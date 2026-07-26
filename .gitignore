@@ -16,3 +16,6 @@ build/
 # OS / editor
 .DS_Store
 *.log
+
+# Designer scratch previews
+design/**/_vorschau*.jpg
