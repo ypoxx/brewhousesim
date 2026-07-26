@@ -248,8 +248,18 @@ Quellen: [Weihenstephan](https://freising-news.de/weihenstephaner-geschichte/) �
 [Säkularisation in Bayern](https://de.wikipedia.org/wiki/S%C3%A4kularisation_in_Bayern) ·
 [Klosterbrauereien](https://www.klosterbrauereien.de/kl%C3%B6ster-brauereien)
 
-Einzelne Jahreszahlen der Epoche III (Kühlmaschine, Reinzuchthefe) sind noch nicht
-gegengeprüft und im Dokument bewusst grob gehalten.
+Vertiefte Recherche mit Verlässlichkeitskennzeichnung, Anachronismenliste und plausiblen
+Zahlen je Epoche: [`design/REFERENZEN.md`](design/REFERENZEN.md).
+
+Zwei dort korrigierte Angaben, die vorher zu glatt formuliert waren:
+
+- **Kühlmaschine.** „Linde/Spaten 1873" ist eine Verkürzung: 1873 der Entwurf, 1874 die
+  Versuchsaufstellung, der erste echte Betrieb 1877 bei Dreher in Triest. Für Uhr 2 ändert
+  das nichts — die 1870er bleiben richtig.
+- **Whitbread.** Die Brauerei war die erste eigens für Massenproduktion gebaute in
+  Britannien, hatte aber **nicht** die erste Dampfmaschine einer Brauerei; die stand 1784
+  bei Goodwyn. Für die Mechanik „Skalierbarkeit als Sorteneigenschaft" ist das unerheblich,
+  für den Text nicht.
 
 ---
 
