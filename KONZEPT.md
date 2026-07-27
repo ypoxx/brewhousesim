@@ -86,10 +86,34 @@ Das ist die Wiederspielbarkeit, ohne mehr Inhalt zu bauen.
 
 ---
 
-## 6. Die vier Epochen
+## 6. Die Epochen — ungleich lang, und das mit Absicht
 
-Jede hat ein anderes **Kernverb**. Deshalb spielt sich jede anders an, statt nur größere
-Zahlen zu haben.
+*Korrigiert. Die frühere Fassung behauptete vier gleichwertige Epochen. Drei Wellen
+Entwürfe haben das widerlegt: **19 von 30 Blättern spielen in den 1880ern, Epoche II bekam
+ein einziges.** Nicht aus Nachlässigkeit — dort steht das Material. Zwei Gutachter kamen
+unabhängig zum selben Schluss: Von vier Epochenbrüchen sind nur zwei echt, und die
+Schwachstelle ist Epoche II, nicht Epoche IV.*
+
+Das Spiel gibt das jetzt zu, statt Gleichmaß zu behaupten:
+
+| | Zeitraum | Rolle | Anteil an der Spielzeit |
+|---|---|---|---|
+| **I. Das Recht** | 1300–1500 | **Vorspiel** — wenige Generationen, wenige, schwere Entscheidungen | klein |
+| **II. Die Ordnung** | 1500–1800 | **Durchgang** — überwiegend Chronik, mit einem harten Ereignis | klein |
+| **III. Die Maschine** | 1800–1914 | **Hauptepoche** | groß |
+| **IV. Die Marke** | 1914–heute | **Hauptepoche** | groß |
+
+Das ist ehrlicher und besser: Ein Vorspiel darf kurz sein, wenn es etwas festlegt, das
+600 Jahre trägt. Epoche I legt fest, dass Haltbarkeit Reichweite ist — und das gilt bis
+2024, wo es aufhört und genau dadurch zum stärksten Moment des Spiels wird.
+
+**Epoche II braucht ein Ereignis, kein Verb.** Sie bekommt den Dreißigjährigen Krieg als
+Kategorienzerstörer — zwei Designer hatten ihn bereits eingezeichnet („Ratsbrauhaus,
+eingegangen 1631", „1634 verbrannt"), ohne zu merken, was sie gefunden hatten. Dazu den
+Sprung vom Pächter zum Eigentümer. Mehr nicht.
+
+Jede Epoche hat ein anderes **Kernverb**. Deshalb spielt sich jede anders an, statt nur
+größere Zahlen zu haben.
 
 ### I. Das Recht (ca. 1300–1500) — *überleben*
 Ein Kessel, ein Braurecht, eine Stadt. Bier verdirbt in Tagen, alles ist lokal.
@@ -320,9 +344,45 @@ Generationswechsel beim Wirt · und erst zuletzt Qualität.
 verliert sofort einen zweistelligen Prozentsatz der gekauften Menge. Konsolidierung
 bestraft sich selbst, ohne dass eine Regel erfunden werden muss.
 
-**Der Ortstyp wandert durch die Epochen.** Schankrecht und eigener Ausschank (I) →
-Wirtshaus mit Vertrag (II–III) → Bahnstation, Depot, Handelsvertrag (III) → Listung im
-Lebensmittelhandel (IV). Derselbe Mechanismus, viermal anderer Charakter.
+### Die Währung wechselt — und das ist der Epochenbruch
+
+*Korrigiert nach dem Fachgutachten. Der Bierlieferungsvertrag mit Darlehen und Ablösung ist
+eine Institution von etwa 1860. Ihn unverändert bis 1300 zurückzutragen, wäre der größte
+Anachronismus des ganzen Entwurfs.*
+
+**Der Mechanismus bleibt in allen Epochen derselbe:** Absatzorte sind endlich und benannt,
+sie sind gebunden, und wer sie will, muss die Bindung ablösen. Was sich ändert, ist die
+**Währung**, in der gebunden und abgelöst wird — und dieser Wechsel ist selbst der
+Epochenbruch, den Epoche II bisher fehlte.
+
+| Epoche | Womit gebunden wird | Womit abgelöst wird |
+|---|---|---|
+| **I–II** | **Recht und Gunst** — Schankkonzession, Bannmeile, Ratssitz, Zunft, Heirat, Verwandtschaft | Ein Amt erwerben, eine Tochter verheiraten, ein Privileg erstreiten |
+| **III (ab ~1860)** | **Der Vertrag** — Laufzeit, Abnahmemenge, Darlehen, verlorener Zuschuss, gestellte Einrichtung | Restschuld bezahlen |
+| **IV** | **Die Listung** — Regalmeter, Einkaufspreis, Eigenmarke | Konditionen, Werbekostenzuschuss, Auslistung |
+
+**Geld gibt es überall — aber es ist nicht überall dasselbe wert.** In Epoche I und II kauft
+Geld keinen Zapfhahn direkt; es kauft die Dinge, die Recht verschaffen: eine Konzession
+kostet eine Gebühr, ein Ratssitz kostet Aufwand und Anwesenheit, eine Heirat hat eine
+Mitgift. Geld ist dort ein *Hebel*, nicht *der* Hebel. Ab etwa 1860 wird es der Hebel — und
+der Spieler soll genau das spüren: dass eine Welt, in der man Adressen kaufen kann, eine
+neue Welt ist.
+
+Die Regel dafür ist bewusst weich gehalten: **Im Zweifel spielbar vor historisch genau.**
+Wo die Unterscheidung nur Reibung erzeugt, ohne eine Entscheidung zu tragen, fällt sie weg.
+
+### Die Abgabe
+
+Fehlte bisher vollständig — in dreißig Entwürfen stand eine einzige Steuerzeile. Ungeld,
+Malzaufschlag, später Brausteuer. Der Punkt ist nicht Verwaltung, sondern dass die **Abgabe
+auf die Stärke** bemessen wurde: Damit wird aus dem Sortenbaum eine Entscheidung statt einer
+Auswahl. Ein starkes Bier reist weiter und kostet mehr Abgabe. Das ist die zweite Achse
+neben Haltbarkeit und Reichweite.
+
+### Und die Biere bekommen Namen
+
+Zwischen 1300 und 1970 hatte in dreißig Entwürfen kein einziges Bier einen Namen. Ein Spiel
+über eine Brauerei, dessen Produkt namenlos bleibt, verfehlt sich selbst.
 
 **Konkurrenten sind Häuser wie deines.** Mit Namen, eigenen Erben, eigener Dampfmaschine
 und eigenem Untergang. Das Konzept liefert den Motor gratis mit: Wenn der Spieler ein Haus
