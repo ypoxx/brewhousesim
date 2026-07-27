@@ -1,134 +1,156 @@
-<title>Brauhaus — Klickdummy</title>
+<title>Brauhaus zum Anker — Klickdummy</title>
 <style>
   :root {
-    --papier:#f2e9d8; --papier-2:#e8dcc6; --tinte:#2b241c; --tinte-2:#6b5f4e;
-    --zinnober:#b23a1f; --grau:#a99c86; --blatt:#fbf7ee;
-    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-    --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Nimbus Sans", sans-serif;
+    --script: "Segoe Script", "Bradley Hand", "Brush Script MT", "Apple Chancery", cursive;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --dunkel: #14120f;
+    --hell: #cdc5b6;
+    --matt: #857d6e;
   }
-  * { box-sizing:border-box; }
-  body { margin:0; background:#171512; color:var(--tinte); font-family:var(--sans); }
-  .rahmen { max-width:1500px; margin:0 auto; padding:18px 16px 60px; }
-  .kopf { display:flex; justify-content:space-between; align-items:baseline; gap:16px;
-    flex-wrap:wrap; color:#cfc4ae; margin-bottom:12px; }
-  .kopf h1 { font-family:var(--serif); font-size:19px; font-weight:600; margin:0;
-    letter-spacing:.01em; }
-  .kopf p { margin:0; font-family:var(--mono); font-size:11px; letter-spacing:.12em;
-    text-transform:uppercase; color:#8d8271; }
-  .buehne { position:relative; background:var(--papier); box-shadow:0 2px 40px #0008; }
-  svg.blatt { display:block; width:100%; height:auto; }
-  text { font-family:var(--serif); fill:var(--tinte); }
-  .lbl { font-family:var(--sans); font-size:13px; }
-  .lbl-k { font-family:var(--sans); font-size:11px; fill:var(--tinte-2); }
-  .num { font-family:var(--sans); font-size:14px; font-variant-numeric:tabular-nums; }
-  .rot { fill:var(--zinnober); }
-  .hand { font-family:var(--serif); font-style:italic; fill:var(--zinnober); font-size:14px; }
-  .titel { font-size:26px; letter-spacing:.01em; }
-  .unter { font-size:13px; fill:var(--tinte-2); font-family:var(--sans); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    background:
+      radial-gradient(1200px 700px at 50% 30%, #201d18 0%, var(--dunkel) 70%);
+    color: var(--hell);
+    -webkit-font-smoothing: antialiased;
+  }
+  .rahmen { max-width: 1560px; margin: 0 auto; padding: 20px 18px 64px; }
 
-  /* Bedienelemente, bewusst diegetisch: sie sehen aus wie Teile des Blattes */
-  .ziel { cursor:pointer; }
-  .ziel:focus { outline:none; }
-  .ziel .treffer { fill:transparent; }
-  .ziel:hover .haus-koerper, .ziel:focus-visible .haus-koerper { fill:var(--papier-2); }
-  .ziel:hover .schild-r, .ziel:focus-visible .schild-r { stroke:var(--zinnober); }
-  .ziel:focus-visible .fokus { stroke:var(--zinnober); stroke-width:1.5; stroke-dasharray:3 3; }
-  .aus { opacity:.32; }
+  /* ---- Kopfleiste ---- */
+  .kopf {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 20px; flex-wrap: wrap; margin-bottom: 14px;
+  }
+  .kopf h1 {
+    margin: 0; font-size: 17px; font-weight: 700; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--hell);
+  }
+  .kopf .stand {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--matt);
+  }
 
-  .schalter { cursor:pointer; }
-  .schalter rect.f { fill:transparent; stroke:var(--tinte-2); stroke-width:1; }
-  .schalter:hover rect.f { stroke:var(--zinnober); }
-  .schalter.an rect.f { fill:var(--zinnober); stroke:var(--zinnober); }
-  .schalter.an text { fill:var(--blatt); }
+  /* ---- Blattreiter ---- */
+  .reiter { display: flex; gap: 3px; align-items: flex-end; margin-bottom: -1px; }
+  .reiter button {
+    font-family: var(--sans); font-size: 11px; font-weight: 700;
+    letter-spacing: .13em; text-transform: uppercase;
+    padding: 9px 18px 8px; border: 0; cursor: pointer;
+    background: #2a251e; color: #9b9282;
+    border-top: 2px solid transparent;
+    border-radius: 3px 3px 0 0;
+    transition: background .15s, color .15s;
+  }
+  .reiter button:hover { background: #362f26; color: var(--hell); }
+  .reiter button[aria-selected="true"] {
+    background: #eeeae1; color: #1b1a18; border-top-color: #c0442a;
+  }
+  .reiter button:disabled { opacity: .35; cursor: default; }
+  .reiter button:disabled:hover { background: #2a251e; color: #9b9282; }
 
-  /* Überlagertes Blatt */
-  .ueber { position:absolute; inset:0; display:none; align-items:center; justify-content:center;
-    background:#2b241cbb; padding:2%; }
-  .ueber.an { display:flex; }
-  #ueber-inhalt { width:min(1040px, 94%); }
-  .ueber svg { width:100%; height:auto; display:block; box-shadow:0 8px 50px #0009; }
+  /* ---- Blatt ---- */
+  .buehne {
+    position: relative;
+    box-shadow: 0 3px 12px #0007, 0 24px 70px #000a;
+    background: #eeeae1;
+  }
+  svg.blatt {
+    display: block; width: 100%; height: auto;
+    opacity: 1; transform: translateY(0);
+    transition: opacity .22s ease, transform .22s ease;
+  }
+  svg.blatt.wechsel { opacity: 0; transform: translateY(10px); }
 
-  .fuss { margin-top:14px; display:flex; justify-content:space-between; gap:16px;
-    flex-wrap:wrap; color:#8d8271; font-family:var(--mono); font-size:11px;
-    letter-spacing:.08em; text-transform:uppercase; }
-  .fuss b { color:#cfc4ae; font-weight:500; }
-  kbd { font-family:var(--mono); border:1px solid #5a5245; padding:1px 5px; border-radius:2px;
-    color:#cfc4ae; }
-  .hinweis { margin-top:26px; color:#9d9280; font-size:14px; line-height:1.65;
-    max-width:78ch; }
-  .hinweis h2 { color:#cfc4ae; font-size:14px; font-family:var(--mono); letter-spacing:.14em;
-    text-transform:uppercase; font-weight:600; margin:0 0 8px; }
-  .hinweis p { margin:0 0 10px; }
-  .hinweis em { color:#cfc4ae; font-style:normal; }
+  svg text { font-family: var(--sans); fill: #1b1a18; }
+  .t1 { font-size: 46px; font-weight: 700; letter-spacing: .002em; }
+  .t2 { font-size: 21px; }
+  .h1 { font-size: 23px; font-weight: 700; letter-spacing: .022em; }
+  .h2 { font-size: 16px; font-weight: 700; letter-spacing: .085em; }
+  .l  { font-size: 18px; }
+  .lb { font-size: 18px; font-weight: 700; }
+  .s  { font-size: 15px; fill: #6e6a63; }
+  .sd { font-size: 15px; fill: #1b1a18; }
+  .n  { font-size: 18px; font-variant-numeric: tabular-nums; }
+  .r  { font-size: 17px; fill: #c0442a; }
+  .ri { font-size: 17px; fill: #c0442a; font-style: italic; }
+  .rb { font-size: 30px; font-weight: 700; fill: #c0442a; letter-spacing: .02em; }
+  .rp { font-size: 32px; font-weight: 700; fill: #c0442a; }
+  .hand { font-family: var(--script); font-size: 21px; }
+  .weg { fill: #8f8b83; }
+
+  /* ---- diegetische Bedienelemente ---- */
+  .ziel { cursor: pointer; }
+  .ziel:focus { outline: none; }
+  .ziel .treffer { fill: transparent; }
+  .ziel:hover .anfass, .ziel:focus-visible .anfass { fill: #ddd6c7; }
+  .ziel:hover .kante, .ziel:focus-visible .kante { stroke: #c0442a; stroke-width: 2.6; }
+  .ziel:focus-visible .fokus { stroke: #c0442a; stroke-width: 1.6; stroke-dasharray: 4 3; }
+  .starr { cursor: default; }
+
+  .schalter { cursor: pointer; }
+  .schalter .feld { fill: transparent; }
+  .schalter:hover .feld { fill: #e2dccf; }
+  .schalter.an .feld { fill: #c0442a; }
+  .schalter.an text { fill: #f6f2ea; }
+  .schalter.tot { cursor: default; opacity: .34; }
+  .schalter.tot:hover .feld { fill: transparent; }
+  .schalter:focus { outline: none; }
+  .schalter:focus-visible .fokus { stroke: #c0442a; stroke-width: 1.6; stroke-dasharray: 4 3; }
+
+  /* ---- Fuß ---- */
+  .fuss {
+    margin-top: 16px; display: flex; justify-content: space-between; gap: 20px;
+    flex-wrap: wrap; font-family: var(--mono); font-size: 11px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--matt);
+  }
+  .fuss b { color: var(--hell); font-weight: 500; }
+  kbd {
+    font-family: var(--mono); border: 1px solid #4b453b; padding: 1px 5px;
+    border-radius: 2px; color: var(--hell);
+  }
+  .notiz { margin-top: 34px; max-width: 82ch; font-size: 14.5px; line-height: 1.68; color: #968c7c; }
+  .notiz h2 {
+    margin: 0 0 10px; font-family: var(--mono); font-size: 11px; font-weight: 600;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--hell);
+  }
+  .notiz p { margin: 0 0 12px; }
+  .notiz em { font-style: normal; color: var(--hell); }
 </style>
 
 <div class="rahmen">
   <div class="kopf">
     <h1>Brauhaus zum Anker · Hohenau</h1>
-    <p id="stand">Anno 1884 · Woche 14 · Georg Kraus, 11. Jahr</p>
+    <span class="stand" id="stand"></span>
   </div>
 
+  <div class="reiter" id="reiter" role="tablist" aria-label="Blätter"></div>
+
   <div class="buehne">
-    <svg class="blatt" id="blatt" viewBox="0 0 1600 900" role="img"
-         aria-label="Technisches Blatt: Brauhaus im Schnitt und die Strecke mit den Wirtshäusern">
-      <defs>
-        <filter id="faser" x="0" y="0" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/>
-          <feColorMatrix type="saturate" values="0"/>
-          <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
-          <feComposite operator="in" in2="SourceGraphic"/>
-        </filter>
-        <pattern id="erde" width="7" height="7" patternUnits="userSpaceOnUse"
-                 patternTransform="rotate(45)">
-          <line x1="0" y1="0" x2="0" y2="7" stroke="#6b5f4e" stroke-width="0.5"/>
-        </pattern>
-        <pattern id="mauer" width="6" height="6" patternUnits="userSpaceOnUse"
-                 patternTransform="rotate(45)">
-          <line x1="0" y1="0" x2="0" y2="6" stroke="#2b241c" stroke-width="0.6"/>
-        </pattern>
-      </defs>
-
-      <rect width="1600" height="900" fill="var(--papier)"/>
-      <rect width="1600" height="900" fill="#000" filter="url(#faser)" opacity="0.5"/>
-      <rect x="18" y="18" width="1564" height="864" fill="none" stroke="var(--tinte)"
-            stroke-width="1.5"/>
-
-      <g id="kopfzeile">
-        <text class="titel" x="48" y="72">DAS HAUS AM WEG</text>
-        <text class="unter" x="48" y="96">Anno 1884 · Hohenau · Blatt 1 von 6</text>
-      </g>
-
-      <g id="chronik"></g>
-      <g id="haus"></g>
-      <g id="strecke"></g>
-      <g id="reichweite"></g>
-      <g id="sorten"></g>
-      <g id="braujahr"></g>
-      <g id="schriftfeld"></g>
-    </svg>
-
-    <div class="ueber" id="ueber"><div id="ueber-inhalt"></div></div>
+    <svg class="blatt" id="blatt" viewBox="0 0 1600 900" role="img"></svg>
   </div>
 
   <div class="fuss">
-    <span><b>Klicken:</b> ein Wirtshaus · eine Sorte · eine Entscheidung</span>
-    <span><b>Zurück:</b> <kbd>Esc</kbd> oder außerhalb klicken</span>
-    <span id="fussrecht">Kein Spielwerk dahinter — jede Zahl ist gesetzt</span>
+    <span id="fuss-links"></span>
+    <span><b>Zurück:</b> <kbd>Esc</kbd> · <b>Blatt:</b> <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></span>
+    <span id="fuss-rechts"></span>
   </div>
 
-  <div class="hinweis">
+  <div class="notiz">
     <h2>Was das hier ist</h2>
-    <p>Ein Klickdummy, kein Spiel. Es rechnet nichts, es simuliert nichts, jede Zahl ist von
-    Hand gesetzt. Der Zweck ist ein anderer: <em>Alles, was du siehst, ist gezeichneter Code —
-    kein einziges erzeugtes Bild.</em> Das Haus, die Strecke, die Wirtshäuser, die Schilder und
-    die Blätter entstehen aus einer Datenstruktur von rund vierzig Zeilen.</p>
-    <p>Damit beantwortet der Dummy die Frage, an der die Mockups nichts beweisen konnten: ob
-    die Erdlinie sich zeichnen lässt statt erzeugt zu werden — und ob die Asset-Rechnung von
-    65 bis 110 Teilen trägt.</p>
-    <p>Probier den Sortenwechsel unten links. <em>Die rote Linie ist die Reichweite</em>, und
-    sie entscheidet, welche Adressen überhaupt erreichbar sind. Das ist der Kern des ganzen
-    Entwurfs in einer einzigen Bewegung.</p>
+    <p>Drei Blätter aus dem Entwurf <em>Die Erdlinie, gegabelt</em> — als Klickdummy, nicht als
+    Spiel. Es rechnet nichts: jede Zahl ist von Hand gesetzt, und die Strecke ist ein
+    schematisches Band, kein Maßstab.</p>
+    <p><em>Kein einziges erzeugtes Bild.</em> Das aufgeschnittene Brauhaus, die Fässer im
+    Gewölbe, die Ausleger, die Silhouetten, die Adlerbrauerei, das Braujahrband — alles
+    entsteht aus Bauteilen und einer Datenstruktur. Damit ist beantwortet, woran die Mockups
+    nichts beweisen konnten: ob die Erdlinie sich <em>zeichnen</em> lässt statt erzeugt zu
+    werden.</p>
+    <p>Drei Dinge sind wirklich verbunden: Die <em>Sorte</em> setzt die rote Linie und damit,
+    welche Häuser auf der Landstraße überhaupt existieren. Die <em>Bahn</em> kennt diese Linie
+    nicht. Und was auf <em>Blatt 8</em> gewählt wird, steht danach auf Blatt 5 im Bild.</p>
   </div>
 </div>
 
@@ -136,384 +158,1079 @@
 (function () {
   "use strict";
 
-  // ---- Daten. Das ist das ganze Spiel, soweit der Dummy es kennt. -------------------
-  const SORTEN = [
-    { id:"land",  name:"Landbier",  haltbar:"10 Tage",  reichweite:26,  stamm:"11 Grad" },
-    { id:"maerz", name:"Maerzen",   haltbar:"30 Tage",  reichweite:74,  stamm:"14 Grad" },
-    { id:"expo",  name:"Exportbier",haltbar:"90 Tage",  reichweite:150, stamm:"16 Grad" },
-  ];
-
-  const ADRESSEN = [
-    { name:"Krone",   ort:"Hohenau",    km:3,   unser:true,  wirt:"Michael Berger, 4. Generation",
-      seit:"1861", vertrag:"Georgi 1885", rest:"1 200 M", hl:[180,140,110],
-      wirbt:"Adlerbrauerei, Vertreter Kolb, dreimal seit Ostern",
-      wort:"Das Dach muss neu. 3 000 Mark. Wer es zahlt, bekommt den Hahn.",
-      glas:"Ein Finger bleibt im Glas." },
-    { name:"Ochsen",  ort:"Lindenau",   km:14,  unser:true,  wirt:"Therese Vogl, seit 1879",
-      seit:"1866", vertrag:"Georgi 1889", rest:"400 M", hl:[260,255,251],
-      wirbt:"niemand", wort:"Solange geliefert wird, wird nicht geredet.",
-      glas:"Kein Rest im Glas." },
-    { name:"Rose",    ort:"Griesbach",  km:31,  unser:false, wirt:"Josef Hartl, 2. Generation",
-      seit:"—", vertrag:"Adlerbrauerei, bis Georgi 1886", rest:"2 400 M beim Adler",
-      hl:[88,84,79], wirbt:"wir, zweimal",
-      wort:"Der Adler hat mir die Schankanlage gestellt. Die nehme ich nicht wieder raus.",
-      glas:"—" },
-    { name:"Anker",   ort:"Reckendorf", km:52,  unser:true,  wirt:"Anna Reindl, Witwe",
-      seit:"1871", vertrag:"Georgi 1885", rest:"900 M", hl:[132,130,128],
-      wirbt:"Adlerbrauerei, seit dem Winter",
-      wort:"Mein Mann hat bei Ihnen unterschrieben. Ich bin nicht mein Mann.",
-      glas:"Zwei Finger bleiben im Glas." },
-    { name:"Sonne",   ort:"Altenau",    km:88,  unser:false, wirt:"Franz Sedlmeier",
-      seit:"—", vertrag:"frei ab Michaeli 1884", rest:"keine", hl:[74,70,66],
-      wirbt:"Adler, Hansa und wir",
-      wort:"Drei Vertreter im Monat. Ich warte, wer am meisten bietet.",
-      glas:"—" },
-    { name:"Post",    ort:"Sankt Veit", km:126, unser:false, wirt:"Konrad Auer",
-      seit:"—", vertrag:"Hansabrauerei, bis 1890", rest:"5 100 M bei Hansa",
-      hl:[310,318,331], wirbt:"niemand mehr",
-      wort:"Die Bahn hält vor der Tür. Was soll ich mit Ihrem Fuhrwerk?",
-      glas:"—" },
-  ];
-
-  const HAUSTEILE = [
-    ["1312","Brunnen"], ["1327","Keller"], ["1412","Felsenkeller"], ["1631","Brand"],
-    ["1804","Kauf aus der Saekularisation"], ["1857","Darre"], ["1877","Eismaschine"],
-    ["1884","Kuehlschiff"],
-  ];
-
-  const MONATE = ["SEP","OKT","NOV","DEZ","JAN","FEB","MRZ","APR","MAI","JUN","JUL","AUG"];
-
-  // ---- Zustand: nur zwei Dinge, weil mehr nicht simuliert wird ----------------------
-  let sorte = 1;          // Index in SORTEN
-  let gewaehlt = null;    // Index in ADRESSEN, für die Detailansicht
-
-  // ---- Geometrie -------------------------------------------------------------------
-  const ERDE = 520, X_WEG = 500, X_ENDE = 1330, KM_MAX = 150;
+  /* ================================================================
+     FARBEN UND MASSE
+     ================================================================ */
+  const C = {
+    papier:  "#eeeae1",
+    papier2: "#e4dfd4",
+    tinte:   "#1b1a18",
+    grauD:   "#8d8a83",
+    grau:    "#a9a59d",
+    grauH:   "#c4c0b7",
+    geist:   "#b9b5ad",
+    rot:     "#c0442a"
+  };
   const NS = "http://www.w3.org/2000/svg";
-  // Gestauchte Achse. Ein echtes Streckenband zeichnet nicht maßstäblich, sondern so, dass
-  // die nahen Adressen auseinandertreten — sonst kleben die ersten drei aufeinander.
-  const xKm = km => X_WEG + Math.sqrt(km / KM_MAX) * (X_ENDE - X_WEG);
+  const W = 1600, H = 900;
 
-  function el(tag, attrs, text) {
+  /* ================================================================
+     DATEN — das ist alles, was der Dummy über die Welt weiß
+     ================================================================ */
+
+  const SORTEN = [
+    { id: "land",  name: "Landbier",   haelt: "10 Tage", km: "6 km",  linie:  905 },
+    { id: "maerz", name: "Maerzen",    haelt: "21 Tage", km: "24 km", linie: 1345,
+      tief: { haelt: "34 Tage", km: "60 km", linie: 1524 } },
+    { id: "expo",  name: "Exportbier", haelt: "90 Tage", km: "60 km", linie: 1524 }
+  ];
+
+  const HAEUSER = [
+    { id: "krone", ast: "strasse", x: 820, name: "Krone", ort: "Hohenau", km: 1,
+      unser: true, umworben: true, sitze: 2, finger: 1,
+      filz: "Filz der|Adlerbrauerei,|seit Ostern auf|dem Tisch",
+      tafel: "DIE KRONE ZU HOHENAU",
+      zeilen: [
+        ["Wirt", "Michael Berger, 4. Generation"],
+        ["Haus seit", "1879, vom Vater"],
+        ["Sitze", "70 und ein Saal"],
+        ["Unser Bier seit", "1861"],
+        ["Vertrag bis", "1885"],
+        ["Vorschuss", "1 200 M"],
+        ["hl 82 . 83 . 84", "210 . 180 . 140"],
+        ["Gestellt", "Schankanlage, 40 Glas, Schild"],
+        ["Es wirbt", "Adler, dreimal seit Ostern"]
+      ],
+      zettel: ["Das Dach muss neu. 3 000 Mark.", "Wer es zahlt, bekommt den Hahn."],
+      zettelVon: "Michael Berger, im Mai",
+      zeichen: ["Unser Zeichen haengt", "seit 1861. Holz, gemalt"]
+    },
+    { id: "loewen", ast: "strasse", x: 1240, name: "Loewen", ort: "Griesbach", km: 24,
+      unser: true, umworben: true, sitze: 2, finger: 2,
+      filz: "Filz der|Adlerbrauerei,|seit dem Winter|auf jedem Tisch",
+      tafel: "DER LOEWEN ZU GRIESBACH",
+      zeilen: [
+        ["Wirt", "Josef Hartl, 2. Generation"],
+        ["Haus seit", "1868, gekauft"],
+        ["Sitze", "120 und Kegelbahn"],
+        ["Unser Bier seit", "1874"],
+        ["Vertrag bis", "1885"],
+        ["Vorschuss", "2 400 M"],
+        ["hl 82 . 83 . 84", "88 . 84 . 79"],
+        ["Gestellt", "nichts"],
+        ["Es wirbt", "Adler, 14 000 M geboten"]
+      ],
+      zettel: ["Der Adler bietet mir vierzehntausend.", "Sie liegen am Rand. Ich in der Mitte."],
+      zettelVon: "Josef Hartl, im Mai",
+      zeichen: ["Unser Zeichen haengt", "am Rand der Reichweite"]
+    },
+    { id: "sonne", ast: "strasse", x: 1400, name: "Sonne", ort: "Altenau", km: 38,
+      unser: false, umworben: false, sitze: 1, finger: 0, filz: "",
+      geistpartner: 1478,
+      tafel: "DIE SONNE ZU ALTENAU",
+      zeilen: [
+        ["Wirt", "Franz Sedlmeier"],
+        ["Haus seit", "1881"],
+        ["Sitze", "60"],
+        ["Unser Bier seit", "—"],
+        ["Vertrag bis", "frei ab Michaeli 1884"],
+        ["Vorschuss", "keiner"],
+        ["hl 82 . 83 . 84", "74 . 70 . 66"],
+        ["Gestellt", "nichts"],
+        ["Es wirbt", "Adler, Hansa und wir"]
+      ],
+      zettel: ["Drei Vertreter im Monat.", "Ich warte, wer am meisten bietet."],
+      zettelVon: "Franz Sedlmeier, im Mai",
+      zeichen: ["Hier haengt noch", "kein Zeichen. Frei"]
+    },
+    { id: "ochsen", ast: "bahn", x: 880, name: "Ochsen", ort: "Lindenau", km: 6,
+      unser: true, umworben: false, sitze: 3, finger: 0, filz: "",
+      tafel: "DER OCHSEN ZU LINDENAU",
+      zeilen: [
+        ["Wirt", "Therese Vogl, seit 1879"],
+        ["Haus seit", "1866, vom Mann"],
+        ["Sitze", "90 und Garten"],
+        ["Unser Bier seit", "1866"],
+        ["Vertrag bis", "1889"],
+        ["Vorschuss", "400 M"],
+        ["hl 82 . 83 . 84", "260 . 255 . 251"],
+        ["Gestellt", "Schankanlage"],
+        ["Es wirbt", "niemand"]
+      ],
+      zettel: ["Solange geliefert wird,", "wird nicht geredet."],
+      zettelVon: "Therese Vogl, im Mai",
+      zeichen: ["Unser Zeichen haengt", "seit 1866. Blech, neu"]
+    },
+    { id: "post", ast: "bahn", x: 1090, name: "Post", ort: "Sankt Veit", km: 11,
+      unser: false, umworben: false, sitze: 2, finger: 0,
+      filz: "Filz der|Hansabrauerei,|die liefert|mit der Bahn",
+      tafel: "DIE POST ZU SANKT VEIT",
+      zeilen: [
+        ["Wirt", "Konrad Auer"],
+        ["Haus seit", "1872"],
+        ["Sitze", "140 und Saal"],
+        ["Unser Bier seit", "—"],
+        ["Vertrag bis", "Hansa, bis 1890"],
+        ["Vorschuss", "5 100 M bei Hansa"],
+        ["hl 82 . 83 . 84", "310 . 318 . 331"],
+        ["Gestellt", "alles, von Hansa"],
+        ["Es wirbt", "niemand mehr"]
+      ],
+      zettel: ["Die Bahn haelt vor der Tuer.", "Was soll ich mit Ihrem Fuhrwerk?"],
+      zettelVon: "Konrad Auer, im Mai",
+      zeichen: ["Das Zeichen der Hansa.", "Emailliert, gestellt."]
+    }
+  ];
+
+  const WEGE = [
+    { id: "keller", kopf: "UNTER DER LINIE", unter: "Den Felsenkeller vertiefen",
+      preis: "16 000 M", kosten: 16000,
+      fakten: ["Zwei Winter Bauzeit", "Ein Winter Stillstand, 3 200 hl weniger",
+               "Haltbarkeit 21 auf 34 Tage", "Reichweite 24 auf 60 km",
+               "Altenau wird erreichbar"],
+      folge: "Der Keller zahlt erst nach 1890." },
+    { id: "haeuser", kopf: "UEBER DER LINIE", unter: "Krone und Loewen abloesen",
+      preis: "15 200 M", kosten: 15200,
+      fakten: ["Sofort", "Bindet 235 hl im Jahr, zehn Jahre lang",
+               "Zwei Haeuser mehr, 49 auf 51", "Reichweite bleibt 24 km",
+               "Kein Lager, kein Sommerbier"],
+      folge: "Nimmst du sie nicht, nimmt sie der Adler." },
+    { id: "depot", kopf: "AM ABZWEIG", unter: "Das Depot an der Bahn pachten",
+      preis: "9 400 M", kosten: 9400,
+      fakten: ["Pacht 600 M im Jahr, zwoelf Jahre", "Fracht 4,80 auf 2,40 je hl",
+               "Ganze Wagen statt Einzelfracht", "Der Adler kommt nicht an den Bahnhof",
+               "Reichweite auf der Bahn ohne Grenze"],
+      folge: "Leer, solange das Bier nur 24 km weit kommt." }
+  ];
+
+  const BARSCHAFT = 16400;
+  const CHRONIK = [["1857", "Felsenkeller"], ["1871", "Dampf"],
+                   ["1879", "Bahn"], ["1884", "Vorschuss"]];
+  const MONATE = ["SEP", "OKT", "NOV", "DEZ", "JAN", "FEB", "MRZ", "APR",
+                  "MAI", "JUN", "JUL", "AUG"];
+
+  /* ================================================================
+     ZUSTAND
+     ================================================================ */
+  let blatt = 5;
+  let sorte = 1;
+  let wirt = "krone";
+  let wahl = null;
+
+  const gewaehlt = id => wahl === id;
+  const haus = id => HAEUSER.find(h => h.id === id);
+
+  function sorteJetzt() {
+    const s = SORTEN[sorte];
+    if (s.tief && gewaehlt("keller")) {
+      return { name: s.name, haelt: s.tief.haelt, km: s.tief.km, linie: s.tief.linie, tief: true };
+    }
+    return { name: s.name, haelt: s.haelt, km: s.km, linie: s.linie, tief: false };
+  }
+  function erreichbar(h) {
+    return h.ast === "bahn" || h.x < sorteJetzt().linie;
+  }
+  function anzahlHaeuser() { return gewaehlt("haeuser") ? 51 : 49; }
+  function fracht() { return gewaehlt("depot") ? "2,40" : "4,80"; }
+
+  /* ================================================================
+     SVG-WERKZEUG
+     ================================================================ */
+  function e(tag, at, tx) {
     const n = document.createElementNS(NS, tag);
-    for (const k in attrs) n.setAttribute(k, attrs[k]);
-    if (text !== undefined) n.textContent = text;
+    if (at) for (const k in at) n.setAttribute(k, at[k]);
+    if (tx !== undefined) n.textContent = tx;
     return n;
   }
-  function leeren(id) { const g = document.getElementById(id); g.innerHTML = ""; return g; }
+  function A(p, tag, at, tx) { const n = e(tag, at, tx); p.appendChild(n); return n; }
+  function G(p, at) { return A(p, "g", at || {}); }
 
-  // ---- Das Haus im Schnitt. Reine Linienarbeit, keine Grafik. -----------------------
-  function zeichneHaus() {
-    const g = leeren("haus");
-    const L = 70, R = 400, FIRST = 210, TRAUF = 330;
+  // Mehrere Zeilen Text auf einer gemeinsamen Grundlinie
+  function zeilen(p, x, y, arr, cls, lh, anchor) {
+    arr.forEach((t, i) => A(p, "text",
+      { x, y: y + i * lh, class: cls, "text-anchor": anchor || "start" }, t));
+  }
 
-    g.appendChild(el("rect", { x:L-52, y:ERDE, width:(R+52)-(L-52), height:150,
-      fill:"url(#erde)", opacity:"0.55" }));
-    g.appendChild(el("line", { x1:30, y1:ERDE, x2:X_ENDE+130, y2:ERDE,
-      stroke:"var(--tinte)", "stroke-width":"2.5" }));
+  // Anklickbare Gruppe mit Tastaturbedienung
+  function klickbar(p, label, fn) {
+    const g = A(p, "g", { class: "ziel", tabindex: "0", role: "button", "aria-label": label });
+    g.addEventListener("click", fn);
+    g.addEventListener("keydown", ev => {
+      if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); fn(); }
+    });
+    return g;
+  }
 
-    // Keller mit Tonnengewölbe
-    g.appendChild(el("path", { d:`M ${L} ${ERDE} L ${L} ${ERDE+120} L ${R} ${ERDE+120} L ${R} ${ERDE}`,
-      fill:"var(--papier)", stroke:"var(--tinte)", "stroke-width":"1.6" }));
-    g.appendChild(el("path", { d:`M ${L+18} ${ERDE+120} L ${L+18} ${ERDE+56}
-      Q ${(L+R)/2} ${ERDE+6} ${R-18} ${ERDE+56} L ${R-18} ${ERDE+120}`,
-      fill:"none", stroke:"var(--tinte)", "stroke-width":"1.2" }));
-    for (let i = 0; i < 6; i++) {
-      const cx = L + 52 + i * 52;
-      g.appendChild(el("ellipse", { cx, cy:ERDE+92, rx:20, ry:24, fill:"none",
-        stroke:"var(--tinte)", "stroke-width":"1.1" }));
-      g.appendChild(el("line", { x1:cx-20, y1:ERDE+92, x2:cx+20, y2:ERDE+92,
-        stroke:"var(--tinte)", "stroke-width":"0.8" }));
+  /* ================================================================
+     BAUTEILE
+     ================================================================ */
+
+  function defs(svg) {
+    const d = A(svg, "defs");
+    const f = A(d, "filter", { id: "faser", x: "0", y: "0", width: "100%", height: "100%" });
+    A(f, "feTurbulence", { type: "fractalNoise", baseFrequency: "0.85", numOctaves: "4", seed: "11" });
+    A(f, "feColorMatrix", { type: "saturate", values: "0" });
+    const ct = A(f, "feComponentTransfer");
+    A(ct, "feFuncA", { type: "linear", slope: "0.055" });
+    A(f, "feComposite", { operator: "in", in2: "SourceGraphic" });
+
+    const sch = A(d, "filter", { id: "schatten", x: "-20%", y: "-20%", width: "150%", height: "160%" });
+    A(sch, "feDropShadow", { dx: "3", dy: "6", stdDeviation: "5", "flood-opacity": "0.28" });
+
+    const erd = A(d, "pattern", { id: "erdreich", width: "9", height: "9",
+      patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" });
+    A(erd, "rect", { width: "9", height: "9", fill: C.papier2 });
+    A(erd, "line", { x1: 0, y1: 0, x2: 0, y2: 9, stroke: C.tinte, "stroke-width": "1" });
+
+    const zg = A(d, "pattern", { id: "ziegel", width: "12", height: "7", patternUnits: "userSpaceOnUse" });
+    A(zg, "rect", { width: "12", height: "7", fill: C.grauH });
+    A(zg, "line", { x1: 0, y1: 6.6, x2: 12, y2: 6.6, stroke: C.tinte, "stroke-width": "0.7" });
+    A(zg, "line", { x1: 6, y1: 0, x2: 6, y2: 7, stroke: C.tinte, "stroke-width": "0.7" });
+  }
+
+  // Blattrahmen, Titel, Untertitel
+  function grundblatt(svg, titel, unter) {
+    A(svg, "rect", { width: W, height: H, fill: C.papier });
+    A(svg, "rect", { width: W, height: H, fill: "#000", filter: "url(#faser)", opacity: "0.65" });
+    A(svg, "rect", { x: 14, y: 14, width: W - 28, height: H - 28, fill: "none",
+      stroke: C.tinte, "stroke-width": "3" });
+    A(svg, "rect", { x: 28, y: 28, width: W - 56, height: H - 56, fill: "none",
+      stroke: C.tinte, "stroke-width": "1" });
+    A(svg, "text", { x: 64, y: 106, class: "t1" }, titel);
+    A(svg, "text", { x: 64, y: 138, class: "t2" }, unter);
+  }
+
+  // Bordierte Tabelle: Kopfzeile + Zeilenpaare
+  function tabelle(p, o) {
+    const g = G(p);
+    const zh = o.zh || 32, kh = o.kh || 36;
+    const hoehe = kh + o.zeilen.length * zh;
+    A(g, "rect", { x: o.x, y: o.y, width: o.w, height: hoehe, fill: "none",
+      stroke: C.tinte, "stroke-width": "1.6" });
+    A(g, "line", { x1: o.x, y1: o.y + kh, x2: o.x + o.w, y2: o.y + kh,
+      stroke: C.tinte, "stroke-width": "1.6" });
+    A(g, "text", { x: o.mitte ? o.x + o.w / 2 : o.x + 12, y: o.y + kh - 12,
+      class: "lb", "text-anchor": o.mitte ? "middle" : "start" }, o.kopf);
+    const teiler = o.teiler;
+    o.zeilen.forEach((z, i) => {
+      const y = o.y + kh + i * zh;
+      if (i) A(g, "line", { x1: o.x, y1: y, x2: o.x + o.w, y2: y,
+        stroke: C.tinte, "stroke-width": "0.8" });
+      A(g, "text", { x: o.x + 12, y: y + zh - 11, class: "l" }, z[0]);
+      if (teiler) {
+        A(g, "text", { x: teiler + 12, y: y + zh - 11, class: "l" }, z[1]);
+      } else {
+        A(g, "text", { x: o.x + o.w - 12, y: y + zh - 11, class: "n",
+          "text-anchor": "end" }, z[1]);
+      }
+    });
+    if (teiler) A(g, "line", { x1: teiler, y1: o.y, x2: teiler, y2: o.y + hoehe,
+      stroke: C.tinte, "stroke-width": "1" });
+    if (o.fuss) {
+      A(g, "line", { x1: o.x, y1: o.y + hoehe, x2: o.x + o.w, y2: o.y + hoehe,
+        stroke: C.tinte, "stroke-width": "0.8" });
+      A(g, "rect", { x: o.x, y: o.y + hoehe, width: o.w, height: 28, fill: "none",
+        stroke: C.tinte, "stroke-width": "1.6" });
+      A(g, "text", { x: o.x + 12, y: o.y + hoehe + 20, class: "s" }, o.fuss);
     }
-    g.appendChild(el("text", { x:(L+R)/2, y:ERDE+150, "text-anchor":"middle",
-      class:"lbl-k" }, "LAGERKELLER · 34 FASS"));
-
-    // Wände und Dach
-    g.appendChild(el("path", { d:`M ${L} ${ERDE} L ${L} ${TRAUF} L ${(L+R)/2} ${FIRST}
-      L ${R} ${TRAUF} L ${R} ${ERDE}`, fill:"var(--papier)", stroke:"var(--tinte)",
-      "stroke-width":"1.8" }));
-    g.appendChild(el("line", { x1:L, y1:TRAUF, x2:R, y2:TRAUF, stroke:"var(--tinte)",
-      "stroke-width":"1" }));
-    // Sparren
-    for (let i = 1; i <= 3; i++) {
-      const t = i / 4, xa = L + t * ((L+R)/2 - L), ya = TRAUF - t * (TRAUF - FIRST);
-      g.appendChild(el("line", { x1:xa, y1:ya, x2:xa, y2:TRAUF, stroke:"var(--tinte)",
-        "stroke-width":"0.7" }));
-      const xb = R - t * (R - (L+R)/2);
-      g.appendChild(el("line", { x1:xb, y1:ya, x2:xb, y2:TRAUF, stroke:"var(--tinte)",
-        "stroke-width":"0.7" }));
-    }
-
-    // Zwischendecke: sonst ist der Hauskörper eine große leere Fläche
-    const DECKE = TRAUF + 74;
-    g.appendChild(el("line", { x1:L, y1:DECKE, x2:R, y2:DECKE, stroke:"var(--tinte)",
-      "stroke-width":"1" }));
-
-    // Kühlschiff — flach, breit, offen. Das Gerät, das allen Entwürfen fehlte.
-    g.appendChild(el("rect", { x:L+34, y:DECKE-30, width:172, height:18, fill:"var(--papier)",
-      stroke:"var(--tinte)", "stroke-width":"1.4" }));
-    g.appendChild(el("text", { x:L+34, y:DECKE-40, class:"lbl-k" }, "KUEHLSCHIFF"));
-
-    // Malzboden rechts daneben, damit das Obergeschoss belegt ist
-    g.appendChild(el("rect", { x:L+228, y:DECKE-34, width:96, height:22, fill:"none",
-      stroke:"var(--tinte)", "stroke-width":"1" }));
-    g.appendChild(el("text", { x:L+228, y:DECKE-42, class:"lbl-k" }, "MALZBODEN"));
-
-    // Sudhaus: offene Pfanne über offenem Feuer. Keine Blase, kein Helm, kein Rohr.
-    const px = L+128, py = ERDE-78;
-    g.appendChild(el("path", { d:`M ${px-46} ${py} Q ${px} ${py+56} ${px+46} ${py}`,
-      fill:"none", stroke:"var(--tinte)", "stroke-width":"2" }));
-    g.appendChild(el("line", { x1:px-52, y1:py, x2:px+52, y2:py, stroke:"var(--tinte)",
-      "stroke-width":"2" }));
-    g.appendChild(el("path", { d:`M ${px-30} ${py+58} l 8 -14 l 7 12 l 9 -18 l 8 20`,
-      fill:"none", stroke:"var(--zinnober)", "stroke-width":"1.4" }));
-    g.appendChild(el("rect", { x:px-56, y:py+62, width:112, height:34, fill:"url(#mauer)",
-      opacity:"0.5", stroke:"var(--tinte)", "stroke-width":"1.2" }));
-    g.appendChild(el("text", { x:L+8, y:DECKE+26, class:"lbl-k" }, "SUDHAUS · 2 SUD JE WOCHE"));
-    // Zwei Frauen an der Krücke — historisch korrekt, in Strichform
-    [px-76, px+78].forEach(fx => {
-      g.appendChild(el("circle", { cx:fx, cy:py+8, r:6, fill:"var(--tinte)" }));
-      g.appendChild(el("path", { d:`M ${fx} ${py+14} l 0 30 M ${fx} ${py+44} l -8 22
-        M ${fx} ${py+44} l 8 22 M ${fx} ${py+22} l ${fx<px?14:-14} 8`,
-        fill:"none", stroke:"var(--tinte)", "stroke-width":"1.6" }));
-    });
-
-    // Darre im Dachstuhl, Rauch durch das Dach
-    g.appendChild(el("rect", { x:R-118, y:TRAUF-52, width:70, height:44, fill:"none",
-      stroke:"var(--tinte)", "stroke-width":"1.3" }));
-    g.appendChild(el("text", { x:R-124, y:TRAUF-58, class:"lbl-k", "text-anchor":"end" }, "DARRE"));
-    g.appendChild(el("path", { d:`M ${R-84} ${TRAUF-58} q -10 -22 4 -38 q 12 -16 2 -32`,
-      fill:"none", stroke:"var(--tinte-2)", "stroke-width":"1", opacity:".7" }));
-
-    // Höhenmaß
-    g.appendChild(el("line", { x1:44, y1:FIRST, x2:44, y2:ERDE+120, stroke:"var(--tinte-2)",
-      "stroke-width":"0.8" }));
-    [[FIRST,"+14"],[ERDE,"0"],[ERDE+120,"-7"]].forEach(([y, t]) => {
-      g.appendChild(el("line", { x1:38, y1:y, x2:50, y2:y, stroke:"var(--tinte-2)",
-        "stroke-width":"0.8" }));
-      g.appendChild(el("text", { x:36, y:y-5, class:"lbl-k", "text-anchor":"end" }, t));
-    });
-    g.appendChild(el("line", { x1:70, y1:ERDE+188, x2:190, y2:ERDE+188, stroke:"var(--tinte)",
-      "stroke-width":"2" }));
-    [[70,"0"],[130,"10"],[190,"20 Schuh"]].forEach(([sx, t]) => {
-      g.appendChild(el("line", { x1:sx, y1:ERDE+184, x2:sx, y2:ERDE+192,
-        stroke:"var(--tinte)", "stroke-width":"1" }));
-      g.appendChild(el("text", { x:sx, y:ERDE+206, class:"lbl-k",
-        "text-anchor":t === "0" ? "start" : "middle" }, t));
-    });
+    return hoehe;
   }
 
-  // ---- Die Strecke: Adressen als Haus mit Schild ------------------------------------
-  function zeichneStrecke() {
-    const g = leeren("strecke");
-    g.appendChild(el("line", { x1:X_WEG-40, y1:ERDE, x2:X_ENDE+130, y2:ERDE,
-      stroke:"var(--tinte)", "stroke-width":"2.5" }));
-
-    ADRESSEN.forEach((a, i) => {
-      const x = xKm(a.km), erreichbar = a.km <= SORTEN[sorte].reichweite;
-      const grp = el("g", { class:"ziel" + (erreichbar ? "" : " aus"), tabindex:"0",
-        role:"button", "aria-label":`${a.name} zu ${a.ort}, ${a.km} Kilometer` });
-
-      grp.appendChild(el("rect", { class:"treffer", x:x-42, y:ERDE-108, width:84, height:150 }));
-      grp.appendChild(el("rect", { class:"fokus", x:x-42, y:ERDE-108, width:84, height:150,
-        fill:"none", stroke:"none" }));
-      // Haus: Körper + Dach
-      grp.appendChild(el("rect", { class:"haus-koerper", x:x-26, y:ERDE-52, width:52, height:52,
-        fill:"var(--papier)", stroke:"var(--tinte)", "stroke-width":"1.4" }));
-      grp.appendChild(el("path", { d:`M ${x-34} ${ERDE-52} L ${x} ${ERDE-86} L ${x+34} ${ERDE-52} Z`,
-        fill:"var(--papier)", stroke:"var(--tinte)", "stroke-width":"1.4" }));
-      grp.appendChild(el("rect", { x:x-8, y:ERDE-24, width:16, height:24, fill:"none",
-        stroke:"var(--tinte)", "stroke-width":"1" }));
-      // Das Schild — kleinste Einheit des Marktmodells: gefüllt heißt unser
-      grp.appendChild(el("line", { x1:x-34, y1:ERDE-64, x2:x-52, y2:ERDE-64,
-        stroke:"var(--tinte)", "stroke-width":"1.2" }));
-      grp.appendChild(el("rect", { class:"schild-r", x:x-70, y:ERDE-64, width:19, height:15,
-        fill:a.unser ? "var(--zinnober)" : "var(--papier)",
-        stroke:a.unser ? "var(--zinnober)" : "var(--tinte)", "stroke-width":"1.2" }));
-
-      // Beschriftung abwechselnd hoch und tief, damit nahe Adressen sich nicht überlagern
-      const dy = i % 2 ? 26 : 62;
-      grp.appendChild(el("line", { x1:x, y1:ERDE+6, x2:x, y2:ERDE+dy-16,
-        stroke:"var(--tinte-2)", "stroke-width":"0.6" }));
-      grp.appendChild(el("text", { x, y:ERDE+dy, class:"lbl", "text-anchor":"middle" }, a.name));
-      grp.appendChild(el("text", { x, y:ERDE+dy+17, class:"lbl-k", "text-anchor":"middle" },
-        `${a.ort} · ${a.km} km`));
-
-      grp.addEventListener("click", () => oeffneWirt(i));
-      grp.addEventListener("keydown", e => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); oeffneWirt(i); }
-      });
-      g.appendChild(grp);
-    });
-  }
-
-  // ---- Die rote Linie: Reichweite. Der Kern des Entwurfs. ---------------------------
-  function zeichneReichweite() {
-    const g = leeren("reichweite");
-    const s = SORTEN[sorte], x = xKm(Math.min(s.reichweite, KM_MAX));
-    g.appendChild(el("line", { x1:x, y1:ERDE-150, x2:x, y2:ERDE+40, stroke:"var(--zinnober)",
-      "stroke-width":"2" }));
-    g.appendChild(el("text", { x:x+10, y:ERDE-134, class:"hand" }, "so weit haelt das Bier"));
-    g.appendChild(el("text", { x:x+10, y:ERDE-114, class:"hand" },
-      `${s.name} · ${s.haltbar} · ${s.reichweite} km`));
-    const jenseits = ADRESSEN.filter(a => a.km > s.reichweite).length;
-    if (jenseits) {
-      g.appendChild(el("text", { x:x+10, y:ERDE-94, class:"lbl-k", fill:"var(--tinte-2)" },
-        `${jenseits} Haeuser liegen dahinter`));
-    }
-  }
-
-  // ---- Sortenwahl. Sieht aus wie eine Legende, ist ein Schalter. --------------------
-  function zeichneSorten() {
-    const g = leeren("sorten");
-    g.appendChild(el("text", { x:70, y:756, class:"lbl-k" }, "WAS AUF DEM WEG IST"));
-    SORTEN.forEach((s, i) => {
-      const y = 776 + i * 30;
-      const grp = el("g", { class:"schalter" + (i === sorte ? " an" : ""), tabindex:"0",
-        role:"button", "aria-pressed":String(i === sorte),
-        "aria-label":`${s.name}, haltbar ${s.haltbar}, Reichweite ${s.reichweite} Kilometer` });
-      grp.appendChild(el("rect", { class:"f", x:70, y:y-15, width:300, height:24 }));
-      grp.appendChild(el("text", { x:80, y:y+2, class:"lbl" }, s.name));
-      grp.appendChild(el("text", { x:222, y:y+2, class:"lbl-k",
-        fill:i === sorte ? "var(--blatt)" : "var(--tinte-2)" }, s.haltbar));
-      grp.appendChild(el("text", { x:330, y:y+2, class:"lbl-k",
-        fill:i === sorte ? "var(--blatt)" : "var(--tinte-2)" }, s.stamm));
-      const waehle = () => { sorte = i; zeichneAlles(); };
-      grp.addEventListener("click", waehle);
-      grp.addEventListener("keydown", e => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); waehle(); }
-      });
-      g.appendChild(grp);
-    });
-  }
-
-  // ---- Das Braujahr. Sudzeit eingefärbt, Sommer blass. ------------------------------
-  function zeichneBraujahr() {
-    const g = leeren("braujahr");
-    const x0 = 500, br = 69, y = 800;
-    g.appendChild(el("text", { x:x0, y:y-10, class:"lbl-k" }, "BRAUJAHR · MICHAELI BIS GEORGI"));
+  // Braujahrband am unteren Blattrand
+  function braujahr(p, x, y, breite, marke) {
+    const g = G(p);
+    const lw = 128, h = 48, mw = (breite - lw) / 12;
+    A(g, "rect", { x, y, width: breite, height: h, fill: "none",
+      stroke: C.tinte, "stroke-width": "1.6" });
+    A(g, "text", { x: x + 14, y: y + 31, class: "h2" }, "BRAUJAHR");
+    A(g, "line", { x1: x + lw, y1: y, x2: x + lw, y2: y + h, stroke: C.tinte, "stroke-width": "1.6" });
     MONATE.forEach((m, i) => {
-      const sud = i < 8;   // Michaeli bis Georgi
-      g.appendChild(el("rect", { x:x0+i*br, y, width:br, height:32,
-        fill:sud ? "var(--papier-2)" : "var(--papier)", stroke:"var(--tinte)",
-        "stroke-width":"0.9" }));
-      g.appendChild(el("text", { x:x0+i*br+br/2, y:y+21, class:"lbl-k", "text-anchor":"middle" }, m));
+      const mx = x + lw + i * mw, sud = i < 8;
+      A(g, "rect", { x: mx, y, width: mw, height: h,
+        fill: sud ? C.grau : C.papier, stroke: C.tinte, "stroke-width": "1" });
+      A(g, "text", { x: mx + mw / 2, y: y + 31, class: "lb", "text-anchor": "middle" }, m);
     });
-    const mx = x0 + 1.4 * br;
-    g.appendChild(el("path", { d:`M ${mx-7} ${y+44} L ${mx+7} ${y+44} L ${mx} ${y+33} Z`,
-      fill:"var(--zinnober)" }));
-    g.appendChild(el("text", { x:x0+8*br+8, y:y+50, class:"hand" },
-      "Was im April im Keller liegt, muss den Sommer tragen."));
+    if (marke !== undefined) {
+      const mx = x + lw + (marke + 0.5) * mw;
+      A(g, "path", { d: `M ${mx - 8} ${y - 12} L ${mx + 8} ${y - 12} L ${mx} ${y - 1} Z`,
+        fill: C.rot });
+    }
   }
 
-  // ---- Chronikspalte und Schriftfeld ------------------------------------------------
-  function zeichneChronik() {
-    const g = leeren("chronik");
-    HAUSTEILE.forEach(([jahr, was], i) => {
-      const y = 60 + i * 27;
-      g.appendChild(el("rect", { x:1360, y:y-16, width:200, height:26, fill:"none",
-        stroke:"var(--tinte-2)", "stroke-width":"0.7" }));
-      g.appendChild(el("text", { x:1370, y:y+2, class:"lbl-k", fill:"var(--tinte)" }, jahr));
-      g.appendChild(el("text", { x:1414, y:y+2, class:"lbl-k" }, was));
-    });
-  }
-
-  function zeichneSchriftfeld() {
-    const g = leeren("schriftfeld");
-    const x = 1160, y = 640, w = 400, h = 140;
-    g.appendChild(el("rect", { x, y, width:w, height:h, fill:"none", stroke:"var(--tinte)",
-      "stroke-width":"1.4" }));
-    g.appendChild(el("line", { x1:x, y1:y+28, x2:x+w, y2:y+28, stroke:"var(--tinte)",
-      "stroke-width":"1" }));
-    g.appendChild(el("text", { x:x+12, y:y+20, class:"lbl" }, "BRAUHAUS ZUM ANKER"));
-    const zeilen = [
-      ["Sud je Woche", "2"], ["Fass im Keller", "34"],
-      ["Wir zapfen in", `${ADRESSEN.filter(a => a.unser).length} von 6 Haus`],
-      ["Kasse", "9 400 M"],
-    ];
-    zeilen.forEach(([k, v], i) => {
-      const yy = y + 52 + i * 22;
-      g.appendChild(el("text", { x:x+12, y:yy, class:"lbl-k" }, k));
-      g.appendChild(el("text", { x:x+w-12, y:yy, class:"num", "text-anchor":"end" }, v));
+  // Chronikkästen oben rechts
+  function chronik(p) {
+    const g = G(p), x = 1370, w = 182, h = 30;
+    CHRONIK.forEach(([j, was], i) => {
+      const y = 44 + i * h;
+      A(g, "rect", { x, y, width: w, height: h, fill: "none", stroke: C.tinte, "stroke-width": "1.2" });
+      A(g, "line", { x1: x + 54, y1: y, x2: x + 54, y2: y + h, stroke: C.tinte, "stroke-width": "1" });
+      A(g, "text", { x: x + 8, y: y + 21, class: "sd" }, j);
+      A(g, "text", { x: x + 62, y: y + 21, class: "sd" }, was);
     });
   }
 
-  function zeichneAlles() {
-    zeichneChronik(); zeichneHaus(); zeichneStrecke(); zeichneReichweite();
-    zeichneSorten(); zeichneBraujahr(); zeichneSchriftfeld();
+  // Fass
+  function fass(p, x, y, w, h, dunkel) {
+    const g = G(p);
+    A(g, "path", { d: `M ${x} ${y + 3} q ${w / 2} ${-6} ${w} 0 v ${h - 6} q ${-w / 2} 6 ${-w} 0 z`,
+      fill: dunkel ? C.grau : C.grauH, stroke: C.tinte, "stroke-width": "1" });
+    A(g, "line", { x1: x + w * 0.32, y1: y + 1, x2: x + w * 0.32, y2: y + h - 1,
+      stroke: C.tinte, "stroke-width": "0.7" });
+    A(g, "line", { x1: x + w * 0.68, y1: y + 1, x2: x + w * 0.68, y2: y + h - 1,
+      stroke: C.tinte, "stroke-width": "0.7" });
   }
 
-  // ---- Das fremde Blatt: der Wirt. Gelegt, nicht eingeblendet. ----------------------
-  function oeffneWirt(i) {
-    gewaehlt = i;
-    const a = ADRESSEN[i];
-    const s = document.createElementNS(NS, "svg");
-    s.setAttribute("viewBox", "0 0 1000 640");
-    s.setAttribute("role", "dialog");
-    s.setAttribute("aria-label", `Blatt zum Wirtshaus ${a.name}`);
-    const add = (t, at, tx) => { s.appendChild(el(t, at, tx)); };
+  // Stehende Silhouette
+  function figur(p, x, fuss, hoehe, hut) {
+    const g = G(p);
+    const k = hoehe * 0.17;
+    A(g, "circle", { cx: x, cy: fuss - hoehe + k, r: k, fill: C.tinte });
+    A(g, "path", { d: `M ${x - k * 1.15} ${fuss - hoehe + k * 2.2}
+      q ${k * 1.15} ${-k * 0.7} ${k * 2.3} 0
+      L ${x + k * 1.05} ${fuss - hoehe * 0.42}
+      L ${x + k * 0.95} ${fuss}
+      L ${x + k * 0.2} ${fuss}
+      L ${x} ${fuss - hoehe * 0.34}
+      L ${x - k * 0.2} ${fuss}
+      L ${x - k * 0.95} ${fuss}
+      L ${x - k * 1.05} ${fuss - hoehe * 0.42} Z`, fill: C.tinte });
+    if (hut) A(g, "path", { d: `M ${x - k * 1.5} ${fuss - hoehe + k * 0.4}
+      h ${k * 3} l ${-k * 0.5} ${-k * 0.7} h ${-k * 2} z`, fill: C.tinte });
+  }
 
-    add("rect", { width:1000, height:640, fill:"var(--blatt)" });
-    add("rect", { width:1000, height:640, fill:"#000", filter:"url(#faser)", opacity:"0.4" });
-    add("rect", { x:14, y:14, width:972, height:612, fill:"none", stroke:"var(--tinte)",
-      "stroke-width":"1.2" });
-    add("text", { x:44, y:70, class:"titel" }, `${a.name.toUpperCase()} ZU ${a.ort.toUpperCase()}`);
-    add("text", { x:44, y:94, class:"unter" }, `Schankstatt · besucht im Mai 1884`);
-    add("line", { x1:44, y1:112, x2:956, y2:112, stroke:"var(--tinte)", "stroke-width":"1" });
+  // Sitzende Silhouette am Tisch. nachLinks: auf welcher Seite die Knie liegen
+  function figurSitzend(p, x, fuss, hoehe, nachLinks) {
+    const g = G(p), s = nachLinks ? -1 : 1, k = hoehe * 0.15;
+    const kopf = fuss - hoehe + k, sitz = fuss - hoehe * 0.44;
+    // Stuhllehne zuerst, damit sie hinter der Figur liegt
+    A(g, "line", { x1: x - s * k * 1.7, y1: fuss, x2: x - s * k * 1.7, y2: fuss - hoehe * 0.78,
+      stroke: C.tinte, "stroke-width": "2" });
+    A(g, "circle", { cx: x, cy: kopf, r: k, fill: C.tinte });
+    A(g, "path", { d: `M ${x - k * 0.95} ${kopf + k * 1.25} h ${k * 1.9} V ${sitz} h ${-k * 1.9} Z`,
+      fill: C.tinte });
+    A(g, "path", { d: `M ${x - k * 0.95} ${sitz} h ${s * k * 3} v ${k * 0.95} h ${-s * k * 3} Z`,
+      fill: C.tinte });
+    A(g, "path", { d: `M ${x + s * k * 2.05} ${sitz + k * 0.95} h ${s * k * 0.95} V ${fuss} h ${-s * k * 0.95} Z`,
+      fill: C.tinte });
+    A(g, "line", { x1: x, y1: kopf + k * 1.9, x2: x + s * k * 2.6, y2: sitz - k * 0.5,
+      stroke: C.tinte, "stroke-width": k * 0.6 });
+  }
 
-    const zeilen = [
-      ["WIRT", a.wirt], ["UNSER BIER SEIT", a.seit], ["VERTRAG", a.vertrag],
-      ["RESTSCHULD", a.rest], ["HL 82 · 83 · 84", a.hl.join(" · ")],
-      ["ES WIRBT", a.wirbt], ["ENTFERNUNG", `${a.km} km · ${Math.ceil(a.km / 30)} Tagereise(n)`],
-      ["IM GLAS", a.glas],
-    ];
-    zeilen.forEach(([k, v], n) => {
-      const y = 150 + n * 38;
-      add("text", { x:44, y, class:"lbl-k" }, k);
-      add("text", { x:340, y, class:"lbl" }, v);
-      add("line", { x1:44, y1:y+12, x2:956, y2:y+12, stroke:"var(--tinte-2)",
-        "stroke-width":"0.4" });
-    });
+  // Ausleger mit Schild. art: "unser" (schwarz) | "fremd" (grau, sechseckig)
+  function ausleger(p, wx, wy, richtung, art, klein) {
+    const g = G(p), s = richtung, arm = klein ? 28 : 38, sw = klein ? 21 : 27, sh = klein ? 16 : 21;
+    // Arm mit Strebe — schmiedeeisern, gerade, nicht geschwungen
+    A(g, "line", { x1: wx, y1: wy, x2: wx + s * arm, y2: wy,
+      stroke: C.tinte, "stroke-width": "2" });
+    A(g, "line", { x1: wx, y1: wy + 15, x2: wx + s * (arm - 12), y2: wy,
+      stroke: C.tinte, "stroke-width": "1.2" });
+    const cx = wx + s * (arm - 3), ty = wy + 8;
+    A(g, "line", { x1: cx - sw / 2 + 3, y1: wy, x2: cx - sw / 2 + 3, y2: ty,
+      stroke: C.tinte, "stroke-width": "1.2" });
+    A(g, "line", { x1: cx + sw / 2 - 3, y1: wy, x2: cx + sw / 2 - 3, y2: ty,
+      stroke: C.tinte, "stroke-width": "1.2" });
+    if (art === "unser") {
+      A(g, "path", { class: "kante",
+        d: `M ${cx - sw / 2} ${ty} h ${sw} v ${sh - 6} l ${-sw / 2} 6 l ${-sw / 2} -6 z`,
+        fill: C.tinte, stroke: C.tinte, "stroke-width": "1.4" });
+    } else {
+      A(g, "path", { class: "kante",
+        d: `M ${cx - sw / 2} ${ty + 5} l ${sw * 0.22} ${-5} h ${sw * 0.56} l ${sw * 0.22} 5
+            v ${sh - 10} l ${-sw * 0.22} 5 h ${-sw * 0.56} l ${-sw * 0.22} -5 z`,
+        fill: C.grauH, stroke: C.grauD, "stroke-width": "1.6" });
+    }
+    return g;
+  }
 
-    add("text", { x:44, y:502, class:"hand", "font-size":"18" }, `„${a.wort}“`);
-    add("text", { x:44, y:526, class:"lbl-k" }, a.wirt.split(",")[0]);
+  // Wirtshaus in Ansicht auf der Erdlinie
+  function wirtshaus(p, x, erde, h, alsGeist) {
+    const g = G(p);
+    const bw = 64, bh = 58, dh = 40;
+    const st = alsGeist ? C.geist : C.tinte;
+    const gemein = { stroke: st, "stroke-width": alsGeist ? "1.6" : "2",
+                     "stroke-dasharray": alsGeist ? "6 5" : "none" };
+    // Giebel
+    A(g, "path", Object.assign({ d: `M ${x - bw / 2 - 8} ${erde - bh} L ${x} ${erde - bh - dh}
+      L ${x + bw / 2 + 8} ${erde - bh} Z`,
+      fill: alsGeist ? "none" : C.grauD }, gemein));
+    // Körper
+    A(g, "rect", Object.assign({ class: alsGeist ? "" : "anfass",
+      x: x - bw / 2, y: erde - bh, width: bw, height: bh,
+      fill: alsGeist ? "none" : C.papier }, gemein));
+    // Fenster
+    [[-16, 14], [8, 14]].forEach(([dx, dy]) =>
+      A(g, "rect", { x: x + dx, y: erde - bh + dy, width: 11, height: 13, fill: "none",
+        stroke: st, "stroke-width": "1.3", "stroke-dasharray": alsGeist ? "4 3" : "none" }));
+    // Tür
+    A(g, "rect", { x: x - 9, y: erde - 26, width: 18, height: 26, fill: "none",
+      stroke: st, "stroke-width": "1.3", "stroke-dasharray": alsGeist ? "4 3" : "none" });
+    if (alsGeist) return g;
+    // Schilder
+    if (h) {
+      ausleger(g, x - bw / 2, erde - bh + 12, -1, h.unser ? "unser" : "fremd");
+      if (h.umworben) ausleger(g, x + bw / 2, erde - bh + 12, 1, "fremd", true);
+    }
+    return g;
+  }
 
-    // Zwei Optionen, die sich ausschließen — mit sichtbaren Kosten
-    const opt = (x, titel, preis, folge, moeglich) => {
-      const g2 = el("g", { class:"schalter" + (moeglich ? "" : " aus"), tabindex:moeglich ? "0" : "-1",
-        role:"button", "aria-label":`${titel}, ${preis}` });
-      g2.appendChild(el("rect", { class:"f", x, y:552, width:290, height:56 }));
-      g2.appendChild(el("text", { x:x+14, y:576, class:"lbl" }, titel));
-      g2.appendChild(el("text", { x:x+14, y:596, class:"lbl-k" }, `${preis} · ${folge}`));
-      if (moeglich) g2.addEventListener("click", e => { e.stopPropagation(); schliessen(); });
-      return g2;
+  // Kessel: runder Boden, gewölbter Deckel — nicht zu verwechseln mit einem Gewölbe
+  function kessel(p, cx, sohle, r, hoehe, farbe, strich) {
+    const g = G(p);
+    const oben = sohle - hoehe;
+    A(g, "path", { d: `M ${cx - r} ${sohle - r * 0.5} V ${oben + r * 0.55}
+      Q ${cx - r} ${oben} ${cx} ${oben} Q ${cx + r} ${oben} ${cx + r} ${oben + r * 0.55}
+      V ${sohle - r * 0.5} Q ${cx} ${sohle + r * 0.35} ${cx - r} ${sohle - r * 0.5} Z`,
+      fill: farbe || C.grau, stroke: strich || C.tinte, "stroke-width": "1.8" });
+    A(g, "line", { x1: cx - r * 0.9, y1: oben + r * 0.62, x2: cx + r * 0.9, y2: oben + r * 0.62,
+      stroke: strich || C.tinte, "stroke-width": "1" });
+    return g;
+  }
+
+  /* ---- Das eigene Brauhaus im Schnitt --------------------------- */
+  function brauhaus(p, erde) {
+    const g = G(p);
+    const x0 = 110, BW = 200, x1 = x0 + BW;
+    const D = 246, F1 = 306, F2 = 368;
+
+    // Schornstein — hoch und schlank, das Erkennungszeichen des Werks
+    const sx = 322, sw = 26;
+    A(g, "rect", { x: sx, y: 174, width: sw, height: erde - 174, fill: "url(#ziegel)",
+      stroke: C.tinte, "stroke-width": "1.6" });
+    A(g, "rect", { x: sx - 7, y: 160, width: sw + 14, height: 15, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.6" });
+    // Geschossdecken
+    const balken = y => A(g, "rect", { x: x0 - 9, y: y - 6, width: BW + 18, height: 12,
+      fill: C.grau, stroke: C.tinte, "stroke-width": "1.4" });
+    balken(D); balken(F1); balken(F2);
+
+    // Obergeschoss: das Kühlschiff — flach, breit, offen
+    A(g, "path", { d: `M ${x0 + 20} ${F1 - 10} L ${x0 + 176} ${F1 - 10}
+      L ${x0 + 166} ${F1 - 34} L ${x0 + 30} ${F1 - 34} Z`,
+      fill: C.grauH, stroke: C.tinte, "stroke-width": "1.6" });
+    A(g, "line", { x1: x0 + 26, y1: F1 - 20, x2: x0 + 170, y2: F1 - 20,
+      stroke: C.tinte, "stroke-width": "0.9" });
+    // Hängewerk darüber
+    A(g, "line", { x1: x0 + 98, y1: D + 8, x2: x0 + 98, y2: F1 - 44,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    A(g, "rect", { x: x0 + 86, y: F1 - 44, width: 24, height: 10, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.2" });
+
+    // Sudhaus: Pfanne und Bottich, jeder mit Dunstrohr
+    kessel(g, x0 + 52, F2 - 8, 30, 50);
+    A(g, "line", { x1: x0 + 52, y1: F2 - 60, x2: x0 + 52, y2: F1 + 4,
+      stroke: C.tinte, "stroke-width": "2.4" });
+    kessel(g, x0 + 138, F2 - 8, 24, 44);
+    A(g, "line", { x1: x0 + 138, y1: F2 - 54, x2: x0 + 138, y2: F1 + 4,
+      stroke: C.tinte, "stroke-width": "2" });
+
+    // Erdgeschoss: Treppe, Fässer, ein Mann
+    let pts = "";
+    for (let i = 0; i <= 4; i++) pts += `${x0 + 178 - i * 15},${erde - 6 - i * 14} ${x0 + 163 - i * 15},${erde - 6 - i * 14} ${x0 + 163 - i * 15},${erde - 20 - i * 14} `;
+    A(g, "polyline", { points: pts.trim(), fill: "none", stroke: C.tinte, "stroke-width": "1.6" });
+    fass(g, x0 + 12, erde - 40, 32, 36, true);
+    fass(g, x0 + 48, erde - 40, 32, 36, false);
+    fass(g, x0 + 84, erde - 40, 32, 36, true);
+    figur(g, x0 + 132, erde - 4, 50, false);
+
+    // Ständerwerk zuletzt, damit es über den Geräten liegt
+    [x0, x0 + BW / 2, x1].forEach(x =>
+      A(g, "rect", { x: x - 6, y: D - 6, width: 12, height: erde - D + 6,
+        fill: C.grau, stroke: C.tinte, "stroke-width": "1.4" }));
+    // Umriss: erst damit ist es ein aufgeschnittenes Haus und kein Gerüst
+    A(g, "rect", { x: x0 - 9, y: D - 6, width: BW + 18, height: erde - D + 6,
+      fill: "none", stroke: C.tinte, "stroke-width": "2.4" });
+    // Fuchs zum Schornstein, unter dem Dach hindurch
+    A(g, "rect", { x: x1 + 9, y: D + 10, width: sx - x1 - 9, height: 16,
+      fill: C.grau, stroke: C.tinte, "stroke-width": "1.4" });
+
+    // Keller: zwei Reihen, dicht belegt
+    const kx = 78, kw = 264, kb = 660;
+    A(g, "rect", { x: kx, y: erde, width: kw, height: kb - erde, fill: "url(#erdreich)",
+      stroke: C.tinte, "stroke-width": "2" });
+    const gewoelbe = (a, b, sohle) => {
+      const r = (b - a) / 2;
+      A(g, "path", { d: `M ${a} ${sohle} V ${sohle - 36} A ${r} ${r} 0 0 1 ${b} ${sohle - 36} V ${sohle} Z`,
+        fill: C.papier, stroke: C.tinte, "stroke-width": "1.4" });
     };
-    s.appendChild(opt(44, a.unser ? "Vorschuss erhoehen" : "Ablosesumme zahlen",
-      a.unser ? "3 000 M" : a.rest, "Kasse 9 400 M", true));
-    s.appendChild(opt(354, "Nichts tun", "0 M", "Vertrag laeuft aus", true));
-    s.appendChild(opt(664, "Eismaschine statt dessen", "4 800 M", "reicht nicht fuer beides", false));
+    const felder = [[88, 160], [174, 246], [260, 332]];
+    felder.forEach(([a, b]) => { gewoelbe(a, b, 544); gewoelbe(a, b, 652); });
+    // Lagerfässer
+    felder.forEach(([a], n) => {
+      if (n > 0) for (let i = 0; i < 3; i++) fass(g, a + 4 + i * 22, 508, 20, 34, (i + n) % 2 === 0);
+      for (let i = 0; i < 3; i++) fass(g, a + 4 + i * 22, 616, 20, 34, (i + n) % 2 === 1);
+    });
+    // Zwei Kellerleute im ersten Feld
+    figur(g, 108, 544, 42, false);
+    figur(g, 132, 544, 40, true);
 
-    const inh = document.getElementById("ueber-inhalt");
-    inh.innerHTML = "";
-    inh.appendChild(s);
-    document.getElementById("ueber").classList.add("an");
-    document.getElementById("fussrecht").textContent =
-      "Blatt 2 · " + a.name + " zu " + a.ort;
+    A(g, "text", { x: 210, y: 682, class: "l", "text-anchor": "middle" },
+      "BRAUHAUS ZUM ANKER, km 0");
+    return g;
   }
 
-  function schliessen() {
-    document.getElementById("ueber").classList.remove("an");
-    document.getElementById("ueber-inhalt").innerHTML = "";
-    gewaehlt = null;
-    document.getElementById("fussrecht").textContent =
-      "Kein Spielwerk dahinter — jede Zahl ist gesetzt";
+  /* ---- Die Adlerbrauerei: fremdes Werk, ganz in Grau -------------- */
+  function adlerbrauerei(p, x, erde) {
+    const g = G(p, { class: "starr", "pointer-events": "none" });
+    const w = 170, x0 = x - w / 2;
+    const halleO = erde - 76, turmO = erde - 106;
+    const st = { fill: "none", stroke: C.grauD, "stroke-width": "3", "stroke-linejoin": "miter" };
+    // Halle mit Satteldach, daneben der höhere Sudhausturm
+    A(g, "path", Object.assign({ d: `M ${x0} ${erde} V ${halleO}
+      L ${x0 + 56} ${halleO - 22} L ${x0 + 112} ${halleO}
+      L ${x0 + 112} ${turmO} L ${x0 + 141} ${turmO - 16} L ${x0 + w} ${turmO}
+      V ${erde} Z` }, st));
+    A(g, "line", { x1: x0 + 112, y1: erde, x2: x0 + 112, y2: turmO,
+      stroke: C.grauD, "stroke-width": "2" });
+    // Kessel im Werk
+    kessel(g, x0 + 30, erde - 8, 20, 44, C.grau, C.grauD);
+    kessel(g, x0 + 76, erde - 8, 17, 38, C.grau, C.grauD);
+    kessel(g, x0 + 141, erde - 8, 20, 52, C.grau, C.grauD);
+    // Schornstein am Kopf der Halle
+    A(g, "path", { d: `M ${x0 + 8} ${halleO} v -66 h 16 v 66`,
+      fill: C.papier, stroke: C.grauD, "stroke-width": "2.6" });
+    A(g, "rect", { x: x0 + 3, y: halleO - 77, width: 26, height: 11,
+      fill: C.papier, stroke: C.grauD, "stroke-width": "2.6" });
+    A(g, "text", { x, y: erde + 32, class: "l", "text-anchor": "middle" }, "ADLERBRAUEREI");
+    A(g, "text", { x, y: erde + 54, class: "s", "text-anchor": "middle" },
+      "21 400 hl . 74 Haeuser");
+    return g;
   }
 
-  document.getElementById("ueber").addEventListener("click", e => {
-    if (e.target.id === "ueber") schliessen();
+  /* ---- Das Depot: flacher Block ohne Keller ---------------------- */
+  function depot(p, x, erde, breite, unser) {
+    const g = G(p);
+    const h = 42, x0 = x - breite / 2;
+    A(g, "path", { class: "anfass",
+      d: `M ${x0} ${erde} V ${erde - h + 8} L ${x0 + 22} ${erde - h}
+          H ${x0 + breite} V ${erde} Z`,
+      fill: unser ? C.grau : C.grauH, stroke: C.tinte, "stroke-width": "2" });
+    A(g, "line", { x1: x0 + 22, y1: erde - h, x2: x0 + 22, y2: erde,
+      stroke: C.tinte, "stroke-width": "1" });
+    return g;
+  }
+
+  /* ================================================================
+     BLATT 5 — DIE STRECKE
+     ================================================================ */
+  function blattStrecke(svg) {
+    grundblatt(svg, "DIE STRECKE", "1884 . Hohenau . Blatt 5");
+    chronik(svg);
+
+    const ERDE = 440, BAHN = 316, STRASSE = 616;
+    const s = sorteJetzt();
+
+    // ---- Erdlinie mit Gabelung
+    const linien = G(svg, { "pointer-events": "none" });
+    A(linien, "line", { x1: 46, y1: ERDE, x2: 432, y2: ERDE,
+      stroke: C.tinte, "stroke-width": "5" });
+    A(linien, "path", { d: `M 430 ${ERDE} C 508 ${ERDE} 512 ${BAHN} 592 ${BAHN} H 1554`,
+      fill: "none", stroke: C.tinte, "stroke-width": "5" });
+    A(linien, "path", { d: `M 430 ${ERDE} C 508 ${ERDE} 512 ${STRASSE} 592 ${STRASSE} H 1554`,
+      fill: "none", stroke: C.tinte, "stroke-width": "5" });
+
+    brauhaus(svg, ERDE);
+
+    // ---- Bahnhof am Abzweig, rot eingekreist
+    const bhf = G(svg, { "pointer-events": "none" });
+    depot(bhf, 500, ERDE, 74, gewaehlt("depot"));
+    A(bhf, "circle", { cx: 498, cy: ERDE - 18, r: 48, fill: "none",
+      stroke: C.rot, "stroke-width": "2.4" });
+    A(bhf, "line", { x1: 544, y1: ERDE - 32, x2: 572, y2: ERDE - 44,
+      stroke: C.rot, "stroke-width": "1.2" });
+
+    // ---- Beschriftung im Zwickel zwischen den Ästen
+    const zw = G(svg, { "pointer-events": "none" });
+    A(zw, "text", { x: 578, y: 402, class: "s", fill: C.tinte }, "BAHNHOF HOHENAU, km 1");
+    zeilen(zw, 578, 434,
+      gewaehlt("depot")
+        ? ["Das Depot ist gepachtet. Der Adler", "kommt nicht mehr an den Bahnhof."]
+        : ["Der Adler will hier", "ein eigenes Depot."],
+      "r", 22);
+    A(zw, "text", { x: 560, y: 282, class: "h2" }, "AN DER BAHN, SEIT 1879");
+    A(zw, "text", { x: 596, y: 544, class: "h2" }, "AUF DER STRASSE");
+
+    // ---- Häuser
+    HAEUSER.forEach(h => {
+      const y = h.ast === "bahn" ? BAHN : STRASSE;
+      const bx = h.geistpartner ? (h.x + h.geistpartner) / 2 : h.x;
+      if (!erreichbar(h)) {
+        const g = G(svg, { class: "starr", "pointer-events": "none", "aria-hidden": "true" });
+        wirtshaus(g, h.x, y, h, true);
+        if (h.geistpartner) wirtshaus(g, h.geistpartner, y, null, true);
+        A(g, "text", { x: bx, y: y + 32, class: "l", "text-anchor": "middle",
+          fill: C.geist }, `${h.ort.toUpperCase()} ${h.km} km`);
+        A(g, "text", { x: bx, y: y + 54, class: "s", "text-anchor": "middle",
+          fill: C.geist }, `zu weit fuer ${s.haelt}`);
+        return;
+      }
+      const g = klickbar(svg, `${h.name} zu ${h.ort}, ${h.km} Kilometer`, () => zuWirt(h.id));
+      A(g, "rect", { class: "treffer", x: h.x - 52, y: y - 102, width: 104, height: 114 });
+      A(g, "rect", { class: "fokus", x: h.x - 52, y: y - 102, width: 104, height: 114,
+        fill: "none", stroke: "none" });
+      wirtshaus(g, h.x, y, h, false);
+      if (h.geistpartner) wirtshaus(g, h.geistpartner, y, null, false);
+      A(g, "text", { x: bx, y: y + 32, class: "l", "text-anchor": "middle" },
+        `${h.ort.toUpperCase()} ${h.km} km`);
+      A(g, "text", { x: bx, y: y + 54, class: "s", "text-anchor": "middle" },
+        gewaehlt("haeuser") && (h.id === "krone" || h.id === "loewen")
+          ? `${h.name}, abgeloest` : h.name);
+    });
+
+    adlerbrauerei(svg, 1030, STRASSE);
+
+    // ---- Frankfurter Depot am Ende der Bahn
+    const gd = G(svg, { class: "starr", "pointer-events": "none" });
+    depot(gd, 1440, BAHN, 108, false);
+    A(gd, "text", { x: 1440, y: BAHN + 34, class: "l", "text-anchor": "middle" },
+      "DEPOT FRANKFURT 180 km");
+    A(gd, "text", { x: 1440, y: BAHN + 56, class: "s", "text-anchor": "middle" },
+      `2 900 hl . Fracht ${fracht()} je hl`);
+    zeilen(svg, 1150, 232,
+      ["Auf der Bahn frisst der Weg nichts.", "Das Bier kommt am selben Tag an."], "r", 22);
+
+    // ---- Die rote Linie
+    const lx = s.linie, rechts = lx > 1250;
+    const rot = G(svg, { "pointer-events": "none" });
+    A(rot, "line", { x1: lx, y1: 420, x2: lx, y2: STRASSE + 58,
+      stroke: C.rot, "stroke-width": "3" });
+    zeilen(rot, lx + (rechts ? -14 : 14), 442,
+      ["So weit haelt das Bier", `${s.haelt} . ${s.km}`], "r", 22, rechts ? "end" : "start");
+    if (s.tief) A(rot, "text", { x: lx + (rechts ? -14 : 14), y: 486,
+      class: "s", "text-anchor": rechts ? "end" : "start", fill: C.rot },
+      "seit dem Felsenkeller");
+
+    // ---- Sortenwahl: sieht aus wie eine Legende, ist ein Schalter
+    const sg = G(svg);
+    const tx = 64, ty = 694, tw = 440, zh = 28, kh = 26;
+    A(sg, "rect", { x: tx, y: ty, width: tw, height: kh + 3 * zh, fill: "none",
+      stroke: C.tinte, "stroke-width": "1.6" });
+    A(sg, "line", { x1: tx, y1: ty + kh, x2: tx + tw, y2: ty + kh,
+      stroke: C.tinte, "stroke-width": "1.6" });
+    [["WAS AUF DEM WEG IST", 12], ["HAELT", 214], ["AUF DER STRASSE", 296]].forEach(([t, dx]) =>
+      A(sg, "text", { x: tx + dx, y: ty + 18, class: "s" }, t));
+    SORTEN.forEach((so, i) => {
+      const y = ty + kh + i * zh;
+      const an = i === sorte;
+      const g = A(sg, "g", { class: "schalter" + (an ? " an" : ""), tabindex: "0",
+        role: "button", "aria-pressed": String(an),
+        "aria-label": `${so.name}, haelt ${so.haelt}, Reichweite ${so.km}` });
+      A(g, "rect", { class: "feld", x: tx + 1, y: y + 1, width: tw - 2, height: zh - 2 });
+      A(g, "rect", { class: "fokus", x: tx + 3, y: y + 3, width: tw - 6, height: zh - 6,
+        fill: "none", stroke: "none" });
+      if (i) A(g, "line", { x1: tx, y1: y, x2: tx + tw, y2: y, stroke: C.tinte, "stroke-width": "0.8" });
+      const tief = so.tief && gewaehlt("keller");
+      A(g, "text", { x: tx + 12, y: y + 20, class: "l" }, so.name);
+      A(g, "text", { x: tx + 214, y: y + 20, class: "l" }, tief ? so.tief.haelt : so.haelt);
+      A(g, "text", { x: tx + 296, y: y + 20, class: "l" }, tief ? so.tief.km : so.km);
+      const waehle = () => { sorte = i; zeichne(); };
+      g.addEventListener("click", waehle);
+      g.addEventListener("keydown", ev => {
+        if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); waehle(); }
+      });
+    });
+
+    braujahr(svg, 46, 816, 1104, 7);
+    tabelle(svg, {
+      x: 1180, y: 684, w: 372, kopf: "BRAUEREI ZUM ANKER", mitte: true, zh: 24, kh: 28,
+      zeilen: [["Absatz hl", "13 750"], ["Haeuser", String(anzahlHaeuser())],
+               ["Haltbarkeit", s.haelt], ["Reichweite", s.km],
+               ["Fracht je hl", `0,60 bis ${fracht()}`]],
+      fuss: "gez. Georg Kraus, 11. Jahr"
+    });
+  }
+
+  /* ================================================================
+     BLATT 6 — DAS FREMDE HAUS AM WEG
+     ================================================================ */
+  function blattWirt(svg) {
+    const h = haus(wirt);
+    const artikel = ["Krone", "Post", "Sonne"].includes(h.name) ? "Die" : "Der";
+    grundblatt(svg, "DAS FREMDE HAUS AM WEG",
+      `${artikel} ${h.name} zu ${h.ort} . aufgenommen im Mai 1884 . Blatt 6`);
+
+    const ERDE = 600, MITTE = 350;
+
+    /* ---- Der Schnitt durch das Haus ---- */
+    const g = G(svg);
+    A(g, "line", { x1: 46, y1: ERDE, x2: 190, y2: ERDE, stroke: C.tinte, "stroke-width": "3" });
+    A(g, "line", { x1: 510, y1: ERDE, x2: 580, y2: ERDE, stroke: C.tinte, "stroke-width": "3" });
+
+    // Dachfläche als geschlossenes Band
+    A(g, "path", { d: `M 160 452 L ${MITTE} 300 L 540 452 L 508 452 L ${MITTE} 334 L 192 452 Z`,
+      fill: C.grauD, stroke: C.tinte, "stroke-width": "1.6" });
+    // Kehlbalken und Firstsäule im Gebälk
+    A(g, "rect", { x: 232, y: 374, width: 236, height: 15, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    A(g, "rect", { x: 342, y: 334, width: 16, height: 42, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    // Deckenbalken über der Schankstube
+    A(g, "rect", { x: 180, y: 437, width: 340, height: 15, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    // Wände
+    A(g, "rect", { x: 190, y: 452, width: 16, height: ERDE - 452, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    A(g, "rect", { x: 494, y: 452, width: 16, height: ERDE - 452, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    // Fußboden
+    A(g, "rect", { x: 180, y: ERDE, width: 340, height: 14, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+
+    // Schank: Tresen mit überstehender Platte, Fass und Hahn
+    A(g, "rect", { x: 216, y: 544, width: 106, height: ERDE - 544, fill: C.grauH,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    A(g, "rect", { x: 210, y: 534, width: 120, height: 12, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    fass(g, 226, 496, 48, 38, true);
+    A(g, "path", { d: "M 330 554 h 14 v 8", fill: "none", stroke: C.tinte, "stroke-width": "2" });
+
+    // Leute
+    figur(g, 352, ERDE, 64, false);                 // der Wirt neben dem Schank
+    if (h.sitze >= 2) {
+      A(g, "rect", { x: 386, y: 550, width: 74, height: 8, fill: C.grauH,
+        stroke: C.tinte, "stroke-width": "1.2" });
+      A(g, "line", { x1: 423, y1: 558, x2: 423, y2: ERDE, stroke: C.tinte, "stroke-width": "1.8" });
+      figurSitzend(g, 390, ERDE, 56, false);
+      figurSitzend(g, 456, ERDE, 56, true);
+    }
+    if (h.sitze >= 3) figur(g, 264, ERDE, 58, true);
+    figur(g, 132, ERDE, 62, true);                  // einer steht draußen
+
+    // Ausleger am Giebel
+    ausleger(g, 510, 496, 1, h.unser ? "unser" : "fremd");
+    if (h.umworben) ausleger(g, 190, 496, -1, "fremd", true);
+
+    // Keller
+    A(g, "rect", { x: 204, y: 614, width: 292, height: 158, fill: "url(#erdreich)",
+      stroke: C.tinte, "stroke-width": "2" });
+    A(g, "path", { d: "M 222 766 V 720 A 84 84 0 0 1 390 720 V 766 Z",
+      fill: C.papier, stroke: C.tinte, "stroke-width": "1.4" });
+    for (let i = 0; i < 3; i++) fass(g, 232 + i * 48, 722, 44, 44, i % 2 === 0);
+    let tp = "";
+    for (let i = 0; i <= 3; i++) tp += `${408 + i * 16},${714 + i * 13} ${424 + i * 16},${714 + i * 13} ${424 + i * 16},${727 + i * 13} `;
+    A(g, "polyline", { points: tp.trim(), fill: "none", stroke: C.tinte, "stroke-width": "1.4" });
+
+    A(g, "text", { x: MITTE, y: 800, class: "l", "text-anchor": "middle" },
+      `${h.name.toUpperCase()} . ${h.ort.toUpperCase()} . km ${h.km}`);
+
+    /* ---- Anmerkungen mit Bezugslinien ---- */
+    A(svg, "polyline", { points: "596,336 552,336 358,552", fill: "none",
+      stroke: C.tinte, "stroke-width": "1" });
+    A(svg, "text", { x: 604, y: 330, class: "l" }, h.zeilen[0][1]);
+
+    A(svg, "polyline", { points: "596,672 566,672 546,528", fill: "none",
+      stroke: C.rot, "stroke-width": "1.2" });
+    zeilen(svg, 604, 666, h.zeichen, "r", 22);
+
+    /* ---- EINZELHEIT A ---- */
+    const eh = G(svg);
+    A(eh, "text", { x: 940, y: 358, class: "h1", "text-anchor": "middle" }, "EINZELHEIT A");
+    A(eh, "line", { x1: 510, y1: 566, x2: 794, y2: 552, stroke: C.tinte, "stroke-width": "0.9" });
+    const ehDefs = A(eh, "defs");
+    const ehClip = A(ehDefs, "clipPath", { id: "ehkreis" });
+    A(ehClip, "circle", { cx: 940, cy: 540, r: 149 });
+    const ei = G(eh, { "clip-path": "url(#ehkreis)" });
+    // Tisch
+    A(ei, "rect", { x: 812, y: 616, width: 256, height: 14, fill: C.grauH,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    A(ei, "rect", { x: 852, y: 630, width: 14, height: 42, fill: C.grauH,
+      stroke: C.tinte, "stroke-width": "1.2" });
+    A(ei, "rect", { x: 1018, y: 630, width: 14, height: 42, fill: C.grauH,
+      stroke: C.tinte, "stroke-width": "1.2" });
+    // Glas, oben weiter als unten
+    const gt = 444, gb = 616, lo = 900, ro = 972, lu = 910, ru = 962;
+    A(ei, "path", { d: `M ${lo} ${gt} L ${ro} ${gt} L ${ru} ${gb} L ${lu} ${gb} Z`,
+      fill: C.papier, stroke: C.tinte, "stroke-width": "2.2" });
+    if (h.finger > 0) {
+      const oben = gb - h.finger * 30, t = (oben - gt) / (gb - gt);
+      const kl = lo + (lu - lo) * t + 4, kr = ro + (ru - ro) * t - 4;
+      A(ei, "path", { d: `M ${kl} ${oben} L ${kr} ${oben} L ${ru - 4} ${gb - 4} L ${lu + 4} ${gb - 4} Z`,
+        fill: C.grau, stroke: C.tinte, "stroke-width": "1.2" });
+      // Bemaßung neben dem Glas
+      const bx = 872;
+      A(ei, "line", { x1: bx, y1: oben, x2: bx, y2: gb, stroke: C.tinte, "stroke-width": "1" });
+      [oben, gb].forEach(y =>
+        A(ei, "line", { x1: bx - 7, y1: y, x2: bx + 34, y2: y, stroke: C.tinte, "stroke-width": "0.8" }));
+      A(ei, "path", { d: `M ${bx} ${oben} l -4 9 h 8 z`, fill: C.tinte });
+      A(ei, "path", { d: `M ${bx} ${gb} l -4 -9 h 8 z`, fill: C.tinte });
+      A(ei, "text", { x: bx - 13, y: 556, class: "s", fill: C.tinte,
+        "text-anchor": "middle", transform: `rotate(-90 ${bx - 13} 556)` },
+        h.finger === 1 ? "EIN FINGER" : "ZWEI FINGER");
+    } else {
+      A(ei, "text", { x: 866, y: 540, class: "s", fill: C.tinte, "text-anchor": "middle",
+        transform: "rotate(-90 866 540)" }, "KEIN REST");
+    }
+    // Filz dessen, der hier wirbt
+    if (h.filz) {
+      A(ei, "rect", { x: 992, y: 606, width: 56, height: 10, fill: C.grau,
+        stroke: C.tinte, "stroke-width": "1.2" });
+      A(ei, "line", { x1: 1044, y1: 544, x2: 1026, y2: 604, stroke: C.tinte, "stroke-width": "0.9" });
+      zeilen(ei, 1058, 486, h.filz.split("|"), "s", 21, "end");
+    }
+    A(eh, "circle", { cx: 940, cy: 540, r: 150, fill: "none", stroke: C.tinte,
+      "stroke-width": "2.4" });
+
+    zeilen(svg, 940, 736,
+      h.finger > 0
+        ? ["Was im Glas bleibt, ist keine Zahl von uns.", "Das Buch dazu fuehrt der Wirt."]
+        : ["Nichts bleibt im Glas. Das ist die beste Zahl,", "die wir nicht selbst fuehren."],
+      "r", 22, "middle");
+
+    /* ---- Tabelle rechts ---- */
+    tabelle(svg, { x: 1136, y: 56, w: 416, kopf: h.tafel, mitte: true,
+      zeilen: h.zeilen, zh: 32, kh: 36, teiler: 1310 });
+
+    /* ---- Angehefteter Zettel ---- */
+    const zg = G(svg, { transform: "rotate(-5 1350 546)", filter: "url(#schatten)" });
+    A(zg, "rect", { x: 1174, y: 476, width: 356, height: 140, fill: "#f4f0e6",
+      stroke: C.tinte, "stroke-width": "1" });
+    h.zettel.forEach((t, i) =>
+      A(zg, "text", { x: 1198, y: 518 + i * 30, class: "hand" }, t));
+    A(zg, "text", { x: 1506, y: 594, class: "hand", "text-anchor": "end",
+      "font-size": "18" }, h.zettelVon);
+    A(zg, "circle", { cx: 1494, cy: 490, r: 9, fill: C.grau, stroke: C.tinte, "stroke-width": "1.4" });
+
+    /* ---- Verweis auf Blatt 8, im Ton der Chronikkästen ---- */
+    const wb = klickbar(svg, "Weiter zu Blatt 8, drei Wege", () => setzeBlatt(8));
+    A(wb, "rect", { class: "anfass", x: 1180, y: 682, width: 372, height: 46, fill: C.papier });
+    A(wb, "rect", { class: "kante", x: 1180, y: 682, width: 372, height: 46,
+      fill: "none", stroke: C.tinte, "stroke-width": "1.6" });
+    A(wb, "rect", { class: "fokus", x: 1184, y: 686, width: 364, height: 38,
+      fill: "none", stroke: "none" });
+    A(wb, "text", { x: 1194, y: 711, class: "lb" }, "WAS DARAUS FOLGT");
+    A(wb, "text", { x: 1540, y: 711, class: "s", "text-anchor": "end" }, "Blatt 8 →");
+
+    braujahr(svg, 46, 812, 1104, 7);
+    tabelle(svg, { x: 1180, y: 740, w: 372, kopf: "BRAUEREI ZUM ANKER", mitte: true,
+      zh: 26, kh: 26,
+      zeilen: [["Haeuser", String(anzahlHaeuser())], ["Reichweite", sorteJetzt().km]],
+      fuss: "aufgenommen von Georg Kraus" });
+  }
+
+  /* ================================================================
+     BLATT 8 — DREI WEGE, EIN WINTER
+     ================================================================ */
+  function bildKeller(p, cx, cy) {
+    const g = G(p);
+    const og = cy - 72, sohle = cy + 60;          // Erdoberfläche und Kellersohle
+    A(g, "path", { d: `M ${cx - 150} ${og} h 300 v ${sohle - og} h -300 z`,
+      fill: "url(#erdreich)", stroke: C.tinte, "stroke-width": "1.8" });
+    // Das bestehende Gewölbe, aus dem Erdreich ausgespart
+    A(g, "path", { d: `M ${cx - 70} ${sohle} V ${cy + 10} A 70 70 0 0 1 ${cx + 70} ${cy + 10} V ${sohle} Z`,
+      fill: C.papier, stroke: C.tinte, "stroke-width": "1.8" });
+    A(g, "path", { d: `M ${cx - 48} ${sohle} V ${cy + 10} A 48 48 0 0 1 ${cx + 48} ${cy + 10} V ${sohle} Z`,
+      fill: "none", stroke: C.tinte, "stroke-width": "1.2" });
+    for (let i = 1; i < 7; i++) {
+      const a = Math.PI - i * (Math.PI / 7);
+      A(g, "line", { x1: cx + Math.cos(a) * 48, y1: cy + 10 - Math.sin(a) * 48,
+        x2: cx + Math.cos(a) * 70, y2: cy + 10 - Math.sin(a) * 70,
+        stroke: C.tinte, "stroke-width": "1" });
+    }
+    // Die neue Tiefe: rot, weil sie noch nicht existiert
+    A(g, "path", { d: `M ${cx - 84} ${sohle} v 56 h 168 v -56`,
+      fill: "url(#erdreich)", stroke: C.rot, "stroke-width": "2.6" });
+    A(g, "line", { x1: cx - 84, y1: sohle, x2: cx + 84, y2: sohle,
+      stroke: C.rot, "stroke-width": "2.6", "stroke-dasharray": "7 5" });
+    return g;
+  }
+
+  function bildHaeuser(p, cx, cy) {
+    const g = G(p);
+    A(g, "line", { x1: cx - 170, y1: cy + 76, x2: cx + 170, y2: cy + 76,
+      stroke: C.tinte, "stroke-width": "3" });
+    [-112, 112].forEach(dx => {
+      const x = cx + dx;
+      A(g, "path", { d: `M ${x - 46} ${cy + 4} L ${x} ${cy - 44} L ${x + 46} ${cy + 4} Z`,
+        fill: C.grau, stroke: C.rot, "stroke-width": "2.6" });
+      A(g, "rect", { x: x - 38, y: cy + 4, width: 76, height: 72, fill: C.grau,
+        stroke: C.rot, "stroke-width": "2.6" });
+      A(g, "rect", { x: x - 7, y: cy + 20, width: 14, height: 18, fill: C.papier,
+        stroke: C.tinte, "stroke-width": "1.2" });
+      ausleger(g, x + (dx < 0 ? 38 : -38), cy + 20, dx < 0 ? 1 : -1, "unser");
+    });
+    return g;
+  }
+  function bildDepot(p, cx, cy) {
+    const g = G(p);
+    A(g, "line", { x1: cx - 180, y1: cy + 76, x2: cx + 180, y2: cy + 76,
+      stroke: C.tinte, "stroke-width": "3" });
+    for (let x = cx - 176; x < cx + 176; x += 14)
+      A(g, "line", { x1: x, y1: cy + 78, x2: x, y2: cy + 88, stroke: C.tinte, "stroke-width": "1.6" });
+    A(g, "path", { d: `M ${cx - 172} ${cy + 76} V ${cy - 6} L ${cx - 148} ${cy - 22}
+      H ${cx + 46} V ${cy + 76} Z`, fill: C.grau, stroke: C.rot, "stroke-width": "2.6" });
+    A(g, "line", { x1: cx - 148, y1: cy - 22, x2: cx - 148, y2: cy + 76,
+      stroke: C.rot, "stroke-width": "2" });
+    A(g, "line", { x1: cx - 62, y1: cy - 12, x2: cx - 62, y2: cy + 76,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    // Wagen
+    A(g, "rect", { x: cx + 84, y: cy + 34, width: 96, height: 26, fill: C.grauH,
+      stroke: C.rot, "stroke-width": "2.4" });
+    A(g, "rect", { x: cx + 80, y: cy + 58, width: 104, height: 8, fill: C.grau,
+      stroke: C.tinte, "stroke-width": "1.4" });
+    [cx + 100, cx + 164].forEach(wx =>
+      A(g, "circle", { cx: wx, cy: cy + 70, r: 8, fill: C.papier, stroke: C.tinte, "stroke-width": "2" }));
+    return g;
+  }
+
+  function blattWege(svg) {
+    grundblatt(svg, "DREI WEGE, EIN WINTER", "Herbst 1884 . Hohenau . Blatt 8");
+
+    const oben = 152, unten = 700, x0 = 46, x1 = 1554;
+    A(svg, "rect", { x: x0, y: oben, width: x1 - x0, height: unten - oben,
+      fill: "none", stroke: C.tinte, "stroke-width": "1.6" });
+    const bw = (x1 - x0) / 3;
+
+    const rest = wahl === null ? BARSCHAFT : BARSCHAFT - WEGE.find(w => w.id === wahl).kosten;
+
+    WEGE.forEach((w, i) => {
+      const sx = x0 + i * bw;
+      if (i) A(svg, "line", { x1: sx, y1: oben, x2: sx, y2: unten,
+        stroke: C.tinte, "stroke-width": "1.6" });
+
+      const ist = wahl === w.id;
+      const tot = wahl !== null && !ist && w.kosten > rest;
+      const g = A(svg, "g", {
+        class: "schalter" + (tot ? " tot" : ""),
+        tabindex: tot ? "-1" : "0", role: "button", "aria-pressed": String(ist),
+        "aria-label": `${w.kopf}, ${w.unter}, ${w.preis}`
+      });
+      if (!tot) {
+        const fn = () => { wahl = ist ? null : w.id; zeichne(); };
+        g.addEventListener("click", fn);
+        g.addEventListener("keydown", ev => {
+          if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); fn(); }
+        });
+      }
+      A(g, "rect", { class: "feld", x: sx + 2, y: oben + 2, width: bw - 4, height: unten - oben - 4,
+        fill: "transparent" });
+      A(g, "rect", { class: "fokus", x: sx + 8, y: oben + 8, width: bw - 16, height: unten - oben - 16,
+        fill: "none", stroke: "none" });
+      if (ist) A(g, "rect", { x: sx + 6, y: oben + 6, width: bw - 12, height: unten - oben - 12,
+        fill: "none", stroke: C.rot, "stroke-width": "3" });
+
+      A(g, "text", { x: sx + 30, y: oben + 46, class: "h1" }, w.kopf);
+      A(g, "text", { x: sx + 30, y: oben + 72, class: "l" }, w.unter);
+      A(g, "text", { x: sx + bw - 30, y: oben + 54, class: "rp", "text-anchor": "end" }, w.preis);
+
+      const mx = sx + bw / 2;
+      if (w.id === "keller") bildKeller(g, mx, oben + 190);
+      if (w.id === "haeuser") bildHaeuser(g, mx, oben + 190);
+      if (w.id === "depot") bildDepot(g, mx, oben + 190);
+
+      w.fakten.forEach((f, n) => {
+        const y = oben + 322 + n * 36;
+        A(g, "line", { x1: sx + 30, y1: y, x2: sx + bw - 30, y2: y,
+          stroke: C.tinte, "stroke-width": "0.8" });
+        A(g, "text", { x: sx + 40, y: y + 25, class: "l" }, f);
+      });
+      A(g, "line", { x1: sx + 30, y1: oben + 322 + 5 * 36, x2: sx + bw - 30,
+        y2: oben + 322 + 5 * 36, stroke: C.tinte, "stroke-width": "0.8" });
+      A(g, "text", { x: sx + 40, y: unten - 20, class: "ri" }, w.folge);
+    });
+
+    // Der rote Balken
+    A(svg, "rect", { x: x0, y: unten, width: x1 - x0, height: 56, fill: "none",
+      stroke: C.tinte, "stroke-width": "1.6" });
+    let balken;
+    if (wahl === null) {
+      balken = `BARSCHAFT ${BARSCHAFT.toLocaleString("de-DE").replace(/\./g, " ")} M . ES REICHT FUER EINES`;
+    } else {
+      const w = WEGE.find(x => x.id === wahl);
+      const uebrig = WEGE.filter(x => x.id !== wahl && x.kosten <= rest).length;
+      balken = `${w.kopf} GEWAEHLT . BLEIBEN ${rest.toLocaleString("de-DE").replace(/\./g, " ")} M . ` +
+        (uebrig ? `NOCH EINES MOEGLICH` : `DIE ANDEREN BEIDEN FALLEN AUS`);
+    }
+    A(svg, "text", { x: (x0 + x1) / 2, y: unten + 39, class: "rb", "text-anchor": "middle" }, balken);
+
+    braujahr(svg, 46, 806, 1104, 2);
+    tabelle(svg, { x: 1180, y: 762, w: 372, kopf: "BRAUEREI ZUM ANKER", mitte: true,
+      zh: 26, kh: 26,
+      zeilen: [["Barschaft", rest.toLocaleString("de-DE").replace(/\./g, " ") + " M"],
+               ["Haeuser", String(anzahlHaeuser())]],
+      fuss: "gez. Georg Kraus, 11. Jahr" });
+  }
+
+  /* ================================================================
+     RAHMENWERK: Reiter, Fuß, Zeichnen
+     ================================================================ */
+  const svg = document.getElementById("blatt");
+
+  function reiterTitel() {
+    const h = haus(wirt);
+    return [
+      [5, "Blatt 5 · Die Strecke"],
+      [6, `Blatt 6 · ${h.name} zu ${h.ort}`],
+      [8, "Blatt 8 · Drei Wege"]
+    ];
+  }
+
+  function zeichneReiter() {
+    const box = document.getElementById("reiter");
+    box.innerHTML = "";
+    reiterTitel().forEach(([nr, t]) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-selected", String(blatt === nr));
+      b.textContent = t;
+      b.addEventListener("click", () => setzeBlatt(nr));
+      box.appendChild(b);
+    });
+  }
+
+  function fussText() {
+    const s = sorteJetzt();
+    if (blatt === 5) return [
+      "<b>Klicken:</b> ein Wirtshaus · eine Sorte",
+      `${s.name} · ${s.haelt} · ${s.km} auf der Strasse`
+    ];
+    if (blatt === 6) return [
+      "<b>Klicken:</b> was daraus folgt",
+      `${haus(wirt).name} zu ${haus(wirt).ort} · km ${haus(wirt).km}`
+    ];
+    return [
+      "<b>Klicken:</b> ein Weg · noch einmal klicken nimmt ihn zurueck",
+      wahl === null ? "Nichts gewaehlt" : `Gewaehlt: ${WEGE.find(w => w.id === wahl).kopf}`
+    ];
+  }
+
+  function zeichne() {
+    svg.innerHTML = "";
+    defs(svg);
+    svg.setAttribute("aria-label",
+      blatt === 5 ? "Blatt 5, die Strecke"
+      : blatt === 6 ? "Blatt 6, das fremde Haus am Weg"
+      : "Blatt 8, drei Wege, ein Winter");
+    if (blatt === 5) blattStrecke(svg);
+    else if (blatt === 6) blattWirt(svg);
+    else blattWege(svg);
+
+    zeichneReiter();
+    const [l, r] = fussText();
+    document.getElementById("fuss-links").innerHTML = l;
+    document.getElementById("fuss-rechts").textContent = r;
+    document.getElementById("stand").textContent =
+      `Anno 1884 · Georg Kraus, 11. Jahr · ${anzahlHaeuser()} Haeuser`;
+  }
+
+  function setzeBlatt(nr) {
+    if (nr === blatt) return;
+    blatt = nr;
+    svg.classList.add("wechsel");
+    setTimeout(() => { zeichne(); svg.classList.remove("wechsel"); }, 160);
+  }
+  function zuWirt(id) {
+    wirt = id;
+    setzeBlatt(6);
+    if (blatt === 6) zeichneReiter();
+  }
+
+  document.addEventListener("keydown", ev => {
+    if (ev.key === "Escape") setzeBlatt(5);
+    if (ev.key === "1") setzeBlatt(5);
+    if (ev.key === "2") setzeBlatt(6);
+    if (ev.key === "3") setzeBlatt(8);
   });
-  document.addEventListener("keydown", e => { if (e.key === "Escape") schliessen(); });
 
-  zeichneAlles();
+  zeichne();
 })();
 </script>
