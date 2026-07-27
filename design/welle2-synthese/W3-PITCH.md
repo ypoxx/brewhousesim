@@ -316,8 +316,9 @@ nur mit einem Geschoss statt vier. Das ist die eigentliche Antwort auf „nieman
 Gesicht": Ich brauche keine neue Grafikklasse, um in ein fremdes Haus hineinzusehen, weil
 Häuser bei mir ohnehin aufgeschnitten sind.
 
-**Gebäude: weiterhin 0. Wirtshäuser: 0. Konkurrenzbrauereien: 0.** Vier Blätter zeigen
-neunzehn Bauwerke aus drei Rechtecktypen. Die Zahl wächst nicht, wenn das Spiel wächst.
+**Gebäude: weiterhin 0. Wirtshäuser: 0. Konkurrenzbrauereien: 0.** Die sechs Blätter zeigen
+gut zwei Dutzend Bauwerke, und alle kommen aus derselben Handvoll Profile, Schraffuren und
+Beschriftungen. Die Zahl wächst nicht, wenn das Spiel wächst.
 
 ---
 
@@ -367,6 +368,51 @@ neunzehn Bauwerke aus drei Rechtecktypen. Die Zahl wächst nicht, wenn das Spiel
    *MCCCLII* besser gemacht. Wenn jemand diesen Pfad baut, würde ich hier nachgeben: römische
    Ziffern in Epoche I sind billig und richtig, und der Bruch beim Übergang zu arabischen
    Ziffern im 15. Jahrhundert wäre ein Epochenereignis geschenkt.
+
+---
+
+## 9a. Verbliebene Mängel in den gelieferten Bildern
+
+Nicht wegdiskutiert, weil ein Pitch, dessen Bilder makellos behauptet werden, unglaubwürdig
+ist. Keiner der fünf Punkte betrifft eine Zahl, eine Jahresangabe oder eine Regel.
+
+1. **`w3-03`, das Streckenband** trägt rund vierzig Teilstriche und ist mit *ALLE HAEUSER 49*
+   beschriftet. Wer nachzählt, findet die Differenz. Im gebauten Spiel wäre der Streifen eine
+   Schleife über den Datensatz und stimmte von selbst.
+2. **`w3-06`** beschriftet den Brunnen zweimal, oben und unten am selben Schacht.
+3. **`w3-06`**, die untere Bannmeilenklammer endet an der Furt statt an einem Ort. Gemeint war
+   ein Punkt zwischen Furt und Griesbach.
+4. **`w3-01`**, die Häuser bei Griesbach tragen ein volles *und* ein leeres Schild. Gemeint
+   war nur das leere — der Löwen ist umkämpft.
+5. **Die Unterschrift von 1350 heißt `gez. H. Kraus`, nicht `gez. Heinrich Kraus`.** Das Wort
+   *Heinrich* kam in drei Läufen dreimal als *Heinrick* heraus. Abkürzen war die einzige
+   Lösung, die nicht am nächsten Fehler vorbei in einen neuen lief.
+
+---
+
+## 9b. Vier handwerkliche Funde für die Nachfolger
+
+Alle an den sechs Läufen belegt, alle neu gegenüber `WERKZEUGE.md`.
+
+1. **Positioniere niemals in Prozent.** *„a ground line at 62 percent of the image height"*
+   hat prompt eine Beschriftung **62 %** auf die Erdlinie geschrieben — dreimal, an drei
+   verschiedenen Linien. Der Vorgänger hatte das schon einmal getroffen; es reicht nicht, es
+   zu wissen, man muss die Formulierung ganz vermeiden. *Oben, unten, knapp unter der Mitte*
+   funktioniert.
+2. **Kein englisches Hilfswort in Versalien.** Aus *UPPER LINE*, *GROUND LINE*, *SPLITS* und
+   *EMPTY sign* wurden vier Beschriftungen im fertigen Bild — das Modell hält Versalien für
+   Text, den es setzen soll. Zwei Sätze helfen zuverlässig: *There is no English anywhere on
+   the sheet* und *the earth line itself carries no label*.
+3. **Die ae/oe/ue-Ersatzschreibung kippt auf zwei Arten**, und beide sehen nach Flüchtigkeit
+   aus: entweder zur Ligatur (*fæhrt*) oder zum echten Umlaut mit angehängtem e (*abgefüellt*,
+   *köennen*). Nachbessern hilft nicht, das Wort wechseln hilft immer: *abgefuellt* →
+   *vom 2. November*, *koennen* → *fuehrt*. Ein zusätzlicher Satz gegen Ligaturen im Prompt
+   senkt die Trefferquote spürbar.
+4. **Zellen einzeln aufzählen reicht nicht immer.** *„Cell 1 SEP tinted, Cell 2 OKT tinted,
+   …"* ergab trotzdem einmal vier und einmal neun getönte Monate. Was durchgehend funktioniert
+   hat, war Aufzählung **plus** dieselbe Regel noch einmal in Worten: *acht getönte Zellen
+   links, vier leere rechts, und keine leere Zelle unter den ersten acht*. Doppelt gesagt ist
+   hier nicht redundant, sondern der Unterschied.
 
 ---
 
