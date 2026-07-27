@@ -192,14 +192,27 @@ richtig, mechanisch schön: früh Glück, spät Geld.
 
 ---
 
-## 10. Tycoon, nicht Transport
+## 10. Tycoon — und Transport ist erlaubt
 
-Ausdrücklich **kein Logistiknetz**: keine Strecken, keine Depots, keine Fahrzeuge.
-Distribution ist eine *Eigenschaft* („wie weit reicht dieses Bier"), kein Netz, das man
-zeichnet.
+*Korrigiert. Die frühere Fassung verbot ein Logistiknetz. Das war eine Überinterpretation:
+Der Auftraggeber wollte verhindern, dass Transport zum Schwerpunkt wird, nur weil Transport
+Tycoon als Vorbild genannt wurde — nicht, dass Entfernung und Verteilung überhaupt
+vorkommen.*
 
 Die Verben sind die klassischen: kaufen, bauen, Preise setzen, expandieren, übernehmen,
 forschen.
+
+**Entfernung darf eine Rolle spielen.** Wie man expandiert, wie weit ein Bier reist, was der
+Weg kostet — das ist Teil einer guten Bierwirtschaft, nicht ein Fremdkörper. Historisch
+sogar zwingend: Der ganze Aufstieg des gehopften Bieres beruht darauf, dass es transportiert
+werden *konnte*.
+
+Die Leitplanke ist eine andere und weichere: **Transport ist Mittel, nicht Selbstzweck.**
+Ein Netz, das man um seiner selbst willen optimiert, während das Bier zur Nebensache wird,
+verfehlt das Spiel. Ein Netz, das erklärt, warum eine Sorte eine Region erobert und eine
+andere nicht, gehört dazu.
+
+Wie viel Netz es am Ende gibt, entscheidet das Marktmodell (siehe 13) — nicht diese Regel.
 
 ---
 
