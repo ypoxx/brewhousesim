@@ -276,19 +276,106 @@ Zwei dort korrigierte Angaben, die vorher zu glatt formuliert waren:
 
 ---
 
-## 13. Offene Fragen
+## 13. Das Marktmodell — Arbeitsannahme
 
-- **Marktmodell.** Wie entstehen Nachfrage und Preis? Das ist das Herzstück und noch
-  offen. Vorrangig vor allem anderen zu klären — hier scheitern vergleichbare Titel.
-- **Verlieren.** Kann das Haus untergehen? Und wenn ja: Ende oder Neuanfang?
-- **Kartenraum.** Erfundene Region oder reale Geografie?
-- **Sitzungslänge.** Wie lang ist eine Amtszeit in Spielminuten?
-- **Umfang der Epoche IV.** Die Gegenwart ist die teuerste Epoche im Bau.
+*Nicht vom Auftraggeber entschieden. Diese Fassung fasst zusammen, worauf sechs unabhängig
+befragte Testpersonen gestoßen sind (siehe `design/feedback/`), und ist ausdrücklich
+kippbar. Sie steht hier, weil ohne sie niemand einen Gegner zeichnen kann — genau daran
+sind alle sechs Entwürfe der ersten Welle gescheitert.*
+
+### Der eine Befund
+
+Sechs Personas, sechs Blickwinkel, ein Urteil: **Es gibt kein Gegenüber.** Niemand trinkt
+das Bier, niemand kostet es, niemand spricht, niemand will dasselbe wie der Spieler,
+niemand hat eine Meinung über ihn. In achtzehn Bildschirmen kommt kein einziges Gebäude
+vor, in dem Bier getrunken wird — Konkurrenzbrauereien schon, Wirtshäuser nicht.
+
+Die Markenstrategin hat daraus den Satz gemacht, an dem das ganze Modell hängt:
+
+> Bedeutung ist keine Eigenschaft, sondern eine Zuschreibung, die ausschließlich in fremden
+> Köpfen existiert. Eine Zahl, die mir gehört, ist keine Marke.
+
+### Der Markt besteht aus Orten, nicht aus Prozenten
+
+Ein Marktanteil ist die Abwesenheit eines Gegners in Zahlenform. Stattdessen:
+
+**Absatzorte sind endlich, benannt und belegbar.** Jeder hat einen Namen, eine Lage, eine
+Menge und eine Geschichte. Wer dort ausschenkt, schenkt woanders nicht aus.
+
+**Gebunden wird über Vorleistung, nicht über Preis.** Der Bierlieferungsvertrag bindet über
+Laufzeit, Abnahmemenge, Darlehen, verlorenen Zuschuss und gestellte Einrichtung, die
+Eigentum der Brauerei bleibt.
+
+**Der Wechsel heißt Ablösung.** Die neue Brauerei zahlt die Restschuld bei der alten und
+schreibt neu. Damit ist kein Wirt frei oder gebunden — **jeder hat einen Preis, der mit den
+Vorleistungen des Wettbewerbers steigt.** Expansion heißt nicht „Werk bauen", sondern
+Adressen freikaufen.
+
+**Wechselauslöser, in der Reihenfolge ihrer Häufigkeit** (aus der Praxis, nicht erfunden):
+Vertragsende plus besseres Angebot · eine einzige verpasste Lieferung zur Unzeit ·
+Preiserhöhung ohne Vorwarnung · Übernahme der Brauerei durch einen Konzern ·
+Generationswechsel beim Wirt · und erst zuletzt Qualität.
+
+**Die eingebaute Bremse.** Wird eine Brauerei aufgekauft, kündigen Wirte — der Käufer
+verliert sofort einen zweistelligen Prozentsatz der gekauften Menge. Konsolidierung
+bestraft sich selbst, ohne dass eine Regel erfunden werden muss.
+
+**Der Ortstyp wandert durch die Epochen.** Schankrecht und eigener Ausschank (I) →
+Wirtshaus mit Vertrag (II–III) → Bahnstation, Depot, Handelsvertrag (III) → Listung im
+Lebensmittelhandel (IV). Derselbe Mechanismus, viermal anderer Charakter.
+
+**Konkurrenten sind Häuser wie deines.** Mit Namen, eigenen Erben, eigener Dampfmaschine
+und eigenem Untergang. Das Konzept liefert den Motor gratis mit: Wenn der Spieler ein Haus
+über Generationen führt, tun die anderen das auch.
+
+### Qualität wird eine eigene Größe
+
+Unter vierzehn Kennzahlen in den Entwürfen der ersten Welle hieß keine einzige Qualität —
+alles war Menge oder Geld. Damit fehlt die Frage, die den Beruf ausmacht: *Ist das gut
+genug, dass mein Name draufkommt?* In allen sechs Pfaden gehen nur Bilanzen kaputt, nie ein
+Sud. Qualität gehört als eigene, sichtbare, verlierbare Größe ins Modell.
+
+### Drei Korrekturen an früheren Abschnitten
+
+- **„Preise setzen" ist als Verb Fiktion.** Der Listenpreis ist eine Zahl auf Papier;
+  entscheidend sind Rückvergütung und Naturalrabatt. Abschnitt 10 nennt es trotzdem noch so.
+- **Abschnitt 6, Epoche IV stimmt so nicht.** Das Brauereisterben war ein Verdrängungskampf
+  um Zapfhähne, nicht um Identität. „Bedeuten" ist das Kernverb der *Gegenwart*, nicht der
+  1970er — was zugleich erklärt, warum Epoche IV in allen sechs Entwürfen nur Epoche III mit
+  anderer Typografie war.
+- **Das Sommerbrauverbot war halb gedacht.** Die andere Jahreshälfte wird nicht „gebaut und
+  geheiratet", sie wird *getrunken*: **Der Aprilbestand entscheidet über den Sommerabsatz.**
+  Aus der Kalenderleiste wird damit eine Entscheidung mit Folgen.
+
+### Was das für die Optik heißt
+
+Abschnitt 11 nennt „Emailschilder in immer mehr Wirtshäusern" als Bild für
+Markenbekanntheit. Das denkt den Wirt als Werbefläche. In Wahrheit ist das Schild die
+**Quittung für einen unterschriebenen Vertrag** — ein Vertriebswert, kein Bekanntheitswert.
+Das Bild bleibt richtig, seine Bedeutung ändert sich.
 
 ---
 
-## 14. Was als Nächstes passiert
+## 14. Offene Fragen
 
-1. Visuelle Entwürfe im Browser — ansehen und wegwerfen ist schneller als beschreiben.
-2. Marktmodell klären.
-3. Erst danach: Code.
+- **Verlieren.** Kann das Haus untergehen? Und wenn ja: Ende oder Neuanfang?
+- **Kartenraum.** Erfundene Region oder reale Geografie?
+- **Sitzungslänge.** Wie lang ist eine Amtszeit in Spielminuten?
+- **Die Gegenwart.** Die mitalternde Ästhetik hat ihren natürlichen Endpunkt um 1975. Ein
+  Vorschlag aus der Prüfung: *in der Gegenwart enden, ohne gegenwärtig auszusehen* — die
+  Instrumente des Spielers bleiben die des Hauses, zeitgenössisch wird nur, was von außen
+  hereinkommt: Listungsvertrag, Konzernpräsentation, Übernahmebrief in Helvetica.
+- **Die drei Bedientiefen** (Abschnitt 8) sind in ihrer jetzigen Fassung ein Skalar, kein
+  Trade-off: „ordentlich, nie optimal" heißt, Handarbeit ist immer besser. Sie werden erst
+  zur Mechanik, wenn Aufmerksamkeit zählbar knapp ist und Richtlinien träge werden.
+- **Der Erbfall** ist bisher Dekoration. Scharf wird er erst durch Erbteilung, den Verlust
+  von Richtlinien und personengebundene Verträge.
+
+---
+
+## 15. Was als Nächstes passiert
+
+1. Zweite Welle visueller Entwürfe, auf Grundlage des Marktmodells oben.
+2. Dritte Welle mit gegenseitigem Austausch der Entwerfenden.
+3. Jury-Empfehlung.
+4. Erst danach: Code.
