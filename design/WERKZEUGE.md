@@ -102,8 +102,36 @@ Im Prompt der Folgebilder ausdrücklich sagen, was übernommen wird und was sich
 > same typographic system, same grid, same line weights. Change only the epoch: this is now
 > 1970, the operation has forty sites, and the density of information is far higher.
 
-`--ref` ist auch der Weg, ein fast fertiges Bild zu **korrigieren** — falsches Wort,
-störendes Element, zu dunkel. Neu würfeln ist fast immer schlechter als nachbessern.
+### Was `--ref` kann und was nicht
+
+*Nachträglich korrigiert. Die ursprüngliche Fassung riet pauschal zum Nachbessern — das ist
+falsch. Alle sechs Designer haben unabhängig voneinander Erfahrungen damit gemacht, die
+sich zunächst widersprachen; aufgelöst sind es vier verschiedene Vorgänge unter einem Namen.*
+
+**Die Regel: `--ref` erhält, was es sieht.**
+
+| Vorgang | Taugt `--ref`? |
+|---|---|
+| Stil über eine Bildserie halten | **Ja, dafür ist es da.** Der eigentliche Zweck. |
+| Flächen, Farben, einzelne Gegenstände ändern | Ja, zuverlässig. |
+| Typografie umstellen, Raster umbauen | **Nein.** Das Referenzbild konserviert die Schrift. Neu erzeugen. |
+| Kleinschrift korrigieren | **Gefährlich.** Buchstaben werden als Textur gesehen und beim Lauf neu gewürfelt — aus korrekten Spalten wurden „Feisenkeller", „Süllstand", „Sodhaus". |
+
+Daraus folgt auch die Auflösung der Umlautfrage: Umlaute **gelingen bei frischer Erzeugung**
+(ein Designer hat ein korrektes „GÄRKELLER" belegt) und sterben im Nachbesserungslauf. Bei
+textdichten Bildern also: Prompt korrigieren und neu erzeugen, nicht nachbessern.
+
+Wenn ein Wort sich trotzdem hartnäckig wehrt, wechselt das Wort. Bewährt hat sich, anderes
+Deutsch zu wählen statt ASCII-Ersatz — „Rechnungsjahr" statt „Geschäftsjahr", „Eismaschine"
+statt „Kühlmaschine".
+
+### Und eine Falle, die keine Prompt-Technik löst
+
+Prüft eure Zahlen **gegeneinander**, nicht nur einzeln. In der Nachprüfung lagen drei von
+vier Pfaden, die einen Marktanteil ins Bild schrieben, daneben — weil niemand den
+Gesamtmarkt nachgeschlagen hatte. Ein Bild kann in sich stimmig aussehen und trotzdem um
+Faktor 4 falsch sein. Wer einen Anteil zeigt, muss das Ganze kennen, auf das er sich
+bezieht.
 
 ---
 
