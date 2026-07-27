@@ -1,0 +1,519 @@
+<title>Brauhaus — Klickdummy</title>
+<style>
+  :root {
+    --papier:#f2e9d8; --papier-2:#e8dcc6; --tinte:#2b241c; --tinte-2:#6b5f4e;
+    --zinnober:#b23a1f; --grau:#a99c86; --blatt:#fbf7ee;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#171512; color:var(--tinte); font-family:var(--sans); }
+  .rahmen { max-width:1500px; margin:0 auto; padding:18px 16px 60px; }
+  .kopf { display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+    flex-wrap:wrap; color:#cfc4ae; margin-bottom:12px; }
+  .kopf h1 { font-family:var(--serif); font-size:19px; font-weight:600; margin:0;
+    letter-spacing:.01em; }
+  .kopf p { margin:0; font-family:var(--mono); font-size:11px; letter-spacing:.12em;
+    text-transform:uppercase; color:#8d8271; }
+  .buehne { position:relative; background:var(--papier); box-shadow:0 2px 40px #0008; }
+  svg.blatt { display:block; width:100%; height:auto; }
+  text { font-family:var(--serif); fill:var(--tinte); }
+  .lbl { font-family:var(--sans); font-size:13px; }
+  .lbl-k { font-family:var(--sans); font-size:11px; fill:var(--tinte-2); }
+  .num { font-family:var(--sans); font-size:14px; font-variant-numeric:tabular-nums; }
+  .rot { fill:var(--zinnober); }
+  .hand { font-family:var(--serif); font-style:italic; fill:var(--zinnober); font-size:14px; }
+  .titel { font-size:26px; letter-spacing:.01em; }
+  .unter { font-size:13px; fill:var(--tinte-2); font-family:var(--sans); }
+
+  /* Bedienelemente, bewusst diegetisch: sie sehen aus wie Teile des Blattes */
+  .ziel { cursor:pointer; }
+  .ziel:focus { outline:none; }
+  .ziel .treffer { fill:transparent; }
+  .ziel:hover .haus-koerper, .ziel:focus-visible .haus-koerper { fill:var(--papier-2); }
+  .ziel:hover .schild-r, .ziel:focus-visible .schild-r { stroke:var(--zinnober); }
+  .ziel:focus-visible .fokus { stroke:var(--zinnober); stroke-width:1.5; stroke-dasharray:3 3; }
+  .aus { opacity:.32; }
+
+  .schalter { cursor:pointer; }
+  .schalter rect.f { fill:transparent; stroke:var(--tinte-2); stroke-width:1; }
+  .schalter:hover rect.f { stroke:var(--zinnober); }
+  .schalter.an rect.f { fill:var(--zinnober); stroke:var(--zinnober); }
+  .schalter.an text { fill:var(--blatt); }
+
+  /* Überlagertes Blatt */
+  .ueber { position:absolute; inset:0; display:none; align-items:center; justify-content:center;
+    background:#2b241cbb; padding:2%; }
+  .ueber.an { display:flex; }
+  #ueber-inhalt { width:min(1040px, 94%); }
+  .ueber svg { width:100%; height:auto; display:block; box-shadow:0 8px 50px #0009; }
+
+  .fuss { margin-top:14px; display:flex; justify-content:space-between; gap:16px;
+    flex-wrap:wrap; color:#8d8271; font-family:var(--mono); font-size:11px;
+    letter-spacing:.08em; text-transform:uppercase; }
+  .fuss b { color:#cfc4ae; font-weight:500; }
+  kbd { font-family:var(--mono); border:1px solid #5a5245; padding:1px 5px; border-radius:2px;
+    color:#cfc4ae; }
+  .hinweis { margin-top:26px; color:#9d9280; font-size:14px; line-height:1.65;
+    max-width:78ch; }
+  .hinweis h2 { color:#cfc4ae; font-size:14px; font-family:var(--mono); letter-spacing:.14em;
+    text-transform:uppercase; font-weight:600; margin:0 0 8px; }
+  .hinweis p { margin:0 0 10px; }
+  .hinweis em { color:#cfc4ae; font-style:normal; }
+</style>
+
+<div class="rahmen">
+  <div class="kopf">
+    <h1>Brauhaus zum Anker · Hohenau</h1>
+    <p id="stand">Anno 1884 · Woche 14 · Georg Kraus, 11. Jahr</p>
+  </div>
+
+  <div class="buehne">
+    <svg class="blatt" id="blatt" viewBox="0 0 1600 900" role="img"
+         aria-label="Technisches Blatt: Brauhaus im Schnitt und die Strecke mit den Wirtshäusern">
+      <defs>
+        <filter id="faser" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/>
+          <feColorMatrix type="saturate" values="0"/>
+          <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+          <feComposite operator="in" in2="SourceGraphic"/>
+        </filter>
+        <pattern id="erde" width="7" height="7" patternUnits="userSpaceOnUse"
+                 patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="7" stroke="#6b5f4e" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="mauer" width="6" height="6" patternUnits="userSpaceOnUse"
+                 patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="6" stroke="#2b241c" stroke-width="0.6"/>
+        </pattern>
+      </defs>
+
+      <rect width="1600" height="900" fill="var(--papier)"/>
+      <rect width="1600" height="900" fill="#000" filter="url(#faser)" opacity="0.5"/>
+      <rect x="18" y="18" width="1564" height="864" fill="none" stroke="var(--tinte)"
+            stroke-width="1.5"/>
+
+      <g id="kopfzeile">
+        <text class="titel" x="48" y="72">DAS HAUS AM WEG</text>
+        <text class="unter" x="48" y="96">Anno 1884 · Hohenau · Blatt 1 von 6</text>
+      </g>
+
+      <g id="chronik"></g>
+      <g id="haus"></g>
+      <g id="strecke"></g>
+      <g id="reichweite"></g>
+      <g id="sorten"></g>
+      <g id="braujahr"></g>
+      <g id="schriftfeld"></g>
+    </svg>
+
+    <div class="ueber" id="ueber"><div id="ueber-inhalt"></div></div>
+  </div>
+
+  <div class="fuss">
+    <span><b>Klicken:</b> ein Wirtshaus · eine Sorte · eine Entscheidung</span>
+    <span><b>Zurück:</b> <kbd>Esc</kbd> oder außerhalb klicken</span>
+    <span id="fussrecht">Kein Spielwerk dahinter — jede Zahl ist gesetzt</span>
+  </div>
+
+  <div class="hinweis">
+    <h2>Was das hier ist</h2>
+    <p>Ein Klickdummy, kein Spiel. Es rechnet nichts, es simuliert nichts, jede Zahl ist von
+    Hand gesetzt. Der Zweck ist ein anderer: <em>Alles, was du siehst, ist gezeichneter Code —
+    kein einziges erzeugtes Bild.</em> Das Haus, die Strecke, die Wirtshäuser, die Schilder und
+    die Blätter entstehen aus einer Datenstruktur von rund vierzig Zeilen.</p>
+    <p>Damit beantwortet der Dummy die Frage, an der die Mockups nichts beweisen konnten: ob
+    die Erdlinie sich zeichnen lässt statt erzeugt zu werden — und ob die Asset-Rechnung von
+    65 bis 110 Teilen trägt.</p>
+    <p>Probier den Sortenwechsel unten links. <em>Die rote Linie ist die Reichweite</em>, und
+    sie entscheidet, welche Adressen überhaupt erreichbar sind. Das ist der Kern des ganzen
+    Entwurfs in einer einzigen Bewegung.</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- Daten. Das ist das ganze Spiel, soweit der Dummy es kennt. -------------------
+  const SORTEN = [
+    { id:"land",  name:"Landbier",  haltbar:"10 Tage",  reichweite:26,  stamm:"11 Grad" },
+    { id:"maerz", name:"Maerzen",   haltbar:"30 Tage",  reichweite:74,  stamm:"14 Grad" },
+    { id:"expo",  name:"Exportbier",haltbar:"90 Tage",  reichweite:150, stamm:"16 Grad" },
+  ];
+
+  const ADRESSEN = [
+    { name:"Krone",   ort:"Hohenau",    km:3,   unser:true,  wirt:"Michael Berger, 4. Generation",
+      seit:"1861", vertrag:"Georgi 1885", rest:"1 200 M", hl:[180,140,110],
+      wirbt:"Adlerbrauerei, Vertreter Kolb, dreimal seit Ostern",
+      wort:"Das Dach muss neu. 3 000 Mark. Wer es zahlt, bekommt den Hahn.",
+      glas:"Ein Finger bleibt im Glas." },
+    { name:"Ochsen",  ort:"Lindenau",   km:14,  unser:true,  wirt:"Therese Vogl, seit 1879",
+      seit:"1866", vertrag:"Georgi 1889", rest:"400 M", hl:[260,255,251],
+      wirbt:"niemand", wort:"Solange geliefert wird, wird nicht geredet.",
+      glas:"Kein Rest im Glas." },
+    { name:"Rose",    ort:"Griesbach",  km:31,  unser:false, wirt:"Josef Hartl, 2. Generation",
+      seit:"—", vertrag:"Adlerbrauerei, bis Georgi 1886", rest:"2 400 M beim Adler",
+      hl:[88,84,79], wirbt:"wir, zweimal",
+      wort:"Der Adler hat mir die Schankanlage gestellt. Die nehme ich nicht wieder raus.",
+      glas:"—" },
+    { name:"Anker",   ort:"Reckendorf", km:52,  unser:true,  wirt:"Anna Reindl, Witwe",
+      seit:"1871", vertrag:"Georgi 1885", rest:"900 M", hl:[132,130,128],
+      wirbt:"Adlerbrauerei, seit dem Winter",
+      wort:"Mein Mann hat bei Ihnen unterschrieben. Ich bin nicht mein Mann.",
+      glas:"Zwei Finger bleiben im Glas." },
+    { name:"Sonne",   ort:"Altenau",    km:88,  unser:false, wirt:"Franz Sedlmeier",
+      seit:"—", vertrag:"frei ab Michaeli 1884", rest:"keine", hl:[74,70,66],
+      wirbt:"Adler, Hansa und wir",
+      wort:"Drei Vertreter im Monat. Ich warte, wer am meisten bietet.",
+      glas:"—" },
+    { name:"Post",    ort:"Sankt Veit", km:126, unser:false, wirt:"Konrad Auer",
+      seit:"—", vertrag:"Hansabrauerei, bis 1890", rest:"5 100 M bei Hansa",
+      hl:[310,318,331], wirbt:"niemand mehr",
+      wort:"Die Bahn hält vor der Tür. Was soll ich mit Ihrem Fuhrwerk?",
+      glas:"—" },
+  ];
+
+  const HAUSTEILE = [
+    ["1312","Brunnen"], ["1327","Keller"], ["1412","Felsenkeller"], ["1631","Brand"],
+    ["1804","Kauf aus der Saekularisation"], ["1857","Darre"], ["1877","Eismaschine"],
+    ["1884","Kuehlschiff"],
+  ];
+
+  const MONATE = ["SEP","OKT","NOV","DEZ","JAN","FEB","MRZ","APR","MAI","JUN","JUL","AUG"];
+
+  // ---- Zustand: nur zwei Dinge, weil mehr nicht simuliert wird ----------------------
+  let sorte = 1;          // Index in SORTEN
+  let gewaehlt = null;    // Index in ADRESSEN, für die Detailansicht
+
+  // ---- Geometrie -------------------------------------------------------------------
+  const ERDE = 520, X_WEG = 500, X_ENDE = 1330, KM_MAX = 150;
+  const NS = "http://www.w3.org/2000/svg";
+  // Gestauchte Achse. Ein echtes Streckenband zeichnet nicht maßstäblich, sondern so, dass
+  // die nahen Adressen auseinandertreten — sonst kleben die ersten drei aufeinander.
+  const xKm = km => X_WEG + Math.sqrt(km / KM_MAX) * (X_ENDE - X_WEG);
+
+  function el(tag, attrs, text) {
+    const n = document.createElementNS(NS, tag);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+  function leeren(id) { const g = document.getElementById(id); g.innerHTML = ""; return g; }
+
+  // ---- Das Haus im Schnitt. Reine Linienarbeit, keine Grafik. -----------------------
+  function zeichneHaus() {
+    const g = leeren("haus");
+    const L = 70, R = 400, FIRST = 210, TRAUF = 330;
+
+    g.appendChild(el("rect", { x:L-52, y:ERDE, width:(R+52)-(L-52), height:150,
+      fill:"url(#erde)", opacity:"0.55" }));
+    g.appendChild(el("line", { x1:30, y1:ERDE, x2:X_ENDE+130, y2:ERDE,
+      stroke:"var(--tinte)", "stroke-width":"2.5" }));
+
+    // Keller mit Tonnengewölbe
+    g.appendChild(el("path", { d:`M ${L} ${ERDE} L ${L} ${ERDE+120} L ${R} ${ERDE+120} L ${R} ${ERDE}`,
+      fill:"var(--papier)", stroke:"var(--tinte)", "stroke-width":"1.6" }));
+    g.appendChild(el("path", { d:`M ${L+18} ${ERDE+120} L ${L+18} ${ERDE+56}
+      Q ${(L+R)/2} ${ERDE+6} ${R-18} ${ERDE+56} L ${R-18} ${ERDE+120}`,
+      fill:"none", stroke:"var(--tinte)", "stroke-width":"1.2" }));
+    for (let i = 0; i < 6; i++) {
+      const cx = L + 52 + i * 52;
+      g.appendChild(el("ellipse", { cx, cy:ERDE+92, rx:20, ry:24, fill:"none",
+        stroke:"var(--tinte)", "stroke-width":"1.1" }));
+      g.appendChild(el("line", { x1:cx-20, y1:ERDE+92, x2:cx+20, y2:ERDE+92,
+        stroke:"var(--tinte)", "stroke-width":"0.8" }));
+    }
+    g.appendChild(el("text", { x:(L+R)/2, y:ERDE+150, "text-anchor":"middle",
+      class:"lbl-k" }, "LAGERKELLER · 34 FASS"));
+
+    // Wände und Dach
+    g.appendChild(el("path", { d:`M ${L} ${ERDE} L ${L} ${TRAUF} L ${(L+R)/2} ${FIRST}
+      L ${R} ${TRAUF} L ${R} ${ERDE}`, fill:"var(--papier)", stroke:"var(--tinte)",
+      "stroke-width":"1.8" }));
+    g.appendChild(el("line", { x1:L, y1:TRAUF, x2:R, y2:TRAUF, stroke:"var(--tinte)",
+      "stroke-width":"1" }));
+    // Sparren
+    for (let i = 1; i <= 3; i++) {
+      const t = i / 4, xa = L + t * ((L+R)/2 - L), ya = TRAUF - t * (TRAUF - FIRST);
+      g.appendChild(el("line", { x1:xa, y1:ya, x2:xa, y2:TRAUF, stroke:"var(--tinte)",
+        "stroke-width":"0.7" }));
+      const xb = R - t * (R - (L+R)/2);
+      g.appendChild(el("line", { x1:xb, y1:ya, x2:xb, y2:TRAUF, stroke:"var(--tinte)",
+        "stroke-width":"0.7" }));
+    }
+
+    // Zwischendecke: sonst ist der Hauskörper eine große leere Fläche
+    const DECKE = TRAUF + 74;
+    g.appendChild(el("line", { x1:L, y1:DECKE, x2:R, y2:DECKE, stroke:"var(--tinte)",
+      "stroke-width":"1" }));
+
+    // Kühlschiff — flach, breit, offen. Das Gerät, das allen Entwürfen fehlte.
+    g.appendChild(el("rect", { x:L+34, y:DECKE-30, width:172, height:18, fill:"var(--papier)",
+      stroke:"var(--tinte)", "stroke-width":"1.4" }));
+    g.appendChild(el("text", { x:L+34, y:DECKE-40, class:"lbl-k" }, "KUEHLSCHIFF"));
+
+    // Malzboden rechts daneben, damit das Obergeschoss belegt ist
+    g.appendChild(el("rect", { x:L+228, y:DECKE-34, width:96, height:22, fill:"none",
+      stroke:"var(--tinte)", "stroke-width":"1" }));
+    g.appendChild(el("text", { x:L+228, y:DECKE-42, class:"lbl-k" }, "MALZBODEN"));
+
+    // Sudhaus: offene Pfanne über offenem Feuer. Keine Blase, kein Helm, kein Rohr.
+    const px = L+128, py = ERDE-78;
+    g.appendChild(el("path", { d:`M ${px-46} ${py} Q ${px} ${py+56} ${px+46} ${py}`,
+      fill:"none", stroke:"var(--tinte)", "stroke-width":"2" }));
+    g.appendChild(el("line", { x1:px-52, y1:py, x2:px+52, y2:py, stroke:"var(--tinte)",
+      "stroke-width":"2" }));
+    g.appendChild(el("path", { d:`M ${px-30} ${py+58} l 8 -14 l 7 12 l 9 -18 l 8 20`,
+      fill:"none", stroke:"var(--zinnober)", "stroke-width":"1.4" }));
+    g.appendChild(el("rect", { x:px-56, y:py+62, width:112, height:34, fill:"url(#mauer)",
+      opacity:"0.5", stroke:"var(--tinte)", "stroke-width":"1.2" }));
+    g.appendChild(el("text", { x:L+8, y:DECKE+26, class:"lbl-k" }, "SUDHAUS · 2 SUD JE WOCHE"));
+    // Zwei Frauen an der Krücke — historisch korrekt, in Strichform
+    [px-76, px+78].forEach(fx => {
+      g.appendChild(el("circle", { cx:fx, cy:py+8, r:6, fill:"var(--tinte)" }));
+      g.appendChild(el("path", { d:`M ${fx} ${py+14} l 0 30 M ${fx} ${py+44} l -8 22
+        M ${fx} ${py+44} l 8 22 M ${fx} ${py+22} l ${fx<px?14:-14} 8`,
+        fill:"none", stroke:"var(--tinte)", "stroke-width":"1.6" }));
+    });
+
+    // Darre im Dachstuhl, Rauch durch das Dach
+    g.appendChild(el("rect", { x:R-118, y:TRAUF-52, width:70, height:44, fill:"none",
+      stroke:"var(--tinte)", "stroke-width":"1.3" }));
+    g.appendChild(el("text", { x:R-124, y:TRAUF-58, class:"lbl-k", "text-anchor":"end" }, "DARRE"));
+    g.appendChild(el("path", { d:`M ${R-84} ${TRAUF-58} q -10 -22 4 -38 q 12 -16 2 -32`,
+      fill:"none", stroke:"var(--tinte-2)", "stroke-width":"1", opacity:".7" }));
+
+    // Höhenmaß
+    g.appendChild(el("line", { x1:44, y1:FIRST, x2:44, y2:ERDE+120, stroke:"var(--tinte-2)",
+      "stroke-width":"0.8" }));
+    [[FIRST,"+14"],[ERDE,"0"],[ERDE+120,"-7"]].forEach(([y, t]) => {
+      g.appendChild(el("line", { x1:38, y1:y, x2:50, y2:y, stroke:"var(--tinte-2)",
+        "stroke-width":"0.8" }));
+      g.appendChild(el("text", { x:36, y:y-5, class:"lbl-k", "text-anchor":"end" }, t));
+    });
+    g.appendChild(el("line", { x1:70, y1:ERDE+188, x2:190, y2:ERDE+188, stroke:"var(--tinte)",
+      "stroke-width":"2" }));
+    [[70,"0"],[130,"10"],[190,"20 Schuh"]].forEach(([sx, t]) => {
+      g.appendChild(el("line", { x1:sx, y1:ERDE+184, x2:sx, y2:ERDE+192,
+        stroke:"var(--tinte)", "stroke-width":"1" }));
+      g.appendChild(el("text", { x:sx, y:ERDE+206, class:"lbl-k",
+        "text-anchor":t === "0" ? "start" : "middle" }, t));
+    });
+  }
+
+  // ---- Die Strecke: Adressen als Haus mit Schild ------------------------------------
+  function zeichneStrecke() {
+    const g = leeren("strecke");
+    g.appendChild(el("line", { x1:X_WEG-40, y1:ERDE, x2:X_ENDE+130, y2:ERDE,
+      stroke:"var(--tinte)", "stroke-width":"2.5" }));
+
+    ADRESSEN.forEach((a, i) => {
+      const x = xKm(a.km), erreichbar = a.km <= SORTEN[sorte].reichweite;
+      const grp = el("g", { class:"ziel" + (erreichbar ? "" : " aus"), tabindex:"0",
+        role:"button", "aria-label":`${a.name} zu ${a.ort}, ${a.km} Kilometer` });
+
+      grp.appendChild(el("rect", { class:"treffer", x:x-42, y:ERDE-108, width:84, height:150 }));
+      grp.appendChild(el("rect", { class:"fokus", x:x-42, y:ERDE-108, width:84, height:150,
+        fill:"none", stroke:"none" }));
+      // Haus: Körper + Dach
+      grp.appendChild(el("rect", { class:"haus-koerper", x:x-26, y:ERDE-52, width:52, height:52,
+        fill:"var(--papier)", stroke:"var(--tinte)", "stroke-width":"1.4" }));
+      grp.appendChild(el("path", { d:`M ${x-34} ${ERDE-52} L ${x} ${ERDE-86} L ${x+34} ${ERDE-52} Z`,
+        fill:"var(--papier)", stroke:"var(--tinte)", "stroke-width":"1.4" }));
+      grp.appendChild(el("rect", { x:x-8, y:ERDE-24, width:16, height:24, fill:"none",
+        stroke:"var(--tinte)", "stroke-width":"1" }));
+      // Das Schild — kleinste Einheit des Marktmodells: gefüllt heißt unser
+      grp.appendChild(el("line", { x1:x-34, y1:ERDE-64, x2:x-52, y2:ERDE-64,
+        stroke:"var(--tinte)", "stroke-width":"1.2" }));
+      grp.appendChild(el("rect", { class:"schild-r", x:x-70, y:ERDE-64, width:19, height:15,
+        fill:a.unser ? "var(--zinnober)" : "var(--papier)",
+        stroke:a.unser ? "var(--zinnober)" : "var(--tinte)", "stroke-width":"1.2" }));
+
+      // Beschriftung abwechselnd hoch und tief, damit nahe Adressen sich nicht überlagern
+      const dy = i % 2 ? 26 : 62;
+      grp.appendChild(el("line", { x1:x, y1:ERDE+6, x2:x, y2:ERDE+dy-16,
+        stroke:"var(--tinte-2)", "stroke-width":"0.6" }));
+      grp.appendChild(el("text", { x, y:ERDE+dy, class:"lbl", "text-anchor":"middle" }, a.name));
+      grp.appendChild(el("text", { x, y:ERDE+dy+17, class:"lbl-k", "text-anchor":"middle" },
+        `${a.ort} · ${a.km} km`));
+
+      grp.addEventListener("click", () => oeffneWirt(i));
+      grp.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); oeffneWirt(i); }
+      });
+      g.appendChild(grp);
+    });
+  }
+
+  // ---- Die rote Linie: Reichweite. Der Kern des Entwurfs. ---------------------------
+  function zeichneReichweite() {
+    const g = leeren("reichweite");
+    const s = SORTEN[sorte], x = xKm(Math.min(s.reichweite, KM_MAX));
+    g.appendChild(el("line", { x1:x, y1:ERDE-150, x2:x, y2:ERDE+40, stroke:"var(--zinnober)",
+      "stroke-width":"2" }));
+    g.appendChild(el("text", { x:x+10, y:ERDE-134, class:"hand" }, "so weit haelt das Bier"));
+    g.appendChild(el("text", { x:x+10, y:ERDE-114, class:"hand" },
+      `${s.name} · ${s.haltbar} · ${s.reichweite} km`));
+    const jenseits = ADRESSEN.filter(a => a.km > s.reichweite).length;
+    if (jenseits) {
+      g.appendChild(el("text", { x:x+10, y:ERDE-94, class:"lbl-k", fill:"var(--tinte-2)" },
+        `${jenseits} Haeuser liegen dahinter`));
+    }
+  }
+
+  // ---- Sortenwahl. Sieht aus wie eine Legende, ist ein Schalter. --------------------
+  function zeichneSorten() {
+    const g = leeren("sorten");
+    g.appendChild(el("text", { x:70, y:756, class:"lbl-k" }, "WAS AUF DEM WEG IST"));
+    SORTEN.forEach((s, i) => {
+      const y = 776 + i * 30;
+      const grp = el("g", { class:"schalter" + (i === sorte ? " an" : ""), tabindex:"0",
+        role:"button", "aria-pressed":String(i === sorte),
+        "aria-label":`${s.name}, haltbar ${s.haltbar}, Reichweite ${s.reichweite} Kilometer` });
+      grp.appendChild(el("rect", { class:"f", x:70, y:y-15, width:300, height:24 }));
+      grp.appendChild(el("text", { x:80, y:y+2, class:"lbl" }, s.name));
+      grp.appendChild(el("text", { x:222, y:y+2, class:"lbl-k",
+        fill:i === sorte ? "var(--blatt)" : "var(--tinte-2)" }, s.haltbar));
+      grp.appendChild(el("text", { x:330, y:y+2, class:"lbl-k",
+        fill:i === sorte ? "var(--blatt)" : "var(--tinte-2)" }, s.stamm));
+      const waehle = () => { sorte = i; zeichneAlles(); };
+      grp.addEventListener("click", waehle);
+      grp.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); waehle(); }
+      });
+      g.appendChild(grp);
+    });
+  }
+
+  // ---- Das Braujahr. Sudzeit eingefärbt, Sommer blass. ------------------------------
+  function zeichneBraujahr() {
+    const g = leeren("braujahr");
+    const x0 = 500, br = 69, y = 800;
+    g.appendChild(el("text", { x:x0, y:y-10, class:"lbl-k" }, "BRAUJAHR · MICHAELI BIS GEORGI"));
+    MONATE.forEach((m, i) => {
+      const sud = i < 8;   // Michaeli bis Georgi
+      g.appendChild(el("rect", { x:x0+i*br, y, width:br, height:32,
+        fill:sud ? "var(--papier-2)" : "var(--papier)", stroke:"var(--tinte)",
+        "stroke-width":"0.9" }));
+      g.appendChild(el("text", { x:x0+i*br+br/2, y:y+21, class:"lbl-k", "text-anchor":"middle" }, m));
+    });
+    const mx = x0 + 1.4 * br;
+    g.appendChild(el("path", { d:`M ${mx-7} ${y+44} L ${mx+7} ${y+44} L ${mx} ${y+33} Z`,
+      fill:"var(--zinnober)" }));
+    g.appendChild(el("text", { x:x0+8*br+8, y:y+50, class:"hand" },
+      "Was im April im Keller liegt, muss den Sommer tragen."));
+  }
+
+  // ---- Chronikspalte und Schriftfeld ------------------------------------------------
+  function zeichneChronik() {
+    const g = leeren("chronik");
+    HAUSTEILE.forEach(([jahr, was], i) => {
+      const y = 60 + i * 27;
+      g.appendChild(el("rect", { x:1360, y:y-16, width:200, height:26, fill:"none",
+        stroke:"var(--tinte-2)", "stroke-width":"0.7" }));
+      g.appendChild(el("text", { x:1370, y:y+2, class:"lbl-k", fill:"var(--tinte)" }, jahr));
+      g.appendChild(el("text", { x:1414, y:y+2, class:"lbl-k" }, was));
+    });
+  }
+
+  function zeichneSchriftfeld() {
+    const g = leeren("schriftfeld");
+    const x = 1160, y = 640, w = 400, h = 140;
+    g.appendChild(el("rect", { x, y, width:w, height:h, fill:"none", stroke:"var(--tinte)",
+      "stroke-width":"1.4" }));
+    g.appendChild(el("line", { x1:x, y1:y+28, x2:x+w, y2:y+28, stroke:"var(--tinte)",
+      "stroke-width":"1" }));
+    g.appendChild(el("text", { x:x+12, y:y+20, class:"lbl" }, "BRAUHAUS ZUM ANKER"));
+    const zeilen = [
+      ["Sud je Woche", "2"], ["Fass im Keller", "34"],
+      ["Wir zapfen in", `${ADRESSEN.filter(a => a.unser).length} von 6 Haus`],
+      ["Kasse", "9 400 M"],
+    ];
+    zeilen.forEach(([k, v], i) => {
+      const yy = y + 52 + i * 22;
+      g.appendChild(el("text", { x:x+12, y:yy, class:"lbl-k" }, k));
+      g.appendChild(el("text", { x:x+w-12, y:yy, class:"num", "text-anchor":"end" }, v));
+    });
+  }
+
+  function zeichneAlles() {
+    zeichneChronik(); zeichneHaus(); zeichneStrecke(); zeichneReichweite();
+    zeichneSorten(); zeichneBraujahr(); zeichneSchriftfeld();
+  }
+
+  // ---- Das fremde Blatt: der Wirt. Gelegt, nicht eingeblendet. ----------------------
+  function oeffneWirt(i) {
+    gewaehlt = i;
+    const a = ADRESSEN[i];
+    const s = document.createElementNS(NS, "svg");
+    s.setAttribute("viewBox", "0 0 1000 640");
+    s.setAttribute("role", "dialog");
+    s.setAttribute("aria-label", `Blatt zum Wirtshaus ${a.name}`);
+    const add = (t, at, tx) => { s.appendChild(el(t, at, tx)); };
+
+    add("rect", { width:1000, height:640, fill:"var(--blatt)" });
+    add("rect", { width:1000, height:640, fill:"#000", filter:"url(#faser)", opacity:"0.4" });
+    add("rect", { x:14, y:14, width:972, height:612, fill:"none", stroke:"var(--tinte)",
+      "stroke-width":"1.2" });
+    add("text", { x:44, y:70, class:"titel" }, `${a.name.toUpperCase()} ZU ${a.ort.toUpperCase()}`);
+    add("text", { x:44, y:94, class:"unter" }, `Schankstatt · besucht im Mai 1884`);
+    add("line", { x1:44, y1:112, x2:956, y2:112, stroke:"var(--tinte)", "stroke-width":"1" });
+
+    const zeilen = [
+      ["WIRT", a.wirt], ["UNSER BIER SEIT", a.seit], ["VERTRAG", a.vertrag],
+      ["RESTSCHULD", a.rest], ["HL 82 · 83 · 84", a.hl.join(" · ")],
+      ["ES WIRBT", a.wirbt], ["ENTFERNUNG", `${a.km} km · ${Math.ceil(a.km / 30)} Tagereise(n)`],
+      ["IM GLAS", a.glas],
+    ];
+    zeilen.forEach(([k, v], n) => {
+      const y = 150 + n * 38;
+      add("text", { x:44, y, class:"lbl-k" }, k);
+      add("text", { x:340, y, class:"lbl" }, v);
+      add("line", { x1:44, y1:y+12, x2:956, y2:y+12, stroke:"var(--tinte-2)",
+        "stroke-width":"0.4" });
+    });
+
+    add("text", { x:44, y:502, class:"hand", "font-size":"18" }, `„${a.wort}“`);
+    add("text", { x:44, y:526, class:"lbl-k" }, a.wirt.split(",")[0]);
+
+    // Zwei Optionen, die sich ausschließen — mit sichtbaren Kosten
+    const opt = (x, titel, preis, folge, moeglich) => {
+      const g2 = el("g", { class:"schalter" + (moeglich ? "" : " aus"), tabindex:moeglich ? "0" : "-1",
+        role:"button", "aria-label":`${titel}, ${preis}` });
+      g2.appendChild(el("rect", { class:"f", x, y:552, width:290, height:56 }));
+      g2.appendChild(el("text", { x:x+14, y:576, class:"lbl" }, titel));
+      g2.appendChild(el("text", { x:x+14, y:596, class:"lbl-k" }, `${preis} · ${folge}`));
+      if (moeglich) g2.addEventListener("click", e => { e.stopPropagation(); schliessen(); });
+      return g2;
+    };
+    s.appendChild(opt(44, a.unser ? "Vorschuss erhoehen" : "Ablosesumme zahlen",
+      a.unser ? "3 000 M" : a.rest, "Kasse 9 400 M", true));
+    s.appendChild(opt(354, "Nichts tun", "0 M", "Vertrag laeuft aus", true));
+    s.appendChild(opt(664, "Eismaschine statt dessen", "4 800 M", "reicht nicht fuer beides", false));
+
+    const inh = document.getElementById("ueber-inhalt");
+    inh.innerHTML = "";
+    inh.appendChild(s);
+    document.getElementById("ueber").classList.add("an");
+    document.getElementById("fussrecht").textContent =
+      "Blatt 2 · " + a.name + " zu " + a.ort;
+  }
+
+  function schliessen() {
+    document.getElementById("ueber").classList.remove("an");
+    document.getElementById("ueber-inhalt").innerHTML = "";
+    gewaehlt = null;
+    document.getElementById("fussrecht").textContent =
+      "Kein Spielwerk dahinter — jede Zahl ist gesetzt";
+  }
+
+  document.getElementById("ueber").addEventListener("click", e => {
+    if (e.target.id === "ueber") schliessen();
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") schliessen(); });
+
+  zeichneAlles();
+})();
+</script>
