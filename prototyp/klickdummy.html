@@ -50,6 +50,7 @@
   }
   .reiter button:disabled { opacity: .35; cursor: default; }
   .reiter button:disabled:hover { background: #2a251e; color: #9b9282; }
+  .reiter button:focus-visible { outline: 2px solid #c0442a; outline-offset: 2px; }
 
   /* ---- Blatt ---- */
   .buehne {
@@ -63,6 +64,10 @@
     transition: opacity .22s ease, transform .22s ease;
   }
   svg.blatt.wechsel { opacity: 0; transform: translateY(10px); }
+  @media (prefers-reduced-motion: reduce) {
+    svg.blatt { transition: none; }
+    svg.blatt.wechsel { opacity: 1; transform: none; }
+  }
 
   svg text { font-family: var(--sans); fill: #1b1a18; }
   .t1 { font-size: 46px; font-weight: 700; letter-spacing: .002em; }
