@@ -87,10 +87,10 @@ Awardnacht als Pokalfinale; Tabelle = das Agenturranking nach Honorarvolumen; Sp
 die Woche, in der Mitarbeiterstunden auf Mandate verteilt werden — die Fuhre mit Stunden
 statt Fässern —, freitags kommt der Pressespiegel; Kader = Berater, Texter, Kontakter;
 Transfermarkt doppelt: Talente werden abgeworben, Etats wechseln die Agentur, der Pitch
-ist die Ablösung. Zwei Stellen tragen von selbst, eine davon besser als beim Bier: Der
-**Kader** ist in einer Agentur das ganze Produkt — der Star-Texter ist der alternde
-Torjäger, Burnout ist eine Formkurve, Abwerbung ist Alltag. Und die **Krise** ist ein
-echter fremdgesetzter Termin: der Shitstorm bricht aus, ob man bereit ist oder nicht.
+ist die Ablösung. Zwei Stellen tragen von selbst, eine besser als beim Bier: Der **Kader**
+ist in einer Agentur das ganze Produkt — der Star-Texter ist der alternde Torjäger,
+Burnout eine Formkurve, Abwerbung Alltag. Und die **Krise** ist ein echter fremdgesetzter
+Termin: der Shitstorm bricht aus, ob man bereit ist oder nicht.
 
 Aber es knirscht dreimal, und dreimal am Motor. Die Saison ist **erfunden statt
 gefunden** — kein Sommerbrauverbot zwingt den Kalender, ein Geschäftsjahr ist ein
@@ -101,9 +101,9 @@ das Urteil **hat keinen Körper**: Das saure Fass an der Landbier-Linie ist ein 
 Faktum, das niemand wegdiskutiert; „Reichweite" und „Sentiment" sind Kurven, die das Spiel
 behaupten muss. Die Markenstrategin hat dem Konzept beigebracht, dass Bedeutung „eine
 Zuschreibung [ist], die ausschließlich in fremden Köpfen existiert" (§13) — eine
-PR-Agentur besteht zu hundert Prozent aus solchen Köpfen, und ein Spiel, das nur aus
-Zuschreibung besteht, hat keine Unterlage, auf der die Zuschreibung aufliegt. Der Spieler
-verhandelt dann mit dem Spiel statt mit der Welt.
+PR-Agentur besteht ganz aus solchen Köpfen, und ein Spiel, das nur aus Zuschreibung
+besteht, hat keine Unterlage, auf der sie aufliegt. Der Spieler verhandelt dann mit dem
+Spiel statt mit der Welt.
 
 ## 4. Die drei Entscheidungsfragen
 
