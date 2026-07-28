@@ -50,20 +50,19 @@ Eishockey Manager übernimmt man den Takt, nicht die Tapete.
 
 | Formatteil | Im 1884er Material | Beleg |
 |---|---|---|
-| Saison | Das Braujahr, Michaeli bis Georgi, ~30 Fuhren | KONZEPT §7: „Eine Rundenstruktur, die man sich nicht ausdenken muss"; VORSCHLAG §4 |
-| Spieltag | Die Fuhre: Bedarf entsteht ohne mich, getrunken wird immer | Marktmodell §13: „eine einzige verpasste Lieferung zur Unzeit" als zweithäufigster Wechselauslöser |
-| Tabelle | Die Steuerliste des Rats (Ungeld, 1884 Brausteuer) + die Straße der Schilder | KONZEPT §13, Abgabe; Emailschild als „Quittung für einen unterschriebenen Vertrag" |
-| Kader | Vertragsbuch und Keller: Verträge altern, Wirte altern, 15 Fassplätze sind Kaderplätze | Wechselauslöser „Generationswechsel beim Wirt"; VOTUM Eingriff 1 |
-| Transfermarkt | Die Ablösung, wörtlich | KONZEPT §13: „Die neue Brauerei zahlt die Restschuld bei der alten" |
+| Saison | Braujahr, Michaeli bis Georgi, ~30 Fuhren | KONZEPT §7: „Eine Rundenstruktur, die man sich nicht ausdenken muss" |
+| Spieltag | Die Fuhre: Bedarf entsteht ohne mich | §13: „eine einzige verpasste Lieferung zur Unzeit" als Wechselauslöser |
+| Tabelle | Steuerliste des Rats + die Straße der Schilder | §13: Abgabe; Emailschild als „Quittung für einen unterschriebenen Vertrag" |
+| Kader | Vertragsbuch und Keller: Verträge und Wirte altern, 15 Fassplätze sind Kaderplätze | §13: „Generationswechsel beim Wirt"; VOTUM Eingriff 1 |
+| Transfermarkt | Die Ablösung, wörtlich | §13: „Die neue Brauerei zahlt die Restschuld bei der alten" |
 | Nachrichten | Die Zettel mit Absender | VORSCHLAG §3: „Der Ochsen ist leer seit Dienstag" |
 | WEITER | Der Wagen | VORSCHLAG §4: „die Woche endet, wenn der Wagen abgeschickt wird" |
 
 Das ist keine Übertragung, das ist eine Feststellung: **Die Fuhre ist bereits ein
 Managerspiel, das sich nicht traut, seine Tabelle aufzuhängen.** Das Marktmodell hat den
-Transfermarkt sogar samt Vokabel erfunden — Ablösung, Restschuld, und „jeder hat einen
-Preis, der mit den Vorleistungen des Wettbewerbers steigt" ist exakt die Logik einer
-Ablösesumme unter laufendem Vertrag. Die Nullsumme steht auch schon da: „Wer dort
-ausschenkt, schenkt woanders nicht aus."
+Transfermarkt samt Vokabel erfunden — „jeder hat einen Preis, der mit den Vorleistungen
+des Wettbewerbers steigt" ist die Logik einer Ablösesumme unter laufendem Vertrag, und
+die Nullsumme steht schon da: „Wer dort ausschenkt, schenkt woanders nicht aus."
 
 Drei Teile fehlen, alle drei bringt das Format mit. **Erstens die Tabelle:** Die Abgabe
 wird auf die Stärke bemessen und beim Rat entrichtet — der Rat kennt also die Sudmengen
