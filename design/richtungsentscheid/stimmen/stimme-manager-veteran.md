@@ -76,9 +76,8 @@ Wagen fährt im Fuhre-Vorschlag schon sichtbar jede Woche (§3); er muss nur wir
 liefern, ablösen, Fehler machen. „Konkurrenten sind Häuser wie deines" (KONZEPT §13) —
 das Format verlangt zwei oder drei davon, mit Namen in derselben Liste. **Drittens der
 Sommer als Endrunde:** „Der Aprilbestand entscheidet über den Sommerabsatz" (§13) ist
-mechanisch ein Playoff — man geht mit dem Kader in die Endrunde, den man bis Georgi gebaut
-hat, und darf nur noch zusehen. Der Fuhre-Vorschlag hat das als „Bühne ohne Hand" (§4)
-schon gezeichnet.
+mechanisch ein Playoff — man tritt mit dem Bestand an, den man bis Georgi gebaut hat, und
+darf nur noch zusehen; der Fuhre-Vorschlag zeichnet das schon als „Bühne ohne Hand" (§4).
 
 ## 3. Die PR-Agentur — das bessere Kaderspiel, das schlechtere Spiel
 
@@ -114,11 +113,11 @@ und echt" (§1). Ein Themenwechsel wirft das Einzige weg, was nachweislich funkt
 für ein Thema, das am Motor schwächer ist. PR wäre der bessere Kader; der Kader ist aber
 Nachschub, nicht Motor.
 
-**Format: Manager — als Skelett, mit der Bühne als Spieltagsbildschirm.** Das ist kein
-Kompromiss, sondern eine Arbeitsteilung: Die Fuhre ist der beste Spieltag, den dieses
-Projekt je hatte; was ihr fehlt — Tabelle, wöchentlich ziehende Gegner, Saisonurteil zu
-Michaeli — ist genau das, was das Managerformat mitbringt. Wer dagegen die 1993er
-Oberfläche meint: nein. Die hat schon dem Dummy geschadet.
+**Format: Manager — als Skelett, mit der Bühne als Spieltagsbildschirm.** Kein
+Kompromiss, eine Arbeitsteilung: Die Fuhre ist der beste Spieltag, den dieses Projekt je
+hatte; was ihr fehlt — Tabelle, wöchentlich ziehende Gegner, Saisonurteil zu Michaeli —
+bringt das Managerformat mit. Wer dagegen die 1993er Oberfläche meint: nein. Die hat
+schon dem Dummy geschadet.
 
 **Epochen: eine feste Zeit.** Kein Managerspiel hat je 700 Jahre erzählt, und der Grund
 ist kein Mangel an Mut: Das Format verspricht Wiederholung — dieselbe Prüfung unter
