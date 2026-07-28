@@ -7,13 +7,12 @@ diesem Material passt.
 
 **Mein Maßstab, damit man mich nachprüfen kann.** Drei Prüffragen, sonst nichts:
 
-1. **Setzt die Welt den Termin, oder setze ich ihn?** Das Managerformat lebt von Prüfungen,
-   die stattfinden, ob ich bereit bin oder nicht.
-2. **Ist das Urteil relativ und öffentlich** — steht mein Name in einer Reihe mit benannten
-   anderen, die dasselbe wollen wie ich?
+1. **Setzt die Welt den Termin, oder setze ich ihn?** Das Managerformat lebt von
+   Prüfungen, die stattfinden, ob ich bereit bin oder nicht.
+2. **Ist das Urteil relativ und öffentlich** — steht mein Name in einer Reihe mit
+   benannten anderen, die dasselbe wollen wie ich?
 3. **Überlebt die Saison die Geschichte, die das Spiel erzählen will?** Das Format
-   verspricht Wiederholung unter haltenden Regeln; wer das Versprechen bricht, muss den
-   Bruch bezahlen.
+   verspricht Wiederholung unter haltenden Regeln; wer bricht, bezahlt.
 
 ---
 
@@ -109,7 +108,7 @@ Spiel statt mit der Welt.
 Niederlagen einen Körper haben. Dazu das Nüchterne: Das 1884er Modell „existiert und ist
 zweimal durchgespielt" (VORSCHLAG §5), der Fünfakter ist „in fünf Braujahren entstanden
 und echt" (§1). Ein Themenwechsel wirft das Einzige weg, was nachweislich funktioniert —
-für ein Thema, das am Motor schwächer ist. PR wäre der bessere Kader; der Kader ist aber
+für ein Thema, das am Motor schwächer ist. PR hätte den besseren Kader; der Kader ist
 Nachschub, nicht Motor.
 
 **Format: Manager — als Skelett, mit der Bühne als Spieltagsbildschirm.** Kein
