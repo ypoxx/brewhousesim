@@ -132,23 +132,22 @@ Braujahr „stirbt mit der Kühlmaschine in den 1870ern" (KONZEPT §7). Also: ei
 ab etwa 1878, viele Saisons, und als Finale die Maschine, die die Saison abschafft — wer
 sie zuerst kauft, braut im Sommer und beendet den Kalender, in dessen Liste er Meister
 werden wollte. Das ist ein Schluss von der Güte, die der Auftraggeber „fünf Sterne"
-nennt, und er kostet null zusätzliche Epochen. Die übrigen drei werden nicht gelöscht,
-sondern vertagt: Trägt eine Saison dreißig Spieltage, kann eine zweite Zeit als eigene
-Kampagne mit eigener Saisonform folgen — die Listung der Epoche IV wäre eine. Als
-Durchfahrt nie.
+nennt, und er kostet null zusätzliche Epochen. Die übrigen drei werden vertagt, nicht
+gelöscht: Trägt eine Saison dreißig Spieltage, kann eine zweite Zeit als eigene Kampagne
+mit eigener Saisonform folgen — die Listung der Epoche IV wäre eine. Als Durchfahrt nie.
 
 ## Der Preis meines Urteils
 
 **Erstens:** Die Kurzfassung des Konzepts stirbt. „Ein Haus über sieben Jahrhunderte"
 (KONZEPT §1) wird ein Denkmal, kein Spiel; Herkunftswahl, Gruit-Konflikt, Erbfall —
 recherchiert, gut, auf unbestimmt vertagt. **Zweitens:** „Kein Handlungsdruck. Man darf
-grübeln" (§2) wird angefressen — nicht in der Woche, die weiter wartet, bis der Wagen
-abgeschickt ist, aber im Jahr: Eine Liste, die zu Michaeli verlesen wird, ist Druck. Ich
-tausche Muße gegen Spannung und sage es offen. **Drittens, der teuerste Posten:** Gegner,
-die jede Woche wirklich ziehen, sind mehr Systemarbeit als alles bisher Geplante — und
-unsichtbar, wenn sie gelingt. **Viertens:** Ich opfere das bessere Kaderspiel dem besseren
-Spieltag; wer den Kader für den Motor des Formats hält, muss mir hier widersprechen, und
-es wäre ein ehrlicher Streit.
+grübeln" (§2) wird angefressen — nicht in der Woche, die wartet, bis der Wagen abgeschickt
+ist, aber im Jahr: Eine Liste, die zu Michaeli verlesen wird, ist Druck. Ich tausche Muße
+gegen Spannung und sage es offen. **Drittens, der teuerste Posten:** Gegner, die jede
+Woche wirklich ziehen, sind mehr Systemarbeit als alles bisher Geplante — und unsichtbar,
+wenn sie gelingt. **Viertens:** Ich opfere das bessere Kaderspiel dem besseren Spieltag;
+wer den Kader für den Motor hält, muss mir hier widersprechen, und es wäre ein ehrlicher
+Streit.
 
 ## Die Schlussfrage — ein Satz
 
