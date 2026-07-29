@@ -50,3 +50,30 @@ Einordnung zur Empfehlung der Gegenüberstellung: Am Entscheid „eine feste Zei
 Epochen als Ausbaustufen" ändert die Serie nichts — aber sie zeigt, was „andockfähig"
 später visuell bedeuten würde, zum Preis von je einem Stadtbild und einem UI-Kleid pro
 Epoche.
+
+## Die Pfade-Matrix (`pfade/`) — drei weitere Ideenpfade, jeweils durch die Epochen
+
+Auftrag: mehr Varianten für unterschiedliche Ideenpfade, jeweils über die Epochen.
+Je Pfad ein 1884er-Anker (bzw. der Gegenwarts-Anker der Agentur), die übrigen Bilder
+per `--ref` daraus.
+
+**Pfad Bühne** (`buehne-1350 / -1884 / -heute`) — das Brauhaus im Schnitt, die Straße,
+die Wirtshäuser: 1350 Kloster mit Grutgarten und Mönch am Handkarren, 1884 die bekannte
+Fuhre-Bühne mit roter Reichweitenlinie, heute Edelstahltank, Kegs, Lkw, Taproom und
+S-Bahn — der Querschnitt bleibt derselbe. *Schwächen: Wirtshausschilder teils englisch
+(„Tavern"), das Heute-Bild erbt die 1884er-Kopfzeile.*
+
+**Pfad Masken** (`masken-1350 / -1884 / -heute`) — dieselbe Tabellen-Maske, dreimal.
+Das ist §13 „Die Währung wechselt" als Bildfolge: die Urkunde mit Siegeln und PROBATUM-
+Vermerken, das Kontorbuch mit Zetteln und Zinnober-Notiz, die Vertriebsübersicht mit
+Regalmetern und „Listingrisiko — ggf. Delisting". Das Emailschild oben links ist im
+Gegenwartsbild das einzige historische Objekt. *Schwäche: die 1350er-Fassung trägt noch
+die 1884er-Kopfzeile des Referenzbilds.*
+
+**Pfad Agentur** (`agentur-1965 / -1995`, Anker: `../stimmung/b1-hauptbildschirm.jpg`) —
+die Mad-Men-Versuchung der PR-Strategin, sichtbar gemacht: 1965 Schreibmaschinenliste,
+Korkwand-Pressespiegel und Messingglocke als WEITER; 1995 Fensterrahmen-UI, Fax mit
+Krisenmeldung, Pager; heute das kühle Dashboard. *Schwäche: die Meldungstexte bleiben
+in allen Epochen die von 2024 — Erbe des Referenzbilds.* Auffällig: Die Agentur-Epochen
+wechseln nur die Requisiten, nie den Mechanismus — was die These der Strategin stützt,
+dass ihr Thema keine Epochen braucht.
