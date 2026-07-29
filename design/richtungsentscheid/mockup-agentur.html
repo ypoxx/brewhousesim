@@ -129,15 +129,17 @@
   /* ============ Team ============ */
   .team-tab td{height:68px}
   .team-tab tr.summe td{height:40px}
-  .mitarbeiter{display:flex;align-items:center;gap:12px}
+  .mitarbeiter{display:flex;align-items:center;gap:10px}
   .pf{width:48px;height:48px;flex:none;display:block}
+  .ma-text{display:flex;flex-direction:column;min-width:0}
+  .ma-text span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .ma-text .name{font-size:15px;line-height:20px;font-weight:600}
   .ma-text .rolle{font-size:13px;line-height:16px;color:var(--neben)}
   .ma-text .mandate{font-size:13px;line-height:16px;color:var(--neben)}
   .staerke{font-size:15px;font-weight:600}
   .staerke.top{color:var(--text)}
   .auslastung{display:flex;align-items:center;gap:8px}
-  .balken{width:88px;height:8px;background:var(--linie);position:relative;flex:none}
+  .balken{width:68px;height:8px;background:var(--linie);position:relative;flex:none}
   .balken i{position:absolute;left:0;top:0;bottom:0;background:var(--neben)}
   .balken em{position:absolute;right:0;top:0;bottom:0;width:6px;background:var(--krise)}
   .auslastung .proz{font-weight:600}
@@ -150,25 +152,28 @@
   .kamp-spalte{display:flex;flex-direction:column;gap:24px;min-height:0}
   .kamp-spalte .panel.dehn{flex:1;min-height:0;overflow:hidden}
 
-  .massnahme{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;
+  .massnahme{display:grid;grid-template-columns:52px minmax(0,1fr) 96px;gap:12px;align-items:center;
     padding:8px 0;border-bottom:1px solid var(--linie)}
   .massnahme:last-of-type{border-bottom:none}
   .m-tag{font-family:var(--mono);font-size:13px;color:var(--neben);border:1px solid var(--linie);
     padding:2px 0;text-align:center;border-radius:3px}
   .m-tag.rot{color:var(--krise);border-color:var(--krise)}
+  .m-mitte{min-width:0;display:block}
+  .m-titel,.m-sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
   .m-titel{font-size:15px;line-height:20px;font-weight:500}
   .m-sub{font-size:13px;line-height:16px;color:var(--neben)}
-  .m-rechts{text-align:right}
+  .m-rechts{text-align:right;white-space:nowrap}
   .m-rechts .wert{font-size:15px;line-height:20px;font-weight:600}
   .m-rechts .sub{font-size:13px;line-height:16px;color:var(--neben)}
   .m-rechts .sub.rot{color:var(--krise)}
 
-  .stat-reihe{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:8px 0 16px}
-  .stat .wert{font-size:22px;line-height:28px;font-weight:700}
-  .stat .label{font-size:13px;line-height:18px;color:var(--neben);letter-spacing:.04em}
+  .stat-reihe{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:4px 0 12px}
+  .stat .wert{font-size:22px;line-height:28px;font-weight:700;display:block}
+  .stat .label{font-size:13px;line-height:18px;color:var(--neben);letter-spacing:.04em;
+    white-space:nowrap;overflow:hidden;display:block}
   .sentiment-balken{display:flex;gap:2px;height:8px;margin:6px 0}
   .sentiment-balken i{display:block}
-  .zitat{border-left:2px solid var(--linie);padding:4px 0 4px 12px;margin-top:16px}
+  .zitat{border-left:2px solid var(--linie);padding:4px 0 4px 12px;margin-top:12px}
   .zitat p{font-size:15px;line-height:21px;font-style:italic}
   .zitat .quelle{font-size:13px;line-height:18px;color:var(--neben);margin-top:4px;font-style:normal}
 
@@ -273,7 +278,7 @@
     <button class="nav-eintrag"><span class="nr">6</span>Pressespiegel</button>
     <div class="nav-fuss">
       <div class="zeile"><span>Ranking</span><span>Platz 7 · ↑1</span></div>
-      <div class="zeile"><span>Glaubwürdigkeit</span><span>71 / 100 · ±0</span></div>
+      <div class="zeile"><span>Glaubwürdigkeit</span><span>71 · ±0</span></div>
     </div>
   </nav>
 
@@ -289,8 +294,8 @@
       <div class="panel">
         <table>
           <colgroup>
-            <col style="width:212px"><col style="width:100px"><col style="width:88px">
-            <col style="width:76px"><col style="width:148px"><col style="width:74px"><col style="width:118px">
+            <col style="width:232px"><col style="width:92px"><col style="width:84px">
+            <col style="width:72px"><col style="width:128px"><col style="width:84px"><col style="width:124px">
           </colgroup>
           <thead>
             <tr>
@@ -298,7 +303,7 @@
               <th>BRANCHE</th>
               <th class="r th2">RETAINER<br>€/MONAT</th>
               <th class="r">BIS</th>
-              <th>ZUFRIEDENHEIT Q3–Q1</th>
+              <th>ZUFRIEDENHEIT</th>
               <th>BETREUT</th>
               <th>STATUS</th>
             </tr>
@@ -315,7 +320,7 @@
             </tr>
             <tr>
               <td><span class="mandant"><span class="kachel" style="background:#5a6e8c;color:#fff">MV</span>Ministerium für Verkehr</span></td>
-              <td class="branche">Öffentliche Hand</td>
+              <td class="branche">Öffentl. Hand</td>
               <td class="r">22.000</td>
               <td class="r">03/2026</td>
               <td><span class="zf"><span class="zb"><i style="height:18px"></i><i style="height:18px"></i><i style="height:19px"></i></span><span class="wert">62</span><span class="delta">+2</span></span></td>
@@ -420,7 +425,7 @@
           </tbody>
         </table>
       </div>
-      <div class="fussnote">Zufriedenheit: Index 0–100 · Quartale Q3/25 · Q4/25 · Q1/26 (laufend) · Δ gegenüber Vorquartal · NORDWIND: Angebot, wird erst mit Zuschlag gebucht</div>
+      <div class="fussnote">Zufriedenheit: Index 0–100 · Q3/25 · Q4/25 · Q1/26 · Δ ggü. Vorquartal · (24.000) = Angebot im Pitch</div>
     </section>
 
     <!-- ========== Ansicht 2: Das Team ========== -->
@@ -432,16 +437,16 @@
       <div class="panel">
         <table class="team-tab">
           <colgroup>
-            <col style="width:300px"><col style="width:44px"><col style="width:56px"><col style="width:64px">
-            <col style="width:64px"><col style="width:128px"><col style="width:84px"><col style="width:76px">
+            <col style="width:280px"><col style="width:40px"><col style="width:56px"><col style="width:76px">
+            <col style="width:76px"><col style="width:116px"><col style="width:88px"><col style="width:84px">
           </colgroup>
           <thead>
             <tr>
               <th>MITARBEITER</th>
               <th class="r">ALTER</th>
-              <th class="c">KRISE</th>
-              <th class="c">KREATION</th>
-              <th class="c">KONTAKTE</th>
+              <th class="r">KRISE</th>
+              <th class="r">KREATION</th>
+              <th class="r">KONTAKTE</th>
               <th>AUSLASTUNG %</th>
               <th class="r th2">GEHALT<br>€/MONAT</th>
               <th>RISIKO</th>
@@ -458,9 +463,9 @@
                 </span>
               </span></td>
               <td class="r">41</td>
-              <td class="c staerke top">82</td>
-              <td class="c staerke">61</td>
-              <td class="c staerke">77</td>
+              <td class="r staerke top">82</td>
+              <td class="r staerke">61</td>
+              <td class="r staerke">77</td>
               <td><span class="auslastung"><span class="balken"><i style="width:100%"></i><em></em></span><span class="proz rot">104</span></span></td>
               <td class="r">7.900</td>
               <td class="risiko hoch">hoch</td>
@@ -471,13 +476,13 @@
                 <span class="ma-text">
                   <span class="name">Stefan Klose</span>
                   <span class="rolle">Senior-Texter</span>
-                  <span class="mandate">Pitch NORDWIND · Texte alle Mandate</span>
+                  <span class="mandate">Pitch NORDWIND · alle Texte</span>
                 </span>
               </span></td>
               <td class="r">45</td>
-              <td class="c staerke">57</td>
-              <td class="c staerke top">88</td>
-              <td class="c staerke">49</td>
+              <td class="r staerke">57</td>
+              <td class="r staerke top">88</td>
+              <td class="r staerke">49</td>
               <td><span class="auslastung"><span class="balken"><i style="width:92%"></i></span><span class="proz">92</span></span></td>
               <td class="r">6.100</td>
               <td class="risiko">mittel</td>
@@ -492,9 +497,9 @@
                 </span>
               </span></td>
               <td class="r">38</td>
-              <td class="c staerke">66</td>
-              <td class="c staerke">52</td>
-              <td class="c staerke">74</td>
+              <td class="r staerke">66</td>
+              <td class="r staerke">52</td>
+              <td class="r staerke">74</td>
               <td><span class="auslastung"><span class="balken"><i style="width:81%"></i></span><span class="proz">81</span></span></td>
               <td class="r">5.600</td>
               <td class="risiko">niedrig</td>
@@ -505,13 +510,13 @@
                 <span class="ma-text">
                   <span class="name">Jonas Roth</span>
                   <span class="rolle">Kontakter · Regionalmedien</span>
-                  <span class="mandate">TS Hallenbeck 09 · Weingut Sonnleitner</span>
+                  <span class="mandate">Hallenbeck 09 · Sonnleitner</span>
                 </span>
               </span></td>
               <td class="r">33</td>
-              <td class="c staerke">48</td>
-              <td class="c staerke">55</td>
-              <td class="c staerke top">86</td>
+              <td class="r staerke">48</td>
+              <td class="r staerke">55</td>
+              <td class="r staerke top">86</td>
               <td><span class="auslastung"><span class="balken"><i style="width:78%"></i></span><span class="proz">78</span></span></td>
               <td class="r">5.200</td>
               <td class="risiko">mittel</td>
@@ -522,13 +527,13 @@
                 <span class="ma-text">
                   <span class="name">Deniz Yılmaz</span>
                   <span class="rolle">Designerin</span>
-                  <span class="mandate">Gestaltung alle Mandate · Pitch NORDWIND</span>
+                  <span class="mandate">Gestaltung · Pitch NORDWIND</span>
                 </span>
               </span></td>
               <td class="r">30</td>
-              <td class="c staerke">22</td>
-              <td class="c staerke top">81</td>
-              <td class="c staerke">38</td>
+              <td class="r staerke">22</td>
+              <td class="r staerke top">81</td>
+              <td class="r staerke">38</td>
               <td><span class="auslastung"><span class="balken"><i style="width:74%"></i></span><span class="proz">74</span></span></td>
               <td class="r">4.700</td>
               <td class="risiko">mittel</td>
@@ -543,9 +548,9 @@
                 </span>
               </span></td>
               <td class="r">27</td>
-              <td class="c staerke">41</td>
-              <td class="c staerke">63</td>
-              <td class="c staerke">58</td>
+              <td class="r staerke">41</td>
+              <td class="r staerke">63</td>
+              <td class="r staerke">58</td>
               <td><span class="auslastung"><span class="balken"><i style="width:88%"></i></span><span class="proz">88</span></span></td>
               <td class="r">3.800</td>
               <td class="risiko">niedrig</td>
@@ -556,13 +561,13 @@
                 <span class="ma-text">
                   <span class="name">Felix Brandt</span>
                   <span class="rolle">Praktikant</span>
-                  <span class="mandate">Monitoring · Krisenwache LANDGOLD</span>
+                  <span class="mandate">Monitoring · Wache LANDGOLD</span>
                 </span>
               </span></td>
               <td class="r">21</td>
-              <td class="c staerke">18</td>
-              <td class="c staerke">44</td>
-              <td class="c staerke">25</td>
+              <td class="r staerke">18</td>
+              <td class="r staerke">44</td>
+              <td class="r staerke">25</td>
               <td><span class="auslastung"><span class="balken"><i style="width:65%"></i></span><span class="proz">65</span></span></td>
               <td class="r">650</td>
               <td class="risiko">niedrig</td>
@@ -576,7 +581,7 @@
           </tbody>
         </table>
       </div>
-      <div class="fussnote">Stärken: Index 0–100 · Auslastung über 100&nbsp;% erhöht Erschöpfung und Kündigungsrisiko · Headhunter-Kontakt bei J. Roth gemeldet (Woche 5)</div>
+      <div class="fussnote">Stärken 0–100 · Auslastung über 100&nbsp;% erhöht Erschöpfung · Headhunter-Kontakt bei J. Roth (Woche 5)</div>
     </section>
 
     <!-- ========== Ansicht 3: Die Kampagne ========== -->
@@ -591,36 +596,36 @@
             <div class="panel-kopf"><h2>Maßnahmen der Woche</h2><span class="meta">4 geplant · 3 gelaufen</span></div>
             <div class="massnahme">
               <span class="m-tag">PM</span>
-              <span><span class="m-titel">„Hoflieferanten-Report 2026“</span><br>
-              <span class="m-sub">versendet Mo 09:00 · an 46 Redaktionen · 0&nbsp;€ Fremdkosten</span></span>
+              <span class="m-mitte"><span class="m-titel">„Hoflieferanten-Report“</span>
+              <span class="m-sub">Mo 09:00 · 46 Redaktionen · 0&nbsp;€</span></span>
               <span class="m-rechts"><span class="wert">12 Abdrucke</span><br><span class="sub">Stand Do</span></span>
             </div>
             <div class="massnahme">
               <span class="m-tag">SOCIAL</span>
-              <span><span class="m-titel">Reel @feldundflur — „Morgens um fünf“</span><br>
-              <span class="m-sub">live seit Di 08:00 · Honorar 4.800&nbsp;€</span></span>
+              <span class="m-mitte"><span class="m-titel">Reel @feldundflur</span>
+              <span class="m-sub">live seit Di 08:00 · 4.800&nbsp;€</span></span>
               <span class="m-rechts"><span class="wert">214 Tsd.</span><br><span class="sub">Aufrufe</span></span>
             </div>
             <div class="massnahme">
               <span class="m-tag">PAID</span>
-              <span><span class="m-titel">Anzeige ½ Seite — Lebensmittel Praxis</span><br>
-              <span class="m-sub">erscheint Fr · 6.400&nbsp;€ · Auflage 34 Tsd.</span></span>
-              <span class="m-rechts"><span class="wert">gebucht</span><br><span class="sub">Motiv freigegeben</span></span>
+              <span class="m-mitte"><span class="m-titel">Anzeige Lebensmittel Praxis</span>
+              <span class="m-sub">½ Seite · erscheint Fr · 6.400&nbsp;€</span></span>
+              <span class="m-rechts"><span class="wert">gebucht</span><br><span class="sub">freigegeben</span></span>
             </div>
             <div class="massnahme">
               <span class="m-tag rot">KRISE</span>
-              <span><span class="m-titel">Statement „Hof Renken“</span><br>
-              <span class="m-sub">Entwurf bei M. Vogt · Freigabe blockiert</span></span>
-              <span class="m-rechts"><span class="wert">offen</span><br><span class="sub rot">wartet auf Entscheidung</span></span>
+              <span class="m-mitte"><span class="m-titel">Statement „Hof Renken“</span>
+              <span class="m-sub">Entwurf bei M. Vogt · blockiert</span></span>
+              <span class="m-rechts"><span class="wert">offen</span><br><span class="sub rot">Route offen</span></span>
             </div>
-            <div class="fussnote">Fremdkosten Woche 7: 11.200&nbsp;€ von 15.000&nbsp;€ freigegeben · Rest 3.800&nbsp;€</div>
+            <div class="fussnote">Fremdkosten: 11.200&nbsp;€ von 15.000&nbsp;€ freigegeben</div>
           </div>
           <div class="panel dehn">
             <div class="panel-kopf"><h2>Ergebnis der Woche</h2><span class="meta">Stand Do 15:04</span></div>
             <div class="stat-reihe">
-              <span class="stat"><span class="wert">27</span><br><span class="label">CLIPPINGS · +9 GGÜ. VW</span></span>
-              <span class="stat"><span class="wert">1,03 Mio.</span><br><span class="label">KONTAKTE MO–DO</span></span>
-              <span class="stat"><span class="wert">51</span><br><span class="label">ZUFRIEDENHEIT · −18</span></span>
+              <span class="stat"><span class="wert">27</span><span class="label">CLIPPINGS · +9</span></span>
+              <span class="stat"><span class="wert">1,03 Mio.</span><span class="label">KONTAKTE MO–DO</span></span>
+              <span class="stat"><span class="wert">51</span><span class="label">ZUFRIEDENH. −18</span></span>
             </div>
             <div class="chart-label">SENTIMENT DER 27 CLIPPINGS</div>
             <div class="sentiment-balken">
@@ -628,7 +633,7 @@
             </div>
             <div class="fussnote" style="margin-top:0">44&nbsp;% positiv (12) · 30&nbsp;% neutral (8) · 26&nbsp;% negativ (7)</div>
             <div class="zitat">
-              <p>„Report und Reel waren stark. Aber wenn Renken morgen auf Seite&nbsp;1 steht, war die Woche umsonst — wir erwarten heute eine Linie.“</p>
+              <p>„Report und Reel waren stark. Aber wird Renken Seite&nbsp;1, war die Woche umsonst — wir erwarten heute eine Linie.“</p>
               <div class="quelle">Dr. Ute Renner · Marketingleitung LANDGOLD · Do 14:12</div>
             </div>
           </div>
@@ -661,7 +666,7 @@
               <text x="319" y="93" text-anchor="middle" class="ct dim">Sa</text>
               <text x="372" y="93" text-anchor="middle" class="ct dim">So</text>
             </svg>
-            <div class="chart-fusszeile">▎Mi 18:40 — Anwohner-Video Hof Renken geht viral</div>
+            <div class="chart-fusszeile">▎Mi 18:40 · Anwohner-Video geht viral</div>
             <div class="chart-label">TONALITÄT — SALDO JE TAG</div>
             <svg viewBox="0 0 380 64" width="100%" role="img" aria-label="Tonalität pro Tag">
               <line x1="34" y1="13" x2="372" y2="13" stroke="#2c3038"/>
@@ -681,18 +686,18 @@
             </svg>
           </div>
           <div class="panel dehn krisenfall">
-            <div class="k-label">KRISENFALL · SEIT MI 18:40 · FRIST HEUTE 17:00 (LANDESZEITUNG)</div>
+            <div class="k-label">KRISENFALL · MI 18:40 · FRIST HEUTE 17:00</div>
             <h2>Güllelager Hof Renken</h2>
-            <p class="k-text">Anwohner-Video vom Güllelager des Zulieferers Hof Renken, zwei Portale zogen nach. Die LANDESZEITUNG druckt morgen — so oder so.</p>
+            <p class="k-text">Anwohner-Video vom Güllelager Hof Renken. Die LANDESZEITUNG druckt morgen — so oder so.</p>
             <button class="option">
               <span class="radio"></span>
               <span><span class="o-titel">Route A — Hinfahren und einräumen</span><br>
-              <span class="o-effekt">Statement 16:00, Montag Hofbesuch mit Presse · bindet Vogt 12&nbsp;h + Klose 6&nbsp;h · Glaubwürdigkeit steigt</span></span>
+              <span class="o-effekt">Statement 16:00, Hofbesuch Mo · Vogt 12&nbsp;h, Klose 6&nbsp;h · Glaubwürdigkeit&nbsp;+</span></span>
             </button>
             <button class="option">
               <span class="radio"></span>
-              <span><span class="o-titel">Route B — Auf den Zulieferer verweisen</span><br>
-              <span class="o-effekt">Schriftliche Stellungnahme, keine Interviews · bindet Klose 2&nbsp;h · Risiko: Kette zieht zum Konzern weiter</span></span>
+              <span><span class="o-titel">Route B — Auf Zulieferer verweisen</span><br>
+              <span class="o-effekt">Schriftlich, keine Interviews · Klose 2&nbsp;h · Risiko: Kette zieht zum Konzern</span></span>
             </button>
           </div>
         </div>
