@@ -98,6 +98,19 @@ Außerhalb: `KONZEPT.md` (Marktmodell §13 bleibt die Systemgrundlage),
    Beschriftungen (bekannte Flash-Fehler: Kauderwelsch-Text, `--ref`-Erbfehler wie
    1884er-Kopfzeilen in anderen Epochen, „Tavern" statt „Wirtshaus").
 
+## 5b. Nachtrag: iOS-Studie
+
+Auf Nachfrage des Auftraggebers entstand `mockup-braumeister-ios.html` — dieselbe
+Spielwelt im iPhone-Hochformat (390×844), Kontorbuch-Kleid, vier Reiter (Lage / Woche /
+Post / Karte). Bewertung in Kürze: Der WEITER-Takt ist eine ideale Mobile-Schleife
+(eine Woche = eine Sitzung), Fuhre-Packen per Stepper ist auf Touch natürlicher als
+mit der Maus, die Zettel-Post passt zur Telefon-Grammatik. Preis: Die 14-Spalten-
+Tabelle wird zur Liste mit Balken-Trend, Stadtkarte/Bühne brauchen Vereinfachung oder
+Querformat. Technisch ist der geplante Stack (statisches HTML/SVG) direkt
+PWA-fähig (kein Store nötig) oder per Capacitor in den App Store bringbar
+(99 $/Jahr). **Empfehlung: Browser/Steam bleibt primär; Masken von Anfang an in zwei
+Breiten denken, dann ist iOS Verpackung, kein Rewrite.**
+
 ## 6. Betriebsnotizen
 
 - **Gemini-Schlüssel:** lag nur unter `~/.gemini_key` im Session-Container und ist
