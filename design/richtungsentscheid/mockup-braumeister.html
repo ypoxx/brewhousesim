@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Braumeister 1884 — Mockup Richtungsentscheid</title>
+<style>
+  /* ============================================================
+     BRAUMEISTER 1884 — Kleid A auf dem Manager-Skelett
+     Farbgrammatik (verbindlich, je Farbe EINE Bedeutung):
+       #26221b  Tinte      = Bestand (Text, Linienwerk)
+       #5c5751  Nebenschrift / grau = fremd oder erledigt
+       #b9b2a4  Hilfslinien — tragen keine Information
+       #a03a24  Zinnober   = Fehl (ungedeckter Bedarf, verlorenes Haus)
+       Auswahl  = Inversion (Balken #26221b, Schrift #eeeae1)
+     Keine Schatten. Kleinste Schrift 13 px. 8-px-Raster.
+     ============================================================ */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #e4dfd3;
+    color: #26221b;
+    font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .app {
+    width: min(1440px, 100vw);
+    height: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 200px minmax(0,1fr) 320px;
+    grid-template-rows: 56px minmax(0,1fr) 64px;
+    gap: 24px;
+  }
+  .panel { background: #eeeae1; border: 1px solid #b9b2a4; }
+
+  /* ---------- Kopfleiste ---------- */
+  .top {
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+  .top .zelle { min-width: 0; }
+  .top .m { text-align: center; }
+  .top .re { text-align: right; }
+  .top .z1 { font-size: 18px; line-height: 24px; font-variant-numeric: tabular-nums lining-nums; }
+  .top .z2 { font-size: 13px; line-height: 18px; color: #5c5751; }
+
+  /* ---------- Navigation ---------- */
+  nav { display: flex; flex-direction: column; padding: 8px 0; }
+  .marke {
+    font-size: 13px; line-height: 18px; color: #5c5751;
+    padding: 8px 16px 10px; border-bottom: 1px solid #b9b2a4; margin-bottom: 8px;
+  }
+  .marke strong { color: #26221b; letter-spacing: .08em; font-weight: 600; }
+  .nav-i {
+    display: block; width: 100%; height: 40px; line-height: 40px;
+    padding: 0 16px; text-align: left;
+    background: none; border: none; font: inherit; font-size: 15px; color: #26221b;
+    cursor: pointer; letter-spacing: .02em;
+  }
+  .nav-i.active { background: #26221b; color: #eeeae1; }
+  .nav-i.off { color: #5c5751; cursor: default; }
+  nav .fuss { margin-top: auto; padding: 8px 16px; font-size: 13px; line-height: 18px; color: #5c5751; }
+
+  /* ---------- Hauptfläche ---------- */
+  main { padding: 16px; overflow: hidden; }
+  .view { display: none; }
+  .view.on { display: block; }
+  .maskkopf { display: flex; align-items: baseline; gap: 16px; margin: 0 0 12px; }
+  h1 {
+    margin: 0; font-size: 22px; line-height: 28px; font-weight: 600;
+    letter-spacing: .08em; text-transform: uppercase;
+  }
+  .frage { font-size: 13px; line-height: 18px; color: #5c5751; }
+  h2 { margin: 16px 0 6px; font-size: 17px; line-height: 24px; font-weight: 600; }
+  h2:first-of-type { margin-top: 0; }
+  .anm { font-size: 13px; line-height: 18px; color: #5c5751; margin: 2px 0 6px; }
+
+  /* ---------- Kontorbuch-Tabellen: nur waagerechte Linien ---------- */
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 15px;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+  th {
+    font-size: 13px; line-height: 18px; font-weight: 400; color: #5c5751;
+    text-align: left; padding: 2px 8px 5px;
+    border-bottom: 1px solid #26221b; white-space: nowrap;
+  }
+  td {
+    line-height: 32px; padding: 0 8px;
+    border-bottom: 1px solid #b9b2a4; white-space: nowrap;
+  }
+  th.n, td.n { text-align: right; }
+  td.txt { white-space: normal; line-height: 20px; padding-top: 5px; padding-bottom: 5px; }
+  .g { color: #5c5751; }
+  .b { font-weight: 600; }
+  .r { color: #a03a24; }
+  tr.sel td { background: #26221b; color: #eeeae1; border-bottom-color: #26221b; }
+  tr.sel td.g, tr.sel .g { color: #eeeae1; }
+  tr.off td, tr.off td.g { color: #5c5751; }
+  tr.sum td {
+    border-top: 1px solid #26221b;
+    border-bottom: 3px double #26221b;
+    font-weight: 600; line-height: 34px;
+  }
+  tr.sum td.g { font-weight: 400; }
+
+  /* Kaderzeilen mit Porträt */
+  table.kader td { line-height: 20px; padding-top: 2px; padding-bottom: 2px; vertical-align: middle; }
+  table.kader td.bild { width: 44px; padding: 3px 4px 3px 8px; }
+  table.kader svg { display: block; }
+
+  /* Formularfeld der Fuhre (Zuteilung) */
+  .feld {
+    display: inline-block; min-width: 44px;
+    border: 1px solid #26221b; background: #eeeae1;
+    line-height: 24px; padding: 0 6px; text-align: right;
+  }
+  tr.sel .feld { border-color: #eeeae1; background: #26221b; color: #eeeae1; }
+
+  /* Zweispalter im Ergebnis */
+  .zwei { display: flex; gap: 24px; }
+  .zwei > div { flex: 1; min-width: 0; }
+  table.klein td { line-height: 26px; }
+  ul.ticker { list-style: none; margin: 0; padding: 0; font-size: 15px; }
+  ul.ticker li { line-height: 26px; border-bottom: 1px solid #b9b2a4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  ul.ticker .tag { display: inline-block; width: 44px; font-size: 13px; color: #5c5751; }
+
+  /* ---------- Rechte Spalte: die Post ---------- */
+  aside { display: flex; flex-direction: column; min-width: 0; }
+  aside .kopf { font-size: 17px; line-height: 24px; font-weight: 600; margin: 0 0 8px; }
+  .karte {
+    background: #eeeae1; border: 1px solid #b9b2a4;
+    padding: 12px 14px; margin-bottom: 16px;
+  }
+  .karte p { margin: 0 0 8px; font-style: italic; font-size: 15px; line-height: 22px; }
+  .karte .von { display: block; text-align: right; font-size: 13px; line-height: 18px; color: #5c5751; }
+
+  /* ---------- Fußzeile ---------- */
+  .boden {
+    grid-column: 1 / 4;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .status { font-size: 15px; line-height: 24px; padding-left: 2px; }
+  .status .g { padding: 0 4px; }
+  .weiterblock { display: flex; flex-direction: column; align-items: stretch; width: 224px; }
+  .weiter {
+    width: 224px; height: 40px;
+    background: #26221b; color: #eeeae1;
+    border: none; font-family: inherit; font-size: 16px;
+    letter-spacing: .12em; text-transform: uppercase; cursor: pointer;
+  }
+  .weiter:active { outline: 3px double #26221b; outline-offset: 2px; }
+  .buchung { font-size: 13px; line-height: 18px; color: #5c5751; text-align: center; margin-top: 3px; }
+
+  /* Schmalere Fenster: zuerst klappt die rechte Spalte ein */
+  @media (max-width: 1279px) {
+    .app { grid-template-columns: 200px minmax(0,1fr); }
+    aside { display: none; }
+    .top, .boden { grid-column: 1 / 3; }
+  }
+</style>
+</head>
+<body>
+<!-- Gemeinsame Schraffuren für die Lithografie-Porträts -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="schraffur" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#26221b" stroke-width="0.9"/>
+    </pattern>
+    <pattern id="raster" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#26221b" stroke-width="0.45"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="app">
+
+  <!-- ============ KOPFLEISTE ============ -->
+  <header class="top panel">
+    <div class="zelle">
+      <div class="z1"><strong>Woche 7 von 30</strong></div>
+      <div class="z2">Mittwoch, 12. November 1884</div>
+    </div>
+    <div class="zelle m">
+      <div class="z1">Kasse 16&#8239;400&nbsp;M</div>
+      <div class="z2">in dieser Woche +385&nbsp;M</div>
+    </div>
+    <div class="zelle re">
+      <div class="z1">Der Löwen wartet auf Antwort</div>
+      <div class="z2">der Adler bietet 14&#8239;000 · Frist bis Freitag, 14. November</div>
+    </div>
+  </header>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="panel">
+    <div class="marke"><strong>BRAUMEISTER 1884</strong><br>Brauerei Kraus, Hohenau · im 15. Jahr</div>
+    <button class="nav-i" data-view="woche">Kontor</button>
+    <button class="nav-i off" title="in diesem Mockup nicht ausgeführt">Sudhaus</button>
+    <button class="nav-i active" data-view="bezirk">Der Bezirk</button>
+    <button class="nav-i off" title="in diesem Mockup nicht ausgeführt">Ablösungen</button>
+    <button class="nav-i" data-view="haus">Das Haus</button>
+    <button class="nav-i off" title="in diesem Mockup nicht ausgeführt">Chronik</button>
+    <div class="fuss">Braujahr 1884/85<br>Michaeli bis Georgi</div>
+  </nav>
+
+  <!-- ============ HAUPTFLÄCHE ============ -->
+  <main class="panel">
+
+    <!-- ~~~~~~~~~~ ANSICHT 1: DIE LAGE — DER BEZIRK ~~~~~~~~~~ -->
+    <section class="view on" data-view="bezirk">
+      <div class="maskkopf">
+        <h1>Die Lage — der Bezirk</h1>
+        <span class="frage">Wo stehe ich? · 14 Häuser, nach Wegstunden geordnet</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Haus</th><th>Ort</th><th class="n">km</th><th class="n">Vertrag bis</th>
+            <th class="n">hl&nbsp;82</th><th class="n">hl&nbsp;83</th><th class="n">hl&nbsp;84</th>
+            <th>gebunden an</th><th>Bemerkung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="sel">
+            <td class="b">Krone</td><td>Hohenau</td><td class="n">1</td><td class="n">1885</td>
+            <td class="n">210</td><td class="n">180</td><td class="n">140</td>
+            <td class="b">wir</td><td>Dach schadhaft — wer zahlt, zapft</td>
+          </tr>
+          <tr>
+            <td class="b">Grüner Baum</td><td>Hohenau</td><td class="n">2</td><td class="n">1886</td>
+            <td class="n">96</td><td class="n">94</td><td class="n">95</td>
+            <td class="b">wir</td><td>zahlt bar, klaglos</td>
+          </tr>
+          <tr>
+            <td class="b">Lamm</td><td>Steinried</td><td class="n">4</td><td class="n">1887</td>
+            <td class="n">118</td><td class="n">121</td><td class="n">124</td>
+            <td class="b">wir</td><td>will neue Bänke zum Frühjahr</td>
+          </tr>
+          <tr>
+            <td class="b">Ochsen</td><td>Lindenau</td><td class="n">6</td><td class="n">1889</td>
+            <td class="n">246</td><td class="n">252</td><td class="n">250</td>
+            <td class="b">wir</td><td class="r">leer seit Dienstag</td>
+          </tr>
+          <tr>
+            <td class="b">Bären</td><td>Oberdorf</td><td class="n">7</td><td class="n">1885</td>
+            <td class="n">88</td><td class="n">86</td><td class="n">84</td>
+            <td class="g">Adler</td><td>Vertrag wird nicht erneuert — zu Georgi frei</td>
+          </tr>
+          <tr>
+            <td class="b">Hirsch</td><td>Buchenau</td><td class="n">9</td><td class="n">1886</td>
+            <td class="n">132</td><td class="n">127</td><td class="n">119</td>
+            <td class="g">Adler</td><td>beim Adler seit 81, Darlehen läuft</td>
+          </tr>
+          <tr>
+            <td class="b">Post</td><td>Sankt Veit</td><td class="n">11</td><td class="n">1888</td>
+            <td class="n">240</td><td class="n">290</td><td class="n">331</td>
+            <td class="g">Hansa</td><td>die Bahn hält vor der Tür</td>
+          </tr>
+          <tr>
+            <td class="b">Anker</td><td>Sankt Veit</td><td class="n">11</td><td class="n">1887</td>
+            <td class="n">176</td><td class="n">181</td><td class="n">178</td>
+            <td class="g">Hansa</td><td>volle Säle am Bahndamm</td>
+          </tr>
+          <tr>
+            <td class="b">Traube</td><td>Kirchheim</td><td class="n">14</td><td class="n">1890</td>
+            <td class="n">154</td><td class="n">158</td><td class="n">161</td>
+            <td class="g">Adler</td><td>frisch gebunden, Darlehen 9&#8239;000</td>
+          </tr>
+          <tr class="off">
+            <td class="b">Rad</td><td>Marbach</td><td class="n">16</td><td class="n">—</td>
+            <td class="n">91</td><td class="n">38</td><td class="n">—</td>
+            <td>—</td><td>abgebrannt im Juni 83, Neubau ungewiss</td>
+          </tr>
+          <tr>
+            <td class="b">Engel</td><td>Tannfeld</td><td class="n">19</td><td class="n">1885</td>
+            <td class="n">72</td><td class="n">70</td><td class="n">71</td>
+            <td class="b">wir</td><td>will den Saal gedeckt</td>
+          </tr>
+          <tr>
+            <td class="b">Linde</td><td>Griesbach</td><td class="n">23</td><td class="n">—</td>
+            <td class="n">54</td><td class="n">49</td><td class="n">47</td>
+            <td>frei</td><td>der Sohn übernimmt zum Jahreswechsel</td>
+          </tr>
+          <tr>
+            <td class="b">Löwen</td><td>Griesbach</td><td class="n">24</td><td class="n">1885</td>
+            <td class="n">95</td><td class="n">88</td><td class="n">80</td>
+            <td class="b">wir</td><td>der Adler bietet 14&#8239;000</td>
+          </tr>
+          <tr>
+            <td class="b">Sonne</td><td>Altenau</td><td class="n">38</td><td class="n">—</td>
+            <td class="n">60</td><td class="n">62</td><td class="n">66</td>
+            <td>frei</td><td>drei Vertreter im Monat — wartet, wer bietet</td>
+          </tr>
+          <tr class="sum">
+            <td>Der Bezirk</td><td class="g">14 Häuser</td><td class="n"></td><td class="n"></td>
+            <td class="n">1&#8239;832</td><td class="n">1&#8239;796</td><td class="n">1&#8239;746</td>
+            <td colspan="2" class="g">davon an uns: 760 hl</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="anm">Gebunden zu Woche 7: an uns 760 hl · Adler 364 · Hansa 509 · frei 113 —
+        dazu die übrigen 44 Häuser im Umkreis mit 380 hl auf Richtlinie.</p>
+    </section>
+
+    <!-- ~~~~~~~~~~ ANSICHT 2: DER KADER — DAS HAUS ~~~~~~~~~~ -->
+    <section class="view" data-view="haus">
+      <div class="maskkopf">
+        <h1>Der Kader — das Haus</h1>
+        <span class="frage">Wer trägt das Haus? · Belegschaft und Aufstellung</span>
+      </div>
+
+      <h2>Die Belegschaft</h2>
+      <table class="kader">
+        <thead>
+          <tr>
+            <th></th><th>Name</th><th>Rolle</th><th class="n">Alter</th>
+            <th class="n">Können /10</th><th class="n">Lohn M/Jahr</th><th>Laune</th>
+            <th class="n">Vertrag bis</th><th>Bemerkung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bild"><svg width="36" height="44" viewBox="0 0 36 44">
+              <ellipse cx="18" cy="22" rx="15.5" ry="19.5" fill="url(#raster)" stroke="#26221b" stroke-width="1"/>
+              <path d="M9 38 Q18 28 27 38 L26 41 L10 41 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <ellipse cx="18" cy="18" rx="8" ry="9" fill="#eeeae1" stroke="#26221b" stroke-width=".8"/>
+              <path d="M10 15 Q11 11 14 12" fill="none" stroke="#26221b" stroke-width=".8"/>
+              <path d="M26 15 Q25 11 22 12" fill="none" stroke="#26221b" stroke-width=".8"/>
+              <path d="M11 21 Q11 31 18 32 Q25 31 25 21 Q22 26 18 26 Q14 26 11 21 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".7"/>
+              <line x1="13.4" y1="15.6" x2="16.2" y2="15.2" stroke="#26221b" stroke-width="1.1"/>
+              <line x1="19.8" y1="15.2" x2="22.6" y2="15.6" stroke="#26221b" stroke-width="1.1"/>
+              <circle cx="14.8" cy="17" r=".9" fill="#26221b"/><circle cx="21.2" cy="17" r=".9" fill="#26221b"/>
+              <path d="M18 17.5 L17.4 21" fill="none" stroke="#26221b" stroke-width=".7"/>
+            </svg></td>
+            <td class="b">Korbinian Steidl</td><td>Braumeister</td><td class="n">51</td>
+            <td class="n">8</td><td class="n">2&#8239;400</td><td>gut</td><td class="n">1887</td>
+            <td class="g">Preismärzen von 1881</td>
+          </tr>
+          <tr>
+            <td class="bild"><svg width="36" height="44" viewBox="0 0 36 44">
+              <ellipse cx="18" cy="22" rx="15.5" ry="19.5" fill="url(#raster)" stroke="#26221b" stroke-width="1"/>
+              <path d="M9 38 Q18 29 27 38 L26 41 L10 41 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <ellipse cx="18" cy="19" rx="7.5" ry="9" fill="#eeeae1" stroke="#26221b" stroke-width=".8"/>
+              <path d="M10.5 16 Q12 9.5 18 9.5 Q24 9.5 25.5 16 Q22 12.5 18 12.5 Q14 12.5 10.5 16 Z" fill="#26221b"/>
+              <path d="M10.8 18 Q10 26 13.5 28 L13.5 21 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <path d="M25.2 18 Q26 26 22.5 28 L22.5 21 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <line x1="13.2" y1="15.8" x2="16" y2="15.6" stroke="#26221b" stroke-width="1.1"/>
+              <line x1="20" y1="15.6" x2="22.8" y2="15.8" stroke="#26221b" stroke-width="1.1"/>
+              <circle cx="14.8" cy="17.4" r=".9" fill="#26221b"/><circle cx="21.2" cy="17.4" r=".9" fill="#26221b"/>
+              <path d="M18 17.8 L17.5 21.5 L18.6 21.7" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <path d="M15.5 25 Q18 23.8 20.5 25" fill="none" stroke="#26221b" stroke-width=".9"/>
+            </svg></td>
+            <td class="b">Lorenz Hagn</td><td>Küfer</td><td class="n">44</td>
+            <td class="n">6</td><td class="n">1&#8239;250</td><td>mürrisch</td><td class="n">1885</td>
+            <td class="g">will 100 M mehr im Jahr</td>
+          </tr>
+          <tr>
+            <td class="bild"><svg width="36" height="44" viewBox="0 0 36 44">
+              <ellipse cx="18" cy="22" rx="15.5" ry="19.5" fill="url(#raster)" stroke="#26221b" stroke-width="1"/>
+              <path d="M9 38 Q18 29 27 38 L26 41 L10 41 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <ellipse cx="18" cy="19" rx="7.5" ry="9" fill="#eeeae1" stroke="#26221b" stroke-width=".8"/>
+              <path d="M10.5 17 Q11 10 17 10 Q24 10 25.5 17 Q25 13.5 21 13 L12.5 14.5 Q11 15.5 10.5 17 Z" fill="#26221b"/>
+              <line x1="13.2" y1="16.2" x2="16" y2="16" stroke="#26221b" stroke-width=".9"/>
+              <line x1="20" y1="16" x2="22.8" y2="16.2" stroke="#26221b" stroke-width=".9"/>
+              <circle cx="14.8" cy="17.8" r=".9" fill="#26221b"/><circle cx="21.2" cy="17.8" r=".9" fill="#26221b"/>
+              <path d="M18 18.2 L17.6 21.8" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <path d="M15.5 24.5 Q18 25.8 20.5 24.5" fill="none" stroke="#26221b" stroke-width=".9"/>
+            </svg></td>
+            <td class="b">Urban Feicht</td><td>Mälzer</td><td class="n">28</td>
+            <td class="n">5</td><td class="n">950</td><td>gut</td><td class="n">1886</td>
+            <td class="g">lernt beim Steidl</td>
+          </tr>
+          <tr>
+            <td class="bild"><svg width="36" height="44" viewBox="0 0 36 44">
+              <ellipse cx="18" cy="22" rx="15.5" ry="19.5" fill="url(#raster)" stroke="#26221b" stroke-width="1"/>
+              <path d="M9 38 Q18 29 27 38 L26 41 L10 41 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <ellipse cx="18" cy="19" rx="7.5" ry="9" fill="#eeeae1" stroke="#26221b" stroke-width=".8"/>
+              <circle cx="12" cy="12.5" r="2.6" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <circle cx="16" cy="10.5" r="2.8" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <circle cx="20.5" cy="10.5" r="2.8" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <circle cx="24.2" cy="12.5" r="2.6" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <line x1="13.2" y1="16.2" x2="16" y2="16" stroke="#26221b" stroke-width=".9"/>
+              <line x1="20" y1="16" x2="22.8" y2="16.2" stroke="#26221b" stroke-width=".9"/>
+              <circle cx="14.8" cy="17.8" r=".9" fill="#26221b"/><circle cx="21.2" cy="17.8" r=".9" fill="#26221b"/>
+              <path d="M18 18.2 L17.6 21.8" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <path d="M15.5 24.5 Q18 25.5 20.5 24.5" fill="none" stroke="#26221b" stroke-width=".9"/>
+            </svg></td>
+            <td class="b">Matthias Lackner</td><td>Sudknecht</td><td class="n">23</td>
+            <td class="n">4</td><td class="n">640</td><td>gut</td><td class="n">1885</td>
+            <td class="g">verlässlich am Kessel</td>
+          </tr>
+          <tr>
+            <td class="bild"><svg width="36" height="44" viewBox="0 0 36 44">
+              <ellipse cx="18" cy="22" rx="15.5" ry="19.5" fill="url(#raster)" stroke="#26221b" stroke-width="1"/>
+              <path d="M9 38 Q18 29 27 38 L26 41 L10 41 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+              <ellipse cx="18" cy="19.5" rx="7.5" ry="8.8" fill="#eeeae1" stroke="#26221b" stroke-width=".8"/>
+              <path d="M10 14.5 Q10.5 8.5 18 8.5 Q25.5 8.5 26 14.5 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".8"/>
+              <path d="M9.5 14.5 L27.5 14.5 L28.5 16 L9 16 Z" fill="#26221b"/>
+              <circle cx="14.8" cy="18.4" r=".9" fill="#26221b"/><circle cx="21.2" cy="18.4" r=".9" fill="#26221b"/>
+              <path d="M18 18.8 L17.6 22" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <path d="M13.8 24 Q16 22.6 18 24 Q20 22.6 22.2 24 L21.5 25.3 Q18 24.4 14.5 25.3 Z" fill="#26221b"/>
+            </svg></td>
+            <td class="b">Simon Wackerl</td><td>Fuhrmann</td><td class="n">34</td>
+            <td class="n">7</td><td class="n">1&#8239;100</td><td>prächtig</td><td class="n">1885</td>
+            <td class="g">kennt jeden Wirt im Bezirk</td>
+          </tr>
+          <tr>
+            <td class="bild"><svg width="36" height="44" viewBox="0 0 36 44">
+              <ellipse cx="18" cy="22" rx="15.5" ry="19.5" fill="url(#raster)" stroke="#26221b" stroke-width="1"/>
+              <path d="M10 38 L14 32 L22 32 L26 38 L25 41 L11 41 Z" fill="#26221b"/>
+              <path d="M14.5 32 L18 36 L21.5 32 Z" fill="#eeeae1" stroke="#26221b" stroke-width=".6"/>
+              <ellipse cx="18" cy="19" rx="7" ry="8.8" fill="#eeeae1" stroke="#26221b" stroke-width=".8"/>
+              <path d="M11.2 16 Q11 11.5 14 11.5" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <path d="M24.8 16 Q25 11.5 22 11.5" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <circle cx="15" cy="17.4" r="2.1" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <circle cx="21" cy="17.4" r="2.1" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <line x1="17.1" y1="17.2" x2="18.9" y2="17.2" stroke="#26221b" stroke-width=".7"/>
+              <circle cx="15" cy="17.4" r=".8" fill="#26221b"/><circle cx="21" cy="17.4" r=".8" fill="#26221b"/>
+              <path d="M18 18 L17.7 21.6" fill="none" stroke="#26221b" stroke-width=".7"/>
+              <path d="M16.2 24.4 L19.8 24.4" fill="none" stroke="#26221b" stroke-width=".9"/>
+              <path d="M16.6 25.5 Q18 28.5 19.4 25.5 Z" fill="url(#schraffur)" stroke="#26221b" stroke-width=".6"/>
+            </svg></td>
+            <td class="b">August Ehrle</td><td>Kontorist</td><td class="n">61</td>
+            <td class="n">7</td><td class="n">1&#8239;400</td><td>still</td><td class="n">Lebzeit</td>
+            <td class="g">führt das Buch seit dem Vater</td>
+          </tr>
+          <tr class="sum">
+            <td></td><td>Die Belegschaft</td><td class="g">6 Leute</td><td class="n"></td>
+            <td class="n"></td><td class="n">7&#8239;740</td><td></td><td class="n"></td>
+            <td class="g">Löhne, je Woche 149 M</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Die Aufstellung — drei Sorten</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sorte</th><th class="n">Reichweite km</th><th class="n">Brautage v.&nbsp;18</th>
+            <th class="n">Fassplätze v.&nbsp;15</th><th class="n">hl je Sud</th><th class="n">Ausstoß hl</th>
+            <th>Bemerkung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="b">Landbier</td><td class="n">6</td><td class="n">11</td><td class="n">8</td>
+            <td class="n">62</td><td class="n">682</td><td>trägt das Haus; drei Wochen haltbar</td>
+          </tr>
+          <tr>
+            <td class="b">Märzen</td><td class="n">24</td><td class="n">5</td><td class="n">5</td>
+            <td class="n">58</td><td class="n">290</td><td>reist bis zum Löwen; hält in den Sommer</td>
+          </tr>
+          <tr>
+            <td class="b">Export</td><td class="n">60</td><td class="n">2</td><td class="n">2</td>
+            <td class="n">54</td><td class="n">108</td><td>für die Bahn; die Abgabe frisst den Rand</td>
+          </tr>
+          <tr class="sum">
+            <td>Das Sudjahr</td><td class="n"></td><td class="n">18</td><td class="n">15</td>
+            <td class="n"></td><td class="n">1&#8239;080</td><td class="g">Bedarf: 1&#8239;140 hl — der Keller ist der Engpass</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ~~~~~~~~~~ ANSICHT 3: DIE WOCHE — FUHRE UND ABRECHNUNG ~~~~~~~~~~ -->
+    <section class="view" data-view="woche">
+      <div class="maskkopf">
+        <h1>Die Woche — die Fuhre</h1>
+        <span class="frage">Was fährt diese Woche? · Fuhre I über die Straße, Fuhre II an die Bahn</span>
+      </div>
+
+      <h2>Die Zuteilung zu Woche 7</h2>
+      <p class="anm">Im Keller: Landbier 34 · Märzen 22 · Export 9 Fass — nach dieser Fuhre bleiben 44.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Haus</th><th>Ort</th><th>Sorte</th><th>Fuhre</th>
+            <th class="n">Bedarf Fass</th><th class="n">geladen</th><th class="n">Fehl</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="b">Krone</td><td>Hohenau</td><td>Landbier</td><td>I</td>
+            <td class="n">3</td><td class="n"><span class="feld">3</span></td><td class="n g">—</td>
+          </tr>
+          <tr>
+            <td class="b">Grüner Baum</td><td>Hohenau</td><td>Landbier</td><td>I</td>
+            <td class="n">2</td><td class="n"><span class="feld">2</span></td><td class="n g">—</td>
+          </tr>
+          <tr>
+            <td class="b">Lamm</td><td>Steinried</td><td>Landbier</td><td>I</td>
+            <td class="n">2</td><td class="n"><span class="feld">2</span></td><td class="n g">—</td>
+          </tr>
+          <tr>
+            <td class="b">Ochsen</td><td>Lindenau</td><td>Landbier</td><td>II</td>
+            <td class="n">6</td><td class="n"><span class="feld">4</span></td><td class="n r">2</td>
+          </tr>
+          <tr>
+            <td class="b">Löwen</td><td>Griesbach</td><td>Märzen</td><td>I</td>
+            <td class="n">2</td><td class="n"><span class="feld">2</span></td><td class="n g">—</td>
+          </tr>
+          <tr>
+            <td class="b">Engel</td><td>Tannfeld</td><td>Märzen</td><td>I</td>
+            <td class="n">1</td><td class="n"><span class="feld">1</span></td><td class="n g">—</td>
+          </tr>
+          <tr>
+            <td class="b">die übrigen 44 Häuser</td><td>im Umkreis</td><td>Landbier</td><td>I u. II</td>
+            <td class="n">7</td><td class="n"><span class="feld">7</span></td><td class="n g">—</td>
+          </tr>
+          <tr class="sum">
+            <td>Beide Fuhren</td><td></td><td></td><td></td>
+            <td class="n">23</td><td class="n">21</td><td class="n r">2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Das Ergebnis der Woche 6 · 3. bis 8. November</h2>
+      <div class="zwei">
+        <div>
+          <p class="anm">Geliefert 29 Fass · <span class="r">verfehlt 2 — der Ochsen</span></p>
+          <table class="klein">
+            <tbody>
+              <tr><td>Lieferungen, 29 Fass</td><td class="n">812</td></tr>
+              <tr><td>Rückstand der Krone, beglichen</td><td class="n">84</td></tr>
+              <tr><td>Löhne</td><td class="n">−149</td></tr>
+              <tr><td>Malz und Hopfen</td><td class="n">−248</td></tr>
+              <tr><td>Fracht und Beschlag</td><td class="n">−114</td></tr>
+              <tr class="sum"><td>Wochensaldo · Kasse am Sonnabend</td><td class="n">+385 · 16&#8239;400</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <p class="anm">Aus der Woche, wie es der Fuhrmann und das Kontor melden</p>
+          <ul class="ticker">
+            <li><span class="tag">Mo 3.</span>Der Adler-Wagen stand vor der Krone. Zwei Stunden.</li>
+            <li><span class="tag">Di 4.</span>Ochsen: 4 statt 6 Fass geladen — der Keller war leer.</li>
+            <li><span class="tag">Mi 5.</span>Die Hansa lud zwölf Fass an der Bahn in Sankt Veit.</li>
+            <li><span class="tag">Do 6.</span>Die Krone zahlte 84 M Rückstand.</li>
+            <li><span class="tag">Fr 7.</span>Zur Linde: der Alte übergibt, der Sohn führt das Haus.</li>
+            <li><span class="tag">Sa 8.</span>Löhne gezahlt, 149 M. Sud Nr. 11 liegt im Keller.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ RECHTE SPALTE: DIE POST ============ -->
+  <aside>
+    <div class="kopf">Die Post</div>
+
+    <div class="view on" data-view="bezirk">
+      <div class="karte">
+        <p>„Der Ochsen ist leer seit Dienstag. Wenn Freitag nichts kommt, redet der Adler mit mir.“</p>
+        <span class="von">— Therese Vogl, Wirtin zum Ochsen, Lindenau</span>
+      </div>
+      <div class="karte">
+        <p>„Das Dach muss neu. 3&#8239;000 Mark. Wer es zahlt, bekommt den Hahn.“</p>
+        <span class="von">— Michael Berger, Krone zu Hohenau</span>
+      </div>
+      <div class="karte">
+        <p>„Der graue Wagen des Adlers stand am Donnerstag vor der Krone. Zwei Stunden.“</p>
+        <span class="von">— Simon Wackerl, Fuhrmann</span>
+      </div>
+    </div>
+
+    <div class="view" data-view="haus">
+      <div class="karte">
+        <p>„Zwanzig Jahre Fässer, und der Lohn wie vor fünf. Die Hansa zahlt vierzehnhundert.“</p>
+        <span class="von">— Lorenz Hagn, Küfer</span>
+      </div>
+      <div class="karte">
+        <p>„Der Feicht hat das Zeug. Gebt ihm den Wintersud, ich stehe daneben.“</p>
+        <span class="von">— Korbinian Steidl, Braumeister</span>
+      </div>
+      <div class="karte">
+        <p>„Der Adler sucht einen zweiten Fuhrmann. Ich hörte es am Markt.“</p>
+        <span class="von">— August Ehrle, Kontorist</span>
+      </div>
+    </div>
+
+    <div class="view" data-view="woche">
+      <div class="karte">
+        <p>„Der Ochsen ist leer seit Dienstag. Wenn Freitag nichts kommt, redet der Adler mit mir.“</p>
+        <span class="von">— Therese Vogl, Wirtin zum Ochsen, Lindenau</span>
+      </div>
+      <div class="karte">
+        <p>„Sud Nr. 12 steht Montag an. Das Malz reicht noch für vier Sude, dann muss gekauft werden.“</p>
+        <span class="von">— Korbinian Steidl, Braumeister</span>
+      </div>
+      <div class="karte">
+        <p>„Die Hansa hat die Frachtsätze gesenkt. Ich lege die Zahlen ins Kontor.“</p>
+        <span class="von">— August Ehrle, Kontorist</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ FUSSZEILE ============ -->
+  <footer class="boden">
+    <div class="status">1 Fuhre nicht gepackt<span class="g">·</span>1 Angebot unbeantwortet<span class="g">·</span>3 Zettel neu</div>
+    <div class="weiterblock">
+      <button class="weiter" type="button">Weiter</button>
+      <div class="buchung">die Woche wird gebucht</div>
+    </div>
+  </footer>
+
+</div>
+<script>
+  // Minimales JS: nur der Ansichtswechsel. Kopfleiste, Navigation,
+  // rechte Spalte und Fußzeile bleiben stehen.
+  document.querySelectorAll('.nav-i[data-view]').forEach(function (knopf) {
+    knopf.addEventListener('click', function () {
+      document.querySelectorAll('.nav-i').forEach(function (k) { k.classList.remove('active'); });
+      knopf.classList.add('active');
+      var ziel = knopf.dataset.view;
+      document.querySelectorAll('.view').forEach(function (v) {
+        v.classList.toggle('on', v.dataset.view === ziel);
+      });
+    });
+  });
+</script>
+</body>
+</html>

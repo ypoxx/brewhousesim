@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Braumeister 1884 — iOS-Studie</title>
+<style>
+  :root{
+    --papier:#eeeae1; --papier-dunkel:#e4dfd2; --tinte:#26221b; --neben:#6e6a63;
+    --zinnober:#a03a24; --linie:#c9c3b4; --fremd:#8a867e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{
+    background:var(--papier); color:var(--tinte);
+    font:16px/1.45 Georgia,'Times New Roman',serif;
+    display:flex; flex-direction:column; max-width:430px; margin:0 auto;
+    height:100dvh; overflow:hidden;
+  }
+  /* Kopf */
+  header{
+    padding:14px 16px 10px; border-bottom:2px solid var(--tinte);
+    background:var(--papier); flex:none;
+  }
+  .kopfzeile{display:flex; justify-content:space-between; align-items:baseline}
+  .kopfzeile b{font-size:19px; letter-spacing:.02em}
+  .kasse{font-variant-numeric:tabular-nums; font-size:19px; font-weight:bold}
+  .termin{margin-top:3px; font-size:14px; color:var(--neben); display:flex; justify-content:space-between}
+  .termin em{color:var(--zinnober); font-style:normal}
+  /* Inhalt */
+  main{flex:1 1 auto; overflow-y:auto; padding:12px 16px 8px}
+  h2{font-size:14px; letter-spacing:.14em; font-weight:normal; text-transform:uppercase;
+     color:var(--neben); margin:6px 0 10px}
+  .ansicht{display:none}
+  .ansicht.aktiv{display:block}
+  /* Lage: Häuser-Liste */
+  .haus{
+    display:flex; align-items:center; gap:12px; padding:11px 2px;
+    border-bottom:1px solid var(--linie);
+  }
+  .haus .nam{flex:1 1 auto; min-width:0}
+  .haus .nam b{font-size:17px}
+  .haus .nam small{display:block; color:var(--neben); font-size:13px}
+  .reihe{display:flex; gap:5px; align-items:flex-end; height:26px}
+  .reihe i{display:block; width:7px; background:var(--tinte); opacity:.85}
+  .reihe.faellt i{background:var(--zinnober)}
+  .chip{
+    font-size:12px; letter-spacing:.06em; padding:3px 8px; border:1px solid var(--tinte);
+    white-space:nowrap; font-family:Georgia,serif;
+  }
+  .chip.wir{background:var(--tinte); color:var(--papier)}
+  .chip.fremd{border-color:var(--fremd); color:var(--fremd)}
+  .chip.frei{border-style:dashed; color:var(--neben); border-color:var(--neben)}
+  .haus.not .nam small{color:var(--zinnober)}
+  .summe{padding:12px 2px 4px; font-size:14px; color:var(--neben);
+         border-top:2px solid var(--tinte); margin-top:2px}
+  /* Woche */
+  .keller{
+    display:flex; justify-content:space-between; padding:10px 12px; margin-bottom:12px;
+    background:var(--papier-dunkel); border:1px solid var(--linie); font-size:14px;
+  }
+  .keller b{font-variant-numeric:tabular-nums}
+  .zuteilung{display:flex; align-items:center; gap:10px; padding:10px 2px;
+             border-bottom:1px solid var(--linie)}
+  .zuteilung .nam{flex:1; font-size:16px}
+  .zuteilung .nam small{display:block; color:var(--neben); font-size:12.5px}
+  .stepper{display:flex; align-items:center; gap:0; border:1px solid var(--tinte)}
+  .stepper button{
+    width:42px; height:40px; border:none; background:var(--papier); color:var(--tinte);
+    font:20px Georgia,serif;
+  }
+  .stepper output{
+    width:38px; text-align:center; font-variant-numeric:tabular-nums; font-size:17px;
+    border-left:1px solid var(--tinte); border-right:1px solid var(--tinte);
+    line-height:40px; height:40px;
+  }
+  .fehl{font-size:13px; color:var(--zinnober); width:44px; text-align:right}
+  .weiter{
+    display:block; width:100%; margin:16px 0 6px; padding:15px;
+    background:var(--tinte); color:var(--papier); border:none;
+    font:17px Georgia,serif; letter-spacing:.18em; text-transform:uppercase;
+  }
+  .weiter small{display:block; font-size:12px; letter-spacing:.04em; text-transform:none;
+                color:var(--papier-dunkel); margin-top:3px}
+  /* Post */
+  .zettel{
+    background:#f6f2e7; border:1px solid var(--linie); padding:13px 14px; margin-bottom:12px;
+    box-shadow:2px 2px 0 rgba(38,34,27,.08);
+  }
+  .zettel p{font-style:italic; font-size:16px}
+  .zettel .abs{margin-top:8px; font-size:13px; color:var(--neben); text-align:right; font-style:normal}
+  .zettel.warn{border-left:4px solid var(--zinnober)}
+  /* Karte */
+  .karte svg{width:100%; height:auto; display:block; border:1px solid var(--linie);
+             background:var(--papier-dunkel)}
+  .legende{font-size:13px; color:var(--neben); margin-top:8px}
+  .legende i{color:var(--zinnober); font-style:normal}
+  /* Reiterleiste */
+  nav{
+    flex:none; display:flex; border-top:2px solid var(--tinte); background:var(--papier);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  nav button{
+    flex:1; padding:9px 0 7px; background:none; border:none; color:var(--neben);
+    font:12.5px Georgia,serif; letter-spacing:.04em;
+  }
+  nav button svg{display:block; margin:0 auto 2px; width:24px; height:24px;
+                 stroke:currentColor; fill:none; stroke-width:1.6}
+  nav button.aktiv{color:var(--papier); background:var(--tinte)}
+  nav button .punkt{color:var(--zinnober)}
+  nav button.aktiv .punkt{color:#e8b4a6}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kopfzeile"><b>Woche 7 <small style="font-size:13px;color:var(--neben)">von 30</small></b>
+    <span class="kasse">16 400 M</span></div>
+  <div class="termin"><span>Mittwoch, 12. November 1884</span>
+    <em>Der Löwen wartet — Frist Fr.</em></div>
+</header>
+
+<main>
+  <!-- DIE LAGE -->
+  <section class="ansicht aktiv" id="lage">
+    <h2>Die Lage · 14 Häuser</h2>
+    <div class="haus"><div class="nam"><b>Krone</b><small>Hohenau · 1 km · Vertrag 1885</small></div>
+      <div class="reihe faellt"><i style="height:24px"></i><i style="height:20px"></i><i style="height:15px"></i></div>
+      <span class="chip wir">wir</span></div>
+    <div class="haus not"><div class="nam"><b>Ochsen</b><small>Lindenau · 6 km · leer seit Dienstag</small></div>
+      <div class="reihe"><i style="height:22px"></i><i style="height:23px"></i><i style="height:22px"></i></div>
+      <span class="chip wir">wir</span></div>
+    <div class="haus"><div class="nam"><b>Grüner Baum</b><small>Hohenau · 2 km · zahlt bar, klaglos</small></div>
+      <div class="reihe"><i style="height:17px"></i><i style="height:16px"></i><i style="height:17px"></i></div>
+      <span class="chip wir">wir</span></div>
+    <div class="haus"><div class="nam"><b>Post</b><small>Sankt Veit · 11 km · die Bahn hält vor der Tür</small></div>
+      <div class="reihe"><i style="height:15px"></i><i style="height:19px"></i><i style="height:24px"></i></div>
+      <span class="chip fremd">Hansa</span></div>
+    <div class="haus"><div class="nam"><b>Löwen</b><small>Griesbach · 24 km · der Adler bietet 14 000</small></div>
+      <div class="reihe faellt"><i style="height:19px"></i><i style="height:17px"></i><i style="height:15px"></i></div>
+      <span class="chip wir">wir</span></div>
+    <div class="haus"><div class="nam"><b>Bären</b><small>Oberdorf · 7 km · zu Georgi frei</small></div>
+      <div class="reihe"><i style="height:16px"></i><i style="height:15px"></i><i style="height:14px"></i></div>
+      <span class="chip fremd">Adler</span></div>
+    <div class="haus"><div class="nam"><b>Linde</b><small>Griesbach · 23 km · der Sohn übernimmt</small></div>
+      <div class="reihe"><i style="height:12px"></i><i style="height:10px"></i><i style="height:9px"></i></div>
+      <span class="chip frei">frei</span></div>
+    <div class="haus"><div class="nam"><b>Sonne</b><small>Altenau · 38 km · wartet, wer bietet</small></div>
+      <div class="reihe"><i style="height:11px"></i><i style="height:12px"></i><i style="height:13px"></i></div>
+      <span class="chip frei">frei</span></div>
+    <div class="summe">Gebunden: an uns 760 hl · Adler 364 · Hansa 509 · frei 113 — Balken: hl 82 · 83 · 84</div>
+  </section>
+
+  <!-- DIE WOCHE -->
+  <section class="ansicht" id="woche">
+    <h2>Die Woche · Fuhre packen</h2>
+    <div class="keller"><span>Im Keller</span><b>Landbier 34 · Märzen 22 · Export 9</b></div>
+    <div class="zuteilung"><div class="nam">Krone<small>Landbier · Bedarf 3</small></div>
+      <span class="fehl"></span>
+      <span class="stepper"><button>−</button><output>3</output><button>+</button></span></div>
+    <div class="zuteilung"><div class="nam">Ochsen<small>Landbier · Bedarf 6</small></div>
+      <span class="fehl">−2</span>
+      <span class="stepper"><button>−</button><output>4</output><button>+</button></span></div>
+    <div class="zuteilung"><div class="nam">Grüner Baum<small>Landbier · Bedarf 2</small></div>
+      <span class="fehl"></span>
+      <span class="stepper"><button>−</button><output>2</output><button>+</button></span></div>
+    <div class="zuteilung"><div class="nam">Löwen<small>Märzen · Bedarf 2</small></div>
+      <span class="fehl"></span>
+      <span class="stepper"><button>−</button><output>2</output><button>+</button></span></div>
+    <div class="zuteilung"><div class="nam">übrige 44 Häuser<small>Richtlinie des Fuhrmanns</small></div>
+      <span class="fehl"></span>
+      <span class="stepper"><button>−</button><output>7</output><button>+</button></span></div>
+    <button class="weiter">Woche abschicken →<small>der Wagen fährt, die Woche wird gebucht</small></button>
+  </section>
+
+  <!-- DIE POST -->
+  <section class="ansicht" id="post">
+    <h2>Die Post · 3 Zettel</h2>
+    <div class="zettel warn"><p>„Der Ochsen ist leer seit Dienstag. Wenn Freitag nichts kommt,
+      redet der Adler mit mir.“</p>
+      <div class="abs">— Therese Vogl, Wirtin zum Ochsen, Lindenau</div></div>
+    <div class="zettel"><p>„Das Dach muss neu. 3 000 Mark. Wer es zahlt, bekommt den Hahn.“</p>
+      <div class="abs">— Michael Berger, Krone zu Hohenau</div></div>
+    <div class="zettel"><p>„Der graue Wagen des Adlers stand am Donnerstag vor der Krone.
+      Zwei Stunden.“</p>
+      <div class="abs">— Simon Wackerl, Fuhrmann</div></div>
+  </section>
+
+  <!-- DIE KARTE -->
+  <section class="ansicht" id="karte">
+    <h2>Der Bezirk · Karte</h2>
+    <div class="karte">
+    <svg viewBox="0 0 380 430" role="img" aria-label="Bezirkskarte">
+      <path d="M30 390 C90 330 90 300 120 260 C150 220 200 210 230 170 C260 130 300 120 350 80"
+            stroke="#a9a294" stroke-width="7" fill="none"/>
+      <path d="M120 260 C160 265 210 280 300 300" stroke="#a9a294" stroke-width="5" fill="none"/>
+      <path d="M10 120 L370 60" stroke="#6e6a63" stroke-width="3" stroke-dasharray="9 5" fill="none"/>
+      <text x="18" y="110" font-size="11" fill="#6e6a63" font-family="Georgia">Bahn</text>
+      <path d="M258 148 A190 190 0 0 1 300 355" stroke="#a03a24" stroke-width="2.5"
+            stroke-dasharray="7 5" fill="none"/>
+      <text x="300" y="380" font-size="11" fill="#a03a24" font-family="Georgia">Märzen · 24 km</text>
+      <g font-family="Georgia" font-size="12.5" fill="#26221b">
+        <rect x="38" y="356" width="46" height="34" fill="#26221b"/>
+        <rect x="52" y="336" width="8" height="22" fill="#26221b"/>
+        <text x="34" y="408">Brauerei Kraus</text>
+        <circle cx="120" cy="260" r="9" fill="#26221b"/><text x="100" y="245">Krone</text>
+        <circle cx="176" cy="228" r="9" fill="#26221b"/><text x="160" y="212">Ochsen</text>
+        <circle cx="230" cy="170" r="9" fill="none" stroke="#8a867e" stroke-width="2.5"/>
+        <text x="212" y="154" fill="#8a867e">Post · Hansa</text>
+        <circle cx="300" cy="300" r="9" fill="#26221b"/><text x="278" y="325">Löwen</text>
+        <circle cx="350" cy="80" r="9" fill="none" stroke="#6e6a63" stroke-width="2"
+                stroke-dasharray="4 3"/>
+        <text x="300" y="66" fill="#6e6a63">Sonne · frei</text>
+        <path d="M176 219 l0 -16 l12 4 l-12 4" fill="#a03a24"/>
+        <rect x="140" y="286" width="26" height="12" fill="#26221b"/>
+        <circle cx="146" cy="302" r="4" fill="#26221b"/><circle cx="160" cy="302" r="4" fill="#26221b"/>
+        <text x="118" y="320" font-size="11" fill="#6e6a63">unsere Fuhre</text>
+      </g>
+    </svg>
+    </div>
+    <div class="legende">Voll = unser Haus · Umriss = gebunden an Fremde · gestrichelt = frei ·
+      <i>Zinnober = Reichweite &amp; Fehl</i>. Wimpel am Ochsen: der Adler wirbt.</div>
+  </section>
+</main>
+
+<nav>
+  <button class="aktiv" data-ziel="lage">
+    <svg viewBox="0 0 24 24"><path d="M4 19h16M4 15l4-4 4 3 5-6 3 3"/></svg>Lage</button>
+  <button data-ziel="woche">
+    <svg viewBox="0 0 24 24"><rect x="5" y="9" width="14" height="10" rx="1"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>Woche</button>
+  <button data-ziel="post">
+    <svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="13" rx="1"/><path d="M4 8l8 6 8-6"/></svg>Post<span class="punkt"> ·3</span></button>
+  <button data-ziel="karte">
+    <svg viewBox="0 0 24 24"><path d="M9 5 4 7v12l5-2 6 2 5-2V5l-5 2-6-2zM9 5v12M15 7v12"/></svg>Karte</button>
+</nav>
+
+<script>
+  document.querySelectorAll('nav button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('nav button').forEach(x=>x.classList.remove('aktiv'));
+      document.querySelectorAll('.ansicht').forEach(x=>x.classList.remove('aktiv'));
+      b.classList.add('aktiv');
+      document.getElementById(b.dataset.ziel).classList.add('aktiv');
+    });
+  });
+</script>
+</body>
+</html>
