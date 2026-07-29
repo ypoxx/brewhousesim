@@ -26,10 +26,7 @@ import urllib.request
 
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 DEFAULT_MODEL = "gemini-3-pro-image"
-SCRATCH_KEY = (
-    "/tmp/claude-0/-home-user-brewhousesim/"
-    "9c913e86-c013-53fc-aec2-8764185a2fec/scratchpad/.gemini_key"
-)
+SCRATCH_KEY = os.path.expanduser("~/.gemini_key")
 MIME_BY_SUFFIX = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
                   ".webp": "image/webp"}
 # Verified against the API on 2026-07-26. There is deliberately no 16:10.
