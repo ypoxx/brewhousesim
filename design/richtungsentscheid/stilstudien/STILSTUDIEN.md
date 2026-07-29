@@ -23,3 +23,30 @@ Ein plausibles Zielbild aus der Serie: **S2 als Heimatbildschirm** (die Stadt, i
 das Marktmodell wohnt), **die Kontorbuch-Masken des Mockups für Tabelle, Kader und
 Michaeli**, und **S1/S3-artige Szenen als Ereignis- und Besuchsbilder**. Das wäre die
 „Haut Bühne" der Mehrheitsstimmen, mit Bildern statt Behauptungen.
+
+## Rückmeldung des Auftraggebers (nach Sichtung)
+
+S2 favorisiert („lebendiger durch die Isometrie"), an S3 gefällt das mitalternde
+Epochen-Interface, S1 und S3 als verwandt empfunden. S5 zu kindlich und KI-seitig zu
+aufwendig. S6 nicht als Hauptakt, aber interessant als **Zwischenkarte der Expansion** —
+man will die Ausbreitung der Brauerei sehen.
+
+## Die Epochen-Serie (`epochen/`)
+
+Auftrag danach: dieselbe Stadt über die Epochen hinweg, in der S2-Optik, mit
+mitalterndem Interface (KONZEPT §11: „Pergament, Kupferstich, Lithografie, Emailschild,
+Gegenwart"). Alle drei neuen Bilder per `--ref` aus `s2-stadtkarte.jpg` (= Epoche III,
+1884) erzeugt — die Stadt bleibt erkennbar dieselbe, und genau das ist die Pointe:
+**„Du spielst ein Haus" als Bildfolge.**
+
+| Datei | Epoche | Was sich wandelt |
+|---|---|---|
+| `epochen/e1-1350.jpg` | I · Das Recht | Klosterbrauerei mit Grutgarten, ein Kupferkessel, Lehmwege, Handkarren; UI als Pergament-Handschrift mit Rubrik-Initialen, WEITER als Siegelrolle. |
+| `epochen/e2-1650.jpg` | II · Die Ordnung | Barockturm, Zunfthäuser, Hopfengärten, eine Brandruine als Kriegsnarbe; UI im Holzschnitt-Duktus, FORTFAHREN als gedrucktes Zunftsiegel. *Bekannte Schwäche: Straßenbild und Bahntrasse noch zu 1884-haft — Erbe des Referenzbilds.* |
+| `s2-stadtkarte.jpg` | III · Die Maschine (1884) | Das Ausgangsbild: Backstein, Schornstein, Eisenbahn, Lithografie-UI. |
+| `epochen/e4-gegenwart.jpg` | IV · Die Marke (heute) | Supermarkt mit Paletten, Lkw statt Fuhre, Taproom im alten Stall, S-Bahn, Solardächer; UI nüchtern-flach. |
+
+Einordnung zur Empfehlung der Gegenüberstellung: Am Entscheid „eine feste Zeit zuerst,
+Epochen als Ausbaustufen" ändert die Serie nichts — aber sie zeigt, was „andockfähig"
+später visuell bedeuten würde, zum Preis von je einem Stadtbild und einem UI-Kleid pro
+Epoche.
