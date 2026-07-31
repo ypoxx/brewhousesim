@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T19:00:03+00:00",
+ "stand": "2026-07-31T19:13:14+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -31,6 +31,12 @@
    "status": "laeuft",
    "runde": 1,
    "gebaut": "werkbank/schuss/2-runde1.png"
+  },
+  {
+   "name": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderruflich",
+   "status": "laeuft",
+   "runde": 1,
+   "gebaut": "werkbank/schuss/3-runde1.png"
   }
  ],
  "chronik": [
@@ -101,6 +107,14 @@
   {
    "zeit": "2026-07-31T19:00:03+00:00",
    "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 1 · läuft"
+  },
+  {
+   "zeit": "2026-07-31T19:13:14+00:00",
+   "text": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderruflich · Runde 1 · läuft"
+  },
+  {
+   "zeit": "2026-07-31T19:13:14+00:00",
+   "text": "DER PREIS Runde 1: Michaelitafel steht. 5 Angebote nebeneinander je Epoche, 4 getrennte Listen, eine Festlegung je Amtszeit mit Chronik. Leiter faellt in allen vier Epochen ueber fuenf Jahre."
   }
  ]
 }
