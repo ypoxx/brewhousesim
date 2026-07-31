@@ -1,112 +1,316 @@
 /* ===========================================================================
-   stil/stadt.css — GEHOERT DEM BAUER VON "DIE STADT". Ersetze frei.
-   Stummelstil: farbige Platzhalterflaeche je Epoche und Ortsmarken.
+   stil/stadt.css — DIE STADT.
+
+   Drei Dinge stehen hier:
+   1. die Platte und der Hof (Bilder, freigestellt, an Orten),
+   2. die Beschriftung der Stadt und das Hausschild — echter Text auf
+      gemalten Tafeln, scharf in jeder Aufloesung,
+   3. die Kopfleiste und die WEITER-Tafel: das Holz aus dem Zielbild,
+      nur eben mit echten Zahlen aus welt.js.
+
+   Alle Groessen in Vielfachen von --s (ein Bezugspixel bei 2752x1536).
    =========================================================================== */
 
-.stadt-platzhalter {
+/* ==========================================================================
+   1 — DIE PLATTE UND DER HOF
+   ========================================================================== */
+
+.stadt-platte {
   position: absolute;
   inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* Vier Epochen, vier Stimmungen. Ersetzt spaeter das Epochenbild. */
-.stadt-platzhalter[data-epoche="1"] {
-  background:
-    radial-gradient(120% 70% at 50% 100%, rgba(120, 92, 48, 0.35), rgba(120, 92, 48, 0) 60%),
-    linear-gradient(180deg, #9fb0b8 0%, #cfcfae 30%, #b9ad81 55%, #9a8a60 100%);
-}
-.stadt-platzhalter[data-epoche="2"] {
-  background:
-    radial-gradient(120% 70% at 50% 100%, rgba(110, 70, 36, 0.4), rgba(110, 70, 36, 0) 60%),
-    linear-gradient(180deg, #a2aeb6 0%, #d5c8a4 30%, #b6a274 55%, #8e7a52 100%);
-}
-.stadt-platzhalter[data-epoche="3"] {
-  background:
-    radial-gradient(90% 60% at 17% 30%, rgba(60, 50, 45, 0.45), rgba(60, 50, 45, 0) 55%),
-    linear-gradient(180deg, #96afbb 0%, #e2c795 30%, #b39a6b 55%, #86704b 100%);
-}
-.stadt-platzhalter[data-epoche="4"] {
-  background:
-    radial-gradient(120% 70% at 50% 100%, rgba(70, 74, 78, 0.4), rgba(70, 74, 78, 0) 60%),
-    linear-gradient(180deg, #8ea5b8 0%, #c9ccc4 30%, #a7a798 55%, #7f7f74 100%);
+/* Ein gebautes Haus. Steht mit dem Fusspunkt auf seinem Ort (anker 'unten'),
+   die Breite kommt aus stadt-daten.js, die Reihenfolge aus der Tiefe:
+   was weiter vorne steht, deckt, was dahinter steht. */
+.stadt-haus {
+  display: block;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(calc(var(--s) * 3) calc(var(--s) * 6) calc(var(--s) * 7) rgba(40, 26, 12, 0.34));
 }
 
-.stadt-schild {
-  position: absolute;
-  left: 50%;
-  top: 12.6%;
-  transform: translate(-50%, 0);
-  width: 38%;
-  padding: calc(var(--s) * 12) calc(var(--s) * 18);
-  background: rgba(255, 250, 235, 0.82);
-  border: calc(var(--s) * 3) dashed rgba(43, 29, 16, 0.6);
-  border-radius: calc(var(--s) * 6);
+/* Der Bauplatz unter der Maus: man sieht, was das Geld veraendert, bevor
+   man es ausgibt. */
+.stadt-haus.geist {
+  opacity: 0.55;
+  filter: drop-shadow(0 0 calc(var(--s) * 12) rgba(255, 246, 214, 0.9)) saturate(0.7);
+  animation: stadt-atem 1.5s ease-in-out infinite;
+}
+
+@keyframes stadt-atem {
+  0%, 100% { opacity: 0.42; }
+  50%      { opacity: 0.68; }
+}
+
+.stadt-rauch {
+  display: block;
+  height: auto;
+  opacity: 0.82;
+  user-select: none;
+}
+
+/* ==========================================================================
+   2 — DIE BESCHRIFTUNG: echter Text auf gemalten Tafeln
+   ========================================================================== */
+
+.stadt-name {
+  white-space: nowrap;
+  padding: calc(var(--s) * 3) calc(var(--s) * 9) calc(var(--s) * 4);
+  background: linear-gradient(180deg, #f6ecd2 0%, #e6d5ae 100%);
+  border: calc(var(--s) * 2) solid #4a3117;
+  border-radius: calc(var(--s) * 2);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 5) rgba(40, 26, 12, 0.4);
+  color: #33220f;
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: calc(var(--s) * 2);
+  line-height: 1.05;
+  rotate: -1.2deg;
+}
+
+.stadt-name .wort { display: block; }
+
+/* Das Hausschild an der Hofmauer. Im Zielbild ist es gemalt und zerfaellt;
+   hier ist es gesetzt. */
+.stadt-hausschild {
+  box-sizing: border-box;
+  padding: calc(var(--s) * 6) calc(var(--s) * 6) calc(var(--s) * 7);
   text-align: center;
-  color: #2b1d10;
-}
-.stadt-schild .kopf {
-  font-family: var(--mono);
-  font-size: calc(var(--s) * 20);
-  letter-spacing: calc(var(--s) * 4);
-  opacity: 0.65;
-}
-.stadt-schild .jahr {
-  font-size: calc(var(--s) * 36);
-  letter-spacing: calc(var(--s) * 3);
-  margin: calc(var(--s) * 4) 0;
-}
-.stadt-schild .text {
-  font-size: calc(var(--s) * 19);
-  line-height: 1.3;
-  margin-top: calc(var(--s) * 5);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0.06)),
+    #f2e2bd;
+  border: calc(var(--s) * 2) solid #4a3117;
+  border-radius: calc(var(--s) * 2);
+  box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 7) rgba(40, 26, 12, 0.45);
+  color: #2f1f0d;
+  font-family: var(--serif);
+  line-height: 1;
 }
 
-/* Der Punkt sitzt GENAU auf dem Ort; nur die Beschriftung weicht aus.
-   Sonst waere das Ortsverzeichnis eine Luege ueber sich selbst. */
-.stadt-ort {
-  width: 0;
-  height: 0;
-  color: #23180d;
-  text-shadow: 0 0 calc(var(--s) * 8) rgba(255, 250, 235, 0.95);
-}
-
-.stadt-ort i {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(var(--s) * 18);
-  height: calc(var(--s) * 18);
-  border-radius: 50%;
-  background: rgba(157, 53, 32, 0.9);
-  border: calc(var(--s) * 3) solid rgba(255, 250, 235, 0.9);
-  box-shadow: 0 0 calc(var(--s) * 8) rgba(0, 0, 0, 0.35);
-}
-
-.stadt-ort .wort,
-.stadt-ort .zahl {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.stadt-hausschild .zeile {
+  font-weight: 700;
+  letter-spacing: calc(var(--s) * 1.5);
+  font-size: calc(var(--s) * 21);
   white-space: nowrap;
 }
-.stadt-ort {
-  --stufe: 0;
+.stadt-hausschild.klein .zeile { font-size: calc(var(--s) * 17); }
+.stadt-hausschild .mitte {
+  display: block;
+  margin: calc(var(--s) * 1) 0;
 }
-.stadt-ort .wort {
-  top: calc(var(--s) * 16 + var(--s) * 46 * var(--stufe));
-  font-size: calc(var(--s) * 21);
-  letter-spacing: calc(var(--s) * 1);
+.stadt-hausschild .anker {
+  width: calc(var(--s) * 17);
+  height: calc(var(--s) * 17);
+  fill: #2f1f0d;
+  vertical-align: middle;
 }
-.stadt-ort .zahl {
-  top: calc(var(--s) * 44 + var(--s) * 46 * var(--stufe));
+.stadt-hausschild .gegr {
+  margin-top: calc(var(--s) * 2);
+  font-size: calc(var(--s) * 11);
+  letter-spacing: calc(var(--s) * 2);
+  opacity: 0.8;
+}
+
+/* 1970: kein gemaltes Brett mehr, sondern eine Leuchtschrifttafel. */
+.stadt-hausschild.hell {
+  background: linear-gradient(180deg, #fdfdfb 0%, #e9eae6 100%);
+  border: calc(var(--s) * 2) solid #6d6b62;
+  border-radius: calc(var(--s) * 1);
+  color: #23231f;
+  padding: calc(var(--s) * 8) calc(var(--s) * 6);
+}
+.stadt-hausschild.hell .zeile {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: calc(var(--s) * 20);
+  letter-spacing: calc(var(--s) * 0.5);
+}
+
+/* ==========================================================================
+   3 — DER BAUHOF
+   Die offenen Bauten der Epoche, mit Preisschild nebeneinander. Das Brett
+   liegt bewusst links am Rand: dort steht kein Wahrzeichen, an dem der
+   Ortsvergleich haengt.
+   ========================================================================== */
+
+.stadt-bauhof {
+  position: absolute;
+  left: 1.1%;
+  top: 54.5%;
+  width: 17.6%;
+  padding: calc(var(--s) * 9) calc(var(--s) * 10) calc(var(--s) * 8);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.18)),
+    repeating-linear-gradient(180deg, #6b4526 0 calc(var(--s) * 26), #66401f 0 calc(var(--s) * 52));
+  border: calc(var(--s) * 3) solid #33200e;
+  border-radius: calc(var(--s) * 5);
+  box-shadow: 0 calc(var(--s) * 8) calc(var(--s) * 18) rgba(0, 0, 0, 0.45);
+  pointer-events: auto;
+}
+
+.stadt-bauhof .kopf {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: calc(var(--s) * 8);
+  padding-bottom: calc(var(--s) * 6);
+  margin-bottom: calc(var(--s) * 7);
+  border-bottom: calc(var(--s) * 2) solid rgba(255, 235, 195, 0.35);
+}
+.stadt-bauhof .kopf .wort {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: calc(var(--s) * 24);
+  letter-spacing: calc(var(--s) * 4);
+  color: #f6e3bd;
+}
+.stadt-bauhof .kopf .zahl {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  color: #d5b183;
+}
+
+.stadt-bauhof .bauzeile { margin-bottom: calc(var(--s) * 7); }
+
+.stadt-bauhof .knopf {
+  display: flex;
+  width: 100%;
+  min-height: calc(var(--s) * 40);
+  padding: calc(var(--s) * 6) calc(var(--s) * 10);
+  font-size: calc(var(--s) * 20);
+  gap: calc(var(--s) * 6);
+  border-radius: calc(var(--s) * 3);
+}
+.stadt-bauhof .knopf .preis { font-size: calc(var(--s) * 18); }
+
+.stadt-bauhof .nutzen {
+  padding: calc(var(--s) * 2) calc(var(--s) * 4) 0;
   font-family: var(--mono);
   font-size: calc(var(--s) * 15);
-  opacity: 0.7;
+  color: #e3c79a;
+  letter-spacing: calc(var(--s) * 0.5);
 }
 
+.stadt-bauhof .leer,
+.stadt-bauhof .fuss {
+  font-size: calc(var(--s) * 15);
+  line-height: 1.25;
+  color: #dcbe92;
+  font-style: italic;
+}
+.stadt-bauhof .fuss {
+  margin-top: calc(var(--s) * 6);
+  padding-top: calc(var(--s) * 6);
+  border-top: calc(var(--s) * 2) solid rgba(255, 235, 195, 0.25);
+}
 
-.stadt-ort.art-bau i    { background: rgba(94, 61, 32, 0.9); }
-.stadt-ort.art-stadt i  { background: rgba(60, 84, 110, 0.9); }
-.stadt-ort.art-land i   { background: rgba(74, 107, 58, 0.9); }
-.stadt-ort.art-wasser i { background: rgba(52, 110, 132, 0.9); }
-.stadt-ort.art-fremd i  { background: rgba(40, 40, 44, 0.9); }
+/* ==========================================================================
+   4 — KOPFLEISTE UND WEITER-TAFEL
+   Gebaut von kern/kopf.js mit echten Zahlen aus welt.js; hier bekommt es
+   das Holz aus dem Zielbild.
+   ========================================================================== */
+
+.kopfleiste {
+  gap: calc(var(--s) * 10);
+  padding: calc(var(--s) * 7) calc(var(--s) * 12);
+  background:
+    linear-gradient(180deg, rgba(255, 226, 178, 0.22) 0%, rgba(0, 0, 0, 0) 22%,
+                            rgba(0, 0, 0, 0.22) 78%, rgba(0, 0, 0, 0.42) 100%),
+    repeating-linear-gradient(92deg, #6d4525 0 calc(var(--s) * 90),
+                                     #67411f 0 calc(var(--s) * 178)),
+    #6b4526;
+  border: calc(var(--s) * 3) solid #35210e;
+  border-radius: calc(var(--s) * 7);
+  box-shadow:
+    inset 0 calc(var(--s) * 2) 0 rgba(255, 226, 178, 0.35),
+    0 calc(var(--s) * 7) calc(var(--s) * 16) rgba(0, 0, 0, 0.45);
+}
+
+.kopfleiste .tafel {
+  flex-direction: row;
+  align-items: baseline;
+  gap: calc(var(--s) * 7);
+  padding: calc(var(--s) * 5) calc(var(--s) * 13);
+  background: linear-gradient(180deg, #58371c 0%, #43290f 100%);
+  border: calc(var(--s) * 2) solid #2a1a0a;
+  border-radius: calc(var(--s) * 3);
+  box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255, 220, 165, 0.18);
+}
+
+.kopfleiste .tafel::before,
+.kopfleiste .tafel::after {
+  color: #b98d55;
+  font-family: var(--serif);
+  font-size: calc(var(--s) * 25);
+  line-height: 1;
+}
+.kopfleiste .tafel::before { content: "["; }
+.kopfleiste .tafel::after  { content: "]"; }
+
+.kopfleiste .tafel .marke {
+  font-family: var(--serif);
+  font-size: calc(var(--s) * 19);
+  letter-spacing: calc(var(--s) * 3);
+  color: #dcb180;
+  opacity: 1;
+}
+.kopfleiste .tafel .wert {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: calc(var(--s) * 26);
+  letter-spacing: calc(var(--s) * 1.5);
+  color: #fbeccb;
+}
+.kopfleiste .tafel.knopf:hover {
+  background: linear-gradient(180deg, #6f4523 0%, #543317 100%);
+}
+
+/* Haus, Braujahr, Generation — die Zeile unter der Leiste. */
+.hauszeile {
+  background: linear-gradient(180deg, rgba(247, 238, 216, 0.9), rgba(233, 219, 186, 0.85));
+  border: calc(var(--s) * 2) solid rgba(74, 49, 23, 0.75);
+  border-radius: calc(var(--s) * 4);
+  padding: calc(var(--s) * 3) calc(var(--s) * 16) calc(var(--s) * 4);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 8) rgba(0, 0, 0, 0.3);
+}
+
+/* Die WEITER-Tafel unten rechts. */
+.knopf.gross[data-zug="weiter"] {
+  background: linear-gradient(180deg, #f7ecd2 0%, #e2cda4 100%);
+  border: calc(var(--s) * 3) solid #4a3117;
+  border-radius: calc(var(--s) * 4);
+  box-shadow:
+    inset 0 calc(var(--s) * 3) 0 rgba(255, 255, 255, 0.6),
+    0 calc(var(--s) * 5) calc(var(--s) * 10) rgba(0, 0, 0, 0.42);
+  font-weight: 700;
+  letter-spacing: calc(var(--s) * 5);
+  padding: calc(var(--s) * 13) calc(var(--s) * 26);
+}
+.knopf.gross[data-zug="weiter"]::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: calc(var(--s) * 4);
+  border-top: calc(var(--s) * 10) solid transparent;
+  border-bottom: calc(var(--s) * 10) solid transparent;
+  border-left: calc(var(--s) * 15) solid #4a3117;
+}
+
+/* Barschaft gegen den Preis des naechsten Zuges. kern/kopf.js setzt die
+   Stellung als Inline-Stil; hier wird nur das Papier untergelegt. */
+.deckung {
+  background: linear-gradient(180deg, rgba(247, 238, 216, 0.94), rgba(230, 214, 179, 0.9)) !important;
+  border: calc(var(--s) * 2) solid rgba(74, 49, 23, 0.7);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 8) rgba(0, 0, 0, 0.3);
+  padding: calc(var(--s) * 5) calc(var(--s) * 12) !important;
+  letter-spacing: calc(var(--s) * 0.5);
+}
