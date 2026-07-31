@@ -138,15 +138,15 @@ var FUHRE_DATEN = {
       ],
       sorten: [
         { k: 'duenn', name: 'Dünnbier', zeichen: 'D', stufe: 1,
-          tage: 1, fass: 5, reife: 0, haltbar: 3, preis: 5, kosten: 9, rohstoff: 3,
+          tage: 1, fass: 5, reife: 0, haltbar: 3, preis: 5, kosten: 6, rohstoff: 2,
           sommer: false,
           satz: 'Ein Tag am Kessel, fünf Fass. In drei Wochen ist es sauer. Der Gasthof nimmt es nicht.' },
         { k: 'grut', name: 'Grutbier', zeichen: 'G', stufe: 2,
-          tage: 2, fass: 4, reife: 0, haltbar: 6, preis: 9, kosten: 11, rohstoff: 4,
+          tage: 2, fass: 4, reife: 0, haltbar: 6, preis: 9, kosten: 8, rohstoff: 3,
           sommer: false,
           satz: 'Das Bier des Hauses. Grut aus Gagel, Porst und Schafgarbe — kein Hopfen.' },
         { k: 'stark', name: 'Starkbier', zeichen: 'S', stufe: 3,
-          tage: 3, fass: 3, reife: 2, haltbar: 16, preis: 19, kosten: 20, rohstoff: 8,
+          tage: 3, fass: 3, reife: 2, haltbar: 16, preis: 19, kosten: 15, rohstoff: 6,
           sommer: true,
           satz: 'Drei Tage für drei Fass. Dafür hält es bis in den Sommer, und das Kloster zahlt.' }
       ]
@@ -174,7 +174,7 @@ var FUHRE_DATEN = {
                satz: 'Acht Plätze, fünf Halte, zwei Pferde. Die Fässer kommen erst nach Wochen zurück.' },
       faesser: 38,
       planStart: 1,
-      unterhalt: 6,
+      unterhalt: 4,
       mengenfaktor: 1,
       winteranteil: 0.68,
       sommerSatz: 'Das Sommerbrauverbot steht seit 1553 in der Ordnung: von Georgi bis '
@@ -193,15 +193,15 @@ var FUHRE_DATEN = {
       ],
       sorten: [
         { k: 'schank', name: 'Schankbier', zeichen: 'S', stufe: 1,
-          sude: 1, fass: 8, reife: 0, haltbar: 4, preis: 13, kosten: 26, rohstoff: 5,
+          sude: 1, fass: 8, reife: 0, haltbar: 4, preis: 13, kosten: 20, rohstoff: 5,
           sommer: false,
           satz: 'Dünn, schnell, acht Fass aus einem Sud. Füllt den Wagen, füllt nicht die Kasse.' },
         { k: 'braun', name: 'Braunbier', zeichen: 'B', stufe: 2,
-          sude: 1, fass: 6, reife: 1, haltbar: 10, preis: 22, kosten: 38, rohstoff: 8,
+          sude: 1, fass: 6, reife: 1, haltbar: 10, preis: 22, kosten: 28, rohstoff: 8,
           sommer: false,
           satz: 'Das Bier der Zunft. Sechs Fass, eine Woche Lager, jeder Wirt nimmt es.' },
         { k: 'maerzen', name: 'Märzenbier', zeichen: 'M', stufe: 3,
-          sude: 1, fass: 4, reife: 10, haltbar: 34, preis: 40, kosten: 52, rohstoff: 11,
+          sude: 1, fass: 4, reife: 10, haltbar: 34, preis: 40, kosten: 40, rohstoff: 11,
           sommer: true,
           satz: 'Zehn Wochen im Fass, ehe es taugt — zehn Wochen belegter Platz. '
               + 'Dafür überlebt es als einziges den Sommer.' }

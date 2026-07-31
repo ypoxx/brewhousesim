@@ -333,14 +333,6 @@
     if (!Z.ladung.length) return;
     var lohn = fuhrlohn();
     var e = ep();
-
-    if (!B.welt.zahle(lohn, 'Fuhrlohn ' + (frachtstufe() ? frachtstufe().name : e.wagen.name)
-        + ' · ' + Z.ladung.length + (Z.ladung.length === 1 ? ' Halt' : ' Halte'), 'spieler')) {
-      Z.meldung = 'Die Kasse reicht nicht für den Fuhrlohn.';
-      B.sende('zeichne', { grund: 'fuhre-arm' });
-      return;
-    }
-
     var gesamt = 0, erloesGesamt = 0;
     var verteilung = {};
 
@@ -378,6 +370,12 @@
       Z.umlauf.push({ faellig: woManifest() + (e.wagen.umlauf || 1), n: n });
       Z.draussen += n;
     });
+
+    /* Erst liefert der Wagen, dann wird der Fuhrmann bezahlt — aus dem, was
+       er mitgebracht hat. Eine leere Kasse haelt die Woche deshalb nie an. */
+    B.welt.zahle(Math.min(lohn, Math.max(0, B.welt.haus.kasse)),
+      'Fuhrlohn ' + (frachtstufe() ? frachtstufe().name : e.wagen.name)
+      + ' · ' + Z.ladung.length + (Z.ladung.length === 1 ? ' Halt' : ' Halte'), 'spieler');
 
     Z.vorige = verteilung;
     Z.ladung = [];
@@ -1302,17 +1300,15 @@
     b.appendChild(hilfe);
 
     var lohn = fuhrlohn(), erloes = fuhrerloes();
-    var arm = voll && !B.welt.kann(lohn);
     var ab = B.knopf({
       text: voll ? 'FUHRE ABSCHICKEN · ' + B.welt.menge(voll) + ' · bringt ' + B.welt.geld(erloes)
                  : 'FUHRE ABSCHICKEN',
       zug: 'fuhre:abschicken', klasse: 'fu-abschicken', preis: lohn ? -lohn : 0,
-      aus: !voll || arm,
-      titel: arm
-        ? 'Der Fuhrlohn von ' + B.welt.geld(lohn) + ' ist nicht bezahlbar. Der Wagen bleibt stehen.'
-        : (voll
-          ? 'Der Wagen fährt, liefert und kommt zurück. Damit ist die Woche vorbei.'
-          : 'Erst beladen. Jedes Fass bekommt ein Haus.'),
+      aus: !voll,
+      titel: voll
+        ? 'Der Wagen fährt, liefert und kommt zurück. Der Fuhrmann wird danach bezahlt. '
+          + 'Damit ist die Woche vorbei.'
+        : 'Erst beladen. Jedes Fass bekommt ein Haus.',
       tu: schicke
     });
     b.appendChild(ab);
