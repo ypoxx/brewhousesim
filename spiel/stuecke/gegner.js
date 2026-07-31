@@ -1127,6 +1127,7 @@
         return;
       }
 
+      if (frisch && !sichtbar(a)) return;
       if (frisch && wechsel.an === 'haus') {
         var g = B.el('div', 'gg-gewonnen', 'zurueckgeholt — unser Haus');
         g.title = a.name + ' ist wieder gebunden. Vier Jahre lang ruehrt er die Adresse nicht an.';
@@ -1199,8 +1200,7 @@
     var kopf = B.el('div', 'gg-bandkopf');
     kopf.appendChild(B.el('span', 'gg-bandtitel', 'Ohne dich geschehen'));
     kopf.appendChild(B.el('span', 'gg-bandzahl', Z.zaehler + ' Zuege'));
-    kopf.appendChild(B.el('span', 'gg-bandwaehrung',
-      'gebunden wird mit ' + ep().waehrung + ' · ' + abloesespanne()));
+    kopf.appendChild(B.el('span', 'gg-bandluecke'));
     var auf = B.knopf({
       text: Z.offen ? 'Das Haus gegenueber schliessen' : 'Das Haus gegenueber',
       zug: 'gegner:blatt',
@@ -1210,6 +1210,12 @@
     });
     kopf.appendChild(auf);
     band.appendChild(kopf);
+
+    var wz = B.el('div', 'gg-bandwaehrung');
+    wz.appendChild(B.el('b', null, 'Gebunden wird ' + (epNr() <= 2 ? 'hier' : 'jetzt') + ' mit '
+      + ep().waehrung));
+    wz.appendChild(B.el('span', null, abloesespanne()));
+    band.appendChild(wz);
 
     var l = Z.zuege.slice(0, 3);
     if (!l.length) {

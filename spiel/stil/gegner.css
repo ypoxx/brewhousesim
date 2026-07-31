@@ -312,14 +312,22 @@
   color: #eef1f3;
   border-radius: calc(var(--s) * 3);
 }
+.gg-bandluecke { flex: 1; }
 .gg-bandwaehrung {
-  flex: 1;
+  display: flex;
+  gap: calc(var(--s) * 10);
+  align-items: baseline;
+  font-size: calc(var(--s) * 17);
+  padding: calc(var(--s) * 2) 0 calc(var(--s) * 4);
+  margin-bottom: calc(var(--s) * 3);
+  border-bottom: calc(var(--s) * 1) dotted rgba(35, 38, 42, 0.4);
+}
+.gg-bandwaehrung b { font-weight: normal; }
+.gg-bandwaehrung span {
+  margin-left: auto;
+  font-family: var(--mono);
   font-size: calc(var(--s) * 16);
-  font-style: italic;
-  opacity: 0.85;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .gg-bandzeile {
   display: flex;
