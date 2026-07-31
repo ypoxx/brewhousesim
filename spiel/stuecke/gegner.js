@@ -366,6 +366,12 @@
   /* ---- die einzelnen Zuege -------------------------------------------- */
 
   function zugWerben(h) {
+    /* Wer schon so viel haelt, wie er halten kann, wirbt nicht weiter — sonst
+       tauscht er jede Woche und das Bild flackert, statt zu druecken. */
+    if (seine(h).length >= hoechstzahl(h) || fremdGesamt() >= gesamtgrenze()) return false;
+    var laufend = 0;
+    Object.keys(Z.werbung).forEach(function (k) { if (Z.werbung[k].wer === h.k) laufend++; });
+    if (laufend >= 2) return false;
     var a = suche(freiFuerIhn(h));
     if (!a) return false;
     var frei = ep().mittel.filter(function (m) { return !m.fest; });
