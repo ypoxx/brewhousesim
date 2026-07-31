@@ -136,18 +136,125 @@
 }
 
 /* ==========================================================================
-   3 — DER BAUHOF
-   Die offenen Bauten der Epoche, mit Preisschild nebeneinander. Das Brett
-   liegt bewusst links am Rand: dort steht kein Wahrzeichen, an dem der
-   Ortsvergleich haengt.
+   3 — DER RAHMEN UND DIE WERKBANK
+
+   Die Buehne hat eine Ordnung, und DIE STADT haelt sie:
+     oben   0   – 11,2 %  Kopfleiste
+     Mitte 11,2 – 87,5 %  DAS STADTFENSTER — gehoert der Platte und dem Hof
+     unten 87,5 – 100  %  Die Werkbank: Reiter, Bauhof, WEITER
+
+   Die Werkbank liegt UEBER allen anderen Ebenen (z-index am Fach), damit die
+   Reiter erreichbar bleiben, wenn ein Brett aufgeschlagen ist. Sie beginnt
+   erst bei 87,5 % — kein aufgeschlagenes Brett reicht so weit herunter, also
+   deckt sie nie eine fremde Schaltflaeche zu.
    ========================================================================== */
 
-.stadt-bauhof {
+/* Zugeklappt heisst weggeschnitten, nicht versteckt: Platz, Groesse und
+   Umbruch bleiben stehen, deshalb stehen im Reiter die lebenden Zahlen des
+   Bretts. Wer sein Brett selbst in eine Leiste legt, setzt data-frei. */
+.stadt-zugeklappt {
+  clip-path: inset(50%) !important;
+  pointer-events: none !important;
+}
+
+.fach-blatt-stadt { z-index: 80; }
+
+.stadt-werkbank {
   position: absolute;
   left: 1.2%;
-  bottom: 1.6%;
-  width: 63.5%;
-  padding: calc(var(--s) * 7) calc(var(--s) * 11) calc(var(--s) * 9);
+  bottom: 1.05%;
+  width: 62.6%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: calc(var(--s) * 5);
+  pointer-events: none;
+}
+
+/* --- Die Reiter: ein Klick schlaegt auf, ein zweiter klappt zu. --- */
+.stadt-reiterzeile {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(var(--s) * 7);
+  padding-left: calc(var(--s) * 12);
+  min-height: calc(var(--s) * 8);
+}
+
+.knopf.stadt-reiter {
+  flex: 0 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: calc(var(--s) * 1);
+  min-height: calc(var(--s) * 50);
+  padding: calc(var(--s) * 5) calc(var(--s) * 14) calc(var(--s) * 7);
+  background: linear-gradient(180deg, #7b5230 0%, #56341a 100%);
+  border: calc(var(--s) * 3) solid #33200e;
+  border-bottom: none;
+  border-radius: calc(var(--s) * 7) calc(var(--s) * 7) 0 0;
+  box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255, 226, 178, 0.3);
+  color: #f2dcb2;
+  overflow: hidden;
+}
+
+.knopf.stadt-reiter .wort {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: calc(var(--s) * 20);
+  letter-spacing: calc(var(--s) * 2.5);
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.knopf.stadt-reiter .zahl {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  letter-spacing: 0;
+  color: #cba777;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.knopf.stadt-reiter::before {
+  content: "▲";
+  position: absolute;
+  right: calc(var(--s) * 7);
+  top: calc(var(--s) * 5);
+  font-size: calc(var(--s) * 12);
+  color: rgba(242, 220, 178, 0.5);
+}
+.knopf.stadt-reiter { position: relative; }
+
+.knopf.stadt-reiter:hover {
+  background: linear-gradient(180deg, #906139 0%, #653e1f 100%);
+}
+
+/* Aufgeschlagen: heller Reiter, er sitzt vorn. */
+.knopf.stadt-reiter.auf {
+  background: linear-gradient(180deg, #f7ecd2 0%, #ded0ad 100%);
+  color: #2b1d10;
+  box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255, 255, 255, 0.7);
+}
+.knopf.stadt-reiter.auf .zahl { color: #6d5a37; }
+.knopf.stadt-reiter.auf::before { content: "▼"; color: rgba(43, 29, 16, 0.5); }
+.knopf.stadt-reiter.auf:hover { background: linear-gradient(180deg, #fff8e8 0%, #e7dabb 100%); }
+
+.knopf.stadt-reiter.frei {
+  background: linear-gradient(180deg, #8d6a30 0%, #614413 100%);
+  color: #ffeec4;
+}
+.knopf.stadt-reiter.frei::before { content: "✦"; }
+
+/* --- Der Bauhof: die offenen Bauten der Epoche, Preisschild nebeneinander. */
+
+.stadt-bauhof {
+  padding: calc(var(--s) * 7) calc(var(--s) * 11) calc(var(--s) * 8);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.18)),
     repeating-linear-gradient(180deg, #6b4526 0 calc(var(--s) * 26), #66401f 0 calc(var(--s) * 52));
@@ -162,8 +269,8 @@
   align-items: baseline;
   justify-content: space-between;
   gap: calc(var(--s) * 8);
-  padding-bottom: calc(var(--s) * 6);
-  margin-bottom: calc(var(--s) * 7);
+  padding-bottom: calc(var(--s) * 5);
+  margin-bottom: calc(var(--s) * 6);
   border-bottom: calc(var(--s) * 2) solid rgba(255, 235, 195, 0.35);
 }
 .stadt-bauhof .kopf .wort {
