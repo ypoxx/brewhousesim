@@ -59,7 +59,7 @@ var GEGNER_DATEN = {
       kurz: 'NORD',
       farbe: 'konzern',
       kasse: { 4: 4200000 },
-      sitz: { 4: { ort: 'bahnhof', dx: -3, dy: 6, sagt: 'ein Buero am Bahnhof, drei Zimmer, kein Kessel' } },
+      sitz: { 4: { ort: 'bahnhof', dx: -3, dy: 6, hofDy: 6, sagt: 'ein Buero am Bahnhof, drei Zimmer, kein Kessel' } },
       vornamen: { 4: ['Reinhard', 'Ute', 'Klaus-Dieter', 'Renate'] },
       titel: { 4: '' },
       art: { 4: 'Gruppe' }
@@ -113,7 +113,7 @@ var GEGNER_DATEN = {
         { k: 'gevatterschaft', name: 'Gevatterschaft', kurz: 'GEV', womit: 'Gevatterschaft', satz: 3, jahre: 8,
           bindet: 'Der Adler steht dem Wirt zum {haus} Gevatter. Das haelt laenger als ein Brief.',
           loest: 'Du wirst selber Pate. Ein Taufmahl, ein Loeffel Silber, und der Wirt kommt herueber.' },
-        { k: 'ratssitz', name: 'Ratsspruch', kurz: 'RAT', womit: 'Ratsspruch', satz: 0, jahre: 10, fest: true,
+        { k: 'ratssitz', name: 'Ratsspruch', kurz: 'RAT', womit: 'Ratsspruch', satz: 12, jahre: 10, fest: true,
           bindet: 'Der Rat spricht {haus} dem Adler zu. Ein Feist sitzt selbst darin.',
           loest: 'Solange ein Feist im Rat sitzt, wird hier nichts umgeschrieben.' }
       ],
@@ -181,7 +181,7 @@ var GEGNER_DATEN = {
         { k: 'heirat', name: 'Heirat', kurz: 'HEI', womit: 'Heirat', satz: 7, jahre: 14,
           bindet: 'Der Adler verheiratet seine Tochter an den Wirt zum {haus}.',
           loest: 'Eine Mitgift gegen die andere. Man kauft keine Heirat — man ueberbietet sie.' },
-        { k: 'buergermeister', name: 'Buergermeisteramt', kurz: 'BGM', womit: 'Amtsgewalt', satz: 0, jahre: 8, fest: true,
+        { k: 'buergermeister', name: 'Buergermeisteramt', kurz: 'BGM', womit: 'Amtsgewalt', satz: 18, jahre: 8, fest: true,
           bindet: 'Der Buergermeister schreibt {haus} dem Adler zu. Er heisst Feist.',
           loest: 'Solange ein Feist das Amt fuehrt, wird hier nichts umgeschrieben.' }
       ],
@@ -320,12 +320,13 @@ var GEGNER_DATEN = {
           loest: 'Exklusiv heisst exklusiv. Ausloesen kann man das nur mit sehr viel Geld.' }
       ],
       gegenzug: {
-        k: 'anteil', name: 'Das Angebot der Nordstern-Gruppe',
-        preis: 0,
-        sagt: 'Die Gruppe bietet fuer ein Viertel des Hauses. Man bekommt Geld und einen Mitentscheider.',
-        folge: 'Angenommen: die Kasse springt, und die Gruppe redet fuer immer mit. '
-             + 'Abgelehnt: die Gruppe listet das Haus bei zwei Adressen aus, sofort.',
-        chronik: '{name} entscheidet ueber das Angebot der Nordstern-Gruppe.'
+        k: 'marke', name: 'Die Marke eintragen lassen',
+        preis: 62000,
+        sagt: 'Wort- und Bildmarke beim Patentamt, ein eigener Ausschank mit dem Namen am Haus, '
+            + 'und ein Anwalt, der beides verteidigt.',
+        folge: 'Von heute an kostet jede Listung nur noch zwei Drittel, und wer das Haus auslistet, '
+             + 'muss es dem Verbraucher erklaeren. Eingetragen ist eingetragen.',
+        chronik: '{name} laesst die Marke eintragen. Der Name gehoert dem Haus, nicht dem Regal.'
       },
       bauten: [
         { k: 'drucktanks', name: 'Drucktanks im Freien', preis: 320000, glyph: 'tank' },
