@@ -1,0 +1,94 @@
+/* ===========================================================================
+   stil/stadt.css — GEHOERT DEM BAUER VON "DIE STADT". Ersetze frei.
+   Stummelstil: farbige Platzhalterflaeche je Epoche und Ortsmarken.
+   =========================================================================== */
+
+.stadt-platzhalter {
+  position: absolute;
+  inset: 0;
+}
+
+/* Vier Epochen, vier Stimmungen. Ersetzt spaeter das Epochenbild. */
+.stadt-platzhalter[data-epoche="1"] {
+  background:
+    radial-gradient(120% 70% at 50% 100%, rgba(120, 92, 48, 0.35), rgba(120, 92, 48, 0) 60%),
+    linear-gradient(180deg, #9fb0b8 0%, #cfcfae 30%, #b9ad81 55%, #9a8a60 100%);
+}
+.stadt-platzhalter[data-epoche="2"] {
+  background:
+    radial-gradient(120% 70% at 50% 100%, rgba(110, 70, 36, 0.4), rgba(110, 70, 36, 0) 60%),
+    linear-gradient(180deg, #a2aeb6 0%, #d5c8a4 30%, #b6a274 55%, #8e7a52 100%);
+}
+.stadt-platzhalter[data-epoche="3"] {
+  background:
+    radial-gradient(90% 60% at 17% 30%, rgba(60, 50, 45, 0.45), rgba(60, 50, 45, 0) 55%),
+    linear-gradient(180deg, #96afbb 0%, #e2c795 30%, #b39a6b 55%, #86704b 100%);
+}
+.stadt-platzhalter[data-epoche="4"] {
+  background:
+    radial-gradient(120% 70% at 50% 100%, rgba(70, 74, 78, 0.4), rgba(70, 74, 78, 0) 60%),
+    linear-gradient(180deg, #8ea5b8 0%, #c9ccc4 30%, #a7a798 55%, #7f7f74 100%);
+}
+
+.stadt-schild {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 0);
+  width: 46%;
+  padding: calc(var(--s) * 16) calc(var(--s) * 22);
+  background: rgba(255, 250, 235, 0.82);
+  border: calc(var(--s) * 3) dashed rgba(43, 29, 16, 0.6);
+  border-radius: calc(var(--s) * 6);
+  text-align: center;
+  color: #2b1d10;
+}
+.stadt-schild .kopf {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 20);
+  letter-spacing: calc(var(--s) * 4);
+  opacity: 0.65;
+}
+.stadt-schild .jahr {
+  font-size: calc(var(--s) * 44);
+  letter-spacing: calc(var(--s) * 3);
+  margin: calc(var(--s) * 6) 0;
+}
+.stadt-schild .text {
+  font-size: calc(var(--s) * 21);
+  line-height: 1.35;
+  margin-top: calc(var(--s) * 6);
+}
+
+.stadt-ort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--s) * 2);
+  white-space: nowrap;
+  color: #23180d;
+  text-shadow: 0 0 calc(var(--s) * 8) rgba(255, 250, 235, 0.95);
+}
+.stadt-ort i {
+  width: calc(var(--s) * 18);
+  height: calc(var(--s) * 18);
+  border-radius: 50%;
+  background: rgba(157, 53, 32, 0.9);
+  border: calc(var(--s) * 3) solid rgba(255, 250, 235, 0.9);
+  box-shadow: 0 0 calc(var(--s) * 8) rgba(0, 0, 0, 0.35);
+}
+.stadt-ort .wort {
+  font-size: calc(var(--s) * 21);
+  letter-spacing: calc(var(--s) * 1);
+}
+.stadt-ort .zahl {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  opacity: 0.7;
+}
+
+.stadt-ort.art-bau i    { background: rgba(94, 61, 32, 0.9); }
+.stadt-ort.art-stadt i  { background: rgba(60, 84, 110, 0.9); }
+.stadt-ort.art-land i   { background: rgba(74, 107, 58, 0.9); }
+.stadt-ort.art-wasser i { background: rgba(52, 110, 132, 0.9); }
+.stadt-ort.art-fremd i  { background: rgba(40, 40, 44, 0.9); }
