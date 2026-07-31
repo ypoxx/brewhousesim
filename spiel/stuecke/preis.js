@@ -86,6 +86,7 @@
     chronik: [],           /* eigene, unabaenderliche Chronik             */
     leiter: [],            /* {jahr, kasse, billigst, verhaeltnis}        */
     ersteTafel: true,
+    erzwungen: false,
     meldung: null
   };
 
@@ -414,6 +415,7 @@
     if (Z.leiter.length > 24) Z.leiter.shift();
 
     Z.offen = (B.arg.roh.tafel !== 'zu') || !erste;
+    Z.erzwungen = false;
     Z.seite = 'tafel';
     B.ton.spiele('preis:michaeli', { art: 'geraeusch' });
     if (!erste) B.ton.spiele('preis:muenzen', { art: 'geraeusch' });
@@ -981,6 +983,7 @@
 
   function schliesse() {
     Z.offen = false;
+    Z.erzwungen = false;
     B.ton.spiele('preis:blatt');
     B.sende('zeichne', { grund: 'preis-zu' });
   }
@@ -1000,6 +1003,7 @@
         : 'Michaeli ist vorueber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.',
       tu: function () {
         Z.offen = !Z.offen;
+        Z.erzwungen = Z.offen;
         Z.seite = 'tafel';
         B.ton.spiele('preis:blatt');
         B.sende('zeichne', { grund: 'preis-griff' });
@@ -1029,6 +1033,7 @@
       titel: 'Was festgelegt wurde, steht dort unabaenderlich.',
       tu: function () {
         Z.offen = true;
+        Z.erzwungen = true;
         Z.seite = 'chronik';
         B.ton.spiele('preis:blatt');
         B.sende('zeichne', { grund: 'preis-chronik' });
@@ -1078,7 +1083,7 @@
       var sommerLaeuft = !!document.querySelector('.fu-sommerblatt');
 
       zeichneGriff(fach);
-      if (Z.offen && !sommerLaeuft) zeichneTafel(fach);
+      if (Z.offen && (!sommerLaeuft || Z.erzwungen)) zeichneTafel(fach);
 
       /* Die eine Zahl: der naechste sinnvolle Zug dieses Stuecks. */
       var billig = billigstesAngebot();
