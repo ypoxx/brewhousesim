@@ -64,6 +64,7 @@
     if (n.platz) l.push('+' + n.platz + ' Fass Lagerplatz');
     if (n.sud) l.push('+' + n.sud + ' Sud je Woche');
     if (n.rohstoff) l.push('+' + n.rohstoff + ' ' + B.welt.epoche().rohstoff);
+    if (!l.length && a.wirkt) l.push(a.wirkt);
     return l.join(' · ');
   }
 
@@ -163,7 +164,7 @@
       if (!B.orte.da(n.ort)) return;
       var el = B.el('div', 'stadt-name');
       el.style.fontSize = 'calc(var(--s) * ' + B.rund(21 * (n.gross || 1), 2) + ')';
-      el.style.zIndex = String(Math.round((B.orte.hole(n.ort).y + (n.dy || 0)) * 10) + 5);
+      el.style.zIndex = '960';
       el.appendChild(B.el('span', 'wort', n.text));
       B.orte.setze(el, n.ort, { anker: 'mitte', dx: n.dx || 0, dy: n.dy || 0 });
       fach.appendChild(el);
@@ -178,7 +179,7 @@
     var el = B.el('div', 'stadt-hausschild' + (s.hell ? ' hell' : '') + (s.klein ? ' klein' : ''));
     el.style.width = (s.breite || 7.5) + '%';
     el.style.rotate = (s.dreh || 0) + 'deg';
-    el.style.zIndex = '700';
+    el.style.zIndex = '950';
     if (s.hell) {
       el.appendChild(B.el('div', 'zeile eins', 'BRAUHAUS'));
       el.appendChild(B.el('div', 'zeile zwei', 'ZUM ANKER'));
@@ -236,7 +237,7 @@
         if (vorschau === a.schluessel) { vorschau = null; B.wage('stadt.vorschau', zeichne); }
       });
       zeile.appendChild(k);
-      zeile.appendChild(B.el('div', 'nutzen', nutzenWort(a) || 'steht im Hof, solange das Haus steht'));
+      zeile.appendChild(B.el('div', 'nutzen', nutzenWort(a) || 'steht, solange das Haus steht'));
       reihe.appendChild(zeile);
     });
 
