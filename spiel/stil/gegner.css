@@ -264,16 +264,37 @@
 /* Der Zeigefinger aus der Liste ins Bild. */
 .gg-zeiger {
   position: absolute;
-  width: calc(var(--s) * 120);
-  height: calc(var(--s) * 120);
-  border: calc(var(--s) * 5) solid var(--gg-warn);
+  width: calc(var(--s) * 130);
+  height: calc(var(--s) * 130);
+  border: calc(var(--s) * 6) solid var(--gg-warn);
   border-radius: 50%;
+  box-shadow: 0 0 0 calc(var(--s) * 3) rgba(255, 248, 230, 0.85),
+              inset 0 0 0 calc(var(--s) * 3) rgba(255, 248, 230, 0.85);
   pointer-events: none;
-  animation: gg-ring 1.2s ease-out infinite;
+}
+.gg-zeiger i {
+  position: absolute;
+  inset: calc(var(--s) * -22);
+  border: calc(var(--s) * 3) solid var(--gg-warn);
+  border-radius: 50%;
+  animation: gg-ring 1.4s ease-out infinite;
+}
+.gg-zeigertext {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + var(--s) * 12);
+  translate: -50% 0;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  white-space: nowrap;
+  background: var(--gg-warn);
+  color: #fff6ec;
+  padding: calc(var(--s) * 2) calc(var(--s) * 9);
+  border-radius: calc(var(--s) * 3);
 }
 @keyframes gg-ring {
-  0%   { opacity: 1;   scale: 0.7; }
-  100% { opacity: 0.1; scale: 1.35; }
+  0%   { opacity: 0.95; scale: 0.85; }
+  100% { opacity: 0;    scale: 1.5; }
 }
 
 /* --------------------------------------------------------------------------

@@ -1172,9 +1172,16 @@
   }
 
   /* --- der Zeigefinger: "das da, im Bild" ------------------------------- */
-  function zeichneZeiger(fach) {
+  function zeichneZeiger() {
+    var fach = B.ebene('kopf', 'gegner');
+    B.leere(fach);
     if (!Z.zeigt || !B.orte.hole(Z.zeigt)) return;
     var r = B.el('div', 'gg-zeiger');
+    r.appendChild(B.el('i'));
+    var o = B.orte.hole(Z.zeigt);
+    var z = Z.zuege.filter(function (x) { return x.ort === Z.zeigt; })[0];
+    r.appendChild(B.el('span', 'gg-zeigertext',
+      o.name + (z ? ' · ' + z.jahr + ' W' + z.woche : '')));
     B.orte.setze(r, Z.zeigt, { anker: 'mitte' });
     fach.appendChild(r);
   }
@@ -1565,7 +1572,7 @@
       zeichneNebenzeichen(fach);
       zeichneAdressen(fach);
       zeichneWagen(fach);
-      zeichneZeiger(fach);
+      zeichneZeiger();
       zeichneBand(fach);
 
       /* Solange die Michaelitafel offen ist, gehoert der Bildschirm ihr. */
