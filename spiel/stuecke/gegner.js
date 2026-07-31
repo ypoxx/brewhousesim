@@ -299,6 +299,31 @@
     };
   }
 
+  /* Wieviele Adressen darf er halten? Nie die ganze Stadt: sonst ist die
+     Partie nach zwanzig Wochen entschieden und danach nur noch zaeh. Wer voll
+     ist, muss eine fahrenlassen, um eine neue zu nehmen — und dann sieht man
+     ZWEI Zeichen wechseln statt einem. */
+  function hoechstzahl(h) {
+    var n = offeneAdressen().length;
+    var anteil = [0.4, 0.45, 0.45, 0.5][epNr() - 1] || 0.45;
+    return Math.max(2, Math.round(n * anteil) - (h.k === 'konzern' ? 1 : 0));
+  }
+
+  /* Gibt die schwaechste seiner Bindungen frei und nennt sie. */
+  function machePlatz(h, ausser) {
+    var l = seine(h).filter(function (a) { return a.schluessel !== ausser; });
+    if (!l.length) return null;
+    l.sort(function (x, y) {
+      return (Z.bindung[x.schluessel] ? Z.bindung[x.schluessel].grund : 0)
+           - (Z.bindung[y.schluessel] ? Z.bindung[y.schluessel].grund : 0);
+    });
+    var a = l[0];
+    B.welt.binde(a.schluessel, null);
+    delete Z.bindung[a.schluessel];
+    Z.wechsel[a.schluessel] = { takt: takt(), an: null, von: h.k };
+    return a;
+  }
+
   function seine(h) {
     return offeneAdressen().filter(function (a) {
       return a.bindung && a.bindung.wem === h.k;
@@ -353,7 +378,11 @@
   function binde(h, a, m, text) {
     var vorher = a.bindung ? a.bindung.wem : null;
     var g = grundwert(a, m);
-    h.kasse -= Math.round(g * 0.5);
+    if (seine(h).length >= hoechstzahl(h)) {
+      var weg = machePlatz(h, a.schluessel);
+      if (weg) text += ' Dafuer laesst er ' + weg.name + ' fahren — die Adresse ist frei.';
+    }
+    h.kasse -= Math.round(g * 0.35);
     B.welt.binde(a.schluessel, h.k, m.womit, jahr() + m.jahre);
     Z.bindung[a.schluessel] = {
       wer: h.k, mittel: m.k, seit: jahr(), bis: jahr() + m.jahre, grund: g, zusatz: 0
@@ -372,7 +401,14 @@
     var a = suche(fremde(h));
     if (!a) return false;
     var m = mittelVon(zug.mittel || ep().mittel[0].k);
-    if (m.fest && !h.marken[m.k]) {
+    /* Ratsspruch und Amtsgewalt sind die Ausnahme, nicht die Regel — sonst
+       steht an der halben Stadt "nicht abloesbar", und das ist kein Spiel. */
+    var fesse = 0;
+    Object.keys(Z.bindung).forEach(function (x) {
+      if (Z.bindung[x].wer === h.k && mittelVon(Z.bindung[x].mittel).fest) fesse++;
+    });
+    if (m.fest && (!h.marken.ratssitz && !h.marken.buergermeister
+                   || fesse >= 1 || !B.wuerfel.trifft(0.5))) {
       m = mittelVon(B.wuerfel.aus(ep().mittel.filter(function (x) { return !x.fest; })).k);
     }
     var text = (zug.text || '{haus} geht an den Adler.').replace('{haus}', a.name);
@@ -631,7 +667,7 @@
       var h = haus(Z.bindung[k].wer);
       if (h) h.kasse += teil;
     });
-    summe = Math.min(summe, Math.round(Math.max(0, B.welt.haus.kasse) * 0.25));
+    summe = Math.min(summe, Math.round(Math.max(0, B.welt.haus.kasse) * 0.15));
     Z.abschlag = summe;
     Z.abschlagJahr = jahr();
     if (summe > 0) {
