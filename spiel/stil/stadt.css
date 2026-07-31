@@ -60,18 +60,20 @@
   margin-top: calc(var(--s) * 6);
 }
 
+/* Der Punkt sitzt GENAU auf dem Ort; nur die Beschriftung weicht aus.
+   Sonst waere das Ortsverzeichnis eine Luege ueber sich selbst. */
 .stadt-ort {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: calc(var(--s) * 2);
-  white-space: nowrap;
+  width: 0;
+  height: 0;
   color: #23180d;
   text-shadow: 0 0 calc(var(--s) * 8) rgba(255, 250, 235, 0.95);
 }
-.stadt-ort.hoch { flex-direction: column-reverse; }
 
 .stadt-ort i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: calc(var(--s) * 18);
   height: calc(var(--s) * 18);
   border-radius: 50%;
@@ -79,15 +81,27 @@
   border: calc(var(--s) * 3) solid rgba(255, 250, 235, 0.9);
   box-shadow: 0 0 calc(var(--s) * 8) rgba(0, 0, 0, 0.35);
 }
+
+.stadt-ort .wort,
+.stadt-ort .zahl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
 .stadt-ort .wort {
+  top: calc(var(--s) * 16);
   font-size: calc(var(--s) * 21);
   letter-spacing: calc(var(--s) * 1);
 }
 .stadt-ort .zahl {
+  top: calc(var(--s) * 44);
   font-family: var(--mono);
   font-size: calc(var(--s) * 15);
   opacity: 0.7;
 }
+.stadt-ort.hoch .wort { top: auto; bottom: calc(var(--s) * 40); }
+.stadt-ort.hoch .zahl { top: auto; bottom: calc(var(--s) * 18); }
 
 .stadt-ort.art-bau i    { background: rgba(94, 61, 32, 0.9); }
 .stadt-ort.art-stadt i  { background: rgba(60, 84, 110, 0.9); }
