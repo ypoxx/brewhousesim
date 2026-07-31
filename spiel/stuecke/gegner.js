@@ -62,7 +62,7 @@
     zaehler: 0,
     wechsel: {},             /* adr -> {takt, an, von} — frisch gewechselt  */
     offen: false,
-    seite: 'lage',
+    seite: 'adler',
     zeigt: null,             /* Ort, auf den der Zeigefinger deutet         */
     wahl: null,
     meldung: null,
@@ -147,11 +147,9 @@
     if (!b) return null;
     var m = mittelVon(b.mittel);
     var h = haus(b.wer);
-    if (m.fest) {
-      /* Ratsspruch, Buergermeisteramt: nur solange er das Amt hat. */
-      if (h && h.marken[m.k === 'ratssitz' ? 'ratssitz' : 'buergermeister']) return null;
-      if (h && (h.marken.ratssitz || h.marken.buergermeister)) return null;
-    }
+    /* Ratsspruch und Amtsgewalt sind nicht kaeuflich, solange er das Amt hat.
+       Faellt das Amt weg, wird auch daraus eine Summe. */
+    if (m.fest && h && (h.marken.ratssitz || h.marken.buergermeister)) return null;
     var summe = b.grund + (b.zusatz || 0);
     var e = ep();
     if (e.tilgung) {
@@ -162,6 +160,7 @@
     }
     if (Z.wirkung.zunftlade && b.mittel === 'zunftbrief') summe = summe * 0.5;
     if (Z.wirkung.bank) summe = summe * (2 / 3);
+    if (Z.wirkung.marke) summe = summe * (2 / 3);
     return Math.max(1, Math.round(summe));
   }
 
@@ -169,6 +168,7 @@
   function werbepreis(a, m) {
     var p = Math.round(grundwert(a, m) * 0.45);
     if (Z.wirkung.bank) p = Math.round(p * (2 / 3));
+    if (Z.wirkung.marke) p = Math.round(p * (2 / 3));
     return Math.max(1, p);
   }
 
@@ -226,9 +226,12 @@
     };
     Z.haeuser[g.schluessel] = h;
     neuerErbe(h, true);
-    /* Er faengt nicht bei null an: zwei Bauten stehen schon auf dem Hof. */
-    var b = ep().bauten;
-    for (var i = 0; i < 2 && i < b.length; i++) h.bauten.push(b[i].k);
+    /* Der Adler faengt nicht bei null an: zwei Bauten stehen schon auf dem Hof.
+       Die Gruppe baut nichts — sie kauft. */
+    if (h.k === 'adler') {
+      var b = ep().bauten;
+      for (var i = 0; i < 2 && i < b.length; i++) h.bauten.push(b[i].k);
+    }
     g.kasse = h.kasse;
     return h;
   }
@@ -308,7 +311,8 @@
       if (!a.bindung) return false;
       if (a.bindung.wem === h.k) return false;
       if (Z.schutz[a.schluessel] && Z.schutz[a.schluessel] > jahr()) return false;
-      if (Z.wirkung.ratsstuhl && epNr() <= 2) return false;   /* der eigene Ratsstuhl sperrt ihn */
+      if (Z.wirkung.ratsstuhl && epNr() === 1) return false;  /* der eigene Ratsstuhl sperrt ihn */
+      if (Z.wirkung.zunftlade && epNr() === 2) return false;  /* die eigene Zunftlade auch */
       return true;
     };
   }
@@ -548,10 +552,10 @@
     return w;
   }
 
-  function waehle(h) {
+  function waehle(h, versuch) {
     var liste = zugliste(h);
-    /* Pflichtliste zuerst — aber nur, was gerade moeglich ist. */
-    if (h.k === 'adler' && h.zuege < PFLICHT.length) {
+    /* Pflichtliste zuerst — aber nur beim ersten Versuch und nur, was geht. */
+    if (!versuch && h.k === 'adler' && h.zuege < PFLICHT.length) {
       var art = PFLICHT[h.zuege];
       var pf = liste.filter(function (z) { return z.art === art; });
       if (pf.length) return B.wuerfel.aus(pf);
@@ -568,7 +572,7 @@
 
   function zieht(h) {
     for (var versuch = 0; versuch < 5; versuch++) {
-      var zug = waehle(h);
+      var zug = waehle(h, versuch);
       if (fuehreAus(h, zug)) { h.letzterZug = Z.takt; return true; }
     }
     /* Wenn gar nichts geht, dann wenigstens der Wagen. */
@@ -645,8 +649,9 @@
       h.kasse += Math.round(ertrag);
       /* Der Preiskampf kostet ihn: was er unter dem Satz ausschenkt. */
       if (h.preis < bierpreis()) {
-        var verlust = Math.round((bierpreis() - h.preis) * seine(h).length * menge(offeneAdressen()[0] || { bedarf: 20 }) * 0.15);
-        h.kasse -= Math.max(0, verlust);
+        var fass = 0;
+        seine(h).forEach(function (a) { fass += menge(a); });
+        h.kasse -= Math.round((bierpreis() - h.preis) * fass * 0.15);
       }
       /* Er erholt sich langsam vom Preiskampf. */
       if (B.wuerfel.trifft(0.35) && h.preis < bierpreis()) h.preis += 1;
@@ -983,18 +988,21 @@
       reihe.appendChild(i);
     });
     hof.appendChild(reihe);
-    B.orte.setze(hof, s.ort, { anker: 'oben', dx: s.dx || 0, dy: (s.dy || 0) + 11.5 });
+    /* Der Hof steht UEBER dem Schild: unten verankert, damit er nach oben
+       waechst und dem Schild nie ins Gesicht rutscht. */
+    B.orte.setze(hof, s.ort, { anker: 'unten', dx: s.dx || 0, dy: (s.hofDy === undefined ? 4 : s.hofDy) });
     fach.appendChild(hof);
   }
 
-  /* --- das leere Stammhaus: derselbe Ort, nur er ist weg ---------------- */
-  function zeichneStammhaus(fach) {
-    var st = stamm('adler').stammhaus;
-    if (!st || epNr() < st.ab) return;
-    var m = B.el('div', 'gg-stammhaus');
-    m.appendChild(B.el('span', null, st.text));
+  /* --- sein Ausschank in der Stadt: derselbe Ort, andere Zeit ----------- */
+  function zeichneNebenzeichen(fach) {
+    var st = stamm('adler').nebenzeichen;
+    if (!st) return;
+    if (st.ab && epNr() < st.ab) return;
+    if (st.bis && epNr() > st.bis) return;
+    var m = B.el('div', 'gg-stammhaus', st.text);
+    m.title = st.titel || st.text;
     B.orte.setze(m, st.ort, { anker: 'oben', dx: st.dx, dy: st.dy });
-    m.title = 'Bis 1867 stand der Adler hier, Wand an Wand mit dem Rathaus.';
     fach.appendChild(m);
   }
 
@@ -1056,9 +1064,8 @@
       }
 
       if (frisch && wechsel.an === 'haus') {
-        var g = B.el('div', 'gg-gewonnen');
-        g.appendChild(B.el('span', null, 'zurueckgeholt ' + wechsel.takt % 30));
-        g.textContent = 'unser Haus — abgeloest';
+        var g = B.el('div', 'gg-gewonnen', 'zurueckgeholt — unser Haus');
+        g.title = a.name + ' ist wieder gebunden. Vier Jahre lang ruehrt er die Adresse nicht an.';
         B.orte.setze(g, a.ort, { anker: 'unten', dy: -3.6 });
         fach.appendChild(g);
       } else if (frisch && !wechsel.an) {
@@ -1259,12 +1266,11 @@
       bl.appendChild(wb);
     }
 
-    /* Die eine Festlegung gegen ihn — je Amtszeit eine, unwiderruflich */
-    var g = ep().gegenzug;
-    var nr = B.welt.zeit.amtszeit.nr;
-    var gb = B.el('div', 'gg-block gg-fest');
-    gb.appendChild(B.el('h3', null, 'Der Gegenzug — eine je Amtszeit, und er wird nicht zurueckgenommen'));
+    /* Das Angebot der Gruppe — beide Antworten sind endgueltig */
     if (Z.angebot) {
+      var abl = B.el('div', 'gg-block gg-fest');
+      abl.appendChild(B.el('h3', null,
+        'Die Nordstern-Gruppe fragt an — beide Antworten sind endgueltig'));
       var ab = B.el('div', 'gg-reihe');
       var k1 = karte(null, 'angebot');
       k1.appendChild(B.el('div', 'gg-kname', 'Das Angebot der Nordstern-Gruppe'));
@@ -1287,8 +1293,16 @@
         tu: angebotAblehnen
       }));
       ab.appendChild(k2);
-      gb.appendChild(ab);
-    } else if (Z.gegenzugGetan[nr]) {
+      abl.appendChild(ab);
+      bl.appendChild(abl);
+    }
+
+    /* Die eine Festlegung gegen ihn — je Amtszeit eine, unwiderruflich */
+    var g = ep().gegenzug;
+    var nr = B.welt.zeit.amtszeit.nr;
+    var gb = B.el('div', 'gg-block gg-fest');
+    gb.appendChild(B.el('h3', null, 'Der Gegenzug — eine je Amtszeit, und er wird nicht zurueckgenommen'));
+    if (Z.gegenzugGetan[nr]) {
       gb.appendChild(B.el('div', 'gg-getan', g.name + ' — festgelegt in dieser Amtszeit. '
         + g.folge));
     } else if (Z.wirkung[g.k]) {
@@ -1431,7 +1445,7 @@
         zeichneHof(fach, h);
         zeichneSitz(fach, h);
       });
-      zeichneStammhaus(fach);
+      zeichneNebenzeichen(fach);
       zeichneAdressen(fach);
       zeichneWagen(fach);
       zeichneZeiger(fach);
