@@ -27,7 +27,7 @@ var GEGNER_DATEN = {
       familie: 'Feist',
       kurz: 'ADLER',
       farbe: 'adler',
-      kasse: { 1: 150, 2: 900, 3: 21000, 4: 260000 },
+      kasse: { 1: 320, 2: 2200, 3: 62000, 4: 1200000 },
       /* Er sitzt in allen vier Epochen auf demselben Fleck jenseits des
          Flusses — und waechst dort. Derselbe Ort, sieben Jahrhunderte. */
       sitz: {

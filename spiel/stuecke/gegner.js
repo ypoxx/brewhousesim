@@ -305,8 +305,20 @@
      ZWEI Zeichen wechseln statt einem. */
   function hoechstzahl(h) {
     var n = offeneAdressen().length;
-    var anteil = [0.4, 0.45, 0.45, 0.5][epNr() - 1] || 0.45;
-    return Math.max(2, Math.round(n * anteil) - (h.k === 'konzern' ? 1 : 0));
+    var anteil = [0.4, 0.4, 0.35, 0.3][epNr() - 1] || 0.35;
+    return Math.max(2, Math.round(n * anteil));
+  }
+
+  /* Und alle Gegner zusammen halten nie mehr als knapp die Haelfte der Stadt.
+     Wer darueber will, muss zuerst etwas fahrenlassen. */
+  function gesamtgrenze() {
+    return Math.max(3, Math.round(offeneAdressen().length * 0.45));
+  }
+
+  function fremdGesamt() {
+    return offeneAdressen().filter(function (a) {
+      return a.bindung && a.bindung.wem && a.bindung.wem !== 'haus';
+    }).length;
   }
 
   /* Gibt die schwaechste seiner Bindungen frei und nennt sie. */
@@ -378,11 +390,16 @@
   function binde(h, a, m, text) {
     var vorher = a.bindung ? a.bindung.wem : null;
     var g = grundwert(a, m);
-    if (seine(h).length >= hoechstzahl(h)) {
+    if (seine(h).length >= hoechstzahl(h) || fremdGesamt() >= gesamtgrenze()) {
       var weg = machePlatz(h, a.schluessel);
-      if (weg) text += ' Dafuer laesst er ' + weg.name + ' fahren — die Adresse ist frei.';
+      if (!weg) {
+        /* Er selbst hat nichts abzugeben — dann geht es dem anderen an den Kragen. */
+        var andere = haeuserJetzt().filter(function (x) { return x.k !== h.k; });
+        for (var i = 0; i < andere.length && !weg; i++) weg = machePlatz(andere[i], a.schluessel);
+      }
+      if (weg) text += ' Dafuer wird ' + weg.name + ' fallengelassen — die Adresse ist frei.';
     }
-    h.kasse -= Math.round(g * 0.35);
+    h.kasse -= Math.round(g * 0.18);
     B.welt.binde(a.schluessel, h.k, m.womit, jahr() + m.jahre);
     Z.bindung[a.schluessel] = {
       wer: h.k, mittel: m.k, seit: jahr(), bis: jahr() + m.jahre, grund: g, zusatz: 0
@@ -463,7 +480,7 @@
     var a = B.wuerfel.aus(l);
     Z.wagen = {
       wer: h.k, von: sitzVon(h).ort, nach: a.ort,
-      seit: takt(), dauer: 3, text: a.name
+      seit: takt(), dauer: 4, text: a.name
     };
     merkeZug(h, 'fuhre', (zug.text || '').replace('{haus}', a.name), a.ort, a.schluessel);
     return true;
@@ -471,7 +488,7 @@
 
   function zugRohstoff(h, zug) {
     var ort = B.orte.da(zug.ort) ? zug.ort : 'muehle';
-    Z.wagen = { wer: h.k, von: ort, nach: sitzVon(h).ort, seit: takt(), dauer: 3, text: 'Rohstoff' };
+    Z.wagen = { wer: h.k, von: ort, nach: sitzVon(h).ort, seit: takt(), dauer: 4, text: 'Rohstoff' };
     h.kasse -= Math.round(h.kasse * 0.02);
     merkeZug(h, 'rohstoff', zug.text, ort, null);
     return true;
@@ -521,7 +538,7 @@
   }
 
   function zugUebernahme(h, zug) {
-    var preis = Math.round(h.kasse * 0.22) + 1;
+    var preis = Math.round(Math.abs(h.kasse) * 0.07) + 1;
     h.kasse -= preis;
     h.brauereien += 1;
     merkeZug(h, 'uebernahme',
