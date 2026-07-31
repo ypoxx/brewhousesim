@@ -316,8 +316,12 @@
       gesehen[s] = jetzt;
 
       /* Was beim Laden schon dalag, liegt als Reiter — beim Laden will man
-         sein Haus sehen. Was danach aufschlaegt, schlaegt auf. */
-      if (frisch) lage[s] = (jetzt - startZeit < LADEZEIT) ? 'zu' : 'auf';
+         sein Haus sehen. Was der Spieler gerade selbst geholt hat und was
+         waehrend des Spiels neu aufschlaegt, schlaegt auf. */
+      if (frisch) {
+        lage[s] = (jetzt - handZeit < HANDFRIST) ? 'auf'
+                : (jetzt - startZeit < LADEZEIT) ? 'zu' : 'auf';
+      }
       /* Ein formatfuellendes Blatt zum Jahreswechsel ist eine Entscheidung. */
       if (jetzt - jahrZeit < JAHRESFRIST && anteil(r, true) > 0.25) lage[s] = 'auf';
 
@@ -355,6 +359,13 @@
         if (ebene) beobachter.observe(ebene, { childList: true, subtree: true, attributes: true });
       });
     }
+    /* Wer klickt, holt sich etwas. Ein Brett, das gleich danach erscheint,
+       hat der Spieler geholt — das klappt nicht vor seiner Nase zu. */
+    var buehne = document.getElementById('buehne');
+    if (buehne) {
+      buehne.addEventListener('click', function () { handZeit = Date.now(); }, true);
+    }
+
     window.setInterval(pruefe, TAKT);
     window.addEventListener('resize', baldPruefen);
     pruefe();
