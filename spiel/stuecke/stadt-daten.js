@@ -51,7 +51,7 @@ var STADT_DATEN = {
       platte: 'bild/platte-1970.jpg',
       sagt: 'Abfuellhalle, Stahltanks, Lastwagen. Von der Mauer steht ein Turm in einer '
           + 'Gruenanlage. Der Schornstein von 1884 steht noch und raucht nicht mehr.',
-      stand: ['schornstein', 'abfuellhalle', 'stahltanks', 'fasslager_stein',
+      stand: ['schornstein', 'abfuellhalle', 'stahltanks', 'kastenlager',
               'eiskeller', 'verladedock'],
       schild: { dx: 0.4, dy: -2.6, breite: 6.6, dreh: -4, hell: true }
     }
@@ -143,7 +143,7 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 40 } },
 
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 2, dy: 1, breite: 13, von: 2, bis: 4, grund: 46,
+      ort: 'fasslager', dx: 2, dy: 1, breite: 13, von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat waechst, der Schwund faellt.',
       nutzen: { platz: 10 } },
 
@@ -211,7 +211,7 @@ var STADT_DATEN = {
 
     /* --- Epoche IV --------------------------------------------------- */
     { schluessel: 'abfuellhalle', name: 'Abfuellhalle', bild: 'abfuellhalle',
-      ort: 'hof', dx: -1, dy: 8, breite: 15, von: 4, bis: 4, grund: 130,
+      ort: 'hof', dx: -3, dy: 10, breite: 14, von: 4, bis: 4, grund: 130,
       sagt: 'Vierzigtausend Flaschen in der Stunde. Der Takt der Halle ist der Takt des Hauses.',
       nutzen: { platz: 120, sud: 20 } },
 
@@ -221,12 +221,12 @@ var STADT_DATEN = {
       nutzen: { platz: 150, sud: 12 } },
 
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: -1, dy: -1, breite: 13, von: 4, bis: 4, grund: 95,
+      ort: 'rampe', dx: 2, dy: -2, breite: 13, von: 4, bis: 4, grund: 95,
       sagt: 'Drei Lastzuege am Dock. Was hier abfaehrt, ist am Abend zweihundert Kilometer weit.',
       nutzen: {}, wirkt: 'drei Lastzuege gleichzeitig' },
 
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'gaertanks', dx: 1, dy: 14, breite: 11.5, von: 4, bis: 4, grund: 70,
+      ort: 'fasslager', dx: 2, dy: 1, breite: 12, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 

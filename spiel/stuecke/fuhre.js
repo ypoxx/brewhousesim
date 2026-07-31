@@ -229,8 +229,8 @@
     if (fr) {
       return Math.round(fr.pauschale + fr.jeFass * geladen() + fr.jeKm * maxKm);
     }
-    var halt = (w.haltPreis || 0) * Z.ladung.length;
-    return Math.round(w.grund + halt + w.jeKm * (maxKm + 0.35 * (summeKm - maxKm)));
+    var halt = (w.haltPreis || 0) * Math.max(0, Z.ladung.length - 1);
+    return Math.round(w.grund + halt + w.jeKm * maxKm + w.jeKm * 0.12 * (summeKm - maxKm));
   }
 
   function fuhrerloes() {
@@ -492,7 +492,7 @@
   function eisZehrt() {
     var e = ep();
     if (!e.eis) return;
-    var brauch = Math.ceil(keller().length / 14) + (keller().length ? 1 : 0);
+    var brauch = Math.ceil(keller().length / 25) + (keller().length ? 1 : 0);
     if (Z.eis >= brauch) { Z.eis -= brauch; return; }
     Z.eis = 0;
     /* Ohne Eis wird der Keller warm — jedes Fass verliert zwei Wochen. */
@@ -681,7 +681,7 @@
     Z.budget = e.budget ? e.budget.start : 0;
     Z.sudeJeWoche = e.sudeJeWoche || 0;
     Z.faesser = Math.max(Z.faesser, e.faesser);
-    Z.fracht = e.fracht ? e.fracht[0].k : 'stueck';
+    Z.fracht = e.fracht ? e.fracht[Math.min(1, e.fracht.length - 1)].k : 'stueck';
     Z.halte = e.wagen.halte;
     Z.eisKeller = e.eis ? e.eis.keller : 0;
     Z.eis = e.eis ? e.eis.start : 0;
@@ -693,7 +693,7 @@
     /* Ein Vorschlag steht an der Tafel, damit die erste Woche laeuft.
        Kein Tutorial — eine Lage, die schon eingestellt ist. */
     var standard = sorten()[1] || sorten()[0];
-    Z.plan[standard.k] = 1;
+    Z.plan[standard.k] = e.planStart || 1;
 
     /* In 1970 gehoeren die Regalmeter der Marke, nicht dem Haus: zwei
        Adressen sind schon gelistet, die anderen nicht. */
@@ -1429,7 +1429,7 @@
       schreibeZettel();
 
       var e = ep();
-      var unterhalt = Math.round((e.wagen.grund || 1) * 0.6 + Z.unterhaltExtra);
+      var unterhalt = Math.round((e.unterhalt || 1) + Z.unterhaltExtra);
       if (unterhalt > 0) {
         B.welt.zahle(unterhalt, 'Löhne, Futter, Instandhaltung', 'spieler');
       }
