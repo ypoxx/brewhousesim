@@ -139,10 +139,11 @@
   var TAKT = 240;               /* ms — der Rahmen sieht regelmaessig nach */
   var VERGESSEN = 900;          /* ms — so lange gilt ein Brett als "noch da" */
   var JAHRESFRIST = 1800;       /* ms — Fenster nach einem Jahreswechsel */
+  var LADEZEIT = 2500;          /* ms — so lange dauert "beim Laden" */
 
   var lage = {};                /* schluessel -> 'zu' | 'auf' */
   var gesehen = {};             /* schluessel -> Zeitstempel */
-  var gespielt = false;         /* ab dem ersten Wochenwechsel */
+  var startZeit = 0;
   var jahrZeit = 0;
   var beobachter = null;
   var imGange = false;
