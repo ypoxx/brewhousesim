@@ -131,7 +131,7 @@ var FUHRE_DATEN = {
       kaeufe: [
         { k: 'budget',   text: 'Brautage vom Rat · +6', basis: 90, staffel: 1.6, menge: 6,
           titel: 'Sechs zusätzliche Brautage in diesem Braujahr. Der Rat verkauft sie ungern und teuer.' },
-        { k: 'rohstoff', text: 'Grut vom Grutherrn · +20', basis: 24, staffel: 1.0, menge: 20,
+        { k: 'rohstoff', text: 'Grut vom Grutherrn · +40', basis: 46, staffel: 1.0, menge: 40,
           titel: 'Ohne Grut kein Bier. Hopfen kennt hier noch niemand.' },
         { k: 'fass',     text: 'Fass vom Böttcher · +3', basis: 34, staffel: 1.06, menge: 3,
           titel: 'Drei Fässer mehr im Umlauf.' }
@@ -188,7 +188,7 @@ var FUHRE_DATEN = {
           titel: 'Ein Zunftgenosse tritt vier Sude seiner Reihe ab. Gilt nur für dieses Braujahr.' },
         { k: 'fass',     text: 'Fässer vom Böttcher · +4', basis: 92, staffel: 1.07, menge: 4,
           titel: 'Vier Fässer mehr im Umlauf. Das ist in dieser Epoche die eigentliche Währung.' },
-        { k: 'rohstoff', text: 'Hopfen vom Markt · +20', basis: 70, staffel: 1.0, menge: 20,
+        { k: 'rohstoff', text: 'Hopfen vom Markt · +60', basis: 200, staffel: 1.0, menge: 60,
           titel: 'Reinheitsgebot: Gerste, Hopfen, Wasser. Grut ist verboten.' }
       ],
       sorten: [
@@ -256,7 +256,7 @@ var FUHRE_DATEN = {
           titel: 'Mehr Fuder Fassungsraum. Unwiderruflich gebaut.' },
         { k: 'sudwerk',  text: 'Dampfsudwerk · +1 Sud je Woche', basis: 4200, staffel: 1.9, menge: 1,
           titel: 'Eine zweite Pfanne unter Dampf. Unwiderruflich.' },
-        { k: 'rohstoff', text: 'Hopfen aus der Hallertau · +60', basis: 320, staffel: 1.0, menge: 60,
+        { k: 'rohstoff', text: 'Hopfen aus der Hallertau · +300', basis: 1500, staffel: 1.0, menge: 300,
           titel: 'Waggonweise, ab Bahnhof.' }
       ],
       sorten: [
@@ -315,7 +315,7 @@ var FUHRE_DATEN = {
           titel: 'Ein Halt mehr je Woche. Das ist in dieser Epoche die einzige echte Vergrößerung.' },
         { k: 'sudwerk',  text: 'Sudhaus erweitern · +1 Sud je Woche', basis: 56000, staffel: 1.7, menge: 1,
           titel: 'Mehr Sude je Woche. Unwiderruflich.' },
-        { k: 'rohstoff', text: 'Hopfen im Kontrakt · +200', basis: 2600, staffel: 1.0, menge: 200,
+        { k: 'rohstoff', text: 'Hopfen im Kontrakt · +1200', basis: 14400, staffel: 1.0, menge: 1200,
           titel: 'Jahreskontrakt mit der Hallertau.' }
       ],
       sorten: [

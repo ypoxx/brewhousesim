@@ -694,3 +694,11 @@
   padding: calc(var(--s) * 6) calc(var(--s) * 10);
   line-height: 1.3;
 }
+
+.fu-rohstoff {
+  flex: 0 0 auto;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 16);
+  opacity: 0.88;
+}
+.fu-rohstoff.knapp { color: #e8a081; opacity: 1; }

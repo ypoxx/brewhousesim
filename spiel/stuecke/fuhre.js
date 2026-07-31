@@ -1018,6 +1018,17 @@
       b.appendChild(sz);
     }
 
+    /* Was in der Kammer liegt — damit der Braumeister nicht wortlos stehen
+       bleibt, wenn der Rohstoff ausgeht. */
+    var rname = B.welt.epoche().rohstoff || 'Rohstoff';
+    var teuerste = 0;
+    sorten().forEach(function (so) { if ((Z.plan[so.k] || 0) && so.rohstoff > teuerste) teuerste = so.rohstoff; });
+    var reichtFuer = teuerste ? Math.floor(B.welt.haus.rohstoff / teuerste) : null;
+    var rz = B.el('div', 'fu-rohstoff' + (reichtFuer !== null && reichtFuer < 3 ? ' knapp' : ''));
+    rz.textContent = rname + ' in der Kammer: ' + B.zahl(B.welt.haus.rohstoff)
+      + (reichtFuer !== null ? ' — reicht für ' + reichtFuer + (reichtFuer === 1 ? ' Sud' : ' Sude') : '');
+    b.appendChild(rz);
+
     if (Z.tafelGewischt) {
       b.appendChild(B.el('div', 'fu-gewischt',
         'GEWISCHT ZU GEORGI — schreib den Plan für ' + B.uhr.braujahr() + ' an.'));
