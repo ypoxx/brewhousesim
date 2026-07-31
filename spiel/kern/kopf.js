@@ -66,7 +66,7 @@
 
     /* Haus und Generation, klein unter der Leiste. */
     var haus = B.el('div', 'hauszeile');
-    haus.style.cssText = 'position:absolute;left:50%;top:8.2%;transform:translateX(-50%);'
+    haus.style.cssText = 'position:absolute;left:50%;top:10.4%;transform:translateX(-50%);'
       + 'font-size:calc(var(--s)*22);color:#2b1d10;letter-spacing:calc(var(--s)*2);'
       + 'text-shadow:0 0 calc(var(--s)*10) rgba(255,248,230,.95);white-space:nowrap;';
     haus.textContent = B.welt.haus.name + ' · ' + B.uhr.braujahr() + ' · '

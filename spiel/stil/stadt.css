@@ -69,6 +69,8 @@
   color: #23180d;
   text-shadow: 0 0 calc(var(--s) * 8) rgba(255, 250, 235, 0.95);
 }
+.stadt-ort.hoch { flex-direction: column-reverse; }
+
 .stadt-ort i {
   width: calc(var(--s) * 18);
   height: calc(var(--s) * 18);
