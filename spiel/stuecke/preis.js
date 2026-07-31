@@ -130,7 +130,7 @@
 
   function rechneAnschlag() {
     var e = ep();
-    var wert = umsatzGewicht() * Z.umsatz + 1.5 * Z.hoehe;
+    var wert = umsatzGewicht() * Z.umsatz + 2.2 * Z.hoehe;
     var basis = Math.max(e.grund, wert);
     var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
     Z.anschlag = basis * Math.pow(e.teuerungJahr, jahre) * Math.pow(e.teuerungKauf, Z.kaeufe);
@@ -331,11 +331,21 @@
     Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.94);
     rechneAnschlag();
 
-    /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. */
+    /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. Er kann sich
+          nicht ins Bodenlose schrauben: was ueber eine Jahreslast hinauswaechst,
+          holt sich der Rat als Pfand — dann ist die Schuld getilgt. */
     if (Z.rueckstand > 0) {
       var alt = Math.round(Z.rueckstand * 1.1);
       Z.rueckstand = 0;
-      buche(alt, 'Rueckstand aus dem Vorjahr, mit Aufschlag', 'rueckstand');
+      if (alt > pflichtSumme()) {
+        var pfand = nimmPfand();
+        Z.rechnung.push({ name: 'Rueckstand getilgt durch Pfand'
+          + (pfand ? ': ' + pfand : ''), betrag: 0, art: 'umlage' });
+        chronik('umlage', 'Der Rueckstand von ' + geld(alt) + ' ist durch ein Pfand getilgt'
+          + (pfand ? ': ' + pfand + ' geht auf fuenf Jahre an den Adler.' : '.'));
+      } else {
+        buche(alt, 'Rueckstand aus dem Vorjahr, mit Aufschlag', 'rueckstand');
+      }
     }
 
     /* 3. Die Pflichten des Jahres. Im ersten Michaeli einer Partie sind sie
@@ -677,7 +687,7 @@
     an.appendChild(B.el('h3', null, 'DER ANSCHLAG'));
     an.appendChild(zeile('Fuer ' + jahr(), geld(Math.round(Z.anschlag)), 'pr-gross'));
     an.appendChild(zeile('davon aus dem Umsatz', geld(Math.round(umsatzGewicht() * Z.umsatz))));
-    an.appendChild(zeile('davon aus der Barschaft', geld(Math.round(1.5 * Z.hoehe))));
+    an.appendChild(zeile('davon aus der Barschaft', geld(Math.round(2.2 * Z.hoehe))));
     an.appendChild(zeile('Teuerung seit ' + Z.startjahr,
       '+' + B.zahl((Math.pow(ep().teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40)) - 1) * 100, 0) + '%'));
     an.appendChild(B.el('div', 'pr-satz pr-klein', e.anschlagSatz));
