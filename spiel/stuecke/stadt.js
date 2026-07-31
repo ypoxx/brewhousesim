@@ -312,7 +312,9 @@
       var frisch = !(s in lage) || (jetzt - (gesehen[s] || 0) > VERGESSEN);
       gesehen[s] = jetzt;
 
-      if (frisch) lage[s] = gespielt ? 'auf' : 'zu';
+      /* Was beim Laden schon dalag, liegt als Reiter — beim Laden will man
+         sein Haus sehen. Was danach aufschlaegt, schlaegt auf. */
+      if (frisch) lage[s] = (jetzt - startZeit < LADEZEIT) ? 'zu' : 'auf';
       /* Ein formatfuellendes Blatt zum Jahreswechsel ist eine Entscheidung. */
       if (jetzt - jahrZeit < JAHRESFRIST && anteil(r, true) > 0.25) lage[s] = 'auf';
 
@@ -342,6 +344,7 @@
   }
 
   function starteRahmen() {
+    startZeit = Date.now();
     if (window.MutationObserver) {
       beobachter = new MutationObserver(function () { if (!imGange) baldPruefen(); });
       ['marken', 'hand', 'blatt'].forEach(function (name) {
@@ -579,15 +582,12 @@
 
     zeichne: zeichne,
 
-    woche: function () { gespielt = true; },
-
-    jahr: function () { gespielt = true; jahrZeit = Date.now(); },
+    jahr: function () { jahrZeit = Date.now(); },
 
     /* Die Epoche nimmt, was ihre Zeit ueberlebt hat, und laesst den Rest
        zurueck. Der Hof waechst weiter, er faengt nicht neu an. */
     epoche: function (d) {
       var neu = d.epoche || e();
-      gespielt = true;
       jahrZeit = Date.now();
       Object.keys(gebaut).forEach(function (s) {
         var a = K.aufbauten.filter(function (x) { return x.schluessel === s; })[0];
