@@ -42,6 +42,7 @@
     halte: 0,
     bann: {},            /* adr -> Jahr des Bannbriefs                      */
     listung: {},         /* adr -> {sorte: true}                            */
+    listungLeer: {},     /* adr -> Jahre ohne Lieferung trotz Listung        */
     durst: {},           /* adr -> Fass, die das Haus jetzt will            */
     leer: {},            /* adr -> Wochen ohne Lieferung                    */
     mahnung: {},         /* adr -> 0..3 magere Jahre in Folge               */
