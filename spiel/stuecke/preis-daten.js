@@ -49,10 +49,10 @@ var PREIS_DATEN = {
       grund: 470,
       teuerungJahr: 1.075,
       teuerungKauf: 1.10,
-      pflichtUmsatz: 0.13,
-      pflichtHoehe: 0.26,
-      umlageAnteil: 0.95,
-      handlohnAnteil: 1.30,
+      pflichtUmsatz: 0.115,
+      pflichtHoehe: 0.22,
+      umlageAnteil: 0.80,
+      handlohnAnteil: 1.10,
       abstaende: [3, 7, 6, 8, 7, 9],
 
       /* Die Bierordnung. Steigt in Jahrzehnten, nicht in Jahren. */
@@ -189,10 +189,10 @@ var PREIS_DATEN = {
       grund: 2800,
       teuerungJahr: 1.070,
       teuerungKauf: 1.11,
-      pflichtUmsatz: 0.115,
-      pflichtHoehe: 0.24,
-      umlageAnteil: 1.00,
-      handlohnAnteil: 1.35,
+      pflichtUmsatz: 0.105,
+      pflichtHoehe: 0.21,
+      umlageAnteil: 0.85,
+      handlohnAnteil: 1.15,
       abstaende: [4, 6, 9, 7, 6, 8],
 
       ordnung: [
@@ -329,10 +329,10 @@ var PREIS_DATEN = {
       grund: 42000,
       teuerungJahr: 1.085,
       teuerungKauf: 1.12,
-      pflichtUmsatz: 0.105,
-      pflichtHoehe: 0.22,
-      umlageAnteil: 1.05,
-      handlohnAnteil: 1.20,
+      pflichtUmsatz: 0.095,
+      pflichtHoehe: 0.20,
+      umlageAnteil: 0.90,
+      handlohnAnteil: 1.10,
       abstaende: [3, 6, 5, 7, 6, 8],
 
       ordnung: [
@@ -467,10 +467,10 @@ var PREIS_DATEN = {
       grund: 620000,
       teuerungJahr: 1.080,
       teuerungKauf: 1.13,
-      pflichtUmsatz: 0.095,
-      pflichtHoehe: 0.20,
-      umlageAnteil: 1.10,
-      handlohnAnteil: 1.15,
+      pflichtUmsatz: 0.085,
+      pflichtHoehe: 0.18,
+      umlageAnteil: 0.95,
+      handlohnAnteil: 1.05,
       abstaende: [4, 5, 7, 6, 5, 8],
 
       ordnung: [
