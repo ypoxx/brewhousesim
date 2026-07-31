@@ -1,0 +1,37 @@
+/* ===========================================================================
+   stil/gegner.css — GEHOERT DEM BAUER VON "DER GEGNER". Ersetze frei.
+   =========================================================================== */
+
+.gegner-marke {
+  text-align: center;
+  min-width: calc(var(--s) * 200);
+  border-color: rgba(60, 30, 20, 0.7);
+  background: rgba(240, 226, 205, 0.7);
+}
+
+.gegner-zettel {
+  position: absolute;
+  min-width: calc(var(--s) * 420);
+  max-width: calc(var(--s) * 520);
+  padding: calc(var(--s) * 10) calc(var(--s) * 14);
+  background: rgba(255, 250, 235, 0.78);
+  border: calc(var(--s) * 2) solid rgba(43, 29, 16, 0.5);
+  border-radius: calc(var(--s) * 5);
+  color: #2b1d10;
+}
+
+.gegner-zettel .ueber {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  letter-spacing: calc(var(--s) * 2);
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: calc(var(--s) * 4);
+}
+
+.gegner-zettel .zeile {
+  font-size: calc(var(--s) * 19);
+  line-height: 1.3;
+  padding: calc(var(--s) * 2) 0;
+  border-bottom: 1px dotted rgba(43, 29, 16, 0.25);
+}
