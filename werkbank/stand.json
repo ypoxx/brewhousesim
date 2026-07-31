@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T17:17:46+00:00",
+ "stand": "2026-07-31T18:05:36+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -17,6 +17,13 @@
    "runde": 1,
    "luecke": "Platzhalter statt Epochenbild: die vier Platten fehlen, das ist die Arbeit von DIE STADT.",
    "gebaut": "werkbank/schuss/skelett-e3.png",
+   "referenz": "zielbild/03-1884.jpg"
+  },
+  {
+   "name": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof",
+   "status": "laeuft",
+   "runde": 1,
+   "gebaut": "werkbank/schuss/1-runde1.png",
    "referenz": "zielbild/03-1884.jpg"
   }
  ],
@@ -52,6 +59,14 @@
   {
    "zeit": "2026-07-31T17:17:46+00:00",
    "text": "Skelett · Runde 1 · bestanden — Platzhalter statt Epochenbild: die vier Platten fehlen, das ist die Arbeit von DIE STADT."
+  },
+  {
+   "zeit": "2026-07-31T18:05:36+00:00",
+   "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 1 · läuft"
+  },
+  {
+   "zeit": "2026-07-31T18:05:36+00:00",
+   "text": "DIE STADT, Runde 1: vier Epochenplatten (2752x1536, ohne eingebrannte Schrift) und 32 freigestellte Aufbauten erzeugt. Hof waechst durch Kauf: ?epoche=N zeigt das Erbe, ?bau=keine denselben Spielstand ohne einen einzigen Kauf."
   }
  ]
 }
