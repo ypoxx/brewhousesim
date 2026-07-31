@@ -180,7 +180,7 @@ var FUHRE_DATEN = {
       sommerSatz: 'Das Sommerbrauverbot steht seit 1553 in der Ordnung: von Georgi bis '
                 + 'Michaeli wird nicht gebraut. Was im April im Keller liegt, ist der ganze Sommer.',
       monate: ['Wonnemond', 'Brachet', 'Heuert', 'Ernting', 'Scheiding'],
-      abgabe: { satz: 0.16, name: 'Ungeld und Zunftbeitrag',
+      abgabe: { satz: 0.13, name: 'Ungeld und Zunftbeitrag',
                 sagt: 'Der Stadt das Ungeld, der Zunft den Beitrag. Beides nach Ausstoß.' },
       bannmeile: 0,
       kaeufe: [
@@ -222,7 +222,7 @@ var FUHRE_DATEN = {
       budget: null,
       sudeJeWoche: 2,
       planStart: 2,
-      unterhalt: 150,
+      unterhalt: 110,
       tafel: { name: 'Sudplan', unter: 'am schwarzen Brett der Mälzerei',
                preis: 260, freiBis: 3 },
       keller: { name: 'Der Eiskeller', bettFass: 2, bett: 'Lagerfass', spalten: 9,
@@ -246,7 +246,7 @@ var FUHRE_DATEN = {
       sommerSatz: 'Die Kältemaschine koennte im Juli brauen. Der Sommerabsatz kommt '
                 + 'trotzdem aus dem Lagerkeller — was im April eingelagert ist, ist der Sommer.',
       monate: ['Mai', 'Juni', 'Juli', 'August', 'September'],
-      abgabe: { satz: 0.14, name: 'Biersteuer und Malzaufschlag',
+      abgabe: { satz: 0.11, name: 'Biersteuer und Malzaufschlag',
                 sagt: 'Seit 1879 wird das Malz besteuert. Wer mehr einbraut, zahlt mehr.' },
       bannmeile: 0,
       kaeufe: [
@@ -289,13 +289,13 @@ var FUHRE_DATEN = {
       budget: null,
       sudeJeWoche: 5,
       planStart: 2,
-      unterhalt: 1800,
+      unterhalt: 1200,
       tafel: { name: 'Sudplan', unter: 'im Schaltraum, auf Formica',
                preis: 2400, freiBis: 3 },
       keller: { name: 'Die Tanks', bettFass: 20, bett: 'Drucktank', spalten: 5,
                 satz: 'Ein Drucktank zu dreißig Hektoliter. Der Keller ist kein Keller mehr.' },
       wagen: { name: 'Lastzug', fass: 300, halte: 3, schritt: 20,
-               grund: 400, jeKm: 30, haltPreis: 1200, umlauf: 1, bruch: 0.01,
+               grund: 400, jeKm: 30, haltPreis: 900, umlauf: 1, bruch: 0.01,
                satz: 'Drei Halte je Tour. Die Menge ist kein Problem mehr — der Plan schon.' },
       faesser: 1400,
       mengenfaktor: 10,
@@ -304,7 +304,7 @@ var FUHRE_DATEN = {
                 + 'kommt aus den Tanks — und in den Tanks ist, was im April drin war.',
       monate: ['Mai', 'Juni', 'Juli', 'August', 'September'],
       bannmeile: 0,
-      abgabe: { satz: 0.17, name: 'Biersteuer und Werbeetat',
+      abgabe: { satz: 0.13, name: 'Biersteuer und Werbeetat',
                 sagt: 'Steuer nach Ausstoß, Werbung nach Marktanteil am eigenen Ausstoß. '
                     + 'Beides wächst mit dem Haus.' },
       listung: { name: 'Listung', basis: 4200, staffel: 1.3,

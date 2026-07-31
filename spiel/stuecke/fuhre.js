@@ -723,7 +723,7 @@
     if (e.listung) {
       Z.listung = {};
       var l = alleHaeuser();
-      for (var i = 0; i < l.length && i < 3; i++) {
+      for (var i = 0; i < l.length && i < 5; i++) {
         var o = {}; o[standard.k] = true;
         Z.listung[l[i].schluessel] = o;
       }
