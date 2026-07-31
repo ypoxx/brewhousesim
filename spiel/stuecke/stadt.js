@@ -145,6 +145,7 @@
 
   var lage = {};                /* schluessel -> 'zu' | 'auf' */
   var gesehen = {};             /* schluessel -> Zeitstempel */
+  var warDa = {};               /* schluessel -> lag beim letzten Blick wirklich da */
   var startZeit = 0;
   var jahrZeit = 0;
   var handZeit = 0;             /* wann der Spieler zuletzt geklickt hat */
@@ -297,6 +298,7 @@
     var liste = fremdeBretter();
     var reiter = [];
     var benutzt = {};
+    var daJetzt = {};
 
     liste.forEach(function (b) {
       var s = schluesselVon(b);
