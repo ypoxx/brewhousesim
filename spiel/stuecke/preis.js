@@ -450,7 +450,7 @@
   function fertigstellen(k) {
     if (Z.fertig[k]) return;
     var a = angebotVon(k);
-    if (!a) return;
+    if (!a) { Z.fertig[k] = jahr(); return; }
     Z.fertig[k] = jahr();
     wende(a, a.wirkung);
     Z.rechnung.push({ name: a.name + ' — fertig', betrag: 0, art: 'fertig' });
@@ -559,7 +559,8 @@
     var plan = zahlplan(a);
     if (!B.welt.zahle(plan.jetzt, a.name + (a.bauzeit ? ' — Anzahlung' : ''), 'spieler')) return;
 
-    Z.genommen[a.k] = { jahr: jahr(), preis: plan.ganz, fertig: jahr() + (a.bauzeit || 0) };
+    Z.genommen[a.k] = { jahr: jahr(), name: a.name, preis: plan.ganz,
+                        fertig: jahr() + (a.bauzeit || 0) };
     Z.kaeufe += 1;
     if (a.sperrt) {
       a.sperrt.forEach(function (k) { Z.gesperrt[k] = a.k; });
@@ -720,11 +721,12 @@
     var etwas = false;
     Object.keys(Z.fertig).forEach(function (k) {
       var a = angebotVon(k);
-      if (!a) return;
+      var name = a ? a.name : (Z.genommen[k] ? Z.genommen[k].name : null);
+      if (!name) return;
       etwas = true;
       var z = B.el('div', 'pr-bestand-zeile');
       z.appendChild(B.el('span', 'pr-bestand-jahr', Z.fertig[k]));
-      z.appendChild(B.el('span', 'pr-bestand-name', a.name));
+      z.appendChild(B.el('span', 'pr-bestand-name', name));
       st.appendChild(z);
     });
     Z.raten.forEach(function (r) {

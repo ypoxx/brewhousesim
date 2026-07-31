@@ -377,7 +377,7 @@ var PREIS_DATEN = {
           satz: 'Wer das Dach zahlt, bestimmt, was unter dem Dach ausgeschenkt wird.',
           wirkung: { bindung: { n: 1, jahre: 30 }, ertrag: 450 } },
 
-        { k: 'darre', name: 'Die Darre mit Warmluft', anteil: 0.105, bauzeit: 1,
+        { k: 'warmluftdarre', name: 'Die Darre mit Warmluft', anteil: 0.105, bauzeit: 1,
           was: 'Kein Rauch mehr im Malz — heisse Luft durch einen Kanal.',
           satz: 'Helles Malz. Damit laesst sich helles Bier brauen, und helles Bier ist gerade Mode.',
           wirkung: { preis: 0.06, ertrag: 700 } },
