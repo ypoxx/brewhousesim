@@ -684,3 +684,13 @@
   letter-spacing: calc(var(--s) * 2);
 }
 .fu-knappheit span { font-size: calc(var(--s) * 18); line-height: 1.28; opacity: 0.86; }
+
+.fu-abgabe {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 18);
+  color: var(--rot);
+  border: calc(var(--s) * 2) solid var(--rot);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 6) calc(var(--s) * 10);
+  line-height: 1.3;
+}

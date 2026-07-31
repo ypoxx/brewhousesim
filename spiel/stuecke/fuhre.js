@@ -1327,8 +1327,13 @@
     bl.appendChild(tab);
 
     bl.appendChild(B.el('div', 'fu-satz stark',
-      'Sommerabsatz: ' + B.welt.menge(s.verkauft) + ' fuer ' + B.welt.geld(s.geld)
+      'Sommerabsatz: ' + B.welt.menge(s.verkauft) + ' für ' + B.welt.geld(s.geld)
       + '. Übrig und wertlos: ' + B.welt.menge(s.rest) + '.'));
+    if (s.abgabe) {
+      bl.appendChild(B.el('div', 'fu-abgabe',
+        s.abgabeName + ' auf einen Umsatz von ' + B.welt.geld(s.umsatz) + ': −'
+        + B.welt.geld(s.abgabe) + '   ·   ' + s.abgabeSatz));
+    }
 
     /* Und gleich hier die eine Jahresentscheidung: was wird gebraut? */
     bl.appendChild(B.el('h3', null, 'Was steht ' + B.uhr.braujahr() + ' an der Tafel?'));

@@ -324,3 +324,11 @@
   padding: calc(var(--s) * 5) calc(var(--s) * 12) !important;
   letter-spacing: calc(var(--s) * 0.5);
 }
+
+/* Die drei Faecher der Ebene 'bau'. Ohne eigenen Stapelkontext, damit die
+   z-Ordnung aller Bauten gemeinsam nach ihrer Tiefe im Bild gilt. */
+.stadt-fach {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

@@ -81,7 +81,6 @@
     gebaut[a.schluessel] = { jahr: B.welt.zeit.jahr, gekauft: true };
     wirke(a);
     B.welt.schreibe(a.name + ' steht im Hof. ' + a.sagt, 'bau');
-    vorschau = null;
     if (B.ton && B.ton.spiele) B.ton.spiele('stadt:bau');
     B.sende('zeichne', { grund: 'stadt:bau' });
   }
@@ -134,6 +133,38 @@
     return el;
   }
 
+  /* Drei feste Faecher in der Ebene 'bau'. Sie werden EINMAL angelegt und
+     danach einzeln neu gefuellt. Das ist kein Schoenheitsfehler, sondern eine
+     Bedingung der Bedienbarkeit: wer bei jedem Mausueberfahren die ganze Ebene
+     neu baut, reisst den Knopf unter dem Zeiger weg — und der Kritiker kommt
+     nie zum Klick. */
+  function teile() {
+    var fach = B.ebene('bau', 'stadt');
+    var t = {
+      hof: fach.querySelector('.stadt-fach-hof'),
+      geist: fach.querySelector('.stadt-fach-geist'),
+      brett: fach.querySelector('.stadt-fach-brett')
+    };
+    if (!t.hof) {
+      t.hof = B.el('div', 'stadt-fach stadt-fach-hof');
+      t.geist = B.el('div', 'stadt-fach stadt-fach-geist');
+      t.brett = B.el('div', 'stadt-fach stadt-fach-brett');
+      fach.appendChild(t.hof);
+      fach.appendChild(t.geist);
+      fach.appendChild(t.brett);
+    }
+    return t;
+  }
+
+  function zeigeVorschau(schluessel) {
+    vorschau = schluessel;
+    var geist = teile().geist;
+    B.leere(geist);
+    if (!schluessel) return;
+    var v = katalog().filter(function (a) { return a.schluessel === schluessel; })[0];
+    if (v) geist.appendChild(hausbild(v, true));
+  }
+
   function zeichneHof(fach) {
     stehend().forEach(function (a) {
       fach.appendChild(hausbild(a, false));
@@ -150,11 +181,6 @@
         fach.appendChild(rauch);
       }
     });
-
-    if (vorschau) {
-      var v = katalog().filter(function (a) { return a.schluessel === vorschau; })[0];
-      if (v) fach.appendChild(hausbild(v, true));
-    }
   }
 
   /* Die Namen der Stadt: echter Text an einem Ort. */
@@ -230,11 +256,12 @@
         tu: function () { kaufe(a); }
       });
       k.addEventListener('mouseenter', function () {
-        vorschau = a.schluessel;
-        B.wage('stadt.vorschau', zeichne);
+        B.wage('stadt.vorschau', function () { zeigeVorschau(a.schluessel); });
       });
       k.addEventListener('mouseleave', function () {
-        if (vorschau === a.schluessel) { vorschau = null; B.wage('stadt.vorschau', zeichne); }
+        if (vorschau === a.schluessel) {
+          B.wage('stadt.vorschau', function () { zeigeVorschau(null); });
+        }
       });
       zeile.appendChild(k);
       zeile.appendChild(B.el('div', 'nutzen', nutzenWort(a) || 'steht, solange das Haus steht'));
@@ -252,12 +279,15 @@
 
   function zeichne() {
     zeichnePlatte();
-    var fach = B.ebene('bau', 'stadt');
-    B.leere(fach);
-    zeichneHof(fach);
-    zeichneNamen(fach);
-    zeichneHausschild(fach);
-    zeichneBauhof(fach);
+    var t = teile();
+    B.leere(t.hof);
+    B.leere(t.geist);
+    B.leere(t.brett);
+    vorschau = null;
+    zeichneHof(t.hof);
+    zeichneNamen(t.hof);
+    zeichneHausschild(t.hof);
+    zeichneBauhof(t.brett);
   }
 
   /* --------------------------------------------------------------------
