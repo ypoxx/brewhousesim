@@ -371,7 +371,7 @@
     if (Z.handlohnFaellig) {
       Z.handlohnFaellig = false;
       if (!Z.handlohnWeg) {
-        var h = rundePreis(e.handlohnAnteil * Z.anschlag * (Z.handlohnHalb ? 0.5 : 1));
+        var h = handlohnBetrag();
         buche(h, 'Handlohn beim Erbfall an den Grundherrn', 'umlage');
         chronik('pflicht', 'Handlohn beim Erbfall: ' + geld(h) + '.');
       } else {
@@ -383,7 +383,7 @@
     var u = umlageDesJahres();
     if (u && !u.bezahlt) {
       u.bezahlt = true;
-      var betrag = rundePreis(e.umlageAnteil * Z.anschlag * (Z.umlageHalb ? 0.5 : 1));
+      var betrag = umlageBetrag();
       u.betrag = betrag;
       if (!buche(betrag, u.name, 'umlage')) {
         var weg = nimmPfand();
@@ -458,22 +458,17 @@
   }
 
   function kommendeLasten() {
-    var e = ep();
     var l = [];
     Z.umlagen.forEach(function (u) {
       if (u.jahr < jahr() || u.bezahlt) return;
-      l.push({
-        jahr: u.jahr, name: u.name, sagt: u.sagt,
-        betrag: rundePreis(e.umlageAnteil * Z.anschlag * (Z.umlageHalb ? 0.5 : 1)),
-        art: 'umlage'
-      });
+      l.push({ jahr: u.jahr, name: u.name, sagt: u.sagt, betrag: umlageBetrag(), art: 'umlage' });
     });
     /* Der Erbfall steht im Kalender: die Amtszeit hat ein Ende. */
     if (!Z.handlohnWeg && amtszeit().bis && amtszeit().bis > jahr()) {
       l.push({
         jahr: amtszeit().bis, name: 'Handlohn beim Erbfall',
         sagt: amtszeit().name + ' fuehrt das Haus seit ' + amtszeit().seit + '.',
-        betrag: rundePreis(e.handlohnAnteil * Z.anschlag * (Z.handlohnHalb ? 0.5 : 1)),
+        betrag: handlohnBetrag(),
         art: 'erbfall'
       });
     }
@@ -577,10 +572,12 @@
     });
   }
 
+  function festPreis(f) { return f.anteil ? rundePreis(f.anteil * Z.anschlag) : 0; }
+
   function festlege(f) {
     if (B.welt.zeit.woche !== 1) return;
     if (!festlegungOffen() || Z.festGenommen[f.k]) return;
-    var preis = rundePreis(f.anteil * Z.anschlag);
+    var preis = festPreis(f);
     if (preis > 0 && !B.welt.zahle(preis, 'Festlegung: ' + f.name, 'spieler')) return;
 
     Z.festGenommen[f.k] = { jahr: jahr(), amtszeit: amtszeit().name, nr: amtszeit().nr, preis: preis };
@@ -642,6 +639,8 @@
         kasten.appendChild(zeile(p.name, geld(-p.betrag), 'pr-pflicht'));
       });
       kasten.appendChild(zeile('Zusammen im Jahr', geld(-pflichtSumme()), 'pr-summe'));
+      kasten.appendChild(B.el('div', 'pr-satz pr-klein',
+        'Sie richten sich nach dem Umsatz des Vorjahres und nach dem, was in der Kasse liegt.'));
     } else {
       var summe = 0;
       Z.rechnung.forEach(function (r) {
@@ -737,7 +736,7 @@
   }
 
   function festKarte(f) {
-    var preis = rundePreis(f.anteil * Z.anschlag);
+    var preis = festPreis(f);
     var offen = festlegungOffen();
     var kann = preis === 0 || B.welt.kann(preis);
     var jetztTag = B.welt.zeit.woche === 1;
