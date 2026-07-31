@@ -123,7 +123,7 @@ var FUHRE_DATEN = {
       sommerSatz: 'Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer '
                 + 'unter der Pfanne — die Stadt fürchtet den Brand.',
       monate: ['Wonnemond', 'Brachet', 'Heuert', 'Ernting', 'Scheiding'],
-      abgabe: { satz: 0.15, name: 'Ungeld',
+      abgabe: { satz: 0.12, name: 'Ungeld',
                 sagt: 'Der Rat nimmt vom Bier, das ausgeschenkt wurde. Wer mehr verkauft, zahlt mehr.' },
       bannmeile: 1,
       bann: { name: 'Bannbrief', basis: 60, staffel: 1.55,
@@ -222,7 +222,7 @@ var FUHRE_DATEN = {
       budget: null,
       sudeJeWoche: 2,
       planStart: 2,
-      unterhalt: 260,
+      unterhalt: 150,
       tafel: { name: 'Sudplan', unter: 'am schwarzen Brett der Mälzerei',
                preis: 260, freiBis: 3 },
       keller: { name: 'Der Eiskeller', bettFass: 2, bett: 'Lagerfass', spalten: 9,
@@ -231,14 +231,14 @@ var FUHRE_DATEN = {
                grund: 0, jeKm: 0, haltPreis: 0, umlauf: 2, bruch: 0.02,
                satz: 'Die Rampe geht an den Bahnhof. Was sie kostet, entscheidet die Stufe.' },
       fracht: [
-        { k: 'stueck', name: 'Stückgut',      fass: 12, pauschale: 90,  jeFass: 22, jeKm: 9,
+        { k: 'stueck', name: 'Stückgut',      fass: 12, pauschale: 70,  jeFass: 16, jeKm: 7,
           satz: 'Jede Menge, jede Woche — und je Fass am teuersten.' },
-        { k: 'halb',   name: 'Halber Wagen',   fass: 40, pauschale: 620, jeFass: 0,  jeKm: 16,
+        { k: 'halb',   name: 'Halber Wagen',   fass: 40, pauschale: 460, jeFass: 0,  jeKm: 12,
           satz: 'Pauschale. Vierzig Fass passen hinein; bezahlt wird der Wagen, nicht die Ladung.' },
-        { k: 'ganz',   name: 'Ganzer Wagen',   fass: 88, pauschale: 980, jeFass: 0,  jeKm: 22,
+        { k: 'ganz',   name: 'Ganzer Wagen',   fass: 88, pauschale: 700, jeFass: 0,  jeKm: 16,
           satz: 'Achtundachtzig Fass. Halb gefüllt ist er das teuerste Geschäft des Hauses.' }
       ],
-      eis: { start: 50, keller: 80, jeFuder: 16, menge: 12, frostVon: 9, frostBis: 22,
+      eis: { start: 60, keller: 90, jeFuder: 16, menge: 16, frostVon: 9, frostBis: 22,
              satz: 'Eis wird aus dem Fluss geschnitten, solange er trägt. Danach nicht mehr.' },
       faesser: 260,
       mengenfaktor: 3,
@@ -246,11 +246,11 @@ var FUHRE_DATEN = {
       sommerSatz: 'Die Kältemaschine koennte im Juli brauen. Der Sommerabsatz kommt '
                 + 'trotzdem aus dem Lagerkeller — was im April eingelagert ist, ist der Sommer.',
       monate: ['Mai', 'Juni', 'Juli', 'August', 'September'],
-      abgabe: { satz: 0.16, name: 'Biersteuer und Malzaufschlag',
+      abgabe: { satz: 0.14, name: 'Biersteuer und Malzaufschlag',
                 sagt: 'Seit 1879 wird das Malz besteuert. Wer mehr einbraut, zahlt mehr.' },
       bannmeile: 0,
       kaeufe: [
-        { k: 'eis',      text: 'Eis schneiden · +12 Fuder', basis: 160, staffel: 1.0, menge: 12,
+        { k: 'eis',      text: 'Eis schneiden · +16 Fuder', basis: 190, staffel: 1.0, menge: 16,
           titel: 'Nur solange der Fluss trägt. Im Maerz ist damit Schluss, egal wie voll die Kasse ist.' },
         { k: 'eiskeller',text: 'Eiskeller vergrößern · +20', basis: 1800, staffel: 1.6, menge: 20,
           titel: 'Mehr Fuder Fassungsraum. Unwiderruflich gebaut.' },
@@ -266,13 +266,13 @@ var FUHRE_DATEN = {
           satz: 'Vierunddreißig Fass aus einem Sud, sofort lieferbar, drei Wochen haltbar. '
               + 'Füllt den halben Wagen im Alleingang.' },
         { k: 'lager', name: 'Lagerbier', zeichen: 'L', stufe: 2,
-          fass: 28, reife: 6, haltbar: 22, preis: 72, kosten: 750, rohstoff: 34, eis: 2,
+          fass: 28, reife: 4, haltbar: 24, preis: 72, kosten: 750, rohstoff: 34, eis: 2,
           sommer: false,
-          satz: 'Sechs Wochen auf Eis. Das Bier, an dem die Kältemaschine haengt.' },
+          satz: 'Vier Wochen auf Eis. Das Bier, an dem die Kältemaschine haengt.' },
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
-          fass: 22, reife: 12, haltbar: 44, preis: 108, kosten: 880, rohstoff: 42, eis: 3,
+          fass: 22, reife: 10, haltbar: 46, preis: 108, kosten: 880, rohstoff: 42, eis: 3,
           sommer: true,
-          satz: 'Zwölf Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller.' }
+          satz: 'Zehn Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller.' }
       ]
     },
 
@@ -288,8 +288,8 @@ var FUHRE_DATEN = {
       knappSatz: 'Drei Halte in der Woche. Und das Regal gehört nicht dir.',
       budget: null,
       sudeJeWoche: 5,
-      planStart: 3,
-      unterhalt: 3200,
+      planStart: 2,
+      unterhalt: 1800,
       tafel: { name: 'Sudplan', unter: 'im Schaltraum, auf Formica',
                preis: 2400, freiBis: 3 },
       keller: { name: 'Die Tanks', bettFass: 20, bett: 'Drucktank', spalten: 5,
@@ -320,17 +320,17 @@ var FUHRE_DATEN = {
       ],
       sorten: [
         { k: 'hell', name: 'Vollbier Hell', zeichen: 'H', stufe: 1,
-          fass: 60, reife: 2, haltbar: 18, preis: 150, kosten: 3900, rohstoff: 55,
+          fass: 60, reife: 1, haltbar: 18, preis: 150, kosten: 3900, rohstoff: 55,
           sommer: false,
-          satz: 'Die Menge. Sechzig Fass je Sud, zwei Wochen Reife, jedes Regal nimmt es.' },
+          satz: 'Die Menge. Sechzig Fass je Sud, eine Woche Reife, jedes Regal nimmt es.' },
         { k: 'pils', name: 'Pilsner', zeichen: 'P', stufe: 2,
-          fass: 50, reife: 4, haltbar: 26, preis: 195, kosten: 4200, rohstoff: 62,
+          fass: 50, reife: 3, haltbar: 26, preis: 195, kosten: 4200, rohstoff: 62,
           sommer: true,
-          satz: 'Die Marke. Vier Wochen Reife, und der Meter im Regal kostet extra.' },
+          satz: 'Die Marke. Drei Wochen Reife, und der Meter im Regal kostet extra.' },
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
-          fass: 40, reife: 6, haltbar: 40, preis: 245, kosten: 4600, rohstoff: 70,
+          fass: 40, reife: 5, haltbar: 40, preis: 245, kosten: 4600, rohstoff: 70,
           sommer: true,
-          satz: 'Sechs Wochen Reife, vierzig Fass. Die Gaststätte zahlt es, der Markt nicht.' }
+          satz: 'Fünf Wochen Reife, vierzig Fass. Die Gaststätte zahlt es, der Markt nicht.' }
       ]
     }
   }
