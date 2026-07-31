@@ -924,7 +924,9 @@
         z2.appendChild(B.knopf({
           text: 'Bannbrief', zug: 'fuhre:bann:' + a.schluessel,
           klasse: 'fu-klein fu-fest fu-tat', preis: -preis,
-          titel: e.bann.satz + ' ' + a.name + ' liegt ' + a.km + ' km außerhalb.',
+          aus: !B.welt.kann(preis),
+          titel: e.bann.satz + ' ' + a.name + ' liegt ' + a.km + ' km außerhalb. '
+            + (B.welt.kann(preis) ? '' : 'Die Kasse reicht nicht.'),
           tu: function () { loeseBann(a); }
         }));
       } else if (grund && e.listung && !gelistet(a)) {
@@ -935,6 +937,7 @@
           text: 'Regalmeter', zug: 'fuhre:listen:' + a.schluessel,
           klasse: 'fu-klein fu-fest fu-tat',
           preis: -Math.round(e.listung.basis * Math.pow(e.listung.staffel, n2)),
+          aus: !B.welt.kann(Math.round(e.listung.basis * Math.pow(e.listung.staffel, n2))),
           titel: e.listung.satz + ' Gelistet würde: ' + s0.name + '.',
           tu: function () { liste(a, s0); }
         }));
@@ -1265,14 +1268,17 @@
     b.appendChild(hilfe);
 
     var lohn = fuhrlohn(), erloes = fuhrerloes();
+    var arm = voll && !B.welt.kann(lohn);
     var ab = B.knopf({
       text: voll ? 'FUHRE ABSCHICKEN · ' + B.welt.menge(voll) + ' · bringt ' + B.welt.geld(erloes)
                  : 'FUHRE ABSCHICKEN',
       zug: 'fuhre:abschicken', klasse: 'fu-abschicken', preis: lohn ? -lohn : 0,
-      aus: !voll,
-      titel: voll
-        ? 'Der Wagen fährt, liefert und kommt zurück. Damit ist die Woche vorbei.'
-        : 'Erst beladen. Jedes Fass bekommt ein Haus.',
+      aus: !voll || arm,
+      titel: arm
+        ? 'Der Fuhrlohn von ' + B.welt.geld(lohn) + ' ist nicht bezahlbar. Der Wagen bleibt stehen.'
+        : (voll
+          ? 'Der Wagen fährt, liefert und kommt zurück. Damit ist die Woche vorbei.'
+          : 'Erst beladen. Jedes Fass bekommt ein Haus.'),
       tu: schicke
     });
     b.appendChild(ab);
