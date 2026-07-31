@@ -47,6 +47,7 @@ var PREIS_DATEN = {
                   + 'Boettcher, Maurer und Grutherr rechnen mit derselben Zahl.',
 
       grund: 470,
+      lastenGrund: 500,
       teuerungJahr: 1.075,
       teuerungKauf: 1.10,
       pflichtUmsatz: 0.100,
@@ -187,6 +188,7 @@ var PREIS_DATEN = {
                   + 'geschaetzt von zwei Ratsherren und einem Zunftmeister.',
 
       grund: 2800,
+      lastenGrund: 2500,
       teuerungJahr: 1.070,
       teuerungKauf: 1.11,
       pflichtUmsatz: 0.085,
@@ -327,6 +329,7 @@ var PREIS_DATEN = {
                   + 'Wer waechst, wird teurer bedient — die Bank rechnet mit.',
 
       grund: 42000,
+      lastenGrund: 15000,
       teuerungJahr: 1.085,
       teuerungKauf: 1.12,
       pflichtUmsatz: 0.085,
@@ -429,7 +432,7 @@ var PREIS_DATEN = {
         { k: 'aktien', name: 'Die Umwandlung in eine Aktiengesellschaft', anteil: 0.0,
           was: 'Fremdes Geld baut mit. Das Haus behaelt den Namen und die Mehrheit.',
           regel: 'Sofort viel Geld in der Kasse. Dafuer geht in jedem Michaeli eine Dividende aus dem Haus — solange es das Haus gibt.',
-          wirkung: { einmal: 2.60, pflichtNeu: { k: 'dividende', name: 'Dividende an die Aktionaere', teil: 0.34,
+          wirkung: { einmal: 7, pflichtNeu: { k: 'dividende', name: 'Dividende an die Aktionaere', teil: 0.34,
             sagt: 'Ein gutes Drittel der jaehrlichen Lasten, oben drauf, unkuendbar.' } } },
 
         { k: 'bahnvertrag', name: 'Der Frachtvertrag mit der Staatsbahn', anteil: 1.10,
@@ -465,6 +468,7 @@ var PREIS_DATEN = {
                   + 'Wer waechst, zahlt hoehere Listungsgebuehren — der Handel rechnet mit.',
 
       grund: 620000,
+      lastenGrund: 45000,
       teuerungJahr: 1.080,
       teuerungKauf: 1.13,
       pflichtUmsatz: 0.078,
@@ -574,7 +578,7 @@ var PREIS_DATEN = {
         { k: 'konzern', name: 'Der Liefervertrag mit der Nordstern-Gruppe', anteil: 0.0,
           was: 'Der Konzern nimmt die Menge ab, stellt die Kaesten und zahlt puenktlich.',
           regel: 'Sofort viel Geld und ein sicherer Absatz. Dafuer bestimmt der Konzern den Preis — das Haus kann ihn nie wieder heben.',
-          wirkung: { einmal: 1.40, preisDeckel: true, ertrag: 240000 } },
+          wirkung: { einmal: 6, preisDeckel: true, ertrag: 240000 } },
 
         { k: 'genossenschaft', name: 'Die Genossenschaft der Gastwirte', anteil: 0.30,
           was: 'Vierzig Wirte zeichnen Anteile und binden sich auf zwanzig Jahre.',

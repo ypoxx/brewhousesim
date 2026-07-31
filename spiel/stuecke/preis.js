@@ -168,7 +168,7 @@
   function lastenBasis() {
     var e = ep();
     var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
-    var roh = e.pflichtUmsatz * Math.max(Z.umsatz, e.grund * 0.9)
+    var roh = e.pflichtUmsatz * Math.max(Z.umsatz, e.lastenGrund)
             + e.pflichtHoehe * Z.hoehe;
     return roh * Math.pow(e.teuerungJahr, jahre);
   }
@@ -301,7 +301,9 @@
           + (jahr() + w.bindung.jahre) + ' nur Bier dieses Hauses.', 'preis');
       }
     }
-    if (w.einmal) loese(rundePreis(w.einmal * Z.anschlag), quelle.name + ' — Zufluss', 'zufluss');
+    /* Der Zufluss ist ein Vielfaches der JAHRESLAST, nicht des Anschlags —
+       sonst schwemmt eine einzige Festlegung die ganze Partie weg. */
+    if (w.einmal) loese(rundePreis(w.einmal * pflichtSumme()), quelle.name + ' — Zufluss', 'zufluss');
     setzeBierpreis();
   }
 

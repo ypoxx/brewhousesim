@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T18:05:36+00:00",
+ "stand": "2026-07-31T18:57:29+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -25,6 +25,12 @@
    "runde": 1,
    "gebaut": "werkbank/schuss/1-runde1.png",
    "referenz": "zielbild/03-1884.jpg"
+  },
+  {
+   "name": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist",
+   "status": "laeuft",
+   "runde": 1,
+   "gebaut": "werkbank/schuss/2-runde1.png"
   }
  ],
  "chronik": [
@@ -67,6 +73,26 @@
   {
    "zeit": "2026-07-31T18:05:36+00:00",
    "text": "DIE STADT, Runde 1: vier Epochenplatten (2752x1536, ohne eingebrannte Schrift) und 32 freigestellte Aufbauten erzeugt. Hof waechst durch Kauf: ?epoche=N zeigt das Erbe, ?bau=keine denselben Spielstand ohne einen einzigen Kauf."
+  },
+  {
+   "zeit": "2026-07-31T18:57:06+00:00",
+   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 1 · läuft"
+  },
+  {
+   "zeit": "2026-07-31T18:57:06+00:00",
+   "text": "DIE FUHRE R1: Wochentakt steht. Anschlagtafel (Sud faellt von selbst) · Keller mit Sorte und Braudatum · Wagen mit wenigen Plaetzen, jedes Fass bekommt ein Haus · hl-Reihe je Adresse mit drei Mahnkerben · Georgi-Blatt (Aprilbestand = Sommer). Knappheit je Epoche verschieden und nie Geld: 1350 Brautage+Bannmeile, 1600 Fassplaetze+Zunftquote, 1884 Frachtstufen+Eis, 1970 Regalmeter+Tourenplan."
+  },
+  {
+   "zeit": "2026-07-31T18:57:19+00:00",
+   "text": "KOLLISION (Aufsicht bitte schlichten): Das Stueck DER PREIS legt ein Brett .pr-tafel ueber x 1-85%, y 12-87% auf die Ebene 'blatt' (z=60). Es verdeckt alle vier Bretter DER FUHRE auf Ebene 'hand' (z=40) vollstaendig; Playwright meldet an jedem Knopf 'intercepts pointer events'. Ein Kritiker kommt derzeit an DIE FUHRE nicht heran. Vorschlag: das Preisblatt wird ueber seinen Griff geoeffnet und geschlossen statt dauerhaft offen zu stehen."
+  },
+  {
+   "zeit": "2026-07-31T18:57:19+00:00",
+   "text": "KOLLISION 2 (Geldfluss): Vier Stuecke ziehen inzwischen gleichzeitig Abgaben aus derselben Kasse — DIE FUHRE 'Ungeld' (nach Ausstoss), dazu Grutgeld, Erbzins, Mahlgeld, Wasserzins aus einem anderen Stueck. In 1350 sind das zusammen rund 35 Prozent des Umsatzes; das Haus geht im dritten Braujahr auf null. DIE FUHRE hat ihre Abgabe auf 8 Prozent gesenkt und mit einem Notgroschen (vier Sude) und einem Deckel (55 Prozent des freien Geldes) versehen. Die Summe braucht trotzdem eine Schlichtung."
+  },
+  {
+   "zeit": "2026-07-31T18:57:29+00:00",
+   "text": "KERN (Bitte fuer die Zwischenwelle): 1. vorrat.plaetze ist mit 90/400 Fass in 1884/1970 zu klein — Sudgroesse mal Lagerzeit passt nicht hinein, die Reifezeiten mussten auf 2-5 Wochen gekuerzt werden. Ein getrennter Gaerkeller (reifendes Bier) neben dem Lagerkeller (lieferbares Bier) waere die saubere Loesung. 2. Es fehlt eine API fuer haus.rohstoff; DIE FUHRE zieht ihn beim Sud direkt ab. 3. nimmHeraus() nimmt immer das aelteste Fass — DIE FUHRE sortiert dafuer die gewuenschten Faesser nach vorn und ruft dann die API."
   }
  ]
 }
