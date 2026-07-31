@@ -711,6 +711,38 @@
     an.appendChild(B.el('div', 'pr-satz pr-klein', e.anschlagSatz));
     sp.appendChild(an);
 
+    /* Was schon steht — die Entscheidungen frueherer Michaelitage, in Zahlen. */
+    var st = B.el('div', 'pr-feld pr-bestand');
+    st.appendChild(B.el('h3', null, 'WAS SCHON STEHT'));
+    var etwas = false;
+    Object.keys(Z.fertig).forEach(function (k) {
+      var a = angebotVon(k);
+      if (!a) return;
+      etwas = true;
+      var z = B.el('div', 'pr-bestand-zeile');
+      z.appendChild(B.el('span', 'pr-bestand-jahr', Z.fertig[k]));
+      z.appendChild(B.el('span', 'pr-bestand-name', a.name));
+      st.appendChild(z);
+    });
+    Z.raten.forEach(function (r) {
+      etwas = true;
+      var z = B.el('div', 'pr-bestand-zeile pr-imbau');
+      z.appendChild(B.el('span', 'pr-bestand-jahr', 'im Bau'));
+      z.appendChild(B.el('span', 'pr-bestand-name',
+        r.name + ' — noch ' + r.offen + ' × ' + geld(r.rate)));
+      st.appendChild(z);
+    });
+    if (!etwas) {
+      st.appendChild(B.el('div', 'pr-satz',
+        'Am Hof steht nur, was die Vorfahren hinterlassen haben. Was von heute an dazukommt, '
+        + 'steht hier und traegt in jedem Michaeli.'));
+    } else {
+      var ertragSumme = 0;
+      Z.ertraege.forEach(function (t) { ertragSumme += t.betrag; });
+      if (ertragSumme) st.appendChild(zeile('traegt im Jahr', geld(ertragSumme), 'pr-ertrag pr-summe'));
+    }
+    sp.appendChild(st);
+
     return sp;
   }
 
