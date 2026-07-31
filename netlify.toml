@@ -1,0 +1,14 @@
+# Die Werkbank ist eine statische Seite in der Repo-Wurzel; es gibt keinen Build.
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/werkbank/stand.json"
+  [headers.values]
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/werkbank/schuss/*"
+  [headers.values]
+    Cache-Control = "no-store"

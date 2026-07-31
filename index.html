@@ -1,0 +1,226 @@
+<title>Brauhaus — Werkbank</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --papier: #efebe2;
+    --tinte: #1b1a18;
+    --matt: #6d665a;
+    --linie: #d3ccbd;
+    --rot: #b8402a;
+    --gruen: #4a6b3a;
+    --feld: #f7f4ee;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier: #16150f; --tinte: #e8e2d4; --matt: #98907f;
+      --linie: #33302a; --rot: #e0664a; --gruen: #8fb173; --feld: #201e18;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--papier); color: var(--tinte);
+    font-family: var(--sans); font-size: 16px; line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+  }
+  .blatt { max-width: 1100px; margin: 0 auto; padding: 20px 16px 80px; }
+
+  header { border-bottom: 3px double var(--linie); padding-bottom: 14px; margin-bottom: 22px; }
+  h1 {
+    font-family: var(--serif); font-size: clamp(26px, 6vw, 40px);
+    margin: 0 0 2px; letter-spacing: .01em; font-weight: 600;
+  }
+  .unter { color: var(--matt); font-size: 14px; }
+  .unter b { color: var(--tinte); font-weight: 600; }
+
+  .latte {
+    background: var(--feld); border-left: 3px solid var(--rot);
+    padding: 12px 14px; margin: 18px 0 26px; font-size: 15px;
+  }
+  .latte h2 {
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--rot); margin: 0 0 6px; font-weight: 700;
+  }
+
+  .zahlen { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+  .kachel {
+    flex: 1 1 130px; background: var(--feld); border: 1px solid var(--linie);
+    padding: 10px 12px;
+  }
+  .kachel .k { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--matt); }
+  .kachel .v { font-family: var(--serif); font-size: 26px; font-variant-numeric: tabular-nums; }
+
+  h2.abschnitt {
+    font-family: var(--serif); font-size: 20px; font-weight: 600;
+    margin: 34px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--linie);
+  }
+
+  .stueck {
+    border: 1px solid var(--linie); background: var(--feld);
+    margin-bottom: 14px; overflow: hidden;
+  }
+  .kopf {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    padding: 10px 13px; border-bottom: 1px solid var(--linie);
+  }
+  .kopf .name { font-weight: 600; font-size: 16px; }
+  .kopf .runde {
+    font-family: var(--mono); font-size: 12px; color: var(--matt);
+    margin-left: auto; white-space: nowrap;
+  }
+  .marke {
+    font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+    font-weight: 700; padding: 2px 7px; border: 1px solid currentColor;
+  }
+  .m-laeuft   { color: var(--matt); }
+  .m-zurueck  { color: var(--rot); }
+  .m-bestanden{ color: var(--gruen); }
+
+  .paar { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--linie); }
+  .paar figure { margin: 0; background: var(--feld); }
+  .paar img { display: block; width: 100%; height: auto; }
+  .paar figcaption {
+    font-size: 10px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--matt); padding: 5px 10px 7px;
+  }
+  .luecke { padding: 11px 13px; font-size: 14.5px; border-top: 1px solid var(--linie); }
+  .luecke b { color: var(--rot); font-weight: 600; }
+
+  ol.chronik { list-style: none; margin: 0; padding: 0; }
+  ol.chronik li {
+    display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--linie);
+    font-size: 14.5px;
+  }
+  ol.chronik time {
+    font-family: var(--mono); font-size: 12px; color: var(--matt);
+    flex: 0 0 auto; padding-top: 2px;
+  }
+
+  .leer { color: var(--matt); font-style: italic; padding: 20px 0; }
+  footer {
+    margin-top: 40px; padding-top: 12px; border-top: 1px solid var(--linie);
+    font-size: 12px; color: var(--matt);
+  }
+  @media (max-width: 560px) {
+    .paar { grid-template-columns: 1fr; }
+    .kopf .runde { margin-left: 0; width: 100%; }
+  }
+</style>
+
+<div class="blatt">
+  <header>
+    <h1>Brauhaus — Werkbank</h1>
+    <div class="unter">Gauntlet Loop · Stand <b id="stand">—</b> · <span id="phase">wird geladen</span></div>
+  </header>
+
+  <div class="latte">
+    <h2>Die Messlatte</h2>
+    <div id="latte">—</div>
+  </div>
+
+  <div class="zahlen" id="zahlen"></div>
+
+  <h2 class="abschnitt">Die Stücke</h2>
+  <div id="stuecke"><p class="leer">Noch nichts abgeliefert.</p></div>
+
+  <h2 class="abschnitt">Chronik</h2>
+  <ol class="chronik" id="chronik"></ol>
+
+  <footer>
+    Diese Seite wird vom Lauf selbst geschrieben und alle 30 Sekunden neu geladen.
+    Quelle: <code>werkbank/stand.json</code>
+  </footer>
+</div>
+
+<script>
+const MARKEN = { laeuft: "läuft", zurueck: "zurück an den Builder", bestanden: "bestanden" };
+
+function uhr(iso) {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return d.toLocaleString("de-DE", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+}
+
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+}
+
+function zeichneStueck(s) {
+  const box = el("div", "stueck");
+  const kopf = el("div", "kopf");
+  kopf.append(el("span", "name", s.name || "ohne Namen"));
+  const st = s.status || "laeuft";
+  kopf.append(el("span", "marke m-" + st, MARKEN[st] || st));
+  if (s.runde != null) kopf.append(el("span", "runde", "Runde " + s.runde));
+  box.append(kopf);
+
+  if (s.gebaut || s.referenz) {
+    const paar = el("div", "paar");
+    for (const [pfad, titel] of [[s.gebaut, "Gebaut"], [s.referenz, "Messlatte"]]) {
+      if (!pfad) continue;
+      const f = el("figure");
+      const i = el("img");
+      i.src = pfad; i.alt = titel; i.loading = "lazy";
+      f.append(i, el("figcaption", null, titel));
+      paar.append(f);
+    }
+    box.append(paar);
+  }
+
+  if (s.luecke) {
+    const l = el("div", "luecke");
+    l.append(el("b", null, "Größte verbliebene Lücke: "));
+    l.append(document.createTextNode(s.luecke));
+    box.append(l);
+  }
+  return box;
+}
+
+async function laden() {
+  let d;
+  try {
+    d = await (await fetch("werkbank/stand.json?t=" + Date.now())).json();
+  } catch (e) {
+    document.getElementById("phase").textContent = "Stand noch nicht geschrieben";
+    return;
+  }
+
+  document.getElementById("stand").textContent = uhr(d.stand);
+  document.getElementById("phase").textContent = d.phase || "—";
+  document.getElementById("latte").textContent = d.latte || "—";
+
+  const z = document.getElementById("zahlen");
+  z.replaceChildren();
+  for (const [k, v] of Object.entries(d.zahlen || {})) {
+    const t = el("div", "kachel");
+    t.append(el("div", "k", k), el("div", "v", String(v)));
+    z.append(t);
+  }
+
+  const st = document.getElementById("stuecke");
+  st.replaceChildren();
+  const liste = d.stuecke || [];
+  if (!liste.length) st.append(el("p", "leer", "Noch nichts abgeliefert."));
+  else liste.forEach(s => st.append(zeichneStueck(s)));
+
+  const ch = document.getElementById("chronik");
+  ch.replaceChildren();
+  for (const e of (d.chronik || []).slice().reverse()) {
+    const li = el("li");
+    const t = el("time", null, uhr(e.zeit));
+    if (e.zeit) t.dateTime = e.zeit;
+    li.append(t, el("span", null, e.text || ""));
+    ch.append(li);
+  }
+}
+
+laden();
+setInterval(laden, 30000);
+</script>
