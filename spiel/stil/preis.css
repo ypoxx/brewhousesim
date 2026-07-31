@@ -1,24 +1,617 @@
 /* ===========================================================================
-   stil/preis.css — GEHOERT DEM BAUER VON "DER PREIS". Ersetze frei.
+   stil/preis.css — DER PREIS.  Die Michaelitafel.
+
+   Vier Epochen, vier verschiedene Blaetter — nicht dieselbe Tafel in anderer
+   Farbe.  I ist Pergament mit roter Rubrik.  II ist Kanzleipapier mit
+   geripptem Grund und Siegellack.  III ist ein Kontobogen mit blaugrauen
+   Linien und rotem Randstrich.  IV ist ein Offsetdruck: weiss, Raster,
+   Grotesk, ein Farbbalken.  Wer 1350 und 1970 nebeneinanderlegt, erkennt
+   nichts wieder.
+
+   Bezug 2752 x 1536, alles in Vielfachen von --s.
    =========================================================================== */
 
-.preis-griff { z-index: 2; }
-
-.preis-blatt .satz {
-  font-size: calc(var(--s) * 21);
-  line-height: 1.35;
-  margin: calc(var(--s) * 8) 0;
+.pr-tafel,
+.pr-griff {
+  --pr-papier: #eee1c2;
+  --pr-tinte: #2a1e12;
+  --pr-schwach: rgba(42, 30, 18, 0.58);
+  --pr-linie: rgba(42, 30, 18, 0.22);
+  --pr-rot: #91301c;
+  --pr-gruen: #43602f;
+  --pr-rand: #4a3018;
+  --pr-feld: rgba(255, 252, 240, 0.5);
+  --pr-schrift: var(--serif);
+  --pr-zahlen: var(--mono);
+  --pr-radius: calc(var(--s) * 4);
 }
 
-.preis-reihe {
+/* --------------------------------------------------------------------------
+   DIE TAFEL — die Buehne klappt um
+   -------------------------------------------------------------------------- */
+.pr-tafel {
+  position: absolute;
+  left: 1.1%;
+  top: 11.4%;
+  width: 84%;
+  height: 76.2%;
   display: flex;
-  gap: calc(var(--s) * 10);
-  margin: calc(var(--s) * 14) 0;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: calc(var(--s) * 8);
+  padding: calc(var(--s) * 14) calc(var(--s) * 18) calc(var(--s) * 12);
+  background: var(--pr-papier);
+  border: calc(var(--s) * 3) solid var(--pr-rand);
+  border-radius: var(--pr-radius);
+  box-shadow: 0 calc(var(--s) * 14) calc(var(--s) * 34) rgba(0, 0, 0, 0.5);
+  color: var(--pr-tinte);
+  font-family: var(--pr-schrift);
+  pointer-events: auto;
+  overflow: hidden;
+  animation: pr-auf 220ms ease-out;
 }
 
-.preis-blatt .knopf.preis-bindung {
+@keyframes pr-auf {
+  from { opacity: 0; scale: 0.985; }
+  to   { opacity: 1; scale: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   KOPF
+   -------------------------------------------------------------------------- */
+.pr-kopf {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 16);
+  border-bottom: calc(var(--s) * 3) solid var(--pr-rand);
+  padding-bottom: calc(var(--s) * 7);
+  flex: 0 0 auto;
+}
+.pr-kopf-links { display: flex; align-items: baseline; gap: calc(var(--s) * 14); min-width: 0; }
+.pr-kopf-tag {
+  font-size: calc(var(--s) * 34);
+  letter-spacing: calc(var(--s) * 5);
+  white-space: nowrap;
+  color: var(--pr-rot);
+}
+.pr-kopf-epoche {
+  font-size: calc(var(--s) * 18);
+  color: var(--pr-schwach);
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pr-kopf-rechts {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: calc(var(--s) * 2);
+  white-space: nowrap;
+}
+.pr-kopf-kasse { font-family: var(--pr-zahlen); font-size: calc(var(--s) * 24); }
+.pr-kopf-klein { font-size: calc(var(--s) * 15); color: var(--pr-schwach); }
+.knopf.pr-reiter {
+  margin-left: calc(var(--s) * 14);
+  padding: calc(var(--s) * 6) calc(var(--s) * 12);
+  min-height: 0;
+  font-size: calc(var(--s) * 17);
+}
+
+/* --------------------------------------------------------------------------
+   LEIB — drei Spalten
+   -------------------------------------------------------------------------- */
+.pr-leib {
+  flex: 1 1 auto;
+  display: flex;
+  gap: calc(var(--s) * 12);
+  min-height: 0;
+}
+.pr-spalte { display: flex; flex-direction: column; gap: calc(var(--s) * 8); min-height: 0; }
+.pr-links  { width: 21%; flex: 0 0 21%; }
+.pr-mitte  { width: 54%; flex: 1 1 54%; min-width: 0; }
+.pr-rechts { width: 25%; flex: 0 0 25%; }
+
+.pr-feld {
+  background: var(--pr-feld);
+  border: calc(var(--s) * 2) solid var(--pr-linie);
+  border-radius: var(--pr-radius);
+  padding: calc(var(--s) * 8) calc(var(--s) * 10);
+  overflow: hidden;
+}
+.pr-feld h3,
+.pr-chronik h3 {
+  margin: 0 0 calc(var(--s) * 5) 0;
+  font-size: calc(var(--s) * 17);
+  letter-spacing: calc(var(--s) * 3);
+  color: var(--pr-rot);
+  border-bottom: calc(var(--s) * 1) solid var(--pr-linie);
+  padding-bottom: calc(var(--s) * 3);
+}
+
+.pr-zeile {
+  display: flex;
+  gap: calc(var(--s) * 8);
+  align-items: baseline;
+  font-size: calc(var(--s) * 16);
+  padding: calc(var(--s) * 2) 0;
+}
+.pr-zeile .pr-was { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pr-zeile .pr-zahl { font-family: var(--pr-zahlen); white-space: nowrap; }
+.pr-zeile.pr-summe {
+  border-top: calc(var(--s) * 2) solid var(--pr-linie);
+  margin-top: calc(var(--s) * 3);
+  padding-top: calc(var(--s) * 4);
+  font-size: calc(var(--s) * 19);
+}
+.pr-zeile.pr-gross .pr-zahl { font-size: calc(var(--s) * 26); }
+.pr-zeile.pr-ertrag .pr-zahl,
+.pr-zeile.pr-zufluss .pr-zahl { color: var(--pr-gruen); }
+.pr-zeile.pr-umlage .pr-zahl,
+.pr-zeile.pr-rueckstand .pr-zahl { color: var(--pr-rot); }
+.pr-zeile.pr-offen { text-decoration: none; }
+.pr-marke {
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 12);
+  color: var(--pr-rot);
+  border: calc(var(--s) * 1) solid var(--pr-rot);
+  border-radius: calc(var(--s) * 3);
+  padding: 0 calc(var(--s) * 4);
+  margin-left: calc(var(--s) * 5);
+}
+
+.pr-satz { font-size: calc(var(--s) * 15); line-height: 1.32; color: var(--pr-schwach); margin: calc(var(--s) * 3) 0; }
+.pr-satz.pr-klein { font-size: calc(var(--s) * 13); }
+.pr-satz-klein { font-size: calc(var(--s) * 13); line-height: 1.3; color: var(--pr-schwach); }
+
+/* --------------------------------------------------------------------------
+   DIE ANGEBOTE — nebeneinander, mit Preisschild
+   -------------------------------------------------------------------------- */
+.pr-abschnitt {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 12);
+  flex: 0 0 auto;
+}
+.pr-abschnitt h3 {
+  margin: 0;
+  font-size: calc(var(--s) * 20);
+  letter-spacing: calc(var(--s) * 4);
+  color: var(--pr-tinte);
+  white-space: nowrap;
+}
+.pr-abschnitt-satz {
+  font-size: calc(var(--s) * 14);
+  color: var(--pr-schwach);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pr-abschnitt-fest h3 { color: var(--pr-rot); }
+
+.pr-reihe {
+  display: flex;
+  gap: calc(var(--s) * 9);
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: stretch;
+}
+.pr-reihe-fest { flex: 0 0 38%; }
+
+.pr-karte,
+.pr-fest {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+  padding: calc(var(--s) * 9) calc(var(--s) * 10) calc(var(--s) * 9);
+  background: rgba(255, 253, 245, 0.72);
+  border: calc(var(--s) * 2) solid var(--pr-rand);
+  border-radius: var(--pr-radius);
+  overflow: hidden;
+}
+.pr-karte.pr-zuteuer { background: rgba(255, 253, 245, 0.34); }
+
+.pr-karte-kopf b {
+  display: block;
+  font-size: calc(var(--s) * 20);
+  line-height: 1.15;
+  min-height: calc(var(--s) * 46);
+}
+
+.pr-schild {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--s) * 1);
+  padding: calc(var(--s) * 4) calc(var(--s) * 8);
+  margin: calc(var(--s) * 2) 0;
+  background: rgba(145, 48, 28, 0.09);
+  border-left: calc(var(--s) * 5) solid var(--pr-rot);
+  border-radius: calc(var(--s) * 2);
+}
+.pr-schild-zahl {
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 27);
+  letter-spacing: calc(var(--s) * -0.5);
+  color: var(--pr-rot);
+  white-space: nowrap;
+}
+.pr-schild-rest { font-size: calc(var(--s) * 12); color: var(--pr-schwach); }
+
+.pr-bauzeit {
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 13);
+  color: var(--pr-tinte);
+  opacity: 0.85;
+}
+.pr-was-text { font-size: calc(var(--s) * 14); line-height: 1.3; font-style: italic; color: var(--pr-schwach); }
+
+.pr-folge, .pr-regel {
+  display: flex;
+  gap: calc(var(--s) * 6);
+  font-size: calc(var(--s) * 14);
+  line-height: 1.28;
+  padding: calc(var(--s) * 4) 0;
+  border-top: calc(var(--s) * 1) dotted var(--pr-linie);
+  border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
+}
+.pr-folge-marke {
+  flex: 0 0 auto;
+  font-size: calc(var(--s) * 11);
+  letter-spacing: calc(var(--s) * 2);
+  text-transform: uppercase;
+  color: var(--pr-rot);
+  padding-top: calc(var(--s) * 2);
+}
+.pr-folge-text { flex: 1 1 auto; min-width: 0; }
+.pr-sperrt {
+  font-size: calc(var(--s) * 12);
+  color: var(--pr-rot);
+  font-family: var(--pr-zahlen);
+}
+.pr-hinweis { font-size: calc(var(--s) * 12); color: var(--pr-schwach); font-family: var(--pr-zahlen); }
+
+.pr-karte .knopf,
+.pr-fest .knopf {
+  margin-top: auto;
   width: 100%;
-  border-color: var(--rot);
-  background: linear-gradient(180deg, #f7e3d5 0%, #e6c6b2 100%);
+  justify-content: space-between;
+  white-space: normal;
+  font-size: calc(var(--s) * 17);
+  padding: calc(var(--s) * 7) calc(var(--s) * 10);
+  min-height: calc(var(--s) * 40);
+}
+.pr-karte .knopf .preis,
+.pr-fest .knopf .preis { font-size: calc(var(--s) * 16); }
+
+.pr-leer {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--s) * 17);
+  color: var(--pr-schwach);
+  font-style: italic;
+  text-align: center;
+  padding: calc(var(--s) * 14);
+}
+
+/* --------------------------------------------------------------------------
+   DIE FESTLEGUNG — das Siegel
+   -------------------------------------------------------------------------- */
+.pr-fest {
+  background: rgba(255, 246, 236, 0.85);
+  border-color: var(--pr-rot);
+  border-width: calc(var(--s) * 3);
+}
+.pr-fest-name { font-size: calc(var(--s) * 19); line-height: 1.15; }
+.pr-fest.pr-fest-zu { opacity: 0.55; }
+.pr-fest-getroffen {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(145, 48, 28, 0.18) 0 calc(var(--s) * 34), transparent calc(var(--s) * 35)),
+    rgba(255, 240, 228, 0.95);
+  border-style: double;
+  border-width: calc(var(--s) * 6);
+}
+.pr-fest-stempel {
+  align-self: flex-start;
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 12);
+  letter-spacing: calc(var(--s) * 3);
+  color: var(--pr-rot);
+  border: calc(var(--s) * 2) solid var(--pr-rot);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 1) calc(var(--s) * 6);
+  transform: rotate(-3deg);
+}
+.knopf.pr-siegel {
+  background: linear-gradient(180deg, #f3ddd2 0%, #e0bda9 100%);
+  border-color: var(--pr-rot);
+}
+
+/* --------------------------------------------------------------------------
+   WAS FAELLIG WIRD · DIE LEITER
+   -------------------------------------------------------------------------- */
+.pr-last {
+  padding: calc(var(--s) * 4) 0;
+  border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
+}
+.pr-last-kopf { display: flex; gap: calc(var(--s) * 7); align-items: baseline; font-size: calc(var(--s) * 15); }
+.pr-last-jahr {
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 15);
+  color: var(--pr-rot);
+  flex: 0 0 auto;
+  min-width: calc(var(--s) * 46);
+}
+.pr-last-name { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pr-last .pr-zahl { font-family: var(--pr-zahlen); white-space: nowrap; }
+.pr-last-erbfall .pr-last-jahr { color: var(--pr-tinte); }
+
+.pr-leiter { flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.pr-leiter-zeile {
+  display: grid;
+  grid-template-columns: 22% 26% 28% 24%;
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 14);
+  padding: calc(var(--s) * 2) 0;
+  border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
+}
+.pr-leiter-zeile span:not(:first-child) { text-align: right; }
+.pr-leiter-kopf { color: var(--pr-schwach); font-size: calc(var(--s) * 12); letter-spacing: calc(var(--s) * 1); }
+.pr-verh { color: var(--pr-rot); }
+
+/* --------------------------------------------------------------------------
+   DIE CHRONIK
+   -------------------------------------------------------------------------- */
+.pr-chronik { flex: 1 1 auto; display: flex; flex-direction: column; gap: calc(var(--s) * 8); min-height: 0; }
+.pr-chronik-fest { display: flex; flex-direction: column; gap: calc(var(--s) * 6); flex: 0 0 auto; }
+.pr-chronik-siegel {
+  display: flex;
+  gap: calc(var(--s) * 12);
+  padding: calc(var(--s) * 7) calc(var(--s) * 10);
+  background: rgba(255, 244, 233, 0.8);
+  border-left: calc(var(--s) * 7) solid var(--pr-rot);
+  border-radius: calc(var(--s) * 3);
+}
+.pr-chronik-jahr {
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 19);
+  color: var(--pr-rot);
+  flex: 0 0 calc(var(--s) * 70);
+}
+.pr-chronik-text { flex: 1 1 auto; min-width: 0; font-size: calc(var(--s) * 17); line-height: 1.3; }
+.pr-chronik-text b { font-size: calc(var(--s) * 21); }
+.pr-chronik-rolle { flex: 1 1 auto; overflow-y: auto; min-height: 0; }
+.pr-chronik-zeile {
+  display: flex;
+  gap: calc(var(--s) * 12);
+  font-size: calc(var(--s) * 16);
+  padding: calc(var(--s) * 3) 0;
+  border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
+}
+.pr-chronik-zeile.dick { font-weight: 700; color: var(--pr-rot); }
+.pr-chronik-was { flex: 1 1 auto; }
+
+/* --------------------------------------------------------------------------
+   FUSS
+   -------------------------------------------------------------------------- */
+.pr-fuss {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 12);
+  border-top: calc(var(--s) * 2) solid var(--pr-linie);
+  padding-top: calc(var(--s) * 7);
+  flex: 0 0 auto;
+}
+.pr-fuss-satz {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: calc(var(--s) * 14);
+  color: var(--pr-schwach);
+  font-style: italic;
+  line-height: 1.25;
+}
+.pr-meldung {
+  flex: 0 0 auto;
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 15);
+  color: var(--pr-gruen);
+}
+.knopf.pr-nichts { font-size: calc(var(--s) * 18); }
+.knopf.pr-weiter { font-size: calc(var(--s) * 26); }
+
+/* --------------------------------------------------------------------------
+   DER GRIFF — rechts neben der Tafel, immer sichtbar
+   -------------------------------------------------------------------------- */
+.pr-griff {
+  position: absolute;
+  left: 85.6%;
+  top: 11.4%;
+  width: 13.3%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 6);
+  padding: calc(var(--s) * 8);
+  background: linear-gradient(180deg, rgba(255, 250, 236, 0.93), rgba(238, 225, 194, 0.93));
+  border: calc(var(--s) * 3) solid var(--pr-rand);
+  border-radius: var(--pr-radius);
+  box-shadow: 0 calc(var(--s) * 6) calc(var(--s) * 16) rgba(0, 0, 0, 0.4);
+  color: var(--pr-tinte);
+  font-family: var(--pr-schrift);
+  pointer-events: auto;
+}
+.knopf.pr-griff-knopf,
+.knopf.pr-griff-chronik {
+  width: 100%;
+  white-space: normal;
+  font-size: calc(var(--s) * 16);
+  padding: calc(var(--s) * 6) calc(var(--s) * 8);
+  min-height: calc(var(--s) * 36);
+}
+.pr-griff-stand { display: flex; flex-direction: column; }
+.pr-griff-stand .pr-zeile { font-size: calc(var(--s) * 14); }
+.pr-griff-stand .pr-last-zeile { color: var(--pr-rot); border-top: calc(var(--s) * 1) dotted var(--pr-linie); }
+
+/* ==========================================================================
+   VIER BLAETTER, VIER ZEITEN
+   ========================================================================== */
+
+/* I — PERGAMENT.  Rauh, warm, rote Rubrik, unregelmaessiger Rand. */
+.pr-stil-pergament {
+  --pr-papier: #e9dabb;
+  --pr-tinte: #2b1c0d;
+  --pr-rot: #8c2b19;
+  --pr-rand: #4a3018;
+  --pr-schrift: var(--serif);
+  background:
+    radial-gradient(ellipse at 20% 12%, rgba(255, 250, 232, 0.75), transparent 55%),
+    radial-gradient(ellipse at 82% 88%, rgba(120, 92, 46, 0.20), transparent 60%),
+    repeating-linear-gradient(102deg, rgba(150, 118, 68, 0.055) 0 calc(var(--s) * 3), transparent 0 calc(var(--s) * 9)),
+    #e9dabb;
+  box-shadow: 0 calc(var(--s) * 14) calc(var(--s) * 34) rgba(0, 0, 0, 0.5),
+              inset 0 0 calc(var(--s) * 60) rgba(101, 74, 33, 0.28);
+}
+.pr-stil-pergament .pr-kopf-tag { font-variant: small-caps; letter-spacing: calc(var(--s) * 7); }
+.pr-stil-pergament .pr-karte { border-style: solid; }
+.pr-stil-pergament .pr-abschnitt h3 { font-variant: small-caps; }
+
+/* II — KANZLEI.  Geripptes Buettenpapier, engere Schrift, Siegellack. */
+.pr-stil-kanzlei {
+  --pr-papier: #eae4cf;
+  --pr-tinte: #211d14;
+  --pr-rot: #7d2320;
+  --pr-rand: #3a3423;
+  --pr-linie: rgba(33, 29, 20, 0.26);
+  --pr-schrift: var(--serif);
+  background:
+    repeating-linear-gradient(90deg, rgba(60, 54, 34, 0.05) 0 calc(var(--s) * 1), transparent 0 calc(var(--s) * 12)),
+    repeating-linear-gradient(0deg, rgba(60, 54, 34, 0.045) 0 calc(var(--s) * 1), transparent 0 calc(var(--s) * 34)),
+    linear-gradient(170deg, #f0ebd8 0%, #e3dcc4 100%);
+}
+.pr-stil-kanzlei .pr-kopf-tag { letter-spacing: calc(var(--s) * 3); font-style: italic; }
+.pr-stil-kanzlei .pr-karte {
+  background: rgba(252, 249, 236, 0.8);
+  border-width: calc(var(--s) * 1);
+  border-color: rgba(33, 29, 20, 0.45);
+  box-shadow: inset 0 0 0 calc(var(--s) * 3) rgba(255, 255, 255, 0.35);
+}
+.pr-stil-kanzlei .pr-schild { border-left-width: calc(var(--s) * 3); background: rgba(125, 35, 32, 0.07); }
+.pr-stil-kanzlei .pr-feld { border-style: double; border-width: calc(var(--s) * 4); }
+
+/* III — KONTOR.  Kontobogen: blaugraue Linien, roter Randstrich, Ziffern. */
+.pr-stil-kontor {
+  --pr-papier: #e7e8de;
+  --pr-tinte: #1d2224;
+  --pr-rot: #8d2f24;
+  --pr-gruen: #2f5a44;
+  --pr-rand: #2a3238;
+  --pr-linie: rgba(46, 74, 84, 0.28);
+  --pr-feld: rgba(255, 255, 255, 0.55);
+  --pr-schrift: var(--serif);
+  background:
+    linear-gradient(90deg, transparent 0 calc(var(--s) * 96), rgba(141, 47, 36, 0.5) calc(var(--s) * 96) calc(var(--s) * 98), transparent calc(var(--s) * 98)),
+    repeating-linear-gradient(0deg, rgba(46, 74, 84, 0.10) 0 calc(var(--s) * 1), transparent 0 calc(var(--s) * 26)),
+    linear-gradient(180deg, #eef0e7 0%, #e2e4d9 100%);
+}
+.pr-stil-kontor .pr-kopf-tag { letter-spacing: calc(var(--s) * 4); font-family: var(--serif); }
+.pr-stil-kontor .pr-karte {
+  background: rgba(255, 255, 255, 0.66);
+  border-width: calc(var(--s) * 1);
+  border-color: rgba(42, 50, 56, 0.5);
+  border-radius: calc(var(--s) * 2);
+}
+.pr-stil-kontor .pr-schild {
+  background: rgba(46, 74, 84, 0.07);
+  border-left-color: #2a3238;
+  border-radius: 0;
+}
+.pr-stil-kontor .pr-schild-zahl { color: #1d2224; }
+.pr-stil-kontor .pr-abschnitt h3 { letter-spacing: calc(var(--s) * 6); }
+.pr-stil-kontor .pr-feld { border-radius: calc(var(--s) * 2); }
+
+/* IV — OFFSET.  Weiss, Grotesk, Raster, ein Farbbalken. Keine Ornamente. */
+.pr-stil-offset {
+  --pr-papier: #f4f4f1;
+  --pr-tinte: #16181a;
+  --pr-schwach: rgba(22, 24, 26, 0.55);
+  --pr-rot: #b5401b;
+  --pr-gruen: #1f6b4f;
+  --pr-rand: #16181a;
+  --pr-linie: rgba(22, 24, 26, 0.16);
+  --pr-feld: #ffffff;
+  --pr-schrift: var(--sans);
+  --pr-radius: 0;
+  background:
+    linear-gradient(180deg, #b5401b 0 calc(var(--s) * 10), transparent calc(var(--s) * 10)),
+    #f4f4f1;
+  border-width: calc(var(--s) * 2);
+  border-radius: 0;
+}
+.pr-stil-offset .pr-kopf {
+  border-bottom-width: calc(var(--s) * 2);
+  border-bottom-color: #16181a;
+}
+.pr-stil-offset .pr-kopf-tag {
+  font-weight: 700;
+  letter-spacing: calc(var(--s) * -1);
+  font-size: calc(var(--s) * 36);
+  color: #16181a;
+}
+.pr-stil-offset .pr-karte,
+.pr-stil-offset .pr-fest {
+  background: #ffffff;
+  border: calc(var(--s) * 1) solid rgba(22, 24, 26, 0.28);
+  border-radius: 0;
+  box-shadow: none;
+}
+.pr-stil-offset .pr-fest { border-top: calc(var(--s) * 5) solid var(--pr-rot); }
+.pr-stil-offset .pr-schild {
+  background: #16181a;
+  border-left: none;
+  border-radius: 0;
+  padding: calc(var(--s) * 5) calc(var(--s) * 8);
+}
+.pr-stil-offset .pr-schild-zahl { color: #ffffff; font-weight: 700; }
+.pr-stil-offset .pr-schild-rest { color: rgba(255, 255, 255, 0.7); }
+.pr-stil-offset .pr-feld h3,
+.pr-stil-offset .pr-abschnitt h3 {
+  color: #16181a;
+  font-weight: 700;
+  letter-spacing: calc(var(--s) * 2);
+}
+.pr-stil-offset .pr-abschnitt-fest h3 { color: var(--pr-rot); }
+.pr-stil-offset .pr-fest-stempel { border-radius: 0; transform: none; }
+.pr-stil-offset .knopf {
+  border-radius: 0;
+  border-width: calc(var(--s) * 1);
+  background: #16181a;
+  color: #ffffff;
+  font-family: var(--sans);
+  box-shadow: none;
+}
+.pr-stil-offset .knopf:hover { background: #33383c; }
+.pr-stil-offset .knopf .preis { color: #ffc9a8; }
+.pr-stil-offset .knopf[disabled] { background: #d8d8d4; color: #16181a; }
+
+/* Der Griff zieht die Epochenfarbe aus der Buehne nach. */
+#buehne[data-epoche="4"] .pr-griff {
+  --pr-papier: #f4f4f1;
+  --pr-tinte: #16181a;
+  --pr-rot: #b5401b;
+  --pr-rand: #16181a;
+  --pr-schrift: var(--sans);
+  background: #f4f4f1;
+  border-radius: 0;
+}
+#buehne[data-epoche="3"] .pr-griff {
+  --pr-rot: #8d2f24;
+  --pr-rand: #2a3238;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(226, 228, 217, 0.92));
+}
+#buehne[data-epoche="2"] .pr-griff {
+  --pr-rot: #7d2320;
+  --pr-rand: #3a3423;
 }
