@@ -697,8 +697,15 @@
     var an = B.el('div', 'pr-feld pr-anschlag');
     an.appendChild(B.el('h3', null, 'DER ANSCHLAG'));
     an.appendChild(zeile('Fuer ' + jahr(), geld(Math.round(Z.anschlag)), 'pr-gross'));
-    an.appendChild(zeile('davon aus dem Umsatz', geld(Math.round(umsatzGewicht() * Z.umsatz))));
-    an.appendChild(zeile('davon aus der Barschaft', geld(Math.round(2.2 * Z.hoehe))));
+    var ausUmsatz = umsatzGewicht() * Z.umsatz;
+    var ausKasse = 2.2 * Z.hoehe;
+    an.appendChild(zeile('aus dem Umsatz des Vorjahrs', geld(Math.round(ausUmsatz))));
+    an.appendChild(zeile('aus der Barschaft', geld(Math.round(ausKasse))));
+    if (ausUmsatz + ausKasse < e.grund) {
+      an.appendChild(zeile('Mindestansatz dieser Zeit', geld(e.grund), 'pr-umlage'));
+    }
+    if (Z.kaeufe) an.appendChild(zeile('Aufschlag fuer ' + Z.kaeufe + ' gebaute Sachen',
+      '+' + B.zahl((Math.pow(ep().teuerungKauf, Z.kaeufe) - 1) * 100, 0) + '%'));
     an.appendChild(zeile('Teuerung seit ' + Z.startjahr,
       '+' + B.zahl((Math.pow(ep().teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40)) - 1) * 100, 0) + '%'));
     an.appendChild(B.el('div', 'pr-satz pr-klein', e.anschlagSatz));
