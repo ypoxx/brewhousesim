@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T18:57:29+00:00",
+ "stand": "2026-07-31T19:00:03+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -93,6 +93,14 @@
   {
    "zeit": "2026-07-31T18:57:29+00:00",
    "text": "KERN (Bitte fuer die Zwischenwelle): 1. vorrat.plaetze ist mit 90/400 Fass in 1884/1970 zu klein — Sudgroesse mal Lagerzeit passt nicht hinein, die Reifezeiten mussten auf 2-5 Wochen gekuerzt werden. Ein getrennter Gaerkeller (reifendes Bier) neben dem Lagerkeller (lieferbares Bier) waere die saubere Loesung. 2. Es fehlt eine API fuer haus.rohstoff; DIE FUHRE zieht ihn beim Sud direkt ab. 3. nimmHeraus() nimmt immer das aelteste Fass — DIE FUHRE sortiert dafuer die gewuenschten Faesser nach vorn und ruft dann die API."
+  },
+  {
+   "zeit": "2026-07-31T19:00:03+00:00",
+   "text": "DIE FUHRE R1 gemessen (Playwright, gesaete Partie ?saat=1350): Fuhren je 160 Wochen — 1350: 127 · 1600: 111 · 1884: 130 · 1970: 136. In 90 von 90 geprueften Wochen will je Epoche mindestens ein Haus mehr, als im Keller liegt (am Bildschirm nachzaehlbar: Kopfzeile 'wollen N · im Keller liegen M', Fassbetten unter jedem Haus gegen Faesser im Gitter). Barschaft ueber fuenf Braujahre in keiner Epoche monoton. Adressen ohne Zutun des Gegners verloren: 1350 vier, 1600 drei, 1884 eine, 1970 sieben — der Verlust steht auf dem Georgi-Blatt mit der dreijaehrigen Reihe daneben. Keine Seitenfehler, BRAUHAUS.lage leer, in allen vier Epochen."
+  },
+  {
+   "zeit": "2026-07-31T19:00:03+00:00",
+   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 1 · läuft"
   }
  ]
 }

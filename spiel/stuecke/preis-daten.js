@@ -370,37 +370,37 @@ var PREIS_DATEN = {
         { k: 'braumeister', name: 'Ein Braumeister aus Weihenstephan', anteil: 0.055, bauzeit: 0,
           was: 'Ein gelernter Mann mit Thermometer, Saccharometer und Zeugnis.',
           satz: 'Er misst, was bisher geschmeckt wurde. Der Ausschlag wird gleichmaessig.',
-          wirkung: { preis: 0.07, ertrag: 900 } },
+          wirkung: { preis: 0.07, ertrag: 400 } },
 
         { k: 'krone', name: 'Das Dach der Krone', anteil: 0.071, bauzeit: 1,
           was: 'Das Gasthaus zur Krone bekommt ein neues Dach — bezahlt von der Brauerei.',
           satz: 'Wer das Dach zahlt, bestimmt, was unter dem Dach ausgeschenkt wird.',
-          wirkung: { bindung: { n: 1, jahre: 30 }, ertrag: 620 } },
+          wirkung: { bindung: { n: 1, jahre: 30 }, ertrag: 450 } },
 
         { k: 'darre', name: 'Die Darre mit Warmluft', anteil: 0.105, bauzeit: 1,
           was: 'Kein Rauch mehr im Malz — heisse Luft durch einen Kanal.',
           satz: 'Helles Malz. Damit laesst sich helles Bier brauen, und helles Bier ist gerade Mode.',
-          wirkung: { preis: 0.06, ertrag: 1100 } },
+          wirkung: { preis: 0.06, ertrag: 700 } },
 
         { k: 'gleis', name: 'Das Gleis bis an die Rampe', anteil: 0.19, bauzeit: 2,
           was: 'Vierhundert Meter Anschlussgleis, Weiche und Prellbock.',
           satz: 'Der Waggon faehrt in den Hof. Die Fuhre endet nicht mehr am Bahnhof.',
-          wirkung: { ertrag: 2600 } },
+          wirkung: { ertrag: 1200 } },
 
         { k: 'maelzerei', name: 'Die Maelzerei mit Weichstock', anteil: 0.24, bauzeit: 2,
           was: 'Weiche, Tenne, Darre in einem Bau aus Backstein.',
           satz: 'Das Haus macht sein Malz selbst und verkauft, was uebrig ist.',
-          wirkung: { rohstoff: 260, ertrag: 1900 } },
+          wirkung: { rohstoff: 260, ertrag: 1500 } },
 
         { k: 'dampf', name: 'Die Dampfmaschine', anteil: 0.30, bauzeit: 2,
           was: 'Eine liegende Einzylindermaschine, achtzehn Pferdestaerken, mit Schwungrad und Transmission.',
           satz: 'Sie ruehrt, pumpt, schrotet und laeuft, solange Kohle da ist.',
-          wirkung: { ertrag: 3400, preis: 0.03 } },
+          wirkung: { ertrag: 1900, preis: 0.03 } },
 
         { k: 'flaschen', name: 'Die Flaschenfuellerei', anteil: 0.33, bauzeit: 1, ab: 1880,
           was: 'Zwoelf Fuellhaehne, Buegelverschluss, ein Spuelbottich.',
           satz: 'Bier verlaesst das Haus zum ersten Mal ohne Fass.',
-          wirkung: { preis: 0.08, ertrag: 2200 } },
+          wirkung: { preis: 0.08, ertrag: 1800 } },
 
         { k: 'email', name: 'Emailschilder an fuenfzehn Haeusern', anteil: 0.16, bauzeit: 0, ab: 1893,
           was: 'Kobaltblaues Email, weisse Kontur, gewoelbte Ecken — die neue Reklame.',
@@ -410,22 +410,22 @@ var PREIS_DATEN = {
         { k: 'kaelte', name: 'Die Kaeltemaschine nach Linde', anteil: 0.52, bauzeit: 2, ab: 1876,
           was: 'Ammoniak-Kompressor, Solekreis, ein Maschinenhaus mit hohem Fenster.',
           satz: 'Das Sommerbrauverbot ist damit eine Gewohnheit statt eines Gesetzes.',
-          wirkung: { plaetze: 180, ertrag: 4200 } },
+          wirkung: { plaetze: 180, ertrag: 3000 } },
 
         { k: 'sudhelm', name: 'Das Sudhaus mit Kupferhelm', anteil: 0.66, bauzeit: 3,
           was: 'Zwei Pfannen, Laeuterbottich, Kupferhauben, ein Fenster in ganzer Hoehe.',
           satz: 'Das Haus sieht zum ersten Mal aus wie das Bild, das man von einer Brauerei hat.',
-          wirkung: { plaetze: 90, ertrag: 5200, preis: 0.04 } },
+          wirkung: { plaetze: 90, ertrag: 3600, preis: 0.04 } },
 
         { k: 'felsenkeller', name: 'Der Felsenkeller', anteil: 0.38, bauzeit: 3,
           was: 'Achthundert Quadratmeter in den Berg getrieben, Lagerfaesser in zwei Etagen.',
           satz: 'Wer lagern kann, muss nicht verkaufen. Das ist die ganze Macht dieses Jahrhunderts.',
-          wirkung: { plaetze: 320, ertrag: 3800 } },
+          wirkung: { plaetze: 320, ertrag: 2200 } },
 
         { k: 'niederlage', name: 'Eine Niederlage in der Kreisstadt', anteil: 0.95, bauzeit: 1,
           was: 'Lagerkeller, Kontor und zwei Fuhrwerke, achtzehn Kilometer flussabwaerts.',
           satz: 'Zum ersten Mal steht Bier des Hauses, wo das Haus nicht ist.',
-          wirkung: { bindung: { n: 2, jahre: 25 }, ertrag: 7000 } }
+          wirkung: { bindung: { n: 2, jahre: 25 }, ertrag: 5200 } }
       ],
 
       festlegungen: [
@@ -438,7 +438,7 @@ var PREIS_DATEN = {
         { k: 'bahnvertrag', name: 'Der Frachtvertrag mit der Staatsbahn', anteil: 1.10,
           was: 'Ein Ausnahmetarif fuer Bier in Kuehlwagen, auf Dauer geschlossen.',
           regel: 'Die Fracht kostet das Haus fuer den Rest der Partie weniger als jeden Wettbewerber.',
-          wirkung: { ertrag: 5200, umlageHalb: false } },
+          wirkung: { ertrag: 2400, umlageHalb: false } },
 
         { k: 'marke', name: 'Die eingetragene Handelsmarke', anteil: 0.85, ab: 1894,
           was: 'Anker und Schriftzug, eingetragen beim Patentamt nach dem Gesetz von 1894.',
@@ -448,7 +448,7 @@ var PREIS_DATEN = {
         { k: 'konvention', name: 'Der Beitritt zur Brauereikonvention', anteil: 0.45,
           was: 'Acht Brauereien setzen einen gemeinsamen Preis und teilen die Stadt in Bezirke.',
           regel: 'Ein sicherer Preis und ein fester Bezirk. Dafuer waechst das Haus nie wieder ueber seinen Bezirk hinaus.',
-          wirkung: { preis: 0.09, wachstumsdeckel: true, ertrag: 1600 } }
+          wirkung: { preis: 0.09, wachstumsdeckel: true, ertrag: 900 } }
       ]
     },
 
@@ -511,62 +511,62 @@ var PREIS_DATEN = {
         { k: 'kasten', name: 'Der eigene Mehrwegkasten', anteil: 0.040, bauzeit: 0,
           was: 'Zwanzig Flaschen, Kunststoff, Name in den Griff gepraegt.',
           satz: 'Der Kasten steht in fremden Kellern und wirbt dort, ohne dass jemand ihn ansieht.',
-          wirkung: { preis: 0.04, ansehen: 8, ertrag: 24000 } },
+          wirkung: { preis: 0.04, ansehen: 8, ertrag: 3000 } },
 
         { k: 'zelt', name: 'Das Bierzelt auf dem Volksfest', anteil: 0.075, bauzeit: 0,
           was: 'Ein Zelt mit dreitausend Plaetzen, neun Tage im Jahr.',
           satz: 'Neun Tage, an denen die Stadt das Bier des Hauses trinkt und sonst nichts.',
-          wirkung: { ertrag: 62000, ansehen: 10 } },
+          wirkung: { ertrag: 6000, ansehen: 10 } },
 
         { k: 'grosshandel', name: 'Der Getraenkefachgrosshandel als Partner', anteil: 0.115, bauzeit: 0,
           was: 'Ein Vertrag mit dem groessten Zwischenhaendler des Kreises.',
           satz: 'Er nimmt Menge ab und bringt sie in Gaststaetten, die das Haus nie besucht.',
-          wirkung: { bindung: { n: 2, jahre: 20 }, ertrag: 96000 } },
+          wirkung: { bindung: { n: 2, jahre: 20 }, ertrag: 9000 } },
 
         { k: 'lastzug', name: 'Zwei Lastzuege mit Anhaenger', anteil: 0.15, bauzeit: 0,
           was: 'Zwei Siebeneinhalbtonner mit Planenaufbau und Ladebordwand.',
           satz: 'Die Auslieferung wird ein Fahrplan statt einer Fuhre.',
-          wirkung: { ertrag: 120000 } },
+          wirkung: { ertrag: 12000 } },
 
         { k: 'werbefilm', name: 'Der Werbefilm im Vorabendprogramm', anteil: 0.21, bauzeit: 0, ab: 1958,
           was: 'Dreissig Sekunden, ein Fluss, ein Chor, ein Schriftzug am Ende.',
           satz: 'Zum ersten Mal kennt jemand das Bier, der nie in der Stadt war.',
-          wirkung: { preis: 0.09, ansehen: 20, ertrag: 60000 } },
+          wirkung: { preis: 0.09, ansehen: 20, ertrag: 16000 } },
 
         { k: 'dosenlinie', name: 'Die Dosenlinie', anteil: 0.26, bauzeit: 1, ab: 1965,
           was: 'Weissblech, Aufreissdeckel, achtzehntausend Dosen in der Stunde.',
           satz: 'Der Handel will sie. Was der Handel will, kommt ins Regal.',
-          wirkung: { ertrag: 180000, preis: -0.03 } },
+          wirkung: { ertrag: 20000, preis: -0.03 } },
 
         { k: 'trikot', name: 'Die Trikotwerbung beim Landesligisten', anteil: 0.13, bauzeit: 0, ab: 1973,
           was: 'Der Schriftzug auf der Brust, zweiundzwanzig Spieltage im Jahr.',
           satz: 'Ein Verein, eine Stadt, ein Name. Billiger als Fernsehen und haelt laenger.',
-          wirkung: { ansehen: 16, preis: 0.05, ertrag: 40000 } },
+          wirkung: { ansehen: 16, preis: 0.05, ertrag: 10000 } },
 
         { k: 'abfuellung', name: 'Die Abfuellanlage, 24.000 Flaschen je Stunde', anteil: 0.45, bauzeit: 2,
           was: 'Reinigung, Fueller, Etikettierer, Packer — eine Halle voll.',
           satz: 'Sie rechnet sich erst ab einer Menge, die das Haus noch nicht hat.',
-          wirkung: { ertrag: 340000, plaetze: 900 } },
+          wirkung: { ertrag: 34000, plaetze: 900 } },
 
         { k: 'gaertanks', name: 'Zylindrokonische Gaertanks im Freien', anteil: 0.34, bauzeit: 2,
           was: 'Acht Edelstahltanks, sechzehn Meter hoch, hinter dem alten Sudhaus.',
           satz: 'Gaerung und Lagerung im selben Tank. Der Felsenkeller wird zum Museum.',
-          wirkung: { plaetze: 1400, ertrag: 210000 } },
+          wirkung: { plaetze: 1400, ertrag: 26000 } },
 
         { k: 'spezialitaet', name: 'Das Kellerbier in der Buegelflasche', anteil: 0.09, bauzeit: 1, ab: 1985,
           was: 'Naturtrueb, ungefiltert, Buegelverschluss, ein Etikett wie 1900.',
           satz: 'Kleine Menge, grosser Preis. Es verkauft die Geschichte des Hauses mit.',
-          wirkung: { preis: 0.11, ansehen: 14, ertrag: 30000 } },
+          wirkung: { preis: 0.11, ansehen: 14, ertrag: 7000 } },
 
         { k: 'logistik', name: 'Das Logistikzentrum an der Bundesstrasse', anteil: 0.80, bauzeit: 3,
           was: 'Hochregal, Rampen fuer zwoelf Lastzuege, ein Verwaltungsriegel aus Glas.',
           satz: 'Der Hof in der Stadt wird zur Adresse, die Ware kommt woanders her.',
-          wirkung: { ertrag: 620000, plaetze: 2200 } },
+          wirkung: { ertrag: 60000, plaetze: 2200 } },
 
         { k: 'brauhaus', name: 'Das Gasthausbrauerei im alten Sudhaus', anteil: 0.16, bauzeit: 2, ab: 1990,
           was: 'Kupfer, lange Tische, ein Sudwerk hinter Glas — im Bau von 1884.',
           satz: 'Das Haus verkauft zum ersten Mal wieder Bier an dem Ort, an dem es gebraut wird.',
-          wirkung: { preis: 0.07, ansehen: 22, ertrag: 90000 } }
+          wirkung: { preis: 0.07, ansehen: 22, ertrag: 12000 } }
       ],
 
       festlegungen: [
@@ -578,7 +578,7 @@ var PREIS_DATEN = {
         { k: 'konzern', name: 'Der Liefervertrag mit der Nordstern-Gruppe', anteil: 0.0,
           was: 'Der Konzern nimmt die Menge ab, stellt die Kaesten und zahlt puenktlich.',
           regel: 'Sofort viel Geld und ein sicherer Absatz. Dafuer bestimmt der Konzern den Preis — das Haus kann ihn nie wieder heben.',
-          wirkung: { einmal: 6, preisDeckel: true, ertrag: 240000 } },
+          wirkung: { einmal: 6, preisDeckel: true, ertrag: 28000 } },
 
         { k: 'genossenschaft', name: 'Die Genossenschaft der Gastwirte', anteil: 0.30,
           was: 'Vierzig Wirte zeichnen Anteile und binden sich auf zwanzig Jahre.',
