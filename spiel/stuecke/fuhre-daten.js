@@ -113,7 +113,7 @@ var FUHRE_DATEN = {
       keller: { name: 'Der Keller', bettFass: 1, bett: 'Fass', spalten: 6,
                 satz: 'Kühl, feucht, klein. Was hier liegt, ist der ganze Handel.' },
       wagen: { name: 'Ochsenkarren', fass: 4, halte: 4, schritt: 1,
-               grund: 2, jeKm: 2.5, haltPreis: 1, umlauf: 2, bruch: 0.03,
+               grund: 2, jeKm: 1.8, haltPreis: 1, umlauf: 2, bruch: 0.03,
                satz: 'Vier Plätze. Der Ochse geht sieben Meilen am Tag und keine mehr.' },
       faesser: 22,
       planStart: 1,
@@ -201,9 +201,9 @@ var FUHRE_DATEN = {
           sommer: false,
           satz: 'Das Bier der Zunft. Sechs Fass, eine Woche Lager, jeder Wirt nimmt es.' },
         { k: 'maerzen', name: 'Märzenbier', zeichen: 'M', stufe: 3,
-          sude: 1, fass: 4, reife: 10, haltbar: 34, preis: 40, kosten: 40, rohstoff: 11,
+          sude: 1, fass: 4, reife: 5, haltbar: 34, preis: 40, kosten: 40, rohstoff: 11,
           sommer: true,
-          satz: 'Zehn Wochen im Fass, ehe es taugt — zehn Wochen belegter Platz. '
+          satz: 'Fünf Wochen im Fass, ehe es taugt — fünf Wochen belegter Fassplatz. '
               + 'Dafür überlebt es als einziges den Sommer.' }
       ]
     },
@@ -221,7 +221,7 @@ var FUHRE_DATEN = {
                + 'nicht aus der Kasse.',
       budget: null,
       sudeJeWoche: 2,
-      planStart: 2,
+      planStart: 1,
       unterhalt: 110,
       tafel: { name: 'Sudplan', unter: 'am schwarzen Brett der Mälzerei',
                preis: 260, freiBis: 3 },
@@ -241,7 +241,7 @@ var FUHRE_DATEN = {
       eis: { start: 60, keller: 90, jeFuder: 16, menge: 16, frostVon: 9, frostBis: 22,
              satz: 'Eis wird aus dem Fluss geschnitten, solange er trägt. Danach nicht mehr.' },
       faesser: 260,
-      mengenfaktor: 3,
+      mengenfaktor: 1.6,
       winteranteil: 0.68,
       sommerSatz: 'Die Kältemaschine koennte im Juli brauen. Der Sommerabsatz kommt '
                 + 'trotzdem aus dem Lagerkeller — was im April eingelagert ist, ist der Sommer.',
@@ -261,18 +261,18 @@ var FUHRE_DATEN = {
       ],
       sorten: [
         { k: 'schank', name: 'Schankbier', zeichen: 'S', stufe: 1,
-          fass: 34, reife: 0, haltbar: 3, preis: 44, kosten: 620, rohstoff: 26, eis: 1,
+          fass: 30, reife: 0, haltbar: 3, preis: 44, kosten: 430, rohstoff: 22, eis: 1,
           sommer: false,
-          satz: 'Vierunddreißig Fass aus einem Sud, sofort lieferbar, drei Wochen haltbar. '
+          satz: 'Dreißig Fass aus einem Sud, sofort lieferbar, drei Wochen haltbar. '
               + 'Füllt den halben Wagen im Alleingang.' },
         { k: 'lager', name: 'Lagerbier', zeichen: 'L', stufe: 2,
-          fass: 28, reife: 4, haltbar: 24, preis: 72, kosten: 750, rohstoff: 34, eis: 2,
+          fass: 24, reife: 2, haltbar: 24, preis: 72, kosten: 480, rohstoff: 30, eis: 2,
           sommer: false,
-          satz: 'Vier Wochen auf Eis. Das Bier, an dem die Kältemaschine haengt.' },
+          satz: 'Zwei Wochen auf Eis. Das Bier, an dem die Kältemaschine haengt.' },
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
-          fass: 22, reife: 10, haltbar: 46, preis: 108, kosten: 880, rohstoff: 42, eis: 3,
+          fass: 18, reife: 5, haltbar: 46, preis: 108, kosten: 620, rohstoff: 36, eis: 3,
           sommer: true,
-          satz: 'Zehn Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller.' }
+          satz: 'Fünf Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller.' }
       ]
     },
 
@@ -298,7 +298,7 @@ var FUHRE_DATEN = {
                grund: 400, jeKm: 30, haltPreis: 900, umlauf: 1, bruch: 0.01,
                satz: 'Drei Halte je Tour. Die Menge ist kein Problem mehr — der Plan schon.' },
       faesser: 1400,
-      mengenfaktor: 10,
+      mengenfaktor: 3,
       winteranteil: 0.68,
       sommerSatz: 'Die Sudpfanne steht im Sommer für die Wartung still. Der Sommerabsatz '
                 + 'kommt aus den Tanks — und in den Tanks ist, was im April drin war.',
@@ -320,17 +320,17 @@ var FUHRE_DATEN = {
       ],
       sorten: [
         { k: 'hell', name: 'Vollbier Hell', zeichen: 'H', stufe: 1,
-          fass: 60, reife: 1, haltbar: 18, preis: 150, kosten: 3900, rohstoff: 55,
+          fass: 50, reife: 1, haltbar: 18, preis: 150, kosten: 2700, rohstoff: 46,
           sommer: false,
-          satz: 'Die Menge. Sechzig Fass je Sud, eine Woche Reife, jedes Regal nimmt es.' },
+          satz: 'Die Menge. Fünfzig Fass je Sud, eine Woche Reife, jedes Regal nimmt es.' },
         { k: 'pils', name: 'Pilsner', zeichen: 'P', stufe: 2,
-          fass: 50, reife: 3, haltbar: 26, preis: 195, kosten: 4200, rohstoff: 62,
+          fass: 40, reife: 2, haltbar: 26, preis: 195, kosten: 3400, rohstoff: 52,
           sommer: true,
-          satz: 'Die Marke. Drei Wochen Reife, und der Meter im Regal kostet extra.' },
+          satz: 'Die Marke. Zwei Wochen Reife, und der Meter im Regal kostet extra.' },
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
-          fass: 40, reife: 5, haltbar: 40, preis: 245, kosten: 4600, rohstoff: 70,
+          fass: 30, reife: 4, haltbar: 40, preis: 245, kosten: 3700, rohstoff: 58,
           sommer: true,
-          satz: 'Fünf Wochen Reife, vierzig Fass. Die Gaststätte zahlt es, der Markt nicht.' }
+          satz: 'Vier Wochen Reife, dreißig Fass. Die Gaststätte zahlt es, der Markt nicht.' }
       ]
     }
   }

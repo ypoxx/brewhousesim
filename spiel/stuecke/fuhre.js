@@ -293,25 +293,44 @@
     B.sende('zeichne', { grund: 'fuhre-leer' });
   }
 
+  /* Eine Faustregel des Fuhrmanns, kein Rat: die Durstigsten zuerst, und
+     kein neuer Halt, dessen Weg mehr kostet, als er einbringt. Die teuren
+     Entscheidungen — welche Sorte, wen man fallenlässt, wann der Bannbrief
+     fällig ist — bleiben beim Spieler. */
   function fuelleNachDurst() {
     var l = haeuser().slice().sort(function (x, y) {
       return (durst(y) - geladenFuer(y.schluessel)) - (durst(x) - geladenFuer(x.schluessel));
     });
     var sicherung = 0;
-    while (geladen() < wagenPlaetze() && sicherung++ < 400) {
+    while (geladen() < wagenPlaetze() && sicherung++ < 600) {
       var gelegt = false;
       for (var i = 0; i < l.length; i++) {
         var a = l[i];
         if (durst(a) - geladenFuer(a.schluessel) < 1) continue;
         if (kannLaden(a)) continue;
-        var vorher = geladen();
+        var vorher = geladen(), vorherLohn = fuhrlohn(), vorherErloes = fuhrerloes();
         lade(a);
-        if (geladen() > vorher) gelegt = true;
+        if (geladen() === vorher) continue;
+        if (fuhrerloes() - vorherErloes < fuhrlohn() - vorherLohn) {
+          /* Der Umweg trägt sich nicht. Wieder herunter damit. */
+          entladeStill(a, geladen() - vorher);
+          continue;
+        }
+        gelegt = true;
         if (geladen() >= wagenPlaetze()) break;
       }
       if (!gelegt) break;
     }
     B.sende('zeichne', { grund: 'fuhre-fuellen' });
+  }
+
+  function entladeStill(a, n) {
+    for (var i = 0; i < Z.ladung.length; i++) {
+      if (Z.ladung[i].adr !== a.schluessel) continue;
+      Z.ladung[i].faesser.splice(Math.max(0, Z.ladung[i].faesser.length - n), n);
+      if (!Z.ladung[i].faesser.length) Z.ladung.splice(i, 1);
+      return;
+    }
   }
 
   function wieVorigeWoche() {
@@ -618,7 +637,9 @@
     if (e.abgabe) {
       abgabeName = e.abgabe.name;
       abgabe = Math.round(Z.jahrUmsatz * e.abgabe.satz);
-      var zahlbar = Math.min(abgabe, Math.max(0, B.welt.haus.kasse));
+      var notgroschen = 0;
+      sorten().forEach(function (so) { if (!notgroschen || so.kosten < notgroschen) notgroschen = so.kosten; });
+      var zahlbar = Math.min(abgabe, Math.max(0, B.welt.haus.kasse - notgroschen * 3));
       if (zahlbar > 0) {
         B.welt.zahle(zahlbar, abgabeName + ' auf ' + B.welt.geld(Math.round(Z.jahrUmsatz)) + ' Umsatz', 'spieler');
       }
