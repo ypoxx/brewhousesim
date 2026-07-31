@@ -540,7 +540,7 @@
     /* In JEDER Woche will mindestens ein Haus mehr, als im Keller liegt.
        Nachzaehlbar am Bildschirm: die Fassbetten unter dem Haus gegen die
        Faesser im Keller. */
-    var liegt = freieFaesser().length;
+    var liegt = Math.max(keller().length, freieFaesser().length);
     var l = haeuser().filter(function (a) { return !sperre(a); });
     if (!l.length) l = haeuser();
     if (l.length) {
