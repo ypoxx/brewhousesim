@@ -187,7 +187,7 @@
      zaehlt fuer die Breite nicht mit (width:0 / min-width:100%) — sonst
      schoebe eine lange Zahl den Namen des Bretts aus dem Reiter. */
   flex: 0 0 auto;
-  min-width: 0;
+  min-width: calc(var(--s) * 248);
   max-width: calc(var(--s) * 420);
   flex-direction: column;
   align-items: flex-start;
