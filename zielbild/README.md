@@ -28,25 +28,29 @@ abgeleitet, damit Kamera, Stil und **Ort** identisch bleiben.
 Durchlaufend in allen vier Bildern: der Fluss von rechts, die Brücke an derselben Stelle,
 die Kirche, die Hügelkette, die Kameraposition, die Kopfleiste, die WEITER-Tafel.
 
-## Bekannte Fehler
+## Fehler und was daraus wurde
 
-Sie sind hier verzeichnet, damit niemand sie für Absicht hält.
-
-| Bild | Fund |
-|---|---|
-| `02-1600.jpg` | „ST. MICHAEL" ist zu **„KT MONMEE"** zerfallen, „GASTHOF LINDENHOF" zu **„CASTUNE LINDKNHOF"**. Zusätzlich hat der Lauf die **Bahnlinie** aus dem Ankerbild mitgeschleppt — 1600 ein klarer Anachronismus |
-| `04-1970.jpg` | Dieselben zwei Beschriftungen, hier **„TE JASMHCI"** und **„GASTONE LINDKNHOF"**. Die Stadtmauer im Hintergrund ist noch vollständig, statt Fragment zu sein |
-| `03-1884.jpg` | „GEGR. 1356" statt 1350 |
-| `02-1600.jpg` | „GCNG. 1385" statt „GEGR. 1350" |
-
-Alle Textfunde haben dieselbe Ursache, und sie steht bereits in
+Der erste Satz hatte in 1600 und 1970 dieselben zerfallenen Beschriftungen — aus
+„ST. MICHAEL" wurde „KT MONMEE" bzw. „TE JASMHCI", aus „GASTHOF LINDENHOF" wurde
+„CASTUNE LINDKNHOF". Ursache steht in
 [`../design/PRUEFUNG.md`](../design/PRUEFUNG.md) §4.1: **`--ref` sieht Kleinschrift nur als
-Textur und würfelt sie neu**, auch die Buchstaben, die vorher richtig waren. Wer das
-reparieren will, erzeugt frisch mit korrigiertem Prompt statt nachzubessern.
+Textur und würfelt sie neu**, auch die Buchstaben, die vorher richtig waren.
 
-**Für die Messlatte sind diese Fehler unerheblich.** Im gebauten Spiel ist Text echter Text,
-vom Programm gesetzt. Gemessen werden Stil, Dichte, Stimmung und Aufbau — nicht die
-gezeichneten Buchstaben.
+Textfehler allein hätten die Latte nicht beschädigt — im gebauten Spiel ist Text echter,
+vom Programm gesetzter Text. **Ein Fund war aber gefährlich:** Das 1600er Blatt hatte die
+**Bahnlinie** aus dem Ankerbild geerbt. Eine Latte, die selbst einen Anachronismus enthält,
+verleitet den Builder dazu, ihn nachzubauen — und lässt ihn dann an der Sperrliste
+scheitern. Ein Fehler in der Messlatte kostet mehr als einer im Gebauten.
+
+Deshalb wurden `02-1600.jpg` und `04-1970.jpg` neu erzeugt, mit ausdrücklichem Verbot der
+Bahn für 1600 und wörtlich vorgegebenen Beschriftungen. Beide sind jetzt sauber; 1970 zeigt
+zusätzlich die Stadtmauer korrekt als **Fragment in einer kleinen Grünanlage** statt als
+geschlossenen Ring.
+
+Offen geblieben ist eine Kleinigkeit in `03-1884.jpg`: dort steht **„GEGR. 1356" statt
+1350**. Das Bild ist der Stilanker, aus dem alle anderen abgeleitet wurden — es neu zu
+würfeln hieße, den ganzen Satz neu zu würfeln. Die Jahreszahl trägt keine Spielinformation.
+Sie bleibt stehen und ist hier verzeichnet, damit niemand sie für Absicht hält.
 
 ## Reproduzieren
 
