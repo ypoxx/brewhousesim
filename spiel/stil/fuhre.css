@@ -167,7 +167,7 @@
   display: flex;
   align-items: center;
   gap: calc(var(--s) * 6);
-  min-height: calc(var(--s) * 24);
+  min-height: calc(var(--s) * 21);
 }
 .fu-z1 .fu-name {
   font-size: calc(var(--s) * 20);
@@ -462,7 +462,7 @@
 }
 
 .fu-wagenbetten {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -523,8 +523,8 @@
    -------------------------------------------------------------------------- */
 .knopf.fu-klein {
   font-size: calc(var(--s) * 17);
-  padding: calc(var(--s) * 5) calc(var(--s) * 10);
-  min-height: calc(var(--s) * 30);
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  min-height: calc(var(--s) * 27);
   gap: calc(var(--s) * 6);
   border-width: calc(var(--s) * 2);
 }
@@ -621,3 +621,66 @@
 .fu-sommer-zeile .w { font-family: var(--mono); font-size: calc(var(--s) * 16); }
 
 .fu-sommer-wahl { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 8); }
+
+/* --------------------------------------------------------------------------
+   DER FRACHTBRIEF — was diese eine Fuhre einbringt, Halt für Halt
+   -------------------------------------------------------------------------- */
+.fu-frachtbrief {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 2);
+  overflow: hidden;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 16);
+}
+.fu-leerzeile {
+  font-family: var(--fu-schrift);
+  font-size: calc(var(--s) * 18);
+  opacity: 0.72;
+  line-height: 1.3;
+}
+.fu-briefzeile {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 8);
+  padding: calc(var(--s) * 2) 0;
+  border-bottom: 1px dotted rgba(255, 240, 210, 0.24);
+}
+#buehne[data-epoche="4"] .fu-briefzeile { border-bottom-color: rgba(35, 32, 25, 0.22); }
+.fu-briefzeile .k {
+  background: var(--fu-s2); color: var(--fu-hell);
+  border-radius: calc(var(--s) * 2); padding: 0 calc(var(--s) * 4);
+  font-size: calc(var(--s) * 14);
+}
+.fu-briefzeile .n { flex: 0 0 auto; white-space: nowrap; }
+.fu-briefzeile .m { flex: 1 1 auto; opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fu-briefzeile .w { flex: 0 0 auto; opacity: 0.7; }
+.fu-briefzeile .g { flex: 0 0 auto; color: #b7d69a; }
+.fu-briefzeile.summe { border-bottom: none; margin-top: auto; }
+.fu-briefzeile.summe .n { flex: 1 1 auto; }
+.fu-briefzeile.summe .g { color: #e8a081; }
+#buehne[data-epoche="4"] .fu-briefzeile .g { color: #2f6b2a; }
+#buehne[data-epoche="4"] .fu-briefzeile.summe .g { color: #a03a18; }
+
+/* --------------------------------------------------------------------------
+   DIE KNAPPHEIT DER EPOCHE — steht an der Tafel, nicht im Handbuch
+   -------------------------------------------------------------------------- */
+.fu-knappheit {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--s) * 3);
+  padding: calc(var(--s) * 5) calc(var(--s) * 8);
+  border-top: 1px dashed rgba(234, 226, 207, 0.3);
+  border-bottom: 1px dashed rgba(234, 226, 207, 0.3);
+  overflow: hidden;
+}
+#buehne[data-epoche="4"] .fu-knappheit { border-color: rgba(35, 32, 25, 0.28); }
+.fu-knappheit b {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 2);
+}
+.fu-knappheit span { font-size: calc(var(--s) * 18); line-height: 1.28; opacity: 0.86; }

@@ -858,7 +858,7 @@
     var e = ep();
     var liegt = freieFaesser().length;
     var wollen = 0;
-    haeuser().forEach(function (a) { wollen += Math.round(durst(a)); });
+    haeuser().forEach(function (a) { wollen += Math.max(durst(a) > 0 ? 1 : 0, Math.round(durst(a))); });
 
     var b = brett('fu-haeuser', 'DIE HÄUSER',
       'wollen ' + B.welt.menge(wollen, true) + ' · im Keller liegen ' + B.welt.menge(liegt));
@@ -906,7 +906,7 @@
                                               : ' — niemand hat sie genommen')));
     } else {
       var schritt = e.wagen.schritt;
-      var will = Math.round(durst(a));
+      var will = Math.max(durst(a) > 0 ? 1 : 0, Math.round(durst(a)));
       var hat = geladenFuer(a.schluessel);
       var betten = B.el('span', 'fu-betten');
       var n = Math.min(7, Math.ceil(will / schritt));
@@ -1066,6 +1066,12 @@
 
     if (Z.sudMeldung) b.appendChild(B.el('div', 'fu-sudmeldung', Z.sudMeldung));
 
+    /* Wovon diese Epoche zu wenig hat. Nie Geld. */
+    var kn = B.el('div', 'fu-knappheit');
+    kn.appendChild(B.el('b', null, 'KNAPP IN DIESER ZEIT: ' + e.knappheit));
+    kn.appendChild(B.el('span', null, e.knappSatz));
+    b.appendChild(kn);
+
     /* Die Knappheit loesen: Preisschilder nebeneinander, die einander
        ausschliessen, weil die Kasse nur fuer eines reicht. */
     var kauf = B.el('div', 'fu-kaeufe');
@@ -1205,6 +1211,39 @@
       gitter.appendChild(leer);
     }
     b.appendChild(gitter);
+
+    /* Der Frachtbrief: was diese eine Fuhre einbringt, Halt für Halt.
+       Preisschilder nebeneinander, die einander ausschließen — der Platz,
+       den ein Fass belegt, hat kein zweites. */
+    var brief = B.el('div', 'fu-frachtbrief');
+    if (!Z.ladung.length) {
+      brief.appendChild(B.el('div', 'fu-leerzeile', e.wagen.satz));
+      brief.appendChild(B.el('div', 'fu-leerzeile',
+        'Der Wagen steht. Jedes Fass bekommt ein Haus — dann fährt er.'));
+    } else {
+      Z.ladung.forEach(function (l) {
+        var a = B.welt.adresse(l.adr);
+        var erloes = 0, sorteName = {};
+        l.faesser.forEach(function (f) {
+          erloes += preisJeFass(sorteFass(f), a);
+          sorteName[sorteFass(f).name] = (sorteName[sorteFass(f).name] || 0) + 1;
+        });
+        var zeile = B.el('div', 'fu-briefzeile');
+        zeile.appendChild(B.el('span', 'k', kurz(a)));
+        zeile.appendChild(B.el('span', 'n', a.name));
+        zeile.appendChild(B.el('span', 'm', Object.keys(sorteName).map(function (s) {
+          return B.welt.menge(sorteName[s]) + ' ' + s; }).join(' + ')));
+        zeile.appendChild(B.el('span', 'w', B.zahl(a.km, a.km < 1 ? 1 : 0) + ' km'));
+        zeile.appendChild(B.el('span', 'g', '+' + B.welt.geld(Math.round(erloes))));
+        brief.appendChild(zeile);
+      });
+      var summe = B.el('div', 'fu-briefzeile summe');
+      summe.appendChild(B.el('span', 'n', 'Fuhrlohn '
+        + (frachtstufe() ? frachtstufe().name : e.wagen.name)));
+      summe.appendChild(B.el('span', 'g', '−' + B.welt.geld(fuhrlohn())));
+      brief.appendChild(summe);
+    }
+    b.appendChild(brief);
 
     var hilfe = B.el('div', 'fu-hilfe');
     hilfe.appendChild(B.knopf({
