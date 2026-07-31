@@ -73,7 +73,7 @@ var GEGNER_DATEN = {
       mehr: { entreissen: 2.2, macht: 1.8 }, weniger: { bauen: 0.6 } },
     { k: 'sparsam', name: 'sparsam', sagt: 'Zaehlt jeden Pfennig zweimal.',
       mehr: { bauen: 1.6, preis: 0.6 }, weniger: { werben: 0.7, entreissen: 0.6 } },
-    { k: 'grosszuegig', name: 'grosszuegig', sagt: 'Setzt dem Wirt drei Fass umsonst vor die Tuer.',
+    { k: 'grosszuegig', name: 'grosszuegig', sagt: 'Laesst dem Wirt umsonst liefern, was er braucht.',
       mehr: { werben: 2.0, preis: 1.6 }, weniger: { bauen: 0.7 } },
     { k: 'gelehrt', name: 'gelehrt', sagt: 'Liest, was neu ist, und kauft es zwei Jahre zu frueh.',
       mehr: { bauen: 2.0 }, weniger: { entreissen: 0.7 } },
@@ -316,7 +316,7 @@ var GEGNER_DATEN = {
           bindet: 'Der Adler unterschreibt beim {haus} die Jahresvereinbarung mit voller Rabattstaffel.',
           loest: 'Die Vereinbarung laeuft. Wer sie bricht, zahlt sie aus.' },
         { k: 'exklusiv', name: 'Exklusivvertrag', kurz: 'EXK', womit: 'Exklusivvertrag', satz: 260, jahre: 8, abschlag: 0.32,
-          bindet: 'Der Adler bindet {haus} exklusiv — acht Jahre, kein fremdes Fass im Haus.',
+          bindet: 'Der Adler bindet {haus} exklusiv — acht Jahre, kein fremdes Bier im Haus.',
           loest: 'Exklusiv heisst exklusiv. Ausloesen kann man das nur mit sehr viel Geld.' }
       ],
       gegenzug: {
