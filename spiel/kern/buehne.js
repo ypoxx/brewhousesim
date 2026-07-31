@@ -187,6 +187,12 @@
     return k;
   };
 
+  /* Vor jedem Zeichnen wird der "naechste sinnvolle Zug" vergessen; die
+     Stuecke melden ihn im selben Durchgang neu an (B.welt.meldeZug). Diese
+     Datei wird vor kern/kopf.js und vor allen Stuecken geladen, also laeuft
+     dieser Horcher als erster — der Wert kann nicht veralten. */
+  B.auf('zeichne', function () { if (B.welt) B.welt.naechsterZug = null; });
+
   /* Alle bedienbaren Zuege auf dem Bildschirm — der Kritiker zaehlt damit,
      ohne Quelltext zu lesen: BRAUHAUS.zuege() in der Konsole. */
   B.zuege = function () {
