@@ -641,9 +641,13 @@
     if (e.abgabe) {
       abgabeName = e.abgabe.name;
       abgabe = Math.round(Z.jahrUmsatz * e.abgabe.satz);
+      /* Der Rat nimmt nach Ausstoß — aber er nimmt nie das Saatgut. Es bleibt
+         immer genug für drei Sude, und nie mehr als die Hälfte des Freien.
+         Sonst wäre die Abgabe kein Gegengewicht, sondern ein Fallbeil. */
       var notgroschen = 0;
       sorten().forEach(function (so) { if (!notgroschen || so.kosten < notgroschen) notgroschen = so.kosten; });
-      var zahlbar = Math.min(abgabe, Math.max(0, B.welt.haus.kasse - notgroschen * 3));
+      var frei = Math.max(0, B.welt.haus.kasse - notgroschen * 4);
+      var zahlbar = Math.min(abgabe, Math.round(frei * 0.55));
       if (zahlbar > 0) {
         B.welt.zahle(zahlbar, abgabeName + ' auf ' + B.welt.geld(Math.round(Z.jahrUmsatz)) + ' Umsatz', 'spieler');
       }
