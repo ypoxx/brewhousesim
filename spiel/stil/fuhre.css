@@ -1,35 +1,610 @@
 /* ===========================================================================
-   stil/fuhre.css — GEHOERT DEM BAUER VON "DIE FUHRE". Ersetze frei.
+   stil/fuhre.css — DIE FUHRE.
+   Vier Bretter auf der Buehne: DIE HAEUSER (links), DIE ANSCHLAGTAFEL und
+   DER KELLER (auf dem Hof), DER WAGEN (an der Strasse).
+
+   Der Werkstoff wechselt mit der Epoche und ist das billigste ehrliche
+   Epochenzeichen, das eine Oberflaeche hat:
+     1350  rohes Eichenholz, Kreide, Hanf
+     1600  geschnitztes Holz, Kanzleipapier, rote Tinte
+     1884  Gusseisen und Oelfarbe (KEIN Emailschild — Sperrliste)
+     1970  Resopal, Kunststoff, Schreibmaschine
    =========================================================================== */
 
-.fuhre-wagen,
-.fuhre-lager {
-  text-align: center;
-  min-width: calc(var(--s) * 190);
+/* --------------------------------------------------------------------------
+   WERKSTOFF JE EPOCHE
+   -------------------------------------------------------------------------- */
+#buehne {
+  --fu-brett:      linear-gradient(178deg, #7a5330 0%, #5f3f22 46%, #4a3019 100%);
+  --fu-rand:       #2e1d0e;
+  --fu-feld:       rgba(250, 240, 218, 0.92);
+  --fu-tinte:      #2b1d10;
+  --fu-hell:       #f6ead0;
+  --fu-schwach:    rgba(43, 29, 16, 0.55);
+  --fu-linie:      rgba(43, 29, 16, 0.22);
+  --fu-warn:       #9d3520;
+  --fu-gut:        #4a6b3a;
+  --fu-kreide:     #eae2cf;
+  --fu-schiefer:   linear-gradient(170deg, #40453f 0%, #2c302c 100%);
+  --fu-schrift:    var(--serif);
+  --fu-zahlen:     var(--mono);
+  --fu-radius:     calc(var(--s) * 5);
+  --fu-s1:         #b9903f;   /* kurz und billig */
+  --fu-s2:         #9a6a2e;   /* das Bier des Hauses */
+  --fu-s3:         #6c3f1c;   /* lang, teuer, sommerfest */
 }
 
-.fuhre-wahl {
+#buehne[data-epoche="2"] {
+  --fu-brett:  linear-gradient(178deg, #6a4a2c 0%, #4e351d 50%, #3a2614 100%);
+  --fu-feld:   rgba(244, 233, 206, 0.94);
+  --fu-hell:   #f3e6c8;
+  --fu-kreide: #e6ddc6;
+}
+
+#buehne[data-epoche="3"] {
+  --fu-brett:  linear-gradient(178deg, #4b5348 0%, #363d34 55%, #262b25 100%);
+  --fu-rand:   #191d18;
+  --fu-feld:   rgba(238, 232, 214, 0.94);
+  --fu-hell:   #e9dfbe;
+  --fu-schiefer: linear-gradient(170deg, #3a4139 0%, #232722 100%);
+  --fu-kreide: #dcd6c2;
+  --fu-s1:     #a9a05a;
+  --fu-s2:     #8d7a3c;
+  --fu-s3:     #6a4a22;
+}
+
+#buehne[data-epoche="4"] {
+  --fu-brett:  linear-gradient(178deg, #d9cdb4 0%, #c3b69a 55%, #a89b80 100%);
+  --fu-rand:   #6d6250;
+  --fu-feld:   rgba(252, 250, 244, 0.95);
+  --fu-tinte:  #232019;
+  --fu-hell:   #fffdf6;
+  --fu-schwach: rgba(35, 32, 25, 0.55);
+  --fu-schiefer: linear-gradient(170deg, #e8e2d2 0%, #cdc5b0 100%);
+  --fu-kreide: #2c2820;
+  --fu-schrift: var(--sans);
+  --fu-s1:     #c98a2e;
+  --fu-s2:     #b1541f;
+  --fu-s3:     #7d3213;
+}
+
+/* --------------------------------------------------------------------------
+   DAS BRETT — Grundform aller vier Tafeln
+   -------------------------------------------------------------------------- */
+.fu-brett {
   position: absolute;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: calc(var(--s) * 12);
-  padding: calc(var(--s) * 12) calc(var(--s) * 14);
-  background: rgba(255, 250, 235, 0.72);
-  border: calc(var(--s) * 2) solid rgba(43, 29, 16, 0.5);
-  border-radius: calc(var(--s) * 6);
-  pointer-events: auto;
+  flex-direction: column;
+  gap: calc(var(--s) * 6);
+  padding: calc(var(--s) * 10) calc(var(--s) * 12) calc(var(--s) * 11);
+  background: var(--fu-brett);
+  border: calc(var(--s) * 3) solid var(--fu-rand);
+  border-radius: var(--fu-radius);
+  box-shadow: 0 calc(var(--s) * 8) calc(var(--s) * 18) rgba(0, 0, 0, 0.42),
+              inset 0 calc(var(--s) * 2) 0 rgba(255, 240, 210, 0.16);
+  color: var(--fu-hell);
+  font-family: var(--fu-schrift);
+  overflow: hidden;
 }
 
-.fuhre-wahl .ueber {
-  position: absolute;
-  left: 0;
-  top: calc(var(--s) * -30);
-  font-family: var(--mono);
-  font-size: calc(var(--s) * 18);
-  color: #2b1d10;
-  text-shadow: 0 0 calc(var(--s) * 8) rgba(255, 250, 235, 0.95);
+#buehne[data-epoche="4"] .fu-brett { color: var(--fu-tinte); }
+
+.fu-kopf {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 10);
+  border-bottom: calc(var(--s) * 2) solid rgba(255, 240, 210, 0.24);
+  padding-bottom: calc(var(--s) * 5);
+  flex: 0 0 auto;
+}
+#buehne[data-epoche="4"] .fu-kopf { border-bottom-color: rgba(35, 32, 25, 0.25); }
+
+.fu-kopf b {
+  font-size: calc(var(--s) * 23);
+  letter-spacing: calc(var(--s) * 3);
+  white-space: nowrap;
+}
+.fu-kopf span {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 17);
+  opacity: 0.82;
+  margin-left: auto;
+  text-align: right;
   white-space: nowrap;
 }
 
-.fuhre-wahl .knopf { min-width: calc(var(--s) * 330); }
+/* --------------------------------------------------------------------------
+   PLATZORDNUNG — alles in Prozent, Bezug 2752 x 1536
+   -------------------------------------------------------------------------- */
+.fu-haeuser { left: 1.1%;  top: 12.8%; width: 25.4%; height: 73.2%; }
+.fu-tafel   { left: 27.2%; top: 12.8%; width: 23.4%; height: 46.0%; }
+.fu-keller  { left: 27.2%; top: 59.6%; width: 23.4%; height: 26.4%; }
+.fu-wagen   { left: 51.4%; top: 59.6%; width: 26.8%; height: 26.4%; }
+
+/* --------------------------------------------------------------------------
+   DIE HAEUSER
+   -------------------------------------------------------------------------- */
+.fu-zettel {
+  flex: 0 0 auto;
+  background: var(--fu-feld);
+  color: var(--fu-tinte);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 6) calc(var(--s) * 9);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 8) rgba(0, 0, 0, 0.35);
+  transform: rotate(-0.5deg);
+}
+.fu-zettel-text {
+  font-size: calc(var(--s) * 19);
+  line-height: 1.24;
+  font-style: italic;
+}
+#buehne[data-epoche="4"] .fu-zettel-text { font-family: var(--mono); font-style: normal; }
+
+.fu-liste {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+.fu-haus {
+  background: var(--fu-feld);
+  color: var(--fu-tinte);
+  border-radius: calc(var(--s) * 3);
+  border-left: calc(var(--s) * 5) solid var(--fu-s2);
+  padding: calc(var(--s) * 4) calc(var(--s) * 8) calc(var(--s) * 5);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 2);
+  flex: 0 0 auto;
+}
+.fu-haus.durstig { border-left-color: var(--fu-warn); box-shadow: 0 0 0 calc(var(--s) * 2) rgba(157, 53, 32, 0.45); }
+.fu-haus.weg { opacity: 0.5; filter: grayscale(1); border-left-color: #555; }
+
+.fu-z1, .fu-z2, .fu-z3, .fu-z4 {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 7);
+}
+.fu-z1 .fu-name {
+  font-size: calc(var(--s) * 20);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1 1 auto;
+}
+.fu-z1 .fu-km,
+.fu-z1 .fu-marke {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 15);
+  color: var(--fu-schwach);
+  white-space: nowrap;
+}
+.fu-z1 .fu-marke {
+  background: var(--fu-s2);
+  color: var(--fu-hell);
+  border-radius: calc(var(--s) * 2);
+  padding: 0 calc(var(--s) * 5);
+  letter-spacing: calc(var(--s) * 1);
+}
+
+.fu-betten { display: inline-flex; gap: calc(var(--s) * 3); }
+.fu-betten .fu-bett {
+  display: block;
+  width: calc(var(--s) * 15);
+  height: calc(var(--s) * 17);
+  border: calc(var(--s) * 2) dashed var(--fu-warn);
+  border-radius: calc(var(--s) * 2);
+  background: transparent;
+}
+.fu-betten .fu-bett.voll { background: var(--fu-s2); border-style: solid; border-color: var(--fu-rand); }
+.fu-betten .fu-bett.satt { border-style: solid; border-color: var(--fu-gut); opacity: 0.4; }
+
+.fu-z2 .fu-will {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 16);
+  white-space: nowrap;
+}
+
+/* Die hl-Reihe: drei Jahre, an denen man den Verlust kommen sieht. */
+.fu-reihe {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: calc(var(--s) * 2);
+  height: calc(var(--s) * 22);
+  padding: 0 calc(var(--s) * 2);
+  border-bottom: calc(var(--s) * 2) solid var(--fu-linie);
+}
+.fu-reihe .fu-saeule {
+  display: block;
+  width: calc(var(--s) * 9);
+  background: var(--fu-gut);
+  border-radius: calc(var(--s) * 1) calc(var(--s) * 1) 0 0;
+}
+.fu-reihe .fu-saeule.mager { background: var(--fu-warn); }
+
+.fu-zahlen {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 14);
+  color: var(--fu-schwach);
+  white-space: nowrap;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fu-mahnung { display: inline-flex; gap: calc(var(--s) * 3); }
+.fu-mahnung i {
+  display: block;
+  width: calc(var(--s) * 10);
+  height: calc(var(--s) * 10);
+  border-radius: 50%;
+  border: calc(var(--s) * 2) solid var(--fu-schwach);
+}
+.fu-mahnung i.an { background: var(--fu-warn); border-color: var(--fu-warn); }
+.fu-mahnung.rot i.an { box-shadow: 0 0 calc(var(--s) * 6) var(--fu-warn); }
+
+.fu-z4 { margin-top: calc(var(--s) * 1); }
+.fu-bindung {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 14);
+  color: var(--fu-schwach);
+  margin-left: auto;
+  white-space: nowrap;
+}
+.fu-verloren {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 15);
+  color: var(--fu-warn);
+  letter-spacing: calc(var(--s) * 1);
+}
+
+/* --------------------------------------------------------------------------
+   DIE ANSCHLAGTAFEL — Schiefer, Kreide
+   -------------------------------------------------------------------------- */
+.fu-schiefer {
+  background: var(--fu-schiefer);
+  color: var(--fu-kreide);
+  border-color: var(--fu-rand);
+}
+.fu-schiefer .fu-kopf { border-bottom-color: rgba(234, 226, 207, 0.3); }
+
+.fu-budget {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 2);
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 5) calc(var(--s) * 8);
+}
+#buehne[data-epoche="4"] .fu-budget { background: rgba(0, 0, 0, 0.08); }
+.fu-budget b { font-size: calc(var(--s) * 21); letter-spacing: calc(var(--s) * 1); }
+.fu-budget span { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 15); opacity: 0.85; }
+.fu-budget.leer b { color: #e08a6a; }
+
+.fu-gewischt {
+  flex: 0 0 auto;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 2);
+  color: #f0c08a;
+  border: calc(var(--s) * 2) dashed #f0c08a;
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 3) calc(var(--s) * 7);
+  text-align: center;
+}
+
+.fu-sorten { flex: 0 0 auto; display: flex; flex-direction: column; gap: calc(var(--s) * 5); }
+
+.fu-sorte {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 2);
+  padding: calc(var(--s) * 4) calc(var(--s) * 7);
+  border-left: calc(var(--s) * 5) solid var(--fu-s2);
+  background: rgba(255, 250, 235, 0.09);
+  border-radius: calc(var(--s) * 3);
+}
+#buehne[data-epoche="4"] .fu-sorte { background: rgba(0, 0, 0, 0.06); }
+.fu-sorte.s1 { border-left-color: var(--fu-s1); }
+.fu-sorte.s2 { border-left-color: var(--fu-s2); }
+.fu-sorte.s3 { border-left-color: var(--fu-s3); }
+
+.fu-sorte-kopf { display: flex; align-items: center; gap: calc(var(--s) * 7); }
+.fu-sorte-kopf b { font-size: calc(var(--s) * 19); flex: 1 1 auto; white-space: nowrap; }
+.fu-zeichen {
+  display: inline-block;
+  width: calc(var(--s) * 22);
+  height: calc(var(--s) * 22);
+  line-height: calc(var(--s) * 22);
+  text-align: center;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 15);
+  font-style: normal;
+  border-radius: 50%;
+  background: var(--fu-s2);
+  color: var(--fu-hell);
+}
+.fu-sorte.s1 .fu-zeichen { background: var(--fu-s1); }
+.fu-sorte.s3 .fu-zeichen { background: var(--fu-s3); }
+.fu-erloes { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 16); white-space: nowrap; }
+
+.fu-sorte-kosten { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 8); }
+.fu-sorte-kosten span {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 14);
+  opacity: 0.85;
+  white-space: nowrap;
+}
+.fu-lagerzeit { color: #f0c08a; opacity: 1 !important; }
+.fu-eiszeichen { color: #9fd0e0; opacity: 1 !important; }
+.fu-sommerfest { color: #b7d69a; opacity: 1 !important; }
+
+.fu-stell { display: flex; align-items: center; gap: calc(var(--s) * 6); }
+.fu-planzahl {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 22);
+  min-width: calc(var(--s) * 24);
+  text-align: center;
+}
+
+.fu-sudmeldung {
+  flex: 0 0 auto;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 15);
+  opacity: 0.9;
+  border-top: 1px dotted rgba(234, 226, 207, 0.3);
+  padding-top: calc(var(--s) * 4);
+}
+
+.fu-kaeufe {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 5);
+  margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   DER KELLER — Fassbetten, jedes mit Sorte und Braudatum
+   -------------------------------------------------------------------------- */
+.fu-gitter {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(var(--spalten, 6), 1fr);
+  gap: calc(var(--s) * 4);
+  align-content: start;
+  overflow: hidden;
+}
+
+.fu-fass {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(var(--s) * 34);
+  border-radius: calc(var(--s) * 6) / calc(var(--s) * 12);
+  background:
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.16) 0 calc(var(--s)*2), transparent calc(var(--s)*2) calc(var(--s)*9)),
+    var(--fu-s2);
+  border: calc(var(--s) * 2) solid var(--fu-rand);
+  color: var(--fu-hell);
+  font-style: normal;
+  box-shadow: inset 0 calc(var(--s) * 3) calc(var(--s) * 5) rgba(255, 240, 200, 0.2);
+}
+.fu-fass.s1 { background-color: var(--fu-s1); }
+.fu-fass.s2 { background-color: var(--fu-s2); }
+.fu-fass.s3 { background-color: var(--fu-s3); }
+.fu-fass b { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 15); line-height: 1; }
+.fu-fass em { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 11); font-style: normal; opacity: 0.85; }
+.fu-fass.klein b { font-size: calc(var(--s) * 13); }
+.fu-fass.klein em { font-size: calc(var(--s) * 10); }
+
+/* Was noch nicht reif ist, belegt einen Platz und bringt nichts ein. */
+.fu-fass.fu-lagert {
+  background-image: repeating-linear-gradient(135deg,
+    rgba(255, 255, 255, 0.22) 0 calc(var(--s) * 4),
+    transparent calc(var(--s) * 4) calc(var(--s) * 9));
+  opacity: 0.86;
+}
+.fu-fass.leer {
+  background: transparent;
+  border-style: dashed;
+  border-color: rgba(255, 240, 210, 0.35);
+  box-shadow: none;
+}
+#buehne[data-epoche="4"] .fu-fass.leer { border-color: rgba(35, 32, 25, 0.3); }
+
+.fu-kellerfuss {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 10);
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 14);
+  opacity: 0.9;
+}
+.fu-eis { color: #9fd0e0; }
+.fu-eis.knapp { color: #e08a6a; }
+.fu-verfall {
+  flex: 0 0 auto;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 14);
+  color: #e08a6a;
+}
+
+/* --------------------------------------------------------------------------
+   DER WAGEN
+   -------------------------------------------------------------------------- */
+.fu-fracht { flex: 0 0 auto; display: flex; gap: calc(var(--s) * 6); }
+.fu-fracht .knopf { flex: 1 1 0; }
+.knopf.fu-gewaehlt {
+  background: linear-gradient(180deg, #f9d79a 0%, #dfae62 100%);
+  box-shadow: 0 0 0 calc(var(--s) * 3) var(--gold), 0 calc(var(--s) * 3) 0 rgba(0, 0, 0, 0.35);
+}
+
+.fu-wagenbetten {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: calc(var(--s) * 4);
+  padding: calc(var(--s) * 5);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: calc(var(--s) * 3);
+  overflow: hidden;
+}
+#buehne[data-epoche="4"] .fu-wagenbetten { background: rgba(0, 0, 0, 0.08); }
+
+.fu-wbett {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--s) * 58);
+  height: calc(var(--s) * 36);
+  border: calc(var(--s) * 2) dashed rgba(255, 240, 210, 0.4);
+  border-radius: calc(var(--s) * 3);
+  font-style: normal;
+}
+#buehne[data-epoche="4"] .fu-wbett { border-color: rgba(35, 32, 25, 0.35); }
+.fu-wbett.voll {
+  border-style: solid;
+  border-color: var(--fu-rand);
+  background: var(--fu-s2);
+  color: var(--fu-hell);
+}
+.fu-wbett.s1 { background: var(--fu-s1); }
+.fu-wbett.s3 { background: var(--fu-s3); }
+.fu-wbett b { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 15); line-height: 1.05; }
+.fu-wbett em { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 12); font-style: normal; opacity: 0.9; }
+
+.fu-hilfe { flex: 0 0 auto; display: flex; gap: calc(var(--s) * 6); }
+
+.knopf.fu-abschicken {
+  flex: 0 0 auto;
+  justify-content: center;
+  font-size: calc(var(--s) * 26);
+  letter-spacing: calc(var(--s) * 2);
+  padding: calc(var(--s) * 11) calc(var(--s) * 20);
+  background: linear-gradient(180deg, #f4dfae 0%, #d9b477 100%);
+}
+.knopf.fu-abschicken:not([disabled]) {
+  box-shadow: 0 calc(var(--s) * 4) 0 rgba(0, 0, 0, 0.4), 0 0 calc(var(--s) * 16) rgba(232, 201, 138, 0.5);
+}
+
+.fu-meldung {
+  flex: 0 0 auto;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 15);
+  opacity: 0.92;
+}
+
+/* --------------------------------------------------------------------------
+   KLEINE KNOEPFE — damit vier davon nebeneinander passen
+   -------------------------------------------------------------------------- */
+.knopf.fu-klein {
+  font-size: calc(var(--s) * 17);
+  padding: calc(var(--s) * 5) calc(var(--s) * 10);
+  min-height: calc(var(--s) * 30);
+  gap: calc(var(--s) * 6);
+  border-width: calc(var(--s) * 2);
+}
+.knopf.fu-klein .preis { font-size: calc(var(--s) * 15); padding-left: calc(var(--s) * 8); }
+.knopf.fu-laden { background: linear-gradient(180deg, #e3efd2 0%, #c4d9a8 100%); }
+.knopf.fu-fest  { background: linear-gradient(180deg, #f2dcd4 0%, #dcb6a8 100%); }
+
+/* Die erste Fuhre soll ohne ein Wort Anleitung sitzen: das duerstende Haus
+   blinkt einmal, bis die erste Fuhre gefahren ist. */
+.knopf.fu-weiser {
+  animation: fu-puls 1.5s ease-in-out infinite;
+}
+@keyframes fu-puls {
+  0%, 100% { box-shadow: 0 calc(var(--s) * 3) 0 rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(157, 53, 32, 0.6); }
+  50%      { box-shadow: 0 calc(var(--s) * 3) 0 rgba(0, 0, 0, 0.35), 0 0 0 calc(var(--s) * 8) rgba(157, 53, 32, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   ZEICHEN AUF DEM BILD — dieselben Orte in allen vier Epochen
+   -------------------------------------------------------------------------- */
+.fu-marke {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--s) * 3);
+  padding: calc(var(--s) * 3) calc(var(--s) * 7);
+  background: rgba(255, 248, 230, 0.86);
+  border: calc(var(--s) * 2) solid var(--fu-rand);
+  border-radius: calc(var(--s) * 3);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 7) rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+.fu-marke b {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 15);
+  letter-spacing: calc(var(--s) * 1);
+  color: var(--fu-tinte);
+}
+.fu-marke .fu-mbetten { display: flex; gap: calc(var(--s) * 2); }
+.fu-marke .fu-mbetten i {
+  display: block;
+  width: calc(var(--s) * 8);
+  height: calc(var(--s) * 11);
+  border: calc(var(--s) * 1) solid var(--fu-warn);
+  border-radius: calc(var(--s) * 1);
+}
+.fu-marke.weg { opacity: 0.4; filter: grayscale(1); }
+
+/* --------------------------------------------------------------------------
+   DAS GEORGI-BLATT — der Sommer laeuft ohne Hand ab
+   -------------------------------------------------------------------------- */
+.fu-sommerblatt {
+  left: 21%;
+  top: 11%;
+  width: 58%;
+  max-height: 78%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 8);
+  overflow-y: auto;
+}
+.fu-sommerblatt h3 {
+  margin: calc(var(--s) * 6) 0 0;
+  font-size: calc(var(--s) * 26);
+  border-bottom: calc(var(--s) * 2) solid var(--linie);
+  padding-bottom: calc(var(--s) * 5);
+}
+.fu-satz { font-size: calc(var(--s) * 20); line-height: 1.3; }
+.fu-satz.stark { font-family: var(--mono); font-size: calc(var(--s) * 19); }
+
+.fu-sommer-tab { display: flex; flex-direction: column; gap: calc(var(--s) * 5); }
+.fu-sommer-zeile { display: flex; align-items: center; gap: calc(var(--s) * 10); }
+.fu-sommer-zeile .m {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 18);
+  min-width: calc(var(--s) * 150);
+}
+.fu-sommer-zeile .balken {
+  flex: 0 0 auto;
+  width: calc(var(--s) * 420);
+  height: calc(var(--s) * 22);
+  background: rgba(43, 29, 16, 0.12);
+  border-radius: calc(var(--s) * 3);
+  overflow: hidden;
+}
+.fu-sommer-zeile .balken i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(180deg, #b98c46, #7d5626);
+  animation: fu-leerlauf 0.7s ease-out both;
+}
+@keyframes fu-leerlauf { from { width: 100%; } }
+.fu-sommer-zeile .w { font-family: var(--mono); font-size: calc(var(--s) * 16); }
+
+.fu-sommer-wahl { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 8); }

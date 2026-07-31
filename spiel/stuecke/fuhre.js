@@ -997,7 +997,10 @@
   function zeichneTafel(fach) {
     var e = ep();
     var b = brett('fu-tafel', e.tafel.name.toUpperCase(), e.tafel.unter);
-    B.orte.setze(b, 'sudhaus', { anker: 'ecke' });
+    /* Die Tafel haengt an der Sudhauswand — der Ort steht als Zeugnis dran,
+       gesetzt wird sie ueber die Platzordnung in stil/fuhre.css, weil ein
+       Brett dieser Groesse kein Punkt ist. */
+    b.setAttribute('data-ort', 'sudhaus');
     b.classList.add('fu-schiefer');
 
     if (e.budget) {
