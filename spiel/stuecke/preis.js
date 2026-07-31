@@ -1,109 +1,1085 @@
 /* ===========================================================================
-   stuecke/preis.js — STUMMEL fuer DER PREIS.
-   Ersetze diese Datei vollstaendig.
+   stuecke/preis.js — DER PREIS.  Die Michaelitafel.
 
-   Ebene: 'blatt' (Michaeli-Blatt, Chronik, Panels).
+   DER ZEITPUNKT, NICHT DAS BLATT
+   Zu Michaeli — Woche 1, dem 29. September — klappt die Buehne um. Wo im
+   Braujahr die Haeuser, die Anschlagtafel, der Keller und der Wagen liegen,
+   liegt an diesem einen Tag die Optionsflaeche: drei bis fuenf benannte
+   Angebote NEBENEINANDER, jedes mit Preisschild, Bauzeit und der Folge, die
+   es spaeter hat. Die Kasse reicht nie fuer alles, und die Groessen sind
+   ungleich — 3.000 fuer das Dach der Krone neben 16.000 fuer den
+   Felsenkeller. Deshalb entstehen Buendel und kein Kreuzchen mit drei
+   Feldern.
 
-   Was der Stummel schon richtig macht:
-   · Ein Blatt, das aufgeht, statt eines Reiters, der umschaltet.
-   · Optionen, die einander AUSSCHLIESSEN, mit Preisschild nebeneinander.
-   · Eine UNWIDERRUFLICHE Festlegung (der gebundene Preis) — die zaehlt der
-     Kritiker gesondert, und ohne sie ist ein Wirtschaftsspiel harmlos.
+   GENAU EINE FESTLEGUNG JE AMTSZEIT
+   Eine Zeile tiefer steht, was nicht zurueckgenommen werden kann. Je Amtszeit
+   eine. Sie aendert eine REGEL fuer den Rest der Partie — Hopfen statt Grut,
+   der Freikauf vom Grundherrn, Vertrag statt Gunst, die Handelsmarke — und
+   steht danach unabaenderlich in der Chronik, die dieses Stueck mitbaut.
+   Der zweite Klick nimmt sie nicht zurueck; es gibt keinen zweiten Klick.
+
+   DIE EINE ZAHL
+   Dieses Stueck verantwortet das Verhaeltnis Barschaft : Preis des naechsten
+   sinnvollen Zuges. Es faellt, weil die Bierordnung in JAHRZEHNTEN um ein
+   Zehntel steigt und der Anschlag in JAHREN um sieben Hundertstel — und weil
+   die billigen Verbesserungen einmalig sind und ausgehen. Beides steht auf
+   der Tafel, in Zahlen, nicht im Quelltext.
+
+   WAS HIER NIE PASSIERT
+   Das Blatt bewertet nicht an Stelle des Spielers. Keine Empfehlung, keine
+   Warnung, keine Schlusszeile, die droht. Es stehen Zahlen da und die Regel,
+   nach der sie zustande kommen. Wer nichts nimmt, bekommt dafuer keinen
+   Tadel — in manchen Jahren ist Nichtnehmen die richtige Antwort, und die
+   Tafel sagt auch das nicht, sie zeigt nur, was faellig wird.
+
+   ?tafel=zu  laesst die Tafel beim Laden geschlossen (fuer Bildaufnahmen).
+
+   BESITZSTAND: stuecke/preis*.js · stil/preis*.css · bild/preis/** · ton/preis/**
    =========================================================================== */
 
 (function (B) {
   'use strict';
 
-  var offen = false;
-  var gebundenBis = 0;
+  var D = window.PREIS_DATEN;
 
-  function tafel() {
-    return PREIS_DATEN.epochen[B.welt.zeit.epoche] || PREIS_DATEN.epochen[1];
+  /* ----------------------------------------------------------------------
+     ZUSTAND. Alles, was welt.js nicht kennt, wohnt hier.
+     ---------------------------------------------------------------------- */
+  var Z = {
+    epoche: 0,
+    startjahr: 0,
+    tafelJahr: 0,
+    offen: false,
+    seite: 'tafel',
+
+    umsatz: 0,
+    hoehe: 0,
+    anschlag: 0,
+    kaeufe: 0,
+
+    angebote: [],          /* Schluessel der diesjaehrigen Auswahl        */
+    genommen: {},          /* k -> {jahr, preis, fertig}                  */
+    fertig: {},            /* k -> Jahr der Fertigstellung                */
+    gesperrt: {},          /* k -> Schluessel, der ihn ausgeschlossen hat */
+    raten: [],             /* [{k, name, rate, offen, faellig}]           */
+
+    pflichtWeg: {},
+    pflichtNeu: [],
+    ertraege: [],          /* [{k, name, betrag}] jaehrlich               */
+    rohstoffe: [],         /* [{k, name, menge}] jaehrlich                */
+    aufschlag: 0,
+
+    umlagen: [],           /* [{jahr, name, sagt, bezahlt}]               */
+    handlohnFaellig: false,
+    rueckstand: 0,
+
+    handlohnWeg: false,
+    handlohnHalb: false,
+    umlageHalb: false,
+    preisDeckel: false,
+    wachstumsdeckel: false,
+
+    festGenommen: {},      /* k -> {jahr, amtszeit, name}                 */
+    festAmtszeit: {},      /* Amtszeit-Nr -> Schluessel                   */
+
+    rechnung: [],          /* was dieses Michaeli gebucht wurde           */
+    chronik: [],           /* eigene, unabaenderliche Chronik             */
+    leiter: [],            /* {jahr, kasse, billigst, verhaeltnis}        */
+    ersteTafel: true,
+    meldung: null
+  };
+
+  /* ----------------------------------------------------------------------
+     KLEINES HANDWERK
+     ---------------------------------------------------------------------- */
+  function ep() { return D.epochen[B.welt.zeit.epoche] || D.epochen[1]; }
+  function jahr() { return B.welt.zeit.jahr; }
+  function amtszeit() { return B.welt.zeit.amtszeit || { nr: 1, name: 'Unbekannt' }; }
+  function geld(n) { return B.welt.geld(n); }
+
+  /* Zwei bedeutende Stellen — damit ein Anschlag wie ein Anschlag aussieht
+     und nicht wie ein Rechenergebnis. */
+  function rundePreis(p) {
+    p = Math.max(1, p);
+    var stufe = Math.floor(Math.log(p) / Math.LN10) - 1;
+    var g = Math.pow(10, Math.max(0, stufe));
+    return Math.max(1, Math.round(p / g) * g);
   }
 
-  function setzePreis(neu, wieLange, wort) {
-    B.welt.haus.preis = neu;
-    if (wieLange) {
-      gebundenBis = B.welt.zeit.jahr + wieLange;
-      B.welt.schreibe('Der Preis ist gebunden: ' + B.welt.geld(neu) + ' je '
-        + tafel().einheit + ' bis ' + gebundenBis + '. Zurueck geht das nicht.', 'preis');
+  function angebotVon(k) {
+    var l = ep().angebote;
+    for (var i = 0; i < l.length; i++) if (l[i].k === k) return l[i];
+    return null;
+  }
+
+  function festlegungVon(k) {
+    var l = ep().festlegungen;
+    for (var i = 0; i < l.length; i++) if (l[i].k === k) return l[i];
+    return null;
+  }
+
+  /* ----------------------------------------------------------------------
+     DER ANSCHLAG — die Zahl, aus der alle Preise dieses Jahres folgen.
+     Sie steht auf der Tafel, mit ihren beiden Bestandteilen: was durch das
+     Haus geht (Umsatz) und was im Haus liegt (Hoehe). Das ist keine
+     Gummiwand, sondern die Regel, nach der ein Rat, ein Boettcher und eine
+     Bank tatsaechlich rechnen: wer mehr hat, wird teurer bedient.
+     ---------------------------------------------------------------------- */
+  function umsatzGewicht() { return Z.wachstumsdeckel ? 0.18 : 0.30; }
+
+  function rechneAnschlag() {
+    var e = ep();
+    var wert = umsatzGewicht() * Z.umsatz + 1.5 * Z.hoehe;
+    var basis = Math.max(e.grund, wert);
+    var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
+    Z.anschlag = basis * Math.pow(e.teuerungJahr, jahre) * Math.pow(e.teuerungKauf, Z.kaeufe);
+    return Z.anschlag;
+  }
+
+  function messeUmsatz(j) {
+    var summe = 0;
+    B.protokoll.forEach(function (p) {
+      if (p.jahr === j && p.wer === 'spieler' && p.preis > 0) summe += p.preis;
+    });
+    return summe;
+  }
+
+  /* Preis eines Angebots in diesem Jahr. */
+  function preisVon(a) { return rundePreis(a.anteil * Z.anschlag); }
+
+  /* Was jetzt zu zahlen ist, wenn gebaut wird (Anzahlung), und die Raten. */
+  function zahlplan(a) {
+    var ganz = preisVon(a);
+    if (!a.bauzeit) return { ganz: ganz, jetzt: ganz, rate: 0, raten: 0 };
+    var jetzt = rundePreis(ganz * 0.45);
+    var rest = Math.max(0, ganz - jetzt);
+    var rate = rundePreis(rest / a.bauzeit);
+    return { ganz: ganz, jetzt: jetzt, rate: rate, raten: a.bauzeit };
+  }
+
+  /* ----------------------------------------------------------------------
+     PFLICHTEN — was jedes Jahr faellig ist, mit Namen.
+     ---------------------------------------------------------------------- */
+  function pflichtenJetzt() {
+    var e = ep();
+    var l = [];
+    e.pflichten.forEach(function (p) {
+      if (Z.pflichtWeg[p.k]) return;
+      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.anteil * Z.anschlag) });
+    });
+    Z.pflichtNeu.forEach(function (p) {
+      if (Z.pflichtWeg[p.k]) return;
+      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.anteil * Z.anschlag) });
+    });
+    return l;
+  }
+
+  function pflichtSumme() {
+    var s = 0;
+    pflichtenJetzt().forEach(function (p) { s += p.betrag; });
+    return s;
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE BIERORDNUNG — das Einkommen je Fass. Sie steigt in Jahrzehnten.
+     Der Aufschlag ist alles, was das Haus selbst dazugebaut hat.
+     ---------------------------------------------------------------------- */
+  function ordnung() {
+    var l = ep().ordnung, treffer = l[0];
+    for (var i = 0; i < l.length; i++) if (jahr() >= l[i].ab) treffer = l[i];
+    return treffer;
+  }
+
+  function setzeBierpreis() {
+    var o = ordnung();
+    B.welt.haus.preis = o.preis * (1 + Z.aufschlag);
+    return B.welt.haus.preis;
+  }
+
+  /* ----------------------------------------------------------------------
+     BUCHEN. Was nicht bezahlt werden kann, wird angeschrieben — als Zahl,
+     nicht als Drohung.
+     ---------------------------------------------------------------------- */
+  function buche(betrag, name, art) {
+    betrag = Math.round(betrag);
+    if (betrag <= 0) return true;
+    var gut = B.welt.zahle(betrag, name, 'spieler');
+    if (!gut) {
+      Z.rueckstand += betrag;
+      Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', offen: true });
+      return false;
     }
-    B.welt.protokolliere({ wer: 'spieler', was: wort + ' — ' + B.welt.geld(neu) + ' je ' + tafel().einheit, preis: 0 });
-    B.ton.spiele('preis:setzen');
-    B.sende('zeichne', { grund: 'preis' });
+    Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht' });
+    return true;
   }
 
+  function loese(betrag, name, art) {
+    betrag = Math.round(betrag);
+    if (betrag <= 0) return;
+    B.welt.nimm(betrag, name, 'spieler');
+    Z.rechnung.push({ name: name, betrag: betrag, art: art || 'ertrag' });
+  }
+
+  /* ----------------------------------------------------------------------
+     BINDUNGEN — der Vertrag, der aus Gunst Recht macht.
+     ---------------------------------------------------------------------- */
+  function bindeHaeuser(n, jahre) {
+    var frei = B.welt.adressenJetzt().filter(function (a) {
+      return !a.bindung || a.bindung.wem !== 'haus';
+    }).sort(function (a, b) { return b.bedarf - a.bedarf; });
+    var namen = [];
+    for (var i = 0; i < n && i < frei.length; i++) {
+      B.welt.binde(frei[i].schluessel, 'haus', 'Vertrag', jahr() + jahre);
+      namen.push(frei[i].name);
+    }
+    return namen;
+  }
+
+  function nimmPfand() {
+    var meine = B.welt.adressenJetzt().filter(function (a) {
+      return a.bindung && a.bindung.wem === 'haus';
+    });
+    var a = meine.length ? meine[meine.length - 1] : B.welt.adressenJetzt()[0];
+    if (!a) return null;
+    B.welt.binde(a.schluessel, 'adler', 'Pfand', jahr() + 5);
+    B.welt.protokolliere({ wer: 'gegner', was: a.name + ' als Pfand fuer den Anschlag — fuenf Jahre beim Adler',
+      preis: 0, adresse: a.schluessel });
+    return a.name;
+  }
+
+  /* ----------------------------------------------------------------------
+     WIRKUNG EINES BAUS ODER EINER FESTLEGUNG
+     ---------------------------------------------------------------------- */
+  function wende(quelle, w) {
+    if (!w) return;
+    if (w.ertrag) Z.ertraege.push({ k: quelle.k, name: quelle.name, betrag: w.ertrag });
+    if (w.rohstoff) Z.rohstoffe.push({ k: quelle.k, name: quelle.name, menge: w.rohstoff });
+    if (w.plaetze) B.welt.vorrat.plaetze += w.plaetze;
+    if (w.ansehen) B.welt.haus.ansehen += w.ansehen;
+    if (w.preis) {
+      if (!(Z.preisDeckel && w.preis > 0)) Z.aufschlag = B.rund(Z.aufschlag + w.preis, 4);
+    }
+    if (w.pflichtWeg) Z.pflichtWeg[w.pflichtWeg] = true;
+    if (w.pflichtNeu) Z.pflichtNeu.push(w.pflichtNeu);
+    if (w.handlohnWeg) Z.handlohnWeg = true;
+    if (w.handlohnHalb) Z.handlohnHalb = true;
+    if (w.umlageHalb) Z.umlageHalb = true;
+    if (w.preisDeckel) Z.preisDeckel = true;
+    if (w.wachstumsdeckel) Z.wachstumsdeckel = true;
+    if (w.bindung) {
+      var namen = bindeHaeuser(w.bindung.n, w.bindung.jahre);
+      if (namen.length) {
+        B.welt.schreibe(quelle.name + ': ' + namen.join(', ') + ' nehmen bis '
+          + (jahr() + w.bindung.jahre) + ' nur Bier dieses Hauses.', 'preis');
+      }
+    }
+    if (w.einmal) loese(rundePreis(w.einmal * Z.anschlag), quelle.name + ' — Zufluss', 'zufluss');
+    setzeBierpreis();
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE EIGENE CHRONIK — append only. Nichts wird je entfernt.
+     ---------------------------------------------------------------------- */
+  function chronik(art, text, dick) {
+    Z.chronik.push({
+      jahr: jahr(), art: art, text: text, dick: !!dick,
+      amtszeit: amtszeit().name, nr: amtszeit().nr
+    });
+  }
+
+  /* ======================================================================
+     MICHAELI — der Zeitpunkt.
+     ====================================================================== */
+  function michaeli(erste) {
+    var e = ep();
+    Z.rechnung = [];
+    Z.tafelJahr = jahr();
+
+    /* 1. Was durch das Haus ging, und was im Haus liegt. */
+    if (!erste) {
+      var gemessen = messeUmsatz(jahr() - 1);
+      if (gemessen > 0) Z.umsatz = gemessen;
+    }
+    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.94);
+    rechneAnschlag();
+
+    /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. */
+    if (Z.rueckstand > 0) {
+      var alt = Math.round(Z.rueckstand * 1.1);
+      Z.rueckstand = 0;
+      buche(alt, 'Rueckstand aus dem Vorjahr, mit Aufschlag', 'rueckstand');
+    }
+
+    /* 3. Die Pflichten des Jahres. Im ersten Michaeli einer Partie sind sie
+          abgetragen — sonst begaenne das Spiel mit einer Schuld. */
+    if (!erste) {
+      pflichtenJetzt().forEach(function (p) { buche(p.betrag, p.name, 'pflicht'); });
+    }
+
+    /* 4. Was gebaut ist, traegt. Nominal — ein fester Zins wird mit den
+          Jahren weniger wert, und genau das ist der Punkt. */
+    Z.ertraege.forEach(function (t) { loese(t.betrag, t.name, 'ertrag'); });
+    Z.rohstoffe.forEach(function (t) {
+      B.welt.haus.rohstoff += t.menge;
+      Z.rechnung.push({ name: t.name, betrag: 0, art: 'rohstoff', menge: t.menge });
+    });
+
+    /* 5. Die Raten der laufenden Bauten. */
+    var nochOffen = [];
+    Z.raten.forEach(function (r) {
+      if (r.faellig > jahr()) { nochOffen.push(r); return; }
+      if (buche(r.rate, 'Rate: ' + r.name, 'rate')) {
+        r.offen -= 1;
+        r.faellig = jahr() + 1;
+        if (r.offen > 0) nochOffen.push(r);
+        else fertigstellen(r.k);
+      } else {
+        r.faellig = jahr() + 1;
+        nochOffen.push(r);
+        chronik('bau', 'Der Bau ' + r.name + ' ruht: die Rate blieb offen.');
+      }
+    });
+    Z.raten = nochOffen;
+    /* Bauten ohne Rate werden nach ihrer Bauzeit fertig. */
+    Object.keys(Z.genommen).forEach(function (k) {
+      var g = Z.genommen[k];
+      if (!Z.fertig[k] && g.fertig <= jahr() && !hatRate(k)) fertigstellen(k);
+    });
+
+    /* 6. Der Handlohn beim Erbfall. */
+    if (Z.handlohnFaellig) {
+      Z.handlohnFaellig = false;
+      if (!Z.handlohnWeg) {
+        var h = rundePreis(e.handlohnAnteil * Z.anschlag * (Z.handlohnHalb ? 0.5 : 1));
+        buche(h, 'Handlohn beim Erbfall an den Grundherrn', 'umlage');
+        chronik('pflicht', 'Handlohn beim Erbfall: ' + geld(h) + '.');
+      } else {
+        Z.rechnung.push({ name: 'Handlohn beim Erbfall — entfaellt (Braurecht am Haus)', betrag: 0, art: 'frei' });
+      }
+    }
+
+    /* 7. Die ausserordentliche Umlage, wenn sie faellig ist. */
+    var u = umlageDesJahres();
+    if (u && !u.bezahlt) {
+      u.bezahlt = true;
+      var betrag = rundePreis(e.umlageAnteil * Z.anschlag * (Z.umlageHalb ? 0.5 : 1));
+      u.betrag = betrag;
+      if (!buche(betrag, u.name, 'umlage')) {
+        var weg = nimmPfand();
+        chronik('umlage', u.name + ' (' + geld(betrag) + ') blieb offen. '
+          + (weg ? 'Pfand: ' + weg + '.' : ''));
+        B.welt.schreibe(u.name + ': ' + geld(betrag) + ' blieb offen. '
+          + (weg ? weg + ' geht auf fuenf Jahre an den Adler.' : ''), 'preis');
+      } else {
+        chronik('umlage', u.name + ': ' + geld(betrag) + ' bezahlt.');
+      }
+    }
+
+    /* 8. Die Bierordnung des Jahres. */
+    setzeBierpreis();
+
+    /* 9. Die Angebote dieses Michaeli. */
+    waehleAngebote();
+
+    /* 10. Die eine Zahl, aufgeschrieben, damit man sie nebeneinanderlegen kann. */
+    var billig = billigstesAngebot();
+    Z.leiter.push({
+      jahr: jahr(),
+      kasse: Math.round(B.welt.haus.kasse),
+      billigst: billig ? billig.preis : 0,
+      name: billig ? billig.a.name : '—',
+      verhaeltnis: billig && billig.preis ? B.welt.haus.kasse / billig.preis : 0
+    });
+    if (Z.leiter.length > 24) Z.leiter.shift();
+
+    Z.offen = (B.arg.roh.tafel !== 'zu') || !erste;
+    Z.seite = 'tafel';
+    B.ton.spiele('preis:michaeli', { art: 'geraeusch' });
+    if (!erste) B.ton.spiele('preis:muenzen', { art: 'geraeusch' });
+  }
+
+  function hatRate(k) {
+    for (var i = 0; i < Z.raten.length; i++) if (Z.raten[i].k === k) return true;
+    return false;
+  }
+
+  function fertigstellen(k) {
+    if (Z.fertig[k]) return;
+    var a = angebotVon(k);
+    if (!a) return;
+    Z.fertig[k] = jahr();
+    wende(a, a.wirkung);
+    Z.rechnung.push({ name: a.name + ' — fertig', betrag: 0, art: 'fertig' });
+    chronik('bau', a.name + ' steht. ' + a.satz);
+    B.welt.schreibe(a.name + ' ist fertig. ' + a.satz, 'preis');
+    B.ton.spiele('preis:fertig', { art: 'geraeusch' });
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE UMLAGEN — ausserordentlich, angekuendigt, unausweichlich.
+     Sie sind der Grund, warum es Jahre gibt, in denen Nichtnehmen die
+     richtige Antwort ist. Die Tafel sagt das nicht; sie zeigt nur das Datum.
+     ---------------------------------------------------------------------- */
+  function planeUmlagen() {
+    var e = ep();
+    Z.umlagen = [];
+    var j = Z.startjahr;
+    for (var i = 0; i < e.abstaende.length; i++) {
+      j += e.abstaende[i];
+      var name = e.umlagen[i % e.umlagen.length];
+      Z.umlagen.push({ jahr: j, name: name.name, sagt: name.sagt, bezahlt: false, betrag: 0 });
+    }
+  }
+
+  function umlageDesJahres() {
+    for (var i = 0; i < Z.umlagen.length; i++) if (Z.umlagen[i].jahr === jahr()) return Z.umlagen[i];
+    return null;
+  }
+
+  function kommendeLasten() {
+    var e = ep();
+    var l = [];
+    Z.umlagen.forEach(function (u) {
+      if (u.jahr < jahr() || u.bezahlt) return;
+      l.push({
+        jahr: u.jahr, name: u.name, sagt: u.sagt,
+        betrag: rundePreis(e.umlageAnteil * Z.anschlag * (Z.umlageHalb ? 0.5 : 1)),
+        art: 'umlage'
+      });
+    });
+    /* Der Erbfall steht im Kalender: die Amtszeit hat ein Ende. */
+    if (!Z.handlohnWeg && amtszeit().bis && amtszeit().bis > jahr()) {
+      l.push({
+        jahr: amtszeit().bis, name: 'Handlohn beim Erbfall',
+        sagt: amtszeit().name + ' fuehrt das Haus seit ' + amtszeit().seit + '.',
+        betrag: rundePreis(e.handlohnAnteil * Z.anschlag * (Z.handlohnHalb ? 0.5 : 1)),
+        art: 'erbfall'
+      });
+    }
+    /* Die Raten laufender Bauten. */
+    Z.raten.forEach(function (r) {
+      l.push({ jahr: r.faellig, name: 'Rate: ' + r.name, sagt: r.offen + ' Raten offen',
+        betrag: r.rate, art: 'rate' });
+    });
+    l.sort(function (a, b) { return a.jahr - b.jahr; });
+    return l.slice(0, 6);
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE AUSWAHL DES JAHRES
+     ---------------------------------------------------------------------- */
+  function offeneAngebote() {
+    return ep().angebote.filter(function (a) {
+      if (Z.genommen[a.k] || Z.gesperrt[a.k]) return false;
+      if (a.ab && jahr() < a.ab) return false;
+      if (a.bis && jahr() > a.bis) return false;
+      return true;
+    }).sort(function (x, y) { return x.anteil - y.anteil; });
+  }
+
+  function waehleAngebote() {
+    var offen = offeneAngebote();
+    var wieViele = D.angeboteJeJahr || 4;
+    if (offen.length <= wieViele + 1) {
+      Z.angebote = offen.map(function (a) { return a.k; });
+      return;
+    }
+    /* Immer das billigste (die Einstiegssprosse) und das groesste (das Ziel,
+       auf das man spart). Dazwischen entscheidet der gesaete Wuerfel — mit
+       derselben Saat dieselbe Tafel. */
+    var wahl = [offen[0].k, offen[offen.length - 1].k];
+    var mitte = offen.slice(1, offen.length - 1);
+    var gemischt = B.wuerfel.misch(mitte);
+    for (var i = 0; i < gemischt.length && wahl.length < wieViele + 1; i++) {
+      wahl.push(gemischt[i].k);
+    }
+    /* nach Preis sortiert nebeneinanderlegen */
+    wahl.sort(function (x, y) {
+      return angebotVon(x).anteil - angebotVon(y).anteil;
+    });
+    Z.angebote = wahl;
+  }
+
+  function billigstesAngebot() {
+    var best = null;
+    Z.angebote.forEach(function (k) {
+      var a = angebotVon(k);
+      if (!a) return;
+      var p = zahlplan(a).jetzt;
+      if (!best || p < best.preis) best = { a: a, preis: p };
+    });
+    return best;
+  }
+
+  /* ----------------------------------------------------------------------
+     NEHMEN
+     ---------------------------------------------------------------------- */
+  function nimm(a) {
+    if (B.welt.zeit.woche !== 1) return;
+    if (Z.genommen[a.k]) return;
+    var plan = zahlplan(a);
+    if (!B.welt.zahle(plan.jetzt, a.name + (a.bauzeit ? ' — Anzahlung' : ''), 'spieler')) return;
+
+    Z.genommen[a.k] = { jahr: jahr(), preis: plan.ganz, fertig: jahr() + (a.bauzeit || 0) };
+    Z.kaeufe += 1;
+    if (a.sperrt) {
+      a.sperrt.forEach(function (k) { Z.gesperrt[k] = a.k; });
+    }
+    if (a.bauzeit && plan.rate > 0) {
+      Z.raten.push({ k: a.k, name: a.name, rate: plan.rate, offen: plan.raten, faellig: jahr() + 1 });
+      chronik('bau', a.name + ' begonnen fuer ' + geld(plan.ganz)
+        + ' — ' + geld(plan.jetzt) + ' angezahlt, ' + plan.raten + ' Raten zu ' + geld(plan.rate)
+        + ', fertig ' + (jahr() + a.bauzeit) + '.');
+      B.welt.schreibe(a.name + ' wird gebaut. Fertig zu Michaeli ' + (jahr() + a.bauzeit) + '.', 'preis');
+    } else {
+      chronik('bau', a.name + ' genommen fuer ' + geld(plan.ganz) + '.');
+      fertigstellen(a.k);
+    }
+    Z.meldung = a.name + ' — ' + geld(plan.jetzt) + ' aus der Kasse.';
+    B.ton.spiele('preis:handschlag', { art: 'geraeusch' });
+    B.sende('zeichne', { grund: 'preis-genommen' });
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE FESTLEGUNG. Eine je Amtszeit. Danach steht sie in der Chronik und
+     laesst sich mit keinem Klick zurueckholen.
+     ---------------------------------------------------------------------- */
+  function festlegungOffen() {
+    return !Z.festAmtszeit[amtszeit().nr];
+  }
+
+  function festlegungen() {
+    return ep().festlegungen.filter(function (f) {
+      if (Z.festGenommen[f.k]) return false;
+      if (f.ab && jahr() < f.ab) return false;
+      return true;
+    });
+  }
+
+  function festlege(f) {
+    if (B.welt.zeit.woche !== 1) return;
+    if (!festlegungOffen() || Z.festGenommen[f.k]) return;
+    var preis = rundePreis(f.anteil * Z.anschlag);
+    if (preis > 0 && !B.welt.zahle(preis, 'Festlegung: ' + f.name, 'spieler')) return;
+
+    Z.festGenommen[f.k] = { jahr: jahr(), amtszeit: amtszeit().name, nr: amtszeit().nr, preis: preis };
+    Z.festAmtszeit[amtszeit().nr] = f.k;
+    wende(f, f.wirkung);
+
+    chronik('festlegung', f.name + ' — ' + f.regel, true);
+    B.welt.schreibe('FESTLEGUNG ' + jahr() + ', ' + amtszeit().name + ': ' + f.name
+      + '. ' + f.regel + ' Das ist nicht zurueckzunehmen.', 'festlegung');
+    B.welt.protokolliere({ wer: 'spieler', was: 'Festlegung: ' + f.name + ' (unabaenderlich)', preis: 0 });
+    Z.meldung = 'Festgelegt: ' + f.name + '. Es steht in der Chronik.';
+    B.ton.spiele('preis:siegel', { art: 'geraeusch' });
+    B.sende('zeichne', { grund: 'preis-festlegung' });
+  }
+
+  /* ======================================================================
+     ZEICHNEN
+     ====================================================================== */
+
+  function zeile(mark, wert, klasse) {
+    var z = B.el('div', 'pr-zeile' + (klasse ? ' ' + klasse : ''));
+    z.appendChild(B.el('span', 'pr-was', mark));
+    z.appendChild(B.el('span', 'pr-zahl', wert));
+    return z;
+  }
+
+  function folgeText(a) {
+    var w = a.wirkung || {};
+    var t = [];
+    if (w.ertrag) t.push('+' + geld(w.ertrag) + ' in jedem Michaeli');
+    if (w.rohstoff) t.push('+' + B.zahl(w.rohstoff) + ' ' + B.welt.epoche().rohstoff + ' im Jahr');
+    if (w.plaetze) t.push('+' + B.welt.menge(w.plaetze) + ' Lagerplatz');
+    if (w.preis) t.push((w.preis > 0 ? '+' : '') + B.zahl(w.preis * 100, 0) + ' im Hundert je '
+      + ep().einheit);
+    if (w.ansehen) t.push((w.ansehen > 0 ? '+' : '') + w.ansehen + ' Ansehen');
+    if (w.pflichtWeg) t.push('kein ' + pflichtName(w.pflichtWeg) + ' mehr');
+    if (w.bindung) t.push(w.bindung.n + ' Haeuser gebunden, ' + w.bindung.jahre + ' Jahre');
+    return t.join(' · ');
+  }
+
+  function pflichtName(k) {
+    var l = ep().pflichten;
+    for (var i = 0; i < l.length; i++) if (l[i].k === k) return l[i].name;
+    for (var j = 0; j < Z.pflichtNeu.length; j++) if (Z.pflichtNeu[j].k === k) return Z.pflichtNeu[j].name;
+    return k;
+  }
+
+  /* --- Spalte 1: die Rechnung des Jahres ------------------------------- */
+  function spalteRechnung() {
+    var e = ep();
+    var sp = B.el('div', 'pr-spalte pr-links');
+
+    var kasten = B.el('div', 'pr-feld');
+    kasten.appendChild(B.el('h3', null, 'DIE RECHNUNG ' + jahr()));
+    if (!Z.rechnung.length) {
+      kasten.appendChild(B.el('div', 'pr-satz', 'Zu diesem Michaeli war nichts abzutragen.'));
+    }
+    var summe = 0;
+    Z.rechnung.forEach(function (r) {
+      var z = zeile(r.name, r.betrag ? geld(r.betrag) : (r.menge ? '+' + B.zahl(r.menge) : '—'),
+        'pr-' + r.art + (r.offen ? ' pr-offen' : ''));
+      if (r.offen) z.appendChild(B.el('span', 'pr-marke', 'angeschrieben'));
+      kasten.appendChild(z);
+      summe += r.betrag;
+    });
+    kasten.appendChild(zeile('Zusammen', geld(summe), 'pr-summe'));
+    sp.appendChild(kasten);
+
+    var ord = B.el('div', 'pr-feld pr-ordnung');
+    ord.appendChild(B.el('h3', null, 'DIE BIERORDNUNG'));
+    var o = ordnung();
+    ord.appendChild(zeile('Satz je ' + e.einheit, geld(Math.round(o.preis * (1 + Z.aufschlag))), 'pr-gross'));
+    ord.appendChild(B.el('div', 'pr-satz', o.sagt));
+    ord.appendChild(B.el('div', 'pr-satz pr-klein',
+      'Gesetzt ' + o.ab + ' — seit ' + (jahr() - o.ab) + ' Jahren. '
+      + (Z.aufschlag ? 'Aufschlag des Hauses: ' + B.zahl(Z.aufschlag * 100, 0) + ' im Hundert.'
+                     : 'Das Haus hat noch keinen Aufschlag erarbeitet.')));
+    sp.appendChild(ord);
+
+    var an = B.el('div', 'pr-feld pr-anschlag');
+    an.appendChild(B.el('h3', null, 'DER ANSCHLAG'));
+    an.appendChild(zeile('Fuer ' + jahr(), geld(Math.round(Z.anschlag)), 'pr-gross'));
+    an.appendChild(zeile('davon aus dem Umsatz', geld(Math.round(umsatzGewicht() * Z.umsatz))));
+    an.appendChild(zeile('davon aus der Barschaft', geld(Math.round(1.5 * Z.hoehe))));
+    an.appendChild(zeile('Teuerung seit ' + Z.startjahr,
+      '+' + B.zahl((Math.pow(ep().teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40)) - 1) * 100, 0) + '%'));
+    an.appendChild(B.el('div', 'pr-satz pr-klein', e.anschlagSatz));
+    sp.appendChild(an);
+
+    return sp;
+  }
+
+  /* --- Spalte 2: die Angebote ------------------------------------------ */
+  function angebotKarte(a) {
+    var plan = zahlplan(a);
+    var kann = B.welt.kann(plan.jetzt);
+    var jetztTag = B.welt.zeit.woche === 1;
+
+    var karte = B.el('div', 'pr-karte' + (kann ? '' : ' pr-zuteuer'));
+    karte.setAttribute('data-angebot', a.k);
+
+    var kopf = B.el('div', 'pr-karte-kopf');
+    kopf.appendChild(B.el('b', null, a.name));
+    karte.appendChild(kopf);
+
+    var schild = B.el('div', 'pr-schild');
+    schild.appendChild(B.el('span', 'pr-schild-zahl', geld(plan.jetzt)));
+    if (plan.raten) {
+      schild.appendChild(B.el('span', 'pr-schild-rest',
+        'von ' + geld(plan.ganz) + ' · dann ' + plan.raten + ' × ' + geld(plan.rate)));
+    } else {
+      schild.appendChild(B.el('span', 'pr-schild-rest', 'ganz, sofort'));
+    }
+    karte.appendChild(schild);
+
+    karte.appendChild(B.el('div', 'pr-bauzeit', a.bauzeit
+      ? 'Bauzeit ' + a.bauzeit + ' Jahr' + (a.bauzeit > 1 ? 'e' : '') + ' · fertig ' + (jahr() + a.bauzeit)
+      : 'Ohne Bauzeit · wirkt ab heute'));
+
+    karte.appendChild(B.el('div', 'pr-was-text', a.was));
+    var f = B.el('div', 'pr-folge');
+    f.appendChild(B.el('span', 'pr-folge-marke', 'Folge'));
+    f.appendChild(B.el('span', 'pr-folge-text', folgeText(a) || a.satz));
+    karte.appendChild(f);
+    karte.appendChild(B.el('div', 'pr-satz-klein', a.satz));
+
+    if (a.sperrt && a.sperrt.length) {
+      var namen = a.sperrt.map(function (k) {
+        var o = angebotVon(k); return o ? o.name : k;
+      }).join(', ');
+      karte.appendChild(B.el('div', 'pr-sperrt', 'Schliesst aus: ' + namen));
+    }
+
+    karte.appendChild(B.knopf({
+      text: jetztTag ? 'Nehmen' : 'Michaeli ist vorueber',
+      zug: 'preis:nimm:' + a.k,
+      preis: -plan.jetzt,
+      klasse: 'pr-nehmen',
+      aus: !kann || !jetztTag,
+      titel: a.name + ' — ' + a.was + '  ' + (folgeText(a) || ''),
+      tu: function () { nimm(a); }
+    }));
+
+    if (!kann) karte.appendChild(B.el('div', 'pr-hinweis', 'Ueber der Kasse: es fehlen '
+      + geld(plan.jetzt - B.welt.haus.kasse) + '.'));
+
+    return karte;
+  }
+
+  function festKarte(f) {
+    var preis = rundePreis(f.anteil * Z.anschlag);
+    var offen = festlegungOffen();
+    var kann = preis === 0 || B.welt.kann(preis);
+    var jetztTag = B.welt.zeit.woche === 1;
+
+    var karte = B.el('div', 'pr-fest' + (offen ? '' : ' pr-fest-zu'));
+    karte.setAttribute('data-festlegung', f.k);
+    karte.appendChild(B.el('b', 'pr-fest-name', f.name));
+    karte.appendChild(B.el('div', 'pr-was-text', f.was));
+    var r = B.el('div', 'pr-regel');
+    r.appendChild(B.el('span', 'pr-folge-marke', 'Regel'));
+    r.appendChild(B.el('span', 'pr-folge-text', f.regel));
+    karte.appendChild(r);
+    karte.appendChild(B.knopf({
+      text: preis ? 'Festlegen' : 'Festlegen — ohne Ausgabe',
+      zug: 'preis:festlege:' + f.k,
+      preis: preis ? -preis : 0,
+      klasse: 'pr-siegel',
+      aus: !offen || !kann || !jetztTag,
+      titel: 'Unabaenderlich. ' + f.regel,
+      tu: function () { festlege(f); }
+    }));
+    if (!offen) karte.appendChild(B.el('div', 'pr-hinweis',
+      'Diese Amtszeit hat sich bereits festgelegt.'));
+    else if (!kann) karte.appendChild(B.el('div', 'pr-hinweis',
+      'Ueber der Kasse: es fehlen ' + geld(preis - B.welt.haus.kasse) + '.'));
+    return karte;
+  }
+
+  function festGetroffenKarte() {
+    var k = Z.festAmtszeit[amtszeit().nr];
+    var g = Z.festGenommen[k];
+    var f = festlegungVon(k) || { name: k, regel: '' };
+    var karte = B.el('div', 'pr-fest pr-fest-getroffen');
+    karte.setAttribute('data-festlegung-getroffen', k);
+    karte.appendChild(B.el('div', 'pr-fest-stempel', 'UNABAENDERLICH'));
+    karte.appendChild(B.el('b', 'pr-fest-name', f.name));
+    karte.appendChild(B.el('div', 'pr-regel', f.regel));
+    karte.appendChild(B.el('div', 'pr-satz-klein',
+      'Festgelegt zu Michaeli ' + g.jahr + ' von ' + g.amtszeit
+      + (g.preis ? ' fuer ' + geld(g.preis) : '') + '. Steht in der Chronik.'));
+    karte.appendChild(B.knopf({
+      text: 'Steht in der Chronik', zug: 'preis:fest-steht', aus: true,
+      titel: 'Eine Festlegung wird nicht zurueckgenommen.'
+    }));
+    return karte;
+  }
+
+  function spalteAngebote() {
+    var sp = B.el('div', 'pr-spalte pr-mitte');
+
+    var kopf = B.el('div', 'pr-abschnitt');
+    kopf.appendChild(B.el('h3', null, 'DIE ANGEBOTE ZU MICHAELI ' + Z.tafelJahr));
+    kopf.appendChild(B.el('span', 'pr-abschnitt-satz',
+      Z.angebote.length + ' nebeneinander · Kasse ' + geld(B.welt.haus.kasse)));
+    sp.appendChild(kopf);
+
+    var reihe = B.el('div', 'pr-reihe');
+    if (!Z.angebote.length) {
+      reihe.appendChild(B.el('div', 'pr-leer',
+        'Fuer diese Zeit ist am Hof gebaut, was zu bauen war. Die naechste Zeit bringt anderes.'));
+    }
+    Z.angebote.forEach(function (k) {
+      var a = angebotVon(k);
+      if (a) reihe.appendChild(angebotKarte(a));
+    });
+    sp.appendChild(reihe);
+
+    var fkopf = B.el('div', 'pr-abschnitt pr-abschnitt-fest');
+    fkopf.appendChild(B.el('h3', null, 'DIE FESTLEGUNG'));
+    fkopf.appendChild(B.el('span', 'pr-abschnitt-satz',
+      'Eine je Amtszeit. Sie aendert eine Regel fuer den Rest der Partie und wird nicht zurueckgenommen.'));
+    sp.appendChild(fkopf);
+
+    var freihe = B.el('div', 'pr-reihe pr-reihe-fest');
+    if (!festlegungOffen()) {
+      freihe.appendChild(festGetroffenKarte());
+      /* Was diese Amtszeit nicht mehr waehlen kann, bleibt sichtbar. */
+      festlegungen().slice(0, 2).forEach(function (f) { freihe.appendChild(festKarte(f)); });
+    } else {
+      var l = festlegungen();
+      if (!l.length) {
+        freihe.appendChild(B.el('div', 'pr-leer', 'Alle Festlegungen dieser Zeit sind getroffen.'));
+      }
+      l.forEach(function (f) { freihe.appendChild(festKarte(f)); });
+    }
+    sp.appendChild(freihe);
+
+    return sp;
+  }
+
+  /* --- Spalte 3: was faellig wird, und die Leiter ----------------------- */
+  function spalteLasten() {
+    var sp = B.el('div', 'pr-spalte pr-rechts');
+
+    var f = B.el('div', 'pr-feld');
+    f.appendChild(B.el('h3', null, 'WAS FAELLIG WIRD'));
+    var lasten = kommendeLasten();
+    if (!lasten.length) f.appendChild(B.el('div', 'pr-satz', 'Nichts Angekuendigtes.'));
+    lasten.forEach(function (l) {
+      var z = B.el('div', 'pr-last pr-last-' + l.art);
+      var kopf = B.el('div', 'pr-last-kopf');
+      kopf.appendChild(B.el('span', 'pr-last-jahr', l.jahr === jahr() ? 'jetzt' : l.jahr));
+      kopf.appendChild(B.el('span', 'pr-last-name', l.name));
+      kopf.appendChild(B.el('span', 'pr-zahl', geld(l.betrag)));
+      z.appendChild(kopf);
+      z.appendChild(B.el('div', 'pr-satz pr-klein', l.sagt));
+      f.appendChild(z);
+    });
+    f.appendChild(B.el('div', 'pr-satz pr-klein', ep().pfand));
+    sp.appendChild(f);
+
+    var lf = B.el('div', 'pr-feld pr-leiter');
+    lf.appendChild(B.el('h3', null, 'DIE LEITER'));
+    lf.appendChild(B.el('div', 'pr-satz pr-klein',
+      'Barschaft zu Michaeli gegen das billigste Angebot desselben Tages.'));
+    var kopfz = B.el('div', 'pr-leiter-zeile pr-leiter-kopf');
+    ['Jahr', 'Kasse', 'billigstes', 'reicht'].forEach(function (t) {
+      kopfz.appendChild(B.el('span', null, t));
+    });
+    lf.appendChild(kopfz);
+    Z.leiter.slice(-9).forEach(function (r) {
+      var z = B.el('div', 'pr-leiter-zeile');
+      z.appendChild(B.el('span', null, r.jahr));
+      z.appendChild(B.el('span', null, B.welt.geld(r.kasse, true)));
+      z.appendChild(B.el('span', null, B.welt.geld(r.billigst, true)));
+      z.appendChild(B.el('span', 'pr-verh', r.verhaeltnis ? B.zahl(r.verhaeltnis, 2) + '×' : '—'));
+      lf.appendChild(z);
+    });
+    sp.appendChild(lf);
+
+    return sp;
+  }
+
+  /* --- Die Chronik ------------------------------------------------------ */
+  function seiteChronik() {
+    var w = B.el('div', 'pr-chronik');
+    w.appendChild(B.el('h3', null, 'DIE CHRONIK DES HAUSES — was nicht mehr zu aendern ist'));
+
+    var fest = B.el('div', 'pr-chronik-fest');
+    var keys = Object.keys(Z.festGenommen);
+    if (!keys.length) {
+      fest.appendChild(B.el('div', 'pr-satz',
+        'Noch hat sich keine Amtszeit festgelegt. Jede Amtszeit hat genau eine Festlegung.'));
+    }
+    keys.sort(function (a, b) { return Z.festGenommen[a].jahr - Z.festGenommen[b].jahr; });
+    keys.forEach(function (k) {
+      var g = Z.festGenommen[k];
+      var f = festlegungVon(k) || { name: k, regel: '' };
+      var z = B.el('div', 'pr-chronik-siegel');
+      z.appendChild(B.el('span', 'pr-chronik-jahr', g.jahr));
+      var t = B.el('div', 'pr-chronik-text');
+      t.appendChild(B.el('b', null, f.name));
+      t.appendChild(B.el('div', null, f.regel));
+      t.appendChild(B.el('div', 'pr-satz-klein', g.amtszeit + ', ' + g.nr + '. Amtszeit'
+        + (g.preis ? ' · ' + geld(g.preis) : '') + ' · unabaenderlich'));
+      z.appendChild(t);
+      fest.appendChild(z);
+    });
+    w.appendChild(fest);
+
+    var rolle = B.el('div', 'pr-chronik-rolle rolle');
+    Z.chronik.slice().reverse().forEach(function (c) {
+      var z = B.el('div', 'pr-chronik-zeile' + (c.dick ? ' dick' : ''));
+      z.appendChild(B.el('span', 'pr-chronik-jahr', c.jahr));
+      z.appendChild(B.el('span', 'pr-chronik-was', c.text));
+      rolle.appendChild(z);
+    });
+    if (!Z.chronik.length) rolle.appendChild(B.el('div', 'pr-satz', 'Noch ist nichts eingetragen.'));
+    w.appendChild(rolle);
+
+    return w;
+  }
+
+  /* --- Die Tafel -------------------------------------------------------- */
+  function zeichneTafel(fach) {
+    var e = ep();
+    var tafel = B.el('div', 'pr-tafel pr-stil-' + e.stil);
+    tafel.setAttribute('data-blatt', 'michaeli');
+    tafel.setAttribute('data-jahr', Z.tafelJahr);
+
+    var kopf = B.el('div', 'pr-kopf');
+    var links = B.el('div', 'pr-kopf-links');
+    links.appendChild(B.el('span', 'pr-kopf-tag', 'MICHAELI ' + Z.tafelJahr));
+    links.appendChild(B.el('span', 'pr-kopf-epoche', e.sagt));
+    kopf.appendChild(links);
+
+    var rechts = B.el('div', 'pr-kopf-rechts');
+    rechts.appendChild(B.el('span', 'pr-kopf-kasse', 'Kasse ' + geld(B.welt.haus.kasse)));
+    rechts.appendChild(B.el('span', 'pr-kopf-klein',
+      amtszeit().name + ', ' + amtszeit().nr + '. Amtszeit · Anschlag ' + geld(Math.round(Z.anschlag))));
+    kopf.appendChild(rechts);
+
+    kopf.appendChild(B.knopf({
+      text: Z.seite === 'chronik' ? 'Zurueck zur Tafel' : 'Chronik des Hauses',
+      zug: 'preis:chronik',
+      klasse: 'pr-reiter',
+      titel: 'Was festgelegt wurde, steht dort unabaenderlich.',
+      tu: function () {
+        Z.seite = Z.seite === 'chronik' ? 'tafel' : 'chronik';
+        B.ton.spiele('preis:blatt');
+        B.sende('zeichne', { grund: 'preis-seite' });
+      }
+    }));
+    tafel.appendChild(kopf);
+
+    if (Z.seite === 'chronik') {
+      tafel.appendChild(seiteChronik());
+    } else {
+      var leib = B.el('div', 'pr-leib');
+      leib.appendChild(spalteRechnung());
+      leib.appendChild(spalteAngebote());
+      leib.appendChild(spalteLasten());
+      tafel.appendChild(leib);
+    }
+
+    var fuss = B.el('div', 'pr-fuss');
+    fuss.appendChild(B.el('div', 'pr-fuss-satz', e.tagSatz));
+    if (Z.meldung) fuss.appendChild(B.el('div', 'pr-meldung', Z.meldung));
+    fuss.appendChild(B.knopf({
+      text: 'Nichts nehmen · das Geld bleibt liegen',
+      zug: 'preis:nichts',
+      klasse: 'pr-nichts',
+      titel: 'Die Tafel geht zu, die Kasse bleibt voll. Was faellig wird, steht rechts.',
+      tu: function () {
+        Z.meldung = null;
+        chronik('nichts', 'Zu Michaeli ' + Z.tafelJahr + ' wurde nichts genommen. Kasse: '
+          + geld(B.welt.haus.kasse) + '.');
+        schliesse();
+      }
+    }));
+    fuss.appendChild(B.knopf({
+      text: 'Das Jahr beginnen',
+      zug: 'preis:tafel-zu',
+      klasse: 'gross pr-weiter',
+      titel: 'Zurueck auf den Hof. Die Tafel oeffnet zu Michaeli ' + (Z.tafelJahr + 1) + ' wieder.',
+      tu: function () { schliesse(); }
+    }));
+    tafel.appendChild(fuss);
+
+    fach.appendChild(tafel);
+  }
+
+  function schliesse() {
+    Z.offen = false;
+    B.ton.spiele('preis:blatt');
+    B.sende('zeichne', { grund: 'preis-zu' });
+  }
+
+  /* --- Der Griff, wenn die Tafel zu ist --------------------------------- */
+  function zeichneGriff(fach) {
+    var offenZahl = Z.angebote.length;
+    var griff = B.el('div', 'pr-griff');
+
+    griff.appendChild(B.knopf({
+      text: Z.offen ? 'Michaelitafel schliessen'
+                    : 'Michaelitafel ' + Z.tafelJahr + ' · ' + offenZahl + ' Angebote',
+      zug: 'preis:tafel',
+      klasse: 'pr-griff-knopf',
+      titel: B.welt.zeit.woche === 1
+        ? 'Heute ist Michaeli. Was hier genommen wird, wird heute genommen.'
+        : 'Michaeli ist vorueber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.',
+      tu: function () {
+        Z.offen = !Z.offen;
+        Z.seite = 'tafel';
+        B.ton.spiele('preis:blatt');
+        B.sende('zeichne', { grund: 'preis-griff' });
+      }
+    }));
+
+    var stand = B.el('div', 'pr-griff-stand');
+    var billig = billigstesAngebot();
+    stand.appendChild(zeile('Bierordnung je ' + ep().einheit,
+      geld(Math.round(ordnung().preis * (1 + Z.aufschlag)))));
+    stand.appendChild(zeile('Anschlag ' + jahr(), geld(Math.round(Z.anschlag))));
+    if (billig) {
+      stand.appendChild(zeile('billigstes Angebot', geld(billig.preis)));
+      stand.appendChild(zeile('Kasse reicht',
+        billig.preis ? B.zahl(B.welt.haus.kasse / billig.preis, 2) + '×' : '—', 'pr-verh'));
+    }
+    var naechste = kommendeLasten()[0];
+    if (naechste) {
+      stand.appendChild(zeile(naechste.jahr + ' · ' + naechste.name, geld(naechste.betrag), 'pr-last-zeile'));
+    }
+    griff.appendChild(stand);
+
+    griff.appendChild(B.knopf({
+      text: 'Chronik des Hauses · ' + Object.keys(Z.festGenommen).length + ' Festlegungen',
+      zug: 'preis:chronik-auf',
+      klasse: 'pr-griff-chronik',
+      titel: 'Was festgelegt wurde, steht dort unabaenderlich.',
+      tu: function () {
+        Z.offen = true;
+        Z.seite = 'chronik';
+        B.ton.spiele('preis:blatt');
+        B.sende('zeichne', { grund: 'preis-chronik' });
+      }
+    }));
+
+    fach.appendChild(griff);
+  }
+
+  /* ======================================================================
+     ANMELDUNG
+     ====================================================================== */
   BRAUHAUS.stueck('preis', {
 
     aufbau: function () {
-      if (B.welt.haus.preis === undefined) B.welt.haus.preis = tafel().mitte;
+      B.ton.melde('preis:michaeli', { art: 'geraeusch', sagt: 'Eine einzelne Glocke, Michaelistag, Schritte auf Holz.' });
+      B.ton.melde('preis:muenzen', { art: 'geraeusch', sagt: 'Muenzen werden auf einen Tisch gezaehlt.' });
+      B.ton.melde('preis:siegel', { art: 'geraeusch', sagt: 'Siegelwachs, Petschaft, Papier — die Festlegung.' });
+      B.ton.melde('preis:handschlag', { art: 'geraeusch', sagt: 'Handschlag, ein Stuhl rueckt, Zustimmung.' });
+      B.ton.melde('preis:fertig', { art: 'geraeusch', sagt: 'Ein Bau ist fertig: Kelle, Balken, Zuruf.' });
+      B.ton.melde('preis:blatt', { art: 'geraeusch', sagt: 'Ein grosser Bogen Papier wird umgeschlagen.' });
+
+      richteEin(true);
+      michaeli(true);
+    },
+
+    jahr: function () {
+      michaeli(false);
+    },
+
+    epoche: function () {
+      richteEin(false);
+    },
+
+    erbfall: function () {
+      Z.handlohnFaellig = true;
+      chronik('erbfall', amtszeit().name + ' uebernimmt das Haus.');
     },
 
     zeichne: function () {
       var fach = B.ebene('blatt', 'preis');
       B.leere(fach);
-      var t = tafel();
-      var jetzt = B.welt.haus.preis || t.mitte;
-      var gebunden = gebundenBis > B.welt.zeit.jahr;
 
-      /* Der Griff: immer sichtbar, immer ein echter Knopf. */
-      var griff = B.knopf({
-        text: offen ? 'Preisblatt schliessen' : 'Preisblatt · ' + B.welt.geld(jetzt) + ' je ' + t.einheit,
-        zug: 'preis:blatt',
-        tu: function () { offen = !offen; B.sende('zeichne', { grund: 'preis-blatt' }); }
-      });
-      griff.classList.add('preis-griff');
-      B.orte.setze(griff, 'marktstand', { anker: 'links', dy: -6 });
-      fach.appendChild(griff);
+      /* Der Sommerzettel der FUHRE gehoert vor die Michaelitafel: erst die
+         Abrechnung des Sommers, dann der Tag, an dem entschieden wird.
+         Gelesen wird fremdes DOM, geschrieben nie. */
+      var sommerLaeuft = !!document.querySelector('.fu-sommerblatt');
 
-      if (!offen) {
-        B.welt.meldeZug('Preis binden', Math.max(1, Math.round(jetzt * 0.5)));
-        return;
-      }
+      zeichneGriff(fach);
+      if (Z.offen && !sommerLaeuft) zeichneTafel(fach);
 
-      var blatt = B.el('div', 'blatt preis-blatt');
-      blatt.style.cssText = 'left:6%;top:24%;width:34%;';
-      blatt.appendChild(B.el('h2', null, 'Der Preis — ' + B.welt.epoche().name));
-      blatt.appendChild(B.el('div', 'satz', t.sagt));
-      blatt.appendChild(B.el('div', 'satz',
-        'Jetzt: ' + B.welt.geld(jetzt) + ' je ' + t.einheit
-        + '   ·   ' + (gebunden ? 'gebunden bis ' + gebundenBis : 'frei')));
-
-      var reihe = B.el('div', 'preis-reihe');
-      [
-        { wort: 'Senken', neu: Math.max(1, jetzt - Math.round(t.spanne / 2)),
-          sagt: 'Mehr Haeuser nehmen dich. Der Ruf sinkt mit.' },
-        { wort: 'Halten', neu: jetzt, sagt: 'Nichts aendern ist auch eine Wahl.' },
-        { wort: 'Heben', neu: jetzt + Math.round(t.spanne / 2),
-          sagt: 'Weniger Haeuser, mehr je Fass. Der Gegner freut sich.' }
-      ].forEach(function (w) {
-        reihe.appendChild(B.knopf({
-          text: w.wort + ' auf ' + B.welt.geld(w.neu),
-          zug: 'preis:' + w.wort.toLowerCase(),
-          titel: w.sagt,
-          aus: gebunden,
-          tu: function () { setzePreis(w.neu, 0, w.wort); }
-        }));
-      });
-      blatt.appendChild(reihe);
-
-      /* Die unwiderrufliche Festlegung. */
-      blatt.appendChild(B.knopf({
-        text: 'Preis auf fuenf Jahre binden',
-        zug: 'preis:binden',
-        preis: -Math.max(1, Math.round(jetzt * 0.5)),
-        klasse: 'preis-bindung',
-        titel: 'Unwiderruflich. Fuenf Jahre lang kein anderer Preis, egal was kommt.',
-        aus: gebunden,
-        tu: function () {
-          if (B.welt.zahle(Math.max(1, Math.round(jetzt * 0.5)), 'Preisbindung beim Rat', 'spieler')) {
-            setzePreis(jetzt, 5, 'Preis gebunden');
-          }
-        }
-      }));
-
-      fach.appendChild(blatt);
+      /* Die eine Zahl: der naechste sinnvolle Zug dieses Stuecks. */
+      var billig = billigstesAngebot();
+      if (billig) B.welt.meldeZug(billig.a.name, billig.preis);
     }
   });
+
+  /* ----------------------------------------------------------------------
+     EPOCHENWECHSEL — neue Listen, neuer Anschlag, dieselbe Chronik.
+     ---------------------------------------------------------------------- */
+  function richteEin(erste) {
+    var e = ep();
+    Z.epoche = B.welt.zeit.epoche;
+    Z.startjahr = jahr();
+    Z.kaeufe = 0;
+    Z.hoehe = Math.max(B.welt.haus.kasse, 1);
+    Z.umsatz = erste ? 0 : messeUmsatz(jahr() - 1);
+    Z.raten = [];
+    Z.angebote = [];
+    Z.meldung = null;
+    rechneAnschlag();
+    planeUmlagen();
+    setzeBierpreis();
+    if (!erste) {
+      chronik('epoche', 'Eine neue Zeit: ' + B.welt.epoche().name
+        + '. Die Michaelitafel traegt andere Angebote.');
+    }
+  }
 
 })(BRAUHAUS);
