@@ -173,6 +173,10 @@ var FUHRE_DATEN = {
                grund: 6, jeKm: 3.5, haltPreis: 2.5, umlauf: 3, bruch: 0.04,
                satz: 'Acht Plätze, fünf Halte, zwei Pferde. Die Fässer kommen erst nach Wochen zurück.' },
       faesser: 38,
+      pfand: { name: 'Pfand einziehen', grund: 14, jeFass: 3,
+               satz: 'Der Knecht fährt die Runde und holt die leeren Fässer zurück, '
+                   + 'ehe sie fällig sind. Kostet einen Tag und ein paar Gulden — '
+                   + 'und ist in dieser Zeit oft der einzige Weg, überhaupt brauen zu können.' },
       planStart: 1,
       unterhalt: 4,
       mengenfaktor: 1,

@@ -512,6 +512,25 @@
     }
   }
 
+  /* 1600: Fassplätze sind die Währung. Wer nicht warten will, bis das Pfand
+     von selbst zurückkommt, schickt den Knecht — und bezahlt dafür. */
+  function ziehePfand() {
+    var e = ep();
+    if (!e.pfand || !Z.draussen) return;
+    var preis = Math.round(e.pfand.grund + e.pfand.jeFass * Z.draussen);
+    if (!B.welt.zahle(preis, 'Pfand eingezogen · ' + Z.draussen + ' Fässer', 'spieler')) {
+      Z.meldung = 'Die Runde des Knechts kostet ' + B.welt.geld(preis) + '.';
+      B.sende('zeichne', { grund: 'fuhre-pfand' });
+      return;
+    }
+    var zurueck = Z.draussen;
+    Z.umlauf = [];
+    Z.draussen = 0;
+    Z.meldung = zurueck + ' Fässer sind zurück im Hof.';
+    B.ton.spiele('fuhre:fass-rollen', { ort: 'fasslager' });
+    B.sende('zeichne', { grund: 'fuhre-pfand' });
+  }
+
   function eisZehrt() {
     var e = ep();
     if (!e.eis) return;
@@ -1217,6 +1236,16 @@
         + (frostzeit() ? ' · der Fluss trägt' : ' · kein Frost mehr');
       eis.title = e.eis.satz;
       fuss.appendChild(eis);
+    }
+    if (e.pfand) {
+      var pp = Math.round(e.pfand.grund + e.pfand.jeFass * Z.draussen);
+      fuss.appendChild(B.knopf({
+        text: e.pfand.name + ' · ' + Z.draussen + ' Fass',
+        zug: 'fuhre:pfand', klasse: 'fu-klein', preis: -pp,
+        aus: !Z.draussen || !B.welt.kann(pp),
+        titel: e.pfand.satz,
+        tu: ziehePfand
+      }));
     }
     if (bf > 1) fuss.appendChild(B.el('span', 'fu-einheit', 'Ein Zeichen = ein ' + e.keller.bett
       + ' zu ' + B.welt.menge(bf)));
