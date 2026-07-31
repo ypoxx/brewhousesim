@@ -1,7 +1,7 @@
 {
- "stand": "2026-07-31T16:37:38+00:00",
- "phase": "Vorbereitung — Messlatte wird gewählt, Endprompt wird geschrieben",
- "latte": "Wird gerade festgelegt. Sicher ist: die vier freigegebenen Zielbilder unter zielbild/ sind die Latte für die Oberflaeche.",
+ "stand": "2026-07-31T16:42:28+00:00",
+ "phase": "Welle 1 — Grundriss, Skelett, erste Stuecke",
+ "latte": "Drei Latten. BILD: Playwright-Aufnahme des laufenden Spiels blind gegen das Zielbild derselben Epoche — solange das Zielbild gewinnt, geht es zurueck. SPIEL: ein frischer Kritiker spielt jede Epoche 20 Minuten und zaehlt am Bildschirm Entscheidungen mit Preis, unwiderrufliche Festlegungen und Zuege des Gegners; dazu Barschaft gegen Preis des naechsten Zuges. TON: 30 Sekunden ohne Bild, ein fremdes Ohr nennt Epoche und Vorgang. Dazu die Sperrliste aus design/PRUEFUNG.md — ein Fund disqualifiziert, gewinnt aber nie.",
  "zahlen": {
   "Epochen": "4",
   "Stücke": "0",
@@ -16,6 +16,14 @@
   {
    "zeit": "2026-07-31T16:37:38+00:00",
    "text": "Zielbilder vom Auftraggeber freigegeben. Der Lauf kann beginnen."
+  },
+  {
+   "zeit": "2026-07-31T16:42:28+00:00",
+   "text": "Welle 1 — Grundriss, Skelett, erste Stuecke"
+  },
+  {
+   "zeit": "2026-07-31T16:42:28+00:00",
+   "text": "Messlatte gewaehlt und begruendet: gauntlet/MESSLATTE.md. Endprompt: gauntlet/PROMPT.md."
   }
  ]
 }
