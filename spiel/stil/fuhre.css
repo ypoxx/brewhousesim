@@ -116,10 +116,10 @@
 /* --------------------------------------------------------------------------
    PLATZORDNUNG — alles in Prozent, Bezug 2752 x 1536
    -------------------------------------------------------------------------- */
-.fu-haeuser { left: 1.1%;  top: 12.8%; width: 25.4%; height: 73.2%; }
-.fu-tafel   { left: 27.2%; top: 12.8%; width: 23.4%; height: 46.0%; }
-.fu-keller  { left: 27.2%; top: 59.6%; width: 23.4%; height: 26.4%; }
-.fu-wagen   { left: 51.4%; top: 59.6%; width: 26.8%; height: 26.4%; }
+.fu-haeuser { left: 1.1%;  top: 12.6%; width: 25.6%; height: 73.6%; }
+.fu-tafel   { left: 27.4%; top: 12.6%; width: 23.2%; height: 40.4%; }
+.fu-keller  { left: 27.4%; top: 53.8%; width: 23.2%; height: 32.4%; }
+.fu-wagen   { left: 51.3%; top: 53.8%; width: 26.9%; height: 32.4%; }
 
 /* --------------------------------------------------------------------------
    DIE HAEUSER
@@ -154,19 +154,20 @@
   color: var(--fu-tinte);
   border-radius: calc(var(--s) * 3);
   border-left: calc(var(--s) * 5) solid var(--fu-s2);
-  padding: calc(var(--s) * 4) calc(var(--s) * 8) calc(var(--s) * 5);
+  padding: calc(var(--s) * 3) calc(var(--s) * 8) calc(var(--s) * 4);
   display: flex;
   flex-direction: column;
-  gap: calc(var(--s) * 2);
+  gap: calc(var(--s) * 1);
   flex: 0 0 auto;
 }
 .fu-haus.durstig { border-left-color: var(--fu-warn); box-shadow: 0 0 0 calc(var(--s) * 2) rgba(157, 53, 32, 0.45); }
 .fu-haus.weg { opacity: 0.5; filter: grayscale(1); border-left-color: #555; }
 
-.fu-z1, .fu-z2, .fu-z3, .fu-z4 {
+.fu-z1, .fu-z2, .fu-z3 {
   display: flex;
   align-items: center;
-  gap: calc(var(--s) * 7);
+  gap: calc(var(--s) * 6);
+  min-height: calc(var(--s) * 24);
 }
 .fu-z1 .fu-name {
   font-size: calc(var(--s) * 20);
@@ -175,27 +176,33 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1 1 auto;
+  min-width: 0;
 }
-.fu-z1 .fu-km,
-.fu-z1 .fu-marke {
+.fu-z1 .fu-km {
   font-family: var(--fu-zahlen);
   font-size: calc(var(--s) * 15);
   color: var(--fu-schwach);
   white-space: nowrap;
+  flex: 0 0 auto;
 }
-.fu-z1 .fu-marke {
+.fu-kuerzel {
+  flex: 0 0 auto;
   background: var(--fu-s2);
   color: var(--fu-hell);
   border-radius: calc(var(--s) * 2);
   padding: 0 calc(var(--s) * 5);
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 14);
   letter-spacing: calc(var(--s) * 1);
+  white-space: nowrap;
 }
 
 .fu-betten { display: inline-flex; gap: calc(var(--s) * 3); }
+.fu-betten { flex: 0 0 auto; }
 .fu-betten .fu-bett {
   display: block;
-  width: calc(var(--s) * 15);
-  height: calc(var(--s) * 17);
+  width: calc(var(--s) * 13);
+  height: calc(var(--s) * 16);
   border: calc(var(--s) * 2) dashed var(--fu-warn);
   border-radius: calc(var(--s) * 2);
   background: transparent;
@@ -205,16 +212,21 @@
 
 .fu-z2 .fu-will {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 16);
+  font-size: calc(var(--s) * 15);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 /* Die hl-Reihe: drei Jahre, an denen man den Verlust kommen sieht. */
 .fu-reihe {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: flex-end;
   gap: calc(var(--s) * 2);
-  height: calc(var(--s) * 22);
+  height: calc(var(--s) * 20);
   padding: 0 calc(var(--s) * 2);
   border-bottom: calc(var(--s) * 2) solid var(--fu-linie);
 }
@@ -236,7 +248,7 @@
   text-overflow: ellipsis;
 }
 
-.fu-mahnung { display: inline-flex; gap: calc(var(--s) * 3); }
+.fu-mahnung { flex: 0 0 auto; display: inline-flex; gap: calc(var(--s) * 3); margin-left: auto; }
 .fu-mahnung i {
   display: block;
   width: calc(var(--s) * 10);
@@ -247,14 +259,15 @@
 .fu-mahnung i.an { background: var(--fu-warn); border-color: var(--fu-warn); }
 .fu-mahnung.rot i.an { box-shadow: 0 0 calc(var(--s) * 6) var(--fu-warn); }
 
-.fu-z4 { margin-top: calc(var(--s) * 1); }
 .fu-bindung {
+  flex: 0 0 auto;
   font-family: var(--fu-zahlen);
   font-size: calc(var(--s) * 14);
   color: var(--fu-schwach);
-  margin-left: auto;
   white-space: nowrap;
 }
+.fu-tat { margin-left: auto; }
+.knopf.fu-ab { padding: calc(var(--s) * 5) calc(var(--s) * 9); }
 .fu-verloren {
   font-family: var(--fu-zahlen);
   font-size: calc(var(--s) * 15);
