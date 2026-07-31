@@ -143,9 +143,9 @@
         var rauch = B.el('img', 'stadt-rauch');
         rauch.alt = '';
         rauch.src = 'bild/hof/rauch.png';
-        rauch.style.width = '13%';
+        rauch.style.width = '9%';
         rauch.style.zIndex = '900';
-        B.orte.setze(rauch, a.ort, { anker: 'unten', dx: (a.dx || 0) - 1.5, dy: -12 });
+        B.orte.setze(rauch, a.ort, { anker: 'unten', dx: (a.dx || 0) - 1.5, dy: -13.5 });
         fach.appendChild(rauch);
       }
     });
