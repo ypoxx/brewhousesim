@@ -77,7 +77,11 @@ var STADT_DATEN = {
      grund      = Grundpreis; der Preis der Epoche ist grund * teuerung
      nutzen     = was der Kauf im Weltzustand bewegt
      -------------------------------------------------------------------- */
-  teuerung: { 1: 1, 2: 5, 3: 110, 4: 700 },
+  /* Die Preise sind so gestellt, dass die Barschaft am Anfang jeder Epoche
+     etwa fuenf der offenen Bauten traegt und der sechste liegen bleibt. Wer
+     alles baut, steht ohne Geld da — das ist die Absicht: die Barschaft darf
+     dem Preis des naechsten Zuges nie davonlaufen. */
+  teuerung: { 1: 0.63, 2: 3, 3: 37, 4: 174 },
 
   aufbauten: [
     /* Der Hof hat zwoelf Standplaetze. Jeder wird ueber die Jahrhunderte neu

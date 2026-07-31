@@ -227,7 +227,7 @@
      -------------------------------------------------------------------- */
   function zeichneBauhof(fach) {
     var ep = e();
-    var liste = offen(ep).sort(function (a, b) { return a.grund - b.grund; }).slice(0, 5);
+    var liste = offen(ep).sort(function (a, b) { return a.grund - b.grund; }).slice(0, 6);
 
     var kasten = B.el('div', 'stadt-bauhof greifbar');
     var kopf = B.el('div', 'kopf');
