@@ -715,3 +715,15 @@
   opacity: 0.88;
 }
 .fu-rohstoff.knapp { color: #e8a081; opacity: 1; }
+
+.fu-verlust {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  line-height: 1.35;
+  color: var(--rot);
+  background: rgba(157, 53, 32, 0.08);
+  border-left: calc(var(--s) * 5) solid var(--rot);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 6) calc(var(--s) * 10);
+}
+.fu-verlust b { display: block; letter-spacing: calc(var(--s) * 1); margin-bottom: calc(var(--s) * 3); }

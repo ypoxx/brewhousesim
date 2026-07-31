@@ -47,6 +47,7 @@
     leer: {},            /* adr -> Wochen ohne Lieferung                    */
     mahnung: {},         /* adr -> 0..3 magere Jahre in Folge               */
     verloren: {},        /* adr -> {jahr, fremd}                            */
+    fremdBeiMahnung: {}, /* stand der Gegner schon da, als es anfing?       */
     ladung: [],          /* [{adr, faesser:[]}] — der beladene Wagen        */
     vorige: null,        /* Verteilung der letzten Fuhre                    */
     zettel: null,
@@ -670,7 +671,8 @@
       abgabe: abgabe, abgabeName: abgabeName,
       abgabeSatz: e.abgabe ? e.abgabe.sagt : '',
       satz: e.sommerSatz,
-      rest: vorrat.length
+      rest: vorrat.length,
+      verloren: []
     };
     B.ton.spiele('sommer:keller-leer', { ort: 'keller', art: 'schleife' });
   }
@@ -687,26 +689,38 @@
     return m;
   }
 
+  var verlorenJetzt = [];
+
   function mahnenUndVerlieren() {
+    verlorenJetzt = [];
     var geliefert = jahresLieferung();
     alleHaeuser().forEach(function (a) {
       if (Z.verloren[a.schluessel]) return;
       var soll = jahresbedarf(a) * 0.30;
       var ist = geliefert[a.schluessel] || 0;
       if (ist < soll) {
+        if (!Z.mahnung[a.schluessel]) {
+          /* Beim ERSTEN mageren Jahr wird festgehalten, ob der Gegner damals
+             schon an der Tür stand. Nur so lässt sich später ehrlich sagen,
+             ob die Adresse genommen oder liegengelassen wurde. */
+          Z.fremdBeiMahnung[a.schluessel] = !!(a.bindung && a.bindung.wem && a.bindung.wem !== 'haus');
+        }
         Z.mahnung[a.schluessel] = (Z.mahnung[a.schluessel] || 0) + 1;
       } else {
         Z.mahnung[a.schluessel] = Math.max(0, (Z.mahnung[a.schluessel] || 0) - 1);
       }
       if (Z.mahnung[a.schluessel] >= 3) {
-        var fremd = a.bindung && a.bindung.wem && a.bindung.wem !== 'haus' ? a.bindung.wem : null;
+        var fremd = Z.fremdBeiMahnung[a.schluessel] ? (a.bindung ? a.bindung.wem : 'gegner') : null;
         Z.verloren[a.schluessel] = { jahr: B.welt.zeit.jahr + 1, fremd: fremd };
+        verlorenJetzt.push({ name: a.name, fremd: fremd, reihe: a.reihe.slice() });
         B.welt.binde(a.schluessel, null);
         B.welt.protokolliere({ wer: 'verfall',
           was: a.name + ' führt kein Bier des Hauses mehr', preis: 0, adresse: a.schluessel });
         B.welt.schreibe(a.name + ' nimmt nichts mehr. ' + (fremd
-          ? 'Der Gegner stand schon vor der Tür.'
-          : 'Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen.'), 'fuhre');
+          ? 'Der Gegner stand schon vor der Tür, als es anfing.'
+          : 'Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen.')
+          + ' Die Reihe: ' + a.reihe.map(function (r) { return B.welt.menge(r, true); }).join(' · ')
+          + ' von ' + B.welt.menge(jahresbedarf(a)) + '.', 'fuhre');
       }
     });
   }
@@ -947,7 +961,7 @@
     var z2 = B.el('div', 'fu-z2');
     if (weg) {
       z2.appendChild(B.el('span', 'fu-verloren',
-        'AUFGEGEBEN ' + weg.jahr + (weg.fremd ? ' — der Gegner stand schon da'
+        'AUFGEGEBEN ' + weg.jahr + (weg.fremd ? ' — der Gegner hatte sie schon'
                                               : ' — niemand hat sie genommen')));
     } else {
       var schritt = e.wagen.schritt;
@@ -1396,6 +1410,19 @@
         + B.welt.geld(s.abgabe) + '   ·   ' + s.abgabeSatz));
     }
 
+    if (s.verloren && s.verloren.length) {
+      var vl = B.el('div', 'fu-verlust');
+      vl.appendChild(B.el('b', null, s.verloren.length === 1
+        ? 'Eine Adresse ist weg:' : s.verloren.length + ' Adressen sind weg:'));
+      s.verloren.forEach(function (v) {
+        vl.appendChild(B.el('div', null, v.name + ' — ' + (v.fremd
+          ? 'der Gegner stand schon da, als es anfing'
+          : 'niemand hat sie genommen; wir haben drei Jahre lang nichts geliefert')
+          + '   ·   Reihe ' + v.reihe.map(function (r) { return B.welt.menge(r, true); }).join(' · ')));
+      });
+      bl.appendChild(vl);
+    }
+
     /* Und gleich hier die eine Jahresentscheidung: was wird gebraut? */
     bl.appendChild(B.el('h3', null, 'Was steht ' + B.uhr.braujahr() + ' an der Tafel?'));
     var wahl = B.el('div', 'fu-sommer-wahl');
@@ -1552,6 +1579,7 @@
     B.wage('fuhre.sommer', function () {
       sommerLaeuft();
       mahnenUndVerlieren();
+      if (Z.sommer) Z.sommer.verloren = verlorenJetzt.slice();
       wischeTafel();
     });
   });
