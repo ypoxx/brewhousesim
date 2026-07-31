@@ -70,6 +70,7 @@
     gegenzugGetan: {},       /* amtszeit-Nr -> true                         */
     angebot: null,           /* IV: das Angebot der Gruppe                  */
     abschlag: 0,             /* was der Abschlag im letzten Jahr kostete    */
+    abschlagJe: {},
     abschlagJahr: 0,
     bereit: false
   };
@@ -119,6 +120,15 @@
     var t = (window.PREIS_DATEN && PREIS_DATEN.epochen && PREIS_DATEN.epochen[e])
       ? PREIS_DATEN.epochen[e].mitte : null;
     return t || [9, 26, 48, 130][e - 1];
+  }
+
+  function preisJeFass() {
+    return bierpreis() * (jahr() >= 1872 ? (B.welt.LITER_JE_FASS / 100) : 1);
+  }
+
+  /* Fuer die Anzeige: derselbe Betrag in der Einheit, die gerade gilt. */
+  function jeEinheit(betragJeFass) {
+    return betragJeFass / (jahr() >= 1872 ? (B.welt.LITER_JE_FASS / 100) : 1);
   }
 
   function mittelVon(k) { return MITTEL[k] || ep().mittel[0]; }
@@ -178,8 +188,7 @@
     var b = Z.bindung[k];
     if (!b) return 0;
     var m = mittelVon(b.mittel);
-    var satz = m.satz || 3;
-    return satz * (ep().abschlagAnteil || 0.3);
+    return preisJeFass() * (m.abschlag || 0.15);
   }
 
   /* ----------------------------------------------------------------------
@@ -673,12 +682,14 @@
       }
     });
     var summe = 0, wo = [];
+    Z.abschlagJe = {};
     Object.keys(Z.bindung).forEach(function (k) {
       var n = geliefert[k] || 0;
       if (!n) return;
       var teil = Math.round(n * abschlagJeFass(k));
       if (teil <= 0) return;
       summe += teil;
+      Z.abschlagJe[k] = teil;
       var a = adresse(k);
       wo.push((a ? a.name : k) + ': ' + B.welt.geld(teil));
       var h = haus(Z.bindung[k].wer);
@@ -1243,9 +1254,10 @@
     ep().mittel.forEach(function (m) {
       var mm = B.el('span', 'gg-mkarte' + (m.fest ? ' fest' : ''));
       mm.appendChild(B.el('b', null, m.name));
-      mm.appendChild(B.el('i', null, m.fest ? 'nicht abloesbar, solange er das Amt hat'
-        : B.welt.geld(Math.round(m.satz * 10)) + ' je 10 ' + B.welt.mengeEinheit() + ' Jahresbedarf'
-          + ' · ' + m.jahre + ' Jahre'));
+      mm.appendChild(B.el('i', null, (m.fest ? 'nicht abloesbar, solange er das Amt hat · '
+        : '') + B.welt.geld(Math.round(jeEinheit(m.satz) * 10)) + ' je 10 '
+        + B.welt.mengeEinheit() + ' Jahresbedarf · ' + m.jahre + ' Jahre · '
+        + Math.round((m.abschlag || 0.15) * 100) + ' vom Hundert Abschlag'));
       mittelzeile.appendChild(mm);
     });
     wk.appendChild(mittelzeile);
@@ -1272,8 +1284,11 @@
           + ' · getilgt seit ' + (jahr() - b.seit) + ' Jahren'));
       }
       kk.appendChild(B.el('div', 'gg-kzeile',
-        'Er drueckt dort ' + B.welt.geld(Math.round(abschlagJeFass(a.schluessel) * 10))
-        + ' je 10 ' + B.welt.mengeEinheit() + ', die das Haus dorthin liefert.'));
+        'Solange er haelt, zahlt der Wirt dem Haus ' + B.welt.geld(Math.round(jeEinheit(abschlagJeFass(a.schluessel))))
+        + ' weniger je ' + B.welt.mengeEinheit() + '.'
+        + (Z.abschlagJe[a.schluessel]
+            ? ' Im Jahr ' + Z.abschlagJahr + ' waren das ' + B.welt.geld(Z.abschlagJe[a.schluessel]) + '.'
+            : '')));
       kk.appendChild(B.el('div', 'gg-ksatz', m.loest));
       if (summe === null) {
         kk.appendChild(B.el('div', 'gg-kfest', 'Nicht abloesbar. Erst muss das Amt weg.'));
