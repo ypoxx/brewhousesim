@@ -141,10 +141,13 @@
   var JAHRESFRIST = 1800;       /* ms — Fenster nach einem Jahreswechsel */
   var LADEZEIT = 2500;          /* ms — so lange dauert "beim Laden" */
 
+  var HANDFRIST = 1400;         /* ms — so lange gilt ein Brett als vom Spieler geholt */
+
   var lage = {};                /* schluessel -> 'zu' | 'auf' */
   var gesehen = {};             /* schluessel -> Zeitstempel */
   var startZeit = 0;
   var jahrZeit = 0;
+  var handZeit = 0;             /* wann der Spieler zuletzt geklickt hat */
   var beobachter = null;
   var imGange = false;
   var angemeldet = false;
