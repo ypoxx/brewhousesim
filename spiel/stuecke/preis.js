@@ -688,7 +688,8 @@
     ord.appendChild(zeile('Satz je ' + e.einheit, geld(Math.round(o.preis * (1 + Z.aufschlag))), 'pr-gross'));
     ord.appendChild(B.el('div', 'pr-satz', o.sagt));
     ord.appendChild(B.el('div', 'pr-satz pr-klein',
-      'Gesetzt ' + o.ab + ' — seit ' + (jahr() - o.ab) + ' Jahren. '
+      (jahr() - o.ab <= 0 ? 'In diesem Jahr gesetzt. '
+        : 'Gesetzt ' + o.ab + ' — seit ' + (jahr() - o.ab) + ' Jahren unveraendert. ')
       + (Z.aufschlag ? 'Aufschlag des Hauses: ' + B.zahl(Z.aufschlag * 100, 0) + ' im Hundert.'
                      : 'Das Haus hat noch keinen Aufschlag erarbeitet.')));
     sp.appendChild(ord);
@@ -1035,6 +1036,8 @@
         B.sende('zeichne', { grund: 'preis-griff' });
       }
     }));
+
+    if (Z.offen) { fach.appendChild(griff); return; }
 
     var stand = B.el('div', 'pr-griff-stand');
     var billig = billigstesAngebot();
