@@ -59,7 +59,7 @@ var GEGNER_DATEN = {
       kurz: 'NORD',
       farbe: 'konzern',
       kasse: { 4: 4200000 },
-      sitz: { 4: { ort: 'bahnhof', dx: -3, dy: 6, hofDy: 6, sagt: 'ein Buero am Bahnhof, drei Zimmer, kein Kessel' } },
+      sitz: { 4: { ort: 'bahnhof', dx: -3, dy: 23, hofDy: 23, sagt: 'ein Buero am Bahnhof, drei Zimmer, kein Kessel' } },
       vornamen: { 4: ['Reinhard', 'Ute', 'Klaus-Dieter', 'Renate'] },
       titel: { 4: '' },
       art: { 4: 'Gruppe' }

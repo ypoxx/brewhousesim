@@ -424,7 +424,12 @@
   }
 
   function zugEntreissen(h, zug) {
-    var a = suche(fremde(h));
+    var pruef = fremde(h);
+    /* Zuerst das Haus. Dem anderen Gegner nimmt er nur, wenn beim Haus
+       nichts zu holen ist — sonst fressen sich die beiden gegenseitig auf
+       und der Spieler sieht bloss zu. */
+    var a = suche(function (x) { return pruef(x) && x.bindung.wem === 'haus'; })
+         || suche(pruef);
     if (!a) return false;
     var m = mittelVon(zug.mittel || ep().mittel[0].k);
     /* Ratsspruch und Amtsgewalt sind die Ausnahme, nicht die Regel — sonst
