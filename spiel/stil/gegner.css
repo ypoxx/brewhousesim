@@ -1,37 +1,491 @@
 /* ===========================================================================
-   stil/gegner.css — GEHOERT DEM BAUER VON "DER GEGNER". Ersetze frei.
+   stil/gegner.css — DER GEGNER.
+
+   Der Gegner ist grau. Das eigene Haus ist warm (Papier, Holz, Tinte), das
+   Haus gegenueber ist Blech, Schiefer und kaltes Grau — man erkennt auf einen
+   Blick, wem ein Zeichen im Bild gehoert, ohne es zu lesen.
+
+   Alle Groessen in Vielfachen von --s (ein Bezugspixel von 2752x1536).
+   Bewegungen NIE ueber transform: ortsgebundene Dinge haengen daran.
    =========================================================================== */
 
-.gegner-marke {
-  text-align: center;
-  min-width: calc(var(--s) * 200);
-  border-color: rgba(60, 30, 20, 0.7);
-  background: rgba(240, 226, 205, 0.7);
+:root {
+  --gg-tinte:   #23262a;
+  --gg-grau:    #676d75;
+  --gg-blech:   #b9bec4;
+  --gg-blech-h: #d6dade;
+  --gg-schiefer:#4a5057;
+  --gg-papier:  #dcdcd6;
+  --gg-warn:    #8d2f1c;
+  --gg-gut:     #3f6b3a;
 }
 
-.gegner-zettel {
+.fach-gegner { color: var(--gg-tinte); }
+
+.gg-svg { display: block; line-height: 0; }
+.gg-svg svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.gg-schildform { fill: var(--gg-blech); stroke: var(--gg-tinte); stroke-width: 5; }
+.gg-vogel { fill: var(--gg-tinte); }
+.gg-glyph { fill: none; stroke: var(--gg-tinte); stroke-width: 2.6;
+            stroke-linejoin: round; stroke-linecap: round; }
+
+.gg-konzern .gg-schildform { fill: #cdd4da; stroke: #1d2a38; }
+.gg-konzern .gg-vogel { fill: #1d2a38; }
+
+/* --------------------------------------------------------------------------
+   SEIN SITZ — anklickbar, mit sichtbarer Lage. Nie Dekoration.
+   -------------------------------------------------------------------------- */
+.gg-sitz {
   position: absolute;
-  min-width: calc(var(--s) * 420);
-  max-width: calc(var(--s) * 520);
-  padding: calc(var(--s) * 10) calc(var(--s) * 14);
-  background: rgba(255, 250, 235, 0.78);
-  border: calc(var(--s) * 2) solid rgba(43, 29, 16, 0.5);
-  border-radius: calc(var(--s) * 5);
-  color: #2b1d10;
+  display: block;
+  width: calc(var(--s) * 320);
+  padding: calc(var(--s) * 8) calc(var(--s) * 10) calc(var(--s) * 9);
+  background: linear-gradient(180deg, #eceef0 0%, #c9ced3 62%, #b3b9bf 100%);
+  border: calc(var(--s) * 3) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 4);
+  box-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 12) rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--serif);
+  color: var(--gg-tinte);
 }
+.gg-sitz:hover { background: linear-gradient(180deg, #f6f8fa 0%, #d6dbe0 62%, #c0c6cc 100%); }
+.gg-sitz.offen { outline: calc(var(--s) * 3) solid var(--gg-schiefer); outline-offset: calc(var(--s) * 2); }
+.gg-sitz.klamm { border-color: var(--gg-warn); }
 
-.gegner-zettel .ueber {
-  font-family: var(--mono);
-  font-size: calc(var(--s) * 17);
+.gg-sitzkopf { display: flex; align-items: center; gap: calc(var(--s) * 9); }
+.gg-wappen { width: calc(var(--s) * 40); height: calc(var(--s) * 43); flex: none; }
+.gg-wappen.klein { width: calc(var(--s) * 26); height: calc(var(--s) * 28); }
+.gg-sitztext { min-width: 0; }
+.gg-name {
+  font-size: calc(var(--s) * 25);
   letter-spacing: calc(var(--s) * 2);
   text-transform: uppercase;
-  opacity: 0.7;
-  margin-bottom: calc(var(--s) * 4);
+  line-height: 1.05;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gg-erbe { font-size: calc(var(--s) * 17); opacity: 0.8; white-space: nowrap;
+           overflow: hidden; text-overflow: ellipsis; }
+
+.gg-zahlen {
+  display: flex;
+  gap: calc(var(--s) * 4);
+  margin-top: calc(var(--s) * 7);
+  border-top: calc(var(--s) * 1) solid rgba(35, 38, 42, 0.35);
+  padding-top: calc(var(--s) * 5);
+}
+.gg-feld { flex: 1 1 0; min-width: 0; text-align: center; }
+.gg-feld b {
+  display: block;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 19);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.gg-feld i {
+  display: block;
+  font-style: normal;
+  font-size: calc(var(--s) * 13);
+  letter-spacing: calc(var(--s) * 1);
+  text-transform: uppercase;
+  opacity: 0.65;
 }
 
-.gegner-zettel .zeile {
+.gg-marken { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 4); margin-top: calc(var(--s) * 6); }
+.gg-siegel {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 13);
+  letter-spacing: calc(var(--s) * 1);
+  padding: calc(var(--s) * 2) calc(var(--s) * 6);
+  border: calc(var(--s) * 1) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 2);
+  background: rgba(35, 38, 42, 0.09);
+  text-transform: uppercase;
+}
+.gg-siegel.not { color: #fff; background: var(--gg-warn); border-color: var(--gg-warn); }
+
+/* --------------------------------------------------------------------------
+   SEIN HOF — was er gebaut hat, steht da. Jeder Bau ein Zug.
+   -------------------------------------------------------------------------- */
+.gg-hof {
+  position: absolute;
+  width: calc(var(--s) * 320);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--s) * 3);
+  pointer-events: none;
+}
+.gg-hofbild {
+  width: calc(var(--s) * 230);
+  height: auto;
+  filter: drop-shadow(0 calc(var(--s) * 4) calc(var(--s) * 8) rgba(0, 0, 0, 0.45))
+          saturate(0.35) contrast(1.02);
+}
+.gg-bauten {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--s) * 3);
+}
+.gg-bau {
+  width: calc(var(--s) * 30);
+  height: calc(var(--s) * 30);
+  padding: calc(var(--s) * 2);
+  background: rgba(220, 224, 228, 0.86);
+  border: calc(var(--s) * 1) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 3);
+  pointer-events: auto;
+}
+
+.gg-stammhaus {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  letter-spacing: calc(var(--s) * 1);
+  color: var(--gg-tinte);
+  background: rgba(216, 218, 214, 0.72);
+  border: calc(var(--s) * 1) dashed rgba(35, 38, 42, 0.6);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 3) calc(var(--s) * 8);
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   DAS ZEICHEN AM GIEBEL — hier haengt die Bindung, mit ihrem Preis
+   -------------------------------------------------------------------------- */
+.gg-schild, .gg-wimpel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 6);
+  padding: calc(var(--s) * 4) calc(var(--s) * 9);
+  border: calc(var(--s) * 2) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 3);
+  box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 9) rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  font-family: var(--serif);
+  color: var(--gg-tinte);
+  white-space: nowrap;
+}
+.gg-schild {
+  background: linear-gradient(180deg, #e3e6e9 0%, #b6bcc2 100%);
+}
+.gg-schild:hover { background: linear-gradient(180deg, #f2f5f7 0%, #c6ccd2 100%); }
+.gg-schildtext b {
+  display: block;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  letter-spacing: calc(var(--s) * 1);
+}
+.gg-schildtext i {
+  display: block;
+  font-style: normal;
+  font-size: calc(var(--s) * 15);
+  color: var(--gg-warn);
+}
+.gg-schild.zuteuer .gg-schildtext i { opacity: 0.55; }
+.gg-schild.fest .gg-schildtext i { color: var(--gg-tinte); opacity: 0.7; }
+.gg-schild.fest { border-style: double; border-width: calc(var(--s) * 4); }
+
+/* Ein Zeichen, das gerade gewechselt hat, blinkt drei Wochen lang. */
+.gg-schild.frisch, .gg-gewonnen, .gg-frei {
+  animation: gg-puls 1.6s ease-in-out infinite;
+}
+@keyframes gg-puls {
+  0%, 100% { box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 9) rgba(0, 0, 0, 0.45); }
+  50%      { box-shadow: 0 0 calc(var(--s) * 16) calc(var(--s) * 4) rgba(141, 47, 28, 0.75); }
+}
+
+/* Der Wimpel: er wirbt. Die Uhr laeuft, auch wenn man wegsieht. */
+.gg-wimpel {
+  background: linear-gradient(180deg, #eceadf 0%, #cfcdc0 100%);
+  border-style: dashed;
+}
+.gg-wimpel:hover { background: linear-gradient(180deg, #f8f6ec 0%, #dedbcd 100%); }
+.gg-wimpeltext b {
+  display: block;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  letter-spacing: calc(var(--s) * 1);
+}
+.gg-wimpeltext i {
+  display: block;
+  font-style: normal;
+  font-size: calc(var(--s) * 15);
+  color: var(--gg-gut);
+}
+.gg-wimpel.zuteuer .gg-wimpeltext i { color: var(--gg-warn); opacity: 0.7; }
+
+.gg-gewonnen, .gg-frei {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  padding: calc(var(--s) * 4) calc(var(--s) * 9);
+  border-radius: calc(var(--s) * 3);
+  border: calc(var(--s) * 2) solid var(--gg-tinte);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.gg-gewonnen { background: #dfe8d8; color: #2f4a27; border-color: #3f6b3a; }
+.gg-frei { background: #efe6d2; color: #5a4a2c; }
+
+/* --------------------------------------------------------------------------
+   DER GRAUE WAGEN — er faehrt, waehrend man woanders hinsieht
+   -------------------------------------------------------------------------- */
+.gg-wagen {
+  position: absolute;
+  transform: translate(-50%, -80%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--s) * 2);
+  pointer-events: none;
+  animation: gg-rollen 1.1s ease-in-out infinite;
+}
+@keyframes gg-rollen {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 calc(var(--s) * -4); }
+}
+.gg-wagenbild {
+  width: calc(var(--s) * 150);
+  height: auto;
+  filter: drop-shadow(0 calc(var(--s) * 4) calc(var(--s) * 7) rgba(0, 0, 0, 0.5)) saturate(0.3);
+}
+.gg-wagenzettel {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  background: rgba(35, 38, 42, 0.82);
+  color: #eef1f3;
+  padding: calc(var(--s) * 2) calc(var(--s) * 7);
+  border-radius: calc(var(--s) * 3);
+  white-space: nowrap;
+}
+
+/* Der Zeigefinger aus der Liste ins Bild. */
+.gg-zeiger {
+  position: absolute;
+  width: calc(var(--s) * 120);
+  height: calc(var(--s) * 120);
+  border: calc(var(--s) * 5) solid var(--gg-warn);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: gg-ring 1.2s ease-out infinite;
+}
+@keyframes gg-ring {
+  0%   { opacity: 1;   scale: 0.7; }
+  100% { opacity: 0.1; scale: 1.35; }
+}
+
+/* --------------------------------------------------------------------------
+   DAS LAUFBAND — was ohne dich geschah, immer sichtbar, immer gezaehlt
+   -------------------------------------------------------------------------- */
+.gg-band {
+  position: absolute;
+  width: 34%;
+  padding: calc(var(--s) * 6) calc(var(--s) * 10) calc(var(--s) * 7);
+  background: linear-gradient(180deg, rgba(226, 228, 226, 0.93), rgba(200, 203, 203, 0.9));
+  border: calc(var(--s) * 2) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 4);
+  box-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 12) rgba(0, 0, 0, 0.35);
+  pointer-events: auto;
+  color: var(--gg-tinte);
+}
+.gg-bandkopf {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 10);
+  border-bottom: calc(var(--s) * 1) solid rgba(35, 38, 42, 0.4);
+  padding-bottom: calc(var(--s) * 4);
+  margin-bottom: calc(var(--s) * 4);
+}
+.gg-bandtitel {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 3);
+  text-transform: uppercase;
+}
+.gg-bandzahl {
+  font-family: var(--mono);
   font-size: calc(var(--s) * 19);
-  line-height: 1.3;
+  padding: calc(var(--s) * 1) calc(var(--s) * 8);
+  background: var(--gg-tinte);
+  color: #eef1f3;
+  border-radius: calc(var(--s) * 3);
+}
+.gg-bandwaehrung {
+  flex: 1;
+  font-size: calc(var(--s) * 16);
+  font-style: italic;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gg-bandzeile {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 8);
+  font-size: calc(var(--s) * 18);
+  line-height: 1.2;
   padding: calc(var(--s) * 2) 0;
-  border-bottom: 1px dotted rgba(43, 29, 16, 0.25);
+}
+.gg-bandzeile .wann { font-family: var(--mono); font-size: calc(var(--s) * 15); opacity: 0.7;
+                      min-width: calc(var(--s) * 92); }
+.gg-bandzeile .was { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gg-bandzeile.neu .was { font-weight: bold; }
+.gg-bandzeile.leer { opacity: 0.6; font-style: italic; }
+
+/* Knoepfe im Band und im Blatt — klein genug fuer eine Zeile. */
+.knopf.gg-klein {
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  min-height: 0;
+  font-size: calc(var(--s) * 17);
+  gap: calc(var(--s) * 6);
+  border-width: calc(var(--s) * 2);
+}
+.knopf.gg-klein.an { background: linear-gradient(180deg, #cfd4d8 0%, #aeb4ba 100%); }
+.knopf.gg-winzig {
+  padding: calc(var(--s) * 1) calc(var(--s) * 7);
+  min-height: 0;
+  font-size: calc(var(--s) * 14);
+  font-family: var(--mono);
+  border-width: calc(var(--s) * 1);
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   DAS BLATT — das ganze Haus gegenueber
+   -------------------------------------------------------------------------- */
+.gg-blatt {
+  left: 50.5%;
+  top: 12.6%;
+  width: 47.5%;
+  height: 75%;
+  overflow-y: auto;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(0, 0, 0, 0.05)),
+    var(--gg-papier);
+  border-color: var(--gg-tinte);
+  padding: calc(var(--s) * 16) calc(var(--s) * 20);
+}
+.gg-bkopf { display: flex; align-items: flex-start; gap: calc(var(--s) * 14); }
+.gg-bkopf h2 { border-bottom: none; padding-bottom: 0; margin-bottom: calc(var(--s) * 2); }
+.gg-unter { font-size: calc(var(--s) * 18); font-style: italic; opacity: 0.85; }
+.gg-reiter { margin-left: auto; display: flex; gap: calc(var(--s) * 6); flex: none; }
+
+.gg-waehrung {
+  margin: calc(var(--s) * 10) 0;
+  padding: calc(var(--s) * 10) calc(var(--s) * 12);
+  border: calc(var(--s) * 2) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 4);
+  background: rgba(255, 255, 255, 0.4);
+}
+.gg-wtitel {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 18);
+  letter-spacing: calc(var(--s) * 2);
+  text-transform: uppercase;
+  margin-bottom: calc(var(--s) * 5);
+}
+.gg-wsatz { font-size: calc(var(--s) * 18); line-height: 1.3; margin-bottom: calc(var(--s) * 4); }
+.gg-wsatz.stark { font-family: var(--mono); font-size: calc(var(--s) * 17); }
+.gg-mittel { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 6); margin-top: calc(var(--s) * 6); }
+.gg-mkarte {
+  flex: 1 1 calc(var(--s) * 250);
+  padding: calc(var(--s) * 5) calc(var(--s) * 8);
+  border: calc(var(--s) * 1) solid rgba(35, 38, 42, 0.5);
+  border-radius: calc(var(--s) * 3);
+  background: rgba(255, 255, 255, 0.45);
+}
+.gg-mkarte b { display: block; font-size: calc(var(--s) * 19); }
+.gg-mkarte i { display: block; font-style: normal; font-family: var(--mono);
+               font-size: calc(var(--s) * 14); opacity: 0.8; }
+.gg-mkarte.fest { border-style: double; border-width: calc(var(--s) * 3); }
+
+.gg-block { margin-top: calc(var(--s) * 12); }
+.gg-block h3 {
+  margin: 0 0 calc(var(--s) * 6);
+  font-size: calc(var(--s) * 22);
+  letter-spacing: calc(var(--s) * 1);
+  border-bottom: calc(var(--s) * 1) solid rgba(35, 38, 42, 0.35);
+  padding-bottom: calc(var(--s) * 4);
+}
+.gg-reihe { display: flex; gap: calc(var(--s) * 8); flex-wrap: wrap; align-items: stretch; }
+.gg-karte {
+  flex: 1 1 calc(var(--s) * 290);
+  min-width: calc(var(--s) * 250);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 3);
+  padding: calc(var(--s) * 9) calc(var(--s) * 11);
+  border: calc(var(--s) * 2) solid rgba(35, 38, 42, 0.6);
+  border-radius: calc(var(--s) * 4);
+  background: rgba(255, 255, 255, 0.5);
+}
+.gg-karte .knopf { margin-top: auto; align-self: stretch; }
+.gg-karte.wirbt { border-style: dashed; background: rgba(240, 236, 218, 0.6); }
+.gg-karte.gegen, .gg-karte.angebot { border-color: var(--gg-warn); background: rgba(255, 246, 240, 0.6); }
+.gg-kname { font-size: calc(var(--s) * 21); letter-spacing: calc(var(--s) * 1); }
+.gg-kzeile { font-family: var(--mono); font-size: calc(var(--s) * 15); opacity: 0.9; }
+.gg-kzeile.stark { opacity: 1; color: var(--gg-warn); }
+.gg-ksatz { font-size: calc(var(--s) * 16); font-style: italic; line-height: 1.25;
+            margin-bottom: calc(var(--s) * 5); }
+.gg-kfest { font-family: var(--mono); font-size: calc(var(--s) * 15); color: var(--gg-warn); }
+.gg-leer { font-style: italic; opacity: 0.7; font-size: calc(var(--s) * 18); }
+.gg-getan {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  padding: calc(var(--s) * 8) calc(var(--s) * 10);
+  border: calc(var(--s) * 2) double var(--gg-warn);
+  border-radius: calc(var(--s) * 3);
+  background: rgba(255, 246, 240, 0.6);
+}
+
+.gg-lage { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 6) calc(var(--s) * 16); }
+.gg-lage span {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+}
+.gg-lage span.warn { color: var(--gg-warn); }
+.gg-hofliste { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 5); margin-top: calc(var(--s) * 6); }
+.gg-hofding {
+  font-size: calc(var(--s) * 15);
+  padding: calc(var(--s) * 2) calc(var(--s) * 8);
+  border: calc(var(--s) * 1) solid rgba(35, 38, 42, 0.5);
+  border-radius: calc(var(--s) * 8);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.gg-rolle { max-height: calc(var(--s) * 300); }
+.gg-zzeile {
+  display: flex;
+  gap: calc(var(--s) * 8);
+  align-items: baseline;
+  font-size: calc(var(--s) * 16);
+  padding: calc(var(--s) * 3) 0;
+  border-bottom: 1px dotted rgba(35, 38, 42, 0.3);
+}
+.gg-zzeile .wann { font-family: var(--mono); opacity: 0.7; min-width: calc(var(--s) * 92); }
+.gg-zzeile .art {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 13);
+  text-transform: uppercase;
+  letter-spacing: calc(var(--s) * 1);
+  min-width: calc(var(--s) * 88);
+  opacity: 0.75;
+}
+.gg-zzeile .was { flex: 1; }
+
+.gg-meldung {
+  margin-top: calc(var(--s) * 10);
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  padding: calc(var(--s) * 7) calc(var(--s) * 10);
+  background: rgba(35, 38, 42, 0.85);
+  color: #eef1f3;
+  border-radius: calc(var(--s) * 3);
 }
