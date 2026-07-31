@@ -888,108 +888,104 @@
     if (weg) k.classList.add('weg');
     if (wichtig && !weg) k.classList.add('durstig');
 
-    /* Zeile 1: Name, Entfernung, Verlangen als Fassbetten */
+    /* Zeile 1: wer, wie weit, an wen gebunden */
     var z1 = B.el('div', 'fu-z1');
+    z1.appendChild(B.el('span', 'fu-kuerzel', kurz(a)));
     z1.appendChild(B.el('span', 'fu-name', a.name));
     z1.appendChild(B.el('span', 'fu-km', B.zahl(a.km, a.km < 1 ? 1 : 0) + ' km'));
-    z1.appendChild(B.el('span', 'fu-marke', kurz(a)));
+    var b2 = a.bindung;
+    z1.appendChild(B.el('span', 'fu-bindung', weg ? '—'
+      : (b2 ? (b2.wem === 'haus' ? 'unser Haus' : b2.wem) : 'frei')));
     k.appendChild(z1);
 
+    /* Zeile 2: was das Haus will — und der eine Handgriff daneben */
     var z2 = B.el('div', 'fu-z2');
     if (weg) {
       z2.appendChild(B.el('span', 'fu-verloren',
-        'AUFGEGEBEN ' + weg.jahr + (weg.fremd ? ' — der Gegner stand da' : ' — niemand hat sie genommen')));
+        'AUFGEGEBEN ' + weg.jahr + (weg.fremd ? ' — der Gegner stand schon da'
+                                              : ' — niemand hat sie genommen')));
     } else {
       var schritt = e.wagen.schritt;
       var will = Math.round(durst(a));
       var hat = geladenFuer(a.schluessel);
       var betten = B.el('span', 'fu-betten');
-      var n = Math.min(9, Math.ceil(will / schritt));
+      var n = Math.min(7, Math.ceil(will / schritt));
       for (var i = 0; i < n; i++) {
         betten.appendChild(B.el('i', 'fu-bett' + (i * schritt < hat ? ' voll' : '')));
       }
       if (!n) betten.appendChild(B.el('i', 'fu-bett satt'));
       z2.appendChild(betten);
       z2.appendChild(B.el('span', 'fu-will', 'will ' + B.welt.menge(will)
-        + (hat ? ' · ' + B.welt.menge(hat) + ' auf dem Wagen' : '')));
+        + (hat ? ' · ' + B.welt.menge(hat) + ' geladen' : '')));
+
+      var grund = sperre(a);
+      if (grund && e.bann && a.km > e.bannmeile && !Z.bann[a.schluessel]) {
+        var preis = Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr));
+        z2.appendChild(B.knopf({
+          text: 'Bannbrief', zug: 'fuhre:bann:' + a.schluessel,
+          klasse: 'fu-klein fu-fest fu-tat', preis: -preis,
+          titel: e.bann.satz + ' ' + a.name + ' liegt ' + a.km + ' km außerhalb.',
+          tu: function () { loeseBann(a); }
+        }));
+      } else if (grund && e.listung && !gelistet(a)) {
+        var s0 = sorten()[1] || sorten()[0];
+        var n2 = 0;
+        for (var kk in Z.listung) for (var qq in Z.listung[kk]) if (Z.listung[kk][qq]) n2++;
+        z2.appendChild(B.knopf({
+          text: 'Regalmeter', zug: 'fuhre:listen:' + a.schluessel,
+          klasse: 'fu-klein fu-fest fu-tat',
+          preis: -Math.round(e.listung.basis * Math.pow(e.listung.staffel, n2)),
+          titel: e.listung.satz + ' Gelistet würde: ' + s0.name + '.',
+          tu: function () { liste(a, s0); }
+        }));
+      } else {
+        var hemm = kannLaden(a);
+        var kn = B.knopf({
+          text: '+ ' + B.welt.menge(e.wagen.schritt), zug: 'fuhre:laden:' + a.schluessel,
+          klasse: 'fu-klein fu-laden fu-tat', aus: !!hemm,
+          titel: hemm || (B.welt.menge(e.wagen.schritt) + ' für ' + a.name + ' auf den Wagen. '
+            + a.name + ' zahlt ' + B.welt.geld(preisJeFass(sorten()[1] || sorten()[0], a)) + ' je Fass.'),
+          tu: function () { lade(a); }
+        });
+        if (!hemm && !Z.fuhren && durst(a) >= 1) kn.classList.add('fu-weiser');
+        z2.appendChild(kn);
+        z2.appendChild(B.knopf({
+          text: '−', zug: 'fuhre:abladen:' + a.schluessel,
+          klasse: 'fu-klein fu-ab', aus: !geladenFuer(a.schluessel),
+          titel: 'Wieder herunter vom Wagen.',
+          tu: function () { entlade(a); }
+        }));
+      }
     }
     k.appendChild(z2);
 
-    /* Zeile 3: die Reihe der letzten drei Jahre — daran sieht man zwei
-       Jahre vorher, dass eine Adresse verloren geht. */
+    /* Zeile 3: die Reihe der letzten drei Jahre. Daran sieht man zwei Jahre
+       vorher, dass eine Adresse verlorengeht — und zwar ohne den Gegner. */
     var z3 = B.el('div', 'fu-z3');
     var soll = jahresbedarf(a);
     var reihe = B.el('span', 'fu-reihe');
-    reihe.title = 'Absatz der letzten drei Braujahre gegen den Bedarf von '
-      + B.welt.menge(soll) + '. Faellt die Reihe drei Jahre unter ein Drittel, ist die Adresse weg.';
+    reihe.title = 'Absatz der drei letzten Braujahre gegen den Bedarf von '
+      + B.welt.menge(soll) + '. Bleibt er drei Jahre unter einem Drittel, ist die Adresse weg.';
     a.reihe.forEach(function (r) {
       var saeule = B.el('i', 'fu-saeule' + (r < soll * 0.35 ? ' mager' : ''));
-      saeule.style.height = B.grenze(Math.round(r / Math.max(1, soll) * 100), 4, 100) + '%';
+      saeule.style.height = B.grenze(Math.round(r / Math.max(1, soll) * 100), 5, 100) + '%';
       reihe.appendChild(saeule);
     });
     z3.appendChild(reihe);
     z3.appendChild(B.el('span', 'fu-zahlen',
       a.reihe.map(function (r) { return B.welt.menge(r, true); }).join('·')
-      + ' / ' + B.welt.menge(soll)));
+      + ' von ' + B.welt.menge(soll)));
 
     if (!weg) {
       var m = Z.mahnung[a.schluessel] || 0;
       var mk = B.el('span', 'fu-mahnung' + (m >= 2 ? ' rot' : ''));
       mk.title = m
-        ? m + ' magere Jahre in Folge. Beim dritten ist die Adresse weg.'
-        : 'Keine Mahnung. Das Haus ist zufrieden.';
+        ? m + ' magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr.'
+        : 'Keine Mahnung.';
       for (var q = 0; q < 3; q++) mk.appendChild(B.el('i', q < m ? 'an' : ''));
       z3.appendChild(mk);
     }
     k.appendChild(z3);
-
-    /* Zeile 4: der Handgriff */
-    var z4 = B.el('div', 'fu-z4');
-    if (!weg) {
-      var grund = sperre(a);
-      if (grund && ep().bann && a.km > ep().bannmeile && !Z.bann[a.schluessel]) {
-        var preis = Math.round(ep().bann.basis * Math.pow(ep().bann.staffel, Z.bannNr));
-        z4.appendChild(B.knopf({
-          text: 'Bannbrief loesen', zug: 'fuhre:bann:' + a.schluessel,
-          klasse: 'fu-klein fu-fest', preis: -preis,
-          titel: ep().bann.satz + ' ' + a.name + ' liegt ' + a.km + ' km draussen.',
-          tu: function () { loeseBann(a); }
-        }));
-      } else if (grund && ep().listung && !gelistet(a)) {
-        var s0 = sorten()[1] || sorten()[0];
-        var n2 = 0;
-        for (var kk in Z.listung) for (var qq in Z.listung[kk]) if (Z.listung[kk][qq]) n2++;
-        z4.appendChild(B.knopf({
-          text: 'Regalmeter · ' + s0.name, zug: 'fuhre:listen:' + a.schluessel,
-          klasse: 'fu-klein fu-fest',
-          preis: -Math.round(ep().listung.basis * Math.pow(ep().listung.staffel, n2)),
-          titel: ep().listung.satz,
-          tu: function () { liste(a, s0); }
-        }));
-      } else {
-        var hemm = kannLaden(a);
-        var schrittText = '+ ' + B.welt.menge(ep().wagen.schritt);
-        var kn = B.knopf({
-          text: schrittText, zug: 'fuhre:laden:' + a.schluessel,
-          klasse: 'fu-klein fu-laden', aus: !!hemm,
-          titel: hemm || ('Ein Fass fuer ' + a.name + ' auf den Wagen. '
-            + 'Bringt ' + B.welt.geld(preisJeFass(sorten()[1] || sorten()[0], a)) + ' je Fass.'),
-          tu: function () { lade(a); }
-        });
-        if (!hemm && !Z.fuhren && durst(a) >= 1) kn.classList.add('fu-weiser');
-        z4.appendChild(kn);
-        z4.appendChild(B.knopf({
-          text: '−', zug: 'fuhre:abladen:' + a.schluessel,
-          klasse: 'fu-klein', aus: !geladenFuer(a.schluessel),
-          titel: 'Wieder herunter vom Wagen.',
-          tu: function () { entlade(a); }
-        }));
-      }
-      var b2 = a.bindung;
-      z4.appendChild(B.el('span', 'fu-bindung',
-        b2 ? (b2.wem === 'haus' ? 'unser Haus' : 'gebunden: ' + b2.wem) : 'frei'));
-    }
-    k.appendChild(z4);
     return k;
   }
 
