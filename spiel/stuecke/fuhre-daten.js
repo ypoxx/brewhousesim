@@ -123,7 +123,7 @@ var FUHRE_DATEN = {
       sommerSatz: 'Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer '
                 + 'unter der Pfanne — die Stadt fürchtet den Brand.',
       monate: ['Wonnemond', 'Brachet', 'Heuert', 'Ernting', 'Scheiding'],
-      abgabe: { satz: 0.10, name: 'Ungeld',
+      abgabe: { satz: 0.08, name: 'Ungeld',
                 sagt: 'Der Rat nimmt vom Bier, das ausgeschenkt wurde. Wer mehr verkauft, zahlt mehr.' },
       bannmeile: 1,
       bann: { name: 'Bannbrief', basis: 60, staffel: 1.55,
@@ -180,7 +180,7 @@ var FUHRE_DATEN = {
       sommerSatz: 'Das Sommerbrauverbot steht seit 1553 in der Ordnung: von Georgi bis '
                 + 'Michaeli wird nicht gebraut. Was im April im Keller liegt, ist der ganze Sommer.',
       monate: ['Wonnemond', 'Brachet', 'Heuert', 'Ernting', 'Scheiding'],
-      abgabe: { satz: 0.13, name: 'Ungeld und Zunftbeitrag',
+      abgabe: { satz: 0.11, name: 'Ungeld und Zunftbeitrag',
                 sagt: 'Der Stadt das Ungeld, der Zunft den Beitrag. Beides nach Ausstoß.' },
       bannmeile: 0,
       kaeufe: [
@@ -246,7 +246,7 @@ var FUHRE_DATEN = {
       sommerSatz: 'Die Kältemaschine koennte im Juli brauen. Der Sommerabsatz kommt '
                 + 'trotzdem aus dem Lagerkeller — was im April eingelagert ist, ist der Sommer.',
       monate: ['Mai', 'Juni', 'Juli', 'August', 'September'],
-      abgabe: { satz: 0.11, name: 'Biersteuer und Malzaufschlag',
+      abgabe: { satz: 0.10, name: 'Biersteuer und Malzaufschlag',
                 sagt: 'Seit 1879 wird das Malz besteuert. Wer mehr einbraut, zahlt mehr.' },
       bannmeile: 0,
       kaeufe: [
@@ -304,7 +304,7 @@ var FUHRE_DATEN = {
                 + 'kommt aus den Tanks — und in den Tanks ist, was im April drin war.',
       monate: ['Mai', 'Juni', 'Juli', 'August', 'September'],
       bannmeile: 0,
-      abgabe: { satz: 0.13, name: 'Biersteuer und Werbeetat',
+      abgabe: { satz: 0.11, name: 'Biersteuer und Werbeetat',
                 sagt: 'Steuer nach Ausstoß, Werbung nach Marktanteil am eigenen Ausstoß. '
                     + 'Beides wächst mit dem Haus.' },
       listung: { name: 'Listung', basis: 2600, staffel: 1.22,
