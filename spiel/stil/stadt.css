@@ -187,8 +187,8 @@
   align-items: flex-start;
   justify-content: center;
   gap: calc(var(--s) * 1);
-  min-height: calc(var(--s) * 50);
-  padding: calc(var(--s) * 5) calc(var(--s) * 14) calc(var(--s) * 7);
+  min-height: calc(var(--s) * 44);
+  padding: calc(var(--s) * 4) calc(var(--s) * 14) calc(var(--s) * 6);
   background: linear-gradient(180deg, #7b5230 0%, #56341a 100%);
   border: calc(var(--s) * 3) solid #33200e;
   border-bottom: none;
@@ -254,7 +254,7 @@
 /* --- Der Bauhof: die offenen Bauten der Epoche, Preisschild nebeneinander. */
 
 .stadt-bauhof {
-  padding: calc(var(--s) * 7) calc(var(--s) * 11) calc(var(--s) * 8);
+  padding: calc(var(--s) * 6) calc(var(--s) * 11) calc(var(--s) * 7);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.18)),
     repeating-linear-gradient(180deg, #6b4526 0 calc(var(--s) * 26), #66401f 0 calc(var(--s) * 52));
