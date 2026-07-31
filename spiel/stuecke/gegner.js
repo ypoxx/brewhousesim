@@ -471,6 +471,7 @@
 
   function zugBauen(h) {
     var l = ep().bauten.filter(function (b) {
+      if (b.abJahr && jahr() < b.abJahr) return false;
       return h.bauten.indexOf(b.k) < 0 && h.kasse >= b.preis;
     });
     if (!l.length) return false;
@@ -488,7 +489,8 @@
     if (h.preis <= boden) return false;
     h.preis = Math.max(boden, h.preis - (zug.schritt || 1));
     merkeZug(h, 'preis',
-      (zug.text || '').replace('{geld}', B.welt.geld(h.preis)),
+      (zug.text || '').replace('{geld}', B.welt.geld(h.preis))
+        .replace('{einheit}', B.welt.mengeEinheit()),
       sitzVon(h).ort, null);
     return true;
   }
@@ -608,7 +610,12 @@
 
   function zugliste(h) {
     var e = ep();
-    return (h.k === 'konzern' && e.konzernzuege) ? e.konzernzuege : e.zuege;
+    var l = (h.k === 'konzern' && e.konzernzuege) ? e.konzernzuege : e.zuege;
+    return l.filter(function (z) {
+      if (z.abJahr && jahr() < z.abJahr) return false;
+      if (z.bisJahr && jahr() > z.bisJahr) return false;
+      return true;
+    });
   }
 
   function gewicht(h, zug) {
