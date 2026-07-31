@@ -1008,6 +1008,13 @@
     k.setAttribute('data-zug', 'gegner:oeffnen:' + h.k);
     k.title = nameVon(h) + ' — ' + s.sagt + '. ' + h.erbe.name + ', ' + h.erbe.wesenName
       + '. Anklicken: das ganze Haus gegenueber.';
+    k.addEventListener('click', function (ereignis) {
+      ereignis.preventDefault();
+      if (Z.offen && Z.seite === h.k) { Z.offen = false; }
+      else { Z.offen = true; Z.seite = h.k; }
+      B.ton.spiele('gegner:hinsehen', { ort: s.ort });
+      neuZeichnen('gegner-sitz');
+    });
 
     var kopf = B.el('div', 'gg-sitzkopf');
     kopf.appendChild(svg(h.k === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen'));
