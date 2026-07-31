@@ -46,12 +46,18 @@
       var bau = B.ebene('bau', 'stadt');
       B.leere(bau);
 
-      var lauf = 0;
+      /* Der Punkt sitzt genau auf dem Ort; nur die Beschriftung weicht aus,
+         damit eng benachbarte Orte (hof/kesselstelle, muehle/bruecke_oben)
+         lesbar bleiben. */
+      var gesetzt = [];
       B.orte.liste(e).forEach(function (o) {
         if (o.art === 'ui') return;
-        /* Beschriftung abwechselnd ueber und unter den Punkt, damit sich eng
-           benachbarte Orte (hof/kesselstelle, muehle/bruecke_oben) lesen lassen. */
-        var m = B.el('div', 'stadt-ort art-' + o.art + ((lauf++ % 2) ? ' hoch' : ''));
+        var stufe = gesetzt.filter(function (v) {
+          return Math.abs(v.x - o.x) < 7 && Math.abs(v.y - o.y) < 6;
+        }).length;
+        gesetzt.push(o);
+        var m = B.el('div', 'stadt-ort art-' + o.art);
+        m.style.setProperty('--stufe', stufe);
         m.appendChild(B.el('i'));
         m.appendChild(B.el('span', 'wort', o.name));
         m.appendChild(B.el('span', 'zahl', o.x + '/' + o.y));
