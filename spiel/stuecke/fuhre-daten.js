@@ -113,7 +113,7 @@ var FUHRE_DATEN = {
       keller: { name: 'Der Keller', bettFass: 1, bett: 'Fass', spalten: 6,
                 satz: 'Kühl, feucht, klein. Was hier liegt, ist der ganze Handel.' },
       wagen: { name: 'Ochsenkarren', fass: 5, halte: 4, schritt: 1,
-               grund: 2, jeKm: 1.8, haltPreis: 1, umlauf: 2, bruch: 0.03,
+               grund: 1, jeKm: 1.6, haltPreis: 0.6, umlauf: 2, bruch: 0.03,
                satz: 'Fünf Plätze, vier Halte. Der Ochse geht sieben Meilen am Tag und keine mehr.' },
       faesser: 22,
       planStart: 1,
@@ -131,7 +131,7 @@ var FUHRE_DATEN = {
       kaeufe: [
         { k: 'budget',   text: 'Brautage vom Rat · +6', basis: 90, staffel: 1.6, menge: 6,
           titel: 'Sechs zusätzliche Brautage in diesem Braujahr. Der Rat verkauft sie ungern und teuer.' },
-        { k: 'rohstoff', text: 'Grut vom Grutherrn · +40', basis: 46, staffel: 1.0, menge: 40,
+        { k: 'rohstoff', text: 'Grut vom Grutherrn · +40', basis: 34, staffel: 1.0, menge: 40,
           titel: 'Ohne Grut kein Bier. Hopfen kennt hier noch niemand.' },
         { k: 'fass',     text: 'Fass vom Böttcher · +3', basis: 34, staffel: 1.06, menge: 3,
           titel: 'Drei Fässer mehr im Umlauf.' }
@@ -142,7 +142,7 @@ var FUHRE_DATEN = {
           sommer: false,
           satz: 'Ein Tag am Kessel, fünf Fass. In drei Wochen ist es sauer. Der Gasthof nimmt es nicht.' },
         { k: 'grut', name: 'Grutbier', zeichen: 'G', stufe: 2,
-          tage: 2, fass: 4, reife: 0, haltbar: 6, preis: 9, kosten: 8, rohstoff: 3,
+          tage: 2, fass: 4, reife: 0, haltbar: 6, preis: 9, kosten: 7, rohstoff: 3,
           sommer: false,
           satz: 'Das Bier des Hauses. Grut aus Gagel, Porst und Schafgarbe — kein Hopfen.' },
         { k: 'stark', name: 'Starkbier', zeichen: 'S', stufe: 3,
