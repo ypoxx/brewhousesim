@@ -1,0 +1,357 @@
+/* ===========================================================================
+   grund.css — Grundstil des Skeletts.  GEHOERT DEM SKELETT-BAUER.
+   Ein Stueck-Bauer aendert diese Datei nicht, sondern schreibt in
+   stil/<seinname>.css und stil/<seinname>-zusatz.css.
+
+   Bezugsformat der Buehne: 2752 x 1536.
+   --s ist EIN Bezugspixel. Alle Groessen in Vielfachen davon, dann waechst
+   die Schrift mit dem Fenster mit und die Aufnahme in 2752x1536 stimmt.
+   =========================================================================== */
+
+:root {
+  --s: min(calc(100vw / 2752), calc(100vh / 1536));
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Holz und Tinte der Kopfleiste — in allen Epochen dieselbe Tafel. */
+  --holz: #6b4526;
+  --holz-hell: #8a5c33;
+  --holz-dunkel: #3d2614;
+  --tafel: #f2e6cd;
+  --tinte: #2b1d10;
+  --gold: #e8c98a;
+
+  --papier: #efe6d2;
+  --linie: #b7a684;
+  --rot: #9d3520;
+  --gruen: #4a6b3a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;              /* kein Scrollbalken, niemals */
+  background: #0d0b08;
+  color: var(--tinte);
+  font-family: var(--serif);
+  font-size: calc(var(--s) * 24);
+  line-height: 1.25;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   DIE BUEHNE
+   -------------------------------------------------------------------------- */
+
+#buehne {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  /* Himmel-zu-Erde-Verlauf als unterster Grund. Liegt UNTER der Ebene
+     'platte'; sobald DIE STADT ihre Epochenplatte legt, sieht man ihn nicht
+     mehr. Er sorgt nur dafuer, dass nie schwarzes Nichts zu sehen ist. */
+  background:
+    linear-gradient(180deg,
+      var(--himmel-oben, #cfd8dc) 0%,
+      var(--himmel-unten, #e7dcc4) 34%,
+      var(--erde-oben, #cdbd97) 46%,
+      var(--erde-unten, #b7a179) 100%);
+}
+
+/* Epochenstimmung. Setzt kern/buehne.js ueber data-epoche. */
+#buehne[data-epoche="1"] {
+  --himmel-oben: #b9c4cb; --himmel-unten: #dcd8c4;
+  --erde-oben: #c6c295;   --erde-unten: #ab9a72;
+}
+#buehne[data-epoche="2"] {
+  --himmel-oben: #b5bfc6; --himmel-unten: #e0d6b9;
+  --erde-oben: #c2b98b;   --erde-unten: #9d8b65;
+}
+#buehne[data-epoche="3"] {
+  --himmel-oben: #a9bcc6; --himmel-unten: #ecd9b0;
+  --erde-oben: #c3b489;   --erde-unten: #9a8460;
+}
+#buehne[data-epoche="4"] {
+  --himmel-oben: #9fb3c4; --himmel-unten: #d9dbd3;
+  --erde-oben: #b3b0a1;   --erde-unten: #8d8b80;
+}
+
+/* --------------------------------------------------------------------------
+   EBENEN — feste z-Ordnung, jede ein leerer Container
+   -------------------------------------------------------------------------- */
+
+.ebene {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;          /* durchlaessig, damit Ebenen sich nicht blockieren */
+}
+
+#ebene-platte { z-index: 10; }
+#ebene-bau    { z-index: 20; }
+#ebene-marken { z-index: 30; }
+#ebene-hand   { z-index: 40; }
+#ebene-kopf   { z-index: 50; }
+#ebene-blatt  { z-index: 60; }
+
+/* Ein Fach ist der Container GENAU EINES Stuecks in GENAU EINER Ebene.
+   BRAUHAUS.ebene('marken','gegner') liefert es. */
+.fach {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Alles Bedienbare faengt Klicks wieder ein. */
+.ebene button,
+.ebene a[href],
+.ebene input,
+.ebene select,
+.ebene textarea,
+.ebene .greifbar {
+  pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   ORTSGEBUNDENE DINGE
+   Ein Element mit .amort steht auf einem Ort aus kern/orte.js.
+   BRAUHAUS.orte.setze(el,'sudhaus') setzt left/top; der Anker kommt aus
+   data-anker.
+   -------------------------------------------------------------------------- */
+
+.amort { position: absolute; }
+.amort[data-anker="mitte"]  { transform: translate(-50%, -50%); }
+.amort[data-anker="unten"]  { transform: translate(-50%, -100%); }
+.amort[data-anker="oben"]   { transform: translate(-50%, 0); }
+.amort[data-anker="links"]  { transform: translate(0, -50%); }
+.amort[data-anker="rechts"] { transform: translate(-100%, -50%); }
+.amort[data-anker="ecke"]   { transform: none; }
+
+/* --------------------------------------------------------------------------
+   KNOEPFE — die Bedienregel
+   Jede Handlung ist ueber ein echtes <button> mit sichtbarem deutschem Text
+   und stabilem data-zug erreichbar.  BRAUHAUS.knopf() baut sie.
+   -------------------------------------------------------------------------- */
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--s) * 10);
+  padding: calc(var(--s) * 9) calc(var(--s) * 18);
+  min-height: calc(var(--s) * 46);
+  background: linear-gradient(180deg, #f6ecd6 0%, #e4d3b0 100%);
+  color: var(--tinte);
+  border: calc(var(--s) * 2) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 4);
+  box-shadow: 0 calc(var(--s) * 3) 0 rgba(0, 0, 0, 0.35);
+  font-family: var(--serif);
+  font-size: calc(var(--s) * 24);
+  letter-spacing: calc(var(--s) * 1);
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.knopf:hover { background: linear-gradient(180deg, #fff6e4 0%, #eddcbb 100%); }
+.knopf:active { transform: translateY(calc(var(--s) * 2)); box-shadow: none; }
+.knopf:focus-visible { outline: calc(var(--s) * 3) solid var(--gold); outline-offset: calc(var(--s) * 2); }
+.knopf[disabled], .knopf[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: default;
+  filter: grayscale(0.5);
+}
+
+/* Der Preis steht am Knopf, nicht in einer Tabelle. Das ist die Latte:
+   Entscheidungen mit Preisschild nebeneinander. */
+.knopf .preis {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 20);
+  color: var(--rot);
+  margin-left: auto;
+  padding-left: calc(var(--s) * 14);
+}
+.knopf .preis.einnahme { color: var(--gruen); }
+
+.knopf.gross {
+  font-size: calc(var(--s) * 34);
+  padding: calc(var(--s) * 14) calc(var(--s) * 30);
+  letter-spacing: calc(var(--s) * 3);
+}
+
+/* --------------------------------------------------------------------------
+   KOPFLEISTE — Holztafeln oben, wie im Zielbild
+   -------------------------------------------------------------------------- */
+
+.kopfleiste {
+  display: flex;
+  gap: calc(var(--s) * 14);
+  align-items: stretch;
+  padding: calc(var(--s) * 8);
+  background: linear-gradient(180deg, var(--holz-hell) 0%, var(--holz) 55%, var(--holz-dunkel) 100%);
+  border: calc(var(--s) * 3) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 6);
+  box-shadow: 0 calc(var(--s) * 6) calc(var(--s) * 14) rgba(0, 0, 0, 0.4);
+  pointer-events: auto;
+}
+
+.tafel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--s) * 6) calc(var(--s) * 20);
+  background: linear-gradient(180deg, #7d5330 0%, #5c3a1f 100%);
+  border: calc(var(--s) * 2) solid #2f1c0d;
+  border-radius: calc(var(--s) * 4);
+  color: var(--gold);
+  font-family: var(--serif);
+  letter-spacing: calc(var(--s) * 2);
+  white-space: nowrap;
+}
+
+.tafel .marke {
+  font-size: calc(var(--s) * 16);
+  opacity: 0.7;
+  letter-spacing: calc(var(--s) * 3);
+  text-transform: uppercase;
+}
+.tafel .wert {
+  font-size: calc(var(--s) * 30);
+  color: #fbeccb;
+}
+.tafel.knopf {
+  background: linear-gradient(180deg, #7d5330 0%, #5c3a1f 100%);
+  color: var(--gold);
+  border-color: #2f1c0d;
+  cursor: pointer;
+}
+.tafel.knopf:hover { background: linear-gradient(180deg, #96663d 0%, #6d4726 100%); }
+.tafel.knopf .wert { color: #fbeccb; }
+
+/* --------------------------------------------------------------------------
+   BLATT — Chronik, Michaeli-Blatt, Panels
+   -------------------------------------------------------------------------- */
+
+.blatt {
+  position: absolute;
+  pointer-events: auto;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.04)),
+    var(--papier);
+  border: calc(var(--s) * 3) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 5);
+  box-shadow: 0 calc(var(--s) * 12) calc(var(--s) * 30) rgba(0, 0, 0, 0.45);
+  padding: calc(var(--s) * 22) calc(var(--s) * 26);
+  color: var(--tinte);
+  overflow: hidden;
+}
+
+.blatt h2 {
+  margin: 0 0 calc(var(--s) * 12) 0;
+  font-size: calc(var(--s) * 32);
+  letter-spacing: calc(var(--s) * 2);
+  border-bottom: calc(var(--s) * 2) solid var(--linie);
+  padding-bottom: calc(var(--s) * 8);
+}
+
+.blatt .zeile {
+  display: flex;
+  gap: calc(var(--s) * 12);
+  font-size: calc(var(--s) * 21);
+  padding: calc(var(--s) * 3) 0;
+  border-bottom: 1px dotted var(--linie);
+}
+.blatt .zeile .wann { font-family: var(--mono); color: #7a6a4e; min-width: calc(var(--s) * 150); }
+.blatt .zeile .was { flex: 1; }
+.blatt .zeile .zahl { font-family: var(--mono); text-align: right; }
+
+.rolle { overflow-y: auto; }
+.rolle::-webkit-scrollbar { width: calc(var(--s) * 10); }
+.rolle::-webkit-scrollbar-thumb { background: var(--linie); border-radius: calc(var(--s) * 5); }
+
+/* --------------------------------------------------------------------------
+   STUMMEL — was ein noch nicht gebautes Stueck zeigt.
+   Verschwindet, sobald der Stueck-Bauer seine Datei ersetzt.
+   -------------------------------------------------------------------------- */
+
+.stummel {
+  position: absolute;
+  border: calc(var(--s) * 2) dashed rgba(43, 29, 16, 0.55);
+  border-radius: calc(var(--s) * 4);
+  background: rgba(255, 250, 235, 0.28);
+  color: #2b1d10;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 18);
+  padding: calc(var(--s) * 6) calc(var(--s) * 10);
+  letter-spacing: calc(var(--s) * 1);
+}
+
+.stummel .name {
+  font-family: var(--serif);
+  font-size: calc(var(--s) * 22);
+  letter-spacing: calc(var(--s) * 3);
+  text-transform: uppercase;
+}
+
+/* Ortsmarke: ein benannter Punkt aus kern/orte.js. */
+.ortsmarke {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--s) * 3);
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  color: #241a0e;
+  text-shadow: 0 0 calc(var(--s) * 6) rgba(255, 248, 230, 0.95);
+  white-space: nowrap;
+}
+.ortsmarke i {
+  display: block;
+  width: calc(var(--s) * 16);
+  height: calc(var(--s) * 16);
+  border-radius: 50%;
+  background: rgba(157, 53, 32, 0.85);
+  border: calc(var(--s) * 2) solid rgba(255, 248, 230, 0.9);
+}
+
+.ohne-skript {
+  position: fixed;
+  inset: 40% 10% auto 10%;
+  z-index: 999;
+  background: #efe6d2;
+  padding: 2rem;
+  font-family: var(--serif);
+  text-align: center;
+}
+
+/* Ein Stueck, das beim Aufbau geworfen hat, wird hier vermerkt statt die
+   Seite zu verlieren. Sichtbar nur mit ?pruefe=1. */
+#kern-lage {
+  position: absolute;
+  left: 0.5%;
+  bottom: 0.5%;
+  z-index: 70;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  padding: calc(var(--s) * 6) calc(var(--s) * 10);
+  border-radius: calc(var(--s) * 4);
+  pointer-events: none;
+  white-space: pre;
+}

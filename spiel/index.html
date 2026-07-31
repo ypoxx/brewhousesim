@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brauhaus zum Anker — 1350 bis heute</title>
+<meta name="description" content="Wirtschaftssimulation. Ein Haus, sieben Jahrhunderte, ein Ort.">
+<!-- Leeres Icon als data-URI: verhindert eine Netzanfrage nach /favicon.ico. -->
+<link rel="icon" href="data:,">
+
+<!--
+  ===================================================================
+  DIE EINZIGE HTML-DATEI DES SPIELS.
+  Sie ist FERTIG und wird nach dem Skelettbau NICHT MEHR ANGEFASST.
+  Alle Dateien aller vier Stuecke sind hier bereits eingehaengt; jede
+  liegt als lauffaehiger Stummel vor. Kein Stueck-Bauer braucht je ein
+  <script>- oder <link>-Tag zu ergaenzen.  Das ist die Parallelsicherung.
+
+  Keine ES-Module, kein import, kein Netzzugriff, keine Web-Fonts.
+  ===================================================================
+-->
+
+<link rel="stylesheet" href="stil/grund.css">
+
+<link rel="stylesheet" href="stil/stadt.css">
+<link rel="stylesheet" href="stil/stadt-zusatz.css">
+<link rel="stylesheet" href="stil/fuhre.css">
+<link rel="stylesheet" href="stil/fuhre-zusatz.css">
+<link rel="stylesheet" href="stil/preis.css">
+<link rel="stylesheet" href="stil/preis-zusatz.css">
+<link rel="stylesheet" href="stil/gegner.css">
+<link rel="stylesheet" href="stil/gegner-zusatz.css">
+</head>
+<body>
+
+<!--
+  DIE BUEHNE. Fuellt den Viewport exakt (100vw/100vh, kein Letterbox-Balken,
+  kein Scrollbalken). Bezugsformat 2752x1536 — alle Koordinaten in Prozent,
+  damit eine Aufnahme in 2752x1536 randlos ist.
+
+  Ebenenstapel mit fester z-Ordnung. Jede Ebene ist ein leerer Container;
+  ein Stueck holt sich seinen eigenen Unterbehaelter mit BRAUHAUS.ebene(name)
+  und schreibt NIE ausserhalb davon.
+-->
+<div id="buehne" data-epoche="1">
+  <div class="ebene" id="ebene-platte" data-ebene="platte"></div><!-- Epochenbild      -->
+  <div class="ebene" id="ebene-bau"    data-ebene="bau"></div><!-- gebaute Gebaeude    -->
+  <div class="ebene" id="ebene-marken" data-ebene="marken"></div><!-- Schilder, Gegner -->
+  <div class="ebene" id="ebene-hand"   data-ebene="hand"></div><!-- Faesser, Wagen     -->
+  <div class="ebene" id="ebene-kopf"   data-ebene="kopf"></div><!-- HUD, WEITER        -->
+  <div class="ebene" id="ebene-blatt"  data-ebene="blatt"></div><!-- Blaetter, Panels  -->
+</div>
+
+<noscript>
+  <p class="ohne-skript">Dieses Spiel braucht JavaScript. Es laedt keine Daten aus dem Netz.</p>
+</noscript>
+
+<!-- ========================= KERN (nur der Skelett-Bauer) ========================= -->
+<script src="kern/basis.js"></script>
+<script src="kern/orte.js"></script>
+<script src="kern/uhr.js"></script>
+<script src="kern/welt.js"></script>
+<script src="kern/ton.js"></script>
+<script src="kern/buehne.js"></script>
+<script src="kern/kopf.js"></script>
+
+<!-- ========================= DIE STADT ========================= -->
+<script src="stuecke/stadt-daten.js"></script>
+<script src="stuecke/stadt.js"></script>
+<script src="stuecke/stadt-zusatz.js"></script>
+
+<!-- ========================= DIE FUHRE ========================= -->
+<script src="stuecke/fuhre-daten.js"></script>
+<script src="stuecke/fuhre.js"></script>
+<script src="stuecke/fuhre-zusatz.js"></script>
+
+<!-- ========================= DER PREIS ========================= -->
+<script src="stuecke/preis-daten.js"></script>
+<script src="stuecke/preis.js"></script>
+<script src="stuecke/preis-zusatz.js"></script>
+
+<!-- ========================= DER GEGNER ======================== -->
+<script src="stuecke/gegner-daten.js"></script>
+<script src="stuecke/gegner.js"></script>
+<script src="stuecke/gegner-zusatz.js"></script>
+
+<!-- Startet die Partie. Muss zuletzt stehen. -->
+<script src="kern/start.js"></script>
+</body>
+</html>
