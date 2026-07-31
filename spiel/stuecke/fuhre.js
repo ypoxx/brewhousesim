@@ -131,7 +131,7 @@
     var e = ep();
     if (Z.verloren[a.schluessel]) return 'Aufgegeben. Diese Adresse ist weg.';
     if (e.bannmeile && a.km > e.bannmeile && !Z.bann[a.schluessel]) {
-      return 'Ausserhalb der Bannmeile (' + e.bannmeile + ' Meile). Ohne Bannbrief des Rats faehrt hier kein Fass.';
+      return 'Außerhalb der Bannmeile (' + e.bannmeile + ' Meile). Ohne Bannbrief des Rats fährt hier kein Fass.';
     }
     if (e.listung && !gelistet(a)) {
       return 'Nicht gelistet. Ohne Regalmeter nimmt der Einkauf keine Ware an.';
@@ -248,9 +248,9 @@
   function kannLaden(a) {
     var g = sperre(a);
     if (g) return g;
-    if (geladen() >= wagenPlaetze()) return 'Der Wagen ist voll. ' + B.welt.menge(wagenPlaetze()) + ' und keins mehr.';
+    if (geladen() >= wagenPlaetze()) return 'Der Wagen ist voll. ' + B.welt.menge(wagenPlaetze()) + ' und kein Fass mehr.';
     if (geladenFuer(a.schluessel) === 0 && Z.ladung.length >= (frachtstufe() ? ep().wagen.halte : ep().wagen.halte)) {
-      return 'Keine Halte frei. Diese Tour faehrt ' + ep().wagen.halte + ' Adressen an.';
+      return 'Keine Halte frei. Diese Tour fährt ' + ep().wagen.halte + ' Adressen an.';
     }
     if (!waehleFass(a)) {
       var frei = freieFaesser().length;
@@ -335,7 +335,7 @@
 
     if (!B.welt.zahle(lohn, 'Fuhrlohn ' + (frachtstufe() ? frachtstufe().name : e.wagen.name)
         + ' · ' + Z.ladung.length + (Z.ladung.length === 1 ? ' Halt' : ' Halte'), 'spieler')) {
-      Z.meldung = 'Die Kasse reicht nicht fuer den Fuhrlohn.';
+      Z.meldung = 'Die Kasse reicht nicht für den Fuhrlohn.';
       B.sende('zeichne', { grund: 'fuhre-arm' });
       return;
     }
@@ -381,7 +381,7 @@
     Z.ladung = [];
     Z.fuhren += 1;
     Z.meldung = B.welt.menge(gesamt) + ' ausgeliefert an ' + Object.keys(verteilung).length
-      + (Object.keys(verteilung).length === 1 ? ' Haus' : ' Haeuser')
+      + (Object.keys(verteilung).length === 1 ? ' Haus' : ' Häuser')
       + ' · ' + B.welt.geld(Math.round(erloesGesamt) - lohn) + ' geblieben';
 
     B.ton.spiele('fuhre:abfahrt:' + ['ochse', 'pferd', 'waggon', 'lastzug'][B.welt.zeit.epoche - 1],
@@ -437,7 +437,7 @@
           if (sudZahl >= grenzeSude) { gruende.push('nur ' + grenzeSude + ' Sude je Woche'); break; }
         }
         if (B.welt.vorrat.plaetze - keller().length < s.fass) { gruende.push('kein Platz im Keller'); break; }
-        if (fassplaetzeFrei() < s.fass) { gruende.push('keine leeren Faesser'); break; }
+        if (fassplaetzeFrei() < s.fass) { gruende.push('keine leeren Fässer'); break; }
         if (B.welt.haus.rohstoff < s.rohstoff) { gruende.push('kein ' + (B.welt.epoche().rohstoff || 'Rohstoff')); break; }
         if (e.eis && Z.eis < (s.eis || 0)) { gruende.push('kein Eis'); break; }
         if (!B.welt.kann(s.kosten)) { gruende.push('die Kasse'); break; }
@@ -485,7 +485,7 @@
     if (bruch) {
       Z.faesser = Math.max(4, Z.faesser - bruch);
       B.welt.protokolliere({ wer: 'verfall',
-        was: bruch + (bruch === 1 ? ' Fass ist' : ' Faesser sind') + ' beim Wirt zersprungen', preis: 0 });
+        was: bruch + (bruch === 1 ? ' Fass ist' : ' Fässer sind') + ' beim Wirt zersprungen', preis: 0 });
     }
   }
 
@@ -562,7 +562,7 @@
     });
     if (gekippt) {
       B.welt.protokolliere({ wer: 'verfall',
-        was: 'Georgi: ' + gekippt + ' Fass ueberstehen den Sommer nicht und kippen', preis: 0, menge: gekippt });
+        was: 'Georgi: ' + gekippt + ' Fass überstehen den Sommer nicht und kippen', preis: 0, menge: gekippt });
     }
 
     var vorrat = bleibt.slice();
@@ -658,9 +658,9 @@
         Z.verloren[a.schluessel] = { jahr: B.welt.zeit.jahr + 1, fremd: fremd };
         B.welt.binde(a.schluessel, null);
         B.welt.protokolliere({ wer: 'verfall',
-          was: a.name + ' fuehrt kein Bier des Hauses mehr', preis: 0, adresse: a.schluessel });
+          was: a.name + ' führt kein Bier des Hauses mehr', preis: 0, adresse: a.schluessel });
         B.welt.schreibe(a.name + ' nimmt nichts mehr. ' + (fremd
-          ? 'Der Gegner stand schon vor der Tuer.'
+          ? 'Der Gegner stand schon vor der Tür.'
           : 'Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen.'), 'fuhre');
       }
     });
@@ -764,16 +764,16 @@
     var e = ep();
     if (!e.bann) return;
     var preis = Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr));
-    if (!B.welt.zahle(preis, 'Bannbrief fuer ' + a.name, 'spieler')) {
-      Z.meldung = 'Der Bannbrief fuer ' + a.name + ' kostet ' + B.welt.geld(preis) + '.';
+    if (!B.welt.zahle(preis, 'Bannbrief für ' + a.name, 'spieler')) {
+      Z.meldung = 'Der Bannbrief für ' + a.name + ' kostet ' + B.welt.geld(preis) + '.';
       B.sende('zeichne', { grund: 'fuhre-bann' });
       return;
     }
     Z.bannNr += 1;
     Z.unterhaltExtra += preis * 0.004;
     Z.bann[a.schluessel] = B.welt.zeit.jahr;
-    B.welt.schreibe('Der Rat siegelt den Bannbrief fuer ' + a.name + '. '
-      + 'Das gilt fuer immer und kostete ' + B.welt.geld(preis) + '.', 'fuhre');
+    B.welt.schreibe('Der Rat siegelt den Bannbrief für ' + a.name + '. '
+      + 'Das gilt für immer und kostete ' + B.welt.geld(preis) + '.', 'fuhre');
     B.ton.spiele('fuhre:siegel', { ort: 'marktplatz' });
     B.sende('zeichne', { grund: 'fuhre-bann' });
   }
@@ -860,7 +860,7 @@
     var wollen = 0;
     haeuser().forEach(function (a) { wollen += Math.round(durst(a)); });
 
-    var b = brett('fu-haeuser', 'DIE HAEUSER',
+    var b = brett('fu-haeuser', 'DIE HÄUSER',
       'wollen ' + B.welt.menge(wollen) + ' · im Keller liegen ' + B.welt.menge(liegt));
 
     if (Z.zettel) {
@@ -1002,7 +1002,7 @@
     if (e.budget) {
       var reicht = planSummeBudget() ? Math.floor(Z.budget / planSummeBudget()) : 0;
       var bz = B.el('div', 'fu-budget' + (Z.budget <= 0 ? ' leer' : ''));
-      bz.appendChild(B.el('b', null, e.budget.name + ': ' + Z.budget + ' uebrig'));
+      bz.appendChild(B.el('b', null, e.budget.name + ': ' + Z.budget + ' übrig'));
       bz.appendChild(B.el('span', null, planSummeBudget()
         ? 'Dieser Plan frisst ' + planSummeBudget() + ' je Woche — reicht ' + reicht
           + (reicht === 1 ? ' Woche' : ' Wochen')
@@ -1017,7 +1017,7 @@
 
     if (Z.tafelGewischt) {
       b.appendChild(B.el('div', 'fu-gewischt',
-        'GEWISCHT ZU GEORGI — schreib den Plan fuer ' + B.uhr.braujahr() + ' an.'));
+        'GEWISCHT ZU GEORGI — schreib den Plan für ' + B.uhr.braujahr() + ' an.'));
     }
 
     var frei = B.welt.zeit.woche <= (e.tafel.freiBis || 3);
@@ -1074,7 +1074,7 @@
       var aus = !B.welt.kann(preis);
       var titel = def.titel;
       if (def.k === 'eis') {
-        if (!frostzeit()) { aus = true; titel = 'Der Fluss traegt nicht mehr. Eis gibt es von Woche '
+        if (!frostzeit()) { aus = true; titel = 'Der Fluss trägt nicht mehr. Eis gibt es von Woche '
           + e.eis.frostVon + ' bis ' + e.eis.frostBis + ' und sonst nie.'; }
         else if (Z.eis >= Z.eisKeller) { aus = true; titel = 'Der Eiskeller ist voll.'; }
       }
@@ -1125,12 +1125,12 @@
     b.appendChild(gitter);
 
     var fuss = B.el('div', 'fu-kellerfuss');
-    fuss.appendChild(B.el('span', null, 'Fassplaetze: ' + Z.faesser + ' eigene · '
-      + f.length + ' voll · ' + Z.draussen + ' beim Wirt · ' + fassplaetzeFrei() + ' leer'));
+    fuss.appendChild(B.el('span', null, 'Fassplätze: ' + Z.faesser + ' eigene · '
+      + f.length + ' gefüllt · ' + Z.draussen + ' beim Wirt · ' + fassplaetzeFrei() + ' leer'));
     if (e.eis) {
       var eis = B.el('span', 'fu-eis' + (Z.eis <= 2 ? ' knapp' : ''));
       eis.textContent = 'Eis: ' + Z.eis + ' von ' + Z.eisKeller + ' Fuder'
-        + (frostzeit() ? ' · der Fluss traegt' : ' · kein Frost mehr');
+        + (frostzeit() ? ' · der Fluss trägt' : ' · kein Frost mehr');
       eis.title = e.eis.satz;
       fuss.appendChild(eis);
     }
@@ -1194,7 +1194,7 @@
         bett.appendChild(B.el('b', null, kurz(a)));
         bett.appendChild(B.el('em', null, s.zeichen));
         bett.title = B.welt.menge(Math.min(schritt, l.faesser.length - g * schritt)) + ' '
-          + s.name + ' fuer ' + a.name + ' (' + a.km + ' km)';
+          + s.name + ' für ' + a.name + ' (' + a.km + ' km)';
         gitter.appendChild(bett);
         gesetzt++;
       }
@@ -1208,9 +1208,9 @@
 
     var hilfe = B.el('div', 'fu-hilfe');
     hilfe.appendChild(B.knopf({
-      text: 'Nach Durst fuellen', zug: 'fuhre:fuellen', klasse: 'fu-klein',
+      text: 'Nach Durst füllen', zug: 'fuhre:fuellen', klasse: 'fu-klein',
       aus: voll >= kap,
-      titel: 'Eine Fassung, kein Rat: der Fuhrmann laedt fuer die Duerstenden. '
+      titel: 'Eine Faustregel, kein Rat: der Fuhrmann lädt für die Dürstenden. '
            + 'Der weite Weg und der zahlende Wirt stehen da nicht drin.',
       tu: fuelleNachDurst
     }));
@@ -1232,7 +1232,7 @@
       zug: 'fuhre:abschicken', klasse: 'fu-abschicken', preis: lohn ? -lohn : 0,
       aus: !voll,
       titel: voll
-        ? 'Der Wagen faehrt, liefert und kommt zurueck. Damit ist die Woche vorbei.'
+        ? 'Der Wagen fährt, liefert und kommt zurück. Damit ist die Woche vorbei.'
         : 'Erst beladen. Jedes Fass bekommt ein Haus.',
       tu: schicke
     });
@@ -1289,7 +1289,7 @@
 
     bl.appendChild(B.el('div', 'fu-satz stark',
       'Sommerabsatz: ' + B.welt.menge(s.verkauft) + ' fuer ' + B.welt.geld(s.geld)
-      + '. Uebrig und wertlos: ' + B.welt.menge(s.rest) + '.'));
+      + '. Übrig und wertlos: ' + B.welt.menge(s.rest) + '.'));
 
     /* Und gleich hier die eine Jahresentscheidung: was wird gebraut? */
     bl.appendChild(B.el('h3', null, 'Was steht ' + B.uhr.braujahr() + ' an der Tafel?'));
@@ -1314,7 +1314,7 @@
 
     bl.appendChild(B.knopf({
       text: 'Michaeli — das Jahr beginnt', zug: 'fuhre:sommer-zu', klasse: 'gross',
-      titel: 'Zurueck auf den Hof.',
+      titel: 'Zurück auf den Hof.',
       tu: function () { Z.sommerOffen = false; B.sende('zeichne', { grund: 'fuhre-sommer-zu' }); }
     }));
     fach.appendChild(bl);
@@ -1326,14 +1326,14 @@
   BRAUHAUS.stueck('fuhre', {
 
     aufbau: function () {
-      B.ton.melde('sud:pfanne', { art: 'geraeusch', sagt: 'Offene Pfanne, Holzfeuer, Ruehrscheit.' });
-      B.ton.melde('fuhre:fass-rollen', { art: 'geraeusch', sagt: 'Ein Fass rollt ueber Kopfsteinpflaster.' });
-      B.ton.melde('fuhre:abfahrt:ochse', { art: 'geraeusch', sagt: 'Ochsengespann, Holzraeder, Peitsche.' });
+      B.ton.melde('sud:pfanne', { art: 'geraeusch', sagt: 'Offene Pfanne, Holzfeuer, Rührscheit.' });
+      B.ton.melde('fuhre:fass-rollen', { art: 'geraeusch', sagt: 'Ein Fass rollt über Kopfsteinpflaster.' });
+      B.ton.melde('fuhre:abfahrt:ochse', { art: 'geraeusch', sagt: 'Ochsengespann, Holzräder, Peitsche.' });
       B.ton.melde('fuhre:abfahrt:pferd', { art: 'geraeusch', sagt: 'Zwei Pferde, Eisenreifen, Torbogen.' });
       B.ton.melde('fuhre:abfahrt:waggon', { art: 'geraeusch', sagt: 'Rangieren, Puffer, Dampf an der Rampe.' });
-      B.ton.melde('fuhre:abfahrt:lastzug', { art: 'geraeusch', sagt: 'Diesel, Luftbremse, Kaesten auf Rollen.' });
+      B.ton.melde('fuhre:abfahrt:lastzug', { art: 'geraeusch', sagt: 'Diesel, Luftbremse, Kästen auf Rollen.' });
       B.ton.melde('tafel:kreide', { art: 'geraeusch', sagt: 'Kreide auf Schiefer.' });
-      B.ton.melde('sommer:keller-leer', { art: 'schleife', sagt: 'Tropfen im leeren Gewoelbe, Fliegen.' });
+      B.ton.melde('sommer:keller-leer', { art: 'schleife', sagt: 'Tropfen im leeren Gewölbe, Fliegen.' });
       B.ton.melde('fuhre:siegel', { art: 'geraeusch', sagt: 'Siegelwachs, Papier, Ratsstube.' });
 
       richteEpocheEin(true);
@@ -1369,7 +1369,7 @@
       var e = ep();
       var unterhalt = Math.round((e.wagen.grund || 1) * 0.6 + Z.unterhaltExtra);
       if (unterhalt > 0) {
-        B.welt.zahle(unterhalt, 'Lohn, Futter, Instandhaltung', 'spieler');
+        B.welt.zahle(unterhalt, 'Löhne, Futter, Instandhaltung', 'spieler');
       }
     },
 
