@@ -222,17 +222,23 @@
      BUCHEN. Was nicht bezahlt werden kann, wird angeschrieben — als Zahl,
      nicht als Drohung.
      ---------------------------------------------------------------------- */
+  /* Was die Kasse traegt, wird bezahlt; der Rest wird angeschrieben. Kein
+     Alles-oder-nichts — sonst wuerde ein einziges mageres Jahr das Haus in
+     eine Schuldenspirale kippen, aus der es nicht zurueckfindet. */
   function buche(betrag, name, art) {
     betrag = Math.round(betrag);
     if (betrag <= 0) return true;
-    var gut = B.welt.zahle(betrag, name, 'spieler');
-    if (!gut) {
-      Z.rueckstand += betrag;
-      Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', offen: true });
-      return false;
+    var kasse = Math.max(0, Math.floor(B.welt.haus.kasse));
+    if (kasse >= betrag) {
+      B.welt.zahle(betrag, name, 'spieler');
+      Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht' });
+      return true;
     }
-    Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht' });
-    return true;
+    if (kasse > 0) B.welt.zahle(kasse, name + ' (Teilzahlung)', 'spieler');
+    var rest = betrag - kasse;
+    Z.rueckstand += rest;
+    Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', offen: rest });
+    return false;
   }
 
   function loese(betrag, name, art) {
@@ -648,7 +654,7 @@
       Z.rechnung.forEach(function (r) {
         var z = zeile(r.name, r.betrag ? geld(r.betrag) : (r.menge ? '+' + B.zahl(r.menge) : '—'),
           'pr-' + r.art + (r.offen ? ' pr-offen' : ''));
-        if (r.offen) z.appendChild(B.el('span', 'pr-marke', 'angeschrieben'));
+        if (r.offen) z.appendChild(B.el('span', 'pr-marke', 'offen ' + geld(r.offen)));
         kasten.appendChild(z);
         summe += r.betrag;
       });
