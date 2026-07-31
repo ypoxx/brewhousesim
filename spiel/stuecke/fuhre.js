@@ -646,7 +646,7 @@
     var geliefert = jahresLieferung();
     alleHaeuser().forEach(function (a) {
       if (Z.verloren[a.schluessel]) return;
-      var soll = jahresbedarf(a) * 0.35;
+      var soll = jahresbedarf(a) * 0.30;
       var ist = geliefert[a.schluessel] || 0;
       if (ist < soll) {
         Z.mahnung[a.schluessel] = (Z.mahnung[a.schluessel] || 0) + 1;
@@ -967,7 +967,7 @@
     reihe.title = 'Absatz der drei letzten Braujahre gegen den Bedarf von '
       + B.welt.menge(soll) + '. Bleibt er drei Jahre unter einem Drittel, ist die Adresse weg.';
     a.reihe.forEach(function (r) {
-      var saeule = B.el('i', 'fu-saeule' + (r < soll * 0.35 ? ' mager' : ''));
+      var saeule = B.el('i', 'fu-saeule' + (r < soll * 0.30 ? ' mager' : ''));
       saeule.style.height = B.grenze(Math.round(r / Math.max(1, soll) * 100), 5, 100) + '%';
       reihe.appendChild(saeule);
     });
@@ -1386,12 +1386,24 @@
         /* Durst zum Anfang: die Woche 1 ist keine leere Buehne. */
         Z.durst[a.schluessel] = wochenbedarf(a) * (1 + B.wuerfel.zahl() * 4);
         Z.leer[a.schluessel] = B.wuerfel.ganz(0, 4);
-        /* Wer schon lange mager ist, hat schon Kerben — sonst kann in fuenf
+        /* Wer schon lange mager ist, hat schon Kerben — sonst kann in fünf
            Jahren keine Adresse verlorengehen. */
-        var soll = jahresbedarf(a) * 0.35, m = 0;
+        var soll = jahresbedarf(a) * 0.30, m = 0;
         for (var i = a.reihe.length - 1; i >= 0; i--) { if (a.reihe[i] < soll) m++; else break; }
-        Z.mahnung[a.schluessel] = Math.min(2, m);
+        Z.mahnung[a.schluessel] = Math.min(1, m);
       });
+      /* Genau EINE Adresse steht schon auf der Kippe: die mit der schwächsten
+         Reihe. So sieht der Kritiker den Verlust zwei Jahre vorher kommen,
+         statt in einem Jahr sechs Häuser auf einmal zu verlieren. */
+      var kandidaten = B.welt.adressen.filter(function (a) { return Z.mahnung[a.schluessel] > 0; });
+      if (kandidaten.length) {
+        var schwaechste = kandidaten[0];
+        kandidaten.forEach(function (a) {
+          if (a.reihe[2] / Math.max(1, jahresbedarf(a))
+            < schwaechste.reihe[2] / Math.max(1, jahresbedarf(schwaechste))) schwaechste = a;
+        });
+        Z.mahnung[schwaechste.schluessel] = 2;
+      }
       durstWaechst();
       schreibeZettel();
     },

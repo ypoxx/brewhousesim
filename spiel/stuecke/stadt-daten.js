@@ -87,13 +87,13 @@ var STADT_DATEN = {
 
     /* --- Epoche I ---------------------------------------------------- */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
-      ort: 'kesselstelle', dx: 0, dy: 6, breite: 11, von: 1, bis: 2, grund: 26,
+      ort: 'kesselstelle', dx: 3, dy: 5, breite: 11, von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne ueber offenem Feuer, zwei Brauerinnen mit Holzschaufeln. '
           + 'Kein Helm, kein Schwanenhals — das waere eine Blase und kein Sudkessel.',
       nutzen: { sud: 1 } },
 
     { schluessel: 'malzboden', name: 'Malzboden auf Stelzen', bild: 'malzboden',
-      ort: 'malzboden', dx: -5, dy: 13, breite: 11, von: 1, bis: 2, grund: 30,
+      ort: 'malzboden', dx: -5, dy: 16, breite: 11, von: 1, bis: 2, grund: 30,
       sagt: 'Der Speicher steht auf Steinstuempfen: Ratten koennen nicht hinauf.',
       nutzen: { platz: 4 } },
 
@@ -103,7 +103,7 @@ var STADT_DATEN = {
       nutzen: { sud: 1 } },
 
     { schluessel: 'fasslager_holz', name: 'Fassschuppen', bild: 'fasslager_holz',
-      ort: 'fasslager', dx: 3, dy: 1, breite: 12.5, von: 1, bis: 1, grund: 22,
+      ort: 'fasslager', dx: 2, dy: 1, breite: 12.5, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach ueber den Faessern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
@@ -113,60 +113,60 @@ var STADT_DATEN = {
       nutzen: { platz: 8 } },
 
     { schluessel: 'grutkammer', name: 'Grutkammer', bild: 'grutkammer',
-      ort: 'keller', dx: -1, dy: 5, breite: 8, von: 1, bis: 1, grund: 20,
+      ort: 'keller', dx: -1, dy: 4, breite: 8, von: 1, bis: 1, grund: 20,
       sagt: 'Porst, Gagel, Schafgarbe. Wer die Grut hat, hat das Bier — Hopfen kommt spaeter.',
       nutzen: { rohstoff: 20 } },
 
     { schluessel: 'ochsenstall', name: 'Ochsenstall', bild: 'ochsenstall',
-      ort: 'rampe', dx: 1, dy: 1, breite: 10, von: 1, bis: 1, grund: 28,
+      ort: 'rampe', dx: 3, dy: -1, breite: 10, von: 1, bis: 1, grund: 28,
       sagt: 'Ein eigenes Zugtier. Danach faehrt die Fuhre, wann das Haus es will.',
-      nutzen: {} },
+      nutzen: {}, wirkt: 'die Fuhre faehrt, wann das Haus will' },
 
     { schluessel: 'gaerbottiche', name: 'Gaerbottiche', bild: 'gaerbottiche',
-      ort: 'gaertanks', dx: 0, dy: 16, breite: 9.5, von: 1, bis: 2, grund: 24,
+      ort: 'gaertanks', dx: 1, dy: 14, breite: 9.5, von: 1, bis: 2, grund: 24,
       sagt: 'Offene Holzbottiche unter einem Schutzdach. Was hier gaert, ist obergaerig.',
       nutzen: { platz: 4 } },
 
     { schluessel: 'kueferei', name: 'Kueferei', bild: 'kueferei',
-      ort: 'gaertanks', dx: 3, dy: 7, breite: 10.5, von: 1, bis: 2, grund: 36,
+      ort: 'hof', dx: -2, dy: 10, breite: 10.5, von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Kuefer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
 
     /* --- Epoche II --------------------------------------------------- */
     { schluessel: 'darre', name: 'Darre', bild: 'darre',
-      ort: 'gaertanks', dx: -1, dy: 9, breite: 9.5, von: 2, bis: 2, grund: 42,
+      ort: 'gaertanks', dx: -2, dy: 13, breite: 9.5, von: 2, bis: 2, grund: 42,
       sagt: 'Ueber dem Rauch wird das Malz trocken. Wie heiss man darrt, entscheidet die Farbe.',
       nutzen: { rohstoff: 40 } },
 
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 3, dy: 1, breite: 13, von: 2, bis: 4, grund: 46,
+      ort: 'fasslager', dx: 2, dy: 1, breite: 13, von: 2, bis: 4, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat waechst, der Schwund faellt.',
       nutzen: { platz: 10 } },
 
     { schluessel: 'rossmuehle', name: 'Rossmuehle', bild: 'rossmuehle',
-      ort: 'keller', dx: -1, dy: 5, breite: 10, von: 2, bis: 2, grund: 40,
+      ort: 'keller', dx: -1, dy: 4, breite: 10, von: 2, bis: 2, grund: 40,
       sagt: 'Schroten im eigenen Hof, statt in der Muehle am Fluss zu warten.',
       nutzen: { sud: 1 } },
 
     { schluessel: 'pferdestall', name: 'Pferdestall', bild: 'pferdestall',
-      ort: 'rampe', dx: 1, dy: 1, breite: 10, von: 2, bis: 3, grund: 44,
+      ort: 'rampe', dx: 3, dy: -1, breite: 10, von: 2, bis: 3, grund: 44,
       sagt: 'Zwei Kaltblueter. Der Ochse zieht mehr, das Pferd zieht schneller.',
-      nutzen: {} },
+      nutzen: {}, wirkt: 'die Fuhre faehrt schneller' },
 
     { schluessel: 'kontor', name: 'Kontor', bild: 'kontor',
-      ort: 'tor', dx: 5, dy: -1, breite: 6.5, von: 2, bis: 3, grund: 38,
+      ort: 'tor', dx: 5, dy: -2, breite: 6.5, von: 2, bis: 3, grund: 38,
       sagt: 'Wer schreibt, weiss im Herbst, was der Fruehling gekostet hat.',
-      nutzen: {} },
+      nutzen: {}, wirkt: 'Ordnung im Buch' },
 
     { schluessel: 'hopfenlager', name: 'Hopfenlager', bild: 'hopfenlager',
-      ort: 'keller', dx: 6, dy: 3, breite: 7, von: 2, bis: 4, grund: 40,
+      ort: 'keller', dx: 6, dy: 1, breite: 7, von: 2, bis: 4, grund: 40,
       sagt: 'Hopfen im Sack, trocken und dunkel. Erst mit dem Hopfen haelt Bier eine Reise aus.',
       nutzen: { rohstoff: 60 } },
 
     { schluessel: 'waschhaus', name: 'Waschhaus', bild: 'waschhaus',
-      ort: 'hof', dx: 3, dy: 1, breite: 9, von: 2, bis: 2, grund: 32,
+      ort: 'hof', dx: 0, dy: 2, breite: 9, von: 2, bis: 2, grund: 32,
       sagt: 'Heisses Wasser fuer Fass und Bottich. Sauberkeit ist die halbe Haltbarkeit.',
-      nutzen: {} },
+      nutzen: {}, wirkt: 'das Fass bleibt sauber' },
 
     /* --- Epoche III -------------------------------------------------- */
     { schluessel: 'schornstein', name: 'Schornstein und Dampfmaschine', bild: 'schornstein',
@@ -181,22 +181,22 @@ var STADT_DATEN = {
       nutzen: { platz: 40, sud: 2 } },
 
     { schluessel: 'eiskeller', name: 'Eiskeller', bild: 'eiskeller',
-      ort: 'keller', dx: 2, dy: -2, breite: 10, von: 3, bis: 4, grund: 70,
+      ort: 'keller', dx: -1, dy: 4, breite: 10, von: 3, bis: 4, grund: 70,
       sagt: 'Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergaeriges Lagerbier moeglich.',
       nutzen: { platz: 30 } },
 
     { schluessel: 'laderampe', name: 'Laderampe', bild: 'laderampe',
-      ort: 'gaertanks', dx: 0, dy: 16, breite: 11, von: 3, bis: 3, grund: 60,
+      ort: 'rampe', dx: 1, dy: -2, breite: 11, von: 3, bis: 3, grund: 60,
       sagt: 'Auf Wagenhoehe. Erst mit der Bahn lohnt sich, was hier verladen wird.',
-      nutzen: {} },
+      nutzen: {}, wirkt: 'Verladen auf Wagenhoehe' },
 
     { schluessel: 'maschinenhaus', name: 'Maschinenhaus', bild: 'maschinenhaus',
-      ort: 'keller', dx: -1, dy: 5, breite: 10, von: 3, bis: 3, grund: 90,
+      ort: 'keller', dx: 2, dy: -2, breite: 10, von: 3, bis: 3, grund: 90,
       sagt: 'Lindes Kaeltemaschine. Ab jetzt braucht der Sommer keine Erlaubnis mehr.',
       nutzen: { sud: 4 } },
 
     { schluessel: 'maelzerei', name: 'Maelzereiturm', bild: 'maelzerei',
-      ort: 'malzboden', dx: -5, dy: 13, breite: 8, von: 3, bis: 4, grund: 85,
+      ort: 'malzboden', dx: -5, dy: 16, breite: 8, von: 3, bis: 4, grund: 85,
       sagt: 'Fuenf Boeden uebereinander. Das Haus maelzt sein Malz wieder selbst.',
       nutzen: { rohstoff: 120 } },
 
@@ -207,7 +207,7 @@ var STADT_DATEN = {
 
     /* --- Epoche IV --------------------------------------------------- */
     { schluessel: 'abfuellhalle', name: 'Abfuellhalle', bild: 'abfuellhalle',
-      ort: 'hof', dx: 0, dy: 8, breite: 15, von: 4, bis: 4, grund: 130,
+      ort: 'hof', dx: -1, dy: 8, breite: 15, von: 4, bis: 4, grund: 130,
       sagt: 'Vierzigtausend Flaschen in der Stunde. Der Takt der Halle ist der Takt des Hauses.',
       nutzen: { platz: 120, sud: 20 } },
 
@@ -217,12 +217,12 @@ var STADT_DATEN = {
       nutzen: { platz: 150, sud: 12 } },
 
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: 1, dy: 1, breite: 13, von: 4, bis: 4, grund: 95,
+      ort: 'rampe', dx: -1, dy: -1, breite: 13, von: 4, bis: 4, grund: 95,
       sagt: 'Drei Lastzuege am Dock. Was hier abfaehrt, ist am Abend zweihundert Kilometer weit.',
-      nutzen: {} },
+      nutzen: {}, wirkt: 'drei Lastzuege gleichzeitig' },
 
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'gaertanks', dx: 0, dy: 16, breite: 11.5, von: 4, bis: 4, grund: 70,
+      ort: 'gaertanks', dx: 1, dy: 14, breite: 11.5, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
@@ -232,9 +232,9 @@ var STADT_DATEN = {
       nutzen: { sud: 8 } },
 
     { schluessel: 'waage', name: 'Fahrzeugwaage', bild: 'waage',
-      ort: 'keller', dx: -1, dy: 5, breite: 8.5, von: 4, bis: 4, grund: 55,
+      ort: 'keller', dx: 2, dy: -2, breite: 8.5, von: 4, bis: 4, grund: 55,
       sagt: 'Voll rein, leer raus, alles gewogen. Wer nicht wiegt, verliert im Kleinen.',
-      nutzen: {} },
+      nutzen: {}, wirkt: 'kein Schwund beim Wiegen' },
 
     { schluessel: 'sudhaus_neu', name: 'Neues Sudhaus', bild: 'sudhaus_neu',
       ort: 'hof', dx: 3, dy: 1, breite: 11.5, von: 4, bis: 4, grund: 140,
@@ -243,8 +243,8 @@ var STADT_DATEN = {
       nutzen: { sud: 16 } },
 
     { schluessel: 'verwaltung', name: 'Verwaltungsbau', bild: 'verwaltung',
-      ort: 'tor', dx: 5, dy: -1, breite: 9, von: 4, bis: 4, grund: 90,
+      ort: 'tor', dx: 5, dy: -2, breite: 9, von: 4, bis: 4, grund: 90,
       sagt: 'Drei Geschosse Schreibtisch. Ein Haus, das eine Marke ist, wird verwaltet.',
-      nutzen: {} }
+      nutzen: {}, wirkt: 'Ordnung im Buch' }
   ]
 };
