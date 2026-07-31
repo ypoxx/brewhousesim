@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T19:47:44+00:00",
+ "stand": "2026-07-31T19:53:05+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -39,6 +39,12 @@
    "status": "laeuft",
    "runde": 1,
    "gebaut": "werkbank/schuss/3-runde1.png"
+  },
+  {
+   "name": "DER GEGNER — die Züge, die ohne den Spieler geschahen",
+   "status": "laeuft",
+   "runde": 1,
+   "gebaut": "werkbank/schuss/4-runde1.png"
   }
  ],
  "chronik": [
@@ -129,6 +135,14 @@
   {
    "zeit": "2026-07-31T19:47:44+00:00",
    "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 1 · bestanden — Das aufgeklappte Gegner-Panel 'Das Haus gegenueber' laesst sich nicht mehr schliessen: sein Schliessknopf wird von einem H2 ueberdeckt (elementFromPoint liefert H2 statt Button) — bei 1920x937, 1600x1000 und 2752x1536 gleichermassen. Escape tut nichts, die Seite scrollt nicht (body overflow hidden). Da localStorage leer bleibt und ein Reload auf Woche 1/30 zurueckwirft, beendet ein einziger Klick die Partie. Zweitens blockiert die Georgi-Tafel den Hintergrund nicht: WEITER blieb aktiv und hat mir das ganze Michaeli-1351-Kauffenster weggeklickt ('Michaeli ist vorueber' auf allen fuenf Angeboten)."
+  },
+  {
+   "zeit": "2026-07-31T19:53:05+00:00",
+   "text": "DER GEGNER — die Züge, die ohne den Spieler geschahen · Runde 1 · läuft"
+  },
+  {
+   "zeit": "2026-07-31T19:53:05+00:00",
+   "text": "GEGNER Runde 1: Adlerbrauerei jenseits des Flusses mit eigener Kasse, Erben, Hof und Untergang; ab 1970 dazu die Nordstern-Gruppe. In 24 Klicks 14 bis 30 Züge ohne Zutun des Spielers, je Epoche eine andere Zugliste. Die Währung der Bindung wechselt: Konzession/Bannmeile/Ratsspruch/Gevatterschaft — Zunftbrief/Pacht/Heirat/Bürgermeisteramt — Bierlieferungsvertrag mit Darlehen und Ablösesumme — Listung mit Konditionen und Auslistung."
   }
  ]
 }
