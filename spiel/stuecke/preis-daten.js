@@ -165,7 +165,7 @@ var PREIS_DATEN = {
           regel: 'Das Grutgeld entfaellt. Das Bier haelt laenger, reist weiter und faengt mehr.',
           wirkung: { pflichtWeg: 'grutgeld', rohstoff: 26, preis: 0.09 } },
 
-        { k: 'vertrag', name: 'Vertrag statt Gunst', anteil: 0.90,
+        { k: 'vertrag', name: 'Vertrag statt Gunst', anteil: 0.32,
           was: 'Vier Wirte setzen ihr Zeichen unter einen Brief auf fuenfundzwanzig Jahre.',
           regel: 'Vier Haeuser nehmen nur noch Bier dieses Hauses. Die uebrigen merken sich, dass sie nicht gefragt wurden.',
           wirkung: { bindung: { n: 4, jahre: 25 }, ansehen: -6 } }
@@ -294,7 +294,7 @@ var PREIS_DATEN = {
           regel: 'Der Pachtzins endet. Fuer immer. Aus dem Paechter wird der Eigentuemer.',
           wirkung: { pflichtWeg: 'pachtzins' } },
 
-        { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 1.10,
+        { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 0.28,
           was: 'Gerste, Hopfen, Wasser — und der Schwur darauf vor dem Rat.',
           regel: 'Kein billiges Beibier mehr. Jedes Fass faengt mehr, und die Zunft steht hinter dem Haus.',
           wirkung: { preis: 0.16, ansehen: 10 } },
@@ -435,17 +435,17 @@ var PREIS_DATEN = {
           wirkung: { einmal: 7, pflichtNeu: { k: 'dividende', name: 'Dividende an die Aktionaere', teil: 0.34,
             sagt: 'Ein gutes Drittel der jaehrlichen Lasten, oben drauf, unkuendbar.' } } },
 
-        { k: 'bahnvertrag', name: 'Der Frachtvertrag mit der Staatsbahn', anteil: 1.10,
+        { k: 'bahnvertrag', name: 'Der Frachtvertrag mit der Staatsbahn', anteil: 0.75,
           was: 'Ein Ausnahmetarif fuer Bier in Kuehlwagen, auf Dauer geschlossen.',
           regel: 'Die Fracht kostet das Haus fuer den Rest der Partie weniger als jeden Wettbewerber.',
           wirkung: { ertrag: 2400, umlageHalb: false } },
 
-        { k: 'marke', name: 'Die eingetragene Handelsmarke', anteil: 0.85, ab: 1894,
+        { k: 'marke', name: 'Die eingetragene Handelsmarke', anteil: 0.62, ab: 1894,
           was: 'Anker und Schriftzug, eingetragen beim Patentamt nach dem Gesetz von 1894.',
           regel: 'Der Name gehoert dem Haus. Jedes Fass faengt von nun an mehr, weil auf ihm etwas steht.',
           wirkung: { preis: 0.13, ansehen: 18 } },
 
-        { k: 'konvention', name: 'Der Beitritt zur Brauereikonvention', anteil: 0.45,
+        { k: 'konvention', name: 'Der Beitritt zur Brauereikonvention', anteil: 0.22,
           was: 'Acht Brauereien setzen einen gemeinsamen Preis und teilen die Stadt in Bezirke.',
           regel: 'Ein sicherer Preis und ein fester Bezirk. Dafuer waechst das Haus nie wieder ueber seinen Bezirk hinaus.',
           wirkung: { preis: 0.09, wachstumsdeckel: true, ertrag: 900 } }
@@ -570,7 +570,7 @@ var PREIS_DATEN = {
       ],
 
       festlegungen: [
-        { k: 'handelsmarke', name: 'Die Handelsmarke', anteil: 0.55,
+        { k: 'handelsmarke', name: 'Die Handelsmarke', anteil: 0.28,
           was: 'Wort und Bild, geschuetzt in allen Klassen, mit Etat fuer die naechsten Jahre.',
           regel: 'Der Name traegt den Preis. Jedes Hektoliter faengt fuer den Rest der Partie mehr, weil ein Name darauf steht.',
           wirkung: { preis: 0.18, ansehen: 25 } },
@@ -580,13 +580,13 @@ var PREIS_DATEN = {
           regel: 'Sofort viel Geld und ein sicherer Absatz. Dafuer bestimmt der Konzern den Preis — das Haus kann ihn nie wieder heben.',
           wirkung: { einmal: 6, preisDeckel: true, ertrag: 28000 } },
 
-        { k: 'genossenschaft', name: 'Die Genossenschaft der Gastwirte', anteil: 0.30,
+        { k: 'genossenschaft', name: 'Die Genossenschaft der Gastwirte', anteil: 0.22,
           was: 'Vierzig Wirte zeichnen Anteile und binden sich auf zwanzig Jahre.',
           regel: 'Vier Haeuser bleiben dem Haus. Dafuer geht in jedem Michaeli eine Rueckverguetung an die Wirte.',
           wirkung: { bindung: { n: 4, jahre: 60 }, pflichtNeu: { k: 'rueckverguetung', name: 'Rueckverguetung an die Genossen', teil: 0.19,
             sagt: 'Ein Fuenftel der jaehrlichen Lasten, oben drauf, satzungsgemaess.' } } },
 
-        { k: 'privat', name: 'Der Rueckzug auf die eigene Braustaette', anteil: 0.20,
+        { k: 'privat', name: 'Der Rueckzug auf die eigene Braustaette', anteil: 0.13,
           was: 'Kein Handel mehr, kein Regal, keine Aktion. Nur noch Gastronomie und Werksverkauf.',
           regel: 'Die Listungsgebuehr entfaellt fuer immer, und jedes Hektoliter faengt deutlich mehr. Die grossen Mengen sind damit vorbei.',
           wirkung: { pflichtWeg: 'listung', preis: 0.30, wachstumsdeckel: true } }
