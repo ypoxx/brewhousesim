@@ -279,7 +279,7 @@
 
     if (offenDa) {
       zeile.appendChild(B.knopf({
-        text: 'Die Stadt sehen',
+        text: 'Stadt zeigen',
         zug: 'stadt:alles-zuklappen',
         klasse: 'stadt-reiter frei',
         titel: 'Klappt alle Bretter zu. Danach steht nur noch der Hof im Bild.',

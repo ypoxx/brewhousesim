@@ -177,7 +177,9 @@
   align-items: flex-end;
   gap: calc(var(--s) * 7);
   padding-left: calc(var(--s) * 12);
+  padding-right: calc(var(--s) * 12);
   min-height: calc(var(--s) * 8);
+  overflow: hidden;
 }
 
 .knopf.stadt-reiter {
