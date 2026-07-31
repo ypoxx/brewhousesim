@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T19:14:41+00:00",
+ "stand": "2026-07-31T19:20:00+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -21,10 +21,11 @@
   },
   {
    "name": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof",
-   "status": "laeuft",
+   "status": "zurueck",
    "runde": 1,
    "gebaut": "werkbank/schuss/1-runde1.png",
-   "referenz": "zielbild/03-1884.jpg"
+   "referenz": "zielbild/03-1884.jpg",
+   "luecke": "Bild zu ~70% von Tafeln verdeckt: bau=keine vs bau=alle (12 Bauten) aendert im 2752x1536-Schuss nur Rauchfahne, einen Schornsteinschaft und die BAUHOF-Zeile. Kein Hofgebaeude wird sichtbar."
   },
   {
    "name": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist",
@@ -119,6 +120,10 @@
   {
    "zeit": "2026-07-31T19:14:41+00:00",
    "text": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderruflich · Runde 1 · läuft"
+  },
+  {
+   "zeit": "2026-07-31T19:20:00+00:00",
+   "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 1 · zurück an den Builder — Bild zu ~70% von Tafeln verdeckt: bau=keine vs bau=alle (12 Bauten) aendert im 2752x1536-Schuss nur Rauchfahne, einen Schornsteinschaft und die BAUHOF-Zeile. Kein Hofgebaeude wird sichtbar."
   }
  ]
 }
