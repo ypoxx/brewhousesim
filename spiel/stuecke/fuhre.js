@@ -744,7 +744,7 @@
     if (e.listung) {
       Z.listung = {};
       var l = alleHaeuser();
-      for (var i = 0; i < l.length && i < 5; i++) {
+      for (var i = 0; i < l.length && i < 6; i++) {
         var o = {}; o[standard.k] = true;
         Z.listung[l[i].schluessel] = o;
       }
@@ -1497,10 +1497,20 @@
       Z.jahrUmsatz = 0;
       Z.sommerOffen = !!Z.sommer;
       /* Listungen laufen zu Georgi aus, wenn nichts geliefert wurde. */
+      /* Ein Regalmeter fällt, wenn zwei Jahre lang nichts darin stand.
+         Ein leeres Jahr verzeiht der Händler noch. */
       if (e.listung) {
         var gel = jahresLieferung();
         for (var k in Z.listung) {
-          if (!gel[k]) delete Z.listung[k];
+          if (gel[k]) { Z.listungLeer[k] = 0; continue; }
+          Z.listungLeer[k] = (Z.listungLeer[k] || 0) + 1;
+          if (Z.listungLeer[k] >= 2) {
+            delete Z.listung[k];
+            delete Z.listungLeer[k];
+            var ad = B.welt.adresse(k);
+            B.welt.protokolliere({ wer: 'verfall', preis: 0, adresse: k,
+              was: (ad ? ad.name : k) + ': Listung gefallen, das Regal ist neu belegt' });
+          }
         }
       }
       durstWaechst();

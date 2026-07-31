@@ -123,7 +123,7 @@ var FUHRE_DATEN = {
       sommerSatz: 'Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer '
                 + 'unter der Pfanne — die Stadt fürchtet den Brand.',
       monate: ['Wonnemond', 'Brachet', 'Heuert', 'Ernting', 'Scheiding'],
-      abgabe: { satz: 0.12, name: 'Ungeld',
+      abgabe: { satz: 0.10, name: 'Ungeld',
                 sagt: 'Der Rat nimmt vom Bier, das ausgeschenkt wurde. Wer mehr verkauft, zahlt mehr.' },
       bannmeile: 1,
       bann: { name: 'Bannbrief', basis: 60, staffel: 1.55,
@@ -288,7 +288,7 @@ var FUHRE_DATEN = {
       knappSatz: 'Drei Halte in der Woche. Und das Regal gehört nicht dir.',
       budget: null,
       sudeJeWoche: 5,
-      planStart: 2,
+      planStart: 1,
       unterhalt: 1200,
       tafel: { name: 'Sudplan', unter: 'im Schaltraum, auf Formica',
                preis: 2400, freiBis: 3 },
@@ -307,7 +307,7 @@ var FUHRE_DATEN = {
       abgabe: { satz: 0.13, name: 'Biersteuer und Werbeetat',
                 sagt: 'Steuer nach Ausstoß, Werbung nach Marktanteil am eigenen Ausstoß. '
                     + 'Beides wächst mit dem Haus.' },
-      listung: { name: 'Listung', basis: 4200, staffel: 1.3,
+      listung: { name: 'Listung', basis: 2600, staffel: 1.22,
                  satz: 'Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. '
                      + 'Zu Georgi fällt sie, wenn nichts geliefert wurde.' },
       kaeufe: [
