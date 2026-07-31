@@ -615,17 +615,23 @@
     var kasten = B.el('div', 'pr-feld');
     kasten.appendChild(B.el('h3', null, 'DIE RECHNUNG ' + jahr()));
     if (!Z.rechnung.length) {
-      kasten.appendChild(B.el('div', 'pr-satz', 'Zu diesem Michaeli war nichts abzutragen.'));
+      kasten.appendChild(B.el('div', 'pr-satz',
+        'Zu diesem Michaeli war nichts abzutragen. Ab Michaeli ' + (jahr() + 1) + ' laufen:'));
+      pflichtenJetzt().forEach(function (p) {
+        kasten.appendChild(zeile(p.name, geld(-p.betrag), 'pr-pflicht'));
+      });
+      kasten.appendChild(zeile('Zusammen im Jahr', geld(-pflichtSumme()), 'pr-summe'));
+    } else {
+      var summe = 0;
+      Z.rechnung.forEach(function (r) {
+        var z = zeile(r.name, r.betrag ? geld(r.betrag) : (r.menge ? '+' + B.zahl(r.menge) : '—'),
+          'pr-' + r.art + (r.offen ? ' pr-offen' : ''));
+        if (r.offen) z.appendChild(B.el('span', 'pr-marke', 'angeschrieben'));
+        kasten.appendChild(z);
+        summe += r.betrag;
+      });
+      kasten.appendChild(zeile('Zusammen', geld(summe), 'pr-summe'));
     }
-    var summe = 0;
-    Z.rechnung.forEach(function (r) {
-      var z = zeile(r.name, r.betrag ? geld(r.betrag) : (r.menge ? '+' + B.zahl(r.menge) : '—'),
-        'pr-' + r.art + (r.offen ? ' pr-offen' : ''));
-      if (r.offen) z.appendChild(B.el('span', 'pr-marke', 'angeschrieben'));
-      kasten.appendChild(z);
-      summe += r.betrag;
-    });
-    kasten.appendChild(zeile('Zusammen', geld(summe), 'pr-summe'));
     sp.appendChild(kasten);
 
     var ord = B.el('div', 'pr-feld pr-ordnung');
@@ -693,6 +699,9 @@
       karte.appendChild(B.el('div', 'pr-sperrt', 'Schliesst aus: ' + namen));
     }
 
+    if (!kann) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
+      'Ueber der Kasse: es fehlen ' + geld(plan.jetzt - B.welt.haus.kasse) + '.'));
+
     karte.appendChild(B.knopf({
       text: jetztTag ? 'Nehmen' : 'Michaeli ist vorueber',
       zug: 'preis:nimm:' + a.k,
@@ -702,9 +711,6 @@
       titel: a.name + ' — ' + a.was + '  ' + (folgeText(a) || ''),
       tu: function () { nimm(a); }
     }));
-
-    if (!kann) karte.appendChild(B.el('div', 'pr-hinweis', 'Ueber der Kasse: es fehlen '
-      + geld(plan.jetzt - B.welt.haus.kasse) + '.'));
 
     return karte;
   }
@@ -723,6 +729,10 @@
     r.appendChild(B.el('span', 'pr-folge-marke', 'Regel'));
     r.appendChild(B.el('span', 'pr-folge-text', f.regel));
     karte.appendChild(r);
+    if (!offen) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
+      'Diese Amtszeit hat sich bereits festgelegt. Die naechste hat wieder eine Wahl.'));
+    else if (!kann) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
+      'Ueber der Kasse: es fehlen ' + geld(preis - B.welt.haus.kasse) + '.'));
     karte.appendChild(B.knopf({
       text: preis ? 'Festlegen' : 'Festlegen — ohne Ausgabe',
       zug: 'preis:festlege:' + f.k,
@@ -732,10 +742,6 @@
       titel: 'Unabaenderlich. ' + f.regel,
       tu: function () { festlege(f); }
     }));
-    if (!offen) karte.appendChild(B.el('div', 'pr-hinweis',
-      'Diese Amtszeit hat sich bereits festgelegt.'));
-    else if (!kann) karte.appendChild(B.el('div', 'pr-hinweis',
-      'Ueber der Kasse: es fehlen ' + geld(preis - B.welt.haus.kasse) + '.'));
     return karte;
   }
 
