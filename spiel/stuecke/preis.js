@@ -592,7 +592,15 @@
     });
   }
 
-  function festPreis(f) { return f.anteil ? rundePreis(f.anteil * Z.anschlag) : 0; }
+  /* Eine Festlegung ist ein Rechtsakt, kein Kostenvoranschlag. Ihre Taxe haengt
+     an der Zeit, nicht am Vermoegen des Hauses — sonst waere sie fuer ein
+     wachsendes Haus nie erreichbar, weil sie mit der Kasse mitwuechse. */
+  function festBasis() {
+    var e = ep();
+    return e.grund * Math.pow(e.teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40));
+  }
+
+  function festPreis(f) { return f.anteil ? rundePreis(f.anteil * festBasis()) : 0; }
 
   function festlege(f) {
     if (B.welt.zeit.woche !== 1) return;
