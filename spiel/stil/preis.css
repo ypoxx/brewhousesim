@@ -1,0 +1,24 @@
+/* ===========================================================================
+   stil/preis.css — GEHOERT DEM BAUER VON "DER PREIS". Ersetze frei.
+   =========================================================================== */
+
+.preis-griff { z-index: 2; }
+
+.preis-blatt .satz {
+  font-size: calc(var(--s) * 21);
+  line-height: 1.35;
+  margin: calc(var(--s) * 8) 0;
+}
+
+.preis-reihe {
+  display: flex;
+  gap: calc(var(--s) * 10);
+  margin: calc(var(--s) * 14) 0;
+  flex-wrap: wrap;
+}
+
+.preis-blatt .knopf.preis-bindung {
+  width: 100%;
+  border-color: var(--rot);
+  background: linear-gradient(180deg, #f7e3d5 0%, #e6c6b2 100%);
+}
