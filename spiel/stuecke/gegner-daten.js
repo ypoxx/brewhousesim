@@ -31,13 +31,13 @@ var GEGNER_DATEN = {
       /* Er sitzt in allen vier Epochen auf demselben Fleck jenseits des
          Flusses — und waechst dort. Derselbe Ort, sieben Jahrhunderte. */
       sitz: {
-        1: { ort: 'konkurrenz', dx: -5, dy: 4, hofDy: 4,
+        1: { ort: 'konkurrenz', dx: -3, dy: 6, hofDy: 6,
              sagt: 'jenseits des Flusses, vor der Mauer, wo das Wasser kalt ist und kein Ratszins liegt' },
-        2: { ort: 'konkurrenz', dx: -5, dy: 4, hofDy: 4,
+        2: { ort: 'konkurrenz', dx: -3, dy: 6, hofDy: 6,
              sagt: 'jenseits des Flusses, jetzt aus Stein, mit einer Eisgrube am Hang' },
-        3: { ort: 'konkurrenz', dx: -5, dy: 4, hofDy: 4,
+        3: { ort: 'konkurrenz', dx: -3, dy: 6, hofDy: 6,
              sagt: 'jenseits des Flusses, am Gleis, mit einem Schornstein ueber dem Tal' },
-        4: { ort: 'konkurrenz', dx: -5, dy: 4, hofDy: 4,
+        4: { ort: 'konkurrenz', dx: -3, dy: 6, hofDy: 6,
              sagt: 'jenseits des Flusses, Tanks im Freien, eigene Ausfahrt zur Bundesstrasse' }
       },
       /* Sein Ausschank in der Stadt — vor der Industrie holt er die Kundschaft

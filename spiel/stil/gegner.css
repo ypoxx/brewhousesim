@@ -115,7 +115,7 @@
   pointer-events: none;
 }
 .gg-hofbild {
-  width: calc(var(--s) * 196);
+  width: calc(var(--s) * 168);
   height: auto;
   filter: drop-shadow(0 calc(var(--s) * 4) calc(var(--s) * 8) rgba(0, 0, 0, 0.45))
           saturate(0.35) contrast(1.02);
