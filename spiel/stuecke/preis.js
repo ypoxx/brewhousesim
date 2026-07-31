@@ -330,7 +330,10 @@
       var gemessen = messeUmsatz(jahr() - 1);
       if (gemessen > 0) Z.umsatz = gemessen;
     }
-    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.94);
+    /* Die Schaetzung folgt der Kasse nach oben sofort und nach unten langsam:
+       wer einmal gross war, wird nicht im naechsten Jahr wieder billig bedient.
+       Aber sie gibt nach, sonst kaeme ein verarmtes Haus nie zurueck. */
+    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.85);
     rechneAnschlag();
 
     /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. Er kann sich

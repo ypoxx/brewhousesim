@@ -49,7 +49,7 @@ var PREIS_DATEN = {
       grund: 470,
       lastenGrund: 500,
       teuerungJahr: 1.075,
-      teuerungKauf: 1.10,
+      teuerungKauf: 1.08,
       pflichtUmsatz: 0.100,
       pflichtHoehe: 0.20,
       umlageAnteil: 0.80,
