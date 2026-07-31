@@ -186,6 +186,7 @@
   /* Der Reiter ist so breit wie seine Ueberschrift. Die Kennzahl darunter
      zaehlt fuer die Breite nicht mit (width:0 / min-width:100%) — sonst
      schoebe eine lange Zahl den Namen des Bretts aus dem Reiter. */
+  position: relative;
   flex: 0 0 auto;
   min-width: calc(var(--s) * 248);
   max-width: calc(var(--s) * 420);
@@ -236,7 +237,6 @@
   font-size: calc(var(--s) * 12);
   color: rgba(242, 220, 178, 0.5);
 }
-.knopf.stadt-reiter { position: relative; }
 
 .knopf.stadt-reiter:hover {
   background: linear-gradient(180deg, #906139 0%, #653e1f 100%);
