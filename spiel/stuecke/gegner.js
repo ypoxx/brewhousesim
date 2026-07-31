@@ -489,7 +489,7 @@
     var a = B.wuerfel.aus(l);
     Z.wagen = {
       wer: h.k, von: sitzVon(h).ort, nach: a.ort,
-      seit: takt(), dauer: 4, text: a.name
+      seit: takt(), dauer: 5, text: a.name
     };
     merkeZug(h, 'fuhre', (zug.text || '').replace('{haus}', a.name), a.ort, a.schluessel);
     return true;
@@ -497,7 +497,7 @@
 
   function zugRohstoff(h, zug) {
     var ort = B.orte.da(zug.ort) ? zug.ort : 'muehle';
-    Z.wagen = { wer: h.k, von: ort, nach: sitzVon(h).ort, seit: takt(), dauer: 4, text: 'Rohstoff' };
+    Z.wagen = { wer: h.k, von: ort, nach: sitzVon(h).ort, seit: takt(), dauer: 5, text: 'Rohstoff' };
     h.kasse -= Math.round(h.kasse * 0.02);
     merkeZug(h, 'rohstoff', zug.text, ort, null);
     return true;
@@ -1167,6 +1167,32 @@
     fach.appendChild(r);
   }
 
+  /* Was eine Abloesung in dieser Zeit kostet — ohne dass jemand fragen muss. */
+  function abloesespanne() {
+    var l = [];
+    Object.keys(Z.bindung).forEach(function (k) {
+      var p = abloese(k);
+      if (p !== null) l.push(p);
+    });
+    if (!l.length) {
+      var e = ep().mittel.filter(function (m) { return !m.fest; });
+      var a = offeneAdressen();
+      if (!a.length || !e.length) return 'Abloesung: noch nichts gebunden';
+      var min = grundwert(a[0], e[0]), max = min;
+      a.forEach(function (x) {
+        e.forEach(function (m) {
+          var g = grundwert(x, m);
+          if (g < min) min = g; if (g > max) max = g;
+        });
+      });
+      return 'eine Bindung wuerde ' + B.welt.geld(min) + ' bis ' + B.welt.geld(max) + ' kosten';
+    }
+    l.sort(function (x, y) { return x - y; });
+    return l.length === 1
+      ? 'Abloesung: ' + B.welt.geld(l[0])
+      : 'Abloesung ' + B.welt.geld(l[0]) + ' bis ' + B.welt.geld(l[l.length - 1]);
+  }
+
   /* --- das Laufband: OHNE DICH GESCHEHEN -------------------------------- */
   function zeichneBand(fach) {
     var band = B.el('div', 'gg-band');
@@ -1174,7 +1200,7 @@
     kopf.appendChild(B.el('span', 'gg-bandtitel', 'Ohne dich geschehen'));
     kopf.appendChild(B.el('span', 'gg-bandzahl', Z.zaehler + ' Zuege'));
     kopf.appendChild(B.el('span', 'gg-bandwaehrung',
-      'gebunden wird mit: ' + ep().waehrung));
+      'gebunden wird mit ' + ep().waehrung + ' · ' + abloesespanne()));
     var auf = B.knopf({
       text: Z.offen ? 'Das Haus gegenueber schliessen' : 'Das Haus gegenueber',
       zug: 'gegner:blatt',
