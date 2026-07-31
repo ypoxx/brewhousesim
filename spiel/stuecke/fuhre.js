@@ -54,6 +54,7 @@
     kaufNr: {},
     bannNr: 0,
     unterhaltExtra: 0,
+    jahrUmsatz: 0,
     fuhren: 0,
     meldung: null,
     sudMeldung: null,
@@ -366,6 +367,7 @@
       verteilung[a.schluessel] = n;
       gesamt += n;
       erloesGesamt += erloes;
+      Z.jahrUmsatz += erloes;
 
       /* Geliefert heisst gebunden — bis der Naechste kommt. */
       if (!a.bindung || a.bindung.wem === 'haus') {
@@ -609,6 +611,24 @@
     }
 
     if (geldGesamt > 0) B.welt.nimm(Math.round(geldGesamt), 'Sommerabsatz aus dem Aprilbestand', 'spieler');
+    Z.jahrUmsatz += geldGesamt;
+
+    /* DIE ABGABE. Sie wächst mit dem Ausstoß, nicht mit der Kasse — deshalb
+       kann das Haus nicht in eine Wohlstandssingularität davonlaufen. Ungeld,
+       Malzaufschlag, Biersteuer: das historische Gegenstück zum Erfolg. */
+    var abgabe = 0, abgabeName = '';
+    if (e.abgabe) {
+      abgabeName = e.abgabe.name;
+      abgabe = Math.round(Z.jahrUmsatz * e.abgabe.satz);
+      var zahlbar = Math.min(abgabe, Math.max(0, B.welt.haus.kasse));
+      if (zahlbar > 0) {
+        B.welt.zahle(zahlbar, abgabeName + ' auf ' + B.welt.geld(Math.round(Z.jahrUmsatz)) + ' Umsatz', 'spieler');
+      }
+      if (zahlbar < abgabe) {
+        B.welt.schreibe('Das Haus bleibt ' + B.welt.geld(abgabe - zahlbar) + ' '
+          + abgabeName + ' schuldig. Der Rat merkt sich das.', 'fuhre');
+      }
+    }
 
     /* Der Keller wird geleert: der Rest ist im Herbst nichts mehr wert. */
     var uebrig = keller().length;
@@ -624,6 +644,9 @@
       teile: teile,
       verkauft: verkauftGesamt,
       geld: Math.round(geldGesamt),
+      umsatz: Math.round(Z.jahrUmsatz),
+      abgabe: abgabe, abgabeName: abgabeName,
+      abgabeSatz: e.abgabe ? e.abgabe.sagt : '',
       satz: e.sommerSatz,
       rest: vorrat.length
     };
@@ -1452,6 +1475,7 @@
       Z.kaufNr.budget = 0;
       Z.ladung = [];
       Z.vorige = null;
+      Z.jahrUmsatz = 0;
       Z.sommerOffen = !!Z.sommer;
       /* Listungen laufen zu Georgi aus, wenn nichts geliefert wurde. */
       if (e.listung) {
