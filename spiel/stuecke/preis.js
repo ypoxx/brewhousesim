@@ -160,16 +160,29 @@
   /* ----------------------------------------------------------------------
      PFLICHTEN — was jedes Jahr faellig ist, mit Namen.
      ---------------------------------------------------------------------- */
+  /* Die Lasten haengen an dem, was messbar ist: am Umsatz des Vorjahres und an
+     der Barschaft. Nicht am Preis eines Kellers. Deshalb kann eine Epoche das
+     Haus nicht ueber Nacht zerreiben, und deshalb frisst Liegenlassen sich
+     selbst auf: wer hortet, wird hoeher veranlagt. */
+  function lastenBasis() {
+    var e = ep();
+    var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
+    var roh = e.pflichtUmsatz * Math.max(Z.umsatz, e.grund * 0.9)
+            + e.pflichtHoehe * Z.hoehe;
+    return roh * Math.pow(e.teuerungJahr, jahre);
+  }
+
   function pflichtenJetzt() {
     var e = ep();
+    var basis = lastenBasis();
     var l = [];
     e.pflichten.forEach(function (p) {
       if (Z.pflichtWeg[p.k]) return;
-      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.anteil * Z.anschlag) });
+      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.teil * basis) });
     });
     Z.pflichtNeu.forEach(function (p) {
       if (Z.pflichtWeg[p.k]) return;
-      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.anteil * Z.anschlag) });
+      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.teil * basis) });
     });
     return l;
   }
@@ -178,6 +191,14 @@
     var s = 0;
     pflichtenJetzt().forEach(function (p) { s += p.betrag; });
     return s;
+  }
+
+  function umlageBetrag() {
+    return rundePreis(ep().umlageAnteil * pflichtSumme() * (Z.umlageHalb ? 0.5 : 1));
+  }
+
+  function handlohnBetrag() {
+    return rundePreis(ep().handlohnAnteil * pflichtSumme() * (Z.handlohnHalb ? 0.5 : 1));
   }
 
   /* ----------------------------------------------------------------------

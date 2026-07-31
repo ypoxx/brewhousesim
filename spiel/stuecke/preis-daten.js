@@ -49,9 +49,10 @@ var PREIS_DATEN = {
       grund: 470,
       teuerungJahr: 1.075,
       teuerungKauf: 1.10,
-      pflichtAnteil: 0.22,
-      umlageAnteil: 0.55,
-      handlohnAnteil: 0.85,
+      pflichtUmsatz: 0.13,
+      pflichtHoehe: 0.26,
+      umlageAnteil: 0.95,
+      handlohnAnteil: 1.30,
       abstaende: [3, 7, 6, 8, 7, 9],
 
       /* Die Bierordnung. Steigt in Jahrzehnten, nicht in Jahren. */
@@ -63,13 +64,13 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'grutgeld',  name: 'Grutgeld an den Grutherrn', anteil: 0.075,
+        { k: 'grutgeld',  name: 'Grutgeld an den Grutherrn', teil: 0.34,
           sagt: 'Wer Grut braucht, kauft sie vom Grutherrn. Es gibt keinen zweiten.' },
-        { k: 'erbzins',   name: 'Erbzins an den Grundherrn', anteil: 0.070,
+        { k: 'erbzins',   name: 'Erbzins an den Grundherrn', teil: 0.32,
           sagt: 'Das Anwesen gehoert nicht dem Haus. Der Zins laeuft, ob gebraut wird oder nicht.' },
-        { k: 'wasserzins', name: 'Wasserzins an die Stadt', anteil: 0.035,
+        { k: 'wasserzins', name: 'Wasserzins an die Stadt', teil: 0.15,
           sagt: 'Der Brunnen auf dem Markt ist der Stadt ihrer.' },
-        { k: 'mahlgeld',  name: 'Mahlgeld an die Muehle', anteil: 0.040,
+        { k: 'mahlgeld',  name: 'Mahlgeld an die Muehle', teil: 0.19,
           sagt: 'Das Malz muss zur Muehle. Der Mueller nimmt den Metzen.' }
       ],
 
@@ -188,9 +189,10 @@ var PREIS_DATEN = {
       grund: 2800,
       teuerungJahr: 1.070,
       teuerungKauf: 1.11,
-      pflichtAnteil: 0.21,
-      umlageAnteil: 0.60,
-      handlohnAnteil: 0.90,
+      pflichtUmsatz: 0.115,
+      pflichtHoehe: 0.24,
+      umlageAnteil: 1.00,
+      handlohnAnteil: 1.35,
       abstaende: [4, 6, 9, 7, 6, 8],
 
       ordnung: [
@@ -202,13 +204,13 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'pachtzins', name: 'Pachtzins ans Kloster', anteil: 0.080,
+        { k: 'pachtzins', name: 'Pachtzins ans Kloster', teil: 0.38,
           sagt: 'Die Hofstatt ist Klosterlehen. Der Zins geht nach Obernberg.' },
-        { k: 'zunftumlage', name: 'Zunftumlage und Meisterbuechse', anteil: 0.045,
+        { k: 'zunftumlage', name: 'Zunftumlage und Meisterbuechse', teil: 0.21,
           sagt: 'Lade, Trunk, Begraebnis, Witwenkasse. Wer nicht zahlt, braut nicht.' },
-        { k: 'ungeld', name: 'Ungeld auf den Ausschank', anteil: 0.055,
+        { k: 'ungeld', name: 'Ungeld auf den Ausschank', teil: 0.26,
           sagt: 'Vom ausgeschenkten Bier nimmt der Rat den zwanzigsten Pfennig.' },
-        { k: 'malzaufschlag', name: 'Malzaufschlag des Kurfuersten', anteil: 0.030,
+        { k: 'malzaufschlag', name: 'Malzaufschlag des Kurfuersten', teil: 0.15,
           sagt: 'Seit 1543 auf jeden Scheffel Malz. Er ist nie wieder abgeschafft worden.' }
       ],
 
@@ -303,7 +305,7 @@ var PREIS_DATEN = {
         { k: 'bierbann', name: 'Der Bierbann ueber vier Doerfer', anteil: 2.80,
           was: 'Ein landesherrliches Privileg: in vier Doerfern darf nur dieses Haus liefern.',
           regel: 'Vier Haeuser bleiben dem Haus, solange das Haus steht. Der Landesherr nimmt dafuer jaehrlich seinen Teil.',
-          wirkung: { bindung: { n: 4, jahre: 200 }, pflichtNeu: { k: 'bannzins', name: 'Bannzins an den Landesherrn', anteil: 0.045,
+          wirkung: { bindung: { n: 4, jahre: 200 }, pflichtNeu: { k: 'bannzins', name: 'Bannzins an den Landesherrn', teil: 0.16,
             sagt: 'Der Preis des Privilegs, jaehrlich, ohne Ende.' } } }
       ]
     },
@@ -327,9 +329,10 @@ var PREIS_DATEN = {
       grund: 42000,
       teuerungJahr: 1.085,
       teuerungKauf: 1.12,
-      pflichtAnteil: 0.20,
-      umlageAnteil: 0.50,
-      handlohnAnteil: 0.70,
+      pflichtUmsatz: 0.105,
+      pflichtHoehe: 0.22,
+      umlageAnteil: 1.05,
+      handlohnAnteil: 1.20,
       abstaende: [3, 6, 5, 7, 6, 8],
 
       ordnung: [
@@ -340,13 +343,13 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'biersteuer', name: 'Biersteuer nach Malzgewicht', anteil: 0.075,
+        { k: 'biersteuer', name: 'Biersteuer nach Malzgewicht', teil: 0.375,
           sagt: 'Gewogen wird das Malz, nicht das Bier. Wer staerker braut, zahlt mehr.' },
-        { k: 'hypothek', name: 'Zins auf die Hypothek', anteil: 0.060,
+        { k: 'hypothek', name: 'Zins auf die Hypothek', teil: 0.30,
           sagt: 'Der Fabrikbau ist auf Kredit gebaut. Der Zins laeuft, auch wenn nicht gebraut wird.' },
-        { k: 'gewerbesteuer', name: 'Gewerbesteuer der Gemeinde', anteil: 0.035,
+        { k: 'gewerbesteuer', name: 'Gewerbesteuer der Gemeinde', teil: 0.175,
           sagt: 'Nach Ertrag und Betriebskapital, veranlagt vom Steuerausschuss.' },
-        { k: 'kessel', name: 'Kesselrevision und Feuerversicherung', anteil: 0.030,
+        { k: 'kessel', name: 'Kesselrevision und Feuerversicherung', teil: 0.15,
           sagt: 'Ein Dampfkessel ist versicherungspflichtig und wird jaehrlich abgedrueckt.' }
       ],
 
@@ -426,8 +429,8 @@ var PREIS_DATEN = {
         { k: 'aktien', name: 'Die Umwandlung in eine Aktiengesellschaft', anteil: 0.0,
           was: 'Fremdes Geld baut mit. Das Haus behaelt den Namen und die Mehrheit.',
           regel: 'Sofort viel Geld in der Kasse. Dafuer geht in jedem Michaeli eine Dividende aus dem Haus — solange es das Haus gibt.',
-          wirkung: { einmal: 2.60, pflichtNeu: { k: 'dividende', name: 'Dividende an die Aktionaere', anteil: 0.075,
-            sagt: 'Sieben und ein halbes Hundertstel des Anschlags, jaehrlich, unkuendbar.' } } },
+          wirkung: { einmal: 2.60, pflichtNeu: { k: 'dividende', name: 'Dividende an die Aktionaere', teil: 0.34,
+            sagt: 'Ein gutes Drittel der jaehrlichen Lasten, oben drauf, unkuendbar.' } } },
 
         { k: 'bahnvertrag', name: 'Der Frachtvertrag mit der Staatsbahn', anteil: 1.10,
           was: 'Ein Ausnahmetarif fuer Bier in Kuehlwagen, auf Dauer geschlossen.',
@@ -464,9 +467,10 @@ var PREIS_DATEN = {
       grund: 620000,
       teuerungJahr: 1.080,
       teuerungKauf: 1.13,
-      pflichtAnteil: 0.19,
-      umlageAnteil: 0.45,
-      handlohnAnteil: 0.60,
+      pflichtUmsatz: 0.095,
+      pflichtHoehe: 0.20,
+      umlageAnteil: 1.10,
+      handlohnAnteil: 1.15,
       abstaende: [4, 5, 7, 6, 5, 8],
 
       ordnung: [
@@ -479,13 +483,13 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'biersteuer', name: 'Biersteuer und Umsatzsteuer', anteil: 0.070,
+        { k: 'biersteuer', name: 'Biersteuer und Umsatzsteuer', teil: 0.36,
           sagt: 'Nach Stammwuerze gestaffelt. Der Mengenstaffelsatz begruenstigt gerade noch dieses Haus.' },
-        { k: 'loehne', name: 'Tarif, Sozialabgaben, Altersversorgung', anteil: 0.055,
+        { k: 'loehne', name: 'Tarif, Sozialabgaben, Altersversorgung', teil: 0.29,
           sagt: 'Der Tarifvertrag gilt fuer das ganze Braugewerbe. Verhandelt wird anderswo.' },
-        { k: 'listung', name: 'Listungsgebuehr und Werbekostenzuschuss', anteil: 0.040,
+        { k: 'listung', name: 'Listungsgebuehr und Werbekostenzuschuss', teil: 0.20,
           sagt: 'Wer im Regal stehen will, zahlt fuer den Platz. Frueher hiess das Bannmeile, heute WKZ.' },
-        { k: 'zinsen', name: 'Zins und Tilgung', anteil: 0.030,
+        { k: 'zinsen', name: 'Zins und Tilgung', teil: 0.15,
           sagt: 'Die Abfuellanlage ist finanziert. Zwoelf Jahre laeuft die Rate.' }
       ],
 
@@ -575,8 +579,8 @@ var PREIS_DATEN = {
         { k: 'genossenschaft', name: 'Die Genossenschaft der Gastwirte', anteil: 0.30,
           was: 'Vierzig Wirte zeichnen Anteile und binden sich auf zwanzig Jahre.',
           regel: 'Vier Haeuser bleiben dem Haus. Dafuer geht in jedem Michaeli eine Rueckverguetung an die Wirte.',
-          wirkung: { bindung: { n: 4, jahre: 60 }, pflichtNeu: { k: 'rueckverguetung', name: 'Rueckverguetung an die Genossen', anteil: 0.040,
-            sagt: 'Vier Hundertstel des Anschlags, jaehrlich, satzungsgemaess.' } } },
+          wirkung: { bindung: { n: 4, jahre: 60 }, pflichtNeu: { k: 'rueckverguetung', name: 'Rueckverguetung an die Genossen', teil: 0.19,
+            sagt: 'Ein Fuenftel der jaehrlichen Lasten, oben drauf, satzungsgemaess.' } } },
 
         { k: 'privat', name: 'Der Rueckzug auf die eigene Braustaette', anteil: 0.20,
           was: 'Kein Handel mehr, kein Regal, keine Aktion. Nur noch Gastronomie und Werksverkauf.',
