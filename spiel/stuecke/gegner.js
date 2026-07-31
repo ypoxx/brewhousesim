@@ -931,7 +931,8 @@
     kopf.appendChild(svg(h.k === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen'));
     var t = B.el('div', 'gg-sitztext');
     t.appendChild(B.el('div', 'gg-name', nameVon(h)));
-    t.appendChild(B.el('div', 'gg-erbe', h.erbe.name + ' · ' + h.erbe.wesenName));
+    t.appendChild(B.el('div', 'gg-erbe', h.erbe.name + ' · ' + h.erbe.wesenName
+      + ' · haelt ' + seine(h).length + (seine(h).length === 1 ? ' Haus' : ' Haeuser')));
     kopf.appendChild(t);
     k.appendChild(kopf);
 
@@ -939,11 +940,10 @@
     z.appendChild(zahlfeld('Zuege', String(h.zuege)));
     z.appendChild(zahlfeld('Kasse', B.welt.geld(Math.round(h.kasse / 10) * 10)));
     if (h.k === 'adler') {
-      z.appendChild(zahlfeld('Preis', B.welt.geld(h.preis) + '/' + B.welt.mengeEinheit()));
+      z.appendChild(zahlfeld('sein Preis', B.welt.geld(h.preis)));
     } else {
       z.appendChild(zahlfeld('Brauereien', String(h.brauereien)));
     }
-    z.appendChild(zahlfeld('Haeuser', String(seine(h).length)));
     k.appendChild(z);
 
     var marken = B.el('div', 'gg-marken');
@@ -1388,6 +1388,12 @@
       Z.takt = takt();
       B.welt.gegner.forEach(function (g) { bauePartei(g); });
       uebernehmeAusgangslage();
+      /* Sein erster Zug faellt, ehe der Spieler das erste Mal hinsieht.
+         Von der ersten Sekunde an laeuft irgendwo eine Uhr, die ihm gehoert. */
+      B.wage('gegner.ersterZug', function () {
+        Z.takt = takt();
+        zugWerben(haus('adler'));
+      });
       Z.bereit = true;
       B.welt.schreibe('Gegenueber steht ' + nameVon(haus('adler')) + '. '
         + haus('adler').erbe.name + ' fuehrt es. Gebunden wird in dieser Zeit mit '

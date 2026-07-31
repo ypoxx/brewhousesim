@@ -42,7 +42,7 @@ var GEGNER_DATEN = {
       },
       /* Sein Ausschank in der Stadt — vor der Industrie holt er die Kundschaft
          am Markt ab, danach braucht er ihn nicht mehr. */
-      nebenzeichen: { bis: 2, ort: 'marktplatz', dx: 2, dy: 6,
+      nebenzeichen: { bis: 2, ort: 'marktplatz', dx: 4, dy: 9,
                       text: 'Adler-Ausschank am Markt',
                       titel: 'Sein Ausschank in der Stadt. Der Hof liegt jenseits des Flusses.' },
       vornamen: {
