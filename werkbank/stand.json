@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T16:49:39+00:00",
+ "stand": "2026-07-31T17:17:46+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -7,9 +7,19 @@
   "Stücke": "0",
   "Runden": "0",
   "Stücke Welle 1": "4",
-  "davon Spiellatte": "3"
+  "davon Spiellatte": "3",
+  "Skelett-Dateien": "41"
  },
- "stuecke": [],
+ "stuecke": [
+  {
+   "name": "Skelett",
+   "status": "bestanden",
+   "runde": 1,
+   "luecke": "Platzhalter statt Epochenbild: die vier Platten fehlen, das ist die Arbeit von DIE STADT.",
+   "gebaut": "werkbank/schuss/skelett-e3.png",
+   "referenz": "zielbild/03-1884.jpg"
+  }
+ ],
  "chronik": [
   {
    "zeit": "2026-07-31T16:37:38+00:00",
@@ -34,6 +44,14 @@
   {
    "zeit": "2026-07-31T16:49:28+00:00",
    "text": "Vier Stücke geschnitten: DIE STADT (Bild, vier Platten desselben Ortes plus wachsender Hof), DIE FUHRE (die Woche mit einer Knappheit, die kein Geld ist), DER PREIS (Michaeli-Blatt: Angebote nebeneinander, eines davon unwiderruflich) und DER GEGNER (der zieht, während man wegsieht) — drei von vier werden gespielt, nicht fotografiert, weil dieser Lauf sonst als Klickdummy endet."
+  },
+  {
+   "zeit": "2026-07-31T17:17:46+00:00",
+   "text": "Skelett läuft: spiel/index.html lädt in allen vier Epochen ohne einen einzigen Konsolenfehler (30 lokale Anfragen, 0 externe). Zu sehen: Kopfleiste aus echten welt.js-Werten (Scheiding 1350 · 112 Pf · GRUT 40 · Keller 4/12 · Woche 1/30 · Chronik · Buch), darunter Haus, Braujahr, Generation und Epochenname; die farbige Epochenplatte; alle 28 Orte aus kern/orte.js als beschriftete Punkte; Fuhre-Wahl mit drei Zielen samt Preisschild; Preisblatt mit unwiderruflicher Bindung; die Adlerbrauerei mit Zettel 'OHNE DICH GESCHEHEN'; WEITER unten rechts. Dreissig Klicks auf WEITER schliessen ein Braujahr (1350 W1 -> 1351 W1), Gegner zieht dabei 12 Mal ohne den Spieler. Wurzel-index.html unveraendert (md5 93b198ed), kein git-Befehl ausgefuehrt."
+  },
+  {
+   "zeit": "2026-07-31T17:17:46+00:00",
+   "text": "Skelett · Runde 1 · bestanden — Platzhalter statt Epochenbild: die vier Platten fehlen, das ist die Arbeit von DIE STADT."
   }
  ]
 }
