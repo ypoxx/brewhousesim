@@ -93,20 +93,38 @@
     });
     fach.appendChild(weiter);
 
-    /* Die eine Zahl, auf die es nach der Messlatte ankommt:
-       Barschaft gegen Preis des naechsten sinnvollen Zuges. */
-    var deckung = B.welt.zugDeckung();
-    if (deckung !== null) {
-      var w = B.el('div', 'deckung');
-      w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
-        + 'font-family:var(--mono);font-size:calc(var(--s)*19);color:#2b1d10;'
-        + 'background:rgba(255,248,230,.75);padding:calc(var(--s)*4) calc(var(--s)*10);'
-        + 'border-radius:calc(var(--s)*4);white-space:nowrap;';
-      w.textContent = 'naechster Zug: ' + B.welt.naechsterZug.was + ' — '
-        + B.welt.geld(B.welt.naechsterZug.preis)
-        + '  (Kasse reicht ' + B.zahl(deckung, 1) + '×)';
-      fach.appendChild(w);
+    zeichneDeckung();
+    /* Die Stuecke melden ihren naechsten Zug erst NACH diesem Horcher an.
+       Ein Bildaufbau spaeter steht die Zahl richtig da. */
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(function () { B.wage('kopf.deckung', zeichneDeckung); });
     }
+  }
+
+  /* -------------------------------------------------------------------
+     DIE EINE ZAHL, auf die es nach der Messlatte ankommt:
+     Barschaft gegen Preis des naechsten sinnvollen Zuges. Waechst sie
+     ueber die Partie, ist es Patrizier IV — und der Lauf ist verloren.
+     Sie steht deshalb von Anfang an auf dem Bildschirm, nicht im Quelltext.
+     ------------------------------------------------------------------- */
+  function zeichneDeckung() {
+    var fach = B.ebene('kopf', 'kern');
+    var alt = fach.querySelector('.deckung');
+    if (alt) alt.parentNode.removeChild(alt);
+
+    var deckung = B.welt.zugDeckung();
+    if (deckung === null) return;
+
+    var w = B.el('div', 'deckung');
+    w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
+      + 'font-family:var(--mono);font-size:calc(var(--s)*19);color:#2b1d10;'
+      + 'background:rgba(255,248,230,.75);padding:calc(var(--s)*4) calc(var(--s)*10);'
+      + 'border-radius:calc(var(--s)*4);white-space:nowrap;';
+    w.setAttribute('data-deckung', B.rund(deckung, 2));
+    w.textContent = 'naechster Zug: ' + B.welt.naechsterZug.was + ' — '
+      + B.welt.geld(B.welt.naechsterZug.preis)
+      + '  (Kasse reicht ' + B.zahl(deckung, 1) + '×)';
+    fach.appendChild(w);
   }
 
   /* ----------------------------------------------------------------------
