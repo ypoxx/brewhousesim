@@ -307,6 +307,7 @@
 
       var r = b.el.getBoundingClientRect();
       if (r.width < 8 || r.height < 8) return;      /* nicht da, also kein Reiter */
+      daJetzt[s] = true;
 
       /* Klein genug: das ist eine Marke im Bild, kein Brett. Finger weg. */
       if (anteil(r, false) <= GRENZE && !b.el.classList.contains(ZU)) {
@@ -314,7 +315,8 @@
         return;
       }
 
-      var frisch = !(s in lage) || (jetzt - (gesehen[s] || 0) > VERGESSEN);
+      /* Frisch heisst: noch nie gesehen, oder eben wieder aufgetaucht. */
+      var frisch = !(s in lage) || !warDa[s] || (jetzt - (gesehen[s] || 0) > VERGESSEN);
       gesehen[s] = jetzt;
 
       /* Was beim Laden schon dalag, liegt als Reiter — beim Laden will man
@@ -335,6 +337,7 @@
       });
     });
 
+    warDa = daJetzt;
     zeichneReiter(reiter);
   }
 
