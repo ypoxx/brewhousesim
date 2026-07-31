@@ -298,9 +298,8 @@
      Entscheidungen — welche Sorte, wen man fallenlässt, wann der Bannbrief
      fällig ist — bleiben beim Spieler. */
   function fuelleNachDurst() {
-    var l = haeuser().slice().sort(function (x, y) {
-      return (durst(y) - geladenFuer(y.schluessel)) - (durst(x) - geladenFuer(x.schluessel));
-    });
+    function rang(a) { return (durst(a) - geladenFuer(a.schluessel)) / (1 + a.km * 0.45); }
+    var l = haeuser().slice().sort(function (x, y) { return rang(y) - rang(x); });
     var sicherung = 0;
     while (geladen() < wagenPlaetze() && sicherung++ < 600) {
       var gelegt = false;
@@ -308,11 +307,14 @@
         var a = l[i];
         if (durst(a) - geladenFuer(a.schluessel) < 1) continue;
         if (kannLaden(a)) continue;
+        var neuerHalt = geladenFuer(a.schluessel) === 0 && Z.ladung.length > 0;
         var vorher = geladen(), vorherLohn = fuhrlohn(), vorherErloes = fuhrerloes();
         lade(a);
         if (geladen() === vorher) continue;
-        if (fuhrerloes() - vorherErloes < fuhrlohn() - vorherLohn) {
-          /* Der Umweg trägt sich nicht. Wieder herunter damit. */
+        /* Ein ZUSAETZLICHER Halt muss sich tragen. Die Grundfracht der ersten
+           Ladung wird nicht gegen ein einzelnes Fass gerechnet — sonst fuehre
+           der Wagen nie los. */
+        if (neuerHalt && fuhrerloes() - vorherErloes < fuhrlohn() - vorherLohn) {
           entladeStill(a, geladen() - vorher);
           continue;
         }
