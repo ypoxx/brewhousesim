@@ -200,16 +200,20 @@
      -------------------------------------------------------------------- */
   function zeichneBauhof(fach) {
     var ep = e();
-    var liste = offen(ep).sort(function (a, b) { return a.grund - b.grund; }).slice(0, 6);
+    var liste = offen(ep).sort(function (a, b) { return a.grund - b.grund; }).slice(0, 5);
 
     var kasten = B.el('div', 'stadt-bauhof greifbar');
     var kopf = B.el('div', 'kopf');
     kopf.appendChild(B.el('span', 'wort', 'BAUHOF'));
-    kopf.appendChild(B.el('span', 'zahl', stehend(ep).length + ' im Hof'));
+    kopf.appendChild(B.el('span', 'zahl', stehend(ep).length + ' Bauten im Hof · '
+      + 'gebaut wird einmal, es steht auch fuer die Enkel'));
     kasten.appendChild(kopf);
 
+    var reihe = B.el('div', 'reihe');
+    kasten.appendChild(reihe);
+
     if (!liste.length) {
-      kasten.appendChild(B.el('div', 'leer', 'Der Hof ist fuer diese Zeit fertig gebaut.'));
+      reihe.appendChild(B.el('div', 'leer', 'Der Hof ist fuer diese Zeit fertig gebaut.'));
     }
 
     liste.forEach(function (a) {
@@ -232,12 +236,10 @@
         if (vorschau === a.schluessel) { vorschau = null; B.wage('stadt.vorschau', zeichne); }
       });
       zeile.appendChild(k);
-      var wort = nutzenWort(a);
-      if (wort) zeile.appendChild(B.el('div', 'nutzen', wort));
-      kasten.appendChild(zeile);
+      zeile.appendChild(B.el('div', 'nutzen', nutzenWort(a) || 'steht im Hof, solange das Haus steht'));
+      reihe.appendChild(zeile);
     });
 
-    kasten.appendChild(B.el('div', 'fuss', 'Gebaut wird einmal. Was steht, steht auch fuer die Enkel.'));
     fach.appendChild(kasten);
 
     /* Die eine Zahl der Messlatte: der naechste sinnvolle Zug. */
