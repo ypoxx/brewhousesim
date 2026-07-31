@@ -48,6 +48,28 @@
     B.sende('zeichne', { grund: 'fuhre' });
   }
 
+  /* Ein Sud, damit der Kreislauf im Stummel ueberhaupt laeuft: ohne Bier
+     keine Fuhre, ohne Fuhre kein Geld. Welches Stueck das Brauen am Ende
+     bekommt, ist NICHT entschieden — hier steht es nur, damit ein Kritiker
+     eine geschlossene Schleife vorfindet. */
+  function sudKosten() {
+    return Math.max(1, Math.round([6, 14, 30, 90][B.welt.zeit.epoche - 1]));
+  }
+
+  function braue() {
+    var e = B.welt.epoche();
+    var menge = B.welt.haus.sudJeWoche;
+    if (B.welt.vorrat.faesser.length >= B.welt.vorrat.plaetze) {
+      B.welt.schreibe('Kein Platz im Keller. Erst muss Bier hinaus.', 'sud');
+      return;
+    }
+    if (!B.welt.zahle(sudKosten(), 'Ein Sud ' + e.sorte, 'spieler')) return;
+    var gelegt = B.welt.legeEin(e.sorte, menge);
+    B.welt.protokolliere({ wer: 'spieler', was: gelegt + ' Fass ' + e.sorte + ' eingelegt', preis: 0, menge: gelegt });
+    B.ton.spiele('sud:kochen', { ort: 'kesselstelle' });
+    B.sende('zeichne', { grund: 'sud' });
+  }
+
   BRAUHAUS.stueck('fuhre', {
 
     aufbau: function () {},
@@ -73,6 +95,21 @@
         + B.welt.menge(B.welt.vorrat.plaetze)));
       B.orte.setze(lager, 'fasslager', { anker: 'mitte' });
       fach.appendChild(lager);
+
+      /* Der Kessel: die offene Pfanne ueber offenem Feuer (Sperrliste). */
+      var voll = B.welt.vorrat.faesser.length >= B.welt.vorrat.plaetze;
+      fach.appendChild(B.knopf({
+        text: 'Sud ansetzen · ' + B.welt.menge(B.welt.haus.sudJeWoche),
+        zug: 'fuhre:sud',
+        preis: -sudKosten(),
+        ort: 'kesselstelle',
+        anker: 'mitte',
+        dy: 5,
+        aus: voll,
+        titel: voll ? 'Der Keller ist voll.' : 'Offene Pfanne ueber offenem Feuer. ' + B.welt.epoche().sorte + '.',
+        tu: braue
+      }));
+      B.welt.meldeZug('Sud', sudKosten());
 
       /* Drei Ziele nebeneinander, jedes mit Preisschild. */
       var wahl = B.el('div', 'fuhre-wahl');
