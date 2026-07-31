@@ -849,7 +849,7 @@
     var rest = (f.reife || 0) - alter(f);
     i.title = s.name + ' · gebraut ' + f.jahr + ', Woche ' + f.woche
       + (rest > 0 ? ' · reif in ' + rest + (rest === 1 ? ' Woche' : ' Wochen')
-                  : ' · reif, haelt noch ' + Math.max(0, f.haltbar - alter(f)) + ' Wochen');
+                  : ' · reif, hält noch ' + Math.max(0, f.haltbar - alter(f)) + ' Wochen');
     return i;
   }
 
@@ -861,7 +861,7 @@
     haeuser().forEach(function (a) { wollen += Math.round(durst(a)); });
 
     var b = brett('fu-haeuser', 'DIE HÄUSER',
-      'wollen ' + B.welt.menge(wollen) + ' · im Keller liegen ' + B.welt.menge(liegt));
+      'wollen ' + B.welt.menge(wollen, true) + ' · im Keller liegen ' + B.welt.menge(liegt));
 
     if (Z.zettel) {
       var z = B.el('div', 'fu-zettel');
@@ -1038,7 +1038,7 @@
       if (e.budget) kosten.appendChild(B.el('span', null, budgetKosten(s) + ' ' + e.budget.name));
       kosten.appendChild(B.el('span', null, '→ ' + B.welt.menge(s.fass)));
       if (s.reife) kosten.appendChild(B.el('span', 'fu-lagerzeit', s.reife + ' Wo. Lager'));
-      kosten.appendChild(B.el('span', null, 'haelt ' + s.haltbar + ' Wo.'));
+      kosten.appendChild(B.el('span', null, 'hält ' + s.haltbar + ' Wo.'));
       if (s.eis) kosten.appendChild(B.el('span', 'fu-eiszeichen', s.eis + ' Eis'));
       if (s.sommer) kosten.appendChild(B.el('span', 'fu-sommerfest', 'sommerfest'));
       r.appendChild(kosten);
@@ -1107,8 +1107,8 @@
     var e = ep(), f = keller(), bf = e.keller.bettFass;
     var reifeZahl = f.filter(reif).length;
     var b = brett('fu-keller', e.keller.name.toUpperCase(),
-      B.welt.menge(f.length) + ' von ' + B.welt.menge(B.welt.vorrat.plaetze)
-      + ' · ' + B.welt.menge(reifeZahl) + ' reif');
+      B.welt.menge(f.length, true) + ' von ' + B.welt.menge(B.welt.vorrat.plaetze)
+      + ' · ' + B.welt.menge(reifeZahl, true) + ' reif');
 
     var gitter = B.el('div', 'fu-gitter');
     gitter.style.setProperty('--spalten', e.keller.spalten);
@@ -1152,7 +1152,7 @@
     var e = ep(), fr = frachtstufe();
     var voll = geladen(), kap = wagenPlaetze();
     var b = brett('fu-wagen', (fr ? fr.name : e.wagen.name).toUpperCase(),
-      B.welt.menge(voll) + ' von ' + B.welt.menge(kap) + ' · '
+      B.welt.menge(voll, true) + ' von ' + B.welt.menge(kap) + ' · '
       + Z.ladung.length + ' von ' + e.wagen.halte + ' Halten');
 
     if (e.fracht) {
