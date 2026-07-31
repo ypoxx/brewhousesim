@@ -219,9 +219,17 @@
     var roh = (kopf.innerText || kopf.textContent || '').replace(/ /g, ' ');
     var zeilen = roh.split('\n').map(function (z) { return z.trim(); })
       .filter(function (z) { return z.length; });
-    var stark = kopf.querySelector('b, strong, h1, h2, h3, h4, .wort, .titel');
-    var titel = stark ? (stark.innerText || stark.textContent || '').trim() : (zeilen[0] || '');
-    if (!titel) titel = 'Brett';
+    /* Die Ueberschrift des Bretts, nicht die Aufschrift eines Knopfes darin —
+       sonst hiesse die Michaelitafel "Chronik des Hauses". */
+    var stark = null;
+    var kandidaten = kopf.querySelectorAll('b, strong, h1, h2, h3, h4, .titel, .wort');
+    for (var j = 0; j < kandidaten.length; j++) {
+      if (kandidaten[j].closest('button, a')) continue;
+      stark = kandidaten[j];
+      break;
+    }
+    var titel = stark ? (stark.innerText || stark.textContent || '').trim() : '';
+    if (!titel) titel = zeilen[0] || 'Brett';
     var unter = '';
     for (var i = 0; i < zeilen.length; i++) {
       if (zeilen[i] !== titel) { unter = zeilen[i]; break; }
