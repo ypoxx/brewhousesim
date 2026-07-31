@@ -124,7 +124,7 @@ var STADT_DATEN = {
     { schluessel: 'ochsenstall', name: 'Ochsenstall', bild: 'ochsenstall',
       ort: 'rampe', dx: 3, dy: -1, breite: 10, von: 1, bis: 1, grund: 28,
       sagt: 'Ein eigenes Zugtier. Danach faehrt die Fuhre, wann das Haus es will.',
-      nutzen: {}, wirkt: 'die Fuhre faehrt, wann das Haus will' },
+      nutzen: {}, wirkt: 'faehrt, wann das Haus will' },
 
     { schluessel: 'gaerbottiche', name: 'Gaerbottiche', bild: 'gaerbottiche',
       ort: 'gaertanks', dx: 1, dy: 14, breite: 9.5, von: 1, bis: 2, grund: 24,
