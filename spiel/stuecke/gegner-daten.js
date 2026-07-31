@@ -28,15 +28,23 @@ var GEGNER_DATEN = {
       kurz: 'ADLER',
       farbe: 'adler',
       kasse: { 1: 150, 2: 900, 3: 21000, 4: 260000 },
+      /* Er sitzt in allen vier Epochen auf demselben Fleck jenseits des
+         Flusses — und waechst dort. Derselbe Ort, sieben Jahrhunderte. */
       sitz: {
-        1: { ort: 'marktplatz', dx: 3, dy: 6, sagt: 'am Markt, in der Stadt, Wand an Wand mit dem Rathaus' },
-        2: { ort: 'marktplatz', dx: 3, dy: 6, sagt: 'am Markt, in der Stadt, mit steinernem Keller unter dem Platz' },
-        3: { ort: 'konkurrenz', dx: 0, dy: 4, sagt: 'jenseits des Flusses, seit 1867 vor der Mauer, am Gleis' },
-        4: { ort: 'konkurrenz', dx: 0, dy: 4, sagt: 'jenseits des Flusses, Tanks im Freien, eigene Ausfahrt' }
+        1: { ort: 'konkurrenz', dx: -4, dy: 4, hofDy: 4,
+             sagt: 'jenseits des Flusses, vor der Mauer, wo das Wasser kalt ist und kein Ratszins liegt' },
+        2: { ort: 'konkurrenz', dx: -4, dy: 4, hofDy: 4,
+             sagt: 'jenseits des Flusses, jetzt aus Stein, mit einer Eisgrube am Hang' },
+        3: { ort: 'konkurrenz', dx: -4, dy: 4, hofDy: 4,
+             sagt: 'jenseits des Flusses, am Gleis, mit einem Schornstein ueber dem Tal' },
+        4: { ort: 'konkurrenz', dx: -4, dy: 4, hofDy: 4,
+             sagt: 'jenseits des Flusses, Tanks im Freien, eigene Ausfahrt zur Bundesstrasse' }
       },
-      /* Das leere Stammhaus bleibt am Markt stehen, damit man sieht, dass es
-         derselbe Ort ist — nur der Adler ist weggezogen. */
-      stammhaus: { ab: 3, ort: 'marktplatz', dx: 3, dy: 6, text: 'Stammhaus Adler · leer seit 1867' },
+      /* Sein Ausschank in der Stadt — vor der Industrie holt er die Kundschaft
+         am Markt ab, danach braucht er ihn nicht mehr. */
+      nebenzeichen: { bis: 2, ort: 'marktplatz', dx: 2, dy: 6,
+                      text: 'Adler-Ausschank am Markt',
+                      titel: 'Sein Ausschank in der Stadt. Der Hof liegt jenseits des Flusses.' },
       vornamen: {
         1: ['Cunz', 'Utz', 'Else', 'Hartmann'],
         2: ['Sebastian', 'Barbara', 'Kaspar', 'Apollonia'],
