@@ -37,7 +37,8 @@
 
       var schild = B.el('div', 'stadt-schild');
       schild.appendChild(B.el('div', 'kopf', 'DIE STADT — Stummel'));
-      schild.appendChild(B.el('div', 'jahr', daten.jahr + ' · ' + daten.name));
+      schild.appendChild(B.el('div', 'jahr', B.welt.zeit.jahr + ' · ' + daten.name
+        + ' (Platte ' + daten.jahr + ')'));
       schild.appendChild(B.el('div', 'text', daten.sagt));
       schild.appendChild(B.el('div', 'text', 'Hier gehoert ' + daten.platte + ' hin.'));
       platte.appendChild(schild);
