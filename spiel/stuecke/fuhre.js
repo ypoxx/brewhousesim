@@ -1058,8 +1058,9 @@
       b.appendChild(bz);
     } else {
       var sz = B.el('div', 'fu-budget');
-      sz.appendChild(B.el('b', null, 'Sudhaus: ' + Z.sudeJeWoche + ' Sude je Woche'));
-      sz.appendChild(B.el('span', null, e.knappSatz));
+      sz.appendChild(B.el('b', null, 'Sudhaus: ' + Z.sudeJeWoche
+        + (Z.sudeJeWoche === 1 ? ' Sud je Woche' : ' Sude je Woche')));
+      sz.appendChild(B.el('span', null, 'Mehr Pfannen gibt es nur gebaut, nicht bestellt.'));
       b.appendChild(sz);
     }
 
