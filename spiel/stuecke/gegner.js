@@ -1510,9 +1510,10 @@
       zeichneZeiger(fach);
       zeichneBand(fach);
 
+      /* Solange die Michaelitafel offen ist, gehoert der Bildschirm ihr. */
       var blatt = B.ebene('blatt', 'gegner');
       B.leere(blatt);
-      if (Z.offen) zeichneBlatt(blatt);
+      if (Z.offen && !document.querySelector('[data-zug="preis:tafel-zu"]')) zeichneBlatt(blatt);
 
       meldeZug();
     }
