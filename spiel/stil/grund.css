@@ -167,7 +167,16 @@ button {
 }
 
 .knopf:hover { background: linear-gradient(180deg, #fff6e4 0%, #eddcbb 100%); }
-.knopf:active { transform: translateY(calc(var(--s) * 2)); box-shadow: none; }
+
+/* ACHTUNG, gilt fuer ALLE vier Stuecke:
+   Ein Element mit .amort wird ueber 'transform' auf seinem Ort gehalten.
+   Wer 'transform' fuer eine Bewegung ueberschreibt, reisst das Ding von
+   seinem Ort — und zwar genau zwischen Maustaste-runter und -hoch. Playwright
+   meldet dann "buehne intercepts pointer events", der Kritiker kommt nicht
+   mehr an die Bedienung, und der Lauf misst nur noch Pixel.
+   Deshalb: fuer Bewegungen die EIGENE Eigenschaft 'translate' benutzen, die
+   sich mit 'transform' zusammensetzt statt sie zu ersetzen. */
+.knopf:active { translate: 0 calc(var(--s) * 2); box-shadow: none; }
 .knopf:focus-visible { outline: calc(var(--s) * 3) solid var(--gold); outline-offset: calc(var(--s) * 2); }
 .knopf[disabled], .knopf[aria-disabled="true"] {
   opacity: 0.5;
