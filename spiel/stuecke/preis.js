@@ -521,6 +521,18 @@
     }).sort(function (x, y) { return x.anteil - y.anteil; });
   }
 
+  /* Wer schliesst wen aus — in BEIDEN Richtungen. Ein Paar darf nie halb auf
+     dem Tisch liegen, sonst sieht man den Preis, aber nicht die Gabelung. */
+  function partnerVon(k) {
+    var l = [];
+    var a = angebotVon(k);
+    if (a && a.sperrt) a.sperrt.forEach(function (s) { if (l.indexOf(s) < 0) l.push(s); });
+    ep().angebote.forEach(function (o) {
+      if (o.sperrt && o.sperrt.indexOf(k) >= 0 && l.indexOf(o.k) < 0) l.push(o.k);
+    });
+    return l;
+  }
+
   function waehleAngebote() {
     var offen = offeneAngebote();
     var wieViele = D.angeboteJeJahr || 4;
@@ -528,14 +540,34 @@
       Z.angebote = offen.map(function (a) { return a.k; });
       return;
     }
+    var frei = {};
+    offen.forEach(function (a) { frei[a.k] = true; });
+
     /* Immer das billigste (die Einstiegssprosse) und das groesste (das Ziel,
        auf das man spart). Dazwischen entscheidet der gesaete Wuerfel — mit
        derselben Saat dieselbe Tafel. */
     var wahl = [offen[0].k, offen[offen.length - 1].k];
-    var mitte = offen.slice(1, offen.length - 1);
-    var gemischt = B.wuerfel.misch(mitte);
-    for (var i = 0; i < gemischt.length && wahl.length < wieViele + 1; i++) {
-      wahl.push(gemischt[i].k);
+    function drin(k) { return wahl.indexOf(k) >= 0; }
+
+    /* Und immer wenigstens EINE Gabelung: zwei Angebote, die einander
+       ausschliessen, nebeneinander. Ohne sie waere die Reihe eine Preisliste
+       und keine Entscheidung. */
+    var mitte = B.wuerfel.misch(offen.slice(1, offen.length - 1));
+    var paar = null, i, g;
+    for (i = 0; i < mitte.length && !paar; i++) {
+      g = partnerVon(mitte[i].k).filter(function (k) { return frei[k]; });
+      if (g.length) paar = [mitte[i].k, g[0]];
+    }
+    if (!paar) {
+      for (i = 0; i < wahl.length && !paar; i++) {
+        g = partnerVon(wahl[i]).filter(function (k) { return frei[k]; });
+        if (g.length) paar = [wahl[i], g[0]];
+      }
+    }
+    if (paar) paar.forEach(function (k) { if (!drin(k)) wahl.push(k); });
+
+    for (i = 0; i < mitte.length && wahl.length < wieViele + 1; i++) {
+      if (!drin(mitte[i].k)) wahl.push(mitte[i].k);
     }
     /* nach Preis sortiert nebeneinanderlegen */
     wahl.sort(function (x, y) {

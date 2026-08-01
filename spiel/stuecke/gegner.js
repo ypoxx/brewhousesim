@@ -309,7 +309,9 @@
      damit vom ersten Bildschirm an eine Summe am Schild steht. */
   function uebernehmeAusgangslage() {
     var frei = ep().mittel.filter(function (m) { return !m.fest; });
-    B.welt.adressen.forEach(function (a) {
+    /* Nur Haeuser, die es in DIESER Epoche gibt. Ein Bahnhofswirt, den man
+       1350 gebunden haette, stuende in keinem Bild und in keiner Rechnung. */
+    B.welt.adressenJetzt().forEach(function (a) {
       if (!a.bindung) return;
       if (a.bindung.wem === 'haus') return;
       var h = Z.haeuser[a.bindung.wem];
@@ -579,7 +581,10 @@
   }
 
   function zugRohstoff(h, zug) {
+    /* Auch das ist ein Wagen auf der Strasse und faellt unter dieselbe Sperre. */
+    if (Z.takt - Z.wagenTakt < 6) return false;
     var ort = B.orte.da(zug.ort) ? zug.ort : 'muehle';
+    Z.wagenTakt = Z.takt;
     Z.wagen = { wer: h.k, von: ort, nach: sitzVon(h).ort, seit: takt(), dauer: 5, text: 'Rohstoff' };
     h.kasse -= Math.round(h.kasse * 0.02);
     merkeZug(h, 'rohstoff', zug.text, ort, null);
