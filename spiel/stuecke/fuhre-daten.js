@@ -192,6 +192,27 @@ var FUHRE_DATEN = {
       monate: ['Wonnemond', 'Brachet', 'Heuert', 'Ernting', 'Scheiding'],
       abgabe: { satz: 0.08, name: 'Ungeld',
                 sagt: 'Der Rat nimmt vom Bier, das ausgeschenkt wurde. Wer mehr verkauft, zahlt mehr.' },
+      ziel: {
+        name: 'Das Kerbholz beim Wirt', kurz: 'Ziel', wort: 'Kerbe',
+        satz: 'Der Wirt zahlt nicht am Tor. Er lässt anschreiben, und am Michaelistag '
+            + 'geht der Knecht mit dem Holz die Runde. Deshalb liegt der Termin dort.',
+        angeld: 0.055,
+        angeldName: 'Angeld auf das kommende Braujahr',
+        angeldSatz: 'Wer im Winter beliefert sein will, legt zu Michaeli etwas an. '
+                  + 'Es wird abgetrunken, nicht geschenkt.',
+        umgang: 'Der Umgang vor Michaeli',
+        stufen: [
+          { k: 'bar', name: 'Bar auf die Hand', bar: 1.00, durst: 0.66, ausfall: 0,
+            was: 'Kein Fass verlässt den Hof ohne Münze.',
+            sagt: 'Sicher und klein: wer bar zahlen muss, bestellt weniger.' },
+          { k: 'ziel', name: 'Aufs Kerbholz, fällig zu Michaeli', bar: 0.38, durst: 1.00, ausfall: 0.05,
+            was: 'Zwei Hölzer, ein Schnitt: eines beim Wirt, eines im Haus.',
+            sagt: 'Das Übliche. Das meiste Geld kommt am Zahltag, ein Teil kommt nie.' },
+          { k: 'borg', name: 'Auf Borg bis Michaeli', bar: 0.12, durst: 1.32, ausfall: 0.15,
+            was: 'Der Wirt nimmt, so viel er ausschenken kann, und rechnet im Herbst.',
+            sagt: 'Der Ausschank wächst, und das ganze Jahr hängt an einem Tag.' }
+        ]
+      },
       bannmeile: 1,
       bann: { name: 'Bannbrief', basis: 60, staffel: 1.55,
               satz: 'Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich.' },
@@ -286,6 +307,26 @@ var FUHRE_DATEN = {
       monate: ['Wonnemond', 'Brachet', 'Heuert', 'Ernting', 'Scheiding'],
       abgabe: { satz: 0.08, name: 'Ungeld und Zunftbeitrag',
                 sagt: 'Der Stadt das Ungeld, der Zunft den Beitrag. Beides nach Ausstoß.' },
+      ziel: {
+        name: 'Das Schuldbuch der Wirte', kurz: 'Ziel', wort: 'Posten',
+        satz: 'Die Ordnung kennt das Ziel: geliefert wird das Jahr über, gerechnet wird '
+            + 'zu Michaeli. Wer vorher Geld sehen will, muss es sagen — und verkauft weniger.',
+        angeld: 0.05,
+        angeldName: 'Angeld auf das kommende Braujahr',
+        angeldSatz: 'Der Wirt legt an, damit im Winter geliefert wird. Es wird abgetrunken.',
+        umgang: 'Die Rechnung zu Michaeli',
+        stufen: [
+          { k: 'bar', name: 'Zug um Zug, bar', bar: 1.00, durst: 0.70, ausfall: 0,
+            was: 'Fass gegen Gulden, an der Kellertür.',
+            sagt: 'Der Zunft ist es recht. Dem Wirt nicht — er bestellt kleiner.' },
+          { k: 'ziel', name: 'Auf Ziel bis Michaeli', bar: 0.44, durst: 1.00, ausfall: 0.05,
+            was: 'Ein Posten im Schuldbuch, vom Wirt gegengezeichnet.',
+            sagt: 'Das Übliche. Das Buch trägt das Jahr, der Zahltag trägt das Haus.' },
+          { k: 'borg', name: 'Auf langes Ziel, mit Nachlass', bar: 0.15, durst: 1.30, ausfall: 0.14,
+            was: 'Ein Jahr Ziel und ein Nachlass obendrauf, dafür nimmt er doppelt.',
+            sagt: 'Der Absatz wächst schneller als die Kasse. Beides ist wahr.' }
+        ]
+      },
       bannmeile: 0,
       probe: { name: 'Freifass an den Wirt', kurz: 'Freifass',
                satz: 'Ein Fass ohne Rechnung, mit dem Zeichen der Zunft am Boden. '
