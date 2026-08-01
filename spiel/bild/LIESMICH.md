@@ -43,4 +43,31 @@ Jedes Bild steht an einem Ort aus `kern/orte.js` (Tabelle in
 `rauch.png` liegt nur in Epoche III über dem Schornstein. 1970 steht derselbe
 Schornstein noch und raucht nicht mehr.
 
+### Der Maßstab (Runde 3)
+
+> **Wer Figuren zeigt, wird an den Figuren der Platte gemessen.**
+
+`pfanne.png` ist in Runde 3 neu erzeugt worden, weil der Kritiker es
+nachgemessen hat: die zwei Brauerinnen waren rund 300 px hoch neben einer Magd
+von 73 px, und die Pfanne maß zweieinhalb Körperlängen — ein Sudkessel von fünf
+Metern im Jahr 1350. Das neue Bild (900×428) zeigt die ganze **Braustelle**:
+Maischbottich, offene Pfanne über offenem Feuer auf einem kniehohen Steinring,
+Kühlschiff, Holzstoß, zwei Brauerinnen. Es ist so gezeichnet, dass die Pfanne
+**drei Viertel einer Körperlänge** breit ist (rund 1,3 m), und es wird so
+gestellt, dass die Brauerin genau so groß ist wie die Leute auf der Platte:
+
+| | Brauerin im Bild | Mensch auf der Platte daneben |
+|---|---|---|
+| 1350, `breite` 8.9 | **78 px** | Magd am Tor 72 px · Mann im Hof 82 px |
+| 1600, `breite` 6.6 | **58 px** | die zwei Männer am Sudhaus 51 px |
+
+Gemessen wird an einem 2752×1536-Schuss, nicht geschätzt. Dieselbe Regel gilt
+für `kueferei.png`: der Küfer maß bei `breite` 14 volle 113 px und mißt bei
+9.9 / 8.2 jetzt 80 / 66 px. Alle übrigen dreißig Aufbauten zeigen keinen
+Menschen und bleiben unverändert.
+
+Weil die vier Platten nicht auf den Pixel gleich groß gezeichnet sind, dürfen
+Breite und Versatz je Epoche gestaffelt werden — `breiten: {1:…, 2:…}` und
+`versatz: {2:{dx,dy}}` in `stuecke/stadt-daten.js`.
+
 Die drei anderen Stücke legen ihr Material unter `fuhre/`, `preis/`, `gegner/` ab.
