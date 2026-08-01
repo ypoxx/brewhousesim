@@ -560,11 +560,16 @@
     return true;
   }
 
+  /* Der graue Wagen ist ein Bild, kein Schlag. Er darf nicht jede zweite
+     Woche fahren, sonst besteht sein halbes Repertoire aus Fuhrwerk und der
+     Kritiker zaehlt Meldungen statt Zuegen. Hoechstens alle sechs Wochen. */
   function zugFuhre(h, zug) {
+    if (Z.takt - Z.wagenTakt < 6) return false;
     var l = seine(h);
     if (!l.length) l = offeneAdressen();
     if (!l.length) return false;
     var a = B.wuerfel.aus(l);
+    Z.wagenTakt = Z.takt;
     Z.wagen = {
       wer: h.k, von: sitzVon(h).ort, nach: a.ort,
       seit: takt(), dauer: 5, text: a.name
@@ -716,12 +721,17 @@
   }
 
   function zieht(h) {
-    for (var versuch = 0; versuch < 5; versuch++) {
+    for (var versuch = 0; versuch < 6; versuch++) {
       var zug = waehle(h, versuch);
       if (fuehreAus(h, zug)) { h.letzterZug = Z.takt; return true; }
     }
-    /* Wenn gar nichts geht, dann wenigstens der Wagen. */
-    return zugFuhre(h, { text: 'Ein grauer Wagen des Hauses gegenueber faehrt zum {haus}.' });
+    /* Wenn gar nichts geht, dann wenigstens der Wagen — aber der hat seine
+       eigene Sperre und faehrt nicht jede Woche. */
+    if (zugFuhre(h, { text: 'Ein grauer Wagen des Hauses gegenueber faehrt zum {haus}.' })) {
+      h.letzterZug = Z.takt;
+      return true;
+    }
+    return false;
   }
 
   /* ----------------------------------------------------------------------
@@ -729,6 +739,7 @@
      ---------------------------------------------------------------------- */
   function wocheLaeuft() {
     Z.takt = takt();
+    var vorher = Z.zaehler;
 
     /* Werbungen, die auslaufen, werden zu Bindungen. Ohne Rueckfrage. */
     Object.keys(Z.werbung).forEach(function (k) {
@@ -740,14 +751,21 @@
       /* Die ersten zehn Zuege kommen sicher: hoechstens zwei Wochen Pause.
          Danach entscheidet sein Wesen und seine Lage. */
       var muss = (h.k === 'adler' && h.zuege < PFLICHT.length && seit >= 2);
+      /* Wer geklagt hat, bekommt Antwort: drei Wochen zieht er sicher. */
+      if (Z.zorn > 0 && h.k === 'adler') muss = true;
       var g = weltGegner(h.k);
       var mut = g ? g.wagemut : 0.5;
       if (h.stufe >= 2) mut *= 0.5;
       if (muss || B.wuerfel.trifft(mut * (h.k === 'konzern' ? 0.7 : 1))) zieht(h);
     });
+    if (Z.zorn > 0) Z.zorn -= 1;
 
     /* Der graue Wagen kommt an. */
     if (Z.wagen && Z.takt - Z.wagen.seit > Z.wagen.dauer) Z.wagen = null;
+
+    /* Was seit dem letzten Klick auf WEITER geschehen ist — die Zahl, die der
+       Kritiker sucht, steht danach oben im Band. */
+    Z.wocheZuege = Z.zaehler - vorher;
   }
 
   /* ----------------------------------------------------------------------
@@ -817,6 +835,110 @@
       var ab = Math.round(Math.max(0, B.welt.haus.kasse) * 0.05);
       if (ab > 0) B.welt.zahle(ab, 'Gewinnabfuehrung an die Nordstern-Gruppe (ein Viertel)', 'gegner');
     }
+  }
+
+  /* ----------------------------------------------------------------------
+     DER ABSCHLAG — abgezogen bei JEDER Lieferung, nicht erst am Jahresende.
+     Der Kritiker soll den Verlust an der Stelle sehen, an der er entsteht:
+     eine Zeile im Buch, mit seinem Namen davor, in derselben Woche.
+
+     DECKEL (spiel/ZUSTAENDIGKEIT.md §4): alles zusammen bleibt unter DREI vom
+     Hundert des Umsatzes dieses Braujahres. Es wird laufend mitgezaehlt, nicht
+     geschaetzt — was das Haus nicht eingenommen hat, kann er nicht abpressen.
+     ---------------------------------------------------------------------- */
+  var imAbzug = false;
+
+  function hoereBuch(p) {
+    if (!Z.bereit || imAbzug || !p) return;
+    if (p.wer !== 'spieler' || p.misslungen) return;
+    if (p.preis > 0) Z.umsatzJahr += p.preis;
+    if (!p.adresse || !p.menge) return;
+    var b = Z.bindung[p.adresse];
+    if (!b) return;
+    var h = haus(b.wer);
+    if (!h || h.weg) return;
+
+    var teil = Math.round(p.menge * abschlagJeFass(p.adresse));
+    var kappe = Math.floor(Z.umsatzJahr * (D.abschlagKappe || 0.03));
+    teil = Math.min(teil, kappe - Z.abschlag);
+    teil = Math.min(teil, Math.floor(Math.max(0, B.welt.haus.kasse)));
+    if (teil <= 0) return;
+
+    var a = adresse(p.adresse);
+    imAbzug = true;
+    B.wage('gegner.abschlag', function () {
+      B.welt.zahle(teil, 'Preisabschlag beim ' + (a ? a.name : p.adresse)
+        + ' — ' + nameVon(h) + ' haelt die Adresse'
+        + (preisdruck() > 1.02 ? ' und schenkt unter dem Satz aus' : ''), 'gegner');
+    });
+    imAbzug = false;
+
+    Z.abschlag += teil;
+    Z.abschlagJe[p.adresse] = (Z.abschlagJe[p.adresse] || 0) + teil;
+    h.kasse += teil;
+  }
+
+  /* ----------------------------------------------------------------------
+     DER ZUG, DER KEIN GELD KOSTET
+     Damit es keinen Zustand gibt, aus dem heraus gegen ihn nichts mehr geht:
+     eine Klage je Braujahr. Sie kostet Ansehen, nicht Bargeld — und sie macht
+     ihn zornig, was drei Wochen lang zu spueren ist.
+     ---------------------------------------------------------------------- */
+  function beschwerdeZiel() {
+    var wl = Object.keys(Z.werbung).filter(function (k) { return !!adresse(k); });
+    if (wl.length) return { art: 'werbung', k: wl[0] };
+    var bl = Object.keys(Z.bindung).filter(function (k) {
+      return adresse(k) && abloese(k) !== null;
+    });
+    if (!bl.length) return null;
+    bl.sort(function (x, y) { return (abloese(y) || 0) - (abloese(x) || 0); });
+    return { art: 'bindung', k: bl[0] };
+  }
+
+  function beschwerdeMoeglich() {
+    return !!ep().beschwerde && Z.beschwerdeJahr !== jahr() && !!beschwerdeZiel();
+  }
+
+  function beschwerdeFuehren() {
+    var bs = ep().beschwerde;
+    var ziel = beschwerdeZiel();
+    if (!bs || !ziel || Z.beschwerdeJahr === jahr()) return;
+    Z.beschwerdeJahr = jahr();
+    B.welt.haus.ansehen = Math.max(0, (B.welt.haus.ansehen || 0) - 4);
+    Z.zorn = 3;
+
+    var a = adresse(ziel.k);
+    var g = ep().gegenzug;
+    var glueck = 0.5 + (Z.wirkung[g.k] ? 0.2 : 0);
+    var gelingt = B.wuerfel.trifft(glueck);
+    var satz;
+
+    if (gelingt && ziel.art === 'werbung') {
+      delete Z.werbung[ziel.k];
+      Z.schutz[ziel.k] = jahr() + 2;
+      satz = a.name + ': die Werbung ist vom Tisch. Zwei Jahre ruehrt er die Adresse nicht an.';
+    } else if (gelingt) {
+      var b = Z.bindung[ziel.k];
+      b.bis = Math.max(jahr() + 1, b.bis - 2);
+      b.nachlass = Math.min(0.5, (b.nachlass || 0) + 0.25);
+      if (a.bindung) a.bindung.bis = b.bis;
+      satz = bs.gelingt.replace('{haus}', a.name)
+        + ' Abloesen kostet jetzt ' + B.welt.geld(abloese(ziel.k)) + ' statt vorher mehr.';
+    } else {
+      satz = bs.misslingt;
+    }
+
+    Z.wechsel[ziel.k] = { takt: takt(), an: gelingt ? null : (Z.bindung[ziel.k] ? Z.bindung[ziel.k].wer : null),
+                          von: null, klage: true };
+    B.welt.protokolliere({ wer: 'spieler', was: bs.name + ' gegen ' + a.name
+      + (gelingt ? ' — durchgedrungen' : ' — abgewiesen'), preis: 0, adresse: ziel.k });
+    B.welt.schreibe(bs.name + ': ' + satz + ' Es hat keinen '
+      + B.welt.waehrung().name + ' gekostet, aber vier Ansehen — und der Adler '
+      + 'weiss jetzt, von wem.', 'gegner');
+    B.ton.spiele('gegner:klage', { ort: a.ort });
+    Z.beschwerdeAusgang = { jahr: jahr(), gelingt: gelingt, satz: satz, wo: a.name };
+    Z.meldung = bs.name + ': ' + satz;
+    neuZeichnen('gegner-klage');
   }
 
   /* Auch das Haus gegenueber kann fallen. Drei Stufen und ein Ende. */

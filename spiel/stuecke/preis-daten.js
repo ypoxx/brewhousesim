@@ -46,6 +46,7 @@ var PREIS_DATEN = {
       anschlagSatz: 'Der Anschlag ist die Schätzung des Rats: was durch das Haus geht und was im Haus liegt. '
                   + 'Böttcher, Maurer und Grutherr rechnen mit derselben Zahl.',
 
+      rechtSatz: 'vom Rat verliehen',
       grund: 470,
       lastenGrund: 500,
       teuerungJahr: 1.075,
@@ -76,11 +77,11 @@ var PREIS_DATEN = {
       ],
 
       umlagen: [
-        { name: 'Umlage für den Mauerbau',   sagt: 'Die Stadt schließt den Ring nach Süden.' },
-        { name: 'Landfriedensgeld',           sagt: 'Der Bund der Städte hält Reisige. Bezahlt wird von den Häusern.' },
-        { name: 'Brandschatzung',             sagt: 'Ein Heerhaufe steht vor dem Tor und zieht gegen Geld weiter.' },
-        { name: 'Zehnt auf das Braugerät',   sagt: 'Der Rat besteuert Pfanne, Bottich und Fass nach Schätzung.' },
-        { name: 'Umlage für die Brücke',    sagt: 'Das Hochwasser hat den Steg genommen.' }
+        { teil: 0.75, name: 'Umlage für den Mauerbau',   sagt: 'Die Stadt schließt den Ring nach Süden.' },
+        { teil: 0.55, name: 'Landfriedensgeld',           sagt: 'Der Bund der Städte hält Reisige. Bezahlt wird von den Häusern.' },
+        { teil: 1.85, name: 'Brandschatzung',             sagt: 'Ein Heerhaufe steht vor dem Tor und zieht gegen Geld weiter.' },
+        { teil: 1.10, name: 'Zehnt auf das Braugerät',   sagt: 'Der Rat besteuert Pfanne, Bottich und Fass nach Schätzung.' },
+        { teil: 0.90, name: 'Umlage für die Brücke',    sagt: 'Das Hochwasser hat den Steg genommen.' }
       ],
       pfand: 'Wer den Anschlag nicht abträgt, dem nimmt der Rat ein Pfand: eine Wirtschaft wird '
            + 'auf fünf Jahre dem Adler zugesprochen.',
@@ -187,6 +188,7 @@ var PREIS_DATEN = {
       anschlagSatz: 'Der Anschlag steht im Steuerbuch der Stadt: Vermögen und Gewerb, '
                   + 'geschätzt von zwei Ratsherren und einem Zunftmeister.',
 
+      rechtSatz: 'vom Kloster gepachtet',
       grund: 2800,
       lastenGrund: 2500,
       teuerungJahr: 1.070,
@@ -217,11 +219,11 @@ var PREIS_DATEN = {
       ],
 
       umlagen: [
-        { name: 'Türkensteuer',        sagt: 'Der Reichstag hat sie bewilligt. Die Stadt legt sie um.' },
-        { name: 'Kriegskontribution',   sagt: 'Einquartierung oder Geld. Das Haus wählt das Geld.' },
-        { name: 'Quartierlast',         sagt: 'Vierzig Reiter, sechs Wochen, Hafer inbegriffen.' },
-        { name: 'Bauumlage für das Rathaus', sagt: 'Der Rat baut sich einen Giebel mit Uhr.' },
-        { name: 'Brandsteuer nach dem Stadtbrand', sagt: 'Die halbe Gasse hinter der Kirche ist abgebrannt.' }
+        { teil: 0.70, name: 'Türkensteuer',        sagt: 'Der Reichstag hat sie bewilligt. Die Stadt legt sie um.' },
+        { teil: 2.10, name: 'Kriegskontribution',   sagt: 'Einquartierung oder Geld. Das Haus wählt das Geld.' },
+        { teil: 0.95, name: 'Quartierlast',         sagt: 'Vierzig Reiter, sechs Wochen, Hafer inbegriffen.' },
+        { teil: 0.60, name: 'Bauumlage für das Rathaus', sagt: 'Der Rat baut sich einen Giebel mit Uhr.' },
+        { teil: 1.40, name: 'Brandsteuer nach dem Stadtbrand', sagt: 'Die halbe Gasse hinter der Kirche ist abgebrannt.' }
       ],
       pfand: 'Wer den Anschlag nicht abträgt, dem legt die Zunft die Braugerechtigkeit still: '
            + 'eine Wirtschaft geht auf fünf Jahre an den Adler.',
@@ -328,6 +330,7 @@ var PREIS_DATEN = {
       anschlagSatz: 'Der Anschlag ist jetzt eine Bewertung: Umsatz, Anlagen, Kredit. '
                   + 'Wer wächst, wird teurer bedient — die Bank rechnet mit.',
 
+      rechtSatz: 'eigen, im Grundbuch',
       grund: 42000,
       lastenGrund: 11000,
       teuerungJahr: 1.085,
@@ -357,11 +360,11 @@ var PREIS_DATEN = {
       ],
 
       umlagen: [
-        { name: 'Kesselschaden und Neuabnahme', sagt: 'Ein Rohrriss im Dampfkessel. Der Sachverständige lässt nicht mit sich reden.' },
-        { name: 'Kanal- und Wasseranschluss',   sagt: 'Die Stadt legt Röhren und legt die Kosten um.' },
-        { name: 'Nachzahlung Biersteuer',       sagt: 'Die Revision hat drei Jahre nachgerechnet.' },
-        { name: 'Gründerkrach — Wechsel fällig', sagt: 'Die Bank verlängert nicht. Der Wechsel wird glatt bezahlt.' },
-        { name: 'Neubau der Zufahrt',           sagt: 'Der Lastwagenverkehr hat die Rampenstraße zerfahren.' }
+        { teil: 0.65, name: 'Kesselschaden und Neuabnahme', sagt: 'Ein Rohrriss im Dampfkessel. Der Sachverständige lässt nicht mit sich reden.' },
+        { teil: 1.15, name: 'Kanal- und Wasseranschluss',   sagt: 'Die Stadt legt Röhren und legt die Kosten um.' },
+        { teil: 0.85, name: 'Nachzahlung Biersteuer',       sagt: 'Die Revision hat drei Jahre nachgerechnet.' },
+        { teil: 2.30, name: 'Gründerkrach — Wechsel fällig', sagt: 'Die Bank verlängert nicht. Der Wechsel wird glatt bezahlt.' },
+        { teil: 1.00, name: 'Neubau der Zufahrt',           sagt: 'Der Lastwagenverkehr hat die Rampenstraße zerfahren.' }
       ],
       pfand: 'Wer nicht bezahlt, dessen Wechsel geht an die Bank, und die Bank verkauft ihn weiter: '
            + 'eine Gaststätte wird auf fünf Jahre dem Adler verschrieben.',
@@ -467,6 +470,7 @@ var PREIS_DATEN = {
       anschlagSatz: 'Der Anschlag heißt jetzt Bewertung: Umsatz, Anlagevermögen, Marktzugang. '
                   + 'Wer wächst, zahlt höhere Listungsgebühren — der Handel rechnet mit.',
 
+      rechtSatz: 'eigen · Konzession',
       grund: 620000,
       lastenGrund: 32000,
       teuerungJahr: 1.080,
@@ -498,11 +502,11 @@ var PREIS_DATEN = {
       ],
 
       umlagen: [
-        { name: 'Währungsreform — Umstellung 10:1', sagt: 'Aus zehn Reichsmark wird eine D-Mark. Die Kasse schmilzt, die Schulden auch.' },
-        { name: 'Tarifabschluss mit Nachzahlung',   sagt: 'Sieben Prozent rückwirkend zum Januar.' },
-        { name: 'Pfand- und Rücknahmepflicht',     sagt: 'Kästen, Kisten, Automaten. Das Haus zahlt die Umstellung.' },
-        { name: 'Energiepreissprung',               sagt: 'Der Sudkessel läuft mit Gas, und Gas hat sich verdoppelt.' },
-        { name: 'Umbau der Kläranlage',            sagt: 'Die Abwasserverordnung gilt auch für Brauereien.' }
+        { teil: 2.60, name: 'Währungsreform — Umstellung 10:1', sagt: 'Aus zehn Reichsmark wird eine D-Mark. Die Kasse schmilzt, die Schulden auch.' },
+        { teil: 0.80, name: 'Tarifabschluss mit Nachzahlung',   sagt: 'Sieben Prozent rückwirkend zum Januar.' },
+        { teil: 1.25, name: 'Pfand- und Rücknahmepflicht',     sagt: 'Kästen, Kisten, Automaten. Das Haus zahlt die Umstellung.' },
+        { teil: 0.95, name: 'Energiepreissprung',               sagt: 'Der Sudkessel läuft mit Gas, und Gas hat sich verdoppelt.' },
+        { teil: 1.55, name: 'Umbau der Kläranlage',            sagt: 'Die Abwasserverordnung gilt auch für Brauereien.' }
       ],
       pfand: 'Wer nicht zahlt, verliert die Listung: eine Gaststätte wird auf fünf Jahre '
            + 'von der Nordstern-Gruppe beliefert.',
@@ -563,7 +567,7 @@ var PREIS_DATEN = {
           satz: 'Der Hof in der Stadt wird zur Adresse, die Ware kommt woanders her.',
           wirkung: { ertrag: 60000, plaetze: 2200 } },
 
-        { k: 'brauhaus', name: 'Das Gasthausbrauerei im alten Sudhaus', anteil: 0.16, bauzeit: 2, ab: 1990,
+        { k: 'brauhaus', name: 'Die Gasthausbrauerei im alten Sudhaus', anteil: 0.16, bauzeit: 2, ab: 1990,
           was: 'Kupfer, lange Tische, ein Sudwerk hinter Glas — im Bau von 1884.',
           satz: 'Das Haus verkauft zum ersten Mal wieder Bier an dem Ort, an dem es gebraut wird.',
           wirkung: { preis: 0.07, ansehen: 22, ertrag: 12000 } }

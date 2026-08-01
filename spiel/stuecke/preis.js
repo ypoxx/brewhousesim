@@ -194,8 +194,12 @@
     return s;
   }
 
-  function umlageBetrag() {
-    return rundePreis(ep().umlageAnteil * pflichtSumme() * (Z.umlageHalb ? 0.5 : 1));
+  /* Jede Umlage hat ihr eigenes Gewicht. Eine Brandschatzung ist keine
+     Brueckenumlage — stuenden fuenf gleiche Zahlen untereinander, waere die
+     Spalte offensichtlich eine Formel und kein Kalender. */
+  function umlageBetrag(u) {
+    var teil = (u && u.teil) ? u.teil : 1;
+    return rundePreis(ep().umlageAnteil * teil * pflichtSumme() * (Z.umlageHalb ? 0.5 : 1));
   }
 
   function handlohnBetrag() {
