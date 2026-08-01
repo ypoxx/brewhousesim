@@ -422,7 +422,7 @@ var FUHRE_DATEN = {
          fuenf Adressen auf einmal. Die Knappheit bleibt (der Fluss traegt
          nur zwischen Woche 9 und 22); sie ist jetzt eine Entscheidung im
          Winter statt einer Wand im Herbst. */
-      eis: { start: 130, keller: 190, jeFuder: 16, menge: 26, frostVon: 9, frostBis: 22,
+      eis: { start: 210, keller: 330, jeFuder: 16, menge: 42, frostVon: 9, frostBis: 22,
              satz: 'Eis wird aus dem Fluss geschnitten, solange er trägt. Danach nicht mehr.' },
       faesser: 260,
       mengenfaktor: 1.6,
@@ -475,7 +475,7 @@ var FUHRE_DATEN = {
                      + 'Er nimmt Eis, weil Eis im Sommer mehr wert ist als Mark.' }
       },
       kaeufe: [
-        { k: 'eis',      text: 'Eis schneiden · +26 Fuder', basis: 260, staffel: 1.0, menge: 26,
+        { k: 'eis',      text: 'Eis schneiden · +42 Fuder', basis: 420, staffel: 1.0, menge: 42,
           titel: 'Nur solange der Fluss trägt. Im März ist damit Schluss, egal wie voll die Kasse ist.' },
         { k: 'eiskeller',text: 'Eiskeller vergrößern · +20', basis: 1800, staffel: 1.6, menge: 20,
           titel: 'Mehr Fuder Fassungsraum. Unwiderruflich gebaut.' },
