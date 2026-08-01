@@ -1,1 +1,350 @@
-/* stil/sud.css — Stummel fuer "sud" (Welle 2). Leer, vollstaendig ersetzbar. */
+/* ===========================================================================
+   stil/sud.css — DER SUD.
+
+   Zwei Dinge im Bild:
+     .sud-brett   Das Sudhaus. Gross, liegt links im Stadtfenster und wird
+                  vom Rahmen der STADT beim Laden zum Reiter geklappt.
+     .sud-zettel  Der Kesselzettel am Sudhaus. Bleibt UNTER der Ortsmarken-
+                  Schwelle der STADT (2,4 % der Buehnenflaeche = rund
+                  101.000 px bei 2752x1536), damit er ein Punkt bleibt und
+                  kein Brett. Deshalb sind Breite und Hoehe hier gedeckelt:
+                  13 % x 16,5 % = 2,145 % — mit Luft nach unten.
+
+   SPERRLISTE: Emailschilder erst ab den 1890ern. Der Zettel ist deshalb
+   1350 Kreide auf Holz, 1600 eine Schiefertafel, 1884 Papier hinter Glas,
+   1970 Formica. Kein Blechschild in Epoche 1 bis 3.
+   =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DAS BRETT
+   -------------------------------------------------------------------------- */
+
+.sud-brett {
+  position: absolute;
+  left: 1.2%;
+  top: 12.4%;
+  width: 40%;
+  height: 74%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(0, 0, 0, 0.05)),
+    var(--papier);
+  border: calc(var(--s) * 3) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 5);
+  box-shadow: 0 calc(var(--s) * 12) calc(var(--s) * 30) rgba(0, 0, 0, 0.45);
+  padding: calc(var(--s) * 16) calc(var(--s) * 18) calc(var(--s) * 12);
+  color: var(--tinte);
+  overflow: hidden;
+}
+
+.sud-kopf {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 10);
+  border-bottom: calc(var(--s) * 2) solid var(--linie);
+  padding-bottom: calc(var(--s) * 8);
+}
+.sud-kopf b {
+  font-size: calc(var(--s) * 30);
+  letter-spacing: calc(var(--s) * 3);
+}
+.sud-unter { font-size: calc(var(--s) * 19); color: #6f5f43; }
+.sud-frage { font-size: calc(var(--s) * 19); color: #7a3f22; font-style: italic; }
+.sud-frage.gross {
+  flex: 1 0 100%;
+  font-size: calc(var(--s) * 23);
+  font-style: normal;
+  letter-spacing: calc(var(--s) * 1);
+}
+
+.sud-historie {
+  font-size: calc(var(--s) * 18);
+  line-height: 1.35;
+  color: #5b4c34;
+  padding: calc(var(--s) * 8) 0 calc(var(--s) * 6);
+  border-bottom: 1px dotted var(--linie);
+}
+
+.sud-rolle {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: calc(var(--s) * 6);
+}
+
+/* --------------------------------------------------------------------------
+   EINE ACHSE — Optionen mit Preisschild nebeneinander, die einander
+   ausschliessen. Das ist woertlich die zweite Latte.
+   -------------------------------------------------------------------------- */
+
+.sud-achse,
+.sud-gaerkeller,
+.sud-hefe,
+.sud-buch {
+  margin-top: calc(var(--s) * 12);
+  padding-top: calc(var(--s) * 8);
+  border-top: calc(var(--s) * 2) solid var(--linie);
+}
+
+.sud-achskopf {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 12);
+}
+.sud-achsname {
+  font-size: calc(var(--s) * 22);
+  letter-spacing: calc(var(--s) * 3);
+}
+.sud-achssatz {
+  font-size: calc(var(--s) * 17);
+  color: #6f5f43;
+  padding: calc(var(--s) * 3) 0 calc(var(--s) * 6);
+}
+
+.sud-optionen {
+  display: flex;
+  gap: calc(var(--s) * 8);
+  align-items: stretch;
+}
+
+.sud-karte {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+  padding: calc(var(--s) * 7);
+  border: calc(var(--s) * 2) solid #c3b291;
+  border-radius: calc(var(--s) * 4);
+  background: rgba(255, 253, 245, 0.5);
+}
+.sud-karte.gewaehlt { border-color: #7a3f22; background: rgba(255, 246, 224, 0.9); }
+.sud-karte.fest { border-style: double; border-width: calc(var(--s) * 4); }
+.sud-karte.weg { opacity: 0.45; }
+
+.knopf.sud-wahl {
+  width: 100%;
+  white-space: normal;
+  min-height: calc(var(--s) * 54);
+  font-size: calc(var(--s) * 20);
+  padding: calc(var(--s) * 7) calc(var(--s) * 10);
+  gap: calc(var(--s) * 6);
+}
+.knopf.sud-wahl.ist {
+  background: linear-gradient(180deg, #efe0bb 0%, #d9c193 100%);
+  border-color: #7a3f22;
+}
+.knopf.sud-wahl.siegel { border-color: #7a3f22; }
+.knopf.sud-wahl .preis { font-size: calc(var(--s) * 18); }
+
+.sud-marke {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 6);
+  align-items: baseline;
+}
+.sud-schild {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  letter-spacing: calc(var(--s) * 1);
+  padding: 0 calc(var(--s) * 5);
+  border: 1px solid #b09a72;
+  border-radius: calc(var(--s) * 3);
+  color: #6b5a3d;
+  white-space: nowrap;
+}
+.sud-schild.ist { background: #7a3f22; color: #f6e7c8; border-color: #5a2c15; }
+.sud-schild.fest { border-color: #7a3f22; color: #7a3f22; }
+.sud-schild.siegel { background: #e8d6ab; border-color: #7a3f22; color: #5a2c15; }
+.sud-schild.weg { border-style: dashed; opacity: 0.8; }
+
+.sud-wirkung {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  color: #4a6b3a;
+}
+.sud-kartensatz { font-size: calc(var(--s) * 16); line-height: 1.3; color: #5b4c34; }
+.sud-warnung { font-size: calc(var(--s) * 16); line-height: 1.3; color: var(--rot); }
+
+/* --------------------------------------------------------------------------
+   DER GAERKELLER — Bottiche als Band
+   -------------------------------------------------------------------------- */
+
+.sud-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 5);
+  padding: calc(var(--s) * 4) 0;
+}
+.sud-bottich {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 6);
+  padding: calc(var(--s) * 4) calc(var(--s) * 8);
+  border: calc(var(--s) * 2) solid #8a6a3f;
+  border-radius: calc(var(--s) * 3) calc(var(--s) * 3) calc(var(--s) * 8) calc(var(--s) * 8);
+  background: linear-gradient(180deg, #d9c8a5 0%, #b99a6a 100%);
+  font-size: calc(var(--s) * 16);
+}
+.sud-bottich.s1 { background: linear-gradient(180deg, #dfd6bd 0%, #c2b08a 100%); }
+.sud-bottich.s3 { background: linear-gradient(180deg, #cdb07e 0%, #9c7a49 100%); }
+.sud-bottich.reif { border-color: #4a6b3a; box-shadow: 0 0 0 calc(var(--s) * 2) rgba(74, 107, 58, 0.35); }
+.sud-bottich.gesperrt { border-color: var(--rot); border-style: dashed; }
+.sud-bnr { font-family: var(--mono); color: #5a4426; }
+.sud-bsorte { font-weight: bold; }
+.sud-bmenge { font-family: var(--mono); }
+.sud-brest { font-family: var(--mono); font-size: calc(var(--s) * 15); color: #5a4426; }
+
+.sud-leer { font-size: calc(var(--s) * 17); color: #7d6c4e; font-style: italic; padding: calc(var(--s) * 6) 0; }
+
+.sud-werkzeug {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 8);
+  padding-top: calc(var(--s) * 4);
+}
+.knopf.sud-tat {
+  font-size: calc(var(--s) * 19);
+  min-height: calc(var(--s) * 44);
+  padding: calc(var(--s) * 6) calc(var(--s) * 12);
+  white-space: normal;
+}
+.knopf.sud-tat.klein { font-size: calc(var(--s) * 17); min-height: calc(var(--s) * 38); }
+.knopf.sud-tat .preis { font-size: calc(var(--s) * 17); }
+
+.sud-chargen {
+  margin-top: calc(var(--s) * 8);
+  padding: calc(var(--s) * 8);
+  border: calc(var(--s) * 2) dashed var(--rot);
+  border-radius: calc(var(--s) * 4);
+  background: rgba(157, 53, 32, 0.06);
+}
+.sud-chargenzeile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 8);
+  padding-top: calc(var(--s) * 5);
+}
+
+/* --------------------------------------------------------------------------
+   DIE GUETE — ein Zeiger, vier Namen
+   -------------------------------------------------------------------------- */
+
+.sud-balken {
+  height: calc(var(--s) * 14);
+  border: calc(var(--s) * 2) solid #8a6a3f;
+  border-radius: calc(var(--s) * 7);
+  background: #e3d6b8;
+  overflow: hidden;
+  margin: calc(var(--s) * 5) 0;
+}
+.sud-balken i { display: block; height: 100%; background: #4a6b3a; }
+.sud-balken.schlecht i { background: var(--rot); }
+
+.sud-fussnote { font-size: calc(var(--s) * 16); color: #7d6c4e; padding-top: calc(var(--s) * 4); }
+
+/* --------------------------------------------------------------------------
+   DAS SUDBUCH
+   -------------------------------------------------------------------------- */
+
+.sud-buchzeile {
+  display: flex;
+  gap: calc(var(--s) * 10);
+  font-size: calc(var(--s) * 16);
+  padding: calc(var(--s) * 2) 0;
+  border-bottom: 1px dotted var(--linie);
+}
+.sud-buchzeile .wann { font-family: var(--mono); color: #7a6a4e; min-width: calc(var(--s) * 96); }
+.sud-buchzeile .was { flex: 1; }
+
+/* --------------------------------------------------------------------------
+   DER KESSELZETTEL — ein Punkt, kein Brett.
+   Gedeckelt auf 13 % x 16,5 % der Buehne = 2,145 % Flaeche; die Schwelle der
+   STADT liegt bei 2,4 %. Wer hier Zeilen ergaenzt, misst nach.
+   -------------------------------------------------------------------------- */
+
+.sud-zettel {
+  position: absolute;
+  width: 13%;
+  max-height: 16.5%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 3);
+  pointer-events: auto;
+  padding: calc(var(--s) * 6) calc(var(--s) * 8);
+  color: #2b1d10;
+  background: linear-gradient(180deg, #f3e7c9 0%, #e0cda4 100%);
+  border: calc(var(--s) * 3) solid #5a3d1f;
+  border-radius: calc(var(--s) * 3);
+  box-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 12) rgba(0, 0, 0, 0.4);
+}
+
+.sud-zkopf {
+  font-size: calc(var(--s) * 17);
+  letter-spacing: calc(var(--s) * 2);
+  border-bottom: 1px solid #a8916a;
+  padding-bottom: calc(var(--s) * 2);
+}
+.sud-zverfahren {
+  font-size: calc(var(--s) * 15);
+  line-height: 1.15;
+  max-height: calc(var(--s) * 36);
+  overflow: hidden;
+  color: #5b4c34;
+}
+.sud-zzahlen {
+  display: flex;
+  justify-content: space-between;
+  gap: calc(var(--s) * 6);
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+}
+.sud-zzahlen .gut { color: #3d6b2e; }
+.sud-zzahlen .schlecht { color: var(--rot); }
+
+.knopf.sud-tat.voll {
+  width: 100%;
+  font-size: calc(var(--s) * 15);
+  min-height: calc(var(--s) * 30);
+  padding: calc(var(--s) * 3) calc(var(--s) * 7);
+  gap: calc(var(--s) * 4);
+  line-height: 1.1;
+}
+.knopf.sud-tat.voll .preis { font-size: calc(var(--s) * 14); padding-left: calc(var(--s) * 6); }
+
+/* Epochenkleid des Zettels. Kein Emailschild vor den 1890ern. */
+#buehne[data-epoche="1"] .sud-zettel {
+  background: linear-gradient(180deg, #6d5230 0%, #503a20 100%);
+  color: #f2e6cd;
+  border-color: #2f1c0d;
+}
+#buehne[data-epoche="1"] .sud-zverfahren,
+#buehne[data-epoche="1"] .sud-zkopf { color: #e8d6ab; }
+#buehne[data-epoche="1"] .sud-zzahlen .gut { color: #a9c98e; }
+
+#buehne[data-epoche="2"] .sud-zettel {
+  background: linear-gradient(180deg, #3f4644 0%, #2b302e 100%);
+  color: #e6e2d3;
+  border-color: #1c201e;
+}
+#buehne[data-epoche="2"] .sud-zverfahren,
+#buehne[data-epoche="2"] .sud-zkopf { color: #d8d2bd; }
+#buehne[data-epoche="2"] .sud-zzahlen .gut { color: #a9c98e; }
+
+#buehne[data-epoche="3"] .sud-zettel {
+  background: linear-gradient(180deg, #f7f1e0 0%, #e6dcc2 100%);
+  border-color: #4a3a24;
+}
+
+#buehne[data-epoche="4"] .sud-zettel {
+  background: linear-gradient(180deg, #e9e7de 0%, #d3d1c6 100%);
+  border-color: #4c5150;
+  border-radius: calc(var(--s) * 2);
+  font-family: var(--sans);
+}
+#buehne[data-epoche="4"] .sud-zkopf { letter-spacing: calc(var(--s) * 3); }
