@@ -321,8 +321,8 @@ var GEGNER_DATEN = {
       },
       bauten: [
         { k: 'eismaschine', name: 'Kaeltemaschine nach Linde', preis: 9000, glyph: 'maschine', abJahr: 1876,
-          spiegel: 'maschinenhaus', nutzen: 'Kaelte ohne Eis vom Weiher. Er braut den Sommer durch, wenn das Haus stillsteht.' },
-        { k: 'dampfsud', name: 'Dampfsudwerk', preis: 7400, glyph: 'pfanne', spiegel: 'sudhaus_neu',
+          spiegel: 'eiskeller', nutzen: 'Kaelte ohne Eis vom Weiher. Er braut den Sommer durch, wenn das Haus stillsteht.' },
+        { k: 'dampfsud', name: 'Dampfsudwerk', preis: 7400, glyph: 'pfanne', spiegel: 'schornstein',
           nutzen: 'Dampf statt Feuer unter der Pfanne: vier Sude an einem Tag.' },
         { k: 'flaschen', name: 'Flaschenfuellerei', preis: 5200, glyph: 'flasche', abJahr: 1875,
           spiegel: 'flaschenhalle', nutzen: 'Er verkauft ins Wohnzimmer, nicht nur in die Wirtsstube.' },
@@ -332,7 +332,7 @@ var GEGNER_DATEN = {
           nutzen: 'Er haelt Vorrat in der Stadt und liefert nach, ehe der Wirt gemerkt hat, dass es fehlt.' },
         { k: 'malzturm', name: 'Malzturm', preis: 8100, glyph: 'turm', spiegel: 'maelzerei',
           nutzen: 'Er maelzt selbst, das ganze Jahr, und kauft kein fremdes Malz.' },
-        { k: 'schornstein', name: 'Zweiter Schornstein', preis: 4200, glyph: 'turm', spiegel: 'kesselhaus',
+        { k: 'schornstein', name: 'Zweiter Schornstein', preis: 4200, glyph: 'turm', spiegel: 'maschinenhaus',
           nutzen: 'Ein zweiter Kessel unter Dampf. Man sieht es von der Stadtmauer aus.' }
       ],
       wagenbild: 'wagen3',
@@ -410,13 +410,15 @@ var GEGNER_DATEN = {
           nutzen: 'Er gaert im Freien und braucht keinen Keller mehr dafuer.' },
         { k: 'dosenlinie', name: 'Dosenlinie', preis: 480000, glyph: 'halle', spiegel: 'abfuellhalle',
           nutzen: 'Die Dose steht dort im Regal, wo das Fass nie hinkommt.' },
-        { k: 'keg', name: 'KEG-Reinigung', preis: 210000, glyph: 'maschine', spiegel: 'waschhaus',
+        { k: 'keg', name: 'KEG-Reinigung', preis: 210000, glyph: 'maschine', spiegel: 'kastenlager',
           nutzen: 'Sein Fass kommt sauber zurueck und geht am selben Tag wieder raus.' },
         { k: 'fuhrpark', name: 'Eigener Fuhrpark', preis: 260000, glyph: 'wagen', spiegel: 'verladedock',
           nutzen: 'Er faehrt selbst und ist nicht auf eine fremde Spedition angewiesen.' },
         { k: 'werbeabteilung', name: 'Werbeabteilung', preis: 140000, glyph: 'schild', spiegel: 'verwaltung',
           nutzen: 'Vier Leute, die den ganzen Tag nichts tun, als an seinen Namen zu denken.' },
-        { k: 'labor', name: 'Labor und Qualitaetsstelle', preis: 175000, glyph: 'turm', spiegel: 'kastenlager',
+        /* Ohne 'spiegel': eine Qualitaetsstelle gibt es im eigenen Hof nicht zu
+           kaufen. Das ist keine Luecke in der Tabelle, das ist der Satz. */
+        { k: 'labor', name: 'Labor und Qualitaetsstelle', preis: 175000, glyph: 'turm',
           nutzen: 'Jede Charge geprueft. Der Einkauf verlangt das Protokoll, und er hat es.' }
       ],
       wagenbild: 'wagen4',
