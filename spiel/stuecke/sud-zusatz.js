@@ -26,6 +26,8 @@
                       + 'und Schöpfeimer, 1884 Kühlschiff und Rohr, 1970 Pumpe und Ventil.'],
     ['sud:ausschlagen', 'Der Bottich wird ausgeschlagen: Hahn auf, Bier ins Fass. '
                       + 'Holz und Handpumpe, später Schlauch und Druck.'],
+    ['sud:hefe',        'Erntehefe wird vom gärenden Bottich abgehoben: Holzschaufel und '
+                      + 'Bütte, ab 1884 ein Blechgefäß, 1970 ein Hahn am Konus.'],
     ['sud:anstich',     'Ein Fass wird angebrochen — Schlegel auf Zapfen, ein kurzes Zischen. '
                       + '1970 statt dessen ein Kugelhahn.'],
     ['sud:fehlsud',     'Ein Bottich wird verworfen: Bier läuft auf Stein und in den Ablauf. '

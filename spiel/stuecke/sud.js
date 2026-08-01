@@ -453,6 +453,23 @@
 
   function anstichFrei() { return Z.anstichWoche !== woManifest(); }
 
+  /* Erntehefe aus dem gaerenden Bottich. Der billigste Weg und der
+     historische Regelfall — er kostet kein Fass, gibt aber weniger her und
+     geht nur, SOLANGE ETWAS GAERT. Damit ist die Hefepflege in 1350 teuer
+     (ein Fass von zwoelfen im Keller) und in 1884 selbstverstaendlich —
+     dieselbe Zahl, ein anderes Jahrhundert. */
+  function fuehreHefe() {
+    if (!anstichFrei() || !Z.bottiche.length) return false;
+    Z.anstichWoche = woManifest();
+    var plus = D.guete.fuehren || 8;
+    Z.guete = B.grenze(Z.guete + plus, 0, D.guete.hoechst || 100);
+    buch(ep().fuehren.text + ' — Bottich ' + Z.bottiche[0].nr + ', +' + plus);
+    B.welt.protokolliere({ wer: 'spieler', was: ep().fuehren.text, preis: 0, menge: 0 });
+    B.ton.spiele('sud:hefe', { ort: 'sudhaus' });
+    B.sende('zeichne', { grund: 'sud:hefe' });
+    return true;
+  }
+
   function anstich(jung) {
     if (!anstichFrei()) return false;
     var raus = B.sud.nimmHeraus(1, jung ? { juengstes: true } : { aeltestes: true });
@@ -781,28 +798,39 @@
 
     var frei = anstichFrei();
     var lager = B.welt.vorrat.faesser.length;
+    var f = ep().fuehren;
     var reihe = B.el('div', 'sud-werkzeug');
+
     reihe.appendChild(knopf({
-      text: a.text + ' · jüngstes Fass',
+      text: f.text + ' · +' + (D.guete.fuehren || 8),
+      zug: 'sud:hefe-fuehren', klasse: 'sud-tat',
+      titel: f.titel + ' Kostet kein Fass.',
+      aus: !frei || !Z.bottiche.length,
+      tu: fuehreHefe
+    }));
+    reihe.appendChild(knopf({
+      text: a.text + ' · jüngstes Fass · +' + (D.guete.anstichJung || 14),
       zug: 'sud:anstich-jung', klasse: 'sud-tat',
       titel: a.titel + ' Das jüngste Fass gibt das kräftigste Zeug — und es wäre noch '
-           + 'lange zu verkaufen gewesen.',
+           + 'lange zu verkaufen gewesen. Kostet ' + B.welt.menge(1) + '.',
       aus: !frei || !lager,
       tu: function () { anstich(true); }
     }));
     reihe.appendChild(knopf({
-      text: a.text + ' · ältestes Fass',
+      text: a.text + ' · ältestes Fass · +' + (D.guete.anstichAlt || 6),
       zug: 'sud:anstich-alt', klasse: 'sud-tat',
-      titel: a.titel + ' Das älteste Fass wäre bald verdorben — dafür gibt es nur '
-           + 'die Hälfte her.',
+      titel: a.titel + ' Das älteste Fass wäre ohnehin bald verdorben — dafür gibt es nur '
+           + 'die Hälfte her. Kostet ' + B.welt.menge(1) + '.',
       aus: !frei || !lager,
       tu: function () { anstich(false); }
     }));
     kasten.appendChild(reihe);
     kasten.appendChild(zeile('sud-fussnote', frei
-      ? (lager ? 'Ein Fass die Woche. Kein Geld, ein Fass.'
-               : 'Der Lagerkeller ist leer — es ist kein Fass da, das man anbrechen könnte.')
-      : 'Diese Woche ist schon angestochen.'));
+      ? (Z.bottiche.length
+          ? 'Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Fass.'
+          : (lager ? 'Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt ein Fass.'
+                   : 'Es gärt nichts und im Lagerkeller liegt nichts. Diese Woche geht keine Hefe.'))
+      : 'Diese Woche ist die Hefe schon nachgeführt.'));
     fach.appendChild(kasten);
   }
 
@@ -884,15 +912,18 @@
       e.guete.kurz + ' ' + an.text));
     z.appendChild(l);
 
-    /* Der immer bezahlbare Zug: der Anstich. */
+    /* Der immer bezahlbare Zug: die Hefe. Solange etwas gaert, kostet sie
+       kein Fass; sonst wird ein Fass angebrochen. Der Zettel nimmt den
+       billigeren Weg, das Brett laesst die Wahl. */
     var frei = anstichFrei(), lager = B.welt.vorrat.faesser.length;
+    var ausBottich = Z.bottiche.length > 0;
     z.appendChild(knopf({
-      text: e.anstich.text,
+      text: ausBottich ? e.fuehren.text : e.anstich.text,
       zug: 'sud:zettel-anstich',
       klasse: 'sud-tat klein voll',
-      titel: e.anstich.titel,
-      aus: !frei || !lager,
-      tu: function () { anstich(true); }
+      titel: ausBottich ? e.fuehren.titel : (e.anstich.titel + ' Kostet ' + B.welt.menge(1) + '.'),
+      aus: !frei || (!ausBottich && !lager),
+      tu: function () { if (ausBottich) fuehreHefe(); else anstich(true); }
     }));
 
     /* Zwei Umstellungen, die einander ausschliessen, mit ihrem Preis daneben:
