@@ -164,8 +164,9 @@ GERAEUSCH = {
     # UI-Pieptoene" geruegt. Jetzt ist er je Epoche ein wirkliches Zeichen.
     "woche1": ("A wooden clapper knocked twice on a board in a yard, then a very small "
                "handbell rung once. Dry, close, no music.", 3),
-    "woche2": ("A small brass handbell rung twice, briskly, in a stone yard. Nothing "
-               "else. No music.", 3),
+    "woche2": ("A church tower clock striking one single deep bronze stroke over a "
+               "town, with a faint mechanical whirring of the clockwork just before "
+               "it. Low and heavy, not a small bell. No music.", 4),
     "woche3": ("One short blast of a steam whistle at a works, close by, then silence. "
                "No music.", 3),
     "woche4": ("A mechanical factory time clock stamping a card: a lever pulled, a punch "
