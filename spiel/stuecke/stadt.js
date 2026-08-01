@@ -465,7 +465,9 @@
         rauch.src = 'bild/hof/rauch.png';
         rauch.style.width = '9%';
         rauch.style.zIndex = '900';
-        B.orte.setze(rauch, a.ort, { anker: 'unten', dx: (a.dx || 0) - 1.5, dy: -13.5 });
+        /* Der Fuss der Fahne sitzt auf der Krone des Schafts: der Schaft ist
+           breite * (779/218) hoch, gemessen in Prozent der Buehnenhoehe. */
+        B.orte.setze(rauch, a.ort, { anker: 'unten', dx: (a.dx || 0) - 1.5, dy: -16 });
         fach.appendChild(rauch);
       }
     });
