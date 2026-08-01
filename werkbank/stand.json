@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T17:23:23+00:00",
+ "stand": "2026-08-01T17:44:22+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -412,6 +412,26 @@
   {
    "zeit": "2026-08-01T17:23:23+00:00",
    "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 4 · bestanden — Das Schlussblatt behauptet unbedingt 'Mit leerer Lade hat dieses Haus jahrelang weitergebraut: auf Kerbe, auf den zweiten Guss, auf zurueckverkaufte Vorraete', waehrend zwei Zeilen darunter die eigene Zaehlung 'Fuhren hinausgeschickt 0 / Ausgeliefert 0 Fass / Ohne Rechnung hergegeben 0 / Adressen zurueckgeholt 0' steht (E1, 1353/13, belegt bei 1600x1000 und 2752x1536). Der Satz, der die These traegt, ist Textbaustein und widerspricht dem Beleg daneben — fuhre.js Z.2486-2489 an s.fuhren/s.kerben binden."
+  },
+  {
+   "zeit": "2026-08-01T17:43:46+00:00",
+   "text": "NAME R2: DIE RUEGE IST BEHOBEN, UND ZWAR IN DEN EIGENEN DATEIEN. Der Ruf bewegt jetzt Geld: DAS AUFGELD. Sobald DIE FUHRE eine Lieferung verbucht (Protokoll, fremde Zeile, NUR GELESEN), legt DER NAME seinen Satz darauf und nimmt ihn als eigene, benannte Buchung ueber die oeffentliche API ein — B.welt.nimm(betrag, 'Aufgeld auf den Namen · <Wirt> · X im Hundert auf <Rechnung>'). welt.haus.preis bleibt unangetastet, es wird in kein fremdes Zahlenfeld geschrieben, und es ist KEINE Abgabe: das Aufgeld ist nie negativ, der 18-Prozent-Deckel aus Zustaendigkeit 4 bleibt unberuehrt. Gegenprobe gegen doppelte Buchung eingebaut: setzt preis.js eines Tages welt.haus.rufAufschlagGelesen = true, hoert DER NAME sofort auf zu buchen."
+  },
+  {
+   "zeit": "2026-08-01T17:44:05+00:00",
+   "text": "NAME R2: GEMESSEN AM SCHIRM, DREI ARME DESSELBEN GESAETEN SPIELS (E4, saat=1350, 40 Wochen, gleiche Klickfolge). bauen: Einnahmen 577.910 DM, davon 32.877 DM Aufgeld in 100 Buchungen — Gasthof Lindenhof zahlt 130,00 statt 145,43 DM je hl. nichts: 567.977 DM, davon 21.674 Aufgeld — Lindenhof 130,00 -> 141,71. ruhe (Zeichen verdeckt): 545.673 DM, Aufgeld 0, Lindenhof zahlt genau 130,00. Auf annaehernd identischer Menge (4.650 / 4.695 / 4.680 Fass) liegen die Arme 6,0 Prozent auseinander statt 0,05. Genau die Zahl, an der die Runde 1 gescheitert ist — 'Lindenhof zahlt in JEDER Woche ALLER drei Arme exakt 130 DM je hl' — trennt die Arme jetzt."
+  },
+  {
+   "zeit": "2026-08-01T17:44:05+00:00",
+   "text": "NAME R2: WO MAN ES SIEHT, OHNE QUELLTEXT. Neuer dritter Reiter DAS AUFGELD im Blatt, mit (1) drei Summen (diese Woche / dieses Braujahr / seit dem Epochenjahr), (2) der Tafel WAS JEDES HAUS FUER DIESELBE MENGE ZAHLT — je Wirt Menge, Rechnung der Fuhre, Aufgeld und 'je hl 130,0 -> 141,7' —, und (3) jeder einzelnen Buchung mit Jahr, Woche, Wirt, Rechnung, Satz und Ruf. Im Band steht dieselbe Sache klein: die drei Summen, die letzte Buchung im Klartext, und der Knopf name:aufgeldbuch. Die alte Kopfzeile heisst nicht mehr 'ohne Namen', sondern 'Rechnung der Fuhre' gegen 'mit dem Aufgeld'; und was DER NAME NICHT kann, steht DURCHGESTRICHEN daneben: 'und einen hoeheren Grundpreis je Fass — den schreibt DER PREIS, und er liest welt.haus.rufAufschlag noch nicht.'"
+  },
+  {
+   "zeit": "2026-08-01T17:44:22+00:00",
+   "text": "NAME R2: DER ZWEITE BEFUND (in 1970 nur 1 von 55 Wochen zwei bezahlbare Preisschild-Karten) ist behoben und nachgezaehlt: 26 von 55 Wochen mit ZWEI ODER MEHR gleichzeitig bezahlbaren Karten, 18 mit genau einer, 11 mit keiner (vorher 1 / 4 / 50). Zwei Wege, beide epocheneigen: (a) die Leiter in 1970 ist dichter geworden — Bierdeckel 1.800 (neu), Kronkorken 5.000, Anzeige im Anzeigenblatt 9.000 (neu), Bande 14.000, Spot 48.000; (b) DER ETAT: 1970 traegt nur DREI Jahresposten gleichzeitig, und ein voller Etat SPERRT NICHT, sondern TAUSCHT — der Knopf bleibt bezahlbar, traegt sein Preisschild und sagt vorher, welcher Posten dafuer weicht. Das ist die Ausschliessung, die Latte 2 zaehlt, ohne dass ein Knopf grau wird. Nebenbei in 1600 der Freitrunk zur Kirchweih (18 fl) und in 1884 die Annonce im Wochenblatt (240 M): E2 geht von 25 auf 7 Wochen ohne bezahlbare Karte, E3 von 41 auf 36."
+  },
+  {
+   "zeit": "2026-08-01T17:44:22+00:00",
+   "text": "NAME R2: der Randbefund des Pruefers ist erledigt — der gesamte Anzeigetext DES NAMEN ist jetzt korrektes Deutsch. 47 Zeichenketten in name.js und die ganze name-daten.js. Angefasst wurden ausschliesslich Anzeigetexte; kein 'k', kein data-zug, kein Tonruf, kein Klassenname, kein Bildpfad — die Ersetzung lief ueber einen Literal-Parser mit Sperrliste (^name: / ^nm- / reine Kleinbezeichner), damit aus 'zaehle' nicht 'zähle' und aus name:aushaengen nicht name:aushängen wird. Geprueft: AUSHAENGEN heisst AUSHÄNGEN, Litfasssaeule heisst Litfaßsäule, Guete heisst Güte, Schliessen heisst Schließen."
   }
  ]
 }
