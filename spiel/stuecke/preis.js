@@ -1269,29 +1269,46 @@
     B.sende('zeichne', { grund: 'preis-zu' });
   }
 
+  /* Der Sommerzettel der FUHRE liegt zu Michaeli oben und hat Vorrang: erst
+     die Abrechnung des Sommers, dann der Tag, an dem entschieden wird. Nur
+     GELESEN wird fremdes DOM, geschrieben nie. */
+  function sommerLaeuft() { return !!document.querySelector('.fu-sommerblatt'); }
+
+  /* Was WIRKLICH auf dem Tisch liegt — nicht, was Z.offen sich wuenscht.
+     Der Griff muss den sichtbaren Zustand beschriften, sonst steht dort
+     "schließen", waehrend nichts zu sehen ist, und der erste Klick tut
+     scheinbar nichts. */
+  function tafelSichtbar() { return Z.offen && (!sommerLaeuft() || Z.erzwungen); }
+
   /* --- Der Griff, wenn die Tafel zu ist --------------------------------- */
   function zeichneGriff(fach) {
     var offenZahl = lebendeAngebote().length;
+    var sichtbar = tafelSichtbar();
+    var wartet = !sichtbar && Z.offen && sommerLaeuft();
     var griff = B.el('div', 'pr-griff');
 
     griff.appendChild(B.knopf({
-      text: Z.offen ? 'Michaelitafel schließen'
-                    : 'Michaelitafel ' + Z.tafelJahr + ' · ' + offenZahl + ' Angebote',
+      text: sichtbar
+        ? 'Michaelitafel schließen'
+        : 'Michaelitafel ' + Z.tafelJahr + ' · ' + offenZahl + ' Angebote'
+          + (wartet ? ' — liegt bereit' : ''),
       zug: 'preis:tafel',
-      klasse: 'pr-griff-knopf',
-      titel: B.welt.zeit.woche === 1
-        ? 'Heute ist Michaeli. Was hier genommen wird, wird heute genommen.'
-        : 'Michaeli ist vorüber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.',
+      klasse: 'pr-griff-knopf' + (wartet ? ' pr-griff-wartet' : ''),
+      titel: wartet
+        ? 'Der Sommerzettel liegt oben. Die Michaelitafel wartet darunter und schlägt auf, sobald er weg ist — oder sofort, auf diesen Klick.'
+        : (B.welt.zeit.woche === 1
+            ? 'Heute ist Michaeli. Was hier genommen wird, wird heute genommen.'
+            : 'Michaeli ist vorüber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.'),
       tu: function () {
-        Z.offen = !Z.offen;
-        Z.erzwungen = Z.offen;
+        if (tafelSichtbar()) { Z.offen = false; Z.erzwungen = false; }
+        else { Z.offen = true; Z.erzwungen = true; }
         Z.seite = 'tafel';
         B.ton.spiele('preis:blatt');
         B.sende('zeichne', { grund: 'preis-griff' });
       }
     }));
 
-    if (Z.offen) { fach.appendChild(griff); return; }
+    if (sichtbar) { fach.appendChild(griff); return; }
 
     var stand = B.el('div', 'pr-griff-stand');
     var billig = billigstesAngebot();
@@ -1360,13 +1377,8 @@
       var fach = B.ebene('blatt', 'preis');
       B.leere(fach);
 
-      /* Der Sommerzettel der FUHRE gehoert vor die Michaelitafel: erst die
-         Abrechnung des Sommers, dann der Tag, an dem entschieden wird.
-         Gelesen wird fremdes DOM, geschrieben nie. */
-      var sommerLaeuft = !!document.querySelector('.fu-sommerblatt');
-
       zeichneGriff(fach);
-      if (Z.offen && (!sommerLaeuft || Z.erzwungen)) zeichneTafel(fach);
+      if (tafelSichtbar()) zeichneTafel(fach);
 
       /* Die eine Zahl: der naechste sinnvolle Zug dieses Stuecks. */
       var billig = billigstesAngebot();

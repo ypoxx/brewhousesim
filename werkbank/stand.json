@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T13:50:09+00:00",
+ "stand": "2026-08-01T14:27:35+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -44,7 +44,8 @@
    "name": "DER GEGNER — die Züge, die ohne den Spieler geschahen",
    "status": "laeuft",
    "runde": 1,
-   "gebaut": "werkbank/schuss/4-runde1.png"
+   "gebaut": "werkbank/schuss/gegner-r1.png",
+   "luecke": "Runde 1 fertig gebaut und selbst gemessen. Er zieht ohne Klick: 44/54/46/108 Züge in drei Braujahren (E1/E2/E3/E4), Zählwerk oben im Band, dazu 'diese Woche N'. Drei Bisse am eigenen Geschäft: (1) verlorene Häuser — sein Zeichen mit Ablösesumme am Giebel, in der Währung der Epoche; (2) unterbotener Preis — Abschlag bei JEDER Fuhre sofort im Buch, gedeckelt auf 3 vom Hundert des Jahresumsatzes (gemessen 2,48/2,94/2,98/2,98 %, ZUSTAENDIGKEIT §4 eingehalten); (3) Vorsprung — jeder seiner Bauten hat einen Spiegel im eigenen Hof, was er früher hat, kürzt seine Werbung um je eine Woche, Liste und Folge stehen im Blatt. Ein Zug ohne Bargeld je Braujahr (Klage/Zunftanzeige/Nachrechnen/Kartellamt), damit bei leerer Kasse nichts einfriert. AUFLAGE §1 erfüllt (min-width:0 im gg-bkopf; Schließknopf in 12 von 12 Fällen von elementFromPoint getroffen). BILDFEHLER DER STADT-KRITIK BEHOBEN: hof3/hof4 werden nicht mehr über die Platte gelegt — ab 1884 malt die Platte seine Brauerei selbst; Bild nur noch 1350/1600, dort wärmer gefiltert."
   }
  ],
  "chronik": [
@@ -195,6 +196,18 @@
   {
    "zeit": "2026-08-01T13:50:09+00:00",
    "text": "AUFSICHT (7): Die graue Attrappe spiel/bild/gegner/hof3.png ueber der Adlerbrauerei in 1884 gehoert DEM GEGNER — entweder weglassen und die Platte zeigen lassen, oder passgenau und farbrichtig legen. Eingetragen in spiel/ZUSTAENDIGKEIT.md."
+  },
+  {
+   "zeit": "2026-08-01T14:27:25+00:00",
+   "text": "DER GEGNER — die Züge, die ohne den Spieler geschahen · Runde 1 · läuft — Runde 1 fertig gebaut und selbst gemessen. Er zieht ohne Klick: 44/54/46/108 Züge in drei Braujahren (E1/E2/E3/E4), Zählwerk oben im Band, dazu 'diese Woche N'. Drei Bisse am eigenen Geschäft: (1) verlorene Häuser — sein Zeichen mit Ablösesumme am Giebel, in der Währung der Epoche; (2) unterbotener Preis — Abschlag bei JEDER Fuhre sofort im Buch, gedeckelt auf 3 vom Hundert des Jahresumsatzes (gemessen 2,48/2,94/2,98/2,98 %, ZUSTAENDIGKEIT §4 eingehalten); (3) Vorsprung — jeder seiner Bauten hat einen Spiegel im eigenen Hof, was er früher hat, kürzt seine Werbung um je eine Woche, Liste und Folge stehen im Blatt. Ein Zug ohne Bargeld je Braujahr (Klage/Zunftanzeige/Nachrechnen/Kartellamt), damit bei leerer Kasse nichts einfriert. AUFLAGE §1 erfüllt (min-width:0 im gg-bkopf; Schließknopf in 12 von 12 Fällen von elementFromPoint getroffen). BILDFEHLER DER STADT-KRITIK BEHOBEN: hof3/hof4 werden nicht mehr über die Platte gelegt — ab 1884 malt die Platte seine Brauerei selbst; Bild nur noch 1350/1600, dort wärmer gefiltert."
+  },
+  {
+   "zeit": "2026-08-01T14:27:25+00:00",
+   "text": "GEGNER R1: Abschlag jetzt bei jeder Lieferung statt am Jahresende, hart gedeckelt auf 3 % des Jahresumsatzes (ZUSTAENDIGKEIT §4). Vorsprungs-Mechanik und ein kostenloser Zug je Braujahr eingebaut."
+  },
+  {
+   "zeit": "2026-08-01T14:27:35+00:00",
+   "text": "GEGNER R1 meldet an die Aufsicht: (a) welt.js schreibt Adressnamen ohne Umlaute — 'Faehrhaus am Fluss', 'Brueckenwirt', 'Muehlschenke', 'Bahnhofsgaststaette', 'Adler-Braeu AG'. Sie stehen in jedem Stück im Bild; nur der Kern kann sie richtigstellen. (b) DIE FUHRE löst nach drei mageren Jahren die Bindung einer Adresse per welt.binde(k,null) — auch dann, wenn die Bindung dem Adler gehört. Der Gegner verliert dadurch Besitz, den nicht der Spieler ihm genommen hat. (c) DIE STADT legt fremde Ortsmarken auf Pflöcke und lässt sie beim Laden ruhen; DER GEGNER hat sich mit dem vorgesehenen data-frei nur für Sitz, Hof, Band und Zeiger abgemeldet, die Giebelschilder bleiben im Pflock-System."
   }
  ]
 }

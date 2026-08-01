@@ -80,6 +80,13 @@
 .pr-abschnitt { align-items: flex-end; }
 .pr-abschnitt-satz { white-space: normal; line-height: 1.25; }
 
+/* Zu Michaeli liegt der Sommerzettel der FUHRE oben. Der Griff sagt dann,
+   dass die Tafel darunter bereitliegt, statt "schließen" zu behaupten. */
+.knopf.pr-griff-wartet {
+  border-color: var(--pr-rot, #91301c);
+  box-shadow: 0 0 0 calc(var(--s) * 2) rgba(145, 48, 28, 0.18);
+}
+
 /* --------------------------------------------------------------------------
    DIE CHRONIK — drei Spalten statt einer leeren Seite
 
