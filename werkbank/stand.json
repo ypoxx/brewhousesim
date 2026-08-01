@@ -1,5 +1,5 @@
 {
- "stand": "2026-07-31T20:25:21+00:00",
+ "stand": "2026-08-01T11:58:06+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -29,10 +29,10 @@
   },
   {
    "name": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist",
-   "status": "bestanden",
-   "runde": 1,
-   "gebaut": "werkbank/schuss/2-runde1.png",
-   "luecke": "Das aufgeklappte Gegner-Panel 'Das Haus gegenueber' laesst sich nicht mehr schliessen: sein Schliessknopf wird von einem H2 ueberdeckt (elementFromPoint liefert H2 statt Button) — bei 1920x937, 1600x1000 und 2752x1536 gleichermassen. Escape tut nichts, die Seite scrollt nicht (body overflow hidden). Da localStorage leer bleibt und ein Reload auf Woche 1/30 zurueckwirft, beendet ein einziger Klick die Partie. Zweitens blockiert die Georgi-Tafel den Hintergrund nicht: WEITER blieb aktiv und hat mir das ganze Michaeli-1351-Kauffenster weggeklickt ('Michaeli ist vorueber' auf allen fuenf Angeboten)."
+   "status": "laeuft",
+   "runde": 2,
+   "gebaut": "werkbank/schuss/2-runde2.png",
+   "luecke": "Fehler 2 behoben und mit 69 Pruefungen bei 1920x937, 1600x1000 und 2752x1536 belegt: die Georgi-Tafel sperrt den Hintergrund jetzt wirklich (Deckel .fu-sperre ueber der ganzen Buehne, WEITER wird von elementFromPoint nicht mehr getroffen, Mausklick UND Leertaste UND Eingabetaste bewegen die Uhr nicht mehr), Schliessweg per KLICK (Knopf klebt im Fuss, scrollt nicht weg) UND per ESCAPE. Fehler 1 ist NICHT die Fuhre: der deckende H2 und der gedeckte Schliessknopf liegen beide in fach-blatt-gegner > .gg-blatt > .gg-bkopf, also in gegner.js/gegner.css — Regel 3 verbietet der Fuhre diese Dateien. Er reproduziert auch nicht mehr (12 Epochen-x-Aufloesungs-Kombinationen plus erzwungener Langtext: Knopf immer erreichbar, Klick schliesst immer)."
   },
   {
    "name": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderruflich",
@@ -147,6 +147,22 @@
   {
    "zeit": "2026-07-31T20:25:21+00:00",
    "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 2 · läuft"
+  },
+  {
+   "zeit": "2026-08-01T11:37:49+00:00",
+   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 2 · läuft — Reparatur laeuft"
+  },
+  {
+   "zeit": "2026-08-01T11:57:38+00:00",
+   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 2 · läuft — Fehler 2 behoben und mit 69 Pruefungen bei 1920x937, 1600x1000 und 2752x1536 belegt: die Georgi-Tafel sperrt den Hintergrund jetzt wirklich (Deckel .fu-sperre ueber der ganzen Buehne, WEITER wird von elementFromPoint nicht mehr getroffen, Mausklick UND Leertaste UND Eingabetaste bewegen die Uhr nicht mehr), Schliessweg per KLICK (Knopf klebt im Fuss, scrollt nicht weg) UND per ESCAPE. Fehler 1 ist NICHT die Fuhre: der deckende H2 und der gedeckte Schliessknopf liegen beide in fach-blatt-gegner > .gg-blatt > .gg-bkopf, also in gegner.js/gegner.css — Regel 3 verbietet der Fuhre diese Dateien. Er reproduziert auch nicht mehr (12 Epochen-x-Aufloesungs-Kombinationen plus erzwungener Langtext: Knopf immer erreichbar, Klick schliesst immer)."
+  },
+  {
+   "zeit": "2026-08-01T11:57:54+00:00",
+   "text": "ZUSTAENDIGKEIT (Aufsicht bitte schlichten) — Fehler 1 gehoert DEM GEGNER, nicht der Fuhre. Gemessen mit Playwright: der deckende H2 ist 'fach-blatt-gegner > div.blatt.gg-blatt > div.gg-bkopf > div > h2', der gedeckte Knopf ist 'div.gg-bkopf > div.gg-reiter > button' — beide in spiel/stuecke/gegner.js und spiel/stil/gegner.css. Regel 3 verbietet der Fuhre diese Dateien; sie hat sie nicht angefasst. Zwei Befunde fuer den Gegner-Builder: (1) Der Fehler reproduziert im heutigen Stand NICHT mehr — 4 Epochen x 3 Aufloesungen, dazu beide Haeuser in 1970, Schliessknopf in allen 14 Faellen von elementFromPoint getroffen und per Klick geschlossen; die Runde-2-Arbeit der STADT hat die Kopfzeile mitverschoben. (2) Die Anfaelligkeit steht aber noch im Blatt: '.gg-bkopf' ist ein Flex-Streifen, der Textblock daneben hat 'min-width:auto' und '.gg-reiter' hat 'flex:none' — wird der Erbspruch in .gg-unter einmal laenger als der Platz, schiebt sich der Textblock ueber die Reiterknoepfe statt zu schrumpfen. Ein 'min-width:0' auf dem Textblock macht den Fehler dauerhaft unmoeglich."
+  },
+  {
+   "zeit": "2026-08-01T11:58:06+00:00",
+   "text": "GRENZE DER SPERRE (zur Kenntnis) — Die neue Georgi-Sperre der Fuhre liegt in ihrem eigenen Fach auf Ebene 'blatt' (z=60) und deckt damit alles darunter, insbesondere den WEITER-Knopf des Kerns auf Ebene 'kopf' (z=50). Sie kann konstruktionsbedingt NICHT decken: 'fach-blatt-stadt' (z-index 80, also Reiterleiste und BAUHOF) und die Faecher von PREIS und GEGNER, die als spaetere Geschwister derselben Ebene ueber ihr liegen. Waehrend die Georgi-Tafel oben liegt, bleiben also Bauhof-Kaeufe und der Michaeli-Griff bedienbar. Die Fuhre haelt das absichtlich so: wuerde sie ihr Fach hochziehen, geriete ein bereits offenes Gegner-Blatt unter ihren Deckel und waere dann selbst nicht mehr schliessbar — genau die Falle, die Fehler 1 beschreibt. Nachgemessen: liegt das Gegner-Blatt schon oben, wenn Georgi kommt, bleibt sein Schliessknopf in allen drei Aufloesungen erreichbar und schliesst per Klick. Wer eine Sperre ueber ALLE Stuecke will, braucht dafuer eine Ebene im Kern; das ist keine Entscheidung eines einzelnen Stuecks."
   }
  ]
 }

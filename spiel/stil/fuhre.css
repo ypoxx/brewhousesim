@@ -588,6 +588,21 @@
 /* --------------------------------------------------------------------------
    DAS GEORGI-BLATT — der Sommer laeuft ohne Hand ab
    -------------------------------------------------------------------------- */
+
+/* Die Sperre. Eine Tafel, die oben liegt, sperrt den Hintergrund wirklich:
+   dieser Deckel deckt die ganze Buehne und faengt jeden Klick ab, der sonst
+   den WEITER-Knopf des Kerns (Ebene 'kopf', z=50) traefe. Er liegt im Fach
+   der Fuhre auf Ebene 'blatt' (z=60), also darueber. Die Tafel selbst ist
+   sein naechstes Geschwister und liegt damit ueber ihm. */
+.fu-sperre {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  background: rgba(24, 15, 6, 0.55);
+  backdrop-filter: blur(calc(var(--s) * 2));
+  -webkit-backdrop-filter: blur(calc(var(--s) * 2));
+}
+
 .fu-sommerblatt {
   left: 21%;
   top: 11%;
@@ -597,6 +612,27 @@
   flex-direction: column;
   gap: calc(var(--s) * 8);
   overflow-y: auto;
+}
+
+/* Der Ausgang klebt am Fuss und scrollt nicht weg — bei jeder Aufloesung
+   dieselbe Stelle, auch wenn das Blatt lang wird. */
+.fu-sommer-fuss {
+  position: sticky;
+  bottom: calc(var(--s) * -22);
+  margin-top: auto;
+  padding: calc(var(--s) * 10) 0 calc(var(--s) * 2);
+  background: linear-gradient(180deg, rgba(239, 230, 210, 0), var(--papier) calc(var(--s) * 14));
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 6);
+  flex: 0 0 auto;
+}
+.fu-sommer-fuss > .knopf { width: 100%; }
+.fu-sommer-hinweis {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  color: #7a6a4e;
+  text-align: center;
 }
 .fu-sommerblatt h3 {
   margin: calc(var(--s) * 6) 0 0;

@@ -1409,10 +1409,67 @@
   }
 
   /* --- DAS GEORGI-BLATT ----------------------------------------------- */
+
+  /* Der eine Weg hinaus. Steht hier oben, weil ihn drei Dinge brauchen: der
+     Knopf im Fuss der Tafel, die Sperre und die Escape-Taste. */
+  function schliesseSommer(grund) {
+    if (!Z.sommerOffen) return false;
+    Z.sommerOffen = false;
+    B.sende('zeichne', { grund: grund || 'fuhre-sommer-zu' });
+    return true;
+  }
+
+  /* Liegt die Georgi-Tafel gerade oben? */
+  function sommerLiegtOben() { return !!(Z.sommerOffen && Z.sommer); }
+
+  /* Eine Tafel, die oben liegt, muss den Hintergrund WIRKLICH sperren — und
+     zwar auch gegen die Tastatur. kern/kopf.js schaltet mit Leertaste und
+     Eingabe eine Woche weiter; ein Deckel aus Pixeln haelt das nicht auf.
+     Dieser Horcher laeuft in der Fangphase auf document und damit VOR dem
+     Horcher des Kerns, der am selben Knoten in der Blasenphase haengt.
+     stopImmediatePropagation() nimmt ihm die Taste ab, bevor er sie sieht.
+     Angemeldet wird genau einmal, im Aufbau. */
+  function tastenSperre(ereignis) {
+    if (!sommerLiegtOben()) return;
+
+    if (ereignis.key === 'Escape') {
+      ereignis.preventDefault();
+      ereignis.stopImmediatePropagation();
+      B.ton.spiele('tafel:kreide');
+      schliesseSommer('fuhre-sommer-escape');
+      return;
+    }
+
+    if (ereignis.key === ' ' || ereignis.key === 'Enter') {
+      /* Dem Kern die Taste in jedem Fall abnehmen — sonst laeuft die Woche
+         weiter, waehrend die Tafel noch oben liegt. Nur wenn der Finger auf
+         einem Knopf DIESER Tafel steht, darf die Taste ihre eigene,
+         eingebaute Wirkung behalten. */
+      ereignis.stopImmediatePropagation();
+      var ziel = ereignis.target;
+      var eigen = ziel && ziel.closest && ziel.closest('.fu-sommerblatt');
+      if (!eigen) ereignis.preventDefault();
+    }
+  }
+
   function zeichneSommer(fach) {
-    if (!Z.sommerOffen || !Z.sommer) return;
+    if (!sommerLiegtOben()) return;
     var s = Z.sommer, e = ep();
-    var bl = B.el('div', 'blatt fu-sommerblatt');
+
+    /* Die Sperre: ein Deckel ueber der ganzen Buehne, im Fach der Fuhre und
+       damit auf Ebene 'blatt' (z=60). Sie liegt ueber allem, was darunter
+       liegt — insbesondere ueber dem WEITER-Knopf des Kerns auf Ebene
+       'kopf' (z=50). data-frei, weil die Reiterleiste der Stadt eine Sperre
+       niemals zuklappen darf: eine zugeklappte Sperre unter einer offenen
+       Tafel waere genau die Falle, die sie verhindern soll. */
+    var sperre = B.el('div', { klasse: 'fu-sperre', daten: { frei: '1' } });
+    sperre.setAttribute('aria-hidden', 'true');
+    fach.appendChild(sperre);
+
+    var bl = B.el('div', { klasse: 'blatt fu-sommerblatt', daten: { frei: '1' } });
+    bl.setAttribute('role', 'dialog');
+    bl.setAttribute('aria-modal', 'true');
+    bl.setAttribute('aria-label', 'Georgi ' + s.jahr);
     bl.appendChild(B.el('h2', null, 'Georgi ' + s.jahr + ' — die Tafel ist gewischt'));
     bl.appendChild(B.el('div', 'fu-satz', e.sommerSatz));
     bl.appendChild(B.el('div', 'fu-satz stark',
@@ -1477,11 +1534,21 @@
       : 'nichts. Dann steht die Pfanne kalt.'));
     bl.appendChild(stand);
 
-    bl.appendChild(B.knopf({
+    /* Der Ausgang klebt am Fuss der Tafel. Er scrollt nicht mit: sonst haengt
+       er bei einem vollen Georgi-Blatt (viele verlorene Adressen, viele
+       Sorten) unter der Kante und ist bei 1920x937 nicht mehr zu treffen.
+       So steht er bei jeder Aufloesung an derselben Stelle. */
+    var fuss = B.el('div', 'fu-sommer-fuss');
+    fuss.appendChild(B.knopf({
       text: 'Michaeli — das Jahr beginnt', zug: 'fuhre:sommer-zu', klasse: 'gross',
-      titel: 'Zurück auf den Hof.',
-      tu: function () { Z.sommerOffen = false; B.sende('zeichne', { grund: 'fuhre-sommer-zu' }); }
+      titel: 'Zurück auf den Hof. Die Taste Escape tut dasselbe.',
+      tu: function () { schliesseSommer('fuhre-sommer-zu'); }
     }));
+    fuss.appendChild(B.el('div', 'fu-sommer-hinweis',
+      'Solange diese Tafel oben liegt, ruht der Hof: WEITER ist gesperrt. '
+      + 'Escape schliesst sie ebenfalls.'));
+    bl.appendChild(fuss);
+
     fach.appendChild(bl);
   }
 
@@ -1500,6 +1567,9 @@
       B.ton.melde('tafel:kreide', { art: 'geraeusch', sagt: 'Kreide auf Schiefer.' });
       B.ton.melde('sommer:keller-leer', { art: 'schleife', sagt: 'Tropfen im leeren Gewölbe, Fliegen.' });
       B.ton.melde('fuhre:siegel', { art: 'geraeusch', sagt: 'Siegelwachs, Papier, Ratsstube.' });
+
+      /* Fangphase: laeuft vor dem Tastenhorcher des Kerns. Siehe tastenSperre. */
+      document.addEventListener('keydown', tastenSperre, true);
 
       richteEpocheEin(true);
 
