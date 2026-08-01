@@ -711,10 +711,11 @@
       bt.appendChild(B.el('span', 'sud-bnr', String(b.nr)));
       bt.appendChild(B.el('span', 'sud-bsorte', b.sorte));
       bt.appendChild(B.el('span', 'sud-bmenge', B.welt.menge(b.fass)));
+      var lagerVoll = B.welt.vorrat.faesser.length >= B.welt.vorrat.plaetze;
       bt.appendChild(B.el('span', 'sud-brest',
         b.gesperrt ? ('gesperrt ±' + b.streuung + ' %')
                    : (rest ? ('reif in ' + rest + (rest === 1 ? ' Woche' : ' Wochen'))
-                           : 'schlägt aus')));
+                           : (lagerVoll ? 'reif — kein Platz im Lager' : 'schlägt aus'))));
       bt.title = b.sorte + ' · ' + b.verfahren + ' · hält am Fass '
         + Math.round(b.haltbarPur * (b.faktor || 1)) + ' Wochen';
       band.appendChild(bt);

@@ -264,8 +264,8 @@ var SUD_DATEN = {
       anstich: { text: 'Hefe aus dem Tank zusetzen', zug: 'sud:anstich',
                  titel: 'Hefe wird aus einem Tank gezogen und neu angestellt.',
                  satz: 'Der Braumeister zieht Hefe und stellt neu an.' },
-      fehlsud: { name: 'Die Charge fällt aus der Spezifikation', kurz: 'aus der Spezifikation',
-                 satz: 'Ein Tank außerhalb der Grenzwerte. Er wird gesperrt.' },
+      fehlsud: { name: 'Der Tank ist umgeschlagen', kurz: 'umgeschlagen',
+                 satz: 'Ein Gärtank mit Fremdkeimen. Er wird abgelassen und gereinigt.' },
       charge: {
         name: 'GESPERRTE CHARGEN',
         satz: 'Eine Charge außerhalb der Grenzwerte geht nicht ins Regal, ehe jemand '
