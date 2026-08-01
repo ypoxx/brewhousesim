@@ -651,9 +651,13 @@
        Stuecks auf die leere Kasse, und sie steht an der Tafel, nicht im
        Handbuch. */
     var ns = notSorte();
-    var nichtsDa = freieFaesser().length === 0;
+    /* Nur wirklich in der Not: der Keller ist ganz leer, oder der Plan ist
+       am Geld gescheitert und es liegt kein reifes Fass zum Verkauf da.
+       Solange etwas im Keller reift, wartet die Pfanne. */
+    var nichtsDa = keller().length === 0;
+    var nurGeld = geldFehlt && !gebraut && freieFaesser().length === 0;
     var notGrund = null;
-    if (ns && (nichtsDa || (geldFehlt && !gebraut))) {
+    if (ns && (nichtsDa || nurGeld)) {
       var ziel = Math.max(1, Math.ceil(wagenPlaetze() / Math.max(1, ns.fass)));
       while (Z.notsud < ziel) {
         notGrund = setzeAn(ns);
@@ -714,8 +718,8 @@
     var e = ep();
     if (!e.pfand || !Z.draussen) return;
     var preis = Math.round(e.pfand.grund + e.pfand.jeFass * Z.draussen);
-    if (!B.welt.zahle(preis, 'Pfand eingezogen · ' + Z.draussen + ' Fässer', 'spieler')) {
-      Z.meldung = 'Die Runde des Knechts kostet ' + B.welt.geld(preis) + '.';
+    if (!zahleOderKerbe(preis, 'Pfand eingezogen · ' + Z.draussen + ' Fässer')) {
+      Z.meldung = 'Die Runde des Knechts kostet ' + B.welt.geld(preis) + '.' + kerbTitel(preis);
       B.sende('zeichne', { grund: 'fuhre-pfand' });
       return;
     }
@@ -1011,8 +1015,8 @@
     if (k === 'eis' && !frostzeit()) return;
     if (k === 'eis' && Z.eis >= Z.eisKeller) return;
     var preis = staffelPreis(k, def.basis, def.staffel);
-    if (!B.welt.zahle(preis, def.text, 'spieler')) {
-      Z.meldung = 'Die Kasse reicht nicht: ' + def.text + ' kostet ' + B.welt.geld(preis) + '.';
+    if (!zahleOderKerbe(preis, def.text)) {
+      Z.meldung = def.text + ' kostet ' + B.welt.geld(preis) + '.' + kerbTitel(preis);
       B.sende('zeichne', { grund: 'fuhre-kauf' });
       return;
     }
@@ -1042,8 +1046,8 @@
     var e = ep();
     if (!e.bann) return;
     var preis = Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr));
-    if (!B.welt.zahle(preis, 'Bannbrief für ' + a.name, 'spieler')) {
-      Z.meldung = 'Der Bannbrief für ' + a.name + ' kostet ' + B.welt.geld(preis) + '.';
+    if (!zahleOderKerbe(preis, 'Bannbrief für ' + a.name)) {
+      Z.meldung = 'Der Bannbrief für ' + a.name + ' kostet ' + B.welt.geld(preis) + '.' + kerbTitel(preis);
       B.sende('zeichne', { grund: 'fuhre-bann' });
       return;
     }
@@ -1062,8 +1066,8 @@
     var n = 0;
     for (var k in Z.listung) for (var q in Z.listung[k]) if (Z.listung[k][q]) n++;
     var preis = Math.round(e.listung.basis * Math.pow(e.listung.staffel, n));
-    if (!B.welt.zahle(preis, 'Listung ' + s.name + ' beim ' + a.name, 'spieler')) {
-      Z.meldung = 'Der Regalmeter beim ' + a.name + ' kostet ' + B.welt.geld(preis) + '.';
+    if (!zahleOderKerbe(preis, 'Listung ' + s.name + ' beim ' + a.name)) {
+      Z.meldung = 'Der Regalmeter beim ' + a.name + ' kostet ' + B.welt.geld(preis) + '.' + kerbTitel(preis);
       B.sende('zeichne', { grund: 'fuhre-listung' });
       return;
     }
@@ -1389,8 +1393,8 @@
 
   function stelleTafel(s, richtung, preis) {
     if (richtung > 0 && preis) {
-      if (!B.welt.zahle(preis, 'Der Braumeister stellt um', 'spieler')) {
-        Z.meldung = 'Umstellen kostet ' + B.welt.geld(preis) + '. Die Kasse reicht nicht.';
+      if (!zahleOderKerbe(preis, 'Der Braumeister stellt um')) {
+        Z.meldung = 'Umstellen kostet ' + B.welt.geld(preis) + '.' + kerbTitel(preis);
         B.sende('zeichne', { grund: 'fuhre-tafel' });
         return;
       }
