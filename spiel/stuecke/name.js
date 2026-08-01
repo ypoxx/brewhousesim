@@ -457,7 +457,7 @@
       if (Z.bruchWochen >= 5) {
         Z.bruchWochen = 0;
         var leer = B.welt.vorrat.faesser.length === 0;
-        eintrag(leer ? D.urteile.leer[ep()] : D.urteile.tadel[ep()],
+        eintrag(leer ? D.urteile.leer[ep()] : D.urteile.bruch[ep()],
           (leer ? -8 : -6) * lautstaerke(), 'Die Gasse', 'bruch');
       }
     } else if (Z.bruchWochen > 0) {

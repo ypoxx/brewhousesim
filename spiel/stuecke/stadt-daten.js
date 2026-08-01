@@ -328,7 +328,7 @@ var STADT_DATEN = {
       nutzen: { platz: 30 } },
 
     { schluessel: 'laderampe', name: 'Laderampe', bild: 'laderampe',
-      ort: 'rampe', dx: 5, dy: 2, breite: 14, von: 3, bis: 3, grund: 60,
+      ort: 'rampe', dx: 7, dy: 1, breite: 14, von: 3, bis: 3, grund: 60,
       sagt: 'Auf Wagenhöhe. Erst mit der Bahn lohnt sich, was hier verladen wird.',
       nutzen: {}, wirkt: 'Verladen auf Wagenhöhe' },
 
@@ -364,7 +364,7 @@ var STADT_DATEN = {
       nutzen: { platz: 150, sud: 12 } },
 
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: 5, dy: 2, breite: 14, von: 4, bis: 4, grund: 95,
+      ort: 'rampe', dx: 7, dy: 1, breite: 14, von: 4, bis: 4, grund: 95,
       sagt: 'Drei Lastzüge am Dock. Was hier abfährt, ist am Abend zweihundert Kilometer weit.',
       nutzen: {}, wirkt: 'drei Lastzüge gleichzeitig' },
 

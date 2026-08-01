@@ -217,6 +217,12 @@ var NAME_DATEN = (function () {
         3: 'Silbermedaille der Gewerbeausstellung.',
         4: 'Preis der Fachjury.'
       },
+      bruch: {
+        1: 'In der Gasse spricht es sich herum: unter dem Zeiger kam duennes Bier.',
+        2: 'Zwei Wirte schicken das Fass zurueck — unter dem Anker war es nicht dasselbe.',
+        3: 'Die Haendler melden Reklamationen auf Ware mit dem Etikett des Ankers.',
+        4: 'In den Gaststaetten redet man: der Anker ist nicht mehr das, was der Spot sagt.'
+      },
       leer: {
         1: 'Der Zeiger hing, und es war kein Bier im Haus.',
         2: 'Ein Schild ueber einer Tuer, hinter der kein Anker mehr ausgeschenkt wird.',
