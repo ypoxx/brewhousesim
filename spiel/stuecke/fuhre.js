@@ -37,6 +37,31 @@
      leere Auftragsbuch: wenn keine Adresse der Stadt mehr Bier des Hauses
      fuehrt, ist es vorbei.
 
+   UND DIESES ENDE WIRD VOLLZOGEN, NICHT BLOSS HINGESCHRIEBEN
+     Ein Satz, der das Ende erklaert, waehrend WEITER ewig weiterlaeuft, ist
+     kein Ende, sondern derselbe eingefrorene Zustand eine Ebene hoeher.
+     Also gibt es beides — den Weg zurueck und die Frist:
+
+       · DAS PROBEFASS. Jede aufgegebene Adresse behaelt einen Knopf. Ein
+         Fass ohne Rechnung an den Wirt kostet keinen Pfennig; es kostet ein
+         reifes Fass, einen Platz auf dem Wagen und einen der wenigen Halte
+         der Woche — also genau die knappe Sache dieser Epoche. Vier
+         ueberzeugende Faesser holen eine Adresse zurueck, sechs, wenn der
+         Gegner sie schon gebunden hat. Ein Notsud ueberzeugt halb: er
+         zaehlt einfach, nicht doppelt. Damit ist der Weg zurueck IMMER
+         offen, auch mit leerer Kasse — die Pfanne steht ja nie kalt.
+       · DER NEUE WIRT. Zu Georgi kann eine lange aufgegebene Adresse von
+         selbst wieder anfragen. Das geschieht ohne den Spieler, und nur
+         solange das Haus ueberhaupt noch liefert.
+       · DIE FRIST. Nimmt keine einzige Adresse mehr ab, laeuft eine Uhr:
+         zwoelf Wochen (1970: acht). Sie steht still in jeder Woche, in der
+         ein Fass auf Probe hinausgeht — wer es versucht, verliert nicht.
+         Laeuft sie ab, entzieht die Instanz der Epoche dem Haus die
+         Grundlage, `B.uhr.beende('keine-abnehmer', ...)` haelt die Uhr an
+         (ZUSTAENDIGKEIT 12), und dieses Stueck malt sein Schlussblatt:
+         Chronik, Generationenzeile, Wiederanfang.
+     Das Nachspiel gehoert spaeter DEM ERBE. Hier steht nur das Anhalten.
+
    BESITZSTAND: stuecke/fuhre*.js · stil/fuhre*.css · bild/fuhre/** · ton/fuhre/**
    =========================================================================== */
 
@@ -86,8 +111,26 @@
     notsud: 0,           /* Notsude DIESER Woche, vom Braumeister gesetzt    */
     notGesamt: 0,        /* Notsude im laufenden Braujahr                    */
     notGemeldet: false,
-    endeGemeldet: false
+    endeGemeldet: false,
+
+    /* DER WEG ZURUECK UND DAS ENDE */
+    probe: {},           /* adr -> {zutrauen, jahr, gaben}                   */
+    probeGesamt: 0,      /* verschenkte Faesser, ueber die ganze Partie      */
+    probeDieseWoche: 0,  /* Faesser auf Probe, die DIESE Woche hinausgingen  */
+    zurueckGeholt: [],   /* [{name, jahr, wie}] fuers Schlussblatt           */
+    frist: null,         /* Wochen, die dem leeren Auftragsbuch bleiben      */
+    fristGemeldet: false,
+    geschlecht: [],      /* die Generationenzeile, fuers Schlussblatt        */
+    startJahr: 0,
+    schluss: null,
+    schlussOffen: false
   };
+
+  /* Wie viele ueberzeugende Faesser eine Adresse zurueckholen. Ein Fass, das
+     der Wirt gewoehnlich gar nicht fuehrt, zaehlt halb — deshalb steht hier
+     eine gerade Zahl. */
+  var PROBE_ZIEL = 4;
+  var PROBE_ZIEL_FREMD = 6;   /* wenn der Gegner die Adresse schon hat */
 
   /* ----------------------------------------------------------------------
      KLEINES HANDWERK
