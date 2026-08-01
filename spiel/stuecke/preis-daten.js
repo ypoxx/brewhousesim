@@ -602,29 +602,44 @@ var PREIS_DATEN = {
           satz: 'Neun Tage, an denen die Stadt das Bier des Hauses trinkt und sonst nichts.',
           wirkung: { ertrag: 6000, ansehen: 10 } },
 
+        /* Die Strecke gehört einem: entweder dem Großhändler oder dem Haus.
+           Er billiger und ohne Fahrer, dafür kennt er den Wirt und das Haus
+           nicht mehr. Kein Großhändler nimmt ein Haus, das ihm dieselben
+           Gaststätten selbst anfährt. */
         { k: 'grosshandel', name: 'Der Getränkefachgroßhandel als Partner', anteil: 0.115, bauzeit: 0,
           was: 'Ein Vertrag mit dem größten Zwischenhändler des Kreises.',
           satz: 'Er nimmt Menge ab und bringt sie in Gaststätten, die das Haus nie besucht.',
+          sperrt: ['lastzug'],
           wirkung: { bindung: { n: 2, jahre: 20 }, ertrag: 9000 } },
 
         { k: 'lastzug', name: 'Zwei Lastzüge mit Anhänger', anteil: 0.15, bauzeit: 0,
           was: 'Zwei Siebeneinhalbtonner mit Planenaufbau und Ladebordwand.',
           satz: 'Die Auslieferung wird ein Fahrplan statt einer Fuhre.',
+          sperrt: ['grosshandel'],
           wirkung: { ertrag: 12000 } },
 
+        /* Der Werbeetat wird einmal ausgegeben. Fernsehen kostet das Doppelte
+           und reicht über den Kreis hinaus; das Trikot kostet die Hälfte und
+           wirkt genau da, wo das Haus ohnehin steht. */
         { k: 'werbefilm', name: 'Der Werbefilm im Vorabendprogramm', anteil: 0.21, bauzeit: 0, ab: 1958,
           was: 'Dreißig Sekunden, ein Fluss, ein Chor, ein Schriftzug am Ende.',
           satz: 'Zum ersten Mal kennt jemand das Bier, der nie in der Stadt war.',
+          sperrt: ['trikot'],
           wirkung: { preis: 0.09, ansehen: 20, ertrag: 16000 } },
 
+        /* Eine Halle, eine Linie. Dose heißt Menge und weniger je Hektoliter,
+           Bügelflasche heißt wenig Menge und viel je Hektoliter. Das Haus baut
+           die eine oder die andere und weiß danach, welches Haus es ist. */
         { k: 'dosenlinie', name: 'Die Dosenlinie', anteil: 0.26, bauzeit: 1, ab: 1965,
           was: 'Weißblech, Aufreißdeckel, achtzehntausend Dosen in der Stunde.',
           satz: 'Der Handel will sie. Was der Handel will, kommt ins Regal.',
+          sperrt: ['spezialitaet'],
           wirkung: { ertrag: 20000, preis: -0.03 } },
 
         { k: 'trikot', name: 'Die Trikotwerbung beim Landesligisten', anteil: 0.13, bauzeit: 0, ab: 1973,
           was: 'Der Schriftzug auf der Brust, zweiundzwanzig Spieltage im Jahr.',
           satz: 'Ein Verein, eine Stadt, ein Name. Billiger als Fernsehen und hält länger.',
+          sperrt: ['werbefilm'],
           wirkung: { ansehen: 16, preis: 0.05, ertrag: 10000 } },
 
         { k: 'abfuellung', name: 'Die Abfüllanlage, 24.000 Flaschen je Stunde', anteil: 0.45, bauzeit: 2,
@@ -640,16 +655,22 @@ var PREIS_DATEN = {
         { k: 'spezialitaet', name: 'Das Kellerbier in der Bügelflasche', anteil: 0.09, bauzeit: 1, ab: 1985,
           was: 'Naturtrüb, ungefiltert, Bügelverschluss, ein Etikett wie 1900.',
           satz: 'Kleine Menge, großer Preis. Es verkauft die Geschichte des Hauses mit.',
+          sperrt: ['dosenlinie'],
           wirkung: { preis: 0.11, ansehen: 14, ertrag: 7000 } },
 
+        /* Das alte Sudhaus ist einmal da. Entweder es wird zur Gastwirtschaft,
+           dann bleibt das Haus klein und teuer je Hektoliter — oder es wird
+           geräumt und das Haus zieht an die Bundesstraße. */
         { k: 'logistik', name: 'Das Logistikzentrum an der Bundesstraße', anteil: 0.80, bauzeit: 3,
           was: 'Hochregal, Rampen für zwölf Lastzüge, ein Verwaltungsriegel aus Glas.',
           satz: 'Der Hof in der Stadt wird zur Adresse, die Ware kommt woanders her.',
+          sperrt: ['brauhaus'],
           wirkung: { ertrag: 60000, plaetze: 2200 } },
 
         { k: 'brauhaus', name: 'Die Gasthausbrauerei im alten Sudhaus', anteil: 0.16, bauzeit: 2, ab: 1990,
           was: 'Kupfer, lange Tische, ein Sudwerk hinter Glas — im Bau von 1884.',
           satz: 'Das Haus verkauft zum ersten Mal wieder Bier an dem Ort, an dem es gebraut wird.',
+          sperrt: ['logistik'],
           wirkung: { preis: 0.07, ansehen: 22, ertrag: 12000 } }
       ],
 
