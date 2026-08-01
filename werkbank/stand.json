@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T21:15:06+00:00",
+ "stand": "2026-08-01T21:27:55+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -596,6 +596,10 @@
   {
    "zeit": "2026-08-01T21:15:06+00:00",
    "text": "DIE STADT, Runde 6 — Belege des Kritikers liegen in werkbank/schuss/stadt-r6-kritik/: tiefenumkehr-1884-pferdestall-ueber-gaertanks.png (Gaertanks allein neben Gaertanks im vollen Hof), massstab-1970-kastenlager.png (Kasten gegen Arbeiter mit Sackkarre), brunnen-1350-solo-und-hof.png, mauerlinie-gegenprobe-1350.png (?boden=1 auf leerer Platte), ortstreue-st-michael-vier-platten.png, 1970-gegen-zielbild-04.png. Messgeraet: werkbank/auge.py."
+  },
+  {
+   "zeit": "2026-08-01T21:27:55+00:00",
+   "text": "DIE EICHUNG: Messstand steht — Playwright, echte Mausklicks, elementFromPoint. Bretter muessen erst ueber die Reiter aufgeklappt werden, sonst ist die Woche unbedienbar (stadt-zugeklappt, pointer-events:none, Knoepfe bleiben aktiv). FUHRE ABSCHICKEN beendet die Woche selbst; zu Jahresbeginn liegt der Sommerzettel (.fu-sperre) ueber WEITER. Vier Laeufe ueber je 300 Wochen angeworfen."
   }
  ]
 }
