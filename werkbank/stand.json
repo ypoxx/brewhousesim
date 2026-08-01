@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T20:35:51+00:00",
+ "stand": "2026-08-01T20:38:14+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -66,6 +66,12 @@
    "status": "bestanden",
    "runde": 2,
    "luecke": "1884 ist die einzige Epoche ohne Zeichen des Hauses auf der Platte: im Startzustand liefert bild/name/ dort kein einziges Bild (E1 zeiger1.png, E2 schild2.png, E4 tafel4.png — E3 nichts), und das per Vorgabe aktive Medium 'Etiketten' ist auf der Platte unsichtbar. Erst 2.400 M fuer die Litfasssaeule setzen saeule3.png in die Stadt. Latte 1 in drei von vier Epochen erfuellt."
+  },
+  {
+   "name": "DIE FUHRE",
+   "status": "laeuft",
+   "runde": 4,
+   "luecke": "Eichung gebaut und gemessen: Michaelitag deckt das zweitbilligste Angebot in E1 5/5, E2 4/5 (1604), E3 5/5, E4 4/5 (1974). Offen: die zwei Fehljahre haengen an der Michaeli-Rechnung von DER PREIS (gemessen 22-44 % des Umsatzes gegen 5 % Anteil) und an KERN meldeZug(was,preis,art) fuer ZUSTAENDIGKEIT 18."
   }
  ],
  "chronik": [
@@ -520,6 +526,14 @@
   {
    "zeit": "2026-08-01T20:35:51+00:00",
    "text": "DIE FUHRE: ZUSTAENDIGKEIT 13 ist erfuellt, mit echten Mausklicks nachgewiesen. In jeder der vier Epochen wird innerhalb der ersten zwei Braujahre eine unwiderrufliche Festlegung wirklich anklickbar UND sie kostet etwas: E1 1351 'Vertrag statt Gunst' −160 Pf (Kasse 191→31) · E2 1601 'Das Reinheitsgebot annehmen' −810 fl (838→28) · E3 1884 'Beitritt zur Brauereikonvention' −9.200 M aktiv · E4 1970 'Rueckzug auf die eigene Braustaette' −81.000 DM aktiv. Damit ist auch der Befund aus STAND.md §7 beantwortet: 'ohne Ausgabe' ist nicht mehr die einzige erreichbare Festlegung."
+  },
+  {
+   "zeit": "2026-08-01T20:38:14+00:00",
+   "text": "DIE FUHRE: Das Ziel ist eine echte Wahl, nicht eine Buchungsvorschrift — gemessen in 1350 ueber sechs Braujahre, gleiche Saat, nur die Zahlungsweise getauscht. 'Bar auf die Hand': Michaelitag in 5/5 Jahren gedeckt, Kennzahl 10 bis 47, aber die Bestellung faellt auf 66 %. 'Aufs Kerbholz' (Vorgabe): 5/5 gedeckt, Kennzahl 0,8 bis 15,5. 'Auf Borg': Absatz plus 32 %, aber ab dem dritten Jahr reicht die Kasse zu Michaeli nicht mehr und die Kennzahl liegt in 36 % der Wochen unter 1x. Das steht so auf der Karte, bevor gewaehlt wird. Frage an die Aufsicht: soll die Latte aus ZUSTAENDIGKEIT 17 auch fuer die riskante Wahl gelten, oder darf sie der Preis dieser Wahl sein?"
+  },
+  {
+   "zeit": "2026-08-01T20:38:14+00:00",
+   "text": "DIE FUHRE · Runde 4 · läuft — Eichung gebaut und gemessen: Michaelitag deckt das zweitbilligste Angebot in E1 5/5, E2 4/5 (1604), E3 5/5, E4 4/5 (1974). Offen: die zwei Fehljahre haengen an der Michaeli-Rechnung von DER PREIS (gemessen 22-44 % des Umsatzes gegen 5 % Anteil) und an KERN meldeZug(was,preis,art) fuer ZUSTAENDIGKEIT 18."
   }
  ]
 }
