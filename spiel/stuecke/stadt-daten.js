@@ -141,8 +141,8 @@ var STADT_DATEN = {
        deshalb 6.9 statt 8.2 und ein Schritt nach vorn aus dem Steinhaus. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
       ort: 'kesselstelle', dx: -9, dy: 5,
-      breite: 8.9, breiten: { 1: 8.9, 2: 6.9 },
-      versatz: { 2: { dy: -4 } },
+      breite: 8.9, breiten: { 1: 8.9, 2: 6.6 },
+      versatz: { 2: { dx: 6, dy: -4 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne ueber offenem Feuer, daneben Maischbottich und '
           + 'Kuehlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
@@ -165,8 +165,8 @@ var STADT_DATEN = {
       nutzen: { platz: 6 } },
 
     { schluessel: 'keller_gewoelbe', name: 'Gewoelbekeller', bild: 'keller_gewoelbe',
-      ort: 'keller', dx: 1, dy: 6, breite: 12.5,
-      versatz: { 2: { dx: 1, dy: -8 } },
+      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 2: 9.0 },
+      versatz: { 2: { dx: -2, dy: -8 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kuehl und dunkel. Jede Woche, die ein Fass laenger haelt, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
@@ -191,7 +191,7 @@ var STADT_DATEN = {
        von 72. Bei 9.9 misst er 80, bei 8.2 in der weitraeumigeren Platte 1600
        noch 66 — beides die Groesse der Leute, die dort stehen. */
     { schluessel: 'kueferei', name: 'Kueferei', bild: 'kueferei',
-      ort: 'tor', dx: 0, dy: 10, breite: 9.9, breiten: { 1: 9.9, 2: 8.2 },
+      ort: 'tor', dx: 0, dy: 10, breite: 9.9, breiten: { 1: 9.9, 2: 7.2 },
       versatz: { 2: { dy: -6 } },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Kuefer. Fassband und Daube kosten dann nur noch Holz.',
@@ -204,8 +204,8 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 40 } },
 
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 8, dy: 2, breite: 14,
-      versatz: { 2: { dx: 3, dy: -8 } },
+      ort: 'fasslager', dx: 8, dy: 2, breite: 14, breiten: { 2: 10.1 },
+      versatz: { 2: { dx: 4, dy: -8 } },
       von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat waechst, der Schwund faellt.',
       nutzen: { platz: 10 } },
