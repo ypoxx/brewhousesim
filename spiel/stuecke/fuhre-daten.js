@@ -395,7 +395,9 @@ var FUHRE_DATEN = {
                + 'nicht aus der Kasse.',
       budget: null,
       sudeJeWoche: 2,
-      planStart: 1,
+      /* Die Pfanne von 1884 steht nicht zu Haelfte still: zwei Sude in der
+         Woche sind das Werk, und der Braumeister schreibt sie an. */
+      planStart: 2,
       unterhalt: 110,
       tafel: { name: 'Sudplan', unter: 'am schwarzen Brett der Mälzerei',
                preis: 260, freiBis: 3 },
@@ -412,7 +414,17 @@ var FUHRE_DATEN = {
         { k: 'ganz',   name: 'Ganzer Wagen',   fass: 88, pauschale: 700, jeFass: 0,  jeKm: 16,
           satz: 'Achtundachtzig Fass. Halb gefüllt ist er das teuerste Geschäft des Hauses.' }
       ],
-      eis: { start: 60, keller: 90, jeFuder: 16, menge: 16, frostVon: 9, frostBis: 22,
+      /* Der Eiskeller einer Brauerei von 1884 wird im Winter fuer das GANZE
+         Jahr gefuellt — er ist ein Vorratsbau, kein Wochenvorrat. Vorher
+         standen hier 60 Fuder bei einem Verbrauch von sieben in der Woche:
+         das reichte bis zur achten Woche, und die erste Woche, in der
+         geschnitten werden durfte, war die neunte. Gemessen stand deshalb in
+         neun von sechzehn Wochen „Kein Sud: kein Eis" an der Tafel, das Haus
+         braute ein Fuenftel seiner Pfanne und verlor im zweiten Braujahr
+         fuenf Adressen auf einmal. Die Knappheit bleibt (der Fluss traegt
+         nur zwischen Woche 9 und 22); sie ist jetzt eine Entscheidung im
+         Winter statt einer Wand im Herbst. */
+      eis: { start: 130, keller: 190, jeFuder: 16, menge: 26, frostVon: 9, frostBis: 22,
              satz: 'Eis wird aus dem Fluss geschnitten, solange er trägt. Danach nicht mehr.' },
       faesser: 260,
       mengenfaktor: 1.6,
@@ -465,7 +477,7 @@ var FUHRE_DATEN = {
                      + 'Er nimmt Eis, weil Eis im Sommer mehr wert ist als Mark.' }
       },
       kaeufe: [
-        { k: 'eis',      text: 'Eis schneiden · +16 Fuder', basis: 190, staffel: 1.0, menge: 16,
+        { k: 'eis',      text: 'Eis schneiden · +26 Fuder', basis: 260, staffel: 1.0, menge: 26,
           titel: 'Nur solange der Fluss trägt. Im März ist damit Schluss, egal wie voll die Kasse ist.' },
         { k: 'eiskeller',text: 'Eiskeller vergrößern · +20', basis: 1800, staffel: 1.6, menge: 20,
           titel: 'Mehr Fuder Fassungsraum. Unwiderruflich gebaut.' },
