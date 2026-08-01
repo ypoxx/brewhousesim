@@ -208,6 +208,12 @@ var SUD_DATEN = {
               satz: 'Im Winter geschnitten, im Keller gestapelt. In den warmen Wochen trägt '
                   + 'der Gärkeller nur die Hälfte.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02, warmDrossel: 0.5 } },
+            { k: 'warm', name: 'Ohne Kühlung durchgären lassen', preis: 0, schild: 'ohne Ausgabe',
+              satz: 'Der Bottich läuft warm durch. Eine Woche schneller fertig, und das Bier '
+                  + 'hält kaum mehr als ein Drittel. In einem Betrieb ohne Eis und ohne Geld '
+                  + 'ist das der Weg, auf dem trotzdem gebraut wird.',
+              warnung: 'Warm geführt kippt jeder zehnte Bottich.',
+              wirkung: { haltbar: 0.6, gaer: -1, roh: 0, mehr: 0, risiko: 0.10 } },
             { k: 'maschine', name: 'Lindesche Kältemaschine', preis: 9800, fest: true,
               satz: 'Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält '
                   + 'das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer. '
@@ -295,6 +301,11 @@ var SUD_DATEN = {
             { k: 'natur', name: 'Naturtrüb, unfiltriert', preis: 0, schild: 'wie immer',
               satz: 'Wie im Keller, so ins Fass. Hält, was es hält.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
+            { k: 'schoenen', name: 'Schönen mit Kieselsol', preis: 0, schild: 'ohne Ausgabe',
+              satz: 'Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. '
+                  + 'Kostet nichts als ein Fass Verlust je Sud und bringt fünfzehn Prozent '
+                  + 'Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt.',
+              wirkung: { haltbar: 1.15, gaer: 0, roh: 0, mehr: -1, risiko: 0 } },
             { k: 'filter', name: 'Kieselgurfilter', preis: 26000, einmal: true,
               satz: 'Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. '
                   + 'Einmal bezahlt, danach jederzeit abzustellen.',

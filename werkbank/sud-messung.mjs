@@ -137,6 +137,12 @@ for (const epoche of [1, 2, 3, 4]) {
   ].join(' ')));
 
   // --- 5. Keine Sackgasse: was geht bei leerer Kasse und leerer Kammer? ----
+  // Erst alles zuklappen, was der Jahreswechsel aufgeschlagen hat — sonst
+  // misst man, was ein fremdes Blatt verdeckt, und nicht die eigene Lage.
+  await seite.keyboard.press('Escape');
+  await seite.waitForTimeout(200);
+  const zumachen = await seite.$('button[data-zug="stadt:alles-zuklappen"]');
+  if (zumachen) { await zumachen.click(); await seite.waitForTimeout(300); }
   const notlage = await seite.evaluate(() => {
     window.BRAUHAUS.welt.haus.kasse = 0;
     window.BRAUHAUS.welt.haus.rohstoff = 0;

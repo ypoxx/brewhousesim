@@ -212,8 +212,13 @@
         var x = f[i];
         if (x.sudDurch) continue;                       /* war schon im Gaerkeller */
         var wochen = Math.max(0, (x.reife || 0) + (w.gaer || 0));
-        if (wochen <= 0) continue;                      /* sofort lieferbar */
-        if (B.welt.fassAlter(x) >= wochen) continue;    /* schon reif geworden */
+        /* Auch ein Sud OHNE Gaerwochen geht durch den Gaerkeller, sobald das
+           Verfahren etwas an ihm aendert — sonst gaelte "mit Weizen
+           gestreckt" nur fuer die Sorten, die ohnehin liegen, und der Spieler
+           bekaeme nicht, was auf dem Knopf steht. Er wird dann in derselben
+           Woche wieder ausgeschlagen; es kostet keinen Tag. */
+        if (wochen <= 0 && !w.mehr && w.haltbar === 1) continue;
+        if (wochen > 0 && B.welt.fassAlter(x) >= wochen) continue;   /* schon reif */
         var g = x.k || x.sorte || 'sud';
         if (!gruppen[g]) gruppen[g] = [];
         gruppen[g].push(x);
