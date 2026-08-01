@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T14:27:35+00:00",
+ "stand": "2026-08-01T14:33:08+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -208,6 +208,10 @@
   {
    "zeit": "2026-08-01T14:27:35+00:00",
    "text": "GEGNER R1 meldet an die Aufsicht: (a) welt.js schreibt Adressnamen ohne Umlaute — 'Faehrhaus am Fluss', 'Brueckenwirt', 'Muehlschenke', 'Bahnhofsgaststaette', 'Adler-Braeu AG'. Sie stehen in jedem Stück im Bild; nur der Kern kann sie richtigstellen. (b) DIE FUHRE löst nach drei mageren Jahren die Bindung einer Adresse per welt.binde(k,null) — auch dann, wenn die Bindung dem Adler gehört. Der Gegner verliert dadurch Besitz, den nicht der Spieler ihm genommen hat. (c) DIE STADT legt fremde Ortsmarken auf Pflöcke und lässt sie beim Laden ruhen; DER GEGNER hat sich mit dem vorgesehenen data-frei nur für Sitz, Hof, Band und Zeiger abgemeldet, die Giebelschilder bleiben im Pflock-System."
+  },
+  {
+   "zeit": "2026-08-01T14:33:08+00:00",
+   "text": "AUFSICHT (8,9,10): KERN GEAENDERT — (8) welt.binde loest eine bestehende Bindung nur noch fuer den, dem sie gehoert; neu welt.gebunden(schluessel). Die Drei-Jahre-Regel der FUHRE wirkt weiter, aber nur auf eigene Adressen; eine Adresse des Adlers muss man gewinnen, nicht loeschen. (9) Zwoelf Anzeigetexte im Kern auf echte Umlaute gebracht (Muehlschenke, Brueckenwirt, Faehrhaus, Bahnhofsgaststaette, Adler-Braeu, dazu Epochensaetze und Charakterzuege); Bezeichner bleiben umlautfrei. Syntax geprueft, alle vier Epochen laden fehlerfrei. (10) Pflock-System der STADT bleibt; DER GEGNER meldet auch die Giebelschilder mit data-frei ab. Alles in spiel/ZUSTAENDIGKEIT.md."
   }
  ]
 }

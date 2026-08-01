@@ -198,3 +198,69 @@ etwas, das den Zustand des Nachbarn anzeigt — Rauch, ein Schild, ein Fuhrwerk.
 > **Auflage an DER GEGNER:** Entweder `hof3.png` in 1884 weglassen und die Platte zeigen
 > lassen, oder es passgenau und farbrichtig über die dortige Brauerei legen. Eine graue
 > Attrappe über einem gezeichneten Gebäude ist beides nicht.
+
+## 8 — Wer eine Bindung löst, muss sie besitzen
+
+**Vorgetragen von:** dem Builder von DER GEGNER, in Runde 1.
+**Entschieden:** Kern geändert, von der Aufsicht.
+
+> DIE FUHRE löst nach drei mageren Jahren die Bindung einer Adresse per
+> `welt.binde(k, null)` — auch dann, wenn die Bindung dem Adler gehört. Der Gegner
+> verliert dadurch Besitz, den nicht der Spieler ihm genommen hat.
+
+Die Regel der FUHRE ist inhaltlich richtig: Ein Wirt, der drei Jahre lang nicht beliefert
+wird, sieht sich anderswo um. Falsch ist nur, dass sie **für alle** gilt. Ein Haus, das der
+Adler beliefert, hat keine mageren Jahre — und wenn doch, dann sind sie seine Sache, nicht
+die der FUHRE.
+
+Das ist kein Streit zwischen zwei Stücken, sondern eine fehlende Sicherung im Kern: Wenn
+jede Partei jede Bindung löschen darf, gibt es keinen Besitz. Also gehört die Sicherung
+dorthin, wo sie niemand umgehen kann.
+
+> **Geändert in `spiel/kern/welt.js`:** `binde(schluessel, wem, womit, bisJahr, wer)` — eine
+> bestehende Bindung zu **lösen** gelingt nur dem, dem sie gehört. Fehlt `wer`, gilt `haus`.
+> Ein Fehlversuch gibt `false` zurück und ändert nichts. Dazu neu:
+> `welt.gebunden(schluessel)` gibt zurück, wem die Adresse gerade gehört — damit ein Stück
+> fragen kann, statt zu raten.
+
+Für DIE FUHRE heißt das: Ihre Drei-Jahre-Regel wirkt weiter, aber nur auf eigene Adressen.
+Will sie eine Adresse des Adlers, muss sie sie gewinnen — nicht löschen. Das ist die
+interessantere Mechanik, und sie war ohnehin gemeint.
+
+## 9 — Die Umlaute im Kern, behoben
+
+**Vorgetragen von:** dem Builder von DER GEGNER.
+**Entschieden:** von der Aufsicht behoben, weil kein Stück in `spiel/kern/` schreiben darf.
+
+> `welt.js` schreibt Adressnamen ohne Umlaute — „Faehrhaus am Fluss", „Brueckenwirt",
+> „Muehlschenke", „Bahnhofsgaststaette", „Adler-Braeu AG". Sie stehen in jedem Stück im Bild;
+> nur der Kern kann sie richtigstellen.
+
+Es waren mehr als die gemeldeten fünf: Auch die Epochensätze und die Charakterzüge der
+Generationen waren betroffen — „Vom Paechter zum Eigentuemer", „Kaeltemaschine", „Haelt das
+Geld zusammen, versaeumt die Gelegenheit". Zwölf Anzeigetexte insgesamt.
+
+**Angefasst wurden ausschließlich Anzeigetexte** (`name:` und `sagt:`). Bezeichner —
+`schluessel`, `art`, `ort` — bleiben umlautfrei, weil sie keine Sprache sind, sondern
+Schlüssel; ein Umlaut darin würde jeden Vergleich in jedem Stück brechen. Danach geprüft:
+Syntax gültig, alle vier Epochen laden ohne einen Fehler auf der Seite.
+
+Der Grund, warum das überhaupt so war, steht in `design/PRUEFUNG.md` §4.2: Umlautvermeidung
+war die sichere Strategie beim Erzeugen von *Bildern*. Für Text, den ein Programm setzt, gilt
+sie nicht — dort ist sie nur falsch geschrieben.
+
+## 10 — Die Ortsmarken: DIE STADT hält die Pflöcke, jeder meldet sich selbst ab
+
+**Vorgetragen von:** dem Builder von DER GEGNER.
+**Entschieden:** So bleibt es; die Abmeldung wird vollständig.
+
+> DIE STADT legt fremde Ortsmarken auf Pflöcke und lässt sie beim Laden ruhen; DER GEGNER hat
+> sich mit dem vorgesehenen `data-frei` nur für Sitz, Hof, Band und Zeiger abgemeldet, die
+> Giebelschilder bleiben im Pflock-System.
+
+Kein Fehler, sondern eine unvollständige Abmeldung. Das Pflock-System der STADT ist richtig —
+es verhindert, dass Marken über der Platte flattern. Wer eigene Marken selbst setzt, meldet
+sie ab.
+
+> **Auflage an DER GEGNER:** auch die Giebelschilder mit `data-frei` kennzeichnen, oder sie
+> bewusst im Pflock-System lassen und das hier vermerken. Nicht halb.
