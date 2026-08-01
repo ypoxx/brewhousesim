@@ -473,3 +473,11 @@
 .nm-band.zu .nm-frei,
 .nm-band.zu .nm-meldung,
 .nm-band.zu .nm-griff { display: none; }
+
+.nm-bandgriff {
+  margin-left: auto;
+  padding: 0 calc(var(--s) * 6);
+  font-size: calc(var(--s) * 16);
+  line-height: 1;
+}
+.nm-band.zu .nm-gross { margin-bottom: 0; }
