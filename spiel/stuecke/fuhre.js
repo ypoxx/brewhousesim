@@ -1455,6 +1455,22 @@
      Nie der Sud (der faellt von selbst), immer die Knappheit. */
   function meldeZug() {
     var e = ep();
+
+    /* Steht das Auftragsbuch leer, ist der naechste sinnvolle Zug KEIN Kauf.
+       Er kostet null, und genau das wird gemeldet: die Kopfleiste des Kerns
+       zeigt daraufhin gar keinen Preis mehr an, statt einem toten Haus einen
+       Hopfenlagerbau vorzuschlagen. Was wirklich zu tun ist, steht gross auf
+       dem Brett DIE HÄUSER. */
+    if (B.welt.zeit.ende) {
+      B.welt.meldeZug('kein Zug mehr — das Haus ist zu', 0);
+      return;
+    }
+    if (!haeuser().length) {
+      var pd1 = probeDef();
+      B.welt.meldeZug(pd1 ? pd1.name + ' — ohne Rechnung' : 'Ein Fass verschenken', 0);
+      return;
+    }
+
     if (e.bann) {
       var offen = haeuser().filter(function (a) {
         return a.km > e.bannmeile && !Z.bann[a.schluessel];
@@ -1519,19 +1535,55 @@
 
     /* DAS ENDE DIESES HAUSES IST NIE DIE LEERE KASSE. Solange eine Adresse
        Bier des Hauses fuehrt, geht es weiter — notfalls mit Kofent und auf
-       Kerbe. Erst wenn keine mehr da ist, ist es vorbei. */
+       Kerbe. Fuehrt keine mehr eines, laeuft die Frist der Epoche, und sie
+       steht sichtbar hier: eine Zahl, die jede Woche kleiner wird, und
+       daneben der Zug, der sie anhaelt. Er kostet kein Geld. */
     if (!haeuser().length) {
-      var aus = B.el('div', 'fu-ausgelaufen');
-      aus.appendChild(B.el('b', null, 'KEIN HAUS DER STADT FÜHRT MEHR BIER DES ANKER'));
-      aus.appendChild(B.el('span', null,
-        'Das ist das Ende — nicht die leere Kasse. Die Pfanne könnte morgen wieder brennen, '
-        + 'und es gäbe niemanden, der das Fass abnimmt.'));
+      var fd = fristDef(), pd0 = probeDef();
+      var aus = B.el('div', 'fu-ausgelaufen' + (B.welt.zeit.ende ? ' tot' : ''));
+      aus.appendChild(B.el('b', null, B.welt.zeit.ende
+        ? 'DAS BRAUHAUS ZUM ANKER IST ZU — ' + B.welt.zeit.jahr
+        : 'KEIN HAUS DER STADT FÜHRT MEHR BIER DES ANKER'));
+      if (B.welt.zeit.ende) {
+        aus.appendChild(B.el('span', null, fd.ende));
+        aus.appendChild(B.knopf({
+          text: 'Das Schlussblatt aufschlagen', zug: 'fuhre:schluss-auf',
+          klasse: 'fu-klein',
+          titel: 'Chronik des Hauses, die Generationen, und der Weg von vorn.',
+          tu: function () { Z.schlussOffen = true; B.sende('zeichne', { grund: 'fuhre-schluss-auf' }); }
+        }));
+      } else {
+        var uhr = B.el('div', 'fu-frist');
+        uhr.appendChild(B.el('b', null, 'NOCH ' + (Z.frist === null ? fd.wochen : Z.frist)
+          + ((Z.frist === 1) ? ' WOCHE' : ' WOCHEN') + ', DANN NIMMT ' + fd.wer.toUpperCase()
+          + ' DEM HAUS DIE GRUNDLAGE'));
+        var balken = B.el('span', 'fu-fristbalken');
+        var i2 = B.el('i');
+        i2.style.width = B.grenze(Math.round((Z.frist === null ? fd.wochen : Z.frist)
+          / Math.max(1, fd.wochen) * 100), 0, 100) + '%';
+        balken.appendChild(i2);
+        uhr.appendChild(balken);
+        aus.appendChild(uhr);
+        aus.appendChild(B.el('span', null, fd.satz));
+        aus.appendChild(B.el('span', 'fu-weg-zurueck', pd0
+          ? 'DER NÄCHSTE ZUG KOSTET KEIN GELD: ' + pd0.name.toUpperCase()
+            + '. Er steht an jeder aufgegebenen Adresse. Er kostet ein reifes Fass, '
+            + 'einen Platz auf dem Wagen und einen Halt — und in jeder Woche, in der '
+            + 'eines hinausgeht, steht die Frist still.'
+          : 'Die Pfanne brennt weiter, und niemand nimmt das Fass ab.'));
+      }
       b.appendChild(aus);
-      if (!Z.endeGemeldet) {
-        Z.endeGemeldet = true;
-        B.welt.schreibe('Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, '
-          + 'aber es liefert nirgendwohin mehr. Nicht das Geld ist ausgegangen — '
-          + 'die Kundschaft.', 'fuhre');
+    }
+
+    /* Wer zurückgeholt wurde, steht klein daneben — sonst glaubt niemand,
+       dass es geht. */
+    if (Z.zurueckGeholt.length) {
+      var letzte = Z.zurueckGeholt[Z.zurueckGeholt.length - 1];
+      if (B.welt.zeit.jahr - letzte.jahr <= 1) {
+        b.appendChild(B.el('div', 'fu-umkehrmeldung',
+          letzte.name + ' ist zurück (' + letzte.jahr + ')'
+          + (letzte.wie === 'neuer' ? ' — der Wirt hat von selbst angefragt.'
+                                    : ' — zurückgeholt ohne einen Pfennig.')));
       }
     }
 
@@ -2049,16 +2101,17 @@
         var a = B.welt.adresse(l.adr);
         var erloes = 0, sorteName = {};
         l.faesser.forEach(function (f) {
-          erloes += preisJeFass(sorteFass(f), a);
+          if (!l.probe) erloes += preisJeFass(sorteFass(f), a);
           sorteName[sorteFass(f).name] = (sorteName[sorteFass(f).name] || 0) + 1;
         });
-        var zeile = B.el('div', 'fu-briefzeile');
+        var zeile = B.el('div', 'fu-briefzeile' + (l.probe ? ' probe' : ''));
         zeile.appendChild(B.el('span', 'k', kurz(a)));
         zeile.appendChild(B.el('span', 'n', a.name));
         zeile.appendChild(B.el('span', 'm', Object.keys(sorteName).map(function (s) {
           return B.welt.menge(sorteName[s]) + ' ' + s; }).join(' + ')));
         zeile.appendChild(B.el('span', 'w', B.zahl(a.km, a.km < 1 ? 1 : 0) + ' km'));
-        zeile.appendChild(B.el('span', 'g', '+' + B.welt.geld(Math.round(erloes))));
+        zeile.appendChild(B.el('span', 'g', l.probe ? 'ohne Rechnung'
+          : '+' + B.welt.geld(Math.round(erloes))));
         brief.appendChild(zeile);
       });
       var summe = B.el('div', 'fu-briefzeile summe');

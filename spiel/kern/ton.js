@@ -114,7 +114,10 @@
 
     /* --- DIE STADT ------------------------------------------------------ */
     'stadt:bau':         { datei: altNeu('bau1', 'bau4'), laut: 0.85 },
-    'stadt:reiter':      { ersatz: 'blatt', laut: 0.45 },
+    /* Der Reiter war ein Rauschstoss aus dem Ersatzkasten — das Ohr hat ihn
+       in 1350 als "Klicken eines modernen Fotoapparats" gehoert. Jetzt ist
+       es das, was er sein soll: ein Bogen Papier. */
+    'stadt:reiter':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.4 },
 
     /* --- DER GEGNER ----------------------------------------------------- */
     'gegner:werben':      { datei: altNeu('karren', 'telefon'), laut: 0.7 },
