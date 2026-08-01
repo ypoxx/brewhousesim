@@ -844,7 +844,9 @@
     brett.setAttribute('data-ort', 'sudhaus');
 
     var kopf = B.el('div', 'sud-kopf');
-    kopf.appendChild(B.el('b', null, e.titel.toUpperCase() + ' · ' + e.jahr));
+    /* Das laufende JAHR, nicht das Schaujahr der Epoche: eine Epoche dauert
+       hier Jahrhunderte, und 1800 ist nicht 1884. */
+    kopf.appendChild(B.el('b', null, e.titel.toUpperCase() + ' · ' + B.welt.zeit.jahr));
     kopf.appendChild(B.el('span', 'sud-unter', e.kessel));
     kopf.appendChild(B.el('span', 'sud-frage gross', e.frage));
     brett.appendChild(kopf);
@@ -901,7 +903,7 @@
     z.setAttribute('data-frei', '1');
     z.setAttribute('data-reiter', 'DER SUD');
 
-    z.appendChild(B.el('div', 'sud-zkopf', 'DER SUD · ' + e.jahr));
+    z.appendChild(B.el('div', 'sud-zkopf', 'DER SUD · ' + B.welt.zeit.jahr));
     z.appendChild(B.el('div', 'sud-zverfahren',
       achsen().map(function (a) { return gewaehlt(a).name; }).join(' · ')));
 
