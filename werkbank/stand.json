@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T16:43:06+00:00",
+ "stand": "2026-08-01T16:43:31+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -58,7 +58,8 @@
    "name": "DER NAME — warum jemand mehr zahlt, als das Bier wert ist",
    "status": "laeuft",
    "runde": 1,
-   "luecke": "Gestartet, nachdem DER PREIS bestanden hat und die Lastzahl von 6,6 auf 1,4 gefallen war. Zustaendigkeit 14 ist vorab geklaert."
+   "luecke": "DER PREIS liest welt.haus.rufAufschlag noch nicht — eine Zeile in preis.js fehlt, und bis sie da ist, wirkt der Ruf nur ueber Adressen statt auch ueber den Preis. Der Ton ist nur gerufen, nicht komponiert: vierzehn name:-Rufe greifen in den Notfall von kern/ton.js. In E1 und E2 leert sich der Keller nach dem ersten Braujahr (Zustaendigkeit 13, fremde Zahlen), dadurch steht die Klemme dort haeufiger als gedacht — die Regel greift richtig, die Lage ist geliehen.",
+   "gebaut": "werkbank/schuss/name-register-e1.png"
   }
  ],
  "chronik": [
@@ -369,6 +370,18 @@
   {
    "zeit": "2026-08-01T16:43:06+00:00",
    "text": "NAME R1: HARTE REGEL geprueft, nicht behauptet. BRAUHAUS.ruf.lebendig() zaehlt am DOM die freien, wirksamen Zuege des Stuecks (Blattschalter zaehlen NICHT mit) — in allen vier Epochen 3 von 3, auch bei Kasse minus 7. Der Zeiger laesst sich immer aus- und einziehen, das Zeichen immer verdecken und wieder zeigen, und 'Herumgehen und den Namen sagen' kostet einmal im Braujahr nur einen Nachmittag."
+  },
+  {
+   "zeit": "2026-08-01T16:43:31+00:00",
+   "text": "NAME R1 an die AUFSICHT, drei Punkte. (1) EINE ZEILE FEHLT NOCH, damit der Ruf am Preis wirkt: in preis.js setzeBierpreis() den Faktor (1 + (B.welt.haus.rufAufschlag || 0)) ergaenzen. Ich habe es NICHT selbst getan — welt.haus.preis gehoert DEM PREIS. (2) DIE FUHRE sperrt zu Georgi mit .fu-sperre den WEITER-Knopf des Kerns; ein Klicker kommt nur ueber ihren eigenen Knopf fuhre:sommer-zu weiter. Das ist genau der Fall aus Zustaendigkeit 2 und kostet jeden Playwright-Lauf Wochen. (3) DEM KLANG: DER NAME ruft vierzehn Namen mit der Vorsilbe 'name:' (Liste in spiel/ton/name/LIESMICH.md). Sie greifen heute in den Notfall und klingen alle wie ein Blatt Papier. Zwei davon waeren ein Latte-3-Gewinn, weil sie je Epoche verschieden gedacht sind: name:druck (Steindruck gegen Blechpresse) und name:siegel (Wachs gegen Aktenstempel)."
+  },
+  {
+   "zeit": "2026-08-01T16:43:31+00:00",
+   "text": "NAME R1: gemessen, nicht geschaetzt. Vier Traeger-Bilder mit gen_image.py auf Magenta erzeugt und freigestellt (globaler Magenta-Test statt Flutfuellung vom Rand, sonst bleibt die Flaeche INNERHALB des Strohkranzes stehen). Erste Fassung war zwei- bis achtfach zu gross — die Litfasssaeule mass vierzehn Meter. Nachgemessen an den Figuren der Platte in 2752x1536: Bierzeiger 151 px neben der Magd am Tor mit 72 px, Wirtshausschild 64 px neben Leuten mit 55 px, Litfasssaeule 94 px neben Leuten mit 45 px, Werbetafel 145 px neben einem Auto von 110 px Laenge. Alles auf der Platte traegt data-frei=name, vollstaendig: 4 von 4 Epochen, 0 Elemente ohne Abmeldung."
+  },
+  {
+   "zeit": "2026-08-01T16:43:31+00:00",
+   "text": "DER NAME — warum jemand mehr zahlt, als das Bier wert ist · Runde 1 · läuft — DER PREIS liest welt.haus.rufAufschlag noch nicht — eine Zeile in preis.js fehlt, und bis sie da ist, wirkt der Ruf nur ueber Adressen statt auch ueber den Preis. Der Ton ist nur gerufen, nicht komponiert: vierzehn name:-Rufe greifen in den Notfall von kern/ton.js. In E1 und E2 leert sich der Keller nach dem ersten Braujahr (Zustaendigkeit 13, fremde Zahlen), dadurch steht die Klemme dort haeufiger als gedacht — die Regel greift richtig, die Lage ist geliehen."
   }
  ]
 }
