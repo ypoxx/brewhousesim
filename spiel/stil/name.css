@@ -177,7 +177,7 @@
   flex-wrap: wrap;
   margin: calc(var(--s) * 3) 0;
 }
-.nm-ohne { font-family: var(--mono); font-size: calc(var(--s) * 17); color: #7a6a4e; text-decoration: line-through; }
+.nm-ohne { font-family: var(--mono); font-size: calc(var(--s) * 17); color: #7a6a4e; }
 .nm-mit  { font-family: var(--mono); font-size: calc(var(--s) * 21); color: var(--gruen); font-weight: 700; }
 .nm-klein { display: block; font-size: calc(var(--s) * 14); color: #7a6a4e; }
 
@@ -356,3 +356,120 @@
   .nm-blatt { left: 29.5%; width: 60%; }
   .nm-gitter { grid-template-columns: 1fr; }
 }
+
+
+/* ==========================================================================
+   DAS AUFGELD — was der Ruf wirklich einbringt.
+   Die drei Zahlen stehen dort, wo in Runde 1 nur eine Behauptung stand.
+   ========================================================================== */
+
+.nm-aufgeld {
+  margin-top: calc(var(--s) * 8);
+  padding: calc(var(--s) * 7) calc(var(--s) * 8) calc(var(--s) * 8);
+  background: rgba(58, 94, 60, 0.10);
+  border: calc(var(--s) * 2) solid rgba(58, 94, 60, 0.45);
+  border-radius: calc(var(--s) * 4);
+}
+
+.nm-geldreihe {
+  display: flex;
+  gap: calc(var(--s) * 6);
+  margin: calc(var(--s) * 5) 0 calc(var(--s) * 4);
+}
+
+.nm-geldpost {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 1);
+  padding: calc(var(--s) * 4) calc(var(--s) * 5);
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: calc(var(--s) * 3);
+}
+.nm-geldpost i {
+  font-style: normal;
+  font-size: calc(var(--s) * 13);
+  color: #7a6a4e;
+  text-transform: uppercase;
+  letter-spacing: calc(var(--s) * 1);
+}
+.nm-geldpost b {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 18);
+  color: #6c6350;
+  white-space: nowrap;
+}
+.nm-geldpost.an b { color: var(--gruen); }
+
+/* Was dieses Stueck NICHT kann, steht durchgestrichen und nicht versteckt. */
+.nm-offen { margin-top: calc(var(--s) * 4); }
+.nm-offen s {
+  text-decoration-thickness: calc(var(--s) * 2);
+  text-decoration-color: rgba(157, 53, 32, 0.85);
+  color: #8a7358;
+}
+
+.nm-klein-knopf {
+  margin-top: calc(var(--s) * 5);
+  width: 100%;
+  font-size: calc(var(--s) * 15);
+}
+
+/* DER ETAT — die Knappheit, die nur 1970 hat. */
+.nm-etat {
+  margin-top: calc(var(--s) * 6);
+  padding: calc(var(--s) * 4) calc(var(--s) * 8);
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 1);
+  color: #5d4a2c;
+  background: rgba(196, 154, 60, 0.22);
+  border: calc(var(--s) * 2) solid rgba(140, 102, 34, 0.55);
+  border-radius: calc(var(--s) * 3);
+}
+.nm-marke.nm-tausch {
+  background: rgba(196, 154, 60, 0.28);
+  color: #6b4f16;
+}
+
+/* Die Nachrechnung im Blatt. */
+.nm-summen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 8);
+  margin: calc(var(--s) * 6) 0 calc(var(--s) * 10);
+}
+.nm-summe {
+  flex: 1 1 calc(var(--s) * 240);
+  padding: calc(var(--s) * 6) calc(var(--s) * 10);
+  background: rgba(58, 94, 60, 0.10);
+  border: calc(var(--s) * 2) solid rgba(58, 94, 60, 0.4);
+  border-radius: calc(var(--s) * 4);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 2);
+}
+.nm-summe i {
+  font-style: normal;
+  font-size: calc(var(--s) * 14);
+  color: #7a6a4e;
+  text-transform: uppercase;
+  letter-spacing: calc(var(--s) * 1);
+}
+.nm-summe b {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 24);
+  color: var(--gruen);
+}
+.nm-buch .zahl { color: var(--gruen); }
+
+/* Das Band laesst sich einklappen — dann gibt es die Stadt frei. */
+.nm-band.zu { width: 12%; }
+.nm-band.zu .nm-satz,
+.nm-band.zu .nm-balken,
+.nm-band.zu .nm-klemme,
+.nm-band.zu .nm-frei,
+.nm-band.zu .nm-meldung,
+.nm-band.zu .nm-griff { display: none; }

@@ -103,6 +103,7 @@
 
     meldung: 'Das Haus hat einen Namen. Noch weiß ihn niemand.',
     blatt: null,           /* null | 'zeichen' | 'register' | 'aufgeld'  */
+    zu: false,             /* das Rufband eingeklappt (nur Anzeige)      */
     lebendig: true,
 
     /* DAS AUFGELD — was der Ruf wirklich einbringt, von diesem Stueck
@@ -1029,7 +1030,7 @@
     B.leere(f);
     var e = epd();
 
-    var band = B.el('div', 'nm-band');
+    var band = B.el('div', 'nm-band' + (Z.zu ? ' zu' : ''));
     band.setAttribute('data-ruf', ruf());
     band.setAttribute('data-deckung', Math.round(Z.deckung));
     band.setAttribute('data-bekannt', Math.round(Z.bekannt));
@@ -1037,7 +1038,16 @@
 
     var kopf = B.el('div', 'nm-kopf');
     kopf.appendChild(B.el('span', 'nm-titel', 'DER NAME'));
-    kopf.appendChild(B.el('span', 'nm-medium', e.medium));
+    if (!Z.zu) kopf.appendChild(B.el('span', 'nm-medium', e.medium));
+    /* Das Band gibt die Platte auf Klick frei — DIE STADT misst die Deckung
+       ihres Fensters, und ein Brett, das man nicht wegbekommt, ist ein Brett
+       zuviel. Kein Zug des Hauses: nur Anzeige. */
+    kopf.appendChild(B.knopf({
+      text: Z.zu ? '▸' : '▾', zug: 'name:band', klasse: 'nm-knopf nm-bandgriff',
+      titel: Z.zu ? 'Das Rufband wieder aufklappen.'
+        : 'Das Rufband einklappen und die Stadt freigeben.',
+      tu: function () { Z.zu = !Z.zu; B.sende('zeichne', { grund: 'name-band' }); }
+    }));
     band.appendChild(kopf);
 
     var gross = B.el('div', 'nm-gross');
@@ -1046,6 +1056,8 @@
     if (Z.nachahmung) gross.appendChild(B.el('span', 'nm-warn', 'nachgemacht'));
     if (Z.fest.verkauft) gross.appendChild(B.el('span', 'nm-warn', 'verkauft'));
     band.appendChild(gross);
+
+    if (Z.zu) { f.appendChild(band); return; }
 
     band.appendChild(balken('Bekanntheit', Z.bekannt, e.deckel, 'nm-bekannt', zielBekannt()));
     band.appendChild(balken('Deckung', Z.deckung, 100, 'nm-deckung'));
@@ -1501,8 +1513,8 @@
         var zug = k.getAttribute('data-zug') || '';
         /* Ein Blatt zu oeffnen ist kein Zug. Gezaehlt wird nur, was den
            Zustand des Hauses aendert und dabei kein Geld kostet. */
-        if (zug === 'name:blatt' || zug === 'name:blatt-zu'
-          || zug.indexOf('name:reiter') === 0) return;
+        if (zug === 'name:blatt' || zug === 'name:blatt-zu' || zug === 'name:band'
+          || zug === 'name:aufgeldbuch' || zug.indexOf('name:reiter') === 0) return;
         var p = k.getAttribute('data-preis');
         if (!p || Number(p) >= 0) frei++;
       });
