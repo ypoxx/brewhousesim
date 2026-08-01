@@ -143,7 +143,17 @@
   border-radius: calc(var(--s) * 7);
   overflow: hidden;
 }
+.nm-schiene { position: relative; }
 .nm-schiene i { display: block; height: 100%; }
+.nm-ziel {
+  position: absolute;
+  top: calc(var(--s) * -3);
+  bottom: calc(var(--s) * -3);
+  width: calc(var(--s) * 3);
+  margin-left: calc(var(--s) * -1.5);
+  background: #2b1d10;
+  text-decoration: none;
+}
 .nm-bekannt .nm-schiene i { background: linear-gradient(90deg, #8a5c33, #c99a55); }
 .nm-deckung .nm-schiene i { background: linear-gradient(90deg, #4a6b3a, #7fa055); }
 

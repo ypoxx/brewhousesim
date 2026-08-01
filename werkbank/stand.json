@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-01T15:51:58+00:00",
- "phase": "Welle 1 laeuft · Welle 2 begonnen",
+ "stand": "2026-08-01T16:34:49+00:00",
+ "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -329,6 +329,10 @@
   {
    "zeit": "2026-08-01T15:51:50+00:00",
    "text": "AUFSICHT (15,16): (15) index.html erweitert - der Bauer von DEM NAMEN stand still, weil die eingefrorene Datei nur die vier Stuecke der Welle 1 kannte. Nachgetragen sind alle drei offenen Stuecke auf einmal (sud, name, erbe) samt lauffaehiger Stummel, damit DER SUD und DAS ERBE nicht in dieselbe Wand laufen; ein 404 kostet sonst den naechsten Kritiker eine falsche Ruege. Geprueft: E1 und E4 laden mit 'keine Fehler auf der Seite'. Fuer die Builder bleibt index.html tabu - wer einen Platz braucht, meldet es, so wie hier geschehen. Fuer die Glaettung vorgemerkt: kern/ton.js haengt klang.css und klang.js zur Laufzeit selbst ein (die einzige Moeglichkeit, die DER KLANG hatte); auf feste Plaetze umstellen, ohne dass klang.js zweimal laedt. (16) ANGENOMMEN, Ruege des KLANG-Pruefers: hoerer.py wurde geaendert, waehrend er damit mass. Er hat es richtig vorgetragen - mit dem Vergleich, der den Verdacht ausraeumt (Prompt Zeichen fuer Zeichen identisch, Urteilslogik unveraendert). Ab jetzt: wer ein Messgeraet aendert, waehrend eine Runde damit misst, schreibt es in die Chronik BEVOR das Ergebnis eingetragen wird."
+  },
+  {
+   "zeit": "2026-08-01T16:34:49+00:00",
+   "text": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md."
   }
  ]
 }

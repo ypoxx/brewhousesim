@@ -812,15 +812,25 @@
      DAS RUFBAND — steht immer da, klein, links oben. Es traegt die eine
      Behauptung des Stuecks als Zahl: dasselbe Fass, zwei Preise.
      ------------------------------------------------------------------ */
-  function balken(name, wert, hoechstens, klasse) {
+  function balken(name, wert, hoechstens, klasse, ziel) {
     var z = B.el('div', 'nm-balken ' + (klasse || ''));
     z.appendChild(B.el('span', 'nm-bname', name));
     var schiene = B.el('div', 'nm-schiene');
     var voll = B.el('i');
     voll.style.width = B.grenze(wert / (hoechstens || 100) * 100, 0, 100) + '%';
     schiene.appendChild(voll);
+    /* Die Zielmarke macht sichtbar, dass Bekanntheit LANGSAM waechst: der
+       Strich steht schon da, der Balken braucht Wochen bis dorthin. */
+    if (ziel !== undefined && ziel !== null) {
+      var m = B.el('u', 'nm-ziel');
+      m.style.left = B.grenze(ziel / (hoechstens || 100) * 100, 0, 100) + '%';
+      m.title = 'Ziel dieser Traeger: ' + Math.round(ziel);
+      schiene.appendChild(m);
+    }
     z.appendChild(schiene);
-    z.appendChild(B.el('span', 'nm-bwert', B.zahl(Math.round(wert))));
+    z.appendChild(B.el('span', 'nm-bwert', B.zahl(Math.round(wert))
+      + (ziel !== undefined && Math.round(ziel) !== Math.round(wert)
+        ? (ziel > wert ? ' \u2197' : ' \u2198') : '')));
     return z;
   }
 
@@ -847,7 +857,7 @@
     if (Z.fest.verkauft) gross.appendChild(B.el('span', 'nm-warn', 'verkauft'));
     band.appendChild(gross);
 
-    band.appendChild(balken('Bekanntheit', Z.bekannt, e.deckel, 'nm-bekannt'));
+    band.appendChild(balken('Bekanntheit', Z.bekannt, e.deckel, 'nm-bekannt', zielBekannt()));
     band.appendChild(balken('Deckung', Z.deckung, 100, 'nm-deckung'));
 
     /* Die Behauptung des Stuecks, als Zahl auf dem Schirm. */
@@ -1288,6 +1298,8 @@
   B.ruf = {
     wert: function () { return ruf(); },
     bekannt: function () { return Math.round(Z.bekannt); },
+    ziel: zielBekannt,
+    ruhe: function () { return !!Z.ruhe; },
     deckung: function () { return Math.round(Z.deckung); },
     aufschlag: aufschlag,
     guete: guete,

@@ -328,7 +328,7 @@ var STADT_DATEN = {
       nutzen: { platz: 30 } },
 
     { schluessel: 'laderampe', name: 'Laderampe', bild: 'laderampe',
-      ort: 'rampe', dx: 7, dy: 1, breite: 14, von: 3, bis: 3, grund: 60,
+      ort: 'rampe', dx: 5, dy: 2, breite: 14, von: 3, bis: 3, grund: 60,
       sagt: 'Auf Wagenhöhe. Erst mit der Bahn lohnt sich, was hier verladen wird.',
       nutzen: {}, wirkt: 'Verladen auf Wagenhöhe' },
 

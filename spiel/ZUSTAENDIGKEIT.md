@@ -458,3 +458,45 @@ strenger statt milder (ein Abbruch gilt seither als *keine Messung* statt als Du
 **Trotzdem gilt ab jetzt:** Wer ein Messgerät ändert, während eine Runde damit misst,
 schreibt es in die Chronik, **bevor** das Ergebnis eingetragen wird — nicht danach. Sonst
 steht am Ende ein Urteil, dessen Zustandekommen niemand mehr nachvollziehen kann.
+
+## 16 — Die Glättung hat elf Nähte geschlossen, drei davon im Kern
+
+**Entschieden vom Glättungslauf am Ende von Welle 1.** Der vollständige Befund steht in
+[`STAND.md`](STAND.md); hier stehen nur die Eingriffe, damit niemand sie doppelt macht.
+
+**Im Kern, als Aufsichtsakt** (dieselbe Begründung wie §8, §9 und §12: es ist genau eine
+Stelle, und kein Stück darf sie anfassen):
+
+- `kern/welt.js` — neu `lager:` je Epoche (**Keller · Gewölbe · Eiskeller · Tanks**). Die
+  Kopfleiste nannte den Vorrat in allen vier Epochen „Keller" und zählte ihn in Fass, während
+  DIE FUHRE dasselbe Fass ab 1872 in Hektoliter zeigt: oben „KELLER 140/400", unten „DIE TANKS
+  210 von 600 hl". Dieselbe Menge, zwei Einheiten, zwei Namen.
+- `kern/kopf.js` — Vorrat jetzt über `B.welt.menge()`, den einen Formatierer des Kerns; dazu
+  „nächster Zug", „Schließen".
+- `kern/uhr.js`, `kern/orte.js` — Monatsnamen und fünf Ortsnamen mit Umlauten
+  („Jänner", „März", „Untere Brücke", „Die Mühle", „Landstraße", „Gärtanks").
+
+**In den Stücken** (jeweils in deren eigenen Dateien):
+
+- **DIE STADT** — ihr gesamter Anzeigetext war umlautfrei geschrieben, während die drei
+  anderen Stücke daneben korrektes Deutsch setzen. 48 Stellen in `stadt-daten.js` und
+  `stadt.js`; ausschließlich Anzeigetexte, kein `schluessel`, kein Bildpfad.
+- **DER PREIS** — `tafelSichtbar()` liest jetzt auch, ob DIE STADT die Tafel in ihren Rahmen
+  geklappt hat. Vorher stand beim Laden aller vier Epochen „Michaelitafel schließen" über
+  einem Bildschirm ohne Tafel. **Nebenwirkung:** die unsichtbar im DOM stehende Tafel hatte
+  `[data-zug="preis:tafel-zu"]` hinterlassen — DER GEGNER schloss daraus auf eine offene
+  Michaelitafel und hielt sein Dossier zu. Der als „toter Knopf" gemeldete Befund ist damit
+  erledigt, ohne dass jemand in `gegner.js` danach gesucht hätte.
+- **DER GEGNER** — Auflage aus §10 erfüllt: die Preisschilder melden sich mit `data-frei` von
+  der Kartenschicht ab und sind seither mit der Maus zu drücken (vorher in 1350 in 62 Wochen
+  kein einziges Mal). Stapelabstand 3,6 → 5,6 %, weil die Schilder jetzt dauernd stehen.
+  Dazu Escape schließt das Haus gegenüber — Pflaster bis zur Sperrschicht aus §2.
+- **DIE FUHRE** — „Wagen leeren" heißt jetzt je Epoche *Karren leeren · Wagen leeren · Rampe
+  räumen · Lastzug leeren*; „Fassplätze: 22 eigene" heißt „Fässer des Hauses", weil zwei
+  Zeilen darüber „4 von 12 Fass" steht.
+
+**Was die Glättung ausdrücklich NICHT getan hat:** die Eichung des Michaelitags (§13). Sie ist
+gemessen und sie ist nicht erfüllt — in E1 und E2 ist in den ersten drei Braujahren **kein
+einziges** der fünf Angebote und keine der Festlegungen je aktiv, in E3 und E4 nur die
+Festlegung mit dem Preisschild „ohne Ausgabe". Das ist kein Naht-, sondern ein Entwurfsfehler
+über drei Stücke hinweg und gehört an einen Tisch, nicht in eine Glättung.
