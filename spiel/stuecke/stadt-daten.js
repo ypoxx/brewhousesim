@@ -51,9 +51,18 @@ var STADT_DATEN = {
       platte: 'bild/platte-1970.jpg',
       sagt: 'Abfüllhalle, Stahltanks, Lastwagen. Von der Mauer steht ein Turm in einer '
           + 'Grünanlage. Der Schornstein von 1884 steht noch und raucht nicht mehr.',
+      /* Runde 5: der Eiskeller ist raus. Ein Eisschlitten mit gesaegten
+         Natureisbloecken neben einer Brauerei von 1970 ist derselbe Fehler
+         wie ein Emailschild in 1350, nur andersherum — Linde hat das 1876
+         erledigt. An seiner Stelle steht das Kesselhaus mit Oelfeuerung,
+         das den kalten Schornstein von 1884 erklaert. */
       stand: ['schornstein', 'abfuellhalle', 'stahltanks', 'kastenlager',
-              'eiskeller', 'verladedock'],
-      schild: { dx: 0.1, dy: -2.4, breite: 7.4, dreh: -4, hell: true }
+              'kesselhaus', 'verladedock'],
+      /* Und das Schild steht auf zwei Stahlrohren, weil in diesem Hof kein
+         Torbogen mehr ist, an dem es haengen koennte: 'gestell' ist die
+         Hoehe der Rohre in Prozent der Buehnenhoehe, der FUSS sitzt dann auf
+         dem Ort. Siehe zeichneHausschild() in stadt.js. */
+      schild: { dx: -1.8, dy: 4.1, breite: 7.4, dreh: -2, hell: true, gestell: 3.4 }
     }
   },
 
@@ -193,9 +202,17 @@ var STADT_DATEN = {
        6.6. Die Brauerin misst damit rund 62 px neben den zwei Gehern der
        Platte 1600, die bei Fuss y=915 58 und 62 px hoch sind — sie steht
        naeher und ist gleich gross, also eher zu klein als zu gross. */
+    /* Runde 5: der Kritiker hat in 1600 nachgemessen, und zwar am Bildschirm.
+       Die zwei Geher auf der leeren Platte sind 53 und 54 px hoch bei Fuss
+       y=910, der Reiter auf der Gasse 110 px bei Huf y=1082; daraus 31 px je
+       Meter oben und 47 px je Meter unten, linear auf y=1044 interpoliert
+       43,5 px je Meter, also 74 px fuer einen Menschen. Gemessen hat er an
+       der Pfanne 57 px — 77 Prozent davon. Der Faktor ist 74/57 = 1,30, und
+       weil eine Figur weiter hinten eher zu klein als zu gross sein soll,
+       steht hier 8,9 statt 9,1: das sind 72 px erwartete 74. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
       ort: 'kesselstelle', dx: -9, dy: 5,
-      breite: 8.9, breiten: { 1: 8.9, 2: 7 },
+      breite: 8.9, breiten: { 1: 8.9, 2: 8.9 },
       versatz: { 2: { dx: 7, dy: 0.5 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne über offenem Feuer, daneben Maischbottich und '
