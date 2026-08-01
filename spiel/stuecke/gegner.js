@@ -268,9 +268,9 @@
     };
     if (!erste) {
       merkeZug(h, 'erbe',
-        h.erbe.name + ' uebernimmt ' + nameVon(h) + '. Man sagt: ' + w.sagt,
+        h.erbe.name + ' übernimmt ' + nameVon(h) + '. Man sagt: ' + w.sagt,
         sitzVon(h).ort, null);
-      B.welt.schreibe('Gegenueber uebernimmt ' + h.erbe.name + ' — ' + w.sagt, 'gegner');
+      B.welt.schreibe('Gegenüber übernimmt ' + h.erbe.name + ' — ' + w.sagt, 'gegner');
     }
     return h.erbe;
   }
@@ -485,7 +485,7 @@
         var andere = haeuserJetzt().filter(function (x) { return x.k !== h.k; });
         for (var i = 0; i < andere.length && !weg; i++) weg = machePlatz(andere[i], a.schluessel);
       }
-      if (weg) text += ' Dafuer wird ' + weg.name + ' fallengelassen — die Adresse ist frei.';
+      if (weg) text += ' Dafür wird ' + weg.name + ' fallengelassen — die Adresse ist frei.';
     }
     h.kasse -= Math.round(g * 0.18);
     B.welt.binde(a.schluessel, h.k, m.womit, jahr() + m.jahre);
@@ -497,7 +497,7 @@
     if (vorher === 'haus') {
       B.welt.schreibe(a.name + ' geht an ' + nameVon(h) + '. '
         + 'Gebunden mit ' + m.womit + ' bis ' + (jahr() + m.jahre)
-        + '. Abloesen kostet ' + B.welt.geld(abloese(a.schluessel)) + '.', 'gegner');
+        + '. Ablösen kostet ' + B.welt.geld(abloese(a.schluessel)) + '.', 'gegner');
     }
     return true;
   }
@@ -543,7 +543,7 @@
     Z.wechsel[a.schluessel] = { takt: takt(), an: h.k, von: h.k, mehr: mehr };
     merkeZug(h, 'aufstocken',
       (zug.text || '').replace('{haus}', a.name).replace('{geld}', B.welt.geld(mehr))
-      + ' Abloesen kostet jetzt ' + B.welt.geld(abloese(a.schluessel)) + '.',
+      + ' Ablösen kostet jetzt ' + B.welt.geld(abloese(a.schluessel)) + '.',
       a.ort, a.schluessel);
     return true;
   }
@@ -558,7 +558,7 @@
     h.kasse -= b.preis;
     h.bauten.push(b.k);
     merkeZug(h, 'bauen',
-      nameVon(h) + ' baut auf dem eigenen Hof: ' + b.name + ' fuer ' + B.welt.geld(b.preis) + '.',
+      nameVon(h) + ' baut auf dem eigenen Hof: ' + b.name + ' für ' + B.welt.geld(b.preis) + '.',
       sitzVon(h).ort, null);
     return true;
   }
@@ -665,10 +665,10 @@
       }).length * 90000));
     Z.angebot = { jahr: jahr(), summe: wert, wer: h.k };
     merkeZug(h, 'angebot',
-      zug.text + ' Sie bietet ' + B.welt.geld(wert) + ' fuer ein Viertel des Hauses.',
+      zug.text + ' Sie bietet ' + B.welt.geld(wert) + ' für ein Viertel des Hauses.',
       sitzVon(h).ort, null);
     B.welt.schreibe('Die Nordstern-Gruppe bietet ' + B.welt.geld(wert)
-      + ' fuer ein Viertel des Hauses. Die Antwort wird nicht zurueckgenommen.', 'gegner');
+      + ' für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen.', 'gegner');
     return true;
   }
 
@@ -744,7 +744,7 @@
     }
     /* Wenn gar nichts geht, dann wenigstens der Wagen — aber der hat seine
        eigene Sperre und faehrt nicht jede Woche. */
-    if (zugFuhre(h, { text: 'Ein grauer Wagen des Hauses gegenueber faehrt zum {haus}.' })) {
+    if (zugFuhre(h, { text: 'Ein grauer Wagen des Hauses gegenüber fährt zum {haus}.' })) {
       h.letzterZug = Z.takt;
       return true;
     }
@@ -851,7 +851,7 @@
     /* 6. Der Anteil der Gruppe will jedes Jahr bedient werden. */
     if (Z.wirkung.anteil) {
       var ab = Math.round(Math.max(0, B.welt.haus.kasse) * 0.05);
-      if (ab > 0) B.welt.zahle(ab, 'Gewinnabfuehrung an die Nordstern-Gruppe (ein Viertel)', 'gegner');
+      if (ab > 0) B.welt.zahle(ab, 'Gewinnabführung an die Nordstern-Gruppe (ein Viertel)', 'gegner');
     }
   }
 
@@ -886,7 +886,7 @@
     imAbzug = true;
     B.wage('gegner.abschlag', function () {
       B.welt.zahle(teil, 'Preisabschlag beim ' + (a ? a.name : p.adresse)
-        + ' — ' + nameVon(h) + ' haelt die Adresse'
+        + ' — ' + nameVon(h) + ' hält die Adresse'
         + (preisdruck() > 1.02 ? ' und schenkt unter dem Satz aus' : ''), 'gegner');
     });
     imAbzug = false;
@@ -934,14 +934,14 @@
     if (gelingt && ziel.art === 'werbung') {
       delete Z.werbung[ziel.k];
       Z.schutz[ziel.k] = jahr() + 2;
-      satz = a.name + ': die Werbung ist vom Tisch. Zwei Jahre ruehrt er die Adresse nicht an.';
+      satz = a.name + ': die Werbung ist vom Tisch. Zwei Jahre rührt er die Adresse nicht an.';
     } else if (gelingt) {
       var b = Z.bindung[ziel.k];
       b.bis = Math.max(jahr() + 1, b.bis - 2);
       b.nachlass = Math.min(0.5, (b.nachlass || 0) + 0.25);
       if (a.bindung) a.bindung.bis = b.bis;
       satz = bs.gelingt.replace('{haus}', a.name)
-        + ' Abloesen kostet jetzt ' + B.welt.geld(abloese(ziel.k)) + ' statt vorher mehr.';
+        + ' Ablösen kostet jetzt ' + B.welt.geld(abloese(ziel.k)) + ' statt vorher mehr.';
     } else {
       satz = bs.misslingt;
     }
@@ -952,7 +952,7 @@
       + (gelingt ? ' — durchgedrungen' : ' — abgewiesen'), preis: 0, adresse: ziel.k });
     B.welt.schreibe(bs.name + ': ' + satz + ' Es hat keinen '
       + B.welt.waehrung().name + ' gekostet, aber vier Ansehen — und der Adler '
-      + 'weiss jetzt, von wem.', 'gegner');
+      + 'weiß jetzt, von wem.', 'gegner');
     B.ton.spiele('gegner:klage', { ort: a.ort });
     Z.beschwerdeAusgang = { jahr: jahr(), gelingt: gelingt, satz: satz, wo: a.name };
     Z.meldung = bs.name + ': ' + satz;
@@ -985,7 +985,7 @@
       if (h.bauten.length) {
         var k = h.bauten.pop(), name = k;
         ep().bauten.forEach(function (b) { if (b.k === k) { name = b.name; h.kasse += Math.round(b.preis * 0.5); } });
-        merkeZug(h, 'not', nameVon(h) + ' verpfaendet ' + name + '. Der Hof wird kleiner.',
+        merkeZug(h, 'not', nameVon(h) + ' verpfändet ' + name + '. Der Hof wird kleiner.',
           sitzVon(h).ort, null);
       }
       return;
@@ -1000,11 +1000,11 @@
         Z.wechsel[a.schluessel] = { takt: takt(), an: 'konzern', von: 'adler' };
       });
       h.weg = true;
-      merkeZug(kon, 'schluckt', 'Die Nordstern-Gruppe uebernimmt ' + nameVon(h)
+      merkeZug(kon, 'schluckt', 'Die Nordstern-Gruppe übernimmt ' + nameVon(h)
         + '. Der Name bleibt auf dem Etikett, die Entscheidung nicht im Haus.',
         sitzVon(kon).ort, null);
-      B.welt.schreibe('Das Haus gegenueber ist gefallen: ' + nameVon(h)
-        + ' gehoert der Nordstern-Gruppe. Alle seine Adressen mit.', 'gegner');
+      B.welt.schreibe('Das Haus gegenüber ist gefallen: ' + nameVon(h)
+        + ' gehört der Nordstern-Gruppe. Alle seine Adressen mit.', 'gegner');
     } else {
       seine(h).forEach(function (a) {
         B.welt.binde(a.schluessel, null);
@@ -1012,10 +1012,10 @@
         Z.wechsel[a.schluessel] = { takt: takt(), an: null, von: h.k };
       });
       h.weg = true;
-      merkeZug(h, 'ende', nameVon(h) + ' gibt auf. Der Hof gegenueber steht leer, '
+      merkeZug(h, 'ende', nameVon(h) + ' gibt auf. Der Hof gegenüber steht leer, '
         + 'die Adressen sind frei.', sitzVon(h).ort, null);
       B.welt.schreibe(nameVon(h) + ' gibt auf. Zum ersten Mal seit ' + h.erbe.seit
-        + ' braut gegenueber niemand.', 'gegner');
+        + ' braut gegenüber niemand.', 'gegner');
     }
   }
 
@@ -1028,7 +1028,7 @@
     if (!w || !a) return;
     if (!B.welt.zahle(w.preis, 'Zuvorkommen beim ' + a.name, 'spieler')) {
       Z.meldung = 'Zuvorkommen beim ' + a.name + ' kostet ' + B.welt.geld(w.preis)
-        + '. Die Kasse haelt ' + B.welt.geld(B.welt.haus.kasse) + '.';
+        + '. Die Kasse hält ' + B.welt.geld(B.welt.haus.kasse) + '.';
       return neuZeichnen('gegner-knapp');
     }
     var m = mittelVon(w.mittel);
@@ -1039,7 +1039,7 @@
     B.welt.schreibe('Das Haus kommt dem Adler zuvor: ' + a.name + ' wird mit '
       + m.womit + ' gebunden, bis ' + (jahr() + m.jahre) + '.', 'gegner');
     B.ton.spiele('gegner:zuvorkommen', { ort: a.ort });
-    Z.meldung = a.name + ': zuvorgekommen. Drei Jahre lang ruehrt er die Adresse nicht an.';
+    Z.meldung = a.name + ': zuvorgekommen. Drei Jahre lang rührt er die Adresse nicht an.';
     neuZeichnen('gegner-zuvor');
   }
 
@@ -1051,8 +1051,8 @@
       Z.meldung = mittelVon(b.mittel).loest;
       return neuZeichnen('gegner-fest');
     }
-    if (!B.welt.zahle(summe, 'Abloesung der Bindung am ' + a.name, 'spieler')) {
-      Z.meldung = 'Die Abloesung am ' + a.name + ' kostet ' + B.welt.geld(summe)
+    if (!B.welt.zahle(summe, 'Ablösung der Bindung am ' + a.name, 'spieler')) {
+      Z.meldung = 'Die Ablösung am ' + a.name + ' kostet ' + B.welt.geld(summe)
         + '. In der Kasse liegen ' + B.welt.geld(B.welt.haus.kasse) + '.';
       return neuZeichnen('gegner-knapp');
     }
@@ -1063,10 +1063,10 @@
     B.welt.binde(k, 'haus', m.womit, jahr() + m.jahre);
     Z.schutz[k] = jahr() + 4;
     Z.wechsel[k] = { takt: takt(), an: 'haus', von: b.wer };
-    B.welt.schreibe(a.name + ' wird abgeloest: ' + B.welt.geld(summe) + ' in der Waehrung '
+    B.welt.schreibe(a.name + ' wird abgelöst: ' + B.welt.geld(summe) + ' in der Währung '
       + 'dieser Zeit — ' + m.name + '. Vier Jahre lang kommt er nicht wieder.', 'gegner');
     B.ton.spiele('gegner:abloesen', { ort: a.ort });
-    Z.meldung = a.name + ' gehoert jetzt dem Haus. ' + B.welt.geld(summe) + ' dafuer.';
+    Z.meldung = a.name + ' gehört jetzt dem Haus. ' + B.welt.geld(summe) + ' dafür.';
     neuZeichnen('gegner-abloese');
   }
 
@@ -1091,11 +1091,11 @@
     if (!Z.angebot) return;
     B.welt.nimm(Z.angebot.summe, 'Nordstern-Gruppe: ein Viertel des Hauses', 'gegner');
     Z.wirkung.anteil = true;
-    B.welt.schreibe('Das Haus verkauft ein Viertel an die Nordstern-Gruppe fuer '
+    B.welt.schreibe('Das Haus verkauft ein Viertel an die Nordstern-Gruppe für '
       + B.welt.geld(Z.angebot.summe) + '. Von heute an redet die Gruppe mit. '
-      + 'Das wird nicht zurueckgenommen.', 'festlegung');
+      + 'Das wird nicht zurückgenommen.', 'festlegung');
     Z.angebot = null;
-    Z.meldung = 'Angenommen. Die Gruppe haelt ein Viertel und fuehrt jedes Jahr Gewinn ab.';
+    Z.meldung = 'Angenommen. Die Gruppe hält ein Viertel und führt jedes Jahr Gewinn ab.';
     neuZeichnen('gegner-anteil');
   }
 
@@ -1117,7 +1117,7 @@
     }
     B.welt.schreibe('Das Haus lehnt das Angebot der Nordstern-Gruppe ab. '
       + 'Am selben Tag verliert es ' + n + ' Adressen an die Gruppe. '
-      + 'Das wird nicht zurueckgenommen.', 'festlegung');
+      + 'Das wird nicht zurückgenommen.', 'festlegung');
     Z.meldung = 'Abgelehnt. ' + n + ' Adressen sind noch am selben Tag weg.';
     neuZeichnen('gegner-abgelehnt');
   }
@@ -1135,8 +1135,8 @@
   function schalteBlatt(wer) {
     if (tafelOben()) {
       Z.offen = false;
-      Z.meldung = 'Solange die Michaelitafel oben liegt, bleibt das Haus gegenueber zu. '
-        + 'Erst die Tafel schliessen.';
+      Z.meldung = 'Solange die Michaelitafel oben liegt, bleibt das Haus gegenüber zu. '
+        + 'Erst die Tafel schließen.';
       return neuZeichnen('gegner-gesperrt');
     }
     if (Z.offen && (!wer || Z.seite === wer)) { Z.offen = false; }
@@ -1158,7 +1158,7 @@
     Object.keys(Z.bindung).forEach(function (k) {
       var a = adresse(k), p = abloese(k);
       if (!a || p === null) return;
-      if (!bester || p < bester.preis) bester = { was: 'Abloesung ' + a.name, preis: p };
+      if (!bester || p < bester.preis) bester = { was: 'Ablösung ' + a.name, preis: p };
     });
     if (bester) B.welt.meldeZug(bester.was, bester.preis);
   }
@@ -1218,7 +1218,7 @@
       + (h.stufe >= 1 ? ' klamm' : '');
     k.setAttribute('data-zug', 'gegner:oeffnen:' + h.k);
     k.title = nameVon(h) + ' — ' + s.sagt + '. ' + h.erbe.name + ', ' + h.erbe.wesenName
-      + '. Anklicken: das ganze Haus gegenueber.';
+      + '. Anklicken: das ganze Haus gegenüber.';
     k.addEventListener('click', function (ereignis) {
       ereignis.preventDefault();
       B.ton.spiele('gegner:hinsehen', { ort: s.ort });
@@ -1230,12 +1230,12 @@
     var t = B.el('div', 'gg-sitztext');
     t.appendChild(B.el('div', 'gg-name', nameVon(h)));
     t.appendChild(B.el('div', 'gg-erbe', h.erbe.name + ' · ' + h.erbe.wesenName
-      + ' · haelt ' + seine(h).length + (seine(h).length === 1 ? ' Haus' : ' Haeuser')));
+      + ' · hält ' + seine(h).length + (seine(h).length === 1 ? ' Haus' : ' Häuser')));
     kopf.appendChild(t);
     k.appendChild(kopf);
 
     var z = B.el('div', 'gg-zahlen');
-    z.appendChild(zahlfeld('Zuege', String(h.zuege)));
+    z.appendChild(zahlfeld('Züge', String(h.zuege)));
     z.appendChild(zahlfeld('Kasse', B.welt.geld(Math.round(h.kasse / 10) * 10)));
     if (h.k === 'adler') {
       z.appendChild(zahlfeld('sein Preis', B.welt.geld(h.preis)));
@@ -1246,7 +1246,7 @@
 
     var marken = B.el('div', 'gg-marken');
     Object.keys(h.marken).forEach(function (mk) {
-      var namen = { ratssitz: 'Sitz im Rat', buergermeister: 'Buergermeister',
+      var namen = { ratssitz: 'Sitz im Rat', buergermeister: 'Bürgermeister',
                     emailschild: 'Emailschild', fernsehen: 'Fernsehwerbung' };
       marken.appendChild(B.el('span', 'gg-siegel', namen[mk] || mk));
     });
@@ -1297,7 +1297,7 @@
       var stand = b ? eigenerStand(b.spiegel) : 'fehlt';
       var i = B.el('span', 'gg-bau' + (stand === 'hat' ? '' : ' vor'));
       i.appendChild(svg(glyph(b ? b.glyph : 'kammer')));
-      i.title = (b ? b.name : bk) + ' — steht auf dem Hof gegenueber.'
+      i.title = (b ? b.name : bk) + ' — steht auf dem Hof gegenüber.'
         + (b && b.nutzen ? ' ' + b.nutzen : '')
         + (stand === 'hat' ? ' Das Haus hat es auch.'
            : stand === 'offen' ? ' Im eigenen Hof noch nicht gebaut.'
@@ -1310,9 +1310,9 @@
       if (vor > 0) {
         var v = B.el('div', 'gg-vorschild',
           'Vorsprung: ' + vor + (vor === 1 ? ' Ding' : ' Dinge') + ' · wirbt '
-          + vor + (vor === 1 ? ' Woche' : ' Wochen') + ' kuerzer');
-        v.title = 'Technik, die er frueher hat als das Haus. Jedes Ding kuerzt seine '
-          + 'Werbung um eine Woche — er ist an der Tuer, ehe man ihn kommen sieht.';
+          + vor + (vor === 1 ? ' Woche' : ' Wochen') + ' kürzer');
+        v.title = 'Technik, die er früher hat als das Haus. Jedes Ding kürzt seine '
+          + 'Werbung um eine Woche — er ist an der Tür, ehe man ihn kommen sieht.';
         hof.appendChild(v);
       }
     }
@@ -1378,13 +1378,13 @@
            der Kritiker zaehlt Optionen mit Preis NEBENEINANDER, und die
            liegen hier: an vier Giebeln gleichzeitig, aus einer Kasse. */
         if (summe !== null) s.setAttribute('data-preis', String(-summe));
-        s.title = a.name + ' · ' + m.name + ' des ' + nameVon(h) + ', laeuft bis ' + b.bis
-          + '. ' + m.loest + (summe === null ? '' : ' Abloesung: ' + B.welt.geld(summe) + '.');
+        s.title = a.name + ' · ' + m.name + ' des ' + nameVon(h) + ', läuft bis ' + b.bis
+          + '. ' + m.loest + (summe === null ? '' : ' Ablösung: ' + B.welt.geld(summe) + '.');
         s.appendChild(svg(b.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
         var txt = B.el('span', 'gg-schildtext');
         txt.appendChild(B.el('b', null, (D.kurz[k] || k.slice(0, 3).toUpperCase()) + ' · ' + m.kurz));
         txt.appendChild(B.el('i', null, summe === null
-          ? 'nicht abloesbar' : 'abloesen ' + B.welt.geld(summe)));
+          ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe)));
         s.appendChild(txt);
         if (summe !== null && !B.welt.kann(summe)) s.classList.add('zuteuer');
         B.orte.setze(s, a.ort, { anker: 'unten', dy: hoch });
@@ -1418,8 +1418,8 @@
 
       if (frisch && !sichtbar(a)) return;
       if (frisch && wechsel.an === 'haus') {
-        var g = B.el('div', 'gg-gewonnen', 'zurueckgeholt — unser Haus');
-        g.title = a.name + ' ist wieder gebunden. Vier Jahre lang ruehrt er die Adresse nicht an.';
+        var g = B.el('div', 'gg-gewonnen', 'zurückgeholt — unser Haus');
+        g.title = a.name + ' ist wieder gebunden. Vier Jahre lang rührt er die Adresse nicht an.';
         B.orte.setze(g, a.ort, { anker: 'unten', dy: hoch });
         fach.appendChild(g);
       } else if (frisch && !wechsel.an) {
@@ -1445,7 +1445,7 @@
     el.appendChild(B.el('span', 'gg-wagenzettel', 'Adler → ' + w.text));
     el.style.left = B.rund(p.x, 3) + '%';
     el.style.top = B.rund(p.y, 3) + '%';
-    el.title = 'Ein grauer Wagen des Hauses gegenueber, unterwegs zum ' + w.text + '.';
+    el.title = 'Ein grauer Wagen des Hauses gegenüber, unterwegs zum ' + w.text + '.';
     fach.appendChild(el);
   }
 
@@ -1475,7 +1475,7 @@
     if (!l.length) {
       var e = ep().mittel.filter(function (m) { return !m.fest; });
       var a = offeneAdressen();
-      if (!a.length || !e.length) return 'Abloesung: noch nichts gebunden';
+      if (!a.length || !e.length) return 'Ablösung: noch nichts gebunden';
       var min = grundwert(a[0], e[0]), max = min;
       a.forEach(function (x) {
         e.forEach(function (m) {
@@ -1483,12 +1483,12 @@
           if (g < min) min = g; if (g > max) max = g;
         });
       });
-      return 'eine Bindung wuerde ' + B.welt.geld(min) + ' bis ' + B.welt.geld(max) + ' kosten';
+      return 'eine Bindung würde ' + B.welt.geld(min) + ' bis ' + B.welt.geld(max) + ' kosten';
     }
     l.sort(function (x, y) { return x - y; });
     return l.length === 1
-      ? 'Abloesung: ' + B.welt.geld(l[0])
-      : 'Abloesung ' + B.welt.geld(l[0]) + ' bis ' + B.welt.geld(l[l.length - 1]);
+      ? 'Ablösung: ' + B.welt.geld(l[0])
+      : 'Ablösung ' + B.welt.geld(l[0]) + ' bis ' + B.welt.geld(l[l.length - 1]);
   }
 
   /* --- das Laufband: OHNE DICH GESCHEHEN -------------------------------- */
@@ -1497,16 +1497,16 @@
     var kopf = B.el('div', 'gg-bandkopf');
     kopf.appendChild(B.el('span', 'gg-bandtitel', 'Ohne dich geschehen'));
     kopf.appendChild(B.el('span', 'gg-bandzahl',
-      Z.zaehler + (Z.zaehler === 1 ? ' Zug' : ' Zuege')));
+      Z.zaehler + (Z.zaehler === 1 ? ' Zug' : ' Züge')));
     if (Z.wocheZuege > 0) {
       var neu = B.el('span', 'gg-bandneu', 'diese Woche ' + Z.wocheZuege);
-      neu.title = 'So viele Zuege sind seit dem letzten Klick auf WEITER gefallen — '
-        + 'ohne Ankuendigung, ohne Rueckfrage.';
+      neu.title = 'So viele Züge sind seit dem letzten Klick auf WEITER gefallen — '
+        + 'ohne Ankündigung, ohne Rückfrage.';
       kopf.appendChild(neu);
     }
     kopf.appendChild(B.el('span', 'gg-bandluecke'));
     var auf = B.knopf({
-      text: Z.offen ? 'Das Haus gegenueber schliessen' : 'Das Haus gegenueber',
+      text: Z.offen ? 'Das Haus gegenüber schließen' : 'Das Haus gegenüber',
       zug: 'gegner:blatt',
       klasse: 'gg-klein',
       titel: 'Kasse, Erben, Hof und jede Bindung des Gegners — mit der Summe, die sie kostet.',
@@ -1540,7 +1540,7 @@
              ? (Z.beschwerdeAusgang.gelingt ? ' — durchgedrungen' : ' — abgewiesen') : '')));
       } else {
         bz.appendChild(B.el('span', 'gg-ohnegeld',
-          bs.name + ': erst, wenn er etwas haelt oder um etwas wirbt'));
+          bs.name + ': erst, wenn er etwas hält oder um etwas wirbt'));
       }
       band.appendChild(bz);
     }
@@ -1550,7 +1550,7 @@
     var l = Z.zuege.slice(0, 3);
     if (!l.length) {
       band.appendChild(B.el('div', 'gg-bandzeile leer',
-        'Gegenueber ist es still. Das bleibt nicht so.'));
+        'Gegenüber ist es still. Das bleibt nicht so.'));
     }
     l.forEach(function (e) {
       var z = B.el('div', 'gg-bandzeile' + (e.takt >= Z.takt - 1 ? ' neu' : ''));
@@ -1558,7 +1558,7 @@
       z.appendChild(B.el('span', 'was', e.text));
       z.appendChild(B.knopf({
         text: 'zeigen', zug: 'gegner:zeige:' + e.nr, klasse: 'gg-winzig',
-        titel: 'Zeigt im Bild, wo dieser Zug etwas veraendert hat.',
+        titel: 'Zeigt im Bild, wo dieser Zug etwas verändert hat.',
         tu: function () {
           Z.zeigt = (Z.zeigt === e.ort) ? null : e.ort;
           neuZeichnen('gegner-zeigen');
@@ -1603,7 +1603,7 @@
       }));
     });
     reiter.appendChild(B.knopf({
-      text: 'Schliessen', zug: 'gegner:blatt-zu', klasse: 'gg-klein',
+      text: 'Schließen', zug: 'gegner:blatt-zu', klasse: 'gg-klein',
       tu: function () { Z.offen = false; neuZeichnen('gegner-zu'); }
     }));
     kopf.appendChild(reiter);
@@ -1619,7 +1619,7 @@
     ep().mittel.forEach(function (m) {
       var mm = B.el('span', 'gg-mkarte' + (m.fest ? ' fest' : ''));
       mm.appendChild(B.el('b', null, m.name));
-      mm.appendChild(B.el('i', null, (m.fest ? 'nicht abloesbar, solange er das Amt hat · '
+      mm.appendChild(B.el('i', null, (m.fest ? 'nicht ablösbar, solange er das Amt hat · '
         : '') + B.welt.geld(Math.round(jeEinheit(m.satz) * 10)) + ' je 10 '
         + B.welt.mengeEinheit() + ' Jahresbedarf · ' + m.jahre + ' Jahre · '
         + Math.round((m.abschlag || 0.15) * 100) + ' vom Hundert Abschlag'));
@@ -1630,11 +1630,11 @@
 
     /* Was er haelt — nebeneinander, jedes mit Preisschild */
     var halten = B.el('div', 'gg-block');
-    halten.appendChild(B.el('h3', null, 'Was er haelt — und was es kostet, es zurueckzuholen'));
+    halten.appendChild(B.el('h3', null, 'Was er hält — und was es kostet, es zurückzuholen'));
     var reihe = B.el('div', 'gg-reihe');
     var seins = seine(h);
     if (!seins.length) reihe.appendChild(B.el('div', 'gg-leer',
-      'Zurzeit haelt er keine Adresse. Das ist der Augenblick, in dem man baut.'));
+      'Zurzeit hält er keine Adresse. Das ist der Augenblick, in dem man baut.'));
     seins.forEach(function (a) {
       var b = Z.bindung[a.schluessel];
       if (!b) return;
@@ -1642,14 +1642,14 @@
       var summe = abloese(a.schluessel);
       var kk = karte(a, 'halt');
       kk.appendChild(B.el('div', 'gg-kname', a.name));
-      kk.appendChild(B.el('div', 'gg-kzeile', m.name + ' · seit ' + b.seit + ' · laeuft bis ' + b.bis));
+      kk.appendChild(B.el('div', 'gg-kzeile', m.name + ' · seit ' + b.seit + ' · läuft bis ' + b.bis));
       if (ep().tilgung) {
         kk.appendChild(B.el('div', 'gg-kzeile',
           'Darlehen ' + B.welt.geld(b.grund + (b.zusatz || 0))
           + ' · getilgt seit ' + (jahr() - b.seit) + ' Jahren'));
       }
       kk.appendChild(B.el('div', 'gg-kzeile',
-        'Solange er haelt, bekommt das Haus dort ' + B.welt.geld(Math.round(jeEinheit(abschlagJeFass(a.schluessel))))
+        'Solange er hält, bekommt das Haus dort ' + B.welt.geld(Math.round(jeEinheit(abschlagJeFass(a.schluessel))))
         + ' weniger je ' + B.welt.mengeEinheit() + ' — bei jeder Fuhre, sofort.'
         + (Z.abschlagJe[a.schluessel]
             ? ' In diesem Braujahr bisher ' + B.welt.geld(Z.abschlagJe[a.schluessel]) + '.'
@@ -1660,12 +1660,12 @@
             : '')));
       kk.appendChild(B.el('div', 'gg-ksatz', m.loest));
       if (summe === null) {
-        kk.appendChild(B.el('div', 'gg-kfest', 'Nicht abloesbar. Erst muss das Amt weg.'));
+        kk.appendChild(B.el('div', 'gg-kfest', 'Nicht ablösbar. Erst muss das Amt weg.'));
       } else {
         kk.appendChild(B.knopf({
-          text: 'Abloesen', zug: 'gegner:abloesen-blatt:' + a.schluessel,
+          text: 'Ablösen', zug: 'gegner:abloesen-blatt:' + a.schluessel,
           preis: -summe, aus: !B.welt.kann(summe),
-          titel: m.loest + ' Danach ruehrt er die Adresse vier Jahre nicht an.',
+          titel: m.loest + ' Danach rührt er die Adresse vier Jahre nicht an.',
           tu: function () { loeseAb(a.schluessel); }
         }));
       }
@@ -1699,7 +1699,7 @@
       vb.appendChild(B.el('div', 'gg-vfolge', vor
         ? 'Sein Vorsprung: ' + vor + (vor === 1 ? ' Ding' : ' Dinge') + '. Darum braucht seine '
           + 'Werbung ' + vor + (vor === 1 ? ' Woche' : ' Wochen') + ' weniger, ehe eine Adresse '
-          + 'gebunden ist. Das ist keine Ankuendigung — es ist die Uhr am Wimpel.'
+          + 'gebunden ist. Das ist keine Ankündigung — es ist die Uhr am Wimpel.'
         : 'Kein Vorsprung: was auf seinem Hof steht, steht auch im eigenen. '
           + 'Seine Werbung braucht die volle Zeit.'));
       bl.appendChild(vb);
@@ -1736,7 +1736,7 @@
     var wirbt = Object.keys(Z.werbung);
     if (wirbt.length) {
       var wb = B.el('div', 'gg-block');
-      wb.appendChild(B.el('h3', null, 'Worum er gerade wirbt — die Uhr laeuft ohne dich'));
+      wb.appendChild(B.el('h3', null, 'Worum er gerade wirbt — die Uhr läuft ohne dich'));
       var wr = B.el('div', 'gg-reihe');
       wirbt.forEach(function (k) {
         var a = adresse(k); if (!a) return;
@@ -1747,7 +1747,7 @@
         kk.appendChild(B.el('div', 'gg-kzeile', 'Er will ' + m.name
           + ' · noch ' + Math.max(0, w.bis - Z.takt) + ' Wochen'));
         kk.appendChild(B.el('div', 'gg-ksatz',
-          'Laesst man die Wochen laufen, bindet er ohne weitere Frage. '
+          'Lässt man die Wochen laufen, bindet er ohne weitere Frage. '
           + 'Danach kostet es ' + B.welt.geld(grundwert(a, m)) + ' statt ' + B.welt.geld(w.preis) + '.'));
         kk.appendChild(B.knopf({
           text: 'Zuvorkommen', zug: 'gegner:zuvorkommen-blatt:' + k,
@@ -1765,16 +1765,16 @@
     if (Z.angebot) {
       var abl = B.el('div', 'gg-block gg-fest');
       abl.appendChild(B.el('h3', null,
-        'Die Nordstern-Gruppe fragt an — beide Antworten sind endgueltig'));
+        'Die Nordstern-Gruppe fragt an — beide Antworten sind endgültig'));
       var ab = B.el('div', 'gg-reihe');
       var k1 = karte(null, 'angebot');
       k1.appendChild(B.el('div', 'gg-kname', 'Das Angebot der Nordstern-Gruppe'));
       k1.appendChild(B.el('div', 'gg-ksatz', 'Sie bietet ' + B.welt.geld(Z.angebot.summe)
-        + ' fuer ein Viertel des Hauses. Angenommen springt die Kasse, und die Gruppe fuehrt '
-        + 'jedes Jahr ein Zwanzigstel ab und redet fuer immer mit.'));
+        + ' für ein Viertel des Hauses. Angenommen springt die Kasse, und die Gruppe führt '
+        + 'jedes Jahr ein Zwanzigstel ab und redet für immer mit.'));
       k1.appendChild(B.knopf({
         text: 'Annehmen', zug: 'gegner:angebot-ja', preis: Z.angebot.summe,
-        titel: 'Unwiderruflich. Das Haus gehoert danach nicht mehr ganz sich selbst.',
+        titel: 'Unwiderruflich. Das Haus gehört danach nicht mehr ganz sich selbst.',
         tu: angebotAnnehmen
       }));
       ab.appendChild(k1);
@@ -1796,7 +1796,7 @@
     var g = ep().gegenzug;
     var nr = B.welt.zeit.amtszeit.nr;
     var gb = B.el('div', 'gg-block gg-fest');
-    gb.appendChild(B.el('h3', null, 'Der Gegenzug — eine je Amtszeit, und er wird nicht zurueckgenommen'));
+    gb.appendChild(B.el('h3', null, 'Der Gegenzug — eine je Amtszeit, und er wird nicht zurückgenommen'));
     if (Z.gegenzugGetan[nr]) {
       gb.appendChild(B.el('div', 'gg-getan', g.name + ' — festgelegt in dieser Amtszeit. '
         + g.folge));
@@ -1811,7 +1811,7 @@
       gk.appendChild(B.knopf({
         text: 'Festlegen', zug: 'gegner:gegenzug', preis: -g.preis,
         aus: g.preis > 0 && !B.welt.kann(g.preis),
-        titel: 'Eine je Amtszeit. Sie aendert eine Regel fuer den Rest der Partie.',
+        titel: 'Eine je Amtszeit. Sie ändert eine Regel für den Rest der Partie.',
         tu: gegenzug
       }));
       gr.appendChild(gk);
@@ -1823,17 +1823,17 @@
     var lb = B.el('div', 'gg-block');
     lb.appendChild(B.el('h3', null, 'Sein Hof, seine Kasse, seine Lage'));
     var lz = B.el('div', 'gg-lage');
-    lz.appendChild(B.el('span', null, 'Kasse (was man hoert): '
+    lz.appendChild(B.el('span', null, 'Kasse (was man hört): '
       + B.welt.geld(Math.round(h.kasse / 10) * 10)));
     lz.appendChild(B.el('span', h.preis < bierpreis() ? 'warn' : null,
       'Sein Preis: ' + B.welt.geld(h.preis) + ' je ' + B.welt.mengeEinheit()
       + ' — der Satz: ' + B.welt.geld(bierpreis())
       + (h.preis < bierpreis()
-         ? ' · er unterbietet, und darum drueckt er den Abschlag um '
+         ? ' · er unterbietet, und darum drückt er den Abschlag um '
            + Math.round((preisdruck() - 1) * 100) + ' vom Hundert hoch'
          : '')));
     lz.appendChild(B.el('span', null, 'Adressen: ' + seins.length));
-    lz.appendChild(B.el('span', null, 'Zuege bisher: ' + h.zuege));
+    lz.appendChild(B.el('span', null, 'Züge bisher: ' + h.zuege));
     lz.appendChild(B.el('span', null, 'Lage: ' + (D.untergang[h.stufe] || D.untergang[0]).name));
     if (Z.abschlag) {
       lz.appendChild(B.el('span', 'warn', 'Sein Abschlag hat das Haus in diesem Braujahr '
@@ -1857,7 +1857,7 @@
     /* Alles, was ohne den Spieler geschah */
     var zb = B.el('div', 'gg-block');
     zb.appendChild(B.el('h3', null, 'Ohne dich geschehen — ' + Z.zaehler
-      + (Z.zaehler === 1 ? ' Zug, er hat' : ' Zuege, jeder hat') + ' einen Ort im Bild'));
+      + (Z.zaehler === 1 ? ' Zug, er hat' : ' Züge, jeder hat') + ' einen Ort im Bild'));
     var rolle = B.el('div', 'gg-rolle rolle');
     Z.zuege.slice(0, 40).forEach(function (e) {
       var z = B.el('div', 'gg-zzeile');
@@ -1909,8 +1909,8 @@
       });
       Z.beschwerdeJahr = 0;
       Z.bereit = true;
-      B.welt.schreibe('Gegenueber steht ' + nameVon(haus('adler')) + '. '
-        + haus('adler').erbe.name + ' fuehrt es. Gebunden wird in dieser Zeit mit '
+      B.welt.schreibe('Gegenüber steht ' + nameVon(haus('adler')) + '. '
+        + haus('adler').erbe.name + ' führt es. Gebunden wird in dieser Zeit mit '
         + ep().waehrung + '.', 'gegner');
       B.ton.melde('gegner:werben', { art: 'geraeusch', sagt: 'Fremder Karren im Hof' });
     },
@@ -1944,10 +1944,10 @@
       });
       var a = haus('adler');
       if (a && d.epoche === 3) {
-        B.welt.schreibe('Der Adler verlaesst die Stadt und baut jenseits des Flusses, '
+        B.welt.schreibe('Der Adler verlässt die Stadt und baut jenseits des Flusses, '
           + 'am Gleis. Am Markt bleibt das leere Stammhaus stehen.', 'gegner');
       }
-      B.welt.schreibe('Eine neue Waehrung der Bindung: ' + ep().waehrung + '. '
+      B.welt.schreibe('Eine neue Währung der Bindung: ' + ep().waehrung + '. '
         + ep().abloesesatz, 'gegner');
     },
 

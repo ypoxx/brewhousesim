@@ -51,9 +51,9 @@ var GEGNER_DATEN = {
         2: { ort: 'konkurrenz', dx: -2, dy: 6, hofDy: 6,
              sagt: 'jenseits des Flusses, jetzt aus Stein, mit einer Eisgrube am Hang' },
         3: { ort: 'konkurrenz', dx: -2, dy: 6, hofDy: 6,
-             sagt: 'jenseits des Flusses, am Gleis, mit einem Schornstein ueber dem Tal' },
+             sagt: 'jenseits des Flusses, am Gleis, mit einem Schornstein über dem Tal' },
         4: { ort: 'konkurrenz', dx: -2, dy: 6, hofDy: 6,
-             sagt: 'jenseits des Flusses, Tanks im Freien, eigene Ausfahrt zur Bundesstrasse' }
+             sagt: 'jenseits des Flusses, Tanks im Freien, eigene Ausfahrt zur Bundesstraße' }
       },
       /* Sein Ausschank in der Stadt — vor der Industrie holt er die Kundschaft
          am Markt ab, danach braucht er ihn nicht mehr. */
@@ -74,7 +74,7 @@ var GEGNER_DATEN = {
       kurz: 'NORD',
       farbe: 'konzern',
       kasse: { 4: 4200000 },
-      sitz: { 4: { ort: 'bahnhof', dx: -3, dy: 23, hofDy: 23, sagt: 'ein Buero am Bahnhof, drei Zimmer, kein Kessel' } },
+      sitz: { 4: { ort: 'bahnhof', dx: -3, dy: 23, hofDy: 23, sagt: 'ein Büro am Bahnhof, drei Zimmer, kein Kessel' } },
       vornamen: { 4: ['Reinhard', 'Ute', 'Klaus-Dieter', 'Renate'] },
       titel: { 4: '' },
       art: { 4: 'Gruppe' }
@@ -84,17 +84,17 @@ var GEGNER_DATEN = {
   /* Wesenszuege der Erben gegenueber. Sie verschieben die Zuggewichte —
      ein wagemutiger Feist bindet, ein sparsamer baut. */
   wesen: [
-    { k: 'streitbar', name: 'streitbar', sagt: 'Fuehrt Prozesse und gewinnt die meisten.',
+    { k: 'streitbar', name: 'streitbar', sagt: 'Führt Prozesse und gewinnt die meisten.',
       mehr: { entreissen: 2.2, macht: 1.8 }, weniger: { bauen: 0.6 } },
-    { k: 'sparsam', name: 'sparsam', sagt: 'Zaehlt jeden Pfennig zweimal.',
+    { k: 'sparsam', name: 'sparsam', sagt: 'Zählt jeden Pfennig zweimal.',
       mehr: { bauen: 1.6, preis: 0.6 }, weniger: { werben: 0.7, entreissen: 0.6 } },
-    { k: 'grosszuegig', name: 'grosszuegig', sagt: 'Laesst dem Wirt umsonst liefern, was er braucht.',
+    { k: 'grosszuegig', name: 'grosszuegig', sagt: 'Lässt dem Wirt umsonst liefern, was er braucht.',
       mehr: { werben: 2.0, preis: 1.6 }, weniger: { bauen: 0.7 } },
-    { k: 'gelehrt', name: 'gelehrt', sagt: 'Liest, was neu ist, und kauft es zwei Jahre zu frueh.',
+    { k: 'gelehrt', name: 'gelehrt', sagt: 'Liest, was neu ist, und kauft es zwei Jahre zu früh.',
       mehr: { bauen: 2.0 }, weniger: { entreissen: 0.7 } },
-    { k: 'traege', name: 'traege', sagt: 'Laesst laufen. Das ist die einzige Verschnaufpause.',
+    { k: 'traege', name: 'traege', sagt: 'Lässt laufen. Das ist die einzige Verschnaufpause.',
       mehr: {}, weniger: { werben: 0.5, entreissen: 0.5, bauen: 0.5, macht: 0.4 } },
-    { k: 'unnachgiebig', name: 'unnachgiebig', sagt: 'Vergisst nichts und loest nichts.',
+    { k: 'unnachgiebig', name: 'unnachgiebig', sagt: 'Vergisst nichts und löst nichts.',
       mehr: { entreissen: 1.6, aufstocken: 2.0 }, weniger: { verlieren: 0.5 } }
   ],
 
@@ -110,11 +110,11 @@ var GEGNER_DATEN = {
       waehrung: 'Recht und Gunst',
       mengenfaktor: 1,
       satz: 'Gebunden wird mit Recht und mit Gunst. Der Rat verleiht die Schankgerechtigkeit, '
-          + 'die Bannmeile sperrt die Meile, ein Ratssitz entscheidet, eine Gevatterschaft haelt laenger als ein Brief. '
+          + 'die Bannmeile sperrt die Meile, ein Ratssitz entscheidet, eine Gevatterschaft hält länger als ein Brief. '
           + 'Geld allein bindet hier niemanden.',
-      abloesesatz: 'Eine Abloesung ist ein Ratsentscheid: Schreibgeld an die Kanzlei, ein Gunstgeschenk an die Herren, '
-          + 'und der Wirt muss zustimmen. Was der Rat einmal verliehen hat, nimmt er nur gegen Gebuehr zurueck.',
-      werbesatz: 'Er stellt dem Wirt drei Fass umsonst vor die Tuer und laesst sie stehen.',
+      abloesesatz: 'Eine Ablösung ist ein Ratsentscheid: Schreibgeld an die Kanzlei, ein Gunstgeschenk an die Herren, '
+          + 'und der Wirt muss zustimmen. Was der Rat einmal verliehen hat, nimmt er nur gegen Gebühr zurück.',
+      werbesatz: 'Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen.',
       wochenWerbung: [3, 6],
       abschlagAnteil: 0.30,
       ertragJeFass: 3,
@@ -124,10 +124,10 @@ var GEGNER_DATEN = {
           loest: 'Der Rat schreibt die Konzession auf das Haus um. Schreibgeld und Gunstgeschenk.' },
         { k: 'bannmeile', name: 'Bannmeile', kurz: 'BAN', womit: 'Bannrecht', satz: 6, jahre: 6, abschlag: 0.19,
           bindet: 'Der Adler erwirkt den Bannbrief: in der Meile um {haus} schenkt nur sein Bier aus.',
-          loest: 'Der Bann wird zerschnitten — das kostet den Rat ein Siegel und dich ein Vermoegen.' },
+          loest: 'Der Bann wird zerschnitten — das kostet den Rat ein Siegel und dich ein Vermögen.' },
         { k: 'gevatterschaft', name: 'Gevatterschaft', kurz: 'GEV', womit: 'Gevatterschaft', satz: 3, jahre: 8, abschlag: 0.1,
-          bindet: 'Der Adler steht dem Wirt zum {haus} Gevatter. Das haelt laenger als ein Brief.',
-          loest: 'Du wirst selber Pate. Ein Taufmahl, ein Loeffel Silber, und der Wirt kommt herueber.' },
+          bindet: 'Der Adler steht dem Wirt zum {haus} Gevatter. Das hält länger als ein Brief.',
+          loest: 'Du wirst selber Pate. Ein Taufmahl, ein Löffel Silber, und der Wirt kommt herüber.' },
         { k: 'ratssitz', name: 'Ratsspruch', kurz: 'RAT', womit: 'Ratsspruch', satz: 12, jahre: 10, abschlag: 0.24, fest: true,
           bindet: 'Der Rat spricht {haus} dem Adler zu. Ein Feist sitzt selbst darin.',
           loest: 'Solange ein Feist im Rat sitzt, wird hier nichts umgeschrieben.' }
@@ -137,17 +137,17 @@ var GEGNER_DATEN = {
         preis: 900,
         sagt: 'Ein Stuhl im Rat der Stadt, auf Lebenszeit, mit Sitz und Stimme.',
         folge: 'Von heute an kann der Adler in dieser Stadt keine Konzession und keinen Ratsspruch mehr auf sich ziehen. '
-             + 'Was er haelt, haelt er weiter.',
+             + 'Was er hält, hält er weiter.',
         chronik: '{name} kauft den Ratsstuhl. Das Haus sitzt fortan selbst im Rat.'
       },
       beschwerde: {
         k: 'klage', name: 'Klage vor dem Stadtgericht',
         sagt: 'Der Wirt hat unter Zwang gesiegelt, und drei Nachbarn sagen es aus. '
-            + 'Ein Schreiber setzt es auf, das Haus traegt es selbst vor.',
-        preis: 'Kein Pfennig — aber vier Ansehen, und der Adler weiss, von wem.',
-        gelingt: 'Der Rat setzt die Bindung am {haus} um zwei Jahre herunter und schlaegt '
-               + 'ein Viertel von der Abloesung ab.',
-        misslingt: 'Der Rat vertagt. Der Adler laesst am Markt erzaehlen, wer geklagt hat.'
+            + 'Ein Schreiber setzt es auf, das Haus trägt es selbst vor.',
+        preis: 'Kein Pfennig — aber vier Ansehen, und der Adler weiß, von wem.',
+        gelingt: 'Der Rat setzt die Bindung am {haus} um zwei Jahre herunter und schlägt '
+               + 'ein Viertel von der Ablösung ab.',
+        misslingt: 'Der Rat vertagt. Der Adler lässt am Markt erzählen, wer geklagt hat.'
       },
       bauten: [
         { k: 'bottich', name: 'Zweiter Bottich', preis: 30, glyph: 'bottich', spiegel: 'gaerbottiche',
@@ -160,8 +160,8 @@ var GEGNER_DATEN = {
           nutzen: 'Zwei Karren an einem Tag: er steht vor dem Haus am Tor.' },
         { k: 'brunnen', name: 'Eigener Brunnen', preis: 38, glyph: 'brunnen', spiegel: 'brunnen',
           nutzen: 'Eigenes Wasser. Er zahlt der Stadt keinen Wasserzins.' },
-        { k: 'kufe', name: 'Grosse Kufe', preis: 34, glyph: 'bottich', spiegel: 'fasslager_holz',
-          nutzen: 'Ein Sud von ihm reicht fuer zwei Wirtshaeuser.' }
+        { k: 'kufe', name: 'Große Kufe', preis: 34, glyph: 'bottich', spiegel: 'fasslager_holz',
+          nutzen: 'Ein Sud von ihm reicht für zwei Wirtshäuser.' }
       ],
       wagenbild: 'wagen1',
       hofbild: 'hof1',
@@ -174,11 +174,11 @@ var GEGNER_DATEN = {
         { k: 'i-bierpfennig', art: 'preis', gewicht: 14, schritt: 1,
           text: 'Der Adler ruft am Markt aus: {geld} je {einheit}, einen Pfennig unter dem Satz.' },
         { k: 'i-karren', art: 'fuhre', gewicht: 7,
-          text: 'Ein grauer Karren des Adlers faehrt zum {haus}.' },
+          text: 'Ein grauer Karren des Adlers fährt zum {haus}.' },
         { k: 'i-ratssitz', art: 'macht', gewicht: 6, marke: 'ratssitz', jahre: 12,
-          text: 'Ein Feist wird in den Rat gewaehlt. Solange er darin sitzt, ist kein Ratsspruch abloesbar.' },
+          text: 'Ein Feist wird in den Rat gewählt. Solange er darin sitzt, ist kein Ratsspruch ablösbar.' },
         { k: 'i-verliert', art: 'verlieren', gewicht: 7,
-          text: 'Der Rat entzieht dem Adler die Konzession fuer {haus}. Der Wirt hat geklagt.' },
+          text: 'Der Rat entzieht dem Adler die Konzession für {haus}. Der Wirt hat geklagt.' },
         { k: 'i-grut', art: 'rohstoff', gewicht: 6, ort: 'hopfengarten',
           text: 'Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist.' },
         { k: 'i-brand', art: 'unglueck', gewicht: 4,
@@ -194,11 +194,11 @@ var GEGNER_DATEN = {
       waehrung: 'Recht und Gunst — durch Zunft und Pacht',
       mengenfaktor: 1,
       satz: 'Gebunden wird immer noch mit Recht und Gunst, aber die Instrumente sind andere. '
-          + 'Die Zunft schreibt zu, wer wen beliefert. Ein Wirtshaus wird nicht ueberredet, es wird gepachtet. '
+          + 'Die Zunft schreibt zu, wer wen beliefert. Ein Wirtshaus wird nicht überredet, es wird gepachtet. '
           + 'Und wer eine Tochter hat, verheiratet sie ins Haus, das er halten will.',
-      abloesesatz: 'Eine Abloesung geht ueber die Zunftlade: Einlage, Strafgeld, ein Fass an die Bruderschaft. '
-          + 'Eine Pacht muss abgekauft werden, eine Heirat kann man ueberhaupt nicht kaufen — nur ueberbieten.',
-      werbesatz: 'Er laesst dem Wirt das Dach richten und schickt keine Rechnung.',
+      abloesesatz: 'Eine Ablösung geht über die Zunftlade: Einlage, Strafgeld, ein Fass an die Bruderschaft. '
+          + 'Eine Pacht muss abgekauft werden, eine Heirat kann man überhaupt nicht kaufen — nur überbieten.',
+      werbesatz: 'Er lässt dem Wirt das Dach richten und schickt keine Rechnung.',
       wochenWerbung: [4, 8],
       abschlagAnteil: 0.30,
       ertragJeFass: 7,
@@ -207,45 +207,45 @@ var GEGNER_DATEN = {
           bindet: 'Die Zunft schreibt {haus} dem Adler zu, mit Brief und Siegel der Lade.',
           loest: 'Die Lade schreibt um: Einlage, Strafgeld und ein Fass an die Bruderschaft.' },
         { k: 'pacht', name: 'Pacht', kurz: 'PAC', womit: 'Pachtvertrag', satz: 14, jahre: 12, abschlag: 0.22,
-          bindet: 'Der Adler pachtet {haus} auf zwoelf Jahre. Der Wirt ist jetzt sein Wirt.',
+          bindet: 'Der Adler pachtet {haus} auf zwölf Jahre. Der Wirt ist jetzt sein Wirt.',
           loest: 'Die Pacht wird abgekauft — der Rest der Jahre, in einer Summe, bar.' },
         { k: 'heirat', name: 'Heirat', kurz: 'HEI', womit: 'Heirat', satz: 7, jahre: 14, abschlag: 0.1,
           bindet: 'Der Adler verheiratet seine Tochter an den Wirt zum {haus}.',
-          loest: 'Eine Mitgift gegen die andere. Man kauft keine Heirat — man ueberbietet sie.' },
-        { k: 'buergermeister', name: 'Buergermeisteramt', kurz: 'BGM', womit: 'Amtsgewalt', satz: 18, jahre: 8, abschlag: 0.26, fest: true,
-          bindet: 'Der Buergermeister schreibt {haus} dem Adler zu. Er heisst Feist.',
-          loest: 'Solange ein Feist das Amt fuehrt, wird hier nichts umgeschrieben.' }
+          loest: 'Eine Mitgift gegen die andere. Man kauft keine Heirat — man überbietet sie.' },
+        { k: 'buergermeister', name: 'Bürgermeisteramt', kurz: 'BGM', womit: 'Amtsgewalt', satz: 18, jahre: 8, abschlag: 0.26, fest: true,
+          bindet: 'Der Bürgermeister schreibt {haus} dem Adler zu. Er heißt Feist.',
+          loest: 'Solange ein Feist das Amt führt, wird hier nichts umgeschrieben.' }
       ],
       gegenzug: {
-        k: 'zunftlade', name: 'Die Zunftlade uebernehmen',
+        k: 'zunftlade', name: 'Die Zunftlade übernehmen',
         preis: 4200,
-        sagt: 'Das Amt des Zunftmeisters, der Schluessel zur Lade, das Recht auf den Brief.',
-        folge: 'Von heute an kostet jede Abloesung eines Zunftbriefs nur noch die Haelfte, und die Zunft '
+        sagt: 'Das Amt des Zunftmeisters, der Schlüssel zur Lade, das Recht auf den Brief.',
+        folge: 'Von heute an kostet jede Ablösung eines Zunftbriefs nur noch die Hälfte, und die Zunft '
              + 'schreibt dem Adler nichts mehr zu.',
-        chronik: '{name} wird Zunftmeister. Der Schluessel zur Lade liegt im Haus.'
+        chronik: '{name} wird Zunftmeister. Der Schlüssel zur Lade liegt im Haus.'
       },
       beschwerde: {
         k: 'anzeige', name: 'Anzeige bei der Zunftlade',
-        sagt: 'Das Haus laesst den Brief in der Lade oeffnen und den Eintrag verlesen. '
+        sagt: 'Das Haus lässt den Brief in der Lade oeffnen und den Eintrag verlesen. '
             + 'Wer zweimal schreibt, hat einmal falsch geschrieben.',
-        preis: 'Kein Gulden — aber vier Ansehen bei den Zunftbruedern, die es nicht gern hoeren.',
-        gelingt: 'Die Lade streicht zwei Jahre aus dem Eintrag am {haus} und laesst ein '
+        preis: 'Kein Gulden — aber vier Ansehen bei den Zunftbrüdern, die es nicht gern hören.',
+        gelingt: 'Die Lade streicht zwei Jahre aus dem Eintrag am {haus} und lässt ein '
                + 'Viertel der Ablage nach.',
-        misslingt: 'Die Lade laesst es auf sich beruhen. Der Zunftmeister isst beim Adler zu Abend.'
+        misslingt: 'Die Lade lässt es auf sich beruhen. Der Zunftmeister isst beim Adler zu Abend.'
       },
       bauten: [
-        { k: 'steinkeller', name: 'Gewoelbekeller', preis: 260, glyph: 'keller', spiegel: 'keller_gewoelbe',
-          nutzen: 'Sein Bier steht kuehl bis Jakobi. Das des Hauses nicht.' },
+        { k: 'steinkeller', name: 'Gewölbekeller', preis: 260, glyph: 'keller', spiegel: 'keller_gewoelbe',
+          nutzen: 'Sein Bier steht kühl bis Jakobi. Das des Hauses nicht.' },
         { k: 'eisgrube', name: 'Eisgrube', preis: 190, glyph: 'eis', spiegel: 'eiskeller',
-          nutzen: 'Er schneidet im Jaenner Eis und schenkt im August kaltes Bier aus.' },
+          nutzen: 'Er schneidet im Jänner Eis und schenkt im August kaltes Bier aus.' },
         { k: 'hopfenboden', name: 'Hopfenboden', preis: 150, glyph: 'kammer', spiegel: 'hopfenlager',
-          nutzen: 'Sein Hopfen ist im Maerz noch gruen, der zugekaufte ist braun.' },
-        { k: 'rossmuehle', name: 'Rossmuehle', preis: 220, glyph: 'muehle', spiegel: 'rossmuehle',
-          nutzen: 'Er schrotet im Hof und wartet an keinem Muehlwehr.' },
+          nutzen: 'Sein Hopfen ist im März noch grün, der zugekaufte ist braun.' },
+        { k: 'rossmuehle', name: 'Rossmühle', preis: 220, glyph: 'muehle', spiegel: 'rossmuehle',
+          nutzen: 'Er schrotet im Hof und wartet an keinem Mühlwehr.' },
         { k: 'kupferpfanne', name: 'Kupferne Pfanne', preis: 340, glyph: 'pfanne', spiegel: 'pfanne',
           nutzen: 'Kupfer statt Eisen. Sein Sud schmeckt nicht nach Kessel.' },
-        { k: 'kueferei', name: 'Eigene Kueferei', preis: 180, glyph: 'fass', spiegel: 'kueferei',
-          nutzen: 'Er bindet seine Faesser selbst und zahlt keinem Kuefer Lohn.' }
+        { k: 'kueferei', name: 'Eigene Küferei', preis: 180, glyph: 'fass', spiegel: 'kueferei',
+          nutzen: 'Er bindet seine Fässer selbst und zahlt keinem Küfer Lohn.' }
       ],
       wagenbild: 'wagen1',
       hofbild: 'hof2',
@@ -255,16 +255,16 @@ var GEGNER_DATEN = {
         { k: 'ii-zunftspruch', art: 'entreissen', gewicht: 15, mittel: 'zunftbrief',
           text: 'Die Zunft schreibt {haus} dem Adler zu. Das Haus war nicht in der Sitzung.' },
         { k: 'ii-pacht', art: 'entreissen', gewicht: 13, mittel: 'pacht',
-          text: 'Der Adler pachtet {haus} ueber den Kopf des Hauses hinweg. Zwoelf Jahre.' },
+          text: 'Der Adler pachtet {haus} über den Kopf des Hauses hinweg. Zwölf Jahre.' },
         { k: 'ii-bau', art: 'bauen', gewicht: 14 },
         { k: 'ii-mass', art: 'preis', gewicht: 11, schritt: 2,
           text: 'Der Adler schenkt aus zu {geld} je {einheit} und legt die Zeche drauf.' },
         { k: 'ii-fuhre', art: 'fuhre', gewicht: 7,
           text: 'Ein grauer Wagen des Adlers rollt zum {haus}.' },
         { k: 'ii-amt', art: 'macht', gewicht: 7, marke: 'buergermeister', jahre: 8,
-          text: 'Ein Feist wird Buergermeister. Solange er es ist, schreibt die Kanzlei fuer ihn.' },
+          text: 'Ein Feist wird Bürgermeister. Solange er es ist, schreibt die Kanzlei für ihn.' },
         { k: 'ii-verliert', art: 'verlieren', gewicht: 7,
-          text: 'Die Zunft ruegt den Adler wegen schlechten Suds. {haus} wird frei.' },
+          text: 'Die Zunft rügt den Adler wegen schlechten Suds. {haus} wird frei.' },
         { k: 'ii-hopfen', art: 'rohstoff', gewicht: 6, ort: 'hopfengarten',
           text: 'Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er reif ist.' },
         { k: 'ii-einquartierung', art: 'unglueck', gewicht: 5,
@@ -278,14 +278,14 @@ var GEGNER_DATEN = {
        zahlt die Abloesesumme — Restschuld plus Aufschlag.
        ------------------------------------------------------------------ */
     3: {
-      waehrung: 'Der Vertrag — Darlehen und Abloesesumme',
+      waehrung: 'Der Vertrag — Darlehen und Ablösesumme',
       mengenfaktor: 1.6,
       satz: 'Seit etwa 1860 bindet kein Recht mehr, sondern ein Vertrag. Die Brauerei leiht dem Wirt Geld '
-          + 'fuer Schankanlage, Dach und Schulden; dafuer nimmt er zwanzig Jahre lang nur ihr Bier. '
+          + 'für Schankanlage, Dach und Schulden; dafür nimmt er zwanzig Jahre lang nur ihr Bier. '
           + 'Das Darlehen steht im Grundbuch, nicht im Ratsprotokoll.',
-      abloesesatz: 'Eine Abloesung ist eine Zahl: die Restschuld des Darlehens plus zwoelf Hundertstel Aufschlag. '
+      abloesesatz: 'Eine Ablösung ist eine Zahl: die Restschuld des Darlehens plus zwölf Hundertstel Aufschlag. '
           + 'Sie sinkt mit jedem getilgten Jahr — und sie steigt, sooft der Adler dem Wirt neues Geld gibt.',
-      werbesatz: 'Er bietet dem Wirt ein Darlehen und laesst den Vertrag schon aufsetzen.',
+      werbesatz: 'Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen.',
       wochenWerbung: [3, 6],
       abschlagAnteil: 0.30,
       ertragJeFass: 22,
@@ -293,45 +293,45 @@ var GEGNER_DATEN = {
       tilgung: 0.08,
       mittel: [
         { k: 'vertrag', name: 'Bierlieferungsvertrag', kurz: 'VER', womit: 'Bierlieferungsvertrag', satz: 45, jahre: 10, abschlag: 0.15,
-          bindet: 'Der Adler schliesst mit {haus} einen Bierlieferungsvertrag: Darlehen {geld}, zehn Jahre.',
-          loest: 'Restschuld plus Aufschlag, bar an den Adler, und der Vertrag geht auf das Haus ueber.' },
+          bindet: 'Der Adler schließt mit {haus} einen Bierlieferungsvertrag: Darlehen {geld}, zehn Jahre.',
+          loest: 'Restschuld plus Aufschlag, bar an den Adler, und der Vertrag geht auf das Haus über.' },
         { k: 'depot', name: 'Depotvertrag', kurz: 'DEP', womit: 'Depotvertrag', satz: 70, jahre: 12, abschlag: 0.22,
-          bindet: 'Der Adler baut dem {haus} den Eiskeller und schreibt sich zwoelf Jahre hinein.',
-          loest: 'Der Keller gehoert dem Adler. Man kauft ihn heraus oder man laesst es.' },
+          bindet: 'Der Adler baut dem {haus} den Eiskeller und schreibt sich zwölf Jahre hinein.',
+          loest: 'Der Keller gehört dem Adler. Man kauft ihn heraus oder man lässt es.' },
         { k: 'hypothek', name: 'Hypothek', kurz: 'HYP', womit: 'Hypothek', satz: 110, jahre: 20, abschlag: 0.3,
-          bindet: 'Der Adler nimmt die erste Hypothek auf {haus}. Der Wirt schuldet ihm das Dach ueber dem Kopf.',
-          loest: 'Die Hypothek wird abgeloest, in einer Summe, beim Notar.' }
+          bindet: 'Der Adler nimmt die erste Hypothek auf {haus}. Der Wirt schuldet ihm das Dach über dem Kopf.',
+          loest: 'Die Hypothek wird abgelöst, in einer Summe, beim Notar.' }
       ],
       gegenzug: {
         k: 'bank', name: 'Das Bankhaus ins Boot holen',
         preis: 26000,
         sagt: 'Ein Kreditrahmen bei der Handelsbank, gegen erste Hypothek auf den eigenen Hof.',
-        folge: 'Von heute an kostet jede Abloesung nur noch zwei Drittel — die Bank streckt vor. '
-             + 'Der eigene Hof haftet dafuer, fuer immer.',
-        chronik: '{name} verpfaendet den eigenen Hof an die Handelsbank und bekommt dafuer die Vertragsmacht.'
+        folge: 'Von heute an kostet jede Ablösung nur noch zwei Drittel — die Bank streckt vor. '
+             + 'Der eigene Hof haftet dafür, für immer.',
+        chronik: '{name} verpfändet den eigenen Hof an die Handelsbank und bekommt dafür die Vertragsmacht.'
       },
       beschwerde: {
         k: 'nachrechnen', name: 'Dem Wirt die Restschuld nachrechnen',
         sagt: 'Das Haus schickt seinen Buchhalter zum Wirt und rechnet ihm den Vertrag '
             + 'nach — Zins, Tilgung, was der Adler wirklich noch zu fordern hat.',
         preis: 'Keine Mark — aber vier Ansehen. Man rechnet einem Wirt nicht ungestraft nach.',
-        gelingt: 'Zwei Jahre Tilgung waren falsch angeschrieben. Die Abloesung am {haus} '
-               + 'faellt um ein Viertel.',
-        misslingt: 'Der Notar bestaetigt jede Zahl. Der Adler laesst es in der Zeitung stehen.'
+        gelingt: 'Zwei Jahre Tilgung waren falsch angeschrieben. Die Ablösung am {haus} '
+               + 'fällt um ein Viertel.',
+        misslingt: 'Der Notar bestätigt jede Zahl. Der Adler lässt es in der Zeitung stehen.'
       },
       bauten: [
-        { k: 'eismaschine', name: 'Kaeltemaschine nach Linde', preis: 9000, glyph: 'maschine', abJahr: 1876,
-          spiegel: 'eiskeller', nutzen: 'Kaelte ohne Eis vom Weiher. Er braut den Sommer durch, wenn das Haus stillsteht.' },
+        { k: 'eismaschine', name: 'Kältemaschine nach Linde', preis: 9000, glyph: 'maschine', abJahr: 1876,
+          spiegel: 'eiskeller', nutzen: 'Kälte ohne Eis vom Weiher. Er braut den Sommer durch, wenn das Haus stillsteht.' },
         { k: 'dampfsud', name: 'Dampfsudwerk', preis: 7400, glyph: 'pfanne', spiegel: 'schornstein',
           nutzen: 'Dampf statt Feuer unter der Pfanne: vier Sude an einem Tag.' },
-        { k: 'flaschen', name: 'Flaschenfuellerei', preis: 5200, glyph: 'flasche', abJahr: 1875,
+        { k: 'flaschen', name: 'Flaschenfüllerei', preis: 5200, glyph: 'flasche', abJahr: 1875,
           spiegel: 'flaschenhalle', nutzen: 'Er verkauft ins Wohnzimmer, nicht nur in die Wirtsstube.' },
         { k: 'gleis', name: 'Eigenes Anschlussgleis', preis: 11000, glyph: 'gleis', abJahr: 1839,
           spiegel: 'laderampe', nutzen: 'Sein Bier steht am Morgen in der Nachbarstadt.' },
         { k: 'depothalle', name: 'Depot in der Neustadt', preis: 6300, glyph: 'halle', spiegel: 'kontor',
-          nutzen: 'Er haelt Vorrat in der Stadt und liefert nach, ehe der Wirt gemerkt hat, dass es fehlt.' },
+          nutzen: 'Er hält Vorrat in der Stadt und liefert nach, ehe der Wirt gemerkt hat, dass es fehlt.' },
         { k: 'malzturm', name: 'Malzturm', preis: 8100, glyph: 'turm', spiegel: 'maelzerei',
-          nutzen: 'Er maelzt selbst, das ganze Jahr, und kauft kein fremdes Malz.' },
+          nutzen: 'Er mälzt selbst, das ganze Jahr, und kauft kein fremdes Malz.' },
         { k: 'schornstein', name: 'Zweiter Schornstein', preis: 4200, glyph: 'turm', spiegel: 'maschinenhaus',
           nutzen: 'Ein zweiter Kessel unter Dampf. Man sieht es von der Stadtmauer aus.' }
       ],
@@ -343,20 +343,20 @@ var GEGNER_DATEN = {
       zuege: [
         { k: 'iii-werben', art: 'werben', gewicht: 22 },
         { k: 'iii-vertrag', art: 'entreissen', gewicht: 14, mittel: 'vertrag',
-          text: 'Der Adler loest beim {haus} die alte Bindung ab und legt einen Vertrag auf den Tisch.' },
+          text: 'Der Adler löst beim {haus} die alte Bindung ab und legt einen Vertrag auf den Tisch.' },
         { k: 'iii-aufstocken', art: 'aufstocken', gewicht: 22,
-          text: 'Der Adler stockt das Darlehen beim {haus} um {geld} auf. Die Abloesesumme steigt.' },
+          text: 'Der Adler stockt das Darlehen beim {haus} um {geld} auf. Die Ablösesumme steigt.' },
         { k: 'iii-bau', art: 'bauen', gewicht: 16 },
         { k: 'iii-preis', art: 'preis', gewicht: 11, schritt: 3,
           text: 'Der Adler senkt den Preis auf {geld} je {einheit}.' },
         { k: 'iii-waggon', art: 'fuhre', gewicht: 6, abJahr: 1839,
           text: 'Zwei Bierwagen des Adlers gehen per Bahn zum {haus}.' },
         { k: 'iii-email', art: 'macht', gewicht: 8, marke: 'emailschild', jahre: 20, abJahr: 1890,
-          text: 'Der Adler nagelt ein Emailschild an den Giebel. Es glaenzt bis zur naechsten Generation.' },
+          text: 'Der Adler nagelt ein Emailschild an den Giebel. Es glänzt bis zur nächsten Generation.' },
         { k: 'iii-verliert', art: 'verlieren', gewicht: 6,
-          text: 'Der Wirt zum {haus} loest sein Darlehen ab. Der Adler verliert die Adresse.' },
+          text: 'Der Wirt zum {haus} löst sein Darlehen ab. Der Adler verliert die Adresse.' },
         { k: 'iii-kessel', art: 'unglueck', gewicht: 5,
-          text: 'Kesselschaden beim Adler. Die Versicherung zahlt spaeter als der Kesselschmied rechnet.' }
+          text: 'Kesselschaden beim Adler. Die Versicherung zahlt später als der Kesselschmied rechnet.' }
       ]
     },
 
@@ -365,27 +365,27 @@ var GEGNER_DATEN = {
        gehoert dem Handel, und der Handel verkauft Meter.
        ------------------------------------------------------------------ */
     4: {
-      waehrung: 'Die Listung — Gebuehr, Konditionen, Auslistung',
+      waehrung: 'Die Listung — Gebühr, Konditionen, Auslistung',
       mengenfaktor: 3,
-      satz: 'Der Vertrag mit dem Wirt zaehlt noch, aber entschieden wird im Einkauf. Wer im Regal steht, '
-          + 'ist gelistet: Listungsgebuehr, Rabattstaffel, Werbekostenzuschuss, Jahresvereinbarung. '
+      satz: 'Der Vertrag mit dem Wirt zählt noch, aber entschieden wird im Einkauf. Wer im Regal steht, '
+          + 'ist gelistet: Listungsgebühr, Rabattstaffel, Werbekostenzuschuss, Jahresvereinbarung. '
           + 'Und wer nicht zahlt, wird ausgelistet — ohne Prozess, ohne Rat, per Telefon.',
-      abloesesatz: 'Eine Abloesung heisst hier: die Konditionen des anderen ueberbieten. Listungsgebuehr, '
+      abloesesatz: 'Eine Ablösung heißt hier: die Konditionen des anderen überbieten. Listungsgebühr, '
           + 'ein Jahr Werbekostenzuschuss im Voraus, und der Einkauf verlangt beides vor der ersten Palette.',
-      werbesatz: 'Er laedt den Einkaeufer zur Jahresgespraech-Reise und legt die Konditionen daneben.',
+      werbesatz: 'Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben.',
       wochenWerbung: [4, 8],
       abschlagAnteil: 0.30,
       ertragJeFass: 55,
       mittel: [
         { k: 'listung', name: 'Listung', kurz: 'LIS', womit: 'Listung', satz: 90, jahre: 3, abschlag: 0.13,
-          bindet: 'Der Adler kauft sich beim {haus} ins Regal: Listungsgebuehr {geld}.',
-          loest: 'Listungsgebuehr und ein Jahr Werbekostenzuschuss, im Voraus, an den Einkauf.' },
+          bindet: 'Der Adler kauft sich beim {haus} ins Regal: Listungsgebühr {geld}.',
+          loest: 'Listungsgebühr und ein Jahr Werbekostenzuschuss, im Voraus, an den Einkauf.' },
         { k: 'jahresvereinbarung', name: 'Jahresvereinbarung', kurz: 'JVB', womit: 'Jahresvereinbarung', satz: 150, jahre: 5, abschlag: 0.2,
           bindet: 'Der Adler unterschreibt beim {haus} die Jahresvereinbarung mit voller Rabattstaffel.',
-          loest: 'Die Vereinbarung laeuft. Wer sie bricht, zahlt sie aus.' },
+          loest: 'Die Vereinbarung läuft. Wer sie bricht, zahlt sie aus.' },
         { k: 'exklusiv', name: 'Exklusivvertrag', kurz: 'EXK', womit: 'Exklusivvertrag', satz: 260, jahre: 8, abschlag: 0.32,
           bindet: 'Der Adler bindet {haus} exklusiv — acht Jahre, kein fremdes Bier im Haus.',
-          loest: 'Exklusiv heisst exklusiv. Ausloesen kann man das nur mit sehr viel Geld.' }
+          loest: 'Exklusiv heißt exklusiv. Auslösen kann man das nur mit sehr viel Geld.' }
       ],
       gegenzug: {
         k: 'marke', name: 'Die Marke eintragen lassen',
@@ -393,8 +393,8 @@ var GEGNER_DATEN = {
         sagt: 'Wort- und Bildmarke beim Patentamt, ein eigener Ausschank mit dem Namen am Haus, '
             + 'und ein Anwalt, der beides verteidigt.',
         folge: 'Von heute an kostet jede Listung nur noch zwei Drittel, und wer das Haus auslistet, '
-             + 'muss es dem Verbraucher erklaeren. Eingetragen ist eingetragen.',
-        chronik: '{name} laesst die Marke eintragen. Der Name gehoert dem Haus, nicht dem Regal.'
+             + 'muss es dem Verbraucher erklären. Eingetragen ist eingetragen.',
+        chronik: '{name} lässt die Marke eintragen. Der Name gehört dem Haus, nicht dem Regal.'
       },
       beschwerde: {
         k: 'kartellamt', name: 'Anzeige beim Bundeskartellamt',
@@ -402,46 +402,46 @@ var GEGNER_DATEN = {
             + 'Konditionen, die kein Kleiner zahlen kann. Aktenzeichen und Wartezeit.',
         preis: 'Keine Mark — aber vier Ansehen. Der Einkauf mag keine Lieferanten mit Anwalt.',
         gelingt: 'Die Beschlussabteilung beanstandet die Bindung am {haus}: zwei Jahre '
-               + 'kuerzer, ein Viertel billiger abzuloesen.',
+               + 'kürzer, ein Viertel billiger abzulösen.',
         misslingt: 'Das Verfahren wird eingestellt. Der Einkauf hat es erfahren, ehe das Haus es erfuhr.'
       },
       bauten: [
         { k: 'drucktanks', name: 'Drucktanks im Freien', preis: 320000, glyph: 'tank', spiegel: 'stahltanks',
-          nutzen: 'Er gaert im Freien und braucht keinen Keller mehr dafuer.' },
+          nutzen: 'Er gärt im Freien und braucht keinen Keller mehr dafür.' },
         { k: 'dosenlinie', name: 'Dosenlinie', preis: 480000, glyph: 'halle', spiegel: 'abfuellhalle',
           nutzen: 'Die Dose steht dort im Regal, wo das Fass nie hinkommt.' },
         { k: 'keg', name: 'KEG-Reinigung', preis: 210000, glyph: 'maschine', spiegel: 'kastenlager',
-          nutzen: 'Sein Fass kommt sauber zurueck und geht am selben Tag wieder raus.' },
+          nutzen: 'Sein Fass kommt sauber zurück und geht am selben Tag wieder raus.' },
         { k: 'fuhrpark', name: 'Eigener Fuhrpark', preis: 260000, glyph: 'wagen', spiegel: 'verladedock',
-          nutzen: 'Er faehrt selbst und ist nicht auf eine fremde Spedition angewiesen.' },
+          nutzen: 'Er fährt selbst und ist nicht auf eine fremde Spedition angewiesen.' },
         { k: 'werbeabteilung', name: 'Werbeabteilung', preis: 140000, glyph: 'schild', spiegel: 'verwaltung',
           nutzen: 'Vier Leute, die den ganzen Tag nichts tun, als an seinen Namen zu denken.' },
         /* Ohne 'spiegel': eine Qualitaetsstelle gibt es im eigenen Hof nicht zu
            kaufen. Das ist keine Luecke in der Tabelle, das ist der Satz. */
-        { k: 'labor', name: 'Labor und Qualitaetsstelle', preis: 175000, glyph: 'turm',
-          nutzen: 'Jede Charge geprueft. Der Einkauf verlangt das Protokoll, und er hat es.' }
+        { k: 'labor', name: 'Labor und Qualitätsstelle', preis: 175000, glyph: 'turm',
+          nutzen: 'Jede Charge geprüft. Der Einkauf verlangt das Protokoll, und er hat es.' }
       ],
       wagenbild: 'wagen4',
       /* KEIN hofbild: 1970 stehen seine Tanks auf der Platte selbst. */
       hofsatz: 'Derselbe Fleck wie 1350. Heute Drucktanks im Freien, eine eigene '
-             + 'Ausfahrt zur Bundesstrasse und ein Name, den man aus dem Fernsehen kennt.',
+             + 'Ausfahrt zur Bundesstraße und ein Name, den man aus dem Fernsehen kennt.',
       zuege: [
         { k: 'iv-werben', art: 'werben', gewicht: 22 },
         { k: 'iv-auslisten', art: 'entreissen', gewicht: 20, mittel: 'listung',
           text: 'Der Einkauf des {haus} listet das Haus aus und nimmt den Adler ins Regal.' },
         { k: 'iv-wkz', art: 'aufstocken', gewicht: 14,
-          text: 'Der Adler erhoeht den Werbekostenzuschuss beim {haus} um {geld}.' },
+          text: 'Der Adler erhöht den Werbekostenzuschuss beim {haus} um {geld}.' },
         { k: 'iv-bau', art: 'bauen', gewicht: 13 },
         { k: 'iv-aktion', art: 'preis', gewicht: 16, schritt: 6,
           text: 'Aktionspreis beim Adler: {geld} je {einheit}, vier Wochen lang, in jedem Prospekt.' },
         { k: 'iv-lastzug', art: 'fuhre', gewicht: 6,
-          text: 'Ein grauer Lastzug des Adlers faehrt zum {haus}.' },
+          text: 'Ein grauer Lastzug des Adlers fährt zum {haus}.' },
         { k: 'iv-werbung', art: 'macht', gewicht: 9, marke: 'fernsehen', jahre: 6,
           text: 'Der Adler schaltet einen Werbespot im Abendprogramm. Man kennt den Namen jetzt auch dort, wo er nicht liefert.' },
         { k: 'iv-verliert', art: 'verlieren', gewicht: 6,
           text: 'Der Einkauf des {haus} wirft den Adler aus dem Regal. Zu viele Sorten, zu wenig Umschlag.' },
         { k: 'iv-rueckruf', art: 'unglueck', gewicht: 6,
-          text: 'Rueckruf beim Adler: eine Charge Pilsner mit Trubstoff, zwei Tage in der Zeitung.' }
+          text: 'Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwei Tage in der Zeitung.' }
       ],
       /* Der Konzern hat eine eigene, kuerzere Liste. Er braut nicht. */
       konzernzuege: [
@@ -451,11 +451,11 @@ var GEGNER_DATEN = {
         { k: 'iv-k-kondition', art: 'aufstocken', gewicht: 12,
           text: 'Die Gruppe legt beim {haus} {geld} auf die Jahreskonditionen.' },
         { k: 'iv-k-uebernahme', art: 'uebernahme', gewicht: 10,
-          text: 'Die Nordstern-Gruppe uebernimmt eine kleine Brauerei im Nachbartal.' },
+          text: 'Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal.' },
         { k: 'iv-k-verliert', art: 'verlieren', gewicht: 5,
           text: 'Das Kartellamt untersagt der Gruppe eine Bindung. {haus} wird frei.' },
         { k: 'iv-k-angebot', art: 'angebot', gewicht: 7,
-          text: 'Die Nordstern-Gruppe laesst anfragen, ob das Haus verkaeuflich sei.' }
+          text: 'Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei.' }
       ]
     }
   },
@@ -487,7 +487,7 @@ var GEGNER_DATEN = {
   untergang: [
     { k: 'gesund', name: 'steht gut' },
     { k: 'klamm', name: 'klamm', sagt: 'Die Kasse ist leer. Er verkauft eine Adresse.' },
-    { k: 'verpfaendet', name: 'verpfaendet', sagt: 'Er verpfaendet, was auf dem Hof steht.' },
+    { k: 'verpfaendet', name: 'verpfaendet', sagt: 'Er verpfändet, was auf dem Hof steht.' },
     { k: 'amende', name: 'am Ende', sagt: 'Er kann nicht mehr. Jetzt entscheidet ein anderer.' }
   ]
 };
