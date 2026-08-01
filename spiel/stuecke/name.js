@@ -168,6 +168,36 @@
     return t.reichweite || 0;
   }
 
+  /* ------------------------------------------------------------------
+     DER ETAT — die Knappheit von 1970, und nur von 1970.
+     1350 ist die Zeit knapp (drei Umtrunke je Amtszeit), 1600 die fremde
+     Tuer, 1884 das Jahresende. 1970 ist es der Etat: er traegt DREI Posten.
+     Wer den vierten will, stellt einen ein — der Knopf bleibt bezahlbar und
+     sagt vorher, welcher es waere. So stehen die Preisschilder nebeneinander
+     UND schliessen einander aus, statt grau zu werden.
+     ------------------------------------------------------------------ */
+  function etatPlaetze() { return epd().etat || 0; }
+
+  function etatBelegt() {
+    var n = 0;
+    traegerListe().forEach(function (t) {
+      if (t.art === 'jahr' && (Z.lauf[t.k] || 0) >= jahr()) n++;
+    });
+    return n;
+  }
+
+  function etatVoll() { return etatPlaetze() > 0 && etatBelegt() >= etatPlaetze(); }
+
+  /* Der Posten, der bei einem vollen Etat weichen wuerde: der schwaechste. */
+  function schwaechsterPosten() {
+    var k = null;
+    traegerListe().forEach(function (t) {
+      if (t.art !== 'jahr' || (Z.lauf[t.k] || 0) < jahr()) return;
+      if (!k || (t.reichweite || 0) < (k.reichweite || 0)) k = t;
+    });
+    return k;
+  }
+
   function zielBekannt() {
     var s = 0;
     traegerListe().forEach(function (t) { s += beitrag(t); });
@@ -626,6 +656,10 @@
   }
 
   function jahreslauf() {
+    B.wage('name.aufgeld', kassiereAufgeld);
+    Z.aufgeldJahrVorher = Z.aufgeldJahr;
+    Z.aufgeldJahr = 0;
+
     /* Was ein Jahr lief, laeuft aus. Nichts wird still verlaengert. */
     var abgelaufen = [];
     Object.keys(Z.lauf).forEach(function (k) {
@@ -648,6 +682,9 @@
     /* Das Medium wechselt — und mit ihm faellt die Bekanntheit zusammen.
        Das REGISTER bleibt: es ist das Gedaechtnis des Hauses. */
     var vorher = Math.round(Z.bekannt);
+    B.wage('name.aufgeld', kassiereAufgeld);
+    Z.aufgeldEpoche = 0;
+    Z.aufgeldWoche = 0;
     Z.bekannt = Math.round(Z.bekannt * 0.45);
     Z.zeiger = false;
     Z.schilder = {};
@@ -1362,8 +1399,23 @@
      9 — ANMELDUNG
      ====================================================================== */
 
+  var nachtrag = false;
+
   function zeichne() {
     if (!D) return;
+    /* Das Aufgeld wird faellig, sobald DIE FUHRE geliefert hat — also im
+       selben Augenblick, in dem der Spieler den Knopf drueckt, nicht erst
+       am Wochenende. Kommt dabei Geld herein, wird EINMAL nachgezeichnet,
+       damit die Kopfleiste nicht eine Handlung hinterherhinkt. */
+    var kam = 0;
+    B.wage('name.aufgeld', function () { kam = kassiereAufgeld(); });
+    if (kam > 0 && !nachtrag) {
+      nachtrag = true;
+      window.setTimeout(function () {
+        nachtrag = false;
+        B.sende('zeichne', { grund: 'name-aufgeld' });
+      }, 0);
+    }
     B.wage('name.platte', zeichnePlatte);
     B.wage('name.band', zeichneBand);
     B.wage('name.blatt', zeichneBlatt);
@@ -1383,6 +1435,8 @@
       Z.deckung = [55, 58, 60, 62][e - 1];
       Z.adlerRuf = [7, 12, 22, 34][e - 1];
       Z.kieserWoche = B.wuerfel.ganz(4, 14);
+      /* Was vor dem Start im Protokoll steht, gehoert nicht diesem Stueck. */
+      Z.buchStand = B.protokoll ? B.protokoll.length : 0;
 
       /* Was die Vorfahren hinterlassen haben. Es traegt genau EIN Braujahr:
          Ende des Jahres laeuft es aus und muss entschieden werden. */

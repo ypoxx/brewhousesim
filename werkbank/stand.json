@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T17:12:00+00:00",
+ "stand": "2026-08-01T17:23:23+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -29,10 +29,10 @@
   },
   {
    "name": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist",
-   "status": "laeuft",
+   "status": "bestanden",
    "runde": 4,
    "gebaut": "werkbank/schuss/fuhre-r4-e4-ende.png",
-   "luecke": "Runde 4 laeuft"
+   "luecke": "Das Schlussblatt behauptet unbedingt 'Mit leerer Lade hat dieses Haus jahrelang weitergebraut: auf Kerbe, auf den zweiten Guss, auf zurueckverkaufte Vorraete', waehrend zwei Zeilen darunter die eigene Zaehlung 'Fuhren hinausgeschickt 0 / Ausgeliefert 0 Fass / Ohne Rechnung hergegeben 0 / Adressen zurueckgeholt 0' steht (E1, 1353/13, belegt bei 1600x1000 und 2752x1536). Der Satz, der die These traegt, ist Textbaustein und widerspricht dem Beleg daneben — fuhre.js Z.2486-2489 an s.fuhren/s.kerben binden."
   },
   {
    "name": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderruflich",
@@ -408,6 +408,10 @@
   {
    "zeit": "2026-08-01T17:12:00+00:00",
    "text": "NAME Runde 1: ZURUECK. Latte 1 bestanden (vier eigene Traeger sitzen AUF der Platte: Bierzeiger mit Strohkranz im Sudhausdach 1350, geschmiedeter Rundausleger ueber der Wirtstuer 1600, Litfasssaeule am Markt 1884, Plakatwand an der Strasse 1970 — je ein IMG, alle mit data-frei abgemeldet). Epocheneigen bestanden: null Ueberschneidung der data-zug zwischen den Epochen, und die ART des Zugs wechselt mit (1350 am eigenen Haus, 3 je Amtszeit; 1600 an fremder Tuer, deren Wirt danach doppelt urteilt; 1884 Jahresetat der verfaellt plus fremde Jury und Warenzeichen; 1970 Jahresetat plus rein reaktive Abwehr). Sperrliste sauber: name:email in 1884 gesperrt mit Grund im Titel, name:warenzeichen bis 1894 gesperrt, 0 von 55 Wochen aktiv. BRAUHAUS.lage leer, keine Fehler auf der Seite in allen vier Epochen, kein absorbierender Zustand (lebendig() faellt in E4 bis zu 11 Wochen auf false, name:kronkorken bleibt aber klickbar und das neue Braujahr holt es zurueck). Keine neue Abgabe: Kassenverlauf ohne Namenszug und mit verdecktem Zeichen Woche fuer Woche identisch. Durchgefallen an Latte 2, Kernfrage: der Ruf bewegt keinen Pfennig — Lindenhof zahlt in allen drei Armen jede Woche exakt 130 DM je hl, bei Ruf 34 wie bei Ruf 19, waehrend das Band '1.373 DM mehr fuer dasselbe Fass Bier' als Kopfzeile fuehrt. Dazu in 1970 nur 1 von 55 Wochen mit zwei gleichzeitig bezahlbaren Preisschild-Karten."
+  },
+  {
+   "zeit": "2026-08-01T17:23:23+00:00",
+   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 4 · bestanden — Das Schlussblatt behauptet unbedingt 'Mit leerer Lade hat dieses Haus jahrelang weitergebraut: auf Kerbe, auf den zweiten Guss, auf zurueckverkaufte Vorraete', waehrend zwei Zeilen darunter die eigene Zaehlung 'Fuhren hinausgeschickt 0 / Ausgeliefert 0 Fass / Ohne Rechnung hergegeben 0 / Adressen zurueckgeholt 0' steht (E1, 1353/13, belegt bei 1600x1000 und 2752x1536). Der Satz, der die These traegt, ist Textbaustein und widerspricht dem Beleg daneben — fuhre.js Z.2486-2489 an s.fuhren/s.kerben binden."
   }
  ]
 }
