@@ -51,7 +51,8 @@ var SUD_DATEN = {
      Anstich einbringt. In allen vier Epochen dieselbe Kurve — nur ihr Name,
      ihr Verb und ihre Folgen wechseln. Das ist Absicht: die Zahl ist die
      Zahl, die EPOCHE ist der Unterschied. */
-  guete: { start: 70, zerfall: 2, boden: 25, anstichJung: 14, anstichAlt: 6, hoechst: 100 },
+  guete: { start: 70, zerfall: 2, boden: 25, anstichJung: 14, anstichAlt: 6,
+           fuehren: 8, hoechst: 100 },
 
   epochen: {
 
@@ -78,6 +79,9 @@ var SUD_DATEN = {
       guete: { name: 'Das Hefezeug', kurz: 'Zeug', invers: false,
                satz: 'Der Brauer hebt Hefe vom vorigen Sud auf. Wird sie nicht nachgeführt, '
                    + 'schlägt der Sud um.' },
+      fuehren: { text: 'Hefezeug aus dem Bottich heben',
+                 titel: 'Solange ein Bottich gärt, hebt der Brauer die Hefe von oben ab. '
+                      + 'Das kostet kein Fass — es geht nur, solange etwas gärt.' },
       anstich: { text: 'Hefezeug vom Fass abnehmen', zug: 'sud:anstich',
                  titel: 'Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass '
                       + 'gibt kräftiges Zeug, ein altes müdes.',
@@ -130,6 +134,9 @@ var SUD_DATEN = {
       },
       guete: { name: 'Die Stellhefe', kurz: 'Stellhefe', invers: false,
                satz: 'Die Zunft hält auf gute Stellhefe. Wer sie nicht schöpft, braut nach Glück.' },
+      fuehren: { text: 'Stellhefe aus dem Gärbottich nehmen',
+                 titel: 'Aus dem gärenden Bottich geschöpft, wie es die Ordnung vorsieht. '
+                      + 'Kostet kein Fass — geht nur, solange ein Bottich steht.' },
       anstich: { text: 'Stellhefe vom Fass schöpfen', zug: 'sud:anstich',
                  titel: 'Ein Fass wird angebrochen und die Hefe geschöpft. Ein junges Fass '
                       + 'gibt kräftige Stellhefe, ein altes müde.',
@@ -193,6 +200,9 @@ var SUD_DATEN = {
       guete: { name: 'Die Hefeführung', kurz: 'Führung', invers: false,
                satz: 'Die Hefe wird geerntet und wieder angestellt. Jede Ernte trägt mit, '
                    + 'was im Bottich sonst noch lebte.' },
+      fuehren: { text: 'Hefe im Gärbottich abernten',
+                 titel: 'Erntehefe von der Decke des Gärbottichs, wie in jedem Betrieb dieser '
+                      + 'Zeit. Kostet kein Fass — geht nur, solange ein Bottich gärt.' },
       anstich: { text: 'Hefe aus dem Fass abernten', zug: 'sud:anstich',
                  titel: 'Ein Fass wird angestochen und die Hefe geerntet. Junges Fass, '
                       + 'kräftige Hefe.',
@@ -261,6 +271,9 @@ var SUD_DATEN = {
       guete: { name: 'Die Streuung', kurz: 'Streuung', invers: true,
                satz: 'Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach, '
                    + 'und er misst genauer als der Gast.' },
+      fuehren: { text: 'Hefe aus dem Gärtank ziehen',
+                 titel: 'Erntehefe aus dem Konus, gekühlt gelagert, neu angestellt. '
+                      + 'Kostet kein Fass — geht nur, solange ein Tank gärt.' },
       anstich: { text: 'Hefe aus dem Tank zusetzen', zug: 'sud:anstich',
                  titel: 'Hefe wird aus einem Tank gezogen und neu angestellt.',
                  satz: 'Der Braumeister zieht Hefe und stellt neu an.' },
