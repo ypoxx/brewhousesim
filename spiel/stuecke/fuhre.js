@@ -1571,12 +1571,13 @@
         balken.appendChild(i2);
         uhr.appendChild(balken);
         aus.appendChild(uhr);
-        aus.appendChild(B.el('span', null, fd.satz));
+        var wer = B.el('span', 'fu-fristsatz', fd.satz);
+        wer.title = fd.satz;
+        aus.appendChild(wer);
         aus.appendChild(B.el('span', 'fu-weg-zurueck', pd0
           ? 'DER NÄCHSTE ZUG KOSTET KEIN GELD: ' + pd0.name.toUpperCase()
-            + '. Er steht an jeder aufgegebenen Adresse. Er kostet ein reifes Fass, '
-            + 'einen Platz auf dem Wagen und einen Halt — und in jeder Woche, in der '
-            + 'eines hinausgeht, steht die Frist still.'
+            + ' — an jeder aufgegebenen Adresse hier unten. Ein reifes Fass, ein Halt. '
+            + 'Solange eines hinausgeht, steht die Frist still.'
           : 'Die Pfanne brennt weiter, und niemand nimmt das Fass ab.'));
       }
       b.appendChild(aus);

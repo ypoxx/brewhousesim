@@ -281,6 +281,16 @@
 
 /* Ist das Haus wirklich zu, wird der Kasten grau statt rot: es brennt nichts
    mehr, es ist vorbei. */
+/* Der Kasten darf die Adressliste darunter nicht auffressen: die Adressen
+   sind der Weg zurueck und muessen ohne Rollen sichtbar bleiben. Deshalb
+   bekommt der Erklaersatz zwei Zeilen und den Rest sein title. */
+.fu-fristsatz {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .fu-ausgelaufen.tot {
   background: rgba(43, 29, 16, 0.18);
   border-color: rgba(43, 29, 16, 0.55);
