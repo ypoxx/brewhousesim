@@ -303,7 +303,7 @@ var STADT_DATEN = {
       nutzen: { sud: 8 } },
 
     { schluessel: 'waage', name: 'Fahrzeugwaage', bild: 'waage',
-      ort: 'hof', dx: 3, dy: 7, breite: 12, von: 4, bis: 4, grund: 55,
+      ort: 'hof', dx: 5, dy: 6, breite: 12, von: 4, bis: 4, grund: 55,
       sagt: 'Voll rein, leer raus, alles gewogen. Wer nicht wiegt, verliert im Kleinen.',
       nutzen: {}, wirkt: 'kein Schwund beim Wiegen' },
 
