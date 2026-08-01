@@ -386,3 +386,24 @@ Die einzige in 1970 sofort erreichbare Festlegung — *„Liefervertrag mit der
 Nordstern-Gruppe"* — trägt als Preisschild **„ohne Ausgabe"** und zahlte beim Klick
 86.000 → 175.000 DM **aus**. Die stärkste unwiderrufliche Wahl des Blattes ist damit die
 einzige ohne Zahl auf dem Schild. Gehört DEM PREIS, in `preis-daten.js`.
+
+## 14 — `bild/name/**` gehört DEM NAMEN, der Rest von `bild/` bleibt DER STADT
+
+**Entschieden von der Aufsicht vorab, damit DER NAME ohne Rückfrage starten kann.**
+
+`spiel/LIESMICH.md` sagt: *„`bild/` gehört DER STADT als Ganzes, weil dort die vier
+Epochenplatten liegen."* Der Grund ist richtig und bleibt richtig — er trägt aber nur so
+weit, wie es um die Platten geht.
+
+> **Ausgeschnitten:** `spiel/bild/name/**` gehört allein DEM NAMEN. Alles andere unter
+> `spiel/bild/` bleibt unverändert DER STADT, einschließlich der vier Platten, des
+> Hofbaukastens und der Ortsmarken.
+
+**An DIE STADT:** In `bild/` liegen ab sofort fremde Dateien. Wer dort ein Verzeichnis
+aufzählt, um daraus etwas abzuleiten, überspringt `name/`. Es ist kein Bauwerk, kein Hofteil
+und keine Platte.
+
+**An DEN NAMEN:** Das Zeichen des Hauses liegt auf der Platte der STADT, nicht daneben. Die
+Ortsmarken der STADT sind ein Pflock-System (§10) — wer eigene Marken selbst setzt, meldet
+sie mit `data-frei` ab, und zwar vollständig, nicht halb. Und **DER NAME schreibt keinen
+Preis**: er setzt einen Ruf, DER PREIS liest ihn (WELLE-2.md).
