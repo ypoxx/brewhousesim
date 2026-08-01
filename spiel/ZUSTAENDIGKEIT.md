@@ -407,3 +407,54 @@ und keine Platte.
 Ortsmarken der STADT sind ein Pflock-System (§10) — wer eigene Marken selbst setzt, meldet
 sie mit `data-frei` ab, und zwar vollständig, nicht halb. Und **DER NAME schreibt keinen
 Preis**: er setzt einen Ruf, DER PREIS liest ihn (WELLE-2.md).
+
+## 15 — `index.html` bekommt die Plätze für Welle 2
+
+**Vorgetragen von:** dem Bauer von DER NAME, als dringend.
+**Entschieden:** Die Aufsicht trägt nach. Für die Builder bleibt die Datei eingefroren.
+
+> `spiel/index.html` hängt `stuecke/name*.js` und `stil/name*.css` NICHT ein. Die Datei ist
+> eingefroren und ich fasse sie nicht an.
+
+Der Bauer hat richtig gehandelt: er hat die Regel nicht gebrochen, sondern gemeldet, und
+stand dafür still. Die Datei kannte nur die vier Stücke der Welle 1 — das war zum Zeitpunkt
+des Einfrierens vollständig und ist es jetzt nicht mehr.
+
+Nachgetragen sind **alle drei** offenen Stücke der Welle 2 auf einmal — `sud`, `name`,
+`erbe` —, damit DER SUD und DAS ERBE später nicht in dieselbe Wand laufen. Dazu liegen,
+genau wie in Welle 1, **lauffähige Stummel** bereit (`<stueck>-daten.js`, `<stueck>.js`,
+`<stueck>-zusatz.js`, `<stueck>.css`, `<stueck>-zusatz.css`). Ein Stummel statt eines
+fehlenden Pfades ist kein Schönheitsfehler: ein 404 landet in der Konsole und kostet den
+nächsten Kritiker eine falsche Rüge.
+
+Geprüft: Epoche 1 und 4 laden nach der Änderung mit *„keine Fehler auf der Seite"*.
+
+**Die Regel für die Builder ändert sich nicht.** `index.html` bleibt tabu. Wer einen Platz
+braucht, den es nicht gibt, meldet es — so wie hier geschehen.
+
+### Für die Glättung vorgemerkt: DER KLANG hängt sich selbst ein
+
+`kern/ton.js` schreibt sich zur Laufzeit ein `<link>` auf `stil/klang.css` und ein
+`<script>` auf `stuecke/klang.js` in die Seite. Das war die einzige Möglichkeit, die DER
+KLANG hatte — ihm gehört eine Kerndatei, DEM NAMEN gehört keine. Es funktioniert und das
+Stück hat damit bestanden; ich rühre es jetzt nicht an, weil man an einem Stück, das gerade
+durch ist, nicht ohne Not dreht. **Die Glättung soll es auf feste Plätze umstellen** — und
+dabei aufpassen, dass `klang.js` dann nicht zweimal geladen wird.
+
+## 16 — Am Messgerät wird nicht gedreht, während die Latte läuft
+
+**Vorgetragen von:** dem Prüfer von DER KLANG, als Randbefund. **Angenommen.**
+
+> `werkbank/hoerer.py` wurde WÄHREND dieser Runde geändert (15:40, während ich las). Der
+> Prompt ist Zeichen für Zeichen identisch mit HEAD (665 Zeichen, verglichen), die
+> Urteilslogik unverändert. Die Messung ist damit nicht verfälscht — aber dass daran gedreht
+> wird, während die Latte läuft, sollte die Aufsicht wissen.
+
+Er hat recht, und er hat es auf die einzig brauchbare Art vorgetragen: nicht als Verdacht,
+sondern mit dem Vergleich, der den Verdacht ausräumt. Die Änderung war die Reparatur des
+Fehlurteils, das derselbe Bauer gemeldet hatte — sie musste sein, und sie machte die Latte
+strenger statt milder (ein Abbruch gilt seither als *keine Messung* statt als Durchfallen).
+
+**Trotzdem gilt ab jetzt:** Wer ein Messgerät ändert, während eine Runde damit misst,
+schreibt es in die Chronik, **bevor** das Ergebnis eingetragen wird — nicht danach. Sonst
+steht am Ende ein Urteil, dessen Zustandekommen niemand mehr nachvollziehen kann.

@@ -272,7 +272,7 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 120 } },
 
     { schluessel: 'flaschenhalle', name: 'Flaschenhalle', bild: 'flaschenhalle',
-      ort: 'hof', dx: -3, dy: 19, breite: 13.5, von: 3, bis: 3, grund: 100,
+      ort: 'hof', dx: 3, dy: 7, breite: 13.5, von: 3, bis: 3, grund: 100,
       sagt: 'Bier in Flaschen geht dorthin, wo kein Fass mehr hinkommt: nach Hause.',
       nutzen: { platz: 20 } },
 
@@ -303,7 +303,7 @@ var STADT_DATEN = {
       nutzen: { sud: 8 } },
 
     { schluessel: 'waage', name: 'Fahrzeugwaage', bild: 'waage',
-      ort: 'hof', dx: -3, dy: 19, breite: 12, von: 4, bis: 4, grund: 55,
+      ort: 'hof', dx: 3, dy: 7, breite: 12, von: 4, bis: 4, grund: 55,
       sagt: 'Voll rein, leer raus, alles gewogen. Wer nicht wiegt, verliert im Kleinen.',
       nutzen: {}, wirkt: 'kein Schwund beim Wiegen' },
 
