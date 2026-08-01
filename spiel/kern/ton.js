@@ -59,13 +59,31 @@
      sagt den Ort, das Werk sagt den Vorgang — und das Werk muss dabei oben
      liegen. Im ersten Durchgang stand das Bett zu laut, und das Ohr sagte
      ueber 1350 nur noch "jemand spielt Floete". */
-  var PEGEL = { bett: 0.30, hof: 0.42, werk: 1.25 };
+  var PEGEL = { bett: 1.0, hof: 1.0, werk: 0.42 };
 
-  /* Und je Epoche noch einmal nachgestellt, weil die vier Hofbaender nicht
-     gleich laut sind: in 1350 haben die Gaense das ganze Bild an sich
-     gerissen, und das Ohr hat einen Bauernhof gehoert statt eines Brauhauses. */
-  var HOFPEGEL = { 1: 0.62, 2: 0.85, 3: 1.0, 4: 1.0 };
-  var BETTPEGEL = { 1: 1.0, 2: 1.0, 3: 0.9, 4: 1.0 };
+  /* Die vier Hofbaender und die vier Betten sind NICHT gleich laut aus dem
+     Erzeuger gekommen — hof1 hatte den dreifachen Effektivwert von hof3.
+     Das ist keine Kleinigkeit: das Ohr hat in 1350 daraufhin einen Bauernhof
+     gehoert ("Floete und Gaense") statt eines Brauhauses, weil die Gaense
+     alles zugedeckt haben, was im Hof geschah. Deshalb wird jede Schleife
+     beim Entschluesseln auf einen festen Effektivwert gezogen, statt sie
+     je Epoche von Hand nachzustellen. */
+  var ZIEL = { bett: 0.055, hof: 0.075 };
+
+  function lautheit(buf) {
+    if (buf.__lautheit !== undefined) return buf.__lautheit;
+    var d = buf.getChannelData(0), n = d.length, schritt = Math.max(1, Math.floor(n / 40000));
+    var summe = 0, zahl = 0;
+    for (var i = 0; i < n; i += schritt) { summe += d[i] * d[i]; zahl++; }
+    buf.__lautheit = zahl ? Math.sqrt(summe / zahl) : 0;
+    return buf.__lautheit;
+  }
+
+  function angleich(buf, ziel) {
+    var l = lautheit(buf);
+    if (!l) return 1;
+    return Math.max(0.15, Math.min(6, ziel / l));
+  }
 
   /* ======================================================================
      1 — DER KATALOG
@@ -365,17 +383,14 @@
     var druck;
     try {
       druck = ctx.createDynamicsCompressor();
-      druck.threshold.value = -9; druck.knee.value = 20;
-      druck.ratio.value = 3; druck.attack.value = 0.008; druck.release.value = 0.28;
+      druck.threshold.value = -4; druck.knee.value = 30;
+      druck.ratio.value = 2.2; druck.attack.value = 0.010; druck.release.value = 0.30;
       meister.connect(druck); druck.connect(ctx.destination);
     } catch (f) { meister.connect(ctx.destination); }
 
     var w = { ctx: ctx, meister: meister, bus: {}, ruhe: {}, schleifen: {} };
     ['bett', 'hof', 'werk'].forEach(function (n) {
-      var fein = 1;
-      if (n === 'hof') fein = HOFPEGEL[epoche] || 1;
-      if (n === 'bett') fein = BETTPEGEL[epoche] || 1;
-      w.ruhe[n] = PEGEL[n] * fein;
+      w.ruhe[n] = PEGEL[n];
       var g = ctx.createGain(); g.gain.value = w.ruhe[n];
       g.connect(meister);
       w.bus[n] = g;
@@ -396,7 +411,7 @@
     q.loopEnd = f.bis;
     var g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, wann);
-    g.gain.linearRampToValueAtTime(1, wann + (blende || 1.2));
+    g.gain.linearRampToValueAtTime(angleich(buf, ZIEL[bus] || 0.07), wann + (blende || 1.2));
     q.connect(g); g.connect(w.bus[bus]);
     var ab = f.von + ((versatz || 0) % Math.max(0.5, f.bis - f.von));
     q.start(wann, ab);
@@ -517,12 +532,6 @@
     if (bettJetzt === epoche) return;
     bettJetzt = epoche;
 
-    /* Die Ruhepegel gehoeren zur Epoche, nicht zum Kontext. */
-    ['bett', 'hof'].forEach(function (n) {
-      var fein = (n === 'hof' ? HOFPEGEL[epoche] : BETTPEGEL[epoche]) || 1;
-      w.ruhe[n] = PEGEL[n] * fein;
-      try { w.bus[n].gain.setValueAtTime(w.ruhe[n], w.ctx.currentTime); } catch (f) { }
-    });
 
     var jetzt = w.ctx.currentTime;
     blendeAus(w, liegend.bett, jetzt);
