@@ -1,5 +1,120 @@
 /* ===========================================================================
-   stil/stadt-zusatz.css — FREIER PLATZ fuer "stadt".
-   Bereits in spiel/index.html eingehaengt, nach stil/stadt.css. Leer, darf
-   vollstaendig ersetzt werden. Kein Bauer aendert index.html.
+   stil/stadt-zusatz.css — DIE KARTENSCHICHT.  Gehoert "stadt".
+   Eingehaengt in spiel/index.html nach stil/stadt.css. Kein Bauer aendert
+   index.html.
+
+   Hier steht genau eine Sache: wie die Ortsmarken der anderen Stuecke im
+   Stadtfenster stehen. Der Kritiker hat sie in Runde 2 "Schmutz auf der
+   Platte" genannt — kleine helle Schilder ohne Fuss, ueber eine gemalte
+   Stadt gestreut. Die Auskunft darin bleibt unveraendert und lesbar; sie
+   bekommt einen Boden (den PFLOCK) und eine Ruhelage.
    =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1 — DER PFLOCK
+   Eine kleine dunkle Scheibe mit Goldring, genau auf dem Ort aus
+   kern/orte.js. Er steht immer, auch wenn die Marke darauf ruht: damit ist
+   im Bild zu sehen, DASS dort etwas ist, ohne dass es die Platte zukleistert.
+   -------------------------------------------------------------------------- */
+
+.knopf.stadt-pflock {
+  display: block;
+  width: calc(var(--s) * 26);
+  height: calc(var(--s) * 26);
+  min-height: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.knopf.stadt-pflock:hover,
+.knopf.stadt-pflock:active { background: none; box-shadow: none; }
+
+/* Der sichtbare deutsche Knopftext bleibt im Knopf — er tritt unter dem
+   Pflock hervor, sobald der Zeiger oder die Tastatur ihn findet. */
+.knopf.stadt-pflock .wort {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + var(--s) * 4);
+  translate: -50% 0;
+  padding: calc(var(--s) * 2) calc(var(--s) * 7) calc(var(--s) * 3);
+  border-radius: calc(var(--s) * 3);
+  background: rgba(38, 24, 10, 0.92);
+  border: calc(var(--s) * 1) solid rgba(214, 178, 96, 0.75);
+  color: #f4e6c6;
+  font-family: var(--serif, serif);
+  font-size: calc(var(--s) * 15);
+  letter-spacing: calc(var(--s) * 1);
+  line-height: 1.15;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease-out;
+}
+
+.knopf.stadt-pflock:hover .wort,
+.knopf.stadt-pflock:focus-visible .wort { opacity: 1; }
+
+/* Die Scheibe selbst. Zwei Ringe: aussen der warme Schatten der Platte,
+   innen das Gold der Beschriftung — dieselbe Familie wie ST. MICHAEL. */
+.knopf.stadt-pflock .scheibe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 32%, #6a4a24 0%, #40290f 62%, #241606 100%);
+  border: calc(var(--s) * 2) solid rgba(226, 190, 108, 0.85);
+  box-shadow:
+    0 calc(var(--s) * 3) calc(var(--s) * 6) rgba(30, 18, 6, 0.55),
+    0 0 0 calc(var(--s) * 2) rgba(255, 248, 226, 0.28);
+}
+
+.knopf.stadt-pflock:hover .scheibe,
+.knopf.stadt-pflock:focus-visible .scheibe {
+  border-color: #ffe6a6;
+  box-shadow:
+    0 calc(var(--s) * 3) calc(var(--s) * 6) rgba(30, 18, 6, 0.55),
+    0 0 calc(var(--s) * 10) calc(var(--s) * 2) rgba(255, 226, 150, 0.55);
+}
+
+/* Die Marke steht: der Pflock tritt zurueck, er ist dann nur noch ihr Fuss. */
+.knopf.stadt-pflock:not(.ruht) {
+  width: calc(var(--s) * 15);
+  height: calc(var(--s) * 15);
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   2 — DIE RUHELAGE DER FREMDEN MARKE
+   Sie wird nicht geloescht und nicht umgeschrieben: sie legt sich hin. Der
+   Platz, den sie einnimmt, bleibt derselbe — deshalb weiss die Kartenschicht
+   jederzeit, wohin ihr Pflock gehoert, und deshalb stehen darin die lebenden
+   Zahlen des fremden Stuecks und nicht eine Abschrift davon.
+   -------------------------------------------------------------------------- */
+
+.stadt-marke-ruht {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   3 — DER SCHALTER IN DER WERKBANK
+   -------------------------------------------------------------------------- */
+
+.stadt-reiter.marken .wort::before {
+  content: '';
+  display: inline-block;
+  width: calc(var(--s) * 12);
+  height: calc(var(--s) * 12);
+  margin-right: calc(var(--s) * 8);
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #6a4a24 0%, #40290f 70%);
+  border: calc(var(--s) * 2) solid rgba(226, 190, 108, 0.9);
+  vertical-align: baseline;
+}
