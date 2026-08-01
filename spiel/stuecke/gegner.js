@@ -2006,6 +2006,18 @@
     }
   });
 
+  /* GLAETTUNG WELLE 1: Jedes andere Blatt im Spiel geht mit Escape zu — die
+     Chronik und das Buch des Kerns, die Georgi-Tafel der FUHRE. Nur das Haus
+     gegenueber blieb stehen. Ein Spieler lernt eine Taste einmal; sie muss
+     dann ueberall gelten. (Die gemeinsame Sperrschicht bleibt Kernaufgabe
+     der Welle 2, ZUSTAENDIGKEIT §2 — das hier ist die eigene Tuer.) */
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape' || !Z.offen) return;
+    if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    Z.offen = false;
+    neuZeichnen('gegner-escape');
+  });
+
   /* Fuer die Konsole des Kritikers: BRAUHAUS.gegner.zuege() */
   B.gegner = {
     zuege: function () { return Z.zuege.slice(); },
