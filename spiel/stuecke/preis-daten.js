@@ -422,8 +422,8 @@ var PREIS_DATEN = {
         { teil: 0.65, name: 'Kesselschaden und Neuabnahme', sagt: 'Ein Rohrriss im Dampfkessel. Der Sachverständige lässt nicht mit sich reden.' },
         { teil: 1.15, name: 'Kanal- und Wasseranschluss',   sagt: 'Die Stadt legt Röhren und legt die Kosten um.' },
         { teil: 0.85, name: 'Nachzahlung Biersteuer',       sagt: 'Die Revision hat drei Jahre nachgerechnet.' },
-        { teil: 2.30, name: 'Gründerkrach — Wechsel fällig', sagt: 'Die Bank verlängert nicht. Der Wechsel wird glatt bezahlt.' },
-        { teil: 1.00, name: 'Neubau der Zufahrt',           sagt: 'Der Lastwagenverkehr hat die Rampenstraße zerfahren.' },
+        { teil: 2.30, name: 'Bankenkrach — der Wechsel wird fällig', sagt: 'Die Bank verlängert nicht. Der Wechsel wird glatt bezahlt.' },
+        { teil: 1.00, name: 'Neubau der Zufahrt',           sagt: 'Der schwere Fuhrverkehr hat die Rampenstraße zerfahren.' },
         { teil: 1.30, name: 'Anschluss an das Elektrizitätswerk', sagt: 'Die Stadt elektrifiziert. Wer Licht will, zahlt den Hausanschluss.' }
       ],
       pfand: 'Wer nicht bezahlt, dessen Wechsel geht an die Bank, und die Bank verkauft ihn weiter: '
@@ -590,21 +590,33 @@ var PREIS_DATEN = {
       ],
 
       umlagen: [
-        { teil: 1.30, name: 'Ölpreiskrise — Energie und Frachten', sagt: 'Das Sudhaus heizt mit Öl, und der Fuhrpark fährt damit.' },
+        { teil: 1.30, name: 'Energie- und Frachtenkrise',       sagt: 'Das Sudhaus heizt nicht umsonst, und der Fuhrpark fährt nicht umsonst.' },
         { teil: 0.80, name: 'Tarifabschluss mit Nachzahlung',   sagt: 'Sieben Prozent rückwirkend zum Januar.' },
         { teil: 1.25, name: 'Pfand- und Rücknahmepflicht',     sagt: 'Kästen, Kisten, Automaten. Das Haus zahlt die Umstellung.' },
         { teil: 0.95, name: 'Energiepreissprung',               sagt: 'Der Sudkessel läuft mit Gas, und Gas hat sich verdoppelt.' },
         { teil: 1.55, name: 'Umbau der Kläranlage',            sagt: 'Die Abwasserverordnung gilt auch für Brauereien.' },
-        { teil: 1.75, name: 'Zwangspfand auf Einwegdosen',      sagt: 'Der Handel räumt die Dose aus dem Regal. Was abgefüllt ist, steht.' }
+        { teil: 1.75, name: 'Missernte bei der Braugerste',      sagt: 'Der Malzpreis zieht an, und der Kontrakt für das nächste Jahr steht noch nicht.' }
       ],
       pfand: 'Wer nicht zahlt, verliert die Listung: eine Gaststätte wird auf fünf Jahre '
            + 'von der Nordstern-Gruppe beliefert.',
 
       angebote: [
-        { k: 'kasten', name: 'Der eigene Mehrwegkasten', anteil: 0.040, bauzeit: 0,
+        { k: 'kasten', name: 'Der eigene Mehrwegkasten', anteil: 0.040, bauzeit: 0, ab: 1955,
           was: 'Zwanzig Flaschen, Kunststoff, Name in den Griff geprägt.',
           satz: 'Der Kasten steht in fremden Kellern und wirbt dort, ohne dass jemand ihn ansieht.',
           wirkung: { preis: 0.04, ansehen: 8, ertrag: 3000 } },
+
+        /* Die erste Haelfte dieser Epoche — Krieg, Inflation, Wiederaufbau —
+           braucht eigene Sprossen, sonst steht die Tafel bis 1950 halb leer. */
+        { k: 'kronkorken', name: 'Die Kronkorken-Füllerei', anteil: 0.055, bauzeit: 0, bis: 1969,
+          was: 'Verschließer, Spülmaschine, ein Band aus Rollen — statt des Bügels ein Blechdeckel.',
+          satz: 'Schneller, dichter, billiger. Der Bügel bleibt für das Sonntagsbier.',
+          wirkung: { preis: 0.05, ertrag: 4000 } },
+
+        { k: 'holzgas', name: 'Der Holzgasgenerator am Lastwagen', anteil: 0.085, bauzeit: 0, bis: 1955,
+          was: 'Ein Kessel hinter dem Führerhaus, Holzkohle statt Benzin, für die Jahre ohne Sprit.',
+          satz: 'Er fährt. Langsam, russig, und er fährt.',
+          wirkung: { ertrag: 5500 } },
 
         { k: 'zelt', name: 'Das Bierzelt auf dem Volksfest', anteil: 0.075, bauzeit: 0,
           was: 'Ein Zelt mit dreitausend Plätzen, neun Tage im Jahr.',
@@ -615,13 +627,13 @@ var PREIS_DATEN = {
            Er billiger und ohne Fahrer, dafür kennt er den Wirt und das Haus
            nicht mehr. Kein Großhändler nimmt ein Haus, das ihm dieselben
            Gaststätten selbst anfährt. */
-        { k: 'grosshandel', name: 'Der Getränkefachgroßhandel als Partner', anteil: 0.115, bauzeit: 0,
+        { k: 'grosshandel', name: 'Der Getränkefachgroßhandel als Partner', anteil: 0.115, bauzeit: 0, ab: 1950,
           was: 'Ein Vertrag mit dem größten Zwischenhändler des Kreises.',
           satz: 'Er nimmt Menge ab und bringt sie in Gaststätten, die das Haus nie besucht.',
           sperrt: ['lastzug'],
           wirkung: { bindung: { n: 2, jahre: 20 }, ertrag: 9000 } },
 
-        { k: 'lastzug', name: 'Zwei Lastzüge mit Anhänger', anteil: 0.15, bauzeit: 0,
+        { k: 'lastzug', name: 'Zwei Lastzüge mit Anhänger', anteil: 0.15, bauzeit: 0, ab: 1950,
           was: 'Zwei Siebeneinhalbtonner mit Planenaufbau und Ladebordwand.',
           satz: 'Die Auslieferung wird ein Fahrplan statt einer Fuhre.',
           sperrt: ['grosshandel'],
@@ -651,17 +663,17 @@ var PREIS_DATEN = {
           sperrt: ['werbefilm'],
           wirkung: { ansehen: 16, preis: 0.05, ertrag: 10000 } },
 
-        { k: 'abfuellung', name: 'Die Abfüllanlage, 24.000 Flaschen je Stunde', anteil: 0.45, bauzeit: 2,
+        { k: 'abfuellung', name: 'Die Abfüllanlage, 24.000 Flaschen je Stunde', anteil: 0.45, bauzeit: 2, ab: 1955,
           was: 'Reinigung, Füller, Etikettierer, Packer — eine Halle voll.',
           satz: 'Sie rechnet sich erst ab einer Menge, die das Haus noch nicht hat.',
           wirkung: { ertrag: 34000, plaetze: 900 } },
 
-        { k: 'gaertanks', name: 'Zylindrokonische Gärtanks im Freien', anteil: 0.34, bauzeit: 2,
+        { k: 'gaertanks', name: 'Zylindrokonische Gärtanks im Freien', anteil: 0.34, bauzeit: 2, ab: 1965,
           was: 'Acht Edelstahltanks, sechzehn Meter hoch, hinter dem alten Sudhaus.',
           satz: 'Gärung und Lagerung im selben Tank. Der Felsenkeller wird zum Museum.',
           wirkung: { plaetze: 1400, ertrag: 26000 } },
 
-        { k: 'spezialitaet', name: 'Das Kellerbier in der Bügelflasche', anteil: 0.09, bauzeit: 1, ab: 1985,
+        { k: 'spezialitaet', name: 'Das Kellerbier in der Bügelflasche', anteil: 0.09, bauzeit: 1, ab: 1975,
           was: 'Naturtrüb, ungefiltert, Bügelverschluss, ein Etikett wie 1900.',
           satz: 'Kleine Menge, großer Preis. Es verkauft die Geschichte des Hauses mit.',
           sperrt: ['dosenlinie'],
@@ -670,7 +682,7 @@ var PREIS_DATEN = {
         /* Das alte Sudhaus ist einmal da. Entweder es wird zur Gastwirtschaft,
            dann bleibt das Haus klein und teuer je Hektoliter — oder es wird
            geräumt und das Haus zieht an die Bundesstraße. */
-        { k: 'logistik', name: 'Das Logistikzentrum an der Bundesstraße', anteil: 0.80, bauzeit: 3,
+        { k: 'logistik', name: 'Das Logistikzentrum an der Bundesstraße', anteil: 0.80, bauzeit: 3, ab: 1960,
           was: 'Hochregal, Rampen für zwölf Lastzüge, ein Verwaltungsriegel aus Glas.',
           satz: 'Der Hof in der Stadt wird zur Adresse, die Ware kommt woanders her.',
           sperrt: ['brauhaus'],
