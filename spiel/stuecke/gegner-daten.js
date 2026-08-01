@@ -14,6 +14,21 @@
    abloesen. Die Zugliste ist in keinen zwei Epochen dieselbe — das ist geprueft,
    indem jede Epoche eigene Zugschluessel hat.
 
+   DREI DINGE, DIE MAN AM EIGENEN GESCHAEFT MERKT
+     1 Verlorene Haeuser — sein Zeichen haengt am Giebel, die Abloesung steht daran.
+     2 Unterbotene Preise — solange sein Preis unter dem Satz steht, zahlt der
+       Wirt dem Haus weniger je Fass. Das steht als Zeile im Buch, mit seinem
+       Namen davor. Gedeckelt auf DREI vom Hundert des Jahresumsatzes
+       (spiel/ZUSTAENDIGKEIT.md §4) — mehr presst er dem Haus nicht ab.
+     3 Technik, die er frueher hat — jeder Bau auf seinem Hof hat einen
+       'spiegel': den gleichwertigen Aufbau im eigenen Hof. Was er hat und das
+       Haus nicht, ist sein Vorsprung, und der Vorsprung verkuerzt seine
+       Werbung um je eine Woche. Man sieht die Liste und man sieht die Folge.
+
+   UND EINEN ZUG, DER KEIN GELD KOSTET
+   'beschwerde' — je Braujahr einmal, kostet Ansehen statt Bargeld. Damit gibt
+   es gegen ihn auch dann noch einen Zug, wenn die Kasse leer ist.
+
    BESITZSTAND: stuecke/gegner*.js · stil/gegner*.css · bild/gegner/**
    =========================================================================== */
 
