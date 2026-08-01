@@ -114,7 +114,122 @@
   }
 
   function budgetFeld() { return ep().budget ? ep().budget.feld : null; }
-  function budgetKosten(s) { var f = budgetFeld(); return f ? (s[f] || 1) : 0; }
+
+  /* Was ein Sud der JAHRESVERLEIHUNG kostet — Brautage beim Rat, Sude bei der
+     Zunft. Der Notsud kostet sie NICHT: Nachbier ist im Buch des Rats kein
+     Bier. Genau daran haengt, dass eine leere Kasse die Pfanne nie kalt
+     stellt. */
+  function budgetKosten(s) {
+    if (s && s.not) return 0;
+    var f = budgetFeld();
+    return f ? (s[f] || 1) : 0;
+  }
+
+  /* Was ein Sud DIE WOCHE kostet: die Pfanne steht denselben Tag am Feuer,
+     ob Grutbier oder Kofent. Das ist die Schranke, die auch fuer den Notsud
+     gilt — sonst waere er unbegrenzt und damit die Antwort auf alles. */
+  function pfannenKosten(s) {
+    var f = budgetFeld();
+    return f ? (s[f] || 1) : 1;
+  }
+
+  /* Der Notsud dieser Epoche: Kofent · Nachbier · Einfachbier · Handelsmarke */
+  function notSorte() {
+    var l = sorten();
+    for (var i = 0; i < l.length; i++) if (l[i].not) return l[i];
+    return null;
+  }
+  function echteSorten() {
+    return sorten().filter(function (s) { return !s.not; });
+  }
+
+  /* ----------------------------------------------------------------------
+     DAS KERBHOLZ — anschreiben lassen
+     Der Glaeubiger schneidet ganze Kerben und zahlt sie aus. Was zu Georgi
+     offen bleibt, nimmt er sich in der knappen Sache dieser Zeit. Deshalb
+     ist eine Schuld hier kein Geldproblem, sondern ein Verlust an Brautagen,
+     Suden der Reihe, Eis oder Regalmetern.
+     ---------------------------------------------------------------------- */
+  function kerbholz() { return ep().kerbholz || null; }
+  function kerbFrei() {
+    var kh = kerbholz();
+    return kh ? Math.max(0, kh.kerben - Z.kerben) : 0;
+  }
+  function kerbDeckung() {
+    var kh = kerbholz();
+    return kh ? kerbFrei() * kh.jeKerbe : 0;
+  }
+  /* Wie viele Kerben ein Betrag braucht, den die Kasse nicht traegt. */
+  function kerbenFuer(betrag) {
+    var kh = kerbholz();
+    if (!kh || B.welt.kann(betrag)) return 0;
+    var fehlt = betrag - Math.max(0, B.welt.haus.kasse);
+    return Math.ceil(fehlt / kh.jeKerbe);
+  }
+  function kannBezahlen(betrag) {
+    if (B.welt.kann(betrag)) return true;
+    var n = kerbenFuer(betrag);
+    return !!n && n <= kerbFrei();
+  }
+  /* Der einzige Weg, in diesem Stueck etwas zu bezahlen. Reicht die Kasse
+     nicht, laesst das Haus anschreiben — solange Kerben frei sind. */
+  function zahleOderKerbe(betrag, was) {
+    if (B.welt.kann(betrag)) return B.welt.zahle(betrag, was, 'spieler');
+    var kh = kerbholz();
+    if (!kh) return false;
+    var n = kerbenFuer(betrag);
+    if (!n || n > kerbFrei()) return false;
+    Z.kerben += n;
+    B.welt.nimm(n * kh.jeKerbe,
+      kh.kurz + ': ' + n + (n === 1 ? ' Kerbe' : ' Kerben') + ' geschnitten', 'spieler');
+    B.ton.spiele('fuhre:kerbe', { ort: 'hof', laut: 0.5 });
+    return B.welt.zahle(betrag, was, 'spieler');
+  }
+  /* Was am Knopf steht, wenn er auf Kerbe geht — der Preis bleibt sichtbar,
+     die Waehrung wechselt. */
+  function kerbZusatz(betrag) {
+    var n = kerbenFuer(betrag);
+    if (!n || n > kerbFrei()) return '';
+    return ' · auf ' + n + (n === 1 ? ' Kerbe' : ' Kerben');
+  }
+  function kerbTitel(betrag) {
+    var kh = kerbholz(), n = kerbenFuer(betrag);
+    if (!kh || !n) return '';
+    if (n > kerbFrei()) {
+      return ' ' + kh.name + ': nur noch ' + kerbFrei() + ' von ' + kh.kerben
+        + ' Kerben frei — das reicht nicht.';
+    }
+    return ' Die Kasse reicht nicht: das geht auf ' + n + (n === 1 ? ' Kerbe' : ' Kerben')
+      + ' beim ' + kh.name + '. ' + kh.pfand.sagt;
+  }
+  function loeseKerbe() {
+    var kh = kerbholz();
+    if (!kh || !Z.kerben) return;
+    if (!B.welt.zahle(kh.jeKerbe, 'Eine Kerbe geloescht · ' + kh.name, 'spieler')) {
+      Z.meldung = 'Eine Kerbe zu loeschen kostet ' + B.welt.geld(kh.jeKerbe) + '.';
+      B.sende('zeichne', { grund: 'fuhre-kerbe' });
+      return;
+    }
+    Z.kerben -= 1;
+    B.ton.spiele('fuhre:kerbe', { ort: 'hof', laut: 0.35 });
+    B.sende('zeichne', { grund: 'fuhre-kerbe' });
+  }
+
+  /* Der dritte Weg: Rohstoff zurueck an den Haendler. Bar auf die Hand,
+     zum Bruchteil des Einkaufs — und die Kammer ist danach leer. */
+  function verkaufeRohstoff(def) {
+    if (!def || !def.rueck) return;
+    if (B.welt.haus.rohstoff < def.menge) return;
+    var erloes = Math.max(1, Math.round(def.basis * def.rueck));
+    B.welt.haus.rohstoff -= def.menge;
+    B.welt.nimm(erloes, (def.rtext || 'Rohstoff zurueck').split(' ·')[0]
+      + ' · ' + def.menge + ' ' + (B.welt.epoche().rohstoff || 'Rohstoff'), 'spieler');
+    Z.meldung = def.menge + ' ' + (B.welt.epoche().rohstoff || 'Rohstoff')
+      + ' zurueck an den Haendler — ' + B.welt.geld(erloes) + ' bar, '
+      + B.welt.geld(def.basis) + ' hat es gekostet.';
+    B.ton.spiele('fuhre:kauf', { ort: 'hof' });
+    B.sende('zeichne', { grund: 'fuhre-rueckverkauf' });
+  }
 
   /* Preis je Fass — DER PREIS setzt den Multiplikator, DIE FUHRE die Sorte. */
   function preisMult() {
@@ -469,53 +584,108 @@
   }
 
   function braue() {
-    var e = ep(), gruende = [], gebraut = 0, sudZahl = 0;
-    var jeWoche = e.budget ? e.budget.jeWoche : (e.sudeJeWoche || 2);
-    var grenzeSude = e.budget ? Infinity : Z.sudeJeWoche;
-    var verbrauchtWoche = 0;
+    var e = ep(), gruende = [], gebraut = 0;
+    /* Die Pfanne dieser Woche. In 1350/1600 in Brautagen bzw. Suden der
+       Reihe, sonst in Suden — sie begrenzt AUCH den Notsud. */
+    var jeWoche = e.budget ? e.budget.jeWoche : (Z.sudeJeWoche || 1);
+    var verbraucht = 0;
+    var geldFehlt = false;
+    Z.notsud = 0;
 
+    /* Einen Sud ansetzen. Gibt null zurueck, wenn er faellt, sonst den
+       Grund, warum nicht — der steht danach an der Tafel. */
+    function setzeAn(s) {
+      var kost = pfannenKosten(s);
+      if (verbraucht + kost > jeWoche) {
+        return e.budget ? ('die Woche hat nur ' + jeWoche + ' ' + e.budget.name)
+                        : ('nur ' + jeWoche + (jeWoche === 1 ? ' Sud' : ' Sude') + ' je Woche');
+      }
+      if (e.budget && Z.budget < budgetKosten(s)) return e.budget.name + ' verbraucht';
+      if (B.welt.vorrat.plaetze - keller().length < s.fass) return 'kein Platz im Keller';
+      if (fassplaetzeFrei() < s.fass) return 'keine leeren Fässer';
+      if (B.welt.haus.rohstoff < s.rohstoff) return 'kein ' + (B.welt.epoche().rohstoff || 'Rohstoff');
+      if (e.eis && Z.eis < (s.eis || 0)) return 'kein Eis';
+      /* Die einzige Stelle, an der Geld einen Sud noch aufhalten kann — und
+         der Notsud kommt hier nie an, weil er nichts kostet. */
+      if (s.kosten > 0 && !B.welt.kann(s.kosten)) return 'die Kasse';
+
+      if (s.kosten > 0) B.welt.zahle(s.kosten, 'Ein Sud ' + s.name, 'spieler');
+      if (s.rohstoff) B.welt.haus.rohstoff -= s.rohstoff;
+      if (e.eis) Z.eis = Math.max(0, Z.eis - (s.eis || 0));
+      if (e.budget) Z.budget -= budgetKosten(s);
+      verbraucht += kost;
+
+      var gelegt = B.welt.legeEin(s.name, s.fass);
+      var f = keller();
+      for (var i = f.length - gelegt; i < f.length; i++) {
+        f[i].k = s.k;
+        f[i].stufe = s.stufe;
+        f[i].reife = s.reife;
+        f[i].haltbar = s.reife + s.haltbar;
+        f[i].zeichen = s.zeichen;
+      }
+      gebraut += gelegt;
+      B.welt.protokolliere({ wer: 'spieler', was: gelegt + ' Fass ' + s.name + ' eingelegt',
+        preis: 0, menge: 0 });
+      return null;
+    }
+
+    /* 1. Was an der Tafel steht. */
     for (var si = 0; si < sorten().length; si++) {
       var s = sorten()[si];
       var will = Z.plan[s.k] || 0;
       for (var n = 0; n < will; n++) {
-        var kost = budgetKosten(s);
-        if (e.budget) {
-          if (verbrauchtWoche + kost > jeWoche) { gruende.push('die Woche hat nur ' + jeWoche + ' ' + e.budget.name); break; }
-          if (Z.budget < kost) { gruende.push(e.budget.name + ' verbraucht'); break; }
-        } else {
-          if (sudZahl >= grenzeSude) { gruende.push('nur ' + grenzeSude + ' Sude je Woche'); break; }
+        var grund = setzeAn(s);
+        if (grund) {
+          gruende.push(grund);
+          if (grund === 'die Kasse') geldFehlt = true;
+          break;
         }
-        if (B.welt.vorrat.plaetze - keller().length < s.fass) { gruende.push('kein Platz im Keller'); break; }
-        if (fassplaetzeFrei() < s.fass) { gruende.push('keine leeren Fässer'); break; }
-        if (B.welt.haus.rohstoff < s.rohstoff) { gruende.push('kein ' + (B.welt.epoche().rohstoff || 'Rohstoff')); break; }
-        if (e.eis && Z.eis < (s.eis || 0)) { gruende.push('kein Eis'); break; }
-        if (!B.welt.kann(s.kosten)) { gruende.push('die Kasse'); break; }
+      }
+    }
 
-        B.welt.zahle(s.kosten, 'Ein Sud ' + s.name, 'spieler');
-        B.welt.haus.rohstoff -= s.rohstoff;
-        if (e.eis) Z.eis = Math.max(0, Z.eis - (s.eis || 0));
-        if (e.budget) { Z.budget -= kost; verbrauchtWoche += kost; }
-        sudZahl++;
-
-        var gelegt = B.welt.legeEin(s.name, s.fass);
-        var f = keller();
-        for (var i = f.length - gelegt; i < f.length; i++) {
-          f[i].k = s.k;
-          f[i].stufe = s.stufe;
-          f[i].reife = s.reife;
-          f[i].haltbar = s.reife + s.haltbar;
-          f[i].zeichen = s.zeichen;
-        }
-        gebraut += gelegt;
-        B.welt.protokolliere({ wer: 'spieler', was: gelegt + ' Fass ' + s.name + ' eingelegt',
-          preis: 0, menge: 0 });
+    /* 2. DER NOTSUD. Der Braumeister laesst die Pfanne nicht kalt, wenn
+       nichts zu verkaufen im Keller liegt oder der Plan bloss am Geld
+       gescheitert ist. Der zweite Guss kostet keinen Pfennig, kein Korn und
+       keinen Tag der Verleihung — nur die Pfanne. Das ist die Antwort des
+       Stuecks auf die leere Kasse, und sie steht an der Tafel, nicht im
+       Handbuch. */
+    var ns = notSorte();
+    var nichtsDa = freieFaesser().length === 0;
+    var notGrund = null;
+    if (ns && (nichtsDa || (geldFehlt && !gebraut))) {
+      var ziel = Math.max(1, Math.ceil(wagenPlaetze() / Math.max(1, ns.fass)));
+      while (Z.notsud < ziel) {
+        notGrund = setzeAn(ns);
+        if (notGrund) break;
+        Z.notsud++;
       }
     }
 
     if (gebraut) B.ton.spiele('sud:pfanne', { ort: 'kesselstelle' });
-    Z.sudMeldung = gebraut
-      ? gebraut + ' Fass angesetzt' + (gruende.length ? ' — dann: ' + gruende[0] : '')
-      : (planSummeSude() ? 'Kein Sud: ' + (gruende[0] || 'die Tafel steht leer') : 'Die Tafel ist leer.');
+
+    /* 3. Was an der Tafel darueber steht. */
+    var teile = [];
+    if (gebraut) teile.push(gebraut + ' Fass angesetzt');
+    if (Z.notsud && ns) {
+      Z.notGesamt += Z.notsud;
+      teile.push('davon ' + Z.notsud + '× ' + ns.name + ' ohne Barauslage'
+        + (geldFehlt ? ' — für den Plan fehlte die Kasse' : ' — der Keller war leer'));
+      if (!Z.notGemeldet) {
+        Z.notGemeldet = true;
+        B.welt.schreibe('Kein Geld in der Lade, und die Pfanne steht trotzdem am Feuer: '
+          + 'der Braumeister setzt ' + ns.name + ' an, den zweiten Guss auf dieselben Treber. '
+          + 'Kein Pfennig, kein ' + (B.welt.epoche().rohstoff || 'Rohstoff')
+          + ', kein Tag der Verleihung — nur die Pfanne.', 'fuhre');
+      }
+    } else if (!gebraut) {
+      teile.push(planSummeSude()
+        ? 'Kein Sud: ' + (gruende[0] || notGrund || 'die Tafel steht leer')
+        : (notGrund ? 'Kein Sud: ' + notGrund : 'Die Tafel ist leer.'));
+    } else if (gruende.length) {
+      teile.push('dann: ' + gruende[0]);
+    }
+    Z.sudMeldung = teile.join(' · ');
   }
 
   /* ----------------------------------------------------------------------
