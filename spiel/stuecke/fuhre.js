@@ -2473,12 +2473,16 @@
     /* DER SATZ, UM DEN ES GING. Er steht hier mit den Zahlen des letzten
        Tages, damit ihn niemand fuer eine Behauptung halten muss. */
     if (!gegenwart) {
-      bl.appendChild(B.el('div', 'fu-schluss-these',
-        'Nicht die leere Kasse hat das Haus zugemacht. Am letzten Tag lagen '
-        + B.welt.geld(s.kasse) + ' in der Lade, ' + B.welt.menge(s.keller) + ' von '
-        + B.welt.menge(s.plaetze) + ' im Keller und ' + B.zahl(s.rohstoff) + ' '
-        + (B.welt.epoche().rohstoff || 'Rohstoff') + ' in der Kammer. '
-        + 'Was fehlte, war die Adresse, die das Fass abnimmt.'));
+      var stand = B.welt.menge(s.keller) + ' von ' + B.welt.menge(s.plaetze) + ' lagen im Keller, '
+        + B.zahl(s.rohstoff) + ' ' + (B.welt.epoche().rohstoff || 'Rohstoff') + ' in der Kammer.';
+      bl.appendChild(B.el('div', 'fu-schluss-these', s.kasse > 0
+        ? 'Nicht die leere Kasse hat das Haus zugemacht. Am letzten Tag lagen '
+          + B.welt.geld(s.kasse) + ' in der Lade, ' + stand
+          + ' Was fehlte, war die Adresse, die das Fass abnimmt.'
+        : 'Die Lade war leer — ' + B.welt.geld(s.kasse) + ' — und das war nie der Grund. '
+          + 'Mit leerer Lade hat dieses Haus jahrelang weitergebraut: auf Kerbe, auf den '
+          + 'zweiten Guss, auf zurückverkaufte Vorräte. ' + stand
+          + ' Gestorben ist es an der Adresse, die fehlte, nicht am Geld.'));
     }
 
     var z = B.el('div', 'fu-schluss-zahlen');
