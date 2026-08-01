@@ -1116,10 +1116,20 @@
       if (B.welt.haus.rohstoff < s.rohstoff) return 'kein ' + (B.welt.epoche().rohstoff || 'Rohstoff');
       if (e.eis && Z.eis < (s.eis || 0)) return 'kein Eis';
       /* Die einzige Stelle, an der Geld einen Sud noch aufhalten kann — und
-         der Notsud kommt hier nie an, weil er nichts kostet. */
-      if (s.kosten > 0 && !B.welt.kann(s.kosten)) return 'die Kasse';
+         der Notsud kommt hier nie an, weil er nichts kostet.
 
-      if (s.kosten > 0) B.welt.zahle(s.kosten, 'Ein Sud ' + s.name, 'spieler');
+         DER SUD DARF ANSCHREIBEN LASSEN. Das Kerbholz gab es in diesem Stueck
+         von Anfang an, aber ausgerechnet der Sud durfte es nicht benutzen: er
+         prüfte bar. Damit stand im Winter regelmässig „Kein Sud: die Kasse"
+         an der Tafel, obwohl vier Kerben frei waren — und genau das ist der
+         Vorgang, den ein Brauhaus seit je auf Anschrift bestreitet. Malz und
+         Hopfen nimmt der Brauer beim Händler auf Kerbe und löst sie ein, wenn
+         die Wirte zu Michaeli zahlen. Das ist der Kreis, um den es hier
+         geht: im Herbst anschreiben, im Winter brauen, zu Michaeli rechnen.
+         Die Zahl der Kerben begrenzt ihn; wer sie voll hat, braut Notbier. */
+      if (s.kosten > 0 && !kannBezahlen(s.kosten)) return 'die Kasse';
+
+      if (s.kosten > 0) zahleOderKerbe(s.kosten, 'Ein Sud ' + s.name);
       if (s.rohstoff) B.welt.haus.rohstoff -= s.rohstoff;
       if (e.eis) Z.eis = Math.max(0, Z.eis - (s.eis || 0));
       if (e.budget) Z.budget -= budgetKosten(s);
