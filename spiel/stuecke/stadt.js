@@ -172,7 +172,8 @@
 
   /* Alle Bretter der anderen Stuecke: direkte Kinder eines fremden Fachs,
      die nicht an einem Ort haengen (.amort ist eine Marke im Bild, kein
-     Brett) und die sich nicht selbst abgemeldet haben (data-frei). */
+     Brett — die gehen an die Kartenschicht weiter unten) und die sich nicht
+     selbst abgemeldet haben (data-frei). */
   function fremdeBretter() {
     var l = [];
     ['marken', 'hand', 'blatt'].forEach(function (name) {
@@ -182,7 +183,7 @@
       for (var i = 0; i < faecher.length; i++) {
         var fach = faecher[i];
         var wer = fach.getAttribute('data-stueck');
-        if (!wer || wer === 'stadt' || wer.indexOf('kern') === 0) continue;
+        if (!wer || wer.indexOf('stadt') === 0 || wer.indexOf('kern') === 0) continue;
         var kinder = fach.children;
         for (var j = 0; j < kinder.length; j++) {
           var el = kinder[j];
@@ -484,7 +485,7 @@
         rauch.style.zIndex = '900';
         /* Der Fuss der Fahne sitzt auf der Krone des Schafts: der Schaft ist
            breite * (779/218) hoch, gemessen in Prozent der Buehnenhoehe. */
-        B.orte.setze(rauch, a.ort, { anker: 'unten', dx: (a.dx || 0) - 1.5, dy: -16 });
+        B.orte.setze(rauch, a.ort, { anker: 'unten', dx: masse(a).dx - 1.5, dy: -16 });
         fach.appendChild(rauch);
       }
     });

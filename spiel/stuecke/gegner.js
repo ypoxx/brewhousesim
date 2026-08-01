@@ -1347,6 +1347,10 @@
           + (frisch ? ' frisch' : '') + (summe === null ? ' fest' : '');
         s.setAttribute('data-zug', 'gegner:abloesen:' + k);
         s.setAttribute('data-adr', k);
+        /* Das Preisschild gehoert an die Sache im Bild, nicht nur ins Blatt —
+           der Kritiker zaehlt Optionen mit Preis NEBENEINANDER, und die
+           liegen hier: an vier Giebeln gleichzeitig, aus einer Kasse. */
+        if (summe !== null) s.setAttribute('data-preis', String(-summe));
         s.title = a.name + ' · ' + m.name + ' des ' + nameVon(h) + ', laeuft bis ' + b.bis
           + '. ' + m.loest + (summe === null ? '' : ' Abloesung: ' + B.welt.geld(summe) + '.');
         s.appendChild(svg(b.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
@@ -1370,6 +1374,7 @@
         p.className = 'gg-wimpel gg-' + stamm(w.wer).farbe;
         p.setAttribute('data-zug', 'gegner:zuvorkommen:' + k);
         p.setAttribute('data-adr', k);
+        p.setAttribute('data-preis', String(-w.preis));
         p.title = nameVon(haus(w.wer)) + ' wirbt um ' + a.name + ' mit ' + mw.name
           + '. In ' + rest + ' Wochen ist die Bindung da, ohne dass du etwas tust. '
           + 'Jetzt zuvorkommen: ' + B.welt.geld(w.preis) + '.';
