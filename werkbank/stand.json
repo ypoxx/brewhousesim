@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T19:17:07+00:00",
+ "stand": "2026-08-01T20:20:20+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -476,6 +476,10 @@
   {
    "zeit": "2026-08-01T19:17:07+00:00",
    "text": "AUFSICHT (17-20) nach der Glaettung: (17) EICHUNG MICHAELI - am Michaelitag muss die Barschaft in jeder Epoche mindestens das ZWEITBILLIGSTE Angebot decken, in jedem der ersten fuenf Braujahre; umgesetzt von der FUHRE (die Woche vor Michaeli darf nicht mehr fordern als sie einbringt), NICHT durch billigere Angebote. (18) Der Nenner der zweiten Latte ist der billigste Zug, der die LAGE DES HAUSES aendert - nicht der billigste Knopf; ein Umtrunk fuer 9 Pf gehoert nicht hinein. (19) 'Deckung' behaelt der Kern, DER NAME benennt seinen Balken um. (20) DER PREIS liest welt.haus.rufAufschlag."
+  },
+  {
+   "zeit": "2026-08-01T20:20:20+00:00",
+   "text": "DIE STADT: Runde 6 laeuft. DAS LOT steht — stuecke/stadt-zusatz.js misst bei jedem Zeichnen je Aufbau 24 Fusspunkte gegen die Mauerlinie; ?boden=1 legt Linie, Torfeld und Punkte ins Bild. Kueferei runter vom Hoftor in die Hoftasche, Brunnen neu gezeichnet und je Epoche gestaffelt (Kranz 4,1 m -> 1,8 m), Betonfuss von 1970 vom Torbogen auf den Hofbeton. 44 von 44 stehen auf ihrem Boden."
   }
  ]
 }
