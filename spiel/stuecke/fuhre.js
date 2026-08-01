@@ -1454,9 +1454,9 @@
        Pfennig, keinen Rohstoff und keinen Tag der Jahresverleihung: nur die
        Pfanne. Deshalb steht er hier in einer eigenen, mageren Zeile und
        nicht zwischen den drei Bieren des Hauses. */
-    var ns = notSorte();
+    var ns = notSorte(), nz = null;
     if (ns) {
-      var nz = B.el('div', 'fu-notsud' + (Z.notsud ? ' laeuft' : ''));
+      nz = B.el('div', 'fu-notsud' + (Z.notsud ? ' laeuft' : ''));
       var nk = B.el('div', 'fu-notsud-kopf');
       nk.appendChild(B.el('i', 'fu-zeichen', ns.zeichen));
       nk.appendChild(B.el('b', null, ns.name));
@@ -1481,9 +1481,12 @@
         tu: function () { stelleTafel(ns, +1, 0); }
       }));
       nz.appendChild(nstell);
-      tab.appendChild(nz);
     }
     b.appendChild(tab);
+    /* Der Notsud haengt UNTER der Sortenliste, nicht darin: die Liste darf
+       bei vier Sorten und schmalem Brett rollen, der Weg aus der leeren
+       Kasse darf das nie. Er steht immer im Bild. */
+    if (nz) b.appendChild(nz);
 
     if (Z.sudMeldung) b.appendChild(B.el('div', 'fu-sudmeldung', Z.sudMeldung));
 
