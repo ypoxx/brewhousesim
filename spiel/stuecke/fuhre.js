@@ -2640,7 +2640,10 @@
     bl.setAttribute('role', 'dialog');
     bl.setAttribute('aria-modal', 'true');
     bl.setAttribute('aria-label', 'Georgi ' + s.jahr);
-    bl.appendChild(B.el('h2', null, 'Georgi ' + s.jahr + ' — die Tafel ist gewischt'));
+    /* Das Blatt liegt zwischen den beiden Zinstagen und heisst deshalb nach
+       beiden: zu Georgi wird die Tafel gewischt, zu Michaeli wird gerechnet
+       und neu angeschrieben. */
+    bl.appendChild(B.el('h2', null, 'Von Georgi ' + s.jahr + ' bis Michaeli — der Sommer und der Zahltag'));
     bl.appendChild(B.el('div', 'fu-satz', e.sommerSatz));
     bl.appendChild(B.el('div', 'fu-satz stark',
       'Der Aprilbestand: ' + B.welt.menge(s.april) + '. Davon sommerfest: '
