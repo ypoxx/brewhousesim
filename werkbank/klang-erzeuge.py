@@ -190,7 +190,7 @@ def main():
     unbekannt = [w for w in wunsch if w not in alle]
     if unbekannt:
         sys.exit("unbekannt: " + " ".join(unbekannt))
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
         for name, wort in pool.map(baue, wunsch):
             print(f"{name:14s} {wort}", flush=True)
 
