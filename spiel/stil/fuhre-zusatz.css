@@ -63,7 +63,11 @@
 .fu-tafel .fu-knappheit b { font-size: calc(var(--s) * 14); }
 .fu-tafel .fu-knappheit span { font-size: calc(var(--s) * 14); line-height: 1.2; }
 .fu-tafel .fu-kaeufe { gap: calc(var(--s) * 4); }
-.fu-tafel .fu-kaeufe .knopf { flex: 1 1 calc(var(--s) * 195); }
+/* Die Kaufknoepfe der Tafel duerfen umbrechen. Sonst stapelt sich in 1884
+   jeder der fuenf Knoepfe auf eine eigene Zeile, und die Sortenliste
+   darueber wird dafuer aufgefressen. */
+.fu-tafel .fu-kaeufe .knopf { flex: 1 1 calc(var(--s) * 185); }
+.fu-tafel .fu-kaeufe .knopf .wort { white-space: normal; line-height: 1.12; }
 .fu-tafel .fu-stell .knopf,
 .fu-tafel .fu-kaeufe .knopf { min-height: calc(var(--s) * 30); padding: calc(var(--s) * 3) calc(var(--s) * 9); }
 .fu-tafel .fu-kaeufe .knopf .wort { font-size: calc(var(--s) * 15); }
