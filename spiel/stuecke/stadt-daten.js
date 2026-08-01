@@ -160,13 +160,13 @@ var STADT_DATEN = {
       nutzen: { sud: 1 } },
 
     { schluessel: 'fasslager_holz', name: 'Fassschuppen', bild: 'fasslager_holz',
-      ort: 'fasslager', dx: 3, dy: -2.5, breite: 14, von: 1, bis: 1, grund: 22,
+      ort: 'fasslager', dx: 4, dy: -3, breite: 14, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach über den Fässern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
     { schluessel: 'keller_gewoelbe', name: 'Gewölbekeller', bild: 'keller_gewoelbe',
-      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 15, 2: 11 },
-      versatz: { 1: { dx: 6, dy: -1.5 }, 2: { dx: 1, dy: -6.5 } },
+      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 12, 2: 11 },
+      versatz: { 1: { dy: -7.5 }, 2: { dx: 1, dy: -6.5 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
