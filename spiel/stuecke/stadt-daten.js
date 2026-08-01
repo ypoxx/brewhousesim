@@ -160,7 +160,7 @@ var STADT_DATEN = {
       nutzen: { sud: 1 } },
 
     { schluessel: 'fasslager_holz', name: 'Fassschuppen', bild: 'fasslager_holz',
-      ort: 'fasslager', dx: 8, dy: 2, breite: 14, von: 1, bis: 1, grund: 22,
+      ort: 'fasslager', dx: 2, dy: -2, breite: 14, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach ueber den Faessern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
@@ -204,7 +204,7 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 40 } },
 
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 8, dy: 2, breite: 14, breiten: { 2: 10.1 },
+      ort: 'fasslager', dx: 2, dy: -2, breite: 14, breiten: { 2: 10.1 },
       versatz: { 2: { dx: 4, dy: -8 } },
       von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat waechst, der Schwund faellt.',
@@ -293,7 +293,7 @@ var STADT_DATEN = {
       nutzen: {}, wirkt: 'drei Lastzuege gleichzeitig' },
 
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'fasslager', dx: 8, dy: 2, breite: 13.5, von: 4, bis: 4, grund: 70,
+      ort: 'fasslager', dx: 2, dy: -2, breite: 13.5, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
