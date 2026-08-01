@@ -186,3 +186,27 @@
   border-radius: calc(var(--s) * 2);
   box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 6) rgba(30, 26, 16, 0.5);
 }
+
+/* --------------------------------------------------------------------------
+   5 — DIE REITERZEILE HAELT MEHR REITER   (Runde 5)
+
+   Der geschlossene Rahmen bringt zwei bis drei Bretter mehr an die Werkbank —
+   DER NAME aus ebene-kopf und die grossen Ortsmarken, die keine waren. Bei
+   248 Bezugspixeln Mindestbreite passten sieben Reiter nicht mehr in die
+   Zeile, der letzte lief unter das Brett des naechsten Zuges. Sie schrumpfen
+   deshalb mit: der Name des Bretts steht mit Auslassungspunkten, die Zahl
+   darunter bleibt vollstaendig, und die Zeile bleibt EINE Zeile — sonst
+   waechst die Werkbank nach oben ins Stadtfenster.
+   -------------------------------------------------------------------------- */
+
+.stadt-reiterzeile { gap: calc(var(--s) * 5); }
+
+.knopf.stadt-reiter {
+  min-width: calc(var(--s) * 150);
+  max-width: calc(var(--s) * 300);
+  flex: 1 1 auto;
+  padding-left: calc(var(--s) * 10);
+  padding-right: calc(var(--s) * 10);
+}
+
+.knopf.stadt-reiter .wort { letter-spacing: calc(var(--s) * 1.4); }
