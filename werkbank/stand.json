@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T15:46:19+00:00",
+ "stand": "2026-08-01T15:47:50+00:00",
  "phase": "Welle 1 laeuft · Welle 2 begonnen",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -53,6 +53,12 @@
    "status": "laeuft",
    "runde": 1,
    "luecke": "Latte 3 ist zum ersten Mal messbar: werkbank/hoerer.py, blind vorgeprueft — 1350 und 1970 mit 95 Prozent richtig erkannt."
+  },
+  {
+   "name": "DER NAME — warum jemand mehr zahlt, als das Bier wert ist",
+   "status": "laeuft",
+   "runde": 1,
+   "luecke": "Gestartet, nachdem DER PREIS bestanden hat und die Lastzahl von 6,6 auf 1,4 gefallen war. Zustaendigkeit 14 ist vorab geklaert."
   }
  ],
  "chronik": [
@@ -303,6 +309,10 @@
   {
    "zeit": "2026-08-01T15:46:19+00:00",
    "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 4 · läuft — Runde 4 laeuft"
+  },
+  {
+   "zeit": "2026-08-01T15:47:50+00:00",
+   "text": "AUFSICHT — DER NAME gestartet (Welle 2, zweites Stueck). Die Latte: ein Ruf ist langsam zu bauen und schnell zu verlieren, und solange man ihn hat, darf man teurer sein als der Nachbar bei gleichem Bier. Vier verschiedene Traeger-Medien, nicht viermal dasselbe Brett: Bierzeiger und Zunftzeichen / Wirtshausschild und Krug / Etikett, Plakat, Litfasssaeule / Kronkorken, Bandenwerbung, Fernsehspot. Der Pruefer muss den Ruf in ZWEI Zustaenden desselben Spiels belegen - aufgebaut und verspielt -, nicht behaupten. DER NAME schreibt keinen Preis, er setzt einen Ruf; DER PREIS liest ihn. Kein neues Geld aus der Kasse: der 18-Prozent-Deckel bleibt."
   }
  ]
 }
