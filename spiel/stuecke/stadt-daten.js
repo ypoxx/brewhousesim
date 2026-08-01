@@ -26,7 +26,7 @@ var STADT_DATEN = {
       sagt: 'Ein Haus, eine offene Pfanne ueber offenem Feuer, ein Braurecht. '
           + 'Die Mauer ist neu und geschlossen, ueber den Fluss fuehrt ein Holzsteg.',
       stand: ['pfanne', 'malzboden', 'brunnen', 'fasslager_holz'],
-      schild: { dx: 6.6, dy: 1.2, breite: 6.2, dreh: -3, klein: true }
+      schild: { dx: 5.6, dy: 5.4, breite: 6.2, dreh: -3, klein: true }
     },
     2: {
       jahr: 1600, name: 'Die Ordnung',
@@ -35,7 +35,7 @@ var STADT_DATEN = {
           + 'hat den Spitzhelm, ueber den Fluss geht ein Steinbogen. Keine Bahn.',
       stand: ['pfanne', 'malzboden', 'brunnen', 'darre', 'fasslager_stein',
               'kueferei', 'keller_gewoelbe'],
-      schild: { dx: 0.2, dy: -3.0, breite: 7.6, dreh: -5 }
+      schild: { dx: 5.4, dy: 5.2, breite: 7.6, dreh: -5 }
     },
     3: {
       jahr: 1884, name: 'Die Maschine',
@@ -44,7 +44,7 @@ var STADT_DATEN = {
           + 'die Konkurrenz sitzt jenseits des Flusses.',
       stand: ['schornstein', 'gaertanks', 'eiskeller', 'fasslager_stein',
               'brunnen', 'laderampe', 'maschinenhaus'],
-      schild: { dx: 0.4, dy: -3.2, breite: 8.0, dreh: -5 }
+      schild: { dx: 5.4, dy: 5.4, breite: 8.0, dreh: -5 }
     },
     4: {
       jahr: 1970, name: 'Die Marke',
@@ -53,7 +53,7 @@ var STADT_DATEN = {
           + 'Gruenanlage. Der Schornstein von 1884 steht noch und raucht nicht mehr.',
       stand: ['schornstein', 'abfuellhalle', 'stahltanks', 'kastenlager',
               'eiskeller', 'verladedock'],
-      schild: { dx: 0.4, dy: -2.6, breite: 6.6, dreh: -4, hell: true }
+      schild: { dx: 5.4, dy: 4.8, breite: 6.6, dreh: -4, hell: true }
     }
   },
 
