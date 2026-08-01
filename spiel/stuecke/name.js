@@ -1050,22 +1050,68 @@
     band.appendChild(balken('Bekanntheit', Z.bekannt, e.deckel, 'nm-bekannt', zielBekannt()));
     band.appendChild(balken('Deckung', Z.deckung, 100, 'nm-deckung'));
 
-    /* Die Behauptung des Stuecks, als Zahl auf dem Schirm. */
+    /* ----------------------------------------------------------------
+       DIE BEHAUPTUNG DES STUECKS — und daneben, was sie eingebracht hat.
+       In Runde 1 stand hier nur die Behauptung. Sie stimmt jetzt, weil
+       DER NAME das Aufgeld selbst einnimmt; und was er NICHT kann — den
+       Grundpreis je Fass heben —, steht durchgestrichen daneben.
+       ---------------------------------------------------------------- */
     var v = preisVergleich();
     var satz = B.el('div', 'nm-satz');
+    satz.setAttribute('data-aufgeld-jahr', Z.aufgeldJahr);
+    satz.setAttribute('data-aufgeld-gesamt', Z.aufgeldGesamt);
     if (v) {
       satz.appendChild(B.el('span', 'nm-satzkopf',
         'Gleiches Bier, 100 ' + v.einheit + ', zwei Preise'));
       var zeile = B.el('div', 'nm-preise');
-      zeile.appendChild(B.el('span', 'nm-ohne', 'ohne Namen ' + geld(v.ohne)));
-      zeile.appendChild(B.el('span', 'nm-mit', 'unter dem Anker ' + geld(v.mit)));
+      zeile.appendChild(B.el('span', 'nm-ohne', 'Rechnung der Fuhre ' + geld(v.ohne)));
+      zeile.appendChild(B.el('span', 'nm-mit', 'mit dem Aufgeld ' + geld(v.mit)));
       satz.appendChild(zeile);
       satz.appendChild(B.el('span', 'nm-klein', '+ ' + B.zahl(aufschlag() * 100, 1)
         + ' im Hundert · ' + geld(v.mit - v.ohne) + ' mehr für dasselbe Fass Bier'
-        + ' · welt.haus.rufAufschlag'));
-    } else {
-      satz.appendChild(B.el('span', 'nm-klein', 'Der Aufschlag liegt in welt.haus.rufAufschlag.'));
+        + (Z.ruhe || !versprechen()
+          ? ' — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht.'
+          : '')));
     }
+
+    /* Was WIRKLICH eingegangen ist. Drei Zahlen, die ein Fremder gegen den
+       Kassenstand halten kann. */
+    var kasten = B.el('div', 'nm-aufgeld');
+    kasten.appendChild(B.el('span', 'nm-satzkopf', epd().aufgeldWort.toUpperCase()
+      + ' — was der Ruf wirklich eingebracht hat'));
+    var reiheG = B.el('div', 'nm-geldreihe');
+    [['diese Woche', Z.aufgeldWoche], ['Braujahr', Z.aufgeldJahr],
+     ['seit ' + epd().jahr, Z.aufgeldEpoche]].forEach(function (p) {
+      var s = B.el('span', 'nm-geldpost' + (p[1] > 0 ? ' an' : ''));
+      s.appendChild(B.el('i', null, p[0]));
+      s.appendChild(B.el('b', null, (p[1] > 0 ? '+' : '') + geld(p[1])));
+      reiheG.appendChild(s);
+    });
+    kasten.appendChild(reiheG);
+    if (Z.aufgeldZuletzt) {
+      var l = Z.aufgeldZuletzt;
+      kasten.appendChild(B.el('span', 'nm-klein', 'zuletzt ' + l.jahr + ', W' + l.woche
+        + ': ' + geld(l.betrag) + ' auf ' + geld(l.rechnung) + ' an ' + l.wohin
+        + ' · ' + B.zahl(l.satz * 100, 1) + ' im Hundert bei Ruf ' + l.ruf));
+    } else {
+      kasten.appendChild(B.el('span', 'nm-klein',
+        'Noch nichts. Das Aufgeld fällt beim Ausliefern an — eine Fuhre, und es steht hier.'));
+    }
+    /* Ehrlich ausgewiesen, was dieses Stueck NICHT kann. */
+    var offen = B.el('div', 'nm-klein nm-offen');
+    var durch = B.el('s', null, 'und einen höheren Grundpreis je Fass');
+    offen.appendChild(durch);
+    offen.appendChild(document.createTextNode(preisLiestSelbst()
+      ? ' — DER PREIS liest welt.haus.rufAufschlag jetzt selbst; DER NAME bucht nicht mehr.'
+      : ' — den schreibt DER PREIS, und er liest welt.haus.rufAufschlag noch nicht.'
+        + ' Solange bucht DER NAME das Aufgeld selbst, Zeile für Zeile.'));
+    kasten.appendChild(offen);
+    kasten.appendChild(B.knopf({
+      text: 'Das Aufgeld nachrechnen', zug: 'name:aufgeldbuch', klasse: 'nm-knopf nm-klein-knopf',
+      titel: 'Jede einzelne Buchung mit Datum, Adresse, Rechnung und Satz.',
+      tu: function () { zeigeBlatt('aufgeld'); }
+    }));
+    satz.appendChild(kasten);
     band.appendChild(satz);
 
     /* DIE KLEMME. Nur wenn sie wirklich zubeisst — sonst nagt sie nicht. */
@@ -1329,6 +1375,57 @@
     blatt.appendChild(liste);
   }
 
+  /* ------------------------------------------------------------------
+     DER REITER DAS AUFGELD — die Nachrechnung. Hier kann ein Fremder
+     Zeile fuer Zeile pruefen, dass der Ruf Geld bewegt: Datum, Adresse,
+     Rechnung der FUHRE, Satz, Betrag. Und die Summe daneben.
+     ------------------------------------------------------------------ */
+  function reiterAufgeld(blatt) {
+    var ab = B.el('div', 'nm-abschnitt');
+    ab.appendChild(B.el('h3', null, epd().aufgeldWort + ' — was der Ruf einbringt'));
+    ab.appendChild(B.el('p', 'nm-p', epd().aufgeldSatz
+      + ' Der Satz ist Ruf ÷ 100 mal ' + B.zahl(epd().aufschlag * 100, 0)
+      + ' im Hundert, der Höchstsatz dieser Epoche. Wer ein Zeichen an seiner Tür '
+      + 'hat, zahlt mehr; wer schlecht über das Haus redet, weniger; und solange '
+      + 'das Zeichen verdeckt ist, zahlt niemand etwas.'));
+    ab.appendChild(B.el('p', 'nm-p nm-offen',
+      'DER NAME schreibt keinen Preis. Den Grundpreis je Fass setzt DER PREIS; '
+      + 'das Aufgeld darauf bucht DER NAME hier selbst, mit welt.nimm(), unter '
+      + 'eigenem Namen. Sobald DER PREIS welt.haus.rufAufschlag liest, hört das '
+      + 'hier auf — damit nichts zweimal in der Kasse steht.'));
+    blatt.appendChild(ab);
+
+    var summe = B.el('div', 'nm-summen');
+    [['diese Woche', Z.aufgeldWoche], ['dieses Braujahr', Z.aufgeldJahr],
+     ['seit ' + epd().jahr, Z.aufgeldEpoche], ['über alle Epochen', Z.aufgeldGesamt]]
+      .forEach(function (p) {
+        var s = B.el('div', 'nm-summe');
+        s.appendChild(B.el('i', null, p[0]));
+        s.appendChild(B.el('b', null, geld(p[1])));
+        summe.appendChild(s);
+      });
+    blatt.appendChild(summe);
+
+    var liste = B.el('div', 'nm-register nm-buch rolle');
+    if (!Z.buch.length) {
+      liste.appendChild(B.el('div', 'zeile',
+        'Noch keine Buchung. Es fällt an, sobald eine Fuhre ankommt und das Zeichen '
+        + 'dabei zu sehen ist.'));
+    }
+    Z.buch.slice().reverse().forEach(function (e) {
+      var z = B.el('div', 'zeile nm-zeile gut');
+      z.appendChild(B.el('span', 'wann', e.jahr + ', W' + e.woche));
+      var was = B.el('span', 'was');
+      was.appendChild(B.el('i', 'nm-wer', e.wohin));
+      was.appendChild(document.createTextNode(' — Rechnung ' + geld(e.rechnung)
+        + ' · Satz ' + B.zahl(e.satz * 100, 1) + ' im Hundert · Ruf ' + e.ruf));
+      z.appendChild(was);
+      z.appendChild(B.el('span', 'zahl', '+' + B.zahl(e.betrag)));
+      liste.appendChild(z);
+    });
+    blatt.appendChild(liste);
+  }
+
   function zeichneBlatt() {
     var f = B.ebene('blatt', ICH);
     B.leere(f);
@@ -1342,11 +1439,13 @@
     links.appendChild(B.el('h2', null, 'Das Zeichen des Hauses · ' + jahr()));
     links.appendChild(B.el('div', 'nm-unterzeile',
       'Ruf ' + ruf() + ' · Bekanntheit ' + Math.round(Z.bekannt) + ' von ' + epd().deckel
-      + ' · Deckung ' + Math.round(Z.deckung) + ' · Keller-Güte ' + guete()));
+      + ' · Deckung ' + Math.round(Z.deckung) + ' · Keller-Güte ' + guete()
+      + ' · Aufgeld dieses Braujahr ' + geld(Z.aufgeldJahr)));
     kopf.appendChild(links);
 
     var reiter = B.el('div', 'nm-reiter');
-    [['zeichen', 'DAS ZEICHEN'], ['register', 'DAS REGISTER (' + Z.register.length + ')']]
+    [['zeichen', 'DAS ZEICHEN'], ['register', 'DAS REGISTER (' + Z.register.length + ')'],
+     ['aufgeld', 'DAS AUFGELD (' + B.zahl(Z.aufgeldGesamt) + ')']]
       .forEach(function (r) {
         reiter.appendChild(B.knopf({
           text: r[1], zug: 'name:reiter:' + r[0],
@@ -1363,6 +1462,7 @@
 
     var koerper = B.el('div', 'nm-koerper rolle');
     if (Z.blatt === 'register') reiterRegister(koerper);
+    else if (Z.blatt === 'aufgeld') reiterAufgeld(koerper);
     else reiterZeichen(koerper);
     blatt.appendChild(koerper);
 
