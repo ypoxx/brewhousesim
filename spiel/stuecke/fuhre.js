@@ -1999,7 +1999,11 @@
     b.appendChild(gitter);
 
     var fuss = B.el('div', 'fu-kellerfuss');
-    fuss.appendChild(B.el('span', null, 'Fassplätze: ' + Z.faesser + ' eigene · '
+    /* GLAETTUNG WELLE 1: Das hiess "Fassplätze: 22 eigene", waehrend zwei
+       Zeilen darueber "4 von 12 Fass" stand — zwei verschiedene Zahlen unter
+       demselben Wort. Gemeint sind hier die FAESSER des Hauses (Gebinde),
+       nicht die Plaetze im Keller. Also heisst es jetzt so. */
+    fuss.appendChild(B.el('span', null, 'Fässer des Hauses: ' + Z.faesser + ' eigene · '
       + f.length + ' gefüllt · ' + Z.draussen + ' beim Wirt · ' + fassplaetzeFrei() + ' leer'));
     if (e.eis) {
       var eis = B.el('span', 'fu-eis' + (Z.eis <= 2 ? ' knapp' : ''));
