@@ -13,10 +13,14 @@
   pointer-events: none;
 }
 
+/* Oben links. Nicht aus Geschmack: der ganze untere Streifen ist in allen
+   vier Epochen von BAUHOF und der Reiterleiste belegt, und ein Schalter, der
+   unter einem fremden Blatt liegt, ist kein Schalter. Oben links ist in
+   1350, 1600, 1884 und 1970 Himmel. */
 .knopf.klang-schalter {
   position: absolute;
-  left: 1.6%;
-  top: 95.4%;
+  left: 1.2%;
+  top: 3.6%;
   transform: translateY(-50%);
   pointer-events: auto;
 
