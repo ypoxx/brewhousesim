@@ -435,8 +435,20 @@
     var fach = pflockfach();
     B.leere(fach);
 
+    /* Zwei Stuecke duerfen dieselbe Adresse bespielen — DIE FUHRE haengt ihre
+       Mahnkerbe an den Marktplatz, DER GEGNER seinen Ausschank auch. Zwei
+       Pfloecke auf demselben Punkt decken einander, und der untere ist mit
+       der Maus nicht mehr erreichbar (Playwright: "subtree intercepts pointer
+       events"). Deshalb faechern gleiche Orte auf. */
+    var jeOrt = {};
+    liste.forEach(function (m) { jeOrt[m.ort] = (jeOrt[m.ort] || 0) + 1; });
+    var lauf = {};
+
     liste.forEach(function (m) {
       if (!m.ort || !B.orte.da(m.ort)) return;
+      var n = jeOrt[m.ort] || 1;
+      var i = (lauf[m.ort] = (lauf[m.ort] || 0) + 1) - 1;
+      var faecher = (n > 1) ? (i - (n - 1) / 2) * 1.15 : 0;
       var p = B.knopf({
         text: m.wort,
         zug: 'stadt:marke:' + m.schluessel.replace(/[^a-z0-9]+/gi, '-').toLowerCase(),
@@ -453,7 +465,7 @@
       p.addEventListener('mouseleave', function () {
         if (markenLage[m.schluessel] === 'ruht') m.el.classList.add(MRUHT);
       });
-      B.orte.setze(p, m.ort, { anker: 'mitte' });
+      B.orte.setze(p, m.ort, { anker: 'mitte', dx: faecher });
       fach.appendChild(p);
     });
   }
