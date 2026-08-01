@@ -183,10 +183,10 @@
    war der halbe Befund des Kritikers; das hier ist die andere Haelfte. */
 .stadt-gestell .fuss {
   position: absolute;
-  left: 12%;
-  right: 12%;
+  left: 28%;
+  right: 28%;
   bottom: 0;
-  height: calc(var(--s) * 11);
+  height: calc(var(--s) * 9);
   background:
     linear-gradient(180deg, #e4dfd2 0%, #cfc8b7 34%, #9b9484 36%, #7d7768 100%);
   border-radius: calc(var(--s) * 1.5);
@@ -200,10 +200,10 @@
 .stadt-gestell .fuss::after {
   content: "";
   position: absolute;
-  left: -18%;
-  right: -6%;
+  left: -55%;
+  right: -25%;
   bottom: calc(var(--s) * -3);
-  height: calc(var(--s) * 8);
+  height: calc(var(--s) * 7);
   border-radius: 50%;
   background: radial-gradient(ellipse at 50% 50%,
     rgba(38, 30, 18, 0.42) 0%, rgba(38, 30, 18, 0.22) 55%, rgba(38, 30, 18, 0) 100%);
