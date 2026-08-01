@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T14:47:08+00:00",
+ "stand": "2026-08-01T14:50:30+00:00",
  "phase": "Welle 1 laeuft · Welle 2 begonnen",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -235,6 +235,10 @@
   {
    "zeit": "2026-08-01T14:46:54+00:00",
    "text": "AUFSICHT — DER KLANG gestartet (Welle 2). Das fremde Ohr ist gebaut und vorgeprueft: es erkannte 1350 und 1970 blind mit 95 Prozent und ruegte ungefragt den Synthwave als anachronistisch fuer 1970 und den Kathedralenhall als unpassend fuer einen Hof. Die Tonlatte ist damit zum ersten Mal seit dem ersten Tag wirklich messbar."
+  },
+  {
+   "zeit": "2026-08-01T14:50:30+00:00",
+   "text": "KLANG: Runde 1 begonnen. 33 Tonproben (4 Musikbetten, 4 Hofbetten, 25 Vorgangsgeraeusche) werden mit gen_audio.py erzeugt; Werkzeug dafuer: werkbank/klang-erzeuge.py. Parallel entsteht die echte Wiedergabe in kern/ton.js."
   }
  ]
 }
