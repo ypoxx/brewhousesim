@@ -1327,9 +1327,28 @@
     fach.appendChild(m);
   }
 
+  /* Zwei Wirtshaeuser koennen im Bild dicht beieinanderliegen — die Muehle
+     und die obere Bruecke sind einen Prozentpunkt auseinander. Dann darf das
+     eine Schild nicht auf dem anderen liegen: gestapelt wird nach oben, in
+     der festen Reihenfolge der Adressliste, also in jeder Woche gleich. */
+  function schildVersatz() {
+    var belegt = {}, karte = {};
+    offeneAdressen().forEach(function (a) {
+      var o = B.orte.hole(a.ort);
+      if (!o) return;
+      var feld = Math.round(o.x / 5) + '/' + Math.round(o.y / 5);
+      var n = belegt[feld] || 0;
+      belegt[feld] = n + 1;
+      karte[a.schluessel] = n * -3.6;
+    });
+    return karte;
+  }
+
   /* --- Schilder und Wimpel an den Wirtshaeusern ------------------------- */
   function zeichneAdressen(fach) {
+    var versatz = schildVersatz();
     offeneAdressen().forEach(function (a) {
+      var hoch = -3.6 + (versatz[a.schluessel] || 0);
       var k = a.schluessel;
       var b = Z.bindung[k];
       var w = Z.werbung[k];
@@ -1360,7 +1379,7 @@
           ? 'nicht abloesbar' : 'abloesen ' + B.welt.geld(summe)));
         s.appendChild(txt);
         if (summe !== null && !B.welt.kann(summe)) s.classList.add('zuteuer');
-        B.orte.setze(s, a.ort, { anker: 'unten', dy: -3.6 });
+        B.orte.setze(s, a.ort, { anker: 'unten', dy: hoch });
         s.addEventListener('click', function () { loeseAb(k); });
         fach.appendChild(s);
         return;
@@ -1383,7 +1402,7 @@
         pt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(w.preis)));
         p.appendChild(pt);
         if (!B.welt.kann(w.preis)) p.classList.add('zuteuer');
-        B.orte.setze(p, a.ort, { anker: 'unten', dy: -3.6 });
+        B.orte.setze(p, a.ort, { anker: 'unten', dy: hoch });
         p.addEventListener('click', function () { zuvorkommen(k); });
         fach.appendChild(p);
         return;
@@ -1393,11 +1412,11 @@
       if (frisch && wechsel.an === 'haus') {
         var g = B.el('div', 'gg-gewonnen', 'zurueckgeholt — unser Haus');
         g.title = a.name + ' ist wieder gebunden. Vier Jahre lang ruehrt er die Adresse nicht an.';
-        B.orte.setze(g, a.ort, { anker: 'unten', dy: -3.6 });
+        B.orte.setze(g, a.ort, { anker: 'unten', dy: hoch });
         fach.appendChild(g);
       } else if (frisch && !wechsel.an) {
         var f = B.el('div', 'gg-frei', 'frei geworden');
-        B.orte.setze(f, a.ort, { anker: 'unten', dy: -3.6 });
+        B.orte.setze(f, a.ort, { anker: 'unten', dy: hoch });
         fach.appendChild(f);
       }
     });
