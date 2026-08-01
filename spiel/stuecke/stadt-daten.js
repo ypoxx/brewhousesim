@@ -140,9 +140,9 @@ var STADT_DATEN = {
        also rund 1,3 m. In 1600 ist die Platte weitraeumiger gezeichnet,
        deshalb 6.9 statt 8.2 und ein Schritt nach vorn aus dem Steinhaus. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
-      ort: 'kesselstelle', dx: -1, dy: -1,
-      breite: 8.2, breiten: { 1: 8.2, 2: 6.9 },
-      versatz: { 2: { dx: -1.5, dy: 2.5 } },
+      ort: 'kesselstelle', dx: -9, dy: 5,
+      breite: 8.9, breiten: { 1: 8.9, 2: 6.9 },
+      versatz: { 2: { dy: -4 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne ueber offenem Feuer, daneben Maischbottich und '
           + 'Kuehlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
@@ -184,8 +184,13 @@ var STADT_DATEN = {
       sagt: 'Offene Holzbottiche unter einem Schutzdach. Was hier gaert, ist obergaerig.',
       nutzen: { platz: 4 } },
 
+    /* Der Kuefer im Bild ist ein Mensch, also gilt fuer ihn dieselbe Regel wie
+       fuer die Brauerinnen: bei breite 14 war er 113 px hoch neben einer Magd
+       von 72. Bei 9.9 misst er 80, bei 8.2 in der weitraeumigeren Platte 1600
+       noch 66 — beides die Groesse der Leute, die dort stehen. */
     { schluessel: 'kueferei', name: 'Kueferei', bild: 'kueferei',
-      ort: 'tor', dx: 0, dy: 10, breite: 14, von: 1, bis: 2, grund: 36,
+      ort: 'tor', dx: 0, dy: 10, breite: 9.9, breiten: { 1: 9.9, 2: 8.2 },
+      von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Kuefer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
 
