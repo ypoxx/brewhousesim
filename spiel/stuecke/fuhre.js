@@ -2072,11 +2072,12 @@
       for (var g = 0; g < gruppen && gesetzt < plaetze; g++) {
         var f = l.faesser[g * schritt];
         var s = sorteFass(f);
-        var bett = B.el('i', 'fu-wbett voll s' + s.stufe);
+        var bett = B.el('i', 'fu-wbett voll s' + s.stufe + (l.probe ? ' probe' : ''));
         bett.appendChild(B.el('b', null, kurz(a)));
-        bett.appendChild(B.el('em', null, s.zeichen));
+        bett.appendChild(B.el('em', null, l.probe ? '?' : s.zeichen));
         bett.title = B.welt.menge(Math.min(schritt, l.faesser.length - g * schritt)) + ' '
-          + s.name + ' für ' + a.name + ' (' + a.km + ' km)';
+          + s.name + ' für ' + a.name + ' (' + a.km + ' km)'
+          + (l.probe ? ' — ' + (probeDef() ? probeDef().name : 'auf Probe') + ', ohne Rechnung' : '');
         gitter.appendChild(bett);
         gesetzt++;
       }
@@ -2142,9 +2143,13 @@
     b.appendChild(hilfe);
 
     var lohn = fuhrlohn(), erloes = fuhrerloes();
+    var aufProbe = probenAufDemWagen();
     var ab = B.knopf({
-      text: voll ? 'FUHRE ABSCHICKEN · ' + B.welt.menge(voll) + ' · bringt ' + B.welt.geld(erloes)
-                 : 'FUHRE ABSCHICKEN',
+      text: !voll ? 'FUHRE ABSCHICKEN'
+        : (aufProbe === voll
+            ? 'FUHRE ABSCHICKEN · ' + B.welt.menge(voll) + ' · ohne Rechnung'
+            : 'FUHRE ABSCHICKEN · ' + B.welt.menge(voll) + ' · bringt ' + B.welt.geld(erloes)
+              + (aufProbe ? ' · ' + B.welt.menge(aufProbe) + ' auf Probe' : '')),
       zug: 'fuhre:abschicken', klasse: 'fu-abschicken', preis: lohn ? -lohn : 0,
       aus: !voll,
       titel: voll
@@ -2189,8 +2194,10 @@
     return true;
   }
 
-  /* Liegt die Georgi-Tafel gerade oben? */
-  function sommerLiegtOben() { return !!(Z.sommerOffen && Z.sommer); }
+  /* Liegt die Georgi-Tafel gerade oben? Das Schlussblatt geht vor: wenn das
+     Haus zu ist, ist Georgi keine Frage mehr. */
+  function sommerLiegtOben() { return !!(Z.sommerOffen && Z.sommer && !schlussLiegtOben()); }
+  function schlussLiegtOben() { return !!(Z.schlussOffen && Z.schluss); }
 
   /* Eine Tafel, die oben liegt, muss den Hintergrund WIRKLICH sperren — und
      zwar auch gegen die Tastatur. kern/kopf.js schaltet mit Leertaste und
@@ -2200,6 +2207,24 @@
      stopImmediatePropagation() nimmt ihm die Taste ab, bevor er sie sieht.
      Angemeldet wird genau einmal, im Aufbau. */
   function tastenSperre(ereignis) {
+    /* Das Schlussblatt zuerst: es liegt ueber allem, auch ueber Georgi. */
+    if (schlussLiegtOben()) {
+      if (ereignis.key === 'Escape') {
+        ereignis.preventDefault();
+        ereignis.stopImmediatePropagation();
+        Z.schlussOffen = false;
+        B.sende('zeichne', { grund: 'fuhre-schluss-escape' });
+        return;
+      }
+      if (ereignis.key === ' ' || ereignis.key === 'Enter') {
+        ereignis.stopImmediatePropagation();
+        var eigen0 = ereignis.target && ereignis.target.closest
+          && ereignis.target.closest('.fu-schlussblatt');
+        if (!eigen0) ereignis.preventDefault();
+      }
+      return;
+    }
+
     if (!sommerLiegtOben()) return;
 
     if (ereignis.key === 'Escape') {
