@@ -140,9 +140,9 @@ var STADT_DATEN = {
        also rund 1,3 m. In 1600 ist die Platte weitraeumiger gezeichnet,
        deshalb 6.9 statt 8.2 und ein Schritt nach vorn aus dem Steinhaus. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
-      ort: 'kesselstelle', dx: -9, dy: 5,
+      ort: 'kesselstelle', dx: -12, dy: 7,
       breite: 8.9, breiten: { 1: 8.9, 2: 6.6 },
-      versatz: { 2: { dx: 7, dy: -4 } },
+      versatz: { 2: { dx: 11, dy: -6 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne ueber offenem Feuer, daneben Maischbottich und '
           + 'Kuehlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
