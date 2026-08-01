@@ -404,3 +404,118 @@
 .fu-gen .e { flex: 0 0 auto; font-style: italic; opacity: 0.75; }
 
 .fu-zurueckliste { border-color: var(--fu-gut, #4a6b3a); }
+
+/* ==========================================================================
+   DAS ZIEL — die Zahlungsweise des Braujahres (ZUSTAENDIGKEIT 17)
+
+   Drei Karten nebeneinander auf dem Brett DIE HÄUSER. Sie schliessen
+   einander aus, sie werden zu Michaeli verabredet und gelten dann bis zum
+   naechsten Michaelitag. Solange die Frist laeuft, stehen sie hell; danach
+   liegt ein Siegelton darueber und die Knoepfe sind aus.
+   ========================================================================== */
+.fu-ziel {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+  padding: calc(var(--s) * 6) calc(var(--s) * 8) calc(var(--s) * 7);
+  border: calc(var(--s) * 2) solid rgba(255, 240, 210, 0.26);
+  border-radius: calc(var(--s) * 4);
+  background: rgba(0, 0, 0, 0.14);
+}
+#buehne[data-epoche="4"] .fu-ziel {
+  border-color: rgba(35, 32, 25, 0.22);
+  background: rgba(255, 255, 255, 0.28);
+}
+.fu-ziel-kopf { display: flex; align-items: baseline; gap: calc(var(--s) * 8); }
+.fu-ziel-kopf b {
+  font-size: calc(var(--s) * 19);
+  letter-spacing: calc(var(--s) * 2);
+  white-space: nowrap;
+}
+.fu-ziel-stand {
+  margin-left: auto;
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 16);
+  opacity: 0.85;
+  text-align: right;
+}
+.fu-ziel-satz {
+  font-size: calc(var(--s) * 16);
+  line-height: 1.22;
+  opacity: 0.8;
+}
+.fu-ziel-reihe {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: calc(var(--s) * 5);
+}
+.fu-ziel-karte {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 3);
+  padding: calc(var(--s) * 5) calc(var(--s) * 6) calc(var(--s) * 6);
+  background: var(--fu-feld);
+  color: var(--fu-tinte);
+  border: calc(var(--s) * 2) solid transparent;
+  border-radius: calc(var(--s) * 3);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 7) rgba(0, 0, 0, 0.32);
+}
+.fu-ziel-karte.gewaehlt {
+  border-color: var(--fu-gut);
+  box-shadow: 0 0 0 calc(var(--s) * 2) rgba(74, 107, 58, 0.35),
+              0 calc(var(--s) * 3) calc(var(--s) * 7) rgba(0, 0, 0, 0.32);
+}
+.fu-ziel-name { font-size: calc(var(--s) * 16); line-height: 1.16; }
+.fu-ziel-was {
+  font-size: calc(var(--s) * 15);
+  line-height: 1.18;
+  opacity: 0.78;
+  min-height: calc(var(--s) * 34);
+}
+.fu-ziel-zahlen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 3) calc(var(--s) * 7);
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 15);
+}
+.fu-ziel-zahlen .gut  { color: var(--fu-gut); }
+.fu-ziel-zahlen .schlecht { color: var(--fu-warn); }
+.fu-ziel-karte .knopf { margin-top: auto; }
+.fu-ziel-fuss {
+  font-size: calc(var(--s) * 15);
+  font-family: var(--fu-zahlen);
+  opacity: 0.72;
+}
+.fu-ziel-fest .fu-ziel-karte:not(.gewaehlt) { opacity: 0.62; }
+
+/* --------------------------------------------------------------------------
+   DER UMGANG VOR MICHAELI, auf dem Georgi-Blatt
+   -------------------------------------------------------------------------- */
+.fu-zahltag {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+  border-top: calc(var(--s) * 2) solid var(--linie, rgba(43, 29, 16, 0.25));
+  padding-top: calc(var(--s) * 6);
+}
+.fu-zahltag > b { letter-spacing: calc(var(--s) * 1); font-size: calc(var(--s) * 19); }
+.fu-zahltag-liste { display: flex; flex-direction: column; gap: calc(var(--s) * 2); }
+.fu-zahltag-zeile {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 8);
+  font-size: calc(var(--s) * 17);
+}
+.fu-zahltag-zeile .n { flex: 1 1 auto; }
+.fu-zahltag-zeile .g { flex: 0 0 auto; font-family: var(--mono); font-weight: 700; }
+.fu-zahltag-zeile .a {
+  flex: 0 0 calc(var(--s) * 250);
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  opacity: 0.72;
+  text-align: right;
+}
+.fu-zahltag-zeile .a.schlecht { color: var(--fu-warn, #9d3520); opacity: 1; }
+.fu-zahltag-zeile.angeld .g { color: var(--fu-gut, #4a6b3a); }
