@@ -69,9 +69,17 @@
     wirkung: {},             /* dauerhafte Folgen der eigenen Festlegungen  */
     gegenzugGetan: {},       /* amtszeit-Nr -> true                         */
     angebot: null,           /* IV: das Angebot der Gruppe                  */
-    abschlag: 0,             /* was der Abschlag im letzten Jahr kostete    */
+    abschlag: 0,             /* was der Abschlag im laufenden Jahr kostet   */
     abschlagJe: {},
     abschlagJahr: 0,
+    umsatzJahr: 0,           /* Einnahmen des Hauses im laufenden Braujahr  */
+    abschlagVorjahr: 0,
+    abschlagJeVorjahr: {},
+    beschwerdeJahr: 0,       /* in welchem Jahr zuletzt geklagt wurde       */
+    beschwerdeAusgang: null,
+    zorn: 0,                 /* Wochen, in denen er sicher und gegen DICH zieht */
+    wocheZuege: 0,           /* was seit dem letzten WEITER geschehen ist   */
+    wagenTakt: -99,
     bereit: false
   };
 

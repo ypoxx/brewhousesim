@@ -396,26 +396,43 @@ var GEGNER_DATEN = {
              + 'muss es dem Verbraucher erklaeren. Eingetragen ist eingetragen.',
         chronik: '{name} laesst die Marke eintragen. Der Name gehoert dem Haus, nicht dem Regal.'
       },
+      beschwerde: {
+        k: 'kartellamt', name: 'Anzeige beim Bundeskartellamt',
+        sagt: 'Das Haus schreibt nach Berlin: Exklusivbindung, Ausschluss vom Regal, '
+            + 'Konditionen, die kein Kleiner zahlen kann. Aktenzeichen und Wartezeit.',
+        preis: 'Keine Mark — aber vier Ansehen. Der Einkauf mag keine Lieferanten mit Anwalt.',
+        gelingt: 'Die Beschlussabteilung beanstandet die Bindung am {haus}: zwei Jahre '
+               + 'kuerzer, ein Viertel billiger abzuloesen.',
+        misslingt: 'Das Verfahren wird eingestellt. Der Einkauf hat es erfahren, ehe das Haus es erfuhr.'
+      },
       bauten: [
-        { k: 'drucktanks', name: 'Drucktanks im Freien', preis: 320000, glyph: 'tank' },
-        { k: 'dosenlinie', name: 'Dosenlinie', preis: 480000, glyph: 'halle' },
-        { k: 'keg', name: 'KEG-Reinigung', preis: 210000, glyph: 'maschine' },
-        { k: 'fuhrpark', name: 'Eigener Fuhrpark', preis: 260000, glyph: 'wagen' },
-        { k: 'werbeabteilung', name: 'Werbeabteilung', preis: 140000, glyph: 'schild' },
-        { k: 'labor', name: 'Labor und Qualitaetsstelle', preis: 175000, glyph: 'turm' }
+        { k: 'drucktanks', name: 'Drucktanks im Freien', preis: 320000, glyph: 'tank', spiegel: 'stahltanks',
+          nutzen: 'Er gaert im Freien und braucht keinen Keller mehr dafuer.' },
+        { k: 'dosenlinie', name: 'Dosenlinie', preis: 480000, glyph: 'halle', spiegel: 'abfuellhalle',
+          nutzen: 'Die Dose steht dort im Regal, wo das Fass nie hinkommt.' },
+        { k: 'keg', name: 'KEG-Reinigung', preis: 210000, glyph: 'maschine', spiegel: 'waschhaus',
+          nutzen: 'Sein Fass kommt sauber zurueck und geht am selben Tag wieder raus.' },
+        { k: 'fuhrpark', name: 'Eigener Fuhrpark', preis: 260000, glyph: 'wagen', spiegel: 'verladedock',
+          nutzen: 'Er faehrt selbst und ist nicht auf eine fremde Spedition angewiesen.' },
+        { k: 'werbeabteilung', name: 'Werbeabteilung', preis: 140000, glyph: 'schild', spiegel: 'verwaltung',
+          nutzen: 'Vier Leute, die den ganzen Tag nichts tun, als an seinen Namen zu denken.' },
+        { k: 'labor', name: 'Labor und Qualitaetsstelle', preis: 175000, glyph: 'turm', spiegel: 'kastenlager',
+          nutzen: 'Jede Charge geprueft. Der Einkauf verlangt das Protokoll, und er hat es.' }
       ],
       wagenbild: 'wagen4',
-      hofbild: 'hof4',
+      /* KEIN hofbild: 1970 stehen seine Tanks auf der Platte selbst. */
+      hofsatz: 'Derselbe Fleck wie 1350. Heute Drucktanks im Freien, eine eigene '
+             + 'Ausfahrt zur Bundesstrasse und ein Name, den man aus dem Fernsehen kennt.',
       zuege: [
         { k: 'iv-werben', art: 'werben', gewicht: 22 },
-        { k: 'iv-auslisten', art: 'entreissen', gewicht: 12, mittel: 'listung',
+        { k: 'iv-auslisten', art: 'entreissen', gewicht: 20, mittel: 'listung',
           text: 'Der Einkauf des {haus} listet das Haus aus und nimmt den Adler ins Regal.' },
-        { k: 'iv-wkz', art: 'aufstocken', gewicht: 12,
+        { k: 'iv-wkz', art: 'aufstocken', gewicht: 14,
           text: 'Der Adler erhoeht den Werbekostenzuschuss beim {haus} um {geld}.' },
-        { k: 'iv-bau', art: 'bauen', gewicht: 14 },
-        { k: 'iv-aktion', art: 'preis', gewicht: 12, schritt: 6,
+        { k: 'iv-bau', art: 'bauen', gewicht: 13 },
+        { k: 'iv-aktion', art: 'preis', gewicht: 16, schritt: 6,
           text: 'Aktionspreis beim Adler: {geld} je {einheit}, vier Wochen lang, in jedem Prospekt.' },
-        { k: 'iv-lastzug', art: 'fuhre', gewicht: 17,
+        { k: 'iv-lastzug', art: 'fuhre', gewicht: 6,
           text: 'Ein grauer Lastzug des Adlers faehrt zum {haus}.' },
         { k: 'iv-werbung', art: 'macht', gewicht: 9, marke: 'fernsehen', jahre: 6,
           text: 'Der Adler schaltet einen Werbespot im Abendprogramm. Man kennt den Namen jetzt auch dort, wo er nicht liefert.' },
@@ -440,6 +457,16 @@ var GEGNER_DATEN = {
       ]
     }
   },
+
+  /* Der Deckel aus spiel/ZUSTAENDIGKEIT.md §4: alles, was DER GEGNER dem Haus
+     an BARGELD abpresst, bleibt im Braujahr unter drei vom Hundert des
+     Umsatzes. Was er sonst nimmt — Adressen, Menge, Vorsprung — ist keine
+     Abgabe, sondern verlorenes Geschaeft, und das ist der Sinn der Sache. */
+  abschlagKappe: 0.03,
+
+  /* Wieviele Wochen seine Werbung hoechstens kuerzer wird, wenn er Technik
+     hat, die das Haus nicht hat. */
+  vorsprungKappe: 3,
 
   /* Orte, an denen eine Marke wirklich im Bild steht und nicht hinter einer
      fremden Tafel verschwindet. Der Gegner sucht sich seine Haeuser lieber
