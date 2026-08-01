@@ -422,6 +422,26 @@ var FUHRE_DATEN = {
       monate: ['Mai', 'Juni', 'Juli', 'August', 'September'],
       abgabe: { satz: 0.08, name: 'Biersteuer und Malzaufschlag',
                 sagt: 'Seit 1879 wird das Malz besteuert. Wer mehr einbraut, zahlt mehr.' },
+      ziel: {
+        name: 'Das Kundenkonto', kurz: 'Zahlungsziel', wort: 'Rechnung',
+        satz: 'Die Rechnung läuft, das Bier ist längst getrunken. Der Jahresabschluss '
+            + 'der Wirtschaften fällt auf Michaeli, und danach richtet sich die Kasse.',
+        angeld: 0.045,
+        angeldName: 'Vorauszahlung auf die Winterlieferung',
+        angeldSatz: 'Wer im Winter beliefert werden will, zahlt voraus. Es wird verrechnet.',
+        umgang: 'Der Jahresabschluss der Kundschaft',
+        stufen: [
+          { k: 'bar', name: 'Kasse gegen Skonto', bar: 1.00, durst: 0.74, ausfall: 0,
+            was: 'Bezahlt bei Übergabe, drei Prozent Nachlass.',
+            sagt: 'Das Geld ist sofort da. Der Wirt bestellt dafür knapper.' },
+          { k: 'ziel', name: 'Rechnung auf dreißig Tage', bar: 0.56, durst: 1.00, ausfall: 0.045,
+            was: 'Fakturiert ab Rampe, zahlbar netto Kasse.',
+            sagt: 'Das Übliche im Handel. Ein Rest bleibt immer bis zum Herbst stehen.' },
+          { k: 'borg', name: 'Jahresrechnung zu Michaeli', bar: 0.18, durst: 1.26, ausfall: 0.12,
+            was: 'Ein Konto je Wirtschaft, abgerechnet einmal im Jahr.',
+            sagt: 'Bindet die Wirtschaft ans Haus — und das Haus an einen einzigen Tag.' }
+        ]
+      },
       bannmeile: 0,
       probe: { name: 'Probefass ab Rampe', kurz: 'Probefass',
                satz: 'Ein Muster geht als Frachtgut an den Wirt, unberechnet. '
@@ -511,6 +531,26 @@ var FUHRE_DATEN = {
       abgabe: { satz: 0.08, name: 'Biersteuer und Werbeetat',
                 sagt: 'Steuer nach Ausstoß, Werbung nach Marktanteil am eigenen Ausstoß. '
                     + 'Beides wächst mit dem Haus.' },
+      ziel: {
+        name: 'Die Debitoren', kurz: 'Zahlungsziel', wort: 'Rechnung',
+        satz: 'Zahlungsziel, Bonus, Jahresgespräch: der Handel zahlt schnell und nimmt '
+            + 'sich den Rest am Jahresende zurück. Der Stichtag ist geblieben.',
+        angeld: 0.04,
+        angeldName: 'Vorauszahlung des Handels auf das Winterhalbjahr',
+        angeldSatz: 'Der Einkauf sichert die Menge und zahlt an. Wird verrechnet.',
+        umgang: 'Das Jahresgespräch',
+        stufen: [
+          { k: 'bar', name: 'Bankeinzug bei Lieferung', bar: 1.00, durst: 0.80, ausfall: 0,
+            was: 'Lastschrift mit dem Lieferschein, kein Ziel.',
+            sagt: 'Liquide und unbeliebt: der Einkauf listet dafür weniger.' },
+          { k: 'ziel', name: 'Rechnung, dreißig Tage netto', bar: 0.70, durst: 1.00, ausfall: 0.035,
+            was: 'Zentralregulierung über den Verband.',
+            sagt: 'Das Übliche. Der Bonus wird zum Jahresgespräch abgerechnet.' },
+          { k: 'borg', name: 'Jahresbonus zum Geschäftsjahr', bar: 0.32, durst: 1.22, ausfall: 0.09,
+            was: 'Niedriger Rechnungspreis, alles Weitere im Jahresgespräch.',
+            sagt: 'Die Menge steigt sofort, das Geld kommt im Herbst — wenn es kommt.' }
+        ]
+      },
       probe: { name: 'Aktionspalette ohne Berechnung', kurz: 'Aktionsware',
                satz: 'Gratisware für den Einkauf: eine Palette ohne Rechnung, ohne Listung, '
                    + 'ohne Werbekostenzuschuss. Das Regal gehört immer noch dem Handel — '
