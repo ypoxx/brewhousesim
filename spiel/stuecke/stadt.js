@@ -163,11 +163,18 @@
      Und die zweite Bresche: .amort und data-frei befreiten OHNE OBERGRENZE.
      Deshalb lag gg-band als 936x158 grosses Banner (3,50 %) dauerhaft als
      "Ortsmarke" ueber der Stadt. Eine Ortsmarke ist ein PUNKT im Bild. Was
-     groesser ist als MARKE (1,6 % der Buehne), ist ein Brett — gleichgueltig
+     groesser ist als MARKE (2,4 % der Buehne), ist ein Brett — gleichgueltig
      welche Klasse und welches Attribut daran haengt, und ohne zweite
      Schwelle. Wer sich als Punkt ausgibt und ein Brett ist, hat seine
      Ausnahme verwirkt.
        -> Beide Ausnahmen gelten nur noch unterhalb von MARKE.
+
+     MARKE liegt bei 2,4 % und nicht tiefer, und das ist eine Entscheidung
+     gegen den bequemeren Weg: gg-hof, das Bild des Hofes gegenueber, misst
+     2,19 % und bleibt damit stehen. Es ist ein BILD AN EINEM ORT und keine
+     Tafel — es an die Werkbank zu holen haette den Blindvergleich schlechter
+     gemacht, nicht besser. Was verschwindet, sind die beiden Schrifttafeln,
+     die der Kritiker benannt hat, und nur die.
 
      Damit ist die Ordnung wieder eine Ordnung und keine Liste von Namen:
        bis MARKE   — ein Punkt. Bekommt einen Pflock, ruht beim Laden.
@@ -177,7 +184,7 @@
   var ZU = 'stadt-zugeklappt';
   var FENSTER = { x0: 0, y0: 11.2, x1: 100, y1: 87.5 };
   var GRENZE = 0.035;           /* Anteil der Buehnenflaeche — so gross darf ein Brett ruhen */
-  var MARKE = 0.016;            /* ... und so gross ist eine Ortsmarke hoechstens */
+  var MARKE = 0.024;            /* ... und so gross ist eine Ortsmarke hoechstens */
   /* platte und bau gehoeren dem Bild selbst — alles andere sieht der Rahmen an. */
   var EBENEN = ['marken', 'hand', 'kopf', 'blatt'];
   var TAKT = 240;               /* ms — der Rahmen sieht regelmaessig nach */
