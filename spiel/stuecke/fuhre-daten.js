@@ -212,7 +212,7 @@ var FUHRE_DATEN = {
         name: 'Kerbholz beim Grutherrn', kurz: 'Kerbholz', zeichen: 'Kerbe',
         jeKerbe: 25, kerben: 6,
         satz: 'Der Grutherr schneidet die Kerbe ins Holz und zahlt aus. '
-            + 'Zu Georgi wird geloescht — in Geld, wenn welches da ist.',
+            + 'Zu Georgi wird gelöscht — in Geld, wenn welches da ist.',
         pfand: { was: 'budget', menge: 3,
                  sagt: 'Je offener Kerbe nimmt der Grutherr drei Brautage des neuen Jahres. '
                      + 'Er will kein Geld, er will die Pfanne.' }
@@ -376,7 +376,7 @@ var FUHRE_DATEN = {
       faesser: 260,
       mengenfaktor: 1.6,
       winteranteil: 0.68,
-      sommerSatz: 'Die Kältemaschine koennte im Juli brauen. Der Sommerabsatz kommt '
+      sommerSatz: 'Die Kältemaschine könnte im Juli brauen. Der Sommerabsatz kommt '
                 + 'trotzdem aus dem Lagerkeller — was im April eingelagert ist, ist der Sommer.',
       monate: ['Mai', 'Juni', 'Juli', 'August', 'September'],
       abgabe: { satz: 0.08, name: 'Biersteuer und Malzaufschlag',
@@ -405,7 +405,7 @@ var FUHRE_DATEN = {
       },
       kaeufe: [
         { k: 'eis',      text: 'Eis schneiden · +16 Fuder', basis: 190, staffel: 1.0, menge: 16,
-          titel: 'Nur solange der Fluss trägt. Im Maerz ist damit Schluss, egal wie voll die Kasse ist.' },
+          titel: 'Nur solange der Fluss trägt. Im März ist damit Schluss, egal wie voll die Kasse ist.' },
         { k: 'eiskeller',text: 'Eiskeller vergrößern · +20', basis: 1800, staffel: 1.6, menge: 20,
           titel: 'Mehr Fuder Fassungsraum. Unwiderruflich gebaut.' },
         { k: 'sudwerk',  text: 'Dampfsudwerk · +1 Sud je Woche', basis: 4200, staffel: 1.9, menge: 1,
@@ -425,7 +425,7 @@ var FUHRE_DATEN = {
         { k: 'lager', name: 'Lagerbier', zeichen: 'L', stufe: 2,
           fass: 24, reife: 2, haltbar: 24, preis: 72, kosten: 480, rohstoff: 30, eis: 2,
           sommer: false,
-          satz: 'Zwei Wochen auf Eis. Das Bier, an dem die Kältemaschine haengt.' },
+          satz: 'Zwei Wochen auf Eis. Das Bier, an dem die Kältemaschine hängt.' },
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
           fass: 18, reife: 5, haltbar: 46, preis: 108, kosten: 620, rohstoff: 36, eis: 3,
           sommer: true,

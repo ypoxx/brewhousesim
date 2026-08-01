@@ -226,7 +226,7 @@ var GEGNER_DATEN = {
       },
       beschwerde: {
         k: 'anzeige', name: 'Anzeige bei der Zunftlade',
-        sagt: 'Das Haus lässt den Brief in der Lade oeffnen und den Eintrag verlesen. '
+        sagt: 'Das Haus lässt den Brief in der Lade öffnen und den Eintrag verlesen. '
             + 'Wer zweimal schreibt, hat einmal falsch geschrieben.',
         preis: 'Kein Gulden — aber vier Ansehen bei den Zunftbrüdern, die es nicht gern hören.',
         gelingt: 'Die Lade streicht zwei Jahre aus dem Eintrag am {haus} und lässt ein '

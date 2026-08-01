@@ -246,8 +246,8 @@
   function loeseKerbe() {
     var kh = kerbholz();
     if (!kh || !Z.kerben) return;
-    if (!B.welt.zahle(kh.jeKerbe, 'Eine Kerbe geloescht · ' + kh.name, 'spieler')) {
-      Z.meldung = 'Eine Kerbe zu loeschen kostet ' + B.welt.geld(kh.jeKerbe) + '.';
+    if (!B.welt.zahle(kh.jeKerbe, 'Eine Kerbe gelöscht · ' + kh.name, 'spieler')) {
+      Z.meldung = 'Eine Kerbe zu löschen kostet ' + B.welt.geld(kh.jeKerbe) + '.';
       B.sende('zeichne', { grund: 'fuhre-kerbe' });
       return;
     }
@@ -263,10 +263,10 @@
     if (B.welt.haus.rohstoff < def.menge) return;
     var erloes = Math.max(1, Math.round(def.basis * def.rueck));
     B.welt.haus.rohstoff -= def.menge;
-    B.welt.nimm(erloes, (def.rtext || 'Rohstoff zurueck').split(' ·')[0]
+    B.welt.nimm(erloes, (def.rtext || 'Rohstoff zurück').split(' ·')[0]
       + ' · ' + def.menge + ' ' + (B.welt.epoche().rohstoff || 'Rohstoff'), 'spieler');
     Z.meldung = def.menge + ' ' + (B.welt.epoche().rohstoff || 'Rohstoff')
-      + ' zurueck an den Haendler — ' + B.welt.geld(erloes) + ' bar, '
+      + ' zurück an den Händler — ' + B.welt.geld(erloes) + ' bar, '
       + B.welt.geld(def.basis) + ' hat es gekostet.';
     B.ton.spiele('fuhre:kauf', { ort: 'hof' });
     B.sende('zeichne', { grund: 'fuhre-rueckverkauf' });
@@ -1195,7 +1195,7 @@
     if (kh && Z.kerben > 0) {
       var hatte = Z.kerben, geloescht = 0;
       while (Z.kerben > 0 && B.welt.haus.kasse >= kh.jeKerbe) {
-        B.welt.zahle(kh.jeKerbe, kh.kurz + ': eine Kerbe geloescht', 'spieler');
+        B.welt.zahle(kh.jeKerbe, kh.kurz + ': eine Kerbe gelöscht', 'spieler');
         Z.kerben -= 1;
         geloescht += 1;
       }
@@ -2563,7 +2563,7 @@
       B.ton.melde('sommer:keller-leer', { art: 'schleife', sagt: 'Tropfen im leeren Gewölbe, Fliegen.' });
       B.ton.melde('fuhre:siegel', { art: 'geraeusch', sagt: 'Siegelwachs, Papier, Ratsstube.' });
       B.ton.melde('fuhre:kerbe', { art: 'geraeusch', sagt: 'Ein Messer schneidet eine Kerbe in Holz.' });
-      B.ton.melde('fuhre:kauf', { art: 'geraeusch', sagt: 'Muenzen auf einen Ladentisch.' });
+      B.ton.melde('fuhre:kauf', { art: 'geraeusch', sagt: 'Münzen auf einen Ladentisch.' });
 
       B.ton.melde('fuhre:probe', { art: 'geraeusch', sagt: 'Ein Zapfhahn wird eingeschlagen, Bier läuft in einen Krug.' });
 

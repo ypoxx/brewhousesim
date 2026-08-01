@@ -200,7 +200,7 @@
       W.chronik = [];
       B.protokoll.length = 0;
 
-      W.schreibe('Das Haus ' + W.haus.name + ', gegruendet ' + W.haus.gegruendet
+      W.schreibe('Das Haus ' + W.haus.name + ', gegründet ' + W.haus.gegruendet
         + '. ' + W.zeit.amtszeit.name + ' fuehrt es.', 'anfang');
       return W;
     },
@@ -383,7 +383,7 @@
         sagt: eigen.sagt
       };
       if (!erste) {
-        W.schreibe(W.zeit.amtszeit.name + ' uebernimmt das Haus in ' + jahr
+        W.schreibe(W.zeit.amtszeit.name + ' übernimmt das Haus in ' + jahr
           + '. Man sagt: ' + eigen.sagt, 'erbfall');
         B.sende('erbfall', { amtszeit: W.zeit.amtszeit });
       }

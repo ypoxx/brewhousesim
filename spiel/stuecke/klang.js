@@ -36,7 +36,7 @@
       zug: 'klang:ton',
       klasse: 'klang-schalter' + (an ? (laeuft ? ' klang-an' : ' klang-wartet') : ' klang-aus'),
       titel: !an ? 'Ton ist aus. Klicken schaltet ihn ein.'
-        : (laeuft ? 'Ton laeuft. Klicken schaltet ihn aus.'
+        : (laeuft ? 'Ton läuft. Klicken schaltet ihn aus.'
           : 'Ton ist bereit — der Browser gibt ihn beim ersten Klick frei.'),
       tu: function () {
         B.ton.setzeStumm(!B.ton.stumm);

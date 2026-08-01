@@ -1314,11 +1314,25 @@
      GELESEN wird fremdes DOM, geschrieben nie. */
   function sommerLaeuft() { return !!document.querySelector('.fu-sommerblatt'); }
 
+  /* DIE STADT haelt den Rahmen: was beim Laden schon dalag, klappt sie in
+     einen Reiter der Werkbank und schneidet es mit .stadt-zugeklappt weg
+     (stil/stadt.css). Fuer DEN PREIS heisst das: die Tafel steht im DOM und
+     ist trotzdem nicht auf dem Tisch. Auch das nur GELESEN, nie geschrieben.
+     GLAETTUNG WELLE 1: ohne diese Zeile stand beim Laden aller vier Epochen
+     "Michaelitafel schließen" an einem Bildschirm, auf dem keine Tafel lag —
+     der erste Klick des Spielers tat dann scheinbar nichts. */
+  function tafelWeggeklappt() {
+    var t = document.querySelector('.pr-tafel');
+    return !!(t && t.classList.contains('stadt-zugeklappt'));
+  }
+
   /* Was WIRKLICH auf dem Tisch liegt — nicht, was Z.offen sich wuenscht.
      Der Griff muss den sichtbaren Zustand beschriften, sonst steht dort
      "schließen", waehrend nichts zu sehen ist, und der erste Klick tut
      scheinbar nichts. */
-  function tafelSichtbar() { return Z.offen && (!sommerLaeuft() || Z.erzwungen); }
+  function tafelSichtbar() {
+    return Z.offen && (!sommerLaeuft() || Z.erzwungen) && !tafelWeggeklappt();
+  }
 
   /* --- Der Griff, wenn die Tafel zu ist --------------------------------- */
   function zeichneGriff(fach) {

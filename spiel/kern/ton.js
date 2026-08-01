@@ -134,7 +134,7 @@
 
     /* --- DER PREIS ------------------------------------------------------ */
     'preis:michaeli':    { datei: altNeu('glocke', 'telefon'), laut: 0.9,
-                           sagt: 'Michaeli: die Glocke, spaeter das Telefon.' },
+                           sagt: 'Michaeli: die Glocke, später das Telefon.' },
     'preis:muenzen':     { datei: altNeu('muenzen', 'kasse'), laut: 0.9 },
     'preis:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.85 },
     'preis:handschlag':  { datei: stets('handschlag'), laut: 0.85 },
