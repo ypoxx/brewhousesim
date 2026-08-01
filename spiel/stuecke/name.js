@@ -901,8 +901,8 @@
     if (bruchGefahr()) {
       var kl = B.el('div', 'nm-klemme');
       kl.appendChild(B.el('div', 'nm-klemmkopf',
-        'Das Zeichen haengt, und der Keller taugt nicht (Guete ' + guete() + ' von 100).'
-        + (Z.bruchWochen ? ' Zweite Woche: ' + Z.bruchWochen + ' von 3.' : '')));
+        'Das Zeichen haengt, und der Keller taugt nicht — Guete ' + guete() + ' von 100.'
+        + ' Seit ' + (Z.bruchWochen + 1) + ' von 5 Wochen; danach steht es im Register.'));
       kl.appendChild(B.knopf({
         text: 'Unter dem Zeichen ausliefern', zug: 'name:liefern', klasse: 'nm-knopf nm-rot',
         titel: 'Es geht hinaus, wie es ist. Kostet heute nichts und spaeter den Namen.',
@@ -1159,7 +1159,7 @@
 
     var kopf = B.el('div', 'nm-bkopf');
     var links = B.el('div', 'nm-bkopf-text');
-    links.appendChild(B.el('h2', null, 'Das Zeichen des Hauses · ' + epd().jahr));
+    links.appendChild(B.el('h2', null, 'Das Zeichen des Hauses · ' + jahr()));
     links.appendChild(B.el('div', 'nm-unterzeile',
       'Ruf ' + ruf() + ' · Bekanntheit ' + Math.round(Z.bekannt) + ' von ' + epd().deckel
       + ' · Deckung ' + Math.round(Z.deckung) + ' · Keller-Guete ' + guete()));
