@@ -513,6 +513,51 @@
 .gg-karte .knopf { margin-top: auto; align-self: stretch; }
 .gg-karte.wirbt { border-style: dashed; background: rgba(240, 236, 218, 0.6); }
 .gg-karte.gegen, .gg-karte.angebot { border-color: var(--gg-warn); background: rgba(255, 246, 240, 0.6); }
+.gg-karte.klage { border-color: var(--gg-gut); background: rgba(238, 243, 233, 0.65); }
+
+/* --------------------------------------------------------------------------
+   DER VORSPRUNG — Technik, die er frueher hat, und was ihm das einbringt
+   -------------------------------------------------------------------------- */
+.gg-vsatz {
+  font-size: calc(var(--s) * 17);
+  font-style: italic;
+  line-height: 1.3;
+  margin-bottom: calc(var(--s) * 6);
+  opacity: 0.9;
+}
+.gg-vliste { display: flex; flex-direction: column; }
+.gg-vzeile {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 10);
+  padding: calc(var(--s) * 4) calc(var(--s) * 6);
+  border-bottom: calc(var(--s) * 1) dotted rgba(35, 38, 42, 0.3);
+  font-size: calc(var(--s) * 16);
+}
+.gg-vzeile .was { min-width: calc(var(--s) * 250); font-size: calc(var(--s) * 18); }
+.gg-vzeile .satz { flex: 1; font-style: italic; opacity: 0.82; }
+.gg-vzeile .stand {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  white-space: nowrap;
+  padding: calc(var(--s) * 1) calc(var(--s) * 7);
+  border-radius: calc(var(--s) * 3);
+  border: calc(var(--s) * 1) solid currentColor;
+}
+.gg-vzeile.hat   { color: var(--gg-tinte); }
+.gg-vzeile.hat .stand { color: var(--gg-gut); }
+.gg-vzeile.offen .stand { color: #8a6a1e; }
+.gg-vzeile.fehlt { background: rgba(141, 47, 28, 0.07); }
+.gg-vzeile.fehlt .stand { color: var(--gg-warn); }
+.gg-vfolge {
+  margin-top: calc(var(--s) * 7);
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  line-height: 1.35;
+  padding: calc(var(--s) * 7) calc(var(--s) * 10);
+  border-left: calc(var(--s) * 5) solid var(--gg-warn);
+  background: rgba(255, 255, 255, 0.42);
+}
 .gg-kname { font-size: calc(var(--s) * 21); letter-spacing: calc(var(--s) * 1); }
 .gg-kzeile { font-family: var(--mono); font-size: calc(var(--s) * 15); opacity: 0.9; }
 .gg-kzeile.stark { opacity: 1; color: var(--gg-warn); }

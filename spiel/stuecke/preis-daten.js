@@ -275,19 +275,50 @@ var PREIS_DATEN = {
           satz: 'Kühl im Sommer. Was dort liegt, überlebt den Juli.',
           wirkung: { plaetze: 14 } },
 
+        /* Fahren oder fahren lassen. Der Bote nimmt heute Geld und kein Risiko
+           ab; die eigenen Rösser kosten fünfmal so viel und tragen fünfmal so
+           viel. Wer den Boten hat, braucht den Wagen nicht — und der Bote fährt
+           für kein Haus, das selbst fährt. */
+        { k: 'botenfuhr', name: 'Die Fuhr beim Landboten', anteil: 0.11, bauzeit: 0,
+          was: 'Ein Jahresvertrag mit dem Boten, der ohnehin jeden Dienstag über Land fährt.',
+          satz: 'Er nimmt vier Fass mit. Wann er zurückkommt, entscheidet nicht das Haus.',
+          sperrt: ['planwagen'],
+          wirkung: { ertrag: 55 } },
+
         { k: 'planwagen', name: 'Zwei Rösser und ein Planwagen', anteil: 0.38, bauzeit: 0,
           was: 'Ein gedeckter Wagen mit Bremse, für die Straßen über Land.',
           satz: 'Neun Meilen am Tag statt sieben, und das Fass kommt trocken an.',
+          sperrt: ['botenfuhr'],
           wirkung: { ertrag: 210 } },
+
+        /* Der Hopfen: kaufen oder ziehen. Der Kontrakt bringt heute Ware und
+           bindet an einen Preis; der Garten braucht drei Jahre und macht das
+           Haus vom Markt unabhängig. Der Händler liefert keinem Haus, das ihm
+           mit eigenen Stangen die Preise verdirbt. */
+        { k: 'hopfenkontrakt', name: 'Der Hopfenkontrakt mit dem Händler', anteil: 0.14, bauzeit: 0,
+          was: 'Fünf Jahre feste Menge zum festen Preis, aus Böhmen über Eger.',
+          satz: 'Der Preis steht, auch wenn die Ernte gut ist. Das ist der Preis dafür, dass er steht.',
+          sperrt: ['hopfengarten'],
+          wirkung: { rohstoff: 30, ertrag: 25 } },
 
         { k: 'hopfengarten', name: 'Der Hopfengarten am Südhang', anteil: 0.55, bauzeit: 3,
           was: 'Vierhundert Stangen, drei Jahre bis zum ersten vollen Ertrag.',
           satz: 'Eigener Hopfen. Der Händler auf dem Markt verliert seine Macht über das Haus.',
+          sperrt: ['hopfenkontrakt'],
           wirkung: { rohstoff: 55, ertrag: 90 } },
+
+        /* Ein Meister im Haus, und nur einer. Entweder wird der Sohn
+           eingeschrieben oder ein fremder Geselle wird gedungen. */
+        { k: 'auswaertiger', name: 'Der auswärtige Braumeister', anteil: 0.19, bauzeit: 0,
+          was: 'Ein Geselle aus Einbeck, auf drei Jahre gedungen, mit Kost und Lohn.',
+          satz: 'Er kann mehr als das Haus. Er geht auch wieder, und nimmt es mit.',
+          sperrt: ['zunftrecht'],
+          wirkung: { preis: 0.05, ertrag: 45 } },
 
         { k: 'zunftrecht', name: 'Das Zunftrecht für den Sohn', anteil: 0.62, bauzeit: 0,
           was: 'Meisterstück, Mutgeld, Einschreibung in die Lade — im Voraus bezahlt.',
           satz: 'Der Erbe ist Meister, bevor er erbt. Der Handlohn fällt halb so hoch aus.',
+          sperrt: ['auswaertiger'],
           wirkung: { handlohnHalb: true, ertrag: 40 } },
 
         { k: 'eiskeller', name: 'Der Eiskeller im Berg', anteil: 0.85, bauzeit: 2,
