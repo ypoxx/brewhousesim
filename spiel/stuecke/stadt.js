@@ -848,9 +848,9 @@
     var werk = B.el('div', 'stadt-schildwerk');
     werk.style.width = (s.breite || 7.5) + '%';
     werk.style.zIndex = '950';
+    werk.style.rotate = (s.dreh || 0) + 'deg';
 
     var el = B.el('div', 'stadt-hausschild' + (s.hell ? ' hell' : '') + (s.klein ? ' klein' : ''));
-    el.style.rotate = (s.dreh || 0) + 'deg';
     if (s.hell) {
       el.appendChild(B.el('div', 'zeile eins', 'BRAUHAUS'));
       el.appendChild(B.el('div', 'zeile zwei', 'ZUM ANKER'));

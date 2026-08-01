@@ -153,6 +153,8 @@
   align-items: center;
 }
 
+.stadt-schildwerk > .stadt-hausschild { width: 100%; }
+
 .stadt-gestell {
   position: relative;
   width: 100%;
