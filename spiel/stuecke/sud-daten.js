@@ -219,22 +219,24 @@ var SUD_DATEN = {
               + 'Die Maschine kommt aus der Kasse und läuft im Juli.',
           optionen: [
             { k: 'natureis', name: 'Natureis aus dem Fluss', preis: 0, schild: 'wie immer',
-              satz: 'Im Winter geschnitten, im Keller gestapelt. In den warmen Wochen trägt '
-                  + 'der Gärkeller nur die Hälfte.',
-              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02, warmDrossel: 0.5 } },
+              satz: 'Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert '
+                  + 'richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. '
+                  + 'In den warmen Wochen trägt der Gärkeller nur die Hälfte.',
+              wirkung: { haltbar: 1.35, gaer: 2, roh: 0, mehr: 0, risiko: 0.02, warmDrossel: 0.5 } },
             { k: 'warm', name: 'Ohne Kühlung durchgären lassen', preis: 0, schild: 'ohne Ausgabe',
               satz: 'Der Bottich läuft warm durch. Eine Woche schneller fertig, und das Bier '
                   + 'hält kaum mehr als ein Drittel. In einem Betrieb ohne Eis und ohne Geld '
                   + 'ist das der Weg, auf dem trotzdem gebraut wird.',
               warnung: 'Warm geführt kippt jeder zehnte Bottich.',
-              wirkung: { haltbar: 0.6, gaer: -1, roh: 0, mehr: 0, risiko: 0.10 } },
+              wirkung: { haltbar: 0.6, gaer: 0, roh: 0, mehr: 0, risiko: 0.10 } },
             { k: 'maschine', name: 'Lindesche Kältemaschine', preis: 9800, fest: true,
               satz: 'Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält '
-                  + 'das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer. '
+                  + 'das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer '
+                  + 'als mit Eis, und das Bier hält länger. '
                   + 'Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut.',
               siegel: 'Aufstellung abgenommen',
               sperrt: ['natureis'],
-              wirkung: { haltbar: 1.25, gaer: -1, roh: 0, mehr: 0, risiko: 0.01 } }
+              wirkung: { haltbar: 1.6, gaer: 1, roh: 0, mehr: 0, risiko: 0.01 } }
           ] },
         { schluessel: 'hefe', name: 'DIE HEFE', frage: 'Woher kommt die Hefe?',
           satz: 'Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war.',
