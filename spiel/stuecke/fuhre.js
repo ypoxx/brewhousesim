@@ -18,6 +18,25 @@
      Kein Schieberegler. Eine Sorte belegt Brautage und Fassplaetze, nicht
      bloss eine Reichweite — sonst waere Exportbier immer die Antwort.
 
+   UND: DIE KASSE IST NIE DIE WAND
+     Ein Brauhaus mit leerer Kasse hoert nicht auf zu brauen — es braut
+     schlechter. Drei Wege stehen offen, alle drei historisch, keiner davon
+     Geld:
+       · DER NOTSUD. Der zweite Guss auf dieselben Treber: null Barauslage,
+         null Rohstoff, kein Tag der Jahresverleihung — nur die Pfanne.
+         Wenig Fass, zwei Wochen haltbar, unterste Stufe. Die Pfanne steht
+         nie kalt, weil kein Geld da ist. Faellt der geplante Sud an der
+         Kasse, setzt der Braumeister von selbst den Notsud an.
+       · DAS KERBHOLZ. Der Spieler darf anschreiben lassen, in ganzen
+         Kerben. Zu Georgi wird geloescht; was offen bleibt, nimmt sich der
+         Glaeubiger in Brautagen, Suden der Reihe, Eis oder Regalmetern.
+         Schulden kosten hier also die knappe Sache, nicht Zins.
+       · DER RUECKVERKAUF. Grut, Hopfen, Kontrakt gehen zum Bruchteil an den
+         Haendler zurueck. Bar auf die Hand, und die Kammer ist leer.
+     Das Ende dieses Hauses ist deshalb nie die leere Kasse, sondern das
+     leere Auftragsbuch: wenn keine Adresse der Stadt mehr Bier des Hauses
+     fuehrt, ist es vorbei.
+
    BESITZSTAND: stuecke/fuhre*.js · stil/fuhre*.css · bild/fuhre/** · ton/fuhre/**
    =========================================================================== */
 
@@ -60,7 +79,14 @@
     fuhren: 0,
     meldung: null,
     sudMeldung: null,
-    tafelGewischt: false
+    tafelGewischt: false,
+    kerben: 0,           /* offene Kerben auf dem Kerbholz                  */
+    kerbAbzug: 0,        /* was der Glaeubiger dem neuen Jahr abgenommen hat */
+    kerbGeorgi: null,    /* Abrechnung fuers Georgi-Blatt                    */
+    notsud: 0,           /* Notsude DIESER Woche, vom Braumeister gesetzt    */
+    notGesamt: 0,        /* Notsude im laufenden Braujahr                    */
+    notGemeldet: false,
+    endeGemeldet: false
   };
 
   /* ----------------------------------------------------------------------

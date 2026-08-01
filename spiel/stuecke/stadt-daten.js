@@ -124,12 +124,12 @@ var STADT_DATEN = {
       nutzen: { platz: 4 } },
 
     { schluessel: 'brunnen', name: 'Ziehbrunnen', bild: 'brunnen',
-      ort: 'brunnen', dx: 4, dy: -1, breite: 12, von: 1, bis: 3, grund: 18,
+      ort: 'brunnen', dx: 4, dy: 0, breite: 13.5, von: 1, bis: 3, grund: 18,
       sagt: 'Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbringt.',
       nutzen: { sud: 1 } },
 
     { schluessel: 'fasslager_holz', name: 'Fassschuppen', bild: 'fasslager_holz',
-      ort: 'fasslager', dx: 6, dy: 2, breite: 14, von: 1, bis: 1, grund: 22,
+      ort: 'fasslager', dx: 8, dy: 2, breite: 14, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach ueber den Faessern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
@@ -139,7 +139,7 @@ var STADT_DATEN = {
       nutzen: { platz: 8 } },
 
     { schluessel: 'grutkammer', name: 'Grutkammer', bild: 'grutkammer',
-      ort: 'keller', dx: 3, dy: -2, breite: 12, von: 1, bis: 1, grund: 20,
+      ort: 'keller', dx: 5, dy: -2, breite: 12, von: 1, bis: 1, grund: 20,
       sagt: 'Porst, Gagel, Schafgarbe. Wer die Grut hat, hat das Bier — Hopfen kommt spaeter.',
       nutzen: { rohstoff: 20 } },
 
@@ -160,17 +160,17 @@ var STADT_DATEN = {
 
     /* --- Epoche II --------------------------------------------------- */
     { schluessel: 'darre', name: 'Darre', bild: 'darre',
-      ort: 'malzboden', dx: 0, dy: 19, breite: 12, von: 2, bis: 2, grund: 42,
+      ort: 'malzboden', dx: 0, dy: 19, breite: 14, von: 2, bis: 2, grund: 42,
       sagt: 'Ueber dem Rauch wird das Malz trocken. Wie heiss man darrt, entscheidet die Farbe.',
       nutzen: { rohstoff: 40 } },
 
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 6, dy: 2, breite: 14, von: 2, bis: 3, grund: 46,
+      ort: 'fasslager', dx: 8, dy: 2, breite: 14, von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat waechst, der Schwund faellt.',
       nutzen: { platz: 10 } },
 
     { schluessel: 'rossmuehle', name: 'Rossmuehle', bild: 'rossmuehle',
-      ort: 'keller', dx: 3, dy: -2, breite: 12, von: 2, bis: 2, grund: 40,
+      ort: 'keller', dx: 5, dy: -2, breite: 12, von: 2, bis: 2, grund: 40,
       sagt: 'Schroten im eigenen Hof, statt in der Muehle am Fluss zu warten.',
       nutzen: { sud: 1 } },
 
@@ -190,7 +190,7 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 60 } },
 
     { schluessel: 'waschhaus', name: 'Waschhaus', bild: 'waschhaus',
-      ort: 'hof', dx: -2, dy: 18, breite: 12.5, von: 2, bis: 2, grund: 32,
+      ort: 'hof', dx: -3, dy: 19, breite: 13, von: 2, bis: 2, grund: 32,
       sagt: 'Heisses Wasser fuer Fass und Bottich. Sauberkeit ist die halbe Haltbarkeit.',
       nutzen: {}, wirkt: 'das Fass bleibt sauber' },
 
@@ -217,7 +217,7 @@ var STADT_DATEN = {
       nutzen: {}, wirkt: 'Verladen auf Wagenhoehe' },
 
     { schluessel: 'maschinenhaus', name: 'Maschinenhaus', bild: 'maschinenhaus',
-      ort: 'keller', dx: 3, dy: -2, breite: 12.5, von: 3, bis: 3, grund: 90,
+      ort: 'keller', dx: 5, dy: -2, breite: 12.5, von: 3, bis: 3, grund: 90,
       sagt: 'Lindes Kaeltemaschine. Ab jetzt braucht der Sommer keine Erlaubnis mehr.',
       nutzen: { sud: 4 } },
 
@@ -227,7 +227,7 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 120 } },
 
     { schluessel: 'flaschenhalle', name: 'Flaschenhalle', bild: 'flaschenhalle',
-      ort: 'hof', dx: -2, dy: 18, breite: 13.5, von: 3, bis: 3, grund: 100,
+      ort: 'hof', dx: -3, dy: 19, breite: 13.5, von: 3, bis: 3, grund: 100,
       sagt: 'Bier in Flaschen geht dorthin, wo kein Fass mehr hinkommt: nach Hause.',
       nutzen: { platz: 20 } },
 
@@ -248,7 +248,7 @@ var STADT_DATEN = {
       nutzen: {}, wirkt: 'drei Lastzuege gleichzeitig' },
 
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'fasslager', dx: 6, dy: 2, breite: 13.5, von: 4, bis: 4, grund: 70,
+      ort: 'fasslager', dx: 8, dy: 2, breite: 13.5, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
@@ -258,7 +258,7 @@ var STADT_DATEN = {
       nutzen: { sud: 8 } },
 
     { schluessel: 'waage', name: 'Fahrzeugwaage', bild: 'waage',
-      ort: 'keller', dx: 3, dy: -2, breite: 11, von: 4, bis: 4, grund: 55,
+      ort: 'hof', dx: -3, dy: 19, breite: 12, von: 4, bis: 4, grund: 55,
       sagt: 'Voll rein, leer raus, alles gewogen. Wer nicht wiegt, verliert im Kleinen.',
       nutzen: {}, wirkt: 'kein Schwund beim Wiegen' },
 
