@@ -152,7 +152,7 @@
     if (Z.fest.warenzeichen && ep() >= 3) s += 5;
     if (Z.fest.medaille && ep() >= 3) s += 8;
     if (Z.nachahmung) s = s * 0.72;                      /* der Nachahmer nimmt Luft weg */
-    if (Z.ruhe) s = s * 0.35;                            /* verdeckt reicht der Name kaum */
+    if (Z.ruhe) s = s * 0.5;                             /* verdeckt reicht der Name halb */
     if (Z.fest.verkauft) s = Math.min(s, 40);            /* der Name gehoert nicht mehr dem Haus */
     return B.grenze(Math.round(s), 0, epd().deckel);
   }
@@ -321,7 +321,7 @@
     Z.kieserWoche = B.wuerfel.ganz(woche() + 6, wjahr());
     var g = guete();
     if (g >= 62) eintrag(D.urteile.lob[1], 7, 'Der Rat', 'lob');
-    else if (Z.zeiger) eintrag(D.urteile.tadel[1], -13 * lautstaerke(), 'Der Rat', 'tadel');
+    else if (Z.zeiger) eintrag(D.urteile.tadel[1], -8 * lautstaerke(), 'Der Rat', 'tadel');
     else eintrag('Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben.',
       0, 'Der Rat', 'still');
   }
@@ -336,14 +336,14 @@
     if (e === 2) {
       if (!versprechen()) return;
       if (g >= 58) eintrag(D.urteile.lob[2], 6, 'Die Zunftschau', 'lob');
-      else eintrag(D.urteile.tadel[2], -12 * lautstaerke(), 'Die Wirte', 'tadel');
+      else eintrag(D.urteile.tadel[2], -7 * lautstaerke(), 'Die Wirte', 'tadel');
       return;
     }
 
     if (e === 3) {
       if (!versprechen()) return;
       if (g >= 55) eintrag(D.urteile.lob[3], 7, 'Das Wochenblatt', 'lob');
-      else eintrag(D.urteile.tadel[3], -14 * lautstaerke(), 'Das Wochenblatt', 'tadel');
+      else eintrag(D.urteile.tadel[3], -8 * lautstaerke(), 'Das Wochenblatt', 'tadel');
       return;
     }
 
@@ -353,7 +353,7 @@
     if (g >= 60) eintrag(D.urteile.lob[4], laut ? 14 : 5, 'Die Leute', 'lob');
     else if (g >= 40) eintrag('Der Verbrauchertest nennt den Anker "durchschnittlich".',
       laut ? -4 : -1, 'Die Leute', 'still');
-    else eintrag(D.urteile.tadel[4], laut ? -26 : -11, 'Die Leute', 'tadel');
+    else eintrag(D.urteile.tadel[4], laut ? -22 : -9, 'Die Leute', 'tadel');
   }
 
   /* Der Ruf zahlt in Adressen: ein Wirt fragt von selbst an. Einmal im
@@ -445,19 +445,20 @@
 
     /* Deckung heilt langsam, wenn wirklich gutes Bier hinausgeht. */
     var g = guete();
-    if (versprechen() && g >= 62) Z.deckung = Math.min(100, Z.deckung + 0.22);
-    else if (!versprechen()) Z.deckung = Math.min(100, Z.deckung + 0.06);
+    var heilung = 0.22 + (100 - Z.deckung) * 0.012;
+    if (versprechen() && g >= 62) Z.deckung = Math.min(100, Z.deckung + heilung);
+    else if (!versprechen()) Z.deckung = Math.min(100, Z.deckung + heilung * 0.3);
 
     /* Schnell zu verlieren: drei Wochen duennes Bier unter dem Zeichen, und
        es steht im Register. Der Spieler sieht die Uhr laufen und hat in
        jeder dieser Wochen einen freien Zug dagegen. */
     if (bruchGefahr()) {
       Z.bruchWochen++;
-      if (Z.bruchWochen >= 3) {
+      if (Z.bruchWochen >= 5) {
         Z.bruchWochen = 0;
         var leer = B.welt.vorrat.faesser.length === 0;
         eintrag(leer ? D.urteile.leer[ep()] : D.urteile.tadel[ep()],
-          (leer ? -16 : -11) * lautstaerke(), 'Die Gasse', 'bruch');
+          (leer ? -8 : -6) * lautstaerke(), 'Die Gasse', 'bruch');
       }
     } else if (Z.bruchWochen > 0) {
       Z.bruchWochen = 0;
@@ -688,7 +689,8 @@
   function waehleLiefern() {
     Z.letzteWahl = 'liefern';
     Z.wahlWoche = stempel();
-    Z.bruchWochen = Math.max(Z.bruchWochen, 2);
+    Z.bruchWochen = Math.max(Z.bruchWochen, 3);
+    Z.deckung = Math.max(0, Z.deckung - 2);
     Z.meldung = 'Es geht hinaus, wie es ist. Das Zeichen haengt weiter — '
       + 'die Rechnung kommt spaeter.';
     nachZug('wahl');
@@ -704,8 +706,7 @@
     if (Z.ruhe) {
       Z.letzteWahl = 'halten';
       Z.wahlWoche = stempel();
-      Z.bekannt = Math.max(0, Z.bekannt - 2);
-      Z.deckung = Math.min(100, Z.deckung + 1.5);
+      Z.deckung = Math.min(100, Z.deckung + 1);
       Z.meldung = 'Das Zeichen ist verdeckt, bis der Sud wieder taugt. '
         + 'Kostet Reichweite, kostet kein Geld, und es ist umkehrbar.';
       B.ton.spiele('name:einziehen');

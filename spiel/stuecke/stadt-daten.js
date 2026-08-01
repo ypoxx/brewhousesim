@@ -123,6 +123,53 @@ var STADT_DATEN = {
      wie die Magd am Tor, die sechs Meter weiter vorn steht — eher kleiner,
      denn sie steht weiter hinten. Ein Sudkessel von 1350 fasst ein bis zwei
      Sud; er ist rund drei Viertel einer Koerperlaenge breit, nicht zweieinhalb.
+
+     DER BODEN.  (Runde 4)
+
+     Runde 3 ging zurueck, weil drei Aufbauten nicht auf dem Boden standen,
+     zwei davon auf der Hofmauer. Die Ursache war nicht ein Tippfehler,
+     sondern diese Raute: sie ist zu gross. Die Hofmauer der vier Platten ist
+     nachgemessen, an allen vier leeren Hoefen (?bau=keine), und sie ist ueberall
+     dieselbe Linie — ein Dach mit dem Scheitel in der Sued-Ecke:
+
+         Scheitel S (823|1205) px = (29,9 | 78,5) Prozent
+         links davon   y = 1205 - 0,49 * (823 - x)
+         rechts davon  y = 1205 - 0,45 * (x - 823)
+
+     Gegenprobe mit den Zahlen des Kritikers: bei x=860 gibt die Formel 1188,
+     er hat 1188 gemessen; bei x=900 gibt sie 1172, er hat 1170 gemessen.
+
+     WER UNTER DIESER LINIE ZEICHNET, STEHT AUF DER MAUER. Und zwar nicht der
+     Fusspunkt allein, sondern JEDE undurchsichtige Spalte des Bildes: die
+     Kistenstapel der Flaschenhalle hingen 58 px unter die Kante, waehrend ihr
+     Fusspunkt noch harmlos aussah. Geprueft wird deshalb das Bild, nicht der
+     Punkt — je Spalte die unterste undurchsichtige Zeile gegen die Formel.
+
+     Damit fallen drei Plaetze der Raute weg, sie lagen jenseits der Mauer:
+         C2 (33|78) und D (30|80) ganz,  C1 (23|76) mit dem Eisschlitten.
+     Der Hof ist vorn also deutlich flacher als die Raute glauben macht. Er
+     hat genau EINE tiefe Tasche, und die liegt am Scheitel:
+
+        A0 (20|60) Schornstein        A1 (22|63) Wasser
+        A2 (31|63) Darre / Sudhaus    A3 (41|63) Malzboden / Maelzerei
+        B1 (28|68) Muehle / Maschine  B2 (36|69) Halle / Waage-Vorplatz
+        B3 (46|66) Bottiche / Tanks   B4 (41|68) Laderampe
+        C1 (26|70) Keller             C2 (30|73,5) Fasslager  — die Tasche
+        C3 (45|74) Stall / Dock (auf der Torgasse, dort geht der Boden vor)
+        D  (27|76) Waage / Waschhaus  (nur was flach ist, nichts Hohes)
+        R  (50|62) Kontor (vor dem Tor, ausserhalb der Mauer)
+        L  (17|68) Hopfenlager (ausserhalb der Mauer, in der Haeuserzeile)
+
+     Zwei Plaetze liegen mit Absicht AUSSERHALB der Mauer und muessen es:
+     R steht vor dem Tor, L in der Zeile der Stadthaeuser links. Beide stehen
+     auf der Gasse, die naeher an der Kamera liegt als die Mauer — sie
+     unterschreiten die Formel und stehen trotzdem auf dem Boden. C3 liegt in
+     der Tordurchfahrt, wo der Boden durch die Mauer nach vorn tritt.
+
+     Die Tasche traegt genau EINEN Aufbau von voller Breite. Wer als zweiter
+     dort hin will, deckt den ersten zu — deshalb steht in jeder Epoche nur
+     ein Bau in C2, und was sonst nach vorn moechte, wird flach (die
+     Fahrzeugwaage) oder geht in das mittlere Band.
      -------------------------------------------------------------------- */
   /* Die Preise sind so gestellt, dass die Barschaft am Anfang jeder Epoche
      etwa fuenf der offenen Bauten traegt und der sechste liegen bleibt. Wer
@@ -166,7 +213,7 @@ var STADT_DATEN = {
 
     { schluessel: 'keller_gewoelbe', name: 'Gewölbekeller', bild: 'keller_gewoelbe',
       ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 11, 2: 11 },
-      versatz: { 1: { dx: 9, dy: -3.5 }, 2: { dx: 1, dy: -6.5 } },
+      versatz: { 1: { dx: 9, dy: -3.5 }, 2: { dx: 1, dy: -7 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
