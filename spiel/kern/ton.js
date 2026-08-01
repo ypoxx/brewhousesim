@@ -92,15 +92,15 @@
      laut: relativ zum Werk-Pegel                                          */
   var KATALOG = {
     /* --- DIE FUHRE ------------------------------------------------------ */
-    'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 1.0,
+    'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 1.15,
                            sagt: 'Der Sud: offene Pfanne, Dampfventil, Kreiselpumpe.' },
-    'fuhre:fass-rollen': { datei: altNeu('fassholz', 'fassstahl'), laut: 0.95,
+    'fuhre:fass-rollen': { datei: altNeu('fassholz', 'fassstahl'), laut: 1.15,
                            sagt: 'Ein Fass rollt.' },
     'fuhre:abfahrt:ochse':   { datei: stets('abfahrt1'), laut: 1.0 },
     'fuhre:abfahrt:pferd':   { datei: stets('abfahrt2'), laut: 1.0 },
     'fuhre:abfahrt:waggon':  { datei: stets('abfahrt3'), laut: 1.0 },
     'fuhre:abfahrt:lastzug': { datei: stets('abfahrt4'), laut: 1.0 },
-    'fuhre:kauf':        { datei: altNeu('muenzen', 'kasse'), laut: 0.85 },
+    'fuhre:kauf':        { datei: altNeu('muenzen', 'kasse'), laut: 1.0 },
     'fuhre:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.8 },
     /* Die Kerbe war nur ein Rauschstoss — das Ohr hat sie in 1350 als
        "Reissverschluss" gehoert. Jetzt ist es ein Messer in Eichenholz. */
@@ -131,7 +131,7 @@
     'gegner:bauen':       { datei: altNeu('bau1', 'bau4'), laut: 0.6 },
     'gegner:aufstocken':  { datei: altNeu('bau1', 'bau4'), laut: 0.6 },
     'gegner:preis':       { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
-    'gegner:fuhre':       { datei: je('abfahrt1', 'abfahrt2', 'abfahrt3', 'abfahrt4'), laut: 0.5 },
+    'gegner:fuhre':       { datei: je('abfahrt1', 'abfahrt2', 'abfahrt3', 'abfahrt4'), laut: 0.65 },
     'gegner:macht':       { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
     'gegner:rohstoff':    { datei: altNeu('muenzen', 'kasse'), laut: 0.6 },
     'gegner:unglueck':    { datei: stets('brand'), laut: 0.9 },
@@ -404,15 +404,20 @@
     } catch (f) { /* schon gestoppt */ }
   }
 
-  /* Das Bett duckt sich kurz weg, wenn im Hof etwas geschieht. */
+  /* Bett UND Hof ducken sich kurz weg, wenn etwas geschieht. 1350 ist eine
+     leise Welt: dort entscheidet dieses Wegducken darueber, ob das Ohr das
+     rollende Fass ueberhaupt bemerkt oder nur noch die Gaense hoert. */
   function ducke(w, wann, tiefe) {
-    var g = w.bus.bett.gain;
-    try {
-      g.cancelScheduledValues(wann);
-      g.setValueAtTime(g.value, wann);
-      g.linearRampToValueAtTime(PEGEL.bett * (tiefe || 0.55), wann + 0.06);
-      g.linearRampToValueAtTime(PEGEL.bett, wann + 0.9);
-    } catch (f) { }
+    var t = tiefe || 0.55;
+    [['bett', t], ['hof', 1 - (1 - t) * 0.45]].forEach(function (paar) {
+      var g = w.bus[paar[0]].gain, ruhe = PEGEL[paar[0]];
+      try {
+        g.cancelScheduledValues(wann);
+        g.setValueAtTime(g.value, wann);
+        g.linearRampToValueAtTime(ruhe * paar[1], wann + 0.06);
+        g.linearRampToValueAtTime(ruhe, wann + 1.1);
+      } catch (f) { }
+    });
   }
 
   /* Eine einzelne Probe in einen Graphen setzen. Gibt zurueck, ob etwas kam. */
