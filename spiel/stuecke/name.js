@@ -1248,6 +1248,15 @@
     var kopf = B.el('div', 'nm-abschnitt');
     kopf.appendChild(B.el('h3', null, e.verb + ' — ' + e.medium));
     kopf.appendChild(B.el('p', 'nm-p', e.satz));
+    /* Die Knappheit dieser Epoche, als Zeile. In 1970 ist es der Etat. */
+    if (etatPlaetze()) {
+      kopf.appendChild(B.el('div', 'nm-etat',
+        'DER ETAT: ' + etatBelegt() + ' von ' + etatPlaetze() + ' Posten belegt'
+        + (etatVoll() && schwaechsterPosten()
+          ? ' — der nächste tauscht ' + schwaechsterPosten().name.replace(/^(Den|Die|Das) /, '')
+            + ' heraus.'
+          : ' — es ist noch Platz.')));
+    }
     blatt.appendChild(kopf);
 
     /* Die Traeger, mit Preisschild nebeneinander. */
@@ -1260,6 +1269,10 @@
       if (t.reichweite) unter.appendChild(B.el('span', 'nm-marke', '+' + t.reichweite + ' Reichweite'));
       if (t.art === 'fest') unter.appendChild(B.el('span', 'nm-marke nm-fest', 'unwiderruflich'));
       if (t.art === 'jahr') unter.appendChild(B.el('span', 'nm-marke', 'ein Braujahr'));
+      if (t.art === 'jahr' && !laeuft(t) && etatVoll() && schwaechsterPosten()) {
+        unter.appendChild(B.el('span', 'nm-marke nm-tausch', 'tauscht '
+          + schwaechsterPosten().name.replace(/^(Den|Die|Das) /, '') + ' heraus'));
+      }
       if (t.art === 'wette') unter.appendChild(B.el('span', 'nm-marke', 'fremde Jury'));
       if (t.hoechstens) unter.appendChild(B.el('span', 'nm-marke',
         zaehle(t.k === 'schild' ? Z.schilder : Z.umtrunk) + ' von ' + t.hoechstens));
@@ -1293,6 +1306,8 @@
           titel: (B.welt.gebunden(a.schluessel) === 'haus'
             ? 'Gebunden ans Haus. ' : 'Nicht gebunden. ')
             + 'Was dieser Wirt sagt: ' + B.zahl(Z.urteil[a.schluessel] || 0)
+            + ' · er zahlt derzeit ' + B.zahl(satzFuer(a.schluessel) * 100, 1)
+            + ' im Hundert Aufgeld auf jede Rechnung'
             + (drauf && ep() === 2 ? ' — abnehmen kostet kein Geld und trotzdem etwas.' : ''),
           tu: function () { schildBei(a); }
         }));
