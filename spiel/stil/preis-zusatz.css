@@ -119,6 +119,23 @@
   border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
   font-size: calc(var(--s) * 15);
 }
+.pr-chronik-offen {
+  padding: calc(var(--s) * 4) 0;
+  border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
+}
+.pr-chronik-offen-kopf {
+  display: flex;
+  gap: calc(var(--s) * 8);
+  align-items: baseline;
+  font-size: calc(var(--s) * 16);
+}
+.pr-chronik-offen-kopf b { flex: 1 1 auto; min-width: 0; }
+.pr-chronik-offen-kopf .pr-zahl {
+  font-family: var(--pr-zahlen);
+  white-space: nowrap;
+  color: var(--pr-rot);
+}
+
 .pr-chronik-verbaut .pr-chronik-was {
   flex: 1 1 auto;
   min-width: 0;
