@@ -149,10 +149,22 @@ var FUHRE_DATEN = {
       bannmeile: 1,
       bann: { name: 'Bannbrief', basis: 60, staffel: 1.55,
               satz: 'Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich.' },
+      kerbholz: {
+        name: 'Kerbholz beim Grutherrn', kurz: 'Kerbholz', zeichen: 'Kerbe',
+        jeKerbe: 25, kerben: 6,
+        satz: 'Der Grutherr schneidet die Kerbe ins Holz und zahlt aus. '
+            + 'Zu Georgi wird geloescht — in Geld, wenn welches da ist.',
+        pfand: { was: 'budget', menge: 3,
+                 sagt: 'Je offener Kerbe nimmt der Grutherr drei Brautage des neuen Jahres. '
+                     + 'Er will kein Geld, er will die Pfanne.' }
+      },
       kaeufe: [
         { k: 'budget',   text: 'Brautage vom Rat · +6', basis: 90, staffel: 1.6, menge: 6,
           titel: 'Sechs zusätzliche Brautage in diesem Braujahr. Der Rat verkauft sie ungern und teuer.' },
         { k: 'rohstoff', text: 'Grut vom Grutherrn · +40', basis: 34, staffel: 1.0, menge: 40,
+          rueck: 0.55, rtext: 'Grut zurück an den Grutherrn · −40',
+          rtitel: 'Vierzig Grut gehen zurück. Der Grutherr nimmt sie, aber nicht zum Einkaufspreis — '
+                + 'und ohne Grut steht die Pfanne bald anders da.',
           titel: 'Ohne Grut kein Bier. Hopfen kennt hier noch niemand.' },
         { k: 'fass',     text: 'Fass vom Böttcher · +3', basis: 34, staffel: 1.06, menge: 3,
           titel: 'Drei Fässer mehr im Umlauf.' }
@@ -169,7 +181,15 @@ var FUHRE_DATEN = {
         { k: 'stark', name: 'Starkbier', zeichen: 'S', stufe: 3,
           tage: 3, fass: 3, reife: 2, haltbar: 16, preis: 19, kosten: 15, rohstoff: 6,
           sommer: true,
-          satz: 'Drei Tage für drei Fass. Dafür hält es bis in den Sommer, und das Kloster zahlt.' }
+          satz: 'Drei Tage für drei Fass. Dafür hält es bis in den Sommer, und das Kloster zahlt.' },
+        { k: 'kofent', name: 'Kofent', zeichen: 'K', stufe: 1, not: true,
+          tage: 1, fass: 3, reife: 0, haltbar: 2, preis: 3, kosten: 0, rohstoff: 0,
+          sommer: false,
+          satz: 'Der zweite Guss auf dieselben Treber. Kein Pfennig, kein Korn Grut, und der Rat '
+              + 'zählt ihn nicht auf die Brautage — Nachbier ist in seinem Buch kein Bier. '
+              + 'Er kostet nur die Pfanne. Drei Fass Dünnes, in zwei Wochen sauer, Gesindebier: '
+              + 'der Gasthof und das Kloster nehmen es nicht. In einer schlechten Woche das '
+              + 'einzige Bier des Hauses.' }
       ]
     },
 
@@ -208,12 +228,23 @@ var FUHRE_DATEN = {
       abgabe: { satz: 0.11, name: 'Ungeld und Zunftbeitrag',
                 sagt: 'Der Stadt das Ungeld, der Zunft den Beitrag. Beides nach Ausstoß.' },
       bannmeile: 0,
+      kerbholz: {
+        name: 'Anschrift bei Mälzer und Böttcher', kurz: 'Anschrift', zeichen: 'Kerbe',
+        jeKerbe: 80, kerben: 6,
+        satz: 'Die Zunft bürgt, der Mälzer schreibt an. Abgerechnet wird zu Georgi, '
+            + 'wie es die Ordnung vorschreibt.',
+        pfand: { was: 'budget', menge: 2,
+                 sagt: 'Je offener Kerbe zieht die Zunft zwei Sude der Reihe ein. '
+                     + 'Bezahlt wird mit dem Braurecht, nicht mit Gulden.' }
+      },
       kaeufe: [
         { k: 'budget',   text: 'Reihe vom Nachbarn · +4 Sude', basis: 300, staffel: 1.7, menge: 4,
           titel: 'Ein Zunftgenosse tritt vier Sude seiner Reihe ab. Gilt nur für dieses Braujahr.' },
         { k: 'fass',     text: 'Fässer vom Böttcher · +4', basis: 92, staffel: 1.07, menge: 4,
           titel: 'Vier Fässer mehr im Umlauf. Das ist in dieser Epoche die eigentliche Währung.' },
         { k: 'rohstoff', text: 'Hopfen vom Markt · +60', basis: 200, staffel: 1.0, menge: 60,
+          rueck: 0.55, rtext: 'Hopfen zurück auf den Markt · −60',
+          rtitel: 'Sechzig Hopfen gehen zurück an den Markt. Der Händler zahlt bar und schlecht.',
           titel: 'Reinheitsgebot: Gerste, Hopfen, Wasser. Grut ist verboten.' }
       ],
       sorten: [
@@ -229,7 +260,14 @@ var FUHRE_DATEN = {
           sude: 1, fass: 4, reife: 5, haltbar: 34, preis: 40, kosten: 40, rohstoff: 11,
           sommer: true,
           satz: 'Fünf Wochen im Fass, ehe es taugt — fünf Wochen belegter Fassplatz. '
-              + 'Dafür überlebt es als einziges den Sommer.' }
+              + 'Dafür überlebt es als einziges den Sommer.' },
+        { k: 'nachbier', name: 'Nachbier', zeichen: 'N', stufe: 1, not: true,
+          sude: 1, fass: 5, reife: 0, haltbar: 3, preis: 7, kosten: 0, rohstoff: 0,
+          sommer: false,
+          satz: 'Konventbier vom zweiten Guss. Die Ordnung erlaubt es fürs Gesinde und rechnet es '
+              + 'nicht auf die Reihe an — es kostet keinen Gulden, keinen Hopfen und keinen Sud '
+              + 'der Zunftquote, nur die Pfanne. Fünf dünne Fass, drei Wochen haltbar. '
+              + 'Der Gasthof führt es nicht.' }
       ]
     },
 
