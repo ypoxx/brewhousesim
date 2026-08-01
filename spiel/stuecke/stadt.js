@@ -466,7 +466,21 @@
       p.addEventListener('mouseleave', function () {
         if (markenLage[m.schluessel] === 'ruht') m.el.classList.add(MRUHT);
       });
-      B.orte.setze(p, m.ort, { anker: 'mitte', dx: faecher });
+      /* Der Pflock steht dort, wo die Marke SELBST verankert ist — nicht auf
+         dem nackten Ort. Sonst landet er beim Ort 'strasse' (y 89) unter der
+         Werkbank, wo ihn niemand mehr trifft, waehrend seine Marke oben im
+         Bild liegt. Und er bleibt im Stadtfenster: darunter faengt die
+         Werkbank die Maus ab. */
+      var lx = parseFloat(m.el.style.left);
+      var ly = parseFloat(m.el.style.top);
+      var o = B.orte.hole(m.ort);
+      if (!isFinite(lx)) lx = o ? o.x : 50;
+      if (!isFinite(ly)) ly = o ? o.y : 50;
+      p.classList.add('amort');
+      p.setAttribute('data-anker', 'mitte');
+      p.setAttribute('data-ort', m.ort);
+      p.style.left = B.rund(B.grenze(lx + faecher, 1, 99), 2) + '%';
+      p.style.top = B.rund(B.grenze(ly, FENSTER.y0 + 1.5, FENSTER.y1 - 1.5), 2) + '%';
       fach.appendChild(p);
     });
 
