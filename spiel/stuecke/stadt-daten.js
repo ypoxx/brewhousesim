@@ -144,17 +144,17 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 20 } },
 
     { schluessel: 'ochsenstall', name: 'Ochsenstall', bild: 'ochsenstall',
-      ort: 'rampe', dx: 1, dy: -3, breite: 13, von: 1, bis: 1, grund: 28,
+      ort: 'rampe', dx: 1, dy: -4, breite: 14, von: 1, bis: 1, grund: 28,
       sagt: 'Ein eigenes Zugtier. Danach faehrt die Fuhre, wann das Haus es will.',
       nutzen: {}, wirkt: 'faehrt, wann das Haus will' },
 
     { schluessel: 'gaerbottiche', name: 'Gaerbottiche', bild: 'gaerbottiche',
-      ort: 'gaertanks', dx: 2, dy: 16, breite: 12.5, von: 1, bis: 2, grund: 24,
+      ort: 'gaertanks', dx: 2, dy: 15, breite: 13.5, von: 1, bis: 2, grund: 24,
       sagt: 'Offene Holzbottiche unter einem Schutzdach. Was hier gaert, ist obergaerig.',
       nutzen: { platz: 4 } },
 
     { schluessel: 'kueferei', name: 'Kueferei', bild: 'kueferei',
-      ort: 'tor', dx: 0, dy: 10, breite: 13, von: 1, bis: 2, grund: 36,
+      ort: 'tor', dx: 0, dy: 10, breite: 14, von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Kuefer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
 
@@ -175,12 +175,12 @@ var STADT_DATEN = {
       nutzen: { sud: 1 } },
 
     { schluessel: 'pferdestall', name: 'Pferdestall', bild: 'pferdestall',
-      ort: 'rampe', dx: 1, dy: -3, breite: 13, von: 2, bis: 3, grund: 44,
+      ort: 'rampe', dx: 1, dy: -4, breite: 13.5, von: 2, bis: 3, grund: 44,
       sagt: 'Zwei Kaltblueter. Der Ochse zieht mehr, das Pferd zieht schneller.',
       nutzen: {}, wirkt: 'die Fuhre faehrt schneller' },
 
     { schluessel: 'kontor', name: 'Kontor', bild: 'kontor',
-      ort: 'tor', dx: 7, dy: -3, breite: 9, von: 2, bis: 3, grund: 38,
+      ort: 'tor', dx: 8, dy: -3, breite: 10, von: 2, bis: 3, grund: 38,
       sagt: 'Wer schreibt, weiss im Herbst, was der Fruehling gekostet hat.',
       nutzen: {}, wirkt: 'Ordnung im Buch' },
 
@@ -202,7 +202,7 @@ var STADT_DATEN = {
       nutzen: { sud: 6 } },
 
     { schluessel: 'gaertanks', name: 'Gaertanks', bild: 'gaertanks',
-      ort: 'gaertanks', dx: 2, dy: 16, breite: 13.5, von: 3, bis: 3, grund: 80,
+      ort: 'gaertanks', dx: 2, dy: 15, breite: 14, von: 3, bis: 3, grund: 80,
       sagt: 'Genietetes Eisen statt Holz. Was im Tank gaert, schmeckt jede Woche gleich.',
       nutzen: { platz: 40, sud: 2 } },
 
@@ -212,7 +212,7 @@ var STADT_DATEN = {
       nutzen: { platz: 30 } },
 
     { schluessel: 'laderampe', name: 'Laderampe', bild: 'laderampe',
-      ort: 'rampe', dx: 5, dy: 2, breite: 13.5, von: 3, bis: 3, grund: 60,
+      ort: 'rampe', dx: 5, dy: 2, breite: 14, von: 3, bis: 3, grund: 60,
       sagt: 'Auf Wagenhoehe. Erst mit der Bahn lohnt sich, was hier verladen wird.',
       nutzen: {}, wirkt: 'Verladen auf Wagenhoehe' },
 
@@ -222,7 +222,7 @@ var STADT_DATEN = {
       nutzen: { sud: 4 } },
 
     { schluessel: 'maelzerei', name: 'Maelzereiturm', bild: 'maelzerei',
-      ort: 'malzboden', dx: 0, dy: 19, breite: 9.5, von: 3, bis: 4, grund: 85,
+      ort: 'malzboden', dx: 0, dy: 19, breite: 10.5, von: 3, bis: 4, grund: 85,
       sagt: 'Fuenf Boeden uebereinander. Das Haus maelzt sein Malz wieder selbst.',
       nutzen: { rohstoff: 120 } },
 
@@ -233,17 +233,17 @@ var STADT_DATEN = {
 
     /* --- Epoche IV --------------------------------------------------- */
     { schluessel: 'abfuellhalle', name: 'Abfuellhalle', bild: 'abfuellhalle',
-      ort: 'rampe', dx: 1, dy: -3, breite: 15, von: 4, bis: 4, grund: 130,
+      ort: 'rampe', dx: 1, dy: -4, breite: 15, von: 4, bis: 4, grund: 130,
       sagt: 'Vierzigtausend Flaschen in der Stunde. Der Takt der Halle ist der Takt des Hauses.',
       nutzen: { platz: 120, sud: 20 } },
 
     { schluessel: 'stahltanks', name: 'Stahltanks im Freien', bild: 'stahltanks',
-      ort: 'gaertanks', dx: 2, dy: 16, breite: 14.5, von: 4, bis: 4, grund: 120,
+      ort: 'gaertanks', dx: 2, dy: 15, breite: 15, von: 4, bis: 4, grund: 120,
       sagt: 'Zylindrokonisch, im Freien, aus Edelstahl. Gaerkeller braucht das keinen mehr.',
       nutzen: { platz: 150, sud: 12 } },
 
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: 5, dy: 2, breite: 13.5, von: 4, bis: 4, grund: 95,
+      ort: 'rampe', dx: 5, dy: 2, breite: 14, von: 4, bis: 4, grund: 95,
       sagt: 'Drei Lastzuege am Dock. Was hier abfaehrt, ist am Abend zweihundert Kilometer weit.',
       nutzen: {}, wirkt: 'drei Lastzuege gleichzeitig' },
 
@@ -269,7 +269,7 @@ var STADT_DATEN = {
       nutzen: { sud: 16 } },
 
     { schluessel: 'verwaltung', name: 'Verwaltungsbau', bild: 'verwaltung',
-      ort: 'tor', dx: 7, dy: -3, breite: 10.5, von: 4, bis: 4, grund: 90,
+      ort: 'tor', dx: 8, dy: -3, breite: 11, von: 4, bis: 4, grund: 90,
       sagt: 'Drei Geschosse Schreibtisch. Ein Haus, das eine Marke ist, wird verwaltet.',
       nutzen: {}, wirkt: 'Ordnung im Buch' }
   ]

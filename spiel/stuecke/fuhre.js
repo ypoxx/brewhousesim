@@ -876,6 +876,56 @@
       }
     }
 
+    /* DAS KERBHOLZ WIRD GELOESCHT. Erst in Geld, soweit welches da ist.
+       Was offen bleibt, nimmt sich der Glaeubiger NICHT in Geld, sondern in
+       der knappen Sache dieser Zeit: Brautage, Sude der Reihe, Eis,
+       Regalmeter. Das ist der Preis der Schuld, und er ist nie Zins. */
+    var kh = kerbholz();
+    Z.kerbGeorgi = null;
+    Z.kerbAbzug = 0;
+    if (kh && Z.kerben > 0) {
+      var hatte = Z.kerben, geloescht = 0;
+      while (Z.kerben > 0 && B.welt.haus.kasse >= kh.jeKerbe) {
+        B.welt.zahle(kh.jeKerbe, kh.kurz + ': eine Kerbe geloescht', 'spieler');
+        Z.kerben -= 1;
+        geloescht += 1;
+      }
+      var offen = Z.kerben;
+      var pf = kh.pfand, genommen = 0, wovon = '';
+      if (offen > 0 && pf) {
+        if (pf.was === 'budget') {
+          genommen = offen * pf.menge;
+          Z.kerbAbzug = genommen;
+          wovon = genommen + ' ' + (e.budget ? e.budget.name : 'Sude');
+        } else if (pf.was === 'eis') {
+          genommen = Math.min(Z.eis, offen * pf.menge);
+          Z.eis = Math.max(0, Z.eis - genommen);
+          wovon = genommen + ' Fuder Eis';
+        } else if (pf.was === 'listung') {
+          var offenL = offen * pf.menge, weg = [];
+          for (var lk in Z.listung) {
+            if (weg.length >= offenL) break;
+            /* Zwei Regalmeter bleiben immer stehen — der Handel wirft ein
+               Haus nicht ganz aus dem Markt, er nimmt ihm die Fläche. */
+            if (Object.keys(Z.listung).length - weg.length <= 2) break;
+            weg.push(lk);
+          }
+          weg.forEach(function (lk) { delete Z.listung[lk]; delete Z.listungLeer[lk]; });
+          genommen = weg.length;
+          wovon = genommen + (genommen === 1 ? ' Regalmeter' : ' Regalmeter');
+        }
+        B.welt.protokolliere({ wer: 'verfall', preis: 0,
+          was: kh.name + ': ' + offen + (offen === 1 ? ' Kerbe' : ' Kerben')
+             + ' offen — genommen wurden ' + wovon });
+        B.welt.schreibe(kh.name + ': ' + offen + (offen === 1 ? ' Kerbe steht' : ' Kerben stehen')
+          + ' noch im Holz. ' + pf.sagt + ' Genommen: ' + wovon + '.', 'fuhre');
+      }
+      Z.kerbGeorgi = { hatte: hatte, geloescht: geloescht, offen: offen,
+        wovon: wovon, sagt: pf ? pf.sagt : '', name: kh.name };
+      /* Genommen ist genommen: das Holz wird glattgehobelt. */
+      Z.kerben = 0;
+    }
+
     /* Der Keller wird geleert: der Rest ist im Herbst nichts mehr wert. */
     var uebrig = keller().length;
     if (uebrig) B.welt.nimmHeraus(uebrig);
@@ -972,6 +1022,13 @@
     Z.kaufNr = {};
     Z.bannNr = 0;
     Z.plan = {};
+    /* Ein neuer Glaeubiger, ein neues Holz: ueber einen Epochensprung von
+       zweihundert Jahren wird keine Kerbe mitgeschleppt. */
+    Z.kerben = 0;
+    Z.kerbAbzug = 0;
+    Z.kerbGeorgi = null;
+    Z.notGesamt = 0;
+    Z.notGemeldet = false;
     /* Ein Vorschlag steht an der Tafel, damit die erste Woche laeuft.
        Kein Tutorial — eine Lage, die schon eingestellt ist. */
     var standard = sorten()[1] || sorten()[0];
@@ -1321,7 +1378,7 @@
     var aendern = frei ? 0 : e.tafel.preis;
 
     var tab = B.el('div', 'fu-sorten');
-    sorten().forEach(function (s) {
+    echteSorten().forEach(function (s) {
       var r = B.el('div', 'fu-sorte s' + s.stufe);
       r.title = s.satz;
       var kopf = B.el('div', 'fu-sorte-kopf');
@@ -1822,11 +1879,16 @@
 
     jahr: function () {
       var e = ep();
-      Z.budget = e.budget ? e.budget.start + (Z.kaufNr.budget || 0) * 0 : 0;
+      /* Was der Glaeubiger sich zu Georgi genommen hat, fehlt jetzt — nicht
+         in der Kasse, sondern an Brautagen bzw. Suden der Reihe. */
+      Z.budget = e.budget ? Math.max(4, e.budget.start - (Z.kerbAbzug || 0)) : 0;
+      Z.kerbAbzug = 0;
       Z.kaufNr.budget = 0;
       Z.ladung = [];
       Z.vorige = null;
       Z.jahrUmsatz = 0;
+      Z.notGesamt = 0;
+      Z.notGemeldet = false;
       Z.sommerOffen = !!Z.sommer;
       /* Listungen laufen zu Georgi aus, wenn nichts geliefert wurde. */
       /* Ein Regalmeter fällt, wenn zwei Jahre lang nichts darin stand.
