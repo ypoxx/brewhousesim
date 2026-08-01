@@ -1628,7 +1628,7 @@
       if (e === 2) Z.schilder.lindenhof = jahr();       /* ein geerbtes Schild */
       if (e >= 2) Z.fest.zunftzeichen = jahr() - 40;
       if (e >= 3) { Z.fest.krug = jahr() - 90; Z.krugAb = jahr() - 78; }
-      if (e === 3) { Z.lauf.etikett = jahr(); Z.lauf.saeule = jahr(); }
+      if (e === 3) { Z.lauf.etikett = jahr(); }   /* die Säule ist zu kaufen, nicht geerbt */
       if (e === 4) { Z.lauf.kronkorken = jahr(); Z.lauf.bande = jahr(); }
       Z.register.push({
         jahr: jahr(), woche: woche(), wer: 'Das Haus', art: 'anfang', gewicht: 0,

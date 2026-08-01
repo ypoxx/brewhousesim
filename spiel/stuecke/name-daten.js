@@ -169,6 +169,12 @@ var NAME_DATEN = (function () {
             + 'hält die Marke in der Hand, während er trinkt.',
           warnt: 'Teuer und langsam: er wirkt erst unter dem nächsten Wirt des Hauses. '
             + 'Dafür hält er alles, was einmal aufgebaut ist, doppelt so lange.' },
+        { k: 'kirchweih', art: 'jahr', name: 'Freitrunk zur Kirchweih geben',
+          preis: 18, reichweite: 5,
+          sagt: 'Ein Fass vor der Kirchentür, am Kirchweihsonntag, umsonst. Die billigste '
+            + 'Art, in einem Jahr einmal in aller Munde zu sein.',
+          warnt: 'Es gilt ein Jahr und muss jedes Jahr neu gegeben werden. Wer einmal '
+            + 'aussetzt, von dem heißt es, er habe nichts mehr übrig.' },
         { k: 'zunftspruch', art: 'schutz', name: 'Zunftspruch gegen den Nachahmer',
           preis: 40, jahre: 8,
           sagt: 'Die Zunft verbietet dem Adler das Zeichen — für acht Jahre.' }
@@ -179,6 +185,10 @@ var NAME_DATEN = (function () {
           sagt: 'Der lithografierte Bogen auf jeder Flasche und jedem Fassdeckel. Die '
             + 'Auflage reicht ein Braujahr.',
           warnt: 'Ein Etikett ist das erste am Haus, was ein anderer nachdrucken kann.' },
+        { k: 'annonce', art: 'jahr', name: 'Annonce im Wochenblatt',
+          preis: 240, reichweite: 6,
+          sagt: 'Zwei Spalten, jeden Samstag, zwischen Viehmarkt und Sterbefällen. Der '
+            + 'billigste Posten der Epoche — und der erste, den ein Leser überblättert.' },
         { k: 'plakat', art: 'jahr', name: 'Plakate anschlagen lassen',
           preis: 1600, reichweite: 21,
           sagt: 'Steindruck in drei Farben an den Bauzäunen der Vorstadt.' },
