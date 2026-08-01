@@ -1344,6 +1344,13 @@
     Z.kerbGeorgi = null;
     Z.notGesamt = 0;
     Z.notGemeldet = false;
+    /* Ein Zutrauen ueberlebt keinen Epochensprung von zweihundert Jahren:
+       der Wirt, der das Probefass getrunken hat, ist lange tot. Die Frist
+       faengt in der neuen Zeit ebenfalls von vorn an. */
+    Z.probe = {};
+    Z.probeDieseWoche = 0;
+    Z.frist = null;
+    Z.fristGemeldet = false;
     /* Ein Vorschlag steht an der Tafel, damit die erste Woche laeuft.
        Kein Tutorial — eine Lage, die schon eingestellt ist. */
     var standard = sorten()[1] || sorten()[0];
@@ -2558,10 +2565,19 @@
       B.ton.melde('fuhre:kerbe', { art: 'geraeusch', sagt: 'Ein Messer schneidet eine Kerbe in Holz.' });
       B.ton.melde('fuhre:kauf', { art: 'geraeusch', sagt: 'Muenzen auf einen Ladentisch.' });
 
+      B.ton.melde('fuhre:probe', { art: 'geraeusch', sagt: 'Ein Zapfhahn wird eingeschlagen, Bier läuft in einen Krug.' });
+
       /* Fangphase: laeuft vor dem Tastenhorcher des Kerns. Siehe tastenSperre. */
       document.addEventListener('keydown', tastenSperre, true);
 
       richteEpocheEin(true);
+
+      /* Der Anfang der Chronik, die auf dem Schlussblatt steht. */
+      Z.startJahr = B.welt.zeit.jahr;
+      if (B.welt.zeit.amtszeit) {
+        Z.geschlecht.push({ name: B.welt.zeit.amtszeit.name, seit: B.welt.zeit.amtszeit.seit,
+          eigenschaft: B.welt.zeit.amtszeit.eigenschaftName });
+      }
 
       /* Die Reihe der letzten drei Jahre auf das Mengenmass dieser Epoche
          bringen — sonst stuende 1884 eine Reihe in Fass neben einem Bedarf
@@ -2647,11 +2663,22 @@
       }
       durstWaechst();
       schreibeZettel();
+      /* Die Georgi-Woche ist auch eine Woche: sonst stuende die Frist am
+         Jahreswechsel still, ohne dass jemand etwas dafuer getan haette. */
+      pruefeAuftragsbuch();
     },
 
     epoche: function () {
       richteEpocheEin(false);
       normalisiereKeller();
+    },
+
+    /* Das Haus bleibt, der Mensch nicht — hier wird die Zeile mitgeschrieben,
+       die spaeter auf dem Schlussblatt steht. */
+    erbfall: function (d) {
+      if (!d || !d.amtszeit) return;
+      Z.geschlecht.push({ name: d.amtszeit.name, seit: d.amtszeit.seit,
+        eigenschaft: d.amtszeit.eigenschaftName });
     },
 
     zeichne: function () {
@@ -2665,10 +2692,24 @@
 
       var blatt = B.ebene('blatt', 'fuhre');
       B.leere(blatt);
+      zeichneSchluss(blatt);
       zeichneSommer(blatt);
 
       meldeZug();
     }
+  });
+
+  /* DAS ENDE. Der Kern hat die Uhr angehalten (ZUSTAENDIGKEIT 12) — dieses
+     Stueck malt daraufhin sein eigenes Schlussblatt und weiss nicht, was die
+     anderen drei tun. Zweimal gerufen wird nichts ueberschrieben. */
+  B.auf('ende', function (d) {
+    if (Z.schluss) return;
+    B.wage('fuhre.schluss', function () {
+      Z.schluss = sammleSchluss(d);
+      Z.schlussOffen = true;
+      Z.sommerOffen = false;
+      Z.ladung = [];
+    });
   });
 
   /* Der Wagen bleibt nicht ueber die Woche stehen: was nicht abgeschickt
@@ -2682,6 +2723,11 @@
     B.wage('fuhre.sommer', function () {
       sommerLaeuft();
       mahnenUndVerlieren();
+      /* Erst vergisst der Wirt, dann fragt vielleicht ein neuer an. In dieser
+         Reihenfolge, damit ein zurueckgeholtes Haus nicht im selben Atemzug
+         sein Zutrauen verliert. */
+      probeVerblasst();
+      neuerWirtFragt();
       if (Z.sommer) Z.sommer.verloren = verlorenJetzt.slice();
       wischeTafel();
     });
@@ -2695,6 +2741,11 @@
         eis: Z.eis, keller: keller().length, reif: freieFaesser().length,
         kerben: Z.kerben, kerbFrei: kerbFrei(), notsud: Z.notsud, notGesamt: Z.notGesamt,
         notsorte: notSorte() ? notSorte().name : null,
+        frist: Z.frist, fristWochen: fristDef().wochen,
+        probe: Object.keys(Z.probe).map(function (k) { return k + ':' + Z.probe[k].zutrauen; }),
+        probeGesamt: Z.probeGesamt,
+        zurueckGeholt: Z.zurueckGeholt.map(function (v) { return v.name + ' ' + v.jahr + ' (' + v.wie + ')'; }),
+        ende: B.welt.zeit.ende ? (B.welt.zeit.endgrund || 'ende') : null,
         durst: Object.keys(Z.durst).map(function (k) { return k + ':' + Math.round(Z.durst[k]); }),
         mahnung: Z.mahnung, verloren: Object.keys(Z.verloren)
       };
