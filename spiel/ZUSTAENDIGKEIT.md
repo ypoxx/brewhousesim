@@ -500,3 +500,62 @@ gemessen und sie ist nicht erfüllt — in E1 und E2 ist in den ersten drei Brau
 einziges** der fünf Angebote und keine der Festlegungen je aktiv, in E3 und E4 nur die
 Festlegung mit dem Preisschild „ohne Ausgabe". Das ist kein Naht-, sondern ein Entwurfsfehler
 über drei Stücke hinweg und gehört an einen Tisch, nicht in eine Glättung.
+
+## 17 — Die Eichung des Michaelitags: eine Zahl, und sie gilt für alle
+
+**Der teuerste offene Punkt aus `spiel/STAND.md` §2 und §6.** Gemessen, nicht behauptet: am
+Michaelitag stehen in E1 −7 / −14 / −21 Pf und in E2 0 / −14 / −28 fl in der Kasse. **0 von 5
+Angeboten und 0 von 3 bzw. 4 Festlegungen aktiv**, in den ersten drei Braujahren, in beiden
+Epochen. Das Herzstück von DER PREIS ist sichtbar, beschriftet, gesiegelt — und unbezahlbar.
+
+Das ist kein Fehler in einem Stück. Es ist wieder die Summe aus vieren, genau wie der
+Abgabenfall aus §4 — nur diesmal andersherum: damals nahmen vier Stücke gleichzeitig, heute
+räumt das Braujahr die Kasse *genau bis* zu dem Tag leer, an dem etwas gekauft werden soll.
+
+> **Die Regel: Am Michaelitag muss die Barschaft in jeder Epoche mindestens den Preis des
+> zweitbilligsten Angebots decken, und zwar in jedem der ersten fünf Braujahre.**
+> Nicht des billigsten — zwei bezahlbare Karten nebeneinander sind das Mindeste, was
+> „Optionen mit Preisschild nebeneinander" bedeuten kann. Eine bezahlbare Karte ist keine
+> Wahl, sondern ein Knopf.
+
+**Wer es umsetzt:** DIE FUHRE hält die Woche zurück, nicht DER PREIS die Angebote billig.
+Ein Angebot herunterzupreisen, bis es passt, entwertet die Latte; die Kasse muss den Tag
+erreichen. Konkret: die Woche vor Michaeli darf nicht mehr fordern, als sie einbringt.
+
+**Und die Gegenrichtung gilt weiter:** Nach dem Michaelitag darf nicht zehn Jahre lang alles
+bezahlbar sein. `STAND.md` §5 zeigt beide Enden derselben kaputten Kurve — 46× im ersten Jahr,
+dann zehn Jahre unter 1×. **Die Kennzahl soll schwanken, nicht kippen.**
+
+## 18 — Der Nenner der zweiten Latte gehört keinem Stück
+
+**Vom Glättungslauf ausdrücklich der Aufsicht vorgelegt.** DER NAME hängt seit Welle 2 mit
+drin und stellt in E1–E3 inzwischen den billigsten nächsten Zug („Umtrunk beim Wirt 9 Pf",
+„Wirtshausschild anschlagen 70 fl"). Damit misst die Kennzahl der zweiten Latte plötzlich
+gegen ein unfertiges Stück.
+
+> **Entschieden: Der Nenner ist der billigste Zug, der die Lage des Hauses ändert — nicht der
+> billigste Knopf.** Ein Umtrunk beim Wirt für 9 Pf ist Beiwerk; er gehört nicht in den
+> Nenner, egal wem er gehört. In den Nenner gehört, was Rohstoff, Fass, Adresse, Bau oder
+> Bindung bewegt.
+
+Das ist keine Rüge an DEN NAMEN — sein Aufgeld ist Geld herein und hält den Deckel aus §4
+ein. Es ist die Feststellung, dass eine Messlatte, die jedes neue Stück verstellen kann,
+keine Messlatte ist.
+
+## 19 — „Deckung" heißt ab sofort nur noch eines
+
+Der Kern nennt die Kennzahl der zweiten Latte `.deckung`; DER NAME nennt seinen zweiten Balken
+„Deckung 60". Zwei Bedeutungen in einem Bild.
+
+> **Der Kern behält das Wort.** DER NAME benennt seinen Balken um — „Bekanntheit" oder was
+> ihm besser passt, nur nicht „Deckung".
+
+## 20 — DER PREIS liest den Ruf
+
+Von DEM NAMEN zweimal gemeldet: `welt.haus.rufAufschlag` wird nicht gelesen, der Grundpreis je
+Fass bleibt vom Ruf unberührt. Das ist die eine Naht, an der DER NAME überhaupt erst zu einer
+Wirtschaftsmechanik wird statt zu einer Anzeige.
+
+> **Auflage an DER PREIS:** den Ruf lesen. **Auflage an DEN NAMEN:** ihn nur setzen, nie einen
+> Preis schreiben (WELLE-2.md, unverändert). Der Aufschlag zählt gegen keinen Deckel, weil er
+> Geld herein ist.
