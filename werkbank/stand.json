@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T15:34:11+00:00",
+ "stand": "2026-08-01T15:37:36+00:00",
  "phase": "Welle 1 laeuft · Welle 2 begonnen",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -267,6 +267,26 @@
   {
    "zeit": "2026-08-01T15:34:11+00:00",
    "text": "AUFSICHT (14): spiel/bild/name/** gehoert DEM NAMEN, der Rest von bild/ bleibt DER STADT samt Platten, Hofbaukasten und Ortsmarken. An DIE STADT: in bild/ liegen ab jetzt fremde Dateien - wer dort aufzaehlt, ueberspringt name/. An DEN NAMEN: Zeichen liegen AUF der Platte, Ortsmarken nach dem Pflock-System (§10) vollstaendig mit data-frei abmelden, und DER NAME schreibt keinen Preis - er setzt einen Ruf, DER PREIS liest ihn. START VERSCHOBEN: Lastzahl 6,62 bei vier Kernen, die vier laufenden Schleifen saettigen die Maschine schon. DER NAME startet, sobald eine Schleife durch ist."
+  },
+  {
+   "zeit": "2026-08-01T15:37:26+00:00",
+   "text": "KLANG: LATTE 3 BESTANDEN, 4 von 4 blind. Das fremde Ohr (werkbank/hoerer.py, ohne Bild, ohne Dateinamen) nennt 1350/1600/1884/1970 richtig mit 95/95/95/100 Prozent und beschreibt den Vorgang korrekt — offener Sudkessel und Vieh; Haemmern, Holzkarren und Pferd; Dampfmaschine; rangierender Lastwagen mit Radio."
+  },
+  {
+   "zeit": "2026-08-01T15:37:26+00:00",
+   "text": "KLANG: Der Weg zur Datei ohne ffmpeg steht. Das Spiel rendert seinen EIGENEN Tongraph mit OfflineAudioContext und reicht WAV heraus: BRAUHAUS.ton.wav(30). werkbank/ohrprobe.mjs klickt dazu 30 Sekunden lang echte data-zug-Knoepfe und holt die Bytes ab — geprueft wird das laufende Spiel, nicht die Dateiablage. Vier Dateien liegen in werkbank/ohr/."
+  },
+  {
+   "zeit": "2026-08-01T15:37:27+00:00",
+   "text": "KLANG: Vier Ruegen des pruefenden Ohres behoben, alle waren Anachronismen im eigenen Bau — 'moderne UI-Pieptoene' (Oszillatoren fuer den WEITER-Knopf), 'Klicken eines Fotoapparats' (Rauschstoss fuer stadt:reiter), 'Reissverschluss' (Rauschstoss fuer fuhre:kerbe) und 'Fahrradklingel' (Handglocke in 1600). In kern/ton.js steht jetzt kein einziger Oszillator mehr."
+  },
+  {
+   "zeit": "2026-08-01T15:37:27+00:00",
+   "text": "KLANG an die AUFSICHT: werkbank/hoerer.py bricht bei etwa jeder zweiten Antwort mitten im JSON ab und meldet dann faelschlich DURCHGEFALLEN, obwohl die richtige Epoche im Rohtext steht; einmal kam eine Liste statt eines Objekts und das Skript warf einen Traceback. hoerer.py gehoert nicht dem KLANG und wurde nicht angefasst. Bis dahin: je Datei einzeln rufen und bei 'kein JSON' wiederholen."
+  },
+  {
+   "zeit": "2026-08-01T15:37:36+00:00",
+   "text": "KLANG: kern/ton.js taugt jetzt fuer alle vier Stuecke der Welle 1 — 35 Rufnamen im Katalog, plus NOTFALL je Vorsilbe, damit kein Ruf ins Leere geht. Dieselbe Handlung klingt je Epoche anders: Muenzen werden zur Registrierkasse, der Ochse zum Lastzug, Kreide zur Schreibmaschine, das Holzfeuer unter der offenen Pfanne zum Dampfventil und dann zur Kreiselpumpe. Die API blieb Zeichen fuer Zeichen; keine Stueck-Datei angefasst."
   }
  ]
 }
