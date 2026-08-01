@@ -88,11 +88,11 @@ var GEGNER_DATEN = {
       mehr: { entreissen: 2.2, macht: 1.8 }, weniger: { bauen: 0.6 } },
     { k: 'sparsam', name: 'sparsam', sagt: 'Zählt jeden Pfennig zweimal.',
       mehr: { bauen: 1.6, preis: 0.6 }, weniger: { werben: 0.7, entreissen: 0.6 } },
-    { k: 'grosszuegig', name: 'grosszuegig', sagt: 'Lässt dem Wirt umsonst liefern, was er braucht.',
+    { k: 'grosszuegig', name: 'großzügig', sagt: 'Lässt dem Wirt umsonst liefern, was er braucht.',
       mehr: { werben: 2.0, preis: 1.6 }, weniger: { bauen: 0.7 } },
     { k: 'gelehrt', name: 'gelehrt', sagt: 'Liest, was neu ist, und kauft es zwei Jahre zu früh.',
       mehr: { bauen: 2.0 }, weniger: { entreissen: 0.7 } },
-    { k: 'traege', name: 'traege', sagt: 'Lässt laufen. Das ist die einzige Verschnaufpause.',
+    { k: 'traege', name: 'träge', sagt: 'Lässt laufen. Das ist die einzige Verschnaufpause.',
       mehr: {}, weniger: { werben: 0.5, entreissen: 0.5, bauen: 0.5, macht: 0.4 } },
     { k: 'unnachgiebig', name: 'unnachgiebig', sagt: 'Vergisst nichts und löst nichts.',
       mehr: { entreissen: 1.6, aufstocken: 2.0 }, weniger: { verlieren: 0.5 } }
@@ -487,7 +487,7 @@ var GEGNER_DATEN = {
   untergang: [
     { k: 'gesund', name: 'steht gut' },
     { k: 'klamm', name: 'klamm', sagt: 'Die Kasse ist leer. Er verkauft eine Adresse.' },
-    { k: 'verpfaendet', name: 'verpfaendet', sagt: 'Er verpfändet, was auf dem Hof steht.' },
+    { k: 'verpfaendet', name: 'verpfändet', sagt: 'Er verpfändet, was auf dem Hof steht.' },
     { k: 'amende', name: 'am Ende', sagt: 'Er kann nicht mehr. Jetzt entscheidet ein anderer.' }
   ]
 };

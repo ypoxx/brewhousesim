@@ -141,6 +141,18 @@
 
   function mittelVon(k) { return MITTEL[k] || ep().mittel[0]; }
 
+  /* Die Zugart steht in der Rolle als Wort auf dem Bildschirm. Die Schluessel
+     bleiben ASCII (sie stehen in data-zug und in Fallunterscheidungen), das
+     Wort daneben ist Deutsch mit Umlauten. */
+  var ARTNAME = {
+    werben: 'wirbt', binden: 'bindet', entreissen: 'entreißt', aufstocken: 'stockt auf',
+    bauen: 'baut', preis: 'unterbietet', fuhre: 'fährt', rohstoff: 'kauft weg',
+    macht: 'nimmt Macht', verlieren: 'verliert', unglueck: 'Unglück',
+    uebernahme: 'Übernahme', angebot: 'Angebot', erbe: 'Erbfall', not: 'Not',
+    ende: 'Ende', schluckt: 'schluckt'
+  };
+  function artName(a) { return ARTNAME[a] || a; }
+
   function adresse(k) { return B.welt.adresse(k); }
 
   function offeneAdressen() {
@@ -1862,7 +1874,7 @@
     Z.zuege.slice(0, 40).forEach(function (e) {
       var z = B.el('div', 'gg-zzeile');
       z.appendChild(B.el('span', 'wann', e.jahr + ' W' + e.woche));
-      z.appendChild(B.el('span', 'art', e.art));
+      z.appendChild(B.el('span', 'art', artName(e.art)));
       z.appendChild(B.el('span', 'was', e.text));
       z.appendChild(B.knopf({
         text: 'zeigen', zug: 'gegner:zeige-blatt:' + e.nr, klasse: 'gg-winzig',

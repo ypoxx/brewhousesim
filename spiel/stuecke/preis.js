@@ -1271,7 +1271,7 @@
 
   /* --- Der Griff, wenn die Tafel zu ist --------------------------------- */
   function zeichneGriff(fach) {
-    var offenZahl = Z.angebote.length;
+    var offenZahl = lebendeAngebote().length;
     var griff = B.el('div', 'pr-griff');
 
     griff.appendChild(B.knopf({
