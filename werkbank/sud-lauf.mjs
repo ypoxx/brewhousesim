@@ -25,7 +25,7 @@ for (const epoche of [1, 2, 3, 4]) {
   await seite.waitForTimeout(700);
 
   const deckungen = [];
-  let geklickt = 0, stillWochen = 0, letzterStand = '';
+  let geklickt = 0, stillWochen = 0, letzterStand = '', letzte = null, letzteWoche = 0;
 
   for (let w = 0; w < WOCHEN; w++) {
     if (STIL === 'fleissig') {
@@ -71,7 +71,13 @@ for (const epoche of [1, 2, 3, 4]) {
     if (s.deckung) deckungen.push(+s.deckung.replace(/\./g, '').replace(',', '.'));
     if (s.stand === letzterStand) stillWochen++; else stillWochen = 0;
     letzterStand = s.stand;
-    if (w === WOCHEN - 1 || s.ende) {
+    letzte = s; letzteWoche = w + 1;
+    if (s.ende) break;
+  }
+  {
+    const s = letzte || {};
+    const w = (letzteWoche || 1) - 1;
+    {
       console.log(`\nEPOCHE ${epoche} · ${STIL} · nach ${w + 1} Wochen (${s.jahr}/${s.woche})`
         + (s.ende ? ' — DAS SPIEL IST ZU ENDE' : ''));
       console.log('  Kasse ' + s.kasse + ' · Lager ' + s.lager + ' (davon ' + s.durch
@@ -91,7 +97,6 @@ for (const epoche of [1, 2, 3, 4]) {
       }
       console.log('  Längste Folge unveränderter Wochen: ' + stillWochen);
       console.log('  BRAUHAUS.lage: ' + s.lage);
-      break;
     }
   }
   console.log('  ' + (fehler.length ? 'FEHLER: ' + fehler.join(' | ') : 'keine Fehler auf der Seite'));
