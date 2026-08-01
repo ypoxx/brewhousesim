@@ -264,3 +264,33 @@ sie ab.
 
 > **Auflage an DER GEGNER:** auch die Giebelschilder mit `data-frei` kennzeichnen, oder sie
 > bewusst im Pflock-System lassen und das hier vermerken. Nicht halb.
+
+## 11 — `kern/ton.js` gehört für Welle 2 DEM KLANG
+
+**Entschieden von der Aufsicht, unaufgefordert, vor dem Start des Stücks.**
+
+Der Skelett-Bauer hat `kern/ton.js` bewusst als Nichtstuer gebaut, der das Protokoll schon
+mitschreibt, und in den Kopf geschrieben: *„In Welle 2 wird hier die echte Wiedergabe
+eingehängt — ohne dass eine einzige Stück-Datei angefasst werden muss."* Genau so wird es
+gemacht. Die Regel „`kern/**` ist schreibgeschützt" wird für **diese eine Datei** und **nur
+für DEN KLANG** aufgehoben.
+
+> **Auflage:** Die vorhandene API bleibt Zeichen für Zeichen, wie sie ist —
+> `melde · spiele · schleife · halt · bett · setzeStumm · setzeLaut`, und `spiele` gibt
+> weiterhin einen Wahrheitswert zurück. Vier Stücke rufen sie bereits. Wer sie ändert,
+> bricht Welle 1 rückwirkend.
+
+Alle anderen Kerndateien bleiben gesperrt.
+
+### Zwei Befunde aus der Vorprüfung der Aufsicht, damit sie niemand zweimal macht
+
+**Die Tonlatte ist echt und sie ist scharf.** `werkbank/hoerer.py` ist gebaut und an zwei
+absichtlich extremen Betten geprüft: 1350 und 1970 wurden blind mit 95 % Sicherheit richtig
+erkannt. Wichtiger ist, was das Ohr **ungefragt** dazu gesagt hat — es hat den Synthwave im
+1970er-Bett als „für 1970 etwas anachronistisch" gerügt und den Kathedralenhall in einer
+Hofszene als unpassend. Dieses Ohr wird nicht wohlwollend sein.
+
+**ElevenLabs `/v1/music` singt.** Das 1350er-Bett kam als lateinischer Mönchsgesang zurück,
+mit verständlichen Worten, obwohl der Prompt nur Instrumente nannte. Für ein Bett unter einem
+Spielhof ist Gesang mit Text fast immer falsch — er zieht die Aufmerksamkeit. Wer Instrumental
+will, muss es ausdrücklich verlangen.
