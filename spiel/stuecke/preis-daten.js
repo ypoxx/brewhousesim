@@ -437,14 +437,36 @@ var PREIS_DATEN = {
           satz: 'Helles Malz. Damit lässt sich helles Bier brauen, und helles Bier ist gerade Mode.',
           wirkung: { preis: 0.06, ertrag: 700 } },
 
+        /* Zur Bahn kommt man auf zwei Weisen. Der Fuhrpark steht in vier
+           Wochen im Hof; das Gleis braucht zwei Jahre und macht danach jede
+           Fuhre billiger. Die Bahn legt keine Weiche für ein Haus, das seine
+           Ladung ohnehin mit eigenen Pferden an die Rampe bringt. */
+        { k: 'fuhrpark', name: 'Zwölf Kaltblüter und der eigene Fuhrpark', anteil: 0.105, bauzeit: 0,
+          was: 'Stallung, Geschirrkammer, Schmiede und ein Fuhrmeister.',
+          satz: 'Jeden Morgen um vier. Jeden Winter dieselben Hufe und dasselbe Futter.',
+          sperrt: ['gleis'],
+          wirkung: { ertrag: 900 } },
+
         { k: 'gleis', name: 'Das Gleis bis an die Rampe', anteil: 0.19, bauzeit: 2,
           was: 'Vierhundert Meter Anschlussgleis, Weiche und Prellbock.',
           satz: 'Der Waggon fährt in den Hof. Die Fuhre endet nicht mehr am Bahnhof.',
+          sperrt: ['fuhrpark'],
           wirkung: { ertrag: 1200 } },
+
+        /* Malz kaufen oder Malz machen. Der Kontrakt kostet ein Drittel und
+           wirkt sofort; die eigene Mälzerei braucht zwei Jahre und verkauft
+           danach an die Nachbarn. Die Handelsmälzerei liefert keinem
+           Wettbewerber. */
+        { k: 'malzkontrakt', name: 'Der Kontrakt mit der Handelsmälzerei', anteil: 0.075, bauzeit: 0,
+          was: 'Waggonweise Sommergerstenmalz, gleichbleibend, mit Analysenschein.',
+          satz: 'Immer dieselbe Ware. Der Preis dafür wird anderswo gemacht.',
+          sperrt: ['maelzerei'],
+          wirkung: { rohstoff: 180, ertrag: 500 } },
 
         { k: 'maelzerei', name: 'Die Mälzerei mit Weichstock', anteil: 0.24, bauzeit: 2,
           was: 'Weiche, Tenne, Darre in einem Bau aus Backstein.',
           satz: 'Das Haus macht sein Malz selbst und verkauft, was übrig ist.',
+          sperrt: ['malzkontrakt'],
           wirkung: { rohstoff: 260, ertrag: 1500 } },
 
         { k: 'dampf', name: 'Die Dampfmaschine', anteil: 0.30, bauzeit: 2,
@@ -462,9 +484,14 @@ var PREIS_DATEN = {
           satz: 'Der Name steht jetzt an fremden Wänden und bleibt dort dreißig Jahre hängen.',
           wirkung: { preis: 0.05, ansehen: 14, ertrag: 800 } },
 
+        /* Kälte aus dem Berg oder Kälte aus der Maschine. Das Haus baut das
+           eine oder das andere; für beides reicht weder der Hof noch der
+           Kessel. Der Keller ist billiger und braucht ein Jahr länger, die
+           Maschine läuft auch im warmen Winter. */
         { k: 'kaelte', name: 'Die Kältemaschine nach Linde', anteil: 0.52, bauzeit: 2, ab: 1876,
           was: 'Ammoniak-Kompressor, Solekreis, ein Maschinenhaus mit hohem Fenster.',
           satz: 'Das Sommerbrauverbot ist damit eine Gewohnheit statt eines Gesetzes.',
+          sperrt: ['felsenkeller'],
           wirkung: { plaetze: 180, ertrag: 3000 } },
 
         { k: 'sudhelm', name: 'Das Sudhaus mit Kupferhelm', anteil: 0.66, bauzeit: 3,
@@ -475,6 +502,7 @@ var PREIS_DATEN = {
         { k: 'felsenkeller', name: 'Der Felsenkeller', anteil: 0.38, bauzeit: 3,
           was: 'Achthundert Quadratmeter in den Berg getrieben, Lagerfässer in zwei Etagen.',
           satz: 'Wer lagern kann, muss nicht verkaufen. Das ist die ganze Macht dieses Jahrhunderts.',
+          sperrt: ['kaelte'],
           wirkung: { plaetze: 320, ertrag: 2200 } },
 
         { k: 'niederlage', name: 'Eine Niederlage in der Kreisstadt', anteil: 0.95, bauzeit: 1,

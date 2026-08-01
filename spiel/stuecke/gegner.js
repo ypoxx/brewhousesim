@@ -1821,7 +1821,11 @@
          Von der ersten Sekunde an laeuft irgendwo eine Uhr, die ihm gehoert. */
       B.wage('gegner.ersterZug', function () {
         Z.takt = takt();
-        zugWerben(haus('adler'));
+        var a = haus('adler');
+        /* Wirbt er schon so viel, wie er halten kann, wirbt er nicht — dann
+           soll trotzdem etwas geschehen sein. Auf dem ERSTEN Bildschirm darf
+           die Zeile "Ohne dich geschehen" nie auf null stehen. */
+        if (a && !zugWerben(a)) zieht(a);
       });
       /* Das Buch mithoeren: der Abschlag wird bei der Lieferung abgezogen,
          nicht am Jahresende nachgereicht. */
