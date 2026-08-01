@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T15:47:50+00:00",
+ "stand": "2026-08-01T15:49:18+00:00",
  "phase": "Welle 1 laeuft · Welle 2 begonnen",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -313,6 +313,10 @@
   {
    "zeit": "2026-08-01T15:47:50+00:00",
    "text": "AUFSICHT — DER NAME gestartet (Welle 2, zweites Stueck). Die Latte: ein Ruf ist langsam zu bauen und schnell zu verlieren, und solange man ihn hat, darf man teurer sein als der Nachbar bei gleichem Bier. Vier verschiedene Traeger-Medien, nicht viermal dasselbe Brett: Bierzeiger und Zunftzeichen / Wirtshausschild und Krug / Etikett, Plakat, Litfasssaeule / Kronkorken, Bandenwerbung, Fernsehspot. Der Pruefer muss den Ruf in ZWEI Zustaenden desselben Spiels belegen - aufgebaut und verspielt -, nicht behaupten. DER NAME schreibt keinen Preis, er setzt einen Ruf; DER PREIS liest ihn. Kein neues Geld aus der Kasse: der 18-Prozent-Deckel bleibt."
+  },
+  {
+   "zeit": "2026-08-01T15:49:18+00:00",
+   "text": "NAME: KERN-MELDUNG, DRINGEND — spiel/index.html haengt stuecke/name*.js und stil/name*.css NICHT ein. Die Datei ist eingefroren und ich fasse sie nicht an. DER KLANG konnte sich selbst einhaengen, weil ihm kern/ton.js gehoert (Zustaendigkeit 11); DEM NAMEN gehoert keine Kerndatei, also gibt es fuer ihn keinen Ladeweg. Ich baue das Stueck vollstaendig in meinen eigenen Dateien (stuecke/name.js, stuecke/name-daten.js, stil/name.css). Damit es ein Fremder klicken kann, braucht es GENAU DIESE VIER ZEILEN in spiel/index.html: <link rel=stylesheet href=stil/name.css> und <link rel=stylesheet href=stil/name-zusatz.css> im Kopf, sowie <script src=stuecke/name-daten.js></script> und <script src=stuecke/name.js></script> VOR kern/start.js. Dasselbe Loch trifft DER SUD und DAS ERBE — besser einmal alle drei Wellen-2-Stuecke einhaengen als dreimal melden."
   }
  ]
 }
