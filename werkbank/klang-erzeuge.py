@@ -158,6 +158,22 @@ GERAEUSCH = {
                    "table. No music.", 5),
     "karren": ("A strange cart drawn up in a yard and halted, the brake set, someone "
                "getting down and knocking twice at a door. No music.", 6),
+
+    # Der WEITER-Knopf ist der haeufigste Ton des Spiels. Er war zuerst ein
+    # synthetisches Glockchen; das pruefende Ohr hat ihn als "moderne
+    # UI-Pieptoene" geruegt. Jetzt ist er je Epoche ein wirkliches Zeichen.
+    "woche1": ("A wooden clapper knocked twice on a board in a yard, then a very small "
+               "handbell rung once. Dry, close, no music.", 3),
+    "woche2": ("A small brass handbell rung twice, briskly, in a stone yard. Nothing "
+               "else. No music.", 3),
+    "woche3": ("One short blast of a steam whistle at a works, close by, then silence. "
+               "No music.", 3),
+    "woche4": ("A mechanical factory time clock stamping a card: a lever pulled, a punch "
+               "striking, a small bell ping. No music.", 3),
+    "kerbe": ("A knife cutting a notch into a wooden tally stick: two short cutting "
+              "scrapes into dry oak. No music.", 3),
+    "horchen": ("A dog barking once far off across a yard and two men murmuring briefly, "
+                "indistinct. No music.", 4),
     "unruhe": ("A small crowd of men murmuring and arguing in a yard, indistinct, one "
                "voice raised briefly, feet shifting on gravel. No music.", 6),
 }

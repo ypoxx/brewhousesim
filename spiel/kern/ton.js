@@ -294,36 +294,20 @@
     q.start(wann); q.stop(wann + dauer + 0.05);
   }
 
-  function ton(ctx, ziel, wann, form, hz, dauer, spitze, bis) {
-    var o = ctx.createOscillator(); o.type = form || 'sine';
-    o.frequency.setValueAtTime(hz, wann);
-    if (bis) o.frequency.exponentialRampToValueAtTime(bis, wann + dauer);
-    var g = huelle(ctx, ziel, wann, 0.004, dauer * 0.1, dauer, spitze);
-    o.connect(g);
-    o.start(wann); o.stop(wann + dauer + 0.05);
-  }
-
-  /* Die Woche schlaegt in jeder Epoche anders. Das ist die billigste Stelle,
-     an der der Hof seine Zeit verraet — sie kommt am haeufigsten vor. */
+  /* Kein einziger Oszillator in dieser Datei. Siehe 'woche' unten. */
   function ersatz(ctx, ziel, welcher, wann, epoche, laut) {
     var v = laut === undefined ? 0.6 : laut;
     switch (welcher) {
 
-      case 'woche':
-        if (epoche === 1) {                       /* Holzklopfen und ein Schaellchen */
-          knall(ctx, ziel, wann, 340, 1.2, 0.10, 0.55 * v);
-          ton(ctx, ziel, wann + 0.05, 'sine', 1180, 0.35, 0.16 * v);
-        } else if (epoche === 2) {                /* Handglocke */
-          ton(ctx, ziel, wann, 'sine', 1046, 0.55, 0.20 * v);
-          ton(ctx, ziel, wann + 0.005, 'sine', 1572, 0.42, 0.10 * v);
-        } else if (epoche === 3) {                /* kurzer Dampfpfiff */
-          ton(ctx, ziel, wann, 'sawtooth', 760, 0.34, 0.10 * v);
-          ton(ctx, ziel, wann + 0.01, 'sawtooth', 1145, 0.30, 0.07 * v);
-          knall(ctx, ziel, wann, 2600, 0.7, 0.30, 0.09 * v);
-        } else {                                  /* Relais und Summer */
-          knall(ctx, ziel, wann, 2400, 3, 0.03, 0.35 * v);
-          ton(ctx, ziel, wann + 0.04, 'square', 880, 0.09, 0.10 * v);
-        }
+      /* Alle Ersatzklaenge sind gefiltertes Rauschen und keine Oszillatoren.
+         Das ist kein Geschmack: ein reiner Sinus oder eine Rechteckwelle
+         klingt in JEDER der vier Epochen nach 1980, und genau das hat das
+         pruefende Ohr im ersten Durchgang beanstandet. Holz, Blech und
+         Papier lassen sich aus Rauschen bauen, ein Piepser nicht wegdenken. */
+
+      case 'woche':                               /* nur bis die Probe geladen ist */
+        knall(ctx, ziel, wann, epoche >= 3 ? 900 : 340, epoche >= 3 ? 1.8 : 1.2, 0.10, 0.5 * v);
+        knall(ctx, ziel, wann + 0.13, epoche >= 3 ? 1400 : 520, 1.4, 0.14, 0.3 * v);
         return true;
 
       case 'kerbe':                               /* Messer schneidet Holz */
@@ -337,8 +321,8 @@
         return true;
 
       case 'aufmerken':                           /* der Nachbar hat sich geregt */
-        ton(ctx, ziel, wann, 'triangle', epoche >= 4 ? 520 : 392, 0.16, 0.13 * v);
-        ton(ctx, ziel, wann + 0.14, 'triangle', epoche >= 4 ? 392 : 294, 0.30, 0.11 * v);
+        knall(ctx, ziel, wann, 260, 1.6, 0.11, 0.35 * v);
+        knall(ctx, ziel, wann + 0.17, 230, 1.6, 0.14, 0.28 * v);
         return true;
 
       case 'keller': {                            /* Schleife: leerer Keller */

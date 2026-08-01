@@ -40,6 +40,25 @@
       an den Haendler zurueck. Bar auf die Hand — und die Kammer ist leer,
       was naechste Woche die Pfanne kostet.
 
+   UND DIE ANTWORT AUF DAS LEERE AUFTRAGSBUCH — auch die ist kein Geld
+   Das Ende dieses Hauses ist nicht die leere Kasse, sondern der leere
+   Wagen. Auch dagegen gibt es einen historischen Handgriff, und er kostet
+   keinen Pfennig:
+
+   4. DAS PROBEFASS (`probe`).  Ein Fass ohne Rechnung an einen Wirt, der
+      das Haus aufgegeben hat. Es kostet kein Geld — es kostet ein reifes
+      Fass aus dem Keller, einen Platz auf dem Wagen und einen der wenigen
+      Halte der Woche, also genau die knappe Sache dieser Epoche. Schmeckt
+      es, kommt die Adresse zurueck; schmeckt es halb, dauert es laenger.
+        1350 Fass auf Probe · 1600 Freifass an den Wirt
+        1884 Probefass ab Rampe · 1970 Aktionspalette ohne Berechnung
+
+   5. DIE FRIST (`frist`).  Und wenn niemand mehr abnimmt und niemand
+      zurueckgeholt wird, dann endet das Haus — mit einem Datum, nicht mit
+      einem WEITER, das ewig weiterlaeuft. Jede Epoche hat eine andere
+      Instanz, die dem Haus die Grundlage entzieht: der Rat, die Zunft, der
+      Malzhaendler, der Handel.
+
    SPERRLISTE beachtet: kein Hopfen 1350 (Grut), offene Pfanne, Hektoliter
    erst ab 1872 (das macht welt.menge), keine Emailschilder vor den 1890ern.
    =========================================================================== */
@@ -150,6 +169,19 @@ var FUHRE_DATEN = {
       bannmeile: 1,
       bann: { name: 'Bannbrief', basis: 60, staffel: 1.55,
               satz: 'Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich.' },
+      probe: { name: 'Fass auf Probe', kurz: 'auf Probe',
+               satz: 'Ein Fass ohne Rechnung an den Wirt, der das Haus aufgegeben hat. '
+                   + 'Kein Pfennig, kein Ungeld, kein Eintrag beim Rat — verschenktes Bier '
+                   + 'ist kein Verkauf. Es kostet ein reifes Fass und einen der vier Halte.',
+               zurueck: '{wirt} zapft wieder Bier des Anker. Der Schankknecht war am Tor '
+                      + 'und hat diesmal ein volles Fass mitgenommen.' },
+      frist: { wochen: 12, wer: 'der Rat',
+               satz: 'Ein Braurecht wird auf Zeit verliehen und für die Stadt verliehen. '
+                   + 'Wessen Bier keine Schenke der Stadt mehr führt, dem nimmt der Rat '
+                   + 'die Pfanne und gibt sie weiter.',
+               ende: 'Der Rat entzieht dem Haus zum Anker das Braurecht: seit zwölf Wochen '
+                   + 'hat keine Schenke der Stadt ein Fass genommen. Die Pfanne geht an '
+                   + 'einen anderen.' },
       kerbholz: {
         name: 'Kerbholz beim Grutherrn', kurz: 'Kerbholz', zeichen: 'Kerbe',
         jeKerbe: 25, kerben: 6,
