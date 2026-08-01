@@ -194,6 +194,34 @@
     },
 
     /* -------------------------------------------------------------------
+       DAS ENDE AUS URSACHE.  Aufsicht, ZUSTAENDIGKEIT 12.
+
+       Bis hierher kannte die Uhr genau ein Ende: die Gegenwart ist erreicht,
+       das Haus steht noch. Ein Haus kann aber auch fallen — und dann lief
+       WEITER bisher ewig weiter und schlug einem Haus, das das Spiel selbst
+       fuer tot erklaert hatte, den naechsten Zug vor.
+
+       Ein Stueck darf die Welt nicht allein anhalten (dieselbe Erwaegung wie
+       bei der Sperre, ZUSTAENDIGKEIT 2): es sagt der Uhr den Grund, die Uhr
+       haelt an und sagt es allen. Jedes Stueck malt sein eigenes Schlussblatt
+       auf 'ende'; keines muss dafuer wissen, was die anderen tun.
+
+           B.uhr.beende('keine-abnehmer', 'Kein Haus der Stadt fuehrt mehr ...')
+
+       Zweimal rufen schadet nicht — das erste Ende gilt.
+       ------------------------------------------------------------------- */
+    beende: function (grund, text) {
+      var z = B.welt.zeit;
+      if (z.ende) return false;
+      z.ende = true;
+      z.endgrund = String(grund || 'unbekannt');
+      if (text) B.welt.schreibe(String(text), 'ende');
+      B.sende('ende', { jahr: z.jahr, woche: z.woche, epoche: z.epoche, grund: z.endgrund });
+      B.sende('zeichne', { grund: 'ende' });
+      return true;
+    },
+
+    /* -------------------------------------------------------------------
        Ruhige Jahre werden nicht gespielt, sondern erzaehlt.
        Ein Stueck ruft das, wenn nichts zu entscheiden ist.
        ------------------------------------------------------------------- */
