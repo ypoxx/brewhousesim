@@ -119,9 +119,20 @@ var PREIS_DATEN = {
           sperrt: ['ochsenstall'],
           wirkung: { ertrag: 62 } },
 
+        /* Klein und sicher gegen groß und langsam: der Kauf beim Zunftbüttner
+           wirkt heute und kostet ein Achtel; die eigene Werkstatt braucht ein
+           Jahr und trägt danach dreifach. Beides zugleich duldet die Zunft
+           nicht — wer bindet, kauft nicht, und wer kauft, bindet nicht. */
+        { k: 'fasskauf', name: 'Der feste Fasskauf bei der Zunft', anteil: 0.09, bauzeit: 0,
+          was: 'Ein Brief über zwölf Fässer im Jahr, zum Zunftpreis, gegen Vorauszahlung.',
+          satz: 'Heute unterschrieben, morgen stehen die Fässer im Hof. Gebunden ist gebunden.',
+          sperrt: ['boettcher'],
+          wirkung: { plaetze: 2, ertrag: 9 } },
+
         { k: 'boettcher', name: 'Der Böttcher im Haus', anteil: 0.34, bauzeit: 1,
           was: 'Eine Werkstatt im Hof, Daubenholz unterm Vordach.',
           satz: 'Fässer werden nicht mehr gekauft, sondern gebunden.',
+          sperrt: ['fasskauf'],
           wirkung: { plaetze: 4, ertrag: 26 } },
 
         { k: 'brunnen', name: 'Der Ziehbrunnen im Hof', anteil: 0.55, bauzeit: 1,
@@ -134,9 +145,19 @@ var PREIS_DATEN = {
           satz: 'Kupfer hält die Hitze gleich. Das Bier wird sauberer und fängt einen besseren Preis.',
           wirkung: { preis: 0.06, ertrag: 30 } },
 
+        /* Dasselbe Übel, zwei Wege: die Handmühle drückt das Mahlgeld heute
+           für ein Sechstel des Preises, das Achtel an der Stadtmühle nimmt es
+           ganz weg. Wer selbst mahlt, bekommt vom Müller keinen Anteilbrief. */
+        { k: 'handmuehle', name: 'Die Handmühle im Hof', anteil: 0.17, bauzeit: 0,
+          was: 'Zwei Steine unter einem Schutzdach, von zwei Knechten getreten.',
+          satz: 'Der Müller merkt es und rechnet weniger. Ganz los wird man ihn damit nicht.',
+          sperrt: ['muehlanteil'],
+          wirkung: { ertrag: 18, rohstoff: 6 } },
+
         { k: 'muehlanteil', name: 'Ein Achtel an der Stadtmühle', anteil: 1.05, bauzeit: 0,
           was: 'Ein Anteilbrief, im Ratsbuch eingetragen.',
           satz: 'Wer Anteil hat, mahlt zuerst und zahlt den Metzen an sich selbst.',
+          sperrt: ['handmuehle'],
           wirkung: { pflichtWeg: 'mahlgeld', ertrag: 40 } },
 
         { k: 'gewoelbe', name: 'Der gewölbte Keller unterm Hof', anteil: 1.90, bauzeit: 3,

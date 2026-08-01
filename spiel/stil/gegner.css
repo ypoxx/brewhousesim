@@ -114,11 +114,17 @@
   gap: calc(var(--s) * 3);
   pointer-events: none;
 }
+/* Das Hofbild steht NUR in 1350 und 1600 — dort ist die Platte an dieser
+   Stelle leeres Feld. Ab 1884 ist seine Brauerei auf der Platte selbst gemalt;
+   ein zweites Haus daruebergelegt waere eine Attrappe ueber dem Bild.
+   Der Filter nimmt ihm nicht alle Farbe: ganz entsaettigt klebt ein Bau wie
+   ein Aufkleber auf einer warmen Aquarellplatte. Kuehler als das eigene Haus,
+   aber aus demselben Papier. */
 .gg-hofbild {
   width: calc(var(--s) * 168);
   height: auto;
-  filter: drop-shadow(0 calc(var(--s) * 4) calc(var(--s) * 8) rgba(0, 0, 0, 0.45))
-          saturate(0.35) contrast(1.02);
+  filter: drop-shadow(0 calc(var(--s) * 4) calc(var(--s) * 8) rgba(0, 0, 0, 0.4))
+          sepia(0.42) saturate(1.45) hue-rotate(-12deg) brightness(1.04) contrast(0.96);
 }
 .gg-bauten {
   display: flex;
@@ -133,6 +139,25 @@
   background: rgba(220, 224, 228, 0.86);
   border: calc(var(--s) * 1) solid var(--gg-tinte);
   border-radius: calc(var(--s) * 3);
+  pointer-events: auto;
+}
+/* Was er hat und das Haus nicht: doppelt gerahmt. Man sieht den Vorsprung,
+   ehe man ihn liest. */
+.gg-bau.vor {
+  border-width: calc(var(--s) * 2);
+  border-color: var(--gg-warn);
+  background: rgba(244, 226, 216, 0.9);
+}
+.gg-vorschild {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  letter-spacing: calc(var(--s) * 1);
+  color: #fff2ea;
+  background: rgba(141, 47, 28, 0.9);
+  border: calc(var(--s) * 1) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 2) calc(var(--s) * 8);
+  white-space: nowrap;
   pointer-events: auto;
 }
 
@@ -333,6 +358,32 @@
   color: #eef1f3;
   border-radius: calc(var(--s) * 3);
 }
+/* Die Zahl, die der Kritiker sucht: was seit dem letzten WEITER fiel. */
+.gg-bandneu {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  padding: calc(var(--s) * 1) calc(var(--s) * 8);
+  background: var(--gg-warn);
+  color: #fff6ec;
+  border-radius: calc(var(--s) * 3);
+  white-space: nowrap;
+}
+/* Der Zug ohne Bargeld. Steht im Band, damit er auch bei leerer Kasse
+   gefunden wird, ohne dass ein Blatt geoeffnet werden muss. */
+.gg-bandklage {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 8);
+  flex-wrap: wrap;
+  padding-bottom: calc(var(--s) * 4);
+  margin-bottom: calc(var(--s) * 3);
+  border-bottom: calc(var(--s) * 1) dotted rgba(35, 38, 42, 0.4);
+}
+.gg-ohnegeld {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  opacity: 0.78;
+}
 .gg-bandluecke { flex: 1; }
 .gg-bandwaehrung {
   display: flex;
@@ -398,8 +449,16 @@
   padding: calc(var(--s) * 16) calc(var(--s) * 20);
 }
 .gg-bkopf { display: flex; align-items: flex-start; gap: calc(var(--s) * 14); }
-.gg-bkopf h2 { border-bottom: none; padding-bottom: 0; margin-bottom: calc(var(--s) * 2); }
-.gg-unter { font-size: calc(var(--s) * 18); font-style: italic; opacity: 0.85; }
+/* AUFLAGE aus spiel/ZUSTAENDIGKEIT.md §1: Der Textblock muss schrumpfen
+   duerfen. Ohne min-width:0 waechst er mit einem langen Erbspruch ueber die
+   Reiterknoepfe und deckt den Schliessknopf zu — genau der Fehler, den ein
+   Kritiker schon einmal gefunden hat. Nicht darauf hoffen, dass der Text
+   kurz bleibt: es unmoeglich machen. */
+.gg-bkopf > div { min-width: 0; }
+.gg-bkopf h2 { border-bottom: none; padding-bottom: 0; margin-bottom: calc(var(--s) * 2);
+               overflow-wrap: anywhere; }
+.gg-unter { font-size: calc(var(--s) * 18); font-style: italic; opacity: 0.85;
+            overflow-wrap: anywhere; }
 .gg-reiter { margin-left: auto; display: flex; gap: calc(var(--s) * 6); flex: none; }
 
 .gg-waehrung {
