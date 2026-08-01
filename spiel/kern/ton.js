@@ -131,23 +131,38 @@
     'gegner:zuvorkommen': { datei: altNeu('karren', 'telefon'), laut: 0.7 },
     'gegner:abloesen':    { datei: stets('handschlag'), laut: 0.7 },
     'gegner:festlegung':  { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
-    'gegner:hinsehen':    { ersatz: 'aufmerken', laut: 0.55 },
+    'gegner:hinsehen':    { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.6 },
 
-    /* --- DER KERN ------------------------------------------------------- */
-    'uhr:woche':         { ersatz: 'woche', laut: 0.55,
+    /* --- DER KERN -------------------------------------------------------
+       Der haeufigste Ton im ganzen Spiel: der WEITER-Knopf. Er war zuerst
+       ein synthetisches Glockchen — und das pruefende Ohr hat ihn ungefragt
+       als "moderne UI-Pieptoene" geruegt, bei 1350. Jetzt ist es je Epoche
+       ein wirkliches Zeichen: Holzklapper, Handglocke, Dampfpfiff, Stechuhr. */
+    'uhr:woche':         { datei: je('woche1', 'woche2', 'woche3', 'woche4'),
+                           ersatz: 'woche', laut: 0.5,
                            sagt: 'Eine Woche weiter — je Epoche ein anderes Zeichen.' }
   };
 
-  /* Was ein unbekannter Name bekommt, damit kein Ruf ins Leere geht. */
-  var VORSILBE = {
-    sud: 'kerbe', fuhre: 'kerbe', preis: 'blatt', stadt: 'blatt',
-    gegner: 'aufmerken', uhr: 'woche', tafel: 'blatt', sommer: 'keller'
+  /* Was ein unbekannter Name bekommt, damit kein Ruf ins Leere geht.
+     Auch der Notfall greift zu einer wirklichen Probe: ein synthetischer
+     Piepser waere in jeder der vier Epochen ein Anachronismus. */
+  var NOTFALL = {
+    sud:    { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 0.6 },
+    fuhre:  { datei: stets('kerbe'), laut: 0.6 },
+    tafel:  { datei: altNeu('kreide', 'maschine'), laut: 0.5 },
+    preis:  { datei: stets('papier'), laut: 0.5 },
+    stadt:  { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
+    gegner: { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.55 },
+    uhr:    { datei: je('woche1', 'woche2', 'woche3', 'woche4'), laut: 0.5 },
+    sommer: { ersatz: 'keller', laut: 0.5 }
   };
 
   function eintrag(name) {
     if (KATALOG[name]) return KATALOG[name];
     var kopf = String(name).split(':')[0];
-    return { ersatz: VORSILBE[kopf] || 'blatt', laut: 0.5, geraten: true };
+    var n = NOTFALL[kopf];
+    if (n) return { datei: n.datei, ersatz: n.ersatz, laut: n.laut, geraten: true };
+    return { ersatz: 'blatt', laut: 0.5, geraten: true };
   }
 
   function dateiVon(e, epoche) {

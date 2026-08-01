@@ -140,9 +140,9 @@ var STADT_DATEN = {
        also rund 1,3 m. In 1600 ist die Platte weitraeumiger gezeichnet,
        deshalb 6.9 statt 8.2 und ein Schritt nach vorn aus dem Steinhaus. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
-      ort: 'kesselstelle', dx: -12, dy: 7,
+      ort: 'kesselstelle', dx: -9, dy: 5,
       breite: 8.9, breiten: { 1: 8.9, 2: 6.6 },
-      versatz: { 2: { dx: 11, dy: -6 } },
+      versatz: { 2: { dx: 8, dy: -4 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne ueber offenem Feuer, daneben Maischbottich und '
           + 'Kuehlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
@@ -166,7 +166,7 @@ var STADT_DATEN = {
 
     { schluessel: 'keller_gewoelbe', name: 'Gewoelbekeller', bild: 'keller_gewoelbe',
       ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 9.5, 2: 8.6 },
-      versatz: { 1: { dx: 5 }, 2: { dx: 0.5, dy: -7 } },
+      versatz: { 1: { dx: 7 }, 2: { dx: 0.5, dy: -7 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kuehl und dunkel. Jede Woche, die ein Fass laenger haelt, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
