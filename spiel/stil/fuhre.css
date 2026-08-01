@@ -117,9 +117,13 @@
    PLATZORDNUNG — alles in Prozent, Bezug 2752 x 1536
    -------------------------------------------------------------------------- */
 .fu-haeuser { left: 1.1%;  top: 12.6%; width: 25.6%; height: 73.6%; }
-.fu-tafel   { left: 27.4%; top: 12.6%; width: 23.2%; height: 40.4%; }
-.fu-keller  { left: 27.4%; top: 53.8%; width: 23.2%; height: 32.4%; }
-.fu-wagen   { left: 51.3%; top: 53.8%; width: 26.9%; height: 32.4%; }
+/* Die Anschlagtafel traegt seit Runde 3 zwei Zeilen mehr — den Notsud und
+   das Kerbholz. Sie bekommt dafuer 2,4 Prozentpunkte Hoehe vom Keller und
+   vom Wagen; die Aussenkanten der Platzordnung bleiben, wo sie waren, damit
+   das Bild der STADT nicht weiter zugedeckt wird. */
+.fu-tafel   { left: 27.4%; top: 12.6%; width: 23.2%; height: 42.8%; }
+.fu-keller  { left: 27.4%; top: 56.2%; width: 23.2%; height: 30.0%; }
+.fu-wagen   { left: 51.3%; top: 56.2%; width: 26.9%; height: 30.0%; }
 
 /* --------------------------------------------------------------------------
    DIE HAEUSER

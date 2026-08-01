@@ -53,7 +53,7 @@ var STADT_DATEN = {
           + 'Gruenanlage. Der Schornstein von 1884 steht noch und raucht nicht mehr.',
       stand: ['schornstein', 'abfuellhalle', 'stahltanks', 'kastenlager',
               'eiskeller', 'verladedock'],
-      schild: { dx: 0.4, dy: -2.6, breite: 6.6, dreh: -4, hell: true }
+      schild: { dx: 0.1, dy: -2.4, breite: 7.4, dreh: -4, hell: true }
     }
   },
 
