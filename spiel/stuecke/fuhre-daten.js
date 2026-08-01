@@ -401,7 +401,15 @@ var FUHRE_DATEN = {
                preis: 260, freiBis: 3 },
       keller: { name: 'Der Eiskeller', bettFass: 2, bett: 'Lagerfass', spalten: 9,
                 satz: 'Ein Lagerfass zu drei Hektoliter. Ohne Eis wird alles darin sauer.' },
-      wagen: { name: 'Bahnfracht ab Rampe', leeren: 'Rampe räumen', fass: 12, halte: 6, schritt: 4,
+      /* Die Knappheit von 1884 ist die FRACHTSTUFE, nicht die Zahl der Halte:
+         ein Wagen der Bahn geht an so viele Stationen, wie das Haus Kunden
+         hat — was er kostet, entscheidet die Stufe. Vorher standen hier
+         sechs Halte fuer zehn Adressen, und weil eine Fuhre zugleich die
+         Woche ist, konnte das Haus nur ein Drittel seines Marktes beliefern:
+         gemessen 180 Fass Absatz im Jahr bei einem Bedarf von 609, danach
+         fuenf verlorene Adressen im zweiten Braujahr. Der Tourenplan mit
+         wenigen Halten gehoert 1970 und steht dort. */
+      wagen: { name: 'Bahnfracht ab Rampe', leeren: 'Rampe räumen', fass: 12, halte: 10, schritt: 4,
                grund: 0, jeKm: 0, haltPreis: 0, umlauf: 2, bruch: 0.02,
                satz: 'Die Rampe geht an den Bahnhof. Was sie kostet, entscheidet die Stufe.' },
       fracht: [
