@@ -21,3 +21,11 @@ build/
 design/**/_*.jpg
 werkbank/.sperre
 werkbank/.gitsperre
+
+# Messschrott der Kritiker in der Wurzel. Die Weglass-Renders der STADT (z1..z4)
+# sind Arbeitsmaterial einer Messung, kein Ergebnis — 153 MB davon lagen schon da.
+# Kritiker gehoeren in den Scratchpad; bis das ueberall sitzt, faengt das hier ab.
+/z1/
+/z2/
+/z3/
+/z4/
