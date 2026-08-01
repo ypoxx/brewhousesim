@@ -1331,7 +1331,26 @@
      "schließen", waehrend nichts zu sehen ist, und der erste Klick tut
      scheinbar nichts. */
   function tafelSichtbar() {
-    return Z.offen && (!sommerLaeuft() || Z.erzwungen) && !tafelWeggeklappt();
+    return Z.offen && (!sommerLaeuft() || Z.erzwungen)
+      && !Z.weggeklappt && !tafelWeggeklappt();
+  }
+
+  /* DIE STADT klappt erst einen Wimpernschlag nach dem Zeichnen zu (ihr
+     Rahmen sieht im Takt nach). Wer den Griff im selben Zug beschriftet,
+     schreibt deshalb immer noch "schließen". Also einmal nachsehen, nachdem
+     der Rahmen dran war — und nur dann neu zeichnen, wenn sich der SICHTBARE
+     Zustand wirklich geaendert hat. Das laeuft genau einmal je Aufschlag. */
+  var rahmenBlick = null;
+  function seheNachRahmen() {
+    if (rahmenBlick) clearTimeout(rahmenBlick);
+    rahmenBlick = setTimeout(function () {
+      rahmenBlick = null;
+      var weg = tafelWeggeklappt();
+      if (weg !== !!Z.weggeklappt) {
+        Z.weggeklappt = weg;
+        B.sende('zeichne', { grund: 'preis-rahmen' });
+      }
+    }, 420);
   }
 
   /* --- Der Griff, wenn die Tafel zu ist --------------------------------- */
@@ -1432,7 +1451,7 @@
       B.leere(fach);
 
       zeichneGriff(fach);
-      if (tafelSichtbar()) zeichneTafel(fach);
+      if (tafelSichtbar()) { zeichneTafel(fach); seheNachRahmen(); }
 
       /* Die eine Zahl: der naechste sinnvolle Zug dieses Stuecks. */
       var billig = billigstesAngebot();
