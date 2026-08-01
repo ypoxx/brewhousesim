@@ -142,7 +142,7 @@ var STADT_DATEN = {
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
       ort: 'kesselstelle', dx: -9, dy: 5,
       breite: 8.9, breiten: { 1: 8.9, 2: 6.6 },
-      versatz: { 2: { dx: 8, dy: -4 } },
+      versatz: { 2: { dx: 7, dy: 3 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne über offenem Feuer, daneben Maischbottich und '
           + 'Kühlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
