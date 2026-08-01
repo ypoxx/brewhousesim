@@ -603,6 +603,16 @@
     nachZug('schild');
   }
 
+  /* Der Knopf auf der Karte nimmt den groessten Wirt, der noch keines hat —
+     die Reihe darunter laesst jeden einzeln waehlen. Kein toter Knopf. */
+  function schildBeimGroessten(t) {
+    var fach = t.k === 'schild' ? Z.schilder : Z.umtrunk;
+    var frei = B.welt.adressenJetzt().filter(function (a) { return !fach[a.schluessel]; })
+      .sort(function (a, b) { return b.bedarf - a.bedarf; });
+    if (!frei.length) { Z.meldung = 'Ueberall, wo es geht, haengt schon eines.'; return nachZug('voll'); }
+    schildBei(frei[0]);
+  }
+
   function beschickeAusstellung(t) {
     if (!zahlt(t.preis, t.name)) { Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer'); }
     var g = guete();
@@ -965,6 +975,7 @@
       titel: (t.sagt || '') + (t.warnt ? ' — ' + t.warnt : '') + (warum ? ' [' + warum + ']' : ''),
       tu: function () {
         if (t.art === 'schalter') return schalteZeiger();
+        if (t.art === 'adresse') return schildBeimGroessten(t);
         if (t.art === 'fest') return kaufeFest(t);
         if (t.art === 'jahr') return kaufeJahr(t);
         if (t.art === 'wette') return beschickeAusstellung(t);
