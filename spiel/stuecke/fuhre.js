@@ -440,12 +440,19 @@
     if (zd.angeld) {
       var hs = echteSorten();
       var haus = hs[Math.min(1, hs.length - 1)] || hs[0];
+      var gel = jahresLieferung();
       haeuser().forEach(function (a) {
         if (!haus) return;
         if (!(a.bindung && a.bindung.wem === 'haus')) return;
         if (sperre(a, haus) && sperre(a, notSorte())) return;
-        var wert = jahresbedarf(a) * preisJeFass(haus, a) * zd.angeld;
-        var n = Math.round(wert);
+        /* Angelegt wird auf das, was der Wirt WIRKLICH nimmt, nicht auf das,
+           was er koennte: ein Anteil des vergangenen Braujahres. Wer nichts
+           genommen hat, legt auch nichts an — dafuer legt jeder gebundene
+           Wirt wenigstens auf die erste Fuhre des Winters an. So kann das
+           Angeld nie groesser werden, als es im Jahr darauf abgetrunken
+           wird; es schafft kein Geld, es verschiebt es auf den Zahltag. */
+        var menge = Math.max(gel[a.schluessel] || 0, wochenbedarf(a) * 1.5);
+        var n = Math.round(menge * preisJeFass(haus, a) * zd.angeld);
         if (n <= 0) return;
         angeld += n;
         Z.vorschuss[a.schluessel] = (Z.vorschuss[a.schluessel] || 0) + n;
