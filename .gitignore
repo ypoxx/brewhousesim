@@ -29,3 +29,7 @@ werkbank/.gitsperre
 /z2/
 /z3/
 /z4/
+
+# Python-Zwischenstand
+__pycache__/
+*.pyc
