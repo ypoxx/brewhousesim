@@ -460,6 +460,7 @@
         tu: function () { markeSchalten(m.schluessel); }
       });
       p.setAttribute('aria-pressed', m.ruht ? 'false' : 'true');
+      p.setAttribute('data-marke', m.schluessel);
       p.appendChild(B.el('span', 'scheibe'));
       p.addEventListener('mouseenter', function () { m.el.classList.remove(MRUHT); });
       p.addEventListener('mouseleave', function () {
@@ -468,6 +469,21 @@
       B.orte.setze(p, m.ort, { anker: 'mitte', dx: faecher });
       fach.appendChild(p);
     });
+
+    /* KEIN TOTER KNOPF IM BILD. Ein Pflock, den die Maus nicht trifft, weil
+       ein fremdes Brett mit data-frei darueberliegt (das Haus gegenueber tut
+       genau das), waere ein Knopf, an dem ein Kritiker mit Playwright
+       haengenbleibt. Der wird wieder abgeraeumt — und seine Marke darf dann
+       stehen, damit keine Auskunft verlorengeht. */
+    for (var i = fach.children.length - 1; i >= 0; i--) {
+      var el = fach.children[i];
+      var r = el.getBoundingClientRect();
+      var t = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+      if (t && el.contains(t)) continue;
+      var s = el.getAttribute('data-marke');
+      if (s && markenLage[s] === 'ruht') markenLage[s] = 'steht';
+      fach.removeChild(el);
+    }
   }
 
   function marken(jetzt) {
