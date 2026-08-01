@@ -179,6 +179,7 @@
     if (Z.wirkung.zunftlade && b.mittel === 'zunftbrief') summe = summe * 0.5;
     if (Z.wirkung.bank) summe = summe * (2 / 3);
     if (Z.wirkung.marke) summe = summe * (2 / 3);
+    if (b.nachlass) summe = summe * (1 - b.nachlass);
     return Math.max(1, Math.round(summe));
   }
 
@@ -191,12 +192,62 @@
   }
 
   /* Was der Abschlag kostet: solange er die Adresse haelt, druckt er den
-     Preis, den das Haus dort noch bekommt. Je Fass, das das Haus liefert. */
+     Preis, den das Haus dort noch bekommt. Je Fass, das das Haus liefert.
+     Steht sein Preis unter dem Satz des Rats, druckt er staerker — das ist
+     die Stelle, an der ein unterbotener Preis wirklich wehtut und nicht bloss
+     eine Meldung ist. */
   function abschlagJeFass(k) {
     var b = Z.bindung[k];
     if (!b) return 0;
     var m = mittelVon(b.mittel);
-    return preisJeFass() * (m.abschlag || 0.15);
+    return preisJeFass() * (m.abschlag || 0.15) * preisdruck();
+  }
+
+  /* 1,0 = er haelt den Satz. Bis 1,5 = er unterbietet ihn um ein Drittel. */
+  function preisdruck() {
+    var h = haus('adler');
+    if (!h || h.weg) return 1;
+    var satz = bierpreis();
+    if (!satz || h.preis >= satz) return 1;
+    return B.grenze(1 + (satz - h.preis) / satz, 1, 1.5);
+  }
+
+  /* ----------------------------------------------------------------------
+     DER VORSPRUNG.  Technik, die er frueher hat als das Haus.
+     Jeder seiner Bauten nennt einen 'spiegel' — den gleichwertigen Aufbau im
+     eigenen Hof. Was er hat und das Haus nicht, kuerzt seine Werbung um je
+     eine Woche. Die Liste steht im Blatt, die Folge steht darunter.
+     ---------------------------------------------------------------------- */
+  function bauNach(k) {
+    var l = ep().bauten, i;
+    for (i = 0; i < l.length; i++) if (l[i].k === k) return l[i];
+    return null;
+  }
+
+  /* 'hat' | 'offen' | 'fehlt' — und die Wahrheit steht in DIE STADT, nicht hier. */
+  function eigenerStand(spiegel) {
+    if (!spiegel || !B.stadt) return 'fehlt';
+    try {
+      if (B.stadt.hat(spiegel)) return 'hat';
+      if (B.stadt.offen().indexOf(spiegel) >= 0) return 'offen';
+    } catch (e) { return 'fehlt'; }
+    return 'fehlt';
+  }
+
+  function vorsprungListe(h) {
+    var l = [];
+    (h.bauten || []).forEach(function (bk) {
+      var b = bauNach(bk);
+      if (!b) return;
+      l.push({ bau: b, stand: eigenerStand(b.spiegel) });
+    });
+    return l;
+  }
+
+  function vorsprung(h) {
+    var n = 0;
+    vorsprungListe(h).forEach(function (x) { if (x.stand !== 'hat') n += 1; });
+    return Math.min(n, D.vorsprungKappe || 3);
   }
 
   /* ----------------------------------------------------------------------
@@ -385,14 +436,20 @@
     var frei = ep().mittel.filter(function (m) { return !m.fest; });
     var m = B.wuerfel.aus(frei);
     var w = ep().wochenWerbung;
+    /* Was er frueher hat als das Haus, macht ihn schneller. Je Ding eine
+       Woche weniger — bis auf eine Woche herunter, nie auf null. */
+    var vor = vorsprung(h);
+    var dauer = Math.max(1, B.wuerfel.ganz(w[0], w[1]) - vor);
     Z.werbung[a.schluessel] = {
-      wer: h.k, mittel: m.k, seit: takt(),
-      bis: takt() + B.wuerfel.ganz(w[0], w[1]),
+      wer: h.k, mittel: m.k, seit: takt(), vorsprung: vor,
+      bis: takt() + dauer,
       preis: werbepreis(a, m)
     };
     merkeZug(h, 'werben',
       nameVon(h) + ' wirbt um ' + a.name + ': ' + ep().werbesatz
-      + ' Zuvorkommen kostet ' + B.welt.geld(Z.werbung[a.schluessel].preis) + '.',
+      + ' Zuvorkommen kostet ' + B.welt.geld(Z.werbung[a.schluessel].preis) + '.'
+      + (vor ? ' Er braucht ' + vor + (vor === 1 ? ' Woche' : ' Wochen')
+             + ' weniger als sonst — er hat, was das Haus nicht hat.' : ''),
       a.ort, a.schluessel);
     return true;
   }
@@ -697,9 +754,16 @@
      DAS JAHR — Abrechnung, Erbfall, Untergang
      ---------------------------------------------------------------------- */
   function jahrLaeuft() {
-    /* 1. Der Abschlag: was ihn zu halten kostet, dass er haelt.
-       Fuer jedes Fass, das das Haus an eine seiner Adressen geliefert hat,
-       drueckt er den Preis. Das steht im Buch, mit seinem Namen davor. */
+    /* 1. Der Abschlag wird nicht mehr am Jahresende gerechnet, sondern bei
+       jeder einzelnen Lieferung abgezogen (siehe hoerePlatte weiter unten).
+       Hier wird nur noch das Jahr umgeblättert. */
+    Z.abschlagVorjahr = Z.abschlag;
+    Z.abschlagJeVorjahr = Z.abschlagJe;
+    Z.abschlagJahr = jahr();
+    Z.abschlag = 0;
+    Z.abschlagJe = {};
+    Z.umsatzJahr = 0;
+
     var jetzt = jahr() - 1;
     var geliefert = {};
     B.protokoll.forEach(function (p) {
@@ -707,27 +771,6 @@
         geliefert[p.adresse] = (geliefert[p.adresse] || 0) + p.menge;
       }
     });
-    var summe = 0, wo = [];
-    Z.abschlagJe = {};
-    Object.keys(Z.bindung).forEach(function (k) {
-      var n = geliefert[k] || 0;
-      if (!n) return;
-      var teil = Math.round(n * abschlagJeFass(k));
-      if (teil <= 0) return;
-      summe += teil;
-      Z.abschlagJe[k] = teil;
-      var a = adresse(k);
-      wo.push((a ? a.name : k) + ': ' + B.welt.geld(teil));
-      var h = haus(Z.bindung[k].wer);
-      if (h) h.kasse += teil;
-    });
-    summe = Math.min(summe, Math.round(Math.max(0, B.welt.haus.kasse) * 0.15));
-    Z.abschlag = summe;
-    Z.abschlagJahr = jahr();
-    if (summe > 0) {
-      B.welt.zahle(summe, 'Preisabschlag, weil der Adler die Adresse haelt ('
-        + wo.join(', ') + ')', 'gegner');
-    }
 
     /* 2. Er verdient an dem, was das Haus dort NICHT liefert. */
     haeuserJetzt().forEach(function (h) {

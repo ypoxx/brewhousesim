@@ -539,9 +539,32 @@
     Z.angebote = wahl;
   }
 
+  /* Was heute noch zu haben ist: nicht genommen, nicht durch eine andere
+     Entscheidung desselben Tages ausgeschlossen. */
+  function lebendeAngebote() {
+    return Z.angebote.filter(function (k) { return !Z.genommen[k] && !Z.gesperrt[k]; });
+  }
+
+  /* Wer heute etwas genommen hat, soll nicht auf eine leere Reihe sehen. Es
+     rueckt nach — aber nur bis zur Zahl des Tages, und nie mehr als sieben
+     Karten nebeneinander. Nachgerueckt wird die naechste Sprosse nach oben,
+     nicht ein Geschenk: das Nachgerueckte kostet ebenfalls. */
+  function nachruecken() {
+    var wieViele = D.angeboteJeJahr || 4;
+    for (var runde = 0; runde < 3; runde++) {
+      if (lebendeAngebote().length >= wieViele) return;
+      if (Z.angebote.length >= 7) return;
+      var haben = {};
+      Z.angebote.forEach(function (k) { haben[k] = true; });
+      var frei = offeneAngebote().filter(function (a) { return !haben[a.k]; });
+      if (!frei.length) return;
+      Z.angebote.push(frei[0].k);
+    }
+  }
+
   function billigstesAngebot() {
     var best = null;
-    Z.angebote.forEach(function (k) {
+    lebendeAngebote().forEach(function (k) {
       var a = angebotVon(k);
       if (!a) return;
       var p = zahlplan(a).jetzt;
@@ -555,7 +578,9 @@
      ---------------------------------------------------------------------- */
   function nimm(a) {
     if (B.welt.zeit.woche !== 1) return;
-    if (Z.genommen[a.k]) return;
+    /* Zweimal dasselbe gibt es nicht, und was heute ausgeschlossen wurde,
+       ist heute ausgeschlossen — sonst waeren Ochse und Gaul beide zu haben. */
+    if (Z.genommen[a.k] || Z.gesperrt[a.k]) return;
     var plan = zahlplan(a);
     if (!B.welt.zahle(plan.jetzt, a.name + (a.bauzeit ? ' — Anzahlung' : ''), 'spieler')) return;
 
@@ -567,15 +592,16 @@
     }
     if (a.bauzeit && plan.rate > 0) {
       Z.raten.push({ k: a.k, name: a.name, rate: plan.rate, offen: plan.raten, faellig: jahr() + 1 });
-      chronik('bau', a.name + ' begonnen fuer ' + geld(plan.ganz)
+      chronik('bau', a.name + ' begonnen für ' + geld(plan.ganz)
         + ' — ' + geld(plan.jetzt) + ' angezahlt, ' + plan.raten + ' Raten zu ' + geld(plan.rate)
         + ', fertig ' + (jahr() + a.bauzeit) + '.');
       B.welt.schreibe(a.name + ' wird gebaut. Fertig zu Michaeli ' + (jahr() + a.bauzeit) + '.', 'preis');
     } else {
-      chronik('bau', a.name + ' genommen fuer ' + geld(plan.ganz) + '.');
+      chronik('bau', a.name + ' genommen für ' + geld(plan.ganz) + '.');
       fertigstellen(a.k);
     }
     Z.meldung = a.name + ' — ' + geld(plan.jetzt) + ' aus der Kasse.';
+    nachruecken();
     B.ton.spiele('preis:handschlag', { art: 'geraeusch' });
     B.sende('zeichne', { grund: 'preis-genommen' });
   }
@@ -752,13 +778,23 @@
   }
 
   /* --- Spalte 2: die Angebote ------------------------------------------ */
+  /* Eine Karte hat drei Zustaende, und alle drei stehen am Bildschirm:
+     zu haben · heute genommen · durch eine andere Entscheidung ausgeschlossen.
+     Kein Knopf bleibt anklickbar, der nichts mehr tut. */
   function angebotKarte(a) {
     var plan = zahlplan(a);
+    var schon = Z.genommen[a.k];
+    var zu = Z.gesperrt[a.k];
     var kann = B.welt.kann(plan.jetzt);
     var jetztTag = B.welt.zeit.woche === 1;
 
-    var karte = B.el('div', 'pr-karte' + (kann ? '' : ' pr-zuteuer'));
+    var karte = B.el('div', 'pr-karte'
+      + (schon ? ' pr-genommen' : '')
+      + (zu ? ' pr-ausgeschlossen' : '')
+      + (!schon && !zu && !kann ? ' pr-zuteuer' : ''));
     karte.setAttribute('data-angebot', a.k);
+    if (schon) karte.setAttribute('data-genommen', schon.jahr);
+    if (zu) karte.setAttribute('data-ausgeschlossen', zu);
 
     var kopf = B.el('div', 'pr-karte-kopf');
     kopf.appendChild(B.el('b', null, a.name));
@@ -849,7 +885,7 @@
     karte.appendChild(B.el('div', 'pr-regel', f.regel));
     karte.appendChild(B.el('div', 'pr-satz-klein',
       'Festgelegt zu Michaeli ' + g.jahr + ' von ' + g.amtszeit
-      + (g.preis ? ' fuer ' + geld(g.preis) : '') + '. Steht in der Chronik.'));
+      + (g.preis ? ' für ' + geld(g.preis) : '') + '. Steht in der Chronik.'));
     karte.appendChild(B.knopf({
       text: 'Steht in der Chronik', zug: 'preis:fest-steht', aus: true,
       titel: 'Eine Festlegung wird nicht zurückgenommen.'
