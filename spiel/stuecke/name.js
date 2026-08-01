@@ -201,7 +201,24 @@
     return Math.round(100 * gut / f.length);
   }
 
-  function bruchGefahr() { return versprechen() && guete() < 40; }
+  /* Ein Versprechen bricht nur, wenn jemand es erlebt. Duennes Bier, das
+     hinausgeht, bricht es immer. Ein leerer Keller bricht es nur, wenn ein
+     gebundenes Haus vergeblich gewartet hat — sonst wuerde ein Haus ohne
+     Kundschaft fuer etwas bestraft, das niemand gemerkt hat. */
+  function enttaeuscht() {
+    var l = meineAdressen();
+    for (var i = 0; i < l.length; i++) {
+      if (!beliefert(l[i].schluessel, 10)) return true;
+    }
+    return false;
+  }
+
+  function bruchGefahr() {
+    if (!versprechen()) return false;
+    if (guete() >= 40) return false;
+    if (!B.welt.vorrat.faesser.length) return enttaeuscht();
+    return true;
+  }
 
   function ruf() { return Math.round(Z.bekannt * Z.deckung / 100); }
 
@@ -460,7 +477,7 @@
         Z.bruchWochen = 0;
         var leer = B.welt.vorrat.faesser.length === 0;
         eintrag(leer ? D.urteile.leer[ep()] : D.urteile.bruch[ep()],
-          (leer ? -8 : -6) * lautstaerke(), 'Die Gasse', 'bruch');
+          (leer ? -7 : -6) * lautstaerke(), 'Die Gasse', 'bruch');
       }
     } else if (Z.bruchWochen > 0) {
       Z.bruchWochen = 0;
