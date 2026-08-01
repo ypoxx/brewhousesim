@@ -209,6 +209,14 @@
   background: linear-gradient(180deg, #f6ddd2 0%, #e6bda9 100%);
   border-color: #7d2c1a;
 }
+.nm-frei {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 5);
+  margin-top: calc(var(--s) * 8);
+}
+.nm-frei .nm-knopf { width: 100%; }
+
 .nm-griff { width: 100%; margin-top: calc(var(--s) * 8); justify-content: center; text-align: center; }
 
 /* --------------------------------------------------------------------------

@@ -864,11 +864,35 @@
       }));
       kl.appendChild(B.knopf({
         text: 'Das Zeichen einziehen', zug: 'name:zurueckhalten', klasse: 'nm-knopf',
-        titel: 'Kostet Reichweite, rettet die Deckung. Kostet kein Geld.',
+        titel: 'Kostet Reichweite, rettet die Deckung. Kostet kein Geld und ist umkehrbar.',
         tu: waehleZurueckhalten
       }));
       band.appendChild(kl);
     }
+
+    /* Die zwei Zuege, die IMMER da sind und nie Geld kosten. Daran haengt
+       die harte Regel: kein Zustand ohne wirksamen Zug. */
+    var frei = B.el('div', 'nm-frei');
+    if (versprechen() || Z.ruhe) {
+      frei.appendChild(B.knopf({
+        text: Z.ruhe ? 'Das Zeichen wieder zeigen' : 'Das Zeichen verdecken',
+        zug: 'name:ruhe', klasse: 'nm-knopf' + (Z.ruhe ? ' nm-an' : ''),
+        titel: Z.ruhe
+          ? 'Verdeckt reicht der Name kaum. Zeigen heisst wieder versprechen.'
+          : 'Kostet kein Geld, nur Reichweite — und rettet die Deckung. Umkehrbar.',
+        tu: function () { schalteRuhe(!Z.ruhe); }
+      }));
+    }
+    frei.appendChild(B.knopf({
+      text: 'Herumgehen und den Namen sagen',
+      zug: 'name:herumgehen', klasse: 'nm-knopf',
+      aus: Z.rundeJahr === jahr(),
+      titel: Z.rundeJahr === jahr()
+        ? 'In diesem Braujahr schon getan. Aufmerksamkeit ist die knappe Ware.'
+        : 'Kostet kein Geld, sondern einen Nachmittag. Einmal im Braujahr.',
+      tu: geheHerum
+    }));
+    band.appendChild(frei);
 
     if (Z.meldung) band.appendChild(B.el('div', 'nm-meldung', Z.meldung));
 
