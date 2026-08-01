@@ -147,11 +147,39 @@
      · Was WAEHREND des Spiels neu aufschlaegt — die Michaelitafel zum
        Jahreswechsel — schlaegt auf. Nur was beim Laden schon dalag, liegt
        als Reiter. Beim Laden will man sein Haus sehen.
+
+     RUNDE 5 — DIE REGEL BRACH AN IHREN EIGENEN AUSNAHMEN.
+
+     Der Kritiker hat den Rahmen mit seinen eigenen Zahlen widerlegt, und er
+     hat recht: er lief ueber ebene-marken, ebene-hand und ebene-blatt. Die
+     Buehne hat aber SECHS Ebenen, und in ebene-kopf lag nm-band — 578x439 px
+     auf (30|123), davon 225.420 px im Stadtfenster, 5,33 % der Buehne, das
+     Anderthalbfache der eigenen GRENZE, in allen vier Epochen beim Laden
+     aufgeschlagen und nie ein Reiter. Ein Blick, der eine ganze Ebene nicht
+     ansieht, ist kein Rahmen.
+       -> Der Blick geht jetzt ueber ALLE Ebenen ausser platte und bau; das
+          sind die beiden, die dem Bild selbst gehoeren.
+
+     Und die zweite Bresche: .amort und data-frei befreiten OHNE OBERGRENZE.
+     Deshalb lag gg-band als 936x158 grosses Banner (3,50 %) dauerhaft als
+     "Ortsmarke" ueber der Stadt. Eine Ortsmarke ist ein PUNKT im Bild. Was
+     groesser ist als MARKE (1,6 % der Buehne), ist ein Brett — gleichgueltig
+     welche Klasse und welches Attribut daran haengt, und ohne zweite
+     Schwelle. Wer sich als Punkt ausgibt und ein Brett ist, hat seine
+     Ausnahme verwirkt.
+       -> Beide Ausnahmen gelten nur noch unterhalb von MARKE.
+
+     Damit ist die Ordnung wieder eine Ordnung und keine Liste von Namen:
+       bis MARKE   — ein Punkt. Bekommt einen Pflock, ruht beim Laden.
+       ab  MARKE   — ein Brett. Bekommt einen Reiter, liegt beim Laden zu.
      ==================================================================== */
 
   var ZU = 'stadt-zugeklappt';
   var FENSTER = { x0: 0, y0: 11.2, x1: 100, y1: 87.5 };
-  var GRENZE = 0.035;           /* Anteil der Buehnenflaeche */
+  var GRENZE = 0.035;           /* Anteil der Buehnenflaeche — so gross darf ein Brett ruhen */
+  var MARKE = 0.016;            /* ... und so gross ist eine Ortsmarke hoechstens */
+  /* platte und bau gehoeren dem Bild selbst — alles andere sieht der Rahmen an. */
+  var EBENEN = ['marken', 'hand', 'kopf', 'blatt'];
   var TAKT = 240;               /* ms — der Rahmen sieht regelmaessig nach */
   var VERGESSEN = 900;          /* ms — so lange gilt ein Brett als "noch da" */
   var JAHRESFRIST = 1800;       /* ms — Fenster nach einem Jahreswechsel */
@@ -170,13 +198,25 @@
   var angemeldet = false;
   var reiterStand = '';         /* letzte gezeichnete Reiterzeile, gegen Flackern */
 
-  /* Alle Bretter der anderen Stuecke: direkte Kinder eines fremden Fachs,
-     die nicht an einem Ort haengen (.amort ist eine Marke im Bild, kein
-     Brett — die gehen an die Kartenschicht weiter unten) und die sich nicht
-     selbst abgemeldet haben (data-frei). */
+  /* Die beiden Ausnahmen — und ihre Obergrenze. Ein Ding, das an einem Ort
+     haengt (.amort) oder sich selbst abgemeldet hat (data-frei), bleibt
+     unangetastet, SOLANGE ES EIN PUNKT IST. Ueber MARKE ist es ein Brett und
+     wird wie eines behandelt. Genau das hat in Runde 4 gefehlt. */
+  function befreit(el) {
+    if (!el.classList.contains('amort') && !el.hasAttribute('data-frei')) return false;
+    var r = el.getBoundingClientRect();
+    if (r.width < 6 || r.height < 6) return true;
+    return anteil(r, false) <= MARKE;
+  }
+
+  /* Alle Bretter der anderen Stuecke: direkte Kinder eines fremden Fachs in
+     einer der vier Ebenen ueber dem Bild. Was klein genug ist, um ein Punkt
+     zu sein, geht an die Kartenschicht weiter unten; alles andere ist hier
+     ein Brett — auch wenn es .amort oder data-frei traegt. Dann allerdings
+     OHNE zweite Schwelle: 'verwirkt' merkt sich das. */
   function fremdeBretter() {
     var l = [];
-    ['marken', 'hand', 'blatt'].forEach(function (name) {
+    EBENEN.forEach(function (name) {
       var ebene = document.getElementById('ebene-' + name);
       if (!ebene) return;
       var faecher = ebene.children;
@@ -187,9 +227,9 @@
         var kinder = fach.children;
         for (var j = 0; j < kinder.length; j++) {
           var el = kinder[j];
-          if (el.classList.contains('amort')) continue;
-          if (el.hasAttribute('data-frei')) continue;
-          l.push({ el: el, wer: wer, nr: j });
+          if (befreit(el)) continue;
+          var beansprucht = el.classList.contains('amort') || el.hasAttribute('data-frei');
+          l.push({ el: el, wer: wer, nr: j, verwirkt: beansprucht });
         }
       }
     });
@@ -593,8 +633,11 @@
       if (r.width < 8 || r.height < 8) return;      /* nicht da, also kein Reiter */
       daJetzt[s] = true;
 
-      /* Klein genug: das ist eine Marke im Bild, kein Brett. Finger weg. */
-      if (anteil(r, false) <= GRENZE && !b.el.classList.contains(ZU)) {
+      /* Klein genug: das ist eine Marke im Bild, kein Brett. Finger weg.
+         Wer sich als Ortsmarke ausgegeben hat und keine ist, hat diese
+         zweite Schwelle verwirkt — sonst laege ein 3,49-%-Banner weiter
+         ueber der Stadt, nur eben knapp unter der Grenze. */
+      if (!b.verwirkt && anteil(r, false) <= GRENZE && !b.el.classList.contains(ZU)) {
         gesehen[s] = jetzt;
         return;
       }
