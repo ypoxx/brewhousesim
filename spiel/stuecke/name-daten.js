@@ -45,8 +45,8 @@ var NAME_DATEN = (function () {
         ort: 'sudhaus',
         bild: 'zeiger1.png',
         bildWenn: 'zeiger',
-        breite: 6.5,
-        versatz: { dx: 0.5, dy: -1 }
+        breite: 5.5,
+        versatz: { dx: 2, dy: -6 }
       },
       2: {
         jahr: 1600,
@@ -62,7 +62,7 @@ var NAME_DATEN = (function () {
         bild: 'schild2.png',
         bildWenn: 'schild',
         breite: 2.4,
-        versatz: { dx: -2.5, dy: 8 }
+        versatz: { dx: -4.5, dy: 11 }
       },
       3: {
         jahr: 1884,
@@ -79,7 +79,7 @@ var NAME_DATEN = (function () {
         bild: 'saeule3.png',
         bildWenn: 'saeule',
         breite: 1.4,
-        versatz: { dx: -1, dy: 6 }
+        versatz: { dx: 2.6, dy: 9.5 }
       },
       4: {
         jahr: 1970,
@@ -95,8 +95,8 @@ var NAME_DATEN = (function () {
         ort: 'strasse',
         bild: 'tafel4.png',
         bildWenn: 'bande',
-        breite: 5.5,
-        versatz: { dx: -1, dy: -3 }
+        breite: 4.6,
+        versatz: { dx: -2, dy: -8 }
       }
     },
 

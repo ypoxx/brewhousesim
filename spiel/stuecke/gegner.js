@@ -1359,7 +1359,11 @@
       var feld = Math.round(o.x / 5) + '/' + Math.round(o.y / 5);
       var n = belegt[feld] || 0;
       belegt[feld] = n + 1;
-      karte[a.schluessel] = n * -3.6;
+      /* GLAETTUNG WELLE 1: 3,6 % Stapelabstand reichten nicht, seit die
+         Preisschilder nicht mehr auf Pfloecken ruhen, sondern alle stehen —
+         zwei Orte im selben Rasterfeld liegen selbst schon 2 % auseinander,
+         und dann deckte das eine Schild das andere zur Haelfte. */
+      karte[a.schluessel] = n * -5.6;
     });
     return karte;
   }
