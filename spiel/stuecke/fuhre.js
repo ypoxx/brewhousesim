@@ -1176,6 +1176,7 @@
     }
 
     /* 1. Was an der Tafel steht. */
+    var planFiel = null;
     for (var si = 0; si < sorten().length; si++) {
       var s = sorten()[si];
       var will = Z.plan[s.k] || 0;
@@ -1183,6 +1184,7 @@
         var grund = setzeAn(s);
         if (grund) {
           gruende.push(grund);
+          if (!planFiel) planFiel = { sorte: s.name, grund: grund };
           if (grund === 'die Kasse') geldFehlt = true;
           break;
         }
@@ -1216,6 +1218,15 @@
     /* 3. Was an der Tafel darueber steht. */
     var teile = [];
     if (gebraut) teile.push(gebraut + ' Fass angesetzt');
+    /* WARUM DER PLAN FIEL, STEHT AUCH DANN DA, WENN DIE PFANNE LIEF.
+       Vorher verschluckte der Notsud die Begruendung: an der Tafel stand
+       „32 Fass angesetzt · davon 2× Einfachbier — der Keller war leer", und
+       dass das Lagerbier am fehlenden Eis gescheitert war, erfuhr niemand.
+       Gemessen in 1884: das Haus braute vom zweiten Braujahr an ausschliesslich
+       Notbier zum Drittel des Preises, und auf dem Bildschirm stand kein
+       einziges Mal, was zu tun gewesen waere. Ein Grund, den der Spieler
+       nicht lesen kann, ist kein Grund. */
+    if (planFiel) teile.push('kein ' + planFiel.sorte + ': ' + planFiel.grund);
     if (Z.notsud && ns) {
       Z.notGesamt += Z.notsud;
       teile.push('davon ' + Z.notsud + '× ' + ns.name + ' ohne Barauslage'

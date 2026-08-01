@@ -64,9 +64,16 @@
     return x <= sx ? sy - BD.links * (sx - x) : sy - BD.rechts * (x - sx);
   }
 
+  /* DAS TORFELD. Oben begrenzt es die Mauerlinie selbst — was darueber
+     liegt, steht im Hof HINTER dem Tor und versperrt nichts; was darunter
+     liegt, steht in der Einfahrt. Unten endet es dort, wo die Gasse vor dem
+     Tor beginnt. */
   function torfeld() {
-    return { x0: BD.tor.x0 * 27.52, x1: BD.tor.x1 * 27.52,
-             y0: BD.tor.y0 * 15.36, y1: BD.tor.y1 * 15.36 };
+    return { x0: BD.tor.x0 * 27.52, x1: BD.tor.x1 * 27.52, y1: BD.tor.y1 * 15.36 };
+  }
+
+  function imTorfeld(t, x, y) {
+    return x >= t.x0 && x <= t.x1 && y <= t.y1 && y > mauer(x) + BD.spiel;
   }
 
   /* ----------------------------------------------------------------------
@@ -90,27 +97,34 @@
     return l;
   }
 
+  /* Nur innerhalb der HOFFRONT urteilt die Mauerlinie. Das ist die
+     Korrektur, die Runde 5 gefehlt hat: rechnet man die Formel ueber die
+     ganze Buehne weiter, verurteilt sie das Hopfenlager fuer eine Mauer,
+     die westlich der West-Ecke gar nicht steht. */
+  function imHof(x) {
+    return x >= BD.von * 27.52 && x <= BD.bis * 27.52;
+  }
+
   function urteile(a, punkte) {
     var tor = torfeld();
     var draussen = (a.boden === 'gasse');
-    var tiefste = -1e9, tiefsteX = 0, drunter = 0, drueber = 0, imTor = 0;
+    var tiefste = -1e9, tiefsteX = 0, drunter = 0, gemessen = 0, imTor = 0;
     punkte.forEach(function (p) {
+      if (imTorfeld(tor, p.x, p.y)) imTor++;
+      if (!imHof(p.x)) return;
+      gemessen++;
       var d = p.y - mauer(p.x);
       if (d > tiefste) { tiefste = d; tiefsteX = p.x; }
       if (d > BD.spiel) drunter++;
-      if (d < -BD.spiel) drueber++;
-      if (p.x >= tor.x0 && p.x <= tor.x1 && p.y >= tor.y0 && p.y <= tor.y1) imTor++;
     });
     var fehler = [];
     if (!draussen && drunter) fehler.push('steht auf der Mauer (' + drunter + ' von '
-      + punkte.length + ' Spalten, tiefste ' + Math.round(tiefste) + ' px darunter)');
-    if (draussen && drueber) fehler.push('haengt in den Hof hinein (' + drueber
-      + ' von ' + punkte.length + ' Spalten)');
-    if (imTor && a.schluessel !== 'tor') fehler.push('verstellt das Hoftor ('
-      + imTor + ' Spalten)');
+      + gemessen + ' Spalten, tiefste ' + Math.round(tiefste) + ' px darunter)');
+    if (draussen && !a.warum) fehler.push('meldet sich als "gasse" ab, ohne zu sagen warum');
+    if (imTor) fehler.push('verstellt das Hoftor (' + imTor + ' Spalten)');
     return { schluessel: a.schluessel, boden: a.boden || 'hof',
-             tiefste: Math.round(tiefste), x: Math.round(tiefsteX),
-             spalten: punkte.length, drunter: drunter, drueber: drueber,
+             tiefste: gemessen ? Math.round(tiefste) : null, x: Math.round(tiefsteX),
+             spalten: gemessen, drunter: drunter,
              tor: imTor, gut: !fehler.length, sagt: fehler.join(' · ') };
   }
 
@@ -162,11 +176,12 @@
     lot.setAttribute('data-frei', '1');
 
     var t = torfeld();
+    var oben = Math.min(mauer(t.x0), mauer(t.x1));
     var kasten = B.el('div', 'lot-tor');
     kasten.style.left = (t.x0 / 27.52) + '%';
-    kasten.style.top = (t.y0 / 15.36) + '%';
+    kasten.style.top = (oben / 15.36) + '%';
     kasten.style.width = ((t.x1 - t.x0) / 27.52) + '%';
-    kasten.style.height = ((t.y1 - t.y0) / 15.36) + '%';
+    kasten.style.height = ((t.y1 - oben) / 15.36) + '%';
     lot.appendChild(kasten);
 
     /* Die Mauerlinie als zwei schraege Balken — dieselbe Formel, die urteilt. */
@@ -189,9 +204,10 @@
       var a = nachSchluessel(haeuser[i].getAttribute('data-bau'));
       if (!a || !K.fuesse[a.bild]) continue;
       var draussen = (a.boden === 'gasse');
+      var t2 = torfeld();
       fusspunkte(haeuser[i], K.fuesse[a.bild]).forEach(function (p) {
-        var d = p.y - mauer(p.x);
-        var schlecht = draussen ? (d < -BD.spiel) : (d > BD.spiel);
+        var schlecht = imTorfeld(t2, p.x, p.y)
+          || (!draussen && imHof(p.x) && p.y - mauer(p.x) > BD.spiel);
         var punkt = B.el('div', 'lot-punkt' + (schlecht ? ' schlecht' : ''));
         punkt.style.left = (p.x / 27.52) + '%';
         punkt.style.top = (p.y / 15.36) + '%';
