@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T21:36:32+00:00",
+ "stand": "2026-08-01T21:40:21+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -77,7 +77,7 @@
    "name": "DER SUD",
    "status": "laeuft",
    "runde": 1,
-   "luecke": "Bild und Ton des Stuecks fehlen noch (bild/sud/**, ton/sud/**); Messung laeuft."
+   "luecke": "Kein eigenes Bild (bild/sud/**) und kein eigener Ton (ton/sud/**) — nur gemeldete Tonnamen. Der Ausstoss von 1884 verdreifacht sich; das gehoert an denselben Tisch wie ZUSTAENDIGKEIT 17."
   },
   {
    "name": "DIE EICHUNG — der Michaelitag muss bezahlbar sein",
@@ -635,6 +635,22 @@
   {
    "zeit": "2026-08-01T21:36:32+00:00",
    "text": "DIE EICHUNG: Belege und Messstand liegen in werkbank/schuss/eichung/ — zwanzig Michaeli-Blaetter als Bild (mich-e<N>-<jahr>.png), e<N>-sparsam.json und e<N>-kaufend.json mit jeder gemessenen Woche, dazu messe.mjs und auswerten.py, damit die Zaehlung wiederholbar ist (Saat 1350, 1920x1000). e2-1605.png zeigt E2 im elften Nullwochen-Zug: Kasse 0 fl, 46 freie Zuege am Schirm, keiner davon bewegt die Lage — kein Todzustand, aber Stillstand."
+  },
+  {
+   "zeit": "2026-08-01T21:40:21+00:00",
+   "text": "SUD: gemessen am Bildschirm (werkbank/sud-messung.mjs, 2752x1536): Vorgabestand 3/3/3/3 Zuege erreichbar+aktiv, je 1 mit Preisschild; Brett offen 5/6/7/7, davon 2/2/3/4 mit Preisschild. Verbliste je Epoche vollstaendig verschieden."
+  },
+  {
+   "zeit": "2026-08-01T21:40:21+00:00",
+   "text": "SUD: harte Regel geprueft — bei Kasse 0 und leerer Kammer bleiben in allen vier Epochen 2 Zuege aktiv UND von elementFromPoint getroffen, und der Klick aendert nachweislich den Zustand."
+  },
+  {
+   "zeit": "2026-08-01T21:40:21+00:00",
+   "text": "SUD: A/B gegen denselben Saat, sud.js abgeschaltet — Ausstoss in 58 Wochen 106/168/288/4140 ohne, 106/178/864/4230 mit dem Gaerkeller. 1884 verdreifacht sich, weil reifendes Bier dort keinen Lagerplatz mehr blockiert (ZUSTAENDIGKEIT 6.1). Wer den Michaelitag eicht (17), muss das wissen."
+  },
+  {
+   "zeit": "2026-08-01T21:40:21+00:00",
+   "text": "DER SUD · Runde 1 · läuft — Kein eigenes Bild (bild/sud/**) und kein eigener Ton (ton/sud/**) — nur gemeldete Tonnamen. Der Ausstoss von 1884 verdreifacht sich; das gehoert an denselben Tisch wie ZUSTAENDIGKEIT 17."
   }
  ]
 }
