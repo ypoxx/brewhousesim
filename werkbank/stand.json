@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-01T14:40:31+00:00",
- "phase": "Welle 1 — Grundriss steht",
+ "stand": "2026-08-01T14:46:54+00:00",
+ "phase": "Welle 1 laeuft · Welle 2 begonnen",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -221,6 +221,14 @@
   {
    "zeit": "2026-08-01T14:40:31+00:00",
    "text": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderruflich · Runde 1 · läuft — Runde 1 fertig gebaut und selbst durchgespielt. Die Michaelitafel liegt in allen vier Epochen: je 5 Angebotskarten NEBENEINANDER mit Preisschild, Bauzeit und Folge in Zahlen, darunter 3-4 Festlegungen, von denen je Amtszeit genau EINE genommen werden kann und die danach mit Stempel UNABAENDERLICH in der Chronik steht. Gegenueber Runde 0 behoben: (1) Ausschluss war ein Loch — nimm() pruefte Z.gesperrt nicht, Ochse UND Gaul waren am selben Michaeli zu haben; jetzt gesperrt, und die Karte traegt den Stempel AUSGESCHLOSSEN mit dem Namen dessen, der sie ausgeschlossen hat. (2) Genommene Karten behielten einen aktiven Nehmen-Knopf, der Klicks folgenlos schluckte; jetzt Stempel GENOMMEN und Knopf aus, beide zweiten Klicks lassen die Kasse nachweislich unveraendert. (3) Es gab im ganzen Spiel EINE Ausschlusspaarung (nur 1350); jetzt 3+3+3+4 Gabelungen ueber die vier Epochen, jede klein-und-sicher gegen gross-und-langsam (Fasskauf 0,09 gegen Boettcher 0,34 mit Bauzeit; Hopfenkontrakt gegen Hopfengarten; Kaeltemaschine gegen Felsenkeller; Grosshandel gegen eigene Lastzuege), und waehleAngebote legt jetzt garantiert ein Paar nebeneinander auf den Tisch. (4) Der Anschlag war streng proportional zur Barschaft — Sparen half deshalb NIE, weil der Preis mit der Kasse mitwuchs; jetzt unterproportional (Exponent 0,55 auf die Barschaft in Vielfachen des Grundansatzes), Sparen holt einen grossen Bau tatsaechlich ein. (5) Teuerung 7,5 %/Jahr gegen eine Bierordnung von 1 %/Jahr machte die Tafel nach acht Jahren dauerhaft tot; jetzt 3,8-4,8 %/Jahr, Kaufaufschlag von 8-13 % auf 4,5-6,5 % gesenkt. Gemessen ueber zehn Michaelitage: Barschaft zu billigstem Angebot faellt 5,09 - 4,68 - 5,34 - 2,73 - 1,77 - 1,23 (E3) bzw. 3,39 - 3,02 - 1,94 - 1,56 - 0,61 - 0,40 (E1). (6) Ganzer Text auf richtige Umlaute umgestellt (Regel 4) — vorher durchweg ae/oe/ue. (7) Die Tafel war ab dem zweiten Michaeli praktisch unerreichbar: sie wird vom Sommerzettel der FUHRE verdeckt, und der Griff sagte trotzdem 'Michaelitafel schliessen', der erste Klick tat scheinbar nichts. Jetzt beschriftet der Griff den SICHTBAREN Zustand und sagt 'liegt bereit'. (8) Sechs Umlagen je Epoche statt fuenf bei sechs Abstaenden (eine wiederholte sich), jede mit eigenem Gewicht — vorher standen fuenf gleiche Betraege untereinander. (9) Anachronismen entschaerft: 'Gruenderkrach' und 'Oelpreiskrise' hingen an EINEM Jahr, obwohl die Epoche Jahrhunderte umspannt; Mehrwegkasten, GFGH, Lastzug, Abfuellanlage, ZK-Tanks, Logistikzentrum haben jetzt ihr Jahr, und fuer 1914-1950 gibt es zwei eigene Angebote. KEIN FUND AUS DER SPERRLISTE: offene Pfanne ohne Helm und Rohr in 1350/1600, Emailschild erst ab 1893, hl erst ab 1884, kein Marktanteil behauptet. OFFEN / NICHT MEIN BESITZSTAND: kern/welt.js rechneJahrAb zieht den Sommerunterhalt ohne Boden ab, die Kasse laeuft dadurch ins Minus (-12 Pf je Jahr bei leerem Haus); der Sommerzettel der FUHRE (.fu-sperre) verdunkelt die ganze Buehne zu 55 %, waehrend die Michaelitafel darueber liegt; und der Bauhof der STADT verkauft 'Ochsenstall' fuer 18 Pf, waehrend die Michaelitafel 'Der Ochsenstall am Tor' fuer 110 Pf anbietet — zwei Preisschilder fuer denselben Namen."
+  },
+  {
+   "zeit": "2026-08-01T14:46:54+00:00",
+   "text": "Welle 1 laeuft · Welle 2 begonnen"
+  },
+  {
+   "zeit": "2026-08-01T14:46:54+00:00",
+   "text": "AUFSICHT — DER KLANG gestartet (Welle 2). Das fremde Ohr ist gebaut und vorgeprueft: es erkannte 1350 und 1970 blind mit 95 Prozent und ruegte ungefragt den Synthwave als anachronistisch fuer 1970 und den Kathedralenhall als unpassend fuer einen Hof. Die Tonlatte ist damit zum ersten Mal seit dem ersten Tag wirklich messbar."
   }
  ]
 }
