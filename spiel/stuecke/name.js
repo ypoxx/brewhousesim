@@ -1133,7 +1133,7 @@
     links.appendChild(B.el('h2', null, 'Das Zeichen des Hauses · ' + epd().jahr));
     links.appendChild(B.el('div', 'nm-unterzeile',
       'Ruf ' + ruf() + ' · Bekanntheit ' + Math.round(Z.bekannt) + ' von ' + epd().deckel
-      + ' · Deckung ' + Math.round(Z.deckung) + ' · Guete des Kellers ' + guete()));
+      + ' · Deckung ' + Math.round(Z.deckung) + ' · Keller-Guete ' + guete()));
     kopf.appendChild(links);
 
     var reiter = B.el('div', 'nm-reiter');
