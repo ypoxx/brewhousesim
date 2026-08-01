@@ -82,6 +82,8 @@
     bruchWochen: 0,        /* wie lange schon unter dem Zeichen duennes Bier */
     letzteWahl: null,
     wahlWoche: -1,
+    ruhe: false,           /* das Zeichen ist verdeckt — kostet Reichweite, rettet Deckung */
+    rundeJahr: 0,          /* der freie Zug: einmal im Braujahr herumgehen */
 
     urteil: {},            /* adresse -> -20..20, was DIESER Wirt sagt   */
     kieserWoche: 0,
@@ -150,6 +152,7 @@
     if (Z.fest.warenzeichen && ep() >= 3) s += 5;
     if (Z.fest.medaille && ep() >= 3) s += 8;
     if (Z.nachahmung) s = s * 0.72;                      /* der Nachahmer nimmt Luft weg */
+    if (Z.ruhe) s = s * 0.35;                            /* verdeckt reicht der Name kaum */
     if (Z.fest.verkauft) s = Math.min(s, 40);            /* der Name gehoert nicht mehr dem Haus */
     return B.grenze(Math.round(s), 0, epd().deckel);
   }
@@ -157,6 +160,7 @@
   /* Haengt gerade irgendein Zeichen des Hauses draussen?  Das ist das
      Versprechen: erst wenn es haengt, kann es gebrochen werden. */
   function versprechen() {
+    if (Z.ruhe) return false;          /* verdeckt wird nichts versprochen */
     var l = traegerListe();
     for (var i = 0; i < l.length; i++) {
       var t = l[i];
@@ -527,6 +531,7 @@
 
   function schalteZeiger() {
     Z.zeiger = !Z.zeiger;
+    Z.ruhe = !Z.zeiger;
     Z.bruchWochen = 0;
     if (Z.zeiger) {
       Z.meldung = 'Der Bierzeiger haengt. Von jetzt an misst die Gasse das Haus daran.';
@@ -675,20 +680,47 @@
     nachZug('wahl');
   }
 
-  function waehleZurueckhalten() {
-    Z.letzteWahl = 'halten';
-    Z.wahlWoche = stempel();
+  /* Das Zeichen verdecken. Es wird NICHTS zerstoert und nichts bezahlt —
+     der Preis ist Reichweite, und der Zug ist umkehrbar. Genau deshalb kann
+     dieses Stueck den Spieler nie einfrieren. */
+  function schalteRuhe(an) {
+    Z.ruhe = !!an;
     Z.bruchWochen = 0;
-    /* Zurueckhalten heisst: das Zeichen kommt herunter. Das kostet Reichweite. */
-    if (ep() === 1) Z.zeiger = false;
-    else if (ep() === 2) { Z.schilder = {}; }
-    else { Z.lauf = {}; }
-    Z.bekannt = Math.max(0, Z.bekannt - 3);
-    Z.deckung = Math.min(100, Z.deckung + 1.5);
-    Z.meldung = 'Das Zeichen ist herunten, bis der Sud wieder taugt. '
-      + 'Das kostet Reichweite und rettet den Namen.';
-    B.ton.spiele('name:einziehen');
-    nachZug('wahl');
+    if (ep() === 1) Z.zeiger = !Z.ruhe;      /* 1350 IST das Verb der Epoche */
+    if (Z.ruhe) {
+      Z.letzteWahl = 'halten';
+      Z.wahlWoche = stempel();
+      Z.bekannt = Math.max(0, Z.bekannt - 2);
+      Z.deckung = Math.min(100, Z.deckung + 1.5);
+      Z.meldung = 'Das Zeichen ist verdeckt, bis der Sud wieder taugt. '
+        + 'Kostet Reichweite, kostet kein Geld, und es ist umkehrbar.';
+      B.ton.spiele('name:einziehen');
+    } else {
+      Z.meldung = 'Das Zeichen ist wieder zu sehen. Ab jetzt gilt es wieder.';
+      B.ton.spiele('name:aushaengen');
+    }
+    nachZug('ruhe');
+  }
+
+  function waehleZurueckhalten() { schalteRuhe(true); }
+
+  /* Der Zug, den es immer gibt: herumgehen und den Namen sagen. Kostet kein
+     Geld, sondern eine Gelegenheit — einmal im Braujahr. */
+  function geheHerum() {
+    if (Z.rundeJahr === jahr()) return;
+    Z.rundeJahr = jahr();
+    Z.bekannt = B.grenze(Z.bekannt + 2.5, 0, epd().deckel);
+    var meine = meineAdressen();
+    if (meine.length) {
+      var a = B.wuerfel.aus(meine);
+      Z.urteil[a.schluessel] = (Z.urteil[a.schluessel] || 0) + 1;
+      Z.meldung = 'Beim ' + a.name + ' vorbeigegangen und den Namen gesagt. '
+        + 'Das kostet kein Geld, nur den Nachmittag.';
+    } else {
+      Z.meldung = 'Herumgegangen und den Namen gesagt. Mehr geht in diesem Braujahr nicht.';
+    }
+    B.ton.spiele('name:mundpropaganda');
+    nachZug('runde');
   }
 
   /* ======================================================================
@@ -1100,6 +1132,11 @@
       if (!fach) return;
       fach.querySelectorAll('button[data-zug]').forEach(function (k) {
         if (k.disabled) return;
+        var zug = k.getAttribute('data-zug') || '';
+        /* Ein Blatt zu oeffnen ist kein Zug. Gezaehlt wird nur, was den
+           Zustand des Hauses aendert und dabei kein Geld kostet. */
+        if (zug === 'name:blatt' || zug === 'name:blatt-zu'
+          || zug.indexOf('name:reiter') === 0) return;
         var p = k.getAttribute('data-preis');
         if (!p || Number(p) >= 0) frei++;
       });
