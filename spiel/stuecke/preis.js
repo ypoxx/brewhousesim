@@ -1059,16 +1059,26 @@
     return sp;
   }
 
-  /* --- Die Chronik ------------------------------------------------------ */
+  /* --- Die Chronik ------------------------------------------------------
+     Drei Spalten, damit dieselbe Flaeche drei Fragen beantwortet:
+     was ist unabaenderlich · was ist verbaut · und wie steht die Barschaft
+     zum Preis des naechsten sinnvollen Zuges, ueber alle Jahre.
+     ---------------------------------------------------------------------- */
   function seiteChronik() {
     var w = B.el('div', 'pr-chronik');
     w.appendChild(B.el('h3', null, 'DIE CHRONIK DES HAUSES — was nicht mehr zu ändern ist'));
 
+    var drei = B.el('div', 'pr-chronik-drei');
+
+    /* 1 — die Siegel und das, was sie verbaut haben */
+    var links = B.el('div', 'pr-chronik-spalte');
+    links.appendChild(B.el('div', 'pr-chronik-kopf', 'DIE FESTLEGUNGEN'));
     var fest = B.el('div', 'pr-chronik-fest');
     var keys = Object.keys(Z.festGenommen);
     if (!keys.length) {
       fest.appendChild(B.el('div', 'pr-satz',
-        'Noch hat sich keine Amtszeit festgelegt. Jede Amtszeit hat genau eine Festlegung.'));
+        'Noch hat sich keine Amtszeit festgelegt. Jede Amtszeit hat genau eine Festlegung, '
+        + 'und sie wird nicht zurückgenommen.'));
     }
     keys.sort(function (a, b) { return Z.festGenommen[a].jahr - Z.festGenommen[b].jahr; });
     keys.forEach(function (k) {
@@ -1084,8 +1094,26 @@
       z.appendChild(t);
       fest.appendChild(z);
     });
-    w.appendChild(fest);
+    links.appendChild(fest);
 
+    links.appendChild(B.el('div', 'pr-chronik-kopf', 'WAS DAMIT VERBAUT IST'));
+    var verbaut = Object.keys(Z.gesperrt);
+    if (!verbaut.length) {
+      links.appendChild(B.el('div', 'pr-satz',
+        'Noch ist keine Wahl getroffen, die eine andere ausschließt.'));
+    }
+    verbaut.forEach(function (k) {
+      var weg = angebotVon(k), durch = angebotVon(Z.gesperrt[k]);
+      var z = B.el('div', 'pr-chronik-verbaut');
+      z.appendChild(B.el('span', 'pr-chronik-was', (weg ? weg.name : k)));
+      z.appendChild(B.el('span', 'pr-satz-klein', 'weil: ' + (durch ? durch.name : Z.gesperrt[k])));
+      links.appendChild(z);
+    });
+    drei.appendChild(links);
+
+    /* 2 — die laufende Rolle */
+    var mitte = B.el('div', 'pr-chronik-spalte');
+    mitte.appendChild(B.el('div', 'pr-chronik-kopf', 'JAHR FÜR JAHR'));
     var rolle = B.el('div', 'pr-chronik-rolle rolle');
     Z.chronik.slice().reverse().forEach(function (c) {
       var z = B.el('div', 'pr-chronik-zeile' + (c.dick ? ' dick' : ''));
@@ -1094,8 +1122,33 @@
       rolle.appendChild(z);
     });
     if (!Z.chronik.length) rolle.appendChild(B.el('div', 'pr-satz', 'Noch ist nichts eingetragen.'));
-    w.appendChild(rolle);
+    mitte.appendChild(rolle);
+    drei.appendChild(mitte);
 
+    /* 3 — die eine Zahl, ueber alle Jahre */
+    var rechts = B.el('div', 'pr-chronik-spalte pr-chronik-leiter');
+    rechts.appendChild(B.el('div', 'pr-chronik-kopf', 'DIE LEITER — ALLE JAHRE'));
+    rechts.appendChild(B.el('div', 'pr-satz pr-klein',
+      'Barschaft zu Michaeli gegen das billigste Angebot desselben Tages. '
+      + 'Wächst die linke Spalte schneller als die mittlere, ist das Haus fertig.'));
+    var kopfz = B.el('div', 'pr-leiter-zeile pr-leiter-kopf');
+    ['Jahr', 'Kasse', 'billigstes', 'reicht'].forEach(function (t) {
+      kopfz.appendChild(B.el('span', null, t));
+    });
+    rechts.appendChild(kopfz);
+    var rolle2 = B.el('div', 'pr-leiter-rolle rolle');
+    Z.leiter.slice().reverse().forEach(function (r) {
+      var z = B.el('div', 'pr-leiter-zeile');
+      z.appendChild(B.el('span', null, r.jahr));
+      z.appendChild(B.el('span', null, B.welt.geld(r.kasse, true)));
+      z.appendChild(B.el('span', null, B.welt.geld(r.billigst, true)));
+      z.appendChild(B.el('span', 'pr-verh', r.verhaeltnis ? B.zahl(r.verhaeltnis, 2) + '×' : '—'));
+      rolle2.appendChild(z);
+    });
+    rechts.appendChild(rolle2);
+    drei.appendChild(rechts);
+
+    w.appendChild(drei);
     return w;
   }
 

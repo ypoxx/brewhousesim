@@ -71,10 +71,58 @@
 .pr-abschnitt-satz { white-space: normal; line-height: 1.25; }
 
 /* --------------------------------------------------------------------------
-   DIE CHRONIK
+   DIE CHRONIK — drei Spalten statt einer leeren Seite
 
-   Sie war eine große leere Fläche, solange nichts darin stand. Jetzt steht
-   sie oben und lässt den Rest der Tafel in Ruhe.
+   Sie war eine große leere Fläche, solange nichts darin stand. Jetzt trägt
+   dieselbe Fläche drei Fragen: was ist unabänderlich, was ist damit verbaut,
+   und wie steht über alle Jahre die Barschaft zum Preis des nächsten Zuges.
    -------------------------------------------------------------------------- */
-.pr-chronik-rolle { align-content: flex-start; }
-.pr-chronik-fest:empty { display: none; }
+.pr-chronik-drei {
+  flex: 1 1 auto;
+  display: flex;
+  gap: calc(var(--s) * 14);
+  min-height: 0;
+}
+.pr-chronik-spalte {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 5);
+  min-height: 0;
+}
+.pr-chronik-spalte + .pr-chronik-spalte {
+  border-left: calc(var(--s) * 1) solid var(--pr-linie);
+  padding-left: calc(var(--s) * 14);
+}
+.pr-chronik-leiter { flex: 0 0 26%; }
+
+.pr-chronik-kopf {
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 14);
+  letter-spacing: calc(var(--s) * 3);
+  color: var(--pr-rot);
+  border-bottom: calc(var(--s) * 1) solid var(--pr-linie);
+  padding-bottom: calc(var(--s) * 2);
+  margin-top: calc(var(--s) * 4);
+  flex: 0 0 auto;
+}
+.pr-chronik-fest { flex: 0 0 auto; overflow: hidden; }
+.pr-chronik-rolle { flex: 1 1 auto; align-content: flex-start; }
+.pr-leiter-rolle { flex: 1 1 auto; overflow-y: auto; min-height: 0; }
+
+.pr-chronik-verbaut {
+  display: flex;
+  gap: calc(var(--s) * 8);
+  align-items: baseline;
+  padding: calc(var(--s) * 2) 0;
+  border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
+  font-size: calc(var(--s) * 15);
+}
+.pr-chronik-verbaut .pr-chronik-was {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-decoration: line-through;
+  text-decoration-color: var(--pr-rot);
+  color: var(--pr-schwach);
+}
