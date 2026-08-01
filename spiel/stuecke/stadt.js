@@ -42,6 +42,22 @@
     return Math.round(a.grund * (K.teuerung[nr || e()] || 1));
   }
 
+  /* DER MASSSTAB je Epoche. Vier Platten sind vier Zeichnungen: auf der
+     Platte 1600 misst ein Mensch im Hof rund 51 px, auf der Platte 1350
+     rund 72. Ein Aufbau mit fester Breite ist damit in einer der beiden
+     Epochen falsch. 'breiten' und 'versatz' staffeln ihn je Epoche; wer
+     nichts staffelt, behaelt breite/dx/dy. */
+  function masse(a, nr) {
+    var ep = nr || e();
+    var v = (a.versatz && a.versatz[ep]) || {};
+    var b = (a.breiten && a.breiten[ep] !== undefined) ? a.breiten[ep] : a.breite;
+    return {
+      breite: b,
+      dx: (a.dx || 0) + (v.dx || 0),
+      dy: (a.dy || 0) + (v.dy || 0)
+    };
+  }
+
   /* Offen = in dieser Epoche baubar und noch nicht gebaut. */
   function offen(nr) {
     return katalog(nr).filter(function (a) { return !hat(a.schluessel); });
@@ -397,14 +413,15 @@
   }
 
   function hausbild(a, geist) {
+    var m = masse(a);
     var el = B.el('img', 'stadt-haus' + (geist ? ' geist' : ''));
     el.alt = '';
     el.setAttribute('draggable', 'false');
     el.setAttribute('data-bau', a.schluessel);
     el.src = 'bild/hof/' + a.bild + '.png';
-    el.style.width = a.breite + '%';
-    el.style.zIndex = String(Math.round((B.orte.hole(a.ort).y + (a.dy || 0)) * 10));
-    B.orte.setze(el, a.ort, { anker: 'unten', dx: a.dx || 0, dy: a.dy || 0 });
+    el.style.width = m.breite + '%';
+    el.style.zIndex = String(Math.round((B.orte.hole(a.ort).y + m.dy) * 10));
+    B.orte.setze(el, a.ort, { anker: 'unten', dx: m.dx, dy: m.dy });
     el.title = a.name + ' — ' + a.sagt;
     return el;
   }

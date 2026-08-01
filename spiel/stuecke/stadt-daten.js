@@ -102,6 +102,27 @@ var STADT_DATEN = {
      von/bis    = in welchen Epochen es ueberhaupt existiert
      grund      = Grundpreis; der Preis der Epoche ist grund * teuerung
      nutzen     = was der Kauf im Weltzustand bewegt
+
+     DER MASSSTAB.  (Runde 3)
+
+     Vier Platten sind vier Zeichnungen. Sie zeigen denselben Ort und
+     dieselbe Kamera, aber sie sind nicht auf den Pixel gleich gross
+     gezeichnet — auf der Platte 1600 misst ein Mensch im Hof rund 51 px,
+     auf der Platte 1350 rund 72 px. Ein Aufbau mit fester Breite ist damit
+     in der einen Epoche richtig und in der anderen falsch. Deshalb darf
+     jeder Aufbau seine Breite und seinen Versatz JE EPOCHE staffeln:
+
+       breiten: { 1: 8.2, 2: 6.9 }      statt/neben breite
+       versatz: { 2: { dx: -1, dy: 1 } } wird auf dx/dy aufgeschlagen
+
+     Was nicht gestaffelt ist, benutzt weiter breite/dx/dy — die dreissig
+     uebrigen Aufbauten sitzen damit unveraendert im Raster.
+
+     Und die Regel, an der Runde 2 gescheitert ist: WER FIGUREN ZEIGT, WIRD
+     AN DEN FIGUREN DER PLATTE GEMESSEN. Eine Brauerin am Kessel ist so gross
+     wie die Magd am Tor, die sechs Meter weiter vorn steht — eher kleiner,
+     denn sie steht weiter hinten. Ein Sudkessel von 1350 fasst ein bis zwei
+     Sud; er ist rund drei Viertel einer Koerperlaenge breit, nicht zweieinhalb.
      -------------------------------------------------------------------- */
   /* Die Preise sind so gestellt, dass die Barschaft am Anfang jeder Epoche
      etwa fuenf der offenen Bauten traegt und der sechste liegen bleibt. Wer
@@ -112,10 +133,20 @@ var STADT_DATEN = {
   aufbauten: [
 
     /* --- Epoche I ---------------------------------------------------- */
+    /* Die Braustelle im Hof: Maischbottich, offene Pfanne ueber offenem Feuer,
+       Kuehlschiff, Holzstoss — und zwei Brauerinnen, die genau so gross sind
+       wie die Leute auf der Platte. Bei breite 8.2 misst die Brauerin im Bild
+       71 px, die Magd am Tor 72; die Pfanne ist 0,75 Koerperlaengen breit,
+       also rund 1,3 m. In 1600 ist die Platte weitraeumiger gezeichnet,
+       deshalb 6.9 statt 8.2 und ein Schritt nach vorn aus dem Steinhaus. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
-      ort: 'kesselstelle', dx: -1, dy: -1, breite: 14, von: 1, bis: 2, grund: 26,
-      sagt: 'Die offene Pfanne ueber offenem Feuer, zwei Brauerinnen mit Holzschaufeln. '
-          + 'Kein Helm, kein Schwanenhals — das waere eine Blase und kein Sudkessel.',
+      ort: 'kesselstelle', dx: -1, dy: -1,
+      breite: 8.2, breiten: { 1: 8.2, 2: 6.9 },
+      versatz: { 2: { dx: -1.5, dy: 2.5 } },
+      von: 1, bis: 2, grund: 26,
+      sagt: 'Die offene Pfanne ueber offenem Feuer, daneben Maischbottich und '
+          + 'Kuehlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
+          + 'Schwanenhals — das waere eine Blase und kein Sudkessel.',
       nutzen: { sud: 1 } },
 
     { schluessel: 'malzboden', name: 'Malzboden auf Stelzen', bild: 'malzboden',
