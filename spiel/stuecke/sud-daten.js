@@ -102,7 +102,7 @@ var SUD_DATEN = {
                   + 'Grutherr hat ein Recht, das man ihm gerade nimmt.',
               warnung: 'Der Grutknecht sieht in die Pfanne, wann er will.',
               wirkung: { haltbar: 1.7, gaer: 1, roh: 2, mehr: 0, risiko: 0.02, anzeige: 0.11 } },
-            { k: 'brief', name: 'Offen gehopft, mit Hopfenbrief', preis: 96, fest: true,
+            { k: 'brief', name: 'Offen gehopft, mit Hopfenbrief', preis: 78, fest: true,
               satz: 'Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. '
                   + 'Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr '
                   + 'im Bottich. Unwiderruflich — der Brief wird nie zurückgegeben, und das '
