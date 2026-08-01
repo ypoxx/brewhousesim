@@ -170,8 +170,9 @@ GERAEUSCH = {
                "No music.", 3),
     "woche4": ("A mechanical factory time clock stamping a card: a lever pulled, a punch "
                "striking, a small bell ping. No music.", 3),
-    "kerbe": ("A knife cutting a notch into a wooden tally stick: two short cutting "
-              "scrapes into dry oak. No music.", 3),
+    "kerbe": ("A knife chopping a notch into a wooden tally stick: two short dull "
+              "chops into dry oak, close up, then the stick set down. No scraping, "
+              "no music.", 3),
     "horchen": ("A dog barking once far off across a yard and two men murmuring briefly, "
                 "indistinct. No music.", 4),
     "unruhe": ("A small crowd of men murmuring and arguing in a yard, indistinct, one "

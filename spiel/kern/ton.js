@@ -102,7 +102,9 @@
     'fuhre:abfahrt:lastzug': { datei: stets('abfahrt4'), laut: 1.0 },
     'fuhre:kauf':        { datei: altNeu('muenzen', 'kasse'), laut: 0.85 },
     'fuhre:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.8 },
-    'fuhre:kerbe':       { ersatz: 'kerbe', laut: 0.7 },
+    /* Die Kerbe war nur ein Rauschstoss — das Ohr hat sie in 1350 als
+       "Reissverschluss" gehoert. Jetzt ist es ein Messer in Eichenholz. */
+    'fuhre:kerbe':       { datei: stets('kerbe'), ersatz: 'kerbe', laut: 0.7 },
     'tafel:kreide':      { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
     'sommer:keller-leer': { ersatz: 'keller', laut: 0.5, schleife: true },
 
