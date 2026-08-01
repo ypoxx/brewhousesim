@@ -444,7 +444,7 @@
       eintrag.faesser.push(f);
     }
     if (!eintrag.faesser.length) return;
-    B.ton.spiele('fuhre:fass-rollen', { ort: 'fasslager', laut: 0.45 });
+    B.ton.spiele('fuhre:probe', { ort: 'fasslager', laut: 0.45 });
     B.sende('zeichne', { grund: 'fuhre-probe' });
   }
 
@@ -2706,7 +2706,11 @@
     if (Z.schluss) return;
     B.wage('fuhre.schluss', function () {
       Z.schluss = sammleSchluss(d);
-      Z.schlussOffen = true;
+      /* Von selbst aufgeschlagen wird das Blatt nur bei DEM Ende, das dieses
+         Stueck zu verantworten hat. Ist die Gegenwart erreicht, gehoert die
+         Buehne dem, der sein eigenes Schlussblatt malt — zwei Deckel
+         uebereinander waeren genau die Falle aus ZUSTAENDIGKEIT 1. */
+      Z.schlussOffen = Z.schluss.grund === 'keine-abnehmer';
       Z.sommerOffen = false;
       Z.ladung = [];
     });
