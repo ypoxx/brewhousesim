@@ -1574,10 +1574,14 @@
           + ' · getilgt seit ' + (jahr() - b.seit) + ' Jahren'));
       }
       kk.appendChild(B.el('div', 'gg-kzeile',
-        'Solange er haelt, zahlt der Wirt dem Haus ' + B.welt.geld(Math.round(jeEinheit(abschlagJeFass(a.schluessel))))
-        + ' weniger je ' + B.welt.mengeEinheit() + '.'
+        'Solange er haelt, bekommt das Haus dort ' + B.welt.geld(Math.round(jeEinheit(abschlagJeFass(a.schluessel))))
+        + ' weniger je ' + B.welt.mengeEinheit() + ' — bei jeder Fuhre, sofort.'
         + (Z.abschlagJe[a.schluessel]
-            ? ' Im Jahr ' + Z.abschlagJahr + ' waren das ' + B.welt.geld(Z.abschlagJe[a.schluessel]) + '.'
+            ? ' In diesem Braujahr bisher ' + B.welt.geld(Z.abschlagJe[a.schluessel]) + '.'
+            : '')
+        + (Z.abschlagJeVorjahr[a.schluessel]
+            ? ' Im Jahr ' + (Z.abschlagJahr - 1) + ' waren es '
+              + B.welt.geld(Z.abschlagJeVorjahr[a.schluessel]) + '.'
             : '')));
       kk.appendChild(B.el('div', 'gg-ksatz', m.loest));
       if (summe === null) {
@@ -1594,6 +1598,64 @@
     });
     halten.appendChild(reihe);
     bl.appendChild(halten);
+
+    /* Was er frueher hat als das Haus — und was ihm das einbringt */
+    if (h.k === 'adler') {
+      var vl = vorsprungListe(h);
+      var vb = B.el('div', 'gg-block');
+      var vor = vorsprung(h);
+      vb.appendChild(B.el('h3', null, 'Was auf seinem Hof steht — und was davon das Haus nicht hat'));
+      vb.appendChild(B.el('div', 'gg-vsatz', ep().hofsatz || ''));
+      var vr = B.el('div', 'gg-vliste');
+      if (!vl.length) {
+        vr.appendChild(B.el('div', 'gg-leer', 'Auf seinem Hof steht nichts als der Kessel. Noch.'));
+      }
+      vl.forEach(function (x) {
+        var z = B.el('div', 'gg-vzeile ' + x.stand);
+        z.appendChild(B.el('span', 'was', x.bau.name));
+        z.appendChild(B.el('span', 'satz', x.bau.nutzen || ''));
+        z.appendChild(B.el('span', 'stand',
+          x.stand === 'hat' ? 'auch im Haus'
+          : x.stand === 'offen' ? 'im Haus zu kaufen — er hat es schon'
+          : 'im Haus gibt es das nicht'));
+        vr.appendChild(z);
+      });
+      vb.appendChild(vr);
+      vb.appendChild(B.el('div', 'gg-vfolge', vor
+        ? 'Sein Vorsprung: ' + vor + (vor === 1 ? ' Ding' : ' Dinge') + '. Darum braucht seine '
+          + 'Werbung ' + vor + (vor === 1 ? ' Woche' : ' Wochen') + ' weniger, ehe eine Adresse '
+          + 'gebunden ist. Das ist keine Ankuendigung — es ist die Uhr am Wimpel.'
+        : 'Kein Vorsprung: was auf seinem Hof steht, steht auch im eigenen. '
+          + 'Seine Werbung braucht die volle Zeit.'));
+      bl.appendChild(vb);
+    }
+
+    /* Der Zug, der kein Geld kostet */
+    var bsd = ep().beschwerde;
+    if (bsd) {
+      var bb = B.el('div', 'gg-block');
+      bb.appendChild(B.el('h3', null, 'Ohne Bargeld gegen ihn — einmal im Braujahr'));
+      var br = B.el('div', 'gg-reihe');
+      var bk = karte(null, 'klage');
+      bk.appendChild(B.el('div', 'gg-kname', bsd.name));
+      bk.appendChild(B.el('div', 'gg-ksatz', bsd.sagt));
+      bk.appendChild(B.el('div', 'gg-kzeile stark', bsd.preis));
+      if (Z.beschwerdeAusgang && Z.beschwerdeAusgang.jahr === jahr()) {
+        bk.appendChild(B.el('div', 'gg-kzeile',
+          (Z.beschwerdeAusgang.gelingt ? 'Durchgedrungen: ' : 'Abgewiesen: ')
+          + Z.beschwerdeAusgang.satz));
+      }
+      bk.appendChild(B.knopf({
+        text: Z.beschwerdeJahr === jahr() ? 'In diesem Braujahr schon geschehen' : bsd.name,
+        zug: 'gegner:beschwerde-blatt',
+        aus: !beschwerdeMoeglich(),
+        titel: 'Kostet keinen Heller. Kostet vier Ansehen, und er zieht drei Wochen lang sicher.',
+        tu: beschwerdeFuehren
+      }));
+      br.appendChild(bk);
+      bb.appendChild(br);
+      bl.appendChild(bb);
+    }
 
     /* Worum er wirbt */
     var wirbt = Object.keys(Z.werbung);
@@ -1688,14 +1750,23 @@
     var lz = B.el('div', 'gg-lage');
     lz.appendChild(B.el('span', null, 'Kasse (was man hoert): '
       + B.welt.geld(Math.round(h.kasse / 10) * 10)));
-    lz.appendChild(B.el('span', null, 'Sein Preis: ' + B.welt.geld(h.preis)
-      + ' je ' + B.welt.mengeEinheit() + ' — der Satz des Rats: ' + B.welt.geld(bierpreis())));
+    lz.appendChild(B.el('span', h.preis < bierpreis() ? 'warn' : null,
+      'Sein Preis: ' + B.welt.geld(h.preis) + ' je ' + B.welt.mengeEinheit()
+      + ' — der Satz: ' + B.welt.geld(bierpreis())
+      + (h.preis < bierpreis()
+         ? ' · er unterbietet, und darum drueckt er den Abschlag um '
+           + Math.round((preisdruck() - 1) * 100) + ' vom Hundert hoch'
+         : '')));
     lz.appendChild(B.el('span', null, 'Adressen: ' + seins.length));
     lz.appendChild(B.el('span', null, 'Zuege bisher: ' + h.zuege));
     lz.appendChild(B.el('span', null, 'Lage: ' + (D.untergang[h.stufe] || D.untergang[0]).name));
     if (Z.abschlag) {
-      lz.appendChild(B.el('span', 'warn', 'Sein Abschlag kostete das Haus '
-        + B.welt.geld(Z.abschlag) + ' im Jahr ' + Z.abschlagJahr + '.'));
+      lz.appendChild(B.el('span', 'warn', 'Sein Abschlag hat das Haus in diesem Braujahr '
+        + B.welt.geld(Z.abschlag) + ' gekostet — bei ' + B.welt.geld(Z.umsatzJahr)
+        + ' Einnahmen. Mehr als drei vom Hundert nimmt er nicht.'));
+    } else if (Z.abschlagVorjahr) {
+      lz.appendChild(B.el('span', 'warn', 'Sein Abschlag kostete das Haus im Jahr '
+        + (Z.abschlagJahr - 1) + ' ' + B.welt.geld(Z.abschlagVorjahr) + '.'));
     }
     lb.appendChild(lz);
     var bauten = B.el('div', 'gg-hofliste');
@@ -1752,6 +1823,12 @@
         Z.takt = takt();
         zugWerben(haus('adler'));
       });
+      /* Das Buch mithoeren: der Abschlag wird bei der Lieferung abgezogen,
+         nicht am Jahresende nachgereicht. */
+      B.auf('protokoll', function (p) {
+        B.wage('gegner.buch', function () { hoereBuch(p); });
+      });
+      Z.beschwerdeJahr = 0;
       Z.bereit = true;
       B.welt.schreibe('Gegenueber steht ' + nameVon(haus('adler')) + '. '
         + haus('adler').erbe.name + ' fuehrt es. Gebunden wird in dieser Zeit mit '
