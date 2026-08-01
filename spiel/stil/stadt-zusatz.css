@@ -99,9 +99,16 @@
 
 .stadt-marke-ruht {
   opacity: 0;
-  pointer-events: none;
   transition: opacity 140ms ease-out;
 }
+
+/* Was unsichtbar ist, faengt keine Maus. Das braucht !important, weil
+   grund.css '.ebene .greifbar' und die Stuecke selbst pointer-events mit
+   hoeherer Spezifitaet setzen — eine ruhende Marke wuerde sonst den Klick
+   schlucken, der ihrem eigenen Pflock gilt, und Playwright meldete
+   "subtree intercepts pointer events". */
+.stadt-marke-ruht,
+.stadt-marke-ruht * { pointer-events: none !important; }
 
 /* --------------------------------------------------------------------------
    3 — DER SCHALTER IN DER WERKBANK
