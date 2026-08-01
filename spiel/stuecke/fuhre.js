@@ -112,6 +112,17 @@
     notGesamt: 0,        /* Notsude im laufenden Braujahr                    */
     notGemeldet: false,
 
+    /* DAS ZIEL — der Zahltag, und warum er auf Michaeli liegt              */
+    ziel: 'ziel',        /* Schluessel der Zahlungsweise dieses Braujahres   */
+    zielJahr: 0,         /* in welchem Braujahr sie verabredet wurde         */
+    ausstand: {},        /* adr -> was der Wirt dem Haus schuldet            */
+    vorschuss: {},       /* adr -> was das Haus dem Wirt in Bier schuldet    */
+    zahltag: null,       /* Abrechnung des Umgangs, fuers Georgi-Blatt       */
+    abgabeJahr: 0,       /* was der Rat in diesem Braujahr laufend nahm      */
+    georgiEin: 0,        /* was die Woche vor Michaeli eingebracht hat       */
+    georgiAus: 0,        /* und was sie gefordert hat — nie mehr als das     */
+    planVorjahr: null,   /* was voriges Jahr an der Tafel stand              */
+
     /* DER WEG ZURUECK UND DAS ENDE */
     probe: {},           /* adr -> {zutrauen, jahr, gaben}                   */
     probeGesamt: 0,      /* verschenkte Faesser, ueber die ganze Partie      */
