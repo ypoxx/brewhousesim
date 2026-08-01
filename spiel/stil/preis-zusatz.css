@@ -58,9 +58,19 @@
    links einen leeren Kasten. Die Festlegungsreihe wird flacher, die
    Angebotsreihe bekommt den Platz, und die linke Spalte hört auf zu strecken.
    -------------------------------------------------------------------------- */
-.pr-reihe-fest { flex: 0 0 32%; }
+.pr-reihe-fest { flex: 0 0 35%; }
 
-.pr-fest .pr-regel { margin-bottom: calc(var(--s) * 4); }
+/* Der Knopf ist die Handlung und darf NIE aus der Karte gedrückt werden.
+   Alles über ihm darf schrumpfen; er selbst nicht. Ohne das schiebt eine
+   lange Regel die Schaltfläche unter den Kartenrand — ein Angebot, das man
+   sieht und nicht nehmen kann, ist schlimmer als keines. */
+.pr-karte > *,
+.pr-fest > * { flex: 0 1 auto; min-height: 0; }
+.pr-karte > .knopf,
+.pr-fest > .knopf { flex: 0 0 auto; }
+.pr-fest .pr-was-text,
+.pr-fest .pr-regel,
+.pr-fest .pr-folge { overflow: hidden; }
 
 .pr-bestand { flex: 0 1 auto; }
 .pr-links > .pr-feld:last-child { margin-bottom: auto; }
