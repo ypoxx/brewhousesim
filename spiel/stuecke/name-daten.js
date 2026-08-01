@@ -62,7 +62,7 @@ var NAME_DATEN = (function () {
         bild: 'schild2.png',
         bildWenn: 'schild',
         breite: 2.4,
-        versatz: { dx: -4.5, dy: 11 }
+        versatz: { dx: -5, dy: 12.5 }
       },
       3: {
         jahr: 1884,
