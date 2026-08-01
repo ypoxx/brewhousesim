@@ -746,7 +746,7 @@
     var kasten = B.el('div', 'sud-hefe');
     var kopf = B.el('div', 'sud-achskopf');
     kopf.appendChild(B.el('b', 'sud-achsname', g.name.toUpperCase()));
-    kopf.appendChild(B.el('span', 'sud-frage', an.zahl + ' ' + an.einheit));
+    kopf.appendChild(B.el('span', 'sud-frage', an.text));
     kasten.appendChild(kopf);
     kasten.appendChild(zeile('sud-achssatz', g.satz));
 
@@ -846,9 +846,9 @@
 
     var l = B.el('div', 'sud-zzahlen');
     l.appendChild(B.el('span', null, gk().name.replace(/^Der /, '') + ' '
-      + B.welt.menge(belegt(), true) + '/' + B.welt.menge(plaetze(), true)));
+      + B.welt.menge(belegt(), true) + '/' + B.welt.menge(plaetze())));
     l.appendChild(B.el('span', an.gut ? 'gut' : 'schlecht',
-      e.guete.kurz + ' ' + an.zahl + an.einheit));
+      e.guete.kurz + ' ' + an.text));
     z.appendChild(l);
 
     /* Der immer bezahlbare Zug: der Anstich. */
