@@ -1229,11 +1229,18 @@
     return f;
   }
 
-  /* --- sein Hof: was darauf steht, steht im Bild ------------------------ */
+  /* --- sein Hof: was darauf steht, steht im Bild -------------------------
+     WICHTIG fuer die Bildlatte: In 1884 und 1970 ist seine Brauerei auf der
+     Platte selbst gemalt — Backstein, zwei Schornsteine, spaeter Tanks im
+     Freien. Ein zweites Gebaeude daruebergelegt waere eine Attrappe ueber dem
+     Bild, und genau das ist einem Kritiker schon aufgefallen. Deshalb steht
+     das Hofbild nur dort, wo die Platte an dieser Stelle leeres Feld zeigt
+     (1350 und 1600). Danach uebernimmt die Platte, und dieses Stueck zeigt
+     nur noch, was NEU dazugekommen ist. */
   function zeichneHof(fach, h) {
     var s = sitzVon(h);
     var hof = B.el('div', 'gg-hof');
-    if (h.k === 'adler') {
+    if (h.k === 'adler' && ep().hofbild) {
       var bild = B.el('img', 'gg-hofbild');
       bild.src = BILD + ep().hofbild + '.png';
       bild.alt = '';
@@ -1244,12 +1251,28 @@
     ep().bauten.forEach(function (b) { namen[b.k] = b; });
     h.bauten.forEach(function (bk) {
       var b = namen[bk];
-      var i = B.el('span', 'gg-bau');
+      var stand = b ? eigenerStand(b.spiegel) : 'fehlt';
+      var i = B.el('span', 'gg-bau' + (stand === 'hat' ? '' : ' vor'));
       i.appendChild(svg(glyph(b ? b.glyph : 'kammer')));
-      i.title = (b ? b.name : bk) + ' — steht auf dem Hof gegenueber.';
+      i.title = (b ? b.name : bk) + ' — steht auf dem Hof gegenueber.'
+        + (b && b.nutzen ? ' ' + b.nutzen : '')
+        + (stand === 'hat' ? ' Das Haus hat es auch.'
+           : stand === 'offen' ? ' Im eigenen Hof noch nicht gebaut.'
+           : ' Im eigenen Hof gibt es das nicht.');
       reihe.appendChild(i);
     });
     hof.appendChild(reihe);
+    if (h.k === 'adler') {
+      var vor = vorsprung(h);
+      if (vor > 0) {
+        var v = B.el('div', 'gg-vorschild',
+          'Vorsprung: ' + vor + (vor === 1 ? ' Ding' : ' Dinge') + ' · wirbt '
+          + vor + (vor === 1 ? ' Woche' : ' Wochen') + ' kuerzer');
+        v.title = 'Technik, die er frueher hat als das Haus. Jedes Ding kuerzt seine '
+          + 'Werbung um eine Woche — er ist an der Tuer, ehe man ihn kommen sieht.';
+        hof.appendChild(v);
+      }
+    }
     /* Der Hof steht UEBER dem Schild: unten verankert, damit er nach oben
        waechst und dem Schild nie ins Gesicht rutscht. */
     B.orte.setze(hof, s.ort, { anker: 'unten', dx: s.dx || 0, dy: (s.hofDy === undefined ? 4 : s.hofDy) });
@@ -1405,6 +1428,12 @@
     var kopf = B.el('div', 'gg-bandkopf');
     kopf.appendChild(B.el('span', 'gg-bandtitel', 'Ohne dich geschehen'));
     kopf.appendChild(B.el('span', 'gg-bandzahl', Z.zaehler + ' Zuege'));
+    if (Z.wocheZuege > 0) {
+      var neu = B.el('span', 'gg-bandneu', 'diese Woche ' + Z.wocheZuege);
+      neu.title = 'So viele Zuege sind seit dem letzten Klick auf WEITER gefallen — '
+        + 'ohne Ankuendigung, ohne Rueckfrage.';
+      kopf.appendChild(neu);
+    }
     kopf.appendChild(B.el('span', 'gg-bandluecke'));
     var auf = B.knopf({
       text: Z.offen ? 'Das Haus gegenueber schliessen' : 'Das Haus gegenueber',
@@ -1421,6 +1450,30 @@
       + ep().waehrung));
     wz.appendChild(B.el('span', null, abloesespanne()));
     band.appendChild(wz);
+
+    /* Der Zug, der kein Geld kostet — er steht hier oben, damit man ihn auch
+       bei leerer Kasse findet, ohne ein Blatt zu oeffnen. */
+    var bs = ep().beschwerde;
+    if (bs) {
+      var bz = B.el('div', 'gg-bandklage');
+      if (beschwerdeMoeglich()) {
+        bz.appendChild(B.knopf({
+          text: bs.name, zug: 'gegner:beschwerde', klasse: 'gg-klein',
+          titel: bs.sagt + ' ' + bs.preis,
+          tu: beschwerdeFuehren
+        }));
+        bz.appendChild(B.el('span', 'gg-ohnegeld', 'kostet kein Geld · vier Ansehen · einmal im Braujahr'));
+      } else if (Z.beschwerdeJahr === jahr()) {
+        bz.appendChild(B.el('span', 'gg-ohnegeld',
+          bs.name + ': in diesem Braujahr schon geschehen'
+          + (Z.beschwerdeAusgang && Z.beschwerdeAusgang.jahr === jahr()
+             ? (Z.beschwerdeAusgang.gelingt ? ' — durchgedrungen' : ' — abgewiesen') : '')));
+      } else {
+        bz.appendChild(B.el('span', 'gg-ohnegeld',
+          bs.name + ': erst, wenn er etwas haelt oder um etwas wirbt'));
+      }
+      band.appendChild(bz);
+    }
 
     var l = Z.zuege.slice(0, 3);
     if (!l.length) {

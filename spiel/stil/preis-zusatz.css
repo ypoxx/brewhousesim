@@ -1,5 +1,80 @@
 /* ===========================================================================
-   stil/preis-zusatz.css — FREIER PLATZ fuer "preis".
-   Bereits in spiel/index.html eingehaengt, nach stil/preis.css. Leer, darf
-   vollstaendig ersetzt werden. Kein Bauer aendert index.html.
+   stil/preis-zusatz.css — DER PREIS, zweite Lage.
+
+   Hier steht, was in der ersten Runde an der Michaelitafel dazukam: die drei
+   sichtbaren Zustände einer Angebotskarte (zu haben · genommen · durch eine
+   andere Entscheidung ausgeschlossen) und ein paar Handbreit weniger Leere.
+
+   Alles hängt an .pr-* und fasst kein fremdes Stück an.
+   BESITZSTAND: stuecke/preis*.js · stil/preis*.css · bild/preis/** · ton/preis/**
    =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DIE DREI ZUSTÄNDE EINER KARTE
+
+   Der Vorwurf, gegen den das hier gebaut ist: ein Knopf, der noch anklickbar
+   aussieht, nachdem er nichts mehr tut. Genommen und ausgeschlossen sind
+   deshalb nicht bloß deaktiviert, sie sind gestempelt — man sieht am Rand des
+   Blicks, dass die Karte Geschichte ist und keine Wahl mehr.
+   -------------------------------------------------------------------------- */
+.pr-karte-stempel {
+  align-self: flex-start;
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 12);
+  letter-spacing: calc(var(--s) * 3);
+  color: var(--pr-gruen, #3d5b3a);
+  border: calc(var(--s) * 2) solid currentColor;
+  border-radius: calc(var(--s) * 3);
+  padding: 0 calc(var(--s) * 6);
+  transform: rotate(-2.5deg);
+  margin: calc(var(--s) * -2) 0 calc(var(--s) * 2);
+}
+.pr-karte-stempel.pr-stempel-zu { color: var(--pr-rot); }
+
+.pr-karte.pr-genommen {
+  background:
+    linear-gradient(180deg, rgba(206, 226, 200, 0.45) 0, rgba(255, 253, 245, 0.80) calc(var(--s) * 60)),
+    rgba(255, 253, 245, 0.80);
+  border-color: var(--pr-gruen, #3d5b3a);
+  border-style: solid;
+}
+.pr-karte.pr-genommen .pr-schild-zahl { opacity: 0.6; }
+
+.pr-karte.pr-ausgeschlossen {
+  background: rgba(246, 238, 232, 0.42);
+  border-style: dashed;
+  border-color: var(--pr-rot);
+}
+/* Der Text bleibt lesbar — der Kritiker soll den Preis dessen sehen, was er
+   sich mit dem anderen Klick verbaut hat. Nur die Farbe geht zurück. */
+.pr-karte.pr-ausgeschlossen .pr-karte-kopf b,
+.pr-karte.pr-ausgeschlossen .pr-schild-zahl { color: var(--pr-schwach); }
+.pr-karte.pr-ausgeschlossen .pr-schild { filter: saturate(0.25); }
+
+/* --------------------------------------------------------------------------
+   WENIGER LEERE
+
+   Runde 1 zeigte unter den drei Festlegungen eine handbreite leere Fläche und
+   links einen leeren Kasten. Die Festlegungsreihe wird flacher, die
+   Angebotsreihe bekommt den Platz, und die linke Spalte hört auf zu strecken.
+   -------------------------------------------------------------------------- */
+.pr-reihe-fest { flex: 0 0 32%; }
+
+.pr-fest .pr-regel { margin-bottom: calc(var(--s) * 4); }
+
+.pr-bestand { flex: 0 1 auto; }
+.pr-links > .pr-feld:last-child { margin-bottom: auto; }
+
+/* Die Kopfzeile der Angebotsspalte trägt jetzt einen längeren Satz — er darf
+   umbrechen statt abgeschnitten zu werden. */
+.pr-abschnitt { align-items: flex-end; }
+.pr-abschnitt-satz { white-space: normal; line-height: 1.25; }
+
+/* --------------------------------------------------------------------------
+   DIE CHRONIK
+
+   Sie war eine große leere Fläche, solange nichts darin stand. Jetzt steht
+   sie oben und lässt den Rest der Tafel in Ruhe.
+   -------------------------------------------------------------------------- */
+.pr-chronik-rolle { align-content: flex-start; }
+.pr-chronik-fest:empty { display: none; }

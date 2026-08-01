@@ -409,7 +409,7 @@
     var u = umlageDesJahres();
     if (u && !u.bezahlt) {
       u.bezahlt = true;
-      var betrag = umlageBetrag();
+      var betrag = umlageBetrag(u);
       u.betrag = betrag;
       if (!buche(betrag, u.name, 'umlage')) {
         var weg = nimmPfand();
@@ -474,8 +474,9 @@
     var j = Z.startjahr;
     for (var i = 0; i < e.abstaende.length; i++) {
       j += e.abstaende[i];
-      var name = e.umlagen[i % e.umlagen.length];
-      Z.umlagen.push({ jahr: j, name: name.name, sagt: name.sagt, bezahlt: false, betrag: 0 });
+      var vorlage = e.umlagen[i % e.umlagen.length];
+      Z.umlagen.push({ jahr: j, name: vorlage.name, sagt: vorlage.sagt,
+        teil: vorlage.teil || 1, bezahlt: false, betrag: 0 });
     }
   }
 
@@ -488,7 +489,7 @@
     var l = [];
     Z.umlagen.forEach(function (u) {
       if (u.jahr < jahr() || u.bezahlt) return;
-      l.push({ jahr: u.jahr, name: u.name, sagt: u.sagt, betrag: umlageBetrag(), art: 'umlage' });
+      l.push({ jahr: u.jahr, name: u.name, sagt: u.sagt, betrag: umlageBetrag(u), art: 'umlage' });
     });
     /* Der Erbfall steht im Kalender: die Amtszeit hat ein Ende. */
     if (!Z.handlohnWeg && amtszeit().bis && amtszeit().bis > jahr()) {
