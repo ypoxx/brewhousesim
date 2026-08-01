@@ -1399,6 +1399,15 @@
           ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe)));
         s.appendChild(txt);
         if (summe !== null && !B.welt.kann(summe)) s.classList.add('zuteuer');
+        /* ZUSTAENDIGKEIT §10, vollstaendig abgemeldet (Glaettung Welle 1):
+           Ein Preisschild ist keine Beschriftung, sondern ein Knopf. Auf der
+           Kartenschicht der STADT bekam es 'stadt-marke-ruht' und damit
+           pointer-events:none — der Ortspflock daneben trug dieselbe
+           Aufschrift samt Preis und tat nichts. Von zwei Dingen mit
+           demselben Preisschild war das wirksame nicht anklickbar und das
+           anklickbare wirkungslos. Wer selbst einen Knopf setzt, meldet ihn
+           ab; die stummen Marken des Stuecks bleiben im Pflocksystem. */
+        s.setAttribute('data-frei', 'gegner');
         B.orte.setze(s, a.ort, { anker: 'unten', dy: hoch });
         s.addEventListener('click', function () { loeseAb(k); });
         fach.appendChild(s);
@@ -1422,6 +1431,7 @@
         pt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(w.preis)));
         p.appendChild(pt);
         if (!B.welt.kann(w.preis)) p.classList.add('zuteuer');
+        p.setAttribute('data-frei', 'gegner');   /* siehe Schild oben */
         B.orte.setze(p, a.ort, { anker: 'unten', dy: hoch });
         p.addEventListener('click', function () { zuvorkommen(k); });
         fach.appendChild(p);
