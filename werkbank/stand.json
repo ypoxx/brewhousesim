@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T22:09:13+00:00",
+ "stand": "2026-08-01T22:09:35+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -85,6 +85,12 @@
    "runde": 1,
    "luecke": "Der Michaelitag ist nur bezahlbar, solange der Spieler ihn nie benutzt: bescheiden gespielt tragen 13 von 20 Michaelitagen zwei Karten (E1 3/3/4/1/2, E2 3/1/3/1/0, E3 4/3/4/3/0, E4 3/2/1/2/1), nimmt man aber an jedem Michaeli auch nur das billigste Angebot, steht ab dem dritten Braujahr in E1, E2 und E3 'HEUTE NICHT' und die Kasse bei null — waehrend die Kennzahl in E2 sechs Jahre in Folge unter 1x liegt und in E4 zehn Jahre lang von 4,9x auf 20,4x steigt.",
    "gebaut": "werkbank/schuss/eichung-e1-1353-heute-nicht.png"
+  },
+  {
+   "name": "DER SUD — was fuer ein Bier das eigentlich ist",
+   "status": "zurueck",
+   "runde": 1,
+   "luecke": "Meine Latte ist bestanden — 3/5/5/9 Sudentscheidungen, keine einzige kommt in zwei Epochen vor, jede kostet und jede zeigt ihre Folge am Fass; zurueck geht es an einer anderen Stelle: 1350, 1600 und 1970 schreiben 'unwiderruflich' auf ihre teuerste Entscheidung (Hopfenbrief −78 Pf, Felsenkeller −260 fl, Betriebslabor −42.000 DM), und sechs Wochen spaeter macht ein einziger Mausklick sie gratis rueckgaengig — nur 1884 haelt sein Wort."
   }
  ],
  "chronik": [
@@ -679,6 +685,18 @@
   {
    "zeit": "2026-08-01T22:09:13+00:00",
    "text": "DER SUD, Runde 1 — HARTE REGEL UND SPERRLISTE. Kasse auf null, Kammer leer, Lager leer, Gaerkeller leer, in allen vier Epochen hergestellt und dann mit der Maus geprueft: erreichbar UND aktiv 26/26/26/28 Knoepfe, davon vom SUD 1/2/2/1 (E1 'Hopfen im Sack, heimlich'; E2 'Mit Weizen gestreckt', 'Mit Hafer und Wicke gestreckt'; E3 'Ohne Kuehlung durchgaeren lassen', 'Hefe im Gaerbottich abernten'; E4 'Schoenen mit Kieselsol'). Jeder davon einzeln geklickt: der Schirm aendert sich jedes Mal. WEITER traegt weiter und bringt Bier (E1 KELLER 0 -> 6/12 Fass bei 0 Grut und 0 Pf). Kein Zustand gefunden, aus dem heraus kein Zug mehr etwas veraendert. Anmerkung zur Meldung des Bauers ('2 Zuege in allen vier Epochen'): in E1 und E4 zaehle ich 1. SPERRLISTE: sauber. Kein Destillierwort auf keinem Schirm; das Spiel sagt es selbst — 'Kein Helm, kein Schwanenhals — das waere eine Blase und kein Sudkessel'. 1350 'Die offene Pfanne ueber offenem Feuer', 1600 'Die offene Pfanne unter dem Kamin', 1884 'Die Sudpfanne unter dem Kupferhelm' (Helm des Sudkessels, keine Blase), 1970 'Das Sudwerk im Schaltraum'. Kein Emailwort in 1884."
+  },
+  {
+   "zeit": "2026-08-01T22:09:28+00:00",
+   "text": "DER SUD, Runde 1 — Nebenbefund an die AUFSICHT und an DIE FUHRE: DER SUD AENDERT DIE WUERZE, DIE SORTE HEISST WEITER WIE VORHER. Nach dem Hopfenbrief in 1350 traegt jedes neue Fass am Lager weiter den Namen 'Grutbier' (Fasstitel 'Grutbier, gebraut 1350 Woche 2, reif, haelt noch 12 Wochen'), und die Chronik schreibt zu Michaeli '1x Grutbier — wie im vorigen Jahr, bis jemand es aendert'. Die Haltbarkeit stimmt, der Name nicht. Das ist eine Naht zwischen DEM SUD (Verfahren) und DER FUHRE (Sortenname), kein Fehler eines der beiden allein."
+  },
+  {
+   "zeit": "2026-08-01T22:09:28+00:00",
+   "text": "DER SUD, Runde 1 — Zahl fuer die Eichung (ZUSTAENDIGKEIT 17), A/B mit gleicher Saat 4242, 62 Wochen, sonst gleicher Spielstil: 1350 mit Hopfenbrief 156 Buchzeilen gegen 170 ohne — die teuerste Entscheidung der Epoche kostet 78 Pf und bringt im gemessenen Zeitraum WENIGER, weil der Gaerkeller bei vollem Lager elf Wochen klemmt. 1600 Felsenkeller 187 gegen 160 und Lager 16/24 gegen 0/24 — traegt. 1884 Kaeltemaschine 180 gegen 180 bei Kasse 0 M gegen 3.441 M — kostet 9.800 M und zahlt im ersten Braujahr nichts zurueck. 1970 Filter+Labor 221 gegen 210 bei Kasse 0 DM gegen 18.455 DM. Wer den Michaelitag eicht, eicht gegen einen Sud, dessen teure Wahl in drei von vier Epochen im ersten Braujahr negativ ist."
+  },
+  {
+   "zeit": "2026-08-01T22:09:35+00:00",
+   "text": "DER SUD — was fuer ein Bier das eigentlich ist · Runde 1 · zurück an den Builder — Meine Latte ist bestanden — 3/5/5/9 Sudentscheidungen, keine einzige kommt in zwei Epochen vor, jede kostet und jede zeigt ihre Folge am Fass; zurueck geht es an einer anderen Stelle: 1350, 1600 und 1970 schreiben 'unwiderruflich' auf ihre teuerste Entscheidung (Hopfenbrief −78 Pf, Felsenkeller −260 fl, Betriebslabor −42.000 DM), und sechs Wochen spaeter macht ein einziger Mausklick sie gratis rueckgaengig — nur 1884 haelt sein Wort."
   }
  ]
 }
