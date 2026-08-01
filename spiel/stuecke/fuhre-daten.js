@@ -395,9 +395,7 @@ var FUHRE_DATEN = {
                + 'nicht aus der Kasse.',
       budget: null,
       sudeJeWoche: 2,
-      /* Die Pfanne von 1884 steht nicht zu Haelfte still: zwei Sude in der
-         Woche sind das Werk, und der Braumeister schreibt sie an. */
-      planStart: 2,
+      planStart: 1,
       unterhalt: 110,
       tafel: { name: 'Sudplan', unter: 'am schwarzen Brett der Mälzerei',
                preis: 260, freiBis: 3 },

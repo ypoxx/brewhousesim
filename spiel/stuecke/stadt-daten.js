@@ -297,7 +297,9 @@ var STADT_DATEN = {
        das Tor misst in 1350 rund 75 px neben Leuten von 76-80 px. */
     { schluessel: 'keller_gewoelbe', name: 'Gewölbekeller', bild: 'keller_gewoelbe',
       ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 11, 2: 11 },
-      versatz: { 1: { dx: 9, dy: -3.5 }, 2: { dx: 1, dy: -7 } },
+      /* Runde 6: der Huegel raeumt der Kueferei die Hoftasche und geht in
+         1350 ein Band zurueck (32|72,5 -> 29|70). */
+      versatz: { 1: { dx: 6, dy: -6 }, 2: { dx: 1, dy: -7 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
@@ -338,9 +340,25 @@ var STADT_DATEN = {
        drei arbeitenden Figuren am Kessel zu (die der Kritiker im Blindtest
        ausdruecklich fuer das Gebaute gezaehlt hat) oder haengt ueber der
        Mauer. Lieber zehn Prozent Massstab als beides. */
+    /* RUNDE 6 — DAS STUECK, MIT DEM DIESE RUNDE ZURUECKKAM.
+       "DIE KUEFEREI STEHT AUF DEM HOFTOR": ort 'tor' (45|64) plus dy 10 gab
+       den Fusspunkt (45|74) = (1238|1136), waehrend die Mauerlinie dort
+       y=1018 sagt. 250 von 252 Spalten lagen unter der Kante, die tiefste
+       121 px. Im Bild hiess das: Tor weg, Magd weg, zwei Faesser ueber dem
+       Mauerkopf auf der Gasse, Kuefer und Feuerkorb in der Luft ueber der
+       Einfahrt.
+       Der Fehler war nicht die Zahl 10, sondern dass ihn niemand gemerkt
+       hat. Beides ist behoben: die Kueferei steht jetzt in der HOFTASCHE
+       (30|74) — dem einen tiefen Platz am Scheitel der Mauer, wo der Boden
+       wirklich bis nach vorn geht —, und stuecke/stadt-zusatz.js misst
+       seither bei jedem Zeichnen nach, ob sie dort auch steht. Der
+       Gewoelbekeller, der bis Runde 5 in der Tasche lag, geht ein Band
+       zurueck; er ist ein Erdhuegel und vertraegt das, ein Arbeitsschuppen
+       mit einem Mann davor nicht.
+       Gemessen nach dem Umzug: tiefster Punkt 9 px UEBER der Mauerlinie,
+       kein Fuss im Torfeld. */
     { schluessel: 'kueferei', name: 'Küferei', bild: 'kueferei',
-      ort: 'tor', dx: 0, dy: 10, breite: 9.2, breiten: { 1: 9.2, 2: 7.3 },
-      versatz: { 2: { dy: -3 } },
+      ort: 'fasslager', dx: 3, dy: -2, breite: 9.2, breiten: { 1: 9.2, 2: 7.3 },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
@@ -372,6 +390,9 @@ var STADT_DATEN = {
 
     { schluessel: 'kontor', name: 'Kontor', bild: 'kontor',
       ort: 'tor', dx: 8, dy: -3, breite: 10, von: 2, bis: 3, grund: 38,
+      boden: 'gasse', warum: 'Das Kontor steht mit Absicht VOR dem Tor, am '
+        + 'Platz, wo die Fuhrleute halten — ein Schreibstube gehoert dorthin, '
+        + 'wo der Wagen ankommt, nicht hinter die Mauer.',
       sagt: 'Wer schreibt, weiß im Herbst, was der Frühling gekostet hat.',
       nutzen: {}, wirkt: 'Ordnung im Buch' },
 
@@ -388,6 +409,9 @@ var STADT_DATEN = {
        als Pellet in den Kuehlraum, nicht als Sack unter den Dachstuhl. */
     { schluessel: 'hopfenlager', name: 'Hopfenlager', bild: 'hopfenlager',
       ort: 'keller', dx: -6, dy: 0, breite: 9, von: 2, bis: 3, grund: 40,
+      boden: 'gasse', warum: 'Der Speicher steht westlich der Hofmauer in der '
+        + 'Haeuserzeile — dort ist der Hof zu Ende und die Gasse faengt an. '
+        + 'Ein Haus, das dem Brauhaus gehoert, aber nicht im Hof steht.',
       sagt: 'Hopfen im Sack, trocken und dunkel. Erst mit dem Hopfen hält Bier eine Reise aus.',
       nutzen: { rohstoff: 60 } },
 
@@ -513,6 +537,8 @@ var STADT_DATEN = {
 
     { schluessel: 'verwaltung', name: 'Verwaltungsbau', bild: 'verwaltung',
       ort: 'tor', dx: 8, dy: -3, breite: 11, von: 4, bis: 4, grund: 90,
+      boden: 'gasse', warum: 'Derselbe Platz wie das Kontor von 1600, drei '
+        + 'Geschosse hoeher: an der Strasse, wo man ihn sieht.',
       sagt: 'Drei Geschosse Schreibtisch. Ein Haus, das eine Marke ist, wird verwaltet.',
       nutzen: {}, wirkt: 'Ordnung im Buch' }
   ]
