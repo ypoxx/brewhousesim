@@ -312,6 +312,15 @@ var FUHRE_DATEN = {
       abgabe: { satz: 0.10, name: 'Biersteuer und Malzaufschlag',
                 sagt: 'Seit 1879 wird das Malz besteuert. Wer mehr einbraut, zahlt mehr.' },
       bannmeile: 0,
+      kerbholz: {
+        name: 'Wechsel beim Malzhändler', kurz: 'Wechsel', zeichen: 'Wechsel',
+        jeKerbe: 900, kerben: 6,
+        satz: 'Ein Wechsel auf drei Monate, akzeptiert vom Malzhändler. '
+            + 'Fällig zu Georgi, wie jedes Papier dieses Hauses.',
+        pfand: { was: 'eis', menge: 12,
+                 sagt: 'Je offenem Wechsel holt sich der Eishändler zwölf Fuder aus dem Keller. '
+                     + 'Er nimmt Eis, weil Eis im Sommer mehr wert ist als Mark.' }
+      },
       kaeufe: [
         { k: 'eis',      text: 'Eis schneiden · +16 Fuder', basis: 190, staffel: 1.0, menge: 16,
           titel: 'Nur solange der Fluss trägt. Im Maerz ist damit Schluss, egal wie voll die Kasse ist.' },
@@ -320,6 +329,9 @@ var FUHRE_DATEN = {
         { k: 'sudwerk',  text: 'Dampfsudwerk · +1 Sud je Woche', basis: 4200, staffel: 1.9, menge: 1,
           titel: 'Eine zweite Pfanne unter Dampf. Unwiderruflich.' },
         { k: 'rohstoff', text: 'Hopfen aus der Hallertau · +300', basis: 1500, staffel: 1.0, menge: 300,
+          rueck: 0.55, rtext: 'Hopfen zurück an den Händler · −300',
+          rtitel: 'Dreihundert Hopfen gehen zurück nach Nürnberg. Der Händler zahlt bar '
+                + 'und behält die Hälfte der Spanne.',
           titel: 'Waggonweise, ab Bahnhof.' }
       ],
       sorten: [
@@ -335,7 +347,13 @@ var FUHRE_DATEN = {
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
           fass: 18, reife: 5, haltbar: 46, preis: 108, kosten: 620, rohstoff: 36, eis: 3,
           sommer: true,
-          satz: 'Fünf Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller.' }
+          satz: 'Fünf Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller.' },
+        { k: 'einfach', name: 'Einfachbier', zeichen: 'N', stufe: 1, not: true,
+          fass: 16, reife: 0, haltbar: 2, preis: 24, kosten: 0, rohstoff: 0, eis: 0,
+          sommer: false,
+          satz: 'Der Nachguss auf den ausgelaugten Treber. Kein Hopfenzukauf, kein Fuder Eis, '
+              + 'keine neue Rechnung beim Mälzer — nur die Pfanne. Der Malzaufschlag kennt es '
+              + 'als Einfachbier und nimmt fast nichts. Ohne Eis ist es in zwei Wochen sauer.' }
       ]
     },
 
@@ -373,12 +391,24 @@ var FUHRE_DATEN = {
       listung: { name: 'Listung', basis: 2600, staffel: 1.22,
                  satz: 'Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. '
                      + 'Zu Georgi fällt sie, wenn nichts geliefert wurde.' },
+      kerbholz: {
+        name: 'Kontokorrent bei der Hausbank', kurz: 'Kontokorrent', zeichen: 'Tranche',
+        jeKerbe: 11000, kerben: 6,
+        satz: 'Die Hausbank räumt eine Linie ein, in Tranchen. Zum Bilanzstichtag Georgi '
+            + 'wird zurückgeführt.',
+        pfand: { was: 'listung', menge: 1,
+                 sagt: 'Je offener Tranche verlangt die Bank eine Sicherheit — und der Handel '
+                     + 'streicht dafür einen Regalmeter. Geld hat die Bank selbst genug.' }
+      },
       kaeufe: [
         { k: 'lastzug',  text: 'Zweiter Lastzug · +1 Halt', basis: 128000, staffel: 1.8, menge: 1,
           titel: 'Ein Halt mehr je Woche. Das ist in dieser Epoche die einzige echte Vergrößerung.' },
         { k: 'sudwerk',  text: 'Sudhaus erweitern · +1 Sud je Woche', basis: 56000, staffel: 1.7, menge: 1,
           titel: 'Mehr Sude je Woche. Unwiderruflich.' },
         { k: 'rohstoff', text: 'Hopfen im Kontrakt · +1200', basis: 14400, staffel: 1.0, menge: 1200,
+          rueck: 0.5, rtext: 'Kontrakt abtreten · −1200',
+          rtitel: 'Der Jahreskontrakt geht an eine andere Brauerei. Sofort Geld, '
+                + 'und der Hopfen ist weg.',
           titel: 'Jahreskontrakt mit der Hallertau.' }
       ],
       sorten: [
@@ -393,7 +423,13 @@ var FUHRE_DATEN = {
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
           fass: 30, reife: 4, haltbar: 40, preis: 245, kosten: 3700, rohstoff: 58,
           sommer: true,
-          satz: 'Vier Wochen Reife, dreißig Fass. Die Gaststätte zahlt es, der Markt nicht.' }
+          satz: 'Vier Wochen Reife, dreißig Fass. Die Gaststätte zahlt es, der Markt nicht.' },
+        { k: 'handel', name: 'Handelsmarke', zeichen: 'W', stufe: 1, not: true,
+          fass: 40, reife: 0, haltbar: 12, preis: 78, kosten: 0, rohstoff: 0,
+          sommer: false,
+          satz: 'Weißes Etikett für das Handelshaus: der Kunde stellt Malz, Etikett und Kasten, '
+              + 'das Haus stellt Sud und Pfanne. Keine eigene Auslage, kein eigener Regalmeter — '
+              + 'und kein eigener Name. Der Gasthof führt es nicht, die Marke wächst nicht davon.' }
       ]
     }
   }
