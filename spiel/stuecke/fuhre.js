@@ -283,6 +283,196 @@
     B.sende('zeichne', { grund: 'fuhre-rueckverkauf' });
   }
 
+  /* ======================================================================
+     DAS ZIEL — WARUM DER ZAHLTAG AUF MICHAELI LIEGT
+     (Auflage der Aufsicht, ZUSTAENDIGKEIT 17)
+
+     Ein Wirt zahlt nicht am Tor. Er laesst anschreiben, und am Zinstag geht
+     der Knecht mit dem Kerbholz die Runde. Michaeli IST dieser Tag — der
+     Termin liegt nicht zufaellig dort, wo das Haus etwas kaufen soll,
+     sondern weil an ihm gerechnet wird. Bisher zahlte in diesem Stueck
+     jeder Wirt bar an der Kellertuer; damit stand das Geld immer im Januar
+     und nie am 29. September, und die Michaelitafel war beschriftet,
+     gesiegelt und unbezahlbar (STAND.md §2).
+
+     Drei Groessen, und keine davon ist ein Regler:
+       · bar     — was der Wirt bei der Lieferung hinlegt
+       · Ziel    — was bis Michaeli im Holz steht und dort eingesammelt wird
+       · Ausfall — was am Zahltag nicht mehr einzutreiben ist
+
+     Und ein Gegengewicht, das die Wahl zu einer Wahl macht: wer bar zahlen
+     muss, bestellt weniger (`durst`). Bar ist sicher und klein, Borg ist
+     gross und haengt an einem einzigen Tag.
+
+     Das Angeld ist die zweite Haelfte desselben Gedankens und der Grund,
+     warum auch ein schlechtes Jahr am Michaelitag Geld in der Lade hat: wer
+     im Winter beliefert werden will, legt im Herbst etwas an. Es ist kein
+     Geschenk — es wird abgetrunken (Z.vorschuss) und mindert die Barzahlung
+     der naechsten Lieferungen. Es schafft kein Geld, es verschiebt es
+     dorthin, wo der Kalender es braucht.
+     ====================================================================== */
+  function zielDef() { return ep().ziel || null; }
+
+  function zielStufen() {
+    var z = zielDef();
+    return z && z.stufen ? z.stufen : [];
+  }
+
+  function zielStufe() {
+    var l = zielStufen();
+    for (var i = 0; i < l.length; i++) if (l[i].k === Z.ziel) return l[i];
+    return l[1] || l[0] || null;
+  }
+
+  /* Verabredet wird zu Michaeli und dann ein Jahr lang nicht mehr: eine
+     Zahlungsweise ist ein Wort unter Kaufleuten, kein Schalter. Die Frist
+     ist der Martinitag — sechs Wochen nach Michaeli. */
+  var ZIEL_FRIST = 7;
+  function zielOffen() {
+    return B.welt.zeit.woche <= ZIEL_FRIST && !B.welt.zeit.ende;
+  }
+
+  function setzeZiel(k) {
+    if (!zielOffen()) return;
+    var l = zielStufen(), s = null;
+    for (var i = 0; i < l.length; i++) if (l[i].k === k) s = l[i];
+    if (!s || Z.ziel === k) return;
+    Z.ziel = k;
+    Z.zielJahr = B.welt.zeit.jahr;
+    B.welt.schreibe('Für ' + B.uhr.braujahr() + ' gilt: ' + s.name + '. ' + s.sagt, 'fuhre');
+    B.ton.spiele('fuhre:siegel', { ort: 'hof' });
+    B.sende('zeichne', { grund: 'fuhre-ziel' });
+  }
+
+  function ausstandSumme() {
+    var n = 0;
+    for (var k in Z.ausstand) n += Z.ausstand[k];
+    return n;
+  }
+  function vorschussSumme() {
+    var n = 0;
+    for (var k in Z.vorschuss) n += Z.vorschuss[k];
+    return n;
+  }
+
+  /* JEDE EINNAHME DES HAUSES GEHT HIER DURCH — und der Rat nimmt sein Teil
+     an derselben Stelle.
+
+     Vorher wurde die Abgabe in einer Summe zu Georgi genommen, gedeckelt auf
+     55 % des freien Geldes; das war ein Pflaster gegen eine Wand, die es
+     nicht geben muss. Das Ungeld ist eine Abgabe auf den Ausschank und wird
+     historisch genommen, wenn gezahlt wird. Genau so lauft sie jetzt: acht
+     Prozent von jedem Betrag, der hereinkommt, in der Woche, in der er
+     hereinkommt. Der Jahresbetrag bleibt derselbe (Abgabendeckel,
+     ZUSTAENDIGKEIT 4: 8 % fuer DIE FUHRE) — er kann nur nicht mehr als Wand
+     an einem einzigen Tag stehen. */
+  function einnahme(brutto, was, adresse, menge) {
+    brutto = Math.round(brutto);
+    if (brutto <= 0) return 0;
+    var e = ep();
+    B.welt.nimm(brutto, was, 'spieler');
+    if (adresse !== undefined) {
+      B.welt.protokolliere({ wer: 'spieler', was: was, preis: 0,
+        menge: menge || 0, adresse: adresse || null });
+    }
+    if (e.abgabe && e.abgabe.satz) {
+      var abg = Math.round(brutto * e.abgabe.satz);
+      if (abg > 0 && B.welt.zahle(abg, e.abgabe.name + ' auf ' + B.welt.geld(brutto), 'spieler')) {
+        Z.abgabeJahr += abg;
+      }
+    }
+    return brutto;
+  }
+
+  /* Was ein Wirt bei der Lieferung hinlegt und was stehen bleibt. Ein
+     Vorschuss aus dem Herbst wird zuerst abgetrunken — er war schon
+     bezahlt. */
+  function buchLieferung(a, erloes) {
+    var st = zielStufe();
+    var rest = Math.round(erloes);
+    var abgetrunken = 0;
+
+    var v = Z.vorschuss[a.schluessel] || 0;
+    if (v > 0 && rest > 0) {
+      abgetrunken = Math.min(v, rest);
+      Z.vorschuss[a.schluessel] = v - abgetrunken;
+      rest -= abgetrunken;
+    }
+
+    var bar = st ? Math.round(rest * st.bar) : rest;
+    var steht = rest - bar;
+    if (steht > 0) Z.ausstand[a.schluessel] = (Z.ausstand[a.schluessel] || 0) + steht;
+    return { bar: bar, steht: steht, abgetrunken: abgetrunken };
+  }
+
+  /* DER UMGANG VOR MICHAELI. Er laeuft am Georgi-Ende, also in der Woche vor
+     Michaeli, und er FORDERT NICHTS — er bringt ein. Das ist die Auflage der
+     Aufsicht woertlich: die Woche vor Michaeli darf nicht mehr fordern, als
+     sie einbringt. */
+  function zahltag() {
+    var zd = zielDef();
+    Z.zahltag = null;
+    if (!zd) return;
+    var st = zielStufe();
+    var posten = [], eingenommen = 0, ausgefallen = 0;
+
+    alleHaeuser().forEach(function (a) {
+      var offen = Math.round(Z.ausstand[a.schluessel] || 0);
+      if (offen <= 0) return;
+      /* Wer mager belieferte, treibt schlechter ein: ein Wirt, dem das Haus
+         drei Jahre lang nichts gebracht hat, sucht am Zahltag Gruende. Und
+         wer schon beim Adler steht, zahlt nur die Haelfte. */
+      var quote = (st ? st.ausfall : 0.05) * (1 + (Z.mahnung[a.schluessel] || 0) * 0.6);
+      if (Z.verloren[a.schluessel]) quote = Math.max(quote, 0.5);
+      else if (a.bindung && a.bindung.wem && a.bindung.wem !== 'haus') quote = Math.max(quote, 0.3);
+      var aus = Math.round(offen * B.grenze(quote, 0, 0.85));
+      var zahlt = offen - aus;
+      eingenommen += zahlt;
+      ausgefallen += aus;
+      posten.push({ name: a.name, offen: offen, zahlt: zahlt, aus: aus });
+      Z.ausstand[a.schluessel] = 0;
+    });
+
+    /* DAS ANGELD. Wer im Winter beliefert werden will, legt zu Michaeli an.
+       Es wird abgetrunken, nicht geschenkt — deshalb steht es zugleich als
+       Schuld des Hauses im Buch (Z.vorschuss). */
+    var angeld = 0, angeldPosten = [];
+    if (zd.angeld) {
+      var hs = echteSorten();
+      var haus = hs[Math.min(1, hs.length - 1)] || hs[0];
+      haeuser().forEach(function (a) {
+        if (!haus) return;
+        if (!(a.bindung && a.bindung.wem === 'haus')) return;
+        if (sperre(a, haus) && sperre(a, notSorte())) return;
+        var wert = jahresbedarf(a) * preisJeFass(haus, a) * zd.angeld;
+        var n = Math.round(wert);
+        if (n <= 0) return;
+        angeld += n;
+        Z.vorschuss[a.schluessel] = (Z.vorschuss[a.schluessel] || 0) + n;
+        angeldPosten.push({ name: a.name, betrag: n });
+      });
+    }
+
+    var gesamt = eingenommen + angeld;
+    if (gesamt > 0) {
+      einnahme(eingenommen, zd.umgang + ' — was die Wirte zu Michaeli zahlen');
+      einnahme(angeld, zd.angeldName);
+    }
+    Z.georgiEin += gesamt;
+
+    Z.zahltag = {
+      name: zd.umgang, satz: zd.satz, stufe: st ? st.name : '',
+      posten: posten, eingenommen: eingenommen, ausgefallen: ausgefallen,
+      angeld: angeld, angeldName: zd.angeldName, angeldSatz: zd.angeldSatz,
+      angeldPosten: angeldPosten, gesamt: gesamt
+    };
+    if (gesamt > 0) {
+      B.welt.schreibe(zd.umgang + ': ' + B.welt.geld(gesamt) + ' kommen herein'
+        + (ausgefallen ? ', ' + B.welt.geld(ausgefallen) + ' sind nicht einzutreiben' : '')
+        + '. Damit steht das Haus vor der Michaelitafel.', 'fuhre');
+    }
+  }
+
   /* Preis je Fass — DER PREIS setzt den Multiplikator, DIE FUHRE die Sorte. */
   function preisMult() {
     var e = B.welt.zeit.epoche;
@@ -786,6 +976,7 @@
     var e = ep();
     var gesamt = 0, erloesGesamt = 0;
     var verteilung = {};
+    var angeschrieben = 0;
 
     var probeGesamt = 0;
 
@@ -818,9 +1009,18 @@
         return;
       }
 
-      B.welt.nimm(Math.round(erloes), B.welt.menge(n) + ' an ' + a.name, 'spieler');
+      /* DAS ZIEL. Was der Wirt hinlegt, kommt in die Lade; was er anschreiben
+         laesst, steht bis Michaeli im Holz. Der Umsatz ist in beiden Faellen
+         derselbe — geliefert ist geliefert, und der Rat rechnet nach
+         Ausstoss, nicht nach Kassenstand. */
+      var buch = buchLieferung(a, erloes);
+      einnahme(buch.bar, B.welt.menge(n) + ' an ' + a.name
+        + (buch.steht ? ' · ' + B.welt.geld(buch.steht) + ' angeschrieben' : '')
+        + (buch.abgetrunken ? ' · ' + B.welt.geld(buch.abgetrunken) + ' vom Angeld abgetrunken' : ''));
+      angeschrieben += buch.steht;
       B.welt.protokolliere({
-        wer: 'spieler', was: 'geliefert an ' + a.name,
+        wer: 'spieler', was: 'geliefert an ' + a.name
+          + (buch.steht ? ' · ' + B.welt.geld(buch.steht) + ' aufs ' + (zielDef() ? zielDef().kurz : 'Ziel') : ''),
         preis: 0, menge: n, adresse: a.schluessel
       });
 
@@ -853,7 +1053,8 @@
     Z.meldung = (gesamt
       ? B.welt.menge(gesamt) + ' ausgeliefert an ' + Object.keys(verteilung).length
         + (Object.keys(verteilung).length === 1 ? ' Haus' : ' Häuser')
-        + ' · ' + B.welt.geld(Math.round(erloesGesamt) - lohn) + ' geblieben'
+        + ' · ' + B.welt.geld(Math.round(erloesGesamt)) + ' verdient, davon '
+        + B.welt.geld(angeschrieben) + ' angeschrieben bis Michaeli'
       : 'Nichts verkauft, ' + B.welt.geld(lohn) + ' Fuhrlohn bezahlt.')
       + (probeGesamt ? ' · ' + B.welt.menge(probeGesamt) + ' ohne Rechnung hinausgegeben' : '');
 
