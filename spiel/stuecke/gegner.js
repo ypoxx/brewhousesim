@@ -1496,7 +1496,8 @@
     var band = B.el('div', 'gg-band');
     var kopf = B.el('div', 'gg-bandkopf');
     kopf.appendChild(B.el('span', 'gg-bandtitel', 'Ohne dich geschehen'));
-    kopf.appendChild(B.el('span', 'gg-bandzahl', Z.zaehler + ' Zuege'));
+    kopf.appendChild(B.el('span', 'gg-bandzahl',
+      Z.zaehler + (Z.zaehler === 1 ? ' Zug' : ' Zuege')));
     if (Z.wocheZuege > 0) {
       var neu = B.el('span', 'gg-bandneu', 'diese Woche ' + Z.wocheZuege);
       neu.title = 'So viele Zuege sind seit dem letzten Klick auf WEITER gefallen — '
@@ -1856,7 +1857,7 @@
     /* Alles, was ohne den Spieler geschah */
     var zb = B.el('div', 'gg-block');
     zb.appendChild(B.el('h3', null, 'Ohne dich geschehen — ' + Z.zaehler
-      + ' Zuege, jeder an einem Ort im Bild'));
+      + (Z.zaehler === 1 ? ' Zug, er hat' : ' Zuege, jeder hat') + ' einen Ort im Bild'));
     var rolle = B.el('div', 'gg-rolle rolle');
     Z.zuege.slice(0, 40).forEach(function (e) {
       var z = B.el('div', 'gg-zzeile');
