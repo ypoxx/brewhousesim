@@ -453,14 +453,13 @@
   function probeKommtAn(a, faesser) {
     var s = Z.probe[a.schluessel];
     if (!s) { s = Z.probe[a.schluessel] = { zutrauen: 0, jahr: 0, gaben: 0 }; }
-    var wert = 0, gut = 0;
-    faesser.forEach(function (f) {
-      if (nimmt(a, sorteFass(f))) { wert += 2; gut++; } else { wert += 1; }
-    });
-    /* Ein Halt ist ein Halt: eine Probe je Woche und Adresse zaehlt einmal,
-       ob nun ein Fass oder eine Palette darin liegt. */
-    var schritt = Math.max(1, ep().wagen.schritt);
-    s.zutrauen += Math.max(1, Math.round(wert / Math.max(1, faesser.length / schritt) / schritt));
+    /* Ein Halt ist ein Versuch — ob ein Fass darin liegt oder eine Palette,
+       aendert nichts daran, dass der Wirt EINMAL probiert. Was zaehlt, ist,
+       ob er dieses Bier ueberhaupt fuehrt: dann zaehlt der Versuch doppelt,
+       sonst einfach. Vier Punkte holen ihn zurueck, sechs beim Gegner. */
+    var gut = 0;
+    faesser.forEach(function (f) { if (nimmt(a, sorteFass(f))) gut++; });
+    s.zutrauen += (gut * 2 >= faesser.length) ? 2 : 1;
     s.jahr = B.welt.zeit.jahr;
     s.gaben += 1;
     Z.probeGesamt += faesser.length;
@@ -650,10 +649,17 @@
   function fuhrerloes() {
     var summe = 0;
     Z.ladung.forEach(function (l) {
+      if (l.probe) return;          /* ein Probefass geht ohne Rechnung */
       var a = B.welt.adresse(l.adr);
       l.faesser.forEach(function (f) { summe += preisJeFass(sorteFass(f), a); });
     });
     return Math.round(summe);
+  }
+
+  function probenAufDemWagen() {
+    var n = 0;
+    Z.ladung.forEach(function (l) { if (l.probe) n += l.faesser.length; });
+    return n;
   }
 
   /* ----------------------------------------------------------------------
@@ -774,17 +780,36 @@
     var gesamt = 0, erloesGesamt = 0;
     var verteilung = {};
 
+    var probeGesamt = 0;
+
     Z.ladung.forEach(function (l) {
       var a = B.welt.adresse(l.adr);
       if (!a) return;
       var n = l.faesser.length;
       var erloes = 0;
-      l.faesser.forEach(function (f) { erloes += preisJeFass(sorteFass(f), a); });
+      if (!l.probe) l.faesser.forEach(function (f) { erloes += preisJeFass(sorteFass(f), a); });
 
       /* Die Faesser gehen ueber die Welt-API aus dem Keller: erst nach vorn
          sortieren, dann herausnehmen. So bleibt der Weltzustand die eine
          Wahrheit und die Kopfleiste stimmt. */
       nimmHerausGezielt(l.faesser);
+
+      /* DAS PROBEFASS. Keine Rechnung, kein Erlös, kein Umsatz — und damit
+         auch kein Ungeld darauf. Es zaehlt auch nicht in die Absatzreihe:
+         verschenktes Bier ist kein Absatz. Was es bewirkt, steht beim
+         Wirt, nicht in der Kasse. */
+      if (l.probe) {
+        B.welt.protokolliere({
+          wer: 'spieler', preis: 0, menge: 0, adresse: a.schluessel,
+          was: (probeDef() ? probeDef().name : 'Fass auf Probe') + ' an ' + a.name
+             + ' · ' + B.welt.menge(n) + ' ohne Rechnung'
+        });
+        Z.umlauf.push({ faellig: woManifest() + (e.wagen.umlauf || 1), n: n });
+        Z.draussen += n;
+        probeGesamt += n;
+        probeKommtAn(a, l.faesser);
+        return;
+      }
 
       B.welt.nimm(Math.round(erloes), B.welt.menge(n) + ' an ' + a.name, 'spieler');
       B.welt.protokolliere({
@@ -815,12 +840,15 @@
       'Fuhrlohn ' + (frachtstufe() ? frachtstufe().name : e.wagen.name)
       + ' · ' + Z.ladung.length + (Z.ladung.length === 1 ? ' Halt' : ' Halte'), 'spieler');
 
-    Z.vorige = verteilung;
+    Z.vorige = Object.keys(verteilung).length ? verteilung : Z.vorige;
     Z.ladung = [];
     Z.fuhren += 1;
-    Z.meldung = B.welt.menge(gesamt) + ' ausgeliefert an ' + Object.keys(verteilung).length
-      + (Object.keys(verteilung).length === 1 ? ' Haus' : ' Häuser')
-      + ' · ' + B.welt.geld(Math.round(erloesGesamt) - lohn) + ' geblieben';
+    Z.meldung = (gesamt
+      ? B.welt.menge(gesamt) + ' ausgeliefert an ' + Object.keys(verteilung).length
+        + (Object.keys(verteilung).length === 1 ? ' Haus' : ' Häuser')
+        + ' · ' + B.welt.geld(Math.round(erloesGesamt) - lohn) + ' geblieben'
+      : 'Nichts verkauft, ' + B.welt.geld(lohn) + ' Fuhrlohn bezahlt.')
+      + (probeGesamt ? ' · ' + B.welt.menge(probeGesamt) + ' ohne Rechnung hinausgegeben' : '');
 
     B.ton.spiele('fuhre:abfahrt:' + ['ochse', 'pferd', 'waggon', 'lastzug'][B.welt.zeit.epoche - 1],
       { ort: 'tor' });
@@ -1548,6 +1576,36 @@
       z2.appendChild(B.el('span', 'fu-verloren',
         'AUFGEGEBEN ' + weg.jahr + (weg.fremd ? ' — der Gegner hatte sie schon'
                                               : ' — niemand hat sie genommen')));
+
+      /* DER WEG ZURUECK. Er steht an jeder aufgegebenen Adresse, er kostet
+         kein Geld, und er ist deshalb auch bei leerer Kasse offen. Was er
+         kostet, steht am Knopf: ein Fass und ein Halt. */
+      var pd = probeDef();
+      if (pd) {
+        var stand = probeStand(a), ziel = probeZiel(a);
+        var liegt = !!probeGeladen(a);
+        var hemmProbe = kannProbe(a);
+        var schritt2 = e.wagen.schritt;
+        k.classList.add('fu-umkehr');
+        var pk = B.knopf({
+          text: (liegt ? 'Probe wieder abladen' : pd.kurz + ' · ' + B.welt.menge(schritt2))
+            + ' · ' + stand + '/' + ziel,
+          zug: 'fuhre:probe:' + a.schluessel,
+          klasse: 'fu-klein fu-probe fu-tat' + (liegt ? ' fu-gewaehlt' : ''),
+          aus: !liegt && !!hemmProbe,
+          titel: hemmProbe && !liegt ? hemmProbe : (pd.satz
+            + ' Zutrauen ' + stand + ' von ' + ziel
+            + (fremdGebunden(a) ? ' — der Wirt hängt an ' + fremdGebunden(a)
+                 + ', das kostet zwei Versuche mehr.' : '.')
+            + ' Ein Bier, das er führt, zählt doppelt; ein Notsud zählt einfach.'),
+          tu: function () { schalteProbe(a); }
+        });
+        z2.appendChild(pk);
+        var pip = B.el('span', 'fu-zutrauen');
+        pip.title = 'Zutrauen des Wirts: ' + stand + ' von ' + ziel + '.';
+        for (var pz = 0; pz < ziel; pz++) pip.appendChild(B.el('i', pz < stand ? 'an' : ''));
+        z2.appendChild(pip);
+      }
     } else {
       var schritt = e.wagen.schritt;
       var will = Math.max(durst(a) > 0 ? 1 : 0, Math.round(durst(a)));
