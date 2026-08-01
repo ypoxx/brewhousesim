@@ -227,8 +227,8 @@ var SUD_DATEN = {
               satz: 'Der Bottich läuft warm durch. Eine Woche schneller fertig, und das Bier '
                   + 'hält kaum mehr als ein Drittel. In einem Betrieb ohne Eis und ohne Geld '
                   + 'ist das der Weg, auf dem trotzdem gebraut wird.',
-              warnung: 'Warm geführt kippt jeder zehnte Bottich.',
-              wirkung: { haltbar: 0.6, gaer: 0, roh: 0, mehr: 0, risiko: 0.10 } },
+              warnung: 'Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche.',
+              wirkung: { haltbar: 0.6, gaer: 0, roh: 0, mehr: 0, risiko: 0.07 } },
             { k: 'maschine', name: 'Lindesche Kältemaschine', preis: 9800, fest: true,
               satz: 'Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält '
                   + 'das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer '
@@ -244,7 +244,7 @@ var SUD_DATEN = {
             { k: 'betrieb', name: 'Betriebshefe aus dem Bottich', preis: 0, schild: 'wie immer',
               satz: 'Geerntet und wieder angestellt, Sud um Sud. Kostet nichts und wird '
                   + 'jedes Mal etwas unsauberer.',
-              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.09, guetefall: 2 } },
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.05, guetefall: 2 } },
             { k: 'reinzucht', name: 'Reinzuchthefe nach Hansen', preis: 3400, fest: true,
               satz: 'Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. '
                   + 'Der Sud wird berechenbar. Unwiderruflich — die alte Betriebshefe wird '

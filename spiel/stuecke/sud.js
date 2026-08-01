@@ -378,7 +378,11 @@
   function fehlsud() {
     if (!Z.bottiche.length) return false;
     var w = wirkung();
-    var p = (w.risiko || 0) + Math.max(0, 60 - Z.guete) / 100 * 0.20;
+    /* Gemessen: mit 0,20 als Faktor und einer Guete am Boden verlor 1884 drei
+       von fuenf Suden im ersten Braujahr — das ist keine Knappheit mehr,
+       sondern eine Wand. 0,14 laesst die Hefepflege lohnend und den Verlust
+       ertraeglich. Hoechstens EIN Bottich je Woche; die Schleife bricht ab. */
+    var p = (w.risiko || 0) + Math.max(0, 60 - Z.guete) / 100 * 0.14;
     for (var i = 0; i < Z.bottiche.length; i++) {
       if (Z.bottiche[i].gesperrt) continue;
       if (!B.wuerfel.trifft(p)) continue;
