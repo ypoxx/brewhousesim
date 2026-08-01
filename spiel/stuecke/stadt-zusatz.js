@@ -138,6 +138,24 @@
     return null;
   }
 
+  /* DAS HAUSSCHILD auf seinem Gestell steht ebenso auf dem Boden wie ein
+     Gebaeude — der dritte Befund der Runde 5 war genau dieses Schild ("eine
+     graue Kapsel ueber dem Tor"). Also wird es mitgemessen, und zwar an
+     seinem Betonfuss: das ist das eine Stueck, das den Boden beruehrt. */
+  function schildpunkte() {
+    var fuss = document.querySelector('.stadt-schildwerk .stadt-gestell .fuss');
+    if (!fuss) return null;
+    var b = bezug();
+    var r = fuss.getBoundingClientRect();
+    var buehne = B.buehne.el;
+    var o = buehne ? buehne.getBoundingClientRect() : { left: 0, top: 0 };
+    var L = (r.left - o.left) / b.sx, W = r.width / b.sx;
+    var Y = (r.bottom - o.top) / b.sy;
+    var l = [];
+    for (var i = 0; i < 6; i++) l.push({ x: L + (i + 0.5) * W / 6, y: Y });
+    return l;
+  }
+
   function pruefe(laut) {
     var fach = document.getElementById('fach-bau-stadt');
     var l = [];
@@ -151,6 +169,8 @@
       if (!profil) continue;
       l.push(urteile(a, fusspunkte(el, profil)));
     }
+    var sp = schildpunkte();
+    if (sp) l.push(urteile({ schluessel: 'hausschild', bild: null }, sp));
     if (laut && window.console) {
       l.forEach(function (z) {
         console.log((z.gut ? 'steht  ' : 'FEHLER ') + z.schluessel + '  Boden ' + z.boden
@@ -214,6 +234,19 @@
         lot.appendChild(punkt);
       });
     }
+    var sp = schildpunkte();
+    if (sp) {
+      var t3 = torfeld();
+      sp.forEach(function (p) {
+        var schlecht = imTorfeld(t3, p.x, p.y)
+          || (imHof(p.x) && p.y - mauer(p.x) > BD.spiel);
+        var punkt = B.el('div', 'lot-punkt' + (schlecht ? ' schlecht' : ''));
+        punkt.style.left = (p.x / 27.52) + '%';
+        punkt.style.top = (p.y / 15.36) + '%';
+        lot.appendChild(punkt);
+      });
+    }
+
     fach.appendChild(lot);
   }
 
