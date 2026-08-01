@@ -1,5 +1,186 @@
 /* ===========================================================================
-   stil/fuhre-zusatz.css — FREIER PLATZ fuer "fuhre".
-   Bereits in spiel/index.html eingehaengt, nach stil/fuhre.css. Leer, darf
-   vollstaendig ersetzt werden. Kein Bauer aendert index.html.
+   stil/fuhre-zusatz.css — DIE FUHRE, zweites Blatt.
+   Bereits in spiel/index.html eingehaengt, nach stil/fuhre.css.
+
+   HIER STEHT NUR, WAS DIE LEERE KASSE SICHTBAR MACHT:
+     · der NOTSUD unter dem Strich der Anschlagtafel — der Sud ohne Barauslage
+     · das KERBHOLZ mit seinen Kerben — was das Haus schuldig ist
+     · der RUECKVERKAUF und die Knoepfe, die auf Kerbe gehen
+     · das ENDE, das keine leere Kasse ist, sondern ein leeres Auftragsbuch
+
+   Dazu die Enge: die Anschlagtafel traegt jetzt zwei Zeilen mehr und muss in
+   40,4 % Hoehe passen. Deshalb wird sie hier gestrafft statt vergroessert —
+   die Platzordnung gehoert der ganzen Buehne und wird nicht fuer ein Brett
+   umgeworfen.
    =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DIE ANSCHLAGTAFEL WIRD ENGER — dieselbe Flaeche, zwei Zeilen mehr
+   -------------------------------------------------------------------------- */
+.fu-tafel { gap: calc(var(--s) * 4); padding-top: calc(var(--s) * 8); }
+.fu-tafel .fu-budget { padding: calc(var(--s) * 3) calc(var(--s) * 8); }
+.fu-tafel .fu-budget b { font-size: calc(var(--s) * 19); }
+.fu-tafel .fu-budget span { font-size: calc(var(--s) * 14); }
+.fu-tafel .fu-rohstoff { font-size: calc(var(--s) * 14); }
+.fu-tafel .fu-sorten { gap: calc(var(--s) * 3); }
+.fu-tafel .fu-sorte { padding: calc(var(--s) * 2) calc(var(--s) * 7); gap: 0; }
+.fu-tafel .fu-sorte-kopf b { font-size: calc(var(--s) * 17); }
+.fu-tafel .fu-sorte-kosten span { font-size: calc(var(--s) * 13); }
+.fu-tafel .fu-erloes { font-size: calc(var(--s) * 14); }
+.fu-tafel .fu-planzahl { font-size: calc(var(--s) * 19); }
+.fu-tafel .fu-sudmeldung { font-size: calc(var(--s) * 13); padding-top: calc(var(--s) * 3); }
+.fu-tafel .fu-knappheit { padding: calc(var(--s) * 3) calc(var(--s) * 8); }
+.fu-tafel .fu-knappheit b { font-size: calc(var(--s) * 14); }
+.fu-tafel .fu-knappheit span { font-size: calc(var(--s) * 14); line-height: 1.2; }
+.fu-tafel .fu-kaeufe { gap: calc(var(--s) * 4); }
+.fu-tafel .fu-stell .knopf,
+.fu-tafel .fu-kaeufe .knopf { min-height: calc(var(--s) * 34); padding: calc(var(--s) * 4) calc(var(--s) * 10); }
+.fu-tafel .fu-kaeufe .knopf .wort { font-size: calc(var(--s) * 15); }
+.fu-tafel .fu-kaeufe .knopf .preis { font-size: calc(var(--s) * 14); padding-left: calc(var(--s) * 8); }
+
+/* --------------------------------------------------------------------------
+   DER NOTSUD — mit Kreide unter den Strich geschrieben
+   Kein eigenes Brett, keine eigene Farbe: eine magere Zeile, die nur dann
+   etwas hermacht, wenn sie wirklich laeuft.
+   -------------------------------------------------------------------------- */
+.fu-notsud {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 1);
+  padding: calc(var(--s) * 3) calc(var(--s) * 7);
+  border-left: calc(var(--s) * 5) dashed rgba(234, 226, 207, 0.45);
+  border-radius: calc(var(--s) * 3);
+  background: rgba(255, 250, 235, 0.045);
+}
+#buehne[data-epoche="4"] .fu-notsud {
+  background: rgba(0, 0, 0, 0.04);
+  border-left-color: rgba(35, 32, 25, 0.4);
+}
+.fu-notsud.laeuft {
+  border-left-style: solid;
+  border-left-color: #b7d69a;
+  background: rgba(120, 170, 90, 0.16);
+}
+.fu-notsud-kopf { display: flex; align-items: center; gap: calc(var(--s) * 7); }
+.fu-notsud-kopf b {
+  font-size: calc(var(--s) * 17);
+  flex: 1 1 auto;
+  white-space: nowrap;
+  letter-spacing: calc(var(--s) * 1);
+}
+.fu-notsud .fu-zeichen {
+  background: transparent;
+  border: calc(var(--s) * 2) dashed rgba(234, 226, 207, 0.6);
+  color: inherit;
+  width: calc(var(--s) * 20);
+  height: calc(var(--s) * 20);
+  line-height: calc(var(--s) * 17);
+  font-size: calc(var(--s) * 13);
+}
+#buehne[data-epoche="4"] .fu-notsud .fu-zeichen { border-color: rgba(35, 32, 25, 0.5); }
+.fu-notsud-zeile {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 13);
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------------------------------
+   DAS KERBHOLZ — die Schuld steht im Holz, nicht in der Kasse
+   -------------------------------------------------------------------------- */
+.fu-kerbholz {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 2);
+  padding: calc(var(--s) * 3) calc(var(--s) * 8);
+  border: 1px dashed rgba(234, 226, 207, 0.34);
+  border-radius: calc(var(--s) * 3);
+}
+#buehne[data-epoche="4"] .fu-kerbholz { border-color: rgba(35, 32, 25, 0.3); }
+.fu-kerbholz.offen { border-style: solid; border-color: #e0b070; }
+
+.fu-kerbzeile { display: flex; align-items: center; gap: calc(var(--s) * 7); }
+.fu-kerbzeile b {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 13);
+  letter-spacing: calc(var(--s) * 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+.fu-kerben { display: flex; gap: calc(var(--s) * 3); flex: 0 0 auto; }
+.fu-kerben i {
+  display: block;
+  width: calc(var(--s) * 4);
+  height: calc(var(--s) * 15);
+  border-radius: calc(var(--s) * 1);
+  background: rgba(234, 226, 207, 0.18);
+  transform: skewX(-14deg);
+}
+#buehne[data-epoche="4"] .fu-kerben i { background: rgba(35, 32, 25, 0.16); }
+.fu-kerben i.an { background: #e0b070; box-shadow: 0 0 calc(var(--s) * 4) rgba(224, 176, 112, 0.7); }
+.fu-kerbzahl {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 13);
+  opacity: 0.8;
+  margin-left: auto;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.fu-kerbsatz {
+  font-size: calc(var(--s) * 13);
+  line-height: 1.2;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.fu-kerbholz .knopf { min-height: calc(var(--s) * 30); padding: calc(var(--s) * 3) calc(var(--s) * 9); }
+.fu-kerbholz .knopf .wort { font-size: calc(var(--s) * 14); }
+
+/* Knoepfe, die auf Kerbe gehen: der Preis bleibt stehen, die Waehrung
+   wechselt. Deshalb eine andere Kante, kein anderer Preis. */
+.knopf.fu-aufkerbe {
+  border-style: dashed;
+  border-color: #e0b070;
+}
+.knopf.fu-aufkerbe .preis { color: #e0b070; }
+.knopf.fu-rueck { border-color: rgba(183, 214, 154, 0.7); }
+
+/* --------------------------------------------------------------------------
+   DAS ENDE, DAS KEINE LEERE KASSE IST
+   -------------------------------------------------------------------------- */
+.fu-ausgelaufen {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 3);
+  background: rgba(157, 53, 32, 0.16);
+  border: calc(var(--s) * 2) solid var(--rot);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 6) calc(var(--s) * 9);
+}
+.fu-ausgelaufen b {
+  font-family: var(--fu-zahlen);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 1);
+  line-height: 1.2;
+}
+.fu-ausgelaufen span { font-size: calc(var(--s) * 15); line-height: 1.25; opacity: 0.92; }
+
+/* Die Abrechnung des Kerbholzes auf dem Georgi-Blatt */
+.fu-kerbabrechnung {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  line-height: 1.35;
+  border: calc(var(--s) * 2) dashed #e0b070;
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 6) calc(var(--s) * 10);
+}
+.fu-kerbabrechnung b { display: block; margin-bottom: calc(var(--s) * 3); letter-spacing: calc(var(--s) * 1); }
