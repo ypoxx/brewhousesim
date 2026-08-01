@@ -128,9 +128,26 @@
      ---------------------------------------------------------------------- */
   function umsatzGewicht() { return Z.wachstumsdeckel ? 0.18 : 0.30; }
 
+  /* Was die Barschaft zum Anschlag beitraegt — und zwar UNTERPROPORTIONAL.
+     Wuerde der Schaetzer die Kasse eins zu eins bewerten, waere der Preis ein
+     festes Vielfaches der Kasse, und Sparen brächte nie etwas: was man
+     zurueckgelegt hat, machte genau das teurer, wofuer man es zurueckgelegt
+     hat. Mit dem Exponenten wird das Doppelte an Barschaft nur rund die
+     Haelfte teurer bedient, und eine gesparte Kasse holt einen grossen Bau
+     tatsaechlich ein. Der Satz auf der Tafel bleibt derselbe: wer mehr hat,
+     wird teurer bedient — nur nicht in derselben Steigung. */
+  var HOEHE_GEWICHT = 2.2;
+  var HOEHE_STEIGUNG = 0.55;
+
+  function ausBarschaft() {
+    var e = ep();
+    var h = Math.max(0, Z.hoehe) / e.grund;
+    return e.grund * HOEHE_GEWICHT * Math.pow(h, HOEHE_STEIGUNG);
+  }
+
   function rechneAnschlag() {
     var e = ep();
-    var wert = umsatzGewicht() * Z.umsatz + 2.2 * Z.hoehe;
+    var wert = umsatzGewicht() * Z.umsatz + ausBarschaft();
     var basis = Math.max(e.grund, wert);
     var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
     Z.anschlag = basis * Math.pow(e.teuerungJahr, jahre) * Math.pow(e.teuerungKauf, Z.kaeufe);
@@ -337,7 +354,7 @@
     /* Die Schaetzung folgt der Kasse nach oben sofort und nach unten langsam:
        wer einmal gross war, wird nicht im naechsten Jahr wieder billig bedient.
        Aber sie gibt nach, sonst kaeme ein verarmtes Haus nie zurueck. */
-    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.85);
+    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.78);
     rechneAnschlag();
 
     /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. Er kann sich
@@ -765,7 +782,7 @@
     an.appendChild(B.el('h3', null, 'DER ANSCHLAG'));
     an.appendChild(zeile('Für ' + jahr(), geld(Math.round(Z.anschlag)), 'pr-gross'));
     var ausUmsatz = umsatzGewicht() * Z.umsatz;
-    var ausKasse = 2.2 * Z.hoehe;
+    var ausKasse = ausBarschaft();
     an.appendChild(zeile('aus dem Umsatz des Vorjahrs', geld(Math.round(ausUmsatz))));
     an.appendChild(zeile('aus der Barschaft', geld(Math.round(ausKasse))));
     if (ausUmsatz + ausKasse < e.grund) {
