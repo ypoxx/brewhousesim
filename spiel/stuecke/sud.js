@@ -821,10 +821,18 @@
     brett.appendChild(kopf);
     brett.appendChild(zeile('sud-historie', e.historie));
 
+    /* Zwei Spalten, damit nichts unter den Rand rutscht. In 1970 stehen
+       sechs Verfahrensoptionen auf dem Brett; einspaltig lagen die beiden
+       Anstich-Knoepfe unterhalb des sichtbaren Randes und wurden von
+       elementFromPoint nicht mehr getroffen — gezaehlt haette sie dann
+       niemand. Ein Zug, den man scrollen muss, ist fuer die zweite Latte
+       kein Zug. */
     var rolle = B.el('div', 'sud-rolle rolle');
-    achsen().forEach(function (a) { zeichneAchse(rolle, a); });
-    zeichneGaerkeller(rolle);
-    zeichneHefe(rolle);
+    var links = B.el('div', 'sud-spalte links');
+    var rechts = B.el('div', 'sud-spalte rechts');
+    achsen().forEach(function (a) { zeichneAchse(links, a); });
+    zeichneHefe(rechts);
+    zeichneGaerkeller(rechts);
 
     /* Das Sudbuch — was ohne den Spieler geschehen ist. */
     var b = B.el('div', 'sud-buch');
@@ -840,8 +848,10 @@
     b.appendChild(zeile('sud-fussnote', 'Dieses Jahr: ' + Z.jahrSude + ' Sude angestellt · '
       + B.welt.menge(Z.jahrFass) + ' · ' + Z.jahrFehl + ' verloren'
       + (Z.jahrAnzeige ? ' · ' + Z.jahrAnzeige + '× angezeigt' : '')));
-    rolle.appendChild(b);
+    rechts.appendChild(b);
 
+    rolle.appendChild(links);
+    rolle.appendChild(rechts);
     brett.appendChild(rolle);
     fach.appendChild(brett);
     return brett;
