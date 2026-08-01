@@ -1,6 +1,324 @@
 /* ===========================================================================
-   stuecke/sud-daten.js — Stummel fuer "sud" (Welle 2).
-   In spiel/index.html bereits eingehaengt; leer und vollstaendig ersetzbar.
-   Angelegt von der Aufsicht, damit der Bauer von "sud" NIE index.html
-   anfassen muss — dieselbe Parallelsicherung wie in Welle 1.
+   stuecke/sud-daten.js — DER SUD, Zahlenwerk.
+   Besitzstand DER SUD: stuecke/sud*.js · stil/sud*.css · bild/sud/** · ton/sud/**
+
+   DIE FRAGE DIESES STUECKS: WORAUS BESTEHT DIE ENTSCHEIDUNG DES BRAUERS?
+
+   Nicht aus Geschmack. Bier war bis ins 19. Jahrhundert vor allem ein
+   HALTBARKEITSPROBLEM, und Haltbarkeit ist eine Handelsfrage: Wer sein Bier
+   haltbar macht, darf es fortfahren; wer es nicht kann, verkauft in der
+   eigenen Gasse. Deshalb ist die Verfahrensentscheidung in jeder Epoche eine
+   andere — und deshalb liest sich diese Datei wie vier verschiedene Spiele.
+
+     1350  GRUT ODER HOPFEN. Die Grut — Gagel, Porst, Schafgarbe — ist ein
+           herrschaftliches Recht: der Grutherr verkauft sie, und nur er.
+           Hopfen faellt nicht unter dieses Recht, haelt das Bier laenger und
+           macht es reisefaehig (Hamburg fuehrt gehopftes Bier seit dem
+           13. Jh. aus). Wer hopft, kann verkaufen, wo er nicht wohnt — und
+           legt sich mit dem Grutrecht an. Hopfen waechst hier noch nicht;
+           er kommt teuer von auswaerts (kein Hopfengarten vor 1600).
+     1600  REIN ODER GESTRECKT, und obergaerig gegen die neue Kellergaerung.
+           Das Gebot von 1516 ist Rohstoffpolitik: Weizen und Roggen gehoeren
+           dem Baecker, Gerste dem Brauer. "Rein" ist eine Zuteilung, kein
+           Guetesiegel. Die kalte Kellergaerung dauert Wochen statt Tagen und
+           macht das Bier sommerfest — das ist der Grund fuer das
+           Sommerbrauverbot von 1553 und fuer den Felsenkeller.
+     1884  EIS ODER MASCHINE. Untergaeriges Lagerbier braucht Kaelte. Kaelte
+           kam bis eben aus dem Fluss und dem Eiskeller; seit Linde (1873)
+           kommt sie aus der Maschine. Wer die Maschine hat, gaert im Sommer.
+           Dazu Hansens Reinzuchthefe (1883): der Sud wird berechenbar.
+     1970  GLEICHMASS. Der Sud muss nicht mehr gut sein, er muss jedes Mal
+           GLEICH sein. Das ist eine andere und teurere Aufgabe: Labor,
+           Filter, Pasteur, Prozessrechner. Was hier gezaehlt wird, ist die
+           Abweichung.
+
+   WAS DIESES STUECK NICHT TUT
+   · Es nimmt kein neues Geld aus der Kasse (WELLE-2 §1, Abgabendeckel §4).
+     Jede Strafe dieses Stuecks wird in ROHSTOFF, BOTTICH oder GUETE bezahlt,
+     nie in Muenze. Geld kostet nur, was der Spieler ausdruecklich kauft.
+   · Es schreibt keinen Preis je Fass (das ist DER PREIS) und keine
+     Verbliste der Fuhre (das ist DIE FUHRE).
+
+   SPERRLISTE: Der Braukessel ist eine OFFENE PFANNE, keine Destillierblase —
+   das Wort "Blase" kommt in diesem Stueck nicht vor. Emailschilder erst ab
+   den 1890ern: der Kesselzettel ist 1350 Kreide auf Holz, 1600 Tafel,
+   1884 Papier hinter Glas, 1970 Formica. Kein Hopfengarten vor 1600.
    =========================================================================== */
+
+var SUD_DATEN = {
+
+  /* Wie schnell die Guete faellt, wenn niemand die Hefe pflegt, und was ein
+     Anstich einbringt. In allen vier Epochen dieselbe Kurve — nur ihr Name,
+     ihr Verb und ihre Folgen wechseln. Das ist Absicht: die Zahl ist die
+     Zahl, die EPOCHE ist der Unterschied. */
+  guete: { start: 70, zerfall: 2, anstichJung: 14, anstichAlt: 6, hoechst: 100 },
+
+  epochen: {
+
+    /* ==================================================================
+       1350 — GRUT ODER HOPFEN
+       ================================================================== */
+    1: {
+      jahr: 1350,
+      titel: 'Das Sudhaus',
+      kessel: 'Die offene Pfanne über offenem Feuer',
+      frage: 'Grut oder Hopfen?',
+      historie: 'Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. '
+              + 'Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es '
+              + 'reisefähig — er wächst hier aber nicht und kommt teuer von auswärts.',
+      gaerkeller: {
+        name: 'Der Gärkeller', gefaess: 'Bottich', gefaesse: 'Bottiche',
+        plaetze: 10,
+        satz: 'Offene Bottiche im Erdkeller. Was hier steht, ist noch kein Bier und '
+            + 'verdirbt auch noch nicht — die Haltbarkeit beginnt erst am Fass.',
+        kauf: { text: 'Bottich beim Küfer bestellen', menge: 6, basis: 26, staffel: 1.25,
+                titel: 'Sechs Fass mehr Gärraum. Was nicht in den Gärkeller passt, reift im '
+                     + 'Lager mit und altert dabei.' }
+      },
+      guete: { name: 'Das Hefezeug', kurz: 'Zeug', invers: false,
+               satz: 'Der Brauer hebt Hefe vom vorigen Sud auf. Wird sie nicht nachgeführt, '
+                   + 'schlägt der Sud um.' },
+      anstich: { text: 'Hefezeug vom Fass abnehmen', zug: 'sud:anstich',
+                 titel: 'Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass '
+                      + 'gibt kräftiges Zeug, ein altes müdes.',
+                 satz: 'Der Brauer bricht ein Fass an und schöpft die Hefe ab.' },
+      fehlsud: { name: 'Der Sud schlägt um', kurz: 'umgeschlagen',
+                 satz: 'Ein Bottich sauer. Der Braumeister lässt ihn in den Hof laufen.' },
+      achsen: [
+        { schluessel: 'wuerze', name: 'DIE WÜRZE', frage: 'Womit wird gewürzt?',
+          satz: 'Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.',
+          optionen: [
+            { k: 'grut', name: 'Grut vom Grutamt', preis: 0, schild: 'wie immer',
+              satz: 'Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen '
+                  + 'darf. Das Bier hält, was es hält: wenige Wochen.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02 } },
+            { k: 'sack', name: 'Hopfen im Sack, heimlich', preis: 0, schild: 'ohne Ausgabe',
+              satz: 'Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt '
+                  + 'so lang — und der Grutherr hat ein Recht, das man ihm gerade nimmt.',
+              warnung: 'Der Grutknecht sieht in die Pfanne, wann er will.',
+              wirkung: { haltbar: 1.7, gaer: 0, roh: 2, mehr: 0, risiko: 0.02, anzeige: 0.11 } },
+            { k: 'brief', name: 'Offen gehopft, mit Hopfenbrief', preis: 96, fest: true,
+              satz: 'Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. '
+                  + 'Der Grutherr klagt und verliert. Unwiderruflich — der Brief wird nie '
+                  + 'zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.',
+              siegel: 'Ratsbrief, gesiegelt',
+              wirkung: { haltbar: 2.0, gaer: 0, roh: 2, mehr: 0, risiko: 0.02 } }
+          ] }
+      ]
+    },
+
+    /* ==================================================================
+       1600 — REIN ODER GESTRECKT · OBERGAERIG ODER KELLERGAERUNG
+       ================================================================== */
+    2: {
+      jahr: 1600,
+      titel: 'Das Sudhaus',
+      kessel: 'Die offene Pfanne unter dem Kamin',
+      frage: 'Rein oder gestreckt — und warm oder kalt?',
+      historie: 'Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. '
+              + 'Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert '
+              + 'Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer.',
+      gaerkeller: {
+        name: 'Der Gärkeller', gefaess: 'Gärbottich', gefaesse: 'Gärbottiche',
+        plaetze: 16,
+        satz: 'Gärbottiche im Gewölbe, getrennt vom Lager. Was gärt, belegt keinen Fassplatz '
+            + 'mehr — das ist der ganze Unterschied zum vorigen Jahrhundert.',
+        kauf: { text: 'Gärbottich setzen lassen', menge: 10, basis: 78, staffel: 1.25,
+                titel: 'Zehn Fass mehr Gärraum. Der Küfer setzt ihn im Gewölbe auf.' }
+      },
+      guete: { name: 'Die Stellhefe', kurz: 'Stellhefe', invers: false,
+               satz: 'Die Zunft hält auf gute Stellhefe. Wer sie nicht schöpft, braut nach Glück.' },
+      anstich: { text: 'Stellhefe vom Fass schöpfen', zug: 'sud:anstich',
+                 titel: 'Ein Fass wird angebrochen und die Hefe geschöpft. Ein junges Fass '
+                      + 'gibt kräftige Stellhefe, ein altes müde.',
+                 satz: 'Der Braumeister bricht ein Fass an und schöpft die Stellhefe.' },
+      fehlsud: { name: 'Der Sud ist verdorben', kurz: 'verdorben',
+                 satz: 'Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen.' },
+      achsen: [
+        { schluessel: 'schuettung', name: 'DIE SCHÜTTUNG', frage: 'Was kommt in den Sud?',
+          satz: 'Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht.',
+          optionen: [
+            { k: 'rein', name: 'Rein nach dem Gebot', preis: 0, schild: 'wie immer',
+              satz: 'Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02 } },
+            { k: 'weizen', name: 'Mit Weizen gestreckt', preis: 0, schild: 'ohne Ausgabe',
+              satz: 'Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. '
+                  + 'Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich.',
+              warnung: 'Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht.',
+              wirkung: { haltbar: 1.15, gaer: 0, roh: -2, mehr: 1, risiko: 0.03, anzeige: 0.10 } },
+            { k: 'hafer', name: 'Mit Hafer und Wicke gestreckt', preis: 0, schild: 'ohne Ausgabe',
+              satz: 'Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. '
+                  + 'In einem schlechten Jahr hat das jedes Haus getan.',
+              warnung: 'Die Bierschau kostet das Haus mehr als den Hafer.',
+              wirkung: { haltbar: 0.75, gaer: 0, roh: -4, mehr: 2, risiko: 0.05, anzeige: 0.13 } }
+          ] },
+        { schluessel: 'gaerung', name: 'DIE GÄRUNG', frage: 'Warm oder kalt?',
+          satz: 'Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — '
+              + 'und übersteht als einziges den Sommer.',
+          optionen: [
+            { k: 'ober', name: 'Obergärig, warm geführt', preis: 0, schild: 'wie immer',
+              satz: 'Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
+            { k: 'keller', name: 'Kellergärung im Felsenkeller', preis: 260, fest: true,
+              satz: 'Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung '
+                  + 'dauert zwei Wochen länger und macht das Bier sommerfest. '
+                  + 'Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut.',
+              siegel: 'Bauabnahme der Zunft',
+              wirkung: { haltbar: 1.6, gaer: 2, roh: 0, mehr: 0, risiko: 0 } }
+          ] }
+      ]
+    },
+
+    /* ==================================================================
+       1884 — EIS ODER MASCHINE · BETRIEBSHEFE ODER REINZUCHT
+       ================================================================== */
+    3: {
+      jahr: 1884,
+      titel: 'Das Sudwerk',
+      kessel: 'Die Sudpfanne unter dem Kupferhelm',
+      frage: 'Eis oder Maschine?',
+      historie: 'Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. '
+              + 'Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im '
+              + 'Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr.',
+      gaerkeller: {
+        name: 'Der Gärkeller', gefaess: 'Gärbottich', gefaesse: 'Gärbottiche',
+        plaetze: 80,
+        satz: 'Der Gärkeller liegt unter dem Sudwerk und ist nicht der Lagerkeller. '
+            + 'Erst diese Trennung erlaubt Lagerzeiten in Monaten statt in Wochen.',
+        kauf: { text: 'Gärbottich aufstellen', menge: 40, basis: 1900, staffel: 1.3,
+                titel: 'Vierzig Fass mehr Gärraum, ausgeschlagenes Holz auf Eisengestell.' }
+      },
+      guete: { name: 'Die Hefeführung', kurz: 'Führung', invers: false,
+               satz: 'Die Hefe wird geerntet und wieder angestellt. Jede Ernte trägt mit, '
+                   + 'was im Bottich sonst noch lebte.' },
+      anstich: { text: 'Hefe aus dem Fass abernten', zug: 'sud:anstich',
+                 titel: 'Ein Fass wird angestochen und die Hefe geerntet. Junges Fass, '
+                      + 'kräftige Hefe.',
+                 satz: 'Der Braumeister sticht ein Fass an und erntet die Hefe.' },
+      fehlsud: { name: 'Die Hefe ist infiziert', kurz: 'infiziert',
+                 satz: 'Ein Bottich mit Fremdhefe. Er geht in den Ausguss.' },
+      achsen: [
+        { schluessel: 'kaelte', name: 'DIE KÄLTE', frage: 'Woher kommt die Kälte?',
+          satz: 'Das Natureis kommt aus dem Winter und ist im September alle. '
+              + 'Die Maschine kommt aus der Kasse und läuft im Juli.',
+          optionen: [
+            { k: 'natureis', name: 'Natureis aus dem Fluss', preis: 0, schild: 'wie immer',
+              satz: 'Im Winter geschnitten, im Keller gestapelt. In den warmen Wochen trägt '
+                  + 'der Gärkeller nur die Hälfte.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02, warmDrossel: 0.5 } },
+            { k: 'maschine', name: 'Lindesche Kältemaschine', preis: 9800, fest: true,
+              satz: 'Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält '
+                  + 'das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer. '
+                  + 'Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut.',
+              siegel: 'Aufstellung abgenommen',
+              sperrt: ['natureis'],
+              wirkung: { haltbar: 1.25, gaer: -1, roh: 0, mehr: 0, risiko: 0.01 } }
+          ] },
+        { schluessel: 'hefe', name: 'DIE HEFE', frage: 'Woher kommt die Hefe?',
+          satz: 'Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war.',
+          optionen: [
+            { k: 'betrieb', name: 'Betriebshefe aus dem Bottich', preis: 0, schild: 'wie immer',
+              satz: 'Geerntet und wieder angestellt, Sud um Sud. Kostet nichts und wird '
+                  + 'jedes Mal etwas unsauberer.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.09, guetefall: 2 } },
+            { k: 'reinzucht', name: 'Reinzuchthefe nach Hansen', preis: 3400, fest: true,
+              satz: 'Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. '
+                  + 'Der Sud wird berechenbar. Unwiderruflich — die alte Betriebshefe wird '
+                  + 'verworfen und ist nicht wiederzubeschaffen.',
+              siegel: 'Reinzucht angestellt',
+              wirkung: { haltbar: 1.1, gaer: 0, roh: 0, mehr: 0, risiko: 0.01, guetepin: 94 } }
+          ] }
+      ]
+    },
+
+    /* ==================================================================
+       1970 — GLEICHMASS
+       ================================================================== */
+    4: {
+      jahr: 1970,
+      titel: 'Das Sudhaus',
+      kessel: 'Das Sudwerk im Schaltraum',
+      frage: 'Wie gleich ist gleich genug?',
+      historie: 'Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. '
+              + 'Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, '
+              + 'rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste.',
+      gaerkeller: {
+        name: 'Der Gärkeller', gefaess: 'Gärtank', gefaesse: 'Gärtanks',
+        plaetze: 320,
+        satz: 'Gärtanks im Freien, isoliert. Getrennt vom Lagerkeller — die Reifung läuft '
+            + 'im Tank, nicht im verkaufsfertigen Bestand.',
+        kauf: { text: 'Gärtank stellen', menge: 180, basis: 24000, staffel: 1.3,
+                titel: 'Hundertachtzig Fass mehr Gärraum. Ein Tank, ein Kran, ein Tag.' }
+      },
+      guete: { name: 'Die Streuung', kurz: 'Streuung', invers: true,
+               satz: 'Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach, '
+                   + 'und er misst genauer als der Gast.' },
+      anstich: { text: 'Hefe aus dem Tank zusetzen', zug: 'sud:anstich',
+                 titel: 'Hefe wird aus einem Tank gezogen und neu angestellt.',
+                 satz: 'Der Braumeister zieht Hefe und stellt neu an.' },
+      fehlsud: { name: 'Die Charge fällt aus der Spezifikation', kurz: 'aus der Spezifikation',
+                 satz: 'Ein Tank außerhalb der Grenzwerte. Er wird gesperrt.' },
+      charge: {
+        name: 'GESPERRTE CHARGEN',
+        satz: 'Eine Charge außerhalb der Grenzwerte geht nicht ins Regal, ehe jemand '
+            + 'unterschreibt. Beides ist eine Entscheidung, und beide kosten.',
+        frei: { text: 'Charge freigeben', titel: 'Sie geht so hinaus. Wenn der Handel nachmisst, '
+                     + 'kommt sie zurück — und die nächsten Chargen stehen unter Beobachtung.' },
+        schnitt: { text: 'Charge verschneiden', titel: 'Mit einer sauberen Charge verschnitten. '
+                       + 'Ein Drittel der Menge geht dabei verloren, die Abweichung ist weg.' },
+        frist: 4,
+        fristSatz: 'Der Braumeister gibt von sich aus frei, was vier Wochen steht.'
+      },
+      achsen: [
+        { schluessel: 'fuehrung', name: 'DIE FÜHRUNG', frage: 'Wonach wird gefahren?',
+          satz: 'Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger.',
+          optionen: [
+            { k: 'erfahrung', name: 'Nach Erfahrung des Braumeisters', preis: 0, schild: 'wie immer',
+              satz: 'Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02, streuung: 6 } },
+            { k: 'labor', name: 'Betriebslabor, Stammwürze und Bittereinheiten', preis: 42000, fest: true,
+              satz: 'Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. '
+                  + 'Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet.',
+              siegel: 'Labor eingerichtet',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.01, streuung: 2, guetepin: 84 } },
+            { k: 'rechner', name: 'Prozessrechner am Sudwerk', preis: 118000, fest: true,
+              satz: 'Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. '
+                  + '1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich.',
+              siegel: 'Anlage abgenommen',
+              wirkung: { haltbar: 1.05, gaer: -1, roh: 0, mehr: 0, risiko: 0.005, streuung: 0, guetepin: 96 } }
+          ] },
+        { schluessel: 'behandlung', name: 'DIE BEHANDLUNG', frage: 'Was geschieht vor der Abfüllung?',
+          satz: 'Jede Stufe kauft Haltbarkeit — und keine ist umsonst.',
+          optionen: [
+            { k: 'natur', name: 'Naturtrüb, unfiltriert', preis: 0, schild: 'wie immer',
+              satz: 'Wie im Keller, so ins Fass. Hält, was es hält.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
+            { k: 'filter', name: 'Kieselgurfilter', preis: 26000, einmal: true,
+              satz: 'Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. '
+                  + 'Einmal bezahlt, danach jederzeit abzustellen.',
+              wirkung: { haltbar: 1.4, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
+            { k: 'pasteur', name: 'Tunnelpasteur', preis: 74000, fest: true,
+              satz: 'Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und '
+                  + 'zwei Fass je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, '
+                  + 'wo vorher die Abfüllung stand.',
+              siegel: 'Anlage abgenommen',
+              wirkung: { haltbar: 2.0, gaer: 0, roh: 0, mehr: -2, risiko: 0 } }
+          ] }
+      ]
+    }
+  },
+
+  /* Was die Anzeige-Instanz je Epoche tut, wenn sie das Haus erwischt.
+     KEINE dieser Strafen ist Geld — der Abgabendeckel aus ZUSTAENDIGKEIT §4
+     bleibt unberuehrt, und ein Haus ohne Kasse bleibt handlungsfaehig. */
+  anzeige: {
+    1: { wer: 'Der Grutherr',
+         satz: 'Der Grutknecht hat den Hopfen unter der Grut gefunden. Der Grutherr lässt '
+             + 'die Kammer räumen und einen Bottich ausgießen.',
+         nimmtRohstoff: 0.30, nimmtBottiche: 1, gueteAb: 6 },
+    2: { wer: 'Die Bierschau',
+         satz: 'Die Schau war im Sudhaus. Brotkorn im Kessel — sie lässt den Bottich in den '
+             + 'Bach laufen und schreibt es der Zunft.',
+         nimmtRohstoff: 0.20, nimmtBottiche: 1, gueteAb: 10 }
+  }
+};
