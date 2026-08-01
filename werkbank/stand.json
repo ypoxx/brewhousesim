@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T16:43:31+00:00",
+ "stand": "2026-08-01T16:45:03+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -382,6 +382,10 @@
   {
    "zeit": "2026-08-01T16:43:31+00:00",
    "text": "DER NAME — warum jemand mehr zahlt, als das Bier wert ist · Runde 1 · läuft — DER PREIS liest welt.haus.rufAufschlag noch nicht — eine Zeile in preis.js fehlt, und bis sie da ist, wirkt der Ruf nur ueber Adressen statt auch ueber den Preis. Der Ton ist nur gerufen, nicht komponiert: vierzehn name:-Rufe greifen in den Notfall von kern/ton.js. In E1 und E2 leert sich der Keller nach dem ersten Braujahr (Zustaendigkeit 13, fremde Zahlen), dadurch steht die Klemme dort haeufiger als gedacht — die Regel greift richtig, die Lage ist geliehen."
+  },
+  {
+   "zeit": "2026-08-01T16:45:03+00:00",
+   "text": "NAME R1: Klickfolge zum Nachpruefen, vier Epochen, ohne Quelltext. spiel/?epoche=1&saat=1350 -> links oben steht DER NAME mit Ruf 10, Bekanntheit 18 von 55 (Zielmarke am Balken) und der Zeile 'ohne Namen 900 Pf / unter dem Anker 907 Pf'. Knopf 'Das Zeichen und das Register' oeffnet das Blatt NEBEN dem Band (nicht darueber, das war der erste Fehler und ist behoben). Reiter DAS ZEICHEN zeigt die Verbliste der Epoche, Reiter DAS REGISTER die datierte Spalte. Dann rund 35x WEITER: der Bierkieser kommt unangemeldet, die Klemme erscheint, und ab Woche 30 liegt die Sperre der FUHRE ueber WEITER — von dort geht es nur ueber ihren Knopf 'Michaeli — das Jahr beginnt'. In ?epoche=3 sind 'Emailschilder ausgeben' und 'Das Warenzeichen eintragen' GRAU mit dem Grund darauf. In ?epoche=4 heisst die Liste Kronkorken, Bande, Fernsehspot, Rueckruf, Unterlassung — kein einziger Knopf davon steht in 1350."
   }
  ]
 }
