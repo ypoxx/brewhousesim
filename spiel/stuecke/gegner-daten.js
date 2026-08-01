@@ -373,7 +373,7 @@ var GEGNER_DATEN = {
       abloesesatz: 'Eine Abloesung heisst hier: die Konditionen des anderen ueberbieten. Listungsgebuehr, '
           + 'ein Jahr Werbekostenzuschuss im Voraus, und der Einkauf verlangt beides vor der ersten Palette.',
       werbesatz: 'Er laedt den Einkaeufer zur Jahresgespraech-Reise und legt die Konditionen daneben.',
-      wochenWerbung: [2, 5],
+      wochenWerbung: [4, 8],
       abschlagAnteil: 0.30,
       ertragJeFass: 55,
       mittel: [

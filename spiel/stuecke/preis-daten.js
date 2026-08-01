@@ -81,7 +81,8 @@ var PREIS_DATEN = {
         { teil: 0.55, name: 'Landfriedensgeld',           sagt: 'Der Bund der Städte hält Reisige. Bezahlt wird von den Häusern.' },
         { teil: 1.85, name: 'Brandschatzung',             sagt: 'Ein Heerhaufe steht vor dem Tor und zieht gegen Geld weiter.' },
         { teil: 1.10, name: 'Zehnt auf das Braugerät',   sagt: 'Der Rat besteuert Pfanne, Bottich und Fass nach Schätzung.' },
-        { teil: 0.90, name: 'Umlage für die Brücke',    sagt: 'Das Hochwasser hat den Steg genommen.' }
+        { teil: 0.90, name: 'Umlage für die Brücke',    sagt: 'Das Hochwasser hat den Steg genommen.' },
+        { teil: 1.50, name: 'Umlage für die Siechenhäuser', sagt: 'Die Stadt begräbt und pflegt. Bezahlt wird von denen, die noch da sind.' }
       ],
       pfand: 'Wer den Anschlag nicht abträgt, dem nimmt der Rat ein Pfand: eine Wirtschaft wird '
            + 'auf fünf Jahre dem Adler zugesprochen.',
@@ -244,7 +245,8 @@ var PREIS_DATEN = {
         { teil: 2.10, name: 'Kriegskontribution',   sagt: 'Einquartierung oder Geld. Das Haus wählt das Geld.' },
         { teil: 0.95, name: 'Quartierlast',         sagt: 'Vierzig Reiter, sechs Wochen, Hafer inbegriffen.' },
         { teil: 0.60, name: 'Bauumlage für das Rathaus', sagt: 'Der Rat baut sich einen Giebel mit Uhr.' },
-        { teil: 1.40, name: 'Brandsteuer nach dem Stadtbrand', sagt: 'Die halbe Gasse hinter der Kirche ist abgebrannt.' }
+        { teil: 1.40, name: 'Brandsteuer nach dem Stadtbrand', sagt: 'Die halbe Gasse hinter der Kirche ist abgebrannt.' },
+        { teil: 1.30, name: 'Salvaguardia für das Haus',        sagt: 'Ein Schutzbrief des Obristen, gegen Bargeld, für ein halbes Jahr.' }
       ],
       pfand: 'Wer den Anschlag nicht abträgt, dem legt die Zunft die Braugerechtigkeit still: '
            + 'eine Wirtschaft geht auf fünf Jahre an den Adler.',
@@ -416,7 +418,8 @@ var PREIS_DATEN = {
         { teil: 1.15, name: 'Kanal- und Wasseranschluss',   sagt: 'Die Stadt legt Röhren und legt die Kosten um.' },
         { teil: 0.85, name: 'Nachzahlung Biersteuer',       sagt: 'Die Revision hat drei Jahre nachgerechnet.' },
         { teil: 2.30, name: 'Gründerkrach — Wechsel fällig', sagt: 'Die Bank verlängert nicht. Der Wechsel wird glatt bezahlt.' },
-        { teil: 1.00, name: 'Neubau der Zufahrt',           sagt: 'Der Lastwagenverkehr hat die Rampenstraße zerfahren.' }
+        { teil: 1.00, name: 'Neubau der Zufahrt',           sagt: 'Der Lastwagenverkehr hat die Rampenstraße zerfahren.' },
+        { teil: 1.30, name: 'Anschluss an das Elektrizitätswerk', sagt: 'Die Stadt elektrifiziert. Wer Licht will, zahlt den Hausanschluss.' }
       ],
       pfand: 'Wer nicht bezahlt, dessen Wechsel geht an die Bank, und die Bank verkauft ihn weiter: '
            + 'eine Gaststätte wird auf fünf Jahre dem Adler verschrieben.',
@@ -582,11 +585,12 @@ var PREIS_DATEN = {
       ],
 
       umlagen: [
-        { teil: 2.60, name: 'Währungsreform — Umstellung 10:1', sagt: 'Aus zehn Reichsmark wird eine D-Mark. Die Kasse schmilzt, die Schulden auch.' },
+        { teil: 1.30, name: 'Ölpreiskrise — Energie und Frachten', sagt: 'Das Sudhaus heizt mit Öl, und der Fuhrpark fährt damit.' },
         { teil: 0.80, name: 'Tarifabschluss mit Nachzahlung',   sagt: 'Sieben Prozent rückwirkend zum Januar.' },
         { teil: 1.25, name: 'Pfand- und Rücknahmepflicht',     sagt: 'Kästen, Kisten, Automaten. Das Haus zahlt die Umstellung.' },
         { teil: 0.95, name: 'Energiepreissprung',               sagt: 'Der Sudkessel läuft mit Gas, und Gas hat sich verdoppelt.' },
-        { teil: 1.55, name: 'Umbau der Kläranlage',            sagt: 'Die Abwasserverordnung gilt auch für Brauereien.' }
+        { teil: 1.55, name: 'Umbau der Kläranlage',            sagt: 'Die Abwasserverordnung gilt auch für Brauereien.' },
+        { teil: 1.75, name: 'Zwangspfand auf Einwegdosen',      sagt: 'Der Handel räumt die Dose aus dem Regal. Was abgefüllt ist, steht.' }
       ],
       pfand: 'Wer nicht zahlt, verliert die Listung: eine Gaststätte wird auf fünf Jahre '
            + 'von der Nordstern-Gruppe beliefert.',

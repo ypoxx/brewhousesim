@@ -444,7 +444,10 @@
     /* Was er frueher hat als das Haus, macht ihn schneller. Je Ding eine
        Woche weniger — bis auf eine Woche herunter, nie auf null. */
     var vor = vorsprung(h);
-    var dauer = Math.max(1, B.wuerfel.ganz(w[0], w[1]) - vor);
+    /* Nie unter zwei Wochen: sonst ist die Bindung da, ehe der Spieler den
+       Wimpel ueberhaupt gesehen hat, und "Zuvorkommen" waere ein Knopf, den
+       niemand je druecken kann. */
+    var dauer = Math.max(2, B.wuerfel.ganz(w[0], w[1]) - vor);
     Z.werbung[a.schluessel] = {
       wer: h.k, mittel: m.k, seit: takt(), vorsprung: vor,
       bis: takt() + dauer,
