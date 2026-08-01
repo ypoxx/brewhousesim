@@ -1013,10 +1013,27 @@
     var kopf = B.el('div', 'pr-abschnitt');
     kopf.appendChild(B.el('h3', null, 'DIE ANGEBOTE ZU MICHAELI ' + Z.tafelJahr));
     var lebt = lebendeAngebote().length;
+    var billig = billigstesAngebot();
+    var reicht = billig && B.welt.kann(billig.preis);
     kopf.appendChild(B.el('span', 'pr-abschnitt-satz',
       Z.angebote.length + ' nebeneinander, ' + lebt + ' heute noch zu haben · Kasse '
       + geld(B.welt.haus.kasse) + ' · was hier weggeht, kommt in diesem Jahr nicht wieder'));
     sp.appendChild(kopf);
+
+    /* Ein Michaeli, an dem die Kasse fuer nichts reicht, ist ein moeglicher
+       Ausgang und kein Fehler — aber er muss dastehen, mit der Zahl daneben.
+       Sonst sieht der Spieler fuenf graue Karten und liest darin nichts. */
+    if (billig && !reicht) {
+      var not = B.el('div', 'pr-knapp');
+      not.appendChild(B.el('span', 'pr-knapp-marke', 'HEUTE NICHT'));
+      not.appendChild(B.el('span', 'pr-knapp-text',
+        'Die Kasse reicht für keines dieser Angebote. Das billigste — ' + billig.a.name
+        + ' — kostet ' + geld(billig.preis) + ', es fehlen '
+        + geld(billig.preis - Math.max(0, B.welt.haus.kasse)) + '. '
+        + 'Wer nichts nimmt, behält die Kasse für Michaeli ' + (Z.tafelJahr + 1) + '; '
+        + 'der Anschlag steigt bis dahin um ' + B.zahl((ep().teuerungJahr - 1) * 100, 1) + ' im Hundert.'));
+      sp.appendChild(not);
+    }
 
     var reihe = B.el('div', 'pr-reihe');
     if (!Z.angebote.length) {

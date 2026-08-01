@@ -58,14 +58,14 @@
     { schluessel: 'ochse',      name: 'Zum Goldenen Ochsen',  ort: 'marktplatz',    km: 0.6, bedarf: 70, art: 'wirtshaus' },
     { schluessel: 'torschenke', name: 'Schenke am Tor',       ort: 'tor',           km: 0.1, bedarf: 40, art: 'schenke' },
     { schluessel: 'pfarrhof',   name: 'Pfarrschenke St. Michael', ort: 'kirche',    km: 0.8, bedarf: 35, art: 'schenke' },
-    { schluessel: 'muehlwirt',  name: 'Muehlschenke',         ort: 'muehle',        km: 3,   bedarf: 45, art: 'wirtshaus' },
-    { schluessel: 'brueckenwirt', name: 'Brueckenwirt',       ort: 'bruecke_unten', km: 2,   bedarf: 55, art: 'wirtshaus' },
-    { schluessel: 'faehrhaus',  name: 'Faehrhaus am Fluss',   ort: 'fluss',         km: 4,   bedarf: 30, art: 'wirtshaus' },
+    { schluessel: 'muehlwirt',  name: 'Mühlschenke',         ort: 'muehle',        km: 3,   bedarf: 45, art: 'wirtshaus' },
+    { schluessel: 'brueckenwirt', name: 'Brückenwirt',       ort: 'bruecke_unten', km: 2,   bedarf: 55, art: 'wirtshaus' },
+    { schluessel: 'faehrhaus',  name: 'Fährhaus am Fluss',   ort: 'fluss',         km: 4,   bedarf: 30, art: 'wirtshaus' },
     { schluessel: 'hirsch',     name: 'Landgasthof Hirsch',   ort: 'strasse',       km: 7,   bedarf: 50, art: 'gasthof' },
     { schluessel: 'markt',      name: 'Ausschank am Markt',   ort: 'marktstand',    km: 0.5, bedarf: 25, art: 'stand' },
     { schluessel: 'obernberg',  name: 'Klosterschenke Obernberg', ort: 'bruecke_oben', km: 9, bedarf: 40, art: 'kloster', bis: 2 },
-    { schluessel: 'bahnhofswirt', name: 'Bahnhofsgaststaette', ort: 'bahnhof',      km: 5,   bedarf: 120, art: 'gasthof', ab: 3 },
-    { schluessel: 'neustadt',   name: 'Gaststaette Neustadt', ort: 'wohnblock',     km: 1.5, bedarf: 200, art: 'gaststaette', ab: 4 }
+    { schluessel: 'bahnhofswirt', name: 'Bahnhofsgaststätte', ort: 'bahnhof',      km: 5,   bedarf: 120, art: 'gasthof', ab: 3 },
+    { schluessel: 'neustadt',   name: 'Gaststätte Neustadt', ort: 'wohnblock',     km: 1.5, bedarf: 200, art: 'gaststaette', ab: 4 }
   ];
 
   /* ----------------------------------------------------------------------
@@ -74,7 +74,7 @@
      ---------------------------------------------------------------------- */
   var GEGNER = [
     { schluessel: 'adler', art: 'brauerei', ab: 1, bis: 4,
-      namen: { 1: 'Brauhaus zum Adler', 2: 'Braustatt Adler', 3: 'Brauerei Adler', 4: 'Adler-Braeu AG' },
+      namen: { 1: 'Brauhaus zum Adler', 2: 'Braustatt Adler', 3: 'Brauerei Adler', 4: 'Adler-Bräu AG' },
       orte: { 1: 'marktplatz', 2: 'marktplatz', 3: 'konkurrenz', 4: 'konkurrenz' },
       kasse: 140, wagemut: 0.45,
       sagt: 'Braut, was das Haus braut, und stellt sich immer eine Woche frueher an die Tuer.' },
@@ -98,7 +98,7 @@
     { schluessel: 'fromm',     name: 'fromm',      sagt: 'Hat die Kirche im Ruecken und die Zunft im Nacken.' },
     { schluessel: 'streitbar', name: 'streitbar',  sagt: 'Gewinnt Prozesse und verliert Freunde.' },
     { schluessel: 'gelehrt',   name: 'gelehrt',    sagt: 'Liest, misst, probiert. Braucht laenger.' },
-    { schluessel: 'bequem',    name: 'bequem',     sagt: 'Laesst laufen. Manchmal ist das richtig.' }
+    { schluessel: 'bequem',    name: 'bequem',     sagt: 'Lässt laufen. Manchmal ist das richtig.' }
   ];
 
   /* ====================================================================== */

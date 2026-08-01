@@ -13,9 +13,14 @@
    2. Die Groessen sind absichtlich ungleich. 'anteil' ist der Preis als
       Vielfaches des Anschlags — 0,07 neben 1,9 ergibt Buendel, nicht ein
       Kreuzchen mit drei Feldern.
-   3. Die Bierordnung steigt in Jahrzehnten um ein Zehntel, der Anschlag um
-      sieben Hundertstel im JAHR. Das ist die eine Zahl, an der ein
-      Wirtschaftsspiel gegen Patrizier IV verliert, und sie steht hier.
+   3. Die Bierordnung steigt in JAHRZEHNTEN um ein Zehntel (rund ein
+      Hundertstel im Jahr), der Anschlag um vier Hundertstel im JAHR. Die
+      Schere geht also mit rund drei Hundertsteln im Jahr auseinander und ist
+      nach vierzig Jahren gedeckelt — dann ist alles gut dreimal so teuer,
+      waehrend das Fass um die Haelfte mehr faengt. Das ist die eine Zahl, an
+      der ein Wirtschaftsspiel gegen Patrizier IV verliert. Sie muss FALLEN,
+      und sie darf nicht auf null fallen: eine Tafel, auf der jahrzehntelang
+      nichts mehr erreichbar ist, ist so tot wie eine, auf der alles geht.
 
    SPERRLISTE beachtet: offene Pfanne, kein Helm, kein Rohr (1350/1600) ·
    Hopfen erst ab 1380 als Entscheidung, nie 1350 gesetzt · Emailschild erst
@@ -49,7 +54,7 @@ var PREIS_DATEN = {
       rechtSatz: 'vom Rat verliehen',
       grund: 470,
       lastenGrund: 500,
-      teuerungJahr: 1.075,
+      teuerungJahr: 1.040,
       teuerungKauf: 1.045,
       pflichtUmsatz: 0.100,
       pflichtHoehe: 0.20,
@@ -213,7 +218,7 @@ var PREIS_DATEN = {
       rechtSatz: 'vom Kloster gepachtet',
       grund: 2800,
       lastenGrund: 2500,
-      teuerungJahr: 1.070,
+      teuerungJahr: 1.038,
       teuerungKauf: 1.055,
       pflichtUmsatz: 0.085,
       pflichtHoehe: 0.155,
@@ -387,7 +392,7 @@ var PREIS_DATEN = {
       rechtSatz: 'eigen, im Grundbuch',
       grund: 42000,
       lastenGrund: 11000,
-      teuerungJahr: 1.085,
+      teuerungJahr: 1.048,
       teuerungKauf: 1.060,
       pflichtUmsatz: 0.085,
       pflichtHoehe: 0.175,
@@ -556,7 +561,7 @@ var PREIS_DATEN = {
       rechtSatz: 'eigen · Konzession',
       grund: 620000,
       lastenGrund: 32000,
-      teuerungJahr: 1.080,
+      teuerungJahr: 1.045,
       teuerungKauf: 1.065,
       pflichtUmsatz: 0.078,
       pflichtHoehe: 0.145,
