@@ -109,6 +109,7 @@
     /* DAS AUFGELD — was der Ruf wirklich einbringt, von diesem Stueck
        selbst vereinnahmt. Kein fremdes Zahlenfeld, eine eigene Buchung. */
     buch: [],              /* {jahr, woche, wohin, rechnung, satz, betrag} */
+    jeWirt: {},            /* Wirtsname -> {menge, rechnung, aufgeld}      */
     buchStand: 0,          /* Lesezeiger ins fremde Protokoll             */
     letzteRechnung: 0,     /* nr der zuletzt verbrauchten Rechnung        */
     aufgeldWoche: 0,
@@ -322,14 +323,18 @@
       && /^[\d.,]+ (Fass|hl) an ./.test(p.was);
   }
 
-  function buche(wohin, adr, erloes) {
+  function buche(wohin, adr, erloes, menge) {
     var satz = satzFuer(adr);
     var betrag = Math.round(erloes * satz);
     if (betrag <= 0) return 0;
     B.welt.nimm(betrag, epd().aufgeldWort + ' · ' + wohin + ' · '
       + B.zahl(satz * 100, 1) + ' im Hundert auf ' + geld(erloes), 'spieler');
     var e = { jahr: jahr(), woche: woche(), wohin: wohin, adr: adr || null,
-      rechnung: erloes, satz: satz, betrag: betrag, ruf: ruf() };
+      rechnung: erloes, satz: satz, betrag: betrag, ruf: ruf(), menge: menge || 0 };
+    /* Was dieser Wirt insgesamt gezahlt hat — das ist die Zeile, mit der man
+       "gleiches Bier, zwei Preise" nachrechnet, ohne den Quelltext zu lesen. */
+    var w = Z.jeWirt[wohin] || (Z.jeWirt[wohin] = { menge: 0, rechnung: 0, aufgeld: 0 });
+    w.menge += (menge || 0); w.rechnung += erloes; w.aufgeld += betrag;
     Z.buch.push(e);
     if (Z.buch.length > 120) Z.buch.shift();
     Z.aufgeldWoche += betrag;
@@ -358,7 +363,7 @@
           if (istRechnung(l[j])) { erloes = l[j].preis; Z.letzteRechnung = l[j].nr; break; }
         }
         if (erloes > 0) {
-          summe += buche(p.was.replace('geliefert an ', ''), p.adresse, erloes);
+          summe += buche(p.was.replace('geliefert an ', ''), p.adresse, erloes, p.menge);
         }
         continue;
       }
@@ -684,8 +689,14 @@
        Das REGISTER bleibt: es ist das Gedaechtnis des Hauses. */
     var vorher = Math.round(Z.bekannt);
     B.wage('name.aufgeld', kassiereAufgeld);
+    /* Neue Epoche, neue Waehrung: das Buch faengt von vorn an, sonst stuenden
+       Pfennig und D-Mark in derselben Spalte. */
     Z.aufgeldEpoche = 0;
     Z.aufgeldWoche = 0;
+    Z.aufgeldJahr = 0;
+    Z.buch = [];
+    Z.jeWirt = {};
+    Z.aufgeldZuletzt = null;
     Z.bekannt = Math.round(Z.bekannt * 0.45);
     Z.zeiger = false;
     Z.schilder = {};
@@ -1424,7 +1435,7 @@
 
     var summe = B.el('div', 'nm-summen');
     [['diese Woche', Z.aufgeldWoche], ['dieses Braujahr', Z.aufgeldJahr],
-     ['seit ' + epd().jahr, Z.aufgeldEpoche], ['über alle Epochen', Z.aufgeldGesamt]]
+     ['seit ' + epd().jahr, Z.aufgeldEpoche]]
       .forEach(function (p) {
         var s = B.el('div', 'nm-summe');
         s.appendChild(B.el('i', null, p[0]));
@@ -1432,6 +1443,37 @@
         summe.appendChild(s);
       });
     blatt.appendChild(summe);
+
+    /* GLEICHES BIER, ZWEI PREISE — je Wirt, aus den eigenen Buchungen
+       gerechnet. Wer nachmisst, was ein Haus je Einheit zahlt, findet hier
+       beide Zeilen nebeneinander statt nur die der FUHRE. */
+    var wirte = Object.keys(Z.jeWirt);
+    if (wirte.length) {
+      var tab = B.el('div', 'nm-abschnitt');
+      tab.appendChild(B.el('h3', null, 'Was jedes Haus für dieselbe Menge zahlt'));
+      var kopfz = B.el('div', 'zeile nm-zeile nm-tabkopf');
+      kopfz.appendChild(B.el('span', 'wann', 'Haus'));
+      kopfz.appendChild(B.el('span', 'was', 'Menge · Rechnung der Fuhre · Aufgeld des Namen'));
+      kopfz.appendChild(B.el('span', 'zahl', 'je ' + B.welt.mengeEinheit()));
+      tab.appendChild(kopfz);
+      wirte.sort(function (a2, b2) { return Z.jeWirt[b2].rechnung - Z.jeWirt[a2].rechnung; });
+      wirte.forEach(function (n) {
+        var w = Z.jeWirt[n];
+        var einh = (B.welt.zeit.jahr >= 1872) ? w.menge * 1.5 : w.menge;   /* 1 Fass = 150 l */
+        var ohne = einh > 0 ? w.rechnung / einh : 0;
+        var mit = einh > 0 ? (w.rechnung + w.aufgeld) / einh : 0;
+        var z = B.el('div', 'zeile nm-zeile gut');
+        z.appendChild(B.el('span', 'wann', n));
+        var was = B.el('span', 'was');
+        was.appendChild(document.createTextNode(B.welt.menge(w.menge) + ' · '
+          + geld(w.rechnung) + ' · '));
+        was.appendChild(B.el('b', 'nm-mehr', '+' + geld(w.aufgeld)));
+        z.appendChild(was);
+        z.appendChild(B.el('span', 'zahl', B.zahl(ohne, 1) + ' → ' + B.zahl(mit, 1)));
+        tab.appendChild(z);
+      });
+      blatt.appendChild(tab);
+    }
 
     var liste = B.el('div', 'nm-register nm-buch rolle');
     if (!Z.buch.length) {
@@ -1472,7 +1514,7 @@
 
     var reiter = B.el('div', 'nm-reiter');
     [['zeichen', 'DAS ZEICHEN'], ['register', 'DAS REGISTER (' + Z.register.length + ')'],
-     ['aufgeld', 'DAS AUFGELD (' + B.zahl(Z.aufgeldGesamt) + ')']]
+     ['aufgeld', 'DAS AUFGELD (' + B.zahl(Z.aufgeldEpoche) + ')']]
       .forEach(function (r) {
         reiter.appendChild(B.knopf({
           text: r[1], zug: 'name:reiter:' + r[0],
@@ -1651,6 +1693,24 @@
     nachgeahmt: function () { return !!Z.nachahmung; },
     nachbar: function () { return Math.round(Z.adlerRuf); },
     register: function () { return Z.register.slice(); },
+    /* Zum Nachmessen ohne Quelltext: was der Ruf eingebracht hat. */
+    aufgeld: function () {
+      return { woche: Z.aufgeldWoche, jahr: Z.aufgeldJahr, epoche: Z.aufgeldEpoche,
+        gesamt: Z.aufgeldGesamt, buchungen: Z.buch.length };
+    },
+    jeWirt: function () {
+      var o = {};
+      Object.keys(Z.jeWirt).forEach(function (k) {
+        var w = Z.jeWirt[k];
+        var einh = (B.welt.zeit.jahr >= 1872) ? w.menge * 1.5 : w.menge;
+        o[k] = { menge: w.menge, rechnung: w.rechnung, aufgeld: w.aufgeld,
+          jeEinheitOhne: einh ? B.rund(w.rechnung / einh, 2) : 0,
+          jeEinheitMit: einh ? B.rund((w.rechnung + w.aufgeld) / einh, 2) : 0 };
+      });
+      return o;
+    },
+    satz: satzFuer,
+    etat: function () { return { plaetze: etatPlaetze(), belegt: etatBelegt() }; },
     aktiv: function () { return aktiveZeilen().length; },
     lebendig: pruefeLebendig,
     blatt: zeigeBlatt

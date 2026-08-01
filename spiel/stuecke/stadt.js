@@ -414,7 +414,7 @@
 
   function fremdeMarken() {
     var l = [];
-    ['marken', 'hand', 'bau', 'blatt'].forEach(function (name) {
+    ['marken', 'hand', 'bau', 'kopf', 'blatt'].forEach(function (name) {
       var ebene = document.getElementById('ebene-' + name);
       if (!ebene) return;
       var faecher = ebene.children;
@@ -570,7 +570,7 @@
       var r = b.el.getBoundingClientRect();
       if (r.width < 6 || r.height < 6) return;
       if (anteil(r, false) <= 0) return;              /* liegt nicht im Stadtfenster */
-      if (anteil(r, false) > GRENZE) return;          /* das ist ein Brett, kein Punkt */
+      if (anteil(r, false) > MARKE) return;           /* das ist ein Brett, kein Punkt */
 
       /* Der Schluessel haengt am ORT, nicht am Text: eine Mahnkerbe mehr ist
          dieselbe Marke und soll nicht jedes Mal von neuem aufspringen. */
@@ -695,7 +695,7 @@
     startZeit = Date.now();
     if (window.MutationObserver) {
       beobachter = new MutationObserver(function () { if (!imGange) baldPruefen(); });
-      ['marken', 'hand', 'blatt'].forEach(function (name) {
+      EBENEN.forEach(function (name) {
         var ebene = document.getElementById('ebene-' + name);
         if (ebene) beobachter.observe(ebene, { childList: true, subtree: true, attributes: true });
       });
@@ -827,12 +827,30 @@
   var ANKER = '<svg class="anker" viewBox="0 0 24 24" aria-hidden="true">'
     + '<path d="M12 2.6a2.1 2.1 0 0 0-.9 4v1.6H8.4v2h2.7v6.9c-2.5-.5-4.4-2.5-4.8-5H8L4.6 8.9 1.2 12.1h1.9c.5 4.4 4.1 7.8 8.6 7.9v.1h.6c4.7 0 8.6-3.5 9.1-8h1.9l-3.4-3.2-3.4 3.2h1.7c-.5 2.6-2.4 4.6-4.9 5.1v-6.9h2.7v-2h-2.7V6.6a2.1 2.1 0 0 0-.9-4z"/></svg>';
 
+  /* DAS HAUSSCHILD.
+
+     Runde 5, dritter Befund des Kritikers: "1970 ist das Hausschild ein
+     rahmenloses weisses Rechteck 207x71 px auf (1138|917) — kein Pfosten,
+     keine Wand dahinter, es steht vor drei Tiefenebenen zugleich."
+
+     Er hat recht, und die Ursache steht in den drei anderen Epochen: dort
+     haengt das Schild am Torbogen der Platte, also an etwas Gemaltem. In der
+     Platte 1970 ist der Hof ein asphaltierter Parkplatz — da haengt nichts.
+     Ein Schild muss aber irgendwo hAENGEN oder STEHEN.
+
+     Deshalb bekommt das Schild, das keine Wand hinter sich hat, ein eigenes
+     GESTELL: zwei Stahlrohre und ein Betonfuss, die auf dem Hofboden stehen,
+     genau wie die Reklametafel, die in derselben Platte danebensteht.
+     'gestell' ist die Hoehe der Rohre in Prozent der Buehnenhoehe; wo es
+     gesetzt ist, sitzt der FUSS auf dem Ort und nicht die Mitte. */
   function zeichneHausschild(fach) {
     var s = daten().schild || {};
+    var werk = B.el('div', 'stadt-schildwerk');
+    werk.style.width = (s.breite || 7.5) + '%';
+    werk.style.zIndex = '950';
+
     var el = B.el('div', 'stadt-hausschild' + (s.hell ? ' hell' : '') + (s.klein ? ' klein' : ''));
-    el.style.width = (s.breite || 7.5) + '%';
     el.style.rotate = (s.dreh || 0) + 'deg';
-    el.style.zIndex = '950';
     if (s.hell) {
       el.appendChild(B.el('div', 'zeile eins', 'BRAUHAUS'));
       el.appendChild(B.el('div', 'zeile zwei', 'ZUM ANKER'));
@@ -844,8 +862,22 @@
       el.appendChild(B.el('div', 'zeile zwei', 'ZUM ANKER'));
       el.appendChild(B.el('div', 'gegr', 'GEGR. ' + B.welt.haus.gegruendet));
     }
-    B.orte.setze(el, 'tor', { anker: 'mitte', dx: s.dx || 0, dy: s.dy || 0 });
-    fach.appendChild(el);
+    werk.appendChild(el);
+
+    if (s.gestell) {
+      var g = B.el('div', 'stadt-gestell');
+      g.style.height = 'calc(var(--h) * ' + B.rund(s.gestell / 100, 4) + ')';
+      g.appendChild(B.el('span', 'bein links'));
+      g.appendChild(B.el('span', 'bein rechts'));
+      g.appendChild(B.el('span', 'fuss'));
+      werk.appendChild(g);
+    }
+
+    B.orte.setze(werk, s.ort || 'tor', {
+      anker: s.gestell ? 'unten' : 'mitte',
+      dx: s.dx || 0, dy: s.dy || 0
+    });
+    fach.appendChild(werk);
   }
 
   /* --------------------------------------------------------------------
@@ -970,6 +1002,8 @@
     rahmen: {
       fenster: FENSTER,
       grenze: GRENZE,
+      marke: MARKE,
+      ebenen: EBENEN.slice(),
       lage: function () { return JSON.parse(JSON.stringify(lage)); },
       zeige: alleZuklappen,
       schalte: schalte

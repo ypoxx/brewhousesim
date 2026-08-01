@@ -481,3 +481,12 @@
   line-height: 1;
 }
 .nm-band.zu .nm-gross { margin-bottom: 0; }
+
+.nm-tabkopf {
+  font-size: calc(var(--s) * 14);
+  text-transform: uppercase;
+  letter-spacing: calc(var(--s) * 1);
+  color: #7a6a4e;
+  border-bottom: calc(var(--s) * 2) solid var(--linie);
+}
+.nm-mehr { color: var(--gruen); font-family: var(--mono); }
