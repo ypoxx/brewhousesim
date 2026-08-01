@@ -483,7 +483,9 @@
       markenGesehen[s] = jetzt;
 
       if (frisch) {
+        var vorher = markenLage[s];
         markenLage[s] = (markenAlle === 'zeigen') ? 'steht'
+          : (vorher !== undefined) ? vorher
           : (jetzt - startZeit < LADEZEIT) ? 'ruht' : 'steht';
       }
 
@@ -538,9 +540,17 @@
 
       /* Was beim Laden schon dalag, liegt als Reiter — beim Laden will man
          sein Haus sehen. Was der Spieler gerade selbst geholt hat und was
-         waehrend des Spiels neu aufschlaegt, schlaegt auf. */
+         waehrend des Spiels neu aufschlaegt, schlaegt auf.
+
+         Und das Dritte, das Runde 3 gekostet hat: ein fremdes Stueck baut
+         sein Brett gelegentlich neu (leeren, fuellen). Zwischen zwei Blicken
+         ist es dann kurz weg und gilt als frisch — danach stand es wieder
+         offen ueber der Stadt, obwohl es niemand geholt hat. Ein Brett, das
+         schon einmal eine Lage hatte, BEHAELT sie ueber seinen Neubau. */
       if (frisch) {
+        var vorher = lage[s];
         lage[s] = (jetzt - handZeit < HANDFRIST) ? 'auf'
+                : (vorher !== undefined) ? vorher
                 : (jetzt - startZeit < LADEZEIT) ? 'zu' : 'auf';
       }
       /* Ein formatfuellendes Blatt zum Jahreswechsel ist eine Entscheidung. */
