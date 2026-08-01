@@ -764,13 +764,22 @@
       st.appendChild(z);
     });
     if (!etwas) {
-      st.appendChild(B.el('div', 'pr-satz',
-        'Am Hof steht nur, was die Vorfahren hinterlassen haben. Was von heute an dazukommt, '
-        + 'steht hier und trägt in jedem Michaeli.'));
+      /* Auch das Erbe ist eine Bilanz, keine leere Fläche: was die Vorfahren
+         hinterlassen haben, steht in denselben Zahlen wie alles Spätere. */
+      st.appendChild(B.el('div', 'pr-satz', 'Von heute an nichts. Was die Vorfahren hinterlassen haben:'));
+      st.appendChild(zeile('Lagerplatz im Keller', B.welt.menge(B.welt.vorrat.plaetze)));
+      st.appendChild(zeile('Sud in der Woche', B.zahl(B.welt.haus.sudJeWoche)));
+      st.appendChild(zeile('Braurecht', e.rechtSatz));
+      st.appendChild(zeile('Ansehen in der Stadt', B.zahl(B.welt.haus.ansehen)));
+      st.appendChild(B.el('div', 'pr-satz pr-klein',
+        'Was von heute an dazukommt, steht hier und trägt in jedem Michaeli.'));
     } else {
       var ertragSumme = 0;
       Z.ertraege.forEach(function (t) { ertragSumme += t.betrag; });
       if (ertragSumme) st.appendChild(zeile('trägt im Jahr', geld(ertragSumme), 'pr-ertrag pr-summe'));
+      st.appendChild(B.el('div', 'pr-satz pr-klein',
+        Object.keys(Z.fertig).length + ' fertig · ' + Z.raten.length + ' im Bau · '
+        + Object.keys(Z.gesperrt).length + ' durch eine Wahl für immer ausgeschlossen'));
     }
     sp.appendChild(st);
 
@@ -800,6 +809,9 @@
     kopf.appendChild(B.el('b', null, a.name));
     karte.appendChild(kopf);
 
+    if (schon) karte.appendChild(B.el('div', 'pr-karte-stempel', 'GENOMMEN'));
+    else if (zu) karte.appendChild(B.el('div', 'pr-karte-stempel pr-stempel-zu', 'AUSGESCHLOSSEN'));
+
     var schild = B.el('div', 'pr-schild');
     schild.appendChild(B.el('span', 'pr-schild-zahl', geld(plan.jetzt)));
     if (plan.raten) {
@@ -826,6 +838,35 @@
         var o = angebotVon(k); return o ? o.name : k;
       }).join(', ');
       karte.appendChild(B.el('div', 'pr-sperrt', 'Schließt aus: ' + namen));
+    }
+
+    if (schon) {
+      karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
+        (a.bauzeit && !Z.fertig[a.k])
+          ? 'Angezahlt zu Michaeli ' + schon.jahr + '. Im Bau bis ' + schon.fertig + '.'
+          : 'Genommen zu Michaeli ' + schon.jahr + ' für ' + geld(schon.preis) + '.'));
+      karte.appendChild(B.knopf({
+        text: (a.bauzeit && !Z.fertig[a.k]) ? 'Im Bau' : 'Steht am Hof',
+        zug: 'preis:steht:' + a.k,
+        aus: true,
+        klasse: 'pr-nehmen',
+        titel: 'Genommen ist genommen. Es gibt keinen zweiten Klick.'
+      }));
+      return karte;
+    }
+
+    if (zu) {
+      var durch = angebotVon(zu);
+      karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
+        'Ausgeschlossen durch: ' + (durch ? durch.name : zu) + '.'));
+      karte.appendChild(B.knopf({
+        text: 'Ausgeschlossen',
+        zug: 'preis:zu:' + a.k,
+        aus: true,
+        klasse: 'pr-nehmen',
+        titel: 'Das eine schließt das andere aus. Diese Zeit bietet es nicht noch einmal an.'
+      }));
+      return karte;
     }
 
     if (!kann) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
@@ -898,8 +939,10 @@
 
     var kopf = B.el('div', 'pr-abschnitt');
     kopf.appendChild(B.el('h3', null, 'DIE ANGEBOTE ZU MICHAELI ' + Z.tafelJahr));
+    var lebt = lebendeAngebote().length;
     kopf.appendChild(B.el('span', 'pr-abschnitt-satz',
-      Z.angebote.length + ' nebeneinander · Kasse ' + geld(B.welt.haus.kasse)));
+      Z.angebote.length + ' nebeneinander, ' + lebt + ' heute noch zu haben · Kasse '
+      + geld(B.welt.haus.kasse) + ' · was hier weggeht, kommt in diesem Jahr nicht wieder'));
     sp.appendChild(kopf);
 
     var reihe = B.el('div', 'pr-reihe');
