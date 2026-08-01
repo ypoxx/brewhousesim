@@ -317,7 +317,7 @@ var FUHRE_DATEN = {
         name: 'Das Schuldbuch der Wirte', kurz: 'Ziel', wort: 'Posten',
         satz: 'Die Ordnung kennt das Ziel: geliefert wird das Jahr über, gerechnet wird '
             + 'zu Michaeli. Wer vorher Geld sehen will, muss es sagen — und verkauft weniger.',
-        angeld: 0.44,
+        angeld: 0.28,
         angeldName: 'Angeld auf das kommende Braujahr',
         angeldSatz: 'Der Wirt legt an, damit im Winter geliefert wird. Es wird abgetrunken.',
         umgang: 'Die Rechnung zu Michaeli',
@@ -566,7 +566,7 @@ var FUHRE_DATEN = {
         name: 'Die Debitoren', kurz: 'Zahlungsziel', wort: 'Rechnung',
         satz: 'Zahlungsziel, Bonus, Jahresgespräch: der Handel zahlt schnell und nimmt '
             + 'sich den Rest am Jahresende zurück. Der Stichtag ist geblieben.',
-        angeld: 0.32,
+        angeld: 0.20,
         angeldName: 'Vorauszahlung des Handels auf das Winterhalbjahr',
         angeldSatz: 'Der Einkauf sichert die Menge und zahlt an. Wird verrechnet.',
         umgang: 'Das Jahresgespräch',
