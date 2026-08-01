@@ -400,7 +400,8 @@
       } else {
         r.faellig = jahr() + 1;
         nochOffen.push(r);
-        chronik('bau', 'Der Bau ' + r.name + ' ruht: die Rate blieb offen.');
+        chronik('bau', r.name + ' ruht: die Rate blieb offen. Noch ' + r.offen
+          + (r.offen === 1 ? ' Rate zu ' : ' Raten zu ') + geld(r.rate) + '.');
       }
     });
     Z.raten = nochOffen;
@@ -647,7 +648,8 @@
     if (a.bauzeit && plan.rate > 0) {
       Z.raten.push({ k: a.k, name: a.name, rate: plan.rate, offen: plan.raten, faellig: jahr() + 1 });
       chronik('bau', a.name + ' begonnen für ' + geld(plan.ganz)
-        + ' — ' + geld(plan.jetzt) + ' angezahlt, ' + plan.raten + ' Raten zu ' + geld(plan.rate)
+        + ' — ' + geld(plan.jetzt) + ' angezahlt, ' + plan.raten
+        + (plan.raten === 1 ? ' Rate zu ' : ' Raten zu ') + geld(plan.rate)
         + ', fertig ' + (jahr() + a.bauzeit) + '.');
       B.welt.schreibe(a.name + ' wird gebaut. Fertig zu Michaeli ' + (jahr() + a.bauzeit) + '.', 'preis');
     } else {

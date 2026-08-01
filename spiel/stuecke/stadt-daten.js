@@ -142,7 +142,7 @@ var STADT_DATEN = {
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
       ort: 'kesselstelle', dx: -9, dy: 5,
       breite: 8.9, breiten: { 1: 8.9, 2: 6.6 },
-      versatz: { 2: { dx: 8, dy: -4 } },
+      versatz: { 2: { dx: 7, dy: -4 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne ueber offenem Feuer, daneben Maischbottich und '
           + 'Kuehlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
@@ -165,8 +165,8 @@ var STADT_DATEN = {
       nutzen: { platz: 6 } },
 
     { schluessel: 'keller_gewoelbe', name: 'Gewoelbekeller', bild: 'keller_gewoelbe',
-      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 2: 9.0 },
-      versatz: { 2: { dx: 1.5, dy: -8 } },
+      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 2: 8.6 },
+      versatz: { 2: { dx: 0.5, dy: -7 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kuehl und dunkel. Jede Woche, die ein Fass laenger haelt, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
