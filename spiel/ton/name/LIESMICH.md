@@ -23,10 +23,11 @@ DER NAME ruft deshalb nur — die Rufnamen stehen fest und ändern sich nicht me
 | `name:mundpropaganda` | herumgehen und den Namen sagen | Schritte auf Pflaster, Stimmen im Hintergrund |
 | `name:rueckruf` | Rückruf 1970 | Telefon, aufgelegt; Kästen, die zurückgeladen werden |
 | `name:verkauf` | der Name ist verkauft | ein einzelner Stempel, dann Stille |
+| `name:aufgeld` | DAS AUFGELD ist auf eine Fuhre gebucht worden | Münzen, die auf ein Brett gezählt werden — kurz, drei bis vier Stück |
 
 Solange keiner davon im Katalog steht, greift der Notfall von `kern/ton.js` und spielt
 ein Blatt Papier. Der Ruf geht also nicht ins Leere — er ist nur noch nicht
-unterschieden. **Bitte an DEN KLANG:** diese vierzehn Namen in `KATALOG` aufnehmen,
+unterschieden. **Bitte an DEN KLANG:** diese fünfzehn Namen in `KATALOG` aufnehmen,
 oder wenigstens eine Vorsilbe `name:` in `NOTFALL`. Vorschlag für die Vorsilbe:
 `altNeu('siegel', 'kasse')` — Wachs und Kasse sind beide „hier wird etwas
 festgemacht" und liegen bereits im Ordner.

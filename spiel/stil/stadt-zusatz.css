@@ -203,8 +203,8 @@
 
 .knopf.stadt-reiter {
   min-width: calc(var(--s) * 150);
-  max-width: calc(var(--s) * 300);
-  flex: 1 1 auto;
+  max-width: calc(var(--s) * 262);
+  flex: 0 1 auto;
   padding-left: calc(var(--s) * 10);
   padding-right: calc(var(--s) * 10);
 }
