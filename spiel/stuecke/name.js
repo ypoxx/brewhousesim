@@ -754,9 +754,15 @@
       B.ton.spiele('name:einziehen');
       return nachZug('jahr-aus');
     }
+    /* Voller Etat: es wird nicht gesperrt, es wird getauscht. Der Zug bleibt
+       bezahlbar und schliesst genau einen anderen aus. */
+    var weicht = etatVoll() ? schwaechsterPosten() : null;
     if (!zahlt(t.preis, t.name)) { Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer'); }
+    if (weicht && weicht.k !== t.k) delete Z.lauf[weicht.k];
     Z.lauf[t.k] = jahr();
-    Z.meldung = t.name + ' läuft bis Ende des Braujahres ' + jahr() + '.';
+    Z.meldung = t.name + ' läuft bis Ende des Braujahres ' + jahr() + '.'
+      + (weicht ? ' Der Etat trägt nur ' + etatPlaetze() + ' Posten — dafür ist '
+        + weicht.name.replace(/^(Den|Die|Das) /, '') + ' eingestellt.' : '');
     B.ton.spiele(t.laut ? 'name:spot' : 'name:druck');
     nachZug('jahr');
   }
@@ -1161,13 +1167,22 @@
       gesperrt = true; warum = 'Die Kasse reicht nicht: ' + geld(-preis) + '.';
     }
 
+    /* Der Etat sperrt nicht, er tauscht — und sagt vorher, wen es trifft. */
+    var tausch = '';
+    if (t.art === 'jahr' && !an && etatVoll()) {
+      var w = schwaechsterPosten();
+      if (w) tausch = ' Der Etat trägt nur ' + etatPlaetze() + ' Posten: dafür wird '
+        + w.name.replace(/^(Den|Die|Das) /, '') + ' eingestellt.';
+    }
+
     var k = B.knopf({
       text: text,
       zug: 'name:' + t.k,
       preis: preis,
       klasse: 'nm-knopf' + (an ? ' nm-an' : ''),
       aus: gesperrt,
-      titel: (t.sagt || '') + (t.warnt ? ' — ' + t.warnt : '') + (warum ? ' [' + warum + ']' : ''),
+      titel: (t.sagt || '') + (t.warnt ? ' — ' + t.warnt : '') + tausch
+        + (warum ? ' [' + warum + ']' : ''),
       tu: function () {
         if (t.art === 'schalter') return schalteZeiger();
         if (t.art === 'adresse') return schildBeimGroessten(t);
