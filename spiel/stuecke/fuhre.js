@@ -1562,7 +1562,14 @@
     Z.budget = e.budget ? e.budget.start : 0;
     Z.sudeJeWoche = e.sudeJeWoche || 0;
     Z.faesser = Math.max(Z.faesser, e.faesser);
-    Z.fracht = e.fracht ? e.fracht[Math.min(1, e.fracht.length - 1)].k : 'stueck';
+    /* DIE KLEINSTE STUFE IST DIE VORGABE. Vorher stand die Bahnfracht beim
+       Laden auf „Halber Wagen" — einer Pauschale fuer vierzig Fass, waehrend
+       in der ersten Woche zwoelf auf der Rampe stehen. Gemessen: 7.184 Mark
+       Fuhrlohn im Jahr bei 21.000 Mark Umsatz, ein Drittel des Hauses fuer
+       Luft. Wer die Stufe nicht fuellt, bezahlt Luft — das ist die Mechanik
+       dieser Epoche und sie bleibt; sie darf nur nicht die Vorgabe sein.
+       Aufsteigen kostet einen Klick und steht mit Preisschild am Wagen. */
+    Z.fracht = e.fracht ? e.fracht[0].k : 'stueck';
     Z.halte = e.wagen.halte;
     Z.eisKeller = e.eis ? e.eis.keller : 0;
     Z.eis = e.eis ? e.eis.start : 0;
