@@ -347,6 +347,226 @@
   }
 
   /* ----------------------------------------------------------------------
+     DAS PROBEFASS — der Weg zurueck, und er kostet kein Geld
+
+     Ein Wirt, der abgesprungen ist, kommt nicht wieder, weil man ihn
+     bezahlt. Er kommt wieder, weil in seinem Keller ein Fass steht, das
+     seinen Gaesten schmeckt. Also gibt das Haus eines her: ohne Rechnung,
+     ohne Ungeld, ohne Eintrag. Was es kostet, ist die knappe Sache dieser
+     Epoche — ein reifes Fass, ein Platz auf dem Wagen, einer der wenigen
+     Halte der Woche. Deshalb steht der Knopf auch bei leerer Kasse offen:
+     der Notsud kostet nichts, und ein Notsud ist ein Fass.
+     ---------------------------------------------------------------------- */
+  function probeDef() { return ep().probe || null; }
+
+  function probeStand(a) {
+    return (Z.probe[a.schluessel] && Z.probe[a.schluessel].zutrauen) || 0;
+  }
+
+  /* Wem die Adresse gerade gehoert, entscheidet, wie schwer es wird. Genommen
+     wird dem Gegner nichts (ZUSTAENDIGKEIT 8) — gewonnen schon. */
+  function fremdGebunden(a) {
+    var w = B.welt.gebunden(a.schluessel);
+    return w && w !== 'haus' ? w : null;
+  }
+
+  function probeZiel(a) {
+    return fremdGebunden(a) ? PROBE_ZIEL_FREMD : PROBE_ZIEL;
+  }
+
+  /* Fuer die Probe wird KEINE Sorte ausgeschlossen. Der Wirt bekommt, was da
+     ist; ob es ihn ueberzeugt, entscheidet sich beim Trinken, nicht beim
+     Beladen. Bevorzugt geht trotzdem das aelteste Fass, das er wirklich
+     fuehrt — ein Haus verschenkt nicht seinen besten Sud, wenn ein
+     passender daneben liegt. */
+  function waehleProbeFass(a) {
+    var frei = freieFaesser();
+    var passend = null, passendAlter = -1;
+    var irgend = null, irgendAlter = -1;
+    for (var i = 0; i < frei.length; i++) {
+      var f = frei[i], al = alter(f);
+      if (nimmt(a, sorteFass(f))) {
+        if (al > passendAlter) { passend = f; passendAlter = al; }
+      } else if (al > irgendAlter) { irgend = f; irgendAlter = al; }
+    }
+    return passend || irgend;
+  }
+
+  function probeGeladen(a) {
+    for (var i = 0; i < Z.ladung.length; i++) {
+      if (Z.ladung[i].adr === a.schluessel && Z.ladung[i].probe) return Z.ladung[i];
+    }
+    return null;
+  }
+
+  /* Warum diese Woche kein Fass auf Probe hinausgeht. Der Grund ist nie
+     Geld — er ist immer ein Fass, ein Platz oder ein Halt. */
+  function kannProbe(a) {
+    var e = ep();
+    if (!probeDef()) return 'In dieser Zeit gibt es das nicht.';
+    if (!Z.verloren[a.schluessel]) return 'Diese Adresse führt Bier des Hauses. Sie braucht keine Probe.';
+    if (probeGeladen(a)) return null;
+    /* Die Bannmeile gilt auch fuer ein verschenktes Fass: sie regelt die
+       Ausfuhr, nicht den Verkauf. Der Regalmeter dagegen regelt die WARE im
+       Regal — Gratisware steht nicht im Regal, sie steht im Lager. */
+    if (e.bannmeile && a.km > e.bannmeile && !Z.bann[a.schluessel]) {
+      return 'Außerhalb der Bannmeile. Auch ein verschenktes Fass fährt nicht ohne Bannbrief hinaus.';
+    }
+    if (geladen() >= wagenPlaetze()) {
+      return 'Der Wagen ist voll. ' + B.welt.menge(wagenPlaetze()) + ' und kein Fass mehr.';
+    }
+    if (Z.ladung.length >= e.wagen.halte) {
+      return 'Keine Halte frei. Diese Tour fährt ' + e.wagen.halte + ' Adressen an.';
+    }
+    if (!waehleProbeFass(a)) return 'Der Keller ist leer. Es liegt kein reifes Fass da, das man hergeben könnte.';
+    return null;
+  }
+
+  /* Legt das Probefass auf den Wagen — oder nimmt es wieder herunter. Ein
+     Knopf, zwei Richtungen: sonst steht bei einer aufgegebenen Adresse ein
+     Ladeknopf ohne Gegenstueck. */
+  function schalteProbe(a) {
+    var da = probeGeladen(a);
+    if (da) {
+      Z.ladung.splice(Z.ladung.indexOf(da), 1);
+      B.sende('zeichne', { grund: 'fuhre-probe-ab' });
+      return;
+    }
+    var grund = kannProbe(a);
+    if (grund) { Z.meldung = grund; B.sende('zeichne', { grund: 'fuhre-probe' }); return; }
+    var eintrag = { adr: a.schluessel, faesser: [], probe: true };
+    var schritt = ep().wagen.schritt;
+    for (var n = 0; n < schritt; n++) {
+      if (geladen() >= wagenPlaetze()) break;
+      var f = waehleProbeFass(a);
+      if (!f) break;
+      if (!eintrag.faesser.length) Z.ladung.push(eintrag);
+      eintrag.faesser.push(f);
+    }
+    if (!eintrag.faesser.length) return;
+    B.ton.spiele('fuhre:fass-rollen', { ort: 'fasslager', laut: 0.45 });
+    B.sende('zeichne', { grund: 'fuhre-probe' });
+  }
+
+  /* Das Fass ist angekommen. Was es beim Wirt bewirkt, haengt nicht am Preis,
+     sondern daran, ob er dieses Bier ueberhaupt fuehrt. */
+  function probeKommtAn(a, faesser) {
+    var s = Z.probe[a.schluessel];
+    if (!s) { s = Z.probe[a.schluessel] = { zutrauen: 0, jahr: 0, gaben: 0 }; }
+    var wert = 0, gut = 0;
+    faesser.forEach(function (f) {
+      if (nimmt(a, sorteFass(f))) { wert += 2; gut++; } else { wert += 1; }
+    });
+    /* Ein Halt ist ein Halt: eine Probe je Woche und Adresse zaehlt einmal,
+       ob nun ein Fass oder eine Palette darin liegt. */
+    var schritt = Math.max(1, ep().wagen.schritt);
+    s.zutrauen += Math.max(1, Math.round(wert / Math.max(1, faesser.length / schritt) / schritt));
+    s.jahr = B.welt.zeit.jahr;
+    s.gaben += 1;
+    Z.probeGesamt += faesser.length;
+    Z.probeDieseWoche += faesser.length;
+    if (s.zutrauen >= probeZiel(a)) holeZurueck(a, gut ? 'probe' : 'probe-mager');
+  }
+
+  /* Die Adresse ist zurueck. Die Reihe faengt bei null an — gewonnen ist der
+     Wirt, nicht das Jahr. */
+  function holeZurueck(a, wie) {
+    if (!Z.verloren[a.schluessel]) return;
+    var vorher = fremdGebunden(a);
+    delete Z.verloren[a.schluessel];
+    delete Z.probe[a.schluessel];
+    delete Z.fremdBeiMahnung[a.schluessel];
+    Z.mahnung[a.schluessel] = 0;
+    Z.leer[a.schluessel] = 0;
+    Z.durst[a.schluessel] = wochenbedarf(a) * 2.5;
+    B.welt.binde(a.schluessel, 'haus', wie === 'neuer' ? 'Anfrage' : (probeDef() ? probeDef().kurz : 'Probe'),
+      B.welt.zeit.jahr + 2);
+    Z.zurueckGeholt.push({ name: a.name, jahr: B.welt.zeit.jahr, wie: wie, vorher: vorher });
+    Z.frist = null;
+    Z.fristGemeldet = false;
+    B.welt.protokolliere({ wer: 'spieler', preis: 0, adresse: a.schluessel,
+      was: a.name + ' führt wieder Bier des Hauses'
+         + (vorher ? ' — abgenommen wurde die Adresse ' + vorher : '') });
+    var satz = wie === 'neuer'
+      ? B.wuerfel.aus(D.neuerWirt[B.welt.zeit.epoche] || D.neuerWirt[1]).replace('{wirt}', a.name)
+      : (probeDef() ? probeDef().zurueck.replace('{wirt}', a.name) : a.name + ' nimmt wieder ab.');
+    B.welt.schreibe(satz + (vorher
+      ? ' Der Wirt hing an ' + vorher + '; das Probefass hat ihn zurückgeholt, nicht das Geld.'
+      : ''), 'fuhre');
+    B.ton.spiele('fuhre:siegel', { ort: 'tor', laut: 0.5 });
+  }
+
+  /* Zu Georgi: was in einem ganzen Braujahr kein Fass gesehen hat, vergisst
+     der Wirt wieder. Sonst waere die Probe ein Sparbuch statt eines
+     Versuchs. */
+  function probeVerblasst() {
+    for (var k in Z.probe) {
+      if (!Object.prototype.hasOwnProperty.call(Z.probe, k)) continue;
+      if (Z.probe[k].jahr >= B.welt.zeit.jahr) continue;
+      Z.probe[k].zutrauen -= 1;
+      if (Z.probe[k].zutrauen <= 0) delete Z.probe[k];
+    }
+  }
+
+  /* Ein Zug, der ohne den Spieler geschieht: hoechstens EINE lange
+     aufgegebene Adresse fragt zu Georgi von selbst wieder an — und nur,
+     solange das Haus ueberhaupt noch liefert. Ein Brauhaus, von dem niemand
+     mehr etwas hat, fragt auch niemand. */
+  function neuerWirtFragt() {
+    if (!haeuser().length) return;
+    var alt = null;
+    alleHaeuser().forEach(function (a) {
+      var w = Z.verloren[a.schluessel];
+      if (!w) return;
+      if (B.welt.zeit.jahr - w.jahr < 3) return;
+      if (!alt || w.jahr < Z.verloren[alt.schluessel].jahr) alt = a;
+    });
+    if (!alt) return;
+    if (!B.wuerfel.trifft(0.25)) return;
+    holeZurueck(alt, 'neuer');
+  }
+
+  /* ----------------------------------------------------------------------
+     DAS LEERE AUFTRAGSBUCH UND DIE FRIST
+
+     Solange eine Adresse Bier des Hauses fuehrt, geht es weiter — notfalls
+     mit Kofent und auf Kerbe. Fuehrt keine mehr eines, laeuft die Frist der
+     Epoche. Sie steht in jeder Woche still, in der ein Fass auf Probe
+     hinausging: wer es versucht, verliert nicht am Kalender. Laeuft sie ab,
+     haelt die Uhr an — der Kern, nicht dieses Stueck (ZUSTAENDIGKEIT 12).
+     ---------------------------------------------------------------------- */
+  function fristDef() { return ep().frist || { wochen: 12, wer: 'die Stadt', satz: '', ende: '' }; }
+
+  function pruefeAuftragsbuch() {
+    var lebt = haeuser().length > 0;
+    var probiert = Z.probeDieseWoche > 0;
+    Z.probeDieseWoche = 0;
+
+    if (lebt) {
+      if (Z.frist !== null) { Z.frist = null; Z.fristGemeldet = false; }
+      return;
+    }
+    if (B.welt.zeit.ende) return;
+
+    var fd = fristDef();
+    if (Z.frist === null) {
+      Z.frist = fd.wochen;
+      Z.endeGemeldet = true;
+      B.welt.schreibe('Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, '
+        + 'aber es liefert nirgendwohin mehr. Nicht das Geld ist ausgegangen — die Kundschaft. '
+        + fd.satz + ' Es bleiben ' + fd.wochen + ' Wochen und '
+        + (probeDef() ? probeDef().name.toLowerCase() : 'ein Fass auf Probe') + '.', 'fuhre');
+      return;
+    }
+    if (probiert) return;          /* die Uhr steht still, solange es versucht wird */
+    Z.frist -= 1;
+    if (Z.frist <= 0) {
+      Z.frist = 0;
+      B.uhr.beende('keine-abnehmer', fd.ende);
+    }
+  }
+
+  /* ----------------------------------------------------------------------
      DER KELLER
      ---------------------------------------------------------------------- */
   function keller() { return B.welt.vorrat.faesser; }
