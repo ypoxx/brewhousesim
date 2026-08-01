@@ -96,3 +96,87 @@ Das ist kein Fehler im Code, das ist ein Fehler im Entwurf. Er wird nicht mit ei
 Fallunterscheidung geheilt, sondern mit einer Antwort auf die Frage, was ein Brauhaus tut,
 wenn kein Geld da ist: anschreiben lassen, Grut zurückverkaufen, einen Dünnsud ohne
 Barauslage. Alle drei sind historisch und alle drei liegen in den eigenen Dateien.
+
+---
+
+## 4 — Die Abgabenlast: eine Obergrenze, und sie gilt für alle
+
+**Vorgetragen von:** dem Builder der FUHRE.
+**Entschieden:** Obergrenze gesetzt. Dies ist die wichtigste Entscheidung dieser Welle.
+
+> Vier Stücke ziehen inzwischen gleichzeitig Abgaben aus derselben Kasse — DIE FUHRE
+> „Ungeld" (nach Ausstoß), dazu Grutgeld, Erbzins, Mahlgeld, Wasserzins aus einem anderen
+> Stück. In 1350 sind das zusammen rund 35 Prozent des Umsatzes; **das Haus geht im dritten
+> Braujahr auf null.**
+
+Das ist keine Meinungsverschiedenheit, das ist ein Systemfehler, den kein Stück sehen kann.
+Jedes hat für sich eine maßvolle Abgabe gebaut; die Summe ruiniert das Haus. Und mit hoher
+Wahrscheinlichkeit ist genau das die Ursache des Todzustands, den der Kritiker unabhängig
+davon gefunden hat: Kasse null, Keller leer, und ab da bewegt sich nichts mehr.
+
+Die FUHRE hat von sich aus reagiert — ihre Abgabe auf 8 % gesenkt, einen Notgroschen von vier
+Suden und einen Deckel bei 55 % des freien Geldes eingezogen. Richtig gehandelt, aber es
+reicht nicht: Wenn vier Stücke unabhängig „maßvoll" sind, ist die Summe es nicht.
+
+### Die Regel
+
+> **Alle Abgaben zusammen dürfen im Mittel eines Braujahres 18 % des Umsatzes nicht
+> übersteigen.** Jedes Stück bekommt einen festen Anteil daran und darf ihn allein
+> unterschreiten, nie überschreiten:
+>
+> | Stück | Anteil am Gesamtdeckel |
+> |---|---|
+> | DIE FUHRE (Ungeld, nach Ausstoß) | 8 % |
+> | DER PREIS (Erbzins und Michaeli-Abgaben) | 5 % |
+> | DER GEGNER (was er dem Haus abpresst) | 3 % |
+> | DIE STADT (Wasserzins, Mahlgeld, Bauabgaben) | 2 % |
+>
+> Wer mehr will, muss es sich von einem anderen Stück abtreten lassen und die Abtretung hier
+> eintragen. Niemand erhöht still.
+
+Achtzehn Prozent sind kein Kompromiss zwischen vier Wünschen, sondern eine Zahl mit einem
+Grund: Sie liegt hoch genug, dass Abgaben in jeder Epoche spürbar sind, und niedrig genug,
+dass ein gut geführtes Haus daran nicht stirbt. Wer sie ändern will, ändert sie hier, mit
+einer Messung daneben.
+
+### Und die härtere Regel dahinter
+
+> **Es darf keinen Zustand geben, aus dem heraus kein Zug mehr etwas verändert.**
+
+Das gilt unabhängig von der Abgabenhöhe und für jedes Stück. Ein Wirtschaftsspiel darf den
+Spieler ruinieren — es darf ihn nicht einfrieren. Wenn kein Geld da ist, muss es einen Weg
+geben, der kein Geld kostet: anschreiben lassen, Vorrat zurückverkaufen, ein Dünnsud ohne
+Barauslage, im Zweifel der Konkurs mit Ende und Nachspiel. Was es nicht geben darf, ist
+WEITER, das ewig weiterläuft und nichts tut.
+
+## 5 — Das Preisblatt steht nicht dauerhaft offen
+
+**Vorgetragen von:** dem Builder der FUHRE.
+**Entschieden:** stattgegeben, mit dem Vorschlag des Antragstellers.
+
+> Das Stück DER PREIS legt ein Brett `.pr-tafel` über x 1–85 %, y 12–87 % auf die Ebene
+> „blatt" (z=60). Es verdeckt alle vier Bretter DER FUHRE auf Ebene „hand" (z=40)
+> vollständig; Playwright meldet an jedem Knopf „intercepts pointer events".
+> **Ein Kritiker kommt derzeit an DIE FUHRE nicht heran.**
+
+Ein Stück, das ein anderes unbedienbar macht, macht auch dessen Prüfung unmöglich — und damit
+die Messlatte wertlos. Der Vorschlag des Antragstellers ist der richtige:
+
+> **Auflage an DER PREIS:** Das Michaeli-Blatt wird über seinen Griff geöffnet und geschlossen,
+> statt dauerhaft offen zu stehen. Geschlossen gibt es die Fläche frei. Das passt ohnehin zum
+> Entwurf: Michaeli ist ein Moment im Jahr, kein Dauerzustand.
+
+## 6 — Drei Bitten an den Kern, angenommen
+
+Der Fuhre-Builder hat drei Dinge gemeldet, die im Kern liegen und die kein Stück ändern darf.
+Alle drei sind berechtigt und gehen in die Zwischenwelle:
+
+1. **`vorrat.plaetze` ist mit 90/400 Fass in 1884/1970 zu klein** — Sudgröße mal Lagerzeit
+   passt nicht hinein, weshalb die Reifezeiten auf 2–5 Wochen gekürzt werden mussten. Das ist
+   sachlich falsch: Ein Lagerbier von 1884 reift Monate, nicht Wochen. **Lösung: getrennter
+   Gärkeller (reifendes Bier) neben dem Lagerkeller (lieferbares Bier).** Damit wird aus einer
+   Zahl, die nicht passt, eine Entscheidung, die etwas kostet.
+2. **Es fehlt eine API für `haus.rohstoff`** — die FUHRE zieht ihn beim Sud direkt ab. Solange
+   das so bleibt, kann kein zweites Stück Rohstoff verbrauchen, ohne zu kollidieren.
+3. **`nimmHeraus()` nimmt immer das älteste Fass** — die FUHRE sortiert deshalb vorher um.
+   Der Kern soll die Auswahl entgegennehmen, statt sie zu erraten.

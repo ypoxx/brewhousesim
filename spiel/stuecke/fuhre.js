@@ -298,7 +298,7 @@
     /* Der Notsud laeuft unter dem Etikett des Haendlers und braucht deshalb
        keinen eigenen Regalmeter — er braucht nur ein Regal. Genau darum ist
        er in 1970 der Weg zurueck: kein Name, aber ein Absatz. */
-    if (s && s.not) return gelistet(a);
+    if (s && s.not) return true;
     var l = Z.listung[a.schluessel];
     return !!(l && l[s.k]);
   }
@@ -397,7 +397,11 @@
      LADEN UND ENTLADEN — der eine Handgriff der Woche
      ---------------------------------------------------------------------- */
   function kannLaden(a) {
-    var g = sperre(a);
+    /* Die Sperre wird gegen das Fass geprueft, das wirklich aufgeladen
+       wuerde — nur so kommt der Notsud auch dorthin, wo die Marke des
+       Hauses nicht hindarf. */
+    var f0 = waehleFass(a);
+    var g = sperre(a, f0 ? sorteFass(f0) : null);
     if (g) return g;
     if (geladen() >= wagenPlaetze()) return 'Der Wagen ist voll. ' + B.welt.menge(wagenPlaetze()) + ' und kein Fass mehr.';
     if (geladenFuer(a.schluessel) === 0 && Z.ladung.length >= (frachtstufe() ? ep().wagen.halte : ep().wagen.halte)) {
@@ -773,7 +777,7 @@
        Nachzaehlbar am Bildschirm: die Fassbetten unter dem Haus gegen die
        Faesser im Keller. */
     var liegt = Math.max(keller().length, freieFaesser().length);
-    var l = haeuser().filter(function (a) { return !sperre(a); });
+    var l = haeuser().filter(function (a) { return !sperre(a, notSorte()); });
     if (!l.length) l = haeuser();
     if (l.length) {
       var groesster = l[0];
@@ -834,7 +838,9 @@
       var verkauft = 0, geld = 0;
       for (var i = 0; i < reihenfolge.length; i++) {
         var a = reihenfolge[i];
-        if (sperre(a)) continue;
+        /* Gegen den Notsud geprueft: welches Fass dann wirklich hingeht,
+           entscheidet weiter unten nimmt()/gelistetFuer() je Fass. */
+        if (sperre(a, notSorte())) continue;
         var will = Math.round(jahresbedarf(a) * sommerAnteil / monate.length);
         var gab = 0;
         while (gab < will && vorrat.length) {
@@ -1290,7 +1296,12 @@
       z2.appendChild(B.el('span', 'fu-will', 'will ' + B.welt.menge(will)
         + (hat ? ' · ' + B.welt.menge(hat) + ' geladen' : '')));
 
+      /* grund = was diese Adresse GRUNDSAETZLICH sperrt (Bannmeile, Regal).
+         hemm  = was diese WOCHE dem Laden im Weg steht — und das kann null
+         sein, obwohl grund steht: der Notsud faehrt ohne Regalmeter. Dann
+         stehen beide Knoepfe nebeneinander, der Ausweg und die Loesung. */
       var grund = sperre(a);
+      var hemm = kannLaden(a);
       if (grund && e.bann && a.km > e.bannmeile && !Z.bann[a.schluessel]) {
         var preis = Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr));
         var bk = kerbZusatz(preis);
@@ -1316,8 +1327,8 @@
           titel: e.listung.satz + ' Gelistet würde: ' + s0.name + '.' + kerbTitel(lp),
           tu: function () { liste(a, s0); }
         }));
-      } else {
-        var hemm = kannLaden(a);
+      }
+      if (!grund || (!hemm && !(e.bann && a.km > e.bannmeile && !Z.bann[a.schluessel]))) {
         var kn = B.knopf({
           text: '+ ' + B.welt.menge(e.wagen.schritt), zug: 'fuhre:laden:' + a.schluessel,
           klasse: 'fu-klein fu-laden fu-tat', aus: !!hemm,
