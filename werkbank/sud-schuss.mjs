@@ -12,23 +12,27 @@ seite.on('console', (m) => { if (m.type() === 'error') fehler.push('console: ' +
 await seite.goto(`http://127.0.0.1:8899/spiel/?epoche=${epoche}&saat=7`, { waitUntil: 'networkidle' });
 await seite.waitForTimeout(800);
 
-if (verfahren) {
-  for (const zug of verfahren.split(',')) {
-    const k = await seite.$(`button[data-zug="${zug}"]`);
-    if (k) { await k.click(); await seite.waitForTimeout(150); }
-    else console.log('  Zug nicht gefunden:', zug);
-  }
-}
+const klick = async (wahl, ms = 250) => {
+  const k = await seite.$(wahl);
+  if (!k) { console.log('  nicht da:', wahl); return false; }
+  try { await k.click({ timeout: 4000 }); } catch (e) { console.log('  nicht klickbar:', wahl); return false; }
+  await seite.waitForTimeout(ms);
+  return true;
+};
+
+// Das Brett aufschlagen, ehe darin geklickt wird — zugeklappt sind seine
+// Knoepfe absichtlich gesperrt.
+await klick('button[data-zug="stadt:reiter:sud-sud-brett"]', 500);
+if (verfahren) for (const zug of verfahren.split(',')) await klick(`button[data-zug="${zug}"]`, 200);
+await klick('button[data-zug="stadt:reiter:sud-sud-brett"]', 300);
 for (let w = 0; w < +wochen; w++) {
   const weiter = await seite.$('button[data-zug="weiter"]');
   if (!weiter) break;
   try { await weiter.click({ timeout: 3000 }); } catch { break; }
 }
 await seite.waitForTimeout(300);
-const zumachen = await seite.$('button[data-zug="stadt:alles-zuklappen"]');
-if (zumachen) { await zumachen.click(); await seite.waitForTimeout(250); }
-const reiter = await seite.$('button[data-zug="stadt:reiter:sud-sud-brett"]');
-if (reiter) { await reiter.click(); await seite.waitForTimeout(500); }
+await klick('button[data-zug="stadt:alles-zuklappen"]', 300);
+await klick('button[data-zug="stadt:reiter:sud-sud-brett"]', 600);
 await seite.screenshot({ path: ziel });
 
 console.log(ziel);
