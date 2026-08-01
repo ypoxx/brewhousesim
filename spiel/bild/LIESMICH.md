@@ -98,3 +98,58 @@ erzeugen keine Naht auf freiem Hofboden. Wer eine davon nach vorn stellt, stellt
 sie vorher frei.
 
 Die drei anderen Stücke legen ihr Material unter `fuhre/`, `preis/`, `gegner/` ab.
+
+### Der Boden und der Maßstab (Runde 6)
+
+> **Ein Bild, das keinen Menschen zeigt, hat keinen Maßstab — und wird deshalb
+> zu groß.**
+
+Runde 5 ging unter anderem mit diesem Satz zurück: *„DER ZIEHBRUNNEN IST FÜNF
+METER BREIT."* Nachgemessen am Bildschirm hatte der Kritiker recht: der Kranz maß
+2,4 / 2,9 / 2,5 Körperlängen, und `brunnen` war der einzige Aufbau über drei
+Epochen **ohne** `breiten`-Staffelung. Beide Ursachen sind behoben, und zwar in
+dieser Reihenfolge:
+
+**`brunnen.png` ist neu** (1928×2041). Im Bild stehen jetzt **zwei Frauen** — eine
+am Kranz, eine mit Schulterjoch und zwei Eimern. Sie sind der Maßstab, den man
+nicht wegdiskutieren kann: wer nachmessen will, legt das Lineal an die Frau. Dazu
+`breiten: {1: 6.5, 2: 5.4, 3: 6.2}`, gestaffelt an den Leuten, die der Kritiker
+auf der Bildtiefe des Brunnens gezählt hat (1350: 61 px, 1600: 51, 1884: 58).
+
+Am Bildschirm gemessen, 1350, `?epoche=1`:
+
+| | gemessen | vorher |
+|---|---|---|
+| Frau am Brunnen | **60 px** | — (es war keine im Bild) |
+| Mensch der Platte auf derselben Tiefe | 61 px | 61 px |
+| Kranz außen | **105 px = 1,7 Körperlängen ≈ 2,9 m** | 147 px = 2,4 Kl ≈ 4,1 m |
+
+Die Figuren sitzen damit auf dem Pixel; der Kranz ist von 4,1 m auf 2,9 m
+gefallen und bleibt **das eine Maß, das noch nicht stimmt** — das Zielbild zeigt
+0,9 Körperlängen. Fünf Anläufe mit `gen_image.py` haben den Kranz nicht weiter
+verkleinert; wer es besser kann, zeichnet dieses eine Bild neu, ohne sonst etwas
+anzufassen.
+
+**`laderampe.png` ist neu** (2076×2076) und aus demselben Grund. Sie war leer, und
+der Kritiker hat 1884 blind gegen das Zielbild verloren, weil *„der Hof 1884
+menschenleer"* ist, während im Zielbild 03 zwei Männer Fässer rollen. Jetzt rollen
+zwei Männer ein Faß auf der Kante über die Bohlen und ein dritter schiebt die
+Sackkarre die Treppe herauf. Und weil damit zum ersten Mal ein Maßstab **im** Bild
+steht, fällt auf, daß die Rampe fast doppelt zu groß war: bei `breite` 14 wäre der
+Mann 87 px hoch geworden, neben Leuten der Platte 1884 von 58. Also **9,4 statt
+14** — gemessen 58 px, Rampe rund 7 m lang, was für eine Bahnrampe mit einem Gleis
+stimmt.
+
+Damit stehen in **jeder** der vier Epochen Menschen im Hof: 1350 und 1600 die zwei
+Brauerinnen, der Küfer und die zwei Frauen am Brunnen; 1884 die zwei Frauen und
+die drei Männer an der Rampe; 1970 der Mann mit der Sackkarre am Verladedock und
+der Fahrer auf dem Gabelstapler.
+
+### Das Werkzeug dazu
+
+`werkbank/schuss/stadt-r6/freistellen.py` schneidet ein erzeugtes Bild frei —
+Weiß raus, eingeschlossene Lücken (zwischen Seil, Schwengel und Pfosten) bleiben
+durchsichtig, Rand zwei Reihen leer und acht weich, Kante nachweislich Alpha 0.
+`werkbank/schuss/stadt-r6/fuesse.py` mißt danach die 24 Fußpunkte je Bild neu.
+**Wer ein Hofbild austauscht, läßt beide laufen** — sonst mißt DAS LOT
+(`stuecke/stadt-zusatz.js`) das alte Bild.

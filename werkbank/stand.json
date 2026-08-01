@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T20:20:20+00:00",
+ "stand": "2026-08-01T20:31:22+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -480,6 +480,10 @@
   {
    "zeit": "2026-08-01T20:20:20+00:00",
    "text": "DIE STADT: Runde 6 laeuft. DAS LOT steht — stuecke/stadt-zusatz.js misst bei jedem Zeichnen je Aufbau 24 Fusspunkte gegen die Mauerlinie; ?boden=1 legt Linie, Torfeld und Punkte ins Bild. Kueferei runter vom Hoftor in die Hoftasche, Brunnen neu gezeichnet und je Epoche gestaffelt (Kranz 4,1 m -> 1,8 m), Betonfuss von 1970 vom Torbogen auf den Hofbeton. 44 von 44 stehen auf ihrem Boden."
+  },
+  {
+   "zeit": "2026-08-01T20:31:22+00:00",
+   "text": "DIE STADT: Bilder neu — bild/hof/brunnen.png (zwei Frauen am Kranz als Massstab im Bild; Kranz 4,1 m -> 2,9 m, Frau 60 px neben 61 px der Platte) und bild/hof/laderampe.png (drei Maenner, Mann 58 px; breite 14 -> 9,4, weil das Bild vorher ohne Figur fast doppelt zu gross war). Damit steht in jeder der vier Epochen ein Mensch im Hof."
   }
  ]
 }
