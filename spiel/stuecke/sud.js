@@ -199,19 +199,25 @@
       var raum = frei();
       if (raum <= 0) return 0;
 
-      /* Nach Sortenschluessel gruppieren: ein Sud, ein Bottich. */
+      var w = wirkung();
+
+      /* Nach Sortenschluessel gruppieren: ein Sud, ein Bottich.
+         Ob ein Fass in den Gaerkeller gehoert, entscheiden die GAERWOCHEN
+         des laufenden Verfahrens — nicht allein die Reifezeit der Sorte.
+         Sonst waere 1350 der Gaerkeller ewig leer: Grutbier liegt nicht,
+         gehopftes Bier liegt eine Woche laenger. Genau das ist die
+         Entscheidung dieser Epoche. */
       var gruppen = {};
       for (var i = 0; i < f.length; i++) {
         var x = f[i];
         if (x.sudDurch) continue;                       /* war schon im Gaerkeller */
-        if (!x.reife || x.reife <= 0) continue;         /* sofort lieferbar */
-        if (B.welt.fassAlter(x) >= x.reife) continue;   /* schon reif geworden */
+        var wochen = Math.max(0, (x.reife || 0) + (w.gaer || 0));
+        if (wochen <= 0) continue;                      /* sofort lieferbar */
+        if (B.welt.fassAlter(x) >= wochen) continue;    /* schon reif geworden */
         var g = x.k || x.sorte || 'sud';
         if (!gruppen[g]) gruppen[g] = [];
         gruppen[g].push(x);
       }
-
-      var w = wirkung();
       var notdurft = false;
       for (var g2 in gruppen) {
         if (!Object.prototype.hasOwnProperty.call(gruppen, g2)) continue;
@@ -417,9 +423,16 @@
      DIE GUETE — vier Namen, ein Zeiger
      ====================================================================== */
 
+  /* Die Guete faellt, wenn niemand die Hefe pflegt — aber sie faellt auf
+     einen BODEN und nicht auf null. Ein Brauhaus, das nichts mehr tut, braut
+     schlecht; es hoert nicht auf zu brauen. Ohne den Boden lag die
+     Fehlsudwahrscheinlichkeit nach achtzehn Wochen bei jedem Bottich ueber
+     20 Prozent, und das ist keine Knappheit mehr, sondern eine Wand. */
   function gueteWoche() {
     var w = wirkung();
-    Z.guete = B.grenze(Z.guete - ((D.guete.zerfall || 2) + (w.guetefall || 0)), 0, 100);
+    var boden = D.guete.boden === undefined ? 25 : D.guete.boden;
+    var neu = Z.guete - ((D.guete.zerfall || 2) + (w.guetefall || 0));
+    Z.guete = B.grenze(Math.max(boden, neu), 0, 100);
     if (w.guetepin) Z.guete = Math.max(Z.guete, w.guetepin);
   }
 

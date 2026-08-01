@@ -51,7 +51,7 @@ var SUD_DATEN = {
      Anstich einbringt. In allen vier Epochen dieselbe Kurve — nur ihr Name,
      ihr Verb und ihre Folgen wechseln. Das ist Absicht: die Zahl ist die
      Zahl, die EPOCHE ist der Unterschied. */
-  guete: { start: 70, zerfall: 2, anstichJung: 14, anstichAlt: 6, hoechst: 100 },
+  guete: { start: 70, zerfall: 2, boden: 25, anstichJung: 14, anstichAlt: 6, hoechst: 100 },
 
   epochen: {
 
@@ -94,15 +94,17 @@ var SUD_DATEN = {
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02 } },
             { k: 'sack', name: 'Hopfen im Sack, heimlich', preis: 0, schild: 'ohne Ausgabe',
               satz: 'Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt '
-                  + 'so lang — und der Grutherr hat ein Recht, das man ihm gerade nimmt.',
+                  + 'so lang, muss dafür eine Woche länger im Bottich liegen — und der '
+                  + 'Grutherr hat ein Recht, das man ihm gerade nimmt.',
               warnung: 'Der Grutknecht sieht in die Pfanne, wann er will.',
-              wirkung: { haltbar: 1.7, gaer: 0, roh: 2, mehr: 0, risiko: 0.02, anzeige: 0.11 } },
+              wirkung: { haltbar: 1.7, gaer: 1, roh: 2, mehr: 0, risiko: 0.02, anzeige: 0.11 } },
             { k: 'brief', name: 'Offen gehopft, mit Hopfenbrief', preis: 96, fest: true,
               satz: 'Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. '
-                  + 'Der Grutherr klagt und verliert. Unwiderruflich — der Brief wird nie '
-                  + 'zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.',
+                  + 'Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr '
+                  + 'im Bottich. Unwiderruflich — der Brief wird nie zurückgegeben, und das '
+                  + 'Grutgeld ist danach nicht mehr zu haben.',
               siegel: 'Ratsbrief, gesiegelt',
-              wirkung: { haltbar: 2.0, gaer: 0, roh: 2, mehr: 0, risiko: 0.02 } }
+              wirkung: { haltbar: 2.0, gaer: 1, roh: 2, mehr: 0, risiko: 0.02 } }
           ] }
       ]
     },
