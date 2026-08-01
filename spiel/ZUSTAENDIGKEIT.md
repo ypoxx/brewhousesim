@@ -339,3 +339,50 @@ Zweimal rufen schadet nicht; das erste Ende gilt.
 **Für Welle 2 vorgemerkt:** Das Nachspiel — Chronik des Hauses, Generationenzeile,
 Neuanfang — gehört **DAS ERBE**, nicht der FUHRE. Die FUHRE baut jetzt nur das Anhalten und
 ein schlichtes Schlussblatt; DAS ERBE übernimmt es später.
+
+## 13 — Die frühen Epochen sind nicht geeicht, und das gehört nicht einem Stück allein
+
+**Vorgetragen von:** dem Kritiker von DER PREIS, Runde 1 — im selben Atemzug, in dem er das
+Stück **bestehen** ließ.
+**Entschieden:** Das Bestehen bleibt. Die Lücke wandert in die Glättung, mit einer Zahl daran.
+
+Der Befund, gemessen und nicht behauptet: In **13 von 20** durchgeklickten Michaeli-Blättern
+stand *„HEUTE NICHT — Die Kasse reicht für keines dieser Angebote"*. In Epoche I und II war
+über dreizehn Blätter hinweg **kein einziger der 49 Festlegungs-Knöpfe je aktiv** (E1: Kasse
+112 Pf gegen die billigste Festlegung 150 Pf; E2: 640 fl gegen 780 fl), während dieselbe
+Wahl in E3 und E4 schon im ersten Klick zu haben ist. Die gemessene Leiter in E1 lautet
+3,39× / −0,18× / −0,36× / −0,54× / −0,68× / −0,80× / −0,90×; in E4 dagegen
+3,44× / 5,30× / 4,41× / 3,20× / 1,48×.
+
+Das heißt im Klartext: **Die unwiderrufliche Entscheidung — das Herzstück dieses Stücks —
+existiert in 1350 und 1600 nur als graue Fläche.** Latte 2 ist damit dem Buchstaben nach
+erfüllt (Angebote nebeneinander, mit Preisschild, einander ausschließend) und dem Sinn nach
+in zwei von vier Epochen nicht.
+
+### Warum ich es trotzdem bestehen lasse
+
+Weil der Fehler nicht in DEM PREIS sitzt. Die Preise der Sprossen macht DER PREIS; das
+Einkommen der frühen Jahre macht DIE FUHRE; und DIE RECHNUNG frisst in E1 mit −73 Pf im Jahr
+die Startkasse von 112 Pf, bevor das billigste eigene Angebot (33 Pf) überhaupt erreichbar
+ist. Wer das einem Builder allein aufträgt, bekommt die Zahlen des anderen gegen sich —
+dieselbe Konstellation wie beim Abgabendeckel in §4.
+
+### Die Auflage an die Glättung, mit einer Zahl
+
+> **In jeder der vier Epochen muss innerhalb der ersten drei Braujahre mindestens eine
+> unwiderrufliche Festlegung tatsächlich anklickbar werden** — nachgewiesen am Bildschirm,
+> nicht im Datenblatt. Und die Leiter darf in keiner Epoche negativ werden: Wo E1
+> −0,18× bis −0,90× steht, ist die Kasse leer und bleibt es.
+
+Zwei Wege stehen offen, beide zulässig: eine unterste Sprosse je Jahr, die an der
+tatsächlichen Barschaft hängt (die Ratenzahlung *„von 94 Pf — dann 1 × 52 Pf"* gibt es
+bereits, sie erscheint in E1/E2 nur nie am unteren Ende), oder die Jahresrechnung der
+Frühepochen gegen die Startkasse eichen. **Wer eicht, meldet die neue Zahl** — sonst
+verschiebt der eine, was der andere gerade festgezurrt hat.
+
+### Nebenbefund, klein und schnell behoben
+
+Die einzige in 1970 sofort erreichbare Festlegung — *„Liefervertrag mit der
+Nordstern-Gruppe"* — trägt als Preisschild **„ohne Ausgabe"** und zahlte beim Klick
+86.000 → 175.000 DM **aus**. Die stärkste unwiderrufliche Wahl des Blattes ist damit die
+einzige ohne Zahl auf dem Schild. Gehört DEM PREIS, in `preis-daten.js`.

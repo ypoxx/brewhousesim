@@ -230,8 +230,12 @@ var STADT_DATEN = {
       sagt: 'Hopfen im Sack, trocken und dunkel. Erst mit dem Hopfen haelt Bier eine Reise aus.',
       nutzen: { rohstoff: 60 } },
 
+    /* Stand bis Runde 2 auf (30|81) — im Hof von 1600 ist das jenseits der
+       Hofmauer auf der Gasse, und weil es dabei am naechsten an der Kamera
+       lag, deckte es die halbe Hofraute. Jetzt im Hof, in der Groesse der
+       Platte 1600. */
     { schluessel: 'waschhaus', name: 'Waschhaus', bild: 'waschhaus',
-      ort: 'hof', dx: -3, dy: 19, breite: 13, von: 2, bis: 2, grund: 32,
+      ort: 'hof', dx: -9, dy: 6, breite: 9.4, von: 2, bis: 2, grund: 32,
       sagt: 'Heisses Wasser fuer Fass und Bottich. Sauberkeit ist die halbe Haltbarkeit.',
       nutzen: {}, wirkt: 'das Fass bleibt sauber' },
 

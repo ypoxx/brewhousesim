@@ -133,6 +133,32 @@ var FUHRE_DATEN = {
     ]
   },
 
+  /* ----------------------------------------------------------------------
+     DER NEUE WIRT. Ein Zug, der ohne den Spieler geschieht: eine Adresse,
+     die das Haus vor Jahren aufgegeben hat, fragt von selbst wieder an.
+     Wirte sterben, Pachten wechseln, Erben haben keine Gewohnheit. Das
+     passiert nur, solange das Haus ueberhaupt noch liefert — ein Brauhaus,
+     von dem niemand mehr etwas hat, fragt auch niemand.
+     ---------------------------------------------------------------------- */
+  neuerWirt: {
+    1: [
+      'Der alte Wirt im {wirt} ist tot. Sein Eidam fragt am Tor, ob das Haus noch braut.',
+      'Im {wirt} sitzt eine neue Wirtin. Sie hat mit dem Adler nichts abgemacht.'
+    ],
+    2: [
+      'Die Pacht am {wirt} ist neu vergeben. Der Wirt fragt bei der Zunft nach dem Anker.',
+      'Der {wirt} hat den Wirt gewechselt. Der neue kennt das Braunbier des Hauses von früher.'
+    ],
+    3: [
+      '{wirt} hat einen neuen Pächter. Er schreibt: "Ihr Lagerbier, wenn es das noch gibt."',
+      'Beim {wirt} ist der Vertrag mit dem Adler ausgelaufen. Der Wirt fragt nach Preisen.'
+    ],
+    4: [
+      'Einkauf {wirt}: neue Leitung. Sie fragt an, ob der Anker noch liefern kann.',
+      '{wirt} hat den Lieferanten gewechselt und fragt nach einem Angebot des Hauses.'
+    ]
+  },
+
   /* ====================================================================== */
 
   epochen: {
@@ -261,6 +287,17 @@ var FUHRE_DATEN = {
       abgabe: { satz: 0.08, name: 'Ungeld und Zunftbeitrag',
                 sagt: 'Der Stadt das Ungeld, der Zunft den Beitrag. Beides nach Ausstoß.' },
       bannmeile: 0,
+      probe: { name: 'Freifass an den Wirt', kurz: 'Freifass',
+               satz: 'Ein Fass ohne Rechnung, mit dem Zeichen der Zunft am Boden. '
+                   + 'Die Ordnung erlaubt es als Probe und rechnet es nicht auf die Reihe an. '
+                   + 'Es kostet keinen Gulden — es kostet den Fassplatz und den Halt.',
+               zurueck: 'Beim {wirt} steht wieder ein Fass des Hauses im Keller. '
+                      + 'Der Wirt hat es der Zunft angezeigt, wie es sich gehört.' },
+      frist: { wochen: 12, wer: 'die Zunft',
+               satz: 'Die Reihe wird unter denen geteilt, die liefern. Wer ein Jahr lang '
+                   + 'keinen Abnehmer hat, wird aus der Reihe gestrichen.',
+               ende: 'Die Zunft streicht das Haus zum Anker aus der Reihe: seit zwölf Wochen '
+                   + 'hat kein Wirt der Stadt ein Fass genommen. Wer nicht liefert, braut nicht.' },
       kerbholz: {
         name: 'Anschrift bei Mälzer und Böttcher', kurz: 'Anschrift', zeichen: 'Kerbe',
         jeKerbe: 80, kerben: 6,
@@ -345,6 +382,18 @@ var FUHRE_DATEN = {
       abgabe: { satz: 0.08, name: 'Biersteuer und Malzaufschlag',
                 sagt: 'Seit 1879 wird das Malz besteuert. Wer mehr einbraut, zahlt mehr.' },
       bannmeile: 0,
+      probe: { name: 'Probefass ab Rampe', kurz: 'Probefass',
+               satz: 'Ein Muster geht als Frachtgut an den Wirt, unberechnet. '
+                   + 'Die Bahn nimmt es wie jedes andere Fass — die Stufe zahlt das Haus, '
+                   + 'das Bier verschenkt es.',
+               zurueck: '{wirt} bestellt wieder beim Anker. Der Wirt schreibt: '
+                      + '"Das Muster war in Ordnung. Schicken Sie wie früher."' },
+      frist: { wochen: 10, wer: 'der Malzhändler',
+               satz: 'Ein Betrieb ohne Absatz bekommt kein Malz mehr auf Wechsel. '
+                   + 'Die Kältemaschine läuft weiter, der Keller füllt sich, und die '
+                   + 'Rampe bleibt leer.',
+               ende: 'Der Malzhändler kündigt die Wechsel, die Bank zieht die Linie ein: '
+                   + 'seit zehn Wochen geht kein Fass über die Rampe. Ein Lager ist kein Absatz.' },
       kerbholz: {
         name: 'Wechsel beim Malzhändler', kurz: 'Wechsel', zeichen: 'Wechsel',
         jeKerbe: 900, kerben: 6,
@@ -421,6 +470,18 @@ var FUHRE_DATEN = {
       abgabe: { satz: 0.08, name: 'Biersteuer und Werbeetat',
                 sagt: 'Steuer nach Ausstoß, Werbung nach Marktanteil am eigenen Ausstoß. '
                     + 'Beides wächst mit dem Haus.' },
+      probe: { name: 'Aktionspalette ohne Berechnung', kurz: 'Aktionsware',
+               satz: 'Gratisware für den Einkauf: eine Palette ohne Rechnung, ohne Listung, '
+                   + 'ohne Werbekostenzuschuss. Das Regal gehört immer noch dem Handel — '
+                   + 'aber eine Palette, die schon im Lager steht, wird auch verkauft.',
+               zurueck: 'Einkauf {wirt} listet den Anker wieder ein. Der Gebietsleiter meldet: '
+                      + '"Die Aktionsware ist durchgelaufen. Sie nehmen uns wieder."' },
+      frist: { wochen: 8, wer: 'der Handel',
+               satz: 'Ohne einen einzigen Abnehmer fällt das Haus aus dem Sortiment, '
+                   + 'aus dem Tourenplan und aus der Preisliste. Volle Tanks sind kein Markt.',
+               ende: 'Der Handel nimmt das Brauhaus zum Anker aus dem Sortiment: seit acht '
+                   + 'Wochen hat kein Einkauf mehr bestellt. Die Tanks sind voll und '
+                   + 'niemand ruft an.' },
       listung: { name: 'Listung', basis: 2600, staffel: 1.22,
                  satz: 'Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. '
                      + 'Zu Georgi fällt sie, wenn nichts geliefert wurde.' },
