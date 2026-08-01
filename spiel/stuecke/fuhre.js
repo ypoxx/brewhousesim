@@ -1762,12 +1762,12 @@
        Hopfenlagerbau vorzuschlagen. Was wirklich zu tun ist, steht gross auf
        dem Brett DIE HÄUSER. */
     if (B.welt.zeit.ende) {
-      B.welt.meldeZug('kein Zug mehr — das Haus ist zu', 0);
+      B.welt.meldeZug('kein Zug mehr — das Haus ist zu', 0, 'beiwerk');
       return;
     }
     if (!haeuser().length) {
       var pd1 = probeDef();
-      B.welt.meldeZug(pd1 ? pd1.name + ' — ohne Rechnung' : 'Ein Fass verschenken', 0);
+      B.welt.meldeZug(pd1 ? pd1.name + ' — ohne Rechnung' : 'Ein Fass verschenken', 0, 'adresse');
       return;
     }
 
@@ -1776,7 +1776,7 @@
         return a.km > e.bannmeile && !Z.bann[a.schluessel];
       });
       if (offen.length) {
-        B.welt.meldeZug('Bannbrief', Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr)));
+        B.welt.meldeZug('Bannbrief', Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr)), 'bindung');
         return;
       }
     }
@@ -1785,7 +1785,7 @@
       if (ohne.length) {
         var n = 0;
         for (var k in Z.listung) for (var q in Z.listung[k]) if (Z.listung[k][q]) n++;
-        B.welt.meldeZug('Regalmeter', Math.round(e.listung.basis * Math.pow(e.listung.staffel, n)));
+        B.welt.meldeZug('Regalmeter', Math.round(e.listung.basis * Math.pow(e.listung.staffel, n)), 'adresse');
         return;
       }
     }
@@ -1793,9 +1793,18 @@
     (e.kaeufe || []).forEach(function (def) {
       if (def.k === 'rohstoff' || def.k === 'eis') return;
       var p = staffelPreis(def.k, def.basis, def.staffel);
-      if (!bester || p < bester.preis) bester = { was: def.text.split(' ·')[0], preis: p };
+      if (!bester || p < bester.preis) {
+        bester = { was: def.text.split(' ·')[0], preis: p,
+                   art: (def.k === 'fass' ? 'fass' : (def.k === 'budget' ? 'bau' : 'rohstoff')) };
+      }
     });
-    if (bester) B.welt.meldeZug(bester.was, bester.preis);
+    /* DRITTES ARGUMENT: die Art des Zuges (ZUSTAENDIGKEIT 18). Der Kern kennt
+       es heute noch nicht und ignoriert es folgenlos; sobald er den Nenner der
+       zweiten Latte auf „der billigste Zug, der die Lage des Hauses aendert"
+       umstellt, zaehlt dieses Stueck von selbst richtig mit. Ein Kauf, der
+       Rohstoff oder Faesser bewegt, ist Lage; ein Probefass ist eine Adresse;
+       ein Bannbrief ist eine Bindung.  KERN-Eintrag ist gestellt. */
+    if (bester) B.welt.meldeZug(bester.was, bester.preis, bester.art);
   }
 
   /* ======================================================================
