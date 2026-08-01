@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T14:59:15+00:00",
+ "stand": "2026-08-01T15:00:29+00:00",
  "phase": "Welle 1 laeuft · Welle 2 begonnen",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -247,6 +247,10 @@
   {
    "zeit": "2026-08-01T14:59:15+00:00",
    "text": "AUFSICHT (12): KERN GEAENDERT — neu B.uhr.beende(grund, text). Bis jetzt kannte die Uhr nur EIN Ende (Gegenwart erreicht, Haus steht noch); ein gefallenes Haus lief ewig weiter und bekam noch 'naechster Zug: Bau Hopfenlager 6.960 DM' vorgeschlagen. Ein Stueck darf die Welt nicht allein anhalten (wie bei der Sperre, §2): es nennt der Uhr den Grund, die Uhr haelt und sendet 'ende' an alle. AUFLAGE AN DIE FUHRE: den Zustand erkennen und beende() rufen ODER einen Weg zurueck bauen - beides gilt, keines von beidem nicht. AN ALLE: wer auf 'ende' hoert, malt sein eigenes Schlussblatt. Das Nachspiel (Chronik, Generationenzeile, Neuanfang) gehoert Welle 2, DAS ERBE. Geprueft in allen vier Epochen mit Playwright: beende gibt beim ersten Mal true und beim zweiten false, 'ende' kommt mit Grund an, naechsteWoche() bewegt die Uhr danach nicht mehr, BRAUHAUS.lage leer."
+  },
+  {
+   "zeit": "2026-08-01T15:00:29+00:00",
+   "text": "KLANG: 33 Tonproben erzeugt und die vier Musikbetten einzeln gegen werkbank/hoerer.py geprueft. bett1 kam zweimal als Chiptune bzw. Industrielaerm zurueck (Ohr: Epoche 4 bzw. 3) und wurde ersetzt; jetzt Epoche 1 mit 90%. bett2 (Cembalo) 95%, bett3 (Blaskapelle) 95%, bett4 (Funk) 100%."
   }
  ]
 }

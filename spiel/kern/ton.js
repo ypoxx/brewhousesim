@@ -70,6 +70,20 @@
   var BETT = je('bett1', 'bett2', 'bett3', 'bett4');
   var HOF = je('hof1', 'hof2', 'hof3', 'hof4');
 
+  /* Was vorn und hinten von einer Schleife wegbleibt. Nicht Kosmetik:
+     bett4 haengt am Ende einen kurzen Signalton an, den das pruefende Ohr
+     ungefragt als "modern, nicht 1970" geruegt hat. Er wird nie gespielt. */
+  var SCHNITT = {
+    bett1: [0.8, 1.5], bett2: [0.8, 1.5], bett3: [0.8, 1.5], bett4: [0.8, 5.5],
+    hof1: [0.3, 0.8], hof2: [0.3, 0.8], hof3: [0.3, 0.8], hof4: [0.3, 0.8]
+  };
+  function schnitt(datei, buf) {
+    var s = SCHNITT[datei] || [0.05, 0.2];
+    var von = Math.min(s[0], buf.duration * 0.1);
+    var bis = Math.max(von + 1, buf.duration - s[1]);
+    return { von: von, bis: bis };
+  }
+
   /* datei: Datei ohne Endung (oder Funktion der Epoche)
      ersatz: Ersatzklang, wenn keine Datei da ist oder sie noch nicht geladen
      laut: relativ zum Werk-Pegel                                          */
@@ -352,19 +366,23 @@
     return w;
   }
 
-  /* Eine Schleife (Bett oder Hof) mit weichem Ein- und Ausblenden. */
-  function legeSchleife(w, bus, buf, wann, dauer, blende) {
+  /* Eine Schleife (Bett oder Hof) mit weichem Ein- und Ausblenden.
+     versatz: wo im Band angefangen wird — damit vier Epochen nicht viermal
+     denselben Musikanfang zeigen. */
+  function legeSchleife(w, bus, buf, wann, dauer, blende, datei, versatz) {
     var ctx = w.ctx;
+    var f = schnitt(datei, buf);
     var q = ctx.createBufferSource();
     q.buffer = buf;
     q.loop = true;
-    q.loopStart = Math.min(0.2, buf.duration * 0.02);
-    q.loopEnd = Math.max(q.loopStart + 0.5, buf.duration - 0.2);
+    q.loopStart = f.von;
+    q.loopEnd = f.bis;
     var g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, wann);
     g.gain.linearRampToValueAtTime(1, wann + (blende || 1.2));
     q.connect(g); g.connect(w.bus[bus]);
-    q.start(wann, 0);
+    var ab = f.von + ((versatz || 0) % Math.max(0.5, f.bis - f.von));
+    q.start(wann, ab);
     if (dauer) q.stop(wann + dauer + 0.2);
     return { quelle: q, gain: g };
   }
