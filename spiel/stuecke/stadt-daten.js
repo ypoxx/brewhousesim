@@ -301,7 +301,7 @@ var STADT_DATEN = {
     kesselhaus: [0.7432, 0.7659, 0.787, 0.8097, 0.8308, 0.8535, 0.8761, 0.8988, 0.9199, 0.9426, 0.9637, 0.9864, 0.9789, 0.9441, 0.9139, 0.9275, 0.9502, 0.9713, 0.9909, 0.9909, 0.9758, 0.8625, 0.8822, 0.8822],
     kontor: [0.5096, 0.8511, 0.8678, 0.8845, 0.9024, 0.9191, 0.9358, 0.9525, 0.9692, 0.9884, 0.9923, 0.9923, 0.9782, 0.9628, 0.9461, 0.932, 0.9461, 0.9512, 0.9422, 0.923, 0.9063, 0.8293, 0.8126, 0.4763],
     kueferei: [0.7976, 0.8065, 0.8274, 0.8408, 0.8408, 0.8304, 0.9747, 0.9792, 0.7738, 0.7307, 0.9062, 0.9077, 0.9167, 0.9196, 0.9167, 0.8705, 0.8185, 0.8051, 0.8214, 0.8199, 0.689, 0.689, 0.692, 0.2351],
-    laderampe: [0.9165, 0.9383, 0.9589, 0.9794, 0.9923, 0.9923, 0.9756, 0.955, 0.9319, 0.9113, 0.8895, 0.8676, 0.8445, 0.8239, 0.8021, 0.7802, 0.7596, 0.7365, 0.7147, 0.6941, 0.6722, 0.6504, 0.6285, 0.6067],
+    laderampe: [0.9181, 0.9933, 0.9933, 0.9933, 0.9933, 0.9933, 0.9812, 0.9595, 0.9379, 0.9162, 0.8945, 0.8733, 0.8516, 0.83, 0.8083, 0.7871, 0.7649, 0.7433, 0.7216, 0.7004, 0.6782, 0.6566, 0.6349, 0.6127],
     maelzerei: [0.8802, 0.8479, 0.9149, 0.9149, 0.8892, 0.9021, 0.9162, 0.942, 0.991, 0.9923, 0.9781, 0.9832, 0.9871, 0.9781, 0.9665, 0.942, 0.9369, 0.9291, 0.9175, 0.9046, 0.893, 0.8802, 0.8673, 0.8544],
     malzboden: [0.9486, 0.9473, 0.9306, 0.9923, 0.9897, 0.9704, 0.9254, 0.9319, 0.9293, 0.9165, 0.982, 0.9923, 0.9923, 0.9846, 0.955, 0.9434, 0.9229, 0.901, 0.8959, 0.8535, 0.8368, 0.8226, 0.8162, 0.3586],
     maschinenhaus: [0.8788, 0.8896, 0.8788, 0.9724, 0.9908, 0.9908, 0.9724, 0.9494, 0.9264, 0.8405, 0.8696, 0.885, 0.8773, 0.8543, 0.9248, 0.9279, 0.7745, 0.7531, 0.7316, 0.7086, 0.7117, 0.7316, 0.7423, -1],
@@ -562,9 +562,23 @@ var STADT_DATEN = {
        ist Mauer. Die Rampe geht deshalb 70 px (4,6 Prozent der Buehnenhoehe)
        nach hinten in den Hof, wo ihre Stufen auf Hofboden aufsetzen; ihr
        tiefster undurchsichtiger Punkt liegt danach ueber der Mauerlinie. */
+    /* RUNDE 6, das Bild neu — und aus demselben Grund wie der Brunnen.
+       Der Kritiker hat 1884 blind gegen das Zielbild verloren, unter anderem
+       hiermit: "der Hof 1884 ist menschenleer ... waehrend im Zielbild 03
+       zwei Maenner Faesser rollen." Auf dieser Rampe stand ein Rollwagen mit
+       zwei Faessern und sonst nichts.
+       Jetzt rollen ZWEI MAENNER ein Fass auf der Kante ueber die Bohlen und
+       ein dritter schiebt die Sackkarre die Treppe herauf. Und weil damit
+       zum ersten Mal ein Massstab IM Bild steht, faellt auf, dass die Rampe
+       fast doppelt zu gross war: bei breite 14 waere der Mann 87 px hoch
+       geworden, neben Leuten der Platte 1884 von 58. Also 9,4 statt 14 —
+       gemessen 58 px, und die Rampe ist damit rund 7 m lang, was fuer eine
+       Bahnrampe mit einem Gleis stimmt. Der Fusspunkt wandert entsprechend
+       nach hinten, sonst haengt die kleinere Rampe ueber der Mauer. */
     { schluessel: 'laderampe', name: 'Laderampe', bild: 'laderampe',
-      ort: 'rampe', dx: 5, dy: -2.6, breite: 14, von: 3, bis: 3, grund: 60,
-      sagt: 'Auf Wagenhöhe. Erst mit der Bahn lohnt sich, was hier verladen wird.',
+      ort: 'rampe', dx: 3, dy: -5, breite: 9.4, von: 3, bis: 3, grund: 60,
+      sagt: 'Auf Wagenhöhe, mit Gleis und Vordach. Zwei Mann rollen ein Fass, '
+          + 'einer schiebt die Sackkarre — erst mit der Bahn lohnt sich das.',
       nutzen: {}, wirkt: 'Verladen auf Wagenhöhe' },
 
     { schluessel: 'maschinenhaus', name: 'Maschinenhaus', bild: 'maschinenhaus',
