@@ -720,8 +720,10 @@
     B.leere(f);
     var e = epd();
 
-    /* Das Zeichen des Hauses sitzt auf der Platte, nicht daneben. */
-    if (versprechen()) {
+    /* Das Zeichen des Hauses sitzt auf der Platte, nicht daneben.
+       Gezeigt wird GENAU der Traeger, den das Bild darstellt (e.bildWenn) —
+       ein Etikett klebt am Fass und steht nicht in der Stadt. */
+    if (laeuft(traeger(e.bildWenn))) {
       var haupt = zeichenBild('nm-haupt', e.breite);
       setzeMarke(haupt, e.ort, { anker: 'unten', dx: e.versatz.dx, dy: e.versatz.dy });
       haupt.title = e.medium + ' — das Zeichen des Hauses, Ruf ' + ruf() + ' von 100.';
@@ -733,7 +735,7 @@
         B.welt.adressenJetzt().forEach(function (a) {
           if (!Z.schilder[a.schluessel] || a.ort === e.ort) return;
           if (!B.orte.da(a.ort)) return;
-          var s = zeichenBild('nm-neben', e.breite * 0.55);
+          var s = zeichenBild('nm-neben', e.breite * 0.85);
           setzeMarke(s, a.ort, { anker: 'unten', dy: -5 });
           s.title = 'Ankerschild bei ' + a.name + '.';
           f.appendChild(s);
@@ -747,7 +749,7 @@
       if (g) {
         var ort = B.welt.gegnerOrt(g);
         if (B.orte.da(ort)) {
-          var n = zeichenBild('nm-nachgeahmt', e.breite * 0.62);
+          var n = zeichenBild('nm-nachgeahmt', e.breite * 0.8);
           setzeMarke(n, ort, { anker: 'unten', dy: -6, dx: 2 });
           n.title = B.welt.gegnerName(g) + ' ' + D.nachahmung[ep()].was + '.';
           f.appendChild(n);
@@ -1141,15 +1143,19 @@
       /* Ein Haus von 1350 hat schon einen Namen; ein Haus von 1970 hat einen
          Ruf, den seine Vorfahren gebaut haben. Das ist die Ausgangslage,
          nicht das Verdienst des Spielers — DAS ERBE nimmt sie spaeter. */
-      Z.bekannt = [4, 12, 26, 41][e - 1];
+      Z.bekannt = [18, 27, 41, 53][e - 1];
       Z.deckung = [55, 58, 60, 62][e - 1];
       Z.adlerRuf = [7, 12, 22, 34][e - 1];
       Z.kieserWoche = B.wuerfel.ganz(4, 14);
-      if (e === 1) Z.zeiger = true;                   /* 1350 haengt der Zeiger */
+
+      /* Was die Vorfahren hinterlassen haben. Es traegt genau EIN Braujahr:
+         Ende des Jahres laeuft es aus und muss entschieden werden. */
+      if (e === 1) Z.zeiger = true;                     /* der Zeiger haengt */
+      if (e === 2) Z.schilder.lindenhof = jahr();       /* ein geerbtes Schild */
       if (e >= 2) Z.fest.zunftzeichen = jahr() - 40;
       if (e >= 3) { Z.fest.krug = jahr() - 90; Z.krugAb = jahr() - 78; }
-      if (e >= 3) Z.lauf.etikett = jahr();
-      if (e >= 4) Z.lauf.kronkorken = jahr();
+      if (e === 3) { Z.lauf.etikett = jahr(); Z.lauf.saeule = jahr(); }
+      if (e === 4) { Z.lauf.kronkorken = jahr(); Z.lauf.bande = jahr(); }
       Z.register.push({
         jahr: jahr(), woche: woche(), wer: 'Das Haus', art: 'anfang', gewicht: 0,
         erloschen: false, erloschDurch: 0, loeschte: 0,

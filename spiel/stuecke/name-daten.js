@@ -44,8 +44,9 @@ var NAME_DATEN = (function () {
           + 'Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal.',
         ort: 'sudhaus',
         bild: 'zeiger1.png',
-        breite: 12,
-        versatz: { dx: -2, dy: -13 }
+        bildWenn: 'zeiger',
+        breite: 6.5,
+        versatz: { dx: 0.5, dy: -1 }
       },
       2: {
         jahr: 1600,
@@ -59,8 +60,9 @@ var NAME_DATEN = (function () {
           + 'an einen Wirt, dem man nichts befehlen kann.',
         ort: 'lindenhof',
         bild: 'schild2.png',
-        breite: 9,
-        versatz: { dx: -4, dy: -7 }
+        bildWenn: 'schild',
+        breite: 2.4,
+        versatz: { dx: -2.5, dy: 8 }
       },
       3: {
         jahr: 1884,
@@ -75,8 +77,9 @@ var NAME_DATEN = (function () {
           + 'jemand nachdrucken.',
         ort: 'marktplatz',
         bild: 'saeule3.png',
-        breite: 4.2,
-        versatz: { dx: 4, dy: -3 }
+        bildWenn: 'saeule',
+        breite: 1.4,
+        versatz: { dx: -1, dy: 6 }
       },
       4: {
         jahr: 1970,
@@ -89,10 +92,11 @@ var NAME_DATEN = (function () {
           + 'welches schmeckt. Niemand im Haus kann daran etwas drehen.',
         satz: 'Der Etat laeuft jedes Jahr neu ab. Und was der Spot verspricht, muss im '
           + 'Kasten sein — sonst hat man teuer dafuer bezahlt, dass es alle merken.',
-        ort: 'wohnblock',
+        ort: 'strasse',
         bild: 'tafel4.png',
-        breite: 13,
-        versatz: { dx: 2, dy: -9 }
+        bildWenn: 'bande',
+        breite: 5.5,
+        versatz: { dx: -1, dy: -3 }
       }
     },
 
