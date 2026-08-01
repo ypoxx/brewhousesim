@@ -23,17 +23,21 @@
      auf den Vorwurf "vier Tapeten": in jeder Epoche tut man etwas anderes.
      ---------------------------------------------------------------------- */
   var EPOCHEN = [
+    /* 'lager' ist der Name, unter dem der Vorrat in der Kopfleiste steht.
+       Er muss zu dem Brett passen, das denselben Vorrat zeigt (DIE FUHRE:
+       DER KELLER · DAS GEWÖLBE · DER EISKELLER · DIE TANKS) — sonst heisst
+       dieselbe Sache oben anders als unten. Glaettung Welle 1. */
     { nr: 1, name: 'Das Recht',   verb: 'ueberleben', von: 1350, bis: 1516, schaujahr: 1350,
-      rohstoff: 'Grut',   sorte: 'Grutbier',  haltbar: 5,
+      rohstoff: 'Grut',   sorte: 'Grutbier',  haltbar: 5, lager: 'Keller',
       sagt: 'Ein Kessel, ein Braurecht, eine Stadt. Bier verdirbt in Tagen.' },
     { nr: 2, name: 'Die Ordnung', verb: 'besitzen',   von: 1517, bis: 1799, schaujahr: 1600,
-      rohstoff: 'Hopfen', sorte: 'Braunbier', haltbar: 9,
+      rohstoff: 'Hopfen', sorte: 'Braunbier', haltbar: 9, lager: 'Gewölbe',
       sagt: 'Reinheitsgebot, Zunft, Sommerbrauverbot. Vom Pächter zum Eigentümer.' },
     { nr: 3, name: 'Die Maschine', verb: 'skalieren', von: 1800, bis: 1913, schaujahr: 1884,
-      rohstoff: 'Hopfen', sorte: 'Lagerbier', haltbar: 22,
+      rohstoff: 'Hopfen', sorte: 'Lagerbier', haltbar: 22, lager: 'Eiskeller',
       sagt: 'Dampf, Bahn, Kältemaschine. Aus dem Betrieb wird ein Unternehmen.' },
     { nr: 4, name: 'Die Marke',   verb: 'bedeuten',   von: 1914, bis: 2025, schaujahr: 1970,
-      rohstoff: 'Hopfen', sorte: 'Pilsner',   haltbar: 40,
+      rohstoff: 'Hopfen', sorte: 'Pilsner',   haltbar: 40, lager: 'Tanks',
       sagt: 'Menge zählt weniger als Identität. Wer nur billig wurde, hat nichts in der Hand.' }
   ];
 

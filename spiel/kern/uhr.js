@@ -90,9 +90,9 @@
      Monatsnamen. In Epoche I und II die alten deutschen — das ist der
      billigste und deutlichste Epochenunterschied, den die Kopfleiste hat.
      ---------------------------------------------------------------------- */
-  var MONAT_ALT = ['Jaenner', 'Hornung', 'Lenzing', 'Ostermond', 'Wonnemond', 'Brachet',
+  var MONAT_ALT = ['Jänner', 'Hornung', 'Lenzing', 'Ostermond', 'Wonnemond', 'Brachet',
                    'Heuert', 'Ernting', 'Scheiding', 'Gilbhart', 'Nebelung', 'Christmond'];
-  var MONAT_NEU = ['Januar', 'Februar', 'Maerz', 'April', 'Mai', 'Juni',
+  var MONAT_NEU = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
                    'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
   var TAG_JE_WOCHE = 7;

@@ -53,7 +53,14 @@
     leiste.appendChild(tafel(d.monat.toUpperCase(), d.jahr));
     leiste.appendChild(tafel('Kasse', B.welt.geld(B.welt.haus.kasse)));
     leiste.appendChild(tafel(e.rohstoff, B.zahl(B.welt.haus.rohstoff)));
-    leiste.appendChild(tafel('Keller', B.welt.vorrat.faesser.length + '/' + B.welt.vorrat.plaetze));
+    /* GLAETTUNG WELLE 1: Die Kopfleiste hat den Vorrat in Fass gezaehlt,
+       waehrend das Brett desselben Vorrats ihn ab 1872 in Hektoliter zeigt —
+       "KELLER 140/400" oben, "DIE TANKS 210 von 600 hl" unten, dieselbe
+       Menge in zwei Einheiten unter zwei Namen. Beides kommt jetzt aus
+       B.welt.menge(), dem einen Formatierer des Kerns, und der Name des
+       Lagers wechselt mit der Epoche wie der Name des Rohstoffs daneben. */
+    leiste.appendChild(tafel(e.lager || 'Keller',
+      B.welt.menge(B.welt.vorrat.faesser.length, true) + '/' + B.welt.menge(B.welt.vorrat.plaetze)));
     leiste.appendChild(tafel('Woche', z.woche + '/' + B.uhr.WOCHEN_IM_JAHR));
     leiste.appendChild(tafelKnopf('Chronik', B.welt.chronik.length, 'kern:chronik', function () {
       zeigeBlatt(blattOffen === 'chronik' ? null : 'chronik');
@@ -84,7 +91,7 @@
       anker: 'rechts',
       aus: !!z.ende,
       titel: letzte
-        ? 'Georgi. Das Braujahr endet, der Sommer laeuft ohne Hand durch.'
+        ? 'Georgi. Das Braujahr endet, der Sommer läuft ohne Hand durch.'
         : 'Eine Woche weiter. Woche ' + z.woche + ' von ' + B.uhr.WOCHEN_IM_JAHR + '.',
       tu: function () {
         B.ton.spiele('uhr:woche');
@@ -121,7 +128,7 @@
       + 'background:rgba(255,248,230,.75);padding:calc(var(--s)*4) calc(var(--s)*10);'
       + 'border-radius:calc(var(--s)*4);white-space:nowrap;';
     w.setAttribute('data-deckung', B.rund(deckung, 2));
-    w.textContent = 'naechster Zug: ' + B.welt.naechsterZug.was + ' — '
+    w.textContent = 'nächster Zug: ' + B.welt.naechsterZug.was + ' — '
       + B.welt.geld(B.welt.naechsterZug.preis)
       + '  (Kasse reicht ' + B.zahl(deckung, 1) + '×)';
     fach.appendChild(w);
@@ -141,7 +148,7 @@
     blatt.setAttribute('data-blatt', welches);
 
     var zu = B.knopf({
-      text: 'Schliessen', zug: 'kern:blatt-zu',
+      text: 'Schließen', zug: 'kern:blatt-zu',
       tu: function () { zeigeBlatt(null); }
     });
     zu.style.cssText = 'position:absolute;right:calc(var(--s)*20);top:calc(var(--s)*18);';
