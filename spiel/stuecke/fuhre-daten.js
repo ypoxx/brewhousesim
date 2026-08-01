@@ -412,12 +412,19 @@ var FUHRE_DATEN = {
       wagen: { name: 'Bahnfracht ab Rampe', leeren: 'Rampe räumen', fass: 12, halte: 10, schritt: 4,
                grund: 0, jeKm: 0, haltPreis: 0, umlauf: 2, bruch: 0.02,
                satz: 'Die Rampe geht an den Bahnhof. Was sie kostet, entscheidet die Stufe.' },
+      /* DER TARIF. Er stand so hoch, dass die Bahn ein Drittel bis die Haelfte
+         des Bierwerts nahm — gemessen 7.292 Mark Fuhrlohn auf 14.875 Mark
+         Umsatz. Damit war 1884 die Epoche, in der Fracht teurer ist als Bier,
+         und genau das Gegenteil ist ihr historischer Sinn: die Bahn hat das
+         Bier ueberhaupt erst weit gebracht, deshalb gibt es Exportbier. Die
+         Stufung bleibt Wort fuer Wort — wer die Stufe nicht fuellt, bezahlt
+         Luft —, sie kostet nur nicht mehr das Haus. */
       fracht: [
-        { k: 'stueck', name: 'Stückgut',      fass: 12, pauschale: 70,  jeFass: 16, jeKm: 7,
+        { k: 'stueck', name: 'Stückgut',      fass: 12, pauschale: 40,  jeFass: 7, jeKm: 3,
           satz: 'Jede Menge, jede Woche — und je Fass am teuersten.' },
-        { k: 'halb',   name: 'Halber Wagen',   fass: 40, pauschale: 460, jeFass: 0,  jeKm: 12,
+        { k: 'halb',   name: 'Halber Wagen',   fass: 40, pauschale: 190, jeFass: 0,  jeKm: 5,
           satz: 'Pauschale. Vierzig Fass passen hinein; bezahlt wird der Wagen, nicht die Ladung.' },
-        { k: 'ganz',   name: 'Ganzer Wagen',   fass: 88, pauschale: 700, jeFass: 0,  jeKm: 16,
+        { k: 'ganz',   name: 'Ganzer Wagen',   fass: 88, pauschale: 300, jeFass: 0,  jeKm: 7,
           satz: 'Achtundachtzig Fass. Halb gefüllt ist er das teuerste Geschäft des Hauses.' }
       ],
       /* Der Eiskeller einer Brauerei von 1884 wird im Winter fuer das GANZE
