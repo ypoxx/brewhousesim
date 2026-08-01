@@ -382,7 +382,10 @@
   /* Und alle Gegner zusammen halten nie mehr als knapp die Haelfte der Stadt.
      Wer darueber will, muss zuerst etwas fahrenlassen. */
   function gesamtgrenze() {
-    return Math.max(3, Math.round(offeneAdressen().length * 0.45));
+    /* Ab 1914 sind es zwei Parteien; steht die Grenze zu eng, nimmt jeder Zug
+       dem anderen etwas weg und die halbe Stadt wechselt woechentlich. */
+    var anteil = haeuserJetzt().length > 1 ? 0.52 : 0.45;
+    return Math.max(3, Math.round(offeneAdressen().length * anteil));
   }
 
   function fremdGesamt() {
@@ -497,6 +500,10 @@
   }
 
   function zugEntreissen(h, zug) {
+    /* Nicht jede Woche. Sonst wechseln in 1970 die Zeichen an den Giebeln so
+       schnell, dass man dem Bild nicht mehr glaubt — und ein Wechsel, den man
+       nicht glaubt, ist kein Zug, sondern Flackern. */
+    if (Z.takt - (h.letzteEntreissung === undefined ? -99 : h.letzteEntreissung) < 5) return false;
     var pruef = fremde(h);
     /* Zuerst das Haus. Dem anderen Gegner nimmt er nur, wenn beim Haus
        nichts zu holen ist — sonst fressen sich die beiden gegenseitig auf
@@ -516,7 +523,9 @@
       m = mittelVon(B.wuerfel.aus(ep().mittel.filter(function (x) { return !x.fest; })).k);
     }
     var text = (zug.text || '{haus} geht an den Adler.').replace('{haus}', a.name);
-    return binde(h, a, m, text);
+    if (!binde(h, a, m, text)) return false;
+    h.letzteEntreissung = Z.takt;
+    return true;
   }
 
   function zugAufstocken(h, zug) {
