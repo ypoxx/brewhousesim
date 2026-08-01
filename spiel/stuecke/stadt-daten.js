@@ -205,7 +205,7 @@ var STADT_DATEN = {
 
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
       ort: 'fasslager', dx: 2, dy: -2, breite: 14, breiten: { 2: 10.1 },
-      versatz: { 2: { dx: 4, dy: -8 } },
+      versatz: { 2: { dx: 10, dy: -4 } },
       von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat waechst, der Schwund faellt.',
       nutzen: { platz: 10 } },
