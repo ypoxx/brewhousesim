@@ -270,7 +270,7 @@
     var a = meine.length ? meine[meine.length - 1] : B.welt.adressenJetzt()[0];
     if (!a) return null;
     B.welt.binde(a.schluessel, 'adler', 'Pfand', jahr() + 5);
-    B.welt.protokolliere({ wer: 'gegner', was: a.name + ' als Pfand fuer den Anschlag — fuenf Jahre beim Adler',
+    B.welt.protokolliere({ wer: 'gegner', was: a.name + ' als Pfand für den Anschlag — fünf Jahre beim Adler',
       preis: 0, adresse: a.schluessel });
     return a.name;
   }
@@ -344,12 +344,12 @@
       Z.rueckstand = 0;
       if (alt > pflichtSumme()) {
         var pfand = nimmPfand();
-        Z.rechnung.push({ name: 'Rueckstand getilgt durch Pfand'
+        Z.rechnung.push({ name: 'Rückstand getilgt durch Pfand'
           + (pfand ? ': ' + pfand : ''), betrag: 0, art: 'umlage' });
-        chronik('umlage', 'Der Rueckstand von ' + geld(alt) + ' ist durch ein Pfand getilgt'
-          + (pfand ? ': ' + pfand + ' geht auf fuenf Jahre an den Adler.' : '.'));
+        chronik('umlage', 'Der Rückstand von ' + geld(alt) + ' ist durch ein Pfand getilgt'
+          + (pfand ? ': ' + pfand + ' geht auf fünf Jahre an den Adler.' : '.'));
       } else {
-        buche(alt, 'Rueckstand aus dem Vorjahr, mit Aufschlag', 'rueckstand');
+        buche(alt, 'Rückstand aus dem Vorjahr, mit Aufschlag', 'rueckstand');
       }
     }
 
@@ -397,7 +397,7 @@
         buche(h, 'Handlohn beim Erbfall an den Grundherrn', 'umlage');
         chronik('pflicht', 'Handlohn beim Erbfall: ' + geld(h) + '.');
       } else {
-        Z.rechnung.push({ name: 'Handlohn beim Erbfall — entfaellt (Braurecht am Haus)', betrag: 0, art: 'frei' });
+        Z.rechnung.push({ name: 'Handlohn beim Erbfall — entfällt (Braurecht am Haus)', betrag: 0, art: 'frei' });
       }
     }
 
@@ -412,7 +412,7 @@
         chronik('umlage', u.name + ' (' + geld(betrag) + ') blieb offen. '
           + (weg ? 'Pfand: ' + weg + '.' : ''));
         B.welt.schreibe(u.name + ': ' + geld(betrag) + ' blieb offen. '
-          + (weg ? weg + ' geht auf fuenf Jahre an den Adler.' : ''), 'preis');
+          + (weg ? weg + ' geht auf fünf Jahre an den Adler.' : ''), 'preis');
       } else {
         chronik('umlage', u.name + ': ' + geld(betrag) + ' bezahlt.');
       }
@@ -490,7 +490,7 @@
     if (!Z.handlohnWeg && amtszeit().bis && amtszeit().bis > jahr()) {
       l.push({
         jahr: amtszeit().bis, name: 'Handlohn beim Erbfall',
-        sagt: amtszeit().name + ' fuehrt das Haus seit ' + amtszeit().seit + '.',
+        sagt: amtszeit().name + ' führt das Haus seit ' + amtszeit().seit + '.',
         betrag: handlohnBetrag(),
         art: 'erbfall'
       });
@@ -618,8 +618,8 @@
 
     chronik('festlegung', f.name + ' — ' + f.regel, true);
     B.welt.schreibe('FESTLEGUNG ' + jahr() + ', ' + amtszeit().name + ': ' + f.name
-      + '. ' + f.regel + ' Das ist nicht zurueckzunehmen.', 'festlegung');
-    B.welt.protokolliere({ wer: 'spieler', was: 'Festlegung: ' + f.name + ' (unabaenderlich)', preis: 0 });
+      + '. ' + f.regel + ' Das ist nicht zurückzunehmen.', 'festlegung');
+    B.welt.protokolliere({ wer: 'spieler', was: 'Festlegung: ' + f.name + ' (unabänderlich)', preis: 0 });
     Z.meldung = 'Festgelegt: ' + f.name + '. Es steht in der Chronik.';
     B.ton.spiele('preis:siegel', { art: 'geraeusch' });
     B.sende('zeichne', { grund: 'preis-festlegung' });
@@ -646,7 +646,7 @@
       + ep().einheit);
     if (w.ansehen) t.push((w.ansehen > 0 ? '+' : '') + w.ansehen + ' Ansehen');
     if (w.pflichtWeg) t.push('kein ' + pflichtName(w.pflichtWeg) + ' mehr');
-    if (w.bindung) t.push(w.bindung.n + ' Haeuser gebunden, ' + w.bindung.jahre + ' Jahre');
+    if (w.bindung) t.push(w.bindung.n + ' Häuser gebunden, ' + w.bindung.jahre + ' Jahre');
     return t.join(' · ');
   }
 
@@ -693,14 +693,14 @@
     ord.appendChild(B.el('div', 'pr-satz', o.sagt));
     ord.appendChild(B.el('div', 'pr-satz pr-klein',
       (jahr() - o.ab <= 0 ? 'In diesem Jahr gesetzt. '
-        : 'Gesetzt ' + o.ab + ' — seit ' + (jahr() - o.ab) + ' Jahren unveraendert. ')
+        : 'Gesetzt ' + o.ab + ' — seit ' + (jahr() - o.ab) + ' Jahren unverändert. ')
       + (Z.aufschlag ? 'Aufschlag des Hauses: ' + B.zahl(Z.aufschlag * 100, 0) + ' im Hundert.'
                      : 'Das Haus hat noch keinen Aufschlag erarbeitet.')));
     sp.appendChild(ord);
 
     var an = B.el('div', 'pr-feld pr-anschlag');
     an.appendChild(B.el('h3', null, 'DER ANSCHLAG'));
-    an.appendChild(zeile('Fuer ' + jahr(), geld(Math.round(Z.anschlag)), 'pr-gross'));
+    an.appendChild(zeile('Für ' + jahr(), geld(Math.round(Z.anschlag)), 'pr-gross'));
     var ausUmsatz = umsatzGewicht() * Z.umsatz;
     var ausKasse = 2.2 * Z.hoehe;
     an.appendChild(zeile('aus dem Umsatz des Vorjahrs', geld(Math.round(ausUmsatz))));
@@ -708,7 +708,7 @@
     if (ausUmsatz + ausKasse < e.grund) {
       an.appendChild(zeile('Mindestansatz dieser Zeit', geld(e.grund), 'pr-umlage'));
     }
-    if (Z.kaeufe) an.appendChild(zeile('Aufschlag fuer ' + Z.kaeufe + ' gebaute Sachen',
+    if (Z.kaeufe) an.appendChild(zeile('Aufschlag für ' + Z.kaeufe + ' gebaute Sachen',
       '+' + B.zahl((Math.pow(ep().teuerungKauf, Z.kaeufe) - 1) * 100, 0) + '%'));
     an.appendChild(zeile('Teuerung seit ' + Z.startjahr,
       '+' + B.zahl((Math.pow(ep().teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40)) - 1) * 100, 0) + '%'));
@@ -740,11 +740,11 @@
     if (!etwas) {
       st.appendChild(B.el('div', 'pr-satz',
         'Am Hof steht nur, was die Vorfahren hinterlassen haben. Was von heute an dazukommt, '
-        + 'steht hier und traegt in jedem Michaeli.'));
+        + 'steht hier und trägt in jedem Michaeli.'));
     } else {
       var ertragSumme = 0;
       Z.ertraege.forEach(function (t) { ertragSumme += t.betrag; });
-      if (ertragSumme) st.appendChild(zeile('traegt im Jahr', geld(ertragSumme), 'pr-ertrag pr-summe'));
+      if (ertragSumme) st.appendChild(zeile('trägt im Jahr', geld(ertragSumme), 'pr-ertrag pr-summe'));
     }
     sp.appendChild(st);
 
@@ -789,14 +789,14 @@
       var namen = a.sperrt.map(function (k) {
         var o = angebotVon(k); return o ? o.name : k;
       }).join(', ');
-      karte.appendChild(B.el('div', 'pr-sperrt', 'Schliesst aus: ' + namen));
+      karte.appendChild(B.el('div', 'pr-sperrt', 'Schließt aus: ' + namen));
     }
 
     if (!kann) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
-      'Ueber der Kasse: es fehlen ' + geld(plan.jetzt - B.welt.haus.kasse) + '.'));
+      'Über der Kasse: es fehlen ' + geld(plan.jetzt - B.welt.haus.kasse) + '.'));
 
     karte.appendChild(B.knopf({
-      text: jetztTag ? 'Nehmen' : 'Michaeli ist vorueber',
+      text: jetztTag ? 'Nehmen' : 'Michaeli ist vorüber',
       zug: 'preis:nimm:' + a.k,
       preis: -plan.jetzt,
       klasse: 'pr-nehmen',
@@ -823,16 +823,16 @@
     r.appendChild(B.el('span', 'pr-folge-text', f.regel));
     karte.appendChild(r);
     if (!offen) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
-      'Diese Amtszeit hat sich bereits festgelegt. Die naechste hat wieder eine Wahl.'));
+      'Diese Amtszeit hat sich bereits festgelegt. Die nächste hat wieder eine Wahl.'));
     else if (!kann) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
-      'Ueber der Kasse: es fehlen ' + geld(preis - B.welt.haus.kasse) + '.'));
+      'Über der Kasse: es fehlen ' + geld(preis - B.welt.haus.kasse) + '.'));
     karte.appendChild(B.knopf({
       text: preis ? 'Festlegen' : 'Festlegen — ohne Ausgabe',
       zug: 'preis:festlege:' + f.k,
       preis: preis ? -preis : 0,
       klasse: 'pr-siegel',
       aus: !offen || !kann || !jetztTag,
-      titel: 'Unabaenderlich. ' + f.regel,
+      titel: 'Unabänderlich. ' + f.regel,
       tu: function () { festlege(f); }
     }));
     return karte;
@@ -844,7 +844,7 @@
     var f = festlegungVon(k) || { name: k, regel: '' };
     var karte = B.el('div', 'pr-fest pr-fest-getroffen');
     karte.setAttribute('data-festlegung-getroffen', k);
-    karte.appendChild(B.el('div', 'pr-fest-stempel', 'UNABAENDERLICH'));
+    karte.appendChild(B.el('div', 'pr-fest-stempel', 'UNABÄNDERLICH'));
     karte.appendChild(B.el('b', 'pr-fest-name', f.name));
     karte.appendChild(B.el('div', 'pr-regel', f.regel));
     karte.appendChild(B.el('div', 'pr-satz-klein',
@@ -852,7 +852,7 @@
       + (g.preis ? ' fuer ' + geld(g.preis) : '') + '. Steht in der Chronik.'));
     karte.appendChild(B.knopf({
       text: 'Steht in der Chronik', zug: 'preis:fest-steht', aus: true,
-      titel: 'Eine Festlegung wird nicht zurueckgenommen.'
+      titel: 'Eine Festlegung wird nicht zurückgenommen.'
     }));
     return karte;
   }
@@ -869,7 +869,7 @@
     var reihe = B.el('div', 'pr-reihe');
     if (!Z.angebote.length) {
       reihe.appendChild(B.el('div', 'pr-leer',
-        'Fuer diese Zeit ist am Hof gebaut, was zu bauen war. Die naechste Zeit bringt anderes.'));
+        'Für diese Zeit ist am Hof gebaut, was zu bauen war. Die nächste Zeit bringt anderes.'));
     }
     Z.angebote.forEach(function (k) {
       var a = angebotVon(k);
@@ -880,7 +880,7 @@
     var fkopf = B.el('div', 'pr-abschnitt pr-abschnitt-fest');
     fkopf.appendChild(B.el('h3', null, 'DIE FESTLEGUNG'));
     fkopf.appendChild(B.el('span', 'pr-abschnitt-satz',
-      'Eine je Amtszeit. Sie aendert eine Regel fuer den Rest der Partie und wird nicht zurueckgenommen.'));
+      'Eine je Amtszeit. Sie ändert eine Regel für den Rest der Partie und wird nicht zurückgenommen.'));
     sp.appendChild(fkopf);
 
     var freihe = B.el('div', 'pr-reihe pr-reihe-fest');
@@ -905,9 +905,9 @@
     var sp = B.el('div', 'pr-spalte pr-rechts');
 
     var f = B.el('div', 'pr-feld');
-    f.appendChild(B.el('h3', null, 'WAS FAELLIG WIRD'));
+    f.appendChild(B.el('h3', null, 'WAS FÄLLIG WIRD'));
     var lasten = kommendeLasten();
-    if (!lasten.length) f.appendChild(B.el('div', 'pr-satz', 'Nichts Angekuendigtes.'));
+    if (!lasten.length) f.appendChild(B.el('div', 'pr-satz', 'Nichts Angekündigtes.'));
     lasten.forEach(function (l) {
       var z = B.el('div', 'pr-last pr-last-' + l.art);
       var kopf = B.el('div', 'pr-last-kopf');
@@ -946,7 +946,7 @@
   /* --- Die Chronik ------------------------------------------------------ */
   function seiteChronik() {
     var w = B.el('div', 'pr-chronik');
-    w.appendChild(B.el('h3', null, 'DIE CHRONIK DES HAUSES — was nicht mehr zu aendern ist'));
+    w.appendChild(B.el('h3', null, 'DIE CHRONIK DES HAUSES — was nicht mehr zu ändern ist'));
 
     var fest = B.el('div', 'pr-chronik-fest');
     var keys = Object.keys(Z.festGenommen);
@@ -964,7 +964,7 @@
       t.appendChild(B.el('b', null, f.name));
       t.appendChild(B.el('div', null, f.regel));
       t.appendChild(B.el('div', 'pr-satz-klein', g.amtszeit + ', ' + g.nr + '. Amtszeit'
-        + (g.preis ? ' · ' + geld(g.preis) : '') + ' · unabaenderlich'));
+        + (g.preis ? ' · ' + geld(g.preis) : '') + ' · unabänderlich'));
       z.appendChild(t);
       fest.appendChild(z);
     });
@@ -1003,10 +1003,10 @@
     kopf.appendChild(rechts);
 
     kopf.appendChild(B.knopf({
-      text: Z.seite === 'chronik' ? 'Zurueck zur Tafel' : 'Chronik des Hauses',
+      text: Z.seite === 'chronik' ? 'Zurück zur Tafel' : 'Chronik des Hauses',
       zug: 'preis:chronik',
       klasse: 'pr-reiter',
-      titel: 'Was festgelegt wurde, steht dort unabaenderlich.',
+      titel: 'Was festgelegt wurde, steht dort unabänderlich.',
       tu: function () {
         Z.seite = Z.seite === 'chronik' ? 'tafel' : 'chronik';
         B.ton.spiele('preis:blatt');
@@ -1032,7 +1032,7 @@
       text: 'Nichts nehmen · das Geld bleibt liegen',
       zug: 'preis:nichts',
       klasse: 'pr-nichts',
-      titel: 'Die Tafel geht zu, die Kasse bleibt voll. Was faellig wird, steht rechts.',
+      titel: 'Die Tafel geht zu, die Kasse bleibt voll. Was fällig wird, steht rechts.',
       tu: function () {
         Z.meldung = null;
         chronik('nichts', 'Zu Michaeli ' + Z.tafelJahr + ' wurde nichts genommen. Kasse: '
@@ -1044,7 +1044,7 @@
       text: 'Das Jahr beginnen',
       zug: 'preis:tafel-zu',
       klasse: 'gross pr-weiter',
-      titel: 'Zurueck auf den Hof. Die Tafel oeffnet zu Michaeli ' + (Z.tafelJahr + 1) + ' wieder.',
+      titel: 'Zurück auf den Hof. Die Tafel öffnet zu Michaeli ' + (Z.tafelJahr + 1) + ' wieder.',
       tu: function () { schliesse(); }
     }));
     tafel.appendChild(fuss);
@@ -1065,13 +1065,13 @@
     var griff = B.el('div', 'pr-griff');
 
     griff.appendChild(B.knopf({
-      text: Z.offen ? 'Michaelitafel schliessen'
+      text: Z.offen ? 'Michaelitafel schließen'
                     : 'Michaelitafel ' + Z.tafelJahr + ' · ' + offenZahl + ' Angebote',
       zug: 'preis:tafel',
       klasse: 'pr-griff-knopf',
       titel: B.welt.zeit.woche === 1
         ? 'Heute ist Michaeli. Was hier genommen wird, wird heute genommen.'
-        : 'Michaeli ist vorueber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.',
+        : 'Michaeli ist vorüber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.',
       tu: function () {
         Z.offen = !Z.offen;
         Z.erzwungen = Z.offen;
@@ -1103,7 +1103,7 @@
       text: 'Chronik des Hauses · ' + Object.keys(Z.festGenommen).length + ' Festlegungen',
       zug: 'preis:chronik-auf',
       klasse: 'pr-griff-chronik',
-      titel: 'Was festgelegt wurde, steht dort unabaenderlich.',
+      titel: 'Was festgelegt wurde, steht dort unabänderlich.',
       tu: function () {
         Z.offen = true;
         Z.erzwungen = true;
@@ -1123,11 +1123,11 @@
 
     aufbau: function () {
       B.ton.melde('preis:michaeli', { art: 'geraeusch', sagt: 'Eine einzelne Glocke, Michaelistag, Schritte auf Holz.' });
-      B.ton.melde('preis:muenzen', { art: 'geraeusch', sagt: 'Muenzen werden auf einen Tisch gezaehlt.' });
+      B.ton.melde('preis:muenzen', { art: 'geraeusch', sagt: 'Münzen werden auf einen Tisch gezählt.' });
       B.ton.melde('preis:siegel', { art: 'geraeusch', sagt: 'Siegelwachs, Petschaft, Papier — die Festlegung.' });
-      B.ton.melde('preis:handschlag', { art: 'geraeusch', sagt: 'Handschlag, ein Stuhl rueckt, Zustimmung.' });
+      B.ton.melde('preis:handschlag', { art: 'geraeusch', sagt: 'Handschlag, ein Stuhl rückt, Zustimmung.' });
       B.ton.melde('preis:fertig', { art: 'geraeusch', sagt: 'Ein Bau ist fertig: Kelle, Balken, Zuruf.' });
-      B.ton.melde('preis:blatt', { art: 'geraeusch', sagt: 'Ein grosser Bogen Papier wird umgeschlagen.' });
+      B.ton.melde('preis:blatt', { art: 'geraeusch', sagt: 'Ein großer Bogen Papier wird umgeschlagen.' });
 
       richteEin(true);
       michaeli(true);
@@ -1143,7 +1143,7 @@
 
     erbfall: function () {
       Z.handlohnFaellig = true;
-      chronik('erbfall', amtszeit().name + ' uebernimmt das Haus.');
+      chronik('erbfall', amtszeit().name + ' übernimmt das Haus.');
     },
 
     zeichne: function () {
@@ -1182,7 +1182,7 @@
     setzeBierpreis();
     if (!erste) {
       chronik('epoche', 'Eine neue Zeit: ' + B.welt.epoche().name
-        + '. Die Michaelitafel traegt andere Angebote.');
+        + '. Die Michaelitafel trägt andere Angebote.');
     }
   }
 

@@ -310,33 +310,52 @@ var GEGNER_DATEN = {
              + 'Der eigene Hof haftet dafuer, fuer immer.',
         chronik: '{name} verpfaendet den eigenen Hof an die Handelsbank und bekommt dafuer die Vertragsmacht.'
       },
+      beschwerde: {
+        k: 'nachrechnen', name: 'Dem Wirt die Restschuld nachrechnen',
+        sagt: 'Das Haus schickt seinen Buchhalter zum Wirt und rechnet ihm den Vertrag '
+            + 'nach — Zins, Tilgung, was der Adler wirklich noch zu fordern hat.',
+        preis: 'Keine Mark — aber vier Ansehen. Man rechnet einem Wirt nicht ungestraft nach.',
+        gelingt: 'Zwei Jahre Tilgung waren falsch angeschrieben. Die Abloesung am {haus} '
+               + 'faellt um ein Viertel.',
+        misslingt: 'Der Notar bestaetigt jede Zahl. Der Adler laesst es in der Zeitung stehen.'
+      },
       bauten: [
-        { k: 'eismaschine', name: 'Kaeltemaschine nach Linde', preis: 9000, glyph: 'maschine', abJahr: 1876 },
-        { k: 'dampfsud', name: 'Dampfsudwerk', preis: 7400, glyph: 'pfanne' },
-        { k: 'flaschen', name: 'Flaschenfuellerei', preis: 5200, glyph: 'flasche', abJahr: 1875 },
-        { k: 'gleis', name: 'Eigenes Anschlussgleis', preis: 11000, glyph: 'gleis', abJahr: 1839 },
-        { k: 'depothalle', name: 'Depot in der Neustadt', preis: 6300, glyph: 'halle' },
-        { k: 'malzturm', name: 'Malzturm', preis: 8100, glyph: 'turm' },
-        { k: 'schornstein', name: 'Zweiter Schornstein', preis: 4200, glyph: 'turm' }
+        { k: 'eismaschine', name: 'Kaeltemaschine nach Linde', preis: 9000, glyph: 'maschine', abJahr: 1876,
+          spiegel: 'maschinenhaus', nutzen: 'Kaelte ohne Eis vom Weiher. Er braut den Sommer durch, wenn das Haus stillsteht.' },
+        { k: 'dampfsud', name: 'Dampfsudwerk', preis: 7400, glyph: 'pfanne', spiegel: 'sudhaus_neu',
+          nutzen: 'Dampf statt Feuer unter der Pfanne: vier Sude an einem Tag.' },
+        { k: 'flaschen', name: 'Flaschenfuellerei', preis: 5200, glyph: 'flasche', abJahr: 1875,
+          spiegel: 'flaschenhalle', nutzen: 'Er verkauft ins Wohnzimmer, nicht nur in die Wirtsstube.' },
+        { k: 'gleis', name: 'Eigenes Anschlussgleis', preis: 11000, glyph: 'gleis', abJahr: 1839,
+          spiegel: 'laderampe', nutzen: 'Sein Bier steht am Morgen in der Nachbarstadt.' },
+        { k: 'depothalle', name: 'Depot in der Neustadt', preis: 6300, glyph: 'halle', spiegel: 'kontor',
+          nutzen: 'Er haelt Vorrat in der Stadt und liefert nach, ehe der Wirt gemerkt hat, dass es fehlt.' },
+        { k: 'malzturm', name: 'Malzturm', preis: 8100, glyph: 'turm', spiegel: 'maelzerei',
+          nutzen: 'Er maelzt selbst, das ganze Jahr, und kauft kein fremdes Malz.' },
+        { k: 'schornstein', name: 'Zweiter Schornstein', preis: 4200, glyph: 'turm', spiegel: 'kesselhaus',
+          nutzen: 'Ein zweiter Kessel unter Dampf. Man sieht es von der Stadtmauer aus.' }
       ],
       wagenbild: 'wagen3',
-      hofbild: 'hof3',
+      /* KEIN hofbild: 1884 steht seine Brauerei auf der Platte selbst. Ein
+         zweites Gebaeude daruebergelegt waere eine Attrappe ueber dem Bild. */
+      hofsatz: 'Derselbe Fleck wie 1350. Was dort heute steht, hat er in 534 Jahren '
+             + 'hingebaut — Backstein, zwei Schornsteine, ein eigenes Gleis.',
       zuege: [
-        { k: 'iii-werben', art: 'werben', gewicht: 24 },
-        { k: 'iii-vertrag', art: 'entreissen', gewicht: 10, mittel: 'vertrag',
+        { k: 'iii-werben', art: 'werben', gewicht: 22 },
+        { k: 'iii-vertrag', art: 'entreissen', gewicht: 14, mittel: 'vertrag',
           text: 'Der Adler loest beim {haus} die alte Bindung ab und legt einen Vertrag auf den Tisch.' },
-        { k: 'iii-aufstocken', art: 'aufstocken', gewicht: 12,
+        { k: 'iii-aufstocken', art: 'aufstocken', gewicht: 22,
           text: 'Der Adler stockt das Darlehen beim {haus} um {geld} auf. Die Abloesesumme steigt.' },
         { k: 'iii-bau', art: 'bauen', gewicht: 16 },
-        { k: 'iii-preis', art: 'preis', gewicht: 10, schritt: 3,
+        { k: 'iii-preis', art: 'preis', gewicht: 11, schritt: 3,
           text: 'Der Adler senkt den Preis auf {geld} je {einheit}.' },
-        { k: 'iii-waggon', art: 'fuhre', gewicht: 18, abJahr: 1839,
+        { k: 'iii-waggon', art: 'fuhre', gewicht: 6, abJahr: 1839,
           text: 'Zwei Bierwagen des Adlers gehen per Bahn zum {haus}.' },
         { k: 'iii-email', art: 'macht', gewicht: 8, marke: 'emailschild', jahre: 20, abJahr: 1890,
           text: 'Der Adler nagelt ein Emailschild an den Giebel. Es glaenzt bis zur naechsten Generation.' },
-        { k: 'iii-verliert', art: 'verlieren', gewicht: 7,
+        { k: 'iii-verliert', art: 'verlieren', gewicht: 6,
           text: 'Der Wirt zum {haus} loest sein Darlehen ab. Der Adler verliert die Adresse.' },
-        { k: 'iii-kessel', art: 'unglueck', gewicht: 6,
+        { k: 'iii-kessel', art: 'unglueck', gewicht: 5,
           text: 'Kesselschaden beim Adler. Die Versicherung zahlt spaeter als der Kesselschmied rechnet.' }
       ]
     },

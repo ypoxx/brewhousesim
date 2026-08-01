@@ -37,14 +37,14 @@ var PREIS_DATEN = {
        ================================================================== */
     1: {
       einheit: 'Fass', mitte: 9, spanne: 3,
-      sagt: 'Der Rat setzt den Bierpfennig. Wer darueber geht, wird gestraft.',
+      sagt: 'Der Rat setzt den Bierpfennig. Wer darüber geht, wird gestraft.',
 
       stil: 'pergament',
       tag: 'Michaeli',
-      tagSatz: 'Am Michaelistag, dem 29. September, wird faellig, was das Jahr ueber gestundet war. '
+      tagSatz: 'Am Michaelistag, dem 29. September, wird fällig, was das Jahr über gestundet war. '
              + 'Danach steht die Pfanne wieder kalt, bis der Zins bezahlt ist.',
-      anschlagSatz: 'Der Anschlag ist die Schaetzung des Rats: was durch das Haus geht und was im Haus liegt. '
-                  + 'Boettcher, Maurer und Grutherr rechnen mit derselben Zahl.',
+      anschlagSatz: 'Der Anschlag ist die Schätzung des Rats: was durch das Haus geht und was im Haus liegt. '
+                  + 'Böttcher, Maurer und Grutherr rechnen mit derselben Zahl.',
 
       grund: 470,
       lastenGrund: 500,
@@ -61,49 +61,49 @@ var PREIS_DATEN = {
         { ab: 1350, preis: 9,  sagt: 'Der Rat setzt den Bierpfennig auf neun je Fass.' },
         { ab: 1391, preis: 10, sagt: 'Nach der Teuerung erlaubt der Rat einen Pfennig mehr.' },
         { ab: 1444, preis: 11, sagt: 'Die Bierordnung wird erneuert: elf Pfennige je Fass.' },
-        { ab: 1490, preis: 12, sagt: 'Zwoelf Pfennige, und der Rat laesst nachmessen.' }
+        { ab: 1490, preis: 12, sagt: 'Zwölf Pfennige, und der Rat lässt nachmessen.' }
       ],
 
       pflichten: [
         { k: 'grutgeld',  name: 'Grutgeld an den Grutherrn', teil: 0.34,
           sagt: 'Wer Grut braucht, kauft sie vom Grutherrn. Es gibt keinen zweiten.' },
         { k: 'erbzins',   name: 'Erbzins an den Grundherrn', teil: 0.32,
-          sagt: 'Das Anwesen gehoert nicht dem Haus. Der Zins laeuft, ob gebraut wird oder nicht.' },
+          sagt: 'Das Anwesen gehört nicht dem Haus. Der Zins läuft, ob gebraut wird oder nicht.' },
         { k: 'wasserzins', name: 'Wasserzins an die Stadt', teil: 0.15,
           sagt: 'Der Brunnen auf dem Markt ist der Stadt ihrer.' },
-        { k: 'mahlgeld',  name: 'Mahlgeld an die Muehle', teil: 0.19,
-          sagt: 'Das Malz muss zur Muehle. Der Mueller nimmt den Metzen.' }
+        { k: 'mahlgeld',  name: 'Mahlgeld an die Mühle', teil: 0.19,
+          sagt: 'Das Malz muss zur Mühle. Der Müller nimmt den Metzen.' }
       ],
 
       umlagen: [
-        { name: 'Umlage fuer den Mauerbau',   sagt: 'Die Stadt schliesst den Ring nach Sueden.' },
-        { name: 'Landfriedensgeld',           sagt: 'Der Bund der Staedte haelt Reisige. Bezahlt wird von den Haeusern.' },
+        { name: 'Umlage für den Mauerbau',   sagt: 'Die Stadt schließt den Ring nach Süden.' },
+        { name: 'Landfriedensgeld',           sagt: 'Der Bund der Städte hält Reisige. Bezahlt wird von den Häusern.' },
         { name: 'Brandschatzung',             sagt: 'Ein Heerhaufe steht vor dem Tor und zieht gegen Geld weiter.' },
-        { name: 'Zehnt auf das Braugeraet',   sagt: 'Der Rat besteuert Pfanne, Bottich und Fass nach Schaetzung.' },
-        { name: 'Umlage fuer die Bruecke',    sagt: 'Das Hochwasser hat den Steg genommen.' }
+        { name: 'Zehnt auf das Braugerät',   sagt: 'Der Rat besteuert Pfanne, Bottich und Fass nach Schätzung.' },
+        { name: 'Umlage für die Brücke',    sagt: 'Das Hochwasser hat den Steg genommen.' }
       ],
-      pfand: 'Wer den Anschlag nicht abtraegt, dem nimmt der Rat ein Pfand: eine Wirtschaft wird '
-           + 'auf fuenf Jahre dem Adler zugesprochen.',
+      pfand: 'Wer den Anschlag nicht abträgt, dem nimmt der Rat ein Pfand: eine Wirtschaft wird '
+           + 'auf fünf Jahre dem Adler zugesprochen.',
 
       angebote: [
-        { k: 'dach', name: 'Das Dach ueber der Pfanne', anteil: 0.07, bauzeit: 0,
-          was: 'Ein Schindeldach auf vier Staendern, ueber der offenen Pfanne.',
-          satz: 'Regen loescht das Feuer nicht mehr, und der Sud faellt nicht aus.',
+        { k: 'dach', name: 'Das Dach über der Pfanne', anteil: 0.07, bauzeit: 0,
+          was: 'Ein Schindeldach auf vier Ständern, über der offenen Pfanne.',
+          satz: 'Regen löscht das Feuer nicht mehr, und der Sud fällt nicht aus.',
           wirkung: { ertrag: 16 } },
 
         { k: 'grutkasten', name: 'Der Grutkasten unter Schloss', anteil: 0.12, bauzeit: 0,
-          was: 'Eine verschlossene Truhe fuer die Grut, mit dem Mass daneben.',
+          was: 'Eine verschlossene Truhe für die Grut, mit dem Maß daneben.',
           satz: 'Gewogen ausgegeben, gewogen abgerechnet.',
           wirkung: { rohstoff: 14 } },
 
-        { k: 'schild', name: 'Das Hausschild ueberm Tor', anteil: 0.10, bauzeit: 0,
+        { k: 'schild', name: 'Das Hausschild überm Tor', anteil: 0.10, bauzeit: 0,
           was: 'Ein geschmiedeter Anker an einem Ausleger, weithin sichtbar.',
-          satz: 'Wer vorbeikommt, weiss von nun an, wo er ist.',
+          satz: 'Wer vorbeikommt, weiß von nun an, wo er ist.',
           wirkung: { ansehen: 8, preis: 0.03 } },
 
         { k: 'bottich', name: 'Ein zweiter Bottich aus Eichenholz', anteil: 0.20, bauzeit: 1,
-          was: 'Ein Gaerbottich vom Kuefer, mit Weidenreifen gebunden.',
-          satz: 'Zwei Bottiche heissen: der zweite Sud muss nicht warten.',
+          was: 'Ein Gärbottich vom Küfer, mit Weidenreifen gebunden.',
+          satz: 'Zwei Bottiche heißen: der zweite Sud muss nicht warten.',
           wirkung: { plaetze: 3 } },
 
         { k: 'ochsenstall', name: 'Der Ochsenstall am Tor', anteil: 0.24, bauzeit: 0,
@@ -113,61 +113,61 @@ var PREIS_DATEN = {
           wirkung: { ertrag: 34 } },
 
         { k: 'karrengaul', name: 'Ein Karrengaul statt des Ochsen', anteil: 0.42, bauzeit: 0,
-          was: 'Ein kaltbluetiges Pferd, Geschirr, Hufbeschlag.',
+          was: 'Ein kaltblütiges Pferd, Geschirr, Hufbeschlag.',
           satz: 'Doppelt so schnell wie der Ochse und dreimal so teuer im Futter.',
           sperrt: ['ochsenstall'],
           wirkung: { ertrag: 62 } },
 
-        { k: 'boettcher', name: 'Der Boettcher im Haus', anteil: 0.34, bauzeit: 1,
+        { k: 'boettcher', name: 'Der Böttcher im Haus', anteil: 0.34, bauzeit: 1,
           was: 'Eine Werkstatt im Hof, Daubenholz unterm Vordach.',
-          satz: 'Faesser werden nicht mehr gekauft, sondern gebunden.',
+          satz: 'Fässer werden nicht mehr gekauft, sondern gebunden.',
           wirkung: { plaetze: 4, ertrag: 26 } },
 
         { k: 'brunnen', name: 'Der Ziehbrunnen im Hof', anteil: 0.55, bauzeit: 1,
           was: 'Achtzehn Klafter durch den Lehm bis auf den Kies.',
-          satz: 'Eigenes Wasser. Der Weg zum Marktbrunnen entfaellt.',
+          satz: 'Eigenes Wasser. Der Weg zum Marktbrunnen entfällt.',
           wirkung: { pflichtWeg: 'wasserzins', ertrag: 12 } },
 
         { k: 'pfanne', name: 'Die kupferne Pfanne', anteil: 0.80, bauzeit: 2,
-          was: 'Eine offene Pfanne aus getriebenem Kupfer ueber offenem Feuer — kein Helm, kein Rohr.',
-          satz: 'Kupfer haelt die Hitze gleich. Das Bier wird sauberer und faengt einen besseren Preis.',
+          was: 'Eine offene Pfanne aus getriebenem Kupfer über offenem Feuer — kein Helm, kein Rohr.',
+          satz: 'Kupfer hält die Hitze gleich. Das Bier wird sauberer und fängt einen besseren Preis.',
           wirkung: { preis: 0.06, ertrag: 30 } },
 
-        { k: 'muehlanteil', name: 'Ein Achtel an der Stadtmuehle', anteil: 1.05, bauzeit: 0,
+        { k: 'muehlanteil', name: 'Ein Achtel an der Stadtmühle', anteil: 1.05, bauzeit: 0,
           was: 'Ein Anteilbrief, im Ratsbuch eingetragen.',
           satz: 'Wer Anteil hat, mahlt zuerst und zahlt den Metzen an sich selbst.',
           wirkung: { pflichtWeg: 'mahlgeld', ertrag: 40 } },
 
-        { k: 'gewoelbe', name: 'Der gewoelbte Keller unterm Hof', anteil: 1.90, bauzeit: 3,
-          was: 'Ein Tonnengewoelbe aus Bruchstein, drei Klafter unter dem Hof.',
-          satz: 'Kuehl und dunkel. Das Bier haelt laenger, und mehr Faesser haben Platz.',
+        { k: 'gewoelbe', name: 'Der gewölbte Keller unterm Hof', anteil: 1.90, bauzeit: 3,
+          was: 'Ein Tonnengewölbe aus Bruchstein, drei Klafter unter dem Hof.',
+          satz: 'Kühl und dunkel. Das Bier hält länger, und mehr Fässer haben Platz.',
           wirkung: { plaetze: 9, ertrag: 55 } },
 
         { k: 'bannmeile', name: 'Die Bannmeile auf zehn Jahre', anteil: 2.60, bauzeit: 0,
           was: 'Ein Ratsbrief: kein fremdes Bier innerhalb einer Meile.',
-          satz: 'Drei Haeuser duerfen zehn Jahre lang nichts anderes ausschenken.',
+          satz: 'Drei Häuser dürfen zehn Jahre lang nichts anderes ausschenken.',
           wirkung: { bindung: { n: 3, jahre: 10 } } }
       ],
 
       festlegungen: [
         { k: 'freikauf', name: 'Der Freikauf vom Grundherrn', anteil: 2.20,
           was: 'Eine Ablosesumme, ein Siegel, ein Eintrag im Salbuch.',
-          regel: 'Der Erbzins endet. Fuer immer. Das Haus gehoert von heute an dem Haus.',
+          regel: 'Der Erbzins endet. Für immer. Das Haus gehört von heute an dem Haus.',
           wirkung: { pflichtWeg: 'erbzins' } },
 
         { k: 'realrecht', name: 'Das Braurecht ans Haus', anteil: 1.70,
-          was: 'Das Recht wird vom Menschen geloest und auf die Hofstatt geschrieben.',
+          was: 'Das Recht wird vom Menschen gelöst und auf die Hofstatt geschrieben.',
           regel: 'Kein Handlohn mehr bei jedem Erbfall. Wer erbt, erbt auch die Pfanne.',
           wirkung: { handlohnWeg: true } },
 
         { k: 'hopfen', name: 'Hopfen statt Grut', anteil: 1.40, ab: 1380,
-          was: 'Der Grutzwang wird abgeloest, Hopfen aus Boehmen kommt auf den Wagen.',
-          regel: 'Das Grutgeld entfaellt. Das Bier haelt laenger, reist weiter und faengt mehr.',
+          was: 'Der Grutzwang wird abgelöst, Hopfen aus Böhmen kommt auf den Wagen.',
+          regel: 'Das Grutgeld entfällt. Das Bier hält länger, reist weiter und fängt mehr.',
           wirkung: { pflichtWeg: 'grutgeld', rohstoff: 26, preis: 0.09 } },
 
         { k: 'vertrag', name: 'Vertrag statt Gunst', anteil: 0.32,
-          was: 'Vier Wirte setzen ihr Zeichen unter einen Brief auf fuenfundzwanzig Jahre.',
-          regel: 'Vier Haeuser nehmen nur noch Bier dieses Hauses. Die uebrigen merken sich, dass sie nicht gefragt wurden.',
+          was: 'Vier Wirte setzen ihr Zeichen unter einen Brief auf fünfundzwanzig Jahre.',
+          regel: 'Vier Häuser nehmen nur noch Bier dieses Hauses. Die übrigen merken sich, dass sie nicht gefragt wurden.',
           wirkung: { bindung: { n: 4, jahre: 25 }, ansehen: -6 } }
       ]
     },
@@ -178,14 +178,14 @@ var PREIS_DATEN = {
        ================================================================== */
     2: {
       einheit: 'Fass', mitte: 22, spanne: 7,
-      sagt: 'Die Zunft haelt den Preis. Ausbrechen kostet den Ruf.',
+      sagt: 'Die Zunft hält den Preis. Ausbrechen kostet den Ruf.',
 
       stil: 'kanzlei',
       tag: 'Michaeli',
       tagSatz: 'Michaeli ist Zinstag und Rechnungstag. Der Zunftschreiber liest vor, '
              + 'was jedes Haus im vergangenen Jahr gesotten hat.',
-      anschlagSatz: 'Der Anschlag steht im Steuerbuch der Stadt: Vermoegen und Gewerb, '
-                  + 'geschaetzt von zwei Ratsherren und einem Zunftmeister.',
+      anschlagSatz: 'Der Anschlag steht im Steuerbuch der Stadt: Vermögen und Gewerb, '
+                  + 'geschätzt von zwei Ratsherren und einem Zunftmeister.',
 
       grund: 2800,
       lastenGrund: 2500,
@@ -199,82 +199,82 @@ var PREIS_DATEN = {
 
       ordnung: [
         { ab: 1517, preis: 22, sagt: 'Die Bierordnung nach dem Reinheitsgebot: zweiundzwanzig Gulden je Fass Braunbier.' },
-        { ab: 1622, preis: 27, sagt: 'Kipper- und Wipperzeit. Die Muenze ist schlecht, der Satz steigt.' },
+        { ab: 1622, preis: 27, sagt: 'Kipper- und Wipperzeit. Die Münze ist schlecht, der Satz steigt.' },
         { ab: 1650, preis: 25, sagt: 'Nach dem Krieg setzt der Rat den Satz herunter — es ist niemand mehr da, der zahlt.' },
         { ab: 1710, preis: 28, sagt: 'Die Bierordnung wird erneuert, das Ungeld gleich mit.' },
-        { ab: 1770, preis: 31, sagt: 'Der Kurfuerst genehmigt einen Aufschlag von drei Gulden.' }
+        { ab: 1770, preis: 31, sagt: 'Der Kurfürst genehmigt einen Aufschlag von drei Gulden.' }
       ],
 
       pflichten: [
         { k: 'pachtzins', name: 'Pachtzins ans Kloster', teil: 0.38,
           sagt: 'Die Hofstatt ist Klosterlehen. Der Zins geht nach Obernberg.' },
-        { k: 'zunftumlage', name: 'Zunftumlage und Meisterbuechse', teil: 0.21,
-          sagt: 'Lade, Trunk, Begraebnis, Witwenkasse. Wer nicht zahlt, braut nicht.' },
+        { k: 'zunftumlage', name: 'Zunftumlage und Meisterbüchse', teil: 0.21,
+          sagt: 'Lade, Trunk, Begräbnis, Witwenkasse. Wer nicht zahlt, braut nicht.' },
         { k: 'ungeld', name: 'Ungeld auf den Ausschank', teil: 0.26,
           sagt: 'Vom ausgeschenkten Bier nimmt der Rat den zwanzigsten Pfennig.' },
-        { k: 'malzaufschlag', name: 'Malzaufschlag des Kurfuersten', teil: 0.15,
+        { k: 'malzaufschlag', name: 'Malzaufschlag des Kurfürsten', teil: 0.15,
           sagt: 'Seit 1543 auf jeden Scheffel Malz. Er ist nie wieder abgeschafft worden.' }
       ],
 
       umlagen: [
-        { name: 'Tuerkensteuer',        sagt: 'Der Reichstag hat sie bewilligt. Die Stadt legt sie um.' },
-        { name: 'Kriegskontribution',   sagt: 'Einquartierung oder Geld. Das Haus waehlt das Geld.' },
+        { name: 'Türkensteuer',        sagt: 'Der Reichstag hat sie bewilligt. Die Stadt legt sie um.' },
+        { name: 'Kriegskontribution',   sagt: 'Einquartierung oder Geld. Das Haus wählt das Geld.' },
         { name: 'Quartierlast',         sagt: 'Vierzig Reiter, sechs Wochen, Hafer inbegriffen.' },
-        { name: 'Bauumlage fuer das Rathaus', sagt: 'Der Rat baut sich einen Giebel mit Uhr.' },
+        { name: 'Bauumlage für das Rathaus', sagt: 'Der Rat baut sich einen Giebel mit Uhr.' },
         { name: 'Brandsteuer nach dem Stadtbrand', sagt: 'Die halbe Gasse hinter der Kirche ist abgebrannt.' }
       ],
-      pfand: 'Wer den Anschlag nicht abtraegt, dem legt die Zunft die Braugerechtigkeit still: '
-           + 'eine Wirtschaft geht auf fuenf Jahre an den Adler.',
+      pfand: 'Wer den Anschlag nicht abträgt, dem legt die Zunft die Braugerechtigkeit still: '
+           + 'eine Wirtschaft geht auf fünf Jahre an den Adler.',
 
       angebote: [
-        { k: 'darre', name: 'Die Darre ueberm Malzboden', anteil: 0.065, bauzeit: 0,
-          was: 'Ein Rauchabzug und ein Lattenrost ueber der Feuerstelle.',
-          satz: 'Gedarrtes Malz laesst sich lagern. Das Braujahr wird planbar.',
+        { k: 'darre', name: 'Die Darre überm Malzboden', anteil: 0.065, bauzeit: 0,
+          was: 'Ein Rauchabzug und ein Lattenrost über der Feuerstelle.',
+          satz: 'Gedarrtes Malz lässt sich lagern. Das Braujahr wird planbar.',
           wirkung: { rohstoff: 20, ertrag: 60 } },
 
         { k: 'probe', name: 'Die Bierprobe des Rats bestehen', anteil: 0.09, bauzeit: 0,
           was: 'Drei Ratsherren, eine Lederhose und eine Bank aus Eichenholz.',
-          satz: 'Wessen Bier die Bank haelt, dessen Fass gilt als recht gesotten.',
+          satz: 'Wessen Bier die Bank hält, dessen Fass gilt als recht gesotten.',
           wirkung: { preis: 0.05, ansehen: 5 } },
 
         { k: 'wappenbrief', name: 'Der Wappenbrief', anteil: 0.15, bauzeit: 0,
           was: 'Ein kaiserlicher Brief mit Anker und Helmzier, gerahmt in der Stube.',
-          satz: 'Kein Recht, nur Rang. Rang laesst sich in Gulden umrechnen.',
+          satz: 'Kein Recht, nur Rang. Rang lässt sich in Gulden umrechnen.',
           wirkung: { ansehen: 12, preis: 0.04 } },
 
-        { k: 'schrotmuehle', name: 'Die Schrotmuehle im Haus', anteil: 0.26, bauzeit: 1,
-          was: 'Ein Handgang mit zwei Steinen, spaeter ein Rosswerk.',
-          satz: 'Das Malz verlaesst den Hof nicht mehr.',
+        { k: 'schrotmuehle', name: 'Die Schrotmühle im Haus', anteil: 0.26, bauzeit: 1,
+          was: 'Ein Handgang mit zwei Steinen, später ein Rosswerk.',
+          satz: 'Das Malz verlässt den Hof nicht mehr.',
           wirkung: { pflichtWeg: 'mahlgeld', ertrag: 120 } },
 
         { k: 'fasslager', name: 'Das Fasslager unter der Kirche', anteil: 0.30, bauzeit: 1,
-          was: 'Zwei Gewoelbe im Berg, von St. Michael gepachtet.',
-          satz: 'Kuehl im Sommer. Was dort liegt, ueberlebt den Juli.',
+          was: 'Zwei Gewölbe im Berg, von St. Michael gepachtet.',
+          satz: 'Kühl im Sommer. Was dort liegt, überlebt den Juli.',
           wirkung: { plaetze: 14 } },
 
-        { k: 'planwagen', name: 'Zwei Roesser und ein Planwagen', anteil: 0.38, bauzeit: 0,
-          was: 'Ein gedeckter Wagen mit Bremse, fuer die Strassen ueber Land.',
+        { k: 'planwagen', name: 'Zwei Rösser und ein Planwagen', anteil: 0.38, bauzeit: 0,
+          was: 'Ein gedeckter Wagen mit Bremse, für die Straßen über Land.',
           satz: 'Neun Meilen am Tag statt sieben, und das Fass kommt trocken an.',
           wirkung: { ertrag: 210 } },
 
-        { k: 'hopfengarten', name: 'Der Hopfengarten am Suedhang', anteil: 0.55, bauzeit: 3,
+        { k: 'hopfengarten', name: 'Der Hopfengarten am Südhang', anteil: 0.55, bauzeit: 3,
           was: 'Vierhundert Stangen, drei Jahre bis zum ersten vollen Ertrag.',
-          satz: 'Eigener Hopfen. Der Haendler auf dem Markt verliert seine Macht ueber das Haus.',
+          satz: 'Eigener Hopfen. Der Händler auf dem Markt verliert seine Macht über das Haus.',
           wirkung: { rohstoff: 55, ertrag: 90 } },
 
-        { k: 'zunftrecht', name: 'Das Zunftrecht fuer den Sohn', anteil: 0.62, bauzeit: 0,
-          was: 'Meisterstueck, Mutgeld, Einschreibung in die Lade — im Voraus bezahlt.',
-          satz: 'Der Erbe ist Meister, bevor er erbt. Der Handlohn faellt halb so hoch aus.',
+        { k: 'zunftrecht', name: 'Das Zunftrecht für den Sohn', anteil: 0.62, bauzeit: 0,
+          was: 'Meisterstück, Mutgeld, Einschreibung in die Lade — im Voraus bezahlt.',
+          satz: 'Der Erbe ist Meister, bevor er erbt. Der Handlohn fällt halb so hoch aus.',
           wirkung: { handlohnHalb: true, ertrag: 40 } },
 
         { k: 'eiskeller', name: 'Der Eiskeller im Berg', anteil: 0.85, bauzeit: 2,
-          was: 'Eine Grube mit Strohdecke, im Winter aus dem Fluss gefuellt.',
-          satz: 'Untergaerig gebraut, kalt gelagert. Das Bier haelt bis in den Herbst.',
+          was: 'Eine Grube mit Strohdecke, im Winter aus dem Fluss gefüllt.',
+          satz: 'Untergärig gebraut, kalt gelagert. Das Bier hält bis in den Herbst.',
           wirkung: { plaetze: 22, preis: 0.05 } },
 
         { k: 'nachbarhaus', name: 'Der Kauf des Nachbarhauses', anteil: 1.30, bauzeit: 0,
           was: 'Die Hofstatt links vom Tor, samt Scheune und Braurecht des verstorbenen Nachbarn.',
-          satz: 'Der Hof wird doppelt so gross, und ein Braurecht weniger ist in der Stadt.',
+          satz: 'Der Hof wird doppelt so groß, und ein Braurecht weniger ist in der Stadt.',
           wirkung: { plaetze: 12, ertrag: 260 } },
 
         { k: 'sudhaus', name: 'Das steinerne Sudhaus', anteil: 2.10, bauzeit: 4,
@@ -290,25 +290,25 @@ var PREIS_DATEN = {
 
       festlegungen: [
         { k: 'eigentum', name: 'Der Kauf des Anwesens', anteil: 2.40,
-          was: 'Die Hofstatt wird aus dem Klosterlehen geloest und ins Grundbuch geschrieben.',
-          regel: 'Der Pachtzins endet. Fuer immer. Aus dem Paechter wird der Eigentuemer.',
+          was: 'Die Hofstatt wird aus dem Klosterlehen gelöst und ins Grundbuch geschrieben.',
+          regel: 'Der Pachtzins endet. Für immer. Aus dem Pächter wird der Eigentümer.',
           wirkung: { pflichtWeg: 'pachtzins' } },
 
         { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 0.28,
           was: 'Gerste, Hopfen, Wasser — und der Schwur darauf vor dem Rat.',
-          regel: 'Kein billiges Beibier mehr. Jedes Fass faengt mehr, und die Zunft steht hinter dem Haus.',
+          regel: 'Kein billiges Beibier mehr. Jedes Fass fängt mehr, und die Zunft steht hinter dem Haus.',
           wirkung: { preis: 0.16, ansehen: 10 } },
 
         { k: 'ratssitz', name: 'Der Zunftbrief mit dem Ratssitz', anteil: 1.90,
-          was: 'Das Haus stellt einen der zwoelf Ratsherren.',
-          regel: 'Ausserordentliche Umlagen treffen das Haus nur noch zur Haelfte. Der Anschlag wird am Tisch gemacht, an dem das Haus sitzt.',
+          was: 'Das Haus stellt einen der zwölf Ratsherren.',
+          regel: 'Außerordentliche Umlagen treffen das Haus nur noch zur Hälfte. Der Anschlag wird am Tisch gemacht, an dem das Haus sitzt.',
           wirkung: { umlageHalb: true } },
 
-        { k: 'bierbann', name: 'Der Bierbann ueber vier Doerfer', anteil: 2.80,
-          was: 'Ein landesherrliches Privileg: in vier Doerfern darf nur dieses Haus liefern.',
-          regel: 'Vier Haeuser bleiben dem Haus, solange das Haus steht. Der Landesherr nimmt dafuer jaehrlich seinen Teil.',
+        { k: 'bierbann', name: 'Der Bierbann über vier Dörfer', anteil: 2.80,
+          was: 'Ein landesherrliches Privileg: in vier Dörfern darf nur dieses Haus liefern.',
+          regel: 'Vier Häuser bleiben dem Haus, solange das Haus steht. Der Landesherr nimmt dafür jährlich seinen Teil.',
           wirkung: { bindung: { n: 4, jahre: 200 }, pflichtNeu: { k: 'bannzins', name: 'Bannzins an den Landesherrn', teil: 0.16,
-            sagt: 'Der Preis des Privilegs, jaehrlich, ohne Ende.' } } }
+            sagt: 'Der Preis des Privilegs, jährlich, ohne Ende.' } } }
       ]
     },
 
@@ -326,7 +326,7 @@ var PREIS_DATEN = {
       tagSatz: 'Michaeli ist Bilanztag geblieben, auch als die Bahn schon fuhr. '
              + 'Der Buchhalter legt die Bogen auf, der Bankier sitzt daneben.',
       anschlagSatz: 'Der Anschlag ist jetzt eine Bewertung: Umsatz, Anlagen, Kredit. '
-                  + 'Wer waechst, wird teurer bedient — die Bank rechnet mit.',
+                  + 'Wer wächst, wird teurer bedient — die Bank rechnet mit.',
 
       grund: 42000,
       lastenGrund: 11000,
@@ -340,36 +340,36 @@ var PREIS_DATEN = {
 
       ordnung: [
         { ab: 1800, preis: 44, sagt: 'Der Landesherr setzt den Bierpreis noch, aber nur noch dem Namen nach.' },
-        { ab: 1871, preis: 48, sagt: 'Reichsgruendung. Die Malzsteuer wird vereinheitlicht, der Preis zieht nach.' },
+        { ab: 1871, preis: 48, sagt: 'Reichsgründung. Die Malzsteuer wird vereinheitlicht, der Preis zieht nach.' },
         { ab: 1890, preis: 51, sagt: 'Die Brauereien der Stadt einigen sich auf einen Satz. Man nennt es Konvention.' },
-        { ab: 1902, preis: 54, sagt: 'Gerstenmissernte. Der Satz steigt und faellt danach nicht mehr.' }
+        { ab: 1902, preis: 54, sagt: 'Gerstenmissernte. Der Satz steigt und fällt danach nicht mehr.' }
       ],
 
       pflichten: [
         { k: 'biersteuer', name: 'Biersteuer nach Malzgewicht', teil: 0.375,
-          sagt: 'Gewogen wird das Malz, nicht das Bier. Wer staerker braut, zahlt mehr.' },
+          sagt: 'Gewogen wird das Malz, nicht das Bier. Wer stärker braut, zahlt mehr.' },
         { k: 'hypothek', name: 'Zins auf die Hypothek', teil: 0.30,
-          sagt: 'Der Fabrikbau ist auf Kredit gebaut. Der Zins laeuft, auch wenn nicht gebraut wird.' },
+          sagt: 'Der Fabrikbau ist auf Kredit gebaut. Der Zins läuft, auch wenn nicht gebraut wird.' },
         { k: 'gewerbesteuer', name: 'Gewerbesteuer der Gemeinde', teil: 0.175,
           sagt: 'Nach Ertrag und Betriebskapital, veranlagt vom Steuerausschuss.' },
         { k: 'kessel', name: 'Kesselrevision und Feuerversicherung', teil: 0.15,
-          sagt: 'Ein Dampfkessel ist versicherungspflichtig und wird jaehrlich abgedrueckt.' }
+          sagt: 'Ein Dampfkessel ist versicherungspflichtig und wird jährlich abgedrückt.' }
       ],
 
       umlagen: [
-        { name: 'Kesselschaden und Neuabnahme', sagt: 'Ein Rohrriss im Dampfkessel. Der Sachverstaendige laesst nicht mit sich reden.' },
-        { name: 'Kanal- und Wasseranschluss',   sagt: 'Die Stadt legt Roehren und legt die Kosten um.' },
+        { name: 'Kesselschaden und Neuabnahme', sagt: 'Ein Rohrriss im Dampfkessel. Der Sachverständige lässt nicht mit sich reden.' },
+        { name: 'Kanal- und Wasseranschluss',   sagt: 'Die Stadt legt Röhren und legt die Kosten um.' },
         { name: 'Nachzahlung Biersteuer',       sagt: 'Die Revision hat drei Jahre nachgerechnet.' },
-        { name: 'Gruenderkrach — Wechsel faellig', sagt: 'Die Bank verlaengert nicht. Der Wechsel wird glatt bezahlt.' },
-        { name: 'Neubau der Zufahrt',           sagt: 'Der Lastwagenverkehr hat die Rampenstrasse zerfahren.' }
+        { name: 'Gründerkrach — Wechsel fällig', sagt: 'Die Bank verlängert nicht. Der Wechsel wird glatt bezahlt.' },
+        { name: 'Neubau der Zufahrt',           sagt: 'Der Lastwagenverkehr hat die Rampenstraße zerfahren.' }
       ],
       pfand: 'Wer nicht bezahlt, dessen Wechsel geht an die Bank, und die Bank verkauft ihn weiter: '
-           + 'eine Gaststaette wird auf fuenf Jahre dem Adler verschrieben.',
+           + 'eine Gaststätte wird auf fünf Jahre dem Adler verschrieben.',
 
       angebote: [
         { k: 'braumeister', name: 'Ein Braumeister aus Weihenstephan', anteil: 0.055, bauzeit: 0,
           was: 'Ein gelernter Mann mit Thermometer, Saccharometer und Zeugnis.',
-          satz: 'Er misst, was bisher geschmeckt wurde. Der Ausschlag wird gleichmaessig.',
+          satz: 'Er misst, was bisher geschmeckt wurde. Der Ausschlag wird gleichmäßig.',
           wirkung: { preis: 0.07, ertrag: 400 } },
 
         { k: 'krone', name: 'Das Dach der Krone', anteil: 0.071, bauzeit: 1,
@@ -378,76 +378,76 @@ var PREIS_DATEN = {
           wirkung: { bindung: { n: 1, jahre: 30 }, ertrag: 450 } },
 
         { k: 'warmluftdarre', name: 'Die Darre mit Warmluft', anteil: 0.105, bauzeit: 1,
-          was: 'Kein Rauch mehr im Malz — heisse Luft durch einen Kanal.',
-          satz: 'Helles Malz. Damit laesst sich helles Bier brauen, und helles Bier ist gerade Mode.',
+          was: 'Kein Rauch mehr im Malz — heiße Luft durch einen Kanal.',
+          satz: 'Helles Malz. Damit lässt sich helles Bier brauen, und helles Bier ist gerade Mode.',
           wirkung: { preis: 0.06, ertrag: 700 } },
 
         { k: 'gleis', name: 'Das Gleis bis an die Rampe', anteil: 0.19, bauzeit: 2,
           was: 'Vierhundert Meter Anschlussgleis, Weiche und Prellbock.',
-          satz: 'Der Waggon faehrt in den Hof. Die Fuhre endet nicht mehr am Bahnhof.',
+          satz: 'Der Waggon fährt in den Hof. Die Fuhre endet nicht mehr am Bahnhof.',
           wirkung: { ertrag: 1200 } },
 
-        { k: 'maelzerei', name: 'Die Maelzerei mit Weichstock', anteil: 0.24, bauzeit: 2,
+        { k: 'maelzerei', name: 'Die Mälzerei mit Weichstock', anteil: 0.24, bauzeit: 2,
           was: 'Weiche, Tenne, Darre in einem Bau aus Backstein.',
-          satz: 'Das Haus macht sein Malz selbst und verkauft, was uebrig ist.',
+          satz: 'Das Haus macht sein Malz selbst und verkauft, was übrig ist.',
           wirkung: { rohstoff: 260, ertrag: 1500 } },
 
         { k: 'dampf', name: 'Die Dampfmaschine', anteil: 0.30, bauzeit: 2,
-          was: 'Eine liegende Einzylindermaschine, achtzehn Pferdestaerken, mit Schwungrad und Transmission.',
-          satz: 'Sie ruehrt, pumpt, schrotet und laeuft, solange Kohle da ist.',
+          was: 'Eine liegende Einzylindermaschine, achtzehn Pferdestärken, mit Schwungrad und Transmission.',
+          satz: 'Sie rührt, pumpt, schrotet und läuft, solange Kohle da ist.',
           wirkung: { ertrag: 1900, preis: 0.03 } },
 
-        { k: 'flaschen', name: 'Die Flaschenfuellerei', anteil: 0.33, bauzeit: 1, ab: 1880,
-          was: 'Zwoelf Fuellhaehne, Buegelverschluss, ein Spuelbottich.',
-          satz: 'Bier verlaesst das Haus zum ersten Mal ohne Fass.',
+        { k: 'flaschen', name: 'Die Flaschenfüllerei', anteil: 0.33, bauzeit: 1, ab: 1880,
+          was: 'Zwölf Füllhähne, Bügelverschluss, ein Spülbottich.',
+          satz: 'Bier verlässt das Haus zum ersten Mal ohne Fass.',
           wirkung: { preis: 0.08, ertrag: 1800 } },
 
-        { k: 'email', name: 'Emailschilder an fuenfzehn Haeusern', anteil: 0.16, bauzeit: 0, ab: 1893,
-          was: 'Kobaltblaues Email, weisse Kontur, gewoelbte Ecken — die neue Reklame.',
-          satz: 'Der Name steht jetzt an fremden Waenden und bleibt dort dreissig Jahre haengen.',
+        { k: 'email', name: 'Emailschilder an fünfzehn Häusern', anteil: 0.16, bauzeit: 0, ab: 1893,
+          was: 'Kobaltblaues Email, weiße Kontur, gewölbte Ecken — die neue Reklame.',
+          satz: 'Der Name steht jetzt an fremden Wänden und bleibt dort dreißig Jahre hängen.',
           wirkung: { preis: 0.05, ansehen: 14, ertrag: 800 } },
 
-        { k: 'kaelte', name: 'Die Kaeltemaschine nach Linde', anteil: 0.52, bauzeit: 2, ab: 1876,
+        { k: 'kaelte', name: 'Die Kältemaschine nach Linde', anteil: 0.52, bauzeit: 2, ab: 1876,
           was: 'Ammoniak-Kompressor, Solekreis, ein Maschinenhaus mit hohem Fenster.',
           satz: 'Das Sommerbrauverbot ist damit eine Gewohnheit statt eines Gesetzes.',
           wirkung: { plaetze: 180, ertrag: 3000 } },
 
         { k: 'sudhelm', name: 'Das Sudhaus mit Kupferhelm', anteil: 0.66, bauzeit: 3,
-          was: 'Zwei Pfannen, Laeuterbottich, Kupferhauben, ein Fenster in ganzer Hoehe.',
+          was: 'Zwei Pfannen, Läuterbottich, Kupferhauben, ein Fenster in ganzer Höhe.',
           satz: 'Das Haus sieht zum ersten Mal aus wie das Bild, das man von einer Brauerei hat.',
           wirkung: { plaetze: 90, ertrag: 3600, preis: 0.04 } },
 
         { k: 'felsenkeller', name: 'Der Felsenkeller', anteil: 0.38, bauzeit: 3,
-          was: 'Achthundert Quadratmeter in den Berg getrieben, Lagerfaesser in zwei Etagen.',
+          was: 'Achthundert Quadratmeter in den Berg getrieben, Lagerfässer in zwei Etagen.',
           satz: 'Wer lagern kann, muss nicht verkaufen. Das ist die ganze Macht dieses Jahrhunderts.',
           wirkung: { plaetze: 320, ertrag: 2200 } },
 
         { k: 'niederlage', name: 'Eine Niederlage in der Kreisstadt', anteil: 0.95, bauzeit: 1,
-          was: 'Lagerkeller, Kontor und zwei Fuhrwerke, achtzehn Kilometer flussabwaerts.',
+          was: 'Lagerkeller, Kontor und zwei Fuhrwerke, achtzehn Kilometer flussabwärts.',
           satz: 'Zum ersten Mal steht Bier des Hauses, wo das Haus nicht ist.',
           wirkung: { bindung: { n: 2, jahre: 25 }, ertrag: 5200 } }
       ],
 
       festlegungen: [
         { k: 'aktien', name: 'Die Umwandlung in eine Aktiengesellschaft', anteil: 0.0,
-          was: 'Fremdes Geld baut mit. Das Haus behaelt den Namen und die Mehrheit.',
-          regel: 'Sofort viel Geld in der Kasse. Dafuer geht in jedem Michaeli eine Dividende aus dem Haus — solange es das Haus gibt.',
-          wirkung: { einmal: 7, pflichtNeu: { k: 'dividende', name: 'Dividende an die Aktionaere', teil: 0.34,
-            sagt: 'Ein gutes Drittel der jaehrlichen Lasten, oben drauf, unkuendbar.' } } },
+          was: 'Fremdes Geld baut mit. Das Haus behält den Namen und die Mehrheit.',
+          regel: 'Sofort viel Geld in der Kasse. Dafür geht in jedem Michaeli eine Dividende aus dem Haus — solange es das Haus gibt.',
+          wirkung: { einmal: 7, pflichtNeu: { k: 'dividende', name: 'Dividende an die Aktionäre', teil: 0.34,
+            sagt: 'Ein gutes Drittel der jährlichen Lasten, oben drauf, unkündbar.' } } },
 
         { k: 'bahnvertrag', name: 'Der Frachtvertrag mit der Staatsbahn', anteil: 0.75,
-          was: 'Ein Ausnahmetarif fuer Bier in Kuehlwagen, auf Dauer geschlossen.',
-          regel: 'Die Fracht kostet das Haus fuer den Rest der Partie weniger als jeden Wettbewerber.',
+          was: 'Ein Ausnahmetarif für Bier in Kühlwagen, auf Dauer geschlossen.',
+          regel: 'Die Fracht kostet das Haus für den Rest der Partie weniger als jeden Wettbewerber.',
           wirkung: { ertrag: 2400, umlageHalb: false } },
 
         { k: 'marke', name: 'Die eingetragene Handelsmarke', anteil: 0.62, ab: 1894,
           was: 'Anker und Schriftzug, eingetragen beim Patentamt nach dem Gesetz von 1894.',
-          regel: 'Der Name gehoert dem Haus. Jedes Fass faengt von nun an mehr, weil auf ihm etwas steht.',
+          regel: 'Der Name gehört dem Haus. Jedes Fass fängt von nun an mehr, weil auf ihm etwas steht.',
           wirkung: { preis: 0.13, ansehen: 18 } },
 
         { k: 'konvention', name: 'Der Beitritt zur Brauereikonvention', anteil: 0.22,
           was: 'Acht Brauereien setzen einen gemeinsamen Preis und teilen die Stadt in Bezirke.',
-          regel: 'Ein sicherer Preis und ein fester Bezirk. Dafuer waechst das Haus nie wieder ueber seinen Bezirk hinaus.',
+          regel: 'Ein sicherer Preis und ein fester Bezirk. Dafür wächst das Haus nie wieder über seinen Bezirk hinaus.',
           wirkung: { preis: 0.09, wachstumsdeckel: true, ertrag: 900 } }
       ]
     },
@@ -458,14 +458,14 @@ var PREIS_DATEN = {
        ================================================================== */
     4: {
       einheit: 'hl', mitte: 130, spanne: 55,
-      sagt: 'Der Preis steht im Regal, und das Regal gehoert nicht dir.',
+      sagt: 'Der Preis steht im Regal, und das Regal gehört nicht dir.',
 
       stil: 'offset',
       tag: 'Geschäftsjahr',
-      tagSatz: 'Der Michaelitag heisst jetzt Bilanzstichtag und liegt trotzdem im September. '
-             + 'Was frueher der Zunftschreiber vorlas, liegt heute als Umlaufbeschluss auf dem Tisch.',
-      anschlagSatz: 'Der Anschlag heisst jetzt Bewertung: Umsatz, Anlagevermoegen, Marktzugang. '
-                  + 'Wer waechst, zahlt hoehere Listungsgebuehren — der Handel rechnet mit.',
+      tagSatz: 'Der Michaelitag heißt jetzt Bilanzstichtag und liegt trotzdem im September. '
+             + 'Was früher der Zunftschreiber vorlas, liegt heute als Umlaufbeschluss auf dem Tisch.',
+      anschlagSatz: 'Der Anschlag heißt jetzt Bewertung: Umsatz, Anlagevermögen, Marktzugang. '
+                  + 'Wer wächst, zahlt höhere Listungsgebühren — der Handel rechnet mit.',
 
       grund: 620000,
       lastenGrund: 32000,
@@ -478,8 +478,8 @@ var PREIS_DATEN = {
       abstaende: [4, 5, 7, 6, 5, 8],
 
       ordnung: [
-        { ab: 1914, preis: 118, sagt: 'Kriegsbier. Die Stammwuerze wird herabgesetzt, der Preis behoerdlich festgelegt.' },
-        { ab: 1950, preis: 126, sagt: 'Nach der Waehrungsreform rechnet alles neu. Der Satz ist wieder frei — auf dem Papier.' },
+        { ab: 1914, preis: 118, sagt: 'Kriegsbier. Die Stammwürze wird herabgesetzt, der Preis behördlich festgelegt.' },
+        { ab: 1950, preis: 126, sagt: 'Nach der Währungsreform rechnet alles neu. Der Satz ist wieder frei — auf dem Papier.' },
         { ab: 1970, preis: 130, sagt: 'Der Handel diktiert die Aktionspreise. Der Listenpreis ist Zierde.' },
         { ab: 1985, preis: 142, sagt: 'Kastenpreis 14,99 im Angebot. Was daraus beim Haus ankommt, steht hier.' },
         { ab: 2002, preis: 155, sagt: 'Umstellung auf Euro. Die Kette rundet ab, die Brauerei rundet nicht auf.' },
@@ -488,78 +488,78 @@ var PREIS_DATEN = {
 
       pflichten: [
         { k: 'biersteuer', name: 'Biersteuer und Umsatzsteuer', teil: 0.36,
-          sagt: 'Nach Stammwuerze gestaffelt. Der Mengenstaffelsatz begruenstigt gerade noch dieses Haus.' },
+          sagt: 'Nach Stammwürze gestaffelt. Der Mengenstaffelsatz begünstigt gerade noch dieses Haus.' },
         { k: 'loehne', name: 'Tarif, Sozialabgaben, Altersversorgung', teil: 0.29,
-          sagt: 'Der Tarifvertrag gilt fuer das ganze Braugewerbe. Verhandelt wird anderswo.' },
-        { k: 'listung', name: 'Listungsgebuehr und Werbekostenzuschuss', teil: 0.20,
-          sagt: 'Wer im Regal stehen will, zahlt fuer den Platz. Frueher hiess das Bannmeile, heute WKZ.' },
+          sagt: 'Der Tarifvertrag gilt für das ganze Braugewerbe. Verhandelt wird anderswo.' },
+        { k: 'listung', name: 'Listungsgebühr und Werbekostenzuschuss', teil: 0.20,
+          sagt: 'Wer im Regal stehen will, zahlt für den Platz. Früher hieß das Bannmeile, heute WKZ.' },
         { k: 'zinsen', name: 'Zins und Tilgung', teil: 0.15,
-          sagt: 'Die Abfuellanlage ist finanziert. Zwoelf Jahre laeuft die Rate.' }
+          sagt: 'Die Abfüllanlage ist finanziert. Zwölf Jahre läuft die Rate.' }
       ],
 
       umlagen: [
-        { name: 'Waehrungsreform — Umstellung 10:1', sagt: 'Aus zehn Reichsmark wird eine D-Mark. Die Kasse schmilzt, die Schulden auch.' },
-        { name: 'Tarifabschluss mit Nachzahlung',   sagt: 'Sieben Prozent rueckwirkend zum Januar.' },
-        { name: 'Pfand- und Ruecknahmepflicht',     sagt: 'Kaesten, Kisten, Automaten. Das Haus zahlt die Umstellung.' },
-        { name: 'Energiepreissprung',               sagt: 'Der Sudkessel laeuft mit Gas, und Gas hat sich verdoppelt.' },
-        { name: 'Umbau der Klaeranlage',            sagt: 'Die Abwasserverordnung gilt auch fuer Brauereien.' }
+        { name: 'Währungsreform — Umstellung 10:1', sagt: 'Aus zehn Reichsmark wird eine D-Mark. Die Kasse schmilzt, die Schulden auch.' },
+        { name: 'Tarifabschluss mit Nachzahlung',   sagt: 'Sieben Prozent rückwirkend zum Januar.' },
+        { name: 'Pfand- und Rücknahmepflicht',     sagt: 'Kästen, Kisten, Automaten. Das Haus zahlt die Umstellung.' },
+        { name: 'Energiepreissprung',               sagt: 'Der Sudkessel läuft mit Gas, und Gas hat sich verdoppelt.' },
+        { name: 'Umbau der Kläranlage',            sagt: 'Die Abwasserverordnung gilt auch für Brauereien.' }
       ],
-      pfand: 'Wer nicht zahlt, verliert die Listung: eine Gaststaette wird auf fuenf Jahre '
+      pfand: 'Wer nicht zahlt, verliert die Listung: eine Gaststätte wird auf fünf Jahre '
            + 'von der Nordstern-Gruppe beliefert.',
 
       angebote: [
         { k: 'kasten', name: 'Der eigene Mehrwegkasten', anteil: 0.040, bauzeit: 0,
-          was: 'Zwanzig Flaschen, Kunststoff, Name in den Griff gepraegt.',
+          was: 'Zwanzig Flaschen, Kunststoff, Name in den Griff geprägt.',
           satz: 'Der Kasten steht in fremden Kellern und wirbt dort, ohne dass jemand ihn ansieht.',
           wirkung: { preis: 0.04, ansehen: 8, ertrag: 3000 } },
 
         { k: 'zelt', name: 'Das Bierzelt auf dem Volksfest', anteil: 0.075, bauzeit: 0,
-          was: 'Ein Zelt mit dreitausend Plaetzen, neun Tage im Jahr.',
+          was: 'Ein Zelt mit dreitausend Plätzen, neun Tage im Jahr.',
           satz: 'Neun Tage, an denen die Stadt das Bier des Hauses trinkt und sonst nichts.',
           wirkung: { ertrag: 6000, ansehen: 10 } },
 
-        { k: 'grosshandel', name: 'Der Getraenkefachgrosshandel als Partner', anteil: 0.115, bauzeit: 0,
-          was: 'Ein Vertrag mit dem groessten Zwischenhaendler des Kreises.',
-          satz: 'Er nimmt Menge ab und bringt sie in Gaststaetten, die das Haus nie besucht.',
+        { k: 'grosshandel', name: 'Der Getränkefachgroßhandel als Partner', anteil: 0.115, bauzeit: 0,
+          was: 'Ein Vertrag mit dem größten Zwischenhändler des Kreises.',
+          satz: 'Er nimmt Menge ab und bringt sie in Gaststätten, die das Haus nie besucht.',
           wirkung: { bindung: { n: 2, jahre: 20 }, ertrag: 9000 } },
 
-        { k: 'lastzug', name: 'Zwei Lastzuege mit Anhaenger', anteil: 0.15, bauzeit: 0,
+        { k: 'lastzug', name: 'Zwei Lastzüge mit Anhänger', anteil: 0.15, bauzeit: 0,
           was: 'Zwei Siebeneinhalbtonner mit Planenaufbau und Ladebordwand.',
           satz: 'Die Auslieferung wird ein Fahrplan statt einer Fuhre.',
           wirkung: { ertrag: 12000 } },
 
         { k: 'werbefilm', name: 'Der Werbefilm im Vorabendprogramm', anteil: 0.21, bauzeit: 0, ab: 1958,
-          was: 'Dreissig Sekunden, ein Fluss, ein Chor, ein Schriftzug am Ende.',
+          was: 'Dreißig Sekunden, ein Fluss, ein Chor, ein Schriftzug am Ende.',
           satz: 'Zum ersten Mal kennt jemand das Bier, der nie in der Stadt war.',
           wirkung: { preis: 0.09, ansehen: 20, ertrag: 16000 } },
 
         { k: 'dosenlinie', name: 'Die Dosenlinie', anteil: 0.26, bauzeit: 1, ab: 1965,
-          was: 'Weissblech, Aufreissdeckel, achtzehntausend Dosen in der Stunde.',
+          was: 'Weißblech, Aufreißdeckel, achtzehntausend Dosen in der Stunde.',
           satz: 'Der Handel will sie. Was der Handel will, kommt ins Regal.',
           wirkung: { ertrag: 20000, preis: -0.03 } },
 
         { k: 'trikot', name: 'Die Trikotwerbung beim Landesligisten', anteil: 0.13, bauzeit: 0, ab: 1973,
           was: 'Der Schriftzug auf der Brust, zweiundzwanzig Spieltage im Jahr.',
-          satz: 'Ein Verein, eine Stadt, ein Name. Billiger als Fernsehen und haelt laenger.',
+          satz: 'Ein Verein, eine Stadt, ein Name. Billiger als Fernsehen und hält länger.',
           wirkung: { ansehen: 16, preis: 0.05, ertrag: 10000 } },
 
-        { k: 'abfuellung', name: 'Die Abfuellanlage, 24.000 Flaschen je Stunde', anteil: 0.45, bauzeit: 2,
-          was: 'Reinigung, Fueller, Etikettierer, Packer — eine Halle voll.',
+        { k: 'abfuellung', name: 'Die Abfüllanlage, 24.000 Flaschen je Stunde', anteil: 0.45, bauzeit: 2,
+          was: 'Reinigung, Füller, Etikettierer, Packer — eine Halle voll.',
           satz: 'Sie rechnet sich erst ab einer Menge, die das Haus noch nicht hat.',
           wirkung: { ertrag: 34000, plaetze: 900 } },
 
-        { k: 'gaertanks', name: 'Zylindrokonische Gaertanks im Freien', anteil: 0.34, bauzeit: 2,
+        { k: 'gaertanks', name: 'Zylindrokonische Gärtanks im Freien', anteil: 0.34, bauzeit: 2,
           was: 'Acht Edelstahltanks, sechzehn Meter hoch, hinter dem alten Sudhaus.',
-          satz: 'Gaerung und Lagerung im selben Tank. Der Felsenkeller wird zum Museum.',
+          satz: 'Gärung und Lagerung im selben Tank. Der Felsenkeller wird zum Museum.',
           wirkung: { plaetze: 1400, ertrag: 26000 } },
 
-        { k: 'spezialitaet', name: 'Das Kellerbier in der Buegelflasche', anteil: 0.09, bauzeit: 1, ab: 1985,
-          was: 'Naturtrueb, ungefiltert, Buegelverschluss, ein Etikett wie 1900.',
-          satz: 'Kleine Menge, grosser Preis. Es verkauft die Geschichte des Hauses mit.',
+        { k: 'spezialitaet', name: 'Das Kellerbier in der Bügelflasche', anteil: 0.09, bauzeit: 1, ab: 1985,
+          was: 'Naturtrüb, ungefiltert, Bügelverschluss, ein Etikett wie 1900.',
+          satz: 'Kleine Menge, großer Preis. Es verkauft die Geschichte des Hauses mit.',
           wirkung: { preis: 0.11, ansehen: 14, ertrag: 7000 } },
 
-        { k: 'logistik', name: 'Das Logistikzentrum an der Bundesstrasse', anteil: 0.80, bauzeit: 3,
-          was: 'Hochregal, Rampen fuer zwoelf Lastzuege, ein Verwaltungsriegel aus Glas.',
+        { k: 'logistik', name: 'Das Logistikzentrum an der Bundesstraße', anteil: 0.80, bauzeit: 3,
+          was: 'Hochregal, Rampen für zwölf Lastzüge, ein Verwaltungsriegel aus Glas.',
           satz: 'Der Hof in der Stadt wird zur Adresse, die Ware kommt woanders her.',
           wirkung: { ertrag: 60000, plaetze: 2200 } },
 
@@ -571,24 +571,24 @@ var PREIS_DATEN = {
 
       festlegungen: [
         { k: 'handelsmarke', name: 'Die Handelsmarke', anteil: 0.28,
-          was: 'Wort und Bild, geschuetzt in allen Klassen, mit Etat fuer die naechsten Jahre.',
-          regel: 'Der Name traegt den Preis. Jedes Hektoliter faengt fuer den Rest der Partie mehr, weil ein Name darauf steht.',
+          was: 'Wort und Bild, geschützt in allen Klassen, mit Etat für die nächsten Jahre.',
+          regel: 'Der Name trägt den Preis. Jedes Hektoliter fängt für den Rest der Partie mehr, weil ein Name darauf steht.',
           wirkung: { preis: 0.18, ansehen: 25 } },
 
         { k: 'konzern', name: 'Der Liefervertrag mit der Nordstern-Gruppe', anteil: 0.0,
-          was: 'Der Konzern nimmt die Menge ab, stellt die Kaesten und zahlt puenktlich.',
-          regel: 'Sofort viel Geld und ein sicherer Absatz. Dafuer bestimmt der Konzern den Preis — das Haus kann ihn nie wieder heben.',
+          was: 'Der Konzern nimmt die Menge ab, stellt die Kästen und zahlt pünktlich.',
+          regel: 'Sofort viel Geld und ein sicherer Absatz. Dafür bestimmt der Konzern den Preis — das Haus kann ihn nie wieder heben.',
           wirkung: { einmal: 6, preisDeckel: true, ertrag: 28000 } },
 
         { k: 'genossenschaft', name: 'Die Genossenschaft der Gastwirte', anteil: 0.22,
           was: 'Vierzig Wirte zeichnen Anteile und binden sich auf zwanzig Jahre.',
-          regel: 'Vier Haeuser bleiben dem Haus. Dafuer geht in jedem Michaeli eine Rueckverguetung an die Wirte.',
-          wirkung: { bindung: { n: 4, jahre: 60 }, pflichtNeu: { k: 'rueckverguetung', name: 'Rueckverguetung an die Genossen', teil: 0.19,
-            sagt: 'Ein Fuenftel der jaehrlichen Lasten, oben drauf, satzungsgemaess.' } } },
+          regel: 'Vier Häuser bleiben dem Haus. Dafür geht in jedem Michaeli eine Rückvergütung an die Wirte.',
+          wirkung: { bindung: { n: 4, jahre: 60 }, pflichtNeu: { k: 'rueckverguetung', name: 'Rückvergütung an die Genossen', teil: 0.19,
+            sagt: 'Ein Fünftel der jährlichen Lasten, oben drauf, satzungsgemäß.' } } },
 
-        { k: 'privat', name: 'Der Rueckzug auf die eigene Braustaette', anteil: 0.13,
+        { k: 'privat', name: 'Der Rückzug auf die eigene Braustätte', anteil: 0.13,
           was: 'Kein Handel mehr, kein Regal, keine Aktion. Nur noch Gastronomie und Werksverkauf.',
-          regel: 'Die Listungsgebuehr entfaellt fuer immer, und jedes Hektoliter faengt deutlich mehr. Die grossen Mengen sind damit vorbei.',
+          regel: 'Die Listungsgebühr entfällt für immer, und jedes Hektoliter fängt deutlich mehr. Die großen Mengen sind damit vorbei.',
           wirkung: { pflichtWeg: 'listung', preis: 0.30, wachstumsdeckel: true } }
       ]
     }
