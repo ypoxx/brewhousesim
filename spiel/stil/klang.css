@@ -1,0 +1,47 @@
+/* ===========================================================================
+   stil/klang.css — DAS STUECK "DER KLANG".
+
+   Genau ein Element: der Tonschalter unten links. Er ist absichtlich winzig
+   (rund 34 Bezugspixel von 2752 Breite, also gut ein Prozent) — die Bildlatte
+   ist ein Blindvergleich gegen gemalte Zielbilder, und ein Stueck, das dort
+   Pixel kostet, schadet einem fremden Stueck.
+   =========================================================================== */
+
+.fach-kopf-klang {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.knopf.klang-schalter {
+  position: absolute;
+  left: 1.6%;
+  top: 95.4%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+
+  min-height: calc(var(--s) * 40);
+  width: calc(var(--s) * 40);
+  padding: 0;
+  gap: 0;
+  border-radius: 50%;
+  border-width: calc(var(--s) * 2);
+
+  font-size: calc(var(--s) * 22);
+  line-height: 1;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+
+.knopf.klang-schalter:hover,
+.knopf.klang-schalter:focus-visible { opacity: 1; }
+
+.knopf.klang-schalter .wort {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.knopf.klang-an { opacity: 0.42; }
+.knopf.klang-wartet { opacity: 0.72; }
+.knopf.klang-aus .wort { opacity: 0.75; }

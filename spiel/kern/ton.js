@@ -505,7 +505,8 @@
       puffer(w.ctx, datei).then(function (buf) {
         merke(w.ctx, datei, buf);
         if (bettJetzt !== epoche || !werk) return;
-        liegend[bus] = legeSchleife(werk, bus, buf, werk.ctx.currentTime + 0.05, 0, 1.6);
+        liegend[bus] = legeSchleife(werk, bus, buf, werk.ctx.currentTime + 0.05, 0, 1.6,
+                                    datei, bus === 'bett' ? epoche * 3.7 : epoche * 2.3);
       }, function () { });
     });
 
@@ -666,30 +667,14 @@
         var w = baueWerk(octx);
         w.meister.gain.value = 0.92;
 
-        var bettBuf = fertig(octx, BETT(epoche));
-        var hofBuf = fertig(octx, HOF(epoche));
         /* Nicht immer bei 0 anfangen: sonst hoert das Ohr viermal denselben
            Musikanfang. Der Versatz haengt an der Epoche, bleibt also gleich. */
-        if (bettBuf) {
-          var s = legeSchleife(w, 'bett', bettBuf, 0, sek, 0.8);
-          try { s.quelle.stop(); } catch (f) { }
-          var q = octx.createBufferSource();
-          q.buffer = bettBuf; q.loop = true;
-          q.loopStart = 0.2; q.loopEnd = Math.max(1, bettBuf.duration - 0.2);
-          q.connect(s.gain);
-          q.start(0, (epoche * 3.7) % Math.max(1, bettBuf.duration - 1));
-          q.stop(sek + 0.1);
-        }
-        if (hofBuf) {
-          var h = legeSchleife(w, 'hof', hofBuf, 0, sek, 0.6);
-          try { h.quelle.stop(); } catch (f) { }
-          var hq = octx.createBufferSource();
-          hq.buffer = hofBuf; hq.loop = true;
-          hq.loopStart = 0.2; hq.loopEnd = Math.max(1, hofBuf.duration - 0.2);
-          hq.connect(h.gain);
-          hq.start(0, (epoche * 2.3) % Math.max(1, hofBuf.duration - 1));
-          hq.stop(sek + 0.1);
-        }
+        var bettBuf = fertig(octx, BETT(epoche));
+        var hofBuf = fertig(octx, HOF(epoche));
+        if (bettBuf) legeSchleife(w, 'bett', bettBuf, 0, sek, 0.8, BETT(epoche),
+                                  opt.versatz === undefined ? epoche * 3.7 : opt.versatz);
+        if (hofBuf) legeSchleife(w, 'hof', hofBuf, 0, sek, 0.6, HOF(epoche),
+                                 opt.versatz === undefined ? epoche * 2.3 : opt.versatz);
 
         plan.forEach(function (p) {
           if (p.t < 0 || p.t > sek - 0.2) return;
