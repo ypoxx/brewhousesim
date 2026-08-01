@@ -124,7 +124,7 @@ var STADT_DATEN = {
       nutzen: { platz: 4 } },
 
     { schluessel: 'brunnen', name: 'Ziehbrunnen', bild: 'brunnen',
-      ort: 'brunnen', dx: 2, dy: 2, breite: 13, von: 1, bis: 3, grund: 18,
+      ort: 'brunnen', dx: 4, dy: 0, breite: 13.5, von: 1, bis: 3, grund: 18,
       sagt: 'Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbringt.',
       nutzen: { sud: 1 } },
 
