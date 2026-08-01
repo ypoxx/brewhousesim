@@ -300,6 +300,26 @@
       zeile.appendChild(k);
     });
 
+    if (markenZahl) {
+      var ruht = (ruhend || 0) > 0;
+      var m = B.knopf({
+        text: 'Ortsmarken',
+        zug: 'stadt:ortsmarken',
+        klasse: 'stadt-reiter marken' + (ruht ? '' : ' auf'),
+        titel: ruht
+          ? markenZahl + ' Ortsmarken der anderen Stuecke liegen auf ihren Pfloecken. '
+            + 'Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.'
+          : 'Legt alle Ortsmarken zurueck auf ihre Pfloecke — dann steht nur noch '
+            + 'die Stadt im Bild.',
+        tu: markenSchalter
+      });
+      m.setAttribute('aria-expanded', ruht ? 'false' : 'true');
+      m.appendChild(B.el('span', 'zahl', ruht
+        ? markenZahl + ' auf dem Pflock'
+        : markenZahl + ' im Bild'));
+      zeile.appendChild(m);
+    }
+
     if (offenDa) {
       zeile.appendChild(B.knopf({
         text: 'Stadt zeigen',
@@ -535,7 +555,8 @@
     });
 
     warDa = daJetzt;
-    zeichneReiter(reiter);
+    var ruhend = marken(jetzt);
+    zeichneReiter(reiter, ruhend);
   }
 
   function pruefe() {
@@ -834,6 +855,13 @@
       lage: function () { return JSON.parse(JSON.stringify(lage)); },
       zeige: alleZuklappen,
       schalte: schalte
+    },
+    /* Die Kartenschicht: wer seine Marke selbst setzen will, setzt data-frei
+       und wird nicht mehr angefasst — wie beim Rahmen. */
+    karte: {
+      lage: function () { return JSON.parse(JSON.stringify(markenLage)); },
+      zahl: function () { return markenZahl; },
+      schalte: markenSchalter
     }
   };
 
