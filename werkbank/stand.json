@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T20:59:56+00:00",
+ "stand": "2026-08-01T21:11:10+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -72,6 +72,12 @@
    "status": "laeuft",
    "runde": 4,
    "luecke": "Eichung gebaut und gemessen: Michaelitag deckt das zweitbilligste Angebot in E1 5/5, E2 4/5 (1604), E3 5/5, E4 4/5 (1974). Offen: die zwei Fehljahre haengen an der Michaeli-Rechnung von DER PREIS (gemessen 22-44 % des Umsatzes gegen 5 % Anteil) und an KERN meldeZug(was,preis,art) fuer ZUSTAENDIGKEIT 18."
+  },
+  {
+   "name": "DER SUD",
+   "status": "laeuft",
+   "runde": 1,
+   "luecke": "Bild und Ton des Stuecks fehlen noch (bild/sud/**, ton/sud/**); Messung laeuft."
   }
  ],
  "chronik": [
@@ -538,6 +544,34 @@
   {
    "zeit": "2026-08-01T20:59:56+00:00",
    "text": "KRITIKER DER STADT R6: neues Messgeraet werkbank/auge.py angelegt, BEVOR damit gemessen wird (ZUSTAENDIGKEIT 16). Es ist das fremde Auge fuer Latte 1: zwei Bilder A/B in getauschter Reihenfolge, ohne Hinweis, welches das gebaute Spiel und welches zielbild/ ist; es muss drei benennbare Stellen nennen. Waehlt der Fremde das Zielbild, geht die Arbeit zurueck."
+  },
+  {
+   "zeit": "2026-08-01T21:10:56+00:00",
+   "text": "SUD: Stueck gebaut — Verfahren je Epoche, Gaerkeller getrennt vom Lagerkeller, B.sud.rohstoff und B.sud.nimmHeraus(n, wahl)."
+  },
+  {
+   "zeit": "2026-08-01T21:11:09+00:00",
+   "text": "KERN: nimmHeraus(n) nimmt immer das aelteste Fass. DER SUD sortiert vorher um (wie DIE FUHRE). Bitte nimmHeraus(n, wahl) mit {aeltestes|juengstes|sorte|k|faesser|reif} — Vorlage steht als B.sud.nimmHeraus in stuecke/sud.js."
+  },
+  {
+   "zeit": "2026-08-01T21:11:09+00:00",
+   "text": "KERN: haus.rohstoff hat keine API; jedes Stueck rechnet direkt am Feld. Vorlage steht als B.sud.rohstoff (stand/reicht/nimm/gib, protokolliert) in stuecke/sud.js."
+  },
+  {
+   "zeit": "2026-08-01T21:11:09+00:00",
+   "text": "KERN: welt.legeEin(sorte, n) setzt jahr/woche/haltbar selbst und kennt k, stufe, zeichen, reife nicht — wer ein Fass zwischen zwei Kellern umlegt, muss fuenf Felder von Hand wieder aufsetzen. Bitte legeEin(sorte, n, muster)."
+  },
+  {
+   "zeit": "2026-08-01T21:11:09+00:00",
+   "text": "KERN: der Gaerkeller liegt jetzt in stuecke/sud.js und zieht reifende Faesser aus welt.vorrat heraus. Sauber waere ein zweiter Behaelter im Kern (ZUSTAENDIGKEIT 6.1)."
+  },
+  {
+   "zeit": "2026-08-01T21:11:09+00:00",
+   "text": "DER SUD · Runde 1 · läuft — Bild und Ton des Stuecks fehlen noch (bild/sud/**, ton/sud/**); Messung laeuft."
+  },
+  {
+   "zeit": "2026-08-01T21:11:10+00:00",
+   "text": "AUFSICHT (21): DER VORWURF DER FUHRE TRIFFT ZU. DER PREIS nimmt 22-44 % (E1) und 22-24 % (E3) statt der erlaubten 5 - das Vier- bis Neunfache, und er sprengt den Gesamtdeckel von 18 allein. Wichtiger als die Zahl ist die Formel: pflichtHoehe haengt an der KASSE, nicht nur am Umsatz. Eine Abgabe, die an der Barschaft haengt, ist keine Abgabe, sondern ein Schwamm - sie frisst genau das Geld, das die Eichung an den Michaelitag traegt, und erklaert rueckwirkend, warum die Kasse im Jahr auf das Vierfache steigt und Michaeli sie vollstaendig nimmt. AUFLAGE AN DER PREIS: (1) keine Abgabe haengt an der Barschaft - Bemessung ist Umsatz oder Besitz, nie der Kassenstand; (2) zurueck auf 5 % im Jahresmittel je Epoche. AUFLAGE AN ALLE VIER: wer der Kasse etwas entnimmt, schreibt seinen Stuecknamen an den Posten - DIE FUHRE konnte in E2 und E4 nicht zuordnen, weil die Namen ihr nicht gehoeren, und ein Deckel, den nur sein Uebertreter nachrechnen kann, ist keiner. DIE EICHUNG wartet damit nicht auf DIE FUHRE (E1 5/5, E2 4/5, E3 5/5, E4 4/5), sondern auf DEN PREIS."
   }
  ]
 }

@@ -1,1 +1,39 @@
-/* stil/sud-zusatz.css — Stummel fuer "sud" (Welle 2). Leer, vollstaendig ersetzbar. */
+/* ===========================================================================
+   stil/sud-zusatz.css — DER SUD, zweite Stildatei.
+   Das Schlussblatt (ZUSTAENDIGKEIT §12) und die Feinheiten, die im
+   Hauptstil nur Laerm waeren.
+   =========================================================================== */
+
+.sud-schluss {
+  left: 26%;
+  top: 22%;
+  width: 46%;
+  max-height: 58%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+}
+
+.sud-schluss h2 { letter-spacing: calc(var(--s) * 4); }
+.sud-schluss .knopf { align-self: flex-start; margin-top: calc(var(--s) * 10); }
+
+/* Ein Bottich, der reif ist und nicht heraus kann, muss anders aussehen als
+   einer, der gleich ausschlaegt — sonst sieht der Spieler nur "schlaegt aus"
+   und wundert sich, warum nichts im Keller ankommt. */
+.sud-bottich.reif .sud-brest { color: #3d6b2e; }
+
+/* Der Guetebalken traegt in 1970 einen anderen Sinn als in 1350: dort ist
+   voll gut, hier ist voll gleichmaessig. Die Farbe entscheidet, nicht die
+   Laenge — deshalb der Schimmer statt einer zweiten Skala. */
+.sud-balken.gut i { box-shadow: inset 0 0 calc(var(--s) * 6) rgba(255, 255, 255, 0.55); }
+
+/* Der Kesselzettel darf nie einen Scrollbalken zeigen: er ist ein Punkt im
+   Bild, kein Fenster. Was nicht hineinpasst, steht auf dem Brett. */
+.sud-zettel::-webkit-scrollbar { display: none; }
+
+/* Zugeklappt heisst zugeklappt — die STADT setzt clip-path und
+   pointer-events:none; sud.js sperrt zusaetzlich die Knoepfe, damit
+   BRAUHAUS.zuege() sie nicht als offen zaehlt. Hier nur die Sicherung
+   fuer den Fall, dass ein Takt einmal ausfaellt. */
+.sud-brett.stadt-zugeklappt button { pointer-events: none; }

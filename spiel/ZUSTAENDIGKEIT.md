@@ -559,3 +559,54 @@ Wirtschaftsmechanik wird statt zu einer Anzeige.
 > **Auflage an DER PREIS:** den Ruf lesen. **Auflage an DEN NAMEN:** ihn nur setzen, nie einen
 > Preis schreiben (WELLE-2.md, unverändert). Der Aufschlag zählt gegen keinen Deckel, weil er
 > Geld herein ist.
+
+## 21 — Die Michaeli-Rechnung sprengt den Deckel, und sie hängt an der falschen Zahl
+
+**Vorgetragen von DER FUHRE, mit Messung über fünf Braujahre, bescheidener Spielstil.**
+**Entschieden: Der Vorwurf trifft zu. DER PREIS muss zurück.**
+
+Gemessen wurde, was jedes Stück vom Umsatz nimmt:
+
+| Stück | erlaubt (§4) | gemessen |
+|---|---|---|
+| DIE FUHRE | 8 % | **8 %** in allen vier Epochen |
+| DER PREIS | 5 % | **22 / 27 / 44 / 26 / 29 %** in E1 · **22 / 24 / 24 / 22 / 23 %** in E3 |
+
+Das ist das Vier- bis Neunfache. Der Gesamtdeckel von 18 % ist damit von einem einzigen
+Stück allein gesprengt.
+
+### Die Zahl ist das kleinere Problem
+
+Der Antrag benennt den eigentlichen Fehler, und der steht in einem Halbsatz:
+
+> „…die Rechnung wächst mit dem Umsatz **UND mit der Kasse** (`pflichtHoehe`), also frisst
+> sie jedes Geld, das ein anderes Stück an diesen Tag trägt."
+
+**Eine Abgabe, die an der Barschaft hängt, ist keine Abgabe, sondern ein Schwamm.** Sie macht
+jede Eichung des Michaelitags unmöglich — nicht schwierig, unmöglich —, weil sie genau das
+Geld aufsaugt, das ihretwegen hingelegt wurde. Sie erklärt auch rückwirkend den Befund aus
+`STAND.md` §2: dass die Kasse im Jahr auf das Vierfache steigt und Michaeli sie *vollständig*
+nimmt. Das war kein Zufall und keine schlechte Balance; das ist die Formel.
+
+> **Auflage an DER PREIS, beide Teile:**
+> 1. **Keine Abgabe hängt an der Barschaft.** `pflichtHoehe` und alles ihm Verwandte werden
+>    vom Kassenstand gelöst. Bemessungsgrundlage ist, was das Haus *umgesetzt* oder
+>    *besessen* hat — Fässer, Adressen, Ausstoß —, niemals, was gerade in der Kasse liegt.
+> 2. **Fünf Prozent, gemessen wie in §4.** Über ein Braujahr gemittelt, in jeder Epoche.
+
+### Und eine Auflage, die nicht DEM PREIS gilt
+
+DIE FUHRE konnte in E2 und E4 nicht zuordnen, „weil ihre Namen mir nicht gehören". Das ist
+kein Vorwurf, sondern eine Lücke im Verfahren: **Wer der Kasse etwas entnimmt, schreibt seinen
+Stücknamen an den Posten.** Sonst kann niemand den Deckel aus §4 nachrechnen, und ein Deckel,
+den nur sein Übertreter nachrechnen kann, ist keiner.
+
+> **Auflage an alle vier Stücke:** jeder Posten, der Geld aus der Kasse nimmt, trägt das
+> Stück im Namen oder in einem Feld daneben. Rückwirkend für die bestehenden Posten.
+
+### Was das für die Eichung heißt
+
+DIE FUHRE steht bei E1 5/5, E2 4/5, E3 5/5, E4 4/5 — zwei Fehljahre bei einer Rechnung, die
+ihr das Vierfache des Erlaubten wegnimmt. **Die Eichung wartet nicht auf DIE FUHRE, sie
+wartet auf DEN PREIS.** Ist die Rechnung von der Barschaft gelöst und auf 5 % zurück, wird
+die Eichung neu gemessen, bevor jemand weiter an ihr baut.
