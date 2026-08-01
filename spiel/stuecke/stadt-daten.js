@@ -165,8 +165,8 @@ var STADT_DATEN = {
       nutzen: { platz: 6 } },
 
     { schluessel: 'keller_gewoelbe', name: 'Gewoelbekeller', bild: 'keller_gewoelbe',
-      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 2: 8.6 },
-      versatz: { 2: { dx: 0.5, dy: -7 } },
+      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 9.5, 2: 8.6 },
+      versatz: { 1: { dx: 5 }, 2: { dx: 0.5, dy: -7 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kuehl und dunkel. Jede Woche, die ein Fass laenger haelt, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
