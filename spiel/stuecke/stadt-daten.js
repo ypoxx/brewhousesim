@@ -269,6 +269,8 @@ var STADT_DATEN = {
       sagt: 'Über dem Rauch wird das Malz trocken. Wie heiß man darrt, entscheidet die Farbe.',
       nutzen: { rohstoff: 40 } },
 
+    /* Dieselbe Wanderung wie der Fassschuppen: von C2 (35|78) auf die
+       Hoftasche (30|73,5). In 1600 sitzt es weiter rechts an der Mauer. */
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
       ort: 'fasslager', dx: 3, dy: -2.5, breite: 14, breiten: { 2: 10.1 },
       versatz: { 2: { dx: 9, dy: -3.5 } },
@@ -317,6 +319,9 @@ var STADT_DATEN = {
       sagt: 'Genietetes Eisen statt Holz. Was im Tank gärt, schmeckt jede Woche gleich.',
       nutzen: { platz: 40, sud: 2 } },
 
+    /* Der Eisschlitten liegt im Bild vorn links unter dem Huegel. Auf dem
+       alten Platz C1 (23|76) lag er 103 px unter der Mauerkante — zwei
+       Eisbloecke auf dem Mauerkopf. Jetzt auf (26|70), hinter dem Fasslager. */
     { schluessel: 'eiskeller', name: 'Eiskeller', bild: 'eiskeller',
       ort: 'keller', dx: 4, dy: 0, breite: 13, von: 3, bis: 4, grund: 70,
       sagt: 'Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergäriges Lagerbier möglich.',
@@ -337,6 +342,11 @@ var STADT_DATEN = {
       sagt: 'Fünf Böden übereinander. Das Haus mälzt sein Malz wieder selbst.',
       nutzen: { rohstoff: 120 } },
 
+    /* Stand bis Runde 3 auf (30|81), also zwei Einheiten SUEDLICH der
+       Sued-Ecke der eigenen Raute: die Kistenstapel hingen 58 px unter die
+       Mauerkante in die Strasse. Jetzt auf B2 (36|69), dem freien Platz
+       zwischen Maschinenhaus und Pferdestall. Dieselbe falsche Koordinate
+       trug bis Runde 3 auch die Fahrzeugwaage. */
     { schluessel: 'flaschenhalle', name: 'Flaschenhalle', bild: 'flaschenhalle',
       ort: 'hof', dx: 3, dy: 7, breite: 13.5, von: 3, bis: 3, grund: 100,
       sagt: 'Bier in Flaschen geht dorthin, wo kein Fass mehr hinkommt: nach Hause.',
@@ -368,6 +378,10 @@ var STADT_DATEN = {
       sagt: 'Ölfeuerung. Der alte Schornstein bleibt stehen und bleibt kalt.',
       nutzen: { sud: 8 } },
 
+    /* Die zweite Bewohnerin von (30|81): die Auffahrrampe endete unter dem
+       Mauerfuss, auf dem Gehweg. Die Waage ist flach, sie darf deshalb als
+       einzige ganz nach vorn auf D (27|76) — vor die Kaesten, wo der Lastzug
+       auffaehrt. Alles Hohe wuerde dort den halben Hof zudecken. */
     { schluessel: 'waage', name: 'Fahrzeugwaage', bild: 'waage',
       ort: 'hof', dx: -6, dy: 14, breite: 12, von: 4, bis: 4, grund: 55,
       sagt: 'Voll rein, leer raus, alles gewogen. Wer nicht wiegt, verliert im Kleinen.',

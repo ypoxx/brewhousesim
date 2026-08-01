@@ -59,7 +59,12 @@ gestellt, dass die Brauerin genau so groß ist wie die Leute auf der Platte:
 | | Brauerin im Bild | Mensch auf der Platte daneben |
 |---|---|---|
 | 1350, `breite` 8.9 | **78 px** | Magd am Tor 72 px · Mann im Hof 82 px |
-| 1600, `breite` 6.6 | **58 px** | die zwei Männer am Sudhaus 51 px |
+| 1600, `breite` 7.0 | **62 px** | die zwei Geher im Hof 58 und 62 px |
+
+Die 1600er Breite ist in Runde 4 von 6.6 auf 7.0 gewachsen, weil die Braustelle
+dort einen Schritt nach vorn auf den freien Hofboden gerückt ist: sie stand unter
+dem Dach der Roßmühle und war auf 4.410 Pixel zusammengeschrumpft. Wer 70 px
+näher an die Kamera rückt, wird größer, sonst schrumpft er zweimal.
 
 Gemessen wird an einem 2752×1536-Schuss, nicht geschätzt. Dieselbe Regel gilt
 für `kueferei.png`: der Küfer maß bei `breite` 14 volle 113 px und mißt bei
@@ -69,5 +74,27 @@ Menschen und bleiben unverändert.
 Weil die vier Platten nicht auf den Pixel gleich groß gezeichnet sind, dürfen
 Breite und Versatz je Epoche gestaffelt werden — `breiten: {1:…, 2:…}` und
 `versatz: {2:{dx,dy}}` in `stuecke/stadt-daten.js`.
+
+### Der freigestellte Rand (Runde 4)
+
+> **Kein Hofteil darf am Bildrand abgeschnitten sein.**
+
+Der Kritiker hat die Ränder aller 32 Dateien vermessen. `keller_gewoelbe.png` war
+die einzige mit einer **zu 97 % undurchsichtigen linken Randspalte** — der
+Erdhügel lief am Rahmen glatt aus dem Bild, und im Schuss 1350 stand daneben eine
+schnurgerade senkrechte Naht von 240 px: 224 von 241 Zeilen mit einem Farbsprung
+über 30, links Hofboden, rechts Wiesengrün.
+
+Das Bild ist deshalb **neu erzeugt** (`--ref spiel/bild/platte-1600.jpg`, Prompt:
+freistehender Hügel, beide Grasflanken laufen *innerhalb* des Rahmens zu Boden,
+kein Sockel, kein Schatten, reines Magenta ringsum), dann mit derselben
+Freistellung wie die anderen 31 geschnitten. Ergebnis 780×462, und alle vier
+Ränder messen **0,00** undurchsichtig.
+
+Die Randwerte der übrigen Dateien bleiben, wie sie waren — `fasslager_stein`
+links 0,46, `abfuellhalle` rechts 0,40, `hopfenlager` oben 0,35. Das sind
+Flächen, die im Spiel hinter anderen Bauten oder unter der Werkbank liegen; sie
+erzeugen keine Naht auf freiem Hofboden. Wer eine davon nach vorn stellt, stellt
+sie vorher frei.
 
 Die drei anderen Stücke legen ihr Material unter `fuhre/`, `preis/`, `gegner/` ab.
