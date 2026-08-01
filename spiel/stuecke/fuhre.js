@@ -111,7 +111,6 @@
     notsud: 0,           /* Notsude DIESER Woche, vom Braumeister gesetzt    */
     notGesamt: 0,        /* Notsude im laufenden Braujahr                    */
     notGemeldet: false,
-    endeGemeldet: false,
 
     /* DER WEG ZURUECK UND DAS ENDE */
     probe: {},           /* adr -> {zutrauen, jahr, gaben}                   */
@@ -119,7 +118,6 @@
     probeDieseWoche: 0,  /* Faesser auf Probe, die DIESE Woche hinausgingen  */
     zurueckGeholt: [],   /* [{name, jahr, wie}] fuers Schlussblatt           */
     frist: null,         /* Wochen, die dem leeren Auftragsbuch bleiben      */
-    fristGemeldet: false,
     geschlecht: [],      /* die Generationenzeile, fuers Schlussblatt        */
     startJahr: 0,
     schluss: null,
@@ -482,7 +480,6 @@
       B.welt.zeit.jahr + 2);
     Z.zurueckGeholt.push({ name: a.name, jahr: B.welt.zeit.jahr, wie: wie, vorher: vorher });
     Z.frist = null;
-    Z.fristGemeldet = false;
     B.welt.protokolliere({ wer: 'spieler', preis: 0, adresse: a.schluessel,
       was: a.name + ' führt wieder Bier des Hauses'
          + (vorher ? ' — abgenommen wurde die Adresse ' + vorher : '') });
@@ -542,7 +539,7 @@
     Z.probeDieseWoche = 0;
 
     if (lebt) {
-      if (Z.frist !== null) { Z.frist = null; Z.fristGemeldet = false; }
+      if (Z.frist !== null) Z.frist = null;
       return;
     }
     if (B.welt.zeit.ende) return;
@@ -550,7 +547,6 @@
     var fd = fristDef();
     if (Z.frist === null) {
       Z.frist = fd.wochen;
-      Z.endeGemeldet = true;
       B.welt.schreibe('Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, '
         + 'aber es liefert nirgendwohin mehr. Nicht das Geld ist ausgegangen — die Kundschaft. '
         + fd.satz + ' Es bleiben ' + fd.wochen + ' Wochen und '
@@ -1350,7 +1346,6 @@
     Z.probe = {};
     Z.probeDieseWoche = 0;
     Z.frist = null;
-    Z.fristGemeldet = false;
     /* Ein Vorschlag steht an der Tafel, damit die erste Woche laeuft.
        Kein Tutorial — eine Lage, die schon eingestellt ist. */
     var standard = sorten()[1] || sorten()[0];
