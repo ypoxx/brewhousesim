@@ -266,9 +266,13 @@
     var einheit = (typeof PREIS_DATEN !== 'undefined' && PREIS_DATEN.epochen
       && PREIS_DATEN.epochen[ep()] && PREIS_DATEN.epochen[ep()].einheit)
       || B.welt.mengeEinheit();
+    /* Auf EINE Einheit ist der Aufschlag in 1350 kleiner als ein Pfennig und
+       damit unlesbar. Gezeigt wird er deshalb auf hundert Einheiten — das ist
+       die Menge, in der ein Wirt bestellt, und die Zahl wird lesbar. */
     return {
-      ohne: Math.round(grund),
-      mit: Math.round(grund * (1 + aufschlag())),
+      ohne: Math.round(grund * 100),
+      mit: Math.round(grund * 100 * (1 + aufschlag())),
+      je: Math.round(grund),
       einheit: einheit
     };
   }
@@ -755,7 +759,7 @@
     /* Das Zeichen des Hauses sitzt auf der Platte, nicht daneben.
        Gezeigt wird GENAU der Traeger, den das Bild darstellt (e.bildWenn) —
        ein Etikett klebt am Fass und steht nicht in der Stadt. */
-    if (laeuft(traeger(e.bildWenn))) {
+    if (!Z.ruhe && laeuft(traeger(e.bildWenn))) {
       var haupt = zeichenBild('nm-haupt', e.breite);
       setzeMarke(haupt, e.ort, { anker: 'unten', dx: e.versatz.dx, dy: e.versatz.dy });
       haupt.title = e.medium + ' — das Zeichen des Hauses, Ruf ' + ruf() + ' von 100.';
@@ -839,13 +843,15 @@
     var v = preisVergleich();
     var satz = B.el('div', 'nm-satz');
     if (v) {
-      satz.appendChild(B.el('span', 'nm-satzkopf', 'Gleiches Bier, zwei Preise'));
+      satz.appendChild(B.el('span', 'nm-satzkopf',
+        'Gleiches Bier, 100 ' + v.einheit + ', zwei Preise'));
       var zeile = B.el('div', 'nm-preise');
       zeile.appendChild(B.el('span', 'nm-ohne', 'ohne Namen ' + geld(v.ohne)));
       zeile.appendChild(B.el('span', 'nm-mit', 'unter dem Anker ' + geld(v.mit)));
       satz.appendChild(zeile);
       satz.appendChild(B.el('span', 'nm-klein', '+ ' + B.zahl(aufschlag() * 100, 1)
-        + ' im Hundert je ' + v.einheit + ' · welt.haus.rufAufschlag'));
+        + ' im Hundert · ' + geld(v.mit - v.ohne) + ' mehr fuer dasselbe Fass Bier'
+        + ' · welt.haus.rufAufschlag'));
     } else {
       satz.appendChild(B.el('span', 'nm-klein', 'Der Aufschlag liegt in welt.haus.rufAufschlag.'));
     }
