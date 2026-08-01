@@ -115,7 +115,7 @@ def main():
     p.add_argument("--jahr", required=True)
     p.add_argument("--laeufe", type=int, default=2)
     p.add_argument("--saat", type=int, default=0)
-    p.add_argument("--modell", default="gemini-3-pro-preview")
+    p.add_argument("--modell", default="gemini-3.1-pro-preview")
     a = p.parse_args()
     s = lade_schluessel()
     r = random.Random(a.saat or hash(a.jahr) & 0xffff)
