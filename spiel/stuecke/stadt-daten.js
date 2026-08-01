@@ -142,7 +142,7 @@ var STADT_DATEN = {
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
       ort: 'kesselstelle', dx: -9, dy: 5,
       breite: 8.9, breiten: { 1: 8.9, 2: 6.6 },
-      versatz: { 2: { dx: 6, dy: -4 } },
+      versatz: { 2: { dx: 7, dy: -4 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne ueber offenem Feuer, daneben Maischbottich und '
           + 'Kuehlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
@@ -166,7 +166,7 @@ var STADT_DATEN = {
 
     { schluessel: 'keller_gewoelbe', name: 'Gewoelbekeller', bild: 'keller_gewoelbe',
       ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 2: 9.0 },
-      versatz: { 2: { dx: -2, dy: -8 } },
+      versatz: { 2: { dx: 0, dy: -8 } },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kuehl und dunkel. Jede Woche, die ein Fass laenger haelt, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
@@ -192,7 +192,7 @@ var STADT_DATEN = {
        noch 66 — beides die Groesse der Leute, die dort stehen. */
     { schluessel: 'kueferei', name: 'Kueferei', bild: 'kueferei',
       ort: 'tor', dx: 0, dy: 10, breite: 9.9, breiten: { 1: 9.9, 2: 7.2 },
-      versatz: { 2: { dy: -6 } },
+      versatz: { 2: { dy: -3 } },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Kuefer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
