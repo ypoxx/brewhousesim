@@ -252,8 +252,29 @@ var STADT_DATEN = {
       sagt: 'Der Speicher steht auf Steinstümpfen: Ratten können nicht hinauf.',
       nutzen: { platz: 4 } },
 
+    /* Runde 6, der zweite Befund des Kritikers: "DER ZIEHBRUNNEN IST FUENF
+       METER BREIT ... der Kranz misst 2,4 / 2,9 / 2,5 Koerperlaengen, also
+       4,1 / 4,9 / 4,3 m Aussendurchmesser." Er hatte zweimal recht: der
+       Brunnen war der einzige Aufbau ueber drei Epochen OHNE Staffelung, und
+       das Bild selbst war schon falsch gezeichnet — im alten PNG war der
+       Kranz doppelt so breit wie der Trog daneben.
+       Beides ist behoben, und zwar in dieser Reihenfolge:
+       · DAS BILD ist neu. Im neuen PNG stehen ZWEI Frauen am Brunnen, eine
+         am Kranz, eine mit Schulterjoch und zwei Eimern. Sie sind der
+         Massstab, den man nicht wegdiskutieren kann: wer nachmessen will,
+         legt das Lineal an die Frau und nicht an meine Zusage. Gemessen im
+         PNG: Kranz aussen 715 px, Frau 605 px — 1,18 Koerperlaengen.
+       · DIE BREITE ist gestaffelt, und zwar an den Leuten, die der Kritiker
+         auf der Bildtiefe des Brunnens gezaehlt hat: 1350 rund 61 px,
+         1600 51 px, 1884 58 px. Bei breite 6,5 / 5,4 / 6,2 misst der Kranz
+         66 / 55 / 63 px, also 1,08 Koerperlaengen — 1,8 m statt 4,1 m.
+       Und weil der Brunnen in I, II UND III steht, stehen damit in jedem
+       dieser drei Hoefe zwei arbeitende Menschen: der Hof 1884 war im
+       Blindvergleich menschenleer, das war der dritte Satz des Kritikers. */
     { schluessel: 'brunnen', name: 'Ziehbrunnen', bild: 'brunnen',
-      ort: 'brunnen', dx: 4, dy: 0, breite: 13.5, von: 1, bis: 3, grund: 18,
+      ort: 'brunnen', dx: 4, dy: 0,
+      breite: 6.5, breiten: { 1: 6.5, 2: 5.4, 3: 6.2 },
+      von: 1, bis: 3, grund: 18,
       sagt: 'Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbringt.',
       nutzen: { sud: 1 } },
 
@@ -286,13 +307,18 @@ var STADT_DATEN = {
       sagt: 'Porst, Gagel, Schafgarbe. Wer die Grut hat, hat das Bier — Hopfen kommt später.',
       nutzen: { rohstoff: 20 } },
 
+    /* Runde 6: dy -4 -> -7. Das Lot fand ihn mit 76 von 393 Spalten bis zu
+       37 px unter der Mauerlinie — die rechte Ecke des Stalls stand auf dem
+       Mauerkopf neben dem Tor. Jetzt liegt sein tiefster Punkt 14 px darueber. */
     { schluessel: 'ochsenstall', name: 'Ochsenstall', bild: 'ochsenstall',
-      ort: 'rampe', dx: 1, dy: -4, breite: 14, von: 1, bis: 1, grund: 28,
+      ort: 'rampe', dx: 1, dy: -7, breite: 14, von: 1, bis: 1, grund: 28,
       sagt: 'Ein eigenes Zugtier. Danach fährt die Fuhre, wann das Haus es will.',
       nutzen: {}, wirkt: 'fährt, wann das Haus will' },
 
+    /* Runde 6: dy 15 -> 13. Das Lot fand 38 Spalten bis zu 23 px unter der
+       Mauerlinie; die vordere Bottichreihe stand auf der Mauer. */
     { schluessel: 'gaerbottiche', name: 'Gärbottiche', bild: 'gaerbottiche',
-      ort: 'gaertanks', dx: 2, dy: 15, breite: 13.5, von: 1, bis: 2, grund: 24,
+      ort: 'gaertanks', dx: 2, dy: 13, breite: 13.5, von: 1, bis: 2, grund: 24,
       sagt: 'Offene Holzbottiche unter einem Schutzdach. Was hier gärt, ist obergärig.',
       nutzen: { platz: 4 } },
 
