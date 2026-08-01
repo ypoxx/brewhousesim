@@ -132,3 +132,55 @@
   border: calc(var(--s) * 2) solid rgba(226, 190, 108, 0.9);
   vertical-align: baseline;
 }
+
+/* --------------------------------------------------------------------------
+   4 — DAS GESTELL DES HAUSSCHILDS   (Runde 5)
+
+   Der Kritiker hat 1970 ein rahmenloses weisses Rechteck 207x71 px auf
+   (1138|917) gefunden: kein Pfosten, keine Wand dahinter, vor drei
+   Tiefenebenen zugleich. In 1350, 1600 und 1884 haengt dasselbe Schild am
+   gemalten Torbogen der Platte — in der Platte 1970 ist der Hof ein
+   asphaltierter Parkplatz, da haengt nichts.
+
+   Also steht es dort. Zwei Stahlrohre und ein Betonfuss, in der Sprache der
+   Reklametafel, die auf derselben Platte danebensteht. Der Fuss sitzt auf dem
+   Ort, nicht die Mitte: das Schild steht auf dem Boden statt darueber.
+   -------------------------------------------------------------------------- */
+
+.stadt-schildwerk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stadt-gestell {
+  position: relative;
+  width: 100%;
+  /* Die Rohre setzen unter dem Schildrand an und stehen nicht davor. */
+  margin-top: calc(var(--s) * -2);
+}
+
+.stadt-gestell .bein {
+  position: absolute;
+  top: 0;
+  bottom: calc(var(--s) * 5);
+  width: calc(var(--s) * 7);
+  background: linear-gradient(90deg, #6d6b62 0%, #b6b3a8 38%, #83817a 72%, #56544d 100%);
+  border-radius: calc(var(--s) * 2);
+  box-shadow: 0 calc(var(--s) * 2) calc(var(--s) * 4) rgba(30, 26, 16, 0.45);
+}
+
+.stadt-gestell .bein.links  { left: 22%; }
+.stadt-gestell .bein.rechts { right: 22%; }
+
+/* Der Betonfuss: das Stueck, das den Boden wirklich beruehrt. */
+.stadt-gestell .fuss {
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 0;
+  height: calc(var(--s) * 7);
+  background: linear-gradient(180deg, #d9d3c4 0%, #a49d8c 100%);
+  border-radius: calc(var(--s) * 2);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 6) rgba(30, 26, 16, 0.5);
+}

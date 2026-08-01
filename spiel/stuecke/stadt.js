@@ -866,7 +866,9 @@
 
     if (s.gestell) {
       var g = B.el('div', 'stadt-gestell');
-      g.style.height = 'calc(var(--h) * ' + B.rund(s.gestell / 100, 4) + ')';
+      /* 'gestell' ist Prozent der Buehnenhoehe; --s ist ein Bezugspixel der
+         Bezugsbuehne 2752x1536, also sind 1 % der Hoehe 15,36 Bezugspixel. */
+      g.style.height = 'calc(var(--s) * ' + B.rund(s.gestell * 15.36, 2) + ')';
       g.appendChild(B.el('span', 'bein links'));
       g.appendChild(B.el('span', 'bein rechts'));
       g.appendChild(B.el('span', 'fuss'));
