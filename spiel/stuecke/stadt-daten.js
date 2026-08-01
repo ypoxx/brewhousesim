@@ -44,7 +44,12 @@ var STADT_DATEN = {
           + 'die Konkurrenz sitzt jenseits des Flusses.',
       stand: ['schornstein', 'gaertanks', 'eiskeller', 'fasslager_stein',
               'brunnen', 'laderampe', 'maschinenhaus'],
-      schild: { dx: 0.4, dy: -3.2, breite: 8.0, dreh: -5 }
+      /* Runde 6: das Schild ruecken. Es hing mitten ueber dem Tor und deckte
+         genau die Stelle, an der jetzt drei Maenner an der Laderampe
+         arbeiten — derselbe Fehler wie der Betonfuss von 1970, nur ohne
+         Fuss. Jetzt sitzt es rechts neben der Einfahrt auf der Mauer, wo an
+         einer Brauerei von 1884 auch eines haengt. */
+      schild: { dx: 5, dy: 1.5, breite: 8.0, dreh: -5 }
     },
     4: {
       jahr: 1970, name: 'Die Marke',
@@ -576,7 +581,7 @@ var STADT_DATEN = {
        Bahnrampe mit einem Gleis stimmt. Der Fusspunkt wandert entsprechend
        nach hinten, sonst haengt die kleinere Rampe ueber der Mauer. */
     { schluessel: 'laderampe', name: 'Laderampe', bild: 'laderampe',
-      ort: 'rampe', dx: 3, dy: -5, breite: 9.4, von: 3, bis: 3, grund: 60,
+      ort: 'rampe', dx: 1, dy: -3.5, breite: 9.4, von: 3, bis: 3, grund: 60,
       sagt: 'Auf Wagenhöhe, mit Gleis und Vordach. Zwei Mann rollen ein Fass, '
           + 'einer schiebt die Sackkarre — erst mit der Bahn lohnt sich das.',
       nutzen: {}, wirkt: 'Verladen auf Wagenhöhe' },
