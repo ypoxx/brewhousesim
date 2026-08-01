@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T21:40:21+00:00",
+ "stand": "2026-08-01T22:08:13+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -651,6 +651,10 @@
   {
    "zeit": "2026-08-01T21:40:21+00:00",
    "text": "DER SUD · Runde 1 · läuft — Kein eigenes Bild (bild/sud/**) und kein eigener Ton (ton/sud/**) — nur gemeldete Tonnamen. Der Ausstoss von 1884 verdreifacht sich; das gehoert an denselben Tisch wie ZUSTAENDIGKEIT 17."
+  },
+  {
+   "zeit": "2026-08-01T22:08:13+00:00",
+   "text": "KRITIKER DER SUD R1: Messstand angelegt und angemeldet, BEVOR ein Ergebnis eingetragen wird (ZUSTAENDIGKEIT 16). Neun eigene Playwright-Skripte in werkbank/schuss/sud-r1-kritik/ (lauf.mjs, probe.mjs, zurueck.mjs, siegel.mjs, nullkasse.mjs, keller.mjs, sperre.mjs, anzeige.mjs, sudblick.mjs), 2752x1536, Saat 4242, echte Mausklicks, elementFromPoint, innerText. Kein Werkzeug eines anderen wurde angefasst. Gemessen wurde nur am Bildschirm; der Quelltext von sud.js wurde nicht gelesen."
   }
  ]
 }
