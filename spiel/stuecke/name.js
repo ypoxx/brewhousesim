@@ -18,7 +18,8 @@
        schweres Urteil KNIPST AELTERE GUTE AUS — sie bleiben durchgestrichen
        stehen. Das ist die Asymmetrie, die eine Zahl nicht abbilden kann.
 
-   2 · DER NAME SCHREIBT KEINEN PREIS (WELLE-2.md, Zustaendigkeit §14).
+   2 · DER NAME SCHREIBT KEINEN PREIS (WELLE-2.md, Zustaendigkeit §14) —
+       ABER ER BUCHT SEIN EIGENES AUFGELD.
        Er legt vier NEUE Felder an, die sonst niemand beschreibt, und zwar dort,
        wo DER PREIS sie ohne Umweg lesen kann:
 
@@ -27,10 +28,21 @@
            B.welt.haus.rufDeckung    0..100   ob er gedeckt ist
            B.welt.haus.rufAufschlag  0..0,32  was er am Preis wert ist
 
-       welt.haus.preis gehoert DEM PREIS und wird hier nicht angefasst; eine
-       einzige Zeile dort (`* (1 + (haus.rufAufschlag||0))`) haengt das Stueck
-       ein. Bis dahin wirkt der Ruf ueber ADRESSEN — und das ist Geld, nur
-       ueber die FUHRE gerechnet statt hier.
+       welt.haus.preis gehoert DEM PREIS und wird hier NICHT angefasst. In
+       Runde 1 hiess das: der Ruf kostete Geld und bewegte keines, weil die
+       eine Zeile in preis.js fehlt. Behoben ohne fremde Datei — DAS AUFGELD:
+
+         Sobald DIE FUHRE eine Lieferung verbucht (Protokoll, fremde Zeile,
+         nur gelesen), legt DER NAME das Aufgeld darauf und nimmt es SELBST
+         ueber die oeffentliche API ein:  B.welt.nimm(betrag, 'Aufgeld …').
+         Das ist Geld herein, keine Abgabe; der Deckel aus §4 bleibt unberuehrt.
+         Es ist eine eigene, benannte Buchung — kein Schreiben in ein fremdes
+         Zahlenfeld. Jede steht im Reiter DAS AUFGELD mit Datum, Adresse,
+         Rechnung, Satz und Betrag.
+
+       Bekommt preis.js eines Tages doch seine Zeile, setzt es
+       `welt.haus.rufAufschlagGelesen = true` — dann hoert DER NAME sofort auf
+       zu buchen, und nichts steht zweimal in der Kasse.
 
    3 · KEIN NEUES GELD AUS DER KASSE (Zustaendigkeit §4, Deckel 18 %).
        Dieses Stueck hat KEINE Abgabe und KEINEN automatischen Abzug. Jeder
@@ -90,8 +102,19 @@
     schauJahr: 0,
 
     meldung: 'Das Haus hat einen Namen. Noch weiß ihn niemand.',
-    blatt: null,           /* null | 'zeichen' | 'register'              */
-    lebendig: true
+    blatt: null,           /* null | 'zeichen' | 'register' | 'aufgeld'  */
+    lebendig: true,
+
+    /* DAS AUFGELD — was der Ruf wirklich einbringt, von diesem Stueck
+       selbst vereinnahmt. Kein fremdes Zahlenfeld, eine eigene Buchung. */
+    buch: [],              /* {jahr, woche, wohin, rechnung, satz, betrag} */
+    buchStand: 0,          /* Lesezeiger ins fremde Protokoll             */
+    letzteRechnung: 0,     /* nr der zuletzt verbrauchten Rechnung        */
+    aufgeldWoche: 0,
+    aufgeldJahr: 0,
+    aufgeldEpoche: 0,
+    aufgeldGesamt: 0,
+    aufgeldZuletzt: null
   };
 
   /* ======================================================================
