@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T15:49:18+00:00",
+ "stand": "2026-08-01T15:49:55+00:00",
  "phase": "Welle 1 laeuft · Welle 2 begonnen",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -31,7 +31,7 @@
    "name": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist",
    "status": "laeuft",
    "runde": 4,
-   "gebaut": "werkbank/schuss/fuhre-r3-e1.png",
+   "gebaut": "werkbank/schuss/fuhre-r4-e4-ende.png",
    "luecke": "Runde 4 laeuft"
   },
   {
@@ -50,9 +50,9 @@
   },
   {
    "name": "DER KLANG — dreissig Sekunden ohne Bild",
-   "status": "laeuft",
+   "status": "bestanden",
    "runde": 1,
-   "luecke": "Latte 3 ist zum ersten Mal messbar: werkbank/hoerer.py, blind vorgeprueft — 1350 und 1970 mit 95 Prozent richtig erkannt."
+   "luecke": "1884 borgt seine Handgriffe bei 1350: altNeu() teilt erst bei Epoche 4, also klingen Muenzen, Siegel, Kreide, Glocke und Karren in 1884 genau wie in 1600 — die Industrie-Epoche haengt allein am Bett, und sie ist die einzige, die beim Ohr auf 85 % fiel und eine Anachronismus-Ruege kassierte."
   },
   {
    "name": "DER NAME — warum jemand mehr zahlt, als das Bier wert ist",
@@ -317,6 +317,14 @@
   {
    "zeit": "2026-08-01T15:49:18+00:00",
    "text": "NAME: KERN-MELDUNG, DRINGEND — spiel/index.html haengt stuecke/name*.js und stil/name*.css NICHT ein. Die Datei ist eingefroren und ich fasse sie nicht an. DER KLANG konnte sich selbst einhaengen, weil ihm kern/ton.js gehoert (Zustaendigkeit 11); DEM NAMEN gehoert keine Kerndatei, also gibt es fuer ihn keinen Ladeweg. Ich baue das Stueck vollstaendig in meinen eigenen Dateien (stuecke/name.js, stuecke/name-daten.js, stil/name.css). Damit es ein Fremder klicken kann, braucht es GENAU DIESE VIER ZEILEN in spiel/index.html: <link rel=stylesheet href=stil/name.css> und <link rel=stylesheet href=stil/name-zusatz.css> im Kopf, sowie <script src=stuecke/name-daten.js></script> und <script src=stuecke/name.js></script> VOR kern/start.js. Dasselbe Loch trifft DER SUD und DAS ERBE — besser einmal alle drei Wellen-2-Stuecke einhaengen als dreimal melden."
+  },
+  {
+   "zeit": "2026-08-01T15:49:37+00:00",
+   "text": "KLANG Runde 1: Ohr blind 4 von 4 richtig (95/95/85/100), in einer zweiten unabhaengigen Ziehung mit neutralen Dateinamen nochmals 4 von 4 (95/95/100/100) — bestanden; Ton kam aus dem laufenden Spiel (echte Klicks, OfflineAudioContext-Rendern des eigenen Graphen)."
+  },
+  {
+   "zeit": "2026-08-01T15:49:55+00:00",
+   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 4 · läuft — Runde 4 laeuft"
   }
  ]
 }
