@@ -80,6 +80,29 @@
 .pr-abschnitt { align-items: flex-end; }
 .pr-abschnitt-satz { white-space: normal; line-height: 1.25; }
 
+/* --------------------------------------------------------------------------
+   HEUTE NICHT — der Tag, an dem die Kasse für nichts reicht.
+   Er ist ein möglicher Ausgang und kein Fehler, also steht er da, mit Zahl.
+   -------------------------------------------------------------------------- */
+.pr-knapp {
+  flex: 0 0 auto;
+  display: flex;
+  gap: calc(var(--s) * 9);
+  align-items: baseline;
+  padding: calc(var(--s) * 5) calc(var(--s) * 9);
+  border: calc(var(--s) * 2) dashed var(--pr-rot);
+  border-radius: var(--pr-radius);
+  background: rgba(145, 48, 28, 0.06);
+}
+.pr-knapp-marke {
+  font-family: var(--pr-zahlen);
+  font-size: calc(var(--s) * 12);
+  letter-spacing: calc(var(--s) * 3);
+  color: var(--pr-rot);
+  white-space: nowrap;
+}
+.pr-knapp-text { font-size: calc(var(--s) * 15); line-height: 1.3; }
+
 /* Zu Michaeli liegt der Sommerzettel der FUHRE oben. Der Griff sagt dann,
    dass die Tafel darunter bereitliegt, statt "schließen" zu behaupten. */
 .knopf.pr-griff-wartet {

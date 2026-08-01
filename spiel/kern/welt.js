@@ -28,13 +28,13 @@
       sagt: 'Ein Kessel, ein Braurecht, eine Stadt. Bier verdirbt in Tagen.' },
     { nr: 2, name: 'Die Ordnung', verb: 'besitzen',   von: 1517, bis: 1799, schaujahr: 1600,
       rohstoff: 'Hopfen', sorte: 'Braunbier', haltbar: 9,
-      sagt: 'Reinheitsgebot, Zunft, Sommerbrauverbot. Vom Paechter zum Eigentuemer.' },
+      sagt: 'Reinheitsgebot, Zunft, Sommerbrauverbot. Vom Pächter zum Eigentümer.' },
     { nr: 3, name: 'Die Maschine', verb: 'skalieren', von: 1800, bis: 1913, schaujahr: 1884,
       rohstoff: 'Hopfen', sorte: 'Lagerbier', haltbar: 22,
-      sagt: 'Dampf, Bahn, Kaeltemaschine. Aus dem Betrieb wird ein Unternehmen.' },
+      sagt: 'Dampf, Bahn, Kältemaschine. Aus dem Betrieb wird ein Unternehmen.' },
     { nr: 4, name: 'Die Marke',   verb: 'bedeuten',   von: 1914, bis: 2025, schaujahr: 1970,
       rohstoff: 'Hopfen', sorte: 'Pilsner',   haltbar: 40,
-      sagt: 'Menge zaehlt weniger als Identitaet. Wer nur billig wurde, hat nichts in der Hand.' }
+      sagt: 'Menge zählt weniger als Identität. Wer nur billig wurde, hat nichts in der Hand.' }
   ];
 
   /* Waehrung nach JAHR, nicht nach Epoche — sonst steht 1810 "Mark" im Bild,
@@ -77,7 +77,7 @@
       namen: { 1: 'Brauhaus zum Adler', 2: 'Braustatt Adler', 3: 'Brauerei Adler', 4: 'Adler-Bräu AG' },
       orte: { 1: 'marktplatz', 2: 'marktplatz', 3: 'konkurrenz', 4: 'konkurrenz' },
       kasse: 140, wagemut: 0.45,
-      sagt: 'Braut, was das Haus braut, und stellt sich immer eine Woche frueher an die Tuer.' },
+      sagt: 'Braut, was das Haus braut, und stellt sich immer eine Woche früher an die Tür.' },
     { schluessel: 'konzern', art: 'konzern', ab: 4, bis: 4,
       namen: { 4: 'Nordstern-Gruppe' },
       orte: { 4: 'bahnhof' },
@@ -93,11 +93,11 @@
   };
 
   var EIGENSCHAFTEN = [
-    { schluessel: 'sparsam',   name: 'sparsam',    sagt: 'Haelt das Geld zusammen, versaeumt die Gelegenheit.' },
+    { schluessel: 'sparsam',   name: 'sparsam',    sagt: 'Hält das Geld zusammen, versäumt die Gelegenheit.' },
     { schluessel: 'wagemutig', name: 'wagemutig',  sagt: 'Baut, bevor gerechnet ist.' },
-    { schluessel: 'fromm',     name: 'fromm',      sagt: 'Hat die Kirche im Ruecken und die Zunft im Nacken.' },
+    { schluessel: 'fromm',     name: 'fromm',      sagt: 'Hat die Kirche im Rücken und die Zunft im Nacken.' },
     { schluessel: 'streitbar', name: 'streitbar',  sagt: 'Gewinnt Prozesse und verliert Freunde.' },
-    { schluessel: 'gelehrt',   name: 'gelehrt',    sagt: 'Liest, misst, probiert. Braucht laenger.' },
+    { schluessel: 'gelehrt',   name: 'gelehrt',    sagt: 'Liest, misst, probiert. Braucht länger.' },
     { schluessel: 'bequem',    name: 'bequem',     sagt: 'Lässt laufen. Manchmal ist das richtig.' }
   ];
 
@@ -330,12 +330,23 @@
       return W.adressen.filter(function (a) { return a.ab <= e && a.bis >= e; });
     },
 
-    /* Bindung setzen — der einzige erlaubte Weg. */
-    binde: function (schluessel, wem, womit, bisJahr) {
+    /* Bindung setzen — der einzige erlaubte Weg.
+       Eine bestehende Bindung zu LOESEN darf nur, wem sie gehoert. Sonst nimmt ein
+       Stueck dem anderen Besitz weg, den der Spieler ihm nie abgenommen hat — genau
+       das ist passiert (ZUSTAENDIGKEIT §8). `wer` ist der Loeschende; fehlt er, gilt
+       'haus'. Ein Fehlversuch gibt false zurueck und aendert nichts. */
+    binde: function (schluessel, wem, womit, bisJahr, wer) {
       var a = W.adresse(schluessel);
       if (!a) return false;
+      if (!wem && a.bindung && a.bindung.wem !== (wer || 'haus')) return false;
       a.bindung = wem ? { wem: wem, womit: womit || 'Vertrag', bis: bisJahr || (W.zeit.jahr + 3) } : null;
       return true;
+    },
+
+    /* Wem gehoert diese Adresse gerade? Damit ein Stueck fragen kann, statt zu raten. */
+    gebunden: function (schluessel) {
+      var a = W.adresse(schluessel);
+      return a && a.bindung ? a.bindung.wem : null;
     },
 
     /* ------------------------------------------------------------------
