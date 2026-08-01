@@ -291,7 +291,7 @@
         zug: 'stadt:reiter:' + b.schluessel.replace(/[^a-z0-9]+/gi, '-').toLowerCase(),
         klasse: 'stadt-reiter' + (b.zu ? '' : ' auf'),
         titel: b.zu
-          ? b.titel + ' aufschlagen. Es legt sich ueber die Stadt, bis man es wieder zuklappt.'
+          ? b.titel + ' aufschlagen. Es legt sich über die Stadt, bis man es wieder zuklappt.'
           : b.titel + ' zuklappen — dann sieht man die Stadt wieder.',
         tu: function () { schalte(b.schluessel); }
       });
@@ -307,9 +307,9 @@
         zug: 'stadt:ortsmarken',
         klasse: 'stadt-reiter marken' + (ruht ? '' : ' auf'),
         titel: ruht
-          ? markenZahl + ' Ortsmarken der anderen Stuecke liegen auf ihren Pfloecken. '
+          ? markenZahl + ' Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. '
             + 'Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.'
-          : 'Legt alle Ortsmarken zurueck auf ihre Pfloecke — dann steht nur noch '
+          : 'Legt alle Ortsmarken zurück auf ihre Pflöcke — dann steht nur noch '
             + 'die Stadt im Bild.',
         tu: markenSchalter
       });
@@ -818,14 +818,14 @@
     var kopf = B.el('div', 'kopf');
     kopf.appendChild(B.el('span', 'wort', 'BAUHOF'));
     kopf.appendChild(B.el('span', 'zahl', stehend(ep).length + ' Bauten im Hof · '
-      + 'gebaut wird einmal, es steht auch fuer die Enkel'));
+      + 'gebaut wird einmal, es steht auch für die Enkel'));
     kasten.appendChild(kopf);
 
     var reihe = B.el('div', 'reihe');
     kasten.appendChild(reihe);
 
     if (!liste.length) {
-      reihe.appendChild(B.el('div', 'leer', 'Der Hof ist fuer diese Zeit fertig gebaut.'));
+      reihe.appendChild(B.el('div', 'leer', 'Der Hof ist für diese Zeit fertig gebaut.'));
     }
 
     liste.forEach(function (a) {
