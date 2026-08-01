@@ -306,14 +306,7 @@ var FUHRE_DATEN = {
                    + 'und ist in dieser Zeit oft der einzige Weg, überhaupt brauen zu können.' },
       planStart: 1,
       unterhalt: 4,
-      /* 1600 ist der Hoehepunkt des deutschen Bierverbrauchs — und das Haus
-         hat hier den doppelten Keller von 1350 (24 Plaetze gegen 12), fuenf
-         Halte statt vier und 38 Faesser statt 22. Die Kundschaft war
-         dieselbe geblieben: gemessen 2.700 Gulden Jahresumsatz gegen eine
-         Anlage, die auf das Doppelte gebaut ist, und daran ist das Haus im
-         vierten Braujahr gestorben. Ein Wirtshaus dieser Zeit schenkt mehr
-         aus als eines von 1350, nicht gleich viel. */
-      mengenfaktor: 1.35,
+      mengenfaktor: 1,
       winteranteil: 0.68,
       sommerSatz: 'Das Sommerbrauverbot steht seit 1553 in der Ordnung: von Georgi bis '
                 + 'Michaeli wird nicht gebraut. Was im April im Keller liegt, ist der ganze Sommer.',
@@ -324,7 +317,7 @@ var FUHRE_DATEN = {
         name: 'Das Schuldbuch der Wirte', kurz: 'Ziel', wort: 'Posten',
         satz: 'Die Ordnung kennt das Ziel: geliefert wird das Jahr über, gerechnet wird '
             + 'zu Michaeli. Wer vorher Geld sehen will, muss es sagen — und verkauft weniger.',
-        angeld: 0.28,
+        angeld: 0.44,
         angeldName: 'Angeld auf das kommende Braujahr',
         angeldSatz: 'Der Wirt legt an, damit im Winter geliefert wird. Es wird abgetrunken.',
         umgang: 'Die Rechnung zu Michaeli',
@@ -573,7 +566,7 @@ var FUHRE_DATEN = {
         name: 'Die Debitoren', kurz: 'Zahlungsziel', wort: 'Rechnung',
         satz: 'Zahlungsziel, Bonus, Jahresgespräch: der Handel zahlt schnell und nimmt '
             + 'sich den Rest am Jahresende zurück. Der Stichtag ist geblieben.',
-        angeld: 0.20,
+        angeld: 0.32,
         angeldName: 'Vorauszahlung des Handels auf das Winterhalbjahr',
         angeldSatz: 'Der Einkauf sichert die Menge und zahlt an. Wird verrechnet.',
         umgang: 'Das Jahresgespräch',
