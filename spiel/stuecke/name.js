@@ -174,7 +174,9 @@
   function lautstaerke() {
     var f = 1, l = traegerListe();
     l.forEach(function (t) { if (t.laut && laeuft(t)) f = 2; });
-    if (Z.fest.zunftzeichen) f = Math.max(f, 2);
+    /* Das Zunftzeichen bindet nur, solange es eine Zunft gibt. In 1884 und
+       1970 macht nicht mehr die Zunft das Versprechen laut, sondern der Druck. */
+    if (ep() <= 2 && Z.fest.zunftzeichen) f = Math.max(f, 2);
     return f;
   }
 
