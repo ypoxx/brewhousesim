@@ -149,8 +149,9 @@ for (const epoche of [1, 2, 3, 4]) {
   // misst man, was ein fremdes Blatt verdeckt, und nicht die eigene Lage.
   await seite.keyboard.press('Escape');
   await seite.waitForTimeout(200);
-  const zumachen = await seite.$('button[data-zug="stadt:alles-zuklappen"]');
-  if (zumachen) { await zumachen.click(); await seite.waitForTimeout(300); }
+  try { await seite.click('button[data-zug="stadt:alles-zuklappen"]', { timeout: 2500 }); }
+  catch { /* keine Bretter offen — dann ist nichts zuzuklappen */ }
+  await seite.waitForTimeout(300);
   const notlage = await seite.evaluate(() => {
     window.BRAUHAUS.welt.haus.kasse = 0;
     window.BRAUHAUS.welt.haus.rohstoff = 0;
