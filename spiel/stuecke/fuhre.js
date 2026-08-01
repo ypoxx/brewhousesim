@@ -693,6 +693,12 @@
     } else if (gruende.length) {
       teile.push('dann: ' + gruende[0]);
     }
+    /* Wenn Geld den Plan aufgehalten hat, steht der Ausweg daneben. Die
+       Kasse ist in diesem Stueck nie eine Wand, und die Tafel sagt das
+       selbst — sonst glaubt es niemand. */
+    if (geldFehlt && ns && !Z.notsud) {
+      teile.push(ns.name + ' kostet nichts und steht unter dem Strich der Tafel');
+    }
     Z.sudMeldung = teile.join(' · ');
   }
 

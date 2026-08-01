@@ -425,7 +425,7 @@ var FUHRE_DATEN = {
           sommer: true,
           satz: 'Vier Wochen Reife, dreißig Fass. Die Gaststätte zahlt es, der Markt nicht.' },
         { k: 'handel', name: 'Handelsmarke', zeichen: 'W', stufe: 1, not: true,
-          fass: 40, reife: 0, haltbar: 12, preis: 78, kosten: 0, rohstoff: 0,
+          fass: 30, reife: 0, haltbar: 10, preis: 62, kosten: 0, rohstoff: 0,
           sommer: false,
           satz: 'Weißes Etikett für das Handelshaus: der Kunde stellt Malz, Etikett und Kasten, '
               + 'das Haus stellt Sud und Pfanne. Keine eigene Auslage, kein eigener Regalmeter — '
