@@ -290,8 +290,14 @@ var FUHRE_DATEN = {
                preis: 14, freiBis: 3 },
       keller: { name: 'Das Gewölbe', bettFass: 1, bett: 'Fass', spalten: 8,
                 satz: 'Vierundzwanzig Plätze im Stein. Märzen belegt sie den ganzen Winter.' },
+      /* Ein Fass ist in dieser Zeit Kapital, und deshalb wird es geflickt und
+         nicht weggeworfen: vier Prozent Bruch je Fuhre hiessen, dass das Haus
+         binnen fuenf Braujahren die Haelfte seiner Faesser verliert und
+         seinen Absatz mit ihnen (gemessen: 118 auf 84 Fass im Jahr). Die
+         Knappheit bleibt der Fassplatz — der Boettcher steht mit Preisschild
+         daneben, das Pfand wird eingezogen —, sie ist nur kein Leck mehr. */
       wagen: { name: 'Pferdefuhrwerk', leeren: 'Wagen leeren', fass: 8, halte: 5, schritt: 1,
-               grund: 6, jeKm: 3.5, haltPreis: 2.5, umlauf: 3, bruch: 0.04,
+               grund: 6, jeKm: 3.5, haltPreis: 2.5, umlauf: 3, bruch: 0.018,
                satz: 'Acht Plätze, fünf Halte, zwei Pferde. Die Fässer kommen erst nach Wochen zurück.' },
       faesser: 38,
       pfand: { name: 'Pfand einziehen', grund: 14, jeFass: 3,
