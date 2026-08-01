@@ -89,7 +89,7 @@
     kieserWoche: 0,
     schauJahr: 0,
 
-    meldung: 'Das Haus hat einen Namen. Noch weiss ihn niemand.',
+    meldung: 'Das Haus hat einen Namen. Noch weiß ihn niemand.',
     blatt: null,           /* null | 'zeichen' | 'register'              */
     lebendig: true
   };
@@ -386,7 +386,7 @@
     Z.gewinnJahr = jahr();
     B.welt.protokolliere({ wer: 'spieler', was: a.name + ' fragt von selbst an — der Name reicht bis dorthin',
       preis: 0, adresse: a.schluessel });
-    Z.meldung = a.name + ' hat von selbst angefragt. Dafuer wurde nichts bezahlt.';
+    Z.meldung = a.name + ' hat von selbst angefragt. Dafür wurde nichts bezahlt.';
     B.ton.spiele('name:zulauf');
   }
 
@@ -420,7 +420,7 @@
           was: B.welt.gegnerName(g) + ' ' + n.was + ' — nachgemacht ist billiger als besser gebraut',
           preis: 0 });
         B.welt.schreibe(B.welt.gegnerName(g) + ' ' + n.was + '.', 'gegner');
-        Z.meldung = 'Das Haus gegenueber fuehrt jetzt dasselbe Zeichen.';
+        Z.meldung = 'Das Haus gegenüber führt jetzt dasselbe Zeichen.';
         B.ton.spiele('name:nachahmung');
         return;
       }
@@ -506,7 +506,7 @@
     if (abgelaufen.length) {
       Z.meldung = 'Ausgelaufen: ' + abgelaufen.map(function (k) {
         var t = traeger(k); return t ? t.name.replace(/^Die |^Den |^Das /, '') : k;
-      }).join(' · ') + '. Ein Etat verlaengert sich nicht von selbst.';
+      }).join(' · ') + '. Ein Etat verlängert sich nicht von selbst.';
     }
     if (Z.schutzBis && Z.schutzBis < jahr()) Z.schutzBis = 0;
 
@@ -530,7 +530,7 @@
     Z.register.push({
       jahr: jahr(), woche: woche(), wer: 'Der Schnitt', art: 'schnitt', gewicht: 0,
       erloschen: false, erloschDurch: 0, loeschte: 0,
-      text: 'Das Traeger-Medium wechselt auf ' + epd().medium.toLowerCase()
+      text: 'Das Träger-Medium wechselt auf ' + epd().medium.toLowerCase()
         + '. Was in ' + (d && d.vorher ? D.epochen[d.vorher].medium.toLowerCase() : 'der alten Form')
         + ' aufgebaut war, muss neu gesagt werden: Bekanntheit ' + vorher
         + ' wird ' + Math.round(Z.bekannt) + '.'
@@ -558,7 +558,7 @@
     Z.ruhe = !Z.zeiger;
     Z.bruchWochen = 0;
     if (Z.zeiger) {
-      Z.meldung = 'Der Bierzeiger haengt. Von jetzt an misst die Gasse das Haus daran.';
+      Z.meldung = 'Der Bierzeiger hängt. Von jetzt an misst die Gasse das Haus daran.';
       B.ton.spiele('name:aushaengen', { ort: 'sudhaus' });
     } else {
       /* Einziehen kostet Bekanntheit, aber es rettet die Deckung. */
@@ -576,7 +576,7 @@
     if (t.k === 'krug') Z.krugAb = jahr() + 12;
     if (t.k === 'warenzeichen' || t.k === 'zunftzeichen') Z.nachahmung = null;
     eintrag(t.k === 'krug'
-      ? 'Der gemarkte Krug ist eingefuehrt. Er wirkt ab ' + Z.krugAb + '.'
+      ? 'Der gemarkte Krug ist eingeführt. Er wirkt ab ' + Z.krugAb + '.'
       : t.name + ' — unwiderruflich.', t.k === 'krug' ? 4 : 6, 'Das Haus', 'fest');
     B.ton.spiele('name:siegel');
     nachZug('fest');
@@ -591,7 +591,7 @@
     }
     if (!zahlt(t.preis, t.name)) { Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer'); }
     Z.lauf[t.k] = jahr();
-    Z.meldung = t.name + ' laeuft bis Ende des Braujahres ' + jahr() + '.';
+    Z.meldung = t.name + ' läuft bis Ende des Braujahres ' + jahr() + '.';
     B.ton.spiele(t.laut ? 'name:spot' : 'name:druck');
     nachZug('jahr');
   }
@@ -608,7 +608,7 @@
       return nachZug('schild-ab');
     }
     if (zaehle(fach) >= (t.hoechstens || 6)) {
-      Z.meldung = 'Mehr traegt das Haus in dieser Epoche nicht.';
+      Z.meldung = 'Mehr trägt das Haus in dieser Epoche nicht.';
       return nachZug('grenze');
     }
     if (!zahlt(t.preis, t.name + ' · ' + a.name)) {
@@ -618,7 +618,7 @@
     Z.urteil[a.schluessel] = (Z.urteil[a.schluessel] || 0) + 2;
     Z.meldung = ep() === 1
       ? 'Umtrunk bei ' + a.name + '. Der Wirt redet ab jetzt anders.'
-      : 'Das Ankerschild haengt bei ' + a.name + '. Sein Urteil zaehlt jetzt doppelt.';
+      : 'Das Ankerschild hängt bei ' + a.name + '. Sein Urteil zählt jetzt doppelt.';
     B.ton.spiele('name:anschlagen');
     nachZug('schild');
   }
@@ -629,7 +629,7 @@
     var fach = t.k === 'schild' ? Z.schilder : Z.umtrunk;
     var frei = B.welt.adressenJetzt().filter(function (a) { return !fach[a.schluessel]; })
       .sort(function (a, b) { return b.bedarf - a.bedarf; });
-    if (!frei.length) { Z.meldung = 'Ueberall, wo es geht, haengt schon eines.'; return nachZug('voll'); }
+    if (!frei.length) { Z.meldung = 'Überall, wo es geht, hängt schon eines.'; return nachZug('voll'); }
     schildBei(frei[0]);
   }
 
@@ -640,7 +640,7 @@
     if (B.wuerfel.trifft(B.grenze(0.18 + g / 180, 0.1, 0.8))) {
       Z.fest.medaille = jahr();
       eintrag(D.urteile.medaille[ep()] || 'Auszeichnung.', 12, 'Die Jury', 'medaille');
-      Z.meldung = 'Eine Medaille. Sie haengt vierzig Jahre im Kontor.';
+      Z.meldung = 'Eine Medaille. Sie hängt vierzig Jahre im Kontor.';
     } else {
       eintrag('Beschickt, nicht ausgezeichnet. Das Geld ist trotzdem weg.', -2, 'Die Jury', 'still');
       Z.meldung = 'Kein Preis. Die Ausstellung hat trotzdem gekostet.';
@@ -654,8 +654,8 @@
     var weg = B.welt.vorrat.faesser.length;
     B.welt.nimmHeraus(weg);
     Z.bruchWochen = 0;
-    eintrag('Das Haus ruft selbst zurueck, bevor es jemand anders sagt.', 9, 'Die Leute', 'lob');
-    Z.meldung = 'Zurueckgerufen. ' + B.welt.menge(weg) + ' aus dem Lager, bar bezahlt — '
+    eintrag('Das Haus ruft selbst zurück, bevor es jemand anders sagt.', 9, 'Die Leute', 'lob');
+    Z.meldung = 'Zurückgerufen. ' + B.welt.menge(weg) + ' aus dem Lager, bar bezahlt — '
       + 'und der Name steht.';
     B.ton.spiele('name:rueckruf');
     nachZug('rueckruf');
@@ -674,7 +674,7 @@
       Z.schutzBis = jahr() + ((traeger(n.schluessel) || {}).jahre || 8);
       Z.adlerRuf = Math.max(6, Z.adlerRuf - 10);
       eintrag(n.gegen + ' — der Nachbar muss das Zeichen abnehmen.', 5, 'Das Recht', 'schutz');
-      Z.meldung = 'Durchgesetzt. Bis ' + Z.schutzBis + ' fuehrt es niemand sonst.';
+      Z.meldung = 'Durchgesetzt. Bis ' + Z.schutzBis + ' führt es niemand sonst.';
     } else {
       eintrag(n.gegen + ' — abgewiesen. Das Zeichen bleibt beim Nachbarn.', -3, 'Das Recht', 'still');
       Z.meldung = 'Abgewiesen. Das Geld ist weg, das Zeichen bleibt beim Nachbarn.';
@@ -690,7 +690,7 @@
     Z.register.push({
       jahr: jahr(), woche: woche(), wer: 'Die Nordstern-Gruppe', art: 'verkauft', gewicht: 0,
       erloschen: false, erloschDurch: 0, loeschte: 0,
-      text: 'Der Name gehoert nicht mehr dem Haus. Gebraut wird weiter; wofuer der Anker '
+      text: 'Der Name gehört nicht mehr dem Haus. Gebraut wird weiter; wofür der Anker '
         + 'steht, entscheidet jetzt jemand anders.'
     });
     /* Alles darueber wird entwertet — das ist der Sinn der Zeile. */
@@ -710,8 +710,8 @@
     Z.wahlWoche = stempel();
     Z.bruchWochen = Math.max(Z.bruchWochen, 3);
     Z.deckung = Math.max(0, Z.deckung - 2);
-    Z.meldung = 'Es geht hinaus, wie es ist. Das Zeichen haengt weiter — '
-      + 'die Rechnung kommt spaeter.';
+    Z.meldung = 'Es geht hinaus, wie es ist. Das Zeichen hängt weiter — '
+      + 'die Rechnung kommt später.';
     nachZug('wahl');
   }
 
@@ -843,7 +843,7 @@
     if (ziel !== undefined && ziel !== null) {
       var m = B.el('u', 'nm-ziel');
       m.style.left = B.grenze(ziel / (hoechstens || 100) * 100, 0, 100) + '%';
-      m.title = 'Ziel dieser Traeger: ' + Math.round(ziel);
+      m.title = 'Ziel dieser Träger: ' + Math.round(ziel);
       schiene.appendChild(m);
     }
     z.appendChild(schiene);
@@ -890,7 +890,7 @@
       zeile.appendChild(B.el('span', 'nm-mit', 'unter dem Anker ' + geld(v.mit)));
       satz.appendChild(zeile);
       satz.appendChild(B.el('span', 'nm-klein', '+ ' + B.zahl(aufschlag() * 100, 1)
-        + ' im Hundert · ' + geld(v.mit - v.ohne) + ' mehr fuer dasselbe Fass Bier'
+        + ' im Hundert · ' + geld(v.mit - v.ohne) + ' mehr für dasselbe Fass Bier'
         + ' · welt.haus.rufAufschlag'));
     } else {
       satz.appendChild(B.el('span', 'nm-klein', 'Der Aufschlag liegt in welt.haus.rufAufschlag.'));
@@ -901,11 +901,11 @@
     if (bruchGefahr()) {
       var kl = B.el('div', 'nm-klemme');
       kl.appendChild(B.el('div', 'nm-klemmkopf',
-        'Das Zeichen haengt, und der Keller taugt nicht — Guete ' + guete() + ' von 100.'
+        'Das Zeichen hängt, und der Keller taugt nicht — Güte ' + guete() + ' von 100.'
         + ' Seit ' + (Z.bruchWochen + 1) + ' von 5 Wochen; danach steht es im Register.'));
       kl.appendChild(B.knopf({
         text: 'Unter dem Zeichen ausliefern', zug: 'name:liefern', klasse: 'nm-knopf nm-rot',
-        titel: 'Es geht hinaus, wie es ist. Kostet heute nichts und spaeter den Namen.',
+        titel: 'Es geht hinaus, wie es ist. Kostet heute nichts und später den Namen.',
         tu: waehleLiefern
       }));
       kl.appendChild(B.knopf({
@@ -924,7 +924,7 @@
         text: Z.ruhe ? 'Das Zeichen wieder zeigen' : 'Das Zeichen verdecken',
         zug: 'name:ruhe', klasse: 'nm-knopf' + (Z.ruhe ? ' nm-an' : ''),
         titel: Z.ruhe
-          ? 'Verdeckt reicht der Name kaum. Zeigen heisst wieder versprechen.'
+          ? 'Verdeckt reicht der Name kaum. Zeigen heißt wieder versprechen.'
           : 'Kostet kein Geld, nur Reichweite — und rettet die Deckung. Umkehrbar.',
         tu: function () { schalteRuhe(!Z.ruhe); }
       }));
@@ -943,9 +943,9 @@
     if (Z.meldung) band.appendChild(B.el('div', 'nm-meldung', Z.meldung));
 
     band.appendChild(B.knopf({
-      text: Z.blatt ? 'Das Zeichen schliessen' : 'Das Zeichen und das Register',
+      text: Z.blatt ? 'Das Zeichen schließen' : 'Das Zeichen und das Register',
       zug: 'name:blatt', klasse: 'nm-knopf nm-griff',
-      titel: 'Traeger dieser Epoche, der Nachahmer, und das Register der Urteile.',
+      titel: 'Träger dieser Epoche, der Nachahmer, und das Register der Urteile.',
       tu: function () { zeigeBlatt(Z.blatt ? null : 'zeichen'); }
     }));
 
@@ -977,7 +977,7 @@
       gesperrt = true; warum = 'Es ahmt gerade niemand nach.';
     }
     if (t.art === 'notbremse' && !bruchGefahr() && guete() >= 40) {
-      gesperrt = true; warum = 'Es ist nichts zurueckzurufen.';
+      gesperrt = true; warum = 'Es ist nichts zurückzurufen.';
     }
 
     var an = laeuft(t);
@@ -1051,7 +1051,7 @@
       var ab = B.el('div', 'nm-abschnitt');
       ab.appendChild(B.el('h3', null, ep() === 1
         ? 'Bei welchem Wirt sitzt man sich hin?'
-        : 'An welcher Tuer haengt der Anker?'));
+        : 'An welcher Tür hängt der Anker?'));
       var reihe = B.el('div', 'nm-reihe');
       var fach = ep() === 1 ? Z.umtrunk : Z.schilder;
       B.welt.adressenJetzt().forEach(function (a) {
@@ -1079,27 +1079,27 @@
     var n = D.nachahmung[ep()];
     var gg = adler();
     var nb = B.el('div', 'nm-abschnitt nm-gegner');
-    nb.appendChild(B.el('h3', null, 'Das Haus gegenueber'));
+    nb.appendChild(B.el('h3', null, 'Das Haus gegenüber'));
     if (Z.nachahmung && gg) {
       nb.appendChild(B.el('p', 'nm-p', B.welt.gegnerName(gg) + ' ' + n.was
         + ' — seit ' + Z.nachahmung.seit + '. Sein Ruf: ' + Math.round(Z.adlerRuf)
-        + '. Solange das laeuft, kommt vom eigenen Zeichen weniger an.'));
+        + '. Solange das läuft, kommt vom eigenen Zeichen weniger an.'));
       if (n.ab && jahr() < n.ab) {
         nb.appendChild(B.el('p', 'nm-warnt', n.ohne || ('Erst ab ' + n.ab + ' gibt es das Mittel dagegen.')));
       } else {
         nb.appendChild(B.knopf({
           text: n.gegen, zug: 'name:gegen', preis: -n.preis, klasse: 'nm-knopf',
           aus: !B.welt.kann(n.preis),
-          titel: n.sicher >= 1 ? 'Wirkt sicher.' : 'Wirkt in ' + Math.round(n.sicher * 100) + ' von 100 Faellen.',
+          titel: n.sicher >= 1 ? 'Wirkt sicher.' : 'Wirkt in ' + Math.round(n.sicher * 100) + ' von 100 Fällen.',
           tu: gegenNachahmung
         }));
       }
     } else {
       nb.appendChild(B.el('p', 'nm-p', gg
-        ? B.welt.gegnerName(gg) + ' fuehrt das eigene Zeichen (noch) nicht. Sein Ruf: '
+        ? B.welt.gegnerName(gg) + ' führt das eigene Zeichen (noch) nicht. Sein Ruf: '
           + Math.round(Z.adlerRuf) + ' gegen ' + ruf() + '.'
-          + (geschuetzt() ? ' Das Zeichen ist geschuetzt.' : ' Es ist ungeschuetzt.')
-        : 'Zurzeit ist niemand da, der nachahmen koennte.'));
+          + (geschuetzt() ? ' Das Zeichen ist geschützt.' : ' Es ist ungeschützt.')
+        : 'Zurzeit ist niemand da, der nachahmen könnte.'));
     }
     blatt.appendChild(nb);
 
@@ -1109,8 +1109,8 @@
       var summe = 120000 + ruf() * 4200;
       ang.appendChild(B.el('h3', null, 'Die Nordstern-Gruppe bietet auf den Namen'));
       ang.appendChild(B.el('p', 'nm-p', 'Gebraut wird weiter, im selben Haus, mit demselben '
-        + 'Sud. Nur wofuer der Anker steht, entscheidet danach jemand anders. '
-        + 'Alles, was im Register ueber dem Strich steht, ist danach erloschen.'));
+        + 'Sud. Nur wofür der Anker steht, entscheidet danach jemand anders. '
+        + 'Alles, was im Register über dem Strich steht, ist danach erloschen.'));
       ang.appendChild(B.knopf({
         text: 'Den Namen verkaufen', zug: 'name:verkaufen', preis: summe,
         klasse: 'nm-knopf nm-rot',
@@ -1123,15 +1123,15 @@
 
   function reiterRegister(blatt) {
     var ab = B.el('div', 'nm-abschnitt');
-    ab.appendChild(B.el('h3', null, 'Das Register — was andere ueber das Haus gesagt haben'));
+    ab.appendChild(B.el('h3', null, 'Das Register — was andere über das Haus gesagt haben'));
     ab.appendChild(B.el('p', 'nm-p', epd().urteiler + '. ' + epd().urteilerSagt
-      + ' Nichts hier laesst sich loeschen. Eine neue schwere Zeile knipst aeltere gute aus; '
+      + ' Nichts hier lässt sich löschen. Eine neue schwere Zeile knipst ältere gute aus; '
       + 'sie bleibt durchgestrichen stehen.'));
     blatt.appendChild(ab);
 
     var liste = B.el('div', 'nm-register rolle');
     if (!Z.register.length) {
-      liste.appendChild(B.el('div', 'zeile', 'Noch hat niemand etwas ueber dieses Haus gesagt.'));
+      liste.appendChild(B.el('div', 'zeile', 'Noch hat niemand etwas über dieses Haus gesagt.'));
     }
     Z.register.slice().reverse().forEach(function (e) {
       var z = B.el('div', 'zeile nm-zeile' + (e.erloschen ? ' erloschen' : '')
@@ -1141,7 +1141,7 @@
       was.appendChild(B.el('i', 'nm-wer', e.wer));
       was.appendChild(document.createTextNode(' ' + e.text));
       if (e.loeschte) was.appendChild(B.el('span', 'nm-knips',
-        ' — ' + e.loeschte + (e.loeschte === 1 ? ' aeltere Zeile erloschen' : ' aeltere Zeilen erloschen')));
+        ' — ' + e.loeschte + (e.loeschte === 1 ? ' ältere Zeile erloschen' : ' ältere Zeilen erloschen')));
       z.appendChild(was);
       z.appendChild(B.el('span', 'zahl', e.gewicht ? (e.gewicht > 0 ? '+' : '') + e.gewicht : '·'));
       liste.appendChild(z);
@@ -1162,7 +1162,7 @@
     links.appendChild(B.el('h2', null, 'Das Zeichen des Hauses · ' + jahr()));
     links.appendChild(B.el('div', 'nm-unterzeile',
       'Ruf ' + ruf() + ' · Bekanntheit ' + Math.round(Z.bekannt) + ' von ' + epd().deckel
-      + ' · Deckung ' + Math.round(Z.deckung) + ' · Keller-Guete ' + guete()));
+      + ' · Deckung ' + Math.round(Z.deckung) + ' · Keller-Güte ' + guete()));
     kopf.appendChild(links);
 
     var reiter = B.el('div', 'nm-reiter');
@@ -1175,7 +1175,7 @@
         }));
       });
     reiter.appendChild(B.knopf({
-      text: 'Schliessen', zug: 'name:blatt-zu', klasse: 'nm-knopf',
+      text: 'Schließen', zug: 'name:blatt-zu', klasse: 'nm-knopf',
       tu: function () { zeigeBlatt(null); }
     }));
     kopf.appendChild(reiter);
@@ -1267,7 +1267,7 @@
       Z.register.push({
         jahr: jahr(), woche: woche(), wer: 'Das Haus', art: 'anfang', gewicht: 0,
         erloschen: false, erloschDurch: 0, loeschte: 0,
-        text: 'Das Haus fuehrt den Anker seit ' + B.welt.haus.gegruendet
+        text: 'Das Haus führt den Anker seit ' + B.welt.haus.gegruendet
           + '. Was er bedeutet, sagen andere.'
       });
       Z.meldung = epd().satz;
@@ -1290,13 +1290,13 @@
         jahr: jahr(), woche: woche(), wer: 'Das Haus', art: 'erbfall', gewicht: 0,
         erloschen: false, erloschDurch: 0, loeschte: 0,
         text: (d && d.amtszeit ? d.amtszeit.name : 'Der Nachfolger')
-          + ' uebernimmt den Namen. Das Register geht mit, die Aufmerksamkeit nicht.'
+          + ' übernimmt den Namen. Das Register geht mit, die Aufmerksamkeit nicht.'
       });
       if (Z.fest.krug && jahr() >= Z.krugAb) {
         Z.register.push({
           jahr: jahr(), woche: woche(), wer: 'Das Haus', art: 'spaet', gewicht: 3,
           erloschen: false, erloschDurch: 0, loeschte: 0,
-          text: 'Der gemarkte Krug, eingefuehrt vor dem Erbfall, traegt jetzt.'
+          text: 'Der gemarkte Krug, eingeführt vor dem Erbfall, trägt jetzt.'
         });
         Z.deckung = Math.min(100, Z.deckung + 3);
       }
