@@ -61,6 +61,12 @@
      ueber 1350 nur noch "jemand spielt Floete". */
   var PEGEL = { bett: 0.30, hof: 0.42, werk: 1.25 };
 
+  /* Und je Epoche noch einmal nachgestellt, weil die vier Hofbaender nicht
+     gleich laut sind: in 1350 haben die Gaense das ganze Bild an sich
+     gerissen, und das Ohr hat einen Bauernhof gehoert statt eines Brauhauses. */
+  var HOFPEGEL = { 1: 0.62, 2: 0.85, 3: 1.0, 4: 1.0 };
+  var BETTPEGEL = { 1: 1.0, 2: 1.0, 3: 0.9, 4: 1.0 };
+
   /* ======================================================================
      1 — DER KATALOG
      Ein Name aus einem Stueck -> eine Probe. Die Epoche entscheidet mit.
@@ -353,7 +359,7 @@
      ist die Datei, die der Pruefer bekommt, wirklich der Ton des Spiels.
      ====================================================================== */
 
-  function baueWerk(ctx) {
+  function baueWerk(ctx, epoche) {
     var meister = ctx.createGain();
     meister.gain.value = 0.92;
     var druck;
@@ -364,9 +370,13 @@
       meister.connect(druck); druck.connect(ctx.destination);
     } catch (f) { meister.connect(ctx.destination); }
 
-    var w = { ctx: ctx, meister: meister, bus: {}, schleifen: {} };
+    var w = { ctx: ctx, meister: meister, bus: {}, ruhe: {}, schleifen: {} };
     ['bett', 'hof', 'werk'].forEach(function (n) {
-      var g = ctx.createGain(); g.gain.value = PEGEL[n];
+      var fein = 1;
+      if (n === 'hof') fein = HOFPEGEL[epoche] || 1;
+      if (n === 'bett') fein = BETTPEGEL[epoche] || 1;
+      w.ruhe[n] = PEGEL[n] * fein;
+      var g = ctx.createGain(); g.gain.value = w.ruhe[n];
       g.connect(meister);
       w.bus[n] = g;
     });
@@ -410,7 +420,7 @@
   function ducke(w, wann, tiefe) {
     var t = tiefe || 0.55;
     [['bett', t], ['hof', 1 - (1 - t) * 0.45]].forEach(function (paar) {
-      var g = w.bus[paar[0]].gain, ruhe = PEGEL[paar[0]];
+      var g = w.bus[paar[0]].gain, ruhe = w.ruhe[paar[0]];
       try {
         g.cancelScheduledValues(wann);
         g.setValueAtTime(g.value, wann);
@@ -476,7 +486,7 @@
     if (!A) return null;
     var ctx;
     try { ctx = new A(); } catch (f) { B.klage('ton.kontext', f); return null; }
-    werk = baueWerk(ctx);
+    werk = baueWerk(ctx, (B.welt && B.welt.zeit) ? B.welt.zeit.epoche : 1);
     werk.meister.gain.value = 0.92 * LAUT;
     return werk;
   }
@@ -506,6 +516,13 @@
     if (!w || w.ctx.state !== 'running') { bettWunsch = epoche; return; }
     if (bettJetzt === epoche) return;
     bettJetzt = epoche;
+
+    /* Die Ruhepegel gehoeren zur Epoche, nicht zum Kontext. */
+    ['bett', 'hof'].forEach(function (n) {
+      var fein = (n === 'hof' ? HOFPEGEL[epoche] : BETTPEGEL[epoche]) || 1;
+      w.ruhe[n] = PEGEL[n] * fein;
+      try { w.bus[n].gain.setValueAtTime(w.ruhe[n], w.ctx.currentTime); } catch (f) { }
+    });
 
     var jetzt = w.ctx.currentTime;
     blendeAus(w, liegend.bett, jetzt);
@@ -676,7 +693,7 @@
       return Promise.all(Object.keys(noetig).map(function (d) {
         return puffer(octx, d).then(function (b) { merke(octx, d, b); }, function () { });
       })).then(function () {
-        var w = baueWerk(octx);
+        var w = baueWerk(octx, epoche);
         w.meister.gain.value = 0.92;
 
         /* Nicht immer bei 0 anfangen: sonst hoert das Ohr viermal denselben
