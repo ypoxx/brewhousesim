@@ -215,3 +215,49 @@
    nur. Wer es entfernte, baute die Zeile neu und riss dem Spieler den Knopf
    unter dem Zeiger weg. */
 .knopf.stadt-reiter.frei.aus { display: none; }
+
+/* ==========================================================================
+   DAS LOT — ?boden=1
+   Die Mauerlinie, das Torfeld und je Aufbau seine 24 gemessenen Fusspunkte.
+   Gruen heisst: der Punkt sitzt auf seinem Boden. Rot heisst: er sitzt auf
+   der Mauer oder in der Luft darueber. Nichts davon liegt im Vorgabestand
+   im Bild — es erscheint nur, wenn jemand nachmessen will.
+   ========================================================================== */
+
+.stadt-lot {
+  position: absolute;
+  inset: 0;
+  z-index: 5000;
+  pointer-events: none;
+}
+
+.stadt-lot .lot-linie {
+  position: absolute;
+  height: 3px;
+  transform-origin: 0 50%;
+  background: #e8402a;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.stadt-lot .lot-tor {
+  position: absolute;
+  border: 3px dashed #1f6feb;
+  background: rgba(31, 111, 235, 0.12);
+}
+
+.stadt-lot .lot-punkt {
+  position: absolute;
+  width: calc(var(--s) * 0.9);
+  height: calc(var(--s) * 0.9);
+  margin: calc(var(--s) * -0.45) 0 0 calc(var(--s) * -0.45);
+  border-radius: 50%;
+  background: #1faa4b;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.stadt-lot .lot-punkt.schlecht {
+  background: #e8402a;
+  width: calc(var(--s) * 1.5);
+  height: calc(var(--s) * 1.5);
+  margin: calc(var(--s) * -0.75) 0 0 calc(var(--s) * -0.75);
+}
