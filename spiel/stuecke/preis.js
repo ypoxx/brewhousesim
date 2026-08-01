@@ -936,6 +936,25 @@
     r.appendChild(B.el('span', 'pr-folge-marke', 'Regel'));
     r.appendChild(B.el('span', 'pr-folge-text', f.regel));
     karte.appendChild(r);
+
+    /* Was sie in Zahlen tut — dieselbe Zeile wie bei einem Angebot, damit
+       sich beides nebeneinanderlegen laesst. */
+    var fz = folgeText(f);
+    if (fz) {
+      var ff = B.el('div', 'pr-folge');
+      ff.appendChild(B.el('span', 'pr-folge-marke', 'Folge'));
+      ff.appendChild(B.el('span', 'pr-folge-text', fz));
+      karte.appendChild(ff);
+    }
+    if (f.wirkung && f.wirkung.pflichtNeu) {
+      karte.appendChild(B.el('div', 'pr-sperrt',
+        'Dafür neu und für immer: ' + f.wirkung.pflichtNeu.name + '.'));
+    }
+    karte.appendChild(B.el('div', 'pr-satz-klein',
+      'Preis dieser Amtszeit: ' + (preis ? geld(preis) : 'keine Ausgabe')
+      + (amtszeit().bis ? ' · ' + amtszeit().name + ' führt das Haus bis ' + amtszeit().bis + '.'
+                        : '')));
+
     if (!offen) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
       'Diese Amtszeit hat sich bereits festgelegt. Die nächste hat wieder eine Wahl.'));
     else if (!kann) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
