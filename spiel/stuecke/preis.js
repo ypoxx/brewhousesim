@@ -1392,7 +1392,9 @@
     stand.appendChild(zeile('Anschlag ' + jahr(), geld(Math.round(Z.anschlag))));
     if (billig) {
       stand.appendChild(zeile('billigstes Angebot', geld(billig.preis)));
-      stand.appendChild(zeile('Kasse reicht',
+      /* "Kasse reicht" steht auch unten rechts am Zug des Kerns und meint
+         dort etwas anderes. Also hier dazusagen, wofuer. Glaettung Welle 1. */
+      stand.appendChild(zeile('Kasse reicht dafür',
         billig.preis ? B.zahl(B.welt.haus.kasse / billig.preis, 2) + '×' : '—', 'pr-verh'));
     }
     var naechste = kommendeLasten()[0];
