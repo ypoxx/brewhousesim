@@ -2140,7 +2140,11 @@
       tu: wieVorigeWoche
     }));
     hilfe.appendChild(B.knopf({
-      text: 'Wagen leeren', zug: 'fuhre:leeren', klasse: 'fu-klein',
+      /* GLAETTUNG WELLE 1: Der Knopf hiess in allen vier Epochen "Wagen
+         leeren" — auch 1970, wo das Fahrzeug daneben LASTZUG heisst und
+         1884, wo gar kein Wagen im Hof steht, sondern eine Bahnrampe.
+         Zwei Namen fuer dieselbe Sache auf demselben Brett. */
+      text: e.wagen.leeren || 'Wagen leeren', zug: 'fuhre:leeren', klasse: 'fu-klein',
       aus: !voll, titel: 'Alles wieder in den Keller.', tu: leereWagen
     }));
     b.appendChild(hilfe);

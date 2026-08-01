@@ -160,7 +160,7 @@ var STADT_DATEN = {
       nutzen: { sud: 1 } },
 
     { schluessel: 'fasslager_holz', name: 'Fassschuppen', bild: 'fasslager_holz',
-      ort: 'fasslager', dx: 2, dy: -2, breite: 14, von: 1, bis: 1, grund: 22,
+      ort: 'fasslager', dx: -1, dy: -6, breite: 14, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach über den Fässern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
@@ -204,8 +204,8 @@ var STADT_DATEN = {
       nutzen: { rohstoff: 40 } },
 
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 2, dy: -2, breite: 14, breiten: { 2: 10.1 },
-      versatz: { 2: { dx: 10, dy: -4 } },
+      ort: 'fasslager', dx: -1, dy: -6, breite: 14, breiten: { 2: 10.1 },
+      versatz: { 2: { dx: 13, dy: 0 } },
       von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat wächst, der Schwund fällt.',
       nutzen: { platz: 10 } },
@@ -252,7 +252,7 @@ var STADT_DATEN = {
       nutzen: { platz: 40, sud: 2 } },
 
     { schluessel: 'eiskeller', name: 'Eiskeller', bild: 'eiskeller',
-      ort: 'keller', dx: 1, dy: 6, breite: 13, von: 3, bis: 4, grund: 70,
+      ort: 'keller', dx: 8, dy: 4, breite: 13, von: 3, bis: 4, grund: 70,
       sagt: 'Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergäriges Lagerbier möglich.',
       nutzen: { platz: 30 } },
 
@@ -293,7 +293,7 @@ var STADT_DATEN = {
       nutzen: {}, wirkt: 'drei Lastzüge gleichzeitig' },
 
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'fasslager', dx: 2, dy: -2, breite: 13.5, von: 4, bis: 4, grund: 70,
+      ort: 'fasslager', dx: -1, dy: -6, breite: 13.5, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
