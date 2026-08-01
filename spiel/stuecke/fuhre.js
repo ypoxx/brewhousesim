@@ -949,6 +949,8 @@
       abgabeSatz: e.abgabe ? e.abgabe.sagt : '',
       satz: e.sommerSatz,
       rest: vorrat.length,
+      kerb: Z.kerbGeorgi,
+      notsude: Z.notGesamt,
       verloren: []
     };
     B.ton.spiele('sommer:keller-leer', { ort: 'keller', art: 'schleife' });
@@ -1205,6 +1207,24 @@
 
     var b = brett('fu-haeuser', 'DIE HÄUSER',
       'wollen ' + B.welt.menge(wollen, true) + ' · im Keller liegen ' + B.welt.menge(liegt));
+
+    /* DAS ENDE DIESES HAUSES IST NIE DIE LEERE KASSE. Solange eine Adresse
+       Bier des Hauses fuehrt, geht es weiter — notfalls mit Kofent und auf
+       Kerbe. Erst wenn keine mehr da ist, ist es vorbei. */
+    if (!haeuser().length) {
+      var aus = B.el('div', 'fu-ausgelaufen');
+      aus.appendChild(B.el('b', null, 'KEIN HAUS DER STADT FÜHRT MEHR BIER DES ANKER'));
+      aus.appendChild(B.el('span', null,
+        'Das ist das Ende — nicht die leere Kasse. Die Pfanne könnte morgen wieder brennen, '
+        + 'und es gäbe niemanden, der das Fass abnimmt.'));
+      b.appendChild(aus);
+      if (!Z.endeGemeldet) {
+        Z.endeGemeldet = true;
+        B.welt.schreibe('Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, '
+          + 'aber es liefert nirgendwohin mehr. Nicht das Geld ist ausgegangen — '
+          + 'die Kundschaft.', 'fuhre');
+      }
+    }
 
     if (Z.zettel) {
       var z = B.el('div', 'fu-zettel');
@@ -1586,11 +1606,12 @@
     }
     if (e.pfand) {
       var pp = Math.round(e.pfand.grund + e.pfand.jeFass * Z.draussen);
+      var pk = Z.draussen ? kerbZusatz(pp) : '';
       fuss.appendChild(B.knopf({
-        text: e.pfand.name + ' · ' + Z.draussen + ' Fass',
-        zug: 'fuhre:pfand', klasse: 'fu-klein', preis: -pp,
-        aus: !Z.draussen || !B.welt.kann(pp),
-        titel: e.pfand.satz,
+        text: e.pfand.name + ' · ' + Z.draussen + ' Fass' + pk,
+        zug: 'fuhre:pfand', klasse: 'fu-klein' + (pk ? ' fu-aufkerbe' : ''), preis: -pp,
+        aus: !Z.draussen || !kannBezahlen(pp),
+        titel: e.pfand.satz + (Z.draussen ? kerbTitel(pp) : ''),
         tu: ziehePfand
       }));
     }
@@ -1847,6 +1868,32 @@
         + B.welt.geld(s.abgabe) + '   ·   ' + s.abgabeSatz));
     }
 
+    /* Die Abrechnung des Kerbholzes — in Geld, soweit welches da war, und
+       im uebrigen in der knappen Sache dieser Zeit. */
+    if (s.kerb && s.kerb.hatte) {
+      var kz = B.el('div', 'fu-kerbabrechnung');
+      kz.appendChild(B.el('b', null, s.kerb.name.toUpperCase() + ': '
+        + s.kerb.hatte + (s.kerb.hatte === 1 ? ' Kerbe' : ' Kerben')));
+      kz.appendChild(B.el('div', null, s.kerb.geloescht
+        ? s.kerb.geloescht + (s.kerb.geloescht === 1 ? ' Kerbe' : ' Kerben') + ' in Geld gelöscht.'
+        : 'Keine einzige in Geld gelöscht — es war keines da.'));
+      if (s.kerb.offen) {
+        kz.appendChild(B.el('div', null, s.kerb.offen
+          + (s.kerb.offen === 1 ? ' Kerbe blieb offen' : ' Kerben blieben offen')
+          + '. ' + s.kerb.sagt + ' Genommen: ' + s.kerb.wovon + '.'));
+      } else {
+        kz.appendChild(B.el('div', null, 'Das Holz ist glatt. Nichts genommen.'));
+      }
+      bl.appendChild(kz);
+    }
+
+    if (s.notsude) {
+      bl.appendChild(B.el('div', 'fu-satz',
+        'Aus der Not gebraut: ' + s.notsude + ' Sud '
+        + (notSorte() ? notSorte().name : 'Notbier') + ' in diesem Braujahr. '
+        + 'Ohne Barauslage — und ohne dass jemand dafür Geld gesehen hätte, das nicht da war.'));
+    }
+
     if (s.verloren && s.verloren.length) {
       var vl = B.el('div', 'fu-verlust');
       vl.appendChild(B.el('b', null, s.verloren.length === 1
@@ -1914,6 +1961,8 @@
       B.ton.melde('tafel:kreide', { art: 'geraeusch', sagt: 'Kreide auf Schiefer.' });
       B.ton.melde('sommer:keller-leer', { art: 'schleife', sagt: 'Tropfen im leeren Gewölbe, Fliegen.' });
       B.ton.melde('fuhre:siegel', { art: 'geraeusch', sagt: 'Siegelwachs, Papier, Ratsstube.' });
+      B.ton.melde('fuhre:kerbe', { art: 'geraeusch', sagt: 'Ein Messer schneidet eine Kerbe in Holz.' });
+      B.ton.melde('fuhre:kauf', { art: 'geraeusch', sagt: 'Muenzen auf einen Ladentisch.' });
 
       /* Fangphase: laeuft vor dem Tastenhorcher des Kerns. Siehe tastenSperre. */
       document.addEventListener('keydown', tastenSperre, true);
@@ -2045,6 +2094,8 @@
       return {
         fuhren: Z.fuhren, budget: Z.budget, faesser: Z.faesser, draussen: Z.draussen,
         eis: Z.eis, keller: keller().length, reif: freieFaesser().length,
+        kerben: Z.kerben, kerbFrei: kerbFrei(), notsud: Z.notsud, notGesamt: Z.notGesamt,
+        notsorte: notSorte() ? notSorte().name : null,
         durst: Object.keys(Z.durst).map(function (k) { return k + ':' + Math.round(Z.durst[k]); }),
         mahnung: Z.mahnung, verloren: Object.keys(Z.verloren)
       };
