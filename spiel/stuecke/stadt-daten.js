@@ -470,6 +470,11 @@ var STADT_DATEN = {
        kein Fuss im Torfeld. */
     { schluessel: 'kueferei', name: 'Küferei', bild: 'kueferei',
       ort: 'fasslager', dx: 4, dy: -4, breite: 9.2, breiten: { 1: 9.2, 2: 7.3 },
+      /* In 1600 einen halben Schritt nach links: dort steht die Braustelle
+         weiter vorn als in 1350, und ein Schuppen, der die drei Figuren am
+         Kessel zudeckt, kostet mehr, als er bringt — der Kritiker hat sie im
+         Blindvergleich ausdruecklich fuer das Gebaute gezaehlt. */
+      versatz: { 2: { dx: -3.5, dy: -1.5 } },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
