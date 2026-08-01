@@ -203,7 +203,8 @@
   var beobachter = null;
   var imGange = false;
   var angemeldet = false;
-  var reiterStand = '';         /* letzte gezeichnete Reiterzeile, gegen Flackern */
+  var reiterStand = '';         /* Satz der Bretter — nur er baut die Zeile neu */
+  var reiterKnopf = {};         /* schluessel -> der stehende Knopf */
 
   /* Die beiden Ausnahmen — und ihre Obergrenze. Ein Ding, das an einem Ort
      haengt (.amort) oder sich selbst abgemeldet hat (data-frei), bleibt
@@ -317,65 +318,101 @@
     pruefe();
   }
 
-  /* ---- Die Reiterzeile. Wird nur angefasst, wenn sich etwas geaendert
-     hat — sonst reisst sie den Knopf unter dem Zeiger weg. ---- */
+  /* ---- Die Reiterzeile.
+
+     Runde 5: sie wird nur noch NEU GEBAUT, wenn andere Bretter da sind. Bis
+     dahin hing die Kennung auch an Auf/Zu und an den Zahlen — also riss jeder
+     Klick auf einen Reiter im naechsten Takt genau den Knopf weg, auf dem der
+     Zeiger stand. Mit sieben Reitern statt vier faellt das ins Gewicht: der
+     Kritiker der zweiten Latte muss zwanzig Minuten lang klicken koennen.
+     Aufschrift, Lage und Titel werden deshalb IM STEHENDEN KNOPF frisch
+     gesetzt, und "Stadt zeigen" bleibt liegen und wird nur ausgeblendet. ---- */
+  function reiterZug(s) {
+    return 'stadt:reiter:' + s.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+  }
+
   function zeichneReiter(liste, ruhend) {
     var zeile = werkbank().querySelector('.stadt-reiterzeile');
     var offenDa = liste.some(function (b) { return !b.zu; });
-    var kennung = liste.map(function (b) {
-      return b.schluessel + '~' + (b.zu ? 'z' : 'a') + '~' + b.titel + '~' + b.unter;
-    }).join('|') + (offenDa ? '|zeigen' : '')
-      + '|marken' + markenZahl + '/' + (ruhend || 0);
-    if (kennung === reiterStand) return;
-    reiterStand = kennung;
+    var satz = liste.map(function (b) { return b.schluessel; }).join('|')
+      + '|' + (markenZahl ? 'marken' : '');
 
-    B.leere(zeile);
-    if (!liste.length && !markenZahl) return;
+    if (satz !== reiterStand) {
+      reiterStand = satz;
+      reiterKnopf = {};
+      B.leere(zeile);
 
-    liste.forEach(function (b) {
-      var k = B.knopf({
-        text: b.titel,
-        zug: 'stadt:reiter:' + b.schluessel.replace(/[^a-z0-9]+/gi, '-').toLowerCase(),
-        klasse: 'stadt-reiter' + (b.zu ? '' : ' auf'),
-        titel: b.zu
-          ? b.titel + ' aufschlagen. Es legt sich über die Stadt, bis man es wieder zuklappt.'
-          : b.titel + ' zuklappen — dann sieht man die Stadt wieder.',
-        tu: function () { schalte(b.schluessel); }
+      liste.forEach(function (b) {
+        var s = b.schluessel;
+        var k = B.knopf({
+          text: b.titel,
+          zug: reiterZug(s),
+          klasse: 'stadt-reiter',
+          tu: function () { schalte(s); }
+        });
+        k.appendChild(B.el('span', 'zahl', ''));
+        reiterKnopf[s] = k;
+        zeile.appendChild(k);
       });
+
+      if (markenZahl) {
+        var m = B.knopf({
+          text: 'Ortsmarken',
+          zug: 'stadt:ortsmarken',
+          klasse: 'stadt-reiter marken',
+          tu: markenSchalter
+        });
+        m.appendChild(B.el('span', 'zahl', ''));
+        reiterKnopf['~marken'] = m;
+        zeile.appendChild(m);
+      }
+
+      if (liste.length) {
+        var z = B.knopf({
+          text: 'Stadt zeigen',
+          zug: 'stadt:alles-zuklappen',
+          klasse: 'stadt-reiter frei',
+          titel: 'Klappt alle Bretter zu. Danach steht nur noch der Hof im Bild.',
+          tu: alleZuklappen
+        });
+        reiterKnopf['~zeigen'] = z;
+        zeile.appendChild(z);
+      }
+    }
+
+    /* Aufschrift und Lage — jedes Mal frisch, aber ohne einen Knopf anzufassen. */
+    liste.forEach(function (b) {
+      var k = reiterKnopf[b.schluessel];
+      if (!k) return;
+      k.classList.toggle('auf', !b.zu);
       k.setAttribute('aria-expanded', b.zu ? 'false' : 'true');
-      k.appendChild(B.el('span', 'zahl', b.unter || (b.zu ? 'zugeklappt' : 'liegt auf')));
-      zeile.appendChild(k);
+      k.title = b.zu
+        ? b.titel + ' aufschlagen. Es legt sich über die Stadt, bis man es wieder zuklappt.'
+        : b.titel + ' zuklappen — dann sieht man die Stadt wieder.';
+      var wort = k.querySelector('.wort');
+      if (wort && wort.textContent !== b.titel) wort.textContent = b.titel;
+      var zahl = k.querySelector('.zahl');
+      var text = b.unter || (b.zu ? 'zugeklappt' : 'liegt auf');
+      if (zahl && zahl.textContent !== text) zahl.textContent = text;
     });
 
-    if (markenZahl) {
+    var mk = reiterKnopf['~marken'];
+    if (mk) {
       var ruht = (ruhend || 0) > 0;
-      var m = B.knopf({
-        text: 'Ortsmarken',
-        zug: 'stadt:ortsmarken',
-        klasse: 'stadt-reiter marken' + (ruht ? '' : ' auf'),
-        titel: ruht
-          ? markenZahl + ' Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. '
-            + 'Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.'
-          : 'Legt alle Ortsmarken zurück auf ihre Pflöcke — dann steht nur noch '
-            + 'die Stadt im Bild.',
-        tu: markenSchalter
-      });
-      m.setAttribute('aria-expanded', ruht ? 'false' : 'true');
-      m.appendChild(B.el('span', 'zahl', ruht
-        ? markenZahl + ' auf dem Pflock'
-        : markenZahl + ' im Bild'));
-      zeile.appendChild(m);
+      mk.classList.toggle('auf', !ruht);
+      mk.setAttribute('aria-expanded', ruht ? 'false' : 'true');
+      mk.title = ruht
+        ? markenZahl + ' Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. '
+          + 'Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.'
+        : 'Legt alle Ortsmarken zurück auf ihre Pflöcke — dann steht nur noch '
+          + 'die Stadt im Bild.';
+      var mz = mk.querySelector('.zahl');
+      var mt = ruht ? markenZahl + ' auf dem Pflock' : markenZahl + ' im Bild';
+      if (mz && mz.textContent !== mt) mz.textContent = mt;
     }
 
-    if (offenDa) {
-      zeile.appendChild(B.knopf({
-        text: 'Stadt zeigen',
-        zug: 'stadt:alles-zuklappen',
-        klasse: 'stadt-reiter frei',
-        titel: 'Klappt alle Bretter zu. Danach steht nur noch der Hof im Bild.',
-        tu: alleZuklappen
-      }));
-    }
+    var zk = reiterKnopf['~zeigen'];
+    if (zk) zk.classList.toggle('aus', !offenDa);
   }
 
   /* ====================================================================

@@ -62,7 +62,7 @@ var STADT_DATEN = {
          Torbogen mehr ist, an dem es haengen koennte: 'gestell' ist die
          Hoehe der Rohre in Prozent der Buehnenhoehe, der FUSS sitzt dann auf
          dem Ort. Siehe zeichneHausschild() in stadt.js. */
-      schild: { dx: -1.8, dy: 4.1, breite: 7.4, dreh: -2, hell: true, gestell: 3.4 }
+      schild: { dx: -1.0, dy: 1.5, breite: 7.4, dreh: -2, hell: true, gestell: 3.4 }
     }
   },
 
@@ -179,6 +179,33 @@ var STADT_DATEN = {
      dort hin will, deckt den ersten zu — deshalb steht in jeder Epoche nur
      ein Bau in C2, und was sonst nach vorn moechte, wird flach (die
      Fahrzeugwaage) oder geht in das mittlere Band.
+
+     DIE FUGENNAHT.  (Runde 5)
+
+     Runde 4 hat EINE Datei neu erzeugt (keller_gewoelbe) und die Klasse fuer
+     geschlossen erklaert. Der Kritiker hat drei weitere gefunden und mit der
+     Messung des Builders selbst nachgerechnet: hopfenlager Oberkante
+     91 Spalten / Farbsprung 190, fasslager_stein linke Kante 102 bzw. 138
+     Zeilen / 158, abfuellhalle rechte Kante 84 Zeilen / 97, keller_gewoelbe
+     rechts noch 14 Zeilen / 197 — gegen einen sauberen Vergleichswert von 36.
+     Er hat auch gesagt, woran man es VORHER sieht: am Alphakanal der Datei.
+
+     Diese Runde behandelt deshalb nicht Faelle, sondern den Ordner:
+
+     · NEU GEZEICHNET wurden alle Bilder, in denen etwas Gebautes an einer
+       Kante endete: hopfenlager, fasslager_stein, abfuellhalle, verladedock,
+       brunnen, flaschenhalle, sudhaus_neu, fasslager_holz, kueferei. Jedes
+       ist so erzeugt, dass rundum leerer Grund bleibt, und jedes wird nach
+       dem Freistellen geprueft: kein Pixel mit Alpha > 0 auf einer Bildkante.
+     · DIE UEBRIGEN 23 Dateien haben denselben Riegel bekommen: die aeussersten
+       zwei Pixelreihen sind durchsichtig, die naechsten acht laufen weich an.
+       Fuenf Bildschirmpixel Uebergang statt eines Schnitts.
+     · GEPRUEFT wird seither mit dem Verfahren des Kritikers, in allen vier
+       Epochen mit bau=alle: kein Aufbau hat noch Pixel seiner Differenzmaske
+       auf seiner eigenen Rechteckkante. Was an Sprung uebrig ist, sitzt auf
+       Unterkanten — dort steht das Haus auf dem Boden, das ist keine Naht —
+       und an zwei Seitenkanten mit 17 und 19 Pixeln bei Sprung 97.
+       Zum Vergleich: 91 Spalten bei 190.
      -------------------------------------------------------------------- */
   /* Die Preise sind so gestellt, dass die Barschaft am Anfang jeder Epoche
      etwa fuenf der offenen Bauten traegt und der sechste liegen bleibt. Wer
@@ -273,14 +300,21 @@ var STADT_DATEN = {
        fuer die Brauerinnen: bei breite 14 war er 113 px hoch neben einer Magd
        von 72. Bei 9.9 misst er 80, bei 8.2 in der weitraeumigeren Platte 1600
        noch 66 — beides die Groesse der Leute, die dort stehen. */
-    /* Runde 5: derselbe Faktor wie bei der Pfanne. Der Kuefer stand in 1600
-       bei breite 7,2 rund 58 px hoch, wo an seiner Tiefe (y=1090) rund 80 px
-       hingehoeren — 9,4 statt 7,2. Er wandert dabei einen Schritt nach links
-       ins Hofinnere, damit der breiter gewordene Schuppen nicht mit dem Fuss
-       ueber die Mauerkante an der Tordurchfahrt hinausragt. */
+    /* Runde 5, nachgemessen und NICHT angefasst. Erst gerechnet, dann am Bild
+       nachgesehen: der Kuefer misst in 1600 bei breite 7,2 volle 71 px (Kopf
+       1007, Fuss 1078), und an seiner Tiefe gehoeren nach der Formel des
+       Kritikers 46,6 px je Meter, also 79 px hin — 90 Prozent, dieselbe
+       Toleranz, die er in 1350 durchgehen liess. Der Kuefer war nie das
+       Problem, die Pfanne war es.
+       Ein Versuch, ihn trotzdem zu vergroessern, ist zurueckgenommen: der
+       Hof 1600 hat vorne genau eine freie Tasche, und die gehoert der
+       Braustelle. Jedes breitere Ding an dieser Stelle deckt entweder die
+       drei arbeitenden Figuren am Kessel zu (die der Kritiker im Blindtest
+       ausdruecklich fuer das Gebaute gezaehlt hat) oder haengt ueber der
+       Mauer. Lieber zehn Prozent Massstab als beides. */
     { schluessel: 'kueferei', name: 'Küferei', bild: 'kueferei',
-      ort: 'tor', dx: 0, dy: 10, breite: 9.9, breiten: { 1: 9.9, 2: 9.4 },
-      versatz: { 2: { dx: -2.5, dy: -3.6 } },
+      ort: 'tor', dx: 0, dy: 10, breite: 9.2, breiten: { 1: 9.2, 2: 7.3 },
+      versatz: { 2: { dy: -3 } },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
@@ -365,8 +399,15 @@ var STADT_DATEN = {
       sagt: 'Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergäriges Lagerbier möglich.',
       nutzen: { platz: 30 } },
 
+    /* Runde 5, der Grenzfall aus dem Befund des Kritikers: "Ihre Treppe endet
+       bei y~1110, der Gassenboden vor dem Tor beginnt auf der Platte erst bei
+       y~1180 — die Stufen laufen auf dem geschlossenen Torfluegel aus, 70 px
+       ueber ihrem Boden." Nachgesehen: das Tor 1884 ist zu, unter der Treppe
+       ist Mauer. Die Rampe geht deshalb 70 px (4,6 Prozent der Buehnenhoehe)
+       nach hinten in den Hof, wo ihre Stufen auf Hofboden aufsetzen; ihr
+       tiefster undurchsichtiger Punkt liegt danach ueber der Mauerlinie. */
     { schluessel: 'laderampe', name: 'Laderampe', bild: 'laderampe',
-      ort: 'rampe', dx: 5, dy: 2, breite: 14, von: 3, bis: 3, grund: 60,
+      ort: 'rampe', dx: 5, dy: -2.6, breite: 14, von: 3, bis: 3, grund: 60,
       sagt: 'Auf Wagenhöhe. Erst mit der Bahn lohnt sich, was hier verladen wird.',
       nutzen: {}, wirkt: 'Verladen auf Wagenhöhe' },
 

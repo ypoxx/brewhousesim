@@ -210,3 +210,8 @@
 }
 
 .knopf.stadt-reiter .wort { letter-spacing: calc(var(--s) * 1.4); }
+
+/* "Stadt zeigen" bleibt liegen, wenn kein Brett offen ist — es verschwindet
+   nur. Wer es entfernte, baute die Zeile neu und riss dem Spieler den Knopf
+   unter dem Zeiger weg. */
+.knopf.stadt-reiter.frei.aus { display: none; }
