@@ -1,9 +1,225 @@
 /* ===========================================================================
-   stuecke/stadt-zusatz.js — FREIER PLATZ fuer "stadt".
-   Diese Datei ist in spiel/index.html bereits eingehaengt und wird NACH
-   stadt.js geladen. Sie ist leer und darf vollstaendig ersetzt werden.
+   stuecke/stadt-zusatz.js — DER BODEN.  Das Lot des Hofes.
 
-   Sie existiert aus genau einem Grund: damit der Bauer von "stadt" seinen Code
-   auf mehrere Dateien verteilen kann, OHNE index.html anzufassen. index.html
-   wird nur einmal geschrieben — das ist die Parallelsicherung.
+   Runde 5 ging mit einem Satz zurueck: "DER BODEN IST NICHT ZU. Bauten sitzen
+   auf Ortsmarken plus Versatz, ohne dass jemand prueft, ob der Fusspunkt im
+   Hof liegt." Der Beleg war die Kueferei, die in 1350 mit 250 von 252 Spalten
+   121 Pixel unter der Mauerkante stand — auf dem Hoftor, ueber der Einfahrt,
+   samt Kuefer, Fass und Feuerkorb in der Luft.
+
+   Das war kein Tippfehler in einer Zeile, sondern eine fehlende Pruefung.
+   Diese Datei ist die Pruefung. Sie laeuft IM SPIEL, bei jedem Zeichnen, und
+   sie misst dasselbe, was der Kritiker am Bildschirm gemessen hat:
+
+     je Aufbau 24 Spalten, je Spalte die UNTERSTE undurchsichtige Zeile
+     seines Bildes, verglichen mit der Mauerlinie der vier Platten.
+
+   Die Fussprofile stehen in stadt-daten.js (K.fuesse), gemessen am
+   Alphakanal der 32 Hofdateien mit werkbank/schuss/stadt-r6/fuesse.py.
+   Deshalb braucht das Lot keinen Schuss und keine Bildverarbeitung: es
+   rechnet mit denselben Zahlen, aus denen der Browser das Bild malt.
+
+   DIE DREI SAETZE, die es prueft:
+
+   1  WER IM HOF STEHT, STEHT HINTER DER MAUER.  Die Mauerlinie ist die
+      Vorderkante des Hofes; sie ist an allen vier leeren Platten nachgemessen
+      (Runde 4) und in allen vier dieselbe. Kein Punkt eines Hofbaus darf
+      darunter reichen. Wer darunter zeichnet, steht auf dem Mauerkopf.
+
+   2  WER DRAUSSEN STEHT, MUSS ES SAGEN.  'boden: gasse' ist eine Erklaerung
+      mit Begruendung, kein Schlupfloch: dann muss der Aufbau in JEDER Spalte
+      unter der Mauerlinie liegen. Wer halb im Hof und halb auf der Gasse
+      steht, steht auf der Mauer — genau das war der Fall Kontor.
+
+   3  NIEMAND VERSTELLT DAS TOR.  Die Einfahrt ist eine gemessene Flaeche der
+      Platte. Wessen Fuss dort aufsetzt, versperrt sie. Das ist der Satz, den
+      die Kueferei gebrochen hat, und er gilt auch fuer einen Bau, der sich
+      brav als 'gasse' abmeldet.
+
+   ZU SEHEN, nicht zu glauben:  ?boden=1  legt die Mauerlinie, das Torfeld und
+   je Aufbau seine 24 gemessenen Fusspunkte ins Bild — gruen, wenn sie sitzen,
+   rot, wo sie es nicht tun. Und BRAUHAUS.stadt.boden.pruefe() gibt dieselben
+   Zahlen in die Konsole, ohne dass jemand ein Bild ausmessen muss.
    =========================================================================== */
+
+(function (B) {
+  'use strict';
+
+  var K = STADT_DATEN;
+  var BD = K.boden;
+
+  /* Alles rechnet auf der Bezugsbuehne 2752x1536 und wird erst zum Schluss
+     auf die wirkliche Buehne umgerechnet. Sonst haengt ein Urteil an der
+     Fenstergroesse des Pruefers. */
+  function bezug() {
+    var m = B.buehne.masse();
+    return { sx: m.breite / m.bezugBreite, sy: m.hoehe / m.bezugHoehe,
+             breite: m.breite, hoehe: m.hoehe };
+  }
+
+  /* DIE MAUERLINIE, in Bezugspixeln. Ein Dach mit dem Scheitel in der
+     Sued-Ecke: links faellt sie mit 0,49, rechts mit 0,45. */
+  function mauer(x) {
+    var sx = BD.scheitel.x * 27.52, sy = BD.scheitel.y * 15.36;
+    return x <= sx ? sy - BD.links * (sx - x) : sy - BD.rechts * (x - sx);
+  }
+
+  function torfeld() {
+    return { x0: BD.tor.x0 * 27.52, x1: BD.tor.x1 * 27.52,
+             y0: BD.tor.y0 * 15.36, y1: BD.tor.y1 * 15.36 };
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE MESSUNG EINES AUFBAUS.
+     Der Kasten kommt aus dem DOM (also aus dem, was wirklich im Bild steht),
+     das Fussprofil aus dem Alphakanal seines Bildes. Beides zusammen gibt
+     je Spalte den untersten undurchsichtigen Punkt in Bezugspixeln.
+     ---------------------------------------------------------------------- */
+  function fusspunkte(el, profil) {
+    var b = bezug();
+    var r = el.getBoundingClientRect();
+    var buehne = B.buehne.el;
+    var o = buehne ? buehne.getBoundingClientRect() : { left: 0, top: 0 };
+    var L = (r.left - o.left) / b.sx, W = r.width / b.sx;
+    var T = (r.top - o.top) / b.sy, H = r.height / b.sy;
+    var l = [];
+    for (var i = 0; i < profil.length; i++) {
+      if (profil[i] < 0) continue;
+      l.push({ x: L + (i + 0.5) * W / profil.length, y: T + profil[i] * H });
+    }
+    return l;
+  }
+
+  function urteile(a, punkte) {
+    var tor = torfeld();
+    var draussen = (a.boden === 'gasse');
+    var tiefste = -1e9, tiefsteX = 0, drunter = 0, drueber = 0, imTor = 0;
+    punkte.forEach(function (p) {
+      var d = p.y - mauer(p.x);
+      if (d > tiefste) { tiefste = d; tiefsteX = p.x; }
+      if (d > BD.spiel) drunter++;
+      if (d < -BD.spiel) drueber++;
+      if (p.x >= tor.x0 && p.x <= tor.x1 && p.y >= tor.y0 && p.y <= tor.y1) imTor++;
+    });
+    var fehler = [];
+    if (!draussen && drunter) fehler.push('steht auf der Mauer (' + drunter + ' von '
+      + punkte.length + ' Spalten, tiefste ' + Math.round(tiefste) + ' px darunter)');
+    if (draussen && drueber) fehler.push('haengt in den Hof hinein (' + drueber
+      + ' von ' + punkte.length + ' Spalten)');
+    if (imTor && a.schluessel !== 'tor') fehler.push('verstellt das Hoftor ('
+      + imTor + ' Spalten)');
+    return { schluessel: a.schluessel, boden: a.boden || 'hof',
+             tiefste: Math.round(tiefste), x: Math.round(tiefsteX),
+             spalten: punkte.length, drunter: drunter, drueber: drueber,
+             tor: imTor, gut: !fehler.length, sagt: fehler.join(' · ') };
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE PRUEFUNG. Liest, was wirklich im eigenen Fach steht.
+     ---------------------------------------------------------------------- */
+  function nachSchluessel(s) {
+    for (var i = 0; i < K.aufbauten.length; i++) {
+      if (K.aufbauten[i].schluessel === s) return K.aufbauten[i];
+    }
+    return null;
+  }
+
+  function pruefe(laut) {
+    var fach = document.getElementById('fach-bau-stadt');
+    var l = [];
+    if (!fach) return l;
+    var haeuser = fach.querySelectorAll('.stadt-haus[data-bau]:not(.geist)');
+    for (var i = 0; i < haeuser.length; i++) {
+      var el = haeuser[i];
+      var a = nachSchluessel(el.getAttribute('data-bau'));
+      if (!a) continue;
+      var profil = K.fuesse[a.bild];
+      if (!profil) continue;
+      l.push(urteile(a, fusspunkte(el, profil)));
+    }
+    if (laut && window.console) {
+      l.forEach(function (z) {
+        console.log((z.gut ? 'steht  ' : 'FEHLER ') + z.schluessel + '  Boden ' + z.boden
+          + '  tiefster Punkt ' + z.tiefste + ' px unter der Mauerlinie'
+          + (z.sagt ? '  — ' + z.sagt : ''));
+      });
+    }
+    return l;
+  }
+
+  /* ----------------------------------------------------------------------
+     ?boden=1 — dasselbe, aber im Bild. Damit muss niemand dem Bauer glauben.
+     ---------------------------------------------------------------------- */
+  function zeichneLot() {
+    var an = B.arg.roh && B.arg.roh.boden;
+    var fach = B.ebene('bau', 'stadt');
+    var alt = fach.querySelector('.stadt-lot');
+    if (alt) fach.removeChild(alt);
+    if (!an) return;
+
+    var b = bezug();
+    var lot = B.el('div', 'stadt-lot');
+    lot.setAttribute('data-frei', '1');
+
+    var t = torfeld();
+    var kasten = B.el('div', 'lot-tor');
+    kasten.style.left = (t.x0 / 27.52) + '%';
+    kasten.style.top = (t.y0 / 15.36) + '%';
+    kasten.style.width = ((t.x1 - t.x0) / 27.52) + '%';
+    kasten.style.height = ((t.y1 - t.y0) / 15.36) + '%';
+    lot.appendChild(kasten);
+
+    /* Die Mauerlinie als zwei schraege Balken — dieselbe Formel, die urteilt. */
+    [[0, BD.scheitel.x * 27.52], [BD.scheitel.x * 27.52, 2752]].forEach(function (s) {
+      var x0 = s[0], x1 = s[1];
+      var y0 = mauer(x0), y1 = mauer(x1);
+      var laenge = Math.sqrt((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0));
+      var strich = B.el('div', 'lot-linie');
+      strich.style.left = (x0 / 27.52) + '%';
+      strich.style.top = (y0 / 15.36) + '%';
+      strich.style.width = (laenge / 27.52) + '%';
+      strich.style.rotate = (Math.atan2((y1 - y0) * b.sy, (x1 - x0) * b.sx)
+        * 180 / Math.PI) + 'deg';
+      lot.appendChild(strich);
+    });
+
+    var fachbau = document.getElementById('fach-bau-stadt');
+    var haeuser = fachbau ? fachbau.querySelectorAll('.stadt-haus[data-bau]:not(.geist)') : [];
+    for (var i = 0; i < haeuser.length; i++) {
+      var a = nachSchluessel(haeuser[i].getAttribute('data-bau'));
+      if (!a || !K.fuesse[a.bild]) continue;
+      var draussen = (a.boden === 'gasse');
+      fusspunkte(haeuser[i], K.fuesse[a.bild]).forEach(function (p) {
+        var d = p.y - mauer(p.x);
+        var schlecht = draussen ? (d < -BD.spiel) : (d > BD.spiel);
+        var punkt = B.el('div', 'lot-punkt' + (schlecht ? ' schlecht' : ''));
+        punkt.style.left = (p.x / 27.52) + '%';
+        punkt.style.top = (p.y / 15.36) + '%';
+        lot.appendChild(punkt);
+      });
+    }
+    fach.appendChild(lot);
+  }
+
+  /* ----------------------------------------------------------------------
+     ANMELDUNG. Ein eigenes Stueck-Fach waere ein zweites 'stadt' — deshalb
+     haengt das Lot am Zeichen-Ereignis und nicht an B.stueck().
+     ---------------------------------------------------------------------- */
+  B.auf('zeichne', function () {
+    B.wage('stadt.boden', function () {
+      zeichneLot();
+      if (B.arg.roh && B.arg.roh.boden === 'laut') pruefe(true);
+    });
+  });
+
+  B.stadt.boden = {
+    mauer: mauer,
+    tor: torfeld,
+    pruefe: pruefe,
+    /* Kurzfassung fuer die Konsole: was steht nicht? */
+    fehler: function () {
+      return pruefe().filter(function (z) { return !z.gut; });
+    }
+  };
+
+})(BRAUHAUS);
