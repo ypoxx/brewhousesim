@@ -1846,6 +1846,61 @@
     fach.appendChild(b);
   }
 
+  /* DAS ZIEL, auf dem Brett DIE HÄUSER: drei Karten nebeneinander, die
+     einander ausschliessen, verabredet zu Michaeli und dann ein Jahr lang
+     bindend. Daneben steht die Zahl, um die es geht — was gerade im Holz
+     steht und am Michaelitag hereinkommt. */
+  function zeichneZiel(b) {
+    var zd = zielDef();
+    if (!zd) return;
+    var st = zielStufe();
+    var offen = zielOffen();
+    var steht = Math.round(ausstandSumme());
+    var vor = Math.round(vorschussSumme());
+
+    var w = B.el('div', 'fu-ziel' + (offen ? '' : ' fu-ziel-fest'));
+    var kopf = B.el('div', 'fu-ziel-kopf');
+    kopf.appendChild(B.el('b', null, zd.name.toUpperCase()));
+    kopf.appendChild(B.el('span', 'fu-ziel-stand',
+      'im Holz bis Michaeli: ' + B.welt.geld(steht)
+      + (vor ? '  ·  abzutrinkendes Angeld: ' + B.welt.geld(vor) : '')));
+    w.appendChild(kopf);
+    w.appendChild(B.el('div', 'fu-ziel-satz', zd.satz));
+
+    var reihe = B.el('div', 'fu-ziel-reihe');
+    zielStufen().forEach(function (s) {
+      var hier = st && s.k === st.k;
+      var karte = B.el('div', 'fu-ziel-karte' + (hier ? ' gewaehlt' : ''));
+      karte.setAttribute('data-ziel', s.k);
+      karte.appendChild(B.el('b', 'fu-ziel-name', s.name));
+      karte.appendChild(B.el('div', 'fu-ziel-was', s.was));
+      var zahlen = B.el('div', 'fu-ziel-zahlen');
+      zahlen.appendChild(B.el('span', null, 'bar ' + Math.round(s.bar * 100) + ' %'));
+      zahlen.appendChild(B.el('span', null, 'Bestellung ' + Math.round(s.durst * 100) + ' %'));
+      zahlen.appendChild(B.el('span', s.ausfall ? 'schlecht' : 'gut',
+        'Ausfall ' + Math.round(s.ausfall * 100) + ' %'));
+      karte.appendChild(zahlen);
+      karte.appendChild(B.knopf({
+        text: hier ? 'So ist es verabredet' : (offen ? 'So verabreden' : 'Nicht mehr zu ändern'),
+        zug: 'fuhre:ziel:' + s.k,
+        aus: hier || !offen,
+        klasse: 'fu-klein',
+        titel: s.sagt + (offen
+          ? '  Verabredet wird bis zur siebten Woche des Braujahres; danach gilt es bis Michaeli.'
+          : '  Das Ziel ist für ' + B.uhr.braujahr() + ' verabredet. Zu Michaeli wird neu geredet.'),
+        tu: function () { setzeZiel(s.k); }
+      }));
+      reihe.appendChild(karte);
+    });
+    w.appendChild(reihe);
+    w.appendChild(B.el('div', 'fu-ziel-fuss', offen
+      ? 'Noch ' + Math.max(0, ZIEL_FRIST - B.welt.zeit.woche + 1)
+        + (ZIEL_FRIST - B.welt.zeit.woche + 1 === 1 ? ' Woche' : ' Wochen')
+        + ', dann gilt das Wort bis Michaeli.'
+      : 'Verabredet für ' + B.uhr.braujahr() + '. Am Michaelitag wird gerechnet und neu geredet.'));
+    b.appendChild(w);
+  }
+
   function hausKarte(a, wichtig) {
     var e = ep();
     var k = B.el('div', 'fu-haus');
@@ -2542,8 +2597,48 @@
     if (s.abgabe) {
       bl.appendChild(B.el('div', 'fu-abgabe',
         s.abgabeName + ' auf einen Umsatz von ' + B.welt.geld(s.umsatz) + ': −'
-        + B.welt.geld(s.abgabe) + '   ·   ' + s.abgabeSatz));
+        + B.welt.geld(s.abgabe) + '   ·   ' + s.abgabeSatz
+        + '  Genommen wurde sie Woche für Woche, bei jeder Einnahme — nicht heute.'));
     }
+
+    /* DER UMGANG VOR MICHAELI. Er steht hier, weil dies der Tag ist, an dem
+       er stattfindet, und weil der Spieler morgen vor der Michaelitafel
+       steht und wissen muss, woher das Geld kommt. */
+    if (s.zahltag && (s.zahltag.gesamt || s.zahltag.posten.length)) {
+      var t = s.zahltag;
+      var zt = B.el('div', 'fu-zahltag');
+      zt.appendChild(B.el('b', null, t.name.toUpperCase() + ' — ' + t.stufe));
+      zt.appendChild(B.el('div', 'fu-satz', t.satz));
+      var tl = B.el('div', 'fu-zahltag-liste');
+      t.posten.forEach(function (p) {
+        var z2 = B.el('div', 'fu-zahltag-zeile');
+        z2.appendChild(B.el('span', 'n', p.name));
+        z2.appendChild(B.el('span', 'g', B.welt.geld(p.zahlt) + ' gezahlt'));
+        z2.appendChild(B.el('span', p.aus ? 'a schlecht' : 'a',
+          p.aus ? B.welt.geld(p.aus) + ' nicht einzutreiben' : 'nichts offen'));
+        tl.appendChild(z2);
+      });
+      t.angeldPosten.forEach(function (p) {
+        var z3 = B.el('div', 'fu-zahltag-zeile angeld');
+        z3.appendChild(B.el('span', 'n', p.name));
+        z3.appendChild(B.el('span', 'g', B.welt.geld(p.betrag) + ' Angeld'));
+        z3.appendChild(B.el('span', 'a', 'wird abgetrunken'));
+        tl.appendChild(z3);
+      });
+      zt.appendChild(tl);
+      zt.appendChild(B.el('div', 'fu-satz stark',
+        'In die Lade: ' + B.welt.geld(t.gesamt)
+        + (t.ausgefallen ? '. Nicht einzutreiben: ' + B.welt.geld(t.ausgefallen) : '')
+        + '. Damit geht das Haus morgen an die Michaelitafel.'));
+      if (t.angeld) zt.appendChild(B.el('div', 'fu-satz', t.angeldSatz));
+      bl.appendChild(zt);
+    }
+
+    /* Die Auflage der Aufsicht, nachrechenbar auf dem Blatt: was diese Woche
+       einbrachte, und was sie forderte. */
+    bl.appendChild(B.el('div', 'fu-satz stark',
+      'Die Woche vor Michaeli: ' + B.welt.geld(s.georgiEin) + ' herein, '
+      + B.welt.geld(s.georgiAus) + ' hinaus.'));
 
     /* Die Abrechnung des Kerbholzes — in Geld, soweit welches da war, und
        im uebrigen in der knappen Sache dieser Zeit. */
@@ -2602,6 +2697,7 @@
     var stand = B.el('div', 'fu-satz', 'An der Tafel steht: ' + (planSummeSude()
       ? sorten().filter(function (x) { return Z.plan[x.k]; })
           .map(function (x) { return Z.plan[x.k] + '× ' + x.name; }).join(' · ')
+        + '  — der Braumeister hat angeschrieben, was voriges Jahr dort stand.'
       : 'nichts. Dann steht die Pfanne kalt.'));
     bl.appendChild(stand);
 
