@@ -22,6 +22,7 @@ import json
 import mimetypes
 import os
 import pathlib
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -65,8 +66,16 @@ def hoere(pfad, modell, schluessel):
             {"inlineData": {"mimeType": typ,
                             "data": base64.b64encode(daten).decode()}}
         ]}],
-        # Kein thinking-Budget nötig; das Ohr soll hören, nicht grübeln.
-        "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
+        "generationConfig": {
+            "temperature": 0.2,
+            "responseMimeType": "application/json",
+            # Ohne diese Grenze bricht die Antwort mitten im JSON ab: die
+            # Denk-Token des Modells zaehlen mit, und das Urteil steht am ENDE.
+            # Ein abgeschnittenes JSON hat der Latte schon einmal ein falsches
+            # DURCHGEFALLEN untergeschoben — der teuerste Fehler, den ein
+            # Messgeraet machen kann.
+            "maxOutputTokens": 4096
+        }
     }
 
     anfrage = urllib.request.Request(
@@ -84,13 +93,41 @@ def hoere(pfad, modell, schluessel):
     teile = (kand.get("content") or {}).get("parts") or []
     text = "".join(t.get("text", "") for t in teile).strip()
     if not text:
-        sys.stderr.write("Keine Antwort. finishReason=%s\n" % kand.get("finishReason"))
-        sys.exit(2)
+        return {"abbruch": "keine Antwort (finishReason=%s)" % kand.get("finishReason")}
+    return deute(text, kand.get("finishReason"))
+
+
+def deute(text, grund=None):
+    """Macht aus der Antwort ein Urteil — auch wenn das JSON abgeschnitten ist.
+
+    Ein Messgeraet darf schweigen ('abbruch'), aber es darf niemals eine
+    unvollstaendige Antwort als Fehlurteil ausgeben.
+    """
     try:
-        return json.loads(text)
+        u = json.loads(text)
+        # Einmal kam eine Liste statt eines Objekts zurueck und riss das
+        # Skript mit einem Traceback ab.
+        if isinstance(u, list):
+            u = next((x for x in u if isinstance(x, dict)), None)
+        if isinstance(u, dict) and u.get("epoche") is not None:
+            return u
     except json.JSONDecodeError:
-        return {"epoche": 0, "sicher": 0, "vorgang": text[:300],
-                "woran": "", "stoert": "Antwort war kein JSON"}
+        pass
+
+    # Bergung: Die Ziffer steht im Rohtext, auch wenn die Klammer fehlt.
+    e = re.search(r'"epoche"\s*:\s*([1-4])', text)
+    if not e:
+        return {"abbruch": "unlesbare Antwort%s" % (" (%s)" % grund if grund else ""),
+                "rohtext": text[:400]}
+
+    def feld(name):
+        m = re.search(r'"%s"\s*:\s*"((?:[^"\\]|\\.)*)"' % name, text)
+        return m.group(1) if m else ""
+
+    s = re.search(r'"sicher"\s*:\s*(\d+)', text)
+    return {"epoche": int(e.group(1)), "sicher": int(s.group(1)) if s else None,
+            "vorgang": feld("vorgang"), "woran": feld("woran"),
+            "stoert": feld("stoert"), "geborgen": True}
 
 
 def main():
@@ -108,16 +145,33 @@ def main():
         sys.stderr.write("$GEMINI_API_KEY fehlt.\n")
         sys.exit(1)
 
-    treffer, gesamt = 0, 0
+    treffer, gesamt, unlesbar = 0, 0, 0
     for i, datei in enumerate(a.datei):
         if not pathlib.Path(datei).exists():
             sys.stderr.write("Nicht gefunden: %s\n" % datei)
             sys.exit(1)
         soll = (i + 1) if a.blind else a.erwartet
-        u = hoere(datei, a.modell, schluessel)
+
+        # Ein Abbruch ist kein Urteil. Lieber zweimal fragen als einmal falsch
+        # durchfallen lassen.
+        for versuch in range(3):
+            u = hoere(datei, a.modell, schluessel)
+            if not u.get("abbruch"):
+                break
 
         print("── %s" % pathlib.Path(datei).name)
-        print("   gehört:  Epoche %s  (sicher %s)" % (u.get("epoche"), u.get("sicher")))
+        if u.get("abbruch"):
+            print("   OHR SCHWEIGT: %s" % u["abbruch"])
+            if u.get("rohtext"):
+                print("   Rohtext: %s" % u["rohtext"][:200])
+            print("   Urteil:  KEINE MESSUNG — nicht als Durchfallen werten.")
+            print()
+            unlesbar += 1
+            continue
+
+        print("   gehört:  Epoche %s  (sicher %s)%s"
+              % (u.get("epoche"), u.get("sicher"),
+                 "  [aus abgeschnittener Antwort geborgen]" if u.get("geborgen") else ""))
         print("   Vorgang: %s" % u.get("vorgang"))
         print("   woran:   %s" % u.get("woran"))
         if u.get("stoert"):
@@ -130,9 +184,13 @@ def main():
                   % ("BESTANDEN" if gut else "DURCHGEFALLEN", soll))
         print()
 
+    if unlesbar:
+        print("%d Datei(en) ohne Messung — dreimal gefragt, dreimal unlesbar." % unlesbar)
     if gesamt:
         print("Ohr: %d von %d richtig." % (treffer, gesamt))
-        sys.exit(0 if treffer == gesamt else 3)
+        sys.exit(0 if treffer == gesamt and not unlesbar else 3)
+    if unlesbar:
+        sys.exit(2)
 
 
 if __name__ == "__main__":
