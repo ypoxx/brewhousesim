@@ -1,1 +1,337 @@
-/* stil/name.css — Stummel fuer "name" (Welle 2). Leer, vollstaendig ersetzbar. */
+/* ===========================================================================
+   stil/name.css — DER NAME.
+
+   Alle Groessen in --s (ein Bezugspixel von 2752x1536). Feste Pixel gibt es
+   hier nicht; das Band waechst mit dem Fenster mit.
+
+   Das Stueck malt an genau drei Stellen:
+     .nm-zeichen   das Traeger-Medium auf der Platte (Ebene 'marken')
+     .nm-band      das Rufband links oben            (Ebene 'kopf')
+     .nm-blatt     Traeger und Register              (Ebene 'blatt')
+   =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DAS ZEICHEN AUF DER PLATTE
+   Es soll auf der Platte SITZEN, nicht darueberliegen: eine leichte
+   Erdung durch Schatten, und die Farbe der Epoche legt sich mit darauf.
+   -------------------------------------------------------------------------- */
+
+.nm-zeichen {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(calc(var(--s) * 3) calc(var(--s) * 5) calc(var(--s) * 6) rgba(30, 20, 10, 0.45));
+}
+
+/* Jede Epoche hat ihr eigenes Licht — sonst klebt ein Schild von 1600 wie
+   ein Aufkleber auf einer Platte von 1970. */
+#buehne[data-epoche="1"] .nm-zeichen { filter: drop-shadow(calc(var(--s) * 3) calc(var(--s) * 5) calc(var(--s) * 6) rgba(40, 28, 12, 0.5)) saturate(0.93) brightness(0.99); }
+#buehne[data-epoche="2"] .nm-zeichen { filter: drop-shadow(calc(var(--s) * 3) calc(var(--s) * 5) calc(var(--s) * 6) rgba(40, 28, 12, 0.5)) saturate(0.95); }
+#buehne[data-epoche="3"] .nm-zeichen { filter: drop-shadow(calc(var(--s) * 3) calc(var(--s) * 5) calc(var(--s) * 7) rgba(35, 25, 15, 0.5)) saturate(0.97); }
+#buehne[data-epoche="4"] .nm-zeichen { filter: drop-shadow(calc(var(--s) * 4) calc(var(--s) * 6) calc(var(--s) * 8) rgba(25, 25, 25, 0.45)) saturate(0.95) contrast(0.98); }
+
+.nm-nachgeahmt {
+  opacity: 0.62;
+  filter: grayscale(0.45) drop-shadow(calc(var(--s) * 2) calc(var(--s) * 4) calc(var(--s) * 5) rgba(30, 20, 10, 0.4));
+}
+
+.nm-nachschild {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 2);
+  text-transform: uppercase;
+  color: #fdf3dd;
+  background: rgba(157, 53, 32, 0.88);
+  border: calc(var(--s) * 2) solid rgba(60, 20, 12, 0.9);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 2) calc(var(--s) * 8);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   DAS RUFBAND — klein, links oben, immer da.
+   -------------------------------------------------------------------------- */
+
+.nm-band {
+  position: absolute;
+  left: 1.1%;
+  top: 8%;
+  width: 21%;
+  pointer-events: auto;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.05)),
+    var(--papier);
+  border: calc(var(--s) * 3) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 5);
+  box-shadow: 0 calc(var(--s) * 8) calc(var(--s) * 18) rgba(0, 0, 0, 0.4);
+  padding: calc(var(--s) * 10) calc(var(--s) * 12) calc(var(--s) * 12);
+  color: var(--tinte);
+  font-size: calc(var(--s) * 19);
+}
+
+.nm-kopf {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 8);
+  border-bottom: calc(var(--s) * 2) solid var(--linie);
+  padding-bottom: calc(var(--s) * 5);
+  margin-bottom: calc(var(--s) * 7);
+}
+
+.nm-titel {
+  font-size: calc(var(--s) * 21);
+  letter-spacing: calc(var(--s) * 4);
+  font-weight: 700;
+}
+
+.nm-medium {
+  font-size: calc(var(--s) * 15);
+  color: #7a6a4e;
+  flex: 1;
+  min-width: 0;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nm-gross {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 9);
+  margin-bottom: calc(var(--s) * 6);
+}
+.nm-gross b {
+  font-size: calc(var(--s) * 46);
+  line-height: 1;
+  font-family: var(--serif);
+}
+.nm-von { font-size: calc(var(--s) * 16); color: #7a6a4e; letter-spacing: calc(var(--s) * 1); }
+
+.nm-warn {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  text-transform: uppercase;
+  letter-spacing: calc(var(--s) * 2);
+  color: #fdf3dd;
+  background: var(--rot);
+  padding: calc(var(--s) * 2) calc(var(--s) * 7);
+  border-radius: calc(var(--s) * 3);
+  white-space: nowrap;
+}
+
+/* Zwei Balken, und sie bedeuten Verschiedenes: einer waechst langsam,
+   der andere faellt schnell. */
+.nm-balken {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 8);
+  margin: calc(var(--s) * 4) 0;
+  font-size: calc(var(--s) * 16);
+}
+.nm-bname { width: 33%; color: #5c4d34; }
+.nm-bwert { width: 12%; text-align: right; font-family: var(--mono); }
+.nm-schiene {
+  flex: 1;
+  height: calc(var(--s) * 13);
+  background: rgba(90, 70, 45, 0.2);
+  border: calc(var(--s) * 1) solid rgba(90, 70, 45, 0.45);
+  border-radius: calc(var(--s) * 7);
+  overflow: hidden;
+}
+.nm-schiene i { display: block; height: 100%; }
+.nm-bekannt .nm-schiene i { background: linear-gradient(90deg, #8a5c33, #c99a55); }
+.nm-deckung .nm-schiene i { background: linear-gradient(90deg, #4a6b3a, #7fa055); }
+
+/* Die eine Behauptung des Stuecks, als Zahl. */
+.nm-satz {
+  margin-top: calc(var(--s) * 8);
+  padding-top: calc(var(--s) * 7);
+  border-top: 1px dotted var(--linie);
+}
+.nm-satzkopf {
+  display: block;
+  font-size: calc(var(--s) * 14);
+  letter-spacing: calc(var(--s) * 3);
+  text-transform: uppercase;
+  color: #7a6a4e;
+}
+.nm-preise {
+  display: flex;
+  gap: calc(var(--s) * 10);
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: calc(var(--s) * 3) 0;
+}
+.nm-ohne { font-family: var(--mono); font-size: calc(var(--s) * 17); color: #7a6a4e; text-decoration: line-through; }
+.nm-mit  { font-family: var(--mono); font-size: calc(var(--s) * 21); color: var(--gruen); font-weight: 700; }
+.nm-klein { display: block; font-size: calc(var(--s) * 14); color: #7a6a4e; }
+
+/* DIE KLEMME: zwei Knoepfe, die einander ausschliessen. */
+.nm-klemme {
+  margin-top: calc(var(--s) * 8);
+  padding: calc(var(--s) * 8);
+  background: rgba(157, 53, 32, 0.12);
+  border: calc(var(--s) * 2) solid rgba(157, 53, 32, 0.55);
+  border-radius: calc(var(--s) * 4);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 6);
+}
+.nm-klemmkopf { font-size: calc(var(--s) * 16); color: #7d2c1a; }
+
+.nm-meldung {
+  margin-top: calc(var(--s) * 8);
+  font-size: calc(var(--s) * 16);
+  color: #5c4d34;
+  border-top: 1px dotted var(--linie);
+  padding-top: calc(var(--s) * 6);
+}
+
+.nm-knopf {
+  font-size: calc(var(--s) * 18);
+  min-height: calc(var(--s) * 36);
+  padding: calc(var(--s) * 6) calc(var(--s) * 12);
+  gap: calc(var(--s) * 8);
+  white-space: normal;
+  text-align: left;
+}
+.nm-knopf .preis { font-size: calc(var(--s) * 16); }
+.nm-knopf.nm-an {
+  background: linear-gradient(180deg, #e6efd7 0%, #cbdcb0 100%);
+  border-color: #3f5a2d;
+}
+.nm-knopf.nm-rot {
+  background: linear-gradient(180deg, #f6ddd2 0%, #e6bda9 100%);
+  border-color: #7d2c1a;
+}
+.nm-griff { width: 100%; margin-top: calc(var(--s) * 8); justify-content: center; text-align: center; }
+
+/* --------------------------------------------------------------------------
+   DAS BLATT
+   -------------------------------------------------------------------------- */
+
+.nm-blatt {
+  left: 1.1%;
+  top: 13.5%;
+  width: 43%;
+  height: 74%;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--s) * 14) calc(var(--s) * 18);
+}
+
+.nm-bkopf {
+  display: flex;
+  align-items: flex-start;
+  gap: calc(var(--s) * 14);
+  border-bottom: calc(var(--s) * 2) solid var(--linie);
+  padding-bottom: calc(var(--s) * 8);
+  margin-bottom: calc(var(--s) * 10);
+}
+/* Zustaendigkeit §1: min-width 0, damit ein langer Text die Reiterknoepfe
+   nie ueberdecken kann, sondern schrumpft. */
+.nm-bkopf-text { flex: 1; min-width: 0; }
+.nm-bkopf h2 { margin: 0; border: none; padding: 0; font-size: calc(var(--s) * 28); }
+.nm-unterzeile { font-family: var(--mono); font-size: calc(var(--s) * 16); color: #7a6a4e; }
+
+.nm-reiter { display: flex; gap: calc(var(--s) * 6); flex: none; flex-wrap: wrap; justify-content: flex-end; }
+.nm-reiterknopf { font-size: calc(var(--s) * 15); letter-spacing: calc(var(--s) * 2); }
+
+.nm-koerper { flex: 1; min-height: 0; overflow-y: auto; padding-right: calc(var(--s) * 6); }
+
+.nm-abschnitt { margin-bottom: calc(var(--s) * 14); }
+.nm-abschnitt h3 {
+  margin: 0 0 calc(var(--s) * 5) 0;
+  font-size: calc(var(--s) * 21);
+  letter-spacing: calc(var(--s) * 2);
+  text-transform: uppercase;
+  color: #5c4d34;
+}
+.nm-p { margin: 0 0 calc(var(--s) * 6) 0; font-size: calc(var(--s) * 18); line-height: 1.35; }
+
+/* Die Traeger: Preisschilder nebeneinander, einander ausschliessend. */
+.nm-gitter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--s) * 9);
+  margin-bottom: calc(var(--s) * 14);
+}
+.nm-karte {
+  background: rgba(255, 252, 240, 0.6);
+  border: calc(var(--s) * 2) solid var(--linie);
+  border-radius: calc(var(--s) * 4);
+  padding: calc(var(--s) * 8);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 5);
+}
+.nm-karte.an { border-color: #4a6b3a; background: rgba(234, 243, 224, 0.7); }
+.nm-karte .nm-knopf { width: 100%; }
+
+.nm-unter { display: flex; gap: calc(var(--s) * 5); flex-wrap: wrap; }
+.nm-marke {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 13);
+  letter-spacing: calc(var(--s) * 1);
+  background: rgba(90, 70, 45, 0.16);
+  border-radius: calc(var(--s) * 3);
+  padding: calc(var(--s) * 1) calc(var(--s) * 6);
+  white-space: nowrap;
+}
+.nm-marke.nm-fest { background: rgba(157, 53, 32, 0.2); color: #7d2c1a; }
+
+.nm-sagt { font-size: calc(var(--s) * 15); color: #5c4d34; line-height: 1.3; }
+.nm-warnt { font-size: calc(var(--s) * 15); color: #7d2c1a; line-height: 1.3; }
+
+.nm-reihe { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 6); }
+.nm-adresse { font-size: calc(var(--s) * 16); }
+
+.nm-gegner {
+  background: rgba(90, 70, 45, 0.1);
+  border-left: calc(var(--s) * 5) solid var(--rot);
+  padding: calc(var(--s) * 9) calc(var(--s) * 11);
+  border-radius: calc(var(--s) * 3);
+}
+.nm-angebot {
+  background: rgba(232, 201, 138, 0.28);
+  border-left: calc(var(--s) * 5) solid var(--holz);
+  padding: calc(var(--s) * 9) calc(var(--s) * 11);
+  border-radius: calc(var(--s) * 3);
+}
+
+/* Das Register: datierte Spalte, nur wachsend, nichts loeschbar. */
+.nm-register { max-height: none; }
+.nm-zeile { align-items: baseline; }
+.nm-zeile .was { line-height: 1.3; }
+.nm-zeile .zahl { min-width: calc(var(--s) * 50); font-family: var(--mono); }
+.nm-wer {
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  letter-spacing: calc(var(--s) * 1);
+  text-transform: uppercase;
+  color: #7a6a4e;
+}
+.nm-zeile.gut .zahl { color: var(--gruen); }
+.nm-zeile.schlecht .zahl { color: var(--rot); }
+.nm-zeile.erloschen {
+  opacity: 0.55;
+  text-decoration: line-through;
+  text-decoration-thickness: calc(var(--s) * 2);
+  text-decoration-color: rgba(157, 53, 32, 0.8);
+}
+.nm-knips { font-size: calc(var(--s) * 14); color: var(--rot); font-family: var(--mono); }
+
+/* --------------------------------------------------------------------------
+   Enge Fenster: das Band bleibt lesbar, statt zu zerfallen.
+   -------------------------------------------------------------------------- */
+@media (max-aspect-ratio: 4/3) {
+  .nm-band { width: 27%; }
+  .nm-blatt { width: 58%; }
+  .nm-gitter { grid-template-columns: 1fr; }
+}
