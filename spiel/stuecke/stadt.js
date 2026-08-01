@@ -369,6 +369,7 @@
   var markenAlle = 'ruhen';     /* Schalter der Werkbank: 'ruhen' | 'zeigen' */
   var markenStand = '';         /* letzte gezeichnete Pflockreihe */
   var markenZahl = 0;
+  var unterZeiger = null;       /* Pflock unter der Maus: seine Marke steht solange */
 
   function fremdeMarken() {
     var l = [];
@@ -462,10 +463,15 @@
       p.setAttribute('aria-pressed', m.ruht ? 'false' : 'true');
       p.setAttribute('data-marke', m.schluessel);
       p.appendChild(B.el('span', 'scheibe'));
-      p.addEventListener('mouseenter', function () { m.el.classList.remove(MRUHT); });
-      p.addEventListener('mouseleave', function () {
+      function heb() { unterZeiger = m.schluessel; m.el.classList.remove(MRUHT); }
+      function lass() {
+        if (unterZeiger === m.schluessel) unterZeiger = null;
         if (markenLage[m.schluessel] === 'ruht') m.el.classList.add(MRUHT);
-      });
+      }
+      p.addEventListener('mouseenter', heb);
+      p.addEventListener('focus', heb);
+      p.addEventListener('mouseleave', lass);
+      p.addEventListener('blur', lass);
       /* Der Pflock steht dort, wo die Marke SELBST verankert ist — nicht auf
          dem nackten Ort. Sonst landet er beim Ort 'strasse' (y 89) unter der
          Werkbank, wo ihn niemand mehr trifft, waehrend seine Marke oben im
@@ -539,7 +545,9 @@
           : (jetzt - startZeit < LADEZEIT) ? 'ruht' : 'steht';
       }
 
-      if (markenLage[s] === 'ruht') b.el.classList.add(MRUHT);
+      /* Der Takt des Rahmens darf nicht wegwischen, was der Zeiger gerade
+         hervorgeholt hat: die Marke unter dem Zeiger bleibt sichtbar. */
+      if (markenLage[s] === 'ruht' && s !== unterZeiger) b.el.classList.add(MRUHT);
       else b.el.classList.remove(MRUHT);
 
       reihe.push({

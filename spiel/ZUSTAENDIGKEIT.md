@@ -294,3 +294,48 @@ Hofszene als unpassend. Dieses Ohr wird nicht wohlwollend sein.
 mit verständlichen Worten, obwohl der Prompt nur Instrumente nannte. Für ein Bett unter einem
 Spielhof ist Gesang mit Text fast immer falsch — er zieht die Aufmerksamkeit. Wer Instrumental
 will, muss es ausdrücklich verlangen.
+
+## 12 — Ein Haus darf fallen, und dann muss die Uhr stehenbleiben
+
+**Vorgetragen von:** dem Kritiker von DER FUHRE, Runde 3.
+**Entschieden:** Der Kern bekommt `B.uhr.beende(grund, text)`. Sofort eingebaut.
+
+Der Befund ist der bisher schwerste des Laufs, und er ist belegt, nicht behauptet: In
+Epoche 4 erreicht ganz gewöhnliches Spiel in Woche 135 den Satz *„KEIN HAUS DER STADT FÜHRT
+MEHR BIER DES ANKER — Das ist das Ende, nicht die leere Kasse."* Danach wurden **120 weitere
+Wochen mit 960 Klicks** gespielt, in E1 und E4 unabhängig: `wollen` steht in jeder dieser
+120 Wochen auf 0, keine einzige Adresse kommt je zurück. Auf dem Bildbeleg vom Februar 1978
+sind alle zehn Häuser AUFGEGEBEN — und daneben laufen 6 Sude die Woche, 525 von 600 hl
+liegen im Tank, und unten rechts steht *„nächster Zug: Bau Hopfenlager — 6.960 DM"*.
+
+Das Spiel schlägt einem Haus, das es selbst für tot erklärt hat, den nächsten Zug vor.
+
+Das ist derselbe Satz wie in §4, nur eine Ebene höher: **Es darf kein WEITER geben, das ewig
+weiterläuft und nichts ändert.** Ein Konkurs braucht ein Ende und ein Nachspiel.
+
+### Warum das in den Kern gehört und nicht in `fuhre.js`
+
+Die Uhr kannte genau ein Ende — die Gegenwart ist erreicht, das Haus steht noch. Ein Stück
+kann sich nicht selbst zum Ende der Welt erklären: hielte `fuhre.js` den Wochentakt allein
+an, malten STADT, PREIS und GEGNER weiter, als sei nichts. Dieselbe Erwägung wie bei der
+Sperre in §2. Also sagt das Stück der Uhr den **Grund**, die Uhr hält an und sagt es
+**allen**:
+
+```js
+B.uhr.beende('keine-abnehmer', 'Kein Haus der Stadt führt mehr Bier des Anker.');
+```
+
+`naechsteWoche()` verweigert danach den Dienst (`z.ende` wurde schon vorher geprüft), das
+Ereignis `ende` trägt `grund`, `jahr`, `woche` und `epoche`, und ein `zeichne` folgt.
+Zweimal rufen schadet nicht; das erste Ende gilt.
+
+> **Auflage an DIE FUHRE:** Den Zustand erkennen und `beende` rufen — oder einen Weg zurück
+> bauen (eine Adresse, die wieder anfragt; ein Wirt, der ein Fass auf Probe nimmt). Beides
+> ist eine gültige Antwort, **keines von beidem ist es nicht.**
+
+> **An alle vier Stücke:** Wer auf `ende` hört, malt sein eigenes Schlussblatt. Niemand muss
+> dafür wissen, was die anderen tun.
+
+**Für Welle 2 vorgemerkt:** Das Nachspiel — Chronik des Hauses, Generationenzeile,
+Neuanfang — gehört **DAS ERBE**, nicht der FUHRE. Die FUHRE baut jetzt nur das Anhalten und
+ein schlichtes Schlussblatt; DAS ERBE übernimmt es später.
