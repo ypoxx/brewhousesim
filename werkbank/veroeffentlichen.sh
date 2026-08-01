@@ -31,10 +31,16 @@ while [ "$(date +%s)" -lt "$ENDE" ]; do
     # einzigen unbekannten Pfad komplett ab und stellt dann gar nichts bereit —
     # lautlos, wenn man den Fehler wegwirft. Genau daran hat dieser Prozess in
     # seiner ersten Fassung eine Viertelstunde lang nichts veroeffentlicht.
+    # Werkzeuge der Werkbank und die Gauntlet-Papiere gehoeren mit dazu: ein
+    # Bauer, der sich ein Skript schreibt, legt es nach werkbank/ — das lag
+    # sonst nur lokal und waere beim naechsten Container-Reset weg gewesen.
     PFADE=()
-    for p in werkbank/stand.json werkbank/schuss spiel; do
+    shopt -s nullglob
+    for p in werkbank/stand.json werkbank/schuss spiel gauntlet \
+             werkbank/*.py werkbank/*.mjs werkbank/*.sh; do
       [ -e "$p" ] && PFADE+=("$p")
     done
+    shopt -u nullglob
     [ ${#PFADE[@]} -eq 0 ] && exit 0
 
     git add -A -- "${PFADE[@]}" || exit 0
