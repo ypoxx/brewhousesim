@@ -814,6 +814,31 @@
     return fr ? fr.fass : ep().wagen.fass;
   }
 
+  /* DIE WAGENSTELLUNG WIRD BESTELLT, NICHT GERATEN.
+
+     Die Stufe war beim Laden fest auf „Halber Wagen" gesetzt — eine
+     Pauschale fuer vierzig Fass, waehrend in der ersten Woche zwoelf auf der
+     Rampe standen. Gemessen: 7.184 Mark Fuhrlohn im Jahr bei 21.000 Mark
+     Umsatz. Ein Drittel des Hauses fuer Luft, und der Spieler hat nie
+     erfahren, warum. Die kleinste Stufe als Vorgabe ist genauso falsch: dann
+     traegt die Rampe nur zwoelf Fass, waehrend die Stadt zwanzig in der
+     Woche will, und das Haus verliert im zweiten Braujahr fuenf Adressen.
+
+     Also wird bestellt, was die Stadt in einer Woche trinkt: die kleinste
+     Stufe, die den Wochenbedarf der belieferten Haeuser traegt. Das ist die
+     Wagenstellung, wie sie mit der Bahn vereinbart wurde — einmal im Jahr,
+     zu Michaeli. Waehrend des Jahres steht sie mit Preisschild am Wagen und
+     der Spieler kann sie jede Woche aendern; „wer die Stufe nicht fuellt,
+     bezahlt Luft" bleibt Wort fuer Wort die Mechanik dieser Epoche. */
+  function passendeFracht() {
+    var f = ep().fracht;
+    if (!f || !f.length) return 'stueck';
+    var braucht = 0;
+    haeuser().forEach(function (a) { braucht += wochenbedarf(a); });
+    for (var i = 0; i < f.length; i++) if (f[i].fass >= braucht) return f[i].k;
+    return f[f.length - 1].k;
+  }
+
   function geladen() {
     var n = 0;
     Z.ladung.forEach(function (l) { n += l.faesser.length; });
@@ -1562,14 +1587,7 @@
     Z.budget = e.budget ? e.budget.start : 0;
     Z.sudeJeWoche = e.sudeJeWoche || 0;
     Z.faesser = Math.max(Z.faesser, e.faesser);
-    /* DIE KLEINSTE STUFE IST DIE VORGABE. Vorher stand die Bahnfracht beim
-       Laden auf „Halber Wagen" — einer Pauschale fuer vierzig Fass, waehrend
-       in der ersten Woche zwoelf auf der Rampe stehen. Gemessen: 7.184 Mark
-       Fuhrlohn im Jahr bei 21.000 Mark Umsatz, ein Drittel des Hauses fuer
-       Luft. Wer die Stufe nicht fuellt, bezahlt Luft — das ist die Mechanik
-       dieser Epoche und sie bleibt; sie darf nur nicht die Vorgabe sein.
-       Aufsteigen kostet einen Klick und steht mit Preisschild am Wagen. */
-    Z.fracht = e.fracht ? e.fracht[0].k : 'stueck';
+    Z.fracht = e.fracht ? passendeFracht() : 'stueck';
     Z.halte = e.wagen.halte;
     Z.eisKeller = e.eis ? e.eis.keller : 0;
     Z.eis = e.eis ? e.eis.start : 0;
