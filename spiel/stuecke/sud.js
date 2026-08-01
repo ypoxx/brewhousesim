@@ -427,10 +427,10 @@
     var g = ep().guete;
     if (g.invers) {
       var w = wirkung();
-      return { zahl: Math.max(0, Math.round((100 - Z.guete) / 4 + (w.streuung || 0))),
-               einheit: '±%', gut: Z.guete >= 70 };
+      return { text: '±' + Math.max(0, Math.round((100 - Z.guete) / 4 + (w.streuung || 0))) + ' %',
+               gut: Z.guete >= 70 };
     }
-    return { zahl: Math.round(Z.guete), einheit: '%', gut: Z.guete >= 55 };
+    return { text: Math.round(Z.guete) + ' %', gut: Z.guete >= 55 };
   }
 
   function anstichFrei() { return Z.anstichWoche !== woManifest(); }
