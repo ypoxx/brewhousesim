@@ -1464,9 +1464,9 @@
         B.welt.geld(preisJeEinheit(ns)) + ' je ' + B.welt.mengeEinheit()));
       nz.appendChild(nk);
       nz.appendChild(B.el('div', 'fu-notsud-zeile',
-        '0 ' + B.welt.waehrung().kurz + ' Auslage · 0 ' + (B.welt.epoche().rohstoff || 'Rohstoff')
-        + ' · 0 ' + (e.budget ? e.budget.name : 'Ration') + ' → ' + B.welt.menge(ns.fass)
-        + ' · hält ' + ns.haltbar + ' Wo. · frisst nur die Pfanne'));
+        '0 ' + B.welt.waehrung().kurz + ' · 0 ' + (B.welt.epoche().rohstoff || 'Rohstoff')
+        + (e.budget ? ' · 0 ' + e.budget.name : '') + ' → ' + B.welt.menge(ns.fass)
+        + ' · hält ' + ns.haltbar + ' Wo. · nur die Pfanne'));
       var nstell = B.el('div', 'fu-stell');
       nstell.appendChild(B.knopf({
         text: '−', zug: 'fuhre:tafel-ab:' + ns.k, klasse: 'fu-klein',

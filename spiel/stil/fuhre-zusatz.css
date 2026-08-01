@@ -38,7 +38,22 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.fu-tafel .fu-sorte { padding: calc(var(--s) * 2) calc(var(--s) * 7); gap: 0; }
+/* Zwei Zeilen statt drei: die Stellknoepfe stehen NEBEN den Kosten, nicht
+   darunter. Erst dadurch passen vier Sorten in dieselbe Tafel. */
+.fu-tafel .fu-sorte,
+.fu-notsud {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: calc(var(--s) * 6);
+  row-gap: 0;
+}
+.fu-tafel .fu-sorte { padding: calc(var(--s) * 2) calc(var(--s) * 7); }
+.fu-tafel .fu-sorte-kopf,
+.fu-notsud-kopf { grid-column: 1 / -1; }
+.fu-tafel .fu-sorte-kosten,
+.fu-notsud-zeile { grid-column: 1; grid-row: 2; min-width: 0; }
+.fu-tafel .fu-stell { grid-column: 2; grid-row: 2; justify-self: end; }
 .fu-tafel .fu-sorte-kopf b { font-size: calc(var(--s) * 17); }
 .fu-tafel .fu-sorte-kosten span { font-size: calc(var(--s) * 13); }
 .fu-tafel .fu-erloes { font-size: calc(var(--s) * 14); }
@@ -48,6 +63,7 @@
 .fu-tafel .fu-knappheit b { font-size: calc(var(--s) * 14); }
 .fu-tafel .fu-knappheit span { font-size: calc(var(--s) * 14); line-height: 1.2; }
 .fu-tafel .fu-kaeufe { gap: calc(var(--s) * 4); }
+.fu-tafel .fu-kaeufe .knopf { flex: 1 1 calc(var(--s) * 195); }
 .fu-tafel .fu-stell .knopf,
 .fu-tafel .fu-kaeufe .knopf { min-height: calc(var(--s) * 34); padding: calc(var(--s) * 4) calc(var(--s) * 10); }
 .fu-tafel .fu-kaeufe .knopf .wort { font-size: calc(var(--s) * 15); }
