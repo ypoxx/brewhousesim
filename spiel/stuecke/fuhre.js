@@ -1371,31 +1371,23 @@
       verkauftGesamt += verkauft;
     }
 
-    if (geldGesamt > 0) B.welt.nimm(Math.round(geldGesamt), 'Sommerabsatz aus dem Aprilbestand', 'spieler');
+    /* Der Sommerabsatz geht durch dieselbe Kasse wie jede Lieferung: der Rat
+       nimmt sein Teil sofort, nicht in einer Summe zu Georgi. */
+    if (geldGesamt > 0) einnahme(Math.round(geldGesamt), 'Sommerabsatz aus dem Aprilbestand');
     Z.jahrUmsatz += geldGesamt;
+    Z.georgiEin += Math.round(geldGesamt);
 
     /* DIE ABGABE. Sie wächst mit dem Ausstoß, nicht mit der Kasse — deshalb
        kann das Haus nicht in eine Wohlstandssingularität davonlaufen. Ungeld,
-       Malzaufschlag, Biersteuer: das historische Gegenstück zum Erfolg. */
-    var abgabe = 0, abgabeName = '';
-    if (e.abgabe) {
-      abgabeName = e.abgabe.name;
-      abgabe = Math.round(Z.jahrUmsatz * e.abgabe.satz);
-      /* Der Rat nimmt nach Ausstoß — aber er nimmt nie das Saatgut. Es bleibt
-         immer genug für drei Sude, und nie mehr als die Hälfte des Freien.
-         Sonst wäre die Abgabe kein Gegengewicht, sondern ein Fallbeil. */
-      var notgroschen = 0;
-      sorten().forEach(function (so) { if (!notgroschen || so.kosten < notgroschen) notgroschen = so.kosten; });
-      var frei = Math.max(0, B.welt.haus.kasse - notgroschen * 4);
-      var zahlbar = Math.min(abgabe, Math.round(frei * 0.55));
-      if (zahlbar > 0) {
-        B.welt.zahle(zahlbar, abgabeName + ' auf ' + B.welt.geld(Math.round(Z.jahrUmsatz)) + ' Umsatz', 'spieler');
-      }
-      if (zahlbar < abgabe) {
-        B.welt.schreibe('Das Haus bleibt ' + B.welt.geld(abgabe - zahlbar) + ' '
-          + abgabeName + ' schuldig. Der Rat merkt sich das.', 'fuhre');
-      }
-    }
+       Malzaufschlag, Biersteuer: das historische Gegenstück zum Erfolg.
+
+       SIE STEHT HIER NUR NOCH ALS ZAHL. Genommen wurde sie das Jahr über,
+       Woche für Woche, bei jeder Einnahme (siehe `einnahme`). Vorher lag sie
+       als eine Summe auf dem Georgi-Tag, gedeckelt auf 55 % des freien
+       Geldes — eine Wand mit einem Pflaster davor, unmittelbar vor dem
+       Michaelitag, an dem das Haus etwas kaufen soll. Der Jahresbetrag ist
+       derselbe geblieben (8 %, ZUSTAENDIGKEIT 4); nur der Termin ist weg. */
+    var abgabe = Z.abgabeJahr, abgabeName = e.abgabe ? e.abgabe.name : '';
 
     /* DAS KERBHOLZ WIRD GELOESCHT. Erst in Geld, soweit welches da ist.
        Was offen bleibt, nimmt sich der Glaeubiger NICHT in Geld, sondern in
@@ -1406,10 +1398,19 @@
     Z.kerbAbzug = 0;
     if (kh && Z.kerben > 0) {
       var hatte = Z.kerben, geloescht = 0;
-      while (Z.kerben > 0 && B.welt.haus.kasse >= kh.jeKerbe) {
+      /* DIE WOCHE VOR MICHAELI FORDERT NIE MEHR, ALS SIE EINBRINGT
+         (ZUSTAENDIGKEIT 17, woertlich). Der Glaeubiger nimmt aus dem, was der
+         Umgang und der Sommer hereingebracht haben — nicht aus dem, was das
+         Haus fuer den naechsten Tag braucht. Was er dann nicht in Geld
+         bekommt, nimmt er wie bisher in der knappen Sache dieser Zeit; das
+         ist der Preis der Schuld und er ist nie Zins. */
+      var freiFuerKerben = Math.max(0, Z.georgiEin - Z.georgiAus);
+      while (Z.kerben > 0 && B.welt.haus.kasse >= kh.jeKerbe && freiFuerKerben >= kh.jeKerbe) {
         B.welt.zahle(kh.jeKerbe, kh.kurz + ': eine Kerbe gelöscht', 'spieler');
         Z.kerben -= 1;
         geloescht += 1;
+        freiFuerKerben -= kh.jeKerbe;
+        Z.georgiAus += kh.jeKerbe;
       }
       var offen = Z.kerben;
       var pf = kh.pfand, genommen = 0, wovon = '';
@@ -1464,6 +1465,8 @@
       umsatz: Math.round(Z.jahrUmsatz),
       abgabe: abgabe, abgabeName: abgabeName,
       abgabeSatz: e.abgabe ? e.abgabe.sagt : '',
+      zahltag: Z.zahltag,
+      georgiEin: Z.georgiEin, georgiAus: Z.georgiAus,
       satz: e.sommerSatz,
       rest: vorrat.length,
       kerb: Z.kerbGeorgi,
@@ -1522,6 +1525,14 @@
   }
 
   function wischeTafel() {
+    /* Was voriges Jahr an der Wand stand, wird nicht vergessen — es wird
+       gewischt. Zu Michaeli schreibt der Braumeister es wieder an (siehe
+       `jahr:`). Vorher stand die Tafel ab dem zweiten Braujahr LEER, und wer
+       das Georgi-Blatt zuklappte, ohne neu anzuschreiben, hatte ein
+       Brauhaus, das ein Jahr lang nicht braute — ohne dass es irgendwo
+       stand. Das war die Haelfte des Einbruchs aus STAND.md §5. */
+    Z.planVorjahr = {};
+    for (var pk in Z.plan) if (Z.plan[pk]) Z.planVorjahr[pk] = Z.plan[pk];
     Z.plan = {};
     Z.tafelGewischt = true;
     B.welt.schreibe('Georgi. Die Tafel am Sudhaus wird gewischt. ' + ep().sommerSatz, 'fuhre');
@@ -2945,6 +2956,14 @@
      die Reihe DIESES Braujahres faellt. */
   B.auf('jahresende', function () {
     B.wage('fuhre.sommer', function () {
+      /* ZUERST DER UMGANG, DANN DIE FORDERUNGEN. Das ist keine Buchhaltung,
+         das ist die Reihenfolge des Tages: erst geht der Knecht mit dem Holz
+         die Runde, dann kommen Glaeubiger und Rat. Wer es andersherum
+         aufschreibt, bekommt genau den Michaelitag, den STAND.md §2 gemessen
+         hat: −7 Pfennig und fuenf graue Karten. */
+      Z.georgiEin = 0;
+      Z.georgiAus = 0;
+      zahltag();
       sommerLaeuft();
       mahnenUndVerlieren();
       /* Erst vergisst der Wirt, dann fragt vielleicht ein neuer an. In dieser
