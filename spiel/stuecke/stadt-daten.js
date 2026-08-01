@@ -61,8 +61,23 @@ var STADT_DATEN = {
       /* Und das Schild steht auf zwei Stahlrohren, weil in diesem Hof kein
          Torbogen mehr ist, an dem es haengen koennte: 'gestell' ist die
          Hoehe der Rohre in Prozent der Buehnenhoehe, der FUSS sitzt dann auf
-         dem Ort. Siehe zeichneHausschild() in stadt.js. */
-      schild: { dx: -1.0, dy: 1.5, breite: 7.4, dreh: -2, hell: true, gestell: 3.4 }
+         dem Ort. Siehe zeichneHausschild() in stadt.js.
+
+         RUNDE 6, der dritte Befund des Kritikers: "DER BETONFUSS VON 1970 IST
+         EINE GRAUE KAPSEL UEBER DEM TOR ... die zwei Rohre enden auf einem
+         148x10 px grossen grauen Balken quer ueber dem Torbogen, ohne
+         Schatten, ohne Bodenkontakt. Dasselbe Schild deckt den einzigen
+         arbeitenden Menschen im Hof 1970 zu 95 Prozent zu."
+         Beides stimmte. Der Fuss sass auf (45|65,5) = (1238|1006), die
+         Mauerkrone dort auf 1018 — zwoelf Pixel. Ein Schild, das auf dem
+         Torbogen steht, steht auf nichts.
+         Jetzt steht es zwoelf Prozent weiter links und acht tiefer, auf dem
+         Hofbeton vor der Waage: Fusspunkt (33|72), die Mauerlinie dort 1167,
+         also 61 px INNERHALB des Hofes. Der Mann mit der Sackkarre am
+         Verladedock steht damit frei. Und der Fuss wirft einen Schatten —
+         'ohne Schatten, ohne Perspektive' war der halbe Befund. */
+      schild: { ort: 'tor', dx: -12, dy: 8, breite: 7.4, dreh: -2,
+                hell: true, gestell: 3.4 }
     }
   },
 
@@ -449,7 +464,7 @@ var STADT_DATEN = {
        Gemessen nach dem Umzug: tiefster Punkt 9 px UEBER der Mauerlinie,
        kein Fuss im Torfeld. */
     { schluessel: 'kueferei', name: 'Küferei', bild: 'kueferei',
-      ort: 'fasslager', dx: 3, dy: -2, breite: 9.2, breiten: { 1: 9.2, 2: 7.3 },
+      ort: 'fasslager', dx: 4, dy: -4, breite: 9.2, breiten: { 1: 9.2, 2: 7.3 },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },

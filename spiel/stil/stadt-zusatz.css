@@ -175,16 +175,39 @@
 .stadt-gestell .bein.links  { left: 22%; }
 .stadt-gestell .bein.rechts { right: 22%; }
 
-/* Der Betonfuss: das Stueck, das den Boden wirklich beruehrt. */
+/* Der Betonfuss: das Stueck, das den Boden wirklich beruehrt.
+   Runde 6: er ist ein Sockel geworden statt eines Balkens — mit einer
+   Deckflaeche in der Schraege der Platte, einer Stirnseite darunter und
+   einem Schlagschatten, der nach hinten links faellt wie jeder andere
+   Schatten im Hof. "Ohne Schatten, ohne Perspektive, ohne Bodenkontakt"
+   war der halbe Befund des Kritikers; das hier ist die andere Haelfte. */
 .stadt-gestell .fuss {
   position: absolute;
-  left: 14%;
-  right: 14%;
+  left: 12%;
+  right: 12%;
   bottom: 0;
-  height: calc(var(--s) * 7);
-  background: linear-gradient(180deg, #d9d3c4 0%, #a49d8c 100%);
-  border-radius: calc(var(--s) * 2);
-  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 6) rgba(30, 26, 16, 0.5);
+  height: calc(var(--s) * 11);
+  background:
+    linear-gradient(180deg, #e4dfd2 0%, #cfc8b7 34%, #9b9484 36%, #7d7768 100%);
+  border-radius: calc(var(--s) * 1.5);
+  box-shadow:
+    inset 0 calc(var(--s) * -1.5) calc(var(--s) * 2) rgba(40, 34, 22, 0.35),
+    0 calc(var(--s) * 1.5) calc(var(--s) * 3) rgba(30, 26, 16, 0.55);
+}
+
+/* Der Schatten auf dem Boden. Er gehoert zum Fuss, nicht zum Schild:
+   sichtbar wird damit, WO das Ding steht. */
+.stadt-gestell .fuss::after {
+  content: "";
+  position: absolute;
+  left: -18%;
+  right: -6%;
+  bottom: calc(var(--s) * -3);
+  height: calc(var(--s) * 8);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 50%,
+    rgba(38, 30, 18, 0.42) 0%, rgba(38, 30, 18, 0.22) 55%, rgba(38, 30, 18, 0) 100%);
+  z-index: -1;
 }
 
 /* --------------------------------------------------------------------------
