@@ -745,6 +745,7 @@
   function wocheLaeuft() {
     Z.takt = takt();
     var vorher = Z.zaehler;
+    Z.meldung = null;              /* eine Woche steht sie, dann ist sie gelesen */
 
     /* Werbungen, die auslaufen, werden zu Bindungen. Ohne Rueckfrage. */
     Object.keys(Z.werbung).forEach(function (k) {
@@ -1111,6 +1112,26 @@
 
   function neuZeichnen(grund) { B.sende('zeichne', { grund: grund || 'gegner' }); }
 
+  /* Liegt gerade die Michaelitafel des PREISES oben, gehoert der Bildschirm
+     ihr (spiel/ZUSTAENDIGKEIT.md §5). Dann wird das eigene Blatt NICHT
+     stillschweigend verschluckt, sondern gesagt, warum es zubleibt — ein Knopf,
+     der nichts tut und nichts sagt, ist das Schlimmste im ganzen Spiel. */
+  function tafelOben() {
+    return !!document.querySelector('[data-zug="preis:tafel-zu"]');
+  }
+
+  function schalteBlatt(wer) {
+    if (tafelOben()) {
+      Z.offen = false;
+      Z.meldung = 'Solange die Michaelitafel oben liegt, bleibt das Haus gegenueber zu. '
+        + 'Erst die Tafel schliessen.';
+      return neuZeichnen('gegner-gesperrt');
+    }
+    if (Z.offen && (!wer || Z.seite === wer)) { Z.offen = false; }
+    else { Z.offen = true; if (wer) Z.seite = wer; }
+    neuZeichnen('gegner-blatt');
+  }
+
   /* ----------------------------------------------------------------------
      DER NAECHSTE SINNVOLLE ZUG — die eine Zahl der Messlatte
      ---------------------------------------------------------------------- */
@@ -1188,10 +1209,8 @@
       + '. Anklicken: das ganze Haus gegenueber.';
     k.addEventListener('click', function (ereignis) {
       ereignis.preventDefault();
-      if (Z.offen && Z.seite === h.k) { Z.offen = false; }
-      else { Z.offen = true; Z.seite = h.k; }
       B.ton.spiele('gegner:hinsehen', { ort: s.ort });
-      neuZeichnen('gegner-sitz');
+      schalteBlatt(h.k);
     });
 
     var kopf = B.el('div', 'gg-sitzkopf');
@@ -1445,7 +1464,7 @@
       zug: 'gegner:blatt',
       klasse: 'gg-klein',
       titel: 'Kasse, Erben, Hof und jede Bindung des Gegners — mit der Summe, die sie kostet.',
-      tu: function () { Z.offen = !Z.offen; neuZeichnen('gegner-blatt'); }
+      tu: function () { schalteBlatt(null); }
     });
     kopf.appendChild(auf);
     band.appendChild(kopf);
@@ -1479,6 +1498,8 @@
       }
       band.appendChild(bz);
     }
+
+    if (Z.meldung) band.appendChild(B.el('div', 'gg-bandmeldung', Z.meldung));
 
     var l = Z.zuege.slice(0, 3);
     if (!l.length) {

@@ -1109,6 +1109,28 @@
       z.appendChild(B.el('span', 'pr-satz-klein', 'weil: ' + (durch ? durch.name : Z.gesperrt[k])));
       links.appendChild(z);
     });
+
+    /* Was noch zu haben ist — mit Taxe. Auch das gehoert in die Chronik:
+       eine Festlegung ist erst dann eine Entscheidung, wenn daneben steht,
+       was man statt ihrer haette nehmen koennen. */
+    links.appendChild(B.el('div', 'pr-chronik-kopf', 'WAS DIESE ZEIT NOCH ANBIETET'));
+    var rest = festlegungen();
+    if (!rest.length) {
+      links.appendChild(B.el('div', 'pr-satz', 'Alle Festlegungen dieser Zeit sind getroffen.'));
+    }
+    rest.forEach(function (f) {
+      var z = B.el('div', 'pr-chronik-offen');
+      var k1 = B.el('div', 'pr-chronik-offen-kopf');
+      k1.appendChild(B.el('b', null, f.name));
+      k1.appendChild(B.el('span', 'pr-zahl', festPreis(f) ? geld(festPreis(f)) : 'ohne Ausgabe'));
+      z.appendChild(k1);
+      z.appendChild(B.el('div', 'pr-satz-klein', f.regel));
+      links.appendChild(z);
+    });
+    links.appendChild(B.el('div', 'pr-satz pr-klein',
+      festlegungOffen()
+        ? amtszeit().name + ' hat die Festlegung dieser Amtszeit noch vor sich.'
+        : amtszeit().name + ' hat sich festgelegt. Die nächste Amtszeit wählt wieder — einmal.'));
     drei.appendChild(links);
 
     /* 2 — die laufende Rolle */

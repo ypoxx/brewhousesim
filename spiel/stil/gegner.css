@@ -414,6 +414,16 @@
 .gg-bandzeile .was { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .gg-bandzeile.neu .was { font-weight: bold; }
 .gg-bandzeile.leer { opacity: 0.6; font-style: italic; }
+.gg-bandmeldung {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  line-height: 1.25;
+  padding: calc(var(--s) * 4) calc(var(--s) * 8);
+  margin-bottom: calc(var(--s) * 4);
+  background: rgba(35, 38, 42, 0.85);
+  color: #eef1f3;
+  border-radius: calc(var(--s) * 3);
+}
 
 /* Knoepfe im Band und im Blatt — klein genug fuer eine Zeile. */
 .knopf.gg-klein {
