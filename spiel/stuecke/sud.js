@@ -222,9 +222,11 @@
         /* Der Aufschlag des Verfahrens in Rohstoff. Reicht die Kammer nicht,
            wird dieser Sud nach der Vorgabe gefuehrt statt zu scheitern. */
         var wirk = w, roh = w.roh;
-        if (roh > 0 && B.welt.haus.rohstoff < roh) { wirk = notWirkung(); notdurft = true; }
-        else if (roh > 0) { B.welt.haus.rohstoff -= roh; }
-        else if (roh < 0) { B.welt.haus.rohstoff = Math.max(0, B.welt.haus.rohstoff + (-roh) * 0); }
+        if (roh > 0 && !B.sud.rohstoff.reicht(roh)) { wirk = notWirkung(); notdurft = true; }
+        else if (roh > 0) { B.sud.rohstoff.nimm(roh); }
+        /* Gestreckt heisst: weniger vom teuren Korn. DIE FUHRE hat die volle
+           Menge schon abgezogen, hier kommt der Unterschied zurueck. */
+        else if (roh < 0) { B.sud.rohstoff.gib(-roh); }
 
         var muster = liste[0];
         var gaerWochen = Math.max(0, (muster.reife || 0) + (wirk.gaer || 0));
