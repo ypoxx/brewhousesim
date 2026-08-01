@@ -119,12 +119,12 @@ var STADT_DATEN = {
       nutzen: { sud: 1 } },
 
     { schluessel: 'malzboden', name: 'Malzboden auf Stelzen', bild: 'malzboden',
-      ort: 'malzboden', dx: 0, dy: 19, breite: 13, von: 1, bis: 1, grund: 30,
+      ort: 'malzboden', dx: 0, dy: 19, breite: 14, von: 1, bis: 1, grund: 30,
       sagt: 'Der Speicher steht auf Steinstuempfen: Ratten koennen nicht hinauf.',
       nutzen: { platz: 4 } },
 
     { schluessel: 'brunnen', name: 'Ziehbrunnen', bild: 'brunnen',
-      ort: 'brunnen', dx: 4, dy: 0, breite: 13.5, von: 1, bis: 3, grund: 18,
+      ort: 'brunnen', dx: 5, dy: 3, breite: 14, von: 1, bis: 3, grund: 18,
       sagt: 'Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbringt.',
       nutzen: { sud: 1 } },
 
@@ -160,7 +160,7 @@ var STADT_DATEN = {
 
     /* --- Epoche II --------------------------------------------------- */
     { schluessel: 'darre', name: 'Darre', bild: 'darre',
-      ort: 'malzboden', dx: 0, dy: 19, breite: 14, von: 2, bis: 2, grund: 42,
+      ort: 'malzboden', dx: 0, dy: 19, breite: 15, von: 2, bis: 2, grund: 42,
       sagt: 'Ueber dem Rauch wird das Malz trocken. Wie heiss man darrt, entscheidet die Farbe.',
       nutzen: { rohstoff: 40 } },
 
