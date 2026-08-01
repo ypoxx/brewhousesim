@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T17:09:10+00:00",
+ "stand": "2026-08-01T17:11:42+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -60,6 +60,12 @@
    "runde": 1,
    "luecke": "DER PREIS liest welt.haus.rufAufschlag noch nicht — eine Zeile in preis.js fehlt, und bis sie da ist, wirkt der Ruf nur ueber Adressen statt auch ueber den Preis. Der Ton ist nur gerufen, nicht komponiert: vierzehn name:-Rufe greifen in den Notfall von kern/ton.js. In E1 und E2 leert sich der Keller nach dem ersten Braujahr (Zustaendigkeit 13, fremde Zahlen), dadurch steht die Klemme dort haeufiger als gedacht — die Regel greift richtig, die Lage ist geliehen.",
    "gebaut": "werkbank/schuss/name-register-e1.png"
+  },
+  {
+   "name": "DER NAME — warum jemand mehr zahlt",
+   "status": "zurueck",
+   "runde": 1,
+   "luecke": "Der Ruf kostet Geld und bewegt keines. Drei Arme desselben gesaeten Spiels (E4, saat=1350, bauen/nichts/ruhe): Gasthof Lindenhof zahlt in JEDER Woche ALLER drei Arme exakt 130 DM je hl, waehrend der Ruf von 34 auf 19 faellt und der eigene Aufschlag von 10,88 auf 6,08 Prozent. 1970/10: bauen (Ruf 34) 70.860 DM, nichts (Ruf 31) 70.860 DM — auf die Mark gleich. 1971/21: bauen (Ruf 15) 261.250 DM gegen ruhe (Ruf 9) 261.110 DM auf identisch 2895 hl, 0,05 Prozent auseinander; in 1970/18 und 1970/26 verdient der Arm mit dem HOEHEREN Ruf sogar WENIGER. Dabei steht in jeder Epoche als Kopfzeile des Bandes 'GLEICHES BIER, 100 HL, ZWEI PREISE · ohne Namen 13.000 DM · unter dem Anker 14.373 DM · +10,6 im Hundert · 1.373 DM mehr fuer dasselbe Fass Bier'. Das Spiel zahlt Woche fuer Woche genau die Zeile 'ohne Namen'. Die zweite Haelfte der These traegt: verdecken laesst Ziel 24 auf 0 und Bekanntheit 18 auf 0 in 12 Wochen fallen, waehrend die Deckung 55 auf 82 steigt, und duennes Bier unter haengendem Zeichen treibt den Ruf ueber datierte Registerurteile des Rats und der Gasse von 21 auf 0. Schnell zu verlieren ist eine Zahl; teurer sein duerfen ist keine."
   }
  ],
  "chronik": [
@@ -394,6 +400,10 @@
   {
    "zeit": "2026-08-01T17:09:10+00:00",
    "text": "DIE STADT, Runde 4, Kritik: zurueck. Zaehlung 9/12/12/12 sichtbare Hofbauten haelt, Massstab 1350 haelt (Platte 84 px gegen Hof 80/92 px). Aber hopfenlager.png ist in drei Epochen waagerecht durchs Dach geschnitten (91 Spalten, Farbsprung 190 gegen 36 im sauberen Fall), fasslager_stein und abfuellhalle ebenso; und 20,2 Prozent des Stadtfensters liegen beim Laden unter Brettern, weil fremdeBretter() die Ebene kopf nicht mitlaeuft."
+  },
+  {
+   "zeit": "2026-08-01T17:11:42+00:00",
+   "text": "DER NAME — warum jemand mehr zahlt · Runde 1 · zurück an den Builder — Der Ruf kostet Geld und bewegt keines. Drei Arme desselben gesaeten Spiels (E4, saat=1350, bauen/nichts/ruhe): Gasthof Lindenhof zahlt in JEDER Woche ALLER drei Arme exakt 130 DM je hl, waehrend der Ruf von 34 auf 19 faellt und der eigene Aufschlag von 10,88 auf 6,08 Prozent. 1970/10: bauen (Ruf 34) 70.860 DM, nichts (Ruf 31) 70.860 DM — auf die Mark gleich. 1971/21: bauen (Ruf 15) 261.250 DM gegen ruhe (Ruf 9) 261.110 DM auf identisch 2895 hl, 0,05 Prozent auseinander; in 1970/18 und 1970/26 verdient der Arm mit dem HOEHEREN Ruf sogar WENIGER. Dabei steht in jeder Epoche als Kopfzeile des Bandes 'GLEICHES BIER, 100 HL, ZWEI PREISE · ohne Namen 13.000 DM · unter dem Anker 14.373 DM · +10,6 im Hundert · 1.373 DM mehr fuer dasselbe Fass Bier'. Das Spiel zahlt Woche fuer Woche genau die Zeile 'ohne Namen'. Die zweite Haelfte der These traegt: verdecken laesst Ziel 24 auf 0 und Bekanntheit 18 auf 0 in 12 Wochen fallen, waehrend die Deckung 55 auf 82 steigt, und duennes Bier unter haengendem Zeichen treibt den Ruf ueber datierte Registerurteile des Rats und der Gasse von 21 auf 0. Schnell zu verlieren ist eine Zahl; teurer sein duerfen ist keine."
   }
  ]
 }
