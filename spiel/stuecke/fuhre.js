@@ -688,10 +688,13 @@
         + (geldFehlt ? ' — für den Plan fehlte die Kasse' : ' — der Keller war leer'));
       if (!Z.notGemeldet) {
         Z.notGemeldet = true;
-        B.welt.schreibe('Kein Geld in der Lade, und die Pfanne steht trotzdem am Feuer: '
+        B.welt.schreibe((geldFehlt
+            ? 'Kein Geld in der Lade, und die Pfanne steht trotzdem am Feuer: '
+            : 'Der Keller steht leer, und der Plan trägt nicht: ')
           + 'der Braumeister setzt ' + ns.name + ' an, den zweiten Guss auf dieselben Treber. '
           + 'Kein Pfennig, kein ' + (B.welt.epoche().rohstoff || 'Rohstoff')
-          + ', kein Tag der Verleihung — nur die Pfanne.', 'fuhre');
+          + ', kein Tag der Verleihung — nur die Pfanne. '
+          + 'Es ist schlechtes Bier, und es ist Bier.', 'fuhre');
       }
     } else if (!gebraut) {
       teile.push(planSummeSude()
@@ -2050,6 +2053,7 @@
       Z.vorige = null;
       Z.jahrUmsatz = 0;
       Z.notGesamt = 0;
+      Z.notsud = 0;
       Z.notGemeldet = false;
       Z.sommerOffen = !!Z.sommer;
       /* Listungen laufen zu Georgi aus, wenn nichts geliefert wurde. */
