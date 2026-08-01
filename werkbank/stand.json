@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T16:41:27+00:00",
+ "stand": "2026-08-01T16:43:06+00:00",
  "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -337,6 +337,38 @@
   {
    "zeit": "2026-08-01T16:41:27+00:00",
    "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 4 · läuft — DIE LUECKE IST GESCHLOSSEN, UND DIE URSACHE WAR NICHT DIE KOORDINATE, SONDERN DIE RAUTE. Die Hofmauer ist auf allen vier leeren Hoefen (?bau=keine) nachgemessen und ueberall dieselbe Linie — ein Dach mit dem Scheitel in der Sued-Ecke: S (823|1205) px, links y = 1205 - 0,49*(823-x), rechts y = 1205 - 0,45*(x-823). Gegenprobe mit den Zahlen des Kritikers: x=860 -> 1188 (er 1188), x=900 -> 1172 (er 1170). Damit lagen drei Standplaetze der in stadt-daten.js notierten Raute JENSEITS der Mauer, nicht nur die eine Koordinate (30|81): C2 (33|78) und D (30|80) ganz, C1 (23|76) mit dem Eisschlitten. Geprueft wird jetzt je Spalte die unterste undurchsichtige Zeile des Bildes gegen die Formel, nicht der Fusspunkt — genau die Messung, mit der die Kistenstapel gefunden wurden. (1) Flaschenhalle 1884 von (30|81) auf B2 (36|69): schlimmste Spalte jetzt 46 px UEBER der Kante statt 58 darunter. (2) Fahrzeugwaage 1970 von (30|81) auf D (27|76) — sie ist flach, sie darf als einzige ganz nach vorn: 34 px darueber, Rampe und Waegehaeuschen ganz sichtbar (36.225 px eigene Flaeche statt vorher verdeckt). (3) keller_gewoelbe.png neu erzeugt und wie die anderen 31 freigestellt: freistehender Erdhuegel, beide Grasflanken laufen im Rahmen zu Boden, 780x462, alle vier Raender 0,00 undurchsichtig (vorher L=0,97). Die Naht ist weg und zwar messbar: an der linken Kante des Aufbaus im Schuss 1350 sind mit und ohne Bau dieselben 55 von 180 Zeilen mit Farbsprung und derselbe mittlere Sprung 36 — der Aufbau fuegt dort keine einzige Kante mehr hinzu (vorher 224 von 241 Zeilen, mittlerer Sprung 120). DREI WEITERE, DIE DER GLEICHE FEHLER WAREN: Fassschuppen 1350 hing mit zwei losen Faessern 112 px unter der Mauerkante, Fasslager 1884 75 px, Kastenlager 1970 67 px (alle auf C2), Eiskeller 1884/1970 mit dem Eisschlitten 103 px (C1). Alle vier jetzt im Hof (-3 bis -75 px). Uebrig bleiben nur die drei Plaetze, die mit Absicht ausserhalb der Mauer liegen und dort auf Gassenboden stehen: Hopfenlager in der Haeuserzeile links (L), Kontor/Verwaltung vor dem Tor (R), und die Torgasse C3 (Kueferei, Laderampe, Verladedock) — dort tritt der Boden durch die Mauer nach vorn. MASSSTAB GEHALTEN UND EINMAL NACHGEZOGEN: die Braupfanne 1350 ist unveraendert (breite 8.9, gleicher Platz, Brauerin 76 px). In 1600 stand sie unter dem Dach der Rossmuehle und war auf 4.410 sichtbare Pixel geschrumpft; sie steht jetzt einen Schritt weiter vorn auf freiem Hofboden (11.070 px) und ist deshalb von 6.6 auf 7.0 mitgewachsen — Brauerin rund 62 px neben den zwei Gehern der Platte 1600 mit 58 und 62 px. Gezaehlt in zwoelf frischen Aufnahmen 2752x1536, ohne einen Seitenfehler: je Aufbau einzeln ausgeblendet und gegen das volle Bild gerechnet, sichtbar sind 9 von 9 (1350), 12 von 12 (1600), 12 von 12 (1884), 12 von 12 (1970) — der kleinste hat 5.800 px. Die Ortsmarken bleiben unveraendert bei 0,24 Prozent Deckung."
+  },
+  {
+   "zeit": "2026-08-01T16:42:45+00:00",
+   "text": "NAME R1 GEBAUT. Der Ruf liegt in VIER NEUEN Feldern auf welt.haus, die sonst niemand beschreibt: haus.ruf, haus.rufBekannt, haus.rufDeckung, haus.rufAufschlag (0..0,32). welt.haus.preis wird NICHT angefasst — DER PREIS haengt das Stueck mit EINER Zeile ein: setzeBierpreis() -> o.preis * (1 + Z.aufschlag) * (1 + (B.welt.haus.rufAufschlag || 0)). Bis dahin wirkt der Ruf ueber Adressen (welt.binde), und das ist Geld, nur ueber DIE FUHRE gerechnet. KEINE Abgabe, KEIN automatischer Abzug: jeder Pfennig haengt an einem angeklickten Knopf, der Deckel aus Zustaendigkeit 4 bleibt unberuehrt."
+  },
+  {
+   "zeit": "2026-08-01T16:42:45+00:00",
+   "text": "NAME R1: Ruf = Bekanntheit x Deckung / 100. Bekanntheit waechst hoechstens 0,9 in der Woche (ein Braujahr hat 30) und ist je Epoche gedeckelt: 55 / 68 / 86 / 92 — 1350 kennen einen drei Gassen weit, 1970 die Republik. Deckung faellt in EINEM Urteil um 6 bis 22 und heilt umso schneller, je tiefer sie steht. Das ist 'langsam zu bauen, schnell zu verlieren' als Zahl statt als Behauptung."
+  },
+  {
+   "zeit": "2026-08-01T16:42:45+00:00",
+   "text": "NAME R1: DER RUF IST KEINE ZAHL, DIE MIR GEHOERT (persona-markenstrategin: 'Marke ist eine Zahl, die jemand anders haelt'). Statt eines Punktekontos gibt es DAS REGISTER: datierte Urteile Fremder, nur wachsend, nichts loeschbar — und eine neue schwere Zeile KNIPST AELTERE GUTE AUS, die bleiben durchgestrichen stehen und ihr Gewicht wird der Deckung wieder abgezogen. Belegt am Schirm: werkbank/schuss/name-register-e1.png zeigt zwei erloschene Lobzeilen von 1350 unter zwei Tadelzeilen von 1351."
+  },
+  {
+   "zeit": "2026-08-01T16:42:45+00:00",
+   "text": "NAME R1: VIER VERBEN, VIER MEDIEN, VIER URTEILENDE INSTANZEN — die Verbliste ist je Epoche eine andere, nicht dieselbe in anderer Schrift. 1350 AUSHAENGEN (Bierzeiger, Zunftzeichen, Umtrunk; es urteilt der Bierkieser des Rats, zweimal im Jahr, unangemeldet). 1600 ANSCHLAGEN (Wirtshausschild je Adresse, gemarkter Krug, Zunftspruch; es urteilen Zunft und Wirte, und wer ein Schild traegt, redet doppelt so laut). 1884 AUFLEGEN (Etikett, Plakat, Litfasssaeule, Emailschild AB 1894, Ausstellung als Wette, Warenzeichen AB 1894; es urteilen Wochenblatt und Jury). 1970 ETAT SETZEN (Kronkorken, Bande, Fernsehspot, Rueckruf, Unterlassung; es urteilen DIE LEUTE im Verbrauchertest, den niemand im Haus beeinflussen kann)."
+  },
+  {
+   "zeit": "2026-08-01T16:43:06+00:00",
+   "text": "NAME R1: DIE KLEMME steht als Knopfpaar am Schirm, sobald das Zeichen haengt und der Keller nicht taugt (Guete unter 40): 'Unter dem Zeichen ausliefern' gegen 'Das Zeichen einziehen'. Beide kosten kein Geld, beide schliessen einander aus, und die Tafel zaehlt die Wochen bis zum Registereintrag mit. Ein leerer Keller bricht das Versprechen NUR, wenn ein gebundenes Haus zehn Wochen vergeblich gewartet hat — sonst wuerde ein Haus ohne Kundschaft fuer etwas bestraft, das niemand gemerkt hat."
+  },
+  {
+   "zeit": "2026-08-01T16:43:06+00:00",
+   "text": "NAME R1: DER GEGNER hat eine Handhabe ueber den vorhandenen Weltzustand bekommen, OHNE dass eine seiner Dateien angefasst wurde. Der Adler ahmt das Zeichen nach (billiger als besser brauen), was die eigene Reichweite auf 72 Prozent drueckt und ihm Ruf zuwachsen laesst; steht sein Ruf 8 ueber dem eigenen, holt er sich hoechstens EINE gebundene Adresse im Braujahr per welt.binde — protokolliert mit wer:'gegner', also zaehlbar unter 'ohne dich geschehen', und zurueckzugewinnen. Das Mittel dagegen ist je Epoche ein anderes: Klage vor dem Rat (55 von 100) / Zunftspruch (85) / Warenzeichen ab 1894 (sicher) / Unterlassung (sicher)."
+  },
+  {
+   "zeit": "2026-08-01T16:43:06+00:00",
+   "text": "NAME R1: SPERRLISTE eingebaut statt versprochen. 'Emailschilder ausgeben' und 'Das Warenzeichen eintragen' tragen ab:1894 und stehen vorher als GESPERRTER Knopf mit dem Grund darauf im Blatt — nachgewiesen im Klickprotokoll von 1884: beide [aus]. Preise und Mengen kommen ausnahmslos aus welt.geld() und welt.menge(); in name-daten.js steht keine Waehrung und keine Einheit."
+  },
+  {
+   "zeit": "2026-08-01T16:43:06+00:00",
+   "text": "NAME R1: HARTE REGEL geprueft, nicht behauptet. BRAUHAUS.ruf.lebendig() zaehlt am DOM die freien, wirksamen Zuege des Stuecks (Blattschalter zaehlen NICHT mit) — in allen vier Epochen 3 von 3, auch bei Kasse minus 7. Der Zeiger laesst sich immer aus- und einziehen, das Zeichen immer verdecken und wieder zeigen, und 'Herumgehen und den Namen sagen' kostet einmal im Braujahr nur einen Nachmittag."
   }
  ]
 }
