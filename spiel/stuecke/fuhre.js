@@ -271,14 +271,17 @@
 
   /* Warum ein Haus diese Woche kein Fass bekommen kann. Der Grund steht am
      Knopf — er ist in jeder Epoche ein anderer, und genau das ist der Punkt. */
-  function sperre(a) {
+  function sperre(a, s) {
     var e = ep();
     if (Z.verloren[a.schluessel]) return 'Aufgegeben. Diese Adresse ist weg.';
     if (e.bannmeile && a.km > e.bannmeile && !Z.bann[a.schluessel]) {
       return 'Außerhalb der Bannmeile (' + e.bannmeile + ' Meile). Ohne Bannbrief des Rats fährt hier kein Fass.';
     }
-    if (e.listung && !gelistet(a)) {
-      return 'Nicht gelistet. Ohne Regalmeter nimmt der Einkauf keine Ware an.';
+    /* Der Regalmeter gilt fuer die MARKE. Der Notsud traegt das Etikett des
+       Haendlers und braucht deshalb keinen — sonst waere 1970 der Verlust
+       aller Regalmeter derselbe absorbierende Zustand wie eine leere Kasse. */
+    if (e.listung && !gelistet(a) && !(s && s.not)) {
+      return 'Nicht gelistet. Ohne Regalmeter nimmt der Einkauf keine Ware des Hauses an.';
     }
     return null;
   }
