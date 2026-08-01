@@ -1462,7 +1462,15 @@
          Haus fuer den naechsten Tag braucht. Was er dann nicht in Geld
          bekommt, nimmt er wie bisher in der knappen Sache dieser Zeit; das
          ist der Preis der Schuld und er ist nie Zins. */
-      var freiFuerKerben = Math.max(0, Z.georgiEin - Z.georgiAus);
+      /* Und nur die HAELFTE davon. Georgi und Michaeli sind die beiden
+         Zinstage des Braujahres, und sie gehoeren verschiedenen Leuten: der
+         Glaeubiger nimmt zu Georgi, der Kaufmann rechnet zu Michaeli. Ein
+         Haus, das sein ganzes Holz aus dem Michaeligeld glattmacht, steht am
+         naechsten Morgen vor der Tafel und kann nichts nehmen. Was offen
+         bleibt, nimmt der Glaeubiger wie bisher in der knappen Sache dieser
+         Zeit — Brautage, Sude der Reihe, Eis, Regalmeter. Das ist teurer als
+         Geld und genau deshalb richtig. */
+      var freiFuerKerben = Math.max(0, Math.round((Z.georgiEin - Z.georgiAus) * 0.5));
       while (Z.kerben > 0 && B.welt.haus.kasse >= kh.jeKerbe && freiFuerKerben >= kh.jeKerbe) {
         B.welt.zahle(kh.jeKerbe, kh.kurz + ': eine Kerbe gelöscht', 'spieler');
         Z.kerben -= 1;
