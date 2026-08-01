@@ -18,9 +18,9 @@
    den ein Spieler im dritten Jahr sagen soll: "Ich zahle mit Brautagen, nicht
    mit Geld — Dünnbier gibt fuenf Fass für einen Tag, Grutbier zwei."
 
-   ZWEI ANTWORTEN AUF DIE LEERE KASSE — und keine davon ist Geld
+   DREI ANTWORTEN AUF DIE LEERE KASSE — und keine davon ist Geld
    Ein Brauhaus ohne Bargeld hoert nicht auf zu brauen. Es tut, was es seit
-   je getan hat, und beides steht hier als Zahl:
+   je getan hat, und alle drei stehen hier als Zahl:
 
    1. DER NOTSUD (`not: true`).  Der zweite Guss auf dieselben Treber. Er
       kostet keinen Pfennig, kein Korn und keinen Tag der Jahresverleihung —
@@ -36,8 +36,9 @@
       wird die leere Kasse nie zur Wand, sondern zu einem Preis in der
       Waehrung der Epoche.
 
-   Dazu der Rueckverkauf (`rueck`): Rohstoff geht zum Bruchteil des Einkaufs
-   an den Haendler zurueck. Bar auf die Hand, teuer erkauft.
+   3. DER RUECKVERKAUF (`rueck`).  Rohstoff geht zum Bruchteil des Einkaufs
+      an den Haendler zurueck. Bar auf die Hand — und die Kammer ist leer,
+      was naechste Woche die Pfanne kostet.
 
    SPERRLISTE beachtet: kein Hopfen 1350 (Grut), offene Pfanne, Hektoliter
    erst ab 1872 (das macht welt.menge), keine Emailschilder vor den 1890ern.

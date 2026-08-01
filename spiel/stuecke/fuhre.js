@@ -1523,9 +1523,11 @@
       kzeile.appendChild(B.el('span', 'fu-kerbzahl',
         Z.kerben + ' von ' + kh.kerben + ' · 1 Kerbe = ' + B.welt.geld(kh.jeKerbe)));
       kb.appendChild(kzeile);
-      kb.appendChild(B.el('div', 'fu-kerbsatz', Z.kerben
-        ? kh.pfand.sagt
-        : kh.satz));
+      var ksatz = B.el('div', 'fu-kerbsatz', Z.kerben ? kh.pfand.sagt : kh.satz);
+      ksatz.title = kh.satz + ' ' + kh.pfand.sagt
+        + ' Eine Kerbe steht für ' + B.welt.geld(kh.jeKerbe) + '; das Holz fasst '
+        + kh.kerben + '.';
+      kb.appendChild(ksatz);
       if (Z.kerben) {
         kb.appendChild(B.knopf({
           text: 'Eine Kerbe löschen', zug: 'fuhre:kerbe-loeschen', klasse: 'fu-klein',
