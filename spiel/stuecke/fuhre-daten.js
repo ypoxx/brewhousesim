@@ -496,7 +496,7 @@ var FUHRE_DATEN = {
           titel: 'Mehr Fuder Fassungsraum. Unwiderruflich gebaut.' },
         { k: 'sudwerk',  text: 'Dampfsudwerk · +1 Sud je Woche', basis: 4200, staffel: 1.9, menge: 1,
           titel: 'Eine zweite Pfanne unter Dampf. Unwiderruflich.' },
-        { k: 'rohstoff', text: 'Hopfen aus der Hallertau · +300', basis: 1500, staffel: 1.0, menge: 300,
+        { k: 'rohstoff', text: 'Hopfen aus der Hallertau · +300', basis: 1150, staffel: 1.0, menge: 300,
           rueck: 0.55, rtext: 'Hopfen zurück an den Händler · −300',
           rtitel: 'Dreihundert Hopfen gehen zurück nach Nürnberg. Der Händler zahlt bar '
                 + 'und behält die Hälfte der Spanne.',
@@ -504,16 +504,16 @@ var FUHRE_DATEN = {
       ],
       sorten: [
         { k: 'schank', name: 'Schankbier', zeichen: 'S', stufe: 1,
-          fass: 30, reife: 0, haltbar: 3, preis: 44, kosten: 430, rohstoff: 22, eis: 1,
+          fass: 30, reife: 0, haltbar: 3, preis: 44, kosten: 320, rohstoff: 22, eis: 1,
           sommer: false,
           satz: 'Dreißig Fass aus einem Sud, sofort lieferbar, drei Wochen haltbar. '
               + 'Füllt den halben Wagen im Alleingang.' },
         { k: 'lager', name: 'Lagerbier', zeichen: 'L', stufe: 2,
-          fass: 24, reife: 2, haltbar: 24, preis: 72, kosten: 480, rohstoff: 30, eis: 2,
+          fass: 24, reife: 2, haltbar: 24, preis: 72, kosten: 360, rohstoff: 30, eis: 2,
           sommer: false,
           satz: 'Zwei Wochen auf Eis. Das Bier, an dem die Kältemaschine hängt.' },
         { k: 'export', name: 'Exportbier', zeichen: 'E', stufe: 3,
-          fass: 18, reife: 5, haltbar: 46, preis: 108, kosten: 620, rohstoff: 36, eis: 3,
+          fass: 18, reife: 5, haltbar: 46, preis: 108, kosten: 470, rohstoff: 36, eis: 3,
           sommer: true,
           satz: 'Fünf Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller.' },
         { k: 'einfach', name: 'Einfachbier', zeichen: 'N', stufe: 1, not: true,
