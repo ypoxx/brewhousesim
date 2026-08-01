@@ -1269,7 +1269,12 @@
 
   function durstWaechst() {
     var mult = preisMult();
-    var faktor = B.grenze(1.3 - 0.3 * mult, 0.6, 1.6);
+    /* Das Zahlungsziel steht mit im Durst: wer bar zahlen muss, bestellt
+       kleiner, und wer anschreiben darf, bestellt groesser. Das ist das
+       Gegengewicht, das aus der Zahlungsweise eine Wahl macht statt einer
+       Buchungsvorschrift. */
+    var st = zielStufe();
+    var faktor = B.grenze(1.3 - 0.3 * mult, 0.6, 1.6) * (st ? st.durst : 1);
     haeuser().forEach(function (a) {
       var w = wochenbedarf(a) * faktor * (0.72 + B.wuerfel.zahl() * 0.62);
       Z.durst[a.schluessel] = Math.min(wochenbedarf(a) * 9, durst(a) + w);
@@ -1556,8 +1561,17 @@
     Z.kaufNr = {};
     Z.bannNr = 0;
     Z.plan = {};
+    Z.planVorjahr = null;
     /* Ein neuer Glaeubiger, ein neues Holz: ueber einen Epochensprung von
-       zweihundert Jahren wird keine Kerbe mitgeschleppt. */
+       zweihundert Jahren wird keine Kerbe mitgeschleppt. Und kein Wirt
+       schuldet ueber zweihundert Jahre hinweg noch etwas — auch das Holz
+       beim Wirt wird glatt. */
+    Z.ausstand = {};
+    Z.vorschuss = {};
+    Z.zahltag = null;
+    Z.abgabeJahr = 0;
+    Z.ziel = 'ziel';
+    Z.zielJahr = 0;
     Z.kerben = 0;
     Z.kerbAbzug = 0;
     Z.kerbGeorgi = null;
@@ -1818,6 +1832,8 @@
       z.appendChild(B.el('div', 'fu-zettel-text', '„' + Z.zettel.text + '"'));
       b.appendChild(z);
     }
+
+    zeichneZiel(b);
 
     var liste = B.el('div', 'fu-liste');
     var neediest = null;
@@ -2871,6 +2887,24 @@
       Z.ladung = [];
       Z.vorige = null;
       Z.jahrUmsatz = 0;
+      Z.abgabeJahr = 0;
+
+      /* MICHAELI: DIE TAFEL WIRD NEU ANGESCHRIEBEN. Ein Brauhaus faengt das
+         Braujahr nicht mit einer leeren Wand an — der Braumeister schreibt
+         an, was voriges Jahr dort stand, und der Spieler aendert es. */
+      if (Z.planVorjahr) {
+        var etwas = false;
+        for (var vk in Z.planVorjahr) {
+          if (Z.planVorjahr[vk] && sorteVon(vk)) { Z.plan[vk] = Z.planVorjahr[vk]; etwas = true; }
+        }
+        if (etwas) {
+          Z.tafelGewischt = false;
+          B.welt.schreibe('Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: '
+            + sorten().filter(function (x) { return Z.plan[x.k]; })
+                .map(function (x) { return Z.plan[x.k] + '× ' + x.name; }).join(' · ')
+            + ' — wie im vorigen Jahr, bis jemand es ändert.', 'fuhre');
+        }
+      }
       Z.notGesamt = 0;
       Z.notsud = 0;
       Z.notGemeldet = false;
