@@ -180,3 +180,21 @@ Alle drei sind berechtigt und gehen in die Zwischenwelle:
    das so bleibt, kann kein zweites Stück Rohstoff verbrauchen, ohne zu kollidieren.
 3. **`nimmHeraus()` nimmt immer das älteste Fass** — die FUHRE sortiert deshalb vorher um.
    Der Kern soll die Auswahl entgegennehmen, statt sie zu erraten.
+
+## 7 — Die graue Attrappe über der Adlerbrauerei gehört DEM GEGNER
+
+**Vorgetragen von:** dem Kritiker der STADT, in Runde 2.
+**Entschieden:** stattgegeben, zur Behebung durch DER GEGNER.
+
+> `spiel/bild/gegner/hof3.png` liegt in 1884 als graue, entsättigte Attrappe genau über der
+> Brauerei Adler der eigenen Platte, deren Backsteinfassade und zwei Schornsteine darunter
+> hervorschauen.
+
+Der Kritiker hat den Fund korrekt als fremd gekennzeichnet, statt ihn der STADT anzulasten
+oder selbst einzugreifen. Die Sache ist inhaltlich eindeutig: **Die Adlerbrauerei steht
+bereits auf der Platte.** Der GEGNER braucht dort kein zweites Gebäude, sondern höchstens
+etwas, das den Zustand des Nachbarn anzeigt — Rauch, ein Schild, ein Fuhrwerk.
+
+> **Auflage an DER GEGNER:** Entweder `hof3.png` in 1884 weglassen und die Platte zeigen
+> lassen, oder es passgenau und farbrichtig über die dortige Brauerei legen. Eine graue
+> Attrappe über einem gezeichneten Gebäude ist beides nicht.
