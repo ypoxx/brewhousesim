@@ -94,6 +94,13 @@ for (const epoche of [1, 2, 3, 4]) {
   // --- 4. Wochen spielen ---------------------------------------------------
   const spur = [];
   for (let w = 0; w < WOCHEN; w++) {
+    // Zu Georgi legt DIE FUHRE ihren Sommerzettel ueber den Hof und sperrt
+    // WEITER darunter ab (ZUSTAENDIGKEIT §2 — so ist es gewollt). Wer weiter
+    // spielen will, schliesst ihn: "Michaeli — das Jahr beginnt".
+    await seite.evaluate(() => {
+      const k = document.querySelector('button[data-zug="fuhre:sommer-zu"]');
+      if (k && !k.disabled) k.click();
+    });
     // Jede Woche neu suchen: kern/kopf.js baut den Knopf beim Jahreswechsel
     // neu, und ein gehaltener Zeiger darauf klickt danach ins Leere.
     try { await seite.click('button[data-zug="weiter"]', { timeout: 4000 }); }

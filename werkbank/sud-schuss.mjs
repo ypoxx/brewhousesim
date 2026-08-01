@@ -26,6 +26,10 @@ await klick('button[data-zug="stadt:reiter:sud-sud-brett"]', 500);
 if (verfahren) for (const zug of verfahren.split(',')) await klick(`button[data-zug="${zug}"]`, 200);
 await klick('button[data-zug="stadt:reiter:sud-sud-brett"]', 300);
 for (let w = 0; w < +wochen; w++) {
+  await seite.evaluate(() => {
+    const k = document.querySelector('button[data-zug="fuhre:sommer-zu"]');
+    if (k && !k.disabled) k.click();
+  });
   try { await seite.click('button[data-zug="weiter"]', { timeout: 4000 }); } catch { break; }
 }
 await seite.waitForTimeout(300);
