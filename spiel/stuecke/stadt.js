@@ -480,6 +480,14 @@
       var r = el.getBoundingClientRect();
       var t = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
       if (t && el.contains(t)) continue;
+      /* Nur ein DAUERHAFTER Deckel zaehlt: ein fremdes Brett mit data-frei
+         oder etwas Eigenes (Hausschild, Hofbau). Eine Marke, die gerade unter
+         dem Zeiger hervorgekommen ist, deckt nur einen Wimpernschlag lang —
+         die darf ihren Nachbarn nicht vom Pflock holen. */
+      var deckel = t && t.closest
+        ? (t.closest('[data-frei]') || t.closest('.fach-bau-stadt')
+           || t.closest('.fach-blatt-stadt')) : null;
+      if (!deckel) continue;
       var s = el.getAttribute('data-marke');
       if (s && markenLage[s] === 'ruht') markenLage[s] = 'steht';
       fach.removeChild(el);
