@@ -363,6 +363,7 @@
      ==================================================================== */
 
   var MRUHT = 'stadt-marke-ruht';
+  var MZEIGT = 'stadt-marke-zeigt';   /* vom Zeiger hervorgeholt: sichtbar, aber ohne Maus */
   var markenLage = {};          /* schluessel -> 'ruht' | 'steht' */
   var markenDa = {};
   var markenGesehen = {};
@@ -463,9 +464,14 @@
       p.setAttribute('aria-pressed', m.ruht ? 'false' : 'true');
       p.setAttribute('data-marke', m.schluessel);
       p.appendChild(B.el('span', 'scheibe'));
-      function heb() { unterZeiger = m.schluessel; m.el.classList.remove(MRUHT); }
+      function heb() {
+        unterZeiger = m.schluessel;
+        m.el.classList.remove(MRUHT);
+        m.el.classList.add(MZEIGT);
+      }
       function lass() {
         if (unterZeiger === m.schluessel) unterZeiger = null;
+        m.el.classList.remove(MZEIGT);
         if (markenLage[m.schluessel] === 'ruht') m.el.classList.add(MRUHT);
       }
       p.addEventListener('mouseenter', heb);
@@ -549,6 +555,7 @@
          hervorgeholt hat: die Marke unter dem Zeiger bleibt sichtbar. */
       if (markenLage[s] === 'ruht' && s !== unterZeiger) b.el.classList.add(MRUHT);
       else b.el.classList.remove(MRUHT);
+      if (s !== unterZeiger) b.el.classList.remove(MZEIGT);
 
       reihe.push({
         schluessel: s, ort: ort, el: b.el, wer: b.wer,

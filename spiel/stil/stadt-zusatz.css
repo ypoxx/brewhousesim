@@ -110,6 +110,13 @@
 .stadt-marke-ruht,
 .stadt-marke-ruht * { pointer-events: none !important; }
 
+/* Vom Zeiger hervorgeholt: die Marke ist zu lesen, nimmt der Maus aber nichts
+   weg — sonst deckte sie den Pflock, auf dem der Zeiger gerade steht, und
+   Playwright kaeme nie zum Klick. Festgeheftet wird per Klick, nicht per
+   Darueberfahren. */
+.stadt-marke-zeigt,
+.stadt-marke-zeigt * { pointer-events: none !important; }
+
 /* --------------------------------------------------------------------------
    3 — DER SCHALTER IN DER WERKBANK
    -------------------------------------------------------------------------- */
