@@ -41,9 +41,10 @@ for (const epoche of [1, 2, 3, 4]) {
         return n;
       });
     }
-    const weiter = await seite.$('button[data-zug="weiter"]');
-    if (!weiter) break;
-    try { await weiter.click({ timeout: 3000 }); } catch { break; }
+    // Jede Woche neu suchen: kern/kopf.js baut den Knopf beim Jahreswechsel
+    // neu, und ein gehaltener Zeiger darauf klickt danach ins Leere.
+    try { await seite.click('button[data-zug="weiter"]', { timeout: 4000 }); }
+    catch { console.log('  WEITER nicht mehr klickbar in Woche ' + (w + 1)); break; }
 
     const s = await seite.evaluate(() => {
       const el = document.querySelector('.deckung, [class*="deckung"]');

@@ -26,9 +26,7 @@ await klick('button[data-zug="stadt:reiter:sud-sud-brett"]', 500);
 if (verfahren) for (const zug of verfahren.split(',')) await klick(`button[data-zug="${zug}"]`, 200);
 await klick('button[data-zug="stadt:reiter:sud-sud-brett"]', 300);
 for (let w = 0; w < +wochen; w++) {
-  const weiter = await seite.$('button[data-zug="weiter"]');
-  if (!weiter) break;
-  try { await weiter.click({ timeout: 3000 }); } catch { break; }
+  try { await seite.click('button[data-zug="weiter"]', { timeout: 4000 }); } catch { break; }
 }
 await seite.waitForTimeout(300);
 await klick('button[data-zug="stadt:alles-zuklappen"]', 300);

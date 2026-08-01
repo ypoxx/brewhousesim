@@ -94,9 +94,10 @@ for (const epoche of [1, 2, 3, 4]) {
   // --- 4. Wochen spielen ---------------------------------------------------
   const spur = [];
   for (let w = 0; w < WOCHEN; w++) {
-    const weiter = await seite.$('button[data-zug="weiter"]');
-    if (!weiter) break;
-    try { await weiter.click({ timeout: 3000 }); } catch { break; }
+    // Jede Woche neu suchen: kern/kopf.js baut den Knopf beim Jahreswechsel
+    // neu, und ein gehaltener Zeiger darauf klickt danach ins Leere.
+    try { await seite.click('button[data-zug="weiter"]', { timeout: 4000 }); }
+    catch { console.log('  WEITER nicht mehr klickbar in Woche ' + (w + 1)); break; }
     if (w % 10 === 0) await seite.waitForTimeout(40);
     if (w % 15 === 0 || w === WOCHEN - 1) {
       const s = await seite.evaluate(() => {
