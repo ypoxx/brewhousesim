@@ -1254,6 +1254,13 @@
     if (marken.childNodes.length) k.appendChild(marken);
 
     B.orte.setze(k, s.ort, { anker: 'oben', dx: s.dx || 0, dy: s.dy || 0 });
+    /* DIE STADT legt fremde Ortsmarken auf einen Pflock und laesst sie beim
+       Laden ruhen (stadt.js, Kartenschicht). Das ist richtig fuer die kleinen
+       Schilder an den Giebeln — das ist es, was der Kritiker als "Schmutz auf
+       der Platte" gelesen hat, und dort machen wir mit. Das Haus gegenueber
+       selbst ist keine Ortsmarke: es ist der Gegner. Es meldet sich mit dem
+       vorgesehenen data-frei von der Kartenschicht ab und bleibt stehen. */
+    k.setAttribute('data-frei', 'gegner');
     fach.appendChild(k);
     return s;
   }
@@ -1312,6 +1319,7 @@
     /* Der Hof steht UEBER dem Schild: unten verankert, damit er nach oben
        waechst und dem Schild nie ins Gesicht rutscht. */
     B.orte.setze(hof, s.ort, { anker: 'unten', dx: s.dx || 0, dy: (s.hofDy === undefined ? 4 : s.hofDy) });
+    hof.setAttribute('data-frei', 'gegner');
     fach.appendChild(hof);
   }
 
@@ -1453,6 +1461,7 @@
     r.appendChild(B.el('span', 'gg-zeigertext',
       o.name + (z ? ' · ' + z.jahr + ' W' + z.woche : '')));
     B.orte.setze(r, Z.zeigt, { anker: 'mitte' });
+    r.setAttribute('data-frei', 'gegner');   /* der Zeigefinger muss zeigen */
     fach.appendChild(r);
   }
 
@@ -1557,6 +1566,9 @@
       band.appendChild(z);
     });
     B.orte.setze(band, 'kopfleiste', { anker: 'oben', dx: 18, dy: 10.5 });
+    /* Kein Ortszeichen, sondern die Liste selbst: "Ohne dich geschehen" ist
+       die eine Zahl, die dieses Stueck zu zeigen hat. Sie ruht nie. */
+    band.setAttribute('data-frei', 'gegner');
     fach.appendChild(band);
   }
 
