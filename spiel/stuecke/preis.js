@@ -1374,7 +1374,9 @@
             : 'Michaeli ist vorüber. Genommen wird zu Michaeli ' + (Z.tafelJahr + 1) + '.'),
       tu: function () {
         if (tafelSichtbar()) { Z.offen = false; Z.erzwungen = false; }
-        else { Z.offen = true; Z.erzwungen = true; }
+        /* Ein Klick ist eine Hand am Brett: DIE STADT laesst aufgeschlagen,
+           was der Spieler selbst geholt hat. Also die Merkmarke loeschen. */
+        else { Z.offen = true; Z.erzwungen = true; Z.weggeklappt = false; }
         Z.seite = 'tafel';
         B.ton.spiele('preis:blatt');
         B.sende('zeichne', { grund: 'preis-griff' });
