@@ -460,24 +460,30 @@
       var g = ctx.createGain();
       g.gain.setValueAtTime(0.0001, wann);
       g.gain.linearRampToValueAtTime(v, wann + 0.02);
-      if (e.schleife || (opt && opt.art === 'schleife')) {
+      var laeuftWeiter = !!(e.schleife || (opt && opt.art === 'schleife'));
+      var d = buf.duration;
+      if (laeuftWeiter) {
         q.loop = true;
         w.schleifen[name] = { quelle: q, gain: g };
       } else {
-        var d = buf.duration;
         g.gain.setValueAtTime(v, wann + Math.max(0.05, d - 0.25));
         g.gain.linearRampToValueAtTime(0.0001, wann + d);
-        q.stop(wann + d + 0.05);
       }
       q.connect(g); g.connect(w.bus.werk);
+      /* start() MUSS vor stop() stehen. Andersherum wirft Chrome, der Wurf
+         landet in B.lage, und spiele() gibt faelschlich false zurueck —
+         genau das hat der erste Lauf im lebenden Spiel gezeigt. */
       q.start(wann);
+      if (!laeuftWeiter) q.stop(wann + d + 0.05);
       ducke(w, wann, 0.6);
       return true;
     }
 
     if (datei) ladeStill(ctx, datei);              /* fuer das naechste Mal */
 
-    var stueck = ersatz(ctx, w.bus.werk, e.ersatz || VORSILBE[String(name).split(':')[0]] || 'blatt',
+    var notfall = NOTFALL[String(name).split(':')[0]];
+    var stueck = ersatz(ctx, w.bus.werk,
+                        e.ersatz || (notfall && notfall.ersatz) || 'blatt',
                         wann, epoche, v);
     if (stueck && stueck !== true) w.schleifen[name] = { quelle: stueck, gain: null };
     ducke(w, wann, 0.75);
