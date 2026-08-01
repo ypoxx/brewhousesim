@@ -273,9 +273,14 @@ var STADT_DATEN = {
        fuer die Brauerinnen: bei breite 14 war er 113 px hoch neben einer Magd
        von 72. Bei 9.9 misst er 80, bei 8.2 in der weitraeumigeren Platte 1600
        noch 66 — beides die Groesse der Leute, die dort stehen. */
+    /* Runde 5: derselbe Faktor wie bei der Pfanne. Der Kuefer stand in 1600
+       bei breite 7,2 rund 58 px hoch, wo an seiner Tiefe (y=1090) rund 80 px
+       hingehoeren — 9,4 statt 7,2. Er wandert dabei einen Schritt nach links
+       ins Hofinnere, damit der breiter gewordene Schuppen nicht mit dem Fuss
+       ueber die Mauerkante an der Tordurchfahrt hinausragt. */
     { schluessel: 'kueferei', name: 'Küferei', bild: 'kueferei',
-      ort: 'tor', dx: 0, dy: 10, breite: 9.9, breiten: { 1: 9.9, 2: 7.2 },
-      versatz: { 2: { dy: -3 } },
+      ort: 'tor', dx: 0, dy: 10, breite: 9.9, breiten: { 1: 9.9, 2: 9.4 },
+      versatz: { 2: { dx: -2.5, dy: -3.6 } },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
@@ -310,8 +315,19 @@ var STADT_DATEN = {
       sagt: 'Wer schreibt, weiß im Herbst, was der Frühling gekostet hat.',
       nutzen: {}, wirkt: 'Ordnung im Buch' },
 
+    /* Runde 5, zweimal angefasst.
+       ERSTENS DAS BILD: hopfenlager.png war der schlimmste der vier
+       Guillotineschnitte — der Dachfirst lag glatt abgesaebelt auf der
+       Oberkante (91 Spalten, Farbsprung 190 gegen einen sauberen Mittelwert
+       von 36), in drei von vier Epochen sichtbar. Das Bild ist neu erzeugt,
+       mit beiden Dachflaechen, beiden Ortgaengen und dem ganzen First
+       innerhalb des Rahmens; alle vier Raender messen 0 undurchsichtig.
+       ZWEITENS DIE ZEIT: bis 3 statt bis 4. Ein Fachwerkspeicher mit
+       Leinensaecken in einer Brauerei von 1970 war der Grund, warum das
+       Zielbild 04 den Blindvergleich gewonnen hat. 1970 kommt der Hopfen
+       als Pellet in den Kuehlraum, nicht als Sack unter den Dachstuhl. */
     { schluessel: 'hopfenlager', name: 'Hopfenlager', bild: 'hopfenlager',
-      ort: 'keller', dx: -6, dy: 0, breite: 9, von: 2, bis: 4, grund: 40,
+      ort: 'keller', dx: -6, dy: 0, breite: 9, von: 2, bis: 3, grund: 40,
       sagt: 'Hopfen im Sack, trocken und dunkel. Erst mit dem Hopfen hält Bier eine Reise aus.',
       nutzen: { rohstoff: 60 } },
 
@@ -339,8 +355,13 @@ var STADT_DATEN = {
     /* Der Eisschlitten liegt im Bild vorn links unter dem Huegel. Auf dem
        alten Platz C1 (23|76) lag er 103 px unter der Mauerkante — zwei
        Eisbloecke auf dem Mauerkopf. Jetzt auf (26|70), hinter dem Fasslager. */
+    /* Runde 5: bis 3 statt bis 4. Der Eisschlitten mit gesaegten
+       Natureisbloecken stand im Schuss 1970 neben den Lastwagen — hundert
+       Jahre nach Lindes Kaeltemaschine. Beim Wechsel nach 1970 verschwindet
+       er jetzt mit einer Zeile in der Chronik, wie jeder Bau, der seine Zeit
+       hinter sich hat. */
     { schluessel: 'eiskeller', name: 'Eiskeller', bild: 'eiskeller',
-      ort: 'keller', dx: 4, dy: 0, breite: 13, von: 3, bis: 4, grund: 70,
+      ort: 'keller', dx: 4, dy: 0, breite: 13, von: 3, bis: 3, grund: 70,
       sagt: 'Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergäriges Lagerbier möglich.',
       nutzen: { platz: 30 } },
 
@@ -380,10 +401,23 @@ var STADT_DATEN = {
       sagt: 'Zylindrokonisch, im Freien, aus Edelstahl. Gärkeller braucht das keinen mehr.',
       nutzen: { platz: 150, sud: 12 } },
 
+    /* Runde 5, das Stueck, an dem 1970 den Blindvergleich verloren hat.
+       Der Kritiker: "die Verladedockplatte liegt wie ein Betondeckel ueber
+       der Hofmitte, die Wagen stehen draussen" — die Lastwagen parkten bei
+       y 1080..1100, waehrend die Mauerkante bei x=1300 auf y=990 liegt, also
+       hundert Pixel unterhalb der Mauer auf der oeffentlichen Gasse. Zwei
+       Ursachen: der Platz (47|73) liegt jenseits der Mauer, und das alte Bild
+       war zu drei Vierteln leere Betonflaeche mit zwei Lastwagen, die unten
+       rechts hinausragten.
+       Das Bild ist neu: zwei Lastwagen RUECKWAERTS an der Rampe, unter dem
+       Vordach, dazu ein Arbeiter mit der Sackkarre — im Zielbild 04 arbeiten
+       Leute im Hof, im Gebauten arbeitete niemand. Und der Platz ist der
+       Hofboden vor der Halle statt der Gehweg davor. */
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: 7, dy: 1, breite: 14, von: 4, bis: 4, grund: 95,
-      sagt: 'Drei Lastzüge am Dock. Was hier abfährt, ist am Abend zweihundert Kilometer weit.',
-      nutzen: {}, wirkt: 'drei Lastzüge gleichzeitig' },
+      ort: 'rampe', dx: -1.5, dy: -0.5, breite: 15.5, von: 4, bis: 4, grund: 95,
+      sagt: 'Zwei Lastzüge rückwärts am Dock, ein Mann mit der Sackkarre. '
+          + 'Was hier abfährt, ist am Abend zweihundert Kilometer weit.',
+      nutzen: {}, wirkt: 'zwei Lastzüge gleichzeitig' },
 
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
       ort: 'fasslager', dx: 3, dy: -2.5, breite: 13.5, von: 4, bis: 4, grund: 70,
