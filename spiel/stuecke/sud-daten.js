@@ -191,7 +191,11 @@ var SUD_DATEN = {
               + 'Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr.',
       gaerkeller: {
         name: 'Der Gärkeller', gefaess: 'Gärbottich', gefaesse: 'Gärbottiche',
-        plaetze: 80,
+        /* 48 und nicht 80: gemessen hob ein Gaerkeller von 80 Fass den Ausstoss
+           von 1884 in 58 Wochen von 288 auf 560 Fass — fast das Doppelte, ohne
+           dass jemand etwas dafuer getan haette. Der Gaerraum soll eine
+           KAUFENTSCHEIDUNG sein und kein Geschenk an eine fremde Bilanz. */
+        plaetze: 48,
         satz: 'Der Gärkeller liegt unter dem Sudwerk und ist nicht der Lagerkeller. '
             + 'Erst diese Trennung erlaubt Lagerzeiten in Monaten statt in Wochen.',
         kauf: { text: 'Gärbottich aufstellen', menge: 40, basis: 1900, staffel: 1.3,
@@ -262,7 +266,7 @@ var SUD_DATEN = {
               + 'rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste.',
       gaerkeller: {
         name: 'Der Gärkeller', gefaess: 'Gärtank', gefaesse: 'Gärtanks',
-        plaetze: 320,
+        plaetze: 200,
         satz: 'Gärtanks im Freien, isoliert. Getrennt vom Lagerkeller — die Reifung läuft '
             + 'im Tank, nicht im verkaufsfertigen Bestand.',
         kauf: { text: 'Gärtank stellen', menge: 180, basis: 24000, staffel: 1.3,
