@@ -240,11 +240,14 @@
   gap: calc(var(--s) * 3);
   margin: calc(var(--s) * 2) 0;
 }
+/* Die Zeile erbt ihre Farbe vom Brett: 1350–1884 steht sie hell auf dunklem
+   Holz, 1970 dunkel auf Resopal. Ein festes Rot waere in beiden Faellen die
+   falsche Wahl — die Dringlichkeit traegt der Balken, nicht die Schrift. */
 .fu-frist b {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 15);
+  font-size: calc(var(--s) * 16);
   letter-spacing: calc(var(--s) * 0.5);
-  color: var(--fu-warn);
+  color: inherit;
   line-height: 1.15;
 }
 .fu-fristbalken {
@@ -268,8 +271,8 @@
   font-family: var(--fu-zahlen);
   font-size: calc(var(--s) * 14) !important;
   line-height: 1.3;
-  color: var(--fu-tinte);
-  background: rgba(74, 107, 58, 0.18);
+  color: inherit;
+  background: rgba(120, 170, 96, 0.22);
   border-left: calc(var(--s) * 3) solid var(--fu-gut);
   padding: calc(var(--s) * 4) calc(var(--s) * 7);
   border-radius: calc(var(--s) * 2);
