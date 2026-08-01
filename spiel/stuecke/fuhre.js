@@ -2374,6 +2374,173 @@
   }
 
   /* ======================================================================
+     DAS SCHLUSSBLATT
+
+     Die Uhr steht. Was hier steht, ist keine Bilanz — es ist eine Chronik:
+     wie lange das Haus gebraut hat, wer es gefuehrt hat, wie viele Fuhren
+     hinausgegangen sind und wie das Auftragsbuch leer geworden ist. Und der
+     Satz, um den es dem Stueck die ganze Zeit ging, steht mit den Zahlen des
+     letzten Tages daneben: das Geld war nicht das Problem.
+
+     Das grosse Nachspiel gehoert spaeter DEM ERBE (ZUSTAENDIGKEIT 12). Hier
+     steht das Anhalten und ein schlichtes Blatt mit einem Weg von vorn.
+     ====================================================================== */
+  function sammleSchluss(d) {
+    var geliefert = 0, verschenkt = 0;
+    B.protokoll.forEach(function (p) {
+      if (p.wer === 'spieler' && p.adresse && p.menge) geliefert += p.menge;
+    });
+    verschenkt = Z.probeGesamt;
+
+    var verloren = [];
+    alleHaeuser().forEach(function (a) {
+      var w = Z.verloren[a.schluessel];
+      if (w) verloren.push({ name: a.name, jahr: w.jahr, fremd: w.fremd });
+    });
+    verloren.sort(function (x, y) { return x.jahr - y.jahr; });
+
+    /* Die Generationenzeile schliessen: der letzte Name endet heute. */
+    var linie = Z.geschlecht.map(function (g) { return { name: g.name, seit: g.seit,
+      eigenschaft: g.eigenschaft, bis: 0 }; });
+    for (var i = 0; i < linie.length; i++) {
+      linie[i].bis = (i + 1 < linie.length) ? linie[i + 1].seit : B.welt.zeit.jahr;
+    }
+
+    return {
+      grund: (d && d.grund) || (B.welt.zeit.jahr >= B.welt.LETZTES_JAHR ? 'gegenwart' : 'unbekannt'),
+      jahr: B.welt.zeit.jahr,
+      woche: B.welt.zeit.woche,
+      satz: fristDef().ende,
+      wer: fristDef().wer,
+      gegruendet: B.welt.haus.gegruendet,
+      seit: Z.startJahr,
+      jahre: Math.max(1, B.welt.zeit.jahr - Z.startJahr + 1),
+      fuhren: Z.fuhren,
+      geliefert: geliefert,
+      verschenkt: verschenkt,
+      zurueck: Z.zurueckGeholt.slice(),
+      verloren: verloren,
+      kasse: B.welt.haus.kasse,
+      keller: keller().length,
+      plaetze: B.welt.vorrat.plaetze,
+      rohstoff: B.welt.haus.rohstoff,
+      linie: linie
+    };
+  }
+
+  /* Der Wiederanfang: dieselbe Epoche, andere Wuerfel. Ein neues Haus in
+     derselben Stadt — mehr verspricht dieses Blatt nicht. */
+  function neuesSpiel() {
+    var teile = [];
+    var roh = B.arg.roh || {};
+    for (var k in roh) {
+      if (!Object.prototype.hasOwnProperty.call(roh, k)) continue;
+      if (k === 'saat' || k === 'jahr' || k === 'woche') continue;
+      teile.push(encodeURIComponent(k) + '=' + encodeURIComponent(roh[k]));
+    }
+    teile.push('saat=' + (1350 + Math.floor(Math.random() * 9000)));
+    window.location.search = '?' + teile.join('&');
+  }
+
+  function zeichneSchluss(fach) {
+    if (!schlussLiegtOben()) return;
+    var s = Z.schluss;
+
+    var sperre = B.el('div', { klasse: 'fu-sperre fu-sperre-ende', daten: { frei: '1' } });
+    sperre.setAttribute('aria-hidden', 'true');
+    fach.appendChild(sperre);
+
+    var bl = B.el('div', { klasse: 'blatt fu-schlussblatt', daten: { frei: '1' } });
+    bl.setAttribute('role', 'dialog');
+    bl.setAttribute('aria-modal', 'true');
+    bl.setAttribute('aria-label', 'Das Ende des Hauses ' + s.jahr);
+
+    var gegenwart = s.grund === 'gegenwart';
+    bl.appendChild(B.el('h2', null, gegenwart
+      ? 'Die Gegenwart ist erreicht — das Haus steht noch'
+      : 'Das Brauhaus zum Anker hört auf · ' + s.jahr));
+    bl.appendChild(B.el('div', 'fu-satz', gegenwart
+      ? 'Sechshundert Jahre an demselben Hof, und die Pfanne brennt.'
+      : s.satz));
+
+    /* DER SATZ, UM DEN ES GING. Er steht hier mit den Zahlen des letzten
+       Tages, damit ihn niemand fuer eine Behauptung halten muss. */
+    if (!gegenwart) {
+      bl.appendChild(B.el('div', 'fu-schluss-these',
+        'Nicht die leere Kasse hat das Haus zugemacht. Am letzten Tag lagen '
+        + B.welt.geld(s.kasse) + ' in der Lade, ' + B.welt.menge(s.keller) + ' von '
+        + B.welt.menge(s.plaetze) + ' im Keller und ' + B.zahl(s.rohstoff) + ' '
+        + (B.welt.epoche().rohstoff || 'Rohstoff') + ' in der Kammer. '
+        + 'Was fehlte, war die Adresse, die das Fass abnimmt.'));
+    }
+
+    var z = B.el('div', 'fu-schluss-zahlen');
+    function zeile(was, wert) {
+      var r = B.el('div', 'fu-schlusszeile');
+      r.appendChild(B.el('span', 'w', was));
+      r.appendChild(B.el('span', 'v', wert));
+      z.appendChild(r);
+    }
+    zeile('Gegründet', String(s.gegruendet));
+    zeile('Gespielt', s.seit + ' bis ' + s.jahr + ' · ' + s.jahre
+      + (s.jahre === 1 ? ' Braujahr' : ' Braujahre'));
+    zeile('Fuhren hinausgeschickt', B.zahl(s.fuhren));
+    zeile('Ausgeliefert', B.welt.menge(s.geliefert));
+    zeile('Ohne Rechnung hergegeben', B.welt.menge(s.verschenkt));
+    zeile('Adressen zurückgeholt', B.zahl(s.zurueck.length));
+    bl.appendChild(z);
+
+    /* DIE GENERATIONENZEILE. Das Haus bleibt, der Mensch nicht. */
+    if (s.linie.length) {
+      var g = B.el('div', 'fu-geschlecht');
+      g.appendChild(B.el('b', null, 'DIE, DIE ES GEFÜHRT HABEN'));
+      s.linie.forEach(function (p) {
+        var r = B.el('div', 'fu-gen');
+        r.appendChild(B.el('span', 'j', p.seit + '–' + p.bis));
+        r.appendChild(B.el('span', 'n', p.name));
+        r.appendChild(B.el('span', 'e', p.eigenschaft || ''));
+        g.appendChild(r);
+      });
+      bl.appendChild(g);
+    }
+
+    if (s.verloren.length) {
+      var vl = B.el('div', 'fu-verlust');
+      vl.appendChild(B.el('b', null, 'WIE DAS AUFTRAGSBUCH LEER WURDE'));
+      s.verloren.forEach(function (v) {
+        vl.appendChild(B.el('div', null, v.jahr + '   ' + v.name + ' — '
+          + (v.fremd ? 'der Gegner stand schon da' : 'niemand hat sie genommen')));
+      });
+      bl.appendChild(vl);
+    }
+
+    if (s.zurueck.length) {
+      var zg = B.el('div', 'fu-verlust fu-zurueckliste');
+      zg.appendChild(B.el('b', null, 'UND WER ZURÜCKKAM'));
+      s.zurueck.forEach(function (v) {
+        zg.appendChild(B.el('div', null, v.jahr + '   ' + v.name + ' — '
+          + (v.wie === 'neuer' ? 'hat von selbst wieder angefragt'
+                               : 'zurückgeholt, ohne einen Pfennig')));
+      });
+      bl.appendChild(zg);
+    }
+
+    var fuss = B.el('div', 'fu-sommer-fuss');
+    fuss.appendChild(B.knopf({
+      text: 'Von vorn anfangen — dieselbe Stadt, andere Würfel',
+      zug: 'fuhre:wiederanfang', klasse: 'gross',
+      titel: 'Ein neues Haus in derselben Stadt. Die Chronik dieses Hauses bleibt, '
+           + 'bis das Fenster geschlossen wird.',
+      tu: neuesSpiel
+    }));
+    fuss.appendChild(B.el('div', 'fu-sommer-hinweis',
+      'Escape legt das Blatt beiseite — der Hof bleibt zu sehen, aber die Woche läuft nicht mehr.'));
+    bl.appendChild(fuss);
+
+    fach.appendChild(bl);
+  }
+
+  /* ======================================================================
      ANMELDUNG
      ====================================================================== */
   BRAUHAUS.stueck('fuhre', {
@@ -2441,6 +2608,10 @@
       if (unterhalt > 0) {
         B.welt.zahle(unterhalt, 'Löhne, Futter, Instandhaltung', 'spieler');
       }
+
+      /* Zuletzt: nimmt ueberhaupt noch jemand ab? Die Frist laeuft hier und
+         nirgends sonst — sie ist eine Woche, keine Zeichnung. */
+      pruefeAuftragsbuch();
     },
 
     jahr: function () {

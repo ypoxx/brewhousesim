@@ -54,9 +54,12 @@
 
   var ORDNER = 'ton/klang/';
 
-  /* Wo die Mischung sitzt. Das Bett darf die Epoche sagen, ohne den Hof zu
-     uebertoenen; der Hof traegt den Vorgang. */
-  var PEGEL = { bett: 0.38, hof: 0.44, werk: 0.95 };
+  /* Wo die Mischung sitzt. Die Latte verlangt ZWEI Auskuenfte aus derselben
+     halben Minute: die Zeit und den Vorgang. Das Bett sagt die Zeit, der Hof
+     sagt den Ort, das Werk sagt den Vorgang — und das Werk muss dabei oben
+     liegen. Im ersten Durchgang stand das Bett zu laut, und das Ohr sagte
+     ueber 1350 nur noch "jemand spielt Floete". */
+  var PEGEL = { bett: 0.30, hof: 0.42, werk: 1.25 };
 
   /* ======================================================================
      1 — DER KATALOG
@@ -354,8 +357,8 @@
     var druck;
     try {
       druck = ctx.createDynamicsCompressor();
-      druck.threshold.value = -12; druck.knee.value = 24;
-      druck.ratio.value = 4; druck.attack.value = 0.006; druck.release.value = 0.25;
+      druck.threshold.value = -9; druck.knee.value = 20;
+      druck.ratio.value = 3; druck.attack.value = 0.008; druck.release.value = 0.28;
       meister.connect(druck); druck.connect(ctx.destination);
     } catch (f) { meister.connect(ctx.destination); }
 
