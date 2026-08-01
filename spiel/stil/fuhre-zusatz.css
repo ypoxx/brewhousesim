@@ -18,7 +18,7 @@
    DIE ANSCHLAGTAFEL WIRD ENGER — dieselbe Flaeche, zwei Zeilen mehr
    -------------------------------------------------------------------------- */
 .fu-tafel { gap: calc(var(--s) * 4); padding-top: calc(var(--s) * 8); }
-.fu-tafel .fu-budget { padding: calc(var(--s) * 3) calc(var(--s) * 8); }
+.fu-tafel .fu-budget { padding: calc(var(--s) * 2) calc(var(--s) * 8); }
 .fu-tafel .fu-budget b { font-size: calc(var(--s) * 19); }
 .fu-tafel .fu-budget span { font-size: calc(var(--s) * 14); }
 .fu-tafel .fu-rohstoff { font-size: calc(var(--s) * 14); }
@@ -66,7 +66,7 @@
 /* Die Kaufknoepfe der Tafel duerfen umbrechen. Sonst stapelt sich in 1884
    jeder der fuenf Knoepfe auf eine eigene Zeile, und die Sortenliste
    darueber wird dafuer aufgefressen. */
-.fu-tafel .fu-kaeufe .knopf { flex: 1 1 calc(var(--s) * 185); }
+.fu-tafel .fu-kaeufe .knopf { flex: 1 1 calc(var(--s) * 158); }
 .fu-tafel .fu-kaeufe .knopf .wort { white-space: normal; line-height: 1.12; }
 .fu-tafel .fu-stell .knopf,
 .fu-tafel .fu-kaeufe .knopf { min-height: calc(var(--s) * 30); padding: calc(var(--s) * 3) calc(var(--s) * 9); }
@@ -125,17 +125,22 @@
    -------------------------------------------------------------------------- */
 .fu-kerbholz {
   flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--s) * 2);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: calc(var(--s) * 8);
+  row-gap: calc(var(--s) * 1);
   padding: calc(var(--s) * 3) calc(var(--s) * 8);
   border: 1px dashed rgba(234, 226, 207, 0.34);
   border-radius: calc(var(--s) * 3);
 }
+.fu-kerbzeile { grid-column: 1 / -1; }
+.fu-kerbsatz { grid-column: 1; grid-row: 2; min-width: 0; }
+.fu-kerbholz .knopf { grid-column: 2; grid-row: 2; }
 #buehne[data-epoche="4"] .fu-kerbholz { border-color: rgba(35, 32, 25, 0.3); }
 .fu-kerbholz.offen { border-style: solid; border-color: #e0b070; }
 
-.fu-kerbzeile { display: flex; align-items: center; gap: calc(var(--s) * 7); }
+.fu-kerbzeile { display: flex; align-items: center; gap: calc(var(--s) * 7); min-width: 0; }
 .fu-kerbzeile b {
   font-family: var(--fu-zahlen);
   font-size: calc(var(--s) * 13);
