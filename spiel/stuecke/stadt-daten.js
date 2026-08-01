@@ -185,7 +185,14 @@ var STADT_DATEN = {
        wie die Leute auf der Platte. Bei breite 8.2 misst die Brauerin im Bild
        71 px, die Magd am Tor 72; die Pfanne ist 0,75 Koerperlaengen breit,
        also rund 1,3 m. In 1600 ist die Platte weitraeumiger gezeichnet,
-       deshalb 6.9 statt 8.2 und ein Schritt nach vorn aus dem Steinhaus. */
+       deshalb 6.9 statt 8.2 und ein Schritt nach vorn aus dem Steinhaus.
+       Runde 4: in 1600 stand die Braustelle unter dem Dach der Rossmuehle
+       und war zu 4.410 geaenderten Pixeln zusammengeschrumpft — jetzt einen
+       Schritt weiter nach vorn auf den freien Hofboden (31|69,5). Weil sie
+       damit 70 px naeher an der Kamera steht, waechst sie mit: 7.0 statt
+       6.6. Die Brauerin misst damit rund 62 px neben den zwei Gehern der
+       Platte 1600, die bei Fuss y=915 58 und 62 px hoch sind — sie steht
+       naeher und ist gleich gross, also eher zu klein als zu gross. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
       ort: 'kesselstelle', dx: -9, dy: 5,
       breite: 8.9, breiten: { 1: 8.9, 2: 7 },
@@ -206,11 +213,23 @@ var STADT_DATEN = {
       sagt: 'Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbringt.',
       nutzen: { sud: 1 } },
 
+    /* Stand bis Runde 3 auf C2 (35|78). Dort haengen die beiden losen Faesser
+       112 px unter die Mauerkante — sie standen auf dem Mauerkopf. Jetzt
+       rechts neben der Braustelle (36|68,5), wo der Hof noch Boden hat. */
     { schluessel: 'fasslager_holz', name: 'Fassschuppen', bild: 'fasslager_holz',
       ort: 'fasslager', dx: 12, dy: -7.5, breite: 13, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach über den Fässern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
+    /* Runde 4, das Bild neu: keller_gewoelbe.png war die einzige der 32
+       Hofdateien mit einer undurchsichtigen linken Randspalte (97 Prozent) —
+       der Erdhuegel war am Bildrand glatt abgeschnitten und stand im Schuss
+       1350 als schnurgerade senkrechte Naht neben der Braupfanne. Das neue
+       Bild ist ein freistehender Huegel: die Grasflanke laeuft auf beiden
+       Seiten INNERHALB des Rahmens zu Boden aus, alle vier Raender messen
+       0,00 undurchsichtig. Weil der Huegel damit flacher und breiter ist als
+       der angeschnittene, ist die Breite mitgewachsen (11 statt 9,5/8,6);
+       das Tor misst in 1350 rund 75 px neben Leuten von 76-80 px. */
     { schluessel: 'keller_gewoelbe', name: 'Gewölbekeller', bild: 'keller_gewoelbe',
       ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 11, 2: 11 },
       versatz: { 1: { dx: 9, dy: -3.5 }, 2: { dx: 1, dy: -7 } },
