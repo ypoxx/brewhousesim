@@ -754,15 +754,19 @@
       kasten.appendChild(B.el('div', 'pr-satz pr-klein',
         'Sie richten sich nach dem Umsatz des Vorjahres und nach dem, was in der Kasse liegt.'));
     } else {
+      /* Ein Plus vor dem Zufluss. Ohne es steht der Ertrag eines Baus in
+         derselben Spalte wie eine Abgabe und liest sich wie eine. */
       var summe = 0;
       Z.rechnung.forEach(function (r) {
-        var z = zeile(r.name, r.betrag ? geld(r.betrag) : (r.menge ? '+' + B.zahl(r.menge) : '—'),
-          'pr-' + r.art + (r.offen ? ' pr-offen' : ''));
+        var wert = r.betrag
+          ? (r.betrag > 0 ? '+' + geld(r.betrag) : geld(r.betrag))
+          : (r.menge ? '+' + B.zahl(r.menge) + ' ' + B.welt.epoche().rohstoff : '—');
+        var z = zeile(r.name, wert, 'pr-' + r.art + (r.offen ? ' pr-offen' : ''));
         if (r.offen) z.appendChild(B.el('span', 'pr-marke', 'offen ' + geld(r.offen)));
         kasten.appendChild(z);
         summe += r.betrag;
       });
-      kasten.appendChild(zeile('Zusammen', geld(summe), 'pr-summe'));
+      kasten.appendChild(zeile('Zusammen', (summe > 0 ? '+' : '') + geld(summe), 'pr-summe'));
     }
     sp.appendChild(kasten);
 
