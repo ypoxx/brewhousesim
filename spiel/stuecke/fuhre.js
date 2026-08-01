@@ -292,6 +292,10 @@
 
   function gelistetFuer(a, s) {
     if (!ep().listung) return true;
+    /* Der Notsud laeuft unter dem Etikett des Haendlers und braucht deshalb
+       keinen eigenen Regalmeter — er braucht nur ein Regal. Genau darum ist
+       er in 1970 der Weg zurueck: kein Name, aber ein Absatz. */
+    if (s && s.not) return gelistet(a);
     var l = Z.listung[a.schluessel];
     return !!(l && l[s.k]);
   }
@@ -1260,24 +1264,27 @@
       var grund = sperre(a);
       if (grund && e.bann && a.km > e.bannmeile && !Z.bann[a.schluessel]) {
         var preis = Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr));
+        var bk = kerbZusatz(preis);
         z2.appendChild(B.knopf({
-          text: 'Bannbrief', zug: 'fuhre:bann:' + a.schluessel,
-          klasse: 'fu-klein fu-fest fu-tat', preis: -preis,
-          aus: !B.welt.kann(preis),
-          titel: e.bann.satz + ' ' + a.name + ' liegt ' + a.km + ' km außerhalb. '
-            + (B.welt.kann(preis) ? '' : 'Die Kasse reicht nicht.'),
+          text: 'Bannbrief' + bk, zug: 'fuhre:bann:' + a.schluessel,
+          klasse: 'fu-klein fu-fest fu-tat' + (bk ? ' fu-aufkerbe' : ''), preis: -preis,
+          aus: !kannBezahlen(preis),
+          titel: e.bann.satz + ' ' + a.name + ' liegt ' + a.km + ' km außerhalb.'
+            + kerbTitel(preis),
           tu: function () { loeseBann(a); }
         }));
       } else if (grund && e.listung && !gelistet(a)) {
         var s0 = sorten()[1] || sorten()[0];
         var n2 = 0;
         for (var kk in Z.listung) for (var qq in Z.listung[kk]) if (Z.listung[kk][qq]) n2++;
+        var lp = Math.round(e.listung.basis * Math.pow(e.listung.staffel, n2));
+        var lk2 = kerbZusatz(lp);
         z2.appendChild(B.knopf({
-          text: 'Regalmeter', zug: 'fuhre:listen:' + a.schluessel,
-          klasse: 'fu-klein fu-fest fu-tat',
-          preis: -Math.round(e.listung.basis * Math.pow(e.listung.staffel, n2)),
-          aus: !B.welt.kann(Math.round(e.listung.basis * Math.pow(e.listung.staffel, n2))),
-          titel: e.listung.satz + ' Gelistet würde: ' + s0.name + '.',
+          text: 'Regalmeter' + lk2, zug: 'fuhre:listen:' + a.schluessel,
+          klasse: 'fu-klein fu-fest fu-tat' + (lk2 ? ' fu-aufkerbe' : ''),
+          preis: -lp,
+          aus: !kannBezahlen(lp),
+          titel: e.listung.satz + ' Gelistet würde: ' + s0.name + '.' + kerbTitel(lp),
           tu: function () { liste(a, s0); }
         }));
       } else {
@@ -1416,9 +1423,74 @@
       r.appendChild(stell);
       tab.appendChild(r);
     });
+
+    /* DER NOTSUD — mit Kreide unter den Strich geschrieben. Er kostet keinen
+       Pfennig, keinen Rohstoff und keinen Tag der Jahresverleihung: nur die
+       Pfanne. Deshalb steht er hier in einer eigenen, mageren Zeile und
+       nicht zwischen den drei Bieren des Hauses. */
+    var ns = notSorte();
+    if (ns) {
+      var nz = B.el('div', 'fu-notsud' + (Z.notsud ? ' laeuft' : ''));
+      var nk = B.el('div', 'fu-notsud-kopf');
+      nk.appendChild(B.el('i', 'fu-zeichen', ns.zeichen));
+      nk.appendChild(B.el('b', null, ns.name));
+      nk.appendChild(B.el('span', 'fu-erloes',
+        B.welt.geld(preisJeEinheit(ns)) + ' je ' + B.welt.mengeEinheit()));
+      nz.appendChild(nk);
+      nz.appendChild(B.el('div', 'fu-notsud-zeile',
+        '0 ' + B.welt.waehrung().kurz + ' Auslage · 0 ' + (B.welt.epoche().rohstoff || 'Rohstoff')
+        + ' · 0 ' + (e.budget ? e.budget.name : 'Ration') + ' → ' + B.welt.menge(ns.fass)
+        + ' · hält ' + ns.haltbar + ' Wo. · frisst nur die Pfanne'));
+      var nstell = B.el('div', 'fu-stell');
+      nstell.appendChild(B.knopf({
+        text: '−', zug: 'fuhre:tafel-ab:' + ns.k, klasse: 'fu-klein',
+        aus: !(Z.plan[ns.k] > 0), titel: 'Einen Notsud weniger je Woche.',
+        tu: function () { stelleTafel(ns, -1, 0); }
+      }));
+      nstell.appendChild(B.el('span', 'fu-planzahl', String(Z.plan[ns.k] || 0)));
+      nstell.appendChild(B.knopf({
+        text: '+', zug: 'fuhre:tafel-auf:' + ns.k, klasse: 'fu-klein',
+        titel: ns.satz + ' Umstellen kostet hier nichts — der Braumeister braucht dafür '
+             + 'weder Kreide noch Erlaubnis.',
+        tu: function () { stelleTafel(ns, +1, 0); }
+      }));
+      nz.appendChild(nstell);
+      tab.appendChild(nz);
+    }
     b.appendChild(tab);
 
     if (Z.sudMeldung) b.appendChild(B.el('div', 'fu-sudmeldung', Z.sudMeldung));
+
+    /* DAS KERBHOLZ. Was das Haus schuldig ist, steht sichtbar im Holz —
+       und daneben, womit es zu Georgi bezahlt wird. Nie mit Zins. */
+    var kh = kerbholz();
+    if (kh) {
+      var kb = B.el('div', 'fu-kerbholz' + (Z.kerben ? ' offen' : ''));
+      var kzeile = B.el('div', 'fu-kerbzeile');
+      kzeile.appendChild(B.el('b', null, kh.name.toUpperCase()));
+      var holz = B.el('span', 'fu-kerben');
+      holz.title = kh.satz;
+      for (var ki = 0; ki < kh.kerben; ki++) {
+        holz.appendChild(B.el('i', ki < Z.kerben ? 'an' : ''));
+      }
+      kzeile.appendChild(holz);
+      kzeile.appendChild(B.el('span', 'fu-kerbzahl',
+        Z.kerben + ' von ' + kh.kerben + ' · 1 Kerbe = ' + B.welt.geld(kh.jeKerbe)));
+      kb.appendChild(kzeile);
+      kb.appendChild(B.el('div', 'fu-kerbsatz', Z.kerben
+        ? kh.pfand.sagt
+        : kh.satz));
+      if (Z.kerben) {
+        kb.appendChild(B.knopf({
+          text: 'Eine Kerbe löschen', zug: 'fuhre:kerbe-loeschen', klasse: 'fu-klein',
+          preis: -kh.jeKerbe, aus: !B.welt.kann(kh.jeKerbe),
+          titel: 'Bar bezahlen, ehe Georgi kommt. Was zu Georgi offen steht, '
+               + 'nimmt sich der Gläubiger anders: ' + kh.pfand.sagt,
+          tu: loeseKerbe
+        }));
+      }
+      b.appendChild(kb);
+    }
 
     /* Wovon diese Epoche zu wenig hat. Nie Geld. */
     var kn = B.el('div', 'fu-knappheit');
@@ -1431,18 +1503,36 @@
     var kauf = B.el('div', 'fu-kaeufe');
     (e.kaeufe || []).forEach(function (def) {
       var preis = staffelPreis(def.k, def.basis, def.staffel);
-      var aus = !B.welt.kann(preis);
-      var titel = def.titel;
+      var aufKerbe = kerbZusatz(preis);
+      var aus = !kannBezahlen(preis);
+      var titel = def.titel + kerbTitel(preis);
       if (def.k === 'eis') {
-        if (!frostzeit()) { aus = true; titel = 'Der Fluss trägt nicht mehr. Eis gibt es von Woche '
+        if (!frostzeit()) { aus = true; aufKerbe = '';
+          titel = 'Der Fluss trägt nicht mehr. Eis gibt es von Woche '
           + e.eis.frostVon + ' bis ' + e.eis.frostBis + ' und sonst nie.'; }
-        else if (Z.eis >= Z.eisKeller) { aus = true; titel = 'Der Eiskeller ist voll.'; }
+        else if (Z.eis >= Z.eisKeller) { aus = true; aufKerbe = ''; titel = 'Der Eiskeller ist voll.'; }
       }
       kauf.appendChild(B.knopf({
-        text: def.text, zug: 'fuhre:kauf:' + def.k, preis: -preis,
-        klasse: 'fu-klein', aus: aus, titel: titel,
+        text: def.text + aufKerbe, zug: 'fuhre:kauf:' + def.k, preis: -preis,
+        klasse: 'fu-klein' + (aufKerbe ? ' fu-aufkerbe' : ''), aus: aus, titel: titel,
         tu: function () { kaufe(def.k); }
       }));
+
+      /* Der Rueckweg. Rohstoff geht zum Bruchteil an den Haendler zurueck —
+         der eine Weg, aus einem vollen Speicher Bargeld zu machen, und er
+         kostet genau das, was die Pfanne naechste Woche braucht. */
+      if (def.rueck) {
+        var erloes = Math.max(1, Math.round(def.basis * def.rueck));
+        kauf.appendChild(B.knopf({
+          text: def.rtext || 'Zurück an den Händler', zug: 'fuhre:rueckkauf:' + def.k,
+          preis: erloes, klasse: 'fu-klein fu-rueck',
+          aus: B.welt.haus.rohstoff < def.menge,
+          titel: (def.rtitel || '') + ' Einkauf ' + B.welt.geld(def.basis)
+               + ', Rückgabe ' + B.welt.geld(erloes) + '. In der Kammer liegen '
+               + B.zahl(B.welt.haus.rohstoff) + '.',
+          tu: function () { verkaufeRohstoff(def); }
+        }));
+      }
     });
     b.appendChild(kauf);
     fach.appendChild(b);
