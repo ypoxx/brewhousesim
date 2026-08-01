@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-01T12:36:24+00:00",
+ "stand": "2026-08-01T12:40:31+00:00",
  "phase": "Welle 1 — Grundriss steht",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -167,6 +167,10 @@
   {
    "zeit": "2026-08-01T12:36:24+00:00",
    "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 2 · zurück an den Builder — TODZUSTAND: Kasse 0 + leerer Keller ist absorbierend — ab da geht die Woche nie wieder an. Aus frischem Spiel (?epoche=1) reproduziert mit 5 Klicks, naemlich genau den fuenf Bauhof-Knoepfen, die das Spiel selbst als 'naechster Zug' empfiehlt, plus WEITER: W6 Kasse 0 Pf, W11 Keller 0/28 (das Bier ist im Keller verdorben, ohne dass eine Fuhre moeglich war), danach 36 Wochen bis Jaenner 1352 voellig unveraendert. Auf der Anschlagtafel liegen dabei 54 Grut und 44 Brautage, und sie sagt selbst 'Kein Sud: die Kasse' — jeder Sud kostet 4 Pf. Alle Knoepfe auf DIE HAEUSER und OCHSENKARREN sind [AUS], kein Konkurs, keine Meldung, kein Ende, WEITER laeuft ewig weiter. Zweimal unabhaengig nachgestellt (45 bzw. 63 Wochen, auch bei 1600x1000). Dazu der Widerspruch: durch die Michaeli-Abgaben faellt die Kasse sehr wohl auf −17 Pf, nur der Spieler darf keinen einzigen Pfennig anschreiben lassen. Damit kippt die These des Stuecks ('die Knappheit, die kein Geld ist') ins Gegenteil: am Ende ist Geld die einzige Schranke. Behebbar in den eigenen Dateien — Sud auf Anschrift, Grut zurueckverkaufen oder ein bezahlungsfreier Duennsud. NEBENBEFUNDE: (a) die Reihe unter jedem Haus zeigt Werte ueber dem eigenen Nenner — 'LIN 3·4·49 von 31 Fass', 'PFA 9·8·14 von 12 Fass', 'TOR 1·1·14 von 14 Fass'; (b) Knoepfe in zugeklappten fu-Brettern bleiben enabled und schlucken Klicks folgenlos (elementFromPoint liefert div#buehne); (c) 'Nach Durst fuellen' laesst Platz frei (E1 4 von 5 Fass, 3 von 4 Halten; E3 47 von 60 hl); (d) waehrend die Georgi-Tafel 'Solange diese Tafel oben liegt, ruht der Hof' behauptet, bleiben die 9 Bauhof-/Reiter-Knoepfe des Stadt-Fachs anklickbar. GEPRUEFT UND IN ORDNUNG: Fehler 2 ist behoben — bei 1920x937, 1600x1000 und 2752x1536 liefert elementFromPoint auf WEITER jedesmal DIV.fu-sperre, der Klick wird abgefangen, Leertaste und Eingabetaste bewegen die Uhr nicht (WOCHE 1/30 vorher wie nachher), Escape schliesst und danach zaehlt WEITER wieder. Fehler 1 reproduziert in 12 Epochen-x-Aufloesungs-Kombinationen nicht: 'Das Haus gegenueber' wird immer von elementFromPoint getroffen und schliesst per Klick."
+  },
+  {
+   "zeit": "2026-08-01T12:40:31+00:00",
+   "text": "AUFSICHT HAT GESCHLICHTET — spiel/ZUSTAENDIGKEIT.md: (1) Der ueberdeckte Schliessknopf gehoert DEM GEGNER; Auflage min-width:0 auf den Textblock in .gg-bkopf, weil der Fehler nur zufaellig verschwunden ist. (2) Eine Sperre ueber ALLE Stuecke kann kein Stueck bauen — wird Kernaufgabe in Welle 2. (3) Der Todzustand bleibt bei der FUHRE und ist ein Entwurfsfehler, kein Codefehler."
   }
  ]
 }
