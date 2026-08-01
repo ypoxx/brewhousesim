@@ -693,7 +693,11 @@
     var jetzt = woManifest();
     if (!Z.bottiche.length) {
       band.appendChild(zeile('sud-leer', 'Kein ' + g.gefaess + ' steht an. '
-        + 'Was die Pfanne diese Woche ansetzt, kommt von selbst hierher.'));
+        + (wirkung().gaer > 0
+            ? 'Was die Pfanne diese Woche ansetzt, kommt von selbst hierher.'
+            : 'Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, '
+              + 'ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen '
+              + 'lässt, füllt diesen Keller.')));
     }
     Z.bottiche.forEach(function (b) {
       var rest = Math.max(0, b.reifAb - jetzt);
@@ -875,27 +879,31 @@
       tu: function () { anstich(true); }
     }));
 
-    /* Und die naechste Umstellung, die etwas kostet — nebeneinander mit
-       Preisschild, wie es die zweite Latte verlangt. */
-    var kandidat = null, kandidatAchse = null;
+    /* Zwei Umstellungen, die einander ausschliessen, mit ihrem Preis daneben:
+       die naechste, die NICHTS kostet, und die naechste, die etwas kostet.
+       Genau das ist die zweite Latte, und sie muss im VORGABESTAND stehen —
+       ein Brett, das erst aufgeschlagen werden muss, zaehlt dort nicht. */
+    var ohne = null, mit = null;
     achsen().forEach(function (a) {
       a.optionen.forEach(function (o) {
         if (gewaehlt(a) === o || verdraengt(a, o)) return;
         var p = (o.preis && !bezahlt(a, o)) ? o.preis : 0;
-        if (kandidat === null || p < kandidat.p) { kandidat = { o: o, p: p }; kandidatAchse = a; }
+        if (p === 0) { if (!ohne) ohne = { o: o, a: a, p: 0 }; }
+        else if (!mit || p < mit.p) mit = { o: o, a: a, p: p };
       });
     });
-    if (kandidat) {
+    [ohne, mit].forEach(function (kand, i) {
+      if (!kand) return;
       z.appendChild(knopf({
-        text: kandidat.o.name,
-        zug: 'sud:zettel-wechsel',
-        preis: kandidat.p ? -kandidat.p : 0,
-        klasse: 'sud-tat klein voll' + (kandidat.o.fest ? ' siegel' : ''),
-        titel: kandidat.o.satz,
-        aus: !!(kandidat.p && !B.welt.kann(kandidat.p)),
-        tu: function () { waehle(kandidatAchse, kandidat.o); }
+        text: kand.o.name,
+        zug: 'sud:zettel-wechsel-' + (i ? 'kauf' : 'frei'),
+        preis: kand.p ? -kand.p : 0,
+        klasse: 'sud-tat klein voll' + (kand.o.fest ? ' siegel' : ''),
+        titel: kand.o.satz,
+        aus: !!(kand.p && !B.welt.kann(kand.p)),
+        tu: function () { waehle(kand.a, kand.o); }
       }));
-    }
+    });
 
     B.orte.setze(z, 'sudhaus', { anker: 'mitte', dy: 0 });
     fach.appendChild(z);

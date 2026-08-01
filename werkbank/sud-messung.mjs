@@ -70,8 +70,9 @@ for (const epoche of [1, 2, 3, 4]) {
   vorAktiv.forEach((x) => console.log('   ·', x.text, x.preis ? '[' + x.preis + ']' : ''));
 
   // --- 3. Brett aufschlagen und alles zaehlen -----------------------------
-  const reiter = await seite.$('button[data-zug="stadt:reiter:das-sudhaus"]');
-  if (reiter) { await reiter.click(); await seite.waitForTimeout(500); }
+  const reiter = await seite.$('button[data-zug="stadt:reiter:sud-sud-brett"]');
+  if (reiter) { await reiter.click(); await seite.waitForTimeout(600); }
+  else console.log('  (kein Reiter DAS SUDHAUS gefunden)');
   const auf = await zaehleErreichbar(seite, 'sud:');
   const aufAktiv = auf.filter((x) => x.aktiv && x.getroffen);
   const aufPreis = aufAktiv.filter((x) => x.preis);
@@ -148,18 +149,19 @@ for (const epoche of [1, 2, 3, 4]) {
   not.forEach((x) => console.log('   ·', x.text));
 
   const wirkt = await seite.evaluate(() => {
-    const vorher = JSON.stringify({
-      g: Math.round(window.BRAUHAUS.SUD_ZUSTAND.guete),
-      l: window.BRAUHAUS.welt.vorrat.faesser.length
+    const lies = () => JSON.stringify({
+      verfahren: window.BRAUHAUS.sud.verfahren(),
+      guete: Math.round(window.BRAUHAUS.SUD_ZUSTAND.guete),
+      lager: window.BRAUHAUS.welt.vorrat.faesser.length,
+      gaer: window.BRAUHAUS.sud.gaerkeller.plaetze(),
+      buch: window.BRAUHAUS.SUD_ZUSTAND.buch.length
     });
+    const vorher = lies();
     const k = [...document.querySelectorAll('button[data-zug^="sud:"]')].find((e) => !e.disabled);
     if (!k) return { ok: false, warum: 'kein Knopf' };
     k.click();
-    const nachher = JSON.stringify({
-      g: Math.round(window.BRAUHAUS.SUD_ZUSTAND.guete),
-      l: window.BRAUHAUS.welt.vorrat.faesser.length
-    });
-    return { ok: vorher !== nachher, vorher, nachher, zug: k.getAttribute('data-zug') };
+    const nachher = lies();
+    return { ok: vorher !== nachher, zug: k.getAttribute('data-zug'), vorher, nachher };
   });
   console.log('  Klick auf den ersten aktiven Zug aendert etwas:', JSON.stringify(wirkt));
 
