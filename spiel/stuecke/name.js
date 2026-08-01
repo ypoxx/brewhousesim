@@ -248,6 +248,102 @@
   function aufschlag() { return B.rund(ruf() / 100 * epd().aufschlag, 4); }
 
   /* ======================================================================
+     1b — DAS AUFGELD.  Die Wirkung, die dieses Stueck SELBST besitzt.
+
+     Der Satz des Stuecks heisst: solange man den Namen hat, darf man teurer
+     sein als der Nachbar bei gleichem Bier. In Runde 1 stand dieser Satz als
+     Zahl auf dem Band und bewegte keinen Pfennig, weil der Grundpreis DEM
+     PREIS gehoert. Er gehoert ihm weiterhin — DER NAME schreibt ihn nicht.
+
+     Stattdessen legt DER NAME das Aufgeld auf die Rechnung, die DIE FUHRE
+     gerade geschrieben hat, und nimmt es als EIGENE, benannte Buchung ein.
+     Gelesen wird dabei nur das Protokoll; geschrieben wird nur ueber
+     B.welt.nimm(). Kein fremdes Feld, keine Abgabe, kein Automatismus, der
+     dem Haus etwas wegnimmt: das Aufgeld ist nie negativ.
+     ====================================================================== */
+
+  /* Liest DER PREIS den Ruf eines Tages selbst, hoert DER NAME sofort auf zu
+     buchen — sonst stuende derselbe Aufschlag zweimal in der Kasse. */
+  function preisLiestSelbst() {
+    return !!(B.welt.haus && B.welt.haus.rufAufschlagGelesen);
+  }
+
+  /* Der Satz, den GENAU DIESER Wirt auf die Rechnung legt. Er haengt am Ruf,
+     am Urteil dieses Wirts, am eigenen Zeichen an seiner Tuer — und er ist
+     null, solange das Zeichen verdeckt ist. Verdecken kostet also wirklich
+     Geld, und man sieht, wieviel. */
+  function satzFuer(schluessel) {
+    if (preisLiestSelbst()) return 0;
+    if (Z.ruhe || !versprechen()) return 0;
+    var s = aufschlag();
+    if (schluessel) {
+      s = s * B.grenze(1 + (Z.urteil[schluessel] || 0) / 40, 0.4, 1.5);
+      if (Z.schilder[schluessel] || Z.umtrunk[schluessel]) s = s * 1.15;
+    }
+    if (Z.nachahmung) s = s * 0.75;     /* wer dasselbe Zeichen daneben sieht, feilscht */
+    return B.grenze(B.rund(s, 4), 0, epd().aufschlag);
+  }
+
+  /* Eine Rechnung der FUHRE erkennt man an ihrer eigenen Schreibweise:
+     welt.menge() + ' an ' + Name des Hauses. */
+  function istRechnung(p) {
+    return p && p.wer === 'spieler' && p.preis > 0 && !p.misslungen
+      && /^[\d.,]+ (Fass|hl) an ./.test(p.was);
+  }
+
+  function buche(wohin, adr, erloes) {
+    var satz = satzFuer(adr);
+    var betrag = Math.round(erloes * satz);
+    if (betrag <= 0) return 0;
+    B.welt.nimm(betrag, epd().aufgeldWort + ' · ' + wohin + ' · '
+      + B.zahl(satz * 100, 1) + ' im Hundert auf ' + geld(erloes), 'spieler');
+    var e = { jahr: jahr(), woche: woche(), wohin: wohin, adr: adr || null,
+      rechnung: erloes, satz: satz, betrag: betrag, ruf: ruf() };
+    Z.buch.push(e);
+    if (Z.buch.length > 120) Z.buch.shift();
+    Z.aufgeldWoche += betrag;
+    Z.aufgeldJahr += betrag;
+    Z.aufgeldEpoche += betrag;
+    Z.aufgeldGesamt += betrag;
+    Z.aufgeldZuletzt = e;
+    return betrag;
+  }
+
+  /* Laeuft das Protokoll von der letzten gelesenen Zeile an durch. Jede
+     Rechnung wird hoechstens EINMAL verwendet (Z.letzteRechnung). */
+  function kassiereAufgeld() {
+    if (!B.protokoll) return 0;
+    var l = B.protokoll, ende = l.length, summe = 0, i, j;
+    for (i = Z.buchStand; i < ende; i++) {
+      var p = l[i];
+      if (!p || p.wer !== 'spieler') continue;
+
+      /* 1 — eine gewoehnliche Fuhre: 'geliefert an X' mit Menge und Adresse.
+         Die Rechnung steht unmittelbar davor. */
+      if (p.menge > 0 && p.adresse && p.was.indexOf('geliefert an ') === 0) {
+        var erloes = 0;
+        for (j = i - 1; j >= 0 && j >= i - 3; j--) {
+          if (!l[j] || l[j].nr <= Z.letzteRechnung) break;
+          if (istRechnung(l[j])) { erloes = l[j].preis; Z.letzteRechnung = l[j].nr; break; }
+        }
+        if (erloes > 0) {
+          summe += buche(p.was.replace('geliefert an ', ''), p.adresse, erloes);
+        }
+        continue;
+      }
+
+      /* 2 — der Sommerabsatz der FUHRE kommt als eine Summe ohne Adresse. */
+      if (p.preis > 0 && p.was.indexOf('Sommerabsatz') === 0 && p.nr > Z.letzteRechnung) {
+        Z.letzteRechnung = p.nr;
+        summe += buche('Sommerabsatz', null, p.preis);
+      }
+    }
+    Z.buchStand = B.protokoll.length;
+    if (summe > 0) B.ton.spiele('name:aufgeld');
+    return summe;
+  }
+
+  /* ======================================================================
      2 — DAS REGISTER.  Fremde Urteile, datiert, nur wachsend.
      Ein schweres schlechtes Urteil knipst aeltere gute aus; sie bleiben
      durchgestrichen stehen. Nichts wird je entfernt.
@@ -299,6 +395,10 @@
     h.rufAufschlag = aufschlag();
     h.rufNachbar = Math.round(Z.adlerRuf);
     h.rufMedium = epd().medium;
+    /* Was der Ruf bis jetzt WIRKLICH eingebracht hat. Auch das schreibt
+       sonst niemand — es ist die Gegenprobe zum Satz auf dem Band. */
+    h.rufAufgeldJahr = Z.aufgeldJahr;
+    h.rufAufgeldGesamt = Z.aufgeldGesamt;
   }
 
   /* Der Satz, den die Latte messbar macht: dasselbe Fass, zwei Preise. */
@@ -476,6 +576,11 @@
      ====================================================================== */
 
   function wochenlauf() {
+    /* Was in der abgelaufenen Woche noch offen war, wird jetzt kassiert;
+       danach faengt die Wochenzahl bei null an. */
+    B.wage('name.aufgeld', kassiereAufgeld);
+    Z.aufgeldWoche = 0;
+
     var ziel = zielBekannt();
 
     /* Langsam zu bauen: hoechstens 0,9 in der Woche.  Ein Braujahr hat 30. */
