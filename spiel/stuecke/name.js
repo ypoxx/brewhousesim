@@ -214,8 +214,18 @@
 
   /* Haengt gerade irgendein Zeichen des Hauses draussen?  Das ist das
      Versprechen: erst wenn es haengt, kann es gebrochen werden. */
+  /* Ein unwiderrufliches Zeichen bleibt am Haus, auch wenn kein Etat mehr
+     laeuft: das Zunftzeichen, der gemarkte Krug, das eingetragene
+     Warenzeichen. Deshalb faellt das Versprechen nicht auf null, sobald das
+     Geld einmal fehlt — es wird nur leiser, weil die Bekanntheit sinkt. Ohne
+     das waere ein leeres Jahr eine Falle, aus der nichts mehr herausfuehrt. */
+  function dauerzeichen() {
+    return !!(Z.fest.zunftzeichen || Z.fest.krug || Z.fest.warenzeichen);
+  }
+
   function versprechen() {
     if (Z.ruhe) return false;          /* verdeckt wird nichts versprochen */
+    if (dauerzeichen()) return true;
     var l = traegerListe();
     for (var i = 0; i < l.length; i++) {
       var t = l[i];
