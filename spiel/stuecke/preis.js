@@ -1886,7 +1886,25 @@
     Z.startjahr = jahr();
     Z.kaeufe = 0;
     Z.hoehe = Math.max(B.welt.haus.kasse, 1);
-    Z.umsatz = erste ? 0 : messeUmsatz(jahr() - 1);
+    /* DAS HAUS HAT NICHT HEUTE ANGEFANGEN.
+
+       Bis zum 2. August 2026 stand der Ausstoss des ersten Jahres auf NULL,
+       weil noch kein Braujahr protokolliert war. Der Anschlag des ersten
+       Michaeli bestand damit allein aus der Barschaft und lag in jeder Epoche
+       am Mindestansatz — und genau deshalb ist die Kennzahl der zweiten Latte
+       in JEDER Epoche im ersten Jahr am hoechsten und faellt danach: gemessen
+       3,39 / 3,56 / 5,09 / 4,30 im Eroeffnungsjahr gegen ein Band von 1,8 bis
+       2,9 in allen folgenden. Ein Drittel des gemessenen Gefaelles ist dieser
+       eine Punkt, und er ist ein Rechenartefakt, kein Zug.
+
+       Er ist auch sachlich falsch. Das Haus zum Anker steht seit
+       Generationen; der Boettcher, der Grutherr und der Rat kennen seinen
+       Ausstoss. `umsatzAnfang` ist, was das Haus unter der vorigen Hand
+       durchgesetzt hat — die Zahl, mit der es angeschlagen wird, bevor es
+       selbst ein Jahr gebraut hat. In die Reihe des Steuerausschusses geht
+       sie nicht ein (siehe `michaeli`, Schritt 11): veranlagt wird die Hand,
+       die jetzt braut. */
+    Z.umsatz = erste ? (ep().umsatzAnfang || 0) : messeUmsatz(jahr() - 1);
     /* Eine neue Zeit rechnet neu: die Nahrung der vorigen Epoche steht in
        einer anderen Waehrung und darf nicht angeschlagen werden. Das gilt
        auch fuer die Reihe, aus der der Dreijahresschnitt kommt — Gulden

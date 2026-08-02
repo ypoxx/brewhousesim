@@ -86,6 +86,10 @@ var PREIS_DATEN = {
          einen Kessel. Wer das nicht mehr hat, braut nicht mehr, und dann
          bekommt der Rat im naechsten Jahr gar nichts. */
       notpfennig: 48,
+      /* Was das Haus unter der vorigen Hand durchgesetzt hat — der Anschlag
+         des ersten Michaeli rechnet damit, nicht mit null (siehe preis.js,
+         `richteEin`). Rund fuenfzig Fass Grutbier zu neun Pfennig. */
+      umsatzAnfang: 450,
       /* DIE NACHFUEHRUNG DES SATZES (siehe preis.js, `nachfuehrung`).
          Wie viel von der Teuerung beim Haus ankommt, ohne dass es etwas
          dafuer baut. Der Biersatz des 14. Jahrhunderts war an den
@@ -283,6 +287,7 @@ var PREIS_DATEN = {
          Holz, Fuhrlohn. Das Kloster als Grundherr nimmt es nicht: ein Pachthof,
          der nicht mehr braut, traegt keinen Pachtzins mehr. */
       notpfennig: 280,
+      umsatzAnfang: 1900,
       /* Der Kurfuerst haelt den Satz kurz: an ihm haengt sein
          Malzaufschlag, und ein hoher Satz macht Unruhe in der Stadt.
          Diese Epoche besteht die zweite Messlatte auch ohne — was hier
@@ -480,6 +485,7 @@ var PREIS_DATEN = {
          entzogen, seit es eine Zivilprozessordnung gibt; der Steuerausschuss
          stundet den Rest und schreibt ihn fort. */
       notpfennig: 4200,
+      umsatzAnfang: 17000,
       /* Der Landesherr setzt den Preis „nur noch dem Namen nach"; was
          wirklich zaehlt, ist die Konvention der Brauereien am Ort, und
          die zieht mit den Kosten mit. Der hoechste der vier Saetze. */
@@ -683,6 +689,7 @@ var PREIS_DATEN = {
          Sudhaus, Abfuellung und Fuhrpark im naechsten Jahr laufen. Eine Bank
          vollstreckt nicht in den Betrieb, der ihre Tilgung verdient. */
       notpfennig: 50000,
+      umsatzAnfang: 150000,
       /* Der Handel diktiert den Aktionspreis, der Listenpreis ist Zierde —
          aber auch der Handel gibt die Kostensteigerung weiter, nur spaet
          und nie ganz. Zwischen 1350 und 1884. */
@@ -742,7 +749,11 @@ var PREIS_DATEN = {
            + 'von der Nordstern-Gruppe beliefert.',
 
       angebote: [
-        { k: 'kasten', name: 'Der eigene Mehrwegkasten', anteil: 0.040, bauzeit: 0, ab: 1955,
+        /* 0,040 war die billigste Sprosse aller vier Epochen und hat das
+           Eroeffnungsjahr dieser Epoche auf 4,30 gehoben, waehrend das Band
+           danach bei 2,1 bis 2,9 liegt. Zwanzigtausend Kaesten und die
+           Flaschen dazu sind fuer ein Haus dieser Groesse keine Kleinigkeit. */
+        { k: 'kasten', name: 'Der eigene Mehrwegkasten', anteil: 0.052, bauzeit: 0, ab: 1955,
           was: 'Zwanzig Flaschen, Kunststoff, Name in den Griff geprägt.',
           satz: 'Der Kasten steht in fremden Kellern und wirbt dort, ohne dass jemand ihn ansieht.',
           wirkung: { preis: 0.04, ansehen: 8, ertrag: 3000 } },
