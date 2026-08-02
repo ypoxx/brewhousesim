@@ -838,7 +838,8 @@
   function imStreit(oben, unten) {
     var d = ueberdeckung(oben.r, unten.r);
     if (d <= DECKGRENZE) return false;      /* beruehrt sich nur */
-    return true;  /* A/B: alte Regel, nur das Rechteck */
+    if (d >= SCHLUCKT) return true;         /* verschluckt es ganz */
+    return zuegeDrunter(oben, unten) > 0;   /* deckt es einen Zug zu? */
   }
 
   function nachsehen() {

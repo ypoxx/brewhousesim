@@ -474,7 +474,11 @@
          + (ziel ? ' — angesetzt war ' + b.sorte : ''),
       preis: 0, menge: 0 });
 
-    if (ziel) {
+    /* Ein Bottich, der nicht auf einmal ins Lager passt, kommt in mehreren
+       Wochen zurueck. Gezaehlt und aufgeschrieben wird er trotzdem EINMAL —
+       sonst stehen im Sudbuch vier Zeilen fuer einen Sud. */
+    if (ziel && !b.gemeldetStufe) {
+      b.gemeldetStufe = true;
       Z.gestuft++;
       buch('Bottich ' + b.nr + ': ' + b.sorte + ' schlägt als ' + ziel.name + ' aus — '
         + 'die Pfanne trägt es nicht');
