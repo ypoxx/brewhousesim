@@ -256,32 +256,36 @@ var STADT_DATEN = {
      -------------------------------------------------------------------- */
   verwertung: {
     1: { verb: 'versatz', wort: 'VERSATZ', tat: 'Zum Versatz',
+         gab: 'zum Versatz gegeben',
          anteil: 0.45, zwang: 0.34, ansehen: -2,
          kopf: 'was der Lombarde am Markt in Satz nimmt',
-         sagt: 'Der Lombarde nimmt Stein und Holz in Satz und zaehlt Pfennige auf '
-             + 'den Tisch. Eingeloest wird selten: wer versetzt, hat verkauft.',
-         ratSagt: 'Der Rat laesst pfaenden. Zwei Ratsdiener, ein Karren, kein Wort.' },
+         sagt: 'Der Lombarde nimmt Stein und Holz in Satz und zählt Pfennige auf '
+             + 'den Tisch. Eingelöst wird selten: wer versetzt, hat verkauft.',
+         ratSagt: 'Der Rat lässt pfänden — zwei Ratsdiener, ein Karren, kein Wort.' },
 
     2: { verb: 'wiederkauf', wort: 'WIEDERKAUF', tat: 'Auf Wiederkauf',
+         gab: 'auf Wiederkauf verkauft',
          anteil: 0.55, zwang: 0.41, ansehen: -3,
          kopf: 'Verkauf mit Wiederkaufsrecht, vor dem Rat verbrieft',
          sagt: 'Verkauft auf Wiederkauf, mit Brief und Siegel im Ratsbuch. Das '
              + 'Geld ist heute da, das Haus steht von heute an fremdem Mann.',
-         ratSagt: 'Der Rat gibt es auf die Gant. Ausgerufen dreimal, zugeschlagen einmal.' },
+         ratSagt: 'Der Rat gibt es auf die Gant — dreimal ausgerufen, einmal zugeschlagen.' },
 
     3: { verb: 'hypothek', wort: 'HYPOTHEK', tat: 'Hypothek auf',
+         gab: 'mit einer Hypothek belegt',
          anteil: 0.70, zwang: 0.52, zins: 0.055, bleibt: true, ansehen: -1,
-         kopf: 'Eintrag ins Hypothekenbuch — das Gebaeude bleibt stehen',
-         sagt: 'Eingetragen im Hypothekenbuch. Das Gebaeude bleibt im Hof und '
-             + 'arbeitet weiter; der Zins laeuft jeden Michaeli mit.',
-         ratSagt: 'Zwangsversteigerung. Das Amtsgericht schlaegt zu, der Hof wird kleiner.' },
+         kopf: 'Eintrag ins Hypothekenbuch — das Gebäude bleibt stehen',
+         sagt: 'Eingetragen im Hypothekenbuch. Das Gebäude bleibt im Hof und '
+             + 'arbeitet weiter; der Zins läuft jeden Michaeli mit.',
+         ratSagt: 'Zwangsversteigerung — das Amtsgericht schlägt zu, der Hof wird kleiner.' },
 
     4: { verb: 'abbruch', wort: 'ABBRUCH', tat: 'Abbruch',
+         gab: 'abgebrochen, der Platz verkauft',
          anteil: 0.85, zwang: 0.63, endgueltig: true, ansehen: -1,
-         kopf: 'Abbruch und Grundstueck — was hier weggeht, kommt nicht wieder',
-         sagt: 'Bagger, Bauschutt, Grundstueck verkauft. Der Quadratmeter '
+         kopf: 'Abbruch und Grundstück — was hier weggeht, kommt nicht wieder',
+         sagt: 'Bagger, Bauschutt, Grundstück verkauft. Der Quadratmeter '
              + 'Innenstadt bringt mehr als das, was darauf steht.',
-         ratSagt: 'Die Bank verwertet. Der Abbruch wird nicht mehr gefragt, er wird angesetzt.' }
+         ratSagt: 'Die Bank verwertet — der Abbruch wird nicht mehr gefragt, er wird angesetzt.' }
   },
 
   /* --------------------------------------------------------------------

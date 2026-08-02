@@ -92,8 +92,17 @@ var SUD_DATEN = {
         plaetze: 10,
         satz: 'Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass.',
         kauf: { text: 'Bottich beim Küfer bestellen', menge: 6, basis: 26, staffel: 1.25,
-                titel: 'Sechs Fass mehr Gärraum. Was nicht in den Gärkeller passt, reift im '
-                     + 'Lager mit und altert dabei.' }
+                titel: '{menge} mehr Gärraum. Was nicht in den Gärkeller passt, reift im '
+                     + 'Lager mit und altert dabei.',
+                /* Die Nebenbedingung der Epoche — eine GRENZE. Wo reihum
+                   gebraut wird, ist Gaerraum kein Handel, sondern Zuteilung:
+                   der Kuefer der Stadt arbeitet fuer alle Haeuser der Reihe. */
+                bedingung: { art: 'grenze', wert: 2,
+                             satz: 'Die Reihe duldet keinen, der doppelt so viel ansetzt wie '
+                                 + 'die anderen: der Küfer der Stadt setzt keinem Haus mehr '
+                                 + 'als zwei neue Bottiche.',
+                             zu: 'Der Küfer hat für dieses Haus zwei Bottiche gesetzt. Mehr '
+                               + 'gibt die Reihe nicht her.' } }
       },
       guete: { name: 'Das Hefezeug', kurz: 'Zeug', invers: false,
                satz: 'Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um.' },
@@ -151,7 +160,16 @@ var SUD_DATEN = {
         plaetze: 16,
         satz: 'Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr.',
         kauf: { text: 'Gärbottich setzen lassen', menge: 10, basis: 78, staffel: 1.25,
-                titel: 'Zehn Fass mehr Gärraum. Der Küfer setzt ihn im Gewölbe auf.' }
+                titel: '{menge} mehr Gärraum. Der Küfer setzt ihn im Gewölbe auf.',
+                /* Die Nebenbedingung der Epoche — eine KOPPLUNG an die eigene
+                   Achse. Die Bauabnahme liegt bei derselben Lade, die auch
+                   die Schuettung beschaut; wer streckt, bekommt sie nicht. */
+                bedingung: { art: 'kopplung', achse: 'schuettung', option: 'rein',
+                             satz: 'Die Bauabnahme liegt bei der Zunftlade — derselben, die '
+                                 + 'auch in den Kessel sieht.',
+                             zu: 'Die Zunftlade nimmt keinen Bau ab, solange in diesem Haus '
+                               + 'gestreckt gebraut wird. Erst rein nach dem Gebot, dann der '
+                               + 'Gärbottich.' } }
       },
       guete: { name: 'Die Stellhefe', kurz: 'Stellhefe', invers: false,
                satz: 'Wer die Stellhefe nicht schöpft, braut nach Glück.' },

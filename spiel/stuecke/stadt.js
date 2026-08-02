@@ -164,10 +164,32 @@
      Stand steckt schon in den Grundzahlen von kern/welt.js. Trotzdem kostet
      auch der geerbte Bau: wer den Malzboden versetzt, hat den Lagerplatz
      nicht mehr. Deshalb wird immer abgezogen und unten abgefangen. */
+  /* Wieviel das Haus zu Beginn dieser Epoche konnte. Die Grundzahlen stehen
+     in kern/welt.js und enthalten den geerbten Stand schon; unter ein Drittel
+     davon darf ein einzelner Abgang das Haus nicht druecken, sonst nimmt der
+     Abbruch EINER Halle in 1970 den Wochensud von 20 auf 1 und das Haus ist
+     nicht arm, sondern tot. */
+  var koennen = null;
+
+  function merkeKoennen() {
+    if (!B.welt.vorrat || !B.welt.haus) return;
+    koennen = {
+      plaetze: B.welt.vorrat.plaetze,
+      sud: B.welt.haus.sudJeWoche || 1
+    };
+  }
+
   function entwirke(a) {
     var n = a.nutzen || {};
-    if (n.platz) B.welt.vorrat.plaetze = Math.max(4, B.welt.vorrat.plaetze - n.platz);
-    if (n.sud) B.welt.haus.sudJeWoche = Math.max(1, (B.welt.haus.sudJeWoche || 1) - n.sud);
+    if (!koennen) merkeKoennen();
+    var bodenPlatz = koennen ? Math.max(4, Math.round(koennen.plaetze * 0.34)) : 4;
+    var bodenSud = koennen ? Math.max(1, Math.round(koennen.sud * 0.34)) : 1;
+    if (n.platz) {
+      B.welt.vorrat.plaetze = Math.max(bodenPlatz, B.welt.vorrat.plaetze - n.platz);
+    }
+    if (n.sud) {
+      B.welt.haus.sudJeWoche = Math.max(bodenSud, (B.welt.haus.sudJeWoche || 1) - n.sud);
+    }
     if (n.rohstoff) B.welt.haus.rohstoff = Math.max(0, B.welt.haus.rohstoff - n.rohstoff);
   }
 
@@ -241,7 +263,7 @@
     var betrag = erloes(a, ep, zwang);
     var bleibt = !!art.bleibt && !zwang;
 
-    B.welt.nimm(betrag, (zwang ? art.ratSagt.split('.')[0] + ': ' : art.tat + ': ') + a.name);
+    B.welt.nimm(betrag, (zwang ? art.ratSagt.split('—')[0].trim() + ': ' : art.tat + ': ') + a.name);
     if (bleibt) {
       belastet[a.schluessel] = { jahr: B.welt.zeit.jahr, betrag: betrag };
     } else {
@@ -254,9 +276,8 @@
     }
     B.welt.schreibe(
       zwang
-        ? art.ratSagt + ' ' + a.name + ' geht fuer ' + B.welt.geld(betrag) + ' weg.'
-        : a.name + ' — ' + art.tat.toLowerCase() + ' gegeben, ' + B.welt.geld(betrag)
-          + '. ' + art.sagt,
+        ? art.ratSagt + ' ' + a.name + ': ' + B.welt.geld(betrag) + '.'
+        : a.name + ' — ' + art.gab + ', ' + B.welt.geld(betrag) + '. ' + art.sagt,
       'bau');
     if (B.ton && B.ton.spiele) B.ton.spiele('stadt:bau');
     return betrag;
@@ -1473,6 +1494,7 @@
 
     aufbau: function () {
       setzeStand();
+      merkeKoennen();
       werkbank();
 
       /* Alles vorladen: der Hof soll beim Kauf sofort dastehen, und der
@@ -1509,6 +1531,7 @@
       seiteGewaehlt = false;
       bauhofSeite = 'bau';
       belastet = {};
+      merkeKoennen();
       Object.keys(gebaut).forEach(function (s) {
         var a = K.aufbauten.filter(function (x) { return x.schluessel === s; })[0];
         if (!a) return;
