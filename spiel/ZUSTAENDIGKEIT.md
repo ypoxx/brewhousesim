@@ -610,3 +610,47 @@ DIE FUHRE steht bei E1 5/5, E2 4/5, E3 5/5, E4 4/5 — zwei Fehljahre bei einer 
 ihr das Vierfache des Erlaubten wegnimmt. **Die Eichung wartet nicht auf DIE FUHRE, sie
 wartet auf DEN PREIS.** Ist die Rechnung von der Barschaft gelöst und auf 5 % zurück, wird
 die Eichung neu gemessen, bevor jemand weiter an ihr baut.
+
+---
+
+## 23 — Ein Blatt darf das Spiel nicht anhalten
+
+**Vorgetragen von:** dem Builder von DER GEGNER, Runde 2, als Kernmeldung — er konnte seine
+eigene Latte nicht messen, weil in 63 von 92 Wochen nichts von seinem Stück im Bild war.
+**Nachgemessen von der Aufsicht, in allen vier Epochen, und schärfer bestätigt.**
+**Entschieden:** Auflage an DIE FUHRE, sofort, vor allem anderen.
+
+Der Befund, gemessen mit einem Spieler, der **nur WEITER klickt** — die einfachste Schleife,
+die das Spiel kennt:
+
+| Epoche | Das Spiel bleibt stehen in | Anteil des Fensters, den `.fu-sperre` deckt |
+|---|---|---|
+| 1 · 1350 | **1351 / Woche 1** | 100 % |
+| 2 · 1600 | **1601 / Woche 1** | 100 % |
+| 3 · 1884 | **1885 / Woche 1** | 100 % |
+| 4 · 1970 | **1971 / Woche 1** | 100 % |
+
+Der Sommerzettel der FUHRE legt sich zu Georgi über den ganzen Hof und geht nicht wieder weg.
+WEITER liegt darunter und ist nicht mehr zu treffen. Herauszukommen ist nur über zwei Knöpfe,
+die man kennen muss: `fuhre:jahresplan:grut` (oder `:duenn`) und danach `fuhre:sommer-zu`.
+Wer das nicht weiß, für den ist die Partie nach **einem** Braujahr zu Ende — in jeder Epoche.
+
+Das ist genau der Fehler aus `spiel/BEFUND-BRETTER.md`, eine Ebene höher: dort deckte ein
+Brett das andere zu, hier deckt ein Blatt alles. Und es hat dieselbe zweite Wirkung: **es
+fälscht jede Messung.** Die Prüfstände der Werkbank drücken beide Knöpfe, weil sie es aus dem
+Quelltext wissen; ein Kritiker, der spielt, tut es nicht. Zwei Wellen lang haben Kritiker
+gegen einen Bildschirm gemessen, der für einen Spieler stillstand.
+
+> **Auflage an DIE FUHRE, drei Teile:**
+> 1. **Der Sommerzettel darf WEITER nie verdecken.** Entweder er lässt das Feld frei, oder
+>    WEITER liegt über ihm. Der Zettel ist eine Entscheidung, kein Riegel.
+> 2. **Er muss sich ohne Vorwissen schließen lassen** — ein sichtbarer Knopf mit dem Wort
+>    darauf, das ihn schließt, nicht zwei, die man erraten muss. §2 der ZUSTAENDIGKEIT hat
+>    ihn als gewollten Halt bestätigt; gewollt ist der Halt, nicht die Sackgasse.
+> 3. **Nachgewiesen wird es mit einem Lauf, der nur WEITER klickt**, über drei Braujahre in
+>    allen vier Epochen. Kommt er durch, ist die Auflage erfüllt. Das Prüfmuster liegt als
+>    `werkbank/schuss/eichung/erreichbar.mjs` daneben.
+
+**Und eine Regel, die daraus folgt, für alle Stücke:** Ein Blatt, das den Bildschirm
+formatfüllend deckt, gehört in `BRAUHAUS.lage`, wenn es länger liegt, als eine Entscheidung
+dauert. Wer eines legt, legt auch den Weg heraus — sichtbar, in derselben Fläche.

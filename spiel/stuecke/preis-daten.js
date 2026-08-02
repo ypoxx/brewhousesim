@@ -427,7 +427,7 @@ var PREIS_DATEN = {
       lastenGrund: 11000,
       teuerungJahr: 1.048,
       teuerungKauf: 1.060,
-      lastenFest: 900,
+      lastenFest: 1000,
       pflichtUmsatz: 0.085,
       pflichtErtrag: 0.45,
       nachlass: 0.55,
@@ -435,7 +435,7 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.175,
       umlageAnteil: 0.90,
       handlohnAnteil: 1.10,
-      abstaende: [3, 3, 4, 3, 5, 4, 3, 4],
+      abstaende: [2, 4, 3, 5, 4, 3, 4],
 
       ordnung: [
         { ab: 1800, preis: 44, sagt: 'Der Landesherr setzt den Bierpreis noch, aber nur noch dem Namen nach.' },
