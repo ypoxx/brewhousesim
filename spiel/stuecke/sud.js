@@ -952,7 +952,13 @@
               + 'ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen '
               + 'lässt, füllt diesen Keller.')));
     }
-    Z.bottiche.forEach(function (b) {
+    /* Hoechstens acht Gefaesse im Bild. In 1970 standen sonst zwanzig Tanks
+       untereinander und schoben die Unterkante des Bretts von 58 auf 87 % der
+       Buehne — dorthin, wo der GEGNER seine Preisschilder am Marktstand hat.
+       Ein Brett, dessen Hoehe vom Betrieb abhaengt, hat keine Flaeche. Am
+       Band haengt kein einziger Knopf; es geht also kein Zug verloren. */
+    var SICHTBAR = 8;
+    Z.bottiche.slice(0, SICHTBAR).forEach(function (b) {
       var rest = Math.max(0, b.reifAb - jetzt);
       var ziel = ausschlagSorte(b);
       var bt = B.el('div', 'sud-bottich s' + b.stufe
@@ -973,6 +979,12 @@
         + (ziel ? ' — angesetzt als ' + b.sorte + ', schlägt als ' + ziel.name + ' aus' : '');
       band.appendChild(bt);
     });
+    if (Z.bottiche.length > SICHTBAR) {
+      var weiter = Z.bottiche.length - SICHTBAR, restFass = 0;
+      Z.bottiche.slice(SICHTBAR).forEach(function (b) { restFass += b.fass; });
+      band.appendChild(B.el('div', 'sud-mehr', '… und ' + weiter + ' weitere '
+        + (weiter === 1 ? g.gefaess : g.gefaesse) + ' mit ' + B.welt.menge(restFass)));
+    }
     kasten.appendChild(band);
 
     /* 1970: was draussen steht und noch nicht nachgemessen ist. Ein
@@ -982,12 +994,15 @@
       var rk = B.el('div', 'sud-rueck');
       rk.appendChild(B.el('b', 'sud-achsname', rr.name));
       rk.appendChild(zeile('sud-achssatz', rr.satz));
-      Z.rueck.slice().sort(function (x, y) { return x.faellig - y.faellig; }).forEach(function (x) {
+      var rl = Z.rueck.slice().sort(function (x, y) { return x.faellig - y.faellig; });
+      rl.slice(0, 3).forEach(function (x) {
         var w = Math.max(0, x.faellig - jetzt);
         rk.appendChild(zeile('sud-rueckzeile', 'Charge ' + x.nr + ' · ' + B.welt.menge(x.menge)
           + ' · ±' + x.ab + ' % · ' + (w ? 'nachgemessen in ' + w + (w === 1 ? ' Woche' : ' Wochen')
                                           : 'wird jetzt nachgemessen')));
       });
+      if (rl.length > 3) rk.appendChild(zeile('sud-mehr', '… und ' + (rl.length - 3)
+        + ' weitere Chargen stehen draußen'));
       kasten.appendChild(rk);
     }
 
@@ -1011,7 +1026,7 @@
       var ck = B.el('div', 'sud-chargen');
       ck.appendChild(B.el('b', 'sud-achsname', ch.name));
       ck.appendChild(zeile('sud-achssatz', ch.satz));
-      gesperrt.forEach(function (b) {
+      gesperrt.slice(0, 3).forEach(function (b) {
         var z = B.el('div', 'sud-chargenzeile');
         z.appendChild(B.el('span', 'sud-bnr', String(b.nr)));
         z.appendChild(B.el('span', 'sud-bsorte',
@@ -1027,6 +1042,10 @@
         }));
         ck.appendChild(z);
       });
+      /* Drei auf einmal — mehr passt nicht ins Brett, und der Braumeister gibt
+         nach vier Wochen ohnehin von selbst frei. */
+      if (gesperrt.length > 3) ck.appendChild(zeile('sud-mehr',
+        '… und ' + (gesperrt.length - 3) + ' weitere Chargen stehen gesperrt.'));
       kasten.appendChild(ck);
     }
 

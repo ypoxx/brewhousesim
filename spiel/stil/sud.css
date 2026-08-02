@@ -248,6 +248,14 @@
 .sud-bottich.gestuft { border-color: #a9764a; border-style: dashed; }
 .sud-bziel { font-family: var(--mono); font-size: calc(var(--s) * 15); color: #7a3f22; }
 
+.sud-mehr {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  color: #7d6c4e;
+  padding-top: calc(var(--s) * 3);
+  flex: 1 0 100%;
+}
+
 .sud-leer { font-size: calc(var(--s) * 17); color: #7d6c4e; font-style: italic; padding: calc(var(--s) * 6) 0; }
 
 /* --------------------------------------------------------------------------
