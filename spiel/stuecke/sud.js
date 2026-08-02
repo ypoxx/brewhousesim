@@ -454,7 +454,11 @@
     /* HIER wird entschieden, was fuer ein Bier es geworden ist. */
     var ziel = ausschlagSorte(b);
     var sorte = ziel ? ziel.name : b.sorte;
-    var pur = ziel ? Math.max(1, (ziel.haltbar || 6) - (ziel.reife || 0)) : b.haltbarPur;
+    /* Die Sortenliste der FUHRE fuehrt `haltbar` als REINE Fasszeit und
+       stempelt beim Brauen `reife + haltbar` ans Fass. Der Gaerkeller rechnet
+       die Reife wieder heraus (haltbarPur); eine neue Sorte bringt ihre reine
+       Zeit dagegen schon mit — hier darf nichts abgezogen werden. */
+    var pur = ziel ? Math.max(1, ziel.haltbar || 6) : b.haltbarPur;
 
     var gelegt = B.welt.legeEin(sorte, n);
     if (!gelegt) return false;
@@ -963,7 +967,7 @@
                    : (rest ? ('reif in ' + rest + (rest === 1 ? ' Woche' : ' Wochen'))
                            : (lagerVoll ? 'reif — kein Platz im Lager' : 'schlägt aus'))));
       bt.title = b.sorte + ' · ' + b.verfahren + ' · hält am Fass '
-        + Math.round((ziel ? Math.max(1, (ziel.haltbar || 6) - (ziel.reife || 0)) : b.haltbarPur)
+        + Math.round((ziel ? Math.max(1, ziel.haltbar || 6) : b.haltbarPur)
                      * (b.faktor || 1)) + ' Wochen'
         + (ziel ? ' — angesetzt als ' + b.sorte + ', schlägt als ' + ziel.name + ' aus' : '');
       band.appendChild(bt);
