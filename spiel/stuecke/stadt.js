@@ -58,6 +58,79 @@
     };
   }
 
+  /* --------------------------------------------------------------------
+     DIE TIEFE.  (Runde 7)
+
+     Runde 6 ging mit diesem Satz zurueck: "DAS LOT MISST DEN BODEN, NICHT
+     DIE TIEFE, UND EINE DATEI NUTZT DAS AUS." Der Beleg war der
+     Pferdestall: seine Datei trug 17,1 Prozent leeren Rand unten, er malte
+     deshalb bei 64,1 Prozent Buehnenhoehe und trug den z-Index seiner
+     Unterkante — 680. In 1884 lagen dadurch 47 Prozent der Gaertanks unter
+     einem Stall, der zwei Meter hinter ihnen steht.
+
+     Der Fehler sass nicht in der Datei, sondern in der Zeile darunter:
+     der z-Index kam aus dem ORT, die Zeichnung aus dem BILD. Solange beide
+     zufaellig zusammenfielen, sah man es nicht. Jetzt kommt beides aus
+     derselben Zahl:
+
+         die unterste undurchsichtige Zeile des Bildes (K.fuesse),
+         umgerechnet in Prozent der Buehnenhoehe.
+
+     Damit ist der Fall keine Ausnahme mehr, sondern unmoeglich: wer ein
+     Bild mit leerem Rand einhaengt, bekommt automatisch den z-Index seines
+     Fusses und nicht den seines Rahmens.
+
+     UND DER ZWEITE SATZ, der aus derselben Runde stammt (Gaerbottiche ueber
+     dem Kontor): WER AUF DER GASSE STEHT, STEHT VOR DER MAUER. Die
+     Bildschirmhoehe allein sagt das nicht — die Hofmauer laeuft schraeg
+     durchs Bild, und ein Haus jenseits der Ost-Ecke kann hoeher im Bild
+     sitzen als ein Bottich im Hof und trotzdem naeher an der Kamera stehen.
+     Also bekommt 'gasse' die Tiefe der Mauerlinie an seiner Stelle als
+     Untergrenze; damit liegt es vor allem, was im Hof steht.
+     -------------------------------------------------------------------- */
+
+  /* Die Bildhoehe in Prozent der BUEHNENHOEHE. breite ist Prozent der
+     Buehnenbreite, das Bild behaelt sein Seitenverhaeltnis. */
+  function bildhoehe(a, m) {
+    var mass = K.bildmass[a.bild];
+    if (!mass || !mass[0]) return 0;
+    return m.breite * (2752 / 1536) * (mass[1] / mass[0]);
+  }
+
+  /* Wo der Aufbau den Boden beruehrt, in Prozent der Buehnenhoehe. */
+  function fusshoehe(a, m, nr) {
+    var ort = B.orte.hole(a.ort);
+    var unten = (ort ? ort.y : 50) + m.dy;
+    var profil = K.fuesse[a.bild];
+    if (!profil) return unten;
+    var tiefst = -1;
+    for (var i = 0; i < profil.length; i++) if (profil[i] > tiefst) tiefst = profil[i];
+    if (tiefst < 0) return unten;
+    return unten - (1 - tiefst) * bildhoehe(a, m);
+  }
+
+  /* DIE MAUERLINIE, in Prozent der Buehnenhoehe, an einer x-Stelle in
+     Prozent der Buehnenbreite. Dieselben Zahlen, mit denen DAS LOT urteilt
+     (K.boden) — nur hier in Prozent statt in Bezugspixeln, weil der z-Index
+     mit Prozent rechnet. */
+  function mauerhoehe(px) {
+    var b = K.boden;
+    var d = px - b.scheitel.x;
+    var steigung = (d <= 0 ? b.links : b.rechts) * (2752 / 1536);
+    return b.scheitel.y - Math.abs(d) * steigung;
+  }
+
+  /* Die Zahl, aus der der z-Index wird. */
+  function tiefe(a, nr) {
+    var m = masse(a, nr);
+    var f = fusshoehe(a, m, nr);
+    if (a.boden === 'gasse') {
+      var ort = B.orte.hole(a.ort);
+      f = Math.max(f, mauerhoehe((ort ? ort.x : 50) + m.dx) + 0.4);
+    }
+    return f;
+  }
+
   /* Offen = in dieser Epoche baubar und noch nicht gebaut. */
   function offen(nr) {
     return katalog(nr).filter(function (a) { return !hat(a.schluessel); });
@@ -843,7 +916,10 @@
     el.setAttribute('data-bau', a.schluessel);
     el.src = 'bild/hof/' + a.bild + '.png';
     el.style.width = m.breite + '%';
-    el.style.zIndex = String(Math.round((B.orte.hole(a.ort).y + m.dy) * 10));
+    /* Nicht (ort.y + dy) — das ist die Unterkante des RAHMENS. Der z-Index
+       gehoert dem Fuss; siehe DIE TIEFE weiter oben. */
+    el.style.zIndex = String(Math.round(tiefe(a) * 10));
+    el.setAttribute('data-tiefe', B.rund(tiefe(a), 2));
     B.orte.setze(el, a.ort, { anker: 'unten', dx: m.dx, dy: m.dy });
     el.title = a.name + ' — ' + a.sagt;
     return el;
@@ -1119,6 +1195,18 @@
       lage: function () { return JSON.parse(JSON.stringify(markenLage)); },
       zahl: function () { return markenZahl; },
       schalte: markenSchalter
+    },
+    /* DIE TIEFE, damit DAS LOT (stuecke/stadt-zusatz.js) mit genau derselben
+       Zahl prueft, aus der der z-Index entsteht — und nicht mit einer
+       zweiten, die daneben liegt. Ein Pruefer, der anders rechnet als der
+       Zeichner, findet den naechsten Pferdestall wieder erst am Bildschirm. */
+    mass: {
+      masse: masse,
+      bildhoehe: function (a, nr) { return bildhoehe(a, masse(a, nr)); },
+      fuss: function (a, nr) { return fusshoehe(a, masse(a, nr), nr); },
+      mauer: mauerhoehe,
+      tiefe: tiefe,
+      katalog: katalog
     }
   };
 
