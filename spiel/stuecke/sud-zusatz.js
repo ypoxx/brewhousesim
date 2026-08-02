@@ -186,7 +186,7 @@
       klappe.setAttribute('data-frei', '1');
       klappe.appendChild(B.el('b', 'sud-klappname', 'DAS SUDBUCH'));
       klappe.appendChild(B.el('span', 'sud-klappzahl',
-        Z.gesamtSude + ' Sude · ' + B.welt.menge(Z.gesamtFass)));
+        Math.max(Z.gesamtLegte || 0, Z.gesamtSude) + ' Sude · ' + B.welt.menge(Z.gesamtFass)));
       klappe.appendChild(B.knopf({
         text: 'Sudbuch aufschlagen',
         zug: 'sud:schluss-auf',
@@ -203,7 +203,7 @@
     var blatt = B.el('div', 'sud-schluss blatt');
     blatt.appendChild(B.el('h2', null, 'DAS SUDBUCH WIRD GESCHLOSSEN'));
     blatt.appendChild(B.el('div', 'sud-achssatz',
-      'Angestellt hat dieses Haus ' + Z.gesamtSude + ' Sude — '
+      'Angestellt hat dieses Haus ' + Math.max(Z.gesamtLegte || 0, Z.gesamtSude) + ' Sude — '
       + B.welt.menge(Z.gesamtFass) + ' Bier, in ' + jahr + ' zum letzten Mal.'));
 
     var pf = pfannenSatz();

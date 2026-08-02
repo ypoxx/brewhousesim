@@ -1622,7 +1622,7 @@
       });
 
       B.auf('ende', function () {
-        buch('Das Sudbuch wird geschlossen: ' + Z.gesamtSude + ' Sude, '
+        buch('Das Sudbuch wird geschlossen: ' + Math.max(Z.gesamtLegte, Z.gesamtSude) + ' Sude, '
           + B.welt.menge(Z.gesamtFass) + ' angestellt.');
       });
 
@@ -1671,7 +1671,18 @@
             + (offen === 1 ? gk().gefaess : gk().gefaesse)
             + ' werden ausgeschlagen und aufs Fass gelegt.', 'sud');
         }
-        buch('Braujahr geschlossen: ' + Z.jahrSude + ' Sude, ' + B.welt.menge(Z.jahrFass)
+        /* "0 Sude" war die Zeile, die der Kritiker zitiert hat — und sie war
+           in 1970 falsch: mit einem Verfahren ohne Gaerwochen laeuft kein Sud
+           durch den Gaerkeller, das Haus BRAUT aber. Das Sudbuch zaehlt
+           deshalb jetzt, was angestellt wurde, und daneben, was durch diesen
+           Keller ging. Nur wenn beides null ist, ist die Pfanne wirklich kalt. */
+        var angestellt = Math.max(Z.jahrLegte, Z.jahrSude);
+        buch('Braujahr geschlossen: '
+          + (angestellt ? angestellt + (angestellt === 1 ? ' Sud' : ' Sude') + ' angestellt'
+                        : 'kein Sud angestellt')
+          + (Z.jahrSude ? ', ' + Z.jahrSude + ' durch den '
+                          + gk().name.replace(/^Der /, '') + ' (' + B.welt.menge(Z.jahrFass) + ')'
+                        : '')
           + ', ' + Z.jahrFehl + ' verloren'
           + (Z.gestuft ? ', ' + Z.gestuft + ' zurückgestuft.' : '.'));
         kaltePfanne();
