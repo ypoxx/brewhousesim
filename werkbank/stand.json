@@ -1,14 +1,20 @@
 {
- "stand": "2026-08-01T22:09:35+00:00",
- "phase": "Welle 1 abgeschlossen — vier Stuecke laufen als ein Ding: gleiche Sprache, gleiche Zahlen, gleiche Tasten; die Kennzahl der zweiten Latte faellt statt zu wachsen (46x/20x/14x/46x Spitze, danach unter 1 in 1350-1884), und der Michaelitag ist in allen vier Epochen unbezahlbar — das ist die erste Aufgabe der Welle 2. Befund in spiel/STAND.md.",
- "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. TON: 30 Sekunden blind, Epoche und Vorgang benannt (Welle 2). Sperrliste design/PRUEFUNG.md disqualifiziert.",
+ "stand": "2026-08-02T13:17:22+00:00",
+ "phase": "Welle 2b läuft — vier Stücke im Gauntlet: DIE EICHUNG (die Kennzahl der zweiten Latte kippt in ALLEN vier Epochen, zwei verarmen, zwei laufen davon), DER GEGNER R2, DIE STADT R6, DER SUD. Je ein Builder und danach ein blinder Kritiker. Zwei Befunde vom 2. August haben die Aufgabe neu gestellt: spiel/BEFUND-BRETTER.md (die Eichung hat einen verklemmten Bildschirm gemessen, nicht die Wirtschaft) und spiel/BEFUND-WIRTSCHAFT.md (die ehrlichen Zahlen).",
+ "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
   "Stücke": "0",
   "Runden": "0",
   "Stücke Welle 1": "4",
   "davon Spiellatte": "3",
-  "Skelett-Dateien": "41"
+  "Skelett-Dateien": "41",
+  "rho 1350": "+0,714",
+  "rho 1600": "0,714 faellt",
+  "rho 1884": "0,771 faellt",
+  "rho 1970": "0,829 steigt",
+  "Zuege unerreichbar": "3/2/3/4 von 76/84/87/81",
+  "Stuecke Welle 2b": "4"
  },
  "stuecke": [
   {
@@ -697,6 +703,18 @@
   {
    "zeit": "2026-08-01T22:09:35+00:00",
    "text": "DER SUD — was fuer ein Bier das eigentlich ist · Runde 1 · zurück an den Builder — Meine Latte ist bestanden — 3/5/5/9 Sudentscheidungen, keine einzige kommt in zwei Epochen vor, jede kostet und jede zeigt ihre Folge am Fass; zurueck geht es an einer anderen Stelle: 1350, 1600 und 1970 schreiben 'unwiderruflich' auf ihre teuerste Entscheidung (Hopfenbrief −78 Pf, Felsenkeller −260 fl, Betriebslabor −42.000 DM), und sechs Wochen spaeter macht ein einziger Mausklick sie gratis rueckgaengig — nur 1884 haelt sein Wort."
+  },
+  {
+   "zeit": "2026-08-02T13:17:10+00:00",
+   "text": "Welle 2b läuft — vier Stücke im Gauntlet: DIE EICHUNG (die Kennzahl der zweiten Latte kippt in ALLEN vier Epochen, zwei verarmen, zwei laufen davon), DER GEGNER R2, DIE STADT R6, DER SUD. Je ein Builder und danach ein blinder Kritiker. Zwei Befunde vom 2. August haben die Aufgabe neu gestellt: spiel/BEFUND-BRETTER.md (die Eichung hat einen verklemmten Bildschirm gemessen, nicht die Wirtschaft) und spiel/BEFUND-WIRTSCHAFT.md (die ehrlichen Zahlen)."
+  },
+  {
+   "zeit": "2026-08-02T13:17:22+00:00",
+   "text": "2. August: Die Eichung hat einen verklemmten Bildschirm gemessen, nicht die Wirtschaft. Ein Drittel aller Bedienelemente war zugedeckt, darunter der Rohstoffeinkauf. Die STADT hat eine Platzordnung bekommen; die Eichung ist neu gefahren."
+  },
+  {
+   "zeit": "2026-08-02T13:17:22+00:00",
+   "text": "2. August: Erste ehrliche Kennzahl. Alle vier Epochen kippen — 1350 und 1970 laufen davon, 1600 und 1884 verarmen (vier von sechs Jahren unter 1x). Welle 2b gestartet: vier Builder, je ein blinder Kritiker."
   }
  ]
 }

@@ -1585,6 +1585,31 @@
      und die obere Bruecke sind einen Prozentpunkt auseinander. Dann darf das
      eine Schild nicht auf dem anderen liegen: gestapelt wird nach oben, in
      der festen Reihenfolge der Adressliste, also in jeder Woche gleich. */
+  /* Sein Haus ist das groesste Ding, das dieses Stueck ins Bild stellt: Karte,
+     Hofbild, Vorsprungschild. Wer sein Zeichen dicht daneben haengt, haengt es
+     hinein — gemessen waren das in 1350 einunddreissig Wochen am Stueck, in
+     denen das Schild der Klosterschenke im Hof des Adlers lag. Der ORT bleibt,
+     wo er ist (Ortstreue ueber 620 Jahre); nur sein Zeichen rueckt zur Seite. */
+  function seitenversatz(o) {
+    var dx = 0;
+    haeuserJetzt().forEach(function (h) {
+      var s = sitzVon(h);
+      var so = B.orte.hole(s.ort);
+      if (!so) return;
+      var sx = so.x + (s.dx || 0), sy = so.y + (s.dy || 0);
+      var weit = Math.abs(o.x - sx);
+      if (weit < 12 && o.y > sy - 22 && o.y < sy + 24) {
+        /* Vom Haus weg, nicht hindurch — und nur so weit, dass das Zeichen
+           im Bild bleibt. */
+        var nach = (o.x >= sx ? 1 : -1) * (12 - weit);
+        if (o.x + nach > 94) nach = 94 - o.x;
+        if (o.x + nach < 6) nach = 6 - o.x;
+        if (Math.abs(nach) > Math.abs(dx)) dx = nach;
+      }
+    });
+    return dx;
+  }
+
   function schildVersatz() {
     var belegt = {}, karte = {};
     offeneAdressen().forEach(function (a) {
@@ -1598,7 +1623,9 @@
          zwei Orte im selben Rasterfeld liegen selbst schon 2 % auseinander,
          und dann deckte das eine Schild das andere zur Haelfte.
          RUNDE 2: seit unter jedem Schild das zweite Preisschild in Bier
-         haengt, ist ein Zeichen doppelt so hoch — 7,4 statt 5,6. */
+         haengt, ist ein Zeichen doppelt so hoch — 9,0 statt 5,6. Zwei Orte im
+         selben Rasterfeld liegen bis zu 2 % auseinander; 9,0 minus 2 ist noch
+         groesser als ein Zeichen hoch ist. */
       var hebe = 0;
       /* Der Marktstand liegt bei 96 %, die Landstrasse bei 89 % — dort unten
          liegen die Bretter der Werkbank, und ein Preisschild hinter einem
@@ -1606,7 +1633,7 @@
          im freien Bild steht. Der ORT bleibt, wo er ist; nur sein Zeichen
          haengt hoeher. */
       if (o.y > 82) hebe = (o.y - 82) * 1.15;
-      karte[a.schluessel] = n * -7.4 - hebe;
+      karte[a.schluessel] = { hoch: n * -9.0 - hebe, seite: seitenversatz(o) };
     });
     return karte;
   }
@@ -1651,7 +1678,8 @@
   function zeichneAdressen(fach) {
     var versatz = schildVersatz();
     offeneAdressen().forEach(function (a) {
-      var hoch = -3.6 + (versatz[a.schluessel] || 0);
+      var v = versatz[a.schluessel] || { hoch: 0, seite: 0 };
+      var hoch = -3.6 + v.hoch;
       var k = a.schluessel;
       var b = Z.bindung[k];
       var w = Z.werbung[k];
@@ -1678,8 +1706,7 @@
             + ' Jetzt: ' + B.welt.geld(s.preis) + '.';
           zz.appendChild(svg(s.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
           var zt = B.el('span', 'gg-zieltext');
-          zt.appendChild(B.el('b', null, (D.kurz[k] || k.slice(0, 3).toUpperCase())
-            + ' · ' + (ab.kurz || 'zielt') + ' · noch ' + rest + ' Wo.'));
+          zt.appendChild(B.el('b', null, (ab.kurz || 'zielt') + ' · noch ' + rest + ' Wo.'));
           zt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(s.preis)));
           zz.appendChild(zt);
           if (!B.welt.kann(s.preis)) zz.classList.add('zuteuer');
@@ -1761,7 +1788,7 @@
            anklickbare wirkungslos. Wer selbst einen Knopf setzt, meldet ihn
            ab; die stummen Marken des Stuecks bleiben im Pflocksystem. */
         paar.setAttribute('data-frei', 'gegner');
-        B.orte.setze(paar, a.ort, { anker: 'unten', dy: hoch });
+        B.orte.setze(paar, a.ort, { anker: 'unten', dx: v.seite, dy: hoch });
         fach.appendChild(paar);
         return;
       }
@@ -1770,11 +1797,11 @@
       if (frisch && wechsel.an === 'haus') {
         var g = B.el('div', 'gg-gewonnen', 'zurückgeholt — unser Haus');
         g.title = a.name + ' ist wieder gebunden. Vier Jahre lang rührt er die Adresse nicht an.';
-        B.orte.setze(g, a.ort, { anker: 'unten', dy: hoch });
+        B.orte.setze(g, a.ort, { anker: 'unten', dx: v.seite, dy: hoch });
         fach.appendChild(g);
       } else if (frisch && !wechsel.an) {
         var f = B.el('div', 'gg-frei', 'frei geworden');
-        B.orte.setze(f, a.ort, { anker: 'unten', dy: hoch });
+        B.orte.setze(f, a.ort, { anker: 'unten', dx: v.seite, dy: hoch });
         fach.appendChild(f);
       }
     });
@@ -1819,8 +1846,10 @@
       gezeigt++;
       /* Was tief im Bild liegt, bekommt seinen Zettel nach oben statt nach
          unten: unten stehen die Bretter der Werkbank. */
-      var oy = B.orte.hole(e.ort).y;
+      var oo = B.orte.hole(e.ort);
+      var oy = oo.y;
       var unten = oy > 74;
+      var seite = seitenversatz(oo);
 
       var m = B.el('div', 'gg-spur gg-' + stamm(e.wer).farbe
         + (alter === 0 ? ' neu' : '') + (alter >= 2 ? ' alt' : ''));
@@ -1833,8 +1862,8 @@
       kopf.appendChild(B.el('i', null, alter === 0 ? 'diese Woche' : 'W' + e.woche));
       m.appendChild(kopf);
       B.orte.setze(m, e.ort, unten
-        ? { anker: 'unten', dy: -(4 + n * 3.4) }
-        : { anker: 'oben', dy: 2.6 + n * 3.4 });
+        ? { anker: 'unten', dx: seite, dy: -(4 + n * 3.4) }
+        : { anker: 'oben', dx: seite, dy: 2.6 + n * 3.4 });
       /* Ein Zettel, der die Maus schluckt, waere schlimmer als keiner: er
          liegt auf der Platte und deckt die Knoepfe der anderen zu. */
       m.setAttribute('data-frei', 'gegner');

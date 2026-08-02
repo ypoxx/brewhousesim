@@ -69,7 +69,12 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.20,
       umlageAnteil: 0.80,
       handlohnAnteil: 1.10,
-      abstaende: [3, 7, 6, 8, 7, 9],
+      /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
+         Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
+         Stadt des 14. Jahrhunderts legte fast in jedem zweiten Jahr etwas
+         um. Sie sind der Grund, warum die Kasse eines Brauhauses in
+         Zacken laeuft und nicht in einer Geraden. */
+      abstaende: [2, 3, 4, 2, 3, 5, 3, 4, 3],
 
       /* Die Bierordnung. Steigt in Jahrzehnten, nicht in Jahren. */
       ordnung: [
@@ -234,7 +239,7 @@ var PREIS_DATEN = {
       lastenGrund: 2500,
       teuerungJahr: 1.038,
       teuerungKauf: 1.055,
-      lastenFest: 200,
+      lastenFest: 160,
       pflichtUmsatz: 0.080,
       pflichtErtrag: 0.50,
       nachlass: 0.55,
@@ -242,7 +247,10 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.155,
       umlageAnteil: 0.85,
       handlohnAnteil: 1.15,
-      abstaende: [4, 6, 9, 7, 6, 8],
+      /* 1600 bis 1650 ist die dichteste Umlagenzeit der ganzen Partie:
+         Tuerkensteuer, Kontribution, Quartierlast, Brandsteuer,
+         Salvaguardia. Der Abstand ist zwei bis vier Jahre, nicht sechs. */
+      abstaende: [2, 2, 3, 2, 4, 3, 2, 3, 4],
 
       ordnung: [
         { ab: 1517, preis: 22, sagt: 'Die Bierordnung nach dem Reinheitsgebot: zweiundzwanzig Gulden je Fass Braunbier.' },
@@ -427,7 +435,7 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.175,
       umlageAnteil: 0.90,
       handlohnAnteil: 1.10,
-      abstaende: [3, 6, 5, 7, 6, 8],
+      abstaende: [3, 3, 4, 3, 5, 4, 3, 4],
 
       ordnung: [
         { ab: 1800, preis: 44, sagt: 'Der Landesherr setzt den Bierpreis noch, aber nur noch dem Namen nach.' },
@@ -603,7 +611,7 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.145,
       umlageAnteil: 0.95,
       handlohnAnteil: 1.05,
-      abstaende: [4, 5, 7, 6, 5, 8],
+      abstaende: [3, 4, 3, 5, 4, 3, 5, 4],
 
       ordnung: [
         { ab: 1914, preis: 118, sagt: 'Kriegsbier. Die Stammwürze wird herabgesetzt, der Preis behördlich festgelegt.' },
