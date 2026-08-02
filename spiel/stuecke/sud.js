@@ -1026,11 +1026,10 @@
       var ck = B.el('div', 'sud-chargen');
       ck.appendChild(B.el('b', 'sud-achsname', ch.name));
       ck.appendChild(zeile('sud-achssatz', ch.satz));
-      gesperrt.slice(0, 3).forEach(function (b) {
+      gesperrt.slice(0, 2).forEach(function (b) {
         var z = B.el('div', 'sud-chargenzeile');
         z.appendChild(B.el('span', 'sud-bnr', String(b.nr)));
-        z.appendChild(B.el('span', 'sud-bsorte',
-          b.sorte + ' · ' + B.welt.menge(b.fass) + ' · ±' + b.streuung + ' %'));
+        z.appendChild(B.el('span', 'sud-bsorte', B.welt.menge(b.fass) + ' · ±' + b.streuung + ' %'));
         z.appendChild(knopf({
           text: ch.frei.text, zug: 'sud:charge-frei:' + b.nr, klasse: 'sud-tat klein',
           titel: ch.frei.titel, tu: function () { chargeFrei(b); }
@@ -1044,8 +1043,8 @@
       });
       /* Drei auf einmal — mehr passt nicht ins Brett, und der Braumeister gibt
          nach vier Wochen ohnehin von selbst frei. */
-      if (gesperrt.length > 3) ck.appendChild(zeile('sud-mehr',
-        '… und ' + (gesperrt.length - 3) + ' weitere Chargen stehen gesperrt.'));
+      if (gesperrt.length > 2) ck.appendChild(zeile('sud-mehr',
+        '… und ' + (gesperrt.length - 2) + ' weitere Chargen stehen gesperrt.'));
       kasten.appendChild(ck);
     }
 
@@ -1205,10 +1204,9 @@
     var b = B.el('div', 'sud-buch');
     var bk = B.el('div', 'sud-achskopf');
     bk.appendChild(B.el('b', 'sud-achsname', 'DAS SUDBUCH'));
-    bk.appendChild(B.el('span', 'sud-frage', 'dieses Jahr ' + Z.jahrSude + ' Sude · '
+    bk.appendChild(B.el('span', 'sud-frage', Z.jahrSude + ' Sude · '
       + B.welt.menge(Z.jahrFass) + ' · ' + Z.jahrFehl + ' verloren'
-      + (Z.gestuft ? ' · ' + Z.gestuft + ' zurückgestuft' : '')
-      + (Z.jahrAnzeige ? ' · ' + Z.jahrAnzeige + '× angezeigt' : '')));
+      + (Z.gestuft ? ' · ' + Z.gestuft + ' gestuft' : '')));
     b.appendChild(bk);
     /* Vier Zeilen, nicht sieben: die Hoehe dieses Bretts darf nicht davon
        abhaengen, wie viel diese Woche passiert ist. Ein Brett, das mit dem
@@ -1344,11 +1342,46 @@
          ihm seine Knoepfe. Genau der Fehler, den BEFUND-BRETTER.md misst,
          nur diesmal im eigenen Haus. */
       if (zettel) {
-        var weg = !Z.brettZu;
+        var weg = !Z.brettZu || fremdVerdeckt(zettel);
         if (zettel.classList.contains('beiseite') !== weg) zettel.classList.toggle('beiseite', weg);
         schalte(zettel, weg);
       }
     });
+  }
+
+  /* ----------------------------------------------------------------------
+     Liegt ein FREMDES Brett ueber dem Kesselzettel?
+
+     Der Zettel haengt am Sudhaus, und ueber dem Sudhaus liegen in 1350 und
+     1600 die Anschlagtafel der FUHRE (x 27,4–50,6 %) und ihre Haeusertafel
+     (1,1–26,7 %). Die Platzordnung der STADT loest Brett gegen Brett auf;
+     eine Ortsmarke nimmt daran nicht teil und kann deshalb begraben werden
+     (BEFUND-BRETTER.md §5, "die Reste sind ein anderer, kleinerer Fall").
+     Verschieben hilft nicht: die linke Bildhaelfte ist in jeder Epoche
+     vergeben, und der Zettel gehoert an das Sudhaus, nicht daneben.
+
+     Also prueft er sich selbst und tritt zurueck, wenn er begraben ist —
+     lieber gar kein Zettel als drei Knoepfe, die aussehen wie Knoepfe und
+     keine sind. Solange er weg ist, wird derselbe Punkt weiter befragt; er
+     kommt von selbst wieder, sobald das fremde Brett zuklappt.
+     ---------------------------------------------------------------------- */
+  function fremdVerdeckt(zettel) {
+    var q = zettel.getBoundingClientRect();
+    if (q.width > 2 && q.height > 2) {
+      Z.zettelPunkt = { x: q.left + q.width / 2, y: q.top + q.height / 2 };
+    }
+    var p = Z.zettelPunkt;
+    if (!p) return false;
+    var t = document.elementFromPoint(p.x, p.y);
+    if (!t) return false;
+    if (zettel.contains(t) || t === zettel) return false;
+    /* Ein fremdes Fach ist ein fremdes Brett. Platte, Bau und der nackte
+       Koerper sind keines — darauf darf der Zettel liegen. */
+    for (var e = t; e; e = e.parentElement) {
+      if (!e.id || e.id.indexOf('fach-') !== 0) continue;
+      return e.id !== 'fach-marken-sud';
+    }
+    return false;
   }
 
   /* Der Rahmen der STADT entscheidet erst im naechsten Bild, ob ein frisch

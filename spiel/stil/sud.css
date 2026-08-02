@@ -25,7 +25,12 @@
   top: 12.4%;
   width: 47%;
   height: auto;
-  max-height: 75%;
+  /* 71 % und nicht mehr 75 %: gemessen liegt die Unterkante im vollsten
+     gemessenen Zustand (1970, neun Bottiche und zwei gesperrte Chargen) bei
+     82,4 % der Buehne. Der Deckel liegt knapp darueber, damit nichts in die
+     Rolle rutscht — und die erklaerte Flaeche des Bretts schrumpft, statt zu
+     wachsen. */
+  max-height: 71%;
   display: flex;
   flex-direction: column;
   pointer-events: auto;

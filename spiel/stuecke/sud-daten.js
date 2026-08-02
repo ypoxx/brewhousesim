@@ -317,11 +317,10 @@ var SUD_DATEN = {
                satz: 'Was im Kasten steht, entscheidet das Sudhaus.' },
       charge: {
         name: 'GESPERRTE CHARGEN',
-        satz: 'Eine Charge außerhalb der Grenzwerte geht nicht ins Regal, ehe jemand '
-            + 'unterschreibt. Beides ist eine Entscheidung, und beide kosten.',
-        frei: { text: 'Charge freigeben', titel: 'Sie geht so hinaus. Wenn der Handel nachmisst, '
-                     + 'kommt sie zurück — und die nächsten Chargen stehen unter Beobachtung.' },
-        schnitt: { text: 'Charge verschneiden', titel: 'Mit einer sauberen Charge verschnitten. '
+        satz: 'Nichts geht ins Regal, ehe jemand unterschreibt. Beides kostet.',
+        frei: { text: 'Freigeben', titel: 'Sie geht so hinaus. Wenn der Einkauf der Handelskette '
+                     + 'nachmisst, kommt sie zurück und der Ersatz geht aus dem Lager.' },
+        schnitt: { text: 'Verschneiden', titel: 'Mit einer sauberen Charge verschnitten. '
                        + 'Ein Drittel der Menge geht dabei verloren, die Abweichung ist weg.' },
         frist: 4,
         fristSatz: 'Der Braumeister gibt von sich aus frei, was vier Wochen steht.',
