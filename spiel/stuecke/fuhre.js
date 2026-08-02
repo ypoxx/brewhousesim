@@ -1935,16 +1935,35 @@
     return best;
   }
 
-  /* Die Beschriftung des Knopfes ist kurz ('Regalmeter', '+ 5 hl'). Fuer den
-     Streifen wird die Adresse dazugeschrieben, damit der genannte Zug am
-     Brett wiederzufinden ist. */
+  /* Die Beschriftung eines Knopfes ist kurz, und zwei davon heissen bloss
+     '+' und '−' — an der Anschlagtafel, wo ein Sud mehr den Braumeister das
+     Umstellen kostet. 'nächster Zug: + — 4 Pf' waere keine Auskunft. Also
+     wird der Name aus dem gebaut, was am Brett steht: die Aufschrift, wenn
+     sie traegt, sonst das Wort fuer diese Art Zug, und dahinter immer das
+     Ding, um das es geht — die Adresse oder das Bier. */
+  var ZUGWORT = {
+    'fuhre:tafel-auf': 'Einen Sud mehr',
+    'fuhre:tafel-ab': 'Einen Sud weniger'
+  };
+
+  function dingName(k) {
+    var a = B.welt.adresse(k);
+    if (a) return a.name;
+    var s = null;
+    (sorten() || []).forEach(function (x) { if (x.k === k) s = x; });
+    var ns = notSorte();
+    if (!s && ns && ns.k === k) s = ns;
+    return s ? s.name : null;
+  }
+
   function zugName(b) {
+    var teil = String(b.zug).split(':');
     var t = (b.knopf.textContent || '').replace(/\s+/g, ' ').trim();
     /* Das Preisschild steht im Knopf selbst und wuerde sich sonst doppeln. */
     t = t.replace(/\s*[−-]\s*[\d.,]+\s*\S*$/, '').trim();
-    var teil = String(b.zug).split(':');
-    var a = teil.length > 2 ? B.welt.adresse(teil[2]) : null;
-    if (a && t.indexOf(a.name) < 0) t += ' · ' + a.name;
+    if (t.length < 4) t = ZUGWORT[teil[0] + ':' + teil[1]] || teil.slice(1).join(' ');
+    var ding = teil.length > 2 ? dingName(teil[2]) : null;
+    if (ding && t.indexOf(ding) < 0) t += ' · ' + ding;
     return t || b.zug;
   }
 

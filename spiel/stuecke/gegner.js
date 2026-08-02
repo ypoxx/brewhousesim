@@ -1544,7 +1544,7 @@
     el.setAttribute('data-umkaempft', B.rund(q, 2));
     el.setAttribute('data-umkaempft-preis', String(u.preis));
     el.appendChild(B.el('b', null, 'umkämpft'));
-    el.appendChild(B.el('span', null, u.was + ' — ' + B.welt.geld(u.preis)));
+    el.appendChild(B.el('span', null, u.was + ' — ' + B.welt.geld(u.preis) + ' ·'));
     el.appendChild(B.el('i', null, 'Kasse reicht ' + B.zahl(q, 1) + '×'));
     el.title = 'Der billigste Zug, um den gegenüber jemand mitbietet — nicht der '
       + 'billigste Posten auf dem Brett. Barschaft geteilt durch diese Summe.';
@@ -2104,6 +2104,84 @@
     fach.appendChild(el);
   }
 
+  /* --- WAS DIE GRUPPE GERADE VOM HAUS WILL ------------------------------
+     RUNDE 2 hat es gemessen: die beiden Antworten auf das Uebernahmeangebot
+     lagen im fuenften Block eines Blattes, das erst aufgeschlagen und dann
+     gescrollt werden muss — der Kritiker hat sie nicht gefunden und dem
+     Stueck bescheinigt, es gebe sie nicht. Es gab sie (gegner:angebot-ja mit
+     436.608 DM am Schild, in Woche 11), aber zwei Klicks tief ist so gut wie
+     gar nicht. Was das Haus als Ganzes betrifft, steht deshalb jetzt im
+     Bild, an ihrem Buero, mit der Frist daneben.
+     -------------------------------------------------------------------- */
+  function zeichneGruppenzettel(fach) {
+    var kon = haus('konzern');
+    if (!kon || kon.weg || (!Z.angebot && !Z.gebot)) return;
+    var s = sitzVon(kon);
+    if (!B.orte.hole(s.ort)) return;
+    var zettel = B.el('div', 'gg-zettel-gruppe');
+
+    if (Z.angebot) {
+      var ab = ep().angebot || {};
+      var rest = Math.max(0, (Z.angebot.bis || 0) - Z.takt);
+      var kasten = B.el('div', 'gg-gzblock gg-gzangebot');
+      kasten.appendChild(B.el('div', 'gg-gzkopf', 'Die Gruppe fragt an'));
+      kasten.appendChild(B.el('div', 'gg-gzsatz', B.welt.geld(Z.angebot.summe)
+        + ' für ein Viertel des Hauses · Antwort binnen ' + rest
+        + (rest === 1 ? ' Woche' : ' Wochen')));
+      var reihe = B.el('div', 'gg-gzreihe');
+      reihe.appendChild(B.knopf({
+        text: (ab.ja || 'Annehmen') + ' · ' + B.welt.geld(Z.angebot.summe),
+        zug: 'gegner:angebot-ja', preis: Z.angebot.summe,
+        titel: 'Unwiderruflich. ' + (ab.jasatz || ''),
+        tu: angebotAnnehmen
+      }));
+      reihe.appendChild(B.knopf({
+        text: ab.nein || 'Ausschlagen', zug: 'gegner:angebot-nein',
+        titel: 'Unwiderruflich. ' + (ab.neinsatz || ''),
+        tu: angebotAblehnen
+      }));
+      kasten.appendChild(reihe);
+      zettel.appendChild(kasten);
+    }
+
+    if (Z.gebot) {
+      var a = adresse(Z.gebot.k);
+      var g = ep().gebot;
+      if (a && g) {
+        var rest2 = Math.max(0, Z.gebot.bis - Z.takt);
+        var kb = B.el('div', 'gg-gzblock gg-gzgebot');
+        kb.appendChild(B.el('div', 'gg-gzkopf', g.verb + ' · ' + a.name));
+        kb.appendChild(B.el('div', 'gg-gzsatz', Z.gebot.name + ' wird verkauft. '
+          + 'Ihr Gebot für den Ausschank: ' + B.welt.geld(Z.gebot.gebot)
+          + ' · Notartermin in ' + rest2 + (rest2 === 1 ? ' Woche' : ' Wochen')));
+        var gr = B.el('div', 'gg-gzreihe');
+        gebotStufen().forEach(function (st) {
+          gr.appendChild(B.knopf({
+            text: st.name, zug: 'gegner:mitbieten:' + st.nr, preis: -st.preis,
+            aus: !B.welt.kann(st.preis),
+            titel: st.sagt + ' Geht es daneben, kommt die Bietungssicherheit zurück — '
+                 + 'bis auf ' + Math.round((g.notarteil || 0.12) * 100) + ' vom Hundert Notarkosten.',
+            tu: function () { mitbieten(st.nr); }
+          }));
+        });
+        kb.appendChild(gr);
+        kb.appendChild(B.knopf({
+          text: 'zeigen', zug: 'gegner:zeige-gebot', klasse: 'gg-winzig',
+          titel: 'Zeigt im Bild, um welches Haus beim Notar gestritten wird.',
+          tu: function () {
+            Z.zeigt = (Z.zeigt === a.ort) ? null : a.ort;
+            neuZeichnen('gegner-zeigen');
+          }
+        }));
+        zettel.appendChild(kb);
+      }
+    }
+
+    B.orte.setze(zettel, s.ort, { anker: 'oben', dx: (s.dx || 0), dy: (s.dy || 0) + 15 });
+    zettel.setAttribute('data-frei', 'gegner');
+    fach.appendChild(zettel);
+  }
+
   /* --- der graue Wagen, der die Strasse faehrt -------------------------- */
   function zeichneWagen(fach) {
     if (!Z.wagen) return;
@@ -2255,6 +2333,110 @@
     return k;
   }
 
+  /* --- die drei Bloecke, die nicht zurueckgenommen werden koennen -------- */
+
+  function zeichneAngebotBlock(bl) {
+    if (!Z.angebot) return;
+    var ab = ep().angebot || {};
+    var rest = Math.max(0, (Z.angebot.bis || 0) - Z.takt);
+    var abl = B.el('div', 'gg-block gg-fest');
+    abl.appendChild(B.el('h3', null, (ab.frage
+      || 'Die Nordstern-Gruppe fragt an — beide Antworten sind endgültig')
+      + ' · noch ' + rest + (rest === 1 ? ' Woche' : ' Wochen')));
+    var reihe = B.el('div', 'gg-reihe');
+    var k1 = karte(null, 'angebot');
+    k1.appendChild(B.el('div', 'gg-kname', ab.ja || 'Annehmen'));
+    k1.appendChild(B.el('div', 'gg-ksatz', 'Sie bietet ' + B.welt.geld(Z.angebot.summe)
+      + ' für ein Viertel des Hauses. ' + (ab.jasatz || '')));
+    k1.appendChild(B.knopf({
+      text: (ab.ja || 'Annehmen') + ' · ' + B.welt.geld(Z.angebot.summe),
+      zug: 'gegner:angebot-ja-blatt', preis: Z.angebot.summe,
+      titel: 'Unwiderruflich. Das Haus gehört danach nicht mehr ganz sich selbst.',
+      tu: angebotAnnehmen
+    }));
+    reihe.appendChild(k1);
+    var k2 = karte(null, 'angebot');
+    k2.appendChild(B.el('div', 'gg-kname', ab.nein || 'Ausschlagen'));
+    k2.appendChild(B.el('div', 'gg-ksatz', ab.neinsatz
+      || 'Kein Geld. Die Gruppe listet das Haus noch am selben Tag bei zwei Adressen aus.'));
+    k2.appendChild(B.knopf({
+      text: ab.nein || 'Ausschlagen', zug: 'gegner:angebot-nein-blatt',
+      titel: 'Unwiderruflich. Zwei Adressen sind sofort weg.',
+      tu: angebotAblehnen
+    }));
+    reihe.appendChild(k2);
+    var k3 = karte(null, 'angebot');
+    k3.appendChild(B.el('div', 'gg-kname', 'Nicht antworten'));
+    k3.appendChild(B.el('div', 'gg-ksatz', 'Kostet keinen Klick. Nach ' + rest
+      + (rest === 1 ? ' weiteren Woche' : ' weiteren Wochen')
+      + ' zieht sie die Anfrage zurück, nimmt sich dafür eine Adresse und fragt '
+      + 'in ein paar Jahren wieder.'));
+    reihe.appendChild(k3);
+    abl.appendChild(reihe);
+    bl.appendChild(abl);
+  }
+
+  function zeichneGebotBlock(bl) {
+    var g = ep().gebot;
+    if (!Z.gebot || !g) return;
+    var a = adresse(Z.gebot.k);
+    if (!a) return;
+    var rest = Math.max(0, Z.gebot.bis - Z.takt);
+    var gb = B.el('div', 'gg-block gg-fest');
+    gb.appendChild(B.el('h3', null, g.verb + ' beim Notar — ' + a.name
+      + ' · in ' + rest + (rest === 1 ? ' Woche' : ' Wochen') + ' wird unterschrieben'));
+    gb.appendChild(B.el('div', 'gg-gsatz', Z.gebot.name + ' wird verkauft. ' + g.sagt
+      + ' Ihr Gebot steht bei ' + B.welt.geld(Z.gebot.gebot) + '.'));
+    var reihe = B.el('div', 'gg-reihe');
+    gebotStufen().forEach(function (st) {
+      var k = karte(a, 'gebot');
+      k.appendChild(B.el('div', 'gg-kname', st.name));
+      k.appendChild(B.el('div', 'gg-kzeile', Math.round(st.glueck * 100)
+        + ' von 100 unterschreiben die Erben daraufhin an das Haus'));
+      k.appendChild(B.el('div', 'gg-ksatz', st.sagt));
+      k.appendChild(B.knopf({
+        text: g.verb + ' · ' + B.welt.geld(st.preis),
+        zug: 'gegner:mitbieten-blatt:' + st.nr, preis: -st.preis,
+        aus: !B.welt.kann(st.preis),
+        titel: 'Ein Gebot je Notartermin. Geht es daneben, kommt das Geld zurück — '
+             + 'bis auf ' + Math.round((g.notarteil || 0.12) * 100) + ' vom Hundert Notarkosten.',
+        tu: function () { mitbieten(st.nr); }
+      }));
+      reihe.appendChild(k);
+    });
+    gb.appendChild(reihe);
+    bl.appendChild(gb);
+  }
+
+  function zeichneGegenzugBlock(bl) {
+    var g = ep().gegenzug;
+    var nr = B.welt.zeit.amtszeit.nr;
+    var gb = B.el('div', 'gg-block gg-fest');
+    gb.appendChild(B.el('h3', null,
+      'Der Gegenzug — eine je Amtszeit, und er wird nicht zurückgenommen'));
+    if (Z.gegenzugGetan[nr]) {
+      gb.appendChild(B.el('div', 'gg-getan', g.name + ' — festgelegt in dieser Amtszeit. '
+        + g.folge));
+    } else if (Z.wirkung[g.k]) {
+      gb.appendChild(B.el('div', 'gg-getan', g.name + ' steht bereits. ' + g.folge));
+    } else {
+      var gr = B.el('div', 'gg-reihe');
+      var gk = karte(null, 'gegen');
+      gk.appendChild(B.el('div', 'gg-kname', g.name));
+      gk.appendChild(B.el('div', 'gg-ksatz', g.sagt));
+      gk.appendChild(B.el('div', 'gg-kzeile stark', g.folge));
+      gk.appendChild(B.knopf({
+        text: 'Festlegen', zug: 'gegner:gegenzug', preis: -g.preis,
+        aus: g.preis > 0 && !B.welt.kann(g.preis),
+        titel: 'Eine je Amtszeit. Sie ändert eine Regel für den Rest der Partie.',
+        tu: gegenzug
+      }));
+      gr.appendChild(gk);
+      gb.appendChild(gr);
+    }
+    bl.appendChild(gb);
+  }
+
   function zeichneBlatt(fach) {
     var bl = B.el('div', 'blatt gg-blatt');
     var h = haus(Z.seite) || haus('adler');
@@ -2282,6 +2464,18 @@
     }));
     kopf.appendChild(reiter);
     bl.appendChild(kopf);
+
+    /* GANZ OBEN, ehe irgendetwas gescrollt werden muss: was nicht
+       zurueckgenommen werden kann. Bis Runde 2 standen diese Bloecke als
+       fuenfter und sechster im Blatt; ein Blatt, das 75 % der Hoehe misst
+       und mehr Inhalt hat, schiebt sie unter die Kante. Gemessen: der Knopf
+       gegner:gegenzug lag in allen vier Epochen bei 93 bis 97 % der
+       Bildhoehe und war von der Werkbank der STADT verdeckt — die eine
+       unwiderrufliche Festlegung dieses Stuecks war mit der Maus nicht zu
+       treffen, ohne vorher zu scrollen. */
+    zeichneAngebotBlock(bl);
+    zeichneGebotBlock(bl);
+    zeichneGegenzugBlock(bl);
 
     /* Die Waehrung der Bindung — der Satz, den man ungefragt sagen koennen soll */
     var wk = B.el('div', 'gg-waehrung');
@@ -2488,64 +2682,6 @@
       bl.appendChild(wb);
     }
 
-    /* Das Angebot der Gruppe — beide Antworten sind endgueltig */
-    if (Z.angebot) {
-      var abl = B.el('div', 'gg-block gg-fest');
-      abl.appendChild(B.el('h3', null,
-        'Die Nordstern-Gruppe fragt an — beide Antworten sind endgültig'));
-      var ab = B.el('div', 'gg-reihe');
-      var k1 = karte(null, 'angebot');
-      k1.appendChild(B.el('div', 'gg-kname', 'Das Angebot der Nordstern-Gruppe'));
-      k1.appendChild(B.el('div', 'gg-ksatz', 'Sie bietet ' + B.welt.geld(Z.angebot.summe)
-        + ' für ein Viertel des Hauses. Angenommen springt die Kasse, und die Gruppe führt '
-        + 'jedes Jahr ein Zwanzigstel ab und redet für immer mit.'));
-      k1.appendChild(B.knopf({
-        text: 'Annehmen', zug: 'gegner:angebot-ja', preis: Z.angebot.summe,
-        titel: 'Unwiderruflich. Das Haus gehört danach nicht mehr ganz sich selbst.',
-        tu: angebotAnnehmen
-      }));
-      ab.appendChild(k1);
-      var k2 = karte(null, 'angebot');
-      k2.appendChild(B.el('div', 'gg-kname', 'Ablehnen'));
-      k2.appendChild(B.el('div', 'gg-ksatz', 'Kein Geld. Die Gruppe listet das Haus noch am '
-        + 'selben Tag bei zwei Adressen aus. Das Haus bleibt ganz.'));
-      k2.appendChild(B.knopf({
-        text: 'Ablehnen', zug: 'gegner:angebot-nein',
-        titel: 'Unwiderruflich. Zwei Adressen sind sofort weg.',
-        tu: angebotAblehnen
-      }));
-      ab.appendChild(k2);
-      abl.appendChild(ab);
-      bl.appendChild(abl);
-    }
-
-    /* Die eine Festlegung gegen ihn — je Amtszeit eine, unwiderruflich */
-    var g = ep().gegenzug;
-    var nr = B.welt.zeit.amtszeit.nr;
-    var gb = B.el('div', 'gg-block gg-fest');
-    gb.appendChild(B.el('h3', null, 'Der Gegenzug — eine je Amtszeit, und er wird nicht zurückgenommen'));
-    if (Z.gegenzugGetan[nr]) {
-      gb.appendChild(B.el('div', 'gg-getan', g.name + ' — festgelegt in dieser Amtszeit. '
-        + g.folge));
-    } else if (Z.wirkung[g.k]) {
-      gb.appendChild(B.el('div', 'gg-getan', g.name + ' steht bereits. ' + g.folge));
-    } else {
-      var gr = B.el('div', 'gg-reihe');
-      var gk = karte(null, 'gegen');
-      gk.appendChild(B.el('div', 'gg-kname', g.name));
-      gk.appendChild(B.el('div', 'gg-ksatz', g.sagt));
-      gk.appendChild(B.el('div', 'gg-kzeile stark', g.folge));
-      gk.appendChild(B.knopf({
-        text: 'Festlegen', zug: 'gegner:gegenzug', preis: -g.preis,
-        aus: g.preis > 0 && !B.welt.kann(g.preis),
-        titel: 'Eine je Amtszeit. Sie ändert eine Regel für den Rest der Partie.',
-        tu: gegenzug
-      }));
-      gr.appendChild(gk);
-      gb.appendChild(gr);
-    }
-    bl.appendChild(gb);
-
     /* Sein Hof und seine Lage */
     var lb = B.el('div', 'gg-block');
     lb.appendChild(B.el('h3', null, 'Sein Hof, seine Kasse, seine Lage'));
@@ -2692,6 +2828,10 @@
       if (!Z.bereit) return;
       Z.takt = takt();
 
+      /* Zuerst rechnen, dann malen: die Kennzahl der zweiten Messlatte steht
+         mit im Bild und darf nicht eine Woche alt sein. */
+      meldeZug();
+
       haeuserJetzt().forEach(function (h) {
         zeichneHof(fach, h);
         zeichneSitz(fach, h);
@@ -2700,16 +2840,16 @@
       zeichneAdressen(fach);
       zeichneZugmarken(fach);
       zeichneKlage(fach);
+      zeichneGruppenzettel(fach);
       zeichneWagen(fach);
       zeichneZeiger();
       zeichneBand(fach);
+      zeichneKennzahl(fach);
 
       /* Solange die Michaelitafel offen ist, gehoert der Bildschirm ihr. */
       var blatt = B.ebene('blatt', 'gegner');
       B.leere(blatt);
       if (Z.offen && !document.querySelector('[data-zug="preis:tafel-zu"]')) zeichneBlatt(blatt);
-
-      meldeZug();
     }
   });
 
