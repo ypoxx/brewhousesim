@@ -768,11 +768,16 @@
     /* 11. Erst jetzt wandern Ausstoss und Nahrung dieses Michaeli in die
            Reihe, aus der der Steuerausschuss im naechsten Jahr seinen
            Dreijahresschnitt zieht. Vorher waere dieses Jahr doppelt
-           gezaehlt: `schnitt()` legt den laufenden Wert selbst obenauf. */
-    Z.umsatzReihe.push(Math.max(0, Math.round(Z.umsatz)));
-    Z.ertragReihe.push(Math.max(0, Math.round(Z.ertrag)));
-    if (Z.umsatzReihe.length > 6) Z.umsatzReihe.shift();
-    if (Z.ertragReihe.length > 6) Z.ertragReihe.shift();
+           gezaehlt: `schnitt()` legt den laufenden Wert selbst obenauf.
+           Der erste Michaeli einer Partie geht NICHT in die Reihe: was dort
+           steht, ist der Ansatz des vorigen Hauses (`umsatzAnfang`), und
+           veranlagt wird die Hand, die jetzt braut. */
+    if (!erste) {
+      Z.umsatzReihe.push(Math.max(0, Math.round(Z.umsatz)));
+      Z.ertragReihe.push(Math.max(0, Math.round(Z.ertrag)));
+      if (Z.umsatzReihe.length > 6) Z.umsatzReihe.shift();
+      if (Z.ertragReihe.length > 6) Z.ertragReihe.shift();
+    }
 
     Z.offen = (B.arg.roh.tafel !== 'zu') || !erste;
     Z.erzwungen = false;

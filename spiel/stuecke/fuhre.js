@@ -3121,6 +3121,74 @@
      Ausgangblatt. Sie ist die Entscheidung dieses Tages; das Ausgangblatt
      kommt im naechsten Bildlauf, sobald die Tafel weg ist, und ist dann das
      juengste Brett auf dem Tisch. */
+  /* WAS AUF DEM TISCH LIEGT, WENN ENTSCHIEDEN WIRD.
+
+     Beide Ausgangblaetter nehmen seit dieser Runde ein Viertel der Buehne —
+     sie muessen, sonst klappt die Platzordnung sie zu (der lange Block in
+     stil/fuhre-zusatz.css rechnet es vor). Ein Viertel Buehne mit drei
+     Saetzen darauf waere Platzgier. Also steht darauf, WORUEBER entschieden
+     wird: wer das Haus gefuehrt hat, welche Haeuser sein Bier fuehren, was
+     im letzten Braujahr hinausging. Genau die Zahlen, die auf dem
+     Schlussblatt danach stehen — nur eben VOR der Entscheidung. */
+  function bestandsBlock(wort) {
+    var k = B.el('div', 'fu-ausgang-bestand');
+
+    var links = B.el('div');
+    links.appendChild(B.el('b', null, 'DIE, DIE ES GEFÜHRT HABEN'));
+    var linie = Z.geschlecht.slice(-4);
+    if (!linie.length) linie = [{ name: B.welt.zeit.amtszeit.name, seit: B.welt.zeit.amtszeit.seit }];
+    if (Z.geschlecht.length > 4) {
+      links.appendChild(B.el('div', 'fu-bestandzeile fort',
+        '… und ' + (Z.geschlecht.length - 4) + ' davor'));
+    }
+    linie.forEach(function (p) {
+      var r = B.el('div', 'fu-bestandzeile');
+      r.appendChild(B.el('span', 'w', p.name));
+      r.appendChild(B.el('span', 'v', 'seit ' + p.seit));
+      links.appendChild(r);
+    });
+    var g = B.el('div', 'fu-bestandzeile');
+    g.appendChild(B.el('span', 'w', 'Gegründet'));
+    g.appendChild(B.el('span', 'v', String(B.welt.haus.gegruendet)));
+    links.appendChild(g);
+    var f = B.el('div', 'fu-bestandzeile');
+    f.appendChild(B.el('span', 'w', 'Fuhren hinausgeschickt'));
+    f.appendChild(B.el('span', 'v', B.zahl(Z.fuhren)));
+    links.appendChild(f);
+    k.appendChild(links);
+
+    var rechts = B.el('div');
+    rechts.appendChild(B.el('b', null, wort));
+    var h = haeuser();
+    if (!h.length) {
+      rechts.appendChild(B.el('div', 'fu-bestandzeile fort', 'Kein Haus der Stadt mehr.'));
+    }
+    h.slice(0, 5).forEach(function (a) {
+      var r = B.el('div', 'fu-bestandzeile');
+      r.appendChild(B.el('span', 'w', a.name));
+      r.appendChild(B.el('span', 'v', B.welt.menge(Math.round(durst(a)))));
+      rechts.appendChild(r);
+    });
+    if (h.length > 5) {
+      rechts.appendChild(B.el('div', 'fu-bestandzeile fort', 'und ' + (h.length - 5) + ' weitere'));
+    }
+    var v = B.el('div', 'fu-bestandzeile');
+    v.appendChild(B.el('span', 'w', 'Im letzten Braujahr hinaus'));
+    v.appendChild(B.el('span', 'v', B.welt.menge(Z.verladenVorjahr)));
+    rechts.appendChild(v);
+    var kl = B.el('div', 'fu-bestandzeile');
+    kl.appendChild(B.el('span', 'w', B.welt.epoche().lager || 'Im Keller'));
+    kl.appendChild(B.el('span', 'v', B.welt.menge(keller().length)));
+    rechts.appendChild(kl);
+    var ka = B.el('div', 'fu-bestandzeile');
+    ka.appendChild(B.el('span', 'w', 'In der Lade'));
+    ka.appendChild(B.el('span', 'v', B.welt.geld(B.welt.haus.kasse)));
+    rechts.appendChild(ka);
+    k.appendChild(rechts);
+
+    return k;
+  }
+
   function zeichneAntrag(fach) {
     if (!Z.antrag || B.welt.zeit.ende || sommerLiegtOben()) return;
     var g = ausgangDef();
@@ -3137,6 +3205,7 @@
       'Noch ' + Z.frist + (Z.frist === 1 ? ' Woche' : ' Wochen') + ', dann entscheidet '
       + a.wer + ' allein.'));
     bl.appendChild(B.el('div', 'fu-satz', a.satz));
+    bl.appendChild(bestandsBlock('WAS HERGEGEBEN WIRD'));
 
     var w = B.el('div', 'fu-ausgang-wahl');
     w.appendChild(B.knopf({
@@ -3180,6 +3249,7 @@
       bl.appendChild(B.el('div', 'fu-ausgang-mass', Z.uebergabe.mass.satz));
     }
     bl.appendChild(B.el('div', 'fu-satz', u.satz));
+    bl.appendChild(bestandsBlock('WAS ÜBERGEBEN WIRD'));
 
     var w = B.el('div', 'fu-ausgang-wahl');
     w.appendChild(B.knopf({

@@ -561,19 +561,90 @@
    Deckgrenze der Platzordnung, und wer die Haeuser aufschlug, klappte den
    Antrag zu. Beides ist ein Reiter entfernt und damit kein Verlust — aber
    nebeneinander ist besser als uebereinander. */
+/* WARUM DAS BLATT SEIT DIESER RUNDE GROESSER IST — 45x24 auf 56x47 Prozent.
+
+   Gemessen auf der sorgfaeltig gespielten Linie (E1, 1920x1000, 270 Wochen):
+   das Uebergabeblatt stand 120 Wochen im Bild und war in KEINER EINZIGEN mit
+   der Maus zu treffen. Es mass 864x242 px = 10,9 Prozent der Buehne, lag mit
+   `stadt-zugeklappt` unter der eigenen Anschlagtafel dieses Stuecks, und der
+   Knopf „Das Haus uebergeben und aufhoeren" sass bei y 245 — 3 px unter der
+   Schnittkante des zugeklappten Blattes. Genau der Befund aus
+   BEFUND-ENDE.md §1, eine Ebene tiefer und von diesem Stueck selbst gebaut.
+
+   Die Platzordnung der STADT (stuecke/stadt.js, platzordnung) hat dafuer eine
+   Regel, und sie ist die richtige: WER ZULETZT AUFGESCHLAGEN HAT, LIEGT OBEN.
+   Ein Automat, der zwischendurch Reiter drueckt, macht damit jedes andere
+   Brett juenger als das Uebergabeblatt — zu Recht. Aber dieselbe Datei kennt
+   eine zweite Regel, und die ist fuer genau diesen Fall gemacht:
+
+     „Ein formatfuellendes Blatt zum Jahreswechsel ist eine Entscheidung."
+     if (jetzt - jahrZeit < JAHRESFRIST && anteil(r, true) > 0.25) lage = 'auf'
+
+   Ueber einem Viertel der Buehne, im Fenster nach einem Jahreswechsel: dann
+   schlaegt es auf und ist damit das juengste Brett auf dem Tisch. Das Blatt
+   erscheint zu Michaeli, also im Jahreswechsel — es muss nur gross genug
+   sein. 56 x 46,5 Prozent sind 26,0 Prozent der Buehne.
+
+   Die Kanten sind gemessen, nicht geschaetzt (1920x1000):
+     DIE HAEUSER  x 1,1–26,7 %   bleibt frei, das Fass auf Probe ist dort
+     DIE ANSCHLAGTAFEL x 27,4–50,6 %, y 12,6–55,4 %  klappt zu — gewollt
+     DER WAGEN    y ab 56,2 %    bleibt frei, 1,3 Prozentpunkte Luft
+     Reiterzeile  y ab 87,5 %    weit weg
+     WEITER       93|96 %        weit weg (ZUSTAENDIGKEIT 23)
+
+   Und weil ein Blatt, das ein Viertel der Buehne nimmt, auch ein Viertel der
+   Buehne wert sein muss, steht jetzt darauf, WAS uebergeben bzw. hergegeben
+   wird — Generationenzeile, fuehrende Haeuser, Ausstoss. Ein leeres grosses
+   Blatt waere Platzgier; ein volles ist die Entscheidungsgrundlage. */
 .fu-ausgangblatt {
   left: 27%;
-  top: 12%;
-  width: 45%;
-  max-height: 64%;
+  top: 11.6%;
+  width: 56%;
+  min-height: 46.5%;
+  max-height: 70%;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--s) * 8);
+  gap: calc(var(--s) * 7);
   overflow-y: auto;
   box-shadow:
     0 calc(var(--s) * 14) calc(var(--s) * 44) rgba(0, 0, 0, 0.55),
     0 0 calc(var(--s) * 16) rgba(0, 0, 0, 0.3);
 }
+
+/* Die Elle dieser Zeit: warum das Haus gerade JETZT uebergeben werden darf. */
+.fu-ausgang-mass {
+  font-size: calc(var(--s) * 19);
+  line-height: 1.4;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* WAS UEBERGEBEN WIRD — zwei Spalten, damit die Hoehe nicht davonlaeuft. */
+.fu-ausgang-bestand {
+  display: flex;
+  gap: calc(var(--s) * 14);
+  border-top: calc(var(--s) * 2) solid var(--linie, rgba(43, 29, 16, 0.25));
+  padding-top: calc(var(--s) * 6);
+  flex: 1 1 auto;
+  align-items: flex-start;
+}
+.fu-ausgang-bestand > div { flex: 1 1 0; min-width: 0; }
+.fu-ausgang-bestand b {
+  display: block;
+  font-size: calc(var(--s) * 17);
+  letter-spacing: calc(var(--s) * 1);
+  margin-bottom: calc(var(--s) * 4);
+}
+.fu-bestandzeile {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 8);
+  font-size: calc(var(--s) * 17);
+  line-height: 1.45;
+}
+.fu-bestandzeile .w { flex: 1 1 auto; min-width: 0; }
+.fu-bestandzeile .v { flex: 0 0 auto; font-family: var(--mono); font-weight: 700; }
+.fu-bestandzeile.fort { opacity: 0.6; font-style: italic; }
 
 /* Die Lage in einer Zeile: wie viel Zeit noch bleibt, oder wie gut es steht. */
 .fu-ausgang-lage {
