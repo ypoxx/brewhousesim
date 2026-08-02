@@ -138,7 +138,14 @@
     startJahr: 0,
     epocheJahr: 0,       /* erstes Jahr dieser Epoche — fuer die Schere    */
     schluss: null,
-    schlussOffen: false
+    schlussOffen: false,
+
+    /* DIE AUSGAENGE (siehe DER AUSGANG weiter unten)                       */
+    antrag: null,        /* {summe, seit} — der Antrag steht im Bild        */
+    antragErledigt: false, /* angenommen ODER ausgeschlagen: kommt nie wieder */
+    ausgang: null,       /* {art, summe, wer, kopf, urteil, folge}          */
+    uebergabe: null,     /* {jahr, erbe} — das Blatt liegt auf              */
+    uebergabeNein: 0     /* Braujahr, in dem sie zuletzt abgelehnt wurde    */
   };
 
   /* Wie viele ueberzeugende Faesser eine Adresse zurueckholen. Ein Fass, das
@@ -801,10 +808,190 @@
     }
     if (probiert) return;          /* die Uhr steht still, solange es versucht wird */
     Z.frist -= 1;
+    /* Ab der Haelfte der Frist steht der Antrag der Epoche im Bild. Wer ihn
+       annimmt, hoert HEUTE auf und hat das Geld; wer ihn ausschlaegt, bekommt
+       den Untergang der Epoche, und der zahlt weniger oder nichts. */
+    if (Z.frist > 0 && Z.frist <= Math.ceil(fd.wochen / 2)) legeAntragVor();
     if (Z.frist <= 0) {
       Z.frist = 0;
-      B.uhr.beende('keine-abnehmer', fd.ende);
+      vollzieheFall();
     }
+  }
+
+  /* ======================================================================
+     DER AUSGANG — vier Epochen, vier Untergaenge, und einer, der keiner ist.
+
+     BEFUND-ENDE.md §1(b) und §1(c): das Ende war viermal dasselbe
+     ('keine-abnehmer'), und es gab kein gutes. Beides hatte dieselbe
+     Ursache: hier stand ein einziger Aufruf `B.uhr.beende('keine-abnehmer')`,
+     und was danach mit dem Haus geschah, stand nirgends.
+
+     Was mit einem Brauhaus geschieht, dem der letzte Abnehmer abgeht, ist
+     aber in jedem Jahrhundert etwas anderes — weil in jedem Jahrhundert
+     etwas anderes an dem Haus VERKAEUFLICH ist:
+
+       1350  gar nichts. Das Braurecht ist verliehen und faellt heim.
+       1600  die Gerechtigkeit. Sie klebt am Haus und hat einen Kaeufer.
+       1884  das ganze Haus. Grundstueck, Sudhaus, Kundenliste.
+       1970  nur noch der Name. Der Betrieb ist Schrott, die Marke nicht.
+
+     Die Texte stehen in fuhre-daten.js unter `ausgaenge`. Hier steht nur,
+     WANN welcher gilt, und dass jeder davon eine ENTSCHEIDUNG ist: der
+     Antrag steht mit seinem Preisschild im Bild, solange die halbe Frist
+     noch laeuft. Zwei Knoepfe, die einander ausschliessen, beide
+     unwiderruflich — annehmen beendet die Partie an diesem Tag, ausschlagen
+     laesst den Antrag verfallen und nimmt ihn nie wieder auf.
+     ====================================================================== */
+  function ausgangDef() {
+    var a = D.ausgaenge || {};
+    return a[B.welt.zeit.epoche] || a[1] || null;
+  }
+
+  /* Wer gebaut hat, bekommt mehr — der Gaerraum ist die Substanz, die ein
+     Kaeufer sieht. basis und jePlatz stehen je Epoche in den Daten. */
+  function antragSumme() {
+    var g = ausgangDef();
+    if (!g || !g.antrag) return 0;
+    return Math.max(0, Math.round(g.antrag.basis + g.antrag.jePlatz * B.welt.vorrat.plaetze));
+  }
+
+  function legeAntragVor() {
+    if (Z.antrag || Z.antragErledigt) return;
+    var g = ausgangDef();
+    if (!g || !g.antrag) return;
+    Z.antrag = { summe: antragSumme(), jahr: B.welt.zeit.jahr, woche: B.welt.zeit.woche };
+    B.welt.schreibe(g.antrag.name + '. ' + g.antrag.satz, 'fuhre');
+    B.ton.spiele('fuhre:siegel');
+  }
+
+  /* Die Chronikzeile eines Ausgangs, mit den Luecken gefuellt. */
+  function ausgangSatz(text, summe) {
+    var fd = fristDef();
+    return String(text || '')
+      .replace('{jahr}', String(B.welt.zeit.jahr))
+      .replace('{wochen}', String(fd.wochen))
+      .replace('{familie}', B.welt.haus.familie)
+      .replace('{geld}', B.welt.geld(summe || 0));
+  }
+
+  function schliesseAb(teil, summe, wortFuerDieKasse) {
+    Z.ausgang = {
+      art: teil.art,
+      grund: teil.grund,
+      summe: summe,
+      kopf: ausgangSatz(teil.kopf, summe),
+      urteil: ausgangSatz(teil.urteil, summe),
+      folge: ausgangSatz(teil.folge, summe)
+    };
+    if (summe > 0) B.welt.nimm(summe, wortFuerDieKasse, 'spieler');
+    B.welt.schreibe(Z.ausgang.urteil + ' ' + Z.ausgang.folge
+      + (summe > 0 ? ' Ausgezahlt: ' + B.welt.geld(summe) + '.' : ''), 'ende');
+    B.uhr.beende(teil.grund, Z.ausgang.urteil);
+  }
+
+  function nimmAntrag() {
+    if (!Z.antrag || B.welt.zeit.ende) return;
+    var g = ausgangDef();
+    if (!g) return;
+    var summe = Z.antrag.summe;
+    Z.antragErledigt = true;
+    Z.antrag = null;
+    B.ton.spiele('fuhre:siegel');
+    schliesseAb(g.angenommen, summe, g.antrag.name + ' — angenommen');
+    B.sende('zeichne', { grund: 'fuhre-antrag-ja' });
+  }
+
+  function schlageAntragAus() {
+    if (!Z.antrag || B.welt.zeit.ende) return;
+    var g = ausgangDef();
+    Z.antragErledigt = true;
+    Z.antrag = null;
+    B.welt.schreibe('Das Haus schlägt den Antrag aus. ' + (g && g.antrag ? g.antrag.wer : 'Die Stadt')
+      + ' nimmt das Gebot vom Tisch; es kommt nicht wieder. '
+      + 'Was jetzt noch geht, geht über die Wirte.', 'festlegung');
+    B.sende('zeichne', { grund: 'fuhre-antrag-nein' });
+  }
+
+  /* Die Frist ist abgelaufen. Jetzt entscheidet die Epoche, nicht der Spieler. */
+  function vollzieheFall() {
+    if (B.welt.zeit.ende) return;
+    var g = ausgangDef();
+    if (!g || !g.fall) { B.uhr.beende('keine-abnehmer', fristDef().ende); return; }
+    Z.antrag = null;
+    var summe = Math.round(antragSumme() * (g.fall.anteil || 0));
+    schliesseAb(g.fall, summe, g.fall.kopf);
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE UEBERGABE — das einzige Ende, nach dem wieder Feuer unter der
+     Pfanne brennt.
+
+     Sie wird nicht verhaengt, sondern angeboten, und nur einem Haus, das
+     steht: fuenf abgeschlossene Braujahre, drei Haeuser, die Bier des Anker
+     fuehren, eine Kasse ohne Loch und ein Braujahr, in dem wirklich
+     geliefert wurde. Wer weiterbraut, bekommt sie zum naechsten Michaeli
+     wieder vorgelegt — sie ist ein Angebot, keine Falle.
+     ---------------------------------------------------------------------- */
+  var UEBERGABE_JAHRE = 5;
+  var UEBERGABE_HAEUSER = 3;
+
+  function uebergabeMoeglich() {
+    if (B.welt.zeit.ende || Z.uebergabe) return false;
+    if (B.welt.zeit.jahr - Z.startJahr < UEBERGABE_JAHRE) return false;
+    if (Z.uebergabeNein === B.welt.zeit.jahr) return false;
+    if (haeuser().length < UEBERGABE_HAEUSER) return false;
+    if (B.welt.haus.kasse < 0) return false;
+    return Z.verladenVorjahr > 0;
+  }
+
+  function pruefeUebergabe() {
+    if (!uebergabeMoeglich()) return;
+    Z.uebergabe = {
+      jahr: B.welt.zeit.jahr,
+      alt: B.welt.zeit.amtszeit.name,
+      haeuser: haeuser().length,
+      verladen: Z.verladenVorjahr
+    };
+  }
+
+  function uebergabeDef() {
+    var u = (D.ausgaenge && D.ausgaenge.uebergabe) || {};
+    return u[B.welt.zeit.epoche] || u[1] || { wort: 'Die Übergabe', satz: '', folge: '' };
+  }
+
+  function nimmUebergabe() {
+    if (!Z.uebergabe || B.welt.zeit.ende) return;
+    var u = uebergabeDef();
+    var alt = Z.uebergabe.alt;
+    /* Das Haus bleibt, der Mensch nicht — und diesmal geht der Mensch von
+       selbst. B.welt.erbe() setzt den naechsten Namen ein und meldet den
+       Erbfall; die Generationenzeile des Schlussblatts schreibt ihn mit. */
+    var neu = B.welt.erbe();
+    var folge = String(u.folge || '')
+      .replace('{familie}', B.welt.haus.familie)
+      .replace('{erbe}', neu.name)
+      .replace('{alt}', alt);
+    Z.ausgang = {
+      art: 'uebergeben',
+      grund: 'uebergeben',
+      summe: 0,
+      kopf: 'Das Haus wird übergeben · ' + B.welt.zeit.jahr,
+      urteil: alt + ' übergibt das Brauhaus zum Anker an ' + neu.name
+            + '. ' + u.satz,
+      folge: folge
+    };
+    Z.uebergabe = null;
+    B.ton.spiele('fuhre:siegel');
+    B.welt.schreibe(Z.ausgang.urteil + ' ' + Z.ausgang.folge, 'ende');
+    B.uhr.beende('uebergeben', Z.ausgang.urteil);
+    B.sende('zeichne', { grund: 'fuhre-uebergabe' });
+  }
+
+  function schlageUebergabeAus() {
+    if (!Z.uebergabe) return;
+    Z.uebergabeNein = Z.uebergabe.jahr;
+    Z.uebergabe = null;
+    B.sende('zeichne', { grund: 'fuhre-uebergabe-nein' });
   }
 
   /* ----------------------------------------------------------------------
@@ -1771,6 +1958,12 @@
     Z.probe = {};
     Z.probeDieseWoche = 0;
     Z.frist = null;
+    /* Und der Antrag der neuen Zeit ist ein anderer: der Rat von 1350 hat
+       kein Gebot in 1600 liegen. */
+    Z.antrag = null;
+    Z.antragErledigt = false;
+    Z.uebergabe = null;
+    Z.uebergabeNein = 0;
     /* Ein Vorschlag steht an der Tafel, damit die erste Woche laeuft.
        Kein Tutorial — eine Lage, die schon eingestellt ist. */
     var standard = sorten()[1] || sorten()[0];
@@ -2818,6 +3011,87 @@
     });
   }
 
+  /* --- DER ANTRAG UND DIE UEBERGABE ------------------------------------
+     Zwei Blaetter, ein Bauplan: eine Ueberschrift, ein Satz, zwei Knoepfe
+     nebeneinander, die einander ausschliessen, und darunter, was aus dem
+     Haus wird. Beide liegen LINKS neben dem Schlussblatt und ueber der
+     Reiterzeile der STADT, damit sie WEITER nie zudecken (ZUSTAENDIGKEIT
+     23) — der Antrag ist eine Entscheidung, kein Riegel. Wer nicht
+     entscheidet, klickt weiter, und die Frist laeuft.
+     -------------------------------------------------------------------- */
+  function zeichneAntrag(fach) {
+    if (!Z.antrag || B.welt.zeit.ende) return;
+    var g = ausgangDef();
+    if (!g || !g.antrag) return;
+    var a = g.antrag;
+    var summe = Z.antrag.summe;
+
+    var bl = B.el('div', {
+      klasse: 'blatt fu-ausgangblatt fu-antrag',
+      daten: { frei: '1', reiter: a.name }
+    });
+    bl.appendChild(B.el('h2', null, a.name));
+    bl.appendChild(B.el('div', 'fu-ausgang-lage',
+      'Noch ' + Z.frist + (Z.frist === 1 ? ' Woche' : ' Wochen') + ', dann entscheidet '
+      + a.wer + ' allein.'));
+    bl.appendChild(B.el('div', 'fu-satz', a.satz));
+
+    var w = B.el('div', 'fu-ausgang-wahl');
+    w.appendChild(B.knopf({
+      text: a.ja, zug: 'fuhre:ausgang:ja', preis: summe, klasse: 'gross',
+      titel: a.jaTitel, tu: nimmAntrag
+    }));
+    w.appendChild(B.knopf({
+      text: a.nein, zug: 'fuhre:ausgang:nein', klasse: 'gross flach',
+      titel: a.neinTitel, tu: schlageAntragAus
+    }));
+    bl.appendChild(w);
+
+    bl.appendChild(B.el('div', 'fu-ausgang-fuss',
+      'Angenommen ist die Partie an diesem Tag zu Ende, und ' + B.welt.geld(summe)
+      + ' liegen in der Lade. Ausgeschlagen kommt das Gebot nicht wieder: '
+      + (g.fall.anteil ? 'wenn die Frist abläuft, bleiben davon '
+          + B.welt.geld(Math.round(summe * g.fall.anteil)) + '.'
+        : 'wenn die Frist abläuft, bleibt davon nichts.')));
+    fach.appendChild(bl);
+  }
+
+  function zeichneUebergabe(fach) {
+    if (!Z.uebergabe || B.welt.zeit.ende) return;
+    var u = uebergabeDef();
+
+    var bl = B.el('div', {
+      klasse: 'blatt fu-ausgangblatt fu-uebergabe',
+      daten: { frei: '1', reiter: u.wort }
+    });
+    bl.appendChild(B.el('h2', null, u.wort + ' · ' + Z.uebergabe.jahr));
+    bl.appendChild(B.el('div', 'fu-ausgang-lage',
+      Z.uebergabe.alt + ' führt das Haus seit ' + B.welt.zeit.amtszeit.seit + '. '
+      + 'Es steht: ' + Z.uebergabe.haeuser + ' Häuser der Stadt führen Bier des Anker, '
+      + B.welt.menge(Z.uebergabe.verladen) + ' sind im letzten Braujahr hinausgegangen, '
+      + 'in der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.'));
+    bl.appendChild(B.el('div', 'fu-satz', u.satz));
+
+    var w = B.el('div', 'fu-ausgang-wahl');
+    w.appendChild(B.knopf({
+      text: 'Das Haus übergeben und aufhören', zug: 'fuhre:uebergabe:ja', klasse: 'gross',
+      titel: 'Die Partie endet hier — und das Haus brennt weiter. '
+           + 'Das ist das einzige Ende, nach dem am nächsten Morgen wieder angestellt wird. '
+           + 'Unwiderruflich.',
+      tu: nimmUebergabe
+    }));
+    w.appendChild(B.knopf({
+      text: 'Weiterbrauen — noch ein Braujahr', zug: 'fuhre:uebergabe:nein', klasse: 'gross flach',
+      titel: 'Das Angebot kommt zum nächsten Michaeli wieder, solange das Haus steht.',
+      tu: schlageUebergabeAus
+    }));
+    bl.appendChild(w);
+    bl.appendChild(B.el('div', 'fu-ausgang-fuss',
+      'Ein Haus, das steht, kann man weitergeben. Ein Haus, das keinen Abnehmer mehr hat, '
+      + 'kann man nur noch hergeben.'));
+    fach.appendChild(bl);
+  }
+
   /* --- DAS GEORGI-BLATT ----------------------------------------------- */
 
   /* Der eine Weg hinaus. Steht hier oben, weil ihn vier Dinge brauchen: der
@@ -3563,6 +3837,9 @@
       /* Die Georgi-Woche ist auch eine Woche: sonst stuende die Frist am
          Jahreswechsel still, ohne dass jemand etwas dafuer getan haette. */
       pruefeAuftragsbuch();
+      /* Und der Michaelitag ist der Tag, an dem ein Haus uebergeben wird.
+         Nach der Abrechnung, damit die Kasse die des neuen Jahres ist. */
+      pruefeUebergabe();
     },
 
     epoche: function () {

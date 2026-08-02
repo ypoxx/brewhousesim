@@ -690,5 +690,255 @@ var FUHRE_DATEN = {
               + 'und kein eigener Name. Der Gasthof führt es nicht, die Marke wächst nicht davon.' }
       ]
     }
+  },
+
+  /* =========================================================================
+     DIE AUSGAENGE — vier Epochen, vier Untergaenge, und einer, der keiner ist.
+
+     BEFUND-ENDE.md §1(b): "Es ist VIERMAL DASSELBE ENDE: endgrund
+     'keine-abnehmer' in allen vier Epochen, nach 103/103/101/99 Wochen. 1884
+     schliesst dabei mit 7.312 M in der Kasse und 48 Fass im Keller — das ist
+     kein Untergang, das ist ein Abbruch." Und §1(c): "Es gibt kein GUTES
+     Ende. Man kann nur aufhoeren zu existieren."
+
+     Beides hat dieselbe Ursache: das leere Auftragsbuch war der einzige
+     Ausgang, und was danach mit dem Haus geschah, stand nirgends. Ein
+     Brauhaus, das keinen Abnehmer mehr hat, HOERT aber nicht einfach auf —
+     es faellt jemandem zu, und wem es zufaellt, ist in jedem Jahrhundert ein
+     anderer. Genau daran haengen die vier Ausgaenge:
+
+       1350  Das Braurecht ist VERLIEHEN. Der Rat nimmt es zurueck, zahlt
+             nichts, und gibt den Sudtag an das naechste Haus in der Reihe.
+       1600  Die Braugerechtigkeit KLEBT AM HAUS und ist verkaeuflich. Die
+             Zunftlade loest sie aus oder ein Zunftgenosse kauft sie.
+       1884  Das Haus ist EIGENTUM und beleihbar. Entweder die
+             Aktienbrauerei kauft es im Ganzen — oder die Bank verwertet.
+       1970  Der Betrieb ist nichts mehr wert, die MARKE schon. Entweder
+             sie wird verkauft, oder das Sudwerk geht zum Schrott.
+
+     JEDER AUSGANG IST EINE ENTSCHEIDUNG, KEIN EREIGNIS. Solange die Frist
+     laeuft, steht der Antrag mit seinem Preisschild im Bild; wer ihn
+     annimmt, hoert an DIESEM Tag auf und hat das Geld. Wer ihn ausschlaegt,
+     bekommt den Untergang der Epoche — und der zahlt weniger oder nichts.
+     Das ist die unwiderrufliche Festlegung, die am Ende der Partie fehlte.
+
+     Und der fuenfte Ausgang, der keiner ist: DIE UEBERGABE. Ein Haus, das
+     steht, kann man weitergeben. Das ist das einzige Ende, bei dem am
+     naechsten Morgen wieder Feuer unter der Pfanne brennt.
+
+     Die Summen sind `basis + jePlatz * Gaerraum`: wer gebaut hat, bekommt
+     mehr. Der Massstab ist die Startkasse der Epoche (112 Pf · 640 fl ·
+     14.250 M · 86.000 DM, kern/welt.js) und der Startgaerraum
+     (12 · 24 · 90 · 400 Fassplaetze).
+     ========================================================================= */
+  ausgaenge: {
+
+    /* ------------------------------------------------------------------ */
+    1: {
+      antrag: {
+        name: 'Der Rat bietet den Abstand',
+        wer: 'der Rat',
+        basis: 40, jePlatz: 4,
+        satz: 'Der Stadtschreiber steht im Hof. Ein Braurecht ist geliehen, nicht gekauft: '
+            + 'wessen Bier keine Schenke der Stadt mehr führt, dem nimmt der Rat die Pfanne '
+            + 'ohnehin. Wer sie von sich aus zurückgibt, bekommt einen Abstand für Kessel, '
+            + 'Bottiche und das Kupfer — wer wartet, bekommt nichts.',
+        ja: 'Die Pfanne zurückgeben',
+        jaTitel: 'Das Braurecht geht heute an die Reihe zurück. Der Hof bleibt der Familie, '
+               + 'das Brauen hört auf. Unwiderruflich.',
+        nein: 'Nicht zurückgeben — die Frist auslaufen lassen',
+        neinTitel: 'Der Abstand verfällt. Läuft die Frist ab, zieht der Rat die Pfanne '
+                 + 'ohne einen Pfennig ein.'
+      },
+      angenommen: {
+        grund: 'pfanne-zurueckgegeben',
+        kopf: 'Die Pfanne geht an die Reihe zurück · {jahr}',
+        urteil: 'Das Haus zum Anker gibt sein Braurecht von sich aus zurück. Der Rat nimmt '
+              + 'Pfanne, Bottiche und Kupfer auf, zahlt den Abstand aus und trägt den Sudtag '
+              + 'auf das nächste Haus der Reihe um.',
+        folge: 'Der Hof bleibt der Familie {familie}. Gebraut wird darin noch — Haustrunk für '
+             + 'den eigenen Tisch, den kein Rat verbietet und den niemand kauft. '
+             + 'Das Bier des Anker steht in keiner Schenke der Stadt mehr.',
+        art: 'zurueckgegeben'
+      },
+      fall: {
+        grund: 'braurecht-entzogen',
+        anteil: 0,
+        kopf: 'Der Rat entzieht das Braurecht · {jahr}',
+        urteil: 'Der Rat entzieht dem Haus zum Anker das Braurecht: seit {wochen} Wochen hat '
+              + 'keine Schenke der Stadt ein Fass genommen. Ein Braurecht wird für die Stadt '
+              + 'verliehen; wer die Stadt nicht mehr versorgt, hat es verwirkt.',
+        folge: 'Es wird nichts bezahlt und nichts abgelöst — was verliehen war, fällt heim. '
+             + 'Zwei Ratsdiener holen die Pfanne noch am selben Tag ab. Der Sudtag des Anker '
+             + 'steht ab Georgi beim Nachbarn in der Reihe.',
+        art: 'entzogen'
+      }
+    },
+
+    /* ------------------------------------------------------------------ */
+    2: {
+      antrag: {
+        name: 'Der Mühlbräu bietet auf die Gerechtigkeit',
+        wer: 'die Zunft',
+        basis: 260, jePlatz: 14,
+        satz: 'Die Braugerechtigkeit klebt am Haus und ist verkäuflich — das ist der ganze '
+            + 'Unterschied zu 1350. Der Mühlbräu will sie: er hat Sudtage zu wenig und Absatz '
+            + 'zu viel. Die Lade sähe es lieber, das Recht käme zurück in die Lade; dann rechnet '
+            + 'sie die Rückstände dagegen und es bleibt ein Drittel.',
+        ja: 'Die Gerechtigkeit an den Mühlbräu verkaufen',
+        jaTitel: 'Der Mühlbräu übernimmt Gerechtigkeit und Sudtage, das Haus zum Anker wird '
+               + 'sein Nebenhaus. Unwiderruflich.',
+        nein: 'Nicht verkaufen — die Frist auslaufen lassen',
+        neinTitel: 'Das Gebot verfällt. Läuft die Frist ab, zieht die Zunftlade die '
+                 + 'Gerechtigkeit selbst ein und rechnet die Rückstände dagegen.'
+      },
+      angenommen: {
+        grund: 'gerechtigkeit-verkauft',
+        kopf: 'Die Gerechtigkeit geht an den Mühlbräu · {jahr}',
+        urteil: 'Das Haus zum Anker verkauft seine Braugerechtigkeit mitsamt den Sudtagen an '
+              + 'den Mühlbräu. Vor der Lade wird abgehandelt, das Siegel kommt darunter, und '
+              + 'die Summe wird bar ausgezahlt.',
+        folge: 'Der Anker bleibt ein Haus und hört auf, eine Brauerei zu sein: der Mühlbräu '
+             + 'braut künftig auf Ankers Sudtage und schenkt sein Bier im Anker aus. '
+             + 'Der Name über der Tür bleibt stehen. Das Bier darunter ist ein fremdes.',
+        art: 'verkauft'
+      },
+      fall: {
+        grund: 'reihe-gestrichen',
+        anteil: 0.35,
+        kopf: 'Die Zunft streicht das Haus aus der Reihe · {jahr}',
+        urteil: 'Die Zunft streicht das Haus zum Anker aus der Reihe: seit {wochen} Wochen hat '
+              + 'kein Wirt der Stadt ein Fass genommen. Die Reihe wird unter denen geteilt, '
+              + 'die liefern — wer nicht liefert, braut nicht.',
+        folge: 'Die Lade zieht die Gerechtigkeit selbst ein und rechnet die offenen Umlagen '
+             + 'dagegen. Ausgezahlt wird, was übrigbleibt. Die Sudtage des Anker werden auf '
+             + 'die übrigen Häuser verteilt; keines davon heißt Bruckner.',
+        art: 'gestrichen'
+      }
+    },
+
+    /* ------------------------------------------------------------------ */
+    3: {
+      antrag: {
+        name: 'Die Aktienbrauerei legt ein Angebot vor',
+        wer: 'die Aktienbrauerei',
+        basis: 6000, jePlatz: 95,
+        satz: 'Der Direktor der Aktienbrauerei kommt mit dem Notar. Er kauft nicht das Bier, '
+            + 'er kauft die Straße: Grundstück, Sudhaus, Kühlmaschine, Fasspark und die '
+            + 'Kundenliste. Das Haus wird Niederlage und Absatzlager. So sind zwischen 1870 '
+            + 'und 1900 die meisten kleinen Häuser verschwunden — nicht bankrott, sondern gekauft.',
+        ja: 'An die Aktienbrauerei verkaufen',
+        jaTitel: 'Gebäude, Sudhaus und Kundenliste gehen an die Aktienbrauerei. '
+               + 'Unwiderruflich.',
+        nein: 'Ablehnen — die Frist auslaufen lassen',
+        neinTitel: 'Das Angebot verfällt. Läuft die Frist ab, kündigt der Malzhändler die '
+                 + 'Wechsel, und die Bank verwertet, was das Angebot gekauft hätte.'
+      },
+      angenommen: {
+        grund: 'an-aktienbrauerei-verkauft',
+        kopf: 'Die Aktienbrauerei kauft das Haus · {jahr}',
+        urteil: 'Das Brauhaus zum Anker wird im Ganzen an die Aktienbrauerei verkauft: '
+              + 'Grundstück, Sudhaus, Kühlmaschine, Fasspark und Kundenliste, bar gegen '
+              + 'Löschung der Wechsel.',
+        folge: 'Der Schriftzug bleibt zehn Jahre am Giebel, weil er dem Käufer etwas wert ist. '
+             + 'Gebraut wird ab dem nächsten Sud in der großen Anlage am Bahnhof; hier steht '
+             + 'nur noch das Absatzlager mit zwei Mann und einem Rollwagen.',
+        art: 'geschluckt'
+      },
+      fall: {
+        grund: 'bank-verwertet',
+        anteil: 0,
+        kopf: 'Die Bank verwertet die Braustätte · {jahr}',
+        urteil: 'Der Malzhändler kündigt die Wechsel, die Bank zieht die Linie ein: seit '
+              + '{wochen} Wochen geht kein Fass über die Rampe. Ein volles Lager ist kein '
+              + 'Absatz, und ein Fass im Keller tilgt keinen Wechsel.',
+        folge: 'Das Amtsgericht setzt den Versteigerungstermin an. Grundstück, Sudhaus und '
+             + 'Kühlmaschine decken die Wechsel — kein Überschuss, keine Ablösung. '
+             + 'Was in der Lade liegt, bleibt der Familie; das Haus bleibt es nicht. '
+             + 'Ersteigert hat es die Aktienbrauerei, für weniger, als sie geboten hatte.',
+        art: 'verwertet'
+      }
+    },
+
+    /* ------------------------------------------------------------------ */
+    4: {
+      antrag: {
+        name: 'Die Nordstern-Gruppe bietet auf die Marke',
+        wer: 'der Handel',
+        basis: 90000, jePlatz: 130,
+        satz: 'Die Nordstern-Gruppe schickt keinen Direktor mehr, sondern einen Justitiar. '
+            + 'Der Betrieb interessiert sie nicht — 30-Hektoliter-Sude rechnen sich in keiner '
+            + 'Kalkulation. Sie kauft den NAMEN: Wortmarke, Etikett, Rezeptur und das Recht, '
+            + '"Brauhaus zum Anker" auf ein Etikett zu drucken, das anderswo gefüllt wird.',
+        ja: 'Die Marke an die Nordstern-Gruppe verkaufen',
+        jaTitel: 'Wortmarke, Etikett und Rezeptur gehen an die Gruppe. Der Betrieb wird '
+               + 'stillgelegt. Unwiderruflich.',
+        nein: 'Nicht verkaufen — die Frist auslaufen lassen',
+        neinTitel: 'Das Gebot verfällt. Läuft die Frist ab, ist der Betrieb ein Grundstück '
+                 + 'mit Altlasten, und das Sudwerk bringt Schrottpreis.'
+      },
+      angenommen: {
+        grund: 'marke-verkauft',
+        kopf: 'Die Marke geht an die Nordstern-Gruppe · {jahr}',
+        urteil: 'Das Brauhaus zum Anker verkauft seine Marke an die Nordstern-Gruppe und '
+              + 'stellt das Brauen ein. Bezahlt wird für Wortmarke, Etikett und Rezeptur — '
+              + 'nicht für Kessel, Tanks und Halle.',
+        folge: 'Anker Pilsner steht weiter im Regal, gebraut zweihundert Kilometer entfernt, '
+             + 'in einer Anlage, die vierhundert Hektoliter im Sud fährt. Auf dem Etikett '
+             + 'steht "gegründet 1350". Am Hof steht ein Bauzaun.',
+        art: 'marke'
+      },
+      fall: {
+        grund: 'brauereisterben',
+        anteil: 0.12,
+        kopf: 'Das Brauhaus wird stillgelegt · {jahr}',
+        urteil: 'Der Handel nimmt das Brauhaus zum Anker aus dem Sortiment: seit {wochen} '
+              + 'Wochen hat kein Einkauf mehr bestellt. Zwischen 1960 und 1990 ist das über '
+              + 'die Hälfte aller deutschen Brauereien gewesen — nicht ein Krach, sondern ein '
+              + 'Regalmeter nach dem anderen.',
+        folge: 'Für den Betrieb findet sich kein Käufer, für die Marke jetzt auch keiner mehr: '
+             + 'eine Marke ohne Listung ist ein Wort. Sudwerk, Tanks und Flaschenkeller gehen '
+             + 'zum Schrottpreis, der Rest wird ausgeräumt. Auf dem Gelände steht später ein '
+             + 'Getränkemarkt, der Bier von acht Konzernen führt.',
+        art: 'gestorben'
+      }
+    },
+
+    /* =======================================================================
+       DIE UEBERGABE — das Ende, das kein Untergang ist.
+
+       Bedingungen stehen in stuecke/fuhre.js (uebergabeMoeglich): mindestens
+       fuenf abgeschlossene Braujahre, mindestens drei Haeuser, die Bier des
+       Anker fuehren, eine Kasse ohne Loch und ein Braujahr, in dem wirklich
+       geliefert wurde. Wer das hat, darf aufhoeren, statt aufzuhoeren zu
+       existieren — und das Haus brennt am naechsten Morgen weiter.
+       ======================================================================= */
+    uebergabe: {
+      1: { wort: 'Die Übergabe vor dem Rat',
+           satz: 'Der Rat trägt den Sudtag auf den neuen Namen um, der Grutherr nimmt die '
+               + 'Kerbe ab und schneidet sie neu. Zwei Zeugen, ein Eintrag, ein Krug.',
+           folge: 'Die Pfanne bleibt in der Familie {familie}. {erbe} führt das Haus zum Anker '
+                + 'weiter; für {alt} ist im Hinterhaus ein Ausgedinge ausgemacht — Brot, Holz '
+                + 'und zwei Eimer Bier in der Woche, aufgeschrieben und siegelt.' },
+      2: { wort: 'Die Übergabe vor der Lade',
+           satz: 'Die Gerechtigkeit wird vor der Lade auf den neuen Namen geschrieben, das '
+               + 'Meisterrecht bestätigt, die Umlage quittiert.',
+           folge: 'Die Gerechtigkeit bleibt am Haus und in der Familie {familie}. {erbe} braut '
+                + 'ab dem nächsten Sudtag auf eigene Rechnung; {alt} behält Stube, Kammer und '
+                + 'das Leibgeding, wie es die Ordnung vorsieht.' },
+      3: { wort: 'Die Übergabe beim Notar',
+           satz: 'Der Übergabevertrag liegt beim Notar: Grundstück, Sudhaus, Kühlmaschine, '
+               + 'Fasspark und Firma gehen über, die Wechsel laufen unverändert weiter.',
+           folge: 'Das Haus bleibt eigen und bleibt bei der Familie {familie} — in einem '
+                + 'Jahrzehnt, in dem die halbe Straße an die Aktienbrauereien verkauft hat. '
+                + '{erbe} führt es weiter, {alt} bekommt eine Leibrente aus dem Betrieb.' },
+      4: { wort: 'Die Übergabe im Handelsregister',
+           satz: 'Der Eintrag wird geändert, die Bankvollmacht umgeschrieben, die '
+               + 'Gebietsleiter des Handels bekommen ein Rundschreiben mit dem neuen Namen.',
+           folge: 'Der Anker bleibt selbständig und bleibt bei der Familie {familie} — in dem '
+                + 'Jahrzehnt, in dem in Deutschland jede zweite Brauerei zumacht. {erbe} führt '
+                + 'ihn weiter, {alt} bleibt im Beirat und geht jeden Morgen durch den '
+                + 'Flaschenkeller.' }
+    }
   }
 };
