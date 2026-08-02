@@ -1450,12 +1450,13 @@
       var betrag = erloes(a, ep, false);
       var zeile = B.el('div', 'bauzeile');
       var k = B.knopf({
-        text: art.tat + ': ' + a.name,
+        text: a.name,
         zug: 'stadt:' + art.verb + ':' + a.schluessel,
         preis: betrag,
         klasse: 'stadt-verwertung',
-        titel: art.sagt + '  [Bauwert ' + B.welt.geld(preis(a, ep)) + ' · '
-             + (art.bleibt ? 'bleibt im Hof, ' + B.rund(art.zins * 100, 1)
+        titel: art.tat + ': ' + a.name + '. ' + art.sagt
+             + '  [Bauwert ' + B.welt.geld(preis(a, ep)) + ' · '
+             + (art.bleibt ? 'bleibt im Hof, ' + B.zahl(art.zins * 100, 1)
                              + ' % Zins jeden Michaeli'
                            : 'geht aus dem Hof'
                              + (nutzenWort(a) ? ', kostet ' + nutzenWort(a) : '')) + ']',
@@ -1471,7 +1472,7 @@
       });
       zeile.appendChild(k);
       zeile.appendChild(B.el('div', 'nutzen', art.bleibt
-        ? 'bleibt stehen · ' + B.rund(art.zins * 100, 1) + ' % Zins'
+        ? 'bleibt stehen · ' + B.zahl(art.zins * 100, 1) + ' % Zins jeden Michaeli'
         : (nutzenWort(a) ? 'weg: ' + nutzenWort(a) : 'geht aus dem Hof')));
       reihe.appendChild(zeile);
     });

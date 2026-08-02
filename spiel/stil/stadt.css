@@ -362,18 +362,38 @@
   min-width: 0;
 }
 
+/* Feste Hoehe, nicht Mindesthoehe: beide Seiten des Kastens muessen gleich
+   hoch sein, sonst wandert die Werkbank beim Umschlagen ins Stadtfenster.
+   Zwei Zeilen Name passen hinein, mehr wird abgeschnitten. */
 .stadt-bauhof .knopf {
   display: flex;
+  align-items: center;
   width: 100%;
-  min-height: calc(var(--s) * 42);
-  padding: calc(var(--s) * 6) calc(var(--s) * 10);
-  font-size: calc(var(--s) * 20);
+  height: calc(var(--s) * 46);
+  min-height: 0;
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  font-size: calc(var(--s) * 19);
   gap: calc(var(--s) * 6);
   border-radius: calc(var(--s) * 3);
   white-space: normal;
-  line-height: 1.05;
+  line-height: 1.0;
 }
-.stadt-bauhof .knopf .wort { flex: 1 1 auto; }
+/* DER VERTRAG DER WERKBANK IST EINE HOEHE, KEIN WUNSCH.  (Runde 7)
+
+   Die zweite Seite des Bauhofs zeigt die STEHENDEN Bauten, und deren Namen
+   sind laenger als die der offenen ('Schornstein und Dampfmaschine' gegen
+   'Kontor'). Ungebremst brach das den Vertrag: mit aufgeschlagener
+   Verwertungsseite stand die Werkbank in 1884 bei 84,59 statt 87,17 Prozent
+   und schob sich 2,6 Punkte ins Stadtfenster. Also bekommt jede Zeile eine
+   feste Hoehe: zwei Zeilen Name, eine Zeile Nutzen, Rest abgeschnitten. */
+.stadt-bauhof .knopf .wort {
+  flex: 1 1 auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: calc(var(--s) * 38);
+}
 .stadt-bauhof .knopf .preis {
   font-size: calc(var(--s) * 19);
   padding-left: calc(var(--s) * 8);
@@ -386,6 +406,9 @@
   font-size: calc(var(--s) * 15);
   color: #e3c79a;
   letter-spacing: calc(var(--s) * 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .stadt-bauhof .leer {
