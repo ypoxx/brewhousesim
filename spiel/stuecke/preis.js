@@ -1382,6 +1382,11 @@
 
   function festKarte(f) {
     var preis = festPreis(f);
+    /* Was sie hereinbringt, mit derselben Rechnung wie beim Klick
+       (`wende`: einmal × Jahreslast) — damit auf dem Schild dieselbe Zahl
+       steht, die gleich in der Kasse landet. */
+    var zufluss = (f.wirkung && f.wirkung.einmal)
+      ? rundePreis(f.wirkung.einmal * pflichtSumme()) : 0;
     var offen = festlegungOffen();
     var kann = preis === 0 || B.welt.kann(preis);
     var jetztTag = B.welt.zeit.woche === 1;
@@ -1409,7 +1414,8 @@
         'Dafür neu und für immer: ' + f.wirkung.pflichtNeu.name + '.'));
     }
     karte.appendChild(B.el('div', 'pr-satz-klein',
-      'Preis dieser Amtszeit: ' + (preis ? geld(preis) : 'keine Ausgabe')
+      'Preis dieser Amtszeit: '
+      + (preis ? geld(preis) : (zufluss ? geld(zufluss) + ' kommen herein' : 'keine Ausgabe'))
       + (amtszeit().bis ? ' · ' + amtszeit().name + ' führt das Haus bis ' + amtszeit().bis + '.'
                         : '')));
 
@@ -1417,10 +1423,15 @@
       'Diese Amtszeit hat sich bereits festgelegt. Die nächste hat wieder eine Wahl.'));
     else if (!kann) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
       'Über der Kasse: es fehlen ' + geld(preis - B.welt.haus.kasse) + '.'));
+    /* Auflage aus ZUSTAENDIGKEIT 13: die staerkste unwiderrufliche Wahl des
+       Blattes war die einzige ohne Zahl auf dem Schild — sie trug „ohne
+       Ausgabe" und zahlte beim Klick 89.000 DM AUS. Kostet eine Festlegung
+       nichts, weil sie Geld hereinbringt, steht jetzt dieses Geld auf dem
+       Schild, mit Vorzeichen. Ein Schild ohne Zahl ist kein Preisschild. */
     karte.appendChild(B.knopf({
-      text: preis ? 'Festlegen' : 'Festlegen — ohne Ausgabe',
+      text: preis ? 'Festlegen' : (zufluss ? 'Festlegen — Geld herein' : 'Festlegen — ohne Ausgabe'),
       zug: 'preis:festlege:' + f.k,
-      preis: preis ? -preis : 0,
+      preis: preis ? -preis : (zufluss || 0),
       klasse: 'pr-siegel',
       aus: !offen || !kann || !jetztTag,
       titel: 'Unabänderlich. ' + f.regel,
