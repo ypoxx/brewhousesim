@@ -278,9 +278,9 @@ var PREIS_DATEN = {
       lastenGrund: 2500,
       teuerungJahr: 1.038,
       teuerungKauf: 1.055,
-      lastenFest: 100,
-      pflichtUmsatz: 0.058,
-      pflichtErtrag: 0.40,
+      lastenFest: 75,
+      pflichtUmsatz: 0.040,
+      pflichtErtrag: 0.28,
       nachlass: 0.55,
       nachlassName: 'Stundung des Klosters auf den Pachtzins',
       /* DER NOTPFENNIG. Das Braugeld fuer einen Sud Braunbier — Malz, Hopfen,
@@ -294,7 +294,7 @@ var PREIS_DATEN = {
          ankommt, ist bewusst der kleinste der vier Saetze. */
       satzFolgt: 0.25,
       pflichtHoehe: 0.155,
-      umlageAnteil: 0.70,
+      umlageAnteil: 0.52,
       handlohnAnteil: 1.15,
       /* 1600 bis 1650 ist die dichteste Umlagenzeit der ganzen Partie:
          Tuerkensteuer, Kontribution, Quartierlast, Brandsteuer,
@@ -476,9 +476,9 @@ var PREIS_DATEN = {
       lastenGrund: 11000,
       teuerungJahr: 1.048,
       teuerungKauf: 1.060,
-      lastenFest: 800,
-      pflichtUmsatz: 0.085,
-      pflichtErtrag: 0.45,
+      lastenFest: 620,
+      pflichtUmsatz: 0.055,
+      pflichtErtrag: 0.32,
       nachlass: 0.55,
       nachlassName: 'Der Steuerausschuss setzt die Veranlagung herab',
       /* DER NOTPFENNIG. Betriebsmittel eines Gewerbes sind der Vollstreckung
@@ -491,7 +491,7 @@ var PREIS_DATEN = {
          die zieht mit den Kosten mit. Der hoechste der vier Saetze. */
       satzFolgt: 0.50,
       pflichtHoehe: 0.175,
-      umlageAnteil: 0.90,
+      umlageAnteil: 0.62,
       handlohnAnteil: 1.10,
       abstaende: [2, 4, 3, 5, 4, 3, 4],
 

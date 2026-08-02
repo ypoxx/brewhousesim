@@ -1042,6 +1042,13 @@
       verladen: Z.verladenVorjahr,
       mass: uebergabeMass()
     };
+    /* In die Chronik, damit das gute Ende nicht nur auf einem Blatt steht,
+       das die Platzordnung eine Woche spaeter in einen Reiter klappen kann.
+       Wer die Chronik liest, findet den Tag wieder. */
+    B.welt.schreibe(uebergabeDef().wort + ': das Haus steht gut genug, um es weiterzugeben — '
+      + Z.uebergabe.haeuser + ' Häuser führen sein Bier, '
+      + B.welt.menge(Z.uebergabe.verladen) + ' sind im Braujahr hinausgegangen. '
+      + 'Das Angebot liegt ' + UEBERGABE_WOCHEN + ' Wochen.', 'fuhre');
   }
 
   function uebergabeDef() {
