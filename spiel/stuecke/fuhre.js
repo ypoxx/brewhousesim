@@ -805,9 +805,23 @@
 
     if (lebt) {
       if (Z.frist !== null) Z.frist = null;
+      /* Ein Probefass hat gewirkt: es gibt wieder eine Adresse. Dann ist der
+         Antrag gegenstandslos — der Kaeufer wollte ein Haus ohne Kundschaft.
+         Er gilt aber NICHT als ausgeschlagen: geht das Auftragsbuch spaeter
+         wieder leer, ist das eine neue Lage und ein neues Gebot. */
+      if (Z.antrag) {
+        Z.antrag = null;
+        B.welt.schreibe('Es liefert wieder. ' + (ausgangDef() && ausgangDef().antrag
+          ? ausgangDef().antrag.wer : 'Der Käufer') + ' nimmt den Antrag zurück — '
+          + 'ein Haus mit Abnehmern steht nicht zum Verkauf.', 'fuhre');
+      }
       return;
     }
     if (B.welt.zeit.ende) return;
+
+    /* Ein Haus ohne einen einzigen Abnehmer wird nicht uebergeben, sondern
+       hergegeben. Das Uebergabeblatt geht vom Tisch, sobald die Frist laeuft. */
+    Z.uebergabe = null;
 
     var fd = fristDef();
     if (Z.frist === null) {
@@ -951,17 +965,23 @@
   var UEBERGABE_JAHRE = 5;
   var UEBERGABE_HAEUSER = 3;
 
-  function uebergabeMoeglich() {
-    if (B.welt.zeit.ende || Z.uebergabe) return false;
+  function hausStehtGut() {
+    if (B.welt.zeit.ende) return false;
     if (B.welt.zeit.jahr - Z.startJahr < UEBERGABE_JAHRE) return false;
-    if (Z.uebergabeNein === B.welt.zeit.jahr) return false;
     if (haeuser().length < UEBERGABE_HAEUSER) return false;
     if (B.welt.haus.kasse < 0) return false;
     return Z.verladenVorjahr > 0;
   }
 
+  /* Zu Michaeli wird neu bewertet, nicht einmal entschieden: was voriges Jahr
+     galt, gilt heute vielleicht nicht mehr. Deshalb wird das Blatt hier jedes
+     Jahr neu gesetzt ODER weggenommen — mit den Zahlen des abgelaufenen
+     Braujahres, nicht mit denen von vor drei Jahren. */
   function pruefeUebergabe() {
-    if (!uebergabeMoeglich()) return;
+    if (!hausStehtGut() || Z.uebergabeNein === B.welt.zeit.jahr || Z.antrag) {
+      Z.uebergabe = null;
+      return;
+    }
     Z.uebergabe = {
       jahr: B.welt.zeit.jahr,
       alt: B.welt.zeit.amtszeit.name,
@@ -3090,7 +3110,7 @@
   }
 
   function zeichneUebergabe(fach) {
-    if (!Z.uebergabe || B.welt.zeit.ende || sommerLiegtOben()) return;
+    if (!Z.uebergabe || Z.antrag || B.welt.zeit.ende || sommerLiegtOben()) return;
     var u = uebergabeDef();
 
     var bl = B.el('div', {
