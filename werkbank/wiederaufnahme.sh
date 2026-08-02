@@ -88,7 +88,11 @@ fi
 echo
 if [ -f werkbank/LAUFENDER-AUFTRAG.md ]; then
   ok "Auftrag steht in werkbank/LAUFENDER-AUFTRAG.md — DIESE DATEI JETZT LESEN"
-  sed -n '/^## Wo der Lauf steht/,/^## /p' werkbank/LAUFENDER-AUFTRAG.md | head -20 | sed 's/^/      /'
+  # Nicht auf eine feste Überschrift festnageln — die wandert, wenn eine neue
+  # Welle anfängt. Am 2.8. hat genau das den Auszug stumm gemacht: das Skript
+  # suchte "## Wo der Lauf steht", während oben "## Welle 3 läuft" stand.
+  # Genommen wird der erste Abschnitt NACH der Grundaufgabe, also der jüngste.
+  awk '/^## /{n++} n>=2 && n<3' werkbank/LAUFENDER-AUFTRAG.md | head -22 | sed 's/^/      /'
 else
   weh "werkbank/LAUFENDER-AUFTRAG.md fehlt — ohne ihn weiß niemand, was der Lauf tut"
 fi
