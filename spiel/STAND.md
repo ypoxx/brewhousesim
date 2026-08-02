@@ -25,6 +25,12 @@ Wo eine Zahl von jemand anderem stammt, steht das dabei.
 > Eichung — und erst danach die Frage, ob die Wirtschaft überhaupt eine Nacharbeit braucht.
 > Der Satz in §2 zu §13 ist überdies überholt: die jüngste Eichung zeigt in allen vier
 > Epochen eine anklickbare Festlegung innerhalb der ersten drei Braujahre.
+>
+> **Nachtrag 2, gleicher Tag:** Die Eichung ist auf dem freien Bildschirm neu gefahren.
+> Die Kennzahltabelle in §5 ist damit ersetzt — **alle vier** Epochen kippen jetzt
+> messbar, zwei nach unten (1600, 1884: vier von sechs Jahren unter 1×) und zwei nach
+> oben (1350, 1970). Zahlen, Ursachenkette und die Richtung der Nacharbeit stehen in
+> **`spiel/BEFUND-WIRTSCHAFT.md`**.
 
 ## 1 — Was jetzt wirklich läuft
 
