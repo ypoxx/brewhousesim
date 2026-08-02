@@ -284,3 +284,17 @@
   height: calc(var(--s) * 16);
   margin: calc(var(--s) * -8) 0 0 calc(var(--s) * -8);
 }
+
+/* DIE TIEFE — wer sich in die Quere kommt. Gelb: derselbe Platz. Rot: die
+   Reihenfolge steht verkehrt herum, einer liegt ueber dem, vor dem er steht. */
+.stadt-lot .lot-streit {
+  position: absolute;
+  border: calc(var(--s) * 3) solid #d4a017;
+  background: rgba(212, 160, 23, 0.10);
+}
+
+.stadt-lot .lot-streit.schlecht {
+  border-color: #e8402a;
+  border-style: dashed;
+  background: rgba(232, 64, 42, 0.16);
+}

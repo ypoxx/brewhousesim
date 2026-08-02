@@ -2855,7 +2855,28 @@
        vor der Tuer: sie liegt zwischen x 21 und 79 Prozent und endet bei
        89 Prozent Hoehe, WEITER steht bei 84–93 / 94–98 Prozent. Die beiden
        Rechtecke beruehren einander nicht, in keiner Aufloesung. */
-    var bl = B.el('div', { klasse: 'blatt fu-sommerblatt', daten: { frei: '1' } });
+    /* JEDES GEORGI IST EIN EIGENES BLATT, und es sagt das auch.
+
+       Die Platzordnung der STADT erkennt ein Brett an seiner Klassenliste
+       und merkt sich, wann es zuletzt aufgeschlagen hat; wer zuletzt
+       aufschlug, liegt oben. Ein Brett, das verschwindet und ein Jahr
+       spaeter wiederkommt, behielt dabei seinen alten Zeitstempel — es war
+       damit das aelteste auf dem Tisch und wurde von jedem juengeren Brett
+       zugeklappt. Gemessen: die Georgi-Tafel lag in 9 von 12 Jahreswechseln
+       als Reiter, obwohl DIE STADT den Jahreswechsel ausdruecklich
+       aufschlagen laesst ("Ein formatfuellendes Blatt zum Jahreswechsel ist
+       eine Entscheidung").
+
+       Die Jahreszahl in der Klasse ist keine List, sondern die Wahrheit:
+       die Tafel von 1352 ist nicht die Tafel von 1351. Damit ist sie jedes
+       Jahr neu auf dem Tisch und liegt oben, solange die Entscheidung
+       ansteht. data-reiter beschriftet ihren Reiter, falls die Platzordnung
+       sie danach doch zuklappt — dann ist der Weg zurueck beschriftet und
+       nicht zu erraten. */
+    var bl = B.el('div', {
+      klasse: 'blatt fu-sommerblatt fu-georgi-' + s.jahr,
+      daten: { frei: '1', reiter: 'Georgi ' + s.jahr + ' · Jahresplan' }
+    });
     bl.setAttribute('role', 'dialog');
     bl.setAttribute('aria-modal', 'true');
     bl.setAttribute('aria-label', 'Georgi ' + s.jahr);
@@ -3094,7 +3115,10 @@
        kein einziger Knopf steht, auch nicht der Wiederanfang. Die Uhr steht
        an dieser Stelle ohnehin (kern/uhr.js: z.ende sperrt WEITER); ein
        zweites Schloss vor einer verschlossenen Tuer ist keines. */
-    var bl = B.el('div', { klasse: 'blatt fu-schlussblatt', daten: { frei: '1' } });
+    var bl = B.el('div', {
+      klasse: 'blatt fu-schlussblatt',
+      daten: { frei: '1', reiter: 'Das Ende des Hauses' }
+    });
     bl.setAttribute('role', 'dialog');
     bl.setAttribute('aria-modal', 'true');
     bl.setAttribute('aria-label', 'Das Ende des Hauses ' + s.jahr);
