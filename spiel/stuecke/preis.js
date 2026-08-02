@@ -617,11 +617,23 @@
        auf 18 Pf, der Anschlag von 2.547 auf 1.912 — nach zwei Jahren steht
        das Haus bei drei Hundertsteln seiner alten Barschaft und wird noch mit
        drei Vierteln des alten Ansatzes bedient. Nach neun Jahren waere er erst
-       auf ein Zehntel. Mit 0,62 ist die Schaetzung nach drei Jahren bei einem
-       Viertel — der Ruf eines grossen Hauses haelt eine Handelsgeneration und
-       nicht ein Menschenleben. Der Weg zurueck ist damit gangbar, ohne dass
-       ein gutes Jahr sofort vergessen waere. */
-    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.62);
+       auf ein Zehntel.
+
+       Zweite Messung, und sie hat die Begruendung umgedreht. Der Nachgeber
+       war als Strafe fuer den Erfolgreichen gedacht. Gemessen bestraft er den
+       Gescheiterten, und zwar doppelt: in 1350 schwankt der Ausstoss von Jahr
+       zu Jahr zwischen 150 und 863 Pf — der Faktor Sechs, und keine einzige
+       Sprosse dazwischen gekauft. Faellt er, faellt die Kasse mit; die
+       Schaetzung aber steht noch zwei Jahre auf dem alten Stand, und die
+       Kennzahl kippt von 2,68 auf 0,63, ohne dass irgendetwas geschehen waere
+       ausser einem mageren Braujahr. Der Boettcher haette in so einem Jahr
+       laengst billiger angeschlagen: er sieht den Hof, nicht das Archiv.
+
+       Mit 0,45 haelt die Schaetzung nach einem Jahr noch knapp die Haelfte
+       und ist nach dreien bei einem Zehntel. Der Ruf eines grossen Hauses
+       traegt damit ueber ein mageres Jahr — nicht ueber ein mageres
+       Jahrzehnt. */
+    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.45);
     rechneAnschlag();
 
     /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. Er kann sich
