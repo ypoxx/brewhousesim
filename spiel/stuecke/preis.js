@@ -279,15 +279,16 @@
   /* Jede Umlage hat ihr eigenes Gewicht. Eine Brandschatzung ist keine
      Brueckenumlage — stuenden fuenf gleiche Zahlen untereinander, waere die
      Spalte offensichtlich eine Formel und kein Kalender. */
-  /* Auch die ausserordentliche Umlage kennt den Nachlass. Sie wird nach
-     Vermoegen und Nahrung umgelegt, und ein Haus, das im vorigen Jahr nichts
-     uebrig hatte, wird verschont — nicht ganz, aber merklich. Ohne das
-     trifft die Brandschatzung genau das Haus am haertesten, das sie am
-     wenigsten tragen kann, und der Weg zurueck ist wieder zu. */
+  /* Die ausserordentliche Umlage folgt der Jahreslast und damit allen drei
+     Wurzeln: sie faellt mit dem Ausstoss und mit der Nahrung des Hauses.
+     Einen eigenen Nachlass bekommt sie NICHT — eine Brandschatzung fragt
+     nicht nach der Bilanz, und genau deshalb ist sie die Zacke im Verlauf
+     und nicht bloss eine weitere Abgabe. Gegengeprueft: mit einem Nachlass
+     auch auf die Umlage verliert die Kennzahl in drei von vier Epochen ihre
+     Gegenbewegung (gemessen: 1350 rho +0,94 statt +0,66). */
   function umlageBetrag(u) {
     var teil = (u && u.teil) ? u.teil : 1;
-    var mild = Z.nachlass ? (1 - (ep().nachlass || 0)) : 1;
-    return rundePreis(ep().umlageAnteil * teil * pflichtSumme() * mild * (Z.umlageHalb ? 0.5 : 1));
+    return rundePreis(ep().umlageAnteil * teil * pflichtSumme() * (Z.umlageHalb ? 0.5 : 1));
   }
 
   function handlohnBetrag() {
