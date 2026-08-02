@@ -24,14 +24,40 @@ dem Bankrott noch sechzehn Jahre weiter.
 
 Was daran jetzt nicht stimmt, ist dreierlei:
 
-**(a) Das Ende ist stumm.** WEITER wird grau, und das ist alles. Kein
-Schlussbild, keine Zeile, warum die Partie vorbei ist, keine Bilanz. Was am
-Schirm liegt, ist DAS SUDBUCH WIRD GESCHLOSSEN — das eigene Blatt eines Stücks,
-das über sich selbst Rechenschaft ablegt, kein Urteil über die Partie. Ein
-Spieler, der zum ersten Mal spielt, sieht einen toten Knopf und weiß nicht, ob
-er verloren hat oder etwas klemmt. (Genau diese Verwechslung hat die Aufsicht
-selbst gemacht: der Messlauf schrieb „WEITER nicht bedienbar" als **Abbruch**
-auf, nicht als Ende.)
+**(a) Das Ende ist stumm — und die Ursache ist eine andere, als hier zuerst
+stand.** BERICHTIGT am 2.8., 18:20 UTC, nachdem DER SUD den wahren Grund
+gefunden hat und die Aufsicht ihn nachgemessen hat.
+
+Ursprünglich stand hier: es gebe kein Schlussbild. **Das war falsch.** DIE FUHRE
+malt sehr wohl eines, 1075×628 px bei 422|90, und es trägt das Urteil im
+Klartext — „Das Brauhaus zum Anker hört auf · 1353 Der Rat entzieht dem Haus zum
+Anker das B…". Am Bildschirm nachgesehen (Stand `cb9d86e`, 1920×1000, alle vier
+Epochen):
+
+| Epoche | `.fu-schlussblatt` | sichtbar? | verdeckt durch |
+|---|---|---|---|
+| 1350 | 1075×628, `stadt-zugeklappt` | **nein** | `sud-schluss blatt` |
+| 1600 | 1075×628, `stadt-zugeklappt` | **nein** | `sud-schluss blatt` |
+| 1884 | 1075×628, `stadt-zugeklappt` | **nein** | `sud-schluss blatt` |
+| 1970 | 1075×643, `stadt-zugeklappt` | **nein** | `sud-buchzeile` |
+
+**Das Urteil über die Partie ist in allen vier Epochen da und liegt in allen
+vier zugeklappt unter dem Sudbuch.** Die Platzordnung der STADT gibt dem zuletzt
+Aufgeschlagenen den Platz, und das ist DAS SUDBUCH — 883×203 bis 883×299, mit
+der Rechenschaft eines einzelnen Stücks über sich selbst. Der Spieler sieht die
+Buchhaltung und nicht das Urteil.
+
+DER SUD hat das erkannt und seine Klappe zurückgenommen; seine eigene Messung
+bei 1440×900, 1600×1000 und 2752×1536 zeigt das Schlussblatt offen. **Bei
+1920×1000 — der Größe, in der hier gemessen wird — greift es noch nicht:** das
+Sudbuch misst dort 883×299 = 13,75 % der Bühne und bleibt damit weit über der
+Schwelle, unter der es sich als kleine Klappe zurückzieht. Die Schwelle ist
+auflösungsabhängig, der Befund also nicht widerlegt, sondern verschoben.
+
+Für den Spieler bleibt es beim selben Satz: **WEITER wird grau, und was er liest,
+ist die Buchhaltung eines Stücks statt des Urteils über seine Partie.** (Dieselbe
+Verwechslung hat die Aufsicht selbst gemacht: ihr Messlauf schrieb „WEITER nicht
+bedienbar" als **Abbruch** auf, nicht als Ende.)
 
 **(b) Es ist viermal dasselbe Ende.** Vier Epochen, vier Mal `keine-abnehmer`,
 vier Mal nach 3,2 bis 3,5 Braujahren. Sechshundert Jahre Brauereigeschichte
@@ -41,6 +67,23 @@ enden immer daran, dass der letzte Abnehmer geht.
 der Kasse** und 48 Fass im Keller. Das Haus ist zahlungsfähig und voll — und
 hört auf. Umgekehrt hat 1350 **−14 Pf**: die Kasse hat unter null immer noch
 keinen Boden.
+
+**Nachtrag 2.8., 18:20 UTC — der Boden ist gebaut, aber er greift in 1350
+nicht.** DIE STADT hat DIE VERWERTUNG gebaut: vier epocheneigene Wege, den Hof
+zu Geld zu machen (1350 VERSATZ beim Lombarden 45 %, 1600 WIEDERKAUF vor dem Rat
+55 %, 1884 HYPOTHEK 70 % mit 5,5 % Zins und stehenbleibendem Bau, 1970 ABBRUCH
+85 %), dazu `ratGreiftZu()` am Michaelitag. Der Builder meldet, die Kasse stehe
+in 1351/1352/1353 jetzt auf 0/0/0 statt −6/−7/−14.
+
+**Am Stand `cb9d86e` nachgemessen, nur WEITER, 1350: sie steht auf genau den
+alten Zahlen.** Michaelitage: 1350 **112**, 1351 **−6**, 1352 **−7**, 1353
+**−14**; 44 von 103 Wochen unter null; in der Chronik **keine einzige
+Pfändungszeile**; `BRAUHAUS.lage` 0, kein Seitenfehler. Ein synthetisch
+gesendetes `jahr`-Ereignis bei Kasse −25 ändert weder Kasse noch Chronik.
+`ratGreiftZu` steht in `stadt.js:297` und hängt am `jahr:`-Handler
+(`stadt.js:1525`); die Uhr sendet `jahr` (`uhr.js:191`) nach `rechneJahrAb()`,
+die Kasse ist zu dem Zeitpunkt also bereits negativ. **Der Boden ist gebaut und
+wird nicht erreicht** — woran, gehört dem Stück, nicht der Aufsicht.
 
 **Der Keller hält in jeder Epoche nur die geringste Sorte** — Kofent,
 Nachbier, Einfachbier, Handelsmarke. Wer nichts tut, sinkt auf das dünnste
