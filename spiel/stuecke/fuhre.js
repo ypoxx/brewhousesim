@@ -100,6 +100,8 @@
     kaufNr: {},
     bannNr: 0,
     unterhaltExtra: 0,
+    sudeWoche: 0,        /* bezahlte Sude dieser Woche — Treber und Lohn    */
+    lohnWoche: 0,        /* was davon an die Saisonkraefte ging             */
     jahrUmsatz: 0,
     fuhren: 0,
     meldung: null,
@@ -871,8 +873,19 @@
     if (fr) {
       return Math.round(fr.pauschale + fr.jeFass * geladen() + fr.jeKm * maxKm);
     }
+    /* FUHRLOHN JE FASS UND MEILE — die Rechnung, die ein Fuhrmann wirklich
+       aufmacht. Bis zum 2. August 2026 hing hier alles an der FAHRT: Grund,
+       Halte, Weg. Was auf dem Karren lag, kam nicht vor. Gemessen war das der
+       Posten, an dem 1600 und 1884 gestorben sind — 824 Gulden Fuhrlohn auf
+       1.979 Gulden Einnahmen, weil der Karren dreissig Wochen lang halb leer
+       dieselbe Runde fuhr (spiel/BEFUND-WIRTSCHAFT.md §5). Der Zentner und
+       die Meile sind seit je die beiden Groessen des Fuhrlohns; die Fahrt
+       allein ist der Tag des Knechts und kostet entsprechend wenig.
+       Die volle Fuhre kostet damit so viel wie vorher — die halbleere nicht
+       mehr. */
     var halt = (w.haltPreis || 0) * Math.max(0, Z.ladung.length - 1);
-    return Math.round(w.grund + halt + w.jeKm * maxKm + w.jeKm * 0.12 * (summeKm - maxKm));
+    return Math.round(w.grund + halt + w.jeKm * maxKm + w.jeKm * 0.12 * (summeKm - maxKm)
+      + (w.jeFass || 0) * geladen());
   }
 
   function fuhrerloes() {
@@ -1133,6 +1146,7 @@
     var verbraucht = 0;
     var geldFehlt = false;
     Z.notsud = 0;
+    Z.sudeWoche = 0;
 
     /* Einen Sud ansetzen. Gibt null zurueck, wenn er faellt, sonst den
        Grund, warum nicht — der steht danach an der Tafel. */
@@ -1177,6 +1191,11 @@
         f[i].zeichen = s.zeichen;
       }
       gebraut += gelegt;
+      /* Ein bezahlter Sud ist ein Sudtag: er legt Treber an, auf denen der
+         zweite Guss laufen kann, und er ruft die Saisonkraefte an die
+         Pfanne. Der Notsud tut beides nicht — er sitzt auf dem Sudtag,
+         den ein anderer bezahlt hat. */
+      if (!s.not) Z.sudeWoche++;
       B.welt.protokolliere({ wer: 'spieler', was: gelegt + ' Fass ' + s.name + ' eingelegt',
         preis: 0, menge: 0 });
       return null;
@@ -1210,9 +1229,28 @@
        Solange etwas im Keller reift, wartet die Pfanne. */
     var nichtsDa = keller().length === 0;
     var nurGeld = geldFehlt && !gebraut && freieFaesser().length === 0;
-    var notGrund = null;
+    var notGrund = null, trebergrenze = null;
     if (ns && (nichtsDa || nurGeld)) {
       var ziel = Math.max(1, Math.ceil(wagenPlaetze() / Math.max(1, ns.fass)));
+      /* KEIN ERSTER SUD, KEIN ZWEITER GUSS.
+
+         Bis zum 2. August 2026 stand hier nur die Wagenlast: der Notsud
+         durfte die ganze Pfanne fuellen, kostenlos, jede Woche, ohne dass
+         je ein bezahlter Sud gelaufen waere. Gemessen war das kein Notnagel
+         mehr, sondern das Geschaeft: 1970 braute das Haus vom zweiten
+         Braujahr an ausschliesslich Handelsmarke — 4.350 Fass im Jahr 1972,
+         ohne einen Pfennig Einsatz — und lief der Kennzahl davon
+         (rho +0,829). 1884 dasselbe eine Etage tiefer.
+
+         Der zweite Guss geht auf die Treber des ersten. Wo keiner
+         angesetzt wurde, gibt es keine Treber. Was bleibt, ist der eine
+         duenne Sud, den ein Brauhaus immer ansetzt — das Gesindebier in
+         I bis III, der Lohnbraukontrakt des Handelshauses in IV. Er haelt
+         das Haus am Leben und macht es nicht reich. */
+      var ng = e.notsud || { jeSud: 1, mindest: 1 };
+      var erlaubt = Z.sudeWoche * (ng.jeSud || 0) + (ng.mindest || 0);
+      if (ziel > erlaubt) trebergrenze = ng.grund || 'mehr Treber gibt die Pfanne nicht her';
+      ziel = Math.min(ziel, erlaubt);
       while (Z.notsud < ziel) {
         notGrund = setzeAn(ns);
         if (notGrund) break;
@@ -1250,11 +1288,14 @@
       }
     } else if (!gebraut) {
       teile.push(planSummeSude()
-        ? 'Kein Sud: ' + (gruende[0] || notGrund || 'die Tafel steht leer')
-        : (notGrund ? 'Kein Sud: ' + notGrund : 'Die Tafel ist leer.'));
+        ? 'Kein Sud: ' + (gruende[0] || notGrund || trebergrenze || 'die Tafel steht leer')
+        : (notGrund || trebergrenze ? 'Kein Sud: ' + (notGrund || trebergrenze) : 'Die Tafel ist leer.'));
     } else if (gruende.length) {
       teile.push('dann: ' + gruende[0]);
     }
+    /* Und wenn der zweite Guss nur deshalb kurz blieb, weil die Treber
+       nicht reichten, steht auch das da. */
+    if (trebergrenze && Z.notsud) teile.push('nicht mehr: ' + trebergrenze);
     /* Wenn Geld den Plan aufgehalten hat, steht der Ausweg daneben. Die
        Kasse ist in diesem Stueck nie eine Wand, und die Tafel sagt das
        selbst — sonst glaubt es niemand. */
@@ -3035,10 +3076,30 @@
       durstWaechst();
       schreibeZettel();
 
+      /* DIE LÖHNE HÄNGEN AN DER PFANNE, DIE ERHALTUNG NICHT.
+
+         Bis zum 2. August 2026 stand hier eine einzige Wochenzahl: 110 Mark
+         in 1884, ob sechzehn Sude liefen oder keiner. Das ist der Posten,
+         an dem das Haus in 1884 gestorben ist — 3.190 Mark im Jahr gegen
+         4.100 Mark Einnahmen, und er ruehrte sich nicht, als der Betrieb
+         schrumpfte (spiel/BEFUND-WIRTSCHAFT.md §3). Historisch ist er zwei
+         verschiedene Dinge: der Braumeister, das Dach, das Geschirr und der
+         Zins auf das Geraet laufen weiter, wenn die Pfanne kalt bleibt —
+         die Braugesellen, die Knechte und das Futter des Zugtiers werden
+         fuer den SUDTAG gedungen. Wer nicht braut, dingt nicht.
+
+         Damit hat ein schrumpfendes Haus einen Weg zurueck, und ein
+         wachsendes wird teurer, ohne dass an einer Zahl gedreht wurde. */
       var e = ep();
-      var unterhalt = Math.round((e.unterhalt || 1) + Z.unterhaltExtra);
-      if (unterhalt > 0) {
-        B.welt.zahle(unterhalt, 'Löhne, Futter, Instandhaltung', 'spieler');
+      var fest = Math.round((e.unterhalt || 1) + Z.unterhaltExtra);
+      var lohn = Math.round((e.lohnSud || 0) * Z.sudeWoche);
+      Z.lohnWoche = lohn;
+      if (fest > 0) {
+        B.welt.zahle(fest, e.unterhaltName || 'Erhaltung, Geschirr, Wache', 'spieler');
+      }
+      if (lohn > 0) {
+        B.welt.zahle(lohn, (e.lohnName || 'Löhne und Futter') + ' · '
+          + Z.sudeWoche + (Z.sudeWoche === 1 ? ' Sudtag' : ' Sudtage'), 'spieler');
       }
 
       /* Zuletzt: nimmt ueberhaupt noch jemand ab? Die Frist laeuft hier und
@@ -3057,6 +3118,28 @@
       Z.vorige = null;
       Z.jahrUmsatz = 0;
       Z.abgabeJahr = 0;
+
+      /* DIE WAGENSTELLUNG WIRD ZU MICHAELI NEU VEREINBART.
+         Der Quelltext von `passendeFracht` sagt das seit Runde 3 selbst —
+         „einmal im Jahr, zu Michaeli" —, gestellt wurde sie aber nur ein
+         einziges Mal, beim Einrichten der Epoche. Deshalb fuhr das Haus von
+         1884 bis 1889 den Halben Wagen weiter, auch als es nur noch zwei
+         Adressen mit vier Hektoliter bediente: gemessen 3.667 Mark Fuhrlohn
+         gegen 3.521 Mark Einnahmen im ganzen Jahr. Wer weniger absetzt,
+         bestellt kleiner — das ist keine Milde, das ist eine Bestellung.
+         Waehrend des Jahres bleibt die Stufe die Wahl des Spielers. */
+      if (e.fracht) {
+        var neueStufe = passendeFracht();
+        if (neueStufe !== Z.fracht) {
+          var alt = frachtstufe();
+          Z.fracht = neueStufe;
+          var neu = frachtstufe();
+          if (alt && neu) {
+            B.welt.schreibe('Die Wagenstellung für ' + B.uhr.braujahr() + ' ist vereinbart: '
+              + neu.name + ' statt ' + alt.name + ' — ' + neu.satz, 'fuhre');
+          }
+        }
+      }
 
       /* MICHAELI: DIE TAFEL WIRD NEU ANGESCHRIEBEN. Ein Brauhaus faengt das
          Braujahr nicht mit einer leeren Wand an — der Braumeister schreibt

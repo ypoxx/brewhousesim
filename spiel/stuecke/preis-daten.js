@@ -56,7 +56,16 @@ var PREIS_DATEN = {
       lastenGrund: 500,
       teuerungJahr: 1.040,
       teuerungKauf: 1.045,
-      pflichtUmsatz: 0.100,
+      /* DREI WURZELN (siehe preis.js, `lastenBasis`).
+         lastenFest  — Erbzins und Wasserzins, in Pfennig, laufen immer.
+         pflichtUmsatz — Grutgeld und Mahlgeld je Fass durch das Haus.
+         pflichtErtrag — der Schoss, den der Rat nach der Nahrung veranlagt.
+         nachlass     — was der Rat nach einem Fehljahr vom Festen erlaesst. */
+      lastenFest: 62,
+      pflichtUmsatz: 0.085,
+      pflichtErtrag: 0.55,
+      nachlass: 0.55,
+      nachlassName: 'Nachlass des Rats auf Zins und Wasser',
       pflichtHoehe: 0.20,
       umlageAnteil: 0.80,
       handlohnAnteil: 1.10,
@@ -71,14 +80,19 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'grutgeld',  name: 'Grutgeld an den Grutherrn', teil: 0.34,
-          sagt: 'Wer Grut braucht, kauft sie vom Grutherrn. Es gibt keinen zweiten.' },
-        { k: 'erbzins',   name: 'Erbzins an den Grundherrn', teil: 0.32,
+        { k: 'grutgeld',  name: 'Grutgeld an den Grutherrn', art: 'menge', teil: 0.64,
+          sagt: 'Wer Grut braucht, kauft sie vom Grutherrn. Es gibt keinen zweiten — '
+              + 'und gezahlt wird nach dem, was durch die Pfanne ging.' },
+        { k: 'mahlgeld',  name: 'Mahlgeld an die Mühle', art: 'menge', teil: 0.36,
+          sagt: 'Das Malz muss zur Mühle. Der Müller nimmt den Metzen vom Scheffel; '
+              + 'wer nichts mahlen lässt, schuldet nichts.' },
+        { k: 'erbzins',   name: 'Erbzins an den Grundherrn', art: 'fest', teil: 0.62,
           sagt: 'Das Anwesen gehört nicht dem Haus. Der Zins läuft, ob gebraut wird oder nicht.' },
-        { k: 'wasserzins', name: 'Wasserzins an die Stadt', teil: 0.15,
-          sagt: 'Der Brunnen auf dem Markt ist der Stadt ihrer.' },
-        { k: 'mahlgeld',  name: 'Mahlgeld an die Mühle', teil: 0.19,
-          sagt: 'Das Malz muss zur Mühle. Der Müller nimmt den Metzen.' }
+        { k: 'wasserzins', name: 'Wasserzins an die Stadt', art: 'fest', teil: 0.38,
+          sagt: 'Der Brunnen auf dem Markt ist der Stadt ihrer. Bezahlt wird die Röhre, nicht der Eimer.' },
+        { k: 'schoss',    name: 'Schoss nach der Nahrung', art: 'ertrag', teil: 1,
+          sagt: 'Zwei Ratsherren schätzen, was das Haus im vergangenen Jahr über den Aufwand '
+              + 'hinaus behalten hat. Ein Jahr ohne Überschuss wird nicht angeschlagen.' }
       ],
 
       umlagen: [
@@ -220,7 +234,11 @@ var PREIS_DATEN = {
       lastenGrund: 2500,
       teuerungJahr: 1.038,
       teuerungKauf: 1.055,
-      pflichtUmsatz: 0.085,
+      lastenFest: 200,
+      pflichtUmsatz: 0.080,
+      pflichtErtrag: 0.50,
+      nachlass: 0.55,
+      nachlassName: 'Stundung des Klosters auf den Pachtzins',
       pflichtHoehe: 0.155,
       umlageAnteil: 0.85,
       handlohnAnteil: 1.15,
@@ -235,14 +253,21 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'pachtzins', name: 'Pachtzins ans Kloster', teil: 0.38,
-          sagt: 'Die Hofstatt ist Klosterlehen. Der Zins geht nach Obernberg.' },
-        { k: 'zunftumlage', name: 'Zunftumlage und Meisterbüchse', teil: 0.21,
-          sagt: 'Lade, Trunk, Begräbnis, Witwenkasse. Wer nicht zahlt, braut nicht.' },
-        { k: 'ungeld', name: 'Ungeld auf den Ausschank', teil: 0.26,
-          sagt: 'Vom ausgeschenkten Bier nimmt der Rat den zwanzigsten Pfennig.' },
-        { k: 'malzaufschlag', name: 'Malzaufschlag des Kurfürsten', teil: 0.15,
-          sagt: 'Seit 1543 auf jeden Scheffel Malz. Er ist nie wieder abgeschafft worden.' }
+        { k: 'ungeld', name: 'Ungeld auf den Ausschank', art: 'menge', teil: 0.63,
+          sagt: 'Vom ausgeschenkten Bier nimmt der Rat den zwanzigsten Pfennig. '
+              + 'Was nicht ausgeschenkt wird, trägt auch kein Ungeld.' },
+        { k: 'malzaufschlag', name: 'Malzaufschlag des Kurfürsten', art: 'menge', teil: 0.37,
+          sagt: 'Seit 1543 auf jeden Scheffel Malz. Er ist nie wieder abgeschafft worden — '
+              + 'aber er kennt nur den Scheffel, der wirklich vermälzt wurde.' },
+        { k: 'pachtzins', name: 'Pachtzins ans Kloster', art: 'fest', teil: 0.64,
+          sagt: 'Die Hofstatt ist Klosterlehen. Der Zins geht nach Obernberg, '
+              + 'auch in einem Jahr, in dem die Pfanne nicht warm wird.' },
+        { k: 'zunftumlage', name: 'Zunftumlage und Meisterbüchse', art: 'fest', teil: 0.36,
+          sagt: 'Lade, Trunk, Begräbnis, Witwenkasse. Es ist eine Abgabe auf den Meister, '
+              + 'nicht auf das Bier. Wer nicht zahlt, braut nicht.' },
+        { k: 'anlage', name: 'Stadtanlage nach der Nahrung', art: 'ertrag', teil: 1,
+          sagt: 'Der Zunftschreiber liest vor, was jedes Haus im vergangenen Jahr gesotten '
+              + 'und was es davon behalten hat. Angelegt wird auf das Behaltene.' }
       ],
 
       umlagen: [
@@ -394,7 +419,11 @@ var PREIS_DATEN = {
       lastenGrund: 11000,
       teuerungJahr: 1.048,
       teuerungKauf: 1.060,
-      pflichtUmsatz: 0.085,
+      lastenFest: 1500,
+      pflichtUmsatz: 0.095,
+      pflichtErtrag: 0.45,
+      nachlass: 0.55,
+      nachlassName: 'Der Steuerausschuss setzt die Veranlagung herab',
       pflichtHoehe: 0.175,
       umlageAnteil: 0.90,
       handlohnAnteil: 1.10,
@@ -408,14 +437,17 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'biersteuer', name: 'Biersteuer nach Malzgewicht', teil: 0.375,
-          sagt: 'Gewogen wird das Malz, nicht das Bier. Wer stärker braut, zahlt mehr.' },
-        { k: 'hypothek', name: 'Zins auf die Hypothek', teil: 0.30,
+        { k: 'biersteuer', name: 'Biersteuer nach Malzgewicht', art: 'menge', teil: 1,
+          sagt: 'Gewogen wird das Malz, nicht das Bier. Wer stärker braut, zahlt mehr — '
+              + 'und wer die Darre kalt lässt, zahlt nichts.' },
+        { k: 'hypothek', name: 'Zins auf die Hypothek', art: 'fest', teil: 0.65,
           sagt: 'Der Fabrikbau ist auf Kredit gebaut. Der Zins läuft, auch wenn nicht gebraut wird.' },
-        { k: 'gewerbesteuer', name: 'Gewerbesteuer der Gemeinde', teil: 0.175,
-          sagt: 'Nach Ertrag und Betriebskapital, veranlagt vom Steuerausschuss.' },
-        { k: 'kessel', name: 'Kesselrevision und Feuerversicherung', teil: 0.15,
-          sagt: 'Ein Dampfkessel ist versicherungspflichtig und wird jährlich abgedrückt.' }
+        { k: 'kessel', name: 'Kesselrevision und Feuerversicherung', art: 'fest', teil: 0.35,
+          sagt: 'Ein Dampfkessel ist versicherungspflichtig und wird jährlich abgedrückt, '
+              + 'ob er unter Dampf stand oder nicht.' },
+        { k: 'gewerbesteuer', name: 'Gewerbesteuer der Gemeinde', art: 'ertrag', teil: 1,
+          sagt: 'Nach Ertrag und Betriebskapital, veranlagt vom Steuerausschuss. '
+              + 'Ein Jahr mit Verlust wird nicht veranlagt.' }
       ],
 
       umlagen: [
@@ -563,7 +595,11 @@ var PREIS_DATEN = {
       lastenGrund: 32000,
       teuerungJahr: 1.045,
       teuerungKauf: 1.065,
-      pflichtUmsatz: 0.078,
+      lastenFest: 16000,
+      pflichtUmsatz: 0.080,
+      pflichtErtrag: 0.50,
+      nachlass: 0.50,
+      nachlassName: 'Tilgungsaussetzung der Hausbank',
       pflichtHoehe: 0.145,
       umlageAnteil: 0.95,
       handlohnAnteil: 1.05,
@@ -579,14 +615,20 @@ var PREIS_DATEN = {
       ],
 
       pflichten: [
-        { k: 'biersteuer', name: 'Biersteuer und Umsatzsteuer', teil: 0.36,
-          sagt: 'Nach Stammwürze gestaffelt. Der Mengenstaffelsatz begünstigt gerade noch dieses Haus.' },
-        { k: 'loehne', name: 'Tarif, Sozialabgaben, Altersversorgung', teil: 0.29,
-          sagt: 'Der Tarifvertrag gilt für das ganze Braugewerbe. Verhandelt wird anderswo.' },
-        { k: 'listung', name: 'Listungsgebühr und Werbekostenzuschuss', teil: 0.20,
-          sagt: 'Wer im Regal stehen will, zahlt für den Platz. Früher hieß das Bannmeile, heute WKZ.' },
-        { k: 'zinsen', name: 'Zins und Tilgung', teil: 0.15,
-          sagt: 'Die Abfüllanlage ist finanziert. Zwölf Jahre läuft die Rate.' }
+        { k: 'biersteuer', name: 'Biersteuer und Umsatzsteuer', art: 'menge', teil: 0.64,
+          sagt: 'Nach Stammwürze gestaffelt. Der Mengenstaffelsatz begünstigt gerade noch dieses Haus — '
+              + 'und er kennt nur den Hektoliter, der wirklich abgefüllt wurde.' },
+        { k: 'listung', name: 'Listungsgebühr und Werbekostenzuschuss', art: 'menge', teil: 0.36,
+          sagt: 'Wer im Regal stehen will, zahlt für den Platz, und der Zuschuss rechnet sich '
+              + 'nach dem Absatz. Früher hieß das Bannmeile, heute WKZ.' },
+        { k: 'loehne', name: 'Tarif, Sozialabgaben, Altersversorgung', art: 'fest', teil: 0.58,
+          sagt: 'Der Tarifvertrag gilt für das ganze Braugewerbe, und die Stammbelegschaft steht '
+              + 'auch in einem Jahr auf der Lohnliste, in dem wenig abgefüllt wird.' },
+        { k: 'zinsen', name: 'Zins und Tilgung', art: 'fest', teil: 0.42,
+          sagt: 'Die Abfüllanlage ist finanziert. Zwölf Jahre läuft die Rate.' },
+        { k: 'ertragsteuer', name: 'Körperschaft- und Gewerbeertragsteuer', art: 'ertrag', teil: 1,
+          sagt: 'Veranlagt wird der Gewinn des abgelaufenen Geschäftsjahres. '
+              + 'Ein Verlustjahr trägt keine Ertragsteuer und wird vorgetragen.' }
       ],
 
       umlagen: [

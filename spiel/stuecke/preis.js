@@ -57,6 +57,11 @@
     anschlag: 0,
     kaeufe: 0,
 
+    ertrag: 0,             /* Was das Braujahr uebrig liess (Nahrung)     */
+    kasseMichaeli: null,   /* Stand am vorigen Michaeli — nur zum Messen  */
+    nachlass: false,       /* Nach einem Verlustjahr laesst der Rat nach  */
+    nachlassBetrag: 0,
+
     angebote: [],          /* Schluessel der diesjaehrigen Auswahl        */
     genommen: {},          /* k -> {jahr, preis, fertig}                  */
     fertig: {},            /* k -> Jahr der Fertigstellung                */
@@ -178,32 +183,92 @@
   /* ----------------------------------------------------------------------
      PFLICHTEN — was jedes Jahr faellig ist, mit Namen.
      ---------------------------------------------------------------------- */
-  /* Die Lasten haengen an dem, was messbar ist: am Umsatz des Vorjahres und an
-     der Barschaft. Nicht am Preis eines Kellers. Deshalb kann eine Epoche das
-     Haus nicht ueber Nacht zerreiben, und deshalb frisst Liegenlassen sich
-     selbst auf: wer hortet, wird hoeher veranlagt. */
-  function lastenBasis() {
+  /* DREI WURZELN, NICHT EINE.
+
+     Bis zum 2. August 2026 stand hier eine einzige Formel:
+       (pflichtUmsatz * max(umsatz, lastenGrund) + pflichtHoehe * hoehe)
+       * teuerungJahr^jahre
+     Sie hatte zwei Fehler, und beide sind gemessen (spiel/BEFUND-WIRTSCHAFT.md).
+     Erstens hing sie an der BARSCHAFT (`pflichtHoehe * hoehe`) — eine Abgabe,
+     die genau das Geld aufsaugt, das fuer den Michaelitag hingelegt wurde
+     (ZUSTAENDIGKEIT 21). Zweitens hatte sie einen BODEN (`lastenGrund`), der
+     jedes Jahr weiter mit der Teuerung multipliziert wurde: die Last stieg,
+     waehrend das Einkommen fiel. 1600 und 1884 sind daran gestorben, vier von
+     sechs Braujahren unter 1x.
+
+     An ihre Stelle tritt, was historisch immer schon zwei — und seit dem
+     19. Jahrhundert drei — verschiedene Dinge waren:
+
+       FEST    Zins, Pacht, Versicherung, Kesselrevision. Sie laufen weiter,
+               wenn die Pfanne kalt bleibt. Das steht in den Daten sogar
+               woertlich: „Der Zins laeuft, ob gebraut wird oder nicht."
+       MENGE   Grutgeld, Mahlgeld, Malzaufschlag, Biersteuer nach Malzgewicht,
+               Ungeld auf den Ausschank, Listungsgebuehr. Gewogen wird das
+               Malz, nicht das Haus. Wer nichts absetzt, zahlt nichts — kein
+               Boden.
+       ERTRAG  Schoss nach der Nahrung, Anlage nach der Nahrung, Gewerbesteuer
+               nach Ertrag, Koerperschaftsteuer. Sie nehmen einen Teil dessen,
+               was das Braujahr UEBRIG liess. Ein Verlustjahr wird nicht
+               angeschlagen.
+
+     Damit gibt es die Rueckkopplung, die gefehlt hat: wer waechst, wird
+     teurer; wer schrumpft, zahlt weniger. Und der Weg zurueck ist der
+     Nachlass — nach einem Verlustjahr setzt der Rat die feste Last herunter.
+     Stundung und Erlass bei Missjahr, Brand oder Einquartierung sind kein
+     Entgegenkommen, sondern die Regel: ein Haus, das eingeht, zahlt gar
+     nichts mehr. */
+  function teuerung() {
+    return Math.pow(ep().teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40));
+  }
+
+  /* Was weiterlaeuft, wenn die Pfanne kalt bleibt. */
+  function lastFest() {
     var e = ep();
-    var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
-    var roh = e.pflichtUmsatz * Math.max(Z.umsatz, e.lastenGrund)
-            + e.pflichtHoehe * Z.hoehe;
-    return roh * Math.pow(e.teuerungJahr, jahre);
+    var f = e.lastenFest * teuerung();
+    if (Z.nachlass) f *= (1 - (e.nachlass || 0));
+    return f;
+  }
+  /* Was an der Menge haengt — ohne Boden. */
+  function lastMenge() {
+    return ep().pflichtUmsatz * Math.max(0, Z.umsatz);
+  }
+  /* Was der Rat nach der Nahrung des vergangenen Jahres veranlagt. */
+  function lastErtrag() {
+    return (ep().pflichtErtrag || 0) * Math.max(0, Z.ertrag);
+  }
+  function lastenBasis(art) {
+    if (art === 'fest') return lastFest();
+    if (art === 'ertrag') return lastErtrag();
+    return lastMenge();
+  }
+
+  function pflichtZeile(p) {
+    return { k: p.k, name: p.name, sagt: p.sagt, art: p.art || 'menge',
+             betrag: rundePreis(p.teil * lastenBasis(p.art || 'menge')) };
   }
 
   function pflichtenJetzt() {
     var e = ep();
-    var basis = lastenBasis();
     var l = [];
     e.pflichten.forEach(function (p) {
       if (Z.pflichtWeg[p.k]) return;
-      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.teil * basis) });
+      var z = pflichtZeile(p);
+      if (z.betrag > 0) l.push(z);
     });
     Z.pflichtNeu.forEach(function (p) {
       if (Z.pflichtWeg[p.k]) return;
-      l.push({ k: p.k, name: p.name, sagt: p.sagt, betrag: rundePreis(p.teil * basis) });
+      var z = pflichtZeile(p);
+      if (z.betrag > 0) l.push(z);
     });
     return l;
   }
+
+  /* Woran diese Zeile haengt — steht am Bildschirm, nicht im Quelltext. */
+  var WURZEL = {
+    fest:   'läuft weiter, auch wenn nicht gebraut wird',
+    menge:  'nach dem Ausstoß des vergangenen Jahres',
+    ertrag: 'nach dem, was das Jahr übrig ließ'
+  };
 
   function pflichtSumme() {
     var s = 0;
@@ -346,14 +411,34 @@
     Z.rechnung = [];
     Z.tafelJahr = jahr();
 
-    /* 1. Was durch das Haus ging, und was im Haus liegt. */
+    /* 1. Was durch das Haus ging, was es uebrig liess, und was im Haus liegt. */
     if (!erste) {
-      var gemessen = messeUmsatz(jahr() - 1);
-      if (gemessen > 0) Z.umsatz = gemessen;
+      /* Der Umsatz faellt mit dem Betrieb — ohne Boden. Ein Haus, das ein
+         mageres Jahr hatte, wird im naechsten niedriger veranlagt. Genau das
+         hat der Boden `lastenGrund` verhindert. */
+      Z.umsatz = messeUmsatz(jahr() - 1);
     }
+    /* DIE NAHRUNG DES JAHRES — was ueber den Aufwand hinaus geblieben ist.
+       Gemessen wird die VERAENDERUNG von Michaeli zu Michaeli, nicht der
+       Stand: ein Haus wird nach dem angeschlagen, was es erwirtschaftet hat,
+       nicht danach, was in der Lade liegt (ZUSTAENDIGKEIT 21). Wer im
+       vorigen Jahr gebaut hat, hat weniger Nahrung — das ist keine Luecke,
+       sondern der Grund, warum ein Haus ueberhaupt baut. */
+    var kasseJetzt = Math.round(B.welt.haus.kasse);
+    Z.ertrag = (erste || Z.kasseMichaeli === null) ? 0 : (kasseJetzt - Z.kasseMichaeli);
+    Z.kasseMichaeli = kasseJetzt;
+    /* DER NACHLASS — der Weg zurueck. Ein Verlustjahr wird nicht nur nicht
+       veranlagt; der Rat, das Kloster, der Steuerausschuss, die Bank setzen
+       auch das Feste herunter. Stundung und Erlass nach Missjahr, Brand oder
+       Einquartierung sind aktenkundig genug, um hier zu stehen. */
+    Z.nachlass = !erste && Z.ertrag < 0;
+    Z.nachlassBetrag = Z.nachlass
+      ? Math.round(ep().lastenFest * teuerung() * (ep().nachlass || 0)) : 0;
     /* Die Schaetzung folgt der Kasse nach oben sofort und nach unten langsam:
        wer einmal gross war, wird nicht im naechsten Jahr wieder billig bedient.
-       Aber sie gibt nach, sonst kaeme ein verarmtes Haus nie zurueck. */
+       Aber sie gibt nach, sonst kaeme ein verarmtes Haus nie zurueck.
+       Sie traegt nur noch den ANSCHLAG (den Preis der Angebote), keine
+       einzige Abgabe mehr. */
     Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.78);
     rechneAnschlag();
 
@@ -377,6 +462,13 @@
     /* 3. Die Pflichten des Jahres. Im ersten Michaeli einer Partie sind sie
           abgetragen — sonst begaenne das Spiel mit einer Schuld. */
     if (!erste) {
+      if (Z.nachlass && Z.nachlassBetrag > 0) {
+        Z.rechnung.push({ name: (e.nachlassName || 'Nachlass auf die feste Last')
+          + ' — das vorige Jahr trug nichts', betrag: 0, art: 'frei' });
+        chronik('pflicht', (e.nachlassName || 'Nachlass auf die feste Last') + ': '
+          + geld(Z.nachlassBetrag) + ' werden nicht angeschlagen. '
+          + 'Das Braujahr hat ' + geld(-Z.ertrag) + ' gekostet und nichts übrig gelassen.');
+      }
       pflichtenJetzt().forEach(function (p) { buche(p.betrag, p.name, 'pflicht'); });
     }
 
@@ -750,11 +842,14 @@
       kasten.appendChild(B.el('div', 'pr-satz',
         'Zu diesem Michaeli war nichts abzutragen. Ab Michaeli ' + (jahr() + 1) + ' laufen:'));
       pflichtenJetzt().forEach(function (p) {
-        kasten.appendChild(zeile(p.name, geld(-p.betrag), 'pr-pflicht'));
+        var z = zeile(p.name, geld(-p.betrag), 'pr-pflicht pr-wurzel-' + p.art);
+        z.appendChild(B.el('span', 'pr-wurzel', WURZEL[p.art] || WURZEL.menge));
+        kasten.appendChild(z);
       });
       kasten.appendChild(zeile('Zusammen im Jahr', geld(-pflichtSumme()), 'pr-summe'));
       kasten.appendChild(B.el('div', 'pr-satz pr-klein',
-        'Sie richten sich nach dem Umsatz des Vorjahres und nach dem, was in der Kasse liegt.'));
+        'Drei Wurzeln: was weiterläuft, wenn die Pfanne kalt bleibt · was am Ausstoß hängt · '
+        + 'was der Rat nach der Nahrung des Jahres veranlagt. Keine hängt an der Kasse.'));
     } else {
       /* Ein Plus vor dem Zufluss. Ohne es steht der Ertrag eines Baus in
          derselben Spalte wie eine Abgabe und liest sich wie eine. */
@@ -770,6 +865,18 @@
       });
       kasten.appendChild(zeile('Zusammen', (summe > 0 ? '+' : '') + geld(summe), 'pr-summe'));
     }
+    /* Woran das Haus dieses Jahr gemessen wird — beide Zahlen stehen da,
+       damit niemand die Rechnung fuer eine Laune halten muss. */
+    var nah = B.el('div', 'pr-nahrung');
+    nah.appendChild(zeile('Ausstoß des vergangenen Jahres', geld(Math.round(Z.umsatz))));
+    nah.appendChild(zeile('davon übrig geblieben',
+      (Z.ertrag > 0 ? '+' : '') + geld(Math.round(Z.ertrag)),
+      Z.ertrag < 0 ? 'pr-mager' : ''));
+    if (Z.nachlass && Z.nachlassBetrag > 0) {
+      nah.appendChild(zeile(e.nachlassName || 'Nachlass auf die feste Last',
+        '−' + geld(Z.nachlassBetrag), 'pr-frei'));
+    }
+    kasten.appendChild(nah);
     sp.appendChild(kasten);
 
     var ord = B.el('div', 'pr-feld pr-ordnung');
@@ -1473,6 +1580,12 @@
     Z.kaeufe = 0;
     Z.hoehe = Math.max(B.welt.haus.kasse, 1);
     Z.umsatz = erste ? 0 : messeUmsatz(jahr() - 1);
+    /* Eine neue Zeit rechnet neu: die Nahrung der vorigen Epoche steht in
+       einer anderen Waehrung und darf nicht angeschlagen werden. */
+    Z.ertrag = 0;
+    Z.kasseMichaeli = null;
+    Z.nachlass = false;
+    Z.nachlassBetrag = 0;
     Z.raten = [];
     Z.angebote = [];
     Z.meldung = null;

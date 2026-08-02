@@ -183,3 +183,41 @@
   text-decoration-color: var(--pr-rot);
   color: var(--pr-schwach);
 }
+
+/* --------------------------------------------------------------------------
+   DIE DREI WURZELN DER RECHNUNG
+
+   Seit der Eichung vom 2. August 2026 hängt nicht mehr jede Zeile der
+   Michaeli-Rechnung an derselben Formel. Drei Wurzeln stehen nebeneinander,
+   und weil sie verschiedene Dinge sind, sollen sie auch verschieden aussehen:
+   was weiterläuft, wenn die Pfanne kalt bleibt · was am Ausstoß hängt · was
+   der Rat nach der Nahrung des Jahres veranlagt. Der Halbsatz dahinter steht
+   klein am Zeilenende und nicht in einem Handbuch.
+   -------------------------------------------------------------------------- */
+.pr-zeile .pr-wurzel {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: calc(var(--s) * 11);
+  font-style: italic;
+  color: var(--pr-schwach);
+  padding-left: calc(var(--s) * 6);
+  order: 3;
+}
+.pr-zeile.pr-wurzel-fest   .pr-was { border-left: calc(var(--s) * 3) solid var(--pr-rand); padding-left: calc(var(--s) * 5); }
+.pr-zeile.pr-wurzel-menge  .pr-was { border-left: calc(var(--s) * 3) solid var(--pr-gruen); padding-left: calc(var(--s) * 5); }
+.pr-zeile.pr-wurzel-ertrag .pr-was { border-left: calc(var(--s) * 3) solid var(--pr-rot);  padding-left: calc(var(--s) * 5); }
+
+/* Was das Braujahr übrig ließ — die Zahl, nach der im nächsten Jahr
+   veranlagt wird. Sie steht unter der Rechnung, damit die Rechnung des
+   nächsten Michaelitags keine Überraschung ist. */
+.pr-nahrung {
+  margin-top: calc(var(--s) * 6);
+  padding-top: calc(var(--s) * 4);
+  border-top: calc(var(--s) * 1) dashed var(--pr-linie);
+}
+.pr-nahrung .pr-zeile { font-size: calc(var(--s) * 14); }
+.pr-nahrung .pr-mager .pr-zahl { color: var(--pr-rot); }
+.pr-nahrung .pr-frei  .pr-zahl { color: var(--pr-gruen); }

@@ -118,6 +118,32 @@ var GEGNER_DATEN = {
       wochenWerbung: [3, 6],
       abschlagAnteil: 0.30,
       ertragJeFass: 3,
+      /* Wie das BILD seine Zuege nennt. Jede Epoche hat andere Woerter — was
+         1350 "der Rat spricht zu" heisst, heisst 1970 "wird eingelistet". */
+      verben: {
+        werben: 'wirbt', binden: 'bindet', zielen: 'spricht vor',
+        entreissen: 'der Rat spricht zu', aufstocken: 'legt zu', bauen: 'baut',
+        preis: 'ruft am Markt aus', fuhre: 'karrt', rohstoff: 'kauft die Grut weg',
+        macht: 'kommt in den Rat', verlieren: 'verliert', unglueck: 'Unglück',
+        not: 'ist klamm', laesstab: 'lässt ab'
+      },
+      /* DIE ABSICHT — er zielt, ehe er zuschlaegt. Ein Ratsspruch faellt nicht
+         am Dienstag aus heiterem Himmel: erst sitzt einer beim Wirt. */
+      absicht: {
+        kurz: 'spricht vor',
+        text: 'Ein Feist sitzt beim Wirt zum {haus} und lässt den Ratsschreiber warten.',
+        wochen: [3, 6],
+        abwehr: 'Dem Rat zuvorkommen',
+        abwehrsatz: 'Das Haus geht selbst zur Kanzlei und lässt sich die Gerechtigkeit '
+                  + 'verschreiben, ehe der Adler es tut.'
+      },
+      /* DIE ANTWORT OHNE BARGELD — sie kostet Bier statt Geld. Das Fass im
+         Keller kann auf den Karren oder zum Wirt; beides geht nicht. */
+      hinhalten: {
+        name: 'Ein Fass an den Wirt', kurz: 'Fass an den Wirt', fass: 1, wochen: 3,
+        satz: 'Ein Fass ohne Rechnung vor die Tür des Wirts. Er lässt den Adler warten.',
+        marke: 'Fass steht beim Wirt'
+      },
       mittel: [
         { k: 'konzession', name: 'Konzession', kurz: 'KON', womit: 'Konzession des Rats', satz: 4, jahre: 4, abschlag: 0.13,
           bindet: 'Der Rat verleiht dem Adler die Schankgerechtigkeit im {haus}.',
@@ -202,6 +228,27 @@ var GEGNER_DATEN = {
       wochenWerbung: [4, 8],
       abschlagAnteil: 0.30,
       ertragJeFass: 7,
+      verben: {
+        werben: 'wirbt', binden: 'bindet', zielen: 'die Lade ladet',
+        entreissen: 'die Zunft schreibt zu', aufstocken: 'schlägt auf', bauen: 'baut',
+        preis: 'setzt die Maß', fuhre: 'fährt', rohstoff: 'kauft den Hopfen weg',
+        macht: 'wird Bürgermeister', verlieren: 'verliert', unglueck: 'Unglück',
+        not: 'ist klamm', laesstab: 'lässt ab'
+      },
+      absicht: {
+        kurz: 'die Lade ladet',
+        text: 'Die Zunftlade ladet den Wirt zum {haus} vor. Der Adler sitzt mit am Tisch.',
+        wochen: [4, 7],
+        abwehr: 'Der Lade zuvorkommen',
+        abwehrsatz: 'Das Haus legt der Lade zuerst ein und lässt den Brief auf sich '
+                  + 'schreiben, ehe der Adler geladen hat.'
+      },
+      hinhalten: {
+        name: 'Ein Fass an die Bruderschaft', kurz: 'Fass in die Lade', fass: 1, wochen: 3,
+        satz: 'Ein Fass zur Bruderschaftszeche. Wer eingelegt hat, wird nicht als '
+            + 'erster verhandelt.',
+        marke: 'Fass in der Lade'
+      },
       mittel: [
         { k: 'zunftbrief', name: 'Zunftbrief', kurz: 'ZUN', womit: 'Zunftbrief', satz: 9, jahre: 6, abschlag: 0.14,
           bindet: 'Die Zunft schreibt {haus} dem Adler zu, mit Brief und Siegel der Lade.',
@@ -291,6 +338,28 @@ var GEGNER_DATEN = {
       ertragJeFass: 22,
       aufschlag: 0.12,
       tilgung: 0.08,
+      verben: {
+        werben: 'wirbt', binden: 'schließt ab', zielen: 'rechnet vor',
+        entreissen: 'nimmt unter Vertrag', aufstocken: 'stockt das Darlehen auf',
+        bauen: 'baut', preis: 'senkt den Preis', fuhre: 'verlädt',
+        rohstoff: 'kauft die Ernte weg', macht: 'sitzt im Aufsichtsrat',
+        verlieren: 'verliert', unglueck: 'Unglück', not: 'ist klamm',
+        laesstab: 'zieht den Vertrag zurück'
+      },
+      absicht: {
+        kurz: 'rechnet vor',
+        text: 'Sein Prokurist sitzt beim Wirt zum {haus} und rechnet ihm das Darlehen vor. '
+            + 'Der Vertrag liegt schon aufgesetzt daneben.',
+        wochen: [3, 6],
+        abwehr: 'Dem Vertrag zuvorkommen',
+        abwehrsatz: 'Das Haus legt dem Wirt sein eigenes Darlehen hin, ehe der Prokurist '
+                  + 'wiederkommt.'
+      },
+      hinhalten: {
+        name: 'Freibier auf die Rechnung des Hauses', kurz: 'Freibier', fass: 2, wochen: 3,
+        satz: 'Aus dem Eiskeller, ohne Rechnung. Der Wirt schiebt die Unterschrift auf.',
+        marke: 'Freibier läuft'
+      },
       mittel: [
         { k: 'vertrag', name: 'Bierlieferungsvertrag', kurz: 'VER', womit: 'Bierlieferungsvertrag', satz: 45, jahre: 10, abschlag: 0.15,
           bindet: 'Der Adler schließt mit {haus} einen Bierlieferungsvertrag: Darlehen {geld}, zehn Jahre.',
@@ -376,6 +445,28 @@ var GEGNER_DATEN = {
       wochenWerbung: [4, 8],
       abschlagAnteil: 0.30,
       ertragJeFass: 55,
+      verben: {
+        werben: 'wirbt', binden: 'listet ein', zielen: 'verhandelt',
+        entreissen: 'listet das Haus aus', aufstocken: 'erhöht die Gebühr',
+        bauen: 'baut', preis: 'wirft den Preis', fuhre: 'fährt Lastzug',
+        rohstoff: 'kontrahiert die Ernte', macht: 'kauft Anteile',
+        verlieren: 'verliert', unglueck: 'Rückruf', not: 'ist klamm',
+        laesstab: 'zieht das Angebot zurück'
+      },
+      absicht: {
+        kurz: 'verhandelt',
+        text: 'Sein Außendienst sitzt beim Einkauf des {haus} und verhandelt die '
+            + 'Konditionen für das nächste Jahr.',
+        wochen: [4, 7],
+        abwehr: 'Der Listung zuvorkommen',
+        abwehrsatz: 'Das Haus unterschreibt die Jahresvereinbarung zuerst — Gebühr und '
+                  + 'Zuschuss im Voraus.'
+      },
+      hinhalten: {
+        name: 'Werbekostenzuschuss in Bier', kurz: 'Zuschuss in Bier', fass: 3, wochen: 3,
+        satz: 'Aufs Haus statt Geld auf die Rechnung. Der Einkauf vertagt das Gespräch.',
+        marke: 'Zuschuss läuft'
+      },
       mittel: [
         { k: 'listung', name: 'Listung', kurz: 'LIS', womit: 'Listung', satz: 90, jahre: 3, abschlag: 0.13,
           bindet: 'Der Adler kauft sich beim {haus} ins Regal: Listungsgebühr {geld}.',

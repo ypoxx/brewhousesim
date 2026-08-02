@@ -56,6 +56,8 @@
     haeuser: {},             /* schluessel -> das Haus gegenueber           */
     bindung: {},             /* adr -> {wer, mittel, seit, bis, grund, zusatz} */
     werbung: {},             /* adr -> {wer, mittel, seit, bis, preis}      */
+    absicht: {},             /* adr -> {wer, mittel, seit, bis, preis, text} */
+    hinhalt: {},             /* adr -> Jahr, in dem hingehalten wurde       */
     schutz: {},              /* adr -> Jahr, bis zu dem er nicht ran darf   */
     wagen: null,             /* {wer, von, nach, seit, dauer, text}         */
     zuege: [],               /* alle sichtbaren Zuege, neueste zuerst       */
@@ -203,6 +205,48 @@
     return Math.max(1, p);
   }
 
+  /* Zuvorkommen, solange er erst zielt: teurer als beim blossen Werben, weil
+     der Wirt schon halb bei ihm sitzt — aber immer noch billiger, als es
+     nachher abzuloesen. Wer frueh antwortet, zahlt weniger. Das ist die
+     ganze Ordnung dieses Stuecks in einer Zahl. */
+  function abwehrpreis(a, m) {
+    var p = Math.round(grundwert(a, m) * 0.62);
+    if (Z.wirkung.bank) p = Math.round(p * (2 / 3));
+    if (Z.wirkung.marke) p = Math.round(p * (2 / 3));
+    return Math.max(1, p);
+  }
+
+  /* Wie das Bild einen Zug nennt. Vier Epochen, vier Listen — was 1350 der
+     Rat zuspricht, wird 1970 eingelistet. Der Rueckfall gilt nur fuer Arten,
+     die eine Epoche gar nicht kennt. */
+  var VERB_ROH = {
+    werben: 'wirbt', binden: 'bindet', zielen: 'sieht sich um', entreissen: 'nimmt',
+    aufstocken: 'legt zu', bauen: 'baut', preis: 'ruft aus', fuhre: 'fährt',
+    rohstoff: 'kauft weg', macht: 'nimmt Sitz', verlieren: 'verliert',
+    unglueck: 'Unglück', not: 'ist klamm', uebernahme: 'übernimmt',
+    angebot: 'bietet an', laesstAb: 'lässt ab'
+  };
+  function verbFuer(art) {
+    var v = ep().verben || {};
+    return v[art] || VERB_ROH[art] || art;
+  }
+
+  /* Was das Hinhalten kostet: kein Geld, sondern Bier. Ein Fass kann auf den
+     Karren oder zum Wirt — beides geht nicht, und genau das ist die Wahl. */
+  function hinhaltFass() {
+    var hh = ep().hinhalten;
+    return hh ? (hh.fass || 1) : 1;
+  }
+  function fassImKeller() {
+    return (B.welt.vorrat && B.welt.vorrat.faesser) ? B.welt.vorrat.faesser.length : 0;
+  }
+  /* Einmal im Braujahr je Adresse — sonst waere es kein Zug, sondern ein Hahn. */
+  function hinhaltMoeglich(k) {
+    if (!ep().hinhalten) return false;
+    if (Z.hinhalt[k] === jahr()) return false;
+    return !!(Z.werbung[k] || Z.absicht[k] || Z.bindung[k]);
+  }
+
   /* Was der Abschlag kostet: solange er die Adresse haelt, druckt er den
      Preis, den das Haus dort noch bekommt. Je Fass, das das Haus liefert.
      Steht sein Preis unter dem Satz des Rats, druckt er staerker — das ist
@@ -211,6 +255,10 @@
   function abschlagJeFass(k) {
     var b = Z.bindung[k];
     if (!b) return 0;
+    /* Wer dem Wirt ein Fass hingestellt hat, wird in diesem Braujahr dort
+       nicht mehr gedrueckt. Der Zug kostet Bier und bringt Geld — die einzige
+       Antwort auf den Adler, die auch bei leerer Kasse geht. */
+    if (Z.hinhalt[k] === jahr()) return 0;
     var m = mittelVon(b.mittel);
     return preisJeFass() * (m.abschlag || 0.15) * preisdruck();
   }
@@ -514,17 +562,36 @@
     return true;
   }
 
+  /* ---- DIE ABSICHT ----------------------------------------------------
+     RUNDE 2.  Bis hierher fiel ein Ratsspruch am Dienstag aus heiterem
+     Himmel: eine Adresse des Hauses gehoerte in derselben Woche dem Adler,
+     in der er sie sich nahm. Man konnte das nachlesen — zuvorkommen konnte
+     man ihm nicht. Das war der halbe Gegner.
+
+     Jetzt zielt er erst. Der Zug faellt in zwei Teilen: "Ein Feist sitzt
+     beim Wirt" steht drei bis sechs Wochen im Bild, mit zwei Preisschildern
+     daneben — Geld oder Bier —, und erst wenn beide unangetastet bleiben,
+     wechselt das Zeichen am Giebel. Beide Teile sind Zuege, die ohne den
+     Spieler geschehen; nur ist der erste jetzt eine Frage und nicht mehr
+     eine Mitteilung.
+     -------------------------------------------------------------------- */
   function zugEntreissen(h, zug) {
     /* Nicht jede Woche. Sonst wechseln in 1970 die Zeichen an den Giebeln so
        schnell, dass man dem Bild nicht mehr glaubt — und ein Wechsel, den man
        nicht glaubt, ist kein Zug, sondern Flackern. */
     if (Z.takt - (h.letzteEntreissung === undefined ? -99 : h.letzteEntreissung) < 5) return false;
+    /* Er zielt auf eine Adresse zur Zeit. Zwei offene Absichten desselben
+       Hauses wuerden das Bild zukleistern und die Antwort unbezahlbar machen. */
+    var eigene = 0;
+    Object.keys(Z.absicht).forEach(function (x) { if (Z.absicht[x].wer === h.k) eigene++; });
+    if (eigene >= 1) return false;
     var pruef = fremde(h);
     /* Zuerst das Haus. Dem anderen Gegner nimmt er nur, wenn beim Haus
        nichts zu holen ist — sonst fressen sich die beiden gegenseitig auf
        und der Spieler sieht bloss zu. */
-    var a = suche(function (x) { return pruef(x) && x.bindung.wem === 'haus'; })
-         || suche(pruef);
+    var a = suche(function (x) {
+      return pruef(x) && x.bindung.wem === 'haus' && !Z.absicht[x.schluessel];
+    }) || suche(function (x) { return pruef(x) && !Z.absicht[x.schluessel]; });
     if (!a) return false;
     var m = mittelVon(zug.mittel || ep().mittel[0].k);
     /* Ratsspruch und Amtsgewalt sind die Ausnahme, nicht die Regel — sonst
@@ -538,9 +605,47 @@
       m = mittelVon(B.wuerfel.aus(ep().mittel.filter(function (x) { return !x.fest; })).k);
     }
     var text = (zug.text || '{haus} geht an den Adler.').replace('{haus}', a.name);
-    if (!binde(h, a, m, text)) return false;
+    var ab = ep().absicht;
+    if (!ab) { if (!binde(h, a, m, text)) return false; h.letzteEntreissung = Z.takt; return true; }
+
+    /* Sein Vorsprung kuerzt auch das Zielen — wer die Technik frueher hat,
+       ist frueher an der Tuer. Nie unter zwei Wochen: sonst waere die Antwort
+       ein Knopf, den niemand je druecken kann. */
+    var dauer = Math.max(2, B.wuerfel.ganz(ab.wochen[0], ab.wochen[1]) - vorsprung(h));
+    Z.absicht[a.schluessel] = {
+      wer: h.k, mittel: m.k, seit: takt(), bis: takt() + dauer,
+      preis: abwehrpreis(a, m), folge: text
+    };
     h.letzteEntreissung = Z.takt;
+    merkeZug(h, 'zielen',
+      ab.text.replace('{haus}', a.name)
+      + ' In ' + dauer + (dauer === 1 ? ' Woche' : ' Wochen') + ' ist es unterschrieben, '
+      + 'wenn niemand dazwischengeht. Zuvorkommen kostet '
+      + B.welt.geld(Z.absicht[a.schluessel].preis) + '.',
+      a.ort, a.schluessel);
     return true;
+  }
+
+  /* Die Absicht laeuft aus. Jetzt erst wechselt das Zeichen — oder er laesst
+     ab, weil das Haus die Adresse inzwischen gebunden hat. Beides ist ein Zug,
+     und beides steht im Bild. */
+  function loeseAbsichtEin(k) {
+    var s = Z.absicht[k], a = adresse(k);
+    delete Z.absicht[k];
+    if (!s || !a) return;
+    var h = haus(s.wer);
+    if (!h || h.weg) return;
+    var m = mittelVon(s.mittel);
+    /* Zwischenzeitlich geschuetzt oder schon seins — dann laesst er ab, und
+       man sieht, dass die Antwort gewirkt hat. */
+    if ((Z.schutz[k] && Z.schutz[k] > jahr())
+        || (a.bindung && a.bindung.wem === s.wer)) {
+      merkeZug(h, 'laesstab',
+        nameVon(h) + ' lässt von ' + a.name + ' ab. Das Haus war schneller.',
+        a.ort, k);
+      return;
+    }
+    binde(h, a, m, s.folge);
   }
 
   function zugAufstocken(h, zug) {
@@ -775,6 +880,11 @@
     Object.keys(Z.werbung).forEach(function (k) {
       if (Z.werbung[k].bis <= Z.takt) loeseWerbungEin(k);
     });
+    /* Absichten, die reif sind, werden zur Unterschrift — oder er laesst ab,
+       weil das Haus ihm zuvorgekommen ist. */
+    Object.keys(Z.absicht).forEach(function (k) {
+      if (Z.absicht[k].bis <= Z.takt) loeseAbsichtEin(k);
+    });
 
     haeuserJetzt().forEach(function (h) {
       var seit = Z.takt - h.letzterZug;
@@ -836,6 +946,13 @@
       }
       /* Er erholt sich langsam vom Preiskampf. */
       if (B.wuerfel.trifft(0.35) && h.preis < bierpreis()) h.preis += 1;
+    });
+
+    /* 2b. Absichten auf Adressen, die es nicht mehr gibt, verfallen still;
+       das Hinhalten gilt nur fuer ein Braujahr. */
+    Object.keys(Z.absicht).forEach(function (k) { if (!adresse(k)) delete Z.absicht[k]; });
+    Object.keys(Z.hinhalt).forEach(function (k) {
+      if (Z.hinhalt[k] < jahr() - 1) delete Z.hinhalt[k];
     });
 
     /* 3. Bindungen, die auslaufen. */
@@ -1055,6 +1172,72 @@
     neuZeichnen('gegner-zuvor');
   }
 
+  /* Ihm zuvorkommen, solange er erst zielt. Teurer als beim Werben, billiger
+     als das Abloesen danach — wer frueh antwortet, zahlt weniger. */
+  function abwehren(k) {
+    var s = Z.absicht[k], a = adresse(k);
+    if (!s || !a) return;
+    var ab = ep().absicht || {};
+    if (!B.welt.zahle(s.preis, (ab.abwehr || 'Zuvorkommen') + ' beim ' + a.name, 'spieler')) {
+      Z.meldung = (ab.abwehr || 'Zuvorkommen') + ' beim ' + a.name + ' kostet '
+        + B.welt.geld(s.preis) + '. Die Kasse hält ' + B.welt.geld(B.welt.haus.kasse) + '.';
+      return neuZeichnen('gegner-knapp');
+    }
+    var m = mittelVon(s.mittel);
+    delete Z.absicht[k];
+    B.welt.binde(k, 'haus', m.womit, jahr() + m.jahre);
+    Z.schutz[k] = jahr() + 3;
+    Z.wechsel[k] = { takt: takt(), an: 'haus', von: null };
+    B.welt.schreibe('Das Haus kommt dem Adler zuvor: ' + a.name + ' wird mit '
+      + m.womit + ' gebunden, bis ' + (jahr() + m.jahre) + '. '
+      + (ab.abwehrsatz || ''), 'gegner');
+    B.ton.spiele('gegner:zuvorkommen', { ort: a.ort });
+    Z.meldung = a.name + ': zuvorgekommen, ehe er unterschrieben hat. '
+      + 'Drei Jahre lang rührt er die Adresse nicht an.';
+    neuZeichnen('gegner-abwehr');
+  }
+
+  /* ---- DER ZUG, DER BIER KOSTET UND KEIN GELD -------------------------
+     RUNDE 2.  Gemessen wurde: in 63 bis 82 von 92 Wochen stand in keiner
+     Epoche EIN einziges bezahlbares Preisschild dieses Stuecks auf dem
+     Schirm — die Kasse ist am Boden, und alles, was gegen den Adler hilft,
+     kostet Geld. Ein Gegner, gegen den man nur mit vollem Beutel etwas tun
+     kann, ist kein Gegner, sondern eine Rechnung.
+
+     Also gibt es eine zweite Waehrung, und sie liegt im eigenen Keller. Ein
+     Fass geht auf den Karren oder zum Wirt — beides geht nicht, und das ist
+     die Wahl, die neben dem teuren Preisschild steht.
+     -------------------------------------------------------------------- */
+  function hinhalten(k) {
+    var a = adresse(k), hh = ep().hinhalten;
+    if (!a || !hh || !hinhaltMoeglich(k)) return;
+    var n = hinhaltFass();
+    if (fassImKeller() < n) {
+      Z.meldung = hh.name + ' beim ' + a.name + ': dafür müssten ' + B.welt.menge(n)
+        + ' im ' + (B.welt.epoche().lager || 'Keller') + ' liegen. Es liegt nichts da.';
+      return neuZeichnen('gegner-leer');
+    }
+    B.welt.nimmHeraus(n);
+    Z.hinhalt[k] = jahr();
+    B.welt.protokolliere({ wer: 'spieler', was: hh.name + ' an ' + a.name,
+      preis: 0, menge: n, adresse: k });
+
+    var folge = [];
+    if (Z.absicht[k]) { Z.absicht[k].bis += (hh.wochen || 3); folge.push('er vertagt'); }
+    if (Z.werbung[k]) { Z.werbung[k].bis += (hh.wochen || 3); folge.push('seine Werbung steht still'); }
+    if (Z.bindung[k]) folge.push('bis Michaeli drückt er hier den Preis nicht mehr');
+
+    B.welt.schreibe(hh.name + ' an ' + a.name + ': ' + hh.satz
+      + ' Es kostet ' + B.welt.menge(n) + ' aus dem eigenen Vorrat und keinen '
+      + B.welt.waehrung().name + '.', 'gegner');
+    B.ton.spiele('gegner:hinhalten', { ort: a.ort });
+    Z.wechsel[k] = { takt: takt(), an: null, von: null, hinhalt: true };
+    Z.meldung = a.name + ': ' + hh.marke + ' — ' + B.welt.menge(n) + ' aus dem Vorrat, '
+      + (folge.length ? folge.join(', ') + '.' : 'der Wirt lässt ihn warten.')
+      + ' Einmal im Braujahr je Adresse.';
+    neuZeichnen('gegner-hinhalt');
+  }
+
   function loeseAb(k) {
     var b = Z.bindung[k], a = adresse(k);
     if (!b || !a) return;
@@ -1167,6 +1350,12 @@
       var p = Z.werbung[k].preis;
       if (!bester || p < bester.preis) bester = { was: 'Zuvorkommen ' + a.name, preis: p };
     });
+    Object.keys(Z.absicht).forEach(function (k) {
+      var a = adresse(k);
+      if (!a) return;
+      var p = Z.absicht[k].preis;
+      if (!bester || p < bester.preis) bester = { was: 'Zuvorkommen ' + a.name, preis: p };
+    });
     Object.keys(Z.bindung).forEach(function (k) {
       var a = adresse(k), p = abloese(k);
       if (!a || p === null) return;
@@ -1256,12 +1445,50 @@
     }
     k.appendChild(z);
 
+    /* RUNDE 2: Die eine Zahl, die dieses Stueck zu zeigen hat, stand bisher
+       nur im Band — und das Band liegt im Vorgabestand zugeklappt. Jetzt
+       steht sie an seinem Haus, wo man ohnehin hinsieht. */
+    if (h.k === 'adler' && Z.wocheZuege > 0) {
+      var wz = B.el('div', 'gg-wochenzug',
+        'diese Woche ' + Z.wocheZuege + (Z.wocheZuege === 1 ? ' Zug' : ' Züge') + ' ohne dich');
+      k.appendChild(wz);
+    }
+
+    /* SEIN WOCHENZETTEL.  Was er auf dem eigenen Hof tut — bauen, den Preis
+       ausrufen, den Rohstoff wegkaufen —, hat keine fremde Adresse, an die
+       man einen Zettel haengen koennte. Es steht deshalb an ihm selbst: die
+       letzten drei Zuege mit dem Verb dieser Epoche, drei Wochen lang. Wer
+       nur auf sein Haus sieht, sieht trotzdem, was geschehen ist. */
+    var zettel = B.el('div', 'gg-zettel');
+    var gez = 0;
+    for (var zi = 0; zi < Z.zuege.length && gez < 3; zi++) {
+      var e = Z.zuege[zi];
+      if (e.wer !== h.k) continue;
+      var alt = Z.takt - e.takt;
+      if (alt < 0 || alt > 2) continue;
+      gez++;
+      var ch = B.el('span', 'gg-zchip' + (alt === 0 ? ' neu' : ''));
+      ch.setAttribute('data-ort', e.ort);
+      ch.setAttribute('data-zugnr', String(e.nr));
+      ch.title = e.jahr + ' Woche ' + e.woche + ': ' + e.text;
+      ch.appendChild(B.el('b', null, verbFuer(e.art)));
+      ch.appendChild(B.el('i', null, 'W' + e.woche));
+      zettel.appendChild(ch);
+    }
+    if (gez) k.appendChild(zettel);
+
     var marken = B.el('div', 'gg-marken');
     Object.keys(h.marken).forEach(function (mk) {
       var namen = { ratssitz: 'Sitz im Rat', buergermeister: 'Bürgermeister',
                     emailschild: 'Emailschild', fernsehen: 'Fernsehwerbung' };
       marken.appendChild(B.el('span', 'gg-siegel', namen[mk] || mk));
     });
+    /* Was die eigene Klage bewirkt hat, sieht man an ihm: er zieht jetzt
+       sicher, statt zu wuerfeln. Ein Zug ohne sichtbare Folge ist keiner. */
+    if (h.k === 'adler' && Z.zorn > 0) {
+      marken.appendChild(B.el('span', 'gg-siegel zorn',
+        'erzürnt · zieht noch ' + Z.zorn + (Z.zorn === 1 ? ' Woche' : ' Wochen') + ' sicher'));
+    }
     if (h.stufe >= 1) marken.appendChild(B.el('span', 'gg-siegel not', D.untergang[h.stufe].name));
     if (marken.childNodes.length) k.appendChild(marken);
 
@@ -1362,13 +1589,58 @@
       /* GLAETTUNG WELLE 1: 3,6 % Stapelabstand reichten nicht, seit die
          Preisschilder nicht mehr auf Pfloecken ruhen, sondern alle stehen —
          zwei Orte im selben Rasterfeld liegen selbst schon 2 % auseinander,
-         und dann deckte das eine Schild das andere zur Haelfte. */
-      karte[a.schluessel] = n * -5.6;
+         und dann deckte das eine Schild das andere zur Haelfte.
+         RUNDE 2: seit unter jedem Schild das zweite Preisschild in Bier
+         haengt, ist ein Zeichen doppelt so hoch — 7,4 statt 5,6. */
+      var hebe = 0;
+      /* Der Marktstand liegt bei 96 %, die Landstrasse bei 89 % — dort unten
+         liegen die Bretter der Werkbank, und ein Preisschild hinter einem
+         Brett ist kein Preisschild. Was tief liegt, wird angehoben, bis es
+         im freien Bild steht. Der ORT bleibt, wo er ist; nur sein Zeichen
+         haengt hoeher. */
+      if (o.y > 82) hebe = (o.y - 82) * 1.15;
+      karte[a.schluessel] = n * -7.4 - hebe;
     });
     return karte;
   }
 
-  /* --- Schilder und Wimpel an den Wirtshaeusern ------------------------- */
+  /* --- Schilder, Wimpel und Zielzeichen an den Wirtshaeusern -------------
+     RUNDE 2.  An jedem Giebel, an dem der Adler etwas tut, haengen jetzt ZWEI
+     Preisschilder untereinander und in zwei verschiedenen Waehrungen: oben
+     die teure, endgueltige Antwort in Geld — abloesen, zuvorkommen —, unten
+     die billige in Bier. Man kann beide sehen, ohne ein Blatt aufzuschlagen,
+     und man kann nur eine von beiden haben.
+     --------------------------------------------------------------------- */
+
+  /* Der Knopf, der Bier kostet statt Geld. */
+  function fassKnopf(a) {
+    var k = a.schluessel, hh = ep().hinhalten;
+    if (!hh) return null;
+    var n = hinhaltFass();
+    var geht = hinhaltMoeglich(k);
+    var da = fassImKeller() >= n;
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'gg-fass' + (geht && da ? '' : ' zuteuer');
+    b.setAttribute('data-zug', 'gegner:hinhalten:' + k);
+    b.setAttribute('data-adr', k);
+    b.setAttribute('data-fass', String(n));
+    b.disabled = !geht || !da;
+    b.title = hh.name + ' beim ' + a.name + '. ' + hh.satz
+      + ' Kostet ' + B.welt.menge(n) + ' aus dem eigenen Vorrat und keinen '
+      + B.welt.waehrung().name + '. Einmal im Braujahr je Adresse.'
+      + (Z.hinhalt[k] === jahr() ? ' In diesem Braujahr schon geschehen.' : '')
+      + (da ? '' : ' Es liegt nicht genug im ' + (B.welt.epoche().lager || 'Keller') + '.');
+    var t = B.el('span', 'gg-fasstext');
+    t.appendChild(B.el('b', null, Z.hinhalt[k] === jahr() ? hh.marke : hh.kurz));
+    t.appendChild(B.el('i', null, Z.hinhalt[k] === jahr()
+      ? 'läuft bis Michaeli' : (da ? B.welt.menge(n) + ' statt Geld'
+                                  : 'Vorrat reicht nicht')));
+    b.appendChild(t);
+    b.addEventListener('click', function () { hinhalten(k); });
+    return b;
+  }
+
   function zeichneAdressen(fach) {
     var versatz = schildVersatz();
     offeneAdressen().forEach(function (a) {
@@ -1376,33 +1648,103 @@
       var k = a.schluessel;
       var b = Z.bindung[k];
       var w = Z.werbung[k];
+      var s = Z.absicht[k];
       var wechsel = Z.wechsel[k];
       var frisch = wechsel && (Z.takt - wechsel.takt) <= 3;
+      var reihen = [];
 
+      /* 1 — Er zielt. Das Dringendste steht oben. */
+      if (s) {
+        var sh = haus(s.wer);
+        if (sh) {
+          var ab = ep().absicht || {};
+          var rest = Math.max(0, s.bis - Z.takt);
+          var zz = document.createElement('button');
+          zz.type = 'button';
+          zz.className = 'gg-ziel gg-' + stamm(s.wer).farbe + (rest <= 2 ? ' knapp' : '');
+          zz.setAttribute('data-zug', 'gegner:abwehren:' + k);
+          zz.setAttribute('data-adr', k);
+          zz.setAttribute('data-preis', String(-s.preis));
+          zz.title = nameVon(sh) + ': ' + ab.text.replace('{haus}', a.name)
+            + ' In ' + rest + (rest === 1 ? ' Woche' : ' Wochen') + ' ist es unterschrieben, '
+            + 'ohne dass jemand fragt. ' + (ab.abwehrsatz || '')
+            + ' Jetzt: ' + B.welt.geld(s.preis) + '.';
+          zz.appendChild(svg(s.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
+          var zt = B.el('span', 'gg-zieltext');
+          zt.appendChild(B.el('b', null, (D.kurz[k] || k.slice(0, 3).toUpperCase())
+            + ' · ' + (ab.kurz || 'zielt') + ' · noch ' + rest + ' Wo.'));
+          zt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(s.preis)));
+          zz.appendChild(zt);
+          if (!B.welt.kann(s.preis)) zz.classList.add('zuteuer');
+          zz.addEventListener('click', function () { abwehren(k); });
+          reihen.push(zz);
+        }
+      }
+
+      /* 2 — Er haelt. Das Zeichen am Giebel, mit der Abloesesumme. */
       if (b) {
         var h = haus(b.wer);
-        if (!h) return;
-        var m = mittelVon(b.mittel);
-        var summe = abloese(k);
-        var s = document.createElement('button');
-        s.type = 'button';
-        s.className = 'gg-schild gg-' + stamm(b.wer).farbe
-          + (frisch ? ' frisch' : '') + (summe === null ? ' fest' : '');
-        s.setAttribute('data-zug', 'gegner:abloesen:' + k);
-        s.setAttribute('data-adr', k);
-        /* Das Preisschild gehoert an die Sache im Bild, nicht nur ins Blatt —
-           der Kritiker zaehlt Optionen mit Preis NEBENEINANDER, und die
-           liegen hier: an vier Giebeln gleichzeitig, aus einer Kasse. */
-        if (summe !== null) s.setAttribute('data-preis', String(-summe));
-        s.title = a.name + ' · ' + m.name + ' des ' + nameVon(h) + ', läuft bis ' + b.bis
-          + '. ' + m.loest + (summe === null ? '' : ' Ablösung: ' + B.welt.geld(summe) + '.');
-        s.appendChild(svg(b.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
-        var txt = B.el('span', 'gg-schildtext');
-        txt.appendChild(B.el('b', null, (D.kurz[k] || k.slice(0, 3).toUpperCase()) + ' · ' + m.kurz));
-        txt.appendChild(B.el('i', null, summe === null
-          ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe)));
-        s.appendChild(txt);
-        if (summe !== null && !B.welt.kann(summe)) s.classList.add('zuteuer');
+        if (h) {
+          var m = mittelVon(b.mittel);
+          var summe = abloese(k);
+          var sc = document.createElement('button');
+          sc.type = 'button';
+          sc.className = 'gg-schild gg-' + stamm(b.wer).farbe
+            + (frisch ? ' frisch' : '') + (summe === null ? ' fest' : '')
+            + (Z.hinhalt[k] === jahr() ? ' hingehalten' : '');
+          sc.setAttribute('data-zug', 'gegner:abloesen:' + k);
+          sc.setAttribute('data-adr', k);
+          /* Das Preisschild gehoert an die Sache im Bild, nicht nur ins Blatt —
+             der Kritiker zaehlt Optionen mit Preis NEBENEINANDER, und die
+             liegen hier: an vier Giebeln gleichzeitig, aus einer Kasse. */
+          if (summe !== null) sc.setAttribute('data-preis', String(-summe));
+          sc.title = a.name + ' · ' + m.name + ' des ' + nameVon(h) + ', läuft bis ' + b.bis
+            + '. ' + m.loest + (summe === null ? '' : ' Ablösung: ' + B.welt.geld(summe) + '.')
+            + (Z.hinhalt[k] === jahr()
+               ? ' Bis Michaeli drückt er hier den Preis nicht — das Fass steht beim Wirt.' : '');
+          sc.appendChild(svg(b.wer === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen klein'));
+          var txt = B.el('span', 'gg-schildtext');
+          txt.appendChild(B.el('b', null, (D.kurz[k] || k.slice(0, 3).toUpperCase()) + ' · ' + m.kurz));
+          txt.appendChild(B.el('i', null, summe === null
+            ? 'nicht ablösbar' : 'ablösen ' + B.welt.geld(summe)));
+          sc.appendChild(txt);
+          if (summe !== null && !B.welt.kann(summe)) sc.classList.add('zuteuer');
+          sc.addEventListener('click', function () { loeseAb(k); });
+          reihen.push(sc);
+        }
+      }
+
+      /* 3 — Er wirbt. Die Uhr laeuft, auch wenn man wegsieht. */
+      if (w && !s) {
+        var mw = mittelVon(w.mittel);
+        var restw = Math.max(0, w.bis - Z.takt);
+        var p = document.createElement('button');
+        p.type = 'button';
+        p.className = 'gg-wimpel gg-' + stamm(w.wer).farbe;
+        p.setAttribute('data-zug', 'gegner:zuvorkommen:' + k);
+        p.setAttribute('data-adr', k);
+        p.setAttribute('data-preis', String(-w.preis));
+        p.title = nameVon(haus(w.wer)) + ' wirbt um ' + a.name + ' mit ' + mw.name
+          + '. In ' + restw + ' Wochen ist die Bindung da, ohne dass du etwas tust. '
+          + 'Jetzt zuvorkommen: ' + B.welt.geld(w.preis) + '.';
+        var pt = B.el('span', 'gg-wimpeltext');
+        pt.appendChild(B.el('b', null, 'wirbt · noch ' + restw + ' Wo.'));
+        pt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(w.preis)));
+        p.appendChild(pt);
+        if (!B.welt.kann(w.preis)) p.classList.add('zuteuer');
+        p.addEventListener('click', function () { zuvorkommen(k); });
+        reihen.push(p);
+      }
+
+      /* 4 — Die Antwort, die Bier kostet. Sie steht unter der teuren. */
+      if (reihen.length) {
+        var fk = fassKnopf(a);
+        if (fk) reihen.push(fk);
+      }
+
+      if (reihen.length) {
+        var paar = B.el('div', 'gg-paar');
+        reihen.forEach(function (r) { paar.appendChild(r); });
         /* ZUSTAENDIGKEIT §10, vollstaendig abgemeldet (Glaettung Welle 1):
            Ein Preisschild ist keine Beschriftung, sondern ein Knopf. Auf der
            Kartenschicht der STADT bekam es 'stadt-marke-ruht' und damit
@@ -1411,34 +1753,9 @@
            demselben Preisschild war das wirksame nicht anklickbar und das
            anklickbare wirkungslos. Wer selbst einen Knopf setzt, meldet ihn
            ab; die stummen Marken des Stuecks bleiben im Pflocksystem. */
-        s.setAttribute('data-frei', 'gegner');
-        B.orte.setze(s, a.ort, { anker: 'unten', dy: hoch });
-        s.addEventListener('click', function () { loeseAb(k); });
-        fach.appendChild(s);
-        return;
-      }
-
-      if (w) {
-        var mw = mittelVon(w.mittel);
-        var rest = Math.max(0, w.bis - Z.takt);
-        var p = document.createElement('button');
-        p.type = 'button';
-        p.className = 'gg-wimpel gg-' + stamm(w.wer).farbe;
-        p.setAttribute('data-zug', 'gegner:zuvorkommen:' + k);
-        p.setAttribute('data-adr', k);
-        p.setAttribute('data-preis', String(-w.preis));
-        p.title = nameVon(haus(w.wer)) + ' wirbt um ' + a.name + ' mit ' + mw.name
-          + '. In ' + rest + ' Wochen ist die Bindung da, ohne dass du etwas tust. '
-          + 'Jetzt zuvorkommen: ' + B.welt.geld(w.preis) + '.';
-        var pt = B.el('span', 'gg-wimpeltext');
-        pt.appendChild(B.el('b', null, 'wirbt · noch ' + rest + ' Wo.'));
-        pt.appendChild(B.el('i', null, 'zuvorkommen ' + B.welt.geld(w.preis)));
-        p.appendChild(pt);
-        if (!B.welt.kann(w.preis)) p.classList.add('zuteuer');
-        p.setAttribute('data-frei', 'gegner');   /* siehe Schild oben */
-        B.orte.setze(p, a.ort, { anker: 'unten', dy: hoch });
-        p.addEventListener('click', function () { zuvorkommen(k); });
-        fach.appendChild(p);
+        paar.setAttribute('data-frei', 'gegner');
+        B.orte.setze(paar, a.ort, { anker: 'unten', dy: hoch });
+        fach.appendChild(paar);
         return;
       }
 
@@ -1454,6 +1771,109 @@
         fach.appendChild(f);
       }
     });
+  }
+
+  /* --- DIE SPUR: was diese Woche geschah, steht am Ort ------------------
+     RUNDE 2.  Gemessen wurde am Bildschirm: von 39 / 44 / 40 / 80 Zuegen in
+     je 92 Wochen hinterliessen nur 19 / 16 / 12 / 25 eine Marke im Bild, die
+     die Maus auch trifft. Alles andere — er baut, er faehrt, er ruft den
+     Preis aus, er verliert eine Konzession — stand allein in der Liste, und
+     die Liste liegt im Vorgabestand zugeklappt. Wer nicht aufschlaegt, sieht
+     zwei Drittel seiner Zuege nicht.
+
+     Jetzt legt jeder Zug drei Wochen lang einen Zettel an seinen Ort. Das
+     Verb darauf ist in jeder Epoche ein anderes: der Rat spricht zu · die
+     Zunft schreibt zu · er nimmt unter Vertrag · er listet aus.
+     --------------------------------------------------------------------- */
+  function zeichneZugmarken(fach) {
+    var belegt = {};
+    var offen = {};
+    /* Wo schon ein Preisschild haengt, braucht es keinen zweiten Zettel. */
+    Object.keys(Z.bindung).forEach(function (k) { offen[k] = true; });
+    Object.keys(Z.werbung).forEach(function (k) { offen[k] = true; });
+    Object.keys(Z.absicht).forEach(function (k) { offen[k] = true; });
+
+    /* Sein eigener Hof traegt seinen Wochenzettel schon (zeichneSitz) — dort
+       waere ein zweiter Zettel nur ein Deckel ueber seinem Haus. */
+    var eigene = {};
+    haeuserJetzt().forEach(function (h) { eigene[sitzVon(h).ort] = true; });
+
+    var gezeigt = 0;
+    for (var i = 0; i < Z.zuege.length && gezeigt < 6; i++) {
+      var e = Z.zuege[i];
+      var alter = Z.takt - e.takt;
+      if (alter < 0 || alter > 2) continue;
+      if (e.adr && offen[e.adr]) continue;
+      if (eigene[e.ort]) continue;
+      if (!B.orte.hole(e.ort)) continue;
+      var n = belegt[e.ort] || 0;
+      if (n >= 2) continue;
+      belegt[e.ort] = n + 1;
+      gezeigt++;
+      /* Was tief im Bild liegt, bekommt seinen Zettel nach oben statt nach
+         unten: unten stehen die Bretter der Werkbank. */
+      var oy = B.orte.hole(e.ort).y;
+      var unten = oy > 74;
+
+      var m = B.el('div', 'gg-spur gg-' + stamm(e.wer).farbe
+        + (alter === 0 ? ' neu' : '') + (alter >= 2 ? ' alt' : ''));
+      m.setAttribute('data-ort', e.ort);
+      m.setAttribute('data-zugnr', String(e.nr));
+      m.title = e.werName + ', ' + e.jahr + ' Woche ' + e.woche + ': ' + e.text
+        + ' — geschehen, ohne dass jemand gefragt hat.';
+      var kopf = B.el('span', 'gg-spurkopf');
+      kopf.appendChild(B.el('b', null, verbFuer(e.art)));
+      kopf.appendChild(B.el('i', null, alter === 0 ? 'diese Woche' : 'W' + e.woche));
+      m.appendChild(kopf);
+      B.orte.setze(m, e.ort, unten
+        ? { anker: 'unten', dy: -(4 + n * 3.4) }
+        : { anker: 'oben', dy: 2.6 + n * 3.4 });
+      /* Ein Zettel, der die Maus schluckt, waere schlimmer als keiner: er
+         liegt auf der Platte und deckt die Knoepfe der anderen zu. */
+      m.setAttribute('data-frei', 'gegner');
+      fach.appendChild(m);
+    }
+  }
+
+  /* --- Der Zug ohne Bargeld, im Bild statt im zugeklappten Brett --------
+     RUNDE 1 hatte ihn gemeldet: "Klage vor dem Stadtgericht laeuft — nur ist
+     an ihm keine Wirkung zu sehen." Er steht ausserdem im Band, und das Band
+     liegt im Vorgabestand zugeklappt. Also steht er jetzt am Markt, wo in
+     jeder Epoche das Amt sitzt, das er anruft — und was er bewirkt hat,
+     steht daneben. */
+  function zeichneKlage(fach) {
+    var bs = ep().beschwerde;
+    if (!bs || !B.orte.hole('marktplatz')) return;
+    var moeglich = beschwerdeMoeglich();
+    var getan = Z.beschwerdeJahr === jahr();
+    if (!moeglich && !getan) return;
+    var ziel = beschwerdeZiel();
+    var el = document.createElement('button');
+    el.type = 'button';
+    el.className = 'gg-amt' + (getan ? ' getan' : '');
+    el.setAttribute('data-zug', 'gegner:beschwerde-bild');
+    el.setAttribute('data-preis', '0');
+    el.disabled = !moeglich;
+    el.title = bs.name + '. ' + bs.sagt + ' ' + bs.preis
+      + (Z.beschwerdeAusgang && Z.beschwerdeAusgang.jahr === jahr()
+         ? ' Zuletzt: ' + Z.beschwerdeAusgang.satz : '');
+    var t = B.el('span', 'gg-amttext');
+    t.appendChild(B.el('b', null, bs.name));
+    t.appendChild(B.el('i', null, getan
+      ? (Z.beschwerdeAusgang && Z.beschwerdeAusgang.jahr === jahr()
+          ? (Z.beschwerdeAusgang.gelingt ? 'durchgedrungen · ' + Z.beschwerdeAusgang.wo
+                                         : 'abgewiesen · ' + Z.beschwerdeAusgang.wo)
+          : 'in diesem Braujahr schon geschehen')
+      : 'kostet kein Geld · vier Ansehen'
+        + (ziel && adresse(ziel.k) ? ' · gegen ' + adresse(ziel.k).name : '')));
+    el.appendChild(t);
+    el.addEventListener('click', beschwerdeFuehren);
+    /* Nicht auf den Markt selbst: dort haengt das Zeichen des Ochsen, und
+       eine Handbreit tiefer stand bis eben das Schild der Torschenke unter
+       diesem Knopf. Er steht jetzt zwischen beiden, im freien Bild. */
+    B.orte.setze(el, 'marktplatz', { anker: 'oben', dx: -3, dy: 5 });
+    el.setAttribute('data-frei', 'gegner');
+    fach.appendChild(el);
   }
 
   /* --- der graue Wagen, der die Strasse faehrt -------------------------- */
@@ -1695,6 +2115,17 @@
           tu: function () { loeseAb(a.schluessel); }
         }));
       }
+      /* Die billige Antwort daneben, in der anderen Waehrung. */
+      if (ep().hinhalten) {
+        kk.appendChild(B.knopf({
+          text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
+          zug: 'gegner:hinhalten-blatt:' + a.schluessel,
+          aus: !hinhaltMoeglich(a.schluessel) || fassImKeller() < hinhaltFass(),
+          titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und bis Michaeli '
+               + 'drückt er an dieser Adresse den Preis nicht mehr.',
+          tu: function () { hinhalten(a.schluessel); }
+        }));
+      }
       reihe.appendChild(kk);
     });
     halten.appendChild(reihe);
@@ -1756,6 +2187,48 @@
       br.appendChild(bk);
       bb.appendChild(br);
       bl.appendChild(bb);
+    }
+
+    /* Worauf er zielt — und was es kostet, ihm zuvorzukommen */
+    var zielt = Object.keys(Z.absicht).filter(function (k) { return !!adresse(k); });
+    if (zielt.length) {
+      var zb = B.el('div', 'gg-block');
+      zb.appendChild(B.el('h3', null,
+        'Worauf er gerade zielt — die Unterschrift fällt ohne Rückfrage'));
+      var zr = B.el('div', 'gg-reihe');
+      zielt.forEach(function (kk) {
+        var a = adresse(kk);
+        var s = Z.absicht[kk];
+        var m = mittelVon(s.mittel);
+        var abd = ep().absicht || {};
+        var ka = karte(a, 'zielt');
+        ka.appendChild(B.el('div', 'gg-kname', a.name));
+        ka.appendChild(B.el('div', 'gg-kzeile', abd.text.replace('{haus}', a.name)));
+        ka.appendChild(B.el('div', 'gg-kzeile', 'Es wird ' + m.name
+          + ' · noch ' + Math.max(0, s.bis - Z.takt) + ' Wochen'));
+        ka.appendChild(B.el('div', 'gg-ksatz',
+          'Lässt man die Wochen laufen, unterschreibt der Wirt. Danach kostet die '
+          + 'Ablösung ' + B.welt.geld(grundwert(a, m)) + ' statt ' + B.welt.geld(s.preis) + '.'));
+        ka.appendChild(B.knopf({
+          text: abd.abwehr || 'Zuvorkommen', zug: 'gegner:abwehren-blatt:' + kk,
+          preis: -s.preis, aus: !B.welt.kann(s.preis),
+          titel: abd.abwehrsatz || 'Jetzt binden, ehe er unterschreibt.',
+          tu: function () { abwehren(kk); }
+        }));
+        if (ep().hinhalten) {
+          ka.appendChild(B.knopf({
+            text: ep().hinhalten.name + ' · ' + B.welt.menge(hinhaltFass()),
+            zug: 'gegner:hinhalten-blatt:' + kk,
+            aus: !hinhaltMoeglich(kk) || fassImKeller() < hinhaltFass(),
+            titel: ep().hinhalten.satz + ' Kostet Bier, kein Geld — und schiebt ihn '
+                 + (ep().hinhalten.wochen || 3) + ' Wochen hinaus.',
+            tu: function () { hinhalten(kk); }
+          }));
+        }
+        zr.appendChild(ka);
+      });
+      zb.appendChild(zr);
+      bl.appendChild(zb);
     }
 
     /* Worum er wirbt */
@@ -1952,6 +2425,10 @@
 
     epoche: function (d) {
       Z.epoche = d.epoche;
+      /* Was in der alten Zeit angebahnt war, wird in der neuen nicht
+         unterschrieben: eine Absicht auf einen Ratsspruch hat 1884 keinen
+         Adressaten mehr. Das Hinhalten laeuft mit dem Braujahr ohnehin ab. */
+      Z.absicht = {};
       /* Sein Preis rechnet sich in der neuen Waehrung neu. */
       haeuserJetzt().forEach(function (h) {
         h.preis = bierpreis();
@@ -1993,6 +2470,8 @@
       });
       zeichneNebenzeichen(fach);
       zeichneAdressen(fach);
+      zeichneZugmarken(fach);
+      zeichneKlage(fach);
       zeichneWagen(fach);
       zeichneZeiger();
       zeichneBand(fach);

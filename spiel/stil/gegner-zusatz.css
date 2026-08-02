@@ -1,5 +1,212 @@
 /* ===========================================================================
-   stil/gegner-zusatz.css — FREIER PLATZ fuer "gegner".
-   Bereits in spiel/index.html eingehaengt, nach stil/gegner.css. Leer, darf
-   vollstaendig ersetzt werden. Kein Bauer aendert index.html.
+   stil/gegner-zusatz.css — DER GEGNER, Runde 2.
+
+   Was hier steht, ist die Antwort auf zwei am Bildschirm gemessene Luecken:
+
+   1  ZWEI PREISSCHILDER NEBENEINANDER, IN ZWEI WAEHRUNGEN.  Bis Runde 1 hing
+      an jedem Giebel genau ein Preis, und der war in 63 bis 82 von 92 Wochen
+      unbezahlbar. Jetzt haengt darunter die billige Antwort — sie kostet Bier
+      aus dem eigenen Keller und keinen Heller. Beide gehoeren sichtbar
+      zusammen (.gg-paar), und man kann nur eine von beiden haben.
+
+   2  DIE SPUR.  Jeder Zug legt drei Wochen lang einen Zettel an seinen Ort.
+      Papierfarben, klein, ohne Mausgriff — er zeigt, er bedient nicht.
+
+   Alle Groessen in Vielfachen von --s. Bewegungen nie ueber transform.
    =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DAS PAAR — die teure Antwort oben, die billige darunter
+   -------------------------------------------------------------------------- */
+.gg-paar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--s) * 3);
+}
+/* Im Paar duerfen die Schilder nicht mehr selbst absolut liegen — sonst
+   fielen sie uebereinander statt untereinander. */
+.gg-paar > .gg-schild,
+.gg-paar > .gg-wimpel,
+.gg-paar > .gg-ziel,
+.gg-paar > .gg-fass { position: static; }
+
+/* --------------------------------------------------------------------------
+   DAS ZIELZEICHEN — er hat sich entschieden, aber noch nicht unterschrieben
+   -------------------------------------------------------------------------- */
+.gg-ziel {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 6);
+  padding: calc(var(--s) * 4) calc(var(--s) * 9);
+  border: calc(var(--s) * 2) dashed var(--gg-warn);
+  border-radius: calc(var(--s) * 3);
+  background: linear-gradient(180deg, #f2e6e0 0%, #d8c3ba 100%);
+  box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 9) rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  font-family: var(--serif);
+  color: var(--gg-tinte);
+  white-space: nowrap;
+}
+.gg-ziel:hover { background: linear-gradient(180deg, #fbf1ec 0%, #e4d1c9 100%); }
+.gg-zieltext b {
+  display: block;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 17);
+  letter-spacing: calc(var(--s) * 1);
+}
+.gg-zieltext i {
+  display: block;
+  font-style: normal;
+  font-size: calc(var(--s) * 15);
+  color: var(--gg-warn);
+}
+.gg-ziel.zuteuer .gg-zieltext i { opacity: 0.55; }
+/* Zwei Wochen vor der Unterschrift wird das Zeichen laut. */
+.gg-ziel.knapp {
+  border-style: solid;
+  animation: gg-puls 1.6s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   DER FASSKNOPF — die Antwort, die Bier kostet und kein Geld
+   Er sieht aus wie das eigene Haus, nicht wie seins: Papier und Holz.
+   -------------------------------------------------------------------------- */
+.gg-fass {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--s) * 3) calc(var(--s) * 9);
+  border: calc(var(--s) * 2) solid #6b5433;
+  border-radius: calc(var(--s) * 3);
+  background: linear-gradient(180deg, #f0e3c6 0%, #d9c69c 100%);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 7) rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-family: var(--serif);
+  color: #3a2c16;
+  white-space: nowrap;
+}
+.gg-fass:hover { background: linear-gradient(180deg, #f9efd9 0%, #e6d5ae 100%); }
+.gg-fasstext b {
+  display: block;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 1);
+}
+.gg-fasstext i {
+  display: block;
+  font-style: normal;
+  font-size: calc(var(--s) * 14);
+  color: #6b5433;
+}
+.gg-fass:disabled { cursor: default; opacity: 0.62; filter: saturate(0.4); }
+.gg-fass.zuteuer .gg-fasstext i { color: var(--gg-warn); }
+/* Wo das Fass schon steht, ist das Zeichen am Giebel ruhiger: er drueckt
+   dort in diesem Braujahr nicht mehr. */
+.gg-schild.hingehalten { border-style: dotted; opacity: 0.9; }
+
+/* --------------------------------------------------------------------------
+   DIE SPUR — was diese Woche geschah, am Ort, drei Wochen lang
+   -------------------------------------------------------------------------- */
+.gg-spur {
+  position: absolute;
+  padding: calc(var(--s) * 2) calc(var(--s) * 7);
+  border: calc(var(--s) * 2) solid var(--gg-schiefer);
+  border-radius: calc(var(--s) * 2);
+  background: rgba(228, 228, 222, 0.94);
+  color: var(--gg-tinte);
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 calc(var(--s) * 2) calc(var(--s) * 6) rgba(0, 0, 0, 0.35);
+}
+.gg-spurkopf { display: flex; align-items: baseline; gap: calc(var(--s) * 6); }
+.gg-spurkopf b {
+  font-family: var(--serif);
+  font-size: calc(var(--s) * 16);
+  font-weight: normal;
+}
+.gg-spurkopf i {
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 13);
+  opacity: 0.68;
+}
+.gg-spur.neu {
+  border-color: var(--gg-warn);
+  background: rgba(243, 231, 226, 0.96);
+}
+.gg-spur.neu .gg-spurkopf i { color: var(--gg-warn); opacity: 1; }
+.gg-spur.alt { opacity: 0.6; }
+.gg-spur.gg-konzern { border-color: #1d2a38; }
+
+/* --------------------------------------------------------------------------
+   DAS AMT AM MARKT — der Zug, der kein Geld kostet, im Bild statt im Brett
+   -------------------------------------------------------------------------- */
+.gg-amt {
+  position: absolute;
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  border: calc(var(--s) * 2) solid var(--gg-gut);
+  border-radius: calc(var(--s) * 3);
+  background: linear-gradient(180deg, #e9efe3 0%, #cfdac6 100%);
+  color: #24381f;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 8) rgba(0, 0, 0, 0.4);
+}
+.gg-amt:hover { background: linear-gradient(180deg, #f3f8ee 0%, #dae5d1 100%); }
+.gg-amt:disabled { cursor: default; opacity: 0.66; filter: saturate(0.35); }
+.gg-amttext b {
+  display: block;
+  font-family: var(--serif);
+  font-size: calc(var(--s) * 17);
+  font-weight: normal;
+}
+.gg-amttext i {
+  display: block;
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  opacity: 0.78;
+}
+.gg-amt.getan { border-color: var(--gg-schiefer); background: #e2e2dc; color: var(--gg-tinte); }
+
+/* --------------------------------------------------------------------------
+   AN SEINEM HAUS: die Zahl der zweiten Latte, ohne dass man etwas aufschlaegt
+   -------------------------------------------------------------------------- */
+.gg-wochenzug {
+  margin-top: calc(var(--s) * 5);
+  padding: calc(var(--s) * 2) calc(var(--s) * 7);
+  border-radius: calc(var(--s) * 2);
+  background: var(--gg-warn);
+  color: #f6efe6;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  text-align: center;
+}
+.gg-siegel.zorn { color: #fff; background: var(--gg-schiefer); border-color: var(--gg-schiefer); }
+
+/* Die Karte im Blatt, auf die er zielt. */
+.gg-karte.zielt { border-style: dashed; border-color: var(--gg-warn);
+                  background: rgba(250, 240, 234, 0.65); }
+
+/* Sein Wochenzettel, an ihm selbst: die letzten drei Zuege mit dem Verb
+   dieser Epoche. Wer nur auf sein Haus sieht, sieht sie trotzdem. */
+.gg-zettel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 4);
+  margin-top: calc(var(--s) * 5);
+}
+.gg-zchip {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 4);
+  padding: calc(var(--s) * 1) calc(var(--s) * 6);
+  border: calc(var(--s) * 1) solid var(--gg-schiefer);
+  border-radius: calc(var(--s) * 2);
+  background: rgba(255, 255, 255, 0.55);
+}
+.gg-zchip b { font-weight: normal; font-family: var(--serif); font-size: calc(var(--s) * 15); }
+.gg-zchip i { font-style: normal; font-family: var(--mono); font-size: calc(var(--s) * 13); opacity: 0.65; }
+.gg-zchip.neu { border-color: var(--gg-warn); background: rgba(243, 231, 226, 0.9); }
+.gg-zchip.neu i { color: var(--gg-warn); opacity: 1; }
