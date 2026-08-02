@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-02T14:23:54+00:00",
- "phase": "Welle 2b: zwei Builder haben abgeliefert (DER GEGNER R2, DIE EICHUNG), ihre blinden Kritiker laufen. Auflage 23 ist erfüllt und von der Aufsicht nachgemessen: drei Braujahre in allen vier Epochen mit nichts als WEITER, vorher war nach einem Jahr Schluss. Die Kennzahl der zweiten Latte hat sich halb bewegt — die Armutsfalle ist weg (0/0/1/0 Jahre unter 1x statt 0/4/4/0), aber 1600 und 1884 kippen weiter.",
+ "stand": "2026-08-02T15:53:54+00:00",
+ "phase": "Welle 2b: zwei blinde Kritiker haben geurteilt — DIE EICHUNG und DER GEGNER, beide 'besteht mit Auflage'. Der Kritiker der EICHUNG hat 7 Läufe zu je 400 Wochen in beiden Extremstilen gefahren: die Kennzahl kippt nicht, ihr höchster Wert überhaupt ist 5,09x und das ist der Startwert von 1884. Kein Fund auf der Sperrliste. Offen bleiben zehn Auflagen, die schärfste: der Nenner der Kopfzeilen-Kennzahl wechselt in 400 Wochen kein einziges Mal und misst gegen einen Bierdeckel statt gegen den umkämpften Zug.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -16,7 +16,11 @@
   "Zuege unerreichbar": "3/2/3/4 von 76/84/87/81",
   "Stuecke Welle 2b": "4",
   "Jahre unter 1x": "0/0/1/0 statt 0/4/4/0",
-  "Auflage 23": "erfuellt, nachgemessen"
+  "Auflage 23": "erfuellt, nachgemessen",
+  "DIE EICHUNG": "besteht mit Auflage",
+  "DER GEGNER": "besteht mit Auflage",
+  "Kennzahl Hoechstwert": "5,09x (Startwert 1884)",
+  "Sperrliste": "kein Fund"
  },
  "stuecke": [
   {
@@ -729,6 +733,14 @@
   {
    "zeit": "2026-08-02T14:23:54+00:00",
    "text": "2. August, Nachmittag: Auflage 23 erfüllt — der Deckel über WEITER ist weg, drei Braujahre laufen in allen vier Epochen mit einem Knopf. Die eigene Nachmessung der Kennzahl bestätigt den Builder nur zur Hälfte: 1350 und 1970 erreichen das Ziel, 1600 und 1884 kippen weiter. Zwischen seiner Messung und meiner sind die anderen Stücke eingeschlagen."
+  },
+  {
+   "zeit": "2026-08-02T15:53:54+00:00",
+   "text": "Welle 2b: zwei blinde Kritiker haben geurteilt — DIE EICHUNG und DER GEGNER, beide 'besteht mit Auflage'. Der Kritiker der EICHUNG hat 7 Läufe zu je 400 Wochen in beiden Extremstilen gefahren: die Kennzahl kippt nicht, ihr höchster Wert überhaupt ist 5,09x und das ist der Startwert von 1884. Kein Fund auf der Sperrliste. Offen bleiben zehn Auflagen, die schärfste: der Nenner der Kopfzeilen-Kennzahl wechselt in 400 Wochen kein einziges Mal und misst gegen einen Bierdeckel statt gegen den umkämpften Zug."
+  },
+  {
+   "zeit": "2026-08-02T15:53:54+00:00",
+   "text": "2. August, 15:52: Erste Kritikerurteile der Welle 2b. DIE EICHUNG besteht mit Auflage — 7 Läufe zu 400 Wochen, die Kennzahl kippt nachweisbar nicht, Höchstwert 5,09x. DER GEGNER besteht mit Auflage. Zehn Auflagen offen, darunter der unehrliche Nenner der Kopfzeilen-Kennzahl und der Jahreswechsel, der anderthalb Klicks kostet."
   }
  ]
 }
