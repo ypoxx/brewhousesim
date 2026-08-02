@@ -61,7 +61,13 @@ var PREIS_DATEN = {
          pflichtUmsatz — Grutgeld und Mahlgeld je Fass durch das Haus.
          pflichtErtrag — der Schoss, den der Rat nach der Nahrung veranlagt.
          nachlass     — was der Rat nach einem Fehljahr vom Festen erlaesst. */
-      lastenFest: 62,
+      /* lastenFest war 62 Pf gegen eine Michaeli-Kasse von 112 Pf: die
+         feste Last allein nahm 55 im Hundert der ganzen Barschaft, jedes
+         Jahr, steigend. In 1600 sind es 16, in 1884 sechs. Am Bildschirm
+         gemessen (Rechnungsspalte 1359): Erbzins 55 und Wasserzins 34
+         gegen 187 Pf Ausstoss. Ein Erbzins auf ein Braugerechtsame war
+         ein fester kleiner Betrag, kein halbes Jahreseinkommen. */
+      lastenFest: 34,
       pflichtUmsatz: 0.085,
       pflichtErtrag: 0.55,
       nachlass: 0.55,
@@ -74,7 +80,12 @@ var PREIS_DATEN = {
          stieg, und nie ganz: die Buerger sollten billig trinken. */
       satzFolgt: 0.62,
       pflichtHoehe: 0.20,
-      umlageAnteil: 0.80,
+      /* Die Umlage lag bei 0,80 der Jahreslast und mit `teil` bis 1,85 bei
+         dem Anderthalbfachen davon — in der aermsten der vier Epochen die
+         hoechste der vier Quoten. Sie hat die Partie 1352, 1355 und 1359
+         jedesmal auf null gesetzt. Sie bleibt die Zacke im Verlauf, nur
+         nicht mehr das Ende. */
+      umlageAnteil: 0.60,
       handlohnAnteil: 1.10,
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
@@ -131,13 +142,14 @@ var PREIS_DATEN = {
 
         { k: 'schild', name: 'Das Hausschild überm Tor', anteil: 0.10, bauzeit: 0,
           was: 'Ein geschmiedeter Anker an einem Ausleger, weithin sichtbar.',
-          satz: 'Wer vorbeikommt, weiß von nun an, wo er ist.',
-          wirkung: { ansehen: 8, preis: 0.03 } },
+          satz: 'Wer vorbeikommt, weiß von nun an, wo er ist — und fragt nach dem Haus, nicht nach dem Bier.',
+          wirkung: { ansehen: 8, preis: 0.05 } },
 
         { k: 'bottich', name: 'Ein zweiter Bottich aus Eichenholz', anteil: 0.20, bauzeit: 1,
           was: 'Ein Gärbottich vom Küfer, mit Weidenreifen gebunden.',
-          satz: 'Zwei Bottiche heißen: der zweite Sud muss nicht warten.',
-          wirkung: { plaetze: 3 } },
+          satz: 'Zwei Bottiche heißen: der zweite Sud muss nicht warten — und der erste '
+              + 'darf ausgären, statt jung aus dem Haus zu gehen.',
+          wirkung: { plaetze: 3, preis: 0.04 } },
 
         { k: 'ochsenstall', name: 'Der Ochsenstall am Tor', anteil: 0.24, bauzeit: 0,
           was: 'Ein eigener Stall statt des geliehenen Gespanns.',
@@ -163,19 +175,20 @@ var PREIS_DATEN = {
 
         { k: 'boettcher', name: 'Der Böttcher im Haus', anteil: 0.34, bauzeit: 1,
           was: 'Eine Werkstatt im Hof, Daubenholz unterm Vordach.',
-          satz: 'Fässer werden nicht mehr gekauft, sondern gebunden.',
+          satz: 'Fässer werden nicht mehr gekauft, sondern gebunden. Ein dichtes Fass '
+              + 'kommt voll beim Wirt an, und der Wirt rechnet danach.',
           sperrt: ['fasskauf'],
-          wirkung: { plaetze: 4, ertrag: 26 } },
+          wirkung: { plaetze: 4, ertrag: 26, preis: 0.03 } },
 
         { k: 'brunnen', name: 'Der Ziehbrunnen im Hof', anteil: 0.55, bauzeit: 1,
           was: 'Achtzehn Klafter durch den Lehm bis auf den Kies.',
           satz: 'Eigenes Wasser. Der Weg zum Marktbrunnen entfällt.',
           wirkung: { pflichtWeg: 'wasserzins', ertrag: 12 } },
 
-        { k: 'pfanne', name: 'Die kupferne Pfanne', anteil: 0.80, bauzeit: 2,
+        { k: 'pfanne', name: 'Die kupferne Pfanne', anteil: 0.66, bauzeit: 2,
           was: 'Eine offene Pfanne aus getriebenem Kupfer über offenem Feuer — kein Helm, kein Rohr.',
           satz: 'Kupfer hält die Hitze gleich. Das Bier wird sauberer und fängt einen besseren Preis.',
-          wirkung: { preis: 0.06, ertrag: 30 } },
+          wirkung: { preis: 0.07, ertrag: 30 } },
 
         /* Dasselbe Übel, zwei Wege: die Handmühle drückt das Mahlgeld heute
            für ein Sechstel des Preises, das Achtel an der Stadtmühle nimmt es
@@ -194,8 +207,9 @@ var PREIS_DATEN = {
 
         { k: 'gewoelbe', name: 'Der gewölbte Keller unterm Hof', anteil: 1.90, bauzeit: 3,
           was: 'Ein Tonnengewölbe aus Bruchstein, drei Klafter unter dem Hof.',
-          satz: 'Kühl und dunkel. Das Bier hält länger, und mehr Fässer haben Platz.',
-          wirkung: { plaetze: 9, ertrag: 55 } },
+          satz: 'Kühl und dunkel. Das Bier hält länger, mehr Fässer haben Platz, und was '
+              + 'über den Sommer kommt, wird im Herbst teurer verkauft.',
+          wirkung: { plaetze: 9, ertrag: 55, preis: 0.05 } },
 
         { k: 'bannmeile', name: 'Die Bannmeile auf zehn Jahre', anteil: 2.60, bauzeit: 0,
           was: 'Ein Ratsbrief: kein fremdes Bier innerhalb einer Meile.',
@@ -619,7 +633,13 @@ var PREIS_DATEN = {
       lastenGrund: 32000,
       teuerungJahr: 1.045,
       teuerungKauf: 1.065,
-      lastenFest: 16000,
+      /* 16.000 DM feste Last gegen eine Michaeli-Kasse von 61.000: 26 im
+         Hundert der Barschaft, jedes Jahr, steigend — und der Ausstoss
+         faellt in dieser Epoche von 250.000 auf 56.000. Gemessen stand die
+         Rechnung 1979 bei 16.012 DM gegen 56.070 DM Ausstoss. Loehne und
+         Zins eines Hauses dieser Groesse sind eine schwere Last, aber
+         nicht ein Viertel der Kasse im Jahr. */
+      lastenFest: 11000,
       pflichtUmsatz: 0.080,
       pflichtErtrag: 0.50,
       nachlass: 0.50,
@@ -629,7 +649,11 @@ var PREIS_DATEN = {
          und nie ganz. Zwischen 1350 und 1884. */
       satzFolgt: 0.45,
       pflichtHoehe: 0.145,
-      umlageAnteil: 0.95,
+      /* Die hoechste Umlagequote der vier Epochen traf das Haus mit dem
+         duennsten Polster. Gemessen: die Rechnung 1973 stand bei 78.600 DM
+         und hat die Kasse von 45.000 auf null gesetzt; von dort ist sie in
+         zehn Jahren nicht zurueckgekommen. */
+      umlageAnteil: 0.72,
       handlohnAnteil: 1.05,
       abstaende: [3, 4, 3, 5, 4, 3, 5, 4],
 
@@ -698,8 +722,9 @@ var PREIS_DATEN = {
 
         { k: 'zelt', name: 'Das Bierzelt auf dem Volksfest', anteil: 0.075, bauzeit: 0,
           was: 'Ein Zelt mit dreitausend Plätzen, neun Tage im Jahr.',
-          satz: 'Neun Tage, an denen die Stadt das Bier des Hauses trinkt und sonst nichts.',
-          wirkung: { ertrag: 6000, ansehen: 10 } },
+          satz: 'Neun Tage, an denen die Stadt das Bier des Hauses trinkt und sonst nichts. '
+              + 'Ausgeschenkt wird ohne Handel dazwischen, und das steht in der Abrechnung.',
+          wirkung: { ertrag: 6000, ansehen: 10, preis: 0.05 } },
 
         /* Die Strecke gehört einem: entweder dem Großhändler oder dem Haus.
            Er billiger und ohne Fahrer, dafür kennt er den Wirt und das Haus
@@ -720,7 +745,7 @@ var PREIS_DATEN = {
         /* Der Werbeetat wird einmal ausgegeben. Fernsehen kostet das Doppelte
            und reicht über den Kreis hinaus; das Trikot kostet die Hälfte und
            wirkt genau da, wo das Haus ohnehin steht. */
-        { k: 'werbefilm', name: 'Der Werbefilm im Vorabendprogramm', anteil: 0.21, bauzeit: 0, ab: 1958,
+        { k: 'werbefilm', name: 'Der Werbefilm im Vorabendprogramm', anteil: 0.17, bauzeit: 0, ab: 1958,
           was: 'Dreißig Sekunden, ein Fluss, ein Chor, ein Schriftzug am Ende.',
           satz: 'Zum ersten Mal kennt jemand das Bier, der nie in der Stadt war.',
           sperrt: ['trikot'],
@@ -774,7 +799,7 @@ var PREIS_DATEN = {
       ],
 
       festlegungen: [
-        { k: 'handelsmarke', name: 'Die Handelsmarke', anteil: 0.28,
+        { k: 'handelsmarke', name: 'Die Handelsmarke', anteil: 0.22,
           was: 'Wort und Bild, geschützt in allen Klassen, mit Etat für die nächsten Jahre.',
           regel: 'Der Name trägt den Preis. Jedes Hektoliter fängt für den Rest der Partie mehr, weil ein Name darauf steht.',
           wirkung: { preis: 0.18, ansehen: 25 } },
