@@ -985,6 +985,11 @@
      ---------------------------------------------------------------------- */
   var MASS_VORGABE = { jahre: 5, haeuser: 3, ausstoss: 1,
     satz: 'Ein Haus, das liefert und zahlt, kann man weitergeben.' };
+  /* So viele Wochen liegt das Angebot, dann verfaellt es bis zum naechsten
+     Michaeli. Vier, weil die Uebergabe im Herbst verhandelt wird und nicht
+     das ganze Jahr — und weil ein Blatt dieser Groesse nicht laenger liegen
+     darf (siehe woche:). */
+  var UEBERGABE_WOCHEN = 4;
 
   function uebergabeMass() {
     var u = uebergabeDef();
@@ -3235,12 +3240,16 @@
       klasse: 'blatt fu-ausgangblatt fu-uebergabe',
       daten: { frei: '1', reiter: u.wort }
     });
+    var rest = Z.uebergabe.frist === undefined ? UEBERGABE_WOCHEN : Z.uebergabe.frist;
     bl.appendChild(B.el('h2', null, u.wort + ' · ' + Z.uebergabe.jahr));
     bl.appendChild(B.el('div', 'fu-ausgang-lage',
       Z.uebergabe.alt + ' führt das Haus seit ' + B.welt.zeit.amtszeit.seit + '. '
       + 'Es steht: ' + Z.uebergabe.haeuser + ' Häuser der Stadt führen Bier des Anker, '
       + B.welt.menge(Z.uebergabe.verladen) + ' sind im letzten Braujahr hinausgegangen, '
-      + 'in der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.'));
+      + 'in der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '. '
+      + 'Verhandelt wird um Michaeli: noch ' + Math.max(1, rest)
+      + (Math.max(1, rest) === 1 ? ' Woche' : ' Wochen') + ', dann liegt das Angebot '
+      + 'erst zum nächsten Michaeli wieder da.'));
     /* DIE ELLE DIESER ZEIT, am Blatt und nicht nur im Quelltext. Ohne sie
        liest der Spieler „es steht" als Behauptung; mit ihr sieht er, woran
        es in DIESEM Jahrhundert gemessen wird — und warum die Zahl in 1970
@@ -3963,6 +3972,21 @@
       Z.sommerOffen = false;
       if (Z.epoche !== B.welt.zeit.epoche) richteEpocheEin(false);
       Z.meldung = null;
+
+      /* MICHAELI IST EIN MOMENT IM JAHR, KEIN DAUERZUSTAND (ZUSTAENDIGKEIT 5).
+
+         Das Uebergabeblatt lag bisher, bis es beantwortet wurde — gemessen
+         120 von 270 Wochen in E1. Ein Blatt, das ein Viertel der Buehne nimmt
+         und vier Jahre liegenbleibt, ist kein Angebot mehr, sondern Moebel;
+         es hat auf der sorgfaeltig gespielten Linie die eigene Anschlagtafel
+         des Stuecks dauerhaft in den Reiter gedrueckt. Also laeuft es aus.
+         Weggenommen wird es OHNE `uebergabeNein` — wer nicht antwortet, hat
+         nicht abgelehnt, und zum naechsten Michaeli liegt es wieder da. */
+      if (Z.uebergabe) {
+        Z.uebergabe.frist = (Z.uebergabe.frist === undefined
+          ? UEBERGABE_WOCHEN : Z.uebergabe.frist) - 1;
+        if (Z.uebergabe.frist <= 0) Z.uebergabe = null;
+      }
       umlaufZurueck();
       eisErnte();
       braue();
