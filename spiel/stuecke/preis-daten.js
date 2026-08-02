@@ -72,6 +72,12 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.55,
       nachlass: 0.55,
       nachlassName: 'Nachlass des Rats auf Zins und Wasser',
+      /* DER NOTPFENNIG (siehe preis.js, `buche`). Was der Rat stehen laesst,
+         wenn die Rechnung groesser ist als die Lade. Bemessen an dem, was ein
+         Sud an Barauslage kostet: Grut, Malz, Holz und der Fuhrlohn fuer
+         einen Kessel. Wer das nicht mehr hat, braut nicht mehr, und dann
+         bekommt der Rat im naechsten Jahr gar nichts. */
+      notpfennig: 48,
       /* DIE NACHFUEHRUNG DES SATZES (siehe preis.js, `nachfuehrung`).
          Wie viel von der Teuerung beim Haus ankommt, ohne dass es etwas
          dafuer baut. Der Biersatz des 14. Jahrhunderts war an den
@@ -265,6 +271,10 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.40,
       nachlass: 0.55,
       nachlassName: 'Stundung des Klosters auf den Pachtzins',
+      /* DER NOTPFENNIG. Das Braugeld fuer einen Sud Braunbier — Malz, Hopfen,
+         Holz, Fuhrlohn. Das Kloster als Grundherr nimmt es nicht: ein Pachthof,
+         der nicht mehr braut, traegt keinen Pachtzins mehr. */
+      notpfennig: 280,
       /* Der Kurfuerst haelt den Satz kurz: an ihm haengt sein
          Malzaufschlag, und ein hoher Satz macht Unruhe in der Stadt.
          Diese Epoche besteht die zweite Messlatte auch ohne — was hier
@@ -458,6 +468,10 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.45,
       nachlass: 0.55,
       nachlassName: 'Der Steuerausschuss setzt die Veranlagung herab',
+      /* DER NOTPFENNIG. Betriebsmittel eines Gewerbes sind der Vollstreckung
+         entzogen, seit es eine Zivilprozessordnung gibt; der Steuerausschuss
+         stundet den Rest und schreibt ihn fort. */
+      notpfennig: 4200,
       /* Der Landesherr setzt den Preis „nur noch dem Namen nach"; was
          wirklich zaehlt, ist die Konvention der Brauereien am Ort, und
          die zieht mit den Kosten mit. Der hoechste der vier Saetze. */
@@ -649,6 +663,10 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.50,
       nachlass: 0.50,
       nachlassName: 'Tilgungsaussetzung der Hausbank',
+      /* DER NOTPFENNIG. Was die Hausbank auf dem Konto stehen laesst, damit
+         Sudhaus, Abfuellung und Fuhrpark im naechsten Jahr laufen. Eine Bank
+         vollstreckt nicht in den Betrieb, der ihre Tilgung verdient. */
+      notpfennig: 50000,
       /* Der Handel diktiert den Aktionspreis, der Listenpreis ist Zierde —
          aber auch der Handel gibt die Kostensteigerung weiter, nur spaet
          und nie ganz. Zwischen 1350 und 1884. */
