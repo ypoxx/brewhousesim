@@ -1919,7 +1919,7 @@
      nichts und ueberlaesst den Nenner denen, die einen haben.
      ==================================================================== */
   function billigsterKnopf() {
-    var fach = document.getElementById('fach-hand-fuhre');
+    var fach = B.ebene('hand', 'fuhre');
     if (!fach) return null;
     var best = null;
     fach.querySelectorAll('button[data-zug][data-preis]').forEach(function (k) {
@@ -1951,8 +1951,6 @@
   /* Der naechste sinnvolle Zug — die Zahl, an der die Messlatte haengt.
      Nie der Sud (der faellt von selbst), immer die Knappheit. */
   function meldeZug() {
-    var e = ep();
-
     /* Steht das Auftragsbuch leer, ist der naechste sinnvolle Zug KEIN Kauf.
        Er kostet null, und genau das wird gemeldet: die Kopfleiste des Kerns
        zeigt daraufhin gar keinen Preis mehr an, statt einem toten Haus einen
@@ -1968,40 +1966,19 @@
       return;
     }
 
-    if (e.bann) {
-      var offen = haeuser().filter(function (a) {
-        return a.km > e.bannmeile && !Z.bann[a.schluessel];
-      });
-      if (offen.length) {
-        B.welt.meldeZug('Bannbrief', Math.round(e.bann.basis * Math.pow(e.bann.staffel, Z.bannNr)), 'bindung');
-        return;
-      }
-    }
-    if (e.listung) {
-      var ohne = haeuser().filter(function (a) { return !gelistet(a); });
-      if (ohne.length) {
-        var n = 0;
-        for (var k in Z.listung) for (var q in Z.listung[k]) if (Z.listung[k][q]) n++;
-        B.welt.meldeZug('Regalmeter', Math.round(e.listung.basis * Math.pow(e.listung.staffel, n)), 'adresse');
-        return;
-      }
-    }
-    var bester = null;
-    (e.kaeufe || []).forEach(function (def) {
-      if (def.k === 'rohstoff' || def.k === 'eis') return;
-      var p = staffelPreis(def.k, def.basis, def.staffel);
-      if (!bester || p < bester.preis) {
-        bester = { was: def.text.split(' ·')[0], preis: p,
-                   art: (def.k === 'fass' ? 'fass' : (def.k === 'budget' ? 'bau' : 'rohstoff')) };
-      }
-    });
-    /* DRITTES ARGUMENT: die Art des Zuges (ZUSTAENDIGKEIT 18). Der Kern kennt
-       es heute noch nicht und ignoriert es folgenlos; sobald er den Nenner der
-       zweiten Latte auf „der billigste Zug, der die Lage des Hauses aendert"
-       umstellt, zaehlt dieses Stueck von selbst richtig mit. Ein Kauf, der
-       Rohstoff oder Faesser bewegt, ist Lage; ein Probefass ist eine Adresse;
-       ein Bannbrief ist eine Bindung.  KERN-Eintrag ist gestellt. */
-    if (bester) B.welt.meldeZug(bester.was, bester.preis, bester.art);
+    /* Ab hier zaehlt nur noch, was am Brett steht. Die Art kommt aus dem
+       Zugschluessel, weil der Kern sie heute noch nicht liest, sie aber
+       lesen soll, sobald der Nenner auf „der billigste Zug, der die Lage
+       des Hauses aendert" umgestellt ist. Ein Bannbrief ist eine Bindung,
+       ein Regalmeter eine Adresse, ein Kauf ist Lage.  KERN-Eintrag steht
+       im Bericht. */
+    var b = billigsterKnopf();
+    if (!b) return;
+    var art = 'lage';
+    if (b.zug.indexOf('fuhre:bann:') === 0) art = 'bindung';
+    else if (b.zug.indexOf('fuhre:listen:') === 0) art = 'adresse';
+    else if (b.zug.indexOf('fuhre:kauf:') === 0) art = 'lage';
+    B.welt.meldeZug(zugName(b), b.preis, art);
   }
 
   /* ======================================================================

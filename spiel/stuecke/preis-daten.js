@@ -642,7 +642,15 @@ var PREIS_DATEN = {
       umlagen: [
         { teil: 1.30, name: 'Energie- und Frachtenkrise',       sagt: 'Das Sudhaus heizt nicht umsonst, und der Fuhrpark fährt nicht umsonst.' },
         { teil: 0.80, name: 'Tarifabschluss mit Nachzahlung',   sagt: 'Sieben Prozent rückwirkend zum Januar.' },
-        { teil: 1.25, name: 'Pfand- und Rücknahmepflicht',     sagt: 'Kästen, Kisten, Automaten. Das Haus zahlt die Umstellung.' },
+        /* Hier stand 'Pfand- und Rücknahmepflicht'. Eine solche Pflicht gab
+           es 1980 nicht: die Verpackungsverordnung ist von 1991, das
+           Zwangspfand auf Einweg von 2003. Was es gab, war das Gegenteil
+           einer Pflicht — eine Verabredung der Brauereien untereinander auf
+           Einheitsflasche und genormten Kasten, dem Vorbild der
+           Getränkegenossenschaften nach. Wer mitmachte, kaufte seinen
+           ganzen Flaschen- und Kastenbestand neu. Das kostet dasselbe Geld
+           und behauptet kein Gesetz, das es nicht gab. */
+        { teil: 1.25, name: 'Umstellung auf den Einheitskasten', sagt: 'Der Verband einigt sich auf Normflasche und genormten Kasten. Wer mithält, kauft den ganzen Bestand neu.' },
         { teil: 0.95, name: 'Energiepreissprung',               sagt: 'Der Sudkessel läuft mit Gas, und Gas hat sich verdoppelt.' },
         { teil: 1.55, name: 'Umbau der Kläranlage',            sagt: 'Die Abwasserverordnung gilt auch für Brauereien.' },
         { teil: 1.75, name: 'Missernte bei der Braugerste',      sagt: 'Der Malzpreis zieht an, und der Kontrakt für das nächste Jahr steht noch nicht.' }

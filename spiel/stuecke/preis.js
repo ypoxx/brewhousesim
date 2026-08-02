@@ -727,6 +727,42 @@
     return best;
   }
 
+  /* ======================================================================
+     WAS DIESES STUECK AN DEN STREIFEN MELDET.
+
+     Die Zahl unten rechts heisst "Kasse geteilt durch den Preis des
+     naechsten sinnvollen Zuges". Bis hierher hat dieses Stueck in jeder der
+     52 Wochen das billigste Angebot der Michaelitafel gemeldet — auch in
+     den 51 Wochen, in denen es nicht zu nehmen ist. nimm() beginnt mit
+     `if (B.welt.zeit.woche !== 1) return;`, und der Knopf traegt in genau
+     diesen Wochen die Aufschrift 'Michaeli ist vorüber' und ist aus. Ein
+     Preis, den man ein Jahr lang nicht zahlen kann, ist kein Nenner.
+
+     Gemeldet wird jetzt nur, was heute zu haben ist: Michaeli, das Angebot
+     nicht genommen, nicht ausgeschlossen, und die Kasse reicht fuer die
+     erste Zahlung — dieselben vier Bedingungen, unter denen der Knopf
+     'Nehmen' bedienbar ist. Sonst schweigt dieses Stueck, und der Nenner
+     gehoert dem, der wirklich einen Zug anzubieten hat.
+
+     Was dabei NICHT verlorengeht: DIE LEITER auf der Tafel und die Zeile
+     "Kasse reicht dafür" am Griff rechnen weiter jede Woche mit dem
+     billigsten Angebot. Das ist die ehrliche Messung der Latte, und sie
+     steht dort ganzjaehrig, weil sie eine Aussage ueber die Preisleiter
+     macht und keine ueber den naechsten Klick.
+     ====================================================================== */
+  function meldeZug() {
+    if (B.welt.zeit.woche !== 1) return;
+    var best = null;
+    lebendeAngebote().forEach(function (k) {
+      var a = angebotVon(k);
+      if (!a || Z.genommen[k] || Z.gesperrt[k]) return;
+      var p = zahlplan(a).jetzt;
+      if (!B.welt.kann(p)) return;
+      if (!best || p < best.preis) best = { a: a, preis: p };
+    });
+    if (best) B.welt.meldeZug(best.a.name, best.preis, 'lage');
+  }
+
   /* ----------------------------------------------------------------------
      NEHMEN
      ---------------------------------------------------------------------- */
@@ -1575,9 +1611,7 @@
       zeichneGriff(fach);
       if (tafelSichtbar()) { zeichneTafel(fach); seheNachRahmen(); }
 
-      /* Die eine Zahl: der naechste sinnvolle Zug dieses Stuecks. */
-      var billig = billigstesAngebot();
-      if (billig) B.welt.meldeZug(billig.a.name, billig.preis);
+      meldeZug();
     }
   });
 
