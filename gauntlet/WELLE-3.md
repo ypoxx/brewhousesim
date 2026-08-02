@@ -129,42 +129,56 @@ einmal blind drauflos — sieht er nach vier Jahren einen Unterschied am
 Bildschirm? Und fährt er ein Haus absichtlich an die Wand: bekommt er unterwegs
 eine Wahl, oder nur eine kleinere Zahl?
 
-### 3 · DIE KOPFZEILE — die eine Zahl muss ehrlich sein
+> **Erledigt in Welle 2b, hier nur noch als Merkposten:**
+> **DIE KOPFZEILE** ist ehrlich — `meldeZug(was, preis, art, zug)` rangiert seit
+> Commit `c882fd7` nach Art vor Preis (ZUSTAENDIGKEIT §24), gemessen 5,89× /
+> 3,76× / 8,35× / 3,54× statt 12,4× / 35,6× / 274× / 47,8×. Was bleibt, ist ein
+> Handgriff für DEN GEGNER: seine Übergangszeile mit `data-umkaempft` darf
+> verschwinden, zwei Kennzahlen nebeneinander sind eine zu viel.
+> **DAS FÜNFTE VERB** gibt es — MITBIETEN in 1970, nachgezählt: nur dort, und
+> über vier Saaten in 5 bis 15 der angebotenen Wochen bezahlbar.
 
-Dateien: `stuecke/eichung*` und die betroffenen `meldeZug`-Aufrufer
+### 3 · DER NAME — was auf dem Schirm steht, ist für den Spieler
 
-Die Kopfzeile nennt den billigsten **Knopf**, die Latte meint den billigsten
-**umkämpften Zug**. Faktor 10 bis 45.
+Dateien: `stuecke/name*.js` · `stil/name*.css`
 
-* `meldeZug(was, preis, art)` wird von den Stücken bereits mit `art` gerufen
-  (`beiwerk|adresse|umkaempft|lage`), aber `kern/welt.js` ignoriert das dritte
-  Argument und nimmt stur das Minimum. **Das ist eine KERN-Änderung und gehört
-  der Aufsicht** — sie liegt als Bitte von DIE FUHRE seit Welle 2 vor.
-* Danach darf die ehrliche Ersatzzeile unten rechts („UMKÄMPFT Ablösung … ·
-  Kasse reicht −0,3×") wieder verschwinden. Zwei Kennzahlen nebeneinander sind
-  eine Kennzahl zu viel.
-* Vorsicht beim Messen: `data-deckung` gibt es **zweimal mit verschiedener
-  Bedeutung** — `kern/kopf.js` die Kennzahl, `stuecke/name.js` das Deckungsband
-  des Rufs. Nur die Kopfzeile trägt die Klasse `.deckung`.
+DER NAME war in keiner Welle und ist der einzige Ort, an dem der Spieler eine
+**Notiz zwischen zwei Buildern** liest — in allen vier Epochen, im laufenden
+Spiel, mit dem Namen eines JS-Feldes darin (`name.js:1135`):
 
-**Der Kritiker zählt:** Über eine ganze Partie — wie oft wechselt der Nenner,
-und nennt er je etwas, das der Gegner ihm wegnehmen kann?
+> „— den schreibt DER PREIS, und er liest `welt.haus.rufAufschlag` noch nicht.
+> Solange bucht DER NAME das Aufgeld selbst, Zeile für Zeile."
 
-### 4 · DAS FÜNFTE VERB — eine Epoche, die anders gespielt wird
+* Diese Zeile und alles ihresgleichen verschwindet. Was der Spieler liest, ist
+  die Sprache seiner Zeit, nicht die des Quelltextes.
+* `data-deckung` trägt DER NAME für das Deckungsband des Rufs, `kern/kopf.js`
+  für die Kennzahl der Latte. **Zwei Bedeutungen, ein Attribut** — das hat schon
+  eine Messung der Aufsicht verdorben. Eines von beiden muss umbenannt werden,
+  und DER NAME ist das jüngere.
+* Und die Gelegenheit: DER NAME meldete bis zu dieser Welle den billigsten Zug
+  des ganzen Spiels und gewann damit vierhundert Wochen lang die Kopfzeile mit
+  einem Bierdeckel. Er meldet jetzt nichts mehr mit Rang. **Ist Ruf überhaupt
+  eine Entscheidung mit Preisschild — oder nur eine Zahl, die steigt?**
 
-Dateien: `stuecke/gegner*.js`
+**Der Kritiker zählt:** Findet er in vier Epochen eine Zeile, die nach Werkstatt
+klingt statt nach Spiel? Und: kann er den Ruf verlieren, oder wächst er nur?
 
-Nachgezählt am Stand `c6daa5a`, alle Bretter aufgeschlagen: 1350, 1600 und 1884
-haben dieselben drei Verben gegen den Gegner (ablösen, hinhalten, zuvorkommen).
-**1970 hat mit ablösen und hinhalten sogar eines weniger.** Vier Epochen, ein
-Handgriff.
+### 4 · DAS ERBE — was über die Amtszeit hinaus bleibt
 
-* Mindestens **eine** Epoche bekommt ein Verb, das es nur dort gibt und das aus
-  ihrer Zeit kommt.
-* 1970 bekommt sein drittes zurück.
+Dateien: `stuecke/erbe*.js`
 
-**Der Kritiker zählt:** Kann er in einer Epoche etwas tun, das in den anderen
-dreien gar nicht auf dem Schirm steht?
+Das einzige Stück, das nie eine Runde hatte. Die Uhr ruft `welt.erbe()`, wenn
+die Amtszeit abläuft — in 1350 reicht sie bis 1386, und die Partie endet heute
+1353. **Ein Erbe, das in keiner gemessenen Partie je eintritt, ist kein Stück,
+sondern ein Versprechen.**
+
+* Der Erbfall muss in einer normal gespielten Partie **vorkommen** und am
+  Bildschirm etwas ändern, das man vorher und nachher zählen kann.
+* Die nächste Hand erbt den Hof, nicht die Gewohnheiten: was der Vorgänger fest
+  vereinbart hat, bindet sie; was er sich angewöhnt hat, nicht.
+
+**Der Kritiker zählt:** Spielt er bis zum Erbfall — sieht er, dass jemand
+anderes das Haus führt, ohne ein Blatt aufzuschlagen?
 
 ---
 
