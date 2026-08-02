@@ -36,7 +36,36 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
-## Wo der Lauf steht (Stand 2. August 2026, 13:30 UTC)
+## Wo der Lauf steht (Stand 2. August 2026, 14:25 UTC)
+
+**Erledigt und von der Aufsicht nachgemessen:** Auflage 23 (`ZUSTAENDIGKEIT.md` §23) — der
+Deckel über WEITER ist weg, `nurweiter.mjs` schafft **drei Braujahre in allen vier Epochen**
+mit nichts als WEITER; vorher war nach einem Braujahr Schluss. Der Halt zu Georgi bleibt, sein
+Ausgang trägt jetzt das Wort darauf.
+
+**Die Kennzahl hat sich halb bewegt.** Eigene Messung (sequenziell! siehe Fallstrick unten):
+
+| Epoche | vor der Welle | jetzt gemessen | Ziel \|rho\| < 0,7 |
+|---|---|---|---|
+| 1350 | +0,714 | **+0,429** | erreicht |
+| 1600 | −0,714 | **+0,886** | verfehlt |
+| 1884 | −0,771 | **−0,771** | verfehlt |
+| 1970 | +0,829 | **−0,429** | erreicht |
+
+Jahre unter 1×: **0/0/1/0** statt vorher 0/4/4/0 — die Armutsfalle ist weg, das zweite
+Kriterium ist erfüllt. Der EICHUNG-Builder hatte für 1600 und 1884 bessere Zahlen gemeldet;
+zwischen seiner Messung und meiner sind die anderen Stücke eingeschlagen. **Deshalb misst die
+Aufsicht selbst.** Nächster Schritt: sein Urteil vom blinden Kritiker abwarten, dann Runde 2
+mit meinen Zahlen.
+
+**FALLSTRICK, der eine Stunde gekostet hat:** `messe.mjs` NIE vier Epochen parallel fahren.
+Auf vier Kernen brechen alle vier reproduzierbar in Woche 31 ab — und das sieht genau aus wie
+der Defekt aus Auflage 23. Sequenziell laufen sie durch:
+`for e in 1 2 3 4; do node werkbank/schuss/eichung/messe.mjs $e 160 sparsam /tmp/eichung/e$e-sparsam.json; done`
+
+---
+
+## Der ursprüngliche Wellenplan (Stand 13:30 UTC)
 
 **Welle 2b läuft** als Workflow `wf_94fe188f-ca8`, vier Stücke, je Builder → blinder
 Kritiker → Nacharbeit:
