@@ -192,7 +192,12 @@
   border: 1px solid #b09a72;
   border-radius: calc(var(--s) * 3);
   color: #6b5a3d;
-  white-space: nowrap;
+  /* Kein nowrap: in 1970 stehen vier Karten nebeneinander, jede rund
+     118 px breit, und "einmal zu zahlen" schob sich dort ueber den Rand in
+     die Nachbarkarte. Ein Schild, das ueber fremde Flaeche haengt, ist
+     derselbe Fehler wie ein Brett, das es tut — nur kleiner. */
+  white-space: normal;
+  min-width: 0;
 }
 .sud-schild.ist { background: #7a3f22; color: #f6e7c8; border-color: #5a2c15; }
 .sud-schild.fest { border-color: #7a3f22; color: #7a3f22; }
@@ -214,7 +219,8 @@
   letter-spacing: calc(var(--s) * 1);
   padding: 0 calc(var(--s) * 5);
   border-radius: calc(var(--s) * 3);
-  white-space: nowrap;
+  white-space: normal;
+  min-width: 0;
 }
 .sud-rang.hoch { background: #dfe7cf; border: 1px solid #6f8a58; color: #33501f; }
 .sud-rang.tief { background: #efdcc6; border: 1px solid #a9764a; color: #7a3f22; }
