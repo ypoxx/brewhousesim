@@ -515,7 +515,10 @@ var STADT_DATEN = {
          weiter vorn als in 1350, und ein Schuppen, der die drei Figuren am
          Kessel zudeckt, kostet mehr, als er bringt — der Kritiker hat sie im
          Blindvergleich ausdruecklich fuer das Gebaute gezaehlt. */
-      versatz: { 2: { dx: -3.5, dy: -1.5 } },
+      /* Runde 7: in 1350 stand die Kueferei genau vor dem Gewoelbekeller und
+         nahm ihm 72 Prozent seiner Pixel — vom Erdhuegel blieben 8.664. Drei
+         Prozent nach rechts, und beide sind zu sehen. */
+      versatz: { 1: { dx: 3 }, 2: { dx: -3.5, dy: -1.5 } },
       von: 1, bis: 2, grund: 36,
       sagt: 'Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz.',
       nutzen: { platz: 4 } },
