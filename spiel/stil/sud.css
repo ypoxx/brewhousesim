@@ -84,10 +84,12 @@
 
 /* In der Karte darf der Erklaersatz nicht ins Endlose wachsen — sonst
    schiebt er die Knoepfe darunter unter den Rand, und dann zaehlt sie
-   niemand mehr. Der volle Text steht am title des Knopfes. */
+   niemand mehr. Der volle Text steht am title des Knopfes.
+   Drei Zeilen und nicht vier: die linke Spalte traegt in drei von vier
+   Epochen zwei Achsen, und jede Zeile zaehlt dort sechsmal. */
 .sud-kartensatz {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -155,7 +157,7 @@
 .knopf.sud-wahl {
   width: 100%;
   white-space: normal;
-  min-height: calc(var(--s) * 54);
+  min-height: calc(var(--s) * 48);
   font-size: calc(var(--s) * 20);
   padding: calc(var(--s) * 7) calc(var(--s) * 10);
   gap: calc(var(--s) * 2);

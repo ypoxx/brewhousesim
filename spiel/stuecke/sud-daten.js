@@ -90,15 +90,13 @@ var SUD_DATEN = {
       gaerkeller: {
         name: 'Der Gärkeller', gefaess: 'Bottich', gefaesse: 'Bottiche',
         plaetze: 10,
-        satz: 'Offene Bottiche im Erdkeller. Was hier steht, ist noch kein Bier und '
-            + 'verdirbt auch noch nicht — die Haltbarkeit beginnt erst am Fass.',
+        satz: 'Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass.',
         kauf: { text: 'Bottich beim Küfer bestellen', menge: 6, basis: 26, staffel: 1.25,
                 titel: 'Sechs Fass mehr Gärraum. Was nicht in den Gärkeller passt, reift im '
                      + 'Lager mit und altert dabei.' }
       },
       guete: { name: 'Das Hefezeug', kurz: 'Zeug', invers: false,
-               satz: 'Der Brauer hebt Hefe vom vorigen Sud auf. Wird sie nicht nachgeführt, '
-                   + 'schlägt der Sud um.' },
+               satz: 'Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um.' },
       fuehren: { text: 'Hefezeug aus dem Bottich heben',
                  titel: 'Solange ein Bottich gärt, hebt der Brauer die Hefe von oben ab. '
                       + 'Das kostet kein Fass — es geht nur, solange etwas gärt.' },
@@ -109,8 +107,7 @@ var SUD_DATEN = {
       fehlsud: { name: 'Der Sud schlägt um', kurz: 'umgeschlagen',
                  satz: 'Ein Bottich sauer. Der Braumeister lässt ihn in den Hof laufen.' },
       wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Der Rat schreibt vor, was ein Fass kosten darf; welches Haus es nimmt, '
-                   + 'entscheidet die Pfanne. Ein Bier ohne Hopfen fährt nicht bis zum Kloster.' },
+               satz: 'Welches Haus ein Fass nimmt, entscheidet die Pfanne.' },
       achsen: [
         { schluessel: 'wuerze', name: 'DIE WÜRZE', frage: 'Womit wird gewürzt?',
           satz: 'Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.',
@@ -152,13 +149,12 @@ var SUD_DATEN = {
       gaerkeller: {
         name: 'Der Gärkeller', gefaess: 'Gärbottich', gefaesse: 'Gärbottiche',
         plaetze: 16,
-        satz: 'Gärbottiche im Gewölbe, getrennt vom Lager. Was gärt, belegt keinen Fassplatz '
-            + 'mehr — das ist der ganze Unterschied zum vorigen Jahrhundert.',
+        satz: 'Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr.',
         kauf: { text: 'Gärbottich setzen lassen', menge: 10, basis: 78, staffel: 1.25,
                 titel: 'Zehn Fass mehr Gärraum. Der Küfer setzt ihn im Gewölbe auf.' }
       },
       guete: { name: 'Die Stellhefe', kurz: 'Stellhefe', invers: false,
-               satz: 'Die Zunft hält auf gute Stellhefe. Wer sie nicht schöpft, braut nach Glück.' },
+               satz: 'Wer die Stellhefe nicht schöpft, braut nach Glück.' },
       fuehren: { text: 'Stellhefe aus dem Gärbottich nehmen',
                  titel: 'Aus dem gärenden Bottich geschöpft, wie es die Ordnung vorsieht. '
                       + 'Kostet kein Fass — geht nur, solange ein Bottich steht.' },
@@ -169,8 +165,7 @@ var SUD_DATEN = {
       fehlsud: { name: 'Der Sud ist verdorben', kurz: 'verdorben',
                  satz: 'Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen.' },
       wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Die Zunft schaut auf die Reihe, der Wirt auf das Fass. Gestrecktes Bier '
-                   + 'führt kein Gasthof, und ein Märzen ist ohne kalten Keller nicht zu machen.' },
+               satz: 'Gestrecktes Bier führt kein Gasthof, und er merkt es.' },
       achsen: [
         { schluessel: 'schuettung', name: 'DIE SCHÜTTUNG', frage: 'Was kommt in den Sud?',
           satz: 'Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht.',
@@ -227,14 +222,12 @@ var SUD_DATEN = {
            dass jemand etwas dafuer getan haette. Der Gaerraum soll eine
            KAUFENTSCHEIDUNG sein und kein Geschenk an eine fremde Bilanz. */
         plaetze: 48,
-        satz: 'Der Gärkeller liegt unter dem Sudwerk und ist nicht der Lagerkeller. '
-            + 'Erst diese Trennung erlaubt Lagerzeiten in Monaten statt in Wochen.',
+        satz: 'Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten.',
         kauf: { text: 'Gärbottich aufstellen', menge: 40, basis: 1900, staffel: 1.3,
                 titel: 'Vierzig Fass mehr Gärraum, ausgeschlagenes Holz auf Eisengestell.' }
       },
       guete: { name: 'Die Hefeführung', kurz: 'Führung', invers: false,
-               satz: 'Die Hefe wird geerntet und wieder angestellt. Jede Ernte trägt mit, '
-                   + 'was im Bottich sonst noch lebte.' },
+               satz: 'Jede Ernte trägt mit, was im Bottich sonst noch lebte.' },
       fuehren: { text: 'Hefe im Gärbottich abernten',
                  titel: 'Erntehefe von der Decke des Gärbottichs, wie in jedem Betrieb dieser '
                       + 'Zeit. Kostet kein Fass — geht nur, solange ein Bottich gärt.' },
@@ -245,8 +238,7 @@ var SUD_DATEN = {
       fehlsud: { name: 'Die Hefe ist infiziert', kurz: 'infiziert',
                  satz: 'Ein Bottich mit Fremdhefe. Er geht in den Ausguss.' },
       wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Der Bahnhofswirt und der Landgasthof führen Lagerbier und Export. '
-                   + 'Wer ohne Kälte braut, hat nur noch Schankbier anzubieten.' },
+               satz: 'Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es.' },
       achsen: [
         { schluessel: 'kaelte', name: 'DIE KÄLTE', frage: 'Woher kommt die Kälte?',
           satz: 'Das Natureis kommt aus dem Winter und ist im September alle. '
@@ -307,14 +299,12 @@ var SUD_DATEN = {
       gaerkeller: {
         name: 'Der Gärkeller', gefaess: 'Gärtank', gefaesse: 'Gärtanks',
         plaetze: 200,
-        satz: 'Gärtanks im Freien, isoliert. Getrennt vom Lagerkeller — die Reifung läuft '
-            + 'im Tank, nicht im verkaufsfertigen Bestand.',
+        satz: 'Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager.',
         kauf: { text: 'Gärtank stellen', menge: 180, basis: 24000, staffel: 1.3,
                 titel: 'Hundertachtzig Fass mehr Gärraum. Ein Tank, ein Kran, ein Tag.' }
       },
       guete: { name: 'Die Streuung', kurz: 'Streuung', invers: true,
-               satz: 'Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach, '
-                   + 'und er misst genauer als der Gast.' },
+               satz: 'Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach.' },
       fuehren: { text: 'Hefe aus dem Gärtank ziehen',
                  titel: 'Erntehefe aus dem Konus, gekühlt gelagert, neu angestellt. '
                       + 'Kostet kein Fass — geht nur, solange ein Tank gärt.' },
@@ -324,8 +314,7 @@ var SUD_DATEN = {
       fehlsud: { name: 'Der Tank ist umgeschlagen', kurz: 'umgeschlagen',
                  satz: 'Ein Gärtank mit Fremdkeimen. Er wird abgelassen und gereinigt.' },
       wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Die Gaststätte führt alles, der Markt nur das Hellste, der Landgasthof '
-                   + 'kein Schankbier. Was im Kasten steht, entscheidet das Sudhaus.' },
+               satz: 'Was im Kasten steht, entscheidet das Sudhaus.' },
       charge: {
         name: 'GESPERRTE CHARGEN',
         satz: 'Eine Charge außerhalb der Grenzwerte geht nicht ins Regal, ehe jemand '
