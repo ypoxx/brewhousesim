@@ -47,11 +47,33 @@ wurden gemessen, „nur WEITER" und „jede Woche der billigste umkämpfte Zug":
 | 1884 | −1,000 | −0,949 | 0 von 4 | 4 von 4 |
 | 1970 | −0,800 | −0,800 | 1 von 4 | 4 von 4 |
 
-Ziel: |rho| < 0,7. **Spielen macht es schlimmer.** 1884 hält sich passiv bei
-einem Median von 4,42× und null Jahren unter 1×; wer dort kauft, steht in allen
-vier Jahren unter 1×. Wer nichts tut, verhungert langsam; wer jeden umkämpften
-Zug nimmt, verhungert schnell. **Der Wirtschaft fehlt die Rückkopplung, nicht
-der Kopfzeile die Beschriftung.**
+Ziel: |rho| < 0,7. Wer nichts tut, verhungert langsam; wer jeden umkämpften Zug
+nimmt, sobald die Kasse ihn trägt, verhungert schnell — 1884 hält sich passiv
+bei einem Median von 4,42× und null schlechten Jahren und fällt kaufend in allen
+vier Jahren unter 1×.
+
+Beide Stile sind aber entartet, und deshalb zählt die **sorgfältig gespielte
+Linie** des EICHUNG-Builders mehr (vier Läufe zu je 400 Wochen, Rücklagen,
+Michaeli-Umstellung, jede Woche gefahren). Die Aufsicht hat 1350 mit seinem
+eigenen Skript nachgefahren — es reproduziert. Auf seine vier Dateien die Latte
+angewandt:
+
+| Epoche | Start → Ende | rho | Jahre unter 1× | Latte |
+|---|---|---|---|---|
+| 1350 | 3,39 → **0,16** | **−0,795** | **6 von 12** | reißt beide |
+| 1600 | 3,56 → 2,69 | **+0,165** | **0 von 14** | **besteht** |
+| 1884 | 5,09 → 1,40 | −0,367 | 2 von 14 | besteht |
+| 1970 | 3,44 → **0,06** | −0,572 | **9 von 11** | reißt das zweite |
+
+**Das ist der Befund, aus dem Stück 2 folgt — und er ist gutartiger, als er
+aussieht.** Der Builder schließt aus denselben Läufen „elf Läufe und kein
+Kippen"; das prüft nur die Richtung nach oben. Die Latte ist zweiseitig. 1350
+fällt um den Faktor 21, 1970 um den Faktor 57.
+
+**Aber 1600 besteht sauber**: Vermögen mal acht, Kennzahl im Band 1,44–3,17,
+weil die Preise 1,32× schneller wachsen als die Barschaft. Die Wirtschaft *kann*
+also. Die Aufgabe heißt darum nicht „die Wirtschaft reparieren", sondern
+**1350 und 1970 nach dem Muster von 1600 bauen.**
 
 ---
 

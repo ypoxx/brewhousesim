@@ -103,12 +103,70 @@ kauft, steht in **allen vier** Jahren unter 1× und im Median bei 0,00×. In
 beiden Stilen, in allen vier Epochen, liegt |rho| bei 0,8 bis 1,0 — das Ziel
 ist |rho| < 0,7.
 
-**Damit ist die zweite Latte gerissen, und zwar nicht am Nenner.** Die Kennzahl
-fällt monoton, weil die Barschaft monoton fällt: beide Extremstile enden bei
-null. Wer nichts tut, verhungert langsam; wer jeden umkämpften Zug nimmt,
-verhungert schnell. Ein Mittelweg mag existieren, aber die Wirtschaft gibt ihm
-keine Rückkopplung — und **das** ist die Aufgabe, nicht die Beschriftung der
-Kopfzeile.
+**Was damit belegt ist — und was ausdrücklich nicht.** Belegt ist: *beide
+Extremstile enden bei null*. Wer nichts tut, verhungert langsam; wer jeden
+umkämpften Zug nimmt, sobald die Kasse ihn trägt, verhungert schnell. Das ist
+mehr als ein Randfall, denn der zweite Stil **spielt** ja — er spielt nur ohne
+Vorsicht.
+
+## 2b · Die sorgfältig gespielte Linie — und warum sie die Latte trotzdem reißt
+
+Beide Stile oben sind entartet: der eine tut nichts, der andere kauft ohne
+Rücklage. Der EICHUNG-Builder legt für dieselbe Welle etwas Besseres vor: vier
+aufgezeichnete Läufe eines **sorgfältig** spielenden Automaten
+(`werkbank/schuss/eichung/preis-linie-e*.json`, je 400 Wochen, 0 Fehler, kein
+Abbruch), der Rücklagen hält, zu Michaeli umstellt, vor dem Ausgehen einkauft
+und jede Woche fährt.
+
+**Die Aufsicht hat 1350 auf dem eingefrorenen Stand `7913ba8` nachgefahren, mit
+seinem eigenen Skript.** Es reproduziert: 400 Wochen, 0 Fehler, kein Abbruch,
+Schluss 1363/11, Kasse 0 bis 417 (er: 0 bis 398). Die Leiter läuft bei ihm
+3,39 → 0,16, bei mir 3,39 → 0,16. **Sein Lauf ist echt.**
+
+Nur trägt er nicht den Schluss, den er daraus zieht. Der Builder schreibt: *„In
+keinem der vier Läufe übersteigt DIE LEITER je die Eröffnung; zusammen mit den
+sieben Läufen des Kritikers sind das elf Läufe und kein Kippen."* Das ist wahr —
+**aber es prüft nur eine Richtung.** Die Latte ist zweiseitig: die Kennzahl darf
+weder davonlaufen noch zusammenbrechen. Auf **seine eigenen vier Dateien**
+angewandt:
+
+| Epoche | Jahre | Start | Ende | rho | Jahre unter 1× | Latte |
+|---|---|---|---|---|---|---|
+| 1350 | 12 | 3,39 | **0,16** | **−0,795** | **6 von 12** | reißt beide |
+| 1600 | 14 | 3,56 | 2,69 | **+0,165** | **0 von 14** | **besteht** |
+| 1884 | 14 | 5,09 | 1,40 | −0,367 | 2 von 14 | besteht |
+| 1970 | 11 | 3,44 | **0,06** | −0,572 | **9 von 11** | reißt das zweite |
+
+**1600 besteht sauber, und das ist ein echter Erfolg** — genau der Beleg, der
+bisher fehlte: ein Haus verachtfacht sein Vermögen, und die Kennzahl bleibt im
+Band 1,44 bis 3,17, weil die Preise 1,32× schneller wachsen als die Barschaft.
+So soll es aussehen.
+
+**1350 und 1970 kippen — nur nach unten statt nach oben.** In 1350 fällt die
+Leiter um den Faktor 21, in 1970 um den Faktor 57, und in neun von elf Jahren
+reicht die Kasse dort nicht einmal für den billigsten Zug. Kein Davonlaufen zu
+finden heißt nicht, kein Kippen zu finden.
+
+**Damit steht die Aufgabe für die nächste Welle genau:** nicht „die Wirtschaft
+ist kaputt" — 1600 zeigt, dass sie es nicht ist —, sondern **1350 und 1970 nach
+dem Muster von 1600 bauen.** Die Frage lautet nicht „fällt die Kennzahl?",
+sondern: *belohnt die Wirtschaft Sorgfalt spürbar, und bestraft sie Erfolg?*
+1600 tut beides. Die anderen drei bestrafen nur.
+
+## 2a · Zwei Berichtigungen an der Aufsicht selbst
+
+**Die „0 unerreichbaren Züge von 80/90/93/84" gelten für einen kleineren Satz,
+als die Zahl klingt.** `erreichbar.mjs` schlägt nur `stadt:reiter:*` auf. Ein
+Klick auf `name:blatt` — der dauernd im Bild steht — legt weitere **17/18/11/11**
+Züge frei, davon **12/13/6/5 mit Preisschild**. Nachgeprüft am Stand `7913ba8`:
+alle treffen sich selbst (`frei=true`), die meisten sind aktiv. *Unerreichbar
+ist also nach wie vor keiner* — aber der Nenner der Aussage war zu klein, und der
+EICHUNG-Builder hat recht, das anzumerken.
+
+Nebenwirkung für die Kennzahl: `name:umtrunk` mit 9 Pf ist **kein Phantom**,
+sondern ein wirklich erreichbarer, aktiver Zug. Die Kopfzeile erfindet ihren
+Nenner nicht — sie wählt ihn nur falsch aus. Es ist ein fester Jahresposten der
+Werbung, kein umkämpfter Zug.
 
 ## 3 · Was daraus für die nächste Welle folgt
 
