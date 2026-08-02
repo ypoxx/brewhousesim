@@ -32,32 +32,12 @@
            Filter, Pasteur, Prozessrechner. Was hier gezaehlt wird, ist die
            Abweichung.
 
-   WAS "hoechst" IST — DIE FOLGE, DIE MAN BEIM WIRT WIEDERSIEHT
-   Runde 1 hat die Entscheidung gebaut, aber ihre Folge blieb im Keller:
-   Haltbarkeit, Gaerwochen, Bottiche. Beim Wirt war nichts davon zu sehen.
-   Deshalb traegt jede Option jetzt ein `hoechst` — die HOECHSTE STUFE, die
-   dieses Verfahren ueberhaupt hergibt.
-
-     Die FUHRE bestellt die Sorte (Duennbier · Grutbier · Starkbier), DER SUD
-     sagt, was die Pfanne davon halten kann. Wer Starkbier ansetzt und mit
-     Grut wuerzt, schlaegt Grutbier aus — drei Brautage fuer den Preis von
-     zweien. Und die Klosterschenke, die nur Stufe 3 fuehrt, steht dann vor
-     einem Fass, das sie nicht nimmt.
-
-   Die Zahl geht NIE nach oben: das Verfahren hebt kein Bier, es DECKELT es.
-   Der Vorgabestand jeder Epoche deckelt auf 2 — genau das Haus-Bier. Wer das
-   Brett nie aufschlaegt, verliert dadurch nichts. Nach unten deckeln nur die
-   billigen Abkuerzungen (Hafer 1600, ohne Kuehlung 1884); die oberste Stufe
-   ist die Belohnung fuer die unwiderrufliche Festlegung.
-
    WAS DIESES STUECK NICHT TUT
    · Es nimmt kein neues Geld aus der Kasse (WELLE-2 §1, Abgabendeckel §4).
      Jede Strafe dieses Stuecks wird in ROHSTOFF, BOTTICH oder GUETE bezahlt,
      nie in Muenze. Geld kostet nur, was der Spieler ausdruecklich kauft.
    · Es schreibt keinen Preis je Fass (das ist DER PREIS) und keine
-     Verbliste der Fuhre (das ist DIE FUHRE). Auch `hoechst` schreibt keinen
-     Preis: es entscheidet, WELCHE Sorte im Fass liegt — den Preis dieser
-     Sorte setzen wie bisher DIE FUHRE und DER PREIS.
+     Verbliste der Fuhre (das ist DIE FUHRE).
 
    SPERRLISTE: Der Braukessel ist eine OFFENE PFANNE, keine Destillierblase —
    das Wort "Blase" kommt in diesem Stueck nicht vor. Emailschilder erst ab
@@ -108,30 +88,25 @@ var SUD_DATEN = {
                  satz: 'Der Brauer bricht ein Fass an und schöpft die Hefe ab.' },
       fehlsud: { name: 'Der Sud schlägt um', kurz: 'umgeschlagen',
                  satz: 'Ein Bottich sauer. Der Braumeister lässt ihn in den Hof laufen.' },
-      wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Der Rat schreibt vor, was ein Fass kosten darf; welches Haus es nimmt, '
-                   + 'entscheidet die Pfanne. Ein Bier ohne Hopfen fährt nicht bis zum Kloster.' },
       achsen: [
         { schluessel: 'wuerze', name: 'DIE WÜRZE', frage: 'Womit wird gewürzt?',
           satz: 'Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.',
           optionen: [
-            { k: 'grut', name: 'Grut vom Grutamt', preis: 0, schild: 'wie immer', hoechst: 2,
+            { k: 'grut', name: 'Grut vom Grutamt', preis: 0, schild: 'wie immer',
               satz: 'Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen '
-                  + 'darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den '
-                  + 'Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als '
-                  + 'Bier des Hauses aus.',
+                  + 'darf. Das Bier hält, was es hält: wenige Wochen.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02 } },
-            { k: 'sack', name: 'Hopfen im Sack, heimlich', preis: 0, schild: 'ohne Ausgabe', hoechst: 3,
+            { k: 'sack', name: 'Hopfen im Sack, heimlich', preis: 0, schild: 'ohne Ausgabe',
               satz: 'Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt '
-                  + 'so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt '
-                  + 'jetzt auch ein Starkbier, das bis zum Kloster fährt.',
+                  + 'so lang, muss dafür eine Woche länger im Bottich liegen — und der '
+                  + 'Grutherr hat ein Recht, das man ihm gerade nimmt.',
               warnung: 'Der Grutknecht sieht in die Pfanne, wann er will.',
               wirkung: { haltbar: 1.7, gaer: 1, roh: 2, mehr: 0, risiko: 0.02, anzeige: 0.11 } },
-            { k: 'brief', name: 'Offen gehopft, mit Hopfenbrief', preis: 78, fest: true, hoechst: 3,
+            { k: 'brief', name: 'Offen gehopft, mit Hopfenbrief', preis: 78, fest: true,
               satz: 'Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. '
                   + 'Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr '
-                  + 'im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der '
-                  + 'Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.',
+                  + 'im Bottich. Unwiderruflich — der Brief wird nie zurückgegeben, und das '
+                  + 'Grutgeld ist danach nicht mehr zu haben.',
               siegel: 'Ratsbrief, gesiegelt',
               wirkung: { haltbar: 2.0, gaer: 1, roh: 2, mehr: 0, risiko: 0.02 } }
           ] }
@@ -168,25 +143,21 @@ var SUD_DATEN = {
                  satz: 'Der Braumeister bricht ein Fass an und schöpft die Stellhefe.' },
       fehlsud: { name: 'Der Sud ist verdorben', kurz: 'verdorben',
                  satz: 'Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen.' },
-      wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Die Zunft schaut auf die Reihe, der Wirt auf das Fass. Gestrecktes Bier '
-                   + 'führt kein Gasthof, und ein Märzen ist ohne kalten Keller nicht zu machen.' },
       achsen: [
         { schluessel: 'schuettung', name: 'DIE SCHÜTTUNG', frage: 'Was kommt in den Sud?',
           satz: 'Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht.',
           optionen: [
-            { k: 'rein', name: 'Rein nach dem Gebot', preis: 0, schild: 'wie immer', hoechst: 3,
+            { k: 'rein', name: 'Rein nach dem Gebot', preis: 0, schild: 'wie immer',
               satz: 'Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02 } },
-            { k: 'weizen', name: 'Mit Weizen gestreckt', preis: 0, schild: 'ohne Ausgabe', hoechst: 3,
+            { k: 'weizen', name: 'Mit Weizen gestreckt', preis: 0, schild: 'ohne Ausgabe',
               satz: 'Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. '
                   + 'Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich.',
               warnung: 'Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht.',
               wirkung: { haltbar: 1.15, gaer: 0, roh: -2, mehr: 1, risiko: 0.03, anzeige: 0.10 } },
-            { k: 'hafer', name: 'Mit Hafer und Wicke gestreckt', preis: 0, schild: 'ohne Ausgabe', hoechst: 1,
-              satz: 'Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so '
-                  + 'gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der '
-                  + 'Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan.',
+            { k: 'hafer', name: 'Mit Hafer und Wicke gestreckt', preis: 0, schild: 'ohne Ausgabe',
+              satz: 'Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. '
+                  + 'In einem schlechten Jahr hat das jedes Haus getan.',
               warnung: 'Die Bierschau kostet das Haus mehr als den Hafer.',
               wirkung: { haltbar: 0.75, gaer: 0, roh: -4, mehr: 2, risiko: 0.05, anzeige: 0.13 } }
           ] },
@@ -194,14 +165,12 @@ var SUD_DATEN = {
           satz: 'Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — '
               + 'und übersteht als einziges den Sommer.',
           optionen: [
-            { k: 'ober', name: 'Obergärig, warm geführt', preis: 0, schild: 'wie immer', hoechst: 2,
-              satz: 'Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein '
-                  + 'Märzenbier, das den Sommer übersteht, wird daraus nicht.',
+            { k: 'ober', name: 'Obergärig, warm geführt', preis: 0, schild: 'wie immer',
+              satz: 'Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
-            { k: 'keller', name: 'Kellergärung im Felsenkeller', preis: 260, fest: true, hoechst: 3,
+            { k: 'keller', name: 'Kellergärung im Felsenkeller', preis: 260, fest: true,
               satz: 'Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung '
-                  + 'dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt '
-                  + 'das Märzenbier, das der Gasthof und die Klosterschenke zahlen. '
+                  + 'dauert zwei Wochen länger und macht das Bier sommerfest. '
                   + 'Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut.',
               siegel: 'Bauabnahme der Zunft',
               wirkung: { haltbar: 1.6, gaer: 2, roh: 0, mehr: 0, risiko: 0 } }
@@ -244,28 +213,23 @@ var SUD_DATEN = {
                  satz: 'Der Braumeister sticht ein Fass an und erntet die Hefe.' },
       fehlsud: { name: 'Die Hefe ist infiziert', kurz: 'infiziert',
                  satz: 'Ein Bottich mit Fremdhefe. Er geht in den Ausguss.' },
-      wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Der Bahnhofswirt und der Landgasthof führen Lagerbier und Export. '
-                   + 'Wer ohne Kälte braut, hat nur noch Schankbier anzubieten.' },
       achsen: [
         { schluessel: 'kaelte', name: 'DIE KÄLTE', frage: 'Woher kommt die Kälte?',
           satz: 'Das Natureis kommt aus dem Winter und ist im September alle. '
               + 'Die Maschine kommt aus der Kasse und läuft im Juli.',
           optionen: [
-            { k: 'natureis', name: 'Natureis aus dem Fluss', preis: 0, schild: 'wie immer', hoechst: 3,
+            { k: 'natureis', name: 'Natureis aus dem Fluss', preis: 0, schild: 'wie immer',
               satz: 'Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert '
                   + 'richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. '
                   + 'In den warmen Wochen trägt der Gärkeller nur die Hälfte.',
               wirkung: { haltbar: 1.35, gaer: 2, roh: 0, mehr: 0, risiko: 0.02, warmDrossel: 0.5 } },
-            { k: 'warm', name: 'Ohne Kühlung durchgären lassen', preis: 0, schild: 'ohne Ausgabe', hoechst: 1,
-              satz: 'Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält '
-                  + 'kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was '
-                  + 'herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem '
-                  + 'Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird.',
-              warnung: 'Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die '
-                     + 'Untersuchungsanstalt zieht Proben.',
-              wirkung: { haltbar: 0.6, gaer: 0, roh: 0, mehr: 0, risiko: 0.07, anzeige: 0.08 } },
-            { k: 'maschine', name: 'Lindesche Kältemaschine', preis: 9800, fest: true, hoechst: 3,
+            { k: 'warm', name: 'Ohne Kühlung durchgären lassen', preis: 0, schild: 'ohne Ausgabe',
+              satz: 'Der Bottich läuft warm durch. Eine Woche schneller fertig, und das Bier '
+                  + 'hält kaum mehr als ein Drittel. In einem Betrieb ohne Eis und ohne Geld '
+                  + 'ist das der Weg, auf dem trotzdem gebraut wird.',
+              warnung: 'Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche.',
+              wirkung: { haltbar: 0.6, gaer: 0, roh: 0, mehr: 0, risiko: 0.07 } },
+            { k: 'maschine', name: 'Lindesche Kältemaschine', preis: 9800, fest: true,
               satz: 'Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält '
                   + 'das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer '
                   + 'als mit Eis, und das Bier hält länger. '
@@ -277,16 +241,14 @@ var SUD_DATEN = {
         { schluessel: 'hefe', name: 'DIE HEFE', frage: 'Woher kommt die Hefe?',
           satz: 'Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war.',
           optionen: [
-            { k: 'betrieb', name: 'Betriebshefe aus dem Bottich', preis: 0, schild: 'wie immer', hoechst: 2,
-              satz: 'Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal '
-                  + 'etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit '
-                  + 'nicht zu verbürgen: es schlägt als Lagerbier aus.',
+            { k: 'betrieb', name: 'Betriebshefe aus dem Bottich', preis: 0, schild: 'wie immer',
+              satz: 'Geerntet und wieder angestellt, Sud um Sud. Kostet nichts und wird '
+                  + 'jedes Mal etwas unsauberer.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.05, guetefall: 2 } },
-            { k: 'reinzucht', name: 'Reinzuchthefe nach Hansen', preis: 3400, fest: true, hoechst: 3,
+            { k: 'reinzucht', name: 'Reinzuchthefe nach Hansen', preis: 3400, fest: true,
               satz: 'Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. '
-                  + 'Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. '
-                  + 'Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht '
-                  + 'wiederzubeschaffen.',
+                  + 'Der Sud wird berechenbar. Unwiderruflich — die alte Betriebshefe wird '
+                  + 'verworfen und ist nicht wiederzubeschaffen.',
               siegel: 'Reinzucht angestellt',
               wirkung: { haltbar: 1.1, gaer: 0, roh: 0, mehr: 0, risiko: 0.01, guetepin: 94 } }
           ] }
@@ -323,9 +285,6 @@ var SUD_DATEN = {
                  satz: 'Der Braumeister zieht Hefe und stellt neu an.' },
       fehlsud: { name: 'Der Tank ist umgeschlagen', kurz: 'umgeschlagen',
                  satz: 'Ein Gärtank mit Fremdkeimen. Er wird abgelassen und gereinigt.' },
-      wirte: { name: 'WAS BEIM WIRT ANKOMMT',
-               satz: 'Die Gaststätte führt alles, der Markt nur das Hellste, der Landgasthof '
-                   + 'kein Schankbier. Was im Kasten steht, entscheidet das Sudhaus.' },
       charge: {
         name: 'GESPERRTE CHARGEN',
         satz: 'Eine Charge außerhalb der Grenzwerte geht nicht ins Regal, ehe jemand '
@@ -335,36 +294,21 @@ var SUD_DATEN = {
         schnitt: { text: 'Charge verschneiden', titel: 'Mit einer sauberen Charge verschnitten. '
                        + 'Ein Drittel der Menge geht dabei verloren, die Abweichung ist weg.' },
         frist: 4,
-        fristSatz: 'Der Braumeister gibt von sich aus frei, was vier Wochen steht.',
-        /* Der Rueckstand einer freigegebenen Charge. Ohne ihn ist "freigeben"
-           streng besser als "verschneiden" — eine Wahl mit nur einer richtigen
-           Antwort ist keine. Der Handel misst spaeter nach, und er misst ohne
-           den Spieler; bezahlt wird in BIER, nicht in Geld. */
-        rueck: {
-          name: 'DRAUSSEN, NOCH NICHT NACHGEMESSEN',
-          satz: 'Freigegebene Chargen stehen beim Handel im Regal. Der Einkauf misst nach, '
-              + 'wann er will — und schickt zurück, was ihm nicht passt.',
-          frist: [2, 5],
-          wer: 'Der Einkauf der Handelskette',
-          zurueck: 'Der Einkauf hat Charge {nr} nachgemessen: ±{ab} % und damit außerhalb der '
-                 + 'Vereinbarung. {menge} kommen zurück ins Haus und aus dem Regal.',
-          durch: 'Charge {nr} ist durchgegangen — nachgemessen hat niemand.'
-        }
+        fristSatz: 'Der Braumeister gibt von sich aus frei, was vier Wochen steht.'
       },
       achsen: [
         { schluessel: 'fuehrung', name: 'DIE FÜHRUNG', frage: 'Wonach wird gefahren?',
           satz: 'Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger.',
           optionen: [
-            { k: 'erfahrung', name: 'Nach Erfahrung des Braumeisters', preis: 0, schild: 'wie immer', hoechst: 2,
-              satz: 'Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel '
-                  + 'nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil.',
+            { k: 'erfahrung', name: 'Nach Erfahrung des Braumeisters', preis: 0, schild: 'wie immer',
+              satz: 'Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.02, streuung: 6 } },
-            { k: 'labor', name: 'Betriebslabor, Stammwürze und Bittereinheiten', preis: 42000, fest: true, hoechst: 3,
+            { k: 'labor', name: 'Betriebslabor, Stammwürze und Bittereinheiten', preis: 42000, fest: true,
               satz: 'Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. '
                   + 'Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet.',
               siegel: 'Labor eingerichtet',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.01, streuung: 2, guetepin: 84 } },
-            { k: 'rechner', name: 'Prozessrechner am Sudwerk', preis: 118000, fest: true, hoechst: 3,
+            { k: 'rechner', name: 'Prozessrechner am Sudwerk', preis: 118000, fest: true,
               satz: 'Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. '
                   + '1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich.',
               siegel: 'Anlage abgenommen',
@@ -373,21 +317,19 @@ var SUD_DATEN = {
         { schluessel: 'behandlung', name: 'DIE BEHANDLUNG', frage: 'Was geschieht vor der Abfüllung?',
           satz: 'Jede Stufe kauft Haltbarkeit — und keine ist umsonst.',
           optionen: [
-            { k: 'natur', name: 'Naturtrüb, unfiltriert', preis: 0, schild: 'wie immer', hoechst: 2,
-              satz: 'Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export '
-                  + 'auf die Reise.',
+            { k: 'natur', name: 'Naturtrüb, unfiltriert', preis: 0, schild: 'wie immer',
+              satz: 'Wie im Keller, so ins Fass. Hält, was es hält.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
-            { k: 'schoenen', name: 'Schönen mit Kieselsol', preis: 0, schild: 'ohne Ausgabe', hoechst: 2,
+            { k: 'schoenen', name: 'Schönen mit Kieselsol', preis: 0, schild: 'ohne Ausgabe',
               satz: 'Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. '
                   + 'Kostet nichts als ein Fass Verlust je Sud und bringt fünfzehn Prozent '
                   + 'Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt.',
               wirkung: { haltbar: 1.15, gaer: 0, roh: 0, mehr: -1, risiko: 0 } },
-            { k: 'filter', name: 'Kieselgurfilter', preis: 26000, einmal: true, hoechst: 3,
+            { k: 'filter', name: 'Kieselgurfilter', preis: 26000, einmal: true,
               satz: 'Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. '
-                  + 'Erst blank filtriertes Bier geht als Export hinaus. '
                   + 'Einmal bezahlt, danach jederzeit abzustellen.',
               wirkung: { haltbar: 1.4, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
-            { k: 'pasteur', name: 'Tunnelpasteur', preis: 74000, fest: true, hoechst: 3,
+            { k: 'pasteur', name: 'Tunnelpasteur', preis: 74000, fest: true,
               satz: 'Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und '
                   + 'zwei Fass je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, '
                   + 'wo vorher die Abfüllung stand.',
@@ -409,14 +351,6 @@ var SUD_DATEN = {
     2: { wer: 'Die Bierschau',
          satz: 'Die Schau war im Sudhaus. Brotkorn im Kessel — sie lässt den Bottich in den '
              + 'Bach laufen und schreibt es der Zunft.',
-         nimmtRohstoff: 0.20, nimmtBottiche: 1, gueteAb: 10 },
-    /* Das Reichsgesetz betreffend den Verkehr mit Nahrungsmitteln, Genussmitteln
-       und Gebrauchsgegenstaenden vom 14. Mai 1879 hat die oeffentlichen
-       Untersuchungsanstalten geschaffen; sie ziehen Proben, wo sie wollen.
-       Warm durchgegorenes Bier ist der Fall, auf den sie warten. */
-    3: { wer: 'Die Untersuchungsanstalt',
-         satz: 'Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein '
-             + 'Befund, und das Gesetz von 1879 gibt ihm den Bottich.',
-         nimmtRohstoff: 0.15, nimmtBottiche: 1, gueteAb: 8 }
+         nimmtRohstoff: 0.20, nimmtBottiche: 1, gueteAb: 10 }
   }
 };
