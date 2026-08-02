@@ -188,7 +188,12 @@ var FUHRE_DATEN = {
          Futter des Ochsen kommen je Sudtag dazu (fuhre.js, `woche`). */
       unterhalt: 1,
       unterhaltName: 'Dach, Geschirr, Wache',
-      teuerungLauf: 1.028,
+      /* 1350 ist das Jahr nach dem Grossen Sterben. Die Loehne der
+         Handwerker und Knechte springen, weil Haende fehlen; der Rat
+         antwortet mit Hoechstpreisen und laesst den Bierpfennig
+         einundvierzig Jahre stehen. Das ist die schaerfste Schere der
+         ganzen Partie, und sie ist die bestbezeugte. */
+      teuerungLauf: 1.045,
       lohnSud: 1.3,
       lohnName: 'Brauknecht und Futter',
       notsud: { jeSud: 1, mindest: 1,
@@ -540,9 +545,11 @@ var FUHRE_DATEN = {
       ],
       sorten: [
         { k: 'schank', name: 'Schankbier', zeichen: 'S', stufe: 1,
-          fass: 30, reife: 0, haltbar: 3, preis: 44, kosten: 320, rohstoff: 22, eis: 1,
+          fass: 30, reife: 0, haltbar: 3, preis: 44, kosten: 320, rohstoff: 22, eis: 0,
           sommer: false,
-          satz: 'Dreißig Fass aus einem Sud, sofort lieferbar, drei Wochen haltbar. '
+          satz: 'Obergärig, schnell vergoren, ohne Eis: dreißig Fass aus einem Sud, sofort '
+              + 'lieferbar, drei Wochen haltbar. Das Eis kauft nicht das Brauen, es kauft die '
+              + 'Haltbarkeit und die Entfernung — dafür stehen Lagerbier und Export daneben. '
               + 'Füllt den halben Wagen im Alleingang.' },
         { k: 'lager', name: 'Lagerbier', zeichen: 'L', stufe: 2,
           fass: 24, reife: 2, haltbar: 24, preis: 72, kosten: 360, rohstoff: 30, eis: 2,
