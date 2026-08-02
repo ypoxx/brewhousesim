@@ -256,28 +256,28 @@ var STADT_DATEN = {
      -------------------------------------------------------------------- */
   verwertung: {
     1: { verb: 'versatz', wort: 'VERSATZ', tat: 'Zum Versatz',
-         anteil: 0.45, zwang: 0.28, ansehen: -2,
+         anteil: 0.45, zwang: 0.34, ansehen: -2,
          kopf: 'was der Lombarde am Markt in Satz nimmt',
          sagt: 'Der Lombarde nimmt Stein und Holz in Satz und zaehlt Pfennige auf '
              + 'den Tisch. Eingeloest wird selten: wer versetzt, hat verkauft.',
          ratSagt: 'Der Rat laesst pfaenden. Zwei Ratsdiener, ein Karren, kein Wort.' },
 
     2: { verb: 'wiederkauf', wort: 'WIEDERKAUF', tat: 'Auf Wiederkauf',
-         anteil: 0.55, zwang: 0.34, ansehen: -3,
+         anteil: 0.55, zwang: 0.41, ansehen: -3,
          kopf: 'Verkauf mit Wiederkaufsrecht, vor dem Rat verbrieft',
          sagt: 'Verkauft auf Wiederkauf, mit Brief und Siegel im Ratsbuch. Das '
              + 'Geld ist heute da, das Haus steht von heute an fremdem Mann.',
          ratSagt: 'Der Rat gibt es auf die Gant. Ausgerufen dreimal, zugeschlagen einmal.' },
 
     3: { verb: 'hypothek', wort: 'HYPOTHEK', tat: 'Hypothek auf',
-         anteil: 0.70, zwang: 0.42, zins: 0.055, bleibt: true, ansehen: -1,
+         anteil: 0.70, zwang: 0.52, zins: 0.055, bleibt: true, ansehen: -1,
          kopf: 'Eintrag ins Hypothekenbuch — das Gebaeude bleibt stehen',
          sagt: 'Eingetragen im Hypothekenbuch. Das Gebaeude bleibt im Hof und '
              + 'arbeitet weiter; der Zins laeuft jeden Michaeli mit.',
          ratSagt: 'Zwangsversteigerung. Das Amtsgericht schlaegt zu, der Hof wird kleiner.' },
 
     4: { verb: 'abbruch', wort: 'ABBRUCH', tat: 'Abbruch',
-         anteil: 0.85, zwang: 0.52, endgueltig: true, ansehen: -1,
+         anteil: 0.85, zwang: 0.63, endgueltig: true, ansehen: -1,
          kopf: 'Abbruch und Grundstueck — was hier weggeht, kommt nicht wieder',
          sagt: 'Bagger, Bauschutt, Grundstueck verkauft. Der Quadratmeter '
              + 'Innenstadt bringt mehr als das, was darauf steht.',

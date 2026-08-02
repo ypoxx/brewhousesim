@@ -267,30 +267,45 @@
     B.sende('zeichne', { grund: 'stadt:bau' });
   }
 
-  /* Michaeli. Steht die Kasse im Minus, greift der Rat zu — solange, bis sie
-     wieder ueber null steht oder der Hof leer ist. Zuerst geht das
-     billigste Stueck; der Rat nimmt, was am schnellsten Kaeufer findet. */
+  /* Michaeli. Steht die Kasse im Minus, greift der Rat zu — EINMAL im Jahr,
+     nicht bis zur Saettigung. Zwei Ratsdiener und ein Karren raeumen keinen
+     Hof an einem Nachmittag, und ein Loch von sechs Pfennigen darf nicht den
+     halben Hof kosten. Genommen wird das kleinste Stueck, dessen Zwangserloes
+     die Schuld deckt; deckt keines sie, geht das groesste und der Rest bleibt
+     als Schuld stehen — bis zum naechsten Michaeli. */
   function ratGreiftZu() {
     if (!B.welt.zeit || B.welt.zeit.ende) return;
-    var geholt = 0;
-    for (var runde = 0; runde < 12 && B.welt.haus.kasse < 0; runde++) {
-      var l = verwertbarZwang();
-      if (!l.length) break;
-      l.sort(function (x, y) { return preis(x) - preis(y); });
-      verwerte(l[0], true);
-      geholt++;
-    }
-    if (B.welt.haus.kasse < 0 && !verwertbarZwang().length) {
+    if (B.welt.haus.kasse >= 0) return;
+
+    var schuld = -B.welt.haus.kasse;
+    var l = verwertbarZwang();
+
+    if (!l.length) {
       B.welt.schreibe(
-        'Der Hof ist leer, die Kasse steht bei ' + B.welt.geld(B.welt.haus.kasse)
-        + '. Es ist nichts mehr da, was ein Glaeubiger nehmen koennte.', 'ende');
+        'Der Hof ist leer und die Kasse steht bei ' + B.welt.geld(B.welt.haus.kasse)
+        + '. Es ist nichts mehr da, was ein Gläubiger nehmen könnte.', 'ende');
       if (B.uhr && B.uhr.beende) {
         B.uhr.beende('haus-verloren',
           'Das Brauhaus zum Anker ist verloren: kein Bargeld, kein Hof, kein Pfand. '
           + 'Die Chronik der Familie ' + B.welt.haus.familie + ' wird geschlossen.');
       }
+      B.sende('zeichne', { grund: 'stadt:bau' });
+      return;
     }
-    if (geholt) B.sende('zeichne', { grund: 'stadt:bau' });
+
+    l.sort(function (x, y) { return preis(x) - preis(y); });
+    var nimm = null;
+    for (var i = 0; i < l.length; i++) {
+      if (erloes(l[i], e(), true) >= schuld) { nimm = l[i]; break; }
+    }
+    if (!nimm) nimm = l[l.length - 1];
+
+    verwerte(nimm, true);
+    if (B.welt.haus.kasse < 0) {
+      B.welt.schreibe('Es reicht nicht. ' + B.welt.geld(-B.welt.haus.kasse)
+        + ' bleiben als Schuld stehen; zu Michaeli kommen sie wieder.', 'bau');
+    }
+    B.sende('zeichne', { grund: 'stadt:bau' });
   }
 
   /* Beim Zwang gibt es kein Hypothekenbuch: das Amtsgericht nimmt auch, was

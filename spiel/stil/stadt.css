@@ -305,6 +305,47 @@
   letter-spacing: calc(var(--s) * 4);
   color: #f6e3bd;
 }
+
+/* Die zwei Seiten desselben Kastens: links bauen, rechts verwerten. Die
+   rechte heisst in jeder Epoche anders — VERSATZ, WIEDERKAUF, HYPOTHEK,
+   ABBRUCH — und ist gesperrt, solange nichts im Hof steht. */
+.stadt-bauhof .kopf .seiten {
+  display: flex;
+  align-items: stretch;
+  gap: calc(var(--s) * 4);
+  flex: 0 0 auto;
+}
+.knopf.stadt-seite {
+  padding: calc(var(--s) * 2) calc(var(--s) * 9);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: calc(var(--s) * 22);
+  letter-spacing: calc(var(--s) * 3);
+  color: #c9a877;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.22));
+  border: calc(var(--s) * 2) solid rgba(255, 235, 195, 0.22);
+  border-radius: calc(var(--s) * 3) calc(var(--s) * 3) 0 0;
+  box-shadow: none;
+}
+.knopf.stadt-seite:hover { color: #f6e3bd; border-color: rgba(255, 235, 195, 0.45); }
+.knopf.stadt-seite.auf {
+  color: #fdf0d4;
+  background: linear-gradient(180deg, rgba(255, 231, 186, 0.30), rgba(0, 0, 0, 0.05));
+  border-color: rgba(255, 235, 195, 0.7);
+}
+.knopf.stadt-seite[disabled] { color: #8a6e4c; border-color: rgba(255, 235, 195, 0.12); }
+
+/* Was Geld einbringt, traegt Messing statt Kalk. Wer bei leerer Kasse
+   hierher sieht, soll den Unterschied auf einen Blick haben. */
+.stadt-bauhof .knopf.stadt-verwertung {
+  background: linear-gradient(180deg, #7d5a2c 0%, #533619 100%);
+  border-color: #2c1a09;
+}
+.stadt-bauhof .knopf.stadt-verwertung:hover {
+  background: linear-gradient(180deg, #9a7139 0%, #6b4720 100%);
+}
+.stadt-bauhof .knopf.stadt-verwertung .preis.einnahme { color: #ffe9a8; }
+.stadt-bauhof .bauzeile .nutzen { color: #e3c79a; }
 .stadt-bauhof .kopf .zahl {
   font-family: var(--mono);
   font-size: calc(var(--s) * 16);
