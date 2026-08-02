@@ -1304,6 +1304,7 @@
        einziges Mal, was zu tun gewesen waere. Ein Grund, den der Spieler
        nicht lesen kann, ist kein Grund. */
     if (planFiel) teile.push('kein ' + planFiel.sorte + ': ' + planFiel.grund);
+    if (ersatz) teile.push('statt dessen ' + ersatz.sorte + ' — das kommt ohne aus');
     if (Z.notsud && ns) {
       Z.notGesamt += Z.notsud;
       teile.push('davon ' + Z.notsud + '× ' + ns.name + ' ohne Barauslage'

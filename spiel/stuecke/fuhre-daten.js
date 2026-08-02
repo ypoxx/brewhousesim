@@ -414,7 +414,7 @@ var FUHRE_DATEN = {
       budget: null,
       sudeJeWoche: 2,
       planStart: 1,
-      unterhalt: 42,
+      unterhalt: 34,
       unterhaltName: 'Braumeister, Kessel, Versicherung',
       lohnSud: 78,
       lohnName: 'Schichtlohn und Kohle',
