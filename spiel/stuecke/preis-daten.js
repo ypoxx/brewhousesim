@@ -78,7 +78,7 @@ var PREIS_DATEN = {
          Kornpreis gebunden und wurde zwischen den grossen Erneuerungen
          nachgesetzt — aber der Rat setzte ihn spaeter nach, als das Korn
          stieg, und nie ganz: die Buerger sollten billig trinken. */
-      satzFolgt: 0.62,
+      satzFolgt: 0.82,
       pflichtHoehe: 0.20,
       /* Die Umlage lag bei 0,80 der Jahreslast und mit `teil` bis 1,85 bei
          dem Anderthalbfachen davon — in der aermsten der vier Epochen die
@@ -629,7 +629,12 @@ var PREIS_DATEN = {
                   + 'Wer wächst, zahlt höhere Listungsgebühren — der Handel rechnet mit.',
 
       rechtSatz: 'eigen · Konzession',
-      grund: 620000,
+      /* 620.000 gegen eine Michaeli-Kasse von 86.000 war das siebenfache
+         Verhaeltnis der Epoche; in 1350, 1600 und 1884 liegt es bei drei
+         bis vier. Am Bildschirm hiess das: die zweite Sprosse der Leiter
+         kostete 52.000 DM, als das Haus 61.000 hatte, und ist in vierzehn
+         Braujahren kein einziges Mal genommen worden. */
+      grund: 500000,
       lastenGrund: 32000,
       teuerungJahr: 1.045,
       teuerungKauf: 1.065,
@@ -647,7 +652,7 @@ var PREIS_DATEN = {
       /* Der Handel diktiert den Aktionspreis, der Listenpreis ist Zierde —
          aber auch der Handel gibt die Kostensteigerung weiter, nur spaet
          und nie ganz. Zwischen 1350 und 1884. */
-      satzFolgt: 0.45,
+      satzFolgt: 0.60,
       pflichtHoehe: 0.145,
       /* Die hoechste Umlagequote der vier Epochen traf das Haus mit dem
          duennsten Polster. Gemessen: die Rechnung 1973 stand bei 78.600 DM
@@ -720,7 +725,26 @@ var PREIS_DATEN = {
           satz: 'Er fährt. Langsam, russig, und er fährt.',
           wirkung: { ertrag: 5500 } },
 
-        { k: 'zelt', name: 'Das Bierzelt auf dem Volksfest', anteil: 0.075, bauzeit: 0,
+        /* DIE ZWEITE UND DRITTE SPROSSE. Die Leiter dieser Epoche sprang von
+           0,040 (Kasten) auf 0,115 (Grosshandel) — das Dreifache in einem
+           Schritt, weil Kronkorken (bis 1969) und Holzgas (bis 1955) beide
+           vor dem Schaujahr 1970 enden und im Spiel nie auf der Tafel
+           liegen. In 1600 steht die zweite Sprosse beim 1,3fachen der
+           ersten, in 1884 beim 1,2fachen. Beide neuen sind das, was ein
+           Landbrauhaus der siebziger Jahre wirklich als erstes kaufte. */
+        { k: 'schankanlage', name: 'Die Schankanlagen in den Wirtschaften', anteil: 0.050, bauzeit: 0, ab: 1955,
+          was: 'Kompressor, Leitung, Zapfhahn mit dem Namen des Hauses — gestellt, nicht verkauft.',
+          satz: 'Wer die Anlage des Hauses im Keller hat, zapft daraus, was das Haus liefert, '
+              + 'und rechnet nach der Liste statt nach dem Angebot.',
+          wirkung: { preis: 0.04, ertrag: 4500 } },
+
+        { k: 'getraenkemarkt', name: 'Der Getränkemarkt am Brauereitor', anteil: 0.065, bauzeit: 0, ab: 1965,
+          was: 'Eine Halle neben der Rampe, Kasten auf Palette, samstags bis zwölf.',
+          satz: 'Was hier über den Tresen geht, geht ohne Handel dazwischen. '
+              + 'Je Kasten bleibt dem Haus, was sonst der Zwischenhandel nimmt.',
+          wirkung: { preis: 0.06, ertrag: 8000 } },
+
+        { k: 'zelt', name: 'Das Bierzelt auf dem Volksfest', anteil: 0.070, bauzeit: 0,
           was: 'Ein Zelt mit dreitausend Plätzen, neun Tage im Jahr.',
           satz: 'Neun Tage, an denen die Stadt das Bier des Hauses trinkt und sonst nichts. '
               + 'Ausgeschenkt wird ohne Handel dazwischen, und das steht in der Abrechnung.',
@@ -730,7 +754,7 @@ var PREIS_DATEN = {
            Er billiger und ohne Fahrer, dafür kennt er den Wirt und das Haus
            nicht mehr. Kein Großhändler nimmt ein Haus, das ihm dieselben
            Gaststätten selbst anfährt. */
-        { k: 'grosshandel', name: 'Der Getränkefachgroßhandel als Partner', anteil: 0.115, bauzeit: 0, ab: 1950,
+        { k: 'grosshandel', name: 'Der Getränkefachgroßhandel als Partner', anteil: 0.095, bauzeit: 0, ab: 1950,
           was: 'Ein Vertrag mit dem größten Zwischenhändler des Kreises.',
           satz: 'Er nimmt Menge ab und bringt sie in Gaststätten, die das Haus nie besucht.',
           sperrt: ['lastzug'],
@@ -815,7 +839,7 @@ var PREIS_DATEN = {
           wirkung: { bindung: { n: 4, jahre: 60 }, pflichtNeu: { k: 'rueckverguetung', name: 'Rückvergütung an die Genossen', teil: 0.19,
             sagt: 'Ein Fünftel der jährlichen Lasten, oben drauf, satzungsgemäß.' } } },
 
-        { k: 'privat', name: 'Der Rückzug auf die eigene Braustätte', anteil: 0.13,
+        { k: 'privat', name: 'Der Rückzug auf die eigene Braustätte', anteil: 0.11,
           was: 'Kein Handel mehr, kein Regal, keine Aktion. Nur noch Gastronomie und Werksverkauf.',
           regel: 'Die Listungsgebühr entfällt für immer, und jedes Hektoliter fängt deutlich mehr. Die großen Mengen sind damit vorbei.',
           wirkung: { pflichtWeg: 'listung', preis: 0.30, wachstumsdeckel: true } }
