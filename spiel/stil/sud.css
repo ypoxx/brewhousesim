@@ -97,12 +97,17 @@
    ausschliessen. Das ist woertlich die zweite Latte.
    -------------------------------------------------------------------------- */
 
+/* Die Abstaende zwischen den Feldern sind knapp gehalten, und das ist kein
+   Geschmack: die rechte Spalte traegt vier Felder, und jeder Punkt Abstand
+   zaehlt viermal. Das Brett darf nicht ueber y 69 % der Buehne hinauswachsen —
+   darunter liegen in 1884 die Preisschilder des GEGNERs am Marktstand. */
 .sud-achse,
 .sud-gaerkeller,
 .sud-hefe,
+.sud-wirte,
 .sud-buch {
-  margin-top: calc(var(--s) * 12);
-  padding-top: calc(var(--s) * 8);
+  margin-top: calc(var(--s) * 8);
+  padding-top: calc(var(--s) * 6);
   border-top: calc(var(--s) * 2) solid var(--linie);
 }
 
@@ -251,11 +256,6 @@
    so lang ist wie "Ochse". Sonst wandert die Zahl mit dem laengsten Namen.
    -------------------------------------------------------------------------- */
 
-.sud-wirte {
-  margin-top: calc(var(--s) * 12);
-  padding-top: calc(var(--s) * 8);
-  border-top: calc(var(--s) * 2) solid var(--linie);
-}
 .sud-wzeile {
   display: grid;
   grid-template-columns: calc(var(--s) * 26) minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1.4fr);

@@ -1121,7 +1121,7 @@
       tu: fuehreHefe
     }));
     reihe.appendChild(knopf({
-      text: a.text + ' · jüngstes Fass · +' + (D.guete.anstichJung || 14),
+      text: 'Jüngstes Fass anbrechen · +' + (D.guete.anstichJung || 14),
       zug: 'sud:anstich-jung', klasse: 'sud-tat',
       titel: a.titel + ' Das jüngste Fass gibt das kräftigste Zeug — und es wäre noch '
            + 'lange zu verkaufen gewesen. Kostet ' + B.welt.menge(1) + '.',
@@ -1129,7 +1129,7 @@
       tu: function () { anstich(true); }
     }));
     reihe.appendChild(knopf({
-      text: a.text + ' · ältestes Fass · +' + (D.guete.anstichAlt || 6),
+      text: 'Ältestes Fass anbrechen · +' + (D.guete.anstichAlt || 6),
       zug: 'sud:anstich-alt', klasse: 'sud-tat',
       titel: a.titel + ' Das älteste Fass wäre ohnehin bald verdorben — dafür gibt es nur '
            + 'die Hälfte her. Kostet ' + B.welt.menge(1) + '.',
@@ -1138,10 +1138,9 @@
     }));
     kasten.appendChild(reihe);
     kasten.appendChild(zeile('sud-fussnote', frei
-      ? (Z.bottiche.length
-          ? 'Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Fass.'
+      ? (Z.bottiche.length ? 'Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Fass.'
           : (lager ? 'Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt ein Fass.'
-                   : 'Es gärt nichts und im Lagerkeller liegt nichts. Diese Woche geht keine Hefe.'))
+                   : 'Es gärt nichts, und im Keller liegt nichts.'))
       : 'Diese Woche ist die Hefe schon nachgeführt.'));
     fach.appendChild(kasten);
   }
@@ -1186,7 +1185,10 @@
     /* Das Sudbuch — was ohne den Spieler geschehen ist. */
     var b = B.el('div', 'sud-buch');
     b.appendChild(B.el('b', 'sud-achsname', 'DAS SUDBUCH'));
-    var letzte = Z.buch.slice(-7).reverse();
+    /* Vier Zeilen, nicht sieben: die Hoehe dieses Bretts darf nicht davon
+       abhaengen, wie viel diese Woche passiert ist. Ein Brett, das mit dem
+       Sudbuch waechst, waechst irgendwann ueber fremde Knoepfe. */
+    var letzte = Z.buch.slice(-4).reverse();
     if (!letzte.length) b.appendChild(zeile('sud-leer', 'Noch keine Eintragung.'));
     letzte.forEach(function (x) {
       var z = B.el('div', 'sud-buchzeile');
