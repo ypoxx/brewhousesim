@@ -94,6 +94,9 @@
     gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
     jahrSude: 0, jahrFass: 0, jahrFehl: 0, jahrAnzeige: 0,
+    jahrLegte: 0,         /* hat das Haus dieses Braujahr ueberhaupt gebraut? */
+    kalt: 0,              /* Braujahre in Folge ohne einen einzigen Sud       */
+    bestellt: [],         /* 1970: bezahlter Gaerraum auf dem Tieflader       */
     gesamtSude: 0, gesamtFass: 0,
     gemeldet: {},         /* einmalige Chroniksaetze                          */
     imGange: false,
@@ -869,12 +872,20 @@
   }
 
   function kaufeGaerraum() {
+    if (kaufSperre()) return;
     var p = kaufPreis();
     if (!B.welt.zahle(p, 'DER SUD: ' + gk().kauf.text, 'spieler')) return;
-    Z.zusatz += gk().kauf.menge;
+    var b = bedingung();
     Z.kaufNr++;
+    if (b && b.art === 'lieferzeit') {
+      /* Bezahlt ist bezahlt; gestellt wird spaeter. */
+      Z.bestellt.push({ ab: woManifest() + (b.wochen || 3), menge: gk().kauf.menge });
+      buch(gk().kauf.text + ' — steht in ' + (b.wochen || 3) + ' Wochen');
+    } else {
+      Z.zusatz += gk().kauf.menge;
+      buch(gk().kauf.text + ' — jetzt ' + B.welt.menge(plaetze()) + ' Gärraum');
+    }
     B.ton.spiele('sud:bau', { ort: 'sudhaus' });
-    buch(gk().kauf.text + ' — jetzt ' + B.welt.menge(plaetze()) + ' Gärraum');
     saugeUndSchlage();
     B.sende('zeichne', { grund: 'sud:gaerraum' });
   }
@@ -919,6 +930,15 @@
   }
 
   function zeile(klasse, text) { return B.el('div', klasse, text); }
+
+  /* {menge} in den Datensaetzen steht fuer die Menge des Zukaufs — und die
+     heisst 1350 "6 Fass" und 1884 "60 hl". Vorher stand die Zahl als Wort im
+     Text ("Vierzig Fass mehr Gaerraum") und widersprach in 1884 und 1970 dem
+     Knopf darueber, der schon in Hektolitern rechnete. Ein Absatz, zwei
+     Masse — genau der Fund des Kritikers, nur in diesem Haus. */
+  function fuelle(text) {
+    return String(text || '').replace(/\{menge\}/g, B.welt.menge(gk().kauf.menge));
+  }
 
   function zeichneAchse(fach, a) {
     var kasten = B.el('div', 'sud-achse');
@@ -976,7 +996,7 @@
       if (wk.haltbar && wk.haltbar !== 1) wirk.push('Haltbarkeit ×' + String(wk.haltbar).replace('.', ','));
       if (wk.gaer) wirk.push((wk.gaer > 0 ? '+' : '−') + Math.abs(wk.gaer) + ' Wo. Gärung');
       if (wk.roh) wirk.push((wk.roh > 0 ? '+' : '−') + Math.abs(wk.roh) + ' ' + B.sud.rohstoff.name() + ' je Sud');
-      if (wk.mehr) wirk.push((wk.mehr > 0 ? '+' : '−') + Math.abs(wk.mehr) + ' Fass je Sud');
+      if (wk.mehr) wirk.push((wk.mehr > 0 ? '+' : '−') + B.welt.menge(Math.abs(wk.mehr)) + ' je Sud');
       if (wk.streuung !== undefined && ep().charge) wirk.push('Streuung ±' + wk.streuung + ' %');
       if (wk.anzeige) wirk.push('Anzeige ' + Math.round(wk.anzeige * 100) + ' % je Woche');
       if (wk.warmDrossel) wirk.push('warme Wochen: halber Gärraum');
@@ -1070,18 +1090,31 @@
       kasten.appendChild(rk);
     }
 
+    /* Was bestellt und bezahlt ist, aber noch nicht steht (1970). */
+    Z.bestellt.forEach(function (x) {
+      var w = Math.max(0, x.ab - jetzt);
+      kasten.appendChild(zeile('sud-fussnote', B.welt.menge(x.menge) + ' Gärraum bestellt und '
+        + 'bezahlt — ' + (w ? 'gestellt in ' + w + (w === 1 ? ' Woche' : ' Wochen')
+                            : 'wird diese Woche gestellt') + '.'));
+    });
+
     var reihe = B.el('div', 'sud-werkzeug');
     var p = kaufPreis();
+    var sperre = kaufSperre();
+    var bed = bedingung();
     reihe.appendChild(knopf({
       text: g.kauf.text + ' · +' + B.welt.menge(g.kauf.menge),
       zug: 'sud:gaerraum',
       preis: -p,
       klasse: 'sud-tat',
-      titel: g.kauf.titel,
-      aus: !B.welt.kann(p),
+      titel: sperre || (fuelle(g.kauf.titel) + (bed ? ' ' + bed.satz : '')),
+      aus: !!sperre || !B.welt.kann(p),
       tu: kaufeGaerraum
     }));
     kasten.appendChild(reihe);
+    /* Die Nebenbedingung steht am Brett, nicht nur im Titel: was sie
+       verlangt, soll man lesen koennen, ehe man den Knopf sucht. */
+    if (bed) kasten.appendChild(zeile(sperre ? 'sud-warnung' : 'sud-fussnote', sperre || bed.satz));
 
     /* 1970: die gesperrten Chargen, mit zwei Antworten und zwei Preisen. */
     var ch = ep().charge;

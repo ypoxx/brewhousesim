@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-02T17:42:53+00:00",
+ "stand": "2026-08-02T17:54:19+00:00",
  "phase": "Aufsicht misst am eingefrorenen Stand: die Partie endet in allen vier Epochen nach gut drei Braujahren, stumm und immer aus demselben Grund.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -766,6 +766,10 @@
   {
    "zeit": "2026-08-02T17:42:53+00:00",
    "text": "Latte 2 auf die vier Läufe des EICHUNG-Builders gerechnet: 1600 besteht sauber (rho +0,165, 0 von 14 Jahren unter 1×), 1350 und 1970 kippen nach unten (Faktor 21 bzw. 57). Aufgabe: 1350 und 1970 nach dem Muster von 1600."
+  },
+  {
+   "zeit": "2026-08-02T17:54:19+00:00",
+   "text": "Fünftes Verb nachgezählt: MITBIETEN gibt es nur in 1970, drei Gebote nebeneinander, in vier Saaten in 5 bis 15 Wochen bezahlbar. Bei saat=1350 ist der erste Notartermin unbezahlbar — wer einmal hinsieht, hält es für tot."
   }
  ]
 }
