@@ -55,6 +55,17 @@ vorher `journal.jsonl` im Transcript-Verzeichnis lesen.
 **Wer im Journal wissen will, wer ein Agent ist, liest seine erste Nutzerzeile,
 nicht seine Position.** Diese Verwechslung hat in Welle 2b eine Stunde gekostet.
 
+**Am 2.8. um 19:58 UTC hat ein Container-Neustart die Welle mitten im Bauen
+erschlagen** — beide Builder hörten in derselben Sekunde auf zu schreiben, das
+Journal blieb auf zwei `started` ohne ein einziges `result`. So sieht ein Tod
+aus, nicht so sieht Arbeit aus: **hören zwei Agenten in DERSELBEN Sekunde auf,
+war es kein Zufall.** Wieder angeworfen mit
+`Workflow({scriptPath: …, resumeFromRunId: "wf_eccf90fc-7a6"})`. Weil kein Agent
+fertig war, gab es nichts aus dem Zwischenspeicher — die Builder fangen neu an,
+aber auf ihren eigenen, schon committeten Dateien. **Deshalb sichert die
+Aufsicht die Arbeit der Builder laufend und nicht am Ende:** genau diese
+Commits waren nach dem Neustart alles, was von zwei Stunden Bauen übrig war.
+
 ---
 
 ## Welle 2b (abgeschlossen, 2. August 2026, 18:35 UTC)
