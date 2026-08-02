@@ -67,8 +67,8 @@ var PREIS_DATEN = {
          gemessen (Rechnungsspalte 1359): Erbzins 55 und Wasserzins 34
          gegen 187 Pf Ausstoss. Ein Erbzins auf ein Braugerechtsame war
          ein fester kleiner Betrag, kein halbes Jahreseinkommen. */
-      lastenFest: 34,
-      pflichtUmsatz: 0.070,
+      lastenFest: 26,
+      pflichtUmsatz: 0.052,
       /* Der Schoss stand auf 0,55 — von allem, was ein Braujahr uebrig liess,
          nahm der Rat mehr als die Haelfte, und zwar in der aermsten Epoche.
          Gemessen ueber die sorgfaeltig gespielte Linie nimmt DER PREIS in
@@ -77,7 +77,7 @@ var PREIS_DATEN = {
          abschoepft, woraus ein Haus waechst. Ein Vermoegensschoss lag bei
          einem halben bis einem Hundertstel des geschaetzten Vermoegens im
          Jahr, nicht bei der Haelfte des Zuwachses. */
-      pflichtErtrag: 0.42,
+      pflichtErtrag: 0.32,
       nachlass: 0.55,
       nachlassName: 'Nachlass des Rats auf Zins und Wasser',
       /* DER NOTPFENNIG (siehe preis.js, `buche`). Was der Rat stehen laesst,
@@ -89,7 +89,7 @@ var PREIS_DATEN = {
       /* Was das Haus unter der vorigen Hand durchgesetzt hat — der Anschlag
          des ersten Michaeli rechnet damit, nicht mit null (siehe preis.js,
          `richteEin`). Rund fuenfzig Fass Grutbier zu neun Pfennig. */
-      umsatzAnfang: 450,
+      umsatzAnfang: 150,
       /* DIE NACHFUEHRUNG DES SATZES (siehe preis.js, `nachfuehrung`).
          Wie viel von der Teuerung beim Haus ankommt, ohne dass es etwas
          dafuer baut. Der Biersatz des 14. Jahrhunderts war an den
@@ -103,7 +103,7 @@ var PREIS_DATEN = {
          hoechste der vier Quoten. Sie hat die Partie 1352, 1355 und 1359
          jedesmal auf null gesetzt. Sie bleibt die Zacke im Verlauf, nur
          nicht mehr das Ende. */
-      umlageAnteil: 0.42,
+      umlageAnteil: 0.35,
       handlohnAnteil: 1.10,
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
