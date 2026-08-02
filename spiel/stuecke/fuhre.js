@@ -3482,6 +3482,45 @@
      Das grosse Nachspiel gehoert spaeter DEM ERBE (ZUSTAENDIGKEIT 12). Hier
      steht das Anhalten und ein schlichtes Blatt mit einem Weg von vorn.
      ====================================================================== */
+  /* DAS URTEIL ZU EINEM GRUND.
+
+     Die Uhr kennt Endgruende aus drei Stuecken (kern/uhr.js: beende). Wer
+     das Ende ausgeloest hat, weiss am besten, was es bedeutet — deshalb
+     liegt der eigene Ausgang in Z.ausgang, mit Kopf, Urteil und Folge. Fuer
+     jeden fremden Grund steht der Satz in fuhre-daten.js unter
+     `ausgaenge.fremd`. Und wenn ein Stueck einen Grund erfindet, den hier
+     niemand kennt, wird das gesagt statt verschwiegen: ein leeres Urteil
+     waere schlimmer als ein unvollstaendiges. */
+  function urteilZu(grund) {
+    if (Z.ausgang && Z.ausgang.grund === grund) return Z.ausgang;
+    var f = (D.ausgaenge && D.ausgaenge.fremd) || {};
+    var t = f[grund];
+    if (t) {
+      return {
+        art: t.art, grund: grund, summe: 0, gut: !!t.gut,
+        kopf: ausgangSatz(t.kopf, 0),
+        urteil: B.welt.zeit.ende && letzteEndzeile() ? letzteEndzeile() : ausgangSatz(t.kopf, 0),
+        folge: ausgangSatz(t.folge, 0)
+      };
+    }
+    return {
+      art: 'unbekannt', grund: grund, summe: 0, gut: false,
+      kopf: 'Das Brauhaus zum Anker hört auf · ' + B.welt.zeit.jahr,
+      urteil: letzteEndzeile() || 'Die Uhr steht still.',
+      folge: 'Der Grund heißt „' + grund + '" und ist auf diesem Blatt nicht beschrieben.'
+    };
+  }
+
+  /* Was das anhaltende Stueck selbst in die Chronik geschrieben hat. Das ist
+     das Urteil in seinen eigenen Worten — es wird zitiert, nicht ersetzt. */
+  function letzteEndzeile() {
+    var c = B.welt.chronik;
+    for (var i = c.length - 1; i >= 0; i--) {
+      if (c[i].art === 'ende' && c[i].text) return c[i].text;
+    }
+    return '';
+  }
+
   function sammleSchluss(d) {
     var geliefert = 0, verschenkt = 0;
     B.protokoll.forEach(function (p) {
@@ -3503,8 +3542,13 @@
       linie[i].bis = (i + 1 < linie.length) ? linie[i + 1].seit : B.welt.zeit.jahr;
     }
 
+    var grund = (d && d.grund)
+      || (B.welt.zeit.jahr >= B.welt.LETZTES_JAHR ? 'gegenwart' : 'unbekannt');
+    if (grund === 'unbekannt' && B.welt.zeit.endgrund) grund = B.welt.zeit.endgrund;
+
     return {
-      grund: (d && d.grund) || (B.welt.zeit.jahr >= B.welt.LETZTES_JAHR ? 'gegenwart' : 'unbekannt'),
+      grund: grund,
+      ausgang: urteilZu(grund),
       jahr: B.welt.zeit.jahr,
       woche: B.welt.zeit.woche,
       satz: fristDef().ende,
@@ -3549,25 +3593,44 @@
        kein einziger Knopf steht, auch nicht der Wiederanfang. Die Uhr steht
        an dieser Stelle ohnehin (kern/uhr.js: z.ende sperrt WEITER); ein
        zweites Schloss vor einer verschlossenen Tuer ist keines. */
+    /* DAS URTEIL, und wie es sich von einem Beiblatt unterscheidet.
+
+       Auf 'ende' malt jedes Stueck sein eigenes Schlussblatt (ZUSTAENDIGKEIT
+       12). Das ist richtig fuer die Rechenschaft eines Stuecks ueber SEINE
+       Sache — das Sudbuch ueber die Pfanne — und falsch fuer das Urteil ueber
+       die PARTIE, denn davon kann es nur eines geben. BEFUND-ENDE.md §1 hat
+       genau das gemessen: der Spieler sah die Buchhaltung eines Stuecks statt
+       des Urteils.
+
+       Also traegt dieses Blatt es aus, fuer jeden Endgrund, auch fuer die,
+       die andere Stuecke ausloesen (urteilZu). data-urteil ist die Marke, an
+       der ein Beiblatt erkennt, dass das Urteil schon geschrieben ist und es
+       zuruecktreten kann; DER SUD tut das seit Runde 3 von selbst, und in der
+       Klassenliste steht `schluss` als zweites Erkennungszeichen fuer den,
+       der data-urteil nicht kennt. */
+    var a = s.ausgang || urteilZu(s.grund);
+    var gut = !!(a.gut || a.art === 'gegenwart' || a.art === 'uebergeben');
+
     var bl = B.el('div', {
-      klasse: 'blatt fu-schlussblatt',
-      daten: { frei: '1', reiter: 'Das Ende des Hauses' }
+      klasse: 'blatt fu-schlussblatt fu-ende-' + (a.art || 'unbekannt') + (gut ? ' fu-ende-gut' : ''),
+      daten: { frei: '1', urteil: '1', reiter: 'Das Ende des Hauses' }
     });
     bl.setAttribute('role', 'dialog');
     bl.setAttribute('aria-modal', 'true');
     bl.setAttribute('aria-label', 'Das Ende des Hauses ' + s.jahr);
 
-    var gegenwart = s.grund === 'gegenwart';
-    bl.appendChild(B.el('h2', null, gegenwart
-      ? 'Die Gegenwart ist erreicht — das Haus steht noch'
-      : 'Das Brauhaus zum Anker hört auf · ' + s.jahr));
-    bl.appendChild(B.el('div', 'fu-satz', gegenwart
-      ? 'Sechshundert Jahre an demselben Hof, und die Pfanne brennt.'
-      : s.satz));
+    bl.appendChild(B.el('h2', null, a.kopf));
+    bl.appendChild(B.el('div', 'fu-satz', a.urteil));
+    bl.appendChild(B.el('div', 'fu-ende-folge', a.folge));
+    if (a.summe > 0) {
+      bl.appendChild(B.el('div', 'fu-ende-summe',
+        'Ausgezahlt: ' + B.welt.geld(a.summe) + '. In der Lade liegen damit '
+        + B.welt.geld(s.kasse) + '.'));
+    }
 
     /* DER SATZ, UM DEN ES GING. Er steht hier mit den Zahlen des letzten
        Tages, damit ihn niemand fuer eine Behauptung halten muss. */
-    if (!gegenwart) {
+    if (!gut) {
       var stand = B.welt.menge(s.keller) + ' von ' + B.welt.menge(s.plaetze) + ' lagen im Keller, '
         + B.zahl(s.rohstoff) + ' ' + (B.welt.epoche().rohstoff || 'Rohstoff') + ' in der Kammer.';
       bl.appendChild(B.el('div', 'fu-schluss-these', s.kasse > 0
@@ -3867,6 +3930,8 @@
       var blatt = B.ebene('blatt', 'fuhre');
       B.leere(blatt);
       zeichneSchluss(blatt);
+      zeichneAntrag(blatt);
+      zeichneUebergabe(blatt);
       legeSommer(blatt);
 
       meldeZug();
@@ -3880,12 +3945,19 @@
     if (Z.schluss) return;
     B.wage('fuhre.schluss', function () {
       Z.schluss = sammleSchluss(d);
-      /* Von selbst aufgeschlagen wird das Blatt nur bei DEM Ende, das dieses
-         Stueck zu verantworten hat. Ist die Gegenwart erreicht, gehoert die
-         Buehne dem, der sein eigenes Schlussblatt malt — zwei Deckel
-         uebereinander waeren genau die Falle aus ZUSTAENDIGKEIT 1. */
-      Z.schlussOffen = Z.schluss.grund === 'keine-abnehmer';
+      /* AUFGESCHLAGEN WIRD IMMER — das ist die Aenderung aus BEFUND-ENDE §1.
+
+         Vorher stand hier `Z.schlussOffen = Z.schluss.grund === 'keine-abnehmer'`:
+         das Blatt schlug nur bei DEM Ende auf, das dieses Stueck selbst
+         ausgeloest hatte. Bei jedem fremden Grund — kalte Pfanne, leerer Hof,
+         Gegenwart — blieb es zu, und der Spieler las die Rechenschaft eines
+         Stuecks ueber sich selbst. Ein Urteil, das nur ueber die eigenen
+         Faelle spricht, ist kein Urteil. urteilZu() hat fuer jeden Grund
+         einen Satz, also wird es fuer jeden Grund aufgeschlagen. */
+      Z.schlussOffen = true;
       Z.sommerOffen = false;
+      Z.antrag = null;
+      Z.uebergabe = null;
       Z.ladung = [];
     });
   });

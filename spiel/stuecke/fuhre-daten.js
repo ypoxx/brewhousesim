@@ -913,6 +913,61 @@ var FUHRE_DATEN = {
        geliefert wurde. Wer das hat, darf aufhoeren, statt aufzuhoeren zu
        existieren — und das Haus brennt am naechsten Morgen weiter.
        ======================================================================= */
+    /* =======================================================================
+       DIE FREMDEN AUSGAENGE.
+
+       welt.zeit.endgrund kennt Werte aus drei Stuecken: DER SUD haelt die
+       Uhr an, wenn die Pfanne drei Braujahre kalt stand (vier Gruende, einer
+       je Epoche); DIE STADT, wenn kein Pfand mehr da ist; der Kern, wenn die
+       Gegenwart erreicht ist. Jedes dieser Stuecke schreibt sein eigenes
+       Beiblatt ueber SEINE Sache — das Sudbuch ueber die Pfanne, der Bauhof
+       ueber den Hof. Was keinem von ihnen gehoert, ist DAS URTEIL UEBER DIE
+       PARTIE, und das steht auf genau einem Blatt (stuecke/fuhre.js,
+       zeichneSchluss). Damit es fuer jeden Grund etwas zu sagen hat, stehen
+       die fremden Gruende hier mit.
+       ======================================================================= */
+    fremd: {
+      'reihe-verloren': {
+        kopf: 'Der Sudtag fällt an die Reihe zurück · {jahr}',
+        folge: 'Drei Braujahre ohne einen einzigen Sud. Ein Braurecht hängt am Brauen und '
+             + 'nicht am Namen: der Rat trägt den Sudtag auf das nächste Haus um. '
+             + 'Die Pfanne bleibt stehen, sie gehört zum Hof.',
+        art: 'kalt' },
+      'lade-zieht-ein': {
+        kopf: 'Die Lade zieht die Gerechtigkeit ein · {jahr}',
+        folge: 'Drei Braujahre ohne einen einzigen Sud. Die Zunftlade nimmt die '
+             + 'Braugerechtigkeit an sich und verteilt die Sudtage auf die übrigen Häuser. '
+             + 'Verkauft wird nichts — verteilt wird alles.',
+        art: 'kalt' },
+      'braustaette-still': {
+        kopf: 'Die Hypothek wird aufgerufen · {jahr}',
+        folge: 'Drei Braujahre ohne einen einzigen Sud. Die Bank ruft die Hypothek auf die '
+             + 'stillstehende Braustätte; der Kupferhelm kommt unter den Hammer, die '
+             + 'Kältemaschine wird ausgebaut und in eine fremde Halle gestellt.',
+        art: 'kalt' },
+      'anlage-still': {
+        kopf: 'Die Anlage wird verkauft · {jahr}',
+        folge: 'Drei Braujahre ohne eine einzige Charge. Eine Brauerei, die nicht fährt, ist '
+             + 'kein Betrieb mehr, sondern ein Grundstück mit Anlagen darauf — und dafür '
+             + 'findet sich immer ein Käufer.',
+        art: 'kalt' },
+      'haus-verloren': {
+        kopf: 'Der Hof ist leer, die Lade auch · {jahr}',
+        folge: 'Kein Bargeld, kein Hof, kein Pfand. Es ist nichts mehr da, was ein Gläubiger '
+             + 'nehmen könnte, und darum ist auch nichts mehr da, womit weitergebraut würde.',
+        art: 'ausgepfaendet' },
+      'keine-abnehmer': {
+        kopf: 'Das Brauhaus zum Anker hört auf · {jahr}',
+        folge: 'Kein Haus der Stadt führt noch Bier des Anker.',
+        art: 'entzogen' },
+      'gegenwart': {
+        kopf: 'Die Gegenwart ist erreicht — das Haus steht noch · {jahr}',
+        folge: 'Sechshundert Jahre an demselben Hof, und die Pfanne brennt. Von den Brauereien, '
+             + 'die 1350 in dieser Stadt Bier machten, ist das hier die einzige, die noch da ist.',
+        gut: true,
+        art: 'gegenwart' }
+    },
+
     uebergabe: {
       1: { wort: 'Die Übergabe vor dem Rat',
            satz: 'Der Rat trägt den Sudtag auf den neuen Namen um, der Grutherr nimmt die '

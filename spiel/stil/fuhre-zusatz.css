@@ -543,3 +543,94 @@
 }
 .fu-schere.auf { color: #e8b6a2; }
 .fu-schere.ab  { color: #b8d8a8; }
+
+/* ==========================================================================
+   DIE AUSGAENGE — DER ANTRAG UND DIE UEBERGABE
+
+   Zwei Blaetter, ein Bauplan: Ueberschrift, Lage, Satz, zwei Knoepfe
+   nebeneinander, Fussnote. Sie liegen zwischen 20 und 68 Prozent der Breite
+   und enden bei 76 Prozent der Hoehe — WEITER steht bei 93|96 (kern/orte.js),
+   die Reiterzeile der STADT bei 87,5. Ein Antrag ist eine Entscheidung, kein
+   Riegel (ZUSTAENDIGKEIT 23): wer nicht entscheidet, klickt weiter, und die
+   Frist laeuft.
+   ========================================================================== */
+.fu-ausgangblatt {
+  left: 20%;
+  top: 12%;
+  width: 48%;
+  max-height: 64%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 8);
+  overflow-y: auto;
+  box-shadow:
+    0 calc(var(--s) * 14) calc(var(--s) * 44) rgba(0, 0, 0, 0.55),
+    0 0 calc(var(--s) * 16) rgba(0, 0, 0, 0.3);
+}
+
+/* Die Lage in einer Zeile: wie viel Zeit noch bleibt, oder wie gut es steht. */
+.fu-ausgang-lage {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 18);
+  line-height: 1.35;
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  border-left: calc(var(--s) * 4) solid var(--rot, #9d3520);
+  background: rgba(157, 53, 32, 0.1);
+}
+.fu-uebergabe .fu-ausgang-lage {
+  border-left-color: var(--fu-gut, #4a6b3a);
+  background: rgba(74, 107, 58, 0.12);
+}
+
+/* Zwei Knoepfe, die einander ausschliessen. Untereinander, nicht
+   nebeneinander: der eine traegt ein Preisschild und der andere nicht, und
+   nebeneinander laege das Schild dann in der Mitte der Zeile statt am Rand. */
+.fu-ausgang-wahl {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 6);
+}
+.fu-ausgang-wahl > .knopf { width: 100%; font-size: calc(var(--s) * 26); }
+.fu-ausgang-wahl > .knopf.flach {
+  font-size: calc(var(--s) * 22);
+  background: linear-gradient(180deg, #e6dcc4 0%, #d3c5a4 100%);
+}
+
+.fu-ausgang-fuss {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  color: #7a6a4e;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   DAS URTEIL — und woran man sieht, WELCHES Ende es war
+
+   Vier Epochen, vier Untergaenge, dazu die Uebergabe und die Gegenwart. Der
+   Balken oben am Blatt traegt die Farbe des Ausgangs: rot, wo etwas genommen
+   wurde, ocker, wo verkauft wurde, gruen, wo das Haus weitergeht. Ohne die
+   Farbe waere ein gutes Ende von einem schlechten nur am Text zu
+   unterscheiden — und das ist zu wenig fuer ein Blatt, das die Partie
+   beschliesst.
+   ========================================================================== */
+.fu-schlussblatt { border-top-width: calc(var(--s) * 10); border-top-color: var(--rot, #9d3520); }
+.fu-ende-verkauft,
+.fu-ende-geschluckt,
+.fu-ende-marke,
+.fu-ende-zurueckgegeben { border-top-color: #a8842c; }
+.fu-ende-gut { border-top-color: var(--fu-gut, #4a6b3a); }
+
+.fu-ende-folge {
+  font-size: calc(var(--s) * 20);
+  line-height: 1.4;
+}
+.fu-ende-summe {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 20);
+  font-weight: 700;
+  color: var(--gruen, #4a6b3a);
+  padding: calc(var(--s) * 3) 0;
+  border-top: calc(var(--s) * 1) dotted var(--linie);
+  border-bottom: calc(var(--s) * 1) dotted var(--linie);
+}
+.fu-ende-gut .fu-satz { font-size: calc(var(--s) * 22); }
