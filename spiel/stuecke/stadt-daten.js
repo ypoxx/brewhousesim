@@ -81,7 +81,7 @@ var STADT_DATEN = {
          also 61 px INNERHALB des Hofes. Der Mann mit der Sackkarre am
          Verladedock steht damit frei. Und der Fuss wirft einen Schatten —
          'ohne Schatten, ohne Perspektive' war der halbe Befund. */
-      schild: { ort: 'tor', dx: -12, dy: 8, breite: 7.4, dreh: -2,
+      schild: { ort: 'tor', dx: -15, dy: 8, breite: 7.4, dreh: -2,
                 hell: true, gestell: 3.4 }
     }
   },
@@ -420,6 +420,12 @@ var STADT_DATEN = {
     { schluessel: 'brunnen', name: 'Ziehbrunnen', bild: 'brunnen',
       ort: 'brunnen', dx: 4, dy: 0,
       breite: 6.5, breiten: { 1: 6.5, 2: 5.4, 3: 6.2 },
+      /* Runde 7: in 1600 waren von seinen 9.200 eigenen Pixeln noch 824
+         zu sehen — Waschhaus und Hopfenlager standen davor. Ein Kauf, den
+         man nicht sieht, ist kein Kauf. Der Brunnen geht deshalb in II auf
+         den freien Hofboden davor (21|62 -> 25|71); in I und III bleibt er,
+         wo er ist. */
+      versatz: { 2: { dx: 4, dy: 9 } },
       von: 1, bis: 3, grund: 18,
       sagt: 'Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbringt.',
       nutzen: { sud: 1 } },
@@ -534,8 +540,25 @@ var STADT_DATEN = {
       sagt: 'Schroten im eigenen Hof, statt in der Mühle am Fluss zu warten.',
       nutzen: { sud: 1 } },
 
+    /* Runde 7. Zwei Befunde an derselben Datei.
+       · Der Kritiker der Runde 6: "bild/hof/pferdestall.png hat 17,1 Prozent
+         leeren Rand unten (jede andere Hofdatei hoechstens 2,1)." Nachgemessen
+         war es ein Staubkorn — einzelne Pixel mit Alpha 1..12 bei y=748..768,
+         die der Freistellung den Rahmen bis zum unteren Bildrand aufgezogen
+         haben. Das Bild ist mit werkbank/schuss/stadt-r7/staub.py neu
+         geschnitten: 772x779 -> 790x669, kein einziges deckendes Pixel
+         verloren. Damit sitzt der Fuss wieder auf dem Ort, den die Tabelle
+         nennt, statt 17 Prozent darueber zu haengen.
+       · Und weil er damit nach vorn rueckt, faellt auf, was vorher der
+         schwebende Rahmen verdeckt hat: Stall und Laderampe stehen in 1884
+         auf DEMSELBEN Platz ('rampe', beide dy rund -4). Die Rampe war zu
+         97 Prozent begraben — eine Bahnrampe, die man nicht sieht. In 1884
+         geht der Stall deshalb ein Band nach hinten auf A2 (33|63), den
+         Platz, den in dieser Epoche niemand hat: das Pferd ist dort nicht
+         weniger richtig, es steht nur nicht mehr im Weg der Bahn. */
     { schluessel: 'pferdestall', name: 'Pferdestall', bild: 'pferdestall',
       ort: 'rampe', dx: 1, dy: -4, breite: 13.5, von: 2, bis: 3, grund: 44,
+      versatz: { 3: { dx: -8, dy: -9 } },
       sagt: 'Zwei Kaltblüter. Der Ochse zieht mehr, das Pferd zieht schneller.',
       nutzen: {}, wirkt: 'die Fuhre fährt schneller' },
 
