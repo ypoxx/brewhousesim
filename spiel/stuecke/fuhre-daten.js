@@ -488,7 +488,7 @@ var FUHRE_DATEN = {
          Export. Vorher gab es sie gar nicht: wer einmal kein Eis mehr
          hatte, bekam nie wieder welches, und die Epoche endete
          unwiderruflich beim Nachguss (BEFUND-WIRTSCHAFT). */
-      eis: { start: 210, keller: 330, jeFuder: 16, menge: 42, frei: 6, frostVon: 9, frostBis: 22,
+      eis: { start: 210, keller: 330, jeFuder: 16, menge: 42, frei: 4, frostVon: 9, frostBis: 22,
              satz: 'Eis wird aus dem Fluss geschnitten, solange er trägt. Danach nicht mehr.' },
       faesser: 260,
       mengenfaktor: 1.6,
