@@ -1031,6 +1031,13 @@
     nah.appendChild(zeile('davon übrig geblieben',
       (Z.ertrag > 0 ? '+' : '') + geld(Math.round(Z.ertrag)),
       Z.ertrag < 0 ? 'pr-mager' : ''));
+    /* Was der Ausschuss zugrunde legt, ist nicht dieselbe Zahl — und der
+       Unterschied ist in den Zackenjahren der ganze Unterschied. */
+    if (Z.umsatzReihe.length) {
+      nah.appendChild(zeile('veranlagt wird der Schnitt aus '
+        + Math.min(3, Z.umsatzReihe.length + 1) + ' Jahren',
+        geld(Math.round(umsatzVeranlagt())), 'pr-veranlagt'));
+    }
     if (Z.nachlass && Z.nachlassBetrag > 0) {
       nah.appendChild(zeile(e.nachlassName || 'Nachlass auf die feste Last',
         '−' + geld(Z.nachlassBetrag), 'pr-frei'));
