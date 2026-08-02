@@ -153,3 +153,85 @@ durchsichtig, Rand zwei Reihen leer und acht weich, Kante nachweislich Alpha 0.
 `werkbank/schuss/stadt-r6/fuesse.py` mißt danach die 24 Fußpunkte je Bild neu.
 **Wer ein Hofbild austauscht, läßt beide laufen** — sonst mißt DAS LOT
 (`stuecke/stadt-zusatz.js`) das alte Bild.
+
+### Die Tiefe, der Schatten und zwei neue Bilder (Runde 7)
+
+> **Ein Bild traegt nicht nur, was darauf ist, sondern auch, wo sein Fuss
+> liegt — und wie gross ein Bierkasten darin ist.**
+
+Runde 6 ging mit zwei Saetzen zurueck, beide nachmessbar.
+
+**1 — `pferdestall.png` hatte 17,1 % leeren Rand unten**, jede andere der 32
+Dateien hoechstens 2,1. Der Stall malte deshalb bei 64,1 % Buehnenhoehe und
+trug den z-Index seiner Rahmenunterkante (68,0 %) — in 1884 lagen dadurch
+47 % der Gaertanks unter einem Stall, der zwei Meter hinter ihnen steht.
+
+Die Ursache war kein Zeichenfehler, sondern **ein Staubkorn**: einzelne Pixel
+mit Alpha 1..12 bei y = 748..768, unsichtbar, aber gross genug, dass die
+Freistellung den Rahmen bis zum unteren Bildrand aufgezogen hat. Geschnitten
+mit `werkbank/schuss/stadt-r7/staub.py`: **772x779 -> 790x669**, kein
+einziges deckendes Pixel verloren (337.158 vorher wie nachher).
+
+Und damit derselbe Fall nicht wiederkommt, kommt der z-Index jetzt aus dem
+**Fussprofil** statt aus dem Ort (`stuecke/stadt.js`, DIE TIEFE). Dafuer
+steht neben `K.fuesse` neu `K.bildmass` in `stuecke/stadt-daten.js` — die
+natuerliche Groesse jeder Hofdatei. **Wer ein Bild austauscht, laesst
+`werkbank/schuss/stadt-r7/profile.py` laufen; es schreibt beide Bloecke.**
+
+**2 — `kastenlager.png` war eine Riesen-Kistenwand.** Der Kritiker hat es
+neben dem Arbeiter (55 px = 1,70 m) nachgemessen: ein Bierkasten mass
+0,78 x 2,08 m, der Fuenferstapel las sich als 3,90 m hohe Wand. Ein Bierkasten
+ist 0,40 x 0,30 x 0,30 m. Das alte Bild hatte keinen Menschen darin, also auch
+kein Mass — dieselbe Ursache wie beim Ziehbrunnen der Runde 6.
+
+Das neue Bild (790x449) zeigt **neun Palettenstapel und zwei Arbeiter**, einer
+traegt einen Kasten, einer setzt einen ab. Jeder Stapel ist fuenf Kaesten hoch
+und reicht dem Mann an die Schulter — die Probe, die man mit blossem Auge
+machen kann. Bei `breite` 8,3 misst der Mann 55 px.
+
+**`verladedock.png` ist aus demselben Grund neu** (700x427). Das fremde Auge
+sagte "schwebende LKW", "der LKW steckt in der Rampe", "in der Luft haengende
+Laderampe" — alle drei zeigen auf dieselbe Ursache: **das Bild trug seinen
+eigenen Boden mit**, eine Betonplatte mit sichtbarer Kante, und der vordere
+Wagen ragte darueber hinaus. Zwei Bodenflaechen uebereinander ergeben genau
+den Eindruck einer Platte, die in der Luft haengt. Das neue Bild hat keinen
+Boden: zwei Lastwagen, alle Raeder auf **einer** Bodenlinie, zwei Arbeiter,
+einer mit der Sackkarre. Der Boden darunter ist der Hof. `breite` 15,5 -> 8,8;
+das waren 13 Meter Bildbreite fuer zwei Sechsmeterwagen.
+
+> **Regel fuer jedes neue Hofbild: kein eigener Boden, kein Sockel, keine
+> Schattenplatte. Der Boden gehoert der Platte.**
+
+**3 — `platte-1970.jpg` ist neu**, mit `--ref` auf sich selbst und der
+Auflage, jedes Gebaeude auf den Pixel stehen zu lassen. Behoben sind die vier
+Stellen, die das fremde Auge in vier Blindlaeufen benannt hat: die weissen
+**Parkplatzmarkierungen im Fabrikhof** (ein Brauereihof ist kein Parkplatz),
+die **Bruecke unten rechts**, ueber die der Fluss zu laufen schien, die
+**Bahn**, die in der Landschaft verschmolz, und die **verschmolzenen
+Hintergrundhaeuser**. Die Ortstreue ist danach nachgemessen, nicht geglaubt
+(`werkbank/schuss/stadt-r7/ortstreue.py`): der Turm von St. Michael hat in
+Zeile y=470 dieselben dunklen Kanten wie vorher (1488, 1491, 1497, 1511,
+1522, 1525, 1533, 1536, 1543, 1546, 1554, 1561, 1578, ... 1696, 1700, 1705),
+die Mauerkrone bei x=830 liegt weiter auf y=1197/1201/1224, und die
+Flussbiegung ist Kante fuer Kante dieselbe. Die Gegenprobe im Spiel: mit
+`?boden=1` liegt die gezeichnete Mauerlinie auch auf der neuen Platte auf der
+Mauerkrone und der Torkasten auf der Einfahrt.
+
+**4 — Der Schatten lag auf der falschen Seite.** Er war da (`stil/stadt.css`),
+aber er fiel 3 nach **rechts** und 6 nach unten. Auf allen vier Platten steht
+die Sonne rechts — nachgemessen an Dingen, die niemand gebaut hat: der
+Mauerturm im Park von 1970 wirft nach links, die Baeume daneben werfen nach
+links, die Bank unter dem Baum wirft nach links. Jetzt zwei Schatten nach
+links unten: ein kurzer, dunkler bindet den Fuss an den Boden, ein langer,
+weicher setzt das Gebaeude in dieselbe Sonne wie die Platte.
+
+### Das Werkzeug dazu (Runde 7)
+
+| Datei | was sie tut |
+|---|---|
+| `werkbank/schuss/stadt-r7/weissen.py` | JPEG-Weiss auf reines Weiss schnappen, **vor** dem Freistellen — sonst haelt `freistellen.py` das ganze Blatt fuer Objekt |
+| `werkbank/schuss/stadt-r7/staub.py` | Alphakoerner entfernen und neu auf die Umrandung schneiden |
+| `werkbank/schuss/stadt-r7/profile.py` | `fuesse` **und** `bildmass` fuer `stadt-daten.js` |
+| `werkbank/schuss/stadt-r7/pruefe.mjs` | Boden, Reihenfolge und pixelgenaue Deckung je Epoche, aus dem laufenden Spiel |
+| `werkbank/schuss/stadt-r7/ortstreue.py` | bleibt der Ort derselbe, wenn eine Platte neu gezeichnet wird |
+| `werkbank/schuss/stadt-r7/abnahme.mjs` | 36 Ladefaelle, 19 Bauhof-Kaeufe mit echten Mausklicks, 320 gespielte Wochen |
