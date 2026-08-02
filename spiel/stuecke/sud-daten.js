@@ -32,12 +32,32 @@
            Filter, Pasteur, Prozessrechner. Was hier gezaehlt wird, ist die
            Abweichung.
 
+   WAS "hoechst" IST — DIE FOLGE, DIE MAN BEIM WIRT WIEDERSIEHT
+   Runde 1 hat die Entscheidung gebaut, aber ihre Folge blieb im Keller:
+   Haltbarkeit, Gaerwochen, Bottiche. Beim Wirt war nichts davon zu sehen.
+   Deshalb traegt jede Option jetzt ein `hoechst` — die HOECHSTE STUFE, die
+   dieses Verfahren ueberhaupt hergibt.
+
+     Die FUHRE bestellt die Sorte (Duennbier · Grutbier · Starkbier), DER SUD
+     sagt, was die Pfanne davon halten kann. Wer Starkbier ansetzt und mit
+     Grut wuerzt, schlaegt Grutbier aus — drei Brautage fuer den Preis von
+     zweien. Und die Klosterschenke, die nur Stufe 3 fuehrt, steht dann vor
+     einem Fass, das sie nicht nimmt.
+
+   Die Zahl geht NIE nach oben: das Verfahren hebt kein Bier, es DECKELT es.
+   Der Vorgabestand jeder Epoche deckelt auf 2 — genau das Haus-Bier. Wer das
+   Brett nie aufschlaegt, verliert dadurch nichts. Nach unten deckeln nur die
+   billigen Abkuerzungen (Hafer 1600, ohne Kuehlung 1884); die oberste Stufe
+   ist die Belohnung fuer die unwiderrufliche Festlegung.
+
    WAS DIESES STUECK NICHT TUT
    · Es nimmt kein neues Geld aus der Kasse (WELLE-2 §1, Abgabendeckel §4).
      Jede Strafe dieses Stuecks wird in ROHSTOFF, BOTTICH oder GUETE bezahlt,
      nie in Muenze. Geld kostet nur, was der Spieler ausdruecklich kauft.
    · Es schreibt keinen Preis je Fass (das ist DER PREIS) und keine
-     Verbliste der Fuhre (das ist DIE FUHRE).
+     Verbliste der Fuhre (das ist DIE FUHRE). Auch `hoechst` schreibt keinen
+     Preis: es entscheidet, WELCHE Sorte im Fass liegt — den Preis dieser
+     Sorte setzen wie bisher DIE FUHRE und DER PREIS.
 
    SPERRLISTE: Der Braukessel ist eine OFFENE PFANNE, keine Destillierblase —
    das Wort "Blase" kommt in diesem Stueck nicht vor. Emailschilder erst ab
