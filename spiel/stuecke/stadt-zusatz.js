@@ -204,6 +204,77 @@
   }
 
   /* ----------------------------------------------------------------------
+     DIE TIEFE.  Der vierte Satz: wer vorne steht, liegt oben — und niemand
+     stellt sich auf den Platz eines anderen.
+
+     Gemessen wird an Rechtecken, nicht an Pixeln: der Browser gibt keine
+     Deckung freigestellter Bilder heraus, ohne dass man jedes Bild in eine
+     Leinwand malt, und das bei jedem Zeichnen. Ein Rechteck ueberschaetzt
+     die Deckung, also sind die Schwellen entsprechend grosszuegig — es soll
+     ein begrabenes Gebaeude finden, keinen Streifen ruegen. Was es findet,
+     hat der Kritiker der Runde 6 mit Pixeln nachgemessen: 47 Prozent.
+     ---------------------------------------------------------------------- */
+  var DECKARM = 0.42;    /* so viel des Kleineren darf sich decken */
+  var ORDNUNG = 0.10;    /* ab hier zaehlt die Reihenfolge schon */
+
+  function deckung(a, b) {
+    var w = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+    var h = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+    if (w <= 0 || h <= 0) return 0;
+    var klein = Math.min(a.width * a.height, b.width * b.height);
+    return klein > 0 ? (w * h) / klein : 0;
+  }
+
+  function bauten() {
+    var fach = document.getElementById('fach-bau-stadt');
+    var l = [];
+    if (!fach) return l;
+    var haeuser = fach.querySelectorAll('.stadt-haus[data-bau]:not(.geist)');
+    for (var i = 0; i < haeuser.length; i++) {
+      var el = haeuser[i];
+      var r = el.getBoundingClientRect();
+      if (r.width < 4 || r.height < 4) continue;
+      l.push({
+        schluessel: el.getAttribute('data-bau'),
+        el: el, r: r,
+        tiefe: parseFloat(el.getAttribute('data-tiefe')),
+        z: parseFloat(el.style.zIndex) || 0
+      });
+    }
+    return l;
+  }
+
+  function pruefeTiefe(laut) {
+    var l = bauten(), fehler = [];
+    for (var i = 0; i < l.length; i++) {
+      for (var j = i + 1; j < l.length; j++) {
+        var d = deckung(l[i].r, l[j].r);
+        if (d < ORDNUNG) continue;
+        var vorn = l[i].z >= l[j].z ? l[i] : l[j];
+        var hinten = vorn === l[i] ? l[j] : l[i];
+        /* Wer oben liegt, muss den tieferen Fuss haben. */
+        if (vorn.tiefe + 0.05 < hinten.tiefe) {
+          fehler.push({ art: 'reihenfolge', oben: vorn.schluessel, unten: hinten.schluessel,
+            deckung: Math.round(d * 100),
+            sagt: vorn.schluessel + ' liegt ueber ' + hinten.schluessel
+              + ', steht aber ' + B.rund(hinten.tiefe - vorn.tiefe, 2) + ' dahinter' });
+        } else if (d > DECKARM) {
+          fehler.push({ art: 'platz', oben: vorn.schluessel, unten: hinten.schluessel,
+            deckung: Math.round(d * 100),
+            sagt: vorn.schluessel + ' begraebt ' + hinten.schluessel + ' zu '
+              + Math.round(d * 100) + ' % — derselbe Platz' });
+        }
+      }
+    }
+    if (laut && window.console) {
+      if (!fehler.length) console.log('Tiefe: ' + l.length + ' Aufbauten, keine Deckung ueber '
+        + Math.round(DECKARM * 100) + ' %, keine verkehrte Reihenfolge');
+      fehler.forEach(function (f) { console.log('TIEFE  ' + f.sagt); });
+    }
+    return fehler;
+  }
+
+  /* ----------------------------------------------------------------------
      ?boden=1 — dasselbe, aber im Bild. Damit muss niemand dem Bauer glauben.
      ---------------------------------------------------------------------- */
   function zeichneLot() {
@@ -269,6 +340,25 @@
       });
     }
 
+    /* Wer sich in die Quere kommt, bekommt einen Rahmen um sein Rechteck —
+       gelb, wenn nur der Platz eng ist, rot, wenn die Reihenfolge falsch
+       herum steht. */
+    var o = B.buehne.el ? B.buehne.el.getBoundingClientRect() : { left: 0, top: 0 };
+    pruefeTiefe().forEach(function (f) {
+      [f.oben, f.unten].forEach(function (s) {
+        var el = fachbau ? fachbau.querySelector('.stadt-haus[data-bau="' + s + '"]') : null;
+        if (!el) return;
+        var r = el.getBoundingClientRect();
+        var kasten = B.el('div', 'lot-streit' + (f.art === 'reihenfolge' ? ' schlecht' : ''));
+        kasten.style.left = ((r.left - o.left) / b.breite * 100) + '%';
+        kasten.style.top = ((r.top - o.top) / b.hoehe * 100) + '%';
+        kasten.style.width = (r.width / b.breite * 100) + '%';
+        kasten.style.height = (r.height / b.hoehe * 100) + '%';
+        kasten.title = f.sagt;
+        lot.appendChild(kasten);
+      });
+    });
+
     fach.appendChild(lot);
   }
 
@@ -279,7 +369,7 @@
   B.auf('zeichne', function () {
     B.wage('stadt.boden', function () {
       zeichneLot();
-      if (B.arg.roh && B.arg.roh.boden === 'laut') pruefe(true);
+      if (B.arg.roh && B.arg.roh.boden === 'laut') { pruefe(true); pruefeTiefe(true); }
     });
   });
 
@@ -291,6 +381,14 @@
     fehler: function () {
       return pruefe().filter(function (z) { return !z.gut; });
     }
+  };
+
+  /* DIE TIEFE liegt neben DEM BODEN und wird genauso gerufen:
+     BRAUHAUS.stadt.tiefe.pruefe() — was deckt wen, und liegt es richtig? */
+  B.stadt.tiefe = {
+    pruefe: pruefeTiefe,
+    liste: bauten,
+    grenzen: { deckung: DECKARM, ordnung: ORDNUNG }
   };
 
 })(BRAUHAUS);
