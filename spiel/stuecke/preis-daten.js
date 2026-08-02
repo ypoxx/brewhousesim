@@ -427,7 +427,7 @@ var PREIS_DATEN = {
       lastenGrund: 11000,
       teuerungJahr: 1.048,
       teuerungKauf: 1.060,
-      lastenFest: 1000,
+      lastenFest: 900,
       pflichtUmsatz: 0.085,
       pflichtErtrag: 0.45,
       nachlass: 0.55,
