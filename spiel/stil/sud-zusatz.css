@@ -18,6 +18,50 @@
 .sud-schluss h2 { letter-spacing: calc(var(--s) * 4); }
 .sud-schluss .knopf { align-self: flex-start; margin-top: calc(var(--s) * 10); }
 
+/* Der Satz ueber die Pfanne — was aus ihr wird, wenn die Uhr steht. Er
+   steht ueber dem Sudbuch, weil er das einzige ist, was ein Spieler an
+   diesem Blatt wirklich lesen muss. */
+.sud-pfannensatz {
+  font-size: calc(var(--s) * 22);
+  line-height: 1.35;
+  padding: calc(var(--s) * 8) 0 calc(var(--s) * 6) calc(var(--s) * 10);
+  border-left: calc(var(--s) * 4) solid var(--holz-dunkel);
+  margin: calc(var(--s) * 6) 0;
+}
+
+/* -------------------------------------------------------------------------
+   DIE KLAPPE. Das Sudbuch am Ende der Partie, zugeklappt an den Rand gelegt.
+
+   Die Groesse ist kein Geschmack, sondern eine Rechnung: die Platzordnung
+   der STADT behandelt alles ueber 2,4 % der Buehnenflaeche als BRETT und
+   gibt dem zuletzt Aufgeschlagenen den Platz — genau so hat dieses Blatt in
+   Runde 2 das Schlussblatt der FUHRE zugeklappt. 16 % x 9 % = 1,44 % liegt
+   sicher darunter; die Klappe bleibt eine Marke und nimmt niemandem etwas.
+   ------------------------------------------------------------------------- */
+.sud-buchklappe {
+  position: absolute;
+  right: 1.4%;
+  top: 74%;
+  width: 16%;
+  max-height: 9%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 3);
+  padding: calc(var(--s) * 8) calc(var(--s) * 10);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(0, 0, 0, 0.06)), var(--papier);
+  border: calc(var(--s) * 2) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 4);
+  box-shadow: 0 calc(var(--s) * 6) calc(var(--s) * 16) rgba(0, 0, 0, 0.4);
+  color: var(--tinte);
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.sud-klappname { font-size: calc(var(--s) * 17); letter-spacing: calc(var(--s) * 2); }
+.sud-klappzahl { font-family: var(--mono); font-size: calc(var(--s) * 15); color: #6b5c42; }
+.sud-buchklappe .knopf { align-self: stretch; }
+
 /* Ein Bottich, der reif ist und nicht heraus kann, muss anders aussehen als
    einer, der gleich ausschlaegt — sonst sieht der Spieler nur "schlaegt aus"
    und wundert sich, warum nichts im Keller ankommt. */

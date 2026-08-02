@@ -57,54 +57,152 @@
   });
 
   /* ======================================================================
-     2 — DAS SCHLUSSBLATT
+     2 — DAS SCHLUSSBLATT, UND WARUM ES JETZT ZURUECKTRITT
 
      ZUSTAENDIGKEIT §12: Das Haus darf fallen, und dann steht die Uhr. Jedes
-     Stueck malt sein eigenes Schlussblatt; keines muss dafuer wissen, was die
-     anderen tun. DER SUD schreibt auf, was in seiner Pfanne war — das ist
-     der einzige Nachruf, den ein Brauhaus verdient.
+     Stueck malt sein eigenes Schlussblatt; keines muss dafuer wissen, was
+     die anderen tun. DER SUD schreibt auf, was in seiner Pfanne war.
+
+     RUNDE 3 — DAS BLATT LAG AUF DEM URTEIL.
+
+     Gemessen (1600x1000, nur WEITER bis zum Ende, alle vier Epochen): DIE
+     FUHRE malt bei 352|90 ein Schlussblatt von 896x561 px, auf dem steht,
+     warum die Partie vorbei ist ("Die Zunft streicht das Haus zum Anker aus
+     der Reihe"). Dieses Blatt hier lag mit 736x268 bei 416|220 MITTEN
+     DARAUF — und weil die Platzordnung der STADT dem zuletzt Aufgeschlagenen
+     den Platz gibt, klappte sie das fremde Blatt zu. Wer danach auf den
+     Schirm sah, fand als einzige offene Flaeche DAS SUDBUCH: die
+     Rechenschaft eines Stuecks ueber sich selbst, kein Urteil ueber die
+     Partie. Genau das hat die Aufsicht in BEFUND-ENDE.md §1(a)
+     aufgeschrieben, und sie hat recht — der Fehler lag hier.
+
+     Also tritt das Sudbuch zurueck: es legt sich als KLAPPE an den Rand,
+     klein genug, um in der Platzordnung eine Marke und kein Brett zu sein,
+     und mit den lebenden Zahlen darauf. Ein Klick schlaegt es auf, ein
+     zweiter legt es zurueck. Nur wenn sonst NIEMAND ein Schlussblatt malt,
+     schlaegt es von selbst auf — dann ist Stille schlimmer als Deckung.
      ====================================================================== */
+
+  var SCHLUSS = { d: null, offen: false };
+
+  /* Malt ein anderes Stueck bereits ein Schlussblatt? Gesucht wird ueber
+     alle Ebenen ausser der Bildplatte, in fremden Faechern, nach Blaettern,
+     die sich selbst als Schluss ausweisen. */
+  function fremderSchluss() {
+    var ebenen = ['marken', 'hand', 'kopf', 'blatt'], i, j, k;
+    for (i = 0; i < ebenen.length; i++) {
+      var eb = document.getElementById('ebene-' + ebenen[i]);
+      if (!eb) continue;
+      for (j = 0; j < eb.children.length; j++) {
+        var fach = eb.children[j];
+        var wer = fach.getAttribute('data-stueck') || '';
+        if (wer.indexOf('sud') === 0) continue;
+        for (k = 0; k < fach.children.length; k++) {
+          var el = fach.children[k];
+          var kl = String(el.className || '');
+          if (/schluss|nachruf|ende/i.test(kl)) return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  function epochenSatz(feld) {
+    var q = (typeof SUD_DATEN !== 'undefined') ? SUD_DATEN : null;
+    if (!q) return '';
+    var e = B.welt.zeit.epoche;
+    if (feld === 'kalt') return (q.kalt && q.kalt[e]) || null;
+    return (q.schluss && q.schluss[e]) || null;
+  }
+
+  /* Was aus der Pfanne wird. Ueber die PARTIE urteilt dieses Blatt nicht —
+     das steht auf dem Blatt dessen, der das Ende ausgeloest hat. */
+  function pfannenSatz() {
+    var d = SCHLUSS.d || {};
+    var kalt = epochenSatz('kalt');
+    if (kalt && d.grund === kalt.grund) return kalt.ende + ' ' + kalt.pfanne;
+    var s = epochenSatz('schluss');
+    if (!s) return '';
+    return d.grund ? s.faellt : s.steht;
+  }
+
+  function male() {
+    var Z = B.SUD_ZUSTAND;
+    if (!Z) return;
+    var fach = B.ebene('blatt', 'sud');
+    B.leere(fach);
+    var d = SCHLUSS.d || {};
+    var jahr = d.jahr || B.welt.zeit.jahr;
+
+    /* --- zugeklappt: eine Marke am Rand, mit den lebenden Zahlen --------- */
+    if (!SCHLUSS.offen) {
+      var klappe = B.el('div', 'sud-buchklappe');
+      klappe.setAttribute('data-frei', '1');
+      klappe.appendChild(B.el('b', 'sud-klappname', 'DAS SUDBUCH'));
+      klappe.appendChild(B.el('span', 'sud-klappzahl',
+        Z.gesamtSude + ' Sude · ' + B.welt.menge(Z.gesamtFass)));
+      klappe.appendChild(B.knopf({
+        text: 'Sudbuch aufschlagen',
+        zug: 'sud:schluss-auf',
+        klasse: 'sud-tat klein',
+        titel: 'Was in dieser Pfanne war, Jahr für Jahr.',
+        tu: function () { SCHLUSS.offen = true; male(); }
+      }));
+      fach.appendChild(klappe);
+      return;
+    }
+
+    /* --- aufgeschlagen: das Blatt ---------------------------------------- */
+    var blatt = B.el('div', 'sud-schluss blatt');
+    blatt.appendChild(B.el('h2', null, 'DAS SUDBUCH WIRD GESCHLOSSEN'));
+    blatt.appendChild(B.el('div', 'sud-achssatz',
+      'Angestellt hat dieses Haus ' + Z.gesamtSude + ' Sude — '
+      + B.welt.menge(Z.gesamtFass) + ' Bier, in ' + jahr + ' zum letzten Mal.'));
+
+    var pf = pfannenSatz();
+    if (pf) blatt.appendChild(B.el('div', 'sud-pfannensatz', pf));
+
+    var wf = [];
+    if (B.sud && B.sud.verfahren) {
+      var v = B.sud.verfahren();
+      for (var k in v) { if (Object.prototype.hasOwnProperty.call(v, k)) wf.push(v[k]); }
+    }
+    blatt.appendChild(B.el('div', 'sud-fussnote',
+      'Zuletzt gefahren: ' + (wf.join(' · ') || '—')
+      + ' · im Gärkeller stehen noch ' + Z.bottiche.length + '.'));
+
+    Z.buch.slice(-8).reverse().forEach(function (x) {
+      var z = B.el('div', 'sud-buchzeile');
+      z.appendChild(B.el('span', 'wann', x.jahr + '/' + x.woche));
+      z.appendChild(B.el('span', 'was', x.text));
+      blatt.appendChild(z);
+    });
+
+    blatt.appendChild(B.knopf({
+      text: 'Sudbuch zuklappen',
+      zug: 'sud:schluss-zu',
+      klasse: 'sud-tat',
+      titel: 'Das Sudbuch legt sich an den Rand zurück.',
+      tu: function () { SCHLUSS.offen = false; male(); }
+    }));
+
+    fach.appendChild(blatt);
+  }
 
   B.auf('ende', function (d) {
     B.wage('sud.ende', function () {
-      var Z = B.SUD_ZUSTAND;
-      if (!Z) return;
-      var fach = B.ebene('blatt', 'sud');
-      B.leere(fach);
-
-      var blatt = B.el('div', 'sud-schluss blatt');
-      blatt.setAttribute('data-frei', '1');
-      blatt.appendChild(B.el('h2', null, 'DAS SUDBUCH WIRD GESCHLOSSEN'));
-      blatt.appendChild(B.el('div', 'sud-achssatz',
-        'Angestellt hat dieses Haus ' + Z.gesamtSude + ' Sude — '
-        + B.welt.menge(Z.gesamtFass) + ' Bier, in ' + (d && d.jahr ? d.jahr : B.welt.zeit.jahr)
-        + ' zum letzten Mal.'));
-
-      var wf = [];
-      if (B.sud && B.sud.verfahren) {
-        var v = B.sud.verfahren();
-        for (var k in v) { if (Object.prototype.hasOwnProperty.call(v, k)) wf.push(v[k]); }
-      }
-      blatt.appendChild(B.el('div', 'sud-fussnote',
-        'Zuletzt gefahren: ' + (wf.join(' · ') || '—')
-        + ' · im Gärkeller stehen noch ' + Z.bottiche.length + '.'));
-
-      Z.buch.slice(-8).reverse().forEach(function (x) {
-        var z = B.el('div', 'sud-buchzeile');
-        z.appendChild(B.el('span', 'wann', x.jahr + '/' + x.woche));
-        z.appendChild(B.el('span', 'was', x.text));
-        blatt.appendChild(z);
-      });
-
-      blatt.appendChild(B.knopf({
-        text: 'Sudbuch zuklappen',
-        zug: 'sud:schluss-zu',
-        klasse: 'sud-tat',
-        tu: function () { B.leere(B.ebene('blatt', 'sud')); }
-      }));
-
-      fach.appendChild(blatt);
+      SCHLUSS.d = d || {};
+      SCHLUSS.offen = false;
+      male();
     });
+    /* Die fremden Schlussblaetter entstehen erst im 'zeichne' NACH diesem
+       Ruf — deshalb wird nicht jetzt entschieden, sondern gleich darauf. */
+    window.setTimeout(function () {
+      B.wage('sud.ende.platz', function () {
+        if (!fremderSchluss()) SCHLUSS.offen = true;
+        male();
+      });
+    }, 700);
   });
 
   /* ======================================================================
