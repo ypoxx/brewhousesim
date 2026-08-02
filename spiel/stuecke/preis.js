@@ -318,19 +318,19 @@
   /* Was die Kasse traegt, wird bezahlt; der Rest wird angeschrieben. Kein
      Alles-oder-nichts — sonst wuerde ein einziges mageres Jahr das Haus in
      eine Schuldenspirale kippen, aus der es nicht zurueckfindet. */
-  function buche(betrag, name, art) {
+  function buche(betrag, name, art, wurzel) {
     betrag = Math.round(betrag);
     if (betrag <= 0) return true;
     var kasse = Math.max(0, Math.floor(B.welt.haus.kasse));
     if (kasse >= betrag) {
       B.welt.zahle(betrag, name, 'spieler');
-      Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht' });
+      Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', wurzel: wurzel });
       return true;
     }
     if (kasse > 0) B.welt.zahle(kasse, name + ' (Teilzahlung)', 'spieler');
     var rest = betrag - kasse;
     Z.rueckstand += rest;
-    Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', offen: rest });
+    Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', wurzel: wurzel, offen: rest });
     return false;
   }
 
@@ -476,7 +476,7 @@
           + geld(Z.nachlassBetrag) + ' werden nicht angeschlagen. '
           + 'Das Braujahr hat ' + geld(-Z.ertrag) + ' gekostet und nichts übrig gelassen.');
       }
-      pflichtenJetzt().forEach(function (p) { buche(p.betrag, p.name, 'pflicht'); });
+      pflichtenJetzt().forEach(function (p) { buche(p.betrag, p.name, 'pflicht', p.art); });
     }
 
     /* 4. Was gebaut ist, traegt. Nominal — ein fester Zins wird mit den
@@ -865,7 +865,11 @@
         var wert = r.betrag
           ? (r.betrag > 0 ? '+' + geld(r.betrag) : geld(r.betrag))
           : (r.menge ? '+' + B.zahl(r.menge) + ' ' + B.welt.epoche().rohstoff : '—');
-        var z = zeile(r.name, wert, 'pr-' + r.art + (r.offen ? ' pr-offen' : ''));
+        var z = zeile(r.name, wert, 'pr-' + r.art + (r.offen ? ' pr-offen' : '')
+          + (r.wurzel ? ' pr-wurzel-' + r.wurzel : ''));
+        /* Woran diese Zeile haengt, steht an der Zeile — nicht in einer
+           Legende und nicht im Quelltext. */
+        if (r.wurzel && WURZEL[r.wurzel]) z.appendChild(B.el('span', 'pr-wurzel', WURZEL[r.wurzel]));
         if (r.offen) z.appendChild(B.el('span', 'pr-marke', 'offen ' + geld(r.offen)));
         kasten.appendChild(z);
         summe += r.betrag;

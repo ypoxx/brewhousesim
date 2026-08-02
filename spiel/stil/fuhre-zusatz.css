@@ -348,17 +348,23 @@
 /* --------------------------------------------------------------------------
    DAS SCHLUSSBLATT
    -------------------------------------------------------------------------- */
-.fu-sperre-ende { background: rgba(12, 8, 4, 0.74); }
-
+/* Der Deckel .fu-sperre-ende ist ersatzlos weg — siehe stil/fuhre.css beim
+   Georgi-Blatt und den Block bei schliesseSommer() in stuecke/fuhre.js.
+   Das Blatt traegt seinen Schatten selbst: er faellt um das Blatt herum,
+   nicht ueber den ganzen Hof, und er wird mit dem Blatt weggeschnitten,
+   wenn die Platzordnung der STADT es in einen Reiter klappt. */
 .fu-schlussblatt {
   left: 22%;
   top: 9%;
   width: 56%;
-  max-height: 82%;
+  max-height: 80%;
   display: flex;
   flex-direction: column;
   gap: calc(var(--s) * 8);
   overflow-y: auto;
+  box-shadow:
+    0 calc(var(--s) * 16) calc(var(--s) * 54) rgba(0, 0, 0, 0.6),
+    0 0 calc(var(--s) * 18) rgba(0, 0, 0, 0.35);
 }
 
 .fu-schluss-these {

@@ -2718,8 +2718,9 @@
 
   /* --- DAS GEORGI-BLATT ----------------------------------------------- */
 
-  /* Der eine Weg hinaus. Steht hier oben, weil ihn drei Dinge brauchen: der
-     Knopf im Fuss der Tafel, die Sperre und die Escape-Taste. */
+  /* Der eine Weg hinaus. Steht hier oben, weil ihn vier Dinge brauchen: der
+     Knopf im Fuss der Tafel, der WEITER-Knopf des Kerns, die Escape-Taste
+     und der Wochenwechsel. */
   function schliesseSommer(grund) {
     if (!Z.sommerOffen) return false;
     Z.sommerOffen = false;
@@ -2732,9 +2733,70 @@
   function sommerLiegtOben() { return !!(Z.sommerOffen && Z.sommer && !schlussLiegtOben()); }
   function schlussLiegtOben() { return !!(Z.schlussOffen && Z.schluss); }
 
-  /* Eine Tafel, die oben liegt, muss den Hintergrund WIRKLICH sperren — und
-     zwar auch gegen die Tastatur. kern/kopf.js schaltet mit Leertaste und
-     Eingabe eine Woche weiter; ein Deckel aus Pixeln haelt das nicht auf.
+  /* ====================================================================
+     ZUSTAENDIGKEIT 23 — DER ZETTEL IST EINE ENTSCHEIDUNG, KEIN RIEGEL.
+
+     Bis hierher lag unter der Georgi-Tafel ein Deckel ueber der ganzen
+     Buehne (.fu-sperre, Ebene 'blatt' z=60) und deckte damit auch den
+     WEITER-Knopf des Kerns (Ebene 'kopf' z=50). Gemessen wurde, was das
+     kostet: ein Spieler, der nur WEITER klickt, kam in allen vier Epochen
+     im zweiten Braujahr nicht weiter — 1351/1, 1601/1, 1885/1, 1971/1,
+     der Deckel auf 100 Prozent des Fensters, heraus nur ueber zwei Knoepfe,
+     die man kennen muss.
+
+     Der Deckel ist ersatzlos weg, und zwar aus drei Gruenden:
+       · Er hat gedeckt, was er nicht decken durfte (WEITER).
+       · Er hat die Unwahrheit gesagt: neben ihm blieben Bauhof, Reiterleiste
+         und Michaeli-Griff bedienbar. Eine Sperre ueber alle Stuecke ist
+         Sache des Kerns und keines Stuecks (ZUSTAENDIGKEIT 2).
+       · Und er hat seine eigene Tafel ueberlebt: klappt die Platzordnung der
+         STADT die Tafel weg, blieb der Deckel liegen — ein schwarzes Fenster
+         ohne Knopf darin. Genau das war die Sackgasse in Epoche IV.
+
+     Der Halt zu Georgi bleibt (ZUSTAENDIGKEIT 2): solange die Tafel im Bild
+     liegt, schaltet WEITER die Woche NICHT weiter, sondern legt die Tafel
+     beiseite. Ein Klick, kein Vorwissen. Liegt sie nicht im Bild, haelt sie
+     auch niemanden auf.
+     ==================================================================== */
+
+  /* Ist die Tafel fuer die Maus wirklich da? Gemessen an dem Knopf, auf den
+     es ankommt: ihrem eigenen Ausgang. Trifft elementFromPoint in seiner
+     Mitte den Knopf selbst, liegt die Tafel im Bild und darf aufhalten.
+     Trifft er ihn nicht — weil die Platzordnung der STADT sie in einen
+     Reiter geklappt hat oder ein fremdes Brett darueberliegt —, dann hat
+     dieses Stueck kein Recht, die Woche anzuhalten. Wer nicht sichtbar
+     fragt, bekommt keine Antwort. */
+  function tafelImBild() {
+    var k = document.querySelector('[data-zug="fuhre:sommer-zu"]');
+    if (!k) return false;
+    var r = k.getBoundingClientRect();
+    if (!r.width || !r.height) return false;
+    var x = r.left + r.width / 2, y = r.top + r.height / 2;
+    if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) return false;
+    var t = document.elementFromPoint(x, y);
+    return !!(t && (t === k || k.contains(t)));
+  }
+
+  /* WEITER ist der Ausgang, den jeder kennt. Dieser Horcher laeuft in der
+     Fangphase auf document und damit vor dem Horcher am Knopf selbst
+     (kern/buehne.js haengt ihn in der Blasenphase an) — stopPropagation
+     nimmt dem Kern den Klick ab, bevor die Woche laeuft. Angemeldet genau
+     einmal, im Aufbau. */
+  function weiterHorcher(ereignis) {
+    if (!sommerLiegtOben()) return;
+    var ziel = ereignis.target && ereignis.target.closest
+      ? ereignis.target.closest('[data-zug="weiter"]') : null;
+    if (!ziel) return;
+    if (!tafelImBild()) return;          /* dann haelt hier nichts mehr auf */
+    ereignis.preventDefault();
+    ereignis.stopPropagation();
+    B.ton.spiele('tafel:kreide');
+    schliesseSommer('fuhre-sommer-weiter');
+  }
+
+  /* Die Tastatur des Kerns (Leertaste, Eingabe) tut dasselbe wie WEITER, weil
+     kern/kopf.js sie auf denselben Knopf legt. Also tut sie hier auch
+     dasselbe: sie legt die Tafel beiseite, statt die Woche zu schalten.
      Dieser Horcher laeuft in der Fangphase auf document und damit VOR dem
      Horcher des Kerns, der am selben Knoten in der Blasenphase haengt.
      stopImmediatePropagation() nimmt ihm die Taste ab, bevor er sie sieht.
@@ -2769,14 +2831,18 @@
     }
 
     if (ereignis.key === ' ' || ereignis.key === 'Enter') {
-      /* Dem Kern die Taste in jedem Fall abnehmen — sonst laeuft die Woche
-         weiter, waehrend die Tafel noch oben liegt. Nur wenn der Finger auf
-         einem Knopf DIESER Tafel steht, darf die Taste ihre eigene,
-         eingebaute Wirkung behalten. */
-      ereignis.stopImmediatePropagation();
+      /* Steht der Finger auf einem Knopf DIESER Tafel, behaelt die Taste
+         ihre eigene, eingebaute Wirkung. Sonst tut sie, was WEITER tut:
+         sie legt die Tafel beiseite. Nur wenn die Tafel gar nicht im Bild
+         liegt, bleibt die Taste dem Kern und die Woche laeuft. */
       var ziel = ereignis.target;
       var eigen = ziel && ziel.closest && ziel.closest('.fu-sommerblatt');
-      if (!eigen) ereignis.preventDefault();
+      if (eigen) return;
+      if (!tafelImBild()) return;
+      ereignis.preventDefault();
+      ereignis.stopImmediatePropagation();
+      B.ton.spiele('tafel:kreide');
+      schliesseSommer('fuhre-sommer-taste');
     }
   }
 
@@ -2784,16 +2850,11 @@
     if (!sommerLiegtOben()) return;
     var s = Z.sommer, e = ep();
 
-    /* Die Sperre: ein Deckel ueber der ganzen Buehne, im Fach der Fuhre und
-       damit auf Ebene 'blatt' (z=60). Sie liegt ueber allem, was darunter
-       liegt — insbesondere ueber dem WEITER-Knopf des Kerns auf Ebene
-       'kopf' (z=50). data-frei, weil die Reiterleiste der Stadt eine Sperre
-       niemals zuklappen darf: eine zugeklappte Sperre unter einer offenen
-       Tafel waere genau die Falle, die sie verhindern soll. */
-    var sperre = B.el('div', { klasse: 'fu-sperre', daten: { frei: '1' } });
-    sperre.setAttribute('aria-hidden', 'true');
-    fach.appendChild(sperre);
-
+    /* Kein Deckel mehr ueber der Buehne — siehe den Block bei
+       schliesseSommer(). Die Tafel ist ein Blatt auf dem Tisch, kein Riegel
+       vor der Tuer: sie liegt zwischen x 21 und 79 Prozent und endet bei
+       89 Prozent Hoehe, WEITER steht bei 84–93 / 94–98 Prozent. Die beiden
+       Rechtecke beruehren einander nicht, in keiner Aufloesung. */
     var bl = B.el('div', { klasse: 'blatt fu-sommerblatt', daten: { frei: '1' } });
     bl.setAttribute('role', 'dialog');
     bl.setAttribute('aria-modal', 'true');
@@ -2938,13 +2999,17 @@
        So steht er bei jeder Aufloesung an derselben Stelle. */
     var fuss = B.el('div', 'fu-sommer-fuss');
     fuss.appendChild(B.knopf({
-      text: 'Michaeli — das Jahr beginnt', zug: 'fuhre:sommer-zu', klasse: 'gross',
-      titel: 'Zurück auf den Hof. Die Taste Escape tut dasselbe.',
+      /* ZUSTAENDIGKEIT 23, zweiter Teil: ein sichtbarer Knopf mit dem Wort
+         darauf, das ihn schliesst. Das Wort steht vorn, damit es auch dann
+         zu lesen ist, wenn die Zeile schmal wird. */
+      text: 'Tafel schließen — Michaeli, das Jahr beginnt',
+      zug: 'fuhre:sommer-zu', klasse: 'gross',
+      titel: 'Zurück auf den Hof. WEITER und die Taste Escape tun dasselbe.',
       tu: function () { schliesseSommer('fuhre-sommer-zu'); }
     }));
     fuss.appendChild(B.el('div', 'fu-sommer-hinweis',
-      'Solange diese Tafel oben liegt, ruht der Hof: WEITER ist gesperrt. '
-      + 'Escape schliesst sie ebenfalls.'));
+      'Solange die Tafel auf dem Tisch liegt, ruht die Woche. '
+      + 'WEITER und die Taste Escape legen sie ebenfalls beiseite.'));
     bl.appendChild(fuss);
 
     fach.appendChild(bl);
@@ -3023,10 +3088,12 @@
     if (!schlussLiegtOben()) return;
     var s = Z.schluss;
 
-    var sperre = B.el('div', { klasse: 'fu-sperre fu-sperre-ende', daten: { frei: '1' } });
-    sperre.setAttribute('aria-hidden', 'true');
-    fach.appendChild(sperre);
-
+    /* Auch hier kein Deckel mehr. Aus demselben Grund wie bei Georgi: er
+       ueberlebt sein eigenes Blatt, wenn die Platzordnung der STADT es
+       wegklappt — und dann liegt ein schwarzes Fenster ueber dem Hof, in dem
+       kein einziger Knopf steht, auch nicht der Wiederanfang. Die Uhr steht
+       an dieser Stelle ohnehin (kern/uhr.js: z.ende sperrt WEITER); ein
+       zweites Schloss vor einer verschlossenen Tuer ist keines. */
     var bl = B.el('div', { klasse: 'blatt fu-schlussblatt', daten: { frei: '1' } });
     bl.setAttribute('role', 'dialog');
     bl.setAttribute('aria-modal', 'true');
@@ -3143,6 +3210,9 @@
 
       /* Fangphase: laeuft vor dem Tastenhorcher des Kerns. Siehe tastenSperre. */
       document.addEventListener('keydown', tastenSperre, true);
+      /* Fangphase: laeuft vor dem Klickhorcher am WEITER-Knopf selbst.
+         Siehe weiterHorcher — ZUSTAENDIGKEIT 23. */
+      document.addEventListener('click', weiterHorcher, true);
 
       richteEpocheEin(true);
 
@@ -3185,6 +3255,12 @@
     },
 
     woche: function () {
+      /* Die Georgi-Tafel gehoert dem Jahreswechsel und keiner zweiten Woche.
+         Ist die Woche trotzdem weitergelaufen — weil die Tafel gar nicht im
+         Bild lag und deshalb niemanden aufhalten durfte —, wird sie hier
+         beiseitegelegt. So kann kein Blatt liegenbleiben, das der Spieler
+         nie gesehen hat. */
+      Z.sommerOffen = false;
       if (Z.epoche !== B.welt.zeit.epoche) richteEpocheEin(false);
       Z.meldung = null;
       umlaufZurueck();

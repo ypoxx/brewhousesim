@@ -593,20 +593,18 @@
    DAS GEORGI-BLATT — der Sommer laeuft ohne Hand ab
    -------------------------------------------------------------------------- */
 
-/* Die Sperre. Eine Tafel, die oben liegt, sperrt den Hintergrund wirklich:
-   dieser Deckel deckt die ganze Buehne und faengt jeden Klick ab, der sonst
-   den WEITER-Knopf des Kerns (Ebene 'kopf', z=50) traefe. Er liegt im Fach
-   der Fuhre auf Ebene 'blatt' (z=60), also darueber. Die Tafel selbst ist
-   sein naechstes Geschwister und liegt damit ueber ihm. */
-.fu-sperre {
-  position: absolute;
-  inset: 0;
-  pointer-events: auto;
-  background: rgba(24, 15, 6, 0.55);
-  backdrop-filter: blur(calc(var(--s) * 2));
-  -webkit-backdrop-filter: blur(calc(var(--s) * 2));
-}
+/* HIER LAG DIE SPERRE — .fu-sperre, ein Deckel ueber der ganzen Buehne.
+   Sie ist ersatzlos weg (ZUSTAENDIGKEIT 23). Sie deckte den WEITER-Knopf
+   des Kerns (Ebene 'kopf', z=50) vom Fach der Fuhre aus (Ebene 'blatt',
+   z=60) und hielt damit einen Spieler, der nur WEITER klickt, im zweiten
+   Braujahr fest — in allen vier Epochen. Wer sie wieder einbaut, baut den
+   Fehler wieder ein; die Begruendung im Langen steht in stuecke/fuhre.js
+   bei schliesseSommer().
 
+   Die Tafel traegt ihren Schatten stattdessen selbst: er faellt um sie
+   herum und nicht ueber den Hof, er faengt keinen Klick ab (Schatten sind
+   nicht anfassbar), und er verschwindet mit ihr, wenn die Platzordnung der
+   STADT sie in einen Reiter klappt. */
 .fu-sommerblatt {
   left: 21%;
   top: 11%;
@@ -616,6 +614,9 @@
   flex-direction: column;
   gap: calc(var(--s) * 8);
   overflow-y: auto;
+  box-shadow:
+    0 calc(var(--s) * 16) calc(var(--s) * 54) rgba(0, 0, 0, 0.6),
+    0 0 calc(var(--s) * 18) rgba(0, 0, 0, 0.35);
 }
 
 /* Der Ausgang klebt am Fuss und scrollt nicht weg — bei jeder Aufloesung
