@@ -587,6 +587,48 @@
     return true;
   }
 
+  /* ----------------------------------------------------------------------
+     DER RUECKLAEUFER — 1970.
+
+     Ohne ihn war "Charge freigeben" streng besser als "Charge verschneiden":
+     das eine kostete sechs Punkte Guete, das andere ein Drittel des Tanks.
+     Eine Wahl mit genau einer richtigen Antwort ist keine Wahl. Der Handel
+     misst jetzt nach — spaeter, ohne den Spieler, mit einer
+     Wahrscheinlichkeit, die an der Abweichung haengt, die er selbst
+     durchgewinkt hat. Bezahlt wird in BIER, nicht in Muenze.
+     ---------------------------------------------------------------------- */
+  function fuelle(vorlage, x) {
+    return String(vorlage || '')
+      .replace('{nr}', x.nr).replace('{ab}', x.ab)
+      .replace('{menge}', B.welt.menge(x.weg || x.menge));
+  }
+
+  function rueckPruefen() {
+    var ch = ep().charge, r = ch && ch.rueck;
+    if (!r || !Z.rueck.length) return false;
+    var jetzt = woManifest(), etwas = false;
+    for (var i = Z.rueck.length - 1; i >= 0; i--) {
+      var x = Z.rueck[i];
+      if (jetzt < x.faellig) continue;
+      Z.rueck.splice(i, 1);
+      etwas = true;
+      if (!B.wuerfel.trifft(Math.min(0.7, (x.ab || 0) / 100 * 2.2))) {
+        buch(fuelle(r.durch, x));
+        continue;
+      }
+      x.weg = Math.max(1, Math.round(x.menge * 0.5));
+      var raus = B.sud.nimmHeraus(x.weg, { aeltestes: true });
+      x.weg = raus.length || x.weg;
+      Z.guete = B.grenze(Z.guete - 8, 0, 100);
+      buch(r.wer + ': Charge ' + x.nr + ' zurück — ' + B.welt.menge(x.weg) + ' aus dem Lager');
+      B.welt.schreibe(fuelle(r.zurueck, x), 'sud');
+      B.welt.protokolliere({ wer: 'gegner',
+        was: r.wer + ': Charge ' + x.nr + ' zurückgewiesen', preis: 0, menge: x.weg });
+      B.ton.spiele('sud:rueckruf', { ort: 'keller' });
+    }
+    return etwas;
+  }
+
   /* ======================================================================
      DIE GUETE — vier Namen, ein Zeiger
      ====================================================================== */
@@ -767,6 +809,11 @@
   function chargeFrei(b) {
     b.gesperrt = false; b.geprueft = true;
     Z.guete = B.grenze(Z.guete - 6, 0, 100);
+    var r = ep().charge && ep().charge.rueck;
+    if (r) {
+      Z.rueck.push({ nr: b.nr, ab: b.streuung, menge: b.fass,
+        faellig: woManifest() + B.wuerfel.ganz(r.frist[0], r.frist[1]) });
+    }
     buch('Charge ' + b.nr + ' freigegeben — der Handel misst nach');
     B.welt.schreibe('Charge ' + b.nr + ' geht mit ±' + b.streuung + ' % hinaus. '
       + 'Wenn der Einkauf nachmisst, steht das Haus in seinem Buch.', 'sud');
@@ -839,6 +886,18 @@
       else if (o.einmal && !bezahlt(a, o)) marke.appendChild(B.el('span', 'sud-schild', 'einmal zu zahlen'));
       else if (o.schild) marke.appendChild(B.el('span', 'sud-schild', o.schild));
 
+      /* Das Preisschild dieses Stuecks: was fuer ein Bier dabei herauskommt.
+         Es steht vor der Haltbarkeit, weil man es beim Wirt wiedersieht und
+         die Haltbarkeit nur im Keller. */
+      if (o.hoechst !== undefined) {
+        var zs = sorteAufStufe(o.hoechst);
+        if (zs) {
+          var traegtAlles = o.hoechst >= obersteStufe();
+          marke.appendChild(B.el('span', 'sud-rang' + (traegtAlles ? ' hoch' : ' tief'),
+            (traegtAlles ? 'trägt ' : 'höchstens ') + zs.name));
+        }
+      }
+
       var wk = o.wirkung || {};
       var wirk = [];
       if (wk.haltbar && wk.haltbar !== 1) wirk.push('Haltbarkeit ×' + String(wk.haltbar).replace('.', ','));
@@ -886,10 +945,13 @@
     }
     Z.bottiche.forEach(function (b) {
       var rest = Math.max(0, b.reifAb - jetzt);
+      var ziel = ausschlagSorte(b);
       var bt = B.el('div', 'sud-bottich s' + b.stufe
-        + (b.gesperrt ? ' gesperrt' : (rest ? '' : ' reif')));
+        + (b.gesperrt ? ' gesperrt' : (rest ? '' : ' reif'))
+        + (ziel ? ' gestuft' : ''));
       bt.appendChild(B.el('span', 'sud-bnr', String(b.nr)));
       bt.appendChild(B.el('span', 'sud-bsorte', b.sorte));
+      if (ziel) bt.appendChild(B.el('span', 'sud-bziel', '→ ' + ziel.name));
       bt.appendChild(B.el('span', 'sud-bmenge', B.welt.menge(b.fass)));
       var lagerVoll = B.welt.vorrat.faesser.length >= B.welt.vorrat.plaetze;
       bt.appendChild(B.el('span', 'sud-brest',
@@ -897,10 +959,28 @@
                    : (rest ? ('reif in ' + rest + (rest === 1 ? ' Woche' : ' Wochen'))
                            : (lagerVoll ? 'reif — kein Platz im Lager' : 'schlägt aus'))));
       bt.title = b.sorte + ' · ' + b.verfahren + ' · hält am Fass '
-        + Math.round(b.haltbarPur * (b.faktor || 1)) + ' Wochen';
+        + Math.round((ziel ? Math.max(1, (ziel.haltbar || 6) - (ziel.reife || 0)) : b.haltbarPur)
+                     * (b.faktor || 1)) + ' Wochen'
+        + (ziel ? ' — angesetzt als ' + b.sorte + ', schlägt als ' + ziel.name + ' aus' : '');
       band.appendChild(bt);
     });
     kasten.appendChild(band);
+
+    /* 1970: was draussen steht und noch nicht nachgemessen ist. Ein
+       gedeckter Zug des Handels, mit Datum — kein Ueberfall aus dem Nichts. */
+    var rr = ep().charge && ep().charge.rueck;
+    if (rr && Z.rueck.length) {
+      var rk = B.el('div', 'sud-rueck');
+      rk.appendChild(B.el('b', 'sud-achsname', rr.name));
+      rk.appendChild(zeile('sud-achssatz', rr.satz));
+      Z.rueck.slice().sort(function (x, y) { return x.faellig - y.faellig; }).forEach(function (x) {
+        var w = Math.max(0, x.faellig - jetzt);
+        rk.appendChild(zeile('sud-rueckzeile', 'Charge ' + x.nr + ' · ' + B.welt.menge(x.menge)
+          + ' · ±' + x.ab + ' % · ' + (w ? 'nachgemessen in ' + w + (w === 1 ? ' Woche' : ' Wochen')
+                                          : 'wird jetzt nachgemessen')));
+      });
+      kasten.appendChild(rk);
+    }
 
     var reihe = B.el('div', 'sud-werkzeug');
     var p = kaufPreis();
