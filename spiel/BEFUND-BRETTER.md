@@ -1,0 +1,137 @@
+# BEFUND — Die Eichung hat einen verklemmten Bildschirm gemessen, nicht die Wirtschaft
+
+Geschrieben am 2. August 2026, vor der ersten Arbeit der Welle 2. Anlass war der Auftrag aus
+`STAND.md` §2 — *„der Michaelitag ist in allen vier Epochen praktisch unbezahlbar"* — und die
+Auflage aus `ZUSTAENDIGKEIT.md` §13. Beim Nachmessen ist etwas anderes herausgekommen.
+
+**Wie hier gemessen wurde.** Playwright, Chromium, 1920 × 1000 (dazu 2752 × 1536 und
+1366 × 768 für die Deckungsprobe), `?epoche=1..4&saat=1350`. Alles Gezählte stammt vom
+Bildschirm: `elementFromPoint`, `elementsFromPoint`, echte Mausklicks, `getComputedStyle`,
+und die Sätze, die das Spiel selbst an seine Tafel schreibt. Werkzeuge liegen daneben und
+sind einzeln nachfahrbar: `werkbank/schuss/eichung/decke.mjs`, `wohin.mjs`, `gegenprobe.mjs`.
+
+---
+
+## 1 — Der Befund in einem Satz
+
+> **Ein Drittel aller Bedienelemente ist in jeder Epoche für die Maus nicht da, sobald mehrere
+> Bretter offen liegen — und genau in diesem Zustand hat die Eichung gemessen.** In Epoche 1
+> und 2 trifft es `fuhre:kauf:rohstoff`, den Einkauf, von dem das ganze Jahr abhängt.
+
+Gemessen mit `decke.mjs`, alle Bretter aufgeklappt, je Epoche:
+
+| Epoche | Züge im DOM | davon für die Maus nicht erreichbar |
+|---|---|---|
+| 1 · 1350 | 83 | **29** |
+| 2 · 1600 | 91 | **30** |
+| 3 · 1884 | 94 | **30** |
+| 4 · 1970 | 88 | **30** |
+
+Die Decke ist fast immer DER SUD über DIE FUHRE. Betroffen sind nicht Randdinge, sondern die
+Verben der Woche: `fuhre:laden:*` und `fuhre:abladen:*` für zwei bis vier Häuser in jeder
+Epoche, `fuhre:ziel:bar` / `:borg` / `:ziel`, `fuhre:tafel-ab:*`, und die Einkäufe —
+`fuhre:kauf:rohstoff` (E1, E2), `fuhre:kauf:eis` und `:sudwerk` (E3), `fuhre:kauf:lastzug`
+(E4).
+
+## 2 — Warum: zwei Bretter auf demselben Fleck
+
+Kein Zufall und kein Zeichenfehler, sondern zwei Zeilen CSS, die dieselbe Fläche vergeben.
+
+| | links | oben | Breite | x-Bereich |
+|---|---|---|---|---|
+| `.sud-brett` (`stil/sud.css`) | 1,2 % | 12,4 % | **47 %** | **1,2 – 48,2 %** |
+| `.fu-haeuser` (`stil/fuhre.css`) | 1,1 % | 12,6 % | 25,6 % | 1,1 – 26,7 % |
+| `.fu-tafel` | 27,4 % | 12,6 % | 23,2 % | 27,4 – 50,6 % |
+| `.fu-keller` | 27,4 % | 56,2 % | 23,2 % | 27,4 – 50,6 % |
+
+DIE FUHRE kachelt ihre vier Bretter überschneidungsfrei. **DER SUD legt sich mit voller Breite
+über drei davon.** Wer zuletzt aufklappt, liegt oben.
+
+Nachgefahren, Schritt für Schritt, an `fuhre:kauf:rohstoff` in Epoche 2:
+
+| Zustand | Ergebnis |
+|---|---|
+| Vorgabestand (alles zugeklappt) | verdeckt — das eigene Brett ist zu (so gewollt) |
+| nur das FUHRE-Brett aufgeklappt | **erreichbar** |
+| SUD zusätzlich aufgeklappt | **verdeckt von `div.sud-leer`** |
+| SUD wieder zugeklappt | **erreichbar** |
+
+Der Knopf ist dabei durchgehend `disabled = false` und liegt im Bild. Er sieht in jedem dieser
+Zustände gleich aus. Nur trifft der Klick ihn nicht.
+
+Das ist derselbe Fehlertyp wie in `STAND.md` §4 („zwei Stücke, zwei Meinungen über denselben
+Zustand") — nur größer, weil er nicht einen Knopf trifft, sondern eine Fläche.
+
+## 3 — Was das mit der Eichung gemacht hat
+
+`messe.mjs` ruft `klappeAuf()` und klappt **alle sieben Bretter** auf, bevor es zu spielen
+beginnt. Damit liegt DER SUD von der ersten Woche an über DIE FUHRE, und der sparsame Stil —
+*„Rohstoff nachkaufen, wenn er knapp wird"* — kauft nie etwas, weil sein Knopf nicht zu
+treffen ist. Die Folge steht in `wohin.mjs`, Epoche 2:
+
+* Ab Woche 10 des ersten Jahres steht der Rohstoff auf **1** und bleibt dort — 90 Wochen lang.
+* Das Spiel schreibt es selbst an die Tafel, jede zweite Woche: **„Kein Sud: kein Hopfen."**
+* Ohne Sud kein Bier: Die Einnahmen fallen von 1.464 fl (1600) auf 368 fl (1601) auf 55 fl
+  (1602), während die festen Lasten — Fuhrlohn, Löhne, Pachtzins, Ungeld, Zunftumlage — mit
+  rund 950 fl im Jahr weiterlaufen. Ab 1604 steht die Kasse auf 0 und bleibt dort.
+
+**Die Gegenprobe** (`gegenprobe.mjs`) spielt denselben Stil, räumt aber vor jedem Klick das
+Brett weg, das darüber liegt — wie ein Mensch es täte. Epoche 2, 100 Wochen, sonst identisch:
+
+| | Rohstoffkäufe | Rohstoff | Keller | Kasse 1603 |
+|---|---|---|---|---|
+| wie die Eichung (alles offen) | **0** | 1 … 1 | fällt auf 10 | 0 → 0 |
+| wie ein Spieler (Bretter freiräumen) | **5** | 1 … 89 | hält 16 – 24 | 0 → **93** |
+
+Derselbe Code, dieselbe Saat, derselbe Stil. Der einzige Unterschied ist, ob der Einkaufsknopf
+zu treffen war.
+
+## 4 — Was daraus folgt, und was ausdrücklich nicht
+
+**Es folgt:** Die Zahlenreihen der Eichung messen nicht die Wirtschaft des Spiels, sondern
+einen Betrieb, dem der Einkauf gesperrt war. Das betrifft die Kennzahltabelle in `STAND.md` §5
+(*„1350 bis 1884 fallen unter eins und bleiben dort"*) und den Satz in §2, der Welle 2 ihre
+erste Aufgabe gegeben hat. **Beides muss neu gemessen werden, bevor irgendjemand eine Zahl an
+Preisen, Löhnen oder Angeboten verstellt.** Wer jetzt die Wirtschaft nachzieht, eicht sie auf
+eine Klemme.
+
+**Es folgt nicht,** dass die Wirtschaft in Ordnung ist. Auch im freigeräumten Lauf steht die
+Kasse in Epoche 2 im Jahr 1602 auf null. Der Unterschied ist, dass sie sich danach wieder
+erholt (93 fl im Jahr 1603) und der Keller Bier behält, statt auf zehn Fass abzusinken.
+**Knapp statt tot.** Ob „knapp" die Latte trifft, sagt erst die neue Messung.
+
+**Und ein Nebenbefund zu §13, der die Auflage entlastet:** Nach der jüngsten eingecheckten
+Eichung — nach der letzten Codeänderung entstanden, also gültig für den heutigen Stand — wird
+in **allen vier Epochen innerhalb der ersten drei Braujahre mindestens eine unwiderrufliche
+Festlegung anklickbar**: E1 im Jahr 1351 (`vertrag`, 160 Pf), E2 im Jahr 1601 (`reinheit`,
+810 fl), E3 schon 1884 (`konvention`, 9.200 M), E4 schon 1970 (`privat`, 81.000 DM). Der Satz
+in §2 — *„0 von 5 Angeboten und 0 von 3 bzw. 4 Festlegungen"* — stammt aus einem Stand von
+16:33 Uhr; die Eichung von 21:36 Uhr widerspricht ihm. Da diese Zahlen aus den verklemmten
+Läufen stammen, also aus einem Betrieb mit **zu wenig** Geld, kann die Lage mit freiem Einkauf
+nur besser sein. **§13 gilt nach heutigem Stand als erfüllt** — mit Ausnahme des dort
+genannten Nebenbefunds, dass in E3 und E4 ab dem zweiten Jahr die einzige noch erreichbare
+Festlegung die mit dem Preisschild „ohne Ausgabe" ist (`aktien`, `konzern`). Das steht.
+
+## 5 — Was zu tun ist, in dieser Reihenfolge
+
+1. **Die Bretter dürfen einander nicht zudecken.** Zwei Wege, beide zulässig, beide klein:
+   entweder bekommt `.sud-brett` eine Fläche, die DIE FUHRE nicht benutzt — frei ist der
+   Streifen rechts oben (x 51,3 – 98,8 %, y 12,4 – 55,4 %, das sind 47,5 × 43 Prozentpunkte,
+   und `.sud-brett` ist 47 % breit) —, oder die Reiter der STADT klappen beim Aufschlagen
+   weg, was sie verdecken würden. Der zweite Weg ist der ehrlichere, wenn die Bühne für fünf
+   Stücke zu klein geworden ist; der erste ist zwei Zahlen.
+2. **`decke.mjs` wird eine Latte.** Ein Stück, dessen Brett fremde Schaltflächen zudeckt, ist
+   nicht fertig — gleichgültig, wie gut es aussieht. Die Zahl gehört neben `BRAUHAUS.lage`
+   in jeden Lauf: **erreichbar muss jeder aktive Zug sein, in jeder Epoche, in jeder
+   Auflösung.**
+3. **`messe.mjs` bekommt das Freiräumen aus `gegenprobe.mjs`.** Solange `klappeAuf()` alle
+   Bretter offen lässt, misst die Eichung weiter den verklemmten Bildschirm — auch nachdem
+   Punkt 1 erledigt ist, denn dann liegt eben ein anderes Brett oben.
+4. **Danach erst** die Eichung neu fahren, `STAND.md` §2 und §5 nachschreiben und entscheiden,
+   ob die Wirtschaft wirklich eine Nacharbeit braucht.
+
+## 6 — Der eine Satz
+
+Die Werkbank hat sauber gemessen und richtig gerechnet. Sie hat nur nicht geprüft, ob der
+Spieler, den sie simuliert, seine Knöpfe erreicht — und deshalb elf Monate Spielzeit lang
+einem Brauhaus zugesehen, dem jemand die Tür zum Hopfenhändler zugestellt hatte.

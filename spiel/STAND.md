@@ -14,6 +14,18 @@ Wo eine Zahl von jemand anderem stammt, steht das dabei.
 
 ---
 
+> **Nachtrag vom 2. August 2026 — vor der ersten Arbeit der Welle 2 lesen.**
+> Die Zahlen in §2 und §5 sind auf einem verklemmten Bildschirm entstanden: `messe.mjs`
+> klappt alle Bretter auf, dabei legt sich das Brett von DER SUD über das von DIE FUHRE, und
+> `fuhre:kauf:rohstoff` ist dann für die Maus nicht zu treffen. Der gemessene Betrieb konnte
+> keinen Rohstoff kaufen und schrieb neunzig Wochen lang „Kein Sud: kein Hopfen" an seine
+> eigene Tafel. Ein Drittel aller Bedienelemente ist in jeder Epoche so zugedeckt.
+> Belege, Gegenprobe und die Reihenfolge der Nacharbeit: **`spiel/BEFUND-BRETTER.md`**.
+> Kurz: die Aufgabe der Welle 2 ist zuerst die Platzordnung der Bretter, dann eine neue
+> Eichung — und erst danach die Frage, ob die Wirtschaft überhaupt eine Nacharbeit braucht.
+> Der Satz in §2 zu §13 ist überdies überholt: die jüngste Eichung zeigt in allen vier
+> Epochen eine anklickbare Festlegung innerhalb der ersten drei Braujahre.
+
 ## 1 — Was jetzt wirklich läuft
 
 * **Vier Epochen laden fehlerfrei und zeigen denselben Ort.** St. Michael, die Flussbiegung,
