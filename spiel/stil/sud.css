@@ -307,8 +307,8 @@
   padding-top: calc(var(--s) * 4);
 }
 .knopf.sud-tat {
-  font-size: calc(var(--s) * 19);
-  min-height: calc(var(--s) * 44);
+  font-size: calc(var(--s) * 18);
+  min-height: calc(var(--s) * 38);
   padding: calc(var(--s) * 6) calc(var(--s) * 12);
   white-space: normal;
 }

@@ -1184,11 +1184,17 @@
 
     /* Das Sudbuch — was ohne den Spieler geschehen ist. */
     var b = B.el('div', 'sud-buch');
-    b.appendChild(B.el('b', 'sud-achsname', 'DAS SUDBUCH'));
+    var bk = B.el('div', 'sud-achskopf');
+    bk.appendChild(B.el('b', 'sud-achsname', 'DAS SUDBUCH'));
+    bk.appendChild(B.el('span', 'sud-frage', 'dieses Jahr ' + Z.jahrSude + ' Sude · '
+      + B.welt.menge(Z.jahrFass) + ' · ' + Z.jahrFehl + ' verloren'
+      + (Z.gestuft ? ' · ' + Z.gestuft + ' zurückgestuft' : '')
+      + (Z.jahrAnzeige ? ' · ' + Z.jahrAnzeige + '× angezeigt' : '')));
+    b.appendChild(bk);
     /* Vier Zeilen, nicht sieben: die Hoehe dieses Bretts darf nicht davon
        abhaengen, wie viel diese Woche passiert ist. Ein Brett, das mit dem
        Sudbuch waechst, waechst irgendwann ueber fremde Knoepfe. */
-    var letzte = Z.buch.slice(-4).reverse();
+    var letzte = Z.buch.slice(-3).reverse();
     if (!letzte.length) b.appendChild(zeile('sud-leer', 'Noch keine Eintragung.'));
     letzte.forEach(function (x) {
       var z = B.el('div', 'sud-buchzeile');
@@ -1196,9 +1202,6 @@
       z.appendChild(B.el('span', 'was', x.text));
       b.appendChild(z);
     });
-    b.appendChild(zeile('sud-fussnote', 'Dieses Jahr: ' + Z.jahrSude + ' Sude angestellt · '
-      + B.welt.menge(Z.jahrFass) + ' · ' + Z.jahrFehl + ' verloren'
-      + (Z.jahrAnzeige ? ' · ' + Z.jahrAnzeige + '× angezeigt' : '')));
     rechts.appendChild(b);
 
     rolle.appendChild(links);
