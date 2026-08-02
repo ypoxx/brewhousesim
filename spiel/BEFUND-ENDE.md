@@ -84,13 +84,31 @@ mit verschiedener Bedeutung** — `kern/kopf.js` die Kennzahl, `stuecke/name.js`
 das Deckungsband des Rufs. Nur die Kopfzeile trägt die Klasse `.deckung`. Wer
 ohne sie misst, misst den Ruf und merkt es nicht.
 
-**Zweitens, was NICHT gesichert ist: rho = −1,000 ist noch kein Urteil über das
-Spiel.** Diese Zahl steht für einen Stil, der nichts tut. Ein Haus, das nie
-etwas kauft und nie braut, *muss* fallen — dass die Kennzahl dann monoton fällt,
-ist richtig und kein Fehler. Die Latte zielt auf den Spieler, der spielt. Die
-Gegenprobe im Stil „kaufend" (jede Woche der billigste umkämpfte Zug, sobald die
-Kasse ihn trägt) läuft; **erst mit ihr darf man sagen, ob die Latte gerissen
-ist.** Bis dahin gilt aus dieser Messung nur der Satz über die Kopfzeile.
+**Zweitens, was erst die Gegenprobe entscheidet: ist rho = −1,000 nur der
+Randfall eines Stils, der nichts tut?** Ein Haus, das nie kauft und nie braut,
+*muss* fallen; dass die Kennzahl dann monoton fällt, wäre richtig und kein
+Fehler. Also derselbe Lauf noch einmal im Stil **„kaufend"**: jede Woche der
+billigste umkämpfte Zug, sobald die Kasse ihn trägt.
+
+| Epoche | rho umkämpft · nur WEITER | rho umkämpft · kaufend | Jahre unter 1× · WEITER | · kaufend | Median · WEITER | · kaufend |
+|---|---|---|---|---|---|---|
+| 1350 | −1,000 | **−1,000** | 3 von 4 | **3 von 3** | 0,00× | 0,00× |
+| 1600 | −1,000 | **−1,000** | 2 von 4 | **4 von 4** | 1,67× | **0,00×** |
+| 1884 | −1,000 | **−0,949** | 0 von 4 | **4 von 4** | 4,42× | **0,00×** |
+| 1970 | −0,800 | **−0,800** | 1 von 4 | **4 von 4** | 2,84× | **0,01×** |
+
+**Die Antwort ist nein — Spielen macht es schlimmer, nicht besser.** 1884 hielt
+sich passiv mit einem Median von 4,42× und **null** Jahren unter 1×; wer dort
+kauft, steht in **allen vier** Jahren unter 1× und im Median bei 0,00×. In
+beiden Stilen, in allen vier Epochen, liegt |rho| bei 0,8 bis 1,0 — das Ziel
+ist |rho| < 0,7.
+
+**Damit ist die zweite Latte gerissen, und zwar nicht am Nenner.** Die Kennzahl
+fällt monoton, weil die Barschaft monoton fällt: beide Extremstile enden bei
+null. Wer nichts tut, verhungert langsam; wer jeden umkämpften Zug nimmt,
+verhungert schnell. Ein Mittelweg mag existieren, aber die Wirtschaft gibt ihm
+keine Rückkopplung — und **das** ist die Aufgabe, nicht die Beschriftung der
+Kopfzeile.
 
 ## 3 · Was daraus für die nächste Welle folgt
 

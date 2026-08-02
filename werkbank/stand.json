@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-02T17:11:19+00:00",
- "phase": "Welle 2b, erste Runde vollständig: alle vier Stücke bestehen mit Auflage, kein Fund auf der Sperrliste. Drei von vier blinden Kritikern benennen unabhängig denselben Fehler — die Kopfzeile 'nächster Zug' nennt in jeder Epoche über hunderte Wochen unverändert dieselbe Kleinigkeit (Umtrunk 9 Pf, Freitrunk 18 fl, Annonce 240 M, Bierdeckel 1.800 DM), während das billigste umkämpfte Angebot ein Vielfaches kostet. Zwei benennen: die Wirtschaft hat keinen Boden und kein Ende — ab Jahr 2 bis 4 steht die Kasse auf 0 und die Partie läuft noch sechzehn Jahre weiter.",
+ "stand": "2026-08-02T17:30:51+00:00",
+ "phase": "Aufsicht misst am eingefrorenen Stand: die Partie endet in allen vier Epochen nach gut drei Braujahren, stumm und immer aus demselben Grund.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -758,6 +758,10 @@
   {
    "zeit": "2026-08-02T17:11:19+00:00",
    "text": "Die zwölf unerreichbaren Züge sind frei: 0 von 80/90/93/84 statt 3/2/2/5, brettweise nachgemessen."
+  },
+  {
+   "zeit": "2026-08-02T17:30:51+00:00",
+   "text": "Aufsicht misst am eingefrorenen Stand: die Partie endet in allen vier Epochen nach gut drei Braujahren, stumm und immer aus demselben Grund."
   }
  ]
 }
