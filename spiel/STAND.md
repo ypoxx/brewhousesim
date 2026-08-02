@@ -1,260 +1,151 @@
-# STAND — was am Ende von Welle 1 wirklich da ist
+# STAND — nach Welle 2b
 
-Geschrieben vom **Glättungslauf** am 1. August 2026, nach Welle 1. Der Glättungslauf entwirft
-nichts. Er hat den laufenden Build in allen vier Epochen fotografiert, durchgeklickt und
-zusammengesetzt, was vier getrennt gebaute Stücke aneinander vorbei gemacht haben.
+Geschrieben von der Aufsicht am 2. August 2026, nachdem der Workflow
+`wf_94fe188f-ca8` durch war: **zwölf Agenten, vier Stücke, je ein Builder, ein
+blinder Kritiker und eine Nacharbeit. Kein Fehler, kein Abbruch.**
 
-**Wie hier gemessen wurde.** Playwright, Chromium, `?epoche=1..4`, Auflösungen 2752×1536,
-1920×1000 und 1366×768. Alles Gezählte stammt vom Bildschirm — `elementFromPoint`,
-`innerText`, echte Mausklicks, die abgelesenen Zahlen des Spiels selbst. Rund 1.600 gespielte
-Wochen, dazu ein Dutzend Sonderprüfungen. **Kein Seitenfehler, kein Konsolenfehler, kein
-404 in keinem Lauf; `BRAUHAUS.lage` blieb in allen vier Epochen leer.**
+Der Stand von Welle 1 liegt unverändert in [`STAND-WELLE-1.md`](STAND-WELLE-1.md).
 
-Wo eine Zahl von jemand anderem stammt, steht das dabei.
+**Wie hier gemessen wurde.** Playwright, Chromium, 1920×1000, `?epoche=1..4&saat=1350`,
+alles am Bildschirm — `elementFromPoint`, `innerText`, echte Mausklicks, die
+Zahlen, die das Spiel selbst anzeigt. **Gemessen wird an einem eingefrorenen
+Commit auf Hafen 8900** (`werkbank/schuss/aufsicht/messstand.sh`), nicht am
+Arbeitsbaum: solange Builder darin schreiben, ist jede Zahl aus dem Arbeitsbaum
+ein wanderndes Ziel. Wo eine Zahl von einem Builder oder Kritiker stammt, steht
+es dabei.
 
 ---
 
-> **Nachtrag vom 2. August 2026 — vor der ersten Arbeit der Welle 2 lesen.**
-> Die Zahlen in §2 und §5 sind auf einem verklemmten Bildschirm entstanden: `messe.mjs`
-> klappt alle Bretter auf, dabei legt sich das Brett von DER SUD über das von DIE FUHRE, und
-> `fuhre:kauf:rohstoff` ist dann für die Maus nicht zu treffen. Der gemessene Betrieb konnte
-> keinen Rohstoff kaufen und schrieb neunzig Wochen lang „Kein Sud: kein Hopfen" an seine
-> eigene Tafel. Ein Drittel aller Bedienelemente ist in jeder Epoche so zugedeckt.
-> Belege, Gegenprobe und die Reihenfolge der Nacharbeit: **`spiel/BEFUND-BRETTER.md`**.
-> Kurz: die Aufgabe der Welle 2 ist zuerst die Platzordnung der Bretter, dann eine neue
-> Eichung — und erst danach die Frage, ob die Wirtschaft überhaupt eine Nacharbeit braucht.
-> Der Satz in §2 zu §13 ist überdies überholt: die jüngste Eichung zeigt in allen vier
-> Epochen eine anklickbare Festlegung innerhalb der ersten drei Braujahre.
->
-> **Nachtrag 2, gleicher Tag:** Die Eichung ist auf dem freien Bildschirm neu gefahren.
-> Die Kennzahltabelle in §5 ist damit ersetzt — **alle vier** Epochen kippen jetzt
-> messbar, zwei nach unten (1600, 1884: vier von sechs Jahren unter 1×) und zwei nach
-> oben (1350, 1970). Zahlen, Ursachenkette und die Richtung der Nacharbeit stehen in
-> **`spiel/BEFUND-WIRTSCHAFT.md`**.
+## 1 — Was diese Welle geschlossen hat
 
-## 1 — Was jetzt wirklich läuft
+**Die Kopfzeile nennt den umkämpften Zug.** Das war Auflage 1 aus drei von vier
+Verdikten und die Ursache dafür, dass die zweite Messlatte über zwei Wellen
+hinweg nicht zu beurteilen war. `kern/welt.js` hielt das blanke Minimum über
+alle Meldungen; damit gewann in jeder Epoche derselbe feste Jahresposten der
+Werbung, dessen Preis sich in 400 Wochen nicht bewegt. Die Kennzahl war die
+Kasse mit anderer Beschriftung.
 
-* **Vier Epochen laden fehlerfrei und zeigen denselben Ort.** St. Michael, die Flussbiegung,
-  der Brückenstandort, Gasthof Lindenhof und die Mühlenstelle liegen in allen vier Platten an
-  derselben Stelle (gemessen vom Kritiker der STADT, Runde 2).
-* **Der Hof wächst sichtbar.** Einzeln nachweisbare Hofbauten je Epoche: **9 / 12 / 12 / 12**
-  (Latte war sechs; Verfahren: „alle gegen alle-ohne-genau-diesen-einen", nur im Stadtfenster
-  gezählt — Kritiker der STADT, Runde 2, in Runde 3 auf den Maßstab hin nachgebessert).
-* **Die Woche ist bedienbar und kostet etwas.** Sud einstellen, Rohstoff kaufen, Wagen laden,
-  Fuhre abschicken, Jahr schließen — 200 Wochen am Stück in jeder Epoche ohne Sackgasse.
-* **Der Michaelitag liegt als eigenes Blatt oben**: fünf Angebote nebeneinander mit
-  Preisschild in der Währung des Jahres, darunter drei bis vier unwiderrufliche Festlegungen
-  mit Siegel, dazu DIE RECHNUNG, DER ANSCHLAG und DIE LEITER (die Kennzahl der zweiten Latte
-  schreibt das Spiel selbst auf sein Blatt).
-* **Der Gegner zieht ohne den Spieler.** 38 / 43 / 38 / 91 Züge in je 92 Wochen, mit Folgen im
-  Bild statt Ankündigungen (Kritiker DER GEGNER, Runde 1).
-* **Seine Preisschilder sind seit dieser Glättung mit der Maus zu drücken** — siehe §4.
-* **Das Haus kann fallen, und dann steht die Uhr.** Nachgestellt: E1 endet im Januar 1354,
-  E4 im Februar 1974, beide mit Grund `keine-abnehmer`; danach verweigert `naechsteWoche()`
-  den Dienst. Das ewig weiterlaufende WEITER aus Runde 3 ist weg.
-* **Der Ton ist gemessen und bestanden** (Latte 3, Welle 2, Stück DER KLANG): ein fremdes Ohr
-  nennt blind 1350 / 1600 / 1884 / 1970 mit 95 / 95 / 95 / 100 Prozent richtig.
-* **Entscheidungen mit Preisschild nebeneinander, ohne dass man erst etwas aufschlagen muss**
-  (erreichbar *und* aktiv, `elementFromPoint`, Vorgabestand): **8 / 9 / 8 / 7.**
-  Mit allen Brettern aufgeschlagen: 13 / 9 / 8 / 12.
+Alle vier Stücke haben unabhängig dieselbe Kernänderung verlangt, DIE FUHRE
+schon in Welle 2. Eingearbeitet als `meldeZug(was, preis, art, zug)` mit
+Rangordnung vor Preisvergleich (ZUSTAENDIGKEIT §24), Commit `c882fd7`:
 
-## 2 — Was nur scheinbar läuft
-
-Dies ist der wichtigere Abschnitt.
-
-* **Der Michaelitag ist in allen vier Epochen praktisch unbezahlbar.** Gespielt mit der
-  Handlung, die das Spiel selbst vorschlägt (liefern, Rohstoff nachkaufen), steht die Kasse
-  *am Michaelitag* in E1 bei −7 / −14 / −21 Pf und in E2 bei 0 / −14 / −28 fl. Ergebnis in den
-  ersten drei Braujahren: **0 von 5 Angeboten und 0 von 3 bzw. 4 Festlegungen aktiv.** In E3
-  und E4 ist im ersten Jahr ein Teil erreichbar (3/5 bzw. 2/5 Angebote), danach nichts mehr —
-  und **die einzige je aktive Festlegung ist in beiden Epochen die mit dem Preisschild „ohne
-  Ausgabe"**. Das Herzstück von DER PREIS ist also sichtbar, beschriftet, gesiegelt — und in
-  keiner Epoche zu haben. Die Auflage aus `ZUSTAENDIGKEIT.md` §13 („in jeder der vier Epochen
-  muss innerhalb der ersten drei Braujahre mindestens eine unwiderrufliche Festlegung
-  tatsächlich anklickbar werden") ist **nicht erfüllt**, gemessen am Bildschirm.
-* **Das Geld ist da — nur nie an dem Tag, an dem es gebraucht wird.** Im Jahresverlauf steigt
-  die Kasse in E1 auf das Vierfache der Startbarschaft; Michaeli nimmt sie vollständig. Das
-  ist kein Zahlenfehler in einem Stück, sondern die Summe aus vier Stücken (§5).
-* **Nach dem dritten Braujahr passiert in E1–E3 wirtschaftlich nichts mehr.** Die Kasse
-  pendelt zehn Jahre lang um null, ohne dass das Spiel endet oder etwas sagt. Kein
-  Todzustand im Sinne der harten Regel — es ändert sich in jeder Woche etwas —, aber ein
-  Spiel, in dem zehn Jahre lang kein Zug bezahlbar ist, ist praktisch stehengeblieben.
-* **Die Bretter der Werkbank liegen im Vorgabestand zugeklappt**, und die Knöpfe darin bleiben
-  im DOM aktiv, obwohl sie weggeschnitten sind. Ein Klick dorthin geht ins Leere. Für die Maus
-  harmlos, für jede automatische Prüfung eine Fehlerquelle.
-* **Welle 2 läuft bereits mit** (`index.html` wurde von der Aufsicht nachgetragen). DER NAME
-  ist eingehängt und schreibt schon in `welt.meldeZug` — in E1, E2 und E3 ist *sein* Posten
-  inzwischen der billigste nächste Zug („Umtrunk beim Wirt 9 Pf", „Wirtshausschild anschlagen
-  70 fl", „Etiketten auflegen 900 M"). **Der Nenner der zweiten Latte gehört damit einem
-  unfertigen Stück.** Das ist keine Kritik an DEM NAMEN, sondern eine Zuständigkeitsfrage, die
-  jemand entscheiden muss.
-
-## 3 — Die vier Stücke: erreicht, gemessen woran, offen
-
-| Stück | Stand | Woran gemessen | Was offen ist |
+| Epoche | Kopfzeile vorher | jetzt | nennt jetzt |
 |---|---|---|---|
-| **Skelett** | bestanden | Vier Epochen laden, Ebenenstapel, Knopf-Fabrik | — |
-| **DIE STADT** | Runde 3 gebaut, **noch nicht beurteilt** | Bildlatte + Auszählung sichtbarer Bauten (9/12/12/12), Tafelanteil 9–10 % des Stadtfensters | Runde 3 (Maßstab der Pfanne, Staffelung je Epoche, Ortsmarken auf Pflöcken) hat noch kein Kritiker gesehen |
-| **DIE FUHRE** | zurück (Runde 3), Reparatur ist eingebaut | 260+ Wochen je Epoche, Kennzahl, Verbliste, Sperrliste | Das Ende zündet (nachgestellt), aber das Jahrzehnt bei Kasse ≈ 0 davor ist neu und ungeprüft |
-| **DER PREIS** | bestanden (Runde 1) | 20 Michaeli-Blätter durchgeklickt, Ausschluss und Siegel geklickt | §13: die Eichung — hier gemessen als 0 von 5 / 0 von 3 in E1 und E2 |
-| **DER GEGNER** | zurück (Runde 1) | 368 gespielte Wochen, Zensus über 1.161 Preisschilder | Der Grund der Rückweisung ist in dieser Glättung behoben; er braucht eine neue Runde |
-| **DER KLANG** (Welle 2) | Latte 3 bestanden | Fremdes Ohr, blind, 4 von 4 | Klangdichte im laufenden Spiel ungeprüft |
+| 1350 | 12,4× | **5,89×** | Zuvorkommen Klosterschenke Obernberg · 19 Pf |
+| 1600 | 35,6× | **3,76×** | Zuvorkommen Mühlschenke · 170 fl |
+| 1884 | 274,0× | **8,35×** | Ablösung Ausschank am Markt · 1.706 M |
+| 1970 | 47,8× | **3,54×** | Ablösung Landgasthof Hirsch · 24.300 DM |
 
-## 4 — Was diese Glättung angefasst hat
+Diese vier Zahlen sind genau die, die DER GEGNER unabhängig als die ehrlichen
+gemessen hatte — zwei Wege, eine Zahl.
 
-Nur Nähte, nichts Neues. Elf Eingriffe, alle klein, jeder mit einem Satz im Quelltext daneben.
+**Die zwölf unerreichbaren Züge sind frei.** `erreichbar.mjs` brettweise:
+**0 von 80/90/93/84** statt 3/2/2/5. Ursache war DER GRIFF bei `top: 12,4 %`,
+der das Paar des GEGNERS am Bahnhof zudeckte. *Einschränkung, die der
+EICHUNG-Builder zu Recht angemerkt hat:* `erreichbar.mjs` schlägt nur
+`stadt:reiter:*` auf. Ein Klick auf `name:blatt` legt weitere 17/18/11/11 Züge
+frei, davon 12/13/6/5 mit Preisschild — auch sie sind alle erreichbar, aber der
+Nenner der Aussage war zu klein.
 
-**Eine Sprache statt zwei.** DIE STADT schrieb ihren gesamten Anzeigetext ohne Umlaute
-(„Gaerbottiche", „Gewoelbekeller", „Kueferei", „Rossmuehle", „Maelzereiturm", „Abfuellhalle",
-„faehrt, wann das Haus will", „es steht auch fuer die Enkel"), während FUHRE, PREIS und GEGNER
-daneben „Kältemaschine", „Pächter" und „fällig" schrieben — auf demselben Bildschirm zwei
-Rechtschreibungen. Dazu die Kopfleiste („naechster Zug"), die Monatsnamen des Kerns
-(„Jaenner", „Maerz") und fünf Ortsnamen („Untere Bruecke", „Die Muehle", „Landstrasse",
-„Gaertanks"). Alles auf Anzeigetexte beschränkt; kein `schluessel`, kein Klassenname, kein
-Bildpfad wurde angefasst. Gegenprobe: der komplette Bildschirmtext aller Bretter in allen vier
-Epochen enthält jetzt kein einziges falsch geschriebenes Wort mehr.
+**Der Jahreswechsel kostet einen Klick, nicht anderthalb.** `nurweiter.mjs`
+schafft drei Braujahre in allen vier Epochen mit nichts als WEITER.
 
-**Eine Zahl statt zweier.** Die Kopfleiste zählte den Vorrat in Fass, das Brett desselben
-Vorrats ab 1872 in Hektoliter: oben „KELLER 140/400", unten „DIE TANKS 210 von 600 hl". Beides
-kommt jetzt aus `B.welt.menge()`, dem einen Formatierer des Kerns, und der Name des Lagers
-wechselt mit der Epoche wie der Rohstoff daneben: **Keller · Gewölbe · Eiskeller · Tanks** —
-genau die vier Wörter, die DIE FUHRE auf ihr Brett schreibt. (Kernänderung, Aufsichtsakt, in
-`welt.js` als `lager:` eingetragen.)
+**Ein fünftes Spielerverb, epocheneigen.** DER GEGNER hat für 1970 MITBIETEN
+gebaut: ein Notartermin mit drei Geboten nebeneinander, jedes mit eigenem
+Preisschild, jedes die anderen ausschließend, keines sicher. Von der Aufsicht
+nachgezählt (`werkbank/schuss/aufsicht/mitbieten.mjs`): es gibt das Verb **nur**
+in 1970 — in den anderen drei Epochen taucht in 120 Wochen kein
+`gegner:mitbieten*` auf —, und es ist über vier Saaten in 11/15/5/10 der
+angebotenen Wochen bezahlbar. *Hinweis für den nächsten Kritiker, kein Mangel:*
+bei `saat=1350` ist der **erste** Notartermin unbezahlbar (Kasse 49.760 gegen
+87.091 DM, alle drei Knöpfe aus). Wer einmal hinsieht und weitergeht, hält das
+Verb für tot.
 
-**Ein Knopf, der die Wahrheit sagt.** In allen vier Epochen stand beim Laden oben rechts
-**„Michaelitafel schließen"** — auf einem Bildschirm, auf dem keine Tafel lag. Ursache: DER
-PREIS hielt die Tafel für offen, DIE STADT hatte sie als „lag beim Laden schon da" in ihren
-Rahmen geklappt (`clip-path: inset(50%)`). Zwei Stücke, zwei Meinungen über denselben
-Zustand, und der erste Klick des Spielers tat scheinbar nichts. DER PREIS liest jetzt den
-sichtbaren Zustand (wie er es beim Sommerzettel der FUHRE schon tat) und beschriftet danach.
-**Nebenwirkung, die mehr wert ist als die Reparatur selbst:** die unsichtbare Tafel hatte den
-Prüfausdruck `[data-zug="preis:tafel-zu"]` im DOM gelassen — DER GEGNER schloss daraus, die
-Michaelitafel liege oben, und **verweigerte sein Dossier**. Das ist der vom Kritiker als „toter
-Knopf" gemeldete Befund („`.fach-blatt-gegner` mit 0 Kindern"). Er ist damit erledigt: „Das
-Haus gegenüber" öffnet in allen vier Epochen ein volles Blatt.
+**Ein Sachfehler ist raus.** „1980 Pfand- und Rücknahmepflicht" ist ersetzt; die
+Datei nennt jetzt Verpackungsverordnung 1991 und Zwangspfand 2003 und behauptet
+kein Gesetz, das es nicht gab.
 
-**Preisschilder, die man drücken kann.** Die Schilder des Adlers an den eigenen Adressen lagen
-im Pflocksystem der STADT und rechneten dort `pointer-events: none`; daneben trug der Pflock
-dieselbe Aufschrift samt Preis und tat nichts. Von zwei Dingen mit demselben Preisschild war
-das wirksame nicht anklickbar und das anklickbare wirkungslos. DER GEGNER meldet seine
-Preisschilder jetzt mit `data-frei` ab — der Weg, den `ZUSTAENDIGKEIT.md` §10 vorsieht.
+---
 
-Zensus danach, je 40 Wochen: gezählt 106 / 190 / 117 / 162 Preisschilder, davon von
-`elementFromPoint` getroffen **98 / 146 / 70 / 64**. Echte Mausklicks: 2 / 1 / 3 / 2, **alle mit
-Wirkung auf die Kasse** — 112 → 56 Pf, 640 → 52 fl, 14.250 → 9.057 M, 86.000 → 41.450 DM. Zum
-Vergleich der Befund, der das Stück zurückschickte: in 1350 gab es in 62 Wochen **keinen
-einzigen** Augenblick, in dem eine bezahlte Antwort auf den Adler zugleich bezahlbar und
-anklickbar war. Der Preis dafür: die Schilder stehen jetzt dauernd im Bild statt auf Pflöcken
-zu ruhen — dabei deckten sich zwei in 1600 zur Hälfte, also wurde ihr Stapelabstand von
-3,6 auf 5,6 Prozent gesetzt. Nachgemessen: **keine Überlappung in keiner Epoche.**
+## 2 — Was gebaut wurde und nicht ankommt
 
-**Eine Taste, die überall gilt.** Escape schloss die Chronik, das Buch und die Georgi-Tafel,
-aber nicht das Haus gegenüber. Jetzt auch das. (Die gemeinsame Sperrschicht bleibt
-Kernaufgabe — §5.)
+Zwei Stücke haben etwas Richtiges gebaut, und beides erreicht den Bildschirm
+nicht. Beide Befunde stehen ausführlich in [`BEFUND-ENDE.md`](BEFUND-ENDE.md).
 
-**Vier kleine Namensdinge.** „Wagen leeren" hieß auch 1970 so, wo das Fahrzeug daneben LASTZUG
-heißt, und 1884, wo gar kein Wagen im Hof steht, sondern eine Bahnrampe: jetzt *Karren leeren ·
-Wagen leeren · Rampe räumen · Lastzug leeren*. „Fassplätze: 22 eigene" stand zwei Zeilen unter
-„4 von 12 Fass" — zwei Zahlen unter demselben Wort; die untere heißt jetzt „Fässer des
-Hauses". „Kasse reicht" stand gleichzeitig an zwei Stellen mit verschiedener Bedeutung; auf
-dem Michaeli-Griff heißt es jetzt „Kasse reicht dafür".
+**Das Urteil über die Partie liegt zugeklappt unter dem Sudbuch.** DIE FUHRE
+malt ein Schlussblatt, 1075×628 px, mit dem Urteil im Klartext („Das Brauhaus
+zum Anker hört auf · 1353 Der Rat entzieht dem Haus zum Anker das B…"). In
+**allen vier Epochen** trägt es die Klasse `stadt-zugeklappt` und liegt unter
+`sud-schluss` — der Rechenschaft eines einzelnen Stücks über sich selbst. DER
+SUD hat das selbst gefunden und seine Klappe zurückgenommen; bei 1440×900,
+1600×1000 und 2752×1536 steht das Schlussblatt offen. **Bei 1920×1000 greift es
+nicht**, weil das Sudbuch dort 13,75 % der Bühne misst und über der Schwelle
+bleibt.
 
-## 5 — Die Kennzahl der zweiten Latte
+*Das berichtigt einen früheren Befund der Aufsicht:* „das Ende ist stumm" war
+richtig in dem, was der Spieler sieht, und falsch in der Ursache. Ein Ende gibt
+es, und es hat Worte.
 
-> Barschaft ÷ Preis des nächsten sinnvollen Zuges. Wächst sie über die Partie, ist es
-> Patrizier IV, und der Lauf ist verloren.
+**Der Boden der Wirtschaft ist gebaut und wird nicht erreicht.** DIE STADT hat
+DIE VERWERTUNG gebaut — vier epocheneigene Wege, den Hof zu Geld zu machen
+(1350 VERSATZ 45 %, 1600 WIEDERKAUF 55 %, 1884 HYPOTHEK 70 % mit 5,5 % Zins und
+stehenbleibendem Bau, 1970 ABBRUCH 85 %) — und meldet für 1350 Kassenstände von
+0/0/0 statt −6/−7/−14.
 
-Das Spiel trägt die Zahl selbst unten rechts auf („Kasse reicht N×"). Abgelesen, nicht
-gerechnet; 200 Wochen je Epoche, ein fester, bescheidener Spielstil (jede Woche nach Durst
-laden, Fuhre abschicken, Rohstoff nachkaufen, wenn er knapp wird — **nicht bauen**):
+Nachgemessen am Stand `cb9d86e`, nur WEITER: **genau die alten Zahlen.**
+Michaelitage 112 / −6 / −7 / −14, **44 von 103 Wochen unter null**, in der
+Chronik **keine einzige Pfändungszeile**, `lage` 0, kein Seitenfehler. Ein
+synthetisch gesendetes `jahr`-Ereignis bei Kasse −25 bewegt weder Kasse noch
+Chronik.
 
-| Epoche | Start | Höchstwert | nach 3 Jahren | Ende (Jahr 13) | Form |
-|---|---|---|---|---|---|
-| 1350 | 14,9× | **46,9×** (Jahr 1) | 0,8× | 0,9× (1363) | steiler Aufstieg, dann zehn Jahre zwischen 0,0 und 2,8 |
-| 1600 | 10,6× | 20,2× | 0,5× | 0,01× (1612) | dasselbe, tiefer |
-| 1884 | 10,8× | 13,7× | 0,03× | 0,13× (1897) | fällt am schnellsten, zwölf Jahre bei 0,0–0,35 |
-| 1970 | 14,6× | **45,5×** | 22,7× | 27,1× (1983) | **steigt** — sägend, aber im Trend aufwärts |
+---
 
-Zum Vergleich Welle 1: **22× in 1350, 594× in 1884, 1323× in 1970.**
+## 3 — Die Kennzahl der zweiten Latte
 
-**Die Antwort auf die Frage der Aufsicht: Nein, so steht sie nicht mehr.** Die Zahlen sind um
-ein bis zwei Größenordnungen gefallen, und die Reihenfolge über die Epochen ist weg — 1884 ist
-heute die *ärmste* Epoche, nicht die reichste. Der Befund, der 594× und 1323× hervorbrachte,
-ist damit erledigt.
+Ziel dieser Welle: **|rho| < 0,7 in allen vier Epochen, höchstens ein Jahr von
+sechs unter 1×.**
 
-**Aber die Latte ist deshalb nicht bestanden**, und zwar aus zwei Gründen:
+Auf der **sorgfältig gespielten Linie** (vier aufgezeichnete 400-Wochen-Läufe des
+EICHUNG-Builders; die Aufsicht hat 1350 mit seinem eigenen Skript nachgefahren
+und es reproduziert, 3,39 → 0,16 bei ihm wie bei mir):
 
-1. **1970 wächst weiterhin**, wenn man nicht ausgibt. Gegenprobe mit einem Spielstil, der
-   zusätzlich alles kauft, was die Kasse dreifach trägt: dann pendelt E4 über dreizehn Jahre
-   zwischen 0,3× und 11,1× ohne Trend. Die Kurve hängt also nicht am Spiel, sondern daran, ob
-   der Spieler etwas zu kaufen findet — genau das ist die Wohlstandssingularität in ihrer
-   milden Form: das Geld hat kein Ziel.
-2. **1350 bis 1884 fallen unter eins und bleiben dort.** Eine Kennzahl, die zehn Jahre lang
-   „0,0×" sagt, misst nichts mehr. Der Spieler ist nicht reich geworden — er ist arm geworden
-   und kann nichts mehr tun. Das ist das andere Ende derselben kaputten Kurve.
+| Epoche | Start → Ende | rho | Jahre unter 1× | Latte |
+|---|---|---|---|---|
+| 1350 | 3,39 → 0,16 | −0,795 | 6 von 12 | reißt beide |
+| **1600** | 3,56 → 2,69 | **+0,165** | **0 von 14** | **besteht** |
+| 1884 | 5,09 → 1,40 | −0,367 | 2 von 14 | besteht |
+| 1970 | 3,44 → 0,06 | −0,572 | 9 von 11 | reißt das zweite |
 
-Die Latte will eine Zahl, die *interessant bleibt*: mal knapp, mal luftig, nie beides für zehn
-Jahre am Stück. Keine der vier Epochen tut das heute.
+Der Builder schließt daraus „elf Läufe und kein Kippen". Das ist wahr für die
+Richtung **nach oben** — die Latte ist aber zweiseitig, und 1350 fällt um den
+Faktor 21, 1970 um den Faktor 57.
 
-## 6 — Offene Kritiken
+**1600 besteht sauber, und das ist der Beleg, der bisher fehlte:** ein Haus
+verachtfacht sein Vermögen, und die Kennzahl bleibt im Band 1,44–3,17, weil die
+Preise 1,32× schneller wachsen als die Barschaft. Die Wirtschaft *kann* also.
 
-**Zugewiesen und noch offen:**
+**Die Aufgabe heißt darum nicht „die Wirtschaft reparieren", sondern 1350 und
+1970 nach dem Muster von 1600 bauen.**
 
-1. **§13 — Eichung des Michaelitags** (DER PREIS, DIE FUHRE, Aufsicht gemeinsam). Gemessen
-   nicht erfüllt, Zahlen in §2. Das ist der teuerste offene Punkt.
-2. **§2 — Sperrschicht im Kern mit einem Register offener Blätter.** Jedes Stück baut heute
-   seine eigene Tür; ich habe dem GEGNER seine Escape-Taste nachgerüstet, damit sich die drei
-   gleich verhalten. Das ist ein Pflaster.
-3. **§6 — Gärkeller und Lagerkeller trennen**, `haus.rohstoff` als API, `nimmHeraus()` mit
-   Auswahl. Übertrag an DER SUD.
-4. **DIE STADT, Runde 3** braucht einen Kritiker. Der Maßstab der Pfanne ist nachgemessen
-   (Brauerin 78 px gegen Magd 72 px), aber niemand von außen hat es gesehen.
-5. **DER GEGNER** braucht eine neue Runde, nachdem seine Preisschilder jetzt erreichbar sind.
-6. **Die Verben der Kernwoche sind in 620 Jahren dieselben.** „Nach Durst füllen", „Wie vorige
-   Woche", „FUHRE ABSCHICKEN" stehen 1350 wie 1970 wortgleich da. Die Wirtschaftsverben sind
-   vier verschiedene Listen — der Wochenzug ist eine einzige. Ich habe nur das Leeren
-   auseinandergezogen; der Rest ist Entwurfsarbeit und gehört der FUHRE oder DEM SUD.
+---
 
-**Neu und noch niemandem zugewiesen:**
+## 4 — Was als Nächstes drankommt
 
-7. **„Deckung" heißt jetzt zweierlei.** Der Kern nennt die Kennzahl der zweiten Latte so
-   (`.deckung`), DER NAME nennt seinen zweiten Balken so („Deckung 60"). Zwei Bedeutungen,
-   ein Wort, ein Bildschirm.
-8. **DER NAME schreibt ohne Umlaute** („Litfasssaeule") — dasselbe, was die STADT gerade
-   abgelegt hat. Wer in Welle 2 baut, schreibt Deutsch mit Umlauten.
-9. **Bretter im Vorgabestand klappen zu, ihre Knöpfe bleiben aktiv.** Gehört dem Rahmen der
-   STADT oder der Sperrschicht des Kerns aus §2.
+[`../gauntlet/WELLE-3.md`](../gauntlet/WELLE-3.md) steht und ist auf diese Zahlen
+gestützt. Vier Stücke: **DAS ENDE** (vier Epochen, vier Ausgänge, und eines, das
+spricht) · **DIE RÜCKKOPPLUNG** (1350 und 1970 nach dem Muster von 1600) · **DIE
+KOPFZEILE** (erledigt in dieser Welle — der Punkt schrumpft auf: die
+Übergangszeile aus `gegner.js` darf jetzt verschwinden) · **DAS FÜNFTE VERB**
+(erledigt für 1970).
 
-## 7 — Was die nächste Welle als ERSTES angehen muss
+Dazu der Kleinkram, der kein eigenes Stück braucht:
 
-**Den Michaelitag bezahlbar machen — und zwar zusammen, nicht je Stück.**
-
-Das ist nicht die eleganteste Baustelle, aber die einzige, deren Fehlen alles andere entwertet.
-Alles, was Welle 1 gebaut hat, läuft auf diesen einen Tag zu: die Fuhre erwirtschaftet für ihn,
-der Gegner erhöht den Einsatz für ihn, die Stadt zeigt, was er bezahlt hat. Und an diesem Tag
-steht die Kasse bei −7 Pf, und der Spieler darf nichts.
-
-Die Zahl, an der es sich messen lässt, ist schon geschrieben (`ZUSTAENDIGKEIT.md` §13): **in
-jeder Epoche muss in den ersten drei Braujahren mindestens eine unwiderrufliche Festlegung
-wirklich anklickbar werden, nachgewiesen am Bildschirm.** Heute: null, in allen vieren.
-
-Drei Dinge gehören dazu, und alle drei müssen an einem Tisch entschieden werden:
-
-* **Die Rechnung darf den Tag nicht auffressen.** Der Abgabendeckel von 18 % gilt je Stück und
-  wird eingehalten — die Summe trifft aber alle an *einem* Datum. Entweder der Michaelitag
-  wird gestaffelt, oder die Angebote bekommen eine unterste Sprosse, die an der tatsächlichen
-  Barschaft hängt. Die Ratenzahlung („von 94 Pf · dann 1 × 52 Pf") gibt es bereits und
-  erscheint in E1/E2 nie am unteren Ende.
-* **„Ohne Ausgabe" darf nicht die einzige erreichbare Festlegung sein.** In 1884 und 1970 ist
-  sie es. Eine unwiderrufliche Wahl, die nichts kostet, ist keine Wahl.
-* **Wer eicht, meldet die neue Zahl.** Sonst verschiebt der eine, was der andere festzurrt —
-  das ist genau der Weg, auf dem der Deckel aus §4 überhaupt nötig wurde.
-
-**Danach, in dieser Reihenfolge:** die Sperrschicht im Kern (§2, sie blockiert drei Stücke
-gleichzeitig), dann DAS ERBE — denn der Epochenschnitt ist die einzige Stelle, an der die
-Kurve aus §5 sauber neu bepreist werden darf, und ohne ihn sind es vier Spiele hintereinander
-und kein Haus über 675 Jahre.
-
-**Und eine Warnung an die Aufsicht:** Welle 2 läuft bereits, während dieser Text entsteht.
-DER NAME hängt im Spiel und besetzt schon den Nenner der zweiten Latte. Wer die Eichung des
-Michaelitags aufschiebt, eicht später gegen ein bewegliches Ziel.
+* **`stuecke/name.js:1135`** — der Spieler liest in allen vier Epochen eine
+  Übergabenotiz zwischen zwei Buildern, die ein JS-Feld beim Namen nennt.
+* **Der Zähler „Chronik des Hauses · N Festlegungen"** steht auf 0. DER GEGNER
+  hat die Ursache gefunden: `stuecke/preis.js:1525` zählt
+  `Object.keys(Z.festGenommen)` statt
+  `chronik.filter(c => c.art === 'festlegung').length`.
+* **Drei Braujahre sind zu kurz.** Die Amtszeit in 1350 läuft bis 1386, die
+  Partie endet 1353 — auf sorgfältig gespielter Linie trägt sie vierzehn Jahre.
+  Der Abbruch trifft den, der nichts tut.

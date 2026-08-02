@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-02T17:54:19+00:00",
- "phase": "Aufsicht misst am eingefrorenen Stand: die Partie endet in allen vier Epochen nach gut drei Braujahren, stumm und immer aus demselben Grund.",
+ "stand": "2026-08-02T18:28:15+00:00",
+ "phase": "Welle 2b ist durch: zwölf Agenten, vier Stücke, vier Nacharbeiten. Die Kopfzeile nennt jetzt den umkämpften Zug (5,89× / 3,76× / 8,35× / 3,54× statt 12,4× / 35,6× / 274× / 47,8×).",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -770,6 +770,18 @@
   {
    "zeit": "2026-08-02T17:54:19+00:00",
    "text": "Fünftes Verb nachgezählt: MITBIETEN gibt es nur in 1970, drei Gebote nebeneinander, in vier Saaten in 5 bis 15 Wochen bezahlbar. Bei saat=1350 ist der erste Notartermin unbezahlbar — wer einmal hinsieht, hält es für tot."
+  },
+  {
+   "zeit": "2026-08-02T18:28:15+00:00",
+   "text": "Welle 2b ist durch: zwölf Agenten, vier Stücke, vier Nacharbeiten. Die Kopfzeile nennt jetzt den umkämpften Zug (5,89× / 3,76× / 8,35× / 3,54× statt 12,4× / 35,6× / 274× / 47,8×)."
+  },
+  {
+   "zeit": "2026-08-02T18:28:15+00:00",
+   "text": "KERN eingearbeitet: meldeZug rangiert nach Art vor Preis. Von allen vier Stücken unabhängig verlangt. Auflage 1 aus drei von vier Verdikten damit geschlossen."
+  },
+  {
+   "zeit": "2026-08-02T18:28:15+00:00",
+   "text": "Zwei Befunde beim Nachmessen: das Urteil über die Partie liegt in allen vier Epochen zugeklappt unter dem Sudbuch, und der neue Boden der Wirtschaft greift in 1350 nicht (−6/−7/−14 Pf zu Michaeli wie zuvor)."
   }
  ]
 }
