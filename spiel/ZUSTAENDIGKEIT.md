@@ -654,3 +654,25 @@ gegen einen Bildschirm gemessen, der für einen Spieler stillstand.
 **Und eine Regel, die daraus folgt, für alle Stücke:** Ein Blatt, das den Bildschirm
 formatfüllend deckt, gehört in `BRAUHAUS.lage`, wenn es länger liegt, als eine Entscheidung
 dauert. Wer eines legt, legt auch den Weg heraus — sichtbar, in derselben Fläche.
+
+## 24 · Wer einen Zug meldet, nennt seine Art — und seinen Schlüssel
+
+`welt.meldeZug(was, preis, art, zug)` nimmt seit dem 2. August vier Argumente.
+Der Kern hält **nicht mehr das Minimum**, sondern zuerst den höheren Rang:
+
+    umkaempft 3 · bindung/adresse/bau 2 · lage 1 · alles ohne Art 0
+
+Werbung ohne `art` verliert damit gegen jeden Zug, der die Lage des Hauses
+ändert. Das war nötig, weil die Kopfzeile vierhundert Wochen lang denselben
+festen Jahresposten nannte — 9 Pf / 18 fl / 240 M / 1.800 DM — und die Kennzahl
+der zweiten Latte damit die Kasse mit anderer Beschriftung war (gemessen 2,1-
+bis 32,8-fach neben dem billigsten umkämpften Zug). Alle vier Stücke der
+Welle 2b haben diese Änderung unabhängig verlangt, DIE FUHRE schon in Welle 2.
+
+**Das vierte Argument ist keine Zier.** Wer seinen Zugschlüssel mitschickt, wird
+beim Wort genommen: `zugDeckung()` liefert `null`, wenn zu der Meldung kein
+`[data-zug]` ohne `disabled` im Dokument steht. Eine Zahl, zu der am Bildschirm
+kein bedienbarer Knopf gehört, ist keine Kennzahl, sondern eine Behauptung.
+
+Gemessen nach der Änderung, Woche 1: **5,89× · 3,76× · 8,35× · 3,54×** statt
+12,4× / 35,6× / 274,0× / 47,8×, und alle vier nennen einen umkämpften Zug.
