@@ -554,10 +554,17 @@
    Riegel (ZUSTAENDIGKEIT 23): wer nicht entscheidet, klickt weiter, und die
    Frist laeuft.
    ========================================================================== */
+/* Warum 27 Prozent und nicht 20: DIE HAEUSER liegt zwischen 1,1 und 26,7
+   Prozent der Breite, und genau dort steht der Weg aus der Frist heraus — das
+   Fass auf Probe. Gemessen (E1, 1920x1000, Antrag steht): bei 20 Prozent
+   deckte das Blatt 13,6 Prozent der Haeusertafel, das ist ueber der
+   Deckgrenze der Platzordnung, und wer die Haeuser aufschlug, klappte den
+   Antrag zu. Beides ist ein Reiter entfernt und damit kein Verlust — aber
+   nebeneinander ist besser als uebereinander. */
 .fu-ausgangblatt {
-  left: 20%;
+  left: 27%;
   top: 12%;
-  width: 48%;
+  width: 45%;
   max-height: 64%;
   display: flex;
   flex-direction: column;

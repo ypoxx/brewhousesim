@@ -811,9 +811,9 @@
          wieder leer, ist das eine neue Lage und ein neues Gebot. */
       if (Z.antrag) {
         Z.antrag = null;
-        B.welt.schreibe('Es liefert wieder. ' + (ausgangDef() && ausgangDef().antrag
-          ? ausgangDef().antrag.wer : 'Der Käufer') + ' nimmt den Antrag zurück — '
-          + 'ein Haus mit Abnehmern steht nicht zum Verkauf.', 'fuhre');
+        B.welt.schreibe('Es liefert wieder — und damit ist der Antrag vom Tisch: '
+          + (ausgangDef() && ausgangDef().antrag ? ausgangDef().antrag.wer : 'der Käufer')
+          + ' nimmt kein Haus, das Abnehmer hat.', 'fuhre');
       }
       return;
     }
