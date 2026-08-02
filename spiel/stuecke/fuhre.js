@@ -1895,6 +1895,59 @@
     B.sende('zeichne', { grund: 'fuhre-listung' });
   }
 
+  /* ====================================================================
+     DER NAECHSTE ZUG WIRD AM BILDSCHIRM ABGELESEN, NICHT NEBENHER GERECHNET.
+
+     Die Zahl unten rechts heisst "Barschaft geteilt durch den Preis des
+     naechsten sinnvollen Zuges". Sie ist nur so viel wert wie ihr Nenner,
+     und der war hier zweimal zu grosszuegig:
+
+       · Gemeldet wurde 'Bannbrief' und 'Regalmeter' — Gattungsnamen. Auf dem
+         Brett steht kein Knopf 'Regalmeter', dort stehen fuenf, je einer
+         beim Faehrhaus, beim Hirsch, am Markt, beim Bahnhofswirt und in der
+         Neustadt. Wer die Zahl nachpruefen will, findet den genannten Zug
+         nicht.
+       · Gemeldet wurde auch, was gar nicht zu haben war: der Preis kam aus
+         der Staffel, nicht vom Knopf, und ob der Knopf ueberhaupt gezeichnet
+         und bedienbar war, hat niemand gefragt.
+
+     Jetzt wird gemeldet, was dasteht: der billigste Knopf DIESES Stuecks,
+     der ein Preisschild traegt (data-preis) und nicht aus ist, mit seiner
+     eigenen Beschriftung und der Adresse dazu. Gelesen wird aus dem eigenen
+     Fach, unmittelbar nachdem es gezeichnet wurde — dieselbe Quelle, aus
+     der auch der Kritiker zaehlt. Findet sich keiner, meldet dieses Stueck
+     nichts und ueberlaesst den Nenner denen, die einen haben.
+     ==================================================================== */
+  function billigsterKnopf() {
+    var fach = document.getElementById('fach-hand-fuhre');
+    if (!fach) return null;
+    var best = null;
+    fach.querySelectorAll('button[data-zug][data-preis]').forEach(function (k) {
+      if (k.disabled) return;
+      var p = Number(k.getAttribute('data-preis'));
+      if (!p || p >= 0) return;                 /* nur was Geld kostet */
+      var r = k.getBoundingClientRect();
+      if (!r.width || !r.height) return;        /* nicht gezeichnet */
+      if (!best || -p < best.preis) {
+        best = { preis: -p, zug: k.getAttribute('data-zug'), knopf: k };
+      }
+    });
+    return best;
+  }
+
+  /* Die Beschriftung des Knopfes ist kurz ('Regalmeter', '+ 5 hl'). Fuer den
+     Streifen wird die Adresse dazugeschrieben, damit der genannte Zug am
+     Brett wiederzufinden ist. */
+  function zugName(b) {
+    var t = (b.knopf.textContent || '').replace(/\s+/g, ' ').trim();
+    /* Das Preisschild steht im Knopf selbst und wuerde sich sonst doppeln. */
+    t = t.replace(/\s*[−-]\s*[\d.,]+\s*\S*$/, '').trim();
+    var teil = String(b.zug).split(':');
+    var a = teil.length > 2 ? B.welt.adresse(teil[2]) : null;
+    if (a && t.indexOf(a.name) < 0) t += ' · ' + a.name;
+    return t || b.zug;
+  }
+
   /* Der naechste sinnvolle Zug — die Zahl, an der die Messlatte haengt.
      Nie der Sud (der faellt von selbst), immer die Knappheit. */
   function meldeZug() {
@@ -2058,6 +2111,59 @@
     });
     b.appendChild(liste);
     fach.appendChild(b);
+    passeListe(liste);
+  }
+
+  /* ====================================================================
+     JEDE ADRESSE MUSS AUF DAS BRETT PASSEN.
+
+     Gemessen bei 1920x1000: die Liste ist 469 Pixel hoch (Epoche 4: 454),
+     zehn bis elf Adressen brauchen 559 bzw. 615. Der Rest lief unten aus
+     dem Brett heraus. Sichtbar war er nicht — die Liste rollt —, mit der
+     Maus war er es auch nicht: die letzten Zeilen lagen rechnerisch unter
+     der Werkbank der STADT (die beginnt bei 874). Genau daher kamen zehn
+     der zwoelf unerreichbaren Zuege der Eichung: fuhre:laden/abladen:markt
+     und fuhre:bann:obernberg in 1350, laden/abladen:obernberg in 1600,
+     laden/abladen:bahnhofswirt in 1884, listen:markt, listen:bahnhofswirt
+     und listen:neustadt in 1970. Die Listung ist die epocheneigene Achse
+     von 1970; drei ihrer fuenf Knoepfe waren nicht anzufassen, waehrend
+     dasselbe Brett 'Bestellung offen: 230 hl' meldete.
+
+     Kein Rollen mehr, sondern engerer Satz: die Liste bekommt ihr eigenes
+     Bezugspixel. Jedes calc(var(--s) * n) darin — Schriftgrad, Zeilenhoehe,
+     Innenabstand, Luecke — schrumpft im selben Verhaeltnis, das Bild bleibt
+     dasselbe, nur kleiner. Der Faktor kommt aus der Messung und nicht aus
+     einer Tabelle, damit er auch bei anderer Fensterhoehe und bei mehr
+     Adressen stimmt. Untergrenze 0,62: darunter waere die Zeile nicht mehr
+     zu lesen, und dann ist Rollen das kleinere Uebel.
+     ==================================================================== */
+  var BEZUG = 'min(calc(100vw / 2752), calc(100vh / 1536))';
+
+  function setzeBezug(el, f) {
+    if (f >= 0.999) el.style.removeProperty('--s');
+    else el.style.setProperty('--s', 'calc(' + f.toFixed(3) + ' * ' + BEZUG + ')');
+  }
+
+  function passeListe(liste) {
+    if (!liste) return;
+    if (typeof requestAnimationFrame !== 'function') return;
+    requestAnimationFrame(function () {
+      B.wage('fuhre.liste-passt', function () {
+        if (!liste.parentNode) return;
+        setzeBezug(liste, 1);
+        var frei = liste.clientHeight;
+        var voll = liste.scrollHeight;
+        if (!frei || !voll || voll <= frei) return;
+        var f = B.grenze((frei - 2) / voll, 0.62, 1);
+        setzeBezug(liste, f);
+        /* Zweiter Blick: was nicht am Bezugspixel haengt — Rahmen von einem
+           Pixel, Zeilenumbrueche, die aufgehen —, bleibt uebrig. Einmal
+           nachziehen genuegt; gemessen bleibt danach nichts stehen. */
+        if (liste.scrollHeight > liste.clientHeight) {
+          setzeBezug(liste, B.grenze(f * (liste.clientHeight - 2) / liste.scrollHeight, 0.62, 1));
+        }
+      });
+    });
   }
 
   /* DAS ZIEL, auf dem Brett DIE HÄUSER: drei Karten nebeneinander, die
@@ -2777,21 +2883,55 @@
     return !!(t && (t === k || k.contains(t)));
   }
 
-  /* WEITER ist der Ausgang, den jeder kennt. Dieser Horcher laeuft in der
-     Fangphase auf document und damit vor dem Horcher am Knopf selbst
-     (kern/buehne.js haengt ihn in der Blasenphase an) — stopPropagation
-     nimmt dem Kern den Klick ab, bevor die Woche laeuft. Angemeldet genau
-     einmal, im Aufbau. */
+  /* ====================================================================
+     DER JAHRESWECHSEL KOSTET EINEN KLICK, NICHT ANDERTHALB.
+
+     Bis hierher nahm dieser Horcher dem Kern den Klick ab (stopPropagation)
+     und legte nur die Tafel beiseite. Gemessen war das ein halber Zug zu
+     viel: in Woche 1 jedes Braujahrs war WEITER sichtbar, aktiv und traf
+     sich selbst — und die Woche blieb trotzdem stehen. Erst der zweite
+     Druck loeste sie. Die eigene Eichung (werkbank/schuss/eichung/messe.mjs)
+     zaehlt genau das als "kein Zug veraendert die Woche" und brach in
+     Epoche 1 bei 1352/1 ab, nach 60 statt 400 Wochen.
+
+     Jetzt tut ein Druck beides: die Tafel geht beiseite UND die Woche
+     laeuft. Der Klick geht weiter an den Kern — kein preventDefault, kein
+     stopPropagation. Wer im ersten Halbjahr noch etwas tun will, hat den
+     eigenen Ausgang am Fuss der Tafel ('Beiseite legen'); der kostet keine
+     Woche. Der Halt zu Georgi bleibt also erhalten fuer den, der ihn will,
+     und steht dem nicht mehr im Weg, der weiterwill.
+     ==================================================================== */
   function weiterHorcher(ereignis) {
     if (!sommerLiegtOben()) return;
     var ziel = ereignis.target && ereignis.target.closest
       ? ereignis.target.closest('[data-zug="weiter"]') : null;
     if (!ziel) return;
     if (!tafelImBild()) return;          /* dann haelt hier nichts mehr auf */
-    ereignis.preventDefault();
-    ereignis.stopPropagation();
     B.ton.spiele('tafel:kreide');
-    schliesseSommer('fuhre-sommer-weiter');
+    raeumeSommerAb();
+  }
+
+  /* Die Tafel verschwindet, der Klick laeuft weiter. Neu gezeichnet wird
+     hier NICHT: der Kern schaltet gleich die Woche und zeichnet dabei
+     ohnehin alles neu. Nur wenn die Woche wider Erwarten stehen bleibt —
+     WEITER war doch aus, ein anderer Horcher hat abgebrochen —, holt der
+     Bildlauf danach das Zeichnen nach. Sonst bliebe die Tafel liegen,
+     obwohl dieses Stueck sie schon abgeraeumt hat. */
+  function raeumeSommerAb() {
+    if (!Z.sommerOffen) return;
+    Z.sommerOffen = false;
+    var stand = B.welt.zeit.jahr * 100 + B.welt.zeit.woche;
+    if (typeof requestAnimationFrame !== 'function') {
+      B.sende('zeichne', { grund: 'fuhre-sommer-weiter' });
+      return;
+    }
+    requestAnimationFrame(function () {
+      B.wage('fuhre.sommer-nach', function () {
+        if (B.welt.zeit.jahr * 100 + B.welt.zeit.woche === stand) {
+          B.sende('zeichne', { grund: 'fuhre-sommer-weiter' });
+        }
+      });
+    });
   }
 
   /* Die Tastatur des Kerns (Leertaste, Eingabe) tut dasselbe wie WEITER, weil
@@ -2832,17 +2972,15 @@
 
     if (ereignis.key === ' ' || ereignis.key === 'Enter') {
       /* Steht der Finger auf einem Knopf DIESER Tafel, behaelt die Taste
-         ihre eigene, eingebaute Wirkung. Sonst tut sie, was WEITER tut:
-         sie legt die Tafel beiseite. Nur wenn die Tafel gar nicht im Bild
-         liegt, bleibt die Taste dem Kern und die Woche laeuft. */
+         ihre eigene, eingebaute Wirkung. Sonst tut sie genau das, was WEITER
+         tut — und das ist seit der Auflage zum Jahreswechsel: Tafel beiseite
+         UND Woche weiter. Also nur abraeumen und die Taste durchlassen. */
       var ziel = ereignis.target;
       var eigen = ziel && ziel.closest && ziel.closest('.fu-sommerblatt');
       if (eigen) return;
       if (!tafelImBild()) return;
-      ereignis.preventDefault();
-      ereignis.stopImmediatePropagation();
       B.ton.spiele('tafel:kreide');
-      schliesseSommer('fuhre-sommer-taste');
+      raeumeSommerAb();
     }
   }
 
