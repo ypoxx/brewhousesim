@@ -36,7 +36,48 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
-## Wo der Lauf steht (Stand 2. August 2026, 14:25 UTC)
+## Wo der Lauf steht (Stand 2. August 2026, 15:55 UTC)
+
+**Zwei blinde Kritiker haben geurteilt, beide „besteht mit Auflage":**
+DIE EICHUNG und DER GEGNER. Kein Fund auf der Sperrliste.
+
+**Die Kennzahl kippt nicht** — der Kritiker hat sie in **7 Läufen zu je 400 Wochen** in
+beiden Extremstilen gemessen (nie kaufen = Obergrenze der Barschaft; jede Woche das
+Billigste kaufen). Höchster Wert von Barschaft ÷ billigstes erreichbares Angebot in
+irgendeiner Epoche, irgendeinem Jahr, irgendeinem Stil: **5,09×**, und das ist der
+Startwert von 1884. In 1970 steigen die Preise um 76 %, während die Kasse auf null fällt.
+
+**Warum meine eigene Messung (rho +0,886 in 1600) davon abweicht — und wer recht hat:**
+Wir messen verschiedene Nenner. `auswerten.py` nimmt den billigsten *lageändernden* Zug am
+Schirm, der Kritiker das billigste *erreichbare Angebot*, und er lief 400 statt 160 Wochen
+in sieben statt einem Lauf. Seine Zahl liegt näher am Wortlaut der Latte. **Die Auflage 1
+des Kritikers sagt genau das:** der Nenner der Kopfzeilen-Kennzahl wechselt in 400 Wochen
+kein einziges Mal — 1350 „Umtrunk beim Wirt" 9 Pf, 1600 „Freitrunk zur Kirchweih" 18 fl,
+1884 „Annonce im Wochenblatt" 240 M, 1970 „Bierdeckel drucken lassen" 1.800 DM. Das Spiel
+misst sich selbst gegen einen Bierdeckel. **Solange das so ist, ist jede rho-Zahl ein
+Streit über den Nenner. Erst den Nenner ehrlich machen, dann neu messen — beide Wege.**
+
+**Die zehn Auflagen** stehen in `journal.jsonl` des Workflows. Die schwersten:
+1. Nenner der Kennzahl gegen den *umkämpften* Zug rechnen (E4 zeigt 47,8×, das billigste
+   Ablösen kostet aber 24.300 DM = 3,54×; Faktor 13).
+2. **Der Jahreswechsel kostet anderthalb Klicks**: WEITER ist aktiv, sichtbar, trifft sich
+   selbst — der Klick landet, die Woche bleibt stehen, erst der zweite löst sie.
+3. Die zwölf unerreichbaren Züge freilegen (3/2/2/5 von 80/90/93/84; in 1970 sind drei der
+   fünf `fuhre:listen:*`, die epocheneigene Achse).
+4. DER GEGNER: „Chronik des Hauses · N Festlegungen" steht in allen vier Epochen auf 0,
+   auch nach bezahlter Festlegung. Und der bezahlte Einwegzug gibt seine Geschwisterknöpfe
+   wieder frei.
+5. Mindestens eine Epoche braucht ein fünftes Spielerverb — das Gerüst ablösen/zuvorkommen/
+   hinhalten/Beschwerde ist viermal dasselbe.
+
+**Sachfund ohne Sperrlistenwirkung:** „1980 Pfand- und Rücknahmepflicht" in E4 — eine
+bundesweite Rücknahmepflicht gab es 1980 nicht.
+
+---
+
+## Frühere Stände
+
+### Stand 14:25 UTC
 
 **Erledigt und von der Aufsicht nachgemessen:** Auflage 23 (`ZUSTAENDIGKEIT.md` §23) — der
 Deckel über WEITER ist weg, `nurweiter.mjs` schafft **drei Braujahre in allen vier Epochen**
