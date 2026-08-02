@@ -204,20 +204,32 @@
   }
 
   /* ----------------------------------------------------------------------
-     DIE TIEFE.  Der vierte Satz: wer vorne steht, liegt oben — und niemand
-     stellt sich auf den Platz eines anderen.
+     DIE TIEFE.  Zwei Fragen, und sie kosten verschieden viel.
 
-     Gemessen wird an Rechtecken, nicht an Pixeln: der Browser gibt keine
-     Deckung freigestellter Bilder heraus, ohne dass man jedes Bild in eine
-     Leinwand malt, und das bei jedem Zeichnen. Ein Rechteck ueberschaetzt
-     die Deckung, also sind die Schwellen entsprechend grosszuegig — es soll
-     ein begrabenes Gebaeude finden, keinen Streifen ruegen. Was es findet,
-     hat der Kritiker der Runde 6 mit Pixeln nachgemessen: 47 Prozent.
+     DIE ERSTE ist billig und laeuft bei jedem Zeichnen mit: LIEGT DIE
+     REIHENFOLGE RICHTIG HERUM? Sie vergleicht nur Rechtecke und Tiefen und
+     ist damit dieselbe Rechnung, aus der stadt.js den z-Index macht — sie
+     kann also nur anschlagen, wenn jemand den z-Index woanders herholt.
+     Genau das war der Pferdestall.
+
+     DIE ZWEITE ist teuer und wird gerufen, nicht gefahren: WIRD JEMAND
+     BEGRABEN? Ein Rechteck taugt dafuer nicht — in einer isometrischen
+     Zeichnung ueberlappen sich die Rechtecke zweier friedlicher Nachbarn zu
+     siebzig Prozent, waehrend sich ihre Bilder kaum beruehren. Also wird
+     gezaehlt, was der Kritiker zaehlt: PIXEL. Jedes Hofbild wird in eine
+     Leinwand gemalt, in der Reihenfolge des z-Index, und danach steht fuer
+     jeden Bildpunkt fest, wem er gehoert. Verdeckt = eigene Punkte, die
+     einem anderen gehoeren.
+
+     Das ist dasselbe Verfahren wie die Differenzmaske des Kritikers, nur
+     ohne Schuss und ohne Python — und es gibt dieselbe Zahl: 1884 waren
+     47,2 Prozent der Gaertanks zugedeckt.
      ---------------------------------------------------------------------- */
-  var DECKARM = 0.42;    /* so viel des Kleineren darf sich decken */
-  var ORDNUNG = 0.10;    /* ab hier zaehlt die Reihenfolge schon */
+  var BEGRABEN = 0.55;   /* so viel der eigenen Pixel darf verschwinden */
+  var ORDNUNG = 0.10;    /* Rechteckdeckung, ab der die Reihenfolge zaehlt */
+  var MESSBREITE = 1376; /* halbe Bezugsbreite — die Anteile bleiben gleich */
 
-  function deckung(a, b) {
+  function rechteckdeckung(a, b) {
     var w = Math.min(a.right, b.right) - Math.max(a.left, b.left);
     var h = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
     if (w <= 0 || h <= 0) return 0;
@@ -244,34 +256,107 @@
     return l;
   }
 
+  /* DIE ERSTE FRAGE — billig, bei jedem Zeichnen. */
   function pruefeTiefe(laut) {
     var l = bauten(), fehler = [];
     for (var i = 0; i < l.length; i++) {
       for (var j = i + 1; j < l.length; j++) {
-        var d = deckung(l[i].r, l[j].r);
-        if (d < ORDNUNG) continue;
+        if (rechteckdeckung(l[i].r, l[j].r) < ORDNUNG) continue;
         var vorn = l[i].z >= l[j].z ? l[i] : l[j];
         var hinten = vorn === l[i] ? l[j] : l[i];
-        /* Wer oben liegt, muss den tieferen Fuss haben. */
-        if (vorn.tiefe + 0.05 < hinten.tiefe) {
+        /* Wer oben liegt, muss den tieferen Fuss haben. Ein Zehntel Prozent
+           Buehnenhoehe ist die Rundung des z-Index selbst und zaehlt nicht. */
+        if (vorn.tiefe + 0.15 < hinten.tiefe) {
           fehler.push({ art: 'reihenfolge', oben: vorn.schluessel, unten: hinten.schluessel,
-            deckung: Math.round(d * 100),
             sagt: vorn.schluessel + ' liegt ueber ' + hinten.schluessel
               + ', steht aber ' + B.rund(hinten.tiefe - vorn.tiefe, 2) + ' dahinter' });
-        } else if (d > DECKARM) {
-          fehler.push({ art: 'platz', oben: vorn.schluessel, unten: hinten.schluessel,
-            deckung: Math.round(d * 100),
-            sagt: vorn.schluessel + ' begraebt ' + hinten.schluessel + ' zu '
-              + Math.round(d * 100) + ' % — derselbe Platz' });
         }
       }
     }
     if (laut && window.console) {
-      if (!fehler.length) console.log('Tiefe: ' + l.length + ' Aufbauten, keine Deckung ueber '
-        + Math.round(DECKARM * 100) + ' %, keine verkehrte Reihenfolge');
+      if (!fehler.length) console.log('Reihenfolge: ' + l.length
+        + ' Aufbauten, keiner liegt ueber einem, vor dem er steht');
       fehler.forEach(function (f) { console.log('TIEFE  ' + f.sagt); });
     }
     return fehler;
+  }
+
+  /* DIE ZWEITE FRAGE — teuer, auf Zuruf. Gibt je Aufbau, wie viel von ihm
+     im vollen Hof uebrig bleibt, und wer ihm den Rest genommen hat. */
+  function messeDeckung(laut) {
+    var l = bauten();
+    if (!l.length) return [];
+    var buehne = B.buehne.el;
+    if (!buehne || !window.document.createElement('canvas').getContext) return [];
+    var o = buehne.getBoundingClientRect();
+    var s = MESSBREITE / o.width;
+    var W = Math.round(o.width * s), H = Math.round(o.height * s);
+    var leinwand = document.createElement('canvas');
+    leinwand.width = W; leinwand.height = H;
+    var stift = leinwand.getContext('2d', { willReadFrequently: true });
+
+    /* Erst jeder fuer sich: wie viele Punkte hat er ueberhaupt? */
+    var masken = [];
+    for (var i = 0; i < l.length; i++) {
+      var r = l[i].r;
+      stift.clearRect(0, 0, W, H);
+      try {
+        stift.drawImage(l[i].el, (r.left - o.left) * s, (r.top - o.top) * s,
+          r.width * s, r.height * s);
+      } catch (fehlschlag) { masken.push(null); continue; }
+      var d = stift.getImageData(0, 0, W, H).data;
+      var maske = new Uint8Array(W * H), eigen = 0;
+      for (var p = 0, q = 3; p < maske.length; p++, q += 4) {
+        if (d[q] > 96) { maske[p] = 1; eigen++; }
+      }
+      l[i].eigen = eigen;
+      masken.push(maske);
+    }
+
+    /* Dann alle zusammen, von hinten nach vorn: wem gehoert der Punkt? */
+    var reihe = l.map(function (b, i) { return i; })
+      .sort(function (x, y) { return l[x].z - l[y].z; });
+    var oben = new Int16Array(W * H).fill(-1);
+    reihe.forEach(function (i) {
+      var maske = masken[i];
+      if (!maske) return;
+      for (var p = 0; p < maske.length; p++) if (maske[p]) oben[p] = i;
+    });
+
+    var ergebnis = l.map(function (b, i) {
+      var maske = masken[i];
+      var verdeckt = 0, durch = {};
+      if (maske) {
+        for (var p = 0; p < maske.length; p++) {
+          if (!maske[p] || oben[p] === i) continue;
+          verdeckt++;
+          var wer = oben[p] >= 0 ? l[oben[p]].schluessel : '?';
+          durch[wer] = (durch[wer] || 0) + 1;
+        }
+      }
+      var eigen = b.eigen || 0;
+      /* Auf Bezugspixel hochrechnen, damit die Zahl bei jeder Fenstergroesse
+         dieselbe ist wie im 2752x1536-Schuss des Kritikers. */
+      var faktor = (2752 / W) * (1536 / H);
+      return {
+        schluessel: b.schluessel,
+        eigen: Math.round(eigen * faktor),
+        sichtbar: Math.round((eigen - verdeckt) * faktor),
+        anteil: eigen ? B.rund(verdeckt / eigen, 3) : 0,
+        durch: Object.keys(durch).sort(function (x, y) { return durch[y] - durch[x]; })
+          .slice(0, 2).map(function (k) { return k + ' ' + Math.round(durch[k] * faktor); }),
+        gut: !eigen || verdeckt / eigen <= BEGRABEN
+      };
+    }).sort(function (a, b) { return b.anteil - a.anteil; });
+
+    if (laut && window.console) {
+      ergebnis.forEach(function (z) {
+        console.log((z.gut ? 'sieht man  ' : 'BEGRABEN   ') + z.schluessel
+          + '  ' + Math.round(z.anteil * 100) + ' % zugedeckt, sichtbar ' + z.sichtbar
+          + ' px' + (z.durch.length ? '  — durch ' + z.durch.join(', ') : ''));
+      });
+    }
+    return ergebnis;
   }
 
   /* ----------------------------------------------------------------------
@@ -341,22 +426,28 @@
     }
 
     /* Wer sich in die Quere kommt, bekommt einen Rahmen um sein Rechteck —
-       gelb, wenn nur der Platz eng ist, rot, wenn die Reihenfolge falsch
-       herum steht. */
+       rot, wenn die Reihenfolge verkehrt herum steht; gelb, wenn er im
+       vollen Hof unter die Deckungsgrenze faellt. */
     var o = B.buehne.el ? B.buehne.el.getBoundingClientRect() : { left: 0, top: 0 };
+    function rahme(s, schlecht, wort) {
+      var el = fachbau ? fachbau.querySelector('.stadt-haus[data-bau="' + s + '"]') : null;
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      var kasten = B.el('div', 'lot-streit' + (schlecht ? ' schlecht' : ''));
+      kasten.style.left = ((r.left - o.left) / b.breite * 100) + '%';
+      kasten.style.top = ((r.top - o.top) / b.hoehe * 100) + '%';
+      kasten.style.width = (r.width / b.breite * 100) + '%';
+      kasten.style.height = (r.height / b.hoehe * 100) + '%';
+      kasten.title = wort;
+      lot.appendChild(kasten);
+    }
     pruefeTiefe().forEach(function (f) {
-      [f.oben, f.unten].forEach(function (s) {
-        var el = fachbau ? fachbau.querySelector('.stadt-haus[data-bau="' + s + '"]') : null;
-        if (!el) return;
-        var r = el.getBoundingClientRect();
-        var kasten = B.el('div', 'lot-streit' + (f.art === 'reihenfolge' ? ' schlecht' : ''));
-        kasten.style.left = ((r.left - o.left) / b.breite * 100) + '%';
-        kasten.style.top = ((r.top - o.top) / b.hoehe * 100) + '%';
-        kasten.style.width = (r.width / b.breite * 100) + '%';
-        kasten.style.height = (r.height / b.hoehe * 100) + '%';
-        kasten.title = f.sagt;
-        lot.appendChild(kasten);
-      });
+      rahme(f.oben, true, f.sagt);
+      rahme(f.unten, true, f.sagt);
+    });
+    messeDeckung().forEach(function (z) {
+      if (!z.gut) rahme(z.schluessel, false,
+        z.schluessel + ': ' + Math.round(z.anteil * 100) + ' % zugedeckt');
     });
 
     fach.appendChild(lot);
@@ -369,7 +460,9 @@
   B.auf('zeichne', function () {
     B.wage('stadt.boden', function () {
       zeichneLot();
-      if (B.arg.roh && B.arg.roh.boden === 'laut') { pruefe(true); pruefeTiefe(true); }
+      if (B.arg.roh && B.arg.roh.boden === 'laut') {
+        pruefe(true); pruefeTiefe(true); messeDeckung(true);
+      }
     });
   });
 
@@ -384,11 +477,17 @@
   };
 
   /* DIE TIEFE liegt neben DEM BODEN und wird genauso gerufen:
-     BRAUHAUS.stadt.tiefe.pruefe() — was deckt wen, und liegt es richtig? */
+       BRAUHAUS.stadt.tiefe.pruefe()   liegt die Reihenfolge richtig herum?
+       BRAUHAUS.stadt.tiefe.deckung()  wie viel sieht man von jedem, in Pixeln?
+     Die zweite zaehlt Pixel und braucht einen Augenblick. */
   B.stadt.tiefe = {
     pruefe: pruefeTiefe,
+    deckung: messeDeckung,
     liste: bauten,
-    grenzen: { deckung: DECKARM, ordnung: ORDNUNG }
+    begraben: function () {
+      return messeDeckung().filter(function (z) { return !z.gut; });
+    },
+    grenzen: { begraben: BEGRABEN, ordnung: ORDNUNG }
   };
 
 })(BRAUHAUS);

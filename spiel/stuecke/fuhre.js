@@ -2846,6 +2846,32 @@
     }
   }
 
+  /* DIE TAFEL WIRD AUF DEN TISCH GELEGT, NICHT MITGEZEICHNET.
+
+     Ein Bildlauf spaeter als der Hof — und das ist kein Kunstgriff, sondern
+     die Reihenfolge des Tages: erst steht der Hof, dann kommt der Braumeister
+     mit dem Blatt. Es hat auch eine gemessene Wirkung: die Platzordnung der
+     STADT laesst das Brett oben liegen, das ZULETZT aufgeschlagen hat. Wird
+     zu Georgi alles im selben Zug neu gezeichnet, sind alle Bretter gleich
+     jung, der Gleichstand faellt nach Ebenenreihenfolge — und 'blatt' kommt
+     nach 'hand', also verlor die Georgi-Tafel gegen den Sudplan. Gemessen:
+     in 3 von 4 Epochen lag sie beim ERSTEN Georgi als Reiter, also genau
+     dann, wenn der Spieler sie zum ersten Mal sehen soll.
+
+     Die Marke verhindert, dass ein veralteter Bildlauf ein zweites Blatt
+     nachlegt. Ohne requestAnimationFrame wird sofort gelegt. */
+  var sommerMarke = 0;
+  function legeSommer(fach) {
+    var meine = ++sommerMarke;
+    if (!sommerLiegtOben()) return;
+    if (typeof requestAnimationFrame !== 'function') { zeichneSommer(fach); return; }
+    requestAnimationFrame(function () {
+      if (meine !== sommerMarke || !sommerLiegtOben()) return;
+      if (fach.querySelector('.fu-sommerblatt')) return;
+      B.wage('fuhre.georgi', function () { zeichneSommer(fach); });
+    });
+  }
+
   function zeichneSommer(fach) {
     if (!sommerLiegtOben()) return;
     var s = Z.sommer, e = ep();
@@ -3430,7 +3456,7 @@
       var blatt = B.ebene('blatt', 'fuhre');
       B.leere(blatt);
       zeichneSchluss(blatt);
-      zeichneSommer(blatt);
+      legeSommer(blatt);
 
       meldeZug();
     }
