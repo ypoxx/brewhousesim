@@ -409,6 +409,14 @@ var SUD_DATEN = {
     2: { wer: 'Die Bierschau',
          satz: 'Die Schau war im Sudhaus. Brotkorn im Kessel — sie lässt den Bottich in den '
              + 'Bach laufen und schreibt es der Zunft.',
-         nimmtRohstoff: 0.20, nimmtBottiche: 1, gueteAb: 10 }
+         nimmtRohstoff: 0.20, nimmtBottiche: 1, gueteAb: 10 },
+    /* Das Reichsgesetz betreffend den Verkehr mit Nahrungsmitteln, Genussmitteln
+       und Gebrauchsgegenstaenden vom 14. Mai 1879 hat die oeffentlichen
+       Untersuchungsanstalten geschaffen; sie ziehen Proben, wo sie wollen.
+       Warm durchgegorenes Bier ist der Fall, auf den sie warten. */
+    3: { wer: 'Die Untersuchungsanstalt',
+         satz: 'Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein '
+             + 'Befund, und das Gesetz von 1879 gibt ihm den Bottich.',
+         nimmtRohstoff: 0.15, nimmtBottiche: 1, gueteAb: 8 }
   }
 };
