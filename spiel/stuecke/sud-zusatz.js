@@ -129,6 +129,16 @@
         jetzt: 'jedes Stueck rechnet direkt an haus.rohstoff; zwei Stuecke, die im '
              + 'selben Zug verbrauchen, ueberschreiben einander stillschweigend.',
         soll: 'Eine API im Kern, die protokolliert. Vorlage: B.sud.rohstoff.' },
+      { was: 'welt.sorten() — die Leiter der Epoche im Kern',
+        jetzt: 'Welche Sorten es in einer Epoche gibt und auf welcher Stufe sie stehen, '
+             + 'weiss nur FUHRE_DATEN. DER SUD muss diese fremde Datenglobale LESEN, um '
+             + 'sagen zu koennen, als was ein Bottich ausschlaegt (hoechst) — so, wie '
+             + 'fuhre.js seinerseits PREIS_DATEN liest. Es funktioniert und faellt still '
+             + 'aus, wenn die Globale fehlt; sauber ist es nicht.',
+        soll: 'Der Kern fuehrt die Sortenleiter (k, name, zeichen, stufe, reife, haltbar) '
+            + 'und gibt sie heraus; DIE FUHRE bepreist sie weiter, DER SUD entscheidet '
+            + 'weiter, welche Sprosse aus der Pfanne kommt. Erst dann ist "was fuer ein '
+            + 'Bier herauskommt" eine Naht und kein Griff in fremde Daten.' },
       { was: 'welt.vorrat: Gaerkeller neben Lagerkeller',
         jetzt: 'DER SUD zieht reifende Faesser mit nimmHeraus aus dem Lager heraus und '
              + 'legt sie mit legeEin zurueck; dabei muessen k, stufe, zeichen, reife und '

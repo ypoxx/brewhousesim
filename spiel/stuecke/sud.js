@@ -42,6 +42,19 @@
       altert wie bisher. Es gibt also keinen Zustand, den dieses Stueck
       schlechter macht als den vorgefundenen — nur einen, den es besser macht.
 
+   1b. RUNDE 2 — DIE FOLGE, DIE MAN BEIM WIRT WIEDERSIEHT.
+      Runde 1 hatte die Entscheidung, aber ihre Folgen blieben im Keller:
+      Haltbarkeit, Gaerwochen, Bottiche. Kein fremdes Stueck las je etwas
+      von diesem hier, und beim Wirt war nichts davon zu sehen. Jetzt traegt
+      jede Option ein `hoechst` — die hoechste SORTE, die dieses Verfahren
+      hergibt. DIE FUHRE bestellt (Duennbier · Grutbier · Starkbier), DER SUD
+      sagt, was die Pfanne davon haelt; was tiefer ausschlaegt, nimmt der
+      Gasthof nicht mehr und das Kloster erst recht nicht.
+      Die Zahl geht NIE nach oben — dieses Stueck deckelt, es hebt nicht.
+      Der Vorgabestand jeder Epoche deckelt auf Stufe 2, also genau auf das
+      Bier des Hauses: wer das Brett nie aufschlaegt, verliert keinen Pfennig
+      (gemessen, 150 Wochen, zwei Saaten, vier Epochen: null Rueckstufungen).
+
    3. haus.rohstoff ALS API (Uebertrag §6.2) — B.sud.rohstoff.
    4. nimmHeraus() MIT AUSWAHL (Uebertrag §6.3) — B.sud.nimmHeraus(n, wahl).
       Beide liegen hier statt im Kern, weil kein Stueck in kern/ schreiben
