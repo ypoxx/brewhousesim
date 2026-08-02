@@ -37,3 +37,26 @@
    BRAUHAUS.zuege() sie nicht als offen zaehlt. Hier nur die Sicherung
    fuer den Fall, dass ein Takt einmal ausfaellt. */
 .sud-brett.stadt-zugeklappt button { pointer-events: none; }
+
+/* --------------------------------------------------------------------------
+   DER ZETTEL TRITT ZURUECK, SOLANGE DAS BRETT OFFEN LIEGT.
+
+   Beide gehoeren diesem Stueck, beide haengen am Sudhaus, und das Brett ist
+   47 % breit — der Zettel lag also unter dem eigenen Brett und hatte drei
+   aktive, untreffbare Knoepfe. `display:none` und nicht `visibility`, weil
+   erst damit das Rechteck verschwindet: ein Zaehler, der nach der Flaeche
+   geht (decke.mjs, BEFUND-BRETTER.md), sieht dann gar nichts mehr statt
+   etwas Totes.
+   -------------------------------------------------------------------------- */
+.sud-zettel.beiseite { display: none; }
+
+/* Der Rang auf dem Zettel — die eine Zahl dieses Stuecks, die auch im
+   Vorgabestand im Bild steht. */
+.sud-zrang {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  letter-spacing: calc(var(--s) * 1);
+  color: #6b4a22;
+}
+#buehne[data-epoche="1"] .sud-zrang,
+#buehne[data-epoche="2"] .sud-zrang { color: #e0c894; }
