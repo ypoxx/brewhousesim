@@ -82,20 +82,30 @@ Eine Partie muss **aufhören und dabei etwas sagen**. Heute wird ein Knopf grau.
 verschiedene Ausgänge, und weiß er nach jedem in einem Satz, warum? Erkennt er
 am Bildschirm den Unterschied zwischen „verloren" und „das Spiel klemmt"?
 
-### 2 · DER BODEN — was passiert, wenn das Geld alle ist
+### 2 · DIE RÜCKKOPPLUNG — warum jeder Weg nach unten führt
 
-Dateien: `stuecke/preis*.js` (DER PREIS besitzt die Kasse)
+Dateien: `stuecke/preis*.js` (DER PREIS besitzt die Kasse) · `stuecke/fuhre*.js`
 
-Die Kasse geht unter null und niemand merkt es. −14 Pf ist keine Zahl, das ist
-ein fehlender Fall.
+**Das schwerste Stück der Welle.** Beide Extremstile enden bei null: rho
+zwischen −0,8 und −1,0, in allen vier Epochen, ob man spielt oder nicht. Der
+Grund steht schon in `spiel/BEFUND-WIRTSCHAFT.md` und hat sich nicht geändert:
+*Kosten hängen an der Fahrt und am Kalender, Ertrag hängt an der Ladung, und
+nichts koppelt das Ergebnis auf die Schwierigkeit zurück.*
 
-* Ein Boden mit **Folge**: Schulden, Zins, ein Gläubiger, Pfand auf den Hof,
-  das verkaufte Fuhrwerk. Nicht eine negative Zahl in der Kopfzeile.
+* Ein Haus, das gut spielt, muss **spürbar** besser dastehen — und ein Haus, das
+  gut dasteht, muss es **schwerer** haben. Ohne diese zweite Hälfte wächst die
+  Kennzahl davon, sobald die erste da ist; das ist der Patrizier-IV-Fall aus der
+  Latte.
+* Ein Boden mit **Folge**: Schulden, Zins, ein Gläubiger, Pfand auf den Hof, das
+  verkaufte Fuhrwerk. Nicht eine negative Zahl in der Kopfzeile (1350 endet bei
+  −14 Pf).
 * Der Weg nach unten muss **spürbar** sein, bevor er zu Ende ist — eine Warnung,
   eine Frist, eine letzte Gelegenheit.
 
-**Der Kritiker zählt:** Fährt er ein Haus absichtlich an die Wand — bekommt er
-unterwegs eine Wahl, oder nur eine kleinere Zahl?
+**Der Kritiker zählt:** Spielt er zweimal dieselbe Epoche, einmal sorgfältig und
+einmal blind drauflos — sieht er nach vier Jahren einen Unterschied am
+Bildschirm? Und fährt er ein Haus absichtlich an die Wand: bekommt er unterwegs
+eine Wahl, oder nur eine kleinere Zahl?
 
 ### 3 · DIE KOPFZEILE — die eine Zahl muss ehrlich sein
 
