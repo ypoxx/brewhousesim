@@ -934,7 +934,8 @@
     if (!g || !g.fall) { B.uhr.beende('keine-abnehmer', fristDef().ende); return; }
     Z.antrag = null;
     var summe = Math.round(antragSumme() * (g.fall.anteil || 0));
-    schliesseAb(g.fall, summe, g.fall.kopf);
+    /* ausgangSatz fuellt {jahr} — sonst steht die Lücke im Protokollbuch. */
+    schliesseAb(g.fall, summe, ausgangSatz(g.fall.kopf, summe));
   }
 
   /* ----------------------------------------------------------------------
