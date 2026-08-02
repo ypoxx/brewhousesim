@@ -1079,9 +1079,10 @@
         return st && st.indexOf(hoch) < 0;
       });
       if (fort.length) {
-        kasten.appendChild(zeile('sud-warnung', (fort.length === 1 ? 'Dieses Haus führt' : 'Diese Häuser führen')
-          + ' nur ' + spitze.name + ' und bekommt' + (fort.length === 1 ? '' : 'en')
-          + ' vom Anker nichts: ' + fort.map(function (a) { return a.name; }).join(' · ') + '.'));
+        kasten.appendChild(zeile('sud-warnung',
+          fort.map(function (a) { return a.name; }).join(' und ')
+          + (fort.length === 1 ? ' führt' : ' führen') + ' nur ' + spitze.name
+          + ' und bekomm' + (fort.length === 1 ? 't' : 'en') + ' vom Anker nichts.'));
       }
     }
     if (Z.gestuft) {

@@ -816,30 +816,62 @@
 
      Das schliesst Bretter seltener und richtiger. Wer sich am Rand
      ueberlappt, bleibt offen; wer einen Knopf begraebt, klappt zu. */
-  var SCHLUCKT = 0.55;          /* so viel des Kleineren ist auch ohne Knopf zu viel */
-
   function deckt(r, el) {
     var x = el.left + el.width / 2, y = el.top + el.height / 2;
     return x > r.left && x < r.right && y > r.top && y < r.bottom;
   }
 
-  function zuegeDrunter(oben, unten) {
-    var l = unten.el.querySelectorAll('[data-zug]');
-    var n = 0;
-    for (var i = 0; i < l.length; i++) {
-      if (l[i].disabled) continue;
-      var q = l[i].getBoundingClientRect();
-      if (q.width < 2 || q.height < 2) continue;
-      if (deckt(oben.r, q)) n++;
-    }
-    return n;
+  function imStreit(oben, unten) {
+    return ueberdeckung(oben.r, unten.r) > DECKGRENZE;
   }
 
-  function imStreit(oben, unten) {
-    var d = ueberdeckung(oben.r, unten.r);
-    if (d <= DECKGRENZE) return false;      /* beruehrt sich nur */
-    if (d >= SCHLUCKT) return true;         /* verschluckt es ganz */
-    return zuegeDrunter(oben, unten) > 0;   /* deckt es einen Zug zu? */
+  /* WAS DIE WERKBANK SELBST ZUDECKT.  (Runde 7)
+
+     Die Platzordnung regelt Brett gegen Brett. Eine Partei war nie dabei:
+     die Werkbank der STADT. Sie liegt ueber allem (das muss sie, sonst waeren
+     die Reiter unter einem Brett nicht mehr zu treffen) und sie klappt nie
+     zu. Ihr Vertrag steht im Kopf von stil/stadt.css — sie faengt erst bei
+     87,5 Prozent der Hoehe an, und darueber ist Stadtfenster.
+
+     Nachgemessen haelt sie ihn: Reiterzeile 87,11 / 87,43 / 87,40 Prozent,
+     Bauhof 91,11 / 91,34 / 91,31 in 2752x1536, 1920x1000 und 1366x768. Aber
+     der Vertrag hat eine zweite Haelfte, die niemand geprueft hat — dass
+     unter ihr auch nichts LIEGT. In 1970 liegt dort etwas: drei Zuege der
+     FUHRE sitzen bei 87,7 bis 98,9 Prozent der Hoehe, also unter der
+     Reiterzeile und unter dem Bauhof, und sind fuer die Maus nicht da.
+
+     Das ist ein fremder Befund und wird deshalb gemeldet, nicht geheilt: den
+     Bauhof durchlaessig zu machen hiesse, einen Klick auf ein gemaltes Brett
+     an einen unsichtbaren Knopf darunter zu geben, und das ist schlimmer als
+     der Fehler. Damit ihn niemand suchen muss, zaehlt der Rahmen ihn:
+     BRAUHAUS.stadt.rahmen.verdeckt(). */
+  function verdecktVonWerkbank() {
+    var w = werkbank();
+    var teile = [w.querySelector('.stadt-reiterzeile'), w.querySelector('.stadt-bauhof')];
+    var kaesten = [];
+    teile.forEach(function (t) {
+      if (!t) return;
+      var r = t.getBoundingClientRect();
+      if (r.width > 2 && r.height > 2) kaesten.push(r);
+    });
+    var l = document.querySelectorAll('[data-zug]');
+    var raus = [];
+    for (var i = 0; i < l.length; i++) {
+      var el = l[i];
+      var zug = el.getAttribute('data-zug');
+      if (zug.indexOf('stadt:') === 0 || el.disabled) continue;
+      var q = el.getBoundingClientRect();
+      if (q.width < 2 || q.height < 2) continue;
+      for (var k = 0; k < kaesten.length; k++) {
+        if (!deckt(kaesten[k], q)) continue;
+        var x = q.left + q.width / 2, y = q.top + q.height / 2;
+        var oben = document.elementFromPoint(x, y);
+        if (oben && (oben === el || el.contains(oben))) break;
+        raus.push({ zug: zug, unter: kaesten[k] === kaesten[0] ? 'reiterzeile' : 'bauhof' });
+        break;
+      }
+    }
+    return raus;
   }
 
   function nachsehen() {
@@ -1255,7 +1287,8 @@
       ebenen: EBENEN.slice(),
       lage: function () { return JSON.parse(JSON.stringify(lage)); },
       zeige: alleZuklappen,
-      schalte: schalte
+      schalte: schalte,
+      verdeckt: verdecktVonWerkbank
     },
     /* Die Kartenschicht: wer seine Marke selbst setzen will, setzt data-frei
        und wird nicht mehr angefasst — wie beim Rahmen. */
