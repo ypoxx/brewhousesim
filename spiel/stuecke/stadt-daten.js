@@ -529,7 +529,7 @@ var STADT_DATEN = {
     /* Dieselbe Wanderung wie der Fassschuppen: von C2 (35|78) auf die
        Hoftasche (30|73,5). In 1600 sitzt es weiter rechts an der Mauer. */
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 3, dy: -2.5, breite: 14, breiten: { 2: 10.1 },
+      ort: 'fasslager', dx: 5, dy: -2.5, breite: 14, breiten: { 2: 10.1 },
       versatz: { 2: { dx: 9, dy: -3.5 } },
       von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat wächst, der Schwund fällt.',
@@ -665,7 +665,7 @@ var STADT_DATEN = {
        zwischen Maschinenhaus und Pferdestall. Dieselbe falsche Koordinate
        trug bis Runde 3 auch die Fahrzeugwaage. */
     { schluessel: 'flaschenhalle', name: 'Flaschenhalle', bild: 'flaschenhalle',
-      ort: 'hof', dx: 3, dy: 7, breite: 13.5, von: 3, bis: 3, grund: 100,
+      ort: 'hof', dx: 0, dy: 7, breite: 13.5, von: 3, bis: 3, grund: 100,
       sagt: 'Bier in Flaschen geht dorthin, wo kein Fass mehr hinkommt: nach Hause.',
       nutzen: { platz: 20 } },
 
