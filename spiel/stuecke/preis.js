@@ -79,6 +79,7 @@
     umlagen: [],           /* [{jahr, name, sagt, bezahlt}]               */
     handlohnFaellig: false,
     rueckstand: 0,
+    gestundet: 0,          /* was dieses Michaeli am Notpfennig hängenblieb */
 
     handlohnWeg: false,
     handlohnHalb: false,
@@ -152,13 +153,41 @@
     return e.grund * HOEHE_GEWICHT * Math.pow(h, HOEHE_STEIGUNG);
   }
 
+  /* DER MINDESTANSATZ IST EIN ANSATZ, KEINE SCHULD, DIE MIT DER ZEIT WAECHST.
+
+     Bis zum 2. August 2026 stand hier
+       basis = max(grund, wert);  anschlag = basis * teuerung^jahre * ...
+     Der Boden `grund` wurde also mit der Teuerung mitgehoben. Fuer ein
+     wachsendes Haus ist das gleichgueltig — `wert` liegt ohnehin darueber.
+     Fuer ein schrumpfendes ist es toedlich, und zwar gemessen: in 1970 steht
+     der Anschlag 1971 bis 1983 in JEDEM Jahr auf dem Boden, waehrend der
+     eigene Wert des Hauses (Barschaft plus Umsatz) von 425.711 auf 258.216 DM
+     faellt. Der Anschlag steigt in denselben Jahren von 556.462 auf
+     943.694 DM. Das billigste Angebot kostet damit 1983 mehr als das
+     Doppelte von 1971, obwohl das Haus auf ein Drittel geschrumpft ist —
+     genau der Fehler, den `lastenGrund` bei den Pflichten hatte und der dort
+     schon entfernt wurde (siehe oben, DREI WURZELN).
+
+     Jetzt gilt die Teuerung fuer den eigenen Wert des Hauses und nicht fuer
+     den Mindestansatz: der Boden ist die Zahl, unter die in dieser Zeit
+     niemand einen Bau anschlaegt, und die aendert sich nicht dadurch, dass
+     ein Haus verarmt. Wer waechst, merkt von der Aenderung nichts. */
   function rechneAnschlag() {
     var e = ep();
     var wert = umsatzGewicht() * Z.umsatz + ausBarschaft();
-    var basis = Math.max(e.grund, wert);
     var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
-    Z.anschlag = basis * Math.pow(e.teuerungJahr, jahre) * Math.pow(e.teuerungKauf, Z.kaeufe);
+    var zeit = Math.pow(e.teuerungJahr, jahre) * Math.pow(e.teuerungKauf, Z.kaeufe);
+    Z.anschlag = Math.max(e.grund, wert * zeit);
     return Z.anschlag;
+  }
+
+  /* Steht der Anschlag auf dem Mindestansatz? Nur dann steht die Zeile
+     dazu auf der Tafel. */
+  function amBoden() {
+    var e = ep();
+    var jahre = B.grenze(jahr() - Z.startjahr, 0, 40);
+    var zeit = Math.pow(e.teuerungJahr, jahre) * Math.pow(e.teuerungKauf, Z.kaeufe);
+    return (umsatzGewicht() * Z.umsatz + ausBarschaft()) * zeit < e.grund;
   }
 
   function messeUmsatz(j) {
@@ -409,21 +438,53 @@
      BUCHEN. Was nicht bezahlt werden kann, wird angeschrieben — als Zahl,
      nicht als Drohung.
      ---------------------------------------------------------------------- */
-  /* Was die Kasse traegt, wird bezahlt; der Rest wird angeschrieben. Kein
-     Alles-oder-nichts — sonst wuerde ein einziges mageres Jahr das Haus in
-     eine Schuldenspirale kippen, aus der es nicht zurueckfindet. */
+  /* DIE STUNDUNG — was der Rat stehen laesst.
+
+     Bis zum 2. August 2026 nahm dieser Buchungsweg alles, was in der Lade
+     lag: `kasse >= betrag ? zahle(betrag) : zahle(kasse)`. Ein Haus, dessen
+     Rechnung groesser ist als seine Barschaft, stand danach auf NULL — und
+     genau das ist am Bildschirm der haeufigste Zustand der beiden Epochen,
+     die die zweite Messlatte reissen. Gemessen an der sorgfaeltig gespielten
+     Linie, Michaelitafel 1970: 1976 bis 1981 steht die Kasse an fuenf von
+     sechs Michaelitagen auf 3.000 DM oder darunter, und der Rueckstand laeuft
+     mit einem Zehntel Aufschlag weiter. Die Kennzahl „Barschaft geteilt durch
+     den Preis des naechsten Zuges" ist dann nicht klein, sondern NULL, und
+     kein Zug aendert daran etwas — der Zustand, den ZUSTAENDIGKEIT 4 als
+     einzige harte Regel verbietet.
+
+     Ein Glaeubiger, der das letzte Geld nimmt, bekommt im naechsten Jahr gar
+     nichts mehr. Deshalb hat keine Stadt so gepfaendet: dem Handwerker blieb
+     sein Werkzeug und der Vorrat, den er zum Weiterarbeiten brauchte, und was
+     darueber hinaus faellig war, wurde gestundet — angeschrieben, mit
+     Aufschlag, wiedervorgelegt. Der Rat nimmt bis zum Notpfennig und keinen
+     Pfennig weiter.
+
+     Das ist keine Milde und keine Abgabe, die an der Barschaft haengt: der
+     Notpfennig ist eine feste Zahl der Epoche (`notpfennig` in den Daten),
+     unabhaengig davon, wie es dem Haus geht. Was er stehen laesst, ist nicht
+     erlassen, sondern gestundet — es steht naechstes Michaeli mit Aufschlag
+     wieder da, und waechst der Rueckstand ueber eine Jahreslast, nimmt der
+     Rat ein Pfand (Schritt 2 in `michaeli`). Die Strafe bleibt; sie
+     versteinert das Haus nur nicht mehr. */
+  function notpfennig() {
+    var n = ep().notpfennig;
+    return (typeof n === 'number' && n > 0) ? Math.round(n) : 0;
+  }
+
   function buche(betrag, name, art, wurzel) {
     betrag = Math.round(betrag);
     if (betrag <= 0) return true;
     var kasse = Math.max(0, Math.floor(B.welt.haus.kasse));
-    if (kasse >= betrag) {
+    var frei = Math.max(0, kasse - notpfennig());
+    if (frei >= betrag) {
       B.welt.zahle(betrag, name, 'spieler');
       Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', wurzel: wurzel });
       return true;
     }
-    if (kasse > 0) B.welt.zahle(kasse, name + ' (Teilzahlung)', 'spieler');
-    var rest = betrag - kasse;
+    if (frei > 0) B.welt.zahle(frei, name + ' (Teilzahlung)', 'spieler');
+    var rest = betrag - frei;
     Z.rueckstand += rest;
+    Z.gestundet += rest;
     Z.rechnung.push({ name: name, betrag: -betrag, art: art || 'pflicht', wurzel: wurzel, offen: rest });
     return false;
   }
@@ -510,6 +571,7 @@
   function michaeli(erste) {
     var e = ep();
     Z.rechnung = [];
+    Z.gestundet = 0;
     Z.tafelJahr = jahr();
 
     /* 1. Was durch das Haus ging, was es uebrig liess, und was im Haus liegt. */
@@ -1102,8 +1164,11 @@
     var ausKasse = ausBarschaft();
     an.appendChild(zeile('aus dem Umsatz des Vorjahrs', geld(Math.round(ausUmsatz))));
     an.appendChild(zeile('aus der Barschaft', geld(Math.round(ausKasse))));
-    if (ausUmsatz + ausKasse < e.grund) {
+    if (amBoden()) {
       an.appendChild(zeile('Mindestansatz dieser Zeit', geld(e.grund), 'pr-umlage'));
+      an.appendChild(B.el('div', 'pr-satz pr-klein',
+        'Unter diese Zahl schlägt in dieser Zeit niemand einen Bau an. Sie steigt '
+        + 'nicht mit der Teuerung — sie ist der Ansatz der Zeit und nicht das Haus.'));
     }
     if (Z.kaeufe) an.appendChild(zeile('Aufschlag für ' + Z.kaeufe + ' gebaute Sachen',
       '+' + B.zahl((Math.pow(ep().teuerungKauf, Z.kaeufe) - 1) * 100, 0) + '%'));
