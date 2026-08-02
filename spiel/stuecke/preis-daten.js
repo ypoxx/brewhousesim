@@ -68,7 +68,7 @@ var PREIS_DATEN = {
          gegen 187 Pf Ausstoss. Ein Erbzins auf ein Braugerechtsame war
          ein fester kleiner Betrag, kein halbes Jahreseinkommen. */
       lastenFest: 34,
-      pflichtUmsatz: 0.085,
+      pflichtUmsatz: 0.070,
       /* Der Schoss stand auf 0,55 — von allem, was ein Braujahr uebrig liess,
          nahm der Rat mehr als die Haelfte, und zwar in der aermsten Epoche.
          Gemessen ueber die sorgfaeltig gespielte Linie nimmt DER PREIS in
@@ -99,7 +99,7 @@ var PREIS_DATEN = {
          hoechste der vier Quoten. Sie hat die Partie 1352, 1355 und 1359
          jedesmal auf null gesetzt. Sie bleibt die Zacke im Verlauf, nur
          nicht mehr das Ende. */
-      umlageAnteil: 0.48,
+      umlageAnteil: 0.42,
       handlohnAnteil: 1.10,
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
@@ -674,9 +674,9 @@ var PREIS_DATEN = {
          Ein Landbrauhaus mit dreissig Leuten hat schwere Fixkosten; es hat
          nicht ein Viertel seines Umsatzes an Lohn und Zins, sonst gaebe es
          die Brauerei nicht mehr. */
-      lastenFest: 6500,
-      pflichtUmsatz: 0.055,
-      pflichtErtrag: 0.38,
+      lastenFest: 4500,
+      pflichtUmsatz: 0.042,
+      pflichtErtrag: 0.30,
       nachlass: 0.50,
       nachlassName: 'Tilgungsaussetzung der Hausbank',
       /* DER NOTPFENNIG. Was die Hausbank auf dem Konto stehen laesst, damit
@@ -692,7 +692,7 @@ var PREIS_DATEN = {
          duennsten Polster. Gemessen: die Rechnung 1973 stand bei 78.600 DM
          und hat die Kasse von 45.000 auf null gesetzt; von dort ist sie in
          zehn Jahren nicht zurueckgekommen. */
-      umlageAnteil: 0.45,
+      umlageAnteil: 0.36,
       handlohnAnteil: 1.05,
       abstaende: [3, 4, 3, 5, 4, 3, 5, 4],
 
