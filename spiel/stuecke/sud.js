@@ -1319,6 +1319,16 @@
     brett.appendChild(kopf);
     brett.appendChild(zeile('sud-historie', e.historie));
 
+    /* Die kalte Pfanne steht am Brett, ehe sie zaehlt. Wer sie liest, hat
+       noch ein Braujahr, um zu antworten. */
+    var kd = kaltDef();
+    if (kd && Z.kalt > 0) {
+      brett.appendChild(zeile('sud-warnung kalt',
+        String(kd.e.warnung || '').replace('{n}', Z.kalt).replace('{e}', Z.kalt === 1 ? '' : 'e')
+        + ' Noch ' + (kd.frist - Z.kalt)
+        + ((kd.frist - Z.kalt) === 1 ? ' Braujahr.' : ' Braujahre.')));
+    }
+
     /* Zwei Spalten, damit nichts unter den Rand rutscht. In 1970 stehen
        sechs Verfahrensoptionen auf dem Brett; einspaltig lagen die beiden
        Anstich-Knoepfe unterhalb des sichtbaren Randes und wurden von
