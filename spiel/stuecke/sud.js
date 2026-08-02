@@ -1231,12 +1231,12 @@
     reihe.appendChild(knopf({
       text: f.text + ' · +' + (D.guete.fuehren || 8),
       zug: 'sud:hefe-fuehren', klasse: 'sud-tat',
-      titel: f.titel + ' Kostet kein Fass.',
+      titel: f.titel,
       aus: !frei || !Z.bottiche.length,
       tu: fuehreHefe
     }));
     reihe.appendChild(knopf({
-      text: 'Jüngstes Fass anbrechen · +' + (D.guete.anstichJung || 14),
+      text: (a.jung || 'Jüngstes Fass anbrechen') + ' · +' + (D.guete.anstichJung || 14),
       zug: 'sud:anstich-jung', klasse: 'sud-tat',
       titel: a.titel + ' Das jüngste Fass gibt das kräftigste Zeug — und es wäre noch '
            + 'lange zu verkaufen gewesen. Kostet ' + B.welt.menge(1) + '.',
@@ -1244,7 +1244,7 @@
       tu: function () { anstich(true); }
     }));
     reihe.appendChild(knopf({
-      text: 'Ältestes Fass anbrechen · +' + (D.guete.anstichAlt || 6),
+      text: (a.alt || 'Ältestes Fass anbrechen') + ' · +' + (D.guete.anstichAlt || 6),
       zug: 'sud:anstich-alt', klasse: 'sud-tat',
       titel: a.titel + ' Das älteste Fass wäre ohnehin bald verdorben — dafür gibt es nur '
            + 'die Hälfte her. Kostet ' + B.welt.menge(1) + '.',
