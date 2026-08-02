@@ -310,7 +310,7 @@ var FUHRE_DATEN = {
          Knappheit bleibt der Fassplatz — der Boettcher steht mit Preisschild
          daneben, das Pfand wird eingezogen —, sie ist nur kein Leck mehr. */
       wagen: { name: 'Pferdefuhrwerk', leeren: 'Wagen leeren', fass: 8, halte: 5, schritt: 1,
-               grund: 1.5, jeKm: 0.8, haltPreis: 0.6, jeFass: 2.3, umlauf: 3, bruch: 0.018,
+               grund: 1.5, jeKm: 0.8, haltPreis: 0.6, jeFass: 1.9, umlauf: 3, bruch: 0.018,
                satz: 'Acht Plätze, fünf Halte, zwei Pferde. Die Fässer kommen erst nach Wochen zurück.' },
       faesser: 38,
       pfand: { name: 'Pfand einziehen', grund: 14, jeFass: 3,
@@ -320,7 +320,7 @@ var FUHRE_DATEN = {
       planStart: 1,
       unterhalt: 2,
       unterhaltName: 'Erhaltung des Braugeräts',
-      teuerungLauf: 1.012,
+      teuerungLauf: 1.004,
       lohnSud: 2.2,
       lohnName: 'Gesellenlohn und Pferdefutter',
       notsud: { jeSud: 1, mindest: 1,
@@ -378,7 +378,7 @@ var FUHRE_DATEN = {
           titel: 'Ein Zunftgenosse tritt vier Sude seiner Reihe ab. Gilt nur für dieses Braujahr.' },
         { k: 'fass',     text: 'Fässer vom Böttcher · +4', basis: 92, staffel: 1.07, menge: 4,
           titel: 'Vier Fässer mehr im Umlauf. Das ist in dieser Epoche die eigentliche Währung.' },
-        { k: 'rohstoff', text: 'Hopfen vom Markt · +60', basis: 150, staffel: 1.0, menge: 60,
+        { k: 'rohstoff', text: 'Hopfen vom Markt · +60', basis: 120, staffel: 1.0, menge: 60,
           rueck: 0.55, rtext: 'Hopfen zurück auf den Markt · −60',
           rtitel: 'Sechzig Hopfen gehen zurück an den Markt. Der Händler zahlt bar und schlecht.',
           titel: 'Reinheitsgebot: Gerste, Hopfen, Wasser. Grut ist verboten.' }
@@ -478,7 +478,17 @@ var FUHRE_DATEN = {
          fuenf Adressen auf einmal. Die Knappheit bleibt (der Fluss traegt
          nur zwischen Woche 9 und 22); sie ist jetzt eine Entscheidung im
          Winter statt einer Wand im Herbst. */
-      eis: { start: 210, keller: 330, jeFuder: 16, menge: 42, frostVon: 9, frostBis: 22,
+      /* `frei` ist die Eisernte des eigenen Gesindes: solange der Fluss
+         traegt, gehen die Knechte mit Saege und Schlitten hinunter und
+         fuellen den Keller, so weit sie kommen. Das war die Regel und
+         keine Ausgabe — bezahlt wurde es mit den Winterloehnen, die
+         ohnehin laufen. Der Eishaendler (der Knopf daneben) liefert das
+         Vielfache davon und kostet Geld; ohne ihn reicht die eigene Ernte
+         fuer den Keller und ein paar Sude Lagerbier, nicht fuer den
+         Export. Vorher gab es sie gar nicht: wer einmal kein Eis mehr
+         hatte, bekam nie wieder welches, und die Epoche endete
+         unwiderruflich beim Nachguss (BEFUND-WIRTSCHAFT). */
+      eis: { start: 210, keller: 330, jeFuder: 16, menge: 42, frei: 4, frostVon: 9, frostBis: 22,
              satz: 'Eis wird aus dem Fluss geschnitten, solange er trägt. Danach nicht mehr.' },
       faesser: 260,
       mengenfaktor: 1.6,

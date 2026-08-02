@@ -239,18 +239,18 @@ var PREIS_DATEN = {
       lastenGrund: 2500,
       teuerungJahr: 1.038,
       teuerungKauf: 1.055,
-      lastenFest: 130,
-      pflichtUmsatz: 0.070,
-      pflichtErtrag: 0.50,
+      lastenFest: 100,
+      pflichtUmsatz: 0.058,
+      pflichtErtrag: 0.40,
       nachlass: 0.55,
       nachlassName: 'Stundung des Klosters auf den Pachtzins',
       pflichtHoehe: 0.155,
-      umlageAnteil: 0.85,
+      umlageAnteil: 0.70,
       handlohnAnteil: 1.15,
       /* 1600 bis 1650 ist die dichteste Umlagenzeit der ganzen Partie:
          Tuerkensteuer, Kontribution, Quartierlast, Brandsteuer,
          Salvaguardia. Der Abstand ist zwei bis vier Jahre, nicht sechs. */
-      abstaende: [2, 2, 3, 2, 4, 3, 2, 3, 4],
+      abstaende: [1, 2, 3, 2, 4, 3, 2, 3, 4],
 
       ordnung: [
         { ab: 1517, preis: 22, sagt: 'Die Bierordnung nach dem Reinheitsgebot: zweiundzwanzig Gulden je Fass Braunbier.' },

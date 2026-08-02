@@ -99,6 +99,7 @@
     sommerOffen: false,
     kaufNr: {},
     bannNr: 0,
+    eisGemeldet: false,
     unterhaltExtra: 0,
     verladen: 0,         /* Fass, die dieses Braujahr wirklich hinausgingen */
     verladenVorjahr: 0,
@@ -1834,6 +1835,23 @@
     B.sende('zeichne', { grund: 'fuhre-kauf' });
   }
 
+  /* DIE EISERNTE DES EIGENEN GESINDES. Solange der Fluss traegt, wird
+     geschnitten — das ist Winterarbeit und keine Rechnung. Sie fuellt den
+     Keller nicht, sie haelt ihn nur ueber Wasser: wer Lagerbier in Menge
+     oder Exportbier will, kauft beim Eishaendler dazu. */
+  function eisErnte() {
+    var e = ep();
+    if (!e.eis || !e.eis.frei || !frostzeit()) return;
+    var vorher = Z.eis;
+    Z.eis = Math.min(Z.eisKeller, Z.eis + e.eis.frei);
+    if (Z.eis > vorher && !Z.eisGemeldet) {
+      Z.eisGemeldet = true;
+      B.welt.schreibe('Der Fluss trägt. Die Knechte schneiden Eis und fahren es in den Keller — '
+        + e.eis.frei + ' Fuder in der Woche, solange der Frost hält. '
+        + 'Mehr bringt nur der Eishändler, und der will Geld.', 'fuhre');
+    }
+  }
+
   function frostzeit() {
     var e = ep();
     if (!e.eis) return false;
@@ -3170,6 +3188,7 @@
       if (Z.epoche !== B.welt.zeit.epoche) richteEpocheEin(false);
       Z.meldung = null;
       umlaufZurueck();
+      eisErnte();
       braue();
       eisZehrt();
       durstWaechst();
