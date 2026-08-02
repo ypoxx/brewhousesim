@@ -1056,7 +1056,7 @@
       r.appendChild(B.el('span', 'sud-wzahl',
         nimmt.length + ' von ' + alle.length + (alle.length === 1 ? ' Haus' : ' Häusern')));
       r.appendChild(B.el('span', 'sud-wurteil', geht
-        ? 'die Pfanne trägt es'
+        ? 'trägt die Pfanne'
         : 'schlägt als ' + (oben ? oben.name : '—') + ' aus'));
       r.title = nimmt.length ? nimmt.map(function (a) { return a.name; }).join(' · ')
                              : 'Kein Haus in dieser Zeit führt es.';
@@ -1163,8 +1163,13 @@
     var rolle = B.el('div', 'sud-rolle rolle');
     var links = B.el('div', 'sud-spalte links');
     var rechts = B.el('div', 'sud-spalte rechts');
+    /* Links die Entscheidungen, rechts ihre Folgen — erst beim Wirt, dann
+       in der Hefe, dann im Keller. Das Feld BEIM WIRT steht rechts und
+       nicht unter den Achsen, weil die linke Spalte in drei von vier
+       Epochen ohnehin die laengere ist: unter den Achsen haette es das
+       Brett um weitere zehn Prozent der Buehnenhoehe wachsen lassen. */
     achsen().forEach(function (a) { zeichneAchse(links, a); });
-    zeichneWirte(links);
+    zeichneWirte(rechts);
     zeichneHefe(rechts);
     zeichneGaerkeller(rechts);
 

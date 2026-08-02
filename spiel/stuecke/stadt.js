@@ -789,10 +789,57 @@
     var liegt = [];
     offen.forEach(function (e) {
       for (var i = 0; i < liegt.length; i++) {
-        if (ueberdeckung(e.r, liegt[i].r) > DECKGRENZE) { lage[e.s] = 'zu'; return; }
+        if (imStreit(e, liegt[i])) { lage[e.s] = 'zu'; return; }
       }
       liegt.push(e);
     });
+  }
+
+  /* WORAN MAN EINEN STREIT ERKENNT.  (Runde 7)
+
+     Bis hierher entschied allein das Rechteck: deckt es mehr als DECKGRENZE
+     des kleineren Bretts, klappt das aeltere zu. Das ist zu grob in beide
+     Richtungen. Ein Brett ist kein Rechteck, sondern eine Handvoll Knoepfe
+     in viel Luft — DER SUD legt ueber DIE FUHRE ein 47 Prozent breites Feld,
+     das zu drei Vierteln leer ist. Zwei Bretter koennen sich also zu einem
+     Fuenftel decken, ohne dass ein einziger Zug darunter liegt; und eines
+     kann ein anderes fast ganz begraben, ohne die Grenze zu reissen, wenn
+     der Verdeckte klein ist.
+
+     Der Befund, um den es geht, sagt es selbst (spiel/BEFUND-BRETTER.md §5):
+     "erreichbar muss jeder aktive Zug sein". Also wird genau das gefragt und
+     nicht seine Naeherung:
+
+       Ein Streit ist, wenn das obere Brett einen ZUG des unteren zudeckt —
+       oder wenn es das untere fast ganz verschluckt (dann ist es auch ohne
+       Knopf darunter kein bedienbarer Zustand mehr).
+
+     Das schliesst Bretter seltener und richtiger. Wer sich am Rand
+     ueberlappt, bleibt offen; wer einen Knopf begraebt, klappt zu. */
+  var SCHLUCKT = 0.55;          /* so viel des Kleineren ist auch ohne Knopf zu viel */
+
+  function deckt(r, el) {
+    var x = el.left + el.width / 2, y = el.top + el.height / 2;
+    return x > r.left && x < r.right && y > r.top && y < r.bottom;
+  }
+
+  function zuegeDrunter(oben, unten) {
+    var l = unten.el.querySelectorAll('[data-zug]');
+    var n = 0;
+    for (var i = 0; i < l.length; i++) {
+      if (l[i].disabled) continue;
+      var q = l[i].getBoundingClientRect();
+      if (q.width < 2 || q.height < 2) continue;
+      if (deckt(oben.r, q)) n++;
+    }
+    return n;
+  }
+
+  function imStreit(oben, unten) {
+    var d = ueberdeckung(oben.r, unten.r);
+    if (d <= DECKGRENZE) return false;      /* beruehrt sich nur */
+    if (d >= SCHLUCKT) return true;         /* verschluckt es ganz */
+    return zuegeDrunter(oben, unten) > 0;   /* deckt es einen Zug zu? */
   }
 
   function nachsehen() {
