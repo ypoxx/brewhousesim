@@ -100,6 +100,8 @@
     kaufNr: {},
     bannNr: 0,
     unterhaltExtra: 0,
+    verladen: 0,         /* Fass, die dieses Braujahr wirklich hinausgingen */
+    verladenVorjahr: 0,
     sudeWoche: 0,        /* bezahlte Sude dieser Woche — Treber und Lohn    */
     lohnWoche: 0,        /* was davon an die Saisonkraefte ging             */
     jahrUmsatz: 0,
@@ -841,9 +843,19 @@
      bezahlt Luft" bleibt Wort fuer Wort die Mechanik dieser Epoche. */
   function passendeFracht() {
     var f = ep().fracht;
-    if (!f || !f.length) return 'stueck';
+    if (!f || !f.length) return f && f.length ? f[0].k : 'stueck';
     var braucht = 0;
     haeuser().forEach(function (a) { braucht += wochenbedarf(a); });
+    /* BESTELLT WIRD, WAS DAS HAUS VERLADEN KANN — NICHT, WAS DIE STADT WILL.
+       Der Durst der Stadt ist nicht die Wagenstellung. Gemessen: 1886 wollten
+       sieben Wirtschaften zusammen ueber vierzig Hektoliter die Woche, das
+       Haus brachte vier auf die Rampe — und bestellte weiter den Halben
+       Wagen zu 190 Mark Pauschale, weil die Stufe am Durst haengt. Eine
+       Bahn vereinbart die Wagenstellung nach dem Aufkommen des vorigen
+       Jahres; wer weniger aufgibt, bekommt kleinere Wagen. */
+    if (Z.verladenVorjahr > 0) {
+      braucht = Math.min(braucht, Z.verladenVorjahr / B.uhr.WOCHEN_IM_JAHR * 1.35);
+    }
     for (var i = 0; i < f.length; i++) if (f[i].fass >= braucht) return f[i].k;
     return f[f.length - 1].k;
   }
@@ -1093,6 +1105,7 @@
       + ' · ' + Z.ladung.length + (Z.ladung.length === 1 ? ' Halt' : ' Halte'), 'spieler');
 
     Z.vorige = Object.keys(verteilung).length ? verteilung : Z.vorige;
+    Z.verladen += gesamt;
     Z.ladung = [];
     Z.fuhren += 1;
     Z.meldung = (gesamt
@@ -1202,7 +1215,7 @@
     }
 
     /* 1. Was an der Tafel steht. */
-    var planFiel = null;
+    var planFiel = null, ersatz = null;
     for (var si = 0; si < sorten().length; si++) {
       var s = sorten()[si];
       var will = Z.plan[s.k] || 0;
@@ -1212,6 +1225,25 @@
           gruende.push(grund);
           if (!planFiel) planFiel = { sorte: s.name, grund: grund };
           if (grund === 'die Kasse') geldFehlt = true;
+          /* DER BRAUMEISTER BRENNT KLEINER, EHE ER KALT LAESST.
+             Woran das Lagerbier scheitert — Eis, Hopfen, ein Fassplatz —,
+             daran scheitert das Schankbier oft nicht: es braucht ein Fuder
+             statt zweier und die halbe Menge Hopfen. Ein Brauhaus, dem der
+             Eiskeller leer wird, hoert nicht auf zu brauen; es braut das
+             geringere Bier. Gemessen war das Gegenteil der Fall: ab 1886
+             stand der Plan auf Lagerbier, fiel jede Woche am Eis, und das
+             Haus ging vom besten Bier unmittelbar auf den Nachguss zum
+             Drittel des Preises — die Zwischenstufe, die es gab, wurde nie
+             angesetzt. Der Grund steht an der Tafel; die Wahl bleibt beim
+             Spieler, der die Tafel jederzeit umschreiben kann. */
+          var kleiner = echteSorten().filter(function (x) { return x.stufe < s.stufe; })
+            .sort(function (a, b) { return b.stufe - a.stufe; });
+          for (var ei = 0; ei < kleiner.length; ei++) {
+            if (!setzeAn(kleiner[ei])) {
+              if (!ersatz) ersatz = { statt: s.name, sorte: kleiner[ei].name, grund: grund };
+              break;
+            }
+          }
           break;
         }
       }
@@ -1521,13 +1553,30 @@
       }
       var offen = Z.kerben;
       var pf = kh.pfand, genommen = 0, wovon = '';
+      /* WAS ZUM HANDWERK GEHOERT, BLEIBT STEHEN.
+
+         Der Glaeubiger nahm bisher, was er wollte — und er nahm genau das,
+         womit das Haus ihn haette bezahlen koennen. Gemessen: in 1600 zog
+         die Zunft zwoelf von vierzig Suden der Reihe ein, in 1884 holte der
+         Eishaendler sechsunddreissig Fuder aus einem Keller, in dem noch
+         neunzig lagen — danach gab es kein Lagerbier mehr, also kein Geld,
+         also im naechsten Jahr wieder Wechsel. Eine Schuldenspirale, aus der
+         kein Zug mehr herausfuehrt (ZUSTAENDIGKEIT 4, die haertere Regel).
+
+         Das Pfandrecht kennt diese Grenze seit je, und seit 1877 steht sie
+         in der Zivilprozessordnung: was zur Fortsetzung der Erwerbstaetigkeit
+         noetig ist, ist unpfaendbar. Der Glaeubiger nimmt die Haelfte und
+         laesst die Haelfte — nicht aus Milde, sondern weil er im naechsten
+         Jahr bezahlt werden will. */
+      var laesst = (pf && pf.laesst !== undefined) ? pf.laesst : 0.5;
       if (offen > 0 && pf) {
         if (pf.was === 'budget') {
-          genommen = offen * pf.menge;
+          var grenzeB = Math.floor((e.budget ? e.budget.start : 0) * (1 - laesst));
+          genommen = Math.min(offen * pf.menge, Math.max(0, grenzeB));
           Z.kerbAbzug = genommen;
           wovon = genommen + ' ' + (e.budget ? e.budget.name : 'Sude');
         } else if (pf.was === 'eis') {
-          genommen = Math.min(Z.eis, offen * pf.menge);
+          genommen = Math.min(Z.eis, offen * pf.menge, Math.floor(Z.eis * (1 - laesst)));
           Z.eis = Math.max(0, Z.eis - genommen);
           wovon = genommen + ' Fuder Eis';
         } else if (pf.was === 'listung') {
@@ -3118,6 +3167,8 @@
       Z.vorige = null;
       Z.jahrUmsatz = 0;
       Z.abgabeJahr = 0;
+      Z.verladenVorjahr = Z.verladen;
+      Z.verladen = 0;
 
       /* DIE WAGENSTELLUNG WIRD ZU MICHAELI NEU VEREINBART.
          Der Quelltext von `passendeFracht` sagt das seit Runde 3 selbst —

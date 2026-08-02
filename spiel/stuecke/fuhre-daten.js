@@ -443,6 +443,16 @@ var FUHRE_DATEN = {
          Stufung bleibt Wort fuer Wort — wer die Stufe nicht fuellt, bezahlt
          Luft —, sie kostet nur nicht mehr das Haus. */
       fracht: [
+        /* DER EIGENE BIERWAGEN. Er hat gefehlt, und sein Fehlen war teuer:
+           ohne ihn ging auch das Fass an den Gasthof zweihundert Schritt
+           weiter ueber die Rampe und die Bahn — 40 Mark Pauschale fuer ein
+           Fass zu 24 Mark. Jede Brauerei von 1884 hatte ihre Rollfuhre mit
+           Kaltblut und Bierkutscher; die Bahn war fuer das Exportbier da,
+           nicht fuer die Wirtschaft in der Gasse. Er traegt wenig, er kostet
+           wenig, und ueber die Bannmeile hinaus kommt er nicht — deshalb der
+           hohe Satz je Kilometer. */
+        { k: 'rollfuhr', name: 'Eigene Rollfuhre', fass: 8, pauschale: 6, jeFass: 2, jeKm: 13,
+          satz: 'Kaltblut und Bierkutscher, die Wirtschaften der Stadt. Weit kommt er nicht.' },
         { k: 'stueck', name: 'Stückgut',      fass: 12, pauschale: 40,  jeFass: 7, jeKm: 3,
           satz: 'Jede Menge, jede Woche — und je Fass am teuersten.' },
         { k: 'halb',   name: 'Halber Wagen',   fass: 40, pauschale: 190, jeFass: 0,  jeKm: 5,
