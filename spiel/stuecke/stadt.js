@@ -1393,6 +1393,17 @@
     var reihe = B.el('div', 'reihe');
     kasten.appendChild(reihe);
 
+    /* Die eine Zahl der Messlatte: der naechste sinnvolle Zug. Er haengt
+       NICHT daran, welche Seite gerade oben liegt — der billigste offene Bau
+       ist der naechste Zug dieses Stuecks, auch wenn der Kasten gerade zeigt,
+       womit man ihn bezahlen koennte. Der dritte Wert sagt, was fuer ein Zug
+       das ist: ein Bau aendert die Lage, er ist kein Umtrunk. Vier Stuecke
+       melden ihn inzwischen mit; der Kern nimmt ihn noch nicht an — siehe
+       Bericht, Absatz KERN. */
+    if (baubar.length) {
+      B.welt.meldeZug('Bau ' + baubar[0].name, preis(baubar[0], ep), 'lage');
+    }
+
     if (geld) { zeichneVerwertung(reihe, liste, ep, art); return; }
 
     if (!liste.length) {
@@ -1424,14 +1435,6 @@
       reihe.appendChild(zeile);
     });
 
-    /* Die eine Zahl der Messlatte: der naechste sinnvolle Zug. Der dritte
-       Wert sagt, WAS fuer ein Zug das ist — ein Bau aendert die Lage, er ist
-       kein Umtrunk. Vier Stuecke melden ihn inzwischen mit; der Kern nimmt
-       ihn noch nicht an (siehe Bericht, Absatz KERN). */
-    if (liste.length) {
-      var billigste = liste[0];
-      B.welt.meldeZug('Bau ' + billigste.name, preis(billigste, ep), 'lage');
-    }
   }
 
   /* Die zweite Seite: was der Hof noch wert ist. Die Preisschilder stehen

@@ -242,13 +242,22 @@ var SUD_DATEN = {
         plaetze: 48,
         satz: 'Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten.',
         kauf: { text: 'Gärbottich aufstellen', menge: 40, basis: 1900, staffel: 1.3,
-                titel: 'Vierzig Fass mehr Gärraum, ausgeschlagenes Holz auf Eisengestell.' }
+                titel: '{menge} mehr Gärraum, ausgeschlagenes Holz auf Eisengestell.',
+                /* Die Nebenbedingung der Epoche — eine BEDINGTE WIRKSAMKEIT.
+                   Der Bottich steht sofort; ob er traegt, entscheidet die
+                   Kaelte. Natureis ist im September alle, und was dann in
+                   den neuen Bottichen liegt, gaert warm. */
+                bedingung: { art: 'kalt', achse: 'kaelte', option: 'maschine',
+                             satz: 'Gekaufter Gärraum trägt nur, solange es kalt ist.',
+                             zu: 'Solange die Kälte aus dem Fluss kommt, steht der zugekaufte '
+                               + 'Gärraum in den warmen Wochen leer — das Natureis reicht für '
+                               + 'den alten Keller und nicht für den neuen Bottich.' } }
       },
       guete: { name: 'Die Hefeführung', kurz: 'Führung', invers: false,
                satz: 'Jede Ernte trägt mit, was im Bottich sonst noch lebte.' },
       fuehren: { text: 'Hefe im Gärbottich abernten',
                  titel: 'Erntehefe von der Decke des Gärbottichs, wie in jedem Betrieb dieser '
-                      + 'Zeit. Kostet kein Fass — geht nur, solange ein Bottich gärt.' },
+                      + 'Zeit. Kostet kein Bier — geht nur, solange ein Bottich gärt.' },
       anstich: { text: 'Hefe aus dem Fass abernten', zug: 'sud:anstich',
                  titel: 'Ein Fass wird angestochen und die Hefe geerntet. Junges Fass, '
                       + 'kräftige Hefe.',
@@ -318,14 +327,22 @@ var SUD_DATEN = {
         name: 'Der Gärkeller', gefaess: 'Gärtank', gefaesse: 'Gärtanks',
         plaetze: 200,
         satz: 'Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager.',
-        kauf: { text: 'Gärtank stellen', menge: 180, basis: 24000, staffel: 1.3,
-                titel: 'Hundertachtzig Fass mehr Gärraum. Ein Tank, ein Kran, ein Tag.' }
+        kauf: { text: 'Gärtank bestellen', menge: 180, basis: 24000, staffel: 1.3,
+                titel: '{menge} mehr Gärraum. Bestellt, geschweißt, gefahren, gestellt.',
+                /* Die Nebenbedingung der Epoche — eine LIEFERZEIT. Ein Tank
+                   von 1970 wird nicht gekauft, er wird bestellt: der
+                   Kesselbauer schweisst ihn, der Tieflader bringt ihn, der
+                   Kran setzt ihn. Bezahlt wird bei Bestellung. */
+                bedingung: { art: 'lieferzeit', wochen: 3,
+                             satz: 'Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen.',
+                             zu: 'Der Tank ist bestellt und bezahlt. Der Kesselbauer schweißt, '
+                               + 'der Tieflader fährt — vorher trägt er nichts.' } }
       },
       guete: { name: 'Die Streuung', kurz: 'Streuung', invers: true,
                satz: 'Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach.' },
       fuehren: { text: 'Hefe aus dem Gärtank ziehen',
                  titel: 'Erntehefe aus dem Konus, gekühlt gelagert, neu angestellt. '
-                      + 'Kostet kein Fass — geht nur, solange ein Tank gärt.' },
+                      + 'Kostet kein Bier — geht nur, solange ein Tank gärt.' },
       anstich: { text: 'Hefe aus dem Tank zusetzen', zug: 'sud:anstich',
                  titel: 'Hefe wird aus einem Tank gezogen und neu angestellt.',
                  satz: 'Der Braumeister zieht Hefe und stellt neu an.' },
@@ -387,8 +404,8 @@ var SUD_DATEN = {
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
             { k: 'schoenen', name: 'Schönen mit Kieselsol', preis: 0, schild: 'ohne Ausgabe', hoechst: 2,
               satz: 'Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. '
-                  + 'Kostet nichts als ein Fass Verlust je Sud und bringt fünfzehn Prozent '
-                  + 'Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt.',
+                  + 'Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn '
+                  + 'Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt.',
               wirkung: { haltbar: 1.15, gaer: 0, roh: 0, mehr: -1, risiko: 0 } },
             { k: 'filter', name: 'Kieselgurfilter', preis: 26000, einmal: true, hoechst: 3,
               satz: 'Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. '
@@ -397,7 +414,7 @@ var SUD_DATEN = {
               wirkung: { haltbar: 1.4, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
             { k: 'pasteur', name: 'Tunnelpasteur', preis: 74000, fest: true, hoechst: 3,
               satz: 'Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und '
-                  + 'zwei Fass je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, '
+                  + 'drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, '
                   + 'wo vorher die Abfüllung stand.',
               siegel: 'Anlage abgenommen',
               wirkung: { haltbar: 2.0, gaer: 0, roh: 0, mehr: -2, risiko: 0 } }
@@ -426,5 +443,78 @@ var SUD_DATEN = {
          satz: 'Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein '
              + 'Befund, und das Gesetz von 1879 gibt ihm den Bottich.',
          nimmtRohstoff: 0.15, nimmtBottiche: 1, gueteAb: 8 }
+  },
+
+  /* =======================================================================
+     DIE KALTE PFANNE — der Ausgang, den DIESES Stueck zu verantworten hat.
+
+     Gemessen am Stand vor dieser Runde: in 1600 schliessen die Braujahre
+     1602 und 1603 mit "0 Sude", in 1970 die Jahre 1972 und 1973, und das
+     Sudbuch schrieb es dreimal hintereinander auf, ohne dass es etwas
+     bedeutet haette. Ein Brauhaus, das drei Jahre nicht anstellt, ist kein
+     Brauhaus mehr — und in jeder der vier Rechtslagen hoert es aus einem
+     ANDEREN Grund auf, es zu sein:
+
+       1350  Wo reihum gebraut wird, haengt das Braurecht am Sudtag. Wer
+             seinen Tag dreimal verstreichen laesst, steht nicht mehr in der
+             Reihe; der Rat gibt ihn weiter.
+       1600  Die Zunftlade fuehrt die Braugerechtigkeit als Realrecht am
+             Haus, mit der Pflicht, es auszuueben.
+       1884  Eine Braustaette, die nicht arbeitet, ist Masse: der
+             Malzhaendler laesst sie schaetzen, die Bank ruft die Hypothek.
+       1970  Eine stillstehende Anlage hat einen Wert und einen Kaeufer.
+             Die Nordstern-Gruppe hat ihr Angebot laengst im Protokoll.
+
+     Die Warnung steht zwei Jahre vorher am Brett und im Sudbuch. Das ist
+     die "sichtbare Verlustlage", die vorher fehlte.
+     ======================================================================= */
+  kalt: {
+    frist: 3,
+    1: { warnung: 'Der Sudtag ist verstrichen: {n} Braujahr{e} ohne Sud. Wer dreimal nicht '
+                + 'anstellt, steht nicht mehr in der Reihe.',
+         grund: 'reihe-verloren',
+         ende: 'Drei Braujahre ohne einen einzigen Sud. Der Rat gibt den Sudtag des Hauses '
+             + 'an die Reihe zurück — das Braurecht hängt am Brauen, nicht am Namen.',
+         pfanne: 'Die Pfanne bleibt stehen, sie gehört zum Haus. Wer nach dieser Familie '
+               + 'einzieht, feuert unter demselben Stein.' },
+    2: { warnung: 'Die Lade hat es angeschrieben: {n} Braujahr{e} ohne Sud. Beim dritten zieht '
+                + 'sie die Gerechtigkeit ein.',
+         grund: 'lade-zieht-ein',
+         ende: 'Drei Braujahre ohne einen einzigen Sud. Die Zunftlade zieht die '
+             + 'Braugerechtigkeit ein und verteilt die Sudtage auf die übrigen Häuser.',
+         pfanne: 'Pfanne, Gärbottiche und der Schlüssel zum Felsenkeller gehen an die Lade. '
+               + 'Verkauft wird nichts — verteilt wird alles.' },
+    3: { warnung: 'Der Schornstein raucht nicht: {n} Braujahr{e} ohne Sud. Der Malzhändler '
+                + 'lässt die Braustätte bereits schätzen.',
+         grund: 'braustaette-still',
+         ende: 'Drei Braujahre ohne einen einzigen Sud. Die Bank ruft die Hypothek auf die '
+             + 'stillstehende Braustätte; das Amtsgericht setzt den Versteigerungstermin an.',
+         pfanne: 'Der Kupferhelm kommt unter den Hammer, die Kältemaschine wird ausgebaut und '
+               + 'in eine fremde Halle gestellt. Das Sudhaus bleibt leer stehen.' },
+    4: { warnung: 'Das Sudwerk steht: {n} Braujahr{e} ohne Charge. Eine stillstehende Anlage '
+                + 'hat einen Wert und einen Käufer.',
+         grund: 'anlage-still',
+         ende: 'Drei Braujahre ohne eine einzige Charge. Eine Brauerei, die nicht fährt, ist '
+             + 'kein Betrieb mehr, sondern ein Grundstück mit Anlagen darauf.',
+         pfanne: 'Die Tanks werden leergefahren und gespült, das Sudwerk stillgelegt. Was '
+               + 'bleibt, ist die Marke — und für die steht ein Angebot im Protokoll.' }
+  },
+
+  /* Was aus der Pfanne wird, wenn die Uhr aus einem FREMDEN Grund steht.
+     ZUSTAENDIGKEIT §12: jedes Stueck malt sein eigenes Schlussblatt; dieses
+     hier spricht nur ueber das, was ihm gehoert — das Sudhaus. Das Urteil
+     ueber die Partie steht auf dem Blatt dessen, der das Ende ausgeloest hat,
+     und dieses Blatt legt sich nicht darueber. */
+  schluss: {
+    1: { steht: 'Die Pfanne bleibt an. Was an Feuer, Wasser und Malz durch dieses Haus '
+              + 'gegangen ist, steht im Sudbuch — der Rest ist Sache derer, die nach uns '
+              + 'kommen.',
+         faellt: 'Das Feuer unter der Pfanne wird nicht wieder angezündet.' },
+    2: { steht: 'Die Pfanne bleibt an, und der Felsenkeller bleibt kalt.',
+         faellt: 'Die Pfanne wird ausgeschöpft und der Kessel abgeschlagen.' },
+    3: { steht: 'Das Sudwerk läuft weiter; der Kupferhelm bleibt, wo er steht.',
+         faellt: 'Das Sudwerk wird abgestellt und der Kupferhelm gewogen.' },
+    4: { steht: 'Das Sudwerk fährt weiter, Charge um Charge, wie es das Protokoll verlangt.',
+         faellt: 'Das Sudwerk wird abgefahren und der letzte Tank gespült.' }
   }
 };

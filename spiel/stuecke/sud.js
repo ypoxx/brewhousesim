@@ -287,8 +287,59 @@
     return wo <= 4 || wo >= 26;         /* Michaeli-Herbst und Georgi-Fruehling */
   }
 
+  /* ----------------------------------------------------------------------
+     DIE NEBENBEDINGUNG DER EPOCHE (Auflage 7 des Kritikers: der geteilte
+     Zug soll in jeder Epoche eine ANDERE Bedingung tragen, nicht viermal
+     dieselbe mit anderen Worten). Gaerraum kostet ueberall Geld — aber:
+
+       1350  GRENZE          der Kuefer setzt keinem Haus mehr als zwei
+       1600  KOPPLUNG        die Lade nimmt nicht ab, wer gestreckt braut
+       1884  BEDINGTE WIRKUNG  ohne Maschine traegt der Zukauf nur im Winter
+       1970  LIEFERZEIT      bezahlt bei Bestellung, gestellt nach drei Wochen
+
+     Vier verschiedene Arten, nicht vier Namen fuer eine Grenze.
+     ---------------------------------------------------------------------- */
+  function bedingung() { return (gk().kauf && gk().kauf.bedingung) || null; }
+
+  /* Warum jetzt nicht bestellt werden kann — oder null. */
+  function kaufSperre() {
+    var b = bedingung();
+    if (!b) return null;
+    if (b.art === 'grenze') return Z.kaufNr >= b.wert ? b.zu : null;
+    if (b.art === 'kopplung') {
+      var a = achseVon(b.achse);
+      if (a && Z.verfahren[b.achse] !== b.option) return b.zu;
+    }
+    return null;
+  }
+
+  /* 1884: der zugekaufte Gaerraum traegt nur, solange es kalt ist. */
+  function zusatzTraegt() {
+    var b = bedingung();
+    if (!b || b.art !== 'kalt') return Z.zusatz;
+    if (!warmeWoche()) return Z.zusatz;
+    return Z.verfahren[b.achse] === b.option ? Z.zusatz : 0;
+  }
+
+  /* 1970: was bestellt und bezahlt ist, aber noch auf dem Tieflader steht. */
+  function liefere() {
+    if (!Z.bestellt.length) return false;
+    var jetzt = woManifest(), kam = 0;
+    Z.bestellt = Z.bestellt.filter(function (x) {
+      if (x.ab > jetzt) return true;
+      Z.zusatz += x.menge; kam += x.menge;
+      return false;
+    });
+    if (kam) {
+      buch(gk().kauf.text.replace(/bestellen$/, 'gestellt') + ' — jetzt '
+        + B.welt.menge(plaetze()) + ' Gärraum');
+      B.ton.spiele('sud:bau', { ort: 'sudhaus' });
+    }
+    return !!kam;
+  }
+
   function plaetze() {
-    var basis = gk().plaetze + Z.zusatz;
+    var basis = gk().plaetze + zusatzTraegt();
     var w = wirkung();
     if (w.warmDrossel < 1 && warmeWoche()) basis = Math.floor(basis * w.warmDrossel);
     return Math.max(1, basis);
