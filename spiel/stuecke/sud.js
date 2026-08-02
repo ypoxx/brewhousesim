@@ -76,6 +76,9 @@
     guete: 70,
     anstichWoche: -1,
     nr: 0,                /* laufende Nummer der Bottiche                     */
+    rueck: [],            /* freigegebene Chargen, die beim Handel stehen     */
+    brettZu: true,        /* liegt das Brett als Reiter? (Vorgabestand: ja)   */
+    gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
     jahrSude: 0, jahrFass: 0, jahrFehl: 0, jahrAnzeige: 0,
     gesamtSude: 0, gesamtFass: 0,
@@ -156,6 +159,113 @@
   }
 
   /* ======================================================================
+     WAS FUER EIN BIER HERAUSKOMMT — die Folge, die man BEIM WIRT wiedersieht
+
+     Runde 1 hat die Entscheidung gebaut; ihre Folgen blieben im Keller
+     (Haltbarkeit, Gaerwochen, Bottiche). Beim Wirt war nichts davon zu
+     sehen — kein fremdes Stueck las je etwas von diesem hier.
+
+     Die Naht, die es dafuer schon gab, ist das FASS: der Gaerkeller nimmt es
+     aus dem Lager und legt es zurueck und setzt dabei ohnehin k, stufe,
+     zeichen, reife und haltbar wieder auf. Genau dort wird jetzt entschieden,
+     WELCHE SORTE im Fass liegt.
+
+       DIE FUHRE bestellt (Duennbier · Grutbier · Starkbier),
+       DER SUD sagt, was die Pfanne davon haelt.
+
+     Die Zahl heisst `hoechst` und geht NIE nach oben — dieses Stueck
+     deckelt, es hebt nicht. Der Vorgabestand jeder Epoche deckelt auf 2,
+     also genau auf das Bier des Hauses: wer das Brett nie aufschlaegt,
+     verliert dadurch keinen Pfennig. Nach unten deckeln nur die billigen
+     Abkuerzungen, nach oben oeffnet nur die bezahlte Festlegung.
+
+     FUHRE_DATEN wird hier NUR GELESEN (so, wie fuhre.js seinerseits
+     PREIS_DATEN liest). Faellt es aus, faellt die Deckelung still aus und
+     nichts bricht.
+     ====================================================================== */
+
+  function fuhreEpoche() {
+    var F = (typeof FUHRE_DATEN !== 'undefined') ? FUHRE_DATEN : null;
+    if (!F || !F.epochen) return null;
+    return F.epochen[B.welt.zeit.epoche] || null;
+  }
+
+  /* Die Leiter der Epoche, von unten nach oben. Der Notsud (Kofent,
+     Nachbier, Einfachbier, Handelsmarke) steht nicht darauf: er ist kein
+     Rang, sondern ein Ausweg — er faehrt an Bannmeile und Regalmeter
+     vorbei, und wer zurueckgestuft wird, landet nie dort. */
+  function leiter() {
+    var q = fuhreEpoche();
+    if (!q || !q.sorten) return [];
+    return q.sorten.filter(function (s) { return !s.not; })
+      .slice().sort(function (a, b) { return (a.stufe || 0) - (b.stufe || 0); });
+  }
+
+  function istNotsud(k) {
+    var q = fuhreEpoche();
+    if (!q || !q.sorten || !k) return false;
+    for (var i = 0; i < q.sorten.length; i++) {
+      if (q.sorten[i].k === k) return !!q.sorten[i].not;
+    }
+    return false;
+  }
+
+  /* Die hoechste Sorte auf oder unter dieser Stufe. */
+  function sorteAufStufe(st) {
+    var l = leiter(), tref = null;
+    for (var i = 0; i < l.length; i++) {
+      if (l[i].stufe <= st && (!tref || l[i].stufe > tref.stufe)) tref = l[i];
+    }
+    return tref || l[0] || null;
+  }
+
+  function obersteStufe() {
+    var l = leiter();
+    return l.length ? l[l.length - 1].stufe : 3;
+  }
+
+  /* Das Minimum ueber alle Achsen: eine einzige Abkuerzung genuegt, um das
+     Bier zu deckeln. Vier Achsen, die einander aufwiegen, waeren keine
+     Entscheidung, sondern eine Rechenaufgabe. */
+  function hoechsteStufe() {
+    var h = 99;
+    achsen().forEach(function (a) {
+      var o = gewaehlt(a);
+      if (o && o.hoechst !== undefined && o.hoechst < h) h = o.hoechst;
+    });
+    return h === 99 ? obersteStufe() : h;
+  }
+
+  /* Was aus diesem Bottich wirklich wird — oder null, wenn es bleibt, wie
+     es bestellt war. */
+  function ausschlagSorte(b) {
+    if (!b || b.notsud) return null;
+    var hoch = (b.hoechst === undefined) ? hoechsteStufe() : b.hoechst;
+    var st = b.stufe || 2;
+    if (st <= hoch) return null;
+    var z = sorteAufStufe(hoch);
+    if (!z || z.stufe >= st) return null;
+    return z;
+  }
+
+  /* Welche Stufen ein Haus ueberhaupt fuehrt — aus der Artenliste der
+     FUHRE, gelesen, nicht geraten. */
+  function artStufen(a) {
+    var F = (typeof FUHRE_DATEN !== 'undefined') ? FUHRE_DATEN : null;
+    if (!F || !F.arten || !a) return null;
+    var d = F.arten[a.art] || F.arten.wirtshaus;
+    return d ? d.stufen : null;
+  }
+
+  function nehmen(stufe) {
+    var l = B.welt.adressenJetzt().filter(function (a) {
+      var st = artStufen(a);
+      return st && st.indexOf(stufe) >= 0;
+    });
+    return l;
+  }
+
+  /* ======================================================================
      DER GAERKELLER
      ====================================================================== */
 
@@ -207,6 +317,7 @@
          Sonst waere 1350 der Gaerkeller ewig leer: Grutbier liegt nicht,
          gehopftes Bier liegt eine Woche laenger. Genau das ist die
          Entscheidung dieser Epoche. */
+      var hoch = hoechsteStufe();
       var gruppen = {};
       for (var i = 0; i < f.length; i++) {
         var x = f[i];
@@ -216,8 +327,12 @@
            Verfahren etwas an ihm aendert — sonst gaelte "mit Weizen
            gestreckt" nur fuer die Sorten, die ohnehin liegen, und der Spieler
            bekaeme nicht, was auf dem Knopf steht. Er wird dann in derselben
-           Woche wieder ausgeschlagen; es kostet keinen Tag. */
-        if (wochen <= 0 && !w.mehr && w.haltbar === 1) continue;
+           Woche wieder ausgeschlagen; es kostet keinen Tag.
+           Und er geht hindurch, wenn die Pfanne ihn nicht traegt: sonst
+           bliebe die Deckelung genau dort wirkungslos, wo sie zaehlt —
+           beim Grutbier, das ohne Hopfen kein Starkbier wird. */
+        var deckelt = ((x.stufe || 2) > hoch) && !istNotsud(x.k);
+        if (wochen <= 0 && !w.mehr && w.haltbar === 1 && !deckelt) continue;
         if (wochen > 0 && B.welt.fassAlter(x) >= wochen) continue;   /* schon reif */
         var g = x.k || x.sorte || 'sud';
         if (!gruppen[g]) gruppen[g] = [];
