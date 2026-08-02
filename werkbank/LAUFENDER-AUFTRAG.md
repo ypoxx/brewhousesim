@@ -36,7 +36,39 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
-## Wo der Lauf steht (Stand 2. August 2026, 17:30 UTC)
+## Wo der Lauf steht (Stand 2. August 2026, 18:35 UTC) — WELLE 2b IST DURCH
+
+Workflow `wf_94fe188f-ca8` beendet: **zwölf Agenten, vier Stücke, je Builder →
+blinder Kritiker → Nacharbeit, kein Fehler, kein Abbruch.** Der volle Stand steht
+in **`spiel/STAND.md`** (der Welle-1-Stand liegt als `spiel/STAND-WELLE-1.md`
+daneben), der nächste Plan in **`gauntlet/WELLE-3.md`**.
+
+**Geschlossen und nachgemessen:** die Kopfzeile nennt den umkämpften Zug
+(5,89× / 3,76× / 8,35× / 3,54× statt 12,4× / 35,6× / 274× / 47,8×) · die zwölf
+unerreichbaren Züge sind frei · der Jahreswechsel kostet einen Klick · 1970 hat
+ein eigenes fünftes Verb (MITBIETEN) · der Sachfehler „1980 Pfandpflicht" ist raus.
+
+**Die KERN-Änderung ist eingearbeitet** (Commit `c882fd7`, ZUSTAENDIGKEIT §24):
+`meldeZug(was, preis, art, zug)` rangiert nach Art vor Preis. Von allen vier
+Stücken unabhängig verlangt. **Regel für den nächsten Lauf: gesammelte
+KERN-Bitten arbeitet die Aufsicht ein, wenn KEIN Agent mehr läuft — nicht
+zwischendurch.**
+
+**Zwei Sachen sind gebaut und kommen nicht an** (beide in `spiel/BEFUND-ENDE.md`):
+1. Das Urteil über die Partie (`fu-schlussblatt`, 1075×628, mit Klartext) liegt
+   in allen vier Epochen `stadt-zugeklappt` unter dem Sudbuch. Bei 1440×900,
+   1600×1000 und 2752×1536 geht es auf, **bei 1920×1000 nicht.**
+2. Der Boden der Wirtschaft (DIE VERWERTUNG) wird in 1350 nie erreicht:
+   Michaelitage 112 / −6 / −7 / −14, 44 von 103 Wochen unter null, keine
+   Pfändungszeile in der Chronik.
+
+**Die Latte, sorgfältig gespielt:** 1600 besteht sauber (rho +0,165, 0 von 14
+Jahren unter 1×), 1884 besteht, **1350 (rho −0,795, 6 von 12) und 1970 (9 von 11)
+kippen nach unten.** Die Aufgabe heißt: 1350 und 1970 nach dem Muster von 1600.
+
+---
+
+## Früherer Stand (2. August 2026, 17:30 UTC)
 
 **Werkzeug der Aufsicht, neu — `werkbank/schuss/aufsicht/`:**
 
