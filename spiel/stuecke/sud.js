@@ -389,6 +389,12 @@
           reifAb: woManifest() + gaerWochen,
           haltbarPur: pur,
           faktor: wirk.haltbar,
+          /* Die Deckelung wird an der PFANNE entschieden, nicht am Fasshahn:
+             was einmal ohne Hopfen kocht, wird durch einen spaeteren
+             Hopfenbrief nicht haltbar. Sie steht deshalb am Bottich und
+             wandert mit ihm. */
+          hoechst: hoch,
+          notsud: istNotsud(muster.k),
           verfahren: verfahrensKurz(wirk === w),
           notdurft: (wirk !== w),
           gesperrt: false,
@@ -407,6 +413,16 @@
     } catch (e) { B.klage('sud.sauge', e); }
     finally { Z.imGange = false; }
     return genommen;
+  }
+
+  /* Ansaugen und, was schon fertig ist, gleich wieder ausschlagen. Ohne den
+     zweiten Schritt laege ein Sud ohne Gaerwochen bis zum naechsten
+     Wochenwechsel im Bottich und waere nicht lieferbar — das waere eine
+     Verschlechterung, und dieses Stueck darf keine einbauen. */
+  function saugeUndSchlage() {
+    var n = sauge();
+    if (n) reifePruefen();
+    return n;
   }
 
   /* Genau diese Faesser aus dem Lagerkeller nehmen — ueber die API des Kerns,
@@ -434,20 +450,48 @@
     var raum = B.welt.vorrat.plaetze - B.welt.vorrat.faesser.length;
     if (raum <= 0) return false;
     var n = Math.min(b.fass, raum);
-    var gelegt = B.welt.legeEin(b.sorte, n);
+
+    /* HIER wird entschieden, was fuer ein Bier es geworden ist. */
+    var ziel = ausschlagSorte(b);
+    var sorte = ziel ? ziel.name : b.sorte;
+    var pur = ziel ? Math.max(1, (ziel.haltbar || 6) - (ziel.reife || 0)) : b.haltbarPur;
+
+    var gelegt = B.welt.legeEin(sorte, n);
     if (!gelegt) return false;
     var f = B.welt.vorrat.faesser;
-    var haltbar = Math.max(1, Math.round(b.haltbarPur * (b.faktor || 1)));
+    var haltbar = Math.max(1, Math.round(pur * (b.faktor || 1)));
     for (var i = f.length - gelegt; i < f.length; i++) {
-      f[i].k = b.k; f[i].stufe = b.stufe; f[i].zeichen = b.zeichen;
+      f[i].k = ziel ? ziel.k : b.k;
+      f[i].stufe = ziel ? ziel.stufe : b.stufe;
+      f[i].zeichen = ziel ? ziel.zeichen : b.zeichen;
       f[i].reife = 0;                       /* reif — die Gaerung ist vorbei */
       f[i].haltbar = haltbar;
       f[i].sudDurch = true;                 /* nie ein zweites Mal ansaugen */
     }
     b.fass -= gelegt;
     B.welt.protokolliere({ wer: 'spieler',
-      was: B.welt.menge(gelegt) + ' ' + b.sorte + ' aus dem Gärkeller ins Lager',
+      was: B.welt.menge(gelegt) + ' ' + sorte + ' aus dem Gärkeller ins Lager'
+         + (ziel ? ' — angesetzt war ' + b.sorte : ''),
       preis: 0, menge: 0 });
+
+    if (ziel) {
+      Z.gestuft++;
+      buch('Bottich ' + b.nr + ': ' + b.sorte + ' schlägt als ' + ziel.name + ' aus — '
+        + 'die Pfanne trägt es nicht');
+      if (!Z.gemeldet.gestuft) {
+        Z.gemeldet.gestuft = true;
+        var fort = nehmen(b.stufe || 2).filter(function (a) {
+          var st = artStufen(a);
+          return st && st.indexOf(ziel.stufe) < 0;
+        });
+        B.welt.schreibe('Der Bottich war als ' + b.sorte + ' angesetzt und schlägt als '
+          + ziel.name + ' aus: das Verfahren des Hauses trägt nicht höher. '
+          + (fort.length
+              ? fort.map(function (a) { return a.name; }).join(' und ')
+              + (fort.length === 1 ? ' nimmt' : ' nehmen') + ' es damit nicht mehr.'
+              : 'Am Fass sieht man es, beim Wirt am Preis.'), 'sud');
+      }
+    }
     return true;
   }
 
@@ -716,7 +760,7 @@
     Z.kaufNr++;
     B.ton.spiele('sud:bau', { ort: 'sudhaus' });
     buch(gk().kauf.text + ' — jetzt ' + B.welt.menge(plaetze()) + ' Gärraum');
-    sauge();
+    saugeUndSchlage();
     B.sende('zeichne', { grund: 'sud:gaerraum' });
   }
 
@@ -1156,7 +1200,7 @@
         if (Z.imGange) return;
         if (!p || p.wer !== 'spieler') return;
         if (!/eingelegt/.test(p.was || '')) return;
-        B.wage('sud.protokoll', sauge);
+        B.wage('sud.protokoll', saugeUndSchlage);
       });
 
       B.auf('ende', function () {
@@ -1228,7 +1272,7 @@
 
     zeichne: function () {
       setzeEpoche();
-      sauge();
+      saugeUndSchlage();
       meldeZug();
       zeichneBrett();
       zeichneZettel();
