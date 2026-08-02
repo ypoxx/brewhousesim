@@ -438,17 +438,28 @@
 .knopf.pr-weiter { font-size: calc(var(--s) * 26); }
 
 /* --------------------------------------------------------------------------
-   DER GRIFF — rechts neben der Tafel, immer sichtbar
+   DER GRIFF — rechts oben, immer sichtbar
+
+   Er stand bei top 12,4 % und damit auf einem fremden Zug: bei 1920x1000
+   deckte er das Paar des GEGNERS am Bahnhof zu (gemessen 1762,169 bis
+   1886,234), also 'Bahnhofsgaststätte ablösen' und 'hinhalten' — zwei der
+   zwoelf unerreichbaren Zuege der Eichung. Der Griff ist ein Griff und liegt
+   auf der obersten Ebene; die Marken des GEGNERS haengen an einem Ort und
+   koennen nicht ausweichen. Also weicht der Griff.
+
+   Er sitzt jetzt in der Zeile der Kopfleiste, rechts davon: die endet bei
+   1502, der Griff beginnt bei 1644. Enger gesetzt ist er auch, damit sein
+   Fuss ueber dem Paar bleibt und nicht bloss knapp daneben.
    -------------------------------------------------------------------------- */
 .pr-griff {
   position: absolute;
   left: 85.6%;
-  top: 12.4%;
+  top: 3.0%;
   width: 13.3%;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--s) * 6);
-  padding: calc(var(--s) * 8);
+  gap: calc(var(--s) * 4);
+  padding: calc(var(--s) * 6);
   background: linear-gradient(180deg, rgba(255, 250, 236, 0.93), rgba(238, 225, 194, 0.93));
   border: calc(var(--s) * 3) solid var(--pr-rand);
   border-radius: var(--pr-radius);
@@ -461,12 +472,12 @@
 .knopf.pr-griff-chronik {
   width: 100%;
   white-space: normal;
-  font-size: calc(var(--s) * 16);
-  padding: calc(var(--s) * 6) calc(var(--s) * 8);
-  min-height: calc(var(--s) * 36);
+  font-size: calc(var(--s) * 15);
+  padding: calc(var(--s) * 4) calc(var(--s) * 8);
+  min-height: calc(var(--s) * 30);
 }
 .pr-griff-stand { display: flex; flex-direction: column; }
-.pr-griff-stand .pr-zeile { font-size: calc(var(--s) * 14); }
+.pr-griff-stand .pr-zeile { font-size: calc(var(--s) * 13); }
 .pr-griff-stand .pr-last-zeile { color: var(--pr-rot); border-top: calc(var(--s) * 1) dotted var(--pr-linie); }
 
 /* ==========================================================================

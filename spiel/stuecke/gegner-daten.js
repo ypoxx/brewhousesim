@@ -506,6 +506,65 @@ var GEGNER_DATEN = {
           bindet: 'Der Adler bindet {haus} exklusiv — acht Jahre, kein fremdes Bier im Haus.',
           loest: 'Exklusiv heißt exklusiv. Auslösen kann man das nur mit sehr viel Geld.' }
       ],
+      /* ------------------------------------------------------------------
+         DIE FUENFTE HANDLUNG — und es gibt sie nur in dieser Zeit.
+         1350 kauft niemand eine Brauerei; 1970 kauft die Gruppe nichts
+         anderes. Zwischen Handschlag und Notartermin liegen Wochen, und in
+         diesen Wochen zaehlt das hoehere Gebot. Der Betrieb im Nachbartal
+         ist fuer ein Haus dieser Groesse unerreichbar — der Ausschank in
+         DIESER Stadt, der mit ihm den Besitzer wechselt, ist es nicht.
+
+         Das ist der eine Zug, der keinen festen Tarif hat: drei Gebote
+         nebeneinander, jedes mit seinem Preis, keines sicher. Wer zu knapp
+         bietet, bekommt die Bietungssicherheit zurueck — bis auf das, was
+         beim Notar bleibt.
+         ------------------------------------------------------------------ */
+      gebot: {
+        verb: 'Mitbieten', kurz: 'Notartermin',
+        wochen: 5,
+        notarteil: 0.12,
+        brauereien: [
+          'Brauerei Nachtigall im Nachbartal',
+          'Klosterbräu Obernberg',
+          'Felsenkeller Sankt Veit',
+          'Bürgerbräu Neustadt',
+          'Aktienbrauerei Waldeck',
+          'Brauhaus Hirschau'
+        ],
+        sagt: 'Die Erben verkaufen. Der Betrieb geht an die Gruppe — der Ausschank in der '
+            + 'Stadt geht an den, der beim Notar das höhere Gebot auf dem Tisch hat.',
+        stufen: [
+          { name: 'knapp darüber', faktor: 1.12, glueck: 0.34,
+            sagt: 'Die Erben rechnen nach und rufen die Gruppe noch einmal an.' },
+          { name: 'deutlich darüber', faktor: 1.45, glueck: 0.62,
+            sagt: 'Genug, dass am Küchentisch darüber geredet wird.' },
+          { name: 'so, dass niemand mehr überlegt', faktor: 1.9, glueck: 0.88,
+            sagt: 'Der Notar liest vor, und es wird unterschrieben.' }
+        ],
+        gewonnen: 'Beim Notar unterschreiben die Erben an das Haus: der Ausschank im {haus} '
+                + 'gehört ihm. Die Kessel im Tal gehen trotzdem an die Gruppe.',
+        verloren: 'Die Erben unterschreiben an die Gruppe. Die Bietungssicherheit kommt zurück, '
+                + 'bis auf die Notarkosten — {geld} sind weg, und {haus} ist es auch.',
+        verpasst: 'Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben.'
+      },
+
+      /* Das Angebot der Gruppe steht nicht ewig. Wer nicht antwortet, hat
+         nicht abgelehnt — er hat nur nicht geantwortet, und dafuer nimmt sie
+         sich etwas und fragt spaeter wieder. */
+      angebot: {
+        wochen: 8,
+        ja: 'Ein Viertel abtreten',
+        nein: 'Ausschlagen',
+        frage: 'Die Nordstern-Gruppe fragt an — beide Antworten sind endgültig',
+        jasatz: 'Die Kasse springt, und die Gruppe redet von da an mit: jedes Jahr geht ihr '
+              + 'ein Zwanzigstel des Bestands ab, und das Haus gehört nicht mehr ganz sich selbst.',
+        neinsatz: 'Kein Geld. Die Gruppe listet das Haus noch am selben Tag bei zwei Adressen '
+                + 'aus. Dafür bleibt es ganz.',
+        verfallen: 'Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, '
+                 + 'antwortet auch nicht mehr — sie nimmt sich stattdessen {haus} und fragt '
+                 + 'in ein paar Jahren wieder.'
+      },
+
       gegenzug: {
         k: 'marke', name: 'Die Marke eintragen lassen',
         preis: 62000,

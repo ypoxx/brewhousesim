@@ -71,6 +71,9 @@
     wirkung: {},             /* dauerhafte Folgen der eigenen Festlegungen  */
     gegenzugGetan: {},       /* amtszeit-Nr -> true                         */
     angebot: null,           /* IV: das Angebot der Gruppe                  */
+    gebot: null,             /* IV: die Versteigerung beim Notar            */
+    gebotAusgang: null,      /* was beim letzten Notartermin herauskam      */
+    umkaempft: null,         /* der billigste umkaempfte Zug, fuer die Kennzahl */
     abschlag: 0,             /* was der Abschlag im laufenden Jahr kostet   */
     abschlagJe: {},
     abschlagJahr: 0,
