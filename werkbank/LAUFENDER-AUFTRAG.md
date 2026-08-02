@@ -36,7 +36,28 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
-## Wo der Lauf steht (Stand 2. August 2026, 18:35 UTC) — WELLE 2b IST DURCH
+## Welle 3 läuft (seit 2. August 2026, 18:45 UTC)
+
+Workflow **`wf_eccf90fc-7a6`**, vier Stücke, je Builder → blinder Kritiker →
+Nacharbeit. Plan in `gauntlet/WELLE-3.md`.
+
+| Stück | Auftrag in einem Satz |
+|---|---|
+| DAS ENDE | Das Urteil über die Partie liegt zugeklappt unter dem Sudbuch, und es ist viermal dasselbe Ende. |
+| DIE RÜCKKOPPLUNG | 1350 und 1970 nach dem Muster von 1600 — und der gebaute Boden, der nie erreicht wird. |
+| DER NAME | Eine Notiz zwischen zwei Buildern steht in allen vier Epochen am Schirm; `data-deckung` bedeutet zweierlei. |
+| DAS ERBE | Das einzige Stück ohne Runde. `welt.erbe()` tritt in keiner gemessenen Partie je ein. |
+
+Skript: `~/.claude/projects/-home-user-brewhousesim/*/workflows/scripts/gauntlet-welle-3-wf_eccf90fc-7a6.js`
+Fortsetzen nach Abbruch: `Workflow({scriptPath: "…", resumeFromRunId: "wf_eccf90fc-7a6"})` —
+vorher `journal.jsonl` im Transcript-Verzeichnis lesen.
+
+**Wer im Journal wissen will, wer ein Agent ist, liest seine erste Nutzerzeile,
+nicht seine Position.** Diese Verwechslung hat in Welle 2b eine Stunde gekostet.
+
+---
+
+## Welle 2b (abgeschlossen, 2. August 2026, 18:35 UTC)
 
 Workflow `wf_94fe188f-ca8` beendet: **zwölf Agenten, vier Stücke, je Builder →
 blinder Kritiker → Nacharbeit, kein Fehler, kein Abbruch.** Der volle Stand steht
