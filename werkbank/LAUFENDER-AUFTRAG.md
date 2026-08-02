@@ -36,7 +36,87 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
-## Wo der Lauf steht (Stand 2. August 2026, 15:55 UTC)
+## Wo der Lauf steht (Stand 2. August 2026, 17:30 UTC)
+
+**Werkzeug der Aufsicht, neu — `werkbank/schuss/aufsicht/`:**
+
+| Datei | wofür |
+|---|---|
+| `messstand.sh` | friert einen Commit ein und serviert ihn auf **:8900**. Der Arbeitsbaum auf :8899 gehört den Buildern; wer dort misst, misst ein wanderndes Ziel. `messstand.sh HEAD` |
+| `nenner.mjs` | liest Woche für Woche Brett für Brett **alle** Preisschilder selbst vom Schirm und rechnet drei Nenner: `kopf` (was das Spiel behauptet), `alles`, `umkaempft` (nur der zählt nach der Latte). `HAFEN=8900 node … <epoche> <wochen> <ziel.json>` |
+| `auswerten.py` | rho je Nenner, Jahre unter 1×, Zahl der verschiedenen Nenner |
+| `gebraut.mjs` | wird überhaupt gebraut? Stile `weiter` und `brauend` |
+
+**Erledigt und nachgemessen: die zwölf unerreichbaren Züge sind frei** —
+`erreichbar.mjs` brettweise: **0 von 80/90/93/84** statt 3/2/2/5. Ursache war DER
+GRIFF bei `top: 12,4 %`, der das Paar des GEGNERS am Bahnhof zudeckte.
+
+**Der schwerste Befund dieses Nachmittags, am eingefrorenen Stand c6daa5a:**
+**Die Partie endet in allen vier Epochen nach gut drei Braujahren, immer aus
+demselben Grund, und sie sagt es nicht.** Nur WEITER gedrückt, sonst nichts:
+
+| Epoche | endet | Grund | Kasse | Keller | Plätze | Sorte |
+|---|---|---|---|---|---|---|
+| 1350 | 1353/13 | `keine-abnehmer` | **−14 Pf** | 3 | 12 | Kofent |
+| 1600 | 1603/13 | `keine-abnehmer` | 0 | 5 | 24 | Nachbier |
+| 1884 | 1887/11 | `keine-abnehmer` | 7.312 M | 48 | 90 | Einfachbier |
+| 1970 | 1973/9 | `keine-abnehmer` | 339 DM | 30 | 400 | Handelsmarke |
+
+Ein Ende **gibt** es also inzwischen (`welt.zeit.ende`, gesetzt von
+`B.uhr.beende` aus `fuhre.js:806`, wenn `Z.frist` abläuft) — das war Auflage 2
+und ist zur Hälfte erledigt. Was fehlt, ist dreierlei:
+
+1. **Es sagt nichts.** WEITER wird grau, und das ist alles. Kein Schlussbild,
+   keine Zeile, warum die Partie vorbei ist. Was am Schirm steht, ist DAS
+   SUDBUCH WIRD GESCHLOSSEN — das eigene Blatt eines Stücks, kein Urteil über
+   die Partie.
+2. **Es ist immer dasselbe Ende.** Vier Epochen, vier Mal `keine-abnehmer`, vier
+   Mal nach 3,2 bis 3,5 Braujahren. 1884 endet mit **7.312 M in der Kasse** —
+   das ist kein Ende aus Armut, sondern der letzte Abnehmer, der geht.
+3. **Die Kasse hat weiter keinen Boden**: in 1350 steht sie am Ende bei −14 Pf.
+
+Das Sudbuch schreibt dazu selbst hin: „Angestellt hat dieses Haus 0 Sude — 0
+Fass Bier", dreimal „Braujahr geschlossen: 0 Sude, 0 Fass, 0 verloren". Im
+Keller liegt in jeder Epoche nur die **geringste** Sorte. (Der Keller ist nicht
+leer — ein erster Messversuch behauptete das, weil er `f.n` über
+`vorrat.faesser` summierte; die Liste führt aber **einzelne Fässer ohne
+Stückzahlfeld**. Richtig ist `faesser.length`.)
+
+**Die Kennzahl, drei Nenner nebeneinander** (c6daa5a, nur WEITER, bis zum Ende):
+
+| Epoche | Wochen | Kopfzeile behauptet | gegen umkämpft | Faktor | verschiedene Nenner |
+|---|---|---|---|---|---|
+| 1350 | 104 | 0,00× (max 23,25) | 0,00× (max 5,89) | — | 3 |
+| 1600 | 104 | 19,21× | **1,67×** | 11,5 | 3 |
+| 1884 | 102 | 199,54× | **4,42×** | 45,1 | 2 |
+
+Der Nenner wechselt inzwischen (2–3 statt 1) — der EICHUNG-Builder hat daran
+gearbeitet, und am Schirm steht unten rechts schon eine Zeile „UMKÄMPFT Ablösung
+… · Kasse reicht −0,3×". **Aber die Kopfzeile behauptet weiter das Zehn- bis
+Fünfundvierzigfache** des ehrlichen Werts. Solange beide Zahlen nebeneinander
+stehen, ist die Latte nicht erfüllt, sondern nur besser dokumentiert.
+
+**Noch offen, keinem laufenden Builder zugewiesen** (Aufgaben #2–#4 der Liste):
+Boden und Ende der Wirtschaft · Entwicklernotiz in `name.js:1135` steht in allen
+vier Epochen am Schirm („den schreibt DER PREIS, und er liest
+welt.haus.rufAufschlag noch nicht") · fünftes Spielerverb (1350/1600/1884 haben
+dieselben drei, 1970 hat nur zwei — eines **weniger**, nicht eines mehr).
+
+**Sachfund erledigt:** „1980 Pfand- und Rücknahmepflicht" ist raus,
+`preis-daten.js:642` nennt jetzt Verpackungsverordnung 1991 / Zwangspfand 2003.
+
+**Zwei Fallstricke, die je eine halbe Stunde gekostet haben:**
+1. `BRAUHAUS.uhr.jahr` **gibt es nicht** — die Zeit steht in `welt.zeit`.
+   `JSON.stringify` wirft `undefined` lautlos weg, also schrieb ein erster Lauf
+   240 Wochen ohne Jahreszahl auf, und die Auswertung meldete „keine umkämpften
+   Angebote", obwohl 60 von 60 Wochen welche hatten.
+2. `data-deckung` gibt es **zweimal mit verschiedener Bedeutung**: `kern/kopf.js`
+   die Kennzahl, `stuecke/name.js` das Deckungsband des Rufs. Nur die Kopfzeile
+   trägt die Klasse `.deckung`. Wer ohne sie sucht, misst den Ruf.
+
+---
+
+## Früherer Stand (2. August 2026, 15:55 UTC)
 
 **Zwei blinde Kritiker haben geurteilt, beide „besteht mit Auflage":**
 DIE EICHUNG und DER GEGNER. Kein Fund auf der Sperrliste.

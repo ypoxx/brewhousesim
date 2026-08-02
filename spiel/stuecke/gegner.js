@@ -72,6 +72,7 @@
     gegenzugGetan: {},       /* amtszeit-Nr -> true                         */
     angebot: null,           /* IV: das Angebot der Gruppe                  */
     gebot: null,             /* IV: die Versteigerung beim Notar            */
+    gebotSperre: 0,          /* bis zu diesem Takt kein neuer Notartermin    */
     gebotAusgang: null,      /* was beim letzten Notartermin herauskam      */
     umkaempft: null,         /* der billigste umkaempfte Zug, fuer die Kennzahl */
     abschlag: 0,             /* was der Abschlag im laufenden Jahr kostet   */
@@ -445,7 +446,11 @@
      ZWEI Zeichen wechseln statt einem. */
   function hoechstzahl(h) {
     var n = offeneAdressen().length;
-    var anteil = [0.4, 0.4, 0.35, 0.3][epNr() - 1] || 0.35;
+    /* RUNDE 3: seit machePlatz() wirklich freigibt, greifen diese Zahlen zum
+       ersten Mal. Vorher war 0,4 folgenlos und der Adler hielt 8 von 10; jetzt
+       ist die Grenze die Grenze, und sie liegt bei der knappen Haelfte — das
+       ist es, was hier immer stehen sollte. */
+    var anteil = [0.5, 0.5, 0.45, 0.3][epNr() - 1] || 0.35;
     return Math.max(2, Math.round(n * anteil));
   }
 
@@ -473,7 +478,15 @@
            - (Z.bindung[y.schluessel] ? Z.bindung[y.schluessel].grund : 0);
     });
     var a = l[0];
-    B.welt.binde(a.schluessel, null);
+    /* FUNFTES ARGUMENT.  kern/welt.js:342 gibt eine Bindung nur frei, wenn
+       der Aufrufer sagt, WESSEN Bindung er loest — sonst gibt binde() still
+       false zurueck und die Adresse bleibt haengen. Ohne dieses Argument hat
+       machePlatz() bis Runde 2 nie etwas freigegeben: Z.bindung wurde
+       geloescht, a.bindung nicht, und damit lief die Obergrenze dieses
+       Stuecks ins Leere. Gemessen in 1970 nach 70 Wochen: die Gruppe hielt 8
+       von 11 Adressen bei einer Hoechstzahl von 3 und einer Gesamtgrenze von
+       6, und fuenf davon standen in der Welt als ihre, im Stueck als nichts. */
+    B.welt.binde(a.schluessel, null, null, 0, h.k);
     delete Z.bindung[a.schluessel];
     Z.wechsel[a.schluessel] = { takt: takt(), an: null, von: h.k };
     return a;
@@ -750,7 +763,7 @@
     var l = seine(h);
     if (!l.length) return false;
     var a = B.wuerfel.aus(l);
-    B.welt.binde(a.schluessel, null);
+    B.welt.binde(a.schluessel, null, null, 0, h.k);
     delete Z.bindung[a.schluessel];
     Z.wechsel[a.schluessel] = { takt: takt(), an: null, von: h.k };
     merkeZug(h, 'verlieren', (zug.text || '').replace('{haus}', a.name),
@@ -782,7 +795,7 @@
   function zugUebernahme(h, zug) {
     var preis = Math.round(Math.abs(h.kasse) * 0.07) + 1;
     var g = ep().gebot;
-    var ziel = g && !Z.gebot ? suche(function (a) {
+    var ziel = (g && !Z.gebot && Z.takt >= Z.gebotSperre) ? suche(function (a) {
       if (a.bindung && a.bindung.wem === 'haus') return false;
       if (a.bindung && a.bindung.wem === h.k) return false;
       if (Z.werbung[a.schluessel] || Z.absicht[a.schluessel]) return false;
@@ -823,6 +836,7 @@
   function loeseGebotEin() {
     var G = Z.gebot, g = ep().gebot;
     Z.gebot = null;
+    Z.gebotSperre = Z.takt + 2 * ((g && g.wochen) || 5);
     if (!G) return;
     var h = haus(G.wer), a = adresse(G.k);
     if (!h || !a) return;
@@ -1048,7 +1062,7 @@
       var a = adresse(k);
       if (!a) { delete Z.bindung[k]; return; }
       if (b.bis <= jahr() || !a.bindung || a.bindung.wem !== b.wer) {
-        if (a.bindung && a.bindung.wem === b.wer) B.welt.binde(k, null);
+        if (a.bindung && a.bindung.wem === b.wer) B.welt.binde(k, null, null, 0, b.wer);
         delete Z.bindung[k];
       }
     });
@@ -1186,7 +1200,7 @@
       var l = seine(h);
       if (l.length) {
         var a = B.wuerfel.aus(l);
-        B.welt.binde(a.schluessel, null);
+        B.welt.binde(a.schluessel, null, null, 0, h.k);
         delete Z.bindung[a.schluessel];
         Z.wechsel[a.schluessel] = { takt: takt(), an: null, von: h.k };
         h.kasse += Math.round(grundwert(a, ep().mittel[0]) * 0.8);
@@ -1216,14 +1230,28 @@
         Z.wechsel[a.schluessel] = { takt: takt(), an: 'konzern', von: 'adler' };
       });
       h.weg = true;
+      /* Aber nicht die ganze Stadt. Der Schluck geht bis Runde 2 an der
+         Gesamtgrenze vorbei: gemessen hielten die Gegner nach dem Fall des
+         Adlers 11 von 11 Adressen, und danach hat der Spieler nichts mehr,
+         woran er ansetzen koennte. Was die Gruppe nicht bedienen kann, laesst
+         sie fahren — dieselbe Grenze wie fuer jede andere Bindung. */
+      var frei = [];
+      while (fremdGesamt() > gesamtgrenze()) {
+        var weg = machePlatz(kon, null);
+        if (!weg) break;
+        frei.push(weg.name);
+      }
       merkeZug(kon, 'schluckt', 'Die Nordstern-Gruppe übernimmt ' + nameVon(h)
-        + '. Der Name bleibt auf dem Etikett, die Entscheidung nicht im Haus.',
+        + '. Der Name bleibt auf dem Etikett, die Entscheidung nicht im Haus.'
+        + (frei.length ? ' Bedienen kann sie nicht alles: ' + frei.join(', ')
+           + (frei.length === 1 ? ' wird frei.' : ' werden frei.') : ''),
         sitzVon(kon).ort, null);
       B.welt.schreibe('Das Haus gegenüber ist gefallen: ' + nameVon(h)
-        + ' gehört der Nordstern-Gruppe. Alle seine Adressen mit.', 'gegner');
+        + ' gehört der Nordstern-Gruppe. Seine Adressen mit — bis auf die, '
+        + 'die ihr Lastzug nicht anfährt.', 'gegner');
     } else {
       seine(h).forEach(function (a) {
-        B.welt.binde(a.schluessel, null);
+        B.welt.binde(a.schluessel, null, null, 0, h.k);
         delete Z.bindung[a.schluessel];
         Z.wechsel[a.schluessel] = { takt: takt(), an: null, von: h.k };
       });
@@ -1387,6 +1415,7 @@
     var gelingt = B.wuerfel.trifft(st.glueck);
     var name = G.name;
     Z.gebot = null;
+    Z.gebotSperre = Z.takt + 2 * (g.wochen || 5);
     if (h) h.brauereien += 1;               /* die Kessel im Tal bekommt sie so oder so */
     if (gelingt) {
       var m = mittelVon('jahresvereinbarung');
@@ -2127,8 +2156,7 @@
       + (rest === 1 ? ' Woche' : ' Wochen') + ', dann nimmt sie sich eine Adresse'));
     var reihe = B.el('div', 'gg-gzreihe');
     reihe.appendChild(B.knopf({
-      text: (ab.ja || 'Annehmen') + ' · ' + B.welt.geld(Z.angebot.summe),
-      zug: 'gegner:angebot-ja', preis: Z.angebot.summe,
+      text: ab.ja || 'Annehmen', zug: 'gegner:angebot-ja', preis: Z.angebot.summe,
       titel: 'Unwiderruflich. ' + (ab.jasatz || ''),
       tu: angebotAnnehmen
     }));
@@ -2138,7 +2166,7 @@
       tu: angebotAblehnen
     }));
     kasten.appendChild(reihe);
-    B.orte.setze(kasten, s.ort, { anker: 'rechts', dx: 3, dy: (s.dy || 0) + 17 });
+    B.orte.setze(kasten, s.ort, { anker: 'rechts', dx: 3, dy: (s.dy || 0) + 25 });
     kasten.setAttribute('data-frei', 'gegner');
     fach.appendChild(kasten);
   }
