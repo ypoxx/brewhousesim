@@ -94,7 +94,8 @@
     gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
     jahrSude: 0, jahrFass: 0, jahrFehl: 0, jahrAnzeige: 0,
-    jahrLegte: 0,         /* hat das Haus dieses Braujahr ueberhaupt gebraut? */
+    jahrLegte: 0,         /* wie oft das Haus dieses Braujahr angestellt hat  */
+    gesamtLegte: 0,
     kalt: 0,              /* Braujahre in Folge ohne einen einzigen Sud       */
     bestellt: [],         /* 1970: bezahlter Gaerraum auf dem Tieflader       */
     gesamtSude: 0, gesamtFass: 0,
@@ -1616,7 +1617,7 @@
         /* Gebraut ist gebraut, auch wenn der Gaerkeller voll ist und dieses
            Stueck den Sud gar nicht erst ansaugt. Sonst zaehlte ein volles
            Haus als kalte Pfanne — der Fehler waere teuer. */
-        Z.jahrLegte++;
+        Z.jahrLegte++; Z.gesamtLegte++;
         B.wage('sud.protokoll', saugeUndSchlage);
       });
 

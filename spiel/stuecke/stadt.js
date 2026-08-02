@@ -1472,7 +1472,7 @@
       });
       zeile.appendChild(k);
       zeile.appendChild(B.el('div', 'nutzen', art.bleibt
-        ? 'bleibt stehen · ' + B.zahl(art.zins * 100, 1) + ' % Zins jeden Michaeli'
+        ? 'bleibt stehen · ' + B.zahl(art.zins * 100, 1) + ' % Zins'
         : (nutzenWort(a) ? 'weg: ' + nutzenWort(a) : 'geht aus dem Hof')));
       reihe.appendChild(zeile);
     });
