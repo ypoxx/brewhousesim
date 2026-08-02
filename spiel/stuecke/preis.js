@@ -53,6 +53,8 @@
     seite: 'tafel',
 
     umsatz: 0,
+    umsatzReihe: [],       /* Ausstoss der Vorjahre — fuer die Veranlagung  */
+    ertragReihe: [],       /* Nahrung der Vorjahre  — fuer die Veranlagung  */
     hoehe: 0,
     anschlag: 0,
     kaeufe: 0,
@@ -228,13 +230,51 @@
     if (Z.nachlass) f *= (1 - (e.nachlass || 0));
     return f;
   }
+  /* DIE VERANLAGUNG NACH DREI JAHREN.
+
+     Der Boettcher rechnet mit dem, was er heute sieht — deshalb steht im
+     ANSCHLAG weiter der Ausstoss des Vorjahrs. Ein Steuerausschuss rechnet
+     anders: er veranlagt nach dem Durchschnitt der letzten drei Jahre, und
+     zwar seit es Veranlagungen gibt. Das ist nicht Milde, sondern
+     Verwaltung — eine Behoerde, die einem Haus jedes Jahr eine neue Zahl
+     zumutet, bekommt jedes Jahr einen Einspruch.
+
+     Warum es hier steht: am Bildschirm gemessen schwankt der Ausstoss in
+     1970 zwischen 24.054 und 309.087 DM von einem Jahr auf das andere —
+     das Dreizehnfache. Die Last des Jahres hing an der EINEN Vorjahreszahl,
+     die ausserordentliche Umlage haengt an der Last, und so stand die
+     Rechnung 1973 bei 125.500 DM gegen eine Kasse von 57.297. Ein Zug hat
+     die Partie beendet; von 1974 bis 1983 stand die Kasse auf 3.000 DM.
+
+     Mit dem Dreijahresschnitt bleibt beides erhalten und wird tragbar: ein
+     gutes Jahr wird noch angeschlagen, aber nicht sofort ganz, und ein
+     schlechtes entlastet noch, aber nicht sofort ganz. Wer waechst, zahlt
+     mit zwei Jahren Verzug mehr; wer schrumpft, zahlt mit zwei Jahren
+     Verzug weniger. Das ist die Rueckkopplung, nur mit Traegheit. */
+  var VERANLAGUNG_GEWICHT = [0.5, 0.3, 0.2];   /* juengstes zuerst */
+
+  function schnitt(reihe, jetzt) {
+    var r = (reihe || []).concat([jetzt]);
+    var s = 0, w = 0;
+    for (var i = 0; i < VERANLAGUNG_GEWICHT.length && i < r.length; i++) {
+      var wert = r[r.length - 1 - i];
+      if (typeof wert !== 'number' || !isFinite(wert)) continue;
+      s += VERANLAGUNG_GEWICHT[i] * Math.max(0, wert);
+      w += VERANLAGUNG_GEWICHT[i];
+    }
+    return w ? s / w : 0;
+  }
+
+  function umsatzVeranlagt() { return schnitt(Z.umsatzReihe, Math.max(0, Z.umsatz)); }
+  function ertragVeranlagt() { return schnitt(Z.ertragReihe, Math.max(0, Z.ertrag)); }
+
   /* Was an der Menge haengt — ohne Boden. */
   function lastMenge() {
-    return ep().pflichtUmsatz * Math.max(0, Z.umsatz);
+    return ep().pflichtUmsatz * umsatzVeranlagt();
   }
   /* Was der Rat nach der Nahrung des vergangenen Jahres veranlagt. */
   function lastErtrag() {
-    return (ep().pflichtErtrag || 0) * Math.max(0, Z.ertrag);
+    return (ep().pflichtErtrag || 0) * ertragVeranlagt();
   }
   function lastenBasis(art) {
     if (art === 'fest') return lastFest();
@@ -266,8 +306,8 @@
   /* Woran diese Zeile haengt — steht am Bildschirm, nicht im Quelltext. */
   var WURZEL = {
     fest:   'läuft weiter, auch wenn nicht gebraut wird',
-    menge:  'nach dem Ausstoß des vergangenen Jahres',
-    ertrag: 'nach dem, was das Jahr übrig ließ'
+    menge:  'nach dem Ausstoß im Schnitt der letzten drei Jahre',
+    ertrag: 'nach dem, was die letzten drei Jahre übrig ließen'
   };
 
   function pflichtSumme() {
@@ -618,6 +658,15 @@
       verhaeltnis: billig && billig.preis ? B.welt.haus.kasse / billig.preis : 0
     });
     if (Z.leiter.length > 24) Z.leiter.shift();
+
+    /* 11. Erst jetzt wandern Ausstoss und Nahrung dieses Michaeli in die
+           Reihe, aus der der Steuerausschuss im naechsten Jahr seinen
+           Dreijahresschnitt zieht. Vorher waere dieses Jahr doppelt
+           gezaehlt: `schnitt()` legt den laufenden Wert selbst obenauf. */
+    Z.umsatzReihe.push(Math.max(0, Math.round(Z.umsatz)));
+    Z.ertragReihe.push(Math.max(0, Math.round(Z.ertrag)));
+    if (Z.umsatzReihe.length > 6) Z.umsatzReihe.shift();
+    if (Z.ertragReihe.length > 6) Z.ertragReihe.shift();
 
     Z.offen = (B.arg.roh.tafel !== 'zu') || !erste;
     Z.erzwungen = false;
@@ -1711,8 +1760,12 @@
     Z.hoehe = Math.max(B.welt.haus.kasse, 1);
     Z.umsatz = erste ? 0 : messeUmsatz(jahr() - 1);
     /* Eine neue Zeit rechnet neu: die Nahrung der vorigen Epoche steht in
-       einer anderen Waehrung und darf nicht angeschlagen werden. */
+       einer anderen Waehrung und darf nicht angeschlagen werden. Das gilt
+       auch fuer die Reihe, aus der der Dreijahresschnitt kommt — Gulden
+       gehen nicht in einen Durchschnitt mit Mark. */
     Z.ertrag = 0;
+    Z.umsatzReihe = [];
+    Z.ertragReihe = [];
     Z.kasseMichaeli = null;
     Z.nachlass = false;
     Z.nachlassBetrag = 0;
