@@ -174,6 +174,16 @@ dreien gar nicht auf dem Schirm steht?
   Übergabenotiz zwischen zwei Buildern: „— den schreibt DER PREIS, und er liest
   `welt.haus.rufAufschlag` noch nicht. Solange bucht DER NAME das Aufgeld
   selbst, Zeile für Zeile." Das gehört nicht auf den Bildschirm.
+* **Der Zähler „Chronik des Hauses · N Festlegungen" steht in allen vier Epochen
+  auf 0**, auch nach bezahlter Festlegung. DER GEGNER hat die Ursache gefunden
+  und nachgemessen: der Knopf steht in `stuecke/preis.js:1525` und zählt
+  `Object.keys(Z.festGenommen)` — also nur die Festlegungen von DER PREIS. Nach
+  einem Gegenzug in 1970 steht in `welt.chronik` ein Eintrag mit
+  `art='festlegung'`, und der Zähler daneben bleibt auf 0. *Die Zahl ist da, der
+  Zähler liest sie nicht.* Umstellen auf
+  `chronik.filter(c => c.art === 'festlegung').length` fasst alle vier Stücke auf
+  einmal. Gehört DEM PREIS.
 * **Drei Braujahre sind zu kurz.** Die Amtszeit in 1350 läuft bis 1386, die
   Partie endet 1353. Ob das am Ende oder an der Wirtschaft liegt, entscheidet
-  Stück 1 und 2 gemeinsam.
+  Stück 1 und 2 gemeinsam. Auf sorgfältig gespielter Linie trägt dieselbe Partie
+  vierzehn Jahre — der Abbruch trifft den, der nichts tut.

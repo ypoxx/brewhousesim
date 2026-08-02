@@ -1299,21 +1299,49 @@
   /* --------------------------------------------------------------------
      DER BAUHOF — die offenen Bauten der Epoche, mit Preisschild
      nebeneinander. Wer hier klickt, gibt Geld aus und sieht es im Bild.
+
+     Runde 7: derselbe Kasten hat jetzt zwei Seiten. Links wird gebaut,
+     rechts wird verwertet — und die zweite Seite heisst in jeder Epoche
+     anders, weil sie in jeder Epoche etwas anderes ist. Zwei Seiten statt
+     zwei Kaesten, weil die Werkbank ihren Vertrag haelt: sie faengt bei
+     87,5 Prozent der Hoehe an und waechst dafuer nicht.
      -------------------------------------------------------------------- */
+  var bauhofSeite = 'bau';        /* 'bau' | 'geld' */
+
   function zeichneBauhof(kasten) {
     var ep = e();
-    var liste = offen(ep).sort(function (a, b) { return a.grund - b.grund; }).slice(0, 5);
+    var art = verwertungsArt(ep);
+    var geldListe = verwertbar(ep).sort(function (a, b) { return preis(b, ep) - preis(a, ep); });
+    if (bauhofSeite === 'geld' && !geldListe.length) bauhofSeite = 'bau';
+    var geld = bauhofSeite === 'geld';
+    var liste = geld ? geldListe.slice(0, 5)
+                     : offen(ep).sort(function (a, b) { return a.grund - b.grund; }).slice(0, 5);
 
     B.leere(kasten);
 
     var kopf = B.el('div', 'kopf');
-    kopf.appendChild(B.el('span', 'wort', 'BAUHOF'));
-    kopf.appendChild(B.el('span', 'zahl', stehend(ep).length + ' Bauten im Hof · '
-      + 'gebaut wird einmal, es steht auch für die Enkel'));
+    var reiter = B.el('span', 'seiten');
+    reiter.appendChild(B.knopf({
+      text: 'BAUHOF', zug: 'stadt:seite:bau', klasse: 'stadt-seite' + (geld ? '' : ' auf'),
+      titel: 'Was in dieser Zeit im Hof noch zu bauen ist.',
+      tu: function () { bauhofSeite = 'bau'; B.sende('zeichne', { grund: 'stadt:bau' }); }
+    }));
+    reiter.appendChild(B.knopf({
+      text: art.wort, zug: 'stadt:' + art.verb, klasse: 'stadt-seite' + (geld ? ' auf' : ''),
+      aus: !geldListe.length,
+      titel: art.kopf + '. ' + art.sagt,
+      tu: function () { bauhofSeite = 'geld'; B.sende('zeichne', { grund: 'stadt:bau' }); }
+    }));
+    kopf.appendChild(reiter);
+    kopf.appendChild(B.el('span', 'zahl', geld
+      ? art.kopf
+      : stehend(ep).length + ' Bauten im Hof · gebaut wird einmal, es steht auch für die Enkel'));
     kasten.appendChild(kopf);
 
     var reihe = B.el('div', 'reihe');
     kasten.appendChild(reihe);
+
+    if (geld) { zeichneVerwertung(reihe, liste, ep, art); return; }
 
     if (!liste.length) {
       reihe.appendChild(B.el('div', 'leer', 'Der Hof ist für diese Zeit fertig gebaut.'));
@@ -1344,11 +1372,54 @@
       reihe.appendChild(zeile);
     });
 
-    /* Die eine Zahl der Messlatte: der naechste sinnvolle Zug. */
+    /* Die eine Zahl der Messlatte: der naechste sinnvolle Zug. Der dritte
+       Wert sagt, WAS fuer ein Zug das ist — ein Bau aendert die Lage, er ist
+       kein Umtrunk. Vier Stuecke melden ihn inzwischen mit; der Kern nimmt
+       ihn noch nicht an (siehe Bericht, Absatz KERN). */
     if (liste.length) {
       var billigste = liste[0];
-      B.welt.meldeZug('Bau ' + billigste.name, preis(billigste, ep));
+      B.welt.meldeZug('Bau ' + billigste.name, preis(billigste, ep), 'lage');
     }
+  }
+
+  /* Die zweite Seite: was der Hof noch wert ist. Die Preisschilder stehen
+     hier mit Plus — das ist der Unterschied, auf den es ankommt, wenn die
+     Kasse leer ist. */
+  function zeichneVerwertung(reihe, liste, ep, art) {
+    if (!liste.length) {
+      reihe.appendChild(B.el('div', 'leer',
+        'Im Hof steht nichts mehr, was sich zu Geld machen ließe.'));
+      return;
+    }
+    liste.forEach(function (a) {
+      var betrag = erloes(a, ep, false);
+      var zeile = B.el('div', 'bauzeile');
+      var k = B.knopf({
+        text: art.tat + ': ' + a.name,
+        zug: 'stadt:' + art.verb + ':' + a.schluessel,
+        preis: betrag,
+        klasse: 'stadt-verwertung',
+        titel: art.sagt + '  [Bauwert ' + B.welt.geld(preis(a, ep)) + ' · '
+             + (art.bleibt ? 'bleibt im Hof, ' + B.rund(art.zins * 100, 1)
+                             + ' % Zins jeden Michaeli'
+                           : 'geht aus dem Hof'
+                             + (nutzenWort(a) ? ', kostet ' + nutzenWort(a) : '')) + ']',
+        tu: function () { verwerteZug(a); }
+      });
+      k.addEventListener('mouseenter', function () {
+        B.wage('stadt.vorschau', function () { zeigeVorschau(a.schluessel); });
+      });
+      k.addEventListener('mouseleave', function () {
+        if (vorschau === a.schluessel) {
+          B.wage('stadt.vorschau', function () { zeigeVorschau(null); });
+        }
+      });
+      zeile.appendChild(k);
+      zeile.appendChild(B.el('div', 'nutzen', art.bleibt
+        ? 'bleibt stehen · ' + B.rund(art.zins * 100, 1) + ' % Zins'
+        : (nutzenWort(a) ? 'weg: ' + nutzenWort(a) : 'geht aus dem Hof')));
+      reihe.appendChild(zeile);
+    });
   }
 
   function zeichne() {
@@ -1388,7 +1459,14 @@
 
     zeichne: zeichne,
 
-    jahr: function () { jahrZeit = Date.now(); },
+    /* Michaeli: erst laeuft der Zins, dann sieht der Rat in die Kasse.
+       Das ist der Boden — unter null bleibt sie nicht liegen, es kostet nur
+       jedes Mal ein Stueck Hof. */
+    jahr: function () {
+      jahrZeit = Date.now();
+      zinsLaeuft();
+      ratGreiftZu();
+    },
 
     /* Die Epoche nimmt, was ihre Zeit ueberlebt hat, und laesst den Rest
        zurueck. Der Hof waechst weiter, er faengt nicht neu an. */
@@ -1415,6 +1493,20 @@
     hat: hat,
     stehend: function () { return stehend().map(function (a) { return a.schluessel; }); },
     offen: function () { return offen().map(function (a) { return a.schluessel; }); },
+    /* DER BODEN: was der Hof heute noch bar wert ist, und wie er zu Geld
+       wird. Damit kann jeder nachrechnen, ohne Quelltext zu lesen:
+       BRAUHAUS.stadt.hofwert() */
+    hofwert: function () {
+      var ep = e(), art = verwertungsArt(ep);
+      var frei = verwertbar(ep).reduce(function (s, a) { return s + erloes(a, ep, false); }, 0);
+      var zwang = stehend(ep).reduce(function (s, a) { return s + erloes(a, ep, true); }, 0);
+      return {
+        art: art.verb, wort: art.wort,
+        bauten: stehend(ep).length, verwertbar: verwertbar(ep).length,
+        bar: frei, imZwang: zwang,
+        belastet: Object.keys(belastet).length
+      };
+    },
     rahmen: {
       fenster: FENSTER,
       grenze: GRENZE,
