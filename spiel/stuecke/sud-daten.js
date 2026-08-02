@@ -110,6 +110,7 @@ var SUD_DATEN = {
                  titel: 'Solange ein Bottich gärt, hebt der Brauer die Hefe von oben ab. '
                       + 'Das kostet kein Fass — es geht nur, solange etwas gärt.' },
       anstich: { text: 'Hefezeug vom Fass abnehmen', zug: 'sud:anstich',
+                 jung: 'Junges Fass anbrechen', alt: 'Altes Fass anbrechen',
                  titel: 'Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass '
                       + 'gibt kräftiges Zeug, ein altes müdes.',
                  satz: 'Der Brauer bricht ein Fass an und schöpft die Hefe ab.' },
@@ -177,6 +178,7 @@ var SUD_DATEN = {
                  titel: 'Aus dem gärenden Bottich geschöpft, wie es die Ordnung vorsieht. '
                       + 'Kostet kein Fass — geht nur, solange ein Bottich steht.' },
       anstich: { text: 'Stellhefe vom Fass schöpfen', zug: 'sud:anstich',
+                 jung: 'Junges Fass anstechen', alt: 'Altes Fass anstechen',
                  titel: 'Ein Fass wird angebrochen und die Hefe geschöpft. Ein junges Fass '
                       + 'gibt kräftige Stellhefe, ein altes müde.',
                  satz: 'Der Braumeister bricht ein Fass an und schöpft die Stellhefe.' },
@@ -259,6 +261,7 @@ var SUD_DATEN = {
                  titel: 'Erntehefe von der Decke des Gärbottichs, wie in jedem Betrieb dieser '
                       + 'Zeit. Kostet kein Bier — geht nur, solange ein Bottich gärt.' },
       anstich: { text: 'Hefe aus dem Fass abernten', zug: 'sud:anstich',
+                 jung: 'Junges Lagerfass anstechen', alt: 'Altes Lagerfass anstechen',
                  titel: 'Ein Fass wird angestochen und die Hefe geerntet. Junges Fass, '
                       + 'kräftige Hefe.',
                  satz: 'Der Braumeister sticht ein Fass an und erntet die Hefe.' },
@@ -344,6 +347,7 @@ var SUD_DATEN = {
                  titel: 'Erntehefe aus dem Konus, gekühlt gelagert, neu angestellt. '
                       + 'Kostet kein Bier — geht nur, solange ein Tank gärt.' },
       anstich: { text: 'Hefe aus dem Tank zusetzen', zug: 'sud:anstich',
+                 jung: 'Frisches Fass anzapfen', alt: 'Ältestes Fass anzapfen',
                  titel: 'Hefe wird aus einem Tank gezogen und neu angestellt.',
                  satz: 'Der Braumeister zieht Hefe und stellt neu an.' },
       fehlsud: { name: 'Der Tank ist umgeschlagen', kurz: 'umgeschlagen',

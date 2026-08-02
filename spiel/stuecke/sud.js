@@ -1253,8 +1253,9 @@
     }));
     kasten.appendChild(reihe);
     kasten.appendChild(zeile('sud-fussnote', frei
-      ? (Z.bottiche.length ? 'Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Fass.'
-          : (lager ? 'Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt ein Fass.'
+      ? (Z.bottiche.length ? 'Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier.'
+          : (lager ? 'Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt '
+                     + B.welt.menge(1) + '.'
                    : 'Es gärt nichts, und im Keller liegt nichts.'))
       : 'Diese Woche ist die Hefe schon nachgeführt.'));
     fach.appendChild(kasten);
@@ -1617,7 +1618,9 @@
         buch('Braujahr geschlossen: ' + Z.jahrSude + ' Sude, ' + B.welt.menge(Z.jahrFass)
           + ', ' + Z.jahrFehl + ' verloren'
           + (Z.gestuft ? ', ' + Z.gestuft + ' zurückgestuft.' : '.'));
+        kaltePfanne();
         Z.jahrSude = 0; Z.jahrFass = 0; Z.jahrFehl = 0; Z.jahrAnzeige = 0; Z.gestuft = 0;
+        Z.jahrLegte = 0;
       });
     },
 
