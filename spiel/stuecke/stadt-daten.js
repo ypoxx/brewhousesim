@@ -657,26 +657,40 @@ var STADT_DATEN = {
       sagt: 'Zylindrokonisch, im Freien, aus Edelstahl. Gärkeller braucht das keinen mehr.',
       nutzen: { platz: 150, sud: 12 } },
 
-    /* Runde 5, das Stueck, an dem 1970 den Blindvergleich verloren hat.
-       Der Kritiker: "die Verladedockplatte liegt wie ein Betondeckel ueber
-       der Hofmitte, die Wagen stehen draussen" — die Lastwagen parkten bei
-       y 1080..1100, waehrend die Mauerkante bei x=1300 auf y=990 liegt, also
-       hundert Pixel unterhalb der Mauer auf der oeffentlichen Gasse. Zwei
-       Ursachen: der Platz (47|73) liegt jenseits der Mauer, und das alte Bild
-       war zu drei Vierteln leere Betonflaeche mit zwei Lastwagen, die unten
-       rechts hinausragten.
-       Das Bild ist neu: zwei Lastwagen RUECKWAERTS an der Rampe, unter dem
-       Vordach, dazu ein Arbeiter mit der Sackkarre — im Zielbild 04 arbeiten
-       Leute im Hof, im Gebauten arbeitete niemand. Und der Platz ist der
-       Hofboden vor der Halle statt der Gehweg davor. */
+    /* Runde 7. Das fremde Auge hat 1970 zum zweiten Mal gegen das Zielbild
+       verloren und dafuer Gruende genannt, die man nachmessen kann:
+       "schwebende LKW", "der LKW steckt in der Rampe", "in der Luft
+       haengende Laderampe". Alle drei zeigen auf dasselbe: das Bild trug
+       SEINEN EIGENEN BODEN mit — eine Betonplatte mit sichtbarer Kante,
+       auf der die Wagen standen. Zwei Bodenflaechen uebereinander, die
+       eigene und die des Hofes, ergeben genau den Eindruck einer Platte,
+       die in der Luft haengt; und der vordere Wagen ragte ueber ihre Kante
+       hinaus, also stak er darin.
+       Das neue Bild hat keinen Boden: zwei Lastwagen, alle Raeder auf
+       EINER Bodenlinie, zwei Arbeiter, einer mit der Sackkarre. Der Boden
+       darunter ist der Hof.
+       Und es ist auf den Menschen geeicht statt geschaetzt — 15,5 waren
+       13 Meter Bildbreite fuer zwei Sechsmeterwagen; bei 8,8 misst der
+       Mann mit der Sackkarre 55 px wie die Leute der Platte 1970. */
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: -1.5, dy: -0.5, breite: 15.5, von: 4, bis: 4, grund: 95,
-      sagt: 'Zwei Lastzüge rückwärts am Dock, ein Mann mit der Sackkarre. '
+      ort: 'rampe', dx: 2.5, dy: 1.5, breite: 8.8, von: 4, bis: 4, grund: 95,
+      sagt: 'Zwei Lastzüge geladen, zwei Mann dabei, einer mit der Sackkarre. '
           + 'Was hier abfährt, ist am Abend zweihundert Kilometer weit.',
       nutzen: {}, wirkt: 'zwei Lastzüge gleichzeitig' },
 
+    /* "Absurde Riesen-Kistenwand" — der Satz, mit dem das fremde Auge 1970
+       dem Zielbild den Vorzug gab, und der Kritiker hat ihn nachgerechnet:
+       neben dem Arbeiter (55 px = 1,70 m) mass EIN Bierkasten 0,78 x 2,08 m,
+       der Fuenferstapel las sich als 3,90 m hohe Wand, so hoch wie die
+       Abfuellhalle daneben. Ein Bierkasten ist 0,40 x 0,30 x 0,30 m.
+       Das alte Bild hatte keinen Menschen darin, also auch kein Mass. Im
+       neuen stehen zwei: einer traegt einen Kasten, einer setzt einen ab.
+       Jeder Stapel ist fuenf Kaesten auf einer Palette und reicht dem Mann
+       an die Schulter — das ist die Probe, die man mit blossem Auge machen
+       kann. Neun Stapel statt vier, damit aus dem richtigen Mass kein
+       Spielzeug wird: bei breite 8,3 misst der Mann 55 px. */
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'fasslager', dx: 3, dy: -2.5, breite: 13.5, von: 4, bis: 4, grund: 70,
+      ort: 'fasslager', dx: 1, dy: -1, breite: 8.3, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
