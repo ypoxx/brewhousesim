@@ -114,12 +114,38 @@ Festlegung die mit dem Preisschild „ohne Ausgabe" ist (`aktien`, `konzern`). D
 
 ## 5 — Was zu tun ist, in dieser Reihenfolge
 
-1. **Die Bretter dürfen einander nicht zudecken.** Zwei Wege, beide zulässig, beide klein:
-   entweder bekommt `.sud-brett` eine Fläche, die DIE FUHRE nicht benutzt — frei ist der
-   Streifen rechts oben (x 51,3 – 98,8 %, y 12,4 – 55,4 %, das sind 47,5 × 43 Prozentpunkte,
-   und `.sud-brett` ist 47 % breit) —, oder die Reiter der STADT klappen beim Aufschlagen
-   weg, was sie verdecken würden. Der zweite Weg ist der ehrlichere, wenn die Bühne für fünf
-   Stücke zu klein geworden ist; der erste ist zwei Zahlen.
+1. **Die Bretter dürfen einander nicht zudecken — und zwar über die Reiter, nicht über die
+   Platzordnung.** Zwei Wege standen offen; einer ist inzwischen ausprobiert und gemessen.
+
+   *Weg 1, das Brett verschieben, ist widerlegt.* `.sud-brett` versuchsweise nach
+   `left: 51.3%; max-height: 43%` gelegt — in den Streifen rechts oben, den DIE FUHRE frei
+   lässt — und `decke.mjs` erneut gefahren:
+
+   | Epoche | vorher | nach dem Umzug |
+   |---|---|---|
+   | 1 · 1350 | 29 | **20** |
+   | 2 · 1600 | 30 | **21** |
+   | 3 · 1884 | 30 | **20** |
+   | 4 · 1970 | 30 | **24** |
+
+   Besser, und `fuhre:kauf:rohstoff` ist damit in E1 und E2 frei — der Befund aus §3 wäre
+   erledigt. Aber es bleibt ein Drittel-minus, und die neue Liste zeigt, warum das kein Weg
+   ist: **DER SUD deckt jetzt DER GEGNER zu** (`gegner:beschwerde`, `gegner:blatt`,
+   `gegner:abloesen:*`, `gegner:zuvorkommen:*`) und dazu die Marken der STADT
+   (`stadt:marke:*`) — und der Höhendeckel von 43 % schneidet **DEM SUD seine eigenen
+   Knöpfe** ab (`sud:zettel-wechsel-frei`, `sud:gaerung:ober`, `sud:gaerraum`). Ein
+   Rechteck weiterzuschieben verschiebt nur, wer zugedeckt wird. Der Versuch ist wieder
+   zurückgenommen; `sud.css` steht unverändert.
+
+   *Der Grund ist grundsätzlich:* Die Bühne ist voll. DIE FUHRE allein belegt 1,1 – 78,2 %
+   über die ganze Höhe. Für ein zweites 47 % breites Brett ist kein Platz, an keiner Stelle —
+   auch nicht rechts, weil dort DER GEGNER und die Marken liegen.
+
+   *Weg 2 bleibt, und er ist der richtige:* **Ein Reiter, der aufschlägt, klappt zu, was er
+   zudecken würde.** Das ist die Zuständigkeit der STADT (`stadt.js`, `stadt-zugeklappt`),
+   es braucht keine neue Fläche, und es macht die Bretter zu dem, was sie im Vorgabestand
+   ohnehin schon sind: ein Stapel, aus dem man eines aufschlägt. Die Rechteck-Kollisionen
+   sind dann nur noch eine Frage der Reihenfolge, nicht der Fläche.
 2. **`decke.mjs` wird eine Latte.** Ein Stück, dessen Brett fremde Schaltflächen zudeckt, ist
    nicht fertig — gleichgültig, wie gut es aussieht. Die Zahl gehört neben `BRAUHAUS.lage`
    in jeden Lauf: **erreichbar muss jeder aktive Zug sein, in jeder Epoche, in jeder
