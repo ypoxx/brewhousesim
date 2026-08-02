@@ -56,11 +56,23 @@
        · DIE FRIST. Nimmt keine einzige Adresse mehr ab, laeuft eine Uhr:
          zwoelf Wochen (1970: acht). Sie steht still in jeder Woche, in der
          ein Fass auf Probe hinausgeht — wer es versucht, verliert nicht.
-         Laeuft sie ab, entzieht die Instanz der Epoche dem Haus die
-         Grundlage, `B.uhr.beende('keine-abnehmer', ...)` haelt die Uhr an
-         (ZUSTAENDIGKEIT 12), und dieses Stueck malt sein Schlussblatt:
-         Chronik, Generationenzeile, Wiederanfang.
-     Das Nachspiel gehoert spaeter DEM ERBE. Hier steht nur das Anhalten.
+
+   UND DAS ENDE IST VIERMAL EIN ANDERES (siehe DER AUSGANG)
+     Ab der halben Frist steht DER ANTRAG der Epoche im Bild: zwei Knoepfe
+     untereinander, einer mit Preisschild, beide unwiderruflich. Wer annimmt,
+     hoert an diesem Tag auf und hat das Geld — die Pfanne zurueckgegeben
+     (1350), die Gerechtigkeit verkauft (1600), an die Aktienbrauerei
+     verkauft (1884), die Marke verkauft (1970). Wer ausschlaegt, bekommt den
+     Untergang seiner Epoche, und der zahlt weniger oder nichts: Braurecht
+     entzogen, aus der Reihe gestrichen, von der Bank verwertet, stillgelegt.
+     Dazu DIE UEBERGABE — das einzige Ende, nach dem am naechsten Morgen
+     wieder Feuer unter der Pfanne brennt. Sie wird angeboten, nicht
+     verhaengt, und nur einem Haus, das steht.
+     Angehalten wird die Uhr nie von diesem Stueck selbst, sondern mit
+     `B.uhr.beende(grund)` (ZUSTAENDIGKEIT 12). Danach malt dieses Stueck
+     DAS URTEIL — fuer jeden Grund, auch fuer die, die andere Stuecke
+     ausloesen; die uebrigen Schlussblaetter sind Beiblaetter.
+     Das Nachspiel gehoert spaeter DEM ERBE.
 
    BESITZSTAND: stuecke/fuhre*.js · stil/fuhre*.css · bild/fuhre/** · ton/fuhre/**
    =========================================================================== */
@@ -1965,6 +1977,7 @@
        kein Gebot in 1600 liegen. */
     Z.antrag = null;
     Z.antragErledigt = false;
+    Z.ausgang = null;
     Z.uebergabe = null;
     Z.uebergabeNein = 0;
     /* Ein Vorschlag steht an der Tafel, damit die erste Woche laeuft.
@@ -4023,6 +4036,14 @@
         probeGesamt: Z.probeGesamt,
         zurueckGeholt: Z.zurueckGeholt.map(function (v) { return v.name + ' ' + v.jahr + ' (' + v.wie + ')'; }),
         ende: B.welt.zeit.ende ? (B.welt.zeit.endgrund || 'ende') : null,
+        /* DER AUSGANG — was der Kritiker zaehlen koennen muss, ohne
+           Quelltext zu lesen: steht ein Antrag im Bild, was ist er wert,
+           wurde er schon entschieden, und liegt die Uebergabe an. */
+        antrag: Z.antrag ? Z.antrag.summe : null,
+        antragErledigt: Z.antragErledigt,
+        antragWert: antragSumme(),
+        uebergabe: Z.uebergabe ? Z.uebergabe.jahr : null,
+        ausgang: Z.ausgang ? Z.ausgang.grund : null,
         durst: Object.keys(Z.durst).map(function (k) { return k + ':' + Math.round(Z.durst[k]); }),
         mahnung: Z.mahnung, verloren: Object.keys(Z.verloren)
       };

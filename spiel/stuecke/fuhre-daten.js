@@ -826,7 +826,8 @@ var FUHRE_DATEN = {
         satz: 'Der Direktor der Aktienbrauerei kommt mit dem Notar. Er kauft nicht das Bier, '
             + 'er kauft die Straße: Grundstück, Sudhaus, Kühlmaschine, Fasspark und die '
             + 'Kundenliste. Das Haus wird Niederlage und Absatzlager. So sind zwischen 1870 '
-            + 'und 1900 die meisten kleinen Häuser verschwunden — nicht bankrott, sondern gekauft.',
+            + 'und 1900 Tausende kleiner Häuser verschwunden — viele nicht im Konkurs, '
+            + 'sondern im Kaufvertrag.',
         ja: 'An die Aktienbrauerei verkaufen',
         jaTitel: 'Gebäude, Sudhaus und Kundenliste gehen an die Aktienbrauerei. '
                + 'Unwiderruflich.',
@@ -893,9 +894,9 @@ var FUHRE_DATEN = {
         anteil: 0.12,
         kopf: 'Das Brauhaus wird stillgelegt · {jahr}',
         urteil: 'Der Handel nimmt das Brauhaus zum Anker aus dem Sortiment: seit {wochen} '
-              + 'Wochen hat kein Einkauf mehr bestellt. Zwischen 1960 und 1990 ist das über '
-              + 'die Hälfte aller deutschen Brauereien gewesen — nicht ein Krach, sondern ein '
-              + 'Regalmeter nach dem anderen.',
+              + 'Wochen hat kein Einkauf mehr bestellt. Zwischen 1960 und 1990 hat sich die Zahl '
+              + 'der Brauereien in der Bundesrepublik etwa halbiert — nicht ein Krach, sondern '
+              + 'ein Regalmeter nach dem anderen.',
         folge: 'Für den Betrieb findet sich kein Käufer, für die Marke jetzt auch keiner mehr: '
              + 'eine Marke ohne Listung ist ein Wort. Sudwerk, Tanks und Flaschenkeller gehen '
              + 'zum Schrottpreis, der Rest wird ausgeräumt. Auf dem Gelände steht später ein '
