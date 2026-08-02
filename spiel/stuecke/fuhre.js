@@ -957,21 +957,69 @@
      Pfanne brennt.
 
      Sie wird nicht verhaengt, sondern angeboten, und nur einem Haus, das
-     steht: fuenf abgeschlossene Braujahre, drei Haeuser, die Bier des Anker
-     fuehren, eine Kasse ohne Loch und ein Braujahr, in dem wirklich
-     geliefert wurde. Wer weiterbraut, bekommt sie zum naechsten Michaeli
-     wieder vorgelegt — sie ist ein Angebot, keine Falle.
-     ---------------------------------------------------------------------- */
-  var UEBERGABE_JAHRE = 5;
-  var UEBERGABE_HAEUSER = 3;
+     steht. Wer weiterbraut, bekommt sie zum naechsten Michaeli wieder
+     vorgelegt — sie ist ein Angebot, keine Falle.
 
-  function hausStehtGut() {
-    if (B.welt.zeit.ende) return false;
-    if (B.welt.zeit.jahr - Z.startJahr < UEBERGABE_JAHRE) return false;
-    if (haeuser().length < UEBERGABE_HAEUSER) return false;
-    if (B.welt.haus.kasse < 0) return false;
-    return Z.verladenVorjahr > 0;
+     WAS "STEHT" HEISST, IST IN JEDEM JAHRHUNDERT ETWAS ANDERES, und das war
+     der Fehler, den die Messung gefunden hat. Bis hierher stand fuer alle
+     vier Epochen dieselbe Zahl: fuenf Braujahre und DREI Haeuser, die Bier
+     des Anker fuehren. Gemessen auf der sorgfaeltig gespielten Linie
+     (270 Wochen, 0 Seitenfehler, kein Abbruch):
+
+       E1 1350   ab 1355 angeboten, 120 Wochen im Bild
+       E2 1600   ab 1605 angeboten
+       E3 1884   ab 1889 angeboten
+       E4 1970   NIE — die Zahl der fuehrenden Haeuser steht 1972 auf 3,
+                 1973 auf 2 und ab 1976 auf 1, waehrend die Uhr erst 1975
+                 fuenf Braujahre voll hat. Kasse 62.606 bis 86.352 DM,
+                 870 hl im letzten Braujahr hinausgegangen.
+
+     Das Haus in 1970 war also zahlungsfaehig, hat geliefert und stand neun
+     Jahre — und bekam das gute Ende trotzdem nie, weil an 1970 die Elle von
+     1350 angelegt wurde. Genau darum geht es beim Brauereisterben: die Zahl
+     der Abnehmer SINKT, das ist der Vorgang selbst. Wer 1978 noch eine
+     Listung haelt, zahlt und ausliefert, steht besser als die Haelfte der
+     Branche. Also steht die Elle jetzt je Epoche in fuhre-daten.js
+     (`ausgaenge.uebergabe[n].mass`) — Jahre, Haeuser, Ausstoss und der Satz,
+     der sagt, warum diese Zahl fuer diese Zeit die richtige ist.
+     ---------------------------------------------------------------------- */
+  var MASS_VORGABE = { jahre: 5, haeuser: 3, ausstoss: 1,
+    satz: 'Ein Haus, das liefert und zahlt, kann man weitergeben.' };
+
+  function uebergabeMass() {
+    var u = uebergabeDef();
+    var m = u && u.mass;
+    if (!m) return MASS_VORGABE;
+    return {
+      jahre:    m.jahre    === undefined ? MASS_VORGABE.jahre    : m.jahre,
+      haeuser:  m.haeuser  === undefined ? MASS_VORGABE.haeuser  : m.haeuser,
+      ausstoss: m.ausstoss === undefined ? MASS_VORGABE.ausstoss : m.ausstoss,
+      satz:     m.satz     || MASS_VORGABE.satz
+    };
   }
+
+  /* Warum das Haus (noch) nicht uebergeben werden kann — in Klartext, damit
+     das gute Ende nicht als unerklaerte Abwesenheit dasteht. Gibt null
+     zurueck, wenn nichts fehlt. */
+  function uebergabeFehlt() {
+    if (B.welt.zeit.ende) return 'Die Uhr steht.';
+    var m = uebergabeMass();
+    var jahre = B.welt.zeit.jahr - Z.startJahr;
+    if (jahre < m.jahre) {
+      return 'Noch ' + (m.jahre - jahre) + (m.jahre - jahre === 1 ? ' Braujahr' : ' Braujahre')
+        + ', dann ist das Haus alt genug für eine Übergabe.';
+    }
+    if (haeuser().length < m.haeuser) {
+      return 'Es führen ' + haeuser().length + ' von ' + m.haeuser + ' Häusern Bier des Anker.';
+    }
+    if (B.welt.haus.kasse < 0) return 'Die Lade hat ein Loch — ' + B.welt.geld(B.welt.haus.kasse) + '.';
+    if (Z.verladenVorjahr < m.ausstoss) {
+      return 'Im letzten Braujahr ist ' + B.welt.menge(Z.verladenVorjahr) + ' hinausgegangen.';
+    }
+    return null;
+  }
+
+  function hausStehtGut() { return uebergabeFehlt() === null; }
 
   /* Zu Michaeli wird neu bewertet, nicht einmal entschieden: was voriges Jahr
      galt, gilt heute vielleicht nicht mehr. Deshalb wird das Blatt hier jedes
@@ -986,7 +1034,8 @@
       jahr: B.welt.zeit.jahr,
       alt: B.welt.zeit.amtszeit.name,
       haeuser: haeuser().length,
-      verladen: Z.verladenVorjahr
+      verladen: Z.verladenVorjahr,
+      mass: uebergabeMass()
     };
   }
 
@@ -3123,6 +3172,13 @@
       + 'Es steht: ' + Z.uebergabe.haeuser + ' Häuser der Stadt führen Bier des Anker, '
       + B.welt.menge(Z.uebergabe.verladen) + ' sind im letzten Braujahr hinausgegangen, '
       + 'in der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '.'));
+    /* DIE ELLE DIESER ZEIT, am Blatt und nicht nur im Quelltext. Ohne sie
+       liest der Spieler „es steht" als Behauptung; mit ihr sieht er, woran
+       es in DIESEM Jahrhundert gemessen wird — und warum die Zahl in 1970
+       eine andere ist als in 1350. */
+    if (Z.uebergabe.mass && Z.uebergabe.mass.satz) {
+      bl.appendChild(B.el('div', 'fu-ausgang-mass', Z.uebergabe.mass.satz));
+    }
     bl.appendChild(B.el('div', 'fu-satz', u.satz));
 
     var w = B.el('div', 'fu-ausgang-wahl');

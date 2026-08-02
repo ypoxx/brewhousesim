@@ -969,26 +969,65 @@ var FUHRE_DATEN = {
         art: 'gegenwart' }
     },
 
+    /* DIE ELLE, MIT DER "EIN HAUS, DAS STEHT" GEMESSEN WIRD.
+
+       Sie stand bis zur Messung fuer alle vier Epochen gleich — fuenf
+       Braujahre, drei fuehrende Haeuser — und ergab in 1970 nie ein gutes
+       Ende: auf der sorgfaeltig gespielten Linie fuehren dort 1972 noch drei
+       Haeuser, 1973 zwei, ab 1976 eines, waehrend die fuenf Braujahre erst
+       1975 voll sind. Das Haus war dabei zahlungsfaehig (62.606 bis 86.352
+       DM) und hat 870 hl im Jahr ausgeliefert.
+
+       Der Fehler war nicht die Zahl, sondern dass es EINE Zahl war. Die Zahl
+       der Abnehmer sinkt in 1970, weil das Brauereisterben genau das IST;
+       daran ein Haus zu messen, heisst es an einem Vorgang zu messen, den es
+       nicht macht. In 1350 dagegen ist die Reihe die Reihe: wer nicht drei
+       Schenken beliefert, hat sein Braurecht nicht ausgenutzt.
+
+         jahre    abgeschlossene Braujahre unter dem heutigen Namen
+         haeuser  Adressen, die Bier des Anker fuehren
+         ausstoss was im letzten Braujahr mindestens hinausging (in Fass)
+         satz     warum diese Zahl fuer diese Zeit die richtige ist
+       ======================================================================= */
     uebergabe: {
       1: { wort: 'Die Übergabe vor dem Rat',
+           mass: { jahre: 5, haeuser: 3, ausstoss: 1,
+                   satz: 'Drei Schenken sind das Maß von 1350: die Reihe teilt die Sudtage '
+                       + 'unter denen, die die Stadt versorgen. Wer drei Häuser hält, hat '
+                       + 'sein Braurecht ausgenutzt und darf es weitergeben.' },
            satz: 'Der Rat trägt den Sudtag auf den neuen Namen um, der Grutherr nimmt die '
                + 'Kerbe ab und schneidet sie neu. Zwei Zeugen, ein Eintrag, ein Krug.',
            folge: 'Die Pfanne bleibt in der Familie {familie}. {erbe} führt das Haus zum Anker '
                 + 'weiter; für {alt} ist im Hinterhaus ein Ausgedinge ausgemacht — Brot, Holz '
                 + 'und zwei Eimer Bier in der Woche, aufgeschrieben und siegelt.' },
       2: { wort: 'Die Übergabe vor der Lade',
+           mass: { jahre: 5, haeuser: 3, ausstoss: 1,
+                   satz: 'Die Lade übergibt eine Gerechtigkeit nur an einen, der sie führen '
+                       + 'kann: drei Wirte in der Stadt, eine Lade ohne Rückstand, ein Jahr '
+                       + 'mit Ausstoß. Das prüft sie, bevor sie den Namen ändert.' },
            satz: 'Die Gerechtigkeit wird vor der Lade auf den neuen Namen geschrieben, das '
                + 'Meisterrecht bestätigt, die Umlage quittiert.',
            folge: 'Die Gerechtigkeit bleibt am Haus und in der Familie {familie}. {erbe} braut '
                 + 'ab dem nächsten Sudtag auf eigene Rechnung; {alt} behält Stube, Kammer und '
                 + 'das Leibgeding, wie es die Ordnung vorsieht.' },
       3: { wort: 'Die Übergabe beim Notar',
+           mass: { jahre: 5, haeuser: 2, ausstoss: 1,
+                   satz: 'Zwei feste Abnehmer reichen 1884, und das ist keine Milde: die '
+                       + 'Aktienbrauereien kaufen der Straße gerade die Kundschaft weg. Wer '
+                       + 'zwei hält und die Wechsel bedient, übergibt einen Betrieb.' },
            satz: 'Der Übergabevertrag liegt beim Notar: Grundstück, Sudhaus, Kühlmaschine, '
                + 'Fasspark und Firma gehen über, die Wechsel laufen unverändert weiter.',
            folge: 'Das Haus bleibt eigen und bleibt bei der Familie {familie} — in einem '
                 + 'Jahrzehnt, in dem die halbe Straße an die Aktienbrauereien verkauft hat. '
                 + '{erbe} führt es weiter, {alt} bekommt eine Leibrente aus dem Betrieb.' },
       4: { wort: 'Die Übergabe im Handelsregister',
+           mass: { jahre: 4, haeuser: 1, ausstoss: 1,
+                   satz: 'Eine Listung, ein Jahr mit Ausstoß, ein Konto ohne Loch — mehr ist '
+                       + '1970 nicht zu verlangen. In diesem Jahrzehnt macht in Deutschland '
+                       + 'jede zweite Brauerei zu; wer überhaupt noch im Regal steht und '
+                       + 'seine Rechnungen zahlt, steht besser als die halbe Branche. Die '
+                       + 'Zahl der Abnehmer sinkt hier nicht aus Versäumnis — das Sinken '
+                       + 'ist der Vorgang selbst.' },
            satz: 'Der Eintrag wird geändert, die Bankvollmacht umgeschrieben, die '
                + 'Gebietsleiter des Handels bekommen ein Rundschreiben mit dem neuen Namen.',
            folge: 'Der Anker bleibt selbständig und bleibt bei der Familie {familie} — in dem '
