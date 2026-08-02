@@ -30,12 +30,30 @@
 /* Ein gebautes Haus. Steht mit dem Fusspunkt auf seinem Ort (anker 'unten'),
    die Breite kommt aus stadt-daten.js, die Reihenfolge aus der Tiefe:
    was weiter vorne steht, deckt, was dahinter steht. */
+/* DER SCHATTEN.  (Runde 7)
+
+   Das fremde Auge hat 1970 zum zweiten Mal gegen das Zielbild entschieden und
+   dabei zweimal denselben Satz gesagt: "schwebende Kisten" und "fehlende
+   Schattenbindung am Boden". Nachgesehen war der Schatten da — er lag nur auf
+   der falschen Seite: 3 nach RECHTS, 6 nach unten.
+
+   Auf allen vier Platten steht die Sonne rechts. Nachgemessen an Dingen, die
+   niemand gebaut hat und die deshalb nicht luegen: der Mauerturm im Park von
+   1970 wirft nach links, die Baeume daneben werfen nach links, die Bank unter
+   dem Baum wirft nach links. Ein Hofbau, der nach rechts wirft, steht damit in
+   einer zweiten Sonne — und das Auge sieht es, auch wenn es den Grund nicht
+   benennen kann.
+
+   Zwei Schatten statt einem: ein kurzer, dunkler bindet den Fuss an den Boden,
+   ein langer, weicher setzt das Gebaeude in dieselbe Sonne wie die Platte. */
 .stadt-haus {
   display: block;
   height: auto;
   user-select: none;
   -webkit-user-drag: none;
-  filter: drop-shadow(calc(var(--s) * 3) calc(var(--s) * 6) calc(var(--s) * 7) rgba(40, 26, 12, 0.34));
+  filter:
+    drop-shadow(calc(var(--s) * -3) calc(var(--s) * 3) calc(var(--s) * 2.5) rgba(42, 27, 13, 0.52))
+    drop-shadow(calc(var(--s) * -11) calc(var(--s) * 8) calc(var(--s) * 12) rgba(42, 27, 13, 0.30));
 }
 
 /* Der Bauplatz unter der Maus: man sieht, was das Geld veraendert, bevor

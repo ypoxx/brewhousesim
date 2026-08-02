@@ -770,8 +770,22 @@
       return lage[e.s] === 'auf' && anteil(e.r, false) <= 0.6;
     });
     if (offen.length < 2) return;
-    /* Das juengste zuerst — es gewinnt jeden Streit, den es hat. */
-    offen.sort(function (x, y) { return (aufZeit[y.s] || 0) - (aufZeit[x.s] || 0); });
+    /* Das juengste zuerst — es gewinnt jeden Streit, den es hat.
+
+       BEI GLEICHSTAND ENTSCHEIDET DIE EBENE, NICHT DER ZUFALL. Wird die
+       ganze Buehne in einem Zug neu gezeichnet, sind alle Bretter im selben
+       Durchgang frisch und bekommen denselben Zeitstempel. Vorher fiel der
+       Gleichstand still nach der Reihenfolge von EBENEN, in der 'blatt'
+       zuletzt kommt — also verlor jedes Blatt gegen jedes Brett. Der Builder
+       der FUHRE hat es gemessen: die Georgi-Tafel lag in 9 von 12
+       Jahreswechseln als Reiter statt auf dem Tisch, und in E4 in allen
+       dreien. Das widerspricht der eigenen Regel dieses Rahmens, dass ein
+       formatfuellendes Blatt zum Jahreswechsel eine Entscheidung ist.
+       Jetzt gewinnt bei gleicher Zeit, wer weiter oben liegt. */
+    offen.sort(function (x, y) {
+      var d = (aufZeit[y.s] || 0) - (aufZeit[x.s] || 0);
+      return d !== 0 ? d : (y.rang - x.rang);
+    });
     var liegt = [];
     offen.forEach(function (e) {
       for (var i = 0; i < liegt.length; i++) {
@@ -832,10 +846,17 @@
       /* Ein Brett, das ohne Reiterklick aufschlaegt, gilt als eben geholt —
          sonst haette es keine Zeit und verloere jeden Streit gegen ein
          Brett, das seit dem Laden offen liegt. */
-      if (lage[s] === 'auf' && !aufZeit[s]) aufZeit[s] = jetzt;
+      /* Ein Brett, das eben wieder aufgetaucht ist, ist NEU auf dem Tisch.
+         Vorher wurde der Zeitstempel nur gesetzt, wenn er 0 war — ein Blatt,
+         das ein Jahr spaeter wiederkommt, trug damit seinen Stempel von vor
+         einem Jahr und verlor jeden Streit gegen ein Brett, das seither
+         offen lag. Gemeldet und gemessen vom Builder der FUHRE. */
+      if (lage[s] === 'auf' && (!aufZeit[s] || !warDa[s])) aufZeit[s] = jetzt;
       if (lage[s] === 'zu') aufZeit[s] = 0;
 
-      eintraege.push({ s: s, el: b.el, r: r });
+      /* rang = Reihenfolge der Ebenen (EBENEN), damit der Gleichstand in
+         der Platzordnung nicht still nach Einfuegereihenfolge faellt. */
+      eintraege.push({ s: s, el: b.el, r: r, rang: eintraege.length });
     });
 
     platzordnung(eintraege, jetzt);
