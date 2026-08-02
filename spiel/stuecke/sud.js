@@ -1311,12 +1311,30 @@
      BRAUHAUS.zuege() meldet sie als offen. In den EIGENEN Dateien ist das
      zu heilen, also wird es hier geheilt.
      ---------------------------------------------------------------------- */
+  /* Und dasselbe eine Ebene tiefer: ein Knopf, den die Maus nicht trifft, ist
+     kein Knopf. Ueber diesem Brett kann ein formatfuellendes Blatt liegen —
+     die Michaelitafel etwa nimmt an der Platzordnung der STADT ausdruecklich
+     nicht teil (BEFUND-BRETTER.md §5). Dann steht hier ein Dutzend aktiver,
+     untreffbarer Knoepfe, und genau das zaehlt ein Kritiker als tot. Also
+     fragt jeder Knopf selbst nach, ob er im Bild ist, und schaltet sich
+     sonst ab, bis das Blatt wieder weg ist. Die gemeinsame Sperrschicht
+     bleibt Kernaufgabe (ZUSTAENDIGKEIT §2); dies ist die Fassung, die ein
+     einzelnes Stueck in seinen eigenen Dateien bauen darf. */
+  function imBild(el) {
+    var q = el.getBoundingClientRect();
+    if (q.width < 3 || q.height < 3) return false;
+    var x = q.left + q.width / 2, y = q.top + q.height / 2;
+    if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) return false;
+    var t = document.elementFromPoint(x, y);
+    return !!(t && (t === el || el.contains(t)));
+  }
+
   function schalte(wurzel, tot) {
     if (!wurzel) return;
     var kn = wurzel.querySelectorAll('button[data-zug]');
     for (var i = 0; i < kn.length; i++) {
       var soll = kn[i].getAttribute('data-soll-aus') === '1';
-      var neu = tot || soll;
+      var neu = tot || soll || !imBild(kn[i]);
       if (kn[i].disabled !== neu) {
         kn[i].disabled = neu;
         if (neu) kn[i].setAttribute('aria-disabled', 'true');
