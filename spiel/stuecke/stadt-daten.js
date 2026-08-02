@@ -696,7 +696,7 @@ var STADT_DATEN = {
        13 Meter Bildbreite fuer zwei Sechsmeterwagen; bei 8,8 misst der
        Mann mit der Sackkarre 55 px wie die Leute der Platte 1970. */
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: -3.5, dy: -0.5, breite: 8.8, von: 4, bis: 4, grund: 95,
+      ort: 'rampe', dx: -5, dy: -2, breite: 8.8, von: 4, bis: 4, grund: 95,
       sagt: 'Zwei Lastzüge geladen, zwei Mann dabei, einer mit der Sackkarre. '
           + 'Was hier abfährt, ist am Abend zweihundert Kilometer weit.',
       nutzen: {}, wirkt: 'zwei Lastzüge gleichzeitig' },
