@@ -1633,7 +1633,11 @@
          im freien Bild steht. Der ORT bleibt, wo er ist; nur sein Zeichen
          haengt hoeher. */
       if (o.y > 82) hebe = (o.y - 82) * 1.15;
-      karte[a.schluessel] = { hoch: n * -9.0 - hebe, seite: seitenversatz(o) };
+      /* Gestapelt wird nach oben — ausser oben ist kein Platz mehr. Ueber
+         der Muehle liegt die Michaelitafel des PREISES; ein Zeichen, das
+         dorthin steigt, ist verdeckt. Dann wird nach unten gestapelt. */
+      var richtung = (o.y - 3.6 - n * 9 < 30) ? 1 : -1;
+      karte[a.schluessel] = { hoch: n * 9 * richtung - hebe, seite: seitenversatz(o) };
     });
     return karte;
   }
@@ -1907,7 +1911,7 @@
     /* Nicht auf den Markt selbst: dort haengt das Zeichen des Ochsen, und
        eine Handbreit tiefer stand bis eben das Schild der Torschenke unter
        diesem Knopf. Er steht jetzt zwischen beiden, im freien Bild. */
-    B.orte.setze(el, 'marktplatz', { anker: 'oben', dx: -3, dy: 5 });
+    B.orte.setze(el, 'marktplatz', { anker: 'oben', dx: -8, dy: 4 });
     el.setAttribute('data-frei', 'gegner');
     fach.appendChild(el);
   }
