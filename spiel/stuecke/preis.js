@@ -610,8 +610,18 @@
        wer einmal gross war, wird nicht im naechsten Jahr wieder billig bedient.
        Aber sie gibt nach, sonst kaeme ein verarmtes Haus nie zurueck.
        Sie traegt nur noch den ANSCHLAG (den Preis der Angebote), keine
-       einzige Abgabe mehr. */
-    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.78);
+       einzige Abgabe mehr.
+
+       Der Nachgeber stand auf 0,78 im Jahr. Gemessen (Michaelitafel 1350,
+       sorgfaeltig gespielte Linie): die Kasse faellt 1356 bis 1358 von 573
+       auf 18 Pf, der Anschlag von 2.547 auf 1.912 — nach zwei Jahren steht
+       das Haus bei drei Hundertsteln seiner alten Barschaft und wird noch mit
+       drei Vierteln des alten Ansatzes bedient. Nach neun Jahren waere er erst
+       auf ein Zehntel. Mit 0,62 ist die Schaetzung nach drei Jahren bei einem
+       Viertel — der Ruf eines grossen Hauses haelt eine Handelsgeneration und
+       nicht ein Menschenleben. Der Weg zurueck ist damit gangbar, ohne dass
+       ein gutes Jahr sofort vergessen waere. */
+    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.62);
     rechneAnschlag();
 
     /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. Er kann sich
@@ -724,6 +734,18 @@
       } else {
         chronik('umlage', u.name + ': ' + geld(betrag) + ' bezahlt.');
       }
+    }
+
+    /* 7b. Was am Notpfennig hängengeblieben ist, steht als eigene Zeile da —
+           sonst sieht der Spieler eine Rechnung, die nicht aufgeht, und keinen
+           Grund dafür. */
+    if (Z.gestundet > 0 && notpfennig() > 0) {
+      Z.rechnung.push({ name: 'Gestundet — der Notpfennig bleibt im Haus ('
+        + geld(notpfennig()) + ')', betrag: 0, art: 'frei' });
+      chronik('pflicht', geld(Z.gestundet) + ' konnten nicht abgetragen werden. '
+        + 'Der Rat lässt dem Haus den Notpfennig von ' + geld(notpfennig())
+        + ' stehen; der Rest ist gestundet und kommt zu Michaeli ' + (jahr() + 1)
+        + ' mit Aufschlag wieder.');
     }
 
     /* 8. Die Bierordnung des Jahres. */
@@ -956,7 +978,14 @@
       if (!B.welt.kann(p)) return;
       if (!best || p < best.preis) best = { a: a, preis: p };
     });
-    if (best) B.welt.meldeZug(best.a.name, best.preis, 'lage');
+    /* Vier Argumente, nicht drei (ZUSTAENDIGKEIT 24). Die Art ist `bau` und
+       nicht `lage`: was hier gemeldet wird, ist ein Bottich, ein Brunnen, ein
+       Keller — es aendert die Lage des Hauses und ist kein Beiwerk. Der
+       vierte, der Zugschluessel, ist keine Zier: `zugDeckung()` gibt `null`,
+       wenn zu dieser Zahl kein bedienbarer Knopf am Bildschirm steht. Genau
+       das ist hier moeglich — der Griff kann zugeklappt sein —, und dann soll
+       die Kopfzeile diese Zahl auch nicht nennen. */
+    if (best) B.welt.meldeZug(best.a.name, best.preis, 'bau', 'preis:nimm:' + best.a.k);
   }
 
   /* ----------------------------------------------------------------------
