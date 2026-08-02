@@ -226,7 +226,14 @@
     unglueck: 'Unglück', not: 'ist klamm', uebernahme: 'übernimmt',
     angebot: 'bietet an', laesstAb: 'lässt ab'
   };
-  function verbFuer(art) {
+  function verbFuer(art, mittelK) {
+    /* Das Mittel ist genauer als die Epoche: "steht Gevatter" ist wahr,
+       "der Rat spricht zu" waere es an dieser Stelle nicht. */
+    if (mittelK && D.verbenMittel && D.verbenMittel[mittelK]
+        && (art === 'binden' || art === 'entreissen' || art === 'zielen'
+            || art === 'aufstocken')) {
+      return D.verbenMittel[mittelK];
+    }
     var v = ep().verben || {};
     return v[art] || VERB_ROH[art] || art;
   }
@@ -390,7 +397,7 @@
      DIE ZUGMASCHINE
      ---------------------------------------------------------------------- */
 
-  function merkeZug(h, art, text, ort, adr) {
+  function merkeZug(h, art, text, ort, adr, mittelK) {
     Z.zaehler += 1;
     h.zuege += 1;
     var g = weltGegner(h.k);
@@ -398,7 +405,7 @@
     var e = {
       nr: Z.zaehler, jahr: jahr(), woche: woche(), takt: takt(),
       wer: h.k, werName: nameVon(h), art: art, text: text,
-      ort: ort || sitzVon(h).ort, adr: adr || null
+      ort: ort || sitzVon(h).ort, adr: adr || null, mittel: mittelK || null
     };
     Z.zuege.unshift(e);
     if (Z.zuege.length > 140) Z.zuege.length = 140;
@@ -553,7 +560,7 @@
       wer: h.k, mittel: m.k, seit: jahr(), bis: jahr() + m.jahre, grund: g, zusatz: 0
     };
     Z.wechsel[a.schluessel] = { takt: takt(), an: h.k, von: vorher };
-    merkeZug(h, vorher === 'haus' ? 'entreissen' : 'binden', text, a.ort, a.schluessel);
+    merkeZug(h, vorher === 'haus' ? 'entreissen' : 'binden', text, a.ort, a.schluessel, m.k);
     if (vorher === 'haus') {
       B.welt.schreibe(a.name + ' geht an ' + nameVon(h) + '. '
         + 'Gebunden mit ' + m.womit + ' bis ' + (jahr() + m.jahre)
@@ -622,7 +629,7 @@
       + ' In ' + dauer + (dauer === 1 ? ' Woche' : ' Wochen') + ' ist es unterschrieben, '
       + 'wenn niemand dazwischengeht. Zuvorkommen kostet '
       + B.welt.geld(Z.absicht[a.schluessel].preis) + '.',
-      a.ort, a.schluessel);
+      a.ort, a.schluessel, m.k);
     return true;
   }
 
@@ -661,7 +668,7 @@
     merkeZug(h, 'aufstocken',
       (zug.text || '').replace('{haus}', a.name).replace('{geld}', B.welt.geld(mehr))
       + ' Ablösen kostet jetzt ' + B.welt.geld(abloese(a.schluessel)) + '.',
-      a.ort, a.schluessel);
+      a.ort, a.schluessel, b.mittel);
     return true;
   }
 
@@ -1471,7 +1478,7 @@
       ch.setAttribute('data-ort', e.ort);
       ch.setAttribute('data-zugnr', String(e.nr));
       ch.title = e.jahr + ' Woche ' + e.woche + ': ' + e.text;
-      ch.appendChild(B.el('b', null, verbFuer(e.art)));
+      ch.appendChild(B.el('b', null, verbFuer(e.art, e.mittel)));
       ch.appendChild(B.el('i', null, 'W' + e.woche));
       zettel.appendChild(ch);
     }
@@ -1822,7 +1829,7 @@
       m.title = e.werName + ', ' + e.jahr + ' Woche ' + e.woche + ': ' + e.text
         + ' — geschehen, ohne dass jemand gefragt hat.';
       var kopf = B.el('span', 'gg-spurkopf');
-      kopf.appendChild(B.el('b', null, verbFuer(e.art)));
+      kopf.appendChild(B.el('b', null, verbFuer(e.art, e.mittel)));
       kopf.appendChild(B.el('i', null, alter === 0 ? 'diese Woche' : 'W' + e.woche));
       m.appendChild(kopf);
       B.orte.setze(m, e.ort, unten

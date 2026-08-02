@@ -81,6 +81,34 @@ var GEGNER_DATEN = {
     }
   },
 
+  /* ----------------------------------------------------------------------
+     WAS IM BILD DARUEBERSTEHT, WENN ER EINE ADRESSE NIMMT
+
+     RUNDE 2.  Ein Zug legt jetzt einen Zettel an seinen Ort, und darauf steht
+     ein Verb. Ein Verb je Epoche waere gelogen: 1350 erwirkt er ein Recht,
+     steht aber auch Gevatter, und das ist kein Recht, sondern Gunst. Also
+     nennt der Zettel das MITTEL, nicht die Epoche — die Mittelschluessel sind
+     ueber alle vier Epochen verschieden, damit sind die Verben es auch, und
+     jedes einzelne ist wahr. Ein Zunftbrief von 1795 heisst 1802 noch
+     Zunftbrief; deshalb steht die Liste hier oben und nicht in einer Epoche.
+     ---------------------------------------------------------------------- */
+  verbenMittel: {
+    konzession:        'erwirkt die Konzession',
+    bannmeile:         'erwirkt den Bann',
+    gevatterschaft:    'steht Gevatter',
+    ratssitz:          'lässt den Rat sprechen',
+    zunftbrief:        'lässt die Zunft zuschreiben',
+    pacht:             'pachtet',
+    heirat:            'verheiratet die Tochter',
+    buergermeister:    'lässt das Amt schreiben',
+    vertrag:           'schließt den Liefervertrag',
+    depot:             'setzt das Depot',
+    hypothek:          'nimmt die Hypothek',
+    listung:           'kauft sich ins Regal',
+    jahresvereinbarung:'unterschreibt die Jahresvereinbarung',
+    exklusiv:          'bindet exklusiv'
+  },
+
   /* Wesenszuege der Erben gegenueber. Sie verschieben die Zuggewichte —
      ein wagemutiger Feist bindet, ein sparsamer baut. */
   wesen: [
@@ -122,7 +150,7 @@ var GEGNER_DATEN = {
          1350 "der Rat spricht zu" heisst, heisst 1970 "wird eingelistet". */
       verben: {
         werben: 'wirbt', binden: 'bindet', zielen: 'spricht vor',
-        entreissen: 'der Rat spricht zu', aufstocken: 'legt zu', bauen: 'baut',
+        entreissen: 'erwirkt Recht und Gunst', aufstocken: 'legt zu', bauen: 'baut',
         preis: 'ruft am Markt aus', fuhre: 'karrt', rohstoff: 'kauft die Grut weg',
         macht: 'kommt in den Rat', verlieren: 'verliert', unglueck: 'Unglück',
         not: 'ist klamm', laesstab: 'lässt ab'
@@ -230,7 +258,7 @@ var GEGNER_DATEN = {
       ertragJeFass: 7,
       verben: {
         werben: 'wirbt', binden: 'bindet', zielen: 'die Lade ladet',
-        entreissen: 'die Zunft schreibt zu', aufstocken: 'schlägt auf', bauen: 'baut',
+        entreissen: 'greift nach dem Haus', aufstocken: 'schlägt auf', bauen: 'baut',
         preis: 'setzt die Maß', fuhre: 'fährt', rohstoff: 'kauft den Hopfen weg',
         macht: 'wird Bürgermeister', verlieren: 'verliert', unglueck: 'Unglück',
         not: 'ist klamm', laesstab: 'lässt ab'
