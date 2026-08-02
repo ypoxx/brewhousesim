@@ -135,6 +135,7 @@
     frist: null,         /* Wochen, die dem leeren Auftragsbuch bleiben      */
     geschlecht: [],      /* die Generationenzeile, fuers Schlussblatt        */
     startJahr: 0,
+    epocheJahr: 0,       /* erstes Jahr dieser Epoche — fuer die Schere    */
     schluss: null,
     schlussOffen: false
   };
@@ -149,6 +150,38 @@
      KLEINES HANDWERK
      ---------------------------------------------------------------------- */
   function ep() { return D.epochen[B.welt.zeit.epoche] || D.epochen[1]; }
+
+  /* ----------------------------------------------------------------------
+     DIE SCHERE — laufende Kosten gegen einen Preis, den ein anderer setzt.
+
+     `preis-daten.js` schreibt sie in seinen eigenen Kopf: „Die Bierordnung
+     steigt in JAHRZEHNTEN um ein Zehntel, der Anschlag um vier Hundertstel
+     im JAHR." Gerechnet wurde sie bisher nur auf der Michaelitafel — auf die
+     Abgaben und auf die Preise der Angebote. Korn, Grut, Hopfen, Lohn und
+     Fuhrlohn standen 1350 wie 1355 auf dem Pfennig gleich, waehrend der Rat
+     den Bierpfennig einundvierzig Jahre lang nicht anruehrte. Damit war die
+     einzige Bewegung im laufenden Betrieb der Gewinn, und er lief in eine
+     Richtung davon (gemessen: rho +0,714 in 1350).
+
+     Die Schere gehoert dorthin, wo sie historisch sass: zwischen die
+     Einkaufsseite und einen festgesetzten Verkaufspreis. Jede Epoche hat
+     ihre eigene Richtung, und eine davon zeigt nach unten:
+
+       1350  +2,8 % im Jahr — Korn und Lohn steigen, der Bierpfennig steht.
+       1600  +1,2 % im Jahr — die Bierordnung wird mehrmals erneuert.
+       1884  −0,6 % im Jahr — von 1873 bis 1896 fallen die Preise; billige
+             Ueberseegerste, Kohle und Fracht werden Jahr um Jahr wohlfeiler.
+       1970  +2,0 % im Jahr — Tarif und Energie ziehen an, der Listenpreis
+             folgt langsamer als die Kosten.
+
+     Nach dreissig Jahren steht sie still: was danach kommt, ist eine neue
+     Ordnung und keine Teuerung mehr. */
+  function laufTeuerung() {
+    var t = ep().teuerungLauf;
+    if (!t || t === 1) return 1;
+    return Math.pow(t, B.grenze(B.welt.zeit.jahr - (Z.epocheJahr || B.welt.zeit.jahr), 0, 30));
+  }
+  function laufPreis(n) { return Math.max(0, Math.round(n * laufTeuerung())); }
   function sorten() { return ep().sorten; }
   function art(a) { return D.arten[a.art] || D.arten.wirtshaus; }
   function kurz(a) { return D.kurz[a.schluessel] || a.schluessel.slice(0, 3).toUpperCase(); }
@@ -883,7 +916,7 @@
     });
     var fr = frachtstufe();
     if (fr) {
-      return Math.round(fr.pauschale + fr.jeFass * geladen() + fr.jeKm * maxKm);
+      return laufPreis(fr.pauschale + fr.jeFass * geladen() + fr.jeKm * maxKm);
     }
     /* FUHRLOHN JE FASS UND MEILE — die Rechnung, die ein Fuhrmann wirklich
        aufmacht. Bis zum 2. August 2026 hing hier alles an der FAHRT: Grund,
@@ -896,7 +929,7 @@
        Die volle Fuhre kostet damit so viel wie vorher — die halbleere nicht
        mehr. */
     var halt = (w.haltPreis || 0) * Math.max(0, Z.ladung.length - 1);
-    return Math.round(w.grund + halt + w.jeKm * maxKm + w.jeKm * 0.12 * (summeKm - maxKm)
+    return laufPreis(w.grund + halt + w.jeKm * maxKm + w.jeKm * 0.12 * (summeKm - maxKm)
       + (w.jeFass || 0) * geladen());
   }
 
@@ -1186,9 +1219,10 @@
          die Wirte zu Michaeli zahlen. Das ist der Kreis, um den es hier
          geht: im Herbst anschreiben, im Winter brauen, zu Michaeli rechnen.
          Die Zahl der Kerben begrenzt ihn; wer sie voll hat, braut Notbier. */
-      if (s.kosten > 0 && !kannBezahlen(s.kosten)) return 'die Kasse';
+      var barpreis = laufPreis(s.kosten);
+      if (barpreis > 0 && !kannBezahlen(barpreis)) return 'die Kasse';
 
-      if (s.kosten > 0) zahleOderKerbe(s.kosten, 'Ein Sud ' + s.name);
+      if (barpreis > 0) zahleOderKerbe(barpreis, 'Ein Sud ' + s.name);
       if (s.rohstoff) B.welt.haus.rohstoff -= s.rohstoff;
       if (e.eis) Z.eis = Math.max(0, Z.eis - (s.eis || 0));
       if (e.budget) Z.budget -= budgetKosten(s);
@@ -1701,6 +1735,7 @@
   function richteEpocheEin(neu) {
     var e = ep();
     Z.epoche = B.welt.zeit.epoche;
+    Z.epocheJahr = B.welt.zeit.jahr;
     Z.budget = e.budget ? e.budget.start : 0;
     Z.sudeJeWoche = e.sudeJeWoche || 0;
     Z.faesser = Math.max(Z.faesser, e.faesser);
@@ -1777,7 +1812,7 @@
     if (!def) return;
     if (k === 'eis' && !frostzeit()) return;
     if (k === 'eis' && Z.eis >= Z.eisKeller) return;
-    var preis = staffelPreis(k, def.basis, def.staffel);
+    var preis = laufPreis(staffelPreis(k, def.basis, def.staffel));
     if (!zahleOderKerbe(preis, def.text)) {
       Z.meldung = def.text + ' kostet ' + B.welt.geld(preis) + '.' + kerbTitel(preis);
       B.sende('zeichne', { grund: 'fuhre-kauf' });
@@ -2249,6 +2284,20 @@
     rz.textContent = rname + ' in der Kammer: ' + B.zahl(B.welt.haus.rohstoff)
       + (reichtFuer !== null ? ' — reicht für ' + reichtFuer + (reichtFuer === 1 ? ' Sud' : ' Sude') : '');
     b.appendChild(rz);
+
+    /* DIE SCHERE STEHT AN DER TAFEL, NICHT IM QUELLTEXT. Was Korn, Lohn und
+       Fuhre seit dem ersten Jahr dieser Zeit teurer (oder wohlfeiler)
+       geworden sind — daneben, was der Satz je Fass macht. Der Spieler soll
+       sehen, dass die beiden Zahlen auseinanderlaufen, bevor er es merkt. */
+    var sch = Math.round((laufTeuerung() - 1) * 100);
+    if (sch !== 0) {
+      var scz = B.el('div', 'fu-schere' + (sch > 0 ? ' auf' : ' ab'));
+      scz.textContent = 'Korn, Lohn und Fuhre seit ' + (Z.epocheJahr || B.welt.zeit.jahr) + ': '
+        + (sch > 0 ? '+' : '−') + Math.abs(sch) + ' im Hundert. '
+        + (sch > 0 ? 'Den Satz je ' + B.welt.mengeEinheit() + ' setzt nicht das Haus.'
+                   : 'Der Satz je ' + B.welt.mengeEinheit() + ' fällt langsamer.');
+      b.appendChild(scz);
+    }
 
     if (Z.tafelGewischt) {
       b.appendChild(B.el('div', 'fu-gewischt',
@@ -3141,8 +3190,8 @@
          Damit hat ein schrumpfendes Haus einen Weg zurueck, und ein
          wachsendes wird teurer, ohne dass an einer Zahl gedreht wurde. */
       var e = ep();
-      var fest = Math.round((e.unterhalt || 1) + Z.unterhaltExtra);
-      var lohn = Math.round((e.lohnSud || 0) * Z.sudeWoche);
+      var fest = laufPreis((e.unterhalt || 1) + Z.unterhaltExtra);
+      var lohn = laufPreis((e.lohnSud || 0) * Z.sudeWoche);
       Z.lohnWoche = lohn;
       if (fest > 0) {
         B.welt.zahle(fest, e.unterhaltName || 'Erhaltung, Geschirr, Wache', 'spieler');

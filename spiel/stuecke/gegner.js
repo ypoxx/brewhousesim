@@ -1226,8 +1226,13 @@
     }
     B.welt.nimmHeraus(n);
     Z.hinhalt[k] = jahr();
-    B.welt.protokolliere({ wer: 'spieler', was: hh.name + ' an ' + a.name,
-      preis: 0, menge: n, adresse: k });
+    /* Ohne 'menge': DIE FUHRE liest das Protokoll und zaehlt jeden Eintrag mit
+       Adresse UND Menge als Lieferung. Ein Fass, das der Wirt geschenkt
+       bekommt, ist keine Lieferung — es stuende sonst in fremder Buchfuehrung
+       als Umsatz, den es nie gab. Die Menge steht im Text. */
+    B.welt.protokolliere({ wer: 'spieler',
+      was: hh.name + ' an ' + a.name + ' · ' + B.welt.menge(n),
+      preis: 0, adresse: k });
 
     var folge = [];
     if (Z.absicht[k]) { Z.absicht[k].bis += (hh.wochen || 3); folge.push('er vertagt'); }
@@ -1901,11 +1906,17 @@
     t.appendChild(B.el('b', null, bs.name));
     t.appendChild(B.el('i', null, getan
       ? (Z.beschwerdeAusgang && Z.beschwerdeAusgang.jahr === jahr()
-          ? (Z.beschwerdeAusgang.gelingt ? 'durchgedrungen · ' + Z.beschwerdeAusgang.wo
-                                         : 'abgewiesen · ' + Z.beschwerdeAusgang.wo)
+          ? (Z.beschwerdeAusgang.gelingt ? 'durchgedrungen' : 'abgewiesen')
           : 'in diesem Braujahr schon geschehen')
-      : 'kostet kein Geld · vier Ansehen'
-        + (ziel && adresse(ziel.k) ? ' · gegen ' + adresse(ziel.k).name : '')));
+      : 'kostet kein Geld · vier Ansehen'));
+    /* Gegen wen, in einer eigenen Zeile: die Namen der Adressen sind lang,
+       und ein Kasten, der mit dem laengsten Namen waechst, schiebt sich unter
+       das Brett des SUDES. */
+    var wo = getan
+      ? (Z.beschwerdeAusgang && Z.beschwerdeAusgang.jahr === jahr()
+          ? Z.beschwerdeAusgang.wo : null)
+      : (ziel && adresse(ziel.k) ? adresse(ziel.k).name : null);
+    if (wo) t.appendChild(B.el('em', null, 'gegen ' + wo));
     el.appendChild(t);
     el.addEventListener('click', beschwerdeFuehren);
     /* Nicht auf den Markt selbst: dort haengt das Zeichen des Ochsen, und

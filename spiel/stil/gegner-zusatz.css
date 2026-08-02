@@ -168,6 +168,13 @@
   font-size: calc(var(--s) * 14);
   opacity: 0.78;
 }
+.gg-amttext em {
+  display: block;
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  opacity: 0.9;
+}
 .gg-amt.getan { border-color: var(--gg-schiefer); background: #e2e2dc; color: var(--gg-tinte); }
 
 /* --------------------------------------------------------------------------
