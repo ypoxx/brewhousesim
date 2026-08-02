@@ -194,7 +194,10 @@
 
   var HANDFRIST = 1400;         /* ms — so lange gilt ein Brett als vom Spieler geholt */
 
+  var DECKGRENZE = 0.12;        /* Anteil des kleineren Bretts — so viel darf sich decken */
+
   var lage = {};                /* schluessel -> 'zu' | 'auf' */
+  var aufZeit = {};             /* schluessel -> wann zuletzt aufgeschlagen (0 = zu) */
   var gesehen = {};             /* schluessel -> Zeitstempel */
   var warDa = {};               /* schluessel -> lag beim letzten Blick wirklich da */
   var startZeit = 0;
@@ -309,12 +312,14 @@
 
   function schalte(schluessel) {
     lage[schluessel] = (lage[schluessel] === 'zu') ? 'auf' : 'zu';
+    /* Der Klick ist die Zeit, nach der die Platzordnung entscheidet. */
+    aufZeit[schluessel] = (lage[schluessel] === 'auf') ? Date.now() : 0;
     if (B.ton && B.ton.spiele) B.ton.spiele('stadt:reiter');
     pruefe();
   }
 
   function alleZuklappen() {
-    Object.keys(lage).forEach(function (k) { lage[k] = 'zu'; });
+    Object.keys(lage).forEach(function (k) { lage[k] = 'zu'; aufZeit[k] = 0; });
     pruefe();
   }
 
@@ -661,12 +666,55 @@
     return reihe.filter(function (m) { return m.ruht; }).length;
   }
 
+  /* Wie viel zweier Rechtecke einander decken, gemessen am kleineren der
+     beiden. Zwei Bretter, die sich an der Kante beruehren, sind kein Fall
+     fuer die Platzordnung; eines, das zu einem Drittel auf dem anderen
+     liegt, begraebt dessen Knoepfe. */
+  function ueberdeckung(a, b) {
+    var w = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+    var h = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+    if (w <= 0 || h <= 0) return 0;
+    var klein = Math.min(a.width * a.height, b.width * b.height);
+    return klein > 0 ? (w * h) / klein : 0;
+  }
+
+  /* DIE PLATZORDNUNG. Die Buehne ist fuer fuenf Stuecke zu klein geworden:
+     DIE FUHRE allein kachelt 1,1 bis 78,2 Prozent ueber die ganze Hoehe,
+     und DER SUD legt sich mit 47 Prozent Breite darueber. Wer zuletzt
+     aufklappte, lag oben — und deckte dem anderen die Knoepfe zu, ohne dass
+     man es ihnen ansah: sie blieben aktiv und im Bild, nur traf der Klick
+     das Brett darueber. Ein Drittel aller Bedienelemente war so nicht zu
+     erreichen, darunter der Rohstoffeinkauf, an dem das ganze Jahr haengt
+     (spiel/BEFUND-BRETTER.md).
+
+     Das Rechteck weiterzuschieben hilft nicht, es verschiebt nur, wer
+     zugedeckt wird — gemessen und verworfen. Also entscheidet die Zeit:
+     WER ZULETZT AUFGESCHLAGEN HAT, LIEGT OBEN; was er zudecken wuerde,
+     klappt zu und behaelt seinen Reiter. Das macht die Bretter zu dem, was
+     sie im Vorgabestand ohnehin sind — ein Stapel, aus dem man aufschlaegt. */
+  function platzordnung(eintraege, jetzt) {
+    var offen = eintraege.filter(function (e) {
+      return lage[e.s] === 'auf' && anteil(e.r, false) <= 0.6;
+    });
+    if (offen.length < 2) return;
+    /* Das juengste zuerst — es gewinnt jeden Streit, den es hat. */
+    offen.sort(function (x, y) { return (aufZeit[y.s] || 0) - (aufZeit[x.s] || 0); });
+    var liegt = [];
+    offen.forEach(function (e) {
+      for (var i = 0; i < liegt.length; i++) {
+        if (ueberdeckung(e.r, liegt[i].r) > DECKGRENZE) { lage[e.s] = 'zu'; return; }
+      }
+      liegt.push(e);
+    });
+  }
+
   function nachsehen() {
     var jetzt = Date.now();
     var liste = fremdeBretter();
     var reiter = [];
     var benutzt = {};
     var daJetzt = {};
+    var eintraege = [];
 
     liste.forEach(function (b) {
       var s = schluesselVon(b);
@@ -708,11 +756,22 @@
       /* Ein formatfuellendes Blatt zum Jahreswechsel ist eine Entscheidung. */
       if (jetzt - jahrZeit < JAHRESFRIST && anteil(r, true) > 0.25) lage[s] = 'auf';
 
-      if (lage[s] === 'auf') klappeAuf(b.el); else klappeZu(b.el);
+      /* Ein Brett, das ohne Reiterklick aufschlaegt, gilt als eben geholt —
+         sonst haette es keine Zeit und verloere jeden Streit gegen ein
+         Brett, das seit dem Laden offen liegt. */
+      if (lage[s] === 'auf' && !aufZeit[s]) aufZeit[s] = jetzt;
+      if (lage[s] === 'zu') aufZeit[s] = 0;
 
-      var t = beschriftung(b.el);
+      eintraege.push({ s: s, el: b.el, r: r });
+    });
+
+    platzordnung(eintraege, jetzt);
+
+    eintraege.forEach(function (e) {
+      if (lage[e.s] === 'auf') klappeAuf(e.el); else klappeZu(e.el);
+      var t = beschriftung(e.el);
       reiter.push({
-        schluessel: s, zu: lage[s] === 'zu', titel: t.titel, unter: t.unter
+        schluessel: e.s, zu: lage[e.s] === 'zu', titel: t.titel, unter: t.unter
       });
     });
 

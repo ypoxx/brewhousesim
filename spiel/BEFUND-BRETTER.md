@@ -141,11 +141,41 @@ Festlegung die mit dem Preisschild „ohne Ausgabe" ist (`aktien`, `konzern`). D
    über die ganze Höhe. Für ein zweites 47 % breites Brett ist kein Platz, an keiner Stelle —
    auch nicht rechts, weil dort DER GEGNER und die Marken liegen.
 
-   *Weg 2 bleibt, und er ist der richtige:* **Ein Reiter, der aufschlägt, klappt zu, was er
-   zudecken würde.** Das ist die Zuständigkeit der STADT (`stadt.js`, `stadt-zugeklappt`),
-   es braucht keine neue Fläche, und es macht die Bretter zu dem, was sie im Vorgabestand
-   ohnehin schon sind: ein Stapel, aus dem man eines aufschlägt. Die Rechteck-Kollisionen
-   sind dann nur noch eine Frage der Reihenfolge, nicht der Fläche.
+   *Weg 2 ist gebaut:* **Wer zuletzt aufschlägt, liegt oben; was er zudecken würde, klappt
+   zu und behält seinen Reiter.** Umgesetzt in `stadt.js` als `platzordnung()` — die STADT
+   geht in `nachsehen()` ohnehin alle Bretter mit ihren Rechtecken durch; die Auflösung
+   hängt sich dort an. Zwei Bretter gelten als im Streit, wenn sie sich zu mehr als 12 %
+   des kleineren decken (`DECKGRENZE`); formatfüllende Blätter über 60 % nehmen nicht teil,
+   die dürfen decken. Die Zeit kommt aus dem Reiterklick.
+
+### Was die Platzordnung gebracht hat — und was nicht
+
+**Sie behebt nicht die Zahl, die man erwarten würde**, und das gehört hierhin: Wer ohnehin
+ein Brett nach dem anderen aufschlägt, hatte nie ein Problem. `erreichbar.mjs` — je Brett
+dessen Reiter aufschlagen, dann alle Züge darin anfassen — misst mit und ohne Eingriff
+**dasselbe**: 3 / 2 / 3 / 4 unerreichbare Züge von 76 / 84 / 87 / 81. (Die Reste sind ein
+anderer, kleinerer Fall: Knöpfe, die einander innerhalb eines Bretts decken, und die
+Kopfleiste — `fuhre:laden:markt`, `fuhre:listen:neustadt`, `gegner:abloesen:markt`.)
+
+**Sie behebt den Zustand, in dem der Bildschirm gelogen hat.** Genau der Vorgang, gemessen
+in Epoche 2 an `fuhre:kauf:rohstoff`:
+
+| Schritt | ohne Platzordnung | mit Platzordnung |
+|---|---|---|
+| 1. FUHRE aufgeschlagen | erreichbar | erreichbar |
+| 2. SUD danach aufgeschlagen | **tot: offen, aktiv, verdeckt** | zugeklappt, Reiter sichtbar |
+| 3. FUHRE-Reiter noch einmal | klappt zu — es wird schlimmer | **wieder erreichbar** |
+
+Zeile 3 ist der eigentliche Gewinn. Vorher tat der naheliegende Griff — noch einmal auf den
+Reiter des Bretts, das man bedienen will — das Gegenteil dessen, wonach er aussah.
+
+**Im Spiellauf** (Epoche 2, 100 Wochen, sparsam) hält der Rohstoff mit Platzordnung in jedem
+Jahr mindestens 21 (25 / 25 / 25 / 21) statt in zwei Jahren auf 1 abzusinken; 11 Käufe statt
+9. Die Kasse steht mit und ohne in einzelnen Jahren auf null — **die wirtschaftliche Frage
+aus §4 bleibt unverändert offen.**
+
+`BRAUHAUS.lage` ist in allen vier Epochen 0, keine Seiten- oder Konsolenfehler; nach sieben
+Reiterklicks bleiben zwei verträgliche Bretter offen statt sich zu begraben.
 2. **`decke.mjs` wird eine Latte.** Ein Stück, dessen Brett fremde Schaltflächen zudeckt, ist
    nicht fertig — gleichgültig, wie gut es aussieht. Die Zahl gehört neben `BRAUHAUS.lage`
    in jeden Lauf: **erreichbar muss jeder aktive Zug sein, in jeder Epoche, in jeder
