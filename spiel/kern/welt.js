@@ -467,17 +467,42 @@
     },
 
     /* Barschaft gegen Preis des naechsten sinnvollen Zuges — die eine Zahl,
-       auf die es nach der Messlatte ankommt. Stuecke melden ihren jeweils
-       naechsten sinnvollen Zug hier an, der Kern haelt das Minimum.  */
+       auf die es nach der Messlatte ankommt.
+
+       Bis zum 2.8.2026 hielt der Kern hier schlicht das MINIMUM ueber alle
+       Meldungen. Damit gewann in jeder Epoche derselbe feste Jahresposten der
+       Werbung, dessen Preis sich in 400 Wochen nicht bewegt — 9 Pf / 18 fl /
+       240 M / 1.800 DM. Die Kopfzeile war die Kasse mit anderer Beschriftung:
+       gemessen 2,1- bis 32,8-fach neben dem billigsten umkaempften Zug. Alle
+       vier Stuecke der Welle 2b haben unabhaengig dieselbe Kernaenderung
+       verlangt (DIE EICHUNG, DER GEGNER, DIE STADT, DER SUD), und DIE FUHRE
+       schon in Welle 2.
+
+       Jetzt entscheidet zuerst die ART des Zuges, dann sein Preis. Werbung
+       ohne 'art' bekommt Rang 0 und verliert gegen alles, was die Lage des
+       Hauses aendert. Die Stuecke schicken die Art laengst mit.  */
     naechsterZug: null,
-    meldeZug: function (was, preis) {
-      if (!W.naechsterZug || preis < W.naechsterZug.preis) {
-        W.naechsterZug = { was: was, preis: preis };
+    ZUGRANG: { umkaempft: 3, bindung: 2, adresse: 2, bau: 2, lage: 1 },
+    meldeZug: function (was, preis, art, zug) {
+      if (!preis) return;
+      var r = W.ZUGRANG[art] || 0;
+      var alt = W.naechsterZug;
+      if (!alt || r > alt.rang || (r === alt.rang && preis < alt.preis)) {
+        W.naechsterZug = { was: was, preis: preis, art: art || null,
+                           zug: zug || null, rang: r };
       }
     },
     zugDeckung: function () {
-      if (!W.naechsterZug || !W.naechsterZug.preis) return null;
-      return W.haus.kasse / W.naechsterZug.preis;
+      var z = W.naechsterZug;
+      if (!z || !z.preis) return null;
+      /* Eine Zahl, zu der am Bildschirm kein bedienbarer Knopf steht, ist
+         keine Kennzahl, sondern eine Behauptung. Wer seinen Zugschluessel
+         mitschickt, wird beim Wort genommen. */
+      if (z.zug && typeof document !== 'undefined') {
+        var el = document.querySelector('[data-zug="' + z.zug + '"]');
+        if (!el || el.disabled) return null;
+      }
+      return W.haus.kasse / z.preis;
     }
   };
 
