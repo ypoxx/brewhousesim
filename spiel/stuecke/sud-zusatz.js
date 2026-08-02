@@ -107,6 +107,52 @@
     return false;
   }
 
+  /* ----------------------------------------------------------------------
+     WOHIN DIE KLAPPE GEHOERT.
+
+     Gemessen in Epoche 4 (1600x1000, Partie zu Ende gespielt): an ihrer
+     ersten Stelle lag die Klappe mit ihrem Wort DAS SUDBUCH genau auf
+     gegner:angebot-ja — dem Knopf, mit dem man das Angebot der
+     Nordstern-Gruppe annimmt. Ein kleines Ding an einem festen Platz ist
+     dasselbe Vergehen wie ein grosses, nur schwerer zu finden.
+
+     Also sucht sie sich ihren Platz selbst: sie geht die Ecken durch und
+     bleibt an der ersten stehen, an der sie KEINEN fremden Zug zudeckt.
+     Findet sie keine, legt sie sich an den Rand ganz unten — und wenn auch
+     das nicht reicht, verschwindet sie lieber, als einen Knopf zu begraben.
+     ---------------------------------------------------------------------- */
+  var STELLEN = [
+    { rechts: 1.4, oben: 74 }, { rechts: 1.4, oben: 65 }, { rechts: 1.4, oben: 56 },
+    { rechts: 1.4, oben: 47 }, { rechts: 1.4, oben: 38 }, { rechts: 18, oben: 74 },
+    { rechts: 35, oben: 74 }, { rechts: 52, oben: 74 }, { rechts: 69, oben: 74 },
+    { rechts: 82, oben: 13 }
+  ];
+
+  function deckt(klappe) {
+    var q = klappe.getBoundingClientRect();
+    var l = document.querySelectorAll('[data-zug]');
+    for (var i = 0; i < l.length; i++) {
+      var el = l[i];
+      if (klappe.contains(el)) continue;
+      var r = el.getBoundingClientRect();
+      if (!r.width || !r.height) continue;
+      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      if (cx < q.left || cx > q.right || cy < q.top || cy > q.bottom) continue;
+      var t = document.elementFromPoint(cx, cy);
+      if (t && klappe.contains(t)) return true;
+    }
+    return false;
+  }
+
+  function stelleKlappe(klappe) {
+    for (var i = 0; i < STELLEN.length; i++) {
+      klappe.style.right = STELLEN[i].rechts + '%';
+      klappe.style.top = STELLEN[i].oben + '%';
+      if (!deckt(klappe)) return;
+    }
+    klappe.parentNode.removeChild(klappe);
+  }
+
   function epochenSatz(feld) {
     var q = (typeof SUD_DATEN !== 'undefined') ? SUD_DATEN : null;
     if (!q) return '';
@@ -149,6 +195,7 @@
         tu: function () { SCHLUSS.offen = true; male(); }
       }));
       fach.appendChild(klappe);
+      stelleKlappe(klappe);
       return;
     }
 
