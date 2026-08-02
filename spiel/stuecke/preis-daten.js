@@ -85,7 +85,7 @@ var PREIS_DATEN = {
          hoechste der vier Quoten. Sie hat die Partie 1352, 1355 und 1359
          jedesmal auf null gesetzt. Sie bleibt die Zacke im Verlauf, nur
          nicht mehr das Ende. */
-      umlageAnteil: 0.60,
+      umlageAnteil: 0.55,
       handlohnAnteil: 1.10,
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
@@ -658,7 +658,7 @@ var PREIS_DATEN = {
          duennsten Polster. Gemessen: die Rechnung 1973 stand bei 78.600 DM
          und hat die Kasse von 45.000 auf null gesetzt; von dort ist sie in
          zehn Jahren nicht zurueckgekommen. */
-      umlageAnteil: 0.72,
+      umlageAnteil: 0.58,
       handlohnAnteil: 1.05,
       abstaende: [3, 4, 3, 5, 4, 3, 5, 4],
 

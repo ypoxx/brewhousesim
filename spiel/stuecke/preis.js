@@ -631,12 +631,34 @@
       u.bezahlt = true;
       var betrag = umlageBetrag(u);
       u.betrag = betrag;
+      /* DER RUECKSTAND STATT DES SOFORTIGEN PFANDS.
+
+         Bis hierher kostete eine Umlage, die nicht zu bezahlen war, noch
+         am selben Michaeli eine Adresse: `nimmPfand()` gleich hier, ohne
+         Frist. Das ist die Rueckkopplung nach unten in ihrer haertesten
+         Form — und sie schliesst sich selbst: die gepfaendete Wirtschaft
+         nimmt fuenf Jahre lang das Bier des Adlers, der Ausstoss faellt,
+         die naechste Umlage ist erst recht nicht zu bezahlen. Am
+         Bildschirm nachgelesen (Chronik 1970, sorgfaeltig gespielte
+         Linie): 1977 Tarifabschluss 13.000 DM offen -> Gasthof Lindenhof
+         an den Adler; 1980 Einheitskasten 26.000 DM offen -> derselbe
+         Gasthof noch einmal. Dazwischen faellt der Ausstoss von 108.966
+         auf 29.274 DM.
+
+         Fuer die Pflichten galt schon immer etwas anderes: was nicht
+         bezahlt werden kann, wird angeschrieben, und erst wenn der
+         Rueckstand ueber eine ganze Jahreslast waechst, holt sich der Rat
+         ein Pfand (Schritt 2). Die Umlage folgt jetzt derselben Regel.
+         Gemahnt wird zuerst, gepfaendet danach — so hat es jede Stadt
+         gehalten, die ihr Geld wiedersehen wollte. Das Pfand bleibt, es
+         kommt nur nicht mehr am selben Tag. */
       if (!buche(betrag, u.name, 'umlage')) {
-        var weg = nimmPfand();
-        chronik('umlage', u.name + ' (' + geld(betrag) + ') blieb offen. '
-          + (weg ? 'Pfand: ' + weg + '.' : ''));
-        B.welt.schreibe(u.name + ': ' + geld(betrag) + ' blieb offen. '
-          + (weg ? weg + ' geht auf fünf Jahre an den Adler.' : ''), 'preis');
+        chronik('umlage', u.name + ': ' + geld(betrag) + ' angeschlagen, '
+          + geld(Z.rueckstand) + ' bleiben stehen. Zu Michaeli ' + (jahr() + 1)
+          + ' kommen sie mit Aufschlag wieder; wächst der Rückstand über eine '
+          + 'Jahreslast, nimmt der Rat ein Pfand.');
+        B.welt.schreibe(u.name + ': ' + geld(betrag) + ' angeschlagen. '
+          + geld(Z.rueckstand) + ' bleiben als Rückstand stehen.', 'preis');
       } else {
         chronik('umlage', u.name + ': ' + geld(betrag) + ' bezahlt.');
       }
