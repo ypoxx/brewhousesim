@@ -40,6 +40,28 @@
    je Aufbau seine 24 gemessenen Fusspunkte ins Bild — gruen, wenn sie sitzen,
    rot, wo sie es nicht tun. Und BRAUHAUS.stadt.boden.pruefe() gibt dieselben
    Zahlen in die Konsole, ohne dass jemand ein Bild ausmessen muss.
+
+   ---------------------------------------------------------------------------
+   DER VIERTE SATZ — DIE TIEFE.  (Runde 7)
+
+   Runde 6 ging mit dem Satz zurueck, der diese Datei beim Namen nennt:
+
+     "DAS LOT MISST DEN BODEN, NICHT DIE TIEFE, UND EINE DATEI NUTZT DAS AUS.
+      Der Boden ist zu, der Platz darauf nicht — DAS LOT fragt 'liegt der Fuss
+      hinter der Mauer', nie 'ist dieser Boden schon vergeben'."
+
+   Er hat recht gehabt, und der Beleg war der Pferdestall ueber den Gaertanks:
+   47 Prozent der Tanks zugedeckt, der vordere ganz weg, der Laufsteg vom
+   Stalldach durchschnitten. Also fragt das Lot jetzt beides:
+
+   4  WER VORNE STEHT, LIEGT OBEN.  Decken sich zwei Aufbauten im Bild, muss
+      der mit dem TIEFEREN Fuss oben liegen. Die Tiefe kommt aus derselben
+      Zahl, aus der stadt.js den z-Index macht (B.stadt.mass.tiefe) — ein
+      Pruefer, der anders rechnet als der Zeichner, findet den naechsten
+      Pferdestall erst wieder am Bildschirm.
+
+   Gemeldet wird nur, was man auch sieht: eine Deckung unter DECKARM Prozent
+   der eigenen Flaeche des Verdeckten ist ein Streifen und kein Fehler.
    =========================================================================== */
 
 (function (B) {
