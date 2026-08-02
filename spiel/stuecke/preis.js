@@ -296,8 +296,7 @@
   }
 
   /* ----------------------------------------------------------------------
-     DIE BIERORDNUNG — das Einkommen je Fass. Sie steigt in Jahrzehnten.
-     Der Aufschlag ist alles, was das Haus selbst dazugebaut hat.
+     DIE BIERORDNUNG — das Einkommen je Fass.
      ---------------------------------------------------------------------- */
   function ordnung() {
     var l = ep().ordnung, treffer = l[0];
@@ -305,9 +304,64 @@
     return treffer;
   }
 
+  /* DIE NACHFUEHRUNG — die eine Zahl, an der die zweite Messlatte hing.
+
+     Bis zum 2. August 2026 war das Einkommen je Fass in einer Partie
+     NOMINAL FEST. Die Bierordnung hat benannte Stufen (1350, 1391, 1444,
+     1490 — 1517, 1622, 1650 …), und die liegen vierzig bis hundert Jahre
+     auseinander; eine Partie ueber vierzehn Braujahre erlebt in drei von
+     vier Epochen keine einzige davon. Gleichzeitig steigt ALLES andere mit
+     `teuerungJahr`: der Anschlag, die feste Last, die Taxe der Festlegung.
+     Am Bildschirm gemessen (die Rechnungsspalte der Michaelitafel, vierzehn
+     Michaelitage je Epoche, sorgfaeltig gespielte Linie):
+
+       Epoche   Satz je Fass    Ausstoss          Barschaft      Latte
+       1350      9 -> 9    (0%)   789 -> 151 Pf     112 -> 12     reisst
+       1600     22 -> 26,6 (+21%) 2109 -> 2580 fl   640 -> 5391   besteht
+       1884   51,4 -> 57,6 (+12%) 20800 -> 15824 M  11450->17740  besteht
+       1970    135 -> 135  (+0%)  249765 -> 56070   61000 -> 3000 reisst
+
+     Die beiden, die bestehen, sind genau die beiden, deren Einkommen je
+     Fass in der Partie gewachsen ist — 1600 ueber die Festlegung
+     `reinheit` (+16 %), 1884 ueber `konvention`/`marke` und die
+     Ordnungsstufe von 1890. Die beiden, die reissen, sind die, in denen
+     der Satz vierzehn Jahre lang auf derselben Zahl stand.
+
+     Ein Rat, der den Bierpfennig vierzig Jahre nicht anruehrt, waehrend
+     Korn, Zins und Lohn um vier Hundertstel im Jahr steigen, ist auch
+     historisch die falsche Stadt. Der Biersatz WAR an den Kornpreis
+     gebunden und wurde zwischen den grossen Erneuerungen nachgesetzt; die
+     Daten sagen es selbst („Nach der Teuerung erlaubt der Rat einen
+     Pfennig mehr"). Also fuehrt er nach — aber nicht ganz, und wie weit,
+     ist der Charakter der Epoche:
+
+       satzFolgt = 1   der Satz haelt Schritt; die Zeit kostet nichts
+       satzFolgt = 0   der Satz steht; die Zeit frisst das Haus (bisher)
+
+     Was NICHT nachgefuehrt wird, ist die Luecke, die der Spieler selbst
+     schliessen muss — mit dem AUFSCHLAG, und der ist nur zu bauen. Das ist
+     die Rueckkopplung nach oben; die nach unten steht in `rechneAnschlag`
+     und in den drei Wurzeln der Pflichten. */
+  function satzFolgt() {
+    var f = ep().satzFolgt;
+    return (typeof f === 'number') ? B.grenze(f, 0, 1) : 0;
+  }
+
+  /* Der Faktor, um den der Rat den Satz seit dem Antritt dieses Hauses
+     nachgesetzt hat. Gemessen ab Z.startjahr, nicht ab dem Jahr der
+     Ordnung: eine Erneuerung von 1517 ist 1600 keine Neuigkeit mehr. */
+  function nachfuehrung() {
+    return 1 + satzFolgt() * (teuerung() - 1);
+  }
+
+  /* Was das Haus heute je Fass loest: der Satz des Rats, nachgefuehrt, mal
+     dem, was das Haus sich selbst erarbeitet hat. */
+  function satzJetzt() {
+    return ordnung().preis * nachfuehrung() * (1 + Z.aufschlag);
+  }
+
   function setzeBierpreis() {
-    var o = ordnung();
-    B.welt.haus.preis = o.preis * (1 + Z.aufschlag);
+    B.welt.haus.preis = satzJetzt();
     return B.welt.haus.preis;
   }
 
@@ -437,8 +491,17 @@
     /* DER NACHLASS — der Weg zurueck. Ein Verlustjahr wird nicht nur nicht
        veranlagt; der Rat, das Kloster, der Steuerausschuss, die Bank setzen
        auch das Feste herunter. Stundung und Erlass nach Missjahr, Brand oder
-       Einquartierung sind aktenkundig genug, um hier zu stehen. */
-    Z.nachlass = !erste && Z.ertrag < 0;
+       Einquartierung sind aktenkundig genug, um hier zu stehen.
+
+       Er hing an `Z.ertrag < 0` und griff darum genau bei dem Haus nicht,
+       fuer das er gemacht ist: eine Kasse, die auf null steht, aendert sich
+       von Michaeli zu Michaeli um NULL, nicht um weniger als null. Am
+       Bildschirm nachgesehen — Michaelitafel 1350, Jahre 1359 bis 1363 —
+       stand dort fuenfmal „davon übrig geblieben 0 Pf" und keine einzige
+       Nachlasszeile, waehrend Erbzins und Wasserzins mit der Teuerung
+       weiterstiegen: 89 Pf feste Last gegen 187 Pf Ausstoss. Ein Jahr, das
+       nichts uebrig laesst, ist genau der Fall. */
+    Z.nachlass = !erste && Z.ertrag <= 0;
     Z.nachlassBetrag = Z.nachlass
       ? Math.round(ep().lastenFest * teuerung() * (ep().nachlass || 0)) : 0;
     /* Die Schaetzung folgt der Kasse nach oben sofort und nach unten langsam:
@@ -926,16 +989,32 @@
     kasten.appendChild(nah);
     sp.appendChild(kasten);
 
+    /* DIE BIERORDNUNG, in drei Zeilen statt einer: was der Rat gesetzt hat,
+       was er seither nachgesetzt hat, und was das Haus sich selbst dazu
+       erarbeitet hat. Die dritte Zeile ist die einzige, die der Spieler
+       bewegen kann — deshalb steht sie mit ihrer Zahl da und nicht in
+       einem Nebensatz. */
     var ord = B.el('div', 'pr-feld pr-ordnung');
     ord.appendChild(B.el('h3', null, 'DIE BIERORDNUNG'));
     var o = ordnung();
-    ord.appendChild(zeile('Satz je ' + e.einheit, geld(Math.round(o.preis * (1 + Z.aufschlag))), 'pr-gross'));
+    ord.appendChild(zeile('Satz je ' + e.einheit, geld(Math.round(satzJetzt())), 'pr-gross'));
     ord.appendChild(B.el('div', 'pr-satz', o.sagt));
+    var nf = nachfuehrung();
+    ord.appendChild(zeile('vom Rat gesetzt ' + o.ab, geld(o.preis), 'pr-satzteil'));
+    ord.appendChild(zeile(satzFolgt()
+        ? 'seither nachgesetzt (' + B.zahl(satzFolgt() * 100, 0) + ' im Hundert der Teuerung)'
+        : 'seither nachgesetzt — in dieser Zeit nie',
+      (nf > 1 ? '+' : '') + B.zahl((nf - 1) * 100, 0) + '%', 'pr-satzteil'));
+    ord.appendChild(zeile('Aufschlag des Hauses — selbst gebaut',
+      (Z.aufschlag > 0 ? '+' : '') + B.zahl(Z.aufschlag * 100, 0) + '%',
+      'pr-satzteil pr-satz-aufschlag'));
     ord.appendChild(B.el('div', 'pr-satz pr-klein',
       (jahr() - o.ab <= 0 ? 'In diesem Jahr gesetzt. '
-        : 'Gesetzt ' + o.ab + ' — seit ' + (jahr() - o.ab) + ' Jahren unverändert. ')
-      + (Z.aufschlag ? 'Aufschlag des Hauses: ' + B.zahl(Z.aufschlag * 100, 0) + ' im Hundert.'
-                     : 'Das Haus hat noch keinen Aufschlag erarbeitet.')));
+        : 'Gesetzt ' + o.ab + ' — die Stufe steht seit ' + (jahr() - o.ab) + ' Jahren. ')
+      + (satzFolgt()
+          ? 'Zwischen den Stufen setzt der Rat nach dem Korn nach, aber nicht ganz. '
+          : 'Zwischen den Stufen rührt hier niemand den Satz an. ')
+      + 'Was zur Teuerung fehlt, ist der Teil, den nur das Haus selbst zubauen kann.'));
     sp.appendChild(ord);
 
     var an = B.el('div', 'pr-feld pr-anschlag');
@@ -1542,7 +1621,7 @@
     var stand = B.el('div', 'pr-griff-stand');
     var billig = billigstesAngebot();
     stand.appendChild(zeile('Bierordnung je ' + ep().einheit,
-      geld(Math.round(ordnung().preis * (1 + Z.aufschlag)))));
+      geld(Math.round(satzJetzt()))));
     stand.appendChild(zeile('Anschlag ' + jahr(), geld(Math.round(Z.anschlag))));
     if (billig) {
       stand.appendChild(zeile('billigstes Angebot', geld(billig.preis)));
@@ -1558,7 +1637,13 @@
     griff.appendChild(stand);
 
     griff.appendChild(B.knopf({
-      text: 'Chronik des Hauses · ' + Object.keys(Z.festGenommen).length + ' Festlegungen',
+      /* Der Zaehler stand in allen vier Epochen auf 0, und das war keine
+         falsche Zaehlung: der sorgfaeltig spielende Automat hat in
+         vierzehn Braujahren keine einzige Festlegung bezahlen koennen.
+         Er zaehlt weiter, was er heisst — nur steht jetzt daneben, was
+         sonst noch unabaenderlich in der Chronik steht. */
+      text: 'Chronik des Hauses · ' + Object.keys(Z.festGenommen).length + ' Festlegungen · '
+            + Object.keys(Z.fertig).length + ' gebaut',
       zug: 'preis:chronik-auf',
       klasse: 'pr-griff-chronik',
       titel: 'Was festgelegt wurde, steht dort unabänderlich.',

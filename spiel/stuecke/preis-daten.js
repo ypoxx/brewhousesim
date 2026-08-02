@@ -66,6 +66,13 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.55,
       nachlass: 0.55,
       nachlassName: 'Nachlass des Rats auf Zins und Wasser',
+      /* DIE NACHFUEHRUNG DES SATZES (siehe preis.js, `nachfuehrung`).
+         Wie viel von der Teuerung beim Haus ankommt, ohne dass es etwas
+         dafuer baut. Der Biersatz des 14. Jahrhunderts war an den
+         Kornpreis gebunden und wurde zwischen den grossen Erneuerungen
+         nachgesetzt — aber der Rat setzte ihn spaeter nach, als das Korn
+         stieg, und nie ganz: die Buerger sollten billig trinken. */
+      satzFolgt: 0.62,
       pflichtHoehe: 0.20,
       umlageAnteil: 0.80,
       handlohnAnteil: 1.10,
@@ -244,6 +251,11 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.40,
       nachlass: 0.55,
       nachlassName: 'Stundung des Klosters auf den Pachtzins',
+      /* Der Kurfuerst haelt den Satz kurz: an ihm haengt sein
+         Malzaufschlag, und ein hoher Satz macht Unruhe in der Stadt.
+         Diese Epoche besteht die zweite Messlatte auch ohne — was hier
+         ankommt, ist bewusst der kleinste der vier Saetze. */
+      satzFolgt: 0.25,
       pflichtHoehe: 0.155,
       umlageAnteil: 0.70,
       handlohnAnteil: 1.15,
@@ -432,6 +444,10 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.45,
       nachlass: 0.55,
       nachlassName: 'Der Steuerausschuss setzt die Veranlagung herab',
+      /* Der Landesherr setzt den Preis „nur noch dem Namen nach"; was
+         wirklich zaehlt, ist die Konvention der Brauereien am Ort, und
+         die zieht mit den Kosten mit. Der hoechste der vier Saetze. */
+      satzFolgt: 0.50,
       pflichtHoehe: 0.175,
       umlageAnteil: 0.90,
       handlohnAnteil: 1.10,
@@ -608,6 +624,10 @@ var PREIS_DATEN = {
       pflichtErtrag: 0.50,
       nachlass: 0.50,
       nachlassName: 'Tilgungsaussetzung der Hausbank',
+      /* Der Handel diktiert den Aktionspreis, der Listenpreis ist Zierde —
+         aber auch der Handel gibt die Kostensteigerung weiter, nur spaet
+         und nie ganz. Zwischen 1350 und 1884. */
+      satzFolgt: 0.45,
       pflichtHoehe: 0.145,
       umlageAnteil: 0.95,
       handlohnAnteil: 1.05,

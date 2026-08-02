@@ -884,9 +884,12 @@
       folge: ausgangSatz(teil.folge, summe)
     };
     if (summe > 0) B.welt.nimm(summe, wortFuerDieKasse, 'spieler');
+    /* Die Zeile wird HIER geschrieben und nicht der Uhr uebergeben: sonst
+       stuende sie zweimal in der Chronik, einmal kurz und einmal ganz.
+       B.uhr.beende schreibt nur, wenn man ihm einen Text mitgibt. */
     B.welt.schreibe(Z.ausgang.urteil + ' ' + Z.ausgang.folge
       + (summe > 0 ? ' Ausgezahlt: ' + B.welt.geld(summe) + '.' : ''), 'ende');
-    B.uhr.beende(teil.grund, Z.ausgang.urteil);
+    B.uhr.beende(teil.grund);
   }
 
   function nimmAntrag() {
@@ -983,7 +986,7 @@
     Z.uebergabe = null;
     B.ton.spiele('fuhre:siegel');
     B.welt.schreibe(Z.ausgang.urteil + ' ' + Z.ausgang.folge, 'ende');
-    B.uhr.beende('uebergeben', Z.ausgang.urteil);
+    B.uhr.beende('uebergeben');
     B.sende('zeichne', { grund: 'fuhre-uebergabe' });
   }
 
