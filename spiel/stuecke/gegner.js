@@ -773,30 +773,103 @@
     return true;
   }
 
+  /* Sie kauft eine Brauerei im Nachbartal. Bis Runde 2 war das eine Zeile
+     und ein Zaehlerstand: elf geschluckte Betriebe in 99 Wochen, und auf dem
+     Brett hat sich davon nichts bewegt — ein Zug ohne Ort, genau das, was
+     dieses Stueck sich selbst verboten hat. Jetzt geht mit dem Betrieb der
+     Ausschank IN DIESER STADT mit, und zwischen Handschlag und Notartermin
+     liegen fuenf Wochen, in denen ein hoeheres Gebot zaehlt. */
   function zugUebernahme(h, zug) {
     var preis = Math.round(Math.abs(h.kasse) * 0.07) + 1;
+    var g = ep().gebot;
+    var ziel = g && !Z.gebot ? suche(function (a) {
+      if (a.bindung && a.bindung.wem === 'haus') return false;
+      if (a.bindung && a.bindung.wem === h.k) return false;
+      if (Z.werbung[a.schluessel] || Z.absicht[a.schluessel]) return false;
+      if (Z.schutz[a.schluessel] && Z.schutz[a.schluessel] > jahr()) return false;
+      return true;
+    }) : null;
     h.kasse -= preis;
-    h.brauereien += 1;
+    if (!ziel) {
+      /* Kein Ausschank in dieser Stadt, der mitginge — dann bleibt es eine
+         Zahl auf ihrem Briefkopf, und sie bekommt ihn ohne Gegenrede. */
+      h.brauereien += 1;
+      merkeZug(h, 'uebernahme',
+        zug.text + ' Sie zahlt ' + B.welt.geld(preis) + '. Es ist die '
+        + h.brauereien + '. in dieser Gegend, und in dieser Stadt hängt kein Schild daran.',
+        sitzVon(h).ort, null);
+      B.welt.schreibe(zug.text, 'gegner');
+      return true;
+    }
+    var wochen = g.wochen || 5;
+    var m = mittelVon('jahresvereinbarung');
+    Z.gebot = {
+      wer: h.k, k: ziel.schluessel, name: B.wuerfel.aus(g.brauereien),
+      gebot: Math.max(500, Math.round(grundwert(ziel, m) * 0.8)),
+      seit: Z.takt, bis: Z.takt + wochen, ort: ziel.ort
+    };
     merkeZug(h, 'uebernahme',
-      zug.text + ' Sie zahlt ' + B.welt.geld(preis) + '. Es ist die '
-      + h.brauereien + '. in dieser Gegend.', sitzVon(h).ort, null);
-    B.welt.schreibe(zug.text, 'gegner');
+      zug.text.replace('eine kleine Brauerei im Nachbartal', Z.gebot.name)
+      + ' Sie zahlt ' + B.welt.geld(preis) + ' für die Kessel. Mit ihnen geht der Ausschank '
+      + 'im ' + ziel.name + ' — Notartermin in ' + wochen + ' Wochen, bis dahin zählt das '
+      + 'höhere Gebot.', ziel.ort, ziel.schluessel);
+    B.welt.schreibe(Z.gebot.name + ' wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; '
+      + 'über den Ausschank im ' + ziel.name + ' wird beim Notar entschieden. '
+      + 'Ihr Gebot steht bei ' + B.welt.geld(Z.gebot.gebot) + '.', 'gegner');
     return true;
+  }
+
+  /* Der Notartermin. Wer nicht mitgeboten hat, sieht hier zu. */
+  function loeseGebotEin() {
+    var G = Z.gebot, g = ep().gebot;
+    Z.gebot = null;
+    if (!G) return;
+    var h = haus(G.wer), a = adresse(G.k);
+    if (!h || !a) return;
+    h.brauereien += 1;
+    var m = mittelVon('jahresvereinbarung');
+    binde(h, a, m, (g && g.verpasst ? g.verpasst : 'Der Notartermin ist gehalten.')
+      + ' ' + G.name + ' gehört der Gruppe, und der Ausschank im ' + a.name + ' mit.');
+    Z.gebotAusgang = { takt: Z.takt, wo: a.name, gelingt: false, still: true };
   }
 
   function zugAngebot(h, zug) {
     if (Z.angebot || Z.wirkung.anteil || Z.wirkung.abgelehnt) return false;
+    var ab = ep().angebot || {};
     var wert = Math.max(50000, Math.round(B.welt.haus.kasse * 1.4
       + B.welt.adressenJetzt().filter(function (a) {
         return a.bindung && a.bindung.wem === 'haus';
       }).length * 90000));
-    Z.angebot = { jahr: jahr(), summe: wert, wer: h.k };
+    Z.angebot = { jahr: jahr(), summe: wert, wer: h.k,
+                  seit: Z.takt, bis: Z.takt + (ab.wochen || 8) };
     merkeZug(h, 'angebot',
-      zug.text + ' Sie bietet ' + B.welt.geld(wert) + ' für ein Viertel des Hauses.',
+      zug.text + ' Sie bietet ' + B.welt.geld(wert) + ' für ein Viertel des Hauses. '
+      + 'Sie erwartet die Antwort binnen ' + (ab.wochen || 8) + ' Wochen.',
       sitzVon(h).ort, null);
     B.welt.schreibe('Die Nordstern-Gruppe bietet ' + B.welt.geld(wert)
-      + ' für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen.', 'gegner');
+      + ' für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — '
+      + 'und keine Antwort ist auch eine.', 'gegner');
     return true;
+  }
+
+  /* Acht Wochen ohne Antwort sind keine Ablehnung, sondern ein Versaeumnis:
+     sie zieht die Anfrage zurueck, nimmt sich stattdessen eine Adresse und
+     fragt spaeter wieder. Die Wahl bleibt also im Spiel — der Preis fuers
+     Wegsehen nicht. */
+  function verfaelltAngebot() {
+    var ab = ep().angebot || {};
+    var h = haus(Z.angebot ? Z.angebot.wer : 'konzern') || haus('konzern');
+    Z.angebot = null;
+    if (!h || h.weg) return;
+    var m = mittelVon('jahresvereinbarung');
+    var ziel = suche(function (a) {
+      return !(a.bindung && a.bindung.wem === h.k);
+    });
+    if (!ziel) return;
+    binde(h, ziel, m, (ab.verfallen || 'Die Gruppe zieht die Anfrage zurück.')
+      .replace('{haus}', ziel.name));
+    B.welt.schreibe('Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen '
+      + 'hat sie sich ' + ziel.name + '.', 'gegner');
   }
 
   /* Die Auswahl. Die ersten zehn Zuege folgen einer Pflichtliste — so sieht
@@ -895,6 +968,10 @@
     Object.keys(Z.absicht).forEach(function (k) {
       if (Z.absicht[k].bis <= Z.takt) loeseAbsichtEin(k);
     });
+    /* Der Notartermin und die Frist der Gruppe laufen ab, ob man hinsieht
+       oder nicht. Beides steht mit der Zahl der Wochen im Bild. */
+    if (Z.gebot && Z.gebot.bis <= Z.takt) loeseGebotEin();
+    if (Z.angebot && Z.angebot.bis && Z.angebot.bis <= Z.takt) verfaelltAngebot();
 
     haeuserJetzt().forEach(function (h) {
       var seit = Z.takt - h.letzterZug;
@@ -1280,6 +1357,68 @@
     neuZeichnen('gegner-abloese');
   }
 
+  /* ---- DAS GEBOT BEIM NOTAR — der fuenfte Zug, und der einzige ohne Tarif
+     Abloesen, Zuvorkommen und Hinhalten haben einen Preis, der am Schild
+     steht; hier steht ein fremdes Gebot, und was daraufgelegt wird, ist die
+     Entscheidung. Drei Stufen nebeneinander, jede mit ihrem Preisschild,
+     jede schliesst die beiden anderen aus. Sicher ist keine.
+     -------------------------------------------------------------------- */
+  function gebotStufen() {
+    var g = ep().gebot;
+    if (!g || !Z.gebot) return [];
+    return g.stufen.map(function (st, i) {
+      return { nr: i, name: st.name, sagt: st.sagt, glueck: st.glueck,
+               preis: Math.max(1, Math.round(Z.gebot.gebot * st.faktor)) };
+    });
+  }
+
+  function mitbieten(nr) {
+    var g = ep().gebot, G = Z.gebot;
+    if (!g || !G) return;
+    var st = gebotStufen()[nr];
+    var a = adresse(G.k);
+    if (!st || !a) return;
+    if (!B.welt.zahle(st.preis, 'Gebot beim Notar: Ausschank im ' + a.name, 'spieler')) {
+      Z.meldung = 'Das Gebot ' + st.name + ' kostet ' + B.welt.geld(st.preis)
+        + '. In der Kasse liegen ' + B.welt.geld(B.welt.haus.kasse) + '.';
+      return neuZeichnen('gegner-knapp');
+    }
+    var h = haus(G.wer);
+    var gelingt = B.wuerfel.trifft(st.glueck);
+    var name = G.name;
+    Z.gebot = null;
+    if (h) h.brauereien += 1;               /* die Kessel im Tal bekommt sie so oder so */
+    if (gelingt) {
+      var m = mittelVon('jahresvereinbarung');
+      delete Z.bindung[a.schluessel];
+      delete Z.werbung[a.schluessel];
+      delete Z.absicht[a.schluessel];
+      B.welt.binde(a.schluessel, 'haus', m.womit, jahr() + m.jahre);
+      Z.schutz[a.schluessel] = jahr() + 3;
+      Z.wechsel[a.schluessel] = { takt: takt(), an: 'haus', von: G.wer };
+      B.welt.schreibe(g.gewonnen.replace('{haus}', a.name) + ' ' + B.welt.geld(st.preis)
+        + ' beim Notar, ' + name + ' behält die Gruppe.', 'gegner');
+      B.ton.spiele('gegner:zuvorkommen', { ort: a.ort });
+      Z.meldung = a.name + ' gehört dem Haus. ' + B.welt.geld(st.preis) + ' dafür — '
+        + st.sagt;
+      Z.gebotAusgang = { takt: Z.takt, wo: a.name, gelingt: true, summe: st.preis };
+    } else {
+      var zurueck = Math.round(st.preis * (1 - (g.notarteil || 0.12)));
+      B.welt.nimm(zurueck, 'Bietungssicherheit zurück vom Notar', 'gegner');
+      var weg = st.preis - zurueck;
+      if (h) binde(h, a, mittelVon('jahresvereinbarung'),
+        'Beim Notar unterschreiben die Erben an die Gruppe. Der Ausschank im '
+        + a.name + ' geht mit ' + name + ' an sie.');
+      B.welt.schreibe(g.verloren.replace('{geld}', B.welt.geld(weg))
+        .replace('{haus}', a.name), 'gegner');
+      B.ton.spiele('gegner:entreissen', { ort: a.ort });
+      Z.meldung = 'Überboten. ' + B.welt.geld(zurueck) + ' kommen zurück, '
+        + B.welt.geld(weg) + ' bleiben beim Notar, und ' + a.name + ' ist weg.';
+      Z.gebotAusgang = { takt: Z.takt, wo: a.name, gelingt: false, summe: weg };
+    }
+    neuZeichnen('gegner-gebot');
+  }
+
   function gegenzug() {
     var g = ep().gegenzug;
     var nr = B.welt.zeit.amtszeit.nr;
@@ -1357,8 +1496,21 @@
   /* ----------------------------------------------------------------------
      DER NAECHSTE SINNVOLLE ZUG — die eine Zahl der Messlatte
      ---------------------------------------------------------------------- */
+  /* Der billigste UMKAEMPFTE Zug — nicht der billigste Posten ueberhaupt.
+     Der Unterschied ist kein Feinschliff: in 1970 steht der billigste Posten
+     des ganzen Spiels bei 1.800 DM (ein Bierdeckel), das billigste Abloesen
+     bei 24.300 DM. Wer die Kennzahl gegen den Bierdeckel rechnet, liest
+     47,8x statt 3,5x und wuerde eine Wohlstandssingularitaet nicht anzeigen,
+     sondern verdecken. Dieses Stueck meldet deshalb seinen Zug mit der Art
+     'umkaempft' an und schreibt die Zahl zusaetzlich selbst ins Bild.
+     (Was der Kern daraus macht, steht als KERN-Absatz im Bericht.) */
   function meldeZug() {
     var bester = null;
+    if (Z.gebot) {
+      var st = gebotStufen()[0];
+      var ga = adresse(Z.gebot.k);
+      if (st && ga) bester = { was: 'Mitbieten ' + ga.name, preis: st.preis };
+    }
     Object.keys(Z.werbung).forEach(function (k) {
       var a = adresse(k);
       if (!a) return;
@@ -1376,7 +1528,29 @@
       if (!a || p === null) return;
       if (!bester || p < bester.preis) bester = { was: 'Ablösung ' + a.name, preis: p };
     });
-    if (bester) B.welt.meldeZug(bester.was, bester.preis);
+    Z.umkaempft = bester;
+    if (bester) B.welt.meldeZug(bester.was, bester.preis, 'umkaempft');
+  }
+
+  /* Die Zahl der zweiten Messlatte, mit dem richtigen Nenner, im Bild neben
+     WEITER — dort, wo die Zahl des Kerns steht, die gegen den Bierdeckel
+     rechnet. Sie steht daneben und nicht darueber: welche von beiden die
+     Kopfzeile fuehrt, entscheidet nicht dieses Stueck. */
+  function zeichneKennzahl(fach) {
+    var u = Z.umkaempft;
+    if (!u || !u.preis) return;
+    var q = B.welt.haus.kasse / u.preis;
+    var el = B.el('div', 'gg-kennzahl' + (q < 1 ? ' knapp' : ''));
+    el.setAttribute('data-umkaempft', B.rund(q, 2));
+    el.setAttribute('data-umkaempft-preis', String(u.preis));
+    el.appendChild(B.el('b', null, 'umkämpft'));
+    el.appendChild(B.el('span', null, u.was + ' — ' + B.welt.geld(u.preis)));
+    el.appendChild(B.el('i', null, 'Kasse reicht ' + B.zahl(q, 1) + '×'));
+    el.title = 'Der billigste Zug, um den gegenüber jemand mitbietet — nicht der '
+      + 'billigste Posten auf dem Brett. Barschaft geteilt durch diese Summe.';
+    B.orte.setze(el, 'weiter', { anker: 'rechts', dx: 0, dy: -11.5 });
+    el.setAttribute('data-frei', 'gegner');
+    fach.appendChild(el);
   }
 
   /* ======================================================================
