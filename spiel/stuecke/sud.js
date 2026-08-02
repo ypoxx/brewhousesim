@@ -1024,6 +1024,65 @@
     fach.appendChild(kasten);
   }
 
+  /* ----------------------------------------------------------------------
+     WAS BEIM WIRT ANKOMMT.
+
+     Die Leiter der Epoche, Sprosse fuer Sprosse: wie das Bier heisst, wie
+     viele Haeuser es fuehren, und ob die Pfanne es traegt. Ohne dieses Feld
+     ist die Deckelung eine Zahl im Quelltext; mit ihm ist sie eine
+     Entscheidung, die man vor dem Klicken lesen kann.
+     ---------------------------------------------------------------------- */
+  function zeichneWirte(fach) {
+    var l = leiter();
+    if (!l.length) return;                 /* ohne die Sortenliste kein Urteil */
+    var w = ep().wirte || { name: 'WAS BEIM WIRT ANKOMMT', satz: '' };
+    var hoch = hoechsteStufe();
+    var alle = B.welt.adressenJetzt();
+    var oben = sorteAufStufe(hoch);
+
+    var kasten = B.el('div', 'sud-wirte');
+    var kopf = B.el('div', 'sud-achskopf');
+    kopf.appendChild(B.el('b', 'sud-achsname', w.name));
+    kopf.appendChild(B.el('span', 'sud-frage', oben ? 'höchstens ' + oben.name : ''));
+    kasten.appendChild(kopf);
+    kasten.appendChild(zeile('sud-achssatz', w.satz));
+
+    l.forEach(function (s) {
+      var geht = s.stufe <= hoch;
+      var nimmt = nehmen(s.stufe);
+      var r = B.el('div', 'sud-wzeile' + (geht ? '' : ' aus'));
+      r.appendChild(B.el('i', 'sud-wzeichen s' + s.stufe, s.zeichen));
+      r.appendChild(B.el('span', 'sud-wsorte', s.name));
+      r.appendChild(B.el('span', 'sud-wzahl',
+        nimmt.length + ' von ' + alle.length + (alle.length === 1 ? ' Haus' : ' Häusern')));
+      r.appendChild(B.el('span', 'sud-wurteil', geht
+        ? 'die Pfanne trägt es'
+        : 'schlägt als ' + (oben ? oben.name : '—') + ' aus'));
+      r.title = nimmt.length ? nimmt.map(function (a) { return a.name; }).join(' · ')
+                             : 'Kein Haus in dieser Zeit führt es.';
+      kasten.appendChild(r);
+    });
+
+    /* Wer wegfaellt, steht mit Namen da. Eine Zahl merkt sich niemand. */
+    var spitze = l[l.length - 1];
+    if (spitze && spitze.stufe > hoch) {
+      var fort = nehmen(spitze.stufe).filter(function (a) {
+        var st = artStufen(a);
+        return st && st.indexOf(hoch) < 0;
+      });
+      if (fort.length) {
+        kasten.appendChild(zeile('sud-warnung', (fort.length === 1 ? 'Dieses Haus führt' : 'Diese Häuser führen')
+          + ' nur ' + spitze.name + ' und bekommt' + (fort.length === 1 ? '' : 'en')
+          + ' vom Anker nichts: ' + fort.map(function (a) { return a.name; }).join(' · ') + '.'));
+      }
+    }
+    if (Z.gestuft) {
+      kasten.appendChild(zeile('sud-fussnote', 'Dieses Braujahr ' + Z.gestuft
+        + (Z.gestuft === 1 ? ' Bottich' : ' Bottiche') + ' zurückgestuft.'));
+    }
+    fach.appendChild(kasten);
+  }
+
   function zeichneHefe(fach) {
     var g = ep().guete, a = ep().anstich, an = gueteAnzeige();
     var kasten = B.el('div', 'sud-hefe');
@@ -1105,6 +1164,7 @@
     var links = B.el('div', 'sud-spalte links');
     var rechts = B.el('div', 'sud-spalte rechts');
     achsen().forEach(function (a) { zeichneAchse(links, a); });
+    zeichneWirte(links);
     zeichneHefe(rechts);
     zeichneGaerkeller(rechts);
 
@@ -1142,13 +1202,18 @@
     B.leere(fach);
 
     var e = ep(), an = gueteAnzeige();
-    var z = B.el('div', 'sud-zettel');
+    var z = B.el('div', 'sud-zettel' + (Z.brettZu ? '' : ' beiseite'));
     z.setAttribute('data-frei', '1');
     z.setAttribute('data-reiter', 'DER SUD');
 
     z.appendChild(B.el('div', 'sud-zkopf', 'DER SUD · ' + B.welt.zeit.jahr));
     z.appendChild(B.el('div', 'sud-zverfahren',
       achsen().map(function (a) { return gewaehlt(a).name; }).join(' · ')));
+
+    /* Was dieses Verfahren beim Wirt hergibt — die eine Zahl dieses Stuecks,
+       die auch im Vorgabestand im Bild steht. */
+    var oben = sorteAufStufe(hoechsteStufe());
+    if (oben) z.appendChild(B.el('div', 'sud-zrang', 'höchstens ' + oben.name));
 
     var l = B.el('div', 'sud-zzahlen');
     l.appendChild(B.el('span', null, gk().name.replace(/^Der /, '') + ' '
@@ -1209,23 +1274,51 @@
      BRAUHAUS.zuege() meldet sie als offen. In den EIGENEN Dateien ist das
      zu heilen, also wird es hier geheilt.
      ---------------------------------------------------------------------- */
+  function schalte(wurzel, tot) {
+    if (!wurzel) return;
+    var kn = wurzel.querySelectorAll('button[data-zug]');
+    for (var i = 0; i < kn.length; i++) {
+      var soll = kn[i].getAttribute('data-soll-aus') === '1';
+      var neu = tot || soll;
+      if (kn[i].disabled !== neu) {
+        kn[i].disabled = neu;
+        if (neu) kn[i].setAttribute('aria-disabled', 'true');
+        else kn[i].removeAttribute('aria-disabled');
+      }
+    }
+  }
+
   function taktZugeklappt() {
     B.wage('sud.takt', function () {
       var fach = document.getElementById('fach-hand-sud');
-      if (!fach) return;
-      var brett = fach.firstElementChild;
-      if (!brett) return;
-      var zu = brett.classList.contains('stadt-zugeklappt');
-      var kn = brett.querySelectorAll('button[data-zug]');
-      for (var i = 0; i < kn.length; i++) {
-        var soll = kn[i].getAttribute('data-soll-aus') === '1';
-        var neu = zu || soll;
-        if (kn[i].disabled !== neu) {
-          kn[i].disabled = neu;
-          if (neu) kn[i].setAttribute('aria-disabled', 'true');
-          else kn[i].removeAttribute('aria-disabled');
-        }
+      var brett = fach ? fach.firstElementChild : null;
+      var zettel = document.querySelector('.sud-zettel');
+      if (brett) {
+        Z.brettZu = brett.classList.contains('stadt-zugeklappt');
+        schalte(brett, Z.brettZu);
       }
+      /* DER SUD zeigt genau EINE Flaeche. Der Kesselzettel haengt am
+         Sudhaus, und das Sudhaus liegt unter dem eigenen Brett — steht
+         beides zugleich im Bild, verdeckt dieses Stueck seine eigenen drei
+         Knoepfe, und ein Zaehler findet sie aktiv und untreffbar. Also
+         tritt der Zettel zurueck, solange das Brett offen liegt, und mit
+         ihm seine Knoepfe. Genau der Fehler, den BEFUND-BRETTER.md misst,
+         nur diesmal im eigenen Haus. */
+      if (zettel) {
+        var weg = !Z.brettZu;
+        if (zettel.classList.contains('beiseite') !== weg) zettel.classList.toggle('beiseite', weg);
+        schalte(zettel, weg);
+      }
+    });
+  }
+
+  /* Der Rahmen der STADT entscheidet erst im naechsten Bild, ob ein frisch
+     gezeichnetes Brett zugeklappt liegt. Zweimal warten, dann nachsehen —
+     sonst blinkt der Zettel bei jedem Neuzeichnen kurz ueber dem Brett. */
+  function taktGleich() {
+    if (typeof window.requestAnimationFrame !== 'function') { taktZugeklappt(); return; }
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(taktZugeklappt);
     });
   }
 
@@ -1300,6 +1393,7 @@
         sauge();
         gueteWoche();
         anzeigePruefen();
+        rueckPruefen();
         fehlsud();
         /* Was zu lange gesperrt steht, gibt der Braumeister von selbst frei —
            sonst entstuende ein Gaerkeller, der sich nie mehr leert. */
@@ -1357,6 +1451,7 @@
       zeichneBrett();
       zeichneZettel();
       taktZugeklappt();
+      taktGleich();
     }
   });
 
