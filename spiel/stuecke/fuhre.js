@@ -3022,8 +3022,24 @@
      23) — der Antrag ist eine Entscheidung, kein Riegel. Wer nicht
      entscheidet, klickt weiter, und die Frist laeuft.
      -------------------------------------------------------------------- */
+  /* EIN BLATT ZUR ZEIT, UND ZWAR DAS RICHTIGE.
+
+     Gemessen (E1, sorgfaeltig gespielt, 1920x1000): das Uebergabeblatt
+     entsteht am Michaelitag — und am Michaelitag legt dieses Stueck auch die
+     Georgi-Tafel auf den Tisch. Beide sind im selben Zug frisch, beide liegen
+     in derselben Ebene, und die Platzordnung der STADT entscheidet den
+     Gleichstand nach der Reihenfolge im DOM. Die Tafel gewann, das
+     Uebergabeblatt lag mit `stadt-zugeklappt` darunter, und seine beiden
+     Knoepfe trafen sich selbst nicht mehr — genau der Fehler, den
+     BEFUND-ENDE §1 fuer das Schlussblatt aufgeschrieben hat, eine Ebene
+     tiefer und von diesem Stueck selbst gebaut.
+
+     Also wird nicht gestapelt: solange die Georgi-Tafel liegt, wartet das
+     Ausgangblatt. Sie ist die Entscheidung dieses Tages; das Ausgangblatt
+     kommt im naechsten Bildlauf, sobald die Tafel weg ist, und ist dann das
+     juengste Brett auf dem Tisch. */
   function zeichneAntrag(fach) {
-    if (!Z.antrag || B.welt.zeit.ende) return;
+    if (!Z.antrag || B.welt.zeit.ende || sommerLiegtOben()) return;
     var g = ausgangDef();
     if (!g || !g.antrag) return;
     var a = g.antrag;
@@ -3060,7 +3076,7 @@
   }
 
   function zeichneUebergabe(fach) {
-    if (!Z.uebergabe || B.welt.zeit.ende) return;
+    if (!Z.uebergabe || B.welt.zeit.ende || sommerLiegtOben()) return;
     var u = uebergabeDef();
 
     var bl = B.el('div', {
