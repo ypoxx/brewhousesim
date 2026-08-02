@@ -690,7 +690,7 @@ var STADT_DATEN = {
        kann. Neun Stapel statt vier, damit aus dem richtigen Mass kein
        Spielzeug wird: bei breite 8,3 misst der Mann 55 px. */
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'fasslager', dx: -4, dy: -6, breite: 8.3, von: 4, bis: 4, grund: 70,
+      ort: 'fasslager', dx: -6, dy: -8, breite: 8.3, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
@@ -704,7 +704,7 @@ var STADT_DATEN = {
        einzige ganz nach vorn auf D (27|76) — vor die Kaesten, wo der Lastzug
        auffaehrt. Alles Hohe wuerde dort den halben Hof zudecken. */
     { schluessel: 'waage', name: 'Fahrzeugwaage', bild: 'waage',
-      ort: 'hof', dx: -2, dy: 13, breite: 12, von: 4, bis: 4, grund: 55,
+      ort: 'hof', dx: -5, dy: 14, breite: 12, von: 4, bis: 4, grund: 55,
       sagt: 'Voll rein, leer raus, alles gewogen. Wer nicht wiegt, verliert im Kleinen.',
       nutzen: {}, wirkt: 'kein Schwund beim Wiegen' },
 
