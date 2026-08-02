@@ -234,6 +234,57 @@ var STADT_DATEN = {
   teuerung: { 1: 0.63, 2: 3, 3: 37, 4: 174 },
 
   /* --------------------------------------------------------------------
+     DIE VERWERTUNG — der Hof ist Kapital.  (Runde 7)
+
+     Runde 6 ging mit diesem Satz zurueck: "DER BODEN DER WIRTSCHAFT FEHLT.
+     Ab Jahr 2 steht die Kasse auf 0 und bleibt dort." Nachgemessen: sie
+     bleibt nicht auf 0, sie geht in 1350 auf −14 Pf, weil kern/welt.js den
+     Sommerunterhalt ohne Pruefung abzieht. Ein Haus ohne Bargeld hat aber
+     nicht nichts — es hat einen Hof aus Stein und Holz. Was fehlte, war der
+     Weg zurueck: Stein wieder zu Muenze.
+
+     Diesen Weg gibt es in jedem Jahrhundert, und er heisst in jedem
+     Jahrhundert anders und funktioniert anders. Deshalb steht hier kein
+     umbenanntes Verb, sondern vier verschiedene: ein 'stadt:versatz' gibt
+     es in 1600 ueberhaupt nicht, eine 'stadt:hypothek' in 1350 nicht.
+
+       anteil   was das Haus vom heutigen Bauwert bar bekommt
+       zwang    was der Rat gibt, wenn er selbst zugreift (immer weniger)
+       bleibt   steht das Gebaeude danach noch im Hof?
+       zins     jaehrliche Last auf dem aufgenommenen Betrag
+       ansehen  was der Vorgang das Haus in der Stadt kostet
+     -------------------------------------------------------------------- */
+  verwertung: {
+    1: { verb: 'versatz', wort: 'VERSATZ', tat: 'Zum Versatz',
+         anteil: 0.45, zwang: 0.28, ansehen: -2,
+         kopf: 'was der Lombarde am Markt in Satz nimmt',
+         sagt: 'Der Lombarde nimmt Stein und Holz in Satz und zaehlt Pfennige auf '
+             + 'den Tisch. Eingeloest wird selten: wer versetzt, hat verkauft.',
+         ratSagt: 'Der Rat laesst pfaenden. Zwei Ratsdiener, ein Karren, kein Wort.' },
+
+    2: { verb: 'wiederkauf', wort: 'WIEDERKAUF', tat: 'Auf Wiederkauf',
+         anteil: 0.55, zwang: 0.34, ansehen: -3,
+         kopf: 'Verkauf mit Wiederkaufsrecht, vor dem Rat verbrieft',
+         sagt: 'Verkauft auf Wiederkauf, mit Brief und Siegel im Ratsbuch. Das '
+             + 'Geld ist heute da, das Haus steht von heute an fremdem Mann.',
+         ratSagt: 'Der Rat gibt es auf die Gant. Ausgerufen dreimal, zugeschlagen einmal.' },
+
+    3: { verb: 'hypothek', wort: 'HYPOTHEK', tat: 'Hypothek auf',
+         anteil: 0.70, zwang: 0.42, zins: 0.055, bleibt: true, ansehen: -1,
+         kopf: 'Eintrag ins Hypothekenbuch — das Gebaeude bleibt stehen',
+         sagt: 'Eingetragen im Hypothekenbuch. Das Gebaeude bleibt im Hof und '
+             + 'arbeitet weiter; der Zins laeuft jeden Michaeli mit.',
+         ratSagt: 'Zwangsversteigerung. Das Amtsgericht schlaegt zu, der Hof wird kleiner.' },
+
+    4: { verb: 'abbruch', wort: 'ABBRUCH', tat: 'Abbruch',
+         anteil: 0.85, zwang: 0.52, endgueltig: true, ansehen: -1,
+         kopf: 'Abbruch und Grundstueck — was hier weggeht, kommt nicht wieder',
+         sagt: 'Bagger, Bauschutt, Grundstueck verkauft. Der Quadratmeter '
+             + 'Innenstadt bringt mehr als das, was darauf steht.',
+         ratSagt: 'Die Bank verwertet. Der Abbruch wird nicht mehr gefragt, er wird angesetzt.' }
+  },
+
+  /* --------------------------------------------------------------------
      DER BODEN.  (Runde 6)
 
      Runde 5 ging mit diesem Satz zurueck: "DER BODEN IST NICHT ZU — Bauten

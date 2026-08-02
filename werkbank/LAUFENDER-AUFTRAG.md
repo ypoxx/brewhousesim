@@ -82,19 +82,30 @@ leer — ein erster Messversuch behauptete das, weil er `f.n` über
 `vorrat.faesser` summierte; die Liste führt aber **einzelne Fässer ohne
 Stückzahlfeld**. Richtig ist `faesser.length`.)
 
-**Die Kennzahl, drei Nenner nebeneinander** (c6daa5a, nur WEITER, bis zum Ende):
+**Die Latte, auf die SORGFÄLTIG gespielte Linie gerechnet** — das ist die Zahl,
+auf die es ankommt. Grundlage sind die vier 400-Wochen-Läufe des
+EICHUNG-Builders (`werkbank/schuss/eichung/preis-linie-e*.json`); die Aufsicht
+hat 1350 mit seinem eigenen Skript am Stand `7913ba8` nachgefahren und es
+**reproduziert** (3,39 → 0,16 bei ihm wie bei mir):
 
-| Epoche | Wochen | Kopfzeile behauptet | gegen umkämpft | Faktor | verschiedene Nenner |
-|---|---|---|---|---|---|
-| 1350 | 104 | 0,00× (max 23,25) | 0,00× (max 5,89) | — | 3 |
-| 1600 | 104 | 19,21× | **1,67×** | 11,5 | 3 |
-| 1884 | 102 | 199,54× | **4,42×** | 45,1 | 2 |
+| Epoche | Start → Ende | rho | Jahre unter 1× | Latte |
+|---|---|---|---|---|
+| 1350 | 3,39 → **0,16** | **−0,795** | **6 von 12** | reißt beide |
+| 1600 | 3,56 → 2,69 | **+0,165** | **0 von 14** | **besteht** |
+| 1884 | 5,09 → 1,40 | −0,367 | 2 von 14 | besteht |
+| 1970 | 3,44 → **0,06** | −0,572 | **9 von 11** | reißt das zweite |
 
-Der Nenner wechselt inzwischen (2–3 statt 1) — der EICHUNG-Builder hat daran
-gearbeitet, und am Schirm steht unten rechts schon eine Zeile „UMKÄMPFT Ablösung
-… · Kasse reicht −0,3×". **Aber die Kopfzeile behauptet weiter das Zehn- bis
-Fünfundvierzigfache** des ehrlichen Werts. Solange beide Zahlen nebeneinander
-stehen, ist die Latte nicht erfüllt, sondern nur besser dokumentiert.
+**Der Builder schließt „elf Läufe und kein Kippen" — das prüft nur die Richtung
+nach oben.** Die Latte ist zweiseitig. 1350 fällt um Faktor 21, 1970 um Faktor
+57. **Aber 1600 besteht sauber**, und das ist der Beleg, der bisher fehlte: das
+Vermögen verachtfacht sich, die Kennzahl bleibt im Band 1,44–3,17, weil die
+Preise 1,32× schneller wachsen als die Barschaft. **Die Aufgabe heißt deshalb
+nicht „die Wirtschaft reparieren", sondern 1350 und 1970 nach dem Muster von
+1600 bauen.**
+
+Die Kopfzeile behauptet daneben weiter das 2,1- bis 32,8-fache des ehrlichen
+Werts (von beiden Buildern unabhängig gemessen). Das ist eine **KERN**-Sache,
+Aufgabe #5, und liegt bei der Aufsicht.
 
 **Noch offen, keinem laufenden Builder zugewiesen** (Aufgaben #2–#4 der Liste):
 Boden und Ende der Wirtschaft · Entwicklernotiz in `name.js:1135` steht in allen
@@ -105,7 +116,14 @@ dieselben drei, 1970 hat nur zwei — eines **weniger**, nicht eines mehr).
 **Sachfund erledigt:** „1980 Pfand- und Rücknahmepflicht" ist raus,
 `preis-daten.js:642` nennt jetzt Verpackungsverordnung 1991 / Zwangspfand 2003.
 
-**Zwei Fallstricke, die je eine halbe Stunde gekostet haben:**
+**Drei Fallstricke, die je eine halbe Stunde gekostet haben:**
+
+0. **`pkill -f "<muster>"` erschlägt die eigene Shell**, wenn das Muster in ihrer
+   Kommandozeile steht — `pkill -f "http.server 8900"` aus einem Befehl heraus,
+   der genau diese Zeichenkette enthält, beendet den Aufrufer (Exit 144). Am
+   2. August zweimal passiert, das zweite Mal eine Minute nachdem ich es
+   aufgeschrieben hatte. Den Prozess über den Hafen finden:
+   `ss -lptn "sport = :8900"`.
 1. `BRAUHAUS.uhr.jahr` **gibt es nicht** — die Zeit steht in `welt.zeit`.
    `JSON.stringify` wirft `undefined` lautlos weg, also schrieb ein erster Lauf
    240 Wochen ohne Jahreszahl auf, und die Auswertung meldete „keine umkämpften

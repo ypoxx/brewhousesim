@@ -159,6 +159,18 @@
     return l.join(' · ');
   }
 
+  /* Was ein Bau dem Haus wieder wegnimmt, wenn er aus dem Hof geht. Nur was
+     dieses Haus selbst gebaut hat, hatte je 'wirke' gesehen — der geerbte
+     Stand steckt schon in den Grundzahlen von kern/welt.js. Trotzdem kostet
+     auch der geerbte Bau: wer den Malzboden versetzt, hat den Lagerplatz
+     nicht mehr. Deshalb wird immer abgezogen und unten abgefangen. */
+  function entwirke(a) {
+    var n = a.nutzen || {};
+    if (n.platz) B.welt.vorrat.plaetze = Math.max(4, B.welt.vorrat.plaetze - n.platz);
+    if (n.sud) B.welt.haus.sudJeWoche = Math.max(1, (B.welt.haus.sudJeWoche || 1) - n.sud);
+    if (n.rohstoff) B.welt.haus.rohstoff = Math.max(0, B.welt.haus.rohstoff - n.rohstoff);
+  }
+
   function kaufe(a) {
     if (hat(a.schluessel)) return;
     var p = preis(a);
@@ -176,9 +188,132 @@
     B.sende('zeichne', { grund: 'stadt:bau' });
   }
 
+  /* ====================================================================
+     DIE VERWERTUNG — der Boden unter der Kasse.  (Runde 7)
+
+     Die Auflage lautete: "DER BODEN DER WIRTSCHAFT FEHLT. Gebraucht wird ein
+     Boden: entweder ein Ende (Haus verloren, Chronik geschlossen), oder ein
+     Betrieb, der bei ehrlichem Liefern die laufenden Lasten traegt."
+
+     Ein Betrieb ist nicht die Sache dieses Stuecks — das Bier verkaufen
+     andere. Was diesem Stueck gehoert, ist der Hof, und der Hof ist das
+     einzige Vermoegen, das ein Brauhaus mit leerer Kasse noch hat. Also
+     baut DIE STADT den anderen Boden: Stein zurueck zu Muenze, in vier
+     Formen, die es wirklich gab (K.verwertung), und darunter das Ende.
+
+     Drei Stufen, in dieser Reihenfolge:
+       1. Der Spieler verwertet selbst — ein Zug mit Preisschild, der auch
+          bei null Pfennig noch da ist. Er kostet den Bau.
+       2. Steht die Kasse zu Michaeli im Minus, greift der Rat selbst zu,
+          und zwar zum Zwangssatz: er gibt weniger als der Markt.
+       3. Ist nichts mehr da, was er nehmen koennte, ist das Haus verloren.
+          Dann sagt es die Uhr, und die Chronik wird geschlossen.
+     ==================================================================== */
+
+  /* schluessel -> {jahr, betrag}. Nur Epoche 3 kennt das: dort bleibt das
+     Gebaeude stehen und traegt einen Zins. */
+  var belastet = {};
+
+  function verwertungsArt(nr) { return K.verwertung[nr || e()] || K.verwertung[1]; }
+
+  /* Was fuer diese Epoche noch zu Geld zu machen ist. In Epoche 3 faellt
+     weg, was schon im Hypothekenbuch steht. */
+  function verwertbar(nr) {
+    var ep = nr || e();
+    var art = verwertungsArt(ep);
+    return stehend(ep).filter(function (a) {
+      return !(art.bleibt && belastet[a.schluessel]);
+    });
+  }
+
+  function erloes(a, nr, zwang) {
+    var art = verwertungsArt(nr);
+    var satz = zwang ? art.zwang : art.anteil;
+    return Math.max(1, Math.round(preis(a, nr) * satz));
+  }
+
+  /* Nimmt den Bau aus dem Hof — oder laesst ihn stehen und schreibt ihn ins
+     Hypothekenbuch. Gibt den Betrag zurueck, der in die Kasse ging. */
+  function verwerte(a, zwang) {
+    if (!hat(a.schluessel)) return 0;
+    var ep = e();
+    var art = verwertungsArt(ep);
+    var betrag = erloes(a, ep, zwang);
+    var bleibt = !!art.bleibt && !zwang;
+
+    B.welt.nimm(betrag, (zwang ? art.ratSagt.split('.')[0] + ': ' : art.tat + ': ') + a.name);
+    if (bleibt) {
+      belastet[a.schluessel] = { jahr: B.welt.zeit.jahr, betrag: betrag };
+    } else {
+      delete gebaut[a.schluessel];
+      delete belastet[a.schluessel];
+      entwirke(a);
+    }
+    if (art.ansehen) {
+      B.welt.haus.ansehen = Math.max(0, (B.welt.haus.ansehen || 0) + art.ansehen);
+    }
+    B.welt.schreibe(
+      zwang
+        ? art.ratSagt + ' ' + a.name + ' geht fuer ' + B.welt.geld(betrag) + ' weg.'
+        : a.name + ' — ' + art.tat.toLowerCase() + ' gegeben, ' + B.welt.geld(betrag)
+          + '. ' + art.sagt,
+      'bau');
+    if (B.ton && B.ton.spiele) B.ton.spiele('stadt:bau');
+    return betrag;
+  }
+
+  function verwerteZug(a) {
+    verwerte(a, false);
+    B.sende('zeichne', { grund: 'stadt:bau' });
+  }
+
+  /* Michaeli. Steht die Kasse im Minus, greift der Rat zu — solange, bis sie
+     wieder ueber null steht oder der Hof leer ist. Zuerst geht das
+     billigste Stueck; der Rat nimmt, was am schnellsten Kaeufer findet. */
+  function ratGreiftZu() {
+    if (!B.welt.zeit || B.welt.zeit.ende) return;
+    var geholt = 0;
+    for (var runde = 0; runde < 12 && B.welt.haus.kasse < 0; runde++) {
+      var l = verwertbarZwang();
+      if (!l.length) break;
+      l.sort(function (x, y) { return preis(x) - preis(y); });
+      verwerte(l[0], true);
+      geholt++;
+    }
+    if (B.welt.haus.kasse < 0 && !verwertbarZwang().length) {
+      B.welt.schreibe(
+        'Der Hof ist leer, die Kasse steht bei ' + B.welt.geld(B.welt.haus.kasse)
+        + '. Es ist nichts mehr da, was ein Glaeubiger nehmen koennte.', 'ende');
+      if (B.uhr && B.uhr.beende) {
+        B.uhr.beende('haus-verloren',
+          'Das Brauhaus zum Anker ist verloren: kein Bargeld, kein Hof, kein Pfand. '
+          + 'Die Chronik der Familie ' + B.welt.haus.familie + ' wird geschlossen.');
+      }
+    }
+    if (geholt) B.sende('zeichne', { grund: 'stadt:bau' });
+  }
+
+  /* Beim Zwang gibt es kein Hypothekenbuch: das Amtsgericht nimmt auch, was
+     schon belastet ist. */
+  function verwertbarZwang() { return stehend(); }
+
+  /* Der Zins auf allem, was im Hypothekenbuch steht — jeden Michaeli. */
+  function zinsLaeuft() {
+    var art = verwertungsArt();
+    if (!art.zins) return;
+    var summe = 0;
+    Object.keys(belastet).forEach(function (s) {
+      if (hat(s)) summe += belastet[s].betrag; else delete belastet[s];
+    });
+    if (summe <= 0) return;
+    var zins = Math.max(1, Math.round(summe * art.zins));
+    B.welt.nimm(-zins, 'Hypothekenzins auf ' + B.welt.geld(summe));
+  }
+
   /* Der Hof, wie ihn die Vorfahren hinterlassen haben — oder was ?bau= sagt. */
   function setzeStand() {
     gebaut = {};
+    belastet = {};
     var wunsch = B.arg.roh ? B.arg.roh.bau : null;
     var liste;
     if (wunsch === 'keine') liste = [];
