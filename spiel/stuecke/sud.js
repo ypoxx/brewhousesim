@@ -1359,6 +1359,8 @@
        nichts stillschweigend mitwandert. */
     Z.fest = {};
     Z.guete = D.guete.start || 70;
+    Z.rueck = [];
+    Z.gestuft = 0;
   }
 
   B.stueck('sud', {
@@ -1426,8 +1428,9 @@
             + ' werden ausgeschlagen und aufs Fass gelegt.', 'sud');
         }
         buch('Braujahr geschlossen: ' + Z.jahrSude + ' Sude, ' + B.welt.menge(Z.jahrFass)
-          + ', ' + Z.jahrFehl + ' verloren.');
-        Z.jahrSude = 0; Z.jahrFass = 0; Z.jahrFehl = 0; Z.jahrAnzeige = 0;
+          + ', ' + Z.jahrFehl + ' verloren'
+          + (Z.gestuft ? ', ' + Z.gestuft + ' zurückgestuft.' : '.'));
+        Z.jahrSude = 0; Z.jahrFass = 0; Z.jahrFehl = 0; Z.jahrAnzeige = 0; Z.gestuft = 0;
       });
     },
 
