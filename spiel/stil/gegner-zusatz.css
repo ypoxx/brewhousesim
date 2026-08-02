@@ -225,15 +225,11 @@
    genau die Zuege, die bis Runde 2 im fuenften Block eines gescrollten
    Blattes lagen und dort nicht gefunden wurden.
    -------------------------------------------------------------------------- */
-.gg-zettel-gruppe {
-  position: absolute;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--s) * 5);
-  pointer-events: auto;
-}
 .gg-gzblock {
+  position: absolute;
+  width: 21%;
+  max-width: calc(var(--s) * 600);
+  pointer-events: auto;
   padding: calc(var(--s) * 6) calc(var(--s) * 9) calc(var(--s) * 8);
   border: calc(var(--s) * 2) solid var(--gg-warn);
   border-radius: calc(var(--s) * 3);
@@ -260,7 +256,7 @@
 }
 .gg-gzreihe { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 4); }
 .gg-gzreihe .knopf { flex: 1 1 calc(var(--s) * 120); }
-.gg-zettel-gruppe .knopf.gg-winzig { align-self: flex-start; margin-top: calc(var(--s) * 4); }
+
 
 /* Der Satz ueber den drei Geboten im Blatt. */
 .gg-gsatz {

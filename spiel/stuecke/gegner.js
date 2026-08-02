@@ -811,10 +811,10 @@
     merkeZug(h, 'uebernahme',
       zug.text.replace('eine kleine Brauerei im Nachbartal', Z.gebot.name)
       + ' Sie zahlt ' + B.welt.geld(preis) + ' für die Kessel. Mit ihnen geht der Ausschank '
-      + 'im ' + ziel.name + ' — Notartermin in ' + wochen + ' Wochen, bis dahin zählt das '
+      + 'in dieser Stadt: ' + ziel.name + '. Notartermin in ' + wochen + ' Wochen, bis dahin zählt das '
       + 'höhere Gebot.', ziel.ort, ziel.schluessel);
     B.welt.schreibe(Z.gebot.name + ' wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; '
-      + 'über den Ausschank im ' + ziel.name + ' wird beim Notar entschieden. '
+      + 'über den Ausschank in der Stadt — ' + ziel.name + ' — wird beim Notar entschieden. '
       + 'Ihr Gebot steht bei ' + B.welt.geld(Z.gebot.gebot) + '.', 'gegner');
     return true;
   }
@@ -829,7 +829,7 @@
     h.brauereien += 1;
     var m = mittelVon('jahresvereinbarung');
     binde(h, a, m, (g && g.verpasst ? g.verpasst : 'Der Notartermin ist gehalten.')
-      + ' ' + G.name + ' gehört der Gruppe, und der Ausschank im ' + a.name + ' mit.');
+      + ' ' + G.name + ' gehört der Gruppe, und der Ausschank in der Stadt — ' + a.name + ' — mit.');
     Z.gebotAusgang = { takt: Z.takt, wo: a.name, gelingt: false, still: true };
   }
 
@@ -1378,7 +1378,7 @@
     var st = gebotStufen()[nr];
     var a = adresse(G.k);
     if (!st || !a) return;
-    if (!B.welt.zahle(st.preis, 'Gebot beim Notar: Ausschank im ' + a.name, 'spieler')) {
+    if (!B.welt.zahle(st.preis, 'Gebot beim Notar: Ausschank ' + a.name, 'spieler')) {
       Z.meldung = 'Das Gebot ' + st.name + ' kostet ' + B.welt.geld(st.preis)
         + '. In der Kasse liegen ' + B.welt.geld(B.welt.haus.kasse) + '.';
       return neuZeichnen('gegner-knapp');
@@ -1407,8 +1407,8 @@
       B.welt.nimm(zurueck, 'Bietungssicherheit zurück vom Notar', 'gegner');
       var weg = st.preis - zurueck;
       if (h) binde(h, a, mittelVon('jahresvereinbarung'),
-        'Beim Notar unterschreiben die Erben an die Gruppe. Der Ausschank im '
-        + a.name + ' geht mit ' + name + ' an sie.');
+        'Beim Notar unterschreiben die Erben an die Gruppe. Der Ausschank in der '
+        + 'Stadt — ' + a.name + ' — geht mit ' + name + ' an sie.');
       B.welt.schreibe(g.verloren.replace('{geld}', B.welt.geld(weg))
         .replace('{haus}', a.name), 'gegner');
       B.ton.spiele('gegner:entreissen', { ort: a.ort });
@@ -2113,73 +2113,63 @@
      gar nicht. Was das Haus als Ganzes betrifft, steht deshalb jetzt im
      Bild, an ihrem Buero, mit der Frist daneben.
      -------------------------------------------------------------------- */
-  function zeichneGruppenzettel(fach) {
+  function zeichneAngebotZettel(fach) {
     var kon = haus('konzern');
-    if (!kon || kon.weg || (!Z.angebot && !Z.gebot)) return;
+    if (!Z.angebot || !kon || kon.weg) return;
     var s = sitzVon(kon);
     if (!B.orte.hole(s.ort)) return;
-    var zettel = B.el('div', 'gg-zettel-gruppe');
+    var ab = ep().angebot || {};
+    var rest = Math.max(0, (Z.angebot.bis || 0) - Z.takt);
+    var kasten = B.el('div', 'gg-gzblock gg-gzangebot');
+    kasten.appendChild(B.el('div', 'gg-gzkopf', 'Die Gruppe fragt an'));
+    kasten.appendChild(B.el('div', 'gg-gzsatz', B.welt.geld(Z.angebot.summe)
+      + ' für ein Viertel des Hauses · Antwort binnen ' + rest
+      + (rest === 1 ? ' Woche' : ' Wochen') + ', dann nimmt sie sich eine Adresse'));
+    var reihe = B.el('div', 'gg-gzreihe');
+    reihe.appendChild(B.knopf({
+      text: (ab.ja || 'Annehmen') + ' · ' + B.welt.geld(Z.angebot.summe),
+      zug: 'gegner:angebot-ja', preis: Z.angebot.summe,
+      titel: 'Unwiderruflich. ' + (ab.jasatz || ''),
+      tu: angebotAnnehmen
+    }));
+    reihe.appendChild(B.knopf({
+      text: ab.nein || 'Ausschlagen', zug: 'gegner:angebot-nein',
+      titel: 'Unwiderruflich. ' + (ab.neinsatz || ''),
+      tu: angebotAblehnen
+    }));
+    kasten.appendChild(reihe);
+    B.orte.setze(kasten, s.ort, { anker: 'rechts', dx: 3, dy: (s.dy || 0) + 17 });
+    kasten.setAttribute('data-frei', 'gegner');
+    fach.appendChild(kasten);
+  }
 
-    if (Z.angebot) {
-      var ab = ep().angebot || {};
-      var rest = Math.max(0, (Z.angebot.bis || 0) - Z.takt);
-      var kasten = B.el('div', 'gg-gzblock gg-gzangebot');
-      kasten.appendChild(B.el('div', 'gg-gzkopf', 'Die Gruppe fragt an'));
-      kasten.appendChild(B.el('div', 'gg-gzsatz', B.welt.geld(Z.angebot.summe)
-        + ' für ein Viertel des Hauses · Antwort binnen ' + rest
-        + (rest === 1 ? ' Woche' : ' Wochen')));
-      var reihe = B.el('div', 'gg-gzreihe');
-      reihe.appendChild(B.knopf({
-        text: (ab.ja || 'Annehmen') + ' · ' + B.welt.geld(Z.angebot.summe),
-        zug: 'gegner:angebot-ja', preis: Z.angebot.summe,
-        titel: 'Unwiderruflich. ' + (ab.jasatz || ''),
-        tu: angebotAnnehmen
+  /* Der Notarzettel haengt an dem Haus, um das gestritten wird — nicht an
+     ihrem Buero. Wer ihn liest, sieht im selben Blick, wo es liegt. */
+  function zeichneGebotZettel(fach) {
+    var g = ep().gebot;
+    if (!Z.gebot || !g) return;
+    var a = adresse(Z.gebot.k);
+    if (!a || !B.orte.hole(a.ort)) return;
+    var rest = Math.max(0, Z.gebot.bis - Z.takt);
+    var kb = B.el('div', 'gg-gzblock gg-gzgebot');
+    kb.appendChild(B.el('div', 'gg-gzkopf', g.verb + ' · ' + a.name));
+    kb.appendChild(B.el('div', 'gg-gzsatz', Z.gebot.name + ' wird verkauft. Ihr Gebot für '
+      + 'den Ausschank: ' + B.welt.geld(Z.gebot.gebot) + ' · Notartermin in ' + rest
+      + (rest === 1 ? ' Woche' : ' Wochen')));
+    var gr = B.el('div', 'gg-gzreihe');
+    gebotStufen().forEach(function (st) {
+      gr.appendChild(B.knopf({
+        text: st.name, zug: 'gegner:mitbieten:' + st.nr, preis: -st.preis,
+        aus: !B.welt.kann(st.preis),
+        titel: st.sagt + ' Geht es daneben, kommt die Bietungssicherheit zurück — '
+             + 'bis auf ' + Math.round((g.notarteil || 0.12) * 100) + ' vom Hundert Notarkosten.',
+        tu: function () { mitbieten(st.nr); }
       }));
-      reihe.appendChild(B.knopf({
-        text: ab.nein || 'Ausschlagen', zug: 'gegner:angebot-nein',
-        titel: 'Unwiderruflich. ' + (ab.neinsatz || ''),
-        tu: angebotAblehnen
-      }));
-      kasten.appendChild(reihe);
-      zettel.appendChild(kasten);
-    }
-
-    if (Z.gebot) {
-      var a = adresse(Z.gebot.k);
-      var g = ep().gebot;
-      if (a && g) {
-        var rest2 = Math.max(0, Z.gebot.bis - Z.takt);
-        var kb = B.el('div', 'gg-gzblock gg-gzgebot');
-        kb.appendChild(B.el('div', 'gg-gzkopf', g.verb + ' · ' + a.name));
-        kb.appendChild(B.el('div', 'gg-gzsatz', Z.gebot.name + ' wird verkauft. '
-          + 'Ihr Gebot für den Ausschank: ' + B.welt.geld(Z.gebot.gebot)
-          + ' · Notartermin in ' + rest2 + (rest2 === 1 ? ' Woche' : ' Wochen')));
-        var gr = B.el('div', 'gg-gzreihe');
-        gebotStufen().forEach(function (st) {
-          gr.appendChild(B.knopf({
-            text: st.name, zug: 'gegner:mitbieten:' + st.nr, preis: -st.preis,
-            aus: !B.welt.kann(st.preis),
-            titel: st.sagt + ' Geht es daneben, kommt die Bietungssicherheit zurück — '
-                 + 'bis auf ' + Math.round((g.notarteil || 0.12) * 100) + ' vom Hundert Notarkosten.',
-            tu: function () { mitbieten(st.nr); }
-          }));
-        });
-        kb.appendChild(gr);
-        kb.appendChild(B.knopf({
-          text: 'zeigen', zug: 'gegner:zeige-gebot', klasse: 'gg-winzig',
-          titel: 'Zeigt im Bild, um welches Haus beim Notar gestritten wird.',
-          tu: function () {
-            Z.zeigt = (Z.zeigt === a.ort) ? null : a.ort;
-            neuZeichnen('gegner-zeigen');
-          }
-        }));
-        zettel.appendChild(kb);
-      }
-    }
-
-    B.orte.setze(zettel, s.ort, { anker: 'oben', dx: (s.dx || 0), dy: (s.dy || 0) + 15 });
-    zettel.setAttribute('data-frei', 'gegner');
-    fach.appendChild(zettel);
+    });
+    kb.appendChild(gr);
+    B.orte.setze(kb, a.ort, { anker: 'oben', dy: 9 });
+    kb.setAttribute('data-frei', 'gegner');
+    fach.appendChild(kb);
   }
 
   /* --- der graue Wagen, der die Strasse faehrt -------------------------- */
@@ -2840,7 +2830,8 @@
       zeichneAdressen(fach);
       zeichneZugmarken(fach);
       zeichneKlage(fach);
-      zeichneGruppenzettel(fach);
+      zeichneAngebotZettel(fach);
+      zeichneGebotZettel(fach);
       zeichneWagen(fach);
       zeichneZeiger();
       zeichneBand(fach);

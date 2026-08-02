@@ -541,8 +541,8 @@ var GEGNER_DATEN = {
           { name: 'so, dass niemand mehr überlegt', faktor: 1.9, glueck: 0.88,
             sagt: 'Der Notar liest vor, und es wird unterschrieben.' }
         ],
-        gewonnen: 'Beim Notar unterschreiben die Erben an das Haus: der Ausschank im {haus} '
-                + 'gehört ihm. Die Kessel im Tal gehen trotzdem an die Gruppe.',
+        gewonnen: 'Beim Notar unterschreiben die Erben an das Haus: der Ausschank in der Stadt '
+                + '— {haus} — gehört ihm. Die Kessel im Tal gehen trotzdem an die Gruppe.',
         verloren: 'Die Erben unterschreiben an die Gruppe. Die Bietungssicherheit kommt zurück, '
                 + 'bis auf die Notarkosten — {geld} sind weg, und {haus} ist es auch.',
         verpasst: 'Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben.'
