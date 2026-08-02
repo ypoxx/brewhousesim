@@ -116,6 +116,17 @@ dieselben drei, 1970 hat nur zwei — eines **weniger**, nicht eines mehr).
 **Sachfund erledigt:** „1980 Pfand- und Rücknahmepflicht" ist raus,
 `preis-daten.js:642` nennt jetzt Verpackungsverordnung 1991 / Zwangspfand 2003.
 
+**Wo Welle 2b genau steht (17:50 UTC):** Runde 1 ist für alle vier Stücke durch,
+alle vier „besteht mit Auflage". Die **Nacharbeitsrunde** läuft: DIE EICHUNG
+fertig, DER GEGNER fertig, **DIE STADT und DER SUD schreiben noch**
+(`a723e696`, `afbfb7a2`). Beides sind **Builder, keine Kritiker** — die Aufsicht
+hat sie eine Stunde lang für Kritiker gehalten, weil sie in der Reihenfolge des
+Journals nach den Builder-Ergebnissen starteten. Wer im Journal wissen will, wer
+ein Agent ist, liest seine **erste Nutzerzeile**, nicht seine Position.
+
+Folge für die KERN-Änderung (Aufgabe #5): sie wartet, aber nicht weil ein
+Kritiker misst — sondern weil zwei Builder gerade in ihren Dateien schreiben.
+
 **Drei Fallstricke, die je eine halbe Stunde gekostet haben:**
 
 0. **`pkill -f "<muster>"` erschlägt die eigene Shell**, wenn das Muster in ihrer

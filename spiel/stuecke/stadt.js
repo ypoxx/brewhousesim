@@ -1322,35 +1322,51 @@
      87,5 Prozent der Hoehe an und waechst dafuer nicht.
      -------------------------------------------------------------------- */
   var bauhofSeite = 'bau';        /* 'bau' | 'geld' */
+  var seiteGewaehlt = false;      /* hat der Spieler selbst umgeschlagen? */
 
   function zeichneBauhof(kasten) {
     var ep = e();
     var art = verwertungsArt(ep);
+    var baubar = offen(ep).sort(function (a, b) { return a.grund - b.grund; });
     var geldListe = verwertbar(ep).sort(function (a, b) { return preis(b, ep) - preis(a, ep); });
+    var traegt = baubar.filter(function (a) { return B.welt.kann(preis(a, ep)); }).length;
+
+    /* Solange der Spieler nicht selbst umgeschlagen hat, schlaegt der Kasten
+       selbst auf die Seite, auf der noch etwas geht. Das ist die Antwort auf
+       "die Kasse steht auf null und das Spiel sagt nichts": bei leerer Kasse
+       liegt oben, was ein leeres Haus noch tun kann. */
+    if (!seiteGewaehlt) bauhofSeite = (!traegt && geldListe.length) ? 'geld' : 'bau';
     if (bauhofSeite === 'geld' && !geldListe.length) bauhofSeite = 'bau';
     var geld = bauhofSeite === 'geld';
-    var liste = geld ? geldListe.slice(0, 5)
-                     : offen(ep).sort(function (a, b) { return a.grund - b.grund; }).slice(0, 5);
+    var liste = geld ? geldListe.slice(0, 5) : baubar.slice(0, 5);
 
     B.leere(kasten);
 
     var kopf = B.el('div', 'kopf');
     var reiter = B.el('span', 'seiten');
     reiter.appendChild(B.knopf({
-      text: 'BAUHOF', zug: 'stadt:seite:bau', klasse: 'stadt-seite' + (geld ? '' : ' auf'),
+      text: 'BAUHOF', zug: 'stadt:bau:seite', klasse: 'stadt-seite' + (geld ? '' : ' auf'),
       titel: 'Was in dieser Zeit im Hof noch zu bauen ist.',
-      tu: function () { bauhofSeite = 'bau'; B.sende('zeichne', { grund: 'stadt:bau' }); }
+      tu: function () {
+        bauhofSeite = 'bau'; seiteGewaehlt = true;
+        B.sende('zeichne', { grund: 'stadt:bau' });
+      }
     }));
     reiter.appendChild(B.knopf({
       text: art.wort, zug: 'stadt:' + art.verb, klasse: 'stadt-seite' + (geld ? ' auf' : ''),
       aus: !geldListe.length,
       titel: art.kopf + '. ' + art.sagt,
-      tu: function () { bauhofSeite = 'geld'; B.sende('zeichne', { grund: 'stadt:bau' }); }
+      tu: function () {
+        bauhofSeite = 'geld'; seiteGewaehlt = true;
+        B.sende('zeichne', { grund: 'stadt:bau' });
+      }
     }));
     kopf.appendChild(reiter);
     kopf.appendChild(B.el('span', 'zahl', geld
       ? art.kopf
-      : stehend(ep).length + ' Bauten im Hof · gebaut wird einmal, es steht auch für die Enkel'));
+      : (traegt ? stehend(ep).length + ' Bauten im Hof · gebaut wird einmal, es steht auch für die Enkel'
+                : 'Die Kasse trägt keinen dieser Bauten. Was der Hof wert ist, steht unter '
+                  + art.wort + '.')));
     kasten.appendChild(kopf);
 
     var reihe = B.el('div', 'reihe');
@@ -1488,6 +1504,11 @@
     epoche: function (d) {
       var neu = d.epoche || e();
       jahrZeit = Date.now();
+      /* Die naechste Amtszeit erbt den Hof, nicht die Wahl des Kastens — und
+         eine Hypothek des vorigen Jahrhunderts steht in keinem Buch mehr. */
+      seiteGewaehlt = false;
+      bauhofSeite = 'bau';
+      belastet = {};
       Object.keys(gebaut).forEach(function (s) {
         var a = K.aufbauten.filter(function (x) { return x.schluessel === s; })[0];
         if (!a) return;
