@@ -44,9 +44,7 @@
     ['sud:sperre',      'Eine Charge wird gesperrt. Ein Klebeband, ein Stempel, ein Anruf. '
                       + 'Nur 1970.'],
     ['sud:freigabe',    'Eine gesperrte Charge wird freigegeben — Unterschrift, Telefonhörer auf.'],
-    ['sud:verschneiden', 'Zwei Tanks werden zusammengefahren: Pumpe an, Rauschen im Rohr.'],
-    ['sud:rueckruf',    'Ein Rückläufer kommt an der Rampe an: Rollcontainer auf Beton, '
-                      + 'Flaschen klirren im Kasten, ein Lieferschein wird abgezeichnet. Nur 1970.']
+    ['sud:verschneiden', 'Zwei Tanks werden zusammengefahren: Pumpe an, Rauschen im Rohr.']
   ];
 
   B.wage('sud.ton', function () {

@@ -76,9 +76,6 @@
     guete: 70,
     anstichWoche: -1,
     nr: 0,                /* laufende Nummer der Bottiche                     */
-    rueck: [],            /* freigegebene Chargen, die beim Handel stehen     */
-    brettZu: true,        /* liegt das Brett als Reiter? (Vorgabestand: ja)   */
-    gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
     jahrSude: 0, jahrFass: 0, jahrFehl: 0, jahrAnzeige: 0,
     gesamtSude: 0, gesamtFass: 0,
@@ -159,113 +156,6 @@
   }
 
   /* ======================================================================
-     WAS FUER EIN BIER HERAUSKOMMT — die Folge, die man BEIM WIRT wiedersieht
-
-     Runde 1 hat die Entscheidung gebaut; ihre Folgen blieben im Keller
-     (Haltbarkeit, Gaerwochen, Bottiche). Beim Wirt war nichts davon zu
-     sehen — kein fremdes Stueck las je etwas von diesem hier.
-
-     Die Naht, die es dafuer schon gab, ist das FASS: der Gaerkeller nimmt es
-     aus dem Lager und legt es zurueck und setzt dabei ohnehin k, stufe,
-     zeichen, reife und haltbar wieder auf. Genau dort wird jetzt entschieden,
-     WELCHE SORTE im Fass liegt.
-
-       DIE FUHRE bestellt (Duennbier · Grutbier · Starkbier),
-       DER SUD sagt, was die Pfanne davon haelt.
-
-     Die Zahl heisst `hoechst` und geht NIE nach oben — dieses Stueck
-     deckelt, es hebt nicht. Der Vorgabestand jeder Epoche deckelt auf 2,
-     also genau auf das Bier des Hauses: wer das Brett nie aufschlaegt,
-     verliert dadurch keinen Pfennig. Nach unten deckeln nur die billigen
-     Abkuerzungen, nach oben oeffnet nur die bezahlte Festlegung.
-
-     FUHRE_DATEN wird hier NUR GELESEN (so, wie fuhre.js seinerseits
-     PREIS_DATEN liest). Faellt es aus, faellt die Deckelung still aus und
-     nichts bricht.
-     ====================================================================== */
-
-  function fuhreEpoche() {
-    var F = (typeof FUHRE_DATEN !== 'undefined') ? FUHRE_DATEN : null;
-    if (!F || !F.epochen) return null;
-    return F.epochen[B.welt.zeit.epoche] || null;
-  }
-
-  /* Die Leiter der Epoche, von unten nach oben. Der Notsud (Kofent,
-     Nachbier, Einfachbier, Handelsmarke) steht nicht darauf: er ist kein
-     Rang, sondern ein Ausweg — er faehrt an Bannmeile und Regalmeter
-     vorbei, und wer zurueckgestuft wird, landet nie dort. */
-  function leiter() {
-    var q = fuhreEpoche();
-    if (!q || !q.sorten) return [];
-    return q.sorten.filter(function (s) { return !s.not; })
-      .slice().sort(function (a, b) { return (a.stufe || 0) - (b.stufe || 0); });
-  }
-
-  function istNotsud(k) {
-    var q = fuhreEpoche();
-    if (!q || !q.sorten || !k) return false;
-    for (var i = 0; i < q.sorten.length; i++) {
-      if (q.sorten[i].k === k) return !!q.sorten[i].not;
-    }
-    return false;
-  }
-
-  /* Die hoechste Sorte auf oder unter dieser Stufe. */
-  function sorteAufStufe(st) {
-    var l = leiter(), tref = null;
-    for (var i = 0; i < l.length; i++) {
-      if (l[i].stufe <= st && (!tref || l[i].stufe > tref.stufe)) tref = l[i];
-    }
-    return tref || l[0] || null;
-  }
-
-  function obersteStufe() {
-    var l = leiter();
-    return l.length ? l[l.length - 1].stufe : 3;
-  }
-
-  /* Das Minimum ueber alle Achsen: eine einzige Abkuerzung genuegt, um das
-     Bier zu deckeln. Vier Achsen, die einander aufwiegen, waeren keine
-     Entscheidung, sondern eine Rechenaufgabe. */
-  function hoechsteStufe() {
-    var h = 99;
-    achsen().forEach(function (a) {
-      var o = gewaehlt(a);
-      if (o && o.hoechst !== undefined && o.hoechst < h) h = o.hoechst;
-    });
-    return h === 99 ? obersteStufe() : h;
-  }
-
-  /* Was aus diesem Bottich wirklich wird — oder null, wenn es bleibt, wie
-     es bestellt war. */
-  function ausschlagSorte(b) {
-    if (!b || b.notsud) return null;
-    var hoch = (b.hoechst === undefined) ? hoechsteStufe() : b.hoechst;
-    var st = b.stufe || 2;
-    if (st <= hoch) return null;
-    var z = sorteAufStufe(hoch);
-    if (!z || z.stufe >= st) return null;
-    return z;
-  }
-
-  /* Welche Stufen ein Haus ueberhaupt fuehrt — aus der Artenliste der
-     FUHRE, gelesen, nicht geraten. */
-  function artStufen(a) {
-    var F = (typeof FUHRE_DATEN !== 'undefined') ? FUHRE_DATEN : null;
-    if (!F || !F.arten || !a) return null;
-    var d = F.arten[a.art] || F.arten.wirtshaus;
-    return d ? d.stufen : null;
-  }
-
-  function nehmen(stufe) {
-    var l = B.welt.adressenJetzt().filter(function (a) {
-      var st = artStufen(a);
-      return st && st.indexOf(stufe) >= 0;
-    });
-    return l;
-  }
-
-  /* ======================================================================
      DER GAERKELLER
      ====================================================================== */
 
@@ -317,7 +207,6 @@
          Sonst waere 1350 der Gaerkeller ewig leer: Grutbier liegt nicht,
          gehopftes Bier liegt eine Woche laenger. Genau das ist die
          Entscheidung dieser Epoche. */
-      var hoch = hoechsteStufe();
       var gruppen = {};
       for (var i = 0; i < f.length; i++) {
         var x = f[i];
@@ -327,12 +216,8 @@
            Verfahren etwas an ihm aendert — sonst gaelte "mit Weizen
            gestreckt" nur fuer die Sorten, die ohnehin liegen, und der Spieler
            bekaeme nicht, was auf dem Knopf steht. Er wird dann in derselben
-           Woche wieder ausgeschlagen; es kostet keinen Tag.
-           Und er geht hindurch, wenn die Pfanne ihn nicht traegt: sonst
-           bliebe die Deckelung genau dort wirkungslos, wo sie zaehlt —
-           beim Grutbier, das ohne Hopfen kein Starkbier wird. */
-        var deckelt = ((x.stufe || 2) > hoch) && !istNotsud(x.k);
-        if (wochen <= 0 && !w.mehr && w.haltbar === 1 && !deckelt) continue;
+           Woche wieder ausgeschlagen; es kostet keinen Tag. */
+        if (wochen <= 0 && !w.mehr && w.haltbar === 1) continue;
         if (wochen > 0 && B.welt.fassAlter(x) >= wochen) continue;   /* schon reif */
         var g = x.k || x.sorte || 'sud';
         if (!gruppen[g]) gruppen[g] = [];
@@ -389,12 +274,6 @@
           reifAb: woManifest() + gaerWochen,
           haltbarPur: pur,
           faktor: wirk.haltbar,
-          /* Die Deckelung wird an der PFANNE entschieden, nicht am Fasshahn:
-             was einmal ohne Hopfen kocht, wird durch einen spaeteren
-             Hopfenbrief nicht haltbar. Sie steht deshalb am Bottich und
-             wandert mit ihm. */
-          hoechst: hoch,
-          notsud: istNotsud(muster.k),
           verfahren: verfahrensKurz(wirk === w),
           notdurft: (wirk !== w),
           gesperrt: false,
@@ -413,16 +292,6 @@
     } catch (e) { B.klage('sud.sauge', e); }
     finally { Z.imGange = false; }
     return genommen;
-  }
-
-  /* Ansaugen und, was schon fertig ist, gleich wieder ausschlagen. Ohne den
-     zweiten Schritt laege ein Sud ohne Gaerwochen bis zum naechsten
-     Wochenwechsel im Bottich und waere nicht lieferbar — das waere eine
-     Verschlechterung, und dieses Stueck darf keine einbauen. */
-  function saugeUndSchlage() {
-    var n = sauge();
-    if (n) reifePruefen();
-    return n;
   }
 
   /* Genau diese Faesser aus dem Lagerkeller nehmen — ueber die API des Kerns,
@@ -450,56 +319,20 @@
     var raum = B.welt.vorrat.plaetze - B.welt.vorrat.faesser.length;
     if (raum <= 0) return false;
     var n = Math.min(b.fass, raum);
-
-    /* HIER wird entschieden, was fuer ein Bier es geworden ist. */
-    var ziel = ausschlagSorte(b);
-    var sorte = ziel ? ziel.name : b.sorte;
-    /* Die Sortenliste der FUHRE fuehrt `haltbar` als REINE Fasszeit und
-       stempelt beim Brauen `reife + haltbar` ans Fass. Der Gaerkeller rechnet
-       die Reife wieder heraus (haltbarPur); eine neue Sorte bringt ihre reine
-       Zeit dagegen schon mit — hier darf nichts abgezogen werden. */
-    var pur = ziel ? Math.max(1, ziel.haltbar || 6) : b.haltbarPur;
-
-    var gelegt = B.welt.legeEin(sorte, n);
+    var gelegt = B.welt.legeEin(b.sorte, n);
     if (!gelegt) return false;
     var f = B.welt.vorrat.faesser;
-    var haltbar = Math.max(1, Math.round(pur * (b.faktor || 1)));
+    var haltbar = Math.max(1, Math.round(b.haltbarPur * (b.faktor || 1)));
     for (var i = f.length - gelegt; i < f.length; i++) {
-      f[i].k = ziel ? ziel.k : b.k;
-      f[i].stufe = ziel ? ziel.stufe : b.stufe;
-      f[i].zeichen = ziel ? ziel.zeichen : b.zeichen;
+      f[i].k = b.k; f[i].stufe = b.stufe; f[i].zeichen = b.zeichen;
       f[i].reife = 0;                       /* reif — die Gaerung ist vorbei */
       f[i].haltbar = haltbar;
       f[i].sudDurch = true;                 /* nie ein zweites Mal ansaugen */
     }
     b.fass -= gelegt;
     B.welt.protokolliere({ wer: 'spieler',
-      was: B.welt.menge(gelegt) + ' ' + sorte + ' aus dem Gärkeller ins Lager'
-         + (ziel ? ' — angesetzt war ' + b.sorte : ''),
+      was: B.welt.menge(gelegt) + ' ' + b.sorte + ' aus dem Gärkeller ins Lager',
       preis: 0, menge: 0 });
-
-    /* Ein Bottich, der nicht auf einmal ins Lager passt, kommt in mehreren
-       Wochen zurueck. Gezaehlt und aufgeschrieben wird er trotzdem EINMAL —
-       sonst stehen im Sudbuch vier Zeilen fuer einen Sud. */
-    if (ziel && !b.gemeldetStufe) {
-      b.gemeldetStufe = true;
-      Z.gestuft++;
-      buch('Bottich ' + b.nr + ': ' + b.sorte + ' schlägt als ' + ziel.name + ' aus — '
-        + 'die Pfanne trägt es nicht');
-      if (!Z.gemeldet.gestuft) {
-        Z.gemeldet.gestuft = true;
-        var fort = nehmen(b.stufe || 2).filter(function (a) {
-          var st = artStufen(a);
-          return st && st.indexOf(ziel.stufe) < 0;
-        });
-        B.welt.schreibe('Der Bottich war als ' + b.sorte + ' angesetzt und schlägt als '
-          + ziel.name + ' aus: das Verfahren des Hauses trägt nicht höher. '
-          + (fort.length
-              ? fort.map(function (a) { return a.name; }).join(' und ')
-              + (fort.length === 1 ? ' nimmt' : ' nehmen') + ' es damit nicht mehr.'
-              : 'Am Fass sieht man es, beim Wirt am Preis.'), 'sud');
-      }
-    }
     return true;
   }
 
@@ -585,8 +418,7 @@
     }
     Z.guete = B.grenze(Z.guete - (a.gueteAb || 0), 0, 100);
 
-    buch(a.wer + ' war da — ' + weg + ' ' + rname
-      + (bot ? ' und ' + B.welt.menge(bot) + ' aus dem Gärkeller' : '') + ' weg');
+    buch(a.wer + ' war da — ' + weg + ' ' + rname + ' und ' + B.welt.menge(bot) + ' weg');
     B.welt.schreibe(a.satz + ' Es kostet ' + weg + ' ' + rname
       + (bot ? ' und ' + B.welt.menge(bot) + ' aus dem Gärkeller' : '')
       + ' — keinen Pfennig. Wer kein Geld hat, zahlt trotzdem.', 'sud');
@@ -594,48 +426,6 @@
       preis: 0, menge: bot });
     B.ton.spiele('sud:anzeige', { ort: 'sudhaus' });
     return true;
-  }
-
-  /* ----------------------------------------------------------------------
-     DER RUECKLAEUFER — 1970.
-
-     Ohne ihn war "Charge freigeben" streng besser als "Charge verschneiden":
-     das eine kostete sechs Punkte Guete, das andere ein Drittel des Tanks.
-     Eine Wahl mit genau einer richtigen Antwort ist keine Wahl. Der Handel
-     misst jetzt nach — spaeter, ohne den Spieler, mit einer
-     Wahrscheinlichkeit, die an der Abweichung haengt, die er selbst
-     durchgewinkt hat. Bezahlt wird in BIER, nicht in Muenze.
-     ---------------------------------------------------------------------- */
-  function fuelle(vorlage, x) {
-    return String(vorlage || '')
-      .replace('{nr}', x.nr).replace('{ab}', x.ab)
-      .replace('{menge}', B.welt.menge(x.weg || x.menge));
-  }
-
-  function rueckPruefen() {
-    var ch = ep().charge, r = ch && ch.rueck;
-    if (!r || !Z.rueck.length) return false;
-    var jetzt = woManifest(), etwas = false;
-    for (var i = Z.rueck.length - 1; i >= 0; i--) {
-      var x = Z.rueck[i];
-      if (jetzt < x.faellig) continue;
-      Z.rueck.splice(i, 1);
-      etwas = true;
-      if (!B.wuerfel.trifft(Math.min(0.7, (x.ab || 0) / 100 * 2.2))) {
-        buch(fuelle(r.durch, x));
-        continue;
-      }
-      x.weg = Math.max(1, Math.round(x.menge * 0.5));
-      var raus = B.sud.nimmHeraus(x.weg, { aeltestes: true });
-      x.weg = raus.length || x.weg;
-      Z.guete = B.grenze(Z.guete - 8, 0, 100);
-      buch(r.wer + ': Charge ' + x.nr + ' zurück — ' + B.welt.menge(x.weg) + ' aus dem Lager');
-      B.welt.schreibe(fuelle(r.zurueck, x), 'sud');
-      B.welt.protokolliere({ wer: 'gegner',
-        was: r.wer + ': Charge ' + x.nr + ' zurückgewiesen', preis: 0, menge: x.weg });
-      B.ton.spiele('sud:rueckruf', { ort: 'keller' });
-    }
-    return etwas;
   }
 
   /* ======================================================================
@@ -811,18 +601,13 @@
     Z.kaufNr++;
     B.ton.spiele('sud:bau', { ort: 'sudhaus' });
     buch(gk().kauf.text + ' — jetzt ' + B.welt.menge(plaetze()) + ' Gärraum');
-    saugeUndSchlage();
+    sauge();
     B.sende('zeichne', { grund: 'sud:gaerraum' });
   }
 
   function chargeFrei(b) {
     b.gesperrt = false; b.geprueft = true;
     Z.guete = B.grenze(Z.guete - 6, 0, 100);
-    var r = ep().charge && ep().charge.rueck;
-    if (r) {
-      Z.rueck.push({ nr: b.nr, ab: b.streuung, menge: b.fass,
-        faellig: woManifest() + B.wuerfel.ganz(r.frist[0], r.frist[1]) });
-    }
     buch('Charge ' + b.nr + ' freigegeben — der Handel misst nach');
     B.welt.schreibe('Charge ' + b.nr + ' geht mit ±' + b.streuung + ' % hinaus. '
       + 'Wenn der Einkauf nachmisst, steht das Haus in seinem Buch.', 'sud');
@@ -895,18 +680,6 @@
       else if (o.einmal && !bezahlt(a, o)) marke.appendChild(B.el('span', 'sud-schild', 'einmal zu zahlen'));
       else if (o.schild) marke.appendChild(B.el('span', 'sud-schild', o.schild));
 
-      /* Das Preisschild dieses Stuecks: was fuer ein Bier dabei herauskommt.
-         Es steht vor der Haltbarkeit, weil man es beim Wirt wiedersieht und
-         die Haltbarkeit nur im Keller. */
-      if (o.hoechst !== undefined) {
-        var zs = sorteAufStufe(o.hoechst);
-        if (zs) {
-          var traegtAlles = o.hoechst >= obersteStufe();
-          marke.appendChild(B.el('span', 'sud-rang' + (traegtAlles ? ' hoch' : ' tief'),
-            (traegtAlles ? 'trägt ' : 'höchstens ') + zs.name));
-        }
-      }
-
       var wk = o.wirkung || {};
       var wirk = [];
       if (wk.haltbar && wk.haltbar !== 1) wirk.push('Haltbarkeit ×' + String(wk.haltbar).replace('.', ','));
@@ -952,21 +725,12 @@
               + 'ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen '
               + 'lässt, füllt diesen Keller.')));
     }
-    /* Hoechstens acht Gefaesse im Bild. In 1970 standen sonst zwanzig Tanks
-       untereinander und schoben die Unterkante des Bretts von 58 auf 87 % der
-       Buehne — dorthin, wo der GEGNER seine Preisschilder am Marktstand hat.
-       Ein Brett, dessen Hoehe vom Betrieb abhaengt, hat keine Flaeche. Am
-       Band haengt kein einziger Knopf; es geht also kein Zug verloren. */
-    var SICHTBAR = 8;
-    Z.bottiche.slice(0, SICHTBAR).forEach(function (b) {
+    Z.bottiche.forEach(function (b) {
       var rest = Math.max(0, b.reifAb - jetzt);
-      var ziel = ausschlagSorte(b);
       var bt = B.el('div', 'sud-bottich s' + b.stufe
-        + (b.gesperrt ? ' gesperrt' : (rest ? '' : ' reif'))
-        + (ziel ? ' gestuft' : ''));
+        + (b.gesperrt ? ' gesperrt' : (rest ? '' : ' reif')));
       bt.appendChild(B.el('span', 'sud-bnr', String(b.nr)));
       bt.appendChild(B.el('span', 'sud-bsorte', b.sorte));
-      if (ziel) bt.appendChild(B.el('span', 'sud-bziel', '→ ' + ziel.name));
       bt.appendChild(B.el('span', 'sud-bmenge', B.welt.menge(b.fass)));
       var lagerVoll = B.welt.vorrat.faesser.length >= B.welt.vorrat.plaetze;
       bt.appendChild(B.el('span', 'sud-brest',
@@ -974,37 +738,10 @@
                    : (rest ? ('reif in ' + rest + (rest === 1 ? ' Woche' : ' Wochen'))
                            : (lagerVoll ? 'reif — kein Platz im Lager' : 'schlägt aus'))));
       bt.title = b.sorte + ' · ' + b.verfahren + ' · hält am Fass '
-        + Math.round((ziel ? Math.max(1, ziel.haltbar || 6) : b.haltbarPur)
-                     * (b.faktor || 1)) + ' Wochen'
-        + (ziel ? ' — angesetzt als ' + b.sorte + ', schlägt als ' + ziel.name + ' aus' : '');
+        + Math.round(b.haltbarPur * (b.faktor || 1)) + ' Wochen';
       band.appendChild(bt);
     });
-    if (Z.bottiche.length > SICHTBAR) {
-      var weiter = Z.bottiche.length - SICHTBAR, restFass = 0;
-      Z.bottiche.slice(SICHTBAR).forEach(function (b) { restFass += b.fass; });
-      band.appendChild(B.el('div', 'sud-mehr', '… und ' + weiter + ' weitere '
-        + (weiter === 1 ? g.gefaess : g.gefaesse) + ' mit ' + B.welt.menge(restFass)));
-    }
     kasten.appendChild(band);
-
-    /* 1970: was draussen steht und noch nicht nachgemessen ist. Ein
-       gedeckter Zug des Handels, mit Datum — kein Ueberfall aus dem Nichts. */
-    var rr = ep().charge && ep().charge.rueck;
-    if (rr && Z.rueck.length) {
-      var rk = B.el('div', 'sud-rueck');
-      rk.appendChild(B.el('b', 'sud-achsname', rr.name));
-      rk.appendChild(zeile('sud-achssatz', rr.satz));
-      var rl = Z.rueck.slice().sort(function (x, y) { return x.faellig - y.faellig; });
-      rl.slice(0, 3).forEach(function (x) {
-        var w = Math.max(0, x.faellig - jetzt);
-        rk.appendChild(zeile('sud-rueckzeile', 'Charge ' + x.nr + ' · ' + B.welt.menge(x.menge)
-          + ' · ±' + x.ab + ' % · ' + (w ? 'nachgemessen in ' + w + (w === 1 ? ' Woche' : ' Wochen')
-                                          : 'wird jetzt nachgemessen')));
-      });
-      if (rl.length > 3) rk.appendChild(zeile('sud-mehr', '… und ' + (rl.length - 3)
-        + ' weitere Chargen stehen draußen'));
-      kasten.appendChild(rk);
-    }
 
     var reihe = B.el('div', 'sud-werkzeug');
     var p = kaufPreis();
@@ -1026,10 +763,11 @@
       var ck = B.el('div', 'sud-chargen');
       ck.appendChild(B.el('b', 'sud-achsname', ch.name));
       ck.appendChild(zeile('sud-achssatz', ch.satz));
-      gesperrt.slice(0, 2).forEach(function (b) {
+      gesperrt.forEach(function (b) {
         var z = B.el('div', 'sud-chargenzeile');
         z.appendChild(B.el('span', 'sud-bnr', String(b.nr)));
-        z.appendChild(B.el('span', 'sud-bsorte', B.welt.menge(b.fass) + ' · ±' + b.streuung + ' %'));
+        z.appendChild(B.el('span', 'sud-bsorte',
+          b.sorte + ' · ' + B.welt.menge(b.fass) + ' · ±' + b.streuung + ' %'));
         z.appendChild(knopf({
           text: ch.frei.text, zug: 'sud:charge-frei:' + b.nr, klasse: 'sud-tat klein',
           titel: ch.frei.titel, tu: function () { chargeFrei(b); }
@@ -1041,73 +779,9 @@
         }));
         ck.appendChild(z);
       });
-      /* Drei auf einmal — mehr passt nicht ins Brett, und der Braumeister gibt
-         nach vier Wochen ohnehin von selbst frei. */
-      if (gesperrt.length > 2) ck.appendChild(zeile('sud-mehr',
-        '… und ' + (gesperrt.length - 2) + ' weitere Chargen stehen gesperrt.'));
       kasten.appendChild(ck);
     }
 
-    fach.appendChild(kasten);
-  }
-
-  /* ----------------------------------------------------------------------
-     WAS BEIM WIRT ANKOMMT.
-
-     Die Leiter der Epoche, Sprosse fuer Sprosse: wie das Bier heisst, wie
-     viele Haeuser es fuehren, und ob die Pfanne es traegt. Ohne dieses Feld
-     ist die Deckelung eine Zahl im Quelltext; mit ihm ist sie eine
-     Entscheidung, die man vor dem Klicken lesen kann.
-     ---------------------------------------------------------------------- */
-  function zeichneWirte(fach) {
-    var l = leiter();
-    if (!l.length) return;                 /* ohne die Sortenliste kein Urteil */
-    var w = ep().wirte || { name: 'WAS BEIM WIRT ANKOMMT', satz: '' };
-    var hoch = hoechsteStufe();
-    var alle = B.welt.adressenJetzt();
-    var oben = sorteAufStufe(hoch);
-
-    var kasten = B.el('div', 'sud-wirte');
-    var kopf = B.el('div', 'sud-achskopf');
-    kopf.appendChild(B.el('b', 'sud-achsname', w.name));
-    kopf.appendChild(B.el('span', 'sud-frage', oben ? 'höchstens ' + oben.name : ''));
-    kasten.appendChild(kopf);
-    kasten.appendChild(zeile('sud-achssatz', w.satz));
-
-    l.forEach(function (s) {
-      var geht = s.stufe <= hoch;
-      var nimmt = nehmen(s.stufe);
-      var r = B.el('div', 'sud-wzeile' + (geht ? '' : ' aus'));
-      r.appendChild(B.el('i', 'sud-wzeichen s' + s.stufe, s.zeichen));
-      r.appendChild(B.el('span', 'sud-wsorte', s.name));
-      r.appendChild(B.el('span', 'sud-wzahl',
-        nimmt.length + ' von ' + alle.length + (alle.length === 1 ? ' Haus' : ' Häusern')));
-      r.appendChild(B.el('span', 'sud-wurteil', geht
-        ? 'trägt die Pfanne'
-        : 'schlägt als ' + (oben ? oben.name : '—') + ' aus'));
-      r.title = nimmt.length ? nimmt.map(function (a) { return a.name; }).join(' · ')
-                             : 'Kein Haus in dieser Zeit führt es.';
-      kasten.appendChild(r);
-    });
-
-    /* Wer wegfaellt, steht mit Namen da. Eine Zahl merkt sich niemand. */
-    var spitze = l[l.length - 1];
-    if (spitze && spitze.stufe > hoch) {
-      var fort = nehmen(spitze.stufe).filter(function (a) {
-        var st = artStufen(a);
-        return st && st.indexOf(hoch) < 0;
-      });
-      if (fort.length) {
-        kasten.appendChild(zeile('sud-warnung',
-          fort.map(function (a) { return a.name; }).join(' und ')
-          + (fort.length === 1 ? ' führt' : ' führen') + ' nur ' + spitze.name
-          + ' und bekomm' + (fort.length === 1 ? 't' : 'en') + ' vom Anker nichts.'));
-      }
-    }
-    if (Z.gestuft) {
-      kasten.appendChild(zeile('sud-fussnote', 'Dieses Braujahr ' + Z.gestuft
-        + (Z.gestuft === 1 ? ' Bottich' : ' Bottiche') + ' zurückgestuft.'));
-    }
     fach.appendChild(kasten);
   }
 
@@ -1139,7 +813,7 @@
       tu: fuehreHefe
     }));
     reihe.appendChild(knopf({
-      text: 'Jüngstes Fass anbrechen · +' + (D.guete.anstichJung || 14),
+      text: a.text + ' · jüngstes Fass · +' + (D.guete.anstichJung || 14),
       zug: 'sud:anstich-jung', klasse: 'sud-tat',
       titel: a.titel + ' Das jüngste Fass gibt das kräftigste Zeug — und es wäre noch '
            + 'lange zu verkaufen gewesen. Kostet ' + B.welt.menge(1) + '.',
@@ -1147,7 +821,7 @@
       tu: function () { anstich(true); }
     }));
     reihe.appendChild(knopf({
-      text: 'Ältestes Fass anbrechen · +' + (D.guete.anstichAlt || 6),
+      text: a.text + ' · ältestes Fass · +' + (D.guete.anstichAlt || 6),
       zug: 'sud:anstich-alt', klasse: 'sud-tat',
       titel: a.titel + ' Das älteste Fass wäre ohnehin bald verdorben — dafür gibt es nur '
            + 'die Hälfte her. Kostet ' + B.welt.menge(1) + '.',
@@ -1156,9 +830,10 @@
     }));
     kasten.appendChild(reihe);
     kasten.appendChild(zeile('sud-fussnote', frei
-      ? (Z.bottiche.length ? 'Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Fass.'
+      ? (Z.bottiche.length
+          ? 'Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Fass.'
           : (lager ? 'Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt ein Fass.'
-                   : 'Es gärt nichts, und im Keller liegt nichts.'))
+                   : 'Es gärt nichts und im Lagerkeller liegt nichts. Diese Woche geht keine Hefe.'))
       : 'Diese Woche ist die Hefe schon nachgeführt.'));
     fach.appendChild(kasten);
   }
@@ -1190,28 +865,14 @@
     var rolle = B.el('div', 'sud-rolle rolle');
     var links = B.el('div', 'sud-spalte links');
     var rechts = B.el('div', 'sud-spalte rechts');
-    /* Links die Entscheidungen, rechts ihre Folgen — erst beim Wirt, dann
-       in der Hefe, dann im Keller. Das Feld BEIM WIRT steht rechts und
-       nicht unter den Achsen, weil die linke Spalte in drei von vier
-       Epochen ohnehin die laengere ist: unter den Achsen haette es das
-       Brett um weitere zehn Prozent der Buehnenhoehe wachsen lassen. */
     achsen().forEach(function (a) { zeichneAchse(links, a); });
-    zeichneWirte(rechts);
     zeichneHefe(rechts);
     zeichneGaerkeller(rechts);
 
     /* Das Sudbuch — was ohne den Spieler geschehen ist. */
     var b = B.el('div', 'sud-buch');
-    var bk = B.el('div', 'sud-achskopf');
-    bk.appendChild(B.el('b', 'sud-achsname', 'DAS SUDBUCH'));
-    bk.appendChild(B.el('span', 'sud-frage', Z.jahrSude + ' Sude · '
-      + B.welt.menge(Z.jahrFass) + ' · ' + Z.jahrFehl + ' verloren'
-      + (Z.gestuft ? ' · ' + Z.gestuft + ' gestuft' : '')));
-    b.appendChild(bk);
-    /* Vier Zeilen, nicht sieben: die Hoehe dieses Bretts darf nicht davon
-       abhaengen, wie viel diese Woche passiert ist. Ein Brett, das mit dem
-       Sudbuch waechst, waechst irgendwann ueber fremde Knoepfe. */
-    var letzte = Z.buch.slice(-3).reverse();
+    b.appendChild(B.el('b', 'sud-achsname', 'DAS SUDBUCH'));
+    var letzte = Z.buch.slice(-7).reverse();
     if (!letzte.length) b.appendChild(zeile('sud-leer', 'Noch keine Eintragung.'));
     letzte.forEach(function (x) {
       var z = B.el('div', 'sud-buchzeile');
@@ -1219,6 +880,9 @@
       z.appendChild(B.el('span', 'was', x.text));
       b.appendChild(z);
     });
+    b.appendChild(zeile('sud-fussnote', 'Dieses Jahr: ' + Z.jahrSude + ' Sude angestellt · '
+      + B.welt.menge(Z.jahrFass) + ' · ' + Z.jahrFehl + ' verloren'
+      + (Z.jahrAnzeige ? ' · ' + Z.jahrAnzeige + '× angezeigt' : '')));
     rechts.appendChild(b);
 
     rolle.appendChild(links);
@@ -1239,18 +903,13 @@
     B.leere(fach);
 
     var e = ep(), an = gueteAnzeige();
-    var z = B.el('div', 'sud-zettel' + (Z.brettZu ? '' : ' beiseite'));
+    var z = B.el('div', 'sud-zettel');
     z.setAttribute('data-frei', '1');
     z.setAttribute('data-reiter', 'DER SUD');
 
     z.appendChild(B.el('div', 'sud-zkopf', 'DER SUD · ' + B.welt.zeit.jahr));
     z.appendChild(B.el('div', 'sud-zverfahren',
       achsen().map(function (a) { return gewaehlt(a).name; }).join(' · ')));
-
-    /* Was dieses Verfahren beim Wirt hergibt — die eine Zahl dieses Stuecks,
-       die auch im Vorgabestand im Bild steht. */
-    var oben = sorteAufStufe(hoechsteStufe());
-    if (oben) z.appendChild(B.el('div', 'sud-zrang', 'höchstens ' + oben.name));
 
     var l = B.el('div', 'sud-zzahlen');
     l.appendChild(B.el('span', null, gk().name.replace(/^Der /, '') + ' '
@@ -1311,86 +970,23 @@
      BRAUHAUS.zuege() meldet sie als offen. In den EIGENEN Dateien ist das
      zu heilen, also wird es hier geheilt.
      ---------------------------------------------------------------------- */
-  function schalte(wurzel, tot) {
-    if (!wurzel) return;
-    var kn = wurzel.querySelectorAll('button[data-zug]');
-    for (var i = 0; i < kn.length; i++) {
-      var soll = kn[i].getAttribute('data-soll-aus') === '1';
-      var neu = tot || soll;
-      if (kn[i].disabled !== neu) {
-        kn[i].disabled = neu;
-        if (neu) kn[i].setAttribute('aria-disabled', 'true');
-        else kn[i].removeAttribute('aria-disabled');
-      }
-    }
-  }
-
   function taktZugeklappt() {
     B.wage('sud.takt', function () {
       var fach = document.getElementById('fach-hand-sud');
-      var brett = fach ? fach.firstElementChild : null;
-      var zettel = document.querySelector('.sud-zettel');
-      if (brett) {
-        Z.brettZu = brett.classList.contains('stadt-zugeklappt');
-        schalte(brett, Z.brettZu);
+      if (!fach) return;
+      var brett = fach.firstElementChild;
+      if (!brett) return;
+      var zu = brett.classList.contains('stadt-zugeklappt');
+      var kn = brett.querySelectorAll('button[data-zug]');
+      for (var i = 0; i < kn.length; i++) {
+        var soll = kn[i].getAttribute('data-soll-aus') === '1';
+        var neu = zu || soll;
+        if (kn[i].disabled !== neu) {
+          kn[i].disabled = neu;
+          if (neu) kn[i].setAttribute('aria-disabled', 'true');
+          else kn[i].removeAttribute('aria-disabled');
+        }
       }
-      /* DER SUD zeigt genau EINE Flaeche. Der Kesselzettel haengt am
-         Sudhaus, und das Sudhaus liegt unter dem eigenen Brett — steht
-         beides zugleich im Bild, verdeckt dieses Stueck seine eigenen drei
-         Knoepfe, und ein Zaehler findet sie aktiv und untreffbar. Also
-         tritt der Zettel zurueck, solange das Brett offen liegt, und mit
-         ihm seine Knoepfe. Genau der Fehler, den BEFUND-BRETTER.md misst,
-         nur diesmal im eigenen Haus. */
-      if (zettel) {
-        var weg = !Z.brettZu || fremdVerdeckt(zettel);
-        if (zettel.classList.contains('beiseite') !== weg) zettel.classList.toggle('beiseite', weg);
-        schalte(zettel, weg);
-      }
-    });
-  }
-
-  /* ----------------------------------------------------------------------
-     Liegt ein FREMDES Brett ueber dem Kesselzettel?
-
-     Der Zettel haengt am Sudhaus, und ueber dem Sudhaus liegen in 1350 und
-     1600 die Anschlagtafel der FUHRE (x 27,4–50,6 %) und ihre Haeusertafel
-     (1,1–26,7 %). Die Platzordnung der STADT loest Brett gegen Brett auf;
-     eine Ortsmarke nimmt daran nicht teil und kann deshalb begraben werden
-     (BEFUND-BRETTER.md §5, "die Reste sind ein anderer, kleinerer Fall").
-     Verschieben hilft nicht: die linke Bildhaelfte ist in jeder Epoche
-     vergeben, und der Zettel gehoert an das Sudhaus, nicht daneben.
-
-     Also prueft er sich selbst und tritt zurueck, wenn er begraben ist —
-     lieber gar kein Zettel als drei Knoepfe, die aussehen wie Knoepfe und
-     keine sind. Solange er weg ist, wird derselbe Punkt weiter befragt; er
-     kommt von selbst wieder, sobald das fremde Brett zuklappt.
-     ---------------------------------------------------------------------- */
-  function fremdVerdeckt(zettel) {
-    var q = zettel.getBoundingClientRect();
-    if (q.width > 2 && q.height > 2) {
-      Z.zettelPunkt = { x: q.left + q.width / 2, y: q.top + q.height / 2 };
-    }
-    var p = Z.zettelPunkt;
-    if (!p) return false;
-    var t = document.elementFromPoint(p.x, p.y);
-    if (!t) return false;
-    if (zettel.contains(t) || t === zettel) return false;
-    /* Ein fremdes Fach ist ein fremdes Brett. Platte, Bau und der nackte
-       Koerper sind keines — darauf darf der Zettel liegen. */
-    for (var e = t; e; e = e.parentElement) {
-      if (!e.id || e.id.indexOf('fach-') !== 0) continue;
-      return e.id !== 'fach-marken-sud';
-    }
-    return false;
-  }
-
-  /* Der Rahmen der STADT entscheidet erst im naechsten Bild, ob ein frisch
-     gezeichnetes Brett zugeklappt liegt. Zweimal warten, dann nachsehen —
-     sonst blinkt der Zettel bei jedem Neuzeichnen kurz ueber dem Brett. */
-  function taktGleich() {
-    if (typeof window.requestAnimationFrame !== 'function') { taktZugeklappt(); return; }
-    window.requestAnimationFrame(function () {
-      window.requestAnimationFrame(taktZugeklappt);
     });
   }
 
@@ -1431,8 +1027,6 @@
        nichts stillschweigend mitwandert. */
     Z.fest = {};
     Z.guete = D.guete.start || 70;
-    Z.rueck = [];
-    Z.gestuft = 0;
   }
 
   B.stueck('sud', {
@@ -1447,7 +1041,7 @@
         if (Z.imGange) return;
         if (!p || p.wer !== 'spieler') return;
         if (!/eingelegt/.test(p.was || '')) return;
-        B.wage('sud.protokoll', saugeUndSchlage);
+        B.wage('sud.protokoll', sauge);
       });
 
       B.auf('ende', function () {
@@ -1467,7 +1061,6 @@
         sauge();
         gueteWoche();
         anzeigePruefen();
-        rueckPruefen();
         fehlsud();
         /* Was zu lange gesperrt steht, gibt der Braumeister von selbst frei —
            sonst entstuende ein Gaerkeller, der sich nie mehr leert. */
@@ -1500,9 +1093,8 @@
             + ' werden ausgeschlagen und aufs Fass gelegt.', 'sud');
         }
         buch('Braujahr geschlossen: ' + Z.jahrSude + ' Sude, ' + B.welt.menge(Z.jahrFass)
-          + ', ' + Z.jahrFehl + ' verloren'
-          + (Z.gestuft ? ', ' + Z.gestuft + ' zurückgestuft.' : '.'));
-        Z.jahrSude = 0; Z.jahrFass = 0; Z.jahrFehl = 0; Z.jahrAnzeige = 0; Z.gestuft = 0;
+          + ', ' + Z.jahrFehl + ' verloren.');
+        Z.jahrSude = 0; Z.jahrFass = 0; Z.jahrFehl = 0; Z.jahrAnzeige = 0;
       });
     },
 
@@ -1521,12 +1113,11 @@
 
     zeichne: function () {
       setzeEpoche();
-      saugeUndSchlage();
+      sauge();
       meldeZug();
       zeichneBrett();
       zeichneZettel();
       taktZugeklappt();
-      taktGleich();
     }
   });
 
