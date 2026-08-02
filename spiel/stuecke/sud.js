@@ -871,6 +871,46 @@
     B.sende('zeichne', { grund: 'sud:verfahren' });
   }
 
+  /* ======================================================================
+     DIE KALTE PFANNE — der Ausgang, den DIESES Stueck zu verantworten hat.
+
+     Vorgefunden (gemessen, nur WEITER, Saat 1350): 1600 schliesst die Jahre
+     1602 und 1603 mit "0 Sude", 1970 die Jahre 1972 und 1973. Das Sudbuch
+     schrieb es auf, und es bedeutete nichts. Ein Brauhaus, das drei Jahre
+     nicht anstellt, ist keines mehr — und jede Rechtslage sagt das anders:
+     der Sudtag faellt an die Reihe zurueck (1350), die Lade zieht die
+     Gerechtigkeit ein (1600), die Bank ruft die Hypothek auf die
+     stillstehende Braustaette (1884), eine stillstehende Anlage findet
+     einen Kaeufer (1970).
+
+     Zwei Jahre lang steht die Warnung am Brett und im Sudbuch; erst das
+     dritte haelt die Uhr an. Ein Stueck haelt die Welt nicht selbst an —
+     es nennt der Uhr den Grund (kern/uhr.js, B.uhr.beende).
+     ====================================================================== */
+  function kaltDef() {
+    var k = D.kalt;
+    if (!k) return null;
+    var e = k[B.welt.zeit.epoche];
+    return e ? { frist: k.frist || 3, e: e } : null;
+  }
+
+  function kaltePfanne() {
+    if (Z.jahrSude > 0 || Z.jahrLegte > 0) { Z.kalt = 0; return; }
+    Z.kalt++;
+    var kd = kaltDef();
+    if (!kd) return;
+    if (Z.kalt >= kd.frist) {
+      buch(kd.e.ende);
+      B.welt.schreibe(kd.e.ende, 'ende');
+      if (B.uhr && B.uhr.beende) B.uhr.beende(kd.e.grund, kd.e.ende);
+      return;
+    }
+    var satz = String(kd.e.warnung || '')
+      .replace('{n}', Z.kalt).replace('{e}', Z.kalt === 1 ? '' : 'e');
+    buch(satz);
+    B.welt.schreibe(satz, 'sud');
+  }
+
   function kaufeGaerraum() {
     if (kaufSperre()) return;
     var p = kaufPreis();
@@ -1563,6 +1603,10 @@
         if (Z.imGange) return;
         if (!p || p.wer !== 'spieler') return;
         if (!/eingelegt/.test(p.was || '')) return;
+        /* Gebraut ist gebraut, auch wenn der Gaerkeller voll ist und dieses
+           Stueck den Sud gar nicht erst ansaugt. Sonst zaehlte ein volles
+           Haus als kalte Pfanne — der Fehler waere teuer. */
+        Z.jahrLegte++;
         B.wage('sud.protokoll', saugeUndSchlage);
       });
 
@@ -1580,6 +1624,7 @@
     woche: function () {
       B.wage('sud.woche', function () {
         setzeEpoche();
+        liefere();
         sauge();
         gueteWoche();
         anzeigePruefen();
@@ -1632,6 +1677,10 @@
         reifePruefen();
         Z.bottiche = [];
         Z.epocheGesetzt = 0;
+        /* Neue Zeit, neues Haus: eine kalte Pfanne von 1350 belastet 1600
+           nicht, und ein Tank, der 1970 auf dem Tieflader stand, kommt in
+           keiner anderen Epoche an. */
+        Z.kalt = 0; Z.jahrLegte = 0; Z.bestellt = [];
         setzeEpoche();
         buch('Neue Zeit, neues Verfahren: ' + ep().frage);
       });
@@ -1639,6 +1688,7 @@
 
     zeichne: function () {
       setzeEpoche();
+      liefere();
       saugeUndSchlage();
       meldeZug();
       zeichneBrett();
