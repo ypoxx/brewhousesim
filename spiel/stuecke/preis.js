@@ -654,9 +654,33 @@
       pflichtenJetzt().forEach(function (p) { buche(p.betrag, p.name, 'pflicht', p.art); });
     }
 
-    /* 4. Was gebaut ist, traegt. Nominal — ein fester Zins wird mit den
-          Jahren weniger wert, und genau das ist der Punkt. */
-    Z.ertraege.forEach(function (t) { loese(t.betrag, t.name, 'ertrag'); });
+    /* 4. Was gebaut ist, traegt — und zwar in dem Geld, in dem das Jahr
+          rechnet.
+
+          Bis zum 2. August 2026 stand hier der nominale Betrag, mit der
+          Begruendung, ein fester Zins werde mit den Jahren weniger wert. Das
+          ist fuer eine Rente richtig und fuer einen Bau falsch: ein zweiter
+          Bottich bringt keine Rente, er bringt Bier, und das Bier wird zum
+          Satz DIESES Jahres verkauft. Die Kostenseite derselben Rechnung wird
+          seit jeher mit `teuerung()` multipliziert (`lastFest`) — die
+          Ertragsseite stand still. Das ist keine Alterung, das ist eine
+          Unwucht, und sie waechst mit genau dem Faktor, ueber den die zweite
+          Messlatte misst.
+
+          Gemessen, was sie anrichtet: in 1350 kostet die zweite Sprosse im
+          fuenften Braujahr rund hundert Pfennig und traegt neun im Jahr. Zwei
+          Laeufe derselben Fassung, nebeneinander (mess/g1, mess/g2): der
+          Lauf, der sie NICHT nimmt, steht ueber vierzehn Jahre bei 0 Jahren
+          unter 1x; der Lauf, der sie nimmt, bei 5 von 14 und faellt im Jahr
+          nach dem Kauf von 3,18 auf 0,79. Ein Angebot, dessen Annahme das
+          Haus schlechter stellt als seine Ablehnung, ist keine Entscheidung.
+
+          Der Preis eines Baus steigt mit der Zeit, sein Ertrag jetzt auch.
+          Was NICHT mitwaechst, bleibt der Anteil am Satz je Fass — der ist
+          und bleibt das, was nur gebaut werden kann. */
+    Z.ertraege.forEach(function (t) {
+      loese(Math.round(t.betrag * teuerung()), t.name, 'ertrag');
+    });
     Z.rohstoffe.forEach(function (t) {
       B.welt.haus.rohstoff += t.menge;
       Z.rechnung.push({ name: t.name, betrag: 0, art: 'rohstoff', menge: t.menge });
@@ -1246,7 +1270,8 @@
     } else {
       var ertragSumme = 0;
       Z.ertraege.forEach(function (t) { ertragSumme += t.betrag; });
-      if (ertragSumme) st.appendChild(zeile('trägt im Jahr', geld(ertragSumme), 'pr-ertrag pr-summe'));
+      if (ertragSumme) st.appendChild(zeile('trägt im Jahr',
+        geld(Math.round(ertragSumme * teuerung())), 'pr-ertrag pr-summe'));
       st.appendChild(B.el('div', 'pr-satz pr-klein',
         Object.keys(Z.fertig).length + ' fertig · ' + Z.raten.length + ' im Bau · '
         + Object.keys(Z.gesperrt).length + ' durch eine Wahl für immer ausgeschlossen'));
