@@ -103,8 +103,9 @@ Gerät dieser Welle rechnet (`werkbank/schuss/eichung/auswerten.py`, Funktion `s
 | 1970 | B | 14 | 2,25 | 4,26 | +0,269 | +0,108 | 0/14 | besteht |
 | 1970 | C | 13 | 2,25 | 1,03 | −0,181 | −0,278 | 0/13 | besteht |
 
-Die Zweite Bedingung („höchstens ein Jahr von sechs unter 1×") hält überall: 0/13, 0/14 und
-in 1884 1/13 bzw. 1/14 — das ist unter 1/6.
+Die zweite Bedingung („höchstens ein Jahr von sechs unter 1×") hält überall: 0/13 bzw. 0/14,
+und in 1884 1/13 bzw. 1/14 — das ist unter 1/6. **Diese Hälfte des Ziels ist in allen vier
+Epochen erfüllt.** Gerissen ist allein die andere.
 
 ### 3.2 · Gegenprobe: Jahresmedian der wöchentlich abgelesenen Kopfzeile
 
@@ -362,10 +363,15 @@ sondern **alle zwei Braujahre**: `erbe-daten.js:315 STUNDE_ABSTAND = 2` →
 zwölf Läufen**: `zeit.amtszeit.nr` läuft in 400 Wochen von **1 auf 8**, mit Wechseln
 in den Wochen 12–18 der Jahre +2, +4, +6, …
 
-Das heißt: das Spiel **erlaubt bis zu 8** unwiderrufliche Festlegungen in 14 Jahren und eine
-sorgfältige Hand nimmt **1 oder 0**. In 1350 und 1600 vor allem deshalb, weil an 13 von 14
-Michaelitagen überhaupt keine bezahlbar ist; in 1884 und 1970 deshalb, weil die bezahlbaren
-mehr als 45 % der Kasse kosten.
+Das heißt: das Spiel **erlaubt bis zu 8** unwiderrufliche Festlegungen in 14 Jahren, und
+eine sorgfältige Hand nimmt **1 oder 0**. Aus zwei verschiedenen Gründen:
+
+* **1350 und 1600:** an mindestens **10 von 14** Michaelitagen stand überhaupt keine aktive
+  Festlegung da — an genau diesen Tagen hat die Hand auch nichts gekauft, die Kasse war also
+  unberührt und trotzdem war keine bezahlbar.
+* **1884 und 1970:** an **11–13 von 14** Michaelitagen stand eine da, aber sie kostete mehr
+  als 45 % der Kasse. Eine unwiderrufliche Entscheidung, die eine vorsichtige Hand
+  zahlungsunfähig macht, ist eine Karte, die man ansieht und nicht nimmt.
 
 **Und ein Widerspruch am Preisschild selbst.** Jede Festlegungskarte trägt
 (`preis.js:1729`):
