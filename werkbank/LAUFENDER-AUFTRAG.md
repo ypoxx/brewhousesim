@@ -36,6 +36,53 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
+## WIEDERHERSTELLUNG — was am 3. August funktioniert hat und was nicht
+
+**Vier Container-Resets in vier Stunden.** Zweimal genau beim Start eines
+Workflows. Jedes Mal stand der Arbeitsbaum wieder auf dem Basis-Commit.
+
+**Der volle `git fetch` funktioniert hier NICHT MEHR.** Das Repo ist über 2 GiB
+gepackt (fast alles Belegbilder der Kritiker), und der Proxy bricht die
+Übertragung ab:
+
+```
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+```
+
+Was ich der Reihe nach probiert habe, und was daraus wurde:
+
+| Versuch | Ergebnis |
+|---|---|
+| `git fetch` voll | `early EOF` nach 3,3 GB |
+| `--filter=blob:none` | Ref kam, aber der Proxy liefert keine Blobs nach → **Objektspeicher kaputt** |
+| `git fetch --refetch` | `early EOF` |
+| `--depth=1` auf kaputtem Speicher | „remote did not send all necessary objects" |
+| **`--depth=1` auf frischem `.git`** | **funktioniert** |
+
+**Das Rezept, das geht:**
+
+```
+rm -rf .git && git init && git remote add origin <url>     # falls .git kaputt
+(setsid nohup git fetch --depth=1 origin <zweig> >/tmp/fetch.log 2>&1 </dev/null & disown)
+# warten, dann:
+git reset --hard FETCH_HEAD
+```
+
+**Zwei Fallen dabei:**
+1. Ein abgebrochener Versuch hinterlässt `.git/shallow.lock`. Der nächste Fetch
+   stirbt sofort daran, ohne dass man es merkt — `rm -f .git/*.lock`.
+2. `pgrep -f "git fetch"` trifft die **eigene Warte-Shell**, deren Kommandozeile
+   die Zeichenkette enthält. Dann sieht ein toter Fetch aus wie ein laufender.
+   Am Logfile prüfen, nicht an `pgrep`.
+
+**Folge: der Baum ist jetzt FLACH** (`git rev-list --count HEAD` = 1). Ob ein
+Push daraus angenommen wird, steht direkt unter diesem Absatz — wer hier
+ankommt, prüft es als Erstes.
+
+---
+
 ## Welle 3 (2./3. August 2026) — gebaut, geurteilt, teils nachgemessen
 
 **Der Workflow ist weg, die Arbeit nicht.** Am 3.8. gegen 04:20 UTC hat ein zweiter
