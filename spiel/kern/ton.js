@@ -837,6 +837,7 @@
     senke(w, 'bett', wann, t, h, 0.75);
     senke(w, 'hof', wann, t, h, 0.75);
     senke(w, 'werk', wann, t, h, 0.75);
+    if (w.bus.fremd) senke(w, 'fremd', wann, t, h, 0.75);
   }
 
   /* DAS NACHBARHOF-ZEICHEN — Auflage 1.

@@ -70,7 +70,7 @@ const AUFNAHME = () => {
   const kt = kopf ? (kopf.innerText || '') : '';
   const dm = kt.match(/Kasse reicht ([\d.,]+)×/);
   return {
-    jahr: W.zeit.jahr, woche: W.zeit.woche, ende: !!W.zeit.ende,
+    jahr: W.zeit.jahr, woche: W.zeit.woche, ende: !!W.zeit.ende, endgrund: W.zeit.endgrund || null,
     kasse: Math.round(W.haus.kasse), rohstoff: Math.round(W.haus.rohstoff),
     lager: faesser.length,
     halt: faesser.length ? +(faesser.reduce((n, f) => n + (f.haltbar || 0), 0) / faesser.length).toFixed(2) : 0,
