@@ -3,7 +3,7 @@
 
     ./werkbank/hoerer.py probe.wav
     ./werkbank/hoerer.py probe.wav --erwartet 3        # nennt Bestanden/Durchgefallen
-    ./werkbank/hoerer.py e1.wav e2.wav e3.wav e4.wav --blind
+    ./werkbank/hoerer.py aufnahmen/*.wav --blind   # mischt selbst, Epoche aus dem Dateinamen
 
 Das Ohr bekommt NUR den Ton. Kein Bild, kein Dateiname, keine Epoche, keine
 Beschreibung dessen, was der Bauer sich gedacht hat. Es bekommt die vier
@@ -23,6 +23,8 @@ import mimetypes
 import os
 import pathlib
 import re
+import time
+import random
 import sys
 import urllib.error
 import urllib.request
@@ -103,10 +105,18 @@ def hoere(pfad, modell, schluessel):
 # geworden, obwohl das Ohr nie etwas gehoert hat. Die Huerde ist mit Absicht eng:
 # nur wenn der Text das Nichthoeren AUSSPRICHT und die Sicherheit bei 0 liegt.
 # Bloss niedrige Sicherheit bleibt ein echter, zaehlender Fehlgriff.
+# ERWEITERT am 3.8. abends: die erste Fassung liess
+#   "Aufgrund der fehlenden Audiodaten … leere Zeitstempel"
+# bei sicher=0 durch und buchte sie als Epoche 1. Mit --erwartet 1 waere daraus
+# ein BESTANDEN OHNE MESSUNG geworden — noch schlimmer als ein falsches
+# Durchgefallen, weil es niemandem auffaellt. Gemessen und gemeldet vom blinden
+# Kritiker DER KLANG (Welle 5).
 VERWEIGERT = re.compile(
-    r"keine?\s+(audio|ton|klang|datei)|nicht\s+(hoeren|hören|verarbeiten|abspielen)"
+    r"keine?\s+(audio|ton|klang|datei)|fehlende[nr]?\s+(audio|ton|klang|datei)"
+    r"|nicht\s+(hoeren|hören|verarbeiten|abspielen)"
     r"|no\s+audio|cannot\s+(process|hear|access)|unable\s+to\s+(process|hear)"
-    r"|i'?m\s+sorry|es\s+wurde\s+keine", re.I)
+    r"|i'?m\s+sorry|es\s+wurde\s+keine|leere[nr]?\s+zeitstempel"
+    r"|ohne\s+(audio|ton)|audiodaten\s+fehl", re.I)
 
 
 def verweigert(u, text):
@@ -161,7 +171,9 @@ def main():
     p.add_argument("--erwartet", type=int, default=None,
                    help="Epoche 1-4; ist sie gesetzt, wird geurteilt")
     p.add_argument("--blind", action="store_true",
-                   help="mehrere Dateien: erwartet 1,2,3,4 in dieser Reihenfolge")
+                   help="mischt die Dateien SELBST und deckt den Schlüssel erst "
+                        "am Ende auf; die Epoche wird aus dem Dateinamen gelesen "
+                        "(…e1…, …epoche2…)")
     p.add_argument("--modell", default="gemini-3.1-pro-preview")
     a = p.parse_args()
 
@@ -170,19 +182,46 @@ def main():
         sys.stderr.write("$GEMINI_API_KEY fehlt.\n")
         sys.exit(1)
 
+    dateien = list(a.datei)
+    soll_je = {}
+    if a.blind:
+        # BLIND HEISST BLIND. Bis zum 3. August 2026 tat --blind nur dies:
+        #   soll = i + 1
+        # Es mischte NICHT, es unterstellte die Reihenfolge 1,2,3,4 — und die
+        # Aufrufzeile in dieser Datei lud mit `e1 e2 e3 e4 --blind` genau dazu
+        # ein. Wer das tippte, mass seine eigene Sortierung und nannte das
+        # Ergebnis blind. Gefunden vom blinden Kritiker DER KLANG (Welle 5).
+        # Jetzt liest das Werkzeug die Soll-Epoche aus dem DATEINAMEN, mischt
+        # selbst und deckt den Schluessel erst auf, wenn alle Antworten da sind.
+        for d in dateien:
+            m = re.search(r'(?:^|[^0-9])e(?:poche)?[ _-]?([1-4])(?:[^0-9]|$)',
+                          pathlib.Path(d).name, re.I)
+            if not m:
+                sys.stderr.write(
+                    "--blind braucht die Epoche im Dateinamen (z.B. epoche3.wav): %s\n" % d)
+                sys.exit(1)
+            soll_je[d] = int(m.group(1))
+        random.shuffle(dateien)
+        print("%d Aufnahmen gemischt. Der Schlüssel steht am Ende.\n" % len(dateien))
+
     treffer, gesamt, unlesbar = 0, 0, 0
-    for i, datei in enumerate(a.datei):
+    for i, datei in enumerate(dateien):
         if not pathlib.Path(datei).exists():
             sys.stderr.write("Nicht gefunden: %s\n" % datei)
             sys.exit(1)
-        soll = (i + 1) if a.blind else a.erwartet
+        soll = soll_je.get(datei) if a.blind else a.erwartet
 
         # Ein Abbruch ist kein Urteil. Lieber zweimal fragen als einmal falsch
-        # durchfallen lassen.
+        # durchfallen lassen — aber MIT WARTEZEIT dazwischen. Ohne sie liefen
+        # die drei Versuche in Millisekunden gegen dieselbe Sperre und waren
+        # zu dritt so wertlos wie einer: den blinden Kritiker DER KLANG hat
+        # das 22 von 24 Messungen gekostet (HTTP 429).
         for versuch in range(3):
             u = hoere(datei, a.modell, schluessel)
             if not u.get("abbruch"):
                 break
+            if versuch < 2:
+                time.sleep(5 * (versuch + 1))
 
         print("── %s" % pathlib.Path(datei).name)
         if u.get("abbruch"):
@@ -207,6 +246,15 @@ def main():
             treffer += 1 if gut else 0
             print("   Urteil:  %s (erwartet %s)"
                   % ("BESTANDEN" if gut else "DURCHGEFALLEN", soll))
+        print()
+
+    if a.blind:
+        # Der Schluessel erst hier — vorher konnte ihn niemand sehen, auch der
+        # nicht, der das Werkzeug aufruft. Das ist der Unterschied zwischen
+        # blind und "in der Reihenfolge, die ich selbst gewaehlt habe".
+        print("── Schlüssel (erst jetzt aufgedeckt)")
+        for d in dateien:
+            print("   %-34s war Epoche %d" % (pathlib.Path(d).name, soll_je[d]))
         print()
 
     if unlesbar:
