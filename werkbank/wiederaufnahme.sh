@@ -70,7 +70,11 @@ fi
 # ------------------------------------------------------- 5 · der Veröffentlicher
 # Der einzige Prozess, der pushen darf. Ohne ihn steht die Fortschrittsseite still,
 # während der Lauf weiterarbeitet — und beim nächsten Reset ist alles weg.
-ANZ=$(pgrep -fc 'veroeffentlichen\.sh' 2>/dev/null || echo 0)
+# NICHT `pgrep -fc … || echo 0`: pgrep gibt bei null Treffern die Zeile "0" aus
+# UND endet mit Status 1, also feuert das `|| echo 0` zusätzlich — heraus kommt
+# "0\n0", und jeder Vergleich danach bricht mit "integer expression expected".
+# Am 3.8. passiert, genau in dem Lauf, in dem der Veröffentlicher tot war.
+ANZ=$(pgrep -f 'veroeffentlichen\.sh' 2>/dev/null | wc -l)
 if [ "$ANZ" -eq 1 ]; then
   ok "Veröffentlicher läuft"
 elif [ "$ANZ" -gt 1 ]; then
