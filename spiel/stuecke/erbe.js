@@ -899,7 +899,11 @@
     var kLeer = B.knopf({
       text: ohneArtikel(e.formen.bruch.name),
       zug: 'erbe:uebergabe:bruch',
-      klasse: 'erb-knopf erb-uebergabe erb-leer',
+      /* NICHT erb-leer: diese Klasse traegt im Buch die Zeile "Nichts. Alles
+         haengt an einem Menschen" und ist grau und kursiv. Am Bildschirm
+         gemessen faerbte sie den dritten Weg auf rgb(138,122,94) kursiv —
+         ein waehlbarer, unwiderruflicher Zug sah aus wie ein gesperrter. */
+      klasse: 'erb-knopf erb-uebergabe erb-ohne',
       titel: e.formen.bruch.satz + ' — kostet nichts und nimmt alles, was nur '
         + 'an der Person hing, dazu ' + B.welt.menge(erbteilFass()) + ' aus dem Lager. '
         + 'Unwiderruflich.',
