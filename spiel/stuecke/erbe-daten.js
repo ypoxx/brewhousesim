@@ -239,9 +239,14 @@
      Woche, weil die alte Hand weniger Jahre vor sich hat. Das Leibgeding
      bleibt gleich hoch und wird darum umso teurer, je frueher man es
      verspricht — genau der Handel, den ein Ausgedinge wirklich ist. */
-  D.ABFINDUNG_ANFANG = 1.0;      /* Anteil der Erbmasse in Woche 1 */
-  D.ABFINDUNG_ZERFALL = 0.030;   /* je verstrichener Woche */
-  D.ABFINDUNG_BODEN = 0.45;
+  D.ABFINDUNG_ANFANG = 1.0;      /* Anteil der Erbmasse am Anfang der Amtszeit */
+  D.ABFINDUNG_BODEN = 0.45;      /* und am Tag vor der Stunde */
+  /* Nicht mehr "je verstrichener Woche" mit festem Zerfall: das war an eine
+     Amtszeit von 15 Wochen geeicht und stand bei einer von sechzig nach
+     Woche 19 nur noch auf dem Boden. Der Preis faellt jetzt im Verhaeltnis
+     zur RESTLICHEN Amtszeit — je naeher die Stunde, desto weniger Jahre hat
+     die alte Hand noch vor sich, desto billiger ist sie abzufinden. Das gilt
+     fuer jede Laenge und faellt in jeder Woche sichtbar weiter. */
   D.LEIBGEDING_ANTEIL = 0.20;    /* je Michaeli, auf die Erbmasse */
 
   /* WANN DIE STUNDE VON SELBST KOMMT.  Zweimal verschoben, beide Male, weil
@@ -293,7 +298,12 @@
          traegt die Leiste ihre vier Knoepfe bis zum letzten Klick, die II. und
          die III. Hand entscheiden dieselbe Frage neu — und der zweite Erbfall,
          den es nie gab, faellt in einer Partie von rund 100 Wochen zweimal. */
-  D.STUNDE_ABSTAND = 1;          /* Braujahre zwischen zwei Stunden */
+  D.STUNDE_ABSTAND = 2;          /* Braujahre zwischen zwei Stunden.
+     Mit 1 gemessen: E1 vier Erbfaelle in 103 Wochen, Haende I bis V. Das ist
+     eine Seuche und keine Hausgeschichte. Mit 2 haelt eine Hand rund sechzig
+     gespielte Wochen; in einer Partie von hundert wechselt das Haus zweimal,
+     und die Leiste zaehlt trotzdem in jeder Woche ihre vier Knoepfe, weil die
+     Uebergabe die ganze Amtszeit ueber offensteht. */
   D.STUNDE_WOCHE_VON = 12;
   D.STUNDE_WOCHE_BIS = 18;
 

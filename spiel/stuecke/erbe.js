@@ -73,6 +73,8 @@
 
   var Z = {
     startJahr: 0,
+    seitJahr: 0,
+    seitWoche: 1,
     startKasse: 0,
     eich: 1,                  /* Auflage 5: an der Startbarschaft geeicht */
     eichRoh: 0,
@@ -183,11 +185,16 @@
       + Math.round(Math.max(0, B.welt.haus.kasse) * (D.KASSE_ANTEIL || 0));
   }
 
-  function verstrichen() {
-    return (jahr() - Z.startJahr) * B.uhr.WOCHEN_IM_JAHR + (woche() - 1);
+  /* Wie lang die laufende Amtszeit ist und wieviel davon noch aussteht. */
+  function amtszeitWochen() {
+    return Math.max(1, (Z.stundeJahr - Z.seitJahr) * B.uhr.WOCHEN_IM_JAHR
+                       + (Z.stundeWoche - Z.seitWoche));
+  }
+  function restAnteil() {
+    return Math.max(0, Math.min(1, wochenBisStunde() / amtszeitWochen()));
   }
   function abfindungPreis() {
-    var f = Math.max(D.ABFINDUNG_BODEN, D.ABFINDUNG_ANFANG - D.ABFINDUNG_ZERFALL * verstrichen());
+    var f = D.ABFINDUNG_BODEN + (D.ABFINDUNG_ANFANG - D.ABFINDUNG_BODEN) * restAnteil();
     return Math.max(1, Math.round(erbmasse() * f));
   }
   function leibgedingPreis() {
@@ -222,8 +229,10 @@
   /* Die naechste Stunde stellen. Nach JEDEM Erbfall — die Amtszeit der
      II. Hand laeuft bis weit hinter das Ende der Partie, und ohne dies bliebe
      die Leiste bis zum letzten Klick leer (Auflage 3). */
-  function stelleStunde(a, ersteJahr) {
-    Z.stundeJahr = ersteJahr;
+  function stelleStunde(a, zielJahr) {
+    Z.seitJahr = jahr();
+    Z.seitWoche = woche();
+    Z.stundeJahr = zielJahr;
     Z.stundeWoche = stundeWocheFuer(a);
   }
 
