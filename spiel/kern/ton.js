@@ -1118,6 +1118,13 @@
   /* Eine einzelne Probe in einen Graphen setzen. Gibt zurueck, ob etwas kam. */
   function setzeProbe(w, name, opt, epoche, wann) {
     var ctx = w.ctx;
+    /* `T.bett()` ruft spiele('bett:epocheN'). Diesen Namen kennt der Katalog
+       nicht — er wuerde also in den Notfallkasten fallen, dort als geratener
+       Ruf gezaehlt und als Papierrascheln erklingen. Heute faellt er nur
+       deshalb nicht auf, weil er kommt, bevor der Browser den Ton freigibt;
+       ein Epochenwechsel im laufenden Spiel wuerde ihn ausloesen. Das Bett
+       legt `legeBett()`, nicht der Katalog. */
+    if (/^bett:epoche/.test(name)) return true;
     var e = eintrag(name);
     var v = (e.laut === undefined ? 0.8 : e.laut) * (opt && opt.laut !== undefined ? opt.laut / 0.8 : 1);
     v = Math.max(0.05, Math.min(1.6, v));
@@ -1156,7 +1163,7 @@
       if (e.mindest) v *= Math.max(1, angleich(buf, e.mindest));
       g.gain.setValueAtTime(0.0001, wann);
       g.gain.linearRampToValueAtTime(v, wann + 0.02);
-      var d = buf.duration / (e.tempo || 1);
+      var d = buf.duration;
       /* EIN VORGANG IST EIN EREIGNIS UND KEIN TEPPICH.
          Die Proben sind fuenf bis acht Sekunden lang, und im Spiel faellt alle
          halbe Sekunde ein Klick. Bis Welle 4 lief also jede Probe voll aus,
@@ -1168,7 +1175,11 @@
       var ab = laeuftWeiter ? 0 : (EINSATZ[datei] || 0);
       var kappe = (typeof e.laenge === 'function') ? e.laenge(epoche) : e.laenge;
       if (!kappe) kappe = e.zeichen ? 3.4 : 2.6;
-      d = Math.max(0.3, d - ab);
+      /* `ab` ist ein Griff IN die Probe und rechnet in Probensekunden;
+         `d` ist die Spielzeit und rechnet in Hofsekunden. Bei `tempo` sind
+         das zwei verschiedene Sekunden, und wer sie verwechselt, schneidet
+         eine gedehnte Probe zu frueh ab. */
+      d = Math.max(0.3, (d - ab) / (e.tempo || 1));
       if (!laeuftWeiter && d > kappe) d = kappe;
       if (laeuftWeiter) {
         q.loop = true;
@@ -1206,7 +1217,7 @@
 
   var werk = null;                 /* der lebende Graph */
   var bettJetzt = null;            /* welche Epoche gerade liegt */
-  var liegend = { bett: null, hof: null };
+  var liegend = { bett: null, hof: null, grund: null };
   var wachAn = false;
 
   function KontextArt() { return window.AudioContext || window.webkitAudioContext; }
@@ -1281,6 +1292,20 @@
       }, function () { });
     });
 
+    /* DER GRUND wird EINMAL gelegt und beim Epochenwechsel nicht angefasst.
+       Er ist in allen vier Epochen dieselbe Datei und darf auch denselben
+       Einstiegspunkt behalten — jede Abhaengigkeit von der Epoche waere eine
+       Auskunft ueber die Epoche. */
+    if (!liegend.grund) {
+      var gd = GRUND(epoche);
+      puffer(w.ctx, gd).then(function (buf) {
+        merke(w.ctx, gd, buf);
+        if (!werk || liegend.grund) return;
+        liegend.grund = legeSchleife(werk, 'grund', buf, werk.ctx.currentTime + 0.05,
+                                     0, 1.6, gd, 0);
+      }, function () { });
+    }
+
     /* Die Proben dieser Epoche im Voraus holen, damit der erste Ruf klingt. */
     vorratDerEpoche(epoche).forEach(function (d) { ladeStill(w.ctx, d); });
   }
@@ -1296,6 +1321,8 @@
        oft nur einen. */
     var n = NACHBAR_DATEI(epoche);
     if (n && !l[n]) aus.push(n);
+    var g = GRUND(epoche);
+    if (g && !l[g]) aus.push(g);
     return aus;
   }
 
@@ -1441,6 +1468,16 @@
        Rueckgabe heisst: jeder Ruf des Spiels hat einen eigenen Klang. */
     geraten: function () { return Object.assign({}, GERATEN); },
 
+    /* AUFLAGE 3, nachzaehlbar statt behauptet: wie oft eine Kopie derselben
+       Probe nach hinten geschoben werden musste, weil im halben
+       Sekundenfenster schon zwei standen — und wie oft eine ganz ausfiel,
+       weil auch STAPEL_WEIT nicht reichte. Abgenommen wird die Auflage am
+       Mitschnitt; diese Zahl sagt nur, wie oft die Grenze gegriffen hat. */
+    gestundet: function () {
+      return { spaeter: (werk && werk.stapelSpaet) || 0,
+               ausgefallen: (werk && werk.stapelAus) || 0 };
+    },
+
     mitschnitt: function () { return mitschnitt.slice(); },
     beginneMitschnitt: function () { mitschnitt.length = 0; mitAnfang = jetztSek(); return true; },
     katalog: function () { return Object.keys(KATALOG).slice(); },
@@ -1479,6 +1516,7 @@
       var noetig = {};
       noetig[BETT(epoche)] = 1;
       noetig[HOF(epoche)] = 1;
+      noetig[GRUND(epoche)] = 1;
       plan.forEach(function (p) {
         var d = dateiVon(eintrag(p.name), epoche);
         if (d) noetig[d] = 1;
@@ -1498,6 +1536,8 @@
                                   opt.versatz === undefined ? epoche * 3.7 : opt.versatz);
         if (hofBuf) legeSchleife(w, 'hof', hofBuf, 0, sek, 0.6, HOF(epoche),
                                  opt.versatz === undefined ? epoche * 2.3 : opt.versatz);
+        var grundBuf = fertig(octx, GRUND(epoche));
+        if (grundBuf) legeSchleife(w, 'grund', grundBuf, 0, sek, 0.6, GRUND(epoche), 0);
 
         plan.forEach(function (p) {
           if (p.t < 0 || p.t > sek - 0.2) return;
