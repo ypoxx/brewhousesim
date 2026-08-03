@@ -1,0 +1,17 @@
+{
+ "epoche": 4,
+ "konsole": [],
+ "rate": 44100,
+ "sekunden": 30,
+ "mitschnitt": [],
+ "lage": 0,
+ "pegel": {
+  "zustand": "running",
+  "stumm": false,
+  "laut": 0.8,
+  "rms": 0,
+  "spitze": 0,
+  "hoechste": 0,
+  "lauteste": 0
+ }
+}
