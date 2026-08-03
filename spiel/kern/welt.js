@@ -481,30 +481,67 @@
        Jetzt entscheidet zuerst die ART des Zuges, dann sein Preis. Werbung
        ohne 'art' bekommt Rang 0 und verliert gegen alles, was die Lage des
        Hauses aendert. Die Stuecke schicken die Art laengst mit.  */
-    naechsterZug: null,
     ZUGRANG: { umkaempft: 3, bindung: 2, adresse: 2, bau: 2, lage: 1 },
+
+    /* ALLE Meldungen dieses Durchgangs, nicht nur die beste.
+       Vorher hielt der Kern EINE Meldung. Fiel die durch die Pruefung unten
+       (kein Knopf da, gesperrt, verdeckt), gab es fuer diese Woche gar keine
+       Kennzahl — `null` statt des naechstbesten Zuges. Gemessen am 3. August
+       2026 von DIE RUECKKOPPLUNG: 18 von 4.800 Wochen, davon 6 von 400 allein
+       in 1884. Eine Latte, die in einzelnen Wochen einfach nichts sagt, ist an
+       genau diesen Wochen blind. */
+    zugMeldungen: [],
+
     meldeZug: function (was, preis, art, zug) {
       if (!preis) return;
-      var r = W.ZUGRANG[art] || 0;
-      var alt = W.naechsterZug;
-      if (!alt || r > alt.rang || (r === alt.rang && preis < alt.preis)) {
-        W.naechsterZug = { was: was, preis: preis, art: art || null,
-                           zug: zug || null, rang: r };
-      }
+      W.zugMeldungen.push({ was: was, preis: preis, art: art || null,
+                            zug: zug || null, rang: W.ZUGRANG[art] || 0 });
     },
-    zugDeckung: function () {
-      var z = W.naechsterZug;
-      if (!z || !z.preis) return null;
-      /* Eine Zahl, zu der am Bildschirm kein bedienbarer Knopf steht, ist
-         keine Kennzahl, sondern eine Behauptung. Wer seinen Zugschluessel
-         mitschickt, wird beim Wort genommen. */
-      if (z.zug && typeof document !== 'undefined') {
-        var el = document.querySelector('[data-zug="' + z.zug + '"]');
-        if (!el || el.disabled) return null;
+
+    /* Der beste Zug, den man WIRKLICH DRUECKEN KANN. Rang vor Preis, und dann
+       der Reihe nach, bis einer die Pruefung besteht — statt beim ersten
+       Fehlschlag aufzugeben. Ueberschrift und Kennzahl lesen beide hier, damit
+       die Zahl nie zu einem anderen Zug gehoert als der Text daneben. */
+    besterZug: function () {
+      var liste = W.zugMeldungen.slice().sort(function (a, b) {
+        return b.rang - a.rang || a.preis - b.preis;
+      });
+      for (var i = 0; i < liste.length; i++) {
+        if (W.zugBedienbar(liste[i])) return liste[i];
       }
-      return W.haus.kasse / z.preis;
+      return null;
+    },
+
+    /* Bedienbar heisst: der Knopf steht da, ist nicht gesperrt UND hat eine
+       Flaeche. Die Flaechenpruefung ist neu — `disabled` allein liess Knoepfe
+       durch, die zwar frei waren, aber zusammengeklappt bei 0x0 lagen. */
+    zugBedienbar: function (z) {
+      if (!z || !z.preis) return false;
+      if (!z.zug || typeof document === 'undefined') return true;
+      var el = document.querySelector('[data-zug="' + z.zug + '"]');
+      if (!el || el.disabled) return false;
+      var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+      if (r && (!r.width || !r.height)) return false;
+      return true;
+    },
+
+    zugDeckung: function () {
+      var z = W.besterZug();
+      return z ? W.haus.kasse / z.preis : null;
     }
   };
+
+  /* `naechsterZug` bleibt nach aussen genau das, was es war — eine Eigenschaft,
+     die man liest (kern/kopf.js) und vor jedem Zeichnen auf null setzt
+     (kern/buehne.js). Nur steht jetzt der beste BEDIENBARE Zug darin, aus allen
+     Meldungen des Durchgangs, statt der einen, die zufaellig zuerst gewann.
+     Als Eigenschaft mit Zugriffsfunktionen, damit kein Stueck und keine andere
+     Kerndatei angefasst werden muss. */
+  Object.defineProperty(W, 'naechsterZug', {
+    get: function () { return W.besterZug(); },
+    set: function (v) { if (!v) W.zugMeldungen = []; },
+    enumerable: true, configurable: true
+  });
 
   B.welt = W;
 
