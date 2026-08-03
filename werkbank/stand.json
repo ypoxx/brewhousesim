@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-03T12:03:26+00:00",
- "phase": "Welle 4 — DER KLANG gebaut, blinder Kritiker misst die dritte Latte gerade nach. DER SUD hat seinen Bericht abgelegt. DIE RÜCKKOPPLUNG baut noch an 1600 (rho +0,873). DER PREIS folgt danach.",
+ "stand": "2026-08-03T12:52:52+00:00",
+ "phase": "Welle 4 — DER KLANG geurteilt (besteht mit Auflage, acht Auflagen, in Nacharbeit). DIE RÜCKKOPPLUNG gebaut: 1600 rho +0,873 → +0,121, blinder Kritiker misst am eingefrorenen Stand da7d690 nach. DER SUD baut noch. DER PREIS folgt, wenn preis*.js frei ist.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -838,6 +838,18 @@
   {
    "zeit": "2026-08-03T12:03:26+00:00",
    "text": "Welle 4 — DER KLANG gebaut, blinder Kritiker misst die dritte Latte gerade nach. DER SUD hat seinen Bericht abgelegt. DIE RÜCKKOPPLUNG baut noch an 1600 (rho +0,873). DER PREIS folgt danach."
+  },
+  {
+   "zeit": "2026-08-03T12:52:52+00:00",
+   "text": "Welle 4 — DER KLANG geurteilt (besteht mit Auflage, acht Auflagen, in Nacharbeit). DIE RÜCKKOPPLUNG gebaut: 1600 rho +0,873 → +0,121, blinder Kritiker misst am eingefrorenen Stand da7d690 nach. DER SUD baut noch. DER PREIS folgt, wenn preis*.js frei ist."
+  },
+  {
+   "zeit": "2026-08-03T12:52:52+00:00",
+   "text": "DER KLANG, Runde 1 — DIE DRITTE LATTE IST ZUM ERSTEN MAL IN VIER WELLEN GEMESSEN, und sie hält: das fremde Ohr nennt die Epoche 8 von 8 richtig, zwei Durchgänge, zwei Mischungen, Schlüssel versiegelt und erst danach gelesen. Der Ton entsteht wirklich (AudioContext running, 0 von 303/298/294/298 Pegelproben bei null, rms 0,077-0,110). ABER DER BLINDE KRITIKER HAT DEN BEFUND UMGEDREHT: die Epoche wird vom KLANGBETT getragen, nicht vom VORGANG. Dreißig Sekunden ohne einen einzigen Klick erreichen 94/97/59/75 Prozent des Pegels des gespielten Laufs, und das Ohr nennt die Epoche daraus 3 von 3 messbaren richtig. Die Aufsicht hat unabhängig nachgemessen, eigener Code, zwanzig Sekunden je Epoche, Analyser am selben ausgang(): 102/105/100/101 Prozent — Nichtstun klingt so laut wie Spielen. (Einschränkung der Aufsichtszahl: gröber geklickt als der Kritiker, teils Leerklicks; seine Zahl ist die belastbarere, die Richtung ist dieselbe.) Damit ist die Latte formal bestanden, aber nicht aus dem Grund, aus dem sie geschrieben wurde: sie will Epoche UND VORGANG. Weiter gemessen: Michaelitag 4/4 hörbar bei Sekunde 16/17, Sud 4/4, Fuhre 2/4, GEGENZUG 0 VON 4 — obwohl auf drei von vier Bändern gegner:* steht. Anachronismen mit Sekunde belegt: Ragtime in 1884 (frühestens 1893, dreimal unabhängig so benannt), digitaler Handy-Klingelton als Michaeliklang 1970. Nullprobe des Kritikers gegen vier Blender: 1 Falschtreffer in 32. Urteil: besteht mit Auflage, acht Auflagen, zurück an den Builder."
+  },
+  {
+   "zeit": "2026-08-03T12:52:52+00:00",
+   "text": "AUFSICHT — MESSGERÄT REPARIERT, Auflage 8 des KLANG-Kritikers. werkbank/hoerer.py hat aus einer Modell-Verweigerung ein Urteil über das Spiel gemacht: bei ruhe-drei.wav wurde 'Epoche 1, sicher 0' geborgen, mit --erwartet wäre daraus ein Fehlurteil geworden. Dazu stand Ausstiegscode 3 sowohl für 'durchgefallen' als auch für 'keine Messung' — wer das Skript in einer Kette aufruft, konnte beides nicht unterscheiden. Behoben, und die Hürde eng gesetzt: als Verweigerung zählt nur, wenn der Text das Nichthören AUSSPRICHT UND die Sicherheit 0 ist; bloße Unsicherheit bleibt ein zählender Fehlgriff, sonst würde das Gerät echte Fehler verschwinden lassen. Gegen acht Fälle geprüft (echte Verweigerung deutsch und englisch, geborgene Verweigerung, unsicherer Fehlgriff, Treffer, sicher-0-mit-echtem-Raten, abgeschnittenes JSON, völlig unlesbar): 8 von 8 wie vorgesehen. Codes jetzt getrennt: 0 alles richtig, 2 gar keine Messung, 3 danebengelegen, 4 gemessen und richtig, aber es fehlen Messungen. Der Kritiker hat das Gerät korrekt NICHT selbst angefasst (md5 8a0886a7 unverändert, §16)."
   }
  ]
 }
