@@ -169,6 +169,20 @@
       k.setAttribute('data-preis', String(opt.preis));
     }
 
+    /* DAS SPIEL SAGT NEIN, ODER ES IST NICHTS DA — zwei Dinge, eine Zahl.
+       `disabled` traegt beides zugleich: die Regel des Spiels UND jede
+       Verdeckung, die ein Stueck spaeter darueberlegt. Wer aktive Zuege zaehlt,
+       zaehlt damit etwas anderes, als er glaubt — und das ist Spalte (a) der
+       zweiten Messlatte. Am 3. August 2026 gemessen: von 440 Zuegen ueber vier
+       Epochen trugen 55 ein `data-soll-aus` (12,5 %), weil DER SUD es sich
+       selbst eingebaut hatte; die 13/20/20/14 gesperrten Zuege ohne jede
+       Auskunft kamen ausnahmslos aus `fuhre:*`.
+       Diese eine Zeile setzt das Attribut fuer JEDEN Knopf, der ueber B.knopf()
+       entsteht — kein Stueck muss dafuer etwas aendern. `data-soll-aus` sagt,
+       was das SPIEL will; `disabled` bleibt die Summe aus Spiel und Verdeckung.
+       Vorgeschlagen und gemessen begruendet von DER SUD (Welle 4). */
+    k.setAttribute('data-soll-aus', opt.aus ? '1' : '0');
+
     if (opt.aus) {
       k.disabled = true;
       k.setAttribute('aria-disabled', 'true');
