@@ -326,14 +326,28 @@ var PREIS_DATEN = {
          deshalb kommt sie nur hier: in 1350, 1884 und 1970 kaeme sie nie
          ueber den Freibetrag und waere eine tote Zeile.
 
-         `liegeFrei` in JAHRESLASTEN. Zwei sind gemessen und nicht geraten:
-         die Michaelirechnung dieser Epoche liegt zwischen 158 und 844 fl, die
-         billigste Sprosse der Tafel zwischen 210 und 1.700, die
-         ausserordentliche Umlage bei 0,52 bis 2,10 Jahreslasten. Wer zwei
-         Jahreslasten bar haelt, kann die naechste Umlage und die naechste
-         Sprosse bezahlen, ohne angeschlagen zu werden. Wer spart und dann
-         kauft, zahlt nichts; angeschlagen wird nur, was Jahr fuer Jahr
-         unberuehrt liegen bleibt.
+         `liegeFrei` in JAHRESLASTEN, und der Freibetrag hat zusaetzlich einen
+         Boden auf dem Preis der billigsten Festlegung dieser Zeit (siehe
+         preis.js, `liegeFreibetrag`). Wer eine Jahreslast bar haelt, kann die
+         naechste Umlage tragen; wer auf die unwiderrufliche Wahl spart, wird
+         gar nicht angeschlagen. Angeschlagen wird nur, was Jahr fuer Jahr
+         unberuehrt darueber liegen bleibt.
+
+         BEIDE ZAHLEN SIND GEMESSEN UND NICHT GERATEN. Vier Laeufe derselben
+         Linie, je 400 Wochen, nur diese beiden Zahlen veraendert
+         (rho = Spearman der Kennzahl gegen das Jahr, wie die Aufsicht rechnet):
+
+           liegeFrei / liegeSatz   rho      Band          Festlegung
+           — (ohne alles)        +0,873   2,27–67,33x        1x
+           2,0 / 0,45            +0,644   2,02–13,02x        1x
+           1,5 / 0,55            +0,723   1,96– 8,07x        1x
+           1,0 / 0,70            −0,182   1,49– 5,90x        1x
+
+         Die Lade steht damit ueber vierzehn Jahre bei 377 bis 809 fl statt bei
+         430 bis 4.637, und die Kennzahl geht von 3,76x auf 2,70x statt auf
+         27,81x. Weiter herunter darf der Freibetrag nicht: bei 1,5/0,55 ohne
+         den Boden auf der Festlegung nimmt der Automat in vierzehn Jahren
+         KEINE einzige Festlegung mehr — die zweite Messlatte zaehlt beides.
 
          `liegeSatz` ist hoch, und das ist diese Epoche. Der Anschlag steht
          nach dem Satz weiter oben „im Steuerbuch der Stadt: Vermoegen und
