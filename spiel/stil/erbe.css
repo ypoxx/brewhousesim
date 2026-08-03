@@ -364,12 +364,20 @@
   --erb-tinte: #23201a;
   --erb-rubrik: #93211c;
   background:
+    /* Die Rippen des Schoepfsiebs: dicht, waagrecht, ueber das ganze Blatt.
+       Sie muessen zu SEHEN sein, sonst ist Buetten nur ein Wort im Kommentar. */
     repeating-linear-gradient(0deg,
-      rgba(140, 130, 104, 0.10) 0,
-      rgba(140, 130, 104, 0.10) calc(var(--s) * 1),
-      rgba(140, 130, 104, 0) calc(var(--s) * 1),
-      rgba(140, 130, 104, 0) calc(var(--s) * 7)),
-    linear-gradient(180deg, #f3efdf 0%, #eae4cf 100%);
+      rgba(126, 114, 84, 0.16) 0,
+      rgba(126, 114, 84, 0.16) calc(var(--s) * 2),
+      rgba(255, 252, 240, 0.30) calc(var(--s) * 2),
+      rgba(255, 252, 240, 0.30) calc(var(--s) * 5)),
+    /* und die weiten Kettdrähte quer dazu */
+    repeating-linear-gradient(90deg,
+      rgba(126, 114, 84, 0.10) 0,
+      rgba(126, 114, 84, 0.10) calc(var(--s) * 2),
+      rgba(126, 114, 84, 0) calc(var(--s) * 2),
+      rgba(126, 114, 84, 0) calc(var(--s) * 30)),
+    linear-gradient(180deg, #f6f1de 0%, #ece5cb 100%);
   color: var(--erb-tinte);
   font-family: var(--serif);
 }
@@ -416,17 +424,26 @@
   /* Durchgehende Zeilenlinien wie auf einem Formular, dazu die rote
      Randlinie der Spalte. */
   background:
+    /* die rote Randlinie der Spalte */
     linear-gradient(90deg,
       rgba(157, 43, 34, 0) calc(var(--s) * 34),
-      rgba(157, 43, 34, 0.55) calc(var(--s) * 34),
-      rgba(157, 43, 34, 0.55) calc(var(--s) * 35),
-      rgba(157, 43, 34, 0) calc(var(--s) * 35)),
+      rgba(157, 43, 34, 0.70) calc(var(--s) * 34),
+      rgba(157, 43, 34, 0.70) calc(var(--s) * 36),
+      rgba(157, 43, 34, 0) calc(var(--s) * 36)),
+    /* die gedruckte Zeilenlinie */
     repeating-linear-gradient(0deg,
-      rgba(126, 157, 196, 0) 0,
-      rgba(126, 157, 196, 0) calc(var(--s) * 25),
-      rgba(126, 157, 196, 0.42) calc(var(--s) * 25),
-      rgba(126, 157, 196, 0.42) calc(var(--s) * 26)),
-    linear-gradient(180deg, #f7f6ee 0%, #eef0e6 100%);
+      rgba(74, 116, 166, 0) 0,
+      rgba(74, 116, 166, 0) calc(var(--s) * 25),
+      rgba(74, 116, 166, 0.55) calc(var(--s) * 25),
+      rgba(74, 116, 166, 0.55) calc(var(--s) * 26)),
+    /* und das Zeilenband dazwischen — ein Vordruck ist ueber die halbe
+       Flaeche getoent, sonst ist er nur ein weisses Blatt mit Strichen */
+    repeating-linear-gradient(0deg,
+      rgba(74, 116, 166, 0.09) 0,
+      rgba(74, 116, 166, 0.09) calc(var(--s) * 13),
+      rgba(74, 116, 166, 0) calc(var(--s) * 13),
+      rgba(74, 116, 166, 0) calc(var(--s) * 26)),
+    linear-gradient(180deg, #eef3ea 0%, #e2eade 100%);
   color: var(--erb-tinte);
   font-family: var(--serif);
   font-stretch: condensed;
@@ -470,7 +487,10 @@
 #buehne[data-epoche="4"] .erb-buch {
   --erb-tinte: #23241f;
   --erb-rubrik: #3c4a5a;
-  background: linear-gradient(180deg, #f4f4f1 0%, #e9e9e4 100%);
+  /* Durchschlagpapier: flach, kuehl, ohne jede Struktur. Genau das
+     unterscheidet es vom Vordruck von 1884 — der ist liniert und getoent,
+     dieser ist leer. */
+  background: linear-gradient(180deg, #fbfbfa 0%, #f0f0ee 100%);
   color: var(--erb-tinte);
   /* Gleiche Dickte fuer alles. Ein Durchschlag hat keine zweite Schrift. */
   font-family: var(--mono);
