@@ -571,15 +571,22 @@
   }
 
   /* Der fuenfte Zug der frommen Hand. */
+  function geistlicheHaeuser() {
+    return B.welt.adressenJetzt().filter(function (a) {
+      return a.art === 'kloster' || a.schluessel === 'pfarrhof';
+    });
+  }
+  function seelgeraetPreis() {
+    var p = 0;
+    geistlicheHaeuser().forEach(function (a) { p += wert(a); });
+    return p > 0 ? Math.max(1, Math.round(p * 1.6 * feder())) : 0;
+  }
   function stifteSeelgeraet() {
     if (Z.seelgeraet) return false;
     var e = ep();
-    var geistlich = B.welt.adressenJetzt().filter(function (a) {
-      return a.art === 'kloster' || a.schluessel === 'pfarrhof';
-    });
-    var p = 0;
-    geistlich.forEach(function (a) { p += wert(a); });
-    p = Math.max(1, Math.round(p * 1.6));
+    var geistlich = geistlicheHaeuser();
+    var p = seelgeraetPreis();
+    if (p <= 0) return false;
     if (!B.welt.zahle(p, e.seelgeraet.name)) return false;
     Z.seelgeraet = true;
     geistlich.forEach(function (a) {
@@ -672,6 +679,130 @@
     return n.length > 21 ? n.slice(0, 20) + '…' : n;
   }
 
+  /* ======================================================================
+     DIE LEISTE.  Vier Knoepfe in einer Zeile, drei mit Preisschild, und zwar
+     von der ersten bis zur letzten Woche der Partie.
+
+     Der Kritiker hat gezaehlt, was nach der Stunde uebrigblieb: E1 Mittel
+     0,29 preisbeschilderte Zuege je Woche (85 von 115 Wochen null), E4 0,05
+     (108 von 113 null). Eigene Nachmessung, Beobachtungspartie, Saat 1350:
+     E1 0,03 (85 von 88 null), E2 0,60, E3 0,99, E4 0,96. Der Befund stimmt,
+     und er hatte zwei Ursachen, die beide hier lagen:
+
+       · Es gab genau eine Stunde. Danach war die Uebergabe entschieden und
+         die drei Wege verschwanden aus dem DOM — fuer immer.
+       · Was danach noch kam (Nachschrift, Fortschreiben, Anfechten), setzt
+         voraus, dass das Haus ueberhaupt noch etwas haelt. In E1 hielt es ab
+         Woche 21 nichts mehr, und die Leiste war leer.
+
+     Beides ist jetzt anders. Nach jedem Erbfall wird die naechste Stunde
+     gestellt, und die Leiste traegt IMMER dieselben vier Knoepfe: eine Tat
+     und die drei Wege. Die Tat ist die dringendste, die es gerade gibt —
+     alle anderen liegen im Buch hinter dem Reiter.
+     ====================================================================== */
+
+  /* Die Tat, die auf der Leiste steht. In dieser Reihenfolge, und die erste,
+     die es gibt, gewinnt. Die vollstaendige Liste steht im Buch. */
+  function taten() {
+    var e = ep(), ei = eig(), l = [];
+
+    /* 1 — Was bezahlt wurde und genommen ist. Das drueckt am meisten. */
+    var w = widerspruchListe();
+    if (w.length) {
+      var x = w[0], ax = B.welt.adresse(x.schluessel), pw = widerspruchPreis(x);
+      l.push({ zug: 'erbe:widerspruch', art: 'umkaempft', klasse: 'erb-knopf erb-streit',
+        text: e.widerspruch.name.replace(/^(Widerspruch aus dem|Auf den)\s+/, 'Widerspruch · '),
+        kurz: e.widerspruch.name + ' ' + ax.name, preis: pw,
+        titel: ax.name + ': ' + geld(x.preis) + ' sind ' + x.jahr + '/' + x.woche
+          + ' dafür bezahlt worden, ' + x.wegJahr + '/' + x.wegWoche + ' war es fort ('
+          + x.grund + '). ' + e.widerspruch.satz,
+        aus: !B.welt.kann(pw),
+        tu: function () { widersprich(x.schluessel); } });
+    }
+
+    /* 2 — Was nur an dieser Hand haengt und die Stunde nicht ueberlebt. */
+    var offen = personListe().slice().sort(function (p, q) { return wert(q) - wert(p); });
+    if (offen.length) {
+      var ziel = offen[0];
+      var borg = ei.zug === 'borg';
+      var p1 = borg ? schreibPreis(ziel) * 2 : schreibPreis(ziel);
+      l.push({ zug: 'erbe:tafel:verschreibe', art: 'bindung', klasse: 'erb-knopf erb-weit',
+        text: (borg ? e.verb + ' auf Borg · ' : e.verb + ' · ') + kurzName(ziel),
+        kurz: e.verb + ' ' + ziel.name, preis: p1,
+        titel: ziel.name + ' hängt an ' + (amt().name || 'der Hand') + ' ('
+          + ziel.bindung.womit + '). ' + e.verb + ' ' + e.wo + ' — dann haftet die '
+          + 'Bindung am Haus und überlebt den Erbfall. Feder ' + B.zahl(feder(), 2)
+          + '×' + (imAntritt() ? ', Antrittsgeld der neuen Hand eingerechnet' : '')
+          + '. Unwiderruflich.',
+        aus: !borg && !B.welt.kann(p1),
+        tu: function () { schreibeAufsHaus(ziel.schluessel, borg); } });
+    }
+
+    /* 3 — Was mit der letzten Hand gefallen ist. */
+    var nach = offeneNachschrift();
+    if (nach.length) {
+      var pn = nachschriftPreis();
+      l.push({ zug: 'erbe:nachschrift', art: 'bindung', klasse: 'erb-knopf erb-nach',
+        text: 'Nachschrift · ' + nach.length + (nach.length === 1 ? ' Haus' : ' Häuser'),
+        kurz: 'Nachschrift ' + nach.length, preis: pn,
+        titel: 'Mit ' + (Z.alt ? Z.alt.name : 'der alten Hand') + ' gefallen: '
+          + nach.map(function (a) { return a.name; }).join(', ')
+          + '. Neu ' + e.wo + ' schreiben lassen — diesmal am Haus. Unwiderruflich.',
+        aus: !B.welt.kann(pn),
+        tu: function () { schreibeNach(); } });
+    }
+
+    /* 4 — Was am Haus haftet, haftet nur bis zu einem Tag. */
+    var bald = baldFaellig();
+    if (bald) {
+      var pv = verlaengerPreis(bald);
+      l.push({ zug: 'erbe:verlaengern', art: 'bindung', klasse: 'erb-knopf',
+        text: 'Fortschreiben · ' + kurzName(bald),
+        kurz: 'Fortschreiben ' + bald.name, preis: pv,
+        titel: bald.name + ' haftet am Haus (' + bald.bindung.womit + '), aber nur '
+          + 'bis ' + bald.bindung.bis + '. Fortschreiben ' + e.wo + ' bis '
+          + (jahr() + e.jahre) + '. Unwiderruflich.',
+        aus: !B.welt.kann(pv),
+        tu: function () { verlaengere(bald.schluessel); } });
+    }
+
+    /* 5 — Der Zug, den nur diese Eigenschaft kennt. */
+    if (ei.zug === 'anfechten') {
+      var fremd = B.welt.adressenJetzt().filter(function (a) {
+        return a.bindung && a.bindung.wem !== 'haus' && !amHaus(a.bindung.womit);
+      }).sort(function (p, q) { return wert(q) - wert(p); });
+      if (fremd.length) {
+        var f = fremd[0], pf = Math.round(wert(f) * 2.2);
+        l.push({ zug: 'erbe:anfechten', art: 'umkaempft', klasse: 'erb-knopf erb-streit',
+          text: e.anfechten.name + ' · ' + kurzName(f),
+          kurz: e.anfechten.name + ' ' + f.name, preis: pf,
+          titel: f.name + ' hängt bei ' + wemName(f.bindung.wem) + ' nur an einer Person ('
+            + f.bindung.womit + '). Das lässt sich anfechten.',
+          aus: !B.welt.kann(pf),
+          tu: function () { fechteAn(f.schluessel); } });
+      }
+    }
+    if (ei.zug === 'seelgeraet' && !Z.seelgeraet) {
+      var ps = seelgeraetPreis();
+      if (ps > 0) {
+        l.push({ zug: 'erbe:seelgeraet', art: 'bindung', klasse: 'erb-knopf',
+          text: e.seelgeraet.name, kurz: e.seelgeraet.name, preis: ps,
+          titel: e.seelgeraet.satz + ' ' + geistlicheHaeuser().map(function (a) { return a.name; }).join(', ')
+            + ' hängen danach am Haus.',
+          aus: !B.welt.kann(ps),
+          tu: function () { stifteSeelgeraet(); } });
+      }
+    }
+    return l;
+  }
+
+  function tatKnopf(t) {
+    var k = B.knopf({ text: t.text, zug: t.zug, preis: -t.preis, klasse: t.klasse,
+                      titel: t.titel, aus: t.aus, tu: t.tu });
+    B.welt.meldeZug(t.kurz, t.preis, t.art, t.zug);
+    return k;
+  }
+
   function zeichneTafel(fach) {
     var e = ep(), a = amt();
     var t = B.el('div', 'erb-leiste');
@@ -686,197 +817,74 @@
     var band = B.el('div', 'erb-band');
     band.appendChild(B.el('b', 'erb-wort', e.wort));
     band.appendChild(B.el('span', 'erb-uhr',
-      Z.uebergeben ? (roem(a.nr) + ' Hand')
-                   : ('noch ' + wochenBisStunde()
-                      + (wochenBisStunde() === 1 ? ' Woche' : ' Wochen'))));
+      'noch ' + wochenBisStunde() + (wochenBisStunde() === 1 ? ' Woche' : ' Wochen')));
+    /* Die Nummer der Hand, ihre Eigenschaft UND der Preis ihrer Feder in einer
+       Spalte: das ist die Zeile, an der sich nachlesen laesst, ob mit dem
+       Erbfall wirklich etwas anderes am Haus sitzt (Auflage 2). */
     band.appendChild(B.el('span', 'erb-hand',
-      (a.name || '—') + ' · ' + (a.eigenschaftName || '—')));
+      roem(a.nr) + ' ' + (a.name || '—') + ' · ' + (a.eigenschaftName || '—')
+      + ' · Feder ' + B.zahl(feder(), 2) + '×'));
     band.appendChild(B.el('span', 'erb-stand',
       'am Haus ' + amHausListe().length + ' · an der Person ' + personListe().length));
-    /* Der Name der Hand ist das Wichtigste im Band und darf als Letztes
-       gekuerzt werden; die Zahlen rechts duerfen es zuerst. */
-
-    var knoepfe = B.el('div', 'erb-knoepfe');
-
-    if (!Z.uebergeben) {
-      /* Was die Stunde nehmen wird, wenn niemand etwas vereinbart: die
-         Bindungen, die nur an ihr hängen, und ihr Teil aus dem Keller. */
-      band.appendChild(B.el('span', 'erb-nimmt',
-        'nimmt ' + personListe().length + ' · ' + B.welt.menge(erbteilFass())));
-
-      /* Der wertvollste offene Fall — ein Knopf, der immer im Bild steht. */
-      var offen = personListe().slice().sort(function (x, y) { return wert(y) - wert(x); });
-      if (offen.length) {
-        var ziel = offen[0];
-        var p = schreibPreis(ziel);
-        knoepfe.appendChild(B.knopf({
-          text: e.verb + ' · ' + kurzName(ziel),
-          zug: 'erbe:tafel:verschreibe',
-          preis: -p,
-          klasse: 'erb-knopf erb-weit',
-          titel: ziel.name + ' hängt an ' + (a.name || 'der Hand') + ' (' + ziel.bindung.womit
-            + '). ' + e.verb + ' ' + e.wo + ' — dann haftet die Bindung am Haus und '
-            + 'überlebt den Erbfall. Unwiderruflich.',
-          aus: !B.welt.kann(p),
-          tu: function () { schreibeAufsHaus(ziel.schluessel, false); }
-        }));
-        B.welt.meldeZug(e.verb + ' ' + ziel.name, p, 'bindung', 'erbe:tafel:verschreibe');
-      }
-
-      /* Die drei Wege. Nebeneinander, jeder mit Preisschild, jeder endgueltig. */
-      var lg = leibgedingPreis(), ab = abfindungPreis();
-      knoepfe.appendChild(B.knopf({
-        text: ohneArtikel(e.formen.leibgeding.name) + ' · jährlich',
-        zug: 'erbe:uebergabe:leibgeding',
-        preis: -lg,
-        klasse: 'erb-knopf erb-uebergabe',
-        titel: e.formen.leibgeding.satz + ' — ' + geld(lg) + ' jedes Michaeli, '
-          + 'solange das Haus steht. Unwiderruflich.',
-        tu: function () { uebergib('leibgeding'); }
-      }));
-      knoepfe.appendChild(B.knopf({
-        text: ohneArtikel(e.formen.abfindung.name),
-        zug: 'erbe:uebergabe:abfindung',
-        preis: -ab,
-        klasse: 'erb-knopf erb-uebergabe',
-        titel: e.formen.abfindung.satz + ' — einmal ' + geld(ab) + '. '
-          + 'Der Preis fällt jede Woche. Unwiderruflich.',
-        aus: !B.welt.kann(ab),
-        tu: function () { uebergib('abfindung'); }
-      }));
-      var kLeer = B.knopf({
-        text: ohneArtikel(e.formen.bruch.name),
-        zug: 'erbe:uebergabe:bruch',
-        klasse: 'erb-knopf erb-uebergabe erb-leer',
-        titel: e.formen.bruch.satz + ' — kostet nichts und nimmt alles, was nur '
-          + 'an der Person hing. Unwiderruflich.',
-        tu: function () { uebergib('bruch'); }
-      });
-      /* B.knopf laesst den Preis 0 weg. Neben zwei Preisschildern sieht ein
-         Knopf ohne Schild aber aus wie ein gesperrter — also traegt der
-         dritte Weg seine Null selbst. Die Null IST hier die Entscheidung. */
-      kLeer.appendChild(B.el('span', 'preis einnahme', geld(0)));
-      knoepfe.appendChild(kLeer);
-    } else {
-      band.appendChild(B.el('span', 'erb-form',
-        (e.formen[Z.form] ? e.formen[Z.form].kurz : 'DIE STUNDE')
-        + ' · Feder ' + B.zahl(eig().faktor, 2) + '×'));
-      if (Z.form === 'leibgeding' && !Z.leibgedingVerfallen) {
-        band.appendChild(B.el('span', 'erb-last',
-          'jedes Michaeli ' + geld(Z.leibgeding)));
-      } else {
-        band.appendChild(B.el('span', 'erb-gefallen',
-          (Z.leibgedingVerfallen ? 'Leibgeding verfallen · ' : '')
-          + 'nahm ' + Z.gefallen.length + ' · '
-          + B.welt.menge(Z.erbteilFass)));
-      }
-      nachKnoepfe(knoepfe);
+    /* Was die Stunde nehmen wird, wenn niemand etwas vereinbart. */
+    band.appendChild(B.el('span', 'erb-nimmt',
+      'nimmt ' + personListe().length + ' · ' + B.welt.menge(erbteilFass())));
+    /* Auflage 1: was bezahlt und doch verloren ist, steht auf der Leiste und
+       nicht erst hinter einem Reiter. */
+    if (Z.erloschen.length) {
+      band.appendChild(B.el('span', 'erb-erloschen',
+        'erloschen ' + Z.erloschen.length + ' · ' + geld(erloschenSumme())));
     }
+    var last = leibgedingLast();
+    if (last > 0) {
+      band.appendChild(B.el('span', 'erb-last', 'jedes Michaeli ' + geld(last)));
+    }
+
+    /* Die vier Knoepfe. Eine Tat und die drei Wege — immer, in jeder Woche. */
+    var knoepfe = B.el('div', 'erb-knoepfe');
+    var l = taten();
+    if (l.length) knoepfe.appendChild(tatKnopf(l[0]));
+
+    var lg = leibgedingPreis(), ab = abfindungPreis();
+    knoepfe.appendChild(B.knopf({
+      text: ohneArtikel(e.formen.leibgeding.name) + ' · jährlich',
+      zug: 'erbe:uebergabe:leibgeding',
+      preis: -lg,
+      klasse: 'erb-knopf erb-uebergabe',
+      titel: e.formen.leibgeding.satz + ' — ' + geld(lg) + ' jedes Michaeli, '
+        + 'solange das Haus steht'
+        + (last > 0 ? '; dazu die ' + geld(last) + ', die schon laufen' : '')
+        + '. Unwiderruflich.',
+      tu: function () { uebergib('leibgeding'); }
+    }));
+    knoepfe.appendChild(B.knopf({
+      text: ohneArtikel(e.formen.abfindung.name),
+      zug: 'erbe:uebergabe:abfindung',
+      preis: -ab,
+      klasse: 'erb-knopf erb-uebergabe',
+      titel: e.formen.abfindung.satz + ' — einmal ' + geld(ab) + '. '
+        + 'Der Preis fällt jede Woche. Unwiderruflich.',
+      aus: !B.welt.kann(ab),
+      tu: function () { uebergib('abfindung'); }
+    }));
+    var kLeer = B.knopf({
+      text: ohneArtikel(e.formen.bruch.name),
+      zug: 'erbe:uebergabe:bruch',
+      klasse: 'erb-knopf erb-uebergabe erb-leer',
+      titel: e.formen.bruch.satz + ' — kostet nichts und nimmt alles, was nur '
+        + 'an der Person hing, dazu ' + B.welt.menge(erbteilFass()) + ' aus dem Lager. '
+        + 'Unwiderruflich.',
+      tu: function () { uebergib('bruch'); }
+    });
+    /* B.knopf laesst den Preis 0 weg. Neben zwei Preisschildern sieht ein
+       Knopf ohne Schild aber aus wie ein gesperrter — also traegt der
+       dritte Weg seine Null selbst. Die Null IST hier die Entscheidung. */
+    kLeer.appendChild(B.el('span', 'preis einnahme', geld(0)));
+    knoepfe.appendChild(kLeer);
 
     t.appendChild(band);
     t.appendChild(knoepfe);
     fach.appendChild(t);
-  }
-
-  /* Was die neue Hand kann, was die alte nicht konnte. */
-  function nachKnoepfe(knoepfe) {
-    var e = ep(), ei = eig();
-    var offen = personListe().slice().sort(function (x, y) { return wert(y) - wert(x); });
-
-    /* Was mit der alten Hand gefallen ist, laesst sich zurueckholen. Einmal,
-       teuer, und nur solange kein anderer zugegriffen hat. */
-    var nach = offeneNachschrift();
-    if (nach.length) {
-      var pn = nachschriftPreis();
-      knoepfe.appendChild(B.knopf({
-        text: 'Nachschrift · ' + nach.length + (nach.length === 1 ? ' Haus' : ' Häuser'),
-        zug: 'erbe:nachschrift',
-        preis: -pn,
-        klasse: 'erb-knopf erb-nach',
-        titel: 'Mit ' + (Z.alt ? Z.alt.name : 'der alten Hand') + ' gefallen: '
-          + nach.map(function (a) { return a.name; }).join(', ')
-          + '. Neu ' + e.wo + ' schreiben lassen — diesmal am Haus. Unwiderruflich.',
-        aus: !B.welt.kann(pn),
-        tu: function () { schreibeNach(); }
-      }));
-      B.welt.meldeZug('Nachschrift ' + nach.length, pn, 'bindung', 'erbe:nachschrift');
-    }
-
-    if (offen.length) {
-      var ziel = offen[0];
-      var borg = ei.zug === 'borg';
-      var p = borg ? schreibPreis(ziel) * 2 : schreibPreis(ziel);
-      knoepfe.appendChild(B.knopf({
-        text: (borg ? e.verb + ' auf Borg · ' : e.verb + ' · ') + kurzName(ziel),
-        zug: 'erbe:tafel:verschreibe',
-        preis: -p,
-        klasse: 'erb-knopf',
-        titel: borg
-          ? 'Auf Borg ' + e.wo + ' geschrieben — am Michaeli das Doppelte, ' + geld(p) + '.'
-          : e.verb + ' ' + e.wo + '. Unwiderruflich.',
-        aus: !borg && !B.welt.kann(p),
-        tu: function () { schreibeAufsHaus(ziel.schluessel, borg); }
-      }));
-      B.welt.meldeZug(e.verb + ' ' + ziel.name, p, 'bindung', 'erbe:tafel:verschreibe');
-    }
-
-    if (ei.zug === 'anfechten') {
-      var fremd = B.welt.adressenJetzt().filter(function (a) {
-        return a.bindung && a.bindung.wem !== 'haus' && !amHaus(a.bindung.womit);
-      }).sort(function (x, y) { return wert(y) - wert(x); });
-      if (fremd.length) {
-        var f = fremd[0];
-        var pf = Math.round(wert(f) * 2.2);
-        knoepfe.appendChild(B.knopf({
-          text: e.anfechten.name + ' · ' + kurzName(f),
-          zug: 'erbe:anfechten',
-          preis: -pf,
-          klasse: 'erb-knopf erb-streit',
-          titel: f.name + ' hängt bei ' + f.bindung.wem + ' nur an einer Person ('
-            + f.bindung.womit + '). Das lässt sich anfechten.',
-          aus: !B.welt.kann(pf),
-          tu: function () { fechteAn(f.schluessel); }
-        }));
-        B.welt.meldeZug(e.anfechten.name + ' ' + f.name, pf, 'umkaempft', 'erbe:anfechten');
-      }
-    }
-
-    var bald = baldFaellig();
-    if (bald) {
-      var pv = verlaengerPreis(bald);
-      knoepfe.appendChild(B.knopf({
-        text: 'Fortschreiben · ' + kurzName(bald),
-        zug: 'erbe:verlaengern',
-        preis: -pv,
-        klasse: 'erb-knopf',
-        titel: bald.name + ' haftet am Haus (' + bald.bindung.womit + '), aber nur '
-          + 'bis ' + bald.bindung.bis + '. Fortschreiben ' + e.wo + ' bis '
-          + (jahr() + e.jahre) + '. Unwiderruflich.',
-        aus: !B.welt.kann(pv),
-        tu: function () { verlaengere(bald.schluessel); }
-      }));
-      B.welt.meldeZug('Fortschreiben ' + bald.name, pv, 'bindung', 'erbe:verlaengern');
-    }
-
-    if (ei.zug === 'seelgeraet' && !Z.seelgeraet) {
-      var geistlich = B.welt.adressenJetzt().filter(function (a) {
-        return a.art === 'kloster' || a.schluessel === 'pfarrhof';
-      });
-      var ps = 0;
-      geistlich.forEach(function (a) { ps += wert(a); });
-      ps = Math.max(1, Math.round(ps * 1.6));
-      knoepfe.appendChild(B.knopf({
-        text: e.seelgeraet.name,
-        zug: 'erbe:seelgeraet',
-        preis: -ps,
-        klasse: 'erb-knopf',
-        titel: e.seelgeraet.satz + ' ' + geistlich.map(function (a) { return a.name; }).join(', ')
-          + ' hängen danach am Haus.',
-        aus: !B.welt.kann(ps),
-        tu: function () { stifteSeelgeraet(); }
-      }));
-      B.welt.meldeZug(e.seelgeraet.name, ps, 'bindung', 'erbe:seelgeraet');
-    }
   }
 
   /* --- das Brett: die volle Liste --------------------------------------- */
