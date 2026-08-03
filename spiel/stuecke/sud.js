@@ -1778,40 +1778,12 @@
     });
   }
 
-  /* ----------------------------------------------------------------------
-     Liegt ein FREMDES Brett ueber dem Kesselzettel?
-
-     Der Zettel haengt am Sudhaus, und ueber dem Sudhaus liegen in 1350 und
-     1600 die Anschlagtafel der FUHRE (x 27,4–50,6 %) und ihre Haeusertafel
-     (1,1–26,7 %). Die Platzordnung der STADT loest Brett gegen Brett auf;
-     eine Ortsmarke nimmt daran nicht teil und kann deshalb begraben werden
-     (BEFUND-BRETTER.md §5, "die Reste sind ein anderer, kleinerer Fall").
-     Verschieben hilft nicht: die linke Bildhaelfte ist in jeder Epoche
-     vergeben, und der Zettel gehoert an das Sudhaus, nicht daneben.
-
-     Also prueft er sich selbst und tritt zurueck, wenn er begraben ist —
-     lieber gar kein Zettel als drei Knoepfe, die aussehen wie Knoepfe und
-     keine sind. Solange er weg ist, wird derselbe Punkt weiter befragt; er
-     kommt von selbst wieder, sobald das fremde Brett zuklappt.
-     ---------------------------------------------------------------------- */
-  function fremdVerdeckt(zettel) {
-    var q = zettel.getBoundingClientRect();
-    if (q.width > 2 && q.height > 2) {
-      Z.zettelPunkt = { x: q.left + q.width / 2, y: q.top + q.height / 2 };
-    }
-    var p = Z.zettelPunkt;
-    if (!p) return false;
-    var t = document.elementFromPoint(p.x, p.y);
-    if (!t) return false;
-    if (zettel.contains(t) || t === zettel) return false;
-    /* Ein fremdes Fach ist ein fremdes Brett. Platte, Bau und der nackte
-       Koerper sind keines — darauf darf der Zettel liegen. */
-    for (var e = t; e; e = e.parentElement) {
-      if (!e.id || e.id.indexOf('fach-') !== 0) continue;
-      return e.id !== 'fach-marken-sud';
-    }
-    return false;
-  }
+  /* Der Vorgaenger dieser Stelle hiess fremdVerdeckt() und fragte genau EINEN
+     Punkt ab — den Mittelpunkt des Zettels. Er ist ersatzlos gestrichen: die
+     fremden Bretter der FUHRE decken die UNTERE Haelfte des Zettels, also
+     seine Knoepfe und nicht seine Mitte, und deshalb meldete er in 305 von
+     400 Wochen "frei" ueber einem Zettel, an dem nichts mehr zu druecken war.
+     Was jetzt gilt, steht bei ZETTELSTELLEN. */
 
   /* Der Rahmen der STADT entscheidet erst im naechsten Bild, ob ein frisch
      gezeichnetes Brett zugeklappt liegt. Zweimal warten, dann nachsehen —
