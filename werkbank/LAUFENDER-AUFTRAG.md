@@ -87,12 +87,32 @@ sich nicht mehr gegen einen Bierdeckel.
 
 **1884 und 1970 haben kein Jahr mehr unter 1×** (vorher 0 und 1 von 4).
 
-**Was NICHT erreicht ist: |rho| < 0,7.** Alle vier liegen zwischen 0,775 und
-1,000. Aber Vorsicht mit dieser Zahl — sie stammt aus dem **sparsamen** Stil, und
-ein Haus, das nichts tut, muss fallen. Das Urteil gehört auf die sorgfältig
-gespielte Linie; deren Skript für Welle 3 (`werkbank/schuss/erbe3/klug.mjs`) ist
-committet und noch nicht von der Aufsicht nachgefahren. **Das ist der nächste
-Schritt.**
+**DIE ENTSCHEIDENDE ZAHL — die sorgfältig gespielte Linie**, von der Aufsicht am
+Stand `ee1715b` selbst nachgefahren (`werkbank/schuss/eichung/preis-linie.mjs`,
+vier Läufe zu je 400 Wochen, 14 Jahre, 0 Seitenfehler):
+
+| Epoche | Start → Ende | min–max | rho | Jahre unter 1× | Latte |
+|---|---|---|---|---|---|
+| 1350 | 5,89 → 2,69 | 0,75–7,88 | **−0,152** | 1 von 14 | **besteht** |
+| 1600 | 3,76 → **27,81** | 2,27–**67,33** | **+0,873** | 0 von 14 | **reißt** |
+| 1884 | 8,35 → 2,06 | 0,63–10,18 | **+0,143** | 1 von 14 | **besteht** |
+| 1970 | 2,25 → 2,54 | 0,81–6,53 | **−0,112** | 1 von 14 | **besteht** |
+
+**Drei von vier bestehen jetzt beide Kriterien.** Vor Welle 3 stand 1350 bei
+−0,795 (6 von 12 Jahren unter 1×), 1884 bei −0,367, 1970 bei −0,572 mit 9 von 11.
+Jetzt hat **keine** Epoche mehr als ein Jahr von vierzehn unter 1×.
+
+**Und 1600 ist gekippt — in die andere Richtung.** Es war das einzige, das in
+Welle 2b sauber bestand (+0,165). Jetzt läuft die Leiter von 3,76 auf 27,81 und
+in der Spitze auf **67,33×** davon: die Barschaft wächst schneller als die Preise.
+Das ist wörtlich der Patrizier-IV-Fall aus der Messlatte, nur diesmal in 1600
+statt überall. **Das ist der Befund für die nächste Welle:** die Rückkopplung
+wirkt in drei Epochen und fehlt in der vierten nach oben.
+
+(Der sparsame Stil sagt weiter −0,775 bis −1,000 — aber ein Haus, das nichts tut,
+muss fallen; dieser Stil ist der Randfall, nicht das Urteil. `klug.mjs` in
+`werkbank/schuss/erbe3/` ist NICHT diese Linie, sondern DAS ERBE's Skript für
+Erbfälle.)
 
 **Offen und ungeprüft:** die Auflagen der vier Kritiker im Einzelnen — ihr
 Wortlaut ist mit dem Journal verloren. Was noch messbar ist, misst die Aufsicht
