@@ -781,8 +781,18 @@
        nicht danach, was in der Lade liegt (ZUSTAENDIGKEIT 21). Wer im
        vorigen Jahr gebaut hat, hat weniger Nahrung — das ist keine Luecke,
        sondern der Grund, warum ein Haus ueberhaupt baut. */
+    /* GELIEHENES IST KEINE NAHRUNG. `Z.vorgriff` haelt an dieser Stelle noch
+       den Betrag, den der Rat am VORIGEN Michaeli auf den Notpfennig
+       vorgeschossen hat (Schritt 7d setzt ihn erst weiter unten neu). Er lag
+       das ganze Jahr in der Lade und stuende ohne diesen Abzug als Zuwachs
+       des Hauses da — der Schoss wuerde auf ein Darlehen erhoben, und der
+       Nachlass fuer ein Fehljahr (`Z.ertrag <= 0`) bliebe genau dem Haus
+       versagt, fuer das er gemacht ist. Beides waere aus dem Boden eine
+       zweite Strafe. Der Vorgriff kommt zu Michaeli ohnehin mit Aufschlag
+       zurueck; die Rechnung dafuer steht in Schritt 2, nicht hier. */
     var kasseJetzt = Math.round(B.welt.haus.kasse);
-    Z.ertrag = (erste || Z.kasseMichaeli === null) ? 0 : (kasseJetzt - Z.kasseMichaeli);
+    Z.ertrag = (erste || Z.kasseMichaeli === null)
+      ? 0 : (kasseJetzt - Z.kasseMichaeli - (Z.vorgriff || 0));
     Z.kasseMichaeli = kasseJetzt;
     /* DER NACHLASS — der Weg zurueck. Ein Verlustjahr wird nicht nur nicht
        veranlagt; der Rat, das Kloster, der Steuerausschuss, die Bank setzen

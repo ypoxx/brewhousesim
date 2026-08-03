@@ -1,0 +1,98 @@
+[
+ {
+  "probe": "probe-01.wav",
+  "quelle": "e4-gespielt.wav",
+  "soll": 4,
+  "art": "gespielt",
+  "gehoert": 3,
+  "sicher": 95,
+  "richtig": false,
+  "woran": "Laute Dampfpfeifen, zischender Wasserdampf von Dampfmaschinen und metallisches Klappern schwerer Geräte.",
+  "vorgang": "In einem industriellen Brauereihof werden Fässer verladen und dampfbetriebene Maschinen bedient.",
+  "stoert": "Keine störenden oder unpassenden Geräusche hörbar."
+ },
+ {
+  "probe": "probe-02.wav",
+  "quelle": "e2-still.wav",
+  "soll": 2,
+  "art": "still",
+  "gehoert": 2,
+  "sicher": 90,
+  "richtig": true,
+  "woran": "An der gezupften Lautenmusik im Stil der Renaissance sowie den Geräuschen von Schritten und quietschenden Holzrädern auf Kopfsteinpflaster.",
+  "vorgang": "Im Brauhaushof wird ein hölzerner Karren transportiert, während im Hintergrund ein Lautenspieler eine Renaissance-Melodie spielt.",
+  "stoert": "Keine auffälligen Anachronismen; Musik und Kulisse passen sehr gut in die Zeit um 1600."
+ },
+ {
+  "probe": "probe-03.wav",
+  "quelle": "e1-gespielt.wav",
+  "soll": 1,
+  "art": "gespielt",
+  "gehoert": 1,
+  "sicher": 90,
+  "richtig": true,
+  "woran": "Eine einfache Holzflöte zu Beginn, das Poltern und Rollen schwerer Holzfässer, ein Blashorn-Signal sowie das deutliche Kratzen eines Federkiels auf Pergament.",
+  "vorgang": "Im Hof eines mittelalterlichen Brauhauses werden schwere Holzfässer gerollt, Getreide geschaufelt und die Lieferungen mit einem Federkiel protokolliert.",
+  "stoert": "Nein, sämtliche Klänge entsprechen exakt den handwerklichen Abläufen und Instrumenten des Spätmittelalters um 1350."
+ },
+ {
+  "probe": "probe-04.wav",
+  "quelle": "e4-still.wav",
+  "soll": 4,
+  "art": "still",
+  "gehoert": 4,
+  "sicher": 100,
+  "richtig": true,
+  "woran": "Der Klang eines modernen Verbrennungsmotors (LKW/Lieferwagen) und die typische 70er-Jahre-Funk/Jazz-Musik mit E-Bass, Schlagzeug und E-Orgel.",
+  "vorgang": "Ein LKW oder Lieferwagen fährt bzw. idelt im Brauereihof, während Kisten oder Ladung bewegt werden und im Hintergrund Musik läuft.",
+  "stoert": "Nein, alle Geräusche und die Musik passen sehr gut zusammen."
+ },
+ {
+  "probe": "probe-05.wav",
+  "quelle": "e3-still.wav",
+  "soll": 3,
+  "art": "still",
+  "gehoert": 3,
+  "sicher": 90,
+  "richtig": true,
+  "woran": "Zu hören ist eine typische Blaskapelle mit Ventilblechblasinstrumenten wie Tuba und Trompeten, wie sie im 19. Jahrhundert populär wurden.",
+  "vorgang": "Eine Blaskapelle spielt im Brauhaushof schwungvolle Musik zur Unterhaltung der Gäste.",
+  "stoert": "Es gibt keine störenden modernen Anachronismen wie Motorengeräusche oder Mikrofonsurren."
+ },
+ {
+  "probe": "probe-06.wav",
+  "quelle": "e1-still.wav",
+  "soll": 1,
+  "art": "still",
+  "gehoert": 1,
+  "sicher": 85,
+  "richtig": true,
+  "woran": "An der einfachen, akustischen Holzflöte (Blockflöte) und dem Fehlen jeglicher mechanischer oder industrieller Hintergrundgeräusche.",
+  "vorgang": "Eine mittelalterliche Flötenmelodie wird gespielt, während jemand ein Getränk einschenkt und trinkt.",
+  "stoert": "Nichts, die Geräusche und die Musik passen stimmig in das Spätmittelalter."
+ },
+ {
+  "probe": "probe-07.wav",
+  "quelle": "e2-gespielt.wav",
+  "soll": 2,
+  "art": "gespielt",
+  "gehoert": 2,
+  "sicher": 85,
+  "richtig": true,
+  "woran": "Charakteristische Lautenmusik mit Tambourin, Klappern eines Holzpferdewagens auf Pflastersteinen, Hundegebell und Kirchenglocken.",
+  "vorgang": "Ein Pferdewagen transportiert Holzfässer über das Kopfsteinpflaster des Brauhaushofs, während im Hintergrund Renaissance-Lautenmusik gespielt wird.",
+  "stoert": "Nein, alle akustischen Elemente passen stimmig in die Renaissance um 1600."
+ },
+ {
+  "probe": "probe-08.wav",
+  "quelle": "e3-gespielt.wav",
+  "soll": 3,
+  "art": "gespielt",
+  "gehoert": 3,
+  "sicher": 95,
+  "richtig": true,
+  "woran": "Das charakteristische Zischen von Dampfventilen, das mechanische Dröhnen schwerer Maschinen und das deutliche Erklingen einer Dampfpfeife.",
+  "vorgang": "Im Brauereihof arbeiten industrielle Dampfmaschinen und es wird hochdruckkomprimierter Dampf abgelassen, gefolgt von einem Dampfpfeifensignal.",
+  "stoert": "Nein, die Klänge passen perfekt in die Epoche der Industrialisierung um 1884."
+ }
+]
