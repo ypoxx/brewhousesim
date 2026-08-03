@@ -1,0 +1,203 @@
+MESSPROTOKOLL DER SUD, Welle 4 — rohe Ausgaben aller Laeufe.
+vorher = eingefrorener Stand auf Hafen 8901, nachher = Arbeitsbaum auf 8899.
+
+=== VORHER, sorgfaeltige Linie (blind + braut), 400 Wochen je Lauf
+E2/blind: 400 Wo (1600–1613) · Wochen mit >=2 aktiven Bierknoepfen 28 · mit >=1 28 · mit Preisschild 28 · verschiedene 2 · Sude ges 252 / Fass 1278 · Rang "höchstens Braunbier" · Guete 25 · Kasse 5264 · Fehler 0 
+E3/blind: 400 Wo (1884–1897) · Wochen mit >=2 aktiven Bierknoepfen 71 · mit >=1 74 · mit Preisschild 71 · verschiedene 2 · Sude ges 329 / Fass 3855 · Rang "höchstens Lagerbier" · Guete 25 · Kasse 13472 · Fehler 0 
+E1/braut: 400 Wo (1350–1363) · Wochen mit >=2 aktiven Bierknoepfen 115 · mit >=1 235 · mit Preisschild 115 · verschiedene 2 · Sude ges 0 / Fass 0 · Rang "höchstens Grutbier" · Guete 98 · Kasse 79 · Fehler 0 
+E3/braut: 400 Wo (1884–1897) · Wochen mit >=2 aktiven Bierknoepfen 57 · mit >=1 61 · mit Preisschild 57 · verschiedene 2 · Sude ges 351 / Fass 3704 · Rang "höchstens Lagerbier" · Guete 25 · Kasse 20146 · Fehler 0 
+A-FERTIG
+E4/blind: 400 Wo (1970–1983) · Wochen mit >=2 aktiven Bierknoepfen 196 · mit >=1 197 · mit Preisschild 196 · verschiedene 2 · Sude ges 50 / Fass 1840 · Rang "höchstens Pilsner" · Guete 25 · Kasse 95533 · Fehler 0 
+E2/braut: 400 Wo (1600–1613) · Wochen mit >=2 aktiven Bierknoepfen 33 · mit >=1 33 · mit Preisschild 33 · verschiedene 2 · Sude ges 195 / Fass 980 · Rang "höchstens Braunbier" · Guete 98 · Kasse 2967 · Fehler 0 
+E4/braut: 400 Wo (1970–1983) · Wochen mit >=2 aktiven Bierknoepfen 120 · mit >=1 125 · mit Preisschild 120 · verschiedene 2 · Sude ges 61 / Fass 2160 · Rang "höchstens Pilsner" · Guete 30 · Kasse 95801 · Fehler 0 
+B-FERTIG
+
+=== VORHER, gesperrte Charge 1970
+== VORHER charge (1970)
+1970, 200 Wochen nur WEITER: Wochen mit gesperrter Charge 8 · davon mit BEIDEN Antworten bedienbar 0 · selbst entschieden 0 · Stand 1973/9 · lage 0 · Seitenfehler 0
+
+=== NACHHER, sorgfaeltige Linie (blind), 400 Wochen je Lauf
+E1/blind: 400 Wo (1350–1363) · Wochen mit >=2 aktiven Bierknoepfen 394 · mit >=1 400 · mit Preisschild 394 · verschiedene 2 · Sude ges 0 / Fass 0 · Rang "höchstens Grutbier" · Guete 25 · Kasse 138 · Fehler 0 
+E2/blind: 400 Wo (1600–1613) · Wochen mit >=2 aktiven Bierknoepfen 390 · mit >=1 390 · mit Preisschild 390 · verschiedene 2 · Sude ges 320 / Fass 1616 · Rang "höchstens Braunbier" · Guete 25 · Kasse 1246 · Fehler 0 
+== NACHHER charge (1970)
+1970, 200 Wochen nur WEITER: Wochen mit gesperrter Charge 3 · davon mit BEIDEN Antworten bedienbar 3 · selbst entschieden 3 · Stand 1973/9 · lage 0 · Seitenfehler 0
+A-FERTIG
+E3/blind: 400 Wo (1884–1897) · Wochen mit >=2 aktiven Bierknoepfen 364 · mit >=1 391 · mit Preisschild 364 · verschiedene 2 · Sude ges 339 / Fass 3853 · Rang "höchstens Lagerbier" · Guete 17 · Kasse 30371 · Fehler 0 
+E4/blind: 400 Wo (1970–1983) · Wochen mit >=2 aktiven Bierknoepfen 255 · mit >=1 373 · mit Preisschild 275 · verschiedene 2 · Sude ges 49 / Fass 1800 · Rang "höchstens Pilsner" · Guete 25 · Kasse 34226 · Fehler 0 
+A2-FERTIG
+
+=== NACHHER, Siegel (6 Faelle, alle vier Epochen)
+=== E1 sud:wuerze:brief sud:wuerze:grut
+START kasse 112 verf {"wuerze":"grut"} fest {}
+GEKAUFT sud:wuerze:brief -> kasse 34 verf {"wuerze":"brief"} fest {"wuerze:brief":true}
+SOFORT ZURUECK sud:wuerze:grut klickbar=false 
+WIEDER HIN   sud:wuerze:brief klickbar=false 
+nach 4 Wochen: 1350/5 verf {"wuerze":"brief"}
+SPAETER ZURUECK sud:wuerze:grut klickbar=false 
+lage 0 seitenfehler 0
+=== E2 sud:gaerung:keller sud:gaerung:ober
+START kasse 440 verf {"schuettung":"rein","gaerung":"ober"} fest {}
+GEKAUFT sud:gaerung:keller -> kasse 180 verf {"schuettung":"rein","gaerung":"keller"} fest {"gaerung:keller":true}
+SOFORT ZURUECK sud:gaerung:ober klickbar=false 
+WIEDER HIN   sud:gaerung:keller klickbar=false 
+nach 4 Wochen: 1600/5 verf {"schuettung":"rein","gaerung":"keller"}
+SPAETER ZURUECK sud:gaerung:ober klickbar=false 
+lage 0 seitenfehler 0
+=== E3 sud:kaelte:maschine sud:kaelte:warm
+START kasse 14250 verf {"kaelte":"natureis","hefe":"betrieb"} fest {}
+GEKAUFT sud:kaelte:maschine -> kasse 4450 verf {"kaelte":"maschine","hefe":"betrieb"} fest {"kaelte:maschine":true}
+SOFORT ZURUECK sud:kaelte:warm klickbar=false 
+WIEDER HIN   sud:kaelte:maschine klickbar=false 
+nach 4 Wochen: 1884/5 verf {"kaelte":"maschine","hefe":"betrieb"}
+SPAETER ZURUECK sud:kaelte:warm klickbar=false 
+lage 0 seitenfehler 0
+=== E3 sud:hefe:reinzucht sud:hefe:betrieb
+START kasse 14250 verf {"kaelte":"natureis","hefe":"betrieb"} fest {}
+GEKAUFT sud:hefe:reinzucht -> kasse 10850 verf {"kaelte":"natureis","hefe":"reinzucht"} fest {"hefe:reinzucht":true}
+SOFORT ZURUECK sud:hefe:betrieb klickbar=false 
+WIEDER HIN   sud:hefe:reinzucht klickbar=false 
+nach 4 Wochen: 1884/5 verf {"kaelte":"natureis","hefe":"reinzucht"}
+SPAETER ZURUECK sud:hefe:betrieb klickbar=false 
+lage 0 seitenfehler 0
+=== E4 sud:fuehrung:labor sud:fuehrung:erfahrung
+START kasse 86000 verf {"fuehrung":"erfahrung","behandlung":"natur"} fest {}
+GEKAUFT sud:fuehrung:labor -> kasse 44000 verf {"fuehrung":"labor","behandlung":"natur"} fest {"fuehrung:labor":true}
+SOFORT ZURUECK sud:fuehrung:erfahrung klickbar=false 
+WIEDER HIN   sud:fuehrung:labor klickbar=false 
+nach 4 Wochen: 1970/5 verf {"fuehrung":"labor","behandlung":"natur"}
+SPAETER ZURUECK sud:fuehrung:erfahrung klickbar=false 
+lage 0 seitenfehler 0
+=== E4 sud:behandlung:pasteur sud:behandlung:natur
+START kasse 86000 verf {"fuehrung":"erfahrung","behandlung":"natur"} fest {}
+GEKAUFT sud:behandlung:pasteur -> kasse 12000 verf {"fuehrung":"erfahrung","behandlung":"pasteur"} fest {"behandlung:pasteur":true}
+SOFORT ZURUECK sud:behandlung:natur klickbar=false 
+WIEDER HIN   sud:behandlung:pasteur klickbar=false 
+nach 4 Wochen: 1970/5 verf {"fuehrung":"erfahrung","behandlung":"pasteur"}
+SPAETER ZURUECK sud:behandlung:natur klickbar=false 
+lage 0 seitenfehler 0
+
+=== NACHHER, zwei Partien mit verschiedenem Bier (120 Wochen je Partie)
+== NACHHER zweipartien E1
+--- TEUER  E1  Stand 1353/13  lage 0  Seitenfehler 0
+    genommen  : —
+    Zettelrang: höchstens Grutbier
+    Verfahren : {"wuerze":"grut"} fest []
+    Guete     : 98 · Bottiche 0 · Sude 0 · Fass 0
+    Keller    : 1 Fass {"Kofent":1} · Haltbarkeit im Mittel 2 Wochen
+    Kasse     : 0
+--- BILLIG  E1  Stand 1354/1  lage 0  Seitenfehler 0
+    genommen  : 1350/4 sud:wuerze:sack
+    Zettelrang: höchstens Starkbier
+    Verfahren : {"wuerze":"sack"} fest []
+    Guete     : 25 · Bottiche 0 · Sude 81 · Fass 250
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 90
+== NACHHER zweipartien E2
+--- TEUER  E2  Stand 1603/13  lage 2  Seitenfehler 0
+    genommen  : 1600/2 sud:gaerung:keller -260
+    Zettelrang: höchstens Märzenbier
+    Verfahren : {"schuettung":"rein","gaerung":"keller"} fest ["gaerung:keller"]
+    Guete     : 98 · Bottiche 0 · Sude 31 · Fass 155
+    Keller    : 15 Fass {"Nachbier":15} · Haltbarkeit im Mittel 6 Wochen
+    Kasse     : 302
+--- BILLIG  E2  Stand 1604/1  lage 0  Seitenfehler 0
+    genommen  : 1600/1 sud:schuettung:hafer
+    Zettelrang: höchstens Schankbier
+    Verfahren : {"schuettung":"hafer","gaerung":"ober"} fest []
+    Guete     : 25 · Bottiche 0 · Sude 61 · Fass 494
+    Keller    : 8 Fass {"Schankbier":8} · Haltbarkeit im Mittel 3 Wochen
+    Kasse     : 337
+== NACHHER zweipartien E3
+--- TEUER  E3  Stand 1887/11  lage 0  Seitenfehler 0
+    genommen  : 1884/5 sud:hefe:reinzucht -3400
+    Zettelrang: höchstens Exportbier
+    Verfahren : {"kaelte":"natureis","hefe":"reinzucht"} fest ["hefe:reinzucht"]
+    Guete     : 98 · Bottiche 0 · Sude 25 · Fass 400
+    Keller    : 3 Fass {"Einfachbier":3} · Haltbarkeit im Mittel 4 Wochen
+    Kasse     : 5786
+--- BILLIG  E3  Stand 1888/1  lage 0  Seitenfehler 0
+    genommen  : 1884/1 sud:kaelte:warm
+    Zettelrang: höchstens Schankbier
+    Verfahren : {"kaelte":"warm","hefe":"betrieb"} fest []
+    Guete     : 25 · Bottiche 0 · Sude 41 · Fass 687
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 8842
+== NACHHER zweipartien E4
+--- TEUER  E4  Stand 1974/1  lage 0  Seitenfehler 0
+    genommen  : 1970/2 sud:fuehrung:labor -42000 | 1970/4 sud:behandlung:filter -26000
+    Zettelrang: höchstens Exportbier
+    Verfahren : {"fuehrung":"labor","behandlung":"filter"} fest ["fuehrung:labor","behandlung:filter"]
+    Guete     : 98 · Bottiche 0 · Sude 16 · Fass 540
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 284
+--- BILLIG  E4  Stand 1974/1  lage 0  Seitenfehler 0
+    genommen  : 1970/3 sud:behandlung:schoenen
+    Zettelrang: höchstens Pilsner
+    Verfahren : {"fuehrung":"erfahrung","behandlung":"schoenen"} fest []
+    Guete     : 21 · Bottiche 0 · Sude 101 · Fass 1610
+    Keller    : 31 Fass {"Handelsmarke":31} · Haltbarkeit im Mittel 12 Wochen
+    Kasse     : 46640
+B3-FERTIG
+
+=== NACHHER, zwei Partien — zweiter Anlauf (andere Kaufregel), zum Vergleich
+== NACHHER zweipartien E1
+--- TEUER  E1  Stand 1353/13  lage 0  Seitenfehler 0
+    genommen  : 1350/2 sud:wuerze:brief -78
+    Zettelrang: höchstens Starkbier
+    Verfahren : {"wuerze":"brief"} fest ["wuerze:brief"]
+    Guete     : 98 · Bottiche 0 · Sude 25 · Fass 83
+    Keller    : 2 Fass {"Kofent":2} · Haltbarkeit im Mittel 2 Wochen
+    Kasse     : 0
+--- BILLIG  E1  Stand 1354/1  lage 0  Seitenfehler 0
+    genommen  : 1350/2 sud:wuerze:sack
+    Zettelrang: höchstens Starkbier
+    Verfahren : {"wuerze":"sack"} fest []
+    Guete     : 19 · Bottiche 0 · Sude 95 · Fass 293
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 49
+== NACHHER zweipartien E2
+--- TEUER  E2  Stand 1603/13  lage 0  Seitenfehler 0
+    genommen  : 1600/2 sud:gaerung:keller -260
+    Zettelrang: höchstens Märzenbier
+    Verfahren : {"schuettung":"rein","gaerung":"keller"} fest ["gaerung:keller"]
+    Guete     : 98 · Bottiche 0 · Sude 29 · Fass 145
+    Keller    : 14 Fass {"Nachbier":14} · Haltbarkeit im Mittel 6 Wochen
+    Kasse     : 401
+--- BILLIG  E2  Stand 1604/1  lage 0  Seitenfehler 0
+    genommen  : 1600/3 sud:schuettung:hafer
+    Zettelrang: höchstens Schankbier
+    Verfahren : {"schuettung":"hafer","gaerung":"ober"} fest []
+    Guete     : 15 · Bottiche 0 · Sude 67 · Fass 558
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 309
+== NACHHER zweipartien E3
+--- TEUER  E3  Stand 1887/11  lage 0  Seitenfehler 0
+    genommen  : 1884/5 sud:kaelte:maschine -9800 | 1884/11 sud:hefe:reinzucht -3400
+    Zettelrang: höchstens Exportbier
+    Verfahren : {"kaelte":"maschine","hefe":"reinzucht"} fest ["kaelte:maschine","hefe:reinzucht"]
+    Guete     : 96 · Bottiche 1 · Sude 21 · Fass 368
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 15
+--- BILLIG  E3  Stand 1888/1  lage 0  Seitenfehler 0
+    genommen  : 1884/1 sud:kaelte:warm
+    Zettelrang: höchstens Schankbier
+    Verfahren : {"kaelte":"warm","hefe":"betrieb"} fest []
+    Guete     : 25 · Bottiche 0 · Sude 41 · Fass 687
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 8842
+== NACHHER zweipartien E4
+--- TEUER  E4  Stand 1974/1  lage 0  Seitenfehler 0
+    genommen  : —
+    Zettelrang: höchstens Pilsner
+    Verfahren : {"fuehrung":"erfahrung","behandlung":"natur"} fest []
+    Guete     : 96 · Bottiche 0 · Sude 6 · Fass 240
+    Keller    : 0 Fass {} · Haltbarkeit im Mittel 0 Wochen
+    Kasse     : 95438
+--- BILLIG  E4  Stand 1973/9  lage 0  Seitenfehler 0
+    genommen  : —
+    Zettelrang: höchstens Pilsner
+    Verfahren : {"fuehrung":"erfahrung","behandlung":"natur"} fest []
+    Guete     : 25 · Bottiche 0 · Sude 6 · Fass 240
+    Keller    : 30 Fass {"Handelsmarke":30} · Haltbarkeit im Mittel 10 Wochen
+    Kasse     : 48163
+B2-FERTIG

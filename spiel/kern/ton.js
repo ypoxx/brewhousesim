@@ -284,7 +284,7 @@
     'sud:fehlsud':       { datei: stets('brand'), laut: 0.8 },
     'sud:sperre':        { datei: stets('unruhe'), laut: 0.7 },
     'sud:rueckruf':      { datei: altNeu('glocke', 'telefon'), laut: 0.8 },
-    'sud:freigabe':      { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
+    'sud:freigabe':      { datei: je('siegel', 'siegel', 'woche3', 'maschine'), laut: 0.75 },
     'sud:siegel':        { datei: altNeu('siegel', 'maschine'), laut: 0.75 },
     'sud:kauf':          { datei: altNeu('muenzen', 'kasse'), laut: 0.85 },
     'sud:umstellen':     { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
@@ -341,8 +341,17 @@
        ein synthetisches Glockchen — und das pruefende Ohr hat ihn ungefragt
        als "moderne UI-Pieptoene" geruegt, bei 1350. Jetzt ist es je Epoche
        ein wirkliches Zeichen: Holzklapper, Handglocke, Dampfpfiff, Stechuhr. */
-    'uhr:woche':         { datei: je('woche1', 'woche2', 'woche3', 'woche4'),
+    /* AUFLAGE 7, und sie hat mehr eingebracht als das Aufraeumen einer toten
+       Datei. `fabrikpfeife.mp3` war nirgends genannt — und `woche3.mp3`, das
+       Wochenzeichen von 1884, ist einzeln vorgelegt eine "Trillerpfeife,
+       Schiedsrichterpfeife". Zeitlich erlaubt (die Trillerpfeife gibt es seit
+       1868), aber im Hof einer Dampfbrauerei ist das Zeichen der Woche die
+       WERKSPFEIFE. Die tote Datei war die richtige Probe an der falschen
+       Stelle, nicht ueberzaehlig. Die Trillerpfeife steht jetzt bei
+       'sud:freigabe' — der Braumeister pfeift den Sud frei. */
+    'uhr:woche':         { datei: je('woche1', 'woche2', 'fabrikpfeife', 'woche4'),
                            ersatz: 'woche', laut: 0.5,
+                           laenge: je(2.6, 2.6, 1.7, 2.6),
                            sagt: 'Eine Woche weiter — je Epoche ein anderes Zeichen.' }
   };
 
@@ -889,7 +898,8 @@
          Achtfache des Bettes, und der Michaelitag konnte darueber nicht mehr
          hinaus. Wer schneidet, hoert mehr. */
       var ab = laeuftWeiter ? 0 : (EINSATZ[datei] || 0);
-      var kappe = e.laenge || (e.zeichen ? 3.4 : 2.6);
+      var kappe = (typeof e.laenge === 'function') ? e.laenge(epoche) : e.laenge;
+      if (!kappe) kappe = e.zeichen ? 3.4 : 2.6;
       d = Math.max(0.3, d - ab);
       if (!laeuftWeiter && d > kappe) d = kappe;
       if (laeuftWeiter) {
