@@ -1,0 +1,60 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 3,
+    "sicher": 100
+   },
+   "b": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 5,
+    "sicher": 100
+   },
+   "d": {
+    "da": true,
+    "sekunde": 17,
+    "sicher": 90
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   }
+  },
+  "jahr_geschaetzt": 1950,
+  "anachronismen": [
+   {
+    "sekunde": 2,
+    "klang": "8-Bit/Chiptune-Soundeffekt",
+    "warum": "Ein digitaler Synthesizer-Klang aus der Ära der frühen Videospiele (1980er), der nicht in die mechanische/industrielle Umgebung passt."
+   },
+   {
+    "sekunde": 14,
+    "klang": "Cartoon-Sprungfeder (Boing)",
+    "warum": "Ein künstlicher, überzeichneter Cartoon-Soundeffekt, der stark mit der ansonsten realistischen Geräuschkulisse bricht."
+   }
+  ],
+  "datei": "probe-03.wav"
+ }
+]

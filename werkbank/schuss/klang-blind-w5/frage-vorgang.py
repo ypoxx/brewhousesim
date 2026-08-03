@@ -13,7 +13,7 @@ Das Ohr erfaehrt weder Epoche noch Dateiname (nur die Bytes gehen hinaus).
 
     ./frage-vorgang.py --jahr 1350 probe.wav
 """
-import argparse, base64, json, mimetypes, os, pathlib, re, sys
+import argparse, base64, json, mimetypes, os, pathlib, re, sys, time
 import urllib.error, urllib.request
 
 URL = ("https://generativelanguage.googleapis.com/v1beta/models/"
@@ -104,10 +104,14 @@ def main():
     aus = []
     for d in a.datei:
         u = None
-        for _ in range(3):
+        # Wartezeit zwischen den Versuchen. Ohne sie feuern drei Versuche
+        # binnen einer Sekunde in dieselbe Minutensperre (429) und die
+        # Messung faellt aus, obwohl das Kontingent des Tages noch steht.
+        for versuch in range(4):
             u = frag(d, a.modell, s)
             if not u.get("abbruch"):
                 break
+            time.sleep(20 * (versuch + 1))
         u["datei"] = pathlib.Path(d).name
         aus.append(u)
         pk = u.get("punkte") or {}
