@@ -86,6 +86,17 @@
      noch Pferde und Fassgeplaetscher nannte und die Floete nicht mehr. */
   var ZIEL = { bett: 0.048, hof: 0.048, grund: 0.030 };
 
+  /* Der Hof von 1350 steht tiefer als die anderen drei, und das ist gemessen:
+     `hof1.mp3` ist einzeln vorgelegt "knisterndes Feuer · gluckernde
+     Fluessigkeit". Feuer ist breitbandiges Rauschen, und breitbandiges
+     Rauschen unter einem gehaltenen Ton ist fuer ein fremdes Ohr Dampf: die
+     gespielte Aufnahme von 1350 ist zweimal von drei als 1884 gehoert worden,
+     begruendet mit "Zischen einer Dampfmaschine" und "Dampfpfeife" — wobei
+     die Dampfpfeife die Blockfloete des Bettes war, die fuer sich tadellos
+     ist ("Blockfloete · Anblasgeraeusche, 14. Jahrhundert"). Nicht der Ton
+     war falsch, sondern das Rauschen darunter. */
+  var ZIEL_HOF = je(0.034, 0.048, 0.048, 0.048);
+
   /* ======================================================================
      DER RUHENDE HOF — WELLE 5, AUFLAGE 1. Die teuerste Aenderung dieser
      Datei, und sie steht hier oben, weil sie den ganzen Aufbau umdreht.
@@ -215,8 +226,8 @@
        und die Pumpe von 1970, die beide Kontur haben. `laut` und `laenge`
        duerfen wie `datei` Funktionen der Epoche sein. */
     'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'),
-                           laut: je(0.85, 1.0, 1.15, 1.15),
-                           laenge: je(2.2, 2.6, 3.2, 3.2),
+                           laut: je(0.68, 1.0, 1.15, 1.15),
+                           laenge: je(1.6, 2.6, 3.2, 3.2),
                            sagt: 'Der Sud: offene Pfanne, Dampfventil, Kreiselpumpe.' },
     /* WELLE 5. `fassstahl.mp3` ist geloescht. Einzeln vorgelegt war sie ein
        "GONGSCHLAG · resonierender Nachhall eines metallischen Klangkoerpers,
@@ -244,11 +255,20 @@
        ausdruecklich "Umfuellen von Fluessigkeit" gehoert.
        Fuenf Neuerzeugungen brachten fuenfmal wieder Wasser, ein Klappern
        von Wuerfeln und eine Handglocke. Die Datei ist geloescht.
-       Der Ochse faehrt jetzt mit der geprueften Pferdefuhre ab, aber
-       LANGSAMER: `tempo` unter 1 dehnt die Probe und senkt sie zugleich um
-       gut drei Halbtoene — schwere, langsame Hufe und ein tiefer
-       polternder Karren statt eines Traberzugs. Ein Ochse ist ein
-       langsameres Pferd, und das hoert man. */
+       Der Ochse faehrt jetzt mit der geprueften Pferdefuhre ab.
+
+       EIN ZWISCHENSCHRITT IST WIEDER ZURUECKGENOMMEN, und zwar gemessen:
+       zuerst lief die Pferdefuhre in 1350 mit `tempo` 0,80, also um ein
+       Fuenftel gedehnt und um gut drei Halbtoene gesenkt — ein Ochse ist ein
+       langsameres Pferd. Fuer sich vorgelegt haelt die gedehnte Probe stand
+       ("Pferdehufe · Kutschenraeder · Pferdegeschirr"); in der Mischung von
+       1350 aber hat das fremde Ohr in vier von sechs Durchgaengen "das laut
+       quietschende Geraeusch von METALLRAEDERN AUF SCHIENEN" und "das
+       metallische Aechzen schwerer EISENRAEDER oder DAMPFMASCHINEN" gemeldet
+       und die Epoche auf 1884 gelegt. Die eisenbeschlagenen Raeder der Probe
+       werden beim Dehnen tiefer, und tief und metallisch ist fuer ein Ohr
+       eine Maschine. 1350 traegt seine Zeit deshalb nicht ueber die
+       Geschwindigkeit, sondern ueber das Tier: */
     /* Und weil ein langsameres Pferd immer noch ein Pferd ist: das erste
        Mass war `abfahrt2` allein bei tempo 0,80, und das blinde Ohr hat die
        gespielte Aufnahme von 1350 daraufhin als 1600 gehoert — "das
@@ -256,8 +276,8 @@
        `dazu` legt deshalb das Tier davor: `ochse.mp3`, einzeln vorgelegt
        "Kuhbloeken, zeitlos". Ein Ochse vor dem Karren ist die eine Auskunft,
        die 1350 von 1600 trennt, ohne dass ein Ohr sie ueberhoeren kann. */
-    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6, tempo: 0.80,
-                               dazu: { datei: stets('ochse'), laut: 1.0, versatz: 0.15 } },
+    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6,
+                               dazu: { datei: stets('ochse'), laut: 1.4, laenge: 4.2, versatz: 0 } },
     'fuhre:abfahrt:pferd':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6 },
     'fuhre:abfahrt:waggon':  { datei: stets('abfahrt3'), laut: 1.1, laenge: 4.6 },
     'fuhre:abfahrt:lastzug': { datei: stets('abfahrt4'), laut: 1.1, laenge: 4.6 },
@@ -349,11 +369,10 @@
     'gegner:bauen':       { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
     'gegner:aufstocken':  { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
     'gegner:preis':       { datei: altNeu('kreide', 'maschine'), laut: 0.8, fern: true },
-    /* Dieselbe Reihe wie beim eigenen Zug — nur hinter der Wand und mit dem
-       langsamen Ochsen in 1350 (`abfahrt1.mp3` ist geloescht, siehe
-       'fuhre:abfahrt:ochse'). */
+    /* Dieselbe Reihe wie beim eigenen Zug, nur hinter der Wand — ohne das
+       Tier, denn der Nachbar zeigt seinen Ochsen nicht her (`abfahrt1.mp3`
+       ist geloescht, siehe 'fuhre:abfahrt:ochse'). */
     'gegner:fuhre':       { datei: je('abfahrt2', 'abfahrt2', 'abfahrt3', 'abfahrt4'),
-                            tempo: je(0.80, 1, 1, 1),
                             laut: 0.85, laenge: 3.6, fern: true, nachbar: true },
     'gegner:macht':       { datei: altNeu('siegel', 'maschine'), laut: 0.85, fern: true, nachbar: true },
     'gegner:rohstoff':    { datei: altNeu('muenzen', 'kasse'), laut: 0.8, fern: true, nachbar: true },
@@ -930,7 +949,7 @@
   /* Eine Schleife (Bett oder Hof) mit weichem Ein- und Ausblenden.
      versatz: wo im Band angefangen wird — damit vier Epochen nicht viermal
      denselben Musikanfang zeigen. */
-  function legeSchleife(w, bus, buf, wann, dauer, blende, datei, versatz) {
+  function legeSchleife(w, bus, buf, wann, dauer, blende, datei, versatz, ziel) {
     var ctx = w.ctx;
     var f = schnitt(datei, buf);
     var q = ctx.createBufferSource();
@@ -940,7 +959,7 @@
     q.loopEnd = f.bis;
     var g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, wann);
-    g.gain.linearRampToValueAtTime(angleich(buf, ZIEL[bus] || 0.07), wann + (blende || 1.2));
+    g.gain.linearRampToValueAtTime(angleich(buf, ziel || ZIEL[bus] || 0.07), wann + (blende || 1.2));
     q.connect(g); g.connect(w.bus[bus]);
     var ab = f.von + ((versatz || 0) % Math.max(0.5, f.bis - f.von));
     q.start(wann, ab);
@@ -1373,7 +1392,8 @@
         merke(w.ctx, datei, buf);
         if (bettJetzt !== epoche || !werk) return;
         liegend[bus] = legeSchleife(werk, bus, buf, werk.ctx.currentTime + 0.05, 0, 1.6,
-                                    datei, bus === 'bett' ? epoche * 3.7 : epoche * 2.3);
+                                    datei, bus === 'bett' ? epoche * 3.7 : epoche * 2.3,
+                                    bus === 'hof' ? ZIEL_HOF(epoche) : null);
       }, function () { });
     });
 
@@ -1645,7 +1665,8 @@
         if (bettBuf) legeSchleife(w, 'bett', bettBuf, 0, sek, 0.8, BETT(epoche),
                                   opt.versatz === undefined ? epoche * 3.7 : opt.versatz);
         if (hofBuf) legeSchleife(w, 'hof', hofBuf, 0, sek, 0.6, HOF(epoche),
-                                 opt.versatz === undefined ? epoche * 2.3 : opt.versatz);
+                                 opt.versatz === undefined ? epoche * 2.3 : opt.versatz,
+                                 ZIEL_HOF(epoche));
         var grundBuf = fertig(octx, GRUND(epoche));
         if (grundBuf) legeSchleife(w, 'grund', grundBuf, 0, sek, 0.6, GRUND(epoche), 0);
 
