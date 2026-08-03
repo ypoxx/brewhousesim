@@ -361,6 +361,24 @@ Aufsicht ihre Zahlen hatte — zwei Wege, ein Befund.
 > **Kontrolle des Geräts**. Wer jetzt Streuung misst, hat ein kaputtes Messgerät
 > und soll es suchen, statt die Streuung hinzunehmen.
 
+> **ZWEITE MESSREGEL, 3. August spätabends: SEQUENZIELL MESSEN, NIE PARALLEL.**
+> Gemeldet von DER PREIS und mit Zahlen belegt: dieselbe Hand lieferte bei
+> **vier gleichzeitigen Browsern** ρ **+0,354 statt +0,393** und **+0,305 statt
+> +0,108**. Vier Browser auf vier Kernen sind ein kaputtes Gerät — die Klicks
+> fallen unter Last aus, und genau davon lebt die gemessene Partie.
+>
+> **Das bindet auch die Aufsicht, und zwar doppelt:** eigene Läufe immer in
+> einer Schleife, nie im Hintergrund nebeneinander. **Und: nicht selbst messen,
+> solange ein Kritiker oder Builder misst** — sonst verdirbt man beide
+> Messungen zugleich und merkt es an keiner. Wer nachmessen will, wartet, bis
+> der Agent fertig ist, und misst dann am eingefrorenen Stand.
+>
+> *(Die zwölf Läufe der Aufsicht vom 3.8. abends liefen in einer Schleife, also
+> sequenziell — die Zahlen +0,591 / +0,231 / +0,393 / +0,108 stehen. Der erste
+> Satz desselben Abends hatte zeitweise zwei Browser nebeneinander; alle drei
+> 1350-Läufe ergaben dennoch exakt +0,591, auch die nach dem Ende der
+> Parallelität.)*
+
 ---
 
 ## Welle 3 (2./3. August 2026) — gebaut, geurteilt, teils nachgemessen

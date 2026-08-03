@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-03T21:23:30+00:00",
- "phase": "Welle 5 — DER PREIS baut (Festlegungszähler und Kassenboden), DER KLANG arbeitet an fünf Auflagen nach. Der schwerste Befund der Welle: das fremde Ohr erkennt die Epoche aus einer STILLEN Aufnahme zu 90 Prozent, aus einer gespielten nur zu 60 — Spielen macht die Zeit schlechter erkennbar, weil vier Musikstücke aus vier Jahrhunderten unter dem Hof liegen. Die Aufsicht hat unterdessen drei Mängel am eigenen Messgerät hoerer.py behoben, darunter den schwersten: --blind mischte gar nicht, es unterstellte die Reihenfolge 1,2,3,4.",
+ "stand": "2026-08-03T22:37:21+00:00",
+ "phase": "Welle 5 — DER PREIS ist gebaut und wird blind geprüft, DER KLANG arbeitet an fünf Auflagen nach. Zwei Befunde über das MESSEN sind heute dazugekommen und binden ab jetzt auch die Aufsicht: erstens mischte --blind in hoerer.py gar nicht, sondern unterstellte die Reihenfolge 1,2,3,4 — behoben; zweitens sind mehrere gleichzeitige Browser ein kaputtes Messgerät (dieselbe Hand lieferte parallel rho +0,354 statt +0,393). Es wird sequenziell gemessen, und die Aufsicht misst nicht, solange ein Agent misst.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -117,21 +117,16 @@
    "runde": 3,
    "luecke": "BESTANDEN nach Nachmessung der Aufsicht. Zwölf Läufe auf dem eingefrorenen HEAD 1b5ab7a, je drei pro Epoche, Spannweite 0,000: rho +0,591 / +0,231 / +0,393 / +0,108, Jahre unter 1× 0/0/1/0, null Seitenfehler. Der Builder hat außerdem die Ursache des ganzen Zahlenstreits gefunden: nicht der Stand änderte sich, sondern die Messhand — preis-linie.mjs sah nach jedem Klick nur einmal hin, unter Last fiel der Klick aus. Damit sind zwei frühere Befunde der Aufsicht widerlegt: 1350 riss schon vor dieser Runde (+0,701 auf dem alten Stand, mit dem neuen Gerät zweimal identisch), und die gemeldete Streuung von 0,54 war das Gerät, nicht das Spiel. OFFEN: der Builder meldet +0,288 für 1350, die Aufsicht misst +0,591 — beide stimmen auf verschiedenen Bäumen, weil DER SUD 19 Minuten nach seinem letzten Commit eine neue Achse mit Preis in dieselbe Kennzahl gespeist hat.",
    "gebaut": "werkbank/beleg/preis-e3.jpg"
+  },
+  {
+   "name": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderr",
+   "status": "laeuft",
+   "runde": 2,
+   "luecke": "GEBAUT in Welle 5, wartet auf den blinden Kritiker. DER URSPRÜNGLICHE VERDACHT IST WIDERLEGT: der Zähler ist nicht blind — er springt von '0 Festlegungen' auf '1', sobald eine Zeile mit art='festlegung' entsteht. Die Ereignisse sind nur zu selten, 1/1/0/0 in vierzehn Jahren und acht Amtszeiten. Ursache am Bildschirm abgelesen: in 1350 steht ab 1355 neun Jahre, in 1600 dreizehn Jahre keine einzige bedienbare Festlegung auf der Tafel, weil die Taxe mit der Teuerung wächst und die Lade nicht. Zweite Hälfte der Diagnose trifft das MESSGERÄT: in 1884 und 1970 tragen aktien und konzern ein PLUS-Preisschild und sind alle vierzehn Jahre aktiv, aber die Referenzhand rechnet Math.abs(preis) und lehnt Zufluss als Ausgabe ab — eine willige Hand holt dort 2 bzw. 3. Gebaut: Vorgriff auf den Notpfennig, angeschrieben statt geschenkt, dazu je eine zweite Sprosse für 1350 und 1600 aus bestehender Mechanik. Kasse in der Spielprobe von -1/13/117/334 auf 48/280/4.200/50.000, Wochen unter null in 1350 von 1 auf 0. Gegen sich selbst gemeldet: rho 1970 verschlechtert sich von +0,108 auf +0,275, weil der Boden genau einmal griff und das tiefste Jahr von 1,96x auf 2,37x hob; die Latte hält weit. KERN gemeldet: welt.js:412 zieht den Unterhalt ungeprüft ab.",
+   "gebaut": "werkbank/beleg/preis-e3.jpg"
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T18:05:36+00:00",
-   "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 1 · läuft"
-  },
-  {
-   "zeit": "2026-07-31T18:05:36+00:00",
-   "text": "DIE STADT, Runde 1: vier Epochenplatten (2752x1536, ohne eingebrannte Schrift) und 32 freigestellte Aufbauten erzeugt. Hof waechst durch Kauf: ?epoche=N zeigt das Erbe, ?bau=keine denselben Spielstand ohne einen einzigen Kauf."
-  },
-  {
-   "zeit": "2026-07-31T18:57:06+00:00",
-   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 1 · läuft"
-  },
   {
    "zeit": "2026-07-31T18:57:06+00:00",
    "text": "DIE FUHRE R1: Wochentakt steht. Anschlagtafel (Sud faellt von selbst) · Keller mit Sorte und Braudatum · Wagen mit wenigen Plaetzen, jedes Fass bekommt ein Haus · hl-Reihe je Adresse mit drei Mahnkerben · Georgi-Blatt (Aprilbestand = Sommer). Knappheit je Epoche verschieden und nie Geld: 1350 Brautage+Bannmeile, 1600 Fassplaetze+Zunftquote, 1884 Frachtstufen+Eis, 1970 Regalmeter+Tourenplan."
@@ -919,6 +914,18 @@
   {
    "zeit": "2026-08-03T21:23:30+00:00",
    "text": "AUFSICHT — DAS MESSGERÄT hoerer.py WAR IN DREI PUNKTEN KAPUTT, alle drei vom blinden Kritiker DER KLANG gemessen und gemeldet, ohne dass er selbst daran gedreht hätte (ZUSTÄNDIGKEIT 16). Der schwerste: --blind MISCHTE NICHT. Es tat nur soll = i + 1, unterstellte also die Reihenfolge 1,2,3,4 — und die Aufrufzeile in der eigenen Dokumentation lud mit 'hoerer.py e1.wav e2.wav e3.wav e4.wav --blind' genau dazu ein. Wer das tippte, maß seine eigene Sortierung und nannte das Ergebnis blind. Das entwertet die dritte Messlatte selbst, nicht nur eine Zahl. Jetzt liest das Werkzeug die Soll-Epoche aus dem Dateinamen, mischt selbst und deckt den Schlüssel erst am Ende auf, nach allen Antworten und für alle nachrechenbar. Zweitens ließ die Verweigerungssperre 'Aufgrund der fehlenden Audiodaten … leere Zeitstempel' bei sicher=0 durch und buchte sie als Epoche 1 — mit --erwartet 1 wäre daraus ein BESTANDEN OHNE MESSUNG geworden, schlimmer als ein falsches Durchgefallen, weil es niemandem auffällt. Die Aufsicht hatte genau diese Sperre am Nachmittag schon einmal repariert; sie war zu eng gesetzt. Drittens fehlte den drei Wiederholversuchen jede Wartezeit: sie liefen in Millisekunden gegen dieselbe Sperre und waren zu dritt so wertlos wie einer — das hat den Kritiker 22 von 24 Messungen gekostet. Geprüft: acht Fälle gegen deute(), 8 von 8 wie vorgesehen, darunter drei, die weiterhin als Urteil zählen müssen; die Mischung über 200 Durchläufe nachgewiesen (7 unverändert, erwartet rund 8 bei vier Dateien)."
+  },
+  {
+   "zeit": "2026-08-03T22:37:21+00:00",
+   "text": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderr · Runde 2 · läuft — GEBAUT in Welle 5, wartet auf den blinden Kritiker. DER URSPRÜNGLICHE VERDACHT IST WIDERLEGT: der Zähler ist nicht blind — er springt von '0 Festlegungen' auf '1', sobald eine Zeile mit art='festlegung' entsteht. Die Ereignisse sind nur zu selten, 1/1/0/0 in vierzehn Jahren und acht Amtszeiten. Ursache am Bildschirm abgelesen: in 1350 steht ab 1355 neun Jahre, in 1600 dreizehn Jahre keine einzige bedienbare Festlegung auf der Tafel, weil die Taxe mit der Teuerung wächst und die Lade nicht. Zweite Hälfte der Diagnose trifft das MESSGERÄT: in 1884 und 1970 tragen aktien und konzern ein PLUS-Preisschild und sind alle vierzehn Jahre aktiv, aber die Referenzhand rechnet Math.abs(preis) und lehnt Zufluss als Ausgabe ab — eine willige Hand holt dort 2 bzw. 3. Gebaut: Vorgriff auf den Notpfennig, angeschrieben statt geschenkt, dazu je eine zweite Sprosse für 1350 und 1600 aus bestehender Mechanik. Kasse in der Spielprobe von -1/13/117/334 auf 48/280/4.200/50.000, Wochen unter null in 1350 von 1 auf 0. Gegen sich selbst gemeldet: rho 1970 verschlechtert sich von +0,108 auf +0,275, weil der Boden genau einmal griff und das tiefste Jahr von 1,96x auf 2,37x hob; die Latte hält weit. KERN gemeldet: welt.js:412 zieht den Unterhalt ungeprüft ab."
+  },
+  {
+   "zeit": "2026-08-03T22:37:21+00:00",
+   "text": "Welle 5 — DER PREIS ist gebaut und wird blind geprüft, DER KLANG arbeitet an fünf Auflagen nach. Zwei Befunde über das MESSEN sind heute dazugekommen und binden ab jetzt auch die Aufsicht: erstens mischte --blind in hoerer.py gar nicht, sondern unterstellte die Reihenfolge 1,2,3,4 — behoben; zweitens sind mehrere gleichzeitige Browser ein kaputtes Messgerät (dieselbe Hand lieferte parallel rho +0,354 statt +0,393). Es wird sequenziell gemessen, und die Aufsicht misst nicht, solange ein Agent misst."
+  },
+  {
+   "zeit": "2026-08-03T22:37:21+00:00",
+   "text": "DER PREIS, Welle 5 — DER VERDACHT AUS DEM WELLENPLAN IST WIDERLEGT, und das ist das Wertvollste an dieser Runde. Seit Welle 2b stand im Auftrag, der Zähler 'Chronik des Hauses · 0 Festlegungen' sei blind: er zähle nur die eigenen Festlegungen, während in welt.chronik sehr wohl Einträge anderer Stücke stünden. Der Builder hat es am Bildschirm nachgemessen: der Zähler springt sehr wohl auf 1, sobald eine Zeile mit art='festlegung' entsteht. Die Zahl war nie falsch — die Ereignisse sind zu selten, 1/1/0/0 in vierzehn Jahren. Ursache, aus der Sichtlage jedes Siegelknopfs abgelesen: in 1350 steht ab 1355 neun Jahre lang, in 1600 dreizehn Jahre lang keine einzige bedienbare Festlegung auf der Tafel, weil die Taxe mit der Teuerung wächst und die Lade nicht; der Abstand zum Freikauf wächst über vierzehn Jahre um 757 Pf. Die zweite Hälfte der Diagnose trifft nicht das Spiel, sondern das MESSGERÄT: in 1884 und 1970 tragen aktien und konzern ein PLUS-Preisschild und sind in allen vierzehn Jahren aktiv — aber die Referenzhand rechnet Math.abs(preis) und lehnt einen Zufluss als zu teure Ausgabe ab. Eine willige Hand holt dort 2 bzw. 3 Festlegungen. Zwei Wellen lang hat also ein Messfehler wie ein Spielfehler ausgesehen. DAZU EIN ZWEITER BEFUND ÜBER DAS MESSEN: vier gleichzeitige Browser sind ein kaputtes Gerät — dieselbe Hand lieferte parallel rho +0,354 statt +0,393 und +0,305 statt +0,108. Ab jetzt wird sequenziell gemessen, und die Aufsicht misst nicht, solange ein Agent misst, weil sie sonst beide Messungen zugleich verdirbt."
   }
  ]
 }
