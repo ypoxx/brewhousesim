@@ -1,0 +1,60 @@
+── probe-alpha.wav
+       0s  Mechanisches Rattern und Klicken (wie ein schweres Zahnrad oder eine Winde)
+       2s  Kurzes, hohes mechanisches Quietschen
+       3s  Kurzer menschlicher Ruf oder Grunzen
+       6s  Schnelle Folge von hohen elektronischen Pieptönen
+       8s  Mechanisches Klacken
+      10s  Lautes Zischen von Druckluft (wie bei einer Bremse)
+      13s  Metallisches Klimpern
+      14s  Mechanisches Surren
+      15s  Erneutes metallisches Klimpern und Rasseln
+      17s  Lauter, hallender metallischer Schlag (wie ein Gong)
+      18s  Mechanisches Rattern und Klicken
+      21s  Kurzes mechanisches Klacken
+      26s  Mechanisches Surren
+      27s  Mechanisches Rattern und Klicken
+      28s  Kurzer menschlicher Ruf oder Grunzen
+   dauerhaft: Beschwingte, jazzige Hintergrundmusik (mit Bass, Schlagzeug und Bläsern/Synths) sowie ein durchgehendes, tiefes Brummen eines großen Motors (wie ein LKW- oder Dieselmotor im Leerlauf).
+   aendert:   Nein, der Grundklang aus Musik und Motorbrummen bleibt über die gesamten 30 Sekunden konstant.
+   fuhre            nein  sek -1  sicher 0
+   sud              JA   sek 11  sicher 100
+   zahltag          JA   sek 17  sicher 100
+   gegner           nein  sek -1  sicher 0
+   blender_regen    nein  sek -1  sicher 0
+   blender_hund     JA   sek 2  sicher 100
+   blender_chor     nein  sek -1  sicher 0
+   blender_schiff   nein  sek -1  sicher 0
+
+── probe-beta.wav
+       0s  Laute, langgezogene Dampfpfeife ertönt
+       6s  Helles Klingeln einer kleinen Glocke
+      12s  Erneutes Tuten der Dampfpfeife
+      14s  Helles Klingeln einer Glocke
+      16s  Helles Klingeln einer Glocke
+      17s  Laute, langgezogene Dampfpfeife ertönt
+      20s  Mechanisches Klacken oder Einrasten
+      22s  Zwei kurze, hohe Pfiffe
+      26s  Laute, langgezogene Dampfpfeife ertönt
+      28s  Mechanisches Klacken oder Einrasten
+   dauerhaft: Fröhliche Ragtime-Klaviermusik und kontinuierliche, rhythmische Maschinengeräusche (Zischen, Stampfen, Rattern wie bei einer Dampfmaschine).
+   aendert:   Nein, der Grundklang aus Klaviermusik und Maschinengeräuschen bleibt durchgehend konstant.
+   fuhre            nein  sek -1  sicher 0
+   sud              JA   sek 15  sicher 100
+   zahltag          JA   sek 17  sicher 100
+   gegner           nein  sek -1  sicher 0
+   blender_regen    nein  sek -1  sicher 0
+   blender_hund     nein  sek -1  sicher 0
+   blender_chor     nein  sek -1  sicher 0
+   blender_schiff   nein  sek -1  sicher 0
+
+── probe-gamma.wav
+   A KEINE MESSUNG: unlesbar
+   fuhre            JA   sek 6  sicher 100
+   sud              JA   sek 0  sicher 100
+   zahltag          JA   sek 16  sicher 100
+   gegner           nein  sek -1  sicher 0
+   blender_regen    nein  sek -1  sicher 0
+   blender_hund     nein  sek -1  sicher 0
+   blender_chor     nein  sek -1  sicher 0
+   blender_schiff   nein  sek -1  sicher 0
+
