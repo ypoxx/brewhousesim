@@ -131,6 +131,17 @@ GERAEUSCH = {
         "No pure tone, no siren, no electronic beep, no whistle, no steam, no "
         "voices, no music.", 5, 0.7),
 
+    # NEU, und es ist der Rest eines gescheiterten Anlaufs. Sieben Versuche,
+    #  eine OCHSENFUHRE zu erzeugen, haben fuenfmal Wasser, einmal einen
+    #  Wuerfelbecher, einmal eine Handglocke und einmal eine Tuerklinke
+    #  geliefert — die Gegenstelle kennt offenbar keinen Ochsenkarren. Was
+    #  sie kennt, ist der OCHSE: "Kuhbloeken, zeitlos". Also traegt 1350
+    #  nicht den Karren, sondern das Tier davor; der Karren kommt aus der
+    #  geprueften Pferdefuhre, um ein Fuenftel verlangsamt.
+    "ochse": (
+        "Deep slow hoofbeats of cattle on a stone road, a low ox bellow, "
+        "a wooden axle groaning under load", 6, 0.8),
+
     # NEU. 1884 hatte fuer den WEITER-Knopf und fuer den Michaelitag DIESELBE
     #  Probe (`fabrikpfeife`), also achtmal denselben reinen Pfeifton in
     #  dreissig Sekunden — und ein wiederholter reiner Ton ist fuer ein Ohr

@@ -119,7 +119,13 @@
   var LEBEN_AN = 0.70;      /* so schnell kommt der Hof zum Leben */
   var LEBEN_HALT = 3.20;    /* so lange bleibt er oben nach dem letzten Zug */
   var LEBEN_AB = 2.60;      /* so lange braucht er zurueck */
-  var LEBEN_TIEF = 0.05;    /* was ohne Arbeit uebrig bleibt */
+  /* NULL, und das ist gemessen und nicht gemeint. Mit LEBEN_TIEF = 0,05 —
+     also 26 dB unter dem Grund und im Pegelverlauf nicht mehr zu finden —
+     hat das fremde Ohr die stille Aufnahme von 1350 immer noch mit
+     Sicherheit 90 richtig genannt, begruendet mit "das Spiel einer
+     einfachen Holzfloete". Eine Melodie ist noch weit unter dem Rauschen
+     eine Melodie. Ein Fuenfhundertstel ist kein bisschen, wenn es singt. */
+  var LEBEN_TIEF = 0.0;     /* was ohne Arbeit uebrig bleibt: nichts */
   /* Der GRUND atmet in jeder Epoche gleich tief. Eine epochenabhaengige
      Atemtiefe waere selbst wieder eine Auskunft ueber das Jahrhundert —
      leiser als Musik, aber messbar. */
