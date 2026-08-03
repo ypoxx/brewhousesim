@@ -212,7 +212,10 @@
     'name:zulauf':       { datei: stets('unruhe'), laut: 0.6 },
     'name:verlust':      { datei: stets('unruhe'), laut: 0.5 },
     'name:mundpropaganda': { datei: stets('unruhe'), laut: 0.45 },
-    'name:urteil-gut':   { datei: altNeu('glocke', 'telefon'), laut: 0.55 },
+    /* War eine Glocke. In 1600 lagen dadurch sieben glockenaehnliche Schlaege
+       in dreissig Sekunden, und das Ohr hat daraus ungefragt eine "moderne
+       Fahrradklingel" gemacht. Ein gutes Urteil ist ein Handschlag. */
+    'name:urteil-gut':   { datei: stets('handschlag'), laut: 0.5 },
     'name:urteil-schlecht': { datei: stets('unruhe'), laut: 0.6 },
     'name:entzug':       { datei: stets('unruhe'), laut: 0.7 },
     'name:nachahmung':   { datei: altNeu('karren', 'telefon'), laut: 0.55 },
@@ -228,9 +231,14 @@
     'erbe:spruch':       { datei: stets('unruhe'), laut: 0.6 },
     'erbe:widerspruch':  { datei: stets('unruhe'), laut: 0.7 },
     'erbe:uebergabe':    { datei: stets('handschlag'), laut: 0.8 },
-    'erbe:erbteil':      { datei: altNeu('muenzen', 'kasse'), laut: 0.7 },
+    /* Nicht Muenzen: erbteil faellt unmittelbar nach 'erbe:fallen', und
+       Glocke-dann-klimperndes-Metall hat das Ohr in 1350 als Telefonklingeln
+       gehoert. Der Erbteil wird ins Buch geschrieben. */
+    'erbe:erbteil':      { datei: altNeu('feder', 'kasse'), laut: 0.6 },
     'erbe:stiftung':     { datei: altNeu('glocke', 'telefon'), laut: 0.7 },
-    'erbe:stunde':       { datei: je('woche1', 'woche2', 'woche3', 'woche4'), laut: 0.45 },
+    /* Auch nicht das Wochenzeichen: es faellt in derselben Sekunde wie
+       'uhr:woche' und verdoppelt es nur. Eine Kerbe im Holz. */
+    'erbe:stunde':       { datei: stets('kerbe'), laut: 0.4 },
 
     /* --- DER KERN -------------------------------------------------------
        Der haeufigste Ton im ganzen Spiel: der WEITER-Knopf. Er war zuerst
