@@ -21,20 +21,43 @@ Alle Proben liegen in `klang/`. Die vier alten, leeren Stück-Verzeichnisse
 (`stadt/`, `fuhre/`, `preis/`, `gegner/`) bleiben frei: der Katalog sitzt an
 einer Stelle, weil dieselbe Probe von mehreren Stücken gerufen wird.
 
-## Drei Schichten, und erst zusammen ergeben sie eine Jahreszahl
+## Vier Schichten, und nur drei davon laufen ohne Zutun nicht
 
-| Schicht | Dateien | Was sie sagt |
-|---|---|---|
-| **Bett** | `klang/bett1..4.mp3` | die **Zeit** — Holzflöte · Cembalo · Blaskapelle · Funk |
-| **Fremd** | `klang/nachbar1,4.mp3` + Wand | den **Gegenzug** — was drüben geschieht, hinter der Mauer |
-| **Hof** | `klang/hof1..4.mp3` | den **Ort** — Feuer unter der Pfanne · Küferei und Stall · Dampfmaschine · Diesel |
-| **Werk** | die übrigen ~35 Proben | den **Vorgang** — was der Spieler gerade getan hat |
+| Schicht | Dateien | Was sie sagt | läuft |
+|---|---|---|---|
+| **Grund** | `klang/grund.mp3` — **eine Datei für alle vier Epochen** | daß hier ein Hof ist, und sonst **nichts** | immer |
+| **Bett** | `klang/bett1..4.mp3` | die **Zeit** — Blockflöte · Laute · Blaskapelle · Funk | nur bei Arbeit |
+| **Hof** | `klang/hof1..4.mp3` | den **Ort** — Feuer unter der Pfanne · Küferei und Stall · Dampfmaschine · Diesel | nur bei Arbeit |
+| **Fremd** | `klang/nachbar1,4.mp3` + Wand | den **Gegenzug** — was drüben geschieht, hinter der Mauer | bei Arbeit |
+| **Werk** | die übrigen ~40 Proben | den **Vorgang** — was der Spieler gerade getan hat | bei Arbeit |
 
-Das Bett trägt die Epoche, und zwar messbar: das blinde Ohr nennt in **jedem**
-Durchgang zuerst das Instrument, wenn es 1350 und 1600 unterscheidet. Als `bett2`
-einmal versehentlich mit einer Blockflöte zurückkam — demselben Leitinstrument
-wie `bett1` —, fiel 1600 sofort durch (*„gehört: Epoche 3"*). **Zwei Epochen mit
-einem Leitinstrument sind für ein blindes Ohr eine Epoche.**
+**Das ist seit Welle 5 umgebaut, und zwar gemessen.** Bis dahin trug das Bett
+die Epoche — und lief ohne jedes Zutun, während `ducke()` es unter jeden
+Vorgang wegzog. Das Ergebnis war die Latte auf dem Kopf: dreißig Sekunden
+**Nichtstun** wurden vom fremden Ohr in **12 von 12** Durchgängen der richtigen
+Epoche zugeordnet, dreißig Sekunden **Spielen** nur in **3 von 12** — dem
+Zufall gleich. Zwölfmal von zwölf begründete das Ohr die stille Aufnahme mit
+dem Instrument der Musik.
+
+Heute holt jeder Vorgang Bett und Hof binnen 0,7 s herauf (`belebe()`) und hält
+sie 3,2 s; danach sinken sie in 2,6 s auf **null**. Übrig bleibt `grund.mp3` —
+Wind im Torbogen, in allen vier Epochen dasselbe Band, mit epochenunabhängiger
+Atemtiefe, weil auch eine Modulationstiefe eine Auskunft wäre.
+
+> **Ein Hof, in dem niemand arbeitet, klingt in jedem Jahrhundert gleich.
+> Die Zeit hört man erst, wenn jemand etwas tut.**
+
+Danach: still **17 %**, gespielt **58 %** (drei Durchgänge über acht
+Aufnahmen). Der volle Befund steht in
+[`../../werkbank/urteile/welle5-der-klang-nacharbeit.md`](../../werkbank/urteile/welle5-der-klang-nacharbeit.md).
+
+`LEBEN_TIEF` ist **null** und nicht 0,05: bei 0,05 — 26 dB unter dem Grund und
+im Pegelverlauf nicht mehr auffindbar — hat das Ohr die stille Aufnahme von
+1350 immer noch mit Sicherheit 90 richtig genannt, *„an der einfachen
+Holzflöte"*. Eine Melodie ist noch weit unter dem Rauschen eine Melodie.
+
+Zwei Epochen mit einem Leitinstrument bleiben für ein blindes Ohr eine Epoche —
+die Regel gilt weiter, sie gilt jetzt nur für die **gespielte** halbe Minute.
 
 Dasselbe Ereignis klingt in jeder Epoche anders — das ist der ganze Punkt:
 
@@ -44,9 +67,9 @@ Dasselbe Ereignis klingt in jeder Epoche anders — das ist der ganze Punkt:
 | `fuhre:kauf`, `preis:muenzen` | Münzen auf Holz | Münzen | Münzen | Registrierkasse |
 | `fuhre:fass-rollen` | Eichenfass auf Pflaster | dito | dito | Stahlfass auf Beton |
 | `tafel:kreide`, `gegner:preis` | Kreide auf Schiefer | Kreide | Kreide | Schreibmaschine |
-| `preis:michaeli` | Kirchenglocke | Glocke | Glocke | **Werksglocke** |
-| `uhr:woche` (WEITER) | Holzklapper | Turmuhr | **Werkspfeife** | Stechuhr |
-| `fuhre:abfahrt:*` | Ochsengespann | Pferdefuhrwerk | Rangieren am Waggon | Lastzug, Druckluft |
+| `preis:michaeli` | Kirchenglocke | Glocke | Werkspfeife | **Werksglocke** |
+| `uhr:woche` (WEITER) | Holzklapper | Turmuhr | **Schichtglocke** | Stechuhr |
+| `fuhre:abfahrt:*` | Ochse vor dem Karren | Pferdefuhrwerk | Rangieren am Waggon | Lastzug |
 | `sud:anstellen` | Holzfeuer | Holzfeuer | Dampf | Motor |
 | `sud:anstich` | Zapfen und Einschenken | dito | dito | Flaschenband |
 | `erbe:erbteil` | Kiel im Hausbuch | dito | dito | Registrierkasse |
@@ -155,8 +178,45 @@ dann nur der Schalter.
 Alle Proben stammen aus `design/tools/gen_audio.py`. Die Prompts der Welle 2
 stehen in [`../../werkbank/klang-erzeuge.py`](../../werkbank/klang-erzeuge.py),
 die der Welle 4 in
-[`../../werkbank/schuss/klang/erzeuge.py`](../../werkbank/schuss/klang/erzeuge.py) —
+[`../../werkbank/schuss/klang/erzeuge.py`](../../werkbank/schuss/klang/erzeuge.py),
+die der Welle 5 in
+[`../../werkbank/schuss/klang-w5-nach/erzeuge.py`](../../werkbank/schuss/klang-w5-nach/erzeuge.py) —
 dort trägt **jede** Zeile den Satz des Ohres, der die alte Probe verurteilt hat.
+Die ersetzten Proben liegen als `<name>.alt.mp3` in
+`werkbank/schuss/klang-w5-nach/alt/` — **außerhalb** von `spiel/`, damit sie
+nicht als tote Datei mitfahren.
+
+### Eine Probe kann jahrelang das Falsche enthalten, ohne daß es auffällt
+
+Der teuerste Fund der Welle 5 war keine Mischung, sondern eine Datei. In Welle 5
+ist **jede** epochentragende Probe einzeln vorgelegt worden — und sieben von
+ihnen enthielten nicht, was ihr Name verspricht:
+
+| Probe | hieß | war in Wahrheit |
+|---|---|---|
+| `abfahrt1` | Ochsenfuhre 1350 | *„Plätschern von Wasser · Gluckern · Tropfen"* |
+| `abfahrt2` | Pferdefuhre 1600 | *„metallisches Kurbeln und Ratschen einer Mechanik"* |
+| `abfahrt3` | Rangieren 1884 | *„menschliches Pfeifen einer Melodie"* |
+| `abfahrt4` | Lastzug 1970 | Motor **plus** langes Druckluftzischen → Dampf |
+| `sud1` | offenes Feuer 1350 | Wassergluckern, kein Feuer |
+| `sud3` | Dampfventil 1884 | *„Sprühdose / Aerosolspray, erst ab 1927"* |
+| `fassstahl` | Stahlfass 1970 | *„Gongschlag"* |
+| `werksglocke` | Werksglocke 1970 | *„hoher, schriller elektronischer Pfeifton"* |
+| `glocke` | Kirchenglocke | *„Röhrenglocken"* — Orchesterinstrument |
+
+**Die FUHRE, der Hauptvorgang des Spiels, hatte in drei von vier Epochen gar
+keinen Abfahrtsklang.** Das ist der Grund, aus dem die *gespielte* halbe Minute
+die Epoche schlechter trug als die stille — nicht die Mischung, sondern der
+Inhalt. Wer eine Probe erzeugt und nicht einzeln vorlegt, hat sie nicht erzeugt,
+sondern nur heruntergeladen.
+
+Und die Gegenstelle liefert nicht, was man bestellt: sieben Versuche auf eine
+Ochsenfuhre ergaben fünfmal Wasser, einen Würfelbecher und eine Türklinke; vier
+Versuche auf ein rollendes Stahlfass einen bellenden Hund, ein Klopfen auf Holz
+und zwei Triangeln. Beide Dateien sind deshalb **gelöscht**: 1350 trägt seine
+Zeit jetzt über das Tier (`ochse.mp3`, geprüft *„Kuhblöken, zeitlos"*), und das
+Faß rollt in allen vier Epochen als `fassholz`. Eine Probe, die das Falsche
+sagt, ist schlechter als keine.
 
 ```bash
 ./werkbank/schuss/klang/erzeuge.py            # was fehlt
