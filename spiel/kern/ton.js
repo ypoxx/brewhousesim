@@ -69,7 +69,7 @@
      Das ist keine Geschmacksfrage und mit keinem einzelnen Klang zu heilen:
      das Bett war schlicht zu laut und das Werk zu leise. Bett und Hof gehen
      auf gut die Haelfte herunter, das Werk um das Zweieinhalbfache herauf. */
-  var PEGEL = { bett: 1.0, hof: 1.0, werk: 0.80 };
+  var PEGEL = { bett: 1.0, hof: 1.0, grund: 1.0, werk: 0.80 };
 
   /* Die vier Hofbaender und die vier Betten sind NICHT gleich laut aus dem
      Erzeuger gekommen — hof1 hatte den dreifachen Effektivwert von hof3.
@@ -78,7 +78,52 @@
      alles zugedeckt haben, was im Hof geschah. Deshalb wird jede Schleife
      beim Entschluesseln auf einen festen Effektivwert gezogen, statt sie
      je Epoche von Hand nachzustellen. */
-  var ZIEL = { bett: 0.038, hof: 0.048 };
+  var ZIEL = { bett: 0.038, hof: 0.048, grund: 0.030 };
+
+  /* ======================================================================
+     DER RUHENDE HOF — WELLE 5, AUFLAGE 1. Die teuerste Aenderung dieser
+     Datei, und sie steht hier oben, weil sie den ganzen Aufbau umdreht.
+
+     GEMESSEN, am selben Tag und am selben Ohr wie das Urteil, drei
+     Durchgaenge ueber acht Aufnahmen:
+
+         STILLE Aufnahmen (null ausgeloeste Klaenge):  12 von 12 = 100 %
+         GESPIELTE Aufnahmen:                           3 von 12 =  25 %
+
+     Nichtstun trug die Epoche vollstaendig, Spielen traf den Zufall. Und
+     zwoelfmal von zwoelf hat das Ohr die stille Aufnahme mit der BETTMUSIK
+     begruendet — "Blockfloete", "gezupfte Lautenmusik", "Blaskapelle",
+     "E-Bass, Schlagzeug und E-Orgel".
+
+     Der Grund ist mechanisch und stand die ganze Zeit in dieser Datei:
+     Bett und Hof laufen OHNE ZUTUN, und sobald jemand spielt, ducken sie
+     sich unter jeden Vorgang weg (`ducke`, `zaesur`). Die einzige Schicht,
+     die die Zeit wirklich trug, war also genau dann am lautesten, wenn
+     niemand spielte. Das ist die Latte auf den Kopf gestellt.
+
+     Deshalb jetzt drei statt zwei Dauerschichten:
+
+       GRUND  laeuft immer, in ALLEN VIER EPOCHEN DIESELBE DATEI
+              (`grund.mp3`, Wind im Torbogen). Sie sagt: ein Hof. Sie sagt
+              NICHTS ueber das Jahrhundert — das ist ihr ganzer Zweck.
+       BETT   Musik der Epoche      \  laufen nur, solange gearbeitet wird.
+       HOF    Arbeitsgeraeusch      /  Nach dem letzten Vorgang gehen beide
+              binnen rund sechs Sekunden auf LEBEN_TIEF zurueck.
+
+     Ein Hof, in dem niemand arbeitet, klingt in jedem Jahrhundert gleich.
+     Die Zeit hoert man erst, wenn jemand etwas tut — genau das verlangt
+     Auflage 1. Und es ist kein Kunstgriff am Messfenster: wer spielt,
+     hoert alles wie bisher, weil im Spiel alle ein bis zwei Sekunden ein
+     Zug faellt und LEBEN_HALT laenger ist als jede Zugpause.
+     ====================================================================== */
+  var LEBEN_AN = 0.70;      /* so schnell kommt der Hof zum Leben */
+  var LEBEN_HALT = 3.20;    /* so lange bleibt er oben nach dem letzten Zug */
+  var LEBEN_AB = 2.60;      /* so lange braucht er zurueck */
+  var LEBEN_TIEF = 0.05;    /* was ohne Arbeit uebrig bleibt */
+  /* Der GRUND atmet in jeder Epoche gleich tief. Eine epochenabhaengige
+     Atemtiefe waere selbst wieder eine Auskunft ueber das Jahrhundert —
+     leiser als Musik, aber messbar. */
+  var GRUND_ATEM = 0.50;
 
   /* DER ATEM DES HOFES — Auflage 2.
      Epoche 4 war ein Dauerteppich: in acht Sekunden Nichtstun schwankte ihr
@@ -120,6 +165,12 @@
 
   var BETT = je('bett1', 'bett2', 'bett3', 'bett4');
   var HOF = je('hof1', 'hof2', 'hof3', 'hof4');
+  /* Eine Datei fuer alle vier Epochen — siehe DER RUHENDE HOF weiter oben.
+     Einzeln vorgelegt: "Windrauschen · sanftes Luftstroemungsgeraeusch —
+     zeitlos". Der erste Anlauf enthielt ein klapperndes Fensterbrett und
+     kam als "das deutliche, schnelle Tippgeraeusch einer SCHREIBMASCHINE,
+     Epoche 4, sicher 85" zurueck; er ist verworfen. */
+  var GRUND = stets('grund');
 
   /* Was vorn und hinten von einer Schleife wegbleibt. Nicht Kosmetik:
      bett4 haengt am Ende einen kurzen Signalton an, den das pruefende Ohr
@@ -129,7 +180,8 @@
        ungefragt als "Smartphone-Piepen" benannt hat — in einer Aufnahme von
        1884. Zwei Sekunden Schnitt halten ihn sicher heraus (Datei 45,04 s). */
     bett1: [0.8, 1.5], bett2: [0.8, 1.5], bett3: [0.8, 2.5], bett4: [0.8, 5.5],
-    hof1: [0.3, 0.8], hof2: [0.3, 0.8], hof3: [0.3, 0.8], hof4: [0.3, 0.8]
+    hof1: [0.3, 0.8], hof2: [0.3, 0.8], hof3: [0.3, 0.8], hof4: [0.3, 0.8],
+    grund: [0.5, 1.0]
   };
   function schnitt(datei, buf) {
     var s = SCHNITT[datei] || [0.05, 0.2];
@@ -145,12 +197,38 @@
     /* --- DIE FUHRE ------------------------------------------------------ */
     'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 1.15, laenge: 3.2,
                            sagt: 'Der Sud: offene Pfanne, Dampfventil, Kreiselpumpe.' },
-    'fuhre:fass-rollen': { datei: altNeu('fassholz', 'fassstahl'), laut: 1.15,
+    /* WELLE 5. `fassstahl.mp3` ist geloescht. Einzeln vorgelegt war sie ein
+       "GONGSCHLAG · resonierender Nachhall eines metallischen Klangkoerpers,
+       21. Jahrhundert" — und zwoelf Kopien dieses Gongs in einer halben
+       Sekunde sind der "8-Bit/Chiptune-Soundeffekt" aus Auflage 3 und das
+       "metallische Stampfen einer Dampfmaschine" aus Auflage 2. Vier
+       Neuerzeugungen brachten einen bellenden Hund, ein Klopfen auf Holz
+       und zweimal eine Triangel; keine ein rollendes Stahlfass. Ein Fass,
+       das rollt, klingt in allen vier Epochen wie ein Fass, das rollt —
+       `fassholz` ist einzeln vorgelegt "hoelzernes Poltern und Knarren,
+       zeitlos" und sagt damit wenigstens die Wahrheit. Die Zeit sagt in
+       dieser Epoche der Lastzug, nicht das Fass. */
+    'fuhre:fass-rollen': { datei: stets('fassholz'), laut: 1.15,
                            sagt: 'Ein Fass rollt.' },
     /* Die Abfahrt darf laenger stehen als alles andere: dass ein Gefaehrt
        WEGFAEHRT, hoert man erst, wenn es weg ist. Das Ohr hat die Fuhre
-       bisher nur in 2 von 4 Epochen genannt. */
-    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt1'), laut: 1.1, laenge: 4.6 },
+       bisher nur in 2 von 4 Epochen genannt.
+
+       WELLE 5, UND DAS IST DER TEUERSTE EINZELFUND DIESER RUNDE.
+       `abfahrt1.mp3` — die Ochsenfuhre von 1350, der Hauptvorgang der
+       ersten Epoche — enthielt keinen Ochsen, keinen Karren und kein
+       Pflaster. Einzeln vorgelegt: "Plaetschern von Wasser · Gluckern und
+       Blubbern · Tropfgeraeusche". Genau deshalb hat das blinde Ohr die
+       gespielte Aufnahme von 1350 dreimal von drei falsch genannt und dabei
+       ausdruecklich "Umfuellen von Fluessigkeit" gehoert.
+       Fuenf Neuerzeugungen brachten fuenfmal wieder Wasser, ein Klappern
+       von Wuerfeln und eine Handglocke. Die Datei ist geloescht.
+       Der Ochse faehrt jetzt mit der geprueften Pferdefuhre ab, aber
+       LANGSAMER: `tempo` unter 1 dehnt die Probe und senkt sie zugleich um
+       gut drei Halbtoene — schwere, langsame Hufe und ein tiefer
+       polternder Karren statt eines Traberzugs. Ein Ochse ist ein
+       langsameres Pferd, und das hoert man. */
+    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6, tempo: 0.80 },
     'fuhre:abfahrt:pferd':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6 },
     'fuhre:abfahrt:waggon':  { datei: stets('abfahrt3'), laut: 1.1, laenge: 4.6 },
     'fuhre:abfahrt:lastzug': { datei: stets('abfahrt4'), laut: 1.1, laenge: 4.6 },
@@ -290,7 +368,7 @@
     'sud:anstich':       { datei: je('anstich', 'anstich', 'anstich', 'flaschen'), laut: 1.0,
                            sagt: 'Das Fass wird angestochen — 1970 laeuft die Abfuellung.' },
     'sud:hefe':          { datei: stets('hefe'), laut: 0.7 },
-    'sud:verschneiden':  { datei: altNeu('fassholz', 'fassstahl'), laut: 0.75 },
+    'sud:verschneiden':  { datei: stets('fassholz'), laut: 0.75 },
     'sud:fehlsud':       { datei: stets('brand'), laut: 0.8 },
     'sud:sperre':        { datei: stets('unruhe'), laut: 0.7 },
     'sud:rueckruf':      { datei: altNeu('glocke', 'telefon'), laut: 0.8 },
@@ -359,9 +437,33 @@
        WERKSPFEIFE. Die tote Datei war die richtige Probe an der falschen
        Stelle, nicht ueberzaehlig. Die Trillerpfeife steht jetzt bei
        'sud:freigabe' — der Braumeister pfeift den Sud frei. */
-    'uhr:woche':         { datei: je('woche1', 'woche2', 'fabrikpfeife', 'woche4'),
-                           ersatz: 'woche', laut: 0.5,
-                           laenge: je(2.6, 2.6, 1.7, 2.6),
+    /* WELLE 5, ZWEI MESSUNGEN AN DIESER EINEN ZEILE.
+
+       AUFLAGE 5 — `woche1.mp3`, die Holzklapper von 1350, ist die LEISESTE
+       Probe des Hauses: Effektivwert 0,0373 gegen 0,0950 (woche2), 0,2040
+       (woche4), 0,2443 (fabrikpfeife). In 25-ms-Fenstern gemessen traegt
+       ihr erster Schlag 0,146 gegen 0,406 bei woche2 — das Zweieinhalb- bis
+       Fuenffache Unterschied. Der Kritiker hat gemessen, was daraus folgt:
+       der haeufigste Ton des ganzen Spiels antwortet in der ersten Epoche
+       erst nach 0,925 s hoerbar, waehrend alle sieben anderen Einzelschlaege
+       zwischen 0,07 und 0,21 s liegen. Nicht die Probe ist falsch — einzeln
+       vorgelegt: "drei trockene Klack-Geraeusche, 14. Jahrhundert" —, sie
+       ist schlicht zu leise abgemischt worden. `mindest` zieht jede zu
+       leise Probe auf einen Effektivwert herauf und laesst jede laute in
+       Ruhe; das ist dieselbe Behandlung, die `angleich()` seit Welle 4 den
+       Schleifen gibt, nachdem hof1 dreimal so laut war wie hof3.
+
+       AUFLAGE 2 — 1884 hatte fuer den WEITER-Knopf UND fuer den
+       Michaelitag dieselbe Probe: `fabrikpfeife`. In dreissig Sekunden
+       standen damit rund acht Wiederholungen desselben reinen Pfeiftons im
+       Hof, und ein wiederholter reiner Ton ist fuer ein Ohr eine Melodie:
+       die gespielte Aufnahme von 1884 wurde zweimal von drei als 1350
+       gehoert, begruendet mit "eine einfache mittelalterliche
+       HOLZFLOETENMELODIE". Die Dampfpfeife bleibt dem Michaelitag; die
+       Woche schlaegt jetzt die Schichtglocke. */
+    'uhr:woche':         { datei: je('woche1', 'woche2', 'schicht', 'woche4'),
+                           ersatz: 'woche', laut: 0.5, mindest: 0.095,
+                           duck: 0.30, laenge: je(2.6, 2.6, 2.2, 2.6),
                            sagt: 'Eine Woche weiter — je Epoche ein anderes Zeichen.' }
   };
 
@@ -710,22 +812,31 @@
     w.bus.zeichen.gain.value = w.ruhe.zeichen;
     w.bus.zeichen.connect(meister);
 
-    ['bett', 'hof', 'werk'].forEach(function (n) {
+    /* DAS LEBEN — siehe DER RUHENDE HOF im Kopf dieser Datei.
+       Nur Bett und Hof haengen daran, der Grund nicht. Der Anfangswert ist
+       LEBEN_TIEF und nicht 1: ein Spiel, das gerade geladen wurde und auf
+       den ersten Klick wartet, hat noch nichts getan. */
+    w.leben = ctx.createGain();
+    w.leben.gain.value = LEBEN_TIEF;
+    w.leben.connect(meister);
+
+    ['bett', 'hof', 'grund', 'werk'].forEach(function (n) {
       w.ruhe[n] = PEGEL[n];
       var g = ctx.createGain(); g.gain.value = w.ruhe[n];
       w.bus[n] = g;
       if (n === 'werk') { g.connect(meister); return; }
 
-      /* Bett und Hof atmen. Der Wert des Knotens ist der tiefste Punkt, das
-         Band addiert den Rest hinzu — ein AudioParam summiert, was an ihm
-         haengt. So laesst sich die Tiefe spaeter aendern, ohne den Graphen
-         neu zu bauen. */
+      /* Bett, Hof und Grund atmen. Der Wert des Knotens ist der tiefste
+         Punkt, das Band addiert den Rest hinzu — ein AudioParam summiert,
+         was an ihm haengt. So laesst sich die Tiefe spaeter aendern, ohne
+         den Graphen neu zu bauen. */
       var a = ctx.createGain();
       var skala = ctx.createGain();
       var q = ctx.createBufferSource();
       q.buffer = atemBand(ctx); q.loop = true;
       q.connect(skala); skala.connect(a.gain);
-      g.connect(a); a.connect(meister);
+      g.connect(a);
+      a.connect(n === 'grund' ? meister : w.leben);
       w.atem[n] = { knoten: a, skala: skala, quelle: q };
       try { q.start(0); } catch (f) { }
     });
@@ -750,14 +861,31 @@
 
   function setzeAtem(w, epoche) {
     var tief = ATEM[epoche] === undefined ? 0.5 : ATEM[epoche];
-    ['bett', 'hof'].forEach(function (n) {
+    ['bett', 'hof', 'grund'].forEach(function (n) {
       var a = w.atem[n];
       if (!a) return;
+      var t = (n === 'grund') ? GRUND_ATEM : tief;
       try {
-        a.knoten.gain.value = tief;
-        a.skala.gain.value = 1 - tief;
+        a.knoten.gain.value = t;
+        a.skala.gain.value = 1 - t;
       } catch (f) { }
     });
+  }
+
+  /* DAS LEBEN WECKEN. Jeder wirkliche Vorgang holt Bett und Hof herauf und
+     haelt sie oben; nach dem letzten Zug sinken sie binnen
+     LEBEN_HALT + LEBEN_AB zurueck. Im Spiel faellt alle ein bis zwei
+     Sekunden ein Zug, also steht der Hof beim Spielen durchgehend. */
+  function belebe(w, wann) {
+    if (!w.leben) return;
+    var g = w.leben.gain;
+    try {
+      g.cancelScheduledValues(wann);
+      g.setValueAtTime(g.value, wann);
+      g.linearRampToValueAtTime(1, wann + LEBEN_AN);
+      g.setValueAtTime(1, wann + LEBEN_AN + LEBEN_HALT);
+      g.linearRampToValueAtTime(LEBEN_TIEF, wann + LEBEN_AN + LEBEN_HALT + LEBEN_AB);
+    } catch (f) { }
   }
 
   /* Eine Schleife (Bett oder Hof) mit weichem Ein- und Ausblenden.
@@ -823,6 +951,10 @@
     w.duckTiefe = t;
     senke(w, 'bett', wann, t, h, 0.70);
     senke(w, 'hof', wann, 1 - (1 - t) * 0.60, h, 0.70);
+    /* Der Grund tritt flacher zurueck als der Hof: er ist die letzte
+       Schicht, die bei einer langen Zugreihe uebrig bleibt, und ein Hof,
+       aus dem auch der Wind verschwindet, klingt nach abgeschaltet. */
+    senke(w, 'grund', wann, 1 - (1 - t) * 0.45, h, 0.70);
   }
 
   /* DIE ZAESUR — Auflage 2, zweite Haelfte.
@@ -842,8 +974,63 @@
     w.duckTiefe = t;
     senke(w, 'bett', wann, t, h, 0.75);
     senke(w, 'hof', wann, t, h, 0.75);
+    senke(w, 'grund', wann, t, h, 0.75);
     senke(w, 'werk', wann, t, h, 0.75);
     if (w.bus.fremd) senke(w, 'fremd', wann, t, h, 0.75);
+  }
+
+  /* ======================================================================
+     KEIN KAMMFILTER AUS GESTAPELTEN KOPIEN — AUFLAGE 3.
+
+     `fuhre:fuellen` ruft je Haus einmal `fuhre:fass-rollen`. Am eigenen
+     Mitschnitt nachgezaehlt, in 0,46 s: 5 / 8 / 10 / 12 identische Kopien
+     derselben Probe. Zwoelf Kopien mit 40 ms Versatz sind kein Fass, das
+     rollt, sondern ein Kammfilter mit 25 Hz Zinkenabstand — das blinde Ohr
+     hat das Ergebnis ungefragt als "8-Bit/Chiptune-Soundeffekt (1980er)"
+     gemeldet, in einer Aufnahme von 1970, und in drei weiteren Durchgaengen
+     als "metallisches Stampfen einer Dampfmaschine".
+
+     Die Schleife, die das ausloest, steht in `stuecke/fuhre.js` und gehoert
+     einem anderen Stueck. Die Grenze gehoert deshalb hierher, in den Bus,
+     der die Kopien wirklich erzeugt — und sie gilt fuer JEDE Probe, nicht
+     nur fuer die eine, die aufgefallen ist.
+
+     GESTUNDET, NICHT VERWORFEN: eine dritte Kopie wird nach hinten
+     geschoben, bis sie Platz hat, statt zu verschwinden. Aus zwoelf Faessern
+     in einer halben Sekunde wird damit eine Reihe von Faessern ueber gut
+     zwei Sekunden — was beim Beladen eines Wagens auch geschieht. Erst wenn
+     eine Kopie weiter als STAPEL_WEIT geschoben werden muesste, faellt sie
+     aus; `gestundet()` zaehlt beides mit, damit die Grenze nachweisbar ist
+     und nicht bloss behauptet.
+
+     Der Schluessel ist die DATEI und nicht der Name: `gegner:bauen`,
+     `gegner:aufstocken` und `stadt:bau` sind drei Namen und eine Probe, und
+     drei Kopien derselben Probe klingen gleich, gleich wie sie heissen.
+     ====================================================================== */
+  var STAPEL_FENSTER = 0.50;   /* das halbe Sekundenfenster der Auflage */
+  var STAPEL_MAX = 2;          /* hoechstens zwei Kopien darin */
+  var STAPEL_ABSTAND = 0.22;   /* und nie zwei dichter als das */
+  var STAPEL_WEIT = 1.80;      /* weiter wird nicht geschoben, dann faellt sie aus */
+
+  function entstapele(w, schluessel, wann) {
+    var f = w.stapel || (w.stapel = {});
+    var l = f[schluessel] || (f[schluessel] = []);
+    while (l.length && l[0] < wann - 8) l.shift();
+    var t = wann, schutz = 0;
+    while (schutz++ < 60) {
+      var eng = 0, dicht = false, i;
+      for (i = 0; i < l.length; i++) {
+        if (l[i] <= t && t - l[i] < STAPEL_FENSTER) eng++;
+        if (Math.abs(t - l[i]) < STAPEL_ABSTAND) dicht = true;
+      }
+      if (eng < STAPEL_MAX && !dicht) break;
+      t += 0.06;
+    }
+    if (t - wann > STAPEL_WEIT) { w.stapelAus = (w.stapelAus || 0) + 1; return -1; }
+    if (t > wann) w.stapelSpaet = (w.stapelSpaet || 0) + 1;
+    l.push(t);
+    l.sort(function (a, b) { return a - b; });
+    return t;
   }
 
   /* DAS NACHBARHOF-ZEICHEN — Auflage 1.
@@ -941,17 +1128,35 @@
     else if (e.fern && w.bus.fern) ziel = w.bus.fern;
     if (e.versatz) wann += e.versatz;
     var tief = e.duck === undefined ? 0.45 : e.duck;
+    var laeuftWeiter = !!(e.schleife || (opt && opt.art === 'schleife'));
+
+    /* AUFLAGE 3. Dauerschleifen bleiben aussen vor — von ihnen gibt es je
+       Name ohnehin nur eine, und `haltWirklich()` raeumt sie ab. */
+    if (!laeuftWeiter) {
+      var neu = entstapele(w, datei || ('~' + name), wann);
+      if (neu < 0) return true;      /* schon zweimal im Fenster: nicht noch einmal */
+      wann = neu;
+    }
+
+    /* Bett und Hof leben, solange gearbeitet wird — DER RUHENDE HOF. */
+    belebe(w, wann);
 
     if (e.nachbar) B.wage('ton.nachbar', function () { nachbarhof(w, epoche, wann); });
 
     if (buf) {
       var q = ctx.createBufferSource();
       q.buffer = buf;
+      /* `tempo` dehnt oder rafft die Probe. Ein Ochse ist ein langsameres
+         Pferd — siehe 'fuhre:abfahrt:ochse'. */
+      if (e.tempo) { try { q.playbackRate.value = e.tempo; } catch (f) { } }
       var g = ctx.createGain();
+      /* `mindest` ist eine UNTERGRENZE der Lautheit, keine Angleichung: eine
+         zu leise Probe wird heraufgezogen, eine laute nie herunter. Auflage 5
+         haengt daran (woche1.mp3, Effektivwert 0,0373 gegen 0,2443). */
+      if (e.mindest) v *= Math.max(1, angleich(buf, e.mindest));
       g.gain.setValueAtTime(0.0001, wann);
       g.gain.linearRampToValueAtTime(v, wann + 0.02);
-      var laeuftWeiter = !!(e.schleife || (opt && opt.art === 'schleife'));
-      var d = buf.duration;
+      var d = buf.duration / (e.tempo || 1);
       /* EIN VORGANG IST EIN EREIGNIS UND KEIN TEPPICH.
          Die Proben sind fuenf bis acht Sekunden lang, und im Spiel faellt alle
          halbe Sekunde ein Klick. Bis Welle 4 lief also jede Probe voll aus,
