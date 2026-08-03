@@ -1,0 +1,7 @@
+[
+ {
+  "abbruch": "Verweigerung, kein Urteil (sicher=0)",
+  "rohtext": "{\n  \"epoche\": 4,\n  \"sicher\": 0,\n  \"vorgang\": \"Da keine Audiodaten, sondern nur leere Zeitstempel übermittelt wurden, kann der Vorgang nicht bestimmt werden.\",\n  \"woran\": \"Es fehlt die Tonspur, um Geräusche analysieren zu können.\",\n  \"stoert\": \"Das Fehlen jeglicher akustischer Informationen.\"\n}",
+  "datei": "probe-03.wav"
+ }
+]

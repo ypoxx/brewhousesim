@@ -88,7 +88,7 @@ const pegelReihe = [];
 
 /* Zugplan: was ein Mensch in einer halben Minute tut. Immer dieselbe
    Reihenfolge, damit die vier Epochen vergleichbar bleiben. */
-const PLAN = [
+const PLAN = process.env.PLANJSON ? JSON.parse(process.env.PLANJSON) : [
   [0.8, 'stadt:reiter:fuhre-fu-brett-fu-wagen'],
   [2.0, 'fuhre:fuellen'], [3.4, 'fuhre:abschicken'],
   [6.0, 'sud:zettel-anstich'], [7.5, 'weiter'],
