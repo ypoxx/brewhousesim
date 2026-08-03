@@ -43,7 +43,18 @@
   left: 54%;
   top: 73%;
   width: 44%;
-  height: 5.6%;
+  /* RUNDE 3.  War 5,6 %. Das Band traegt jetzt bis zu sieben Spalten — dazu
+     kamen die Feder der Hand und die erloschenen Verschreibungen —, und im
+     schlimmsten Fall (alles verschrieben, Leibgeding laufend, eine
+     Verschreibung genommen) brach es auf zwei Zeilen um. Nachgemessen: Band
+     39 px hoch bei 32 px Platz, die Knopfreihe wurde gequetscht, und
+     elementFromPoint traf 'erbe:widerspruch' und 'erbe:uebergabe:leibgeding'
+     in E1 und E4 nicht mehr. 6,8 % geben dem Band zwei Zeilen UND der
+     Knopfreihe ihre volle Hoehe.
+     Die Flaeche bleibt unter der GRENZE von stadt.js: 44 % x 6,8 % = 2,99 %
+     gegen 3,5 %. Und sie bleibt im gemessenen freien Streifen: der reicht
+     x 54–99 %, y 72–83 %, die Leiste sitzt in y 73–79,8 %. */
+  height: 6.8%;
   overflow: hidden;
   pointer-events: none;              /* nur die Knoepfe fangen die Maus */
   display: flex;
@@ -124,11 +135,16 @@
 /* Wo die Hand nichts zu entscheiden hat, steht auch kein leerer Kasten. */
 .erb-knoepfe:empty { display: none; }
 
+/* Die Knopfreihe wird NIE gequetscht. Sie ist die Latte: vier Knoepfe, drei
+   mit Preisschild, alle vier vom Mauszeiger zu treffen. Schrumpfen darf das
+   Band, nicht sie. */
 .erb-knoepfe {
   display: flex;
   gap: calc(var(--s) * 6);
   align-items: stretch;
+  flex: 0 0 auto;
 }
+.erb-band { flex: 0 1 auto; }
 
 .erb-leiste .knopf,
 .knopf.erb-knopf {
