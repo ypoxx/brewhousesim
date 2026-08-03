@@ -1,0 +1,1607 @@
+{
+ "epoche": 3,
+ "art": "gespielt",
+ "saat": "1350",
+ "hafen": "http://127.0.0.1:8917",
+ "dauer": 30,
+ "start": {
+  "ok": true,
+  "rate": 44100,
+  "zustand": "running",
+  "t0": 16.581950113378685,
+  "laut": 0.8,
+  "stumm": false,
+  "pegelVorher": {
+   "zustand": "running",
+   "stumm": false,
+   "laut": 0.8,
+   "rms": 0,
+   "spitze": 0,
+   "hoechste": 0,
+   "lauteste": 0
+  }
+ },
+ "standVorAufnahme": {
+  "jahr": 1884,
+  "woche": 26,
+  "epoche": 3,
+  "ende": false,
+  "amtszeit": {
+   "nr": 2,
+   "name": "Therese Bruckner",
+   "vorname": "Therese",
+   "seit": 1884,
+   "bis": 1911,
+   "eigenschaft": "wagemutig",
+   "eigenschaftName": "wagemutig",
+   "sagt": "Baut, bevor gerechnet ist."
+  }
+ },
+ "vorlaufKlicks": 25,
+ "vorklicks": [],
+ "klicks": [
+  {
+   "t": 0.89,
+   "wunsch": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen"
+  },
+  {
+   "t": 2.07,
+   "wunsch": "fuhre:fuellen",
+   "zug": "fuhre:fuellen"
+  },
+  {
+   "t": 3.5,
+   "wunsch": "fuhre:abschicken",
+   "zug": "fuhre:abschicken"
+  },
+  {
+   "t": 6.02,
+   "wunsch": "sud:zettel-anstich",
+   "zug": "sud:zettel-anstich"
+  },
+  {
+   "t": 7.53,
+   "wunsch": "weiter",
+   "zug": "weiter"
+  },
+  {
+   "t": 9.61,
+   "wunsch": "fuhre:fuellen",
+   "zug": "fuhre:fuellen"
+  },
+  {
+   "t": 11.07,
+   "wunsch": "fuhre:abschicken",
+   "zug": "fuhre:abschicken"
+  },
+  {
+   "t": 13.51,
+   "wunsch": "weiter",
+   "zug": "weiter"
+  },
+  {
+   "t": 15.05,
+   "wunsch": "weiter",
+   "zug": "weiter"
+  },
+  {
+   "t": 17.12,
+   "wunsch": "fuhre:fuellen",
+   "zug": null
+  },
+  {
+   "t": 18.52,
+   "wunsch": "fuhre:abschicken",
+   "zug": null
+  },
+  {
+   "t": 21.07,
+   "wunsch": "weiter",
+   "zug": "weiter"
+  },
+  {
+   "t": 22.61,
+   "wunsch": "weiter",
+   "zug": "weiter"
+  },
+  {
+   "t": 24.04,
+   "wunsch": "fuhre:fuellen",
+   "zug": null
+  },
+  {
+   "t": 25.57,
+   "wunsch": "fuhre:abschicken",
+   "zug": null
+  },
+  {
+   "t": 27.59,
+   "wunsch": "weiter",
+   "zug": "weiter"
+  },
+  {
+   "t": 29.07,
+   "wunsch": "weiter",
+   "zug": "weiter"
+  }
+ ],
+ "pegelReihe": [
+  {
+   "t": 0,
+   "rms": 0,
+   "spitze": 0,
+   "zustand": "running"
+  },
+  {
+   "t": 0.14,
+   "rms": 0.02727858164656612,
+   "spitze": 0.11458493769168854,
+   "zustand": "running"
+  },
+  {
+   "t": 0.27,
+   "rms": 0.03398852653809595,
+   "spitze": 0.12344993650913239,
+   "zustand": "running"
+  },
+  {
+   "t": 0.39,
+   "rms": 0.025334140143963943,
+   "spitze": 0.09266583621501923,
+   "zustand": "running"
+  },
+  {
+   "t": 0.52,
+   "rms": 0.023019110480367037,
+   "spitze": 0.07302403450012207,
+   "zustand": "running"
+  },
+  {
+   "t": 0.64,
+   "rms": 0.034513460024518376,
+   "spitze": 0.1349940299987793,
+   "zustand": "running"
+  },
+  {
+   "t": 0.77,
+   "rms": 0.03637996285125454,
+   "spitze": 0.10567133128643036,
+   "zustand": "running"
+  },
+  {
+   "t": 0.95,
+   "rms": 0.03867181872316856,
+   "spitze": 0.12540052831172943,
+   "zustand": "running"
+  },
+  {
+   "t": 1.08,
+   "rms": 0.022471417568706305,
+   "spitze": 0.08989839255809784,
+   "zustand": "running"
+  },
+  {
+   "t": 1.21,
+   "rms": 0.022169506922085025,
+   "spitze": 0.07518026232719421,
+   "zustand": "running"
+  },
+  {
+   "t": 1.33,
+   "rms": 0.02381095637801887,
+   "spitze": 0.0777738094329834,
+   "zustand": "running"
+  },
+  {
+   "t": 1.46,
+   "rms": 0.02616143139782365,
+   "spitze": 0.10002313554286957,
+   "zustand": "running"
+  },
+  {
+   "t": 1.58,
+   "rms": 0.024323496812439716,
+   "spitze": 0.07538542151451111,
+   "zustand": "running"
+  },
+  {
+   "t": 1.71,
+   "rms": 0.02029025373742864,
+   "spitze": 0.07534927129745483,
+   "zustand": "running"
+  },
+  {
+   "t": 1.83,
+   "rms": 0.014544426120075234,
+   "spitze": 0.0491037592291832,
+   "zustand": "running"
+  },
+  {
+   "t": 1.95,
+   "rms": 0.016036802265949276,
+   "spitze": 0.06071845442056656,
+   "zustand": "running"
+  },
+  {
+   "t": 2.63,
+   "rms": 0.10540337975598096,
+   "spitze": 0.23556435108184814,
+   "zustand": "running"
+  },
+  {
+   "t": 2.76,
+   "rms": 0.10433868926535253,
+   "spitze": 0.23609676957130432,
+   "zustand": "running"
+  },
+  {
+   "t": 2.88,
+   "rms": 0.10724533522570966,
+   "spitze": 0.25342947244644165,
+   "zustand": "running"
+  },
+  {
+   "t": 3,
+   "rms": 0.10817514783691473,
+   "spitze": 0.39602595567703247,
+   "zustand": "running"
+  },
+  {
+   "t": 3.13,
+   "rms": 0.11470451841614966,
+   "spitze": 0.5147659778594971,
+   "zustand": "running"
+  },
+  {
+   "t": 3.25,
+   "rms": 0.14665793505283173,
+   "spitze": 0.42674392461776733,
+   "zustand": "running"
+  },
+  {
+   "t": 3.38,
+   "rms": 0.133881387767516,
+   "spitze": 0.35624271631240845,
+   "zustand": "running"
+  },
+  {
+   "t": 3.62,
+   "rms": 0.22228315503374282,
+   "spitze": 0.631977379322052,
+   "zustand": "running"
+  },
+  {
+   "t": 3.75,
+   "rms": 0.12780804912666824,
+   "spitze": 0.4164912700653076,
+   "zustand": "running"
+  },
+  {
+   "t": 3.87,
+   "rms": 0.22068026600854673,
+   "spitze": 0.64223313331604,
+   "zustand": "running"
+  },
+  {
+   "t": 3.99,
+   "rms": 0.12968847745243017,
+   "spitze": 0.5069645047187805,
+   "zustand": "running"
+  },
+  {
+   "t": 4.12,
+   "rms": 0.2640213686116874,
+   "spitze": 0.8150061368942261,
+   "zustand": "running"
+  },
+  {
+   "t": 4.24,
+   "rms": 0.15138331975642005,
+   "spitze": 0.49946171045303345,
+   "zustand": "running"
+  },
+  {
+   "t": 4.37,
+   "rms": 0.1793027895949215,
+   "spitze": 0.6228607892990112,
+   "zustand": "running"
+  },
+  {
+   "t": 4.5,
+   "rms": 0.2794565512664323,
+   "spitze": 0.6995021104812622,
+   "zustand": "running"
+  },
+  {
+   "t": 4.64,
+   "rms": 0.1707396359663526,
+   "spitze": 0.7664402723312378,
+   "zustand": "running"
+  },
+  {
+   "t": 4.77,
+   "rms": 0.23055479251012984,
+   "spitze": 0.7509447336196899,
+   "zustand": "running"
+  },
+  {
+   "t": 4.9,
+   "rms": 0.12570469828572212,
+   "spitze": 0.4403337836265564,
+   "zustand": "running"
+  },
+  {
+   "t": 5.02,
+   "rms": 0.14178854666118906,
+   "spitze": 0.5452374219894409,
+   "zustand": "running"
+  },
+  {
+   "t": 5.14,
+   "rms": 0.1790191988187438,
+   "spitze": 0.614112377166748,
+   "zustand": "running"
+  },
+  {
+   "t": 5.27,
+   "rms": 0.17142537019126752,
+   "spitze": 0.6247401237487793,
+   "zustand": "running"
+  },
+  {
+   "t": 5.4,
+   "rms": 0.181948342520621,
+   "spitze": 0.634438157081604,
+   "zustand": "running"
+  },
+  {
+   "t": 5.52,
+   "rms": 0.13475744475712653,
+   "spitze": 0.45212018489837646,
+   "zustand": "running"
+  },
+  {
+   "t": 5.64,
+   "rms": 0.18861029456361908,
+   "spitze": 0.6608678102493286,
+   "zustand": "running"
+  },
+  {
+   "t": 5.77,
+   "rms": 0.0875633336976276,
+   "spitze": 0.310321569442749,
+   "zustand": "running"
+  },
+  {
+   "t": 5.89,
+   "rms": 0.21025613178579092,
+   "spitze": 0.7225991487503052,
+   "zustand": "running"
+  },
+  {
+   "t": 6.14,
+   "rms": 0.10698876563480658,
+   "spitze": 0.3874932527542114,
+   "zustand": "running"
+  },
+  {
+   "t": 6.27,
+   "rms": 0.16138389550546461,
+   "spitze": 0.6020833253860474,
+   "zustand": "running"
+  },
+  {
+   "t": 6.4,
+   "rms": 0.07955558650466861,
+   "spitze": 0.260320246219635,
+   "zustand": "running"
+  },
+  {
+   "t": 6.52,
+   "rms": 0.1467706634907017,
+   "spitze": 0.4190680980682373,
+   "zustand": "running"
+  },
+  {
+   "t": 6.65,
+   "rms": 0.06463514652124772,
+   "spitze": 0.22310569882392883,
+   "zustand": "running"
+  },
+  {
+   "t": 6.78,
+   "rms": 0.03632382806690835,
+   "spitze": 0.14184260368347168,
+   "zustand": "running"
+  },
+  {
+   "t": 6.9,
+   "rms": 0.022570140900732085,
+   "spitze": 0.08026781678199768,
+   "zustand": "running"
+  },
+  {
+   "t": 7.03,
+   "rms": 0.014634399797323507,
+   "spitze": 0.047986648976802826,
+   "zustand": "running"
+  },
+  {
+   "t": 7.16,
+   "rms": 0.017328371781396564,
+   "spitze": 0.06477870792150497,
+   "zustand": "running"
+  },
+  {
+   "t": 7.29,
+   "rms": 0.03358082742530816,
+   "spitze": 0.10595612227916718,
+   "zustand": "running"
+  },
+  {
+   "t": 7.41,
+   "rms": 0.04514064761464926,
+   "spitze": 0.18745693564414978,
+   "zustand": "running"
+  },
+  {
+   "t": 7.72,
+   "rms": 0.16410142438939687,
+   "spitze": 0.577803373336792,
+   "zustand": "running"
+  },
+  {
+   "t": 7.84,
+   "rms": 0.1854033911377588,
+   "spitze": 0.712935745716095,
+   "zustand": "running"
+  },
+  {
+   "t": 7.97,
+   "rms": 0.2803664871046434,
+   "spitze": 0.7214782238006592,
+   "zustand": "running"
+  },
+  {
+   "t": 8.09,
+   "rms": 0.16352228903161628,
+   "spitze": 0.5946419835090637,
+   "zustand": "running"
+  },
+  {
+   "t": 8.22,
+   "rms": 0.1958573505654176,
+   "spitze": 0.6545788049697876,
+   "zustand": "running"
+  },
+  {
+   "t": 8.35,
+   "rms": 0.09569136306000557,
+   "spitze": 0.287245512008667,
+   "zustand": "running"
+  },
+  {
+   "t": 8.47,
+   "rms": 0.12232899034227272,
+   "spitze": 0.5457113981246948,
+   "zustand": "running"
+  },
+  {
+   "t": 8.6,
+   "rms": 0.09185442093149618,
+   "spitze": 0.3180016279220581,
+   "zustand": "running"
+  },
+  {
+   "t": 8.73,
+   "rms": 0.14269771700423264,
+   "spitze": 0.4145936965942383,
+   "zustand": "running"
+  },
+  {
+   "t": 8.85,
+   "rms": 0.10135617131306536,
+   "spitze": 0.30051255226135254,
+   "zustand": "running"
+  },
+  {
+   "t": 8.98,
+   "rms": 0.08111173946356627,
+   "spitze": 0.28090792894363403,
+   "zustand": "running"
+  },
+  {
+   "t": 9.11,
+   "rms": 0.13610021537816439,
+   "spitze": 0.4904434084892273,
+   "zustand": "running"
+  },
+  {
+   "t": 9.23,
+   "rms": 0.0684247467078385,
+   "spitze": 0.2127704918384552,
+   "zustand": "running"
+  },
+  {
+   "t": 9.36,
+   "rms": 0.09211892147488135,
+   "spitze": 0.3348655700683594,
+   "zustand": "running"
+  },
+  {
+   "t": 9.48,
+   "rms": 0.040999314565211234,
+   "spitze": 0.14649294316768646,
+   "zustand": "running"
+  },
+  {
+   "t": 9.92,
+   "rms": 0.07744396020424735,
+   "spitze": 0.30836808681488037,
+   "zustand": "running"
+  },
+  {
+   "t": 10.05,
+   "rms": 0.05934164372732796,
+   "spitze": 0.19437485933303833,
+   "zustand": "running"
+  },
+  {
+   "t": 10.18,
+   "rms": 0.0649996151104298,
+   "spitze": 0.17853699624538422,
+   "zustand": "running"
+  },
+  {
+   "t": 10.3,
+   "rms": 0.08241016064432367,
+   "spitze": 0.20280949771404266,
+   "zustand": "running"
+  },
+  {
+   "t": 10.43,
+   "rms": 0.09085997744001703,
+   "spitze": 0.23391221463680267,
+   "zustand": "running"
+  },
+  {
+   "t": 10.57,
+   "rms": 0.10561425278765545,
+   "spitze": 0.4041242003440857,
+   "zustand": "running"
+  },
+  {
+   "t": 10.69,
+   "rms": 0.05355562744222283,
+   "spitze": 0.1896064132452011,
+   "zustand": "running"
+  },
+  {
+   "t": 10.82,
+   "rms": 0.09747850447667704,
+   "spitze": 0.3770526349544525,
+   "zustand": "running"
+  },
+  {
+   "t": 10.95,
+   "rms": 0.09758033311245073,
+   "spitze": 0.2770478129386902,
+   "zustand": "running"
+  },
+  {
+   "t": 11.26,
+   "rms": 0.13600005973064583,
+   "spitze": 0.5072511434555054,
+   "zustand": "running"
+  },
+  {
+   "t": 11.38,
+   "rms": 0.14279358254789437,
+   "spitze": 0.5606205463409424,
+   "zustand": "running"
+  },
+  {
+   "t": 11.51,
+   "rms": 0.1471365931069077,
+   "spitze": 0.5172874331474304,
+   "zustand": "running"
+  },
+  {
+   "t": 11.63,
+   "rms": 0.16878766104788662,
+   "spitze": 0.5357875227928162,
+   "zustand": "running"
+  },
+  {
+   "t": 11.75,
+   "rms": 0.2029245747154076,
+   "spitze": 0.6076458096504211,
+   "zustand": "running"
+  },
+  {
+   "t": 11.88,
+   "rms": 0.15612261228655763,
+   "spitze": 0.5124599933624268,
+   "zustand": "running"
+  },
+  {
+   "t": 12.01,
+   "rms": 0.20856110505279488,
+   "spitze": 0.6764712333679199,
+   "zustand": "running"
+  },
+  {
+   "t": 12.14,
+   "rms": 0.13560244341513206,
+   "spitze": 0.45315197110176086,
+   "zustand": "running"
+  },
+  {
+   "t": 12.27,
+   "rms": 0.18635488279439297,
+   "spitze": 0.6279424428939819,
+   "zustand": "running"
+  },
+  {
+   "t": 12.39,
+   "rms": 0.1624068626016651,
+   "spitze": 0.552847146987915,
+   "zustand": "running"
+  },
+  {
+   "t": 12.51,
+   "rms": 0.13317306688626815,
+   "spitze": 0.4012318551540375,
+   "zustand": "running"
+  },
+  {
+   "t": 12.64,
+   "rms": 0.16341488676128477,
+   "spitze": 0.7691072225570679,
+   "zustand": "running"
+  },
+  {
+   "t": 12.77,
+   "rms": 0.11600166671694566,
+   "spitze": 0.3769919276237488,
+   "zustand": "running"
+  },
+  {
+   "t": 12.89,
+   "rms": 0.19121479786835582,
+   "spitze": 0.596340537071228,
+   "zustand": "running"
+  },
+  {
+   "t": 13.02,
+   "rms": 0.09747846664996447,
+   "spitze": 0.303458034992218,
+   "zustand": "running"
+  },
+  {
+   "t": 13.14,
+   "rms": 0.16103820011336287,
+   "spitze": 0.5110033750534058,
+   "zustand": "running"
+  },
+  {
+   "t": 13.27,
+   "rms": 0.17629326178764815,
+   "spitze": 0.5228904485702515,
+   "zustand": "running"
+  },
+  {
+   "t": 13.39,
+   "rms": 0.11971952854976069,
+   "spitze": 0.45331016182899475,
+   "zustand": "running"
+  },
+  {
+   "t": 13.67,
+   "rms": 0.14919484222261142,
+   "spitze": 0.5685374140739441,
+   "zustand": "running"
+  },
+  {
+   "t": 13.8,
+   "rms": 0.15194007640086948,
+   "spitze": 0.5345368385314941,
+   "zustand": "running"
+  },
+  {
+   "t": 13.92,
+   "rms": 0.18389450270167162,
+   "spitze": 0.5489692687988281,
+   "zustand": "running"
+  },
+  {
+   "t": 14.04,
+   "rms": 0.14468191326241536,
+   "spitze": 0.5385595560073853,
+   "zustand": "running"
+  },
+  {
+   "t": 14.17,
+   "rms": 0.13500232878023183,
+   "spitze": 0.43751293420791626,
+   "zustand": "running"
+  },
+  {
+   "t": 14.3,
+   "rms": 0.11905620181382831,
+   "spitze": 0.4292222261428833,
+   "zustand": "running"
+  },
+  {
+   "t": 14.42,
+   "rms": 0.0965874088924081,
+   "spitze": 0.40034276247024536,
+   "zustand": "running"
+  },
+  {
+   "t": 14.55,
+   "rms": 0.09757245709609715,
+   "spitze": 0.343533456325531,
+   "zustand": "running"
+  },
+  {
+   "t": 14.67,
+   "rms": 0.11596679347247399,
+   "spitze": 0.47363147139549255,
+   "zustand": "running"
+  },
+  {
+   "t": 14.8,
+   "rms": 0.14196680808845186,
+   "spitze": 0.48624101281166077,
+   "zustand": "running"
+  },
+  {
+   "t": 14.92,
+   "rms": 0.15190217399764794,
+   "spitze": 0.5049515962600708,
+   "zustand": "running"
+  },
+  {
+   "t": 15.29,
+   "rms": 0.4407111224016327,
+   "spitze": 0.8187141418457031,
+   "zustand": "running"
+  },
+  {
+   "t": 15.47,
+   "rms": 0.3139348095026786,
+   "spitze": 0.6860135793685913,
+   "zustand": "running"
+  },
+  {
+   "t": 15.62,
+   "rms": 0.29198615870461414,
+   "spitze": 0.763676643371582,
+   "zustand": "running"
+  },
+  {
+   "t": 15.75,
+   "rms": 0.40672669005964013,
+   "spitze": 0.8187141418457031,
+   "zustand": "running"
+  },
+  {
+   "t": 15.87,
+   "rms": 0.31093518264128694,
+   "spitze": 0.7440488338470459,
+   "zustand": "running"
+  },
+  {
+   "t": 16,
+   "rms": 0.2370339956307815,
+   "spitze": 0.6919068098068237,
+   "zustand": "running"
+  },
+  {
+   "t": 16.13,
+   "rms": 0.2740952475934135,
+   "spitze": 0.6950052976608276,
+   "zustand": "running"
+  },
+  {
+   "t": 16.25,
+   "rms": 0.3839317719321751,
+   "spitze": 0.7841806411743164,
+   "zustand": "running"
+  },
+  {
+   "t": 16.38,
+   "rms": 0.32152115303993306,
+   "spitze": 0.80421382188797,
+   "zustand": "running"
+  },
+  {
+   "t": 16.5,
+   "rms": 0.2670863634745286,
+   "spitze": 0.7004647850990295,
+   "zustand": "running"
+  },
+  {
+   "t": 16.63,
+   "rms": 0.37842125346026984,
+   "spitze": 0.8187141418457031,
+   "zustand": "running"
+  },
+  {
+   "t": 16.75,
+   "rms": 0.5477235399058811,
+   "spitze": 0.8187141418457031,
+   "zustand": "running"
+  },
+  {
+   "t": 16.87,
+   "rms": 0.518310652671284,
+   "spitze": 0.8187141418457031,
+   "zustand": "running"
+  },
+  {
+   "t": 17,
+   "rms": 0.57764206477228,
+   "spitze": 0.8187141418457031,
+   "zustand": "running"
+  },
+  {
+   "t": 18.03,
+   "rms": 0.4034804475176426,
+   "spitze": 0.8187141418457031,
+   "zustand": "running"
+  },
+  {
+   "t": 18.16,
+   "rms": 0.2551202563433452,
+   "spitze": 0.6091235876083374,
+   "zustand": "running"
+  },
+  {
+   "t": 18.28,
+   "rms": 0.21845213422819001,
+   "spitze": 0.6718343496322632,
+   "zustand": "running"
+  },
+  {
+   "t": 18.4,
+   "rms": 0.06858157208983397,
+   "spitze": 0.18937785923480988,
+   "zustand": "running"
+  },
+  {
+   "t": 19.43,
+   "rms": 0.017074708034189284,
+   "spitze": 0.057125743478536606,
+   "zustand": "running"
+  },
+  {
+   "t": 19.55,
+   "rms": 0.022391716175798233,
+   "spitze": 0.09104345738887787,
+   "zustand": "running"
+  },
+  {
+   "t": 19.68,
+   "rms": 0.023608010646253258,
+   "spitze": 0.0739414170384407,
+   "zustand": "running"
+  },
+  {
+   "t": 19.8,
+   "rms": 0.02537297075697612,
+   "spitze": 0.09666858613491058,
+   "zustand": "running"
+  },
+  {
+   "t": 19.95,
+   "rms": 0.028327520738177243,
+   "spitze": 0.08109209686517715,
+   "zustand": "running"
+  },
+  {
+   "t": 20.07,
+   "rms": 0.03161313561502536,
+   "spitze": 0.10391788184642792,
+   "zustand": "running"
+  },
+  {
+   "t": 20.19,
+   "rms": 0.02650394301991284,
+   "spitze": 0.08906471729278564,
+   "zustand": "running"
+  },
+  {
+   "t": 20.32,
+   "rms": 0.023624501322422463,
+   "spitze": 0.09640231728553772,
+   "zustand": "running"
+  },
+  {
+   "t": 20.44,
+   "rms": 0.023407805412126146,
+   "spitze": 0.0677991509437561,
+   "zustand": "running"
+  },
+  {
+   "t": 20.57,
+   "rms": 0.023463593330843774,
+   "spitze": 0.07723411917686462,
+   "zustand": "running"
+  },
+  {
+   "t": 20.7,
+   "rms": 0.01808377001808282,
+   "spitze": 0.0681878849864006,
+   "zustand": "running"
+  },
+  {
+   "t": 20.82,
+   "rms": 0.023398947075368326,
+   "spitze": 0.0775802731513977,
+   "zustand": "running"
+  },
+  {
+   "t": 20.95,
+   "rms": 0.05556081990467368,
+   "spitze": 0.19571787118911743,
+   "zustand": "running"
+  },
+  {
+   "t": 21.23,
+   "rms": 0.08441837585385867,
+   "spitze": 0.2079041451215744,
+   "zustand": "running"
+  },
+  {
+   "t": 21.36,
+   "rms": 0.12227004048988648,
+   "spitze": 0.30679577589035034,
+   "zustand": "running"
+  },
+  {
+   "t": 21.48,
+   "rms": 0.07539899517932518,
+   "spitze": 0.3252858817577362,
+   "zustand": "running"
+  },
+  {
+   "t": 21.62,
+   "rms": 0.09007855826663222,
+   "spitze": 0.2852000594139099,
+   "zustand": "running"
+  },
+  {
+   "t": 21.75,
+   "rms": 0.10420386555554478,
+   "spitze": 0.28152310848236084,
+   "zustand": "running"
+  },
+  {
+   "t": 21.87,
+   "rms": 0.0850131402186275,
+   "spitze": 0.2533438801765442,
+   "zustand": "running"
+  },
+  {
+   "t": 21.99,
+   "rms": 0.05982662613960898,
+   "spitze": 0.20203137397766113,
+   "zustand": "running"
+  },
+  {
+   "t": 22.12,
+   "rms": 0.07794541850756916,
+   "spitze": 0.2655538022518158,
+   "zustand": "running"
+  },
+  {
+   "t": 22.24,
+   "rms": 0.09097809297722166,
+   "spitze": 0.25969401001930237,
+   "zustand": "running"
+  },
+  {
+   "t": 22.36,
+   "rms": 0.09611002567089316,
+   "spitze": 0.27895185351371765,
+   "zustand": "running"
+  },
+  {
+   "t": 22.49,
+   "rms": 0.07853768031249797,
+   "spitze": 0.25620973110198975,
+   "zustand": "running"
+  },
+  {
+   "t": 22.79,
+   "rms": 0.11985013850730278,
+   "spitze": 0.34456366300582886,
+   "zustand": "running"
+  },
+  {
+   "t": 22.91,
+   "rms": 0.12367458718369229,
+   "spitze": 0.3431377410888672,
+   "zustand": "running"
+  },
+  {
+   "t": 23.04,
+   "rms": 0.0799685339524807,
+   "spitze": 0.23005646467208862,
+   "zustand": "running"
+  },
+  {
+   "t": 23.16,
+   "rms": 0.06756742899340601,
+   "spitze": 0.21313828229904175,
+   "zustand": "running"
+  },
+  {
+   "t": 23.29,
+   "rms": 0.0997798739780182,
+   "spitze": 0.24484121799468994,
+   "zustand": "running"
+  },
+  {
+   "t": 23.41,
+   "rms": 0.082185384136114,
+   "spitze": 0.2716054320335388,
+   "zustand": "running"
+  },
+  {
+   "t": 23.54,
+   "rms": 0.06550272305062346,
+   "spitze": 0.19053833186626434,
+   "zustand": "running"
+  },
+  {
+   "t": 23.66,
+   "rms": 0.05953834459057299,
+   "spitze": 0.19331949949264526,
+   "zustand": "running"
+  },
+  {
+   "t": 23.79,
+   "rms": 0.09707125148226442,
+   "spitze": 0.21389621496200562,
+   "zustand": "running"
+  },
+  {
+   "t": 23.91,
+   "rms": 0.0723906489525841,
+   "spitze": 0.22691655158996582,
+   "zustand": "running"
+  },
+  {
+   "t": 24.95,
+   "rms": 0.016462023762179347,
+   "spitze": 0.04908238351345062,
+   "zustand": "running"
+  },
+  {
+   "t": 25.07,
+   "rms": 0.014866943443981552,
+   "spitze": 0.06378239393234253,
+   "zustand": "running"
+  },
+  {
+   "t": 25.19,
+   "rms": 0.020730469712207975,
+   "spitze": 0.06570617854595184,
+   "zustand": "running"
+  },
+  {
+   "t": 25.32,
+   "rms": 0.017711633042894585,
+   "spitze": 0.058524616062641144,
+   "zustand": "running"
+  },
+  {
+   "t": 25.45,
+   "rms": 0.01778807258007748,
+   "spitze": 0.07329876720905304,
+   "zustand": "running"
+  },
+  {
+   "t": 26.47,
+   "rms": 0.014679907044185507,
+   "spitze": 0.04040685296058655,
+   "zustand": "running"
+  },
+  {
+   "t": 26.59,
+   "rms": 0.017389964213871942,
+   "spitze": 0.05551637336611748,
+   "zustand": "running"
+  },
+  {
+   "t": 26.72,
+   "rms": 0.02270598263880147,
+   "spitze": 0.08142174035310745,
+   "zustand": "running"
+  },
+  {
+   "t": 26.85,
+   "rms": 0.02575180143961823,
+   "spitze": 0.0877402275800705,
+   "zustand": "running"
+  },
+  {
+   "t": 26.97,
+   "rms": 0.022849369246850732,
+   "spitze": 0.08215223997831345,
+   "zustand": "running"
+  },
+  {
+   "t": 27.09,
+   "rms": 0.0241440815114682,
+   "spitze": 0.0820128321647644,
+   "zustand": "running"
+  },
+  {
+   "t": 27.22,
+   "rms": 0.02167993476508237,
+   "spitze": 0.08245757222175598,
+   "zustand": "running"
+  },
+  {
+   "t": 27.34,
+   "rms": 0.016994890346132087,
+   "spitze": 0.05722305551171303,
+   "zustand": "running"
+  },
+  {
+   "t": 27.46,
+   "rms": 0.01622080696655812,
+   "spitze": 0.05440398305654526,
+   "zustand": "running"
+  },
+  {
+   "t": 27.71,
+   "rms": 0.05650624914840664,
+   "spitze": 0.1658405065536499,
+   "zustand": "running"
+  },
+  {
+   "t": 27.83,
+   "rms": 0.09298243532731922,
+   "spitze": 0.21525874733924866,
+   "zustand": "running"
+  },
+  {
+   "t": 27.96,
+   "rms": 0.09086574309408837,
+   "spitze": 0.27406373620033264,
+   "zustand": "running"
+  },
+  {
+   "t": 28.08,
+   "rms": 0.09025357853513537,
+   "spitze": 0.23007702827453613,
+   "zustand": "running"
+  },
+  {
+   "t": 28.2,
+   "rms": 0.09658407636494337,
+   "spitze": 0.2796397805213928,
+   "zustand": "running"
+  },
+  {
+   "t": 28.33,
+   "rms": 0.10077244900026007,
+   "spitze": 0.27994924783706665,
+   "zustand": "running"
+  },
+  {
+   "t": 28.46,
+   "rms": 0.08954481588534528,
+   "spitze": 0.30113065242767334,
+   "zustand": "running"
+  },
+  {
+   "t": 28.58,
+   "rms": 0.08658225043270419,
+   "spitze": 0.2780611515045166,
+   "zustand": "running"
+  },
+  {
+   "t": 28.7,
+   "rms": 0.053364770427518825,
+   "spitze": 0.16271616518497467,
+   "zustand": "running"
+  },
+  {
+   "t": 28.83,
+   "rms": 0.1025779921438489,
+   "spitze": 0.2642975449562073,
+   "zustand": "running"
+  },
+  {
+   "t": 28.95,
+   "rms": 0.07461708720621632,
+   "spitze": 0.26585692167282104,
+   "zustand": "running"
+  },
+  {
+   "t": 29.18,
+   "rms": 0.12022244433278051,
+   "spitze": 0.3105313777923584,
+   "zustand": "running"
+  },
+  {
+   "t": 29.3,
+   "rms": 0.12277160277173955,
+   "spitze": 0.3442012071609497,
+   "zustand": "running"
+  },
+  {
+   "t": 29.43,
+   "rms": 0.07885509546142579,
+   "spitze": 0.24832585453987122,
+   "zustand": "running"
+  },
+  {
+   "t": 29.55,
+   "rms": 0.09116399028576846,
+   "spitze": 0.23089036345481873,
+   "zustand": "running"
+  },
+  {
+   "t": 29.68,
+   "rms": 0.11152548126280624,
+   "spitze": 0.3360733389854431,
+   "zustand": "running"
+  },
+  {
+   "t": 29.8,
+   "rms": 0.0823969839892149,
+   "spitze": 0.2595539689064026,
+   "zustand": "running"
+  },
+  {
+   "t": 29.94,
+   "rms": 0.0639227583015881,
+   "spitze": 0.20784662663936615,
+   "zustand": "running"
+  }
+ ],
+ "fehler": [],
+ "abtastwerte": 1318912,
+ "rate": 44100,
+ "sekundenGemessen": 29.90730158730159,
+ "spitze": 0.8187141418457031,
+ "rms": 0.1689941686448797,
+ "zustand": "running",
+ "mitschnitt": [
+  {
+   "t": 0.94,
+   "name": "stadt:reiter",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 2.12,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.17,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.21,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.24,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.28,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.32,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.36,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.4,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.47,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 2.5,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 3.55,
+   "name": "fuhre:abfahrt:waggon",
+   "opt": {
+    "ort": "tor"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 3.55,
+   "name": "gegner:bauen",
+   "opt": {
+    "ort": "konkurrenz"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 3.56,
+   "name": "name:aufgeld",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 6.08,
+   "name": "sud:anstich",
+   "opt": {
+    "ort": "keller"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 7.59,
+   "name": "uhr:woche",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 7.59,
+   "name": "gegner:aufstocken",
+   "opt": {
+    "ort": "marktplatz"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 9.7,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 9.75,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 9.79,
+   "name": "fuhre:fass-rollen",
+   "opt": {
+    "ort": "fasslager",
+    "laut": 0.5
+   },
+   "epoche": 3
+  },
+  {
+   "t": 11.14,
+   "name": "fuhre:abfahrt:waggon",
+   "opt": {
+    "ort": "tor"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 11.14,
+   "name": "sud:anstellen",
+   "opt": {
+    "ort": "sudhaus"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 11.14,
+   "name": "sud:pfanne",
+   "opt": {
+    "ort": "kesselstelle"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 11.14,
+   "name": "gegner:unglueck",
+   "opt": {
+    "ort": "konkurrenz"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 11.15,
+   "name": "name:aufgeld",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 13.57,
+   "name": "uhr:woche",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 13.57,
+   "name": "sud:anstellen",
+   "opt": {
+    "ort": "sudhaus"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 13.57,
+   "name": "sud:pfanne",
+   "opt": {
+    "ort": "kesselstelle"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 15.1,
+   "name": "uhr:woche",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 15.11,
+   "name": "sommer:keller-leer",
+   "opt": {
+    "ort": "keller",
+    "art": "schleife"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 15.13,
+   "name": "preis:michaeli",
+   "opt": {
+    "art": "geraeusch"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 15.13,
+   "name": "preis:muenzen",
+   "opt": {
+    "art": "geraeusch"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 15.13,
+   "name": "sud:ausschlagen",
+   "opt": {
+    "ort": "keller"
+   },
+   "epoche": 3
+  },
+  {
+   "t": 15.13,
+   "name": "name:urteil-schlecht",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 21.14,
+   "name": "tafel:kreide",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 21.14,
+   "name": "uhr:woche",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 22.65,
+   "name": "uhr:woche",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 27.64,
+   "name": "uhr:woche",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 29.1,
+   "name": "uhr:woche",
+   "opt": {},
+   "epoche": 3
+  },
+  {
+   "t": 29.1,
+   "name": "name:urteil-schlecht",
+   "opt": {},
+   "epoche": 3
+  }
+ ],
+ "geraten": {},
+ "zeit": {
+  "jahr": 1885,
+  "woche": 5,
+  "epoche": 3,
+  "ende": false,
+  "amtszeit": {
+   "nr": 2,
+   "name": "Therese Bruckner",
+   "vorname": "Therese",
+   "seit": 1884,
+   "bis": 1911,
+   "eigenschaft": "wagemutig",
+   "eigenschaftName": "wagemutig",
+   "sagt": "Baut, bevor gerechnet ist."
+  }
+ },
+ "lage": 0,
+ "lageTexte": []
+}
