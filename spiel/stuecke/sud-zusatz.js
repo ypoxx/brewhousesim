@@ -216,7 +216,10 @@
     }
     blatt.appendChild(B.el('div', 'sud-fussnote',
       'Zuletzt gefahren: ' + (wf.join(' · ') || '—')
-      + ' · im Gärkeller stehen noch ' + Z.bottiche.length + '.'));
+      + ' · im Gärkeller stehen noch ' + Z.bottiche.length + '.'
+      + (Z.gestuftGesamt
+          ? ' ' + Z.gestuftGesamt + ' Mal hat die Pfanne nicht getragen, was bestellt war.'
+          : ' Die Pfanne hat getragen, was bestellt war.')));
 
     Z.buch.slice(-8).reverse().forEach(function (x) {
       var z = B.el('div', 'sud-buchzeile');

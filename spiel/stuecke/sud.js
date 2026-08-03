@@ -93,6 +93,7 @@
     brettZu: true,        /* liegt das Brett als Reiter? (Vorgabestand: ja)   */
     zettelStelle: 0,      /* welcher Platz am Sudhaus gerade traegt           */
     gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
+    gestuftGesamt: 0,     /* ... und wie oft ueberhaupt (wird nie geleert)    */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
     jahrSude: 0, jahrFass: 0, jahrFehl: 0, jahrAnzeige: 0,
     jahrLegte: 0,         /* wie oft das Haus dieses Braujahr angestellt hat  */
@@ -590,7 +591,7 @@
        sonst stehen im Sudbuch vier Zeilen fuer einen Sud. */
     if (ziel && !b.gemeldetStufe) {
       b.gemeldetStufe = true;
-      Z.gestuft++;
+      Z.gestuft++; Z.gestuftGesamt++;
       buch('Bottich ' + b.nr + ': ' + b.sorte + ' schlägt als ' + ziel.name + ' aus — '
         + 'die Pfanne trägt es nicht');
       if (!Z.gemeldet.gestuft) {
@@ -1479,9 +1480,20 @@
 
   /* ----------------------------------------------------------------------
      DER KESSELZETTEL — klein, ortsgebunden, immer im Bild.
-     Er bleibt unter der Ortsmarken-Schwelle der STADT (2,4 % der Buehne) und
+     Er bleibt unter der Ortsmarken-Schwelle der STADT (2,4 % der Buehne;
+     nachgemessen 1,88–2,14 % bei 1440x900, 1920x1000 und 2752x1536) und
      meldet sich mit data-frei von der Kartenschicht ab (ZUSTAENDIGKEIT §10).
-     Er traegt die zwei Zuege, die IMMER gehen — auch bei leerer Kasse.
+
+     Er ist das GANZE Stueck im Vorgabestand — das Brett liegt zugeklappt,
+     und ein zugeklapptes Brett schaltet seine Knoepfe ab. Was hier nicht
+     steht, steht fuer einen sorgfaeltig spielenden Menschen nirgends. Also
+     traegt er seit Welle 4 vier Zuege statt drei, in zwei Zeilen:
+
+       1  DIE HEFE, zwei Wege nebeneinander, jede Woche, Preis in Bier
+       2  DAS VERFAHREN, der naechste kostenlose und der naechste bezahlte
+          Wechsel, jeder mit dem Bier daneben, das dabei herauskommt
+          — oder, solange eine Charge gesperrt steht (1970), deren beide
+          Antworten; oder, wenn alles entschieden ist, der Gaerraum.
      ---------------------------------------------------------------------- */
   function zeichneZettel() {
     var fach = B.ebene('marken', 'sud');

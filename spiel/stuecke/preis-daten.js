@@ -496,8 +496,21 @@ var PREIS_DATEN = {
            Nach sechs Michaeli stand auch hier „0 Festlegungen". 0,15 x 2.800
            = 420 fl — der Schwur vor dem Rat kostet die Gebuehr und das
            teurere Malz des ersten Jahres, nicht ein ganzes Vermoegen. Die
-           drei grossen (5.320 / 6.720 / 7.840 fl) bleiben unberuehrt. */
-        { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 0.15,
+           drei grossen (5.320 / 6.720 / 7.840 fl) bleiben unberuehrt.
+
+           NACHGEZOGEN IN WELLE 4, und zwar gemessen. Mit dem Anschlag auf das
+           bare Vermoegen (siehe `liegeSatz`) haelt die Lade dieser Epoche
+           ueber vierzehn Jahre 308 bis 1.695 fl statt 310 bis 5.217. Der
+           Automat nimmt eine Festlegung erst, wenn sie hoechstens 45 im
+           Hundert der Michaelilade kostet — bei 0,15 x 2.800 = 420 fl (mit
+           der Teuerung bis 525) waeren dafuer 1.167 fl noetig, und die
+           Michaelilade steht in der Spitze bei 957. Gemessen: `Festlegung 0x`
+           ueber die ganze Partie, wo vorher 1x stand. Eine Kennzahl im Band,
+           die die unwiderrufliche Wahl unerreichbar macht, ist ein Tausch und
+           kein Fortschritt — die zweite Messlatte zaehlt beides.
+           0,10 x 2.800 = 280 fl: die Gebuehr fuer den Schwur und das teurere
+           Malz des ersten Jahres, erreichbar aus einer Lade von 622 fl. */
+        { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 0.10,
           was: 'Gerste, Hopfen, Wasser — und der Schwur darauf vor dem Rat.',
           regel: 'Kein billiges Beibier mehr. Jedes Fass fängt mehr, und die Zunft steht hinter dem Haus.',
           wirkung: { preis: 0.16, ansehen: 10 } },
