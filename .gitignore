@@ -55,3 +55,12 @@ werkbank/schuss/*.jpg
 werkbank/schuss/*.jpeg
 werkbank/schuss/*.webp
 werkbank/schuss/*.gif
+
+# Und dasselbe fuer unkomprimierten Ton. DER KLANG hatte nach keiner halben
+# Stunde 12 .wav-Blobs mit 20,2 MB in der Historie — je Durchgang eine neue
+# Fassung, jede 1,9 MB. Die .webm daneben traegt dieselbe Aufnahme mit 236 KB,
+# also einem Achtel, und ist das, was der blinde Kritiker abspielt. Die .wav
+# bleiben auf der Platte liegen und sind aus der .webm jederzeit wieder
+# herzustellen; sie wandern nur nicht mehr mit.
+werkbank/schuss/**/*.wav
+werkbank/schuss/*.wav
