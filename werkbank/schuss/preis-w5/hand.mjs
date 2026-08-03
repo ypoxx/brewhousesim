@@ -143,13 +143,23 @@ async function schirm() {
       }
       zuege.push({ zug: el.getAttribute('data-zug'),
         preis: el.getAttribute('data-preis') ? +el.getAttribute('data-preis') : null,
-        aus: !!el.disabled, hit });
+        aus: !!el.disabled, sollAus: el.getAttribute('data-soll-aus'), hit });
     });
     const plan = [...document.querySelectorAll('.fu-planzahl')].map(e => +e.textContent || 0);
     const n = B.welt.naechsterZug || null;
     let d = null;
     try { d = B.welt.zugDeckung(); } catch (e) { d = null; }
+    /* AUFTRAG 1 — die Chronik des Hauses ausgezaehlt, nach Art. */
+    const ch = B.welt.chronik || [];
+    const arten = {};
+    ch.forEach(c => { const a = (c && c.art) || '?'; arten[a] = (arten[a] || 0) + 1; });
+    const festZeilen = ch.filter(c => c && c.art === 'festlegung')
+      .map(c => ({ jahr: c.jahr, woche: c.woche, text: String(c.text || '').slice(0, 90) }));
+    /* Was der Knopf SELBST behauptet — abgelesen, nicht nachgerechnet. */
+    const kn = document.querySelector('[data-zug="preis:chronik-auf"]');
     return {
+      chronikN: ch.length, arten, festZeilen,
+      knopfText: kn ? (kn.innerText || '').trim().replace(/\s+/g, ' ') : null,
       jahr: B.welt.zeit.jahr, woche: B.welt.zeit.woche, ende: !!B.welt.zeit.ende,
       kasse: B.welt.haus.kasse, rohstoff: B.welt.haus.rohstoff,
       faesser: B.welt.vorrat.faesser.length, plaetze: B.welt.vorrat.plaetze,
@@ -174,7 +184,7 @@ const alle = (s, muster) => s.zuege.filter(z => muster.test(z.zug) && !z.aus);
 
 /* ------------------------------------------------------- DIE HAND, WOCHE FUER WOCHE */
 
-const reihe = [], jahre = [];
+const reihe = [], jahre = [], festSicht = [];
 let abgebrochen = null, zielGesetzt = 0, festGesetzt = 0;
 
 for (let i = 0; i < WOCHEN; i++) {
@@ -182,7 +192,8 @@ for (let i = 0; i < WOCHEN; i++) {
   if (s.ende) { abgebrochen = { grund: 'Haus zu', i, stand: s.jahr + '/' + s.woche }; break; }
 
   /* Am ANFANG der Woche abgelesen, vor jedem eigenen Handgriff. */
-  reihe.push({ n: i, jahr: s.jahr, woche: s.woche, kasse: s.kasse, rohstoff: s.rohstoff,
+  reihe.push({ n: i, chronikN: s.chronikN, arten: s.arten, knopfText: s.knopfText,
+    jahr: s.jahr, woche: s.woche, kasse: s.kasse, rohstoff: s.rohstoff,
     faesser: s.faesser, plaetze: s.plaetze, amtszeit: s.amtszeit,
     deckung: s.deckung, nennerPreis: s.nennerPreis, nennerArt: s.nennerArt,
     nennerZug: s.nennerZug, nennerWas: s.nennerWas });
@@ -196,6 +207,15 @@ for (let i = 0; i < WOCHEN; i++) {
     const griff = await lage('preis:tafel');
     if (griff && !/schließen/.test(griff.text || '')) await klick('preis:tafel', 220);
     let m = await schirm();
+
+    /* AUFTRAG 1 — bevor geklickt wird, wird PROTOKOLLIERT, was ueberhaupt
+       dasteht: jeder Siegelknopf mit disabled, data-soll-aus, Trefferlage und
+       Preis. Ohne das laesst sich hinterher nicht sagen, ob die Festlegung
+       ausblieb, weil das Spiel nein sagte, weil sie zugedeckt war, oder weil
+       die Hand sie sich nicht leisten wollte. */
+    const festLage = m.zuege.filter(z => /^preis:festlege:/.test(z.zug))
+      .map(z => ({ zug: z.zug, aus: z.aus, sollAus: z.sollAus, hit: z.hit, preis: z.preis }));
+    festSicht.push({ jahr: s.jahr, kasse: m.kasse, amtszeit: m.amtszeit, lage: festLage });
 
     const feste = alle(m, /^preis:festlege:/).filter(z => z.preis && Math.abs(z.preis) <= m.kasse * 0.45);
     if (feste.length) {
@@ -286,13 +306,20 @@ fs.writeFileSync(ZIEL, JSON.stringify({
   leiterRoh: roh,
   schluss: { jahr: schluss.jahr, woche: schluss.woche, kasse: schluss.kasse, lage: schluss.lage,
              amtszeit: schluss.amtszeit },
+  chronik: { n: schluss.chronikN, arten: schluss.arten, festZeilen: schluss.festZeilen },
+  knopfText: schluss.knopfText,
+  festSicht,
   jahre, reihe
 }, null, 1));
 
 const rk = (roh || []).filter(r => r && r.zugVerh).map(r => r.zugVerh);
+const fz = schluss.festZeilen || [];
 console.log(`E${ep}@${HAFEN}: ${reihe.length} Wochen (${reihe[0] && reihe[0].jahr}–${schluss.jahr}), `
   + `Kasse ${Math.min(...kassen)}–${Math.max(...kassen)}, `
   + `KENNZAHL roh ${rk.length ? Math.min(...rk).toFixed(2) + '–' + Math.max(...rk).toFixed(2) + '×' : '—'} `
   + `ueber ${rk.length} Jahre, Ziel ${zielGesetzt}× / Festlegung ${festGesetzt}×, `
   + `Amtszeit bis ${schluss.amtszeit}, Seitenfehler ${fehler.length}`, abgebrochen || '');
+console.log(`   CHRONIK ${schluss.chronikN} Zeilen ${JSON.stringify(schluss.arten)}`);
+console.log(`   art='festlegung': ${fz.length}` + (fz.length ? ' — ' + fz.map(z => z.jahr + '/' + z.woche).join(', ') : ''));
+console.log(`   KNOPF: ${schluss.knopfText}`);
 await browser.close();
