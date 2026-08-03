@@ -47,10 +47,8 @@ GERAEUSCH = {
     # "FALSCH: moderne Hartplastik- oder Polyurethanrollen (Rollkoffer)" — das
     #  war die Ochsenfuhre von 1350, der Hauptvorgang der Epoche.
     "abfahrt1": (
-        "A heavy ox cart leaving a cobbled courtyard in the year 1350: two oxen with "
-        "slow cloven hooves on stone, a solid wooden wheel creaking on a wooden axle, "
-        "a wooden yoke knocking, a harness chain, the cart rumbling away out through "
-        "a gate. No voices, no music, no engines, no rubber or plastic wheels.", 7),
+        "Oxen hooves walking away on cobblestones while a wooden cart with creaking "
+        "wooden wheels rumbles out through a stone gateway.", 7),
 
     # "Klänge: rotierendes metallisches Geräusch (wie eine sich drehende Münze)" —
     #  gemeint war ein Pferdefuhrwerk.
@@ -62,50 +60,46 @@ GERAEUSCH = {
 
     # "FALSCH: mechanische Fahrradklingel" — und das ist der HAEUFIGSTE Ton des
     #  ganzen Spiels: der WEITER-Knopf, in 1350.
+    # Gewaehlt im dritten Anlauf. Der erste Versuch klang dem Ohr WIEDER nach
+    #  Fahrradklingel; lange Verbotslisten helfen der Gegenstelle nicht.
     "woche1": (
-        "A medieval night watchman's wooden clapper rattle struck three times: dry "
-        "hard beechwood knocking on hardwood, close and short, then silence. No bell, "
-        "no bicycle bell, no metal ringing, no voices, no music, no electronics.", 3),
+        "A wooden watchman's rattle: two hard beech boards clapped together three "
+        "times in a stone courtyard. Dry knocking wood, no ringing.", 3),
 
     # "FALSCH: klingt stark nach moderner Plastikfolie oder Zellophan" — dabei
     #  ist es der Ton, den DIE FUHRE sechsmal ruft, wenn ein Vertrag gilt.
+    # Drei Anlaeufe: "Zellophan", dann "Gummispielzeug", dann "Ratsche". Erst
+    #  der Holzstempel kam als "zeitlos, nichts falsch" zurueck.
     "siegel": (
-        "Sealing a charter: hot sealing wax dripping onto parchment, a heavy brass "
-        "seal pressed into the wax with one short squeeze and pulled away, stiff "
-        "parchment shifted on an oak table. No plastic, no cellophane, no crinkling "
-        "foil, no voices, no music.", 5),
+        "A wooden stamp struck once onto a sheet of parchment on an oak table, one "
+        "dull thud, then the parchment lifted and rustled.", 4),
 
     # "FALSCH: mechanisches Gerät / Schalter (00:01)", 20. Jahrhundert.
     "kerbe": (
-        "Cutting a tally notch: a knife blade chopping three short notches into a dry "
-        "oak tally stick, hardwood fibres splitting, the stick knocked once on a "
-        "wooden table. No clicks, no switches, no ratchets, no voices, no music.", 3),
+        "A knife chopping three deep notches into a dry oak stick. Wood splitting, "
+        "chips falling, close.", 3),
 
     # "FALSCH: elektrisches Gerät (Elektromotor), ab 00:00" — im Hofband von
     #  1884, also unter allem, was in dieser Epoche geschieht.
+    # Der erste Anlauf kam als Kuechengeraeusch zurueck ("heisses Fett, Messer
+    #  auf dem Brett"). Kurz und auf EINE Sache gerichtet traf es.
     "hof3": (
-        "Continuous background ambience of a brewery yard in the year 1884: a "
-        "stationary steam engine chuffing slowly behind a brick wall, a wide leather "
-        "flat belt slapping on a pulley, coal shovelled, iron-shod hooves and an "
-        "iron-rimmed dray wagon on cobbles, a cooper hammering hoops further off, "
-        "steam hissing from a valve. Even, unchanging, loopable. No electric motor "
-        "hum, no cars, no voices, no music.", 22),
+        "A stationary steam engine working behind a wall: slow rhythmic chuffing and "
+        "hissing steam, a big flywheel turning, a leather drive belt slapping, iron "
+        "clanking. Continuous factory yard ambience.", 22),
 
     # Nicht anachronistisch, aber der leiseste Ton (RMS 0,038) an einer der
     # lautesten Stellen: ein volles Fass, das ueber den Hof rollt.
     "fassholz": (
-        "A heavy full oak beer cask rolled on its bilge over cobblestones and then "
-        "over wooden planks: oak staves rumbling low and loud, iron hoops ringing on "
-        "stone, the cask thudding against a wooden chock and stopping. No voices, no "
-        "music, no engines.", 5),
+        "A large full oak barrel rolling slowly over cobblestones, deep wooden rumble, "
+        "iron hoops ringing, then thudding to a stop.", 5),
 
     # "Klänge: Boing-Geräusch (vibrierende Feder oder Maultrommel)" — gemeint
     #  war ein Stahlfass in 1970.
     "fassstahl": (
-        "A stainless steel beer keg in a 1970s brewery yard: the keg set down hard on "
-        "concrete with a hollow metallic ring, rolled on its rim over concrete, then "
-        "rumbling up a steel ramp and knocking against another keg. No music, no "
-        "springs, no boing, no jew's harp, no voices.", 5),
+        "An empty stainless steel beer keg dropped onto a concrete floor and rolled on "
+        "its rim, hollow metallic booming and scraping, then knocking against another "
+        "keg.", 5),
 
     # "Klänge: Schieben oder Kratzen eines Gegenstandes (z.B. eines Stuhls)" —
     #  gemeint war der Handschlag, mit dem ein Vertrag zustande kommt.
@@ -119,28 +113,24 @@ GERAEUSCH = {
     # Band von allen). Das Ohr hat daraufhin ueber die ganze Epoche gesagt:
     # "Jemand fegt, jemand saegt, Gaense schnattern" — ein Bauernhof, kein
     # Brauhaus. Der Vorgang ist die halbe Latte; also muss das Band brauen.
+    # Der erste Anlauf hatte bei Sekunde 16 ein "Klicken eines Kugelschreibers"
+    #  — in einem Band, das 22 Sekunden lang unter allem liegt.
     "hof1": (
-        "Continuous background ambience of a medieval brewing yard, year 1350, from "
-        "the middle of a small walled courtyard: a wood fire crackling under a wide "
-        "open copper pan, wort bubbling and steaming, a wooden paddle stirring mash "
-        "in a tub, a bucket drawn dripping from a well, wooden pattens on cobbles, an "
-        "oak cask rolled slowly behind, hens, one distant church bell. Even, quiet, "
-        "dry, loopable. No engines, no geese, no voices, no music.", 22),
+        "Ambience inside a medieval brewhouse yard: a steady wood fire crackling under "
+        "a copper pan, wort bubbling slowly, a wooden paddle stirring, water dripping "
+        "into a bucket. Calm, continuous.", 22),
 
     # ------------------------------------------------------------------------
     # NEU — Rufe, die es seit Welle 2 gibt und die bisher im Ersatzkasten
     # landeten: DER SUD, DER NAME und DAS ERBE klangen alle nach Papier.
     # ------------------------------------------------------------------------
-    "maische": (
-        "Mashing in a brewery: a long wooden mash paddle stirring thick hot grain "
-        "mash in a large wooden tub, slow heavy sloshing and dragging, steam, grain "
-        "husks, a wooden scoop knocked twice on the rim of the tub. No voices, no "
-        "music.", 5),
+    # KEINE Maische-Probe. Zwei Anlaeufe kamen als "Espressomaschine" und als
+    # "Holzratsche" zurueck; das Anstellen klingt jetzt ueber sud1..sud4, und
+    # das ist ohnehin naeher am Spiel: die Pfanne ist der Sud.
 
     "anstich": (
-        "Tapping a beer cask: a wooden tap driven into the bung of a full oak cask "
-        "with three blows of a wooden mallet, the last blow dull as it seats, then "
-        "beer gushing and foaming into an earthenware jug. No voices, no music.", 5),
+        "A wooden tap hammered into an oak barrel with three mallet blows, then beer "
+        "pouring and foaming into a clay jug.", 5),
 
     "flaschen": (
         "A bottling hall: glass beer bottles clinking shoulder to shoulder along a "
@@ -162,14 +152,17 @@ GERAEUSCH = {
 MUSIK = {
     # Das Ohr datiert das alte bett2 auf "18. Jahrhundert, Spätbarock/Galant,
     # Menuett in G-Dur" — zweihundert Jahre zu spaet fuer 1600.
-    "bett2": ("Instrumental only. Absolutely no voices, no singing, no choir. "
-              "Music of about 1600, a broken consort playing in the panelled room of a "
-              "burgher's house: lute, treble recorder, tenor recorder, bass viol, a "
-              "small hand-struck tabor. A slow pavane, plain and modal, with a "
-              "measured walking tread. Renaissance, not baroque: no harpsichord solo, "
-              "no minuet, no galant style, no orchestra, no functional dominant "
-              "cadences, no virtuoso runs. Quiet background music, loopable, no "
-              "ending, no crescendo.", 40),
+    # Zweiter Anlauf. Der erste kam als Blockfloete zurueck — also genau das
+    # Instrument, das bett1 (1350) traegt. Zwei Epochen mit demselben
+    # Leitinstrument sind fuer ein blindes Ohr eine Epoche. Jetzt gezupft.
+    "bett2": ("Instrumental only, no voices, no singing. Renaissance consort music of "
+              "about 1600 for a burgher's parlour. A PLUCKED LUTE carries the melody "
+              "with clear plucked strings; a bass viol bows a slow ground bass "
+              "beneath; a small tabor drum marks a steady pavane tread; a virginal "
+              "answers with short plucked figures. Full four-part harmony, courtly "
+              "and measured. Do NOT use a recorder or any flute as the lead. No "
+              "orchestra, no piano, no baroque ornaments. Quiet, loopable, no "
+              "ending.", 40),
 }
 
 GRENZE = 450

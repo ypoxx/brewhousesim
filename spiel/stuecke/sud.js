@@ -130,6 +130,40 @@
 
   function bezahlt(a, o) { return !o.preis || Z.fest[a.schluessel + ':' + o.k] === true; }
 
+  /* ----------------------------------------------------------------------
+     DAS SIEGEL — und warum es bis Welle 4 keins war.
+
+     Gemessen am Stand vor dieser Runde (werkbank/schuss/sud-w4/siegel.mjs,
+     alle vier Epochen, sechs Festlegungen): JEDE bezahlte, mit dem Wort
+     "unwiderruflich" beschriftete Festlegung liess sich in derselben Sekunde
+     und sechs Wochen spaeter gratis zurueckstellen, beliebig oft. Der
+     Kritiker der Runde 1 hatte drei von vier Epochen gemeldet; es waren
+     vier von vier — in 1884 haelt nur `sperrt: ['natureis']`, und daneben
+     steht `warm` offen, und die zweite Achse (Reinzucht) haelt gar nichts.
+
+     `Z.fest` merkte sich nur, dass BEZAHLT wurde. Bezahlt heisst aber nicht
+     festgelegt: `bezahlt()` machte die teure Option danach zur gratis
+     umschaltbaren, und die billige Vorgabe stand daneben und war es ohnehin.
+     Ein Siegel, das man abziehen kann, ist ein Aufkleber.
+
+     DIE RATSCHE. Was besiegelt ist, gilt — die Achse laesst von da an nur
+     noch AUFWAERTS: eine noch teurere Festlegung derselben Achse (1970:
+     Labor, dann Prozessrechner) bleibt kaufbar, alles darunter ist weg.
+     Nach unten geht nichts mehr, nie, in keiner Epoche. Damit ist die Wahl
+     das, was auf dem Schild steht, und zwar bevor man sie trifft.
+     ---------------------------------------------------------------------- */
+
+  /* Die teuerste bezahlte Festlegung dieser Achse — oder null. */
+  function gesiegelt(a) {
+    var t = null;
+    for (var i = 0; i < a.optionen.length; i++) {
+      var x = a.optionen[i];
+      if (!x.fest || !x.preis || !bezahlt(a, x)) continue;
+      if (!t || x.preis > t.preis) t = x;
+    }
+    return t;
+  }
+
   /* Eine Option ist gesperrt, wenn eine bezahlte Festlegung sie verdraengt
      hat — die Kaeltemaschine baut den Eiskeller um, und der Eiskeller kommt
      nicht wieder. */
@@ -139,6 +173,10 @@
       if (x === o || !x.sperrt || !bezahlt(a, x)) continue;
       if (x.sperrt.indexOf(o.k) >= 0) return true;
     }
+    /* Das Siegel: alles ausser dem Besiegelten selbst und dem, was teurer
+       und ebenfalls unwiderruflich ist, ist nicht mehr zu haben. */
+    var s = gesiegelt(a);
+    if (s && o !== s && !(o.fest && o.preis > s.preis)) return true;
     return false;
   }
 
@@ -989,6 +1027,19 @@
     kasten.appendChild(kopf);
     kasten.appendChild(zeile('sud-achssatz', a.satz));
 
+    /* Das Siegel steht ueber der Achse, nicht nur an der Karte: wer hier
+       liest, weiss vor dem Suchen, dass diese Frage entschieden ist. */
+    var sieg = gesiegelt(a);
+    if (sieg) {
+      var hoeher = a.optionen.some(function (x) {
+        return x.fest && x.preis > sieg.preis && !bezahlt(a, x);
+      });
+      kasten.appendChild(zeile('sud-siegelzeile',
+        (sieg.siegel || 'gesiegelt') + ': ' + sieg.name + '. '
+        + (hoeher ? 'Zurück geht es nicht — nur noch weiter hinauf.'
+                  : 'Diese Frage ist entschieden, für dieses Haus und diese Zeit.')));
+    }
+
     var reihe = B.el('div', 'sud-optionen');
     a.optionen.forEach(function (o) {
       var ist = gewaehlt(a) === o;
@@ -1013,7 +1064,8 @@
       karte.appendChild(k);
 
       var marke = B.el('div', 'sud-marke');
-      if (weg) marke.appendChild(B.el('span', 'sud-schild weg', 'nicht mehr zu haben'));
+      if (weg) marke.appendChild(B.el('span', 'sud-schild weg',
+        sieg && sieg !== o ? 'das Siegel liegt darauf' : 'nicht mehr zu haben'));
       else if (ist) marke.appendChild(B.el('span', 'sud-schild ist', 'läuft'));
       else if (o.fest && bezahlt(a, o)) marke.appendChild(B.el('span', 'sud-schild siegel', o.siegel || 'gesiegelt'));
       else if (o.fest) marke.appendChild(B.el('span', 'sud-schild fest', 'unwiderruflich'));
@@ -1408,19 +1460,53 @@
       e.guete.kurz + ' ' + an.text));
     z.appendChild(l);
 
-    /* Der immer bezahlbare Zug: die Hefe. Solange etwas gaert, kostet sie
-       kein Fass; sonst wird ein Fass angebrochen. Der Zettel nimmt den
-       billigeren Weg, das Brett laesst die Wahl. */
+    /* ------------------------------------------------------------------
+       DIE HEFE — die Entscheidung, die JEDE Woche ansteht.
+
+       Gemessen vor dieser Runde (werkbank/schuss/sud-w4/linie.mjs, vier
+       Epochen, je 400 Wochen, sorgfaeltig gespielt): der Zettel trug hier
+       genau EINEN Knopf. Damit war die einzige woechentlich wiederkehrende
+       Entscheidung dieses Stuecks im Vorgabestand keine — ein Knopf ist
+       keine Wahl, und das Brett mit den beiden anderen liegt zugeklappt
+       und abgeschaltet daneben.
+
+       Jetzt stehen die beiden Wege NEBENEINANDER, und sie schliessen
+       einander aus, weil die Hefe nur einmal in der Woche gezogen wird:
+
+         gaert etwas   fuehren (+8, kostet kein Bier)  |  junges Fass (+14, 1 Fass)
+         gaert nichts  junges Fass (+14, 1 Fass)       |  altes Fass (+6, 1 Fass)
+
+       Der Preis steht in BIER und nicht in Muenze — dieses Stueck nimmt
+       kein Geld aus der Kasse (WELLE-2 §1, Abgabendeckel §4). Er steht
+       deshalb im Wort auf dem Knopf.
+       ------------------------------------------------------------------ */
     var frei = anstichFrei(), lager = B.welt.vorrat.faesser.length;
     var ausBottich = Z.bottiche.length > 0;
-    z.appendChild(knopf({
-      text: ausBottich ? e.fuehren.text : e.anstich.text,
+    var einFass = B.welt.menge(1);
+    var paar = B.el('div', 'sud-zpaar');
+    paar.appendChild(knopf({
+      text: (ausBottich ? e.fuehren.text : (e.anstich.jung || 'Jüngstes Fass anbrechen'))
+          + ' · +' + (ausBottich ? (D.guete.fuehren || 8) : (D.guete.anstichJung || 14)),
       zug: 'sud:zettel-anstich',
-      klasse: 'sud-tat klein voll',
-      titel: ausBottich ? e.fuehren.titel : (e.anstich.titel + ' Kostet ' + B.welt.menge(1) + '.'),
+      klasse: 'sud-tat klein voll halb',
+      titel: ausBottich ? e.fuehren.titel : (e.anstich.titel + ' Kostet ' + einFass + '.'),
       aus: !frei || (!ausBottich && !lager),
       tu: function () { if (ausBottich) fuehreHefe(); else anstich(true); }
     }));
+    paar.appendChild(knopf({
+      text: (ausBottich ? (e.anstich.jung || 'Jüngstes Fass anbrechen')
+                        : (e.anstich.alt || 'Ältestes Fass anbrechen'))
+          + ' · +' + (ausBottich ? (D.guete.anstichJung || 14) : (D.guete.anstichAlt || 6))
+          + ' · ' + einFass,
+      zug: 'sud:zettel-hefe-fass',
+      klasse: 'sud-tat klein voll halb',
+      titel: e.anstich.titel + ' Kostet ' + einFass + ' aus dem Keller — '
+           + (ausBottich ? 'mehr als die Erntehefe hergibt, und es ist verkäufliches Bier.'
+                         : 'das älteste wäre ohnehin bald verdorben, gibt dafür nur die Hälfte.'),
+      aus: !frei || !lager,
+      tu: function () { anstich(ausBottich); }
+    }));
+    z.appendChild(paar);
 
     /* Zwei Umstellungen, die einander ausschliessen, mit ihrem Preis daneben:
        die naechste, die NICHTS kostet, und die naechste, die etwas kostet.
@@ -1437,15 +1523,27 @@
     });
     [ohne, mit].forEach(function (kand, i) {
       if (!kand) return;
-      z.appendChild(knopf({
+      var kn = knopf({
         text: kand.o.name,
         zug: 'sud:zettel-wechsel-' + (i ? 'kauf' : 'frei'),
         preis: kand.p ? -kand.p : 0,
         klasse: 'sud-tat klein voll' + (kand.o.fest ? ' siegel' : ''),
-        titel: kand.o.satz,
+        titel: kand.o.satz + (kand.o.fest ? ' UNWIDERRUFLICH: danach ist diese Frage '
+             + 'entschieden, und die Vorgabe ist nicht mehr zu haben.' : ''),
         aus: !!(kand.p && !B.welt.kann(kand.p)),
         tu: function () { waehle(kand.a, kand.o); }
-      }));
+      });
+      /* Was dabei herauskommt, steht AM KNOPF und nicht erst im Brett:
+         sonst ist die Wahl zwei Namen ohne Folge. */
+      if (kand.o.hoechst !== undefined) {
+        var zs = sorteAufStufe(kand.o.hoechst);
+        if (zs) {
+          var hoch = kand.o.hoechst >= obersteStufe();
+          kn.appendChild(B.el('span', 'sud-zrangschild' + (hoch ? ' hoch' : ' tief'),
+            (hoch ? 'trägt ' : 'nur ') + zs.name));
+        }
+      }
+      z.appendChild(kn);
     });
 
     B.orte.setze(z, 'sudhaus', { anker: 'mitte', dy: 0 });
@@ -1567,17 +1665,44 @@
      Bau oder Bindung bewegt. Gaerraum ist Bau, ein Verfahren bewegt Rohstoff
      und Haltbarkeit. Beiwerk meldet dieses Stueck nicht.
      ====================================================================== */
+  /* Steht zu diesem Schluessel ein bedienbarer Knopf im Bild? */
+  function lebt(zug) {
+    if (typeof document === 'undefined') return false;
+    var el = document.querySelector('[data-zug="' + zug + '"]');
+    return !!(el && !el.disabled);
+  }
+
   function meldeZug() {
     var bester = null;
     achsen().forEach(function (a) {
       a.optionen.forEach(function (o) {
         if (!o.preis || bezahlt(a, o) || verdraengt(a, o)) return;
-        if (!bester || o.preis < bester.preis) bester = { was: o.name, preis: o.preis };
+        if (!bester || o.preis < bester.preis) {
+          /* Das Verfahren bewegt Rohstoff, Haltbarkeit und die Sorte im
+             Fass — Lage, nicht Beiwerk. Getragen wird der Zug im
+             Vorgabestand vom Kesselzettel, aufgeschlagen vom Brett. */
+          bester = { was: o.name, preis: o.preis, art: 'lage',
+                     zuege: ['sud:zettel-wechsel-kauf', 'sud:' + a.schluessel + ':' + o.k] };
+        }
       });
     });
     var p = kaufPreis();
-    if (!bester || p < bester.preis) bester = { was: gk().kauf.text, preis: p };
-    if (bester) B.welt.meldeZug(bester.was, bester.preis);
+    if (!kaufSperre() && (!bester || p < bester.preis)) {
+      bester = { was: gk().kauf.text, preis: p, art: 'bau', zuege: ['sud:gaerraum'] };
+    }
+    if (!bester) return;
+    /* ZUSTAENDIGKEIT §24: wer seinen Zugschluessel mitschickt, wird beim Wort
+       genommen — zugDeckung() liefert null, wenn zu der Meldung kein
+       bedienbarer Knopf steht. Also meldet dieses Stueck NUR, was gerade
+       wirklich zu druecken ist. Vorher meldete es in jeder Woche einen
+       Preis, auch wenn sein Brett zugeklappt und jeder seiner Knoepfe
+       abgeschaltet war: eine Zahl ohne Knopf, also eine Behauptung. */
+    var zug = null;
+    for (var i = 0; i < bester.zuege.length; i++) {
+      if (lebt(bester.zuege[i])) { zug = bester.zuege[i]; break; }
+    }
+    if (!zug) return;
+    B.welt.meldeZug(bester.was, bester.preis, bester.art, zug);
   }
 
   /* ======================================================================

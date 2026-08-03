@@ -32,7 +32,7 @@ const fehler = [];
 seite.on('pageerror', e => fehler.push('pageerror: ' + String(e).slice(0, 200)));
 seite.on('console', m => { if (m.type() === 'error') fehler.push('console: ' + m.text().slice(0, 200)); });
 
-await seite.goto(`http://127.0.0.1:8899/spiel/?epoche=${ep}&saat=${SAAT}`, { waitUntil: 'networkidle' });
+await seite.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=${SAAT}`, { waitUntil: 'networkidle' });
 await seite.waitForTimeout(900);
 
 async function lage(zug) {

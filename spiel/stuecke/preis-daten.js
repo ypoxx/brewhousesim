@@ -314,6 +314,42 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.155,
       umlageAnteil: 0.52,
       handlohnAnteil: 1.15,
+
+      /* DIE VIERTE WURZEL — UND SIE STEHT NUR HIER.
+
+         Gemessen (Welle 4, preis-linie.mjs, vier Laeufe zu 400 Wochen,
+         saat=1350): 1600 ist die einzige der vier Epochen, in der die
+         Barschaft um das Elffache waechst — 430 auf 4.637 fl —, waehrend der
+         Ausstoss STEHT (1.900 auf 1.634 fl). Das Haus waechst nicht, es
+         hortet. Die drei Wurzeln der Pflichten haengen alle an Fluessen und
+         fassen einen Bestand nicht; deshalb kommt die vierte dazu, und
+         deshalb kommt sie nur hier: in 1350, 1884 und 1970 kaeme sie nie
+         ueber den Freibetrag und waere eine tote Zeile.
+
+         `liegeFrei` in JAHRESLASTEN. Zwei sind gemessen und nicht geraten:
+         die Michaelirechnung dieser Epoche liegt zwischen 158 und 844 fl, die
+         billigste Sprosse der Tafel zwischen 210 und 1.700, die
+         ausserordentliche Umlage bei 0,52 bis 2,10 Jahreslasten. Wer zwei
+         Jahreslasten bar haelt, kann die naechste Umlage und die naechste
+         Sprosse bezahlen, ohne angeschlagen zu werden. Wer spart und dann
+         kauft, zahlt nichts; angeschlagen wird nur, was Jahr fuer Jahr
+         unberuehrt liegen bleibt.
+
+         `liegeSatz` ist hoch, und das ist diese Epoche. Der Anschlag steht
+         nach dem Satz weiter oben „im Steuerbuch der Stadt: Vermoegen und
+         Gewerb" — und zwischen 1618 und 1648 wurde dieses geschaetzte
+         Vermoegen jedes Jahr aufs Neue angeschlagen: Tuerkensteuer,
+         Kontribution, Quartiergeld, Salvaguardia, Brandsteuer. Sie stehen
+         alle fuenf schon in der Umlagenliste dieser Epoche. Ein Buerger, der
+         in diesen Jahrzehnten bares Geld sichtbar in der Lade liegen hatte,
+         hat es nicht behalten — genau darum ist der Abstand der Umlagen hier
+         zwei bis vier Jahre und nicht sechs. */
+      liegeName: 'Anschlag auf das bare Vermögen',
+      liegeSagt: 'Zu Michaeli liest der Zunftschreiber, was bar in der Lade liegt, '
+               + 'und der Rat schreibt es ins Steuerbuch: Vermögen und Gewerb. '
+               + 'In diesen Jahrzehnten wird das Vermögen jedes Jahr aufs Neue angeschlagen.',
+      liegeFrei: 2,
+      liegeSatz: 0.45,
       /* 1600 bis 1650 ist die dichteste Umlagenzeit der ganzen Partie:
          Tuerkensteuer, Kontribution, Quartierlast, Brandsteuer,
          Salvaguardia. Der Abstand ist zwei bis vier Jahre, nicht sechs. */

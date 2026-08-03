@@ -336,7 +336,8 @@
   var WURZEL = {
     fest:   'läuft weiter, auch wenn nicht gebraut wird',
     menge:  'nach dem Ausstoß im Schnitt der letzten drei Jahre',
-    ertrag: 'nach dem, was die letzten drei Jahre übrig ließen'
+    ertrag: 'nach dem, was die letzten drei Jahre übrig ließen',
+    hoehe:  'auf das, was nach dem Zahltag bar liegen bleibt'
   };
 
   function pflichtSumme() {
@@ -362,6 +363,90 @@
 
   function handlohnBetrag() {
     return rundePreis(ep().handlohnAnteil * pflichtSumme() * (Z.handlohnHalb ? 0.5 : 1));
+  }
+
+  /* ----------------------------------------------------------------------
+     DIE VIERTE WURZEL — WAS BAR LIEGEN BLEIBT.
+     Und sie hat nicht jede Epoche, weil sie nicht jede Epoche braucht.
+
+     DER BEFUND, an dem sie haengt (Welle 4, gemessen mit
+     werkbank/schuss/eichung/preis-linie.mjs, vier Laeufe, je 400 Wochen,
+     sorgfaeltig gespielte Linie, saat=1350):
+
+       Epoche  Kasse Michaeli    Ausstoss          Preis des naechsten
+                                                   umkaempften Zuges
+       1350     112 ->   113     150 ->   547 Pf     19 ->  42 Pf
+       1600     430 ->  4.637  1.900 -> 1.634 fl    170 -> 151 fl
+       1884  11.150 -> 24.704 17.000 ->20.493 M   1.706 ->12.000 M
+       1970  86.000 -> 50.000       —              38.221 ->19.683 DM
+
+     1600 ist die einzige Epoche, in der die Barschaft um das Elffache
+     waechst, waehrend der Ausstoss STEHT. Das Haus waechst nicht, es HORTET:
+     zuletzt liegen 4.637 fl bar in der Lade gegen einen Ausstoss von 1.634 fl
+     — das Anderthalbfache eines Jahresumsatzes, in bar, ohne Verwendung. In
+     1350 sind es 0,21 Jahresumsaetze, in 1884 1,2 bei dreifachem Anschlag.
+
+     Und daran zerbricht die zweite Messlatte: der Preis des naechsten
+     umkaempften Zuges kommt in dieser Epoche aus einer festen Tafel des
+     GEGNERS (Menge der Adresse x Satz des Mittels) und bewegt sich in
+     vierzehn Jahren nicht. Barschaft geteilt durch diesen Preis geht damit
+     von 3,76x auf 27,81x, in der Spitze auf 67,33x — der Patrizier-IV-Fall.
+     Alles, was DIESES Stueck anschlaegt, waechst dagegen sauber mit: die
+     eigene Preisleiter steht in 1600 ueber vierzehn Jahre bei 2,38x bis
+     3,37x, dem engsten Band aller vier Epochen.
+
+     WARUM DIE DREI WURZELN DAS NICHT FASSEN. Sie haengen an FLUESSEN: was
+     durch das Haus ging (menge), was das Jahr uebrig liess (ertrag), was
+     ohnehin laeuft (fest). Ein Haus, dessen Ausstoss steht und dessen Lade
+     sich trotzdem fuellt, wird von allen dreien nicht erfasst — der BESTAND
+     kommt in keiner vor. Das war eine bewusste Entscheidung (ZUSTAENDIGKEIT
+     21: eine Abgabe auf die Barschaft frisst genau das Geld, das fuer den
+     Michaelitag hingelegt wurde), und sie war richtig fuer eine Abgabe OHNE
+     Freibetrag.
+
+     MIT FREIBETRAG ist es keine Abgabe auf das Sparen mehr, sondern eine auf
+     das Liegenlassen: frei bleibt ein Vielfaches der Jahreslast — genug, um
+     die naechste Sprosse und die naechste Umlage zu bezahlen —, und
+     angeschlagen wird nur, was daruber hinaus Jahr fuer Jahr unberuehrt
+     liegt. Wer spart und dann kauft, zahlt nichts. Wer sitzt, zahlt.
+
+     Historisch ist das keine Erfindung, sondern der Normalfall dieser
+     Epoche. Der Anschlag steht laut den Daten dieser Epoche selbst „im
+     Steuerbuch der Stadt: VERMOEGEN und Gewerb, geschaetzt von zwei
+     Ratsherren und einem Zunftmeister" — und zwischen 1618 und 1648 wurde
+     genau dieses geschaetzte Vermoegen jedes Jahr aufs Neue angeschlagen:
+     Tuerkensteuer, Kontribution, Quartiergeld, Salvaguardia. Ein Buerger,
+     der bares Geld sichtbar in der Lade liegen hatte, hat es nicht behalten.
+
+     Warum sie NUR in 1600 steht: in den anderen drei Epochen greift sie
+     nicht, weil die Barschaft dort nie ueber den Freibetrag hinauswaechst.
+     Eine Regel, die in drei von vier Epochen nichts tut, gehoert nicht in
+     alle vier — dort waere sie totes Gewicht in der Rechnungsspalte. Fehlen
+     `liegeSatz` und `liegeFrei` in den Daten einer Epoche, ist diese Funktion
+     ein Nichtstuer, und die Rechnung dieser Epoche ist Zeile fuer Zeile
+     dieselbe wie vorher. Nachgemessen: sie IST es (siehe Bericht).
+     ---------------------------------------------------------------------- */
+  function liegeFreibetrag() {
+    var e = ep();
+    if (!e.liegeSatz) return 0;
+    return Math.round((e.liegeFrei || 0) * pflichtSumme());
+  }
+
+  function liegegeld() {
+    var e = ep();
+    if (!e.liegeSatz) return 0;
+    /* Ohne Jahreslast kein Freibetrag — und ohne Freibetrag kein Anschlag.
+       Der erste Michaeli einer Partie hat keine Rechnung; er bekommt auch
+       diese nicht. */
+    if (pflichtSumme() <= 0) return 0;
+    var bar = Math.max(0, Math.floor(B.welt.haus.kasse));
+    var frei = liegeFreibetrag();
+    if (bar <= frei) return 0;
+    return rundePreis(e.liegeSatz * (bar - frei));
+  }
+
+  function liegeName() {
+    return ep().liegeName || 'Anschlag auf das bare Vermögen';
   }
 
   /* ----------------------------------------------------------------------
@@ -796,6 +881,29 @@
       }
     }
 
+    /* 7a. WAS BAR LIEGEN BLEIBT — die vierte Wurzel, und nur dort, wo eine
+           Epoche sie in den Daten stehen hat. Sie steht HIER und nicht bei
+           den Pflichten (Schritt 3), weil sie den Stand NACH dem Zahltag
+           meint: was Pflicht, Rate, Handlohn und Umlage uebriggelassen
+           haben und was das Haus danach noch immer nicht braucht.
+
+           Sie geht ausdruecklich NICHT in `pflichtSumme()` ein. Die
+           Jahreslast traegt die Umlage und den Handlohn; haenge die vierte
+           Wurzel dort hinein, schlaegt die Barschaft ueber drei Ecken auf
+           sich selbst durch, und aus einer Rueckkopplung wird eine Spirale.
+           Die Begruendung im ganzen steht oben bei `liegegeld`. */
+    var barVorher = Math.max(0, Math.floor(B.welt.haus.kasse));
+    var liegeFrei = liegeFreibetrag();
+    var liege = liegegeld();
+    if (liege > 0) {
+      buche(liege, liegeName(), 'pflicht', 'hoehe');
+      chronik('pflicht', liegeName() + ': von ' + geld(barVorher) + ' bar bleiben '
+        + geld(liegeFrei) + ' frei — ' + B.zahl(e.liegeFrei || 0, 1)
+        + ' Jahreslasten. Auf die ' + geld(barVorher - liegeFrei) + ', die darüber '
+        + 'liegen blieben, schlägt der Rat ' + geld(liege) + ' an. '
+        + 'Was im Haus verbaut ist, wird nicht angeschlagen.');
+    }
+
     /* 7b. Was am Notpfennig hängengeblieben ist, steht als eigene Zeile da —
            sonst sieht der Spieler eine Rechnung, die nicht aufgeht, und keinen
            Grund dafür. */
@@ -925,6 +1033,20 @@
       l.push({ jahr: r.faellig, name: 'Rate: ' + r.name, sagt: r.offen + ' Raten offen',
         betrag: r.rate, art: 'rate' });
     });
+    /* Was der Rat auf das ansetzt, was bar liegen bleibt — mit dem Stand von
+       HEUTE, nicht mit dem vom letzten Michaeli. Die Zahl faellt, sobald das
+       Geld im Haus verbaut ist, und steigt, solange es liegt. Genau das soll
+       sie: eine angekuendigte Zahl, die sich durch einen Zug bewegen laesst,
+       ist eine Entscheidung; eine, die erst am Zahltag auftaucht, ist eine
+       Strafe. Sie steht nur da, wo die Epoche sie kennt und wo sie greift. */
+    var lg = liegegeld();
+    if (lg > 0) {
+      l.push({ jahr: jahr() + 1, name: liegeName(),
+        sagt: (ep().liegeSagt || '') + ' Frei bleiben ' + geld(liegeFreibetrag())
+            + ' — heute liegen ' + geld(Math.max(0, Math.floor(B.welt.haus.kasse)))
+            + ' bar im Haus.',
+        betrag: lg, art: 'umlage' });
+    }
     l.sort(function (a, b) { return a.jahr - b.jahr; });
     return l.slice(0, 6);
   }
@@ -1254,7 +1376,10 @@
       kasten.appendChild(zeile('Zusammen im Jahr', geld(-pflichtSumme()), 'pr-summe'));
       kasten.appendChild(B.el('div', 'pr-satz pr-klein',
         'Drei Wurzeln: was weiterläuft, wenn die Pfanne kalt bleibt · was am Ausstoß hängt · '
-        + 'was der Rat nach der Nahrung des Jahres veranlagt. Keine hängt an der Kasse.'));
+        + 'was der Rat nach der Nahrung des Jahres veranlagt. '
+        + (e.liegeSatz
+            ? 'Und in dieser Zeit eine vierte: was bar liegen bleibt.'
+            : 'Keine hängt an der Kasse.')));
     } else {
       /* Ein Plus vor dem Zufluss. Ohne es steht der Ertrag eines Baus in
          derselben Spalte wie eine Abgabe und liest sich wie eine. */
@@ -1273,6 +1398,17 @@
         summe += r.betrag;
       });
       kasten.appendChild(zeile('Zusammen', (summe > 0 ? '+' : '') + geld(summe), 'pr-summe'));
+    }
+    /* Die vierte Wurzel steht als REGEL da, nicht erst als Rechnungszeile —
+       sonst liest der Spieler sie zum ersten Mal an dem Tag, an dem sie ihn
+       trifft. Sie steht nur, wo die Epoche sie kennt. */
+    if (e.liegeSatz) {
+      kasten.appendChild(B.el('div', 'pr-satz pr-klein pr-liege',
+        liegeName() + ': frei bleiben ' + B.zahl(e.liegeFrei || 0, 1) + ' Jahreslasten — '
+        + geld(liegeFreibetrag()) + '. Auf alles, was zu Michaeli darüber hinaus bar im '
+        + 'Haus liegt, schlägt der Rat ' + B.zahl((e.liegeSatz || 0) * 100, 0)
+        + ' im Hundert an. Was verbaut, gebunden oder festgelegt ist, zählt nicht mit. '
+        + (ep().liegeSagt || '')));
     }
     /* Woran das Haus dieses Jahr gemessen wird — beide Zahlen stehen da,
        damit niemand die Rechnung fuer eine Laune halten muss. */

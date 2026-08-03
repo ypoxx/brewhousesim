@@ -468,3 +468,63 @@
   font-family: var(--sans);
 }
 #buehne[data-epoche="4"] .sud-zkopf { letter-spacing: calc(var(--s) * 3); }
+
+/* --------------------------------------------------------------------------
+   WELLE 4 — DAS SIEGEL UND DIE WOECHENTLICHE WAHL
+
+   1. .sud-siegelzeile  steht ueber der Achse, sobald eine Festlegung bezahlt
+      ist. Vor Welle 4 stand "unwiderruflich" nur am Knopf, und danach liess
+      sich die Vorgabe gratis zurueckholen — gemessen in ALLEN VIER Epochen.
+      Jetzt haelt die Achse, und die Zeile sagt es, ehe jemand sucht.
+   2. .sud-zpaar       zwei Hefe-Knoepfe NEBENEINANDER auf dem Kesselzettel.
+      Sie ersetzen einen einzelnen und brauchen deshalb keine zusaetzliche
+      Hoehe: der Zettel bleibt unter der Ortsmarken-Schwelle der STADT
+      (13 % x 16,5 % = 2,145 % der Buehne gegen 2,4 %). Wer hier eine Zeile
+      ergaenzt, misst nach.
+   3. .sud-zrangschild  was aus der Umstellung beim Wirt wird — am Knopf, wo
+      man es liest, ehe man ihn drueckt.
+   -------------------------------------------------------------------------- */
+
+.sud-siegelzeile {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  line-height: 1.25;
+  color: #5a2c15;
+  background: #e8d6ab;
+  border-left: calc(var(--s) * 4) solid #7a3f22;
+  padding: calc(var(--s) * 3) calc(var(--s) * 7);
+  border-radius: calc(var(--s) * 2);
+}
+
+.sud-zpaar {
+  display: flex;
+  gap: calc(var(--s) * 4);
+  align-items: stretch;
+}
+.knopf.sud-tat.voll.halb {
+  width: auto;
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: calc(var(--s) * 14);
+  padding: calc(var(--s) * 3) calc(var(--s) * 5);
+}
+.knopf.sud-tat.voll.halb .wort {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sud-zrangschild {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 13);
+  letter-spacing: calc(var(--s) * 1);
+  padding: 0 calc(var(--s) * 4);
+  border-radius: calc(var(--s) * 3);
+  white-space: nowrap;
+}
+.sud-zrangschild.hoch { background: #dfe7cf; border: 1px solid #6f8a58; color: #33501f; }
+.sud-zrangschild.tief { background: #efdcc6; border: 1px solid #a9764a; color: #7a3f22; }
+
+/* Der Zettel traegt vier Knoepfe statt drei; die Zeilen duerfen deshalb
+   nicht mehr Luft nehmen als vorher. */
+#buehne .sud-zettel .knopf.sud-tat.klein.voll { min-height: calc(var(--s) * 26); }
