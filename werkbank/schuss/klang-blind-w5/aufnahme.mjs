@@ -37,21 +37,16 @@ p.on('pageerror', e => fehler.push('pageerror: ' + e.message));
 await p.goto(`${HAFEN}/spiel/?epoche=${EP}&saat=${SAAT}`, { waitUntil: 'networkidle' });
 await p.waitForTimeout(2000);
 
-/* --- ein echter Mausklick auf einen sichtbaren, nicht gesperrten Zug ----- */
-async function klick(praefix) {
-  const sel = `[data-zug^="${praefix}"]`;
-  const el = await p.$$(sel);
-  for (const e of el) {
-    try {
-      if (!(await e.isVisible())) continue;
-      const aus = await e.evaluate(n => n.disabled === true || n.dataset.sollAus === '1');
-      if (aus) continue;
-      const zug = await e.evaluate(n => n.dataset.zug);
-      await e.click({ timeout: 1200 });
-      return zug;
-    } catch (_) { /* verdeckt oder weggezeichnet — naechster */ }
-  }
-  return null;
+/* --- ein echter Mausklick auf einen sichtbaren, nicht gesperrten Zug -----
+   Locator statt ElementHandle: das Spiel zeichnet bei jeder Woche neu, ein
+   festgehaltenes Element ist danach tot. Der Locator fragt neu. */
+async function klick(praefix, frist = 900) {
+  const loc = p.locator(`[data-zug^="${praefix}"]:not([data-soll-aus="1"]):visible`).first();
+  try {
+    const zug = await loc.getAttribute('data-zug', { timeout: frist });
+    await loc.click({ timeout: frist, noWaitAfter: true });
+    return zug;
+  } catch (_) { return null; }
 }
 
 /* --- VORLAUF: mit der Maus bis kurz vor den Jahreswechsel ---------------- */
@@ -75,11 +70,13 @@ const start = await p.evaluate(() => {
   const proc = ctx.createScriptProcessor(4096, 1, 1);
   const nichts = ctx.createGain(); nichts.gain.value = 0;
   aus.connect(proc); proc.connect(nichts); nichts.connect(ctx.destination);
-  const K = { rate: ctx.sampleRate, teile: [], proc, nichts, ctx, t0: ctx.currentTime };
+  const K = { rate: ctx.sampleRate, teile: [], proc, nichts, ctx, t0: ctx.currentTime,
+              perf0: performance.now() / 1000 };
   proc.onaudioprocess = function (e) { K.teile.push(new Float32Array(e.inputBuffer.getChannelData(0))); };
   window.__KRITIKER = K;
   B.ton.beginneMitschnitt();
-  return { ok: true, rate: ctx.sampleRate, zustand: ctx.state, laut: B.ton.laut, stumm: B.ton.stumm };
+  return { ok: true, rate: ctx.sampleRate, zustand: ctx.state, t0: K.t0,
+           laut: B.ton.laut, stumm: B.ton.stumm, pegelVorher: B.ton.pegel() };
 });
 if (!start.ok) { console.error('Abgriff fehlgeschlagen: ' + start.grund); await b.close(); process.exit(2); }
 
@@ -92,15 +89,15 @@ const pegelReihe = [];
 /* Zugplan: was ein Mensch in einer halben Minute tut. Immer dieselbe
    Reihenfolge, damit die vier Epochen vergleichbar bleiben. */
 const PLAN = [
-  [1.0, 'fuhre:laden'], [2.2, 'fuhre:fuellen'], [3.4, 'weiter'],
-  [5.0, 'sud:zettel-anstich'], [6.4, 'weiter'],
-  [8.0, 'fuhre:laden'], [9.2, 'fuhre:tafel-auf'], [10.4, 'weiter'],
-  [12.0, 'gegner:zeige'], [13.2, 'weiter'],
-  [15.0, 'fuhre:laden'], [16.2, 'fuhre:fuellen'], [17.4, 'weiter'],
-  [19.0, 'stadt:reiter:sud'], [20.2, 'weiter'],
-  [22.0, 'fuhre:laden'], [23.2, 'weiter'],
-  [25.0, 'name:jetzt'], [26.2, 'weiter'],
-  [27.6, 'fuhre:fuellen'], [28.6, 'weiter']
+  [0.8, 'stadt:reiter:fuhre-fu-brett-fu-wagen'],
+  [2.0, 'fuhre:fuellen'], [3.4, 'fuhre:abschicken'],
+  [6.0, 'sud:zettel-anstich'], [7.5, 'weiter'],
+  [9.5, 'fuhre:fuellen'], [11.0, 'fuhre:abschicken'],
+  [13.5, 'weiter'], [15.0, 'weiter'],
+  [17.0, 'fuhre:fuellen'], [18.5, 'fuhre:abschicken'],
+  [21.0, 'weiter'], [22.5, 'weiter'],
+  [24.0, 'fuhre:fuellen'], [25.5, 'fuhre:abschicken'],
+  [27.5, 'weiter'], [29.0, 'weiter']
 ];
 let n = 0;
 while (sek() < DAUER) {
@@ -150,7 +147,10 @@ const ergebnis = await p.evaluate(() => {
     sekundenGemessen: n / K.rate,
     spitze: spitze, rms: Math.sqrt(quad / Math.max(1, n)),
     zustand: K.ctx.state,
-    mitschnitt: B.ton.mitschnitt(),
+    /* auf die SEKUNDE DER AUFNAHME umgerechnet, nicht auf die Seitenzeit */
+    mitschnitt: B.ton.mitschnitt().map(m => ({
+      t: Number((m.t - K.perf0).toFixed(2)), name: m.name, opt: m.opt, epoche: m.epoche
+    })),
     geraten: B.ton.geraten(),
     zeit: JSON.parse(JSON.stringify(B.welt.zeit)),
     lage: B.lage ? B.lage.length : -1,
