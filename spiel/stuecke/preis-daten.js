@@ -342,10 +342,17 @@ var PREIS_DATEN = {
            2,0 / 0,45            +0,644   2,02–13,02x        1x
            1,5 / 0,55            +0,723   1,96– 8,07x        1x
            1,0 / 0,70            −0,182   1,49– 5,90x        1x
+           1,0 / 0,70 (2. Lauf)  +0,191   1,61– 6,63x        1x
+           1,0 / 0,70 (3. Lauf)  +0,121   1,75–10,11x        1x
+
+         Die letzten drei Zeilen sind DERSELBE Stand, dreimal gefahren — das
+         Pruefskript ist unter Last nicht bitgenau (feste Wartezeiten, nicht
+         der Wuerfel; der ist gesaet). Groesstes |rho| der drei: 0,191, und
+         keiner der drei hat ein Jahr unter 1x.
 
          Die Lade steht damit ueber vierzehn Jahre bei 377 bis 809 fl statt bei
-         430 bis 4.637, und die Kennzahl geht von 3,76x auf 2,70x statt auf
-         27,81x. Weiter herunter darf der Freibetrag nicht: bei 1,5/0,55 ohne
+         430 bis 4.637, und die Kennzahl geht von 3,76x auf 1,61 bis 4,85x
+         statt auf 27,81x. Weiter herunter darf der Freibetrag nicht: bei 1,5/0,55 ohne
          den Boden auf der Festlegung nimmt der Automat in vierzehn Jahren
          KEINE einzige Festlegung mehr — die zweite Messlatte zaehlt beides.
 

@@ -97,6 +97,24 @@ def hoere(pfad, modell, schluessel):
     return deute(text, kand.get("finishReason"))
 
 
+# Eine Verweigerung ist keine Antwort. Der blinde Kritiker von DER KLANG hat am
+# 3. August gemessen, dass eine Modell-Verweigerung zu "Epoche 1, sicher 0"
+# geborgen wurde — mit --erwartet waere daraus ein Fehlurteil UEBER DAS SPIEL
+# geworden, obwohl das Ohr nie etwas gehoert hat. Die Huerde ist mit Absicht eng:
+# nur wenn der Text das Nichthoeren AUSSPRICHT und die Sicherheit bei 0 liegt.
+# Bloss niedrige Sicherheit bleibt ein echter, zaehlender Fehlgriff.
+VERWEIGERT = re.compile(
+    r"keine?\s+(audio|ton|klang|datei)|nicht\s+(hoeren|hören|verarbeiten|abspielen)"
+    r"|no\s+audio|cannot\s+(process|hear|access)|unable\s+to\s+(process|hear)"
+    r"|i'?m\s+sorry|es\s+wurde\s+keine", re.I)
+
+
+def verweigert(u, text):
+    """Wahr, wenn die Antwort sagt, dass gar nichts gehoert wurde."""
+    s = u.get("sicher")
+    return (s in (0, None)) and bool(VERWEIGERT.search(text or ""))
+
+
 def deute(text, grund=None):
     """Macht aus der Antwort ein Urteil — auch wenn das JSON abgeschnitten ist.
 
@@ -110,6 +128,9 @@ def deute(text, grund=None):
         if isinstance(u, list):
             u = next((x for x in u if isinstance(x, dict)), None)
         if isinstance(u, dict) and u.get("epoche") is not None:
+            if verweigert(u, text):
+                return {"abbruch": "Verweigerung, kein Urteil (sicher=%s)" % u.get("sicher"),
+                        "rohtext": text[:400]}
             return u
     except json.JSONDecodeError:
         pass
@@ -125,9 +146,13 @@ def deute(text, grund=None):
         return m.group(1) if m else ""
 
     s = re.search(r'"sicher"\s*:\s*(\d+)', text)
-    return {"epoche": int(e.group(1)), "sicher": int(s.group(1)) if s else None,
-            "vorgang": feld("vorgang"), "woran": feld("woran"),
-            "stoert": feld("stoert"), "geborgen": True}
+    u = {"epoche": int(e.group(1)), "sicher": int(s.group(1)) if s else None,
+         "vorgang": feld("vorgang"), "woran": feld("woran"),
+         "stoert": feld("stoert"), "geborgen": True}
+    if verweigert(u, text):
+        return {"abbruch": "Verweigerung, kein Urteil (sicher=%s)" % u.get("sicher"),
+                "rohtext": text[:400]}
+    return u
 
 
 def main():
@@ -188,7 +213,21 @@ def main():
         print("%d Datei(en) ohne Messung — dreimal gefragt, dreimal unlesbar." % unlesbar)
     if gesamt:
         print("Ohr: %d von %d richtig." % (treffer, gesamt))
-        sys.exit(0 if treffer == gesamt and not unlesbar else 3)
+    # Ausstiegscodes getrennt. Vorher stand 3 sowohl fuer "durchgefallen" als
+    # auch fuer "es gab gar keine Messung" — wer das Skript in einer Kette
+    # aufruft, konnte beides nicht unterscheiden und haette eine ausgefallene
+    # Messung als Urteil ueber das Spiel gebucht. Gemessen und gemeldet vom
+    # blinden Kritiker DER KLANG am 3. August 2026.
+    #   0 = alles richtig, nichts fehlt
+    #   2 = ueberhaupt keine Messung zustande gekommen
+    #   3 = gemessen und danebengelegen
+    #   4 = gemessen, alles Gemessene richtig, aber es fehlen Messungen
+    if gesamt and treffer < gesamt:
+        sys.exit(3)
+    if gesamt and unlesbar:
+        sys.exit(4)
+    if gesamt:
+        sys.exit(0)
     if unlesbar:
         sys.exit(2)
 
