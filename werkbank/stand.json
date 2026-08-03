@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-03T22:37:21+00:00",
- "phase": "Welle 5 — DER PREIS ist gebaut und wird blind geprüft, DER KLANG arbeitet an fünf Auflagen nach. Zwei Befunde über das MESSEN sind heute dazugekommen und binden ab jetzt auch die Aufsicht: erstens mischte --blind in hoerer.py gar nicht, sondern unterstellte die Reihenfolge 1,2,3,4 — behoben; zweitens sind mehrere gleichzeitige Browser ein kaputtes Messgerät (dieselbe Hand lieferte parallel rho +0,354 statt +0,393). Es wird sequenziell gemessen, und die Aufsicht misst nicht, solange ein Agent misst.",
+ "stand": "2026-08-03T23:40:12+00:00",
+ "phase": "Welle 5 — DER KLANG ist durch: vier von fünf Auflagen abgenommen, die dritte Messlatte trägt zum ersten Mal wirklich den VORGANG statt der Kulisse (still 12/12 auf 2/12, gespielt 3/12 auf 7/12). DER PREIS wird gerade blind geprüft. Die Aufsicht misst bewusst nicht mit, solange ein Agent misst — gleichzeitige Browser verfälschen die Zahlen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -67,9 +67,9 @@
   },
   {
    "name": "DER KLANG — dreissig Sekunden ohne Bild",
-   "status": "zurueck",
+   "status": "bestanden",
    "runde": 2,
-   "luecke": "BESTEHT MIT AUFLAGE, fünf Auflagen, in Nacharbeit. Der Pegel ist repariert: Spielen ist jetzt 3,6 bis 6,3 mal so laut wie Nichtstun, alle vier Vorgänge feuern in allen vier Epochen, jeder Klick wird in 0,07 bis 0,21 s beantwortet. ABER DER BEFUND IST SCHWERER GEWORDEN, nicht leichter: Aufnahmen mit NULL ausgelösten Klängen ordnet das fremde Ohr zu 18 von 20 (90 Prozent) richtig zu, gespielte nur zu 12 von 20 (60 Prozent). Spielen macht die Epoche SCHLECHTER erkennbar. Viermal von vier begründet das Ohr die stille Aufnahme mit dem Instrument der Bettmusik — Blockflöte, gezupfte Laute, Blaskapelle, 70er-Funk mit E-Bass. Solange vier Musikstücke aus vier Jahrhunderten unter dem Hof liegen, misst die Latte die Musik und nicht das Spiel. Weiterer Fund: fuhre:fuellen stapelt 5/8/10/12 identische Fassroll-Klänge in 0,46 s, vom Ohr ungefragt als 8-Bit-Chiptune gemeldet. Der Kritiker hat eine eigene Anschuldigung nach Gegenprobe zurückgezogen — sein erster Aufnahmesatz trug den Schwanz seines Schnellvorlaufs, beide Ohren meldeten ein modernes Rolltor; die korrigierten Zahlen fallen besser für den Builder aus als seine ersten.",
+   "luecke": "NACHGEARBEITET, vier von fünf Auflagen abgenommen, die fünfte teilweise. Mit dem Verfahren des Kritikers gemessen, drei Durchgänge am selben Tag: der vorgefundene Stand ordnete STILLE Aufnahmen zu 12 von 12 richtig zu und gespielte nur zu 3 von 12 — der ausgelieferte kehrt das um auf 2 von 12 still und 7 von 12 gespielt. Der Befund des Kritikers stimmte und war zu milde: die gespielte Aufnahme war nicht schlechter erkennbar, sie war Raten. DIE URSACHE LAG IN DEN DATEIEN, nicht in der Mischung: sieben Proben enthielten etwas anderes, als ihr Name verspricht. abfahrt1 — die Ochsenfuhre von 1350, der Hauptvorgang der ersten Epoche — war Wasserplätschern; sud3 enthielt eine Sprühdose ab 1927 in 1884; fassstahl war ein Gong; abfahrt3 ein gepfiffenes Liedchen, daher die mittelalterliche Holzflöte in 1884; glocke waren Röhrenglocken, daher die Fahrradklingel und Autohupe, die in Welle 4 fälschlich karren.mp3 angelastet wurde. DIE FUHRE hatte in drei von vier Epochen gar keinen Abfahrtsklang. Zehn Proben neu erzeugt und einzeln vorgeprüft, zwei nach elf Versuchen gelöscht statt geschönt. Auflage 3 ohne Kernänderung gelöst, fuhre.js unberührt. OFFEN: Auflage 4, der Gegenzug ist nur in 1350 hörbar geworden.",
    "gebaut": "werkbank/beleg/sud-e1.jpg"
   },
   {
@@ -127,18 +127,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T18:57:06+00:00",
-   "text": "DIE FUHRE R1: Wochentakt steht. Anschlagtafel (Sud faellt von selbst) · Keller mit Sorte und Braudatum · Wagen mit wenigen Plaetzen, jedes Fass bekommt ein Haus · hl-Reihe je Adresse mit drei Mahnkerben · Georgi-Blatt (Aprilbestand = Sommer). Knappheit je Epoche verschieden und nie Geld: 1350 Brautage+Bannmeile, 1600 Fassplaetze+Zunftquote, 1884 Frachtstufen+Eis, 1970 Regalmeter+Tourenplan."
-  },
-  {
-   "zeit": "2026-07-31T18:57:19+00:00",
-   "text": "KOLLISION (Aufsicht bitte schlichten): Das Stueck DER PREIS legt ein Brett .pr-tafel ueber x 1-85%, y 12-87% auf die Ebene 'blatt' (z=60). Es verdeckt alle vier Bretter DER FUHRE auf Ebene 'hand' (z=40) vollstaendig; Playwright meldet an jedem Knopf 'intercepts pointer events'. Ein Kritiker kommt derzeit an DIE FUHRE nicht heran. Vorschlag: das Preisblatt wird ueber seinen Griff geoeffnet und geschlossen statt dauerhaft offen zu stehen."
-  },
-  {
-   "zeit": "2026-07-31T18:57:19+00:00",
-   "text": "KOLLISION 2 (Geldfluss): Vier Stuecke ziehen inzwischen gleichzeitig Abgaben aus derselben Kasse — DIE FUHRE 'Ungeld' (nach Ausstoss), dazu Grutgeld, Erbzins, Mahlgeld, Wasserzins aus einem anderen Stueck. In 1350 sind das zusammen rund 35 Prozent des Umsatzes; das Haus geht im dritten Braujahr auf null. DIE FUHRE hat ihre Abgabe auf 8 Prozent gesenkt und mit einem Notgroschen (vier Sude) und einem Deckel (55 Prozent des freien Geldes) versehen. Die Summe braucht trotzdem eine Schlichtung."
-  },
   {
    "zeit": "2026-07-31T18:57:29+00:00",
    "text": "KERN (Bitte fuer die Zwischenwelle): 1. vorrat.plaetze ist mit 90/400 Fass in 1884/1970 zu klein — Sudgroesse mal Lagerzeit passt nicht hinein, die Reifezeiten mussten auf 2-5 Wochen gekuerzt werden. Ein getrennter Gaerkeller (reifendes Bier) neben dem Lagerkeller (lieferbares Bier) waere die saubere Loesung. 2. Es fehlt eine API fuer haus.rohstoff; DIE FUHRE zieht ihn beim Sud direkt ab. 3. nimmHeraus() nimmt immer das aelteste Fass — DIE FUHRE sortiert dafuer die gewuenschten Faesser nach vorn und ruft dann die API."
@@ -926,6 +914,18 @@
   {
    "zeit": "2026-08-03T22:37:21+00:00",
    "text": "DER PREIS, Welle 5 — DER VERDACHT AUS DEM WELLENPLAN IST WIDERLEGT, und das ist das Wertvollste an dieser Runde. Seit Welle 2b stand im Auftrag, der Zähler 'Chronik des Hauses · 0 Festlegungen' sei blind: er zähle nur die eigenen Festlegungen, während in welt.chronik sehr wohl Einträge anderer Stücke stünden. Der Builder hat es am Bildschirm nachgemessen: der Zähler springt sehr wohl auf 1, sobald eine Zeile mit art='festlegung' entsteht. Die Zahl war nie falsch — die Ereignisse sind zu selten, 1/1/0/0 in vierzehn Jahren. Ursache, aus der Sichtlage jedes Siegelknopfs abgelesen: in 1350 steht ab 1355 neun Jahre lang, in 1600 dreizehn Jahre lang keine einzige bedienbare Festlegung auf der Tafel, weil die Taxe mit der Teuerung wächst und die Lade nicht; der Abstand zum Freikauf wächst über vierzehn Jahre um 757 Pf. Die zweite Hälfte der Diagnose trifft nicht das Spiel, sondern das MESSGERÄT: in 1884 und 1970 tragen aktien und konzern ein PLUS-Preisschild und sind in allen vierzehn Jahren aktiv — aber die Referenzhand rechnet Math.abs(preis) und lehnt einen Zufluss als zu teure Ausgabe ab. Eine willige Hand holt dort 2 bzw. 3 Festlegungen. Zwei Wellen lang hat also ein Messfehler wie ein Spielfehler ausgesehen. DAZU EIN ZWEITER BEFUND ÜBER DAS MESSEN: vier gleichzeitige Browser sind ein kaputtes Gerät — dieselbe Hand lieferte parallel rho +0,354 statt +0,393 und +0,305 statt +0,108. Ab jetzt wird sequenziell gemessen, und die Aufsicht misst nicht, solange ein Agent misst, weil sie sonst beide Messungen zugleich verdirbt."
+  },
+  {
+   "zeit": "2026-08-03T23:40:12+00:00",
+   "text": "DER KLANG — dreissig Sekunden ohne Bild · Runde 2 · bestanden — NACHGEARBEITET, vier von fünf Auflagen abgenommen, die fünfte teilweise. Mit dem Verfahren des Kritikers gemessen, drei Durchgänge am selben Tag: der vorgefundene Stand ordnete STILLE Aufnahmen zu 12 von 12 richtig zu und gespielte nur zu 3 von 12 — der ausgelieferte kehrt das um auf 2 von 12 still und 7 von 12 gespielt. Der Befund des Kritikers stimmte und war zu milde: die gespielte Aufnahme war nicht schlechter erkennbar, sie war Raten. DIE URSACHE LAG IN DEN DATEIEN, nicht in der Mischung: sieben Proben enthielten etwas anderes, als ihr Name verspricht. abfahrt1 — die Ochsenfuhre von 1350, der Hauptvorgang der ersten Epoche — war Wasserplätschern; sud3 enthielt eine Sprühdose ab 1927 in 1884; fassstahl war ein Gong; abfahrt3 ein gepfiffenes Liedchen, daher die mittelalterliche Holzflöte in 1884; glocke waren Röhrenglocken, daher die Fahrradklingel und Autohupe, die in Welle 4 fälschlich karren.mp3 angelastet wurde. DIE FUHRE hatte in drei von vier Epochen gar keinen Abfahrtsklang. Zehn Proben neu erzeugt und einzeln vorgeprüft, zwei nach elf Versuchen gelöscht statt geschönt. Auflage 3 ohne Kernänderung gelöst, fuhre.js unberührt. OFFEN: Auflage 4, der Gegenzug ist nur in 1350 hörbar geworden."
+  },
+  {
+   "zeit": "2026-08-03T23:40:12+00:00",
+   "text": "Welle 5 — DER KLANG ist durch: vier von fünf Auflagen abgenommen, die dritte Messlatte trägt zum ersten Mal wirklich den VORGANG statt der Kulisse (still 12/12 auf 2/12, gespielt 3/12 auf 7/12). DER PREIS wird gerade blind geprüft. Die Aufsicht misst bewusst nicht mit, solange ein Agent misst — gleichzeitige Browser verfälschen die Zahlen."
+  },
+  {
+   "zeit": "2026-08-03T23:40:12+00:00",
+   "text": "DER KLANG r2 — DIE URSACHE LAG IN DEN DATEIEN, UND SIE WAR DREI WELLEN LANG UNSICHTBAR. Der Builder hat jede epochentragende Tonprobe EINZELN einem fremden Ohr vorgelegt, statt nur die Mischung zu messen. Sieben von ihnen enthielten etwas anderes, als ihr Dateiname verspricht: abfahrt1 — die Ochsenfuhre von 1350, der Hauptvorgang der ersten Epoche — war Wasserplätschern. sud3 enthielt eine Sprühdose, die es erst ab 1927 gibt, in einer Aufnahme von 1884. fassstahl war ein Gong. abfahrt3 war ein gepfiffenes Liedchen, und daher kam die mittelalterliche Holzflöte, die das Ohr in 1884 gehört hatte. glocke waren Röhrenglocken — und daher kam die Fahrradklingel und die Autohupe, die in Welle 4 fälschlich karren.mp3 angelastet worden war. DIE FUHRE HATTE IN DREI VON VIER EPOCHEN GAR KEINEN ABFAHRTSKLANG. Damit ist auch erklärt, warum drei Wellen lang niemand den Fehler fand: gemessen wurde immer die Mischung, nie die einzelne Probe. Dazu der mechanische Grund: Bett und Hof liefen ohne Zutun und duckten sich unter jeden Zug weg — die einzige Schicht, die die Zeit sagte, war genau dann weg, wenn jemand spielte. Ergebnis mit dem Verfahren des Kritikers, drei Durchgänge am selben Tag: still von 12/12 auf 2/12, gespielt von 3/12 auf 7/12. Der Befund des Kritikers stimmte und war zu milde — die gespielte Aufnahme war nicht schlechter erkennbar, sie war Raten. Zwei Dinge, die der Builder gegen sich selbst getan hat: er liefert ausdrücklich NICHT den Stand mit der besten Zahl aus, sondern den einzigen, der Auflage 2 erfüllt, und sagt das so; und ein Fund des Ohres, den er in der Wellenform nicht bestätigen konnte, steht als unbelegt im Bericht, statt dass daraufhin etwas geändert wurde. Zwei neu erzeugte Proben, die nach elf Versuchen nicht stimmten, hat er gelöscht statt geschönt."
   }
  ]
 }
