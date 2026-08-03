@@ -191,32 +191,65 @@
        es das, was er sein soll: ein Bogen Papier. */
     'stadt:reiter':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.4 },
 
-    /* --- DER GEGNER ----------------------------------------------------- */
-    'gegner:werben':      { datei: altNeu('karren', 'telefon'), laut: 0.7 },
-    'gegner:entreissen':  { datei: stets('unruhe'), laut: 0.75 },
-    'gegner:klage':       { datei: stets('unruhe'), laut: 0.75 },
-    'gegner:bauen':       { datei: altNeu('bau1', 'bau4'), laut: 0.6 },
-    'gegner:aufstocken':  { datei: altNeu('bau1', 'bau4'), laut: 0.6 },
-    'gegner:preis':       { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
-    'gegner:fuhre':       { datei: je('abfahrt1', 'abfahrt2', 'abfahrt3', 'abfahrt4'), laut: 0.65 },
-    'gegner:macht':       { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
-    'gegner:rohstoff':    { datei: altNeu('muenzen', 'kasse'), laut: 0.6 },
-    'gegner:unglueck':    { datei: stets('brand'), laut: 0.9 },
-    'gegner:verlieren':   { datei: stets('unruhe'), laut: 0.55 },
-    'gegner:zuvorkommen': { datei: altNeu('karren', 'telefon'), laut: 0.7 },
-    'gegner:abloesen':    { datei: stets('handschlag'), laut: 0.7 },
-    'gegner:festlegung':  { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
+    /* --- DER GEGNER -----------------------------------------------------
+       AUFLAGE 1, UND SIE IST DER KERN DES GANZEN URTEILS.
+       Der Gegenzug stand auf drei von vier Baendern — und das fremde Ohr hat
+       ihn 0 von 4 Mal gehoert. Er war da und war doch nicht da, und der
+       Grund ist, dass er nach demselben Hof klang wie alles andere: derselbe
+       Karren, dasselbe Papier, dasselbe Siegel wie beim eigenen Zug. Zwei
+       Klaenge, die sich nur im Namen unterscheiden, sind fuer ein blindes Ohr
+       ein Klang.
+
+       Deshalb hat der Gegenzug jetzt einen eigenen ORT statt eines eigenen
+       Namens. Alles, was der Nachbar tut, geht durch `fern` — Tiefpass und
+       der kurze Nachschlag eines fremden Hofes, also durch eine Wand. Und
+       jeder wirkliche Zug des Nachbarn (`nachbar: true`) zieht das
+       NACHBARHOF-Zeichen nach sich: zwei Sekunden gedaempftes Saegen und
+       Haemmern von drueben, unter dem sich Bett und Hof tief wegducken.
+       Das ist die einzige Stelle im ganzen Stueck, die so klingt.
+       Was der Spieler selbst anstoesst (`hinsehen`, `oeffnen`, `hinhalten`),
+       traegt kein Zeichen — sonst waere das Zeichen wertlos. */
+    'gegner:werben':      { datei: altNeu('karren', 'telefon'), laut: 0.95, fern: true, nachbar: true },
+    'gegner:entreissen':  { datei: stets('unruhe'), laut: 1.0, fern: true, nachbar: true },
+    'gegner:klage':       { datei: stets('unruhe'), laut: 0.9, fern: true },
+    'gegner:bauen':       { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
+    'gegner:aufstocken':  { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
+    'gegner:preis':       { datei: altNeu('kreide', 'maschine'), laut: 0.8, fern: true },
+    'gegner:fuhre':       { datei: je('abfahrt1', 'abfahrt2', 'abfahrt3', 'abfahrt4'), laut: 0.85, fern: true, nachbar: true },
+    'gegner:macht':       { datei: altNeu('siegel', 'maschine'), laut: 0.85, fern: true, nachbar: true },
+    'gegner:rohstoff':    { datei: altNeu('muenzen', 'kasse'), laut: 0.8, fern: true, nachbar: true },
+    'gegner:unglueck':    { datei: stets('brand'), laut: 1.1, fern: true, nachbar: true },
+    'gegner:verlieren':   { datei: stets('unruhe'), laut: 0.7, fern: true },
+    'gegner:zuvorkommen': { datei: altNeu('karren', 'telefon'), laut: 0.95, fern: true, nachbar: true },
+    'gegner:abloesen':    { datei: stets('handschlag'), laut: 0.9, fern: true, nachbar: true },
+    'gegner:festlegung':  { datei: altNeu('siegel', 'maschine'), laut: 0.85, fern: true, nachbar: true },
     'gegner:hinsehen':    { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.6 },
     /* Vier Namen, die DER GEGNER wirklich ruft und die bis Welle 4 alle im
        Notfallkasten landeten — also viermal dasselbe Hundebellen. Am
        Mitschnitt gezaehlt: in 1970 kam 'gegner:zielen' allein sechsmal in
        dreissig Sekunden. */
-    'gegner:zielen':      { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.45 },
-    'gegner:binden':      { datei: stets('handschlag'), laut: 0.65 },
-    'gegner:angebot':     { datei: altNeu('karren', 'telefon'), laut: 0.6 },
+    'gegner:zielen':      { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.45, fern: true },
+    'gegner:binden':      { datei: stets('handschlag'), laut: 0.9, fern: true, nachbar: true },
+    'gegner:angebot':     { datei: altNeu('karren', 'telefon'), laut: 0.85, fern: true, nachbar: true },
     'gegner:hinhalten':   { datei: stets('papier'), ersatz: 'blatt', laut: 0.5 },
-    'gegner:mitbieten':   { datei: altNeu('muenzen', 'kasse'), laut: 0.75 },
+    'gegner:mitbieten':   { datei: altNeu('muenzen', 'kasse'), laut: 0.95, fern: true, nachbar: true },
     'gegner:oeffnen':     { datei: stets('papier'), ersatz: 'blatt', laut: 0.4 },
+    /* AUFLAGE 3. Sechs Namen, die `merkeZug()` in gegner.js:417 aus
+       'gegner:' + art bildet und die deshalb nie jemand als Zeichenkette
+       gesucht hat. `gegner:uebernahme` allein ist in 1970 SECHSMAL in den
+       Notfallkasten gefallen. Nachgezaehlt an der Zugmaschine selbst: die
+       siebzehn Werte von `art` sind angebot · aufstocken · bauen · ende ·
+       erbe · fuhre · laesstab · macht · not · preis · rohstoff · schluckt ·
+       uebernahme · unglueck · verlieren · werben · zielen, dazu `binden` und
+       `entreissen` aus Zeile 579. Alle neunzehn stehen jetzt oben oder hier.
+       Abgenommen wird das nicht am Quelltext, sondern an `geraten()`. */
+    'gegner:uebernahme':  { datei: stets('handschlag'), laut: 1.0, fern: true, nachbar: true,
+                            sagt: 'Der Nachbar uebernimmt ein Haus — Handschlag von drueben.' },
+    'gegner:schluckt':    { datei: stets('unruhe'), laut: 1.0, fern: true, nachbar: true },
+    'gegner:not':         { datei: altNeu('muenzen', 'kasse'), laut: 0.8, fern: true },
+    'gegner:ende':        { datei: stets('brand'), laut: 1.0, fern: true, nachbar: true },
+    'gegner:erbe':        { datei: altNeu('feder', 'maschine'), laut: 0.75, fern: true },
+    'gegner:laesstab':    { datei: stets('papier'), ersatz: 'blatt', laut: 0.6, fern: true },
 
     /* --- DER SUD --------------------------------------------------------
        Gebaut in Welle 2b, also nach dieser Datei. Bis Welle 4 fiel JEDER
@@ -277,6 +310,13 @@
     /* Auch nicht das Wochenzeichen: es faellt in derselben Sekunde wie
        'uhr:woche' und verdoppelt es nur. Eine Kerbe im Holz. */
     'erbe:stunde':       { datei: stets('kerbe'), laut: 0.4 },
+    /* Vier Namen aus der Erbleiste, die heute als Zugschluessel dastehen und
+       morgen geklungen sein wollen. Sie kosten nichts und halten den
+       Notfallkasten leer, falls DAS ERBE sie anschliesst. */
+    'erbe:anfechten':    { datei: stets('unruhe'), laut: 0.7 },
+    'erbe:nachschrift':  { datei: stets('feder'), laut: 0.55 },
+    'erbe:seelgeraet':   { datei: altNeu('glocke', 'telefon'), laut: 0.7 },
+    'erbe:verlaengern':  { datei: altNeu('siegel', 'maschine'), laut: 0.65 },
 
     /* --- DER KERN -------------------------------------------------------
        Der haeufigste Ton im ganzen Spiel: der WEITER-Knopf. Er war zuerst
@@ -522,28 +562,128 @@
      ist die Datei, die der Pruefer bekommt, wirklich der Ton des Spiels.
      ====================================================================== */
 
+  /* DIE BREMSE — Auflage 6.
+     `epoche3.wav` hat die Vollaussteuerung beruehrt: Spitze 1,0000 bei einer
+     Probe von 1 323 000. Einmal ist einmal zu viel, und der Kompressor allein
+     kann es nicht verhindern: er regelt den Pegel, aber er hat keine Decke.
+     Diese hier hat eine. Die Kennlinie ist g·tanh(x/g) ueber der Eingabe
+     -1..+1; alles darueber klemmt der Knoten selbst auf den Randwert. Mit
+     g = 1,35 kann am Ausgang nie mehr als 0,851 stehen, und unterhalb von
+     0,3 weicht die Kennlinie um weniger als zwei Prozent von der Geraden ab —
+     eine Decke, kein Verzerrer. */
+  function bremse(ctx, g) {
+    var w = ctx.createWaveShaper();
+    var n = 4097, c = new Float32Array(n), i, x;
+    for (i = 0; i < n; i++) {
+      x = (i / (n - 1)) * 2 - 1;
+      c[i] = g * Math.tanh(x / g);
+    }
+    w.curve = c;
+    try { w.oversample = '4x'; } catch (f) { }
+    return w;
+  }
+
+  /* Die Kontur des Atems: eine Runde von ATEM_RUNDE Sekunden, Wert 0..1.
+     Zwei Wellen ungleicher Laenge, damit es nicht nach Motor klingt, und
+     hoch 1,5 genommen, damit der Hof unten laenger verweilt als oben — sonst
+     erwischt ein Messfenster von 500 ms den tiefsten Punkt nicht. Anfang und
+     Ende sind beide null, die Schleife hat also keine Naht. */
+  function atemBand(ctx) {
+    if (ctx.__klangAtem) return ctx.__klangAtem;
+    var rate = 1000, n = Math.round(ATEM_RUNDE * rate);
+    var b = ctx.createBuffer(1, n, rate), d = b.getChannelData(0), i, p, v;
+    for (i = 0; i < n; i++) {
+      p = i / n;
+      v = 0.72 * (0.5 - 0.5 * Math.cos(2 * Math.PI * p))
+        + 0.28 * (0.5 - 0.5 * Math.cos(6 * Math.PI * p));
+      d[i] = Math.pow(v, 1.5);
+    }
+    ctx.__klangAtem = b;
+    return b;
+  }
+
+  /* Ein Kanal, der durch eine Wand kommt: Tiefpass, ein Hochpass gegen das
+     Wummern, und der kurze Nachschlag eines fremden Hofes. Damit klingt der
+     Gegenzug nicht wie der eigene Zug, sondern wie DRUEBEN — genau die
+     Auskunft, die dem fremden Ohr gefehlt hat. */
+  function baueWand(ctx, ziel, kappe, echo, nass) {
+    var ein = ctx.createGain(); ein.gain.value = 1;
+    var tief = ctx.createBiquadFilter();
+    tief.type = 'lowpass'; tief.frequency.value = kappe; tief.Q.value = 0.5;
+    var hoch = ctx.createBiquadFilter();
+    hoch.type = 'highpass'; hoch.frequency.value = 170;
+    var v = ctx.createDelay(0.6); v.delayTime.value = echo;
+    var rueck = ctx.createGain(); rueck.gain.value = 0.32;
+    var n = ctx.createGain(); n.gain.value = nass;
+    ein.connect(tief); tief.connect(hoch);
+    hoch.connect(ziel);
+    hoch.connect(v); v.connect(rueck); rueck.connect(v);
+    v.connect(n); n.connect(ziel);
+    return ein;
+  }
+
   function baueWerk(ctx, epoche) {
     var meister = ctx.createGain();
     meister.gain.value = 0.92;
-    var druck;
+    var letzt = meister;
     try {
-      druck = ctx.createDynamicsCompressor();
-      druck.threshold.value = -4; druck.knee.value = 30;
-      druck.ratio.value = 2.2; druck.attack.value = 0.010; druck.release.value = 0.30;
-      meister.connect(druck); druck.connect(ctx.destination);
-    } catch (f) { meister.connect(ctx.destination); }
+      var druck = ctx.createDynamicsCompressor();
+      druck.threshold.value = -6; druck.knee.value = 26;
+      druck.ratio.value = 3.0; druck.attack.value = 0.008; druck.release.value = 0.26;
+      meister.connect(druck);
+      letzt = druck;
+    } catch (f) { }
+    try {
+      var deckel = bremse(ctx, 1.35);
+      letzt.connect(deckel);
+      letzt = deckel;
+    } catch (f) { }
+    letzt.connect(ctx.destination);
 
     /* Was wirklich zum Ausgang geht. Daran haengt der Pegelmesser — sonst
-       misst man den Wunsch und nicht den Ton. */
-    var w = { ctx: ctx, meister: meister, ausgang: druck || meister,
-              bus: {}, ruhe: {}, schleifen: {} };
+       misst man den Wunsch und nicht den Ton. Seit Welle 4 Runde 2 ist das
+       der Knoten HINTER der Bremse: wer den Ausgang abgreift, soll denselben
+       Ton bekommen, der aus dem Lautsprecher kommt, und nicht den davor. */
+    var w = { ctx: ctx, meister: meister, ausgang: letzt,
+              bus: {}, ruhe: {}, atem: {}, schleifen: {} };
     ['bett', 'hof', 'werk'].forEach(function (n) {
       w.ruhe[n] = PEGEL[n];
       var g = ctx.createGain(); g.gain.value = w.ruhe[n];
-      g.connect(meister);
       w.bus[n] = g;
+      if (n === 'werk') { g.connect(meister); return; }
+
+      /* Bett und Hof atmen. Der Wert des Knotens ist der tiefste Punkt, das
+         Band addiert den Rest hinzu — ein AudioParam summiert, was an ihm
+         haengt. So laesst sich die Tiefe spaeter aendern, ohne den Graphen
+         neu zu bauen. */
+      var a = ctx.createGain();
+      var skala = ctx.createGain();
+      var q = ctx.createBufferSource();
+      q.buffer = atemBand(ctx); q.loop = true;
+      q.connect(skala); skala.connect(a.gain);
+      g.connect(a); a.connect(meister);
+      w.atem[n] = { knoten: a, skala: skala, quelle: q };
+      try { q.start(0); } catch (f) { }
     });
+    setzeAtem(w, epoche);
+
+    /* Zwei Waende. `fern` ist der Nachbarhof, wie man ihn ueber den Zaun
+       hoert; `nachbar` ist dasselbe eine Wand weiter und traegt das Zeichen. */
+    w.bus.fern = baueWand(ctx, w.bus.werk, 2000, 0.155, 0.40);
+    w.bus.nachbar = baueWand(ctx, w.bus.werk, 1050, 0.190, 0.55);
     return w;
+  }
+
+  function setzeAtem(w, epoche) {
+    var tief = ATEM[epoche] === undefined ? 0.5 : ATEM[epoche];
+    ['bett', 'hof'].forEach(function (n) {
+      var a = w.atem[n];
+      if (!a) return;
+      try {
+        a.knoten.gain.value = tief;
+        a.skala.gain.value = 1 - tief;
+      } catch (f) { }
+    });
   }
 
   /* Eine Schleife (Bett oder Hof) mit weichem Ein- und Ausblenden.
@@ -577,20 +717,63 @@
     } catch (f) { /* schon gestoppt */ }
   }
 
-  /* Bett UND Hof ducken sich kurz weg, wenn etwas geschieht. 1350 ist eine
-     leise Welt: dort entscheidet dieses Wegducken darueber, ob das Ohr das
-     rollende Fass ueberhaupt bemerkt oder nur noch die Gaense hoert. */
-  function ducke(w, wann, tiefe) {
-    var t = tiefe || 0.55;
-    [['bett', t], ['hof', 1 - (1 - t) * 0.45]].forEach(function (paar) {
+  /* Bett UND Hof ducken sich weg, wenn etwas geschieht. 1350 ist eine leise
+     Welt: dort entscheidet dieses Wegducken darueber, ob das Ohr das rollende
+     Fass ueberhaupt bemerkt oder nur noch die Gaense hoert. `halt` haelt das
+     Bett unten, solange ein langer Vorgang laeuft — der Michaelitag von 1970
+     war leiser als das, was ohnehin lief (Hub 0,87), und ein Zeichen, das
+     unter der Kulisse bleibt, ist kein Zeichen. */
+  function ducke(w, wann, tiefe, halt) {
+    var t = tiefe === undefined ? 0.5 : tiefe;
+    var h = halt || 0;
+    [['bett', t], ['hof', 1 - (1 - t) * 0.60]].forEach(function (paar) {
       var g = w.bus[paar[0]].gain, ruhe = w.ruhe[paar[0]];
       try {
         g.cancelScheduledValues(wann);
         g.setValueAtTime(g.value, wann);
-        g.linearRampToValueAtTime(ruhe * paar[1], wann + 0.06);
-        g.linearRampToValueAtTime(ruhe, wann + 1.1);
+        g.linearRampToValueAtTime(ruhe * paar[1], wann + 0.05);
+        if (h) g.setValueAtTime(ruhe * paar[1], wann + 0.05 + h);
+        g.linearRampToValueAtTime(ruhe, wann + 0.05 + h + 0.70);
       } catch (f) { }
     });
+  }
+
+  /* DAS NACHBARHOF-ZEICHEN — Auflage 1.
+     Zwei Sekunden Saegen und Haemmern, eine Wand weiter. Es steht NEBEN dem
+     eigentlichen Klang des Zuges, nicht an seiner Stelle: das Ohr soll hoeren,
+     WAS drueben geschieht und DASS es drueben geschieht.
+     Der Abstand von 3,2 s ist keine Zierde. In 1970 fallen 'gegner:binden',
+     ':unglueck' und ':uebernahme' in dieselbe Sekunde; ohne Sperre laege das
+     Zeichen dreifach uebereinander und waere wieder eine Wand. */
+  var NACHBAR_DATEI = altNeu('bau1', 'bau4');
+  var NACHBAR_DAUER = 2.1;
+  var NACHBAR_PAUSE = 3.2;
+
+  function nachbarhof(w, epoche, wann) {
+    var ctx = w.ctx;
+    if (w.nachbarLetzt !== undefined && wann - w.nachbarLetzt < NACHBAR_PAUSE) return false;
+    var datei = NACHBAR_DATEI(epoche);
+    var buf = fertig(ctx, datei);
+    if (!buf) { ladeStill(ctx, datei); return false; }
+    w.nachbarLetzt = wann;
+    w.nachbarZahl = (w.nachbarZahl || 0) + 1;
+
+    var d = Math.min(NACHBAR_DAUER, Math.max(0.6, buf.duration - 0.15));
+    var frei = Math.max(0.001, buf.duration - d - 0.05);
+    var ab = (w.nachbarZahl * 1.31) % frei;          /* gesaet, nicht gewuerfelt */
+
+    var q = ctx.createBufferSource();
+    q.buffer = buf;
+    var g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, wann);
+    g.gain.linearRampToValueAtTime(1.0, wann + 0.22);
+    g.gain.setValueAtTime(1.0, wann + d - 0.45);
+    g.gain.linearRampToValueAtTime(0.0001, wann + d);
+    q.connect(g); g.connect(w.bus.nachbar);
+    q.start(wann, ab);
+    q.stop(wann + d + 0.05);
+    ducke(w, wann, 0.30, d - 0.4);
+    return true;
   }
 
   /* Eine einzelne Probe in einen Graphen setzen. Gibt zurueck, ob etwas kam. */
@@ -601,6 +784,11 @@
     v = Math.max(0.05, Math.min(1.6, v));
     var datei = dateiVon(e, epoche);
     var buf = datei ? fertig(ctx, datei) : null;
+    var ziel = (e.fern && w.bus.fern) ? w.bus.fern : w.bus.werk;
+    if (e.versatz) wann += e.versatz;
+    var tief = e.duck === undefined ? 0.45 : e.duck;
+
+    if (e.nachbar) B.wage('ton.nachbar', function () { nachbarhof(w, epoche, wann); });
 
     if (buf) {
       var q = ctx.createBufferSource();
@@ -617,24 +805,24 @@
         g.gain.setValueAtTime(v, wann + Math.max(0.05, d - 0.25));
         g.gain.linearRampToValueAtTime(0.0001, wann + d);
       }
-      q.connect(g); g.connect(w.bus.werk);
+      q.connect(g); g.connect(ziel);
       /* start() MUSS vor stop() stehen. Andersherum wirft Chrome, der Wurf
          landet in B.lage, und spiele() gibt faelschlich false zurueck —
          genau das hat der erste Lauf im lebenden Spiel gezeigt. */
       q.start(wann);
       if (!laeuftWeiter) q.stop(wann + d + 0.05);
-      ducke(w, wann, 0.6);
+      if (!e.nachbar) ducke(w, wann, tief, e.halt || 0);
       return true;
     }
 
     if (datei) ladeStill(ctx, datei);              /* fuer das naechste Mal */
 
     var notfall = NOTFALL[String(name).split(':')[0]];
-    var stueck = ersatz(ctx, w.bus.werk,
+    var stueck = ersatz(ctx, ziel,
                         e.ersatz || (notfall && notfall.ersatz) || 'blatt',
                         wann, epoche, v);
     if (stueck && stueck !== true) w.schleifen[name] = { quelle: stueck, gain: null };
-    ducke(w, wann, 0.75);
+    if (!e.nachbar) ducke(w, wann, Math.min(0.75, tief + 0.25), 0);
     return true;
   }
 
@@ -700,6 +888,9 @@
     if (bettJetzt === epoche) return;
     bettJetzt = epoche;
 
+    /* Jede Epoche atmet anders tief — 1970 am tiefsten, weil ihr Band als
+       gleichfoermiges Maschinenbrummen aus dem Erzeuger kam. */
+    B.wage('ton.atem', function () { setzeAtem(w, epoche); });
 
     var jetzt = w.ctx.currentTime;
     blendeAus(w, liegend.bett, jetzt);
