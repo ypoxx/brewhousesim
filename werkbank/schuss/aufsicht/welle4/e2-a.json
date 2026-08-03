@@ -1,0 +1,4462 @@
+{
+ "epoche": 2,
+ "wochen": 400,
+ "fehler": [],
+ "abgebrochen": null,
+ "zielGesetzt": 1,
+ "festGesetzt": 1,
+ "kasseMin": 206,
+ "kasseMax": 1687,
+ "leiter": [
+  {
+   "jahr": "1600",
+   "kasse": "640",
+   "billigst": "170",
+   "mal": 3.76
+  },
+  {
+   "jahr": "1601",
+   "kasse": "377",
+   "billigst": "216",
+   "mal": 1.75
+  },
+  {
+   "jahr": "1602",
+   "kasse": "397",
+   "billigst": "135",
+   "mal": 2.94
+  },
+  {
+   "jahr": "1603",
+   "kasse": "364",
+   "billigst": "297",
+   "mal": 1.23
+  },
+  {
+   "jahr": "1604",
+   "kasse": "465",
+   "billigst": "135",
+   "mal": 3.44
+  },
+  {
+   "jahr": "1605",
+   "kasse": "525",
+   "billigst": "294",
+   "mal": 1.79
+  },
+  {
+   "jahr": "1606",
+   "kasse": "683",
+   "billigst": "182",
+   "mal": 3.75
+  },
+  {
+   "jahr": "1607",
+   "kasse": "480",
+   "billigst": "147",
+   "mal": 3.27
+  },
+  {
+   "jahr": "1608",
+   "kasse": "510",
+   "billigst": "189",
+   "mal": 2.7
+  },
+  {
+   "jahr": "1609",
+   "kasse": "470",
+   "billigst": "336",
+   "mal": 1.4
+  },
+  {
+   "jahr": "1610",
+   "kasse": "376",
+   "billigst": "167",
+   "mal": 2.25
+  },
+  {
+   "jahr": "1611",
+   "kasse": "295",
+   "billigst": "270",
+   "mal": 1.09
+  },
+  {
+   "jahr": "1612",
+   "kasse": "501",
+   "billigst": "243",
+   "mal": 2.06
+  },
+  {
+   "jahr": "1613",
+   "kasse": "492",
+   "billigst": "252",
+   "mal": 1.95
+  }
+ ],
+ "schluss": {
+  "jahr": 1613,
+  "woche": 11,
+  "kasse": 890,
+  "lage": 0
+ },
+ "jahre": [
+  {
+   "jahr": 1600,
+   "kasseMichaeli": 360,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1601,
+   "kasseMichaeli": 377,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ],
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1602,
+   "kasseMichaeli": 397,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ],
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ],
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1603,
+   "kasseMichaeli": 364,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ],
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ],
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ],
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1604,
+   "kasseMichaeli": 465,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ],
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ],
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ],
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ],
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1605,
+   "kasseMichaeli": 525,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ],
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ],
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ],
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ],
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ],
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1606,
+   "kasseMichaeli": 683,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ],
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ],
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ],
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ],
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ],
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ],
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1607,
+   "kasseMichaeli": 480,
+   "leiter": [
+    [
+     "1600",
+     "640",
+     "170",
+     "3,76×",
+     "210",
+     "3,05×"
+    ],
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ],
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ],
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ],
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ],
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ],
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ],
+    [
+     "1607",
+     "480",
+     "147",
+     "3,27×",
+     "240",
+     "2,00×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1608,
+   "kasseMichaeli": 510,
+   "leiter": [
+    [
+     "1601",
+     "377",
+     "216",
+     "1,75×",
+     "180",
+     "2,09×"
+    ],
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ],
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ],
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ],
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ],
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ],
+    [
+     "1607",
+     "480",
+     "147",
+     "3,27×",
+     "240",
+     "2,00×"
+    ],
+    [
+     "1608",
+     "510",
+     "189",
+     "2,70×",
+     "250",
+     "2,04×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1609,
+   "kasseMichaeli": 470,
+   "leiter": [
+    [
+     "1602",
+     "397",
+     "135",
+     "2,94×",
+     "180",
+     "2,21×"
+    ],
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ],
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ],
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ],
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ],
+    [
+     "1607",
+     "480",
+     "147",
+     "3,27×",
+     "240",
+     "2,00×"
+    ],
+    [
+     "1608",
+     "510",
+     "189",
+     "2,70×",
+     "250",
+     "2,04×"
+    ],
+    [
+     "1609",
+     "470",
+     "336",
+     "1,40×",
+     "270",
+     "1,74×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1610,
+   "kasseMichaeli": 376,
+   "leiter": [
+    [
+     "1603",
+     "364",
+     "297",
+     "1,23×",
+     "200",
+     "1,82×"
+    ],
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ],
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ],
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ],
+    [
+     "1607",
+     "480",
+     "147",
+     "3,27×",
+     "240",
+     "2,00×"
+    ],
+    [
+     "1608",
+     "510",
+     "189",
+     "2,70×",
+     "250",
+     "2,04×"
+    ],
+    [
+     "1609",
+     "470",
+     "336",
+     "1,40×",
+     "270",
+     "1,74×"
+    ],
+    [
+     "1610",
+     "376",
+     "167",
+     "2,25×",
+     "200",
+     "1,88×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1611,
+   "kasseMichaeli": 295,
+   "leiter": [
+    [
+     "1604",
+     "465",
+     "135",
+     "3,44×",
+     "200",
+     "2,33×"
+    ],
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ],
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ],
+    [
+     "1607",
+     "480",
+     "147",
+     "3,27×",
+     "240",
+     "2,00×"
+    ],
+    [
+     "1608",
+     "510",
+     "189",
+     "2,70×",
+     "250",
+     "2,04×"
+    ],
+    [
+     "1609",
+     "470",
+     "336",
+     "1,40×",
+     "270",
+     "1,74×"
+    ],
+    [
+     "1610",
+     "376",
+     "167",
+     "2,25×",
+     "200",
+     "1,88×"
+    ],
+    [
+     "1611",
+     "295",
+     "270",
+     "1,09×",
+     "220",
+     "1,34×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1612,
+   "kasseMichaeli": 501,
+   "leiter": [
+    [
+     "1605",
+     "525",
+     "294",
+     "1,79×",
+     "260",
+     "2,02×"
+    ],
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ],
+    [
+     "1607",
+     "480",
+     "147",
+     "3,27×",
+     "240",
+     "2,00×"
+    ],
+    [
+     "1608",
+     "510",
+     "189",
+     "2,70×",
+     "250",
+     "2,04×"
+    ],
+    [
+     "1609",
+     "470",
+     "336",
+     "1,40×",
+     "270",
+     "1,74×"
+    ],
+    [
+     "1610",
+     "376",
+     "167",
+     "2,25×",
+     "200",
+     "1,88×"
+    ],
+    [
+     "1611",
+     "295",
+     "270",
+     "1,09×",
+     "220",
+     "1,34×"
+    ],
+    [
+     "1612",
+     "501",
+     "243",
+     "2,06×",
+     "310",
+     "1,62×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1613,
+   "kasseMichaeli": 492,
+   "leiter": [
+    [
+     "1606",
+     "683",
+     "182",
+     "3,75×",
+     "320",
+     "2,13×"
+    ],
+    [
+     "1607",
+     "480",
+     "147",
+     "3,27×",
+     "240",
+     "2,00×"
+    ],
+    [
+     "1608",
+     "510",
+     "189",
+     "2,70×",
+     "250",
+     "2,04×"
+    ],
+    [
+     "1609",
+     "470",
+     "336",
+     "1,40×",
+     "270",
+     "1,74×"
+    ],
+    [
+     "1610",
+     "376",
+     "167",
+     "2,25×",
+     "200",
+     "1,88×"
+    ],
+    [
+     "1611",
+     "295",
+     "270",
+     "1,09×",
+     "220",
+     "1,34×"
+    ],
+    [
+     "1612",
+     "501",
+     "243",
+     "2,06×",
+     "310",
+     "1,62×"
+    ],
+    [
+     "1613",
+     "492",
+     "252",
+     "1,95×",
+     "300",
+     "1,64×"
+    ]
+   ]
+  }
+ ],
+ "reihe": [
+  {
+   "n": 0,
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 360,
+   "rohstoff": 65,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 1,
+   "jahr": 1600,
+   "woche": 2,
+   "kasse": 438,
+   "rohstoff": 41,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 2,
+   "jahr": 1600,
+   "woche": 3,
+   "kasse": 255,
+   "rohstoff": 77,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 3,
+   "jahr": 1600,
+   "woche": 4,
+   "kasse": 354,
+   "rohstoff": 61,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 4,
+   "jahr": 1600,
+   "woche": 5,
+   "kasse": 472,
+   "rohstoff": 53,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 5,
+   "jahr": 1600,
+   "woche": 6,
+   "kasse": 591,
+   "rohstoff": 45,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 6,
+   "jahr": 1600,
+   "woche": 7,
+   "kasse": 589,
+   "rohstoff": 97,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 7,
+   "jahr": 1600,
+   "woche": 8,
+   "kasse": 708,
+   "rohstoff": 89,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 8,
+   "jahr": 1600,
+   "woche": 9,
+   "kasse": 827,
+   "rohstoff": 81,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 9,
+   "jahr": 1600,
+   "woche": 10,
+   "kasse": 965,
+   "rohstoff": 81,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 10,
+   "jahr": 1600,
+   "woche": 11,
+   "kasse": 1102,
+   "rohstoff": 81,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 11,
+   "jahr": 1600,
+   "woche": 12,
+   "kasse": 1238,
+   "rohstoff": 81,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 12,
+   "jahr": 1600,
+   "woche": 13,
+   "kasse": 1340,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 13,
+   "jahr": 1600,
+   "woche": 14,
+   "kasse": 1349,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 14,
+   "jahr": 1600,
+   "woche": 15,
+   "kasse": 1357,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 15,
+   "jahr": 1600,
+   "woche": 16,
+   "kasse": 1363,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 16,
+   "jahr": 1600,
+   "woche": 17,
+   "kasse": 1369,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 17,
+   "jahr": 1600,
+   "woche": 18,
+   "kasse": 1375,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 18,
+   "jahr": 1600,
+   "woche": 19,
+   "kasse": 1376,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 19,
+   "jahr": 1600,
+   "woche": 20,
+   "kasse": 1377,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 20,
+   "jahr": 1600,
+   "woche": 21,
+   "kasse": 1378,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 21,
+   "jahr": 1600,
+   "woche": 22,
+   "kasse": 1379,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 22,
+   "jahr": 1600,
+   "woche": 23,
+   "kasse": 1378,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 23,
+   "jahr": 1600,
+   "woche": 24,
+   "kasse": 1379,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 24,
+   "jahr": 1600,
+   "woche": 25,
+   "kasse": 1379,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 25,
+   "jahr": 1600,
+   "woche": 26,
+   "kasse": 1380,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 26,
+   "jahr": 1600,
+   "woche": 27,
+   "kasse": 1381,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 27,
+   "jahr": 1600,
+   "woche": 28,
+   "kasse": 1382,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 28,
+   "jahr": 1600,
+   "woche": 29,
+   "kasse": 1382,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 29,
+   "jahr": 1600,
+   "woche": 30,
+   "kasse": 1383,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 30,
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 377,
+   "rohstoff": 81,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 31,
+   "jahr": 1601,
+   "woche": 2,
+   "kasse": 375,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 32,
+   "jahr": 1601,
+   "woche": 3,
+   "kasse": 373,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 33,
+   "jahr": 1601,
+   "woche": 4,
+   "kasse": 384,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 34,
+   "jahr": 1601,
+   "woche": 5,
+   "kasse": 394,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 35,
+   "jahr": 1601,
+   "woche": 6,
+   "kasse": 404,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 36,
+   "jahr": 1601,
+   "woche": 7,
+   "kasse": 414,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 37,
+   "jahr": 1601,
+   "woche": 8,
+   "kasse": 424,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 38,
+   "jahr": 1601,
+   "woche": 9,
+   "kasse": 434,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 39,
+   "jahr": 1601,
+   "woche": 10,
+   "kasse": 444,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 40,
+   "jahr": 1601,
+   "woche": 11,
+   "kasse": 454,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 41,
+   "jahr": 1601,
+   "woche": 12,
+   "kasse": 464,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 42,
+   "jahr": 1601,
+   "woche": 13,
+   "kasse": 474,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 43,
+   "jahr": 1601,
+   "woche": 14,
+   "kasse": 483,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 44,
+   "jahr": 1601,
+   "woche": 15,
+   "kasse": 493,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 45,
+   "jahr": 1601,
+   "woche": 16,
+   "kasse": 503,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 46,
+   "jahr": 1601,
+   "woche": 17,
+   "kasse": 513,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 47,
+   "jahr": 1601,
+   "woche": 18,
+   "kasse": 523,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 48,
+   "jahr": 1601,
+   "woche": 19,
+   "kasse": 533,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 49,
+   "jahr": 1601,
+   "woche": 20,
+   "kasse": 543,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 50,
+   "jahr": 1601,
+   "woche": 21,
+   "kasse": 553,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 51,
+   "jahr": 1601,
+   "woche": 22,
+   "kasse": 563,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 52,
+   "jahr": 1601,
+   "woche": 23,
+   "kasse": 573,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 53,
+   "jahr": 1601,
+   "woche": 24,
+   "kasse": 583,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 54,
+   "jahr": 1601,
+   "woche": 25,
+   "kasse": 593,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 55,
+   "jahr": 1601,
+   "woche": 26,
+   "kasse": 603,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 56,
+   "jahr": 1601,
+   "woche": 27,
+   "kasse": 613,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 57,
+   "jahr": 1601,
+   "woche": 28,
+   "kasse": 623,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 58,
+   "jahr": 1601,
+   "woche": 29,
+   "kasse": 633,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 59,
+   "jahr": 1601,
+   "woche": 30,
+   "kasse": 643,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 60,
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 397,
+   "rohstoff": 81,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 61,
+   "jahr": 1602,
+   "woche": 2,
+   "kasse": 334,
+   "rohstoff": 57,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 62,
+   "jahr": 1602,
+   "woche": 3,
+   "kasse": 271,
+   "rohstoff": 33,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 63,
+   "jahr": 1602,
+   "woche": 4,
+   "kasse": 247,
+   "rohstoff": 77,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 64,
+   "jahr": 1602,
+   "woche": 5,
+   "kasse": 383,
+   "rohstoff": 77,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 65,
+   "jahr": 1602,
+   "woche": 6,
+   "kasse": 520,
+   "rohstoff": 77,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 66,
+   "jahr": 1602,
+   "woche": 7,
+   "kasse": 595,
+   "rohstoff": 53,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 67,
+   "jahr": 1602,
+   "woche": 8,
+   "kasse": 571,
+   "rohstoff": 97,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 68,
+   "jahr": 1602,
+   "woche": 9,
+   "kasse": 687,
+   "rohstoff": 89,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 69,
+   "jahr": 1602,
+   "woche": 10,
+   "kasse": 824,
+   "rohstoff": 89,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 70,
+   "jahr": 1602,
+   "woche": 11,
+   "kasse": 960,
+   "rohstoff": 89,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 71,
+   "jahr": 1602,
+   "woche": 12,
+   "kasse": 1036,
+   "rohstoff": 65,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 72,
+   "jahr": 1602,
+   "woche": 13,
+   "kasse": 1047,
+   "rohstoff": 41,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 73,
+   "jahr": 1602,
+   "woche": 14,
+   "kasse": 978,
+   "rohstoff": 93,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 74,
+   "jahr": 1602,
+   "woche": 15,
+   "kasse": 1050,
+   "rohstoff": 93,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 75,
+   "jahr": 1602,
+   "woche": 16,
+   "kasse": 1114,
+   "rohstoff": 93,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 76,
+   "jahr": 1602,
+   "woche": 17,
+   "kasse": 1181,
+   "rohstoff": 93,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 77,
+   "jahr": 1602,
+   "woche": 18,
+   "kasse": 1250,
+   "rohstoff": 93,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 78,
+   "jahr": 1602,
+   "woche": 19,
+   "kasse": 1320,
+   "rohstoff": 93,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 79,
+   "jahr": 1602,
+   "woche": 20,
+   "kasse": 1387,
+   "rohstoff": 93,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 80,
+   "jahr": 1602,
+   "woche": 21,
+   "kasse": 1457,
+   "rohstoff": 93,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 81,
+   "jahr": 1602,
+   "woche": 22,
+   "kasse": 1526,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 82,
+   "jahr": 1602,
+   "woche": 23,
+   "kasse": 1532,
+   "rohstoff": 93,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 83,
+   "jahr": 1602,
+   "woche": 24,
+   "kasse": 1537,
+   "rohstoff": 93,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 84,
+   "jahr": 1602,
+   "woche": 25,
+   "kasse": 1537,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 85,
+   "jahr": 1602,
+   "woche": 26,
+   "kasse": 1537,
+   "rohstoff": 93,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 86,
+   "jahr": 1602,
+   "woche": 27,
+   "kasse": 1536,
+   "rohstoff": 93,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 87,
+   "jahr": 1602,
+   "woche": 28,
+   "kasse": 1536,
+   "rohstoff": 93,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 88,
+   "jahr": 1602,
+   "woche": 29,
+   "kasse": 1536,
+   "rohstoff": 93,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 89,
+   "jahr": 1602,
+   "woche": 30,
+   "kasse": 1536,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 90,
+   "jahr": 1603,
+   "woche": 1,
+   "kasse": 364,
+   "rohstoff": 93,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 91,
+   "jahr": 1603,
+   "woche": 2,
+   "kasse": 362,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 92,
+   "jahr": 1603,
+   "woche": 3,
+   "kasse": 367,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 93,
+   "jahr": 1603,
+   "woche": 4,
+   "kasse": 371,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 94,
+   "jahr": 1603,
+   "woche": 5,
+   "kasse": 376,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 95,
+   "jahr": 1603,
+   "woche": 6,
+   "kasse": 380,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 96,
+   "jahr": 1603,
+   "woche": 7,
+   "kasse": 384,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 97,
+   "jahr": 1603,
+   "woche": 8,
+   "kasse": 388,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 98,
+   "jahr": 1603,
+   "woche": 9,
+   "kasse": 392,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 99,
+   "jahr": 1603,
+   "woche": 10,
+   "kasse": 397,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 100,
+   "jahr": 1603,
+   "woche": 11,
+   "kasse": 401,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 101,
+   "jahr": 1603,
+   "woche": 12,
+   "kasse": 404,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 102,
+   "jahr": 1603,
+   "woche": 13,
+   "kasse": 409,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 103,
+   "jahr": 1603,
+   "woche": 14,
+   "kasse": 413,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 104,
+   "jahr": 1603,
+   "woche": 15,
+   "kasse": 417,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 105,
+   "jahr": 1603,
+   "woche": 16,
+   "kasse": 421,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 106,
+   "jahr": 1603,
+   "woche": 17,
+   "kasse": 425,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 107,
+   "jahr": 1603,
+   "woche": 18,
+   "kasse": 430,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 108,
+   "jahr": 1603,
+   "woche": 19,
+   "kasse": 434,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 109,
+   "jahr": 1603,
+   "woche": 20,
+   "kasse": 438,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 110,
+   "jahr": 1603,
+   "woche": 21,
+   "kasse": 443,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 111,
+   "jahr": 1603,
+   "woche": 22,
+   "kasse": 448,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 112,
+   "jahr": 1603,
+   "woche": 23,
+   "kasse": 453,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 113,
+   "jahr": 1603,
+   "woche": 24,
+   "kasse": 458,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 114,
+   "jahr": 1603,
+   "woche": 25,
+   "kasse": 459,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 115,
+   "jahr": 1603,
+   "woche": 26,
+   "kasse": 463,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 116,
+   "jahr": 1603,
+   "woche": 27,
+   "kasse": 467,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 117,
+   "jahr": 1603,
+   "woche": 28,
+   "kasse": 473,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 118,
+   "jahr": 1603,
+   "woche": 29,
+   "kasse": 484,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 119,
+   "jahr": 1603,
+   "woche": 30,
+   "kasse": 493,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 120,
+   "jahr": 1604,
+   "woche": 1,
+   "kasse": 465,
+   "rohstoff": 93,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 121,
+   "jahr": 1604,
+   "woche": 2,
+   "kasse": 402,
+   "rohstoff": 69,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 122,
+   "jahr": 1604,
+   "woche": 3,
+   "kasse": 339,
+   "rohstoff": 45,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 123,
+   "jahr": 1604,
+   "woche": 4,
+   "kasse": 318,
+   "rohstoff": 97,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 124,
+   "jahr": 1604,
+   "woche": 5,
+   "kasse": 439,
+   "rohstoff": 97,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 125,
+   "jahr": 1604,
+   "woche": 6,
+   "kasse": 560,
+   "rohstoff": 97,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 126,
+   "jahr": 1604,
+   "woche": 7,
+   "kasse": 620,
+   "rohstoff": 73,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 127,
+   "jahr": 1604,
+   "woche": 8,
+   "kasse": 673,
+   "rohstoff": 65,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 128,
+   "jahr": 1604,
+   "woche": 9,
+   "kasse": 683,
+   "rohstoff": 41,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 129,
+   "jahr": 1604,
+   "woche": 10,
+   "kasse": 612,
+   "rohstoff": 93,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 130,
+   "jahr": 1604,
+   "woche": 11,
+   "kasse": 683,
+   "rohstoff": 93,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 131,
+   "jahr": 1604,
+   "woche": 12,
+   "kasse": 755,
+   "rohstoff": 93,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 132,
+   "jahr": 1604,
+   "woche": 13,
+   "kasse": 826,
+   "rohstoff": 93,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 133,
+   "jahr": 1604,
+   "woche": 14,
+   "kasse": 897,
+   "rohstoff": 93,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 134,
+   "jahr": 1604,
+   "woche": 15,
+   "kasse": 948,
+   "rohstoff": 85,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 135,
+   "jahr": 1604,
+   "woche": 16,
+   "kasse": 999,
+   "rohstoff": 77,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 136,
+   "jahr": 1604,
+   "woche": 17,
+   "kasse": 1050,
+   "rohstoff": 69,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 137,
+   "jahr": 1604,
+   "woche": 18,
+   "kasse": 1102,
+   "rohstoff": 61,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 138,
+   "jahr": 1604,
+   "woche": 19,
+   "kasse": 1153,
+   "rohstoff": 53,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 139,
+   "jahr": 1604,
+   "woche": 20,
+   "kasse": 1204,
+   "rohstoff": 45,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 140,
+   "jahr": 1604,
+   "woche": 21,
+   "kasse": 1133,
+   "rohstoff": 97,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 141,
+   "jahr": 1604,
+   "woche": 22,
+   "kasse": 1183,
+   "rohstoff": 89,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 142,
+   "jahr": 1604,
+   "woche": 23,
+   "kasse": 1234,
+   "rohstoff": 81,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 143,
+   "jahr": 1604,
+   "woche": 24,
+   "kasse": 1305,
+   "rohstoff": 81,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 144,
+   "jahr": 1604,
+   "woche": 25,
+   "kasse": 1377,
+   "rohstoff": 81,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 145,
+   "jahr": 1604,
+   "woche": 26,
+   "kasse": 1428,
+   "rohstoff": 73,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 146,
+   "jahr": 1604,
+   "woche": 27,
+   "kasse": 1479,
+   "rohstoff": 65,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 147,
+   "jahr": 1604,
+   "woche": 28,
+   "kasse": 1530,
+   "rohstoff": 57,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 148,
+   "jahr": 1604,
+   "woche": 29,
+   "kasse": 1581,
+   "rohstoff": 49,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 149,
+   "jahr": 1604,
+   "woche": 30,
+   "kasse": 1652,
+   "rohstoff": 49,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 150,
+   "jahr": 1605,
+   "woche": 1,
+   "kasse": 525,
+   "rohstoff": 49,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 151,
+   "jahr": 1605,
+   "woche": 2,
+   "kasse": 503,
+   "rohstoff": 41,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 152,
+   "jahr": 1605,
+   "woche": 3,
+   "kasse": 354,
+   "rohstoff": 93,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 153,
+   "jahr": 1605,
+   "woche": 4,
+   "kasse": 335,
+   "rohstoff": 85,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 154,
+   "jahr": 1605,
+   "woche": 5,
+   "kasse": 315,
+   "rohstoff": 77,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 155,
+   "jahr": 1605,
+   "woche": 6,
+   "kasse": 328,
+   "rohstoff": 69,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 156,
+   "jahr": 1605,
+   "woche": 7,
+   "kasse": 360,
+   "rohstoff": 61,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 157,
+   "jahr": 1605,
+   "woche": 8,
+   "kasse": 422,
+   "rohstoff": 53,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 158,
+   "jahr": 1605,
+   "woche": 9,
+   "kasse": 483,
+   "rohstoff": 45,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 159,
+   "jahr": 1605,
+   "woche": 10,
+   "kasse": 423,
+   "rohstoff": 97,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 160,
+   "jahr": 1605,
+   "woche": 11,
+   "kasse": 496,
+   "rohstoff": 89,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 161,
+   "jahr": 1605,
+   "woche": 12,
+   "kasse": 579,
+   "rohstoff": 81,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 162,
+   "jahr": 1605,
+   "woche": 13,
+   "kasse": 662,
+   "rohstoff": 73,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 163,
+   "jahr": 1605,
+   "woche": 14,
+   "kasse": 745,
+   "rohstoff": 65,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 164,
+   "jahr": 1605,
+   "woche": 15,
+   "kasse": 828,
+   "rohstoff": 57,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 165,
+   "jahr": 1605,
+   "woche": 16,
+   "kasse": 911,
+   "rohstoff": 49,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 166,
+   "jahr": 1605,
+   "woche": 17,
+   "kasse": 994,
+   "rohstoff": 41,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 167,
+   "jahr": 1605,
+   "woche": 18,
+   "kasse": 955,
+   "rohstoff": 93,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 168,
+   "jahr": 1605,
+   "woche": 19,
+   "kasse": 1038,
+   "rohstoff": 85,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 169,
+   "jahr": 1605,
+   "woche": 20,
+   "kasse": 1120,
+   "rohstoff": 77,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 170,
+   "jahr": 1605,
+   "woche": 21,
+   "kasse": 1203,
+   "rohstoff": 69,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 171,
+   "jahr": 1605,
+   "woche": 22,
+   "kasse": 1286,
+   "rohstoff": 61,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 172,
+   "jahr": 1605,
+   "woche": 23,
+   "kasse": 1369,
+   "rohstoff": 53,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 173,
+   "jahr": 1605,
+   "woche": 24,
+   "kasse": 1451,
+   "rohstoff": 45,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 174,
+   "jahr": 1605,
+   "woche": 25,
+   "kasse": 1412,
+   "rohstoff": 97,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 175,
+   "jahr": 1605,
+   "woche": 26,
+   "kasse": 1495,
+   "rohstoff": 89,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 176,
+   "jahr": 1605,
+   "woche": 27,
+   "kasse": 1577,
+   "rohstoff": 81,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 177,
+   "jahr": 1605,
+   "woche": 28,
+   "kasse": 1660,
+   "rohstoff": 73,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 178,
+   "jahr": 1605,
+   "woche": 29,
+   "kasse": 1673,
+   "rohstoff": 65,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 179,
+   "jahr": 1605,
+   "woche": 30,
+   "kasse": 1687,
+   "rohstoff": 57,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 180,
+   "jahr": 1606,
+   "woche": 1,
+   "kasse": 683,
+   "rohstoff": 57,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 181,
+   "jahr": 1606,
+   "woche": 2,
+   "kasse": 587,
+   "rohstoff": 93,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 182,
+   "jahr": 1606,
+   "woche": 3,
+   "kasse": 544,
+   "rohstoff": 77,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 183,
+   "jahr": 1606,
+   "woche": 4,
+   "kasse": 610,
+   "rohstoff": 69,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 184,
+   "jahr": 1606,
+   "woche": 5,
+   "kasse": 696,
+   "rohstoff": 69,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 185,
+   "jahr": 1606,
+   "woche": 6,
+   "kasse": 783,
+   "rohstoff": 69,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 186,
+   "jahr": 1606,
+   "woche": 7,
+   "kasse": 869,
+   "rohstoff": 69,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 187,
+   "jahr": 1606,
+   "woche": 8,
+   "kasse": 895,
+   "rohstoff": 45,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 188,
+   "jahr": 1606,
+   "woche": 9,
+   "kasse": 766,
+   "rohstoff": 89,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 189,
+   "jahr": 1606,
+   "woche": 10,
+   "kasse": 783,
+   "rohstoff": 81,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 190,
+   "jahr": 1606,
+   "woche": 11,
+   "kasse": 819,
+   "rohstoff": 81,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 191,
+   "jahr": 1606,
+   "woche": 12,
+   "kasse": 856,
+   "rohstoff": 81,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 192,
+   "jahr": 1606,
+   "woche": 13,
+   "kasse": 892,
+   "rohstoff": 81,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 193,
+   "jahr": 1606,
+   "woche": 14,
+   "kasse": 929,
+   "rohstoff": 81,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 194,
+   "jahr": 1606,
+   "woche": 15,
+   "kasse": 965,
+   "rohstoff": 81,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 195,
+   "jahr": 1606,
+   "woche": 16,
+   "kasse": 941,
+   "rohstoff": 57,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 196,
+   "jahr": 1606,
+   "woche": 17,
+   "kasse": 957,
+   "rohstoff": 49,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 197,
+   "jahr": 1606,
+   "woche": 18,
+   "kasse": 994,
+   "rohstoff": 49,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 198,
+   "jahr": 1606,
+   "woche": 19,
+   "kasse": 1030,
+   "rohstoff": 49,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 199,
+   "jahr": 1606,
+   "woche": 20,
+   "kasse": 1067,
+   "rohstoff": 49,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 200,
+   "jahr": 1606,
+   "woche": 21,
+   "kasse": 1103,
+   "rohstoff": 49,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 201,
+   "jahr": 1606,
+   "woche": 22,
+   "kasse": 1140,
+   "rohstoff": 49,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 202,
+   "jahr": 1606,
+   "woche": 23,
+   "kasse": 1176,
+   "rohstoff": 49,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 203,
+   "jahr": 1606,
+   "woche": 24,
+   "kasse": 1213,
+   "rohstoff": 49,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 204,
+   "jahr": 1606,
+   "woche": 25,
+   "kasse": 1249,
+   "rohstoff": 49,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 205,
+   "jahr": 1606,
+   "woche": 26,
+   "kasse": 1122,
+   "rohstoff": 93,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 206,
+   "jahr": 1606,
+   "woche": 27,
+   "kasse": 1138,
+   "rohstoff": 85,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 207,
+   "jahr": 1606,
+   "woche": 28,
+   "kasse": 1175,
+   "rohstoff": 85,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 208,
+   "jahr": 1606,
+   "woche": 29,
+   "kasse": 1211,
+   "rohstoff": 85,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 209,
+   "jahr": 1606,
+   "woche": 30,
+   "kasse": 1248,
+   "rohstoff": 85,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 210,
+   "jahr": 1607,
+   "woche": 1,
+   "kasse": 480,
+   "rohstoff": 85,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 211,
+   "jahr": 1607,
+   "woche": 2,
+   "kasse": 478,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 212,
+   "jahr": 1607,
+   "woche": 3,
+   "kasse": 486,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 213,
+   "jahr": 1607,
+   "woche": 4,
+   "kasse": 493,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 214,
+   "jahr": 1607,
+   "woche": 5,
+   "kasse": 500,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 215,
+   "jahr": 1607,
+   "woche": 6,
+   "kasse": 507,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 216,
+   "jahr": 1607,
+   "woche": 7,
+   "kasse": 514,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 217,
+   "jahr": 1607,
+   "woche": 8,
+   "kasse": 521,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 218,
+   "jahr": 1607,
+   "woche": 9,
+   "kasse": 528,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 219,
+   "jahr": 1607,
+   "woche": 10,
+   "kasse": 535,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 220,
+   "jahr": 1607,
+   "woche": 11,
+   "kasse": 542,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 221,
+   "jahr": 1607,
+   "woche": 12,
+   "kasse": 549,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 222,
+   "jahr": 1607,
+   "woche": 13,
+   "kasse": 557,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 223,
+   "jahr": 1607,
+   "woche": 14,
+   "kasse": 564,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 224,
+   "jahr": 1607,
+   "woche": 15,
+   "kasse": 571,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 225,
+   "jahr": 1607,
+   "woche": 16,
+   "kasse": 578,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 226,
+   "jahr": 1607,
+   "woche": 17,
+   "kasse": 585,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 227,
+   "jahr": 1607,
+   "woche": 18,
+   "kasse": 592,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 228,
+   "jahr": 1607,
+   "woche": 19,
+   "kasse": 599,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 229,
+   "jahr": 1607,
+   "woche": 20,
+   "kasse": 606,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 230,
+   "jahr": 1607,
+   "woche": 21,
+   "kasse": 613,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 231,
+   "jahr": 1607,
+   "woche": 22,
+   "kasse": 620,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 232,
+   "jahr": 1607,
+   "woche": 23,
+   "kasse": 627,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 233,
+   "jahr": 1607,
+   "woche": 24,
+   "kasse": 634,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 234,
+   "jahr": 1607,
+   "woche": 25,
+   "kasse": 641,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 235,
+   "jahr": 1607,
+   "woche": 26,
+   "kasse": 648,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 236,
+   "jahr": 1607,
+   "woche": 27,
+   "kasse": 655,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 237,
+   "jahr": 1607,
+   "woche": 28,
+   "kasse": 662,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 238,
+   "jahr": 1607,
+   "woche": 29,
+   "kasse": 670,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 239,
+   "jahr": 1607,
+   "woche": 30,
+   "kasse": 683,
+   "rohstoff": 85,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 240,
+   "jahr": 1608,
+   "woche": 1,
+   "kasse": 510,
+   "rohstoff": 85,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 241,
+   "jahr": 1608,
+   "woche": 2,
+   "kasse": 444,
+   "rohstoff": 61,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 242,
+   "jahr": 1608,
+   "woche": 3,
+   "kasse": 254,
+   "rohstoff": 97,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 243,
+   "jahr": 1608,
+   "woche": 4,
+   "kasse": 366,
+   "rohstoff": 97,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 244,
+   "jahr": 1608,
+   "woche": 5,
+   "kasse": 477,
+   "rohstoff": 97,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 245,
+   "jahr": 1608,
+   "woche": 6,
+   "kasse": 587,
+   "rohstoff": 97,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 246,
+   "jahr": 1608,
+   "woche": 7,
+   "kasse": 698,
+   "rohstoff": 97,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 247,
+   "jahr": 1608,
+   "woche": 8,
+   "kasse": 644,
+   "rohstoff": 73,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 248,
+   "jahr": 1608,
+   "woche": 9,
+   "kasse": 599,
+   "rohstoff": 57,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 249,
+   "jahr": 1608,
+   "woche": 10,
+   "kasse": 671,
+   "rohstoff": 57,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 250,
+   "jahr": 1608,
+   "woche": 11,
+   "kasse": 740,
+   "rohstoff": 57,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 251,
+   "jahr": 1608,
+   "woche": 12,
+   "kasse": 811,
+   "rohstoff": 57,
+   "faesser": 15,
+   "plaetze": 24
+  },
+  {
+   "n": 252,
+   "jahr": 1608,
+   "woche": 13,
+   "kasse": 886,
+   "rohstoff": 57,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 253,
+   "jahr": 1608,
+   "woche": 14,
+   "kasse": 792,
+   "rohstoff": 93,
+   "faesser": 7,
+   "plaetze": 24
+  },
+  {
+   "n": 254,
+   "jahr": 1608,
+   "woche": 15,
+   "kasse": 860,
+   "rohstoff": 85,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 255,
+   "jahr": 1608,
+   "woche": 16,
+   "kasse": 951,
+   "rohstoff": 85,
+   "faesser": 19,
+   "plaetze": 24
+  },
+  {
+   "n": 256,
+   "jahr": 1608,
+   "woche": 17,
+   "kasse": 1042,
+   "rohstoff": 85,
+   "faesser": 11,
+   "plaetze": 24
+  },
+  {
+   "n": 257,
+   "jahr": 1608,
+   "woche": 18,
+   "kasse": 1134,
+   "rohstoff": 85,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 258,
+   "jahr": 1608,
+   "woche": 19,
+   "kasse": 1161,
+   "rohstoff": 61,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 259,
+   "jahr": 1608,
+   "woche": 20,
+   "kasse": 1156,
+   "rohstoff": 53,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 260,
+   "jahr": 1608,
+   "woche": 21,
+   "kasse": 1152,
+   "rohstoff": 45,
+   "faesser": 17,
+   "plaetze": 24
+  },
+  {
+   "n": 261,
+   "jahr": 1608,
+   "woche": 22,
+   "kasse": 1168,
+   "rohstoff": 45,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 262,
+   "jahr": 1608,
+   "woche": 23,
+   "kasse": 1184,
+   "rohstoff": 45,
+   "faesser": 15,
+   "plaetze": 24
+  },
+  {
+   "n": 263,
+   "jahr": 1608,
+   "woche": 24,
+   "kasse": 1200,
+   "rohstoff": 45,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 264,
+   "jahr": 1608,
+   "woche": 25,
+   "kasse": 1217,
+   "rohstoff": 45,
+   "faesser": 13,
+   "plaetze": 24
+  },
+  {
+   "n": 265,
+   "jahr": 1608,
+   "woche": 26,
+   "kasse": 1045,
+   "rohstoff": 81,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 266,
+   "jahr": 1608,
+   "woche": 27,
+   "kasse": 1061,
+   "rohstoff": 81,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 267,
+   "jahr": 1608,
+   "woche": 28,
+   "kasse": 1077,
+   "rohstoff": 81,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 268,
+   "jahr": 1608,
+   "woche": 29,
+   "kasse": 1094,
+   "rohstoff": 81,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 269,
+   "jahr": 1608,
+   "woche": 30,
+   "kasse": 1110,
+   "rohstoff": 81,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 270,
+   "jahr": 1609,
+   "woche": 1,
+   "kasse": 470,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 271,
+   "jahr": 1609,
+   "woche": 2,
+   "kasse": 468,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 272,
+   "jahr": 1609,
+   "woche": 3,
+   "kasse": 504,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 273,
+   "jahr": 1609,
+   "woche": 4,
+   "kasse": 504,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 274,
+   "jahr": 1609,
+   "woche": 5,
+   "kasse": 504,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 275,
+   "jahr": 1609,
+   "woche": 6,
+   "kasse": 503,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 276,
+   "jahr": 1609,
+   "woche": 7,
+   "kasse": 503,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 277,
+   "jahr": 1609,
+   "woche": 8,
+   "kasse": 503,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 278,
+   "jahr": 1609,
+   "woche": 9,
+   "kasse": 503,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 279,
+   "jahr": 1609,
+   "woche": 10,
+   "kasse": 503,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 280,
+   "jahr": 1609,
+   "woche": 11,
+   "kasse": 502,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 281,
+   "jahr": 1609,
+   "woche": 12,
+   "kasse": 502,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 282,
+   "jahr": 1609,
+   "woche": 13,
+   "kasse": 502,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 283,
+   "jahr": 1609,
+   "woche": 14,
+   "kasse": 502,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 284,
+   "jahr": 1609,
+   "woche": 15,
+   "kasse": 502,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 285,
+   "jahr": 1609,
+   "woche": 16,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 286,
+   "jahr": 1609,
+   "woche": 17,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 287,
+   "jahr": 1609,
+   "woche": 18,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 288,
+   "jahr": 1609,
+   "woche": 19,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 289,
+   "jahr": 1609,
+   "woche": 20,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 290,
+   "jahr": 1609,
+   "woche": 21,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 291,
+   "jahr": 1609,
+   "woche": 22,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 292,
+   "jahr": 1609,
+   "woche": 23,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 293,
+   "jahr": 1609,
+   "woche": 24,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 294,
+   "jahr": 1609,
+   "woche": 25,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 295,
+   "jahr": 1609,
+   "woche": 26,
+   "kasse": 501,
+   "rohstoff": 81,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 296,
+   "jahr": 1609,
+   "woche": 27,
+   "kasse": 499,
+   "rohstoff": 81,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 297,
+   "jahr": 1609,
+   "woche": 28,
+   "kasse": 499,
+   "rohstoff": 81,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 298,
+   "jahr": 1609,
+   "woche": 29,
+   "kasse": 499,
+   "rohstoff": 81,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 299,
+   "jahr": 1609,
+   "woche": 30,
+   "kasse": 498,
+   "rohstoff": 81,
+   "faesser": 3,
+   "plaetze": 24
+  },
+  {
+   "n": 300,
+   "jahr": 1610,
+   "woche": 1,
+   "kasse": 376,
+   "rohstoff": 81,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 301,
+   "jahr": 1610,
+   "woche": 2,
+   "kasse": 310,
+   "rohstoff": 57,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 302,
+   "jahr": 1610,
+   "woche": 3,
+   "kasse": 265,
+   "rohstoff": 41,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 303,
+   "jahr": 1610,
+   "woche": 4,
+   "kasse": 341,
+   "rohstoff": 33,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 304,
+   "jahr": 1610,
+   "woche": 5,
+   "kasse": 325,
+   "rohstoff": 93,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 305,
+   "jahr": 1610,
+   "woche": 6,
+   "kasse": 473,
+   "rohstoff": 93,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 306,
+   "jahr": 1610,
+   "woche": 7,
+   "kasse": 586,
+   "rohstoff": 93,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 307,
+   "jahr": 1610,
+   "woche": 8,
+   "kasse": 538,
+   "rohstoff": 69,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 308,
+   "jahr": 1610,
+   "woche": 9,
+   "kasse": 515,
+   "rohstoff": 61,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 309,
+   "jahr": 1610,
+   "woche": 10,
+   "kasse": 607,
+   "rohstoff": 61,
+   "faesser": 11,
+   "plaetze": 24
+  },
+  {
+   "n": 310,
+   "jahr": 1610,
+   "woche": 11,
+   "kasse": 700,
+   "rohstoff": 61,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 311,
+   "jahr": 1610,
+   "woche": 12,
+   "kasse": 603,
+   "rohstoff": 97,
+   "faesser": 1,
+   "plaetze": 24
+  },
+  {
+   "n": 312,
+   "jahr": 1610,
+   "woche": 13,
+   "kasse": 598,
+   "rohstoff": 89,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 313,
+   "jahr": 1610,
+   "woche": 14,
+   "kasse": 594,
+   "rohstoff": 81,
+   "faesser": 15,
+   "plaetze": 24
+  },
+  {
+   "n": 314,
+   "jahr": 1610,
+   "woche": 15,
+   "kasse": 610,
+   "rohstoff": 81,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 315,
+   "jahr": 1610,
+   "woche": 16,
+   "kasse": 626,
+   "rohstoff": 81,
+   "faesser": 19,
+   "plaetze": 24
+  },
+  {
+   "n": 316,
+   "jahr": 1610,
+   "woche": 17,
+   "kasse": 642,
+   "rohstoff": 81,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 317,
+   "jahr": 1610,
+   "woche": 18,
+   "kasse": 659,
+   "rohstoff": 81,
+   "faesser": 17,
+   "plaetze": 24
+  },
+  {
+   "n": 318,
+   "jahr": 1610,
+   "woche": 19,
+   "kasse": 675,
+   "rohstoff": 81,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 319,
+   "jahr": 1610,
+   "woche": 20,
+   "kasse": 691,
+   "rohstoff": 81,
+   "faesser": 15,
+   "plaetze": 24
+  },
+  {
+   "n": 320,
+   "jahr": 1610,
+   "woche": 21,
+   "kasse": 707,
+   "rohstoff": 81,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 321,
+   "jahr": 1610,
+   "woche": 22,
+   "kasse": 724,
+   "rohstoff": 81,
+   "faesser": 13,
+   "plaetze": 24
+  },
+  {
+   "n": 322,
+   "jahr": 1610,
+   "woche": 23,
+   "kasse": 740,
+   "rohstoff": 81,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 323,
+   "jahr": 1610,
+   "woche": 24,
+   "kasse": 756,
+   "rohstoff": 81,
+   "faesser": 11,
+   "plaetze": 24
+  },
+  {
+   "n": 324,
+   "jahr": 1610,
+   "woche": 25,
+   "kasse": 708,
+   "rohstoff": 57,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 325,
+   "jahr": 1610,
+   "woche": 26,
+   "kasse": 704,
+   "rohstoff": 49,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 326,
+   "jahr": 1610,
+   "woche": 27,
+   "kasse": 720,
+   "rohstoff": 49,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 327,
+   "jahr": 1610,
+   "woche": 28,
+   "kasse": 736,
+   "rohstoff": 49,
+   "faesser": 17,
+   "plaetze": 24
+  },
+  {
+   "n": 328,
+   "jahr": 1610,
+   "woche": 29,
+   "kasse": 752,
+   "rohstoff": 49,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 329,
+   "jahr": 1610,
+   "woche": 30,
+   "kasse": 769,
+   "rohstoff": 49,
+   "faesser": 15,
+   "plaetze": 24
+  },
+  {
+   "n": 330,
+   "jahr": 1611,
+   "woche": 1,
+   "kasse": 295,
+   "rohstoff": 49,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 331,
+   "jahr": 1611,
+   "woche": 2,
+   "kasse": 229,
+   "rohstoff": 25,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 332,
+   "jahr": 1611,
+   "woche": 3,
+   "kasse": 206,
+   "rohstoff": 17,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 333,
+   "jahr": 1611,
+   "woche": 4,
+   "kasse": 357,
+   "rohstoff": 17,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 334,
+   "jahr": 1611,
+   "woche": 5,
+   "kasse": 383,
+   "rohstoff": 77,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 335,
+   "jahr": 1611,
+   "woche": 6,
+   "kasse": 396,
+   "rohstoff": 53,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 336,
+   "jahr": 1611,
+   "woche": 7,
+   "kasse": 351,
+   "rohstoff": 37,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 337,
+   "jahr": 1611,
+   "woche": 8,
+   "kasse": 301,
+   "rohstoff": 97,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 338,
+   "jahr": 1611,
+   "woche": 9,
+   "kasse": 376,
+   "rohstoff": 97,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 339,
+   "jahr": 1611,
+   "woche": 10,
+   "kasse": 451,
+   "rohstoff": 97,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 340,
+   "jahr": 1611,
+   "woche": 11,
+   "kasse": 526,
+   "rohstoff": 97,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 341,
+   "jahr": 1611,
+   "woche": 12,
+   "kasse": 601,
+   "rohstoff": 97,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 342,
+   "jahr": 1611,
+   "woche": 13,
+   "kasse": 674,
+   "rohstoff": 97,
+   "faesser": 4,
+   "plaetze": 24
+  },
+  {
+   "n": 343,
+   "jahr": 1611,
+   "woche": 14,
+   "kasse": 685,
+   "rohstoff": 73,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 344,
+   "jahr": 1611,
+   "woche": 15,
+   "kasse": 662,
+   "rohstoff": 65,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 345,
+   "jahr": 1611,
+   "woche": 16,
+   "kasse": 737,
+   "rohstoff": 65,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 346,
+   "jahr": 1611,
+   "woche": 17,
+   "kasse": 812,
+   "rohstoff": 65,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 347,
+   "jahr": 1611,
+   "woche": 18,
+   "kasse": 889,
+   "rohstoff": 65,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 348,
+   "jahr": 1611,
+   "woche": 19,
+   "kasse": 900,
+   "rohstoff": 41,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 349,
+   "jahr": 1611,
+   "woche": 20,
+   "kasse": 790,
+   "rohstoff": 93,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 350,
+   "jahr": 1611,
+   "woche": 21,
+   "kasse": 827,
+   "rohstoff": 93,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 351,
+   "jahr": 1611,
+   "woche": 22,
+   "kasse": 865,
+   "rohstoff": 93,
+   "faesser": 16,
+   "plaetze": 24
+  },
+  {
+   "n": 352,
+   "jahr": 1611,
+   "woche": 23,
+   "kasse": 902,
+   "rohstoff": 93,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 353,
+   "jahr": 1611,
+   "woche": 24,
+   "kasse": 940,
+   "rohstoff": 93,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 354,
+   "jahr": 1611,
+   "woche": 25,
+   "kasse": 977,
+   "rohstoff": 93,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 355,
+   "jahr": 1611,
+   "woche": 26,
+   "kasse": 1015,
+   "rohstoff": 93,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 356,
+   "jahr": 1611,
+   "woche": 27,
+   "kasse": 988,
+   "rohstoff": 69,
+   "faesser": 8,
+   "plaetze": 24
+  },
+  {
+   "n": 357,
+   "jahr": 1611,
+   "woche": 28,
+   "kasse": 1004,
+   "rohstoff": 61,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 358,
+   "jahr": 1611,
+   "woche": 29,
+   "kasse": 1042,
+   "rohstoff": 61,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 359,
+   "jahr": 1611,
+   "woche": 30,
+   "kasse": 1079,
+   "rohstoff": 61,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 360,
+   "jahr": 1612,
+   "woche": 1,
+   "kasse": 501,
+   "rohstoff": 61,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 361,
+   "jahr": 1612,
+   "woche": 2,
+   "kasse": 309,
+   "rohstoff": 97,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 362,
+   "jahr": 1612,
+   "woche": 3,
+   "kasse": 286,
+   "rohstoff": 89,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 363,
+   "jahr": 1612,
+   "woche": 4,
+   "kasse": 441,
+   "rohstoff": 89,
+   "faesser": 10,
+   "plaetze": 24
+  },
+  {
+   "n": 364,
+   "jahr": 1612,
+   "woche": 5,
+   "kasse": 596,
+   "rohstoff": 89,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 365,
+   "jahr": 1612,
+   "woche": 6,
+   "kasse": 572,
+   "rohstoff": 65,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 366,
+   "jahr": 1612,
+   "woche": 7,
+   "kasse": 527,
+   "rohstoff": 49,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 367,
+   "jahr": 1612,
+   "woche": 8,
+   "kasse": 567,
+   "rohstoff": 49,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 368,
+   "jahr": 1612,
+   "woche": 9,
+   "kasse": 607,
+   "rohstoff": 49,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 369,
+   "jahr": 1612,
+   "woche": 10,
+   "kasse": 647,
+   "rohstoff": 49,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 370,
+   "jahr": 1612,
+   "woche": 11,
+   "kasse": 687,
+   "rohstoff": 49,
+   "faesser": 22,
+   "plaetze": 24
+  },
+  {
+   "n": 371,
+   "jahr": 1612,
+   "woche": 12,
+   "kasse": 727,
+   "rohstoff": 49,
+   "faesser": 20,
+   "plaetze": 24
+  },
+  {
+   "n": 372,
+   "jahr": 1612,
+   "woche": 13,
+   "kasse": 767,
+   "rohstoff": 49,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 373,
+   "jahr": 1612,
+   "woche": 14,
+   "kasse": 795,
+   "rohstoff": 49,
+   "faesser": 13,
+   "plaetze": 24
+  },
+  {
+   "n": 374,
+   "jahr": 1612,
+   "woche": 15,
+   "kasse": 833,
+   "rohstoff": 49,
+   "faesser": 11,
+   "plaetze": 24
+  },
+  {
+   "n": 375,
+   "jahr": 1612,
+   "woche": 16,
+   "kasse": 872,
+   "rohstoff": 49,
+   "faesser": 9,
+   "plaetze": 24
+  },
+  {
+   "n": 376,
+   "jahr": 1612,
+   "woche": 17,
+   "kasse": 910,
+   "rohstoff": 49,
+   "faesser": 7,
+   "plaetze": 24
+  },
+  {
+   "n": 377,
+   "jahr": 1612,
+   "woche": 18,
+   "kasse": 759,
+   "rohstoff": 85,
+   "faesser": 7,
+   "plaetze": 24
+  },
+  {
+   "n": 378,
+   "jahr": 1612,
+   "woche": 19,
+   "kasse": 776,
+   "rohstoff": 77,
+   "faesser": 21,
+   "plaetze": 24
+  },
+  {
+   "n": 379,
+   "jahr": 1612,
+   "woche": 20,
+   "kasse": 815,
+   "rohstoff": 77,
+   "faesser": 24,
+   "plaetze": 24
+  },
+  {
+   "n": 380,
+   "jahr": 1612,
+   "woche": 21,
+   "kasse": 853,
+   "rohstoff": 77,
+   "faesser": 23,
+   "plaetze": 24
+  },
+  {
+   "n": 381,
+   "jahr": 1612,
+   "woche": 22,
+   "kasse": 892,
+   "rohstoff": 77,
+   "faesser": 21,
+   "plaetze": 24
+  },
+  {
+   "n": 382,
+   "jahr": 1612,
+   "woche": 23,
+   "kasse": 930,
+   "rohstoff": 77,
+   "faesser": 19,
+   "plaetze": 24
+  },
+  {
+   "n": 383,
+   "jahr": 1612,
+   "woche": 24,
+   "kasse": 968,
+   "rohstoff": 77,
+   "faesser": 17,
+   "plaetze": 24
+  },
+  {
+   "n": 384,
+   "jahr": 1612,
+   "woche": 25,
+   "kasse": 1007,
+   "rohstoff": 77,
+   "faesser": 15,
+   "plaetze": 24
+  },
+  {
+   "n": 385,
+   "jahr": 1612,
+   "woche": 26,
+   "kasse": 1045,
+   "rohstoff": 77,
+   "faesser": 13,
+   "plaetze": 24
+  },
+  {
+   "n": 386,
+   "jahr": 1612,
+   "woche": 27,
+   "kasse": 1084,
+   "rohstoff": 77,
+   "faesser": 11,
+   "plaetze": 24
+  },
+  {
+   "n": 387,
+   "jahr": 1612,
+   "woche": 28,
+   "kasse": 1122,
+   "rohstoff": 77,
+   "faesser": 9,
+   "plaetze": 24
+  },
+  {
+   "n": 388,
+   "jahr": 1612,
+   "woche": 29,
+   "kasse": 1161,
+   "rohstoff": 77,
+   "faesser": 7,
+   "plaetze": 24
+  },
+  {
+   "n": 389,
+   "jahr": 1612,
+   "woche": 30,
+   "kasse": 1135,
+   "rohstoff": 53,
+   "faesser": 5,
+   "plaetze": 24
+  },
+  {
+   "n": 390,
+   "jahr": 1613,
+   "woche": 1,
+   "kasse": 492,
+   "rohstoff": 53,
+   "faesser": 14,
+   "plaetze": 24
+  },
+  {
+   "n": 391,
+   "jahr": 1613,
+   "woche": 2,
+   "kasse": 648,
+   "rohstoff": 53,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 392,
+   "jahr": 1613,
+   "woche": 3,
+   "kasse": 762,
+   "rohstoff": 53,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 393,
+   "jahr": 1613,
+   "woche": 4,
+   "kasse": 570,
+   "rohstoff": 89,
+   "faesser": 2,
+   "plaetze": 24
+  },
+  {
+   "n": 394,
+   "jahr": 1613,
+   "woche": 5,
+   "kasse": 525,
+   "rohstoff": 73,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 395,
+   "jahr": 1613,
+   "woche": 6,
+   "kasse": 639,
+   "rohstoff": 73,
+   "faesser": 18,
+   "plaetze": 24
+  },
+  {
+   "n": 396,
+   "jahr": 1613,
+   "woche": 7,
+   "kasse": 752,
+   "rohstoff": 73,
+   "faesser": 12,
+   "plaetze": 24
+  },
+  {
+   "n": 397,
+   "jahr": 1613,
+   "woche": 8,
+   "kasse": 866,
+   "rohstoff": 73,
+   "faesser": 6,
+   "plaetze": 24
+  },
+  {
+   "n": 398,
+   "jahr": 1613,
+   "woche": 9,
+   "kasse": 979,
+   "rohstoff": 73,
+   "faesser": 0,
+   "plaetze": 24
+  },
+  {
+   "n": 399,
+   "jahr": 1613,
+   "woche": 10,
+   "kasse": 913,
+   "rohstoff": 49,
+   "faesser": 0,
+   "plaetze": 24
+  }
+ ]
+}

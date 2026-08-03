@@ -133,6 +133,36 @@ ein laufender. Am Logfile prüfen, nicht an `pgrep`.
 
 ---
 
+## WELLE 4, DIE RÜCKKOPPLUNG r2 — 1600 geheilt, 1350 dafür gerissen
+
+**Von der Aufsicht selbst nachgemessen**, am eingefrorenen Commit `da7d690`
+(Hafen 8900, `werkbank/schuss/aufsicht/messstand.sh`), NICHT am Arbeitsbaum —
+dort schrieben noch zwei Builder. Je 400 Wochen, `saat=1350`, 0 Seitenfehler in
+allen Läufen. ρ ist Spearman.
+
+| Epoche | vor der Runde | drei eigene Läufe danach | Urteil |
+|---|---|---|---|
+| **1350** | 5,89 → 2,69 · max 7,88 · **−0,152** | 5,89 → 9,20 / 27,64 / 12,94 · max **41,67** · **+0,701 / +0,785 / +0,789** | **REISST** |
+| 1600 | 3,76 → **27,81** · max 67,33 · **+0,873** | 3,76 → 1,95 / 3,25 / 2,32 · max 12,67 · **−0,319 / +0,218 / +0,214** | geheilt |
+| 1884 | 8,35 → 2,06 · **+0,143** | 8,35 → 5,18 · max 9,40 · **+0,393** · 1/14 unter 1× | besteht |
+
+**Der Fehler ist umgezogen, nicht behoben.** Der Builder hat 1350 als
+„identisch, Ziffer für Ziffer" gemeldet. Das ist widerlegt: drei unabhängige
+Läufe, alle drei über der Latte. Der blinde Kritiker kam unabhängig zum selben
+Schluss („1600 ist geheilt. 1350 ist dabei nach oben davongelaufen"), bevor die
+Aufsicht ihre Zahlen hatte — zwei Wege, ein Befund.
+
+> **MESSREGEL, teuer gelernt und ab jetzt bindend: EIN LAUF TRÄGT KEIN URTEIL.**
+> Drei Läufe desselben Standes streuen bei 1600 über **0,54** in ρ (−0,319 bis
+> +0,218) und beim Maximum um das Siebenfache (3,76 bis 12,67). Wer eine
+> Epoche mit einer Einzelzahl frei- oder schuldigspricht, würfelt. Der Builder
+> hat diese Streuung selbst gemeldet (`preis-linie.mjs` ist unter Last nicht
+> bitgenau) — und dann trotzdem 1350 auf einem Lauf für unverändert erklärt.
+> **Mindestens drei Läufe je Epoche, Spannweite mit angeben, sonst ist es keine
+> Messung.**
+
+---
+
 ## Welle 3 (2./3. August 2026) — gebaut, geurteilt, teils nachgemessen
 
 **Der Workflow ist weg, die Arbeit nicht.** Am 3.8. gegen 04:20 UTC hat ein zweiter
