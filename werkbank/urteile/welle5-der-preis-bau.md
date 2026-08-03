@@ -392,21 +392,83 @@ die Hand sie leerzieht, und ich habe ihn nicht gebaut, weil ich seine Wirkung
 auf die zweite Messlatte nicht in der verbleibenden Zeit dreifach nachmessen
 kann. Er steht als Vorschlag da, nicht als Arbeit.
 
+# NACHHER — AUFTRAG 1, die gezaehlten Festlegungen
+
+Dieselben zwei Haende, dieselbe Saat, 400 Wochen, sequenziell, auf dem
+geaenderten Arbeitsbaum (8899):
+
+| Epoche | Referenzhand vorher | Referenzhand nachher | willige Hand vorher | willige Hand **nachher** |
+|---|---|---|---|---|
+| 1350 | 1 | 1 | 1 | **2** — 1350/1 · **1356/1** |
+| 1600 | 1 | 1 | 1 | **2** — 1600/1 · **1604/1** |
+| 1884 | 0 | 0 | 2 | 2 — 1884/1 · 1886/1 |
+| 1970 | 0 | 0 | 3 | 3 — 1970/1 · 1972/1 · 1976/1 |
+
+Die beiden neuen Sprossen werden genommen, und zwar in dem Jahr, fuer das sie
+gerechnet sind: **1356 der Brunnen** (160 Pf gegen eine Lade von 397) und
+**1604 der Hofbefreiungsbrief** (622 fl gegen 922). Der Chronikknopf liest
+danach `Chronik des Hauses · 2 Festlegungen` — abgelesen, nicht nachgerechnet.
+
+**Die Referenzhand nimmt sie NICHT**, und das ist kein Widerspruch, sondern
+dieselbe Handregel wie in Befund 4: `Math.abs(preis) <= Kasse × 0,45`. Der
+Brunnen kostet in seinen erreichbaren Jahren 40 bis 55 im Hundert der Lade —
+oberhalb ihrer Schwelle und unterhalb dessen, was das Spiel sperrt. **Genau
+dort soll eine unwiderrufliche Entscheidung liegen:** teuer genug, dass eine
+Faustregel sie ablehnt, billig genug, dass ein Spieler sie treffen kann.
+
 # LATTE 2 (d) — DIE WELLENZAHL, und was sie in 1970 macht
 
 Sequenziell, ein Browser zur Zeit, 400 Wochen, `saat=1350`, Referenzhand
 unveraendert. Runde A (B und C laufen, sie stehen unten nach, sobald sie da
 sind):
 
-| Epoche | Welle 4 (Aufsicht, `3e6d08c`) | nachher, Runde A | Jahre < 1× |
-|---|---|---|---|
-| 1350 | +0,591 | **+0,591** | 0/14 |
-| 1600 | +0,231 | **+0,231** | 0/14 |
-| 1884 | +0,393 | **+0,393** | 1/14 |
-| 1970 | +0,108 | **+0,275** | 0/14 |
+| Epoche | Welle 4 (Aufsicht, `3e6d08c`) | nachher, DREI Laeufe | Spannweite | Jahre < 1× |
+|---|---|---|---|---|
+| 1350 | +0,591 | **+0,591** ×3 | 0,000 | 0/14 |
+| 1600 | +0,231 | **+0,231** ×2, +0,116 ×1 | 0,114 | 0/14 |
+| 1884 | +0,393 | **+0,393** ×3 | 0,000 | 1/14 |
+| 1970 | +0,108 | **+0,275** ×3 | 0,000 | 0/14 |
+
+Null Seitenfehler in allen zwoelf Laeufen, kein Abbruch, `lage` 0.
 
 **Drei von vier sind Ziffer fuer Ziffer unberuehrt.** 1970 ist es nicht, und
 die Ursache ist auf eine einzige Woche zurueckverfolgt.
+
+**DER BODEN GREIFT IN DEN VIER SORGFAELTIGEN PARTIEN GENAU EINMAL.** Aus den
+Leiterreihen aller zwoelf Laeufe ausgezaehlt (`vorgriff` je Jahr):
+
+```
+1350  keine        Rueckstand max 0
+1600  keine        Rueckstand max 0
+1884  keine        Rueckstand max 0
+1970  1978: 8.760  Rueckstand max 27.079
+```
+
+Damit ist auch beantwortet, was ich beim Einbau als Risiko notiert hatte: eine
+Schuldenspirale entsteht nicht. Der Vorgriff faellt einmal an, kommt einmal
+mit Aufschlag wieder, und der Rueckstand bleibt unter der Jahreslast, ab der
+der Rat ein Pfand nimmt. Und er erklaert, warum 1350, 1600 und 1884 Ziffer fuer
+Ziffer stehen bleiben: in einer kompetent gespielten Partie liegt die Lade
+dort an jedem Michaeli ueber dem Notpfennig (65 > 48 · 377 > 280 · 4.563 >
+4.200 — in 1884 knapp).
+
+**DIE SPANNWEITE IN 1600 IST NICHT NULL, und ich weise sie aus, statt sie zu
+mitteln.** Die Laeufe A und B sind Ziffer fuer Ziffer gleich (+0,231); Lauf C
+weicht ab dem fuenften Jahr ab und ergibt +0,116. Beide halten die Latte weit.
+Ich konnte die Abweichung nicht zuordnen — im selben Behaelter arbeitet ein
+zweiter Agent an `klang*`/`ton`, und dessen Laeufe belasten dieselben vier
+Kerne wie meine. **Ein vierter Lauf 1600 als Stichentscheid: +0,231**, Ziffer
+fuer Ziffer wie A und B.
+
+```
+e2-A  +0,231     e2-B  +0,231     e2-C  +0,116     e2-D  +0,231
+```
+
+Drei von vier landen auf derselben Zahl, und es ist die der Welle 4. Ich
+schreibe die Spannweite trotzdem als 0,114 hin und nicht als 0,000: ein
+Ausreisser, den ich nicht erklaeren kann, ist ein Ausreisser und kein
+Rundungsfehler. Das ist dieselbe Regel, nach der am 3. August die Streuung von
+0,54 aufgeklaert wurde — man klaert sie auf, indem man sie zuerst zugibt.
 
 Die Kennzahlreihe von 1970, Jahr fuer Jahr, gegen die zwoelf Laeufe der
 Aufsicht am eingefrorenen Stand:
