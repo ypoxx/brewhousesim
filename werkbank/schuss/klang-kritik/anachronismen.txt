@@ -55,3 +55,37 @@ Traceback (most recent call last):
   File "/usr/lib/python3.11/urllib/request.py", line 1351, in do_open
     raise URLError(err)
 urllib.error.URLError: <urlopen error [Errno 104] Connection reset by peer>
+── epoche3.wav   (Spiel-Jahr 1884)
+       0s  ab 1893  ZU SPAET · Ragtime-Klaviermusik (durchgehend)
+           Der synkopierte Musikstil Ragtime wurde erst um die Weltausstellung 1893 populär und ist für das Jahr 1884 ein klarer Anachronismus.
+       0s  ab 1712  Rhythmisches Stampfen einer Dampfmaschine (durchgehend)
+       0s  ab 1832  Dampfpfeife
+       2s  ab 1600  Klirren von Glasflaschen
+       6s  ab 1600  Klirren von Glasflaschen
+      12s  ab -300000  Ein Mann pfeift eine Melodie
+      14s  ab -4000000000  Plätschern einer eingegossenen Flüssigkeit
+      17s  ab 1832  Dampfpfeife
+      20s  ab 1750  Metallisches Einrasten / Hebelklacken
+      22s  ab 1712  Zischen von abgelassenem Dampf
+      26s  ab 1832  Dampfpfeife
+      28s  ab 1750  Metallisches Einrasten / Hebelklacken
+
+── epoche4.wav   (Spiel-Jahr 1970)
+       0s  ab 1897  Dieselmotor (Hintergrund)
+       0s  ab 1980  ZU SPAET · Synth-Pop / Synthwave Musik (Hintergrund)
+           Dieser elektronische Musikstil mit seinen charakteristischen Synthesizern und Drum-Machines entstand erst um 1980.
+       0s  ab 1850  Metallisches Scheppern
+       2s  ab 0  Hundebellen
+       3s  ab 1910  Fahrzeughupe
+       7s  ab 1963  Rückfahrwarner
+      11s  ab 1869  Druckluftbremse
+      13s  ab 1600  Klirrende Glasflaschen
+      14s  ab 1920  Elektromotor (Gabelstapler)
+      16s  ab 1990  ZU SPAET · Digitaler Handy-Klingelton
+           Digitale und polyphone Klingeltöne kamen erst mit der Verbreitung von Mobiltelefonen in den 1990er Jahren auf.
+      17s  ab 1850  Schweres Metalltor
+      20s  ab 1850  Metallisches Klacken
+      21s  ab 1927  Sprühdose
+      26s  ab 1600  Klirrende Glasflaschen
+      28s  ab 0  Hundebellen
+

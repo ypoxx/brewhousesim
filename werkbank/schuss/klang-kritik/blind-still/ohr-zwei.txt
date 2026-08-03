@@ -16,3 +16,45 @@
    blender_chor     nein  sek -1  sicher 0
    blender_schiff   nein  sek -1  sicher 0
 
+── ruhe-zwei.wav
+       0s  Beginn einer fröhlichen, dudeligen Synthesizer-Melodie zusammen mit einem schnellen, rhythmischen Zischen und Schnaufen, das an eine Dampfmaschine erinnert.
+       8s  Die Lautstärke der Musik und der mechanischen Geräusche sinkt deutlich ab und klingt gedämpft.
+      11s  Die Lautstärke der Musik und des Schnaufens steigt wieder auf das ursprüngliche, lautere Niveau an.
+   dauerhaft: Eine fröhliche, sich wiederholende Hintergrundmelodie und ein schnelles, rhythmisches, mechanisches Schnaufen (ähnlich einer fahrenden Dampflok).
+   aendert:   Ja, die Gesamtlautstärke des Grundklangs ändert sich; sie wird bei Sekunde 8 deutlich leiser und bei Sekunde 11 wieder lauter.
+   fuhre            nein  sek -1  sicher 0
+   sud              nein  sek -1  sicher 0
+   zahltag          nein  sek -1  sicher 0
+   gegner           nein  sek -1  sicher 0
+   blender_regen    nein  sek -1  sicher 0
+   blender_hund     nein  sek -1  sicher 0
+   blender_chor     nein  sek -1  sicher 0
+   blender_schiff   nein  sek -1  sicher 0
+
+── ruhe-drei.wav
+   A KEINE MESSUNG: unlesbar
+   fuhre            JA   sek 3.0  sicher 90
+   sud              nein  sek -1.0  sicher 0
+   zahltag          JA   sek 8.0  sicher 90
+   gegner           JA   sek 18.0  sicher 90
+   blender_regen    nein  sek -1.0  sicher 0
+   blender_hund     nein  sek -1.0  sicher 0
+   blender_chor     nein  sek -1.0  sicher 0
+   blender_schiff   nein  sek -1.0  sicher 0
+
+── ruhe-vier.wav
+       0s  Ein mechanisches Klacken oder Schaltgeräusch, Beginn von Musik und Motorenbrummen
+       9s  Ein weiteres mechanisches Klacken, ähnlich einem Gangwechsel oder dem Betätigen einer Bremse
+      20s  Erneutes mechanisches Klacken oder Schaltgeräusch
+   dauerhaft: Ein rhythmisches, mechanisches Motorengeräusch im Leerlauf und eine funkige Hintergrundmusik mit Bass und Schlagzeug
+   aendert:   Nein, der Grundklang aus Motor und Musik bleibt durchgehend konstant
+   fuhre            nein  sek -1  sicher 0
+   sud              nein  sek -1  sicher 0
+   zahltag          nein  sek -1  sicher 0
+   gegner           nein  sek -1  sicher 0
+   blender_regen    nein  sek -1  sicher 0
+   blender_hund     nein  sek -1  sicher 0
+   blender_chor     nein  sek -1  sicher 0
+   blender_schiff   nein  sek -1  sicher 0
+
+{"ruhe-eins.wav": {"offen": {"leiste": [{"sek": 0, "was": "Helles, schnelles Blubbern einer Flüssigkeit"}, {"sek": 4, "was": "Tieferes, dumpferes Blubbern"}, {"sek": 7, "was": "Plätscherndes Geräusch, ähnlich wie das Umrühren oder Schütten von Wasser"}, {"sek": 19, "was": "Erneutes helles, schnelles Blubbern"}, {"sek": 24, "was": "Erneutes tieferes, dumpferes Blubbern"}, {"sek": 27, "was": "Erneutes Plätschern oder Umrühren einer Flüssigkeit"}], "dauerhaft": "Knistern eines Feuers und eine ruhige, durchgehende Flötenmelodie", "aenderung": "Nein, der Grundklang aus Feuerknistern und Flötenmusik bleibt über die gesamte Dauer konstant."}, "menue": {"fuhre": {"da": false, "sek": -1, "sicher": 0}, "sud": {"da": true, "sek": 0, "sicher": 100}, "zahltag": {"da": false, "sek": -1, "sicher": 0}, "gegner": {"da": false, "sek": -1, "sicher": 0}, "blender_regen": {"da": false, "sek": -1, "sicher": 0}, "blender_hund": {"da": false, "sek": -1, "sicher": 0}, "blender_chor": {"da": false, "sek": -1, "sicher": 0}, "blender_schiff": {"da": false, "sek": -1, "sicher": 0}}}, "ruhe-zwei.wav": {"offen": {"leiste": [{"sek": 0, "was": "Beginn einer fröhlichen, dudeligen Synthesizer-Melodie zusammen mit einem schnellen, rhythmischen Zischen und Schnaufen, das an eine Dampfmaschine erinnert."}, {"sek": 8, "was": "Die Lautstärke der Musik und der mechanischen Geräusche sinkt deutlich ab und klingt gedämpft."}, {"sek": 11, "was": "Die Lautstärke der Musik und des Schnaufens steigt wieder auf das ursprüngliche, lautere Niveau an."}], "dauerhaft": "Eine fröhliche, sich wiederholende Hintergrundmelodie und ein schnelles, rhythmisches, mechanisches Schnaufen (ähnlich einer fahrenden Dampflok).", "aenderung": "Ja, die Gesamtlautstärke des Grundklangs ändert sich; sie wird bei Sekunde 8 deutlich leiser und bei Sekunde 11 wieder lauter."}, "menue": {"fuhre": {"da": false, "sek": -1, "sicher": 0}, "sud": {"da": false, "sek": -1, "sicher": 0}, "zahltag": {"da": false, "sek": -1, "sicher": 0}, "gegner": {"da": false, "sek": -1, "sicher": 0}, "blender_regen": {"da": false, "sek": -1, "sicher": 0}, "blender_hund": {"da": false, "sek": -1, "sicher": 0}, "blender_chor": {"da": false, "sek": -1, "sicher": 0}, "blender_schiff": {"da": false, "sek": -1, "sicher": 0}}}, "ruhe-drei.wav": {"offen": {"abbruch": "unlesbar", "rohtext": "{\n  \"leiste\": [\n    {\n      \"sek\": 0,\n      \"was\": \"Rhythmisches, mechanisches Klappern oder Hämmern auf Holz\"\n    },\n    {\n      \"sek\": 3,\n      \"was\": \"Knarrendes, rollendes Geräusch, wie ein schweres Holzrad oder ein Karren\"\n    },\n    {\n      \"sek\": 8,\n      \"was\": \"Ein helles Klingeln oder Gloc"}, "menue": {"fuhre": {"da": true, "sek": 3.0, "sicher": 90}, "sud": {"da": false, "sek": -1.0, "sicher": 0}, "zahltag": {"da": true, "sek": 8.0, "sicher": 90}, "gegner": {"da": true, "sek": 18.0, "sicher": 90}, "blender_regen": {"da": false, "sek": -1.0, "sicher": 0}, "blender_hund": {"da": false, "sek": -1.0, "sicher": 0}, "blender_chor": {"da": false, "sek": -1.0, "sicher": 0}, "blender_schiff": {"da": false, "sek": -1.0, "sicher": 0}, "_geborgen": true}}, "ruhe-vier.wav": {"offen": {"leiste": [{"sek": 0, "was": "Ein mechanisches Klacken oder Schaltgeräusch, Beginn von Musik und Motorenbrummen"}, {"sek": 9, "was": "Ein weiteres mechanisches Klacken, ähnlich einem Gangwechsel oder dem Betätigen einer Bremse"}, {"sek": 20, "was": "Erneutes mechanisches Klacken oder Schaltgeräusch"}], "dauerhaft": "Ein rhythmisches, mechanisches Motorengeräusch im Leerlauf und eine funkige Hintergrundmusik mit Bass und Schlagzeug", "aenderung": "Nein, der Grundklang aus Motor und Musik bleibt durchgehend konstant"}, "menue": {"fuhre": {"da": false, "sek": -1, "sicher": 0}, "sud": {"da": false, "sek": -1, "sicher": 0}, "zahltag": {"da": false, "sek": -1, "sicher": 0}, "gegner": {"da": false, "sek": -1, "sicher": 0}, "blender_regen": {"da": false, "sek": -1, "sicher": 0}, "blender_hund": {"da": false, "sek": -1, "sicher": 0}, "blender_chor": {"da": false, "sek": -1, "sicher": 0}, "blender_schiff": {"da": false, "sek": -1, "sicher": 0}}}}
