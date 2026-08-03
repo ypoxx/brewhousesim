@@ -1621,14 +1621,23 @@
        demselben Grund wie die vierte Wurzel darueber. Er ist die einzige Zahl
        des Blattes, die nach UNTEN begrenzt, und er wurde bis heute nirgends
        genannt: der Spieler erfuhr von ihm erst an dem Michaeli, an dem er
-       griff, und dann als Nebensatz in der Chronik. */
+       griff, und dann als Nebensatz in der Chronik.
+
+       ER BEKOMMT EINEN EIGENEN KASTEN und haengt nicht an DIE RECHNUNG. Der
+       Grund steht sechs Zeilen weiter oben: mit dem vollen Satz der vierten
+       Wurzel im selben Kasten lief der Absatz in 1600 am 3. August unten aus
+       dem Feld heraus und brach mitten im Wort ab. In 1600 stuenden BEIDE
+       Regeln in demselben Kasten — die eine, die nach oben nimmt, und die
+       neue, die nach unten laesst. Ein eigener Kasten kann nicht ueberlaufen,
+       und die beiden Regeln lesen sich ohnehin gegeneinander. */
+    var bodenKasten = null;
     if (notpfennig() > 0) {
-      kasten.appendChild(B.el('div', 'pr-satz pr-klein pr-notpfennig',
-        'Der Notpfennig: ' + geld(notpfennig()) + ' bleiben im Haus. So weit und '
-        + 'nicht weiter nimmt der Rat — und liegt zu Michaeli weniger im Kasten, '
-        + 'schießt er auf diese Zahl vor, damit das Haus das Braujahr brauen kann. '
-        + 'Angeschrieben, nicht geschenkt: der Vorgriff steht im nächsten Jahr '
-        + 'mit einem Zehntel Aufschlag wieder oben in der Rechnung.'));
+      bodenKasten = B.el('div', 'pr-feld pr-feld-boden');
+      bodenKasten.appendChild(zeile('Der Notpfennig', geld(notpfennig()), 'pr-gross'));
+      bodenKasten.appendChild(B.el('div', 'pr-satz pr-klein',
+        'So weit und nicht weiter nimmt der Rat. Liegt zu Michaeli weniger im '
+        + 'Kasten, schießt er auf diese Zahl vor — angeschrieben, nicht '
+        + 'geschenkt: der Vorgriff kommt im nächsten Jahr mit Aufschlag wieder.'));
     }
     /* Woran das Haus dieses Jahr gemessen wird — beide Zahlen stehen da,
        damit niemand die Rechnung fuer eine Laune halten muss. */
