@@ -301,11 +301,12 @@
    das erste Mal greift; abgesetzt bekommt sie eine Kante, aber eine helle:
    die Wurzeln nehmen, diese Zeile lässt.
    ---------------------------------------------------------------------- */
-.pr-satz.pr-notpfennig {
-  border-top: 1px solid var(--pr-rand);
-  margin-top: calc(var(--s) * 6);
-  padding-top: calc(var(--s) * 5);
+.pr-last.pr-last-boden {
+  border-top: calc(var(--s) * 1) dashed var(--pr-rand);
+  padding-top: calc(var(--s) * 4);
+  margin-top: calc(var(--s) * 4);
 }
+.pr-last.pr-last-boden .pr-zahl { color: var(--pr-gruen, #3d5b3a); }
 /* Der Vorgriff ist ein Zufluss, aber kein Ertrag — er ist geborgt. Er steht
    deshalb in der Rechnung nicht grün wie ein Ertrag, sondern in der Tinte
    des Rückstands, mit dem er nächstes Jahr zurückkommt. */

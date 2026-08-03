@@ -1617,28 +1617,6 @@
         + B.zahl((e.liegeSatz || 0) * 100, 0) + ' im Hundert an. '
         + 'Was verbaut, gebunden oder festgelegt ist, zählt nicht mit.'));
     }
-    /* DER NOTPFENNIG steht als REGEL da, nicht erst als Rechnungszeile — aus
-       demselben Grund wie die vierte Wurzel darueber. Er ist die einzige Zahl
-       des Blattes, die nach UNTEN begrenzt, und er wurde bis heute nirgends
-       genannt: der Spieler erfuhr von ihm erst an dem Michaeli, an dem er
-       griff, und dann als Nebensatz in der Chronik.
-
-       ER BEKOMMT EINEN EIGENEN KASTEN und haengt nicht an DIE RECHNUNG. Der
-       Grund steht sechs Zeilen weiter oben: mit dem vollen Satz der vierten
-       Wurzel im selben Kasten lief der Absatz in 1600 am 3. August unten aus
-       dem Feld heraus und brach mitten im Wort ab. In 1600 stuenden BEIDE
-       Regeln in demselben Kasten — die eine, die nach oben nimmt, und die
-       neue, die nach unten laesst. Ein eigener Kasten kann nicht ueberlaufen,
-       und die beiden Regeln lesen sich ohnehin gegeneinander. */
-    var bodenKasten = null;
-    if (notpfennig() > 0) {
-      bodenKasten = B.el('div', 'pr-feld pr-feld-boden');
-      bodenKasten.appendChild(zeile('Der Notpfennig', geld(notpfennig()), 'pr-gross'));
-      bodenKasten.appendChild(B.el('div', 'pr-satz pr-klein',
-        'So weit und nicht weiter nimmt der Rat. Liegt zu Michaeli weniger im '
-        + 'Kasten, schießt er auf diese Zahl vor — angeschrieben, nicht '
-        + 'geschenkt: der Vorgriff kommt im nächsten Jahr mit Aufschlag wieder.'));
-    }
     /* Woran das Haus dieses Jahr gemessen wird — beide Zahlen stehen da,
        damit niemand die Rechnung fuer eine Laune halten muss. */
     var nah = B.el('div', 'pr-nahrung');
@@ -2029,6 +2007,32 @@
       f.appendChild(z);
     });
     f.appendChild(B.el('div', 'pr-satz pr-klein', ep().pfand));
+    /* DER NOTPFENNIG — die einzige Zahl des Blattes, die nach UNTEN begrenzt,
+       und bis heute die einzige, die nirgends am Bildschirm stand: der Spieler
+       erfuhr von ihr erst an dem Michaeli, an dem sie griff, und dann als
+       Nebensatz in der Chronik.
+
+       WARUM SIE HIER STEHT UND NICHT IN DER RECHNUNGSSPALTE, wo sie
+       inhaltlich hingehoerte: die linke Spalte ist voll. Am Bildschirm
+       nachgesehen (1600, Tafel aufgeschlagen, 2752x1536) laeuft dort schon
+       heute WAS SCHON STEHT unten aus dem Feld, und die vierte Wurzel bricht
+       mitten im Wort ab — derselbe Ueberlauf, der am 3. August schon einmal
+       gemeldet wurde. Ein zweiter Kasten hat sie vollends ueberlaufen lassen.
+       Rechts steht, was faellig wird; der Notpfennig ist, was NICHT faellig
+       wird, und er steht als letzte Zeile derselben Liste. Nachgesehen: in
+       1600 traegt die Spalte ihn ohne Abschnitt. */
+    if (notpfennig() > 0) {
+      var bod = B.el('div', 'pr-last pr-last-boden');
+      var bkopf = B.el('div', 'pr-last-kopf');
+      bkopf.appendChild(B.el('span', 'pr-last-jahr', 'immer'));
+      bkopf.appendChild(B.el('span', 'pr-last-name', 'Der Notpfennig — was NICHT genommen wird'));
+      bkopf.appendChild(B.el('span', 'pr-zahl', geld(notpfennig())));
+      bod.appendChild(bkopf);
+      bod.appendChild(B.el('div', 'pr-satz pr-klein',
+        'So weit und nicht weiter nimmt der Rat. Liegt zu Michaeli weniger im '
+        + 'Kasten, schießt er auf diese Zahl vor — angeschrieben, nicht geschenkt.'));
+      f.appendChild(bod);
+    }
     sp.appendChild(f);
 
     sp.appendChild(leiterFeld(Z.leiter.slice(-8), false));
