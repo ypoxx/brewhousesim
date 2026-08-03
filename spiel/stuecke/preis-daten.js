@@ -513,7 +513,16 @@ var PREIS_DATEN = {
         { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 0.10,
           was: 'Gerste, Hopfen, Wasser — und der Schwur darauf vor dem Rat.',
           regel: 'Kein billiges Beibier mehr. Jedes Fass fängt mehr, und die Zunft steht hinter dem Haus.',
-          wirkung: { preis: 0.16, ansehen: 10 } },
+          /* Halber Preis, halbe Wirkung — sonst waere aus der Verbilligung
+             oben ein Geschenk geworden. Gemessen mit 0,10 x Taxe und
+             unveraenderter Wirkung (+16 % je Fass, +10 Ansehen): die Lade
+             steigt in denselben vierzehn Jahren von 440 auf 1.027 fl statt
+             auf 820, und der Adler wirbt haeufiger, weil das Haus mehr
+             Ansehen hat — die billigste Antwort auf eine Werbung faellt damit
+             auf 73 bis 104 fl, und die Kennzahl steht bei rho +0,807 statt
+             +0,16. Eine Festlegung, die halb so viel kostet, darf nicht
+             dasselbe tragen. */
+          wirkung: { preis: 0.09, ansehen: 5 } },
 
         { k: 'ratssitz', name: 'Der Zunftbrief mit dem Ratssitz', anteil: 1.90,
           was: 'Das Haus stellt einen der zwölf Ratsherren.',

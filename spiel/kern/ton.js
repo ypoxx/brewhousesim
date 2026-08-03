@@ -373,6 +373,31 @@
     return b;
   }
 
+  /* Ein Tropfen, gebaut aus RAUSCHEN durch einen Resonanzfilter — nicht aus
+     einem Sinus. Das ist der teuerste Fund dieser Runde und er war unsichtbar:
+     der Tropfen war ein abfallender Sinus von 900 auf 420 Hz, viermal in einer
+     Schleife von sechs Sekunden, und diese Schleife laeuft ab Michaeli bis zum
+     Ende. Das fremde Ohr hat sie in 1350 UND in 1884 ungefragt als
+     "mehrfach elektronische Pieptoene, wie ein modernes digitales Geraet"
+     gemeldet — in genau den beiden Epochen, deren Mischung duenn genug ist,
+     dass man sie hoert. Der Kopf dieses Abschnitts behauptete schon vorher
+     "kein einziger Oszillator in dieser Datei"; er stimmte nicht.
+     Zweipoliges Bandpassfilter (RBJ), Guete 1,2 — breit genug, dass ein
+     Wassertropfen daraus wird und kein Piepser. */
+  function tropfen(d, ab, n, r, f0, guete, spitze) {
+    var w0 = 2 * Math.PI * f0 / r, sin = Math.sin(w0), cos = Math.cos(w0);
+    var alpha = sin / (2 * guete);
+    var a0 = 1 + alpha, a1 = -2 * cos, a2 = 1 - alpha;
+    var x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+    var len = Math.floor(r * 0.30);
+    for (var k = 0; k < len && ab + k < n; k++) {
+      var x = (zufall() * 2 - 1) * Math.exp(-15 * k / len);
+      var y = (alpha * x - alpha * x2 - a1 * y1 - a2 * y2) / a0;
+      x2 = x1; x1 = x; y2 = y1; y1 = y;
+      d[ab + k] += y * spitze;
+    }
+  }
+
   /* Ein Keller, der leer ist: Raumton und Tropfen. Als Schleife gebaut. */
   function kellerBand(ctx) {
     if (ctx.__klangKeller) return ctx.__klangKeller;
@@ -382,12 +407,8 @@
       tief = tief * 0.995 + (zufall() * 2 - 1) * 0.005;
       d[i] = tief * 0.9;
     }
-    [0.4, 1.9, 3.1, 4.6].forEach(function (t) {
-      var a = Math.floor(t * r), len = Math.floor(r * 0.28), f = 900;
-      for (var k = 0; k < len && a + k < n; k++) {
-        var h = k / len;
-        d[a + k] += Math.sin(2 * Math.PI * (f - 480 * h) * k / r) * Math.exp(-9 * h) * 0.32;
-      }
+    [[0.4, 780], [1.9, 620], [3.1, 900], [4.6, 700]].forEach(function (t) {
+      tropfen(d, Math.floor(t[0] * r), n, r, t[1], 1.2, 2.4);
     });
     ctx.__klangKeller = b;
     return b;
