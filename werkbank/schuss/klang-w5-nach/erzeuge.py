@@ -36,13 +36,16 @@ GERAEUSCH = {
     #  Sie enthielt keinen Ochsen, keinen Karren und kein Pflaster, sondern
     #  Wasser. Das blinde Ohr hat 1350 dreimal von drei falsch geraten und
     #  einmal ausdruecklich "Umfuellen von Fluessigkeit" gehoert.
+    #  ZWEITER ANLAUF: der erste kam als "Eingiessen einer Fluessigkeit ·
+    #  Schritte" zurueck — wieder Wasser. Das Wort "oxen" zieht offenbar nichts
+    #  Hoerbares nach sich; die Bewegung selbst muss im Prompt stehen.
     "abfahrt1": (
-        "A pair of oxen hauls a wooden cart out of a stone courtyard: slow heavy "
-        "hooves on cobblestones, a yoke and leather harness creaking, solid wooden "
-        "wheels grinding and rumbling over stone, the cart bumping through a "
-        "gateway and the sound moving away into the distance. "
-        "No water, no splashing, no gurgling, no dripping, no voices, no music, "
-        "no metal machinery, no engines.", 7, 0.7),
+        "Heavy cloven hooves plod slowly away over cobblestones while solid wooden "
+        "cartwheels rumble and grind on the stone behind them, a wooden axle "
+        "squeaking with every turn, the cart bumping over a threshold and the "
+        "rumbling fading into the distance. "
+        "No water, no pouring, no splashing, no gurgling, no liquid, no voices, "
+        "no music, no engines.", 7, 0.75),
 
     # "Klänge: Metallisches Kurbeln und Ratschen einer Mechanik · Metallisches
     #  Klappern". Das ist keine Pferdefuhre, das ist eine Winde.
@@ -82,12 +85,15 @@ GERAEUSCH = {
     # "Klänge: Gluckern von Wasser · Blubbern von Luftblasen · Plätschern einer
     #  Flüssigkeit". Kein Feuer. Der Sud von 1350 ist das offene Holzfeuer
     #  unter der Pfanne — ohne es klingt 1350 wie jede andere Zeit auch.
+    #  ZWEITER ANLAUF: der erste kam wieder als "Wassergluckern · Blubbern"
+    #  zurueck. Jede Erwaehnung von Sud, Wuerze oder Pfanne holt Fluessigkeit
+    #  ins Bild; das Feuer muss allein dastehen.
     "sud1": (
-        "An open wood fire burning under a big copper brewing pan in a medieval "
-        "brewhouse: logs crackling and spitting, flames roaring softly, someone "
-        "pushing a log in, the wort inside the copper bubbling thickly and a wooden "
-        "paddle stirring it. "
-        "No machinery, no metal clanging, no voices, no music.", 7, 0.7),
+        "A big open log fire burning fiercely on a hearth: dry logs crackling and "
+        "snapping loudly, sparks popping, flames roaring and drawing, a log "
+        "shifting and collapsing into the embers, a wooden pole poking the fire. "
+        "No water, no liquid, no bubbling, no gurgling, no boiling, no steam, "
+        "no machinery, no voices, no music.", 7, 0.75),
 
     # "FALSCH: Sprühdose / Aerosolspray (bei Sekunde 0-2, erst ab 1927
     #  erfunden)" — dazu "Dreitöniges Tröten einer SPIELZEUGHUPE". Diese Probe
@@ -104,13 +110,15 @@ GERAEUSCH = {
     #  Klangkörpers — Zeit: 21. Jahrhundert (oder zeitlos)". Das war das
     #  rollende Stahlfass von 1970, und zwoelf Kopien davon in einer halben
     #  Sekunde sind der "8-Bit/Chiptune-Soundeffekt" aus Auflage 3.
+    #  ZWEITER ANLAUF: der erste kam als "HUNDEBELLEN · dumpfer metallischer
+    #  Schlag" zurueck. Das Wort keg/barrel holt offenbar einen Hof mit Hund.
     "fassstahl": (
-        "A steel beer keg rolled across a concrete floor in a 1970s brewery yard: "
-        "the hollow steel drum rumbling and ringing dully as it rolls, the seam "
-        "bumping over a joint in the concrete, then the keg tipped upright with a "
-        "flat metallic thud. "
-        "No gong, no bell, no cymbal, no long ringing resonance, no voices, no "
-        "music.", 5, 0.7),
+        "A big empty steel drum lying on its side is pushed and rolled across a "
+        "bare concrete floor: a low hollow metallic rumble that wobbles as the drum "
+        "turns, the raised seam knocking on the concrete once per revolution, "
+        "ending with a dull metallic scrape. "
+        "No dog, no barking, no animals, no gong, no bell, no long ringing, "
+        "no voices, no music.", 5, 0.75),
 
     # "Klänge: Dumpfer Klick · HOHER, SCHRILLER ELEKTRONISCHER PFEIFTON ·
     #  Hintergrundrauschen — Zeit: 20. oder 21. Jahrhundert". Ein
