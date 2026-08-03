@@ -1,0 +1,18 @@
+── ruhe-eins.wav
+       0s  Helles, schnelles Blubbern einer Flüssigkeit
+       4s  Tieferes, dumpferes Blubbern
+       7s  Plätscherndes Geräusch, ähnlich wie das Umrühren oder Schütten von Wasser
+      19s  Erneutes helles, schnelles Blubbern
+      24s  Erneutes tieferes, dumpferes Blubbern
+      27s  Erneutes Plätschern oder Umrühren einer Flüssigkeit
+   dauerhaft: Knistern eines Feuers und eine ruhige, durchgehende Flötenmelodie
+   aendert:   Nein, der Grundklang aus Feuerknistern und Flötenmusik bleibt über die gesamte Dauer konstant.
+   fuhre            nein  sek -1  sicher 0
+   sud              JA   sek 0  sicher 100
+   zahltag          nein  sek -1  sicher 0
+   gegner           nein  sek -1  sicher 0
+   blender_regen    nein  sek -1  sicher 0
+   blender_hund     nein  sek -1  sicher 0
+   blender_chor     nein  sek -1  sicher 0
+   blender_schiff   nein  sek -1  sicher 0
+

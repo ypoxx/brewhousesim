@@ -316,7 +316,37 @@ zwei Stunden. Diese Zahl gehört nicht mir und ist nicht vergleichbar.)
 
 ### 3.3 Zwei Partien, verschiedenes Bier
 
-PLATZ-ZWEIPARTIEN
+Die Frage des Kritikers, wörtlich beantwortet: `zweipartien.mjs` spielt dieselbe
+Epoche, dieselbe Saat, 120 Wochen, zweimal — einmal wird die **unwiderrufliche
+Festlegung** genommen, einmal die **kostenlose Abkürzung**. Alles Übrige ist
+gleich. Verglichen wird nur, was am Schirm steht.
+
+**1600 — Felsenkeller gegen Hafer:**
+
+| | TEUER (Kellergärung, −260 fl) | BILLIG (mit Hafer gestreckt, 0 fl) |
+|---|---|---|
+| Zeile auf dem Kesselzettel | **„höchstens Märzenbier"** | **„höchstens Schankbier"** |
+| Siegel | `gaerung:keller` — die Achse ist zu | keines, alles bleibt offen |
+| Güte am Ende | **98** | **15** |
+| Sude · Fass | 29 · 145 | 67 · 558 |
+| Keller am Ende | 14 Fass Nachbier, Haltbarkeit im Mittel **6 Wochen** | 0 Fass |
+| Kasse am Ende | 401 fl | 309 fl |
+
+Das ist der Unterschied in einem Blick: **die eine Partie darf Märzenbier
+liefern, die andere höchstens Schankbier** — und das steht auf dem Zettel am
+Sudhaus, ohne dass man ein Brett aufschlagen muss. Die billige Partie macht
+mehr Fass aus derselben Pfanne (558 gegen 145) und verkauft es an weniger
+Häuser; die teure hat weniger, aber besseres, und darf es weiter fahren.
+
+**1350 — Hopfenbrief gegen Hopfen im Sack:** hier ist der Rang in beiden
+Partien „höchstens Starkbier", und das ist richtig so — der geschmuggelte
+Hopfen kann dasselbe wie der beurkundete. Der Unterschied steht anderswo:
+`fest: ["wuerze:brief"]` gegen `fest: []`, das Siegel auf der Achse, und der
+Grutknecht, der beim Sack mit 11 % je Woche in die Pfanne sieht (Güte 98 gegen
+19 am Ende). Wer die 78 Pf nicht hat, braut trotzdem — er hat es nur nicht
+schriftlich.
+
+PLATZ-ZWEIPARTIEN-34
 
 ### 3.4 Die gesperrte Charge von 1970
 
