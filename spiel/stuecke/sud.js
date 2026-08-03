@@ -91,8 +91,9 @@
     nr: 0,                /* laufende Nummer der Bottiche                     */
     rueck: [],            /* freigegebene Chargen, die beim Handel stehen     */
     brettZu: true,        /* liegt das Brett als Reiter? (Vorgabestand: ja)   */
-    zettelStelle: 0,      /* welcher Platz am Sudhaus gerade traegt           */
-    zettelSitz: { dx: 0, dy: 0, knapp: false },  /* ... und wo genau, in %    */
+    zettelSitz: { dx: 0, dy: 0, knapp: false },  /* wo der Zettel gerade sitzt,
+                             in Prozentpunkten vom Ort 'sudhaus' aus; knapp =
+                             er hat alles abgeworfen, was kein Knopf ist      */
     gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
     gestuftGesamt: 0,     /* ... und wie oft ueberhaupt (wird nie geleert)    */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
@@ -1536,8 +1537,11 @@
      traegt er seit Welle 4 vier Zuege statt drei, in zwei Zeilen:
 
        1  DIE HEFE, zwei Wege nebeneinander, jede Woche, Preis in Bier
-       2  DAS VERFAHREN, der naechste kostenlose und der naechste bezahlte
-          Wechsel, jeder mit dem Bier daneben, das dabei herauskommt
+       2  DAS VERFAHREN, zwei Umstellungen nebeneinander, jede mit dem Bier
+          daneben, das dabei herauskommt: die naechste KOSTENLOSE, und daneben
+          die naechste bezahlte — oder, wenn die Kasse die nicht hergibt, die
+          naechste kostenlose einer ANDEREN Achse (Welle 4, Auflage 2; der
+          Preis steht dann als Zeile darunter)
           — oder, solange eine Charge gesperrt steht (1970), deren beide
           Antworten; oder, wenn alles entschieden ist, der Gaerraum.
      ---------------------------------------------------------------------- */
@@ -1710,6 +1714,10 @@
     if (kannKauf) { zweite = mit; art = 'kauf'; }
     else if (zweiteFrei) { zweite = zweiteFrei; art = 'frei2'; }
     else if (mit) { zweite = mit; art = 'kauf'; }
+    /* Steht eine Charge gesperrt, bleibt die erste Zeile ihr — dann ist der
+       Schluessel `-frei` unbenutzt, und die zweite Zeile darf die ERSTE
+       kostenlose Umstellung tragen statt der zweiten. */
+    if (chb && art === 'frei2') { zweite = freie[0]; art = 'frei'; }
 
     /* Steht eine Charge gesperrt, nimmt sie den Platz der freien
        Umstellung — der Zettel bleibt unter der Ortsmarken-Schwelle der
