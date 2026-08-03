@@ -80,6 +80,7 @@
     handlohnFaellig: false,
     rueckstand: 0,
     gestundet: 0,          /* was dieses Michaeli am Notpfennig hängenblieb */
+    vorgriff: 0,           /* was der Rat dieses Michaeli auf den Notpfennig vorschoss */
 
     handlohnWeg: false,
     handlohnHalb: false,
@@ -1036,6 +1037,65 @@
            gekauft wird. Die lange Begruendung steht oben bei Schritt 1. */
     Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.45);
     rechneAnschlag();
+
+    /* 7d. DER VORGRIFF AUF DEN NOTPFENNIG — der Boden unter der Lade.
+
+       Der Notpfennig war bis heute nur eine SCHONUNG: `buche()` nimmt nie
+       unter ihn. Kommt das Haus aber schon mit weniger an Michaeli an, gibt
+       ihm der Notpfennig nichts — und genau dieser Fall ist der haeufige.
+       Gemessen am eingefrorenen Stand `3e6d08c`, Buchung fuer Buchung
+       (`werkbank/schuss/preis-w5/boden.mjs`, 1350, grobe Hand): das Haus geht
+       mit 5 Pf in das Braujahr 1351, steht in Woche 16 auf null und bleibt
+       dort bis Woche 30 — fuenfzehn Wochen, in denen KEIN Zug etwas
+       veraendert, weil jeder Zug etwas kostet. Die Kennzahl der zweiten
+       Messlatte ist dann nicht klein, sondern NULL. Ein Zustand, aus dem
+       heraus es keinen Zug gibt, ist kein Spielzustand.
+
+       Der Satz, der daneben schon im Quelltext steht, verspricht das
+       Gegenteil: „dem Handwerker blieb sein Werkzeug und der Vorrat, den er
+       zum Weiterarbeiten brauchte". Ein Rat, der einem Haus nicht so viel
+       laesst, dass es das naechste Jahr brauen kann, sieht dieses Haus nie
+       wieder zahlen. Also schiesst er vor, was zum Notpfennig fehlt — nicht
+       aus Milde: der Vorgriff ist GESCHENKT NICHTS. Er geht auf denselben
+       Rueckstand wie eine nicht bezahlte Pflicht, kommt naechsten Michaeli
+       mit demselben Zehntel Aufschlag wieder (Schritt 2), und waechst der
+       Rueckstand ueber eine Jahreslast, holt sich der Rat dafuer dasselbe
+       Pfand wie sonst auch. Die Strafe bleibt vollstaendig; sie versteinert
+       das Haus nur nicht mehr mitten im Braujahr.
+
+       WARUM HIER UND NICHT VOR 7c: der Schaetzer soll den Hof sehen, wie er
+       ist. Stuende der Vorgriff vor der Schaetzung, schlueg er ueber
+       `Z.hoehe` auf den ANSCHLAG durch, der Anschlag auf die Angebotspreise
+       und damit auf den Nenner der Kennzahl — der Boden haette sich seinen
+       eigenen Nenner mit angehoben und waere keiner. Er steht deshalb hinter
+       der Schaetzung: er hebt den Zaehler, nicht den Nenner.
+
+       WARUM NICHT IM ERSTEN MICHAELI: der erste Michaeli einer Partie hat
+       keine Rechnung (Schritt 3), damit das Spiel nicht mit einer Schuld
+       beginnt. Dann hat er auch keinen Vorgriff. Er greift dort ohnehin nie
+       — die vier Anfangsladen (112 / 640 / 14.250 / 86.000) liegen alle
+       ueber ihrem Notpfennig (48 / 280 / 4.200 / 50.000). */
+    var boden = notpfennig();
+    if (!erste && boden > 0) {
+      var fehlt = boden - Math.floor(B.welt.haus.kasse);
+      if (fehlt > 0) {
+        B.welt.nimm(fehlt, 'Vorgriff auf den Notpfennig', 'spieler');
+        Z.rueckstand += fehlt;
+        Z.vorgriff = fehlt;
+        Z.rechnung.push({ name: 'Vorgriff auf den Notpfennig — angeschrieben',
+          betrag: fehlt, art: 'zufluss' });
+        chronik('pflicht', 'Die Lade reichte nicht bis zum Notpfennig. Der Rat schießt '
+          + geld(fehlt) + ' vor, damit das Haus das Braujahr brauen kann; '
+          + geld(boden) + ' stehen wieder im Kasten. Angeschrieben, nicht geschenkt: '
+          + 'zu Michaeli ' + (jahr() + 1) + ' kommt der Betrag mit Aufschlag wieder.');
+        B.welt.schreibe('Der Rat schießt dem Haus ' + geld(fehlt)
+          + ' auf den Notpfennig vor — angeschrieben, nicht geschenkt.', 'preis');
+      } else {
+        Z.vorgriff = 0;
+      }
+    } else {
+      Z.vorgriff = 0;
+    }
 
     /* 8. Die Bierordnung des Jahres. */
     setzeBierpreis();
