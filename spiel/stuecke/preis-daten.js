@@ -105,6 +105,63 @@ var PREIS_DATEN = {
          nicht mehr das Ende. */
       umlageAnteil: 0.35,
       handlohnAnteil: 1.10,
+
+      /* DIE VIERTE WURZEL, ZUM ZWEITEN MAL — UND SIE STEHT JETZT AUCH HIER.
+
+         WAS GEMESSEN WURDE (Welle 4, Nacharbeit, am eingefrorenen Stand
+         da7d690 auf Hafen 8900, 400 Wochen, saat=1350, jeder Klick der Hand
+         landet — siehe unten, warum das der schwerere und der richtige Fall
+         ist). Die Kennzahl der zweiten Latte, Jahr fuer Jahr:
+
+           5,89 · 1,55 · 4,27 · 2,79 · 5,90 · 4,74 · 10,52 · 41,67 · 26,39
+                · 7,05 · 6,88 · 19,27 · 13,67 · 9,20      Spearman +0,701
+
+         Die Barschaft zu Michaeli laeuft dabei von 112 auf 871 Pf, der Preis
+         des naechsten umkaempften Zuges nur von 19 auf 56. Der Kritiker hat
+         die Ursache mitgemessen: Spearman der Kennzahl gegen die KASSE
+         +0,947, gegen den NENNER −0,202. Die Zahl folgt der Kasse, nicht dem
+         Preis — es ist derselbe Patrizier-IV-Fall, den 1600 vor der letzten
+         Runde hatte, nur eine Epoche frueher.
+
+         WARUM DIESELBE WURZEL WIE IN 1600 UND NICHT ETWAS ANDERES. Die drei
+         Wurzeln der Pflichten haengen an FLUESSEN (fest · menge · ertrag).
+         Ein Haus, dessen Braujahr mehr abwirft, als es ausgeben kann, wird
+         von keiner erfasst: der BESTAND kommt in keiner vor. Genau das ist
+         1350 ab Jahr 6 — die fuenf Angebote dieser Zeit sind dann gebaut,
+         und was hereinkommt, bleibt liegen. Den NENNER darf dieses Stueck
+         nicht anfassen (er gehoert DEM GEGNER), und er soll auch nicht
+         angefasst werden: wer die Ablosesummen anhebt, damit die Kennzahl
+         flacher laeuft, entwertet die Latte genauso wie das Herunterpreisen
+         der Angebote.
+
+         HISTORISCH STEHT DER SATZ SCHON OBEN IN DIESER EPOCHE, woertlich:
+         „Der Anschlag ist die Schaetzung des Rats: was durch das Haus geht
+         UND WAS IM HAUS LIEGT." Der Schoss des 14. Jahrhunderts war ein
+         Vermoegensschoss — zwei Ratsherren gingen durch die Haeuser und
+         schaetzten Haus, Gerät und bares Geld. Was hier dazukommt, ist keine
+         neue Abgabe, sondern die zweite Haelfte einer Zahl, die diese Epoche
+         von Anfang an nennt.
+
+         DER FREIBETRAG IST DERSELBE WIE IN 1600: eine Jahreslast, mindestens
+         aber der Preis der billigsten Festlegung dieser Zeit (85 bis 141 Pf
+         ueber vierzehn Jahre, siehe preis.js `liegeFreibetrag`). Damit wird
+         nicht angeschlagen, wer auf die unwiderrufliche Wahl spart — und
+         genau das ist in dieser Epoche der Fall: der Automat nimmt `vertrag`
+         1352 fuer 92 Pf, und der Boden haelt ihn erreichbar. Wer spart und
+         dann kauft, zahlt nichts; wer sitzt, zahlt.
+
+         `liegeSatz` ist hier 0,70 wie in 1600 und nicht hoeher: die Lade
+         dieser Epoche ist die duennste der vier, der Notpfennig steht bei 48
+         Pf, und `buche()` laesst ihn stehen. Die Zahlen sind gemessen, nicht
+         geraten — die Reihe der Laeufe steht im Bericht der Nacharbeit
+         (werkbank/urteile/welle4-rueckkopplung-nacharbeit.md). */
+      liegeName: 'Anschlag auf das Geld in der Lade',
+      liegeSagt: 'Zu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, '
+               + 'was einer bar liegen hat. Was durch das Haus geht und was im Haus '
+               + 'liegt, steht beim Rat in derselben Zahl.',
+      liegeFrei: 1.0,
+      liegeSatz: 0.70,
+
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
          Stadt des 14. Jahrhunderts legte fast in jedem zweiten Jahr etwas

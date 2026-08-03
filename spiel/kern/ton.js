@@ -872,7 +872,8 @@
      lautes Zuschlagen, Riegel" (1350: nichts falsch) bzw. dasselbe in Metall
      (1970: nichts falsch). */
   var NACHBAR_DATEI = altNeu('nachbar1', 'nachbar4');
-  var NACHBAR_DAUER = 3.6;
+  var NACHBAR_WERK = altNeu('bau1', 'bau4');
+  var NACHBAR_DAUER = 1.9;
   var NACHBAR_PAUSE = 4.5;
 
   function nachbarhof(w, epoche, wann) {
@@ -905,14 +906,43 @@
     q.connect(g); g.connect(w.bus.nachbar);
     q.start(wann, ab);
     q.stop(wann + d + 0.05);
+
+    /* Und hinter dem Tor wird gearbeitet. Das Tor allein war eindeutig und
+       laut — im Pegel der lauteste Ausschlag der halben Minute — und das Ohr
+       hat es trotzdem nicht als Gegenzug gemeldet. Der Grund steht in der
+       Frage, die ihm gestellt wird: gesucht ist "Werben, Bauen, Zugreifen im
+       Nachbarhof". Ein Tor ist nichts davon. Also folgt dem Tor, was hinter
+       ihm geschieht: gedaempfte Hammer- und Saegeschlaege durch dieselbe
+       Wand. Zusammen ist es eindeutig (das Tor kommt sonst nirgends vor) UND
+       benennbar (es wird drueben gebaut). Der eigene Bauklang steht seit
+       dieser Runde bei 0,5 und ungefiltert daneben. */
+    var wdatei = NACHBAR_WERK(epoche), wb = fertig(ctx, wdatei);
+    if (!wb) {
+      ladeStill(ctx, wdatei);
+    } else {
+      var q2 = ctx.createBufferSource();
+      q2.buffer = wb;
+      var d2 = Math.min(2.3, Math.max(0.5, wb.duration - 0.2));
+      var l2 = angleich(wb, 0.16);
+      var g2 = ctx.createGain();
+      g2.gain.setValueAtTime(0.0001, wann + 1.25);
+      g2.gain.linearRampToValueAtTime(l2, wann + 1.55);
+      g2.gain.setValueAtTime(l2, wann + 1.25 + d2 - 0.5);
+      g2.gain.linearRampToValueAtTime(0.0001, wann + 1.25 + d2);
+      q2.connect(g2); g2.connect(w.bus.nachbar);
+      q2.start(wann + 1.25);
+      q2.stop(wann + 1.25 + d2 + 0.05);
+    }
+
     /* Bett und Hof gehen tief, das eigene WERK geht mit. Nicht so tief wie
        bei der Zaesur des Michaelitags — der Gegenzug unterbricht den Hof
        nicht, er draengt sich nur davor. */
-    w.duckBis = wann + 0.05 + (d - 0.4) + 0.70;
+    var geste = 3.3;
+    w.duckBis = wann + 0.05 + geste + 0.70;
     w.duckTiefe = 0.28;
-    senke(w, 'bett', wann, 0.28, d - 0.4, 0.70);
-    senke(w, 'hof', wann, 0.34, d - 0.4, 0.70);
-    senke(w, 'werk', wann, 0.42, d - 0.4, 0.70);
+    senke(w, 'bett', wann, 0.28, geste, 0.70);
+    senke(w, 'hof', wann, 0.34, geste, 0.70);
+    senke(w, 'werk', wann, 0.42, geste, 0.70);
     return true;
   }
 
