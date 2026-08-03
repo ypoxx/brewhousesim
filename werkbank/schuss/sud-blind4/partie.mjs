@@ -79,6 +79,7 @@ const AUFNAHME = () => {
     gaerfass: Z.bottiche.reduce((n, b) => n + b.fass, 0),
     plaetze: B.sud.gaerkeller ? B.sud.gaerkeller.plaetze() : null,
     guete: Math.round(Z.guete), sude: Z.gesamtSude, gesamtFass: Math.round(Z.gesamtFass),
+    legte: Z.gesamtLegte, fehl: Z.jahrFehl, gestuftGesamt: Z.gestuftGesamt || 0,
     gestuft: Z.gestuft || 0,
     verfahren: JSON.parse(JSON.stringify(Z.verfahren)),
     fest: Object.keys(Z.fest),
@@ -120,24 +121,40 @@ for (let w = 0; w < WOCHEN; w++) {
   const hand = [];
   if (STIL !== 'faul') {
     // 1. Die Fuhre. Ihre Knoepfe liegen auf einem zugeklappten Brett —
-    //    ein sorgfaeltiger Spieler schlaegt es auf.
-    for (const r of ['stadt:reiter:fuhre-fu-brett-fu-haeuser', 'stadt:reiter:fuhre-fu-brett-fu-wagen']) {
-      if (await maus(r, { egal: true }) === 'geklickt') break;
+    //    ein sorgfaeltiger Spieler schlaegt es auf. FUELLEN und ABSCHICKEN
+    //    haengen am Wagenbrett, nicht am Haeuserbrett.
+    if (!A.sud.length || true) {
+      const offen = await seite.evaluate(() => {
+        const k = document.querySelector('button[data-zug="fuhre:fuellen"]');
+        if (!k) return false;
+        const r = k.getBoundingClientRect();
+        const t = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+        return !!(t && (t === k || k.contains(t)));
+      });
+      if (!offen) await maus('stadt:reiter:fuhre-fu-brett-fu-wagen', { egal: true, warte: 60 });
     }
     if (await maus('fuhre:fuellen') === 'geklickt') hand.push('fuellen');
     else if (await maus('fuhre:wie-vorige') === 'geklickt') hand.push('wie-vorige');
-    if (await maus('fuhre:abschicken', { warte: 60 }) === 'geklickt') hand.push('abschicken');
+    if (await maus('fuhre:abschicken', { warte: 70 }) === 'geklickt') hand.push('abschicken');
     // 2. Rohstoff nachkaufen, wenn er knapp wird.
     if (A.rohstoff < 40) { if (await maus('fuhre:kauf:rohstoff') === 'geklickt') hand.push('rohstoff'); }
-    // 3. Die Hefe — der Zug des SUD, der nichts kostet ausser Bier.
+    // 3. Der Zettel wieder frei: das Wagenbrett zuklappen, sonst deckt es ihn.
+    await maus('stadt:reiter:fuhre-fu-brett-fu-wagen', { egal: true, warte: 60 });
+    // 4. Die Hefe — der Zug des SUD, der nichts kostet ausser Bier.
     if (await maus('sud:zettel-anstich') === 'geklickt') hand.push('hefe');
-    else if (await maus('sud:hefe-fuehren') === 'geklickt') hand.push('hefe-brett');
-    // 4. Gesperrte Charge (1970) — Frist geht vor.
-    await maus('sud:zettel-charge-frei', { egal: true });
+    // 5. Gesperrte Charge (1970) — Frist geht vor.
+    if (await maus('sud:zettel-charge-frei', { egal: true }) === 'geklickt') hand.push('charge');
     if (STIL === 'siegel') {
       // Die teure Festlegung nehmen, sobald die Kasse sie traegt.
       const r = await maus('sud:zettel-wechsel-kauf');
       if (r === 'geklickt') hand.push('KAUF');
+    }
+    if (STIL === 'brett') {
+      // Der Spieler schlaegt jede Woche DAS SUDHAUS auf und sieht nach.
+      await maus('stadt:reiter:sud-sud-brett', { egal: true, warte: 70 });
+      const c = await seite.evaluate(AUFNAHME);
+      wochen.push({ w: w + 1, C: c, marke: 'brett-offen' });
+      await maus('stadt:reiter:sud-sud-brett', { egal: true, warte: 70 });
     }
   }
 
