@@ -72,11 +72,17 @@
   opacity: 0.85;
 }
 
+/* Das Band traegt bis zu sieben Spalten (Wort · Uhr · Hand+Feder · Stand ·
+   nimmt · erloschen · Michaeli-Last). In 44 % Breite passen sie nicht immer
+   in eine Zeile; statt die letzte abzuschneiden — und das waere ausgerechnet
+   die mit den erloschenen Verschreibungen — bricht das Band um. Zwei Zeilen
+   plus Knopfreihe bleiben innerhalb der 5,6 % Hoehe, nachgemessen. */
 .erb-band {
   display: flex;
   align-items: baseline;
-  gap: calc(var(--s) * 10);
-  font-size: calc(var(--s) * 16);
+  flex-wrap: wrap;
+  gap: calc(var(--s) * 2) calc(var(--s) * 9);
+  font-size: calc(var(--s) * 15);
   white-space: nowrap;
   overflow: hidden;
 }
@@ -87,7 +93,7 @@
    Strich trennt sie, damit 'an der Person 0 DIE STUNDE' nicht zusammenlaeuft. */
 .erb-band > *:not(:first-child) {
   border-left: 1px solid var(--linie);
-  padding-left: calc(var(--s) * 11);
+  padding-left: calc(var(--s) * 9);
 }
 
 .erb-wort {
@@ -102,6 +108,14 @@
 .erb-stand    { font-family: var(--mono); color: var(--gruen); flex: 0 0 auto; }
 .erb-nimmt,
 .erb-gefallen { font-family: var(--mono); color: var(--rot); flex: 0 1 auto; }
+/* Auflage 1: was bezahlt und doch verloren ist, steht auf der Leiste. */
+.erb-erloschen {
+  font-family: var(--mono);
+  color: var(--rot);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  flex: 0 0 auto;
+}
 .erb-form     { font-family: var(--mono); color: var(--tinte); flex: 0 0 auto; }
 .erb-last     { font-family: var(--mono); color: #6b4d1f; flex: 0 0 auto; }
 
@@ -212,6 +226,30 @@
 .erb-lade-lose .erb-ladekopf { color: var(--rot); }
 .erb-lade-weg  .erb-ladekopf { color: #8a6a4a; }
 
+/* AUFLAGE 1 — DIE DRITTE LADE.  Fuer den persoenlichen Verlust gab es eine
+   durchgestrichene Liste, fuer den bezahlten keine Zeile. Jetzt gibt es sie,
+   und sie ist die auffaelligste im Buch: roter Balken, roter Kopf, der
+   gezahlte Betrag rechts. */
+.erb-lade-erloschen {
+  border-top-width: calc(var(--s) * 3);
+  border-top-color: var(--rot);
+}
+.erb-lade-erloschen .erb-ladekopf { color: var(--rot); }
+.erb-lade-erloschen .erb-satz .n { text-decoration: line-through; }
+.erb-lade-erloschen .erb-satz .p { color: var(--rot); }
+.erb-lade-erloschen .erb-satz.erb-zurueck .n {
+  text-decoration: none;
+  color: var(--gruen);
+}
+.erb-lade-erloschen .erb-satz.erb-zurueck .p { color: var(--gruen); }
+
+/* Zwei Haende mit demselben Namen und derselben Art — das Buch sagt es hin,
+   statt "II. Hand" zu behaupten (Auflage 2). */
+.erb-lade-hand .erb-satz.erb-gleich .v { color: var(--rot); }
+.erb-lade-hand .erb-satz .p { font-family: var(--mono); }
+
+.erb-frist-alt { color: #6f5f45; }
+
 .erb-satz {
   display: flex;
   align-items: center;
@@ -235,3 +273,276 @@
   padding: calc(var(--s) * 3) calc(var(--s) * 9);
   font-size: calc(var(--s) * 17);
 }
+
+/* ==========================================================================
+   DIE EPOCHE.  Auflage 4 des Kritikers, woertlich:
+
+     "erbe.css hat null data-epoche-Regeln (fuhre.css 15, sud.css 11); das
+      Brett ist zwischen 1350 und 1970 zu 70,5 % pixelgleich. Die Verbliste
+      ist viermal verschieden, das Blatt viermal dasselbe. Mindestens Papier,
+      Linierung und Schriftbild muessen 1350 (Stadtbuch), 1600 (Siegelbrief),
+      1884 (Hypothekenbuch-Vordruck) und 1970 (Maschinenschrift)
+      auseinanderhalten."
+
+   Das stimmte. Bis hierher unterschied das Blatt nur die Woerter — dieselbe
+   Papierfarbe, dieselbe punktierte Zeilentrennung, dieselbe Antiqua, dasselbe
+   Holz am Rahmen, von 1350 bis 1970.
+
+   Ab hier tragen Leiste und Buch in jeder Epoche ein anderes Schriftstueck.
+   Nicht Farbe zum Farbewechseln, sondern das, was den Vorgang traegt:
+
+     1350  DAS STADTBUCH.        Pergament, fleckig, ungleich. Keine
+                                 Linierung — was liniert ist, ist gedruckt,
+                                 und gedruckt wird hier nichts. Ein schwerer
+                                 dunkler Rahmen aus zwei Linien, wie der
+                                 Holzdeckel eines Amtsbuches. Rubrizierte
+                                 Ueberschriften in Rot, weite Versalien.
+     1600  DER SIEGELBRIEF.      Buetten, kuehler und glatter, mit den
+                                 waagrechten Rippen des Schoepfsiebs. Am
+                                 linken Rand die rote Rubrikleiste eines
+                                 Kanzleibriefs, unten rechts der Siegellack.
+                                 Kursive Kanzleischrift in den Ueberschriften.
+     1884  DER VORDRUCK.         Amtliches Formular: durchgehende blaue
+                                 Zeilenlinien ueber das ganze Blatt, dazu die
+                                 rote Randlinie der Spalte. Ueberschriften
+                                 unterstrichen, eng gesetzt, Zahlen rechts an
+                                 der Spaltenlinie. Es wird eingetragen, nicht
+                                 geschrieben.
+     1970  DIE MASCHINENSCHRIFT. Weisses Blatt ohne Struktur, links der graue
+                                 Streifen mit den Lochungen des Ordners.
+                                 Alles Maschinenschrift, gleiche Dickte, kein
+                                 Zierat, keine Sperrung. Ein Durchschlag.
+
+   Alles in Prozent und in Vielfachen von --s, keine festen Pixel, kein
+   geladenes Bild — die Muster sind Verlaeufe.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1350 — DAS STADTBUCH
+   -------------------------------------------------------------------------- */
+
+#buehne[data-epoche="1"] .erb-leiste,
+#buehne[data-epoche="1"] .erb-buch {
+  --erb-tinte: #2a1c0d;
+  --erb-rubrik: #8e2b18;
+  --erb-hilfslinie: transparent;
+  background:
+    radial-gradient(ellipse at 18% 24%, rgba(120, 92, 48, 0.16) 0%, rgba(120, 92, 48, 0) 42%),
+    radial-gradient(ellipse at 76% 68%, rgba(104, 76, 38, 0.14) 0%, rgba(104, 76, 38, 0) 38%),
+    radial-gradient(ellipse at 44% 92%, rgba(139, 108, 62, 0.12) 0%, rgba(139, 108, 62, 0) 46%),
+    linear-gradient(174deg, #f0e3c4 0%, #e6d6b1 58%, #dcc9a1 100%);
+  color: var(--erb-tinte);
+  font-family: var(--serif);
+}
+#buehne[data-epoche="1"] .erb-buch {
+  border: calc(var(--s) * 4) solid #3d2614;
+  box-shadow:
+    inset 0 0 0 calc(var(--s) * 2) #d9c49a,
+    inset 0 0 0 calc(var(--s) * 4) #5a3c1e,
+    0 calc(var(--s) * 6) calc(var(--s) * 18) rgba(0, 0, 0, 0.45);
+}
+#buehne[data-epoche="1"] .erb-ladekopf {
+  color: var(--erb-rubrik);
+  letter-spacing: calc(var(--s) * 3);
+}
+#buehne[data-epoche="1"] .erb-buch h2 {
+  letter-spacing: calc(var(--s) * 2);
+  color: var(--erb-rubrik);
+}
+/* Ein Amtsbuch hat keine gedruckte Zeile. Die Saetze stehen untereinander,
+   getrennt durch nichts als den Zeilenabstand. */
+#buehne[data-epoche="1"] .erb-satz { border-bottom: 0; }
+#buehne[data-epoche="1"] .erb-satz:nth-child(even) { background: rgba(90, 60, 30, 0.05); }
+#buehne[data-epoche="1"] .erb-lade { border-top-color: #7a5c34; }
+
+/* --------------------------------------------------------------------------
+   1600 — DER SIEGELBRIEF
+   -------------------------------------------------------------------------- */
+
+#buehne[data-epoche="2"] .erb-leiste,
+#buehne[data-epoche="2"] .erb-buch {
+  --erb-tinte: #23201a;
+  --erb-rubrik: #93211c;
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(140, 130, 104, 0.10) 0,
+      rgba(140, 130, 104, 0.10) calc(var(--s) * 1),
+      rgba(140, 130, 104, 0) calc(var(--s) * 1),
+      rgba(140, 130, 104, 0) calc(var(--s) * 7)),
+    linear-gradient(180deg, #f3efdf 0%, #eae4cf 100%);
+  color: var(--erb-tinte);
+  font-family: var(--serif);
+}
+#buehne[data-epoche="2"] .erb-buch {
+  border: calc(var(--s) * 2) solid #6d5c3c;
+  /* Die rote Rubrikleiste des Kanzleibriefs am linken Rand. */
+  border-left: calc(var(--s) * 7) solid var(--erb-rubrik);
+  box-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 16) rgba(0, 0, 0, 0.4);
+}
+/* Der Siegellack. Ein Kreis, kein Bild. */
+#buehne[data-epoche="2"] .erb-buch::after {
+  content: "";
+  position: absolute;
+  right: calc(var(--s) * 22);
+  bottom: calc(var(--s) * 18);
+  width: calc(var(--s) * 46);
+  height: calc(var(--s) * 46);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 32%, #c4523c 0%, #93211c 52%, #6d1512 100%);
+  box-shadow: inset 0 0 calc(var(--s) * 6) rgba(0, 0, 0, 0.5),
+              0 calc(var(--s) * 2) calc(var(--s) * 5) rgba(0, 0, 0, 0.4);
+  opacity: 0.9;
+  pointer-events: none;
+}
+#buehne[data-epoche="2"] .erb-buch h2,
+#buehne[data-epoche="2"] .erb-ladekopf {
+  font-style: italic;
+  letter-spacing: calc(var(--s) * 1);
+}
+#buehne[data-epoche="2"] .erb-ladekopf { color: var(--erb-rubrik); text-transform: none; }
+#buehne[data-epoche="2"] .erb-satz { border-bottom: 1px solid rgba(109, 92, 60, 0.35); }
+#buehne[data-epoche="2"] .erb-lade { border-top-color: #6d5c3c; }
+
+/* --------------------------------------------------------------------------
+   1884 — DER HYPOTHEKENBUCH-VORDRUCK
+   -------------------------------------------------------------------------- */
+
+#buehne[data-epoche="3"] .erb-leiste,
+#buehne[data-epoche="3"] .erb-buch {
+  --erb-tinte: #17202b;
+  --erb-rubrik: #9d2b22;
+  --erb-linie: #7e9dc4;
+  /* Durchgehende Zeilenlinien wie auf einem Formular, dazu die rote
+     Randlinie der Spalte. */
+  background:
+    linear-gradient(90deg,
+      rgba(157, 43, 34, 0) calc(var(--s) * 34),
+      rgba(157, 43, 34, 0.55) calc(var(--s) * 34),
+      rgba(157, 43, 34, 0.55) calc(var(--s) * 35),
+      rgba(157, 43, 34, 0) calc(var(--s) * 35)),
+    repeating-linear-gradient(0deg,
+      rgba(126, 157, 196, 0) 0,
+      rgba(126, 157, 196, 0) calc(var(--s) * 25),
+      rgba(126, 157, 196, 0.42) calc(var(--s) * 25),
+      rgba(126, 157, 196, 0.42) calc(var(--s) * 26)),
+    linear-gradient(180deg, #f7f6ee 0%, #eef0e6 100%);
+  color: var(--erb-tinte);
+  font-family: var(--serif);
+  font-stretch: condensed;
+}
+#buehne[data-epoche="3"] .erb-buch {
+  border: calc(var(--s) * 2) solid #5b6470;
+  box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 12) rgba(0, 0, 0, 0.35);
+  padding-left: calc(var(--s) * 44);
+}
+#buehne[data-epoche="3"] .erb-buch h2 {
+  letter-spacing: 0;
+  border-bottom: calc(var(--s) * 2) solid var(--erb-rubrik);
+  padding-bottom: calc(var(--s) * 3);
+}
+#buehne[data-epoche="3"] .erb-ladekopf {
+  color: var(--erb-tinte);
+  letter-spacing: calc(var(--s) * 1);
+  text-decoration: underline;
+  text-underline-offset: calc(var(--s) * 3);
+}
+#buehne[data-epoche="3"] .erb-lade-fest .erb-ladekopf,
+#buehne[data-epoche="3"] .erb-lade-lose .erb-ladekopf { color: var(--erb-tinte); }
+/* Auf einem Vordruck steht der Betrag in einer Spalte, nicht irgendwo. */
+#buehne[data-epoche="3"] .erb-satz {
+  border-bottom: 1px solid rgba(126, 157, 196, 0.55);
+}
+#buehne[data-epoche="3"] .erb-satz .p {
+  border-left: 1px solid rgba(126, 157, 196, 0.7);
+  padding-left: calc(var(--s) * 6);
+  min-width: calc(var(--s) * 90);
+  text-align: right;
+}
+#buehne[data-epoche="3"] .erb-lade { border-top-color: #5b6470; }
+#buehne[data-epoche="3"] .erb-buchkopf { border-left-color: var(--erb-rubrik); }
+
+/* --------------------------------------------------------------------------
+   1970 — DIE MASCHINENSCHRIFT
+   -------------------------------------------------------------------------- */
+
+#buehne[data-epoche="4"] .erb-leiste,
+#buehne[data-epoche="4"] .erb-buch {
+  --erb-tinte: #23241f;
+  --erb-rubrik: #3c4a5a;
+  background: linear-gradient(180deg, #f4f4f1 0%, #e9e9e4 100%);
+  color: var(--erb-tinte);
+  /* Gleiche Dickte fuer alles. Ein Durchschlag hat keine zweite Schrift. */
+  font-family: var(--mono);
+  letter-spacing: 0;
+}
+#buehne[data-epoche="4"] .erb-buch {
+  border: calc(var(--s) * 1) solid #9a9a92;
+  /* Der graue Streifen mit den Lochungen des Ordners. */
+  border-left: calc(var(--s) * 30) solid #d8d8d1;
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 10) rgba(0, 0, 0, 0.3);
+}
+#buehne[data-epoche="4"] .erb-buch::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--s) * -21);
+  top: 22%;
+  width: calc(var(--s) * 12);
+  height: 56%;
+  background:
+    radial-gradient(circle at 50% 8%,  #8d8d86 0 46%, rgba(0,0,0,0) 47%),
+    radial-gradient(circle at 50% 50%, #8d8d86 0 46%, rgba(0,0,0,0) 47%),
+    radial-gradient(circle at 50% 92%, #8d8d86 0 46%, rgba(0,0,0,0) 47%);
+  pointer-events: none;
+}
+#buehne[data-epoche="4"] .erb-buch h2,
+#buehne[data-epoche="4"] .erb-ladekopf,
+#buehne[data-epoche="4"] .erb-name,
+#buehne[data-epoche="4"] .erb-satz .p,
+#buehne[data-epoche="4"] .knopf.erb-knopf {
+  font-family: var(--mono);
+  letter-spacing: 0;
+}
+#buehne[data-epoche="4"] .erb-buch h2 { font-size: calc(var(--s) * 26); }
+#buehne[data-epoche="4"] .erb-ladekopf { color: var(--erb-rubrik); }
+#buehne[data-epoche="4"] .erb-sagt { font-style: normal; }
+#buehne[data-epoche="4"] .erb-satz { border-bottom: 1px dashed rgba(35, 36, 31, 0.28); }
+#buehne[data-epoche="4"] .erb-lade { border-top-color: #9a9a92; }
+#buehne[data-epoche="4"] .erb-buchkopf { border-left-color: #9a9a92; }
+
+/* --------------------------------------------------------------------------
+   DIE LEISTE FOLGT DEM BLATT — vier Rahmen, vier Schriftbilder
+   -------------------------------------------------------------------------- */
+
+#buehne[data-epoche="1"] .erb-leiste {
+  border-color: #3d2614;
+  border-width: calc(var(--s) * 3);
+}
+#buehne[data-epoche="1"] .erb-wort { color: #8e2b18; }
+
+#buehne[data-epoche="2"] .erb-leiste {
+  border-color: #6d5c3c;
+  border-left: calc(var(--s) * 7) solid #93211c;
+  border-radius: calc(var(--s) * 2);
+}
+#buehne[data-epoche="2"] .erb-wort { font-style: italic; color: #93211c; }
+
+#buehne[data-epoche="3"] .erb-leiste {
+  border-color: #5b6470;
+  border-width: calc(var(--s) * 2);
+  border-radius: 0;
+}
+#buehne[data-epoche="3"] .erb-wort { letter-spacing: calc(var(--s) * 1); color: #9d2b22; }
+#buehne[data-epoche="3"] .erb-band > *:not(:first-child) { border-left-color: #7e9dc4; }
+
+#buehne[data-epoche="4"] .erb-leiste {
+  border: calc(var(--s) * 2) solid #9a9a92;
+  border-radius: calc(var(--s) * 1);
+  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 9) rgba(0, 0, 0, 0.35);
+}
+#buehne[data-epoche="4"] .erb-leiste::before {
+  background: linear-gradient(90deg, #b9b9b1, #d8d8d1, #b9b9b1);
+}
+#buehne[data-epoche="4"] .erb-wort { letter-spacing: calc(var(--s) * 1); color: #3c4a5a; }
+#buehne[data-epoche="4"] .erb-hand { font-style: normal; color: #4a4a42; }
+#buehne[data-epoche="4"] .erb-band > *:not(:first-child) { border-left-color: rgba(35,36,31,0.25); }
