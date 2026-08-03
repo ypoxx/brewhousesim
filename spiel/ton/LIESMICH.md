@@ -26,6 +26,7 @@ einer Stelle, weil dieselbe Probe von mehreren Stücken gerufen wird.
 | Schicht | Dateien | Was sie sagt |
 |---|---|---|
 | **Bett** | `klang/bett1..4.mp3` | die **Zeit** — Holzflöte · Cembalo · Blaskapelle · Funk |
+| **Fremd** | `klang/nachbar1,4.mp3` + Wand | den **Gegenzug** — was drüben geschieht, hinter der Mauer |
 | **Hof** | `klang/hof1..4.mp3` | den **Ort** — Feuer unter der Pfanne · Küferei und Stall · Dampfmaschine · Diesel |
 | **Werk** | die übrigen ~35 Proben | den **Vorgang** — was der Spieler gerade getan hat |
 
@@ -43,8 +44,8 @@ Dasselbe Ereignis klingt in jeder Epoche anders — das ist der ganze Punkt:
 | `fuhre:kauf`, `preis:muenzen` | Münzen auf Holz | Münzen | Münzen | Registrierkasse |
 | `fuhre:fass-rollen` | Eichenfass auf Pflaster | dito | dito | Stahlfass auf Beton |
 | `tafel:kreide`, `gegner:preis` | Kreide auf Schiefer | Kreide | Kreide | Schreibmaschine |
-| `preis:michaeli` | Kirchenglocke | Glocke | Glocke | Telefon |
-| `uhr:woche` (WEITER) | Holzklapper | Turmuhr | Dampfpfiff | Stechuhr |
+| `preis:michaeli` | Kirchenglocke | Glocke | Glocke | **Werksglocke** |
+| `uhr:woche` (WEITER) | Holzklapper | Turmuhr | **Werkspfeife** | Stechuhr |
 | `fuhre:abfahrt:*` | Ochsengespann | Pferdefuhrwerk | Rangieren am Waggon | Lastzug, Druckluft |
 | `sud:anstellen` | Holzfeuer | Holzfeuer | Dampf | Motor |
 | `sud:anstich` | Zapfen und Einschenken | dito | dito | Flaschenband |
@@ -180,3 +181,35 @@ nicht ausdrücklich instrumental verlangt; `/v1/sound-generation` nimmt höchste
 **450 Zeichen**; und `/v1/music` nimmt für 1350 lange Prompts übel — die erste
 Fassung von `bett1` kam als Chiptune zurück, die zweite als Industrielärm. Kurz
 und mit Instrumentennamen war die Lösung.
+
+## Runde 3 der Welle 4 — was der blinde Kritiker geändert hat
+
+Sein tragender Befund: **die Epoche kam aus der Kulisse, nicht aus dem Vorgang.**
+Dreißig Sekunden ohne einen einzigen Klick klangen zu 94 / 97 / 59 / 75 Prozent so
+laut wie der gespielte Lauf, und drei von drei messbaren Betten nannten die Epoche
+allein richtig. „4 von 4 richtig" war wahr und belegte das Falsche.
+
+Heute: **31 / 34 / 15 / 19 Prozent.** Drei Eingriffe, keiner davon ein einzelner
+Klang — Bett und Hof auf gut die Hälfte, das Werk auf knapp das Doppelte, und jede
+Werkprobe auf 2,6 s geschnitten statt fünf bis acht Sekunden auslaufen zu lassen.
+Im Spiel fällt alle halbe Sekunde ein Klick; vorher lagen an jeder Stelle ein
+Dutzend Klänge übereinander. **Wer schneidet, hört mehr.** Die Epoche kommt
+trotzdem an: 4 von 4 beim blinden Ohr, mit einem Bett bei 45 % seines alten Pegels.
+
+Drei Regeln sind dabei neu dazugekommen, alle drei aus einer Messung:
+
+3. **Ein Zeichen darf sich keine Probe mit einem anderen Vorgang teilen.** Der
+   Gegenzug bekam als Zeichen `bau1` — dieselbe Probe, mit der DIE STADT das eigene
+   Bauen klingen lässt. Das Ohr meldete ihn daraufhin in 1884 bei Sekunde 12, wo
+   `sud:bau` steht, statt bei 26. Es hörte „eine Handsäge" und hatte recht.
+4. **Ein Pegel ist kein Klang, aber er macht einen.** Dasselbe Papier, doppelt so
+   laut, wurde vom Ohr zum „Reißverschluss" in 1600.
+5. **Eine Decke ist kein Kompressor.** `epoche3.wav` berührte die
+   Vollaussteuerung. Jetzt sitzt hinter dem Kompressor ein WaveShaper mit
+   `1,2·tanh(x/1,2)`; am Ausgang kann nie mehr als 0,818 stehen. Mit
+   `oversample: '4x'` stand dort wieder 1,0000 — die Filter der Überabtastung
+   schwingen an der Kante über. Deshalb ist die Überabtastung aus.
+
+Der volle Befund und die offenen Punkte — Auflage 1 ist **nicht** abgenommen —
+stehen in
+[`../../werkbank/urteile/welle4-der-klang-nacharbeit.md`](../../werkbank/urteile/welle4-der-klang-nacharbeit.md).

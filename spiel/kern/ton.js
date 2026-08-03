@@ -160,7 +160,7 @@
        "Reissverschluss" gehoert. Jetzt ist es ein Messer in Eichenholz. */
     'fuhre:kerbe':       { datei: stets('kerbe'), ersatz: 'kerbe', laut: 0.7 },
     'fuhre:probe':       { datei: je('anstich', 'anstich', 'anstich', 'flaschen'), laut: 0.6 },
-    'fuhre:listen':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
+    'fuhre:listen':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.32 },
     'tafel:kreide':      { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
     /* Die einzige Dauerschleife des Werks: sie beginnt am Michaelitag und
        laeuft bis zum Ende. Damit ist sie faktisch ein zweites Bett und wird
@@ -200,7 +200,7 @@
     'preis:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.85 },
     'preis:handschlag':  { datei: stets('handschlag'), laut: 0.85 },
     'preis:fertig':      { datei: altNeu('bau1', 'bau4'), laut: 0.55, laenge: 1.8 },
-    'preis:blatt':       { datei: stets('papier'), laut: 0.5 },
+    'preis:blatt':       { datei: stets('papier'), laut: 0.34 },
 
     /* --- DIE STADT ------------------------------------------------------ */
     /* Das EIGENE Bauen tritt zurueck. Nicht aus Bescheidenheit: solange es
@@ -211,7 +211,12 @@
     /* Der Reiter war ein Rauschstoss aus dem Ersatzkasten — das Ohr hat ihn
        in 1350 als "Klicken eines modernen Fotoapparats" gehoert. Jetzt ist
        es das, was er sein soll: ein Bogen Papier. */
-    'stadt:reiter':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.4 },
+    /* 0,26 und nicht 0,4: mit dem angehobenen Werkpegel dieser Runde stand
+       das Papier doppelt so laut wie vorher, und das blinde Ohr hat es in
+       1600 ungefragt als "Reissverschluss ganz am Anfang" geruegt — dieselbe
+       Ruege, die in Welle 4 schon einmal die Kerbe getroffen hat. Ein Pegel
+       ist kein Klang, aber er macht einen. */
+    'stadt:reiter':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.26 },
 
     /* --- DER GEGNER -----------------------------------------------------
        AUFLAGE 1, UND SIE IST DER KERN DES GANZEN URTEILS.
@@ -255,7 +260,7 @@
     'gegner:angebot':     { datei: altNeu('karren', 'telefon'), laut: 0.85, fern: true, nachbar: true },
     'gegner:hinhalten':   { datei: stets('papier'), ersatz: 'blatt', laut: 0.5 },
     'gegner:mitbieten':   { datei: altNeu('muenzen', 'kasse'), laut: 0.95, fern: true, nachbar: true },
-    'gegner:oeffnen':     { datei: stets('papier'), ersatz: 'blatt', laut: 0.4 },
+    'gegner:oeffnen':     { datei: stets('papier'), ersatz: 'blatt', laut: 0.3 },
     /* AUFLAGE 3. Sechs Namen, die `merkeZug()` in gegner.js:417 aus
        'gegner:' + art bildet und die deshalb nie jemand als Zeichenkette
        gesucht hat. `gegner:uebernahme` allein ist in 1970 SECHSMAL in den
@@ -294,7 +299,7 @@
     'sud:kauf':          { datei: altNeu('muenzen', 'kasse'), laut: 0.85 },
     'sud:umstellen':     { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
     'sud:bau':           { datei: altNeu('bau1', 'bau4'), laut: 0.5, laenge: 1.8 },
-    'sud:anzeige':       { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
+    'sud:anzeige':       { datei: stets('papier'), ersatz: 'blatt', laut: 0.32 },
 
     /* --- DER NAME ------------------------------------------------------- */
     'name:anschlagen':   { datei: altNeu('bau1', 'bau4'), laut: 0.5, laenge: 1.8 },

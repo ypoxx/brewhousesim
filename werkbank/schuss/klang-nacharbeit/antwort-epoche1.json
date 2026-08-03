@@ -1,0 +1,379 @@
+{
+ "epoche": 1,
+ "bettSpur": [
+  0.11989,
+  0.09494,
+  0.08036,
+  0.11075,
+  0.09196,
+  0.09089,
+  0.01439,
+  0.01545,
+  0.02277,
+  0.04247,
+  0.0504,
+  0.10768,
+  0.06343,
+  0.07527,
+  0.03626,
+  0.01699
+ ],
+ "ruhe": 0.07527,
+ "messung": [
+  {
+   "vorgang": "Fuhre laden",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stand": "geklickt",
+   "davor": 0.07843,
+   "danach": 0.03639,
+   "hub": 0.46,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Fuhre laden",
+   "zug": "fuhre:laden:lindenhof",
+   "stand": "geklickt",
+   "davor": 0.01764,
+   "danach": 0.07783,
+   "hub": 4.41,
+   "toene": [
+    "fuhre:fass-rollen"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stand": "geklickt",
+   "davor": 0.17391,
+   "danach": 0.0815,
+   "hub": 0.47,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "fuhre:fuellen",
+   "stand": "geklickt",
+   "davor": 0.02559,
+   "danach": 0.12094,
+   "hub": 4.73,
+   "toene": [
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "fuhre:abschicken",
+   "stand": "geklickt",
+   "davor": 0.24579,
+   "danach": 0.26127,
+   "hub": 1.06,
+   "toene": [
+    "fuhre:abfahrt:ochse",
+    "sud:pfanne",
+    "gegner:bauen"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "stadt:reiter:sud-sud-brett",
+   "stand": "geklickt",
+   "davor": 0.22086,
+   "danach": 0.25898,
+   "hub": 1.17,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:wuerze:sack",
+   "stand": "geklickt",
+   "davor": 0.10004,
+   "danach": 0.10106,
+   "hub": 1.01,
+   "toene": [
+    "sud:umstellen",
+    "sud:anstellen"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:anstich-jung",
+   "stand": "unklickbar"
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:hefe-fuehren",
+   "stand": "geklickt",
+   "davor": 0.01438,
+   "danach": 0.23556,
+   "hub": 16.38,
+   "toene": [
+    "sud:hefe"
+   ]
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:beschwerde",
+   "stand": "geklickt",
+   "davor": 0.03739,
+   "danach": 0.07844,
+   "hub": 2.1,
+   "toene": [
+    "gegner:klage"
+   ]
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:zuvorkommen:obernberg",
+   "stand": "nicht-da"
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:abloesen:torschenke",
+   "stand": "geklickt",
+   "davor": 0.08058,
+   "danach": 0.24881,
+   "hub": 3.09,
+   "toene": [
+    "gegner:abloesen"
+   ]
+  },
+  {
+   "vorgang": "Preis",
+   "zug": "preis:tafel",
+   "stand": "geklickt",
+   "davor": 0.14697,
+   "danach": 0.30343,
+   "hub": 2.06,
+   "toene": [
+    "preis:blatt"
+   ]
+  },
+  {
+   "vorgang": "Name",
+   "zug": "name:jetzt:umtrunk",
+   "stand": "unklickbar"
+  },
+  {
+   "vorgang": "Bau",
+   "zug": "stadt:bau:grutkammer",
+   "stand": "geklickt",
+   "davor": 0.06892,
+   "danach": 0.11971,
+   "hub": 1.74,
+   "toene": [
+    "stadt:bau"
+   ]
+  },
+  {
+   "vorgang": "Erbe",
+   "zug": "erbe:verschreibe:ochse",
+   "stand": "unklickbar"
+  }
+ ],
+ "michaeli": {
+  "vorgang": "Michaelitag",
+  "zug": "weiter (Jahreswechsel)",
+  "davor": 0.18686,
+  "danach": 0.44482,
+  "hub": 2.38,
+  "toene": [
+   "uhr:woche",
+   "sommer:keller-leer",
+   "preis:michaeli",
+   "preis:muenzen",
+   "sud:ausschlagen"
+  ],
+  "j": 1351,
+  "w": 1
+ },
+ "gegen": [
+  {
+   "woche": 2,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne"
+   ],
+   "spitze": 0.17992
+  },
+  {
+   "woche": 3,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.2057
+  },
+  {
+   "woche": 4,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.19257
+  },
+  {
+   "woche": 5,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.04855
+  },
+  {
+   "woche": 6,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.04389
+  },
+  {
+   "woche": 7,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.07319
+  },
+  {
+   "woche": 8,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.11329
+  },
+  {
+   "woche": 9,
+   "toene": [
+    "uhr:woche",
+    "gegner:werben"
+   ],
+   "spitze": 0.20995
+  },
+  {
+   "woche": 10,
+   "toene": [
+    "uhr:woche",
+    "gegner:werben"
+   ],
+   "spitze": 0.2618
+  },
+  {
+   "woche": 11,
+   "toene": [
+    "uhr:woche",
+    "gegner:fuhre"
+   ],
+   "spitze": 0.21045
+  },
+  {
+   "woche": 12,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden",
+    "name:urteil-schlecht"
+   ],
+   "spitze": 0.2221
+  },
+  {
+   "woche": 13,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne",
+    "gegner:binden",
+    "gegner:bauen"
+   ],
+   "spitze": 0.16337
+  },
+  {
+   "woche": 14,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.19863
+  },
+  {
+   "woche": 15,
+   "toene": [
+    "uhr:woche",
+    "sud:anzeige",
+    "name:urteil-schlecht",
+    "name:entzug"
+   ],
+   "spitze": 0.21155
+  },
+  {
+   "woche": 16,
+   "toene": [
+    "uhr:woche",
+    "gegner:verlieren"
+   ],
+   "spitze": 0.12772
+  },
+  {
+   "woche": 17,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne",
+    "sud:anzeige"
+   ],
+   "spitze": 0.11683
+  },
+  {
+   "woche": 18,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.18407
+  },
+  {
+   "woche": 19,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.19565
+  },
+  {
+   "woche": 20,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.0397
+  },
+  {
+   "woche": 21,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne"
+   ],
+   "spitze": 0.06281
+  }
+ ],
+ "schluss": {
+  "geraten": {},
+  "lage": 0,
+  "lageInhalt": [],
+  "zeit": "1351/21",
+  "pegel": {
+   "zustand": "running",
+   "stumm": false,
+   "laut": 0.8,
+   "rms": 0.028236696034689635,
+   "spitze": 0.08813448250293732,
+   "hoechste": 0.8187141418457031,
+   "lauteste": 0.44481691220075725
+  }
+ },
+ "konsole": []
+}

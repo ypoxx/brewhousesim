@@ -1,0 +1,395 @@
+{
+ "epoche": 2,
+ "bettSpur": [
+  0.05989,
+  0.04884,
+  0.04192,
+  0.04075,
+  0.03327,
+  0.03191,
+  0.01344,
+  0.01437,
+  0.06442,
+  0.07429,
+  0.07088,
+  0.07635,
+  0.09103,
+  0.10737,
+  0.12176,
+  0.09059
+ ],
+ "ruhe": 0.06442,
+ "messung": [
+  {
+   "vorgang": "Fuhre laden",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stand": "geklickt",
+   "davor": 0.03088,
+   "danach": 0.03681,
+   "hub": 1.19,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Fuhre laden",
+   "zug": "fuhre:laden:lindenhof",
+   "stand": "geklickt",
+   "davor": 0.0298,
+   "danach": 0.0864,
+   "hub": 2.9,
+   "toene": [
+    "fuhre:fass-rollen"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stand": "geklickt",
+   "davor": 0.17817,
+   "danach": 0.05256,
+   "hub": 0.29,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "fuhre:fuellen",
+   "stand": "geklickt",
+   "davor": 0.02701,
+   "danach": 0.20405,
+   "hub": 7.55,
+   "toene": [
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "fuhre:abschicken",
+   "stand": "geklickt",
+   "davor": 0.32339,
+   "danach": 0.26116,
+   "hub": 0.81,
+   "toene": [
+    "fuhre:abfahrt:pferd",
+    "sud:anstellen",
+    "sud:pfanne",
+    "gegner:bauen",
+    "name:aufgeld"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "stadt:reiter:sud-sud-brett",
+   "stand": "geklickt",
+   "davor": 0.22166,
+   "danach": 0.18105,
+   "hub": 0.82,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:schuettung:weizen",
+   "stand": "geklickt",
+   "davor": 0.03491,
+   "danach": 0.13045,
+   "hub": 3.74,
+   "toene": [
+    "sud:umstellen",
+    "sud:anstellen",
+    "sud:ausschlagen"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:anstich-jung",
+   "stand": "geklickt",
+   "davor": 0.07774,
+   "danach": 0.29589,
+   "hub": 3.81,
+   "toene": [
+    "sud:anstich"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:hefe-fuehren",
+   "stand": "unklickbar"
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:beschwerde",
+   "stand": "geklickt",
+   "davor": 0.01392,
+   "danach": 0.07936,
+   "hub": 5.7,
+   "toene": [
+    "gegner:klage"
+   ]
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:zuvorkommen:muehlwirt",
+   "stand": "nicht-da"
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:abloesen:ochse",
+   "stand": "geklickt",
+   "davor": 0.08598,
+   "danach": 0.24415,
+   "hub": 2.84,
+   "toene": [
+    "gegner:abloesen"
+   ]
+  },
+  {
+   "vorgang": "Preis",
+   "zug": "preis:tafel",
+   "stand": "geklickt",
+   "davor": 0.14714,
+   "danach": 0.29613,
+   "hub": 2.01,
+   "toene": [
+    "preis:blatt"
+   ]
+  },
+  {
+   "vorgang": "Name",
+   "zug": "name:band",
+   "stand": "unklickbar"
+  },
+  {
+   "vorgang": "Bau",
+   "zug": "stadt:bau:seite",
+   "stand": "geklickt",
+   "davor": 0.05565,
+   "danach": 0.04128,
+   "hub": 0.74,
+   "toene": []
+  },
+  {
+   "vorgang": "Erbe",
+   "zug": "stadt:reiter:erbe-blatt-erb-buch",
+   "stand": "geklickt",
+   "davor": 0.03881,
+   "danach": 0.02143,
+   "hub": 0.55,
+   "toene": [
+    "stadt:reiter"
+   ]
+  }
+ ],
+ "michaeli": {
+  "vorgang": "Michaelitag",
+  "zug": "weiter (Jahreswechsel)",
+  "davor": 0.21197,
+  "danach": 0.44125,
+  "hub": 2.08,
+  "toene": [
+   "uhr:woche",
+   "sommer:keller-leer",
+   "preis:michaeli",
+   "preis:muenzen",
+   "sud:ausschlagen",
+   "name:urteil-gut"
+  ],
+  "j": 1601,
+  "w": 1
+ },
+ "gegen": [
+  {
+   "woche": 2,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne"
+   ],
+   "spitze": 0.18114
+  },
+  {
+   "woche": 3,
+   "toene": [
+    "uhr:woche",
+    "gegner:rohstoff"
+   ],
+   "spitze": 0.15719
+  },
+  {
+   "woche": 4,
+   "toene": [
+    "uhr:woche",
+    "gegner:verlieren"
+   ],
+   "spitze": 0.20888
+  },
+  {
+   "woche": 5,
+   "toene": [
+    "uhr:woche",
+    "gegner:werben"
+   ],
+   "spitze": 0.21141
+  },
+  {
+   "woche": 6,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.26101
+  },
+  {
+   "woche": 7,
+   "toene": [
+    "uhr:woche",
+    "gegner:bauen"
+   ],
+   "spitze": 0.19434
+  },
+  {
+   "woche": 8,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden"
+   ],
+   "spitze": 0.21238
+  },
+  {
+   "woche": 9,
+   "toene": [
+    "uhr:woche",
+    "gegner:rohstoff",
+    "sud:anzeige"
+   ],
+   "spitze": 0.09831
+  },
+  {
+   "woche": 10,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.1132
+  },
+  {
+   "woche": 11,
+   "toene": [
+    "uhr:woche",
+    "gegner:unglueck"
+   ],
+   "spitze": 0.17638
+  },
+  {
+   "woche": 12,
+   "toene": [
+    "uhr:woche",
+    "gegner:unglueck",
+    "sud:anzeige"
+   ],
+   "spitze": 0.17895
+  },
+  {
+   "woche": 13,
+   "toene": [
+    "uhr:woche",
+    "gegner:bauen",
+    "sud:anzeige"
+   ],
+   "spitze": 0.22333
+  },
+  {
+   "woche": 14,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.21108
+  },
+  {
+   "woche": 15,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne"
+   ],
+   "spitze": 0.11675
+  },
+  {
+   "woche": 16,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.24861
+  },
+  {
+   "woche": 17,
+   "toene": [
+    "uhr:woche",
+    "gegner:rohstoff",
+    "name:urteil-schlecht"
+   ],
+   "spitze": 0.17817
+  },
+  {
+   "woche": 18,
+   "toene": [
+    "uhr:woche",
+    "sud:anzeige"
+   ],
+   "spitze": 0.17885
+  },
+  {
+   "woche": 19,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.18053
+  },
+  {
+   "woche": 20,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne"
+   ],
+   "spitze": 0.159
+  },
+  {
+   "woche": 21,
+   "toene": [
+    "uhr:woche",
+    "fuhre:kerbe",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne"
+   ],
+   "spitze": 0.11353
+  }
+ ],
+ "schluss": {
+  "geraten": {},
+  "lage": 0,
+  "lageInhalt": [],
+  "zeit": "1601/21",
+  "pegel": {
+   "zustand": "running",
+   "stumm": false,
+   "laut": 0.8,
+   "rms": 0.04002705878403114,
+   "spitze": 0.12157739698886871,
+   "hoechste": 0.8187141418457031,
+   "lauteste": 0.44125014302663657
+  }
+ },
+ "konsole": []
+}
