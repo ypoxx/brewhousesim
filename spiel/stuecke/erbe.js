@@ -53,6 +53,49 @@
    Knopf, dieselbe Adresse, anderer Preis: das ist die andere Hand.
 
    ---------------------------------------------------------------------------
+   RUNDE 3 — WAS DER BLINDE KRITIKER GEZAEHLT HAT UND WAS DARAUS WURDE
+   ---------------------------------------------------------------------------
+   Urteil: besteht mit Auflage. Fuenf Auflagen, drei davon gehoerten dieser
+   Datei, eine gehoert zur Haelfte dem Kern, eine ist eine Rechnung.
+
+   1  "Was man als dauerhaft kauft, wird von einem anderen Stueck geloescht —
+      mit einer Meldung, die es leugnet."  Nachgemessen und in jeder Zahl
+      bestaetigt (E1/Saat 1350: Ochse 16 Pf in 1350/1, genommen 1350/11;
+      Pfarrschenke 8 Pf, genommen 1350/21; das Buch fuehrte beide weiter unter
+      GESCHRIEBEN · 2). Die Verschreibung stirbt jetzt SICHTBAR: jede Woche
+      geprueft, mit Datum, Grund und gezahltem Betrag in eine dritte Lade
+      ERLOSCHEN, dazu eine Zeile in Chronik und Protokoll — und ein Knopf mit
+      Preisschild, der Widerspruch aus dem Buch erhebt und das Gezahlte
+      anrechnet.  (Der Satz des GEGNERS bleibt falsch; er steht in
+      gegner-daten.js:226 und ist im Bericht gemeldet.)
+
+   2  "Die II. Hand ist oft dieselbe Hand."  Der Vorname wird in
+      welt.neueAmtszeit gezogen — Kern, Bitte im Bericht. Die Feder gehoert
+      hierher, und sie wechselt jetzt bei JEDEM Erbfall: Antrittsgeld im
+      ersten Jahr, dazu der Erbfolgenachweis, der mit jeder Hand teurer wird.
+      Gemessen an dem Fall, den der Kritiker meint (E2/Saat 1350, zweimal
+      "Veit Bruckner, wagemutig"): Feder 0,70x / 1,08x / 1,16x.
+
+   3  "Nach der Stunde ist die Leiste stumm."  Gemessen, Beobachtungspartie:
+      E1 0,03 preisbeschilderte treffbare aktive erbe-Zuege je Woche ab
+      Woche 16 (85 von 88 Wochen null), E2 0,60, E3 0,99, E4 0,96.
+      Jetzt: 2,13 / 3,69 / 3,00 / 3,77, je 1 von 88/88/86/84 Wochen null —
+      die letzte, in der das Spiel schon aus ist. Zwei Aenderungen: die Stunde
+      streut (11 bis 17 Wochen statt 15 in 16 von 16 Stichproben), und sie
+      kehrt wieder — die Leiste traegt ihre vier Knoepfe bis zum letzten Klick,
+      und der zweite Erbfall, der unerreichbar war, faellt zweimal.
+
+   4  "Die Epoche ist im ERBE nur Wortwahl."  erbe.css hatte null
+      data-epoche-Regeln, das Brett war zwischen 1350 und 1970 zu 70,5 %
+      pixelgleich. Jetzt: Pergament / Buetten mit Siegel / Vordruck mit blauer
+      Linierung / Maschinenschrift, gemessen 0,6 bis 8,4 % pixelgleich ueber
+      alle sechs Paare.
+
+   5  "Es zieht 37 bis 56 Prozent der Startbarschaft."  Ueber drei Saaten
+      nachgemessen war die Spanne 17,9 bis 78,1 %. Das Stueck ist jetzt an der
+      Startkasse geeicht: 17,9 bis 38,1 %.
+
+   ---------------------------------------------------------------------------
    PLATZ.  Zwei Dinge, und beide halten sich an die Ordnung DER STADT.
    ---------------------------------------------------------------------------
    · .erb-leiste steht dauernd, unten quer: 44 % x 5,6 % = 2,46 % der Buehne
@@ -682,17 +725,8 @@
      DAS BILD
      ====================================================================== */
 
-  function zeile(el, marke, wert2, klasse) {
-    var z = B.el('div', 'erb-zeile' + (klasse ? ' ' + klasse : ''));
-    z.appendChild(B.el('span', 'm', marke));
-    z.appendChild(B.el('span', 'w', wert2));
-    el.appendChild(z);
-    return z;
-  }
-
   /* --- die dauernd stehende Tafel --------------------------------------- */
 
-  function haeuser(n) { return n + (n === 1 ? ' Haus' : ' Häuser'); }
   function ohneArtikel(t) { return String(t).replace(/^(Das|Der|Die)\s+/, ''); }
 
   /* Der lange Name eines Wirtshauses sprengt einen Knopf, der ein Viertel der
