@@ -365,6 +365,22 @@
      dessen, was fuer die erloschene Verschreibung schon bezahlt wurde. */
   D.WIDERSPRUCH_SATZ = 2.0;
 
+  /* DIE UNTERSTE STUFE DER UEBERGABE — und warum sie nicht 1 sein darf.
+     Wenn das Haus nichts mehr haelt und die Lade leer ist, faellt die
+     Erbmasse auf null und beide Wege standen mit `Math.max(1, ...)` auf
+     "1 Pf". Am Bildschirm gemessen war dieser eine Pfennig danach in
+     5 bis 6 von 7 Messpunkten DER BILLIGSTE ZUG DER GANZEN TAFEL — und
+     rho = Kasse / billigster Preis, die Zahl der zweiten Latte, sprang
+     dadurch von 10..35 auf 90..213. Das waere eine Kennzahl, die schoen
+     aussieht, weil dieses Stueck einen Pfennigknopf hinstellt, und sonst
+     nichts. Genau davor warnt Auflage 5.
+     Also hat die Uebergabe eine Untergrenze mit einem Grund: die Gebuehr
+     fuer Schreiber, Siegel, Eintrag oder Notar faellt an, auch wenn nichts
+     zu teilen ist. Sie rechnet mit dem Satz der Epoche, dem Eichfaktor und
+     der Feder der Hand — steht also in derselben Waehrung wie alles andere
+     in diesem Stueck. */
+  D.UEBERGABE_MINDEST = 6;
+
   B.erbeDaten = D;
 
 })(BRAUHAUS);

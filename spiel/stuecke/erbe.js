@@ -202,12 +202,17 @@
   function restAnteil() {
     return Math.max(0, Math.min(1, wochenBisStunde() / amtszeitWochen()));
   }
+  /* Was Schreiber, Siegel, Eintrag oder Notar kosten — faellt an, auch wenn
+     nichts zu teilen ist. Die Untergrenze beider Wege. */
+  function gebuehr() {
+    return Math.max(1, Math.round(ep().satz * (D.UEBERGABE_MINDEST || 1) * Z.eich * feder()));
+  }
   function abfindungPreis() {
     var f = D.ABFINDUNG_BODEN + (D.ABFINDUNG_ANFANG - D.ABFINDUNG_BODEN) * restAnteil();
-    return Math.max(1, Math.round(erbmasse() * f));
+    return Math.max(gebuehr(), Math.round(erbmasse() * f));
   }
   function leibgedingPreis() {
-    return Math.max(1, Math.round(erbmasse() * D.LEIBGEDING_ANTEIL));
+    return Math.max(gebuehr(), Math.round(erbmasse() * D.LEIBGEDING_ANTEIL));
   }
   function leibgedingLast() {
     var s = 0;
@@ -872,6 +877,8 @@
       klasse: 'erb-knopf erb-uebergabe',
       titel: e.formen.leibgeding.satz + ' — ' + geld(lg) + ' jedes Michaeli, '
         + 'solange das Haus steht'
+        + (lg <= gebuehr() ? '; das ist die reine Gebühr für ' + e.wo
+           + ', denn zu teilen ist nichts mehr' : '')
         + (last > 0 ? '; dazu die ' + geld(last) + ', die schon laufen' : '')
         + '. Unwiderruflich.',
       tu: function () { uebergib('leibgeding'); }
@@ -882,7 +889,10 @@
       preis: -ab,
       klasse: 'erb-knopf erb-uebergabe',
       titel: e.formen.abfindung.satz + ' — einmal ' + geld(ab) + '. '
-        + 'Der Preis fällt jede Woche. Unwiderruflich.',
+        + (ab <= gebuehr()
+           ? 'Mehr ist es nicht: das ist die Gebühr für ' + e.wo + ', zu teilen ist nichts. '
+           : 'Der Preis fällt mit jeder Woche, die der Stunde näher kommt. ')
+        + 'Unwiderruflich.',
       aus: !B.welt.kann(ab),
       tu: function () { uebergib('abfindung'); }
     }));
@@ -1235,7 +1245,7 @@
         nachgeschrieben: Z.nachgeschrieben,
         alt: Z.alt, neu: Z.neu, haende: Z.haende.slice(),
         startKasse: Z.startKasse, eich: Z.eich, eichRoh: Z.eichRoh,
-        erbmasse: erbmasse(), leibgedingPreis: leibgedingPreis(),
+        erbmasse: erbmasse(), gebuehr: gebuehr(), leibgedingPreis: leibgedingPreis(),
         abfindungPreis: abfindungPreis(),
         eigenschaft: amt().eigenschaft, faktor: eig().faktor,
         feder: feder(), federDauernd: federDauernd(),
