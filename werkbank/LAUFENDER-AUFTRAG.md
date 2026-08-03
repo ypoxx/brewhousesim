@@ -133,6 +133,40 @@ ein laufender. Am Logfile prüfen, nicht an `pgrep`.
 
 ---
 
+## RICHTUNGSENTSCHEIDUNG DES AUFTRAGGEBERS, 3. August 2026 — DER EPOCHENBOGEN
+
+**Das Spiel soll nicht über Jahrhunderte laufen.** Stattdessen Epochen nach Art
+von **Civilization VII**: jede mit eigenen Eigenschaften, mit einer Übergabe, die
+Motivation trägt (man fängt nicht bei 0 an), und einem Zurücksetzen, das Raum
+schafft. Dazu die Fragen: was wird übernommen, was zurückgesetzt, was sind gute
+Ziele je Epoche, gibt es Technologiebäume oder Errungenschaften.
+
+Der Auftraggeber hat ausdrücklich ergänzt: **die Kritik an Civ 7 ist zu
+berücksichtigen** — teils sei sie Gewohnheit aus den Vorgängern, und wir bauen
+ein neues Spiel ohne diese Vorgeschichte.
+
+**Alles Recherchierte, Gemessene und die offenen Fragen stehen in
+[`gauntlet/EPOCHENBOGEN.md`](../gauntlet/EPOCHENBOGEN.md).** Dort auch: was Civ 7
+behält und was es fallen lässt, die fünf lautesten Kritikpunkte, was Firaxis
+davon mit dem „Test of Time"-Update vom 19. Mai 2026 selbst kassiert hat (den
+erzwungenen Identitätswechsel — die Zeitalter blieben), und welche Kritik uns
+strukturell trifft und welche nicht.
+
+**Die Antworten stehen dort NICHT, mit Absicht.** Das Papier ist ein Auftrag für
+den Loop. Wer die Antworten hineinschreibt, hat den blinden Kritiker abgeschafft.
+
+**Empfehlung der Aufsicht, im Papier begründet:** eigene Welle, ein Stück, und
+der erste Auftrag ist **messen, nicht bauen** — (A) wie lange trägt eine gut
+geführte Partie wirklich, und (F) warum werden die vorhandenen unwiderruflichen
+Festlegungen in 14 Jahren nur 1/1/0/0 mal genommen, obwohl acht möglich wären.
+Ein zweiter ungenutzter Baum neben dem ersten hilft niemandem.
+
+**Nicht in Welle 4 einbauen.** Die Änderung berührt `kern/uhr.js`, `kern/welt.js`
+und fünf Stücke zugleich; Welle 4 hat vier offene Stücke und die Wellenzahl ist
+nicht erreicht.
+
+---
+
 ## WELLE 4, DIE RÜCKKOPPLUNG r2 — 1600 geheilt, 1350 dafür gerissen
 
 **Von der Aufsicht selbst nachgemessen**, am eingefrorenen Commit `da7d690`

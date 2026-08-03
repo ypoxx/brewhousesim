@@ -16,14 +16,33 @@ Das Ziel der Welle war `|rho| < 0,7` in **allen vier** Epochen. In 1350 steht Sp
 **drei von drei Läufen** bei oder über 0,7 (+0,742 · +0,701 · +0,701). Das ist genau der
 Fehler, den 1600 vor dieser Runde hatte, nur eine Epoche weiter links.
 
+**Welches rho — und wo die beiden auseinandergehen, gesagt vor dem Urteil:** ich rechne
+**Spearman** und **Pearson**, beide über (Jahresnummer, Kennzahl des Jahres). In 1350 gehen
+sie auseinander: **Spearman +0,742 / +0,701 / +0,701** (reißt), **Pearson +0,442 / +0,416 /
++0,368** (hält). Ich urteile nach Spearman, aus zwei Gründen: es ist die Zahl, die das
+vorhandene Messgerät dieser Welle rechnet (`werkbank/schuss/eichung/auswerten.py`, Funktion
+`spearman`), und es ist die richtige Zahl für die gestellte Frage — „läuft die Kennzahl in
+eine Richtung davon" ist eine Frage nach der Rangfolge, nicht nach einer Geraden.
+
+Dass Pearson in 1350 tiefer liegt, ist nachrechenbar und kein Freispruch: an der Reihe
+`5,89 · 1,55 · 4,27 · 2,79 · 5,90 · 4,74 · 10,52 · 41,67 · 26,39 · 7,05 · 6,88 · 19,27 ·
+13,67 · 9,20` ergibt Pearson **+0,368**; nimmt man die zwei Ausschläge in der Mitte heraus
+(41,67 in 1357 und 26,39 in 1358), springt Pearson auf **+0,713**; auf der Log-Skala — der
+natürlichen für ein Verhältnis — steht er bei **+0,598**. Zwei Spitzen in der Mitte drücken
+ihn, sie widerlegen den Anstieg nicht.
+
+Wer die Welle trotzdem nach Pearson führen will, muss es sagen — dann bestünde 1350 mit
++0,44 / +0,42 / +0,37, und der Bau bestünde. **Das entscheidet die Aufsicht, nicht ich;
+beide Zahlen stehen in §3.1.**
+
 Das ist kein Ausreißer: die Spannweite über drei Läufe ist 0,041, und die ersten neun Jahre
 der Leiter sind in allen drei Läufen Ziffer für Ziffer identisch. Es liegt auch nicht an
 meinem Gerät: eine **wortgleiche Kopie des Originalgeräts** der Eichung
 (`preis-linie.mjs`, geändert ist nur die Hafennummer) liest an demselben Stand für 1350
 dieselbe Reihe und **Spearman +0,701** (§3.5).
 
-**Was für den Builder spricht, und ich sage es zuerst:** die Reparatur von 1600 ist echt und
-an der richtigen Stelle gemacht. rho fällt von +0,873 auf **+0,231 / +0,264 / +0,231**, die
+**Was für den Bau spricht, und es gehört in dasselbe Urteil:** die Reparatur von 1600 ist
+echt und an der richtigen Stelle gemacht. rho fällt von +0,873 auf **+0,231 / +0,264 / +0,231**, die
 Streuung über drei Läufe ist 0,033, und sie kommt nicht daher, dass der Nenner verstellt
 wurde, sondern daher, dass die Kasse in 1600 jetzt **fällt** (Jahresmedian ×0,61), während
 die Preise steigen (×1,48). Wer nur 1600 gelesen hätte, hätte bestanden. Die Auflage der
@@ -186,14 +205,18 @@ deinen eigenen Automaten.* Also habe ich das Originalgerät selbst laufen lassen
 `werkbank/schuss/rueckkopplung/preis-linie-8900.mjs` ist eine wortgleiche Kopie von
 `eichung/preis-linie.mjs`, in der `diff` **genau eine** Zeile zeigt: `8899` → `8900`.
 
-Ergebnis, 1350, 400 Wochen, am eingefrorenen Stand:
+Ergebnis, 400 Wochen, am eingefrorenen Stand — die gerissene Epoche und die geheilte als
+Gegenprobe:
 
-    LEITER  5,89 · 1,55 · 4,27 · 2,79 · 5,90 · 4,74 · 10,52 · 41,67 · 26,39 · 7,05 · 6,88 · 19,27 · 13,67 · 9,20
-    Pearson +0,368   Spearman +0,701   Jahre <1x: 0/14   Seitenfehler 0   kein Abbruch
+    1350  LEITER  5,89 · 1,55 · 4,27 · 2,79 · 5,90 · 4,74 · 10,52 · 41,67 · 26,39 · 7,05 · 6,88 · 19,27 · 13,67 · 9,20
+          Pearson +0,368   Spearman +0,701   Jahre <1x: 0/14   Seitenfehler 0   kein Abbruch
 
-Das ist **Ziffer für Ziffer** die Reihe meines Laufes C (siehe Tabelle 3.1: +0,368 /
-+0,701). Der Befund hängt nicht an meiner Hand und nicht an meinem Gerät. **Er hängt am
-Stand.**
+    1600  LEITER  3,76 · 1,75 · 1,54 · 2,03 · 3,10 · 15,11 · 9,11 · 7,89 · 2,04 · 4,35 · 4,62 · 3,00 · 2,73 · 3,22
+          Pearson +0,002   Spearman +0,231   Jahre <1x: 0/14   Seitenfehler 0   kein Abbruch
+
+Beide sind **Ziffer für Ziffer** die Reihen meiner eigenen Läufe (1350 = Lauf C, +0,368 /
++0,701; 1600 = Lauf A und C, +0,002 / +0,231). Der Befund hängt nicht an meiner Hand und
+nicht an meinem Gerät — **weder der schlechte noch der gute. Er hängt am Stand.**
 
 Und er hängt auch nicht am Hafen: dasselbe Gerät hatte laut Auftrag vor dieser Runde für
 1350 „5,89 → 2,69, rho −0,152" gelesen. Derselbe Startwert (5,89), dasselbe Gerät, dieselbe
@@ -366,9 +389,9 @@ in den Wochen 12–18 der Jahre +2, +4, +6, …
 Das heißt: das Spiel **erlaubt bis zu 8** unwiderrufliche Festlegungen in 14 Jahren, und
 eine sorgfältige Hand nimmt **1 oder 0**. Aus zwei verschiedenen Gründen:
 
-* **1350 und 1600:** an mindestens **10 von 14** Michaelitagen stand überhaupt keine aktive
-  Festlegung da — an genau diesen Tagen hat die Hand auch nichts gekauft, die Kasse war also
-  unberührt und trotzdem war keine bezahlbar.
+* **1350 und 1600:** an **10 von 14** (1350) bzw. **13 von 14** (1600) Michaelitagen stand
+  überhaupt keine aktive Festlegung da — an genau diesen Tagen hat die Hand auch nichts
+  gekauft, die Kasse war also unberührt und trotzdem war keine bezahlbar.
 * **1884 und 1970:** an **11–13 von 14** Michaelitagen stand eine da, aber sie kostete mehr
   als 45 % der Kasse. Eine unwiderrufliche Entscheidung, die eine vorsichtige Hand
   zahlungsunfähig macht, ist eine Karte, die man ansieht und nicht nimmt.
@@ -534,4 +557,12 @@ Argument oder Umgebungsvariable heraus — **von der Aufsicht, nicht von einem B
     werkbank/schuss/rueckkopplung/michaeli1.mjs          erster Michaelitag, nichts gekauft
     werkbank/schuss/rueckkopplung/schirmbild.mjs         Kopfzeile als Bild
     werkbank/schuss/rueckkopplung/kopfzeile-e1..e4.png · kopfzeile.json · michaeli1.json · verben.json
-    Rohdaten der zwölf Läufe: /tmp/rk/e{1..4}-{A,B,C}.json
+    werkbank/schuss/rueckkopplung/lauf-e{1..4}-{A,B,C}.json   die zwölf Läufe (Woche für Woche)
+    werkbank/schuss/rueckkopplung/eichung-e1.json · eichung-e2.json   die Kreuzprobe mit dem Originalgerät
+
+Die zwölf Laufdateien sind auf die Messwerte eingekürzt (Jahr, Woche, Kasse, Kennzahl,
+Nennerzug, Nennerpreis, Nennerart, Zugschlüssel, Spalten a/b/c) — die Listen aller
+Knopfzustände je Woche lagen bei 7,4 MB und gehören nicht in die Historie. Nachrechnen:
+
+    python3 werkbank/schuss/rueckkopplung/auswerten-rk.py werkbank/schuss/rueckkopplung/lauf-e*.json
+    python3 werkbank/schuss/rueckkopplung/spalten.py      werkbank/schuss/rueckkopplung/lauf-e*.json
