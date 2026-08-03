@@ -42,7 +42,7 @@ for (const e of [1, 2, 3, 4]) {
       gesperrt: gesperrt.length,
       gesperrtSollAus: gesperrt.filter((k) => k.getAttribute('data-soll-aus') === '1').length,
       gesperrtVerdeckt: gesperrt.filter((k) => k.getAttribute('data-verdeckt') === '1').length,
-      gesperrtBrettZu: gesperrt.filter((k) => k.getAttribute('data-brett-zu') === '1').length,
+      gesperrtBrettZu: gesperrt.filter((k) => /^brett-/.test(k.getAttribute('data-aus-grund')||'')).length,
       gesperrtOhneAttribut: gesperrt.filter((k) => !k.hasAttribute('data-soll-aus')).length,
       zettel: z ? {
         klasse: z.className,
