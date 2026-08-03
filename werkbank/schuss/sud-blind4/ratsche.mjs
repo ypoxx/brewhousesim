@@ -40,12 +40,22 @@ const lage = (z) => seite.evaluate((zz) => {
     text: (k.innerText || '').replace(/\s+/g, ' ').slice(0, 60) };
 }, z);
 const verf = () => seite.evaluate(() => JSON.parse(JSON.stringify(window.BRAUHAUS.SUD_ZUSTAND.verfahren)));
+// Aufgeschlagen heisst: ein Optionsknopf des Bretts wird von der Maus
+// wirklich getroffen. Nur Z.brettZu zu lesen genuegt nicht — die STADT
+// entscheidet erst im naechsten Bild, und schalte() laeuft alle 320 ms.
+let PROBEZUG = null;
 async function auf() {
-  for (let i = 0; i < 5; i++) {
-    if (!(await seite.evaluate(() => !!window.BRAUHAUS.SUD_ZUSTAND.brettZu))) return true;
-    const r = await lage('stadt:reiter:sud-sud-brett');
-    if (r && !r.aus && r.trifft) { await seite.mouse.click(r.x, r.y); await seite.waitForTimeout(250); }
-    else await seite.waitForTimeout(250);
+  for (let i = 0; i < 8; i++) {
+    const zu = await seite.evaluate(() => !!window.BRAUHAUS.SUD_ZUSTAND.brettZu);
+    if (!zu && PROBEZUG) {
+      const p = await lage(PROBEZUG);
+      if (p && p.trifft) return true;
+    } else if (!zu && !PROBEZUG) return true;
+    if (zu) {
+      const r = await lage('stadt:reiter:sud-sud-brett');
+      if (r && !r.aus && r.trifft) { await seite.mouse.click(r.x, r.y); }
+    }
+    await seite.waitForTimeout(350);
   }
   return false;
 }
@@ -77,6 +87,7 @@ for (const achse of [...new Set(opts.map((o) => o.achse))]) {
   const d = opts.filter((o) => o.achse === achse);
   const fest = d.filter((o) => /unwiderruflich/i.test(o.marke)).sort((a, b) => a.preis - b.preis);
   if (!fest.length) { bericht.schritte.push({ achse, hinweis: 'keine unwiderrufliche Option' }); continue; }
+  PROBEZUG = d[0].zug;
   for (const ziel of fest) {
     await geld(); await auf();
     const vor = await verf();
@@ -84,6 +95,7 @@ for (const achse of [...new Set(opts.map((o) => o.achse))]) {
     await seite.waitForTimeout(250);
     await geld();                       // Geld bleibt reichlich: kein Preis faelscht die Antwort
     await auf();
+    await seite.waitForTimeout(400);
     const nach = await verf();
     const stand = {};
     for (const o of d) stand[o.zug] = await lage(o.zug);

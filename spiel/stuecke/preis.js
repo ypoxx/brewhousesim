@@ -2358,6 +2358,7 @@
     Z.epoche = B.welt.zeit.epoche;
     Z.startjahr = jahr();
     Z.kaeufe = 0;
+    merkeAmtszeit();
     Z.hoehe = Math.max(B.welt.haus.kasse, 1);
     /* DAS HAUS HAT NICHT HEUTE ANGEFANGEN.
 

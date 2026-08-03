@@ -34,6 +34,28 @@ const LAUT = !!process.env.LAUT;
    gehen die Messungen dieser Welle auseinander. Mit WARTE=3 landet jeder
    Klick, und die Partie ist die reiche — die des Kritikers. */
 const WARTE = +(process.env.WARTE || 1);
+/* RUHE=1 ersetzt die Wette durch eine Messung: nach jedem Klick wird
+   gewartet, bis der Bildaufbau wirklich durch ist — zwei Bilder lang, plus
+   eine Runde der Aufgabenschlange —, und ERST DANN sieht die Hand wieder
+   hin. Das haengt nicht mehr an der Uhr und damit nicht mehr an der Last der
+   Maschine. Die feste Wartezeit bleibt als Untergrenze stehen, damit
+   Zeitgeber im Spiel (Ton, Blattwechsel) nicht ueberholt werden.
+   Nachgewiesen: RUHE=1 liefert unter schwerer Last dieselbe Reihe wie
+   WARTE=3 auf der ruhigen Maschine, und beide sind Ziffer fuer Ziffer die
+   des Kritikers. */
+const RUHE = process.env.RUHE !== '0';
+async function ruhe(ms) {
+  if (!RUHE) { await seite.waitForTimeout(ms); return; }
+  await seite.waitForTimeout(Math.min(ms, 40));
+  try {
+    await seite.evaluate(() => new Promise((f) => {
+      let ab = false;
+      const fertig = () => { if (!ab) { ab = true; f(1); } };
+      setTimeout(fertig, 2000);
+      requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(fertig, 0)));
+    }));
+  } catch (e) { /* Seite wechselt gerade — dann reicht die feste Wartezeit */ }
+}
 
 const browser = await chromium.launch();
 const seite = await browser.newPage({ viewport: { width: 1920, height: 1000 }, deviceScaleFactor: 1 });
@@ -72,14 +94,14 @@ async function klick(zug, warte = 60) {
       const rl = await lage(r);
       if (!rl || !rl.sichtbar || rl.aus || !rl.hit) continue;
       await seite.mouse.click(rl.x, rl.y);
-      await seite.waitForTimeout(90 * WARTE);
+      await ruhe(90 * WARTE);
       l = await lage(zug);
       if (l && l.hit) break;
     }
   }
   if (!l || !l.sichtbar || l.aus || !l.hit) return false;
   await seite.mouse.click(l.x, l.y);
-  await seite.waitForTimeout(warte * WARTE);
+  await ruhe(warte * WARTE);
   if (LAUT) console.log('   klick', zug);
   return true;
 }
