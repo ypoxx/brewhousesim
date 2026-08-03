@@ -1,0 +1,1613 @@
+{
+ "epoche": 2,
+ "hafen": "8899",
+ "fehler": [],
+ "reihe": [
+  {
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 640,
+   "gebucht": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 2,
+   "kasse": 448,
+   "vorher": 640,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Mühlschenke",
+     "preis": -170
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler baut auf dem eigenen Hof: Kupferne Pfanne ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 3,
+   "kasse": 195,
+   "vorher": 448,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Brückenwirt",
+     "preis": -231
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Adlers rollt zum Zum Goldenen Ochsen.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 4,
+   "kasse": 173,
+   "vorher": 195,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Klosterschenke Obernberg (nicht be",
+     "preis": -216
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunftlade ladet den Wirt zum Gasthof Lindenhof vor. De",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 5,
+   "kasse": 171,
+   "vorher": 173,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler schenkt aus zu 20 fl je Fass und legt die Zeche ",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 6,
+   "kasse": 169,
+   "vorher": 171,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler wirbt um Fährhaus am Fluss: Er lässt dem W",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 7,
+   "kasse": 167,
+   "vorher": 169,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein Feist wird Bürgermeister. Solange er es ist, schreibt ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 8,
+   "kasse": 165,
+   "vorher": 167,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 9,
+   "kasse": 163,
+   "vorher": 165,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunft schreibt Fährhaus am Fluss dem Adler zu, mit Bri",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler pachtet Gasthof Lindenhof über den Kopf des Haus",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunftlade ladet den Wirt zum Schenke am Tor vor. Der A",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 10,
+   "kasse": 161,
+   "vorher": 163,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 11,
+   "kasse": 159,
+   "vorher": 161,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 12,
+   "kasse": 157,
+   "vorher": 159,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunft schreibt Schenke am Tor dem Adler zu. Das Haus w",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 13,
+   "kasse": 155,
+   "vorher": 157,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "verfall",
+     "was": "Brückenwirt: Heirat fällt mit der Hand",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Landgasthof Hirsch: Gewohnheit fällt mit der Hand",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Erbteil der Miterben aus dem Keller",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 14,
+   "kasse": 133,
+   "vorher": 155,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "2 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler schenkt aus zu 18 fl je Fass und legt die Zeche ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 15,
+   "kasse": 111,
+   "vorher": 133,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "6 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler baut auf dem eigenen Hof: Eigene Küferei f",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 16,
+   "kasse": 89,
+   "vorher": 111,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "6 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 17,
+   "kasse": 67,
+   "vorher": 89,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler schenkt aus zu 16 fl je Fass und legt die Zeche ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 18,
+   "kasse": 65,
+   "vorher": 67,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler schenkt aus zu 14 fl je Fass und legt die Zeche ",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 19,
+   "kasse": 63,
+   "vorher": 65,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Hauses gegenüber fährt zum Fährhaus a",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 20,
+   "kasse": 61,
+   "vorher": 63,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 21,
+   "kasse": 59,
+   "vorher": 61,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 22,
+   "kasse": 57,
+   "vorher": 59,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 23,
+   "kasse": 55,
+   "vorher": 57,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunft rügt den Adler wegen schlechten Suds. Schenke am",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 24,
+   "kasse": 53,
+   "vorher": 55,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 25,
+   "kasse": 51,
+   "vorher": 53,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunft rügt den Adler wegen schlechten Suds. Klostersch",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 26,
+   "kasse": 49,
+   "vorher": 51,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "2 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "2 Fass Braunbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 27,
+   "kasse": 27,
+   "vorher": 49,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "6 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Braunbier",
+     "preis": -18
+    },
+    {
+     "wer": "spieler",
+     "was": "6 Fass Braunbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "spieler",
+     "was": "Gesellenlohn und Pferdefutter · 1 Sudtag",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 28,
+   "kasse": 25,
+   "vorher": 27,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "6 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Adlers rollt zum Fährhaus am Fluss.",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "verdorben: 6 Fass Braunbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 29,
+   "kasse": 23,
+   "vorher": 25,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "6 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 30,
+   "kasse": 21,
+   "vorher": 23,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler baut auf dem eigenen Hof: Hopfenboden für ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 280,
+   "vorher": 21,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Angeld auf das kommende Braujahr",
+     "preis": 5
+    },
+    {
+     "wer": "verfall",
+     "was": "Georgi: 2 Fass überstehen den Sommer nicht und kippen",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Zum Goldenen Ochsen führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -15
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorgriff auf den Notpfennig",
+     "preis": 269
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 2,
+   "kasse": 116,
+   "vorher": 280,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss",
+     "preis": -162
+    },
+    {
+     "wer": "spieler",
+     "was": "5 Fass Nachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 3,
+   "kasse": 114,
+   "vorher": 116,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 4,
+   "kasse": 112,
+   "vorher": 114,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 5,
+   "kasse": 110,
+   "vorher": 112,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler schenkt aus zu 14 fl je Fass und legt die Zeche ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 6,
+   "kasse": 108,
+   "vorher": 110,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 7,
+   "kasse": 106,
+   "vorher": 108,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "5 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "5 Fass Nachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 8,
+   "kasse": 104,
+   "vorher": 106,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler wirbt um Pfarrschenke St. Michael: Er läss",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 9,
+   "kasse": 102,
+   "vorher": 104,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 10,
+   "kasse": 100,
+   "vorher": 102,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler pachtet Pfarrschenke St. Michael auf zwölf Jahre",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 11,
+   "kasse": 98,
+   "vorher": 100,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 12,
+   "kasse": 96,
+   "vorher": 98,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "5 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "5 Fass Nachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Fährhaus am Fluss nimmt jetzt das Bier des Adler — sein Na",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 13,
+   "kasse": 94,
+   "vorher": 96,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler baut auf dem eigenen Hof: Rossmühle für 22",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 14,
+   "kasse": 92,
+   "vorher": 94,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Hauses gegenüber fährt zum Gasthof Li",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 15,
+   "kasse": 90,
+   "vorher": 92,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 16,
+   "kasse": 88,
+   "vorher": 90,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 17,
+   "kasse": 86,
+   "vorher": 88,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "5 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "5 Fass Nachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler wirbt um Landgasthof Hirsch: Er lässt dem ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 18,
+   "kasse": 84,
+   "vorher": 86,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 19,
+   "kasse": 82,
+   "vorher": 84,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 20,
+   "kasse": 80,
+   "vorher": 82,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunft rügt den Adler wegen schlechten Suds. Gasthof Li",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 21,
+   "kasse": 78,
+   "vorher": 80,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -294
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Zunft schreibt Landgasthof Hirsch dem Adler zu, mit Br",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 22,
+   "kasse": 76,
+   "vorher": 78,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -294
+    },
+    {
+     "wer": "verfall",
+     "was": "5 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "5 Fass Nachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 23,
+   "kasse": 74,
+   "vorher": 76,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -294
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 24,
+   "kasse": 72,
+   "vorher": 74,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -294
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler wirbt um Gasthof Lindenhof: Er lässt dem W",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 25,
+   "kasse": 70,
+   "vorher": 72,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Braustatt Adler wirbt um Schenke am Tor: Er lässt dem Wirt",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 26,
+   "kasse": 68,
+   "vorher": 70,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 27,
+   "kasse": 66,
+   "vorher": 68,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "verfall",
+     "was": "5 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "5 Fass Nachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 28,
+   "kasse": 64,
+   "vorher": 66,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 29,
+   "kasse": 62,
+   "vorher": 64,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler pachtet Gasthof Lindenhof auf zwölf Jahre. Der W",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 30,
+   "kasse": 60,
+   "vorher": 62,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Erhaltung des Braugeräts",
+     "preis": -2
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler pachtet Schenke am Tor auf zwölf Jahre. Der Wirt",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 280,
+   "vorher": 60,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -588
+    },
+    {
+     "wer": "spieler",
+     "was": "Angeld auf das kommende Braujahr",
+     "preis": 5
+    },
+    {
+     "wer": "verfall",
+     "was": "Georgi: 5 Fass überstehen den Sommer nicht und kippen",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Mühlschenke führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Brückenwirt führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Ausschank am Markt führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Klosterschenke Obernberg führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -17
+    },
+    {
+     "wer": "gegner",
+     "was": "Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre ",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorgriff auf den Notpfennig",
+     "preis": 232
+    }
+   ]
+  }
+ ]
+}

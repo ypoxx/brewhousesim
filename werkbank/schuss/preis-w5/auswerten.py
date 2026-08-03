@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """DER PREIS, Welle 5 — was diese Runde zaehlt, in einer Tabelle.
 
-    python3 werkbank/schuss/preis-w5/auswerten.py <vorher-dir> <nachher-dir>
+    python3 werkbank/schuss/preis-w5/auswerten.py werkbank/schuss/preis-w5
 
 Die Spearman-Rechnung selbst steht NICHT hier: dafuer laeuft
 `werkbank/schuss/rueckkopplung-r3/auswerten.py` unveraendert weiter, damit die
@@ -30,7 +30,7 @@ def spanne(werte):
     return f'{min(werte)}…{max(werte)}'
 
 
-def block(titel, ordner, muster='e?-?.json'):
+def block(titel, ordner, muster):
     print('=' * 78)
     print(titel, f'({ordner})')
     print(f"{'Epoche':7} {'Laeufe':>6} {'festlegung':>11} {'Kasse min':>10} "
@@ -51,10 +51,10 @@ def block(titel, ordner, muster='e?-?.json'):
               f'{spanne(vg):>10} {spanne(rs):>13} {fehl:>7}')
 
 
-def willig(ordner):
+def willig(ordner, muster):
     print('-' * 78)
     print('festlegungswillige Hand (hand-fest.mjs):')
-    for p in sorted(glob.glob(os.path.join(ordner, 'willig-e?.json'))):
+    for p in sorted(glob.glob(os.path.join(ordner, muster))):
         j = json.load(open(p))
         z = j.get('chronik', {}).get('festZeilen', [])
         print(f"  {EPJ.get(j['epoche']):6} {len(z)} Festlegungen  "
@@ -62,8 +62,8 @@ def willig(ordner):
         print(f"         KNOPF: {j.get('knopfText')}")
 
 
-def boden(ordner):
-    ps = sorted(glob.glob(os.path.join(ordner, 'boden-e?.json')))
+def boden(ordner, muster):
+    ps = sorted(glob.glob(os.path.join(ordner, muster)))
     if not ps:
         return
     print('-' * 78)
@@ -78,13 +78,9 @@ def boden(ordner):
 
 
 if __name__ == '__main__':
-    a = sys.argv[1] if len(sys.argv) > 1 else None
-    b = sys.argv[2] if len(sys.argv) > 2 else None
-    if a:
-        block('VORHER', a, 'e?.json' if not glob.glob(os.path.join(a, 'e?-?.json')) else 'e?-?.json')
-        willig(a)
-        boden(a)
-    if b:
-        block('NACHHER', b)
-        willig(b)
-        boden(b)
+    d = sys.argv[1] if len(sys.argv) > 1 else 'werkbank/schuss/preis-w5'
+    block('VORHER  (eingefrorener Stand 3e6d08c, Hafen 8900)', d, 'vorher-seq-e?.json')
+    boden(d, 'vorher-boden-e?.json')
+    block('NACHHER (Arbeitsbaum, Hafen 8899)', d, 'nachher-e?-?.json')
+    willig(d, 'nachher-willig-e?.json')
+    boden(d, 'nachher-boden-e?.json')

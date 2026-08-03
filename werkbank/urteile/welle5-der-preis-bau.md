@@ -32,10 +32,14 @@ Welle 4 (`kern-nachmessung/BEFUND.md`):
 
 | Epoche | Aufsicht Welle 4 | meine Hand, 4 Laeufe PARALLEL | meine Hand, SEQUENZIELL |
 |---|---|---|---|
-| 1350 | +0,591 | +0,591 | +0,591 |
-| 1600 | +0,231 | +0,231 | +0,231 |
-| 1884 | +0,393 | +0,354 **(falsch)** | +0,393 |
-| 1970 | +0,108 | +0,305 **(falsch)** | — |
+| 1350 | +0,591 | +0,591 | **+0,591** |
+| 1600 | +0,231 | +0,231 | **+0,231** |
+| 1884 | +0,393 | +0,354 **(falsch)** | **+0,393** |
+| 1970 | +0,108 | +0,305 **(falsch)** | **+0,108** |
+
+Sequenziell stimmt meine Hand am eingefrorenen Stand in **allen vier** Epochen
+Ziffer fuer Ziffer mit den zwoelf Laeufen der Aufsicht ueberein. Damit ist
+jeder Unterschied, der unten steht, meiner und nicht der des Geraets.
 
 **Vier Browser auf vier Kernen sind ein kaputtes Geraet.** Der Lauf E1884
 lief 331 Wochen Ziffer fuer Ziffer gleich und wich dann bei 1895/2 ab
@@ -260,9 +264,20 @@ bleiben **unberuehrt** — dort bietet das Spiel jedes Jahr etwas Bedienbares an
 | 1350 | Der eigene Brunnen im Hof | 0,34 × 470 = 160 → 277 Pf | 1355 | `pflichtWeg: 'wasserzins'` |
 | 1600 | Der Hofbefreiungsbrief | 0,20 × 2.800 = 560 → 944 fl | 1604 | `pflichtWeg: 'zunftumlage'`, `ansehen −5` |
 
-Die drei bzw. drei grossen Festlegungen bleiben, wo sie sind. Was gefehlt hat,
-ist die Sprosse dazwischen, und sie ist so bemessen, dass sie in etwa jedem
-zweiten Jahr erreichbar ist und nie geschenkt.
+Die grossen Festlegungen beider Epochen bleiben unberuehrt, wo sie sind — sie
+sind das Ziel, und wer es verschiebt, nimmt der Epoche ihre Spitze. Was
+gefehlt hat, ist die Sprosse dazwischen, und sie ist so bemessen, dass sie in
+etwa jedem zweiten Jahr erreichbar ist und nie geschenkt. Beide benutzen
+ausschliesslich Mechanik, die schon da war (`pflichtWeg`, `ansehen`) — keine
+neue Wirkung, kein neuer Schalter.
+
+**Gegen die Sperrliste geprueft** (`design/PRUEFUNG.md`): kein Hopfen in 1350
+(der Brunnen nennt keinen), keine Waehrung in den Kartentexten (alle Betraege
+gehen durch `welt.geld()`), kein Emailschild, keine Mengeneinheit vor 1872.
+Beide Gegenstaende sind gewoehnliche Rechtsakte ihrer Zeit: ein ausgemauerter
+Hofbrunnen, der den staedtischen Wasserzins beendet, und ein hofbefreites
+Gewerbe, das mit einem Patent aus der Residenz aus der Zunftlast heraus und
+aus dem Wohlwollen der Meister heraustritt.
 
 ## 3 — `stil/preis-zusatz.css`, und zwei Ueberlaeufe, die ich mir selbst gebaut habe
 
@@ -349,18 +364,25 @@ bekommt eine falsche Auskunft.
 | 1884 | Kasse 117 | Kasse **4.200** = Notpfennig |
 | 1970 | Kasse 334 | Kasse **50.000** = Notpfennig |
 
-Buchung fuer Buchung, 1350, dieselben 60 Wochen (`boden.mjs`):
+Buchung fuer Buchung, alle vier Epochen, dieselben 60 Wochen mit derselben
+groben Hand (`boden.mjs`, vorher auf 8900 / nachher auf 8899):
 
-| | vorher | nachher |
-|---|---|---|
-| Kasse am Ende | −1 | **48** |
-| tiefster Stand | −1 | **0** |
-| Wochen unter null | 1 | **0** |
-| Wochen auf oder unter null | 21 | **26** |
+| | Kasse am Ende V→N | tiefster Stand V→N | Wochen ≤ 0 V→N | Wochen < 0 V→N |
+|---|---|---|---|---|
+| 1350 | −1 → **48** | −1 → **0** | 21 → 26 | **1 → 0** |
+| 1600 | 13 → **280** | 1 → **21** | 0 → 0 | 0 → 0 |
+| 1884 | 117 → **4.200** | 4 → 4 | 0 → 0 | 0 → 0 |
+| 1970 | 334 → **50.000** | 334 → 122 | 0 → 0 | 0 → 0 |
 
-**Die letzte Zeile geht gegen mich, und sie steht hier, weil sie gemessen
-ist.** Unter null faellt die Kasse nicht mehr; auf null steht sie oefter. Der
-Grund steht im Protokoll und ist nicht das, was er zu sein scheint:
+Jede Epoche endet auf ihrem Notpfennig. In 1970 sinkt der tiefste Stand von
+334 auf 122 — beides im ERSTEN Braujahr, vor dem ersten Michaeli mit Boden,
+und beides eine Folge davon, dass die Lade nach dem Boden mehr hergibt und die
+grobe Hand mehr ausgibt (siehe unten).
+
+**Eine Zahl geht gegen mich, und sie steht hier, weil sie gemessen ist:**
+in 1350 steigt „Wochen auf oder unter null" von 21 auf 26. Unter null faellt
+die Kasse nicht mehr; auf null steht sie oefter. Der Grund steht im Protokoll
+und ist nicht das, was er zu sein scheint:
 
 ```
 1351/ 1   13 ->   48    verfall  −8  Sommer: Unterhalt und Abgaben
@@ -548,13 +570,92 @@ Hand oeffnet ihn (`hand.mjs`, Woche 1) und sieht dann drei bis fuenf Karten
 nebeneinander. Fuer einen Kritiker mit der Maus heisst das: der Griff oben
 rechts ist der einzige Weg zu diesem Stueck.
 
+---
+
+# ZUM NACHSTELLEN
+
+Alle Rohdaten dieser Runde liegen neben dem Geraet, damit die Aufsicht nicht
+messen muss, um nachzurechnen:
+
+```bash
+# die Zahlen dieser Seite aus den mitgelieferten Laeufen
+python3 werkbank/schuss/preis-w5/auswerten.py werkbank/schuss/preis-w5
+python3 werkbank/schuss/rueckkopplung-r3/auswerten.py \
+        werkbank/schuss/preis-w5/nachher-e?-?.json      # rho nachher
+python3 werkbank/schuss/rueckkopplung-r3/auswerten.py \
+        werkbank/schuss/preis-w5/vorher-seq-e?.json     # rho vorher, 1600 + 1970
+
+# neu messen — STRENG SEQUENZIELL, sonst misst man die Auslastung
+werkbank/schuss/aufsicht/messstand.sh 3e6d08c           # Vorher auf 8900
+HAFEN=8899 ZIEL=/tmp/x werkbank/schuss/preis-w5/lauf.sh # 3x4 + 4 Laeufe
+HAFEN=8899 node werkbank/schuss/preis-w5/latte2.mjs 1 62 # Latte 2 a/b/c
+HAFEN=8899 ZIEL=/tmp/b.json node werkbank/schuss/preis-w5/boden.mjs 1 60
+HAFEN=8899 node werkbank/schuss/preis-w5/tafel-schuss.mjs 1 /tmp/t.png 1356
+```
+
+`nachher-e?-?.json` (13 Laeufe) · `nachher-willig-e?.json` (4) ·
+`vorher-seq-e?.json` (2) · `nachher-boden-e?.json` / `vorher-boden-e?.json`
+(je 4) · drei Bilder.
+
+---
+
+# ABNAHME
+
+```
+node --check spiel/stuecke/preis.js        OK
+node --check spiel/stuecke/preis-daten.js  OK
+node --check spiel/stuecke/preis-zusatz.js OK
+
+node werkbank/schuss/aufsicht/tor.mjs
+  E1..E4: OK  lage=0  fehler=0  zuege 105/112/116/107      TOR OFFEN
+
+node werkbank/schuss/aufsicht/spielprobe.mjs
+  E1  60 Wochen, Kasse 48       lage 0, Fehler 0
+  E2  60 Wochen, Kasse 280      lage 0, Fehler 0
+  E3  60 Wochen, Kasse 4.200    lage 0, Fehler 0
+  E4  60 Wochen, Kasse 50.000   lage 0, Fehler 0          SPIELPROBE BESTANDEN
+```
+
+Dazu 13 Laeufe zu 400 Wochen auf dem geaenderten Stand und 3 auf dem
+eingefrorenen: **null Seitenfehler, null Abbrueche, `lage` 0 in allen.**
+
+---
+
+# WAS OFFEN BLEIBT — ehrlich aufgezaehlt
+
+1. **1970 kostet den Boden 0,167 an rho** (+0,108 → +0,275). Die Latte haelt
+   weit, aber die Zahl der Welle 4 ist in dieser einen Epoche schlechter. Wer
+   sie zurueckhaben will, muss den Notpfennig von 1970 (50.000 DM) verschieben
+   — nicht den Boden entfernen.
+2. **Ein Ausreisser in 1600** (Lauf C, +0,116 gegen dreimal +0,231), nicht
+   zugeordnet.
+3. **Die Referenzhand nimmt die neuen Sprossen nicht.** Gezeigt ist, dass ein
+   Spieler sie nehmen KANN und dass der Zaehler es dann zeigt. Ob ein
+   Kritiker mit der Maus sie nimmt, ist damit nicht gezeigt.
+4. **Der Boden greift nur an Michaeli.** Eine Hand, die jede Woche alles
+   ausgibt, steht trotzdem auf null. Ein woechentlicher Vorgriff waere die
+   Antwort; ich habe ihn nicht gebaut, weil ich seine Wirkung auf die zweite
+   Messlatte nicht mehr dreifach nachmessen konnte.
+5. **Die KERN-Zeile `welt.js:412` ist nicht behoben**, nur abgefangen. Solange
+   sie steht, ist die Kasse zwischen Sommerabrechnung und Michaeli negativ,
+   und wer in dieser Spanne `welt.kann()` fragt, bekommt eine falsche Auskunft.
+6. **263 / 313 / 207 Sichtungen von `disabled` mit `data-soll-aus="0"`** —
+   nach ZUSTAENDIGKEIT 25 ein Fehler. Nicht nach Stuecken aufgeschluesselt.
+7. **768 / 714 / 760 Sichtungen von Knoepfen ganz ohne `data-soll-aus`** — was
+   nicht durch `B.knopf()` geht, traegt das Merkmal nicht.
+
+---
+
 ## Fortschritt
 
-- [x] Werkzeug aufgesetzt, Messstand `3e6d08c` auf 8900, Geraet geeicht
+- [x] Werkzeug aufgesetzt, Messstand `3e6d08c` auf 8900, Geraet in allen vier
+      Epochen sequenziell geeicht
 - [x] AUFTRAG 1 — Messung: 1 / 1 / 0 / 0 in 14 Jahren; Zaehler richtig,
       Ereignisse zu selten; in 1884/1970 nahm die Referenzhand nicht
 - [x] AUFTRAG 2 — Ursache getrennt: KERN bringt unter null, leerer
       Jahresanfang bringt auf null
 - [x] Aenderungen eingebaut, `node --check` auf allen drei .js, TOR OFFEN,
       SPIELPROBE BESTANDEN
-- [ ] Latte 2 nachgemessen, drei Laeufe je Epoche, sequenziell *(laeuft)*
+- [x] Latte 2 (a)(b)(c)(d) nachgemessen, drei bis vier Laeufe je Epoche,
+      sequenziell, Spannweite angegeben
+- [x] Bericht laufend geschrieben

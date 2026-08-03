@@ -131,6 +131,17 @@ GERAEUSCH = {
         "No pure tone, no siren, no electronic beep, no whistle, no steam, no "
         "voices, no music.", 5, 0.7),
 
+    # "Metallischer Glockenklang / ROEHRENGLOCKEN". Roehrenglocken sind ein
+    #  Orchesterinstrument, und genau so hoert sie ein fremdes Ohr: in der
+    #  Mischung von 1350 dreimal von drei als "FAHRRADKLINGEL", einmal als
+    #  "AUTOHUPE", einmal als "SIRENE". Dieselbe Ruege steht schon im Bericht
+    #  der Welle 4 ("eine moderne Autohupe bei 0:03 und 0:26", 1600) — sie ist
+    #  damals der Probe `karren` angelastet worden und stand in Wahrheit auch
+    #  hier. Der Michaelitag von 1350 und 1600 ist eine Kirchenglocke aus
+    #  Bronze, kein Glockenspiel.
+    "glocke": (
+        "Church bells ringing from a stone belfry, deep bronze tolling", 8, 0.9),
+
     # NEU, und es ist der Rest eines gescheiterten Anlaufs. Sieben Versuche,
     #  eine OCHSENFUHRE zu erzeugen, haben fuenfmal Wasser, einmal einen
     #  Wuerfelbecher, einmal eine Handglocke und einmal eine Tuerklinke

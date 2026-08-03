@@ -1,0 +1,1843 @@
+{
+ "epoche": 4,
+ "hafen": "8900",
+ "fehler": [],
+ "reihe": [
+  {
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "gebucht": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 81200,
+   "vorher": 86000,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Werbekostenzuschuss in Bier an Brückenwirt · 4,5 hl",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Pilsner",
+     "preis": -3400
+    },
+    {
+     "wer": "spieler",
+     "was": "40 Fass Pilsner eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtzuschlag und Energie · 1 Sudtag",
+     "preis": -780
+    },
+    {
+     "wer": "gegner",
+     "was": "Nordstern-Gruppe wirbt um Bahnhofsgaststätte: Er lädt den ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 3,
+   "kasse": 35900,
+   "vorher": 81200,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Landgasthof Hirsch",
+     "preis": -40500
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Pilsner",
+     "preis": -3400
+    },
+    {
+     "wer": "spieler",
+     "was": "40 Fass Pilsner eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtzuschlag und Energie · 1 Sudtag",
+     "preis": -780
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG baut auf dem eigenen Hof: Labor und Qualität",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 4,
+   "kasse": 31100,
+   "vorher": 35900,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Bahnhofsgaststätte (nicht bezahlba",
+     "preis": -58320
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Pilsner",
+     "preis": -3400
+    },
+    {
+     "wer": "spieler",
+     "was": "40 Fass Pilsner eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtzuschlag und Energie · 1 Sudtag",
+     "preis": -780
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäufli",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 5,
+   "kasse": 26300,
+   "vorher": 31100,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Bahnhofsgaststätte (nicht bezahlba",
+     "preis": -58320
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Pilsner",
+     "preis": -3400
+    },
+    {
+     "wer": "spieler",
+     "was": "40 Fass Pilsner eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "60 hl Pilsner aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtzuschlag und Energie · 1 Sudtag",
+     "preis": -780
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Lastzug des Adlers fährt zum Brückenwirt.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 6,
+   "kasse": 21500,
+   "vorher": 26300,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Bahnhofsgaststätte (nicht bezahlba",
+     "preis": -58320
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Pilsner",
+     "preis": -3400
+    },
+    {
+     "wer": "spieler",
+     "was": "40 Fass Pilsner eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "60 hl Pilsner aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtzuschlag und Energie · 1 Sudtag",
+     "preis": -780
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Mühlschenke und ve",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "60 hl Pilsner aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 7,
+   "kasse": 16700,
+   "vorher": 21500,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Werbekostenzuschuss in Bier an Mühlschenke · 4,5 hl",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Pilsner",
+     "preis": -3400
+    },
+    {
+     "wer": "spieler",
+     "was": "40 Fass Pilsner eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtzuschlag und Energie · 1 Sudtag",
+     "preis": -780
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Ausschank am Markt",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 8,
+   "kasse": 16080,
+   "vorher": 16700,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Brückenwirt (nicht bezahlbar)",
+     "preis": -38221
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft sich beim Bahnhofsgaststätte ins Regal: Li",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Aktionspreis beim Adler: 124 DM je hl, vier Wochen lang, i",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Nordstern-Gruppe wirbt um Zum Goldenen Ochsen: Er lädt den",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "60 hl Pilsner aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 9,
+   "kasse": 15460,
+   "vorher": 16080,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Werbekostenzuschuss in Bier an Zum Goldenen Ochsen · 4,5 h",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG wirbt um Bahnhofsgaststätte: Er lädt den Ein",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe übernimmt Klosterbräu Obernberg. Sie ",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "60 hl Pilsner aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 10,
+   "kasse": 14840,
+   "vorher": 15460,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Der Listung zuvorkommen beim Mühlschenke (nicht bezahlbar)",
+     "preis": -22599
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nac",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 11,
+   "kasse": 14220,
+   "vorher": 14840,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Der Listung zuvorkommen beim Mühlschenke (nicht bezahlbar)",
+     "preis": -22599
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler schaltet einen Werbespot im Abendprogramm. Man k",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nac",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "60 hl Pilsner aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 12,
+   "kasse": 13600,
+   "vorher": 14220,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Der Listung zuvorkommen beim Mühlschenke (nicht bezahlbar)",
+     "preis": -22599
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Einkauf des Ausschank am Markt listet das Haus aus und",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäufli",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Gasthof Lindenhof: Gewohnheit fällt mit der Hand",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Schenke am Tor: Gewohnheit fällt mit der Hand",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Mühlschenke: Gewohnheit fällt mit der Hand",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Erbteil der Miterben aus dem Keller",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 13,
+   "kasse": 12980,
+   "vorher": 13600,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -28350
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler erhöht den Werbekostenzuschuss beim Ausschank am",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Pfarrschenke St. Michael 10.658 DM au",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 12360,
+   "vorher": 12980,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -39008
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe kauft das Regal im Mühlschenke im Gan",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Notartermin ist gehalten. Es hat kein zweites Gebot ge",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 11740,
+   "vorher": 12360,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -36450
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft sich beim Zum Goldenen Ochsen ins Regal: L",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler bindet Bahnhofsgaststätte exklusiv — acht Jahre,",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 11120,
+   "vorher": 11740,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -36450
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 17,
+   "kasse": 10500,
+   "vorher": 11120,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -36450
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nac",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 18,
+   "kasse": 9880,
+   "vorher": 10500,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -36450
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwe",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 19,
+   "kasse": 9260,
+   "vorher": 9880,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -36450
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 20,
+   "kasse": 8640,
+   "vorher": 9260,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -36450
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Mühlschenke 9.108 DM auf die Jahresko",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 8020,
+   "vorher": 8640,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Werbekostenzuschuss in Bier an Gasthof Lindenhof · 4,5 hl",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 7400,
+   "vorher": 8020,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 6780,
+   "vorher": 7400,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 24,
+   "kasse": 6160,
+   "vorher": 6780,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäufli",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 25,
+   "kasse": 5540,
+   "vorher": 6160,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Aktionspreis beim Adler: 118 DM je hl, vier Wochen lang, i",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Gasthof Lindenhof 19.797 DM auf die J",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 26,
+   "kasse": 4920,
+   "vorher": 5540,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 4300,
+   "vorher": 4920,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Zum Goldenen Ochse",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 3680,
+   "vorher": 4300,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Der Listung zuvorkommen beim Zum Goldenen Ochsen (nicht be",
+     "preis": -21092
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Brückenwirt und ve",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 3060,
+   "vorher": 3680,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Der Listung zuvorkommen beim Zum Goldenen Ochsen (nicht be",
+     "preis": -21092
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Aktionspreis beim Adler: 112 DM je hl, vier Wochen lang, i",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Das Kartellamt untersagt der Gruppe eine Bindung. Gasthof ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 2440,
+   "vorher": 3060,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -620
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt ",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Das Kartellamt untersagt der Gruppe eine Bindung. Mühlsche",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 39042,
+   "vorher": 2440,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorauszahlung des Handels auf das Winterhalbjahr",
+     "preis": 358
+    },
+    {
+     "wer": "spieler",
+     "was": "Biersteuer und Werbeetat auf 358 DM",
+     "preis": -29
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 21 hl an Schenke am Tor",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 47 hl an Gasthof Lindenhof",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 36 hl an Zum Goldenen Ochsen",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 18 hl an Pfarrschenke St. Michael",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 29 hl an Brückenwirt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 24 hl an Mühlschenke",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 21 hl an Schenke am Tor",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 47 hl an Gasthof Lindenhof",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 36 hl an Zum Goldenen Ochsen",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 18 hl an Pfarrschenke St. Michael",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 29 hl an Brückenwirt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 24 hl an Mühlschenke",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommer: 3,0 hl an Schenke am Tor",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Sommerabsatz aus dem Aprilbestand",
+     "preis": 37159
+    },
+    {
+     "wer": "spieler",
+     "was": "Biersteuer und Werbeetat auf 37.159 DM",
+     "preis": -2973
+    },
+    {
+     "wer": "verfall",
+     "was": "Gaststätte Neustadt führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -1718
+    },
+    {
+     "wer": "spieler",
+     "was": "Aufgeld auf den Namen · Sommerabsatz · 10,2 im Hundert auf",
+     "preis": 3805
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 38410,
+   "vorher": 39042,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "30 Fass Handelsmarke eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe kauft das Regal im Brückenwirt im Gan",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG wirbt um Zum Goldenen Ochsen: Er lädt den Ei",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe übernimmt Aktienbrauerei Waldeck. Sie",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 3758,
+   "vorher": 38410,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen",
+     "preis": -34020
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -632
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 3126,
+   "vorher": 3758,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Werbekostenzuschuss in Bier an Zum Goldenen Ochsen · 4,5 h",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG schaltet einen Spot mit einem Anker im Kreis",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 2494,
+   "vorher": 3126,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -632
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 1862,
+   "vorher": 2494,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Nordstern-Gruppe wirbt um Mühlschenke: Er lädt den Einkäuf",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 7,
+   "kasse": 1230,
+   "vorher": 1862,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG lässt von Zum Goldenen Ochsen ab. Das Haus w",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Notartermin ist gehalten. Es hat kein zweites Gebot ge",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwe",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 8,
+   "kasse": 598,
+   "vorher": 1230,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Bahnhofsgaststätte",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 9,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Fährhaus am Fluss ",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nac",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 10,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG wirbt um Pfarrschenke St. Michael: Er lädt d",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Brückenwirt 15.129 DM auf die Jahresk",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler unterschreibt beim Mühlschenke die Jahresvereinb",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Brückenwirt 14.402 DM auf die Jahresk",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Zum Goldenen Ochsen listet den Anker aus — Der Handel hat ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäufli",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler unterschreibt beim Zum Goldenen Ochsen die Jahre",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -32400
+    },
+    {
+     "wer": "verfall",
+     "was": "27 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "30 Fass Handelsmarke eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe kauft das Regal im Bahnhofsgaststätte",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG wirbt um Fährhaus am Fluss: Er lädt den Eink",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Pfarrschenke St. Michael (nicht bezahlbar",
+     "preis": -7655
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft sich beim Pfarrschenke St. Michael ins Reg",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Einkauf des Fährhaus am Fluss listet das Haus aus und ",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Brückenwirt und ve",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -17010
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -17010
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -17010
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft sich beim Fährhaus am Fluss ins Regal: Lis",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -36450
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG wirbt um Gasthof Lindenhof: Er lädt den Eink",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Bahnhofsgaststätte 43.721 DM auf die ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Werbekostenzuschuss in Bier an Gasthof Lindenhof · 4,5 hl",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Das Kartellamt untersagt der Gruppe eine Bindung. Gaststät",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Fährhaus am Fluss ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Einkauf des Brückenwirt listet das Haus aus und nimmt ",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Lastzug des Adlers fährt zum Fährhaus am Fluss.",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe übernimmt Felsenkeller Sankt Veit. Si",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Landgasthof Hirsch nimmt jetzt das Bier des Adler — sein N",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Adler-Bräu AG baut auf dem eigenen Hof: Eigener Fuhrpark f",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Nordstern-Gruppe wirbt um Pfarrschenke St. Michael: Er läd",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Bahnhofsgaststätte 27.256 DM auf die ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Außendienst sitzt beim Einkauf des Bahnhofsgaststätte",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "verfall",
+     "was": "27 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "30 Fass Handelsmarke eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe kauft das Regal im Fährhaus am Fluss ",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Das Kartellamt untersagt der Gruppe eine Bindung. Fährhaus",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 27,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Notartermin ist gehalten. Es hat kein zweites Gebot ge",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Brückenwirt 15.912 DM auf die Jahresk",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 28,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler unterschreibt beim Gasthof Lindenhof die Jahresv",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Lastzug des Adlers fährt zum Zum Goldenen Ochse",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Nordstern-Gruppe wirbt um Schenke am Tor: Er lädt den Eink",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 29,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler unterschreibt beim Pfarrschenke St. Michael die ",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäufli",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 598,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "spieler",
+     "was": "Anlagen, Wartung, Verwaltung (nicht bezahlbar)",
+     "preis": -632
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler erhöht den Werbekostenzuschuss beim Gasthof Lind",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Die Gruppe legt beim Brückenwirt 14.355 DM auf die Jahresk",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 334,
+   "vorher": 598,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -56700
+    },
+    {
+     "wer": "verfall",
+     "was": "Georgi: 30 Fass überstehen den Sommer nicht und kippen",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Zum Goldenen Ochsen führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Brückenwirt führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Fährhaus am Fluss führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Landgasthof Hirsch führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Bahnhofsgaststätte führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -264
+    },
+    {
+     "wer": "verfall",
+     "was": "Gasthof Lindenhof: Listung gefallen, das Regal ist neu bel",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Zum Goldenen Ochsen: Listung gefallen, das Regal ist neu b",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Schenke am Tor: Listung gefallen, das Regal ist neu belegt",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Pfarrschenke St. Michael: Listung gefallen, das Regal ist ",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Mühlschenke: Listung gefallen, das Regal ist neu belegt",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Brückenwirt: Listung gefallen, das Regal ist neu belegt",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre ",
+     "preis": 0
+    }
+   ]
+  }
+ ]
+}

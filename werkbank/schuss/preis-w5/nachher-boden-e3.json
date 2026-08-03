@@ -1,0 +1,1603 @@
+{
+ "epoche": 3,
+ "hafen": "8899",
+ "fehler": [],
+ "reihe": [
+  {
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 14250,
+   "gebucht": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 2,
+   "kasse": 8585,
+   "vorher": 14250,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke",
+     "preis": -5193
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Lagerbier",
+     "preis": -360
+    },
+    {
+     "wer": "spieler",
+     "was": "24 Fass Lagerbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtlohn und Kohle · 1 Sudtag",
+     "preis": -88
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler baut auf dem eigenen Hof: Depot in der Neus",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 3,
+   "kasse": 6331,
+   "vorher": 8585,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Brückenwirt",
+     "preis": -1782
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Lagerbier",
+     "preis": -360
+    },
+    {
+     "wer": "spieler",
+     "was": "24 Fass Lagerbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtlohn und Kohle · 1 Sudtag",
+     "preis": -88
+    },
+    {
+     "wer": "spieler",
+     "was": "36 hl Lagerbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 4,
+   "kasse": 4153,
+   "vorher": 6331,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Ausschank am Markt",
+     "preis": -1706
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Lagerbier",
+     "preis": -360
+    },
+    {
+     "wer": "spieler",
+     "was": "24 Fass Lagerbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtlohn und Kohle · 1 Sudtag",
+     "preis": -88
+    },
+    {
+     "wer": "gegner",
+     "was": "Zwei Bierwagen des Adlers gehen per Bahn zum Gasthof Linde",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 36 hl Lagerbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 5,
+   "kasse": 3681,
+   "vorher": 4153,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Dem Wirt die Restschuld nachrechnen gegen Gasthof Lindenho",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Lagerbier",
+     "preis": -360
+    },
+    {
+     "wer": "spieler",
+     "was": "24 Fass Lagerbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "spieler",
+     "was": "Schichtlohn und Kohle · 1 Sudtag",
+     "preis": -88
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Prokurist sitzt beim Wirt zum Zum Goldenen Ochsen und",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 6,
+   "kasse": 532,
+   "vorher": 3681,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Dem Vertrag zuvorkommen beim Zum Goldenen Ochsen",
+     "preis": -3125
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler senkt den Preis auf 45 M je hl.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 7,
+   "kasse": 508,
+   "vorher": 532,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler wirbt um Bahnhofsgaststätte: Er bietet dem ",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 36 hl Lagerbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 8,
+   "kasse": 484,
+   "vorher": 508,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Bahnhofsgaststätte (nicht bezahlbar)",
+     "preis": -9504
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 9,
+   "kasse": 460,
+   "vorher": 484,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Bahnhofsgaststätte (nicht bezahlbar)",
+     "preis": -9504
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler baut auf dem eigenen Hof: Malzturm für 8.10",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "36 hl Lagerbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 10,
+   "kasse": 436,
+   "vorher": 460,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Bahnhofsgaststätte (nicht bezahlbar)",
+     "preis": -9504
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 11,
+   "kasse": 412,
+   "vorher": 436,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Bahnhofsgaststätte (nicht bezahlbar)",
+     "preis": -9504
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler nimmt die erste Hypothek auf Bahnhofsgaststätte.",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Bahnhofsgaststätte um 7",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "36 hl Lagerbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 12,
+   "kasse": 388,
+   "vorher": 412,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Bahnhofsgaststätte (nicht bezahlba",
+     "preis": -32052
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Sein Prokurist sitzt beim Wirt zum Schenke am Tor und rech",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 13,
+   "kasse": 364,
+   "vorher": 388,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Dem Vertrag zuvorkommen beim Schenke am Tor (nicht bezahlb",
+     "preis": -1786
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 14,
+   "kasse": 340,
+   "vorher": 364,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Dem Vertrag zuvorkommen beim Schenke am Tor (nicht bezahlb",
+     "preis": -1786
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 15,
+   "kasse": 316,
+   "vorher": 340,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Dem Vertrag zuvorkommen beim Schenke am Tor (nicht bezahlb",
+     "preis": -1786
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler löst beim Schenke am Tor die alte Bindung ab und",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler baut auf dem eigenen Hof: Zweiter Schornste",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 16,
+   "kasse": 292,
+   "vorher": 316,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 17,
+   "kasse": 268,
+   "vorher": 292,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler wirbt um Fährhaus am Fluss: Er bietet dem W",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Erbteil der Miterben aus dem Keller",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 18,
+   "kasse": 244,
+   "vorher": 268,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler baut auf dem eigenen Hof: Flaschenfüllerei ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 19,
+   "kasse": 220,
+   "vorher": 244,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler nimmt die erste Hypothek auf Fährhaus am Fluss. ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 20,
+   "kasse": 196,
+   "vorher": 220,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 21,
+   "kasse": 172,
+   "vorher": 196,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 22,
+   "kasse": 148,
+   "vorher": 172,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 23,
+   "kasse": 124,
+   "vorher": 148,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 24,
+   "kasse": 100,
+   "vorher": 124,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler wirbt um Landgasthof Hirsch: Er bietet dem ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 25,
+   "kasse": 76,
+   "vorher": 100,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Gasthof Lindenhof um 3.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 26,
+   "kasse": 52,
+   "vorher": 76,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler baut dem Landgasthof Hirsch den Eiskeller und sc",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 27,
+   "kasse": 28,
+   "vorher": 52,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler senkt den Preis auf 42 M je hl.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 28,
+   "kasse": 4,
+   "vorher": 28,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 29,
+   "kasse": 4,
+   "vorher": 4,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -3226
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Schenke am Tor um 831 M",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 30,
+   "kasse": 4,
+   "vorher": 4,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -4156
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Landgasthof Hirsch um 1",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 1,
+   "kasse": 4200,
+   "vorher": 4,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -4156
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorauszahlung auf die Winterlieferung",
+     "preis": 178
+    },
+    {
+     "wer": "spieler",
+     "was": "Biersteuer und Malzaufschlag auf 178 M",
+     "preis": -14
+    },
+    {
+     "wer": "verfall",
+     "was": "Georgi: 52 Fass überstehen den Sommer nicht und kippen",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -61
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorgriff auf den Notpfennig",
+     "preis": 4093
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 2,
+   "kasse": 4176,
+   "vorher": 4200,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 3,
+   "kasse": 4152,
+   "vorher": 4176,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 4,
+   "kasse": 4128,
+   "vorher": 4152,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 5,
+   "kasse": 280,
+   "vorher": 4128,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor",
+     "preis": -3824
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Bahnhofsgaststätte um 6",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 6,
+   "kasse": 256,
+   "vorher": 280,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Landgasthof Hirsch (nicht bezahlba",
+     "preis": -7149
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "12 hl Einfachbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "12 hl Einfachbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 7,
+   "kasse": 232,
+   "vorher": 256,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 8,
+   "kasse": 208,
+   "vorher": 232,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler baut auf dem eigenen Hof: Eigenes Anschluss",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "24 hl Einfachbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 9,
+   "kasse": 184,
+   "vorher": 208,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 10,
+   "kasse": 160,
+   "vorher": 184,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauerei Adler wirbt um Pfarrschenke St. Michael: Er biete",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 11,
+   "kasse": 136,
+   "vorher": 160,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Pfarrschenke St. Michael (nicht bezahlbar",
+     "preis": -1134
+    },
+    {
+     "wer": "verfall",
+     "was": "16 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Gasthof Lindenhof um 4.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 12,
+   "kasse": 112,
+   "vorher": 136,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Pfarrschenke St. Michael (nicht bezahlbar",
+     "preis": -1134
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 13,
+   "kasse": 88,
+   "vorher": 112,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Pfarrschenke St. Michael (nicht bezahlbar",
+     "preis": -1134
+    },
+    {
+     "wer": "verfall",
+     "was": "16 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler schließt mit Pfarrschenke St. Michael einen Bier",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Pfarrschenke St. Michae",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 14,
+   "kasse": 64,
+   "vorher": 88,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Pfarrschenke St. Michae",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 15,
+   "kasse": 40,
+   "vorher": 64,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Zwei Bierwagen des Adlers gehen per Bahn zum Landgasthof H",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 16,
+   "kasse": 16,
+   "vorher": 40,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung",
+     "preis": -24
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Ausschank am Markt nimmt jetzt das Bier des Adler — sein N",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 17,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Bahnhofsgaststätte um 6",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 18,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "24 hl Einfachbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 19,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 20,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Gasthof Lindenhof um 3.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 21,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 22,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 23,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "verfall",
+     "was": "16 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Gasthof Lindenhof um 4.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 24,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Hauses gegenüber fährt zum Fährhaus a",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 25,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -5441
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "24 hl Einfachbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Fährhaus am Fluss um 1.",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 26,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 27,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "verfall",
+     "was": "infiziert: 24 hl Einfachbier",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 28,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 29,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler stockt das Darlehen beim Gasthof Lindenhof um 7.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 30,
+   "kasse": 16,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -4164
+    },
+    {
+     "wer": "verfall",
+     "was": "16 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "16 Fass Einfachbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Braumeister, Kessel, Versicherung (nicht bezahlbar)",
+     "preis": -24
+    }
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 1,
+   "kasse": 4200,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss (nicht bezahlbar",
+     "preis": -6729
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorauszahlung auf die Winterlieferung",
+     "preis": 197
+    },
+    {
+     "wer": "spieler",
+     "was": "Biersteuer und Malzaufschlag auf 197 M",
+     "preis": -16
+    },
+    {
+     "wer": "verfall",
+     "was": "Gasthof Lindenhof führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Mühlschenke führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Fährhaus am Fluss führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Landgasthof Hirsch führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Ausschank am Markt führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -62
+    },
+    {
+     "wer": "verfall",
+     "was": "Klosterschenke Obernberg: Bindung ausgelaufen",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Brückenwirt als Pfand für den Anschlag — fünf Jahre beim A",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorgriff auf den Notpfennig",
+     "preis": 4065
+    },
+    {
+     "wer": "spieler",
+     "was": "24 hl Einfachbier aus dem Gärkeller ins Lager",
+     "preis": 0
+    }
+   ]
+  }
+ ]
+}

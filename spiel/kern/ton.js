@@ -208,7 +208,15 @@
      laut: relativ zum Werk-Pegel                                          */
   var KATALOG = {
     /* --- DIE FUHRE ------------------------------------------------------ */
-    'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 1.15, laenge: 3.2,
+    /* Das offene Feuer von 1350 (`sud1.mp3`, neu erzeugt) ist ein breites,
+       tiefes Rauschen — allein vorgelegt "knisterndes Feuer, zeitlos", in
+       der Mischung aber der Stoff, aus dem ein Ohr einen Motor macht. In
+       1350 darf es deshalb kuerzer und leiser stehen als der Dampf von 1884
+       und die Pumpe von 1970, die beide Kontur haben. `laut` und `laenge`
+       duerfen wie `datei` Funktionen der Epoche sein. */
+    'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'),
+                           laut: je(0.85, 1.0, 1.15, 1.15),
+                           laenge: je(2.2, 2.6, 3.2, 3.2),
                            sagt: 'Der Sud: offene Pfanne, Dampfventil, Kreiselpumpe.' },
     /* WELLE 5. `fassstahl.mp3` ist geloescht. Einzeln vorgelegt war sie ein
        "GONGSCHLAG · resonierender Nachhall eines metallischen Klangkoerpers,
@@ -798,7 +806,7 @@
     var hoch = ctx.createBiquadFilter();
     hoch.type = 'highpass'; hoch.frequency.value = 170;
     var v = ctx.createDelay(0.6); v.delayTime.value = echo;
-    var rueck = ctx.createGain(); rueck.gain.value = 0.32;
+    var rueck = ctx.createGain(); rueck.gain.value = 0.18;
     var n = ctx.createGain(); n.gain.value = nass;
     ein.connect(tief); tief.connect(hoch);
     hoch.connect(ziel);
@@ -880,8 +888,13 @@
     w.bus.fremd = ctx.createGain();
     w.bus.fremd.gain.value = w.ruhe.fremd;
     w.bus.fremd.connect(meister);
-    w.bus.fern = baueWand(ctx, w.bus.fremd, 2000, 0.155, 0.40);
-    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 1800, 0.190, 0.55);
+    /* Weniger Nachschlag als in Welle 4 (0,155/0,40 und 0,190/0,55): eine
+       Verzoegerung von 190 ms mit 32 % Rueckfuehrung ist ein Resonator, und
+       durch einen Tiefpass gejagt macht sie aus dem rhythmischen Saegen des
+       Nachbarn ein gleichmaessiges Brummen. Genau das hat das fremde Ohr in
+       1350 als Motor gemeldet. Eine Wand ist keine Halle. */
+    w.bus.fern = baueWand(ctx, w.bus.fremd, 2000, 0.115, 0.28);
+    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 1800, 0.135, 0.36);
     return w;
   }
 
@@ -1044,7 +1057,11 @@
   var STAPEL_FENSTER = 0.50;   /* das halbe Sekundenfenster der Auflage */
   var STAPEL_MAX = 2;          /* hoechstens zwei Kopien darin */
   var STAPEL_ABSTAND = 0.22;   /* und nie zwei dichter als das */
-  var STAPEL_WEIT = 1.80;      /* weiter wird nicht geschoben, dann faellt sie aus */
+  /* 1,1 s und nicht 1,8: mit dem groesseren Wert ueberlebten neun der zwoelf
+     Faesser und legten zwei Sekunden ununterbrochenes Poltern in den Hof —
+     das fremde Ohr hat 1350 daraufhin dreimal von drei "Verbrennungsmotor
+     (Auto/LKW)" gemeldet. Eine Reihe ist etwas anderes als ein Teppich. */
+  var STAPEL_WEIT = 1.10;      /* weiter wird nicht geschoben, dann faellt sie aus */
 
   function entstapele(w, schluessel, wann) {
     var f = w.stapel || (w.stapel = {});
@@ -1185,7 +1202,8 @@
        legt `legeBett()`, nicht der Katalog. */
     if (/^bett:epoche/.test(name)) return true;
     var e = eintrag(name);
-    var v = (e.laut === undefined ? 0.8 : e.laut) * (opt && opt.laut !== undefined ? opt.laut / 0.8 : 1);
+    var eLaut = (typeof e.laut === 'function') ? e.laut(epoche) : e.laut;
+    var v = (eLaut === undefined ? 0.8 : eLaut) * (opt && opt.laut !== undefined ? opt.laut / 0.8 : 1);
     v = Math.max(0.05, Math.min(1.6, v));
     var datei = dateiVon(e, epoche);
     var buf = datei ? fertig(ctx, datei) : null;

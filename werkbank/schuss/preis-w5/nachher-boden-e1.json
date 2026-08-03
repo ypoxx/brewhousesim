@@ -1,0 +1,1693 @@
+{
+ "epoche": 1,
+ "hafen": "8899",
+ "fehler": [],
+ "reihe": [
+  {
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 112,
+   "gebucht": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 2,
+   "kasse": 37,
+   "vorher": 112,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Fährhaus am Fluss",
+     "preis": -66
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler baut auf dem eigenen Hof: Große Kufe fü",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 3,
+   "kasse": 9,
+   "vorher": 37,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Klosterschenke Obernberg",
+     "preis": -19
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Karren des Adlers fährt zum Schenke am Tor.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 4,
+   "kasse": 8,
+   "vorher": 9,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Klage vor dem Stadtgericht gegen Schenke am Tor — durchged",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein Feist sitzt beim Wirt zum Zum Goldenen Ochsen und läss",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 5,
+   "kasse": 7,
+   "vorher": 8,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -42
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler ruft am Markt aus: 8 Pf je Fass, einen Pfennig u",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 6,
+   "kasse": 6,
+   "vorher": 7,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -42
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Brückenwirt: Er stellt dem Wir",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 7,
+   "kasse": 5,
+   "vorher": 6,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -42
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat spricht Zum Goldenen Ochsen dem Adler zu. Das Haus",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 8,
+   "kasse": 4,
+   "vorher": 5,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Schenke am Tor (nicht bezahlbar)",
+     "preis": -42
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler erwirkt den Bannbrief: in der Meile um Brückenwi",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Gasthof Lindenhof: Er stellt d",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 9,
+   "kasse": 20,
+   "vorher": 4,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Kerbholz: 1 Kerbe geschnitten",
+     "preis": 25
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 10,
+   "kasse": 11,
+   "vorher": 20,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein Feist sitzt beim Wirt zum Pfarrschenke St. Michael und",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 11,
+   "kasse": 2,
+   "vorher": 11,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler steht dem Wirt zum Gasthof Lindenhof Gevatter. D",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Mühlschenke: Er stellt dem Wir",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 12,
+   "kasse": 1,
+   "vorher": 2,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler baut auf dem eigenen Hof: Darrboden für",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 13,
+   "kasse": 0,
+   "vorher": 1,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat spricht Pfarrschenke St. Michael dem Adler zu. Das",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 14,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler erwirkt den Bannbrief: in der Meile um Mühlschen",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler ruft am Markt aus: 7 Pf je Fass, einen Pfennig u",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 15,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig u",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Landgasthof Hirsch: Gewohnheit fällt mit der Hand",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Ausschank am Markt: Gewohnheit fällt mit der Hand",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Klosterschenke Obernberg: Gevatterschaft fällt mit der Han",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Erbteil der Miterben aus dem Keller",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 16,
+   "kasse": 16,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Kerbholz: 1 Kerbe geschnitten",
+     "preis": 25
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler baut auf dem eigenen Hof: Eigener Brunn",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 17,
+   "kasse": 15,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Hauses gegenüber fährt zum Gasthof Li",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 18,
+   "kasse": 6,
+   "vorher": 15,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 19,
+   "kasse": 22,
+   "vorher": 6,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Kerbholz: 1 Kerbe geschnitten",
+     "preis": 25
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 20,
+   "kasse": 21,
+   "vorher": 22,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein Feist wird in den Rat gewählt. Solange er darin sitzt,",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 21,
+   "kasse": 20,
+   "vorher": 21,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 22,
+   "kasse": 19,
+   "vorher": 20,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 23,
+   "kasse": 18,
+   "vorher": 19,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 24,
+   "kasse": 9,
+   "vorher": 18,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 25,
+   "kasse": 8,
+   "vorher": 9,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler baut auf dem eigenen Hof: Zweiter Karre",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 26,
+   "kasse": 0,
+   "vorher": 8,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 27,
+   "kasse": 16,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Kerbholz: 1 Kerbe geschnitten",
+     "preis": 25
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 28,
+   "kasse": 15,
+   "vorher": 16,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 29,
+   "kasse": 14,
+   "vorher": 15,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler hängt denselben Strohkranz aus — nachge",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 30,
+   "kasse": 13,
+   "vorher": 14,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 1,
+   "kasse": 48,
+   "vorher": 13,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "Georgi: 12 Fass überstehen den Sommer nicht und kippen",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Kerbholz beim Grutherrn: 4 Kerben offen — genommen wurden ",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Mühlschenke führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -8
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorgriff auf den Notpfennig",
+     "preis": 43
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 2,
+   "kasse": 39,
+   "vorher": 48,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 3,
+   "kasse": 30,
+   "vorher": 39,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Ein Sud Grutbier",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "4 Fass Grutbier eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "spieler",
+     "was": "Brauknecht und Futter · 1 Sudtag",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat entzieht dem Adler die Konzession für Gasthof Lind",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 4,
+   "kasse": 29,
+   "vorher": 30,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Karren des Adlers fährt zum Mühlschenke.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 5,
+   "kasse": 28,
+   "vorher": 29,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 6,
+   "kasse": 27,
+   "vorher": 28,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 7,
+   "kasse": 26,
+   "vorher": 27,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 8,
+   "kasse": 25,
+   "vorher": 26,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Schenke am Tor: Er stellt dem ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 9,
+   "kasse": 0,
+   "vorher": 25,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Schenke am Tor",
+     "preis": -25
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 10,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Gasthof Lindenhof: Er stellt d",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 11,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "4 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "3 Fass Kofent eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig u",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 12,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat verleiht dem Adler die Schankgerechtigkeit im Gast",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 13,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Landgasthof Hirsch: Er stellt ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 14,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 15,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "3 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "3 Fass Kofent eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Adler steht dem Wirt zum Landgasthof Hirsch Gevatter. ",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Hauses gegenüber fährt zum Zum Golden",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 16,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 17,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Dem Adler brennt der Darrboden. Zwei Wochen kein Sud. Es k",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 18,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 19,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "3 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "3 Fass Kofent eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 20,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler baut auf dem eigenen Hof: Zweiter Karre",
+     "preis": 0
+    },
+    {
+     "wer": "gegner",
+     "was": "Fährhaus am Fluss nimmt jetzt das Bier des Adler — sein Na",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 21,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat entzieht dem Adler die Konzession für Brückenwirt.",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 22,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 23,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "verfall",
+     "was": "3 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "3 Fass Kofent eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 24,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 25,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Ein grauer Wagen des Hauses gegenüber fährt zum Fährhaus a",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 26,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Zum Goldenen Ochsen (nicht bezahlb",
+     "preis": -100
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat entzieht dem Adler die Konzession für Zum Goldenen",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 27,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "verfall",
+     "was": "3 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "3 Fass Kofent eingelegt",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 28,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Mühlschenke (nicht bezahlbar)",
+     "preis": -96
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Pfarrschenke St. Michael: Er s",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 29,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Pfarrschenke St. Michael (nicht bezahlbar",
+     "preis": -22
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat entzieht dem Adler die Konzession für Fährhaus am ",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 30,
+   "kasse": 0,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Zuvorkommen beim Pfarrschenke St. Michael (nicht bezahlbar",
+     "preis": -22
+    },
+    {
+     "wer": "spieler",
+     "was": "Dach, Geschirr, Wache (nicht bezahlbar)",
+     "preis": -1
+    },
+    {
+     "wer": "gegner",
+     "was": "Der Rat verleiht dem Adler die Schankgerechtigkeit im Pfar",
+     "preis": 0
+    }
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 1,
+   "kasse": 48,
+   "vorher": 0,
+   "gebucht": [
+    {
+     "wer": "spieler",
+     "was": "Ablösung der Bindung am Pfarrschenke St. Michael (nicht be",
+     "preis": -48
+    },
+    {
+     "wer": "verfall",
+     "was": "3 Fass verdorben",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Angeld auf das kommende Braujahr",
+     "preis": 1
+    },
+    {
+     "wer": "verfall",
+     "was": "Gasthof Lindenhof führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Schenke am Tor führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Brückenwirt führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Fährhaus am Fluss führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Klosterschenke Obernberg führt kein Bier des Hauses mehr",
+     "preis": 0
+    },
+    {
+     "wer": "verfall",
+     "was": "Sommer: Unterhalt und Abgaben",
+     "preis": -7
+    },
+    {
+     "wer": "spieler",
+     "was": "Der Rat lässt pfänden: Malzboden auf Stelzen",
+     "preis": 6
+    },
+    {
+     "wer": "gegner",
+     "was": "Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre ",
+     "preis": 0
+    },
+    {
+     "wer": "spieler",
+     "was": "Vorgriff auf den Notpfennig",
+     "preis": 48
+    }
+   ]
+  }
+ ]
+}
