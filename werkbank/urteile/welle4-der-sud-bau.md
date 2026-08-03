@@ -253,9 +253,12 @@ vorher, nicht milder.
 ### 2.8 Die Fläche bleibt unter der Schwelle
 
 Der Kesselzettel darf die Ortsmarken-Schwelle der STADT (2,4 % der Bühne) nicht
-überschreiten. Nachgemessen bei 1920×1000, 1440×900 und 2752×1536, alle vier
-Epochen: **1,88 % bis 2,14 %**, kein Knopf abgeschnitten, jeder von der Maus
-getroffen.
+überschreiten. Nachgemessen nach dem letzten Eingriff, bei 1920×1000, 1440×900
+und 2752×1536, alle vier Epochen: **1,84 % bis 2,14 %**, nichts abgeschnitten
+(Inhaltshöhe = Innenhöhe in allen zwölf Fällen), jeder Knopf von der Maus
+getroffen. Die Ladung des Zettels wächst dabei nicht: das Hefepaar steht in
+einer Zeile statt zweier, die gesperrte Charge nimmt den Platz der kostenlosen
+Umstellung, der Gärraum erscheint nur, wenn eine Zeile frei geworden ist.
 
 ---
 
@@ -317,52 +320,45 @@ zwei Stunden. Diese Zahl gehört nicht mir und ist nicht vergleichbar.)
 ### 3.3 Zwei Partien, verschiedenes Bier
 
 Die Frage des Kritikers, wörtlich beantwortet: `zweipartien.mjs` spielt dieselbe
-Epoche, dieselbe Saat, 120 Wochen, zweimal — einmal wird die **unwiderrufliche
-Festlegung** genommen, einmal die **kostenlose Abkürzung**. Alles Übrige ist
-gleich. Verglichen wird nur, was am Schirm steht.
+Epoche, dieselbe Saat, 120 Wochen, **zweimal** — einmal nimmt die Hand die
+teuerste Festlegung, die sie sich leisten kann, einmal die kostenlose
+Abkürzung der Epoche. Alles Übrige ist gleich. Verglichen wird nur, was am
+Schirm steht. **Die entscheidende Zeile ist die dritte Zeile des
+Kesselzettels** — sie steht im Vorgabestand da, ohne dass ein Brett
+aufgeschlagen werden muss:
 
-**1600 — Felsenkeller gegen Hafer:**
+| Epoche | teure Partie | Zeile am Sudhaus | billige Partie | Zeile am Sudhaus |
+|---|---|---|---|---|
+| 1350 | *(78 Pf nicht bezahlbar → bei der Grut geblieben)* | **höchstens Grutbier** | Hopfen im Sack | **höchstens Starkbier** |
+| 1600 | Felsenkeller −260 fl | **höchstens Märzenbier** | mit Hafer gestreckt | **höchstens Schankbier** |
+| 1884 | Reinzuchthefe −3.400 M | **höchstens Exportbier** | ohne Kühlung | **höchstens Schankbier** |
+| 1970 | Labor −42.000 + Filter −26.000 DM | **höchstens Exportbier** | Schönen mit Kieselsol | **höchstens Pilsner** |
 
-| | TEUER (Kellergärung, −260 fl) | BILLIG (mit Hafer gestreckt, 0 fl) |
-|---|---|---|
-| Zeile auf dem Kesselzettel | **„höchstens Märzenbier"** | **„höchstens Schankbier"** |
-| Siegel | `gaerung:keller` — die Achse ist zu | keines, alles bleibt offen |
-| Güte am Ende | **98** | **15** |
-| Sude · Fass | 29 · 145 | 67 · 558 |
-| Keller am Ende | 14 Fass Nachbier, Haltbarkeit im Mittel **6 Wochen** | 0 Fass |
-| Kasse am Ende | 401 fl | 309 fl |
+In allen vier Epochen nennt der Zettel eine **andere Sorte**, und in allen vier
+ist die billige Partie die mengenreichere und kassenstärkere:
 
-Das ist der Unterschied in einem Blick: **die eine Partie darf Märzenbier
-liefern, die andere höchstens Schankbier** — und das steht auf dem Zettel am
-Sudhaus, ohne dass man ein Brett aufschlagen muss. Die billige Partie macht
-mehr Fass aus derselben Pfanne (558 gegen 145) und verkauft es an weniger
-Häuser; die teure hat weniger, aber besseres, und darf es weiter fahren.
+| | 1600 teuer | 1600 billig | 1884 teuer | 1884 billig | 1970 teuer | 1970 billig |
+|---|---|---|---|---|---|---|
+| Güte am Ende | **98** | 25 | **98** | 25 | **98** | 21 |
+| Sude · Fass | 31 · 155 | 61 · **494** | 25 · 400 | 41 · **687** | 16 · 540 | 101 · **1.610** |
+| Keller am Ende | 15 Fass Nachbier, Haltbarkeit **6 Wo.** | 8 Fass Schankbier, **3 Wo.** | 3 Fass, 4 Wo. | 0 Fass | 0 Fass | 31 Fass Handelsmarke, 12 Wo. |
+| Kasse am Ende | 302 fl | 337 fl | 5.786 M | **8.842 M** | 284 DM | **46.640 DM** |
+| Siegel | `gaerung:keller` | keines | `hefe:reinzucht` | keines | `fuehrung:labor`, `behandlung:filter` | keines |
 
-**1350 — Hopfenbrief gegen Hopfen im Sack:** hier ist der Rang in beiden
-Partien „höchstens Starkbier", und das ist richtig so — der geschmuggelte
-Hopfen kann dasselbe wie der beurkundete. Der Unterschied steht anderswo:
-`fest: ["wuerze:brief"]` gegen `fest: []`, das Siegel auf der Achse, und der
-Grutknecht, der beim Sack mit 11 % je Woche in die Pfanne sieht (Güte 98 gegen
-19 am Ende). Wer die 78 Pf nicht hat, braut trotzdem — er hat es nur nicht
-schriftlich.
+**Das ist eine Entscheidung und keine Verbesserung.** Die billige Partie hat
+1970 nach vier Jahren 46.640 DM und verkauft Handelsmarke; die teure hat
+284 DM und darf exportieren. Ein Kritiker, der beide Partien nebeneinander
+laufen lässt, kann den Unterschied in einem Satz benennen, ohne ein Brett
+anzufassen — er steht auf dem Kesselzettel.
 
-**1884 — Kältemaschine und Reinzucht gegen „ohne Kühlung durchgären lassen":**
-
-| | TEUER (9.800 M + 3.400 M, beide gesiegelt) | BILLIG (warm, 0 M) |
-|---|---|---|
-| Zeile auf dem Kesselzettel | **„höchstens Exportbier"** | **„höchstens Schankbier"** |
-| Siegel | `kaelte:maschine`, `hefe:reinzucht` | keines |
-| Güte am Ende | **96** | **25** |
-| Sude · Fass | 21 · 368 | 41 · 687 |
-| Kasse am Ende | 15 M | 8.842 M |
-
-Auch hier steht der ganze Unterschied in einer Zeile am Sudhaus. Und er hat
-zwei Seiten: die billige Partie hat nach vier Jahren fast neuntausend Mark und
-verkauft Schankbier; die teure hat fünfzehn Mark und darf exportieren. **Das
-ist eine Entscheidung und keine Verbesserung** — genau das, was die Latte
-verlangt.
-
-PLATZ-ZWEIPARTIEN-4
+**Ein Nebenbefund, der DER RÜCKKOPPLUNG gehört, nicht mir:** in 1350 kostet die
+einzige bezahlte Bierentscheidung **78 Pf bei einer Startkasse von 112 Pf**.
+Eine Hand, die nach der Regel „höchstens 60 % der Kasse" kauft, nimmt sie in
+vierzehn Jahren nie. Das ist derselbe Befund wie ZUSTAENDIGKEIT §13/§17 für den
+Michaelitag, nur an meinem Brett. Der Preis steht in `sud-daten.js` und gehört
+mir — ich habe ihn **nicht** gesenkt, weil ein Preis, den man herunterdreht,
+bis er passt, die Latte entwertet, und weil die Kasse von 1350 gerade von zwei
+anderen Bauleuten bewegt wird. **Wer 1350 eicht, eicht diese Zahl mit.**
 
 ### 3.4 Die gesperrte Charge von 1970
 
@@ -377,6 +373,29 @@ Dass es nachher nur noch drei gesperrte Wochen sind, ist die Folge und nicht der
 Zufall: der Spieler entscheidet jetzt in der Woche, in der gesperrt wird, statt
 die Charge vier Wochen stehen zu lassen, bis der Braumeister sie von sich aus
 freigibt.
+
+### 3.5 Das Abnahmetor
+
+Nach dem letzten Eingriff, alle vier Epochen frisch geladen, `?pruefe=1`:
+**`BRAUHAUS.lage` 0, kein Konsolenfehler, in vier von vier.** Im Vorgabestand
+jeder Epoche stehen vier aktive und von der Maus getroffene Züge des SUDES.
+`node --check` auf alle drei geänderten `.js`-Dateien und auf alle vier neuen
+Messgeräte.
+
+### 3.6 Die Antwort auf die Frage der Welle
+
+> *Wird gebraut, und entscheidet man dabei etwas?*
+
+**Vorher:** in vierzehn Jahren, in vier Epochen, wurde beim Bier **null Mal**
+etwas entschieden, das etwas kostete — kein bezahltes Verfahren, kein Siegel,
+keine zurückgestufte Sorte —, und die einzige wöchentlich wiederkehrende Wahl
+(die Hefe) war streng schlecht. Die Entscheidungen *gab* es; sie standen 305,
+365, 275 und 43 Wochen lang sichtbar und unbedienbar am Sudhaus, und wo man
+sie doch nahm, war sie eine halbe Stunde später gratis rückgängig zu machen.
+
+**Nachher:** die Entscheidung steht in 394 / 390 / 364 / 255 von 400 Wochen
+bedienbar da, sie hält, wenn man sie trifft, und zwei Partien derselben Epoche
+tragen danach ein anderes Bier — nachlesbar in einer Zeile am Sudhaus.
 
 ---
 
@@ -419,7 +438,19 @@ Fass), aber es ist eine Änderung am Nenner, und sie fällt in dieselben Stunden
 in denen DIE RÜCKKOPPLUNG rho misst. **Wer rho vergleicht, vergleiche Stände,
 nicht Uhrzeiten.**
 
-**4.5 Die Messung selbst stand auf wanderndem Grund.**
+**4.5 Einmal `BRAUHAUS.lage` 2 gesehen, nicht reproduzierbar.**
+Im dritten Anlauf der Zweipartien-Messung meldete der Lauf *1600 / teuer* am
+Ende (1603/13) `lage 2` bei 0 Seitenfehlern. **Zweimal exakt wiederholt —
+`HAFEN=8899 node werkbank/schuss/sud-w4/zweipartien.mjs 2 120` — beide Male
+`lage 0`**, dazu ein eigener Nachstellversuch über 90 Wochen mit demselben
+Kauf: `lage 0`. Alle anderen 30 Läufe dieser Runde, einschließlich der acht
+400-Wochen-Läufe und der sechs Siegelläufe, melden `lage 0`. Der eine Fall
+fällt in dasselbe Zeitfenster, in dem `preis*.js` neben mir geschrieben wurde.
+**Ich kann ihn nicht erklären und ich kann ihn nicht wiederholen; er steht
+hier, damit er nicht verschwiegen ist**, mit dem Befehl daneben, der ihn
+gegebenenfalls wieder zeigt.
+
+**4.6 Die Messung selbst stand auf wanderndem Grund.**
 Vorher gegen einen eingefrorenen Stand (8901), nachher gegen den Arbeitsbaum
 (8899), an dem zwei andere Builder gleichzeitig schrieben. Die Startkasse von
 1600 hat sich dabei von 640 fl auf 490 fl bewegt. Die Zahlen zum Kesselzettel
@@ -479,6 +510,12 @@ Globale `FUHRE_DATEN`) · Gärkeller neben Lagerkeller in `welt.vorrat`.
 
 Alle vier nehmen `HAFEN=` aus der Umgebung, damit sich ein eingefrorener Stand
 gegen den Arbeitsbaum messen lässt.
+
+Dazu die Messwerte selbst, damit niemand sie nachspielen muss, um sie
+nachzurechnen: `vor-e1..4-blind.json`, `vor-e1..4-braut.json`,
+`nach-e1..4-blind.json` (Woche für Woche: Kasse, Rohstoff, Fässer, Verfahren,
+Güte, Bottiche, Sude, Fass, welche Bierknöpfe aktiv und getroffen waren) und
+`messprotokoll.txt` mit den rohen Ausgaben aller Läufe dieser Runde.
 
 **Nicht angefasst:** `spiel/index.html`, `spiel/kern/**`, jede Datei eines
 anderen Stücks. Kein `git`.

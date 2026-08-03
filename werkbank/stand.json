@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-03T12:52:52+00:00",
- "phase": "Welle 4 — DER KLANG geurteilt (besteht mit Auflage, acht Auflagen, in Nacharbeit). DIE RÜCKKOPPLUNG gebaut: 1600 rho +0,873 → +0,121, blinder Kritiker misst am eingefrorenen Stand da7d690 nach. DER SUD baut noch. DER PREIS folgt, wenn preis*.js frei ist.",
+ "stand": "2026-08-03T14:06:00+00:00",
+ "phase": "Welle 4, zweite Hälfte — beide geurteilten Stücke sind in Nacharbeit. DIE RÜCKKOPPLUNG: FÄLLT DURCH — 1600 geheilt (rho +0,873 → +0,231), dabei 1350 gerissen (+0,701 bis +0,789). Kritiker mit 12 Läufen, Aufsicht unabhängig mit 3 Läufen je Epoche, gleicher Befund. DER KLANG: besteht mit Auflage, acht Auflagen — die Epoche wird vom Klangbett getragen, nicht vom Vorgang. DER SUD baut noch. DER PREIS wartet auf preis*.js. NEU vom Auftraggeber: DER EPOCHENBOGEN (gauntlet/EPOCHENBOGEN.md) — Epochen nach Art von Civ 7, eigene Welle, erst messen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -67,9 +67,10 @@
   },
   {
    "name": "DER KLANG — dreissig Sekunden ohne Bild",
-   "status": "bestanden",
+   "status": "zurueck",
    "runde": 1,
-   "luecke": "BESTANDEN. Zwei unabhaengige Ziehungen, 8 von 8 blind richtig, Ton aus dem laufenden Spiel gerendert. Offen fuer spaeter: 1884 borgt seine Handgriffe bei 1350, weil altNeu() erst bei Epoche 4 teilt."
+   "luecke": "BESTEHT MIT AUFLAGE, acht Auflagen. Die dritte Latte ist zum ersten Mal in vier Wellen gemessen und hält formal: das fremde Ohr nennt die Epoche 8 von 8 richtig, zwei Durchgänge, zwei Mischungen, Schlüssel versiegelt. ABER der blinde Kritiker hat den Grund umgedreht: dreißig Sekunden ohne einen einzigen Klick erreichen 94/97/59/75 Prozent des Pegels des gespielten Laufs, und das Ohr nennt die Epoche daraus 3 von 3 richtig. Die Aufsicht unabhängig: 102/105/100/101 Prozent. Nichtstun klingt so laut wie Spielen — die Epoche wird von der Kulisse getragen, nicht vom Vorgang, obwohl die Latte Epoche UND Vorgang verlangt. Gegenzug 0 von 4 hörbar, obwohl auf drei von vier Bändern gegner-Rufe stehen. Anachronismen mit Sekunde belegt: Ragtime in 1884 (frühestens 1893), digitaler Handy-Klingelton als Michaeliklang 1970.",
+   "gebaut": "werkbank/beleg/sud-e1.jpg"
   },
   {
    "name": "DER NAME — warum jemand mehr zahlt, als das Bier wert ist",
@@ -105,9 +106,17 @@
   },
   {
    "name": "DER SUD — was fuer ein Bier das eigentlich ist",
+   "status": "laeuft",
+   "runde": 2,
+   "luecke": "GEBAUT, wartet auf den blinden Kritiker. Vorher gemessen: das Siegel 'unwiderruflich' hielt in NULL von vier Epochen — nicht in drei, wie der Welle-3-Kritiker meldete; 1884 wirkte nur heil, weil die Sperre genau den einen Rückweg deckte, den er probiert hatte, über zwei andere Wege ging es ebenso. In vierzehn Jahren wurde beim Bier nichts entschieden: vier Läufe zu 400 Wochen, 0 bezahlte Festlegungen, und in 400 von 400 Wochen kein einziger Achsknopf aktiv. Der schwerste Fund: der Kesselzettel stand sichtbar da und konnte nichts, in 305/365/275/43 von 400 Wochen — die Selbstprüfung fragte nur den Mittelpunkt ab, während die Bretter der FUHRE die untere Hälfte decken, also die Knöpfe. Dieselben ersten 60 Wochen: 3 von 60 mit der sorgfältigen Hand gegen 60 von 60 mit reinem WEITER. Der Fehler traf genau den, der spielt. Nachher: Siegel 6 von 6 abgewiesen, Wochen mit mindestens zwei bedienbaren Bierknöpfen 89 auf 394, 28 auf 390, 71 auf 364, 196 auf 255; zwei Partien derselben Epoche tragen jetzt ein anderes Bier.",
+   "gebaut": "werkbank/beleg/sud-e1.jpg"
+  },
+  {
+   "name": "DIE RÜCKKOPPLUNG — die Kennzahl über die Zeit",
    "status": "zurueck",
-   "runde": 1,
-   "luecke": "Meine Latte ist bestanden — 3/5/5/9 Sudentscheidungen, keine einzige kommt in zwei Epochen vor, jede kostet und jede zeigt ihre Folge am Fass; zurueck geht es an einer anderen Stelle: 1350, 1600 und 1970 schreiben 'unwiderruflich' auf ihre teuerste Entscheidung (Hopfenbrief −78 Pf, Felsenkeller −260 fl, Betriebslabor −42.000 DM), und sechs Wochen spaeter macht ein einziger Mausklick sie gratis rueckgaengig — nur 1884 haelt sein Wort."
+   "runde": 2,
+   "luecke": "FÄLLT DURCH. 1600 ist echt repariert — rho +0,873 auf +0,231, und an der richtigen Stelle: dort fällt die Kasse (×0,61) bei steigenden Preisen (×1,48). Dafür ist 1350 gerissen: Spearman +0,742 / +0,701 / +0,701 beim Kritiker, +0,701 / +0,785 / +0,789 bei der unabhängigen Nachmessung der Aufsicht, Spitze 41,67× statt vorher 7,88×. Ursache mitgemessen: in 1350 wächst die Kasse um das 2,30-fache, der Nennerpreis nur um das 1,33-fache; Spearman der Kennzahl gegen die Kasse +0,947 — die Zahl folgt der Kasse, nicht dem Preis. Der Builder hatte 1350 als 'identisch, Ziffer für Ziffer' gemeldet; widerlegt von zwei Seiten unabhängig. Dazu ein Fund des Kritikers, der nicht dieser Datei gehört: gegner.js:1561 ruft meldeZug mit drei statt vier Argumenten, also ohne Zugschlüssel — der Prüfschritt aus ZUSTÄNDIGKEIT 24 läuft dort ins Leere, und diese Stelle stellt in 4.311 von 4.800 Wochen (89,8 Prozent) den Nenner der Kennzahl.",
+   "gebaut": "werkbank/beleg/preis-e3.jpg"
   }
  ],
  "chronik": [
@@ -850,6 +859,34 @@
   {
    "zeit": "2026-08-03T12:52:52+00:00",
    "text": "AUFSICHT — MESSGERÄT REPARIERT, Auflage 8 des KLANG-Kritikers. werkbank/hoerer.py hat aus einer Modell-Verweigerung ein Urteil über das Spiel gemacht: bei ruhe-drei.wav wurde 'Epoche 1, sicher 0' geborgen, mit --erwartet wäre daraus ein Fehlurteil geworden. Dazu stand Ausstiegscode 3 sowohl für 'durchgefallen' als auch für 'keine Messung' — wer das Skript in einer Kette aufruft, konnte beides nicht unterscheiden. Behoben, und die Hürde eng gesetzt: als Verweigerung zählt nur, wenn der Text das Nichthören AUSSPRICHT UND die Sicherheit 0 ist; bloße Unsicherheit bleibt ein zählender Fehlgriff, sonst würde das Gerät echte Fehler verschwinden lassen. Gegen acht Fälle geprüft (echte Verweigerung deutsch und englisch, geborgene Verweigerung, unsicherer Fehlgriff, Treffer, sicher-0-mit-echtem-Raten, abgeschnittenes JSON, völlig unlesbar): 8 von 8 wie vorgesehen. Codes jetzt getrennt: 0 alles richtig, 2 gar keine Messung, 3 danebengelegen, 4 gemessen und richtig, aber es fehlen Messungen. Der Kritiker hat das Gerät korrekt NICHT selbst angefasst (md5 8a0886a7 unverändert, §16)."
+  },
+  {
+   "zeit": "2026-08-03T14:04:19+00:00",
+   "text": "Welle 4, zweite Hälfte — beide geurteilten Stücke sind in Nacharbeit. DIE RÜCKKOPPLUNG: FÄLLT DURCH — 1600 geheilt (rho +0,873 → +0,231), dabei 1350 gerissen (+0,701 bis +0,789). Kritiker mit 12 Läufen, Aufsicht unabhängig mit 3 Läufen je Epoche, gleicher Befund. DER KLANG: besteht mit Auflage, acht Auflagen — die Epoche wird vom Klangbett getragen, nicht vom Vorgang. DER SUD baut noch. DER PREIS wartet auf preis*.js. NEU vom Auftraggeber: DER EPOCHENBOGEN (gauntlet/EPOCHENBOGEN.md) — Epochen nach Art von Civ 7, eigene Welle, erst messen."
+  },
+  {
+   "zeit": "2026-08-03T14:04:19+00:00",
+   "text": "DIE RÜCKKOPPLUNG — die Kennzahl über die Zeit · Runde 2 · zurück an den Builder — FÄLLT DURCH. 1600 ist echt repariert — rho +0,873 auf +0,231, und an der richtigen Stelle: dort fällt die Kasse (×0,61) bei steigenden Preisen (×1,48). Dafür ist 1350 gerissen: Spearman +0,742 / +0,701 / +0,701 beim Kritiker, +0,701 / +0,785 / +0,789 bei der unabhängigen Nachmessung der Aufsicht, Spitze 41,67× statt vorher 7,88×. Ursache mitgemessen: in 1350 wächst die Kasse um das 2,30-fache, der Nennerpreis nur um das 1,33-fache; Spearman der Kennzahl gegen die Kasse +0,947 — die Zahl folgt der Kasse, nicht dem Preis. Der Builder hatte 1350 als 'identisch, Ziffer für Ziffer' gemeldet; widerlegt von zwei Seiten unabhängig. Dazu ein Fund des Kritikers, der nicht dieser Datei gehört: gegner.js:1561 ruft meldeZug mit drei statt vier Argumenten, also ohne Zugschlüssel — der Prüfschritt aus ZUSTÄNDIGKEIT 24 läuft dort ins Leere, und diese Stelle stellt in 4.311 von 4.800 Wochen (89,8 Prozent) den Nenner der Kennzahl."
+  },
+  {
+   "zeit": "2026-08-03T14:04:19+00:00",
+   "text": "DER KLANG — dreissig Sekunden ohne Bild · Runde 1 · zurück an den Builder — BESTEHT MIT AUFLAGE, acht Auflagen. Die dritte Latte ist zum ersten Mal in vier Wellen gemessen und hält formal: das fremde Ohr nennt die Epoche 8 von 8 richtig, zwei Durchgänge, zwei Mischungen, Schlüssel versiegelt. ABER der blinde Kritiker hat den Grund umgedreht: dreißig Sekunden ohne einen einzigen Klick erreichen 94/97/59/75 Prozent des Pegels des gespielten Laufs, und das Ohr nennt die Epoche daraus 3 von 3 richtig. Die Aufsicht unabhängig: 102/105/100/101 Prozent. Nichtstun klingt so laut wie Spielen — die Epoche wird von der Kulisse getragen, nicht vom Vorgang, obwohl die Latte Epoche UND Vorgang verlangt. Gegenzug 0 von 4 hörbar, obwohl auf drei von vier Bändern gegner-Rufe stehen. Anachronismen mit Sekunde belegt: Ragtime in 1884 (frühestens 1893), digitaler Handy-Klingelton als Michaeliklang 1970."
+  },
+  {
+   "zeit": "2026-08-03T14:04:19+00:00",
+   "text": "DIE RÜCKKOPPLUNG r2 — FÄLLT DURCH, und der Fehler ist umgezogen statt behoben. Der blinde Kritiker hat am eingefrorenen Stand da7d690 auf eigenem Hafen ZWÖLF Läufe à 400 Wochen gefahren, drei je Epoche, 4.800 Wochen. Spearman: 1350 +0,742/+0,701/+0,701 REISST, 1600 +0,231/+0,264/+0,231 besteht (vorher +0,873), 1884 +0,346/+0,393/+0,346 besteht, 1970 -0,055/+0,108/-0,278 besteht. Die Aufsicht hat mit eigenem Skript am selben eingefrorenen Stand unabhängig nachgemessen: 1350 endet bei 9,20 / 27,64 / 12,94 statt vorher 2,69, Spitze 41,67 statt 7,88, rho +0,701/+0,785/+0,789. Zwei Messungen, ein Befund. Der Kritiker hat zusätzlich eine Kreuzprobe mit einer wortgleichen Kopie des Originalgeräts gefahren (nur der Hafen geändert, diff = eine Zeile) und Ziffer für Ziffer dieselben Reihen bekommen — der Befund hängt nicht an seinem Automaten. Streuung klein genug, dass er trägt: 0,041 bei 1350, 0,033 bei 1600, 0,047 bei 1884; nur 1970 streut wirklich (0,386), liegt aber weit innerhalb der Latte. Die zweite Bedingung (höchstens ein Jahr von sechs unter 1x) hält in allen vier Epochen. MESSREGEL, teuer gelernt und ab jetzt bindend: EIN LAUF TRÄGT KEIN URTEIL — der Builder hat 1350 auf einem einzigen Lauf für unverändert erklärt, obwohl er selbst gemeldet hatte, dass das Messgerät unter Last nicht bitgenau ist."
+  },
+  {
+   "zeit": "2026-08-03T14:04:19+00:00",
+   "text": "AUFTRAGGEBER, 3. August 2026 — NEUE RICHTUNG: DER EPOCHENBOGEN. Das Spiel soll nicht über Jahrhunderte laufen, sondern Epochen nach Art von Civilization VII bekommen: jede mit eigenen Eigenschaften, mit einer Übergabe, die Motivation trägt, und einem Zurücksetzen, das Raum schafft. Anlass war ein Befund der Aufsicht: der Epochenwechsel IST gebaut (kern/uhr.js:173 schaltet um und meldet 'Eine neue Zeit'), aber er wird nie erreicht — eine Partie endet nach 3 Jahren (nur WEITER, rund 100 Klicks) bis 14 Jahren (sorgfältig gespielt), die kürzeste Epoche ist 112 Jahre lang. Der Bogen ist Mechanik, keine Erfahrung. Recherchiert statt geraten und abgelegt in gauntlet/EPOCHENBOGEN.md: was Civ 7 behält (der Ort, zeitlose Bauten, Kommandanten mit Erfahrung, Traditionen), was es fallen lässt (Städte werden Ortschaften, Gebäude veralten, Einheiten aufgelöst, Technologie- und Zivilbaum je Zeitalter eigen), und wie die Übergabe verdient wird (Legacy Paths mit Meilensteinen, Goldenes und Dunkles Zeitalter, Krise am Ende). Dazu auf Einwand des Auftraggebers die Fan-Kritik, getrennt nach Gewohnheit und Struktur. Belastbarstes Signal: Firaxis hat mit dem Test-of-Time-Update vom 19. Mai 2026 den erzwungenen Identitätswechsel kassiert und die Zeitalter behalten. Genau dieser Punkt kann uns nicht treffen — es ist immer dasselbe Haus am selben Ort. Was uns voll trifft: unangekündigter Verlust, abgebrochene Vorhaben, und ein Schnitt, der gutes Spiel bestraft. Letzteres als Sperrpunkt festgeschrieben, weil es der bequemste Hebel wäre, rho zu glätten ohne das Spiel zu verbessern. Empfehlung: eigene Welle, erster Auftrag messen statt bauen — warum werden die vorhandenen unwiderruflichen Festlegungen in 14 Jahren nur 1/1/0/0 mal genommen, obwohl acht möglich wären."
+  },
+  {
+   "zeit": "2026-08-03T14:06:00+00:00",
+   "text": "DER SUD — was fuer ein Bier das eigentlich ist · Runde 2 · läuft — GEBAUT, wartet auf den blinden Kritiker. Vorher gemessen: das Siegel 'unwiderruflich' hielt in NULL von vier Epochen — nicht in drei, wie der Welle-3-Kritiker meldete; 1884 wirkte nur heil, weil die Sperre genau den einen Rückweg deckte, den er probiert hatte, über zwei andere Wege ging es ebenso. In vierzehn Jahren wurde beim Bier nichts entschieden: vier Läufe zu 400 Wochen, 0 bezahlte Festlegungen, und in 400 von 400 Wochen kein einziger Achsknopf aktiv. Der schwerste Fund: der Kesselzettel stand sichtbar da und konnte nichts, in 305/365/275/43 von 400 Wochen — die Selbstprüfung fragte nur den Mittelpunkt ab, während die Bretter der FUHRE die untere Hälfte decken, also die Knöpfe. Dieselben ersten 60 Wochen: 3 von 60 mit der sorgfältigen Hand gegen 60 von 60 mit reinem WEITER. Der Fehler traf genau den, der spielt. Nachher: Siegel 6 von 6 abgewiesen, Wochen mit mindestens zwei bedienbaren Bierknöpfen 89 auf 394, 28 auf 390, 71 auf 364, 196 auf 255; zwei Partien derselben Epoche tragen jetzt ein anderes Bier."
+  },
+  {
+   "zeit": "2026-08-03T14:06:00+00:00",
+   "text": "DER SUD, Welle 4 — GEBAUT, und der schwerste Fund ist ein unsichtbarer. Der Kesselzettel stand sichtbar auf dem Schirm und war nicht bedienbar: in 305 von 400 Wochen (1350), 365 (1600), 275 (1884) und 43 (1970). Die Selbstprüfung des Stücks fragte nur den MITTELPUNKT des Zettels ab — die Bretter der FUHRE decken aber die UNTERE Hälfte, und dort sitzen die Knöpfe. Damit meldete das Stück sich selbst als heil, während der Spieler nichts drücken konnte. Die Probe, die es zeigt: dieselben ersten 60 Wochen ergeben 3 von 60 bedienbaren Wochen mit der sorgfältig spielenden Hand gegen 60 von 60 mit reinem WEITER — der Fehler traf ausschließlich den, der wirklich spielt, und blieb deshalb drei Wellen lang unentdeckt. Zweiter Fund: das Siegel 'unwiderruflich' hielt in NULL von vier Epochen, nicht in drei wie der Welle-3-Kritiker gemeldet hatte; 1884 wirkte nur heil, weil die Sperre genau den einen Rückweg deckte, den jener Kritiker probiert hatte — über 'ohne Kühlung' und über die Hefeachse ging es ebenso. Ein blinder Kritiker kann zu milde sein, nicht nur zu laut. Drittens: in vierzehn Jahren wurde beim Bier überhaupt nichts entschieden, 0 bezahlte Festlegungen in vier Läufen zu 400 Wochen. Nach dem Bau: Siegel 6 von 6 abgewiesen, Wochen mit mindestens zwei bedienbaren Bierknöpfen 89 auf 394, 28 auf 390, 71 auf 364 und 196 auf 255, Chargenwahl von 0 auf 3 von 3."
   }
  ]
 }
