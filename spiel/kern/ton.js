@@ -78,7 +78,13 @@
      alles zugedeckt haben, was im Hof geschah. Deshalb wird jede Schleife
      beim Entschluesseln auf einen festen Effektivwert gezogen, statt sie
      je Epoche von Hand nachzustellen. */
-  var ZIEL = { bett: 0.038, hof: 0.048, grund: 0.030 };
+  /* Das Bett steht seit Welle 5 HOEHER als in Welle 4 (0,038), und das ist
+     kein Rueckschritt, sondern die Folge des Umbaus darunter: solange das
+     Bett auch ohne Zutun lief, war jedes Dezibel davon ein Dezibel gegen die
+     Latte. Jetzt laeuft es nur, wenn gearbeitet wird — dort soll man es
+     hoeren. Gemessen war der Anlass, dass das Ohr im gespielten 1350 nur
+     noch Pferde und Fassgeplaetscher nannte und die Floete nicht mehr. */
+  var ZIEL = { bett: 0.048, hof: 0.048, grund: 0.030 };
 
   /* ======================================================================
      DER RUHENDE HOF — WELLE 5, AUFLAGE 1. Die teuerste Aenderung dieser
@@ -130,6 +136,7 @@
      Atemtiefe waere selbst wieder eine Auskunft ueber das Jahrhundert —
      leiser als Musik, aber messbar. */
   var GRUND_ATEM = 0.50;
+  var BETT_BODEN = 0.60;    /* so tief und nicht tiefer duckt sich das Bett */
 
   /* DER ATEM DES HOFES — Auflage 2.
      Epoche 4 war ein Dauerteppich: in acht Sekunden Nichtstun schwankte ihr
@@ -234,7 +241,15 @@
        gut drei Halbtoene — schwere, langsame Hufe und ein tiefer
        polternder Karren statt eines Traberzugs. Ein Ochse ist ein
        langsameres Pferd, und das hoert man. */
-    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6, tempo: 0.80 },
+    /* Und weil ein langsameres Pferd immer noch ein Pferd ist: das erste
+       Mass war `abfahrt2` allein bei tempo 0,80, und das blinde Ohr hat die
+       gespielte Aufnahme von 1350 daraufhin als 1600 gehoert — "das
+       Wiehern der Pferde". Ein Schnauben laesst sich nicht wegdehnen.
+       `dazu` legt deshalb das Tier davor: `ochse.mp3`, einzeln vorgelegt
+       "Kuhbloeken, zeitlos". Ein Ochse vor dem Karren ist die eine Auskunft,
+       die 1350 von 1600 trennt, ohne dass ein Ohr sie ueberhoeren kann. */
+    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6, tempo: 0.80,
+                               dazu: { datei: stets('ochse'), laut: 1.0, versatz: 0.15 } },
     'fuhre:abfahrt:pferd':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6 },
     'fuhre:abfahrt:waggon':  { datei: stets('abfahrt3'), laut: 1.1, laenge: 4.6 },
     'fuhre:abfahrt:lastzug': { datei: stets('abfahrt4'), laut: 1.1, laenge: 4.6 },
@@ -960,7 +975,15 @@
         && t >= (w.duckTiefe === undefined ? 1 : w.duckTiefe)) return;
     w.duckBis = wann + 0.05 + h + 0.70;
     w.duckTiefe = t;
-    senke(w, 'bett', wann, t, h, 0.70);
+    /* BETT_BODEN — Welle 5. Ein einzelner Vorgang darf das Bett zur Seite
+       schieben; eine Zugreihe darf es nicht abschalten. Im Spiel faellt alle
+       ein bis zwei Sekunden ein Zug, und mit dem alten Wert (0,45 ohne
+       Boden) stand das Bett waehrend der ganzen halben Minute unten — das
+       ist der Grund, aus dem die GESPIELTE Aufnahme die Epoche schlechter
+       trug als die stille: die einzige Schicht, die die Zeit sagt, war
+       genau dann weg, wenn jemand spielte. Die Zaesur des Michaelitags
+       kennt diesen Boden nicht; sie darf alles anhalten. */
+    senke(w, 'bett', wann, Math.max(t, BETT_BODEN), h, 0.70);
     senke(w, 'hof', wann, 1 - (1 - t) * 0.60, h, 0.70);
     /* Der Grund tritt flacher zurueck als der Hof: er ist die letzte
        Schicht, die bei einer langen Zugreihe uebrig bleibt, und ein Hof,
@@ -1126,6 +1149,31 @@
     return true;
   }
 
+  /* Der zweite Klang desselben Vorgangs — siehe `dazu` im Katalog. */
+  function legeDazu(w, d, ziel, epoche, wann) {
+    var ctx = w.ctx;
+    var datei = dateiVon(d, epoche);
+    if (!datei) return;
+    var buf = fertig(ctx, datei);
+    if (!buf) { ladeStill(ctx, datei); return; }
+    var t = wann + (d.versatz || 0);
+    var neu = entstapele(w, datei, t);
+    if (neu < 0) return;
+    var q = ctx.createBufferSource();
+    q.buffer = buf;
+    if (d.tempo) { try { q.playbackRate.value = d.tempo; } catch (f) { } }
+    var g = ctx.createGain();
+    var v = (d.laut === undefined ? 0.8 : d.laut) * (d.mindest ? Math.max(1, angleich(buf, d.mindest)) : 1);
+    var dauer = Math.min(d.laenge || 3.4, buf.duration / (d.tempo || 1));
+    g.gain.setValueAtTime(0.0001, neu);
+    g.gain.linearRampToValueAtTime(v, neu + 0.03);
+    g.gain.setValueAtTime(v, neu + Math.max(0.05, dauer - 0.3));
+    g.gain.linearRampToValueAtTime(0.0001, neu + dauer);
+    q.connect(g); g.connect(ziel);
+    q.start(neu);
+    q.stop(neu + dauer + 0.05);
+  }
+
   /* Eine einzelne Probe in einen Graphen setzen. Gibt zurueck, ob etwas kam. */
   function setzeProbe(w, name, opt, epoche, wann) {
     var ctx = w.ctx;
@@ -1158,6 +1206,12 @@
 
     /* Bett und Hof leben, solange gearbeitet wird — DER RUHENDE HOF. */
     belebe(w, wann);
+
+    /* `dazu` legt eine ZWEITE Probe unter dieselbe Stelle. Sie laeuft auf
+       demselben Bus, zaehlt in derselben Stapelgrenze und braucht keinen
+       eigenen Katalogeintrag — sie ist kein eigener Vorgang, sondern der
+       zweite Klang desselben. */
+    if (e.dazu) B.wage('ton.dazu', function () { legeDazu(w, e.dazu, ziel, epoche, wann); });
 
     if (e.nachbar) B.wage('ton.nachbar', function () { nachbarhof(w, epoche, wann); });
 
@@ -1326,8 +1380,10 @@
   function vorratDerEpoche(epoche) {
     var l = {}, aus = [];
     Object.keys(KATALOG).forEach(function (n) {
-      var d = dateiVon(KATALOG[n], epoche);
-      if (d && !l[d]) { l[d] = 1; aus.push(d); }
+      [KATALOG[n], KATALOG[n].dazu].forEach(function (e) {
+        var d = e && dateiVon(e, epoche);
+        if (d && !l[d]) { l[d] = 1; aus.push(d); }
+      });
     });
     /* Das Nachbarhof-Zeichen steht in keinem Katalogeintrag und muesste sonst
        auf den ZWEITEN Gegenzug warten — in dreissig Sekunden gibt es aber
@@ -1531,8 +1587,11 @@
       noetig[HOF(epoche)] = 1;
       noetig[GRUND(epoche)] = 1;
       plan.forEach(function (p) {
-        var d = dateiVon(eintrag(p.name), epoche);
+        var e = eintrag(p.name);
+        var d = dateiVon(e, epoche);
         if (d) noetig[d] = 1;
+        var z = e.dazu && dateiVon(e.dazu, epoche);
+        if (z) noetig[z] = 1;
       });
 
       return Promise.all(Object.keys(noetig).map(function (d) {
