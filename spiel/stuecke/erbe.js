@@ -331,10 +331,12 @@
       return { grund: 'Die Adresse gibt es in dieser Zeit nicht mehr', wem: null };
     if (!a.bindung) return { grund: 'Die Frist ist am Michaelitag abgelaufen', wem: null };
     if (a.bindung.wem !== 'haus')
-      return { grund: 'genommen von ' + wemName(a.bindung.wem) + ' — ' + a.bindung.womit,
+      return { grund: 'genommen von ' + wemName(a.bindung.wem),
+               lang: 'genommen von ' + wemName(a.bindung.wem) + ' — ' + a.bindung.womit,
                wem: a.bindung.wem };
     if (!amHaus(a.bindung.womit))
-      return { grund: 'überschrieben mit „' + a.bindung.womit + '"', wem: 'haus' };
+      return { grund: 'überschrieben', lang: 'überschrieben mit „' + a.bindung.womit + '"',
+               wem: 'haus' };
     return null;
   }
 
@@ -348,14 +350,15 @@
       Z.erloschen.push({
         schluessel: g.schluessel, name: g.name, preis: g.preis || 0,
         jahr: g.jahr, woche: g.woche,
-        wegJahr: jahr(), wegWoche: woche(), grund: w.grund, wem: w.wem,
+        wegJahr: jahr(), wegWoche: woche(), grund: w.grund, lang: w.lang || w.grund,
+        wem: w.wem,
         zurueck: false
       });
       B.welt.protokolliere({ wer: 'verfall',
-        was: g.name + ': ' + e.womit + ' erloschen — ' + w.grund,
+        was: g.name + ': ' + e.womit + ' erloschen — ' + (w.lang || w.grund),
         preis: 0, adresse: g.schluessel });
       B.welt.schreibe(g.name + ': die ' + e.womit + ' von ' + g.jahr + '/' + g.woche
-        + ' ist erloschen — ' + w.grund + '. ' + geld(g.preis || 0)
+        + ' ist erloschen — ' + (w.lang || w.grund) + '. ' + geld(g.preis || 0)
         + ' sind dafür bezahlt worden und stehen jetzt unter ERLOSCHEN im Buch.',
         'erbfall');
       klang('erbe:fallen', 'gegner:verlieren');
@@ -739,7 +742,7 @@
         kurz: e.widerspruch.name + ' ' + ax.name, preis: pw,
         titel: ax.name + ': ' + geld(x.preis) + ' sind ' + x.jahr + '/' + x.woche
           + ' dafür bezahlt worden, ' + x.wegJahr + '/' + x.wegWoche + ' war es fort ('
-          + x.grund + '). ' + e.widerspruch.satz,
+          + (x.lang || x.grund) + '). ' + e.widerspruch.satz,
         aus: !B.welt.kann(pw),
         tu: function () { widersprich(x.schluessel); } });
     }
@@ -1032,7 +1035,8 @@
         /* Der Grund wird in der Spalte gekuerzt; er muss trotzdem ganz zu
            lesen sein — sonst steht der halbe Befund im Buch. */
         vg.title = x.name + ': ' + e.verb + ' ' + x.jahr + '/' + x.woche + ' für '
-          + geld(x.preis) + '. Erloschen ' + x.wegJahr + '/' + x.wegWoche + ' — ' + x.grund + '.';
+          + geld(x.preis) + '. Erloschen ' + x.wegJahr + '/' + x.wegWoche + ' — '
+          + (x.lang || x.grund) + '.';
         r.appendChild(vg);
         r.appendChild(B.el('span', 'p', geld(x.preis)));
         var ax = B.welt.adresse(x.schluessel);
