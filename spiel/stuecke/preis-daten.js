@@ -177,8 +177,8 @@ var PREIS_DATEN = {
       liegeSagt: 'Zu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, '
                + 'was einer bar liegen hat. Was durch das Haus geht und was im Haus '
                + 'liegt, steht beim Rat in derselben Zahl.',
-      liegeFrei: 1.0,
-      liegeSatz: 0.70,
+      liegeFrei: 2.0,
+      liegeSatz: 0.55,
 
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
