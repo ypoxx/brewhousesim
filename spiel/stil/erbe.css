@@ -1,1 +1,237 @@
-/* stil/erbe.css — Stummel fuer "erbe" (Welle 2). Leer, vollstaendig ersetzbar. */
+/* ===========================================================================
+   stil/erbe.css — DAS ERBE.
+
+   Zwei Dinge, und beide halten sich an die Platzordnung DER STADT:
+
+   .erb-leiste  steht dauernd. 44 % x 5,6 % = 2,46 % der Buehne. GRENZE in
+                stadt.js liegt bei 3,5 % — darunter laesst der Rahmen ein
+                fremdes Brett voellig in Ruhe. Die Masse sind darum FEST und
+                nicht vom Inhalt abhaengig (overflow:hidden), sonst waechst
+                die Leiste eines Tages ueber die Grenze und verschwindet
+                hinter einem Reiter.
+
+                DER PLATZ IST GEMESSEN, NICHT GERATEN. Ein erster Anlauf legte
+                eine hochkante Tafel auf x 81–98 % / y 63,6–82,1 %. Nachgesehen
+                (werkbank/schuss/erbe/probe.mjs) lag sie dort auf zwei
+                Ortsmarken der FUHRE (x 81,2–88,8 / y 64,6–71,4, in allen vier
+                Epochen) und auf dem Paar des GEGNERS (Epoche 2 und 3:
+                x 84,2–91,8 / y 59,9–66,4; Epoche 4: x 76,8–83,2). Genau der
+                Fall, den die Aufsicht in dieser Welle mit den zwoelf
+                zugedeckten Zuegen abgeraeumt hat — er darf nicht zurueck.
+
+                Die Vereinigung aller dauerhaft belegten Rechtecke ueber alle
+                vier Epochen laesst genau einen breiten freien Streifen unten:
+                x 54–99 %, y 72–83 %. Die Leiste sitzt darin, x 54–98 %,
+                y 73–78,6 %, ueber der Kennzahl und neben nichts.
+
+                Vier Preisschilder nebeneinander in einer Reihe — die Latte
+                verlangt Optionen mit Preisschild NEBENEINANDER, und in einem
+                Streifen ist das woertlich zu nehmen.
+
+   .erb-buch    ist ein richtiges Brett und bekommt einen Reiter wie jedes
+                andere. Fussabdruck wie das Sudbuch, links im Stadtfenster.
+
+   Alles in Prozent und in Vielfachen von --s. Keine festen Pixel.
+   =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DIE LEISTE
+   -------------------------------------------------------------------------- */
+
+.erb-leiste {
+  position: absolute;
+  left: 54%;
+  top: 73%;
+  width: 44%;
+  height: 5.6%;
+  overflow: hidden;
+  pointer-events: none;              /* nur die Knoepfe fangen die Maus */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--s) * 5);
+  padding: calc(var(--s) * 7) calc(var(--s) * 12) calc(var(--s) * 8);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(0, 0, 0, 0.07)),
+    var(--papier);
+  border: calc(var(--s) * 3) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 4);
+  box-shadow: 0 calc(var(--s) * 6) calc(var(--s) * 15) rgba(0, 0, 0, 0.42);
+  color: var(--tinte);
+  font-family: var(--serif);
+  line-height: 1.1;
+}
+
+/* Ein schmaler Streifen am Kopf: das Erbe ist eine Urkunde, kein Schild. */
+.erb-leiste::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: calc(var(--s) * 4);
+  background: linear-gradient(90deg, var(--holz-dunkel), var(--holz-hell), var(--holz-dunkel));
+  opacity: 0.85;
+}
+
+.erb-band {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 10);
+  font-size: calc(var(--s) * 16);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.erb-band > span { overflow: hidden; text-overflow: ellipsis; }
+
+/* Die Angaben im Band sind Spalten einer Zeile, keine Prosa — ein feiner
+   Strich trennt sie, damit 'an der Person 0 DIE STUNDE' nicht zusammenlaeuft. */
+.erb-band > *:not(:first-child) {
+  border-left: 1px solid var(--linie);
+  padding-left: calc(var(--s) * 11);
+}
+
+.erb-wort {
+  font-size: calc(var(--s) * 19);
+  letter-spacing: calc(var(--s) * 3);
+  text-transform: uppercase;
+  flex: 0 0 auto;
+}
+
+.erb-uhr      { font-family: var(--mono); color: var(--rot); flex: 0 0 auto; }
+.erb-hand     { color: #6b4d1f; font-style: italic; flex: 0 0 auto; }
+.erb-stand    { font-family: var(--mono); color: var(--gruen); flex: 0 0 auto; }
+.erb-nimmt,
+.erb-gefallen { font-family: var(--mono); color: var(--rot); flex: 0 1 auto; }
+.erb-form     { font-family: var(--mono); color: var(--tinte); flex: 0 0 auto; }
+.erb-last     { font-family: var(--mono); color: #6b4d1f; flex: 0 0 auto; }
+
+/* Vier Preisschilder in einer Reihe. Jeder Knopf bekommt gleich viel Platz,
+   der Preis steht rechts und wird NIE abgeschnitten — er ist die Latte. */
+/* Wo die Hand nichts zu entscheiden hat, steht auch kein leerer Kasten. */
+.erb-knoepfe:empty { display: none; }
+
+.erb-knoepfe {
+  display: flex;
+  gap: calc(var(--s) * 6);
+  align-items: stretch;
+}
+
+.erb-leiste .knopf,
+.knopf.erb-knopf {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  padding: calc(var(--s) * 4) calc(var(--s) * 9);
+  font-size: calc(var(--s) * 15);
+  gap: calc(var(--s) * 4);
+  border-width: calc(var(--s) * 2);
+  border-radius: calc(var(--s) * 3);
+  box-shadow: 0 calc(var(--s) * 2) 0 rgba(0, 0, 0, 0.3);
+  letter-spacing: 0;
+  overflow: hidden;
+}
+
+.knopf.erb-knopf .wort {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.knopf.erb-knopf .preis {
+  font-size: calc(var(--s) * 14);
+  padding-left: calc(var(--s) * 5);
+  flex: 0 0 auto;
+}
+
+/* Die drei Wege der Uebergabe stehen dunkler: sie sind endgueltig. */
+.knopf.erb-uebergabe {
+  background: linear-gradient(180deg, #e6d3ae 0%, #cdb488 100%);
+  border-color: #4a2f16;
+}
+.knopf.erb-uebergabe:hover { background: linear-gradient(180deg, #f2e2c1 0%, #d9c298 100%); }
+.knopf.erb-leer   { background: linear-gradient(180deg, #e2d6bd 0%, #c8b89a 100%); }
+.knopf.erb-leer .preis { color: #4a6b3a; }
+.knopf.erb-streit { background: linear-gradient(180deg, #e9cfc4 0%, #d3ab99 100%); }
+.knopf.erb-weit   { flex: 1.3 1 0; }
+.knopf.erb-nach   { background: linear-gradient(180deg, #dfe0c8 0%, #bfc0a2 100%); }
+
+/* --------------------------------------------------------------------------
+   DAS BUCH — das Brett mit der vollen Liste
+   -------------------------------------------------------------------------- */
+
+.erb-buch {
+  left: 2%;
+  top: 13.5%;
+  width: 42%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 7);
+  overflow: hidden;
+}
+
+.erb-buch h2 {
+  font-size: calc(var(--s) * 30);
+  margin-bottom: calc(var(--s) * 8);
+}
+
+.erb-buchkopf {
+  border-left: calc(var(--s) * 5) solid var(--holz);
+  padding-left: calc(var(--s) * 12);
+}
+.erb-name  { font-size: calc(var(--s) * 24); letter-spacing: calc(var(--s) * 1); }
+.erb-sagt  { font-size: calc(var(--s) * 19); font-style: italic; color: #6f5f45; }
+.erb-wirkt { font-size: calc(var(--s) * 19); color: #6b4d1f; }
+
+.erb-regel,
+.erb-frist {
+  margin: 0;
+  font-size: calc(var(--s) * 19);
+  line-height: 1.3;
+  color: #4a3a24;
+}
+.erb-frist { color: var(--rot); }
+
+.erb-lade {
+  border-top: calc(var(--s) * 2) solid var(--linie);
+  padding-top: calc(var(--s) * 5);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.erb-ladekopf {
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 2);
+  text-transform: uppercase;
+  color: #6f5f45;
+  margin-bottom: calc(var(--s) * 3);
+}
+
+.erb-lade-fest .erb-ladekopf { color: var(--gruen); }
+.erb-lade-lose .erb-ladekopf { color: var(--rot); }
+.erb-lade-weg  .erb-ladekopf { color: #8a6a4a; }
+
+.erb-satz {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--s) * 8);
+  font-size: calc(var(--s) * 19);
+  padding: calc(var(--s) * 2) 0;
+  border-bottom: 1px dotted var(--linie);
+}
+.erb-satz .n { flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.erb-satz .v { flex: 0 1 auto; color: #6f5f45; font-size: calc(var(--s) * 17);
+               white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 38%; }
+.erb-satz .p { font-family: var(--mono); font-size: calc(var(--s) * 17); color: #6b4d1f; }
+
+.erb-lade-weg .erb-satz .n { text-decoration: line-through; color: #8a7a5e; }
+
+.erb-leer { font-size: calc(var(--s) * 18); font-style: italic; color: #8a7a5e; }
+
+.knopf.erb-mini {
+  flex: 0 0 auto;
+  min-height: 0;
+  padding: calc(var(--s) * 3) calc(var(--s) * 9);
+  font-size: calc(var(--s) * 17);
+}

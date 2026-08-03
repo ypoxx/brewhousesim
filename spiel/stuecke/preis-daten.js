@@ -251,7 +251,25 @@ var PREIS_DATEN = {
           regel: 'Das Grutgeld entfällt. Das Bier hält länger, reist weiter und fängt mehr.',
           wirkung: { pflichtWeg: 'grutgeld', rohstoff: 26, preis: 0.09 } },
 
-        { k: 'vertrag', name: 'Vertrag statt Gunst', anteil: 0.32,
+        /* DIE KLEINSTE UNABAENDERLICHE ENTSCHEIDUNG MUSS ERREICHBAR SEIN.
+
+           Am Bildschirm nachgezaehlt, sorgfaeltig gespielte Linie ueber 190
+           Wochen: der Chronikknopf las in Epoche I und II nach sechs Michaeli
+           unveraendert „0 Festlegungen". Das lag nicht am Spieler. Die
+           billigste Festlegung dieser Zeit kostete 0,32 x 470 = 150 Pf, und
+           die Lade steht an einem Michaelitag dieser Epoche zwischen 29 und
+           112 Pf — die Festlegung war nie zu haben, in keinem Jahr, in keinem
+           Lauf. Eine Entscheidung, die in sechs Braujahren kein einziges Mal
+           zu treffen ist, steht auf der Tafel wie ein Bild an der Wand.
+
+           0,18 x 470 = 85 Pf. Das ist der Preis von rund neun Fass Bier —
+           Schreiberlohn, Wachs, und was vier Wirte kosten, die unterschreiben
+           sollen. Es ist erreichbar fuer ein Haus, das ein Jahr lang
+           zurueckgelegt hat, und unerreichbar fuer eines, das jedes Michaeli
+           leerkauft. Genau das soll eine Festlegung sein. Die drei grossen
+           dieser Zeit (658 / 799 / 1.034 Pf) bleiben, wo sie sind: sie sind
+           das Ziel, auf das man ueber Generationen spart. */
+        { k: 'vertrag', name: 'Vertrag statt Gunst', anteil: 0.18,
           was: 'Vier Wirte setzen ihr Zeichen unter einen Brief auf fünfundzwanzig Jahre.',
           regel: 'Vier Häuser nehmen nur noch Bier dieses Hauses. Die übrigen merken sich, dass sie nicht gefragt wurden.',
           wirkung: { bindung: { n: 4, jahre: 25 }, ansehen: -6 } }
@@ -437,7 +455,13 @@ var PREIS_DATEN = {
           regel: 'Der Pachtzins endet. Für immer. Aus dem Pächter wird der Eigentümer.',
           wirkung: { pflichtWeg: 'pachtzins' } },
 
-        { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 0.28,
+        /* Dasselbe in Epoche II, dieselbe Messung: billigste Festlegung
+           0,28 x 2.800 = 784 fl gegen eine Michaelilade von 280 bis 640 fl.
+           Nach sechs Michaeli stand auch hier „0 Festlegungen". 0,15 x 2.800
+           = 420 fl — der Schwur vor dem Rat kostet die Gebuehr und das
+           teurere Malz des ersten Jahres, nicht ein ganzes Vermoegen. Die
+           drei grossen (5.320 / 6.720 / 7.840 fl) bleiben unberuehrt. */
+        { k: 'reinheit', name: 'Das Reinheitsgebot annehmen', anteil: 0.15,
           was: 'Gerste, Hopfen, Wasser — und der Schwur darauf vor dem Rat.',
           regel: 'Kein billiges Beibier mehr. Jedes Fass fängt mehr, und die Zunft steht hinter dem Haus.',
           wirkung: { preis: 0.16, ansehen: 10 } },

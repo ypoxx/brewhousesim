@@ -1015,7 +1015,8 @@
         + ', dann ist das Haus alt genug für eine Übergabe.';
     }
     if (haeuser().length < m.haeuser) {
-      return 'Es führen ' + haeuser().length + ' von ' + m.haeuser + ' Häusern Bier des Anker.';
+      return 'Es führen ' + haeuser().length + ' von ' + m.haeuser
+        + (m.haeuser === 1 ? ' Haus' : ' Häusern') + ' Bier des Anker.';
     }
     if (B.welt.haus.kasse < 0) return 'Die Lade hat ein Loch — ' + B.welt.geld(B.welt.haus.kasse) + '.';
     if (Z.verladenVorjahr < m.ausstoss) {
@@ -1046,7 +1047,8 @@
        das die Platzordnung eine Woche spaeter in einen Reiter klappen kann.
        Wer die Chronik liest, findet den Tag wieder. */
     B.welt.schreibe(uebergabeDef().wort + ': das Haus steht gut genug, um es weiterzugeben — '
-      + Z.uebergabe.haeuser + ' Häuser führen sein Bier, '
+      + (Z.uebergabe.haeuser === 1 ? 'ein Haus führt' : Z.uebergabe.haeuser + ' Häuser führen')
+      + ' sein Bier, '
       + B.welt.menge(Z.uebergabe.verladen) + ' sind im Braujahr hinausgegangen. '
       + 'Das Angebot liegt ' + UEBERGABE_WOCHEN + ' Wochen.', 'fuhre');
   }
@@ -2270,6 +2272,33 @@
       B.welt.meldeZug('kein Zug mehr — das Haus ist zu', 0, 'beiwerk');
       return;
     }
+
+    /* SOLANGE DER ANTRAG LIEGT, IST ER DER ZUG.
+
+       Gemessen (1920x1000, saat=1350, in der Woche, in der der Antrag
+       aufschlaegt): die Kopfzeile nannte in allen vier Epochen einen Kauf,
+       den die Kasse nicht traegt — 1353 W7 „Abloesung Klosterschenke
+       Obernberg — 42 Pf, Kasse reicht 0,0x" —, waehrend zwei Knoepfe
+       daneben ueber das Haus selbst entscheiden und +56 Pf danebenliegen.
+       Die groesste Entscheidung des Bretts kam in der einen Zahl des
+       Bretts nicht vor.
+
+       DER KERN KENNT DIE ART DAFUER NOCH NICHT. `welt.ZUGRANG` reicht bis
+       'umkaempft' (Rang 3), und unter gleichem Rang gewinnt der BILLIGERE.
+       Der Antrag ist die teuerste Zeile auf dem Brett und verliert damit
+       gegen jede Abloesung — gemessen: er gewinnt die Kopfzeile heute in
+       0 von 4 Epochen. Mit einem Rang ueber 'umkaempft' gewinnt er in 4 von
+       4 (nachgemessen, indem ZUGRANG.ausgang im Browser gesetzt wurde).
+       Die Kernbitte steht im Bericht; die Art wird hier schon geschickt,
+       damit sie am Tag der Kernaenderung ohne Builder-Runde greift. */
+    if (Z.antrag) {
+      var ga = ausgangDef();
+      var rang = (B.welt.ZUGRANG && B.welt.ZUGRANG.ausgang) ? 'ausgang' : 'umkaempft';
+      B.welt.meldeZug((ga && ga.antrag ? ga.antrag.name : 'Der Antrag')
+        + ' — der Käufer zahlt, noch ' + Z.frist + (Z.frist === 1 ? ' Woche' : ' Wochen'),
+        Z.antrag.summe, rang, 'fuhre:ausgang:ja');
+    }
+
     if (!haeuser().length) {
       var pd1 = probeDef();
       B.welt.meldeZug(pd1 ? pd1.name + ' — ohne Rechnung' : 'Ein Fass verschenken', 0, 'adresse');
@@ -2288,7 +2317,11 @@
     if (b.zug.indexOf('fuhre:bann:') === 0) art = 'bindung';
     else if (b.zug.indexOf('fuhre:listen:') === 0) art = 'adresse';
     else if (b.zug.indexOf('fuhre:kauf:') === 0) art = 'lage';
-    B.welt.meldeZug(zugName(b), b.preis, art);
+    /* Das vierte Argument fehlte hier und war der Grund, warum die
+       Kopfzeile eine Zahl halten konnte, zu der kein bedienbarer Knopf mehr
+       stand: welt.zugDeckung nimmt nur den beim Wort, der seinen
+       Zugschluessel mitschickt (ZUSTAENDIGKEIT 24). */
+    B.welt.meldeZug(zugName(b), b.preis, art, b.zug);
   }
 
   /* ======================================================================
@@ -3251,7 +3284,9 @@
     bl.appendChild(B.el('h2', null, u.wort + ' · ' + Z.uebergabe.jahr));
     bl.appendChild(B.el('div', 'fu-ausgang-lage',
       Z.uebergabe.alt + ' führt das Haus seit ' + B.welt.zeit.amtszeit.seit + '. '
-      + 'Es steht: ' + Z.uebergabe.haeuser + ' Häuser der Stadt führen Bier des Anker, '
+      + 'Es steht: ' + (Z.uebergabe.haeuser === 1
+          ? 'ein Haus der Stadt führt Bier des Anker'
+          : Z.uebergabe.haeuser + ' Häuser der Stadt führen Bier des Anker') + ', '
       + B.welt.menge(Z.uebergabe.verladen) + ' sind im letzten Braujahr hinausgegangen, '
       + 'in der Lade liegen ' + B.welt.geld(B.welt.haus.kasse) + '. '
       + 'Verhandelt wird um Michaeli: noch ' + Math.max(1, rest)
@@ -3643,6 +3678,25 @@
       : 'nichts. Dann steht die Pfanne kalt.'));
     bl.appendChild(stand);
 
+    /* WIE WEIT DAS HAUS VOM GUTEN ENDE WEG IST.
+
+       Ein Ende, das nur dann sichtbar wird, wenn es eintritt, ist fuer den
+       Spieler kein Ende, sondern eine Ueberraschung. Also steht einmal im
+       Jahr — am Michaelitag, wo diese Tafel ohnehin liegt — hier, was noch
+       fehlt: die Jahre, die Haeuser, die Lade, der Ausstoss. Wer es liest,
+       weiss, dass es das gute Ende gibt, bevor er es erreicht. Liegt das
+       Angebot bereits, steht das ebenfalls hier und nicht nur auf einem
+       Blatt, das die Platzordnung in einen Reiter klappen kann. */
+    if (!B.welt.zeit.ende) {
+      var fehltU = Z.uebergabe ? null : uebergabeFehlt();
+      bl.appendChild(B.el('div', 'fu-sommer-uebergabe', Z.uebergabe
+        ? uebergabeDef().wort + ' liegt auf dem Tisch: das Haus steht gut genug, um es '
+          + 'weiterzugeben. Das Blatt trägt die beiden Knöpfe; sein Reiter heißt „'
+          + uebergabeDef().wort + '".'
+        : 'Weitergeben statt hergeben: ' + (fehltU || 'das Haus steht.')
+          + ' ' + uebergabeMass().satz));
+    }
+
     /* Der Ausgang klebt am Fuss der Tafel. Er scrollt nicht mit: sonst haengt
        er bei einem vollen Georgi-Blatt (viele verlorene Adressen, viele
        Sorten) unter der Kante und ist bei 1920x937 nicht mehr zu treffen.
@@ -3663,6 +3717,120 @@
     bl.appendChild(fuss);
 
     fach.appendChild(bl);
+  }
+
+  /* ======================================================================
+     DIE VERSIEGELUNG — das Ende haelt nicht nur die Uhr an.
+
+     GEMESSEN, WAS OHNE SIE GESCHIEHT (1920x1000, saat=1350, alle vier
+     Epochen zu Ende gespielt, Antrag angenommen): auf 'ende' stehen 95 bis
+     105 Zuege im DOM, davon 68 bis 80 sichtbar und aktiv. Drei einzelne
+     Mausklicks NACH dem Schlussblatt „Die Marke wird verkauft · 1973":
+
+       stadt:bau:waage        −9.570 DM   Buch +1, Chronik +1
+       stadt:bau:maelzerei   −14.790 DM   Buch +1, Chronik +1
+       gegner:abloesen:muehlwirt −49.900 DM  Buch +1, Chronik +1
+
+     — waehrend daneben das Schlussblatt „In der Lade liegen damit
+     167.319 DM" ausweist. Ein Hof, den das Spiel selbst fuer geschlossen
+     erklaert, baut eine Waage und loest eine Muehlschenke ab.
+
+     DREI SCHLOESSER, WEIL EINES NICHT REICHT:
+
+       1. Die Knopffabrik des Kerns wird umwickelt. Jeder Knopf, der NACH
+          dem Ende entsteht, kommt gesperrt aus ihr heraus — `disabled` ist
+          dann wahr und nicht bloss behauptet. Gemessen faengt das 60 bis 73
+          von 93 bis 107 Zuegen. Nicht gefangen wird zweierlei: DER GEGNER
+          baut 10 bis 13 rohe <button> ohne die Fabrik, und die Ortsmarken
+          der STADT (6 bis 7) entstehen vor dem Ende und werden danach nicht
+          neu gezeichnet. Fuer beide braucht es Schloss 2 und 3.
+       2. Ein Klickhorcher in der Fangphase auf `document` — dieselbe
+          Technik, mit der dieses Stueck seit ZUSTAENDIGKEIT 23 den
+          WEITER-Klick und die Leertaste liest. Er nimmt jeden Klick weg,
+          der nach dem Ende auf einen nicht freigegebenen Zug geht, BEVOR
+          der Horcher des fremden Knopfes ihn sieht. Das faengt auch die
+          rohen Knoepfe.
+       3. `html[data-hof-zu]` als Haken fuer stil/fuhre-zusatz.css. Erst
+          damit SIEHT man das Schloss: das Brett wird grau, und
+          `pointer-events:none` sorgt dafuer, dass elementFromPoint den
+          Knopf nicht mehr trifft.
+
+     WAS OFFEN BLEIBT, UND WARUM. Nach dem Ende darf gelesen werden, nicht
+     gehandelt. Offen bleiben deshalb genau die Zuege, die nichts buchen:
+     die Reiterleiste der STADT (sonst kaeme man an das eigene Schlussblatt
+     nicht zurueck, wenn Escape es beiseitegelegt hat), Chronik und Buch des
+     Kerns, der Tonschalter, WEITER (der Kern sperrt ihn selbst) und der
+     Wiederanfang. Nachgemessen wird das nicht durch Hinsehen, sondern durch
+     Klicken: jeder nach dem Ende noch aktive Knopf wird angeklickt, und
+     Kasse, Buch und Chronik duerfen sich um keinen Strich bewegen.
+
+     DAS GEHOERT IN DEN KERN, NICHT HIERHER. Ein Stueck, das die Fabrik des
+     Kerns umwickelt und mit seinem Stil fremde Knoepfe grau faerbt, tut
+     etwas, das ZUSTAENDIGKEIT 2 ausdruecklich dem Kern zugewiesen hat. Es
+     steht hier, weil das Ende dieses Stueck ist und die Auflage heute
+     faellig ist. Die Kernbitte steht im Bericht: vier Zeilen in
+     kern/buehne.js, dann kann das hier ersatzlos weg.
+     ====================================================================== */
+  /* Was nach dem Ende noch bedient werden darf. Genau, nicht ungefaehr. */
+  /* fuhre:urteil-auf und fuhre:schluss-auf schlagen nur ein Blatt auf und
+     buchen nichts. Sie MUESSEN offen bleiben: Escape legt das Urteil
+     beiseite, und ohne einen Weg zurueck waere das Ende genau die Sackgasse,
+     wegen der ZUSTAENDIGKEIT 23 den Georgi-Deckel abgeschafft hat. */
+  var NACH_ENDE_GENAU = ['weiter', 'fuhre:wiederanfang',
+    'fuhre:urteil-auf', 'fuhre:schluss-auf',
+    'stadt:alles-zuklappen', 'stadt:ortsmarken', 'klang:ton'];
+  var NACH_ENDE_ANFANG = ['kern:', 'stadt:reiter:'];
+
+  function darfNachEnde(zug) {
+    if (!zug) return false;
+    if (NACH_ENDE_GENAU.indexOf(zug) >= 0) return true;
+    for (var i = 0; i < NACH_ENDE_ANFANG.length; i++) {
+      if (zug.indexOf(NACH_ENDE_ANFANG[i]) === 0) return true;
+    }
+    return false;
+  }
+
+  /* Schloss 1. Einmal im Aufbau umwickelt; die Pruefung steht IM Aufruf,
+     damit vor dem Ende nichts anders laeuft als bisher. */
+  function versiegleKnopffabrik() {
+    if (!B.knopf || B.knopf.hofZu) return;
+    var echt = B.knopf;
+    var huelle = function (opt) {
+      var k = echt.call(B, opt);
+      try {
+        if (B.welt.zeit.ende && !(opt && opt.nachEnde)
+          && !darfNachEnde(k.getAttribute('data-zug'))) {
+          k.disabled = true;
+          k.setAttribute('aria-disabled', 'true');
+          k.setAttribute('data-hof-zu', '1');
+        }
+      } catch (e) { /* ein Knopf ohne Welt ist immer noch ein Knopf */ }
+      return k;
+    };
+    huelle.hofZu = true;
+    B.knopf = huelle;
+  }
+
+  /* Schloss 2. Fangphase auf document: laeuft vor jedem Horcher, der am
+     Knopf selbst haengt — auch vor denen der rohen Knoepfe des GEGNERS. */
+  function endeHorcher(ereignis) {
+    if (!B.welt.zeit.ende) return;
+    var ziel = ereignis.target && ereignis.target.closest
+      ? ereignis.target.closest('[data-zug]') : null;
+    if (!ziel) return;
+    if (darfNachEnde(ziel.getAttribute('data-zug'))) return;
+    ereignis.preventDefault();
+    ereignis.stopImmediatePropagation();
+  }
+
+  /* Schloss 3. Der Haken fuers Stilblatt. Auf <html>, weil dort schon
+     data-epoche des Kerns sitzt und weil die Kopfzeile des Kerns ausserhalb
+     von #buehne haengen koennte. */
+  function markiereHof() {
+    var el = document.documentElement;
+    if (!el) return;
+    if (B.welt.zeit.ende) el.setAttribute('data-hof-zu', '1');
+    else el.removeAttribute('data-hof-zu');
   }
 
   /* ======================================================================
@@ -3779,6 +3947,33 @@
   }
 
   function zeichneSchluss(fach) {
+    /* DER GRIFF ZUM URTEIL.
+
+       Gemessen und dabei gefunden: Escape legte das Schlussblatt beiseite,
+       und damit war es weg — kein Blatt, also auch kein Reiter in der
+       Platzordnung der STADT, also kein Weg zurueck. Das war schon vor der
+       Versiegelung so und faellt erst mit ihr auf, weil daneben nun nichts
+       anderes mehr zu tun ist. Ein Ende, das man einmal wegdrueckt und nie
+       wiederfindet, ist kein Ende, sondern ein Verlust.
+
+       Der Griff haengt darum nicht im Brett DIE HAEUSER (das die
+       Platzordnung zuklappt), sondern frei auf der Blattebene. */
+    if (B.welt.zeit.ende && Z.schluss && !Z.schlussOffen) {
+      /* Die Mitte wird am UMSCHLAG gerechnet, nicht am Knopf. grund.css legt
+         `.knopf:active` die eigene Eigenschaft `translate` auf — genau die,
+         mit der man sonst zentriert. Beides am selben Knopf heisst: er
+         springt beim Niederdruecken um seine halbe Breite weg, die Maus geht
+         daneben, und der Klick landet als „DIV.ebene" im Nichts. Gemessen
+         mit mousedown/mouseup/click getrennt; genau so war es. */
+      var griff = B.el('div', 'fu-urteilgriff');
+      griff.appendChild(B.knopf({
+        text: 'Das Urteil über diese Partie', zug: 'fuhre:urteil-auf', klasse: 'gross',
+        titel: 'Wie das Haus geendet ist, wer es geführt hat, wie das Auftragsbuch '
+             + 'leer wurde — und der Weg von vorn.',
+        tu: function () { Z.schlussOffen = true; B.sende('zeichne', { grund: 'fuhre-urteil-auf' }); }
+      }));
+      fach.appendChild(griff);
+    }
     if (!schlussLiegtOben()) return;
     var s = Z.schluss;
 
@@ -3899,6 +4094,13 @@
     }));
     fuss.appendChild(B.el('div', 'fu-sommer-hinweis',
       'Escape legt das Blatt beiseite — der Hof bleibt zu sehen, aber die Woche läuft nicht mehr.'));
+    /* DAS SIEGEL, in Worten. Ohne diesen Satz sieht der Spieler nur ein
+       graues Brett und haelt es fuer einen Fehler. Mit ihm liest er, dass
+       das Grau die Aussage ist. */
+    fuss.appendChild(B.el('div', 'fu-schluss-siegel',
+      'DER HOF IST GESCHLOSSEN. Von hier an bucht kein Knopf mehr — kein Bau, keine '
+      + 'Ablösung, kein Versatz. Was offen bleibt, ist zum Lesen: die Reiter der Bretter, '
+      + 'die Chronik und das Buch.'));
     bl.appendChild(fuss);
 
     fach.appendChild(bl);
@@ -3929,6 +4131,11 @@
       /* Fangphase: laeuft vor dem Klickhorcher am WEITER-Knopf selbst.
          Siehe weiterHorcher — ZUSTAENDIGKEIT 23. */
       document.addEventListener('click', weiterHorcher, true);
+      /* DIE VERSIEGELUNG, Schloss 1 und 2. Der Horcher steht VOR
+         weiterHorcher in der Wirkung: er laeuft spaeter, greift aber nur
+         nach dem Ende, und 'weiter' ist dann ohnehin freigegeben. */
+      versiegleKnopffabrik();
+      document.addEventListener('click', endeHorcher, true);
 
       richteEpocheEin(true);
 
@@ -4137,6 +4344,8 @@
       zeichneKeller(fach);
       zeichneWagen(fach);
 
+      markiereHof();
+
       var blatt = B.ebene('blatt', 'fuhre');
       B.leere(blatt);
       zeichneSchluss(blatt);
@@ -4169,6 +4378,10 @@
       Z.antrag = null;
       Z.uebergabe = null;
       Z.ladung = [];
+      /* Sofort, nicht erst beim naechsten Bildlauf: zwischen 'ende' und dem
+         Zeichnen liegt ein Bildaufbau, in dem sonst noch alles klickbar
+         waere. Siehe DIE VERSIEGELUNG. */
+      markiereHof();
     });
   });
 

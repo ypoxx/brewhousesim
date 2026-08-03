@@ -155,7 +155,7 @@
   text-decoration: none;
 }
 .nm-bekannt .nm-schiene i { background: linear-gradient(90deg, #8a5c33, #c99a55); }
-.nm-deckung .nm-schiene i { background: linear-gradient(90deg, #4a6b3a, #7fa055); }
+.nm-einloesung .nm-schiene i { background: linear-gradient(90deg, #4a6b3a, #7fa055); }
 
 /* Die eine Behauptung des Stuecks, als Zahl. */
 .nm-satz {
@@ -490,3 +490,163 @@
   border-bottom: calc(var(--s) * 2) solid var(--linie);
 }
 .nm-mehr { color: var(--gruen); font-family: var(--mono); }
+
+/* ==========================================================================
+   DER ENTZUG und DAS ZWEITE PREISSCHILD  (Welle 3)
+
+   Zwei Dinge, die dieses Stueck aus einer Zahl, die steigt, in eine Einlage
+   machen: was der Ruf ausser Geld kostet (Faesser, die sonst eine Rechnung
+   geschrieben haetten), und dass er GENOMMEN werden kann.
+   ========================================================================== */
+
+/* Das zweite Preisschild am selben Knopf. Es sieht aus wie das erste und
+   liest sich anders — Ware statt Geld. */
+.nm-fasspreis {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  color: #6b4a20;
+  background: rgba(196, 154, 60, 0.28);
+  border: calc(var(--s) * 1) solid rgba(140, 102, 34, 0.6);
+  border-radius: calc(var(--s) * 3);
+  padding: 0 calc(var(--s) * 5);
+  margin-left: auto;
+  white-space: nowrap;
+}
+.nm-knopf[disabled] .nm-fasspreis { opacity: 0.55; }
+.nm-marke.nm-fassmarke {
+  background: rgba(196, 154, 60, 0.28);
+  color: #6b4a20;
+}
+
+/* GENOMMEN. Steht auf dem Band, nicht hinter einem Griff. */
+.nm-entzug {
+  margin-top: calc(var(--s) * 8);
+  padding: calc(var(--s) * 8);
+  background: rgba(43, 29, 16, 0.1);
+  border: calc(var(--s) * 2) solid #2b1d10;
+  border-left-width: calc(var(--s) * 8);
+  border-radius: calc(var(--s) * 4);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 5);
+}
+.nm-entzugkopf {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 2);
+  color: #2b1d10;
+  text-transform: uppercase;
+}
+.nm-entzug .nm-knopf { width: 100%; }
+
+.nm-abschnitt.nm-entzogen {
+  border-left: calc(var(--s) * 8) solid #2b1d10;
+  padding-left: calc(var(--s) * 8);
+}
+.nm-zaehler {
+  display: inline-block;
+  margin-top: calc(var(--s) * 5);
+  padding: calc(var(--s) * 4) calc(var(--s) * 8);
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 16);
+  letter-spacing: calc(var(--s) * 1);
+  color: #7d2c1a;
+  background: rgba(157, 53, 32, 0.14);
+  border: calc(var(--s) * 2) solid rgba(157, 53, 32, 0.5);
+  border-radius: calc(var(--s) * 3);
+}
+
+/* GENOMMEN steht auch dort, wo der Rahmen der STADT das Brett zuklappt:
+   die zweite Kopfzeile ist die Aufschrift, die auf seinem Reiter landet.
+   Ein Verlust, den man erst aufschlagen muss, ist keiner. */
+.nm-warn.nm-genommen { background: #2b1d10; }
+.nm-medium.nm-genommen {
+  color: #fdf3dd;
+  background: #2b1d10;
+  padding: 0 calc(var(--s) * 5);
+  border-radius: calc(var(--s) * 3);
+  letter-spacing: calc(var(--s) * 1);
+}
+
+/* ==========================================================================
+   WELLE 4 — DIE PREISSCHILDER EINEN KLICK FRUEHER, UND DER RIEGEL VON 1884
+
+   Drei Dinge, die eine Messung gerissen hat und die deshalb hier eigene
+   Regeln bekommen:
+
+     .nm-anschlag   ein Preisschild des Stuecks OHNE einen Klick, am Ort des
+                    Zeichens. Es muss ein PUNKT bleiben: der Rahmen der STADT
+                    macht aus allem, was groesser ist als 2,4 % der Buehne,
+                    ein Brett mit Reiter — dann waere es beim Laden wieder zu.
+                    Deshalb steht die Breite hier fest in --s und nicht in
+                    Prozent des Fensters.
+     .nm-jetzt      dieselben Preisschilder im Band, einen Klick tief statt
+                    zwei, und nur solange das ganze Blatt zu ist.
+     .nm-presse     der Riegel von 1884: ein Gewicht, kein Platz.
+   ========================================================================== */
+
+.nm-anschlag {
+  position: absolute;
+  width: calc(var(--s) * 300);
+  max-width: 11%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+  padding: calc(var(--s) * 6) calc(var(--s) * 7) calc(var(--s) * 7);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.06)),
+    var(--papier);
+  border: calc(var(--s) * 3) solid var(--holz-dunkel);
+  border-radius: calc(var(--s) * 4);
+  box-shadow: 0 calc(var(--s) * 6) calc(var(--s) * 12) rgba(0, 0, 0, 0.42);
+  pointer-events: auto;
+  z-index: 3;
+}
+
+.nm-anschlagkopf {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 14);
+  letter-spacing: calc(var(--s) * 1);
+  text-transform: uppercase;
+  color: #7a6a4e;
+}
+
+.nm-anschlag .nm-knopf {
+  width: 100%;
+  font-size: calc(var(--s) * 16);
+  min-height: calc(var(--s) * 32);
+  padding: calc(var(--s) * 5) calc(var(--s) * 8);
+}
+
+.nm-jetzt {
+  margin-top: calc(var(--s) * 8);
+  padding-top: calc(var(--s) * 7);
+  border-top: calc(var(--s) * 2) solid var(--linie);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 5);
+}
+.nm-jetzt .nm-knopf { width: 100%; }
+.nm-band.zu .nm-jetzt { display: none; }
+
+/* DIE PRESSE — anders gefaerbt als DER ETAT, weil sie etwas anderes ist:
+   1970 tauscht, 1884 ist voll. */
+.nm-etat.nm-presse {
+  color: #4a3a5c;
+  background: rgba(96, 78, 132, 0.18);
+  border-color: rgba(72, 56, 104, 0.55);
+}
+
+/* Der Knopf, der gerade nachfragt, bevor er etwas wegnimmt. */
+.nm-knopf.nm-fragt {
+  background: linear-gradient(180deg, #f7e3c8 0%, #e9c58f 100%);
+  border-color: #8a5a1a;
+  color: #5a3208;
+  font-weight: 600;
+}
+
+.nm-festsatz {
+  border-left: calc(var(--s) * 5) solid rgba(157, 53, 32, 0.55);
+  padding-left: calc(var(--s) * 8);
+  margin-top: calc(var(--s) * 6);
+}

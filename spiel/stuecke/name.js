@@ -25,8 +25,10 @@
 
            B.welt.haus.ruf           0..100
            B.welt.haus.rufBekannt    0..100   wie weit der Name reicht
-           B.welt.haus.rufDeckung    0..100   ob er gedeckt ist
+           B.welt.haus.rufEinloesung 0..100   ob das Haus einloest, was es verspricht
            B.welt.haus.rufAufschlag  0..0,32  was er am Preis wert ist
+           B.welt.haus.rufFassEpoche          was er an Bier gekostet hat
+           B.welt.haus.rufEntzogen            0 oder das Jahr, bis zu dem er WEG ist
 
        welt.haus.preis gehoert DEM PREIS und wird hier NICHT angefasst. In
        Runde 1 hiess das: der Ruf kostete Geld und bewegte keines, weil die
@@ -57,8 +59,41 @@
        DER NAME also immer noch bedienbar. `pruefeLebendig()` unten misst das
        zur Laufzeit und schreibt es in BRAUHAUS.ruf.lebendig().
 
+   WAS DIESE WELLE DAZUGEBAUT HAT — die Frage der Aufsicht lautete: IST RUF
+   UEBERHAUPT EINE ENTSCHEIDUNG MIT PREISSCHILD, ODER NUR EINE ZAHL, DIE
+   STEIGT?  Gemessen war die Antwort: er kostete nur Geld, und das Aufgeld
+   brachte dasselbe Geld zurueck. Also zwei Dinge dazu:
+
+   5 · ER KOSTET ETWAS, DAS MAN AUCH ANDERS AUSGEBEN KOENNTE.
+       Jeder Traeger, der ein Versprechen unter Leute bringt, nimmt FAESSER
+       aus dem Keller — dieselben, die sonst eine Rechnung geschrieben
+       haetten (Umtrunk 1 · Freitrunk 1 · Ausstellung 2 · Kastenaktion 8).
+       Der Knopf traegt beide Preisschilder, Geld und Ware, und wird auch
+       dann grau, wenn nur das Bier fehlt. 'data-fasspreis' steht daneben, damit
+       ein Pruefer es zaehlen kann, ohne Quelltext zu lesen.
+
+   6 · ER IST ZU VERLIEREN, NICHT NUR ZU VERGESSEN — DER ENTZUG.
+       Steht dreimal binnen sechs Jahren im Register, dass unter dem Zeichen
+       duennes Bier ausging, NIMMT die Instanz der Epoche das Zeichen: der
+       Rat den Zeiger, die Zunft ihr Zeichen, das Amtsgericht druckt das
+       Urteil ab, der Handel listet aus. Dabei faellt auch, was
+       "unwiderruflich" hiess. Der Rueckweg kostet Geld, Faesser UND einen
+       Keller, der wieder taugt — mit duennem Bier kommt man nicht zurueck.
+       Ein Lob nimmt eine der drei Zeilen zurueck; das Zeichen zu verdecken
+       kostet kein Geld und beendet die Zaehlung. Gemessen: wer nur WEITER
+       drueckt, verliert es in allen vier Epochen binnen 40 bis 47 Wochen;
+       wer bei duennem Keller verdeckt, in 1350/1600/1884 gar nicht.
+
+   DIE SPRACHE: was auf dem Schirm steht, ist fuer den Spieler. Kein
+   Stueckname, kein Feldname, keine Formel, keine Notiz zwischen zwei
+   Buildern. Die Namen der Stuecke stehen nur noch in diesen Kommentaren.
+
    ORTSMARKEN: alles, was dieses Stueck auf die Platte setzt, traegt
    data-frei="name" (Zustaendigkeit §10) — vollstaendig, nicht halb.
+
+   DAS ATTRIBUT: der zweite Balken heisst EINLOESUNG und traegt
+   data-einloesung. 'deckung' und data-deckung gehoeren allein der Kennzahl
+   des Kerns (Zustaendigkeit §19; BEFUND-ENDE §2).
    =========================================================================== */
 
 (function (B) {
@@ -75,7 +110,7 @@
 
   var Z = {
     bekannt: 5,            /* wie weit der Name reicht        0..deckel */
-    deckung: 55,           /* ob er gedeckt ist               0..100    */
+    einloesung: 55,        /* wie weit das Haus einloest, was das Zeichen verspricht */
     register: [],          /* fremde Urteile, datiert, nur wachsend      */
 
     zeiger: false,         /* 1350: haengt der Bierzeiger?               */
@@ -92,9 +127,16 @@
     gewinnJahr: 0,
 
     bruchWochen: 0,        /* wie lange schon unter dem Zeichen duennes Bier */
+    bruchZeilen: 0,        /* wie oft es schon im Register steht — drei, und es wird entzogen */
+    bruchSeit: 0,          /* ab welchem Jahr gezaehlt wird (Fenster: sechs Jahre) */
+    entzug: null,          /* {jahr, bis, epoche, wer} — das Zeichen ist GENOMMEN */
+    entzuege: 0,           /* wie oft dieses Haus es schon verloren hat */
+    gesperrt: {},          /* traegerschluessel -> bis einschliesslich Jahr */
+    fassAus: 0,            /* Faesser, die der Ruf gekostet hat (Epoche)  */
+    fassGesamt: 0,
     letzteWahl: null,
     wahlWoche: -1,
-    ruhe: false,           /* das Zeichen ist verdeckt — kostet Reichweite, rettet Deckung */
+    ruhe: false,           /* das Zeichen ist verdeckt — kostet Reichweite, rettet die Einloesung */
     rundeJahr: 0,          /* der freie Zug: einmal im Braujahr herumgehen */
 
     urteil: {},            /* adresse -> -20..20, was DIESER Wirt sagt   */
@@ -102,6 +144,7 @@
     schauJahr: 0,
 
     meldung: 'Das Haus hat einen Namen. Noch weiß ihn niemand.',
+    frage: null,           /* der Knopf, der gerade nachfragt, bevor er etwas wegnimmt */
     blatt: null,           /* null | 'zeichen' | 'register' | 'aufgeld'  */
     zu: false,             /* das Rufband eingeklappt (nur Anzeige)      */
     lebendig: true,
@@ -133,6 +176,87 @@
 
   function traegerListe() { return (D && D.traeger[ep()]) || []; }
 
+  /* ------------------------------------------------------------------
+     DAS MASS, IN DEM DIESES HAUS RECHNET.  Der Kern gibt 'Fass' bis 1871
+     und 'hl' danach (welt.mengeEinheit). Beides braucht im Fliesstext ein
+     ausgeschriebenes Wort — 'ein hoeherer Grundpreis je hl' liest sich wie
+     eine Werkstattnotiz. Es hat diesen Lauf einen Kritikerpunkt gekostet,
+     dass genau der eine Satz des Stuecks die Epoche nicht mitdrehte.
+     ------------------------------------------------------------------ */
+  function masswort() {
+    return B.welt.mengeEinheit() === 'hl' ? 'Hektoliter' : 'Fass';
+  }
+  function masspreiswort() {
+    return B.welt.mengeEinheit() === 'hl' ? 'Hektoliterpreis' : 'Fasspreis';
+  }
+
+  /* ------------------------------------------------------------------
+     DIE DRUCKEREI — der Riegel von 1884, und nur von 1884.
+     Kein Platz, sondern ein GEWICHT: die Presse setzt im Braujahr so
+     viele Bogen, und ein Plakat wiegt viermal so schwer wie eine Annonce.
+     Damit ist der vierte Riegel wirklich der vierte und nicht der Etat in
+     anderer Schrift: 1350 zaehlt Stueck je Amtszeit, 1600 fremde Tueren,
+     1884 Gewicht, 1970 Plaetze mit Tausch.
+     ------------------------------------------------------------------ */
+  function bogenDeckel() { return epd().bogen || 0; }
+
+  function bogenBelegt() {
+    var n = 0;
+    traegerListe().forEach(function (t) {
+      if (t.bogen && t.art === 'jahr' && (Z.lauf[t.k] || 0) >= jahr()) n += t.bogen;
+    });
+    return n;
+  }
+
+  function bogenFrei() { return Math.max(0, bogenDeckel() - bogenBelegt()); }
+
+  /* Geht dieser Posten in diesem Braujahr noch in die Presse? */
+  function bogenPasst(t) {
+    if (!bogenDeckel() || !t || !t.bogen) return true;
+    if ((Z.lauf[t.k] || 0) >= jahr()) return true;        /* laeuft schon */
+    return t.bogen <= bogenFrei();
+  }
+
+  /* ------------------------------------------------------------------
+     WAS JETZT ZU HABEN IST.  Dieselben Bedingungen, die knopfFuer() zum
+     Sperren benutzt — hier nur zum Sortieren, damit im Band und am
+     Anschlag der billigste Posten steht, der wirklich geht, und nicht
+     der billigste, der gerade nicht geht.
+     ------------------------------------------------------------------ */
+  function jetztMoeglich(t) {
+    if (istGesperrt(t.k)) return false;
+    if (t.ab && jahr() < t.ab) return false;
+    if (!B.welt.kann(t.preis)) return false;
+    if (fassPreis(t) && fassDa() < fassPreis(t)) return false;
+    return bogenPasst(t);
+  }
+
+  /* Die n billigsten Posten dieser Epoche, die eine Entscheidung sind:
+     kosten Geld, laufen noch nicht, gehoeren dem Haus noch nicht. */
+  function kaufbare(n) {
+    var l = traegerListe().filter(function (t) {
+      if (!t.preis || laeuft(t)) return false;
+      if (t.art === 'notbremse') return false;
+      if (t.art === 'fest' && Z.fest[t.k]) return false;
+      if (t.art === 'schutz' && !Z.nachahmung) return false;
+      if (t.ab && jahr() < t.ab) return false;
+      if (istGesperrt(t.k)) return false;
+      return true;
+    });
+    l.sort(function (a, b) {
+      var ja = jetztMoeglich(a) ? 0 : 1, jb = jetztMoeglich(b) ? 0 : 1;
+      if (ja !== jb) return ja - jb;
+      return a.preis - b.preis;
+    });
+    return l.slice(0, n || 1);
+  }
+
+  function bogenWarum(t) {
+    return (epd().bogenWort || 'DIE PRESSE') + ' ist für das Braujahr voll: '
+      + t.name.replace(/^(Den|Die|Das) /, '') + ' braucht ' + t.bogen + ' Bogen, frei sind '
+      + bogenFrei() + ' von ' + bogenDeckel() + '. Wer etwas abbestellt, macht Bogen frei.';
+  }
+
   function traeger(k) {
     var l = traegerListe();
     for (var i = 0; i < l.length; i++) if (l[i].k === k) return l[i];
@@ -145,9 +269,48 @@
     return n;
   }
 
+  /* ------------------------------------------------------------------
+     DER ENTZUG — was ein Haus verlieren kann und nicht nur vergessen.
+     ------------------------------------------------------------------ */
+  function entzugDaten() { return (D && D.entzug && D.entzug[ep()]) || null; }
+
+  function entzogen() { return !!(Z.entzug && Z.entzug.epoche === ep()); }
+
+  /* Ist dieser Traeger gerade gesperrt — und bis wann? */
+  function sperrBis(k) { return Z.gesperrt[k] || 0; }
+  function istGesperrt(k) { return sperrBis(k) >= jahr(); }
+
+  function gesperrtWarum(k) {
+    var e = entzugDaten();
+    return (e ? e.wer : 'Die Obrigkeit') + ' lässt das nicht zu — bis '
+      + sperrBis(k) + '.' + (e && e.wartet ? ' ' + e.wartet : '');
+  }
+
+  /* ------------------------------------------------------------------
+     WAS DER RUF AUSSER GELD KOSTET.  Faesser aus dem Keller — dieselben,
+     die sonst eine Rechnung geschrieben haetten. Das ist die zweite
+     Verwendung, und deshalb ist es eine Entscheidung.
+     ------------------------------------------------------------------ */
+  function fassPreis(t) { return (t && t.fass) || 0; }
+  function fassDa() { return B.welt.vorrat.faesser.length; }
+
+  /* Nimmt die Faesser und schreibt es ins Protokoll — unter dem Namen des
+     Postens, damit ein Fremder es der Werbung zuordnen kann. */
+  function zahltFass(n, was) {
+    if (!n) return true;
+    if (fassDa() < n) return false;
+    B.welt.nimmHeraus(n);
+    Z.fassAus += n; Z.fassGesamt += n;
+    B.welt.protokolliere({ wer: 'spieler',
+      was: was + ' · ' + B.welt.menge(n) + ' aus dem Lager, nicht verkauft',
+      preis: 0, menge: n });
+    return true;
+  }
+
   /* Traegt dieser Traeger gerade? */
   function laeuft(t) {
     if (!t) return false;
+    if (istGesperrt(t.k)) return false;
     switch (t.art) {
       case 'schalter':  return !!Z.zeiger;
       case 'fest':      return !!Z.fest[t.k];
@@ -203,9 +366,10 @@
   function zielBekannt() {
     var s = 0;
     traegerListe().forEach(function (t) { s += beitrag(t); });
-    if (Z.fest.krug && jahr() >= Z.krugAb) s += 6;        /* wirkt auch spaeter noch */
+    if (Z.fest.krug && jahr() >= Z.krugAb && !istGesperrt('krug')) s += 6;
     if (Z.fest.warenzeichen && ep() >= 3) s += 5;
     if (Z.fest.medaille && ep() >= 3) s += 8;
+    if (entzogen()) s = s * 0.35;                        /* das Zeichen ist genommen */
     if (Z.nachahmung) s = s * 0.72;                      /* der Nachahmer nimmt Luft weg */
     if (Z.ruhe) s = s * 0.5;                             /* verdeckt reicht der Name halb */
     if (Z.fest.verkauft) s = Math.min(s, 40);            /* der Name gehoert nicht mehr dem Haus */
@@ -220,7 +384,12 @@
      Geld einmal fehlt — es wird nur leiser, weil die Bekanntheit sinkt. Ohne
      das waere ein leeres Jahr eine Falle, aus der nichts mehr herausfuehrt. */
   function dauerzeichen() {
-    return !!(Z.fest.zunftzeichen || Z.fest.krug || Z.fest.warenzeichen);
+    return !!((Z.fest.zunftzeichen && !istGesperrt('zunftzeichen'))
+      || (Z.fest.krug && !istGesperrt('krug'))
+      || (Z.fest.warenzeichen && !istGesperrt('warenzeichen'))
+      /* 1970: der Anker steht erhaben im Glas. Den nimmt kein Bilanzstichtag
+         zurueck und kein Einkaeufer aus dem Regal. */
+      || (Z.fest.flaschenform && !istGesperrt('flaschenform')));
   }
 
   function versprechen() {
@@ -285,7 +454,7 @@
     return true;
   }
 
-  function ruf() { return Math.round(Z.bekannt * Z.deckung / 100); }
+  function ruf() { return Math.round(Z.bekannt * Z.einloesung / 100); }
 
   function aufschlag() { return B.rund(ruf() / 100 * epd().aufschlag, 4); }
 
@@ -409,7 +578,7 @@
         if (!a.erloschen && a.gewicht > 0) {
           a.erloschen = true;
           a.erloschDurch = Z.register.length + 1;
-          Z.deckung -= a.gewicht;              /* die alte Zeile zaehlt nicht mehr */
+          Z.einloesung -= a.gewicht;              /* die alte Zeile zaehlt nicht mehr */
           ausgeknipst++;
         }
       }
@@ -417,14 +586,134 @@
     }
 
     Z.register.push(e);
-    Z.deckung = B.grenze(Z.deckung + e.gewicht, 0, 100);
+    Z.einloesung = B.grenze(Z.einloesung + e.gewicht, 0, 100);
     B.welt.schreibe('Der Name des Hauses: ' + e.text, 'ruf');
     B.ton.spiele(gewicht >= 0 ? 'name:urteil-gut' : 'name:urteil-schlecht');
+    zaehleBruch(e.art, e.gewicht);
     return e;
   }
 
   function aktiveZeilen() {
     return Z.register.filter(function (e) { return !e.erloschen; });
+  }
+
+  /* ======================================================================
+     2b — DER ENTZUG.  Der Ruf ist eine Einlage, keine Zahl, die steigt:
+     die dritte Zeile "unter dem Zeichen kam dünnes Bier" binnen sechs
+     Jahren, und die Instanz der Epoche NIMMT das Zeichen. Was dabei
+     faellt, faellt auch dann, wenn es "unwiderruflich" hiess — genau das
+     ist der Unterschied zwischen einem Konto und einer Einlage.
+     Es geschieht OHNE den Spieler; er hat in jeder dieser Wochen einen
+     freien Zug dagegen (das Zeichen verdecken) und sieht die Zaehlung.
+     ====================================================================== */
+
+  /* Nur lesen — ein Zeichnen darf keinen Zustand aendern. Das Fenster von
+     sechs Jahren wird im Jahreslauf geschlossen, nicht beim Malen. */
+  function bruchStand() {
+    if (Z.bruchSeit && jahr() - Z.bruchSeit > 6) return 0;
+    return Z.bruchZeilen;
+  }
+
+  function bruchFenster() {
+    if (Z.bruchSeit && jahr() - Z.bruchSeit > 6) { Z.bruchSeit = 0; Z.bruchZeilen = 0; }
+  }
+
+  function vollzieheEntzug() {
+    var e = entzugDaten();
+    if (!e || entzogen()) return;
+    var bis = jahr() + (e.jahre || 3);
+    var sperrt = e.sperrt || [];
+
+    Z.entzug = { jahr: jahr(), bis: bis, epoche: ep(), wer: e.wer };
+    Z.entzuege++;
+    Z.bruchZeilen = 0; Z.bruchSeit = 0; Z.bruchWochen = 0;
+
+    sperrt.forEach(function (k) {
+      Z.gesperrt[k] = bis;
+      if (Z.lauf[k]) delete Z.lauf[k];
+    });
+    if (sperrt.indexOf('zeiger') >= 0) Z.zeiger = false;
+    if (sperrt.indexOf('schild') >= 0) Z.schilder = {};
+    (e.nimmtFest || []).forEach(function (k) { delete Z.fest[k]; });
+
+    var mit = '';
+    if (e.nimmtAdresse) {
+      var meine = meineAdressen().sort(function (a, b) { return b.bedarf - a.bedarf; });
+      if (meine.length && B.welt.binde(meine[0].schluessel, null, 'Ausgelistet', 0, 'haus')) {
+        Z.urteil[meine[0].schluessel] = -8;
+        mit = ' ' + meine[0].name + ' nimmt nichts mehr ab.';
+        B.welt.protokolliere({ wer: 'gegner',
+          was: meine[0].name + ' listet den Anker aus — ' + e.wer + ' hat entschieden',
+          preis: 0, adresse: meine[0].schluessel });
+      }
+    }
+
+    /* Direkt ins Register, nicht ueber eintrag() — sonst zaehlte sich der
+       Entzug als eigener Bruch und loeste den naechsten aus. */
+    var z = {
+      jahr: jahr(), woche: woche(), wer: e.wer, art: 'entzug',
+      text: e.text + mit + ' Bis ' + bis + '. ' + (e.wartet || ''),
+      gewicht: e.gewicht || -16, erloschen: false, erloschDurch: 0, loeschte: 0
+    };
+    var ausgeknipst = 0;
+    for (var i = Z.register.length - 1; i >= 0 && ausgeknipst < 3; i--) {
+      var a = Z.register[i];
+      if (!a.erloschen && a.gewicht > 0) {
+        a.erloschen = true; a.erloschDurch = Z.register.length + 1;
+        Z.einloesung -= a.gewicht; ausgeknipst++;
+      }
+    }
+    z.loeschte = ausgeknipst;
+    Z.register.push(z);
+    Z.einloesung = B.grenze(Z.einloesung + z.gewicht, 0, 100);
+    Z.bekannt = Math.max(0, Z.bekannt * 0.5);
+    B.welt.schreibe(e.wer + ' nimmt dem Haus das Zeichen: ' + e.text, 'ruf');
+    Z.meldung = e.meldung || 'Das Zeichen ist genommen.';
+    B.ton.spiele('name:entzug');
+  }
+
+  /* Zaehlt die schweren Zeilen. Lob nimmt eine zurueck — wer die Ware in
+     Ordnung bringt, ehe die dritte kommt, behaelt sein Zeichen. */
+  function zaehleBruch(art, gewicht) {
+    if (entzogen()) return;
+    if (art === 'lob' || art === 'medaille') {
+      if (Z.bruchZeilen > 0) Z.bruchZeilen--;
+      return;
+    }
+    if (art !== 'bruch' && art !== 'tadel') return;
+    if (gewicht >= 0) return;
+    if (!Z.bruchSeit || jahr() - Z.bruchSeit > 6) { Z.bruchSeit = jahr(); Z.bruchZeilen = 0; }
+    Z.bruchZeilen++;
+    if (Z.bruchZeilen >= 3) vollzieheEntzug();
+  }
+
+  /* Der Rueckweg. Er kostet Geld, Faesser UND einen Keller, der wieder
+     taugt: mit duennem Bier braucht man gar nicht zu kommen. Was der
+     Entzug an Festem genommen hat, kommt NICHT zurueck. */
+  function loeseEntzug() {
+    var e = entzugDaten();
+    if (!e || !entzogen()) return;
+    if (guete() < (e.guete || 55)) {
+      Z.meldung = 'Erst der Sud, dann die Abbitte. Die Güte des Kellers ist '
+        + guete() + ', gebraucht werden ' + (e.guete || 55) + '.';
+      return nachZug('entzug-nein');
+    }
+    if (fassDa() < fassPreis(e)) {
+      Z.meldung = 'Dafür fehlt das Bier: ' + B.welt.menge(fassPreis(e)) + ' zur Probe.';
+      return nachZug('entzug-nein');
+    }
+    if (!zahlt(e.preis, e.zurueck)) {
+      Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer');
+    }
+    zahltFass(fassPreis(e), e.zurueck);
+    Object.keys(Z.gesperrt).forEach(function (k) { delete Z.gesperrt[k]; });
+    Z.entzug = null;
+    Z.bruchZeilen = 0; Z.bruchWochen = 0;
+    Z.einloesung = B.grenze(Z.einloesung + 6, 0, 100);
+    eintrag(e.zurueckText, 5, e.wer, 'schutz');
+    Z.meldung = e.zurueck + ' — durch. Was genommen wurde, ist damit nicht zurück.';
+    B.ton.spiele('name:siegel');
+    nachZug('entzug-los');
   }
 
   /* ======================================================================
@@ -437,7 +726,7 @@
     if (!h) return;
     h.ruf = ruf();
     h.rufBekannt = Math.round(Z.bekannt);
-    h.rufDeckung = Math.round(Z.deckung);
+    h.rufEinloesung = Math.round(Z.einloesung);
     h.rufAufschlag = aufschlag();
     h.rufNachbar = Math.round(Z.adlerRuf);
     h.rufMedium = epd().medium;
@@ -445,6 +734,11 @@
        sonst niemand — es ist die Gegenprobe zum Satz auf dem Band. */
     h.rufAufgeldJahr = Z.aufgeldJahr;
     h.rufAufgeldGesamt = Z.aufgeldGesamt;
+    /* Und was der Ruf gekostet hat, das kein Geld war. */
+    h.rufFassEpoche = Z.fassAus;
+    h.rufFassGesamt = Z.fassGesamt;
+    h.rufEntzogen = entzogen() ? Z.entzug.bis : 0;
+    h.rufEntzuege = Z.entzuege;
   }
 
   /* Der Satz, den die Latte messbar macht: dasselbe Fass, zwei Preise. */
@@ -622,6 +916,9 @@
      ====================================================================== */
 
   function wochenlauf() {
+    /* Eine Rueckfrage gilt fuer den Augenblick, nicht fuer die naechste
+       Woche: wer WEITER drueckt, hat nicht abbestellt. */
+    Z.frage = null;
     /* Was in der abgelaufenen Woche noch offen war, wird jetzt kassiert;
        danach faengt die Wochenzahl bei null an. */
     B.wage('name.aufgeld', kassiereAufgeld);
@@ -636,11 +933,11 @@
       Z.bekannt = Math.max(ziel, Z.bekannt - runter);
     }
 
-    /* Deckung heilt langsam, wenn wirklich gutes Bier hinausgeht. */
+    /* Die Einloesung heilt langsam, wenn wirklich gutes Bier hinausgeht. */
     var g = guete();
-    var heilung = 0.22 + (100 - Z.deckung) * 0.012;
-    if (versprechen() && g >= 62) Z.deckung = Math.min(100, Z.deckung + heilung);
-    else if (!versprechen()) Z.deckung = Math.min(100, Z.deckung + heilung * 0.3);
+    var heilung = 0.22 + (100 - Z.einloesung) * 0.012;
+    if (versprechen() && g >= 62) Z.einloesung = Math.min(100, Z.einloesung + heilung);
+    else if (!versprechen()) Z.einloesung = Math.min(100, Z.einloesung + heilung * 0.3);
 
     /* Schnell zu verlieren: drei Wochen duennes Bier unter dem Zeichen, und
        es steht im Register. Der Spieler sieht die Uhr laufen und hat in
@@ -661,12 +958,12 @@
     B.wage('name.kieser', bierkieser);
     B.wage('name.gegner', gegnerzug);
 
-    /* Was die Wirte sagen, schlaegt langsam auf die Deckung durch. */
+    /* Was die Wirte sagen, schlaegt langsam auf die Einloesung durch. */
     var summe = 0, wieviele = 0;
     meineAdressen().forEach(function (a) {
       summe += (Z.urteil[a.schluessel] || 0); wieviele++;
     });
-    if (wieviele) Z.deckung = B.grenze(Z.deckung + (summe / wieviele) * 0.03, 0, 100);
+    if (wieviele) Z.einloesung = B.grenze(Z.einloesung + (summe / wieviele) * 0.03, 0, 100);
 
     veroeffentliche();
   }
@@ -687,6 +984,24 @@
       }).join(' · ') + '. Ein Etat verlängert sich nicht von selbst.';
     }
     if (Z.schutzBis && Z.schutzBis < jahr()) Z.schutzBis = 0;
+
+    /* Ein Entzug laeuft von selbst ab — aber erst nach seinen Jahren, und
+       was er an Festem genommen hat, kommt dabei nicht zurueck. */
+    Object.keys(Z.gesperrt).forEach(function (k) {
+      if (Z.gesperrt[k] < jahr()) delete Z.gesperrt[k];
+    });
+    if (Z.entzug && Z.entzug.bis < jahr()) {
+      var ew = Z.entzug.wer;
+      Z.entzug = null;
+      Z.meldung = ew + ' hat die Frist auslaufen lassen. Das Zeichen darf wieder '
+        + 'hängen — was genommen wurde, ist damit nicht zurück.';
+      Z.register.push({
+        jahr: jahr(), woche: woche(), wer: ew, art: 'frist', gewicht: 0,
+        erloschen: false, erloschDurch: 0, loeschte: 0,
+        text: 'Die Frist ist abgelaufen. Das Haus darf wieder aushängen.'
+      });
+    }
+    bruchFenster();
 
     B.wage('name.urteil', jahresurteil);
     B.wage('name.zulauf', wirtFragtAn);
@@ -712,8 +1027,16 @@
     Z.schilder = {};
     Z.umtrunk = {};
     Z.lauf = {};
+    Z.frage = null;
     Z.nachahmung = null;
     Z.bruchWochen = 0;
+    /* Neue Epoche, neue Instanz: der Rat von 1350 sperrt nichts in 1600.
+       Der ENTZUEGE-Zaehler bleibt — er ist das Gedaechtnis des Hauses. */
+    Z.entzug = null;
+    Z.gesperrt = {};
+    Z.bruchZeilen = 0;
+    Z.bruchSeit = 0;
+    Z.fassAus = 0;
     Z.register.push({
       jahr: jahr(), woche: woche(), wer: 'Der Schnitt', art: 'schnitt', gewicht: 0,
       erloschen: false, erloschDurch: 0, loeschte: 0,
@@ -731,13 +1054,51 @@
      ====================================================================== */
 
   function nachZug(grund) {
+    /* Jeder vollzogene Zug loescht eine offene Rueckfrage: wer woanders
+       hinklickt, hat nicht abbestellt. */
+    Z.frage = null;
     veroeffentliche();
     B.sende('zeichne', { grund: 'name-' + (grund || 'zug') });
   }
 
+  /* ------------------------------------------------------------------
+     DIE RUECKFRAGE.  Ein Knopf, der etwas WEGNIMMT, was Geld gekostet
+     hat, fragt einmal nach — und sagt vorher, was er tut. Der Kritiker
+     hat genau das gerissen: 'Einstellen: Kronkorken' stand ohne Preis
+     auf dem Schirm, stornierte den bezahlten Posten beim ersten Klick,
+     und erst danach zeigte derselbe Knopf, was er kostet.
+     ------------------------------------------------------------------ */
+  function frageNach(schluessel, text) {
+    Z.frage = schluessel;
+    Z.meldung = text;
+    veroeffentliche();
+    B.sende('zeichne', { grund: 'name-frage' });
+  }
+
   function zahlt(preis, was) {
     if (!preis) return true;
-    return B.welt.zahle(preis, was, 'spieler');
+    /* Zustaendigkeit §21: wer der Kasse etwas entnimmt, schreibt sein
+       Stueck an den Posten. Hier steht es im Klartext daneben. */
+    return B.welt.zahle(preis, was + ' (Ruf)', 'spieler');
+  }
+
+  /* Geld UND Fass, in dieser Reihenfolge geprueft und dann genommen. Ein
+     halb bezahlter Posten darf es nicht geben. */
+  function bezahle(t, was) {
+    var n = fassPreis(t);
+    if (n && fassDa() < n) {
+      Z.meldung = 'Dafür fehlt das Bier: ' + B.welt.menge(n) + ' aus dem Lager, '
+        + 'und im Lager liegt ' + B.welt.menge(fassDa()) + '.';
+      nachZug('kein-fass');
+      return false;
+    }
+    if (!zahlt(t.preis, was || t.name)) {
+      Z.meldung = 'Die Kasse reicht nicht.';
+      nachZug('leer');
+      return false;
+    }
+    if (n) zahltFass(n, was || t.name);
+    return true;
   }
 
   function schalteZeiger() {
@@ -748,7 +1109,7 @@
       Z.meldung = 'Der Bierzeiger hängt. Von jetzt an misst die Gasse das Haus daran.';
       B.ton.spiele('name:aushaengen', { ort: 'sudhaus' });
     } else {
-      /* Einziehen kostet Bekanntheit, aber es rettet die Deckung. */
+      /* Einziehen kostet Bekanntheit, aber es rettet die Einloesung. */
       Z.bekannt = Math.max(0, Z.bekannt - 4);
       Z.meldung = 'Der Zeiger ist eingezogen. Wer nichts verspricht, bricht nichts.';
       B.ton.spiele('name:einziehen', { ort: 'sudhaus' });
@@ -758,7 +1119,8 @@
 
   function kaufeFest(t) {
     if (Z.fest[t.k]) return;
-    if (!zahlt(t.preis, t.name)) { Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer'); }
+    if (istGesperrt(t.k)) { Z.meldung = gesperrtWarum(t.k); return nachZug('gesperrt'); }
+    if (!bezahle(t)) return;
     Z.fest[t.k] = jahr();
     if (t.k === 'krug') Z.krugAb = jahr() + 12;
     if (t.k === 'warenzeichen' || t.k === 'zunftzeichen') Z.nachahmung = null;
@@ -770,21 +1132,36 @@
   }
 
   function kaufeJahr(t) {
-    if ((Z.lauf[t.k] || 0) >= jahr()) {      /* laeuft schon: einstellen ist frei */
+    if ((Z.lauf[t.k] || 0) >= jahr()) {      /* laeuft schon: abbestellen */
+      if (Z.frage !== t.k) {
+        return frageNach(t.k, 'Abbestellen heißt: ' + t.name.replace(/^(Den|Die|Das) /, '')
+          + ' läuft ab sofort nicht mehr, und das Geld für dieses Braujahr ist ausgegeben. '
+          + 'Es kommt nichts zurück. Frei wird '
+          + (etatPlaetze() ? 'ein Platz im Etat.'
+            : (t.bogen ? t.bogen + ' Bogen in der Druckerei.' : 'die Reichweite.'))
+          + ' Noch einmal auf denselben Knopf, dann gilt es.');
+      }
       delete Z.lauf[t.k];
-      Z.meldung = t.name + ' eingestellt. Das kostet Reichweite und kein Geld.';
+      Z.meldung = t.name.replace(/^(Den|Die|Das) /, '') + ' ist abbestellt. Das kostet '
+        + 'Reichweite; das Geld dieses Braujahres bleibt ausgegeben.';
       B.ton.spiele('name:einziehen');
       return nachZug('jahr-aus');
     }
     /* Voller Etat: es wird nicht gesperrt, es wird getauscht. Der Zug bleibt
        bezahlbar und schliesst genau einen anderen aus. */
+    if (istGesperrt(t.k)) { Z.meldung = gesperrtWarum(t.k); return nachZug('gesperrt'); }
+    /* Die Presse von 1884 tauscht NICHT — sie ist voll, und man sieht, um
+       wieviel. Das ist der andere Riegel, mit Absicht anders. */
+    if (!bogenPasst(t)) { Z.meldung = bogenWarum(t); return nachZug('bogen'); }
     var weicht = etatVoll() ? schwaechsterPosten() : null;
-    if (!zahlt(t.preis, t.name)) { Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer'); }
+    if (!bezahle(t)) return;
     if (weicht && weicht.k !== t.k) delete Z.lauf[weicht.k];
     Z.lauf[t.k] = jahr();
     Z.meldung = t.name + ' läuft bis Ende des Braujahres ' + jahr() + '.'
       + (weicht ? ' Der Etat trägt nur ' + etatPlaetze() + ' Posten — dafür ist '
-        + weicht.name.replace(/^(Den|Die|Das) /, '') + ' eingestellt.' : '');
+        + weicht.name.replace(/^(Den|Die|Das) /, '') + ' abbestellt.' : '')
+      + (bogenDeckel() ? ' In der Druckerei sind jetzt ' + bogenBelegt() + ' von '
+        + bogenDeckel() + ' Bogen belegt.' : '');
     B.ton.spiele(t.laut ? 'name:spot' : 'name:druck');
     nachZug('jahr');
   }
@@ -794,6 +1171,15 @@
     var fach = ep() === 1 ? Z.umtrunk : Z.schilder;
     if (fach[a.schluessel]) {
       if (ep() === 1) return;
+      /* Auch hier nimmt ein Klick etwas weg, was bezahlt wurde. Er fragt
+         einmal nach und sagt vorher, was er kostet: kein Geld und trotzdem
+         etwas. */
+      if (Z.frage !== 'schild:' + a.schluessel) {
+        return frageNach('schild:' + a.schluessel, 'Abnehmen heißt: der Anker kommt von '
+          + 'der Tür des ' + a.name + '. Das kostet kein Geld — die ' + geld(t.preis)
+          + ', die das Schild gekostet hat, sind trotzdem ausgegeben, und die Gasse '
+          + 'sieht es. Noch einmal auf denselben Knopf, dann gilt es.');
+      }
       delete fach[a.schluessel];
       eintrag('Das Schild bei ' + a.name + ' ist abgenommen worden. Die Gasse hat es gesehen.',
         -4, 'Die Wirte', 'ab');
@@ -804,9 +1190,8 @@
       Z.meldung = 'Mehr trägt das Haus in dieser Epoche nicht.';
       return nachZug('grenze');
     }
-    if (!zahlt(t.preis, t.name + ' · ' + a.name)) {
-      Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer');
-    }
+    if (istGesperrt(t.k)) { Z.meldung = gesperrtWarum(t.k); return nachZug('gesperrt'); }
+    if (!bezahle(t, t.name + ' · ' + a.name)) return;
     fach[a.schluessel] = jahr();
     Z.urteil[a.schluessel] = (Z.urteil[a.schluessel] || 0) + 2;
     Z.meldung = ep() === 1
@@ -827,7 +1212,7 @@
   }
 
   function beschickeAusstellung(t) {
-    if (!zahlt(t.preis, t.name)) { Z.meldung = 'Die Kasse reicht nicht.'; return nachZug('leer'); }
+    if (!bezahle(t)) return;
     var g = guete();
     /* Die Jury urteilt ohne das Haus — aber nicht ohne die Ware. */
     if (B.wuerfel.trifft(B.grenze(0.18 + g / 180, 0.1, 0.8))) {
@@ -888,9 +1273,9 @@
     });
     /* Alles darueber wird entwertet — das ist der Sinn der Zeile. */
     Z.register.forEach(function (e) {
-      if (e.gewicht > 0 && !e.erloschen) { e.erloschen = true; Z.deckung -= e.gewicht; }
+      if (e.gewicht > 0 && !e.erloschen) { e.erloschen = true; Z.einloesung -= e.gewicht; }
     });
-    Z.deckung = B.grenze(Z.deckung, 0, 100);
+    Z.einloesung = B.grenze(Z.einloesung, 0, 100);
     B.welt.schreibe('Der Name "Zum Anker" ist verkauft. Das Haus braut weiter.', 'verkauf');
     Z.meldung = 'Verkauft. Das Geld ist da, der Name nicht mehr.';
     B.ton.spiele('name:verkauf');
@@ -902,7 +1287,7 @@
     Z.letzteWahl = 'liefern';
     Z.wahlWoche = stempel();
     Z.bruchWochen = Math.max(Z.bruchWochen, 3);
-    Z.deckung = Math.max(0, Z.deckung - 2);
+    Z.einloesung = Math.max(0, Z.einloesung - 2);
     Z.meldung = 'Es geht hinaus, wie es ist. Das Zeichen hängt weiter — '
       + 'die Rechnung kommt später.';
     nachZug('wahl');
@@ -918,7 +1303,7 @@
     if (Z.ruhe) {
       Z.letzteWahl = 'halten';
       Z.wahlWoche = stempel();
-      Z.deckung = Math.min(100, Z.deckung + 1);
+      Z.einloesung = Math.min(100, Z.einloesung + 1);
       Z.meldung = 'Das Zeichen ist verdeckt, bis der Sud wieder taugt. '
         + 'Kostet Reichweite, kostet kein Geld, und es ist umkehrbar.';
       B.ton.spiele('name:einziehen');
@@ -1002,6 +1387,40 @@
       }
     }
 
+    /* ----------------------------------------------------------------
+       DER ANSCHLAG.  Ein Preisschild dieses Stuecks, das OHNE EINEN
+       KLICK auf dem Schirm steht — dort, wo das Zeichen haengt.
+
+       Warum ueberhaupt: gemessen lagen die Preise des Namens zwei Klicks
+       tief (erst das Band aufschlagen, dann das Blatt), waehrend elf bis
+       dreizehn fremde Preisschilder beim Laden nebeneinander standen. Das
+       Band bekommt sie jetzt auch (ein Klick weniger); hier haengt der
+       billigste Posten der Epoche mit seinem Preis am Ort des Zeichens.
+
+       Warum er die Stadt nicht zudeckt: er traegt data-frei und bleibt
+       unter der Punktgrenze des Rahmens (2,4 % der Buehne) — gemessen
+       0,4 bis 0,5 %. Wer sich als Punkt ausgibt und ein Brett ist, hat
+       seine Ausnahme verwirkt; das hier ist ein Punkt und bleibt einer.
+       ---------------------------------------------------------------- */
+    /* Solange das ganze Blatt offen ist, gibt es die Abkuerzung nicht: das
+       Blatt liegt darueber, und ein Knopf unter einem Brett ist ein
+       Seitenfehler. Gemessen: mit offenem Blatt traf elementFromPoint den
+       Anschlag in 1350, 1884 und 1970 nicht mehr — in 1600 schon, weil das
+       Blatt dort nicht bis zum Lindenhof reicht. Also fuer alle vier weg,
+       solange die ganze Liste danebensteht. */
+    var anOrt = (e.anschlagOrt && B.orte.da(e.anschlagOrt)) ? e.anschlagOrt : e.ort;
+    if (!Z.blatt && B.orte.da(anOrt)) {
+      var w = kaufbare(1)[0];
+      if (w) {
+        var an = B.el('div', 'nm-anschlag');
+        an.appendChild(B.el('span', 'nm-anschlagkopf', 'DER ANKER · Ruf ' + ruf()));
+        an.appendChild(knopfFuer(w, 'anschlag').knopf);
+        var v = e.anschlag || { dx: 8, dy: 9 };
+        setzeMarke(an, anOrt, { anker: 'mitte', dx: v.dx, dy: v.dy });
+        f.appendChild(an);
+      }
+    }
+
     /* Der Nachahmer haengt dasselbe Zeichen aus — blass, drueben. */
     if (Z.nachahmung) {
       var g = adler();
@@ -1053,13 +1472,18 @@
 
     var band = B.el('div', 'nm-band' + (Z.zu ? ' zu' : ''));
     band.setAttribute('data-ruf', ruf());
-    band.setAttribute('data-deckung', Math.round(Z.deckung));
+    band.setAttribute('data-einloesung', Math.round(Z.einloesung));
     band.setAttribute('data-bekannt', Math.round(Z.bekannt));
     band.setAttribute('data-aufschlag', aufschlag());
 
     var kopf = B.el('div', 'nm-kopf');
-    kopf.appendChild(B.el('span', 'nm-titel', 'DER NAME'));
-    if (!Z.zu) kopf.appendChild(B.el('span', 'nm-medium', e.medium));
+    kopf.appendChild(B.el('span', 'nm-titel', 'DER RUF DES HAUSES'));
+    /* Die zweite Zeile des Kopfes ist die Aufschrift, die DIE STADT auf
+       ihren Reiter schreibt, wenn sie das Brett zuklappt. Ein Entzug muss
+       dort stehen: was genommen ist, darf man nicht erst aufschlagen
+       muessen, um es zu sehen. */
+    if (!Z.zu) kopf.appendChild(B.el('span', 'nm-medium' + (entzogen() ? ' nm-genommen' : ''),
+      entzogen() ? 'GENOMMEN von ' + Z.entzug.wer + ' bis ' + Z.entzug.bis : e.medium));
     /* Das Band gibt die Platte auf Klick frei — DIE STADT misst die Deckung
        ihres Fensters, und ein Brett, das man nicht wegbekommt, ist ein Brett
        zuviel. Kein Zug des Hauses: nur Anzeige. */
@@ -1076,12 +1500,15 @@
     gross.appendChild(B.el('span', 'nm-von', 'Ruf von 100'));
     if (Z.nachahmung) gross.appendChild(B.el('span', 'nm-warn', 'nachgemacht'));
     if (Z.fest.verkauft) gross.appendChild(B.el('span', 'nm-warn', 'verkauft'));
+    /* Auch eingeklappt: was genommen ist, laesst sich nicht wegklappen. */
+    if (entzogen()) gross.appendChild(B.el('span', 'nm-warn nm-genommen',
+      'genommen bis ' + Z.entzug.bis));
     band.appendChild(gross);
 
     if (Z.zu) { f.appendChild(band); return; }
 
     band.appendChild(balken('Bekanntheit', Z.bekannt, e.deckel, 'nm-bekannt', zielBekannt()));
-    band.appendChild(balken('Deckung', Z.deckung, 100, 'nm-deckung'));
+    band.appendChild(balken('Einlösung', Z.einloesung, 100, 'nm-einloesung'));
 
     /* ----------------------------------------------------------------
        DIE BEHAUPTUNG DES STUECKS — und daneben, was sie eingebracht hat.
@@ -1097,11 +1524,11 @@
       satz.appendChild(B.el('span', 'nm-satzkopf',
         'Gleiches Bier, 100 ' + v.einheit + ', zwei Preise'));
       var zeile = B.el('div', 'nm-preise');
-      zeile.appendChild(B.el('span', 'nm-ohne', 'Rechnung der Fuhre ' + geld(v.ohne)));
-      zeile.appendChild(B.el('span', 'nm-mit', 'mit dem Aufgeld ' + geld(v.mit)));
+      zeile.appendChild(B.el('span', 'nm-ohne', 'ohne das Zeichen ' + geld(v.ohne)));
+      zeile.appendChild(B.el('span', 'nm-mit', 'mit dem Zeichen ' + geld(v.mit)));
       satz.appendChild(zeile);
       satz.appendChild(B.el('span', 'nm-klein', '+ ' + B.zahl(aufschlag() * 100, 1)
-        + ' im Hundert · ' + geld(v.mit - v.ohne) + ' mehr für dasselbe Fass Bier'
+        + ' im Hundert · ' + geld(v.mit - v.ohne) + ' mehr für dieselbe Menge'
         + (Z.ruhe || !versprechen()
           ? ' — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht.'
           : '')));
@@ -1111,7 +1538,7 @@
        Kassenstand halten kann. */
     var kasten = B.el('div', 'nm-aufgeld');
     kasten.appendChild(B.el('span', 'nm-satzkopf', epd().aufgeldWort.toUpperCase()
-      + ' — was der Ruf wirklich eingebracht hat'));
+      + ' — was der Ruf eingebracht hat'));
     var reiheG = B.el('div', 'nm-geldreihe');
     [['diese Woche', Z.aufgeldWoche], ['Braujahr', Z.aufgeldJahr],
      ['seit ' + epd().jahr, Z.aufgeldEpoche]].forEach(function (p) {
@@ -1128,16 +1555,17 @@
         + ' · ' + B.zahl(l.satz * 100, 1) + ' im Hundert bei Ruf ' + l.ruf));
     } else {
       kasten.appendChild(B.el('span', 'nm-klein',
-        'Noch nichts. Das Aufgeld fällt beim Ausliefern an — eine Fuhre, und es steht hier.'));
+        'Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei '
+        + 'zu sehen ist.'));
     }
-    /* Ehrlich ausgewiesen, was dieses Stueck NICHT kann. */
+    /* Was der Ruf NICHT tut, steht durchgestrichen daneben — in der Sprache
+       eines Hauses, nicht in der einer Werkstatt. */
     var offen = B.el('div', 'nm-klein nm-offen');
-    var durch = B.el('s', null, 'und einen höheren Grundpreis je Fass');
-    offen.appendChild(durch);
-    offen.appendChild(document.createTextNode(preisLiestSelbst()
-      ? ' — DER PREIS liest welt.haus.rufAufschlag jetzt selbst; DER NAME bucht nicht mehr.'
-      : ' — den schreibt DER PREIS, und er liest welt.haus.rufAufschlag noch nicht.'
-        + ' Solange bucht DER NAME das Aufgeld selbst, Zeile für Zeile.'));
+    offen.appendChild(B.el('s', null, 'und einen höheren Grundpreis je ' + masswort()));
+    offen.appendChild(document.createTextNode(
+      ' — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, '
+      + 'nicht darüber: wer den Anker nicht kennt, zahlt den blanken '
+      + masspreiswort() + '.'));
     kasten.appendChild(offen);
     kasten.appendChild(B.knopf({
       text: 'Das Aufgeld nachrechnen', zug: 'name:aufgeldbuch', klasse: 'nm-knopf nm-klein-knopf',
@@ -1147,12 +1575,56 @@
     satz.appendChild(kasten);
     band.appendChild(satz);
 
+    /* ----------------------------------------------------------------
+       DER ENTZUG — die eine Zeile, die aus einer Zahl eine Einlage macht.
+       Sie steht auf dem Band, nicht hinter einem Griff: was genommen
+       wurde, muss man sehen, ohne etwas aufzuschlagen. Daneben der
+       Rueckweg, mit beiden Preisschildern.
+       ---------------------------------------------------------------- */
+    if (entzogen()) {
+      var ed = entzugDaten() || {};
+      var ez = B.el('div', 'nm-entzug');
+      ez.setAttribute('data-entzug', Z.entzug.wer);
+      ez.setAttribute('data-entzug-bis', Z.entzug.bis);
+      ez.appendChild(B.el('div', 'nm-entzugkopf',
+        'GENOMMEN · ' + Z.entzug.wer + ' ' + Z.entzug.jahr + ' bis ' + Z.entzug.bis));
+      ez.appendChild(B.el('div', 'nm-klein', ed.text || ''));
+      var gutGenug = guete() >= (ed.guete || 55);
+      var fassGenug = fassDa() >= fassPreis(ed);
+      var kr = B.knopf({
+        text: ed.zurueck || 'Zurückholen',
+        zug: 'name:entzug-loesen',
+        preis: -(ed.preis || 0),
+        klasse: 'nm-knopf nm-rot',
+        aus: !gutGenug || !fassGenug || !B.welt.kann(ed.preis || 0),
+        titel: (ed.zurueckSagt || '')
+          + ' [Güte des Kellers ' + guete() + ', gebraucht ' + (ed.guete || 55)
+          + (fassPreis(ed) ? ' · ' + B.welt.menge(fassPreis(ed)) + ' zur Probe, im Lager '
+            + B.welt.menge(fassDa()) : '') + ']',
+        tu: loeseEntzug
+      });
+      haengeFassschild(kr, fassPreis(ed));
+      ez.appendChild(kr);
+      ez.appendChild(B.el('div', 'nm-klein',
+        !gutGenug
+          ? 'Erst der Sud, dann die Abbitte: die Güte des Kellers ist ' + guete()
+            + ', gebraucht werden ' + (ed.guete || 55) + '.'
+          : (!fassGenug
+            ? 'Es fehlt das Bier zur Probe: ' + B.welt.menge(fassPreis(ed)) + '.'
+            : 'Der Keller taugt. Es kostet ' + geld(ed.preis || 0)
+              + (fassPreis(ed) ? ' und ' + B.welt.menge(fassPreis(ed)) : '') + '.')));
+      band.appendChild(ez);
+    }
+
     /* DIE KLEMME. Nur wenn sie wirklich zubeisst — sonst nagt sie nicht. */
     if (bruchGefahr()) {
       var kl = B.el('div', 'nm-klemme');
       kl.appendChild(B.el('div', 'nm-klemmkopf',
         'Das Zeichen hängt, und der Keller taugt nicht — Güte ' + guete() + ' von 100.'
-        + ' Seit ' + (Z.bruchWochen + 1) + ' von 5 Wochen; danach steht es im Register.'));
+        + ' Seit ' + (Z.bruchWochen + 1) + ' von 5 Wochen; danach steht es im Register.'
+        + (entzogen() ? ''
+          : ' Nach der dritten solchen Zeile nimmt ' + ((entzugDaten() || {}).wer
+            || 'die Obrigkeit') + ' das Zeichen — ' + bruchStand() + ' von 3 stehen schon da.')));
       kl.appendChild(B.knopf({
         text: 'Unter dem Zeichen ausliefern', zug: 'name:liefern', klasse: 'nm-knopf nm-rot',
         titel: 'Es geht hinaus, wie es ist. Kostet heute nichts und später den Namen.',
@@ -1160,25 +1632,51 @@
       }));
       kl.appendChild(B.knopf({
         text: 'Das Zeichen einziehen', zug: 'name:zurueckhalten', klasse: 'nm-knopf',
-        titel: 'Kostet Reichweite, rettet die Deckung. Kostet kein Geld und ist umkehrbar.',
+        titel: 'Kostet Reichweite, rettet die Einlösung. Kostet kein Geld und ist umkehrbar.',
         tu: waehleZurueckhalten
       }));
       band.appendChild(kl);
     }
 
+    /* ----------------------------------------------------------------
+       DIE PREISSCHILDER, EINEN KLICK FRUEHER.  Gemessen und gerissen:
+       auf dem Grundschirm standen elf bis dreizehn Entscheidungen mit
+       Preis nebeneinander, und keine einzige davon gehoerte dem Namen —
+       seine lagen zwei Klicks tief. Hier stehen die billigsten Posten
+       der Epoche mit ihrem Preis, mit ihrem zweiten Preisschild und mit
+       dem Riegel, der sie ausschliesst. Wenn das ganze Blatt offen ist,
+       verschwinden sie: zweimal derselbe Zug auf einem Schirm waere ein
+       doppelt gezaehltes Preisschild.
+       ---------------------------------------------------------------- */
+    if (Z.blatt !== 'zeichen') {
+      var jetztDa = kaufbare(3);
+      if (jetztDa.length) {
+        var jz = B.el('div', 'nm-jetzt');
+        jz.appendChild(B.el('span', 'nm-satzkopf', 'WAS DER NAME JETZT KOSTET'
+          + (bogenDeckel() ? ' · ' + bogenFrei() + ' von ' + bogenDeckel() + ' Bogen frei'
+            : (etatPlaetze() ? ' · ' + etatBelegt() + ' von ' + etatPlaetze()
+              + ' Posten im Etat belegt' : ''))));
+        jetztDa.forEach(function (t) { jz.appendChild(knopfFuer(t, 'jetzt').knopf); });
+        jz.appendChild(B.el('span', 'nm-klein', 'Die ganze Liste dieser Epoche, der '
+          + 'Nachahmer und das Register stehen unter „Das Zeichen".'));
+        band.appendChild(jz);
+      }
+    }
+
     /* Die zwei Zuege, die IMMER da sind und nie Geld kosten. Daran haengt
        die harte Regel: kein Zustand ohne wirksamen Zug. */
     var frei = B.el('div', 'nm-frei');
-    if (versprechen() || Z.ruhe) {
-      frei.appendChild(B.knopf({
-        text: Z.ruhe ? 'Das Zeichen wieder zeigen' : 'Das Zeichen verdecken',
-        zug: 'name:ruhe', klasse: 'nm-knopf' + (Z.ruhe ? ' nm-an' : ''),
-        titel: Z.ruhe
-          ? 'Verdeckt reicht der Name kaum. Zeigen heißt wieder versprechen.'
-          : 'Kostet kein Geld, nur Reichweite — und rettet die Deckung. Umkehrbar.',
-        tu: function () { schalteRuhe(!Z.ruhe); }
-      }));
-    }
+    /* Ohne Bedingung: dieser Knopf ist die Sicherung der harten Regel aus
+       Zustaendigkeit §4. Wer ihn an eine Lage knuepft, baut eine Lage, in
+       der es ihn nicht gibt. */
+    frei.appendChild(B.knopf({
+      text: Z.ruhe ? 'Das Zeichen wieder zeigen' : 'Das Zeichen verdecken',
+      zug: 'name:ruhe', klasse: 'nm-knopf' + (Z.ruhe ? ' nm-an' : ''),
+      titel: Z.ruhe
+        ? 'Verdeckt reicht der Name kaum. Zeigen heißt wieder versprechen.'
+        : 'Kostet kein Geld, nur Reichweite — und rettet die Einlösung. Umkehrbar.',
+      tu: function () { schalteRuhe(!Z.ruhe); }
+    }));
     frei.appendChild(B.knopf({
       text: 'Herumgehen und den Namen sagen',
       zug: 'name:herumgehen', klasse: 'nm-knopf',
@@ -1209,16 +1707,45 @@
      ------------------------------------------------------------------ */
   function zeigeBlatt(welches) {
     Z.blatt = welches || null;
+    Z.frage = null;              /* wer das Blatt wechselt, hat nicht abbestellt */
     B.sende('zeichne', { grund: 'name-blatt' });
   }
 
-  function knopfFuer(t) {
+  /* Das zweite Preisschild. B.knopf kennt nur Geld; die Faesser haengt
+     dieses Stueck selbst an — mit eigenem Merkmal, damit ein Pruefer sie
+     zaehlen kann, ohne den Quelltext zu lesen. */
+  function haengeFassschild(k, n) {
+    if (!n) return k;
+    var s = B.el('span', 'nm-fasspreis', '− ' + B.welt.menge(n));
+    s.title = B.welt.menge(n) + ' aus dem Lager. Dieselben Fässer hätten eine '
+      + 'Rechnung geschrieben.';
+    k.appendChild(s);
+    /* NICHT 'data-fass': das traegt DER GEGNER seit Welle 2b mit anderer
+       Bedeutung. Zwei Bedeutungen unter einem Merkmal haben in dieser Welle
+       schon eine Messung verdorben (Zustaendigkeit §19) — dieses hier ist
+       das juengere und heisst darum anders. */
+    k.setAttribute('data-fasspreis', String(n));
+    return k;
+  }
+
+  /* 'wo' entscheidet nur ueber den Zugschluessel: derselbe Posten steht im
+     Blatt, im Band und am Anschlag auf der Platte, und zwei Knoepfe duerfen
+     nie denselben data-zug tragen — sonst zaehlt ein Pruefer doppelt und
+     welt.zugDeckung greift den falschen. */
+  function zugSchluessel(k, wo) {
+    return 'name:' + (wo && wo !== 'blatt' ? wo + ':' : '') + k;
+  }
+
+  function knopfFuer(t, wo) {
     var jetzt = jahr();
     var gesperrt = false, warum = '';
 
     if (t.ab && jetzt < t.ab) {
       gesperrt = true;
       warum = t.sperr || ('Gibt es erst ab ' + t.ab + '.');
+    }
+    if (istGesperrt(t.k)) {
+      gesperrt = true; warum = gesperrtWarum(t.k);
     }
     if (t.art === 'fest' && Z.fest[t.k]) {
       gesperrt = true; warum = 'Steht seit ' + Z.fest[t.k] + '. Unwiderruflich.';
@@ -1233,11 +1760,20 @@
     var an = laeuft(t);
     var text = t.name;
     var preis = -t.preis;
+    var faesser = fassPreis(t);
+    var fragt = false;
     if (t.art === 'schalter' && Z.zeiger) { text = t.aus; preis = 0; }
     if (t.art === 'jahr' && an) {
-      text = 'Einstellen: ' + t.name.replace(
-        / (auflegen|anschlagen lassen|mieten|ausgeben|bedrucken|senden)$/, '');
-      preis = 0;
+      /* WAS DER KLICK TUT, STEHT AUF DEM KNOPF.  'Einstellen: Kronkorken'
+         hiess auf Deutsch beides — einrichten und aufhoeren — und tat das
+         zweite. Jetzt steht das Verb vorn, der Zustand dahinter, und der
+         erste Klick fragt nach, statt zu stornieren. */
+      var kurz = t.name.replace(/^(Den|Die|Das) /, '');
+      fragt = (Z.frage === t.k);
+      text = fragt
+        ? 'Wirklich abbestellen? ' + kurz + ' — das bezahlte Braujahr ist weg'
+        : 'Abbestellen: ' + kurz + ' (läuft bis Ende ' + jetzt + ')';
+      preis = 0; faesser = 0;                 /* abbestellen kostet kein Geld */
     }
 
     /* Ein Zug, der Geld kostet, aber nicht bezahlbar ist, bleibt sichtbar
@@ -1245,20 +1781,37 @@
     if (!gesperrt && preis < 0 && !B.welt.kann(-preis)) {
       gesperrt = true; warum = 'Die Kasse reicht nicht: ' + geld(-preis) + '.';
     }
+    /* Und dasselbe fuer das, was kein Geld ist. */
+    if (!gesperrt && faesser && fassDa() < faesser) {
+      gesperrt = true;
+      warum = 'Im Lager liegt zu wenig: ' + B.welt.menge(faesser) + ' gebraucht, '
+        + B.welt.menge(fassDa()) + ' da.';
+    }
+
+    /* Die Presse von 1884 tauscht nicht: sie ist voll, und der Knopf sagt,
+       um wieviel. Erst NACH der Kassenpruefung, damit der teurere Grund
+       nicht den naeherliegenden verdeckt. */
+    if (!gesperrt && !an && !bogenPasst(t)) { gesperrt = true; warum = bogenWarum(t); }
 
     /* Der Etat sperrt nicht, er tauscht — und sagt vorher, wen es trifft. */
     var tausch = '';
     if (t.art === 'jahr' && !an && etatVoll()) {
       var w = schwaechsterPosten();
       if (w) tausch = ' Der Etat trägt nur ' + etatPlaetze() + ' Posten: dafür wird '
-        + w.name.replace(/^(Den|Die|Das) /, '') + ' eingestellt.';
+        + w.name.replace(/^(Den|Die|Das) /, '') + ' abbestellt.';
     }
+    if (t.bogen && !an) tausch += ' Die Presse rechnet in Bogen: dieser Posten wiegt '
+      + t.bogen + ', frei sind ' + bogenFrei() + ' von ' + bogenDeckel() + '.';
+    if (t.art === 'jahr' && an) tausch = ' Der Posten läuft und ist bezahlt. Der erste '
+      + 'Klick fragt nach, der zweite bestellt ab — das Geld dieses Braujahres kommt '
+      + 'nicht zurück.' + (t.bogen ? ' Frei werden ' + t.bogen + ' Bogen.' : '')
+      + (etatPlaetze() ? ' Frei wird ein Platz im Etat.' : '');
 
     var k = B.knopf({
       text: text,
-      zug: 'name:' + t.k,
+      zug: zugSchluessel(t.k, wo),
       preis: preis,
-      klasse: 'nm-knopf' + (an ? ' nm-an' : ''),
+      klasse: 'nm-knopf' + (an ? ' nm-an' : '') + (fragt ? ' nm-fragt' : ''),
       aus: gesperrt,
       titel: (t.sagt || '') + (t.warnt ? ' — ' + t.warnt : '') + tausch
         + (warum ? ' [' + warum + ']' : ''),
@@ -1272,7 +1825,9 @@
         if (t.art === 'schutz') return gegenNachahmung();
       }
     });
-    return { knopf: k, gesperrt: gesperrt, warum: warum, traeger: t, an: an };
+    haengeFassschild(k, faesser);
+    return { knopf: k, gesperrt: gesperrt, warum: warum, traeger: t, an: an,
+      fass: faesser };
   }
 
   function reiterZeichen(blatt) {
@@ -1281,7 +1836,8 @@
     var kopf = B.el('div', 'nm-abschnitt');
     kopf.appendChild(B.el('h3', null, e.verb + ' — ' + e.medium));
     kopf.appendChild(B.el('p', 'nm-p', e.satz));
-    /* Die Knappheit dieser Epoche, als Zeile. In 1970 ist es der Etat. */
+    /* Die Knappheit dieser Epoche, als Zeile. In 1970 ist es der Etat,
+       in 1884 die Presse — und beide sagen, was sie ausschliessen. */
     if (etatPlaetze()) {
       kopf.appendChild(B.el('div', 'nm-etat',
         'DER ETAT: ' + etatBelegt() + ' von ' + etatPlaetze() + ' Posten belegt'
@@ -1290,6 +1846,14 @@
             + ' heraus.'
           : ' — es ist noch Platz.')));
     }
+    if (bogenDeckel()) {
+      kopf.appendChild(B.el('div', 'nm-etat nm-presse',
+        (e.bogenWort || 'DIE PRESSE') + ': ' + bogenBelegt() + ' von ' + bogenDeckel()
+        + ' Bogen im Braujahr belegt — frei sind ' + bogenFrei() + '.'));
+      kopf.appendChild(B.el('div', 'nm-p nm-klein', e.bogenSatz || ''));
+    }
+    /* 1970: warum hier fast nichts stehen bleibt — und was doch. */
+    if (e.festSatz) kopf.appendChild(B.el('div', 'nm-p nm-festsatz', e.festSatz));
     blatt.appendChild(kopf);
 
     /* Die Traeger, mit Preisschild nebeneinander. */
@@ -1302,11 +1866,15 @@
       if (t.reichweite) unter.appendChild(B.el('span', 'nm-marke', '+' + t.reichweite + ' Reichweite'));
       if (t.art === 'fest') unter.appendChild(B.el('span', 'nm-marke nm-fest', 'unwiderruflich'));
       if (t.art === 'jahr') unter.appendChild(B.el('span', 'nm-marke', 'ein Braujahr'));
+      if (t.bogen) unter.appendChild(B.el('span', 'nm-marke nm-tausch',
+        t.bogen + ' von ' + bogenDeckel() + ' Bogen'));
       if (t.art === 'jahr' && !laeuft(t) && etatVoll() && schwaechsterPosten()) {
         unter.appendChild(B.el('span', 'nm-marke nm-tausch', 'tauscht '
           + schwaechsterPosten().name.replace(/^(Den|Die|Das) /, '') + ' heraus'));
       }
       if (t.art === 'wette') unter.appendChild(B.el('span', 'nm-marke', 'fremde Jury'));
+      if (fassPreis(t)) unter.appendChild(B.el('span', 'nm-marke nm-fassmarke',
+        B.welt.menge(fassPreis(t)) + ' aus dem Lager'));
       if (t.hoechstens) unter.appendChild(B.el('span', 'nm-marke',
         zaehle(t.k === 'schild' ? Z.schilder : Z.umtrunk) + ' von ' + t.hoechstens));
       kasten.appendChild(unter);
@@ -1329,9 +1897,18 @@
       B.welt.adressenJetzt().forEach(function (a) {
         var drauf = !!fach[a.schluessel];
         var voll = zaehle(fach) >= (t.hoechstens || 6);
-        var kannNicht = !drauf && (voll || !B.welt.kann(t.preis));
-        reihe.appendChild(B.knopf({
-          text: (drauf ? (ep() === 1 ? 'Sitzt: ' : 'Anker: ') : '') + a.name,
+        var fn = drauf ? 0 : fassPreis(t);
+        var kannNicht = !drauf && (voll || istGesperrt(t.k) || !B.welt.kann(t.preis)
+          || fassDa() < fn);
+        /* Auch hier: was der Klick tut, steht auf dem Knopf. 'Anker: Hirsch'
+           sagte, dass eines hängt, und nahm es beim Klick ab. */
+        var fragtAb = (Z.frage === 'schild:' + a.schluessel);
+        var kn = B.knopf({
+          text: drauf
+            ? (ep() === 1 ? 'Sitzt schon: ' + a.name
+              : (fragtAb ? 'Wirklich abnehmen? Anker bei ' + a.name
+                : 'Anker abnehmen: ' + a.name))
+            : a.name,
           zug: 'name:' + t.k + ':' + a.schluessel,
           preis: drauf ? 0 : -t.preis,
           klasse: 'nm-knopf nm-adresse' + (drauf ? ' nm-an' : ''),
@@ -1341,12 +1918,77 @@
             + 'Was dieser Wirt sagt: ' + B.zahl(Z.urteil[a.schluessel] || 0)
             + ' · er zahlt derzeit ' + B.zahl(satzFuer(a.schluessel) * 100, 1)
             + ' im Hundert Aufgeld auf jede Rechnung'
+            + (fn ? ' · kostet ' + B.welt.menge(fn) + ' aus dem Lager' : '')
+            /* Warum dieser Knopf aus ist, steht am Knopf — nicht nur die
+               Zahl "6 von 6" irgendwo daneben. */
+            + (!drauf && voll ? ' [' + (ep() === 1
+              ? 'Drei Umtrunke sind das Äußerste, was eine Amtszeit schafft: '
+                + zaehle(fach) + ' von ' + (t.hoechstens || 3) + ' sind gesetzt. '
+                + 'Erst die nächste Amtszeit macht wieder Platz.'
+              : 'Mehr Türen trägt das Haus in dieser Epoche nicht: '
+                + zaehle(fach) + ' von ' + (t.hoechstens || 6) + ' hängen. '
+                + 'Wer eines abnimmt, macht eine Tür frei.') + ']' : '')
+            + (!drauf && !voll && !B.welt.kann(t.preis)
+              ? ' [Die Kasse reicht nicht: ' + geld(t.preis) + '.]' : '')
+            + (!drauf && !voll && fn && fassDa() < fn
+              ? ' [Im Lager liegt zu wenig: ' + B.welt.menge(fn) + ' gebraucht, '
+                + B.welt.menge(fassDa()) + ' da.]' : '')
+            + (istGesperrt(t.k) ? ' [' + gesperrtWarum(t.k) + ']' : '')
             + (drauf && ep() === 2 ? ' — abnehmen kostet kein Geld und trotzdem etwas.' : ''),
           tu: function () { schildBei(a); }
-        }));
+        });
+        haengeFassschild(kn, fn);
+        reihe.appendChild(kn);
       });
       ab.appendChild(reihe);
       blatt.appendChild(ab);
+    }
+
+    /* ----------------------------------------------------------------
+       WAS DAS ZEICHEN KOSTEN KANN — die Instanz, die es wieder nimmt.
+       Sie steht auch dann da, wenn nichts genommen ist: ein Risiko, das
+       man erst sieht, wenn es eingetreten ist, ist keine Entscheidung.
+       ---------------------------------------------------------------- */
+    var ed = entzugDaten();
+    if (ed) {
+      var eb = B.el('div', 'nm-abschnitt' + (entzogen() ? ' nm-entzogen' : ''));
+      eb.appendChild(B.el('h3', null, ed.wer + ' — was das Zeichen wieder nehmen kann'));
+      if (entzogen()) {
+        eb.appendChild(B.el('p', 'nm-p', ed.text + ' Bis ' + Z.entzug.bis + '. '
+          + (ed.wartet || '')));
+        var kr2 = B.knopf({
+          text: ed.zurueck, zug: 'name:entzug-loesen-blatt', preis: -(ed.preis || 0),
+          klasse: 'nm-knopf nm-rot',
+          aus: guete() < (ed.guete || 55) || fassDa() < fassPreis(ed)
+            || !B.welt.kann(ed.preis || 0),
+          titel: ed.zurueckSagt,
+          tu: loeseEntzug
+        });
+        haengeFassschild(kr2, fassPreis(ed));
+        eb.appendChild(kr2);
+        eb.appendChild(B.el('div', 'nm-warnt', 'Was genommen wurde, kommt nicht mit '
+          + 'zurück. Der Rückweg macht nur die Sperre auf.'));
+      } else {
+        eb.appendChild(B.el('p', 'nm-p', 'Steht dreimal binnen sechs Jahren im Register, '
+          + 'dass unter dem Zeichen dünnes Bier ausging, dann nimmt es ' + ed.wer
+          + ': ' + ed.text.charAt(0).toLowerCase() + ed.text.slice(1)
+          + ' Ein Lob nimmt eine dieser Zeilen zurück.'));
+        eb.appendChild(B.el('div', 'nm-zaehler',
+          'SCHWERE ZEILEN: ' + bruchStand() + ' von 3'
+          + (Z.entzuege ? ' · schon ' + Z.entzuege + '-mal verloren' : '')));
+      }
+      blatt.appendChild(eb);
+    }
+
+    /* Was der Ruf bis jetzt gekostet hat, das kein Geld war. */
+    if (Z.fassAus) {
+      var fb = B.el('div', 'nm-abschnitt');
+      fb.appendChild(B.el('h3', null, 'Was der Name aus dem Lager genommen hat'));
+      fb.appendChild(B.el('p', 'nm-p', B.welt.menge(Z.fassAus) + ' seit ' + epd().jahr
+        + ' (im ganzen Haus ' + B.welt.menge(Z.fassGesamt) + '). Es sind dieselben '
+        + 'Fässer, die sonst eine Rechnung geschrieben hätten — das ist der Preis '
+        + 'des Namens, der nicht in der Kasse steht.'));
+      blatt.appendChild(fb);
     }
 
     /* Der Nachahmer. */
@@ -1432,15 +2074,15 @@
     var ab = B.el('div', 'nm-abschnitt');
     ab.appendChild(B.el('h3', null, epd().aufgeldWort + ' — was der Ruf einbringt'));
     ab.appendChild(B.el('p', 'nm-p', epd().aufgeldSatz
-      + ' Der Satz ist Ruf ÷ 100 mal ' + B.zahl(epd().aufschlag * 100, 0)
-      + ' im Hundert, der Höchstsatz dieser Epoche. Wer ein Zeichen an seiner Tür '
-      + 'hat, zahlt mehr; wer schlecht über das Haus redet, weniger; und solange '
-      + 'das Zeichen verdeckt ist, zahlt niemand etwas.'));
+      + ' Mehr als ' + B.zahl(epd().aufschlag * 100, 0) + ' im Hundert zahlt in dieser '
+      + 'Zeit niemand; wie nah das Haus daran kommt, sagt der Ruf. Wer ein Zeichen '
+      + 'an seiner Tür hat, zahlt mehr; wer schlecht über das Haus redet, weniger; '
+      + 'und solange das Zeichen verdeckt ist, zahlt niemand etwas.'));
     ab.appendChild(B.el('p', 'nm-p nm-offen',
-      'DER NAME schreibt keinen Preis. Den Grundpreis je Fass setzt DER PREIS; '
-      + 'das Aufgeld darauf bucht DER NAME hier selbst, mit welt.nimm(), unter '
-      + 'eigenem Namen. Sobald DER PREIS welt.haus.rufAufschlag liest, hört das '
-      + 'hier auf — damit nichts zweimal in der Kasse steht.'));
+      'Der ' + masspreiswort() + ' selbst bleibt der ' + masspreiswort()
+      + '. Das Aufgeld ist ein eigener Posten '
+      + 'unter dem Strich, mit Datum, Haus und Satz — jede Zeile hier ist eine, die '
+      + 'ein Wirt bezahlt hat, weil der Anker darauf stand.'));
     blatt.appendChild(ab);
 
     var summe = B.el('div', 'nm-summen');
@@ -1463,7 +2105,7 @@
       tab.appendChild(B.el('h3', null, 'Was jedes Haus für dieselbe Menge zahlt'));
       var kopfz = B.el('div', 'zeile nm-zeile nm-tabkopf');
       kopfz.appendChild(B.el('span', 'wann', 'Haus'));
-      kopfz.appendChild(B.el('span', 'was', 'Menge · Rechnung der Fuhre · Aufgeld des Namen'));
+      kopfz.appendChild(B.el('span', 'was', 'Menge · Rechnung · Aufgeld auf den Anker'));
       kopfz.appendChild(B.el('span', 'zahl', 'je ' + B.welt.mengeEinheit()));
       tab.appendChild(kopfz);
       wirte.sort(function (a2, b2) { return Z.jeWirt[b2].rechnung - Z.jeWirt[a2].rechnung; });
@@ -1488,8 +2130,8 @@
     var liste = B.el('div', 'nm-register nm-buch rolle');
     if (!Z.buch.length) {
       liste.appendChild(B.el('div', 'zeile',
-        'Noch keine Buchung. Es fällt an, sobald eine Fuhre ankommt und das Zeichen '
-        + 'dabei zu sehen ist.'));
+        'Noch keine Buchung. Es fällt an, sobald ein Wagen bei einem Wirt ankommt und '
+        + 'das Zeichen dabei zu sehen ist.'));
     }
     Z.buch.slice().reverse().forEach(function (e) {
       var z = B.el('div', 'zeile nm-zeile gut');
@@ -1518,7 +2160,7 @@
     links.appendChild(B.el('h2', null, 'Das Zeichen des Hauses · ' + jahr()));
     links.appendChild(B.el('div', 'nm-unterzeile',
       'Ruf ' + ruf() + ' · Bekanntheit ' + Math.round(Z.bekannt) + ' von ' + epd().deckel
-      + ' · Deckung ' + Math.round(Z.deckung) + ' · Keller-Güte ' + guete()
+      + ' · Einlösung ' + Math.round(Z.einloesung) + ' · Güte des Kellers ' + guete()
       + ' · Aufgeld dieses Braujahr ' + geld(Z.aufgeldJahr)));
     kopf.appendChild(links);
 
@@ -1578,15 +2220,37 @@
   /* Der naechste sinnvolle Zug dieses Stuecks — aber NIE mit Preis 0,
      sonst zerlegt es die Deckungszahl des Kerns fuer alle vier Stuecke. */
   function meldeZug() {
-    var billigster = null;
+    var billigster = null, schluessel = null;
     traegerListe().forEach(function (t) {
       if (!t.preis || laeuft(t) || (t.ab && jahr() < t.ab)) return;
+      if (istGesperrt(t.k)) return;
       if (t.art === 'fest' && Z.fest[t.k]) return;
       if (t.art === 'schutz' && !Z.nachahmung) return;
       if (t.art === 'notbremse') return;
-      if (!billigster || t.preis < billigster.preis) billigster = t;
+      /* Zustaendigkeit §24: wer meldet, nennt seinen Zugschluessel — und
+         wird beim Wort genommen. Ein Traeger, dessen Knopf gerade nicht auf
+         dem Schirm steht (das Blatt ist zu) oder aus ist, wird nicht
+         gemeldet: eine Zahl ohne bedienbaren Knopf ist eine Behauptung. */
+      /* Derselbe Posten steht an bis zu drei Stellen; gemeldet wird der
+         Schluessel, der WIRKLICH zu treffen ist. Ein Knopf in einem vom
+         Rahmen zugeklappten Brett ist weggeschnitten (clip-path) und
+         zaehlt nicht — sonst stuende die Zahl neben nichts. */
+      var k = null;
+      ['anschlag', 'jetzt', 'blatt'].forEach(function (wo) {
+        if (k) return;
+        var kn = document.querySelector('[data-zug="' + zugSchluessel(t.k, wo) + '"]');
+        if (kn && !kn.disabled && !kn.closest('.stadt-zugeklappt')) k = kn;
+      });
+      if (!k) return;
+      if (!billigster || t.preis < billigster.preis) { billigster = t; schluessel = 'name:' + t.k; }
     });
-    if (billigster) B.welt.meldeZug(billigster.name, billigster.preis);
+    /* KEINE 'art'. Zustaendigkeit §18: der Nenner der zweiten Latte ist der
+       billigste Zug, der die LAGE des Hauses aendert — ein Wirtshausschild
+       ist Werbung, kein umkaempfter Zug. Dieses Stueck hat vierhundert
+       Wochen lang die Kopfzeile mit einem Bierdeckel gewonnen; es meldet
+       darum mit Rang 0 und verliert gegen alles, was Fass, Adresse, Bau
+       oder Bindung bewegt. Das ist Absicht und keine Auslassung. */
+    if (billigster) B.welt.meldeZug(billigster.name, billigster.preis, null, schluessel);
   }
 
   /* ======================================================================
@@ -1626,7 +2290,7 @@
          Ruf, den seine Vorfahren gebaut haben. Das ist die Ausgangslage,
          nicht das Verdienst des Spielers — DAS ERBE nimmt sie spaeter. */
       Z.bekannt = [18, 27, 41, 53][e - 1];
-      Z.deckung = [55, 58, 60, 62][e - 1];
+      Z.einloesung = [55, 58, 60, 62][e - 1];
       Z.adlerRuf = [7, 12, 22, 34][e - 1];
       Z.kieserWoche = B.wuerfel.ganz(4, 14);
       /* Was vor dem Start im Protokoll steht, gehoert nicht diesem Stueck. */
@@ -1674,7 +2338,7 @@
           erloschen: false, erloschDurch: 0, loeschte: 0,
           text: 'Der gemarkte Krug, eingeführt vor dem Erbfall, trägt jetzt.'
         });
-        Z.deckung = Math.min(100, Z.deckung + 3);
+        Z.einloesung = Math.min(100, Z.einloesung + 3);
       }
       veroeffentliche();
     }
@@ -1695,7 +2359,7 @@
     bekannt: function () { return Math.round(Z.bekannt); },
     ziel: zielBekannt,
     ruhe: function () { return !!Z.ruhe; },
-    deckung: function () { return Math.round(Z.deckung); },
+    einloesung: function () { return Math.round(Z.einloesung); },
     aufschlag: aufschlag,
     guete: guete,
     medium: function () { return epd().medium; },
@@ -1721,6 +2385,14 @@
     },
     satz: satzFuer,
     etat: function () { return { plaetze: etatPlaetze(), belegt: etatBelegt() }; },
+    /* Was der Ruf kostet, das kein Geld ist — und was er verlieren kann. */
+    fass: function () { return { epoche: Z.fassAus, gesamt: Z.fassGesamt }; },
+    entzug: function () {
+      var e = entzugDaten();
+      return { offen: entzogen(), wer: e ? e.wer : null,
+        bis: Z.entzug ? Z.entzug.bis : 0, zeilen: bruchStand(), von: 3,
+        entzuege: Z.entzuege, gesperrt: Object.keys(Z.gesperrt).slice() };
+    },
     aktiv: function () { return aktiveZeilen().length; },
     lebendig: pruefeLebendig,
     blatt: zeigeBlatt

@@ -632,9 +632,33 @@
        Mit 0,45 haelt die Schaetzung nach einem Jahr noch knapp die Haelfte
        und ist nach dreien bei einem Zehntel. Der Ruf eines grossen Hauses
        traegt damit ueber ein mageres Jahr — nicht ueber ein mageres
-       Jahrzehnt. */
-    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.45);
-    rechneAnschlag();
+       Jahrzehnt.
+
+       DIE SCHAETZUNG WIRD ERST GEMACHT, WENN DIE RECHNUNG BEZAHLT IST.
+
+       Bis zum 3. August 2026 standen die beiden Zeilen `Z.hoehe = …` und
+       `rechneAnschlag()` GENAU HIER, also vor Schritt 2 bis 7 — vor
+       Rueckstand, Pflichten, Raten, Handlohn und Umlage. Der Schaetzer sah
+       damit die Lade, wie sie beim Aufschliessen aussah, und der Spieler
+       kaufte aus der Lade, wie sie nach dem Zahltag aussah. Am Bildschirm
+       nachgesehen, Michaelitafel 1351 der sorgfaeltig gespielten Linie:
+       Kopfzeile „Kasse 48 Pf", Rechnung „Zusammen −191 Pf", und im Kasten DER
+       ANSCHLAG „aus der Barschaft 632 Pf" — angeschlagen wurde ein Haus mit
+       239 Pf, zahlen musste eines mit 48. Das billigste Angebot desselben
+       Tages kostete darum 77 Pf; nachher, mit derselben Saat und derselben
+       gespielten Linie, kostet es 43 Pf, und DIE LEITER liest 1,12x statt
+       0,62x. In 1350 faellt es nicht auf, weil der erste Michaeli keine
+       Rechnung hat — deshalb steht dort 3,11x und danach die mageren Jahre.
+
+       Ein Boettcher, ein Maurer und ein Grutherr schlagen an, was sie sehen,
+       und sie sehen den Hof am Nachmittag des Michaelistags, nicht am
+       Vormittag. Die beiden Zeilen stehen jetzt hinter Schritt 7. Der
+       Nachgeber 0,45 bleibt: er traegt den Ruf des grossen Hauses ueber ein
+       mageres Jahr, und er traegt ihn jetzt ueber die Rechnung desselben
+       Tages. Nichts zwischen hier und Schritt 8 liest `Z.anschlag` —
+       Pflichten, Umlage und Handlohn haengen an den drei Wurzeln, die
+       Festlegung an `festBasis()`, und beide sind von der Schaetzung
+       unabhaengig. */
 
     /* 2. Der Rueckstand des Vorjahres steht vorn, mit Aufschlag. Er kann sich
           nicht ins Bodenlose schrauben: was ueber eine Jahreslast hinauswaechst,
@@ -784,20 +808,40 @@
         + ' mit Aufschlag wieder.');
     }
 
+    /* 7c. JETZT erst die Schaetzung — die Lade steht offen, die Rechnung ist
+           abgetragen, und was uebrig ist, ist die Barschaft, aus der heute
+           gekauft wird. Die lange Begruendung steht oben bei Schritt 1. */
+    Z.hoehe = Math.max(B.welt.haus.kasse, Z.hoehe * 0.45);
+    rechneAnschlag();
+
     /* 8. Die Bierordnung des Jahres. */
     setzeBierpreis();
 
     /* 9. Die Angebote dieses Michaeli. */
     waehleAngebote();
 
-    /* 10. Die eine Zahl, aufgeschrieben, damit man sie nebeneinanderlegen kann. */
+    /* 10. Die eine Zahl, aufgeschrieben, damit man sie nebeneinanderlegen kann.
+
+           ZWEI SPALTEN, ZWEI BEDEUTUNGEN, BEIDE BESCHRIFTET.
+           `billigst`/`verhaeltnis` ist die eigene Preisleiter: die Barschaft
+           gegen das billigste Angebot DIESER Tafel. Das ist eine Aussage
+           ueber die Sprossen, die dieses Stueck anbietet, und keine
+           Kennzahl — die Tafel liegt an 29 von 30 Wochen zu.
+           `zugPreis`/`zugVerh` ist die Kennzahl der Latte und kommt aus
+           derselben Quelle wie die Zahl unten rechts am Bildschirm
+           (`welt.zugDeckung()`); sie wird erst beim ersten Bildaufbau
+           gefuellt, weil die Stuecke ihren naechsten Zug erst dann melden.
+           Vorher stand hier nur die linke Spalte, und sie hiess DIE LEITER —
+           daher zwei Zahlen fuer dieselbe Lage (1350/W1: Kopfzeile 5,89x,
+           Leiter 3,11x). */
     var billig = billigstesAngebot();
     Z.leiter.push({
       jahr: jahr(),
       kasse: Math.round(B.welt.haus.kasse),
       billigst: billig ? billig.preis : 0,
       name: billig ? billig.a.name : '—',
-      verhaeltnis: billig && billig.preis ? B.welt.haus.kasse / billig.preis : 0
+      verhaeltnis: billig && billig.preis ? B.welt.haus.kasse / billig.preis : 0,
+      zugWas: null, zugPreis: 0, zugArt: null, zugVerh: 0, zugFest: false
     });
     if (Z.leiter.length > 24) Z.leiter.shift();
 
@@ -1003,11 +1047,11 @@
      'Nehmen' bedienbar ist. Sonst schweigt dieses Stueck, und der Nenner
      gehoert dem, der wirklich einen Zug anzubieten hat.
 
-     Was dabei NICHT verlorengeht: DIE LEITER auf der Tafel und die Zeile
-     "Kasse reicht dafür" am Griff rechnen weiter jede Woche mit dem
-     billigsten Angebot. Das ist die ehrliche Messung der Latte, und sie
-     steht dort ganzjaehrig, weil sie eine Aussage ueber die Preisleiter
-     macht und keine ueber den naechsten Klick.
+     Was dabei NICHT verlorengeht: die Spalte "eigene Tafel" auf der LEITER
+     und die Zeile "Kasse : dieses Angebot" am Griff rechnen weiter jede
+     Woche mit dem billigsten Angebot. Das ist eine Aussage ueber die
+     Preisleiter dieses Hauses — und ausdruecklich NICHT die Kennzahl der
+     Latte. Die steht daneben und kommt aus `welt.zugDeckung()`.
      ====================================================================== */
   function meldeZug() {
     if (B.welt.zeit.woche !== 1) return;
@@ -1027,6 +1071,47 @@
        das ist hier moeglich — der Griff kann zugeklappt sein —, und dann soll
        die Kopfzeile diese Zahl auch nicht nennen. */
     if (best) B.welt.meldeZug(best.a.name, best.preis, 'bau', 'preis:nimm:' + best.a.k);
+  }
+
+  /* ======================================================================
+     DIE KENNZAHL IN DIE LEITER SCHREIBEN — EINMAL IM JAHR, AUS DER QUELLE,
+     AUS DER SIE AUCH UNTEN RECHTS KOMMT.
+
+     Zwei Zahlen fuer dieselbe Lage waren der schwerste Einwand gegen dieses
+     Stueck: am 1350/W1 sagte die Kopfzeile „Kasse reicht 5,9x" und DIE
+     LEITER „3,11x". Beide hatten recht — sie massen Verschiedenes, und
+     keine sagte, was sie mass. Solange das so ist, ist die Kennzahl des
+     Stuecks nicht falsifizierbar: wer sie widerlegen will, weiss nicht, an
+     welcher Zahl.
+
+     Jetzt fuehrt DIE LEITER die Kennzahl selbst — nicht nachgerechnet,
+     sondern abgelesen: `B.welt.zugDeckung()` ist dieselbe Funktion, aus der
+     `kern/kopf.js` seine Zahl nimmt. Steht sie im Bild, steht sie in der
+     Leiter, Ziffer fuer Ziffer.
+
+     Warum nicht sofort in `michaeli()`: `buehne.js` loescht `naechsterZug`
+     zu Beginn jedes Bildaufbaus, und die Stuecke melden ihn im selben
+     Durchgang neu. In `michaeli()` — das aus der Uhr kommt, nicht aus dem
+     Zeichnen — steht dort noch nichts oder etwas von voriger Woche. Also
+     dasselbe Verfahren wie in `kern/kopf.js`: ein Bildaufbau spaeter.
+     `zugDeckung()` gibt `null`, solange zu der Zahl kein bedienbarer Knopf
+     am Bildschirm steht; dann wird es in derselben Woche 1 einfach noch
+     einmal versucht. Was einmal steht, wird nicht mehr angefasst — sonst
+     wanderte eine Jahreszahl, weil jemand ein Brett aufklappt.
+     ====================================================================== */
+  function fuelleKennzahl() {
+    if (B.welt.zeit.woche !== 1) return;
+    var l = Z.leiter[Z.leiter.length - 1];
+    if (!l || l.jahr !== jahr() || l.zugFest) return;
+    var d = B.welt.zugDeckung();
+    var n = B.welt.naechsterZug;
+    if (d === null || !n || !n.preis) return;
+    l.zugWas = n.was;
+    l.zugPreis = n.preis;
+    l.zugArt = n.art || null;
+    l.zugVerh = d;
+    l.zugFest = true;
+    B.sende('zeichne', { grund: 'preis-kennzahl' });
   }
 
   /* ----------------------------------------------------------------------
@@ -1088,6 +1173,17 @@
   }
 
   function festPreis(f) { return f.anteil ? rundePreis(f.anteil * festBasis()) : 0; }
+
+  /* Alles, was in der Chronik des Hauses unabaenderlich steht — gleich,
+     welches Stueck es hineingeschrieben hat. DER GEGNER, DIE FUHRE und DAS
+     ERBE schreiben mit `art='festlegung'`; dieses Stueck ebenfalls. Die
+     eigene Zahl bleibt als Untergrenze stehen, falls ein Stueck seine Zeile
+     einmal anders benennt. */
+  function festlegungenGesamt() {
+    var n = 0;
+    (B.welt.chronik || []).forEach(function (c) { if (c && c.art === 'festlegung') n++; });
+    return Math.max(n, Object.keys(Z.festGenommen).length);
+  }
 
   function festlege(f) {
     if (B.welt.zeit.woche !== 1) return;
@@ -1235,14 +1331,19 @@
     an.appendChild(zeile('aus dem Umsatz des Vorjahrs', geld(Math.round(ausUmsatz))));
     an.appendChild(zeile('aus der Barschaft', geld(Math.round(ausKasse))));
     if (amBoden()) {
-      an.appendChild(zeile('Mindestansatz dieser Zeit', geld(e.grund), 'pr-umlage'));
-      an.appendChild(B.el('div', 'pr-satz pr-klein',
-        'Unter diese Zahl schlägt in dieser Zeit niemand einen Bau an. Sie steigt '
-        + 'nicht mit der Teuerung — sie ist der Ansatz der Zeit und nicht das Haus.'));
+      /* Eine Zeile, keine zusaetzliche. Der Kasten DER ANSCHLAG steht neben
+         WAS SCHON STEHT; ein Absatz mehr schiebt dessen Fuss aus dem Rahmen —
+         am Bildschirm nachgesehen, Michaelitafel 1970. */
+      var bz = zeile('Mindestansatz dieser Zeit', geld(e.grund), 'pr-umlage');
+      bz.title = 'Unter diese Zahl schlägt in dieser Zeit niemand einen Bau an. '
+        + 'Sie ist der Ansatz der Zeit und nicht das Haus: ein Haus, das schrumpft, '
+        + 'wird nach ihr bedient, aber sie wächst nicht mit den Jahren.';
+      an.appendChild(bz);
     }
     if (Z.kaeufe) an.appendChild(zeile('Aufschlag für ' + Z.kaeufe + ' gebaute Sachen',
       '+' + B.zahl((Math.pow(ep().teuerungKauf, Z.kaeufe) - 1) * 100, 0) + '%'));
-    an.appendChild(zeile('Teuerung seit ' + Z.startjahr,
+    an.appendChild(zeile('Teuerung seit ' + Z.startjahr
+        + (amBoden() ? ' — nicht auf den Mindestansatz' : ''),
       '+' + B.zahl((Math.pow(ep().teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40)) - 1) * 100, 0) + '%'));
     an.appendChild(B.el('div', 'pr-satz pr-klein', e.anschlagSatz));
     sp.appendChild(an);
@@ -1554,26 +1655,57 @@
     f.appendChild(B.el('div', 'pr-satz pr-klein', ep().pfand));
     sp.appendChild(f);
 
-    var lf = B.el('div', 'pr-feld pr-leiter');
-    lf.appendChild(B.el('h3', null, 'DIE LEITER'));
+    sp.appendChild(leiterFeld(Z.leiter.slice(-8), false));
+
+    return sp;
+  }
+
+  /* --- DIE LEITER, an zwei Stellen dasselbe --------------------------------
+     Eine Zahl ist die Kennzahl der Latte, die andere die eigene Preisleiter.
+     Sie standen bis zum 3. August 2026 als EINE Spalte unter EINER
+     Ueberschrift da, und die Kopfzeile unten rechts sagte in derselben
+     Sekunde etwas anderes. Jetzt stehen beide nebeneinander, jede mit ihrem
+     Satz darueber, und die linke ist Ziffer fuer Ziffer die der Kopfzeile.
+     ---------------------------------------------------------------------- */
+  function leiterFeld(reihen, rolle) {
+    var lf = B.el('div', 'pr-feld pr-leiter' + (rolle ? ' pr-leiter-breit' : ''));
+    lf.appendChild(B.el(rolle ? 'div' : 'h3', rolle ? 'pr-chronik-kopf' : null,
+      'DIE LEITER' + (rolle ? ' — ALLE JAHRE' : '')));
     lf.appendChild(B.el('div', 'pr-satz pr-klein',
-      'Barschaft zu Michaeli gegen das billigste Angebot desselben Tages.'));
+      'Links die Kennzahl: Barschaft zu Michaeli gegen den Preis des nächsten '
+      + 'sinnvollen Zuges — dieselbe Zahl, die unten rechts am Bildschirm steht, '
+      + 'aus derselben Quelle abgelesen. Rechts die eigene Preisleiter: was das '
+      + 'billigste Angebot DIESER Tafel am selben Tag kostete. '
+      + 'Die rechte Spalte ist keine Kennzahl — diese Tafel liegt an '
+      + (B.uhr.WOCHEN_IM_JAHR - 1) + ' von ' + B.uhr.WOCHEN_IM_JAHR + ' Wochen zu, '
+      + 'und sie fällt, sobald die billigen Sprossen genommen sind. Das ist keine '
+      + 'Verschlechterung, sondern der Grund, warum es Sprossen gibt.'
+      + (rolle ? ' Wächst die Kasse schneller als der nächste Zug, ist das Haus fertig.' : '')));
+
     var kopfz = B.el('div', 'pr-leiter-zeile pr-leiter-kopf');
-    ['Jahr', 'Kasse', 'billigstes', 'reicht'].forEach(function (t) {
+    ['Jahr', 'Kasse', 'nächster Zug', 'reicht', 'eigene Tafel', 'reicht'].forEach(function (t) {
       kopfz.appendChild(B.el('span', null, t));
     });
     lf.appendChild(kopfz);
-    Z.leiter.slice(-9).forEach(function (r) {
+
+    var ziel = lf;
+    if (rolle) { ziel = B.el('div', 'pr-leiter-rolle rolle'); lf.appendChild(ziel); }
+
+    reihen.forEach(function (r) {
       var z = B.el('div', 'pr-leiter-zeile');
       z.appendChild(B.el('span', null, r.jahr));
       z.appendChild(B.el('span', null, B.welt.geld(r.kasse, true)));
-      z.appendChild(B.el('span', null, B.welt.geld(r.billigst, true)));
-      z.appendChild(B.el('span', 'pr-verh', r.verhaeltnis ? B.zahl(r.verhaeltnis, 2) + '×' : '—'));
-      lf.appendChild(z);
+      var kz = B.el('span', null, r.zugPreis ? B.welt.geld(r.zugPreis, true) : '—');
+      if (r.zugWas) kz.title = r.zugWas + (r.zugArt ? ' · ' + r.zugArt : '');
+      z.appendChild(kz);
+      z.appendChild(B.el('span', 'pr-verh pr-verh-kennzahl',
+        r.zugVerh ? B.zahl(r.zugVerh, 2) + '×' : '—'));
+      z.appendChild(B.el('span', 'pr-leiter-eigen', B.welt.geld(r.billigst, true)));
+      z.appendChild(B.el('span', 'pr-verh pr-leiter-eigen',
+        r.verhaeltnis ? B.zahl(r.verhaeltnis, 2) + '×' : '—'));
+      ziel.appendChild(z);
     });
-    sp.appendChild(lf);
-
-    return sp;
+    return lf;
   }
 
   /* --- Die Chronik ------------------------------------------------------
@@ -1666,25 +1798,7 @@
 
     /* 3 — die eine Zahl, ueber alle Jahre */
     var rechts = B.el('div', 'pr-chronik-spalte pr-chronik-leiter');
-    rechts.appendChild(B.el('div', 'pr-chronik-kopf', 'DIE LEITER — ALLE JAHRE'));
-    rechts.appendChild(B.el('div', 'pr-satz pr-klein',
-      'Barschaft zu Michaeli gegen das billigste Angebot desselben Tages. '
-      + 'Wächst die linke Spalte schneller als die mittlere, ist das Haus fertig.'));
-    var kopfz = B.el('div', 'pr-leiter-zeile pr-leiter-kopf');
-    ['Jahr', 'Kasse', 'billigstes', 'reicht'].forEach(function (t) {
-      kopfz.appendChild(B.el('span', null, t));
-    });
-    rechts.appendChild(kopfz);
-    var rolle2 = B.el('div', 'pr-leiter-rolle rolle');
-    Z.leiter.slice().reverse().forEach(function (r) {
-      var z = B.el('div', 'pr-leiter-zeile');
-      z.appendChild(B.el('span', null, r.jahr));
-      z.appendChild(B.el('span', null, B.welt.geld(r.kasse, true)));
-      z.appendChild(B.el('span', null, B.welt.geld(r.billigst, true)));
-      z.appendChild(B.el('span', 'pr-verh', r.verhaeltnis ? B.zahl(r.verhaeltnis, 2) + '×' : '—'));
-      rolle2.appendChild(z);
-    });
-    rechts.appendChild(rolle2);
+    rechts.appendChild(leiterFeld(Z.leiter.slice().reverse(), true));
     drei.appendChild(rechts);
 
     w.appendChild(drei);
@@ -1849,11 +1963,19 @@
       geld(Math.round(satzJetzt()))));
     stand.appendChild(zeile('Anschlag ' + jahr(), geld(Math.round(Z.anschlag))));
     if (billig) {
-      stand.appendChild(zeile('billigstes Angebot', geld(billig.preis)));
-      /* "Kasse reicht" steht auch unten rechts am Zug des Kerns und meint
-         dort etwas anderes. Also hier dazusagen, wofuer. Glaettung Welle 1. */
-      stand.appendChild(zeile('Kasse reicht dafür',
-        billig.preis ? B.zahl(B.welt.haus.kasse / billig.preis, 2) + '×' : '—', 'pr-verh'));
+      stand.appendChild(zeile('billigstes Angebot dieser Tafel', geld(billig.preis)));
+      /* Es steht auch unten rechts am Bildschirm eine Zahl mit einem „×"
+         dahinter, und sie meint etwas anderes: dort die Kennzahl der Latte
+         (der naechste sinnvolle Zug des ganzen Spiels), hier die eigene
+         Preisleiter. Zwei Zahlen, die dasselbe zu sein scheinen und es nicht
+         sind, waren der schwerste Einwand gegen dieses Stueck. Also traegt
+         diese hier ihren Bezug im Namen und nicht bloss im Satz daneben. */
+      var vz = zeile('Kasse : dieses Angebot',
+        billig.preis ? B.zahl(B.welt.haus.kasse / billig.preis, 2) + '×' : '—', 'pr-verh');
+      vz.title = 'Nur diese Tafel. Die Kennzahl unten rechts misst den nächsten '
+        + 'sinnvollen Zug des ganzen Spiels und ist meist eine andere Zahl; '
+        + 'beide stehen Jahr für Jahr nebeneinander auf der LEITER.';
+      stand.appendChild(vz);
     }
     var naechste = kommendeLasten()[0];
     if (naechste) {
@@ -1862,13 +1984,22 @@
     griff.appendChild(stand);
 
     griff.appendChild(B.knopf({
-      /* Der Zaehler stand in allen vier Epochen auf 0, und das war keine
-         falsche Zaehlung: der sorgfaeltig spielende Automat hat in
-         vierzehn Braujahren keine einzige Festlegung bezahlen koennen.
-         Er zaehlt weiter, was er heisst — nur steht jetzt daneben, was
-         sonst noch unabaenderlich in der Chronik steht. */
-      text: 'Chronik des Hauses · ' + Object.keys(Z.festGenommen).length + ' Festlegungen · '
-            + Object.keys(Z.fertig).length + ' gebaut',
+      /* ZWEI ZAHLEN, DIE VERSCHIEDENES ZAEHLEN, UND DAS STEHT JETZT DRAN.
+
+         Der Zaehler las `Object.keys(Z.festGenommen)` — also nur die
+         Festlegungen DIESER Tafel — und hiess trotzdem „Chronik des
+         Hauses". Nach einem Gegenzug in 1970 steht in `welt.chronik` ein
+         Eintrag mit `art='festlegung'`, und der Zaehler daneben blieb auf
+         0: die Zahl war da, der Zaehler las sie nicht (WELLE-3,
+         Kleinkram). Er zaehlt jetzt die Chronik des Hauses, so wie er
+         heisst — alle vier Stuecke.
+
+         Die zweite Zahl bleibt bewusst eng und heisst jetzt auch so: „von
+         dieser Tafel gebaut". Sie ist der Beleg dafuer, ob DER PREIS
+         ueberhaupt stattgefunden hat, und den darf ein weiter gefasster
+         Zaehler nicht zudecken. */
+      text: 'Chronik des Hauses · ' + festlegungenGesamt() + ' Festlegungen · '
+            + Object.keys(Z.fertig).length + ' von dieser Tafel gebaut',
       zug: 'preis:chronik-auf',
       klasse: 'pr-griff-chronik',
       titel: 'Was festgelegt wurde, steht dort unabänderlich.',
@@ -1922,6 +2053,13 @@
       if (tafelSichtbar()) { zeichneTafel(fach); seheNachRahmen(); }
 
       meldeZug();
+
+      /* Einen Bildaufbau spaeter steht der naechste Zug fest — dann, und nur
+         dann, traegt DIE LEITER die Kennzahl des Jahres ein. Begruendung bei
+         `fuelleKennzahl`. */
+      if (typeof requestAnimationFrame === 'function') {
+        requestAnimationFrame(function () { B.wage('preis.kennzahl', fuelleKennzahl); });
+      }
     }
   });
 

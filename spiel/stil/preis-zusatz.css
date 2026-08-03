@@ -221,3 +221,57 @@
 .pr-nahrung .pr-zeile { font-size: calc(var(--s) * 14); }
 .pr-nahrung .pr-mager .pr-zahl { color: var(--pr-rot); }
 .pr-nahrung .pr-frei  .pr-zahl { color: var(--pr-gruen); }
+
+/* --------------------------------------------------------------------------
+   DIE LEITER — SECHS SPALTEN, ZWEI BEDEUTUNGEN
+
+   Bis zum 3. August 2026 hatte diese Tabelle vier Spalten und EINE
+   Verhältniszahl, und unten rechts am Bildschirm stand eine zweite, die
+   anders lautete und dasselbe zu sein schien (1350/W1: dort 5,89×, hier
+   3,11×). Jetzt stehen beide nebeneinander: links die Kennzahl der Latte,
+   abgelesen aus derselben Quelle wie die Kopfzeile, rechts die eigene
+   Preisleiter dieser Tafel. Die rechte Hälfte steht in Grau und mit einer
+   Trennlinie davor, damit man am Bild sieht, welche der beiden Zahlen die
+   Kennzahl ist, bevor man die Überschrift gelesen hat.
+
+   Sechs Spalten in einer schmalen Randspalte: die Prozente müssen zusammen
+   100 ergeben UND es darf keine Spaltenlücke dazukommen, sonst schiebt die
+   letzte Zahl über die Kante. Am Bildschirm nachgesehen: mit
+   `column-gap: 4s` stand in 1350 „3,11" ohne das Mal-Zeichen da.
+   -------------------------------------------------------------------------- */
+.pr-leiter-zeile {
+  grid-template-columns: 13% 16% 19% 14% 21% 17%;
+  column-gap: 0;
+  font-size: calc(var(--s) * 13);
+}
+.pr-leiter-kopf { letter-spacing: 0; }
+.pr-leiter-zeile .pr-leiter-eigen {
+  color: var(--pr-schwach);
+}
+.pr-leiter-zeile span:nth-child(5) {
+  border-left: calc(var(--s) * 1) solid var(--pr-linie);
+  padding-left: calc(var(--s) * 5);
+}
+.pr-leiter-zeile span:last-child { padding-right: calc(var(--s) * 2); }
+.pr-verh-kennzahl { color: var(--pr-rot); font-weight: 600; }
+.pr-leiter-zeile .pr-verh.pr-leiter-eigen { color: var(--pr-schwach); font-weight: 400; }
+
+/* Auf der Chronikseite hat die Leiter eine ganze Spalte für sich; dort darf
+   sie breiter sein als das schmale Feld auf der Tafel. */
+.pr-chronik-leiter { flex: 0 0 34%; }
+.pr-leiter-breit .pr-leiter-zeile { font-size: calc(var(--s) * 13); }
+
+/* Auf der Chronikseite steht DIE LEITER in einer eigenen Spalte und braucht
+   dort keinen zweiten Rahmen um den, den die Spalte schon hat. Sie bekommt
+   nur die Höhe, damit die Rolle scrollt statt zu überlaufen. */
+.pr-chronik-leiter > .pr-leiter-breit {
+  background: none;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+.pr-leiter-breit > .pr-leiter-kopf,
+.pr-leiter-breit > .pr-satz { flex: 0 0 auto; }

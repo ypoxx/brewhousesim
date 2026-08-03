@@ -611,6 +611,16 @@
     0 0 calc(var(--s) * 16) rgba(0, 0, 0, 0.3);
 }
 
+/* Auf der Georgi-Tafel, einmal im Jahr: wie weit das Haus vom guten Ende weg
+   ist. Gruen, weil es das einzige Ende ist, nach dem weitergebraut wird. */
+.fu-sommer-uebergabe {
+  font-size: calc(var(--s) * 18);
+  line-height: 1.4;
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  border-left: calc(var(--s) * 4) solid var(--fu-gut, #4a6b3a);
+  background: rgba(74, 107, 58, 0.1);
+}
+
 /* Die Elle dieser Zeit: warum das Haus gerade JETZT uebergeben werden darf. */
 .fu-ausgang-mass {
   font-size: calc(var(--s) * 19);
@@ -712,3 +722,101 @@
   border-bottom: calc(var(--s) * 1) dotted var(--linie);
 }
 .fu-ende-gut .fu-satz { font-size: calc(var(--s) * 22); }
+
+/* ==========================================================================
+   DER GESCHLOSSENE HOF — Schloss 3 der Versiegelung
+
+   `html[data-hof-zu]` setzt stuecke/fuhre.js, sobald welt.zeit.ende steht,
+   und nimmt es nie wieder weg (der Wiederanfang laedt die Seite neu). Erst
+   dieses Blatt macht das Ende SICHTBAR: bis hierher wurde nur die Uhr
+   angehalten, waehrend das Brett weiter aussah wie ein Brett, auf dem man
+   handelt — und auf dem man auch handeln konnte (gemessen: −9.570 DM,
+   −14.790 DM, −49.900 DM mit drei Klicks nach dem Schlussblatt 1973).
+
+   Die Ausnahmeliste ist dieselbe wie in fuhre.js (darfNachEnde) und aus
+   demselben Grund: nach dem Ende darf gelesen werden, nicht gehandelt. Die
+   Reiterleiste bleibt, weil sonst niemand das Schlussblatt zurueckholt, das
+   Escape beiseitegelegt hat; Chronik und Buch bleiben, weil eine Partie, die
+   man nicht mehr nachlesen kann, keine Chronik hat.
+
+   `pointer-events: none` ist hier nicht Zierat, sondern die Messgroesse:
+   damit trifft elementFromPoint den Knopf nicht mehr, und der Kritiker
+   zaehlt am Bildschirm dasselbe, was der Code behauptet.
+
+   DASS EIN STUECK FREMDE KNOEPFE GRAU FAERBT, IST EIN VORGRIFF. Es gehoert
+   in kern/grund.css neben eine Sperre in kern/buehne.js (ZUSTAENDIGKEIT 2).
+   Die Kernbitte steht im Bericht; kommt sie an, faellt dieser Block weg.
+   ========================================================================== */
+/* Diese Liste ist Wort fuer Wort dieselbe wie NACH_ENDE_GENAU und
+   NACH_ENDE_ANFANG in stuecke/fuhre.js. Wer eine aendert, aendert beide —
+   sonst steht ein freigegebener Knopf da und laesst sich nicht druecken
+   (genau so ist der Griff zum Urteil beim Messen durchgefallen). */
+html[data-hof-zu] #buehne button[data-zug]:not([data-zug="weiter"]):not([data-zug="fuhre:wiederanfang"]):not([data-zug="fuhre:urteil-auf"]):not([data-zug="fuhre:schluss-auf"]):not([data-zug="stadt:alles-zuklappen"]):not([data-zug="stadt:ortsmarken"]):not([data-zug="klang:ton"]):not([data-zug^="kern:"]):not([data-zug^="stadt:reiter:"]) {
+  pointer-events: none;
+  opacity: .34;
+  filter: grayscale(1);
+  cursor: default;
+  box-shadow: none;
+}
+
+/* Die Kopfzeile des Kerns wirbt sonst weiter fuer einen naechsten Zug auf
+   einem Hof, den das Spiel selbst fuer geschlossen erklaert hat — gemessen
+   „naechster Zug: Abloesung Schenke am Tor — 32.400 DM (Kasse reicht 5,2x)"
+   neben dem Schlussblatt von 1973. Der Kern kann sie selbst wegnehmen (eine
+   Zeile in welt.zugDeckung, siehe Bericht); bis dahin nimmt sie dieses
+   Blatt weg. */
+html[data-hof-zu] .deckung[data-deckung] { display: none !important; }
+
+/* Und dieselbe Werbung ein zweites Mal: DER GEGNER schreibt seine eigene
+   Kennzahl `.gg-kennzahl[data-umkaempft]` daneben ins Bild („UMKÄMPFT
+   Abloesung Muehlschenke — 21.870 DM · Kasse reicht 1,8x"), und sie steht
+   nach dem Ende genauso da wie die des Kerns. Zwei Kennzahlen nebeneinander
+   sind ohnehin eine zu viel (WELLE-3: „seine Uebergangszeile mit
+   data-umkaempft darf jetzt verschwinden"); auf einem geschlossenen Hof
+   sind es zwei zu viel. Weggenommen wird sie hier nur fuer den einen
+   Zustand, den dieses Stueck besitzt. Ganz weg gehoert sie DEM GEGNER. */
+html[data-hof-zu] .gg-kennzahl[data-umkaempft] { display: none !important; }
+
+/* Und ein sichtbares Wort statt bloss grauer Knoepfe. Es haengt am
+   Schlussblatt, nicht am Hof, damit es mit ihm zusammen beiseitegeht. */
+.fu-schluss-siegel {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 18);
+  letter-spacing: calc(var(--s) * 1);
+  color: #6b4a2a;
+  padding: calc(var(--s) * 4) 0 0;
+  opacity: .85;
+}
+
+/* Der Griff, der das beiseitegelegte Urteil zurueckholt. Er steht dort, wo
+   sonst das Schlussblatt anfaengt, damit der Blick ihn dort sucht, wo das
+   Blatt lag — und er ist gross, weil er nach dem Ende der einzige Knopf im
+   Bild ist, der etwas oeffnet. */
+.fu-urteilgriff {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  translate: -50% -50%;
+  z-index: 5;
+  pointer-events: none;      /* nur der Knopf darin faengt Klicks */
+}
+
+/* NACH DEM ENDE LIEGT DAS URTEIL OBEN — und nur dann.
+
+   BEFUND-ENDE.md §1 hat gemessen, dass es das nicht tat: das Schlussblatt
+   lag in allen vier Epochen zugeklappt unter dem Sudbuch, und der Spieler
+   las die Rechenschaft eines Stuecks statt des Urteils ueber seine Partie.
+   Beim Nachmessen dieser Runde ist derselbe Stapel noch einmal aufgetreten:
+   der Griff, der das mit Escape beiseitegelegte Urteil zurueckholt, wurde
+   von `.sud-schluss` abgefangen („subtree intercepts pointer events").
+
+   Die Faecher der Blattebene stapeln nach DOM-Reihenfolge, und DER SUD
+   entsteht nach DER FUHRE. Das eigene Fach hochzuziehen ist die einzige
+   Handhabe, die ein Stueck dafuer hat — und sie ist hier ungefaehrlich,
+   weil sie NUR nach dem Ende gilt: dann gibt es in diesem Fach nichts als
+   das Urteil und den Griff dazu, und darunter nichts mehr, das man noch
+   schliessen muesste (die Reiterleiste der STADT sitzt bei y~87 % und wird
+   von beiden nicht beruehrt). Vor dem Ende bleibt die Stapelung, wie sie
+   war — sonst geriete ein offenes Gegner-Blatt unter einen Deckel, den man
+   nicht mehr aufbekommt (ZUSTAENDIGKEIT 1 und 2). */
+html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
