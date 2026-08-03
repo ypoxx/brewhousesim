@@ -771,6 +771,44 @@
     return { text: Math.round(Z.guete) + ' %', gut: Z.guete >= 55 };
   }
 
+  /* ----------------------------------------------------------------------
+     WAS DIE HEFE AM FASS AENDERT — Welle 4.
+
+     Gemessen vor dieser Runde (werkbank/schuss/sud-w4/linie.mjs, 400 Wochen
+     je Epoche, sorgfaeltig gespielt): die Guete faellt in ALLEN VIER Epochen
+     von 70 auf ihren Boden 25 und bleibt dort — und am Bildschirm aendert
+     sich davon nichts. Sie haengt bis hierher nur am Fehlsud (der einen
+     Bottich braucht) und an der Streuung (die es nur 1970 gibt). In 1350
+     laeuft ueber vierzehn Jahre KEIN EINZIGER Sud durch den Gaerkeller,
+     weil Grutbier keine Gaerwochen hat: dort war die Guete eine Zahl ohne
+     jede Folge, und die woechentliche Hefeentscheidung damit eine Wahl
+     ohne Wirkung.
+
+     Jetzt haengt die HALTBARKEIT AM FASS an ihr — und zwar nur nach oben.
+     Bei 60 und darunter bleibt alles, wie es war (Faktor 1,00); bei 100
+     haelt das Fass ein Fuenftel laenger. Wer das Brett nie aufschlaegt,
+     verliert dadurch keinen Pfennig — genau die Regel, unter der schon die
+     Deckelung gebaut wurde. Wer die Hefe fuehrt, sieht es im Keller.
+     ---------------------------------------------------------------------- */
+  function hefeFaktor() {
+    return 1 + Math.max(0, Z.guete - 60) / 100 * 0.5;
+  }
+
+  /* Jedes Fass bekommt den Stempel EINMAL, mit der Guete der Stunde, in der
+     es eingelegt wurde. Mehrfach zu laufen schadet nicht. */
+  function stempleHefe() {
+    var f = B.welt.vorrat.faesser, k = hefeFaktor(), n = 0;
+    for (var i = 0; i < f.length; i++) {
+      if (f[i].hefeStempel !== undefined) continue;
+      f[i].hefeStempel = k;
+      if (k > 1 && f[i].haltbar) {
+        var neu = Math.round(f[i].haltbar * k);
+        if (neu > f[i].haltbar) { f[i].haltbar = neu; n++; }
+      }
+    }
+    return n;
+  }
+
   function anstichFrei() { return Z.anstichWoche !== woManifest(); }
 
   /* Erntehefe aus dem gaerenden Bottich. Der billigste Weg und der
@@ -1316,6 +1354,15 @@
     balken.appendChild(fuell);
     kasten.appendChild(balken);
 
+    /* Was die Pflege am Fass wert ist — als Zahl, nicht als Balken. Ohne
+       diese Zeile war die Guete in 1350 ueber vierzehn Jahre folgenlos. */
+    var hf = hefeFaktor();
+    kasten.appendChild(zeile('sud-hefefolge' + (hf > 1 ? ' gut' : ''),
+      hf > 1
+        ? ('Was jetzt eingelegt wird, hält ×'
+           + hf.toFixed(2).replace('.', ',') + ' — die Hefe steht.')
+        : ('Ab ' + (60 + 1) + ' % hält jedes eingelegte Fass länger. Jetzt: ×1,00.')));
+
     var frei = anstichFrei();
     var lager = B.welt.vorrat.faesser.length;
     var f = ep().fuehren;
@@ -1456,8 +1503,14 @@
     var l = B.el('div', 'sud-zzahlen');
     l.appendChild(B.el('span', null, gk().name.replace(/^Der /, '') + ' '
       + B.welt.menge(belegt(), true) + '/' + B.welt.menge(plaetze())));
-    l.appendChild(B.el('span', an.gut ? 'gut' : 'schlecht',
-      e.guete.kurz + ' ' + an.text));
+    var hfz = hefeFaktor();
+    var gspan = B.el('span', an.gut ? 'gut' : 'schlecht',
+      e.guete.kurz + ' ' + an.text + (hfz > 1 ? ' · Fass ×' + hfz.toFixed(2).replace('.', ',') : ''));
+    gspan.title = hfz > 1
+      ? 'Solange die Hefe so steht, hält jedes eingelegte Fass ' + Math.round((hfz - 1) * 100)
+        + ' % länger.'
+      : 'Über 60 % hält jedes eingelegte Fass länger.';
+    l.appendChild(gspan);
     z.appendChild(l);
 
     /* ------------------------------------------------------------------
@@ -1770,7 +1823,7 @@
            Stueck den Sud gar nicht erst ansaugt. Sonst zaehlte ein volles
            Haus als kalte Pfanne — der Fehler waere teuer. */
         Z.jahrLegte++; Z.gesamtLegte++;
-        B.wage('sud.protokoll', saugeUndSchlage);
+        B.wage('sud.protokoll', function () { saugeUndSchlage(); stempleHefe(); });
       });
 
       B.auf('ende', function () {
@@ -1789,6 +1842,7 @@
         setzeEpoche();
         liefere();
         sauge();
+        stempleHefe();
         gueteWoche();
         anzeigePruefen();
         rueckPruefen();
@@ -1864,6 +1918,7 @@
       setzeEpoche();
       liefere();
       saugeUndSchlage();
+      stempleHefe();
       meldeZug();
       zeichneBrett();
       zeichneZettel();

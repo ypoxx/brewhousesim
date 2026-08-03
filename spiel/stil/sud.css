@@ -528,3 +528,11 @@
 /* Der Zettel traegt vier Knoepfe statt drei; die Zeilen duerfen deshalb
    nicht mehr Luft nehmen als vorher. */
 #buehne .sud-zettel .knopf.sud-tat.klein.voll { min-height: calc(var(--s) * 26); }
+
+/* Was die Hefe am Fass wert ist — Welle 4. */
+.sud-hefefolge {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 15);
+  color: #7a6a4e;
+}
+.sud-hefefolge.gut { color: #3d6b2e; }
