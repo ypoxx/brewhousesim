@@ -1547,6 +1547,26 @@
                ausgefallen: (werk && werk.stapelAus) || 0 };
     },
 
+    /* Und wie dicht sie am Ende WIRKLICH standen: je Probe die hoechste Zahl
+       von Kopien, die in irgendeinem halben Sekundenfenster gleichzeitig
+       angesetzt wurden. Das ist nicht der Mitschnitt der Rufe (den fuehrt
+       `mitschnitt()`, und dort stehen weiter zwoelf), sondern das, was der
+       Graph daraus gemacht hat. Mehr als 2 darf hier nie stehen. */
+    dichte: function () {
+      var aus = {};
+      if (!werk || !werk.stapel) return aus;
+      Object.keys(werk.stapel).forEach(function (d) {
+        var l = werk.stapel[d], hoch = 0, i, j, n;
+        for (i = 0; i < l.length; i++) {
+          n = 0;
+          for (j = i; j < l.length && l[j] - l[i] < 0.5; j++) n++;
+          if (n > hoch) hoch = n;
+        }
+        if (hoch > 1) aus[d] = hoch;
+      });
+      return aus;
+    },
+
     mitschnitt: function () { return mitschnitt.slice(); },
     beginneMitschnitt: function () { mitschnitt.length = 0; mitAnfang = jetztSek(); return true; },
     katalog: function () { return Object.keys(KATALOG).slice(); },
