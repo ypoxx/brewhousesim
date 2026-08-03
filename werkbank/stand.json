@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-03T05:32:15+00:00",
+ "stand": "2026-08-03T05:36:53+00:00",
  "phase": "Nach dem zweiten Container-Reset wiederhergestellt. Welle 3 nachgemessen: das Urteil über die Partie ist in allen vier Epochen sichtbar, und jede Epoche hat ihren eigenen Ausgang.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -814,6 +814,10 @@
   {
    "zeit": "2026-08-03T05:32:15+00:00",
    "text": "Welle 3 nachgemessen: vier Epochen, vier eigene Ausgänge (Braurecht entzogen · aus der Reihe gestrichen · Bank verwertet · stillgelegt), das Schlussurteil ist überall sichtbar. Kassentiefststand −1/+112/+7.041/+25.197 statt −14/0/7.312/339."
+  },
+  {
+   "zeit": "2026-08-03T05:36:53+00:00",
+   "text": "Latte nach Welle 3: der Nenner wechselt jetzt 5- bis 11-mal je Lauf und nennt immer einen umkämpften Zug mit Adresse — vorher einer in 400 Wochen. 1884 und 1970 ohne Jahr unter 1×. |rho| < 0,7 noch nicht erreicht."
   }
  ]
 }

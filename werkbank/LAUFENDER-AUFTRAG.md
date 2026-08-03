@@ -69,6 +69,31 @@ Nacharbeiten zurück; DAS ERBE arbeitete noch, seine Dateien sind aber committet
    1350 **−1 Pf** (1 Woche unter null statt 44), 1600 **+112**, 1884 **+7.041**,
    1970 **+25.197** (vorher 339). Bleibt: 1350 berührt für eine Woche die −1.
 
+**Die Latte, sparsamer Stil, am Stand `79e629e` nachgemessen:**
+
+| Epoche | rho umkämpft | Jahre unter 1× | Median | verschiedene Nenner |
+|---|---|---|---|---|
+| 1350 | −0,775 | 3 von 4 | 0,00× | **5** |
+| 1600 | −1,000 | 2 von 4 | 1,34× | **9** |
+| 1884 | −0,800 | **0 von 4** | 2,67× | **9** |
+| 1970 | −0,800 | **0 von 4** | 2,20× | **11** |
+
+**Der große Fortschritt steht in der letzten Spalte.** Vor der Kernänderung nannte
+die Kopfzeile in 400 Wochen **einen einzigen** Nenner je Epoche — „Umtrunk beim
+Wirt" 9 Pf und seinesgleichen. Jetzt wechselt sie 5- bis 11-mal und nennt jedes
+Mal einen umkämpften Zug mit Adresse: Zuvorkommen Klosterschenke Obernberg,
+Ablösung Pfarrschenke St. Michael, Zuvorkommen Brückenwirt. Die Kennzahl misst
+sich nicht mehr gegen einen Bierdeckel.
+
+**1884 und 1970 haben kein Jahr mehr unter 1×** (vorher 0 und 1 von 4).
+
+**Was NICHT erreicht ist: |rho| < 0,7.** Alle vier liegen zwischen 0,775 und
+1,000. Aber Vorsicht mit dieser Zahl — sie stammt aus dem **sparsamen** Stil, und
+ein Haus, das nichts tut, muss fallen. Das Urteil gehört auf die sorgfältig
+gespielte Linie; deren Skript für Welle 3 (`werkbank/schuss/erbe3/klug.mjs`) ist
+committet und noch nicht von der Aufsicht nachgefahren. **Das ist der nächste
+Schritt.**
+
 **Offen und ungeprüft:** die Auflagen der vier Kritiker im Einzelnen — ihr
 Wortlaut ist mit dem Journal verloren. Was noch messbar ist, misst die Aufsicht
 am Bildschirm nach; was nur im Urteilstext stand, ist nicht wiederherstellbar.
