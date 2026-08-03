@@ -36,6 +36,49 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
+## Welle 3 (2./3. August 2026) — gebaut, geurteilt, teils nachgemessen
+
+**Der Workflow ist weg, die Arbeit nicht.** Am 3.8. gegen 04:20 UTC hat ein zweiter
+Container-Reset den Arbeitsbaum auf den Basis-Commit zurückgesetzt UND das
+Transkriptverzeichnis von `wf_eccf90fc-7a6` gelöscht. Damit ist das `journal.jsonl`
+weg: **kein `resumeFromRunId` mehr möglich, die Urteilstexte der vier blinden
+Kritiker sind nicht mehr nachlesbar.** Wiederhergestellt mit
+`git fetch origin … && git reset --hard origin/…` — das dauert hier **über zwei
+Minuten und muss im Hintergrund laufen**, das Repo ist 2,2 GiB gepackt.
+
+**Was das gerettet hat:** dass die Aufsicht die Arbeit der Builder laufend
+committet hat, nicht am Ende. Alles bis `aa650f5` war auf origin. Stand jetzt
+`79e629e`, 698 Commits.
+
+**Wo Welle 3 stand, als das Journal starb:** 11 von 12 Ergebnissen. Alle vier
+Stücke gebaut, alle vier blinden Kritiker „besteht mit Auflage", drei von vier
+Nacharbeiten zurück; DAS ERBE arbeitete noch, seine Dateien sind aber committet.
+
+**Von der Aufsicht am Stand `79e629e` selbst nachgemessen — zwei Auflagen aus
+`spiel/BEFUND-ENDE.md` sind erledigt:**
+
+1. **Das Urteil über die Partie ist sichtbar**, in allen vier Epochen, 1075×746
+   bis 1075×800 px, `elementFromPoint` trifft es selbst. Vorher lag es
+   `stadt-zugeklappt` unter dem Sudbuch.
+2. **Vier Epochen, vier verschiedene Ausgänge** statt viermal `keine-abnehmer`:
+   `braurecht-entzogen` (1350, „Der Rat entzieht das Braurecht") ·
+   `reihe-gestrichen` (1600, „Die Zunft streicht das Haus aus der Reihe") ·
+   `bank-verwertet` (1884, „Die Bank verwertet die Braustätte") ·
+   `brauereisterben` (1970, „Das Brauhaus wird stillgelegt").
+3. **Der Boden hält fast**: Tiefststand der Kasse nur WEITER gedrückt —
+   1350 **−1 Pf** (1 Woche unter null statt 44), 1600 **+112**, 1884 **+7.041**,
+   1970 **+25.197** (vorher 339). Bleibt: 1350 berührt für eine Woche die −1.
+
+**Offen und ungeprüft:** die Auflagen der vier Kritiker im Einzelnen — ihr
+Wortlaut ist mit dem Journal verloren. Was noch messbar ist, misst die Aufsicht
+am Bildschirm nach; was nur im Urteilstext stand, ist nicht wiederherstellbar.
+
+**Regel, die dieser Reset erzwingt:** Der Workflow-Zustand liegt NICHT im Repo und
+überlebt keinen Reset. Wer eine Welle fährt, schreibt die Urteile der Kritiker
+in eine Datei UNTER `werkbank/`, sobald sie da sind — nicht erst am Ende der Welle.
+
+---
+
 ## Welle 3 läuft (seit 2. August 2026, 18:45 UTC)
 
 Workflow **`wf_eccf90fc-7a6`**, vier Stücke, je Builder → blinder Kritiker →
