@@ -1,0 +1,411 @@
+{
+ "epoche": 4,
+ "bettSpur": [
+  0.12173,
+  0.12646,
+  0.09716,
+  0.10649,
+  0.10589,
+  0.11486,
+  0.10369,
+  0.10992,
+  0.09145,
+  0.09848,
+  0.10387,
+  0.10905,
+  0.106,
+  0.09886,
+  0.09831,
+  0.09153
+ ],
+ "ruhe": 0.10589,
+ "messung": [
+  {
+   "vorgang": "Fuhre laden",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stand": "geklickt",
+   "davor": 0.10684,
+   "danach": 0.16283,
+   "hub": 1.52,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Fuhre laden",
+   "zug": "fuhre:laden:lindenhof",
+   "stand": "geklickt",
+   "davor": 0.10683,
+   "danach": 0.13361,
+   "hub": 1.25,
+   "toene": [
+    "fuhre:fass-rollen"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stand": "geklickt",
+   "davor": 0.08364,
+   "danach": 0.0873,
+   "hub": 1.04,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "fuhre:fuellen",
+   "stand": "geklickt",
+   "davor": 0.09247,
+   "danach": 0.22367,
+   "hub": 2.42,
+   "toene": [
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen",
+    "fuhre:fass-rollen"
+   ]
+  },
+  {
+   "vorgang": "Fuhre abschicken",
+   "zug": "fuhre:abschicken",
+   "stand": "geklickt",
+   "davor": 0.09991,
+   "danach": 0.11701,
+   "hub": 1.17,
+   "toene": [
+    "fuhre:abfahrt:lastzug",
+    "sud:anstellen",
+    "sud:pfanne",
+    "gegner:uebernahme",
+    "name:aufgeld"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "stadt:reiter:sud-sud-brett",
+   "stand": "geklickt",
+   "davor": 0.12819,
+   "danach": 0.12851,
+   "hub": 1,
+   "toene": [
+    "stadt:reiter"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:behandlung:filter",
+   "stand": "geklickt",
+   "davor": 0.12693,
+   "danach": 0.10816,
+   "hub": 0.85,
+   "toene": [
+    "sud:kauf",
+    "sud:anstellen",
+    "sud:ausschlagen"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:anstich-jung",
+   "stand": "geklickt",
+   "davor": 0.14347,
+   "danach": 0.13071,
+   "hub": 0.91,
+   "toene": [
+    "sud:anstich"
+   ]
+  },
+  {
+   "vorgang": "Sud",
+   "zug": "sud:hefe-fuehren",
+   "stand": "unklickbar"
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:beschwerde",
+   "stand": "geklickt",
+   "davor": 0.1134,
+   "danach": 0.10304,
+   "hub": 0.91,
+   "toene": [
+    "gegner:klage"
+   ]
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:abloesen:brueckenwirt",
+   "stand": "geklickt",
+   "davor": 0.09197,
+   "danach": 0.0917,
+   "hub": 1,
+   "toene": [
+    "gegner:abloesen"
+   ]
+  },
+  {
+   "vorgang": "Gegner",
+   "zug": "gegner:abloesen:hirsch",
+   "stand": "geklickt",
+   "davor": 0.10978,
+   "danach": 0.10252,
+   "hub": 0.93,
+   "toene": []
+  },
+  {
+   "vorgang": "Preis",
+   "zug": "preis:tafel",
+   "stand": "geklickt",
+   "davor": 0.11448,
+   "danach": 0.0926,
+   "hub": 0.81,
+   "toene": [
+    "preis:blatt"
+   ]
+  },
+  {
+   "vorgang": "Name",
+   "zug": "name:band",
+   "stand": "unklickbar"
+  },
+  {
+   "vorgang": "Bau",
+   "zug": "stadt:bau:seite",
+   "stand": "geklickt",
+   "davor": 0.10844,
+   "danach": 0.09852,
+   "hub": 0.91,
+   "toene": []
+  },
+  {
+   "vorgang": "Erbe",
+   "zug": "stadt:reiter:erbe-blatt-erb-buch",
+   "stand": "geklickt",
+   "davor": 0.0857,
+   "danach": 0.07759,
+   "hub": 0.91,
+   "toene": [
+    "stadt:reiter"
+   ]
+  }
+ ],
+ "michaeli": {
+  "vorgang": "Michaelitag",
+  "zug": "weiter (Jahreswechsel)",
+  "davor": 0.19845,
+  "danach": 0.17173,
+  "hub": 0.87,
+  "toene": [
+   "uhr:woche",
+   "sommer:keller-leer",
+   "preis:michaeli",
+   "preis:muenzen",
+   "name:aufgeld",
+   "name:urteil-schlecht"
+  ],
+  "j": 1971,
+  "w": 1
+ },
+ "gegen": [
+  {
+   "woche": 2,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:sperre",
+    "sud:pfanne"
+   ],
+   "spitze": 0.12604
+  },
+  {
+   "woche": 3,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne"
+   ],
+   "spitze": 0.22163
+  },
+  {
+   "woche": 4,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden",
+    "gegner:aufstocken",
+    "gegner:zielen"
+   ],
+   "spitze": 0.18436
+  },
+  {
+   "woche": 5,
+   "toene": [
+    "uhr:woche",
+    "gegner:aufstocken",
+    "sud:ausschlagen"
+   ],
+   "spitze": 0.186
+  },
+  {
+   "woche": 6,
+   "toene": [
+    "uhr:woche",
+    "gegner:angebot"
+   ],
+   "spitze": 0.17642
+  },
+  {
+   "woche": 7,
+   "toene": [
+    "uhr:woche",
+    "name:urteil-schlecht"
+   ],
+   "spitze": 0.15426
+  },
+  {
+   "woche": 8,
+   "toene": [
+    "uhr:woche",
+    "gegner:werben"
+   ],
+   "spitze": 0.1509
+  },
+  {
+   "woche": 9,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden",
+    "gegner:verlieren"
+   ],
+   "spitze": 0.1534
+  },
+  {
+   "woche": 10,
+   "toene": [
+    "uhr:woche",
+    "gegner:preis",
+    "gegner:uebernahme"
+   ],
+   "spitze": 0.16197
+  },
+  {
+   "woche": 11,
+   "toene": [
+    "uhr:woche",
+    "gegner:werben"
+   ],
+   "spitze": 0.16381
+  },
+  {
+   "woche": 12,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden",
+    "gegner:zielen",
+    "name:urteil-schlecht",
+    "name:entzug"
+   ],
+   "spitze": 0.12442
+  },
+  {
+   "woche": 13,
+   "toene": [
+    "uhr:woche",
+    "gegner:werben"
+   ],
+   "spitze": 0.1385
+  },
+  {
+   "woche": 14,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden"
+   ],
+   "spitze": 0.13846
+  },
+  {
+   "woche": 15,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden",
+    "gegner:binden"
+   ],
+   "spitze": 0.13593
+  },
+  {
+   "woche": 16,
+   "toene": [
+    "uhr:woche"
+   ],
+   "spitze": 0.13566
+  },
+  {
+   "woche": 17,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden",
+    "gegner:zielen",
+    "name:urteil-schlecht"
+   ],
+   "spitze": 0.12696
+  },
+  {
+   "woche": 18,
+   "toene": [
+    "uhr:woche",
+    "gegner:binden",
+    "gegner:zielen",
+    "gegner:verlieren"
+   ],
+   "spitze": 0.13722
+  },
+  {
+   "woche": 19,
+   "toene": [
+    "uhr:woche",
+    "gegner:aufstocken",
+    "gegner:uebernahme"
+   ],
+   "spitze": 0.14242
+  },
+  {
+   "woche": 20,
+   "toene": [
+    "uhr:woche",
+    "gegner:aufstocken"
+   ],
+   "spitze": 0.13393
+  },
+  {
+   "woche": 21,
+   "toene": [
+    "uhr:woche",
+    "sud:anstellen",
+    "sud:ausschlagen",
+    "sud:pfanne",
+    "gegner:aufstocken"
+   ],
+   "spitze": 0.16937
+  }
+ ],
+ "schluss": {
+  "geraten": {
+   "gegner:uebernahme": 6
+  },
+  "lage": 0,
+  "lageInhalt": [],
+  "zeit": "1971/21",
+  "pegel": {
+   "zustand": "running",
+   "stumm": false,
+   "laut": 0.8,
+   "rms": 0.1438667613846587,
+   "spitze": 0.42236328125,
+   "hoechste": 0.7535193562507629,
+   "lauteste": 0.22366608444656963
+  }
+ },
+ "konsole": []
+}

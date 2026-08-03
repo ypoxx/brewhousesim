@@ -294,8 +294,15 @@ Dieselbe sorgfältige Linie, derselbe Stil `blind`, dieselben 400 Wochen —
 |---|---|---|
 | 1350 | 89 von 400 | **394** von 400 |
 | 1600 | 28 von 400 | **390** von 400 |
-| 1884 | 71 von 400 | PLATZ-E3N |
-| 1970 | 196 von 400 | PLATZ-E4N |
+| 1884 | 71 von 400 | **364** von 400 |
+| 1970 | 196 von 400 | **255** von 400 (mit mindestens *einem*: 197 → **373**) |
+
+1970 steigt am wenigsten, und der Grund ist das Messgerät, nicht das Spiel:
+`linie.mjs` zählt als „Bierknopf" nur die Achs- und Wechselschlüssel. In den
+Wochen, in denen 1970 eine **gesperrte Charge** auf dem Zettel steht, nimmt
+deren Paar (`sud:zettel-charge-frei` / `-schnitt`) den Platz der kostenlosen
+Umstellung ein — die Wahl ist da, sie heißt nur anders und wird von diesem
+Zähler nicht mitgezählt. Gemessen wird sie in 3.4.
 
 Dazu, im Vorgabestand jeder Epoche (Woche 1, nichts angeklickt): **vier** aktive
 und treffbare Züge des SUDES statt drei — `sud:zettel-anstich`,

@@ -60,7 +60,11 @@ def frage(pfad, text, modell, schluessel):
         {"text": text},
         {"inlineData": {"mimeType": typ, "data": base64.b64encode(daten).decode()}}]}],
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json",
-                             "maxOutputTokens": 4096}}
+                             # 4096 hat im ersten Durchgang gereicht, um die
+                             # Denk-Token zu fuellen und das JSON mitten in der
+                             # Nullprobe abzuschneiden. Derselbe Fehler, vor dem
+                             # werkbank/hoerer.py warnt.
+                             "maxOutputTokens": 24576}}
     anfrage = urllib.request.Request(URL.format(m=modell) + "?key=" + schluessel,
                                      data=json.dumps(koerper).encode(),
                                      headers={"Content-Type": "application/json"})
@@ -82,6 +86,20 @@ def frage(pfad, text, modell, schluessel):
                 return json.loads(m.group(0))
             except json.JSONDecodeError:
                 pass
+        # Bergung Schluessel fuer Schluessel: ein abgeschnittenes JSON darf
+        # die Punkte, die schon dastehen, nicht mitreissen.
+        geborgen = {}
+        for k in re.findall(r'"([a-z_]+)"\s*:\s*\{([^}]*)\}', t):
+            d, s, si = (re.search(r'"da"\s*:\s*(true|false)', k[1]),
+                        re.search(r'"sek"\s*:\s*(-?[\d.]+)', k[1]),
+                        re.search(r'"sicher"\s*:\s*(\d+)', k[1]))
+            if d:
+                geborgen[k[0]] = {"da": d.group(1) == "true",
+                                  "sek": float(s.group(1)) if s else None,
+                                  "sicher": int(si.group(1)) if si else None}
+        if geborgen:
+            geborgen["_geborgen"] = True
+            return geborgen
         return {"abbruch": "unlesbar", "rohtext": t[:300]}
 
 
@@ -108,7 +126,10 @@ def main():
             print("   B KEINE MESSUNG: %s" % b["abbruch"])
         else:
             for k, _ in MENUE:
-                v = b.get(k) or {}
+                if k not in b:
+                    print("   %-16s KEINE MESSUNG (Punkt fehlt in der Antwort)" % k)
+                    continue
+                v = b[k] or {}
                 print("   %-16s %s  sek %s  sicher %s"
                       % (k, "JA " if v.get("da") else "nein", v.get("sek"), v.get("sicher")))
         print()

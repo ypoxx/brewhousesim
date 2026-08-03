@@ -64,3 +64,11 @@ werkbank/schuss/*.gif
 # herzustellen; sie wandern nur nicht mehr mit.
 werkbank/schuss/**/*.wav
 werkbank/schuss/*.wav
+
+# AUSNAHME MIT ABSICHT: werkbank/beleg/ wird versioniert.
+# Die Fortschrittsseite rendert je Stueck ein Bild. Als die 1217 Belegbilder aus
+# der Historie fielen, gingen sieben davon mit und die Seite zeigte tote Rahmen.
+# werkbank/beleg/ ist der kleine, gepflegte Ersatz: EIN Bild je Stueck, JPEG,
+# 1280 breit, zusammen unter 2 MB. Es wird nachgeschossen, wenn sich das Stueck
+# aendert, nicht angehaeuft. Wer hier etwas ablegt, prueft vorher die Groesse.
+# Massenschuesse einer Messung gehoeren weiterhin nach werkbank/schuss/.
