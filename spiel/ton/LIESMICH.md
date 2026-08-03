@@ -273,3 +273,43 @@ Drei Regeln sind dabei neu dazugekommen, alle drei aus einer Messung:
 Der volle Befund und die offenen Punkte — Auflage 1 ist **nicht** abgenommen —
 stehen in
 [`../../werkbank/urteile/welle4-der-klang-nacharbeit.md`](../../werkbank/urteile/welle4-der-klang-nacharbeit.md).
+
+## Welle 5 — die vier Regeln, die diese Runde dazugelegt hat
+
+Alle vier stehen hier, weil sie **gemessen** worden sind, nicht weil sie
+einleuchten.
+
+6. **Eine Schicht, die ohne Zutun läuft, darf die Epoche nicht sagen.** Sonst
+   mißt die Latte die Kulisse. Der Beweis war brutal: still 12/12, gespielt
+   3/12. Siehe oben, *Vier Schichten*.
+7. **Kein Name darf in einem halben Sekundenfenster mehr als zwei Kopien
+   seiner Probe erzeugen.** `fuhre:fuellen` legte 5/8/10/**12** identische
+   Kopien binnen 0,46 s übereinander — ein Kammfilter mit 25 Hz Zinkenabstand,
+   vom blinden Ohr als *„8-Bit/Chiptune-Soundeffekt"* und als *„Stampfen einer
+   Dampfmaschine"* gemeldet. Die Grenze sitzt in `entstapele()` im Tonbus und
+   nicht im rufenden Stück: dort werden die Kopien erzeugt, und sie gilt für
+   jede Probe. Gestundet wird, nicht verworfen — aus zwölf Fässern in einer
+   halben Sekunde wird eine Reihe von Fässern. Nachzählbar mit
+   `BRAUHAUS.ton.dichte()` und `BRAUHAUS.ton.gestundet()`.
+8. **Ein gehaltener Ton über breitbandigem Rauschen ist eine Dampfpfeife.**
+   Die Blockflöte von 1350 ist einzeln tadellos; über dem roaring fire von
+   `sud1` und dem Feuer von `hof1` wurde sie zur *„Dampfpfeife"* und zog 1350
+   nach 1884. Nicht der Ton war falsch, sondern das Rauschen darunter —
+   deshalb steht der Hof von 1350 tiefer als die anderen drei (`ZIEL_HOF`).
+9. **Dehnen macht aus Metall eine Maschine.** Die Pferdefuhre um ein Fünftel
+   verlangsamt hält einzeln stand (*„Pferdehufe · Kutschenräder"*), in der
+   Mischung wurde sie in vier von sechs Durchgängen zu *„Metallrädern auf
+   Schienen"*. `tempo` bleibt im Tonbus, aber nicht mehr an dieser Stelle.
+
+Zwei kleine Werkzeuge sind dazugekommen und beide sind für die Abnahme da:
+
+```js
+BRAUHAUS.ton.dichte()      // je Probe: meiste gleichzeitig angesetzte Kopien in 0,5 s
+BRAUHAUS.ton.gestundet()   // wie oft eine Kopie geschoben wurde, wie oft sie ausfiel
+```
+
+Dazu `werkbank/schuss/klang-w5-nach/`: `dateien.mjs` hält den Katalog im
+laufenden Spiel gegen das Verzeichnis (in beide Richtungen — fehlende **und**
+tote Proben), `kamm.py` mißt den Kammfilter an der Wellenform statt am
+Quelltext, `frage.py` legt gemischte Proben `hoerer.hoere()` vor und fängt die
+Minutensperre ab, ohne an `hoerer.py` zu drehen.
