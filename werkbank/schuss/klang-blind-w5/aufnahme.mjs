@@ -66,6 +66,11 @@ for (const z of JSON.parse(process.env.VORKLICKS || '[]')) {
   vorklicks.push({ wunsch: z, zug: await klick(z) });
   await p.waitForTimeout(150);
 }
+/* RUHE: abklingen lassen, bevor der Abgriff beginnt. Ohne das steht am Anfang
+   jeder Aufnahme der ausklingende Schwanz des schnellen Vorlaufs (25 Wochen in
+   rund zehn Sekunden) — und der ist ein Artefakt DIESES Pruefstands, nicht des
+   Spiels. Gemessen: die ersten 2 s lagen sonst 4,5- bis 7,9-fach ueber dem Rest. */
+await p.waitForTimeout(Number(process.env.RUHE || 0) * 1000);
 const standVor = await p.evaluate(() => JSON.parse(JSON.stringify(BRAUHAUS.welt.zeit)));
 
 /* --- MEIN ABGRIFF -------------------------------------------------------- */
