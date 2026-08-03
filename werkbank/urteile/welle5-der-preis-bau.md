@@ -10,6 +10,14 @@ auch bitgleich mit dem Arbeitsbaum. `spiel/**` ist zwischen `3e6d08c` und
 `2f0e4b4` (HEAD) unveraendert — der Messstand misst also denselben Stand, den
 der Arbeitsbaum vor meiner ersten Aenderung hatte.
 
+**Die Dateien dieser Runde** (alle in `werkbank/schuss/preis-w5/`):
+`hand.mjs` (Referenzhand + Auszaehlung) · `hand-fest.mjs` (dieselbe Hand, nur
+die Festlegungsregel getauscht) · `boden.mjs` (Kasse Buchung fuer Buchung) ·
+`latte2.mjs` (Latte 2 a/b/c am Bildschirm) · `lauf.sh` (der sequenzielle
+Messlauf) · `auswerten.py` · `tafel-schuss.mjs` (die Tafel aufschlagen und
+fotografieren — sonst sieht man von diesem Stueck nichts) sowie die Bilder
+`e1-tafel-1356.png`, `e2-tafel.png`, `e2-tafel-1606.png`.
+
 **Messgeraet:** `werkbank/schuss/preis-w5/hand.mjs` — Kopie von
 `werkbank/schuss/rueckkopplung-r3/linie.mjs` (nicht angefasst, kopiert),
 zusaetzlich ausgezaehlt: `welt.chronik` nach `art`, alle Zeilen mit
@@ -134,16 +142,18 @@ und lehnt ihn ab. Das ist eine Regel der HAND, nicht des Spiels.
 Gegenprobe mit einer zweiten Hand (`hand-fest.mjs`, wortgleich bis auf diese
 eine Regel: Zufluss zuerst, sonst die billigste nicht abgeschaltete):
 
-| Epoche | Referenzhand | festlegungswillige Hand |
-|---|---|---|
-| 1350 | 1 (1354/1) | 1 (1350/1) |
-| 1600 | 1 (1600/1) | 1 (1600/1) |
-| 1884 | 0 | *(laeuft)* |
-| 1970 | 0 | *(laeuft)* |
+| Epoche | Referenzhand | festlegungswillige Hand | wann |
+|---|---|---|---|
+| 1350 | 1 | **1** | 1350/1 |
+| 1600 | 1 | **1** | 1600/1 |
+| 1884 | 0 | **2** | 1884/1 · 1886/1 |
+| 1970 | 0 | **3** | 1970/1 · 1972/1 · 1976/1 |
 
 In 1350 und 1600 aendert der Wille nichts: es ist nur eine da. Damit ist die
 Diagnose zweigeteilt und beide Teile sind gemessen — **1350/1600: das Spiel
 gibt nicht mehr her. 1884/1970: das Spiel gibt her, die Messhand nahm nicht.**
+Diese Trennung ist der Grund, warum unten nur an 1350 und 1600 etwas geaendert
+wird und an 1884/1970 ausdruecklich nichts.
 
 ---
 
@@ -205,6 +215,183 @@ Kern-Abzug desselben Wochenwechsels noch im selben Zug ab.
 
 ---
 
+# WAS GEAENDERT WURDE
+
+Drei Aenderungen, alle in eigenen Dateien
+(`stuecke/preis.js`, `stuecke/preis-daten.js`, `stil/preis-zusatz.css`).
+Kein `git`. `spiel/index.html` und `spiel/kern/**` unberuehrt.
+
+## 1 — Der Vorgriff auf den Notpfennig (`preis.js`, Michaeli Schritt 7d)
+
+Der Notpfennig war eine SCHONUNG: `buche()` nimmt nie unter ihn. Er wird ein
+BODEN: kommt das Haus mit weniger an Michaeli an, schiesst der Rat vor, was
+fehlt. **Angeschrieben, nicht geschenkt** — der Betrag geht auf denselben
+`Z.rueckstand` wie eine nicht bezahlte Pflicht, kommt naechsten Michaeli mit
+dem bestehenden Zehntel Aufschlag wieder (Schritt 2) und laesst den Rat, wenn
+der Rueckstand ueber eine Jahreslast waechst, dasselbe Pfand nehmen wie sonst.
+Die Strafe bleibt vollstaendig.
+
+Er steht **hinter** Schritt 7c (der Schaetzung), nicht davor. Stuende er
+davor, ginge er ueber `Z.hoehe` in den ANSCHLAG, der Anschlag in die
+Angebotspreise und damit in den NENNER der Kennzahl — ein Boden, der sich
+seinen eigenen Nenner mit anhebt, ist keiner. So hebt er den Zaehler und
+laesst den Nenner stehen.
+
+Dazu steht der Notpfennig jetzt mit Betrag am Bildschirm, **bevor** er das
+erste Mal greift — er war bisher nirgends genannt (Platz und Begruendung
+unter 3a).
+
+Und eine zweite Zeile derselben Aenderung, die leicht zu uebersehen ist:
+**geliehenes Geld ist keine Nahrung.** Die Nahrung des Jahres ist die
+Veraenderung der Lade von Michaeli zu Michaeli. Ohne Abzug stuende der
+Vorgriff des Vorjahrs darin als Zuwachs des Hauses — der Schoss wuerde auf ein
+Darlehen erhoben, und der Nachlass fuer ein Fehljahr (`Z.ertrag <= 0`) bliebe
+genau dem Haus versagt, fuer das er gemacht ist. `Z.ertrag` zieht den Vorgriff
+des Vorjahres deshalb ab (`preis.js`, Michaeli Schritt 1). Das ist keine
+Feinheit: ohne sie waere aus dem Boden eine zweite Strafe geworden.
+
+## 2 — Je eine zweite Sprosse fuer 1350 und 1600 (`preis-daten.js`)
+
+Nur dort, wo die Messung eine leere Tafel nachgewiesen hat. 1884 und 1970
+bleiben **unberuehrt** — dort bietet das Spiel jedes Jahr etwas Bedienbares an.
+
+| Epoche | neu | Taxe | ab | Wirkung (nur bestehende Mechanik) |
+|---|---|---|---|---|
+| 1350 | Der eigene Brunnen im Hof | 0,34 × 470 = 160 → 277 Pf | 1355 | `pflichtWeg: 'wasserzins'` |
+| 1600 | Der Hofbefreiungsbrief | 0,20 × 2.800 = 560 → 944 fl | 1604 | `pflichtWeg: 'zunftumlage'`, `ansehen −5` |
+
+Die drei bzw. drei grossen Festlegungen bleiben, wo sie sind. Was gefehlt hat,
+ist die Sprosse dazwischen, und sie ist so bemessen, dass sie in etwa jedem
+zweiten Jahr erreichbar ist und nie geschenkt.
+
+## 3 — `stil/preis-zusatz.css`, und zwei Ueberlaeufe, die ich mir selbst gebaut habe
+
+Beides am Bildschirm gefunden, nicht im Quelltext, und beides steht hier, weil
+es Arbeit war, die ich zweimal machen musste.
+
+**(a) Die linke Spalte ist voll.** Der Notpfennig gehoerte inhaltlich in DIE
+RECHNUNG. Dort eingebaut hat er in 1600 die Spalte zum Ueberlaufen gebracht:
+WAS SCHON STEHT wurde unten abgeschnitten und die vierte Wurzel brach mitten
+im Wort ab — derselbe Ueberlauf, der am 3. August schon einmal gemeldet und
+durch Kuerzen geheilt worden war. Gegenprobe am eingefrorenen Stand auf 8900:
+die Spalte ist dort schon ohne mich randvoll (DIE BIERORDNUNG bricht ab, Bild
+`/tmp/…/e2-tafel-VORHER.png`). Der Notpfennig steht jetzt als letzte Zeile in
+WAS FÄLLIG WIRD — rechts steht, was faellig wird, und er ist, was NICHT
+faellig wird. Dort traegt die Spalte ihn ohne Abschnitt
+(`werkbank/schuss/preis-w5/e2-tafel.png`).
+
+**(b) Fuenf Siegelkarten nebeneinander.** 1600 hat vier Festlegungen; mit
+meiner fuenfter passen sie nur, solange keine genommen ist — und genau dann
+lief der Satz „Preis dieser Amtszeit …" aus der Karte heraus und LEGTE SICH
+UEBER den Hinweis „Über der Kasse: es fehlen 6.060 fl" darunter. Die
+Zusatzlage setzt seit Runde 1 `flex: 0 1 auto; min-height: 0` auf alle Kinder
+der Karte, aber `overflow` stand nur an dreien. Es steht jetzt auch an
+`.pr-satz-klein`, `.pr-sperrt` und `.pr-hinweis`: geklippt wird von unten, die
+Zahl bleibt oben. Nachgesehen im schwersten Fall (1606, nichts genommen, fuenf
+Karten): kein Text liegt mehr auf einem anderen
+(`werkbank/schuss/preis-w5/e2-tafel-1606.png`).
+
+**(c)** `.pr-last.pr-last-boden` (die Notpfennigzeile abgesetzt, Zahl gruen —
+sie nimmt nicht, sie laesst) und `.pr-zeile.pr-zufluss-geborgt` (der Vorgriff
+steht in der Rechnung nicht gruen wie ein Ertrag, sondern in der Tinte des
+Rueckstands, mit dem er wiederkommt).
+
+**(d) Eine Regel, die man nicht zu Ende lesen kann, ist keine.** Die erste
+Fassung der Brunnen-Regel („…und hängt nicht mehr an der Röhre, die der Rat
+sperren kann") brach in 1356 in der letzten Kartenzeile ab. Gekuerzt auf
+„Der Wasserzins an die Stadt endet. Für immer. Das Haus schöpft aus eigenem
+Grund." (`werkbank/schuss/preis-w5/e1-tafel-1356.png`).
+
+---
+
+# KERN: die eine Zeile, die nicht mir gehoert
+
+`spiel/kern/welt.js:412` in `rechneJahrAb()`:
+
+```js
+var unterhalt = Math.round(W.haus.kasse * 0.04 + W.vorrat.plaetze * 0.6);
+W.haus.kasse -= unterhalt;                 // ungeprueft
+```
+
+`welt.zahle()` zwei Bildschirme darueber prueft die Deckung und gibt `false`
+zurueck, wenn die Lade nicht reicht. **Diese Zeile prueft nicht.** Bei Kasse 0
+und zwoelf Plaetzen zieht sie −7 ab und die Lade steht auf −7; genau so
+entsteht der von der Aufsicht gemessene Stand `E1 = −1`. Es ist die einzige
+Stelle im ganzen Spiel, die `haus.kasse` ausserhalb von `zahle`/`nimm`
+veraendert — nachgeprueft ueber alle acht `spiel/stuecke/*.js`, kein Stueck
+schreibt die Kasse direkt.
+
+**Vorschlag:** dieselbe Deckungspruefung wie in `zahle`, also den Unterhalt auf
+die vorhandene Lade begrenzen —
+
+```js
+var unterhalt = Math.min(Math.max(0, Math.floor(W.haus.kasse)),
+                         Math.round(W.haus.kasse * 0.04 + W.vorrat.plaetze * 0.6));
+```
+
+— und den nicht gedeckten Rest wie jede andere unbezahlbare Zeile ins
+Protokoll schreiben. Mein Vorgriff faengt den Fall an Michaeli desselben
+Wochenwechsels ab (`uhr.js:160`: `rechneJahrAb()` laeuft VOR `sende('jahr')`,
+also vor `michaeli()`), aber er repariert nur; die Kasse war in der Zwischenzeit
+negativ, und ein anderes Stueck, das in diesem Augenblick `welt.kann()` fragt,
+bekommt eine falsche Auskunft.
+
+---
+
+# NACHHER — AUFTRAG 2, und ein Teilbefund, der GEGEN mich ausfaellt
+
+`spielprobe.mjs`, 60 Wochen je Epoche, unveraendert:
+
+| Epoche | vorher | nachher |
+|---|---|---|
+| 1350 | Kasse **−1** | Kasse **48** = Notpfennig |
+| 1600 | Kasse 13 | Kasse **280** = Notpfennig |
+| 1884 | Kasse 117 | Kasse **4.200** = Notpfennig |
+| 1970 | Kasse 334 | Kasse **50.000** = Notpfennig |
+
+Buchung fuer Buchung, 1350, dieselben 60 Wochen (`boden.mjs`):
+
+| | vorher | nachher |
+|---|---|---|
+| Kasse am Ende | −1 | **48** |
+| tiefster Stand | −1 | **0** |
+| Wochen unter null | 1 | **0** |
+| Wochen auf oder unter null | 21 | **26** |
+
+**Die letzte Zeile geht gegen mich, und sie steht hier, weil sie gemessen
+ist.** Unter null faellt die Kasse nicht mehr; auf null steht sie oefter. Der
+Grund steht im Protokoll und ist nicht das, was er zu sein scheint:
+
+```
+1351/ 1   13 ->   48    verfall  −8  Sommer: Unterhalt und Abgaben
+                        spieler +43  Vorgriff auf den Notpfennig
+…
+1351/ 9   25 ->    0    spieler −25  Zuvorkommen beim Schenke am Tor
+```
+
+Dieselbe Woche im Lauf VORHER:
+
+```
+1351/ 9    7 ->    6    spieler −25  Zuvorkommen beim Schenke am Tor (NICHT BEZAHLBAR)
+```
+
+Das Haus steht in derselben Woche auf null, weil es zum ersten Mal etwas
+KAUFEN konnte. Der Boden hat aus einer toten Woche einen Zug gemacht und das
+Geld ist in den Zug gegangen. Die grobe Hand der `spielprobe.mjs` nimmt jede
+Woche irgendeinen bedienbaren Knopf und verkauft nie — eine solche Hand
+faehrt jede Lade auf null, gleich wie hoch der Boden liegt. Mit der
+sorgfaeltig gespielten Linie steht die Kasse in 1350 nie auf null (tiefster
+Stand vorher 39 Pf ueber vierzehn Jahre).
+
+**Was der Boden leistet, ist damit genau benannt und nicht mehr:** die Kasse
+faellt nicht mehr unter null, und das Haus beginnt jedes Braujahr mit dem
+Notpfennig statt mit 5 Pf. Was er NICHT leistet: er haelt eine Hand, die
+jeden Pfennig ausgibt, nicht vom Nullpunkt fern. Dafuer braeuchte es einen
+WOECHENTLICHEN Vorgriff; der waere eine Geldpumpe in genau dem Mass, in dem
+die Hand sie leerzieht, und ich habe ihn nicht gebaut, weil ich seine Wirkung
+auf die zweite Messlatte nicht in der verbleibenden Zeit dreifach nachmessen
+kann. Er steht als Vorschlag da, nicht als Arbeit.
+
 ## Fortschritt
 
 - [x] Werkzeug aufgesetzt, Messstand `3e6d08c` auf 8900, Geraet geeicht
@@ -212,5 +399,6 @@ Kern-Abzug desselben Wochenwechsels noch im selben Zug ab.
       Ereignisse zu selten; in 1884/1970 nahm die Referenzhand nicht
 - [x] AUFTRAG 2 — Ursache getrennt: KERN bringt unter null, leerer
       Jahresanfang bringt auf null
-- [ ] Aenderungen einbauen
-- [ ] Latte 2 nachgemessen, drei Laeufe je Epoche, sequenziell
+- [x] Aenderungen eingebaut, `node --check` auf allen drei .js, TOR OFFEN,
+      SPIELPROBE BESTANDEN
+- [ ] Latte 2 nachgemessen, drei Laeufe je Epoche, sequenziell *(laeuft)*
