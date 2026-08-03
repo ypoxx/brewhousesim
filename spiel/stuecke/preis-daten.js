@@ -364,7 +364,48 @@ var PREIS_DATEN = {
         { k: 'vertrag', name: 'Vertrag statt Gunst', anteil: 0.18,
           was: 'Vier Wirte setzen ihr Zeichen unter einen Brief auf fünfundzwanzig Jahre.',
           regel: 'Vier Häuser nehmen nur noch Bier dieses Hauses. Die übrigen merken sich, dass sie nicht gefragt wurden.',
-          wirkung: { bindung: { n: 4, jahre: 25 }, ansehen: -6 } }
+          wirkung: { bindung: { n: 4, jahre: 25 }, ansehen: -6 } },
+
+        /* DIE ZWEITE SPROSSE — UND WARUM SIE ERST 1355 KOMMT.
+
+           Nachgemessen am eingefrorenen Stand 3e6d08c, sorgfaeltig gespielte
+           Linie ueber 400 Wochen = vierzehn Braujahre und ACHT Amtszeiten,
+           die Sichtlage jedes Siegelknopfes in Woche 1 mitgeschrieben
+           (`werkbank/schuss/preis-w5/hand.mjs`):
+
+             1350  Lade 112   vertrag −85 AN    | freikauf/realrecht AUS
+             1354  Lade 393   vertrag −99 AN    | genommen
+             1355  Lade 293   —                 | freikauf −1300 AUS, realrecht −970 AUS
+             …     …                            | …
+             1363  Lade 246   —                 | freikauf −1700 AUS, realrecht −1300 AUS
+
+           Ab 1355 stand NEUN JAHRE LANG keine einzige bedienbare Festlegung
+           auf der Tafel. Das Haus hat acht Amtszeiten und genau eine
+           unwiderrufliche Entscheidung; die anderen sieben sehen ein Bild an
+           der Wand. Der Grund ist arithmetisch: die Taxe waechst mit
+           `teuerungJahr` (1,040), die Lade waechst nicht mit — der Abstand
+           zum Freikauf ist ueber die vierzehn Jahre um 757 Pf GEWACHSEN.
+           „Das Ziel, auf das man ueber Generationen spart" ist damit kein
+           weiter Weg, sondern ein Weg, der sich beim Gehen verlaengert.
+
+           Die drei grossen bleiben trotzdem, wo sie sind — sie sind das
+           Ziel, und wer es verschiebt, nimmt der Epoche ihre Spitze. Was
+           fehlt, ist die Sprosse DAZWISCHEN, und sie muss klein genug sein,
+           dass ein Haus sie erreicht, ohne aufzuhoeren zu kaufen: 0,34 x 470
+           = 160 Pf in 1350 und 277 Pf in 1364, gegen eine Michaeli-Lade, die
+           in denselben Jahren zwischen 246 und 498 Pf steht. Erreichbar in
+           etwa jedem zweiten Jahr, nie geschenkt. `ab: 1355` haelt sie aus
+           den ersten Amtszeiten heraus, in denen `vertrag` die Wahl ist —
+           erst wenn die billigste weg ist, kommt die zweite.
+
+           Der Gegenstand ist der billigste dauerhafte Rechtsakt, den ein
+           Brauhaus dieser Zeit ueberhaupt tun konnte: den Stadtbrunnen
+           verlassen. Ein Schacht im eigenen Hof kostete einmal und beendete
+           den Wasserzins fuer immer. */
+        { k: 'brunnen', name: 'Der eigene Brunnen im Hof', anteil: 0.34, ab: 1355,
+          was: 'Ein Schacht durch den Lehm bis auf den Kies, ausgemauert, mit Rad und Eimer.',
+          regel: 'Der Wasserzins an die Stadt endet. Für immer. Das Haus schöpft aus dem eigenen Grund und hängt nicht mehr an der Röhre, die der Rat sperren kann.',
+          wirkung: { pflichtWeg: 'wasserzins' } }
       ]
     },
 
@@ -646,7 +687,35 @@ var PREIS_DATEN = {
           was: 'Ein landesherrliches Privileg: in vier Dörfern darf nur dieses Haus liefern.',
           regel: 'Vier Häuser bleiben dem Haus, solange das Haus steht. Der Landesherr nimmt dafür jährlich seinen Teil.',
           wirkung: { bindung: { n: 4, jahre: 200 }, pflichtNeu: { k: 'bannzins', name: 'Bannzins an den Landesherrn', teil: 0.16,
-            sagt: 'Der Preis des Privilegs, jährlich, ohne Ende.' } } }
+            sagt: 'Der Preis des Privilegs, jährlich, ohne Ende.' } } },
+
+        /* DIE ZWEITE SPROSSE DIESER ZEIT — dieselbe Messung, schaerferer Fall.
+
+           Nachgemessen am eingefrorenen Stand 3e6d08c, vierzehn Braujahre,
+           acht Amtszeiten, Sichtlage jedes Siegelknopfes in Woche 1:
+
+             1600  Lade 640   reinheit −280 AN   | eigentum/ratssitz/bierbann AUS
+             1601  Lade 377   —                  | −7.000 / −5.500 / −8.100  AUS
+             …     …                             | …
+             1613  Lade 669   —                  | −11.000 / −8.600 / −13.000 AUS
+
+           DREIZEHN JAHRE, null bedienbare Festlegungen. Das ist der haerteste
+           der vier Faelle: nach dem Reinheitsgebot im Eroeffnungsjahr ist die
+           unwiderrufliche Entscheidung dieser Epoche fuer den Rest der
+           gemessenen Partie kein Zug mehr. Die drei grossen bleiben unberuehrt
+           — sie sind das Ziel. Die neue Sprosse liegt bei 0,20 x 2.800 = 560 fl
+           in 1600 und 944 fl in 1613, gegen eine Michaeli-Lade von 377 bis
+           997 fl: erreichbar in den guten Jahren, unerreichbar in den mageren.
+           `ab: 1604` haelt sie aus den ersten drei Amtszeiten heraus.
+
+           Der Gegenstand ist die eine dauerhafte Loesung, die einem Haus
+           dieser Ordnung offenstand, ohne dass es reich sein musste: die
+           Hofbefreiung. Ein Patent aus der Residenz nahm ein Gewerbe aus der
+           Zunft heraus — und die Zunft vergass es nicht. Deshalb der Ansehen. */
+        { k: 'hofbefreiung', name: 'Der Hofbefreiungsbrief', anteil: 0.20, ab: 1604,
+          was: 'Ein Patent aus der Residenz: das Haus liefert an den Hof und steht nicht mehr unter der Zunft.',
+          regel: 'Zunftumlage und Meisterbüchse entfallen für immer. Die Meister der Stadt vergessen es nicht — sie gehen an diesem Haus vorbei.',
+          wirkung: { pflichtWeg: 'zunftumlage', ansehen: -5 } }
       ]
     },
 
