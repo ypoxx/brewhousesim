@@ -293,26 +293,33 @@ beschreibt.
 
 ### Warum „gleich lange Strecke" und nicht „ganze Partie"
 
-Die NACHHER-Partie von 1350 endete nach 98 Wochen (`braurecht-entzogen`), die
-VORHER-Partie lief 301. Das ist **keine Verschlechterung durch dieses Stück**,
-und der Nachweis dafür ist eine eigene Messung (`schritt.mjs`, jeder Klick
-einzeln protokolliert, beide Stände):
+Die 1350er Partien enden von Lauf zu Lauf verschieden lang: VORHER 301 Wochen
+ohne Abbruch, die Gegenprobe „nur der Zettel" 223, die drei NACHHER-Läufe 98,
+103 und 118 — alle drei mit demselben Grund, `braurecht-entzogen`, also
+*„seit X Wochen hat keine Schenke der Stadt ein Fass genommen"*. Was ich dazu
+gemessen habe, und was ich nicht behaupte:
 
-* Der Abbruch kommt daher, dass `fuhre:fuellen` nicht getroffen wird. Als
-  deckendes Element meldet `elementFromPoint` **`DIV#buehne`** — also die
-  Bühne selbst: es liegt gar nichts darüber, das Wagenbrett war zum
-  Klickzeitpunkt nur noch nicht aufgeklappt. 60 ms Wartezeit reichen nicht.
-  Das ist genau der Messfehler, den der Kritiker in seiner Sperrliste selbst
-  beschreibt („70 ms Wartezeit reichen nicht, der Rahmen der STADT entscheidet
-  erst im nächsten Bild").
-* **Derselbe Fehlschlag tritt auf dem VORHER-Stand auf**, gemessen ab 1350/3
-  bzw. 1350/11, danach in jeder Woche.
-* Warum die VORHER-Partie ihn überlebt hat: `rettung.mjs` schlägt DAS SUDHAUS
-  nur dann auf, wenn der Zettel keine zwei Wahlen hergibt. VORHER war das fast
-  jede Woche, und dieses zusätzliche Auf- und Zuklappen hat das Wagenbrett
-  nebenbei jedes Mal neu gesetzt. NACHHER gibt der Zettel die zwei Wahlen her,
-  das Skript klappt nicht mehr auf — und der fremde Fehlschlag bleibt stehen.
-  Die alte Partie lebte von einem Nebeneffekt der eigenen Krankheit.
+* **Der Abbruch hängt daran, dass `fuhre:fuellen` nicht getroffen wird.** Als
+  Element unter dem Mauszeiger meldet `elementFromPoint` **`DIV#buehne`** —
+  also die Bühne selbst: es liegt **gar nichts darüber**, das Wagenbrett war
+  zum Klickzeitpunkt nur noch nicht aufgeklappt. 60 ms Wartezeit reichen
+  nicht. Das ist genau der Messfehler, den der Kritiker in seiner Sperrliste
+  selbst beschreibt („70 ms Wartezeit reichen nicht, der Rahmen der STADT
+  entscheidet erst im nächsten Bild").
+* **Derselbe Fehlschlag tritt auf dem VORHER-Stand auf** (`schritt.mjs`, jeder
+  Klick einzeln protokolliert): dort ab 1350/3 bzw. 1350/11, danach in jeder
+  Woche, mit demselben `DIV#buehne` darunter. Er ist also nicht von diesem
+  Stück verursacht und nicht von diesem Stück zu beheben — er liegt in der
+  Wartezeit des Messskripts.
+* **Was diesem Stück zuzurechnen ist:** der Hefeknopf `sud:zettel-anstich` ist
+  jetzt von Woche 1 an bedienbar. Vorher war er es nicht — dieselbe Messung
+  zeigt ihn in den ersten sechs Wochen als `aus` bei `data-soll-aus="0"`, also
+  genau als den Defekt, den Auflage 1 beschreibt. Das Skript drückt ihn
+  unbedingt, jede Woche, und er kostet ein Fass aus dem Lager. Über hundert
+  Wochen ist das rund ein Fass je Woche weniger im Verkauf. Ein Mensch würde
+  die Hefe nicht jede Woche mit einem Fass bezahlen; das Skript hat keine
+  solche Regel. **Das ist die Folge einer festen Skriptregel, die auf einen
+  neu erreichbaren Knopf trifft — kein neuer Nachteil im Spiel.**
 
 Deshalb ist die gleich lange Strecke die belastbare Zahl, und sie ist
 zugunsten des VORHER-Standes gerechnet: sie vergleicht seine besten 98 Wochen
