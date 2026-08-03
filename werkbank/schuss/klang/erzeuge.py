@@ -128,9 +128,11 @@ GERAEUSCH = {
     # "Holzratsche" zurueck; das Anstellen klingt jetzt ueber sud1..sud4, und
     # das ist ohnehin naeher am Spiel: die Pfanne ist der Sud.
 
+    # Dritter Anlauf. Die ersten beiden brachten einen hellen Glockenton mit,
+    # und der stand in 1350 als "modernes Telefonklingeln" im Urteil.
     "anstich": (
-        "A wooden tap hammered into an oak barrel with three mallet blows, then beer "
-        "pouring and foaming into a clay jug.", 5),
+        "A cooper hammering a wooden bung into a barrel, dull wooden knocks, followed "
+        "by liquid pouring heavily into a pot.", 5),
 
     "flaschen": (
         "A bottling hall: glass beer bottles clinking shoulder to shoulder along a "
@@ -147,22 +149,41 @@ GERAEUSCH = {
         "A wooden bucket of thick yeast slurry poured into a large open wooden "
         "fermenting vat: heavy viscous splashing, gurgling, foam settling, the empty "
         "bucket set down on flagstones. No voices, no music.", 4),
+    # ------------------------------------------------------------------------
+    # Ersetzt in der letzten Runde, nachdem das Ohr die fertigen dreissig
+    # Sekunden gehoert hatte — nicht die Probe allein. Beides ist noetig:
+    # eine Probe kann fuer sich tadellos sein und in der Mischung kippen.
+    # ------------------------------------------------------------------------
+
+    # Die alte Glocke war kurz und hell. In der Mischung von 1600 hat das Ohr
+    # sie zweimal als "moderne Autohupe bei 0:03 und 0:26" gemeldet, in 1350
+    # als Telefon. Tief und lang klingt sie wie das, was sie ist.
+    "glocke": (
+        "A large bronze church bell tolling slowly three times in a town, deep and "
+        "heavy with a long decaying hum, heard from the street below.", 8),
+
+    # "STÖRT: Der elektronische Rückfahrpiepser war um 1970 noch sehr
+    #  unüblich" — vom Ohr ungefragt gemeldet, im Abfahrtklang von 1970.
+    "abfahrt4": (
+        "A 1970s diesel lorry in a yard: the engine starts, idles roughly, air brakes "
+        "hiss and release, gears grind, and the lorry drives away over concrete. No "
+        "beeping, no reversing alarm, no electronics.", 8),
 }
 
 MUSIK = {
-    # Das Ohr datiert das alte bett2 auf "18. Jahrhundert, Spätbarock/Galant,
-    # Menuett in G-Dur" — zweihundert Jahre zu spaet fuer 1600.
-    # Zweiter Anlauf. Der erste kam als Blockfloete zurueck — also genau das
-    # Instrument, das bett1 (1350) traegt. Zwei Epochen mit demselben
-    # Leitinstrument sind fuer ein blindes Ohr eine Epoche. Jetzt gezupft.
-    "bett2": ("Instrumental only, no voices, no singing. Renaissance consort music of "
-              "about 1600 for a burgher's parlour. A PLUCKED LUTE carries the melody "
-              "with clear plucked strings; a bass viol bows a slow ground bass "
-              "beneath; a small tabor drum marks a steady pavane tread; a virginal "
-              "answers with short plucked figures. Full four-part harmony, courtly "
-              "and measured. Do NOT use a recorder or any flute as the lead. No "
-              "orchestra, no piano, no baroque ornaments. Quiet, loopable, no "
-              "ending.", 40),
+    # DREI Anlaeufe, und der Grund ist die Latte selbst. Das alte bett2 datierte
+    # das Ohr auf "18. Jahrhundert, Menuett" — zweihundert Jahre zu spaet. Der
+    # erste Ersatz kam als Blockfloete zurueck, also mit demselben
+    # Leitinstrument wie bett1 (1350); zwei Epochen mit einem Leitinstrument
+    # sind fuer ein blindes Ohr eine Epoche, und 1600 fiel prompt durch
+    # ("gehoert: Epoche 3"). Der zweite kam als gezupftes Cello. Erst das
+    # Cembalo allein traegt die Epoche: seither nennt das Ohr 1600 mit 95-100 %
+    # und begruendet es JEDES MAL zuerst mit dem Cembalo.
+    "bett2": ("Instrumental only, no voices, no singing, no flute, no recorder, no "
+              "woodwind of any kind. A HARPSICHORD alone plays a slow Renaissance "
+              "pavane of about 1600: bright quilled plucked strings, plain modal "
+              "harmony, a steady walking tread, no ornament runs, no orchestra, no "
+              "piano, no strings, no percussion. Quiet, loopable, no ending.", 40),
 }
 
 GRENZE = 450

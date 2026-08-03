@@ -275,3 +275,22 @@
 }
 .pr-leiter-breit > .pr-leiter-kopf,
 .pr-leiter-breit > .pr-satz { flex: 0 0 auto; }
+
+/* ----------------------------------------------------------------------
+   DIE VIERTE WURZEL — WAS BAR LIEGEN BLEIBT.
+   Sie gibt es nur in 1600 (Begründung in stuecke/preis.js, `liegegeld`).
+   Damit sie in der Rechnungsspalte nicht wie die drei anderen aussieht,
+   bekommt sie eine eigene Kante: die drei Wurzeln hängen an Flüssen, diese
+   an einem Bestand.
+   ---------------------------------------------------------------------- */
+.pr-zeile.pr-wurzel-hoehe .pr-was {
+  border-left: calc(var(--s) * 3) solid var(--pr-tinte);
+  padding-left: calc(var(--s) * 5);
+}
+
+/* Die Regel steht unter der Rechnung, bevor sie das erste Mal zuschlägt. */
+.pr-satz.pr-liege {
+  border-top: 1px solid var(--pr-rand);
+  margin-top: calc(var(--s) * 6);
+  padding-top: calc(var(--s) * 5);
+}
