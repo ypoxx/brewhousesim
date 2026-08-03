@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-03T17:34:39+00:00",
- "phase": "WELLE 4 IST DURCH — das Wellenziel ist erreicht. Von der Aufsicht unabhängig nachgemessen, zwölf Läufe auf dem eingefrorenen HEAD, je drei pro Epoche: rho +0,591 / +0,231 / +0,393 / +0,108, Spannweite jeweils 0,000, höchstens ein Jahr von sechs unter 1×, null Seitenfehler. |rho| unter 0,7 in allen vier Epochen. NICHT erledigt: keine der drei Nacharbeiten ist blind geprüft, DER KLANG hat eine offene Auflage, DER PREIS ist in dieser Welle nie gelaufen, und zwei KERN-Änderungen warten auf die Einarbeitung.",
+ "stand": "2026-08-03T19:28:04+00:00",
+ "phase": "Welle 5 läuft — zwei Agenten. DER PREIS baut endlich (er war in Welle 4 nie dran, weil preis*.js durchgehend belegt war): der Festlegungszähler steht in allen vier Epochen auf 0, und der Kassenboden von 1350 liegt bei -1. DER KLANG wird blind nachgeprüft — seine Nacharbeit hat sieben von acht Auflagen selbst gemeldet, aber selbst gemessen ist nicht geprüft, und Auflage 1 (Gegenzug hörbar zur richtigen Sekunde) ist offen. Beide KERN-Änderungen aus Welle 4 sind eingearbeitet und nachgemessen: sie lassen die Wellenzahl Ziffer für Ziffer unberührt (rho +0,591 / +0,231 / +0,393 / +0,108).",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -120,14 +120,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T16:42:28+00:00",
-   "text": "Messlatte gewaehlt und begruendet: gauntlet/MESSLATTE.md. Endprompt: gauntlet/PROMPT.md."
-  },
-  {
-   "zeit": "2026-07-31T16:49:28+00:00",
-   "text": "Welle 1 — Grundriss steht"
-  },
   {
    "zeit": "2026-07-31T16:49:28+00:00",
    "text": "Vier Stücke geschnitten: DIE STADT (Bild, vier Platten desselben Ortes plus wachsender Hof), DIE FUHRE (die Woche mit einer Knappheit, die kein Geld ist), DER PREIS (Michaeli-Blatt: Angebote nebeneinander, eines davon unwiderruflich) und DER GEGNER (der zieht, während man wegsieht) — drei von vier werden gespielt, nicht fotografiert, weil dieser Lauf sonst als Klickdummy endet."
@@ -919,6 +911,14 @@
   {
    "zeit": "2026-08-03T17:34:39+00:00",
    "text": "WELLE 4 DURCH — DAS WELLENZIEL IST ERREICHT UND VON DER AUFSICHT UNABHÄNGIG NACHGEMESSEN. Zwölf Läufe à 400 Wochen auf dem eingefrorenen HEAD 1b5ab7a, je drei pro Epoche, mit dem neuen load-festen Gerät: 1350 +0,591, 1600 +0,231, 1884 +0,393, 1970 +0,108 — jede Zahl dreimal identisch, Spannweite 0,000, null Seitenfehler, höchstens ein Jahr von sechs unter 1×. ZWEI BERICHTIGUNGEN AN DER AUFSICHT SELBST, beide gefunden vom Builder, nicht von mir. Erstens: die Regel 'rho streut zwischen identischen Läufen um 0,54, das Spiel würfelt' war falsch — es würfelte die Messhand. eichung/preis-linie.mjs sah nach jedem Klick genau einmal hin; unter Last war der Knopf noch nicht neu gezeichnet, der Klick fiel ersatzlos aus, das Haus braute ein Jahr weniger, und die ganze Partie lief anders. Das neue Gerät sieht bis zu sechsmal hin und wartet auf einen echten Bildaufbau: Spannweite 0,000. Die Regel 'drei Läufe je Epoche' bleibt, aber ihr Zweck kehrt sich um — sie ist eine Kontrolle des Geräts, nicht des Spiels. Zweitens: 'der Fehler ist umgezogen, 1350 ist durch diese Runde gerissen' war falsch. Gegenprobe mit dem neuen Gerät auf dem alten Stand da7d690: +0,701, zweimal identisch. 1350 riss schon vorher, die alte Hand hat es nur verdeckt; die Runde hat es von +0,701 auf +0,591 gebessert. DRITTENS ein Befund über die Methode: der Builder meldet für 1350 +0,288, die Aufsicht misst +0,591 — beide Zahlen stimmen, auf verschiedenen Bäumen. Sein letzter Commit war 15:36, DER SUD hat um 15:55 eine neue Achse mit einem Preis von 30 Pf in dieselbe Kennzahl gespeist. Zwei Stücke, die dieselbe Kennzahl füttern, dürfen nicht gleichzeitig nachgearbeitet werden — und die Zahl, die zählt, ist die des zusammengeführten Baums, denn den spielt man."
+  },
+  {
+   "zeit": "2026-08-03T19:28:04+00:00",
+   "text": "Welle 5 läuft — zwei Agenten. DER PREIS baut endlich (er war in Welle 4 nie dran, weil preis*.js durchgehend belegt war): der Festlegungszähler steht in allen vier Epochen auf 0, und der Kassenboden von 1350 liegt bei -1. DER KLANG wird blind nachgeprüft — seine Nacharbeit hat sieben von acht Auflagen selbst gemeldet, aber selbst gemessen ist nicht geprüft, und Auflage 1 (Gegenzug hörbar zur richtigen Sekunde) ist offen. Beide KERN-Änderungen aus Welle 4 sind eingearbeitet und nachgemessen: sie lassen die Wellenzahl Ziffer für Ziffer unberührt (rho +0,591 / +0,231 / +0,393 / +0,108)."
+  },
+  {
+   "zeit": "2026-08-03T19:28:04+00:00",
+   "text": "AUFSICHT — BEIDE KERN-ÄNDERUNGEN AUS WELLE 4 SIND EINGEARBEITET UND NACHGEMESSEN. (1) data-soll-aus an jedem Knopf aus B.knopf(), eine Zeile in kern/buehne.js: von 55 auf 395 von 440 Zügen, und 0 statt 13/20/20/14 gesperrte Züge ohne jede Auskunft. Damit ist Spalte (a) der zweiten Messlatte zum ersten Mal eindeutig — soll-aus=1 heißt das Spiel sagt nein, soll-aus=0 bei disabled heißt verdeckt, und das ist ein Fehler, kein Zustand. (2) Die Kennzahl fällt auf den nächstbesten Zug zurück, statt zu schweigen: vorher hielt kern/welt.js EINE Meldung, fiel die durch die Prüfung, gab es für diese Woche gar keine Kennzahl. meldeZug sammelt jetzt alle, besterZug() geht sie nach Rang und Preis durch; und bedienbar verlangt jetzt eine FLÄCHE, weil disabled allein Knöpfe durchließ, die frei, aber bei 0x0 zusammengeklappt lagen. Überschrift und Kennzahl lesen beide dieselbe Auswahl, damit die Zahl nie zu einem anderen Zug gehört als der Text daneben. NACHGEMESSEN mit zwölf Läufen à 400 Wochen auf dem eingefrorenen Stand: rho +0,591 / +0,231 / +0,393 / +0,108, Ziffer für Ziffer identisch mit vorher, 0 Seitenfehler. Das ist der gewünschte Ausgang einer Kernänderung — wo eine Aufräumaktion die Messzahl verbessert, ist sie verdächtig; wo sie sie unberührt lässt, hat sie nur aufgeräumt. AUSDRÜCKLICH NICHT BESTÄTIGT: die Lücke, die (2) schließt, hat der Builder in sorgfältig gespielten Partien gemessen (18 von 4.800 Wochen). Die Gegenprobe der Aufsicht mit einer passiven Partie zeigt 0 von 402 Wochen, vor wie nach der Änderung. Sie ist dafür zu schwach und wird als zu schwach ausgewiesen, statt als Bestätigung ausgegeben."
   }
  ]
 }
