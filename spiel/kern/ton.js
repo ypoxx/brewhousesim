@@ -858,12 +858,21 @@
      "Geraeusch einer Handsaege" und nannte das den Gegenzug — zu Recht, denn
      es war genau derselbe Klang.
      Ein Zeichen, das sich eine Probe mit einem anderen Vorgang teilt, ist
-     kein Zeichen. `nachbar1`/`nachbar4` kommen in keinem anderen Eintrag des
-     Katalogs vor und sind einzeln vorgelegt "Klopfen auf Holz mit Echo" bzw.
-     "mechanisches Rattern und ein metallisches Knallen mit Nachhall" —
-     beides in keiner der vier Epochen falsch. */
+     kein Zeichen. DRITTER ANLAUF, und der zweite ist an derselben Klippe
+     gescheitert wie der erste: als das Zeichen "schnelles Klopfen auf Holz"
+     war, hat das Ohr in 1350 zweimal hintereinander Sekunde 13 genannt statt
+     24 — dort steht `sud:anstich`, der Kuefer, der den Zapfen ins Fass
+     schlaegt. Auch Klopfen auf Holz. Ein Hof ist voller Holz und voller
+     Haemmer; ein Zeichen darf sich nicht daraus bedienen.
+     Jetzt ist es ein TOR: es quietscht auf, etwas geht hindurch, es faellt
+     zu, der Riegel faellt ein. In den vier Epochen quietscht sonst nichts,
+     und ein Tor, das drueben auf- und zugeht, ist genau die Auskunft, um die
+     es geht — jemand anderes kommt und geht, ohne dass man ihn angestossen
+     hat. Einzeln vorgelegt: "quietschendes Tuerscharnier, schwere Holztuer,
+     lautes Zuschlagen, Riegel" (1350: nichts falsch) bzw. dasselbe in Metall
+     (1970: nichts falsch). */
   var NACHBAR_DATEI = altNeu('nachbar1', 'nachbar4');
-  var NACHBAR_DAUER = 2.8;
+  var NACHBAR_DAUER = 3.6;
   var NACHBAR_PAUSE = 4.5;
 
   function nachbarhof(w, epoche, wann) {
@@ -876,8 +885,11 @@
     w.nachbarZahl = (w.nachbarZahl || 0) + 1;
 
     var d = Math.min(NACHBAR_DAUER, Math.max(0.6, buf.duration - 0.15));
-    var frei = Math.max(0.001, buf.duration - d - 0.05);
-    var ab = (w.nachbarZahl * 1.31) % frei;          /* gesaet, nicht gewuerfelt */
+    /* Immer von vorn. Bei einem Tor ist die Reihenfolge die Auskunft — erst
+       das Quietschen, dann der Schlag, dann der Riegel. Ein Einstieg mittendrin
+       waere wieder nur ein Geraeusch. Dass es jedes Mal dasselbe Tor ist, ist
+       kein Mangel: ein Zeichen wird erkannt, weil es sich gleicht. */
+    var ab = 0;
 
     var q = ctx.createBufferSource();
     q.buffer = buf;

@@ -89,6 +89,7 @@
 
     festGenommen: {},      /* k -> {jahr, amtszeit, name}                 */
     festAmtszeit: {},      /* Amtszeit-Nr -> Schluessel                   */
+    amtszeiten: [],        /* [{nr, seit, name}] — gemessene Amtsantritte */
 
     rechnung: [],          /* was dieses Michaeli gebucht wurde           */
     chronik: [],           /* eigene, unabaenderliche Chronik             */
@@ -105,6 +106,59 @@
   function jahr() { return B.welt.zeit.jahr; }
   function amtszeit() { return B.welt.zeit.amtszeit || { nr: 1, name: 'Unbekannt' }; }
   function geld(n) { return B.welt.geld(n); }
+
+  /* ----------------------------------------------------------------------
+     WIE LANG EINE AMTSZEIT WIRKLICH DAUERT — GEMESSEN, NICHT BEHAUPTET.
+
+     Auf jeder Karte der unwiderruflichen Wahl stand bis zum 3. August 2026:
+     „Barbara Bruckner fuehrt das Haus bis 1636." Die Zahl kommt aus
+     `welt.js:379` (`bis: jahr + wuerfel.ganz(21, 37)`). Sie stimmt nicht:
+     die Amtszeit wechselt in Wirklichkeit alle zwei Braujahre
+     (`erbe-daten.js:315 STUNDE_ABSTAND = 2` -> `erbe.js stundeSchlaegt()` ->
+     `welt.erbe()`). Am Bildschirm gezaehlt, alle vier Epochen, zwoelf
+     Laeufe: `zeit.amtszeit.nr` laeuft in 400 Wochen von 1 auf 8. Barbara
+     Bruckner war 1602 abgeloest, nicht 1636 — die Karte nannte einen
+     Horizont, der zehn- bis achtzehnmal zu lang war. Wer nach diesem Satz
+     kaufte, kaufte 36 Jahre und bekam 2.
+
+     Der Wuerfel gehoert dem Kern, der Abstand dem ERBE — beide sind fuer
+     dieses Stueck gesperrt. Was dieses Stueck darf, ist: die Zahl nicht mehr
+     abschreiben, sondern NACHZAEHLEN. `Z.amtszeiten` haelt fest, in welchem
+     Braujahr jede Amtszeitnummer zum ersten Mal am Werk war; der Abstand
+     zwischen zwei Antritten ist die Frist, die dieses Haus wirklich erlebt
+     hat. Solange erst eine Hand am Werk war, gibt es keine gemessene Frist —
+     dann steht auch keine Zahl da, und die Karte sagt statt dessen das, was
+     ohne jede Messung wahr ist: die Festlegung ueberdauert die Amtszeit.
+
+     Der Satz auf der Karte ist der einzige, der einer UNWIDERRUFLICHEN
+     Entscheidung ihren Zeitraum angibt. Er darf nicht raten. */
+  function merkeAmtszeit() {
+    var a = amtszeit();
+    if (!a || !a.nr) return;
+    for (var i = 0; i < Z.amtszeiten.length; i++) if (Z.amtszeiten[i].nr === a.nr) return;
+    Z.amtszeiten.push({ nr: a.nr, seit: jahr(), name: a.name });
+  }
+
+  /* Der mittlere Abstand zweier Amtsantritte, in Braujahren. 0 = noch nichts
+     gemessen. */
+  function amtszeitFrist() {
+    var l = Z.amtszeiten;
+    if (l.length < 2) return 0;
+    var s = 0;
+    for (var i = 1; i < l.length; i++) s += (l[i].seit - l[i - 1].seit);
+    return Math.max(1, Math.round(s / (l.length - 1)));
+  }
+
+  /* Wann die Frist das naechste Mal ablaeuft. Ohne gemessene Frist keine
+     Zahl — und dann steht der Handlohn auch nicht im Kalender. Lieber eine
+     Zeile weniger als eine Jahreszahl, die um 34 Jahre danebenliegt. */
+  function naechsterErbfall() {
+    var f = amtszeitFrist();
+    if (!f || !Z.amtszeiten.length) return 0;
+    var j = Z.amtszeiten[Z.amtszeiten.length - 1].seit + f;
+    while (j <= jahr()) j += f;
+    return j;
+  }
 
   /* Zwei bedeutende Stellen — damit ein Anschlag wie ein Anschlag aussieht
      und nicht wie ein Rechenergebnis. */
@@ -707,6 +761,7 @@
     Z.rechnung = [];
     Z.gestundet = 0;
     Z.tafelJahr = jahr();
+    merkeAmtszeit();
 
     /* 1. Was durch das Haus ging, was es uebrig liess, und was im Haus liegt. */
     if (!erste) {
@@ -1075,11 +1130,22 @@
       if (u.jahr < jahr() || u.bezahlt) return;
       l.push({ jahr: u.jahr, name: u.name, sagt: u.sagt, betrag: umlageBetrag(u), art: 'umlage' });
     });
-    /* Der Erbfall steht im Kalender: die Amtszeit hat ein Ende. */
-    if (!Z.handlohnWeg && amtszeit().bis && amtszeit().bis > jahr()) {
+    /* Der Erbfall steht im Kalender: die Amtszeit hat ein Ende. Welches,
+       steht NICHT in `amtszeit().bis` — die Zahl dort ist gewuerfelt
+       (`welt.js:379`, 21 bis 37 Jahre) und wird von der Stunde des ERBEN
+       laengst ueberholt, die alle zwei Braujahre schlaegt. Angekuendigt wird
+       deshalb der Abstand, den dieses Haus wirklich erlebt hat
+       (`naechsterErbfall`); solange keiner gemessen ist, steht die Zeile
+       nicht da. Sie war die zweite Stelle mit derselben falschen Zahl: der
+       Handlohn ist in 1350 mehr als eine ganze Jahreslast und faellt alle
+       zwei Jahre — angekuendigt war er auf 1386. */
+    var erb = naechsterErbfall();
+    if (!Z.handlohnWeg && erb) {
       l.push({
-        jahr: amtszeit().bis, name: 'Handlohn beim Erbfall',
-        sagt: amtszeit().name + ' führt das Haus seit ' + amtszeit().seit + '.',
+        jahr: erb, name: 'Handlohn beim Erbfall',
+        sagt: amtszeit().name + ' führt das Haus seit ' + (amtszeit().seit || Z.startjahr)
+            + '; die bisherigen Amtszeiten hielten je ' + amtszeitFrist()
+            + (amtszeitFrist() === 1 ? ' Braujahr.' : ' Braujahre.'),
         betrag: handlohnBetrag(),
         art: 'erbfall'
       });
@@ -1723,11 +1789,22 @@
       karte.appendChild(B.el('div', 'pr-sperrt',
         'Dafür neu und für immer: ' + f.wirkung.pflichtNeu.name + '.'));
     }
+    /* Der Zeitraum auf der Karte — gemessen, nicht gewuerfelt. Begruendung
+       oben bei `merkeAmtszeit`. Was hier stand („fuehrt das Haus bis 1636"),
+       war der einzige Satz, der einer unwiderruflichen Entscheidung ihre
+       Frist angab, und er lag um den Faktor zehn bis achtzehn daneben. */
+    var frist = amtszeitFrist();
     karte.appendChild(B.el('div', 'pr-satz-klein',
       'Preis dieser Amtszeit: '
       + (preis ? geld(preis) : (zufluss ? geld(zufluss) + ' kommen herein' : 'keine Ausgabe'))
-      + (amtszeit().bis ? ' · ' + amtszeit().name + ' führt das Haus bis ' + amtszeit().bis + '.'
-                        : '')));
+      + ' · ' + amtszeit().name + ' führt das Haus seit '
+      + (amtszeit().seit || Z.startjahr) + '. '
+      + (frist
+          ? 'Die bisherigen Amtszeiten dieses Hauses hielten je ' + frist
+            + (frist === 1 ? ' Braujahr' : ' Braujahre') + ' — die Festlegung hält länger: '
+            + 'sie gilt für den Rest der Partie.'
+          : 'Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, '
+            + 'auch wenn das Haus die Hand wechselt.')));
 
     if (!offen) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
       'Diese Amtszeit hat sich bereits festgelegt. Die nächste hat wieder eine Wahl.'));
@@ -2239,7 +2316,10 @@
 
     erbfall: function () {
       Z.handlohnFaellig = true;
-      chronik('erbfall', amtszeit().name + ' übernimmt das Haus.');
+      merkeAmtszeit();
+      chronik('erbfall', amtszeit().name + ' übernimmt das Haus'
+        + (amtszeitFrist() ? ' — die vorige hielt ' + amtszeitFrist()
+            + (amtszeitFrist() === 1 ? ' Braujahr.' : ' Braujahre.') : '.'));
     },
 
     zeichne: function () {
