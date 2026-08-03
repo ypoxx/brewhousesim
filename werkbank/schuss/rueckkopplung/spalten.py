@@ -38,7 +38,10 @@ for ep in sorted(proEp):
         print(f"   (b) Festlegungen gesamt {d['schluss']['festlegungen']}: {fest}")
         print(f"   (c) Gegnerzuege {geg} = {geg/max(1,len(jahre)):.1f} je Jahr, "
               f"{geg/max(1,d['wochen']):.2f} je Woche")
-    schluessel[ep] = set(proEp[ep][0]['zugSchluessel'])
+    # Ereignisnummern (gegner:zeige:47) sind keine Verben, sondern Ereignisse —
+    # wer sie mitzaehlt, misst, wie viel passiert ist, nicht wie viel man tun kann.
+    schluessel[ep] = set(k for k in proEp[ep][0]['zugSchluessel']
+                         if not re.search(r':\d+$', k))
 
 print()
 print('=' * 100)

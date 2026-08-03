@@ -102,7 +102,7 @@ for ep in sorted(proEpoche):
         gedeckt = teuerer = 0
         verh = []
         for x in d['reihe']:
-            if not x['nzPreis']:
+            if not x['nzPreis'] or 'aListe' not in x:
                 continue
             preise = [abs(p) for _, p in x['aListe']]
             if any(abs(p - abs(x['nzPreis'])) <= 1 for p in preise):
