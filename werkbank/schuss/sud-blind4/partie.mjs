@@ -111,6 +111,9 @@ async function maus(zug, opt = {}) {
 
 const wochen = [];
 let abbruch = null;
+// Rohstoff je Epoche anders bemessen: 1350 kauft 40, 1970 kauft 1200.
+const ROHSCHWELLE = [40, 65, 120, 340][EPOCHE - 1];
+const STARTJAHR = [1350, 1600, 1884, 1970][EPOCHE - 1];
 
 for (let w = 0; w < WOCHEN; w++) {
   // Der Sommerzettel der FUHRE sperrt WEITER darunter ab — zu damit.
@@ -123,21 +126,18 @@ for (let w = 0; w < WOCHEN; w++) {
     // 1. Die Fuhre. Ihre Knoepfe liegen auf einem zugeklappten Brett —
     //    ein sorgfaeltiger Spieler schlaegt es auf. FUELLEN und ABSCHICKEN
     //    haengen am Wagenbrett, nicht am Haeuserbrett.
-    if (!A.sud.length || true) {
-      const offen = await seite.evaluate(() => {
-        const k = document.querySelector('button[data-zug="fuhre:fuellen"]');
-        if (!k) return false;
-        const r = k.getBoundingClientRect();
-        const t = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
-        return !!(t && (t === k || k.contains(t)));
-      });
-      if (!offen) await maus('stadt:reiter:fuhre-fu-brett-fu-wagen', { egal: true, warte: 60 });
+    // 1a. Rohstoff und Brautage haengen an der ANSCHLAGTAFEL.
+    if (A.rohstoff < ROHSCHWELLE) {
+      await maus('stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel', { egal: true, warte: 60 });
+      if (await maus('fuhre:kauf:rohstoff') === 'geklickt') hand.push('rohstoff');
+      if (await maus('fuhre:kauf:rohstoff') === 'geklickt') hand.push('rohstoff2');
+      await maus('stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel', { egal: true, warte: 60 });
     }
+    // 1b. FUELLEN und ABSCHICKEN haengen am WAGENBRETT.
+    await maus('stadt:reiter:fuhre-fu-brett-fu-wagen', { egal: true, warte: 60 });
     if (await maus('fuhre:fuellen') === 'geklickt') hand.push('fuellen');
     else if (await maus('fuhre:wie-vorige') === 'geklickt') hand.push('wie-vorige');
     if (await maus('fuhre:abschicken', { warte: 70 }) === 'geklickt') hand.push('abschicken');
-    // 2. Rohstoff nachkaufen, wenn er knapp wird.
-    if (A.rohstoff < 40) { if (await maus('fuhre:kauf:rohstoff') === 'geklickt') hand.push('rohstoff'); }
     // 3. Der Zettel wieder frei: das Wagenbrett zuklappen, sonst deckt es ihn.
     await maus('stadt:reiter:fuhre-fu-brett-fu-wagen', { egal: true, warte: 60 });
     // 4. Die Hefe — der Zug des SUD, der nichts kostet ausser Bier.
@@ -162,6 +162,8 @@ for (let w = 0; w < WOCHEN; w++) {
   wochen.push({ w: w + 1, A, B: Bm, hand });
 
   if (A.ende || Bm.ende) { abbruch = 'ende in Woche ' + (w + 1); break; }
+  // Vierzehn Jahre, dann ist genug gespielt.
+  if (Bm.jahr >= STARTJAHR + 14) { abbruch = null; break; }
   const r = await maus('weiter', { warte: 45 });
   if (r !== 'geklickt') {
     // WEITER kann unter einem fremden Blatt liegen — dann alles zuklappen.

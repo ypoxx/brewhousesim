@@ -199,11 +199,15 @@
                            zeichen: true, versatz: 0.62, duck: 0.22, halt: 0.9 },
     'preis:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.85 },
     'preis:handschlag':  { datei: stets('handschlag'), laut: 0.85 },
-    'preis:fertig':      { datei: altNeu('bau1', 'bau4'), laut: 0.8 },
+    'preis:fertig':      { datei: altNeu('bau1', 'bau4'), laut: 0.55, laenge: 1.8 },
     'preis:blatt':       { datei: stets('papier'), laut: 0.5 },
 
     /* --- DIE STADT ------------------------------------------------------ */
-    'stadt:bau':         { datei: altNeu('bau1', 'bau4'), laut: 0.85 },
+    /* Das EIGENE Bauen tritt zurueck. Nicht aus Bescheidenheit: solange es
+       so laut war wie das fremde, hat das fremde Ohr in 1884 den Gegenzug bei
+       Sekunde 12 gemeldet, wo `sud:bau` steht, statt bei 24, wo der Nachbar
+       wirbt. Wer zwei gleich laute Baustellen hat, hat keine. */
+    'stadt:bau':         { datei: altNeu('bau1', 'bau4'), laut: 0.55 },
     /* Der Reiter war ein Rauschstoss aus dem Ersatzkasten — das Ohr hat ihn
        in 1350 als "Klicken eines modernen Fotoapparats" gehoert. Jetzt ist
        es das, was er sein soll: ein Bogen Papier. */
@@ -288,12 +292,12 @@
     'sud:siegel':        { datei: altNeu('siegel', 'maschine'), laut: 0.75 },
     'sud:kauf':          { datei: altNeu('muenzen', 'kasse'), laut: 0.85 },
     'sud:umstellen':     { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
-    'sud:bau':           { datei: altNeu('bau1', 'bau4'), laut: 0.8 },
+    'sud:bau':           { datei: altNeu('bau1', 'bau4'), laut: 0.5, laenge: 1.8 },
     'sud:anzeige':       { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
 
     /* --- DER NAME ------------------------------------------------------- */
-    'name:anschlagen':   { datei: altNeu('bau1', 'bau4'), laut: 0.7 },
-    'name:aushaengen':   { datei: altNeu('bau1', 'bau4'), laut: 0.6 },
+    'name:anschlagen':   { datei: altNeu('bau1', 'bau4'), laut: 0.5, laenge: 1.8 },
+    'name:aushaengen':   { datei: altNeu('bau1', 'bau4'), laut: 0.45, laenge: 1.8 },
     'name:einziehen':    { datei: stets('kerbe'), ersatz: 'kerbe', laut: 0.5 },
     'name:siegel':       { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
     'name:aufgeld':      { datei: altNeu('muenzen', 'kasse'), laut: 0.8 },
@@ -724,7 +728,7 @@
     /* Zwei Waende. `fern` ist der Nachbarhof, wie man ihn ueber den Zaun
        hoert; `nachbar` ist dasselbe eine Wand weiter und traegt das Zeichen. */
     w.bus.fern = baueWand(ctx, w.bus.werk, 2000, 0.155, 0.40);
-    w.bus.nachbar = baueWand(ctx, w.bus.werk, 1400, 0.190, 0.55);
+    w.bus.nachbar = baueWand(ctx, w.bus.werk, 1800, 0.190, 0.55);
     return w;
   }
 
@@ -848,7 +852,7 @@
      "mechanisches Rattern und ein metallisches Knallen mit Nachhall" —
      beides in keiner der vier Epochen falsch. */
   var NACHBAR_DATEI = altNeu('nachbar1', 'nachbar4');
-  var NACHBAR_DAUER = 2.4;
+  var NACHBAR_DAUER = 2.8;
   var NACHBAR_PAUSE = 4.5;
 
   function nachbarhof(w, epoche, wann) {
@@ -870,7 +874,7 @@
     /* Wie bei den Schleifen: die beiden Proben sind NICHT gleich laut aus dem
        Erzeuger gekommen (Effektivwert 0,044 gegen 0,100). Ein Zeichen, das in
        1350 halb so laut ist wie in 1970, ist in 1350 kein Zeichen. */
-    var laut = angleich(buf, 0.085);
+    var laut = angleich(buf, 0.15);
     g.gain.setValueAtTime(0.0001, wann);
     g.gain.linearRampToValueAtTime(laut, wann + 0.22);
     g.gain.setValueAtTime(laut, wann + d - 0.45);
