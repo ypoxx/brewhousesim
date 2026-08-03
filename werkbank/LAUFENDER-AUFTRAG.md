@@ -131,6 +131,28 @@ Abnahmetor. Die Aufsicht fährt es trotzdem, und zwar bevor sie selbst committet
 deren Kommandozeile die Zeichenkette enthält. Ein toter Fetch sieht dann aus wie
 ein laufender. Am Logfile prüfen, nicht an `pgrep`.
 
+**Agenten sterben mitten im Lauf.** Am 3. August ist der blinde Kritiker für DER
+SUD nach fünf Minuten an einem API-Fehler abgebrochen, mitten beim Bau seines
+Messstands. **Er war nicht verloren:** seine Dateien lagen auf der Platte, und
+ein `SendMessage` an dieselbe Agenten-Kennung nimmt den Lauf mit vollem Kontext
+wieder auf — für einen *blinden* Kritiker ist das sogar besser als ein Neustart,
+weil sein unverdorbener Kontext erhalten bleibt. Neu starten heißt: alles noch
+einmal messen.
+
+> **Regel für jeden Auftrag ab jetzt:** Teilergebnisse **laufend** in die
+> Urteils- oder Berichtsdatei schreiben, nicht erst am Ende. Ein unfertiges
+> Urteil mit den bis dahin gemessenen Zahlen ist mehr wert als ein verlorenes
+> vollständiges. Die Aufsicht sichert die Dateien ohnehin alle paar Minuten —
+> aber nur, was geschrieben ist.
+
+**Zwei Zugschlüssel, an denen sich hier schon Skripte die Zähne ausgebissen
+haben** (sie klicken dann still ins Leere und melden 0 Klicks, ohne zu scheitern):
+- Der Wochenknopf heißt schlicht **`[data-zug="weiter"]`** — nicht `fuhre:weiter`,
+  nicht `welt:weiter`.
+- Die Brett-Reiter heißen **`stadt:reiter:*`**, acht Stück, in allen vier Epochen
+  dieselben Schlüssel (`…:sud-sud-brett`, `…:gegner-amort-gg-band`,
+  `…:name-nm-band`, `…:erbe-blatt-erb-buch`, vier für DIE FUHRE).
+
 ---
 
 ## RICHTUNGSENTSCHEIDUNG DES AUFTRAGGEBERS, 3. August 2026 — DER EPOCHENBOGEN
