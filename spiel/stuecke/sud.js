@@ -1764,7 +1764,14 @@
            wenn KEINE der Stellen traegt — oder wenn das eigene Brett offen
            liegt und er es ohnehin verdecken wuerde. */
         var weg = !Z.brettZu;
-        if (!weg) weg = !stelleZettel(zettel);
+        /* Beiseite heisst 0x0 — daraus kommt er nie wieder heraus, wenn man
+           IHN in diesem Zustand misst. Also erst hervorholen, dann pruefen,
+           und nur zurueckstecken, wenn wirklich keine Stelle traegt. Alles
+           innerhalb eines Bildes, es blinkt nichts. */
+        if (!weg) {
+          zettel.classList.remove('beiseite');
+          weg = !stelleZettel(zettel);
+        }
         if (zettel.classList.contains('beiseite') !== weg) zettel.classList.toggle('beiseite', weg);
         schalte(zettel, weg);
       }
