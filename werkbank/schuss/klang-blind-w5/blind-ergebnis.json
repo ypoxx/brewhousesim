@@ -1,0 +1,90 @@
+[
+ {
+  "probe": "probe-01.wav",
+  "quelle": "e2-still.wav",
+  "soll": 2,
+  "art": "still",
+  "gehoert": 2,
+  "sicher": 100,
+  "richtig": true,
+  "vorgang": "Auf dem Hof wird handwerklich gearbeitet, jemand hämmert und ein quietschender Holzkarren wird bewegt. Im Hintergrund spielt jemand eine Melodie auf einem Cembalo.",
+  "stoert": "In den ersten zwei Sekunden ist ein modernes, lautes Motoren- oder Maschinengeräusch (ähnlich einem Hubschrauber) zu hören, das absolut nicht in diese Zeit passt."
+ },
+ {
+  "probe": "probe-02.wav",
+  "quelle": "e3-still.wav",
+  "soll": 3,
+  "art": "still",
+  "gehoert": 3,
+  "sicher": 90,
+  "richtig": true,
+  "vorgang": "Im Brauhaus-Hof sind schwere, maschinelle Anlagen in Betrieb, vermutlich wird gerade mit Dampfkraft gebraut oder verladen.",
+  "stoert": "Nichts, die mechanischen und industriellen Klänge passen historisch exakt in das späte 19. Jahrhundert."
+ },
+ {
+  "probe": "probe-03.wav",
+  "quelle": "e4-gespielt.wav",
+  "soll": 4,
+  "art": "gespielt",
+  "gehoert": 4,
+  "sicher": 85,
+  "richtig": true,
+  "vorgang": "Ein Lieferwagen wird mit Getränkekästen beladen. Man hört das Klirren von Glasflaschen und das Starten eines Motors.",
+  "stoert": "Nichts, die akustische Kulisse passt vollständig in die 1970er Jahre."
+ },
+ {
+  "probe": "probe-04.wav",
+  "quelle": "e1-gespielt.wav",
+  "soll": 1,
+  "art": "gespielt",
+  "gehoert": 1,
+  "sicher": 95,
+  "richtig": true,
+  "vorgang": "Es wird Bier gebraut, man hört das Blubbern der Kessel und das Arbeiten hölzerner Mechanik.",
+  "stoert": "Ein schnelles, maschinelles Rattern oder Tuckern (wie von einem Motor oder einer Dampfmaschine) ist zu hören, was nicht in das Jahr 1350 passt."
+ },
+ {
+  "probe": "probe-05.wav",
+  "quelle": "e4-still.wav",
+  "soll": 4,
+  "art": "still",
+  "gehoert": 4,
+  "sicher": 100,
+  "richtig": true,
+  "vorgang": "Ein Lastwagen steht mit laufendem Dieselmotor im Hof, während im Hintergrund Musik aus einem Radio läuft. Gelegentliches Flaschenklirren deutet auf das Verladen von Getränken hin.",
+  "stoert": "Nichts, alle zu hörenden Geräusche passen authentisch in die Zeit um 1970."
+ },
+ {
+  "probe": "probe-06.wav",
+  "quelle": "e3-gespielt.wav",
+  "soll": 3,
+  "art": "gespielt",
+  "gehoert": 3,
+  "sicher": 100,
+  "richtig": true,
+  "vorgang": "Eine Dampfmaschine ist im Brauhaus-Hof in Betrieb, während eine laute Dampfpfeife ertönt. Im Hintergrund wird Flüssigkeit umgefüllt und ein Pferd wiehert.",
+  "stoert": "Nichts, die Kombination aus stationären Dampfmaschinen und Pferdefuhrwerken ist historisch absolut passend für das Jahr 1884."
+ },
+ {
+  "probe": "probe-07.wav",
+  "quelle": "e1-still.wav",
+  "soll": 1,
+  "art": "still",
+  "gehoert": 1,
+  "sicher": 95,
+  "richtig": true,
+  "vorgang": "In der Brauerei wird Wasser oder Bier umgefüllt und ein Sud kocht blubbernd über einem offenen Feuer.",
+  "stoert": "Ganz am Anfang ist das laute, metallische Rattern eines modernen Rolltores zu hören, was technisch absolut nicht ins Jahr 1350 passt."
+ },
+ {
+  "probe": "probe-08.wav",
+  "quelle": "e2-gespielt.wav",
+  "soll": 2,
+  "art": "gespielt",
+  "gehoert": 2,
+  "sicher": 80,
+  "richtig": true,
+  "vorgang": "Im Brauhaus-Hof werden schwere Holzfässer gerollt und auf einen von Pferden gezogenen Karren verladen, während im Hintergrund leise Stimmen und Handwerksarbeiten zu hören sind.",
+  "stoert": "Ein sehr leises, beständiges Rauschen im Hintergrund, das wie entfernter Autoverkehr oder ein Flugzeug klingt und nicht in das Jahr 1600 passt."
+ }
+]

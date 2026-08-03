@@ -1,0 +1,66 @@
+[
+ {
+  "epoche": 2,
+  "sicher": 100,
+  "vorgang": "Auf dem Hof wird handwerklich gearbeitet, jemand hämmert und ein quietschender Holzkarren wird bewegt. Im Hintergrund spielt jemand eine Melodie auf einem Cembalo.",
+  "woran": "Das Cembalo als Instrument und der musikalische Stil deuten stark auf die Renaissance oder das Frühbarock (um 1600) hin. Zudem hört man ausschließlich vorindustrielle Arbeitsgeräusche wie Handwerkzeuge und hölzerne Räder.",
+  "stoert": "In den ersten zwei Sekunden ist ein modernes, lautes Motoren- oder Maschinengeräusch (ähnlich einem Hubschrauber) zu hören, das absolut nicht in diese Zeit passt.",
+  "datei": "probe-01.wav"
+ },
+ {
+  "epoche": 3,
+  "sicher": 90,
+  "vorgang": "Im Brauhaus-Hof sind schwere, maschinelle Anlagen in Betrieb, vermutlich wird gerade mit Dampfkraft gebraut oder verladen.",
+  "woran": "Das deutliche Zischen, Stampfen und mechanische Rattern einer Dampfmaschine ist zu hören, was den technologischen Stand der Industrialisierung um 1884 prägt.",
+  "stoert": "Nichts, die mechanischen und industriellen Klänge passen historisch exakt in das späte 19. Jahrhundert.",
+  "datei": "probe-02.wav"
+ },
+ {
+  "epoche": 4,
+  "sicher": 85,
+  "vorgang": "Ein Lieferwagen wird mit Getränkekästen beladen. Man hört das Klirren von Glasflaschen und das Starten eines Motors.",
+  "woran": "Das Geräusch eines modernen Verbrennungsmotors und das typische Aneinanderschlagen von genormten Glasflaschen in Kunststoffkästen.",
+  "stoert": "Nichts, die akustische Kulisse passt vollständig in die 1970er Jahre.",
+  "datei": "probe-03.wav"
+ },
+ {
+  "epoche": 1,
+  "sicher": 0,
+  "vorgang": "Aufgrund der fehlenden Audiodaten kann der genaue Vorgang im Brauhaus-Hof nicht ermittelt werden.",
+  "woran": "Es wurden lediglich leere Zeitstempel von 00:00 bis 00:30 ohne jegliche Geräuschbeschreibung oder Tonspur übergeben.",
+  "stoert": "Das Fehlen der eigentlichen Tonaufnahme macht eine Analyse unmöglich.",
+  "datei": "probe-04.wav"
+ },
+ {
+  "epoche": 4,
+  "sicher": 100,
+  "vorgang": "Ein Lastwagen steht mit laufendem Dieselmotor im Hof, während im Hintergrund Musik aus einem Radio läuft. Gelegentliches Flaschenklirren deutet auf das Verladen von Getränken hin.",
+  "woran": "An dem lauten Dieselmotor, dem Zischen der Druckluftbremse zu Beginn und der Funk- oder Popmusik im Hintergrund, die typisch für die 1970er Jahre ist.",
+  "stoert": "Nichts, alle zu hörenden Geräusche passen authentisch in die Zeit um 1970.",
+  "datei": "probe-05.wav"
+ },
+ {
+  "epoche": 3,
+  "sicher": 100,
+  "vorgang": "Eine Dampfmaschine ist im Brauhaus-Hof in Betrieb, während eine laute Dampfpfeife ertönt. Im Hintergrund wird Flüssigkeit umgefüllt und ein Pferd wiehert.",
+  "woran": "Das rhythmische Stampfen der Dampfmaschine und das Zischen der Dampfpfeife sind eindeutige Merkmale der Industrialisierung. Das Pferdewiehern zeigt, dass gleichzeitig noch tierische Zugkraft genutzt wurde.",
+  "stoert": "Nichts, die Kombination aus stationären Dampfmaschinen und Pferdefuhrwerken ist historisch absolut passend für das Jahr 1884.",
+  "datei": "probe-06.wav"
+ },
+ {
+  "epoche": 1,
+  "sicher": 95,
+  "vorgang": "In der Brauerei wird Wasser oder Bier umgefüllt und ein Sud kocht blubbernd über einem offenen Feuer.",
+  "woran": "Die Zeit lässt sich eindeutig an der schlichten, mittelalterlichen Flötenmelodie und dem Knistern des offenen Holzfeuers erkennen.",
+  "stoert": "Ganz am Anfang ist das laute, metallische Rattern eines modernen Rolltores zu hören, was technisch absolut nicht ins Jahr 1350 passt.",
+  "datei": "probe-07.wav"
+ },
+ {
+  "epoche": 2,
+  "sicher": 80,
+  "vorgang": "Im Brauhaus-Hof werden schwere Holzfässer gerollt und auf einen von Pferden gezogenen Karren verladen, während im Hintergrund leise Stimmen und Handwerksarbeiten zu hören sind.",
+  "woran": "Das Rumpeln der Holzfässer auf unebenem Pflaster, das Wiehern und Hufgeklapper der Pferde sowie das völlige Fehlen maschineller oder industrieller Geräusche deuten auf die Zeit vor der Industrialisierung hin.",
+  "stoert": "Ein sehr leises, beständiges Rauschen im Hintergrund, das wie entfernter Autoverkehr oder ein Flugzeug klingt und nicht in das Jahr 1600 passt.",
+  "datei": "probe-08.wav"
+ }
+]
