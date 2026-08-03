@@ -24,6 +24,7 @@ const WOCHEN = +(process.argv[3] || 400);
 const STIL = process.argv[4] || 'blind';
 const ZIEL = process.argv[5] || `/tmp/sud-w4-e${ep}-${STIL}.json`;
 const SAAT = process.env.SAAT || '1350';
+const HAFEN = process.env.HAFEN || '8899';
 
 const browser = await chromium.launch();
 const seite = await browser.newPage({ viewport: { width: 1920, height: 1000 }, deviceScaleFactor: 1 });
