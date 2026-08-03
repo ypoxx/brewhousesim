@@ -676,3 +676,43 @@ kein bedienbarer Knopf gehört, ist keine Kennzahl, sondern eine Behauptung.
 
 Gemessen nach der Änderung, Woche 1: **5,89× · 3,76× · 8,35× · 3,54×** statt
 12,4× / 35,6× / 274,0× / 47,8×, und alle vier nennen einen umkämpften Zug.
+
+---
+
+## 25 · Jeder Knopf sagt, ob das SPIEL nein sagt — nicht nur, dass er tot ist
+
+`disabled` trägt zwei Dinge zugleich: die Regel des Spiels *und* jede Verdeckung,
+die ein anderes Stück später darüberlegt. Wer aktive Züge zählt, zählt damit
+etwas anderes, als er glaubt — und genau das ist **Spalte (a) der zweiten
+Messlatte**.
+
+Deshalb setzt `B.knopf()` in `kern/buehne.js` ab sofort an **jedem** Knopf:
+
+```js
+k.setAttribute('data-soll-aus', opt.aus ? '1' : '0');
+```
+
+- **`data-soll-aus="1"`** — das Spiel sagt nein. Zu teuer, falsche Zeit, schon
+  festgelegt.
+- **`data-soll-aus="0"` bei `disabled`** — das Spiel erlaubt es, aber der Knopf
+  ist verdeckt oder weggeklappt. **Das ist ein Fehler**, kein Zustand.
+- `disabled` bleibt die **Summe** aus beidem und wird nicht angetastet.
+
+**Wer zählt, sagt dazu, was er gelesen hat.** Eine Zahl aus `disabled` ist eine
+Untergrenze; eine Zahl aus `data-soll-aus` ist die Aussage über das Spiel.
+
+**Gemessen am 3. August 2026**, vier Epochen, Woche 1:
+
+| | vorher | nachher |
+|---|---|---|
+| Züge mit `data-soll-aus` | 55 von 440 (12,5 %) | **395 von 440 (89,8 %)** |
+| gesperrt **ohne jede Auskunft** | 13 / 20 / 20 / 14 | **0 / 0 / 0 / 0** |
+
+Die ungeklärten Fälle kamen ausnahmslos aus `fuhre:*`. Kein Stück musste dafür
+etwas ändern — sie bauen alle über `B.knopf()`. Die verbleibenden gut zehn
+Prozent sind Knöpfe, die nicht über `B.knopf()` entstehen; **keiner davon ist
+gesperrt ohne Auskunft**.
+
+Vorgeschlagen und gemessen begründet von **DER SUD** (Welle 4), eingearbeitet von
+der Aufsicht zwischen den Wellen. Nachprüfbar mit
+`werkbank/schuss/aufsicht/deckung.mjs`.
