@@ -52,14 +52,15 @@ Zahl:
 | 1884 | 97 | 63,9 % | 60,8 % | −3,1 |
 | 1970 | 114 | 22,8 % | 26,3 % | +3,5 |
 
-1350 dreimal unabhängig nachgemessen, gegen denselben VORHER-Stand über
-dieselbe Strecke:
+1350 **viermal unabhängig** nachgemessen, jedes Mal gegen denselben
+VORHER-Stand über dieselbe Strecke:
 
-| Lauf | Strecke | VORHER | NACHHER |
-|---|---|---|---|
-| 1 | 98 Wochen | 7,1 % | **99,0 %** |
-| 2 | 103 Wochen | 6,8 % | **99,0 %** |
-| 3 | 118 Wochen | 6,8 % | **99,2 %** |
+| Lauf | Strecke | VORHER | NACHHER | Zettel `display:none` nachher |
+|---|---|---|---|---|
+| 1 | 98 Wochen | 7,1 % | **99,0 %** | 0 |
+| 2 | 103 Wochen | 6,8 % | **99,0 %** | 2 |
+| 3 | 118 Wochen | 6,8 % | **99,2 %** | 1 |
+| 4 (abgelieferter Stand) | 118 Wochen | 6,8 % | **99,2 %** | **0** |
 
 1884 und 1970 bewegen sich um ±3 Punkte — das ist die Streuung dieser Messung
 (zwei Partien, zwei verschiedene Zufallswege, geldgebundene Achsen). 1350
@@ -75,7 +76,7 @@ Kesselzettel ohne die zweite Bierfrage. Dieselbe Strecke, 118 Wochen:
 |---|---|---|---|---|
 | VORHER, nichts geheilt | 6 | 2 | 8 | **6,8 %** |
 | **nur der Zettel geheilt** | 5 | 0 | 5 | **4,2 %** |
-| Zettel **und** zweite Bierfrage | 14 | 103 | 1 | **99,2 %** |
+| Zettel **und** zweite Bierfrage (abgelieferter Stand) | 14 | 103 | **0** | **99,2 %** |
 
 Die Platzsuche allein bringt 1350 **nicht** über die Auflage — sie hält den
 Zettel im Bild (weg von 8 auf 5 Wochen), aber ein Zettel, der zuverlässig
@@ -89,9 +90,10 @@ und nicht der verschwundene Zettel, sondern dass 1350 **nur eine Frage**
 hatte.
 
 Der Kesselzettel lag im VORHER-Stand in 5,3 bis 7,0 % der Wochen als
-`display: none` auf dem Schirm; nachher in **0,0 bis 4,1 %**, und in dem
-Zustand, in dem er vorher immer verschwand — alle sieben fremden Bretter
-offen —, behält er in allen vier Epochen alle vier Knöpfe.
+`display: none` auf dem Schirm; auf dem abgelieferten Stand in 1350 in
+**0 von 118 Wochen**, über alle Epochen in 0,0 bis 4,1 %. Und in dem Zustand,
+in dem er vorher **immer** verschwand — alle sieben fremden Bretter offen —,
+behält er in allen vier Epochen alle vier Knöpfe.
 
 ## VORHER — mit dem Werkzeug des Kritikers nachgestellt
 
@@ -621,7 +623,8 @@ Alles unter `werkbank/schuss/sud-w4b/`, jedes einzeln nachfahrbar:
 | `schild.mjs` · `export.mjs` | Auflage 3: was auf den Schildern steht, und der Fall mit 192.000 DM |
 | `reichweite.mjs` | wie weit eine Kernänderung an `B.knopf()` trägt |
 | `siegel.mjs` · `ratsche.mjs` | Kopien des Kritikers, auf die neue Festlegung angewandt |
-| `vorher-e*.json` · `end-e*.json` · `end2-e1.json` · `nachher-e*.json` · `nurzettel-e1.json` | die Wochenaufnahmen, aus denen jede Zahl nachgerechnet werden kann |
+| `auf.mjs` | eigenes Brett dreimal auf und zu — tritt der Zettel richtig zurück und kommt er wieder |
+| `vorher-e*.json` · `final-e1.json` (abgelieferter Stand) · `end-e*.json` · `end2-e1.json` · `nachher-e*.json` · `nurzettel-e1.json` | die Wochenaufnahmen, aus denen jede Zahl nachgerechnet werden kann |
 
 Stände: VORHER `127.0.0.1:8913`, NACHHER `127.0.0.1:8915`, Gegenprobe `8916` —
 alle drei eingefrorene Kopien **desselben** Arbeitsbaums (der Stand, wie er
@@ -640,8 +643,8 @@ zwei anderen Builder an `preis*.js` und `ton.js` die Zahl nicht verschiebt.
 
 | Auflage | Stand | Beleg |
 |---|---|---|
-| 1 · Der Zettel darf nicht verschwinden, wenn Geld und Entscheidung da sind | **erfüllt** | alle sieben Bretter offen: 4 von 4 Knöpfen bedienbar in allen vier Epochen (vorher 0 von 4); `display:none` von 5,3–7,0 % auf 0,0–4,1 % der Wochen |
-| 2 · 1350 braucht mehr als eine Gelegenheit (Ziel ≥ 25 %) | **erfüllt** | **6,8 % → 99,0 %**, dreimal nachgemessen (99,0 · 99,0 · 99,2); Gegenprobe zeigt, dass die zweite Bierfrage sie trägt, nicht die Platzsuche |
+| 1 · Der Zettel darf nicht verschwinden, wenn Geld und Entscheidung da sind | **erfüllt** | alle sieben Bretter offen: 4 von 4 Knöpfen bedienbar in allen vier Epochen (vorher 0 von 4); `display:none` in 1350 in **0 von 118 Wochen** (vorher 20 von 301) |
+| 2 · 1350 braucht mehr als eine Gelegenheit (Ziel ≥ 25 %) | **erfüllt** | **6,8 % → 99,2 %**, viermal nachgemessen (99,0 · 99,0 · 99,2 · 99,2); Gegenprobe zeigt, dass die zweite Bierfrage sie trägt, nicht die Platzsuche |
 | 3 · „trägt Exportbier" darf nicht auf einem Knopf stehen, der keins macht | **erfüllt** | „trägt Xbier" kommt in keiner Epoche mehr im Bild vor; stattdessen „lässt X zu" plus zwei Sätze, die sagen, wo bestellt wird — und eine Zeile, die den Keller nachzählt |
 | 4 · Die 1970er Charge mit Frist muss bedienbar sein | **erfüllt** | derselbe Weg wie Auflage 1: `display:none` gilt nur noch für „das eigene Brett liegt offen" |
 | 5 · `schalte()` soll Verdeckung nicht in `disabled` umschreiben | **erfüllt, mit Widerspruch in der Sache** | `data-verdeckt` und `data-aus-grund` trennen die drei Gründe; `disabled` bleibt die Summe, weil ein untreffbarer Knopf wirklich keiner ist |
