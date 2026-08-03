@@ -348,8 +348,8 @@ var PREIS_DATEN = {
       liegeSagt: 'Zu Michaeli liest der Zunftschreiber, was bar in der Lade liegt, '
                + 'und der Rat schreibt es ins Steuerbuch: Vermögen und Gewerb. '
                + 'In diesen Jahrzehnten wird das Vermögen jedes Jahr aufs Neue angeschlagen.',
-      liegeFrei: 1.5,
-      liegeSatz: 0.55,
+      liegeFrei: 1.0,
+      liegeSatz: 0.70,
       /* 1600 bis 1650 ist die dichteste Umlagenzeit der ganzen Partie:
          Tuerkensteuer, Kontribution, Quartierlast, Brandsteuer,
          Salvaguardia. Der Abstand ist zwei bis vier Jahre, nicht sechs. */
