@@ -59,6 +59,13 @@ for (let i = 0; i < 200; i++) {
   if (!z) break;
   await p.waitForTimeout(60);
 }
+/* Zuege, die NOCH VOR der Aufnahme getan werden (z. B. den Wagen beladen,
+   damit im Fenster wirklich nur EIN Klick steht). */
+const vorklicks = [];
+for (const z of JSON.parse(process.env.VORKLICKS || '[]')) {
+  vorklicks.push({ wunsch: z, zug: await klick(z) });
+  await p.waitForTimeout(150);
+}
 const standVor = await p.evaluate(() => JSON.parse(JSON.stringify(BRAUHAUS.welt.zeit)));
 
 /* --- MEIN ABGRIFF -------------------------------------------------------- */
@@ -163,7 +170,7 @@ fs.writeFileSync(ZIEL, Buffer.from(ergebnis.wav, 'base64'));
 delete ergebnis.wav;
 fs.writeFileSync(ZIEL.replace(/\.wav$/, '.json'), JSON.stringify({
   epoche: EP, art: ART, saat: SAAT, hafen: HAFEN, dauer: DAUER,
-  start, standVorAufnahme: standVor, vorlaufKlicks: vorlauf.length,
+  start, standVorAufnahme: standVor, vorlaufKlicks: vorlauf.length, vorklicks,
   klicks, pegelReihe, fehler, ...ergebnis
 }, null, 1));
 

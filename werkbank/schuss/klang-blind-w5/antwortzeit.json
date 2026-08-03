@@ -1,0 +1,338 @@
+[
+ {
+  "datei": "e1-gespielt.wav",
+  "klicks": [
+   {
+    "t_klick": 0.81,
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "antwort_nach_s": null,
+    "hub": 0.15193
+   },
+   {
+    "t_klick": 2.05,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": null,
+    "hub": 0.12281
+   },
+   {
+    "t_klick": 3.52,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": 0.58,
+    "hub": 2.23
+   },
+   {
+    "t_klick": 6,
+    "zug": "sud:zettel-anstich",
+    "antwort_nach_s": 0.0,
+    "hub": 2.51
+   },
+   {
+    "t_klick": 7.5,
+    "zug": "weiter",
+    "antwort_nach_s": 0.075,
+    "hub": 2.12
+   },
+   {
+    "t_klick": 9.53,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": null,
+    "hub": 0.14465
+   },
+   {
+    "t_klick": 11.08,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": 0.195,
+    "hub": 2.15
+   },
+   {
+    "t_klick": 13.53,
+    "zug": "weiter",
+    "antwort_nach_s": 0.595,
+    "hub": 2.47
+   },
+   {
+    "t_klick": 15.09,
+    "zug": "weiter",
+    "antwort_nach_s": -0.015,
+    "hub": 2.92
+   },
+   {
+    "t_klick": 21.13,
+    "zug": "weiter",
+    "antwort_nach_s": 0.47,
+    "hub": 3.05
+   },
+   {
+    "t_klick": 22.59,
+    "zug": "weiter",
+    "antwort_nach_s": 0.01,
+    "hub": 2.77
+   },
+   {
+    "t_klick": 27.51,
+    "zug": "weiter",
+    "antwort_nach_s": 0.09,
+    "hub": 2.34
+   },
+   {
+    "t_klick": 29.1,
+    "zug": "weiter",
+    "antwort_nach_s": null,
+    "hub": 0.12732
+   }
+  ],
+  "ohne_antwort": 4
+ },
+ {
+  "datei": "e2-gespielt.wav",
+  "klicks": [
+   {
+    "t_klick": 0.89,
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "antwort_nach_s": null,
+    "hub": 0.15189
+   },
+   {
+    "t_klick": 2.09,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": null,
+    "hub": 0.1126
+   },
+   {
+    "t_klick": 3.46,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": 0.99,
+    "hub": 2.63
+   },
+   {
+    "t_klick": 6.11,
+    "zug": "sud:zettel-anstich",
+    "antwort_nach_s": 0.09,
+    "hub": 2.1
+   },
+   {
+    "t_klick": 7.59,
+    "zug": "weiter",
+    "antwort_nach_s": 0.085,
+    "hub": 2.42
+   },
+   {
+    "t_klick": 9.61,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": -0.01,
+    "hub": 3.47
+   },
+   {
+    "t_klick": 11.04,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": 0.685,
+    "hub": 2.07
+   },
+   {
+    "t_klick": 13.5,
+    "zug": "weiter",
+    "antwort_nach_s": 0.025,
+    "hub": 2.09
+   },
+   {
+    "t_klick": 15.03,
+    "zug": "weiter",
+    "antwort_nach_s": 0.02,
+    "hub": 8.74
+   },
+   {
+    "t_klick": 21.09,
+    "zug": "weiter",
+    "antwort_nach_s": 0.26,
+    "hub": 2.77
+   },
+   {
+    "t_klick": 22.51,
+    "zug": "weiter",
+    "antwort_nach_s": null,
+    "hub": 0.12964
+   },
+   {
+    "t_klick": 27.54,
+    "zug": "weiter",
+    "antwort_nach_s": -0.015,
+    "hub": 2.13
+   },
+   {
+    "t_klick": 29.04,
+    "zug": "weiter",
+    "antwort_nach_s": 0.06,
+    "hub": 2.0
+   }
+  ],
+  "ohne_antwort": 3
+ },
+ {
+  "datei": "e3-gespielt.wav",
+  "klicks": [
+   {
+    "t_klick": 0.88,
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "antwort_nach_s": null,
+    "hub": 0.22341
+   },
+   {
+    "t_klick": 2.07,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": 0.58,
+    "hub": 2.06
+   },
+   {
+    "t_klick": 3.4,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": null,
+    "hub": 0.1525
+   },
+   {
+    "t_klick": 6.11,
+    "zug": "sud:zettel-anstich",
+    "antwort_nach_s": null,
+    "hub": 0.11297
+   },
+   {
+    "t_klick": 7.58,
+    "zug": "weiter",
+    "antwort_nach_s": 0.07,
+    "hub": 5.86
+   },
+   {
+    "t_klick": 9.58,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": null,
+    "hub": 0.08161
+   },
+   {
+    "t_klick": 11.1,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": 0.075,
+    "hub": 2.0
+   },
+   {
+    "t_klick": 13.56,
+    "zug": "weiter",
+    "antwort_nach_s": null,
+    "hub": 0.1552
+   },
+   {
+    "t_klick": 15.05,
+    "zug": "weiter",
+    "antwort_nach_s": 0.1,
+    "hub": 2.02
+   },
+   {
+    "t_klick": 21.07,
+    "zug": "weiter",
+    "antwort_nach_s": 0.055,
+    "hub": 2.82
+   },
+   {
+    "t_klick": 22.59,
+    "zug": "weiter",
+    "antwort_nach_s": null,
+    "hub": 0.0849
+   },
+   {
+    "t_klick": 27.58,
+    "zug": "weiter",
+    "antwort_nach_s": -0.005,
+    "hub": 4.6
+   },
+   {
+    "t_klick": 29.06,
+    "zug": "weiter",
+    "antwort_nach_s": null,
+    "hub": 0.08511
+   }
+  ],
+  "ohne_antwort": 7
+ },
+ {
+  "datei": "e4-gespielt.wav",
+  "klicks": [
+   {
+    "t_klick": 0.88,
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "antwort_nach_s": -0.005,
+    "hub": 2.36
+   },
+   {
+    "t_klick": 2.07,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": -0.02,
+    "hub": 3.19
+   },
+   {
+    "t_klick": 3.46,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": 0.59,
+    "hub": 2.62
+   },
+   {
+    "t_klick": 6.01,
+    "zug": "sud:zettel-anstich",
+    "antwort_nach_s": 0.24,
+    "hub": 2.27
+   },
+   {
+    "t_klick": 7.51,
+    "zug": "weiter",
+    "antwort_nach_s": null,
+    "hub": 0.15246
+   },
+   {
+    "t_klick": 9.61,
+    "zug": "fuhre:fuellen",
+    "antwort_nach_s": null,
+    "hub": 0.13647
+   },
+   {
+    "t_klick": 11.04,
+    "zug": "fuhre:abschicken",
+    "antwort_nach_s": 0.26,
+    "hub": 2.5
+   },
+   {
+    "t_klick": 13.52,
+    "zug": "weiter",
+    "antwort_nach_s": 0.255,
+    "hub": 2.11
+   },
+   {
+    "t_klick": 15.09,
+    "zug": "weiter",
+    "antwort_nach_s": -0.015,
+    "hub": 3.58
+   },
+   {
+    "t_klick": 21.04,
+    "zug": "weiter",
+    "antwort_nach_s": 0.06,
+    "hub": 2.76
+   },
+   {
+    "t_klick": 22.58,
+    "zug": "weiter",
+    "antwort_nach_s": 0.17,
+    "hub": 3.63
+   },
+   {
+    "t_klick": 27.51,
+    "zug": "weiter",
+    "antwort_nach_s": 0.015,
+    "hub": 3.92
+   },
+   {
+    "t_klick": 29,
+    "zug": "weiter",
+    "antwort_nach_s": 0.15,
+    "hub": 3.5
+   }
+  ],
+  "ohne_antwort": 2
+ }
+]
