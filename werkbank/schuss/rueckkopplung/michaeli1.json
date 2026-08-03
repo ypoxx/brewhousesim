@@ -1,0 +1,174 @@
+[
+ {
+  "ep": 1,
+  "vorTafel": {
+   "kasse": 112,
+   "aktivErreichbar": 14,
+   "aktiv": 29,
+   "gesamt": 31,
+   "angeboteAktiv": [],
+   "angeboteGesamt": 0,
+   "festAktiv": [],
+   "festGesamt": 0
+  },
+  "mitTafel": {
+   "kasse": 112,
+   "aktivErreichbar": 10,
+   "aktiv": 31,
+   "gesamt": 38,
+   "angeboteAktiv": [
+    [
+     "preis:nimm:dach",
+     -36
+    ],
+    [
+     "preis:nimm:bottich",
+     -45
+    ]
+   ],
+   "angeboteGesamt": 5,
+   "festAktiv": [
+    [
+     "preis:festlege:vertrag",
+     -85
+    ]
+   ],
+   "festGesamt": 3
+  }
+ },
+ {
+  "ep": 2,
+  "vorTafel": {
+   "kasse": 640,
+   "aktivErreichbar": 15,
+   "aktiv": 25,
+   "gesamt": 28,
+   "angeboteAktiv": [],
+   "angeboteGesamt": 0,
+   "festAktiv": [],
+   "festGesamt": 0
+  },
+  "mitTafel": {
+   "kasse": 640,
+   "aktivErreichbar": 12,
+   "aktiv": 28,
+   "gesamt": 36,
+   "angeboteAktiv": [
+    [
+     "preis:nimm:darre",
+     -210
+    ],
+    [
+     "preis:nimm:wappenbrief",
+     -500
+    ],
+    [
+     "preis:nimm:auswaertiger",
+     -630
+    ]
+   ],
+   "angeboteGesamt": 5,
+   "festAktiv": [
+    [
+     "preis:festlege:reinheit",
+     -280
+    ]
+   ],
+   "festGesamt": 4
+  }
+ },
+ {
+  "ep": 3,
+  "vorTafel": {
+   "kasse": 14250,
+   "aktivErreichbar": 15,
+   "aktiv": 29,
+   "gesamt": 34,
+   "angeboteAktiv": [],
+   "angeboteGesamt": 0,
+   "festAktiv": [],
+   "festGesamt": 0
+  },
+  "mitTafel": {
+   "kasse": 14250,
+   "aktivErreichbar": 13,
+   "aktiv": 34,
+   "gesamt": 41,
+   "angeboteAktiv": [
+    [
+     "preis:nimm:braumeister",
+     -3100
+    ],
+    [
+     "preis:nimm:malzkontrakt",
+     -4200
+    ],
+    [
+     "preis:nimm:maelzerei",
+     -5900
+    ],
+    [
+     "preis:nimm:flaschen",
+     -8600
+    ]
+   ],
+   "angeboteGesamt": 5,
+   "festAktiv": [
+    [
+     "preis:festlege:aktien",
+     11000
+    ],
+    [
+     "preis:festlege:konvention",
+     -9200
+    ]
+   ],
+   "festGesamt": 3
+  }
+ },
+ {
+  "ep": 4,
+  "vorTafel": {
+   "kasse": 86000,
+   "aktivErreichbar": 13,
+   "aktiv": 28,
+   "gesamt": 34,
+   "angeboteAktiv": [],
+   "angeboteGesamt": 0,
+   "festAktiv": [],
+   "festGesamt": 0
+  },
+  "mitTafel": {
+   "kasse": 86000,
+   "aktivErreichbar": 10,
+   "aktiv": 32,
+   "gesamt": 42,
+   "angeboteAktiv": [
+    [
+     "preis:nimm:schankanlage",
+     -25000
+    ],
+    [
+     "preis:nimm:grosshandel",
+     -48000
+    ],
+    [
+     "preis:nimm:lastzug",
+     -75000
+    ]
+   ],
+   "angeboteGesamt": 5,
+   "festAktiv": [
+    [
+     "preis:festlege:konzern",
+     65000
+    ],
+    [
+     "preis:festlege:privat",
+     -55000
+    ]
+   ],
+   "festGesamt": 4
+  }
+ }
+]

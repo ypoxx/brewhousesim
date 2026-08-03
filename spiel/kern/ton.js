@@ -568,9 +568,16 @@
      kann es nicht verhindern: er regelt den Pegel, aber er hat keine Decke.
      Diese hier hat eine. Die Kennlinie ist g·tanh(x/g) ueber der Eingabe
      -1..+1; alles darueber klemmt der Knoten selbst auf den Randwert. Mit
-     g = 1,35 kann am Ausgang nie mehr als 0,851 stehen, und unterhalb von
-     0,3 weicht die Kennlinie um weniger als zwei Prozent von der Geraden ab —
-     eine Decke, kein Verzerrer. */
+     g = 1,2 kann am Ausgang nie mehr als 0,818 stehen, und unterhalb von
+     0,3 weicht die Kennlinie um weniger als drei Prozent von der Geraden ab —
+     eine Decke, kein Verzerrer.
+
+     `oversample` bleibt AUS, und das ist gemessen und nicht gemeint: mit '4x'
+     stand in epoche3.wav wieder eine Spitze von 1,0000 und zwei uebersteuerte
+     Proben. Die Ueberabtastung filtert vor und nach der Kennlinie, und diese
+     Filter schwingen an der Kante bei ±1 ueber — die Decke gilt dann fuer die
+     Kennlinie, aber nicht mehr fuer den Ausgang. Ohne sie ist der Ausgang
+     Probe fuer Probe ein Wert der Kennlinie, und die Decke haelt. */
   function bremse(ctx, g) {
     var w = ctx.createWaveShaper();
     var n = 4097, c = new Float32Array(n), i, x;
@@ -579,7 +586,7 @@
       c[i] = g * Math.tanh(x / g);
     }
     w.curve = c;
-    try { w.oversample = '4x'; } catch (f) { }
+    try { w.oversample = 'none'; } catch (f) { }
     return w;
   }
 
@@ -637,7 +644,7 @@
       letzt = druck;
     } catch (f) { }
     try {
-      var deckel = bremse(ctx, 1.35);
+      var deckel = bremse(ctx, 1.2);
       letzt.connect(deckel);
       letzt = deckel;
     } catch (f) { }
