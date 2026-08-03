@@ -179,11 +179,22 @@
        Auflage 7), und das Geld kommt eine halbe Sekunde SPAETER statt
        gleichzeitig. Damit ist es das, wonach das pruefende Ohr sucht:
        "eine einzelne Glocke und danach gezaehltes Geld".
+
+       ZWEITER ANLAUF, und er steht hier, weil der erste GEMESSEN gescheitert
+       ist: als Zahltag von 1970 stand hier zuerst `fabrikpfeife` — die tote
+       Probe aus Auflage 7, in einem Aufwasch angeschlossen. Das blinde Ohr
+       hat die Epoche daraufhin zwar mit 100 % richtig genannt, aber ungefragt
+       gemeldet: "STOERT: Das laute Schnaufen und Pfeifen einer Dampflokomotive
+       passt nicht in die 1970er Jahre und gehoert eher in die Epoche um 1884."
+       Ein Anachronismus rueckwaerts ist auch einer. Die Dampfpfeife steht
+       jetzt in 1884, wo sie hingehoert, und 1970 bekommt eine elektrische
+       Werksglocke — einzeln vorgelegt: "lautes mechanisches Klingeln wie eine
+       Schulglocke, 19./20. Jahrhundert, nichts falsch".
        Der Michaelitag ist ausserdem der einzige Vorgang, den das Ohr heute
        schon 4 von 4 Mal trifft; er traegt die Latte und wird laut gestellt. */
-    'preis:michaeli':    { datei: je('glocke', 'glocke', 'glocke', 'fabrikpfeife'),
+    'preis:michaeli':    { datei: je('glocke', 'glocke', 'fabrikpfeife', 'werksglocke'),
                            laut: 1.5, zeichen: true, duck: 0.22, halt: 1.5,
-                           sagt: 'Michaeli: die Glocke, 1970 die Werkspfeife.' },
+                           sagt: 'Michaeli: die Kirchenglocke, die Dampfpfeife, die Werksglocke.' },
     'preis:muenzen':     { datei: altNeu('muenzen', 'kasse'), laut: 1.2,
                            zeichen: true, versatz: 0.62, duck: 0.22, halt: 0.9 },
     'preis:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.85 },
