@@ -55,7 +55,7 @@
      'erbe:widerspruch' und 'erbe:uebergabe:leibgeding' wurden in E1 und E4
      von einem .knopf der FUHRE ueberdeckt. Also waechst sie nach OBEN:
      71,6–78,4 %, mit 0,8 % Luft nach oben und 0,5 % nach unten. */
-  top: 71.6%;
+  top: 73%;
   width: 44%;
   /* RUNDE 3.  War 5,6 %. Das Band traegt jetzt bis zu sieben Spalten — dazu
      kamen die Feder der Hand und die erloschenen Verschreibungen —, und im
@@ -68,7 +68,7 @@
      Die Flaeche bleibt unter der GRENZE von stadt.js: 44 % x 6,8 % = 2,99 %
      gegen 3,5 %. Und sie bleibt im gemessenen freien Streifen: der reicht
      x 54–99 %, y 72–83 %, die Leiste sitzt in y 73–79,8 %. */
-  height: 6.8%;
+  height: 5.6%;
   overflow: hidden;
   pointer-events: none;              /* nur die Knoepfe fangen die Maus */
   display: flex;
