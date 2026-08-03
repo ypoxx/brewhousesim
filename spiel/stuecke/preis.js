@@ -930,7 +930,13 @@
            Die Begruendung im ganzen steht oben bei `liegegeld`. */
     var barVorher = Math.max(0, Math.floor(B.welt.haus.kasse));
     var liegeFrei = liegeFreibetrag();
-    var liege = liegegeld();
+    /* Der erste Michaeli einer Partie hat keine Rechnung (Schritt 3) — dann
+       hat er auch diese nicht. Am Bildschirm nachgesehen: ohne diese Zeile
+       stand in 1600 im Eroeffnungsjahr `Anschlag auf das bare Vermoegen
+       −200 fl` in einer Spalte, die sonst leer ist, und die Lade begann mit
+       440 statt 640 fl. Das Haus zahlt fuer ein Jahr, das es nicht gespielt
+       hat. */
+    var liege = erste ? 0 : liegegeld();
     if (liege > 0) {
       buche(liege, liegeName(), 'pflicht', 'hoehe');
       chronik('pflicht', liegeName() + ': von ' + geld(barVorher) + ' bar bleiben '
