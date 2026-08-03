@@ -434,6 +434,7 @@
   }
 
   function merkeVorher() {
+    Z.vorherFrisch = true;
     Z.alt = { nr: amt().nr, name: amt().name, eigenschaft: amt().eigenschaft,
               eigenschaftName: amt().eigenschaftName };
     Z.vorher = { haus: amHausListe().length, person: personListe().length,
@@ -895,7 +896,7 @@
     buch.setAttribute('data-reiter', 'Das Erbe');
 
     buch.appendChild(B.el('h2', '', e.wort + ' — ' + e.verb + ' ' + e.wo
-      + (Z.uebergeben ? ' · ' + roem(a.nr) + ' Hand' : '')));
+      + ' · ' + roem(a.nr) + ' Hand'));
 
     var kopf = B.el('div', 'erb-buchkopf');
     kopf.appendChild(B.el('div', 'erb-name', (a.name || '—') + ' · ' + (a.eigenschaftName || '—')));
@@ -961,8 +962,8 @@
     lade2.appendChild(B.el('div', 'erb-ladekopf', 'AN DER PERSON · ' + los.length
       + ' — fällt mit der Hand, die es gab'));
     if (!los.length) lade2.appendChild(B.el('div', 'erb-leer',
-      Z.uebergeben ? 'Nichts mehr. Was hier stand, ist gefallen oder geschrieben.'
-                   : 'Nichts. Alles steht im Buch.'));
+      Z.erbfaelle ? 'Nichts mehr. Was hier stand, ist gefallen oder geschrieben.'
+                  : 'Nichts. Alles steht im Buch.'));
     var borg = ei.zug === 'borg';
     los.forEach(function (x) {
       var r = B.el('div', 'erb-satz greifbar');
@@ -1089,8 +1090,30 @@
       /* Kein `||` — STUNDE_NACH_JAHREN ist 0, und 0 || 1 ist 1. Genau dieser
          Rueckfall hat die Stunde beim ersten Lauf ein Braujahr zu spaet
          schlagen lassen; die Tafel sagte 45 Wochen, wo 15 stehen mussten. */
-      Z.stundeJahr = jahr() + (D.STUNDE_NACH_JAHREN === undefined ? 1 : D.STUNDE_NACH_JAHREN);
-      Z.stundeWoche = D.STUNDE_WOCHE === undefined ? 16 : D.STUNDE_WOCHE;
+      stelleStunde(amt(), jahr() + (D.STUNDE_NACH_JAHREN === undefined ? 1 : D.STUNDE_NACH_JAHREN));
+
+      /* AUFLAGE 5 — DIE EICHUNG AN DER STARTBARSCHAFT.
+         Ueber drei Saaten nachgemessen kostete das Verschreiben aller offenen
+         Adressen zwischen 17,9 % (E3/Saat 99) und 78,1 % (E4/Saat 7) der
+         Startkasse; der Kritiker hatte auf Saat 1350 zwischen 37 % und 56 %
+         gemessen. Die Spanne haengt allein daran, welche vier Adressen der
+         Wuerfel dem Haus zuteilt. Also wird sie hier gedeckelt: was ueber
+         ZIEL_ANTEIL hinausgeht, wird gleichmaessig heruntergesetzt; darunter
+         wird nichts angehoben. Einmal gerechnet, im aufbau — danach ist der
+         Faktor fest, und die Preise springen dem Spieler nicht davon. */
+      Z.startKasse = Math.max(1, B.welt.haus.kasse);
+      var roh = 0;
+      personListe().forEach(function (x) {
+        roh += Math.max(1, Math.round(Math.max(1, Math.round(x.bedarf * ep().satz)) * eig().faktor));
+      });
+      Z.eichRoh = roh;
+      Z.eich = roh > 0
+        ? Math.min(1, ((D.ZIEL_ANTEIL === undefined ? 1 : D.ZIEL_ANTEIL) * Z.startKasse) / roh)
+        : 1;
+
+      Z.haende.push({ nr: amt().nr, name: amt().name, eigenschaft: amt().eigenschaft,
+        eigenschaftName: amt().eigenschaftName, feder: feder(), form: null });
+
       B.welt.schreibe('Die Hand am Haus ist ' + amt().name + ', ' + amt().eigenschaftName
         + '. Was sie nur mit einem Handschlag hält, hält das Haus nicht. '
         + ep().erklaerung, 'anfang');
@@ -1112,6 +1135,9 @@
        den Absatz in erbe-daten.js. Am Jahreswechsel raeumt der Abschluss
        Bindungen und Keller ab, bevor dieses Stueck ueberhaupt drankaeme. */
     woche: function () {
+      /* Auflage 1: was bezahlt wurde und in dieser Woche genommen worden ist,
+         faellt hier auf und bekommt seine Zeile — nicht erst am Michaeli. */
+      pruefeErloschen();
       if (!Z.uebergeben && !zeit().ende && stundeIstDa()) stundeSchlaegt();
     },
 
@@ -1119,7 +1145,7 @@
     erbfall: function (d) {
       Z.uebergeben = true;
       if (!Z.form) Z.form = 'stunde';
-      if (!Z.vorher) merkeVorher();
+      if (!Z.vorherFrisch) merkeVorher();
       Z.neu = d && d.amtszeit
         ? { nr: d.amtszeit.nr, name: d.amtszeit.name,
             eigenschaft: d.amtszeit.eigenschaft, eigenschaftName: d.amtszeit.eigenschaftName }
@@ -1130,6 +1156,9 @@
         loesePersoenliche('Mit der Hand fällt, was nur an ihr hing —');
         erbteilAusDemKeller();
       }
+      /* Was bezahlt war und mit dem Erbfall doch fortging, bekommt seine
+         Zeile im selben Augenblick. */
+      pruefeErloschen();
 
       Z.nachher = { haus: amHausListe().length, person: personListe().length,
                     keller: B.welt.vorrat.faesser.length };
@@ -1138,6 +1167,31 @@
         + Z.vorher.person + ' an der Person; jetzt sind es ' + Z.nachher.haus
         + ' und ' + Z.nachher.person + '. ' + (Z.neu ? Z.neu.eigenschaftName + ': '
         + (eig().wirkt || '') : ''), 'erbfall');
+
+      /* ---------------------------------------------------------------
+         AUFLAGE 3 — DIE NAECHSTE STUNDE WIRD GESTELLT.
+         "Die Amtszeit der II. Hand endet 1378/1626/1914/2006 und damit
+         immer nach dem Spielende — ein zweiter Erbfall ist unerreichbar."
+         Er ist es ab jetzt nicht mehr: ein Braujahr weiter, in einer Woche,
+         die aus `amtszeit.bis` dieser Hand faellt und darum mit der Saat
+         streut. Damit traegt die Leiste ihre vier Knoepfe bis zum letzten
+         Klick, und die II. Hand entscheidet dieselbe Frage noch einmal.
+         Dazu das Antrittsgeld: die neue Hand ist dem Schreiber unbekannt,
+         ihre Feder ist bis zum naechsten Michaeli teurer — die Zahl auf der
+         Leiste wechselt also auch dann, wenn der Wuerfel Namen UND
+         Eigenschaft der Vorgaengerin noch einmal zieht (Auflage 2).
+         --------------------------------------------------------------- */
+      Z.erbfaelle++;
+      Z.letzteForm = Z.form;
+      Z.form = null;
+      Z.uebergeben = false;
+      Z.antrittBis = jahr() + (D.ANTRITT_JAHRE === undefined ? 1 : D.ANTRITT_JAHRE);
+      stelleStunde(amt(), jahr() + (D.STUNDE_ABSTAND === undefined ? 1 : D.STUNDE_ABSTAND));
+      if (Z.haende.length) Z.haende[Z.haende.length - 1].form =
+        (ep().formen[Z.letzteForm] ? ep().formen[Z.letzteForm].kurz : 'DIE STUNDE');
+      Z.haende.push({ nr: amt().nr, name: amt().name, eigenschaft: amt().eigenschaft,
+        eigenschaftName: amt().eigenschaftName, feder: feder(), form: null });
+      Z.vorherFrisch = false;
     },
 
     epoche: function () { B.sende('zeichne', { grund: 'erbe-epoche' }); }
@@ -1147,18 +1201,27 @@
   B.erbe = {
     stand: function () {
       return {
-        stundeJahr: Z.stundeJahr, wochenBisStunde: wochenBisStunde(),
-        uebergeben: Z.uebergeben, form: Z.form,
-        leibgeding: Z.leibgeding, leibgedingVerfallen: Z.leibgedingVerfallen,
+        stundeJahr: Z.stundeJahr, stundeWoche: Z.stundeWoche,
+        wochenBisStunde: wochenBisStunde(),
+        uebergeben: Z.uebergeben, erbfaelle: Z.erbfaelle,
+        form: Z.form, letzteForm: Z.letzteForm,
+        leibgedinge: Z.leibgedinge.slice(), leibgedingLast: leibgedingLast(),
         amHaus: amHausListe().map(function (a) { return a.name + ' · ' + a.bindung.womit; }),
         anDerPerson: personListe().map(function (a) { return a.name + ' · ' + a.bindung.womit; }),
         gefallen: Z.gefallen.slice(), geschrieben: Z.geschrieben.slice(),
+        erloschen: Z.erloschen.slice(), erloschenSumme: erloschenSumme(),
+        widerspruchOffen: widerspruchListe().length, widersprochen: Z.widersprochen,
         vorher: Z.vorher, nachher: Z.nachher,
         keller: B.welt.vorrat.faesser.length, erbteilFass: Z.erbteilFass,
         nachschriftOffen: offeneNachschrift().length,
         nachgeschrieben: Z.nachgeschrieben,
-        alt: Z.alt, neu: Z.neu,
-        eigenschaft: amt().eigenschaft, faktor: eig().faktor, fuenfterZug: eig().zug,
+        alt: Z.alt, neu: Z.neu, haende: Z.haende.slice(),
+        startKasse: Z.startKasse, eich: Z.eich, eichRoh: Z.eichRoh,
+        erbmasse: erbmasse(), leibgedingPreis: leibgedingPreis(),
+        abfindungPreis: abfindungPreis(),
+        eigenschaft: amt().eigenschaft, faktor: eig().faktor, feder: feder(),
+        imAntritt: imAntritt(), fuenfterZug: eig().zug,
+        taten: taten().map(function (t) { return t.zug + ' ' + t.preis + (t.aus ? ' (aus)' : ''); }),
         borg: Z.borg.slice(), angefochten: Z.angefochten, seelgeraet: Z.seelgeraet
       };
     }
