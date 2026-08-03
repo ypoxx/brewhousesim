@@ -1,0 +1,70 @@
+[
+ {
+  "ep": 1,
+  "da": true,
+  "text": "nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf  (Kasse reicht 5,9×)",
+  "wert": "5.89",
+  "frei": false,
+  "kasten": {
+   "x": 1162,
+   "y": 888,
+   "b": 623,
+   "h": 24
+  },
+  "zweite": {
+   "text": "umkämpftZuvorkommen Klosterschenke Obernberg — 19 Pf ·Kasse reicht 5,9×",
+   "wert": "5.89"
+  }
+ },
+ {
+  "ep": 2,
+  "da": true,
+  "text": "nächster Zug: Zuvorkommen Mühlschenke — 170 fl  (Kasse reicht 3,8×)",
+  "wert": "3.76",
+  "frei": false,
+  "kasten": {
+   "x": 1255,
+   "y": 888,
+   "b": 530,
+   "h": 24
+  },
+  "zweite": {
+   "text": "umkämpftZuvorkommen Mühlschenke — 170 fl ·Kasse reicht 3,8×",
+   "wert": "3.76"
+  }
+ },
+ {
+  "ep": 3,
+  "da": true,
+  "text": "nächster Zug: Ablösung Ausschank am Markt — 1.706 M  (Kasse reicht 8,4×)",
+  "wert": "8.35",
+  "frei": false,
+  "kasten": {
+   "x": 1217,
+   "y": 888,
+   "b": 569,
+   "h": 24
+  },
+  "zweite": {
+   "text": "umkämpftAblösung Ausschank am Markt — 1.706 M ·Kasse reicht 8,4×",
+   "wert": "8.35"
+  }
+ },
+ {
+  "ep": 4,
+  "da": true,
+  "text": "nächster Zug: Ablösung Brückenwirt — 38.221 DM  (Kasse reicht 2,3×)",
+  "wert": "2.25",
+  "frei": false,
+  "kasten": {
+   "x": 1255,
+   "y": 888,
+   "b": 530,
+   "h": 24
+  },
+  "zweite": {
+   "text": "umkämpftAblösung Brückenwirt — 38.221 DM ·Kasse reicht 2,3×",
+   "wert": "2.25"
+  }
+ }
+]

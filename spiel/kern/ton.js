@@ -69,7 +69,7 @@
      Das ist keine Geschmacksfrage und mit keinem einzelnen Klang zu heilen:
      das Bett war schlicht zu laut und das Werk zu leise. Bett und Hof gehen
      auf gut die Haelfte herunter, das Werk um das Zweieinhalbfache herauf. */
-  var PEGEL = { bett: 1.0, hof: 1.0, werk: 1.05 };
+  var PEGEL = { bett: 1.0, hof: 1.0, werk: 0.72 };
 
   /* Die vier Hofbaender und die vier Betten sind NICHT gleich laut aus dem
      Erzeuger gekommen — hof1 hatte den dreifachen Effektivwert von hof3.
@@ -78,7 +78,7 @@
      alles zugedeckt haben, was im Hof geschah. Deshalb wird jede Schleife
      beim Entschluesseln auf einen festen Effektivwert gezogen, statt sie
      je Epoche von Hand nachzustellen. */
-  var ZIEL = { bett: 0.027, hof: 0.035 };
+  var ZIEL = { bett: 0.038, hof: 0.048 };
 
   /* DER ATEM DES HOFES — Auflage 2.
      Epoche 4 war ein Dauerteppich: in acht Sekunden Nichtstun schwankte ihr
