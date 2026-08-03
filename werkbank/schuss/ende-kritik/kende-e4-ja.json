@@ -1,0 +1,128 @@
+{
+ "url": "http://127.0.0.1:8899/spiel/?epoche=4&saat=1350",
+ "modus": "ja",
+ "spur": [
+  {
+   "i": 0,
+   "jahr": 1970,
+   "kasse": 86000,
+   "aktiv": 76
+  },
+  {
+   "i": 30,
+   "jahr": 1971,
+   "kasse": 68652,
+   "aktiv": 72
+  },
+  {
+   "i": 60,
+   "jahr": 1972,
+   "kasse": 48071,
+   "aktiv": 71
+  },
+  {
+   "i": 90,
+   "jahr": 1973,
+   "kasse": 27951,
+   "aktiv": 67
+  },
+  {
+   "i": 94,
+   "tat": "ausgang:ja",
+   "r": "ok"
+  },
+  {
+   "i": 94,
+   "tat": "weiter=aus",
+   "jahr": 1973,
+   "weiter": "WEITER [an]"
+  }
+ ],
+ "antragBild": {
+  "i": 94,
+  "jahr": 1973,
+  "woche": 5,
+  "kasse": 25319,
+  "text": "ST. MICHAELGASTHOF LINDENHOFBAHNHOFBRAUHAUSZUM ANKER Vorsprung: 2 Dinge · wirbt 2 Wochen kürzerAdler-Bräu AGDr. Werner Feist · gelehrt · hält 3 Häuser58Züge324.970 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW4kauft sich ins RegalW4FernsehwerbungNordstern-GruppeUte Nordstern · träge · hält 2 Häuser57Züge2.422.000 DMKasse7Brauereienunterschreibt die JahresvereinbarungW5unterschreibt die JahresvereinbarungW3LIN · LISablösen 55.078 DMZuschuss in Bier4,5 hl statt GeldTOR · JVBablösen 32.400 DMZuschuss in Bier4,5 hl statt GeldMUE · JVBablösen 49.900 DMZuschuss in Bier4,5 hl statt GeldBRU · JVBablösen 44.550 DMZuschuss in Bier4,5 hl statt GeldBHF · LISablösen 58.320 DMZuschuss in Bier4,5 hl statt GeldAnzeige beim Bundeskartellamtkostet kein Geld · vier Ansehengegen BahnhofsgaststätteOhne dich geschehen115 Zügediese Woche 1Das Haus gegenüberGebunden wird jetzt mit Die Listung — Gebühr, Konditionen, AuslistungAblösung 32.400 DM bis 58.320 DMAnzeige beim Bundeskartellamtkostet kein Geld · vier Ansehen · einmal im Braujahr1973 W5Die Gruppe legt beim Mühlschenke 13.450 DM auf die Jahreskonditionen. Ablösen kostet jetzt 49.900 DM.zeigen1973 W4Der Adler erhöht den Werbe"
+ },
+ "schluss": {
+  "jahr": 1973,
+  "woche": 5,
+  "epoche": 4,
+  "ende": true,
+  "endgrund": "marke-verkauft",
+  "kasse": 167319,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Brauhaus zum Anker verkauft seine Marke an die Nordstern-Gruppe und stellt das Brauen ein. Bezahlt wird für Wortmarke, Etikett und Rezeptur — nicht für Kessel, Tanks und Halle. Anker Pilsner steht weiter im Regal, gebraut zweihundert Kilometer entfernt, in einer Anlage, die vierhundert Hektoliter im Sud fährt. Auf dem Etikett steht \"gegründet 1350\". Am Hof steht ein Bauzaun. Ausgezahlt: 142.000 DM."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 76,
+  "sichtbar": 99,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBAHNHOFBRAUHAUSZUM ANKER",
+   "gegner :: Vorsprung: 2 Dinge · wirbt 2 Wochen kürzerAdler-Bräu AGDr. Werner Feist · gelehrt · hält 3 Häuser58Züge324.970 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW4kauft sich ins RegalW4FernsehwerbungNordstern-GruppeUte Nordstern · träge · hält 2 Häuser57Züge2.422.000 DMKasse7Brauereienunterschreibt die JahresvereinbarungW5unterschreibt die JahresvereinbarungW3LIN · LISablösen 55",
+   "sud :: DER SUD · 1973Nach Erfahrung des Braumeisters · Naturtrüb, unfiltrierthöchstens PilsnerGärkeller 0,0/300 hlStreuung ±25 %Hefe aus dem Tank zusetzenSchönen mit KieselsolKieselgurfilter−26.000 DM",
+   "name :: nachgemacht",
+   "stadt :: LINOCHMUEFAEBHF",
+   "fuhre :: LINOCHMUEBRUFAEBHFDIE HÄUSERwollen 0,0 · im Keller liegen 45 hlDAS BRAUHAUS ZUM ANKER IST ZU — 1973Der Handel nimmt das Brauhaus zum Anker aus dem Sortiment: seit acht Wochen hat kein Einkauf mehr bestellt. Die Tanks sind voll und niemand ruft an.Das Schlussblatt aufschlagenDIE DEBITORENim Holz bis Michaeli: 0 DMZahlungsziel, Bonus, Jahresgespräch: der Handel zahlt schnell und nimmt sich den Rest ",
+   "sud :: DAS SUDHAUS · 1973Das Sudwerk im SchaltraumWie gleich ist gleich genug?Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste.DIE FÜHRUNGWonach wird gefahren?Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger.Nach Erfah",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Der Handel bis 1974▾0Ruf von 100nachgemachtgenommen bis 1974Bekanntheit2Einlösung0Gleiches Bier, 100 hl, zwei Preiseohne das Zeichen 14.101 DMmit dem Zeichen 14.101 DM+ 0,0 im Hundert · 0 DM mehr für dieselbe MengeAUFGELD AUF DEN NAMEN — was der Ruf eingebracht hatdiese Woche0 DMBraujahr0 DMseit 1970+2.108 DMzuletzt 1971, W1: 2.108 DM auf 38.194 DM an Sommerabsatz · ",
+   "erbe :: DAS ERBEII. HandOttmar Bruckner · streitbaram Haus 0 · an der Person 0DIE STUNDE · Feder 1,15×nahm 3 · 191 hlNachschrift · 1 Haus−9.418 DM",
+   "kern :: OKTOBER1973Kasse167.319 DMHopfen28Tanks45/600 hlWoche5/30Chronik75Buch292Brauhaus zum Anker · 1973/74 · Ottmar Bruckner, streitbar · Die MarkeENDEnächster Zug: Ablösung Schenke am Tor — 32.400 DM (Kasse reicht 5,2×)",
+   "klang :: ♪",
+   "stadt :: OHNE DICH GESCHEHEN115 ZügeDIE HÄUSERwollen 0,0 · im Keller liegen 45 hlSUDPLANim Schaltraum, auf FormicaDIE TANKS45 von 600 hl · 45 reifLASTZUG0,0 von 450 hl · 0 von 3 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Der Handel bis 1974Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken6 auf dem PflockStadt zeigenBAUHOFABBRUCH6 Bauten im Hof · gebaut wird einmal, es steht auch für d",
+   "fuhre :: Die Marke geht an die Nordstern-Gruppe · 1973Das Brauhaus zum Anker verkauft seine Marke an die Nordstern-Gruppe und stellt das Brauen ein. Bezahlt wird für Wortmarke, Etikett und Rezeptur — nicht für Kessel, Tanks und Halle.Anker Pilsner steht weiter im Regal, gebraut zweihundert Kilometer entfernt, in einer Anlage, die vierhundert Hektoliter im Sud fährt. Auf dem Etikett steht \"gegründet 1350\". ",
+   "preis :: Michaelitafel 1973 · 5 AngeboteBierordnung je hl141 DMAnschlag 1973500.000 DMbilligstes Angebot25.000 DMKasse reicht dafür6,69×1977 · Tarifabschluss mit Nachzahlung750 DMChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Festschreiben notariell, im Liefervertrag · II. HandOttmar Bruckner · streitbar„Gewinnt Prozesse und verliert Freunde.\"Ficht die Bindung des Gegners an, wo sie nur an einer Person hängt.Ein Vertrag mit Laufzeit überdauert den Geschäftsführer. Eine gute Beziehung überdauert ihn nicht.Margarete Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0, an de",
+   "sud :: DAS SUDBUCH13 Sude · 360 hlSudbuch aufschlagen"
+  ]
+ },
+ "schlussAuf": "FEHLER",
+ "nach": null,
+ "nochmal": "aus",
+ "danach": {
+  "jahr": 1973,
+  "woche": 5,
+  "epoche": 4,
+  "ende": true,
+  "endgrund": "marke-verkauft",
+  "kasse": 167319,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Brauhaus zum Anker verkauft seine Marke an die Nordstern-Gruppe und stellt das Brauen ein. Bezahlt wird für Wortmarke, Etikett und Rezeptur — nicht für Kessel, Tanks und Halle. Anker Pilsner steht weiter im Regal, gebraut zweihundert Kilometer entfernt, in einer Anlage, die vierhundert Hektoliter im Sud fährt. Auf dem Etikett steht \"gegründet 1350\". Am Hof steht ein Bauzaun. Ausgezahlt: 142.000 DM."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 76,
+  "sichtbar": 99,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBAHNHOFBRAUHAUSZUM ANKER",
+   "gegner :: Vorsprung: 2 Dinge · wirbt 2 Wochen kürzerAdler-Bräu AGDr. Werner Feist · gelehrt · hält 3 Häuser58Züge324.970 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW4kauft sich ins RegalW4FernsehwerbungNordstern-GruppeUte Nordstern · träge · hält 2 Häuser57Züge2.422.000 DMKasse7Brauereienunterschreibt die JahresvereinbarungW5unterschreibt die JahresvereinbarungW3LIN · LISablösen 55",
+   "sud :: DER SUD · 1973Nach Erfahrung des Braumeisters · Naturtrüb, unfiltrierthöchstens PilsnerGärkeller 0,0/300 hlStreuung ±25 %Hefe aus dem Tank zusetzenSchönen mit KieselsolKieselgurfilter−26.000 DM",
+   "name :: nachgemacht",
+   "stadt :: LINOCHMUEFAEBHF",
+   "fuhre :: LINOCHMUEBRUFAEBHFDIE HÄUSERwollen 0,0 · im Keller liegen 45 hlDAS BRAUHAUS ZUM ANKER IST ZU — 1973Der Handel nimmt das Brauhaus zum Anker aus dem Sortiment: seit acht Wochen hat kein Einkauf mehr bestellt. Die Tanks sind voll und niemand ruft an.Das Schlussblatt aufschlagenDIE DEBITORENim Holz bis Michaeli: 0 DMZahlungsziel, Bonus, Jahresgespräch: der Handel zahlt schnell und nimmt sich den Rest ",
+   "sud :: DAS SUDHAUS · 1973Das Sudwerk im SchaltraumWie gleich ist gleich genug?Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste.DIE FÜHRUNGWonach wird gefahren?Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger.Nach Erfah",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Der Handel bis 1974▾0Ruf von 100nachgemachtgenommen bis 1974Bekanntheit2Einlösung0Gleiches Bier, 100 hl, zwei Preiseohne das Zeichen 14.101 DMmit dem Zeichen 14.101 DM+ 0,0 im Hundert · 0 DM mehr für dieselbe MengeAUFGELD AUF DEN NAMEN — was der Ruf eingebracht hatdiese Woche0 DMBraujahr0 DMseit 1970+2.108 DMzuletzt 1971, W1: 2.108 DM auf 38.194 DM an Sommerabsatz · ",
+   "erbe :: DAS ERBEII. HandOttmar Bruckner · streitbaram Haus 0 · an der Person 0DIE STUNDE · Feder 1,15×nahm 3 · 191 hlNachschrift · 1 Haus−9.418 DM",
+   "kern :: OKTOBER1973Kasse167.319 DMHopfen28Tanks45/600 hlWoche5/30Chronik75Buch292Brauhaus zum Anker · 1973/74 · Ottmar Bruckner, streitbar · Die MarkeENDEnächster Zug: Ablösung Schenke am Tor — 32.400 DM (Kasse reicht 5,2×)",
+   "klang :: ♪",
+   "stadt :: OHNE DICH GESCHEHEN115 ZügeDIE HÄUSERwollen 0,0 · im Keller liegen 45 hlSUDPLANim Schaltraum, auf FormicaDIE TANKS45 von 600 hl · 45 reifLASTZUG0,0 von 450 hl · 0 von 3 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Der Handel bis 1974Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken6 auf dem PflockStadt zeigenBAUHOFABBRUCH6 Bauten im Hof · gebaut wird einmal, es steht auch für d",
+   "fuhre :: Die Marke geht an die Nordstern-Gruppe · 1973Das Brauhaus zum Anker verkauft seine Marke an die Nordstern-Gruppe und stellt das Brauen ein. Bezahlt wird für Wortmarke, Etikett und Rezeptur — nicht für Kessel, Tanks und Halle.Anker Pilsner steht weiter im Regal, gebraut zweihundert Kilometer entfernt, in einer Anlage, die vierhundert Hektoliter im Sud fährt. Auf dem Etikett steht \"gegründet 1350\". ",
+   "preis :: Michaelitafel 1973 · 5 AngeboteBierordnung je hl141 DMAnschlag 1973500.000 DMbilligstes Angebot25.000 DMKasse reicht dafür6,69×1977 · Tarifabschluss mit Nachzahlung750 DMChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Festschreiben notariell, im Liefervertrag · II. HandOttmar Bruckner · streitbar„Gewinnt Prozesse und verliert Freunde.\"Ficht die Bindung des Gegners an, wo sie nur an einer Person hängt.Ein Vertrag mit Laufzeit überdauert den Geschäftsführer. Eine gute Beziehung überdauert ihn nicht.Margarete Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0, an de",
+   "sud :: DAS SUDBUCH13 Sude · 360 hlSudbuch aufschlagen"
+  ]
+ },
+ "fehler": []
+}

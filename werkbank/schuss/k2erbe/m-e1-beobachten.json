@@ -1,0 +1,5204 @@
+{
+ "epoche": "1",
+ "modus": "beobachten",
+ "wahl": "leibgeding",
+ "start": {
+  "jahr": 1350,
+  "woche": 1,
+  "epoche": 1,
+  "ende": false,
+  "amt": {
+   "nr": 1,
+   "name": "Kunigunde Bruckner",
+   "eig": "sparsam",
+   "bis": 1386
+  },
+  "kasse": 112,
+  "faesser": 4,
+  "kopfLeiste": [
+   "SCHEIDING 1350",
+   "KASSE 112 Pf",
+   "GRUT 40",
+   "KELLER 4/12 Fass",
+   "WOCHE 1/30",
+   "CHRONIK 4",
+   "BUCH 1"
+  ],
+  "kopfDeckung": "5.89",
+  "kopfDeckungTxt": "nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)",
+  "protN": 1,
+  "chrN": 4,
+  "erbLeiste": "DAS ERBE noch 15 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −12 Pf Abfertigung −61 Pf Mit leeren Händen 0 Pf",
+  "erbBuch": "DAS ERBE — Verschreiben vor dem Rat ins Stadtbuch Kunigunde Bruckner · sparsam „Hält das Geld zusammen, versäumt die Gelegenheit.\" Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber. Was im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab. Die Stunde kommt in 15 Wochen — 12. Jänner 1351. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 4 — FÄLLT MIT DER HAND, DIE ES GAB Zum Goldenen Ochsen Gewohnheit Verschreiben −16 Pf Pfarrschenke St. Michael Gewohnheit Verschreiben −8 Pf Landgasthof Hirsch Gewohnheit Verschreiben −11 Pf Ausschank am Markt Gewohnheit Verschreiben −6 Pf",
+  "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 2 Häuser 1 ZÜGE 320 Pf KASSE 9 Pf SEIN PREIS wirbt W1"
+   },
+   {
+    "zug": "gegner:abloesen:torschenke",
+    "preis": -56,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "TOR · KON ablösen 56 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:torschenke",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:faehrhaus",
+    "preis": -66,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "FAE · BAN ablösen 66 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:faehrhaus",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:zuvorkommen:obernberg",
+    "preis": -19,
+    "t": true,
+    "a": true,
+    "cls": "gg-wimpel gg-adler",
+    "txt": "wirbt · noch 4 Wo. zuvorkommen 19 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:obernberg",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": true,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Klosterschenke Obernberg"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hefezeug vom Fass abnehmen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hopfen im Sack, heimlich"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -78,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll siegel",
+    "txt": "Offen gehopft, mit Hopfenbrief −78 Pf"
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "Adler-Ausschank am Mar"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OBE"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "erbe:tafel:verschreibe",
+    "preis": -16,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-weit",
+    "txt": "Verschreiben · Zum Goldenen Ochsen −16 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -12,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Leibgeding · jährlich −12 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -61,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Abfertigung −61 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe erb-leer",
+    "txt": "Mit leeren Händen 0 Pf"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 4"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 1"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross amort",
+    "txt": "WEITER"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-wartet",
+    "txt": "♪"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 1 Zug"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 15 · im Keller liegen 4 Fass"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER KELLER 4 von 12 Fass · 4 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 7 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:versatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "VERSATZ"
+   },
+   {
+    "zug": "stadt:bau:grutkammer",
+    "preis": -13,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Grutkammer −13 Pf"
+   },
+   {
+    "zug": "stadt:bau:gaerbottiche",
+    "preis": -15,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Gärbottiche −15 Pf"
+   },
+   {
+    "zug": "stadt:bau:ochsenstall",
+    "preis": -18,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Ochsenstall −18 Pf"
+   },
+   {
+    "zug": "stadt:bau:keller_gewoelbe",
+    "preis": -21,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Gewölbekeller −21 Pf"
+   },
+   {
+    "zug": "stadt:bau:kueferei",
+    "preis": -23,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Küferei −23 Pf"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1350 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   }
+  ]
+ },
+ "zeilen": [
+  {
+   "i": 0,
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 112,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 12,
+   "billigster": 12,
+   "rho": 9.33,
+   "kopfDeckung": "5.89",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=12",
+    "erbe:uebergabe:abfindung=61",
+    "stadt:bau:grutkammer=13",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 15 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −12 Pf Abfertigung −61 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:grutkammer:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Brauhaus zum Adler baut auf dem eigenen Hof: Große Kufe für 34 Pf."
+   ]
+  },
+  {
+   "i": 1,
+   "jahr": 1350,
+   "woche": 2,
+   "kasse": 99,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 15,
+   "rho": 6.6,
+   "kopfDeckung": "5.21",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=86",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 14 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −86 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 2 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 2,
+   "jahr": 1350,
+   "woche": 3,
+   "kasse": 99,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 15,
+   "rho": 6.6,
+   "kopfDeckung": "5.21",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=84",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 13 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −84 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 2 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Brauhaus zum Adler hält die Adresse (-1)",
+    "gegner: Ein grauer Karren des Adlers fährt zum Schenke am Tor."
+   ]
+  },
+  {
+   "i": 3,
+   "jahr": 1350,
+   "woche": 4,
+   "kasse": 98,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 15,
+   "rho": 6.53,
+   "kopfDeckung": "5.16",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=81",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 12 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −81 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 3 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler steht dem Wirt zum Klosterschenke Obernberg Gevatter. Das hält länger als ein Brief.",
+    "gegner: Der Adler ruft am Markt aus: 8 Pf je Fass, einen Pfennig unter dem Satz."
+   ]
+  },
+  {
+   "i": 4,
+   "jahr": 1350,
+   "woche": 5,
+   "kasse": 98,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 15,
+   "rho": 6.53,
+   "kopfDeckung": "2.33",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=78",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 11 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −78 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 5 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:gaerbottiche:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Brauhaus zum Adler hält die Adresse und schenkt unter dem Satz aus (-1)",
+    "gegner: Brauhaus zum Adler wirbt um Pfarrschenke St. Michael: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 22 Pf."
+   ]
+  },
+  {
+   "i": 5,
+   "jahr": 1350,
+   "woche": 6,
+   "kasse": 82,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 18,
+   "rho": 4.56,
+   "kopfDeckung": "3.73",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=76",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 10 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −76 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 6 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Ein Feist wird in den Rat gewählt. Solange er darin sitzt, ist kein Ratsspruch ablösbar."
+   ]
+  },
+  {
+   "i": 6,
+   "jahr": 1350,
+   "woche": 7,
+   "kasse": 82,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 18,
+   "rho": 4.56,
+   "kopfDeckung": "3.73",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=73",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 9 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −73 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 7 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 7,
+   "jahr": 1350,
+   "woche": 8,
+   "kasse": 82,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 18,
+   "rho": 4.56,
+   "kopfDeckung": "3.73",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=70",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 8 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −70 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 7 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Brauhaus zum Adler hält die Adresse und schenkt unter dem Satz aus (-1)",
+    "gegner: Der Rat entzieht dem Adler die Konzession für Fährhaus am Fluss. Der Wirt hat geklagt."
+   ]
+  },
+  {
+   "i": 8,
+   "jahr": 1350,
+   "woche": 9,
+   "kasse": 81,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 10,
+   "nBezahlbar": 10,
+   "billigster": 18,
+   "rho": 4.5,
+   "kopfDeckung": "3.68",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:obernberg=42",
+    "sud:zettel-wechsel-kauf=78",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "erbe:uebergabe:abfindung=68",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 7 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −68 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 8 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:ochsenstall:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 9,
+   "jahr": 1350,
+   "woche": 10,
+   "kasse": 63,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 7,
+   "billigster": 18,
+   "rho": 3.5,
+   "kopfDeckung": "2.86",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 6 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −18 Pf Abfertigung −65 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 8 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Brauhaus zum Adler hält die Adresse und schenkt unter dem Satz aus (-1)",
+    "gegner: Der Rat verleiht dem Adler die Schankgerechtigkeit im Pfarrschenke St. Michael.",
+    "gegner: Ein Feist sitzt beim Wirt zum Landgasthof Hirsch und lässt den Ratsschreiber warten. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 67 Pf."
+   ]
+  },
+  {
+   "i": 10,
+   "jahr": 1350,
+   "woche": 11,
+   "kasse": 62,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 8,
+   "billigster": 16,
+   "rho": 3.88,
+   "kopfDeckung": "1.48",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abwehren:hirsch=67",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=16",
+    "erbe:uebergabe:abfindung=55",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 5 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −16 Pf Abfertigung −55 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 11,
+   "jahr": 1350,
+   "woche": 12,
+   "kasse": 62,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 8,
+   "billigster": 16,
+   "rho": 3.88,
+   "kopfDeckung": "1.48",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abwehren:hirsch=67",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=16",
+    "erbe:uebergabe:abfindung=52",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 4 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −16 Pf Abfertigung −52 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Brauhaus zum Adler hält die Adresse und schenkt unter dem Satz aus (-1)"
+   ]
+  },
+  {
+   "i": 12,
+   "jahr": 1350,
+   "woche": 13,
+   "kasse": 61,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 8,
+   "billigster": 16,
+   "rho": 3.81,
+   "kopfDeckung": "1.45",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abwehren:hirsch=67",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=16",
+    "erbe:uebergabe:abfindung=50",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 3 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −16 Pf Abfertigung −50 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:keller_gewoelbe:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 13,
+   "jahr": 1350,
+   "woche": 14,
+   "kasse": 40,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 16,
+   "rho": 2.5,
+   "kopfDeckung": "0.95",
+   "angebot": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abwehren:hirsch=67",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=16",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 2 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −16 Pf Abfertigung −48 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat spricht Landgasthof Hirsch dem Adler zu. Das Haus hatte dort nur die Gewohnheit.",
+    "gegner: Brauhaus zum Adler wirbt um Zum Goldenen Ochsen: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 45 Pf."
+   ]
+  },
+  {
+   "i": 14,
+   "jahr": 1350,
+   "woche": 15,
+   "kasse": 40,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner / sparsam (bis 1386)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 12,
+   "rho": 3.33,
+   "kopfDeckung": "0.95",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=45",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=20",
+    "erbe:uebergabe:leibgeding=12",
+    "erbe:uebergabe:abfindung=36",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE noch 1 Woche Kunigunde Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 2 Fass Verschreiben · Lindenhof −20 Pf Leibgeding · jährlich −12 Pf Abfertigung −36 Pf Mit leeren Händen 0 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 12 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Brauhaus zum Adler hält die Adresse und schenkt unter dem Satz aus (-1)",
+    "gegner: Der Adler ruft am Markt aus: 7 Pf je Fass, einen Pfennig unter dem Satz.",
+    "verfall: Gasthof Lindenhof: Lieferung fällt mit der Hand",
+    "verfall: Zum Goldenen Ochsen: Lieferung fällt mit der Hand",
+    "verfall: Ausschank am Markt: Gewohnheit fällt mit der Hand",
+    "verfall: Erbteil der Miterben aus dem Keller"
+   ]
+  },
+  {
+   "i": 15,
+   "jahr": 1350,
+   "woche": 16,
+   "kasse": 39,
+   "faesser": 2,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 23,
+   "rho": 1.7,
+   "kopfDeckung": "0.93",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=45",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 3 Häuser −70 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 13 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig unter dem Satz."
+   ]
+  },
+  {
+   "i": 16,
+   "jahr": 1350,
+   "woche": 17,
+   "kasse": 34,
+   "faesser": 4,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 23,
+   "rho": 1.48,
+   "kopfDeckung": "0.81",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=45",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=24",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 14 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Karren des Adlers fährt zum Klosterschenke Obernberg."
+   ]
+  },
+  {
+   "i": 17,
+   "jahr": 1350,
+   "woche": 18,
+   "kasse": 29,
+   "faesser": 6,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 23,
+   "rho": 1.26,
+   "kopfDeckung": "0.69",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=45",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:tafel:verschreibe=24",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 15 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat verleiht dem Adler die Schankgerechtigkeit im Zum Goldenen Ochsen."
+   ]
+  },
+  {
+   "i": 18,
+   "jahr": 1350,
+   "woche": 19,
+   "kasse": 24,
+   "faesser": 8,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 3,
+   "billigster": 10,
+   "rho": 2.4,
+   "kopfDeckung": "0.57",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10",
+    "erbe:tafel:verschreibe=24",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 16 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 19,
+   "jahr": 1350,
+   "woche": 20,
+   "kasse": 19,
+   "faesser": 10,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.9,
+   "kopfDeckung": "0.45",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 16 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 20,
+   "jahr": 1350,
+   "woche": 21,
+   "kasse": 14,
+   "faesser": 12,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.4,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 16 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Ein Feist sitzt beim Wirt zum Gasthof Lindenhof und lässt den Ratsschreiber warten. In 5 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 231 Pf.",
+    "gegner: Brauhaus zum Adler hängt denselben Strohkranz aus — nachgemacht ist billiger als besser gebraut"
+   ]
+  },
+  {
+   "i": 21,
+   "jahr": 1350,
+   "woche": 22,
+   "kasse": 17,
+   "faesser": 10,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.7,
+   "kopfDeckung": "0.4",
+   "angebot": [
+    "gegner:abwehren:lindenhof=231",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 22,
+   "jahr": 1350,
+   "woche": 23,
+   "kasse": 20,
+   "faesser": 8,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2,
+   "kopfDeckung": "0.48",
+   "angebot": [
+    "gegner:abwehren:lindenhof=231",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 23,
+   "jahr": 1350,
+   "woche": 24,
+   "kasse": 23,
+   "faesser": 6,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 2,
+   "billigster": 10,
+   "rho": 2.3,
+   "kopfDeckung": "0.55",
+   "angebot": [
+    "gegner:abwehren:lindenhof=231",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 24,
+   "jahr": 1350,
+   "woche": 25,
+   "kasse": 26,
+   "faesser": 4,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 3,
+   "billigster": 10,
+   "rho": 2.6,
+   "kopfDeckung": "0.62",
+   "angebot": [
+    "gegner:abwehren:lindenhof=231",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10",
+    "erbe:tafel:verschreibe=24",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 25,
+   "jahr": 1350,
+   "woche": 26,
+   "kasse": 29,
+   "faesser": 2,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 3,
+   "billigster": 10,
+   "rho": 2.9,
+   "kopfDeckung": "0.69",
+   "angebot": [
+    "gegner:abwehren:lindenhof=231",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "gegner:abloesen:obernberg=42",
+    "erbe:nachschrift=10",
+    "erbe:tafel:verschreibe=24",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf Verschreiben · Lindenhof −24 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat spricht Gasthof Lindenhof dem Adler zu. Das Haus hatte dort nur die Gewohnheit. Dafür wird Klosterschenke Obernberg fallengelassen — die Adresse ist frei."
+   ]
+  },
+  {
+   "i": 26,
+   "jahr": 1350,
+   "woche": 27,
+   "kasse": 32,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 10,
+   "rho": 3.2,
+   "kopfDeckung": "0.67",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 27,
+   "jahr": 1350,
+   "woche": 28,
+   "kasse": 31,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 10,
+   "rho": 3.1,
+   "kopfDeckung": "0.65",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Karren des Adlers fährt zum Gasthof Lindenhof."
+   ]
+  },
+  {
+   "i": 28,
+   "jahr": 1350,
+   "woche": 29,
+   "kasse": 30,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 10,
+   "rho": 3,
+   "kopfDeckung": "0.63",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 19 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Dem Adler brennt der Darrboden. Zwei Wochen kein Sud. Es kostet ihn 25 Pf."
+   ]
+  },
+  {
+   "i": 29,
+   "jahr": 1350,
+   "woche": 30,
+   "kasse": 29,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 10,
+   "rho": 2.9,
+   "kopfDeckung": "0.6",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10",
+    "stadt:bau:kueferei=23"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 20 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "verfall: Mühlschenke führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-27)"
+   ]
+  },
+  {
+   "i": 30,
+   "jahr": 1351,
+   "woche": 1,
+   "kasse": 50,
+   "faesser": 0,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 4,
+   "billigster": 6,
+   "rho": 8.33,
+   "kopfDeckung": "1.04",
+   "angebot": [
+    "stadt:bau:kueferei=23",
+    "fuhre:jahresplan:duenn=6",
+    "fuhre:jahresplan:grut=7",
+    "fuhre:jahresplan:stark=15"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 20 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:kueferei:ok",
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 31,
+   "jahr": 1351,
+   "woche": 2,
+   "kasse": 26,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2.6,
+   "kopfDeckung": "0.54",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 20 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler baut auf dem eigenen Hof: Eigener Brunnen für 38 Pf."
+   ]
+  },
+  {
+   "i": 32,
+   "jahr": 1351,
+   "woche": 3,
+   "kasse": 25,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2.5,
+   "kopfDeckung": "0.52",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 21 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 33,
+   "jahr": 1351,
+   "woche": 4,
+   "kasse": 24,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2.4,
+   "kopfDeckung": "0.5",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 21 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ]
+  },
+  {
+   "i": 34,
+   "jahr": 1351,
+   "woche": 5,
+   "kasse": 23,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2.3,
+   "kopfDeckung": "0.48",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 35,
+   "jahr": 1351,
+   "woche": 6,
+   "kasse": 22,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2.2,
+   "kopfDeckung": "0.46",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler baut auf dem eigenen Hof: Darrboden für 44 Pf."
+   ]
+  },
+  {
+   "i": 36,
+   "jahr": 1351,
+   "woche": 7,
+   "kasse": 21,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2.1,
+   "kopfDeckung": "0.44",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 23 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 37,
+   "jahr": 1351,
+   "woche": 8,
+   "kasse": 20,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 2,
+   "kopfDeckung": "0.42",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 23 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 38,
+   "jahr": 1351,
+   "woche": 9,
+   "kasse": 19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.9,
+   "kopfDeckung": "0.4",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 23 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Brauhaus zum Adler baut auf dem eigenen Hof: Zweiter Karren für 22 Pf."
+   ]
+  },
+  {
+   "i": 39,
+   "jahr": 1351,
+   "woche": 10,
+   "kasse": 18,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.8,
+   "kopfDeckung": "0.38",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 24 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 40,
+   "jahr": 1351,
+   "woche": 11,
+   "kasse": 17,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.7,
+   "kopfDeckung": "0.35",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 24 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 41,
+   "jahr": 1351,
+   "woche": 12,
+   "kasse": 16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.6,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 24 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Karren des Adlers fährt zum Schenke am Tor."
+   ]
+  },
+  {
+   "i": 42,
+   "jahr": 1351,
+   "woche": 13,
+   "kasse": 15,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.5,
+   "kopfDeckung": "0.31",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 25 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Dem Adler brennt der Darrboden. Zwei Wochen kein Sud. Es kostet ihn 14 Pf. Zweiter Karren: weg vom Hof."
+   ]
+  },
+  {
+   "i": 43,
+   "jahr": 1351,
+   "woche": 14,
+   "kasse": 14,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.4,
+   "kopfDeckung": "0.29",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 26 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 44,
+   "jahr": 1351,
+   "woche": 15,
+   "kasse": 13,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.3,
+   "kopfDeckung": "0.27",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 26 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 45,
+   "jahr": 1351,
+   "woche": 16,
+   "kasse": 12,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.2,
+   "kopfDeckung": "0.25",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 26 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 46,
+   "jahr": 1351,
+   "woche": 17,
+   "kasse": 11,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 10,
+   "rho": 1.1,
+   "kopfDeckung": "0.23",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108",
+    "erbe:nachschrift=10"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 26 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Der Rat entzieht dem Adler die Konzession für Gasthof Lindenhof. Der Wirt hat geklagt."
+   ]
+  },
+  {
+   "i": 47,
+   "jahr": 1351,
+   "woche": 18,
+   "kasse": 10,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.21,
+   "kopfDeckung": "0.21",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 48,
+   "jahr": 1351,
+   "woche": 19,
+   "kasse": 9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.19,
+   "kopfDeckung": "0.19",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 49,
+   "jahr": 1351,
+   "woche": 20,
+   "kasse": 8,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.17,
+   "kopfDeckung": "0.17",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 50,
+   "jahr": 1351,
+   "woche": 21,
+   "kasse": 7,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.15,
+   "kopfDeckung": "0.15",
+   "angebot": [
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Brauhaus zum Adler wirbt um Gasthof Lindenhof: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 56 Pf."
+   ]
+  },
+  {
+   "i": 51,
+   "jahr": 1351,
+   "woche": 22,
+   "kasse": 6,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.13,
+   "kopfDeckung": "0.13",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=56",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 52,
+   "jahr": 1351,
+   "woche": 23,
+   "kasse": 5,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.1,
+   "kopfDeckung": "0.1",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=56",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 53,
+   "jahr": 1351,
+   "woche": 24,
+   "kasse": 4,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.08,
+   "kopfDeckung": "0.08",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=56",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 54,
+   "jahr": 1351,
+   "woche": 25,
+   "kasse": 3,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=56",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −43 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Der Rat verleiht dem Adler die Schankgerechtigkeit im Gasthof Lindenhof.",
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Zum Goldenen Ochsen."
+   ]
+  },
+  {
+   "i": 55,
+   "jahr": 1351,
+   "woche": 26,
+   "kasse": 2,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 56,
+   "jahr": 1351,
+   "woche": 27,
+   "kasse": 1,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 57,
+   "jahr": 1351,
+   "woche": 28,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0,
+   "kopfDeckung": "0",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat entzieht dem Adler die Konzession für Schenke am Tor. Der Wirt hat geklagt."
+   ]
+  },
+  {
+   "i": 58,
+   "jahr": 1351,
+   "woche": 29,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 48,
+   "rho": 0,
+   "kopfDeckung": "0",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 31 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Brauhaus zum Adler wirbt um Schenke am Tor: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf."
+   ]
+  },
+  {
+   "i": 59,
+   "jahr": 1351,
+   "woche": 30,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 19,
+   "rho": 0,
+   "kopfDeckung": "0",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:zuvorkommen:torschenke=19",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 32 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 3 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Brückenwirt führt kein Bier des Hauses mehr",
+    "verfall: Fährhaus am Fluss führt kein Bier des Hauses mehr",
+    "verfall: Klosterschenke Obernberg führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-17)"
+   ]
+  },
+  {
+   "i": 60,
+   "jahr": 1352,
+   "woche": 1,
+   "kasse": -9,
+   "faesser": 0,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 6,
+   "rho": -1.5,
+   "kopfDeckung": "-0.47",
+   "angebot": [
+    "gegner:abloesen:hirsch=108",
+    "fuhre:jahresplan:duenn=6",
+    "fuhre:jahresplan:grut=7",
+    "fuhre:jahresplan:stark=15"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 32 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 61,
+   "jahr": 1352,
+   "woche": 2,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 19,
+   "rho": -0.47,
+   "kopfDeckung": "-0.47",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:zuvorkommen:torschenke=19",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 32 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat entzieht dem Adler die Konzession für Zum Goldenen Ochsen. Der Wirt hat geklagt."
+   ]
+  },
+  {
+   "i": 62,
+   "jahr": 1352,
+   "woche": 3,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19,
+   "rho": -0.47,
+   "kopfDeckung": "-0.47",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:zuvorkommen:torschenke=19",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 33 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler wirbt um Mühlschenke: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 29 Pf."
+   ]
+  },
+  {
+   "i": 63,
+   "jahr": 1352,
+   "woche": 4,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 19,
+   "rho": -0.47,
+   "kopfDeckung": "-0.47",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:zuvorkommen:torschenke=19",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 34 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler steht dem Wirt zum Schenke am Tor Gevatter. Das hält länger als ein Brief."
+   ]
+  },
+  {
+   "i": 64,
+   "jahr": 1352,
+   "woche": 5,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 29,
+   "rho": -0.31,
+   "kopfDeckung": "-0.31",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 35 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 65,
+   "jahr": 1352,
+   "woche": 6,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 29,
+   "rho": -0.31,
+   "kopfDeckung": "-0.31",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 35 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Karren des Adlers fährt zum Landgasthof Hirsch."
+   ]
+  },
+  {
+   "i": 66,
+   "jahr": 1352,
+   "woche": 7,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 29,
+   "rho": -0.31,
+   "kopfDeckung": "-0.31",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 36 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat verleiht dem Adler die Schankgerechtigkeit im Mühlschenke."
+   ]
+  },
+  {
+   "i": 67,
+   "jahr": 1352,
+   "woche": 8,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 68,
+   "jahr": 1352,
+   "woche": 9,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 69,
+   "jahr": 1352,
+   "woche": 10,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 70,
+   "jahr": 1352,
+   "woche": 11,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 71,
+   "jahr": 1352,
+   "woche": 12,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 72,
+   "jahr": 1352,
+   "woche": 13,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 73,
+   "jahr": 1352,
+   "woche": 14,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 74,
+   "jahr": 1352,
+   "woche": 15,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 75,
+   "jahr": 1352,
+   "woche": 16,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Karren des Adlers fährt zum Pfarrschenke St. Michael."
+   ]
+  },
+  {
+   "i": 76,
+   "jahr": 1352,
+   "woche": 17,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 38 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 77,
+   "jahr": 1352,
+   "woche": 18,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 38 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 78,
+   "jahr": 1352,
+   "woche": 19,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 38 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler baut auf dem eigenen Hof: Zweiter Karren für 22 Pf."
+   ]
+  },
+  {
+   "i": 79,
+   "jahr": 1352,
+   "woche": 20,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 39 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 80,
+   "jahr": 1352,
+   "woche": 21,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 39 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 81,
+   "jahr": 1352,
+   "woche": 22,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 39 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig unter dem Satz."
+   ]
+  },
+  {
+   "i": 82,
+   "jahr": 1352,
+   "woche": 23,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 40 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Gasthof Lindenhof."
+   ]
+  },
+  {
+   "i": 83,
+   "jahr": 1352,
+   "woche": 24,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 84,
+   "jahr": 1352,
+   "woche": 25,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 85,
+   "jahr": 1352,
+   "woche": 26,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 86,
+   "jahr": 1352,
+   "woche": 27,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 87,
+   "jahr": 1352,
+   "woche": 28,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=108"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat entzieht dem Adler die Konzession für Landgasthof Hirsch. Der Wirt hat geklagt."
+   ]
+  },
+  {
+   "i": 88,
+   "jahr": 1352,
+   "woche": 29,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 89,
+   "jahr": 1352,
+   "woche": 30,
+   "kasse": -9,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.21,
+   "kopfDeckung": "-0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 3 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+    "verfall: Landgasthof Hirsch führt kein Bier des Hauses mehr",
+    "verfall: Ausschank am Markt führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-14)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 90,
+   "jahr": 1353,
+   "woche": 1,
+   "kasse": -16,
+   "faesser": 0,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 6,
+   "rho": -2.67,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=64",
+    "fuhre:jahresplan:duenn=6",
+    "fuhre:jahresplan:grut=7",
+    "fuhre:jahresplan:stark=15"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 91,
+   "jahr": 1353,
+   "woche": 2,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat entzieht dem Adler die Konzession für Mühlschenke. Der Wirt hat geklagt."
+   ]
+  },
+  {
+   "i": 92,
+   "jahr": 1353,
+   "woche": 3,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 43 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Karren des Adlers fährt zum Schenke am Tor."
+   ]
+  },
+  {
+   "i": 93,
+   "jahr": 1353,
+   "woche": 4,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 44 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 94,
+   "jahr": 1353,
+   "woche": 5,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 44 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 95,
+   "jahr": 1353,
+   "woche": 6,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 44 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig unter dem Satz."
+   ]
+  },
+  {
+   "i": 96,
+   "jahr": 1353,
+   "woche": 7,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 45 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler wirbt um Zum Goldenen Ochsen: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 45 Pf."
+   ]
+  },
+  {
+   "i": 97,
+   "jahr": 1353,
+   "woche": 8,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:zuvorkommen:ochse=45",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 46 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 98,
+   "jahr": 1353,
+   "woche": 9,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:zuvorkommen:ochse=45",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 46 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Schenke am Tor."
+   ]
+  },
+  {
+   "i": 99,
+   "jahr": 1353,
+   "woche": 10,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:zuvorkommen:ochse=45",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 2 Häuser −37 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Rat verleiht dem Adler die Schankgerechtigkeit im Zum Goldenen Ochsen."
+   ]
+  },
+  {
+   "i": 100,
+   "jahr": 1353,
+   "woche": 11,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 101,
+   "jahr": 1353,
+   "woche": 12,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 102,
+   "jahr": 1353,
+   "woche": 13,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 103,
+   "jahr": 1353,
+   "woche": 14,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 104,
+   "jahr": 1353,
+   "woche": 15,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 105,
+   "jahr": 1353,
+   "woche": 16,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 106,
+   "jahr": 1353,
+   "woche": 17,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 107,
+   "jahr": 1353,
+   "woche": 18,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Pfarrschenke St. Michael."
+   ]
+  },
+  {
+   "i": 108,
+   "jahr": 1353,
+   "woche": 19,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 109,
+   "jahr": 1353,
+   "woche": 20,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 110,
+   "jahr": 1353,
+   "woche": 21,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 111,
+   "jahr": 1353,
+   "woche": 22,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler wirbt um Brückenwirt: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 51 Pf."
+   ]
+  },
+  {
+   "i": 112,
+   "jahr": 1353,
+   "woche": 23,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:brueckenwirt=51"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 113,
+   "jahr": 1353,
+   "woche": 24,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:brueckenwirt=51"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Schenke am Tor."
+   ]
+  },
+  {
+   "i": 114,
+   "jahr": 1353,
+   "woche": 25,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:brueckenwirt=51"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 51 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben",
+    "gegner: Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf."
+   ]
+  },
+  {
+   "i": 115,
+   "jahr": 1353,
+   "woche": 26,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 19,
+   "rho": -0.84,
+   "kopfDeckung": "-0.84",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:brueckenwirt=51",
+    "gegner:zuvorkommen:obernberg=19"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 116,
+   "jahr": 1353,
+   "woche": 27,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 19,
+   "rho": -0.84,
+   "kopfDeckung": "-0.84",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:zuvorkommen:brueckenwirt=51",
+    "gegner:zuvorkommen:obernberg=19"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erwirkt den Bannbrief: in der Meile um Brückenwirt schenkt nur sein Bier aus."
+   ]
+  },
+  {
+   "i": 117,
+   "jahr": 1353,
+   "woche": 28,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 19,
+   "rho": -0.84,
+   "kopfDeckung": "-0.84",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:torschenke=42",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:zuvorkommen:obernberg=19"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler steht dem Wirt zum Klosterschenke Obernberg Gevatter. Das hält länger als ein Brief. Dafür wird Schenke am Tor fallengelassen — die Adresse ist frei."
+   ]
+  },
+  {
+   "i": 118,
+   "jahr": 1353,
+   "woche": 29,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 54 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 119,
+   "jahr": 1353,
+   "woche": 30,
+   "kasse": -16,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.38,
+   "kopfDeckung": "-0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 54 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 3 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Gasthof Lindenhof führt kein Bier des Hauses mehr",
+    "verfall: Zum Goldenen Ochsen führt kein Bier des Hauses mehr",
+    "verfall: Schenke am Tor führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-9)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 120,
+   "jahr": 1354,
+   "woche": 1,
+   "kasse": -19,
+   "faesser": 0,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 6,
+   "rho": -3.17,
+   "kopfDeckung": "-0.45",
+   "angebot": [
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:jahresplan:duenn=6",
+    "fuhre:jahresplan:grut=7",
+    "fuhre:jahresplan:stark=15"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 54 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ]
+  },
+  {
+   "i": 121,
+   "jahr": 1354,
+   "woche": 2,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.45,
+   "kopfDeckung": "-0.45",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauhaus zum Adler wirbt um Mühlschenke: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 22 Pf. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 122,
+   "jahr": 1354,
+   "woche": 3,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 22,
+   "rho": -0.86,
+   "kopfDeckung": "-0.86",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:zuvorkommen:muehlwirt=22",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 123,
+   "jahr": 1354,
+   "woche": 4,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 22,
+   "rho": -0.86,
+   "kopfDeckung": "-0.86",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:zuvorkommen:muehlwirt=22",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 124,
+   "jahr": 1354,
+   "woche": 5,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 22,
+   "rho": -0.86,
+   "kopfDeckung": "-0.86",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:zuvorkommen:muehlwirt=22",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 125,
+   "jahr": 1354,
+   "woche": 6,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 22,
+   "rho": -0.86,
+   "kopfDeckung": "-0.86",
+   "angebot": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abloesen:ochse=100",
+    "gegner:zuvorkommen:muehlwirt=22",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler steht dem Wirt zum Mühlschenke Gevatter. Das hält länger als ein Brief."
+   ]
+  },
+  {
+   "i": 126,
+   "jahr": 1354,
+   "woche": 7,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.45,
+   "kopfDeckung": "-0.45",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=48",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 57 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ]
+  },
+  {
+   "i": 127,
+   "jahr": 1354,
+   "woche": 8,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.45,
+   "kopfDeckung": "-0.45",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=48",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 128,
+   "jahr": 1354,
+   "woche": 9,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.45,
+   "kopfDeckung": "-0.45",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=48",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 3 Fass verdorben"
+   ]
+  },
+  {
+   "i": 129,
+   "jahr": 1354,
+   "woche": 10,
+   "kasse": -19,
+   "faesser": 3,
+   "amt": "Mechthild Bruckner / gelehrt (bis 1378)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 42,
+   "rho": -0.45,
+   "kopfDeckung": "-0.45",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=48",
+    "gegner:abloesen:brueckenwirt=114",
+    "gegner:abloesen:obernberg=42"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  }
+ ],
+ "ende": {
+  "jahr": 1354,
+  "woche": 11,
+  "epoche": 1,
+  "ende": false,
+  "amt": {
+   "nr": 2,
+   "name": "Mechthild Bruckner",
+   "eig": "gelehrt",
+   "bis": 1378
+  },
+  "kasse": -19,
+  "faesser": 3,
+  "kopfLeiste": [
+   "CHRISTMOND 1354",
+   "KASSE −19 Pf",
+   "GRUT 0",
+   "KELLER 3/12 Fass",
+   "WOCHE 11/30",
+   "CHRONIK 72",
+   "BUCH 506"
+  ],
+  "kopfDeckung": "-0.45",
+  "kopfDeckungTxt": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht −0,5×)",
+  "protN": 506,
+  "chrN": 72,
+  "erbLeiste": "DAS ERBE II. Hand Mechthild Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 3 · 2 Fass Nachschrift · 1 Haus −10 Pf",
+  "erbBuch": "DAS ERBE — Verschreiben vor dem Rat ins Stadtbuch · II. Hand Mechthild Bruckner · gelehrt „Liest, misst, probiert. Braucht länger.\" Kennt den Jahreswert jeder Bindung und nennt ihn. Was im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab. Kunigunde Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0, an der Person 3 → 0, aus dem Keller 2 Fass. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 0 — FÄLLT MIT DER HAND, DIE ES GAB Nichts mehr. Was hier stand, ist gefallen oder geschrieben. GEFALLEN · 3 — HING AN EINEM MENSCHEN, NICHT AM HAUS Gasthof Lindenhof Lieferung Zum Goldenen Ochsen Lieferung Ausschank am Markt Gewohnheit DIE HÄNDE I. Kunigunde Bruckner sparsam II. Mechthild Bruckner gelehrt",
+  "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 5 Häuser 58 ZÜGE 330 Pf KASSE 6 Pf SEIN PREIS SITZ IM RAT"
+   },
+   {
+    "zug": "gegner:abloesen:lindenhof",
+    "preis": -124,
+    "t": false,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "LIN · KON ablösen 124 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:ochse",
+    "preis": -100,
+    "t": false,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "OCH · KON ablösen 100 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:ochse",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:muehlwirt",
+    "preis": -48,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "MUE · GEV ablösen 48 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:muehlwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:brueckenwirt",
+    "preis": -114,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "BRU · BAN ablösen 114 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:brueckenwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:obernberg",
+    "preis": -42,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "OBE · GEV ablösen 42 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:obernberg",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": false,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Gasthof Lindenhof"
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Das Haus gegenüber"
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Klage vor dem Stadtgericht"
+   },
+   {
+    "zug": "gegner:zeige:58",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:57",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:56",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hefezeug vom Fass abnehmen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hopfen im Sack, heimlich"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -78,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll siegel",
+    "txt": "Offen gehopft, mit Hopfenbrief−78 Pf"
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "Adler-Ausschank am Mar"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OBE"
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "So ist es verabredet"
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:probe:lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:ochse",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:torschenke",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:pfarrhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:muehlwirt",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:brueckenwirt",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:faehrhaus",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:hirsch",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:markt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:obernberg",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:tafel-ab:duenn",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:duenn",
+    "preis": -4,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −4 Pf"
+   },
+   {
+    "zug": "fuhre:tafel-ab:grut",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:grut",
+    "preis": -4,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −4 Pf"
+   },
+   {
+    "zug": "fuhre:tafel-ab:stark",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:stark",
+    "preis": -4,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −4 Pf"
+   },
+   {
+    "zug": "fuhre:tafel-ab:kofent",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:kofent",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+"
+   },
+   {
+    "zug": "fuhre:kauf:budget",
+    "preis": -90,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Brautage vom Rat · +6 · auf 4 Kerben −90 Pf"
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -34,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Grut vom Grutherrn · +40 · auf 2 Kerben −34 Pf"
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 19,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-rueck",
+    "txt": "Grut zurück an den Grutherrn · −40 +19 Pf"
+   },
+   {
+    "zug": "fuhre:kauf:fass",
+    "preis": -34,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Fass vom Böttcher · +3 · auf 2 Kerben −34 Pf"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Wie vorige Woche"
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Karren leeren"
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-abschicken",
+    "txt": "FUHRE ABSCHICKEN"
+   },
+   {
+    "zug": "sud:wuerze:grut",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Grut vom Grutamt"
+   },
+   {
+    "zug": "sud:wuerze:sack",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl",
+    "txt": "Hopfen im Sack, heimlich"
+   },
+   {
+    "zug": "sud:wuerze:brief",
+    "preis": -78,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Offen gehopft, mit Hopfenbrief −78 Pf"
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Hefezeug aus dem Bottich heben · +8"
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Junges Fass anbrechen · +14"
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Altes Fass anbrechen · +6"
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -26,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-bandgriff",
+    "txt": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-klein-knopf",
+    "txt": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:entzug-loesen",
+    "preis": -36,
+    "t": false,
+    "a": false,
+    "cls": "knopf nm-knopf nm-rot",
+    "txt": "Vor dem Rat abbitten −36 Pf − 1 Fass"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-griff",
+    "txt": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -10,
+    "t": true,
+    "a": false,
+    "cls": "knopf erb-knopf erb-nach",
+    "txt": "Nachschrift · 1 Haus −10 Pf"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 72"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 506"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross amort",
+    "txt": "WEITER"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-an",
+    "txt": "♪"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 58 Züge"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 0 · im Keller liegen 3 Fass"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER KELLER 3 von 12 Fass · 3 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES GENOMMEN von Der Rat bis 1354"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-blatt-fu-antrag-fu-ausgangblatt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "DER RAT BIETET DEN ABSTAND liegt auf"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 7 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:versatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "VERSATZ"
+   },
+   {
+    "zug": "stadt:versatz:ochsenstall",
+    "preis": 8,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Ochsenstall +8 Pf"
+   },
+   {
+    "zug": "stadt:versatz:pfanne",
+    "preis": 7,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Braupfanne im Hof +7 Pf"
+   },
+   {
+    "zug": "stadt:versatz:gaerbottiche",
+    "preis": 7,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Gärbottiche +7 Pf"
+   },
+   {
+    "zug": "stadt:versatz:fasslager_holz",
+    "preis": 6,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Fassschuppen +6 Pf"
+   },
+   {
+    "zug": "stadt:versatz:grutkammer",
+    "preis": 6,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Grutkammer +6 Pf"
+   },
+   {
+    "zug": "fuhre:ausgang:ja",
+    "preis": 88,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross",
+    "txt": "Die Pfanne zurückgeben +88 Pf"
+   },
+   {
+    "zug": "fuhre:ausgang:nein",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross flach",
+    "txt": "Nicht zurückgeben — die Frist auslaufen lassen"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1354 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   }
+  ]
+ },
+ "fehler": []
+}

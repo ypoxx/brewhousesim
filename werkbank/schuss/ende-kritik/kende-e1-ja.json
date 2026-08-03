@@ -1,0 +1,128 @@
+{
+ "url": "http://127.0.0.1:8899/spiel/?epoche=1&saat=1350",
+ "modus": "ja",
+ "spur": [
+  {
+   "i": 0,
+   "jahr": 1350,
+   "kasse": 112,
+   "aktiv": 77
+  },
+  {
+   "i": 30,
+   "jahr": 1351,
+   "kasse": -1,
+   "aktiv": 66
+  },
+  {
+   "i": 60,
+   "jahr": 1352,
+   "kasse": 0,
+   "aktiv": 61
+  },
+  {
+   "i": 90,
+   "jahr": 1353,
+   "kasse": 2,
+   "aktiv": 59
+  },
+  {
+   "i": 96,
+   "tat": "ausgang:ja",
+   "r": "ok"
+  },
+  {
+   "i": 96,
+   "tat": "weiter=aus",
+   "jahr": 1353,
+   "weiter": "WEITER [an]"
+  }
+ ],
+ "antragBild": {
+  "i": 96,
+  "jahr": 1353,
+  "woche": 7,
+  "kasse": 0,
+  "text": "ST. MICHAELGASTHOF LINDENHOFBRAUHAUSZUM ANKERGEGR. 1350 Vorsprung: 3 Dinge · wirbt 3 Wochen kürzerBrauhaus zum AdlerHartmann Feist · streitbar · hält 5 Häuser40Züge350 PfKasse7 Pfsein PreisSitz im RatAdler-Ausschank am MarktPFA · KONablösen 48 PfFass an den Wirt1 Fass statt GeldBRU · KONablösen 76 PfFass an den Wirt1 Fass statt GeldFAE · BANablösen 66 PfFass an den Wirt1 Fass statt GeldOBE · GEVablösen 42 PfFass an den Wirt1 Fass statt GeldKlage vor dem Stadtgerichtkostet kein Geld · vier Ansehengegen BrückenwirtOhne dich geschehen40 ZügeDas Haus gegenüberGebunden wird hier mit Recht und GunstAblösung 42 Pf bis 76 PfKlage vor dem Stadtgerichtkostet kein Geld · vier Ansehen · einmal im Braujahr1352 W29Ein grauer Wagen des Hauses gegenüber fährt zum Fährhaus am Fluss.zeigen1352 W20Ein grauer Karren des Adlers fährt zum Klosterschenke Obernberg.zeigen1352 W17Brauhaus zum Adler baut auf dem eigenen Hof: Eigener Brunnen für 38 Pf.zeigenumkämpftAblösung Klosterschenke Obernberg — 42 Pf ·Kasse reicht 0,0×DER SUD · 1353Grut vom Grutamthöchstens GrutbierGärkeller 0/10 FassZeug 25 %Hefezeug vom Fass abnehmenHopfen im Sack, heimlichOffen gehopft, mit Hopfenbrief−78 PfAdler-Ausschank am MarLIN"
+ },
+ "schluss": {
+  "jahr": 1353,
+  "woche": 7,
+  "epoche": 1,
+  "ende": true,
+  "endgrund": "pfanne-zurueckgegeben",
+  "kasse": 56,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Haus zum Anker gibt sein Braurecht von sich aus zurück. Der Rat nimmt Pfanne, Bottiche und Kupfer auf, zahlt den Abstand aus und trägt den Sudtag auf das nächste Haus der Reihe um. Der Hof bleibt der Familie Bruckner. Gebraut wird darin noch — Haustrunk für den eigenen Tisch, den kein Rat verbietet und den niemand kauft. Das Bier des Anker steht in keiner Schenke der Stadt mehr. Ausgezahlt: 56 Pf."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 68,
+  "sichtbar": 92,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBRAUHAUSZUM ANKERGEGR. 1350",
+   "gegner :: Vorsprung: 3 Dinge · wirbt 3 Wochen kürzerBrauhaus zum AdlerHartmann Feist · streitbar · hält 5 Häuser40Züge350 PfKasse7 Pfsein PreisSitz im RatAdler-Ausschank am MarktPFA · KONablösen 48 PfFass an den Wirt1 Fass statt GeldBRU · KONablösen 76 PfFass an den Wirt1 Fass statt GeldFAE · BANablösen 66 PfFass an den Wirt1 Fass statt GeldOBE · GEVablösen 42 PfFass an den Wirt1 Fass statt GeldKlage vor de",
+   "sud :: DER SUD · 1353Grut vom Grutamthöchstens GrutbierGärkeller 0/10 FassZeug 25 %Hefezeug vom Fass abnehmenHopfen im Sack, heimlichOffen gehopft, mit Hopfenbrief−78 Pf",
+   "name :: ",
+   "stadt :: Adler-Ausschank am MarLINOCHMUEBRUFAEOBE",
+   "fuhre :: LINOCHMUEBRUFAEOBEDIE HÄUSERwollen 0 · im Keller liegen 3 FassDAS BRAUHAUS ZUM ANKER IST ZU — 1353Der Rat entzieht dem Haus zum Anker das Braurecht: seit zwölf Wochen hat keine Schenke der Stadt ein Fass genommen. Die Pfanne geht an einen anderen.Das Schlussblatt aufschlagenDAS KERBHOLZ BEIM WIRTim Holz bis Michaeli: 0 PfDer Wirt zahlt nicht am Tor. Er lässt anschreiben, und am Michaelistag geht d",
+   "sud :: DAS SUDHAUS · 1353Die offene Pfanne über offenem FeuerGrut oder Hopfen?Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts.DIE WÜRZEWomit wird gewürzt?Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.Grut vom Gr",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Der Rat bis 1354▾0Ruf von 100genommen bis 1354Bekanntheit0Einlösung40Gleiches Bier, 100 Fass, zwei Preiseohne das Zeichen 992 Pfmit dem Zeichen 992 Pf+ 0,0 im Hundert · 0 Pf mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht.AUFGELD AUF DEN ZEIGER — was der Ruf eingebracht hatdiese Woche0 PfBraujahr0 Pfseit 13500 PfNoch nicht",
+   "erbe :: DAS ERBEII. HandKunigunde Bruckner · sparsamam Haus 0 · an der Person 0DIE STUNDE · Feder 0,70×nahm 3 · 4 FassNachschrift · 2 Häuser−24 Pf",
+   "kern :: NEBELUNG1353Kasse56 PfGrut1Keller3/4 FassWoche7/30Chronik54Buch237Brauhaus zum Anker · 1353/54 · Kunigunde Bruckner, sparsam · Das RechtENDEnächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 1,3×)",
+   "klang :: ♪",
+   "stadt :: OHNE DICH GESCHEHEN40 ZügeDIE HÄUSERwollen 0 · im Keller liegen 3 FassANSCHLAGTAFELmit Kreide an der SudhauswandDER KELLER3 von 4 Fass · 3 reifOCHSENKARREN0 von 5 Fass · 0 von 4 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Der Rat bis 1354Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken7 auf dem PflockStadt zeigenBAUHOFVERSATZ1 Bauten im Hof · gebaut wird einmal, es steht auch",
+   "fuhre :: Die Pfanne geht an die Reihe zurück · 1353Das Haus zum Anker gibt sein Braurecht von sich aus zurück. Der Rat nimmt Pfanne, Bottiche und Kupfer auf, zahlt den Abstand aus und trägt den Sudtag auf das nächste Haus der Reihe um.Der Hof bleibt der Familie Bruckner. Gebraut wird darin noch — Haustrunk für den eigenen Tisch, den kein Rat verbietet und den niemand kauft. Das Bier des Anker steht in kein",
+   "preis :: Michaelitafel 1353 · 5 AngeboteBierordnung je Fass10 PfAnschlag 1353470 Pfbilligstes Angebot33 PfKasse reicht dafür1,70×1355 · Landfriedensgeld6 PfChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Verschreiben vor dem Rat ins Stadtbuch · II. HandKunigunde Bruckner · sparsam„Hält das Geld zusammen, versäumt die Gelegenheit.\"Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber.Was im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab.Kunigunde Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am H",
+   "sud :: DAS SUDBUCH28 Sude · 0 FassSudbuch aufschlagen"
+  ]
+ },
+ "schlussAuf": "FEHLER",
+ "nach": null,
+ "nochmal": "aus",
+ "danach": {
+  "jahr": 1353,
+  "woche": 7,
+  "epoche": 1,
+  "ende": true,
+  "endgrund": "pfanne-zurueckgegeben",
+  "kasse": 56,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Haus zum Anker gibt sein Braurecht von sich aus zurück. Der Rat nimmt Pfanne, Bottiche und Kupfer auf, zahlt den Abstand aus und trägt den Sudtag auf das nächste Haus der Reihe um. Der Hof bleibt der Familie Bruckner. Gebraut wird darin noch — Haustrunk für den eigenen Tisch, den kein Rat verbietet und den niemand kauft. Das Bier des Anker steht in keiner Schenke der Stadt mehr. Ausgezahlt: 56 Pf."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 68,
+  "sichtbar": 92,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBRAUHAUSZUM ANKERGEGR. 1350",
+   "gegner :: Vorsprung: 3 Dinge · wirbt 3 Wochen kürzerBrauhaus zum AdlerHartmann Feist · streitbar · hält 5 Häuser40Züge350 PfKasse7 Pfsein PreisSitz im RatAdler-Ausschank am MarktPFA · KONablösen 48 PfFass an den Wirt1 Fass statt GeldBRU · KONablösen 76 PfFass an den Wirt1 Fass statt GeldFAE · BANablösen 66 PfFass an den Wirt1 Fass statt GeldOBE · GEVablösen 42 PfFass an den Wirt1 Fass statt GeldKlage vor de",
+   "sud :: DER SUD · 1353Grut vom Grutamthöchstens GrutbierGärkeller 0/10 FassZeug 25 %Hefezeug vom Fass abnehmenHopfen im Sack, heimlichOffen gehopft, mit Hopfenbrief−78 Pf",
+   "name :: ",
+   "stadt :: Adler-Ausschank am MarLINOCHMUEBRUFAEOBE",
+   "fuhre :: LINOCHMUEBRUFAEOBEDIE HÄUSERwollen 0 · im Keller liegen 3 FassDAS BRAUHAUS ZUM ANKER IST ZU — 1353Der Rat entzieht dem Haus zum Anker das Braurecht: seit zwölf Wochen hat keine Schenke der Stadt ein Fass genommen. Die Pfanne geht an einen anderen.Das Schlussblatt aufschlagenDAS KERBHOLZ BEIM WIRTim Holz bis Michaeli: 0 PfDer Wirt zahlt nicht am Tor. Er lässt anschreiben, und am Michaelistag geht d",
+   "sud :: DAS SUDHAUS · 1353Die offene Pfanne über offenem FeuerGrut oder Hopfen?Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts.DIE WÜRZEWomit wird gewürzt?Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.Grut vom Gr",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Der Rat bis 1354▾0Ruf von 100genommen bis 1354Bekanntheit0Einlösung40Gleiches Bier, 100 Fass, zwei Preiseohne das Zeichen 992 Pfmit dem Zeichen 992 Pf+ 0,0 im Hundert · 0 Pf mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht.AUFGELD AUF DEN ZEIGER — was der Ruf eingebracht hatdiese Woche0 PfBraujahr0 Pfseit 13500 PfNoch nicht",
+   "erbe :: DAS ERBEII. HandKunigunde Bruckner · sparsamam Haus 0 · an der Person 0DIE STUNDE · Feder 0,70×nahm 3 · 4 FassNachschrift · 2 Häuser−24 Pf",
+   "kern :: NEBELUNG1353Kasse56 PfGrut1Keller3/4 FassWoche7/30Chronik54Buch237Brauhaus zum Anker · 1353/54 · Kunigunde Bruckner, sparsam · Das RechtENDEnächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 1,3×)",
+   "klang :: ♪",
+   "stadt :: OHNE DICH GESCHEHEN40 ZügeDIE HÄUSERwollen 0 · im Keller liegen 3 FassANSCHLAGTAFELmit Kreide an der SudhauswandDER KELLER3 von 4 Fass · 3 reifOCHSENKARREN0 von 5 Fass · 0 von 4 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Der Rat bis 1354Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken7 auf dem PflockStadt zeigenBAUHOFVERSATZ1 Bauten im Hof · gebaut wird einmal, es steht auch",
+   "fuhre :: Die Pfanne geht an die Reihe zurück · 1353Das Haus zum Anker gibt sein Braurecht von sich aus zurück. Der Rat nimmt Pfanne, Bottiche und Kupfer auf, zahlt den Abstand aus und trägt den Sudtag auf das nächste Haus der Reihe um.Der Hof bleibt der Familie Bruckner. Gebraut wird darin noch — Haustrunk für den eigenen Tisch, den kein Rat verbietet und den niemand kauft. Das Bier des Anker steht in kein",
+   "preis :: Michaelitafel 1353 · 5 AngeboteBierordnung je Fass10 PfAnschlag 1353470 Pfbilligstes Angebot33 PfKasse reicht dafür1,70×1355 · Landfriedensgeld6 PfChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Verschreiben vor dem Rat ins Stadtbuch · II. HandKunigunde Bruckner · sparsam„Hält das Geld zusammen, versäumt die Gelegenheit.\"Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber.Was im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab.Kunigunde Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am H",
+   "sud :: DAS SUDBUCH28 Sude · 0 FassSudbuch aufschlagen"
+  ]
+ },
+ "fehler": []
+}

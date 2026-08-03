@@ -1,0 +1,758 @@
+{
+ "epoche": 1,
+ "wochen": 65,
+ "stil": "sparsam",
+ "saat": "4242",
+ "fehler": [],
+ "angebot": [
+  {
+   "zug": "sud:zettel-anstich",
+   "mal": 65,
+   "aktiv": 63,
+   "getroffen": 0,
+   "texte": [
+    "Hefezeug vom Fass abnehmen"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "mal": 65,
+   "aktiv": 65,
+   "getroffen": 0,
+   "texte": [
+    "Hopfen im Sack, heimlich"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "mal": 65,
+   "aktiv": 8,
+   "getroffen": 0,
+   "texte": [
+    "Offen gehopft, mit Hopfenbrief −78 Pf"
+   ]
+  },
+  {
+   "zug": "sud:wuerze:grut",
+   "mal": 65,
+   "aktiv": 0,
+   "getroffen": 63,
+   "texte": [
+    "Grut vom Grutamt"
+   ]
+  },
+  {
+   "zug": "sud:wuerze:sack",
+   "mal": 65,
+   "aktiv": 65,
+   "getroffen": 63,
+   "texte": [
+    "Hopfen im Sack, heimlich"
+   ]
+  },
+  {
+   "zug": "sud:wuerze:brief",
+   "mal": 65,
+   "aktiv": 8,
+   "getroffen": 63,
+   "texte": [
+    "Offen gehopft, mit Hopfenbrief −78 Pf"
+   ]
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "mal": 65,
+   "aktiv": 0,
+   "getroffen": 63,
+   "texte": [
+    "Hefezeug aus dem Bottich heben · +8"
+   ]
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "mal": 65,
+   "aktiv": 63,
+   "getroffen": 63,
+   "texte": [
+    "Hefezeug vom Fass abnehmen · jüngstes Fass · +14"
+   ]
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "mal": 65,
+   "aktiv": 63,
+   "getroffen": 63,
+   "texte": [
+    "Hefezeug vom Fass abnehmen · ältestes Fass · +6"
+   ]
+  },
+  {
+   "zug": "sud:gaerraum",
+   "mal": 65,
+   "aktiv": 18,
+   "getroffen": 63,
+   "texte": [
+    "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+   ]
+  }
+ ],
+ "gewechselt": [],
+ "protokoll": [
+  {
+   "w": 0,
+   "kopf": "SCHEIDING=1350 | KASSE=112 Pf | GRUT=40 | KELLER=4/12 Fass | WOCHE=1/30 | CHRONIK=3 | BUCH=1",
+   "kasse": "112 Pf",
+   "keller": "4/12 Fass",
+   "roh": "40",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 12,4×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 70 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 1,
+   "kopf": "GILBHART=1350 | KASSE=103 Pf | GRUT=37 | KELLER=8/12 Fass | WOCHE=2/30 | CHRONIK=3 | BUCH=5",
+   "kasse": "103 Pf",
+   "keller": "8/12 Fass",
+   "roh": "37",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 11,4×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 68 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 2,
+   "kopf": "GILBHART=1350 | KASSE=94 Pf | GRUT=34 | KELLER=12/12 Fass | WOCHE=3/30 | CHRONIK=4 | BUCH=9",
+   "kasse": "94 Pf",
+   "keller": "12/12 Fass",
+   "roh": "34",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 10,4×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 66 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 3,
+   "kopf": "GILBHART=1350 | KASSE=92 Pf | GRUT=34 | KELLER=12/12 Fass | WOCHE=4/30 | CHRONIK=5 | BUCH=11",
+   "kasse": "92 Pf",
+   "keller": "12/12 Fass",
+   "roh": "34",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 10,2×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 64 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 4,
+   "kopf": "GILBHART=1350 | KASSE=90 Pf | GRUT=34 | KELLER=12/12 Fass | WOCHE=5/30 | CHRONIK=6 | BUCH=12",
+   "kasse": "90 Pf",
+   "keller": "12/12 Fass",
+   "roh": "34",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 10,0×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 62 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 5,
+   "kopf": "NEBELUNG=1350 | KASSE=88 Pf | GRUT=34 | KELLER=12/12 Fass | WOCHE=6/30 | CHRONIK=6 | BUCH=14",
+   "kasse": "88 Pf",
+   "keller": "12/12 Fass",
+   "roh": "34",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 9,8×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 60 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 6,
+   "kopf": "NEBELUNG=1350 | KASSE=86 Pf | GRUT=34 | KELLER=12/12 Fass | WOCHE=7/30 | CHRONIK=6 | BUCH=15",
+   "kasse": "86 Pf",
+   "keller": "12/12 Fass",
+   "roh": "34",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 9,6×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 58 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 7,
+   "kopf": "NEBELUNG=1350 | KASSE=84 Pf | GRUT=34 | KELLER=12/12 Fass | WOCHE=8/30 | CHRONIK=6 | BUCH=17",
+   "kasse": "84 Pf",
+   "keller": "12/12 Fass",
+   "roh": "34",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 9,3×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 56 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 5
+  },
+  {
+   "w": 8,
+   "kopf": "NEBELUNG=1350 | KASSE=75 Pf | GRUT=31 | KELLER=12/12 Fass | WOCHE=9/30 | CHRONIK=7 | BUCH=22",
+   "kasse": "75 Pf",
+   "keller": "12/12 Fass",
+   "roh": "31",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 8,3×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 54 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 9,
+   "kopf": "CHRISTMOND=1350 | KASSE=66 Pf | GRUT=28 | KELLER=12/12 Fass | WOCHE=10/30 | CHRONIK=8 | BUCH=27",
+   "kasse": "66 Pf",
+   "keller": "12/12 Fass",
+   "roh": "28",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 7,3×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 52 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 10,
+   "kopf": "CHRISTMOND=1350 | KASSE=57 Pf | GRUT=25 | KELLER=12/12 Fass | WOCHE=11/30 | CHRONIK=9 | BUCH=32",
+   "kasse": "57 Pf",
+   "keller": "12/12 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 6,3×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 50 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 11,
+   "kopf": "CHRISTMOND=1350 | KASSE=55 Pf | GRUT=25 | KELLER=12/12 Fass | WOCHE=12/30 | CHRONIK=10 | BUCH=33",
+   "kasse": "55 Pf",
+   "keller": "12/12 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 6,1×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 48 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 12,
+   "kopf": "CHRISTMOND=1350 | KASSE=53 Pf | GRUT=25 | KELLER=12/12 Fass | WOCHE=13/30 | CHRONIK=10 | BUCH=35",
+   "kasse": "53 Pf",
+   "keller": "12/12 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 5,9×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 46 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 13,
+   "kopf": "CHRISTMOND=1350 | KASSE=51 Pf | GRUT=25 | KELLER=12/12 Fass | WOCHE=14/30 | CHRONIK=10 | BUCH=37",
+   "kasse": "51 Pf",
+   "keller": "12/12 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 5,7×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 44 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 14,
+   "kopf": "JÄNNER=1351 | KASSE=49 Pf | GRUT=25 | KELLER=12/12 Fass | WOCHE=15/30 | CHRONIK=10 | BUCH=38",
+   "kasse": "49 Pf",
+   "keller": "12/12 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 5,4×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 42 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 15,
+   "kopf": "JÄNNER=1351 | KASSE=47 Pf | GRUT=25 | KELLER=12/12 Fass | WOCHE=16/30 | CHRONIK=10 | BUCH=40",
+   "kasse": "47 Pf",
+   "keller": "12/12 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 5,2×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 40 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 16,
+   "kopf": "JÄNNER=1351 | KASSE=38 Pf | GRUT=22 | KELLER=12/12 Fass | WOCHE=17/30 | CHRONIK=10 | BUCH=45",
+   "kasse": "38 Pf",
+   "keller": "12/12 Fass",
+   "roh": "22",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 4,2×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 38 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 17,
+   "kopf": "JÄNNER=1351 | KASSE=29 Pf | GRUT=19 | KELLER=12/12 Fass | WOCHE=18/30 | CHRONIK=10 | BUCH=49",
+   "kasse": "29 Pf",
+   "keller": "12/12 Fass",
+   "roh": "19",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 3,2×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 36 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 4
+  },
+  {
+   "w": 18,
+   "kopf": "HORNUNG=1351 | KASSE=20 Pf | GRUT=16 | KELLER=12/12 Fass | WOCHE=19/30 | CHRONIK=10 | BUCH=53",
+   "kasse": "20 Pf",
+   "keller": "12/12 Fass",
+   "roh": "16",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 2,2×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 34 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 19,
+   "kopf": "HORNUNG=1351 | KASSE=18 Pf | GRUT=16 | KELLER=12/12 Fass | WOCHE=20/30 | CHRONIK=10 | BUCH=54",
+   "kasse": "18 Pf",
+   "keller": "12/12 Fass",
+   "roh": "16",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 2,0×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 32 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 20,
+   "kopf": "HORNUNG=1351 | KASSE=16 Pf | GRUT=16 | KELLER=12/12 Fass | WOCHE=21/30 | CHRONIK=11 | BUCH=56",
+   "kasse": "16 Pf",
+   "keller": "12/12 Fass",
+   "roh": "16",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,8×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 30 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 21,
+   "kopf": "HORNUNG=1351 | KASSE=14 Pf | GRUT=16 | KELLER=12/12 Fass | WOCHE=22/30 | CHRONIK=12 | BUCH=58",
+   "kasse": "14 Pf",
+   "keller": "12/12 Fass",
+   "roh": "16",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,6×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 28 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 22,
+   "kopf": "LENZING=1351 | KASSE=12 Pf | GRUT=16 | KELLER=12/12 Fass | WOCHE=23/30 | CHRONIK=12 | BUCH=60",
+   "kasse": "12 Pf",
+   "keller": "12/12 Fass",
+   "roh": "16",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,3×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 26 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 23,
+   "kopf": "LENZING=1351 | KASSE=10 Pf | GRUT=16 | KELLER=12/12 Fass | WOCHE=24/30 | CHRONIK=13 | BUCH=62",
+   "kasse": "10 Pf",
+   "keller": "12/12 Fass",
+   "roh": "16",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,1×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 24,
+   "kopf": "LENZING=1351 | KASSE=1 Pf | GRUT=13 | KELLER=12/12 Fass | WOCHE=25/30 | CHRONIK=13 | BUCH=67",
+   "kasse": "1 Pf",
+   "keller": "12/12 Fass",
+   "roh": "13",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 25,
+   "kopf": "LENZING=1351 | KASSE=17 Pf | GRUT=10 | KELLER=12/12 Fass | WOCHE=26/30 | CHRONIK=13 | BUCH=72",
+   "kasse": "17 Pf",
+   "keller": "12/12 Fass",
+   "roh": "10",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,9×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 26,
+   "kopf": "LENZING=1351 | KASSE=8 Pf | GRUT=7 | KELLER=12/12 Fass | WOCHE=27/30 | CHRONIK=14 | BUCH=77",
+   "kasse": "8 Pf",
+   "keller": "12/12 Fass",
+   "roh": "7",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,9×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 27,
+   "kopf": "OSTERMOND=1351 | KASSE=6 Pf | GRUT=7 | KELLER=12/12 Fass | WOCHE=28/30 | CHRONIK=15 | BUCH=79",
+   "kasse": "6 Pf",
+   "keller": "12/12 Fass",
+   "roh": "7",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,7×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 28,
+   "kopf": "OSTERMOND=1351 | KASSE=4 Pf | GRUT=7 | KELLER=12/12 Fass | WOCHE=29/30 | CHRONIK=15 | BUCH=80",
+   "kasse": "4 Pf",
+   "keller": "12/12 Fass",
+   "roh": "7",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,4×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 29,
+   "kopf": "OSTERMOND=1351 | KASSE=2 Pf | GRUT=7 | KELLER=12/12 Fass | WOCHE=30/30 | CHRONIK=15 | BUCH=81",
+   "kasse": "2 Pf",
+   "keller": "12/12 Fass",
+   "roh": "7",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1350 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 30,
+   "kopf": "SCHEIDING=1351 | KASSE=−1 Pf | GRUT=7 | KELLER=0/12 Fass | WOCHE=1/30 | CHRONIK=20 | BUCH=86",
+   "kasse": "−1 Pf",
+   "keller": "0/12 Fass",
+   "roh": "7",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht −0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 0
+  },
+  {
+   "w": 31,
+   "kopf": "GILBHART=1351 | KASSE=10 Pf | GRUT=3 | KELLER=10/12 Fass | WOCHE=2/30 | CHRONIK=21 | BUCH=93",
+   "kasse": "10 Pf",
+   "keller": "10/12 Fass",
+   "roh": "3",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 32,
+   "kopf": "GILBHART=1351 | KASSE=8 Pf | GRUT=3 | KELLER=10/12 Fass | WOCHE=3/30 | CHRONIK=21 | BUCH=94",
+   "kasse": "8 Pf",
+   "keller": "10/12 Fass",
+   "roh": "3",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,9×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 33,
+   "kopf": "GILBHART=1351 | KASSE=6 Pf | GRUT=3 | KELLER=10/12 Fass | WOCHE=4/30 | CHRONIK=21 | BUCH=96",
+   "kasse": "6 Pf",
+   "keller": "10/12 Fass",
+   "roh": "3",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,7×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 34,
+   "kopf": "GILBHART=1351 | KASSE=4 Pf | GRUT=3 | KELLER=10/12 Fass | WOCHE=5/30 | CHRONIK=21 | BUCH=98",
+   "kasse": "4 Pf",
+   "keller": "10/12 Fass",
+   "roh": "3",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,4×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 35,
+   "kopf": "NEBELUNG=1351 | KASSE=2 Pf | GRUT=3 | KELLER=10/12 Fass | WOCHE=6/30 | CHRONIK=24 | BUCH=100",
+   "kasse": "2 Pf",
+   "keller": "10/12 Fass",
+   "roh": "3",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 36,
+   "kopf": "NEBELUNG=1351 | KASSE=19 Pf | GRUT=1 | KELLER=5/12 Fass | WOCHE=7/30 | CHRONIK=24 | BUCH=106",
+   "kasse": "19 Pf",
+   "keller": "5/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 2,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 37,
+   "kopf": "NEBELUNG=1351 | KASSE=17 Pf | GRUT=1 | KELLER=5/12 Fass | WOCHE=8/30 | CHRONIK=24 | BUCH=107",
+   "kasse": "17 Pf",
+   "keller": "5/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,9×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 38,
+   "kopf": "NEBELUNG=1351 | KASSE=15 Pf | GRUT=1 | KELLER=5/12 Fass | WOCHE=9/30 | CHRONIK=24 | BUCH=108",
+   "kasse": "15 Pf",
+   "keller": "5/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,7×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 39,
+   "kopf": "CHRISTMOND=1351 | KASSE=13 Pf | GRUT=1 | KELLER=5/12 Fass | WOCHE=10/30 | CHRONIK=24 | BUCH=109",
+   "kasse": "13 Pf",
+   "keller": "5/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,4×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 40,
+   "kopf": "CHRISTMOND=1351 | KASSE=11 Pf | GRUT=1 | KELLER=5/12 Fass | WOCHE=11/30 | CHRONIK=25 | BUCH=110",
+   "kasse": "11 Pf",
+   "keller": "5/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,2×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 41,
+   "kopf": "CHRISTMOND=1351 | KASSE=9 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=12/30 | CHRONIK=26 | BUCH=115",
+   "kasse": "9 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 1,0×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 42,
+   "kopf": "CHRISTMOND=1351 | KASSE=7 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=13/30 | CHRONIK=27 | BUCH=117",
+   "kasse": "7 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,8×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 43,
+   "kopf": "CHRISTMOND=1351 | KASSE=5 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=14/30 | CHRONIK=27 | BUCH=118",
+   "kasse": "5 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,6×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 44,
+   "kopf": "JÄNNER=1352 | KASSE=3 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=15/30 | CHRONIK=27 | BUCH=119",
+   "kasse": "3 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,3×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 45,
+   "kopf": "JÄNNER=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=16/30 | CHRONIK=29 | BUCH=123",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 46,
+   "kopf": "JÄNNER=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=17/30 | CHRONIK=29 | BUCH=124",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 47,
+   "kopf": "JÄNNER=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=18/30 | CHRONIK=30 | BUCH=126",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 48,
+   "kopf": "HORNUNG=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=19/30 | CHRONIK=30 | BUCH=127",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 49,
+   "kopf": "HORNUNG=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=20/30 | CHRONIK=30 | BUCH=131",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 50,
+   "kopf": "HORNUNG=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=21/30 | CHRONIK=31 | BUCH=133",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 51,
+   "kopf": "HORNUNG=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=22/30 | CHRONIK=31 | BUCH=134",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 52,
+   "kopf": "LENZING=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=23/30 | CHRONIK=31 | BUCH=135",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 53,
+   "kopf": "LENZING=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=24/30 | CHRONIK=31 | BUCH=140",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 54,
+   "kopf": "LENZING=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=25/30 | CHRONIK=31 | BUCH=141",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 55,
+   "kopf": "LENZING=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=26/30 | CHRONIK=32 | BUCH=142",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 56,
+   "kopf": "LENZING=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=27/30 | CHRONIK=32 | BUCH=144",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 57,
+   "kopf": "OSTERMOND=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=28/30 | CHRONIK=32 | BUCH=149",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 58,
+   "kopf": "OSTERMOND=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=29/30 | CHRONIK=33 | BUCH=150",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 59,
+   "kopf": "OSTERMOND=1352 | KASSE=1 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=30/30 | CHRONIK=33 | BUCH=152",
+   "kasse": "1 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht 0,1×)",
+   "sudmarke": "DER SUD · 1351 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 60,
+   "kopf": "SCHEIDING=1352 | KASSE=−6 Pf | GRUT=1 | KELLER=0/12 Fass | WOCHE=1/30 | CHRONIK=38 | BUCH=158",
+   "kasse": "−6 Pf",
+   "keller": "0/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht −0,7×)",
+   "sudmarke": "DER SUD · 1352 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 0
+  },
+  {
+   "w": 61,
+   "kopf": "GILBHART=1352 | KASSE=−6 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=2/30 | CHRONIK=40 | BUCH=162",
+   "kasse": "−6 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht −0,7×)",
+   "sudmarke": "DER SUD · 1352 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 62,
+   "kopf": "GILBHART=1352 | KASSE=−6 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=3/30 | CHRONIK=40 | BUCH=163",
+   "kasse": "−6 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht −0,7×)",
+   "sudmarke": "DER SUD · 1352 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 63,
+   "kopf": "GILBHART=1352 | KASSE=−6 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=4/30 | CHRONIK=40 | BUCH=164",
+   "kasse": "−6 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht −0,7×)",
+   "sudmarke": "DER SUD · 1352 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  },
+  {
+   "w": 64,
+   "kopf": "GILBHART=1352 | KASSE=−6 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=5/30 | CHRONIK=40 | BUCH=165",
+   "kasse": "−6 Pf",
+   "keller": "6/12 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht −0,7×)",
+   "sudmarke": "DER SUD · 1352 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+   "sudAktiv": 3
+  }
+ ],
+ "schluss": {
+  "kopf": "NEBELUNG=1352 | KASSE=−6 Pf | GRUT=1 | KELLER=6/12 Fass | WOCHE=6/30 | CHRONIK=40 | BUCH=170",
+  "sudmarke": "DER SUD · 1352 Grut vom Grutamt Gärkeller 0/10 Fass Zeug 25 % Hefezeug vom Fass abnehmen Hopfen im Sack, heimlich Offen gehopft, mit Hopfenbrief −78 Pf",
+  "deckung": "nächster Zug: Umtrunk beim Wirt — 9 Pf (Kasse reicht −0,7×)",
+  "gaerband": "Kein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller."
+ }
+}

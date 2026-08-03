@@ -1,0 +1,1741 @@
+{
+ "epoche": 4,
+ "saat": "1350",
+ "kurve": [
+  {
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 47.77777777777778,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:hirsch",
+   "umkAnzahl": 3,
+   "band": "1 Zug",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser1Züge940.000 DMKasse130 DMsein PreisbautW1",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser0Züge4.200.000 DMKasse0Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 81200,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 45.111111111111114,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:hirsch",
+   "umkAnzahl": 3,
+   "band": "1 Zug",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser1Züge940.000 DMKasse130 DMsein PreisbautW1",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser0Züge4.200.000 DMKasse0Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 3,
+   "kasse": 76400,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 42.44444444444444,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:hirsch",
+   "umkAnzahl": 3,
+   "band": "2 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser2Züge730.000 DMKasse130 DMsein Preisdiese Woche 1 Zug ohne dichbautW3bautW1",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser0Züge4.200.000 DMKasse0Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 4,
+   "kasse": 71600,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 39.77777777777778,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:hirsch",
+   "umkAnzahl": 3,
+   "band": "2 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser2Züge730.000 DMKasse130 DMsein PreisbautW3",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser0Züge4.200.000 DMKasse0Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 5,
+   "kasse": 66800,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 37.111111111111114,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:hirsch",
+   "umkAnzahl": 3,
+   "band": "3 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser3Züge730.000 DMKasse130 DMsein Preisdiese Woche 1 Zug ohne dichfährt LastzugW5bautW3",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser0Züge4.200.000 DMKasse0Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 6,
+   "kasse": 62000,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 34.44444444444444,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:hirsch",
+   "umkAnzahl": 3,
+   "band": "3 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser3Züge730.000 DMKasse130 DMsein Preisfährt LastzugW5",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser0Züge4.200.000 DMKasse0Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 7,
+   "kasse": 57200,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 31.77777777777778,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:hirsch",
+   "umkAnzahl": 4,
+   "band": "4 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser4Züge730.000 DMKasse130 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW7fährt LastzugW5",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser0Züge4.200.000 DMKasse0Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 8,
+   "kasse": 56580,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 31.433333333333334,
+   "umkPreis": 22599,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 5,
+   "band": "5 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser4Züge730.000 DMKasse130 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW7",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser1Züge4.200.000 DMKasse0Brauereienunterschreibt die JahresvereinbarungW8"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 9,
+   "kasse": 55960,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 31.08888888888889,
+   "umkPreis": 18954,
+   "umkZug": "gegner:zuvorkommen:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "7 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser5Züge730.000 DMKasse124 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW9kauft sich ins RegalW7",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser2Züge4.200.000 DMKasse0BrauereienwirbtW9unterschreibt die JahresvereinbarungW8"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 10,
+   "kasse": 55340,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 30.744444444444444,
+   "umkPreis": 18954,
+   "umkZug": "gegner:zuvorkommen:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "8 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser5Züge730.000 DMKasse124 DMsein Preisdiese Woche 1 Zug ohne dichwirft den PreisW9",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser3Züge4.200.000 DMKasse0BrauereienwirbtW10wirbtW9unterschreibt die JahresvereinbarungW8"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 11,
+   "kasse": 54720,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 30.4,
+   "umkPreis": 18954,
+   "umkZug": "gegner:zuvorkommen:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "10 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser6Züge730.000 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW11wirft den PreisW9",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser4Züge4.200.000 DMKasse0Brauereienbietet anW11wirbtW10wirbtW9"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 12,
+   "kasse": 54100,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 30.055555555555557,
+   "umkPreis": 18954,
+   "umkZug": "gegner:zuvorkommen:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "10 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser6Züge730.000 DMKasse118 DMsein Preiswirft den PreisW11",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser4Züge4.200.000 DMKasse0Brauereienbietet anW11wirbtW10"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 13,
+   "kasse": 53480,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 29.711111111111112,
+   "umkPreis": 18954,
+   "umkZug": "gegner:zuvorkommen:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "12 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser7Züge730.000 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichkauft AnteileW13wirft den PreisW11Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 0 Häuser5Züge4.200.000 DMKasse0Brauereienfährt LastzugW13bietet anW11"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 52860,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 29.366666666666667,
+   "umkPreis": 18954,
+   "umkZug": "gegner:zuvorkommen:faehrhaus",
+   "umkAnzahl": 5,
+   "band": "16 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser9Züge715.090 DMKasse118 DMsein Preisdiese Woche 4 Züge ohne dichunterschreibt die JahresvereinbarungW14kauft sich ins RegalW14kauft AnteileW13Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 1 Haus7Züge4.193.440 DMKasse0Brauereienzieht das Angebot zurückW14unterschreibt die JahresvereinbarungW14fährt LastzugW13"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 52240,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 29.022222222222222,
+   "umkPreis": 12555,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 6,
+   "band": "18 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser9Züge715.090 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichunterschreibt die JahresvereinbarungW14kauft sich ins RegalW14kauft AnteileW13Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 2 Häuser9Züge4.185.860 DMKasse0Brauereienunterschreibt die JahresvereinbarungW15bindet exklusivW15zieht das Angebot zurückW14"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 51620,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 28.677777777777777,
+   "umkPreis": 12053,
+   "umkZug": "gegner:abwehren:torschenke",
+   "umkAnzahl": 7,
+   "band": "20 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser10Züge715.090 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW16unterschreibt die JahresvereinbarungW14kauft sich ins RegalW14Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 2 Häuser10Züge3.892.850 DMKasse1BrauereienübernimmtW16unterschreibt die JahresvereinbarungW15bindet exklusivW15"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 17,
+   "kasse": 51000,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 28.333333333333332,
+   "umkPreis": 12053,
+   "umkZug": "gegner:abwehren:torschenke",
+   "umkAnzahl": 7,
+   "band": "21 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser11Züge575.090 DMKasse118 DMsein Preisdiese Woche 1 Zug ohne dichbautW17kauft sich ins RegalW16Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 2 Häuser10Züge3.892.850 DMKasse1BrauereienübernimmtW16unterschreibt die JahresvereinbarungW15bindet exklusivW15"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 18,
+   "kasse": 50380,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 27.988888888888887,
+   "umkPreis": 12053,
+   "umkZug": "gegner:abwehren:torschenke",
+   "umkAnzahl": 7,
+   "band": "22 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser11Züge575.090 DMKasse118 DMsein Preisdiese Woche 1 Zug ohne dichbautW17kauft sich ins RegalW16Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 2 Häuser11Züge3.620.350 DMKasse2BrauereienübernimmtW18übernimmtW16"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 19,
+   "kasse": 49760,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 27.644444444444446,
+   "umkPreis": 12053,
+   "umkZug": "gegner:abwehren:torschenke",
+   "umkAnzahl": 7,
+   "band": "23 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser11Züge575.090 DMKasse118 DMsein Preisdiese Woche 1 Zug ohne dichbautW17Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 2 Häuser12Züge3.615.290 DMKasse2Brauereienunterschreibt die JahresvereinbarungW19übernimmtW18"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 20,
+   "kasse": 49140,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 27.3,
+   "umkPreis": 12555,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 7,
+   "band": "25 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 5 Häuser13Züge489.780 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichRückrufW20kauft sich ins RegalW20Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 2 Häuser12Züge3.615.290 DMKasse2Brauereienunterschreibt die JahresvereinbarungW19übernimmtW18"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 48520,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 26.955555555555556,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "27 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 5 Häuser14Züge486.310 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW21RückrufW20kauft sich ins RegalW20Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 3 Häuser13Züge3.611.640 DMKasse2Brauereienunterschreibt die JahresvereinbarungW21unterschreibt die JahresvereinbarungW19"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 47900,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 26.61111111111111,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "28 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 5 Häuser14Züge486.310 DMKasse118 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW21RückrufW20kauft sich ins RegalW20Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 3 Häuser14Züge3.611.640 DMKasse2Brauereienunterschreibt die JahresvereinbarungW22unterschreibt die JahresvereinbarungW21"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 47280,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 26.266666666666666,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "29 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 5 Häuser15Züge311.310 DMKasse118 DMsein Preisdiese Woche 1 Zug ohne dichbautW23kauft sich ins RegalW21Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 3 Häuser14Züge3.611.640 DMKasse2Brauereienunterschreibt die JahresvereinbarungW22unterschreibt die JahresvereinbarungW21"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 24,
+   "kasse": 46660,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 25.92222222222222,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "29 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 5 Häuser15Züge311.310 DMKasse118 DMsein PreisbautW23Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 3 Häuser14Züge3.611.640 DMKasse2Brauereienunterschreibt die JahresvereinbarungW22"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 25,
+   "kasse": 46040,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 25.57777777777778,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "29 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 5 Häuser15Züge311.310 DMKasse118 DMsein PreisbautW23Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 3 Häuser14Züge3.611.640 DMKasse2Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 26,
+   "kasse": 45420,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 25.233333333333334,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "31 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser16Züge308.440 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW26Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser15Züge3.594.150 DMKasse2Brauereienunterschreibt die JahresvereinbarungW26"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 44800,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 24.88888888888889,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "31 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser16Züge308.440 DMKasse118 DMsein Preiskauft sich ins RegalW26Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser15Züge3.594.150 DMKasse2Brauereienunterschreibt die JahresvereinbarungW26"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 44180,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 24.544444444444444,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "33 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser17Züge301.930 DMKasse118 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW28kauft sich ins RegalW26Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser16Züge3.580.740 DMKasse2Brauereienunterschreibt die JahresvereinbarungW28unterschreibt die JahresvereinbarungW26"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 43560,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 24.2,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "34 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser18Züge301.930 DMKasse118 DMsein Preisdiese Woche 1 Zug ohne dichfährt LastzugW29kauft sich ins RegalW28Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser16Züge3.580.740 DMKasse2Brauereienunterschreibt die JahresvereinbarungW28"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 42940,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 23.855555555555554,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "36 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser19Züge301.930 DMKasse112 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW30fährt LastzugW29kauft sich ins RegalW28Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser17Züge3.330.090 DMKasse3BrauereienübernimmtW30unterschreibt die JahresvereinbarungW28"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 72349,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 40.193888888888885,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "36 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser19Züge349.490 DMKasse113 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW30fährt LastzugW29Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser17Züge3.392.790 DMKasse3BrauereienübernimmtW30"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 72349,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 40.193888888888885,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "36 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser19Züge349.490 DMKasse113 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW30fährt LastzugW29Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser17Züge3.392.790 DMKasse3BrauereienübernimmtW30"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 71717,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 39.842777777777776,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "37 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser19Züge349.490 DMKasse113 DMsein Preisdiese Woche 1 Zug ohne dichwirft den PreisW30Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser18Züge3.392.790 DMKasse3Brauereienunterschreibt die JahresvereinbarungW2übernimmtW30"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 71085,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 39.49166666666667,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "38 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser19Züge349.490 DMKasse113 DMsein Preisdiese Woche 1 Zug ohne dichFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser19Züge3.155.290 DMKasse4BrauereienübernimmtW3unterschreibt die JahresvereinbarungW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 70453,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 39.14055555555556,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "38 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser19Züge349.490 DMKasse113 DMsein PreisFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser19Züge3.155.290 DMKasse4BrauereienübernimmtW3unterschreibt die JahresvereinbarungW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 69821,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 38.78944444444444,
+   "umkPreis": 20250,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "40 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser20Züge343.950 DMKasse113 DMsein Preisdiese Woche 2 Züge ohne dichunterschreibt die JahresvereinbarungW5Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser20Züge2.934.420 DMKasse5BrauereienübernimmtW5übernimmtW3"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 69189,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 38.43833333333333,
+   "umkPreis": 28345,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "43 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser21Züge343.950 DMKasse107 DMsein Preisdiese Woche 3 Züge ohne dichwirft den PreisW6unterschreibt die JahresvereinbarungW5Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser22Züge2.916.440 DMKasse5Brauereienunterschreibt die JahresvereinbarungW6unterschreibt die JahresvereinbarungW6übernimmtW5"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 7,
+   "kasse": 68557,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 38.08722222222222,
+   "umkPreis": 27621,
+   "umkZug": "gegner:abwehren:brueckenwirt",
+   "umkAnzahl": 7,
+   "band": "45 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser22Züge343.950 DMKasse107 DMsein Preisdiese Woche 2 Züge ohne dichverliertW7wirft den PreisW6unterschreibt die JahresvereinbarungW5Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser23Züge2.916.440 DMKasse5Brauereienunterschreibt die JahresvereinbarungW7unterschreibt die JahresvereinbarungW6unterschreibt die JahresvereinbarungW6"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 8,
+   "kasse": 67925,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 37.736111111111114,
+   "umkPreis": 27621,
+   "umkZug": "gegner:abwehren:brueckenwirt",
+   "umkAnzahl": 7,
+   "band": "45 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser22Züge343.950 DMKasse107 DMsein PreisverliertW7wirft den PreisW6Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser23Züge2.916.440 DMKasse5Brauereienunterschreibt die JahresvereinbarungW7unterschreibt die JahresvereinbarungW6unterschreibt die JahresvereinbarungW6"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 9,
+   "kasse": 67293,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 37.385,
+   "umkPreis": 27621,
+   "umkZug": "gegner:abwehren:brueckenwirt",
+   "umkAnzahl": 7,
+   "band": "45 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser22Züge343.950 DMKasse107 DMsein PreisverliertW7Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser23Züge2.916.440 DMKasse5Brauereienunterschreibt die JahresvereinbarungW7"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 10,
+   "kasse": 66661,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 37.03388888888889,
+   "umkPreis": 27621,
+   "umkZug": "gegner:abwehren:brueckenwirt",
+   "umkAnzahl": 7,
+   "band": "45 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser22Züge343.950 DMKasse107 DMsein PreisFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser23Züge2.916.440 DMKasse5Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 66029,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 36.68277777777778,
+   "umkPreis": 27621,
+   "umkZug": "gegner:abwehren:brueckenwirt",
+   "umkAnzahl": 7,
+   "band": "47 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser23Züge340.670 DMKasse107 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW11Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser24Züge2.916.440 DMKasse5Brauereienfährt LastzugW11"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 65397,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 36.33166666666666,
+   "umkPreis": 27119,
+   "umkZug": "gegner:abwehren:lindenhof",
+   "umkAnzahl": 8,
+   "band": "49 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser24Züge340.670 DMKasse107 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW12kauft sich ins RegalW11Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser25Züge2.907.460 DMKasse5Brauereienbindet exklusivW12fährt LastzugW11"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 64765,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 35.980555555555554,
+   "umkPreis": 27119,
+   "umkZug": "gegner:abwehren:lindenhof",
+   "umkAnzahl": 8,
+   "band": "51 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser25Züge312.310 DMKasse107 DMsein Preisdiese Woche 2 Züge ohne dichRückrufW13kauft sich ins RegalW12kauft sich ins RegalW11Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser26Züge2.884.220 DMKasse5Brauereienunterschreibt die JahresvereinbarungW13bindet exklusivW12fährt LastzugW11"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 64133,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 35.629444444444445,
+   "umkPreis": 28345,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 5,
+   "band": "55 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser27Züge304.430 DMKasse101 DMsein Preisdiese Woche 4 Züge ohne dichwirft den PreisW14kauft sich ins RegalW14RückrufW13Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser28Züge2.876.200 DMKasse5BrauereienverliertW14unterschreibt die JahresvereinbarungW14unterschreibt die JahresvereinbarungW13"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 63501,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 35.278333333333336,
+   "umkPreis": 28345,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 5,
+   "band": "56 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser28Züge277.370 DMKasse101 DMsein Preisdiese Woche 1 Zug ohne dichRückrufW15wirft den PreisW14kauft sich ins RegalW14Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser28Züge2.876.200 DMKasse5BrauereienverliertW14unterschreibt die JahresvereinbarungW14unterschreibt die JahresvereinbarungW13"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 62869,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 34.92722222222222,
+   "umkPreis": 28345,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 4,
+   "band": "57 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser28Züge277.370 DMKasse101 DMsein Preisdiese Woche 1 Zug ohne dichRückrufW15wirft den PreisW14kauft sich ins RegalW14Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser29Züge2.876.200 DMKasse5BrauereienverliertW16verliertW14unterschreibt die JahresvereinbarungW14"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 62237,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 34.57611111111111,
+   "umkPreis": 28345,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 4,
+   "band": "58 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser29Züge269.670 DMKasse101 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW17RückrufW15Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser29Züge2.876.200 DMKasse5BrauereienverliertW16"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 61605,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 34.225,
+   "umkPreis": 20088,
+   "umkZug": "gegner:abwehren:torschenke",
+   "umkAnzahl": 5,
+   "band": "60 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser30Züge269.670 DMKasse95 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW18kauft sich ins RegalW17Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser30Züge2.876.200 DMKasse5Brauereienunterschreibt die JahresvereinbarungW18verliertW16"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 60973,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 33.87388888888889,
+   "umkPreis": 9040,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "62 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser31Züge269.670 DMKasse95 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW19wirft den PreisW18kauft sich ins RegalW17Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser31Züge2.876.200 DMKasse5Brauereienfährt LastzugW19unterschreibt die JahresvereinbarungW18"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 60341,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 33.522777777777776,
+   "umkPreis": 9040,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "63 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser31Züge269.670 DMKasse95 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW19wirft den PreisW18Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser32Züge2.853.960 DMKasse5Brauereienunterschreibt die JahresvereinbarungW20fährt LastzugW19unterschreibt die JahresvereinbarungW18"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 59709,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 33.17166666666667,
+   "umkPreis": 9040,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "63 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser31Züge269.670 DMKasse95 DMsein Preiskauft sich ins RegalW19Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser32Züge2.853.960 DMKasse5Brauereienunterschreibt die JahresvereinbarungW20fährt LastzugW19"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 59077,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 32.82055555555556,
+   "umkPreis": 9040,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "63 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser31Züge269.670 DMKasse95 DMsein PreisFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser32Züge2.853.960 DMKasse5Brauereienunterschreibt die JahresvereinbarungW20"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 58445,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 32.46944444444444,
+   "umkPreis": 9040,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "64 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser31Züge269.670 DMKasse95 DMsein Preisdiese Woche 1 Zug ohne dichFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser33Züge2.830.590 DMKasse5Brauereienunterschreibt die JahresvereinbarungW23"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 57813,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 32.11833333333333,
+   "umkPreis": 14580,
+   "umkZug": "gegner:abloesen:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "68 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser33Züge267.040 DMKasse95 DMsein Preisdiese Woche 4 Züge ohne dichkauft sich ins RegalW24kauft sich ins RegalW24Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser35Züge2.627.020 DMKasse6BrauereienübernimmtW24unterschreibt die JahresvereinbarungW24unterschreibt die JahresvereinbarungW23"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 57181,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 31.767222222222223,
+   "umkPreis": 14580,
+   "umkZug": "gegner:abloesen:faehrhaus",
+   "umkAnzahl": 7,
+   "band": "70 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser34Züge256.280 DMKasse95 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW25kauft sich ins RegalW24kauft sich ins RegalW24Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser36Züge2.627.020 DMKasse6Brauereienunterschreibt die JahresvereinbarungW25übernimmtW24unterschreibt die JahresvereinbarungW24"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 56549,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 31.41611111111111,
+   "umkPreis": 14580,
+   "umkZug": "gegner:abloesen:faehrhaus",
+   "umkAnzahl": 7,
+   "band": "71 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser34Züge256.280 DMKasse95 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW25kauft sich ins RegalW24kauft sich ins RegalW24Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser37Züge2.443.130 DMKasse7BrauereienübernimmtW26unterschreibt die JahresvereinbarungW25übernimmtW24"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 27,
+   "kasse": 55917,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 31.065,
+   "umkPreis": 14580,
+   "umkZug": "gegner:abloesen:faehrhaus",
+   "umkAnzahl": 7,
+   "band": "73 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser35Züge256.280 DMKasse89 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW27kauft sich ins RegalW25Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser38Züge2.431.190 DMKasse7Brauereienunterschreibt die JahresvereinbarungW27übernimmtW26unterschreibt die JahresvereinbarungW25"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 28,
+   "kasse": 55285,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 30.71388888888889,
+   "umkPreis": 16573,
+   "umkZug": "gegner:abwehren:brueckenwirt",
+   "umkAnzahl": 7,
+   "band": "74 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser36Züge252.790 DMKasse89 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW28wirft den PreisW27Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser38Züge2.431.190 DMKasse7Brauereienunterschreibt die JahresvereinbarungW27übernimmtW26"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 29,
+   "kasse": 54653,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 30.36277777777778,
+   "umkPreis": 16573,
+   "umkZug": "gegner:abwehren:brueckenwirt",
+   "umkAnzahl": 7,
+   "band": "74 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser36Züge252.790 DMKasse89 DMsein Preiskauft sich ins RegalW28wirft den PreisW27Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser38Züge2.431.190 DMKasse7Brauereienunterschreibt die JahresvereinbarungW27"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 54021,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 30.011666666666667,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 8,
+   "band": "76 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser38Züge247.980 DMKasse89 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW30kauft sich ins RegalW30kauft sich ins RegalW28Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser38Züge2.431.190 DMKasse7Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 42379,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 23.54388888888889,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 8,
+   "band": "76 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser38Züge286.260 DMKasse89 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW30kauft sich ins RegalW30Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser38Züge2.499.500 DMKasse7Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 42379,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 23.54388888888889,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 8,
+   "band": "76 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser38Züge286.260 DMKasse89 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW30kauft sich ins RegalW30Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser38Züge2.499.500 DMKasse7Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 2,
+   "kasse": 41734,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 23.185555555555556,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 7,
+   "band": "78 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser39Züge286.260 DMKasse83 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW2kauft sich ins RegalW30kauft sich ins RegalW30Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser39Züge2.486.370 DMKasse7Brauereienunterschreibt die JahresvereinbarungW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 3,
+   "kasse": 41089,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 22.827222222222222,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 6,
+   "band": "79 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser40Züge286.260 DMKasse83 DMsein Preisdiese Woche 1 Zug ohne dichverliertW3wirft den PreisW2Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser39Züge2.486.370 DMKasse7Brauereienunterschreibt die JahresvereinbarungW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 4,
+   "kasse": 40444,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 22.468888888888888,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 7,
+   "band": "81 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser41Züge280.200 DMKasse83 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW4verliertW3wirft den PreisW2Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser40Züge2.486.370 DMKasse7Brauereienunterschreibt die JahresvereinbarungW4unterschreibt die JahresvereinbarungW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 5,
+   "kasse": 39799,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 22.110555555555557,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 6,
+   "band": "83 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser42Züge280.200 DMKasse81 DMsein Preisdiese Woche 2 Züge ohne dichwirft den PreisW5kauft sich ins RegalW4verliertW3Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser41Züge2.486.370 DMKasse7BrauereienverliertW5unterschreibt die JahresvereinbarungW4"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 6,
+   "kasse": 39154,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 21.752222222222223,
+   "umkPreis": 13559,
+   "umkZug": "gegner:abwehren:muehlwirt",
+   "umkAnzahl": 6,
+   "band": "84 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser42Züge280.200 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichwirft den PreisW5kauft sich ins RegalW4Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser42Züge2.312.330 DMKasse8BrauereienübernimmtW6verliertW5unterschreibt die JahresvereinbarungW4"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 7,
+   "kasse": 38509,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 21.39388888888889,
+   "umkPreis": 15066,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "86 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser43Züge276.270 DMKasse81 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW7wirft den PreisW5Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser43Züge2.306.690 DMKasse8Brauereienunterschreibt die JahresvereinbarungW7übernimmtW6verliertW5"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 8,
+   "kasse": 37864,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 21.035555555555554,
+   "umkPreis": 15066,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 6,
+   "band": "86 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser43Züge276.270 DMKasse81 DMsein Preiskauft sich ins RegalW7Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser43Züge2.306.690 DMKasse8Brauereienunterschreibt die JahresvereinbarungW7übernimmtW6"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 9,
+   "kasse": 37219,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 20.677222222222223,
+   "umkPreis": 7533,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 7,
+   "band": "87 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser44Züge276.270 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW9kauft sich ins RegalW7Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser43Züge2.306.690 DMKasse8Brauereienunterschreibt die JahresvereinbarungW7"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 10,
+   "kasse": 36574,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 20.31888888888889,
+   "umkPreis": 7533,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 7,
+   "band": "88 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser44Züge276.270 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW9Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser44Züge2.302.320 DMKasse8Brauereienunterschreibt die JahresvereinbarungW10"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 35929,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 19.960555555555555,
+   "umkPreis": 7533,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 7,
+   "band": "89 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser45Züge270.950 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW11kauft sich ins RegalW9Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser44Züge2.302.320 DMKasse8Brauereienunterschreibt die JahresvereinbarungW10"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 12,
+   "kasse": 35284,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 19.602222222222224,
+   "umkPreis": 7533,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 7,
+   "band": "90 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser46Züge214.910 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichRückrufW12kauft sich ins RegalW11Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser44Züge2.302.320 DMKasse8Brauereienunterschreibt die JahresvereinbarungW10"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 13,
+   "kasse": 34639,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 19.24388888888889,
+   "umkPreis": 7533,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 7,
+   "band": "90 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser46Züge214.910 DMKasse81 DMsein PreisRückrufW12kauft sich ins RegalW11Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser44Züge2.302.320 DMKasse8Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 14,
+   "kasse": 33994,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 18.885555555555555,
+   "umkPreis": 7533,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 8,
+   "band": "92 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser47Züge214.910 DMKasse81 DMsein Preisdiese Woche 2 Züge ohne dichfährt LastzugW14RückrufW12Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser45Züge2.302.320 DMKasse8Brauereienunterschreibt die JahresvereinbarungW14"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 15,
+   "kasse": 33349,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 18.52722222222222,
+   "umkPreis": 7533,
+   "umkZug": "gegner:abwehren:markt",
+   "umkAnzahl": 8,
+   "band": "92 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser47Züge214.910 DMKasse81 DMsein Preisfährt LastzugW14Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser45Züge2.302.320 DMKasse8Brauereienunterschreibt die JahresvereinbarungW14"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 16,
+   "kasse": 32704,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 18.16888888888889,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "93 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser48Züge212.730 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW16fährt LastzugW14Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser45Züge2.302.320 DMKasse8Brauereienunterschreibt die JahresvereinbarungW14"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 17,
+   "kasse": 32059,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 17.810555555555556,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "94 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser48Züge212.730 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW16Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser46Züge2.295.890 DMKasse8Brauereienunterschreibt die JahresvereinbarungW17"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 18,
+   "kasse": 31414,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 17.452222222222222,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "95 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser48Züge212.730 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW16Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser47Züge2.287.870 DMKasse8Brauereienunterschreibt die JahresvereinbarungW18unterschreibt die JahresvereinbarungW17"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 19,
+   "kasse": 30769,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 17.093888888888888,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "97 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser49Züge212.730 DMKasse81 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW19Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser48Züge2.287.870 DMKasse8BrauereienverliertW19unterschreibt die JahresvereinbarungW18unterschreibt die JahresvereinbarungW17"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 20,
+   "kasse": 30124,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 16.735555555555557,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "97 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser49Züge212.730 DMKasse81 DMsein Preiskauft sich ins RegalW19Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser48Züge2.287.870 DMKasse8BrauereienverliertW19unterschreibt die JahresvereinbarungW18"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 21,
+   "kasse": 29479,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 16.377222222222223,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "97 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser49Züge212.730 DMKasse81 DMsein Preiskauft sich ins RegalW19Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser48Züge2.287.870 DMKasse8BrauereienverliertW19"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 22,
+   "kasse": 28834,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 16.01888888888889,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "97 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser49Züge212.730 DMKasse81 DMsein PreisFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser48Züge2.287.870 DMKasse8Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 23,
+   "kasse": 28189,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 15.660555555555556,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "98 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser49Züge212.730 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser49Züge2.287.870 DMKasse8Brauereienunterschreibt die JahresvereinbarungW23"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 24,
+   "kasse": 27544,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 15.302222222222222,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "98 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser49Züge212.730 DMKasse81 DMsein PreisFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser49Züge2.287.870 DMKasse8Brauereienunterschreibt die JahresvereinbarungW23"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 25,
+   "kasse": 26899,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 14.943888888888889,
+   "umkPreis": 12150,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "99 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser50Züge212.730 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichfährt LastzugW25Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser49Züge2.287.870 DMKasse8Brauereienunterschreibt die JahresvereinbarungW23"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 26,
+   "kasse": 26254,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 14.585555555555555,
+   "umkPreis": 17202,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "101 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser52Züge204.880 DMKasse81 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW26kauft sich ins RegalW26fährt LastzugW25Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser49Züge2.287.870 DMKasse8Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 27,
+   "kasse": 25609,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 14.227222222222222,
+   "umkPreis": 17202,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "101 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser52Züge204.880 DMKasse81 DMsein Preiskauft sich ins RegalW26kauft sich ins RegalW26fährt LastzugW25Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser49Züge2.287.870 DMKasse8Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 28,
+   "kasse": 24964,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 13.86888888888889,
+   "umkPreis": 17202,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 7,
+   "band": "103 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 4 Häuser53Züge174.840 DMKasse81 DMsein Preisdiese Woche 2 Züge ohne dichRückrufW28kauft sich ins RegalW26kauft sich ins RegalW26Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 4 Häuser50Züge2.127.720 DMKasse9BrauereienübernimmtW28"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 29,
+   "kasse": 24319,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 13.510555555555555,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "105 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser54Züge172.130 DMKasse81 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW29RückrufW28Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser51Züge2.121.160 DMKasse9Brauereienunterschreibt die JahresvereinbarungW29übernimmtW28"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1972,
+   "woche": 30,
+   "kasse": 23674,
+   "kernZug": "Bierdeckel drucken lassen",
+   "kernPreis": 1800,
+   "kernDeckung": 13.152222222222223,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "106 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 3 Häuser55Züge166.630 DMKasse81 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW30kauft sich ins RegalW29RückrufW28Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser51Züge2.121.160 DMKasse9Brauereienunterschreibt die JahresvereinbarungW29übernimmtW28"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 2384,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "106 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser55Züge178.260 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW30kauft sich ins RegalW29Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser51Züge2.217.690 DMKasse9Brauereienunterschreibt die JahresvereinbarungW29"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 2384,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "106 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser55Züge178.260 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW30kauft sich ins RegalW29Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser51Züge2.217.690 DMKasse9Brauereienunterschreibt die JahresvereinbarungW29"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 2,
+   "kasse": 1726,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "107 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser55Züge178.260 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW30Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser52Züge2.062.450 DMKasse10BrauereienübernimmtW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 3,
+   "kasse": 1068,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "107 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser55Züge178.260 DMKasse82 DMsein PreisFernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser52Züge2.062.450 DMKasse10BrauereienübernimmtW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 4,
+   "kasse": 410,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "109 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser56Züge171.280 DMKasse82 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW4Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser53Züge1.918.080 DMKasse11BrauereienübernimmtW4übernimmtW2"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 410,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 21717,
+   "umkZug": "gegner:abloesen:markt",
+   "umkAnzahl": 6,
+   "band": "109 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser56Züge171.280 DMKasse82 DMsein Preiskauft sich ins RegalW4Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser53Züge1.918.080 DMKasse11BrauereienübernimmtW4"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 6,
+   "kasse": 410,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:faehrhaus",
+   "umkAnzahl": 5,
+   "band": "110 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser57Züge171.280 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichverliertW6kauft sich ins RegalW4Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser53Züge1.918.080 DMKasse11BrauereienübernimmtW4"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 7,
+   "kasse": 410,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 24300,
+   "umkZug": "gegner:abloesen:faehrhaus",
+   "umkAnzahl": 5,
+   "band": "111 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser58Züge165.570 DMKasse82 DMsein Preisdiese Woche 1 Zug ohne dichkauft sich ins RegalW7verliertW6Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser53Züge1.918.080 DMKasse11Brauereien"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 8,
+   "kasse": 410,
+   "kernZug": "Aktionspalette ohne Berechnung — ohne Rechnung",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 9040,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 7,
+   "band": "113 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser59Züge165.570 DMKasse82 DMsein Preisdiese Woche 2 Züge ohne dichkauft sich ins RegalW8kauft sich ins RegalW7verliertW6Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser54Züge1.918.080 DMKasse11Brauereienunterschreibt die JahresvereinbarungW8"
+   ],
+   "lage": 0
+  },
+  {
+   "jahr": 1973,
+   "woche": 9,
+   "kasse": 410,
+   "kernZug": "kein Zug mehr — das Haus ist zu",
+   "kernPreis": 0,
+   "kernDeckung": null,
+   "umkPreis": 9040,
+   "umkZug": "gegner:abwehren:faehrhaus",
+   "umkAnzahl": 7,
+   "band": "115 Züge",
+   "gegner": [
+    "Adler-Bräu AGDr. Hedwig Feist · träge · hält 2 Häuser60Züge165.570 DMKasse82 DMsein Preisdiese Woche 2 Züge ohne dichverliertW9kauft sich ins RegalW8kauft sich ins RegalW7Fernsehwerbung",
+    "Nordstern-GruppeUte Nordstern · streitbar · hält 5 Häuser55Züge1.911.630 DMKasse11Brauereienunterschreibt die JahresvereinbarungW9unterschreibt die JahresvereinbarungW8"
+   ],
+   "lage": 0
+  }
+ ],
+ "fehler": []
+}

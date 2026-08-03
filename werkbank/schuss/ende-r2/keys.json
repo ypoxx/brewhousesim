@@ -1,0 +1,3637 @@
+{
+ "e1": [
+  {
+   "zug": "gegner:oeffnen:adler",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Brauhaus zum AdlerHartmann Feist · strei"
+  },
+  {
+   "zug": "gegner:abloesen:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-48",
+   "stueck": "gegner",
+   "text": "PFA · KONablösen 48 Pf"
+  },
+  {
+   "zug": "gegner:hinhalten:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass an den Wirt1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-76",
+   "stueck": "gegner",
+   "text": "BRU · KONablösen 76 Pf"
+  },
+  {
+   "zug": "gegner:hinhalten:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass an den Wirt1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:faehrhaus",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-66",
+   "stueck": "gegner",
+   "text": "FAE · BANablösen 66 Pf"
+  },
+  {
+   "zug": "gegner:hinhalten:faehrhaus",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass an den Wirt1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:obernberg",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-42",
+   "stueck": "gegner",
+   "text": "OBE · GEVablösen 42 Pf"
+  },
+  {
+   "zug": "gegner:hinhalten:obernberg",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass an den Wirt1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:beschwerde-bild",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "0",
+   "stueck": "gegner",
+   "text": "Klage vor dem Stadtgerichtkostet kein Ge"
+  },
+  {
+   "zug": "gegner:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Das Haus gegenüber"
+  },
+  {
+   "zug": "gegner:beschwerde",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Klage vor dem Stadtgericht"
+  },
+  {
+   "zug": "gegner:zeige:40",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:39",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:38",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "sud:zettel-anstich",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hefezeug vom Fass abnehmen"
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hopfen im Sack, heimlich"
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-78",
+   "stueck": "sud",
+   "text": "Offen gehopft, mit Hopfenbrief−78 Pf"
+  },
+  {
+   "zug": "stadt:marke:gegner-marktplatz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Adler-Ausschank am Mar"
+  },
+  {
+   "zug": "stadt:marke:fuhre-lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "LIN"
+  },
+  {
+   "zug": "stadt:marke:fuhre-marktplatz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OCH"
+  },
+  {
+   "zug": "stadt:marke:fuhre-muehle",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "MUE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-unten",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BRU"
+  },
+  {
+   "zug": "stadt:marke:fuhre-fluss",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "FAE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-oben",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OBE"
+  },
+  {
+   "zug": "fuhre:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Das Schlussblatt aufschlagen"
+  },
+  {
+   "zug": "fuhre:ziel:bar",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:ziel:ziel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "So ist es verabredet"
+  },
+  {
+   "zug": "fuhre:ziel:borg",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:probe:lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:ochse",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:torschenke",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:faehrhaus",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:hirsch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:markt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:obernberg",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "auf Probe · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:tafel-ab:duenn",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:duenn",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-4",
+   "stueck": "fuhre",
+   "text": "+−4 Pf"
+  },
+  {
+   "zug": "fuhre:tafel-ab:grut",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:grut",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-4",
+   "stueck": "fuhre",
+   "text": "+−4 Pf"
+  },
+  {
+   "zug": "fuhre:tafel-ab:stark",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:stark",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-4",
+   "stueck": "fuhre",
+   "text": "+−4 Pf"
+  },
+  {
+   "zug": "fuhre:tafel-ab:kofent",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:kofent",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "+"
+  },
+  {
+   "zug": "fuhre:kauf:budget",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-90",
+   "stueck": "fuhre",
+   "text": "Brautage vom Rat · +6 · auf 2 Kerben−90 "
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-34",
+   "stueck": "fuhre",
+   "text": "Grut vom Grutherrn · +40−34 Pf"
+  },
+  {
+   "zug": "fuhre:rueckkauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "19",
+   "stueck": "fuhre",
+   "text": "Grut zurück an den Grutherrn · −40+19 Pf"
+  },
+  {
+   "zug": "fuhre:kauf:fass",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-34",
+   "stueck": "fuhre",
+   "text": "Fass vom Böttcher · +3−34 Pf"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nach Durst füllen"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Wie vorige Woche"
+  },
+  {
+   "zug": "fuhre:leeren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Karren leeren"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "FUHRE ABSCHICKEN"
+  },
+  {
+   "zug": "sud:wuerze:grut",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Grut vom Grutamt"
+  },
+  {
+   "zug": "sud:wuerze:sack",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hopfen im Sack, heimlich"
+  },
+  {
+   "zug": "sud:wuerze:brief",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-78",
+   "stueck": "sud",
+   "text": "Offen gehopft, mit Hopfenbrief−78 Pf"
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hefezeug aus dem Bottich heben · +8"
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Junges Fass anbrechen · +14"
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Altes Fass anbrechen · +6"
+  },
+  {
+   "zug": "sud:gaerraum",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-26",
+   "stueck": "sud",
+   "text": "Bottich beim Küfer bestellen · +6 Fass−2"
+  },
+  {
+   "zug": "klang:ton",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "klang",
+   "text": "♪"
+  },
+  {
+   "zug": "name:band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "▾"
+  },
+  {
+   "zug": "name:aufgeldbuch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Aufgeld nachrechnen"
+  },
+  {
+   "zug": "name:entzug-loesen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-36",
+   "stueck": "name",
+   "text": "Vor dem Rat abbitten−36 Pf− 1 Fass"
+  },
+  {
+   "zug": "name:ruhe",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen verdecken"
+  },
+  {
+   "zug": "name:herumgehen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Herumgehen und den Namen sagen"
+  },
+  {
+   "zug": "name:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen und das Register"
+  },
+  {
+   "zug": "erbe:nachschrift",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-24",
+   "stueck": "erbe",
+   "text": "Nachschrift · 2 Häuser−24 Pf"
+  },
+  {
+   "zug": "kern:chronik",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Chronik54"
+  },
+  {
+   "zug": "kern:protokoll",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Buch237"
+  },
+  {
+   "zug": "weiter",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "kern",
+   "text": "ENDE"
+  },
+  {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OHNE DICH GESCHEHEN40 Züge"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DIE HÄUSERwollen 0 · im Keller liegen 3 "
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "ANSCHLAGTAFELmit Kreide an der Sudhauswa"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DER KELLER3 von 4 Fass · 3 reif"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OCHSENKARREN0 von 5 Fass · 0 von 4 Halte"
+  },
+  {
+   "zug": "stadt:reiter:sud-sud-brett",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DAS SUDHAUSzugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:name-nm-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DER RUF DES HAUSESGENOMMEN von Der Rat b"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-blatt-fu-ende-zurueckgegeben-fu-schlussblatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Ende des Hauseszugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:erbe-blatt-erb-buch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Erbeliegt auf"
+  },
+  {
+   "zug": "stadt:ortsmarken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Ortsmarken7 auf dem Pflock"
+  },
+  {
+   "zug": "stadt:alles-zuklappen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Stadt zeigen"
+  },
+  {
+   "zug": "stadt:bau:seite",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BAUHOF"
+  },
+  {
+   "zug": "stadt:versatz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "VERSATZ"
+  },
+  {
+   "zug": "stadt:bau:brunnen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-11",
+   "stueck": "stadt",
+   "text": "Ziehbrunnen−11 Pf"
+  },
+  {
+   "zug": "stadt:bau:grutkammer",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-13",
+   "stueck": "stadt",
+   "text": "Grutkammer−13 Pf"
+  },
+  {
+   "zug": "stadt:bau:fasslager_holz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-14",
+   "stueck": "stadt",
+   "text": "Fassschuppen−14 Pf"
+  },
+  {
+   "zug": "stadt:bau:gaerbottiche",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-15",
+   "stueck": "stadt",
+   "text": "Gärbottiche−15 Pf"
+  },
+  {
+   "zug": "stadt:bau:ochsenstall",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-18",
+   "stueck": "stadt",
+   "text": "Ochsenstall−18 Pf"
+  },
+  {
+   "zug": "fuhre:wiederanfang",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Von vorn anfangen — dieselbe Stadt, ande"
+  },
+  {
+   "zug": "preis:tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Michaelitafel 1353 · 5 Angebote"
+  },
+  {
+   "zug": "preis:chronik-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Chronik des Hauses · 0 Festlegungen · 0 "
+  },
+  {
+   "zug": "sud:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Sudbuch aufschlagen"
+  }
+ ],
+ "e2": [
+  {
+   "zug": "gegner:oeffnen:adler",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Braustatt AdlerSebastian Feist · streitb"
+  },
+  {
+   "zug": "gegner:abloesen:lindenhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-756",
+   "stueck": "gegner",
+   "text": "LIN · PACablösen 756 fl"
+  },
+  {
+   "zug": "gegner:hinhalten:lindenhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass in die Lade1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:ochse",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-588",
+   "stueck": "gegner",
+   "text": "OCH · PACablösen 588 fl"
+  },
+  {
+   "zug": "gegner:hinhalten:ochse",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass in die Lade1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-189",
+   "stueck": "gegner",
+   "text": "PFA · ZUNablösen 189 fl"
+  },
+  {
+   "zug": "gegner:hinhalten:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass in die Lade1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-297",
+   "stueck": "gegner",
+   "text": "BRU · ZUNablösen 297 fl"
+  },
+  {
+   "zug": "gegner:hinhalten:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass in die Lade1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:hirsch",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-420",
+   "stueck": "gegner",
+   "text": "HIR · PACablösen 420 fl"
+  },
+  {
+   "zug": "gegner:hinhalten:hirsch",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Fass in die Lade1 Fass statt Geld"
+  },
+  {
+   "zug": "gegner:beschwerde-bild",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "0",
+   "stueck": "gegner",
+   "text": "Anzeige bei der Zunftladekostet kein Gel"
+  },
+  {
+   "zug": "gegner:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Das Haus gegenüber"
+  },
+  {
+   "zug": "gegner:beschwerde",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Anzeige bei der Zunftlade"
+  },
+  {
+   "zug": "gegner:zeige:51",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:50",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:49",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "sud:zettel-anstich",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Stellhefe vom Fass schöpfen"
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Mit Weizen gestreckt"
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-260",
+   "stueck": "sud",
+   "text": "Kellergärung im Felsenkeller−260 fl"
+  },
+  {
+   "zug": "stadt:marke:gegner-marktplatz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Adler-Ausschank am Mar"
+  },
+  {
+   "zug": "stadt:marke:fuhre-lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "LIN"
+  },
+  {
+   "zug": "stadt:marke:fuhre-marktplatz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OCH"
+  },
+  {
+   "zug": "stadt:marke:fuhre-muehle",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "MUE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-unten",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BRU"
+  },
+  {
+   "zug": "stadt:marke:fuhre-fluss",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "FAE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-oben",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OBE"
+  },
+  {
+   "zug": "fuhre:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Das Schlussblatt aufschlagen"
+  },
+  {
+   "zug": "fuhre:ziel:bar",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:ziel:ziel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "So ist es verabredet"
+  },
+  {
+   "zug": "fuhre:ziel:borg",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:probe:lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:ochse",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:torschenke",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:faehrhaus",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:hirsch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:markt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:obernberg",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Freifass · 1 Fass · 0/4"
+  },
+  {
+   "zug": "fuhre:tafel-ab:schank",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:schank",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-14",
+   "stueck": "fuhre",
+   "text": "+−14 fl"
+  },
+  {
+   "zug": "fuhre:tafel-ab:braun",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:braun",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-14",
+   "stueck": "fuhre",
+   "text": "+−14 fl"
+  },
+  {
+   "zug": "fuhre:tafel-ab:maerzen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:maerzen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-14",
+   "stueck": "fuhre",
+   "text": "+−14 fl"
+  },
+  {
+   "zug": "fuhre:tafel-ab:nachbier",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:nachbier",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "+"
+  },
+  {
+   "zug": "fuhre:kauf:budget",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-300",
+   "stueck": "fuhre",
+   "text": "Reihe vom Nachbarn · +4 Sude−300 fl"
+  },
+  {
+   "zug": "fuhre:kauf:fass",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-92",
+   "stueck": "fuhre",
+   "text": "Fässer vom Böttcher · +4−92 fl"
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-120",
+   "stueck": "fuhre",
+   "text": "Hopfen vom Markt · +60−120 fl"
+  },
+  {
+   "zug": "fuhre:rueckkauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "66",
+   "stueck": "fuhre",
+   "text": "Hopfen zurück auf den Markt · −60+66 fl"
+  },
+  {
+   "zug": "fuhre:pfand",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-14",
+   "stueck": "fuhre",
+   "text": "Pfand einziehen · 0 Fass−14 fl"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nach Durst füllen"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Wie vorige Woche"
+  },
+  {
+   "zug": "fuhre:leeren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Wagen leeren"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "FUHRE ABSCHICKEN"
+  },
+  {
+   "zug": "sud:schuettung:rein",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Rein nach dem Gebot"
+  },
+  {
+   "zug": "sud:schuettung:weizen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Mit Weizen gestreckt"
+  },
+  {
+   "zug": "sud:schuettung:hafer",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Mit Hafer und Wicke gestreckt"
+  },
+  {
+   "zug": "sud:gaerung:ober",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Obergärig, warm geführt"
+  },
+  {
+   "zug": "sud:gaerung:keller",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-260",
+   "stueck": "sud",
+   "text": "Kellergärung im Felsenkeller−260 fl"
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Stellhefe aus dem Gärbottich nehmen · +8"
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Junges Fass anstechen · +14"
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Altes Fass anstechen · +6"
+  },
+  {
+   "zug": "sud:gaerraum",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-78",
+   "stueck": "sud",
+   "text": "Gärbottich setzen lassen · +10 Fass−78 f"
+  },
+  {
+   "zug": "name:band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "▾"
+  },
+  {
+   "zug": "name:aufgeldbuch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Aufgeld nachrechnen"
+  },
+  {
+   "zug": "name:entzug-loesen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-210",
+   "stueck": "name",
+   "text": "Der Zunft Abbitte tun−210 fl− 1 Fass"
+  },
+  {
+   "zug": "name:ruhe",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen verdecken"
+  },
+  {
+   "zug": "name:herumgehen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Herumgehen und den Namen sagen"
+  },
+  {
+   "zug": "name:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen und das Register"
+  },
+  {
+   "zug": "erbe:nachschrift",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-203",
+   "stueck": "erbe",
+   "text": "Nachschrift · 2 Häuser−203 fl"
+  },
+  {
+   "zug": "kern:chronik",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Chronik47"
+  },
+  {
+   "zug": "kern:protokoll",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Buch240"
+  },
+  {
+   "zug": "weiter",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "kern",
+   "text": "ENDE"
+  },
+  {
+   "zug": "klang:ton",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "klang",
+   "text": "♪"
+  },
+  {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OHNE DICH GESCHEHEN51 Züge"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DIE HÄUSERwollen 0 · im Keller liegen 5 "
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "SUDORDNUNGauf der Tafel im Sudhaus"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DAS GEWÖLBE5 von 24 Fass · 5 reif"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "PFERDEFUHRWERK0 von 8 Fass · 0 von 5 Hal"
+  },
+  {
+   "zug": "stadt:reiter:sud-sud-brett",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DAS SUDHAUSzugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:name-nm-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DER RUF DES HAUSESGENOMMEN von Die Zunft"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-blatt-fu-ende-verkauft-fu-schlussblatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Ende des Hauseszugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:erbe-blatt-erb-buch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Erbeliegt auf"
+  },
+  {
+   "zug": "stadt:ortsmarken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Ortsmarken7 auf dem Pflock"
+  },
+  {
+   "zug": "stadt:alles-zuklappen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Stadt zeigen"
+  },
+  {
+   "zug": "stadt:bau:seite",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BAUHOF"
+  },
+  {
+   "zug": "stadt:wiederkauf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "WIEDERKAUF"
+  },
+  {
+   "zug": "stadt:bau:gaerbottiche",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-72",
+   "stueck": "stadt",
+   "text": "Gärbottiche−72 fl"
+  },
+  {
+   "zug": "stadt:bau:waschhaus",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-96",
+   "stueck": "stadt",
+   "text": "Waschhaus−96 fl"
+  },
+  {
+   "zug": "stadt:bau:kontor",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-114",
+   "stueck": "stadt",
+   "text": "Kontor−114 fl"
+  },
+  {
+   "zug": "stadt:bau:rossmuehle",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-120",
+   "stueck": "stadt",
+   "text": "Rossmühle−120 fl"
+  },
+  {
+   "zug": "stadt:bau:hopfenlager",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-120",
+   "stueck": "stadt",
+   "text": "Hopfenlager−120 fl"
+  },
+  {
+   "zug": "fuhre:wiederanfang",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Von vorn anfangen — dieselbe Stadt, ande"
+  },
+  {
+   "zug": "preis:tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Michaelitafel 1603 · 5 Angebote"
+  },
+  {
+   "zug": "preis:chronik-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Chronik des Hauses · 0 Festlegungen · 0 "
+  },
+  {
+   "zug": "sud:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Sudbuch aufschlagen"
+  }
+ ],
+ "e3": [
+  {
+   "zug": "gegner:oeffnen:adler",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Brauerei AdlerKommerzienrat Alois Feist "
+  },
+  {
+   "zug": "gegner:abloesen:lindenhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-38172",
+   "stueck": "gegner",
+   "text": "LIN · HYPablösen 38.172 M"
+  },
+  {
+   "zug": "gegner:hinhalten:lindenhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Freibier3,0 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:ochse",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-7702",
+   "stueck": "gegner",
+   "text": "OCH · VERablösen 7.702 M"
+  },
+  {
+   "zug": "gegner:hinhalten:ochse",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Freibier3,0 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:torschenke",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-6846",
+   "stueck": "gegner",
+   "text": "TOR · DEPablösen 6.846 M"
+  },
+  {
+   "zug": "gegner:hinhalten:torschenke",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Freibier3,0 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-4143",
+   "stueck": "gegner",
+   "text": "MUE · VERablösen 4.143 M"
+  },
+  {
+   "zug": "gegner:hinhalten:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Freibier3,0 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-4956",
+   "stueck": "gegner",
+   "text": "BRU · VERablösen 4.956 M"
+  },
+  {
+   "zug": "gegner:hinhalten:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Freibier3,0 hl statt Geld"
+  },
+  {
+   "zug": "gegner:beschwerde-bild",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "0",
+   "stueck": "gegner",
+   "text": "Dem Wirt die Restschuld nachrechnenkoste"
+  },
+  {
+   "zug": "gegner:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Das Haus gegenüber"
+  },
+  {
+   "zug": "gegner:beschwerde",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Dem Wirt die Restschuld nachrechnen"
+  },
+  {
+   "zug": "gegner:zeige:46",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:45",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:44",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "sud:zettel-anstich",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hefe im Gärbottich abernten"
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Ohne Kühlung durchgären lassen"
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-3400",
+   "stueck": "sud",
+   "text": "Reinzuchthefe nach Hansen−3.400 M"
+  },
+  {
+   "zug": "stadt:marke:fuhre-lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "LIN"
+  },
+  {
+   "zug": "stadt:marke:fuhre-marktplatz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OCH"
+  },
+  {
+   "zug": "stadt:marke:fuhre-muehle",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "MUE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-unten",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BRU"
+  },
+  {
+   "zug": "stadt:marke:fuhre-fluss",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "FAE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bahnhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BHF"
+  },
+  {
+   "zug": "fuhre:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Das Schlussblatt aufschlagen"
+  },
+  {
+   "zug": "fuhre:ziel:bar",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:ziel:ziel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "So ist es verabredet"
+  },
+  {
+   "zug": "fuhre:ziel:borg",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:probe:lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:ochse",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:torschenke",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:faehrhaus",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:hirsch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:markt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:bahnhofswirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Probefass · 6,0 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:tafel-ab:schank",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:schank",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-260",
+   "stueck": "fuhre",
+   "text": "+−260 M"
+  },
+  {
+   "zug": "fuhre:tafel-ab:lager",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:lager",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-260",
+   "stueck": "fuhre",
+   "text": "+−260 M"
+  },
+  {
+   "zug": "fuhre:tafel-ab:export",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:export",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-260",
+   "stueck": "fuhre",
+   "text": "+−260 M"
+  },
+  {
+   "zug": "fuhre:tafel-ab:einfach",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:einfach",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "+"
+  },
+  {
+   "zug": "fuhre:kauf:eis",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-420",
+   "stueck": "fuhre",
+   "text": "Eis schneiden · +42 Fuder−420 M"
+  },
+  {
+   "zug": "fuhre:kauf:eiskeller",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-1800",
+   "stueck": "fuhre",
+   "text": "Eiskeller vergrößern · +20−1.800 M"
+  },
+  {
+   "zug": "fuhre:kauf:sudwerk",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-4200",
+   "stueck": "fuhre",
+   "text": "Dampfsudwerk · +1 Sud je Woche−4.200 M"
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-1150",
+   "stueck": "fuhre",
+   "text": "Hopfen aus der Hallertau · +300−1.150 M"
+  },
+  {
+   "zug": "fuhre:rueckkauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "633",
+   "stueck": "fuhre",
+   "text": "Hopfen zurück an den Händler · −300+633 "
+  },
+  {
+   "zug": "fuhre:fracht:rollfuhr",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-58",
+   "stueck": "fuhre",
+   "text": "Eigene Rollfuhre · bis 12 hl−58 M"
+  },
+  {
+   "zug": "fuhre:fracht:stueck",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-52",
+   "stueck": "fuhre",
+   "text": "Stückgut · bis 18 hl−52 M"
+  },
+  {
+   "zug": "fuhre:fracht:halb",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-210",
+   "stueck": "fuhre",
+   "text": "Halber Wagen · bis 60 hl−210 M"
+  },
+  {
+   "zug": "fuhre:fracht:ganz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-328",
+   "stueck": "fuhre",
+   "text": "Ganzer Wagen · bis 132 hl−328 M"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nach Durst füllen"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Wie vorige Woche"
+  },
+  {
+   "zug": "fuhre:leeren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Rampe räumen"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "FUHRE ABSCHICKEN"
+  },
+  {
+   "zug": "sud:kaelte:natureis",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Natureis aus dem Fluss"
+  },
+  {
+   "zug": "sud:kaelte:warm",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Ohne Kühlung durchgären lassen"
+  },
+  {
+   "zug": "sud:kaelte:maschine",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-9800",
+   "stueck": "sud",
+   "text": "Lindesche Kältemaschine−9.800 M"
+  },
+  {
+   "zug": "sud:hefe:betrieb",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Betriebshefe aus dem Bottich"
+  },
+  {
+   "zug": "sud:hefe:reinzucht",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-3400",
+   "stueck": "sud",
+   "text": "Reinzuchthefe nach Hansen−3.400 M"
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hefe im Gärbottich abernten · +8"
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Junges Lagerfass anstechen · +14"
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Altes Lagerfass anstechen · +6"
+  },
+  {
+   "zug": "sud:gaerraum",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-1900",
+   "stueck": "sud",
+   "text": "Gärbottich aufstellen · +60 hl−1.900 M"
+  },
+  {
+   "zug": "klang:ton",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "klang",
+   "text": "♪"
+  },
+  {
+   "zug": "name:band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "▾"
+  },
+  {
+   "zug": "name:aufgeldbuch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Aufgeld nachrechnen"
+  },
+  {
+   "zug": "name:entzug-loesen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-2800",
+   "stueck": "name",
+   "text": "Die Gegendarstellung setzen lassen−2.800"
+  },
+  {
+   "zug": "name:liefern",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Unter dem Zeichen ausliefern"
+  },
+  {
+   "zug": "name:zurueckhalten",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen einziehen"
+  },
+  {
+   "zug": "name:ruhe",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen verdecken"
+  },
+  {
+   "zug": "name:herumgehen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Herumgehen und den Namen sagen"
+  },
+  {
+   "zug": "name:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen und das Register"
+  },
+  {
+   "zug": "erbe:nachschrift",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-5712",
+   "stueck": "erbe",
+   "text": "Nachschrift · 1 Haus−5.712 M"
+  },
+  {
+   "zug": "kern:chronik",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Chronik59"
+  },
+  {
+   "zug": "kern:protokoll",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Buch248"
+  },
+  {
+   "zug": "weiter",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "kern",
+   "text": "ENDE"
+  },
+  {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OHNE DICH GESCHEHEN46 Züge"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DIE HÄUSERwollen 0,0 · im Keller liegen "
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "SUDPLANam schwarzen Brett der Mälzerei"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DER EISKELLER24 von 135 hl · 24 reif"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "EIGENE ROLLFUHRE0,0 von 12 hl · 0 von 10"
+  },
+  {
+   "zug": "stadt:reiter:sud-sud-brett",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DAS SUDHAUSzugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:name-nm-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DER RUF DES HAUSESGENOMMEN von Das Amtsg"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-blatt-fu-ende-geschluckt-fu-schlussblatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Ende des Hauseszugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:erbe-blatt-erb-buch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Erbeliegt auf"
+  },
+  {
+   "zug": "stadt:ortsmarken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Ortsmarken6 auf dem Pflock"
+  },
+  {
+   "zug": "stadt:alles-zuklappen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Stadt zeigen"
+  },
+  {
+   "zug": "stadt:bau:seite",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BAUHOF"
+  },
+  {
+   "zug": "stadt:hypothek",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "HYPOTHEK"
+  },
+  {
+   "zug": "stadt:bau:kontor",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-1406",
+   "stueck": "stadt",
+   "text": "Kontor−1.406 M"
+  },
+  {
+   "zug": "stadt:bau:hopfenlager",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-1480",
+   "stueck": "stadt",
+   "text": "Hopfenlager−1.480 M"
+  },
+  {
+   "zug": "stadt:bau:pferdestall",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-1628",
+   "stueck": "stadt",
+   "text": "Pferdestall−1.628 M"
+  },
+  {
+   "zug": "stadt:bau:maelzerei",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-3145",
+   "stueck": "stadt",
+   "text": "Mälzereiturm−3.145 M"
+  },
+  {
+   "zug": "stadt:bau:flaschenhalle",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-3700",
+   "stueck": "stadt",
+   "text": "Flaschenhalle−3.700 M"
+  },
+  {
+   "zug": "fuhre:wiederanfang",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Von vorn anfangen — dieselbe Stadt, ande"
+  },
+  {
+   "zug": "preis:tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Michaelitafel 1887 · 5 Angebote"
+  },
+  {
+   "zug": "preis:chronik-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Chronik des Hauses · 0 Festlegungen · 0 "
+  },
+  {
+   "zug": "sud:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Sudbuch aufschlagen"
+  }
+ ],
+ "e4": [
+  {
+   "zug": "gegner:oeffnen:adler",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Adler-Bräu AGDr. Werner Feist · gelehrt "
+  },
+  {
+   "zug": "gegner:oeffnen:konzern",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Nordstern-GruppeUte Nordstern · träge · "
+  },
+  {
+   "zug": "gegner:abloesen:lindenhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-55078",
+   "stueck": "gegner",
+   "text": "LIN · LISablösen 55.078 DM"
+  },
+  {
+   "zug": "gegner:hinhalten:lindenhof",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Zuschuss in Bier4,5 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:torschenke",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-32400",
+   "stueck": "gegner",
+   "text": "TOR · JVBablösen 32.400 DM"
+  },
+  {
+   "zug": "gegner:hinhalten:torschenke",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Zuschuss in Bier4,5 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-49900",
+   "stueck": "gegner",
+   "text": "MUE · JVBablösen 49.900 DM"
+  },
+  {
+   "zug": "gegner:hinhalten:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Zuschuss in Bier4,5 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-44550",
+   "stueck": "gegner",
+   "text": "BRU · JVBablösen 44.550 DM"
+  },
+  {
+   "zug": "gegner:hinhalten:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Zuschuss in Bier4,5 hl statt Geld"
+  },
+  {
+   "zug": "gegner:abloesen:bahnhofswirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "-58320",
+   "stueck": "gegner",
+   "text": "BHF · LISablösen 58.320 DM"
+  },
+  {
+   "zug": "gegner:hinhalten:bahnhofswirt",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Zuschuss in Bier4,5 hl statt Geld"
+  },
+  {
+   "zug": "gegner:beschwerde-bild",
+   "tag": "BUTTON",
+   "knopf": false,
+   "aus": false,
+   "preis": "0",
+   "stueck": "gegner",
+   "text": "Anzeige beim Bundeskartellamtkostet kein"
+  },
+  {
+   "zug": "gegner:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Das Haus gegenüber"
+  },
+  {
+   "zug": "gegner:beschwerde",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "Anzeige beim Bundeskartellamt"
+  },
+  {
+   "zug": "gegner:zeige:115",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:114",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "gegner:zeige:113",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "gegner",
+   "text": "zeigen"
+  },
+  {
+   "zug": "sud:zettel-anstich",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hefe aus dem Tank zusetzen"
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Schönen mit Kieselsol"
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-26000",
+   "stueck": "sud",
+   "text": "Kieselgurfilter−26.000 DM"
+  },
+  {
+   "zug": "stadt:marke:fuhre-lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "LIN"
+  },
+  {
+   "zug": "stadt:marke:fuhre-marktplatz",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OCH"
+  },
+  {
+   "zug": "stadt:marke:fuhre-muehle",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "MUE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-unten",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BRU"
+  },
+  {
+   "zug": "stadt:marke:fuhre-fluss",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "FAE"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bahnhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BHF"
+  },
+  {
+   "zug": "fuhre:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Das Schlussblatt aufschlagen"
+  },
+  {
+   "zug": "fuhre:ziel:bar",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:ziel:ziel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "So ist es verabredet"
+  },
+  {
+   "zug": "fuhre:ziel:borg",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nicht mehr zu ändern"
+  },
+  {
+   "zug": "fuhre:probe:lindenhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:ochse",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:torschenke",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:pfarrhof",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:muehlwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:brueckenwirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:faehrhaus",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:hirsch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:markt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:probe:bahnhofswirt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/6"
+  },
+  {
+   "zug": "fuhre:probe:neustadt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Aktionsware · 30 hl · 0/4"
+  },
+  {
+   "zug": "fuhre:tafel-ab:hell",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:hell",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-2400",
+   "stueck": "fuhre",
+   "text": "+−2.400 DM"
+  },
+  {
+   "zug": "fuhre:tafel-ab:pils",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:pils",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-2400",
+   "stueck": "fuhre",
+   "text": "+−2.400 DM"
+  },
+  {
+   "zug": "fuhre:tafel-ab:export",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:export",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-2400",
+   "stueck": "fuhre",
+   "text": "+−2.400 DM"
+  },
+  {
+   "zug": "fuhre:tafel-ab:handel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "−"
+  },
+  {
+   "zug": "fuhre:tafel-auf:handel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "+"
+  },
+  {
+   "zug": "fuhre:kauf:lastzug",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-128000",
+   "stueck": "fuhre",
+   "text": "Zweiter Lastzug · +1 Halt−128.000 DM"
+  },
+  {
+   "zug": "fuhre:kauf:sudwerk",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-56000",
+   "stueck": "fuhre",
+   "text": "Sudhaus erweitern · +1 Sud je Woche−56.0"
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-14400",
+   "stueck": "fuhre",
+   "text": "Hopfen im Kontrakt · +1200−14.400 DM"
+  },
+  {
+   "zug": "fuhre:rueckkauf:rohstoff",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "7200",
+   "stueck": "fuhre",
+   "text": "Kontrakt abtreten · −1200+7.200 DM"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Nach Durst füllen"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Wie vorige Woche"
+  },
+  {
+   "zug": "fuhre:leeren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Lastzug leeren"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "FUHRE ABSCHICKEN"
+  },
+  {
+   "zug": "sud:fuehrung:erfahrung",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Nach Erfahrung des Braumeisters"
+  },
+  {
+   "zug": "sud:fuehrung:labor",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-42000",
+   "stueck": "sud",
+   "text": "Betriebslabor, Stammwürze und Bittereinh"
+  },
+  {
+   "zug": "sud:fuehrung:rechner",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-118000",
+   "stueck": "sud",
+   "text": "Prozessrechner am Sudwerk−118.000 DM"
+  },
+  {
+   "zug": "sud:behandlung:natur",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Naturtrüb, unfiltriert"
+  },
+  {
+   "zug": "sud:behandlung:schoenen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Schönen mit Kieselsol"
+  },
+  {
+   "zug": "sud:behandlung:filter",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-26000",
+   "stueck": "sud",
+   "text": "Kieselgurfilter−26.000 DM"
+  },
+  {
+   "zug": "sud:behandlung:pasteur",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-74000",
+   "stueck": "sud",
+   "text": "Tunnelpasteur−74.000 DM"
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Hefe aus dem Gärtank ziehen · +8"
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Frisches Fass anzapfen · +14"
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Ältestes Fass anzapfen · +6"
+  },
+  {
+   "zug": "sud:gaerraum",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-24000",
+   "stueck": "sud",
+   "text": "Gärtank bestellen · +270 hl−24.000 DM"
+  },
+  {
+   "zug": "klang:ton",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "klang",
+   "text": "♪"
+  },
+  {
+   "zug": "name:band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "▾"
+  },
+  {
+   "zug": "name:aufgeldbuch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Aufgeld nachrechnen"
+  },
+  {
+   "zug": "name:entzug-loesen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": "-26000",
+   "stueck": "name",
+   "text": "Neu listen lassen−26.000 DM− 12 hl"
+  },
+  {
+   "zug": "name:liefern",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Unter dem Zeichen ausliefern"
+  },
+  {
+   "zug": "name:zurueckhalten",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen einziehen"
+  },
+  {
+   "zug": "name:ruhe",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen verdecken"
+  },
+  {
+   "zug": "name:herumgehen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Herumgehen und den Namen sagen"
+  },
+  {
+   "zug": "name:blatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "name",
+   "text": "Das Zeichen und das Register"
+  },
+  {
+   "zug": "erbe:nachschrift",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-9418",
+   "stueck": "erbe",
+   "text": "Nachschrift · 1 Haus−9.418 DM"
+  },
+  {
+   "zug": "kern:chronik",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Chronik75"
+  },
+  {
+   "zug": "kern:protokoll",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "kern",
+   "text": "Buch292"
+  },
+  {
+   "zug": "weiter",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": true,
+   "preis": null,
+   "stueck": "kern",
+   "text": "ENDE"
+  },
+  {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "OHNE DICH GESCHEHEN115 Züge"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DIE HÄUSERwollen 0,0 · im Keller liegen "
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "SUDPLANim Schaltraum, auf Formica"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DIE TANKS45 von 600 hl · 45 reif"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "LASTZUG0,0 von 450 hl · 0 von 3 Halten"
+  },
+  {
+   "zug": "stadt:reiter:sud-sud-brett",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DAS SUDHAUSzugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:name-nm-band",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "DER RUF DES HAUSESGENOMMEN von Der Hande"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-blatt-fu-ende-marke-fu-schlussblatt",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Ende des Hauseszugeklappt"
+  },
+  {
+   "zug": "stadt:reiter:erbe-blatt-erb-buch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Das Erbeliegt auf"
+  },
+  {
+   "zug": "stadt:ortsmarken",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Ortsmarken6 auf dem Pflock"
+  },
+  {
+   "zug": "stadt:alles-zuklappen",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "Stadt zeigen"
+  },
+  {
+   "zug": "stadt:bau:seite",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "BAUHOF"
+  },
+  {
+   "zug": "stadt:abbruch",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "stadt",
+   "text": "ABBRUCH"
+  },
+  {
+   "zug": "stadt:bau:waage",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-9570",
+   "stueck": "stadt",
+   "text": "Fahrzeugwaage−9.570 DM"
+  },
+  {
+   "zug": "stadt:bau:maelzerei",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-14790",
+   "stueck": "stadt",
+   "text": "Mälzereiturm−14.790 DM"
+  },
+  {
+   "zug": "stadt:bau:verwaltung",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-15660",
+   "stueck": "stadt",
+   "text": "Verwaltungsbau−15.660 DM"
+  },
+  {
+   "zug": "stadt:bau:sudhaus_neu",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": "-24360",
+   "stueck": "stadt",
+   "text": "Neues Sudhaus−24.360 DM"
+  },
+  {
+   "zug": "fuhre:wiederanfang",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "fuhre",
+   "text": "Von vorn anfangen — dieselbe Stadt, ande"
+  },
+  {
+   "zug": "preis:tafel",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Michaelitafel 1973 · 5 Angebote"
+  },
+  {
+   "zug": "preis:chronik-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "preis",
+   "text": "Chronik des Hauses · 0 Festlegungen · 0 "
+  },
+  {
+   "zug": "sud:schluss-auf",
+   "tag": "BUTTON",
+   "knopf": true,
+   "aus": false,
+   "preis": null,
+   "stueck": "sud",
+   "text": "Sudbuch aufschlagen"
+  }
+ ]
+}

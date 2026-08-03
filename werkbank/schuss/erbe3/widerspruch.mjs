@@ -1,0 +1,25 @@
+import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
+const b = await chromium.launch();
+const p = await b.newPage({ viewport:{width:1376,height:768} });
+const fehler=[]; p.on('pageerror',e=>fehler.push(e.message));
+await p.goto('http://127.0.0.1:8899/spiel/?epoche=1&saat=1350', { waitUntil:'networkidle' });
+await p.waitForTimeout(400);
+const k = async z => { const e = await p.$(`button[data-zug="${z}"]`); if(!e) return 'fehlt';
+  if (await e.isDisabled()) return 'aus'; await e.click().catch(()=>{}); await p.waitForTimeout(60); return 'ok'; };
+await k('stadt:reiter:erbe-blatt-erb-buch');
+await k('erbe:verschreibe:ochse');
+await k('erbe:verschreibe:pfarrhof');
+for (let i=0;i<11;i++) await k("weiter");
+let st = await p.evaluate(()=>BRAUHAUS.erbe.stand());
+console.log('nach 11 W: erloschen', st.erloschen.map(x=>x.name+' '+x.preis+' '+x.grund), 'offen', st.widerspruchOffen, 'kasse', await 0);
+const kasse0 = await p.evaluate(()=>BRAUHAUS.welt.haus.kasse);
+const knoepfe = await p.evaluate(()=>[...document.querySelectorAll('button[data-zug^="erbe:widerspruch"]')].map(k=>k.getAttribute('data-zug')+' '+k.innerText.replace(/\n/g,' ')+' '+(k.disabled?'AUS':'AN')));
+console.log('kasse', kasse0, 'widerspruchknoepfe', knoepfe);
+console.log('klick ochse:', await k('erbe:widerspruch:ochse'));
+st = await p.evaluate(()=>BRAUHAUS.erbe.stand());
+console.log('danach: kasse', await p.evaluate(()=>BRAUHAUS.welt.haus.kasse),
+  'amHaus', st.amHaus, 'widersprochen', st.widersprochen, 'erloschenSumme', st.erloschenSumme);
+const ch = await p.evaluate(()=>BRAUHAUS.welt.chronik.slice(-3).map(c=>c.jahr+'/'+c.woche+' '+c.text));
+console.log(ch.join('\n'));
+console.log('lage', await p.evaluate(()=>BRAUHAUS.lage.length), 'fehler', fehler.length);
+await b.close();

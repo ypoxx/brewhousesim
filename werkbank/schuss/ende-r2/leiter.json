@@ -1,0 +1,62 @@
+{
+ "e1": {
+  "wochen": 102,
+  "mitZahl": 102,
+  "rho": -0.752,
+  "jahresmediane": [
+   "1350:1.38",
+   "1351:0",
+   "1352:0",
+   "1353:0"
+  ],
+  "unter1": 3,
+  "jahre": 4,
+  "ohneZahl": 0,
+  "fehler": []
+ },
+ "e2": {
+  "wochen": 102,
+  "mitZahl": 102,
+  "rho": -0.853,
+  "jahresmediane": [
+   "1600:2.74",
+   "1601:1.67",
+   "1602:0.89",
+   "1603:0.66"
+  ],
+  "unter1": 2,
+  "jahre": 4,
+  "ohneZahl": 0,
+  "fehler": []
+ },
+ "e3": {
+  "wochen": 100,
+  "mitZahl": 100,
+  "rho": -0.989,
+  "jahresmediane": [
+   "1884:7.11",
+   "1885:6.58",
+   "1886:1.93",
+   "1887:1.82"
+  ],
+  "unter1": 0,
+  "jahre": 4,
+  "ohneZahl": 0,
+  "fehler": []
+ },
+ "e4": {
+  "wochen": 98,
+  "mitZahl": 98,
+  "rho": -0.215,
+  "jahresmediane": [
+   "1970:2.25",
+   "1971:4.89",
+   "1972:2.17",
+   "1973:1.66"
+  ],
+  "unter1": 0,
+  "jahre": 4,
+  "ohneZahl": 0,
+  "fehler": []
+ }
+}

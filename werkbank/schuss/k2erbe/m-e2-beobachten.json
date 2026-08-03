@@ -1,0 +1,5347 @@
+{
+ "epoche": "2",
+ "modus": "beobachten",
+ "wahl": "leibgeding",
+ "start": {
+  "jahr": 1600,
+  "woche": 1,
+  "epoche": 2,
+  "ende": false,
+  "amt": {
+   "nr": 1,
+   "name": "Barbara Bruckner",
+   "eig": "sparsam",
+   "bis": 1636
+  },
+  "kasse": 640,
+  "faesser": 8,
+  "kopfLeiste": [
+   "SCHEIDING 1600",
+   "KASSE 640 fl",
+   "HOPFEN 65",
+   "GEWÖLBE 8/24 Fass",
+   "WOCHE 1/30",
+   "CHRONIK 4",
+   "BUCH 1"
+  ],
+  "kopfDeckung": "3.76",
+  "kopfDeckungTxt": "nächster Zug: Zuvorkommen Mühlschenke — 170 fl (Kasse reicht 3,8×)",
+  "protN": 1,
+  "chrN": 4,
+  "erbLeiste": "DAS ERBE noch 15 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 3 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −78 fl Abfindung −392 fl Ohne Vergleich 0 fl",
+  "erbBuch": "DAS ERBE — Verbriefen im Briefbuch der Stadt, unter Siegel Barbara Bruckner · sparsam „Hält das Geld zusammen, versäumt die Gelegenheit.\" Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber. Ein Brief mit Siegel hängt am Anwesen und wandert mit ihm. Eine Gevatterschaft hängt an einem Menschen. Die Stunde kommt in 15 Wochen — 12. Jänner 1601. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 4 — FÄLLT MIT DER HAND, DIE ES GAB Gasthof Lindenhof Gewohnheit Verbriefen −113 fl Schenke am Tor Gewohnheit Verbriefen −50 fl Fährhaus am Fluss Gewohnheit Verbriefen −38 fl Landgasthof Hirsch Gewohnheit Verbriefen −63 fl",
+  "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "BRAUSTATT ADLER Sebastian Feist · streitbar · hält 3 Häuser 1 ZÜGE 2.200 fl KASSE 22 fl SEIN PREIS wirbt W1"
+   },
+   {
+    "zug": "gegner:abloesen:ochse",
+    "preis": -588,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "OCH · PAC ablösen 588 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:ochse",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:zuvorkommen:muehlwirt",
+    "preis": -170,
+    "t": true,
+    "a": true,
+    "cls": "gg-wimpel gg-adler",
+    "txt": "wirbt · noch 6 Wo. zuvorkommen 170 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:muehlwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:brueckenwirt",
+    "preis": -231,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "BRU · HEI ablösen 231 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:brueckenwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:obernberg",
+    "preis": -216,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "OBE · ZUN ablösen 216 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:obernberg",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": true,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Anzeige bei der Zunftlade kostet kein Geld · vier Ansehen gegen Mühlschenke"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Stellhefe vom Fass schöpfen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Mit Weizen gestreckt"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -260,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll siegel",
+    "txt": "Kellergärung im Felsenkeller −260 fl"
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "Adler-Ausschank am Mar"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OBE"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "erbe:tafel:verschreibe",
+    "preis": -113,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-weit",
+    "txt": "Verbriefen · Lindenhof −113 fl"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -78,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Ausgedinge · jährlich −78 fl"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -392,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Abfindung −392 fl"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe erb-leer",
+    "txt": "Ohne Vergleich 0 fl"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 4"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 1"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross amort",
+    "txt": "WEITER"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-wartet",
+    "txt": "♪"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 1 Zug"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 28 · im Keller liegen 8 Fass"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "SUDORDNUNG auf der Tafel im Sudhaus"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS GEWÖLBE 8 von 24 Fass · 8 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "PFERDEFUHRWERK 0 von 8 Fass · 0 von 5 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES Wirtshausschild und gemarkter Krug"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 7 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:wiederkauf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "WIEDERKAUF"
+   },
+   {
+    "zug": "stadt:bau:gaerbottiche",
+    "preis": -72,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Gärbottiche −72 fl"
+   },
+   {
+    "zug": "stadt:bau:waschhaus",
+    "preis": -96,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Waschhaus −96 fl"
+   },
+   {
+    "zug": "stadt:bau:kontor",
+    "preis": -114,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Kontor −114 fl"
+   },
+   {
+    "zug": "stadt:bau:rossmuehle",
+    "preis": -120,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Rossmühle −120 fl"
+   },
+   {
+    "zug": "stadt:bau:hopfenlager",
+    "preis": -120,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Hopfenlager −120 fl"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1600 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   }
+  ]
+ },
+ "zeilen": [
+  {
+   "i": 0,
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 640,
+   "faesser": 8,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 13,
+   "billigster": 72,
+   "rho": 8.89,
+   "kopfDeckung": "3.76",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:zuvorkommen:muehlwirt=170",
+    "gegner:abloesen:brueckenwirt=231",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=78",
+    "erbe:uebergabe:abfindung=392",
+    "stadt:bau:gaerbottiche=72",
+    "stadt:bau:waschhaus=96",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120"
+   ],
+   "erbLeiste": "DAS ERBE noch 15 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 3 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −78 fl Abfindung −392 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:gaerbottiche:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 170 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse (-2)",
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Kupferne Pfanne für 340 fl."
+   ]
+  },
+  {
+   "i": 1,
+   "jahr": 1600,
+   "woche": 2,
+   "kasse": 614,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 13,
+   "billigster": 92,
+   "rho": 6.67,
+   "kopfDeckung": "3.61",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:zuvorkommen:muehlwirt=170",
+    "gegner:abloesen:brueckenwirt=231",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=92",
+    "erbe:uebergabe:abfindung=445",
+    "stadt:bau:waschhaus=96",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 14 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −92 fl Abfindung −445 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 2 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse (-1)",
+    "gegner: Ein grauer Wagen des Adlers rollt zum Zum Goldenen Ochsen."
+   ]
+  },
+  {
+   "i": 2,
+   "jahr": 1600,
+   "woche": 3,
+   "kasse": 595,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 13,
+   "billigster": 92,
+   "rho": 6.47,
+   "kopfDeckung": "3.5",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:zuvorkommen:muehlwirt=170",
+    "gegner:abloesen:brueckenwirt=231",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=92",
+    "erbe:uebergabe:abfindung=431",
+    "stadt:bau:waschhaus=96",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 13 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −92 fl Abfindung −431 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 3 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse (-1)",
+    "gegner: Die Zunftlade ladet den Wirt zum Landgasthof Hirsch vor. Der Adler sitzt mit am Tisch. In 6 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 260 fl."
+   ]
+  },
+  {
+   "i": 3,
+   "jahr": 1600,
+   "woche": 4,
+   "kasse": 592,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 14,
+   "nBezahlbar": 14,
+   "billigster": 92,
+   "rho": 6.43,
+   "kopfDeckung": "3.48",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:zuvorkommen:muehlwirt=170",
+    "gegner:abloesen:brueckenwirt=231",
+    "gegner:abwehren:hirsch=260",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=92",
+    "erbe:uebergabe:abfindung=418",
+    "stadt:bau:waschhaus=96",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 12 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −92 fl Abfindung −418 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 4 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse (-2)",
+    "gegner: Der Adler schenkt aus zu 20 fl je Fass und legt die Zeche drauf."
+   ]
+  },
+  {
+   "i": 4,
+   "jahr": 1600,
+   "woche": 5,
+   "kasse": 618,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 14,
+   "nBezahlbar": 14,
+   "billigster": 92,
+   "rho": 6.72,
+   "kopfDeckung": "3.64",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:zuvorkommen:muehlwirt=170",
+    "gegner:abloesen:brueckenwirt=231",
+    "gegner:abwehren:hirsch=260",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=92",
+    "erbe:uebergabe:abfindung=404",
+    "stadt:bau:waschhaus=96",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 11 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −92 fl Abfindung −404 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 5 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:waschhaus:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-2)",
+    "gegner: Preisabschlag beim Brückenwirt — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-1)",
+    "gegner: Braustatt Adler wirbt um Fährhaus am Fluss: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 113 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 5,
+   "jahr": 1600,
+   "woche": 6,
+   "kasse": 547,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 14,
+   "nBezahlbar": 13,
+   "billigster": 92,
+   "rho": 5.95,
+   "kopfDeckung": "4.84",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:zuvorkommen:muehlwirt=170",
+    "gegner:abloesen:brueckenwirt=231",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abwehren:hirsch=260",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=92",
+    "erbe:uebergabe:abfindung=390",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 10 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −92 fl Abfindung −390 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 6 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-1)",
+    "gegner: Preisabschlag beim Brückenwirt — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-1)",
+    "gegner: Der Adler pachtet Mühlschenke auf zwölf Jahre. Der Wirt ist jetzt sein Wirt."
+   ]
+  },
+  {
+   "i": 6,
+   "jahr": 1600,
+   "woche": 7,
+   "kasse": 573,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 14,
+   "nBezahlbar": 13,
+   "billigster": 92,
+   "rho": 6.23,
+   "kopfDeckung": "5.07",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:brueckenwirt=231",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abwehren:hirsch=260",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=92",
+    "erbe:uebergabe:abfindung=376",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 9 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −92 fl Abfindung −376 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 7 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-2)",
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Brückenwirt wird frei."
+   ]
+  },
+  {
+   "i": 7,
+   "jahr": 1600,
+   "woche": 8,
+   "kasse": 599,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 13,
+   "billigster": 92,
+   "rho": 6.51,
+   "kopfDeckung": "5.3",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abwehren:hirsch=260",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=92",
+    "erbe:uebergabe:abfindung=363",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 8 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −92 fl Abfindung −363 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 8 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-2)"
+   ]
+  },
+  {
+   "i": 8,
+   "jahr": 1600,
+   "woche": 9,
+   "kasse": 625,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 13,
+   "billigster": 112,
+   "rho": 5.58,
+   "kopfDeckung": "5.53",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abwehren:hirsch=260",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=112",
+    "erbe:uebergabe:abfindung=424",
+    "stadt:bau:kontor=114",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 7 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 6 nimmt 6 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −112 fl Abfindung −424 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 8 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:kontor:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-2)",
+    "gegner: Der Adler pachtet Landgasthof Hirsch über den Kopf des Hauses hinweg. Zwölf Jahre.",
+    "gegner: Die Zunftlade ladet den Wirt zum Fährhaus am Fluss vor. Der Adler sitzt mit am Tisch. In 3 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 100 fl."
+   ]
+  },
+  {
+   "i": 9,
+   "jahr": 1600,
+   "woche": 10,
+   "kasse": 557,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 11,
+   "billigster": 94,
+   "rho": 5.93,
+   "kopfDeckung": "5.57",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abwehren:faehrhaus=100",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=94",
+    "erbe:uebergabe:abfindung=342",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 6 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −94 fl Abfindung −342 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Zum Goldenen Ochsen — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-2)",
+    "gegner: Der Adler pachtet Fährhaus am Fluss auf zwölf Jahre. Der Wirt ist jetzt sein Wirt."
+   ]
+  },
+  {
+   "i": 10,
+   "jahr": 1600,
+   "woche": 11,
+   "kasse": 603,
+   "faesser": 4,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 13,
+   "billigster": 81,
+   "rho": 7.44,
+   "kopfDeckung": "6.03",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abwehren:faehrhaus=100",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=81",
+    "erbe:uebergabe:abfindung=284",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 5 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −81 fl Abfindung −284 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 11 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Eigene Küferei für 180 fl."
+   ]
+  },
+  {
+   "i": 11,
+   "jahr": 1600,
+   "woche": 12,
+   "kasse": 633,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 13,
+   "billigster": 81,
+   "rho": 7.81,
+   "kopfDeckung": "6.33",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abwehren:faehrhaus=100",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=81",
+    "erbe:uebergabe:abfindung=271",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 4 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −81 fl Abfindung −271 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 12 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler lässt von Fährhaus am Fluss ab. Das Haus war schneller.",
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Zum Goldenen Ochsen."
+   ]
+  },
+  {
+   "i": 12,
+   "jahr": 1600,
+   "woche": 13,
+   "kasse": 633,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 12,
+   "billigster": 80,
+   "rho": 7.91,
+   "kopfDeckung": "2.93",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=80",
+    "erbe:uebergabe:abfindung=257",
+    "stadt:bau:rossmuehle=120",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 3 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 1 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −80 fl Abfindung −257 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 14 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:rossmuehle:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 13,
+   "jahr": 1600,
+   "woche": 14,
+   "kasse": 512,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 10,
+   "billigster": 81,
+   "rho": 6.32,
+   "kopfDeckung": "2.37",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=81",
+    "erbe:uebergabe:abfindung=247",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 2 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −81 fl Abfindung −247 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 14 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 14,
+   "jahr": 1600,
+   "woche": 15,
+   "kasse": 511,
+   "faesser": 4,
+   "amt": "Barbara Bruckner / sparsam (bis 1636)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 10,
+   "billigster": 81,
+   "rho": 6.31,
+   "kopfDeckung": "2.37",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=113",
+    "erbe:uebergabe:leibgeding=81",
+    "erbe:uebergabe:abfindung=235",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE noch 1 Woche Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −81 fl Abfindung −235 fl Ohne Vergleich 0 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 14 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "verfall: Gasthof Lindenhof: Lieferung fällt mit der Hand",
+    "verfall: Schenke am Tor: Lieferung fällt mit der Hand",
+    "verfall: Pfarrschenke St. Michael: Lieferung fällt mit der Hand",
+    "verfall: Brückenwirt: Lieferung fällt mit der Hand",
+    "verfall: Erbteil der Miterben aus dem Keller"
+   ]
+  },
+  {
+   "i": 15,
+   "jahr": 1600,
+   "woche": 16,
+   "kasse": 510,
+   "faesser": 2,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 8,
+   "billigster": 120,
+   "rho": 4.25,
+   "kopfDeckung": "2.36",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:nachschrift=388",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 4 Häuser −388 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 14 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Rossmühle für 220 fl."
+   ]
+  },
+  {
+   "i": 16,
+   "jahr": 1600,
+   "woche": 17,
+   "kasse": 509,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 10,
+   "nBezahlbar": 9,
+   "billigster": 50,
+   "rho": 10.18,
+   "kopfDeckung": "2.36",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:nachschrift=318",
+    "erbe:tafel:verschreibe=50",
+    "stadt:bau:hopfenlager=120",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl Verbriefen · Schenke am Tor −50 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 15 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:hopfenlager:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Die Zunftlade ladet den Wirt zum Schenke am Tor vor. Der Adler sitzt mit am Tisch. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 208 fl."
+   ]
+  },
+  {
+   "i": 17,
+   "jahr": 1600,
+   "woche": 18,
+   "kasse": 368,
+   "faesser": 10,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 10,
+   "nBezahlbar": 7,
+   "billigster": 50,
+   "rho": 7.36,
+   "kopfDeckung": "1.77",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abwehren:torschenke=208",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:nachschrift=318",
+    "erbe:tafel:verschreibe=50",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl Verbriefen · Schenke am Tor −50 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 16 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler schenkt aus zu 18 fl je Fass und legt die Zeche drauf."
+   ]
+  },
+  {
+   "i": 18,
+   "jahr": 1600,
+   "woche": 19,
+   "kasse": 347,
+   "faesser": 15,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 10,
+   "nBezahlbar": 7,
+   "billigster": 50,
+   "rho": 6.94,
+   "kopfDeckung": "1.67",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abwehren:torschenke=208",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:nachschrift=318",
+    "erbe:tafel:verschreibe=50",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl Verbriefen · Schenke am Tor −50 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Hopfenboden für 150 fl."
+   ]
+  },
+  {
+   "i": 19,
+   "jahr": 1600,
+   "woche": 20,
+   "kasse": 326,
+   "faesser": 20,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 10,
+   "nBezahlbar": 7,
+   "billigster": 50,
+   "rho": 6.52,
+   "kopfDeckung": "1.57",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abwehren:torschenke=208",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:nachschrift=318",
+    "erbe:tafel:verschreibe=50",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl Verbriefen · Schenke am Tor −50 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Einquartierung beim Adler: eine Kompanie sauft den Keller leer. Es kostet ihn 236 fl. Hopfenboden: weg vom Hof."
+   ]
+  },
+  {
+   "i": 20,
+   "jahr": 1600,
+   "woche": 21,
+   "kasse": 305,
+   "faesser": 25,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 6,
+   "billigster": 50,
+   "rho": 6.1,
+   "kopfDeckung": "1.47",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abwehren:torschenke=208",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=216",
+    "sud:zettel-wechsel-kauf=260",
+    "erbe:tafel:verschreibe=50",
+    "stadt:bau:pferdestall=132"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 1 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl Verbriefen · Schenke am Tor −50 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 19 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:pferdestall:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler pachtet Schenke am Tor über den Kopf des Hauses hinweg. Zwölf Jahre. Dafür wird Klosterschenke Obernberg fallengelassen — die Adresse ist frei."
+   ]
+  },
+  {
+   "i": 21,
+   "jahr": 1600,
+   "woche": 22,
+   "kasse": 172,
+   "faesser": 28,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.68,
+   "kopfDeckung": "0.68",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 20 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-3)",
+    "verfall: 5 Fass verdorben",
+    "gegner: Ein grauer Wagen des Adlers rollt zum Fährhaus am Fluss.",
+    "verfall: verdorben: 6 Fass Braunbier"
+   ]
+  },
+  {
+   "i": 22,
+   "jahr": 1600,
+   "woche": 23,
+   "kasse": 148,
+   "faesser": 24,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.59,
+   "kopfDeckung": "0.59",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 21 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-1)"
+   ]
+  },
+  {
+   "i": 23,
+   "jahr": 1600,
+   "woche": 24,
+   "kasse": 152,
+   "faesser": 23,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.6,
+   "kopfDeckung": "0.6",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 21 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Hopfenboden für 150 fl."
+   ]
+  },
+  {
+   "i": 24,
+   "jahr": 1600,
+   "woche": 25,
+   "kasse": 137,
+   "faesser": 22,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.54,
+   "kopfDeckung": "0.54",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 25,
+   "jahr": 1600,
+   "woche": 26,
+   "kasse": 122,
+   "faesser": 27,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.48,
+   "kopfDeckung": "0.48",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-1)"
+   ]
+  },
+  {
+   "i": 26,
+   "jahr": 1600,
+   "woche": 27,
+   "kasse": 126,
+   "faesser": 28,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.5,
+   "kopfDeckung": "0.5",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Ein Feist wird Bürgermeister. Solange er es ist, schreibt die Kanzlei für ihn."
+   ]
+  },
+  {
+   "i": 27,
+   "jahr": 1600,
+   "woche": 28,
+   "kasse": 131,
+   "faesser": 28,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.52,
+   "kopfDeckung": "0.52",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 23 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler schenkt aus zu 16 fl je Fass und legt die Zeche drauf."
+   ]
+  },
+  {
+   "i": 28,
+   "jahr": 1600,
+   "woche": 29,
+   "kasse": 136,
+   "faesser": 28,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.54,
+   "kopfDeckung": "0.54",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 24 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Schenke am Tor — Braustatt Adler hält die Adresse und schenkt unter dem Satz aus (-1)"
+   ]
+  },
+  {
+   "i": 29,
+   "jahr": 1600,
+   "woche": 30,
+   "kasse": 140,
+   "faesser": 28,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.56,
+   "kopfDeckung": "0.56",
+   "angebot": [
+    "gegner:abloesen:ochse=588",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 24 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 27 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Zum Goldenen Ochsen führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-39)"
+   ]
+  },
+  {
+   "i": 30,
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 293,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 4,
+   "billigster": 13,
+   "rho": 22.54,
+   "kopfDeckung": "1.16",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "fuhre:jahresplan:schank=13",
+    "fuhre:jahresplan:braun=18",
+    "fuhre:jahresplan:maerzen=26"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 24 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Zum Goldenen Ochsen wird frei."
+   ]
+  },
+  {
+   "i": 31,
+   "jahr": 1601,
+   "woche": 2,
+   "kasse": 276,
+   "faesser": 9,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.1,
+   "kopfDeckung": "1.1",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 25 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 32,
+   "jahr": 1601,
+   "woche": 3,
+   "kasse": 274,
+   "faesser": 9,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.09,
+   "kopfDeckung": "1.09",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 25 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 33,
+   "jahr": 1601,
+   "woche": 4,
+   "kasse": 272,
+   "faesser": 9,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.08,
+   "kopfDeckung": "1.08",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 25 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler schenkt aus zu 14 fl je Fass und legt die Zeche drauf."
+   ]
+  },
+  {
+   "i": 34,
+   "jahr": 1601,
+   "woche": 5,
+   "kasse": 270,
+   "faesser": 9,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.07,
+   "kopfDeckung": "1.07",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 26 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er reif ist."
+   ]
+  },
+  {
+   "i": 35,
+   "jahr": 1601,
+   "woche": 6,
+   "kasse": 268,
+   "faesser": 9,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.06,
+   "kopfDeckung": "1.06",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 36,
+   "jahr": 1601,
+   "woche": 7,
+   "kasse": 266,
+   "faesser": 9,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.06,
+   "kopfDeckung": "1.06",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 8 Fass verdorben"
+   ]
+  },
+  {
+   "i": 37,
+   "jahr": 1601,
+   "woche": 8,
+   "kasse": 264,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.05,
+   "kopfDeckung": "1.05",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 38,
+   "jahr": 1601,
+   "woche": 9,
+   "kasse": 262,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.04,
+   "kopfDeckung": "1.04",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 39,
+   "jahr": 1601,
+   "woche": 10,
+   "kasse": 260,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 252,
+   "rho": 1.03,
+   "kopfDeckung": "1.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "sud:zettel-wechsel-kauf=260"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 40,
+   "jahr": 1601,
+   "woche": 11,
+   "kasse": 258,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 252,
+   "rho": 1.02,
+   "kopfDeckung": "1.02",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Einquartierung beim Adler: eine Kompanie sauft den Keller leer. Es kostet ihn 193 fl. Hopfenboden: weg vom Hof."
+   ]
+  },
+  {
+   "i": 41,
+   "jahr": 1601,
+   "woche": 12,
+   "kasse": 256,
+   "faesser": 1,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 252,
+   "rho": 1.02,
+   "kopfDeckung": "1.02",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 1 Fass verdorben",
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Hopfenboden für 150 fl."
+   ]
+  },
+  {
+   "i": 42,
+   "jahr": 1601,
+   "woche": 13,
+   "kasse": 254,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 252,
+   "rho": 1.01,
+   "kopfDeckung": "1.01",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er reif ist."
+   ]
+  },
+  {
+   "i": 43,
+   "jahr": 1601,
+   "woche": 14,
+   "kasse": 252,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 252,
+   "rho": 1,
+   "kopfDeckung": "1",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Einquartierung beim Adler: eine Kompanie sauft den Keller leer. Es kostet ihn 161 fl."
+   ]
+  },
+  {
+   "i": 44,
+   "jahr": 1601,
+   "woche": 15,
+   "kasse": 250,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.99,
+   "kopfDeckung": "0.99",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 31 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 45,
+   "jahr": 1601,
+   "woche": 16,
+   "kasse": 248,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.98,
+   "kopfDeckung": "0.98",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 31 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Klosterschenke Obernberg: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 151 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 46,
+   "jahr": 1601,
+   "woche": 17,
+   "kasse": 246,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 151,
+   "rho": 1.63,
+   "kopfDeckung": "1.63",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:zuvorkommen:obernberg=151"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 32 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 47,
+   "jahr": 1601,
+   "woche": 18,
+   "kasse": 244,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 151,
+   "rho": 1.62,
+   "kopfDeckung": "1.62",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:zuvorkommen:obernberg=151"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 32 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Brückenwirt: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 208 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 48,
+   "jahr": 1601,
+   "woche": 19,
+   "kasse": 242,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 151,
+   "rho": 1.6,
+   "kopfDeckung": "1.6",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:zuvorkommen:obernberg=151"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 33 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 49,
+   "jahr": 1601,
+   "woche": 20,
+   "kasse": 240,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 151,
+   "rho": 1.59,
+   "kopfDeckung": "1.59",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:zuvorkommen:obernberg=151"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 33 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Fährhaus am Fluss."
+   ]
+  },
+  {
+   "i": 50,
+   "jahr": 1601,
+   "woche": 21,
+   "kasse": 238,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 151,
+   "rho": 1.58,
+   "kopfDeckung": "1.58",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:zuvorkommen:obernberg=151"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 34 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 51,
+   "jahr": 1601,
+   "woche": 22,
+   "kasse": 236,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 151,
+   "rho": 1.56,
+   "kopfDeckung": "1.56",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:zuvorkommen:obernberg=151"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 34 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 52,
+   "jahr": 1601,
+   "woche": 23,
+   "kasse": 234,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 151,
+   "rho": 1.55,
+   "kopfDeckung": "1.55",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:zuvorkommen:obernberg=151"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 34 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler pachtet Klosterschenke Obernberg auf zwölf Jahre. Der Wirt ist jetzt sein Wirt."
+   ]
+  },
+  {
+   "i": 53,
+   "jahr": 1601,
+   "woche": 24,
+   "kasse": 232,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 208,
+   "rho": 1.12,
+   "kopfDeckung": "1.12",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 35 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 54,
+   "jahr": 1601,
+   "woche": 25,
+   "kasse": 230,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 208,
+   "rho": 1.11,
+   "kopfDeckung": "1.11",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 35 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler pachtet Brückenwirt auf zwölf Jahre. Der Wirt ist jetzt sein Wirt. Dafür wird Fährhaus am Fluss fallengelassen — die Adresse ist frei.",
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Brückenwirt wird frei."
+   ]
+  },
+  {
+   "i": 55,
+   "jahr": 1601,
+   "woche": 26,
+   "kasse": 228,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.68,
+   "kopfDeckung": "0.68",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 56,
+   "jahr": 1601,
+   "woche": 27,
+   "kasse": 226,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.67,
+   "kopfDeckung": "0.67",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben",
+    "gegner: Einquartierung beim Adler: eine Kompanie sauft den Keller leer. Es kostet ihn 37 fl. Hopfenboden: weg vom Hof."
+   ]
+  },
+  {
+   "i": 57,
+   "jahr": 1601,
+   "woche": 28,
+   "kasse": 224,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.67,
+   "kopfDeckung": "0.67",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 38 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 58,
+   "jahr": 1601,
+   "woche": 29,
+   "kasse": 222,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.66,
+   "kopfDeckung": "0.66",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 38 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er reif ist."
+   ]
+  },
+  {
+   "i": 59,
+   "jahr": 1601,
+   "woche": 30,
+   "kasse": 220,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.65,
+   "kopfDeckung": "0.65",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 39 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 5 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Mühlschenke führt kein Bier des Hauses mehr",
+    "verfall: Ausschank am Markt führt kein Bier des Hauses mehr",
+    "verfall: Klosterschenke Obernberg führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-26)"
+   ]
+  },
+  {
+   "i": 60,
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 194,
+   "faesser": 0,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 3,
+   "billigster": 13,
+   "rho": 14.92,
+   "kopfDeckung": "0.58",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336",
+    "fuhre:jahresplan:schank=13",
+    "fuhre:jahresplan:braun=18",
+    "fuhre:jahresplan:maerzen=26"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 39 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 61,
+   "jahr": 1602,
+   "woche": 2,
+   "kasse": 192,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.57,
+   "kopfDeckung": "0.57",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 39 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 62,
+   "jahr": 1602,
+   "woche": 3,
+   "kasse": 190,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.57,
+   "kopfDeckung": "0.57",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 39 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Hopfenboden für 150 fl."
+   ]
+  },
+  {
+   "i": 63,
+   "jahr": 1602,
+   "woche": 4,
+   "kasse": 188,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.56,
+   "kopfDeckung": "0.56",
+   "angebot": [
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 40 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Gasthof Lindenhof: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 340 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 64,
+   "jahr": 1602,
+   "woche": 5,
+   "kasse": 186,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.55,
+   "kopfDeckung": "0.55",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=340",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Adlers rollt zum Klosterschenke Obernberg."
+   ]
+  },
+  {
+   "i": 65,
+   "jahr": 1602,
+   "woche": 6,
+   "kasse": 184,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.55,
+   "kopfDeckung": "0.55",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=340",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben",
+    "gegner: Braustatt Adler wirbt um Zum Goldenen Ochsen: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 170 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 66,
+   "jahr": 1602,
+   "woche": 7,
+   "kasse": 182,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 170,
+   "rho": 1.07,
+   "kopfDeckung": "1.07",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=340",
+    "gegner:zuvorkommen:ochse=170",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 3 Häuser −318 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 43 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler pachtet Gasthof Lindenhof auf zwölf Jahre. Der Wirt ist jetzt sein Wirt."
+   ]
+  },
+  {
+   "i": 67,
+   "jahr": 1602,
+   "woche": 8,
+   "kasse": 180,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 159,
+   "rho": 1.13,
+   "kopfDeckung": "1.06",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:zuvorkommen:ochse=170",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:hirsch=420",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 44 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Landgasthof Hirsch wird frei."
+   ]
+  },
+  {
+   "i": 68,
+   "jahr": 1602,
+   "woche": 9,
+   "kasse": 178,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 159,
+   "rho": 1.12,
+   "kopfDeckung": "1.05",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:zuvorkommen:ochse=170",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 45 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 69,
+   "jahr": 1602,
+   "woche": 10,
+   "kasse": 176,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 159,
+   "rho": 1.11,
+   "kopfDeckung": "1.04",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:zuvorkommen:ochse=170",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 45 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Zunft schreibt Zum Goldenen Ochsen dem Adler zu, mit Brief und Siegel der Lade."
+   ]
+  },
+  {
+   "i": 70,
+   "jahr": 1602,
+   "woche": 11,
+   "kasse": 174,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.09,
+   "kopfDeckung": "0.52",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 46 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 71,
+   "jahr": 1602,
+   "woche": 12,
+   "kasse": 172,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.08,
+   "kopfDeckung": "0.51",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 46 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Klosterschenke Obernberg."
+   ]
+  },
+  {
+   "i": 72,
+   "jahr": 1602,
+   "woche": 13,
+   "kasse": 170,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.07,
+   "kopfDeckung": "0.51",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 73,
+   "jahr": 1602,
+   "woche": 14,
+   "kasse": 168,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.06,
+   "kopfDeckung": "0.5",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 74,
+   "jahr": 1602,
+   "woche": 15,
+   "kasse": 166,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.04,
+   "kopfDeckung": "0.49",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 75,
+   "jahr": 1602,
+   "woche": 16,
+   "kasse": 164,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.03,
+   "kopfDeckung": "0.49",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 76,
+   "jahr": 1602,
+   "woche": 17,
+   "kasse": 162,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.02,
+   "kopfDeckung": "0.48",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 77,
+   "jahr": 1602,
+   "woche": 18,
+   "kasse": 160,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 159,
+   "rho": 1.01,
+   "kopfDeckung": "0.48",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 78,
+   "jahr": 1602,
+   "woche": 19,
+   "kasse": 158,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.47,
+   "kopfDeckung": "0.47",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 79,
+   "jahr": 1602,
+   "woche": 20,
+   "kasse": 156,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.46,
+   "kopfDeckung": "0.46",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:ochse=378",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Zum Goldenen Ochsen wird frei."
+   ]
+  },
+  {
+   "i": 80,
+   "jahr": 1602,
+   "woche": 21,
+   "kasse": 154,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.46,
+   "kopfDeckung": "0.46",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 81,
+   "jahr": 1602,
+   "woche": 22,
+   "kasse": 152,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.45,
+   "kopfDeckung": "0.45",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er reif ist."
+   ]
+  },
+  {
+   "i": 82,
+   "jahr": 1602,
+   "woche": 23,
+   "kasse": 150,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.45,
+   "kopfDeckung": "0.45",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:muehlwirt=378",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Mühlschenke wird frei."
+   ]
+  },
+  {
+   "i": 83,
+   "jahr": 1602,
+   "woche": 24,
+   "kasse": 148,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.44,
+   "kopfDeckung": "0.44",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Fährhaus am Fluss: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 113 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 84,
+   "jahr": 1602,
+   "woche": 25,
+   "kasse": 146,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 113,
+   "rho": 1.29,
+   "kopfDeckung": "1.29",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 51 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 85,
+   "jahr": 1602,
+   "woche": 26,
+   "kasse": 144,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 113,
+   "rho": 1.27,
+   "kopfDeckung": "1.27",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 86,
+   "jahr": 1602,
+   "woche": 27,
+   "kasse": 142,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 113,
+   "rho": 1.26,
+   "kopfDeckung": "1.26",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler pachtet Fährhaus am Fluss auf zwölf Jahre. Der Wirt ist jetzt sein Wirt."
+   ]
+  },
+  {
+   "i": 87,
+   "jahr": 1602,
+   "woche": 28,
+   "kasse": 140,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.56,
+   "kopfDeckung": "0.56",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Adlers rollt zum Fährhaus am Fluss."
+   ]
+  },
+  {
+   "i": 88,
+   "jahr": 1602,
+   "woche": 29,
+   "kasse": 138,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.55,
+   "kopfDeckung": "0.55",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 89,
+   "jahr": 1602,
+   "woche": 30,
+   "kasse": 136,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.54,
+   "kopfDeckung": "0.54",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 5 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Gasthof Lindenhof führt kein Bier des Hauses mehr",
+    "verfall: Fährhaus am Fluss führt kein Bier des Hauses mehr",
+    "verfall: Landgasthof Hirsch führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-22)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 90,
+   "jahr": 1603,
+   "woche": 1,
+   "kasse": 114,
+   "faesser": 0,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 3,
+   "billigster": 13,
+   "rho": 8.77,
+   "kopfDeckung": "0.45",
+   "angebot": [
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "fuhre:jahresplan:schank=13",
+    "fuhre:jahresplan:braun=18",
+    "fuhre:jahresplan:maerzen=26"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 91,
+   "jahr": 1603,
+   "woche": 2,
+   "kasse": 112,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.44,
+   "kopfDeckung": "0.44",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 92,
+   "jahr": 1603,
+   "woche": 3,
+   "kasse": 110,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.44,
+   "kopfDeckung": "0.44",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Brückenwirt: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 208 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 93,
+   "jahr": 1603,
+   "woche": 4,
+   "kasse": 108,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 208,
+   "rho": 0.52,
+   "kopfDeckung": "0.52",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 54 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 94,
+   "jahr": 1603,
+   "woche": 5,
+   "kasse": 106,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 208,
+   "rho": 0.51,
+   "kopfDeckung": "0.51",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 54 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 95,
+   "jahr": 1603,
+   "woche": 6,
+   "kasse": 104,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 208,
+   "rho": 0.5,
+   "kopfDeckung": "0.5",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 54 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben",
+    "gegner: Ein grauer Wagen des Adlers rollt zum Gasthof Lindenhof."
+   ]
+  },
+  {
+   "i": 96,
+   "jahr": 1603,
+   "woche": 7,
+   "kasse": 102,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 208,
+   "rho": 0.49,
+   "kopfDeckung": "0.49",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:brueckenwirt=208",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler pachtet Brückenwirt auf zwölf Jahre. Der Wirt ist jetzt sein Wirt."
+   ]
+  },
+  {
+   "i": 97,
+   "jahr": 1603,
+   "woche": 8,
+   "kasse": 100,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.61,
+   "kopfDeckung": "0.4",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 98,
+   "jahr": 1603,
+   "woche": 9,
+   "kasse": 98,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.58,
+   "kopfDeckung": "0.39",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Einquartierung beim Adler: eine Kompanie sauft den Keller leer. Es kostet ihn 113 fl. Hopfenboden: weg vom Hof."
+   ]
+  },
+  {
+   "i": 99,
+   "jahr": 1603,
+   "woche": 10,
+   "kasse": 96,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.55,
+   "kopfDeckung": "0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 57 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 100,
+   "jahr": 1603,
+   "woche": 11,
+   "kasse": 94,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.52,
+   "kopfDeckung": "0.37",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 57 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 101,
+   "jahr": 1603,
+   "woche": 12,
+   "kasse": 92,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.48,
+   "kopfDeckung": "0.37",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 57 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Brückenwirt."
+   ]
+  },
+  {
+   "i": 102,
+   "jahr": 1603,
+   "woche": 13,
+   "kasse": 90,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.45,
+   "kopfDeckung": "0.36",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 103,
+   "jahr": 1603,
+   "woche": 14,
+   "kasse": 88,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.42,
+   "kopfDeckung": "0.35",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 104,
+   "jahr": 1603,
+   "woche": 15,
+   "kasse": 86,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.39,
+   "kopfDeckung": "0.34",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 105,
+   "jahr": 1603,
+   "woche": 16,
+   "kasse": 84,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.35,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 106,
+   "jahr": 1603,
+   "woche": 17,
+   "kasse": 82,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.32,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 107,
+   "jahr": 1603,
+   "woche": 18,
+   "kasse": 80,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.29,
+   "kopfDeckung": "0.32",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler baut auf dem eigenen Hof: Hopfenboden für 150 fl."
+   ]
+  },
+  {
+   "i": 108,
+   "jahr": 1603,
+   "woche": 19,
+   "kasse": 78,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.26,
+   "kopfDeckung": "0.31",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 59 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 109,
+   "jahr": 1603,
+   "woche": 20,
+   "kasse": 76,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.23,
+   "kopfDeckung": "0.3",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 59 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er reif ist."
+   ]
+  },
+  {
+   "i": 110,
+   "jahr": 1603,
+   "woche": 21,
+   "kasse": 74,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 62,
+   "rho": 1.19,
+   "kopfDeckung": "0.29",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:brueckenwirt=462",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336",
+    "erbe:nachschrift=62"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 1 Haus −62 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 60 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben",
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Brückenwirt wird frei."
+   ]
+  },
+  {
+   "i": 111,
+   "jahr": 1603,
+   "woche": 22,
+   "kasse": 72,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.29,
+   "kopfDeckung": "0.29",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 112,
+   "jahr": 1603,
+   "woche": 23,
+   "kasse": 70,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.28,
+   "kopfDeckung": "0.28",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 113,
+   "jahr": 1603,
+   "woche": 24,
+   "kasse": 68,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.27,
+   "kopfDeckung": "0.27",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 114,
+   "jahr": 1603,
+   "woche": 25,
+   "kasse": 66,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.26,
+   "kopfDeckung": "0.26",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 115,
+   "jahr": 1603,
+   "woche": 26,
+   "kasse": 64,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.25,
+   "kopfDeckung": "0.25",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 116,
+   "jahr": 1603,
+   "woche": 27,
+   "kasse": 62,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.25,
+   "kopfDeckung": "0.25",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Adlers rollt zum Fährhaus am Fluss."
+   ]
+  },
+  {
+   "i": 117,
+   "jahr": 1603,
+   "woche": 28,
+   "kasse": 60,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.24,
+   "kopfDeckung": "0.24",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 62 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Zunft rügt den Adler wegen schlechten Suds. Fährhaus am Fluss wird frei."
+   ]
+  },
+  {
+   "i": 118,
+   "jahr": 1603,
+   "woche": 29,
+   "kasse": 58,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.17,
+   "kopfDeckung": "0.17",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 63 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 119,
+   "jahr": 1603,
+   "woche": 30,
+   "kasse": 56,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.17,
+   "kopfDeckung": "0.17",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 63 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 5 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Schenke am Tor führt kein Bier des Hauses mehr",
+    "verfall: Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+    "verfall: Brückenwirt führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-19)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 120,
+   "jahr": 1604,
+   "woche": 1,
+   "kasse": 37,
+   "faesser": 0,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 3,
+   "billigster": 13,
+   "rho": 2.85,
+   "kopfDeckung": "0.11",
+   "angebot": [
+    "gegner:abloesen:obernberg=336",
+    "fuhre:jahresplan:schank=13",
+    "fuhre:jahresplan:braun=18",
+    "fuhre:jahresplan:maerzen=26"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 63 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 121,
+   "jahr": 1604,
+   "woche": 2,
+   "kasse": 35,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.1,
+   "kopfDeckung": "0.1",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 63 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 122,
+   "jahr": 1604,
+   "woche": 3,
+   "kasse": 33,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 336,
+   "rho": 0.1,
+   "kopfDeckung": "0.1",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 63 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Fährhaus am Fluss: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 113 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 123,
+   "jahr": 1604,
+   "woche": 4,
+   "kasse": 31,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 113,
+   "rho": 0.27,
+   "kopfDeckung": "0.27",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 64 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 124,
+   "jahr": 1604,
+   "woche": 5,
+   "kasse": 29,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 113,
+   "rho": 0.26,
+   "kopfDeckung": "0.26",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 64 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Pfarrschenke St. Michael: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 85 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 125,
+   "jahr": 1604,
+   "woche": 6,
+   "kasse": 27,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 85,
+   "rho": 0.32,
+   "kopfDeckung": "0.32",
+   "angebot": [
+    "gegner:abloesen:lindenhof=756",
+    "gegner:abloesen:torschenke=336",
+    "gegner:zuvorkommen:pfarrhof=85",
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 65 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 5 Fass verdorben"
+   ]
+  },
+  {
+   "i": 126,
+   "jahr": 1604,
+   "woche": 7,
+   "kasse": 25,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 113,
+   "rho": 0.22,
+   "kopfDeckung": "0.29",
+   "angebot": [
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 65 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft den Hopfen des ganzen Gartens auf, ehe er reif ist."
+   ]
+  },
+  {
+   "i": 127,
+   "jahr": 1604,
+   "woche": 8,
+   "kasse": 23,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 113,
+   "rho": 0.2,
+   "kopfDeckung": "0.27",
+   "angebot": [
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 66 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 128,
+   "jahr": 1604,
+   "woche": 9,
+   "kasse": 21,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 113,
+   "rho": 0.19,
+   "kopfDeckung": "0.25",
+   "angebot": [
+    "gegner:zuvorkommen:faehrhaus=113",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 66 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler pachtet Fährhaus am Fluss auf zwölf Jahre. Der Wirt ist jetzt sein Wirt."
+   ]
+  },
+  {
+   "i": 129,
+   "jahr": 1604,
+   "woche": 10,
+   "kasse": 19,
+   "faesser": 5,
+   "amt": "Barbara Bruckner / sparsam (bis 1626)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 252,
+   "rho": 0.08,
+   "kopfDeckung": "0.22",
+   "angebot": [
+    "gegner:abloesen:faehrhaus=252",
+    "gegner:abloesen:obernberg=336"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+   "ohneDich": "OHNE DICH GESCHEHEN 67 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Braustatt Adler wirbt um Ausschank am Markt: Er lässt dem Wirt das Dach richten und schickt keine Rechnung. Zuvorkommen kostet 95 fl. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  }
+ ],
+ "ende": {
+  "jahr": 1604,
+  "woche": 11,
+  "epoche": 2,
+  "ende": false,
+  "amt": {
+   "nr": 2,
+   "name": "Barbara Bruckner",
+   "eig": "sparsam",
+   "bis": 1626
+  },
+  "kasse": 17,
+  "faesser": 5,
+  "kopfLeiste": [
+   "CHRISTMOND 1604",
+   "KASSE 17 fl",
+   "HOPFEN 0",
+   "GEWÖLBE 5/28 Fass",
+   "WOCHE 11/30",
+   "CHRONIK 62",
+   "BUCH 567"
+  ],
+  "kopfDeckung": "0.2",
+  "kopfDeckungTxt": "nächster Zug: Zuvorkommen Pfarrschenke St. Michael — 85 fl (Kasse reicht 0,2×)",
+  "protN": 567,
+  "chrN": 62,
+  "erbLeiste": "DAS ERBE II. Hand Barbara Bruckner · sparsam am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,70× nahm 4 · 1 Fass Nachschrift · 2 Häuser −159 fl",
+  "erbBuch": "DAS ERBE — Verbriefen im Briefbuch der Stadt, unter Siegel · II. Hand Barbara Bruckner · sparsam „Hält das Geld zusammen, versäumt die Gelegenheit.\" Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber. Ein Brief mit Siegel hängt am Anwesen und wandert mit ihm. Eine Gevatterschaft hängt an einem Menschen. Barbara Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0, an der Person 4 → 0, aus dem Gewölbe 1 Fass. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 0 — FÄLLT MIT DER HAND, DIE ES GAB Nichts mehr. Was hier stand, ist gefallen oder geschrieben. GEFALLEN · 4 — HING AN EINEM MENSCHEN, NICHT AM HAUS Gasthof Lindenhof Lieferung Schenke am Tor Lieferung Pfarrschenke St. Michael Lieferung Brückenwirt Lieferung DIE HÄNDE I. Barbara Bruckner sparsam II. Barbara Bruckner sparsam",
+  "ohneDich": "OHNE DICH GESCHEHEN 68 Züge diese Woche 1 Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "BRAUSTATT ADLER Sebastian Feist · streitbar · hält 4 Häuser 68 ZÜGE 640 fl KASSE 14 fl SEIN PREIS diese Woche "
+   },
+   {
+    "zug": "gegner:abloesen:lindenhof",
+    "preis": -756,
+    "t": false,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "LIN · PAC ablösen 756 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:torschenke",
+    "preis": -336,
+    "t": false,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "TOR · PAC ablösen 336 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:torschenke",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:zuvorkommen:pfarrhof",
+    "preis": -85,
+    "t": false,
+    "a": true,
+    "cls": "gg-wimpel gg-adler zuteuer",
+    "txt": "wirbt · noch 1 Wo. zuvorkommen 85 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:pfarrhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:faehrhaus",
+    "preis": -252,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler frisch zuteuer",
+    "txt": "FAE · PAC ablösen 252 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:faehrhaus",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:zuvorkommen:markt",
+    "preis": -95,
+    "t": true,
+    "a": true,
+    "cls": "gg-wimpel gg-adler zuteuer",
+    "txt": "wirbt · noch 3 Wo. zuvorkommen 95 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:markt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:obernberg",
+    "preis": -336,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "OBE · PAC ablösen 336 fl"
+   },
+   {
+    "zug": "gegner:hinhalten:obernberg",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Fass in die Lade 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": false,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Anzeige bei der Zunftlade kostet kein Geld · vier Ansehen gegen Pfarrschenke St. Michael"
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Das Haus gegenüber"
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Anzeige bei der Zunftlade"
+   },
+   {
+    "zug": "gegner:zeige:68",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:67",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:66",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Stellhefe vom Fass schöpfen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Mit Weizen gestreckt"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -260,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll siegel",
+    "txt": "Kellergärung im Felsenkeller−260 fl"
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "Adler-Ausschank am Mar"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OBE"
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "So ist es verabredet"
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:probe:lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:ochse",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:torschenke",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:pfarrhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:muehlwirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:brueckenwirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:faehrhaus",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:hirsch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:markt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:obernberg",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Freifass · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:tafel-ab:schank",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:schank",
+    "preis": -14,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −14 fl"
+   },
+   {
+    "zug": "fuhre:tafel-ab:braun",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:braun",
+    "preis": -14,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −14 fl"
+   },
+   {
+    "zug": "fuhre:tafel-ab:maerzen",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:maerzen",
+    "preis": -14,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −14 fl"
+   },
+   {
+    "zug": "fuhre:tafel-ab:nachbier",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:nachbier",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+"
+   },
+   {
+    "zug": "fuhre:kauf:budget",
+    "preis": -300,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Reihe vom Nachbarn · +4 Sude · auf 4 Kerben −300 fl"
+   },
+   {
+    "zug": "fuhre:kauf:fass",
+    "preis": -92,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Fässer vom Böttcher · +4 · auf 1 Kerbe −92 fl"
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -120,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Hopfen vom Markt · +60 · auf 2 Kerben −120 fl"
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 66,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-rueck",
+    "txt": "Hopfen zurück auf den Markt · −60 +66 fl"
+   },
+   {
+    "zug": "fuhre:pfand",
+    "preis": -14,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Pfand einziehen · 0 Fass −14 fl"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Wie vorige Woche"
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Wagen leeren"
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-abschicken",
+    "txt": "FUHRE ABSCHICKEN"
+   },
+   {
+    "zug": "sud:schuettung:rein",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Rein nach dem Gebot"
+   },
+   {
+    "zug": "sud:schuettung:weizen",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl",
+    "txt": "Mit Weizen gestreckt"
+   },
+   {
+    "zug": "sud:schuettung:hafer",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl",
+    "txt": "Mit Hafer und Wicke gestreckt"
+   },
+   {
+    "zug": "sud:gaerung:ober",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Obergärig, warm geführt"
+   },
+   {
+    "zug": "sud:gaerung:keller",
+    "preis": -260,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Kellergärung im Felsenkeller −260 fl"
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Stellhefe aus dem Gärbottich nehmen · +8"
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Junges Fass anstechen · +14"
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Altes Fass anstechen · +6"
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -78,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Gärbottich setzen lassen · +10 Fass −78 fl"
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-bandgriff",
+    "txt": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-klein-knopf",
+    "txt": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:entzug-loesen",
+    "preis": -210,
+    "t": false,
+    "a": false,
+    "cls": "knopf nm-knopf nm-rot",
+    "txt": "Der Zunft Abbitte tun −210 fl − 1 Fass"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-griff",
+    "txt": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -159,
+    "t": true,
+    "a": false,
+    "cls": "knopf erb-knopf erb-nach",
+    "txt": "Nachschrift · 2 Häuser −159 fl"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 62"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 567"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross amort",
+    "txt": "WEITER"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-an",
+    "txt": "♪"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 68 Züge"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 0 · im Keller liegen 5 Fass"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "SUDORDNUNG auf der Tafel im Sudhaus"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS GEWÖLBE 5 von 28 Fass · 5 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "PFERDEFUHRWERK 0 von 8 Fass · 0 von 5 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES GENOMMEN von Die Zunft bis 1605"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-blatt-fu-antrag-fu-ausgangblatt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "DER MÜHLBRÄU BIETET AUF DIE GERECHTIGKEIT liegt auf"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 7 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:wiederkauf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "WIEDERKAUF"
+   },
+   {
+    "zug": "stadt:wiederkauf:fasslager_stein",
+    "preis": 76,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Fasslager aus Stein +76 fl"
+   },
+   {
+    "zug": "stadt:wiederkauf:pferdestall",
+    "preis": 73,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Pferdestall +73 fl"
+   },
+   {
+    "zug": "stadt:wiederkauf:darre",
+    "preis": 69,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Darre +69 fl"
+   },
+   {
+    "zug": "stadt:wiederkauf:rossmuehle",
+    "preis": 66,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Rossmühle +66 fl"
+   },
+   {
+    "zug": "stadt:wiederkauf:hopfenlager",
+    "preis": 66,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Hopfenlager +66 fl"
+   },
+   {
+    "zug": "fuhre:ausgang:ja",
+    "preis": 652,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross",
+    "txt": "Die Gerechtigkeit an den Mühlbräu verkaufen +652 fl"
+   },
+   {
+    "zug": "fuhre:ausgang:nein",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross flach",
+    "txt": "Nicht verkaufen — die Frist auslaufen lassen"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1604 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   }
+  ]
+ },
+ "fehler": []
+}

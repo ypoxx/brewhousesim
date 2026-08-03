@@ -1,0 +1,758 @@
+{
+ "epoche": 2,
+ "wochen": 62,
+ "stil": "sudwechsel:sud:gaerung:keller@1",
+ "saat": "4242",
+ "fehler": [],
+ "angebot": [
+  {
+   "zug": "sud:zettel-anstich",
+   "mal": 62,
+   "aktiv": 61,
+   "getroffen": 0,
+   "texte": [
+    "Stellhefe vom Fass schöpfen",
+    "Stellhefe aus dem Gärbottich nehmen"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "mal": 62,
+   "aktiv": 62,
+   "getroffen": 0,
+   "texte": [
+    "Mit Weizen gestreckt"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "mal": 2,
+   "aktiv": 2,
+   "getroffen": 0,
+   "texte": [
+    "Kellergärung im Felsenkeller −260 fl"
+   ]
+  },
+  {
+   "zug": "sud:schuettung:rein",
+   "mal": 62,
+   "aktiv": 0,
+   "getroffen": 60,
+   "texte": [
+    "Rein nach dem Gebot"
+   ]
+  },
+  {
+   "zug": "sud:schuettung:weizen",
+   "mal": 62,
+   "aktiv": 62,
+   "getroffen": 60,
+   "texte": [
+    "Mit Weizen gestreckt"
+   ]
+  },
+  {
+   "zug": "sud:schuettung:hafer",
+   "mal": 62,
+   "aktiv": 62,
+   "getroffen": 60,
+   "texte": [
+    "Mit Hafer und Wicke gestreckt"
+   ]
+  },
+  {
+   "zug": "sud:gaerung:ober",
+   "mal": 62,
+   "aktiv": 60,
+   "getroffen": 60,
+   "texte": [
+    "Obergärig, warm geführt"
+   ]
+  },
+  {
+   "zug": "sud:gaerung:keller",
+   "mal": 62,
+   "aktiv": 2,
+   "getroffen": 60,
+   "texte": [
+    "Kellergärung im Felsenkeller −260 fl",
+    "Kellergärung im Felsenkeller"
+   ]
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "mal": 62,
+   "aktiv": 39,
+   "getroffen": 60,
+   "texte": [
+    "Stellhefe aus dem Gärbottich nehmen · +8"
+   ]
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "mal": 62,
+   "aktiv": 56,
+   "getroffen": 60,
+   "texte": [
+    "Stellhefe vom Fass schöpfen · jüngstes Fass · +14"
+   ]
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "mal": 62,
+   "aktiv": 56,
+   "getroffen": 60,
+   "texte": [
+    "Stellhefe vom Fass schöpfen · ältestes Fass · +6"
+   ]
+  },
+  {
+   "zug": "sud:gaerraum",
+   "mal": 62,
+   "aktiv": 30,
+   "getroffen": 60,
+   "texte": [
+    "Gärbottich setzen lassen · +10 Fass −78 fl"
+   ]
+  }
+ ],
+ "gewechselt": [
+  {
+   "w": 1,
+   "zug": "sud:gaerung:keller",
+   "text": "Kellergärung im Felsenkeller −260 fl",
+   "kasseVor": "618 fl",
+   "kasseNach": "358 fl",
+   "markeVor": "DER SUD · 1600 Rein nach dem Gebot · Obergärig, warm geführt Gärkeller 6/16 Fass Stellhefe 68 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt Kellergärung im Felsenkeller −260 fl",
+   "markeNach": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 14/16 Fass Stellhefe 68 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt"
+  }
+ ],
+ "protokoll": [
+  {
+   "w": 0,
+   "kopf": "SCHEIDING=1600 | KASSE=640 fl | HOPFEN=65 | GEWÖLBE=8/24 Fass | WOCHE=1/30 | CHRONIK=3 | BUCH=1",
+   "kasse": "640 fl",
+   "keller": "8/24 Fass",
+   "roh": "65",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 35,6×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Obergärig, warm geführt Gärkeller 0/16 Fass Stellhefe 70 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt Kellergärung im Felsenkeller −260 fl",
+   "sudAktiv": 6
+  },
+  {
+   "w": 1,
+   "kopf": "GILBHART=1600 | KASSE=618 fl | HOPFEN=57 | GEWÖLBE=8/24 Fass | WOCHE=2/30 | CHRONIK=3 | BUCH=5",
+   "kasse": "618 fl",
+   "keller": "8/24 Fass",
+   "roh": "57",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 34,3×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Obergärig, warm geführt Gärkeller 6/16 Fass Stellhefe 68 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt Kellergärung im Felsenkeller −260 fl",
+   "sudAktiv": 7
+  },
+  {
+   "w": 2,
+   "kopf": "GILBHART=1600 | KASSE=336 fl | HOPFEN=49 | GEWÖLBE=10/24 Fass | WOCHE=3/30 | CHRONIK=4 | BUCH=10",
+   "kasse": "336 fl",
+   "keller": "10/24 Fass",
+   "roh": "49",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 18,7×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 14/16 Fass Stellhefe 66 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 3,
+   "kopf": "GILBHART=1600 | KASSE=314 fl | HOPFEN=41 | GEWÖLBE=18/24 Fass | WOCHE=4/30 | CHRONIK=6 | BUCH=16",
+   "kasse": "314 fl",
+   "keller": "18/24 Fass",
+   "roh": "41",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 17,4×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 12/16 Fass Stellhefe 64 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 4,
+   "kopf": "GILBHART=1600 | KASSE=292 fl | HOPFEN=33 | GEWÖLBE=16/24 Fass | WOCHE=5/30 | CHRONIK=6 | BUCH=19",
+   "kasse": "292 fl",
+   "keller": "16/24 Fass",
+   "roh": "33",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 16,2×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 16/16 Fass Stellhefe 62 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 5,
+   "kopf": "NEBELUNG=1600 | KASSE=270 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=6/30 | CHRONIK=6 | BUCH=24",
+   "kasse": "270 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 15,0×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 16/16 Fass Stellhefe 60 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 6,
+   "kopf": "NEBELUNG=1600 | KASSE=266 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=7/30 | CHRONIK=6 | BUCH=27",
+   "kasse": "266 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 14,8×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 16/16 Fass Stellhefe 58 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 7,
+   "kopf": "NEBELUNG=1600 | KASSE=262 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=8/30 | CHRONIK=7 | BUCH=30",
+   "kasse": "262 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 14,6×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 16/16 Fass Stellhefe 56 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 8,
+   "kopf": "NEBELUNG=1600 | KASSE=258 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=9/30 | CHRONIK=8 | BUCH=33",
+   "kasse": "258 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 14,3×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 14/16 Fass Stellhefe 54 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 9,
+   "kopf": "CHRISTMOND=1600 | KASSE=254 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=10/30 | CHRONIK=9 | BUCH=35",
+   "kasse": "254 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 14,1×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 14/16 Fass Stellhefe 52 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 10,
+   "kopf": "CHRISTMOND=1600 | KASSE=250 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=11/30 | CHRONIK=10 | BUCH=37",
+   "kasse": "250 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 13,9×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 12/16 Fass Stellhefe 42 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 11,
+   "kopf": "CHRISTMOND=1600 | KASSE=246 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=12/30 | CHRONIK=11 | BUCH=40",
+   "kasse": "246 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 13,7×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 10/16 Fass Stellhefe 32 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 12,
+   "kopf": "CHRISTMOND=1600 | KASSE=242 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=13/30 | CHRONIK=11 | BUCH=41",
+   "kasse": "242 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 13,4×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 10/16 Fass Stellhefe 30 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 13,
+   "kopf": "CHRISTMOND=1600 | KASSE=238 fl | HOPFEN=25 | GEWÖLBE=24/24 Fass | WOCHE=14/30 | CHRONIK=12 | BUCH=43",
+   "kasse": "238 fl",
+   "keller": "24/24 Fass",
+   "roh": "25",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 13,2×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 8/16 Fass Stellhefe 20 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 14,
+   "kopf": "JÄNNER=1601 | KASSE=216 fl | HOPFEN=17 | GEWÖLBE=24/24 Fass | WOCHE=15/30 | CHRONIK=13 | BUCH=52",
+   "kasse": "216 fl",
+   "keller": "24/24 Fass",
+   "roh": "17",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 12,0×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 6/16 Fass Stellhefe 17 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 15,
+   "kopf": "JÄNNER=1601 | KASSE=212 fl | HOPFEN=17 | GEWÖLBE=24/24 Fass | WOCHE=16/30 | CHRONIK=13 | BUCH=54",
+   "kasse": "212 fl",
+   "keller": "24/24 Fass",
+   "roh": "17",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 11,8×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 6/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 16,
+   "kopf": "JÄNNER=1601 | KASSE=208 fl | HOPFEN=17 | GEWÖLBE=24/24 Fass | WOCHE=17/30 | CHRONIK=14 | BUCH=56",
+   "kasse": "208 fl",
+   "keller": "24/24 Fass",
+   "roh": "17",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 11,6×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 6/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 17,
+   "kopf": "JÄNNER=1601 | KASSE=204 fl | HOPFEN=17 | GEWÖLBE=24/24 Fass | WOCHE=18/30 | CHRONIK=14 | BUCH=57",
+   "kasse": "204 fl",
+   "keller": "24/24 Fass",
+   "roh": "17",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 11,3×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 6/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 18,
+   "kopf": "HORNUNG=1601 | KASSE=200 fl | HOPFEN=17 | GEWÖLBE=24/24 Fass | WOCHE=19/30 | CHRONIK=14 | BUCH=61",
+   "kasse": "200 fl",
+   "keller": "24/24 Fass",
+   "roh": "17",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 11,1×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 4/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 19,
+   "kopf": "HORNUNG=1601 | KASSE=196 fl | HOPFEN=17 | GEWÖLBE=24/24 Fass | WOCHE=20/30 | CHRONIK=14 | BUCH=62",
+   "kasse": "196 fl",
+   "keller": "24/24 Fass",
+   "roh": "17",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 10,9×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 4/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 20,
+   "kopf": "HORNUNG=1601 | KASSE=192 fl | HOPFEN=17 | GEWÖLBE=24/24 Fass | WOCHE=21/30 | CHRONIK=15 | BUCH=64",
+   "kasse": "192 fl",
+   "keller": "24/24 Fass",
+   "roh": "17",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 10,7×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 4/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 21,
+   "kopf": "HORNUNG=1601 | KASSE=170 fl | HOPFEN=9 | GEWÖLBE=20/24 Fass | WOCHE=22/30 | CHRONIK=16 | BUCH=70",
+   "kasse": "170 fl",
+   "keller": "20/24 Fass",
+   "roh": "9",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 9,4×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 6/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 22,
+   "kopf": "LENZING=1601 | KASSE=166 fl | HOPFEN=9 | GEWÖLBE=20/24 Fass | WOCHE=23/30 | CHRONIK=16 | BUCH=72",
+   "kasse": "166 fl",
+   "keller": "20/24 Fass",
+   "roh": "9",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 9,2×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 6/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 23,
+   "kopf": "LENZING=1601 | KASSE=144 fl | HOPFEN=1 | GEWÖLBE=18/24 Fass | WOCHE=24/30 | CHRONIK=16 | BUCH=77",
+   "kasse": "144 fl",
+   "keller": "18/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 8,0×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 12/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 24,
+   "kopf": "LENZING=1601 | KASSE=140 fl | HOPFEN=1 | GEWÖLBE=22/24 Fass | WOCHE=25/30 | CHRONIK=16 | BUCH=80",
+   "kasse": "140 fl",
+   "keller": "22/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 7,8×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 6/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 7
+  },
+  {
+   "w": 25,
+   "kopf": "LENZING=1601 | KASSE=136 fl | HOPFEN=1 | GEWÖLBE=20/24 Fass | WOCHE=26/30 | CHRONIK=17 | BUCH=83",
+   "kasse": "136 fl",
+   "keller": "20/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 7,6×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 17 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 26,
+   "kopf": "LENZING=1601 | KASSE=132 fl | HOPFEN=1 | GEWÖLBE=18/24 Fass | WOCHE=27/30 | CHRONIK=18 | BUCH=86",
+   "kasse": "132 fl",
+   "keller": "18/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 7,3×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 27,
+   "kopf": "OSTERMOND=1601 | KASSE=128 fl | HOPFEN=1 | GEWÖLBE=18/24 Fass | WOCHE=28/30 | CHRONIK=18 | BUCH=87",
+   "kasse": "128 fl",
+   "keller": "18/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 7,1×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 28,
+   "kopf": "OSTERMOND=1601 | KASSE=124 fl | HOPFEN=1 | GEWÖLBE=18/24 Fass | WOCHE=29/30 | CHRONIK=18 | BUCH=89",
+   "kasse": "124 fl",
+   "keller": "18/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 6,9×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 29,
+   "kopf": "OSTERMOND=1601 | KASSE=120 fl | HOPFEN=1 | GEWÖLBE=18/24 Fass | WOCHE=30/30 | CHRONIK=18 | BUCH=90",
+   "kasse": "120 fl",
+   "keller": "18/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 6,7×)",
+   "sudmarke": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 30,
+   "kopf": "SCHEIDING=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=0/24 Fass | WOCHE=1/30 | CHRONIK=22 | BUCH=94",
+   "kasse": "0 fl",
+   "keller": "0/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 0
+  },
+  {
+   "w": 31,
+   "kopf": "GILBHART=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=0/24 Fass | WOCHE=2/30 | CHRONIK=23 | BUCH=98",
+   "kasse": "0 fl",
+   "keller": "0/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 10/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 4
+  },
+  {
+   "w": 32,
+   "kopf": "GILBHART=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=4/24 Fass | WOCHE=3/30 | CHRONIK=24 | BUCH=102",
+   "kasse": "0 fl",
+   "keller": "4/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 15/16 Fass Stellhefe 17 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 4
+  },
+  {
+   "w": 33,
+   "kopf": "GILBHART=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=14/24 Fass | WOCHE=4/30 | CHRONIK=25 | BUCH=107",
+   "kasse": "0 fl",
+   "keller": "14/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 15/16 Fass Stellhefe 17 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 34,
+   "kopf": "GILBHART=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=10/24 Fass | WOCHE=5/30 | CHRONIK=25 | BUCH=111",
+   "kasse": "0 fl",
+   "keller": "10/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 10/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 35,
+   "kopf": "NEBELUNG=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=19/24 Fass | WOCHE=6/30 | CHRONIK=26 | BUCH=114",
+   "kasse": "0 fl",
+   "keller": "19/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 17 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 36,
+   "kopf": "NEBELUNG=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=19/24 Fass | WOCHE=7/30 | CHRONIK=27 | BUCH=116",
+   "kasse": "0 fl",
+   "keller": "19/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 37,
+   "kopf": "NEBELUNG=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=19/24 Fass | WOCHE=8/30 | CHRONIK=27 | BUCH=117",
+   "kasse": "0 fl",
+   "keller": "19/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 38,
+   "kopf": "NEBELUNG=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=19/24 Fass | WOCHE=9/30 | CHRONIK=28 | BUCH=119",
+   "kasse": "0 fl",
+   "keller": "19/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 39,
+   "kopf": "CHRISTMOND=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=19/24 Fass | WOCHE=10/30 | CHRONIK=28 | BUCH=120",
+   "kasse": "0 fl",
+   "keller": "19/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 40,
+   "kopf": "CHRISTMOND=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=14/24 Fass | WOCHE=11/30 | CHRONIK=28 | BUCH=122",
+   "kasse": "0 fl",
+   "keller": "14/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 41,
+   "kopf": "CHRISTMOND=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=9/24 Fass | WOCHE=12/30 | CHRONIK=29 | BUCH=125",
+   "kasse": "0 fl",
+   "keller": "9/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 42,
+   "kopf": "CHRISTMOND=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=0/24 Fass | WOCHE=13/30 | CHRONIK=29 | BUCH=129",
+   "kasse": "0 fl",
+   "keller": "0/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 10/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 4
+  },
+  {
+   "w": 43,
+   "kopf": "CHRISTMOND=1601 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=4/24 Fass | WOCHE=14/30 | CHRONIK=30 | BUCH=133",
+   "kasse": "0 fl",
+   "keller": "4/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 15/16 Fass Stellhefe 17 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 4
+  },
+  {
+   "w": 44,
+   "kopf": "JÄNNER=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=14/24 Fass | WOCHE=15/30 | CHRONIK=30 | BUCH=138",
+   "kasse": "0 fl",
+   "keller": "14/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 16/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 45,
+   "kopf": "JÄNNER=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=19/24 Fass | WOCHE=16/30 | CHRONIK=30 | BUCH=142",
+   "kasse": "0 fl",
+   "keller": "19/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 10/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 46,
+   "kopf": "JÄNNER=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=21/24 Fass | WOCHE=17/30 | CHRONIK=30 | BUCH=145",
+   "kasse": "0 fl",
+   "keller": "21/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 4/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 47,
+   "kopf": "JÄNNER=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=24/24 Fass | WOCHE=18/30 | CHRONIK=31 | BUCH=148",
+   "kasse": "0 fl",
+   "keller": "24/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 1/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 48,
+   "kopf": "HORNUNG=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=24/24 Fass | WOCHE=19/30 | CHRONIK=31 | BUCH=149",
+   "kasse": "0 fl",
+   "keller": "24/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 1/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 49,
+   "kopf": "HORNUNG=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=24/24 Fass | WOCHE=20/30 | CHRONIK=31 | BUCH=151",
+   "kasse": "0 fl",
+   "keller": "24/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 1/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 50,
+   "kopf": "HORNUNG=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=24/24 Fass | WOCHE=21/30 | CHRONIK=32 | BUCH=153",
+   "kasse": "0 fl",
+   "keller": "24/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 1/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 51,
+   "kopf": "HORNUNG=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=20/24 Fass | WOCHE=22/30 | CHRONIK=32 | BUCH=156",
+   "kasse": "0 fl",
+   "keller": "20/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 52,
+   "kopf": "LENZING=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=10/24 Fass | WOCHE=23/30 | CHRONIK=33 | BUCH=158",
+   "kasse": "0 fl",
+   "keller": "10/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 53,
+   "kopf": "LENZING=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=4/24 Fass | WOCHE=24/30 | CHRONIK=33 | BUCH=160",
+   "kasse": "0 fl",
+   "keller": "4/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 54,
+   "kopf": "LENZING=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=1/24 Fass | WOCHE=25/30 | CHRONIK=33 | BUCH=163",
+   "kasse": "0 fl",
+   "keller": "1/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 55,
+   "kopf": "LENZING=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=1/24 Fass | WOCHE=26/30 | CHRONIK=33 | BUCH=164",
+   "kasse": "0 fl",
+   "keller": "1/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 56,
+   "kopf": "LENZING=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=1/24 Fass | WOCHE=27/30 | CHRONIK=33 | BUCH=166",
+   "kasse": "0 fl",
+   "keller": "1/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 57,
+   "kopf": "OSTERMOND=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=1/24 Fass | WOCHE=28/30 | CHRONIK=34 | BUCH=167",
+   "kasse": "0 fl",
+   "keller": "1/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  },
+  {
+   "w": 58,
+   "kopf": "OSTERMOND=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=0/24 Fass | WOCHE=29/30 | CHRONIK=34 | BUCH=171",
+   "kasse": "0 fl",
+   "keller": "0/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 10/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 4
+  },
+  {
+   "w": 59,
+   "kopf": "OSTERMOND=1602 | KASSE=0 fl | HOPFEN=1 | GEWÖLBE=4/24 Fass | WOCHE=30/30 | CHRONIK=34 | BUCH=174",
+   "kasse": "0 fl",
+   "keller": "4/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1601 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 16/16 Fass Stellhefe 25 % Stellhefe aus dem Gärbottich nehmen Mit Weizen gestreckt",
+   "sudAktiv": 6
+  },
+  {
+   "w": 60,
+   "kopf": "SCHEIDING=1602 | KASSE=−14 fl | HOPFEN=1 | GEWÖLBE=16/24 Fass | WOCHE=1/30 | CHRONIK=42 | BUCH=184",
+   "kasse": "−14 fl",
+   "keller": "16/24 Fass",
+   "roh": "1",
+   "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht −0,8×)",
+   "sudmarke": "DER SUD · 1602 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 0
+  },
+  {
+   "w": 61,
+   "kopf": "GILBHART=1602 | KASSE=−14 fl | HOPFEN=1 | GEWÖLBE=16/24 Fass | WOCHE=2/30 | CHRONIK=42 | BUCH=185",
+   "kasse": "−14 fl",
+   "keller": "16/24 Fass",
+   "roh": "1",
+   "deckung": null,
+   "sudmarke": "DER SUD · 1602 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+   "sudAktiv": 5
+  }
+ ],
+ "schluss": {
+  "kopf": "GILBHART=1602 | KASSE=−14 fl | HOPFEN=1 | GEWÖLBE=16/24 Fass | WOCHE=3/30 | CHRONIK=42 | BUCH=187",
+  "sudmarke": "DER SUD · 1602 Rein nach dem Gebot · Kellergärung im Felsenkeller Gärkeller 0/16 Fass Stellhefe 25 % Stellhefe vom Fass schöpfen Mit Weizen gestreckt",
+  "deckung": "nächster Zug: Freitrunk zur Kirchweih geben — 18 fl (Kasse reicht −0,8×)",
+  "gaerband": "Kein Gärbottich steht an. Was die Pfanne diese Woche ansetzt, kommt von selbst hierher."
+ }
+}

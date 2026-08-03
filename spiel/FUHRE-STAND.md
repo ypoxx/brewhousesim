@@ -4,9 +4,11 @@
 je 200 Wochen, 4 gut geführte Läufe über je 130 Wochen, 3 Läufe bis zum Tod des Hauses, alle
 vier Epochen, 1600×1000 und 2752×1536, echte Mausklicks auf mit `elementFromPoint` geprüften
 Koordinaten. Keine Zeile aus dem Quelltext, außer wo eine Zeilennummer genannt ist.
-Bilder: [`werkbank/schuss/fuhre-stand-e3.png`](../werkbank/schuss/fuhre-stand-e3.png) (1887,
-laufende Partie), [`fuhre-stand-e1-ende.png`](../werkbank/schuss/fuhre-stand-e1-ende.png)
-(Schlussblatt). Keine Konsolenfehler in irgendeinem Lauf.*
+Bilder: `fuhre-stand-e3.png` (1887, laufende Partie) und `fuhre-stand-e1-ende.png`
+(Schlussblatt) lagen unter `werkbank/schuss/`; Belegbilder wandern seit dem
+3. August 2026 nicht mehr in die Historie (siehe `.gitignore`). Nachzustellen mit
+`node werkbank/schuss.mjs "http://127.0.0.1:8899/spiel/?epoche=3&saat=1350"`.
+Keine Konsolenfehler in irgendeinem Lauf.*
 
 ## 1 — Was am Ende steht
 

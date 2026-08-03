@@ -1,0 +1,371 @@
+{
+ "e1": {
+  "antragStand": {
+   "jahr": 1353,
+   "woche": 7,
+   "deckung": "0",
+   "deckungText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf  (Kasse reicht 0,0×)",
+   "naechster": {
+    "was": "Ablösung Klosterschenke Obernberg",
+    "preis": 42,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   }
+  },
+  "ende": "pfanne-zurueckgegeben",
+  "kasse": [
+   56,
+   56
+  ],
+  "buch": [
+   237,
+   237
+  ],
+  "chronik": [
+   54,
+   54
+  ],
+  "deckung": {
+   "wert": "1.33",
+   "text": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf  (Kasse reicht 1,3×)",
+   "sichtbar": false,
+   "imText": false
+  },
+  "zuege": 97,
+  "offen": 32,
+  "offenUndSichtbar": 32,
+  "offenUndFrei": 14,
+  "freieNamen": [
+   "klang:ton",
+   "kern:chronik",
+   "kern:protokoll",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-zurueckgegeben-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen"
+  ],
+  "offeneNamen": [
+   "gegner:oeffnen:adler",
+   "gegner:abloesen:pfarrhof",
+   "gegner:hinhalten:pfarrhof",
+   "gegner:abloesen:brueckenwirt",
+   "gegner:hinhalten:brueckenwirt",
+   "gegner:abloesen:faehrhaus",
+   "gegner:hinhalten:faehrhaus",
+   "gegner:abloesen:obernberg",
+   "gegner:hinhalten:obernberg",
+   "gegner:beschwerde-bild",
+   "stadt:marke:gegner-marktplatz",
+   "stadt:marke:fuhre-lindenhof",
+   "stadt:marke:fuhre-marktplatz",
+   "stadt:marke:fuhre-muehle",
+   "stadt:marke:fuhre-bruecke-unten",
+   "stadt:marke:fuhre-fluss",
+   "stadt:marke:fuhre-bruecke-oben",
+   "klang:ton",
+   "kern:chronik",
+   "kern:protokoll",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-zurueckgegeben-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen",
+   "fuhre:wiederanfang"
+  ],
+  "gebucht": [],
+  "lage": 0,
+  "fehler": []
+ },
+ "e2": {
+  "antragStand": {
+   "jahr": 1603,
+   "woche": 7,
+   "deckung": "0.65",
+   "deckungText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 189 fl  (Kasse reicht 0,6×)",
+   "naechster": {
+    "was": "Ablösung Pfarrschenke St. Michael",
+    "preis": 189,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   }
+  },
+  "ende": "gerechtigkeit-verkauft",
+  "kasse": [
+   718,
+   718
+  ],
+  "buch": [
+   240,
+   240
+  ],
+  "chronik": [
+   47,
+   47
+  ],
+  "deckung": {
+   "wert": "3.8",
+   "text": "nächster Zug: Ablösung Pfarrschenke St. Michael — 189 fl  (Kasse reicht 3,8×)",
+   "sichtbar": false,
+   "imText": false
+  },
+  "zuege": 102,
+  "offen": 34,
+  "offenUndSichtbar": 34,
+  "offenUndFrei": 14,
+  "freieNamen": [
+   "kern:chronik",
+   "kern:protokoll",
+   "klang:ton",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-verkauft-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen"
+  ],
+  "offeneNamen": [
+   "gegner:oeffnen:adler",
+   "gegner:abloesen:lindenhof",
+   "gegner:hinhalten:lindenhof",
+   "gegner:abloesen:ochse",
+   "gegner:hinhalten:ochse",
+   "gegner:abloesen:pfarrhof",
+   "gegner:hinhalten:pfarrhof",
+   "gegner:abloesen:brueckenwirt",
+   "gegner:hinhalten:brueckenwirt",
+   "gegner:abloesen:hirsch",
+   "gegner:hinhalten:hirsch",
+   "gegner:beschwerde-bild",
+   "stadt:marke:gegner-marktplatz",
+   "stadt:marke:fuhre-lindenhof",
+   "stadt:marke:fuhre-marktplatz",
+   "stadt:marke:fuhre-muehle",
+   "stadt:marke:fuhre-bruecke-unten",
+   "stadt:marke:fuhre-fluss",
+   "stadt:marke:fuhre-bruecke-oben",
+   "kern:chronik",
+   "kern:protokoll",
+   "klang:ton",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-verkauft-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen",
+   "fuhre:wiederanfang"
+  ],
+  "gebucht": [],
+  "lage": 0,
+  "fehler": []
+ },
+ "e3": {
+  "antragStand": {
+   "jahr": 1887,
+   "woche": 6,
+   "deckung": "1.81",
+   "deckungText": "nächster Zug: Ablösung Mühlschenke — 4.143 M  (Kasse reicht 1,8×)",
+   "naechster": {
+    "was": "Ablösung Mühlschenke",
+    "preis": 4143,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   }
+  },
+  "ende": "an-aktienbrauerei-verkauft",
+  "kasse": [
+   22061,
+   22061
+  ],
+  "buch": [
+   248,
+   248
+  ],
+  "chronik": [
+   59,
+   59
+  ],
+  "deckung": {
+   "wert": "5.32",
+   "text": "nächster Zug: Ablösung Mühlschenke — 4.143 M  (Kasse reicht 5,3×)",
+   "sichtbar": false,
+   "imText": false
+  },
+  "zuege": 107,
+  "offen": 33,
+  "offenUndSichtbar": 33,
+  "offenUndFrei": 14,
+  "freieNamen": [
+   "kern:chronik",
+   "kern:protokoll",
+   "klang:ton",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-geschluckt-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen"
+  ],
+  "offeneNamen": [
+   "gegner:oeffnen:adler",
+   "gegner:abloesen:lindenhof",
+   "gegner:hinhalten:lindenhof",
+   "gegner:abloesen:ochse",
+   "gegner:hinhalten:ochse",
+   "gegner:abloesen:torschenke",
+   "gegner:hinhalten:torschenke",
+   "gegner:abloesen:muehlwirt",
+   "gegner:hinhalten:muehlwirt",
+   "gegner:abloesen:brueckenwirt",
+   "gegner:hinhalten:brueckenwirt",
+   "gegner:beschwerde-bild",
+   "stadt:marke:fuhre-lindenhof",
+   "stadt:marke:fuhre-marktplatz",
+   "stadt:marke:fuhre-muehle",
+   "stadt:marke:fuhre-bruecke-unten",
+   "stadt:marke:fuhre-fluss",
+   "stadt:marke:fuhre-bahnhof",
+   "kern:chronik",
+   "kern:protokoll",
+   "klang:ton",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-geschluckt-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen",
+   "fuhre:wiederanfang"
+  ],
+  "gebucht": [],
+  "lage": 0,
+  "fehler": []
+ },
+ "e4": {
+  "antragStand": {
+   "jahr": 1973,
+   "woche": 5,
+   "deckung": "0.78",
+   "deckungText": "nächster Zug: Ablösung Schenke am Tor — 32.400 DM  (Kasse reicht 0,8×)",
+   "naechster": {
+    "was": "Ablösung Schenke am Tor",
+    "preis": 32400,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   }
+  },
+  "ende": "marke-verkauft",
+  "kasse": [
+   167319,
+   167319
+  ],
+  "buch": [
+   292,
+   292
+  ],
+  "chronik": [
+   75,
+   75
+  ],
+  "deckung": {
+   "wert": "5.16",
+   "text": "nächster Zug: Ablösung Schenke am Tor — 32.400 DM  (Kasse reicht 5,2×)",
+   "sichtbar": false,
+   "imText": false
+  },
+  "zuege": 107,
+  "offen": 34,
+  "offenUndSichtbar": 34,
+  "offenUndFrei": 14,
+  "freieNamen": [
+   "kern:chronik",
+   "kern:protokoll",
+   "klang:ton",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-marke-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen"
+  ],
+  "offeneNamen": [
+   "gegner:oeffnen:adler",
+   "gegner:oeffnen:konzern",
+   "gegner:abloesen:lindenhof",
+   "gegner:hinhalten:lindenhof",
+   "gegner:abloesen:torschenke",
+   "gegner:hinhalten:torschenke",
+   "gegner:abloesen:muehlwirt",
+   "gegner:hinhalten:muehlwirt",
+   "gegner:abloesen:brueckenwirt",
+   "gegner:hinhalten:brueckenwirt",
+   "gegner:abloesen:bahnhofswirt",
+   "gegner:hinhalten:bahnhofswirt",
+   "gegner:beschwerde-bild",
+   "stadt:marke:fuhre-lindenhof",
+   "stadt:marke:fuhre-marktplatz",
+   "stadt:marke:fuhre-muehle",
+   "stadt:marke:fuhre-bruecke-unten",
+   "stadt:marke:fuhre-fluss",
+   "stadt:marke:fuhre-bahnhof",
+   "kern:chronik",
+   "kern:protokoll",
+   "klang:ton",
+   "stadt:reiter:gegner-amort-gg-band",
+   "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "stadt:reiter:sud-sud-brett",
+   "stadt:reiter:name-nm-band",
+   "stadt:reiter:fuhre-blatt-fu-ende-marke-fu-schlussblatt",
+   "stadt:reiter:erbe-blatt-erb-buch",
+   "stadt:ortsmarken",
+   "stadt:alles-zuklappen",
+   "fuhre:wiederanfang"
+  ],
+  "gebucht": [],
+  "lage": 0,
+  "fehler": []
+ }
+}

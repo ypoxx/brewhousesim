@@ -1,0 +1,128 @@
+{
+ "url": "http://127.0.0.1:8899/spiel/?epoche=2&saat=1350",
+ "modus": "ja",
+ "spur": [
+  {
+   "i": 0,
+   "jahr": 1600,
+   "kasse": 640,
+   "aktiv": 78
+  },
+  {
+   "i": 30,
+   "jahr": 1601,
+   "kasse": 295,
+   "aktiv": 65
+  },
+  {
+   "i": 60,
+   "jahr": 1602,
+   "kasse": 213,
+   "aktiv": 65
+  },
+  {
+   "i": 90,
+   "jahr": 1603,
+   "kasse": 134,
+   "aktiv": 64
+  },
+  {
+   "i": 96,
+   "tat": "ausgang:ja",
+   "r": "ok"
+  },
+  {
+   "i": 96,
+   "tat": "weiter=aus",
+   "jahr": 1603,
+   "weiter": "WEITER [an]"
+  }
+ ],
+ "antragBild": {
+  "i": 96,
+  "jahr": 1603,
+  "woche": 7,
+  "kasse": 122,
+  "text": "ST. MICHAELGASTHOF LINDENHOFBRAUHAUSZUM ANKERGEGR. 1350 Vorsprung: 2 Dinge · wirbt 2 Wochen kürzerBraustatt AdlerSebastian Feist · streitbar · hält 5 Häuser51Züge1.730 flKasse15 flsein PreisBürgermeisterAdler-Ausschank am MarktLIN · PACablösen 756 flFass in die Lade1 Fass statt GeldOCH · PACablösen 588 flFass in die Lade1 Fass statt GeldPFA · ZUNablösen 189 flFass in die Lade1 Fass statt GeldBRU · ZUNablösen 297 flFass in die Lade1 Fass statt GeldHIR · PACablösen 420 flFass in die Lade1 Fass statt GeldAnzeige bei der Zunftladekostet kein Geld · vier Ansehengegen Gasthof LindenhofOhne dich geschehen51 ZügeDas Haus gegenüberGebunden wird hier mit Recht und Gunst — durch Zunft und PachtAblösung 189 fl bis 756 flAnzeige bei der Zunftladekostet kein Geld · vier Ansehen · einmal im Braujahr1602 W29Ein grauer Wagen des Hauses gegenüber fährt zum Brückenwirt.zeigen1602 W23Ein grauer Wagen des Adlers rollt zum Gasthof Lindenhof.zeigen1602 W17Die Zunft schreibt Pfarrschenke St. Michael dem Adler zu, mit Brief und Siegel der Lade. Dafür wird Fährhaus am Fluss fallengelassen — die Adresse ist frei.zeigenumkämpftAblösung Pfarrschenke St. Michael — 189 fl ·Kasse reicht 0,6×DER SUD · 1603Rein nac"
+ },
+ "schluss": {
+  "jahr": 1603,
+  "woche": 7,
+  "epoche": 2,
+  "ende": true,
+  "endgrund": "gerechtigkeit-verkauft",
+  "kasse": 718,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Haus zum Anker verkauft seine Braugerechtigkeit mitsamt den Sudtagen an den Mühlbräu. Vor der Lade wird abgehandelt, das Siegel kommt darunter, und die Summe wird bar ausgezahlt. Der Anker bleibt ein Haus und hört auf, eine Brauerei zu sein: der Mühlbräu braut künftig auf Ankers Sudtage und schenkt sein Bier im Anker aus. Der Name über der Tür bleibt stehen. Das Bier darunter ist ein fremdes. Ausgezahlt: 596 fl."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 75,
+  "sichtbar": 97,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBRAUHAUSZUM ANKERGEGR. 1350",
+   "gegner :: Vorsprung: 2 Dinge · wirbt 2 Wochen kürzerBraustatt AdlerSebastian Feist · streitbar · hält 5 Häuser51Züge1.730 flKasse15 flsein PreisBürgermeisterAdler-Ausschank am MarktLIN · PACablösen 756 flFass in die Lade1 Fass statt GeldOCH · PACablösen 588 flFass in die Lade1 Fass statt GeldPFA · ZUNablösen 189 flFass in die Lade1 Fass statt GeldBRU · ZUNablösen 297 flFass in die Lade1 Fass statt GeldHIR ·",
+   "sud :: DER SUD · 1603Rein nach dem Gebot · Obergärig, warm geführthöchstens BraunbierGärkeller 0/16 FassStellhefe 25 %Stellhefe vom Fass schöpfenMit Weizen gestrecktKellergärung im Felsenkeller−260 fl",
+   "name :: ",
+   "stadt :: Adler-Ausschank am MarLINOCHMUEBRUFAEOBE",
+   "fuhre :: LINOCHMUEBRUFAEOBEDIE HÄUSERwollen 0 · im Keller liegen 5 FassDAS BRAUHAUS ZUM ANKER IST ZU — 1603Die Zunft streicht das Haus zum Anker aus der Reihe: seit zwölf Wochen hat kein Wirt der Stadt ein Fass genommen. Wer nicht liefert, braut nicht.Das Schlussblatt aufschlagenDAS SCHULDBUCH DER WIRTEim Holz bis Michaeli: 0 flDie Ordnung kennt das Ziel: geliefert wird das Jahr über, gerechnet wird zu Mic",
+   "sud :: DAS SUDHAUS · 1603Die offene Pfanne unter dem KaminRein oder gestreckt — und warm oder kalt?Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer.DIE SCHÜTTUNGWas kommt in den Sud?Gerste ist teuer, Weizen ist verboten, Hafer ist billig un",
+   "klang :: ♪",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Die Zunft bis 1605▾0Ruf von 100genommen bis 1605Bekanntheit0Einlösung31Gleiches Bier, 100 Fass, zwei Preiseohne das Zeichen 2.265 flmit dem Zeichen 2.265 fl+ 0,0 im Hundert · 0 fl mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht.AUFGELD AUF DEN ANKER — was der Ruf eingebracht hatdiese Woche0 flBraujahr0 flseit 16000 flNoch ",
+   "erbe :: DAS ERBEII. HandVeit Bruckner · streitbaram Haus 0 · an der Person 0DIE STUNDE · Feder 1,15×nahm 2 · 8 FassNachschrift · 2 Häuser−203 fl",
+   "kern :: NEBELUNG1603Kasse718 flHopfen1Gewölbe5/24 FassWoche7/30Chronik47Buch240Brauhaus zum Anker · 1603/04 · Veit Bruckner, streitbar · Die OrdnungENDEnächster Zug: Ablösung Pfarrschenke St. Michael — 189 fl (Kasse reicht 3,8×)",
+   "stadt :: OHNE DICH GESCHEHEN51 ZügeDIE HÄUSERwollen 0 · im Keller liegen 5 FassSUDORDNUNGauf der Tafel im SudhausDAS GEWÖLBE5 von 24 Fass · 5 reifPFERDEFUHRWERK0 von 8 Fass · 0 von 5 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Die Zunft bis 1605Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken7 auf dem PflockStadt zeigenBAUHOFWIEDERKAUF6 Bauten im Hof · gebaut wird einmal, es steht auc",
+   "fuhre :: Die Gerechtigkeit geht an den Mühlbräu · 1603Das Haus zum Anker verkauft seine Braugerechtigkeit mitsamt den Sudtagen an den Mühlbräu. Vor der Lade wird abgehandelt, das Siegel kommt darunter, und die Summe wird bar ausgezahlt.Der Anker bleibt ein Haus und hört auf, eine Brauerei zu sein: der Mühlbräu braut künftig auf Ankers Sudtage und schenkt sein Bier im Anker aus. Der Name über der Tür bleibt",
+   "preis :: Michaelitafel 1603 · 5 AngeboteBierordnung je Fass23 flAnschlag 16032.800 flbilligstes Angebot180 flKasse reicht dafür3,99×1606 · Quartierlast20 flChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Verbriefen im Briefbuch der Stadt, unter Siegel · II. HandVeit Bruckner · streitbar„Gewinnt Prozesse und verliert Freunde.\"Ficht die Bindung des Gegners an, wo sie nur an einer Person hängt.Ein Brief mit Siegel hängt am Anwesen und wandert mit ihm. Eine Gevatterschaft hängt an einem Menschen.Barbara Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0",
+   "sud :: DAS SUDBUCH23 Sude · 48 FassSudbuch aufschlagen"
+  ]
+ },
+ "schlussAuf": "FEHLER",
+ "nach": null,
+ "nochmal": "aus",
+ "danach": {
+  "jahr": 1603,
+  "woche": 7,
+  "epoche": 2,
+  "ende": true,
+  "endgrund": "gerechtigkeit-verkauft",
+  "kasse": 718,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Haus zum Anker verkauft seine Braugerechtigkeit mitsamt den Sudtagen an den Mühlbräu. Vor der Lade wird abgehandelt, das Siegel kommt darunter, und die Summe wird bar ausgezahlt. Der Anker bleibt ein Haus und hört auf, eine Brauerei zu sein: der Mühlbräu braut künftig auf Ankers Sudtage und schenkt sein Bier im Anker aus. Der Name über der Tür bleibt stehen. Das Bier darunter ist ein fremdes. Ausgezahlt: 596 fl."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 75,
+  "sichtbar": 97,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBRAUHAUSZUM ANKERGEGR. 1350",
+   "gegner :: Vorsprung: 2 Dinge · wirbt 2 Wochen kürzerBraustatt AdlerSebastian Feist · streitbar · hält 5 Häuser51Züge1.730 flKasse15 flsein PreisBürgermeisterAdler-Ausschank am MarktLIN · PACablösen 756 flFass in die Lade1 Fass statt GeldOCH · PACablösen 588 flFass in die Lade1 Fass statt GeldPFA · ZUNablösen 189 flFass in die Lade1 Fass statt GeldBRU · ZUNablösen 297 flFass in die Lade1 Fass statt GeldHIR ·",
+   "sud :: DER SUD · 1603Rein nach dem Gebot · Obergärig, warm geführthöchstens BraunbierGärkeller 0/16 FassStellhefe 25 %Stellhefe vom Fass schöpfenMit Weizen gestrecktKellergärung im Felsenkeller−260 fl",
+   "name :: ",
+   "stadt :: Adler-Ausschank am MarLINOCHMUEBRUFAEOBE",
+   "fuhre :: LINOCHMUEBRUFAEOBEDIE HÄUSERwollen 0 · im Keller liegen 5 FassDAS BRAUHAUS ZUM ANKER IST ZU — 1603Die Zunft streicht das Haus zum Anker aus der Reihe: seit zwölf Wochen hat kein Wirt der Stadt ein Fass genommen. Wer nicht liefert, braut nicht.Das Schlussblatt aufschlagenDAS SCHULDBUCH DER WIRTEim Holz bis Michaeli: 0 flDie Ordnung kennt das Ziel: geliefert wird das Jahr über, gerechnet wird zu Mic",
+   "sud :: DAS SUDHAUS · 1603Die offene Pfanne unter dem KaminRein oder gestreckt — und warm oder kalt?Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer.DIE SCHÜTTUNGWas kommt in den Sud?Gerste ist teuer, Weizen ist verboten, Hafer ist billig un",
+   "klang :: ♪",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Die Zunft bis 1605▾0Ruf von 100genommen bis 1605Bekanntheit0Einlösung31Gleiches Bier, 100 Fass, zwei Preiseohne das Zeichen 2.265 flmit dem Zeichen 2.265 fl+ 0,0 im Hundert · 0 fl mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht.AUFGELD AUF DEN ANKER — was der Ruf eingebracht hatdiese Woche0 flBraujahr0 flseit 16000 flNoch ",
+   "erbe :: DAS ERBEII. HandVeit Bruckner · streitbaram Haus 0 · an der Person 0DIE STUNDE · Feder 1,15×nahm 2 · 8 FassNachschrift · 2 Häuser−203 fl",
+   "kern :: NEBELUNG1603Kasse718 flHopfen1Gewölbe5/24 FassWoche7/30Chronik47Buch240Brauhaus zum Anker · 1603/04 · Veit Bruckner, streitbar · Die OrdnungENDEnächster Zug: Ablösung Pfarrschenke St. Michael — 189 fl (Kasse reicht 3,8×)",
+   "stadt :: OHNE DICH GESCHEHEN51 ZügeDIE HÄUSERwollen 0 · im Keller liegen 5 FassSUDORDNUNGauf der Tafel im SudhausDAS GEWÖLBE5 von 24 Fass · 5 reifPFERDEFUHRWERK0 von 8 Fass · 0 von 5 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Die Zunft bis 1605Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken7 auf dem PflockStadt zeigenBAUHOFWIEDERKAUF6 Bauten im Hof · gebaut wird einmal, es steht auc",
+   "fuhre :: Die Gerechtigkeit geht an den Mühlbräu · 1603Das Haus zum Anker verkauft seine Braugerechtigkeit mitsamt den Sudtagen an den Mühlbräu. Vor der Lade wird abgehandelt, das Siegel kommt darunter, und die Summe wird bar ausgezahlt.Der Anker bleibt ein Haus und hört auf, eine Brauerei zu sein: der Mühlbräu braut künftig auf Ankers Sudtage und schenkt sein Bier im Anker aus. Der Name über der Tür bleibt",
+   "preis :: Michaelitafel 1603 · 5 AngeboteBierordnung je Fass23 flAnschlag 16032.800 flbilligstes Angebot180 flKasse reicht dafür3,99×1606 · Quartierlast20 flChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Verbriefen im Briefbuch der Stadt, unter Siegel · II. HandVeit Bruckner · streitbar„Gewinnt Prozesse und verliert Freunde.\"Ficht die Bindung des Gegners an, wo sie nur an einer Person hängt.Ein Brief mit Siegel hängt am Anwesen und wandert mit ihm. Eine Gevatterschaft hängt an einem Menschen.Barbara Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0",
+   "sud :: DAS SUDBUCH23 Sude · 48 FassSudbuch aufschlagen"
+  ]
+ },
+ "fehler": []
+}

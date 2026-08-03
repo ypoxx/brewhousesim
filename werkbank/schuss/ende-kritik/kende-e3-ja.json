@@ -1,0 +1,128 @@
+{
+ "url": "http://127.0.0.1:8899/spiel/?epoche=3&saat=1350",
+ "modus": "ja",
+ "spur": [
+  {
+   "i": 0,
+   "jahr": 1884,
+   "kasse": 14250,
+   "aktiv": 81
+  },
+  {
+   "i": 30,
+   "jahr": 1885,
+   "kasse": 10626,
+   "aktiv": 68
+  },
+  {
+   "i": 60,
+   "jahr": 1886,
+   "kasse": 9037,
+   "aktiv": 84
+  },
+  {
+   "i": 90,
+   "jahr": 1887,
+   "kasse": 7631,
+   "aktiv": 68
+  },
+  {
+   "i": 95,
+   "tat": "ausgang:ja",
+   "r": "ok"
+  },
+  {
+   "i": 95,
+   "tat": "weiter=aus",
+   "jahr": 1887,
+   "weiter": "WEITER [an]"
+  }
+ ],
+ "antragBild": {
+  "i": 95,
+  "jahr": 1887,
+  "woche": 6,
+  "kasse": 7511,
+  "text": "ST. MICHAELGASTHOF LINDENHOFBAHNHOFBRAUHAUSZUM ANKERGEGR. 1350 Vorsprung: 3 Dinge · wirbt 3 Wochen kürzerBrauerei AdlerKommerzienrat Alois Feist · gelehrt · hält 5 Häuser46Züge−4.900 MKasse30 Msein Preisdiese Woche 1 Zug ohne dichnimmt die HypothekW6LIN · HYPablösen 38.172 MFreibier3,0 hl statt GeldOCH · VERablösen 7.702 MFreibier3,0 hl statt GeldTOR · DEPablösen 6.846 MFreibier3,0 hl statt GeldMUE · VERablösen 4.143 MFreibier3,0 hl statt GeldBRU · VERablösen 4.956 MFreibier3,0 hl statt GeldDem Wirt die Restschuld nachrechnenkostet kein Geld · vier Ansehengegen Gasthof LindenhofOhne dich geschehen46 Zügediese Woche 1Das Haus gegenüberGebunden wird jetzt mit Der Vertrag — Darlehen und AblösesummeAblösung 4.143 M bis 38.172 MDem Wirt die Restschuld nachrechnenkostet kein Geld · vier Ansehen · einmal im Braujahr1887 W6Der Adler stockt das Darlehen beim Gasthof Lindenhof um 3.851 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 38.172 M.zeigen1886 W30Der Adler stockt das Darlehen beim Gasthof Lindenhof um 4.420 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 37.841 M.zeigen1886 W27Der Adler stockt das Darlehen beim Brückenwirt um 826 M auf. Die Ablösesumme steigt. Ablösen kostet"
+ },
+ "schluss": {
+  "jahr": 1887,
+  "woche": 6,
+  "epoche": 3,
+  "ende": true,
+  "endgrund": "an-aktienbrauerei-verkauft",
+  "kasse": 22061,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Brauhaus zum Anker wird im Ganzen an die Aktienbrauerei verkauft: Grundstück, Sudhaus, Kühlmaschine, Fasspark und Kundenliste, bar gegen Löschung der Wechsel. Der Schriftzug bleibt zehn Jahre am Giebel, weil er dem Käufer etwas wert ist. Gebraut wird ab dem nächsten Sud in der großen Anlage am Bahnhof; hier steht nur noch das Absatzlager mit zwei Mann und einem Rollwagen. Ausgezahlt: 14.550 M."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 80,
+  "sichtbar": 102,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBAHNHOFBRAUHAUSZUM ANKERGEGR. 1350",
+   "gegner :: Vorsprung: 3 Dinge · wirbt 3 Wochen kürzerBrauerei AdlerKommerzienrat Alois Feist · gelehrt · hält 5 Häuser46Züge−4.900 MKasse30 Msein Preisdiese Woche 1 Zug ohne dichnimmt die HypothekW6LIN · HYPablösen 38.172 MFreibier3,0 hl statt GeldOCH · VERablösen 7.702 MFreibier3,0 hl statt GeldTOR · DEPablösen 6.846 MFreibier3,0 hl statt GeldMUE · VERablösen 4.143 MFreibier3,0 hl statt GeldBRU · VERablösen",
+   "sud :: DER SUD · 1887Natureis aus dem Fluss · Betriebshefe aus dem Bottichhöchstens LagerbierGärkeller 24/72 hlFührung 25 %Hefe im Gärbottich aberntenOhne Kühlung durchgären lassenReinzuchthefe nach Hansen−3.400 M",
+   "name :: ",
+   "stadt :: LINOCHMUEBRUFAEBHF",
+   "fuhre :: LINOCHMUEBRUFAEBHFDIE HÄUSERwollen 0,0 · im Keller liegen 24 hlDAS BRAUHAUS ZUM ANKER IST ZU — 1887Der Malzhändler kündigt die Wechsel, die Bank zieht die Linie ein: seit zehn Wochen geht kein Fass über die Rampe. Ein Lager ist kein Absatz.Das Schlussblatt aufschlagenDAS KUNDENKONTOim Holz bis Michaeli: 0 MDie Rechnung läuft, das Bier ist längst getrunken. Der Jahresabschluss der Wirtschaften fäll",
+   "sud :: DAS SUDWERK · 1887Die Sudpfanne unter dem KupferhelmEis oder Maschine?Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr.DIE KÄLTEWoher kommt die Kälte?Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse",
+   "klang :: ♪",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Das Amtsgericht bis 1887▾0Ruf von 100genommen bis 1887Bekanntheit2Einlösung0Gleiches Bier, 100 hl, zwei Preiseohne das Zeichen 5.162 Mmit dem Zeichen 5.162 M+ 0,0 im Hundert · 0 M mehr für dieselbe MengeAUFGELD AUF DIE MARKE — was der Ruf eingebracht hatdiese Woche0 MBraujahr0 Mseit 18840 MNoch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu se",
+   "erbe :: DAS ERBEII. HandKaroline Bruckner · gelehrtam Haus 0 · an der Person 0DIE STUNDE · Feder 0,85×nahm 1 · 41 hlNachschrift · 1 Haus−5.712 M",
+   "kern :: NOVEMBER1887Kasse22.061 MHopfen0Eiskeller24/135 hlWoche6/30Chronik59Buch248Brauhaus zum Anker · 1887/88 · Karoline Bruckner, gelehrt · Die MaschineENDEnächster Zug: Ablösung Mühlschenke — 4.143 M (Kasse reicht 5,3×)",
+   "stadt :: OHNE DICH GESCHEHEN46 ZügeDIE HÄUSERwollen 0,0 · im Keller liegen 24 hlSUDPLANam schwarzen Brett der MälzereiDER EISKELLER24 von 135 hl · 24 reifEIGENE ROLLFUHRE0,0 von 12 hl · 0 von 10 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Das Amtsgericht bis 1887Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken6 auf dem PflockStadt zeigenBAUHOFHYPOTHEK7 Bauten im Hof · gebaut wird einm",
+   "fuhre :: Die Aktienbrauerei kauft das Haus · 1887Das Brauhaus zum Anker wird im Ganzen an die Aktienbrauerei verkauft: Grundstück, Sudhaus, Kühlmaschine, Fasspark und Kundenliste, bar gegen Löschung der Wechsel.Der Schriftzug bleibt zehn Jahre am Giebel, weil er dem Käufer etwas wert ist. Gebraut wird ab dem nächsten Sud in der großen Anlage am Bahnhof; hier steht nur noch das Absatzlager mit zwei Mann und",
+   "preis :: Michaelitafel 1887 · 5 AngeboteBierordnung je hl52 MAnschlag 188742.585 Mbilligstes Angebot2.000 MKasse reicht dafür11,03×1890 · Kanal- und Wasseranschluss230 MChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Eintragen ins Hypothekenbuch · II. HandKaroline Bruckner · gelehrt„Liest, misst, probiert. Braucht länger.\"Kennt den Jahreswert jeder Bindung und nennt ihn.Was im Hypothekenbuch steht, geht mit dem Anwesen über. Was am Namen des Wirts hängt, geht mit dem Wirt.Wilhelmine Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0, an der Person 1 → 0, aus dem",
+   "sud :: DAS SUDBUCH31 Sude · 708 hlSudbuch aufschlagen"
+  ]
+ },
+ "schlussAuf": "FEHLER",
+ "nach": null,
+ "nochmal": "aus",
+ "danach": {
+  "jahr": 1887,
+  "woche": 6,
+  "epoche": 3,
+  "ende": true,
+  "endgrund": "an-aktienbrauerei-verkauft",
+  "kasse": 22061,
+  "antragDa": false,
+  "uebergabeDa": false,
+  "chronikEnde": [
+   "Das Brauhaus zum Anker wird im Ganzen an die Aktienbrauerei verkauft: Grundstück, Sudhaus, Kühlmaschine, Fasspark und Kundenliste, bar gegen Löschung der Wechsel. Der Schriftzug bleibt zehn Jahre am Giebel, weil er dem Käufer etwas wert ist. Gebraut wird ab dem nächsten Sud in der großen Anlage am Bahnhof; hier steht nur noch das Absatzlager mit zwei Mann und einem Rollwagen. Ausgezahlt: 14.550 M."
+  ],
+  "weiter": "ENDE [AUS]",
+  "aktiv": 80,
+  "sichtbar": 102,
+  "schlusstext": [
+   "stadt :: ",
+   "stadt :: ST. MICHAELGASTHOF LINDENHOFBAHNHOFBRAUHAUSZUM ANKERGEGR. 1350",
+   "gegner :: Vorsprung: 3 Dinge · wirbt 3 Wochen kürzerBrauerei AdlerKommerzienrat Alois Feist · gelehrt · hält 5 Häuser46Züge−4.900 MKasse30 Msein Preisdiese Woche 1 Zug ohne dichnimmt die HypothekW6LIN · HYPablösen 38.172 MFreibier3,0 hl statt GeldOCH · VERablösen 7.702 MFreibier3,0 hl statt GeldTOR · DEPablösen 6.846 MFreibier3,0 hl statt GeldMUE · VERablösen 4.143 MFreibier3,0 hl statt GeldBRU · VERablösen",
+   "sud :: DER SUD · 1887Natureis aus dem Fluss · Betriebshefe aus dem Bottichhöchstens LagerbierGärkeller 24/72 hlFührung 25 %Hefe im Gärbottich aberntenOhne Kühlung durchgären lassenReinzuchthefe nach Hansen−3.400 M",
+   "name :: ",
+   "stadt :: LINOCHMUEBRUFAEBHF",
+   "fuhre :: LINOCHMUEBRUFAEBHFDIE HÄUSERwollen 0,0 · im Keller liegen 24 hlDAS BRAUHAUS ZUM ANKER IST ZU — 1887Der Malzhändler kündigt die Wechsel, die Bank zieht die Linie ein: seit zehn Wochen geht kein Fass über die Rampe. Ein Lager ist kein Absatz.Das Schlussblatt aufschlagenDAS KUNDENKONTOim Holz bis Michaeli: 0 MDie Rechnung läuft, das Bier ist längst getrunken. Der Jahresabschluss der Wirtschaften fäll",
+   "sud :: DAS SUDWERK · 1887Die Sudpfanne unter dem KupferhelmEis oder Maschine?Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr.DIE KÄLTEWoher kommt die Kälte?Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse",
+   "klang :: ♪",
+   "gegner :: ",
+   "name :: DER RUF DES HAUSESGENOMMEN von Das Amtsgericht bis 1887▾0Ruf von 100genommen bis 1887Bekanntheit2Einlösung0Gleiches Bier, 100 hl, zwei Preiseohne das Zeichen 5.162 Mmit dem Zeichen 5.162 M+ 0,0 im Hundert · 0 M mehr für dieselbe MengeAUFGELD AUF DIE MARKE — was der Ruf eingebracht hatdiese Woche0 MBraujahr0 Mseit 18840 MNoch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu se",
+   "erbe :: DAS ERBEII. HandKaroline Bruckner · gelehrtam Haus 0 · an der Person 0DIE STUNDE · Feder 0,85×nahm 1 · 41 hlNachschrift · 1 Haus−5.712 M",
+   "kern :: NOVEMBER1887Kasse22.061 MHopfen0Eiskeller24/135 hlWoche6/30Chronik59Buch248Brauhaus zum Anker · 1887/88 · Karoline Bruckner, gelehrt · Die MaschineENDEnächster Zug: Ablösung Mühlschenke — 4.143 M (Kasse reicht 5,3×)",
+   "stadt :: OHNE DICH GESCHEHEN46 ZügeDIE HÄUSERwollen 0,0 · im Keller liegen 24 hlSUDPLANam schwarzen Brett der MälzereiDER EISKELLER24 von 135 hl · 24 reifEIGENE ROLLFUHRE0,0 von 12 hl · 0 von 10 HaltenDAS SUDHAUSzugeklapptDER RUF DES HAUSESGENOMMEN von Das Amtsgericht bis 1887Das Ende des Hausesliegt aufDas ErbezugeklapptOrtsmarken6 auf dem PflockStadt zeigenBAUHOFHYPOTHEK7 Bauten im Hof · gebaut wird einm",
+   "fuhre :: Die Aktienbrauerei kauft das Haus · 1887Das Brauhaus zum Anker wird im Ganzen an die Aktienbrauerei verkauft: Grundstück, Sudhaus, Kühlmaschine, Fasspark und Kundenliste, bar gegen Löschung der Wechsel.Der Schriftzug bleibt zehn Jahre am Giebel, weil er dem Käufer etwas wert ist. Gebraut wird ab dem nächsten Sud in der großen Anlage am Bahnhof; hier steht nur noch das Absatzlager mit zwei Mann und",
+   "preis :: Michaelitafel 1887 · 5 AngeboteBierordnung je hl52 MAnschlag 188742.585 Mbilligstes Angebot2.000 MKasse reicht dafür11,03×1890 · Kanal- und Wasseranschluss230 MChronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "gegner :: ",
+   "name :: ",
+   "erbe :: DAS ERBE — Eintragen ins Hypothekenbuch · II. HandKaroline Bruckner · gelehrt„Liest, misst, probiert. Braucht länger.\"Kennt den Jahreswert jeder Bindung und nennt ihn.Was im Hypothekenbuch steht, geht mit dem Anwesen über. Was am Namen des Wirts hängt, geht mit dem Wirt.Wilhelmine Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0, an der Person 1 → 0, aus dem",
+   "sud :: DAS SUDBUCH31 Sude · 708 hlSudbuch aufschlagen"
+  ]
+ },
+ "fehler": []
+}

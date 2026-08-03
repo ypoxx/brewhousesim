@@ -1,0 +1,356 @@
+{
+ "e1": {
+  "zu": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "ANSCHLAGTAFEL": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DER KELLER": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "OCHSENKARREN": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 5,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "sud-zettel amort": 3,
+    "DIV": 2
+   }
+  },
+  "auf": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "ANSCHLAGTAFEL": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DER KELLER": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "OCHSENKARREN": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 5,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "erb-buch blatt": 5
+   }
+  },
+  "fehler": []
+ },
+ "e2": {
+  "zu": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "SUDORDNUNG": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DAS GEWÖLBE": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "PFERDEFUHRWERK": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 10,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "DIV": 8,
+    "sud-zettel amort": 2
+   }
+  },
+  "auf": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "SUDORDNUNG": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DAS GEWÖLBE": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "PFERDEFUHRWERK": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 10,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "erb-buch blatt": 10
+   }
+  },
+  "fehler": []
+ },
+ "e3": {
+  "zu": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "SUDPLAN": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DER EISKELLER": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "HALBER WAGEN": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 10,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "DIV": 8,
+    "sud-zettel amort": 2
+   }
+  },
+  "auf": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "SUDPLAN": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DER EISKELLER": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "HALBER WAGEN": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 10,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "erb-buch blatt": 10
+   }
+  },
+  "fehler": []
+ },
+ "e4": {
+  "zu": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "SUDPLAN": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DIE TANKS": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "LASTZUG": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 6,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "sud-zettel amort": 1,
+    "SPAN": 1,
+    "wort": 1,
+    "DIV": 3
+   }
+  },
+  "auf": {
+   "blattDa": true,
+   "blattKlasse": "erb-leiste",
+   "blattRect": [
+    1037,
+    730,
+    845,
+    56
+   ],
+   "anteilBuehne": 2.5,
+   "bretter": {
+    "DIE HÄUSER": [
+     21,
+     126,
+     492,
+     736
+    ],
+    "SUDPLAN": [
+     526,
+     126,
+     445,
+     428
+    ],
+    "DIE TANKS": [
+     526,
+     562,
+     445,
+     300
+    ],
+    "LASTZUG": [
+     985,
+     562,
+     516,
+     300
+    ]
+   },
+   "laden": 6,
+   "ladenFrei": 0,
+   "ladenDecker": {
+    "erb-buch blatt": 6
+   }
+  },
+  "fehler": []
+ }
+}

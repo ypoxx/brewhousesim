@@ -1,0 +1,17 @@
+import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
+const b=await chromium.launch();
+const p=await b.newPage({viewport:{width:2752,height:1536}});
+await p.goto('http://127.0.0.1:8899/spiel/?epoche=2&saat=1350',{waitUntil:'networkidle'});
+await p.waitForTimeout(400);
+const k=async z=>{const e=await p.$(`button[data-zug="${z}"]`); if(!e||await e.isDisabled().catch(()=>1))return false;
+  await e.click().catch(()=>{}); await p.waitForTimeout(35); return true;};
+await k('stadt:reiter:erbe-blatt-erb-buch');
+for(let i=0;i<80;i++) await k('weiter');
+const st=await p.evaluate(()=>BRAUHAUS.erbe.stand());
+console.log('Haende:', st.haende.map(h=>`${h.nr}. ${h.name} / ${h.eigenschaft} / Feder ${h.feder} / ${h.form||'—'}`).join('\n         '));
+console.log('Leiste:', await p.evaluate(()=>document.querySelector('.erb-leiste').innerText.replace(/\s+/g,' ')));
+const buch=await p.evaluate(()=>{const q=document.querySelector('.erb-buch'); return q?q.innerText.replace(/\n+/g,' | '):null;});
+console.log('BUCH:', buch);
+await p.screenshot({path:'werkbank/schuss/erbe3/haende-e2.png'});
+console.log('lage', await p.evaluate(()=>BRAUHAUS.lage.length));
+await b.close();

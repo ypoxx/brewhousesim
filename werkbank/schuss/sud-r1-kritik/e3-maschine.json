@@ -1,0 +1,758 @@
+{
+ "epoche": 3,
+ "wochen": 62,
+ "stil": "sudwechsel:sud:kaelte:maschine@1",
+ "saat": "4242",
+ "fehler": [],
+ "angebot": [
+  {
+   "zug": "sud:zettel-anstich",
+   "mal": 62,
+   "aktiv": 60,
+   "getroffen": 0,
+   "texte": [
+    "Hefe im Gärbottich abernten",
+    "Hefe aus dem Fass abernten"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "mal": 62,
+   "aktiv": 62,
+   "getroffen": 0,
+   "texte": [
+    "Ohne Kühlung durchgären lassen"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "mal": 62,
+   "aktiv": 3,
+   "getroffen": 0,
+   "texte": [
+    "Reinzuchthefe nach Hansen −3.400 M"
+   ]
+  },
+  {
+   "zug": "sud:kaelte:natureis",
+   "mal": 62,
+   "aktiv": 0,
+   "getroffen": 60,
+   "texte": [
+    "Natureis aus dem Fluss"
+   ]
+  },
+  {
+   "zug": "sud:kaelte:warm",
+   "mal": 62,
+   "aktiv": 62,
+   "getroffen": 60,
+   "texte": [
+    "Ohne Kühlung durchgären lassen"
+   ]
+  },
+  {
+   "zug": "sud:kaelte:maschine",
+   "mal": 62,
+   "aktiv": 2,
+   "getroffen": 60,
+   "texte": [
+    "Lindesche Kältemaschine −9.800 M",
+    "Lindesche Kältemaschine"
+   ]
+  },
+  {
+   "zug": "sud:hefe:betrieb",
+   "mal": 62,
+   "aktiv": 0,
+   "getroffen": 60,
+   "texte": [
+    "Betriebshefe aus dem Bottich"
+   ]
+  },
+  {
+   "zug": "sud:hefe:reinzucht",
+   "mal": 62,
+   "aktiv": 3,
+   "getroffen": 60,
+   "texte": [
+    "Reinzuchthefe nach Hansen −3.400 M"
+   ]
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "mal": 62,
+   "aktiv": 22,
+   "getroffen": 60,
+   "texte": [
+    "Hefe im Gärbottich abernten · +8"
+   ]
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "mal": 62,
+   "aktiv": 54,
+   "getroffen": 60,
+   "texte": [
+    "Hefe aus dem Fass abernten · jüngstes Fass · +14"
+   ]
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "mal": 62,
+   "aktiv": 54,
+   "getroffen": 60,
+   "texte": [
+    "Hefe aus dem Fass abernten · ältestes Fass · +6"
+   ]
+  },
+  {
+   "zug": "sud:gaerraum",
+   "mal": 62,
+   "aktiv": 11,
+   "getroffen": 60,
+   "texte": [
+    "Gärbottich aufstellen · +60 hl −1.900 M"
+   ]
+  }
+ ],
+ "gewechselt": [
+  {
+   "w": 1,
+   "zug": "sud:kaelte:maschine",
+   "text": "Lindesche Kältemaschine −9.800 M",
+   "kasseVor": "13.780 M",
+   "kasseNach": "3.980 M",
+   "markeVor": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 66 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "markeNach": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 66 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M"
+  }
+ ],
+ "protokoll": [
+  {
+   "w": 0,
+   "kopf": "SEPTEMBER=1884 | KASSE=14.250 M | HOPFEN=120 | EISKELLER=11/135 hl | WOCHE=1/30 | CHRONIK=3 | BUCH=1",
+   "kasse": "14.250 M",
+   "keller": "11/135 hl",
+   "roh": "120",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 59,4×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 70 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 1,
+   "kopf": "OKTOBER=1884 | KASSE=13.780 M | HOPFEN=90 | EISKELLER=47/135 hl | WOCHE=2/30 | CHRONIK=3 | BUCH=5",
+   "kasse": "13.780 M",
+   "keller": "47/135 hl",
+   "roh": "90",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 57,4×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 66 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 2,
+   "kopf": "OKTOBER=1884 | KASSE=3.510 M | HOPFEN=60 | EISKELLER=83/135 hl | WOCHE=3/30 | CHRONIK=4 | BUCH=11",
+   "kasse": "3.510 M",
+   "keller": "83/135 hl",
+   "roh": "60",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 14,6×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 62 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 3,
+   "kopf": "OKTOBER=1884 | KASSE=3.040 M | HOPFEN=30 | EISKELLER=83/135 hl | WOCHE=4/30 | CHRONIK=4 | BUCH=14",
+   "kasse": "3.040 M",
+   "keller": "83/135 hl",
+   "roh": "30",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 12,7×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 58 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 4,
+   "kopf": "OKTOBER=1884 | KASSE=2.570 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=5/30 | CHRONIK=6 | BUCH=20",
+   "kasse": "2.570 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 10,7×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 46 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 5,
+   "kopf": "NOVEMBER=1884 | KASSE=2.460 M | HOPFEN=0 | EISKELLER=102/135 hl | WOCHE=6/30 | CHRONIK=6 | BUCH=24",
+   "kasse": "2.460 M",
+   "keller": "102/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 10,3×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 42 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 6,
+   "kopf": "NOVEMBER=1884 | KASSE=2.350 M | HOPFEN=0 | EISKELLER=83/135 hl | WOCHE=7/30 | CHRONIK=6 | BUCH=25",
+   "kasse": "2.350 M",
+   "keller": "83/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 9,8×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 38 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 7,
+   "kopf": "NOVEMBER=1884 | KASSE=2.240 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=8/30 | CHRONIK=6 | BUCH=28",
+   "kasse": "2.240 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 9,3×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 20/72 hl Führung 34 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 8,
+   "kopf": "NOVEMBER=1884 | KASSE=2.130 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=9/30 | CHRONIK=6 | BUCH=31",
+   "kasse": "2.130 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 8,9×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 20/72 hl Führung 30 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 9,
+   "kopf": "DEZEMBER=1884 | KASSE=2.020 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=10/30 | CHRONIK=8 | BUCH=34",
+   "kasse": "2.020 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 8,4×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 20/72 hl Führung 26 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 10,
+   "kopf": "DEZEMBER=1884 | KASSE=1.910 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=11/30 | CHRONIK=9 | BUCH=36",
+   "kasse": "1.910 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 8,0×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 20/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 11,
+   "kopf": "DEZEMBER=1884 | KASSE=1.800 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=12/30 | CHRONIK=10 | BUCH=39",
+   "kasse": "1.800 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 7,5×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 17 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 12,
+   "kopf": "DEZEMBER=1884 | KASSE=1.690 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=13/30 | CHRONIK=10 | BUCH=40",
+   "kasse": "1.690 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 7,0×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 13,
+   "kopf": "DEZEMBER=1884 | KASSE=1.580 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=14/30 | CHRONIK=10 | BUCH=42",
+   "kasse": "1.580 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 6,6×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 14,
+   "kopf": "JANUAR=1885 | KASSE=1.470 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=15/30 | CHRONIK=10 | BUCH=43",
+   "kasse": "1.470 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 6,1×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 15,
+   "kopf": "JANUAR=1885 | KASSE=1.360 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=16/30 | CHRONIK=10 | BUCH=45",
+   "kasse": "1.360 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 5,7×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 16,
+   "kopf": "JANUAR=1885 | KASSE=1.250 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=17/30 | CHRONIK=10 | BUCH=46",
+   "kasse": "1.250 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 5,2×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 17,
+   "kopf": "JANUAR=1885 | KASSE=1.140 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=18/30 | CHRONIK=10 | BUCH=47",
+   "kasse": "1.140 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 4,8×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 18,
+   "kopf": "FEBRUAR=1885 | KASSE=1.030 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=19/30 | CHRONIK=10 | BUCH=49",
+   "kasse": "1.030 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 4,3×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 19,
+   "kopf": "FEBRUAR=1885 | KASSE=920 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=20/30 | CHRONIK=10 | BUCH=50",
+   "kasse": "920 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 3,8×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 20,
+   "kopf": "FEBRUAR=1885 | KASSE=810 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=21/30 | CHRONIK=11 | BUCH=52",
+   "kasse": "810 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 3,4×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 21,
+   "kopf": "FEBRUAR=1885 | KASSE=700 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=22/30 | CHRONIK=12 | BUCH=54",
+   "kasse": "700 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 2,9×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 22,
+   "kopf": "MÄRZ=1885 | KASSE=590 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=23/30 | CHRONIK=12 | BUCH=55",
+   "kasse": "590 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 2,5×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 23,
+   "kopf": "MÄRZ=1885 | KASSE=480 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=24/30 | CHRONIK=12 | BUCH=57",
+   "kasse": "480 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 2,0×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 24,
+   "kopf": "MÄRZ=1885 | KASSE=370 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=25/30 | CHRONIK=12 | BUCH=58",
+   "kasse": "370 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 1,5×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 25,
+   "kopf": "MÄRZ=1885 | KASSE=260 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=26/30 | CHRONIK=12 | BUCH=59",
+   "kasse": "260 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 1,1×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 26,
+   "kopf": "MÄRZ=1885 | KASSE=150 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=27/30 | CHRONIK=12 | BUCH=62",
+   "kasse": "150 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,6×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 27,
+   "kopf": "APRIL=1885 | KASSE=40 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=28/30 | CHRONIK=12 | BUCH=63",
+   "kasse": "40 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 28,
+   "kopf": "APRIL=1885 | KASSE=40 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=29/30 | CHRONIK=12 | BUCH=64",
+   "kasse": "40 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 29,
+   "kopf": "APRIL=1885 | KASSE=40 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=30/30 | CHRONIK=12 | BUCH=66",
+   "kasse": "40 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1884 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 30,
+   "kopf": "SEPTEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=1/30 | CHRONIK=17 | BUCH=72",
+   "kasse": "0 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 0
+  },
+  {
+   "w": 31,
+   "kopf": "OKTOBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=2/30 | CHRONIK=19 | BUCH=76",
+   "kasse": "0 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 2
+  },
+  {
+   "w": 32,
+   "kopf": "OKTOBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=3/30 | CHRONIK=19 | BUCH=81",
+   "kasse": "0 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 33,
+   "kopf": "OKTOBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=4/30 | CHRONIK=20 | BUCH=85",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 34,
+   "kopf": "OKTOBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=5/30 | CHRONIK=20 | BUCH=87",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 35,
+   "kopf": "NOVEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=6/30 | CHRONIK=21 | BUCH=88",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 36,
+   "kopf": "NOVEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=7/30 | CHRONIK=21 | BUCH=89",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 37,
+   "kopf": "NOVEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=8/30 | CHRONIK=21 | BUCH=91",
+   "kasse": "0 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 38,
+   "kopf": "NOVEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=9/30 | CHRONIK=21 | BUCH=95",
+   "kasse": "0 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 2
+  },
+  {
+   "w": 39,
+   "kopf": "DEZEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=10/30 | CHRONIK=21 | BUCH=100",
+   "kasse": "0 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 40,
+   "kopf": "DEZEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=11/30 | CHRONIK=21 | BUCH=103",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 41,
+   "kopf": "DEZEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=12/30 | CHRONIK=21 | BUCH=105",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 42,
+   "kopf": "DEZEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=13/30 | CHRONIK=21 | BUCH=106",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 43,
+   "kopf": "DEZEMBER=1885 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=14/30 | CHRONIK=22 | BUCH=107",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 44,
+   "kopf": "JANUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=15/30 | CHRONIK=23 | BUCH=110",
+   "kasse": "0 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 45,
+   "kopf": "JANUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=16/30 | CHRONIK=24 | BUCH=116",
+   "kasse": "0 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 24/72 hl Führung 17 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 2
+  },
+  {
+   "w": 46,
+   "kopf": "JANUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=24/135 hl | WOCHE=17/30 | CHRONIK=24 | BUCH=120",
+   "kasse": "0 M",
+   "keller": "24/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 47,
+   "kopf": "JANUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=18/30 | CHRONIK=25 | BUCH=124",
+   "kasse": "0 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 17 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 48,
+   "kopf": "FEBRUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=19/30 | CHRONIK=25 | BUCH=125",
+   "kasse": "0 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 49,
+   "kopf": "FEBRUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=20/30 | CHRONIK=25 | BUCH=127",
+   "kasse": "0 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 50,
+   "kopf": "FEBRUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=21/30 | CHRONIK=26 | BUCH=129",
+   "kasse": "0 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 51,
+   "kopf": "FEBRUAR=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=24/135 hl | WOCHE=22/30 | CHRONIK=26 | BUCH=131",
+   "kasse": "0 M",
+   "keller": "24/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 52,
+   "kopf": "MÄRZ=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=23/30 | CHRONIK=26 | BUCH=135",
+   "kasse": "0 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 2
+  },
+  {
+   "w": 53,
+   "kopf": "MÄRZ=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=24/30 | CHRONIK=26 | BUCH=140",
+   "kasse": "0 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 54,
+   "kopf": "MÄRZ=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=25/30 | CHRONIK=26 | BUCH=143",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 55,
+   "kopf": "MÄRZ=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=26/30 | CHRONIK=26 | BUCH=145",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 56,
+   "kopf": "MÄRZ=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=27/30 | CHRONIK=26 | BUCH=147",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 57,
+   "kopf": "APRIL=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=28/30 | CHRONIK=26 | BUCH=152",
+   "kasse": "0 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 2
+  },
+  {
+   "w": 58,
+   "kopf": "APRIL=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=29/30 | CHRONIK=26 | BUCH=157",
+   "kasse": "0 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 59,
+   "kopf": "APRIL=1886 | KASSE=0 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=30/30 | CHRONIK=26 | BUCH=161",
+   "kasse": "0 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,0×)",
+   "sudmarke": "DER SUD · 1885 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 3
+  },
+  {
+   "w": 60,
+   "kopf": "SEPTEMBER=1886 | KASSE=−54 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=1/30 | CHRONIK=34 | BUCH=170",
+   "kasse": "−54 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht −0,2×)",
+   "sudmarke": "DER SUD · 1886 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 0
+  },
+  {
+   "w": 61,
+   "kopf": "OKTOBER=1886 | KASSE=−54 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=2/30 | CHRONIK=35 | BUCH=174",
+   "kasse": "−54 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": null,
+   "sudmarke": "DER SUD · 1886 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 2
+  }
+ ],
+ "schluss": {
+  "kopf": "OKTOBER=1886 | KASSE=−54 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=3/30 | CHRONIK=36 | BUCH=180",
+  "sudmarke": "DER SUD · 1886 Lindesche Kältemaschine · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 17 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+  "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht −0,2×)",
+  "gaerband": "28 Einfachbier 24 hl reif in 1 Woche 29 Einfachbier 24 hl reif in 1 Woche"
+ }
+}

@@ -1,0 +1,502 @@
+{
+ "e1": {
+  "ohne": {
+   "laden": {
+    "n": 4,
+    "frei": 4,
+    "deck": {}
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt stadt-zugeklappt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "mit": {
+   "laden": {
+    "n": 4,
+    "frei": 0,
+    "deck": {
+     "erb-buch blatt": 4
+    }
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser stadt-zugeklappt",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller stadt-zugeklappt",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "fehler": []
+ },
+ "e2": {
+  "ohne": {
+   "laden": {
+    "n": 8,
+    "frei": 8,
+    "deck": {}
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt stadt-zugeklappt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "mit": {
+   "laden": {
+    "n": 8,
+    "frei": 0,
+    "deck": {
+     "erb-buch blatt": 8
+    }
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser stadt-zugeklappt",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller stadt-zugeklappt",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "fehler": []
+ },
+ "e3": {
+  "ohne": {
+   "laden": {
+    "n": 9,
+    "frei": 9,
+    "deck": {}
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt stadt-zugeklappt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "mit": {
+   "laden": {
+    "n": 9,
+    "frei": 0,
+    "deck": {
+     "erb-buch blatt": 9
+    }
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser stadt-zugeklappt",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller stadt-zugeklappt",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "fehler": []
+ },
+ "e4": {
+  "ohne": {
+   "laden": {
+    "n": 6,
+    "frei": 6,
+    "deck": {}
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt stadt-zugeklappt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "mit": {
+   "laden": {
+    "n": 6,
+    "frei": 0,
+    "deck": {
+     "erb-buch blatt": 6
+    }
+   },
+   "probe": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "fahre": {
+    "n": 0,
+    "frei": 0,
+    "deck": {}
+   },
+   "erb": {
+    "klasse": "erb-buch blatt",
+    "rect": [
+     38,
+     135,
+     806,
+     700
+    ],
+    "anteil": 29.4
+   },
+   "bretter": {
+    "fu-haeuser": {
+     "klasse": "fu-brett fu-haeuser stadt-zugeklappt",
+     "rect": [
+      21,
+      126,
+      492,
+      736
+     ]
+    },
+    "fu-keller": {
+     "klasse": "fu-brett fu-keller stadt-zugeklappt",
+     "rect": [
+      526,
+      562,
+      445,
+      300
+     ]
+    },
+    "fu-wagen": {
+     "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+     "rect": [
+      985,
+      562,
+      516,
+      300
+     ]
+    }
+   },
+   "buehne": [
+    1920,
+    1000
+   ]
+  },
+  "fehler": []
+ }
+}

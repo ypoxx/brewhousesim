@@ -1,0 +1,5447 @@
+{
+ "epoche": "1",
+ "log": [
+  {
+   "i": 0,
+   "jahr": 1350,
+   "woche": 1,
+   "epoche": 1,
+   "kasse": 112,
+   "faesser": 4,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 15 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −12 Pf Abfertigung −61 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 23,
+   "nBezahlbar": 23,
+   "billigsterPreis": 6,
+   "rhoBillig": 18.67,
+   "kopfDeckung": "5.89",
+   "kopfText": "nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=12",
+    "erbe:uebergabe:abfindung=61",
+    "stadt:bau:grutkammer=13",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 1,
+   "chronikN": 4,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 112,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner:Brauhaus zum Adler baut auf dem eigenen Hof: Große Kufe für 34 Pf."
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":1,\"art\":\"anfang\",\"text\":\"Das Haus Brauhaus zum Anker, gegründet 1350. Kunigunde Bruckner fuehrt es.\"}",
+    "{\"jahr\":1350,\"woche\":1,\"art\":\"gegner\",\"text\":\"Gegenüber steht Brauhaus zum Adler. Hartmann Feist führt es. Gebunden wird in dieser Zeit mit Recht und Gunst.\"}",
+    "{\"jahr\":1350,\"woche\":1,\"art\":\"sud\",\"text\":\"Im Sudhaus hängt ein neuer Zettel: Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, häl",
+    "{\"jahr\":1350,\"woche\":1,\"art\":\"anfang\",\"text\":\"Die Hand am Haus ist Kunigunde Bruckner, sparsam. Was sie nur mit einem Handschlag hält, hält das Haus nicht. Was im Stadtbuch steht, haftet am Haus. Was "
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 1,
+   "jahr": 1350,
+   "woche": 2,
+   "epoche": 1,
+   "kasse": 103,
+   "faesser": 8,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 14 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 3 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −12 Pf Abfertigung −60 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 23,
+   "nBezahlbar": 23,
+   "billigsterPreis": 6,
+   "rhoBillig": 17.17,
+   "kopfDeckung": "5.42",
+   "kopfText": "nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,4×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=12",
+    "erbe:uebergabe:abfindung=60",
+    "stadt:bau:grutkammer=13",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 6,
+   "chronikN": 4,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 103,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Ein grauer Karren des Adlers fährt zum Fährhaus am Fluss."
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 2,
+   "jahr": 1350,
+   "woche": 3,
+   "epoche": 1,
+   "kasse": 94,
+   "faesser": 12,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 13 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −59 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 23,
+   "nBezahlbar": 23,
+   "billigsterPreis": 6,
+   "rhoBillig": 15.67,
+   "kopfDeckung": "4.95",
+   "kopfText": "nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 4,9×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:uebergabe:abfindung=59",
+    "stadt:bau:grutkammer=13",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 11,
+   "chronikN": 4,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n",
+    "stadt:bau:grutkammer:ok"
+   ],
+   "kasseNachKauf": 81,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Bau: Grutkammer(-13)",
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":3,\"art\":\"bau\",\"text\":\"Grutkammer steht im Hof. Porst, Gagel, Schafgarbe. Wer die Grut hat, hat das Bier — Hopfen kommt später.\"}",
+    "{\"jahr\":1350,\"woche\":4,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser des Rats lobt den Sud vor Zeugen.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 3,
+   "jahr": 1350,
+   "woche": 4,
+   "epoche": 1,
+   "kasse": 80,
+   "faesser": 12,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 12 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −57 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 25,
+   "nBezahlbar": 25,
+   "billigsterPreis": 4,
+   "rhoBillig": 20,
+   "kopfDeckung": "4.21",
+   "kopfText": "nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 4,2×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:zuvorkommen:obernberg=19",
+    "sud:zettel-wechsel-kauf=78",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:uebergabe:abfindung=57",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 13,
+   "chronikN": 6,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 80,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler steht dem Wirt zum Klosterschenke Obernberg Gevatter. Das hält länger als ein Brief.",
+    "gegner:Der Adler ruft am Markt aus: 8 Pf je Fass, einen Pfennig unter dem Satz."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 4,
+   "jahr": 1350,
+   "woche": 5,
+   "epoche": 1,
+   "kasse": 79,
+   "faesser": 12,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 11 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −55 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 25,
+   "nBezahlbar": 25,
+   "billigsterPreis": 4,
+   "rhoBillig": 19.75,
+   "kopfDeckung": "1.88",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 1,9×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "sud:zettel-wechsel-kauf=78",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:uebergabe:abfindung=55",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 16,
+   "chronikN": 6,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 79,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler wirbt um Gasthof Lindenhof: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 56 Pf. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 5,
+   "jahr": 1350,
+   "woche": 6,
+   "epoche": 1,
+   "kasse": 78,
+   "faesser": 12,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 10 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −54 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 26,
+   "nBezahlbar": 26,
+   "billigsterPreis": 4,
+   "rhoBillig": 19.5,
+   "kopfDeckung": "1.86",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 1,9×)",
+   "preise": [
+    "gegner:zuvorkommen:lindenhof=56",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "sud:zettel-wechsel-kauf=78",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:uebergabe:abfindung=54",
+    "stadt:bau:gaerbottiche=15",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 18,
+   "chronikN": 6,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n",
+    "stadt:bau:gaerbottiche:ok"
+   ],
+   "kasseNachKauf": 63,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Ein Feist wird in den Rat gewählt. Solange er darin sitzt, ist kein Ratsspruch ablösbar."
+   ],
+   "neuProtSpieler": [
+    "Bau: Gärbottiche(-15)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":6,\"art\":\"bau\",\"text\":\"Gärbottiche steht im Hof. Offene Holzbottiche unter einem Schutzdach. Was hier gärt, ist obergärig.\"}",
+    "{\"jahr\":1350,\"woche\":7,\"art\":\"gegner\",\"text\":\"Brauhaus zum Adler: Ein Feist wird in den Rat gewählt. Solange er darin sitzt, ist kein Ratsspruch ablösbar.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 6,
+   "jahr": 1350,
+   "woche": 7,
+   "epoche": 1,
+   "kasse": 54,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 9 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 6 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −54 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 24,
+   "nBezahlbar": 16,
+   "billigsterPreis": 4,
+   "rhoBillig": 13.5,
+   "kopfDeckung": "1.29",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 1,3×)",
+   "preise": [
+    "gegner:zuvorkommen:lindenhof=56",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:uebergabe:abfindung=54",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 24,
+   "chronikN": 8,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 54,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Rat verleiht dem Adler die Schankgerechtigkeit im Gasthof Lindenhof.",
+    "gegner:Ein Feist sitzt beim Wirt zum Zum Goldenen Ochsen und lässt den Ratsschreiber warten. In 5 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 186 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 7,
+   "jahr": 1350,
+   "woche": 8,
+   "epoche": 1,
+   "kasse": 53,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 8 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 6 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −52 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 24,
+   "nBezahlbar": 15,
+   "billigsterPreis": 4,
+   "rhoBillig": 13.25,
+   "kopfDeckung": "1.26",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 1,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abwehren:ochse=186",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:uebergabe:abfindung=52",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 27,
+   "chronikN": 8,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 53,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 8,
+   "jahr": 1350,
+   "woche": 9,
+   "epoche": 1,
+   "kasse": 44,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 7 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 6 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −50 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 23,
+   "nBezahlbar": 14,
+   "billigsterPreis": 4,
+   "rhoBillig": 11,
+   "kopfDeckung": "1.05",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 1,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=124",
+    "gegner:abwehren:ochse=186",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "stadt:bau:ochsenstall=18",
+    "stadt:bau:keller_gewoelbe=21",
+    "stadt:bau:kueferei=23",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 32,
+   "chronikN": 8,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n",
+    "stadt:bau:ochsenstall:ok"
+   ],
+   "kasseNachKauf": 26,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "gegner:Der Rat entzieht dem Adler die Konzession für Gasthof Lindenhof. Der Wirt hat geklagt."
+   ],
+   "neuProtSpieler": [
+    "Bau: Ochsenstall(-18)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":9,\"art\":\"bau\",\"text\":\"Ochsenstall steht im Hof. Ein eigenes Zugtier. Danach fährt die Fuhre, wann das Haus es will.\"}",
+    "{\"jahr\":1350,\"woche\":10,\"art\":\"gegner\",\"text\":\"Gasthof Lindenhof ist wieder frei. Brauhaus zum Adler hat die Bindung verloren.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 9,
+   "jahr": 1350,
+   "woche": 10,
+   "epoche": 1,
+   "kasse": 17,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 6 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 6 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −48 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 19,
+   "nBezahlbar": 8,
+   "billigsterPreis": 4,
+   "rhoBillig": 4.25,
+   "kopfDeckung": "0.4",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 0,4×)",
+   "preise": [
+    "gegner:abwehren:ochse=186",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=16",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:verschreibe:ochse=16",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 39,
+   "chronikN": 10,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 17,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 10,
+   "jahr": 1350,
+   "woche": 11,
+   "epoche": 1,
+   "kasse": 8,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 5 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 6 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −46 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 16,
+   "nBezahlbar": 4,
+   "billigsterPreis": 4,
+   "rhoBillig": 2,
+   "kopfDeckung": "0.19",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abwehren:ochse=186",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 44,
+   "chronikN": 10,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 8,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler ruft am Markt aus: 7 Pf je Fass, einen Pfennig unter dem Satz."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 11,
+   "jahr": 1350,
+   "woche": 12,
+   "epoche": 1,
+   "kasse": 7,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 4 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 6 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −44 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 15,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1.75,
+   "kopfDeckung": "0.17",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abwehren:ochse=186",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:faehrhaus=66",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:uebergabe:leibgeding=13",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 46,
+   "chronikN": 10,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Rat spricht Zum Goldenen Ochsen dem Adler zu. Das Haus hatte dort nur die Gewohnheit.",
+    "gegner:Der Rat entzieht dem Adler die Konzession für Fährhaus am Fluss. Der Wirt hat geklagt."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":13,\"art\":\"gegner\",\"text\":\"Zum Goldenen Ochsen geht an Brauhaus zum Adler. Gebunden mit Ratsspruch bis 1360. Ablösen kostet 0 Pf.\"}",
+    "{\"jahr\":1350,\"woche\":13,\"art\":\"gegner\",\"text\":\"Fährhaus am Fluss ist wieder frei. Brauhaus zum Adler hat die Bindung verloren.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 12,
+   "jahr": 1350,
+   "woche": 13,
+   "epoche": 1,
+   "kasse": 6,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 3 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 6 Fass Verschreiben · Hirsch −11 Pf Leibgeding · jährlich −9 Pf Abfertigung −28 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 14,
+   "nBezahlbar": 4,
+   "billigsterPreis": 4,
+   "rhoBillig": 1.5,
+   "kopfDeckung": "0.14",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:uebergabe:leibgeding=9",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 49,
+   "chronikN": 12,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 6,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 13,
+   "jahr": 1350,
+   "woche": 14,
+   "epoche": 1,
+   "kasse": 5,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 2 Wochen Kunigunde Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 6 Fass Verschreiben · Hirsch −11 Pf Leibgeding · jährlich −9 Pf Abfertigung −26 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1.25,
+   "kopfDeckung": "0.12",
+   "kopfText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:uebergabe:leibgeding=9"
+   ],
+   "protokollN": 51,
+   "chronikN": 12,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 5,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "gegner:Ein Feist sitzt beim Wirt zum Landgasthof Hirsch und lässt den Ratsschreiber warten. In 5 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 33 Pf."
+   ],
+   "neuProtSpieler": [
+    "Kerbholz: 1 Kerbe geschnitten(25)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 14,
+   "jahr": 1350,
+   "woche": 15,
+   "epoche": 1,
+   "kasse": 21,
+   "faesser": 16,
+   "amt": "Kunigunde Bruckner/sparsam",
+   "erb": "DAS ERBE noch 1 Woche Kunigunde Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 6 Fass Verschreiben · Hirsch −11 Pf Leibgeding · jährlich −9 Pf Abfertigung −25 Pf Mit leeren Händen 0 Pf",
+   "nPreisSichtAktiv": 19,
+   "nBezahlbar": 9,
+   "billigsterPreis": 4,
+   "rhoBillig": 5.25,
+   "kopfDeckung": "0.64",
+   "kopfText": "nächster Zug: Zuvorkommen Landgasthof Hirsch — 33 Pf (Kasse reicht 0,6×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:abwehren:hirsch=33",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34",
+    "erbe:tafel:verschreibe=11",
+    "erbe:uebergabe:leibgeding=9",
+    "stadt:bau:keller_gewoelbe=21",
+    "erbe:verschreibe:pfarrhof=8",
+    "erbe:verschreibe:hirsch=11",
+    "erbe:verschreibe:markt=6"
+   ],
+   "protokollN": 58,
+   "chronikN": 12,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n",
+    "stadt:bau:keller_gewoelbe:ok"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler wirbt um Brückenwirt: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 34 Pf.",
+    "verfall:Pfarrschenke St. Michael: Gewohnheit fällt mit der Hand",
+    "verfall:Landgasthof Hirsch: Gewohnheit fällt mit der Hand",
+    "verfall:Ausschank am Markt: Gewohnheit fällt mit der Hand",
+    "verfall:Erbteil der Miterben aus dem Keller"
+   ],
+   "neuProtSpieler": [
+    "Bau: Gewölbekeller(-21)",
+    "Kerbholz: 1 Kerbe geschnitten(25)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":15,\"art\":\"bau\",\"text\":\"Gewölbekeller steht im Hof. Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr.\"}",
+    "{\"jahr\":1350,\"woche\":16,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser findet den Sud dünn — und der Zeiger hängt.\"}",
+    "{\"jahr\":1350,\"woche\":16,\"art\":\"erbfall\",\"text\":\"Die Stunde kommt ohne Ansage. Kunigunde Bruckner legt die Kelle hin, und was nur auf ihr Wort hin ging, geht nicht mehr.\"}",
+    "{\"jahr\":1350,\"woche\":16,\"art\":\"erbfall\",\"text\":\"Heinrich Bruckner übernimmt das Haus in 1350. Man sagt: Gewinnt Prozesse und verliert Freunde.\"}",
+    "{\"jahr\":1350,\"woche\":16,\"art\":\"erbfall\",\"text\":\"Mit der Hand fällt, was nur an ihr hing — 3 Häuser halten nicht mehr: Pfarrschenke St. Michael, Landgasthof Hirsch, Ausschank am Markt.\"}",
+    "{\"jahr\":1350,\"woche\":16,\"art\":\"erbfall\",\"text\":\"Die Miterben nehmen ihren Teil in Naturalien: 7 Fass gehen aus dem Keller.\"}",
+    "{\"jahr\":1350,\"woche\":16,\"art\":\"erbfall\",\"text\":\"Das Haus geht auf Heinrich Bruckner über. Vorher hafteten 0 Bindungen am Haus und 3 an der Person; jetzt sind es 0 und 0. streitbar: Ficht die Bindung d"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 15,
+   "jahr": 1350,
+   "woche": 16,
+   "epoche": 1,
+   "kasse": 16,
+   "faesser": 13,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 3 Häuser −56 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 14,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 4,
+   "kopfDeckung": "0.48",
+   "kopfText": "nächster Zug: Zuvorkommen Landgasthof Hirsch — 33 Pf (Kasse reicht 0,5×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:brueckenwirt=34",
+    "gegner:abwehren:hirsch=33",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 69,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 16,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 16,
+   "jahr": 1350,
+   "woche": 17,
+   "epoche": 1,
+   "kasse": 7,
+   "faesser": 17,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 3 Häuser −56 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 14,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1.75,
+   "kopfDeckung": "0.21",
+   "kopfText": "nächster Zug: Zuvorkommen Landgasthof Hirsch — 33 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:brueckenwirt=34",
+    "gegner:abwehren:hirsch=33",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 73,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:1 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)",
+    "Brauknecht und Futter · 1 Sudtag (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 17,
+   "jahr": 1350,
+   "woche": 18,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 3 Häuser −56 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 14,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Zuvorkommen Landgasthof Hirsch — 33 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:brueckenwirt=34",
+    "gegner:abwehren:hirsch=33",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 78,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "gegner:Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig unter dem Satz."
+   ],
+   "neuProtSpieler": [
+    "Kerbholz: 1 Kerbe geschnitten(25)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 18,
+   "jahr": 1350,
+   "woche": 19,
+   "epoche": 1,
+   "kasse": 16,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 3 Häuser −56 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 14,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 4,
+   "kopfDeckung": "0.48",
+   "kopfText": "nächster Zug: Zuvorkommen Landgasthof Hirsch — 33 Pf (Kasse reicht 0,5×)",
+   "preise": [
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:brueckenwirt=34",
+    "gegner:abwehren:hirsch=33",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 85,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 16,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Rat spricht Landgasthof Hirsch dem Adler zu. Das Haus hatte dort nur die Gewohnheit.",
+    "gegner:Brauhaus zum Adler wirbt um Gasthof Lindenhof: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 42 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 19,
+   "jahr": 1350,
+   "woche": 20,
+   "epoche": 1,
+   "kasse": 15,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 15,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3.75,
+   "kopfDeckung": "0.44",
+   "kopfText": "nächster Zug: Zuvorkommen Brückenwirt — 34 Pf (Kasse reicht 0,4×)",
+   "preise": [
+    "gegner:zuvorkommen:lindenhof=42",
+    "gegner:abloesen:torschenke=56",
+    "gegner:zuvorkommen:brueckenwirt=34",
+    "gegner:abloesen:hirsch=54",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 88,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 15,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Rat verleiht dem Adler die Schankgerechtigkeit im Brückenwirt."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 20,
+   "jahr": 1350,
+   "woche": 21,
+   "epoche": 1,
+   "kasse": 14,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 15,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3.5,
+   "kopfDeckung": "0.33",
+   "kopfText": "nächster Zug: Zuvorkommen Gasthof Lindenhof — 42 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:zuvorkommen:lindenhof=42",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 90,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 14,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 21,
+   "jahr": 1350,
+   "woche": 22,
+   "epoche": 1,
+   "kasse": 13,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 15,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3.25,
+   "kopfDeckung": "0.31",
+   "kopfText": "nächster Zug: Zuvorkommen Gasthof Lindenhof — 42 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:zuvorkommen:lindenhof=42",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 91,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 13,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "gegner:Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 22,
+   "jahr": 1350,
+   "woche": 23,
+   "epoche": 1,
+   "kasse": 4,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 15,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1,
+   "kopfDeckung": "0.1",
+   "kopfText": "nächster Zug: Zuvorkommen Gasthof Lindenhof — 42 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:zuvorkommen:lindenhof=42",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 97,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 4,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Kerbholz: 1 Kerbe geschnitten(25)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 23,
+   "jahr": 1350,
+   "woche": 24,
+   "epoche": 1,
+   "kasse": 20,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 15,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 5,
+   "kopfDeckung": "0.48",
+   "kopfText": "nächster Zug: Zuvorkommen Gasthof Lindenhof — 42 Pf (Kasse reicht 0,5×)",
+   "preise": [
+    "gegner:zuvorkommen:lindenhof=42",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "gegner:abloesen:obernberg=42",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 103,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 20,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "gegner:Der Adler steht dem Wirt zum Gasthof Lindenhof Gevatter. Das hält länger als ein Brief. Dafür wird Klosterschenke Obernberg fallengelassen — die Adresse ist frei."
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 24,
+   "jahr": 1350,
+   "woche": 25,
+   "epoche": 1,
+   "kasse": 11,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 14,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 2.75,
+   "kopfDeckung": "0.2",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:muehlwirt=60",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 109,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 11,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 25,
+   "jahr": 1350,
+   "woche": 26,
+   "epoche": 1,
+   "kasse": 2,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0.5,
+   "kopfDeckung": "0.04",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 114,
+   "chronikN": 19,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 2,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "gegner:Brauhaus zum Adler baut auf dem eigenen Hof: Darrboden für 44 Pf."
+   ],
+   "neuProtSpieler": [
+    "Kerbholz: 1 Kerbe geschnitten(25)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":27,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser des Rats lobt den Sud vor Zeugen.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 26,
+   "jahr": 1350,
+   "woche": 27,
+   "epoche": 1,
+   "kasse": 18,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 4.5,
+   "kopfDeckung": "0.33",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 121,
+   "chronikN": 20,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 18,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler baut auf dem eigenen Hof: Zweiter Karren für 22 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 27,
+   "jahr": 1350,
+   "woche": 28,
+   "epoche": 1,
+   "kasse": 17,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 4.25,
+   "kopfDeckung": "0.31",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 123,
+   "chronikN": 20,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 17,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 28,
+   "jahr": 1350,
+   "woche": 29,
+   "epoche": 1,
+   "kasse": 16,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 4,
+   "kopfDeckung": "0.3",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 124,
+   "chronikN": 20,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 16,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 29,
+   "jahr": 1350,
+   "woche": 30,
+   "epoche": 1,
+   "kasse": 15,
+   "faesser": 20,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3.75,
+   "kopfDeckung": "0.28",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 125,
+   "chronikN": 20,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 15,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "verfall:Georgi: 16 Fass überstehen den Sommer nicht und kippen",
+    "verfall:Kerbholz beim Grutherrn: 5 Kerben offen — genommen wurden 15 Brautage",
+    "verfall:Mühlschenke führt kein Bier des Hauses mehr",
+    "verfall:Sommer: Unterhalt und Abgaben(-15)"
+   ],
+   "neuProtSpieler": [],
+   "neuChronik": [
+    "{\"jahr\":1350,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Kerbholz beim Grutherrn: 5 Kerben stehen noch im Holz. Je offener Kerbe nimmt der Grutherr drei Brautage des neuen Jahres. Er will kein Geld, er will die ",
+    "{\"jahr\":1350,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Mühlschenke nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 1 · 1 · 1 von 16 Fass.\"}",
+    "{\"jahr\":1350,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer unter der Pfanne — die Stadt fürchtet den Bra",
+    "{\"jahr\":1351,\"woche\":1,\"art\":\"fuhre\",\"text\":\"Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Grutbier — wie im vorigen Jahr, bis jemand es ändert.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 30,
+   "jahr": 1351,
+   "woche": 1,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 0,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 6,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:brueckenwirt=76",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:jahresplan:duenn=6",
+    "fuhre:jahresplan:grut=7",
+    "fuhre:jahresplan:stark=15"
+   ],
+   "protokollN": 130,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig unter dem Satz."
+   ],
+   "neuProtSpieler": [
+    "Kerbholz: 1 Kerbe geschnitten(25)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 31,
+   "jahr": 1351,
+   "woche": 2,
+   "epoche": 1,
+   "kasse": 16,
+   "faesser": 4,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 10,
+   "nBezahlbar": 0,
+   "billigsterPreis": 34,
+   "rhoBillig": 0.47,
+   "kopfDeckung": "0.3",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 136,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 16,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 32,
+   "jahr": 1351,
+   "woche": 3,
+   "epoche": 1,
+   "kasse": 7,
+   "faesser": 8,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 10,
+   "nBezahlbar": 0,
+   "billigsterPreis": 34,
+   "rhoBillig": 0.21,
+   "kopfDeckung": "0.13",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 141,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)",
+    "Brauknecht und Futter · 1 Sudtag (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 33,
+   "jahr": 1351,
+   "woche": 4,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 12,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 145,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Kerbholz: 1 Kerbe geschnitten(25)",
+    "Ein Sud Grutbier(-7)",
+    "4 Fass Grutbier eingelegt",
+    "Dach, Geschirr, Wache(-1)",
+    "Brauknecht und Futter · 1 Sudtag(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 34,
+   "jahr": 1351,
+   "woche": 5,
+   "epoche": 1,
+   "kasse": 16,
+   "faesser": 16,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 4,
+   "kopfDeckung": "0.3",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 150,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 16,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Dem Adler brennt der Darrboden. Zwei Wochen kein Sud. Es kostet ihn 37 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 35,
+   "jahr": 1351,
+   "woche": 6,
+   "epoche": 1,
+   "kasse": 15,
+   "faesser": 16,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3.75,
+   "kopfDeckung": "0.28",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 152,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 15,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 36,
+   "jahr": 1351,
+   "woche": 7,
+   "epoche": 1,
+   "kasse": 14,
+   "faesser": 16,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3.5,
+   "kopfDeckung": "0.26",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 153,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 14,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler baut auf dem eigenen Hof: Eigener Brunnen für 38 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 37,
+   "jahr": 1351,
+   "woche": 8,
+   "epoche": 1,
+   "kasse": 13,
+   "faesser": 16,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3.25,
+   "kopfDeckung": "0.24",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 155,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 13,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 38,
+   "jahr": 1351,
+   "woche": 9,
+   "epoche": 1,
+   "kasse": 12,
+   "faesser": 16,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 3,
+   "kopfDeckung": "0.22",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 156,
+   "chronikN": 24,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 12,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1351,\"woche\":10,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser findet den Sud dünn — und der Zeiger hängt.\"}"
+   ],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 39,
+   "jahr": 1351,
+   "woche": 10,
+   "epoche": 1,
+   "kasse": 11,
+   "faesser": 12,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 2.75,
+   "kopfDeckung": "0.2",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 158,
+   "chronikN": 25,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 11,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 40,
+   "jahr": 1351,
+   "woche": 11,
+   "epoche": 1,
+   "kasse": 10,
+   "faesser": 8,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 2.5,
+   "kopfDeckung": "0.19",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 160,
+   "chronikN": 25,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 10,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 41,
+   "jahr": 1351,
+   "woche": 12,
+   "epoche": 1,
+   "kasse": 9,
+   "faesser": 4,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 2.25,
+   "kopfDeckung": "0.17",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 162,
+   "chronikN": 25,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 9,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:4 Fass verdorben",
+    "gegner:Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1351,\"woche\":13,\"art\":\"fuhre\",\"text\":\"Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Kofent an, den zweiten Guss auf dieselben Treber. Kein Pfennig, kein Grut, kein Tag"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 42,
+   "jahr": 1351,
+   "woche": 13,
+   "epoche": 1,
+   "kasse": 8,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 2,
+   "kopfDeckung": "0.15",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 166,
+   "chronikN": 26,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 8,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1351,\"woche\":14,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: In der Gasse spricht es sich herum: unter dem Zeiger kam dünnes Bier.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 43,
+   "jahr": 1351,
+   "woche": 14,
+   "epoche": 1,
+   "kasse": 7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1.75,
+   "kopfDeckung": "0.13",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 167,
+   "chronikN": 27,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 44,
+   "jahr": 1351,
+   "woche": 15,
+   "epoche": 1,
+   "kasse": 6,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1.5,
+   "kopfDeckung": "0.11",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 168,
+   "chronikN": 27,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 6,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 45,
+   "jahr": 1351,
+   "woche": 16,
+   "epoche": 1,
+   "kasse": 5,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1.25,
+   "kopfDeckung": "0.09",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 169,
+   "chronikN": 27,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 5,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 46,
+   "jahr": 1351,
+   "woche": 17,
+   "epoche": 1,
+   "kasse": 4,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 3,
+   "billigsterPreis": 4,
+   "rhoBillig": 1,
+   "kopfDeckung": "0.07",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 172,
+   "chronikN": 27,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 4,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 47,
+   "jahr": 1351,
+   "woche": 18,
+   "epoche": 1,
+   "kasse": 3,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0.75,
+   "kopfDeckung": "0.06",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 173,
+   "chronikN": 27,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 3,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1351,\"woche\":19,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: In der Gasse spricht es sich herum: unter dem Zeiger kam dünnes Bier.\"}",
+    "{\"jahr\":1351,\"woche\":19,\"art\":\"ruf\",\"text\":\"Der Rat nimmt dem Haus das Zeichen: Der Rat nimmt dem Haus den Bierzeiger ab. Wer dreimal dünnes Bier unter dem Kranz ausschenkt, hängt ihn nicht mehr aus.\""
+   ],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 48,
+   "jahr": 1351,
+   "woche": 19,
+   "epoche": 1,
+   "kasse": 2,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0.5,
+   "kopfDeckung": "0.04",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 174,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 2,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Ein grauer Wagen des Hauses gegenüber fährt zum Zum Goldenen Ochsen."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 49,
+   "jahr": 1351,
+   "woche": 20,
+   "epoche": 1,
+   "kasse": 1,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0.25,
+   "kopfDeckung": "0.02",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 176,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 1,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 50,
+   "jahr": 1351,
+   "woche": 21,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 179,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 51,
+   "jahr": 1351,
+   "woche": 22,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 180,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 52,
+   "jahr": 1351,
+   "woche": 23,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 181,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 53,
+   "jahr": 1351,
+   "woche": 24,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 182,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 54,
+   "jahr": 1351,
+   "woche": 25,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 185,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 55,
+   "jahr": 1351,
+   "woche": 26,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 186,
+   "chronikN": 29,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1351,\"woche\":27,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben.\"}"
+   ],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 56,
+   "jahr": 1351,
+   "woche": 27,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 187,
+   "chronikN": 30,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Ein grauer Wagen des Hauses gegenüber fährt zum Gasthof Lindenhof."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 57,
+   "jahr": 1351,
+   "woche": 28,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 189,
+   "chronikN": 30,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 58,
+   "jahr": 1351,
+   "woche": 29,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 192,
+   "chronikN": 30,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 59,
+   "jahr": 1351,
+   "woche": 30,
+   "epoche": 1,
+   "kasse": 0,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Lindenhof −62 Pf",
+   "nPreisSichtAktiv": 13,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": 0,
+   "kopfDeckung": "0",
+   "kopfText": "nächster Zug: Ablösung Landgasthof Hirsch — 54 Pf (Kasse reicht 0,0×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:torschenke=56",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:bann:brueckenwirt=60",
+    "fuhre:bann:faehrhaus=60",
+    "fuhre:bann:hirsch=60",
+    "fuhre:bann:obernberg=60",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 193,
+   "chronikN": 30,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": 0,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:Georgi: 3 Fass überstehen den Sommer nicht und kippen",
+    "verfall:Kerbholz beim Grutherrn: 2 Kerben offen — genommen wurden 6 Brautage",
+    "verfall:Gasthof Lindenhof führt kein Bier des Hauses mehr",
+    "verfall:Schenke am Tor führt kein Bier des Hauses mehr",
+    "verfall:Brückenwirt führt kein Bier des Hauses mehr",
+    "verfall:Fährhaus am Fluss führt kein Bier des Hauses mehr",
+    "verfall:Klosterschenke Obernberg führt kein Bier des Hauses mehr",
+    "verfall:Sommer: Unterhalt und Abgaben(-14)",
+    "gegner:Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ],
+   "neuProtSpieler": [
+    "Der Rat lässt pfänden: Gewölbekeller(7)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1351,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Kerbholz beim Grutherrn: 2 Kerben stehen noch im Holz. Je offener Kerbe nimmt der Grutherr drei Brautage des neuen Jahres. Er will kein Geld, er will die ",
+    "{\"jahr\":1351,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Gasthof Lindenhof nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 3 · 4 · 0 von 31 Fass.\"}",
+    "{\"jahr\":1351,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Schenke am Tor nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 1 · 1 · 0 von 14 Fass.\"}",
+    "{\"jahr\":1351,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Brückenwirt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 2 · 2 · 0 von 19 Fass.\"}",
+    "{\"jahr\":1351,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Fährhaus am Fluss nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 1 · 1 · 0 von 11 Fass.\"}",
+    "{\"jahr\":1351,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Klosterschenke Obernberg nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 1 · 1 · 0 von 14 Fa",
+    "{\"jahr\":1351,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer unter der Pfanne — die Stadt fürchtet den Bra",
+    "{\"jahr\":1352,\"woche\":1,\"art\":\"bau\",\"text\":\"Der Rat lässt pfänden — zwei Ratsdiener, ein Karren, kein Wort. Gewölbekeller: 7 Pf.\"}",
+    "{\"jahr\":1352,\"woche\":1,\"art\":\"bau\",\"text\":\"Es reicht nicht. 7 Pf bleiben als Schuld stehen; zu Michaeli kommen sie wieder.\"}",
+    "{\"jahr\":1352,\"woche\":1,\"art\":\"fuhre\",\"text\":\"Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Grutbier — wie im vorigen Jahr, bis jemand es ändert.\"}",
+    "{\"jahr\":1352,\"woche\":1,\"art\":\"preis\",\"text\":\"Umlage für den Mauerbau: 5 Pf angeschlagen. 23 Pf bleiben als Rückstand stehen.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 60,
+   "jahr": 1352,
+   "woche": 1,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 0,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 4,
+   "nBezahlbar": 0,
+   "billigsterPreis": 6,
+   "rhoBillig": -1.17,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:brueckenwirt=76",
+    "fuhre:jahresplan:duenn=6",
+    "fuhre:jahresplan:grut=7",
+    "fuhre:jahresplan:stark=15"
+   ],
+   "protokollN": 203,
+   "chronikN": 41,
+   "plan": [],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1352,\"woche\":2,\"art\":\"fuhre\",\"text\":\"Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Kofent an, den zweiten Guss auf dieselben Treber. Kein Pfennig, kein Grut, kein Tag "
+   ],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 61,
+   "jahr": 1352,
+   "woche": 2,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 3,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.13,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54"
+   ],
+   "protokollN": 205,
+   "chronikN": 42,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 62,
+   "jahr": 1352,
+   "woche": 3,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 3,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.13,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54"
+   ],
+   "protokollN": 206,
+   "chronikN": 42,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 63,
+   "jahr": 1352,
+   "woche": 4,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 207,
+   "chronikN": 42,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 64,
+   "jahr": 1352,
+   "woche": 5,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 208,
+   "chronikN": 42,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben",
+    "gegner:Brauhaus zum Adler wirbt um Mühlschenke: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 29 Pf."
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 65,
+   "jahr": 1352,
+   "woche": 6,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.24",
+   "kopfText": "nächster Zug: Zuvorkommen Mühlschenke — 29 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 212,
+   "chronikN": 42,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 66,
+   "jahr": 1352,
+   "woche": 7,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.24",
+   "kopfText": "nächster Zug: Zuvorkommen Mühlschenke — 29 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 213,
+   "chronikN": 42,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 67,
+   "jahr": 1352,
+   "woche": 8,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.24",
+   "kopfText": "nächster Zug: Zuvorkommen Mühlschenke — 29 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:brueckenwirt=76",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 215,
+   "chronikN": 42,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Rat entzieht dem Adler die Konzession für Brückenwirt. Der Wirt hat geklagt."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1352,\"woche\":9,\"art\":\"gegner\",\"text\":\"Brückenwirt ist wieder frei. Brauhaus zum Adler hat die Bindung verloren.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 68,
+   "jahr": 1352,
+   "woche": 9,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.24",
+   "kopfText": "nächster Zug: Zuvorkommen Mühlschenke — 29 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:muehlwirt=29",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 217,
+   "chronikN": 43,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben",
+    "gegner:Der Rat verleiht dem Adler die Schankgerechtigkeit im Mühlschenke."
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1352,\"woche\":10,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 69,
+   "jahr": 1352,
+   "woche": 10,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 221,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 70,
+   "jahr": 1352,
+   "woche": 11,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 222,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 71,
+   "jahr": 1352,
+   "woche": 12,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 223,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler wirbt um Fährhaus am Fluss: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 15 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 72,
+   "jahr": 1352,
+   "woche": 13,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.47",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 15 Pf (Kasse reicht −0,5×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=15",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 225,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben",
+    "gegner:Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 73,
+   "jahr": 1352,
+   "woche": 14,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.47",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 15 Pf (Kasse reicht −0,5×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=15",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 229,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler wirbt um Ausschank am Markt: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 24 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 74,
+   "jahr": 1352,
+   "woche": 15,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.47",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 15 Pf (Kasse reicht −0,5×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=15",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 231,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig unter dem Satz."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 75,
+   "jahr": 1352,
+   "woche": 16,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.47",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 15 Pf (Kasse reicht −0,5×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=15",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 233,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Dem Adler brennt der Darrboden. Zwei Wochen kein Sud. Es kostet ihn 29 Pf. Eigener Brunnen: weg vom Hof."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 76,
+   "jahr": 1352,
+   "woche": 17,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.47",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 15 Pf (Kasse reicht −0,5×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=15",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 235,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 77,
+   "jahr": 1352,
+   "woche": 18,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.47",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 15 Pf (Kasse reicht −0,5×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=15",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 238,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler steht dem Wirt zum Fährhaus am Fluss Gevatter. Das hält länger als ein Brief."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 78,
+   "jahr": 1352,
+   "woche": 19,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.29",
+   "kopfText": "nächster Zug: Zuvorkommen Ausschank am Markt — 24 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:faehrhaus=33",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 240,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 79,
+   "jahr": 1352,
+   "woche": 20,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −31 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.29",
+   "kopfText": "nächster Zug: Zuvorkommen Ausschank am Markt — 24 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:faehrhaus=33",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 241,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Adler erwirkt den Bannbrief: in der Meile um Ausschank am Markt schenkt nur sein Bier aus. Dafür wird Fährhaus am Fluss fallengelassen — die Adresse ist frei.",
+    "gegner:Ein grauer Wagen des Hauses gegenüber fährt zum Zum Goldenen Ochsen."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 80,
+   "jahr": 1352,
+   "woche": 21,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −18 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:hirsch=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 244,
+   "chronikN": 44,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben",
+    "gegner:Der Rat entzieht dem Adler die Konzession für Landgasthof Hirsch. Der Wirt hat geklagt."
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1352,\"woche\":22,\"art\":\"gegner\",\"text\":\"Landgasthof Hirsch ist wieder frei. Brauhaus zum Adler hat die Bindung verloren.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 81,
+   "jahr": 1352,
+   "woche": 22,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −43 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 5,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": null,
+   "kopfText": null,
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 248,
+   "chronikN": 45,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler wirbt um Fährhaus am Fluss: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 20 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1352,\"woche\":23,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 82,
+   "jahr": 1352,
+   "woche": 23,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −43 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.35",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 20 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=20",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 250,
+   "chronikN": 46,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Dem Adler brennt der Darrboden. Zwei Wochen kein Sud. Es kostet ihn 45 Pf. Zweiter Karren: weg vom Hof."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 83,
+   "jahr": 1352,
+   "woche": 24,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −43 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.35",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 20 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=20",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 252,
+   "chronikN": 46,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler wirbt um Pfarrschenke St. Michael: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 22 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 84,
+   "jahr": 1352,
+   "woche": 25,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −43 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.35",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 20 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=20",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 254,
+   "chronikN": 46,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 85,
+   "jahr": 1352,
+   "woche": 26,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −43 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.35",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 20 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=20",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 257,
+   "chronikN": 46,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 86,
+   "jahr": 1352,
+   "woche": 27,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −43 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.35",
+   "kopfText": "nächster Zug: Zuvorkommen Fährhaus am Fluss — 20 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:zuvorkommen:faehrhaus=20",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 258,
+   "chronikN": 46,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Rat verleiht dem Adler die Schankgerechtigkeit im Fährhaus am Fluss.",
+    "gegner:Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 87,
+   "jahr": 1352,
+   "woche": 28,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 2 Häuser −43 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 7,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.32",
+   "kopfText": "nächster Zug: Zuvorkommen Pfarrschenke St. Michael — 22 Pf (Kasse reicht −0,3×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:zuvorkommen:pfarrhof=22",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:faehrhaus=44",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 261,
+   "chronikN": 46,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Der Rat verleiht dem Adler die Schankgerechtigkeit im Pfarrschenke St. Michael. Dafür wird Fährhaus am Fluss fallengelassen — die Adresse ist frei."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 88,
+   "jahr": 1352,
+   "woche": 29,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.15",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 263,
+   "chronikN": 46,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben",
+    "gegner:Brauhaus zum Adler baut auf dem eigenen Hof: Zweiter Karren für 22 Pf."
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1352,\"woche\":30,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 89,
+   "jahr": 1352,
+   "woche": 30,
+   "epoche": 1,
+   "kasse": -7,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -1.75,
+   "kopfDeckung": "-0.15",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,1×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4"
+   ],
+   "protokollN": 267,
+   "chronikN": 47,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -7,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:Georgi: 3 Fass überstehen den Sommer nicht und kippen",
+    "verfall:Zum Goldenen Ochsen führt kein Bier des Hauses mehr",
+    "verfall:Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+    "verfall:Landgasthof Hirsch führt kein Bier des Hauses mehr",
+    "verfall:Ausschank am Markt führt kein Bier des Hauses mehr",
+    "verfall:Sommer: Unterhalt und Abgaben(-9)",
+    "gegner:Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ],
+   "neuProtSpieler": [
+    "Der Rat lässt pfänden: Malzboden auf Stelzen(6)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1352,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Zum Goldenen Ochsen nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 22 · 0 · 0 von 25 Fass.\"}",
+    "{\"jahr\":1352,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Pfarrschenke St. Michael nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 8 · 0 · 0 von 12 Fa",
+    "{\"jahr\":1352,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Landgasthof Hirsch nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 16 · 0 · 0 von 18 Fass.\"}",
+    "{\"jahr\":1352,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Ausschank am Markt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe: 8 · 0 · 0 von 9 Fass.\"}",
+    "{\"jahr\":1352,\"woche\":30,\"art\":\"fuhre\",\"text\":\"Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer unter der Pfanne — die Stadt fürchtet den Bra",
+    "{\"jahr\":1353,\"woche\":1,\"art\":\"bau\",\"text\":\"Der Rat lässt pfänden — zwei Ratsdiener, ein Karren, kein Wort. Malzboden auf Stelzen: 6 Pf.\"}",
+    "{\"jahr\":1353,\"woche\":1,\"art\":\"bau\",\"text\":\"Es reicht nicht. 10 Pf bleiben als Schuld stehen; zu Michaeli kommen sie wieder.\"}",
+    "{\"jahr\":1353,\"woche\":1,\"art\":\"fuhre\",\"text\":\"Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Grutbier — wie im vorigen Jahr, bis jemand es ändert.\"}",
+    "{\"jahr\":1353,\"woche\":1,\"art\":\"fuhre\",\"text\":\"Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, aber es liefert nirgendwohin mehr. Nicht das Geld ist ausgegangen — die Kundschaft. Ein Brau"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 90,
+   "jahr": 1353,
+   "woche": 1,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 0,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 5,
+   "nBezahlbar": 0,
+   "billigsterPreis": 6,
+   "rhoBillig": -1.67,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54",
+    "fuhre:jahresplan:duenn=6",
+    "fuhre:jahresplan:grut=7",
+    "fuhre:jahresplan:stark=15"
+   ],
+   "protokollN": 275,
+   "chronikN": 56,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1353,\"woche\":2,\"art\":\"fuhre\",\"text\":\"Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Kofent an, den zweiten Guss auf dieselben Treber. Kein Pfennig, kein Grut, kein Tag "
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 91,
+   "jahr": 1353,
+   "woche": 2,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 34,
+   "rhoBillig": -0.29,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 277,
+   "chronikN": 57,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 92,
+   "jahr": 1353,
+   "woche": 3,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 6,
+   "nBezahlbar": 0,
+   "billigsterPreis": 34,
+   "rhoBillig": -0.29,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 278,
+   "chronikN": 57,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Ein grauer Wagen des Hauses gegenüber fährt zum Mühlschenke."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 93,
+   "jahr": 1353,
+   "woche": 4,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -2.5,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 280,
+   "chronikN": 57,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 94,
+   "jahr": 1353,
+   "woche": 5,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -2.5,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 281,
+   "chronikN": 57,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben",
+    "gegner:Der Adler ruft am Markt aus: 6 Pf je Fass, einen Pfennig unter dem Satz."
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 95,
+   "jahr": 1353,
+   "woche": 6,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 9,
+   "nBezahlbar": 0,
+   "billigsterPreis": 4,
+   "rhoBillig": -2.5,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:lindenhof=93",
+    "gegner:abloesen:pfarrhof=48",
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54",
+    "fuhre:tafel-auf:duenn=4",
+    "fuhre:tafel-auf:grut=4",
+    "fuhre:tafel-auf:stark=4",
+    "fuhre:kauf:rohstoff=34",
+    "fuhre:kauf:fass=34"
+   ],
+   "protokollN": 285,
+   "chronikN": 57,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1353,\"woche\":7,\"art\":\"fuhre\",\"text\":\"Der Rat bietet den Abstand. Der Stadtschreiber steht im Hof. Ein Braurecht ist geliehen, nicht gekauft: wessen Bier keine Schenke der Stadt mehr führt, dem"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 96,
+   "jahr": 1353,
+   "woche": 7,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 2,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.19,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54"
+   ],
+   "protokollN": 286,
+   "chronikN": 58,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 97,
+   "jahr": 1353,
+   "woche": 8,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 2,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.19,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54"
+   ],
+   "protokollN": 287,
+   "chronikN": 58,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 98,
+   "jahr": 1353,
+   "woche": 9,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 2,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.19,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54"
+   ],
+   "protokollN": 288,
+   "chronikN": 58,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [
+    "verfall:3 Fass verdorben"
+   ],
+   "neuProtSpieler": [
+    "3 Fass Kofent eingelegt",
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": false
+  },
+  {
+   "i": 99,
+   "jahr": 1353,
+   "woche": 10,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 2,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.19,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54"
+   ],
+   "protokollN": 291,
+   "chronikN": 58,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Brauhaus zum Adler baut auf dem eigenen Hof: Eigener Brunnen für 38 Pf."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 100,
+   "jahr": 1353,
+   "woche": 11,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 2,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.19,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54"
+   ],
+   "protokollN": 293,
+   "chronikN": 58,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [
+    "gegner:Ein grauer Karren des Adlers fährt zum Pfarrschenke St. Michael."
+   ],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 101,
+   "jahr": 1353,
+   "woche": 12,
+   "epoche": 1,
+   "kasse": -10,
+   "faesser": 3,
+   "amt": "Heinrich Bruckner/streitbar",
+   "erb": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+   "nPreisSichtAktiv": 2,
+   "nBezahlbar": 0,
+   "billigsterPreis": 54,
+   "rhoBillig": -0.19,
+   "kopfDeckung": "-0.21",
+   "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+   "preise": [
+    "gegner:abloesen:muehlwirt=64",
+    "gegner:abloesen:markt=54"
+   ],
+   "protokollN": 295,
+   "chronikN": 58,
+   "plan": [
+    "fuhre:fuellen:klickfehler TimeoutError: elementHandle.click: Timeout 2500ms exceeded.\n"
+   ],
+   "kasseNachKauf": -10,
+   "weiter": "ok",
+   "neuProt": [],
+   "neuProtSpieler": [
+    "Dach, Geschirr, Wache (nicht bezahlbar)(-1)"
+   ],
+   "neuChronik": [
+    "{\"jahr\":1353,\"woche\":13,\"art\":\"ende\",\"text\":\"Der Rat entzieht dem Haus zum Anker das Braurecht: seit 12 Wochen hat keine Schenke der Stadt ein Fass genommen. Ein Braurecht wird für die Stadt verliehen",
+    "{\"jahr\":1353,\"woche\":13,\"art\":\"ruf\",\"text\":\"Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben.\"}"
+   ],
+   "gegnerGeaendert": true
+  },
+  {
+   "i": 102,
+   "ENDE": true,
+   "jahr": 1353,
+   "woche": 13
+  }
+ ],
+ "ende": {
+  "jahr": 1353,
+  "woche": 13,
+  "epoche": 1,
+  "ende": true,
+  "amt": {
+   "name": "Heinrich Bruckner",
+   "eig": "streitbar",
+   "bis": 1380,
+   "nr": 2
+  },
+  "kasse": -10,
+  "faesser": 3,
+  "ruf": 0,
+  "kopfDeckung": "-0.21",
+  "kopfText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 48 Pf (Kasse reicht −0,2×)",
+  "protokollN": 296,
+  "chronikN": 60,
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 5 Häuser 55 ZÜGE 290 Pf KASSE 6 Pf SEIN PREIS karrt W12 baut W11 SI",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:abloesen:lindenhof",
+    "preis": -93,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "LIN · GEV ablösen 93 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:hinhalten:lindenhof",
+    "preis": null,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:abloesen:ochse",
+    "preis": null,
+    "cls": "gg-schild gg-adler fest",
+    "txt": "OCH · RAT nicht ablösbar",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:hinhalten:ochse",
+    "preis": null,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:abloesen:pfarrhof",
+    "preis": -48,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "PFA · KON ablösen 48 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:hinhalten:pfarrhof",
+    "preis": null,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:abloesen:muehlwirt",
+    "preis": -64,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "MUE · KON ablösen 64 Pf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:hinhalten:muehlwirt",
+    "preis": null,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:abloesen:markt",
+    "preis": -54,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "MKT · BAN ablösen 54 Pf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:hinhalten:markt",
+    "preis": null,
+    "cls": "gg-fass",
+    "txt": "Fass an den Wirt 1 Fass statt Geld",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "cls": "gg-amt amort",
+    "txt": "Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Gasthof Lindenhof",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "cls": "knopf gg-klein",
+    "txt": "Das Haus gegenüber",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "cls": "knopf gg-klein",
+    "txt": "Klage vor dem Stadtgericht",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "gegner:zeige:55",
+    "preis": null,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:zeige:54",
+    "preis": null,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "gegner:zeige:53",
+    "preis": null,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hefezeug vom Fass abnehmen",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hopfen im Sack, heimlich",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -78,
+    "cls": "knopf sud-tat klein voll siegel",
+    "txt": "Offen gehopft, mit Hopfenbrief−78 Pf",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "preis": null,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "Adler-Ausschank am Mar",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "FAE",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "preis": null,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OBE",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:schluss-auf",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "Das Schlussblatt aufschlagen",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "So ist es verabredet",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "fuhre:probe:lindenhof",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:probe:ochse",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:probe:torschenke",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:probe:pfarrhof",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:probe:muehlwirt",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "fuhre:probe:brueckenwirt",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "fuhre:probe:faehrhaus",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "fuhre:probe:hirsch",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "fuhre:probe:markt",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/6",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:probe:obernberg",
+    "preis": null,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "auf Probe · 1 Fass · 0/4",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "fuhre:tafel-ab:duenn",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "−",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "fuhre:tafel-auf:duenn",
+    "preis": -4,
+    "cls": "knopf fu-klein",
+    "txt": "+ −4 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:tafel-ab:grut",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "−",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:tafel-auf:grut",
+    "preis": -4,
+    "cls": "knopf fu-klein",
+    "txt": "+ −4 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:tafel-ab:stark",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "−",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "fuhre:tafel-auf:stark",
+    "preis": -4,
+    "cls": "knopf fu-klein",
+    "txt": "+ −4 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:tafel-ab:kofent",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "−",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "fuhre:tafel-auf:kofent",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "+",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:kauf:budget",
+    "preis": -90,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Brautage vom Rat · +6 · auf 4 Kerben −90 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -34,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Grut vom Grutherrn · +40 · auf 2 Kerben −34 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 19,
+    "cls": "knopf fu-klein fu-rueck",
+    "txt": "Grut zurück an den Grutherrn · −40 +19 Pf",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "fuhre:kauf:fass",
+    "preis": -34,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Fass vom Böttcher · +3 · auf 2 Kerben −34 Pf",
+    "s": false,
+    "a": true
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "Wie vorige Woche",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "cls": "knopf fu-klein",
+    "txt": "Karren leeren",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "cls": "knopf fu-abschicken",
+    "txt": "FUHRE ABSCHICKEN",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "sud:wuerze:grut",
+    "preis": null,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Grut vom Grutamt",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "sud:wuerze:sack",
+    "preis": null,
+    "cls": "knopf sud-wahl",
+    "txt": "Hopfen im Sack, heimlich",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "sud:wuerze:brief",
+    "preis": -78,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Offen gehopft, mit Hopfenbrief −78 Pf",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "cls": "knopf sud-tat",
+    "txt": "Hefezeug aus dem Bottich heben · +8",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "cls": "knopf sud-tat",
+    "txt": "Junges Fass anbrechen · +14",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "cls": "knopf sud-tat",
+    "txt": "Altes Fass anbrechen · +6",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -26,
+    "cls": "knopf sud-tat",
+    "txt": "Bottich beim Küfer bestellen · +6 Fass −26 Pf",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "cls": "knopf klang-schalter klang-an",
+    "txt": "♪",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "cls": "knopf nm-knopf nm-bandgriff",
+    "txt": "▾",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "cls": "knopf nm-knopf nm-klein-knopf",
+    "txt": "Das Aufgeld nachrechnen",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "name:entzug-loesen",
+    "preis": -36,
+    "cls": "knopf nm-knopf nm-rot",
+    "txt": "Vor dem Rat abbitten −36 Pf − 1 Fass",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "cls": "knopf nm-knopf",
+    "txt": "Das Zeichen verdecken",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "cls": "knopf nm-knopf",
+    "txt": "Herumgehen und den Namen sagen",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "cls": "knopf nm-knopf nm-griff",
+    "txt": "Das Zeichen und das Register",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -26,
+    "cls": "knopf erb-knopf erb-nach",
+    "txt": "Nachschrift · 1 Haus −26 Pf",
+    "s": false,
+    "a": false
+   },
+   {
+    "zug": "erbe:anfechten",
+    "preis": -51,
+    "cls": "knopf erb-knopf erb-streit",
+    "txt": "Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 60",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "cls": "tafel knopf",
+    "txt": "BUCH 296",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "cls": "knopf gross amort",
+    "txt": "ENDE",
+    "s": true,
+    "a": false
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 55 Züge",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 0 · im Keller liegen 3 Fass",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER KELLER 3 von 12 Fass · 3 reif",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES GENOMMEN von Der Rat bis 1354",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:fuhre-blatt-fu-ende-entzogen-fu-schlussblatt",
+    "preis": null,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "DAS ENDE DES HAUSES liegt auf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 7 auf dem Pflock",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "cls": "knopf stadt-seite",
+    "txt": "BAUHOF",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:versatz",
+    "preis": null,
+    "cls": "knopf stadt-seite auf",
+    "txt": "VERSATZ",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:versatz:ochsenstall",
+    "preis": 8,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Ochsenstall +8 Pf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:versatz:pfanne",
+    "preis": 7,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Braupfanne im Hof +7 Pf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:versatz:gaerbottiche",
+    "preis": 7,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Gärbottiche +7 Pf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:versatz:fasslager_holz",
+    "preis": 6,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Fassschuppen +6 Pf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "stadt:versatz:grutkammer",
+    "preis": 6,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Grutkammer +6 Pf",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "fuhre:wiederanfang",
+    "preis": null,
+    "cls": "knopf gross",
+    "txt": "Von vorn anfangen — dieselbe Stadt, andere Würfel",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1353 · 5 Angebote",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+    "s": true,
+    "a": true
+   },
+   {
+    "zug": "sud:schluss-auf",
+    "preis": null,
+    "cls": "knopf sud-tat klein",
+    "txt": "Sudbuch aufschlagen",
+    "s": true,
+    "a": true
+   }
+  ],
+  "erbLeiste": "DAS ERBE II. Hand Heinrich Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 7 Fass Nachschrift · 1 Haus −26 Pf Vor dem Rat anfechten · Zum Goldenen Ochsen −51 Pf",
+  "gegnerStand": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 5 Häuser 55 ZÜGE 290 Pf KASSE 6 Pf SEIN PREIS karrt W12 baut W11 SITZ IM RAT | LIN · GEV ablösen 93 Pf | OCH · RAT nicht ablösbar | PFA · KON ablösen 48 Pf | MUE · KON ablösen 64 Pf | MKT · BAN ablösen 54 Pf | Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Gasthof Lindenhof"
+ },
+ "fehler": []
+}

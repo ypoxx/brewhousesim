@@ -1,0 +1,154 @@
+{
+ "ja-e1": {
+  "ende": "pfanne-zurueckgegeben",
+  "jahr": 1353,
+  "kasse": 56,
+  "zuege": 97,
+  "aus": 64,
+  "offenSichtbar": 33,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": 56,
+  "dBuch": -236,
+  "lage": 0,
+  "fehler": []
+ },
+ "ja-e2": {
+  "ende": "gerechtigkeit-verkauft",
+  "jahr": 1603,
+  "kasse": 718,
+  "zuege": 102,
+  "aus": 67,
+  "offenSichtbar": 35,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": 0,
+  "dBuch": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "ja-e3": {
+  "ende": "an-aktienbrauerei-verkauft",
+  "jahr": 1887,
+  "kasse": 22061,
+  "zuege": 107,
+  "aus": 73,
+  "offenSichtbar": 34,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": -7811,
+  "dBuch": -247,
+  "lage": 0,
+  "fehler": []
+ },
+ "ja-e4": {
+  "ende": "marke-verkauft",
+  "jahr": 1973,
+  "kasse": 167319,
+  "zuege": 107,
+  "aus": 72,
+  "offenSichtbar": 35,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": -81319,
+  "dBuch": -291,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e1": {
+  "ende": "braurecht-entzogen",
+  "jahr": 1353,
+  "kasse": 0,
+  "zuege": 93,
+  "aus": 60,
+  "offenSichtbar": 33,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": 112,
+  "dBuch": -246,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e2": {
+  "ende": "reihe-gestrichen",
+  "jahr": 1603,
+  "kasse": 319,
+  "zuege": 102,
+  "aus": 67,
+  "offenSichtbar": 35,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": 321,
+  "dBuch": -250,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e3": {
+  "ende": "bank-verwertet",
+  "jahr": 1887,
+  "kasse": 7391,
+  "zuege": 107,
+  "aus": 73,
+  "offenSichtbar": 34,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": 0,
+  "dBuch": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e4": {
+  "ende": "brauereisterben",
+  "jahr": 1973,
+  "kasse": 39727,
+  "zuege": 103,
+  "aus": 77,
+  "offenSichtbar": 26,
+  "offenGetroffen": 15,
+  "kenn": {
+   "kern": false,
+   "gegner": false,
+   "textWirbt": false
+  },
+  "gebucht": [],
+  "dKasse": 46273,
+  "dBuch": -300,
+  "lage": 0,
+  "fehler": []
+ }
+}

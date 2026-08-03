@@ -1,0 +1,2324 @@
+{
+ "ep": "2",
+ "gekauft": [
+  "erbe:verschreibe:faehrhaus=-38",
+  "erbe:verschreibe:torschenke=-50",
+  "erbe:verschreibe:hirsch=-63",
+  "erbe:verschreibe:lindenhof=-113"
+ ],
+ "log": [
+  {
+   "i": 0,
+   "j": 1600,
+   "w": 1,
+   "k": 376,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 4 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+   "erb": "DAS ERBE noch 15 Wochen Barbara Bruckner · sparsam am Haus 4 · an der Person 0 nimmt 0 · 3 Fass Ausgedinge · jährlich −3 fl Abfindung −14 fl Ohne Vergleich 0 fl",
+   "nAng": 11,
+   "bil": 3,
+   "rho": 125.33
+  },
+  {
+   "i": 1,
+   "j": 1600,
+   "w": 2,
+   "k": 350,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 4 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 2 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 14 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −63 fl Abfindung −306 fl Ohne Vergleich 0 fl",
+   "nAng": 15,
+   "bil": 44,
+   "rho": 7.95
+  },
+  {
+   "i": 2,
+   "j": 1600,
+   "w": 3,
+   "k": 281,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 5 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 3 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 13 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −63 fl Abfindung −296 fl Ohne Vergleich 0 fl",
+   "nAng": 14,
+   "bil": 44,
+   "rho": 6.39
+  },
+  {
+   "i": 3,
+   "j": 1600,
+   "w": 4,
+   "k": 228,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 4 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 12 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −63 fl Abfindung −287 fl Ohne Vergleich 0 fl",
+   "nAng": 15,
+   "bil": 44,
+   "rho": 5.18
+  },
+  {
+   "i": 4,
+   "j": 1600,
+   "w": 5,
+   "k": 204,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 5 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 11 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −63 fl Abfindung −277 fl Ohne Vergleich 0 fl",
+   "nAng": 15,
+   "bil": 44,
+   "rho": 4.64
+  },
+  {
+   "i": 5,
+   "j": 1600,
+   "w": 6,
+   "k": 179,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 8 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 6 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 10 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −63 fl Abfindung −268 fl Ohne Vergleich 0 fl",
+   "nAng": 16,
+   "bil": 44,
+   "rho": 4.07
+  },
+  {
+   "i": 6,
+   "j": 1600,
+   "w": 7,
+   "k": 161,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 9 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 7 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 9 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −63 fl Abfindung −258 fl Ohne Vergleich 0 fl",
+   "nAng": 16,
+   "bil": 44,
+   "rho": 3.66
+  },
+  {
+   "i": 7,
+   "j": 1600,
+   "w": 8,
+   "k": 187,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 9 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 8 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 8 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −63 fl Abfindung −249 fl Ohne Vergleich 0 fl",
+   "nAng": 15,
+   "bil": 44,
+   "rho": 4.25
+  },
+  {
+   "i": 8,
+   "j": 1600,
+   "w": 9,
+   "k": 169,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 10 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 8 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE noch 7 Wochen Barbara Bruckner · sparsam am Haus 2 · an der Person 4 nimmt 4 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −83 fl Abfindung −315 fl Ohne Vergleich 0 fl",
+   "nAng": 16,
+   "bil": 44,
+   "rho": 3.84
+  },
+  {
+   "i": 9,
+   "j": 1600,
+   "w": 10,
+   "k": 215,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 10 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 10 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 6 Wochen Barbara Bruckner · sparsam am Haus 1 · an der Person 4 nimmt 4 · 4 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −83 fl Abfindung −302 fl Ohne Vergleich 0 fl",
+   "nAng": 16,
+   "bil": 44,
+   "rho": 4.89
+  },
+  {
+   "i": 10,
+   "j": 1600,
+   "w": 11,
+   "k": 211,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 11 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 11 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 5 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −81 fl Abfindung −284 fl Ohne Vergleich 0 fl",
+   "nAng": 17,
+   "bil": 44,
+   "rho": 4.8
+  },
+  {
+   "i": 11,
+   "j": 1600,
+   "w": 12,
+   "k": 191,
+   "amt": "Barbara Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 12 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 12 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 4 Wochen Barbara Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verbriefen · Lindenhof −113 fl Ausgedinge · jährlich −81 fl Abfindung −271 fl Ohne Vergleich 0 fl",
+   "nAng": 17,
+   "bil": 44,
+   "rho": 4.34,
+   "uebergabe": "leibgeding/abfindung:1"
+  },
+  {
+   "i": 12,
+   "j": 1600,
+   "w": 13,
+   "k": 132,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 14 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 3 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 13,
+   "bil": 34,
+   "rho": 3.88
+  },
+  {
+   "i": 13,
+   "j": 1600,
+   "w": 14,
+   "k": 130,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 14 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 3 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 12,
+   "bil": 34,
+   "rho": 3.82
+  },
+  {
+   "i": 14,
+   "j": 1600,
+   "w": 15,
+   "k": 128,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 15 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 3 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 13,
+   "bil": 34,
+   "rho": 3.76
+  },
+  {
+   "i": 15,
+   "j": 1600,
+   "w": 16,
+   "k": 126,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 16 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 3 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 13,
+   "bil": 34,
+   "rho": 3.71
+  },
+  {
+   "i": 16,
+   "j": 1600,
+   "w": 17,
+   "k": 124,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 17 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 3 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 13,
+   "bil": 34,
+   "rho": 3.65
+  },
+  {
+   "i": 17,
+   "j": 1600,
+   "w": 18,
+   "k": 122,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 18 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 11,
+   "bil": 34,
+   "rho": 3.59
+  },
+  {
+   "i": 18,
+   "j": 1600,
+   "w": 19,
+   "k": 120,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 19 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 11,
+   "bil": 34,
+   "rho": 3.53
+  },
+  {
+   "i": 19,
+   "j": 1600,
+   "w": 20,
+   "k": 118,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 20 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 9,
+   "bil": 34,
+   "rho": 3.47
+  },
+  {
+   "i": 20,
+   "j": 1600,
+   "w": 21,
+   "k": 116,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 21 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 34,
+   "rho": 3.41
+  },
+  {
+   "i": 21,
+   "j": 1600,
+   "w": 22,
+   "k": 114,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 22 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 34,
+   "rho": 3.35
+  },
+  {
+   "i": 22,
+   "j": 1600,
+   "w": 23,
+   "k": 112,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 23 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 9,
+   "bil": 34,
+   "rho": 3.29
+  },
+  {
+   "i": 23,
+   "j": 1600,
+   "w": 24,
+   "k": 110,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 23 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 1 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Fortschreiben · Pfarrschenke St. Mic… −34 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 9,
+   "bil": 34,
+   "rho": 3.24
+  },
+  {
+   "i": 24,
+   "j": 1600,
+   "w": 25,
+   "k": 108,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 24 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 2 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 7,
+   "bil": 65,
+   "rho": 1.66
+  },
+  {
+   "i": 25,
+   "j": 1600,
+   "w": 26,
+   "k": 106,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 24 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 6,
+   "bil": 96,
+   "rho": 1.1
+  },
+  {
+   "i": 26,
+   "j": 1600,
+   "w": 27,
+   "k": 104,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 25 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 6,
+   "bil": 96,
+   "rho": 1.08
+  },
+  {
+   "i": 27,
+   "j": 1600,
+   "w": 28,
+   "k": 102,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 26 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 6,
+   "bil": 96,
+   "rho": 1.06
+  },
+  {
+   "i": 28,
+   "j": 1600,
+   "w": 29,
+   "k": 100,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 26 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 6,
+   "bil": 96,
+   "rho": 1.04
+  },
+  {
+   "i": 29,
+   "j": 1600,
+   "w": 30,
+   "k": 98,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 27 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 6,
+   "bil": 96,
+   "rho": 1.02
+  },
+  {
+   "i": 30,
+   "j": 1601,
+   "w": 1,
+   "k": 199,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 27 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 13,
+   "rho": 15.31
+  },
+  {
+   "i": 31,
+   "j": 1601,
+   "w": 2,
+   "k": 197,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 28 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 12,
+   "bil": 96,
+   "rho": 2.05
+  },
+  {
+   "i": 32,
+   "j": 1601,
+   "w": 3,
+   "k": 195,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 28 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 1 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Verbriefen · Lindenhof −146 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 12,
+   "bil": 96,
+   "rho": 2.03
+  },
+  {
+   "i": 33,
+   "j": 1601,
+   "w": 4,
+   "k": 193,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 30 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 11,
+   "bil": 96,
+   "rho": 2.01
+  },
+  {
+   "i": 34,
+   "j": 1601,
+   "w": 5,
+   "k": 191,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 11,
+   "bil": 96,
+   "rho": 1.99
+  },
+  {
+   "i": 35,
+   "j": 1601,
+   "w": 6,
+   "k": 189,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 11,
+   "bil": 96,
+   "rho": 1.97
+  },
+  {
+   "i": 36,
+   "j": 1601,
+   "w": 7,
+   "k": 187,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 31 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.95
+  },
+  {
+   "i": 37,
+   "j": 1601,
+   "w": 8,
+   "k": 185,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 31 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.93
+  },
+  {
+   "i": 38,
+   "j": 1601,
+   "w": 9,
+   "k": 183,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 31 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.91
+  },
+  {
+   "i": 39,
+   "j": 1601,
+   "w": 10,
+   "k": 181,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 31 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.89
+  },
+  {
+   "i": 40,
+   "j": 1601,
+   "w": 11,
+   "k": 179,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 32 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.86
+  },
+  {
+   "i": 41,
+   "j": 1601,
+   "w": 12,
+   "k": 177,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 32 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.84
+  },
+  {
+   "i": 42,
+   "j": 1601,
+   "w": 13,
+   "k": 175,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 33 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.82
+  },
+  {
+   "i": 43,
+   "j": 1601,
+   "w": 14,
+   "k": 173,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 33 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.8
+  },
+  {
+   "i": 44,
+   "j": 1601,
+   "w": 15,
+   "k": 171,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 33 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.78
+  },
+  {
+   "i": 45,
+   "j": 1601,
+   "w": 16,
+   "k": 169,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 33 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.76
+  },
+  {
+   "i": 46,
+   "j": 1601,
+   "w": 17,
+   "k": 167,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 33 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.74
+  },
+  {
+   "i": 47,
+   "j": 1601,
+   "w": 18,
+   "k": 165,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 34 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.72
+  },
+  {
+   "i": 48,
+   "j": 1601,
+   "w": 19,
+   "k": 163,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 34 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.7
+  },
+  {
+   "i": 49,
+   "j": 1601,
+   "w": 20,
+   "k": 161,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 34 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.68
+  },
+  {
+   "i": 50,
+   "j": 1601,
+   "w": 21,
+   "k": 159,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 34 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.66
+  },
+  {
+   "i": 51,
+   "j": 1601,
+   "w": 22,
+   "k": 157,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 35 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.64
+  },
+  {
+   "i": 52,
+   "j": 1601,
+   "w": 23,
+   "k": 155,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 35 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 96,
+   "rho": 1.61
+  },
+  {
+   "i": 53,
+   "j": 1601,
+   "w": 24,
+   "k": 153,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 36 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 9,
+   "bil": 96,
+   "rho": 1.59
+  },
+  {
+   "i": 54,
+   "j": 1601,
+   "w": 25,
+   "k": 151,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 36 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 9,
+   "bil": 96,
+   "rho": 1.57
+  },
+  {
+   "i": 55,
+   "j": 1601,
+   "w": 26,
+   "k": 149,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 37 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 95,
+   "rho": 1.57
+  },
+  {
+   "i": 56,
+   "j": 1601,
+   "w": 27,
+   "k": 147,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 95,
+   "rho": 1.55
+  },
+  {
+   "i": 57,
+   "j": 1601,
+   "w": 28,
+   "k": 145,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 95,
+   "rho": 1.53
+  },
+  {
+   "i": 58,
+   "j": 1601,
+   "w": 29,
+   "k": 143,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 95,
+   "rho": 1.51
+  },
+  {
+   "i": 59,
+   "j": 1601,
+   "w": 30,
+   "k": 141,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 10,
+   "bil": 95,
+   "rho": 1.48
+  },
+  {
+   "i": 60,
+   "j": 1602,
+   "w": 1,
+   "k": 38,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 6,
+   "bil": 13,
+   "rho": 2.92
+  },
+  {
+   "i": 61,
+   "j": 1602,
+   "w": 2,
+   "k": 36,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 38 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 210,
+   "rho": 0.17
+  },
+  {
+   "i": 62,
+   "j": 1602,
+   "w": 3,
+   "k": 34,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 39 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 210,
+   "rho": 0.16
+  },
+  {
+   "i": 63,
+   "j": 1602,
+   "w": 4,
+   "k": 32,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 39 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 210,
+   "rho": 0.15
+  },
+  {
+   "i": 64,
+   "j": 1602,
+   "w": 5,
+   "k": 30,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 40 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 210,
+   "rho": 0.14
+  },
+  {
+   "i": 65,
+   "j": 1602,
+   "w": 6,
+   "k": 28,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 41 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0.13
+  },
+  {
+   "i": 66,
+   "j": 1602,
+   "w": 7,
+   "k": 26,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0.12
+  },
+  {
+   "i": 67,
+   "j": 1602,
+   "w": 8,
+   "k": 24,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0.11
+  },
+  {
+   "i": 68,
+   "j": 1602,
+   "w": 9,
+   "k": 22,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0.1
+  },
+  {
+   "i": 69,
+   "j": 1602,
+   "w": 10,
+   "k": 20,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 42 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 57,
+   "rho": 0.35
+  },
+  {
+   "i": 70,
+   "j": 1602,
+   "w": 11,
+   "k": 18,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 57,
+   "rho": 0.32
+  },
+  {
+   "i": 71,
+   "j": 1602,
+   "w": 12,
+   "k": 16,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 57,
+   "rho": 0.28
+  },
+  {
+   "i": 72,
+   "j": 1602,
+   "w": 13,
+   "k": 14,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 57,
+   "rho": 0.25
+  },
+  {
+   "i": 73,
+   "j": 1602,
+   "w": 14,
+   "k": 12,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 43 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 57,
+   "rho": 0.21
+  },
+  {
+   "i": 74,
+   "j": 1602,
+   "w": 15,
+   "k": 10,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 45 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 126,
+   "rho": 0.08
+  },
+  {
+   "i": 75,
+   "j": 1602,
+   "w": 16,
+   "k": 8,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 45 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 126,
+   "rho": 0.06
+  },
+  {
+   "i": 76,
+   "j": 1602,
+   "w": 17,
+   "k": 6,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 45 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 126,
+   "rho": 0.05
+  },
+  {
+   "i": 77,
+   "j": 1602,
+   "w": 18,
+   "k": 4,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 45 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 126,
+   "rho": 0.03
+  },
+  {
+   "i": 78,
+   "j": 1602,
+   "w": 19,
+   "k": 2,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 46 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 126,
+   "rho": 0.02
+  },
+  {
+   "i": 79,
+   "j": 1602,
+   "w": 20,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 46 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 126,
+   "rho": 0
+  },
+  {
+   "i": 80,
+   "j": 1602,
+   "w": 21,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 47 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 126,
+   "rho": 0
+  },
+  {
+   "i": 81,
+   "j": 1602,
+   "w": 22,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 48 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 3,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 82,
+   "j": 1602,
+   "w": 23,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 49 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 113,
+   "rho": 0
+  },
+  {
+   "i": 83,
+   "j": 1602,
+   "w": 24,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 49 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 113,
+   "rho": 0
+  },
+  {
+   "i": 84,
+   "j": 1602,
+   "w": 25,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 50 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 85,
+   "j": 1602,
+   "w": 26,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 50 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 86,
+   "j": 1602,
+   "w": 27,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 87,
+   "j": 1602,
+   "w": 28,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 88,
+   "j": 1602,
+   "w": 29,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 89,
+   "j": 1602,
+   "w": 30,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× jedes Michaeli 81 fl Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 90,
+   "j": 1603,
+   "w": 1,
+   "k": 5,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 6,
+   "bil": 13,
+   "rho": 0.38
+  },
+  {
+   "i": 91,
+   "j": 1603,
+   "w": 2,
+   "k": 3,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0.01
+  },
+  {
+   "i": 92,
+   "j": 1603,
+   "w": 3,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 93,
+   "j": 1603,
+   "w": 4,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 94,
+   "j": 1603,
+   "w": 5,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 52 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 95,
+   "j": 1603,
+   "w": 6,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 52 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 210,
+   "rho": 0
+  },
+  {
+   "i": 96,
+   "j": 1603,
+   "w": 7,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 53 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 85,
+   "rho": 0.01
+  },
+  {
+   "i": 97,
+   "j": 1603,
+   "w": 8,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 54 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 85,
+   "rho": 0.01
+  },
+  {
+   "i": 98,
+   "j": 1603,
+   "w": 9,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 55 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 99,
+   "j": 1603,
+   "w": 10,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 55 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 100,
+   "j": 1603,
+   "w": 11,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 56 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 101,
+   "j": 1603,
+   "w": 12,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 102,
+   "j": 1603,
+   "w": 13,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 103,
+   "j": 1603,
+   "w": 14,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 104,
+   "j": 1603,
+   "w": 15,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 105,
+   "j": 1603,
+   "w": 16,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 106,
+   "j": 1603,
+   "w": 17,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 57 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 107,
+   "j": 1603,
+   "w": 18,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 57 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 108,
+   "j": 1603,
+   "w": 19,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 58 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 5,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 109,
+   "j": 1603,
+   "w": 20,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 59 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 110,
+   "j": 1603,
+   "w": 21,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 59 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 111,
+   "j": 1603,
+   "w": 22,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 59 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 112,
+   "j": 1603,
+   "w": 23,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 59 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 113,
+   "j": 1603,
+   "w": 24,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 59 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 114,
+   "j": 1603,
+   "w": 25,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 59 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 115,
+   "j": 1603,
+   "w": 26,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 60 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 4,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 116,
+   "j": 1603,
+   "w": 27,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 61 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 3,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 117,
+   "j": 1603,
+   "w": 28,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 3,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 118,
+   "j": 1603,
+   "w": 29,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 3,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 119,
+   "j": 1603,
+   "w": 30,
+   "k": 1,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 62 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 2,
+   "bil": 189,
+   "rho": 0.01
+  },
+  {
+   "i": 120,
+   "j": 1604,
+   "w": 1,
+   "k": 14,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 62 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 3,
+   "bil": 13,
+   "rho": 1.08
+  },
+  {
+   "i": 121,
+   "j": 1604,
+   "w": 2,
+   "k": 12,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 62 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 2,
+   "bil": 189,
+   "rho": 0.06
+  },
+  {
+   "i": 122,
+   "j": 1604,
+   "w": 3,
+   "k": 10,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 63 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 2,
+   "bil": 189,
+   "rho": 0.05
+  },
+  {
+   "i": 123,
+   "j": 1604,
+   "w": 4,
+   "k": 8,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 63 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 2,
+   "bil": 189,
+   "rho": 0.04
+  },
+  {
+   "i": 124,
+   "j": 1604,
+   "w": 5,
+   "k": 6,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 63 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 2,
+   "bil": 189,
+   "rho": 0.03
+  },
+  {
+   "i": 125,
+   "j": 1604,
+   "w": 6,
+   "k": 4,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 64 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 3,
+   "bil": 151,
+   "rho": 0.03
+  },
+  {
+   "i": 126,
+   "j": 1604,
+   "w": 7,
+   "k": 2,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 65 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 1,
+   "bil": 151,
+   "rho": 0.01
+  },
+  {
+   "i": 127,
+   "j": 1604,
+   "w": 8,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 66 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 1,
+   "bil": 336,
+   "rho": 0
+  },
+  {
+   "i": 128,
+   "j": 1604,
+   "w": 9,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 66 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 1,
+   "bil": 336,
+   "rho": 0
+  },
+  {
+   "i": 129,
+   "j": 1604,
+   "w": 10,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 66 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 1,
+   "bil": 336,
+   "rho": 0
+  },
+  {
+   "i": 130,
+   "j": 1604,
+   "w": 11,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 66 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 1,
+   "bil": 336,
+   "rho": 0
+  },
+  {
+   "i": 131,
+   "j": 1604,
+   "w": 12,
+   "k": 0,
+   "amt": "Kaspar Bruckner/fromm",
+   "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 66 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+   "nAng": 1,
+   "bil": 336,
+   "rho": 0
+  },
+  {
+   "i": 132,
+   "ENDE": 1,
+   "j": 1604,
+   "w": 13,
+   "k": 209
+  }
+ ],
+ "ende": {
+  "j": 1604,
+  "w": 13,
+  "ende": true,
+  "k": 209,
+  "amt": "Kaspar Bruckner/fromm",
+  "fest": "Chronik des Hauses · 14 Festlegungen · 0 von dieser Tafel gebaut",
+  "ohne": "OHNE DICH GESCHEHEN 66 Züge Das Haus gegenüber",
+  "erb": "DAS ERBE II. Hand Kaspar Bruckner · fromm am Haus 0 · an der Person 0 AUSGEDINGE · Feder 0,90× Leibgeding verfallen · nahm 0 · 0 Fass Eine Stiftung ans Kloster −216 fl",
+  "kn": [
+   {
+    "z": "gegner:oeffnen:adler",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:lindenhof",
+    "pr": -756,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:lindenhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:pfarrhof",
+    "pr": -189,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:pfarrhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:obernberg",
+    "pr": -336,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:obernberg",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:beschwerde-bild",
+    "pr": 0,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:blatt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:beschwerde",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:zeige:66",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:zeige:65",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:zeige:64",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "sud:zettel-anstich",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:zettel-wechsel-frei",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:zettel-wechsel-kauf",
+    "pr": -260,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "stadt:marke:gegner-marktplatz",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-lindenhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-marktplatz",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-muehle",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-unten",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-fluss",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-oben",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "fuhre:schluss-auf",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:ziel:bar",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:ziel:ziel",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:ziel:borg",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:probe:lindenhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:ochse",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:torschenke",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:pfarrhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:muehlwirt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:brueckenwirt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:faehrhaus",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:hirsch",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:markt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:obernberg",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:schank",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:tafel-auf:schank",
+    "pr": -14,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:braun",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-auf:braun",
+    "pr": -14,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:maerzen",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:tafel-auf:maerzen",
+    "pr": -14,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:nachbier",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:tafel-auf:nachbier",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:kauf:budget",
+    "pr": -300,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:kauf:fass",
+    "pr": -92,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:kauf:rohstoff",
+    "pr": -120,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:rueckkauf:rohstoff",
+    "pr": 66,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:pfand",
+    "pr": -14,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:fuellen",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:wie-vorige",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:leeren",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:abschicken",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:schuettung:rein",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:schuettung:weizen",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:schuettung:hafer",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:gaerung:ober",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:gaerung:keller",
+    "pr": -260,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:hefe-fuehren",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:anstich-jung",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:anstich-alt",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:gaerraum",
+    "pr": -78,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "name:band",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:aufgeldbuch",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:entzug-loesen",
+    "pr": -210,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "name:ruhe",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:herumgehen",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:blatt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "erbe:seelgeraet",
+    "pr": -216,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "kern:chronik",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "kern:protokoll",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "weiter",
+    "pr": null,
+    "t": true,
+    "a": false
+   },
+   {
+    "z": "klang:ton",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:gegner-amort-gg-band",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:sud-sud-brett",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:name-nm-band",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-blatt-fu-ende-gestrichen-fu-schlussblatt",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:erbe-blatt-erb-buch",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:ortsmarken",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:alles-zuklappen",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:seite",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:wiederkauf",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:brunnen",
+    "pr": -54,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:gaerbottiche",
+    "pr": -72,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:waschhaus",
+    "pr": -96,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:kontor",
+    "pr": -114,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:rossmuehle",
+    "pr": -120,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "fuhre:wiederanfang",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "preis:tafel",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "preis:chronik-auf",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "sud:schluss-auf",
+    "pr": null,
+    "t": true,
+    "a": true
+   }
+  ]
+ },
+ "fehler": []
+}

@@ -1,0 +1,2127 @@
+{
+ "epoche": "3",
+ "saat": "1350",
+ "vor": [],
+ "start": {
+  "jahr": 1884,
+  "woche": 1,
+  "ende": false,
+  "kasse": 14250,
+  "amt": {
+   "nr": 1,
+   "name": "Wilhelmine Bruckner",
+   "eig": "sparsam"
+  },
+  "erbe": {
+   "stundeJahr": 1884,
+   "wochenBisStunde": 15,
+   "uebergeben": false,
+   "form": null,
+   "leibgeding": 0,
+   "leibgedingVerfallen": false,
+   "amHaus": [],
+   "anDerPerson": [
+    "Zum Goldenen Ochsen · Gewohnheit",
+    "Schenke am Tor · Gewohnheit",
+    "Brückenwirt · Gewohnheit",
+    "Bahnhofsgaststätte · Gewohnheit"
+   ],
+   "gefallen": [],
+   "geschrieben": [],
+   "vorher": null,
+   "nachher": null,
+   "keller": 7,
+   "erbteilFass": 0,
+   "nachschriftOffen": 0,
+   "nachgeschrieben": 0,
+   "alt": null,
+   "neu": null,
+   "eigenschaft": "sparsam",
+   "faktor": 0.7,
+   "fuenfterZug": null,
+   "borg": [],
+   "angefochten": 0,
+   "seelgeraet": false
+  },
+  "leiste": "DAS ERBE noch 15 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4,5 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.316 M Abfindung −11.580 M Ohne Abfindung 0 M",
+  "lage": 0
+ },
+ "nachVor": {
+  "jahr": 1884,
+  "woche": 1,
+  "ende": false,
+  "kasse": 14250,
+  "amt": {
+   "nr": 1,
+   "name": "Wilhelmine Bruckner",
+   "eig": "sparsam"
+  },
+  "erbe": {
+   "stundeJahr": 1884,
+   "wochenBisStunde": 15,
+   "uebergeben": false,
+   "form": null,
+   "leibgeding": 0,
+   "leibgedingVerfallen": false,
+   "amHaus": [],
+   "anDerPerson": [
+    "Zum Goldenen Ochsen · Gewohnheit",
+    "Schenke am Tor · Gewohnheit",
+    "Brückenwirt · Gewohnheit",
+    "Bahnhofsgaststätte · Gewohnheit"
+   ],
+   "gefallen": [],
+   "geschrieben": [],
+   "vorher": null,
+   "nachher": null,
+   "keller": 7,
+   "erbteilFass": 0,
+   "nachschriftOffen": 0,
+   "nachgeschrieben": 0,
+   "alt": null,
+   "neu": null,
+   "eigenschaft": "sparsam",
+   "faktor": 0.7,
+   "fuenfterZug": null,
+   "borg": [],
+   "angefochten": 0,
+   "seelgeraet": false
+  },
+  "leiste": "DAS ERBE noch 15 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4,5 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.316 M Abfindung −11.580 M Ohne Abfindung 0 M",
+  "lage": 0
+ },
+ "ende": {
+  "jahr": 1887,
+  "woche": 11,
+  "ende": true,
+  "kasse": 7391,
+  "amt": {
+   "nr": 2,
+   "name": "Karoline Bruckner",
+   "eig": "gelehrt"
+  },
+  "erbe": {
+   "stundeJahr": 1884,
+   "wochenBisStunde": 0,
+   "uebergeben": true,
+   "form": "stunde",
+   "leibgeding": 0,
+   "leibgedingVerfallen": false,
+   "amHaus": [],
+   "anDerPerson": [],
+   "gefallen": [
+    {
+     "schluessel": "bahnhofswirt",
+     "name": "Bahnhofsgaststätte",
+     "womit": "Gewohnheit",
+     "wert": 4800
+    }
+   ],
+   "geschrieben": [],
+   "vorher": {
+    "haus": 0,
+    "person": 1,
+    "summe": 4800,
+    "keller": 79,
+    "namen": [
+     "Bahnhofsgaststätte"
+    ]
+   },
+   "nachher": {
+    "haus": 0,
+    "person": 0,
+    "keller": 52
+   },
+   "keller": 16,
+   "erbteilFass": 27,
+   "nachschriftOffen": 1,
+   "nachgeschrieben": 0,
+   "alt": {
+    "nr": 1,
+    "name": "Wilhelmine Bruckner",
+    "eigenschaft": "sparsam",
+    "eigenschaftName": "sparsam"
+   },
+   "neu": {
+    "nr": 2,
+    "name": "Karoline Bruckner",
+    "eigenschaft": "gelehrt",
+    "eigenschaftName": "gelehrt"
+   },
+   "eigenschaft": "gelehrt",
+   "faktor": 0.85,
+   "fuenfterZug": "zahlen",
+   "borg": [],
+   "angefochten": 0,
+   "seelgeraet": false
+  },
+  "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M",
+  "lage": 0
+ },
+ "zeilen": [
+  {
+   "i": 0,
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 14250,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −2.316 M",
+    "erbe:uebergabe:abfindung −11.580 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 15 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4,5 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.316 M Abfindung −11.580 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 1,
+   "jahr": 1884,
+   "woche": 2,
+   "kasse": 13778,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −2.412 M",
+    "erbe:uebergabe:abfindung −11.698 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 14 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 17 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.412 M Abfindung −11.698 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 2,
+   "jahr": 1884,
+   "woche": 3,
+   "kasse": 13306,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −2.508 M",
+    "erbe:uebergabe:abfindung −11.788 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 13 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 29 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.508 M Abfindung −11.788 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 3,
+   "jahr": 1884,
+   "woche": 4,
+   "kasse": 12834,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −2.068 M",
+    "erbe:uebergabe:abfindung −9.409 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 12 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 29 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.068 M Abfindung −9.409 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 4,
+   "jahr": 1884,
+   "woche": 5,
+   "kasse": 12362,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.972 M",
+    "erbe:uebergabe:abfindung −8.677 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 11 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 17 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.972 M Abfindung −8.677 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 5,
+   "jahr": 1884,
+   "woche": 6,
+   "kasse": 12338,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.972 M",
+    "erbe:uebergabe:abfindung −8.381 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 10 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 17 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.972 M Abfindung −8.381 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 6,
+   "jahr": 1884,
+   "woche": 7,
+   "kasse": 12314,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.972 M",
+    "erbe:uebergabe:abfindung −8.085 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 9 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 17 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.972 M Abfindung −8.085 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 7,
+   "jahr": 1884,
+   "woche": 8,
+   "kasse": 12290,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 2,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.748 M",
+    "erbe:uebergabe:abfindung −6.905 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 8 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 29 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.748 M Abfindung −6.905 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 8,
+   "jahr": 1884,
+   "woche": 9,
+   "kasse": 12266,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 2,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.844 M",
+    "erbe:uebergabe:abfindung −7.007 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 7 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 41 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.844 M Abfindung −7.007 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 9,
+   "jahr": 1884,
+   "woche": 10,
+   "kasse": 12242,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 2,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.844 M",
+    "erbe:uebergabe:abfindung −6.731 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 6 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 41 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.844 M Abfindung −6.731 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 10,
+   "jahr": 1884,
+   "woche": 11,
+   "kasse": 12218,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 2,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.844 M",
+    "erbe:uebergabe:abfindung −6.454 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 5 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 41 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.844 M Abfindung −6.454 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 11,
+   "jahr": 1884,
+   "woche": 12,
+   "kasse": 12194,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 2,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.844 M",
+    "erbe:uebergabe:abfindung −6.177 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 4 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 41 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.844 M Abfindung −6.177 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 12,
+   "jahr": 1884,
+   "woche": 13,
+   "kasse": 12170,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 2,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.844 M",
+    "erbe:uebergabe:abfindung −5.901 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 3 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 41 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.844 M Abfindung −5.901 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 13,
+   "jahr": 1884,
+   "woche": 14,
+   "kasse": 12146,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 1,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.284 M",
+    "erbe:uebergabe:abfindung −3.916 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 2 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 1 nimmt 1 · 41 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.284 M Abfindung −3.916 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 14,
+   "jahr": 1884,
+   "woche": 15,
+   "kasse": 12122,
+   "amtNr": 1,
+   "amtName": "Wilhelmine Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 1,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −3.360 M",
+    "erbe:uebergabe:leibgeding −1.284 M",
+    "erbe:uebergabe:abfindung −3.724 M",
+    "erbe:uebergabe:bruch 0 M"
+   ],
+   "leiste": "DAS ERBE noch 1 Woche Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 1 nimmt 1 · 41 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.284 M Abfindung −3.724 M Ohne Abfindung 0 M"
+  },
+  {
+   "i": 15,
+   "jahr": 1884,
+   "woche": 16,
+   "kasse": 12098,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 16,
+   "jahr": 1884,
+   "woche": 17,
+   "kasse": 12074,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 17,
+   "jahr": 1884,
+   "woche": 18,
+   "kasse": 12050,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 18,
+   "jahr": 1884,
+   "woche": 19,
+   "kasse": 12026,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 19,
+   "jahr": 1884,
+   "woche": 20,
+   "kasse": 12002,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 20,
+   "jahr": 1884,
+   "woche": 21,
+   "kasse": 11978,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 21,
+   "jahr": 1884,
+   "woche": 22,
+   "kasse": 11954,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 22,
+   "jahr": 1884,
+   "woche": 23,
+   "kasse": 11930,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 23,
+   "jahr": 1884,
+   "woche": 24,
+   "kasse": 11906,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 24,
+   "jahr": 1884,
+   "woche": 25,
+   "kasse": 11882,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 25,
+   "jahr": 1884,
+   "woche": 26,
+   "kasse": 11858,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 26,
+   "jahr": 1884,
+   "woche": 27,
+   "kasse": 11834,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 27,
+   "jahr": 1884,
+   "woche": 28,
+   "kasse": 11810,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 28,
+   "jahr": 1884,
+   "woche": 29,
+   "kasse": 11786,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 29,
+   "jahr": 1884,
+   "woche": 30,
+   "kasse": 11762,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 30,
+   "jahr": 1885,
+   "woche": 1,
+   "kasse": 10626,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 31,
+   "jahr": 1885,
+   "woche": 2,
+   "kasse": 10602,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 32,
+   "jahr": 1885,
+   "woche": 3,
+   "kasse": 10578,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 33,
+   "jahr": 1885,
+   "woche": 4,
+   "kasse": 10554,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 34,
+   "jahr": 1885,
+   "woche": 5,
+   "kasse": 10530,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 35,
+   "jahr": 1885,
+   "woche": 6,
+   "kasse": 10506,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 36,
+   "jahr": 1885,
+   "woche": 7,
+   "kasse": 10482,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 37,
+   "jahr": 1885,
+   "woche": 8,
+   "kasse": 10458,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 38,
+   "jahr": 1885,
+   "woche": 9,
+   "kasse": 10434,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 39,
+   "jahr": 1885,
+   "woche": 10,
+   "kasse": 10410,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 40,
+   "jahr": 1885,
+   "woche": 11,
+   "kasse": 10386,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 41,
+   "jahr": 1885,
+   "woche": 12,
+   "kasse": 10362,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 42,
+   "jahr": 1885,
+   "woche": 13,
+   "kasse": 10338,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 43,
+   "jahr": 1885,
+   "woche": 14,
+   "kasse": 10314,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 44,
+   "jahr": 1885,
+   "woche": 15,
+   "kasse": 10290,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 45,
+   "jahr": 1885,
+   "woche": 16,
+   "kasse": 10266,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 46,
+   "jahr": 1885,
+   "woche": 17,
+   "kasse": 10242,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 47,
+   "jahr": 1885,
+   "woche": 18,
+   "kasse": 10218,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 48,
+   "jahr": 1885,
+   "woche": 19,
+   "kasse": 10194,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 49,
+   "jahr": 1885,
+   "woche": 20,
+   "kasse": 10170,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 50,
+   "jahr": 1885,
+   "woche": 21,
+   "kasse": 10146,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 51,
+   "jahr": 1885,
+   "woche": 22,
+   "kasse": 10122,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 52,
+   "jahr": 1885,
+   "woche": 23,
+   "kasse": 10098,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 53,
+   "jahr": 1885,
+   "woche": 24,
+   "kasse": 10074,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 54,
+   "jahr": 1885,
+   "woche": 25,
+   "kasse": 10050,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 55,
+   "jahr": 1885,
+   "woche": 26,
+   "kasse": 10026,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 56,
+   "jahr": 1885,
+   "woche": 27,
+   "kasse": 10002,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 57,
+   "jahr": 1885,
+   "woche": 28,
+   "kasse": 9978,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 58,
+   "jahr": 1885,
+   "woche": 29,
+   "kasse": 9954,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 59,
+   "jahr": 1885,
+   "woche": 30,
+   "kasse": 9930,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 60,
+   "jahr": 1886,
+   "woche": 1,
+   "kasse": 9037,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 61,
+   "jahr": 1886,
+   "woche": 2,
+   "kasse": 9013,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 62,
+   "jahr": 1886,
+   "woche": 3,
+   "kasse": 8989,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 63,
+   "jahr": 1886,
+   "woche": 4,
+   "kasse": 8965,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 64,
+   "jahr": 1886,
+   "woche": 5,
+   "kasse": 8941,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 65,
+   "jahr": 1886,
+   "woche": 6,
+   "kasse": 8917,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 66,
+   "jahr": 1886,
+   "woche": 7,
+   "kasse": 8893,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 67,
+   "jahr": 1886,
+   "woche": 8,
+   "kasse": 8869,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 68,
+   "jahr": 1886,
+   "woche": 9,
+   "kasse": 8845,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 69,
+   "jahr": 1886,
+   "woche": 10,
+   "kasse": 8821,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 70,
+   "jahr": 1886,
+   "woche": 11,
+   "kasse": 8797,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 71,
+   "jahr": 1886,
+   "woche": 12,
+   "kasse": 8773,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 72,
+   "jahr": 1886,
+   "woche": 13,
+   "kasse": 8749,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 73,
+   "jahr": 1886,
+   "woche": 14,
+   "kasse": 8725,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 74,
+   "jahr": 1886,
+   "woche": 15,
+   "kasse": 8701,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 75,
+   "jahr": 1886,
+   "woche": 16,
+   "kasse": 8677,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 76,
+   "jahr": 1886,
+   "woche": 17,
+   "kasse": 8653,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 77,
+   "jahr": 1886,
+   "woche": 18,
+   "kasse": 8629,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 78,
+   "jahr": 1886,
+   "woche": 19,
+   "kasse": 8605,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 79,
+   "jahr": 1886,
+   "woche": 20,
+   "kasse": 8581,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 80,
+   "jahr": 1886,
+   "woche": 21,
+   "kasse": 8557,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 81,
+   "jahr": 1886,
+   "woche": 22,
+   "kasse": 8533,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 82,
+   "jahr": 1886,
+   "woche": 23,
+   "kasse": 8509,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 83,
+   "jahr": 1886,
+   "woche": 24,
+   "kasse": 8485,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 84,
+   "jahr": 1886,
+   "woche": 25,
+   "kasse": 8461,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 85,
+   "jahr": 1886,
+   "woche": 26,
+   "kasse": 8437,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 86,
+   "jahr": 1886,
+   "woche": 27,
+   "kasse": 8413,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 87,
+   "jahr": 1886,
+   "woche": 28,
+   "kasse": 8389,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 88,
+   "jahr": 1886,
+   "woche": 29,
+   "kasse": 8365,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 89,
+   "jahr": 1886,
+   "woche": 30,
+   "kasse": 8341,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 90,
+   "jahr": 1887,
+   "woche": 1,
+   "kasse": 7631,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 91,
+   "jahr": 1887,
+   "woche": 2,
+   "kasse": 7607,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 92,
+   "jahr": 1887,
+   "woche": 3,
+   "kasse": 7583,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 93,
+   "jahr": 1887,
+   "woche": 4,
+   "kasse": 7559,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 94,
+   "jahr": 1887,
+   "woche": 5,
+   "kasse": 7535,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 95,
+   "jahr": 1887,
+   "woche": 6,
+   "kasse": 7511,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 96,
+   "jahr": 1887,
+   "woche": 7,
+   "kasse": 7487,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 97,
+   "jahr": 1887,
+   "woche": 8,
+   "kasse": 7463,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 98,
+   "jahr": 1887,
+   "woche": 9,
+   "kasse": 7439,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 99,
+   "jahr": 1887,
+   "woche": 10,
+   "kasse": 7415,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −5.712 M"
+   ],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  },
+  {
+   "i": 100,
+   "jahr": 1887,
+   "woche": 11,
+   "kasse": 7391,
+   "amtNr": 2,
+   "amtName": "Karoline Bruckner",
+   "amtEig": "gelehrt",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 0,
+   "alleMitPreis": 0,
+   "erbeZuege": [],
+   "leiste": "DAS ERBE II. Hand Karoline Bruckner · gelehrt am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,85× nahm 1 · 41 hl Nachschrift · 1 Haus −5.712 M"
+  }
+ ],
+ "fehler": [],
+ "lage": []
+}

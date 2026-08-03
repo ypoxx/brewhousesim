@@ -1,0 +1,5323 @@
+{
+ "epoche": "4",
+ "modus": "eingriff",
+ "wahl": "bruch",
+ "start": {
+  "jahr": 1970,
+  "woche": 1,
+  "epoche": 4,
+  "ende": false,
+  "amt": {
+   "nr": 1,
+   "name": "Margarete Bruckner",
+   "eig": "sparsam",
+   "bis": 2006
+  },
+  "kasse": 86000,
+  "faesser": 140,
+  "kopfLeiste": [
+   "SEPTEMBER 1970",
+   "KASSE 86.000 DM",
+   "HOPFEN 340",
+   "TANKS 210/600 hl",
+   "WOCHE 1/30",
+   "CHRONIK 4",
+   "BUCH 1"
+  ],
+  "kopfDeckung": "2.25",
+  "kopfDeckungTxt": "nächster Zug: Ablösung Brückenwirt — 38.221 DM (Kasse reicht 2,3×)",
+  "protN": 1,
+  "chrN": 4,
+  "erbLeiste": "DAS ERBE noch 15 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.193 DM Abfindung −55.965 DM Ohne Abfindung 0 DM",
+  "erbBuch": "DAS ERBE — Festschreiben notariell, im Liefervertrag Margarete Bruckner · sparsam „Hält das Geld zusammen, versäumt die Gelegenheit.\" Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber. Ein Vertrag mit Laufzeit überdauert den Geschäftsführer. Eine gute Beziehung überdauert ihn nicht. Die Stunde kommt in 15 Wochen — 12. Januar 1971. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 4 — FÄLLT MIT DER HAND, DIE ES GAB Gasthof Lindenhof Gewohnheit Festschreiben −14.742 DM Schenke am Tor Gewohnheit Festschreiben −6.552 DM Mühlschenke Gewohnheit Festschreiben −7.371 DM Ausschank am Markt Gewohnheit Festschreiben −4.095 DM",
+  "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "ADLER-BRÄU AG Dr. Werner Feist · gelehrt · hält 3 Häuser 1 ZÜGE 1.193.110 DM KASSE 130 DM SEIN PREIS kauft sic"
+   },
+   {
+    "zug": "gegner:oeffnen:konzern",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-konzern amort",
+    "txt": "NORDSTERN-GRUPPE Ute Nordstern · träge · hält 0 Häuser 0 ZÜGE 4.200.000 DM KASSE 0 BRAUEREIEN"
+   },
+   {
+    "zug": "gegner:abloesen:brueckenwirt",
+    "preis": -38221,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler frisch",
+    "txt": "BRU · LIS ablösen 38.221 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:brueckenwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:hirsch",
+    "preis": -40500,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "HIR · JVB ablösen 40.500 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:hirsch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:bahnhofswirt",
+    "preis": -58320,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "BHF · LIS ablösen 58.320 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:bahnhofswirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": true,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Anzeige beim Bundeskartellamt kostet kein Geld · vier Ansehen gegen Bahnhofsgaststätte"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hefe aus dem Tank zusetzen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Schönen mit Kieselsol"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -26000,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Kieselgurfilter −26.000 DM"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BHF"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-wartet",
+    "txt": "♪"
+   },
+   {
+    "zug": "erbe:tafel:verschreibe",
+    "preis": -14742,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-weit",
+    "txt": "Festschreiben · Lindenhof −14.742 DM"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -11193,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Versorgungszusage · jährlich −11.193 DM"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -55965,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Abfindung −55.965 DM"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe erb-leer",
+    "txt": "Ohne Abfindung 0 DM"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 4"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 1"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross amort",
+    "txt": "WEITER"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 1 Zug"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 534 · im Keller liegen 210 hl"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "SUDPLAN im Schaltraum, auf Formica"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE TANKS 210 von 600 hl · 210 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 6 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:abbruch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "ABBRUCH"
+   },
+   {
+    "zug": "stadt:bau:waage",
+    "preis": -9570,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Fahrzeugwaage −9.570 DM"
+   },
+   {
+    "zug": "stadt:bau:maelzerei",
+    "preis": -14790,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Mälzereiturm −14.790 DM"
+   },
+   {
+    "zug": "stadt:bau:verwaltung",
+    "preis": -15660,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Verwaltungsbau −15.660 DM"
+   },
+   {
+    "zug": "stadt:bau:sudhaus_neu",
+    "preis": -24360,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Neues Sudhaus −24.360 DM"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1970 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   }
+  ]
+ },
+ "zeilen": [
+  {
+   "i": 0,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "faesser": 140,
+   "amt": "Margarete Bruckner / sparsam (bis 2006)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 9570,
+   "rho": 8.99,
+   "kopfDeckung": "2.25",
+   "angebot": [
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "sud:zettel-wechsel-kauf=26000",
+    "erbe:tafel:verschreibe=14742",
+    "erbe:uebergabe:leibgeding=11193",
+    "erbe:uebergabe:abfindung=55965",
+    "stadt:bau:waage=9570",
+    "stadt:bau:maelzerei=14790",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE noch 15 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.193 DM Abfindung −55.965 DM Ohne Abfindung 0 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:waage:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 11.491 DM. Ablösen kostet jetzt 38.221 DM.",
+    "gegner: Die Nordstern-Gruppe übernimmt Bürgerbräu Neustadt. Sie zahlt 294.001 DM für die Kessel. Mit ihnen geht der Ausschank in dieser Stadt: Bahnhofsgaststätte. Notartermin in 5 Wochen, bis dahin zählt das höhere Gebot."
+   ]
+  },
+  {
+   "i": 1,
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 86105,
+   "faesser": 20,
+   "amt": "Margarete Bruckner / sparsam (bis 2006)",
+   "nAngebotTA": 10,
+   "nBezahlbar": 10,
+   "billigster": 12909,
+   "rho": 6.67,
+   "kopfDeckung": "2.25",
+   "angebot": [
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "sud:zettel-wechsel-kauf=26000",
+    "erbe:tafel:verschreibe=14742",
+    "erbe:uebergabe:leibgeding=12909",
+    "erbe:uebergabe:abfindung=62609",
+    "stadt:bau:maelzerei=14790",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE noch 14 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 11 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −12.909 DM Abfindung −62.609 DM Ohne Abfindung 0 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 2 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Adler-Bräu AG baut auf dem eigenen Hof: Labor und Qualitätsstelle für 175.000 DM.",
+    "gegner: Nordstern-Gruppe wirbt um Zum Goldenen Ochsen: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 44.226 DM."
+   ]
+  },
+  {
+   "i": 2,
+   "jahr": 1970,
+   "woche": 3,
+   "kasse": 83927,
+   "faesser": 60,
+   "amt": "Margarete Bruckner / sparsam (bis 2006)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 13416,
+   "rho": 6.26,
+   "kopfDeckung": "2.2",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=44226",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "sud:zettel-wechsel-kauf=26000",
+    "erbe:tafel:verschreibe=14742",
+    "erbe:uebergabe:leibgeding=13416",
+    "erbe:uebergabe:abfindung=63055",
+    "stadt:bau:maelzerei=14790",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE noch 13 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 30 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.416 DM Abfindung −63.055 DM Ohne Abfindung 0 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 4 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Lastzug des Adlers fährt zum Bahnhofsgaststätte."
+   ]
+  },
+  {
+   "i": 3,
+   "jahr": 1970,
+   "woche": 4,
+   "kasse": 79127,
+   "faesser": 100,
+   "amt": "Margarete Bruckner / sparsam (bis 2006)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 13962,
+   "rho": 5.67,
+   "kopfDeckung": "2.07",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=44226",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "sud:zettel-wechsel-kauf=26000",
+    "erbe:tafel:verschreibe=14742",
+    "erbe:uebergabe:leibgeding=13962",
+    "erbe:uebergabe:abfindung=63527",
+    "stadt:bau:maelzerei=14790",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE noch 12 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 51 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.962 DM Abfindung −63.527 DM Ohne Abfindung 0 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 5 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie bietet 557.325 DM für ein Viertel des Hauses. Sie erwartet die Antwort binnen 8 Wochen."
+   ]
+  },
+  {
+   "i": 4,
+   "jahr": 1970,
+   "woche": 5,
+   "kasse": 76941,
+   "faesser": 80,
+   "amt": "Margarete Bruckner / sparsam (bis 2006)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 11,
+   "billigster": 13689,
+   "rho": 5.62,
+   "kopfDeckung": "2.01",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=44226",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "sud:zettel-wechsel-kauf=26000",
+    "erbe:tafel:verschreibe=14742",
+    "erbe:uebergabe:leibgeding=13689",
+    "erbe:uebergabe:abfindung=60232",
+    "stadt:bau:maelzerei=14790",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE noch 11 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 41 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.689 DM Abfindung −60.232 DM Ohne Abfindung 0 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 6 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:maelzerei:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Sein Außendienst sitzt beim Einkauf des Ausschank am Markt und verhandelt die Konditionen für das nächste Jahr. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 7.533 DM.",
+    "gegner: Nordstern-Gruppe wirbt um Schenke am Tor: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 25.272 DM."
+   ]
+  },
+  {
+   "i": 5,
+   "jahr": 1970,
+   "woche": 6,
+   "kasse": 59956,
+   "faesser": 100,
+   "amt": "Margarete Bruckner / sparsam (bis 2006)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 12,
+   "billigster": 7533,
+   "rho": 7.96,
+   "kopfDeckung": "7.96",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=44226",
+    "gegner:zuvorkommen:torschenke=25272",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abwehren:markt=7533",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "sud:zettel-wechsel-kauf=26000",
+    "erbe:tafel:verschreibe=14742",
+    "erbe:uebergabe:leibgeding=13962",
+    "erbe:uebergabe:abfindung=59339",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE noch 10 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 5 nimmt 5 · 51 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.962 DM Abfindung −59.339 DM Ohne Abfindung 0 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 8 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "erbe:verschreibe:markt:ok",
+    "erbe:verschreibe:torschenke:ok",
+    "erbe:uebergabe:bruch:ok",
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "verschreibVorher": [
+    "erbe:verschreibe:lindenhof=-14742|t=true|a=true",
+    "erbe:verschreibe:ochse=-11466|t=true|a=true",
+    "erbe:verschreibe:torschenke=-6552|t=true|a=true",
+    "erbe:verschreibe:muehlwirt=-7371|t=true|a=true",
+    "erbe:verschreibe:markt=-4095|t=true|a=true"
+   ],
+   "verschreibNachher": [
+    "erbe:verschreibe:lindenhof=-14742|t=true|a=true",
+    "erbe:verschreibe:ochse=-11466|t=true|a=true",
+    "erbe:verschreibe:muehlwirt=-7371|t=true|a=true"
+   ],
+   "erbBuchNachVerschreiben": "DAS ERBE — Festschreiben notariell, im Liefervertrag Margarete Bruckner · sparsam „Hält das Geld zusammen, versäumt die Gelegenheit.\" Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber. Ein Vertrag mit Laufzeit überdauert den Geschäftsführer. Eine gute Beziehung überdauert ihn nicht. Die Stunde kommt in 10 Wochen — 12. Januar 1971. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen. AM HAUS · 2 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Schenke am Tor Bierlieferungsvertrag, notariell bis 1980 Ausschank am Markt Bierlieferungsvertrag, notariell bis 1980 AN DER PERSON · 3 — FÄLLT MIT DER HAND, DIE ES GAB Gasthof Lindenhof Lieferung Festschreiben −14.742 DM Zum Goldenen Ochsen Lieferung Festschreiben −11.466 DM Mühlschenke Gewohnheit Festschreiben −7.371 DM GESCHRIEBEN · 2 Ausschank am Markt 1970/6 · vorher Gewohnheit 4.095 DM Schenke am Tor 1970/6 · vorher Lieferu",
+   "uebergabeVorher": [
+    "erbe:uebergabe:leibgeding=-10920|t=true|a=true",
+    "erbe:uebergabe:abfindung=-46410|t=true|a=true",
+    "erbe:uebergabe:bruch=null|t=true|a=true"
+   ],
+   "uebergabeNachher": [],
+   "erbLeisteNachher": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 2 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM Fortschreiben · Schenke am Tor −7.301 DM",
+   "festlegungenNachher": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "fremd": [
+    "verfall: Gasthof Lindenhof: Lieferung fällt mit der Hand",
+    "verfall: Zum Goldenen Ochsen: Lieferung fällt mit der Hand",
+    "verfall: Mühlschenke: Gewohnheit fällt mit der Hand",
+    "verfall: Erbteil der Miterben aus dem Keller",
+    "gegner: Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben. Bürgerbräu Neustadt gehört der Gruppe, und der Ausschank in der Stadt — Bahnhofsgaststätte — mit.",
+    "gegner: Aktionspreis beim Adler: 124 DM je hl, vier Wochen lang, in jedem Prospekt."
+   ]
+  },
+  {
+   "i": 6,
+   "jahr": 1970,
+   "woche": 7,
+   "kasse": 44509,
+   "faesser": 146,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 7,
+   "billigster": 7301,
+   "rho": 6.1,
+   "kopfDeckung": "5.91",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=44226",
+    "gegner:zuvorkommen:torschenke=25272",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200",
+    "erbe:verlaengern=7301",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 2 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM Fortschreiben · Schenke am Tor −7.301 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 7,
+   "jahr": 1970,
+   "woche": 8,
+   "kasse": 39709,
+   "faesser": 146,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 5,
+   "billigster": 7301,
+   "rho": 5.44,
+   "kopfDeckung": "5.27",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=44226",
+    "gegner:zuvorkommen:torschenke=25272",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200",
+    "erbe:verlaengern=7301",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 2 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM Fortschreiben · Schenke am Tor −7.301 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Adler-Bräu AG wirbt um Mühlschenke: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 28.431 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal. Sie zahlt 272.196 DM. Es ist die 2. in dieser Gegend, und in dieser Stadt hängt kein Schild daran."
+   ]
+  },
+  {
+   "i": 8,
+   "jahr": 1970,
+   "woche": 9,
+   "kasse": 34909,
+   "faesser": 146,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 5,
+   "billigster": 7301,
+   "rho": 4.78,
+   "kopfDeckung": "4.63",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=44226",
+    "gegner:zuvorkommen:torschenke=25272",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200",
+    "erbe:verlaengern=7301",
+    "stadt:bau:verwaltung=15660",
+    "stadt:bau:sudhaus_neu=24360"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 2 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM Fortschreiben · Schenke am Tor −7.301 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 12 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:verwaltung:ok",
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler bindet Zum Goldenen Ochsen exklusiv — acht Jahre, kein fremdes Bier im Haus.",
+    "gegner: Der Einkauf des Ausschank am Markt listet das Haus aus und nimmt den Adler ins Regal."
+   ]
+  },
+  {
+   "i": 9,
+   "jahr": 1970,
+   "woche": 10,
+   "kasse": 18629,
+   "faesser": 146,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 7301,
+   "rho": 2.55,
+   "kopfDeckung": "1.53",
+   "angebot": [
+    "gegner:abloesen:ochse=98280",
+    "gegner:zuvorkommen:torschenke=25272",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200",
+    "erbe:verlaengern=7301"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 1 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −57.494 DM Fortschreiben · Schenke am Tor −7.301 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 14 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Ausschank am Markt wirft den Adler aus dem Regal. Zu viele Sorten, zu wenig Umschlag."
+   ]
+  },
+  {
+   "i": 10,
+   "jahr": 1970,
+   "woche": 11,
+   "kasse": 18009,
+   "faesser": 186,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 7301,
+   "rho": 2.47,
+   "kopfDeckung": "0.71",
+   "angebot": [
+    "gegner:abloesen:ochse=98280",
+    "gegner:zuvorkommen:torschenke=25272",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=38221",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200",
+    "erbe:verlaengern=7301"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 1 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −57.494 DM Fortschreiben · Schenke am Tor −7.301 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 15 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler bindet Schenke am Tor exklusiv — acht Jahre, kein fremdes Bier im Haus.",
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 5.759 DM. Ablösen kostet jetzt 43.980 DM."
+   ]
+  },
+  {
+   "i": 11,
+   "jahr": 1970,
+   "woche": 12,
+   "kasse": 17389,
+   "faesser": 186,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 28431,
+   "rho": 0.61,
+   "kopfDeckung": "0.61",
+   "angebot": [
+    "gegner:abloesen:ochse=98280",
+    "gegner:abloesen:torschenke=56160",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=43980",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −57.494 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, antwortet auch nicht mehr — sie nimmt sich stattdessen Fährhaus am Fluss und fragt in ein paar Jahren wieder. Dafür wird Schenke am Tor fallengelassen — die Adresse ist frei.",
+    "gegner: Sein Außendienst sitzt beim Einkauf des Fährhaus am Fluss und verhandelt die Konditionen für das nächste Jahr. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 9.040 DM."
+   ]
+  },
+  {
+   "i": 12,
+   "jahr": 1970,
+   "woche": 13,
+   "kasse": 16769,
+   "faesser": 226,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 9040,
+   "rho": 1.85,
+   "kopfDeckung": "1.85",
+   "angebot": [
+    "gegner:abloesen:ochse=98280",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=43980",
+    "gegner:abwehren:faehrhaus=9040",
+    "gegner:abloesen:faehrhaus=24300",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −57.494 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 19 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler bindet Mühlschenke exklusiv — acht Jahre, kein fremdes Bier im Haus.",
+    "gegner: Adler-Bräu AG baut auf dem eigenen Hof: Eigener Fuhrpark für 260.000 DM."
+   ]
+  },
+  {
+   "i": 13,
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 16149,
+   "faesser": 226,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 9040,
+   "rho": 1.79,
+   "kopfDeckung": "1.79",
+   "angebot": [
+    "gegner:abloesen:ochse=98280",
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:brueckenwirt=43980",
+    "gegner:abwehren:faehrhaus=9040",
+    "gegner:abloesen:faehrhaus=24300",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −38.329 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 21 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 26 Fass verdorben",
+    "gegner: Der Adler schaltet einen Werbespot im Abendprogramm. Man kennt den Namen jetzt auch dort, wo er nicht liefert.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Zum Goldenen Ochsen wird frei."
+   ]
+  },
+  {
+   "i": 14,
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 15529,
+   "faesser": 240,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 1,
+   "billigster": 9040,
+   "rho": 1.72,
+   "kopfDeckung": "1.72",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:brueckenwirt=43980",
+    "gegner:abwehren:faehrhaus=9040",
+    "gegner:abloesen:faehrhaus=24300",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 23 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Adler-Bräu AG baut auf dem eigenen Hof: Werbeabteilung für 140.000 DM.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Fährhaus am Fluss wird frei."
+   ]
+  },
+  {
+   "i": 15,
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 14909,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 9040,
+   "rho": 1.65,
+   "kopfDeckung": "1.65",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:brueckenwirt=43980",
+    "gegner:abwehren:faehrhaus=9040",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 25 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Fährhaus am Fluss listet das Haus aus und nimmt den Adler ins Regal. Dafür wird Brückenwirt fallengelassen — die Adresse ist frei.",
+    "gegner: Adler-Bräu AG baut auf dem eigenen Hof: KEG-Reinigung für 210.000 DM."
+   ]
+  },
+  {
+   "i": 16,
+   "jahr": 1970,
+   "woche": 17,
+   "kasse": 14289,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 14580,
+   "rho": 0.98,
+   "kopfDeckung": "0.98",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Sein Außendienst sitzt beim Einkauf des Bahnhofsgaststätte und verhandelt die Konditionen für das nächste Jahr. In 3 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 36.158 DM.",
+    "gegner: Die Nordstern-Gruppe übernimmt Brauerei Nachtigall im Nachbartal. Sie zahlt 250.890 DM für die Kessel. Mit ihnen geht der Ausschank in dieser Stadt: Brückenwirt. Notartermin in 5 Wochen, bis dahin zählt das höhere Gebot."
+   ]
+  },
+  {
+   "i": 17,
+   "jahr": 1970,
+   "woche": 18,
+   "kasse": 13669,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 14580,
+   "rho": 0.94,
+   "kopfDeckung": "0.94",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Lastzug des Adlers fährt zum Mühlschenke."
+   ]
+  },
+  {
+   "i": 18,
+   "jahr": 1970,
+   "woche": 19,
+   "kasse": 13049,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 14580,
+   "rho": 0.89,
+   "kopfDeckung": "0.89",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=97200"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Mühlschenke um 22.949 DM. Ablösen kostet jetzt 86.129 DM.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Bahnhofsgaststätte wird frei."
+   ]
+  },
+  {
+   "i": 19,
+   "jahr": 1970,
+   "woche": 20,
+   "kasse": 12429,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 14580,
+   "rho": 0.85,
+   "kopfDeckung": "0.85",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abwehren:bahnhofswirt=36158"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 32 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Bahnhofsgaststätte listet das Haus aus und nimmt den Adler ins Regal. Dafür wird Fährhaus am Fluss fallengelassen — die Adresse ist frei."
+   ]
+  },
+  {
+   "i": 20,
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 11809,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 40500,
+   "rho": 0.29,
+   "kopfDeckung": "0.3",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 33 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 21,
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 11189,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 40500,
+   "rho": 0.28,
+   "kopfDeckung": "0.28",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 33 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben. Brauerei Nachtigall im Nachbartal gehört der Gruppe, und der Ausschank in der Stadt — Brückenwirt — mit.",
+    "gegner: Aktionspreis beim Adler: 118 DM je hl, vier Wochen lang, in jedem Prospekt."
+   ]
+  },
+  {
+   "i": 22,
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 10569,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 40500,
+   "rho": 0.26,
+   "kopfDeckung": "0.26",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 35 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Aktionspreis beim Adler: 112 DM je hl, vier Wochen lang, in jedem Prospekt.",
+    "gegner: Sein Außendienst sitzt beim Einkauf des Bahnhofsgaststätte und verhandelt die Konditionen für das nächste Jahr. In 7 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 60.264 DM."
+   ]
+  },
+  {
+   "i": 23,
+   "jahr": 1970,
+   "woche": 24,
+   "kasse": 9949,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 40500,
+   "rho": 0.25,
+   "kopfDeckung": "0.25",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe legt beim Brückenwirt 9.228 DM auf die Jahreskonditionen. Ablösen kostet jetzt 53.778 DM."
+   ]
+  },
+  {
+   "i": 24,
+   "jahr": 1970,
+   "woche": 25,
+   "kasse": 9329,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 40500,
+   "rho": 0.23,
+   "kopfDeckung": "0.23",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:abloesen:brueckenwirt=53778",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 38 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwei Tage in der Zeitung. Es kostet ihn 49.012 DM.",
+    "gegner: Nordstern-Gruppe wirbt um Mühlschenke: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 16.403 DM."
+   ]
+  },
+  {
+   "i": 25,
+   "jahr": 1970,
+   "woche": 26,
+   "kasse": 8709,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 16403,
+   "rho": 0.53,
+   "kopfDeckung": "0.53",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:zuvorkommen:muehlwirt=16403",
+    "gegner:abloesen:brueckenwirt=53778",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 40 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe legt beim Brückenwirt 16.529 DM auf die Jahreskonditionen. Ablösen kostet jetzt 70.307 DM."
+   ]
+  },
+  {
+   "i": 26,
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 8089,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 16403,
+   "rho": 0.49,
+   "kopfDeckung": "0.49",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:zuvorkommen:muehlwirt=16403",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 27,
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 7469,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 16403,
+   "rho": 0.46,
+   "kopfDeckung": "0.46",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:zuvorkommen:muehlwirt=16403",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwei Tage in der Zeitung. Es kostet ihn 53.021 DM. KEG-Reinigung: weg vom Hof."
+   ]
+  },
+  {
+   "i": 28,
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 6849,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 16403,
+   "rho": 0.42,
+   "kopfDeckung": "0.42",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:zuvorkommen:muehlwirt=16403",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 29,
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 6229,
+   "faesser": 280,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 16403,
+   "rho": 0.38,
+   "kopfDeckung": "0.38",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:zuvorkommen:muehlwirt=16403",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:hirsch=40500",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Brückenwirt — Nordstern-Gruppe hält die Adresse und schenkt unter dem Satz aus (-844)",
+    "gegner: Preisabschlag beim Mühlschenke — Adler-Bräu AG hält die Adresse und schenkt unter dem Satz aus (-246)",
+    "verfall: Gaststätte Neustadt führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-2353)"
+   ]
+  },
+  {
+   "i": 30,
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 54296,
+   "faesser": 0,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 5,
+   "billigster": 2700,
+   "rho": 20.11,
+   "kopfDeckung": "3.31",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:zuvorkommen:muehlwirt=16403",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "stadt:bau:sudhaus_neu=24360",
+    "fuhre:jahresplan:hell=2700",
+    "fuhre:jahresplan:pils=3400",
+    "fuhre:jahresplan:export=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:sudhaus_neu:ok",
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe kauft das Regal im Bahnhofsgaststätte im Ganzen. Das Haus fliegt raus.",
+    "gegner: Sein Außendienst sitzt beim Einkauf des Mühlschenke und verhandelt die Konditionen für das nächste Jahr. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 22.599 DM."
+   ]
+  },
+  {
+   "i": 31,
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 29304,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 22599,
+   "rho": 1.3,
+   "kopfDeckung": "1.79",
+   "angebot": [
+    "gegner:abwehren:muehlwirt=22599",
+    "gegner:abloesen:muehlwirt=86129",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:bahnhofswirt=97200",
+    "sud:zettel-wechsel-kauf=26000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 44 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler unterschreibt beim Mühlschenke die Jahresvereinbarung mit voller Rabattstaffel.",
+    "gegner: Die Gruppe legt beim Bahnhofsgaststätte 32.611 DM auf die Jahreskonditionen. Ablösen kostet jetzt 129.811 DM."
+   ]
+  },
+  {
+   "i": 32,
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 28672,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 22599,
+   "rho": 1.27,
+   "kopfDeckung": "1.27",
+   "angebot": [
+    "gegner:abwehren:muehlwirt=22599",
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "sud:zettel-wechsel-kauf=26000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 46 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie bietet 50.000 DM für ein Viertel des Hauses. Sie erwartet die Antwort binnen 8 Wochen."
+   ]
+  },
+  {
+   "i": 33,
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 28040,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 22599,
+   "rho": 1.24,
+   "kopfDeckung": "1.24",
+   "angebot": [
+    "gegner:abwehren:muehlwirt=22599",
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "sud:zettel-wechsel-kauf=26000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe übernimmt Klosterbräu Obernberg. Sie zahlt 229.688 DM für die Kessel. Mit ihnen geht der Ausschank in dieser Stadt: Gasthof Lindenhof. Notartermin in 5 Wochen, bis dahin zählt das höhere Gebot."
+   ]
+  },
+  {
+   "i": 34,
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 27408,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 22599,
+   "rho": 1.21,
+   "kopfDeckung": "1.21",
+   "angebot": [
+    "gegner:abwehren:muehlwirt=22599",
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "sud:zettel-wechsel-kauf=26000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Nordstern-Gruppe lässt von Mühlschenke ab. Das Haus war schneller."
+   ]
+  },
+  {
+   "i": 35,
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 26776,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 26000,
+   "rho": 1.03,
+   "kopfDeckung": "0.73",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "sud:zettel-wechsel-kauf=26000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 36,
+   "jahr": 1971,
+   "woche": 7,
+   "kasse": 26144,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 26000,
+   "rho": 1.01,
+   "kopfDeckung": "0.72",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "sud:zettel-wechsel-kauf=26000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Adler-Bräu AG wirbt um Brückenwirt: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 34.749 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 37,
+   "jahr": 1971,
+   "woche": 8,
+   "kasse": 25512,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 34749,
+   "rho": 0.73,
+   "kopfDeckung": "0.73",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:zuvorkommen:brueckenwirt=34749",
+    "gegner:abloesen:bahnhofswirt=129811"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 38,
+   "jahr": 1971,
+   "woche": 9,
+   "kasse": 24880,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 34749,
+   "rho": 0.72,
+   "kopfDeckung": "0.72",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:zuvorkommen:brueckenwirt=34749",
+    "gegner:abloesen:bahnhofswirt=129811"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben. Klosterbräu Obernberg gehört der Gruppe, und der Ausschank in der Stadt — Gasthof Lindenhof — mit. Dafür wird Mühlschenke fallengelassen — die Adresse ist frei.",
+    "gegner: Adler-Bräu AG wirbt um Zum Goldenen Ochsen: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 15.309 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 39,
+   "jahr": 1971,
+   "woche": 10,
+   "kasse": 24248,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 15309,
+   "rho": 1.58,
+   "kopfDeckung": "1.58",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:ochse=15309",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:zuvorkommen:brueckenwirt=34749",
+    "gegner:abloesen:bahnhofswirt=129811"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Gasthof Lindenhof wird frei."
+   ]
+  },
+  {
+   "i": 40,
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 23616,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 15309,
+   "rho": 1.54,
+   "kopfDeckung": "1.54",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=15309",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:zuvorkommen:brueckenwirt=34749",
+    "gegner:abloesen:bahnhofswirt=129811"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, antwortet auch nicht mehr — sie nimmt sich stattdessen Gasthof Lindenhof und fragt in ein paar Jahren wieder.",
+    "gegner: Adler-Bräu AG baut auf dem eigenen Hof: KEG-Reinigung für 210.000 DM."
+   ]
+  },
+  {
+   "i": 41,
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 22984,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 15309,
+   "rho": 1.5,
+   "kopfDeckung": "1.5",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:ochse=15309",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:zuvorkommen:brueckenwirt=34749",
+    "gegner:abloesen:bahnhofswirt=129811"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 42,
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 22352,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 15309,
+   "rho": 1.46,
+   "kopfDeckung": "1.46",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:ochse=15309",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:zuvorkommen:brueckenwirt=34749",
+    "gegner:abloesen:bahnhofswirt=129811"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 30 Fass verdorben",
+    "gegner: Der Adler kauft sich beim Zum Goldenen Ochsen ins Regal: Listungsgebühr 34.020 DM.",
+    "gegner: Sein Außendienst sitzt beim Einkauf des Zum Goldenen Ochsen und verhandelt die Konditionen für das nächste Jahr. In 6 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 35.154 DM."
+   ]
+  },
+  {
+   "i": 43,
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 21720,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 19165,
+   "rho": 1.13,
+   "kopfDeckung": "0.64",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:abwehren:ochse=35154",
+    "gegner:abloesen:ochse=34020",
+    "gegner:abloesen:brueckenwirt=70307",
+    "gegner:zuvorkommen:brueckenwirt=34749",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "erbe:nachschrift=19165"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 57 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler bindet Brückenwirt exklusiv — acht Jahre, kein fremdes Bier im Haus.",
+    "gegner: Adler-Bräu AG wirbt um Gasthof Lindenhof: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 19.683 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 44,
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 21088,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 19165,
+   "rho": 1.1,
+   "kopfDeckung": "1.07",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abwehren:ochse=35154",
+    "gegner:abloesen:ochse=34020",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "erbe:nachschrift=19165"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 59 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Adler-Bräu AG wirbt um Mühlschenke: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 9.842 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie bietet 50.000 DM für ein Viertel des Hauses. Sie erwartet die Antwort binnen 8 Wochen."
+   ]
+  },
+  {
+   "i": 45,
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 20456,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 3,
+   "billigster": 9842,
+   "rho": 2.08,
+   "kopfDeckung": "2.08",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abwehren:ochse=35154",
+    "gegner:abloesen:ochse=34020",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "erbe:nachschrift=19165"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 46,
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 19824,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 3,
+   "billigster": 9842,
+   "rho": 2.01,
+   "kopfDeckung": "2.01",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abwehren:ochse=35154",
+    "gegner:abloesen:ochse=34020",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "erbe:nachschrift=19165"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Aktionspreis beim Adler: 107 DM je hl, vier Wochen lang, in jedem Prospekt."
+   ]
+  },
+  {
+   "i": 47,
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 19192,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 2,
+   "billigster": 9842,
+   "rho": 1.95,
+   "kopfDeckung": "1.95",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abwehren:ochse=35154",
+    "gegner:abloesen:ochse=34020",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=129811",
+    "erbe:nachschrift=19165"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 62 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwei Tage in der Zeitung. Es kostet ihn 6.842 DM."
+   ]
+  },
+  {
+   "i": 48,
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 18560,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 1,
+   "billigster": 9842,
+   "rho": 1.89,
+   "kopfDeckung": "1.89",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abwehren:ochse=35154",
+    "gegner:abloesen:ochse=34020",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=129811"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 63 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Gasthof Lindenhof ins Regal: Listungsgebühr 43.740 DM.",
+    "gegner: Die Nordstern-Gruppe kauft das Regal im Zum Goldenen Ochsen im Ganzen. Das Haus fliegt raus.",
+    "gegner: Ein grauer Lastzug des Adlers fährt zum Brückenwirt.",
+    "gegner: Die Gruppe legt beim Bahnhofsgaststätte 42.179 DM auf die Jahreskonditionen. Ablösen kostet jetzt 171.990 DM."
+   ]
+  },
+  {
+   "i": 49,
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 17928,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 9842,
+   "rho": 1.82,
+   "kopfDeckung": "1.82",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=171990"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 67 Züge diese Woche 4 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 50,
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 17296,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 9842,
+   "rho": 1.76,
+   "kopfDeckung": "1.76",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=171990"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 67 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 51,
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 16664,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 9842,
+   "rho": 1.69,
+   "kopfDeckung": "1.69",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=171990"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 67 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Mühlschenke ins Regal: Listungsgebühr 21.870 DM."
+   ]
+  },
+  {
+   "i": 52,
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 16032,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0.73,
+   "kopfDeckung": "0.73",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=171990"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl",
+   "ohneDich": "OHNE DICH GESCHEHEN 68 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, antwortet auch nicht mehr — sie nimmt sich stattdessen Fährhaus am Fluss und fragt in ein paar Jahren wieder.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Fährhaus am Fluss wird frei."
+   ]
+  },
+  {
+   "i": 53,
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 15400,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0.7,
+   "kopfDeckung": "0.7",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=171990"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl",
+   "ohneDich": "OHNE DICH GESCHEHEN 70 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Sein Außendienst sitzt beim Einkauf des Bahnhofsgaststätte und verhandelt die Konditionen für das nächste Jahr. In 5 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 36.158 DM.",
+    "gegner: Die Gruppe legt beim Bahnhofsgaststätte 19.736 DM auf die Jahreskonditionen. Ablösen kostet jetzt 191.726 DM."
+   ]
+  },
+  {
+   "i": 54,
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 14768,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0.68,
+   "kopfDeckung": "0.68",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=191726"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl",
+   "ohneDich": "OHNE DICH GESCHEHEN 72 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 30 Fass verdorben"
+   ]
+  },
+  {
+   "i": 55,
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 14136,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0.65,
+   "kopfDeckung": "0.65",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=191726"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl",
+   "ohneDich": "OHNE DICH GESCHEHEN 72 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwei Tage in der Zeitung. Es kostet ihn 8.513 DM."
+   ]
+  },
+  {
+   "i": 56,
+   "jahr": 1971,
+   "woche": 27,
+   "kasse": 13504,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0.62,
+   "kopfDeckung": "0.62",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=191726"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl",
+   "ohneDich": "OHNE DICH GESCHEHEN 73 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie bietet 50.000 DM für ein Viertel des Hauses. Sie erwartet die Antwort binnen 8 Wochen."
+   ]
+  },
+  {
+   "i": 57,
+   "jahr": 1971,
+   "woche": 28,
+   "kasse": 12872,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0.59,
+   "kopfDeckung": "0.59",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=191726"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl",
+   "ohneDich": "OHNE DICH GESCHEHEN 74 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Mühlschenke um 8.859 DM. Ablösen kostet jetzt 30.729 DM."
+   ]
+  },
+  {
+   "i": 58,
+   "jahr": 1971,
+   "woche": 29,
+   "kasse": 12240,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 30729,
+   "rho": 0.4,
+   "kopfDeckung": "0.4",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:muehlwirt=30729",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=191726"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl",
+   "ohneDich": "OHNE DICH GESCHEHEN 75 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Bahnhofsgaststätte listet das Haus aus und nimmt den Adler ins Regal. Dafür wird Mühlschenke fallengelassen — die Adresse ist frei.",
+    "gegner: Sein Außendienst sitzt beim Einkauf des Zum Goldenen Ochsen und verhandelt die Konditionen für das nächste Jahr. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 21.092 DM."
+   ]
+  },
+  {
+   "i": 59,
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 11608,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21092,
+   "rho": 0.55,
+   "kopfDeckung": "0.55",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abwehren:ochse=21092",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 77 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 30 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Zum Goldenen Ochsen führt kein Bier des Hauses mehr",
+    "verfall: Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+    "verfall: Brückenwirt führt kein Bier des Hauses mehr",
+    "verfall: Fährhaus am Fluss führt kein Bier des Hauses mehr",
+    "verfall: Landgasthof Hirsch führt kein Bier des Hauses mehr",
+    "verfall: Bahnhofsgaststätte führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-704)",
+    "verfall: Gasthof Lindenhof: Listung gefallen, das Regal ist neu belegt",
+    "verfall: Zum Goldenen Ochsen: Listung gefallen, das Regal ist neu belegt",
+    "verfall: Schenke am Tor: Listung gefallen, das Regal ist neu belegt",
+    "verfall: Pfarrschenke St. Michael: Listung gefallen, das Regal ist neu belegt",
+    "verfall: Mühlschenke: Listung gefallen, das Regal ist neu belegt",
+    "verfall: Brückenwirt: Listung gefallen, das Regal ist neu belegt",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 60,
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 10904,
+   "faesser": 0,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 3,
+   "billigster": 2700,
+   "rho": 4.04,
+   "kopfDeckung": "0.52",
+   "angebot": [
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "fuhre:jahresplan:hell=2700",
+    "fuhre:jahresplan:pils=3400",
+    "fuhre:jahresplan:export=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 77 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Aktionspreis beim Adler: 101 DM je hl, vier Wochen lang, in jedem Prospekt."
+   ]
+  },
+  {
+   "i": 61,
+   "jahr": 1972,
+   "woche": 2,
+   "kasse": 10259,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21092,
+   "rho": 0.49,
+   "kopfDeckung": "0.49",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abwehren:ochse=21092",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 78 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 62,
+   "jahr": 1972,
+   "woche": 3,
+   "kasse": 9614,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 21092,
+   "rho": 0.46,
+   "kopfDeckung": "0.46",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abwehren:ochse=21092",
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 78 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Zum Goldenen Ochsen listet das Haus aus und nimmt den Adler ins Regal. Dafür wird Gasthof Lindenhof fallengelassen — die Adresse ist frei.",
+    "gegner: Die Nordstern-Gruppe übernimmt Bürgerbräu Neustadt. Sie zahlt 209.607 DM für die Kessel. Mit ihnen geht der Ausschank in dieser Stadt: Pfarrschenke St. Michael. Notartermin in 5 Wochen, bis dahin zählt das höhere Gebot."
+   ]
+  },
+  {
+   "i": 63,
+   "jahr": 1972,
+   "woche": 4,
+   "kasse": 8969,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 34020,
+   "rho": 0.26,
+   "kopfDeckung": "0.35",
+   "angebot": [
+    "gegner:abloesen:ochse=34020",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −57.494 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 80 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 64,
+   "jahr": 1972,
+   "woche": 5,
+   "kasse": 8324,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 34020,
+   "rho": 0.24,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:ochse=34020",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −57.494 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 80 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, antwortet auch nicht mehr — sie nimmt sich stattdessen Zum Goldenen Ochsen und fragt in ein paar Jahren wieder.",
+    "gegner: Adler-Bräu AG wirbt um Landgasthof Hirsch: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 18.225 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 65,
+   "jahr": 1972,
+   "woche": 6,
+   "kasse": 7679,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 18225,
+   "rho": 0.42,
+   "kopfDeckung": "0.42",
+   "angebot": [
+    "gegner:abloesen:ochse=56700",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:zuvorkommen:hirsch=18225",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −57.494 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 82 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Zum Goldenen Ochsen wird frei."
+   ]
+  },
+  {
+   "i": 66,
+   "jahr": 1972,
+   "woche": 7,
+   "kasse": 7034,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 18225,
+   "rho": 0.39,
+   "kopfDeckung": "0.39",
+   "angebot": [
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:zuvorkommen:hirsch=18225",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 83 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Aktionspreis beim Adler: 95 DM je hl, vier Wochen lang, in jedem Prospekt."
+   ]
+  },
+  {
+   "i": 67,
+   "jahr": 1972,
+   "woche": 8,
+   "kasse": 6389,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 18225,
+   "rho": 0.35,
+   "kopfDeckung": "0.35",
+   "angebot": [
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:zuvorkommen:hirsch=18225",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 84 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben. Bürgerbräu Neustadt gehört der Gruppe, und der Ausschank in der Stadt — Pfarrschenke St. Michael — mit.",
+    "gegner: Adler-Bräu AG wirbt um Fährhaus am Fluss: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 18.954 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal. Sie zahlt 193.862 DM. Es ist die 6. in dieser Gegend, und in dieser Stadt hängt kein Schild daran."
+   ]
+  },
+  {
+   "i": 68,
+   "jahr": 1972,
+   "woche": 9,
+   "kasse": 5744,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 18225,
+   "rho": 0.32,
+   "kopfDeckung": "0.32",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:zuvorkommen:faehrhaus=18954",
+    "gegner:zuvorkommen:hirsch=18225",
+    "gegner:abloesen:bahnhofswirt=58320"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 87 Züge diese Woche 3 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Bahnhofsgaststätte wirft den Adler aus dem Regal. Zu viele Sorten, zu wenig Umschlag."
+   ]
+  },
+  {
+   "i": 69,
+   "jahr": 1972,
+   "woche": 10,
+   "kasse": 5099,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 18225,
+   "rho": 0.28,
+   "kopfDeckung": "0.28",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:zuvorkommen:faehrhaus=18954",
+    "gegner:zuvorkommen:hirsch=18225"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 88 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler unterschreibt beim Landgasthof Hirsch die Jahresvereinbarung mit voller Rabattstaffel.",
+    "gegner: Nordstern-Gruppe wirbt um Schenke am Tor: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 8.748 DM."
+   ]
+  },
+  {
+   "i": 70,
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 4454,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 8748,
+   "rho": 0.51,
+   "kopfDeckung": "0.51",
+   "angebot": [
+    "gegner:zuvorkommen:torschenke=8748",
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:zuvorkommen:faehrhaus=18954",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 90 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler bindet Fährhaus am Fluss exklusiv — acht Jahre, kein fremdes Bier im Haus.",
+    "gegner: Aktionspreis beim Adler: 89 DM je hl, vier Wochen lang, in jedem Prospekt."
+   ]
+  },
+  {
+   "i": 71,
+   "jahr": 1972,
+   "woche": 12,
+   "kasse": 3809,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 8748,
+   "rho": 0.44,
+   "kopfDeckung": "0.44",
+   "angebot": [
+    "gegner:zuvorkommen:torschenke=8748",
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:faehrhaus=42120",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 92 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Fährhaus am Fluss wirft den Adler aus dem Regal. Zu viele Sorten, zu wenig Umschlag."
+   ]
+  },
+  {
+   "i": 72,
+   "jahr": 1972,
+   "woche": 13,
+   "kasse": 3164,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 8748,
+   "rho": 0.36,
+   "kopfDeckung": "0.36",
+   "angebot": [
+    "gegner:zuvorkommen:torschenke=8748",
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 93 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 30 Fass verdorben",
+    "gegner: Nordstern-Gruppe wirbt um Mühlschenke: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 28.431 DM."
+   ]
+  },
+  {
+   "i": 73,
+   "jahr": 1972,
+   "woche": 14,
+   "kasse": 2519,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 8748,
+   "rho": 0.29,
+   "kopfDeckung": "0.29",
+   "angebot": [
+    "gegner:zuvorkommen:torschenke=8748",
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=77220",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 94 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 20.017 DM. Ablösen kostet jetzt 97.237 DM."
+   ]
+  },
+  {
+   "i": 74,
+   "jahr": 1972,
+   "woche": 15,
+   "kasse": 1874,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 8748,
+   "rho": 0.21,
+   "kopfDeckung": "0.21",
+   "angebot": [
+    "gegner:zuvorkommen:torschenke=8748",
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=97237",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 95 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Sein Außendienst sitzt beim Einkauf des Brückenwirt und verhandelt die Konditionen für das nächste Jahr. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 27.621 DM."
+   ]
+  },
+  {
+   "i": 75,
+   "jahr": 1972,
+   "woche": 16,
+   "kasse": 1229,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 8748,
+   "rho": 0.14,
+   "kopfDeckung": "0.14",
+   "angebot": [
+    "gegner:zuvorkommen:torschenke=8748",
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abwehren:brueckenwirt=27621",
+    "gegner:abloesen:brueckenwirt=97237",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 96 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Schenke am Tor ins Regal: Listungsgebühr 19.440 DM."
+   ]
+  },
+  {
+   "i": 76,
+   "jahr": 1972,
+   "woche": 17,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abwehren:brueckenwirt=27621",
+    "gegner:abloesen:brueckenwirt=97237",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 97 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Pfarrschenke St. Michael wird frei."
+   ]
+  },
+  {
+   "i": 77,
+   "jahr": 1972,
+   "woche": 18,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abwehren:brueckenwirt=27621",
+    "gegner:abloesen:brueckenwirt=97237",
+    "gegner:abloesen:hirsch=40500"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 98 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Landgasthof Hirsch um 14.408 DM. Ablösen kostet jetzt 54.908 DM."
+   ]
+  },
+  {
+   "i": 78,
+   "jahr": 1972,
+   "woche": 19,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abwehren:brueckenwirt=27621",
+    "gegner:abloesen:brueckenwirt=97237",
+    "gegner:abloesen:hirsch=54908"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 99 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe kauft das Regal im Brückenwirt im Ganzen. Das Haus fliegt raus.",
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Landgasthof Hirsch um 17.368 DM. Ablösen kostet jetzt 72.276 DM.",
+    "gegner: Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie bietet 50.000 DM für ein Viertel des Hauses. Sie erwartet die Antwort binnen 8 Wochen."
+   ]
+  },
+  {
+   "i": 79,
+   "jahr": 1972,
+   "woche": 20,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:zuvorkommen:muehlwirt=28431",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=72276"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 102 Züge diese Woche 3 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler bindet Mühlschenke exklusiv — acht Jahre, kein fremdes Bier im Haus."
+   ]
+  },
+  {
+   "i": 80,
+   "jahr": 1972,
+   "woche": 21,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=72276"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 103 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 81,
+   "jahr": 1972,
+   "woche": 22,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=72276"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 103 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 82,
+   "jahr": 1972,
+   "woche": 23,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=72276"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 103 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 83,
+   "jahr": 1972,
+   "woche": 24,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:muehlwirt=63180",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=72276"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 103 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Landgasthof Hirsch um 12.196 DM. Ablösen kostet jetzt 84.472 DM.",
+    "gegner: Die Gruppe legt beim Mühlschenke 17.245 DM auf die Jahreskonditionen. Ablösen kostet jetzt 80.425 DM."
+   ]
+  },
+  {
+   "i": 84,
+   "jahr": 1972,
+   "woche": 25,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=84472"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 105 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 30 Fass verdorben",
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Landgasthof Hirsch um 14.687 DM. Ablösen kostet jetzt 99.159 DM."
+   ]
+  },
+  {
+   "i": 85,
+   "jahr": 1972,
+   "woche": 26,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=99159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 106 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Rückruf beim Adler: eine Charge Pilsner mit Trubstoff, zwei Tage in der Zeitung. Es kostet ihn 4.755 DM."
+   ]
+  },
+  {
+   "i": 86,
+   "jahr": 1972,
+   "woche": 27,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 19440,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:torschenke=19440",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=99159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 107 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, antwortet auch nicht mehr — sie nimmt sich stattdessen Pfarrschenke St. Michael und fragt in ein paar Jahren wieder. Dafür wird Schenke am Tor fallengelassen — die Adresse ist frei."
+   ]
+  },
+  {
+   "i": 87,
+   "jahr": 1972,
+   "woche": 28,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 28350,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:abloesen:hirsch=99159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 108 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Brückenwirt wird frei."
+   ]
+  },
+  {
+   "i": 88,
+   "jahr": 1972,
+   "woche": 29,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 28350,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=28350",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:hirsch=99159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 109 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Sein Außendienst sitzt beim Einkauf des Pfarrschenke St. Michael und verhandelt die Konditionen für das nächste Jahr. In 4 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 10.546 DM.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Pfarrschenke St. Michael wird frei."
+   ]
+  },
+  {
+   "i": 89,
+   "jahr": 1972,
+   "woche": 30,
+   "kasse": 584,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 10546,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:abwehren:pfarrhof=10546",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:hirsch=99159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 111 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 30 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Schenke am Tor führt kein Bier des Hauses mehr",
+    "verfall: Mühlschenke führt kein Bier des Hauses mehr",
+    "verfall: Ausschank am Markt führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-263)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 90,
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 321,
+   "faesser": 0,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 2700,
+   "rho": 0.12,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=80425",
+    "fuhre:jahresplan:hell=2700",
+    "fuhre:jahresplan:pils=3400",
+    "fuhre:jahresplan:export=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 111 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 91,
+   "jahr": 1973,
+   "woche": 2,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 10546,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abwehren:pfarrhof=10546",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:hirsch=99159"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 111 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Adler-Bräu AG wirbt um Gaststätte Neustadt: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 72.900 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Sein Außendienst sitzt beim Einkauf des Gasthof Lindenhof und verhandelt die Konditionen für das nächste Jahr. In 7 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 45.198 DM."
+   ]
+  },
+  {
+   "i": 92,
+   "jahr": 1973,
+   "woche": 3,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 10546,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:abwehren:lindenhof=45198",
+    "gegner:abwehren:pfarrhof=10546",
+    "gegner:abloesen:muehlwirt=80425",
+    "gegner:abloesen:hirsch=99159",
+    "gegner:zuvorkommen:neustadt=72900"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 113 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Pfarrschenke St. Michael listet das Haus aus und nimmt den Adler ins Regal.",
+    "gegner: Die Gruppe legt beim Mühlschenke 24.955 DM auf die Jahreskonditionen. Ablösen kostet jetzt 105.380 DM."
+   ]
+  },
+  {
+   "i": 93,
+   "jahr": 1973,
+   "woche": 4,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 17010,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abwehren:lindenhof=45198",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:muehlwirt=105380",
+    "gegner:abloesen:hirsch=99159",
+    "gegner:zuvorkommen:neustadt=72900"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 115 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Nordstern-Gruppe wirbt um Pfarrschenke St. Michael: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 7.655 DM."
+   ]
+  },
+  {
+   "i": 94,
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 7655,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:abwehren:lindenhof=45198",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:pfarrhof=7655",
+    "gegner:abloesen:muehlwirt=105380",
+    "gegner:abloesen:hirsch=99159",
+    "gegner:zuvorkommen:neustadt=72900"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 116 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler unterschreibt beim Gaststätte Neustadt die Jahresvereinbarung mit voller Rabattstaffel. Dafür wird Gasthof Lindenhof fallengelassen — die Adresse ist frei.",
+    "gegner: Aktionspreis beim Adler: 83 DM je hl, vier Wochen lang, in jedem Prospekt."
+   ]
+  },
+  {
+   "i": 95,
+   "jahr": 1973,
+   "woche": 6,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 7655,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:abwehren:lindenhof=45198",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:pfarrhof=7655",
+    "gegner:abloesen:muehlwirt=105380",
+    "gegner:abloesen:hirsch=99159",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 118 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Landgasthof Hirsch wirft den Adler aus dem Regal. Zu viele Sorten, zu wenig Umschlag."
+   ]
+  },
+  {
+   "i": 96,
+   "jahr": 1973,
+   "woche": 7,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 7655,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:abwehren:lindenhof=45198",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:pfarrhof=7655",
+    "gegner:abloesen:muehlwirt=105380",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 119 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie bietet 50.000 DM für ein Viertel des Hauses. Sie erwartet die Antwort binnen 8 Wochen."
+   ]
+  },
+  {
+   "i": 97,
+   "jahr": 1973,
+   "woche": 8,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 7655,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:abwehren:lindenhof=45198",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:pfarrhof=7655",
+    "gegner:abloesen:muehlwirt=105380",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 120 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Aktionspreis beim Adler: 81 DM je hl, vier Wochen lang, in jedem Prospekt.",
+    "gegner: Nordstern-Gruppe wirbt um Gasthof Lindenhof: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 19.683 DM."
+   ]
+  },
+  {
+   "i": 98,
+   "jahr": 1973,
+   "woche": 9,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 7655,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:abwehren:lindenhof=45198",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:pfarrhof=7655",
+    "gegner:abloesen:muehlwirt=105380",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 122 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Nordstern-Gruppe kauft das Regal im Gasthof Lindenhof im Ganzen. Das Haus fliegt raus.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Mühlschenke wird frei."
+   ]
+  },
+  {
+   "i": 99,
+   "jahr": 1973,
+   "woche": 10,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 7655,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:abloesen:lindenhof=72900",
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:pfarrhof=7655",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 124 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Gasthof Lindenhof wird frei."
+   ]
+  },
+  {
+   "i": 100,
+   "jahr": 1973,
+   "woche": 11,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 7655,
+   "rho": 0.04,
+   "kopfDeckung": "0.04",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:pfarrhof=7655",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 125 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Pfarrschenke St. Michael ins Regal: Listungsgebühr 17.010 DM.",
+    "gegner: Ein grauer Lastzug des Adlers fährt zum Gaststätte Neustadt."
+   ]
+  },
+  {
+   "i": 101,
+   "jahr": 1973,
+   "woche": 12,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 17010,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 127 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 102,
+   "jahr": 1973,
+   "woche": 13,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 17010,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:zuvorkommen:lindenhof=19683",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 127 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 30 Fass verdorben",
+    "gegner: Der Adler kauft sich beim Gasthof Lindenhof ins Regal: Listungsgebühr 43.740 DM."
+   ]
+  },
+  {
+   "i": 103,
+   "jahr": 1973,
+   "woche": 14,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 17010,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 128 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 104,
+   "jahr": 1973,
+   "woche": 15,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 17010,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 128 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, antwortet auch nicht mehr — sie nimmt sich stattdessen Mühlschenke und fragt in ein paar Jahren wieder.",
+    "gegner: Adler-Bräu AG wirbt um Brückenwirt: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 20.048 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie bietet 50.000 DM für ein Viertel des Hauses. Sie erwartet die Antwort binnen 8 Wochen."
+   ]
+  },
+  {
+   "i": 105,
+   "jahr": 1973,
+   "woche": 16,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 17010,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:muehlwirt=36450",
+    "gegner:zuvorkommen:brueckenwirt=20048",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 131 Züge diese Woche 3 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe legt beim Mühlschenke 15.290 DM auf die Jahreskonditionen. Ablösen kostet jetzt 51.740 DM."
+   ]
+  },
+  {
+   "i": 106,
+   "jahr": 1973,
+   "woche": 17,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 17010,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:muehlwirt=51740",
+    "gegner:zuvorkommen:brueckenwirt=20048",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 132 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Sein Außendienst sitzt beim Einkauf des Mühlschenke und verhandelt die Konditionen für das nächste Jahr. In 3 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 13.559 DM.",
+    "gegner: Die Nordstern-Gruppe übernimmt Brauerei Nachtigall im Nachbartal. Sie zahlt 174.710 DM für die Kessel. Mit ihnen geht der Ausschank in dieser Stadt: Bahnhofsgaststätte. Notartermin in 5 Wochen, bis dahin zählt das höhere Gebot."
+   ]
+  },
+  {
+   "i": 107,
+   "jahr": 1973,
+   "woche": 18,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 13559,
+   "rho": 0.02,
+   "kopfDeckung": "0.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=43740",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abwehren:muehlwirt=13559",
+    "gegner:abloesen:muehlwirt=51740",
+    "gegner:zuvorkommen:brueckenwirt=20048",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −29.812 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 134 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Adler-Bräu AG wirbt um Ausschank am Markt: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 5.468 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Gasthof Lindenhof wird frei."
+   ]
+  },
+  {
+   "i": 108,
+   "jahr": 1973,
+   "woche": 19,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 5468,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abwehren:muehlwirt=13559",
+    "gegner:abloesen:muehlwirt=51740",
+    "gegner:zuvorkommen:brueckenwirt=20048",
+    "gegner:zuvorkommen:markt=5468",
+    "gegner:abloesen:neustadt=162000"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 136 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Gaststätte Neustadt um 72.695 DM. Ablösen kostet jetzt 234.695 DM."
+   ]
+  },
+  {
+   "i": 109,
+   "jahr": 1973,
+   "woche": 20,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 5468,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abwehren:muehlwirt=13559",
+    "gegner:abloesen:muehlwirt=51740",
+    "gegner:zuvorkommen:brueckenwirt=20048",
+    "gegner:zuvorkommen:markt=5468",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 137 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Mühlschenke listet das Haus aus und nimmt den Adler ins Regal.",
+    "gegner: Der Einkauf des Mühlschenke wirft den Adler aus dem Regal. Zu viele Sorten, zu wenig Umschlag."
+   ]
+  },
+  {
+   "i": 110,
+   "jahr": 1973,
+   "woche": 21,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 5468,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:brueckenwirt=20048",
+    "gegner:zuvorkommen:markt=5468",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 139 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 111,
+   "jahr": 1973,
+   "woche": 22,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 5468,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:brueckenwirt=20048",
+    "gegner:zuvorkommen:markt=5468",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 139 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler unterschreibt beim Brückenwirt die Jahresvereinbarung mit voller Rabattstaffel.",
+    "gegner: Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben. Brauerei Nachtigall im Nachbartal gehört der Gruppe, und der Ausschank in der Stadt — Bahnhofsgaststätte — mit.",
+    "gegner: Die Gruppe legt beim Bahnhofsgaststätte 33.517 DM auf die Jahreskonditionen. Ablösen kostet jetzt 130.717 DM."
+   ]
+  },
+  {
+   "i": 112,
+   "jahr": 1973,
+   "woche": 23,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 5468,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:zuvorkommen:markt=5468",
+    "gegner:abloesen:bahnhofswirt=130717",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 142 Züge diese Woche 3 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, antwortet auch nicht mehr — sie nimmt sich stattdessen Brückenwirt und fragt in ein paar Jahren wieder."
+   ]
+  },
+  {
+   "i": 113,
+   "jahr": 1973,
+   "woche": 24,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 5468,
+   "rho": 0.06,
+   "kopfDeckung": "0.06",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:zuvorkommen:markt=5468",
+    "gegner:abloesen:bahnhofswirt=130717",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 143 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Ausschank am Markt ins Regal: Listungsgebühr 12.150 DM.",
+    "gegner: Adler-Bräu AG wirbt um Fährhaus am Fluss: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 6.561 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 114,
+   "jahr": 1973,
+   "woche": 25,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 6561,
+   "rho": 0.05,
+   "kopfDeckung": "0.05",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:zuvorkommen:faehrhaus=6561",
+    "gegner:abloesen:markt=12150",
+    "gegner:abloesen:bahnhofswirt=130717",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 145 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 30 Fass verdorben",
+    "gegner: Die Gruppe legt beim Bahnhofsgaststätte 24.348 DM auf die Jahreskonditionen. Ablösen kostet jetzt 155.065 DM."
+   ]
+  },
+  {
+   "i": 115,
+   "jahr": 1973,
+   "woche": 26,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 6561,
+   "rho": 0.05,
+   "kopfDeckung": "0.05",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:abloesen:brueckenwirt=44550",
+    "gegner:zuvorkommen:faehrhaus=6561",
+    "gegner:abloesen:markt=12150",
+    "gegner:abloesen:bahnhofswirt=155065",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 146 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Ausschank am Markt wirft den Adler aus dem Regal. Zu viele Sorten, zu wenig Umschlag.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Brückenwirt wird frei."
+   ]
+  },
+  {
+   "i": 116,
+   "jahr": 1973,
+   "woche": 27,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 6561,
+   "rho": 0.05,
+   "kopfDeckung": "0.05",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:faehrhaus=6561",
+    "gegner:abloesen:bahnhofswirt=155065",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 148 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 117,
+   "jahr": 1973,
+   "woche": 28,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 6561,
+   "rho": 0.05,
+   "kopfDeckung": "0.05",
+   "angebot": [
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:faehrhaus=6561",
+    "gegner:abloesen:bahnhofswirt=155065",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 148 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Sein Außendienst sitzt beim Einkauf des Bahnhofsgaststätte und verhandelt die Konditionen für das nächste Jahr. In 6 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 36.158 DM.",
+    "gegner: Nordstern-Gruppe wirbt um Zum Goldenen Ochsen: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 15.309 DM."
+   ]
+  },
+  {
+   "i": 118,
+   "jahr": 1973,
+   "woche": 29,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 0,
+   "billigster": 6561,
+   "rho": 0.05,
+   "kopfDeckung": "0.05",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=15309",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:faehrhaus=6561",
+    "gegner:abloesen:bahnhofswirt=155065",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 150 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Fährhaus am Fluss ins Regal: Listungsgebühr 14.580 DM.",
+    "gegner: Adler-Bräu AG wirbt um Mühlschenke: Er lädt den Einkäufer zur Jahresgespräch-Reise und legt die Konditionen daneben. Zuvorkommen kostet 9.842 DM. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat.",
+    "gegner: Die Gruppe legt beim Bahnhofsgaststätte 30.076 DM auf die Jahreskonditionen. Ablösen kostet jetzt 185.141 DM."
+   ]
+  },
+  {
+   "i": 119,
+   "jahr": 1973,
+   "woche": 30,
+   "kasse": 321,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 9842,
+   "rho": 0.03,
+   "kopfDeckung": "0.03",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=15309",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:bahnhofswirt=185141",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 153 Züge diese Woche 3 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 30 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Gasthof Lindenhof führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-253)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 120,
+   "jahr": 1974,
+   "woche": 1,
+   "kasse": 68,
+   "faesser": 0,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 0,
+   "billigster": 2700,
+   "rho": 0.03,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:bahnhofswirt=185141",
+    "gegner:abloesen:neustadt=234695",
+    "fuhre:jahresplan:hell=2700",
+    "fuhre:jahresplan:pils=3400",
+    "fuhre:jahresplan:export=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 153 Züge diese Woche 3 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 121,
+   "jahr": 1974,
+   "woche": 2,
+   "kasse": 68,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 9842,
+   "rho": 0.01,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:zuvorkommen:ochse=15309",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:bahnhofswirt=185141",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −48.976 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 153 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Zum Goldenen Ochsen ins Regal: Listungsgebühr 34.020 DM.",
+    "gegner: Die Gruppe legt beim Bahnhofsgaststätte 43.205 DM auf die Jahreskonditionen. Ablösen kostet jetzt 228.346 DM."
+   ]
+  },
+  {
+   "i": 122,
+   "jahr": 1974,
+   "woche": 3,
+   "kasse": 68,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 9842,
+   "rho": 0.01,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:abloesen:ochse=34020",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:bahnhofswirt=228346",
+    "gegner:abloesen:neustadt=234695"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 155 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler erhöht den Werbekostenzuschuss beim Gaststätte Neustadt um 63.115 DM. Ablösen kostet jetzt 297.810 DM.",
+    "gegner: Die Nordstern-Gruppe übernimmt Klosterbräu Obernberg. Sie zahlt 157.980 DM für die Kessel. Mit ihnen geht der Ausschank in dieser Stadt: Brückenwirt. Notartermin in 5 Wochen, bis dahin zählt das höhere Gebot."
+   ]
+  },
+  {
+   "i": 123,
+   "jahr": 1974,
+   "woche": 4,
+   "kasse": 68,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 0,
+   "billigster": 9842,
+   "rho": 0.01,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:abloesen:ochse=34020",
+    "gegner:abloesen:pfarrhof=17010",
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:bahnhofswirt=228346",
+    "gegner:abloesen:neustadt=297810"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 1 Haus −19.165 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 157 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Einkauf des Bahnhofsgaststätte listet das Haus aus und nimmt den Adler ins Regal. Dafür wird Gasthof Lindenhof fallengelassen — die Adresse ist frei.",
+    "gegner: Das Kartellamt untersagt der Gruppe eine Bindung. Zum Goldenen Ochsen wird frei."
+   ]
+  },
+  {
+   "i": 124,
+   "jahr": 1974,
+   "woche": 5,
+   "kasse": 68,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 9842,
+   "rho": 0.01,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:zuvorkommen:muehlwirt=9842",
+    "gegner:abloesen:faehrhaus=14580",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "gegner:abloesen:neustadt=297810"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 3 Häuser −87.305 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 159 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler kauft sich beim Mühlschenke ins Regal: Listungsgebühr 21.870 DM. Dafür wird Fährhaus am Fluss fallengelassen — die Adresse ist frei.",
+    "gegner: Sein Außendienst sitzt beim Einkauf des Pfarrschenke St. Michael und verhandelt die Konditionen für das nächste Jahr. In 6 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 10.546 DM.",
+    "gegner: Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal. Sie zahlt 146.922 DM. Es ist die 8. in dieser Gegend, und in dieser Stadt hängt kein Schild daran."
+   ]
+  },
+  {
+   "i": 125,
+   "jahr": 1974,
+   "woche": 6,
+   "kasse": 68,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "gegner:abloesen:neustadt=297810"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 162 Züge diese Woche 3 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 126,
+   "jahr": 1974,
+   "woche": 7,
+   "kasse": 68,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "gegner:abloesen:neustadt=297810"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 162 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Ein grauer Wagen des Hauses gegenüber fährt zum Mühlschenke.",
+    "gegner: Die Gruppe legt beim Pfarrschenke St. Michael 5.898 DM auf die Jahreskonditionen. Ablösen kostet jetzt 22.908 DM."
+   ]
+  },
+  {
+   "i": 127,
+   "jahr": 1974,
+   "woche": 8,
+   "kasse": 68,
+   "faesser": 30,
+   "amt": "Margarete Bruckner / bequem (bis 2002)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 21870,
+   "rho": 0,
+   "kopfDeckung": "0.01",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=21870",
+    "gegner:abloesen:bahnhofswirt=58320",
+    "gegner:abloesen:neustadt=297810"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+   "ohneDich": "OHNE DICH GESCHEHEN 164 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Notartermin ist gehalten. Es hat kein zweites Gebot gegeben. Klosterbräu Obernberg gehört der Gruppe, und der Ausschank in der Stadt — Brückenwirt — mit.",
+    "gegner: Die Gruppe legt beim Brückenwirt 17.838 DM auf die Jahreskonditionen. Ablösen kostet jetzt 62.388 DM."
+   ]
+  },
+  {
+   "i": 128,
+   "ENDE": true,
+   "jahr": 1974,
+   "woche": 9,
+   "kasse": 17108
+  }
+ ],
+ "ende": {
+  "jahr": 1974,
+  "woche": 9,
+  "epoche": 4,
+  "ende": true,
+  "amt": {
+   "nr": 2,
+   "name": "Margarete Bruckner",
+   "eig": "bequem",
+   "bis": 2002
+  },
+  "kasse": 17108,
+  "faesser": 30,
+  "kopfLeiste": [
+   "NOVEMBER 1974",
+   "KASSE 17.108 DM",
+   "HOPFEN 44",
+   "TANKS 45/600 hl",
+   "WOCHE 9/30",
+   "CHRONIK 114",
+   "BUCH 429"
+  ],
+  "kopfDeckung": "1.62",
+  "kopfDeckungTxt": "nächster Zug: Zuvorkommen Pfarrschenke St. Michael — 10.546 DM (Kasse reicht 1,6×)",
+  "protN": 429,
+  "chrN": 114,
+  "erbLeiste": "DAS ERBE II. Hand Margarete Bruckner · bequem am Haus 0 · an der Person 0 OHNE · Feder 1,30× nahm 3 · 51 hl Nachschrift · 2 Häuser −68.141 DM",
+  "erbBuch": "DAS ERBE — Festschreiben notariell, im Liefervertrag · II. Hand Margarete Bruckner · bequem „Lässt laufen. Manchmal ist das richtig.\" Lässt schreiben, wer gerade da ist. Alles kostet ein Viertel mehr. Ein Vertrag mit Laufzeit überdauert den Geschäftsführer. Eine gute Beziehung überdauert ihn nicht. Margarete Bruckner hat übergeben — Ohne Abfindung. Übergabe ohne Gegenleistung. Was an ihrer Person hing, ist mit der Unterschrift weg. Am Haus 2 → 2, an der Person 3 → 0, aus den Tanks 51 hl. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 0 — FÄLLT MIT DER HAND, DIE ES GAB Nichts mehr. Was hier stand, ist gefallen oder geschrieben. GEFALLEN · 3 — HING AN EINEM MENSCHEN, NICHT AM HAUS Gasthof Lindenhof Lieferung Zum Goldenen Ochsen Lieferung Mühlschenke Gewohnheit GESCHRIEBEN · 2 Ausschank am Markt 1970/6 · vorher Gewohnheit 4.095 DM Sc",
+  "ohneDich": "OHNE DICH GESCHEHEN 166 Züge diese Woche 2 Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "ADLER-BRÄU AG Dr. Werner Feist · gelehrt · hält 3 Häuser 83 ZÜGE −47.920 DM KASSE 81 DM SEIN PREIS diese Woche"
+   },
+   {
+    "zug": "gegner:oeffnen:konzern",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-konzern amort",
+    "txt": "NORDSTERN-GRUPPE Ute Nordstern · träge · hält 2 Häuser 83 ZÜGE 1.929.680 DM KASSE 9 BRAUEREIEN unterschreibt d"
+   },
+   {
+    "zug": "gegner:abwehren:pfarrhof",
+    "preis": -10546,
+    "t": false,
+    "a": true,
+    "cls": "gg-ziel gg-adler",
+    "txt": "verhandelt · noch 3 Wo. zuvorkommen 10.546 DM"
+   },
+   {
+    "zug": "gegner:abloesen:pfarrhof",
+    "preis": -22908,
+    "t": false,
+    "a": true,
+    "cls": "gg-schild gg-konzern frisch zuteuer",
+    "txt": "PFA · LIS ablösen 22.908 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:pfarrhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:muehlwirt",
+    "preis": -21870,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler frisch zuteuer",
+    "txt": "MUE · LIS ablösen 21.870 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:muehlwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:brueckenwirt",
+    "preis": -62388,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-konzern frisch zuteuer",
+    "txt": "BRU · JVB ablösen 62.388 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:brueckenwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:bahnhofswirt",
+    "preis": -58320,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "BHF · LIS ablösen 58.320 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:bahnhofswirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:neustadt",
+    "preis": -297810,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "NEU · JVB ablösen 297.810 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:neustadt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": false,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Anzeige beim Bundeskartellamt kostet kein Geld · vier Ansehen gegen Gaststätte Neustadt"
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Das Haus gegenüber"
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Anzeige beim Bundeskartellamt"
+   },
+   {
+    "zug": "gegner:zeige:166",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:165",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:164",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hefe aus dem Tank zusetzen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Schönen mit Kieselsol"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -26000,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Kieselgurfilter−26.000 DM"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock amort",
+    "txt": "BHF"
+   },
+   {
+    "zug": "fuhre:schluss-auf",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Das Schlussblatt aufschlagen"
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "So ist es verabredet"
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:probe:lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:ochse",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:torschenke",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:pfarrhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:muehlwirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:brueckenwirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:faehrhaus",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:hirsch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:markt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:bahnhofswirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:neustadt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Aktionsware · 30 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:tafel-ab:hell",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:hell",
+    "preis": -2400,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −2.400 DM"
+   },
+   {
+    "zug": "fuhre:tafel-ab:pils",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:pils",
+    "preis": -2400,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −2.400 DM"
+   },
+   {
+    "zug": "fuhre:tafel-ab:export",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:export",
+    "preis": -2400,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −2.400 DM"
+   },
+   {
+    "zug": "fuhre:tafel-ab:handel",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:handel",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+"
+   },
+   {
+    "zug": "fuhre:kauf:lastzug",
+    "preis": -128000,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Zweiter Lastzug · +1 Halt −128.000 DM"
+   },
+   {
+    "zug": "fuhre:kauf:sudwerk",
+    "preis": -56000,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Sudhaus erweitern · +1 Sud je Woche · auf 4 Kerben −56.000 DM"
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -14400,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Hopfen im Kontrakt · +1200 −14.400 DM"
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 7200,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-rueck",
+    "txt": "Kontrakt abtreten · −1200 +7.200 DM"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Wie vorige Woche"
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Lastzug leeren"
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-abschicken",
+    "txt": "FUHRE ABSCHICKEN"
+   },
+   {
+    "zug": "sud:fuehrung:erfahrung",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Nach Erfahrung des Braumeisters"
+   },
+   {
+    "zug": "sud:fuehrung:labor",
+    "preis": -42000,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM"
+   },
+   {
+    "zug": "sud:fuehrung:rechner",
+    "preis": -118000,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Prozessrechner am Sudwerk −118.000 DM"
+   },
+   {
+    "zug": "sud:behandlung:natur",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Naturtrüb, unfiltriert"
+   },
+   {
+    "zug": "sud:behandlung:schoenen",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl",
+    "txt": "Schönen mit Kieselsol"
+   },
+   {
+    "zug": "sud:behandlung:filter",
+    "preis": -26000,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl",
+    "txt": "Kieselgurfilter −26.000 DM"
+   },
+   {
+    "zug": "sud:behandlung:pasteur",
+    "preis": -74000,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Tunnelpasteur −74.000 DM"
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Hefe aus dem Gärtank ziehen · +8"
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Frisches Fass anzapfen · +14"
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Ältestes Fass anzapfen · +6"
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -24000,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Gärtank bestellen · +270 hl −24.000 DM"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-an",
+    "txt": "♪"
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-bandgriff",
+    "txt": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-klein-knopf",
+    "txt": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:entzug-loesen",
+    "preis": -26000,
+    "t": false,
+    "a": false,
+    "cls": "knopf nm-knopf nm-rot",
+    "txt": "Neu listen lassen −26.000 DM − 12 hl"
+   },
+   {
+    "zug": "name:liefern",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-rot",
+    "txt": "Unter dem Zeichen ausliefern"
+   },
+   {
+    "zug": "name:zurueckhalten",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Das Zeichen einziehen"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-griff",
+    "txt": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -68141,
+    "t": false,
+    "a": false,
+    "cls": "knopf erb-knopf erb-nach",
+    "txt": "Nachschrift · 2 Häuser −68.141 DM"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 114"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 429"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": false,
+    "cls": "knopf gross amort",
+    "txt": "ENDE"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 166 Züge"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 0,0 · im Keller liegen 45 hl"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "SUDPLAN im Schaltraum, auf Formica"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE TANKS 45 von 600 hl · 45 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES GENOMMEN von Der Handel bis 1974"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-blatt-fu-ende-gestorben-fu-schlussblatt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "DAS ENDE DES HAUSES liegt auf"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken auf",
+    "txt": "ORTSMARKEN 7 im Bild"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:abbruch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "ABBRUCH"
+   },
+   {
+    "zug": "stadt:abbruch:sudhaus_neu",
+    "preis": 20706,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Neues Sudhaus +20.706 DM"
+   },
+   {
+    "zug": "stadt:abbruch:abfuellhalle",
+    "preis": 19227,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Abfüllhalle +19.227 DM"
+   },
+   {
+    "zug": "stadt:abbruch:stahltanks",
+    "preis": 17748,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Stahltanks im Freien +17.748 DM"
+   },
+   {
+    "zug": "stadt:abbruch:schornstein",
+    "preis": 14051,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Schornstein und Dampfmaschine +14.051 DM"
+   },
+   {
+    "zug": "stadt:abbruch:verladedock",
+    "preis": 14051,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Verladedock +14.051 DM"
+   },
+   {
+    "zug": "fuhre:wiederanfang",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross",
+    "txt": "Von vorn anfangen — dieselbe Stadt, andere Würfel"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1974 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   },
+   {
+    "zug": "sud:schluss-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein",
+    "txt": "Sudbuch aufschlagen"
+   }
+  ]
+ },
+ "fehler": []
+}

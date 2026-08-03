@@ -1,0 +1,799 @@
+{
+ "vor": {
+  "ende": true,
+  "grund": "brauereisterben",
+  "jahr": 1973,
+  "woche": 9,
+  "kasse": 39727,
+  "buch": 301,
+  "chronik": 77,
+  "aktivSicht": [
+   {
+    "z": "gegner:oeffnen:adler",
+    "p": null
+   },
+   {
+    "z": "gegner:oeffnen:konzern",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:lindenhof",
+    "p": "-55078"
+   },
+   {
+    "z": "gegner:hinhalten:lindenhof",
+    "p": null
+   },
+   {
+    "z": "gegner:abwehren:muehlwirt",
+    "p": "-22599"
+   },
+   {
+    "z": "gegner:abloesen:muehlwirt",
+    "p": "-21870"
+   },
+   {
+    "z": "gegner:hinhalten:muehlwirt",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:bahnhofswirt",
+    "p": "-58320"
+   },
+   {
+    "z": "gegner:hinhalten:bahnhofswirt",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde-bild",
+    "p": "0"
+   },
+   {
+    "z": "gegner:blatt",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:120",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:119",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:118",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:gegner-bruecke-unten",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-muehle",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-unten",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-fluss",
+    "p": null
+   },
+   {
+    "z": "fuhre:schluss-auf",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:lindenhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:ochse",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:torschenke",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:pfarrhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:muehlwirt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:brueckenwirt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:faehrhaus",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:hirsch",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:markt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:bahnhofswirt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:neustadt",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:hell",
+    "p": "-2400"
+   },
+   {
+    "z": "fuhre:tafel-ab:pils",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:pils",
+    "p": "-2400"
+   },
+   {
+    "z": "fuhre:tafel-auf:export",
+    "p": "-2400"
+   },
+   {
+    "z": "fuhre:tafel-auf:handel",
+    "p": null
+   },
+   {
+    "z": "fuhre:kauf:sudwerk",
+    "p": "-56000"
+   },
+   {
+    "z": "fuhre:kauf:rohstoff",
+    "p": "-14400"
+   },
+   {
+    "z": "fuhre:fuellen",
+    "p": null
+   },
+   {
+    "z": "name:band",
+    "p": null
+   },
+   {
+    "z": "name:aufgeldbuch",
+    "p": null
+   },
+   {
+    "z": "name:liefern",
+    "p": null
+   },
+   {
+    "z": "name:zurueckhalten",
+    "p": null
+   },
+   {
+    "z": "name:ruhe",
+    "p": null
+   },
+   {
+    "z": "name:herumgehen",
+    "p": null
+   },
+   {
+    "z": "name:blatt",
+    "p": null
+   },
+   {
+    "z": "erbe:nachschrift",
+    "p": "-24488"
+   },
+   {
+    "z": "kern:chronik",
+    "p": null
+   },
+   {
+    "z": "kern:protokoll",
+    "p": null
+   },
+   {
+    "z": "klang:ton",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:gegner-amort-gg-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:sud-sud-brett",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:name-nm-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-blatt-fu-ende-gestorben-fu-schlussblatt",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:erbe-blatt-erb-buch",
+    "p": null
+   },
+   {
+    "z": "stadt:ortsmarken",
+    "p": null
+   },
+   {
+    "z": "stadt:alles-zuklappen",
+    "p": null
+   },
+   {
+    "z": "stadt:bau:seite",
+    "p": null
+   },
+   {
+    "z": "stadt:abbruch",
+    "p": null
+   },
+   {
+    "z": "stadt:bau:waage",
+    "p": "-9570"
+   },
+   {
+    "z": "stadt:bau:maelzerei",
+    "p": "-14790"
+   },
+   {
+    "z": "stadt:bau:verwaltung",
+    "p": "-15660"
+   },
+   {
+    "z": "stadt:bau:sudhaus_neu",
+    "p": "-24360"
+   },
+   {
+    "z": "fuhre:wiederanfang",
+    "p": null
+   },
+   {
+    "z": "preis:tafel",
+    "p": null
+   },
+   {
+    "z": "preis:chronik-auf",
+    "p": null
+   },
+   {
+    "z": "sud:schluss-auf",
+    "p": null
+   }
+  ],
+  "deckung": "nächster Zug: Ablösung Mühlschenke — 21.870 DM (Kasse reicht 1,8×)",
+  "alleDeckung": [
+   {
+    "k": "deckung",
+    "v": "1.82"
+   }
+  ]
+ },
+ "preiszuege": [
+  {
+   "z": "gegner:abloesen:lindenhof",
+   "p": "-55078"
+  },
+  {
+   "z": "gegner:abwehren:muehlwirt",
+   "p": "-22599"
+  },
+  {
+   "z": "gegner:abloesen:muehlwirt",
+   "p": "-21870"
+  },
+  {
+   "z": "gegner:abloesen:bahnhofswirt",
+   "p": "-58320"
+  },
+  {
+   "z": "fuhre:tafel-auf:hell",
+   "p": "-2400"
+  },
+  {
+   "z": "fuhre:tafel-auf:pils",
+   "p": "-2400"
+  },
+  {
+   "z": "fuhre:tafel-auf:export",
+   "p": "-2400"
+  },
+  {
+   "z": "fuhre:kauf:sudwerk",
+   "p": "-56000"
+  },
+  {
+   "z": "fuhre:kauf:rohstoff",
+   "p": "-14400"
+  },
+  {
+   "z": "erbe:nachschrift",
+   "p": "-24488"
+  },
+  {
+   "z": "stadt:bau:waage",
+   "p": "-9570"
+  },
+  {
+   "z": "stadt:bau:maelzerei",
+   "p": "-14790"
+  },
+  {
+   "z": "stadt:bau:verwaltung",
+   "p": "-15660"
+  },
+  {
+   "z": "stadt:bau:sudhaus_neu",
+   "p": "-24360"
+  }
+ ],
+ "wirkung": [
+  {
+   "zug": "gegner:abloesen:lindenhof",
+   "preis": "-55078",
+   "klick": "FEHLER",
+   "kasseVorher": 39727,
+   "kasseNachher": 39727,
+   "buchVorher": 301,
+   "buchNachher": 301,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "gegner:abwehren:muehlwirt",
+   "preis": "-22599",
+   "klick": "ok",
+   "kasseVorher": 39727,
+   "kasseNachher": 17128,
+   "buchVorher": 301,
+   "buchNachher": 302,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "gegner:abloesen:muehlwirt",
+   "preis": "-21870",
+   "klick": "ok",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 302,
+   "buchNachher": 303,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "gegner:abloesen:bahnhofswirt",
+   "preis": "-58320",
+   "klick": "ok",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 303,
+   "buchNachher": 304,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "fuhre:tafel-auf:hell",
+   "preis": "-2400",
+   "klick": "FEHLER",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 304,
+   "buchNachher": 304,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "fuhre:tafel-auf:pils",
+   "preis": "-2400",
+   "klick": "FEHLER",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 304,
+   "buchNachher": 304,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "fuhre:tafel-auf:export",
+   "preis": "-2400",
+   "klick": "FEHLER",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 304,
+   "buchNachher": 304,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "fuhre:kauf:sudwerk",
+   "preis": "-56000",
+   "klick": "FEHLER",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 304,
+   "buchNachher": 304,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "preis": "-14400",
+   "klick": "FEHLER",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 304,
+   "buchNachher": 304,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "erbe:nachschrift",
+   "preis": "-24488",
+   "klick": "aus",
+   "kasseVorher": 17128,
+   "kasseNachher": 17128,
+   "buchVorher": 304,
+   "buchNachher": 304,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "stadt:bau:waage",
+   "preis": "-9570",
+   "klick": "ok",
+   "kasseVorher": 17128,
+   "kasseNachher": 7558,
+   "buchVorher": 304,
+   "buchNachher": 305,
+   "jahr": 1973,
+   "woche": 9
+  },
+  {
+   "zug": "stadt:bau:maelzerei",
+   "preis": "-14790",
+   "klick": "fehlt",
+   "kasseVorher": 7558,
+   "kasseNachher": 7558,
+   "buchVorher": 305,
+   "buchNachher": 305,
+   "jahr": 1973,
+   "woche": 9
+  }
+ ],
+ "nach": {
+  "ende": true,
+  "grund": "brauereisterben",
+  "jahr": 1973,
+  "woche": 9,
+  "kasse": 7558,
+  "buch": 305,
+  "chronik": 79,
+  "aktivSicht": [
+   {
+    "z": "gegner:oeffnen:adler",
+    "p": null
+   },
+   {
+    "z": "gegner:oeffnen:konzern",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:lindenhof",
+    "p": "-55078"
+   },
+   {
+    "z": "gegner:hinhalten:lindenhof",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:muehlwirt",
+    "p": "-21870"
+   },
+   {
+    "z": "gegner:hinhalten:muehlwirt",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:bahnhofswirt",
+    "p": "-58320"
+   },
+   {
+    "z": "gegner:hinhalten:bahnhofswirt",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde-bild",
+    "p": "0"
+   },
+   {
+    "z": "gegner:blatt",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:120",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:119",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:118",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:gegner-bruecke-unten",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-muehle",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-unten",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-fluss",
+    "p": null
+   },
+   {
+    "z": "fuhre:schluss-auf",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:lindenhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:ochse",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:torschenke",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:pfarrhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:muehlwirt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:brueckenwirt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:faehrhaus",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:hirsch",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:markt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:bahnhofswirt",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:neustadt",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:hell",
+    "p": "-2400"
+   },
+   {
+    "z": "fuhre:tafel-ab:pils",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:pils",
+    "p": "-2400"
+   },
+   {
+    "z": "fuhre:tafel-auf:export",
+    "p": "-2400"
+   },
+   {
+    "z": "fuhre:tafel-auf:handel",
+    "p": null
+   },
+   {
+    "z": "fuhre:kauf:sudwerk",
+    "p": "-56000"
+   },
+   {
+    "z": "fuhre:kauf:rohstoff",
+    "p": "-14400"
+   },
+   {
+    "z": "fuhre:fuellen",
+    "p": null
+   },
+   {
+    "z": "name:band",
+    "p": null
+   },
+   {
+    "z": "name:aufgeldbuch",
+    "p": null
+   },
+   {
+    "z": "name:liefern",
+    "p": null
+   },
+   {
+    "z": "name:zurueckhalten",
+    "p": null
+   },
+   {
+    "z": "name:ruhe",
+    "p": null
+   },
+   {
+    "z": "name:herumgehen",
+    "p": null
+   },
+   {
+    "z": "name:blatt",
+    "p": null
+   },
+   {
+    "z": "erbe:verlaengern",
+    "p": "-7266"
+   },
+   {
+    "z": "kern:chronik",
+    "p": null
+   },
+   {
+    "z": "kern:protokoll",
+    "p": null
+   },
+   {
+    "z": "klang:ton",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:gegner-amort-gg-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:sud-sud-brett",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:name-nm-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-blatt-fu-ende-gestorben-fu-schlussblatt",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:erbe-blatt-erb-buch",
+    "p": null
+   },
+   {
+    "z": "stadt:ortsmarken",
+    "p": null
+   },
+   {
+    "z": "stadt:alles-zuklappen",
+    "p": null
+   },
+   {
+    "z": "stadt:bau:seite",
+    "p": null
+   },
+   {
+    "z": "stadt:abbruch",
+    "p": null
+   },
+   {
+    "z": "stadt:abbruch:abfuellhalle",
+    "p": "19227"
+   },
+   {
+    "z": "stadt:abbruch:stahltanks",
+    "p": "17748"
+   },
+   {
+    "z": "stadt:abbruch:schornstein",
+    "p": "14051"
+   },
+   {
+    "z": "stadt:abbruch:verladedock",
+    "p": "14051"
+   },
+   {
+    "z": "stadt:abbruch:kesselhaus",
+    "p": "12572"
+   },
+   {
+    "z": "fuhre:wiederanfang",
+    "p": null
+   },
+   {
+    "z": "preis:tafel",
+    "p": null
+   },
+   {
+    "z": "preis:chronik-auf",
+    "p": null
+   },
+   {
+    "z": "sud:schluss-auf",
+    "p": null
+   }
+  ],
+  "deckung": "nächster Zug: Ablösung Mühlschenke — 21.870 DM (Kasse reicht 0,3×)",
+  "alleDeckung": [
+   {
+    "k": "deckung",
+    "v": "0.35"
+   }
+  ]
+ },
+ "fehler": []
+}

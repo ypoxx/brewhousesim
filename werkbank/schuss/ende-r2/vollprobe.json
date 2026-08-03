@@ -1,0 +1,154 @@
+{
+ "ja-e1": {
+  "ende": "pfanne-zurueckgegeben",
+  "zuege": 97,
+  "gesperrt": 64,
+  "offenSichtbar": 33,
+  "offenGetroffen": 14,
+  "klicksA": 96,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "ja-e2": {
+  "ende": "gerechtigkeit-verkauft",
+  "zuege": 102,
+  "gesperrt": 67,
+  "offenSichtbar": 35,
+  "offenGetroffen": 14,
+  "klicksA": 101,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "ja-e3": {
+  "ende": "an-aktienbrauerei-verkauft",
+  "zuege": 107,
+  "gesperrt": 73,
+  "offenSichtbar": 34,
+  "offenGetroffen": 14,
+  "klicksA": 106,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "ja-e4": {
+  "ende": "marke-verkauft",
+  "zuege": 107,
+  "gesperrt": 72,
+  "offenSichtbar": 35,
+  "offenGetroffen": 14,
+  "klicksA": 106,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e1": {
+  "ende": "braurecht-entzogen",
+  "zuege": 93,
+  "gesperrt": 60,
+  "offenSichtbar": 33,
+  "offenGetroffen": 14,
+  "klicksA": 92,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e2": {
+  "ende": "reihe-gestrichen",
+  "zuege": 102,
+  "gesperrt": 67,
+  "offenSichtbar": 35,
+  "offenGetroffen": 14,
+  "klicksA": 101,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e3": {
+  "ende": "bank-verwertet",
+  "zuege": 107,
+  "gesperrt": 73,
+  "offenSichtbar": 34,
+  "offenGetroffen": 14,
+  "klicksA": 106,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ },
+ "nein-e4": {
+  "ende": "brauereisterben",
+  "zuege": 103,
+  "gesperrt": 77,
+  "offenSichtbar": 26,
+  "offenGetroffen": 14,
+  "klicksA": 102,
+  "klicksB": 15,
+  "gebucht": [],
+  "kenn": {
+   "kern": false,
+   "gegner": false
+  },
+  "dKasse": 0,
+  "dBuch": 0,
+  "dChronik": 0,
+  "lage": 0,
+  "fehler": []
+ }
+}

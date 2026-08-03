@@ -1,0 +1,2326 @@
+{
+ "ep": "4",
+ "gekauft": [
+  "erbe:verschreibe:markt=-4095",
+  "erbe:verschreibe:torschenke=-6552",
+  "erbe:verschreibe:muehlwirt=-7371",
+  "erbe:verschreibe:lindenhof=-14742"
+ ],
+ "log": [
+  {
+   "i": 0,
+   "j": 1970,
+   "w": 1,
+   "k": 53240,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 4 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+   "erb": "DAS ERBE noch 15 Wochen Margarete Bruckner · sparsam am Haus 4 · an der Person 0 nimmt 0 · 71 hl Versorgungszusage · jährlich −1.833 DM Abfindung −9.165 DM Ohne Abfindung 0 DM",
+   "nAng": 9,
+   "bil": 1833,
+   "rho": 29.05
+  },
+  {
+   "i": 1,
+   "j": 1970,
+   "w": 2,
+   "k": 53345,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 4 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 2 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 14 Wochen Margarete Bruckner · sparsam am Haus 2 · an der Person 3 nimmt 3 · 11 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −9.633 DM Abfindung −46.720 DM Ohne Abfindung 0 DM",
+   "nAng": 12,
+   "bil": 6552,
+   "rho": 8.14
+  },
+  {
+   "i": 2,
+   "j": 1970,
+   "w": 3,
+   "k": 39701,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 5 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 4 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 13 Wochen Margarete Bruckner · sparsam am Haus 3 · an der Person 2 nimmt 2 · 30 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −6.864 DM Abfindung −32.261 DM Ohne Abfindung 0 DM",
+   "nAng": 12,
+   "bil": 6552,
+   "rho": 6.06
+  },
+  {
+   "i": 3,
+   "j": 1970,
+   "w": 4,
+   "k": 28349,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 5 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 12 Wochen Margarete Bruckner · sparsam am Haus 4 · an der Person 1 nimmt 1 · 51 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.538 DM Abfindung −25.198 DM Ohne Abfindung 0 DM",
+   "nAng": 11,
+   "bil": 5538,
+   "rho": 5.12
+  },
+  {
+   "i": 4,
+   "j": 1970,
+   "w": 5,
+   "k": 26163,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 6 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 11 Wochen Margarete Bruckner · sparsam am Haus 4 · an der Person 1 nimmt 1 · 41 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.265 DM Abfindung −23.166 DM Ohne Abfindung 0 DM",
+   "nAng": 11,
+   "bil": 5265,
+   "rho": 4.97
+  },
+  {
+   "i": 5,
+   "j": 1970,
+   "w": 6,
+   "k": 23968,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 8 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 10 Wochen Margarete Bruckner · sparsam am Haus 4 · an der Person 1 nimmt 1 · 51 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.538 DM Abfindung −23.537 DM Ohne Abfindung 0 DM",
+   "nAng": 11,
+   "bil": 5538,
+   "rho": 4.33
+  },
+  {
+   "i": 6,
+   "j": 1970,
+   "w": 7,
+   "k": 21773,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 10 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 9 Wochen Margarete Bruckner · sparsam am Haus 4 · an der Person 1 nimmt 1 · 60 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.772 DM Abfindung −23.665 DM Ohne Abfindung 0 DM",
+   "nAng": 10,
+   "bil": 5772,
+   "rho": 3.77
+  },
+  {
+   "i": 7,
+   "j": 1970,
+   "w": 8,
+   "k": 23749,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 12 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 8 Wochen Margarete Bruckner · sparsam am Haus 4 · an der Person 1 nimmt 1 · 51 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.538 DM Abfindung −21.875 DM Ohne Abfindung 0 DM",
+   "nAng": 10,
+   "bil": 5538,
+   "rho": 4.29
+  },
+  {
+   "i": 8,
+   "j": 1970,
+   "w": 9,
+   "k": 25725,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 13 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 7 Wochen Margarete Bruckner · sparsam am Haus 4 · an der Person 1 nimmt 1 · 41 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.265 DM Abfindung −20.007 DM Ohne Abfindung 0 DM",
+   "nAng": 11,
+   "bil": 5265,
+   "rho": 4.89
+  },
+  {
+   "i": 9,
+   "j": 1970,
+   "w": 10,
+   "k": 27629,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 16 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 6 Wochen Margarete Bruckner · sparsam am Haus 2 · an der Person 1 nimmt 1 · 30 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −4.992 DM Abfindung −18.221 DM Ohne Abfindung 0 DM",
+   "nAng": 11,
+   "bil": 4992,
+   "rho": 5.53
+  },
+  {
+   "i": 10,
+   "j": 1970,
+   "w": 11,
+   "k": 27009,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 17 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 5 Wochen Margarete Bruckner · sparsam am Haus 2 · an der Person 1 nimmt 1 · 51 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.538 DM Abfindung −19.383 DM Ohne Abfindung 0 DM",
+   "nAng": 11,
+   "bil": 5538,
+   "rho": 4.88
+  },
+  {
+   "i": 11,
+   "j": 1970,
+   "w": 12,
+   "k": 28906,
+   "amt": "Margarete Bruckner/sparsam",
+   "fest": "Chronik des Hauses · 6 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 19 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE noch 4 Wochen Margarete Bruckner · sparsam am Haus 1 · an der Person 1 nimmt 1 · 41 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −5.265 DM Abfindung −17.638 DM Ohne Abfindung 0 DM",
+   "nAng": 11,
+   "bil": 5265,
+   "rho": 5.49,
+   "uebergabe": "leibgeding/abfindung:1"
+  },
+  {
+   "i": 12,
+   "j": 1970,
+   "w": 13,
+   "k": 28286,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 20 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 12,
+   "bil": 5686,
+   "rho": 4.97
+  },
+  {
+   "i": 13,
+   "j": 1970,
+   "w": 14,
+   "k": 27666,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 22 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 12,
+   "bil": 5686,
+   "rho": 4.87
+  },
+  {
+   "i": 14,
+   "j": 1970,
+   "w": 15,
+   "k": 27046,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 22 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 12,
+   "bil": 5686,
+   "rho": 4.76
+  },
+  {
+   "i": 15,
+   "j": 1970,
+   "w": 16,
+   "k": 26426,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 23 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 13,
+   "bil": 5686,
+   "rho": 4.65
+  },
+  {
+   "i": 16,
+   "j": 1970,
+   "w": 17,
+   "k": 25806,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 24 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 13,
+   "bil": 5686,
+   "rho": 4.54
+  },
+  {
+   "i": 17,
+   "j": 1970,
+   "w": 18,
+   "k": 25186,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 25 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 14,
+   "bil": 5686,
+   "rho": 4.43
+  },
+  {
+   "i": 18,
+   "j": 1970,
+   "w": 19,
+   "k": 24566,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 26 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 14,
+   "bil": 5686,
+   "rho": 4.32
+  },
+  {
+   "i": 19,
+   "j": 1970,
+   "w": 20,
+   "k": 23946,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 27 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 13,
+   "bil": 5686,
+   "rho": 4.21
+  },
+  {
+   "i": 20,
+   "j": 1970,
+   "w": 21,
+   "k": 23326,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 28 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 1 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Fortschreiben · Mühlschenke −5.686 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 13,
+   "bil": 5686,
+   "rho": 4.1
+  },
+  {
+   "i": 21,
+   "j": 1970,
+   "w": 22,
+   "k": 22706,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 31 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 12,
+   "bil": 13104,
+   "rho": 1.73
+  },
+  {
+   "i": 22,
+   "j": 1970,
+   "w": 23,
+   "k": 22086,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 32 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 13104,
+   "rho": 1.69
+  },
+  {
+   "i": 23,
+   "j": 1970,
+   "w": 24,
+   "k": 21466,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 32 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 1 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Festschreiben · Lindenhof −18.954 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 13104,
+   "rho": 1.64
+  },
+  {
+   "i": 24,
+   "j": 1970,
+   "w": 25,
+   "k": 20846,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 37 Züge diese Woche 5 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 13104,
+   "rho": 1.59
+  },
+  {
+   "i": 25,
+   "j": 1970,
+   "w": 26,
+   "k": 20226,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 38 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 13104,
+   "rho": 1.54
+  },
+  {
+   "i": 26,
+   "j": 1970,
+   "w": 27,
+   "k": 19606,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 39 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 13104,
+   "rho": 1.5
+  },
+  {
+   "i": 27,
+   "j": 1970,
+   "w": 28,
+   "k": 18986,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 40 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 8,
+   "bil": 9842,
+   "rho": 1.93
+  },
+  {
+   "i": 28,
+   "j": 1970,
+   "w": 29,
+   "k": 18366,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 41 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 9842,
+   "rho": 1.87
+  },
+  {
+   "i": 29,
+   "j": 1970,
+   "w": 30,
+   "k": 17746,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 9842,
+   "rho": 1.8
+  },
+  {
+   "i": 30,
+   "j": 1971,
+   "w": 1,
+   "k": 39575,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 8,
+   "bil": 2700,
+   "rho": 14.66
+  },
+  {
+   "i": 31,
+   "j": 1971,
+   "w": 2,
+   "k": 38943,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 44 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 12029,
+   "rho": 3.24
+  },
+  {
+   "i": 32,
+   "j": 1971,
+   "w": 3,
+   "k": 38311,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 46 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 10,
+   "bil": 12029,
+   "rho": 3.18
+  },
+  {
+   "i": 33,
+   "j": 1971,
+   "w": 4,
+   "k": 37679,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 47 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 12029,
+   "rho": 3.13
+  },
+  {
+   "i": 34,
+   "j": 1971,
+   "w": 5,
+   "k": 37047,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 48 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 12029,
+   "rho": 3.08
+  },
+  {
+   "i": 35,
+   "j": 1971,
+   "w": 6,
+   "k": 36415,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 50 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 8,
+   "bil": 13104,
+   "rho": 2.78
+  },
+  {
+   "i": 36,
+   "j": 1971,
+   "w": 7,
+   "k": 35783,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 51 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 13104,
+   "rho": 2.73
+  },
+  {
+   "i": 37,
+   "j": 1971,
+   "w": 8,
+   "k": 35151,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 52 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 10,
+   "bil": 13104,
+   "rho": 2.68
+  },
+  {
+   "i": 38,
+   "j": 1971,
+   "w": 9,
+   "k": 34519,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 54 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 9842,
+   "rho": 3.51
+  },
+  {
+   "i": 39,
+   "j": 1971,
+   "w": 10,
+   "k": 33887,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 54 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 9842,
+   "rho": 3.44
+  },
+  {
+   "i": 40,
+   "j": 1971,
+   "w": 11,
+   "k": 33255,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 55 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 9842,
+   "rho": 3.38
+  },
+  {
+   "i": 41,
+   "j": 1971,
+   "w": 12,
+   "k": 32623,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 57 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 9842,
+   "rho": 3.31
+  },
+  {
+   "i": 42,
+   "j": 1971,
+   "w": 13,
+   "k": 31991,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 60 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 10,
+   "bil": 9842,
+   "rho": 3.25
+  },
+  {
+   "i": 43,
+   "j": 1971,
+   "w": 14,
+   "k": 31359,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 60 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 10,
+   "bil": 9842,
+   "rho": 3.19
+  },
+  {
+   "i": 44,
+   "j": 1971,
+   "w": 15,
+   "k": 30727,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 61 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 10,
+   "bil": 13104,
+   "rho": 2.34
+  },
+  {
+   "i": 45,
+   "j": 1971,
+   "w": 16,
+   "k": 30095,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 10,
+   "bil": 13104,
+   "rho": 2.3
+  },
+  {
+   "i": 46,
+   "j": 1971,
+   "w": 17,
+   "k": 29463,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 63 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 10,
+   "bil": 13104,
+   "rho": 2.25
+  },
+  {
+   "i": 47,
+   "j": 1971,
+   "w": 18,
+   "k": 28831,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 65 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 13104,
+   "rho": 2.2
+  },
+  {
+   "i": 48,
+   "j": 1971,
+   "w": 19,
+   "k": 28199,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 65 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 13104,
+   "rho": 2.15
+  },
+  {
+   "i": 49,
+   "j": 1971,
+   "w": 20,
+   "k": 27567,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 66 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 13104,
+   "rho": 2.1
+  },
+  {
+   "i": 50,
+   "j": 1971,
+   "w": 21,
+   "k": 26935,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 67 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 11,
+   "bil": 13104,
+   "rho": 2.06
+  },
+  {
+   "i": 51,
+   "j": 1971,
+   "w": 22,
+   "k": 26303,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 69 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 13104,
+   "rho": 2.01
+  },
+  {
+   "i": 52,
+   "j": 1971,
+   "w": 23,
+   "k": 25671,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 70 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 7533,
+   "rho": 3.41
+  },
+  {
+   "i": 53,
+   "j": 1971,
+   "w": 24,
+   "k": 25039,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 71 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 7533,
+   "rho": 3.32
+  },
+  {
+   "i": 54,
+   "j": 1971,
+   "w": 25,
+   "k": 24407,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 72 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 7533,
+   "rho": 3.24
+  },
+  {
+   "i": 55,
+   "j": 1971,
+   "w": 26,
+   "k": 23775,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 73 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 12150,
+   "rho": 1.96
+  },
+  {
+   "i": 56,
+   "j": 1971,
+   "w": 27,
+   "k": 23143,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 75 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 12150,
+   "rho": 1.9
+  },
+  {
+   "i": 57,
+   "j": 1971,
+   "w": 28,
+   "k": 22511,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 76 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 12150,
+   "rho": 1.85
+  },
+  {
+   "i": 58,
+   "j": 1971,
+   "w": 29,
+   "k": 21879,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 78 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 8,
+   "bil": 12150,
+   "rho": 1.8
+  },
+  {
+   "i": 59,
+   "j": 1971,
+   "w": 30,
+   "k": 21247,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 80 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 9,
+   "bil": 12029,
+   "rho": 1.77
+  },
+  {
+   "i": 60,
+   "j": 1972,
+   "w": 1,
+   "k": 14892,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 80 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 2700,
+   "rho": 5.52
+  },
+  {
+   "i": 61,
+   "j": 1972,
+   "w": 2,
+   "k": 14247,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 81 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 12029,
+   "rho": 1.18
+  },
+  {
+   "i": 62,
+   "j": 1972,
+   "w": 3,
+   "k": 13602,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 83 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 12029,
+   "rho": 1.13
+  },
+  {
+   "i": 63,
+   "j": 1972,
+   "w": 4,
+   "k": 12957,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 85 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 22113,
+   "rho": 0.59
+  },
+  {
+   "i": 64,
+   "j": 1972,
+   "w": 5,
+   "k": 12312,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 86 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 22113,
+   "rho": 0.56
+  },
+  {
+   "i": 65,
+   "j": 1972,
+   "w": 6,
+   "k": 11667,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 86 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 22113,
+   "rho": 0.53
+  },
+  {
+   "i": 66,
+   "j": 1972,
+   "w": 7,
+   "k": 11022,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 87 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 22113,
+   "rho": 0.5
+  },
+  {
+   "i": 67,
+   "j": 1972,
+   "w": 8,
+   "k": 10377,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 88 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 22113,
+   "rho": 0.47
+  },
+  {
+   "i": 68,
+   "j": 1972,
+   "w": 9,
+   "k": 9732,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 91 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 22113,
+   "rho": 0.44
+  },
+  {
+   "i": 69,
+   "j": 1972,
+   "w": 10,
+   "k": 9087,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 93 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 49140,
+   "rho": 0.18
+  },
+  {
+   "i": 70,
+   "j": 1972,
+   "w": 11,
+   "k": 8442,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 93 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 49140,
+   "rho": 0.17
+  },
+  {
+   "i": 71,
+   "j": 1972,
+   "w": 12,
+   "k": 7797,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 94 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 49140,
+   "rho": 0.16
+  },
+  {
+   "i": 72,
+   "j": 1972,
+   "w": 13,
+   "k": 7152,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 96 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 21092,
+   "rho": 0.34
+  },
+  {
+   "i": 73,
+   "j": 1972,
+   "w": 14,
+   "k": 6507,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 97 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 21092,
+   "rho": 0.31
+  },
+  {
+   "i": 74,
+   "j": 1972,
+   "w": 15,
+   "k": 5862,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 97 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 21092,
+   "rho": 0.28
+  },
+  {
+   "i": 75,
+   "j": 1972,
+   "w": 16,
+   "k": 5217,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 99 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 34020,
+   "rho": 0.15
+  },
+  {
+   "i": 76,
+   "j": 1972,
+   "w": 17,
+   "k": 4572,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 100 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 34020,
+   "rho": 0.13
+  },
+  {
+   "i": 77,
+   "j": 1972,
+   "w": 18,
+   "k": 3927,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 102 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 34020,
+   "rho": 0.12
+  },
+  {
+   "i": 78,
+   "j": 1972,
+   "w": 19,
+   "k": 3282,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 103 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 34020,
+   "rho": 0.1
+  },
+  {
+   "i": 79,
+   "j": 1972,
+   "w": 20,
+   "k": 2637,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 104 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 34020,
+   "rho": 0.08
+  },
+  {
+   "i": 80,
+   "j": 1972,
+   "w": 21,
+   "k": 1992,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 105 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 7655,
+   "rho": 0.26
+  },
+  {
+   "i": 81,
+   "j": 1972,
+   "w": 22,
+   "k": 1347,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 105 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 7655,
+   "rho": 0.18
+  },
+  {
+   "i": 82,
+   "j": 1972,
+   "w": 23,
+   "k": 702,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 108 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 17010,
+   "rho": 0.04
+  },
+  {
+   "i": 83,
+   "j": 1972,
+   "w": 24,
+   "k": 57,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 108 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 17010,
+   "rho": 0
+  },
+  {
+   "i": 84,
+   "j": 1972,
+   "w": 25,
+   "k": 57,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 111 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 3,
+   "bil": 17010,
+   "rho": 0
+  },
+  {
+   "i": 85,
+   "j": 1972,
+   "w": 26,
+   "k": 57,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 112 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 3,
+   "bil": 17010,
+   "rho": 0
+  },
+  {
+   "i": 86,
+   "j": 1972,
+   "w": 27,
+   "k": 57,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 113 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 3,
+   "bil": 17010,
+   "rho": 0
+  },
+  {
+   "i": 87,
+   "j": 1972,
+   "w": 28,
+   "k": 57,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 115 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 28350,
+   "rho": 0
+  },
+  {
+   "i": 88,
+   "j": 1972,
+   "w": 29,
+   "k": 57,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 117 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 18954,
+   "rho": 0
+  },
+  {
+   "i": 89,
+   "j": 1972,
+   "w": 30,
+   "k": 57,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 118 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 18954,
+   "rho": 0
+  },
+  {
+   "i": 90,
+   "j": 1973,
+   "w": 1,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 118 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 2700,
+   "rho": 0.21
+  },
+  {
+   "i": 91,
+   "j": 1973,
+   "w": 2,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 120 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 18954,
+   "rho": 0.03
+  },
+  {
+   "i": 92,
+   "j": 1973,
+   "w": 3,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 122 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 12758,
+   "rho": 0.05
+  },
+  {
+   "i": 93,
+   "j": 1973,
+   "w": 4,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 123 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 12758,
+   "rho": 0.05
+  },
+  {
+   "i": 94,
+   "j": 1973,
+   "w": 5,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 124 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 21092,
+   "rho": 0.03
+  },
+  {
+   "i": 95,
+   "j": 1973,
+   "w": 6,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 125 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 21092,
+   "rho": 0.03
+  },
+  {
+   "i": 96,
+   "j": 1973,
+   "w": 7,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 126 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 34020,
+   "rho": 0.02
+  },
+  {
+   "i": 97,
+   "j": 1973,
+   "w": 8,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 127 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 3,
+   "bil": 34020,
+   "rho": 0.02
+  },
+  {
+   "i": 98,
+   "j": 1973,
+   "w": 9,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 128 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 3,
+   "bil": 34020,
+   "rho": 0.02
+  },
+  {
+   "i": 99,
+   "j": 1973,
+   "w": 10,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 129 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 3,
+   "bil": 34020,
+   "rho": 0.02
+  },
+  {
+   "i": 100,
+   "j": 1973,
+   "w": 11,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 129 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 3,
+   "bil": 34020,
+   "rho": 0.02
+  },
+  {
+   "i": 101,
+   "j": 1973,
+   "w": 12,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 131 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 34020,
+   "rho": 0.02
+  },
+  {
+   "i": 102,
+   "j": 1973,
+   "w": 13,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 133 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 12029,
+   "rho": 0.05
+  },
+  {
+   "i": 103,
+   "j": 1973,
+   "w": 14,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 134 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 7655,
+   "rho": 0.08
+  },
+  {
+   "i": 104,
+   "j": 1973,
+   "w": 15,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 134 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 7655,
+   "rho": 0.08
+  },
+  {
+   "i": 105,
+   "j": 1973,
+   "w": 16,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 135 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 7655,
+   "rho": 0.08
+  },
+  {
+   "i": 106,
+   "j": 1973,
+   "w": 17,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 137 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 7655,
+   "rho": 0.08
+  },
+  {
+   "i": 107,
+   "j": 1973,
+   "w": 18,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 139 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 4,
+   "bil": 7655,
+   "rho": 0.08
+  },
+  {
+   "i": 108,
+   "j": 1973,
+   "w": 19,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 141 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 7655,
+   "rho": 0.08
+  },
+  {
+   "i": 109,
+   "j": 1973,
+   "w": 20,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 143 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 7655,
+   "rho": 0.08
+  },
+  {
+   "i": 110,
+   "j": 1973,
+   "w": 21,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 146 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 17010,
+   "rho": 0.03
+  },
+  {
+   "i": 111,
+   "j": 1973,
+   "w": 22,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 146 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 17010,
+   "rho": 0.03
+  },
+  {
+   "i": 112,
+   "j": 1973,
+   "w": 23,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 146 Züge Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 17010,
+   "rho": 0.03
+  },
+  {
+   "i": 113,
+   "j": 1973,
+   "w": 24,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 149 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 17010,
+   "rho": 0.03
+  },
+  {
+   "i": 114,
+   "j": 1973,
+   "w": 25,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 150 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 22772,
+   "rho": 0.03
+  },
+  {
+   "i": 115,
+   "j": 1973,
+   "w": 26,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 152 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 26730,
+   "rho": 0.02
+  },
+  {
+   "i": 116,
+   "j": 1973,
+   "w": 27,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 153 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 29894,
+   "rho": 0.02
+  },
+  {
+   "i": 117,
+   "j": 1973,
+   "w": 28,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 154 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 5,
+   "bil": 29894,
+   "rho": 0.02
+  },
+  {
+   "i": 118,
+   "j": 1973,
+   "w": 29,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 156 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 6561,
+   "rho": 0.09
+  },
+  {
+   "i": 119,
+   "j": 1973,
+   "w": 30,
+   "k": 579,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 158 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× jedes Michaeli 5.265 DM Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 6561,
+   "rho": 0.09
+  },
+  {
+   "i": 120,
+   "j": 1974,
+   "w": 1,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 158 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 6,
+   "bil": 2700,
+   "rho": 0.12
+  },
+  {
+   "i": 121,
+   "j": 1974,
+   "w": 2,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 159 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 6561,
+   "rho": 0.05
+  },
+  {
+   "i": 122,
+   "j": 1974,
+   "w": 3,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 161 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 10546,
+   "rho": 0.03
+  },
+  {
+   "i": 123,
+   "j": 1974,
+   "w": 4,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 163 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 7,
+   "bil": 10546,
+   "rho": 0.03
+  },
+  {
+   "i": 124,
+   "j": 1974,
+   "w": 5,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 164 Züge diese Woche 1 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 2,
+   "bil": 37593,
+   "rho": 0.01
+  },
+  {
+   "i": 125,
+   "j": 1974,
+   "w": 6,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 167 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 2,
+   "bil": 37593,
+   "rho": 0.01
+  },
+  {
+   "i": 126,
+   "j": 1974,
+   "w": 7,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 170 Züge diese Woche 3 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 2,
+   "bil": 37593,
+   "rho": 0.01
+  },
+  {
+   "i": 127,
+   "j": 1974,
+   "w": 8,
+   "k": 316,
+   "amt": "Hedwig Bruckner/fromm",
+   "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+   "ohne": "OHNE DICH GESCHEHEN 172 Züge diese Woche 2 Das Haus gegenüber",
+   "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+   "nAng": 2,
+   "bil": 97200,
+   "rho": 0
+  },
+  {
+   "i": 128,
+   "ENDE": 1,
+   "j": 1974,
+   "w": 9,
+   "k": 17356
+  }
+ ],
+ "ende": {
+  "j": 1974,
+  "w": 9,
+  "ende": true,
+  "k": 17356,
+  "amt": "Hedwig Bruckner/fromm",
+  "fest": "Chronik des Hauses · 7 Festlegungen · 0 von dieser Tafel gebaut",
+  "ohne": "OHNE DICH GESCHEHEN 172 Züge Das Haus gegenüber",
+  "erb": "DAS ERBE II. Hand Hedwig Bruckner · fromm am Haus 0 · an der Person 0 VERSORGUNG · Feder 0,90× Leibgeding verfallen · nahm 0 · 0,0 hl Eine Stiftung der Firma −13.104 DM",
+  "kn": [
+   {
+    "z": "gegner:oeffnen:adler",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:oeffnen:konzern",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:lindenhof",
+    "pr": -72900,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:lindenhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:ochse",
+    "pr": -98280,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:ochse",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:abwehren:torschenke",
+    "pr": -20088,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:torschenke",
+    "pr": -104949,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:torschenke",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:bahnhofswirt",
+    "pr": -97200,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:bahnhofswirt",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:abloesen:neustadt",
+    "pr": -97200,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:hinhalten:neustadt",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:beschwerde-bild",
+    "pr": 0,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:angebot-ja",
+    "pr": 50000,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:angebot-nein",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "gegner:blatt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:beschwerde",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:zeige:172",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:zeige:171",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "gegner:zeige:170",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "sud:zettel-anstich",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:zettel-wechsel-frei",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:zettel-wechsel-kauf",
+    "pr": -26000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "stadt:marke:gegner-bruecke-unten",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-muehle",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-fluss",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "stadt:marke:fuhre-bahnhof",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "fuhre:schluss-auf",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:ziel:bar",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:ziel:ziel",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:ziel:borg",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:probe:lindenhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:ochse",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:torschenke",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:pfarrhof",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:muehlwirt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:brueckenwirt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:faehrhaus",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:hirsch",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:markt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:bahnhofswirt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:probe:neustadt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:hell",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:tafel-auf:hell",
+    "pr": -2400,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:pils",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-auf:pils",
+    "pr": -2400,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:export",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:tafel-auf:export",
+    "pr": -2400,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:tafel-ab:handel",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:tafel-auf:handel",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:kauf:lastzug",
+    "pr": -128000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:kauf:sudwerk",
+    "pr": -56000,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:kauf:rohstoff",
+    "pr": -14400,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:rueckkauf:rohstoff",
+    "pr": 7200,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:fuellen",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "fuhre:wie-vorige",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:leeren",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "fuhre:abschicken",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:fuehrung:erfahrung",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:fuehrung:labor",
+    "pr": -42000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:fuehrung:rechner",
+    "pr": -118000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:behandlung:natur",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:behandlung:schoenen",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:behandlung:filter",
+    "pr": -26000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:behandlung:pasteur",
+    "pr": -74000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:hefe-fuehren",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:anstich-jung",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:anstich-alt",
+    "pr": null,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "sud:gaerraum",
+    "pr": -24000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "name:band",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:aufgeldbuch",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:entzug-loesen",
+    "pr": -26000,
+    "t": false,
+    "a": false
+   },
+   {
+    "z": "name:liefern",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:zurueckhalten",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:ruhe",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:herumgehen",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "name:blatt",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "erbe:seelgeraet",
+    "pr": -13104,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "kern:chronik",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "kern:protokoll",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "weiter",
+    "pr": null,
+    "t": true,
+    "a": false
+   },
+   {
+    "z": "klang:ton",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:gegner-amort-gg-gzangebot-gg-gzblock",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:gegner-amort-gg-band",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:sud-sud-brett",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:name-nm-band",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:fuhre-blatt-fu-ende-gestorben-fu-schlussblatt",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:reiter:erbe-blatt-erb-buch",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:ortsmarken",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:alles-zuklappen",
+    "pr": null,
+    "t": false,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:seite",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:abbruch",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:waage",
+    "pr": -9570,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:maelzerei",
+    "pr": -14790,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:verwaltung",
+    "pr": -15660,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "stadt:bau:sudhaus_neu",
+    "pr": -24360,
+    "t": true,
+    "a": false
+   },
+   {
+    "z": "fuhre:wiederanfang",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "preis:tafel",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "preis:chronik-auf",
+    "pr": null,
+    "t": true,
+    "a": true
+   },
+   {
+    "z": "sud:schluss-auf",
+    "pr": null,
+    "t": true,
+    "a": true
+   }
+  ]
+ },
+ "fehler": []
+}

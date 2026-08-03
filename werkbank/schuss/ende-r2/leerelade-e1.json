@@ -1,0 +1,3646 @@
+{
+ "reihe": [
+  {
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 112,
+   "deckung": "5.89",
+   "aktiv": 50,
+   "mitPreis": 16,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 34,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:zuvorkommen:obernberg=-19",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 2,
+   "kasse": 103,
+   "deckung": "5.42",
+   "aktiv": 46,
+   "mitPreis": 16,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 6,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:zuvorkommen:obernberg=-19",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 3,
+   "kasse": 94,
+   "deckung": "4.95",
+   "aktiv": 46,
+   "mitPreis": 16,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 6,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:zuvorkommen:obernberg=-19",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 4,
+   "kasse": 93,
+   "deckung": "4.89",
+   "aktiv": 46,
+   "mitPreis": 16,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 6,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:zuvorkommen:obernberg=-19",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 5,
+   "kasse": 92,
+   "deckung": "2.19",
+   "aktiv": 46,
+   "mitPreis": 16,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 6,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 6,
+   "kasse": 91,
+   "deckung": "2.17",
+   "aktiv": 48,
+   "mitPreis": 17,
+   "bezahlbar": 17,
+   "einnahme": 0,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:lindenhof",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:zuvorkommen:lindenhof=-56",
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 7,
+   "kasse": 90,
+   "deckung": "2.14",
+   "aktiv": 48,
+   "mitPreis": 17,
+   "bezahlbar": 17,
+   "einnahme": 0,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:lindenhof",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:zuvorkommen:lindenhof=-56",
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 8,
+   "kasse": 89,
+   "deckung": "2.12",
+   "aktiv": 50,
+   "mitPreis": 18,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:lindenhof",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 9,
+   "kasse": 80,
+   "deckung": "1.9",
+   "aktiv": 50,
+   "mitPreis": 18,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:lindenhof",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 10,
+   "kasse": 71,
+   "deckung": "1.69",
+   "aktiv": 49,
+   "mitPreis": 17,
+   "bezahlbar": 16,
+   "einnahme": 0,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:faehrhaus=-66",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 11,
+   "kasse": 62,
+   "deckung": "1.48",
+   "aktiv": 48,
+   "mitPreis": 15,
+   "bezahlbar": 14,
+   "einnahme": 0,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 12,
+   "kasse": 61,
+   "deckung": "1.45",
+   "aktiv": 50,
+   "mitPreis": 16,
+   "bezahlbar": 15,
+   "einnahme": 0,
+   "ohnePreis": 34,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:zuvorkommen:muehlwirt=-43",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 13,
+   "kasse": 60,
+   "deckung": "1.43",
+   "aktiv": 50,
+   "mitPreis": 16,
+   "bezahlbar": 15,
+   "einnahme": 0,
+   "ohnePreis": 34,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:zuvorkommen:muehlwirt=-43",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 14,
+   "kasse": 59,
+   "deckung": "1.4",
+   "aktiv": 55,
+   "mitPreis": 16,
+   "bezahlbar": 15,
+   "einnahme": 0,
+   "ohnePreis": 39,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:zuvorkommen:muehlwirt=-43",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 15,
+   "kasse": 58,
+   "deckung": "1.38",
+   "aktiv": 55,
+   "mitPreis": 16,
+   "bezahlbar": 14,
+   "einnahme": 0,
+   "ohnePreis": 39,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 16,
+   "kasse": 57,
+   "deckung": "1.36",
+   "aktiv": 49,
+   "mitPreis": 11,
+   "bezahlbar": 9,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:torschenke=-56",
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 17,
+   "kasse": 48,
+   "deckung": "1.14",
+   "aktiv": 49,
+   "mitPreis": 11,
+   "bezahlbar": 8,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:abloesen:obernberg=-42",
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 18,
+   "kasse": 39,
+   "deckung": "0.93",
+   "aktiv": 49,
+   "mitPreis": 11,
+   "bezahlbar": 7,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 19,
+   "kasse": 30,
+   "deckung": "0.71",
+   "aktiv": 48,
+   "mitPreis": 10,
+   "bezahlbar": 6,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 20,
+   "kasse": 29,
+   "deckung": "0.69",
+   "aktiv": 48,
+   "mitPreis": 10,
+   "bezahlbar": 6,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 21,
+   "kasse": 28,
+   "deckung": "0.67",
+   "aktiv": 48,
+   "mitPreis": 10,
+   "bezahlbar": 6,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 22,
+   "kasse": 27,
+   "deckung": "0.64",
+   "aktiv": 48,
+   "mitPreis": 10,
+   "bezahlbar": 6,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 23,
+   "kasse": 26,
+   "deckung": "0.62",
+   "aktiv": 48,
+   "mitPreis": 10,
+   "bezahlbar": 6,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 24,
+   "kasse": 25,
+   "deckung": "0.6",
+   "aktiv": 48,
+   "mitPreis": 10,
+   "bezahlbar": 6,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15",
+    "stadt:bau:ochsenstall=-18",
+    "stadt:bau:keller_gewoelbe=-21",
+    "stadt:bau:kueferei=-23"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 25,
+   "kasse": 16,
+   "deckung": "0.38",
+   "aktiv": 45,
+   "mitPreis": 7,
+   "bezahlbar": 3,
+   "einnahme": 0,
+   "ohnePreis": 38,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 12,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0",
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 26,
+   "kasse": 7,
+   "deckung": "0.17",
+   "aktiv": 41,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 4,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 5,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:malzboden=9",
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 27,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 4,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 5,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:malzboden=9",
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 28,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 4,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 5,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:malzboden=9",
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 29,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 4,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 5,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:malzboden=9",
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 30,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 4,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 5,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:malzboden=9",
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 1,
+   "kasse": -1,
+   "deckung": "-0.02",
+   "aktiv": 34,
+   "mitPreis": 9,
+   "bezahlbar": 0,
+   "einnahme": 3,
+   "ohnePreis": 25,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 5,
+   "namenFrei": [
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz",
+    "fuhre:jahresplan:kofent",
+    "fuhre:sommer-zu"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 2,
+   "kasse": 15,
+   "deckung": "0.36",
+   "aktiv": 39,
+   "mitPreis": 5,
+   "bezahlbar": 2,
+   "einnahme": 0,
+   "ohnePreis": 34,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 1,
+   "freiWirksam": 11,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "stadt:bau:grutkammer=-13",
+    "stadt:bau:gaerbottiche=-15"
+   ],
+   "namenEin": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 3,
+   "kasse": 6,
+   "deckung": "0.14",
+   "aktiv": 40,
+   "mitPreis": 6,
+   "bezahlbar": 0,
+   "einnahme": 3,
+   "ohnePreis": 34,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 11,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 4,
+   "kasse": 5,
+   "deckung": "0.12",
+   "aktiv": 40,
+   "mitPreis": 6,
+   "bezahlbar": 0,
+   "einnahme": 3,
+   "ohnePreis": 34,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 11,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 5,
+   "kasse": 4,
+   "deckung": "0.1",
+   "aktiv": 40,
+   "mitPreis": 6,
+   "bezahlbar": 0,
+   "einnahme": 3,
+   "ohnePreis": 34,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 11,
+   "namenFrei": [
+    "gegner:abloesen:ochse",
+    "gegner:hinhalten:ochse",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 6,
+   "kasse": 3,
+   "deckung": "0.07",
+   "aktiv": 39,
+   "mitPreis": 6,
+   "bezahlbar": 0,
+   "einnahme": 3,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 7,
+   "kasse": 2,
+   "deckung": "0.05",
+   "aktiv": 39,
+   "mitPreis": 6,
+   "bezahlbar": 0,
+   "einnahme": 3,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 8,
+   "kasse": 1,
+   "deckung": "0.02",
+   "aktiv": 45,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 37,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 9,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 45,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 37,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 10,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 11,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 12,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 13,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 14,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 15,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 16,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 17,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 18,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 19,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 44,
+   "mitPreis": 8,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 36,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 20,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 21,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 22,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 23,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 24,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 25,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 26,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 27,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 28,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 29,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 30,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 9,
+   "bezahlbar": 1,
+   "einnahme": 3,
+   "ohnePreis": 31,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 4,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:torschenke",
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:fasslager_holz=6",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 1,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 33,
+   "mitPreis": 8,
+   "bezahlbar": 0,
+   "einnahme": 2,
+   "ohnePreis": 25,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 5,
+   "namenFrei": [
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz",
+    "fuhre:jahresplan:kofent",
+    "fuhre:sommer-zu"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 2,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 3,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 4,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 5,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 6,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 7,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 8,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 5,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:muehlwirt",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 9,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 39,
+   "mitPreis": 4,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 10,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 39,
+   "mitPreis": 4,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 11,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 39,
+   "mitPreis": 4,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 12,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 40,
+   "mitPreis": 5,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 13,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 14,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 15,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 16,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 17,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 18,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 19,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 20,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 21,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 22,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 23,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 24,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 25,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 37,
+   "mitPreis": 7,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 30,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 26,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 27,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 28,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 29,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 30,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 41,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 2,
+   "ohnePreis": 35,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 3,
+   "freiWirksam": 9,
+   "namenFrei": [
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "gegner:blatt",
+    "gegner:beschwerde",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "stadt:versatz:brunnen=5"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 1,
+   "kasse": 2,
+   "deckung": "0.05",
+   "aktiv": 32,
+   "mitPreis": 7,
+   "bezahlbar": 0,
+   "einnahme": 1,
+   "ohnePreis": 25,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 5,
+   "namenFrei": [
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz",
+    "fuhre:jahresplan:kofent",
+    "fuhre:sommer-zu"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 2,
+   "kasse": 1,
+   "deckung": "0.02",
+   "aktiv": 38,
+   "mitPreis": 5,
+   "bezahlbar": 0,
+   "einnahme": 1,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 3,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 5,
+   "bezahlbar": 0,
+   "einnahme": 1,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 4,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 5,
+   "bezahlbar": 0,
+   "einnahme": 1,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 5,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 5,
+   "bezahlbar": 0,
+   "einnahme": 1,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 6,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 5,
+   "bezahlbar": 0,
+   "einnahme": 1,
+   "ohnePreis": 33,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 10,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "sud:wuerze:sack",
+    "sud:anstich-jung",
+    "sud:anstich-alt",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 7,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 32,
+   "mitPreis": 5,
+   "bezahlbar": 0,
+   "einnahme": 2,
+   "ohnePreis": 27,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 7,
+   "namenFrei": [
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz",
+    "fuhre:ausgang:nein"
+   ],
+   "namenBez": [],
+   "namenEin": [
+    "stadt:versatz:pfanne=7",
+    "fuhre:ausgang:ja=56"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 8,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 1,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 9,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 1,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 10,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 1,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 11,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 1,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 12,
+   "kasse": 0,
+   "deckung": "0",
+   "aktiv": 38,
+   "mitPreis": 6,
+   "bezahlbar": 1,
+   "einnahme": 1,
+   "ohnePreis": 32,
+   "probe": 0,
+   "laden": 0,
+   "kerbe": 0,
+   "rueckkauf": 0,
+   "versatz": 2,
+   "freiWirksam": 8,
+   "namenFrei": [
+    "gegner:hinhalten:pfarrhof",
+    "gegner:hinhalten:brueckenwirt",
+    "gegner:hinhalten:faehrhaus",
+    "gegner:hinhalten:obernberg",
+    "fuhre:fuellen",
+    "weiter",
+    "stadt:bau:seite",
+    "stadt:versatz"
+   ],
+   "namenBez": [
+    "gegner:beschwerde-bild=0"
+   ],
+   "namenEin": [
+    "stadt:versatz:pfanne=7"
+   ]
+  }
+ ],
+ "fehler": []
+}

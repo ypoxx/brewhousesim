@@ -1,0 +1,5654 @@
+{
+ "epoche": "3",
+ "modus": "beobachten",
+ "wahl": "leibgeding",
+ "start": {
+  "jahr": 1884,
+  "woche": 1,
+  "epoche": 3,
+  "ende": false,
+  "amt": {
+   "nr": 1,
+   "name": "Wilhelmine Bruckner",
+   "eig": "sparsam",
+   "bis": 1920
+  },
+  "kasse": 14250,
+  "faesser": 7,
+  "kopfLeiste": [
+   "SEPTEMBER 1884",
+   "KASSE 14.250 M",
+   "HOPFEN 120",
+   "EISKELLER 11/135 hl",
+   "WOCHE 1/30",
+   "CHRONIK 4",
+   "BUCH 1"
+  ],
+  "kopfDeckung": "8.35",
+  "kopfDeckungTxt": "nächster Zug: Ablösung Ausschank am Markt — 1.706 M (Kasse reicht 8,4×)",
+  "protN": 1,
+  "chrN": 4,
+  "erbLeiste": "DAS ERBE noch 15 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4,5 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.316 M Abfindung −11.580 M Ohne Abfindung 0 M",
+  "erbBuch": "DAS ERBE — Eintragen ins Hypothekenbuch Wilhelmine Bruckner · sparsam „Hält das Geld zusammen, versäumt die Gelegenheit.\" Schreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber. Was im Hypothekenbuch steht, geht mit dem Anwesen über. Was am Namen des Wirts hängt, geht mit dem Wirt. Die Stunde kommt in 15 Wochen — 12. Januar 1885. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 4 — FÄLLT MIT DER HAND, DIE ES GAB Zum Goldenen Ochsen Gewohnheit Eintragen −1.960 M Schenke am Tor Gewohnheit Eintragen −1.120 M Brückenwirt Gewohnheit Eintragen −1.540 M Bahnhofsgaststätte Gewohnheit Eintragen −3.360 M",
+  "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "BRAUEREI ADLER Kommerzienrat Alois Feist · gelehrt · hält 3 Häuser 1 ZÜGE 62.000 M KASSE 48 M SEIN PREIS wirbt"
+   },
+   {
+    "zug": "gegner:abloesen:lindenhof",
+    "preis": -17741,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "LIN · HYP ablösen 17.741 M"
+   },
+   {
+    "zug": "gegner:hinhalten:lindenhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:muehlwirt",
+    "preis": -5193,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "MUE · DEP ablösen 5.193 M"
+   },
+   {
+    "zug": "gegner:hinhalten:muehlwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:zuvorkommen:brueckenwirt",
+    "preis": -1782,
+    "t": true,
+    "a": true,
+    "cls": "gg-wimpel gg-adler",
+    "txt": "wirbt · noch 3 Wo. zuvorkommen 1.782 M"
+   },
+   {
+    "zug": "gegner:hinhalten:brueckenwirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:markt",
+    "preis": -1706,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler",
+    "txt": "MKT · VER ablösen 1.706 M"
+   },
+   {
+    "zug": "gegner:hinhalten:markt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": true,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Dem Wirt die Restschuld nachrechnen kostet kein Geld · vier Ansehen gegen Brückenwirt"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hefe im Gärbottich abernten"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Ohne Kühlung durchgären lassen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -3400,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein voll siegel",
+    "txt": "Reinzuchthefe nach Hansen −3.400 M"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BHF"
+   },
+   {
+    "zug": "fuhre:fracht:rollfuhr",
+    "preis": -58,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Eigene Rollfuhre · bis 12 hl −58 M"
+   },
+   {
+    "zug": "fuhre:fracht:stueck",
+    "preis": -52,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Stückgut · bis 18 hl −52 M"
+   },
+   {
+    "zug": "fuhre:fracht:halb",
+    "preis": -210,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein fu-gewaehlt",
+    "txt": "Halber Wagen · bis 60 hl −210 M"
+   },
+   {
+    "zug": "fuhre:fracht:ganz",
+    "preis": -328,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Ganzer Wagen · bis 132 hl −328 M"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-wartet",
+    "txt": "♪"
+   },
+   {
+    "zug": "erbe:tafel:verschreibe",
+    "preis": -3360,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-weit",
+    "txt": "Eintragen · Bahnhofsgaststätte −3.360 M"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -2316,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Leibrente · jährlich −2.316 M"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -11580,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe",
+    "txt": "Abfindung −11.580 M"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf erb-knopf erb-uebergabe erb-leer",
+    "txt": "Ohne Abfindung 0 M"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 4"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 1"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross amort",
+    "txt": "WEITER"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 1 Zug"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 146 · im Keller liegen 11 hl"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "SUDPLAN am schwarzen Brett der Mälzerei"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER EISKELLER 11 von 135 hl · 11 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "HALBER WAGEN 0,0 von 60 hl · 0 von 10 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES Etikett, Plakat, Litfaßsäule"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 6 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:hypothek",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "HYPOTHEK"
+   },
+   {
+    "zug": "stadt:bau:kontor",
+    "preis": -1406,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Kontor −1.406 M"
+   },
+   {
+    "zug": "stadt:bau:hopfenlager",
+    "preis": -1480,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Hopfenlager −1.480 M"
+   },
+   {
+    "zug": "stadt:bau:pferdestall",
+    "preis": -1628,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Pferdestall −1.628 M"
+   },
+   {
+    "zug": "stadt:bau:maelzerei",
+    "preis": -3145,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Mälzereiturm −3.145 M"
+   },
+   {
+    "zug": "stadt:bau:flaschenhalle",
+    "preis": -3700,
+    "t": true,
+    "a": true,
+    "cls": "knopf",
+    "txt": "Flaschenhalle −3.700 M"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1884 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   }
+  ]
+ },
+ "zeilen": [
+  {
+   "i": 0,
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 14250,
+   "faesser": 7,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 17,
+   "nBezahlbar": 16,
+   "billigster": 52,
+   "rho": 274.04,
+   "kopfDeckung": "8.35",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:zuvorkommen:brueckenwirt=1782",
+    "gegner:abloesen:markt=1706",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=2316",
+    "erbe:uebergabe:abfindung=11580",
+    "stadt:bau:kontor=1406",
+    "stadt:bau:hopfenlager=1480",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 15 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 4,5 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.316 M Abfindung −11.580 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 1 Zug Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:kontor:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 1.782 M.",
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse (-5)",
+    "gegner: Brauerei Adler baut auf dem eigenen Hof: Depot in der Neustadt für 6.300 M."
+   ]
+  },
+  {
+   "i": 1,
+   "jahr": 1884,
+   "woche": 2,
+   "kasse": 12465,
+   "faesser": 24,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 15,
+   "billigster": 52,
+   "rho": 239.71,
+   "kopfDeckung": "7.31",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:zuvorkommen:brueckenwirt=1782",
+    "gegner:abloesen:markt=1706",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=2376",
+    "erbe:uebergabe:abfindung=11524",
+    "stadt:bau:hopfenlager=1480",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 14 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 12 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.376 M Abfindung −11.524 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 2 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Zwei Bierwagen des Adlers gehen per Bahn zum Ausschank am Markt."
+   ]
+  },
+  {
+   "i": 2,
+   "jahr": 1884,
+   "woche": 3,
+   "kasse": 11993,
+   "faesser": 48,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 15,
+   "billigster": 52,
+   "rho": 230.63,
+   "kopfDeckung": "7.03",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:zuvorkommen:brueckenwirt=1782",
+    "gegner:abloesen:markt=1706",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=2472",
+    "erbe:uebergabe:abfindung=11618",
+    "stadt:bau:hopfenlager=1480",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 13 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 24 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.472 M Abfindung −11.618 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 3 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse (-10)",
+    "gegner: Der Adler schließt mit Brückenwirt einen Bierlieferungsvertrag: Darlehen 3.960 M, zehn Jahre.",
+    "gegner: Der Adler senkt den Preis auf 45 M je hl."
+   ]
+  },
+  {
+   "i": 3,
+   "jahr": 1884,
+   "woche": 4,
+   "kasse": 11652,
+   "faesser": 64,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 15,
+   "billigster": 52,
+   "rho": 224.08,
+   "kopfDeckung": "6.83",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=2104",
+    "erbe:uebergabe:abfindung=9573",
+    "stadt:bau:hopfenlager=1480",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 12 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 33 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.104 M Abfindung −9.573 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 5 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-12)",
+    "verfall: 1 Fass ist beim Wirt zersprungen",
+    "gegner: Brauerei Adler wirbt um Bahnhofsgaststätte: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 9.504 M.",
+    "verfall: infiziert: 36 hl Lagerbier"
+   ]
+  },
+  {
+   "i": 4,
+   "jahr": 1884,
+   "woche": 5,
+   "kasse": 11309,
+   "faesser": 32,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 17,
+   "nBezahlbar": 16,
+   "billigster": 52,
+   "rho": 217.48,
+   "kopfDeckung": "6.63",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:zuvorkommen:bahnhofswirt=9504",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=1972",
+    "erbe:uebergabe:abfindung=8677",
+    "stadt:bau:hopfenlager=1480",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 11 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 17 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −1.972 M Abfindung −8.677 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 6 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:hopfenlager:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-11)"
+   ]
+  },
+  {
+   "i": 5,
+   "jahr": 1884,
+   "woche": 6,
+   "kasse": 9487,
+   "faesser": 48,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 14,
+   "billigster": 52,
+   "rho": 182.44,
+   "kopfDeckung": "5.56",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:zuvorkommen:bahnhofswirt=9504",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=2032",
+    "erbe:uebergabe:abfindung=8636",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 10 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 24 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.032 M Abfindung −8.636 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 6 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler baut auf dem eigenen Hof: Zweiter Schornstein für 4.200 M."
+   ]
+  },
+  {
+   "i": 6,
+   "jahr": 1884,
+   "woche": 7,
+   "kasse": 9015,
+   "faesser": 78,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 14,
+   "billigster": 52,
+   "rho": 173.37,
+   "kopfDeckung": "5.28",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:zuvorkommen:bahnhofswirt=9504",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=2152",
+    "erbe:uebergabe:abfindung=8823",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 9 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 39 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.152 M Abfindung −8.823 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 7 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-12)"
+   ]
+  },
+  {
+   "i": 7,
+   "jahr": 1884,
+   "woche": 8,
+   "kasse": 9120,
+   "faesser": 64,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 14,
+   "billigster": 52,
+   "rho": 175.38,
+   "kopfDeckung": "5.35",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:zuvorkommen:bahnhofswirt=9504",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=3360",
+    "erbe:uebergabe:leibgeding=2104",
+    "erbe:uebergabe:abfindung=8311",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 8 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 33 hl Eintragen · Bahnhofsgaststätte −3.360 M Leibrente · jährlich −2.104 M Abfindung −8.311 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 7 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-12)",
+    "gegner: Der Adler nimmt die erste Hypothek auf Bahnhofsgaststätte. Der Wirt schuldet ihm das Dach über dem Kopf.",
+    "gegner: Der Adler stockt das Darlehen beim Bahnhofsgaststätte um 5.175 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 29.450 M."
+   ]
+  },
+  {
+   "i": 8,
+   "jahr": 1884,
+   "woche": 9,
+   "kasse": 9225,
+   "faesser": 56,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 14,
+   "billigster": 52,
+   "rho": 177.4,
+   "kopfDeckung": "5.41",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=1960",
+    "erbe:uebergabe:leibgeding=1108",
+    "erbe:uebergabe:abfindung=4210",
+    "stadt:bau:pferdestall=1628",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 7 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 29 hl Eintragen · Zum Goldenen Ochsen −1.960 M Leibrente · jährlich −1.108 M Abfindung −4.210 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 9 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:pferdestall:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-11)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "verfall: infiziert: 36 hl Lagerbier"
+   ]
+  },
+  {
+   "i": 9,
+   "jahr": 1884,
+   "woche": 10,
+   "kasse": 7697,
+   "faesser": 44,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 15,
+   "nBezahlbar": 13,
+   "billigster": 52,
+   "rho": 148.02,
+   "kopfDeckung": "4.51",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=1960",
+    "erbe:uebergabe:leibgeding=1060",
+    "erbe:uebergabe:abfindung=3869",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 6 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 23 hl Eintragen · Zum Goldenen Ochsen −1.960 M Leibrente · jährlich −1.060 M Abfindung −3.869 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 9 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-5)",
+    "gegner: Sein Prokurist sitzt beim Wirt zum Zum Goldenen Ochsen und rechnet ihm das Darlehen vor. Der Vertrag liegt schon aufgesetzt daneben. In 5 Wochen ist es unterschrieben, wenn niemand dazwischengeht. Zuvorkommen kostet 3.125 M.",
+    "verfall: infiziert: 27 hl Lagerbier"
+   ]
+  },
+  {
+   "i": 10,
+   "jahr": 1884,
+   "woche": 11,
+   "kasse": 7803,
+   "faesser": 42,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 14,
+   "billigster": 52,
+   "rho": 150.06,
+   "kopfDeckung": "4.57",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abwehren:ochse=3125",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=1960",
+    "erbe:uebergabe:leibgeding=1048",
+    "erbe:uebergabe:abfindung=3668",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 5 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 21 hl Eintragen · Zum Goldenen Ochsen −1.960 M Leibrente · jährlich −1.048 M Abfindung −3.668 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)"
+   ]
+  },
+  {
+   "i": 11,
+   "jahr": 1884,
+   "woche": 12,
+   "kasse": 7908,
+   "faesser": 34,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 14,
+   "billigster": 52,
+   "rho": 152.08,
+   "kopfDeckung": "4.64",
+   "angebot": [
+    "gegner:abloesen:lindenhof=17741",
+    "gegner:abwehren:ochse=3125",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=1960",
+    "erbe:uebergabe:leibgeding=1024",
+    "erbe:uebergabe:abfindung=3430",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 4 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 18 hl Eintragen · Zum Goldenen Ochsen −1.960 M Leibrente · jährlich −1.024 M Abfindung −3.430 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 10 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-5)",
+    "gegner: Der Adler stockt das Darlehen beim Gasthof Lindenhof um 3.674 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 21.856 M.",
+    "gegner: Brauerei Adler druckt ein Etikett, das dem eigenen bis auf die Farbe gleicht — nachgemacht ist billiger als besser gebraut"
+   ]
+  },
+  {
+   "i": 12,
+   "jahr": 1884,
+   "woche": 13,
+   "kasse": 8014,
+   "faesser": 26,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 16,
+   "nBezahlbar": 14,
+   "billigster": 52,
+   "rho": 154.12,
+   "kopfDeckung": "4.7",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abwehren:ochse=3125",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=1960",
+    "erbe:uebergabe:leibgeding=988",
+    "erbe:uebergabe:abfindung=3162",
+    "stadt:bau:maelzerei=3145",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 3 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 14 hl Eintragen · Zum Goldenen Ochsen −1.960 M Leibrente · jährlich −988 M Abfindung −3.162 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 11 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "stadt:bau:maelzerei:ok",
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Brauerei Adler baut auf dem eigenen Hof: Malzturm für 8.100 M."
+   ]
+  },
+  {
+   "i": 13,
+   "jahr": 1884,
+   "woche": 14,
+   "kasse": 4520,
+   "faesser": 22,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 15,
+   "nBezahlbar": 12,
+   "billigster": 52,
+   "rho": 86.92,
+   "kopfDeckung": "2.65",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abwehren:ochse=3125",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=1706",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=1960",
+    "erbe:uebergabe:leibgeding=976",
+    "erbe:uebergabe:abfindung=2977",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 2 Wochen Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 12 hl Eintragen · Zum Goldenen Ochsen −1.960 M Leibrente · jährlich −976 M Abfindung −2.977 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 12 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-5)",
+    "gegner: Der Adler stockt das Darlehen beim Ausschank am Markt um 791 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 2.456 M."
+   ]
+  },
+  {
+   "i": 14,
+   "jahr": 1884,
+   "woche": 15,
+   "kasse": 4172,
+   "faesser": 14,
+   "amt": "Wilhelmine Bruckner / sparsam (bis 1920)",
+   "nAngebotTA": 15,
+   "nBezahlbar": 11,
+   "billigster": 52,
+   "rho": 80.23,
+   "kopfDeckung": "1.7",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abwehren:ochse=3125",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:markt=2456",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:tafel:verschreibe=1960",
+    "erbe:uebergabe:leibgeding=940",
+    "erbe:uebergabe:abfindung=2726",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE noch 1 Woche Wilhelmine Bruckner · sparsam am Haus 0 · an der Person 2 nimmt 2 · 7,5 hl Eintragen · Zum Goldenen Ochsen −1.960 M Leibrente · jährlich −940 M Abfindung −2.726 M Ohne Abfindung 0 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 13 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Der Adler löst beim Zum Goldenen Ochsen die alte Bindung ab und legt einen Vertrag auf den Tisch. Dafür wird Ausschank am Markt fallengelassen — die Adresse ist frei.",
+    "verfall: Schenke am Tor: Gewohnheit fällt mit der Hand",
+    "verfall: Erbteil der Miterben aus dem Keller"
+   ]
+  },
+  {
+   "i": 15,
+   "jahr": 1884,
+   "woche": 16,
+   "kasse": 3823,
+   "faesser": 20,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 73.52,
+   "kopfDeckung": "0.86",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 14 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Zwei Bierwagen des Adlers gehen per Bahn zum Mühlschenke."
+   ]
+  },
+  {
+   "i": 16,
+   "jahr": 1884,
+   "woche": 17,
+   "kasse": 3351,
+   "faesser": 44,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 6,
+   "billigster": 52,
+   "rho": 64.44,
+   "kopfDeckung": "0.76",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 15 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: infiziert: 36 hl Lagerbier"
+   ]
+  },
+  {
+   "i": 17,
+   "jahr": 1884,
+   "woche": 18,
+   "kasse": 3327,
+   "faesser": 20,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 6,
+   "billigster": 52,
+   "rho": 63.98,
+   "kopfDeckung": "0.75",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 15 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler baut auf dem eigenen Hof: Eigenes Anschlussgleis für 11.000 M."
+   ]
+  },
+  {
+   "i": 18,
+   "jahr": 1884,
+   "woche": 19,
+   "kasse": 3303,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 11,
+   "nBezahlbar": 6,
+   "billigster": 52,
+   "rho": 63.52,
+   "kopfDeckung": "0.74",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 16 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-5)",
+    "gegner: Der Adler senkt den Preis auf 42 M je hl.",
+    "verfall: infiziert: 30 hl Lagerbier"
+   ]
+  },
+  {
+   "i": 19,
+   "jahr": 1884,
+   "woche": 20,
+   "kasse": 3401,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 7,
+   "billigster": 52,
+   "rho": 65.4,
+   "kopfDeckung": "0.77",
+   "angebot": [
+    "gegner:abloesen:lindenhof=21856",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 17 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-5)",
+    "gegner: Der Adler stockt das Darlehen beim Gasthof Lindenhof um 3.437 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 25.705 M."
+   ]
+  },
+  {
+   "i": 20,
+   "jahr": 1884,
+   "woche": 21,
+   "kasse": 3497,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 7,
+   "billigster": 52,
+   "rho": 67.25,
+   "kopfDeckung": "0.79",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)"
+   ]
+  },
+  {
+   "i": 21,
+   "jahr": 1884,
+   "woche": 22,
+   "kasse": 3592,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 7,
+   "billigster": 52,
+   "rho": 69.08,
+   "kopfDeckung": "0.81",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-5)",
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 22,
+   "jahr": 1884,
+   "woche": 23,
+   "kasse": 3688,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 12,
+   "nBezahlbar": 7,
+   "billigster": 52,
+   "rho": 70.92,
+   "kopfDeckung": "0.83",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-5)"
+   ]
+  },
+  {
+   "i": 23,
+   "jahr": 1884,
+   "woche": 24,
+   "kasse": 3784,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 72.77,
+   "kopfDeckung": "0.85",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:ok"
+   ],
+   "fremd": [
+    "gegner: Preisabschlag beim Gasthof Lindenhof — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)",
+    "gegner: Preisabschlag beim Bahnhofsgaststätte — Brauerei Adler hält die Adresse und schenkt unter dem Satz aus (-6)"
+   ]
+  },
+  {
+   "i": 24,
+   "jahr": 1884,
+   "woche": 25,
+   "kasse": 3879,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 74.6,
+   "kopfDeckung": "0.87",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 25,
+   "jahr": 1884,
+   "woche": 26,
+   "kasse": 3855,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 74.13,
+   "kopfDeckung": "0.87",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 26,
+   "jahr": 1884,
+   "woche": 27,
+   "kasse": 3831,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 73.67,
+   "kopfDeckung": "0.86",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 27,
+   "jahr": 1884,
+   "woche": 28,
+   "kasse": 3807,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 73.21,
+   "kopfDeckung": "0.86",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 28,
+   "jahr": 1884,
+   "woche": 29,
+   "kasse": 3783,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 72.75,
+   "kopfDeckung": "0.85",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 18 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler baut auf dem eigenen Hof: Flaschenfüllerei für 5.200 M."
+   ]
+  },
+  {
+   "i": 29,
+   "jahr": 1884,
+   "woche": 30,
+   "kasse": 3759,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 13,
+   "nBezahlbar": 8,
+   "billigster": 52,
+   "rho": 72.29,
+   "kopfDeckung": "0.85",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25705",
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:muehlwirt=5193",
+    "gegner:abloesen:brueckenwirt=4435",
+    "gegner:abloesen:bahnhofswirt=29450",
+    "sud:zettel-wechsel-kauf=3400",
+    "fuhre:fracht:rollfuhr=58",
+    "fuhre:fracht:stueck=52",
+    "fuhre:fracht:halb=210",
+    "fuhre:fracht:ganz=328",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 19 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:ok",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 32 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Sommer: Unterhalt und Abgaben (-305)"
+   ]
+  },
+  {
+   "i": 30,
+   "jahr": 1885,
+   "woche": 1,
+   "kasse": 4211,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 7,
+   "billigster": 320,
+   "rho": 13.16,
+   "kopfDeckung": "1.03",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=4778",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700",
+    "fuhre:jahresplan:schank=320",
+    "fuhre:jahresplan:lager=360",
+    "fuhre:jahresplan:export=470"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 19 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 31,
+   "jahr": 1885,
+   "woche": 2,
+   "kasse": 4187,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 5,
+   "billigster": 2016,
+   "rho": 2.08,
+   "kopfDeckung": "1.03",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=4778",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 19 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Mühlschenke um 1.464 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 6.166 M."
+   ]
+  },
+  {
+   "i": 32,
+   "jahr": 1885,
+   "woche": 3,
+   "kasse": 4163,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 5,
+   "billigster": 2016,
+   "rho": 2.06,
+   "kopfDeckung": "1.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=6166",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 20 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Zwei Bierwagen des Adlers gehen per Bahn zum Brückenwirt."
+   ]
+  },
+  {
+   "i": 33,
+   "jahr": 1885,
+   "woche": 4,
+   "kasse": 4139,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 5,
+   "billigster": 2016,
+   "rho": 2.05,
+   "kopfDeckung": "1.01",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=6166",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 21 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 34,
+   "jahr": 1885,
+   "woche": 5,
+   "kasse": 4115,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 5,
+   "billigster": 2016,
+   "rho": 2.04,
+   "kopfDeckung": "1.01",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=6166",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 21 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler senkt den Preis auf 40 M je hl.",
+    "verfall: infiziert: 12 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 35,
+   "jahr": 1885,
+   "woche": 6,
+   "kasse": 4091,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 5,
+   "billigster": 2016,
+   "rho": 2.03,
+   "kopfDeckung": "1",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=6166",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 36,
+   "jahr": 1885,
+   "woche": 7,
+   "kasse": 4067,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 2.02,
+   "kopfDeckung": "1",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=6166",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 37,
+   "jahr": 1885,
+   "woche": 8,
+   "kasse": 4043,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 2.01,
+   "kopfDeckung": "0.99",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=6166",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 38,
+   "jahr": 1885,
+   "woche": 9,
+   "kasse": 4019,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.99,
+   "kopfDeckung": "0.99",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=6166",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 22 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 8 Fass verdorben",
+    "gegner: Der Adler stockt das Darlehen beim Mühlschenke um 1.920 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 7.986 M."
+   ]
+  },
+  {
+   "i": 39,
+   "jahr": 1885,
+   "woche": 10,
+   "kasse": 3995,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.98,
+   "kopfDeckung": "0.98",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 23 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 40,
+   "jahr": 1885,
+   "woche": 11,
+   "kasse": 3971,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.97,
+   "kopfDeckung": "0.97",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 23 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Zwei Bierwagen des Adlers gehen per Bahn zum Brückenwirt.",
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 41,
+   "jahr": 1885,
+   "woche": 12,
+   "kasse": 3947,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.96,
+   "kopfDeckung": "0.97",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 24 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Kesselschaden beim Adler. Die Versicherung zahlt später als der Kesselschmied rechnet. Es kostet ihn 3.427 M. Flaschenfüllerei: weg vom Hof."
+   ]
+  },
+  {
+   "i": 42,
+   "jahr": 1885,
+   "woche": 13,
+   "kasse": 3923,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.95,
+   "kopfDeckung": "0.96",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 25 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 43,
+   "jahr": 1885,
+   "woche": 14,
+   "kasse": 3899,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.93,
+   "kopfDeckung": "0.96",
+   "angebot": [
+    "gegner:abloesen:lindenhof=23649",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 25 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Gasthof Lindenhof um 4.459 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 28.243 M."
+   ]
+  },
+  {
+   "i": 44,
+   "jahr": 1885,
+   "woche": 15,
+   "kasse": 3875,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.92,
+   "kopfDeckung": "0.95",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 26 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 45,
+   "jahr": 1885,
+   "woche": 16,
+   "kasse": 3851,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.91,
+   "kopfDeckung": "0.94",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 26 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "gegner: Brauerei Adler baut auf dem eigenen Hof: Flaschenfüllerei für 5.200 M."
+   ]
+  },
+  {
+   "i": 46,
+   "jahr": 1885,
+   "woche": 17,
+   "kasse": 3827,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.9,
+   "kopfDeckung": "0.94",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 47,
+   "jahr": 1885,
+   "woche": 18,
+   "kasse": 3803,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.89,
+   "kopfDeckung": "0.93",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 48,
+   "jahr": 1885,
+   "woche": 19,
+   "kasse": 3779,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 9,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.87,
+   "kopfDeckung": "0.93",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "gegner:abloesen:bahnhofswirt=27094",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 27 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Wirt zum Bahnhofsgaststätte löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 49,
+   "jahr": 1885,
+   "woche": 20,
+   "kasse": 3755,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.86,
+   "kopfDeckung": "0.92",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 50,
+   "jahr": 1885,
+   "woche": 21,
+   "kasse": 3731,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.85,
+   "kopfDeckung": "0.91",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 51,
+   "jahr": 1885,
+   "woche": 22,
+   "kasse": 3707,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 8,
+   "nBezahlbar": 4,
+   "billigster": 2016,
+   "rho": 1.84,
+   "kopfDeckung": "0.91",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=4080",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "stadt:bau:flaschenhalle=3700"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 28 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Brückenwirt um 1.381 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 5.503 M."
+   ]
+  },
+  {
+   "i": 52,
+   "jahr": 1885,
+   "woche": 23,
+   "kasse": 3683,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.83,
+   "kopfDeckung": "0.71",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 53,
+   "jahr": 1885,
+   "woche": 24,
+   "kasse": 3659,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.81,
+   "kopfDeckung": "0.7",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 54,
+   "jahr": 1885,
+   "woche": 25,
+   "kasse": 3635,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.8,
+   "kopfDeckung": "0.7",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 55,
+   "jahr": 1885,
+   "woche": 26,
+   "kasse": 3611,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.79,
+   "kopfDeckung": "0.7",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 56,
+   "jahr": 1885,
+   "woche": 27,
+   "kasse": 3587,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.78,
+   "kopfDeckung": "0.69",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 57,
+   "jahr": 1885,
+   "woche": 28,
+   "kasse": 3563,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.77,
+   "kopfDeckung": "0.69",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:ochse=5193",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 29 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Wirt zum Zum Goldenen Ochsen löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 58,
+   "jahr": 1885,
+   "woche": 29,
+   "kasse": 3539,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.76,
+   "kopfDeckung": "0.64",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 59,
+   "jahr": 1885,
+   "woche": 30,
+   "kasse": 3515,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.74,
+   "kopfDeckung": "0.64",
+   "angebot": [
+    "gegner:abloesen:lindenhof=28243",
+    "gegner:abloesen:muehlwirt=7986",
+    "gegner:abloesen:brueckenwirt=5503",
+    "sud:zettel-wechsel-kauf=3400",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 16 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Pfarrschenke St. Michael führt kein Bier des Hauses mehr",
+    "verfall: Mühlschenke führt kein Bier des Hauses mehr",
+    "verfall: Fährhaus am Fluss führt kein Bier des Hauses mehr",
+    "verfall: Landgasthof Hirsch führt kein Bier des Hauses mehr",
+    "verfall: Ausschank am Markt führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-195)",
+    "verfall: Klosterschenke Obernberg: Bindung ausgelaufen"
+   ]
+  },
+  {
+   "i": 60,
+   "jahr": 1886,
+   "woche": 1,
+   "kasse": 3320,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 5,
+   "billigster": 320,
+   "rho": 10.38,
+   "kopfDeckung": "0.66",
+   "angebot": [
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "fuhre:jahresplan:schank=320",
+    "fuhre:jahresplan:lager=360",
+    "fuhre:jahresplan:export=470"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 61,
+   "jahr": 1886,
+   "woche": 2,
+   "kasse": 3296,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.63,
+   "kopfDeckung": "0.65",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 62,
+   "jahr": 1886,
+   "woche": 3,
+   "kasse": 3272,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.62,
+   "kopfDeckung": "0.65",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 63,
+   "jahr": 1886,
+   "woche": 4,
+   "kasse": 3248,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.61,
+   "kopfDeckung": "0.64",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 64,
+   "jahr": 1886,
+   "woche": 5,
+   "kasse": 3224,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.6,
+   "kopfDeckung": "0.64",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 65,
+   "jahr": 1886,
+   "woche": 6,
+   "kasse": 3200,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.59,
+   "kopfDeckung": "0.63",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 30 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler wirbt um Bahnhofsgaststätte: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 3.888 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 66,
+   "jahr": 1886,
+   "woche": 7,
+   "kasse": 3176,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.58,
+   "kopfDeckung": "0.82",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:zuvorkommen:bahnhofswirt=3888",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 31 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 67,
+   "jahr": 1886,
+   "woche": 8,
+   "kasse": 3152,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.56,
+   "kopfDeckung": "0.81",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:zuvorkommen:bahnhofswirt=3888",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 31 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 68,
+   "jahr": 1886,
+   "woche": 9,
+   "kasse": 3128,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.55,
+   "kopfDeckung": "0.8",
+   "angebot": [
+    "gegner:abloesen:lindenhof=25984",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:zuvorkommen:bahnhofswirt=3888",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 31 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Gasthof Lindenhof um 4.420 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 30.174 M."
+   ]
+  },
+  {
+   "i": 69,
+   "jahr": 1886,
+   "woche": 10,
+   "kasse": 3104,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.54,
+   "kopfDeckung": "0.8",
+   "angebot": [
+    "gegner:abloesen:lindenhof=30174",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:zuvorkommen:bahnhofswirt=3888",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 32 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler schließt mit Bahnhofsgaststätte einen Bierlieferungsvertrag: Darlehen 8.640 M, zehn Jahre.",
+    "gegner: Zwei Bierwagen des Adlers gehen per Bahn zum Mühlschenke.",
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 70,
+   "jahr": 1886,
+   "woche": 11,
+   "kasse": 3080,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.53,
+   "kopfDeckung": "0.61",
+   "angebot": [
+    "gegner:abloesen:lindenhof=30174",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 34 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 71,
+   "jahr": 1886,
+   "woche": 12,
+   "kasse": 3056,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.52,
+   "kopfDeckung": "0.6",
+   "angebot": [
+    "gegner:abloesen:lindenhof=30174",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 34 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Gasthof Lindenhof um 3.851 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 33.824 M."
+   ]
+  },
+  {
+   "i": 72,
+   "jahr": 1886,
+   "woche": 13,
+   "kasse": 3032,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.5,
+   "kopfDeckung": "0.6",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 35 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "gegner: Der Adler senkt den Preis auf 37 M je hl."
+   ]
+  },
+  {
+   "i": 73,
+   "jahr": 1886,
+   "woche": 14,
+   "kasse": 3008,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.49,
+   "kopfDeckung": "0.59",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 36 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 74,
+   "jahr": 1886,
+   "woche": 15,
+   "kasse": 2984,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.48,
+   "kopfDeckung": "0.59",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 36 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 75,
+   "jahr": 1886,
+   "woche": 16,
+   "kasse": 2960,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.47,
+   "kopfDeckung": "0.58",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 36 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 76,
+   "jahr": 1886,
+   "woche": 17,
+   "kasse": 2936,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.46,
+   "kopfDeckung": "0.58",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 36 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 77,
+   "jahr": 1886,
+   "woche": 18,
+   "kasse": 2912,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.44,
+   "kopfDeckung": "0.58",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 36 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 78,
+   "jahr": 1886,
+   "woche": 19,
+   "kasse": 2888,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.43,
+   "kopfDeckung": "0.57",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 36 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler wirbt um Zum Goldenen Ochsen: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 5.544 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 79,
+   "jahr": 1886,
+   "woche": 20,
+   "kasse": 2864,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.42,
+   "kopfDeckung": "0.57",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:zuvorkommen:ochse=5544",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 80,
+   "jahr": 1886,
+   "woche": 21,
+   "kasse": 2840,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.41,
+   "kopfDeckung": "0.56",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:zuvorkommen:ochse=5544",
+    "gegner:abloesen:muehlwirt=7347",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 37 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "gegner: Der Wirt zum Mühlschenke löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 81,
+   "jahr": 1886,
+   "woche": 22,
+   "kasse": 2816,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.4,
+   "kopfDeckung": "0.56",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:zuvorkommen:ochse=5544",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 38 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler nimmt die erste Hypothek auf Zum Goldenen Ochsen. Der Wirt schuldet ihm das Dach über dem Kopf.",
+    "gegner: Brauerei Adler wirbt um Pfarrschenke St. Michael: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 1.134 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 82,
+   "jahr": 1886,
+   "woche": 23,
+   "kasse": 2792,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 1134,
+   "rho": 2.46,
+   "kopfDeckung": "2.46",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:zuvorkommen:pfarrhof=1134",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 40 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 83,
+   "jahr": 1886,
+   "woche": 24,
+   "kasse": 2768,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 3,
+   "billigster": 1134,
+   "rho": 2.44,
+   "kopfDeckung": "2.44",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:zuvorkommen:pfarrhof=1134",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 40 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler schließt mit Pfarrschenke St. Michael einen Bierlieferungsvertrag: Darlehen 2.520 M, zehn Jahre."
+   ]
+  },
+  {
+   "i": 84,
+   "jahr": 1886,
+   "woche": 25,
+   "kasse": 2744,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.36,
+   "kopfDeckung": "0.97",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:abloesen:pfarrhof=2822",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 85,
+   "jahr": 1886,
+   "woche": 26,
+   "kasse": 2720,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.35,
+   "kopfDeckung": "0.96",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:abloesen:pfarrhof=2822",
+    "gegner:abloesen:brueckenwirt=5063",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 41 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Wirt zum Brückenwirt löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 86,
+   "jahr": 1886,
+   "woche": 27,
+   "kasse": 2696,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.34,
+   "kopfDeckung": "0.96",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:abloesen:pfarrhof=2822",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 87,
+   "jahr": 1886,
+   "woche": 28,
+   "kasse": 2672,
+   "faesser": 40,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.33,
+   "kopfDeckung": "0.95",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:abloesen:pfarrhof=2822",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 88,
+   "jahr": 1886,
+   "woche": 29,
+   "kasse": 2648,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.31,
+   "kopfDeckung": "0.94",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:abloesen:pfarrhof=2822",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 42 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Wirt zum Pfarrschenke St. Michael löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 89,
+   "jahr": 1886,
+   "woche": 30,
+   "kasse": 2624,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.3,
+   "kopfDeckung": "0.27",
+   "angebot": [
+    "gegner:abloesen:lindenhof=33824",
+    "gegner:abloesen:ochse=13798",
+    "gegner:abloesen:bahnhofswirt=9677",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 43 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "verfall: Georgi: 32 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Zum Goldenen Ochsen führt kein Bier des Hauses mehr",
+    "verfall: Schenke am Tor führt kein Bier des Hauses mehr",
+    "verfall: Brückenwirt führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-159)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 90,
+   "jahr": 1887,
+   "woche": 1,
+   "kasse": 2465,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 5,
+   "billigster": 320,
+   "rho": 7.7,
+   "kopfDeckung": "0.28",
+   "angebot": [
+    "gegner:abloesen:bahnhofswirt=8903",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240",
+    "fuhre:jahresplan:schank=320",
+    "fuhre:jahresplan:lager=360",
+    "fuhre:jahresplan:export=470"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 43 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 91,
+   "jahr": 1887,
+   "woche": 2,
+   "kasse": 2441,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.21,
+   "kopfDeckung": "0.27",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:abloesen:bahnhofswirt=8903",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 43 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Bahnhofsgaststätte um 2.774 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 11.761 M.",
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 92,
+   "jahr": 1887,
+   "woche": 3,
+   "kasse": 2417,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.2,
+   "kopfDeckung": "0.21",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 44 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler wirbt um Mühlschenke: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 2.268 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 93,
+   "jahr": 1887,
+   "woche": 4,
+   "kasse": 2393,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.19,
+   "kopfDeckung": "1.06",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:zuvorkommen:muehlwirt=2268",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 45 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 94,
+   "jahr": 1887,
+   "woche": 5,
+   "kasse": 2369,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.18,
+   "kopfDeckung": "1.04",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:zuvorkommen:muehlwirt=2268",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 45 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 95,
+   "jahr": 1887,
+   "woche": 6,
+   "kasse": 2345,
+   "faesser": 24,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.16,
+   "kopfDeckung": "1.03",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:zuvorkommen:muehlwirt=2268",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 45 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 96,
+   "jahr": 1887,
+   "woche": 7,
+   "kasse": 2321,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 3,
+   "billigster": 2016,
+   "rho": 1.15,
+   "kopfDeckung": "1.02",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:zuvorkommen:muehlwirt=2268",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 45 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler baut dem Mühlschenke den Eiskeller und schreibt sich zwölf Jahre hinein.",
+    "gegner: Brauerei Adler wirbt um Fährhaus am Fluss: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 2.376 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 97,
+   "jahr": 1887,
+   "woche": 8,
+   "kasse": 2297,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 7,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.14,
+   "kopfDeckung": "0.97",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:abloesen:muehlwirt=5645",
+    "gegner:zuvorkommen:faehrhaus=2376",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 47 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Wirt zum Mühlschenke löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 98,
+   "jahr": 1887,
+   "woche": 9,
+   "kasse": 2273,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.13,
+   "kopfDeckung": "0.96",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:zuvorkommen:faehrhaus=2376",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 48 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "gegner: Der Adler nimmt die erste Hypothek auf Fährhaus am Fluss. Der Wirt schuldet ihm das Dach über dem Kopf."
+   ]
+  },
+  {
+   "i": 99,
+   "jahr": 1887,
+   "woche": 10,
+   "kasse": 2249,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 6,
+   "nBezahlbar": 2,
+   "billigster": 2016,
+   "rho": 1.12,
+   "kopfDeckung": "0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=12695",
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016",
+    "erbe:seelgeraet=2240"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 49 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 8 Fass verdorben",
+    "gegner: Der Adler stockt das Darlehen beim Zum Goldenen Ochsen um 3.779 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 16.588 M."
+   ]
+  },
+  {
+   "i": 100,
+   "jahr": 1887,
+   "woche": 11,
+   "kasse": 2225,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.1,
+   "kopfDeckung": "0.38",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=16588",
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 8 Fass verdorben"
+   ]
+  },
+  {
+   "i": 101,
+   "jahr": 1887,
+   "woche": 12,
+   "kasse": 2201,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.09,
+   "kopfDeckung": "0.37",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=16588",
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 102,
+   "jahr": 1887,
+   "woche": 13,
+   "kasse": 2177,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 5,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.08,
+   "kopfDeckung": "0.37",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:ochse=16588",
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 50 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Wirt zum Zum Goldenen Ochsen löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 103,
+   "jahr": 1887,
+   "woche": 14,
+   "kasse": 2153,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.07,
+   "kopfDeckung": "0.36",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 51 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Wirt zum Fährhaus am Fluss löst sein Darlehen ab. Der Adler verliert die Adresse.",
+    "verfall: infiziert: 24 hl Einfachbier"
+   ]
+  },
+  {
+   "i": 104,
+   "jahr": 1887,
+   "woche": 15,
+   "kasse": 2129,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.06,
+   "kopfDeckung": "0.18",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 105,
+   "jahr": 1887,
+   "woche": 16,
+   "kasse": 2105,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.04,
+   "kopfDeckung": "0.18",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 106,
+   "jahr": 1887,
+   "woche": 17,
+   "kasse": 2081,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.03,
+   "kopfDeckung": "0.18",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 107,
+   "jahr": 1887,
+   "woche": 18,
+   "kasse": 2057,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.02,
+   "kopfDeckung": "0.17",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 52 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "gegner: Brauerei Adler wirbt um Zum Goldenen Ochsen: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 2.268 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 108,
+   "jahr": 1887,
+   "woche": 19,
+   "kasse": 2033,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 1,
+   "billigster": 2016,
+   "rho": 1.01,
+   "kopfDeckung": "0.9",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:zuvorkommen:ochse=2268",
+    "gegner:abloesen:bahnhofswirt=11761",
+    "erbe:nachschrift=2016"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 109,
+   "jahr": 1887,
+   "woche": 20,
+   "kasse": 2009,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 2268,
+   "rho": 0.89,
+   "kopfDeckung": "0.89",
+   "angebot": [
+    "gegner:abloesen:lindenhof=31118",
+    "gegner:zuvorkommen:ochse=2268",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 53 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler schließt mit Zum Goldenen Ochsen einen Bierlieferungsvertrag: Darlehen 5.040 M, zehn Jahre.",
+    "gegner: Der Wirt zum Gasthof Lindenhof löst sein Darlehen ab. Der Adler verliert die Adresse."
+   ]
+  },
+  {
+   "i": 110,
+   "jahr": 1887,
+   "woche": 21,
+   "kasse": 1985,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.35,
+   "kopfDeckung": "0.35",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge diese Woche 2 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 111,
+   "jahr": 1887,
+   "woche": 22,
+   "kasse": 1961,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.35,
+   "kopfDeckung": "0.35",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 112,
+   "jahr": 1887,
+   "woche": 23,
+   "kasse": 1937,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.34,
+   "kopfDeckung": "0.34",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 113,
+   "jahr": 1887,
+   "woche": 24,
+   "kasse": 1913,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.34,
+   "kopfDeckung": "0.34",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 114,
+   "jahr": 1887,
+   "woche": 25,
+   "kasse": 1889,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.33,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 55 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "gegner: Der Adler senkt den Preis auf 34 M je hl."
+   ]
+  },
+  {
+   "i": 115,
+   "jahr": 1887,
+   "woche": 26,
+   "kasse": 1865,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.33,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 116,
+   "jahr": 1887,
+   "woche": 27,
+   "kasse": 1841,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.33,
+   "kopfDeckung": "0.33",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben"
+   ]
+  },
+  {
+   "i": 117,
+   "jahr": 1887,
+   "woche": 28,
+   "kasse": 1817,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.32,
+   "kopfDeckung": "0.32",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 118,
+   "jahr": 1887,
+   "woche": 29,
+   "kasse": 1793,
+   "faesser": 8,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.32,
+   "kopfDeckung": "0.32",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 119,
+   "jahr": 1887,
+   "woche": 30,
+   "kasse": 1769,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 2,
+   "nBezahlbar": 0,
+   "billigster": 5645,
+   "rho": 0.31,
+   "kopfDeckung": "0.31",
+   "angebot": [
+    "gegner:abloesen:ochse=5645",
+    "gegner:abloesen:bahnhofswirt=11761"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: Georgi: 16 Fass überstehen den Sommer nicht und kippen",
+    "verfall: Gasthof Lindenhof führt kein Bier des Hauses mehr",
+    "verfall: Bahnhofsgaststätte führt kein Bier des Hauses mehr",
+    "verfall: Sommer: Unterhalt und Abgaben (-125)",
+    "gegner: Gasthof Lindenhof als Pfand für den Anschlag — fünf Jahre beim Adler"
+   ]
+  },
+  {
+   "i": 120,
+   "jahr": 1888,
+   "woche": 1,
+   "kasse": 1644,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 3,
+   "billigster": 320,
+   "rho": 5.14,
+   "kopfDeckung": "0.32",
+   "angebot": [
+    "gegner:abloesen:bahnhofswirt=10820",
+    "fuhre:jahresplan:schank=320",
+    "fuhre:jahresplan:lager=360",
+    "fuhre:jahresplan:export=470"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 56 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler wirbt um Landgasthof Hirsch: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 1.620 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 121,
+   "jahr": 1888,
+   "woche": 2,
+   "kasse": 1621,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 1,
+   "billigster": 1620,
+   "rho": 1,
+   "kopfDeckung": "1",
+   "angebot": [
+    "gegner:abloesen:ochse=5193",
+    "gegner:zuvorkommen:hirsch=1620",
+    "gegner:abloesen:bahnhofswirt=10820"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 57 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Bahnhofsgaststätte um 2.477 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 13.168 M."
+   ]
+  },
+  {
+   "i": 122,
+   "jahr": 1888,
+   "woche": 3,
+   "kasse": 1598,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 1620,
+   "rho": 0.99,
+   "kopfDeckung": "0.99",
+   "angebot": [
+    "gegner:abloesen:ochse=5193",
+    "gegner:zuvorkommen:hirsch=1620",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 58 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Brauerei Adler wirbt um Fährhaus am Fluss: Er bietet dem Wirt ein Darlehen und lässt den Vertrag schon aufsetzen. Zuvorkommen kostet 2.376 M. Er braucht 1 Woche weniger als sonst — er hat, was das Haus nicht hat."
+   ]
+  },
+  {
+   "i": 123,
+   "jahr": 1888,
+   "woche": 4,
+   "kasse": 1575,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 1620,
+   "rho": 0.97,
+   "kopfDeckung": "0.97",
+   "angebot": [
+    "gegner:abloesen:ochse=5193",
+    "gegner:zuvorkommen:faehrhaus=2376",
+    "gegner:zuvorkommen:hirsch=1620",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 59 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler schließt mit Landgasthof Hirsch einen Bierlieferungsvertrag: Darlehen 3.600 M, zehn Jahre."
+   ]
+  },
+  {
+   "i": 124,
+   "jahr": 1888,
+   "woche": 5,
+   "kasse": 1552,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 4,
+   "nBezahlbar": 0,
+   "billigster": 2376,
+   "rho": 0.65,
+   "kopfDeckung": "0.65",
+   "angebot": [
+    "gegner:abloesen:ochse=5193",
+    "gegner:zuvorkommen:faehrhaus=2376",
+    "gegner:abloesen:hirsch=4032",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 60 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "verfall: 16 Fass verdorben",
+    "gegner: Der Adler stockt das Darlehen beim Landgasthof Hirsch um 1.128 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 5.295 M."
+   ]
+  },
+  {
+   "i": 125,
+   "jahr": 1888,
+   "woche": 6,
+   "kasse": 1529,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 2376,
+   "rho": 0.64,
+   "kopfDeckung": "0.64",
+   "angebot": [
+    "gegner:zuvorkommen:faehrhaus=2376",
+    "gegner:abloesen:hirsch=5295",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 126,
+   "jahr": 1888,
+   "woche": 7,
+   "kasse": 1506,
+   "faesser": 0,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 2376,
+   "rho": 0.63,
+   "kopfDeckung": "0.63",
+   "angebot": [
+    "gegner:zuvorkommen:faehrhaus=2376",
+    "gegner:abloesen:hirsch=5295",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 61 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler nimmt die erste Hypothek auf Fährhaus am Fluss. Der Wirt schuldet ihm das Dach über dem Kopf."
+   ]
+  },
+  {
+   "i": 127,
+   "jahr": 1888,
+   "woche": 8,
+   "kasse": 1483,
+   "faesser": 16,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 5295,
+   "rho": 0.28,
+   "kopfDeckung": "0.29",
+   "angebot": [
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:hirsch=5295",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 62 Züge diese Woche 1 Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 128,
+   "jahr": 1888,
+   "woche": 9,
+   "kasse": 1460,
+   "faesser": 32,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 5295,
+   "rho": 0.28,
+   "kopfDeckung": "0.28",
+   "angebot": [
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:hirsch=5295",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 62 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": []
+  },
+  {
+   "i": 129,
+   "jahr": 1888,
+   "woche": 10,
+   "kasse": 1437,
+   "faesser": 48,
+   "amt": "Karoline Bruckner / fromm (bis 1914)",
+   "nAngebotTA": 3,
+   "nBezahlbar": 0,
+   "billigster": 5295,
+   "rho": 0.27,
+   "kopfDeckung": "0.28",
+   "angebot": [
+    "gegner:abloesen:faehrhaus=5914",
+    "gegner:abloesen:hirsch=5295",
+    "gegner:abloesen:bahnhofswirt=13168"
+   ],
+   "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+   "ohneDich": "OHNE DICH GESCHEHEN 62 Züge Das Haus gegenüber",
+   "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+   "tat": [
+    "fuellen:FEHL",
+    "abschicken:FEHL",
+    "weiter:ok"
+   ],
+   "fremd": [
+    "gegner: Der Adler stockt das Darlehen beim Bahnhofsgaststätte um 2.173 M auf. Die Ablösesumme steigt. Ablösen kostet jetzt 15.228 M."
+   ]
+  }
+ ],
+ "ende": {
+  "jahr": 1888,
+  "woche": 11,
+  "epoche": 3,
+  "ende": true,
+  "amt": {
+   "nr": 2,
+   "name": "Karoline Bruckner",
+   "eig": "fromm",
+   "bis": 1914
+  },
+  "kasse": 1414,
+  "faesser": 48,
+  "kopfLeiste": [
+   "DEZEMBER 1888",
+   "KASSE 1.414 M",
+   "HOPFEN 0",
+   "EISKELLER 72/135 hl",
+   "WOCHE 11/30",
+   "CHRONIK 92",
+   "BUCH 575"
+  ],
+  "kopfDeckung": "0.27",
+  "kopfDeckungTxt": "nächster Zug: Ablösung Zum Goldenen Ochsen — 5.193 M (Kasse reicht 0,3×)",
+  "protN": 575,
+  "chrN": 92,
+  "erbLeiste": "DAS ERBE II. Hand Karoline Bruckner · fromm am Haus 0 · an der Person 0 DIE STUNDE · Feder 0,90× nahm 1 · 15 hl Nachschrift · 1 Haus −2.016 M Eine Stiftung für die Pfarrei −2.240 M",
+  "erbBuch": "DAS ERBE — Eintragen ins Hypothekenbuch · II. Hand Karoline Bruckner · fromm „Hat die Kirche im Rücken und die Zunft im Nacken.\" Ein Seelgerät bindet die geistlichen Häuser ans Haus. Was im Hypothekenbuch steht, geht mit dem Anwesen über. Was am Namen des Wirts hängt, geht mit dem Wirt. Wilhelmine Bruckner hat übergeben — ohne Vereinbarung, weil die Stunde nicht wartete. Am Haus 0 → 0, an der Person 1 → 0, aus dem Eiskeller 15 hl. AM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT Nichts. Alles hängt an einem Menschen. AN DER PERSON · 0 — FÄLLT MIT DER HAND, DIE ES GAB Nichts mehr. Was hier stand, ist gefallen oder geschrieben. GEFALLEN · 1 — HING AN EINEM MENSCHEN, NICHT AM HAUS Schenke am Tor Gewohnheit DIE HÄNDE I. Wilhelmine Bruckner sparsam II. Karoline Bruckner fromm",
+  "ohneDich": "OHNE DICH GESCHEHEN 63 Züge diese Woche 1 Das Haus gegenüber",
+  "festlegungen": "Chronik des Hauses · 0 Festlegungen · 0 gebaut",
+  "knoepfe": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-sitz gg-adler amort",
+    "txt": "BRAUEREI ADLER Kommerzienrat Alois Feist · gelehrt · hält 5 Häuser 63 ZÜGE 5.390 M KASSE 34 M SEIN PREIS diese"
+   },
+   {
+    "zug": "gegner:abloesen:ochse",
+    "preis": -5193,
+    "t": false,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "OCH · VER ablösen 5.193 M"
+   },
+   {
+    "zug": "gegner:hinhalten:ochse",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:faehrhaus",
+    "preis": -5914,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler frisch zuteuer",
+    "txt": "FAE · HYP ablösen 5.914 M"
+   },
+   {
+    "zug": "gegner:hinhalten:faehrhaus",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:hirsch",
+    "preis": -5295,
+    "t": false,
+    "a": true,
+    "cls": "gg-schild gg-adler zuteuer",
+    "txt": "HIR · VER ablösen 5.295 M"
+   },
+   {
+    "zug": "gegner:hinhalten:hirsch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:bahnhofswirt",
+    "preis": -15228,
+    "t": true,
+    "a": true,
+    "cls": "gg-schild gg-adler frisch zuteuer",
+    "txt": "BHF · VER ablösen 15.228 M"
+   },
+   {
+    "zug": "gegner:hinhalten:bahnhofswirt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "gg-fass",
+    "txt": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "t": false,
+    "a": true,
+    "cls": "gg-amt amort",
+    "txt": "Dem Wirt die Restschuld nachrechnen kostet kein Geld · vier Ansehen gegen Bahnhofsgaststätte"
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Das Haus gegenüber"
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-klein",
+    "txt": "Dem Wirt die Restschuld nachrechnen"
+   },
+   {
+    "zug": "gegner:zeige:63",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:62",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:61",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf gg-winzig",
+    "txt": "zeigen"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Hefe aus dem Fass abernten"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll",
+    "txt": "Ohne Kühlung durchgären lassen"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -3400,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat klein voll siegel",
+    "txt": "Reinzuchthefe nach Hansen−3.400 M"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-pflock ruht amort",
+    "txt": "BHF"
+   },
+   {
+    "zug": "fuhre:schluss-auf",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Das Schlussblatt aufschlagen"
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "So ist es verabredet"
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:probe:lindenhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:ochse",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:torschenke",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:pfarrhof",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:muehlwirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:brueckenwirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:faehrhaus",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:hirsch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:markt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:bahnhofswirt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-probe fu-tat",
+    "txt": "Probefass · 6,0 hl · 0/6"
+   },
+   {
+    "zug": "fuhre:tafel-ab:schank",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:schank",
+    "preis": -260,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −260 M"
+   },
+   {
+    "zug": "fuhre:tafel-ab:lager",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:lager",
+    "preis": -260,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −260 M"
+   },
+   {
+    "zug": "fuhre:tafel-ab:export",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:export",
+    "preis": -260,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+ −260 M"
+   },
+   {
+    "zug": "fuhre:tafel-ab:einfach",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:einfach",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "+"
+   },
+   {
+    "zug": "fuhre:kauf:eis",
+    "preis": -420,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Eis schneiden · +42 Fuder −420 M"
+   },
+   {
+    "zug": "fuhre:kauf:eiskeller",
+    "preis": -1800,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Eiskeller vergrößern · +20 · auf 1 Kerbe −1.800 M"
+   },
+   {
+    "zug": "fuhre:kauf:sudwerk",
+    "preis": -4200,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-aufkerbe",
+    "txt": "Dampfsudwerk · +1 Sud je Woche · auf 4 Kerben −4.200 M"
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -1150,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Hopfen aus der Hallertau · +300 −1.150 M"
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 633,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein fu-rueck",
+    "txt": "Hopfen zurück an den Händler · −300 +633 M"
+   },
+   {
+    "zug": "fuhre:fracht:rollfuhr",
+    "preis": -58,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein fu-gewaehlt",
+    "txt": "Eigene Rollfuhre · bis 12 hl −58 M"
+   },
+   {
+    "zug": "fuhre:fracht:stueck",
+    "preis": -52,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Stückgut · bis 18 hl −52 M"
+   },
+   {
+    "zug": "fuhre:fracht:halb",
+    "preis": -210,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Halber Wagen · bis 60 hl −210 M"
+   },
+   {
+    "zug": "fuhre:fracht:ganz",
+    "preis": -328,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Ganzer Wagen · bis 132 hl −328 M"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf fu-klein",
+    "txt": "Nach Durst füllen"
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Wie vorige Woche"
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-klein",
+    "txt": "Rampe räumen"
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf fu-abschicken",
+    "txt": "FUHRE ABSCHICKEN"
+   },
+   {
+    "zug": "sud:kaelte:natureis",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Natureis aus dem Fluss"
+   },
+   {
+    "zug": "sud:kaelte:warm",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl",
+    "txt": "Ohne Kühlung durchgären lassen"
+   },
+   {
+    "zug": "sud:kaelte:maschine",
+    "preis": -9800,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Lindesche Kältemaschine −9.800 M"
+   },
+   {
+    "zug": "sud:hefe:betrieb",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl ist",
+    "txt": "Betriebshefe aus dem Bottich"
+   },
+   {
+    "zug": "sud:hefe:reinzucht",
+    "preis": -3400,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-wahl siegel",
+    "txt": "Reinzuchthefe nach Hansen −3.400 M"
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Hefe im Gärbottich abernten · +8"
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Junges Lagerfass anstechen · +14"
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Altes Lagerfass anstechen · +6"
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -1900,
+    "t": false,
+    "a": false,
+    "cls": "knopf sud-tat",
+    "txt": "Gärbottich aufstellen · +60 hl −1.900 M"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf klang-schalter klang-an",
+    "txt": "♪"
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-bandgriff",
+    "txt": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-klein-knopf",
+    "txt": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:liefern",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-rot",
+    "txt": "Unter dem Zeichen ausliefern"
+   },
+   {
+    "zug": "name:zurueckhalten",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Das Zeichen einziehen"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf",
+    "txt": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "t": false,
+    "a": true,
+    "cls": "knopf nm-knopf nm-griff",
+    "txt": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -2016,
+    "t": false,
+    "a": false,
+    "cls": "knopf erb-knopf erb-nach",
+    "txt": "Nachschrift · 1 Haus −2.016 M"
+   },
+   {
+    "zug": "erbe:seelgeraet",
+    "preis": -2240,
+    "t": true,
+    "a": false,
+    "cls": "knopf erb-knopf",
+    "txt": "Eine Stiftung für die Pfarrei −2.240 M"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "CHRONIK 92"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "tafel knopf",
+    "txt": "BUCH 575"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "t": true,
+    "a": false,
+    "cls": "knopf gross amort",
+    "txt": "ENDE"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "OHNE DICH GESCHEHEN 63 Züge"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DIE HÄUSER wollen 0,0 · im Keller liegen 72 hl"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "SUDPLAN am schwarzen Brett der Mälzerei"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER EISKELLER 72 von 135 hl · 72 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "EIGENE ROLLFUHRE 0,0 von 12 hl · 0 von 10 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DER RUF DES HAUSES Etikett, Plakat, Litfaßsäule"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-blatt-fu-ende-verwertet-fu-schlussblatt",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter auf",
+    "txt": "DAS ENDE DES HAUSES liegt auf"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter",
+    "txt": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter marken",
+    "txt": "ORTSMARKEN 6 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-reiter frei",
+    "txt": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite",
+    "txt": "BAUHOF"
+   },
+   {
+    "zug": "stadt:hypothek",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-seite auf",
+    "txt": "HYPOTHEK"
+   },
+   {
+    "zug": "stadt:hypothek:schornstein",
+    "preis": 2461,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Schornstein und Dampfmaschine +2.461 M"
+   },
+   {
+    "zug": "stadt:hypothek:maschinenhaus",
+    "preis": 2331,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Maschinenhaus +2.331 M"
+   },
+   {
+    "zug": "stadt:hypothek:maelzerei",
+    "preis": 2202,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Mälzereiturm +2.202 M"
+   },
+   {
+    "zug": "stadt:hypothek:gaertanks",
+    "preis": 2072,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Gärtanks +2.072 M"
+   },
+   {
+    "zug": "stadt:hypothek:eiskeller",
+    "preis": 1813,
+    "t": true,
+    "a": true,
+    "cls": "knopf stadt-verwertung",
+    "txt": "Eiskeller +1.813 M"
+   },
+   {
+    "zug": "fuhre:wiederanfang",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf gross",
+    "txt": "Von vorn anfangen — dieselbe Stadt, andere Würfel"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-knopf",
+    "txt": "Michaelitafel 1888 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf pr-griff-chronik",
+    "txt": "Chronik des Hauses · 0 Festlegungen · 0 gebaut"
+   },
+   {
+    "zug": "sud:schluss-auf",
+    "preis": null,
+    "t": true,
+    "a": true,
+    "cls": "knopf sud-tat klein",
+    "txt": "Sudbuch aufschlagen"
+   }
+  ]
+ },
+ "fehler": []
+}

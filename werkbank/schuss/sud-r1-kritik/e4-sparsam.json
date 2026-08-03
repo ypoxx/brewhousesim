@@ -1,0 +1,831 @@
+{
+ "epoche": 4,
+ "wochen": 65,
+ "stil": "sparsam",
+ "saat": "4242",
+ "fehler": [],
+ "angebot": [
+  {
+   "zug": "sud:zettel-anstich",
+   "mal": 65,
+   "aktiv": 63,
+   "getroffen": 0,
+   "texte": [
+    "Hefe aus dem Tank zusetzen",
+    "Hefe aus dem Gärtank ziehen"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "mal": 65,
+   "aktiv": 65,
+   "getroffen": 0,
+   "texte": [
+    "Schönen mit Kieselsol"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "mal": 65,
+   "aktiv": 60,
+   "getroffen": 0,
+   "texte": [
+    "Kieselgurfilter −26.000 DM"
+   ]
+  },
+  {
+   "zug": "sud:fuehrung:erfahrung",
+   "mal": 65,
+   "aktiv": 0,
+   "getroffen": 63,
+   "texte": [
+    "Nach Erfahrung des Braumeisters"
+   ]
+  },
+  {
+   "zug": "sud:fuehrung:labor",
+   "mal": 65,
+   "aktiv": 41,
+   "getroffen": 63,
+   "texte": [
+    "Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM"
+   ]
+  },
+  {
+   "zug": "sud:fuehrung:rechner",
+   "mal": 65,
+   "aktiv": 0,
+   "getroffen": 63,
+   "texte": [
+    "Prozessrechner am Sudwerk −118.000 DM"
+   ]
+  },
+  {
+   "zug": "sud:behandlung:natur",
+   "mal": 65,
+   "aktiv": 0,
+   "getroffen": 63,
+   "texte": [
+    "Naturtrüb, unfiltriert"
+   ]
+  },
+  {
+   "zug": "sud:behandlung:schoenen",
+   "mal": 65,
+   "aktiv": 64,
+   "getroffen": 63,
+   "texte": [
+    "Schönen mit Kieselsol"
+   ]
+  },
+  {
+   "zug": "sud:behandlung:filter",
+   "mal": 65,
+   "aktiv": 59,
+   "getroffen": 63,
+   "texte": [
+    "Kieselgurfilter −26.000 DM"
+   ]
+  },
+  {
+   "zug": "sud:behandlung:pasteur",
+   "mal": 65,
+   "aktiv": 2,
+   "getroffen": 63,
+   "texte": [
+    "Tunnelpasteur −74.000 DM"
+   ]
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "mal": 65,
+   "aktiv": 9,
+   "getroffen": 63,
+   "texte": [
+    "Hefe aus dem Gärtank ziehen · +8"
+   ]
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "mal": 65,
+   "aktiv": 62,
+   "getroffen": 63,
+   "texte": [
+    "Hefe aus dem Tank zusetzen · jüngstes Fass · +14"
+   ]
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "mal": 65,
+   "aktiv": 62,
+   "getroffen": 63,
+   "texte": [
+    "Hefe aus dem Tank zusetzen · ältestes Fass · +6"
+   ]
+  },
+  {
+   "zug": "sud:gaerraum",
+   "mal": 65,
+   "aktiv": 59,
+   "getroffen": 63,
+   "texte": [
+    "Gärtank stellen · +270 hl −24.000 DM"
+   ]
+  },
+  {
+   "zug": "sud:charge-frei:2",
+   "mal": 5,
+   "aktiv": 5,
+   "getroffen": 5,
+   "texte": [
+    "Charge freigeben"
+   ]
+  },
+  {
+   "zug": "sud:charge-schnitt:2",
+   "mal": 5,
+   "aktiv": 5,
+   "getroffen": 5,
+   "texte": [
+    "Charge verschneiden · −20 hl"
+   ]
+  },
+  {
+   "zug": "sud:charge-frei:3",
+   "mal": 5,
+   "aktiv": 5,
+   "getroffen": 5,
+   "texte": [
+    "Charge freigeben"
+   ]
+  },
+  {
+   "zug": "sud:charge-schnitt:3",
+   "mal": 5,
+   "aktiv": 5,
+   "getroffen": 5,
+   "texte": [
+    "Charge verschneiden · −20 hl"
+   ]
+  }
+ ],
+ "gewechselt": [],
+ "protokoll": [
+  {
+   "w": 0,
+   "kopf": "SEPTEMBER=1970 | KASSE=86.000 DM | HOPFEN=340 | TANKS=210/600 hl | WOCHE=1/30 | CHRONIK=4 | BUCH=1",
+   "kasse": "86.000 DM",
+   "keller": "210/600 hl",
+   "roh": "340",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 47,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±14 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 0
+  },
+  {
+   "w": 1,
+   "kopf": "OKTOBER=1970 | KASSE=81.400 DM | HOPFEN=288 | TANKS=210/600 hl | WOCHE=2/30 | CHRONIK=4 | BUCH=5",
+   "kasse": "81.400 DM",
+   "keller": "210/600 hl",
+   "roh": "288",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 45,2×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 60/300 hl Streuung ±14 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 8
+  },
+  {
+   "w": 2,
+   "kopf": "OKTOBER=1970 | KASSE=76.800 DM | HOPFEN=236 | TANKS=210/600 hl | WOCHE=3/30 | CHRONIK=5 | BUCH=10",
+   "kasse": "76.800 DM",
+   "keller": "210/600 hl",
+   "roh": "236",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 42,7×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 120/300 hl Streuung ±15 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 8
+  },
+  {
+   "w": 3,
+   "kopf": "OKTOBER=1970 | KASSE=72.200 DM | HOPFEN=184 | TANKS=270/600 hl | WOCHE=4/30 | CHRONIK=5 | BUCH=14",
+   "kasse": "72.200 DM",
+   "keller": "270/600 hl",
+   "roh": "184",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 40,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 120/300 hl Streuung ±15 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 7
+  },
+  {
+   "w": 4,
+   "kopf": "OKTOBER=1970 | KASSE=67.600 DM | HOPFEN=132 | TANKS=270/600 hl | WOCHE=5/30 | CHRONIK=7 | BUCH=19",
+   "kasse": "67.600 DM",
+   "keller": "270/600 hl",
+   "roh": "132",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 37,6×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 180/300 hl Streuung ±16 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 9
+  },
+  {
+   "w": 5,
+   "kopf": "NOVEMBER=1970 | KASSE=63.000 DM | HOPFEN=80 | TANKS=270/600 hl | WOCHE=6/30 | CHRONIK=7 | BUCH=23",
+   "kasse": "63.000 DM",
+   "keller": "270/600 hl",
+   "roh": "80",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 35,0×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 240/300 hl Streuung ±16 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 11
+  },
+  {
+   "w": 6,
+   "kopf": "NOVEMBER=1970 | KASSE=58.400 DM | HOPFEN=28 | TANKS=330/600 hl | WOCHE=7/30 | CHRONIK=8 | BUCH=28",
+   "kasse": "58.400 DM",
+   "keller": "330/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 32,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 240/300 hl Streuung ±17 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 11
+  },
+  {
+   "w": 7,
+   "kopf": "NOVEMBER=1970 | KASSE=57.200 DM | HOPFEN=28 | TANKS=390/600 hl | WOCHE=8/30 | CHRONIK=9 | BUCH=31",
+   "kasse": "57.200 DM",
+   "keller": "390/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 31,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 180/300 hl Streuung ±17 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 11
+  },
+  {
+   "w": 8,
+   "kopf": "NOVEMBER=1970 | KASSE=56.000 DM | HOPFEN=28 | TANKS=450/600 hl | WOCHE=9/30 | CHRONIK=9 | BUCH=34",
+   "kasse": "56.000 DM",
+   "keller": "450/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 31,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 120/300 hl Streuung ±18 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 11
+  },
+  {
+   "w": 9,
+   "kopf": "DEZEMBER=1970 | KASSE=54.800 DM | HOPFEN=28 | TANKS=510/600 hl | WOCHE=10/30 | CHRONIK=10 | BUCH=37",
+   "kasse": "54.800 DM",
+   "keller": "510/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 30,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 60/300 hl Streuung ±19 % Hefe aus dem Gärtank ziehen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 9
+  },
+  {
+   "w": 10,
+   "kopf": "DEZEMBER=1970 | KASSE=53.600 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=11/30 | CHRONIK=11 | BUCH=40",
+   "kasse": "53.600 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 29,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±21 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 11,
+   "kopf": "DEZEMBER=1970 | KASSE=52.400 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=12/30 | CHRONIK=13 | BUCH=43",
+   "kasse": "52.400 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 29,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±21 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 12,
+   "kopf": "DEZEMBER=1970 | KASSE=51.200 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=13/30 | CHRONIK=13 | BUCH=45",
+   "kasse": "51.200 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 28,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±22 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 13,
+   "kopf": "DEZEMBER=1970 | KASSE=50.000 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=14/30 | CHRONIK=13 | BUCH=46",
+   "kasse": "50.000 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 27,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±22 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 14,
+   "kopf": "JANUAR=1971 | KASSE=48.800 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=15/30 | CHRONIK=15 | BUCH=49",
+   "kasse": "48.800 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 27,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±23 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 15,
+   "kopf": "JANUAR=1971 | KASSE=47.600 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=16/30 | CHRONIK=15 | BUCH=50",
+   "kasse": "47.600 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 26,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±23 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 16,
+   "kopf": "JANUAR=1971 | KASSE=46.400 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=17/30 | CHRONIK=16 | BUCH=52",
+   "kasse": "46.400 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 25,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±24 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 17,
+   "kopf": "JANUAR=1971 | KASSE=45.200 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=18/30 | CHRONIK=17 | BUCH=55",
+   "kasse": "45.200 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 25,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±24 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 18,
+   "kopf": "FEBRUAR=1971 | KASSE=44.000 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=19/30 | CHRONIK=17 | BUCH=56",
+   "kasse": "44.000 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 24,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 19,
+   "kopf": "FEBRUAR=1971 | KASSE=42.800 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=20/30 | CHRONIK=18 | BUCH=58",
+   "kasse": "42.800 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 23,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 20,
+   "kopf": "FEBRUAR=1971 | KASSE=41.600 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=21/30 | CHRONIK=19 | BUCH=60",
+   "kasse": "41.600 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 23,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 21,
+   "kopf": "FEBRUAR=1971 | KASSE=40.400 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=22/30 | CHRONIK=21 | BUCH=63",
+   "kasse": "40.400 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 22,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 22,
+   "kopf": "MÄRZ=1971 | KASSE=39.200 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=23/30 | CHRONIK=21 | BUCH=65",
+   "kasse": "39.200 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 21,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 23,
+   "kopf": "MÄRZ=1971 | KASSE=38.000 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=24/30 | CHRONIK=22 | BUCH=67",
+   "kasse": "38.000 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 21,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 24,
+   "kopf": "MÄRZ=1971 | KASSE=36.800 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=25/30 | CHRONIK=22 | BUCH=68",
+   "kasse": "36.800 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 20,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 25,
+   "kopf": "MÄRZ=1971 | KASSE=35.600 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=26/30 | CHRONIK=22 | BUCH=69",
+   "kasse": "35.600 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 19,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 26,
+   "kopf": "MÄRZ=1971 | KASSE=34.400 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=27/30 | CHRONIK=22 | BUCH=72",
+   "kasse": "34.400 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 19,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 27,
+   "kopf": "APRIL=1971 | KASSE=33.200 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=28/30 | CHRONIK=22 | BUCH=74",
+   "kasse": "33.200 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 18,4×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 28,
+   "kopf": "APRIL=1971 | KASSE=32.000 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=29/30 | CHRONIK=24 | BUCH=77",
+   "kasse": "32.000 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 17,8×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 29,
+   "kopf": "APRIL=1971 | KASSE=30.800 DM | HOPFEN=28 | TANKS=570/600 hl | WOCHE=30/30 | CHRONIK=24 | BUCH=78",
+   "kasse": "30.800 DM",
+   "keller": "570/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 17,1×)",
+   "sudmarke": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 30,
+   "kopf": "SEPTEMBER=1971 | KASSE=67.295 DM | HOPFEN=28 | TANKS=0,0/600 hl | WOCHE=1/30 | CHRONIK=28 | BUCH=106",
+   "kasse": "67.295 DM",
+   "keller": "0,0/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 37,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 0
+  },
+  {
+   "w": 31,
+   "kopf": "OKTOBER=1971 | KASSE=66.095 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=2/30 | CHRONIK=29 | BUCH=112",
+   "kasse": "66.095 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 36,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 32,
+   "kopf": "OKTOBER=1971 | KASSE=64.895 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=3/30 | CHRONIK=29 | BUCH=113",
+   "kasse": "64.895 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 36,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 33,
+   "kopf": "OKTOBER=1971 | KASSE=63.695 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=4/30 | CHRONIK=30 | BUCH=115",
+   "kasse": "63.695 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 35,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 34,
+   "kopf": "OKTOBER=1971 | KASSE=62.495 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=5/30 | CHRONIK=30 | BUCH=116",
+   "kasse": "62.495 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 34,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 35,
+   "kopf": "NOVEMBER=1971 | KASSE=61.295 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=6/30 | CHRONIK=31 | BUCH=117",
+   "kasse": "61.295 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 34,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 36,
+   "kopf": "NOVEMBER=1971 | KASSE=60.095 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=7/30 | CHRONIK=33 | BUCH=120",
+   "kasse": "60.095 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 33,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 37,
+   "kopf": "NOVEMBER=1971 | KASSE=58.895 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=8/30 | CHRONIK=33 | BUCH=122",
+   "kasse": "58.895 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 32,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 38,
+   "kopf": "NOVEMBER=1971 | KASSE=57.695 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=9/30 | CHRONIK=34 | BUCH=125",
+   "kasse": "57.695 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 32,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 39,
+   "kopf": "DEZEMBER=1971 | KASSE=56.495 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=10/30 | CHRONIK=34 | BUCH=126",
+   "kasse": "56.495 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 31,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 40,
+   "kopf": "DEZEMBER=1971 | KASSE=55.295 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=11/30 | CHRONIK=35 | BUCH=128",
+   "kasse": "55.295 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 30,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 41,
+   "kopf": "DEZEMBER=1971 | KASSE=54.095 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=12/30 | CHRONIK=36 | BUCH=130",
+   "kasse": "54.095 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 30,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 42,
+   "kopf": "DEZEMBER=1971 | KASSE=52.895 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=13/30 | CHRONIK=37 | BUCH=133",
+   "kasse": "52.895 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 29,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 43,
+   "kopf": "DEZEMBER=1971 | KASSE=51.695 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=14/30 | CHRONIK=38 | BUCH=141",
+   "kasse": "51.695 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 28,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 44,
+   "kopf": "JANUAR=1972 | KASSE=50.495 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=15/30 | CHRONIK=38 | BUCH=143",
+   "kasse": "50.495 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 28,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 45,
+   "kopf": "JANUAR=1972 | KASSE=49.295 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=16/30 | CHRONIK=40 | BUCH=145",
+   "kasse": "49.295 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 27,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 46,
+   "kopf": "JANUAR=1972 | KASSE=48.095 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=17/30 | CHRONIK=40 | BUCH=146",
+   "kasse": "48.095 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 26,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 47,
+   "kopf": "JANUAR=1972 | KASSE=46.895 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=18/30 | CHRONIK=40 | BUCH=147",
+   "kasse": "46.895 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 26,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 48,
+   "kopf": "FEBRUAR=1972 | KASSE=45.695 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=19/30 | CHRONIK=41 | BUCH=150",
+   "kasse": "45.695 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 25,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 49,
+   "kopf": "FEBRUAR=1972 | KASSE=44.495 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=20/30 | CHRONIK=42 | BUCH=152",
+   "kasse": "44.495 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 24,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 50,
+   "kopf": "FEBRUAR=1972 | KASSE=43.295 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=21/30 | CHRONIK=43 | BUCH=154",
+   "kasse": "43.295 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 24,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 51,
+   "kopf": "FEBRUAR=1972 | KASSE=42.095 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=22/30 | CHRONIK=43 | BUCH=155",
+   "kasse": "42.095 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 23,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 6
+  },
+  {
+   "w": 52,
+   "kopf": "MÄRZ=1972 | KASSE=40.895 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=23/30 | CHRONIK=43 | BUCH=157",
+   "kasse": "40.895 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 22,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 53,
+   "kopf": "MÄRZ=1972 | KASSE=39.695 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=24/30 | CHRONIK=44 | BUCH=159",
+   "kasse": "39.695 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 22,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 54,
+   "kopf": "MÄRZ=1972 | KASSE=38.495 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=25/30 | CHRONIK=44 | BUCH=162",
+   "kasse": "38.495 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 21,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 55,
+   "kopf": "MÄRZ=1972 | KASSE=37.295 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=26/30 | CHRONIK=45 | BUCH=170",
+   "kasse": "37.295 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 20,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 56,
+   "kopf": "MÄRZ=1972 | KASSE=36.095 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=27/30 | CHRONIK=46 | BUCH=173",
+   "kasse": "36.095 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 20,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 57,
+   "kopf": "APRIL=1972 | KASSE=34.895 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=28/30 | CHRONIK=46 | BUCH=174",
+   "kasse": "34.895 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 19,4×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 58,
+   "kopf": "APRIL=1972 | KASSE=33.695 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=29/30 | CHRONIK=47 | BUCH=177",
+   "kasse": "33.695 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 18,7×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 59,
+   "kopf": "APRIL=1972 | KASSE=32.495 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=30/30 | CHRONIK=47 | BUCH=178",
+   "kasse": "32.495 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 18,1×)",
+   "sudmarke": "DER SUD · 1971 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 5
+  },
+  {
+   "w": 60,
+   "kopf": "SEPTEMBER=1972 | KASSE=18.455 DM | HOPFEN=28 | TANKS=0,0/600 hl | WOCHE=1/30 | CHRONIK=55 | BUCH=196",
+   "kasse": "18.455 DM",
+   "keller": "0,0/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 10,3×)",
+   "sudmarke": "DER SUD · 1972 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 0
+  },
+  {
+   "w": 61,
+   "kopf": "OKTOBER=1972 | KASSE=17.255 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=2/30 | CHRONIK=57 | BUCH=202",
+   "kasse": "17.255 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 9,6×)",
+   "sudmarke": "DER SUD · 1972 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 3
+  },
+  {
+   "w": 62,
+   "kopf": "OKTOBER=1972 | KASSE=16.055 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=3/30 | CHRONIK=57 | BUCH=204",
+   "kasse": "16.055 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 8,9×)",
+   "sudmarke": "DER SUD · 1972 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 3
+  },
+  {
+   "w": 63,
+   "kopf": "OKTOBER=1972 | KASSE=14.855 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=4/30 | CHRONIK=58 | BUCH=207",
+   "kasse": "14.855 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 8,3×)",
+   "sudmarke": "DER SUD · 1972 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 3
+  },
+  {
+   "w": 64,
+   "kopf": "OKTOBER=1972 | KASSE=13.655 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=5/30 | CHRONIK=58 | BUCH=208",
+   "kasse": "13.655 DM",
+   "keller": "225/600 hl",
+   "roh": "28",
+   "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 7,6×)",
+   "sudmarke": "DER SUD · 1972 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+   "sudAktiv": 3
+  }
+ ],
+ "schluss": {
+  "kopf": "NOVEMBER=1972 | KASSE=12.455 DM | HOPFEN=28 | TANKS=225/600 hl | WOCHE=6/30 | CHRONIK=58 | BUCH=210",
+  "sudmarke": "DER SUD · 1972 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert Gärkeller 0,0/300 hl Streuung ±25 % Hefe aus dem Tank zusetzen Schönen mit Kieselsol Kieselgurfilter −26.000 DM",
+  "deckung": "nächster Zug: Bierdeckel drucken lassen — 1.800 DM (Kasse reicht 6,9×)",
+  "gaerband": "Kein Gärtank steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller."
+ }
+}

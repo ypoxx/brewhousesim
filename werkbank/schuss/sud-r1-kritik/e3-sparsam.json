@@ -1,0 +1,777 @@
+{
+ "epoche": 3,
+ "wochen": 65,
+ "stil": "sparsam",
+ "saat": "4242",
+ "fehler": [],
+ "angebot": [
+  {
+   "zug": "sud:zettel-anstich",
+   "mal": 65,
+   "aktiv": 63,
+   "getroffen": 0,
+   "texte": [
+    "Hefe im Gärbottich abernten",
+    "Hefe aus dem Fass abernten"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "mal": 65,
+   "aktiv": 65,
+   "getroffen": 0,
+   "texte": [
+    "Ohne Kühlung durchgären lassen"
+   ]
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "mal": 65,
+   "aktiv": 56,
+   "getroffen": 0,
+   "texte": [
+    "Reinzuchthefe nach Hansen −3.400 M"
+   ]
+  },
+  {
+   "zug": "sud:kaelte:natureis",
+   "mal": 65,
+   "aktiv": 0,
+   "getroffen": 63,
+   "texte": [
+    "Natureis aus dem Fluss"
+   ]
+  },
+  {
+   "zug": "sud:kaelte:warm",
+   "mal": 65,
+   "aktiv": 64,
+   "getroffen": 63,
+   "texte": [
+    "Ohne Kühlung durchgären lassen"
+   ]
+  },
+  {
+   "zug": "sud:kaelte:maschine",
+   "mal": 65,
+   "aktiv": 27,
+   "getroffen": 63,
+   "texte": [
+    "Lindesche Kältemaschine −9.800 M"
+   ]
+  },
+  {
+   "zug": "sud:hefe:betrieb",
+   "mal": 65,
+   "aktiv": 0,
+   "getroffen": 63,
+   "texte": [
+    "Betriebshefe aus dem Bottich"
+   ]
+  },
+  {
+   "zug": "sud:hefe:reinzucht",
+   "mal": 65,
+   "aktiv": 55,
+   "getroffen": 63,
+   "texte": [
+    "Reinzuchthefe nach Hansen −3.400 M"
+   ]
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "mal": 65,
+   "aktiv": 31,
+   "getroffen": 63,
+   "texte": [
+    "Hefe im Gärbottich abernten · +8"
+   ]
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "mal": 65,
+   "aktiv": 58,
+   "getroffen": 63,
+   "texte": [
+    "Hefe aus dem Fass abernten · jüngstes Fass · +14"
+   ]
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "mal": 65,
+   "aktiv": 58,
+   "getroffen": 63,
+   "texte": [
+    "Hefe aus dem Fass abernten · ältestes Fass · +6"
+   ]
+  },
+  {
+   "zug": "sud:gaerraum",
+   "mal": 65,
+   "aktiv": 59,
+   "getroffen": 63,
+   "texte": [
+    "Gärbottich aufstellen · +60 hl −1.900 M"
+   ]
+  }
+ ],
+ "gewechselt": [],
+ "protokoll": [
+  {
+   "w": 0,
+   "kopf": "SEPTEMBER=1884 | KASSE=14.250 M | HOPFEN=120 | EISKELLER=11/135 hl | WOCHE=1/30 | CHRONIK=3 | BUCH=1",
+   "kasse": "14.250 M",
+   "keller": "11/135 hl",
+   "roh": "120",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 59,4×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 70 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 0
+  },
+  {
+   "w": 1,
+   "kopf": "OKTOBER=1884 | KASSE=13.780 M | HOPFEN=90 | EISKELLER=47/135 hl | WOCHE=2/30 | CHRONIK=3 | BUCH=5",
+   "kasse": "13.780 M",
+   "keller": "47/135 hl",
+   "roh": "90",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 57,4×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 66 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 2,
+   "kopf": "OKTOBER=1884 | KASSE=13.310 M | HOPFEN=60 | EISKELLER=119/135 hl | WOCHE=3/30 | CHRONIK=3 | BUCH=10",
+   "kasse": "13.310 M",
+   "keller": "119/135 hl",
+   "roh": "60",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 55,5×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 62 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 3,
+   "kopf": "OKTOBER=1884 | KASSE=12.840 M | HOPFEN=30 | EISKELLER=119/135 hl | WOCHE=4/30 | CHRONIK=4 | BUCH=14",
+   "kasse": "12.840 M",
+   "keller": "119/135 hl",
+   "roh": "30",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 53,5×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 58 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 4,
+   "kopf": "OKTOBER=1884 | KASSE=12.730 M | HOPFEN=30 | EISKELLER=83/135 hl | WOCHE=5/30 | CHRONIK=4 | BUCH=16",
+   "kasse": "12.730 M",
+   "keller": "83/135 hl",
+   "roh": "30",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 53,0×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 54 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 5,
+   "kopf": "NOVEMBER=1884 | KASSE=12.260 M | HOPFEN=0 | EISKELLER=119/135 hl | WOCHE=6/30 | CHRONIK=5 | BUCH=21",
+   "kasse": "12.260 M",
+   "keller": "119/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 51,1×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 50 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 6,
+   "kopf": "NOVEMBER=1884 | KASSE=12.150 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=7/30 | CHRONIK=5 | BUCH=23",
+   "kasse": "12.150 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 50,6×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 46 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 7,
+   "kopf": "NOVEMBER=1884 | KASSE=12.040 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=8/30 | CHRONIK=6 | BUCH=26",
+   "kasse": "12.040 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 50,2×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 42 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 8,
+   "kopf": "NOVEMBER=1884 | KASSE=11.930 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=9/30 | CHRONIK=7 | BUCH=30",
+   "kasse": "11.930 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 49,7×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 59/72 hl Führung 30 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 9,
+   "kopf": "DEZEMBER=1884 | KASSE=11.820 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=10/30 | CHRONIK=9 | BUCH=34",
+   "kasse": "11.820 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 49,3×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/72 hl Führung 18 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 10,
+   "kopf": "DEZEMBER=1884 | KASSE=11.710 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=11/30 | CHRONIK=9 | BUCH=35",
+   "kasse": "11.710 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 48,8×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 11,
+   "kopf": "DEZEMBER=1884 | KASSE=11.600 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=12/30 | CHRONIK=11 | BUCH=38",
+   "kasse": "11.600 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 48,3×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 20/72 hl Führung 17 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 12,
+   "kopf": "DEZEMBER=1884 | KASSE=11.490 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=13/30 | CHRONIK=11 | BUCH=40",
+   "kasse": "11.490 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 47,9×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 20/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 7
+  },
+  {
+   "w": 13,
+   "kopf": "DEZEMBER=1884 | KASSE=11.380 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=14/30 | CHRONIK=12 | BUCH=42",
+   "kasse": "11.380 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 47,4×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 17 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 14,
+   "kopf": "JANUAR=1885 | KASSE=11.270 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=15/30 | CHRONIK=13 | BUCH=45",
+   "kasse": "11.270 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 47,0×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 15,
+   "kopf": "JANUAR=1885 | KASSE=11.160 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=16/30 | CHRONIK=14 | BUCH=47",
+   "kasse": "11.160 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 46,5×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 16,
+   "kopf": "JANUAR=1885 | KASSE=11.050 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=17/30 | CHRONIK=14 | BUCH=48",
+   "kasse": "11.050 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 46,0×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 17,
+   "kopf": "JANUAR=1885 | KASSE=10.940 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=18/30 | CHRONIK=14 | BUCH=49",
+   "kasse": "10.940 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 45,6×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 18,
+   "kopf": "FEBRUAR=1885 | KASSE=10.830 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=19/30 | CHRONIK=14 | BUCH=51",
+   "kasse": "10.830 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 45,1×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 19,
+   "kopf": "FEBRUAR=1885 | KASSE=10.720 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=20/30 | CHRONIK=14 | BUCH=52",
+   "kasse": "10.720 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 44,7×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 20,
+   "kopf": "FEBRUAR=1885 | KASSE=10.610 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=21/30 | CHRONIK=14 | BUCH=54",
+   "kasse": "10.610 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 44,2×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 21,
+   "kopf": "FEBRUAR=1885 | KASSE=10.500 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=22/30 | CHRONIK=14 | BUCH=56",
+   "kasse": "10.500 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 43,8×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 22,
+   "kopf": "MÄRZ=1885 | KASSE=10.390 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=23/30 | CHRONIK=14 | BUCH=58",
+   "kasse": "10.390 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 43,3×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 23,
+   "kopf": "MÄRZ=1885 | KASSE=10.280 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=24/30 | CHRONIK=14 | BUCH=59",
+   "kasse": "10.280 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 42,8×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 24,
+   "kopf": "MÄRZ=1885 | KASSE=10.170 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=25/30 | CHRONIK=14 | BUCH=60",
+   "kasse": "10.170 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 42,4×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 25,
+   "kopf": "MÄRZ=1885 | KASSE=10.060 M | HOPFEN=0 | EISKELLER=135/135 hl | WOCHE=26/30 | CHRONIK=14 | BUCH=61",
+   "kasse": "10.060 M",
+   "keller": "135/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 41,9×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 26,
+   "kopf": "MÄRZ=1885 | KASSE=9.950 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=27/30 | CHRONIK=14 | BUCH=64",
+   "kasse": "9.950 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 41,5×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 27,
+   "kopf": "APRIL=1885 | KASSE=9.840 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=28/30 | CHRONIK=14 | BUCH=65",
+   "kasse": "9.840 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 41,0×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 28,
+   "kopf": "APRIL=1885 | KASSE=9.730 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=29/30 | CHRONIK=14 | BUCH=67",
+   "kasse": "9.730 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 40,5×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 29,
+   "kopf": "APRIL=1885 | KASSE=9.620 M | HOPFEN=0 | EISKELLER=125/135 hl | WOCHE=30/30 | CHRONIK=14 | BUCH=68",
+   "kasse": "9.620 M",
+   "keller": "125/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 40,1×)",
+   "sudmarke": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 30,
+   "kopf": "SEPTEMBER=1885 | KASSE=6.191 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=1/30 | CHRONIK=18 | BUCH=75",
+   "kasse": "6.191 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 25,8×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 0
+  },
+  {
+   "w": 31,
+   "kopf": "OKTOBER=1885 | KASSE=6.081 M | HOPFEN=0 | EISKELLER=12/135 hl | WOCHE=2/30 | CHRONIK=19 | BUCH=79",
+   "kasse": "6.081 M",
+   "keller": "12/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 25,3×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 32,
+   "kopf": "OKTOBER=1885 | KASSE=5.971 M | HOPFEN=0 | EISKELLER=12/135 hl | WOCHE=3/30 | CHRONIK=20 | BUCH=81",
+   "kasse": "5.971 M",
+   "keller": "12/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 24,9×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 17 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 33,
+   "kopf": "OKTOBER=1885 | KASSE=5.861 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=4/30 | CHRONIK=20 | BUCH=85",
+   "kasse": "5.861 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 24,4×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 34,
+   "kopf": "OKTOBER=1885 | KASSE=5.751 M | HOPFEN=0 | EISKELLER=36/135 hl | WOCHE=5/30 | CHRONIK=21 | BUCH=88",
+   "kasse": "5.751 M",
+   "keller": "36/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 24,0×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 24/72 hl Führung 17 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 35,
+   "kopf": "NOVEMBER=1885 | KASSE=5.641 M | HOPFEN=0 | EISKELLER=36/135 hl | WOCHE=6/30 | CHRONIK=22 | BUCH=90",
+   "kasse": "5.641 M",
+   "keller": "36/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 23,5×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 24/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 36,
+   "kopf": "NOVEMBER=1885 | KASSE=5.531 M | HOPFEN=0 | EISKELLER=36/135 hl | WOCHE=7/30 | CHRONIK=23 | BUCH=92",
+   "kasse": "5.531 M",
+   "keller": "36/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 23,0×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 17 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 37,
+   "kopf": "NOVEMBER=1885 | KASSE=5.421 M | HOPFEN=0 | EISKELLER=36/135 hl | WOCHE=8/30 | CHRONIK=23 | BUCH=93",
+   "kasse": "5.421 M",
+   "keller": "36/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 22,6×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 38,
+   "kopf": "NOVEMBER=1885 | KASSE=5.311 M | HOPFEN=0 | EISKELLER=12/135 hl | WOCHE=9/30 | CHRONIK=23 | BUCH=95",
+   "kasse": "5.311 M",
+   "keller": "12/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 22,1×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 39,
+   "kopf": "DEZEMBER=1885 | KASSE=5.201 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=10/30 | CHRONIK=23 | BUCH=99",
+   "kasse": "5.201 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 21,7×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 40,
+   "kopf": "DEZEMBER=1885 | KASSE=5.091 M | HOPFEN=0 | EISKELLER=24/135 hl | WOCHE=11/30 | CHRONIK=23 | BUCH=102",
+   "kasse": "5.091 M",
+   "keller": "24/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 21,2×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 41,
+   "kopf": "DEZEMBER=1885 | KASSE=4.981 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=12/30 | CHRONIK=23 | BUCH=106",
+   "kasse": "4.981 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 20,8×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 42,
+   "kopf": "DEZEMBER=1885 | KASSE=4.871 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=13/30 | CHRONIK=24 | BUCH=108",
+   "kasse": "4.871 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 20,3×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 24/72 hl Führung 17 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 43,
+   "kopf": "DEZEMBER=1885 | KASSE=4.761 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=14/30 | CHRONIK=24 | BUCH=111",
+   "kasse": "4.761 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 19,8×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 44,
+   "kopf": "JANUAR=1886 | KASSE=4.651 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=15/30 | CHRONIK=25 | BUCH=113",
+   "kasse": "4.651 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 19,4×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 45,
+   "kopf": "JANUAR=1886 | KASSE=4.541 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=16/30 | CHRONIK=25 | BUCH=114",
+   "kasse": "4.541 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 18,9×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 46,
+   "kopf": "JANUAR=1886 | KASSE=4.431 M | HOPFEN=0 | EISKELLER=24/135 hl | WOCHE=17/30 | CHRONIK=25 | BUCH=116",
+   "kasse": "4.431 M",
+   "keller": "24/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 18,5×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 47,
+   "kopf": "JANUAR=1886 | KASSE=4.321 M | HOPFEN=0 | EISKELLER=24/135 hl | WOCHE=18/30 | CHRONIK=25 | BUCH=117",
+   "kasse": "4.321 M",
+   "keller": "24/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 18,0×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 48,
+   "kopf": "FEBRUAR=1886 | KASSE=4.211 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=19/30 | CHRONIK=25 | BUCH=122",
+   "kasse": "4.211 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 17,5×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 49,
+   "kopf": "FEBRUAR=1886 | KASSE=4.101 M | HOPFEN=0 | EISKELLER=24/135 hl | WOCHE=20/30 | CHRONIK=25 | BUCH=125",
+   "kasse": "4.101 M",
+   "keller": "24/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 17,1×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 72/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 50,
+   "kopf": "FEBRUAR=1886 | KASSE=3.991 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=21/30 | CHRONIK=25 | BUCH=128",
+   "kasse": "3.991 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 16,6×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 51,
+   "kopf": "FEBRUAR=1886 | KASSE=3.881 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=22/30 | CHRONIK=25 | BUCH=131",
+   "kasse": "3.881 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 16,2×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 24/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 6
+  },
+  {
+   "w": 52,
+   "kopf": "MÄRZ=1886 | KASSE=3.771 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=23/30 | CHRONIK=25 | BUCH=133",
+   "kasse": "3.771 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 15,7×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 53,
+   "kopf": "MÄRZ=1886 | KASSE=3.661 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=24/30 | CHRONIK=26 | BUCH=134",
+   "kasse": "3.661 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 15,3×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 54,
+   "kopf": "MÄRZ=1886 | KASSE=3.551 M | HOPFEN=0 | EISKELLER=96/135 hl | WOCHE=25/30 | CHRONIK=26 | BUCH=135",
+   "kasse": "3.551 M",
+   "keller": "96/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 14,8×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/72 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 55,
+   "kopf": "MÄRZ=1886 | KASSE=3.441 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=26/30 | CHRONIK=26 | BUCH=137",
+   "kasse": "3.441 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 14,3×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 56,
+   "kopf": "MÄRZ=1886 | KASSE=3.331 M | HOPFEN=0 | EISKELLER=24/135 hl | WOCHE=27/30 | CHRONIK=26 | BUCH=140",
+   "kasse": "3.331 M",
+   "keller": "24/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 13,9×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 57,
+   "kopf": "APRIL=1886 | KASSE=3.221 M | HOPFEN=0 | EISKELLER=12/135 hl | WOCHE=28/30 | CHRONIK=26 | BUCH=145",
+   "kasse": "3.221 M",
+   "keller": "12/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 13,4×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 58,
+   "kopf": "APRIL=1886 | KASSE=3.111 M | HOPFEN=0 | EISKELLER=12/135 hl | WOCHE=29/30 | CHRONIK=27 | BUCH=147",
+   "kasse": "3.111 M",
+   "keller": "12/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 13,0×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 5
+  },
+  {
+   "w": 59,
+   "kopf": "APRIL=1886 | KASSE=3.001 M | HOPFEN=0 | EISKELLER=48/135 hl | WOCHE=30/30 | CHRONIK=27 | BUCH=151",
+   "kasse": "3.001 M",
+   "keller": "48/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 12,5×)",
+   "sudmarke": "DER SUD · 1885 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 60,
+   "kopf": "SEPTEMBER=1886 | KASSE=147 M | HOPFEN=0 | EISKELLER=0,0/135 hl | WOCHE=1/30 | CHRONIK=35 | BUCH=163",
+   "kasse": "147 M",
+   "keller": "0,0/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,6×)",
+   "sudmarke": "DER SUD · 1886 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 0,0/36 hl Führung 25 % Hefe aus dem Fass abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 0
+  },
+  {
+   "w": 61,
+   "kopf": "OKTOBER=1886 | KASSE=37 M | HOPFEN=0 | EISKELLER=12/135 hl | WOCHE=2/30 | CHRONIK=36 | BUCH=166",
+   "kasse": "37 M",
+   "keller": "12/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1886 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 62,
+   "kopf": "OKTOBER=1886 | KASSE=37 M | HOPFEN=0 | EISKELLER=12/135 hl | WOCHE=3/30 | CHRONIK=37 | BUCH=168",
+   "kasse": "37 M",
+   "keller": "12/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1886 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 17 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 2
+  },
+  {
+   "w": 63,
+   "kopf": "OKTOBER=1886 | KASSE=37 M | HOPFEN=0 | EISKELLER=72/135 hl | WOCHE=4/30 | CHRONIK=38 | BUCH=173",
+   "kasse": "37 M",
+   "keller": "72/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1886 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 36/36 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  },
+  {
+   "w": 64,
+   "kopf": "OKTOBER=1886 | KASSE=37 M | HOPFEN=0 | EISKELLER=36/135 hl | WOCHE=5/30 | CHRONIK=40 | BUCH=177",
+   "kasse": "37 M",
+   "keller": "36/135 hl",
+   "roh": "0",
+   "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+   "sudmarke": "DER SUD · 1886 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 48/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+   "sudAktiv": 4
+  }
+ ],
+ "schluss": {
+  "kopf": "NOVEMBER=1886 | KASSE=37 M | HOPFEN=0 | EISKELLER=60/135 hl | WOCHE=6/30 | CHRONIK=40 | BUCH=180",
+  "sudmarke": "DER SUD · 1886 Natureis aus dem Fluss · Betriebshefe aus dem Bottich Gärkeller 24/72 hl Führung 25 % Hefe im Gärbottich abernten Ohne Kühlung durchgären lassen Reinzuchthefe nach Hansen −3.400 M",
+  "deckung": "nächster Zug: Annonce im Wochenblatt — 240 M (Kasse reicht 0,2×)",
+  "gaerband": "26 Einfachbier 24 hl reif in 1 Woche"
+ }
+}

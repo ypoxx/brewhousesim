@@ -33,3 +33,25 @@ werkbank/.gitsperre
 # Python-Zwischenstand
 __pycache__/
 *.pyc
+
+# BELEGBILDER GEHOEREN NICHT IN DIE HISTORIE.
+# Am 3. August 2026 lagen 1217 Schuesse mit 3,1 GB unter werkbank/schuss/ —
+# 2,94 GB der 3,3 GB Historie dieses Zweigs. Damit war das Repo weder zu klonen
+# noch zu holen: vier Hol-Strategien sind gerissen, fuenf Container-Ruecksetzungen
+# liefen ins Leere. Die Bilder sind Arbeitsmaterial einer Messung, kein Ergebnis.
+# Das Ergebnis ist das Urteil in Worten (werkbank/urteile/) und die gemessene
+# Zahl (die .json neben dem Skript). Beides bleibt versioniert.
+#
+# Schiess weiter nach werkbank/schuss/ — die Messstaende lesen von dort. Nur
+# wandern die Bilder nicht mehr mit. Skripte (.mjs .py .sh) und Messwerte (.json)
+# sind ausgenommen und werden weiter mitgeschrieben.
+werkbank/schuss/**/*.png
+werkbank/schuss/**/*.jpg
+werkbank/schuss/**/*.jpeg
+werkbank/schuss/**/*.webp
+werkbank/schuss/**/*.gif
+werkbank/schuss/*.png
+werkbank/schuss/*.jpg
+werkbank/schuss/*.jpeg
+werkbank/schuss/*.webp
+werkbank/schuss/*.gif

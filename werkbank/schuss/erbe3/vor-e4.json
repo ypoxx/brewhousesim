@@ -1,0 +1,2099 @@
+{
+ "epoche": "4",
+ "saat": "1350",
+ "vor": [],
+ "start": {
+  "jahr": 1970,
+  "woche": 1,
+  "ende": false,
+  "kasse": 86000,
+  "amt": {
+   "nr": 1,
+   "name": "Margarete Bruckner",
+   "eig": "sparsam"
+  },
+  "erbe": {
+   "stundeJahr": 1970,
+   "wochenBisStunde": 15,
+   "uebergeben": false,
+   "form": null,
+   "leibgeding": 0,
+   "leibgedingVerfallen": false,
+   "amHaus": [],
+   "anDerPerson": [
+    "Gasthof Lindenhof · Gewohnheit",
+    "Schenke am Tor · Gewohnheit",
+    "Mühlschenke · Gewohnheit",
+    "Ausschank am Markt · Gewohnheit"
+   ],
+   "gefallen": [],
+   "geschrieben": [],
+   "vorher": null,
+   "nachher": null,
+   "keller": 140,
+   "erbteilFass": 0,
+   "nachschriftOffen": 0,
+   "nachgeschrieben": 0,
+   "alt": null,
+   "neu": null,
+   "eigenschaft": "sparsam",
+   "faktor": 0.7,
+   "fuenfterZug": null,
+   "borg": [],
+   "angefochten": 0,
+   "seelgeraet": false
+  },
+  "leiste": "DAS ERBE noch 15 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.193 DM Abfindung −55.965 DM Ohne Abfindung 0 DM",
+  "lage": 0
+ },
+ "nachVor": {
+  "jahr": 1970,
+  "woche": 1,
+  "ende": false,
+  "kasse": 86000,
+  "amt": {
+   "nr": 1,
+   "name": "Margarete Bruckner",
+   "eig": "sparsam"
+  },
+  "erbe": {
+   "stundeJahr": 1970,
+   "wochenBisStunde": 15,
+   "uebergeben": false,
+   "form": null,
+   "leibgeding": 0,
+   "leibgedingVerfallen": false,
+   "amHaus": [],
+   "anDerPerson": [
+    "Gasthof Lindenhof · Gewohnheit",
+    "Schenke am Tor · Gewohnheit",
+    "Mühlschenke · Gewohnheit",
+    "Ausschank am Markt · Gewohnheit"
+   ],
+   "gefallen": [],
+   "geschrieben": [],
+   "vorher": null,
+   "nachher": null,
+   "keller": 140,
+   "erbteilFass": 0,
+   "nachschriftOffen": 0,
+   "nachgeschrieben": 0,
+   "alt": null,
+   "neu": null,
+   "eigenschaft": "sparsam",
+   "faktor": 0.7,
+   "fuenfterZug": null,
+   "borg": [],
+   "angefochten": 0,
+   "seelgeraet": false
+  },
+  "leiste": "DAS ERBE noch 15 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.193 DM Abfindung −55.965 DM Ohne Abfindung 0 DM",
+  "lage": 0
+ },
+ "ende": {
+  "jahr": 1973,
+  "woche": 9,
+  "ende": true,
+  "kasse": 39727,
+  "amt": {
+   "nr": 2,
+   "name": "Ottmar Bruckner",
+   "eig": "streitbar"
+  },
+  "erbe": {
+   "stundeJahr": 1970,
+   "wochenBisStunde": 0,
+   "uebergeben": true,
+   "form": "stunde",
+   "leibgeding": 0,
+   "leibgedingVerfallen": false,
+   "amHaus": [],
+   "anDerPerson": [],
+   "gefallen": [
+    {
+     "schluessel": "torschenke",
+     "name": "Schenke am Tor",
+     "womit": "Gewohnheit",
+     "wert": 9360
+    },
+    {
+     "schluessel": "muehlwirt",
+     "name": "Mühlschenke",
+     "womit": "Gewohnheit",
+     "wert": 10530
+    },
+    {
+     "schluessel": "markt",
+     "name": "Ausschank am Markt",
+     "womit": "Gewohnheit",
+     "wert": 5850
+    }
+   ],
+   "geschrieben": [],
+   "vorher": {
+    "haus": 0,
+    "person": 3,
+    "summe": 25740,
+    "keller": 380,
+    "namen": [
+     "Schenke am Tor",
+     "Mühlschenke",
+     "Ausschank am Markt"
+    ]
+   },
+   "nachher": {
+    "haus": 0,
+    "person": 0,
+    "keller": 253
+   },
+   "keller": 30,
+   "erbteilFass": 127,
+   "nachschriftOffen": 2,
+   "nachgeschrieben": 0,
+   "alt": {
+    "nr": 1,
+    "name": "Margarete Bruckner",
+    "eigenschaft": "sparsam",
+    "eigenschaftName": "sparsam"
+   },
+   "neu": {
+    "nr": 2,
+    "name": "Ottmar Bruckner",
+    "eigenschaft": "streitbar",
+    "eigenschaftName": "streitbar"
+   },
+   "eigenschaft": "streitbar",
+   "faktor": 1.15,
+   "fuenfterZug": "anfechten",
+   "borg": [],
+   "angefochten": 0,
+   "seelgeraet": false
+  },
+  "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM",
+  "lage": 0
+ },
+ "zeilen": [
+  {
+   "i": 0,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −11.193 DM",
+    "erbe:uebergabe:abfindung −55.965 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 15 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.193 DM Abfindung −55.965 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 1,
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 81200,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −11.193 DM",
+    "erbe:uebergabe:abfindung −54.286 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 14 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.193 DM Abfindung −54.286 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 2,
+   "jahr": 1970,
+   "woche": 3,
+   "kasse": 76400,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −11.193 DM",
+    "erbe:uebergabe:abfindung −52.607 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 13 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.193 DM Abfindung −52.607 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 3,
+   "jahr": 1970,
+   "woche": 4,
+   "kasse": 71600,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −11.700 DM",
+    "erbe:uebergabe:abfindung −53.235 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 12 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 90 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.700 DM Abfindung −53.235 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 4,
+   "jahr": 1970,
+   "woche": 5,
+   "kasse": 66800,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −11.700 DM",
+    "erbe:uebergabe:abfindung −51.480 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 11 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 90 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −11.700 DM Abfindung −51.480 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 5,
+   "jahr": 1970,
+   "woche": 6,
+   "kasse": 62000,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −12.246 DM",
+    "erbe:uebergabe:abfindung −52.046 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 10 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 111 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −12.246 DM Abfindung −52.046 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 6,
+   "jahr": 1970,
+   "woche": 7,
+   "kasse": 57200,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −13.260 DM",
+    "erbe:uebergabe:abfindung −54.366 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 9 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 150 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.260 DM Abfindung −54.366 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 7,
+   "jahr": 1970,
+   "woche": 8,
+   "kasse": 56580,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −13.260 DM",
+    "erbe:uebergabe:abfindung −52.377 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 8 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 150 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.260 DM Abfindung −52.377 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 8,
+   "jahr": 1970,
+   "woche": 9,
+   "kasse": 55960,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −13.260 DM",
+    "erbe:uebergabe:abfindung −50.388 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 7 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 150 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.260 DM Abfindung −50.388 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 9,
+   "jahr": 1970,
+   "woche": 10,
+   "kasse": 55340,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 11,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −13.260 DM",
+    "erbe:uebergabe:abfindung −48.399 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 6 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 150 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.260 DM Abfindung −48.399 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 10,
+   "jahr": 1970,
+   "woche": 11,
+   "kasse": 54720,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 4,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −14.742 DM",
+    "erbe:uebergabe:leibgeding −13.260 DM",
+    "erbe:uebergabe:abfindung −46.410 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 5 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 4 nimmt 4 · 150 hl Festschreiben · Lindenhof −14.742 DM Versorgungszusage · jährlich −13.260 DM Abfindung −46.410 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 11,
+   "jahr": 1970,
+   "woche": 12,
+   "kasse": 54100,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −7.371 DM",
+    "erbe:uebergabe:leibgeding −9.048 DM",
+    "erbe:uebergabe:abfindung −30.311 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 4 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 150 hl Festschreiben · Mühlschenke −7.371 DM Versorgungszusage · jährlich −9.048 DM Abfindung −30.311 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 12,
+   "jahr": 1970,
+   "woche": 13,
+   "kasse": 53480,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −7.371 DM",
+    "erbe:uebergabe:leibgeding −9.594 DM",
+    "erbe:uebergabe:abfindung −30.701 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 3 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 171 hl Festschreiben · Mühlschenke −7.371 DM Versorgungszusage · jährlich −9.594 DM Abfindung −30.701 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 13,
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 52860,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −7.371 DM",
+    "erbe:uebergabe:leibgeding −10.101 DM",
+    "erbe:uebergabe:abfindung −30.808 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 2 Wochen Margarete Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 191 hl Festschreiben · Mühlschenke −7.371 DM Versorgungszusage · jährlich −10.101 DM Abfindung −30.808 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 14,
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 52240,
+   "amtNr": 1,
+   "amtName": "Margarete Bruckner",
+   "amtEig": "sparsam",
+   "uebergeben": false,
+   "form": null,
+   "amHaus": 0,
+   "person": 3,
+   "erbeMitPreis": 4,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:tafel:verschreibe −7.371 DM",
+    "erbe:uebergabe:leibgeding −10.101 DM",
+    "erbe:uebergabe:abfindung −29.293 DM",
+    "erbe:uebergabe:bruch 0 DM"
+   ],
+   "leiste": "DAS ERBE noch 1 Woche Margarete Bruckner · sparsam am Haus 0 · an der Person 3 nimmt 3 · 191 hl Festschreiben · Mühlschenke −7.371 DM Versorgungszusage · jährlich −10.101 DM Abfindung −29.293 DM Ohne Abfindung 0 DM"
+  },
+  {
+   "i": 15,
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 51620,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 16,
+   "jahr": 1970,
+   "woche": 17,
+   "kasse": 51000,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 17,
+   "jahr": 1970,
+   "woche": 18,
+   "kasse": 50380,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 18,
+   "jahr": 1970,
+   "woche": 19,
+   "kasse": 49760,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 19,
+   "jahr": 1970,
+   "woche": 20,
+   "kasse": 49140,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 20,
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 48520,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 21,
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 47900,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 22,
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 47280,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 23,
+   "jahr": 1970,
+   "woche": 24,
+   "kasse": 46660,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 24,
+   "jahr": 1970,
+   "woche": 25,
+   "kasse": 46040,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 25,
+   "jahr": 1970,
+   "woche": 26,
+   "kasse": 45420,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 26,
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 44800,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 27,
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 44180,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 28,
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 43560,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 29,
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 42940,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 30,
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 68652,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 31,
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 68020,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 32,
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 67388,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 33,
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 66756,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 34,
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 66124,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 35,
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 65492,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 36,
+   "jahr": 1971,
+   "woche": 7,
+   "kasse": 64860,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 37,
+   "jahr": 1971,
+   "woche": 8,
+   "kasse": 64228,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 38,
+   "jahr": 1971,
+   "woche": 9,
+   "kasse": 63596,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 39,
+   "jahr": 1971,
+   "woche": 10,
+   "kasse": 62964,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 40,
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 62332,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −41.441 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 3 Häuser −41.441 DM"
+  },
+  {
+   "i": 41,
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 61700,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 42,
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 61068,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 43,
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 60436,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 44,
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 59804,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 45,
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 59172,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 46,
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 58540,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 47,
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 57908,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 48,
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 57276,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 49,
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 56644,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 50,
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 56012,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 51,
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 55380,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 52,
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 54748,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 53,
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 54116,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 54,
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 53484,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 55,
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 52852,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 56,
+   "jahr": 1971,
+   "woche": 27,
+   "kasse": 52220,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 57,
+   "jahr": 1971,
+   "woche": 28,
+   "kasse": 51588,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 58,
+   "jahr": 1971,
+   "woche": 29,
+   "kasse": 50956,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 59,
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 50324,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 60,
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 48071,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 0,
+   "alleMitPreis": 8,
+   "erbeZuege": [],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 61,
+   "jahr": 1972,
+   "woche": 2,
+   "kasse": 47426,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 10,
+   "erbeZuege": [
+    "erbe:nachschrift −26.372 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −26.372 DM"
+  },
+  {
+   "i": 62,
+   "jahr": 1972,
+   "woche": 3,
+   "kasse": 46781,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 13,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 63,
+   "jahr": 1972,
+   "woche": 4,
+   "kasse": 46136,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 13,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 64,
+   "jahr": 1972,
+   "woche": 5,
+   "kasse": 45491,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 12,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 65,
+   "jahr": 1972,
+   "woche": 6,
+   "kasse": 44846,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 12,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 66,
+   "jahr": 1972,
+   "woche": 7,
+   "kasse": 44201,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 12,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 67,
+   "jahr": 1972,
+   "woche": 8,
+   "kasse": 43556,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 68,
+   "jahr": 1972,
+   "woche": 9,
+   "kasse": 42911,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 69,
+   "jahr": 1972,
+   "woche": 10,
+   "kasse": 42266,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 70,
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 41621,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 71,
+   "jahr": 1972,
+   "woche": 12,
+   "kasse": 40976,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 72,
+   "jahr": 1972,
+   "woche": 13,
+   "kasse": 40331,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 73,
+   "jahr": 1972,
+   "woche": 14,
+   "kasse": 39686,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 74,
+   "jahr": 1972,
+   "woche": 15,
+   "kasse": 39041,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 75,
+   "jahr": 1972,
+   "woche": 16,
+   "kasse": 38396,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 76,
+   "jahr": 1972,
+   "woche": 17,
+   "kasse": 37751,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 77,
+   "jahr": 1972,
+   "woche": 18,
+   "kasse": 37106,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 78,
+   "jahr": 1972,
+   "woche": 19,
+   "kasse": 36461,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 79,
+   "jahr": 1972,
+   "woche": 20,
+   "kasse": 35816,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 80,
+   "jahr": 1972,
+   "woche": 21,
+   "kasse": 35171,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 81,
+   "jahr": 1972,
+   "woche": 22,
+   "kasse": 34526,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 82,
+   "jahr": 1972,
+   "woche": 23,
+   "kasse": 33881,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 83,
+   "jahr": 1972,
+   "woche": 24,
+   "kasse": 33236,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 84,
+   "jahr": 1972,
+   "woche": 25,
+   "kasse": 32591,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −24.488 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 85,
+   "jahr": 1972,
+   "woche": 26,
+   "kasse": 31946,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 86,
+   "jahr": 1972,
+   "woche": 27,
+   "kasse": 31301,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 87,
+   "jahr": 1972,
+   "woche": 28,
+   "kasse": 30656,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 88,
+   "jahr": 1972,
+   "woche": 29,
+   "kasse": 30011,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 89,
+   "jahr": 1972,
+   "woche": 30,
+   "kasse": 29366,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 8,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 90,
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 27951,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 9,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 91,
+   "jahr": 1973,
+   "woche": 2,
+   "kasse": 27293,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 92,
+   "jahr": 1973,
+   "woche": 3,
+   "kasse": 26635,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 93,
+   "jahr": 1973,
+   "woche": 4,
+   "kasse": 25977,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 94,
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 25319,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 95,
+   "jahr": 1973,
+   "woche": 6,
+   "kasse": 24661,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 7,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 96,
+   "jahr": 1973,
+   "woche": 7,
+   "kasse": 24003,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 1,
+   "alleMitPreis": 6,
+   "erbeZuege": [
+    "erbe:nachschrift −9.418 DM"
+   ],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 1 Haus −9.418 DM"
+  },
+  {
+   "i": 97,
+   "jahr": 1973,
+   "woche": 8,
+   "kasse": 23345,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 0,
+   "alleMitPreis": 5,
+   "erbeZuege": [],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  },
+  {
+   "i": 98,
+   "jahr": 1973,
+   "woche": 9,
+   "kasse": 39727,
+   "amtNr": 2,
+   "amtName": "Ottmar Bruckner",
+   "amtEig": "streitbar",
+   "uebergeben": true,
+   "form": "stunde",
+   "amHaus": 0,
+   "person": 0,
+   "erbeMitPreis": 0,
+   "alleMitPreis": 0,
+   "erbeZuege": [],
+   "leiste": "DAS ERBE II. Hand Ottmar Bruckner · streitbar am Haus 0 · an der Person 0 DIE STUNDE · Feder 1,15× nahm 3 · 191 hl Nachschrift · 2 Häuser −24.488 DM"
+  }
+ ],
+ "fehler": [],
+ "lage": []
+}

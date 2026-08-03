@@ -1,0 +1,4317 @@
+{
+ "epoche": 3,
+ "wochen": 400,
+ "fehler": [],
+ "abgebrochen": null,
+ "zielGesetzt": 1,
+ "festGesetzt": 0,
+ "kasseMin": 29,
+ "kasseMax": 13681,
+ "leiter": [
+  {
+   "jahr": "1884",
+   "kasse": "14.250",
+   "billigst": "2.800",
+   "mal": 5.09
+  },
+  {
+   "jahr": "1885",
+   "kasse": "9.038",
+   "billigst": "1.800",
+   "mal": 5.02
+  },
+  {
+   "jahr": "1886",
+   "kasse": "7.103",
+   "billigst": "1.600",
+   "mal": 4.44
+  },
+  {
+   "jahr": "1887",
+   "kasse": "5.678",
+   "billigst": "4.700",
+   "mal": 1.21
+  },
+  {
+   "jahr": "1888",
+   "kasse": "4.423",
+   "billigst": "2.700",
+   "mal": 1.64
+  },
+  {
+   "jahr": "1889",
+   "kasse": "3.668",
+   "billigst": "2.800",
+   "mal": 1.31
+  },
+  {
+   "jahr": "1890",
+   "kasse": "484",
+   "billigst": "4.700",
+   "mal": 0.1
+  },
+  {
+   "jahr": "1891",
+   "kasse": "4.066",
+   "billigst": "4.900",
+   "mal": 0.83
+  },
+  {
+   "jahr": "1892",
+   "kasse": "5.928",
+   "billigst": "5.500",
+   "mal": 1.08
+  },
+  {
+   "jahr": "1893",
+   "kasse": "6.327",
+   "billigst": "6.000",
+   "mal": 1.05
+  },
+  {
+   "jahr": "1894",
+   "kasse": "8.742",
+   "billigst": "6.300",
+   "mal": 1.39
+  },
+  {
+   "jahr": "1895",
+   "kasse": "9.563",
+   "billigst": "7.100",
+   "mal": 1.35
+  },
+  {
+   "jahr": "1896",
+   "kasse": "11.138",
+   "billigst": "7.900",
+   "mal": 1.41
+  },
+  {
+   "jahr": "1897",
+   "kasse": "11.719",
+   "billigst": "8.400",
+   "mal": 1.4
+  }
+ ],
+ "schluss": {
+  "jahr": 1897,
+  "woche": 11,
+  "kasse": 10197,
+  "lage": 0
+ },
+ "jahre": [
+  {
+   "jahr": 1884,
+   "kasseMichaeli": 11450,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1885,
+   "kasseMichaeli": 9052,
+   "leiter": []
+  },
+  {
+   "jahr": 1886,
+   "kasseMichaeli": 5505,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ],
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1887,
+   "kasseMichaeli": 5682,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ],
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1888,
+   "kasseMichaeli": 4424,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ],
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1889,
+   "kasseMichaeli": 3669,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ],
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1890,
+   "kasseMichaeli": 486,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ],
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1891,
+   "kasseMichaeli": 4068,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ],
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ],
+    [
+     "1891",
+     "4.066",
+     "4.900",
+     "0,83×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1892,
+   "kasseMichaeli": 5931,
+   "leiter": [
+    [
+     "1884",
+     "14.250",
+     "2.800",
+     "5,09×"
+    ],
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ],
+    [
+     "1891",
+     "4.066",
+     "4.900",
+     "0,83×"
+    ],
+    [
+     "1892",
+     "5.928",
+     "5.500",
+     "1,08×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1893,
+   "kasseMichaeli": 6329,
+   "leiter": [
+    [
+     "1885",
+     "9.038",
+     "1.800",
+     "5,02×"
+    ],
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ],
+    [
+     "1891",
+     "4.066",
+     "4.900",
+     "0,83×"
+    ],
+    [
+     "1892",
+     "5.928",
+     "5.500",
+     "1,08×"
+    ],
+    [
+     "1893",
+     "6.327",
+     "6.000",
+     "1,05×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1894,
+   "kasseMichaeli": 8744,
+   "leiter": [
+    [
+     "1886",
+     "7.103",
+     "1.600",
+     "4,44×"
+    ],
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ],
+    [
+     "1891",
+     "4.066",
+     "4.900",
+     "0,83×"
+    ],
+    [
+     "1892",
+     "5.928",
+     "5.500",
+     "1,08×"
+    ],
+    [
+     "1893",
+     "6.327",
+     "6.000",
+     "1,05×"
+    ],
+    [
+     "1894",
+     "8.742",
+     "6.300",
+     "1,39×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1895,
+   "kasseMichaeli": 9565,
+   "leiter": [
+    [
+     "1887",
+     "5.678",
+     "4.700",
+     "1,21×"
+    ],
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ],
+    [
+     "1891",
+     "4.066",
+     "4.900",
+     "0,83×"
+    ],
+    [
+     "1892",
+     "5.928",
+     "5.500",
+     "1,08×"
+    ],
+    [
+     "1893",
+     "6.327",
+     "6.000",
+     "1,05×"
+    ],
+    [
+     "1894",
+     "8.742",
+     "6.300",
+     "1,39×"
+    ],
+    [
+     "1895",
+     "9.563",
+     "7.100",
+     "1,35×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1896,
+   "kasseMichaeli": 11140,
+   "leiter": [
+    [
+     "1888",
+     "4.423",
+     "2.700",
+     "1,64×"
+    ],
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ],
+    [
+     "1891",
+     "4.066",
+     "4.900",
+     "0,83×"
+    ],
+    [
+     "1892",
+     "5.928",
+     "5.500",
+     "1,08×"
+    ],
+    [
+     "1893",
+     "6.327",
+     "6.000",
+     "1,05×"
+    ],
+    [
+     "1894",
+     "8.742",
+     "6.300",
+     "1,39×"
+    ],
+    [
+     "1895",
+     "9.563",
+     "7.100",
+     "1,35×"
+    ],
+    [
+     "1896",
+     "11.138",
+     "7.900",
+     "1,41×"
+    ]
+   ]
+  },
+  {
+   "jahr": 1897,
+   "kasseMichaeli": 11721,
+   "leiter": [
+    [
+     "1889",
+     "3.668",
+     "2.800",
+     "1,31×"
+    ],
+    [
+     "1890",
+     "484",
+     "4.700",
+     "0,10×"
+    ],
+    [
+     "1891",
+     "4.066",
+     "4.900",
+     "0,83×"
+    ],
+    [
+     "1892",
+     "5.928",
+     "5.500",
+     "1,08×"
+    ],
+    [
+     "1893",
+     "6.327",
+     "6.000",
+     "1,05×"
+    ],
+    [
+     "1894",
+     "8.742",
+     "6.300",
+     "1,39×"
+    ],
+    [
+     "1895",
+     "9.563",
+     "7.100",
+     "1,35×"
+    ],
+    [
+     "1896",
+     "11.138",
+     "7.900",
+     "1,41×"
+    ],
+    [
+     "1897",
+     "11.719",
+     "8.400",
+     "1,40×"
+    ]
+   ]
+  }
+ ],
+ "reihe": [
+  {
+   "n": 0,
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 11450,
+   "rohstoff": 120,
+   "faesser": 7,
+   "plaetze": 90
+  },
+  {
+   "n": 1,
+   "jahr": 1884,
+   "woche": 2,
+   "kasse": 10830,
+   "rohstoff": 60,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 2,
+   "jahr": 1884,
+   "woche": 3,
+   "kasse": 9208,
+   "rohstoff": 330,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 3,
+   "jahr": 1884,
+   "woche": 4,
+   "kasse": 9102,
+   "rohstoff": 300,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 4,
+   "jahr": 1884,
+   "woche": 5,
+   "kasse": 9442,
+   "rohstoff": 300,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 5,
+   "jahr": 1884,
+   "woche": 6,
+   "kasse": 9333,
+   "rohstoff": 270,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 6,
+   "jahr": 1884,
+   "woche": 7,
+   "kasse": 9215,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 7,
+   "jahr": 1884,
+   "woche": 8,
+   "kasse": 9545,
+   "rohstoff": 240,
+   "faesser": 82,
+   "plaetze": 90
+  },
+  {
+   "n": 8,
+   "jahr": 1884,
+   "woche": 9,
+   "kasse": 9875,
+   "rohstoff": 240,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 9,
+   "jahr": 1884,
+   "woche": 10,
+   "kasse": 9757,
+   "rohstoff": 210,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 10,
+   "jahr": 1884,
+   "woche": 11,
+   "kasse": 10106,
+   "rohstoff": 210,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 11,
+   "jahr": 1884,
+   "woche": 12,
+   "kasse": 10455,
+   "rohstoff": 210,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 12,
+   "jahr": 1884,
+   "woche": 13,
+   "kasse": 10356,
+   "rohstoff": 180,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 13,
+   "jahr": 1884,
+   "woche": 14,
+   "kasse": 10703,
+   "rohstoff": 180,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 14,
+   "jahr": 1884,
+   "woche": 15,
+   "kasse": 11050,
+   "rohstoff": 180,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 15,
+   "jahr": 1884,
+   "woche": 16,
+   "kasse": 11397,
+   "rohstoff": 180,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 16,
+   "jahr": 1884,
+   "woche": 17,
+   "kasse": 11250,
+   "rohstoff": 150,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 17,
+   "jahr": 1884,
+   "woche": 18,
+   "kasse": 11551,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 18,
+   "jahr": 1884,
+   "woche": 19,
+   "kasse": 10954,
+   "rohstoff": 90,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 19,
+   "jahr": 1884,
+   "woche": 20,
+   "kasse": 9207,
+   "rohstoff": 330,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 20,
+   "jahr": 1884,
+   "woche": 21,
+   "kasse": 9516,
+   "rohstoff": 330,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 21,
+   "jahr": 1884,
+   "woche": 22,
+   "kasse": 8946,
+   "rohstoff": 270,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 22,
+   "jahr": 1884,
+   "woche": 23,
+   "kasse": 9270,
+   "rohstoff": 270,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 23,
+   "jahr": 1884,
+   "woche": 24,
+   "kasse": 9613,
+   "rohstoff": 270,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 24,
+   "jahr": 1884,
+   "woche": 25,
+   "kasse": 9508,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 25,
+   "jahr": 1884,
+   "woche": 26,
+   "kasse": 9851,
+   "rohstoff": 240,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 26,
+   "jahr": 1884,
+   "woche": 27,
+   "kasse": 9744,
+   "rohstoff": 210,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 27,
+   "jahr": 1884,
+   "woche": 28,
+   "kasse": 10085,
+   "rohstoff": 210,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 28,
+   "jahr": 1884,
+   "woche": 29,
+   "kasse": 10426,
+   "rohstoff": 210,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 29,
+   "jahr": 1884,
+   "woche": 30,
+   "kasse": 10767,
+   "rohstoff": 210,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 30,
+   "jahr": 1885,
+   "woche": 1,
+   "kasse": 9052,
+   "rohstoff": 210,
+   "faesser": 14,
+   "plaetze": 90
+  },
+  {
+   "n": 31,
+   "jahr": 1885,
+   "woche": 2,
+   "kasse": 8810,
+   "rohstoff": 150,
+   "faesser": 26,
+   "plaetze": 90
+  },
+  {
+   "n": 32,
+   "jahr": 1885,
+   "woche": 3,
+   "kasse": 7955,
+   "rohstoff": 90,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 33,
+   "jahr": 1885,
+   "woche": 4,
+   "kasse": 7931,
+   "rohstoff": 90,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 34,
+   "jahr": 1885,
+   "woche": 5,
+   "kasse": 5873,
+   "rohstoff": 330,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 35,
+   "jahr": 1885,
+   "woche": 6,
+   "kasse": 6045,
+   "rohstoff": 330,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 36,
+   "jahr": 1885,
+   "woche": 7,
+   "kasse": 5772,
+   "rohstoff": 300,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 37,
+   "jahr": 1885,
+   "woche": 8,
+   "kasse": 5498,
+   "rohstoff": 270,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 38,
+   "jahr": 1885,
+   "woche": 9,
+   "kasse": 5669,
+   "rohstoff": 270,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 39,
+   "jahr": 1885,
+   "woche": 10,
+   "kasse": 5841,
+   "rohstoff": 270,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 40,
+   "jahr": 1885,
+   "woche": 11,
+   "kasse": 5567,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 41,
+   "jahr": 1885,
+   "woche": 12,
+   "kasse": 5738,
+   "rohstoff": 240,
+   "faesser": 82,
+   "plaetze": 90
+  },
+  {
+   "n": 42,
+   "jahr": 1885,
+   "woche": 13,
+   "kasse": 5908,
+   "rohstoff": 240,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 43,
+   "jahr": 1885,
+   "woche": 14,
+   "kasse": 6078,
+   "rohstoff": 240,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 44,
+   "jahr": 1885,
+   "woche": 15,
+   "kasse": 6248,
+   "rohstoff": 240,
+   "faesser": 86,
+   "plaetze": 90
+  },
+  {
+   "n": 45,
+   "jahr": 1885,
+   "woche": 16,
+   "kasse": 6417,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 46,
+   "jahr": 1885,
+   "woche": 17,
+   "kasse": 6587,
+   "rohstoff": 240,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 47,
+   "jahr": 1885,
+   "woche": 18,
+   "kasse": 6756,
+   "rohstoff": 240,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 48,
+   "jahr": 1885,
+   "woche": 19,
+   "kasse": 6925,
+   "rohstoff": 240,
+   "faesser": 84,
+   "plaetze": 90
+  },
+  {
+   "n": 49,
+   "jahr": 1885,
+   "woche": 20,
+   "kasse": 7094,
+   "rohstoff": 240,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 50,
+   "jahr": 1885,
+   "woche": 21,
+   "kasse": 7263,
+   "rohstoff": 240,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 51,
+   "jahr": 1885,
+   "woche": 22,
+   "kasse": 7432,
+   "rohstoff": 240,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 52,
+   "jahr": 1885,
+   "woche": 23,
+   "kasse": 7602,
+   "rohstoff": 240,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 53,
+   "jahr": 1885,
+   "woche": 24,
+   "kasse": 7771,
+   "rohstoff": 240,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 54,
+   "jahr": 1885,
+   "woche": 25,
+   "kasse": 7940,
+   "rohstoff": 240,
+   "faesser": 60,
+   "plaetze": 90
+  },
+  {
+   "n": 55,
+   "jahr": 1885,
+   "woche": 26,
+   "kasse": 8109,
+   "rohstoff": 240,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 56,
+   "jahr": 1885,
+   "woche": 27,
+   "kasse": 8278,
+   "rohstoff": 240,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 57,
+   "jahr": 1885,
+   "woche": 28,
+   "kasse": 8448,
+   "rohstoff": 240,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 58,
+   "jahr": 1885,
+   "woche": 29,
+   "kasse": 8617,
+   "rohstoff": 240,
+   "faesser": 44,
+   "plaetze": 90
+  },
+  {
+   "n": 59,
+   "jahr": 1885,
+   "woche": 30,
+   "kasse": 8786,
+   "rohstoff": 240,
+   "faesser": 40,
+   "plaetze": 90
+  },
+  {
+   "n": 60,
+   "jahr": 1886,
+   "woche": 1,
+   "kasse": 5505,
+   "rohstoff": 240,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 61,
+   "jahr": 1886,
+   "woche": 2,
+   "kasse": 4595,
+   "rohstoff": 180,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 62,
+   "jahr": 1886,
+   "woche": 3,
+   "kasse": 3685,
+   "rohstoff": 120,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 63,
+   "jahr": 1886,
+   "woche": 4,
+   "kasse": 3661,
+   "rohstoff": 120,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 64,
+   "jahr": 1886,
+   "woche": 5,
+   "kasse": 4119,
+   "rohstoff": 120,
+   "faesser": 40,
+   "plaetze": 90
+  },
+  {
+   "n": 65,
+   "jahr": 1886,
+   "woche": 6,
+   "kasse": 4577,
+   "rohstoff": 120,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 66,
+   "jahr": 1886,
+   "woche": 7,
+   "kasse": 5035,
+   "rohstoff": 120,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 67,
+   "jahr": 1886,
+   "woche": 8,
+   "kasse": 5493,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 68,
+   "jahr": 1886,
+   "woche": 9,
+   "kasse": 5065,
+   "rohstoff": 60,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 69,
+   "jahr": 1886,
+   "woche": 10,
+   "kasse": 3501,
+   "rohstoff": 300,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 70,
+   "jahr": 1886,
+   "woche": 11,
+   "kasse": 3516,
+   "rohstoff": 270,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 71,
+   "jahr": 1886,
+   "woche": 12,
+   "kasse": 3974,
+   "rohstoff": 270,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 72,
+   "jahr": 1886,
+   "woche": 13,
+   "kasse": 3989,
+   "rohstoff": 240,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 73,
+   "jahr": 1886,
+   "woche": 14,
+   "kasse": 4004,
+   "rohstoff": 210,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 74,
+   "jahr": 1886,
+   "woche": 15,
+   "kasse": 4462,
+   "rohstoff": 210,
+   "faesser": 82,
+   "plaetze": 90
+  },
+  {
+   "n": 75,
+   "jahr": 1886,
+   "woche": 16,
+   "kasse": 4920,
+   "rohstoff": 210,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 76,
+   "jahr": 1886,
+   "woche": 17,
+   "kasse": 4935,
+   "rohstoff": 180,
+   "faesser": 86,
+   "plaetze": 90
+  },
+  {
+   "n": 77,
+   "jahr": 1886,
+   "woche": 18,
+   "kasse": 5393,
+   "rohstoff": 180,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 78,
+   "jahr": 1886,
+   "woche": 19,
+   "kasse": 5851,
+   "rohstoff": 180,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 79,
+   "jahr": 1886,
+   "woche": 20,
+   "kasse": 5866,
+   "rohstoff": 150,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 80,
+   "jahr": 1886,
+   "woche": 21,
+   "kasse": 6324,
+   "rohstoff": 150,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 81,
+   "jahr": 1886,
+   "woche": 22,
+   "kasse": 6782,
+   "rohstoff": 150,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 82,
+   "jahr": 1886,
+   "woche": 23,
+   "kasse": 7240,
+   "rohstoff": 150,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 83,
+   "jahr": 1886,
+   "woche": 24,
+   "kasse": 7700,
+   "rohstoff": 150,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 84,
+   "jahr": 1886,
+   "woche": 25,
+   "kasse": 8160,
+   "rohstoff": 150,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 85,
+   "jahr": 1886,
+   "woche": 26,
+   "kasse": 8620,
+   "rohstoff": 150,
+   "faesser": 66,
+   "plaetze": 90
+  },
+  {
+   "n": 86,
+   "jahr": 1886,
+   "woche": 27,
+   "kasse": 9080,
+   "rohstoff": 150,
+   "faesser": 58,
+   "plaetze": 90
+  },
+  {
+   "n": 87,
+   "jahr": 1886,
+   "woche": 28,
+   "kasse": 9540,
+   "rohstoff": 150,
+   "faesser": 50,
+   "plaetze": 90
+  },
+  {
+   "n": 88,
+   "jahr": 1886,
+   "woche": 29,
+   "kasse": 10000,
+   "rohstoff": 150,
+   "faesser": 42,
+   "plaetze": 90
+  },
+  {
+   "n": 89,
+   "jahr": 1886,
+   "woche": 30,
+   "kasse": 10460,
+   "rohstoff": 150,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 90,
+   "jahr": 1887,
+   "woche": 1,
+   "kasse": 5682,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 91,
+   "jahr": 1887,
+   "woche": 2,
+   "kasse": 5658,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 92,
+   "jahr": 1887,
+   "woche": 3,
+   "kasse": 5634,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 93,
+   "jahr": 1887,
+   "woche": 4,
+   "kasse": 5610,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 94,
+   "jahr": 1887,
+   "woche": 5,
+   "kasse": 5720,
+   "rohstoff": 150,
+   "faesser": 12,
+   "plaetze": 90
+  },
+  {
+   "n": 95,
+   "jahr": 1887,
+   "woche": 6,
+   "kasse": 5829,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 96,
+   "jahr": 1887,
+   "woche": 7,
+   "kasse": 5938,
+   "rohstoff": 150,
+   "faesser": 4,
+   "plaetze": 90
+  },
+  {
+   "n": 97,
+   "jahr": 1887,
+   "woche": 8,
+   "kasse": 5930,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 98,
+   "jahr": 1887,
+   "woche": 9,
+   "kasse": 5025,
+   "rohstoff": 90,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 99,
+   "jahr": 1887,
+   "woche": 10,
+   "kasse": 2991,
+   "rohstoff": 330,
+   "faesser": 40,
+   "plaetze": 90
+  },
+  {
+   "n": 100,
+   "jahr": 1887,
+   "woche": 11,
+   "kasse": 2086,
+   "rohstoff": 270,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 101,
+   "jahr": 1887,
+   "woche": 12,
+   "kasse": 2062,
+   "rohstoff": 270,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 102,
+   "jahr": 1887,
+   "woche": 13,
+   "kasse": 2231,
+   "rohstoff": 270,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 103,
+   "jahr": 1887,
+   "woche": 14,
+   "kasse": 2399,
+   "rohstoff": 270,
+   "faesser": 62,
+   "plaetze": 90
+  },
+  {
+   "n": 104,
+   "jahr": 1887,
+   "woche": 15,
+   "kasse": 2127,
+   "rohstoff": 240,
+   "faesser": 82,
+   "plaetze": 90
+  },
+  {
+   "n": 105,
+   "jahr": 1887,
+   "woche": 16,
+   "kasse": 2295,
+   "rohstoff": 240,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 106,
+   "jahr": 1887,
+   "woche": 17,
+   "kasse": 2464,
+   "rohstoff": 240,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 107,
+   "jahr": 1887,
+   "woche": 18,
+   "kasse": 2632,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 108,
+   "jahr": 1887,
+   "woche": 19,
+   "kasse": 2800,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 109,
+   "jahr": 1887,
+   "woche": 20,
+   "kasse": 2968,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 110,
+   "jahr": 1887,
+   "woche": 21,
+   "kasse": 3136,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 111,
+   "jahr": 1887,
+   "woche": 22,
+   "kasse": 3305,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 112,
+   "jahr": 1887,
+   "woche": 23,
+   "kasse": 3473,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 113,
+   "jahr": 1887,
+   "woche": 24,
+   "kasse": 3641,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 114,
+   "jahr": 1887,
+   "woche": 25,
+   "kasse": 3809,
+   "rohstoff": 240,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 115,
+   "jahr": 1887,
+   "woche": 26,
+   "kasse": 3977,
+   "rohstoff": 240,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 116,
+   "jahr": 1887,
+   "woche": 27,
+   "kasse": 4146,
+   "rohstoff": 240,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 117,
+   "jahr": 1887,
+   "woche": 28,
+   "kasse": 4314,
+   "rohstoff": 240,
+   "faesser": 26,
+   "plaetze": 90
+  },
+  {
+   "n": 118,
+   "jahr": 1887,
+   "woche": 29,
+   "kasse": 4482,
+   "rohstoff": 240,
+   "faesser": 22,
+   "plaetze": 90
+  },
+  {
+   "n": 119,
+   "jahr": 1887,
+   "woche": 30,
+   "kasse": 4650,
+   "rohstoff": 240,
+   "faesser": 18,
+   "plaetze": 90
+  },
+  {
+   "n": 120,
+   "jahr": 1888,
+   "woche": 1,
+   "kasse": 4424,
+   "rohstoff": 240,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 121,
+   "jahr": 1888,
+   "woche": 2,
+   "kasse": 4401,
+   "rohstoff": 240,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 122,
+   "jahr": 1888,
+   "woche": 3,
+   "kasse": 4378,
+   "rohstoff": 240,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 123,
+   "jahr": 1888,
+   "woche": 4,
+   "kasse": 4420,
+   "rohstoff": 240,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 124,
+   "jahr": 1888,
+   "woche": 5,
+   "kasse": 4461,
+   "rohstoff": 240,
+   "faesser": 20,
+   "plaetze": 90
+  },
+  {
+   "n": 125,
+   "jahr": 1888,
+   "woche": 6,
+   "kasse": 4502,
+   "rohstoff": 240,
+   "faesser": 20,
+   "plaetze": 90
+  },
+  {
+   "n": 126,
+   "jahr": 1888,
+   "woche": 7,
+   "kasse": 4543,
+   "rohstoff": 240,
+   "faesser": 12,
+   "plaetze": 90
+  },
+  {
+   "n": 127,
+   "jahr": 1888,
+   "woche": 8,
+   "kasse": 4584,
+   "rohstoff": 240,
+   "faesser": 4,
+   "plaetze": 90
+  },
+  {
+   "n": 128,
+   "jahr": 1888,
+   "woche": 9,
+   "kasse": 3751,
+   "rohstoff": 180,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 129,
+   "jahr": 1888,
+   "woche": 10,
+   "kasse": 2854,
+   "rohstoff": 120,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 130,
+   "jahr": 1888,
+   "woche": 11,
+   "kasse": 2394,
+   "rohstoff": 90,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 131,
+   "jahr": 1888,
+   "woche": 12,
+   "kasse": 1934,
+   "rohstoff": 60,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 132,
+   "jahr": 1888,
+   "woche": 13,
+   "kasse": 2151,
+   "rohstoff": 60,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 133,
+   "jahr": 1888,
+   "woche": 14,
+   "kasse": 1932,
+   "rohstoff": 30,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 134,
+   "jahr": 1888,
+   "woche": 15,
+   "kasse": 2149,
+   "rohstoff": 30,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 135,
+   "jahr": 1888,
+   "woche": 16,
+   "kasse": 2366,
+   "rohstoff": 30,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 136,
+   "jahr": 1888,
+   "woche": 17,
+   "kasse": 2583,
+   "rohstoff": 30,
+   "faesser": 54,
+   "plaetze": 90
+  },
+  {
+   "n": 137,
+   "jahr": 1888,
+   "woche": 18,
+   "kasse": 2363,
+   "rohstoff": 0,
+   "faesser": 62,
+   "plaetze": 90
+  },
+  {
+   "n": 138,
+   "jahr": 1888,
+   "woche": 19,
+   "kasse": 2581,
+   "rohstoff": 0,
+   "faesser": 58,
+   "plaetze": 90
+  },
+  {
+   "n": 139,
+   "jahr": 1888,
+   "woche": 20,
+   "kasse": 2798,
+   "rohstoff": 0,
+   "faesser": 60,
+   "plaetze": 90
+  },
+  {
+   "n": 140,
+   "jahr": 1888,
+   "woche": 21,
+   "kasse": 3015,
+   "rohstoff": 0,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 141,
+   "jahr": 1888,
+   "woche": 22,
+   "kasse": 3232,
+   "rohstoff": 0,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 142,
+   "jahr": 1888,
+   "woche": 23,
+   "kasse": 2327,
+   "rohstoff": 300,
+   "faesser": 84,
+   "plaetze": 90
+  },
+  {
+   "n": 143,
+   "jahr": 1888,
+   "woche": 24,
+   "kasse": 2544,
+   "rohstoff": 300,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 144,
+   "jahr": 1888,
+   "woche": 25,
+   "kasse": 2761,
+   "rohstoff": 300,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 145,
+   "jahr": 1888,
+   "woche": 26,
+   "kasse": 2978,
+   "rohstoff": 300,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 146,
+   "jahr": 1888,
+   "woche": 27,
+   "kasse": 3195,
+   "rohstoff": 300,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 147,
+   "jahr": 1888,
+   "woche": 28,
+   "kasse": 3413,
+   "rohstoff": 300,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 148,
+   "jahr": 1888,
+   "woche": 29,
+   "kasse": 3630,
+   "rohstoff": 300,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 149,
+   "jahr": 1888,
+   "woche": 30,
+   "kasse": 3847,
+   "rohstoff": 300,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 150,
+   "jahr": 1889,
+   "woche": 1,
+   "kasse": 3669,
+   "rohstoff": 300,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 151,
+   "jahr": 1889,
+   "woche": 2,
+   "kasse": 3646,
+   "rohstoff": 300,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 152,
+   "jahr": 1889,
+   "woche": 3,
+   "kasse": 3623,
+   "rohstoff": 300,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 153,
+   "jahr": 1889,
+   "woche": 4,
+   "kasse": 3744,
+   "rohstoff": 300,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 154,
+   "jahr": 1889,
+   "woche": 5,
+   "kasse": 3864,
+   "rohstoff": 300,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 155,
+   "jahr": 1889,
+   "woche": 6,
+   "kasse": 3984,
+   "rohstoff": 300,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 156,
+   "jahr": 1889,
+   "woche": 7,
+   "kasse": 4104,
+   "rohstoff": 300,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 157,
+   "jahr": 1889,
+   "woche": 8,
+   "kasse": 4225,
+   "rohstoff": 300,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 158,
+   "jahr": 1889,
+   "woche": 9,
+   "kasse": 3476,
+   "rohstoff": 240,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 159,
+   "jahr": 1889,
+   "woche": 10,
+   "kasse": 2584,
+   "rohstoff": 180,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 160,
+   "jahr": 1889,
+   "woche": 11,
+   "kasse": 2127,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 161,
+   "jahr": 1889,
+   "woche": 12,
+   "kasse": 2104,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 162,
+   "jahr": 1889,
+   "woche": 13,
+   "kasse": 2139,
+   "rohstoff": 120,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 163,
+   "jahr": 1889,
+   "woche": 14,
+   "kasse": 2175,
+   "rohstoff": 90,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 164,
+   "jahr": 1889,
+   "woche": 15,
+   "kasse": 2644,
+   "rohstoff": 90,
+   "faesser": 46,
+   "plaetze": 90
+  },
+  {
+   "n": 165,
+   "jahr": 1889,
+   "woche": 16,
+   "kasse": 2244,
+   "rohstoff": 30,
+   "faesser": 86,
+   "plaetze": 90
+  },
+  {
+   "n": 166,
+   "jahr": 1889,
+   "woche": 17,
+   "kasse": 2714,
+   "rohstoff": 30,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 167,
+   "jahr": 1889,
+   "woche": 18,
+   "kasse": 2749,
+   "rohstoff": 0,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 168,
+   "jahr": 1889,
+   "woche": 19,
+   "kasse": 3219,
+   "rohstoff": 0,
+   "faesser": 42,
+   "plaetze": 90
+  },
+  {
+   "n": 169,
+   "jahr": 1889,
+   "woche": 20,
+   "kasse": 2572,
+   "rohstoff": 300,
+   "faesser": 34,
+   "plaetze": 90
+  },
+  {
+   "n": 170,
+   "jahr": 1889,
+   "woche": 21,
+   "kasse": 2173,
+   "rohstoff": 240,
+   "faesser": 26,
+   "plaetze": 90
+  },
+  {
+   "n": 171,
+   "jahr": 1889,
+   "woche": 22,
+   "kasse": 1773,
+   "rohstoff": 180,
+   "faesser": 66,
+   "plaetze": 90
+  },
+  {
+   "n": 172,
+   "jahr": 1889,
+   "woche": 23,
+   "kasse": 2242,
+   "rohstoff": 180,
+   "faesser": 58,
+   "plaetze": 90
+  },
+  {
+   "n": 173,
+   "jahr": 1889,
+   "woche": 24,
+   "kasse": 2712,
+   "rohstoff": 180,
+   "faesser": 50,
+   "plaetze": 90
+  },
+  {
+   "n": 174,
+   "jahr": 1889,
+   "woche": 25,
+   "kasse": 3181,
+   "rohstoff": 180,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 175,
+   "jahr": 1889,
+   "woche": 26,
+   "kasse": 3651,
+   "rohstoff": 180,
+   "faesser": 40,
+   "plaetze": 90
+  },
+  {
+   "n": 176,
+   "jahr": 1889,
+   "woche": 27,
+   "kasse": 4120,
+   "rohstoff": 180,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 177,
+   "jahr": 1889,
+   "woche": 28,
+   "kasse": 4590,
+   "rohstoff": 180,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 178,
+   "jahr": 1889,
+   "woche": 29,
+   "kasse": 5059,
+   "rohstoff": 180,
+   "faesser": 58,
+   "plaetze": 90
+  },
+  {
+   "n": 179,
+   "jahr": 1889,
+   "woche": 30,
+   "kasse": 5528,
+   "rohstoff": 180,
+   "faesser": 50,
+   "plaetze": 90
+  },
+  {
+   "n": 180,
+   "jahr": 1890,
+   "woche": 1,
+   "kasse": 486,
+   "rohstoff": 180,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 181,
+   "jahr": 1890,
+   "woche": 2,
+   "kasse": 463,
+   "rohstoff": 180,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 182,
+   "jahr": 1890,
+   "woche": 3,
+   "kasse": 440,
+   "rohstoff": 180,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 183,
+   "jahr": 1890,
+   "woche": 4,
+   "kasse": 567,
+   "rohstoff": 180,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 184,
+   "jahr": 1890,
+   "woche": 5,
+   "kasse": 691,
+   "rohstoff": 180,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 185,
+   "jahr": 1890,
+   "woche": 6,
+   "kasse": 815,
+   "rohstoff": 180,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 186,
+   "jahr": 1890,
+   "woche": 7,
+   "kasse": 939,
+   "rohstoff": 180,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 187,
+   "jahr": 1890,
+   "woche": 8,
+   "kasse": 916,
+   "rohstoff": 180,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 188,
+   "jahr": 1890,
+   "woche": 9,
+   "kasse": 29,
+   "rohstoff": 120,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 189,
+   "jahr": 1890,
+   "woche": 10,
+   "kasse": 189,
+   "rohstoff": 60,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 190,
+   "jahr": 1890,
+   "woche": 11,
+   "kasse": 754,
+   "rohstoff": 30,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 191,
+   "jahr": 1890,
+   "woche": 12,
+   "kasse": 299,
+   "rohstoff": 0,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 192,
+   "jahr": 1890,
+   "woche": 13,
+   "kasse": 760,
+   "rohstoff": 0,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 193,
+   "jahr": 1890,
+   "woche": 14,
+   "kasse": 1242,
+   "rohstoff": 0,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 194,
+   "jahr": 1890,
+   "woche": 15,
+   "kasse": 1724,
+   "rohstoff": 0,
+   "faesser": 40,
+   "plaetze": 90
+  },
+  {
+   "n": 195,
+   "jahr": 1890,
+   "woche": 16,
+   "kasse": 2206,
+   "rohstoff": 0,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 196,
+   "jahr": 1890,
+   "woche": 17,
+   "kasse": 2688,
+   "rohstoff": 0,
+   "faesser": 38,
+   "plaetze": 90
+  },
+  {
+   "n": 197,
+   "jahr": 1890,
+   "woche": 18,
+   "kasse": 3170,
+   "rohstoff": 0,
+   "faesser": 46,
+   "plaetze": 90
+  },
+  {
+   "n": 198,
+   "jahr": 1890,
+   "woche": 19,
+   "kasse": 2543,
+   "rohstoff": 300,
+   "faesser": 38,
+   "plaetze": 90
+  },
+  {
+   "n": 199,
+   "jahr": 1890,
+   "woche": 20,
+   "kasse": 2161,
+   "rohstoff": 240,
+   "faesser": 30,
+   "plaetze": 90
+  },
+  {
+   "n": 200,
+   "jahr": 1890,
+   "woche": 21,
+   "kasse": 1779,
+   "rohstoff": 180,
+   "faesser": 46,
+   "plaetze": 90
+  },
+  {
+   "n": 201,
+   "jahr": 1890,
+   "woche": 22,
+   "kasse": 1397,
+   "rohstoff": 120,
+   "faesser": 62,
+   "plaetze": 90
+  },
+  {
+   "n": 202,
+   "jahr": 1890,
+   "woche": 23,
+   "kasse": 1878,
+   "rohstoff": 120,
+   "faesser": 54,
+   "plaetze": 90
+  },
+  {
+   "n": 203,
+   "jahr": 1890,
+   "woche": 24,
+   "kasse": 2231,
+   "rohstoff": 120,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 204,
+   "jahr": 1890,
+   "woche": 25,
+   "kasse": 2718,
+   "rohstoff": 120,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 205,
+   "jahr": 1890,
+   "woche": 26,
+   "kasse": 3200,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 206,
+   "jahr": 1890,
+   "woche": 27,
+   "kasse": 3682,
+   "rohstoff": 120,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 207,
+   "jahr": 1890,
+   "woche": 28,
+   "kasse": 4163,
+   "rohstoff": 120,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 208,
+   "jahr": 1890,
+   "woche": 29,
+   "kasse": 4282,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 209,
+   "jahr": 1890,
+   "woche": 30,
+   "kasse": 4769,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 210,
+   "jahr": 1891,
+   "woche": 1,
+   "kasse": 4068,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 211,
+   "jahr": 1891,
+   "woche": 2,
+   "kasse": 4202,
+   "rohstoff": 120,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 212,
+   "jahr": 1891,
+   "woche": 3,
+   "kasse": 4336,
+   "rohstoff": 120,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 213,
+   "jahr": 1891,
+   "woche": 4,
+   "kasse": 4313,
+   "rohstoff": 120,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 214,
+   "jahr": 1891,
+   "woche": 5,
+   "kasse": 4447,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 215,
+   "jahr": 1891,
+   "woche": 6,
+   "kasse": 4580,
+   "rohstoff": 120,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 216,
+   "jahr": 1891,
+   "woche": 7,
+   "kasse": 4714,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 217,
+   "jahr": 1891,
+   "woche": 8,
+   "kasse": 4848,
+   "rohstoff": 120,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 218,
+   "jahr": 1891,
+   "woche": 9,
+   "kasse": 4123,
+   "rohstoff": 60,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 219,
+   "jahr": 1891,
+   "woche": 10,
+   "kasse": 3397,
+   "rohstoff": 0,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 220,
+   "jahr": 1891,
+   "woche": 11,
+   "kasse": 2428,
+   "rohstoff": 300,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 221,
+   "jahr": 1891,
+   "woche": 12,
+   "kasse": 1976,
+   "rohstoff": 270,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 222,
+   "jahr": 1891,
+   "woche": 13,
+   "kasse": 2053,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 223,
+   "jahr": 1891,
+   "woche": 14,
+   "kasse": 2559,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 224,
+   "jahr": 1891,
+   "woche": 15,
+   "kasse": 3066,
+   "rohstoff": 240,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 225,
+   "jahr": 1891,
+   "woche": 16,
+   "kasse": 3143,
+   "rohstoff": 210,
+   "faesser": 84,
+   "plaetze": 90
+  },
+  {
+   "n": 226,
+   "jahr": 1891,
+   "woche": 17,
+   "kasse": 3649,
+   "rohstoff": 210,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 227,
+   "jahr": 1891,
+   "woche": 18,
+   "kasse": 3726,
+   "rohstoff": 180,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 228,
+   "jahr": 1891,
+   "woche": 19,
+   "kasse": 4232,
+   "rohstoff": 180,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 229,
+   "jahr": 1891,
+   "woche": 20,
+   "kasse": 4310,
+   "rohstoff": 150,
+   "faesser": 86,
+   "plaetze": 90
+  },
+  {
+   "n": 230,
+   "jahr": 1891,
+   "woche": 21,
+   "kasse": 4816,
+   "rohstoff": 150,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 231,
+   "jahr": 1891,
+   "woche": 22,
+   "kasse": 5322,
+   "rohstoff": 150,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 232,
+   "jahr": 1891,
+   "woche": 23,
+   "kasse": 5828,
+   "rohstoff": 150,
+   "faesser": 86,
+   "plaetze": 90
+  },
+  {
+   "n": 233,
+   "jahr": 1891,
+   "woche": 24,
+   "kasse": 6334,
+   "rohstoff": 150,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 234,
+   "jahr": 1891,
+   "woche": 25,
+   "kasse": 6841,
+   "rohstoff": 150,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 235,
+   "jahr": 1891,
+   "woche": 26,
+   "kasse": 7347,
+   "rohstoff": 150,
+   "faesser": 62,
+   "plaetze": 90
+  },
+  {
+   "n": 236,
+   "jahr": 1891,
+   "woche": 27,
+   "kasse": 7853,
+   "rohstoff": 150,
+   "faesser": 54,
+   "plaetze": 90
+  },
+  {
+   "n": 237,
+   "jahr": 1891,
+   "woche": 28,
+   "kasse": 8359,
+   "rohstoff": 150,
+   "faesser": 46,
+   "plaetze": 90
+  },
+  {
+   "n": 238,
+   "jahr": 1891,
+   "woche": 29,
+   "kasse": 8865,
+   "rohstoff": 150,
+   "faesser": 38,
+   "plaetze": 90
+  },
+  {
+   "n": 239,
+   "jahr": 1891,
+   "woche": 30,
+   "kasse": 9372,
+   "rohstoff": 150,
+   "faesser": 30,
+   "plaetze": 90
+  },
+  {
+   "n": 240,
+   "jahr": 1892,
+   "woche": 1,
+   "kasse": 5931,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 241,
+   "jahr": 1892,
+   "woche": 2,
+   "kasse": 5908,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 242,
+   "jahr": 1892,
+   "woche": 3,
+   "kasse": 5885,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 243,
+   "jahr": 1892,
+   "woche": 4,
+   "kasse": 5862,
+   "rohstoff": 150,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 244,
+   "jahr": 1892,
+   "woche": 5,
+   "kasse": 5992,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 245,
+   "jahr": 1892,
+   "woche": 6,
+   "kasse": 6122,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 246,
+   "jahr": 1892,
+   "woche": 7,
+   "kasse": 6252,
+   "rohstoff": 150,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 247,
+   "jahr": 1892,
+   "woche": 8,
+   "kasse": 6382,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 248,
+   "jahr": 1892,
+   "woche": 9,
+   "kasse": 5658,
+   "rohstoff": 90,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 249,
+   "jahr": 1892,
+   "woche": 10,
+   "kasse": 3838,
+   "rohstoff": 330,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 250,
+   "jahr": 1892,
+   "woche": 11,
+   "kasse": 3388,
+   "rohstoff": 300,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 251,
+   "jahr": 1892,
+   "woche": 12,
+   "kasse": 3365,
+   "rohstoff": 300,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 252,
+   "jahr": 1892,
+   "woche": 13,
+   "kasse": 3438,
+   "rohstoff": 270,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 253,
+   "jahr": 1892,
+   "woche": 14,
+   "kasse": 3938,
+   "rohstoff": 270,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 254,
+   "jahr": 1892,
+   "woche": 15,
+   "kasse": 4438,
+   "rohstoff": 270,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 255,
+   "jahr": 1892,
+   "woche": 16,
+   "kasse": 4511,
+   "rohstoff": 240,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 256,
+   "jahr": 1892,
+   "woche": 17,
+   "kasse": 5011,
+   "rohstoff": 240,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 257,
+   "jahr": 1892,
+   "woche": 18,
+   "kasse": 5084,
+   "rohstoff": 210,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 258,
+   "jahr": 1892,
+   "woche": 19,
+   "kasse": 5157,
+   "rohstoff": 180,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 259,
+   "jahr": 1892,
+   "woche": 20,
+   "kasse": 5657,
+   "rohstoff": 180,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 260,
+   "jahr": 1892,
+   "woche": 21,
+   "kasse": 5730,
+   "rohstoff": 150,
+   "faesser": 84,
+   "plaetze": 90
+  },
+  {
+   "n": 261,
+   "jahr": 1892,
+   "woche": 22,
+   "kasse": 6230,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 262,
+   "jahr": 1892,
+   "woche": 23,
+   "kasse": 6730,
+   "rohstoff": 150,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 263,
+   "jahr": 1892,
+   "woche": 24,
+   "kasse": 7230,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 264,
+   "jahr": 1892,
+   "woche": 25,
+   "kasse": 7730,
+   "rohstoff": 150,
+   "faesser": 66,
+   "plaetze": 90
+  },
+  {
+   "n": 265,
+   "jahr": 1892,
+   "woche": 26,
+   "kasse": 8230,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 266,
+   "jahr": 1892,
+   "woche": 27,
+   "kasse": 8730,
+   "rohstoff": 150,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 267,
+   "jahr": 1892,
+   "woche": 28,
+   "kasse": 9230,
+   "rohstoff": 150,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 268,
+   "jahr": 1892,
+   "woche": 29,
+   "kasse": 9730,
+   "rohstoff": 150,
+   "faesser": 56,
+   "plaetze": 90
+  },
+  {
+   "n": 269,
+   "jahr": 1892,
+   "woche": 30,
+   "kasse": 10230,
+   "rohstoff": 150,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 270,
+   "jahr": 1893,
+   "woche": 1,
+   "kasse": 6329,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 271,
+   "jahr": 1893,
+   "woche": 2,
+   "kasse": 6306,
+   "rohstoff": 150,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 272,
+   "jahr": 1893,
+   "woche": 3,
+   "kasse": 6283,
+   "rohstoff": 150,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 273,
+   "jahr": 1893,
+   "woche": 4,
+   "kasse": 6413,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 274,
+   "jahr": 1893,
+   "woche": 5,
+   "kasse": 6543,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 275,
+   "jahr": 1893,
+   "woche": 6,
+   "kasse": 6673,
+   "rohstoff": 150,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 276,
+   "jahr": 1893,
+   "woche": 7,
+   "kasse": 6803,
+   "rohstoff": 150,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 277,
+   "jahr": 1893,
+   "woche": 8,
+   "kasse": 6933,
+   "rohstoff": 150,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 278,
+   "jahr": 1893,
+   "woche": 9,
+   "kasse": 6214,
+   "rohstoff": 90,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 279,
+   "jahr": 1893,
+   "woche": 10,
+   "kasse": 4253,
+   "rohstoff": 330,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 280,
+   "jahr": 1893,
+   "woche": 11,
+   "kasse": 3806,
+   "rohstoff": 300,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 281,
+   "jahr": 1893,
+   "woche": 12,
+   "kasse": 3359,
+   "rohstoff": 270,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 282,
+   "jahr": 1893,
+   "woche": 13,
+   "kasse": 3435,
+   "rohstoff": 240,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 283,
+   "jahr": 1893,
+   "woche": 14,
+   "kasse": 3935,
+   "rohstoff": 240,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 284,
+   "jahr": 1893,
+   "woche": 15,
+   "kasse": 4011,
+   "rohstoff": 210,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 285,
+   "jahr": 1893,
+   "woche": 16,
+   "kasse": 4511,
+   "rohstoff": 210,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 286,
+   "jahr": 1893,
+   "woche": 17,
+   "kasse": 5011,
+   "rohstoff": 210,
+   "faesser": 66,
+   "plaetze": 90
+  },
+  {
+   "n": 287,
+   "jahr": 1893,
+   "woche": 18,
+   "kasse": 5087,
+   "rohstoff": 180,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 288,
+   "jahr": 1893,
+   "woche": 19,
+   "kasse": 5163,
+   "rohstoff": 150,
+   "faesser": 84,
+   "plaetze": 90
+  },
+  {
+   "n": 289,
+   "jahr": 1893,
+   "woche": 20,
+   "kasse": 5663,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 290,
+   "jahr": 1893,
+   "woche": 21,
+   "kasse": 5739,
+   "rohstoff": 120,
+   "faesser": 86,
+   "plaetze": 90
+  },
+  {
+   "n": 291,
+   "jahr": 1893,
+   "woche": 22,
+   "kasse": 6239,
+   "rohstoff": 120,
+   "faesser": 62,
+   "plaetze": 90
+  },
+  {
+   "n": 292,
+   "jahr": 1893,
+   "woche": 23,
+   "kasse": 6739,
+   "rohstoff": 120,
+   "faesser": 54,
+   "plaetze": 90
+  },
+  {
+   "n": 293,
+   "jahr": 1893,
+   "woche": 24,
+   "kasse": 7239,
+   "rohstoff": 120,
+   "faesser": 46,
+   "plaetze": 90
+  },
+  {
+   "n": 294,
+   "jahr": 1893,
+   "woche": 25,
+   "kasse": 7739,
+   "rohstoff": 120,
+   "faesser": 46,
+   "plaetze": 90
+  },
+  {
+   "n": 295,
+   "jahr": 1893,
+   "woche": 26,
+   "kasse": 8239,
+   "rohstoff": 120,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 296,
+   "jahr": 1893,
+   "woche": 27,
+   "kasse": 8739,
+   "rohstoff": 120,
+   "faesser": 44,
+   "plaetze": 90
+  },
+  {
+   "n": 297,
+   "jahr": 1893,
+   "woche": 28,
+   "kasse": 9239,
+   "rohstoff": 120,
+   "faesser": 36,
+   "plaetze": 90
+  },
+  {
+   "n": 298,
+   "jahr": 1893,
+   "woche": 29,
+   "kasse": 9739,
+   "rohstoff": 120,
+   "faesser": 28,
+   "plaetze": 90
+  },
+  {
+   "n": 299,
+   "jahr": 1893,
+   "woche": 30,
+   "kasse": 10239,
+   "rohstoff": 120,
+   "faesser": 20,
+   "plaetze": 90
+  },
+  {
+   "n": 300,
+   "jahr": 1894,
+   "woche": 1,
+   "kasse": 8744,
+   "rohstoff": 120,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 301,
+   "jahr": 1894,
+   "woche": 2,
+   "kasse": 8721,
+   "rohstoff": 120,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 302,
+   "jahr": 1894,
+   "woche": 3,
+   "kasse": 8698,
+   "rohstoff": 120,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 303,
+   "jahr": 1894,
+   "woche": 4,
+   "kasse": 8675,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 304,
+   "jahr": 1894,
+   "woche": 5,
+   "kasse": 8805,
+   "rohstoff": 120,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 305,
+   "jahr": 1894,
+   "woche": 6,
+   "kasse": 8935,
+   "rohstoff": 120,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 306,
+   "jahr": 1894,
+   "woche": 7,
+   "kasse": 9065,
+   "rohstoff": 120,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 307,
+   "jahr": 1894,
+   "woche": 8,
+   "kasse": 9042,
+   "rohstoff": 120,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 308,
+   "jahr": 1894,
+   "woche": 9,
+   "kasse": 8175,
+   "rohstoff": 60,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 309,
+   "jahr": 1894,
+   "woche": 10,
+   "kasse": 6358,
+   "rohstoff": 300,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 310,
+   "jahr": 1894,
+   "woche": 11,
+   "kasse": 6060,
+   "rohstoff": 270,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 311,
+   "jahr": 1894,
+   "woche": 12,
+   "kasse": 6184,
+   "rohstoff": 270,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 312,
+   "jahr": 1894,
+   "woche": 13,
+   "kasse": 6250,
+   "rohstoff": 240,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 313,
+   "jahr": 1894,
+   "woche": 14,
+   "kasse": 6310,
+   "rohstoff": 210,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 314,
+   "jahr": 1894,
+   "woche": 15,
+   "kasse": 6370,
+   "rohstoff": 180,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 315,
+   "jahr": 1894,
+   "woche": 16,
+   "kasse": 6852,
+   "rohstoff": 180,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 316,
+   "jahr": 1894,
+   "woche": 17,
+   "kasse": 6912,
+   "rohstoff": 150,
+   "faesser": 82,
+   "plaetze": 90
+  },
+  {
+   "n": 317,
+   "jahr": 1894,
+   "woche": 18,
+   "kasse": 7393,
+   "rohstoff": 150,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 318,
+   "jahr": 1894,
+   "woche": 19,
+   "kasse": 7453,
+   "rohstoff": 120,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 319,
+   "jahr": 1894,
+   "woche": 20,
+   "kasse": 7513,
+   "rohstoff": 90,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 320,
+   "jahr": 1894,
+   "woche": 21,
+   "kasse": 7573,
+   "rohstoff": 60,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 321,
+   "jahr": 1894,
+   "woche": 22,
+   "kasse": 8055,
+   "rohstoff": 60,
+   "faesser": 66,
+   "plaetze": 90
+  },
+  {
+   "n": 322,
+   "jahr": 1894,
+   "woche": 23,
+   "kasse": 8537,
+   "rohstoff": 60,
+   "faesser": 58,
+   "plaetze": 90
+  },
+  {
+   "n": 323,
+   "jahr": 1894,
+   "woche": 24,
+   "kasse": 9019,
+   "rohstoff": 60,
+   "faesser": 50,
+   "plaetze": 90
+  },
+  {
+   "n": 324,
+   "jahr": 1894,
+   "woche": 25,
+   "kasse": 9501,
+   "rohstoff": 60,
+   "faesser": 42,
+   "plaetze": 90
+  },
+  {
+   "n": 325,
+   "jahr": 1894,
+   "woche": 26,
+   "kasse": 9983,
+   "rohstoff": 60,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 326,
+   "jahr": 1894,
+   "woche": 27,
+   "kasse": 10465,
+   "rohstoff": 60,
+   "faesser": 44,
+   "plaetze": 90
+  },
+  {
+   "n": 327,
+   "jahr": 1894,
+   "woche": 28,
+   "kasse": 10947,
+   "rohstoff": 60,
+   "faesser": 36,
+   "plaetze": 90
+  },
+  {
+   "n": 328,
+   "jahr": 1894,
+   "woche": 29,
+   "kasse": 11429,
+   "rohstoff": 60,
+   "faesser": 28,
+   "plaetze": 90
+  },
+  {
+   "n": 329,
+   "jahr": 1894,
+   "woche": 30,
+   "kasse": 11911,
+   "rohstoff": 60,
+   "faesser": 20,
+   "plaetze": 90
+  },
+  {
+   "n": 330,
+   "jahr": 1895,
+   "woche": 1,
+   "kasse": 9565,
+   "rohstoff": 60,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 331,
+   "jahr": 1895,
+   "woche": 2,
+   "kasse": 9543,
+   "rohstoff": 60,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 332,
+   "jahr": 1895,
+   "woche": 3,
+   "kasse": 9521,
+   "rohstoff": 60,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 333,
+   "jahr": 1895,
+   "woche": 4,
+   "kasse": 9651,
+   "rohstoff": 60,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 334,
+   "jahr": 1895,
+   "woche": 5,
+   "kasse": 9777,
+   "rohstoff": 60,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 335,
+   "jahr": 1895,
+   "woche": 6,
+   "kasse": 9903,
+   "rohstoff": 60,
+   "faesser": 24,
+   "plaetze": 90
+  },
+  {
+   "n": 336,
+   "jahr": 1895,
+   "woche": 7,
+   "kasse": 10029,
+   "rohstoff": 60,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 337,
+   "jahr": 1895,
+   "woche": 8,
+   "kasse": 10155,
+   "rohstoff": 60,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 338,
+   "jahr": 1895,
+   "woche": 9,
+   "kasse": 8366,
+   "rohstoff": 300,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 339,
+   "jahr": 1895,
+   "woche": 10,
+   "kasse": 7505,
+   "rohstoff": 240,
+   "faesser": 48,
+   "plaetze": 90
+  },
+  {
+   "n": 340,
+   "jahr": 1895,
+   "woche": 11,
+   "kasse": 7064,
+   "rohstoff": 210,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 341,
+   "jahr": 1895,
+   "woche": 12,
+   "kasse": 7042,
+   "rohstoff": 210,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 342,
+   "jahr": 1895,
+   "woche": 13,
+   "kasse": 7113,
+   "rohstoff": 180,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 343,
+   "jahr": 1895,
+   "woche": 14,
+   "kasse": 7597,
+   "rohstoff": 180,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 344,
+   "jahr": 1895,
+   "woche": 15,
+   "kasse": 8081,
+   "rohstoff": 180,
+   "faesser": 62,
+   "plaetze": 90
+  },
+  {
+   "n": 345,
+   "jahr": 1895,
+   "woche": 16,
+   "kasse": 8146,
+   "rohstoff": 150,
+   "faesser": 62,
+   "plaetze": 90
+  },
+  {
+   "n": 346,
+   "jahr": 1895,
+   "woche": 17,
+   "kasse": 8211,
+   "rohstoff": 120,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 347,
+   "jahr": 1895,
+   "woche": 18,
+   "kasse": 8694,
+   "rohstoff": 120,
+   "faesser": 60,
+   "plaetze": 90
+  },
+  {
+   "n": 348,
+   "jahr": 1895,
+   "woche": 19,
+   "kasse": 8759,
+   "rohstoff": 90,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 349,
+   "jahr": 1895,
+   "woche": 20,
+   "kasse": 9243,
+   "rohstoff": 90,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 350,
+   "jahr": 1895,
+   "woche": 21,
+   "kasse": 9308,
+   "rohstoff": 60,
+   "faesser": 84,
+   "plaetze": 90
+  },
+  {
+   "n": 351,
+   "jahr": 1895,
+   "woche": 22,
+   "kasse": 9792,
+   "rohstoff": 60,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 352,
+   "jahr": 1895,
+   "woche": 23,
+   "kasse": 10276,
+   "rohstoff": 60,
+   "faesser": 44,
+   "plaetze": 90
+  },
+  {
+   "n": 353,
+   "jahr": 1895,
+   "woche": 24,
+   "kasse": 10760,
+   "rohstoff": 60,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 354,
+   "jahr": 1895,
+   "woche": 25,
+   "kasse": 11244,
+   "rohstoff": 60,
+   "faesser": 44,
+   "plaetze": 90
+  },
+  {
+   "n": 355,
+   "jahr": 1895,
+   "woche": 26,
+   "kasse": 11728,
+   "rohstoff": 60,
+   "faesser": 60,
+   "plaetze": 90
+  },
+  {
+   "n": 356,
+   "jahr": 1895,
+   "woche": 27,
+   "kasse": 12212,
+   "rohstoff": 60,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 357,
+   "jahr": 1895,
+   "woche": 28,
+   "kasse": 12696,
+   "rohstoff": 60,
+   "faesser": 44,
+   "plaetze": 90
+  },
+  {
+   "n": 358,
+   "jahr": 1895,
+   "woche": 29,
+   "kasse": 13170,
+   "rohstoff": 60,
+   "faesser": 36,
+   "plaetze": 90
+  },
+  {
+   "n": 359,
+   "jahr": 1895,
+   "woche": 30,
+   "kasse": 13654,
+   "rohstoff": 60,
+   "faesser": 28,
+   "plaetze": 90
+  },
+  {
+   "n": 360,
+   "jahr": 1896,
+   "woche": 1,
+   "kasse": 11140,
+   "rohstoff": 60,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 361,
+   "jahr": 1896,
+   "woche": 2,
+   "kasse": 11118,
+   "rohstoff": 60,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 362,
+   "jahr": 1896,
+   "woche": 3,
+   "kasse": 11096,
+   "rohstoff": 60,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 363,
+   "jahr": 1896,
+   "woche": 4,
+   "kasse": 11203,
+   "rohstoff": 60,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 364,
+   "jahr": 1896,
+   "woche": 5,
+   "kasse": 11310,
+   "rohstoff": 60,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 365,
+   "jahr": 1896,
+   "woche": 6,
+   "kasse": 11417,
+   "rohstoff": 60,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 366,
+   "jahr": 1896,
+   "woche": 7,
+   "kasse": 11523,
+   "rohstoff": 60,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 367,
+   "jahr": 1896,
+   "woche": 8,
+   "kasse": 11630,
+   "rohstoff": 60,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 368,
+   "jahr": 1896,
+   "woche": 9,
+   "kasse": 9833,
+   "rohstoff": 300,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 369,
+   "jahr": 1896,
+   "woche": 10,
+   "kasse": 9106,
+   "rohstoff": 240,
+   "faesser": 40,
+   "plaetze": 90
+  },
+  {
+   "n": 370,
+   "jahr": 1896,
+   "woche": 11,
+   "kasse": 8250,
+   "rohstoff": 180,
+   "faesser": 64,
+   "plaetze": 90
+  },
+  {
+   "n": 371,
+   "jahr": 1896,
+   "woche": 12,
+   "kasse": 7811,
+   "rohstoff": 150,
+   "faesser": 88,
+   "plaetze": 90
+  },
+  {
+   "n": 372,
+   "jahr": 1896,
+   "woche": 13,
+   "kasse": 8289,
+   "rohstoff": 150,
+   "faesser": 80,
+   "plaetze": 90
+  },
+  {
+   "n": 373,
+   "jahr": 1896,
+   "woche": 14,
+   "kasse": 8767,
+   "rohstoff": 150,
+   "faesser": 72,
+   "plaetze": 90
+  },
+  {
+   "n": 374,
+   "jahr": 1896,
+   "woche": 15,
+   "kasse": 8828,
+   "rohstoff": 120,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 375,
+   "jahr": 1896,
+   "woche": 16,
+   "kasse": 9307,
+   "rohstoff": 120,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 376,
+   "jahr": 1896,
+   "woche": 17,
+   "kasse": 9368,
+   "rohstoff": 90,
+   "faesser": 90,
+   "plaetze": 90
+  },
+  {
+   "n": 377,
+   "jahr": 1896,
+   "woche": 18,
+   "kasse": 9846,
+   "rohstoff": 90,
+   "faesser": 76,
+   "plaetze": 90
+  },
+  {
+   "n": 378,
+   "jahr": 1896,
+   "woche": 19,
+   "kasse": 10324,
+   "rohstoff": 90,
+   "faesser": 78,
+   "plaetze": 90
+  },
+  {
+   "n": 379,
+   "jahr": 1896,
+   "woche": 20,
+   "kasse": 10803,
+   "rohstoff": 90,
+   "faesser": 70,
+   "plaetze": 90
+  },
+  {
+   "n": 380,
+   "jahr": 1896,
+   "woche": 21,
+   "kasse": 10864,
+   "rohstoff": 60,
+   "faesser": 74,
+   "plaetze": 90
+  },
+  {
+   "n": 381,
+   "jahr": 1896,
+   "woche": 22,
+   "kasse": 9855,
+   "rohstoff": 330,
+   "faesser": 68,
+   "plaetze": 90
+  },
+  {
+   "n": 382,
+   "jahr": 1896,
+   "woche": 23,
+   "kasse": 10333,
+   "rohstoff": 330,
+   "faesser": 60,
+   "plaetze": 90
+  },
+  {
+   "n": 383,
+   "jahr": 1896,
+   "woche": 24,
+   "kasse": 10811,
+   "rohstoff": 330,
+   "faesser": 52,
+   "plaetze": 90
+  },
+  {
+   "n": 384,
+   "jahr": 1896,
+   "woche": 25,
+   "kasse": 11290,
+   "rohstoff": 330,
+   "faesser": 44,
+   "plaetze": 90
+  },
+  {
+   "n": 385,
+   "jahr": 1896,
+   "woche": 26,
+   "kasse": 11768,
+   "rohstoff": 330,
+   "faesser": 58,
+   "plaetze": 90
+  },
+  {
+   "n": 386,
+   "jahr": 1896,
+   "woche": 27,
+   "kasse": 12246,
+   "rohstoff": 330,
+   "faesser": 50,
+   "plaetze": 90
+  },
+  {
+   "n": 387,
+   "jahr": 1896,
+   "woche": 28,
+   "kasse": 12724,
+   "rohstoff": 330,
+   "faesser": 42,
+   "plaetze": 90
+  },
+  {
+   "n": 388,
+   "jahr": 1896,
+   "woche": 29,
+   "kasse": 13203,
+   "rohstoff": 330,
+   "faesser": 34,
+   "plaetze": 90
+  },
+  {
+   "n": 389,
+   "jahr": 1896,
+   "woche": 30,
+   "kasse": 13681,
+   "rohstoff": 330,
+   "faesser": 26,
+   "plaetze": 90
+  },
+  {
+   "n": 390,
+   "jahr": 1897,
+   "woche": 1,
+   "kasse": 11721,
+   "rohstoff": 330,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 391,
+   "jahr": 1897,
+   "woche": 2,
+   "kasse": 11699,
+   "rohstoff": 330,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 392,
+   "jahr": 1897,
+   "woche": 3,
+   "kasse": 11677,
+   "rohstoff": 330,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 393,
+   "jahr": 1897,
+   "woche": 4,
+   "kasse": 11783,
+   "rohstoff": 330,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 394,
+   "jahr": 1897,
+   "woche": 5,
+   "kasse": 11889,
+   "rohstoff": 330,
+   "faesser": 16,
+   "plaetze": 90
+  },
+  {
+   "n": 395,
+   "jahr": 1897,
+   "woche": 6,
+   "kasse": 11995,
+   "rohstoff": 330,
+   "faesser": 8,
+   "plaetze": 90
+  },
+  {
+   "n": 396,
+   "jahr": 1897,
+   "woche": 7,
+   "kasse": 12101,
+   "rohstoff": 330,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 397,
+   "jahr": 1897,
+   "woche": 8,
+   "kasse": 12079,
+   "rohstoff": 330,
+   "faesser": 0,
+   "plaetze": 90
+  },
+  {
+   "n": 398,
+   "jahr": 1897,
+   "woche": 9,
+   "kasse": 11228,
+   "rohstoff": 270,
+   "faesser": 32,
+   "plaetze": 90
+  },
+  {
+   "n": 399,
+   "jahr": 1897,
+   "woche": 10,
+   "kasse": 10505,
+   "rohstoff": 210,
+   "faesser": 72,
+   "plaetze": 90
+  }
+ ]
+}

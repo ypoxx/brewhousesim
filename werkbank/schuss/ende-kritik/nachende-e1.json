@@ -1,0 +1,704 @@
+{
+ "vor": {
+  "ende": true,
+  "grund": "braurecht-entzogen",
+  "jahr": 1353,
+  "woche": 13,
+  "kasse": 0,
+  "buch": 247,
+  "chronik": 54,
+  "aktivSicht": [
+   {
+    "z": "gegner:oeffnen:adler",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:pfarrhof",
+    "p": "-48"
+   },
+   {
+    "z": "gegner:hinhalten:pfarrhof",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:brueckenwirt",
+    "p": "-76"
+   },
+   {
+    "z": "gegner:hinhalten:brueckenwirt",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:faehrhaus",
+    "p": "-66"
+   },
+   {
+    "z": "gegner:hinhalten:faehrhaus",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:obernberg",
+    "p": "-42"
+   },
+   {
+    "z": "gegner:hinhalten:obernberg",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde-bild",
+    "p": "0"
+   },
+   {
+    "z": "gegner:blatt",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:43",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:42",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:41",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:gegner-marktplatz",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-lindenhof",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-marktplatz",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-muehle",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-unten",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-fluss",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-oben",
+    "p": null
+   },
+   {
+    "z": "fuhre:schluss-auf",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:lindenhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:ochse",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:torschenke",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:pfarrhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:markt",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:duenn",
+    "p": "-4"
+   },
+   {
+    "z": "fuhre:tafel-ab:grut",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:grut",
+    "p": "-4"
+   },
+   {
+    "z": "fuhre:tafel-auf:stark",
+    "p": "-4"
+   },
+   {
+    "z": "fuhre:tafel-auf:kofent",
+    "p": null
+   },
+   {
+    "z": "fuhre:kauf:budget",
+    "p": "-90"
+   },
+   {
+    "z": "fuhre:kauf:rohstoff",
+    "p": "-34"
+   },
+   {
+    "z": "fuhre:kauf:fass",
+    "p": "-34"
+   },
+   {
+    "z": "fuhre:fuellen",
+    "p": null
+   },
+   {
+    "z": "klang:ton",
+    "p": null
+   },
+   {
+    "z": "name:band",
+    "p": null
+   },
+   {
+    "z": "name:aufgeldbuch",
+    "p": null
+   },
+   {
+    "z": "name:ruhe",
+    "p": null
+   },
+   {
+    "z": "name:herumgehen",
+    "p": null
+   },
+   {
+    "z": "name:blatt",
+    "p": null
+   },
+   {
+    "z": "kern:chronik",
+    "p": null
+   },
+   {
+    "z": "kern:protokoll",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:gegner-amort-gg-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:sud-sud-brett",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:name-nm-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-blatt-fu-ende-entzogen-fu-schlussblatt",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:erbe-blatt-erb-buch",
+    "p": null
+   },
+   {
+    "z": "stadt:ortsmarken",
+    "p": null
+   },
+   {
+    "z": "stadt:alles-zuklappen",
+    "p": null
+   },
+   {
+    "z": "stadt:bau:seite",
+    "p": null
+   },
+   {
+    "z": "stadt:versatz",
+    "p": null
+   },
+   {
+    "z": "stadt:versatz:pfanne",
+    "p": "7"
+   },
+   {
+    "z": "fuhre:wiederanfang",
+    "p": null
+   },
+   {
+    "z": "preis:tafel",
+    "p": null
+   },
+   {
+    "z": "preis:chronik-auf",
+    "p": null
+   },
+   {
+    "z": "sud:schluss-auf",
+    "p": null
+   }
+  ],
+  "deckung": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 0,0×)",
+  "alleDeckung": [
+   {
+    "k": "deckung",
+    "v": "0"
+   }
+  ]
+ },
+ "preiszuege": [
+  {
+   "z": "gegner:abloesen:pfarrhof",
+   "p": "-48"
+  },
+  {
+   "z": "gegner:abloesen:brueckenwirt",
+   "p": "-76"
+  },
+  {
+   "z": "gegner:abloesen:faehrhaus",
+   "p": "-66"
+  },
+  {
+   "z": "gegner:abloesen:obernberg",
+   "p": "-42"
+  },
+  {
+   "z": "fuhre:tafel-auf:duenn",
+   "p": "-4"
+  },
+  {
+   "z": "fuhre:tafel-auf:grut",
+   "p": "-4"
+  },
+  {
+   "z": "fuhre:tafel-auf:stark",
+   "p": "-4"
+  },
+  {
+   "z": "fuhre:kauf:budget",
+   "p": "-90"
+  },
+  {
+   "z": "fuhre:kauf:rohstoff",
+   "p": "-34"
+  },
+  {
+   "z": "fuhre:kauf:fass",
+   "p": "-34"
+  },
+  {
+   "z": "stadt:versatz:pfanne",
+   "p": "7"
+  }
+ ],
+ "wirkung": [
+  {
+   "zug": "gegner:abloesen:pfarrhof",
+   "preis": "-48",
+   "klick": "FEHLER",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 247,
+   "buchNachher": 247,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "gegner:abloesen:brueckenwirt",
+   "preis": "-76",
+   "klick": "ok",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 247,
+   "buchNachher": 248,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "gegner:abloesen:faehrhaus",
+   "preis": "-66",
+   "klick": "ok",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 248,
+   "buchNachher": 249,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "gegner:abloesen:obernberg",
+   "preis": "-42",
+   "klick": "ok",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 249,
+   "buchNachher": 250,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "fuhre:tafel-auf:duenn",
+   "preis": "-4",
+   "klick": "FEHLER",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 250,
+   "buchNachher": 250,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "fuhre:tafel-auf:grut",
+   "preis": "-4",
+   "klick": "FEHLER",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 250,
+   "buchNachher": 250,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "fuhre:tafel-auf:stark",
+   "preis": "-4",
+   "klick": "FEHLER",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 250,
+   "buchNachher": 250,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "fuhre:kauf:budget",
+   "preis": "-90",
+   "klick": "FEHLER",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 250,
+   "buchNachher": 250,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "preis": "-34",
+   "klick": "FEHLER",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 250,
+   "buchNachher": 250,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "fuhre:kauf:fass",
+   "preis": "-34",
+   "klick": "FEHLER",
+   "kasseVorher": 0,
+   "kasseNachher": 0,
+   "buchVorher": 250,
+   "buchNachher": 250,
+   "jahr": 1353,
+   "woche": 13
+  },
+  {
+   "zug": "stadt:versatz:pfanne",
+   "preis": "7",
+   "klick": "ok",
+   "kasseVorher": 0,
+   "kasseNachher": 7,
+   "buchVorher": 250,
+   "buchNachher": 251,
+   "jahr": 1353,
+   "woche": 13
+  }
+ ],
+ "nach": {
+  "ende": true,
+  "grund": "braurecht-entzogen",
+  "jahr": 1353,
+  "woche": 13,
+  "kasse": 7,
+  "buch": 251,
+  "chronik": 55,
+  "aktivSicht": [
+   {
+    "z": "gegner:oeffnen:adler",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:pfarrhof",
+    "p": "-48"
+   },
+   {
+    "z": "gegner:hinhalten:pfarrhof",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:brueckenwirt",
+    "p": "-76"
+   },
+   {
+    "z": "gegner:hinhalten:brueckenwirt",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:faehrhaus",
+    "p": "-66"
+   },
+   {
+    "z": "gegner:hinhalten:faehrhaus",
+    "p": null
+   },
+   {
+    "z": "gegner:abloesen:obernberg",
+    "p": "-42"
+   },
+   {
+    "z": "gegner:hinhalten:obernberg",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde-bild",
+    "p": "0"
+   },
+   {
+    "z": "gegner:blatt",
+    "p": null
+   },
+   {
+    "z": "gegner:beschwerde",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:43",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:42",
+    "p": null
+   },
+   {
+    "z": "gegner:zeige:41",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:gegner-marktplatz",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-lindenhof",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-marktplatz",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-muehle",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-unten",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-fluss",
+    "p": null
+   },
+   {
+    "z": "stadt:marke:fuhre-bruecke-oben",
+    "p": null
+   },
+   {
+    "z": "fuhre:schluss-auf",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:lindenhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:ochse",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:torschenke",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:pfarrhof",
+    "p": null
+   },
+   {
+    "z": "fuhre:probe:markt",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:duenn",
+    "p": "-4"
+   },
+   {
+    "z": "fuhre:tafel-ab:grut",
+    "p": null
+   },
+   {
+    "z": "fuhre:tafel-auf:grut",
+    "p": "-4"
+   },
+   {
+    "z": "fuhre:tafel-auf:stark",
+    "p": "-4"
+   },
+   {
+    "z": "fuhre:tafel-auf:kofent",
+    "p": null
+   },
+   {
+    "z": "fuhre:kauf:budget",
+    "p": "-90"
+   },
+   {
+    "z": "fuhre:kauf:rohstoff",
+    "p": "-34"
+   },
+   {
+    "z": "fuhre:kauf:fass",
+    "p": "-34"
+   },
+   {
+    "z": "fuhre:fuellen",
+    "p": null
+   },
+   {
+    "z": "klang:ton",
+    "p": null
+   },
+   {
+    "z": "name:band",
+    "p": null
+   },
+   {
+    "z": "name:aufgeldbuch",
+    "p": null
+   },
+   {
+    "z": "name:ruhe",
+    "p": null
+   },
+   {
+    "z": "name:herumgehen",
+    "p": null
+   },
+   {
+    "z": "name:blatt",
+    "p": null
+   },
+   {
+    "z": "kern:chronik",
+    "p": null
+   },
+   {
+    "z": "kern:protokoll",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:gegner-amort-gg-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:sud-sud-brett",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:name-nm-band",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:fuhre-blatt-fu-ende-entzogen-fu-schlussblatt",
+    "p": null
+   },
+   {
+    "z": "stadt:reiter:erbe-blatt-erb-buch",
+    "p": null
+   },
+   {
+    "z": "stadt:ortsmarken",
+    "p": null
+   },
+   {
+    "z": "stadt:alles-zuklappen",
+    "p": null
+   },
+   {
+    "z": "stadt:bau:seite",
+    "p": null
+   },
+   {
+    "z": "fuhre:wiederanfang",
+    "p": null
+   },
+   {
+    "z": "preis:tafel",
+    "p": null
+   },
+   {
+    "z": "preis:chronik-auf",
+    "p": null
+   },
+   {
+    "z": "sud:schluss-auf",
+    "p": null
+   }
+  ],
+  "deckung": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf (Kasse reicht 0,2×)",
+  "alleDeckung": [
+   {
+    "k": "deckung",
+    "v": "0.17"
+   }
+  ]
+ },
+ "fehler": []
+}

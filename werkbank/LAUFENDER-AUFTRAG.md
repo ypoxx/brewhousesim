@@ -36,50 +36,66 @@ statt den Loop zu fahren. Die Aufsicht misst, benennt und gibt den Befund als Ei
 den Loop. Sie baut nicht. Wer selbst baut, hat keinen blinden Kritiker mehr — und dann ist
 die Methode weg, die das Ganze trägt.
 
-## WIEDERHERSTELLUNG — was am 3. August funktioniert hat und was nicht
+## WIEDERHERSTELLUNG — erledigt am 3. August 2026. Die Ursache ist weg.
 
-**Vier Container-Resets in vier Stunden.** Zweimal genau beim Start eines
-Workflows. Jedes Mal stand der Arbeitsbaum wieder auf dem Basis-Commit.
+**Fünf Container-Resets in vier Stunden**, dreimal genau beim Start eines
+Workflows. Jedes Mal stand der Arbeitsbaum wieder auf dem Basis-Commit, und der
+Weg zurück war versperrt: der volle `git fetch` riss mit `early EOF` nach 3,3 GB,
+`--filter=blob:none` zerlegte den Objektspeicher, `--refetch` riss ebenso.
 
-**Der volle `git fetch` funktioniert hier NICHT MEHR.** Das Repo ist über 2 GiB
-gepackt (fast alles Belegbilder der Kritiker), und der Proxy bricht die
-Übertragung ab:
+**Die Ursache war gemessen, nicht geraten:**
 
-```
-fetch-pack: unexpected disconnect while reading sideband packet
-fatal: early EOF
-fatal: fetch-pack: invalid index-pack output
-```
-
-Was ich der Reihe nach probiert habe, und was daraus wurde:
-
-| Versuch | Ergebnis |
+| | |
 |---|---|
-| `git fetch` voll | `early EOF` nach 3,3 GB |
-| `--filter=blob:none` | Ref kam, aber der Proxy liefert keine Blobs nach → **Objektspeicher kaputt** |
-| `git fetch --refetch` | `early EOF` |
-| `--depth=1` auf kaputtem Speicher | „remote did not send all necessary objects" |
-| **`--depth=1` auf frischem `.git`** | **funktioniert** |
+| Belegbilder unter `werkbank/schuss/` | 1217 Dateien, 3,1 GB, Median 3,1 MB je PNG |
+| davon in irgendeinem Dokument eingebettet | **2** |
+| Blob-Gewicht `schuss` in der Historie | **2,94 GB** |
+| Blob-Gewicht alles Übrige | **0,36 GB** |
+| Standardzweig `project-setup-apis-p51a0f` | **0** Belegbilder |
 
-**Das Rezept, das geht:**
+Die 2,94 GB lagen also vollständig auf diesem Zweig. **Komprimieren hätte nichts
+geholfen** — Git behält jeden alten Blob für immer; nur ein Umschreiben der
+Historie kommt an sie heran.
+
+**Was getan wurde** (nach Rückfrage beim Auftraggeber, der die Bereinigung
+freigegeben hat, falls die Bilder für den weiteren Verlauf entbehrlich sind —
+sie sind es, Begründung unten):
 
 ```
-rm -rf .git && git init && git remote add origin <url>     # falls .git kaputt
-(setsid nohup git fetch --depth=1 origin <zweig> >/tmp/fetch.log 2>&1 </dev/null & disown)
-# warten, dann:
-git reset --hard FETCH_HEAD
+git fetch --depth=1 origin <zweig>          # kam durch, 2,37 GB
+git fetch --unshallow origin <zweig>        # kam ebenfalls durch → 752 Commits
+pip install git-filter-repo
+git filter-repo --path werkbank/schuss --invert-paths --refs <zweig> --force
 ```
 
-**Zwei Fallen dabei:**
-1. Ein abgebrochener Versuch hinterlässt `.git/shallow.lock`. Der nächste Fetch
-   stirbt sofort daran, ohne dass man es merkt — `rm -f .git/*.lock`.
-2. `pgrep -f "git fetch"` trifft die **eigene Warte-Shell**, deren Kommandozeile
-   die Zeichenkette enthält. Dann sieht ein toter Fetch aus wie ein laufender.
-   Am Logfile prüfen, nicht an `pgrep`.
+752 → 640 Commits (112 waren reine Bild-Commits und wurden leer). Danach die
+**243 Nicht-Bild-Dateien** aus `werkbank/schuss/` aus dem alten Commit
+zurückgeholt: 105 Skripte (`.mjs`/`.py`/`.sh`) und 138 Messwertdateien (`.json`).
 
-**Folge: der Baum ist jetzt FLACH** (`git rev-list --count HEAD` = 1). Ob ein
-Push daraus angenommen wird, steht direkt unter diesem Absatz — wer hier
-ankommt, prüft es als Erstes.
+> **Das war der gefährliche Teil.** Unter `werkbank/schuss/` lagen nicht nur
+> Bilder, sondern die **Messgeräte** — `eichung/preis-linie.mjs` (die Linie des
+> sorgfältigen Spiels, aus der die Wellenzahlen kommen), `aufsicht/messstand.sh`,
+> `aufsicht/nenner.mjs`, `stadt-r6/lot.mjs`, die neun Skripte des SUD-Kritikers.
+> Wer hier noch einmal aufräumt, filtert **nach Endung, nicht nach Ordner**.
+
+**Ergebnis:** Arbeitsbaum 3,4 GB → **263 MB**. Abnahmetor danach gefahren:
+vier von vier Epochen laden, `BRAUHAUS.lage` 0, keine Konsolenfehler.
+
+**Warum die Bilder entbehrlich sind — das ist die Methode, nicht Bequemlichkeit:**
+Der blinde Kritiker sieht **das laufende Spiel**, nie ein altes Bild; täte er es,
+wäre die Blindheit hin. Die Messlatte BILD vergleicht die *laufende* Aufnahme
+gegen `zielbild/` (9 Dateien, 15 MB — die bleiben). Die Zahlen kommen aus
+`preis-linie.mjs`, nicht aus Bildern. Das Ergebnis eines Urteils ist der **Text**
+in `werkbank/urteile/` und die **Zahl** in der `.json` neben dem Skript. Beides
+ist versioniert. Das Bild ist Arbeitsmaterial.
+
+**Ab jetzt greift `.gitignore`:** weiter nach `werkbank/schuss/` schießen, die
+Messstände lesen von dort — aber `*.png|jpg|jpeg|webp|gif` wandern nicht mehr
+mit. Skripte und Messwerte schon.
+
+**Eine Falle bleibt:** `pgrep -f "git fetch"` trifft die **eigene Warte-Shell**,
+deren Kommandozeile die Zeichenkette enthält. Ein toter Fetch sieht dann aus wie
+ein laufender. Am Logfile prüfen, nicht an `pgrep`.
 
 ---
 

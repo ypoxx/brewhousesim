@@ -1,0 +1,138 @@
+{
+ "1": {
+  "ohneKlickAlle": 10,
+  "ohneKlickErbe": 3,
+  "erbeZuege": [
+   "erbe:tafel:verschreibe",
+   "erbe:uebergabe:leibgeding",
+   "erbe:uebergabe:abfindung"
+  ],
+  "rho": [
+   12.44,
+   8.29,
+   -0.2,
+   0,
+   0,
+   0,
+   0.4
+  ],
+  "erbeBilligster": "4/7",
+  "unter1": "5/7",
+  "rhoOhne": [
+   12.44,
+   6.44,
+   -0.2,
+   0,
+   0,
+   0,
+   0.33
+  ],
+  "unter1Ohne": "5/7",
+  "erbfaelle": 2,
+  "endeKasse": 0,
+  "lage": 0,
+  "fehler": 0
+ },
+ "2": {
+  "ohneKlickAlle": 10,
+  "ohneKlickErbe": 3,
+  "erbeZuege": [
+   "erbe:tafel:verschreibe",
+   "erbe:uebergabe:leibgeding",
+   "erbe:uebergabe:abfindung"
+  ],
+  "rho": [
+   35.56,
+   27.33,
+   22.69,
+   14.83,
+   16.38,
+   10.28,
+   10.31
+  ],
+  "erbeBilligster": "1/7",
+  "unter1": "0/7",
+  "rhoOhne": [
+   35.56,
+   27.33,
+   22.69,
+   14.83,
+   16.38,
+   10.28,
+   10.31
+  ],
+  "unter1Ohne": "0/7",
+  "erbfaelle": 2,
+  "endeKasse": 319,
+  "lage": 0,
+  "fehler": 0
+ },
+ "3": {
+  "ohneKlickAlle": 10,
+  "ohneKlickErbe": 3,
+  "erbeZuege": [
+   "erbe:tafel:verschreibe",
+   "erbe:uebergabe:leibgeding",
+   "erbe:uebergabe:abfindung"
+  ],
+  "rho": [
+   59.38,
+   50.51,
+   60.38,
+   58.47,
+   51.35,
+   49.44,
+   55.16
+  ],
+  "erbeBilligster": "5/7",
+  "unter1": "0/7",
+  "rhoOhne": [
+   59.38,
+   50.51,
+   33.21,
+   42.88,
+   28.24,
+   6.19,
+   22.75
+  ],
+  "unter1Ohne": "0/7",
+  "erbfaelle": 2,
+  "endeKasse": 7041,
+  "lage": 0,
+  "fehler": 0
+ },
+ "4": {
+  "ohneKlickAlle": 9,
+  "ohneKlickErbe": 3,
+  "erbeZuege": [
+   "erbe:tafel:verschreibe",
+   "erbe:uebergabe:leibgeding",
+   "erbe:uebergabe:abfindung"
+  ],
+  "rho": [
+   47.78,
+   29.02,
+   95.54,
+   83.82,
+   58.96,
+   31.54,
+   28.8
+  ],
+  "erbeBilligster": "5/7",
+  "unter1": "0/7",
+  "rhoOhne": [
+   47.78,
+   29.02,
+   26.72,
+   35.16,
+   18.52,
+   22.76,
+   11.04
+  ],
+  "unter1Ohne": "0/7",
+  "erbfaelle": 2,
+  "endeKasse": 41579,
+  "lage": 0,
+  "fehler": 0
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "e1": {
+  "treffer": {
+   "jahr": 1353,
+   "woche": 7,
+   "kasse": 0,
+   "antragPreis": "56",
+   "deckungText": "nächster Zug: Ablösung Klosterschenke Obernberg — 42 Pf  (Kasse reicht 0,0×)",
+   "naechster": {
+    "was": "Ablösung Klosterschenke Obernberg",
+    "preis": 42,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   },
+   "gewinner": "anderes"
+  },
+  "fehler": []
+ },
+ "e2": {
+  "treffer": {
+   "jahr": 1603,
+   "woche": 7,
+   "kasse": 122,
+   "antragPreis": "596",
+   "deckungText": "nächster Zug: Ablösung Pfarrschenke St. Michael — 189 fl  (Kasse reicht 0,6×)",
+   "naechster": {
+    "was": "Ablösung Pfarrschenke St. Michael",
+    "preis": 189,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   },
+   "gewinner": "anderes"
+  },
+  "fehler": []
+ },
+ "e3": {
+  "treffer": {
+   "jahr": 1887,
+   "woche": 6,
+   "kasse": 7511,
+   "antragPreis": "14550",
+   "deckungText": "nächster Zug: Ablösung Mühlschenke — 4.143 M  (Kasse reicht 1,8×)",
+   "naechster": {
+    "was": "Ablösung Mühlschenke",
+    "preis": 4143,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   },
+   "gewinner": "anderes"
+  },
+  "fehler": []
+ },
+ "e4": {
+  "treffer": {
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 25319,
+   "antragPreis": "142000",
+   "deckungText": "nächster Zug: Ablösung Schenke am Tor — 32.400 DM  (Kasse reicht 0,8×)",
+   "naechster": {
+    "was": "Ablösung Schenke am Tor",
+    "preis": 32400,
+    "art": "umkaempft",
+    "zug": null,
+    "rang": 3
+   },
+   "gewinner": "anderes"
+  },
+  "fehler": []
+ }
+}

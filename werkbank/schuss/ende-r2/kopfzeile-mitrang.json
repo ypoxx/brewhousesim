@@ -1,0 +1,74 @@
+{
+ "e1": {
+  "treffer": {
+   "jahr": 1353,
+   "woche": 7,
+   "kasse": 0,
+   "antragPreis": "56",
+   "deckungText": "nächster Zug: Der Rat bietet den Abstand — noch 6 Wochen — 56 Pf  (Kasse reicht 0,0×)",
+   "naechster": {
+    "was": "Der Rat bietet den Abstand — noch 6 Wochen",
+    "preis": 56,
+    "art": "ausgang",
+    "zug": "fuhre:ausgang:ja",
+    "rang": 5
+   },
+   "gewinner": "ANTRAG"
+  },
+  "fehler": []
+ },
+ "e2": {
+  "treffer": {
+   "jahr": 1603,
+   "woche": 7,
+   "kasse": 122,
+   "antragPreis": "596",
+   "deckungText": "nächster Zug: Der Mühlbräu bietet auf die Gerechtigkeit — noch 6 Wochen — 596 fl  (Kasse reicht 0,2×)",
+   "naechster": {
+    "was": "Der Mühlbräu bietet auf die Gerechtigkeit — noch 6 Wochen",
+    "preis": 596,
+    "art": "ausgang",
+    "zug": "fuhre:ausgang:ja",
+    "rang": 5
+   },
+   "gewinner": "ANTRAG"
+  },
+  "fehler": []
+ },
+ "e3": {
+  "treffer": {
+   "jahr": 1887,
+   "woche": 6,
+   "kasse": 7511,
+   "antragPreis": "14550",
+   "deckungText": "nächster Zug: Die Aktienbrauerei legt ein Angebot vor — noch 5 Wochen — 14.550 M  (Kasse reicht 0,5×)",
+   "naechster": {
+    "was": "Die Aktienbrauerei legt ein Angebot vor — noch 5 Wochen",
+    "preis": 14550,
+    "art": "ausgang",
+    "zug": "fuhre:ausgang:ja",
+    "rang": 5
+   },
+   "gewinner": "ANTRAG"
+  },
+  "fehler": []
+ },
+ "e4": {
+  "treffer": {
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 25319,
+   "antragPreis": "142000",
+   "deckungText": "nächster Zug: Die Nordstern-Gruppe bietet auf die Marke — noch 4 Wochen — 142.000 DM  (Kasse reicht 0,2×)",
+   "naechster": {
+    "was": "Die Nordstern-Gruppe bietet auf die Marke — noch 4 Wochen",
+    "preis": 142000,
+    "art": "ausgang",
+    "zug": "fuhre:ausgang:ja",
+    "rang": 5
+   },
+   "gewinner": "ANTRAG"
+  },
+  "fehler": []
+ }
+}
