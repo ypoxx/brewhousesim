@@ -294,3 +294,20 @@
   margin-top: calc(var(--s) * 6);
   padding-top: calc(var(--s) * 5);
 }
+
+/* ----------------------------------------------------------------------
+   DER NOTPFENNIG — die einzige Zahl des Blattes, die nach UNTEN begrenzt.
+   Sie steht wie die vierte Wurzel als Regel unter der Rechnung, bevor sie
+   das erste Mal greift; abgesetzt bekommt sie eine Kante, aber eine helle:
+   die Wurzeln nehmen, diese Zeile lässt.
+   ---------------------------------------------------------------------- */
+.pr-satz.pr-notpfennig {
+  border-top: 1px solid var(--pr-rand);
+  margin-top: calc(var(--s) * 6);
+  padding-top: calc(var(--s) * 5);
+}
+/* Der Vorgriff ist ein Zufluss, aber kein Ertrag — er ist geborgt. Er steht
+   deshalb in der Rechnung nicht grün wie ein Ertrag, sondern in der Tinte
+   des Rückstands, mit dem er nächstes Jahr zurückkommt. */
+.pr-zeile.pr-zufluss-geborgt .pr-zahl { color: var(--pr-tinte); }
+.pr-zeile.pr-zufluss-geborgt .pr-was { font-style: italic; }

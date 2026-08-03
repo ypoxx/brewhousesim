@@ -1083,7 +1083,7 @@
         Z.rueckstand += fehlt;
         Z.vorgriff = fehlt;
         Z.rechnung.push({ name: 'Vorgriff auf den Notpfennig — angeschrieben',
-          betrag: fehlt, art: 'zufluss' });
+          betrag: fehlt, art: 'zufluss-geborgt' });
         chronik('pflicht', 'Die Lade reichte nicht bis zum Notpfennig. Der Rat schießt '
           + geld(fehlt) + ' vor, damit das Haus das Braujahr brauen kann; '
           + geld(boden) + ' stehen wieder im Kasten. Angeschrieben, nicht geschenkt: '
@@ -1600,6 +1600,19 @@
         + '. Auf alles, was zu Michaeli darüber hinaus bar liegt, schlägt der Rat '
         + B.zahl((e.liegeSatz || 0) * 100, 0) + ' im Hundert an. '
         + 'Was verbaut, gebunden oder festgelegt ist, zählt nicht mit.'));
+    }
+    /* DER NOTPFENNIG steht als REGEL da, nicht erst als Rechnungszeile — aus
+       demselben Grund wie die vierte Wurzel darueber. Er ist die einzige Zahl
+       des Blattes, die nach UNTEN begrenzt, und er wurde bis heute nirgends
+       genannt: der Spieler erfuhr von ihm erst an dem Michaeli, an dem er
+       griff, und dann als Nebensatz in der Chronik. */
+    if (notpfennig() > 0) {
+      kasten.appendChild(B.el('div', 'pr-satz pr-klein pr-notpfennig',
+        'Der Notpfennig: ' + geld(notpfennig()) + ' bleiben im Haus. So weit und '
+        + 'nicht weiter nimmt der Rat — und liegt zu Michaeli weniger im Kasten, '
+        + 'schießt er auf diese Zahl vor, damit das Haus das Braujahr brauen kann. '
+        + 'Angeschrieben, nicht geschenkt: der Vorgriff steht im nächsten Jahr '
+        + 'mit einem Zehntel Aufschlag wieder oben in der Rechnung.'));
     }
     /* Woran das Haus dieses Jahr gemessen wird — beide Zahlen stehen da,
        damit niemand die Rechnung fuer eine Laune halten muss. */
