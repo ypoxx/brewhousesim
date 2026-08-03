@@ -176,9 +176,10 @@
        Der Michaelitag ist ausserdem der einzige Vorgang, den das Ohr heute
        schon 4 von 4 Mal trifft; er traegt die Latte und wird laut gestellt. */
     'preis:michaeli':    { datei: je('glocke', 'glocke', 'glocke', 'fabrikpfeife'),
-                           laut: 1.3, duck: 0.30, halt: 1.6,
+                           laut: 1.5, zeichen: true, duck: 0.22, halt: 1.5,
                            sagt: 'Michaeli: die Glocke, 1970 die Werkspfeife.' },
-    'preis:muenzen':     { datei: altNeu('muenzen', 'kasse'), laut: 1.05, versatz: 0.62 },
+    'preis:muenzen':     { datei: altNeu('muenzen', 'kasse'), laut: 1.2,
+                           zeichen: true, versatz: 0.62, duck: 0.22, halt: 0.9 },
     'preis:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.85 },
     'preis:handschlag':  { datei: stets('handschlag'), laut: 0.85 },
     'preis:fertig':      { datei: altNeu('bau1', 'bau4'), laut: 0.8 },
@@ -656,6 +657,13 @@
        Ton bekommen, der aus dem Lautsprecher kommt, und nicht den davor. */
     var w = { ctx: ctx, meister: meister, ausgang: letzt,
               bus: {}, ruhe: {}, atem: {}, schleifen: {} };
+    /* Der Zeichenbus laeuft an der Zaesur vorbei — sonst duckte sich die
+       Glocke unter sich selbst weg. */
+    w.ruhe.zeichen = 1.25;
+    w.bus.zeichen = ctx.createGain();
+    w.bus.zeichen.gain.value = w.ruhe.zeichen;
+    w.bus.zeichen.connect(meister);
+
     ['bett', 'hof', 'werk'].forEach(function (n) {
       w.ruhe[n] = PEGEL[n];
       var g = ctx.createGain(); g.gain.value = w.ruhe[n];
@@ -733,19 +741,52 @@
      Bett unten, solange ein langer Vorgang laeuft — der Michaelitag von 1970
      war leiser als das, was ohnehin lief (Hub 0,87), und ein Zeichen, das
      unter der Kulisse bleibt, ist kein Zeichen. */
+  function senke(w, bus, wann, anteil, halt, zurueck) {
+    var g = w.bus[bus].gain, ruhe = w.ruhe[bus];
+    try {
+      g.cancelScheduledValues(wann);
+      g.setValueAtTime(g.value, wann);
+      g.linearRampToValueAtTime(ruhe * anteil, wann + 0.05);
+      if (halt) g.setValueAtTime(ruhe * anteil, wann + 0.05 + halt);
+      g.linearRampToValueAtTime(ruhe, wann + 0.05 + halt + zurueck);
+    } catch (f) { }
+  }
+
   function ducke(w, wann, tiefe, halt) {
     var t = tiefe === undefined ? 0.5 : tiefe;
     var h = halt || 0;
-    [['bett', t], ['hof', 1 - (1 - t) * 0.60]].forEach(function (paar) {
-      var g = w.bus[paar[0]].gain, ruhe = w.ruhe[paar[0]];
-      try {
-        g.cancelScheduledValues(wann);
-        g.setValueAtTime(g.value, wann);
-        g.linearRampToValueAtTime(ruhe * paar[1], wann + 0.05);
-        if (h) g.setValueAtTime(ruhe * paar[1], wann + 0.05 + h);
-        g.linearRampToValueAtTime(ruhe, wann + 0.05 + h + 0.70);
-      } catch (f) { }
-    });
+    /* Ein spaeterer, FLACHERER Zug darf einen tieferen, der noch laeuft, nicht
+       aufheben. Ohne diese Sperre hebt `sud:ausschlagen` die Zaesur des
+       Michaelitags wieder auf — es faellt in dieselbe Sekunde, eine Stelle
+       spaeter in der Liste, und `cancelScheduledValues` macht keinen
+       Unterschied zwischen tief und flach. Gemessen: genau daran hing der
+       Michaeli-Hub. */
+    if (w.duckBis !== undefined && wann < w.duckBis
+        && t >= (w.duckTiefe === undefined ? 1 : w.duckTiefe)) return;
+    w.duckBis = wann + 0.05 + h + 0.70;
+    w.duckTiefe = t;
+    senke(w, 'bett', wann, t, h, 0.70);
+    senke(w, 'hof', wann, 1 - (1 - t) * 0.60, h, 0.70);
+  }
+
+  /* DIE ZAESUR — Auflage 2, zweite Haelfte.
+     Der Michaelitag hatte in 1970 einen Hub von 0,87: der Zahltag war leiser
+     als das, was ohnehin lief. Ein tieferes Bett allein heilt das nicht —
+     gemessen wurde danach ein Hub von 0,87 in 1350 und 0,74 in 1600, und
+     diesmal lag es nicht am Bett, sondern am WERK: das Jahr wechselt nach
+     einer Reihe schneller Klicks, und deren Klaenge stehen noch im Raum.
+     Ein Zeichen, das die ganze Epoche traegt, braucht deshalb eine Zaesur und
+     nicht nur mehr Pegel: Bett, Hof UND Werk gehen zurueck, und das Zeichen
+     selbst laeuft an ihnen vorbei auf einen eigenen Bus. Der Hof haelt an,
+     wenn die Glocke schlaegt. */
+  function zaesur(w, wann, tiefe, halt) {
+    var t = tiefe === undefined ? 0.25 : tiefe;
+    var h = halt || 0;
+    w.duckBis = wann + 0.05 + h + 0.75;
+    w.duckTiefe = t;
+    senke(w, 'bett', wann, t, h, 0.75);
+    senke(w, 'hof', wann, t, h, 0.75);
+    senke(w, 'werk', wann, t, h, 0.75);
   }
 
   /* DAS NACHBARHOF-ZEICHEN — Auflage 1.
@@ -794,7 +835,9 @@
     v = Math.max(0.05, Math.min(1.6, v));
     var datei = dateiVon(e, epoche);
     var buf = datei ? fertig(ctx, datei) : null;
-    var ziel = (e.fern && w.bus.fern) ? w.bus.fern : w.bus.werk;
+    var ziel = w.bus.werk;
+    if (e.zeichen && w.bus.zeichen) ziel = w.bus.zeichen;
+    else if (e.fern && w.bus.fern) ziel = w.bus.fern;
     if (e.versatz) wann += e.versatz;
     var tief = e.duck === undefined ? 0.45 : e.duck;
 
@@ -821,7 +864,8 @@
          genau das hat der erste Lauf im lebenden Spiel gezeigt. */
       q.start(wann);
       if (!laeuftWeiter) q.stop(wann + d + 0.05);
-      if (!e.nachbar) ducke(w, wann, tief, e.halt || 0);
+      if (e.zeichen) zaesur(w, wann, tief, e.halt || 0);
+      else if (!e.nachbar) ducke(w, wann, tief, e.halt || 0);
       return true;
     }
 
@@ -832,7 +876,8 @@
                         e.ersatz || (notfall && notfall.ersatz) || 'blatt',
                         wann, epoche, v);
     if (stueck && stueck !== true) w.schleifen[name] = { quelle: stueck, gain: null };
-    if (!e.nachbar) ducke(w, wann, Math.min(0.75, tief + 0.25), 0);
+    if (e.zeichen) zaesur(w, wann, tief, e.halt || 0);
+    else if (!e.nachbar) ducke(w, wann, Math.min(0.75, tief + 0.25), 0);
     return true;
   }
 
