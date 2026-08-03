@@ -332,6 +332,22 @@
   D.ANTRITT_AUFSCHLAG = 0.25;
   D.ANTRITT_JAHRE = 1;
 
+  /* Das Antrittsgeld allein reicht nicht. Nachgemessen, Epoche 2, Saat 1350:
+     die Uhr zog zweimal hintereinander "Veit Bruckner, wagemutig" — beide
+     Haende standen im Antrittsjahr auf Feder 1,25x, und ein Jahr spaeter
+     beide auf 1,00x. Name gleich, Art gleich, Feder gleich: genau der Fall,
+     den der Kritiker beanstandet hat, nur eine Hand weiter.
+
+     Also traegt die Feder zusaetzlich die NUMMER der Hand. Wer als dritte
+     Hand schreiben laesst, muss dem Schreiber zuerst nachweisen lassen, dass
+     die zwei Uebergaben davor rechtens waren — der Erbfolgenachweis, den
+     jedes Amtsbuch verlangt, und er kostet mit jedem Handwechsel mehr. Damit
+     ist die Feder rechnerisch bei JEDEM Erbfall eine andere, auch bei
+     gleichem Namen und gleicher Art; die Zeile "Feder n,nn x" auf der Leiste
+     ist dann keine Behauptung mehr, sondern ein Preis, den man nachrechnen
+     kann. Den Vornamen selbst kann nur der Kern trennen (Bitte im Bericht). */
+  D.HAND_AUFSCHLAG = 0.08;
+
   /* RUNDE 3, AUFLAGE 5.  "Es zieht 37 bis 56 Prozent der Startbarschaft in den
      ersten 15 Wochen."  Nachgemessen ueber drei Saaten war die Spanne noch
      weiter: 17,9 % (E3/Saat 99) bis 78,1 % (E4/Saat 7) — die Forderung des

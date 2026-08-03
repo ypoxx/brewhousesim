@@ -139,10 +139,19 @@
      (Auflage 2, zweite Haelfte). */
   function feder() {
     var f = eig().faktor;
+    /* Der Erbfolgenachweis: je Handwechsel ein Aufschlag, dauerhaft. */
+    f *= (1 + (D.HAND_AUFSCHLAG || 0) * Math.max(0, (amt().nr || 1) - 1));
+    /* Das Antrittsgeld: bis zum ersten Michaeli der neuen Hand. */
     if (Z.antrittBis && jahr() < Z.antrittBis) f *= (1 + (D.ANTRITT_AUFSCHLAG || 0));
     return Math.round(f * 100) / 100;
   }
   function imAntritt() { return !!(Z.antrittBis && jahr() < Z.antrittBis); }
+  /* Was die Feder dieser Hand kostet, wenn das Antrittsjahr vorbei ist —
+     die Zahl, an der sich zwei Haende vergleichen lassen. */
+  function federDauernd() {
+    var f = eig().faktor * (1 + (D.HAND_AUFSCHLAG || 0) * Math.max(0, (amt().nr || 1) - 1));
+    return Math.round(f * 100) / 100;
+  }
 
   /* Was eine Bindung wert ist: der Jahresbedarf des Hauses, mit dem Satz der
      Epoche, mal dem Eichfaktor aus dem aufbau (Auflage 5). */
@@ -922,7 +931,7 @@
       + '. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen.'
       + (imAntritt() ? ' ' + (a.name || 'Die neue Hand') + ' ist beim Schreiber noch '
          + 'unbekannt: bis Michaeli ' + jahr() + ' kostet jede Feder das Antrittsgeld mit, '
-         + B.zahl(feder(), 2) + '× statt ' + B.zahl(eig().faktor, 2) + '×.' : '')));
+         + B.zahl(feder(), 2) + '× statt ' + B.zahl(federDauernd(), 2) + '×.' : '')));
 
     if (Z.erbfaelle) {
       var f = e.formen[Z.letzteForm];
@@ -1121,7 +1130,7 @@
         : 1;
 
       Z.haende.push({ nr: amt().nr, name: amt().name, eigenschaft: amt().eigenschaft,
-        eigenschaftName: amt().eigenschaftName, feder: feder(), form: null });
+        eigenschaftName: amt().eigenschaftName, feder: federDauernd(), form: null });
 
       B.welt.schreibe('Die Hand am Haus ist ' + amt().name + ', ' + amt().eigenschaftName
         + '. Was sie nur mit einem Handschlag hält, hält das Haus nicht. '
@@ -1199,7 +1208,7 @@
       if (Z.haende.length) Z.haende[Z.haende.length - 1].form =
         (ep().formen[Z.letzteForm] ? ep().formen[Z.letzteForm].kurz : 'DIE STUNDE');
       Z.haende.push({ nr: amt().nr, name: amt().name, eigenschaft: amt().eigenschaft,
-        eigenschaftName: amt().eigenschaftName, feder: feder(), form: null });
+        eigenschaftName: amt().eigenschaftName, feder: federDauernd(), form: null });
       Z.vorherFrisch = false;
     },
 
@@ -1228,7 +1237,8 @@
         startKasse: Z.startKasse, eich: Z.eich, eichRoh: Z.eichRoh,
         erbmasse: erbmasse(), leibgedingPreis: leibgedingPreis(),
         abfindungPreis: abfindungPreis(),
-        eigenschaft: amt().eigenschaft, faktor: eig().faktor, feder: feder(),
+        eigenschaft: amt().eigenschaft, faktor: eig().faktor,
+        feder: feder(), federDauernd: federDauernd(),
         imAntritt: imAntritt(), fuenfterZug: eig().zug,
         taten: taten().map(function (t) { return t.zug + ' ' + t.preis + (t.aus ? ' (aus)' : ''); }),
         borg: Z.borg.slice(), angefochten: Z.angefochten, seelgeraet: Z.seelgeraet
