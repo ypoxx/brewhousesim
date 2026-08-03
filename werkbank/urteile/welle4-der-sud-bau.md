@@ -346,7 +346,23 @@ Grutknecht, der beim Sack mit 11 % je Woche in die Pfanne sieht (Güte 98 gegen
 19 am Ende). Wer die 78 Pf nicht hat, braut trotzdem — er hat es nur nicht
 schriftlich.
 
-PLATZ-ZWEIPARTIEN-34
+**1884 — Kältemaschine und Reinzucht gegen „ohne Kühlung durchgären lassen":**
+
+| | TEUER (9.800 M + 3.400 M, beide gesiegelt) | BILLIG (warm, 0 M) |
+|---|---|---|
+| Zeile auf dem Kesselzettel | **„höchstens Exportbier"** | **„höchstens Schankbier"** |
+| Siegel | `kaelte:maschine`, `hefe:reinzucht` | keines |
+| Güte am Ende | **96** | **25** |
+| Sude · Fass | 21 · 368 | 41 · 687 |
+| Kasse am Ende | 15 M | 8.842 M |
+
+Auch hier steht der ganze Unterschied in einer Zeile am Sudhaus. Und er hat
+zwei Seiten: die billige Partie hat nach vier Jahren fast neuntausend Mark und
+verkauft Schankbier; die teure hat fünfzehn Mark und darf exportieren. **Das
+ist eine Entscheidung und keine Verbesserung** — genau das, was die Latte
+verlangt.
+
+PLATZ-ZWEIPARTIEN-4
 
 ### 3.4 Die gesperrte Charge von 1970
 

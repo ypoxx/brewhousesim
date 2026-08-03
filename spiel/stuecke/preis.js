@@ -1457,15 +1457,19 @@
     }
     /* Die vierte Wurzel steht als REGEL da, nicht erst als Rechnungszeile —
        sonst liest der Spieler sie zum ersten Mal an dem Tag, an dem sie ihn
-       trifft. Sie steht nur, wo die Epoche sie kennt. */
+       trifft. Sie steht nur, wo die Epoche sie kennt.
+
+       KURZ, und das ist gemessen: mit dem vollen Satz aus den Daten
+       (`liegeSagt`) hinten dran lief der Absatz am 3. August in 1600 unten aus
+       dem Kasten heraus und brach mitten im Wort ab. Der lange Satz steht in
+       WAS FAELLIG WIRD, wo die Spalte ihn traegt; hier steht die Regel. */
     if (e.liegeSatz) {
       kasten.appendChild(B.el('div', 'pr-satz pr-klein pr-liege',
         liegeName() + ': frei bleiben ' + B.zahl(e.liegeFrei || 0, 1) + ' Jahreslasten, '
-        + 'mindestens aber der Preis der nächsten Festlegung — zusammen '
-        + geld(liegeFreibetrag()) + '. Auf alles, was zu Michaeli darüber hinaus bar im '
-        + 'Haus liegt, schlägt der Rat ' + B.zahl((e.liegeSatz || 0) * 100, 0)
-        + ' im Hundert an. Was verbaut, gebunden oder festgelegt ist, zählt nicht mit. '
-        + (ep().liegeSagt || '')));
+        + 'mindestens der Preis der nächsten Festlegung — ' + geld(liegeFreibetrag())
+        + '. Auf alles, was zu Michaeli darüber hinaus bar liegt, schlägt der Rat '
+        + B.zahl((e.liegeSatz || 0) * 100, 0) + ' im Hundert an. '
+        + 'Was verbaut, gebunden oder festgelegt ist, zählt nicht mit.'));
     }
     /* Woran das Haus dieses Jahr gemessen wird — beide Zahlen stehen da,
        damit niemand die Rechnung fuer eine Laune halten muss. */
