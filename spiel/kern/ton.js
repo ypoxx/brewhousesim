@@ -590,7 +590,10 @@
      Ende sind beide null, die Schleife hat also keine Naht. */
   function atemBand(ctx) {
     if (ctx.__klangAtem) return ctx.__klangAtem;
-    var rate = 1000, n = Math.round(ATEM_RUNDE * rate);
+    /* 3000 Hz ist die unterste Abtastrate, die createBuffer zulaesst; darunter
+       wirft der Browser. Fuer eine Kontur, deren schnellste Welle drei Runden
+       auf sieben Sekunden macht, ist das reichlich. */
+    var rate = 3000, n = Math.round(ATEM_RUNDE * rate);
     var b = ctx.createBuffer(1, n, rate), d = b.getChannelData(0), i, p, v;
     for (i = 0; i < n; i++) {
       p = i / n;

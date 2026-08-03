@@ -84,10 +84,11 @@ for ep in sorted(proEpoche):
         print(f"  Lauf {d['lauf']}  {d['wochen']} Wochen  {jahre[0] if jahre else '?'}-{d['schluss']['jahr']}  "
               f"Seitenfehler {len(d['fehler'])}  Abbruch {d['abgebrochen']}  lage {d['schluss']['lage']}")
         print(f"  (d) LEITER  {len(mal)} Jahre: {[round(m,2) for m in mal]}")
+        f2 = lambda v: '  n/a' if v is None else f'{v:+.3f}'
         print(f"      erste {mal[0]:.2f}  letzte {mal[-1]:.2f}  min {min(mal):.2f}  max {max(mal):.2f}"
-              f"   Pearson {rp:+.3f}  Spearman {rs:+.3f}   Jahre <1x: {u1}/{len(mal)}")
+              f"   Pearson {f2(rp)}  Spearman {f2(rs)}   Jahre <1x: {u1}/{len(mal)}")
         print(f"  (d) Kopfzeile woechentlich, Jahresmedian ({len(wmed)} Jahre): {[round(m,2) for m in wmed]}")
-        print(f"      Pearson {wp:+.3f}  Spearman {ws:+.3f}   Jahre <1x: {wu1}/{len(wmed)}")
+        print(f"      Pearson {f2(wp)}  Spearman {f2(ws)}   Jahre <1x: {wu1}/{len(wmed)}")
         print(f"  (a) Preisentscheidungen aktiv+erreichbar je Woche: median {st.median(a):.0f} "
               f"min {min(a)} max {max(a)}   (nur aktiv, auch verdeckt: median {st.median(aa):.0f})")
         print(f"  (b) unwiderrufliche Festlegungen am Ende: {d['schluss']['festlegungen']} "
@@ -97,6 +98,32 @@ for ep in sorted(proEpoche):
         print(f"  (d) Nenner, wer ihn stellt: Arten {d['nennerArt']}")
         for k, v in nenner[:5]:
             print(f"        {v:4d}x  {k}")
+        # Ist die Zahl ehrlich? Steht zum genannten Preis ein aktiver, erreichbarer Knopf?
+        gedeckt = teuerer = 0
+        verh = []
+        for x in d['reihe']:
+            if not x['nzPreis']:
+                continue
+            preise = [abs(p) for _, p in x['aListe']]
+            if any(abs(p - abs(x['nzPreis'])) <= 1 for p in preise):
+                gedeckt += 1
+            if preise:
+                teuerste = max(preise)
+                verh.append(teuerste / abs(x['nzPreis']))
+                if teuerste >= 10 * abs(x['nzPreis']):
+                    teuerer += 1
+        n = len([x for x in d['reihe'] if x['nzPreis']])
+        print(f"  (d) EHRLICH? Knopf mit demselben Preis aktiv+erreichbar: {gedeckt}/{n} Wochen "
+              f"({100*gedeckt/max(1,n):.0f}%)   Zugschluessel mitgeschickt: "
+              f"{sum(1 for x in d['reihe'] if x['nzZug'])}/{n}")
+        if verh:
+            print(f"      teuerste Entscheidung am Schirm / Nenner: median {st.median(verh):.1f}x  "
+                  f"max {max(verh):.1f}x   Wochen mit >=10x daneben: {teuerer}/{n}")
+        # Michaeli, Regel §17: Kasse deckt das zweitbilligste Angebot
+        mich = [(j['jahr'], j['kasseMichaeli'], j['angebotAktiv'], j['festAmSchirm']) for j in d['jahre']]
+        print(f"      Michaeli, Angebote aktiv (erste 6 Jahre): "
+              f"{[(a, c) for a, b, c, e in mich[:6]]}  Festlegungen am Schirm: "
+              f"{[e for a, b, c, e in mich[:6]]}")
         zus[ep].append(dict(lauf=d['lauf'], n=len(mal), erst=mal[0], letzt=mal[-1],
                             pear=rp, spear=rs, u1=u1, wpear=wp, wspear=ws, wu1=wu1,
                             wn=len(wmed), wochen=d['wochen'], fehler=len(d['fehler']),
@@ -108,6 +135,8 @@ print('ZUSAMMENFASSUNG — LEITER (Bildschirmreihe), Ziel |rho| < 0,7 und hoechs
 print(f"{'Ep':>3} {'Lauf':>5} {'Jahre':>6} {'erste':>7} {'letzte':>7} {'Pearson':>9} {'Spearman':>9} {'<1x':>7} {'Urteil':>8}")
 for ep in sorted(zus):
     for z in zus[ep]:
+        if z['spear'] is None or z['pear'] is None:
+            continue
         ok = (abs(z['spear']) < 0.7 and abs(z['pear']) < 0.7 and z['u1'] <= z['n'] / 6)
         print(f"{ep:>3} {z['lauf']:>5} {z['n']:>6} {z['erst']:>7.2f} {z['letzt']:>7.2f} "
               f"{z['pear']:>+9.3f} {z['spear']:>+9.3f} {str(z['u1'])+'/'+str(z['n']):>7} "
@@ -117,14 +146,16 @@ print('ZUSAMMENFASSUNG — Kopfzeile woechentlich, Jahresmedian (unabhaengige Ge
 print(f"{'Ep':>3} {'Lauf':>5} {'Jahre':>6} {'Pearson':>9} {'Spearman':>9} {'<1x':>7}")
 for ep in sorted(zus):
     for z in zus[ep]:
+        if z['wpear'] is None: continue
         print(f"{ep:>3} {z['lauf']:>5} {z['wn']:>6} {z['wpear']:>+9.3f} {z['wspear']:>+9.3f} "
               f"{str(z['wu1'])+'/'+str(z['wn']):>7}")
 print()
 print('STREUUNG je Epoche (LEITER)')
 for ep in sorted(zus):
-    sp = [z['spear'] for z in zus[ep]]
-    pe = [z['pear'] for z in zus[ep]]
+    sp = [z['spear'] for z in zus[ep] if z['spear'] is not None]
+    pe = [z['pear'] for z in zus[ep] if z['pear'] is not None]
     le = [z['letzt'] for z in zus[ep]]
+    if not sp: continue
     print(f"  E{ep}: Spearman {min(sp):+.3f} .. {max(sp):+.3f} (Spanne {max(sp)-min(sp):.3f}) | "
           f"Pearson {min(pe):+.3f} .. {max(pe):+.3f} (Spanne {max(pe)-min(pe):.3f}) | "
           f"letzte {min(le):.2f} .. {max(le):.2f}")
