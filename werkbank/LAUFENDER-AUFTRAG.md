@@ -269,7 +269,63 @@ nicht erreicht.
 
 ---
 
-## WELLE 4, DIE RÜCKKOPPLUNG r2 — 1600 geheilt, 1350 dafür gerissen
+## WELLE 4 IST DURCH — DAS WELLENZIEL IST ERREICHT (3. August 2026, abends)
+
+**Von der Aufsicht selbst nachgemessen**, zwölf Läufe à 400 Wochen auf dem
+**eingefrorenen HEAD `1b5ab7a`**, je drei pro Epoche, mit dem load-festen Gerät
+`werkbank/schuss/rueckkopplung-r3/linie.mjs`. Rohdaten und Befund in
+`werkbank/schuss/aufsicht/welle4-schluss/`.
+
+| Epoche | ρ (drei Läufe) | Spannweite | Start → Ende | Jahre < 1× | Seitenfehler |
+|---|---|---|---|---|---|
+| 1350 | +0,591 ×3 | **0,000** | 5,89 → 8,20 | 0/14 | 0 |
+| 1600 | +0,231 ×3 | **0,000** | 3,76 → 3,22 | 0/14 | 0 |
+| 1884 | +0,393 ×3 | **0,000** | 8,35 → 5,18 | 1/14 | 0 |
+| 1970 | +0,108 ×3 | **0,000** | 2,25 → 4,26 | 0/14 | 0 |
+
+**|ρ| < 0,7 in allen vier, höchstens ein Jahr von sechs unter 1× — erreicht.**
+
+**Was damit NICHT erledigt ist**, damit niemand die Welle für geschlossen hält:
+- **Keine der drei Nacharbeiten ist blind geprüft.** Builder haben ihre eigene
+  Arbeit gemessen, die Aufsicht hat die Kernzahlen nachgemessen — ein blinder
+  Kritiker hat die *nachgearbeiteten* Stücke noch nicht gespielt.
+- **DER KLANG, Auflage 1 offen**: der Gegenzug ist hörbar, aber das Ohr trifft
+  die Sekunde nur 1 von 4. Der Builder sagt das selbst.
+- **DER PREIS ist in dieser Welle nie gelaufen** — `preis*.js` war durchgehend
+  belegt. Der Festlegungszähler und der Kassenboden stehen weiter offen.
+- **Zwei KERN-Änderungen liegen bereit** (unten), einzuarbeiten, wenn kein Agent
+  mehr läuft.
+
+**Befund über die Methode: parallele Nacharbeiten setzen sich nicht zusammen.**
+Der Builder meldet für 1350 **+0,288**, die Aufsicht misst **+0,591**. Beide
+stimmen — auf verschiedenen Bäumen. Letzter `preis.js`-Commit war 15:36;
+`sud-daten.js` mit der neuen Achse DAS BRAUWASSER (30 Pf, unwiderruflich) kam
+15:55, und `sud.js:2179` speist über `meldeZug` in genau dieselbe Kennzahl.
+
+> **Regel:** Zwei Stücke, die dieselbe Kennzahl füttern, nicht gleichzeitig
+> nacharbeiten lassen. Und die Zahl, die zählt, ist die des **zusammengeführten**
+> Baums — den spielt man.
+
+**Zwei KERN-Änderungen, gemessen begründet, warten auf die Aufsicht:**
+1. **`kern/buehne.js`, eine Zeile**: `k.setAttribute('data-soll-aus', opt.aus ? '1' : '0')`
+   in `B.knopf()`. Erreicht gemessen 94/102 · 102/112 · 106/116 · 98/107 aller
+   Züge und **alle** heute ungeklärten — löst den Messlatten-Befund unten, ohne
+   dass ein Stück etwas ändert. Vorgeschlagen von DER SUD.
+2. **`kern/welt.js`**: `zugDeckung()` gibt `null`, wenn die eine gehaltene
+   Meldung durch die Prüfung fällt, statt auf den nächstbesten Zug
+   zurückzufallen — gemessen 18 von 4.800 Wochen. Dazu prüft `welt.js:503` nur
+   `el.disabled`, nicht Sichtbarkeit. Vorgeschlagen von DIE RÜCKKOPPLUNG.
+
+---
+
+## WELLE 4, DIE RÜCKKOPPLUNG r2 — 1600 geheilt, 1350 dafür gerissen (BERICHTIGT)
+
+**Die Überschrift dieses Abschnitts war falsch, und der Befund darin auch.**
+Gegenprobe mit dem load-festen Gerät auf dem **alten** Stand `da7d690`:
+**+0,701, zweimal identisch.** 1350 riss also **schon vorher**; die alte Messhand
+hat es verdeckt. Die Runde hat 1350 nicht gebrochen, sondern von +0,701 auf
++0,591 gebessert. Der Abschnitt bleibt als Beleg stehen, wie eine Messung ohne
+Gerätekontrolle in die Irre führt.
 
 **Von der Aufsicht selbst nachgemessen**, am eingefrorenen Commit `da7d690`
 (Hafen 8900, `werkbank/schuss/aufsicht/messstand.sh`), NICHT am Arbeitsbaum —
@@ -288,14 +344,22 @@ Läufe, alle drei über der Latte. Der blinde Kritiker kam unabhängig zum selbe
 Schluss („1600 ist geheilt. 1350 ist dabei nach oben davongelaufen"), bevor die
 Aufsicht ihre Zahlen hatte — zwei Wege, ein Befund.
 
-> **MESSREGEL, teuer gelernt und ab jetzt bindend: EIN LAUF TRÄGT KEIN URTEIL.**
-> Drei Läufe desselben Standes streuen bei 1600 über **0,54** in ρ (−0,319 bis
-> +0,218) und beim Maximum um das Siebenfache (3,76 bis 12,67). Wer eine
-> Epoche mit einer Einzelzahl frei- oder schuldigspricht, würfelt. Der Builder
-> hat diese Streuung selbst gemeldet (`preis-linie.mjs` ist unter Last nicht
-> bitgenau) — und dann trotzdem 1350 auf einem Lauf für unverändert erklärt.
-> **Mindestens drei Läufe je Epoche, Spannweite mit angeben, sonst ist es keine
-> Messung.**
+> **MESSREGEL: EIN LAUF TRÄGT KEIN URTEIL.** Mindestens drei Läufe je Epoche,
+> Spannweite mit angeben.
+>
+> **BERICHTIGT am 3.8. abends — die Begründung, die hier stand, war falsch.**
+> Ursprünglich stand hier: „Drei Läufe desselben Standes streuen über 0,54 in ρ,
+> das Spiel würfelt." **Es würfelte nicht das Spiel, sondern die Messhand.**
+> `eichung/preis-linie.mjs:80` sah nach jedem Klick genau einmal hin, mit fester
+> Wartezeit; unter Last war der Knopf noch nicht neu gezeichnet, der Klick fiel
+> ersatzlos aus, das Haus braute ein Jahr weniger, und die ganze Partie lief
+> anders. Mit `rueckkopplung-r3/linie.mjs`, das bis zu sechsmal hinsieht und auf
+> einen echten Bildaufbau wartet: **Spannweite 0,000 über zwölf Läufe.**
+> Gefunden hat das der Builder, nicht die Aufsicht.
+>
+> **Die Regel bleibt, ihr Zweck kehrt sich um:** drei Läufe sind eine
+> **Kontrolle des Geräts**. Wer jetzt Streuung misst, hat ein kaputtes Messgerät
+> und soll es suchen, statt die Streuung hinzunehmen.
 
 ---
 

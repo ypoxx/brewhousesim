@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-03T16:52:57+00:00",
- "phase": "Welle 4 — alle drei Nacharbeiten abgeliefert, die Aufsicht misst nach. DIE RÜCKKOPPLUNG meldet 1350 von +0,701 auf +0,288 geheilt und die drei anderen Bit für Bit unberührt (+0,231 / +0,169 / +0,108), 0 von 14 Jahren unter 1× überall — das wäre das Wellenziel. UND SIE HAT DEN STREIT UM DIE ZAHLEN AUFGEKLÄRT: nicht der Stand hatte sich geändert, sondern die Messhand — preis-linie.mjs sah nach jedem Klick nur einmal hin, unter Last fiel der Klick aus und die Partie lief anders. Zwölf eigene Läufe der Aufsicht auf dem eingefrorenen Stand laufen, dazu eine Gegenprobe mit dem neuen Gerät auf dem ALTEN Stand: war 1350 je heil, oder hat die alte Hand es nur verdeckt?",
+ "stand": "2026-08-03T17:34:39+00:00",
+ "phase": "WELLE 4 IST DURCH — das Wellenziel ist erreicht. Von der Aufsicht unabhängig nachgemessen, zwölf Läufe auf dem eingefrorenen HEAD, je drei pro Epoche: rho +0,591 / +0,231 / +0,393 / +0,108, Spannweite jeweils 0,000, höchstens ein Jahr von sechs unter 1×, null Seitenfehler. |rho| unter 0,7 in allen vier Epochen. NICHT erledigt: keine der drei Nacharbeiten ist blind geprüft, DER KLANG hat eine offene Auflage, DER PREIS ist in dieser Welle nie gelaufen, und zwei KERN-Änderungen warten auf die Einarbeitung.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -113,25 +113,13 @@
   },
   {
    "name": "DIE RÜCKKOPPLUNG — die Kennzahl über die Zeit",
-   "status": "zurueck",
-   "runde": 2,
-   "luecke": "FÄLLT DURCH. 1600 ist echt repariert — rho +0,873 auf +0,231, und an der richtigen Stelle: dort fällt die Kasse (×0,61) bei steigenden Preisen (×1,48). Dafür ist 1350 gerissen: Spearman +0,742 / +0,701 / +0,701 beim Kritiker, +0,701 / +0,785 / +0,789 bei der unabhängigen Nachmessung der Aufsicht, Spitze 41,67× statt vorher 7,88×. Ursache mitgemessen: in 1350 wächst die Kasse um das 2,30-fache, der Nennerpreis nur um das 1,33-fache; Spearman der Kennzahl gegen die Kasse +0,947 — die Zahl folgt der Kasse, nicht dem Preis. Der Builder hatte 1350 als 'identisch, Ziffer für Ziffer' gemeldet; widerlegt von zwei Seiten unabhängig. Dazu ein Fund des Kritikers, der nicht dieser Datei gehört: gegner.js:1561 ruft meldeZug mit drei statt vier Argumenten, also ohne Zugschlüssel — der Prüfschritt aus ZUSTÄNDIGKEIT 24 läuft dort ins Leere, und diese Stelle stellt in 4.311 von 4.800 Wochen (89,8 Prozent) den Nenner der Kennzahl.",
+   "status": "bestanden",
+   "runde": 3,
+   "luecke": "BESTANDEN nach Nachmessung der Aufsicht. Zwölf Läufe auf dem eingefrorenen HEAD 1b5ab7a, je drei pro Epoche, Spannweite 0,000: rho +0,591 / +0,231 / +0,393 / +0,108, Jahre unter 1× 0/0/1/0, null Seitenfehler. Der Builder hat außerdem die Ursache des ganzen Zahlenstreits gefunden: nicht der Stand änderte sich, sondern die Messhand — preis-linie.mjs sah nach jedem Klick nur einmal hin, unter Last fiel der Klick aus. Damit sind zwei frühere Befunde der Aufsicht widerlegt: 1350 riss schon vor dieser Runde (+0,701 auf dem alten Stand, mit dem neuen Gerät zweimal identisch), und die gemeldete Streuung von 0,54 war das Gerät, nicht das Spiel. OFFEN: der Builder meldet +0,288 für 1350, die Aufsicht misst +0,591 — beide stimmen auf verschiedenen Bäumen, weil DER SUD 19 Minuten nach seinem letzten Commit eine neue Achse mit Preis in dieselbe Kennzahl gespeist hat.",
    "gebaut": "werkbank/beleg/preis-e3.jpg"
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T16:37:38+00:00",
-   "text": "Vorbereitung — Messlatte wird gewählt, Endprompt wird geschrieben"
-  },
-  {
-   "zeit": "2026-07-31T16:37:38+00:00",
-   "text": "Zielbilder vom Auftraggeber freigegeben. Der Lauf kann beginnen."
-  },
-  {
-   "zeit": "2026-07-31T16:42:28+00:00",
-   "text": "Welle 1 — Grundriss, Skelett, erste Stuecke"
-  },
   {
    "zeit": "2026-07-31T16:42:28+00:00",
    "text": "Messlatte gewaehlt und begruendet: gauntlet/MESSLATTE.md. Endprompt: gauntlet/PROMPT.md."
@@ -919,6 +907,18 @@
   {
    "zeit": "2026-08-03T16:52:57+00:00",
    "text": "Welle 4 — alle drei Nacharbeiten abgeliefert, die Aufsicht misst nach. DIE RÜCKKOPPLUNG meldet 1350 von +0,701 auf +0,288 geheilt und die drei anderen Bit für Bit unberührt (+0,231 / +0,169 / +0,108), 0 von 14 Jahren unter 1× überall — das wäre das Wellenziel. UND SIE HAT DEN STREIT UM DIE ZAHLEN AUFGEKLÄRT: nicht der Stand hatte sich geändert, sondern die Messhand — preis-linie.mjs sah nach jedem Klick nur einmal hin, unter Last fiel der Klick aus und die Partie lief anders. Zwölf eigene Läufe der Aufsicht auf dem eingefrorenen Stand laufen, dazu eine Gegenprobe mit dem neuen Gerät auf dem ALTEN Stand: war 1350 je heil, oder hat die alte Hand es nur verdeckt?"
+  },
+  {
+   "zeit": "2026-08-03T17:34:39+00:00",
+   "text": "WELLE 4 IST DURCH — das Wellenziel ist erreicht. Von der Aufsicht unabhängig nachgemessen, zwölf Läufe auf dem eingefrorenen HEAD, je drei pro Epoche: rho +0,591 / +0,231 / +0,393 / +0,108, Spannweite jeweils 0,000, höchstens ein Jahr von sechs unter 1×, null Seitenfehler. |rho| unter 0,7 in allen vier Epochen. NICHT erledigt: keine der drei Nacharbeiten ist blind geprüft, DER KLANG hat eine offene Auflage, DER PREIS ist in dieser Welle nie gelaufen, und zwei KERN-Änderungen warten auf die Einarbeitung."
+  },
+  {
+   "zeit": "2026-08-03T17:34:39+00:00",
+   "text": "DIE RÜCKKOPPLUNG — die Kennzahl über die Zeit · Runde 3 · bestanden — BESTANDEN nach Nachmessung der Aufsicht. Zwölf Läufe auf dem eingefrorenen HEAD 1b5ab7a, je drei pro Epoche, Spannweite 0,000: rho +0,591 / +0,231 / +0,393 / +0,108, Jahre unter 1× 0/0/1/0, null Seitenfehler. Der Builder hat außerdem die Ursache des ganzen Zahlenstreits gefunden: nicht der Stand änderte sich, sondern die Messhand — preis-linie.mjs sah nach jedem Klick nur einmal hin, unter Last fiel der Klick aus. Damit sind zwei frühere Befunde der Aufsicht widerlegt: 1350 riss schon vor dieser Runde (+0,701 auf dem alten Stand, mit dem neuen Gerät zweimal identisch), und die gemeldete Streuung von 0,54 war das Gerät, nicht das Spiel. OFFEN: der Builder meldet +0,288 für 1350, die Aufsicht misst +0,591 — beide stimmen auf verschiedenen Bäumen, weil DER SUD 19 Minuten nach seinem letzten Commit eine neue Achse mit Preis in dieselbe Kennzahl gespeist hat."
+  },
+  {
+   "zeit": "2026-08-03T17:34:39+00:00",
+   "text": "WELLE 4 DURCH — DAS WELLENZIEL IST ERREICHT UND VON DER AUFSICHT UNABHÄNGIG NACHGEMESSEN. Zwölf Läufe à 400 Wochen auf dem eingefrorenen HEAD 1b5ab7a, je drei pro Epoche, mit dem neuen load-festen Gerät: 1350 +0,591, 1600 +0,231, 1884 +0,393, 1970 +0,108 — jede Zahl dreimal identisch, Spannweite 0,000, null Seitenfehler, höchstens ein Jahr von sechs unter 1×. ZWEI BERICHTIGUNGEN AN DER AUFSICHT SELBST, beide gefunden vom Builder, nicht von mir. Erstens: die Regel 'rho streut zwischen identischen Läufen um 0,54, das Spiel würfelt' war falsch — es würfelte die Messhand. eichung/preis-linie.mjs sah nach jedem Klick genau einmal hin; unter Last war der Knopf noch nicht neu gezeichnet, der Klick fiel ersatzlos aus, das Haus braute ein Jahr weniger, und die ganze Partie lief anders. Das neue Gerät sieht bis zu sechsmal hin und wartet auf einen echten Bildaufbau: Spannweite 0,000. Die Regel 'drei Läufe je Epoche' bleibt, aber ihr Zweck kehrt sich um — sie ist eine Kontrolle des Geräts, nicht des Spiels. Zweitens: 'der Fehler ist umgezogen, 1350 ist durch diese Runde gerissen' war falsch. Gegenprobe mit dem neuen Gerät auf dem alten Stand da7d690: +0,701, zweimal identisch. 1350 riss schon vorher, die alte Hand hat es nur verdeckt; die Runde hat es von +0,701 auf +0,591 gebessert. DRITTENS ein Befund über die Methode: der Builder meldet für 1350 +0,288, die Aufsicht misst +0,591 — beide Zahlen stimmen, auf verschiedenen Bäumen. Sein letzter Commit war 15:36, DER SUD hat um 15:55 eine neue Achse mit einem Preis von 30 Pf in dieselbe Kennzahl gespeist. Zwei Stücke, die dieselbe Kennzahl füttern, dürfen nicht gleichzeitig nachgearbeitet werden — und die Zahl, die zählt, ist die des zusammengeführten Baums, denn den spielt man."
   }
  ]
 }
