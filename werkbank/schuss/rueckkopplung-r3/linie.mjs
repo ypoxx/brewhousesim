@@ -23,6 +23,17 @@ const ZIEL = process.argv[4] || `/tmp/rk3/e${ep}.json`;
 const HAFEN = process.env.HAFEN || '8900';
 const SAAT = process.env.SAAT || '1350';
 const LAUT = !!process.env.LAUT;
+/* WARUM ES DIESEN FAKTOR GIBT — der wichtigste Befund dieser Runde.
+   Die festen Wartezeiten des Originalgeraets (60 bis 220 ms) sind kein
+   Messwert, sondern eine Wette darauf, dass der Bildaufbau schneller ist als
+   die Wartezeit. Ist die Maschine belastet, kommt der naechste `lage()`-Blick
+   auf ein noch nicht neu gezeichnetes Bild, der Knopf gilt als „nicht
+   getroffen", und der Klick faellt AUS. Am staerksten trifft das die Schleife,
+   die zu Michaeli den Sudplan stellt: faellt dort ein Klick aus, braut das
+   Haus ein Jahr lang weniger, und die ganze Partie laeuft anders. Genau daran
+   gehen die Messungen dieser Welle auseinander. Mit WARTE=3 landet jeder
+   Klick, und die Partie ist die reiche — die des Kritikers. */
+const WARTE = +(process.env.WARTE || 1);
 
 const browser = await chromium.launch();
 const seite = await browser.newPage({ viewport: { width: 1920, height: 1000 }, deviceScaleFactor: 1 });
@@ -61,14 +72,14 @@ async function klick(zug, warte = 60) {
       const rl = await lage(r);
       if (!rl || !rl.sichtbar || rl.aus || !rl.hit) continue;
       await seite.mouse.click(rl.x, rl.y);
-      await seite.waitForTimeout(90);
+      await seite.waitForTimeout(90 * WARTE);
       l = await lage(zug);
       if (l && l.hit) break;
     }
   }
   if (!l || !l.sichtbar || l.aus || !l.hit) return false;
   await seite.mouse.click(l.x, l.y);
-  await seite.waitForTimeout(warte);
+  await seite.waitForTimeout(warte * WARTE);
   if (LAUT) console.log('   klick', zug);
   return true;
 }
