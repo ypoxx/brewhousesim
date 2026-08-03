@@ -725,10 +725,20 @@
     });
     setzeAtem(w, epoche);
 
-    /* Zwei Waende. `fern` ist der Nachbarhof, wie man ihn ueber den Zaun
-       hoert; `nachbar` ist dasselbe eine Wand weiter und traegt das Zeichen. */
-    w.bus.fern = baueWand(ctx, w.bus.werk, 2000, 0.155, 0.40);
-    w.bus.nachbar = baueWand(ctx, w.bus.werk, 1800, 0.190, 0.55);
+    /* Zwei Waende, und beide haengen NICHT am Werkbus, sondern an einem
+       eigenen. Das ist die Stelle, an der Auflage 1 haengt: der Gegenzug
+       faellt im Spiel regelmaessig in dieselbe Sekunde wie fuenf eigene
+       Klaenge — in 1884 stehen bei Sekunde 24 `uhr:woche`, `sud:anstellen`,
+       `sud:ausschlagen`, `sud:pfanne` und `name:verlust` neben
+       `gegner:werben`. Solange der Nachbar im selben Bus liegt wie sie, kann
+       er nicht vortreten, ohne alles andere mitzunehmen. Auf einem eigenen
+       Bus kann der Hof fuer ihn zuruecktreten. */
+    w.ruhe.fremd = 1.0;
+    w.bus.fremd = ctx.createGain();
+    w.bus.fremd.gain.value = w.ruhe.fremd;
+    w.bus.fremd.connect(meister);
+    w.bus.fern = baueWand(ctx, w.bus.fremd, 2000, 0.155, 0.40);
+    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 1800, 0.190, 0.55);
     return w;
   }
 
@@ -874,7 +884,7 @@
     /* Wie bei den Schleifen: die beiden Proben sind NICHT gleich laut aus dem
        Erzeuger gekommen (Effektivwert 0,044 gegen 0,100). Ein Zeichen, das in
        1350 halb so laut ist wie in 1970, ist in 1350 kein Zeichen. */
-    var laut = angleich(buf, 0.15);
+    var laut = angleich(buf, 0.19);
     g.gain.setValueAtTime(0.0001, wann);
     g.gain.linearRampToValueAtTime(laut, wann + 0.22);
     g.gain.setValueAtTime(laut, wann + d - 0.45);
@@ -882,7 +892,14 @@
     q.connect(g); g.connect(w.bus.nachbar);
     q.start(wann, ab);
     q.stop(wann + d + 0.05);
-    ducke(w, wann, 0.30, d - 0.4);
+    /* Bett und Hof gehen tief, das eigene WERK geht mit. Nicht so tief wie
+       bei der Zaesur des Michaelitags — der Gegenzug unterbricht den Hof
+       nicht, er draengt sich nur davor. */
+    w.duckBis = wann + 0.05 + (d - 0.4) + 0.70;
+    w.duckTiefe = 0.28;
+    senke(w, 'bett', wann, 0.28, d - 0.4, 0.70);
+    senke(w, 'hof', wann, 0.34, d - 0.4, 0.70);
+    senke(w, 'werk', wann, 0.42, d - 0.4, 0.70);
     return true;
   }
 

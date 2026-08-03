@@ -127,10 +127,9 @@ for (let w = 0; w < WOCHEN; w++) {
     //    ein sorgfaeltiger Spieler schlaegt es auf. FUELLEN und ABSCHICKEN
     //    haengen am Wagenbrett, nicht am Haeuserbrett.
     // 1a. Rohstoff und Brautage haengen an der ANSCHLAGTAFEL.
-    if (A.rohstoff < ROHSCHWELLE) {
+    if (A.rohstoff < ROHSCHWELLE / 2) {
       await maus('stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel', { egal: true, warte: 60 });
       if (await maus('fuhre:kauf:rohstoff') === 'geklickt') hand.push('rohstoff');
-      if (await maus('fuhre:kauf:rohstoff') === 'geklickt') hand.push('rohstoff2');
       await maus('stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel', { egal: true, warte: 60 });
     }
     // 1b. FUELLEN und ABSCHICKEN haengen am WAGENBRETT.
