@@ -724,7 +724,7 @@
     /* Zwei Waende. `fern` ist der Nachbarhof, wie man ihn ueber den Zaun
        hoert; `nachbar` ist dasselbe eine Wand weiter und traegt das Zeichen. */
     w.bus.fern = baueWand(ctx, w.bus.werk, 2000, 0.155, 0.40);
-    w.bus.nachbar = baueWand(ctx, w.bus.werk, 1050, 0.190, 0.55);
+    w.bus.nachbar = baueWand(ctx, w.bus.werk, 1400, 0.190, 0.55);
     return w;
   }
 
@@ -834,8 +834,21 @@
      Zeichen dreifach uebereinander und waere wieder eine Wand. Viereinhalb
      Sekunden, weil das Zeichen sonst beim schnellen Weiterklicken zum
      Dauerlaeufer wird und den Michaelitag zudeckt — genau gemessen. */
-  var NACHBAR_DATEI = altNeu('bau1', 'bau4');
-  var NACHBAR_DAUER = 2.1;
+  /* ZWEITER ANLAUF, und wieder steht er hier, weil der erste GEMESSEN
+     gescheitert ist. Das Zeichen war zuerst `bau1`/`bau4` — dieselbe Probe,
+     mit der DIE STADT und DER SUD das EIGENE Bauen klingen lassen. Das
+     fremde Ohr hat den Gegenzug daraufhin zwar in 4 von 4 Aufnahmen gemeldet
+     (vorher 0 von 4), aber dreimal an der falschen Sekunde: in 1884 bei 12 s,
+     wo `sud:bau` steht, statt bei 24 s, wo der Nachbar wirbt. Es hoerte
+     "Geraeusch einer Handsaege" und nannte das den Gegenzug — zu Recht, denn
+     es war genau derselbe Klang.
+     Ein Zeichen, das sich eine Probe mit einem anderen Vorgang teilt, ist
+     kein Zeichen. `nachbar1`/`nachbar4` kommen in keinem anderen Eintrag des
+     Katalogs vor und sind einzeln vorgelegt "Klopfen auf Holz mit Echo" bzw.
+     "mechanisches Rattern und ein metallisches Knallen mit Nachhall" —
+     beides in keiner der vier Epochen falsch. */
+  var NACHBAR_DATEI = altNeu('nachbar1', 'nachbar4');
+  var NACHBAR_DAUER = 2.4;
   var NACHBAR_PAUSE = 4.5;
 
   function nachbarhof(w, epoche, wann) {
@@ -854,9 +867,13 @@
     var q = ctx.createBufferSource();
     q.buffer = buf;
     var g = ctx.createGain();
+    /* Wie bei den Schleifen: die beiden Proben sind NICHT gleich laut aus dem
+       Erzeuger gekommen (Effektivwert 0,044 gegen 0,100). Ein Zeichen, das in
+       1350 halb so laut ist wie in 1970, ist in 1350 kein Zeichen. */
+    var laut = angleich(buf, 0.085);
     g.gain.setValueAtTime(0.0001, wann);
-    g.gain.linearRampToValueAtTime(1.0, wann + 0.22);
-    g.gain.setValueAtTime(1.0, wann + d - 0.45);
+    g.gain.linearRampToValueAtTime(laut, wann + 0.22);
+    g.gain.setValueAtTime(laut, wann + d - 0.45);
     g.gain.linearRampToValueAtTime(0.0001, wann + d);
     q.connect(g); g.connect(w.bus.nachbar);
     q.start(wann, ab);
@@ -1023,6 +1040,11 @@
       var d = dateiVon(KATALOG[n], epoche);
       if (d && !l[d]) { l[d] = 1; aus.push(d); }
     });
+    /* Das Nachbarhof-Zeichen steht in keinem Katalogeintrag und muesste sonst
+       auf den ZWEITEN Gegenzug warten — in dreissig Sekunden gibt es aber
+       oft nur einen. */
+    var n = NACHBAR_DATEI(epoche);
+    if (n && !l[n]) aus.push(n);
     return aus;
   }
 
