@@ -58,6 +58,10 @@ if (tiefst.kasse <= 0) {
   console.log(`  Die Buchungen der Woche ${tiefst.jahr}/${tiefst.woche} (vorher ${tiefst.vorher}):`);
   (tiefst.gebucht || []).forEach(g => console.log(`    ${g.wer.padEnd(8)} ${String(g.preis).padStart(9)}  ${g.was}`));
 }
+if (process.env.ZIEL) {
+  const fs = await import('fs');
+  fs.writeFileSync(process.env.ZIEL, JSON.stringify({ epoche: ep, hafen: HAFEN, fehler, reihe }, null, 1));
+}
 const ersteNeg = reihe.find(r => r.kasse < 0);
 if (ersteNeg && ersteNeg !== tiefst) {
   console.log(`  ERSTMALS unter null ${ersteNeg.jahr}/${ersteNeg.woche} (vorher ${ersteNeg.vorher}):`);
