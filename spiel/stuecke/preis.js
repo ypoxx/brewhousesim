@@ -137,6 +137,10 @@
     if (!a || !a.nr) return;
     for (var i = 0; i < Z.amtszeiten.length; i++) if (Z.amtszeiten[i].nr === a.nr) return;
     Z.amtszeiten.push({ nr: a.nr, seit: jahr(), name: a.name });
+    /* Wie DIE LEITER: die Liste laeuft mit, sie waechst nicht ueber die
+       Partie hinaus. Gemessen wird der Abstand der letzten Antritte, nicht
+       der von vor sechs Jahrhunderten. */
+    if (Z.amtszeiten.length > 24) Z.amtszeiten.shift();
   }
 
   /* Der mittlere Abstand zweier Amtsantritte, in Braujahren. 0 = noch nichts
