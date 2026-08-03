@@ -275,6 +275,9 @@
 .erb-lade-erloschen .erb-ladekopf { color: var(--rot); }
 .erb-lade-erloschen .erb-satz .n { text-decoration: line-through; }
 .erb-lade-erloschen .erb-satz .p { color: var(--rot); }
+/* Der Grund ist hier die Hauptsache und bekommt mehr Spalte als sonst. */
+.erb-lade-erloschen .erb-satz .n { flex: 0 1 auto; }
+.erb-lade-erloschen .erb-satz .v { max-width: 58%; flex: 1 1 auto; }
 .erb-lade-erloschen .erb-satz.erb-zurueck .n {
   text-decoration: none;
   color: var(--gruen);

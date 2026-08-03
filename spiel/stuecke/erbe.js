@@ -1028,7 +1028,12 @@
       Z.erloschen.forEach(function (x) {
         var r = B.el('div', 'erb-satz' + (x.zurueck ? ' erb-zurueck' : ' greifbar'));
         r.appendChild(B.el('span', 'n', x.name));
-        r.appendChild(B.el('span', 'v', x.wegJahr + '/' + x.wegWoche + ' · ' + x.grund));
+        var vg = B.el('span', 'v', x.wegJahr + '/' + x.wegWoche + ' · ' + x.grund);
+        /* Der Grund wird in der Spalte gekuerzt; er muss trotzdem ganz zu
+           lesen sein — sonst steht der halbe Befund im Buch. */
+        vg.title = x.name + ': ' + e.verb + ' ' + x.jahr + '/' + x.woche + ' für '
+          + geld(x.preis) + '. Erloschen ' + x.wegJahr + '/' + x.wegWoche + ' — ' + x.grund + '.';
+        r.appendChild(vg);
         r.appendChild(B.el('span', 'p', geld(x.preis)));
         var ax = B.welt.adresse(x.schluessel);
         var offenNoch = !x.zurueck && ax
