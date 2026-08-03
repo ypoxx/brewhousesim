@@ -2063,6 +2063,16 @@
     }
   });
 
+  /* Fuer die Konsole des Kritikers: BRAUHAUS.preis.lage() — nur lesen.
+     Ohne diesen Griff laesst sich am Bildschirm nicht nachpruefen, WORAUS
+     ein Anschlag entstanden ist; DER GEGNER hat denselben unter
+     BRAUHAUS.gegner.lage(). Er aendert nichts und wird von nichts benutzt. */
+  B.preis = {
+    lage: function () { return Z; },
+    anschlag: function () { return Z.anschlag; },
+    leiter: function () { return Z.leiter.slice(); }
+  };
+
   /* ----------------------------------------------------------------------
      EPOCHENWECHSEL — neue Listen, neuer Anschlag, dieselbe Chronik.
      ---------------------------------------------------------------------- */
