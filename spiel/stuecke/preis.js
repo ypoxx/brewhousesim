@@ -1428,7 +1428,8 @@
        trifft. Sie steht nur, wo die Epoche sie kennt. */
     if (e.liegeSatz) {
       kasten.appendChild(B.el('div', 'pr-satz pr-klein pr-liege',
-        liegeName() + ': frei bleiben ' + B.zahl(e.liegeFrei || 0, 1) + ' Jahreslasten — '
+        liegeName() + ': frei bleiben ' + B.zahl(e.liegeFrei || 0, 1) + ' Jahreslasten, '
+        + 'mindestens aber der Preis der nächsten Festlegung — zusammen '
         + geld(liegeFreibetrag()) + '. Auf alles, was zu Michaeli darüber hinaus bar im '
         + 'Haus liegt, schlägt der Rat ' + B.zahl((e.liegeSatz || 0) * 100, 0)
         + ' im Hundert an. Was verbaut, gebunden oder festgelegt ist, zählt nicht mit. '
