@@ -85,7 +85,11 @@ async function partie(art) {
     z = await lies();
     const achsen = z.kn.filter(x => /^sud:[a-z]+:[a-z]+$/.test(x.zug) && !/^sud:(zettel|charge)/.test(x.zug));
     if (art === 'teuer') {
-      const fest = achsen.filter(x => x.preis && !x.aus);
+      /* NICHT auf !aus filtern: solange das Sudbrett zugeklappt liegt, sind
+         ALLE seine Knoepfe abgeschaltet — klick() schlaegt es auf und sieht
+         dann noch einmal hin. Wer hier vorher filtert, kauft nie etwas und
+         misst seinen eigenen Automaten. */
+      const fest = achsen.filter(x => x.preis);
       if (fest.length) {
         const b = fest.reduce((a, x) => (Math.abs(x.preis) > Math.abs(a.preis) ? x : a));
         if (await klick(b.zug)) genommen.push(z.jahr + '/' + z.woche + ' ' + b.zug + ' ' + b.preis);
