@@ -1,0 +1,449 @@
+{
+ "epoche": 1,
+ "optionen": [
+  {
+   "zug": "sud:wuerze:grut",
+   "achse": "wuerze",
+   "k": "grut",
+   "preis": 0,
+   "text": "Grut vom Grutamt"
+  },
+  {
+   "zug": "sud:wuerze:sack",
+   "achse": "wuerze",
+   "k": "sack",
+   "preis": 0,
+   "text": "Hopfen im Sack, heimlich"
+  },
+  {
+   "zug": "sud:wuerze:brief",
+   "achse": "wuerze",
+   "k": "brief",
+   "preis": 78,
+   "text": "Offen gehopft, mit Hopfenbrief −78 Pf"
+  },
+  {
+   "zug": "sud:wasser:bach",
+   "achse": "wasser",
+   "k": "bach",
+   "preis": 0,
+   "text": "Aus dem Stadtbach geschöpft"
+  },
+  {
+   "zug": "sud:wasser:brunnen",
+   "achse": "wasser",
+   "k": "brunnen",
+   "preis": 0,
+   "text": "Aus dem Ziehbrunnen im Hof"
+  },
+  {
+   "zug": "sud:wasser:roehre",
+   "achse": "wasser",
+   "k": "roehre",
+   "preis": 30,
+   "text": "Röhrenrecht an der Quelle −30 Pf"
+  }
+ ],
+ "versuche": [
+  {
+   "achse": "wuerze",
+   "vorgabe": "sud:wuerze:grut",
+   "gekauft": "sud:wuerze:brief",
+   "preis": 78,
+   "kauf": {
+    "geklickt": true,
+    "war": {
+     "x": 432.3125,
+     "y": 340.1875,
+     "aus": false,
+     "trifft": true,
+     "text": "Offen gehopft, mit Hopfenbrief −78 Pf"
+    }
+   },
+   "vorKauf": {
+    "verfahren": {
+     "wuerze": "grut",
+     "wasser": "bach"
+    },
+    "fest": [],
+    "kasse": 1234,
+    "jahr": 1350,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "nachKauf": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "bach"
+    },
+    "fest": [
+     "wuerze:brief"
+    ],
+    "kasse": 1156,
+    "jahr": 1350,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "wege": [
+    {
+     "weg": "W1 Brettknopf Vorgabe, echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "trifft": true
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W2 Brettknopf Vorgabe, zwangsweise aktiviert, echte Maus",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 114.09375,
+       "y": 354.3828125,
+       "aus": false,
+       "trifft": true,
+       "text": "Grut vom Grutamt"
+      }
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W3 Brettknopf Vorgabe, synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:wuerze:grut zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 114.09375,
+       "y": 354.3828125,
+       "aus": false,
+       "trifft": true,
+       "text": "Grut vom Grutamt"
+      }
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:wuerze:sack zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 272.703125,
+       "y": 360.953125,
+       "aus": false,
+       "trifft": true,
+       "text": "Hopfen im Sack, heimlich"
+      }
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W4 sud:zettel-wechsel-frei",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 576,
+       "y": 309.6484375,
+       "aus": false,
+       "trifft": true,
+       "text": "Aus dem Ziehbrunnen im Hof lässt Starkbier zu"
+      }
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W5 sud:zettel-wechsel-kauf",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 576,
+       "y": 338.9609375,
+       "aus": false,
+       "trifft": true,
+       "text": "Röhrenrecht an der Quelle −30 Pf lässt Starkbier zu"
+      }
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W7 nach 12 Jahren (Erbfall) Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "weg": "W8 nach Rohstoffmangel Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    }
+   ],
+   "nachSechsWochen": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "bach"
+    },
+    "fest": [
+     "wuerze:brief"
+    ],
+    "kasse": 1126,
+    "jahr": 1350,
+    "woche": 7,
+    "meister": null,
+    "brettZu": false
+   },
+   "zettelNachSiegel": {
+    "frei": null,
+    "kauf": null,
+    "gaerraum": {
+     "x": 576,
+     "y": 326.3671875,
+     "aus": false,
+     "trifft": true,
+     "text": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+    }
+   },
+   "nachErbfall": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "roehre"
+    },
+    "fest": [
+     "wuerze:brief",
+     "wasser:roehre"
+    ],
+    "kasse": 36,
+    "jahr": 1353,
+    "woche": 13,
+    "meister": null,
+    "brettZu": true
+   },
+   "nachNotsud": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "roehre"
+    },
+    "fest": [
+     "wuerze:brief",
+     "wasser:roehre"
+    ],
+    "kasse": 36,
+    "jahr": 1353,
+    "woche": 13,
+    "meister": null,
+    "brettZu": true
+   }
+  },
+  {
+   "achse": "wasser",
+   "vorgabe": "sud:wasser:bach",
+   "gekauft": "sud:wasser:roehre",
+   "preis": 30,
+   "kauf": {
+    "weg": "abgeschaltet",
+    "trifft": false
+   },
+   "vorKauf": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "roehre"
+    },
+    "fest": [
+     "wuerze:brief",
+     "wasser:roehre"
+    ],
+    "kasse": 1090,
+    "jahr": 1353,
+    "woche": 13,
+    "meister": null,
+    "brettZu": false
+   },
+   "nachKauf": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "roehre"
+    },
+    "fest": [
+     "wuerze:brief",
+     "wasser:roehre"
+    ],
+    "kasse": 1090,
+    "jahr": 1353,
+    "woche": 13,
+    "meister": null,
+    "brettZu": false
+   },
+   "wege": [
+    {
+     "weg": "W1 Brettknopf Vorgabe, echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "trifft": false
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W2 Brettknopf Vorgabe, zwangsweise aktiviert, echte Maus",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W3 Brettknopf Vorgabe, synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:wasser:bach zwangsweise aktiviert",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:wasser:brunnen zwangsweise aktiviert",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W4 sud:zettel-wechsel-frei",
+     "ergebnis": {
+      "weg": "kein Knopf"
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W5 sud:zettel-wechsel-kauf",
+     "ergebnis": {
+      "weg": "kein Knopf"
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W7 nach 12 Jahren (Erbfall) Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": true
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    },
+    {
+     "weg": "W8 nach Rohstoffmangel Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "roehre",
+     "nachher": "roehre",
+     "zurueck": false
+    }
+   ],
+   "nachSechsWochen": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "roehre"
+    },
+    "fest": [
+     "wuerze:brief",
+     "wasser:roehre"
+    ],
+    "kasse": 1090,
+    "jahr": 1353,
+    "woche": 13,
+    "meister": null,
+    "brettZu": false
+   },
+   "zettelNachSiegel": {
+    "frei": null,
+    "kauf": null,
+    "gaerraum": {
+     "x": 576,
+     "y": 535.109375,
+     "aus": true,
+     "trifft": false,
+     "text": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+    }
+   },
+   "nachErbfall": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "roehre"
+    },
+    "fest": [
+     "wuerze:brief",
+     "wasser:roehre"
+    ],
+    "kasse": 1090,
+    "jahr": 1353,
+    "woche": 13,
+    "meister": null,
+    "brettZu": true
+   },
+   "nachNotsud": {
+    "verfahren": {
+     "wuerze": "brief",
+     "wasser": "roehre"
+    },
+    "fest": [
+     "wuerze:brief",
+     "wasser:roehre"
+    ],
+    "kasse": 1090,
+    "jahr": 1353,
+    "woche": 13,
+    "meister": null,
+    "brettZu": true
+   }
+  }
+ ],
+ "fehler": []
+}

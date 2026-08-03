@@ -192,13 +192,15 @@ var SUD_DATEN = {
               + 'Kleinigkeit — es ist die zweite Frage, die dieses Haus zu beantworten hat, '
               + 'und sie kostet keinen Pfennig.',
           optionen: [
-            { k: 'bach', name: 'Aus dem Stadtbach geschöpft', preis: 0, schild: 'wie immer',
+            /* Die Namen tragen eigene Verben — „schöpfen" gehört in 1600 zur
+               Stellhefe und kommt hier deshalb nicht auf einen Knopf. */
+            { k: 'bach', name: 'Wasser aus dem Stadtbach', preis: 0, schild: 'wie immer',
               hoechst: 3,
               satz: 'Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt '
                   + 'niemand, und die Lohgerber sitzen weiter oben am selben Wasser. So braut '
                   + 'die ganze Reihe, und so hält das Bier, was es hält.',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
-            { k: 'brunnen', name: 'Aus dem Ziehbrunnen im Hof', preis: 0, schild: 'ohne Ausgabe',
+            { k: 'brunnen', name: 'Wasser aus dem Ziehbrunnen', preis: 0, schild: 'ohne Ausgabe',
               hoechst: 3,
               satz: 'Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das '
                   + 'bessere Wasser hält das Bier ein Stück länger — und der halbe Sudtag '
