@@ -91,6 +91,7 @@
     nr: 0,                /* laufende Nummer der Bottiche                     */
     rueck: [],            /* freigegebene Chargen, die beim Handel stehen     */
     brettZu: true,        /* liegt das Brett als Reiter? (Vorgabestand: ja)   */
+    zettelStelle: 0,      /* welcher Platz am Sudhaus gerade traegt           */
     gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
     jahrSude: 0, jahrFass: 0, jahrFehl: 0, jahrAnzeige: 0,
@@ -1625,9 +1626,81 @@
       }));
     }
 
-    B.orte.setze(z, 'sudhaus', { anker: 'mitte', dy: 0 });
+    B.orte.setze(z, 'sudhaus', { anker: 'mitte',
+      dx: ZETTELSTELLEN[Z.zettelStelle].dx, dy: ZETTELSTELLEN[Z.zettelStelle].dy });
     fach.appendChild(z);
     return z;
+  }
+
+  /* ----------------------------------------------------------------------
+     WO DER KESSELZETTEL SITZEN DARF — Welle 4.
+
+     Der schwerste gemessene Fund dieser Runde und der Grund, warum die
+     Bierentscheidung in einer sorgfaeltig gespielten Partie fast nie
+     erreichbar war (werkbank/schuss/sud-w4/linie.mjs, 400 Wochen je Epoche):
+
+       1350  in 305 von 400 Wochen stand KEIN Wechselknopf zur Verfuegung,
+             obwohl der Zettel die ganze Zeit im Bild war
+       1600  in 354 von 400
+
+     Der Zettel haengt am Sudhaus, und ueber dem Sudhaus liegen die
+     Anschlagtafel und die Haeusertafel der FUHRE. Sie decken seine UNTERE
+     Haelfte — also genau die Knoepfe. Die alte Selbstpruefung fragte nur
+     den MITTELPUNKT des Zettels ab (fremdVerdeckt) und meldete deshalb
+     "frei", waehrend jeder einzelne Knopf darunter von elementFromPoint
+     nicht mehr getroffen und von schalte() abgeschaltet wurde: ein Zettel,
+     der sichtbar dasteht und nichts kann.
+
+     Beiseitetreten heilt das nicht — dann ist er ganz weg. Also sucht er
+     sich seinen Platz, so wie es das Sudbuch auf seiner Klappe schon tut
+     (sud-zusatz.js): er geht ein paar Stellen AM SUDHAUS durch und bleibt
+     an der ersten stehen, an der (a) alle seine eigenen Knoepfe getroffen
+     werden und (b) er keinen fremden Zug begraebt. Findet er keine, tritt
+     er wie bisher zurueck — lieber kein Zettel als drei Knoepfe, die keine
+     sind.
+
+     Alle Stellen sind in Prozent der Buehne und haengen am Ort 'sudhaus';
+     eigene Koordinaten gibt es hier nicht (LIESMICH: Orte).
+     ---------------------------------------------------------------------- */
+  var ZETTELSTELLEN = [
+    { dx: 0, dy: 0 }, { dx: 0, dy: -13 }, { dx: 0, dy: 13 },
+    { dx: -15, dy: -8 }, { dx: 15, dy: -8 },
+    { dx: -15, dy: 9 }, { dx: 15, dy: 9 }, { dx: 0, dy: -22 }
+  ];
+
+  /* Sitzt der Zettel gut: eigene Knoepfe treffbar, kein fremder begraben? */
+  function zettelSitzt(zettel) {
+    var kn = zettel.querySelectorAll('button[data-zug]'), i;
+    for (i = 0; i < kn.length; i++) {
+      if (kn[i].getAttribute('data-soll-aus') === '1') continue;
+      if (!imBild(kn[i])) return false;
+    }
+    var q = zettel.getBoundingClientRect();
+    var l = document.querySelectorAll('[data-zug]');
+    for (i = 0; i < l.length; i++) {
+      var el = l[i];
+      if (zettel.contains(el)) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < 3 || r.height < 3) continue;
+      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      if (cx < q.left || cx > q.right || cy < q.top || cy > q.bottom) continue;
+      var t = document.elementFromPoint(cx, cy);
+      if (t && zettel.contains(t)) return false;
+    }
+    return true;
+  }
+
+  function stelleZettel(zettel) {
+    if (zettelSitzt(zettel)) return true;
+    for (var n = 1; n <= ZETTELSTELLEN.length; n++) {
+      var i = (Z.zettelStelle + n) % ZETTELSTELLEN.length;
+      B.orte.setze(zettel, 'sudhaus',
+        { anker: 'mitte', dx: ZETTELSTELLEN[i].dx, dy: ZETTELSTELLEN[i].dy });
+      if (zettelSitzt(zettel)) { Z.zettelStelle = i; return true; }
+    }
+    B.orte.setze(zettel, 'sudhaus', { anker: 'mitte', dx: 0, dy: 0 });
+    Z.zettelStelle = 0;
+    return false;
   }
 
   /* ----------------------------------------------------------------------
@@ -1686,7 +1759,12 @@
          ihm seine Knoepfe. Genau der Fehler, den BEFUND-BRETTER.md misst,
          nur diesmal im eigenen Haus. */
       if (zettel) {
-        var weg = !Z.brettZu || fremdVerdeckt(zettel);
+        /* Erst umsetzen, dann urteilen: ein Zettel, der noch einen freien
+           Platz am Sudhaus hat, tritt nicht zurueck. Zurueck tritt er nur,
+           wenn KEINE der Stellen traegt — oder wenn das eigene Brett offen
+           liegt und er es ohnehin verdecken wuerde. */
+        var weg = !Z.brettZu;
+        if (!weg) weg = !stelleZettel(zettel);
         if (zettel.classList.contains('beiseite') !== weg) zettel.classList.toggle('beiseite', weg);
         schalte(zettel, weg);
       }

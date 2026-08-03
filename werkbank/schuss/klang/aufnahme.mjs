@@ -26,12 +26,21 @@ const [
   basis = 'http://127.0.0.1:8899/spiel/',
   ziel = 'werkbank/schuss/klang',
   sekunden = '30',
-  nurEpoche = ''
+  nurEpoche = '',
+  startWoche = '26'
 ] = process.argv.slice(2);
 
 const SEK = Number(sekunden);
 const EPOCHEN = nurEpoche ? [Number(nurEpoche)] : [1, 2, 3, 4];
 mkdirSync(ziel, { recursive: true });
+
+// Warum nicht in Woche 1 angefangen wird: der MICHAELITAG ist einer der vier
+// Vorgaenge, nach denen der Auftrag fragt, und er faellt auf die 30. Woche des
+// Braujahres. Aus Woche 1 heraus ist er in dreissig Sekunden nicht erreichbar
+// — in vierzehn Handgriffen kommt man fuenf Wochen weit, nicht neunundzwanzig.
+// Also faengt die Aufnahme kurz davor an. `?woche=` ist ein Parameter des
+// Kerns, kein Kunstgriff dieses Skripts.
+const WOCHE = Number(startWoche);
 
 // Der Wunschzettel. Jede Zeile ist EIN Vorgang; die Liste dahinter sind die
 // Knoepfe, die ihn in irgendeiner Epoche ausloesen — genommen wird der erste,
@@ -65,7 +74,7 @@ for (const epoche of EPOCHEN) {
   seite.on('pageerror', (e) => fehler.push('pageerror: ' + e));
   seite.on('console', (m) => { if (m.type() === 'error') fehler.push('console: ' + m.text()); });
 
-  await seite.goto(`${basis}?epoche=${epoche}&saat=1350`,
+  await seite.goto(`${basis}?epoche=${epoche}&saat=1350` + (WOCHE ? `&woche=${WOCHE}` : ''),
                    { waitUntil: 'domcontentloaded', timeout: 60000 });
   await seite.waitForSelector('#buehne[data-bereit="1"]', { timeout: 30000 });
   await seite.waitForTimeout(700);
