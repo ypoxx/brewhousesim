@@ -4,7 +4,7 @@ Kritikers gerechnet.
 
   python3 spalten.py /tmp/rk/e*-*.json [/tmp/rk/verben.json]
 """
-import json, sys, glob, collections, statistics as st
+import json, re, sys, glob, collections, statistics as st
 
 dateien = [p for p in (sys.argv[1:] or sorted(glob.glob('/tmp/rk/e*-*.json'))) if 'verben' not in p]
 verbenP = [p for p in sys.argv[1:] if 'verben' in p]
