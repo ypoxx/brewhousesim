@@ -69,7 +69,7 @@
      Das ist keine Geschmacksfrage und mit keinem einzelnen Klang zu heilen:
      das Bett war schlicht zu laut und das Werk zu leise. Bett und Hof gehen
      auf gut die Haelfte herunter, das Werk um das Zweieinhalbfache herauf. */
-  var PEGEL = { bett: 1.0, hof: 1.0, werk: 0.72 };
+  var PEGEL = { bett: 1.0, hof: 1.0, werk: 0.80 };
 
   /* Die vier Hofbaender und die vier Betten sind NICHT gleich laut aus dem
      Erzeuger gekommen — hof1 hatte den dreifachen Effektivwert von hof3.
@@ -91,7 +91,7 @@
      pumpt. Der Wert ist der TIEFSTE Punkt, 1 waere keine Bewegung.
      1884 und besonders 1970 stehen am tiefsten: deren Baender sind aus dem
      Erzeuger als gleichfoermiges Maschinenbrummen gekommen. */
-  var ATEM = { 1: 0.52, 2: 0.52, 3: 0.44, 4: 0.26 };
+  var ATEM = { 1: 0.46, 2: 0.46, 3: 0.34, 4: 0.24 };
   var ATEM_RUNDE = 7.0;
 
   function lautheit(buf) {
@@ -143,14 +143,17 @@
      laut: relativ zum Werk-Pegel                                          */
   var KATALOG = {
     /* --- DIE FUHRE ------------------------------------------------------ */
-    'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 1.15,
+    'sud:pfanne':        { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 1.15, laenge: 3.2,
                            sagt: 'Der Sud: offene Pfanne, Dampfventil, Kreiselpumpe.' },
     'fuhre:fass-rollen': { datei: altNeu('fassholz', 'fassstahl'), laut: 1.15,
                            sagt: 'Ein Fass rollt.' },
-    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt1'), laut: 1.0 },
-    'fuhre:abfahrt:pferd':   { datei: stets('abfahrt2'), laut: 1.0 },
-    'fuhre:abfahrt:waggon':  { datei: stets('abfahrt3'), laut: 1.0 },
-    'fuhre:abfahrt:lastzug': { datei: stets('abfahrt4'), laut: 1.0 },
+    /* Die Abfahrt darf laenger stehen als alles andere: dass ein Gefaehrt
+       WEGFAEHRT, hoert man erst, wenn es weg ist. Das Ohr hat die Fuhre
+       bisher nur in 2 von 4 Epochen genannt. */
+    'fuhre:abfahrt:ochse':   { datei: stets('abfahrt1'), laut: 1.1, laenge: 4.6 },
+    'fuhre:abfahrt:pferd':   { datei: stets('abfahrt2'), laut: 1.1, laenge: 4.6 },
+    'fuhre:abfahrt:waggon':  { datei: stets('abfahrt3'), laut: 1.1, laenge: 4.6 },
+    'fuhre:abfahrt:lastzug': { datei: stets('abfahrt4'), laut: 1.1, laenge: 4.6 },
     'fuhre:kauf':        { datei: altNeu('muenzen', 'kasse'), laut: 1.0 },
     'fuhre:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.8 },
     /* Die Kerbe war nur ein Rauschstoss — das Ohr hat sie in 1350 als
@@ -159,7 +162,10 @@
     'fuhre:probe':       { datei: je('anstich', 'anstich', 'anstich', 'flaschen'), laut: 0.6 },
     'fuhre:listen':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
     'tafel:kreide':      { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
-    'sommer:keller-leer': { ersatz: 'keller', laut: 0.5, schleife: true },
+    /* Die einzige Dauerschleife des Werks: sie beginnt am Michaelitag und
+       laeuft bis zum Ende. Damit ist sie faktisch ein zweites Bett und wird
+       entsprechend leise gehalten. */
+    'sommer:keller-leer': { ersatz: 'keller', laut: 0.32, schleife: true },
 
     /* --- DER PREIS ------------------------------------------------------ */
     /* Auflage 5. Das Telefon war fuer sich tadellos — einzeln vorgelegt nennt
@@ -216,7 +222,7 @@
     'gegner:bauen':       { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
     'gegner:aufstocken':  { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
     'gegner:preis':       { datei: altNeu('kreide', 'maschine'), laut: 0.8, fern: true },
-    'gegner:fuhre':       { datei: je('abfahrt1', 'abfahrt2', 'abfahrt3', 'abfahrt4'), laut: 0.85, fern: true, nachbar: true },
+    'gegner:fuhre':       { datei: je('abfahrt1', 'abfahrt2', 'abfahrt3', 'abfahrt4'), laut: 0.85, laenge: 3.6, fern: true, nachbar: true },
     'gegner:macht':       { datei: altNeu('siegel', 'maschine'), laut: 0.85, fern: true, nachbar: true },
     'gegner:rohstoff':    { datei: altNeu('muenzen', 'kasse'), laut: 0.8, fern: true, nachbar: true },
     'gegner:unglueck':    { datei: stets('brand'), laut: 1.1, fern: true, nachbar: true },
@@ -361,6 +367,16 @@
     if (n) return { datei: n.datei, ersatz: n.ersatz, laut: n.laut, geraten: true };
     return { ersatz: 'blatt', laut: 0.5, geraten: true };
   }
+
+  /* WO IN DER PROBE DER KLANG WIRKLICH ANFAENGT.
+     Gemessen, nicht geschaetzt: jede Probe wurde entschluesselt und das erste
+     20-ms-Fenster gesucht, das ein Fuenftel des Hoechstwerts erreicht.
+     `handschlag.mp3` faengt erst bei 1,28 s an zu klatschen — und derselbe
+     Handschlag ist der Klang, mit dem der Nachbar ein Haus abloest, bindet
+     und uebernimmt. Die Abnahme der Auflage 1 verlangt die Sekunde auf ±2 s;
+     mit anderthalb Sekunden Vorlauf verschenkt man sie an das Messfenster.
+     Wo hier nichts steht, faengt die Probe bei null an. */
+  var EINSATZ = { handschlag: 1.20, muenzen: 0.26, unruhe: 0.13, hefe: 0.10 };
 
   function dateiVon(e, epoche) {
     if (!e || !e.datei) return null;
@@ -795,10 +811,12 @@
      WAS drueben geschieht und DASS es drueben geschieht.
      Der Abstand von 3,2 s ist keine Zierde. In 1970 fallen 'gegner:binden',
      ':unglueck' und ':uebernahme' in dieselbe Sekunde; ohne Sperre laege das
-     Zeichen dreifach uebereinander und waere wieder eine Wand. */
+     Zeichen dreifach uebereinander und waere wieder eine Wand. Viereinhalb
+     Sekunden, weil das Zeichen sonst beim schnellen Weiterklicken zum
+     Dauerlaeufer wird und den Michaelitag zudeckt — genau gemessen. */
   var NACHBAR_DATEI = altNeu('bau1', 'bau4');
   var NACHBAR_DAUER = 2.1;
-  var NACHBAR_PAUSE = 3.2;
+  var NACHBAR_PAUSE = 4.5;
 
   function nachbarhof(w, epoche, wann) {
     var ctx = w.ctx;
@@ -851,6 +869,18 @@
       g.gain.linearRampToValueAtTime(v, wann + 0.02);
       var laeuftWeiter = !!(e.schleife || (opt && opt.art === 'schleife'));
       var d = buf.duration;
+      /* EIN VORGANG IST EIN EREIGNIS UND KEIN TEPPICH.
+         Die Proben sind fuenf bis acht Sekunden lang, und im Spiel faellt alle
+         halbe Sekunde ein Klick. Bis Welle 4 lief also jede Probe voll aus,
+         und damit lagen an jeder Stelle ein Dutzend Klaenge uebereinander —
+         gemessen an der Stelle, an der es weh tat: neun Zehntelsekunden nach
+         dem letzten Klick stand im Hof von 1350 noch ein Pegel von 0,25, das
+         Achtfache des Bettes, und der Michaelitag konnte darueber nicht mehr
+         hinaus. Wer schneidet, hoert mehr. */
+      var ab = laeuftWeiter ? 0 : (EINSATZ[datei] || 0);
+      var kappe = e.laenge || (e.zeichen ? 3.4 : 2.6);
+      d = Math.max(0.3, d - ab);
+      if (!laeuftWeiter && d > kappe) d = kappe;
       if (laeuftWeiter) {
         q.loop = true;
         w.schleifen[name] = { quelle: q, gain: g };
@@ -862,7 +892,7 @@
       /* start() MUSS vor stop() stehen. Andersherum wirft Chrome, der Wurf
          landet in B.lage, und spiele() gibt faelschlich false zurueck —
          genau das hat der erste Lauf im lebenden Spiel gezeigt. */
-      q.start(wann);
+      if (ab) q.start(wann, ab); else q.start(wann);
       if (!laeuftWeiter) q.stop(wann + d + 0.05);
       if (e.zeichen) zaesur(w, wann, tief, e.halt || 0);
       else if (!e.nachbar) ducke(w, wann, tief, e.halt || 0);
