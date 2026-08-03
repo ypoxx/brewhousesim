@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-03T14:22:31+00:00",
+ "stand": "2026-08-03T14:37:25+00:00",
  "phase": "Welle 4, zweite Hälfte — drei Agenten arbeiten. DIE RÜCKKOPPLUNG in Nacharbeit: fiel durch, weil 1600 geheilt wurde (rho +0,873 → +0,231) und dabei 1350 riss (+0,701 bis +0,789); Kritiker mit 12 Läufen und Aufsicht mit 3 Läufen je Epoche kamen unabhängig zum selben Befund. DER KLANG in Nacharbeit an acht Auflagen — die schwerste: die Epoche wird vom Klangbett getragen, nicht vom Vorgang. DER SUD wird gerade blind geprüft (der erste Kritiker starb an einem API-Fehler und wurde mit vollem Kontext fortgesetzt). DER PREIS wartet weiter auf preis*.js. Wellenziel noch nicht erreicht: |rho| unter 0,7 in allen vier Epochen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -891,6 +891,10 @@
   {
    "zeit": "2026-08-03T14:22:31+00:00",
    "text": "Welle 4, zweite Hälfte — drei Agenten arbeiten. DIE RÜCKKOPPLUNG in Nacharbeit: fiel durch, weil 1600 geheilt wurde (rho +0,873 → +0,231) und dabei 1350 riss (+0,701 bis +0,789); Kritiker mit 12 Läufen und Aufsicht mit 3 Läufen je Epoche kamen unabhängig zum selben Befund. DER KLANG in Nacharbeit an acht Auflagen — die schwerste: die Epoche wird vom Klangbett getragen, nicht vom Vorgang. DER SUD wird gerade blind geprüft (der erste Kritiker starb an einem API-Fehler und wurde mit vollem Kontext fortgesetzt). DER PREIS wartet weiter auf preis*.js. Wellenziel noch nicht erreicht: |rho| unter 0,7 in allen vier Epochen."
+  },
+  {
+   "zeit": "2026-08-03T14:37:25+00:00",
+   "text": "AUFSICHT — DIE WERKSTATTSEITE IST WIEDER ANGESCHLOSSEN. Sie hing an der Deploy-Vorschau von PR #2; der wurde am 3.8. um 10:46 UTC geschlossen, ohne Merge, und damit baute Netlify keine Vorschau mehr. Gleichzeitig war zwischen 05:50 und 10:47 UTC nichts gepusht worden, weil der Container-Ausfall lief. Der Auftraggeber sah deshalb stundenlang einen Stand von 05:50 UTC und hielt ihn für aktuell — eine Seite, die stehenbleibt, ohne es zu sagen, ist schlimmer als gar keine. Der Auftraggeber hat daraufhin einen Branch-Deploy auf claude/brauhaus-imperium-sim-163s85 eingeschaltet: der baut bei jedem Push neu, unabhängig von Pull Requests, und lässt die Produktionsseite unberührt. Die Adresse steht ab jetzt in werkbank/LAUFENDER-AUFTRAG.md ganz oben, denn dass sie nirgends im Repo stand, war der Grund, warum der Ausfall so schwer zu finden war. Zwei Grenzen sind dabei aktenkundig geworden und stehen ebenfalls dort: *.netlify.app und api.netlify.com sind durch die Egress-Policy dieser Umgebung gesperrt, die Aufsicht kann die Seite also nicht selbst abrufen; und das Netlify-MCP bietet als einzige Schreiboperation deploy-site, was auf die Produktion ginge — Branch-Deploys sind nur in der Netlify-Oberfläche einstellbar."
   }
  ]
 }

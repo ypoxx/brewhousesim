@@ -1,5 +1,45 @@
 # LAUFENDER AUFTRAG — was dieser Lauf tut, falls der Kontext weg ist
 
+## DIE WERKSTATTSEITE — wo sie steht, und wie sie am 3. August still starb
+
+```
+https://claude-brauhaus-imperium-sim-163s85--brewhousesim.netlify.app
+```
+
+**Das ist die Adresse dieses Zweigs.** Sie stand bis zum 3. August 2026 nirgends
+im Repo, und genau deshalb war der Ausfall so mühsam zu finden.
+
+**Was passiert war:** Die Seite hing an der **Deploy-Vorschau von PR #2**. Der
+PR wurde am 3.8. um 10:46 UTC geschlossen, ohne Merge — damit baute Netlify
+keine Vorschau mehr. Gleichzeitig war zwischen 05:50 und 10:47 UTC nichts
+gepusht worden (der Container-Ausfall weiter unten). Der Auftraggeber sah also
+stundenlang einen Stand von **05:50 UTC = 07:50 deutscher Zeit** und hielt ihn
+für aktuell. Eine Seite, die stehenbleibt, ohne es zu sagen, ist schlimmer als
+gar keine.
+
+**Die Lösung, vom Auftraggeber am 3.8. eingeschaltet:** ein **Branch-Deploy**
+auf `claude/brauhaus-imperium-sim-163s85`. Er baut bei **jedem Push** neu,
+unabhängig von Pull Requests, und lässt die Produktionsseite in Ruhe.
+
+| | |
+|---|---|
+| Werkstatt dieses Zweigs | `claude-brauhaus-imperium-sim-163s85--brewhousesim.netlify.app` |
+| Produktionsseite (Basiszweig, **alt**) | `brewhousesim.netlify.app` — Stand 27. Juli, Commit `a2dc97a` |
+| Netlify-Projekt | `app.netlify.com/projects/brewhousesim`, Site-ID `cbf1ad15-7f0e-4649-a009-448faad7d1b2` |
+
+**Zwei Dinge, die die Aufsicht hier NICHT kann** — nicht vergessen und nicht
+erneut Stunden hineinstecken:
+1. **`*.netlify.app` und `api.netlify.com` sind durch die Egress-Policy dieser
+   Umgebung gesperrt.** Die Seite lässt sich von hier aus nicht abrufen und
+   nicht prüfen. Ob sie lebt, weiß nur, wer sie im Browser öffnet.
+2. Das Netlify-MCP bietet als Schreiboperation nur `deploy-site`, und das ginge
+   **auf die Produktion**. Branch-Deploys sind über die Werkzeuge hier nicht
+   einstellbar — das geht nur in der Netlify-Oberfläche.
+
+**Prüfen, ob die Seite frisch ist:** `werkbank/stand.json` trägt oben ein Feld
+`stand` mit dem Zeitstempel. Steht dort etwas Altes, während gearbeitet wird,
+zeigt die Seite eine Lüge — `./werkbank/stand.py phase "..."` nachziehen.
+
 **Diese Datei ist das Gedächtnis des Laufs.** Der Container wird zurückgesetzt, Kontexte
 werden zusammengefasst, Sitzungen enden. Was nur im Kopf der Aufsicht steht, ist beim
 nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
