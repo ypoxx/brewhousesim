@@ -320,7 +320,12 @@
     'gegner:bauen':       { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
     'gegner:aufstocken':  { datei: altNeu('bau1', 'bau4'), laut: 0.85, fern: true, nachbar: true },
     'gegner:preis':       { datei: altNeu('kreide', 'maschine'), laut: 0.8, fern: true },
-    'gegner:fuhre':       { datei: je('abfahrt1', 'abfahrt2', 'abfahrt3', 'abfahrt4'), laut: 0.85, laenge: 3.6, fern: true, nachbar: true },
+    /* Dieselbe Reihe wie beim eigenen Zug — nur hinter der Wand und mit dem
+       langsamen Ochsen in 1350 (`abfahrt1.mp3` ist geloescht, siehe
+       'fuhre:abfahrt:ochse'). */
+    'gegner:fuhre':       { datei: je('abfahrt2', 'abfahrt2', 'abfahrt3', 'abfahrt4'),
+                            tempo: je(0.80, 1, 1, 1),
+                            laut: 0.85, laenge: 3.6, fern: true, nachbar: true },
     'gegner:macht':       { datei: altNeu('siegel', 'maschine'), laut: 0.85, fern: true, nachbar: true },
     'gegner:rohstoff':    { datei: altNeu('muenzen', 'kasse'), laut: 0.8, fern: true, nachbar: true },
     'gegner:unglueck':    { datei: stets('brand'), laut: 1.1, fern: true, nachbar: true },
@@ -1154,8 +1159,10 @@
       var q = ctx.createBufferSource();
       q.buffer = buf;
       /* `tempo` dehnt oder rafft die Probe. Ein Ochse ist ein langsameres
-         Pferd — siehe 'fuhre:abfahrt:ochse'. */
-      if (e.tempo) { try { q.playbackRate.value = e.tempo; } catch (f) { } }
+         Pferd — siehe 'fuhre:abfahrt:ochse'. Darf wie `laenge` und `datei`
+         eine Funktion der Epoche sein. */
+      var tempo = (typeof e.tempo === 'function') ? e.tempo(epoche) : e.tempo;
+      if (tempo && tempo !== 1) { try { q.playbackRate.value = tempo; } catch (f) { } }
       var g = ctx.createGain();
       /* `mindest` ist eine UNTERGRENZE der Lautheit, keine Angleichung: eine
          zu leise Probe wird heraufgezogen, eine laute nie herunter. Auflage 5
@@ -1179,7 +1186,7 @@
          `d` ist die Spielzeit und rechnet in Hofsekunden. Bei `tempo` sind
          das zwei verschiedene Sekunden, und wer sie verwechselt, schneidet
          eine gedehnte Probe zu frueh ab. */
-      d = Math.max(0.3, (d - ab) / (e.tempo || 1));
+      d = Math.max(0.3, (d - ab) / (tempo || 1));
       if (!laeuftWeiter && d > kappe) d = kappe;
       if (laeuftWeiter) {
         q.loop = true;
