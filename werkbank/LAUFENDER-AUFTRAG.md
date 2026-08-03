@@ -93,6 +93,25 @@ ist versioniert. Das Bild ist Arbeitsmaterial.
 Messstände lesen von dort — aber `*.png|jpg|jpeg|webp|gif` wandern nicht mehr
 mit. Skripte und Messwerte schon.
 
+**Nachtrag vom selben Tag, 11:24 UTC — dieselbe Falle in Ton.** DER KLANG hatte
+nach keiner halben Stunde **12 `.wav`-Blobs mit 20,2 MB** in der Historie: je
+Durchgang eine neue Fassung, jede 1,9 MB. Die `.webm` daneben trägt dieselbe
+Aufnahme mit 236 KB — einem Achtel — und ist das, was der blinde Kritiker
+abspielt. `.wav` ist jetzt ebenfalls in der `.gitignore`; die Dateien bleiben auf
+der Platte und sind aus der `.webm` wiederherzustellen.
+
+> **Die Regel dahinter, allgemein:** was **Arbeitsmaterial einer Messung** ist,
+> gehört nicht in die Historie — Bild, Ton, Zwischenrender. Was **Ergebnis** ist,
+> gehört hinein: das Urteil in Worten und die Zahl daneben. Wer ein neues
+> Aufnahmeformat einführt, prüft es gegen diese Regel, **bevor** der erste
+> Durchgang läuft. Zweimal an einem Tag ist genug.
+
+**Der Veröffentlicher sichert die Builder von selbst.** `werkbank/veroeffentlichen.sh`
+nimmt alle 180 s unter derselben Sperre `werkbank/stand.json spiel gauntlet
+werkbank/schuss werkbank/*.py|mjs|sh` und pusht. Schritt (a) des Selbst-Checks
+läuft also fortlaufend — aber **ungeprüft**: der Veröffentlicher fährt kein
+Abnahmetor. Die Aufsicht fährt es trotzdem, und zwar bevor sie selbst committet.
+
 **Eine Falle bleibt:** `pgrep -f "git fetch"` trifft die **eigene Warte-Shell**,
 deren Kommandozeile die Zeichenkette enthält. Ein toter Fetch sieht dann aus wie
 ein laufender. Am Logfile prüfen, nicht an `pgrep`.
