@@ -392,6 +392,100 @@ die Hand sie leerzieht, und ich habe ihn nicht gebaut, weil ich seine Wirkung
 auf die zweite Messlatte nicht in der verbleibenden Zeit dreifach nachmessen
 kann. Er steht als Vorschlag da, nicht als Arbeit.
 
+# LATTE 2 (d) — DIE WELLENZAHL, und was sie in 1970 macht
+
+Sequenziell, ein Browser zur Zeit, 400 Wochen, `saat=1350`, Referenzhand
+unveraendert. Runde A (B und C laufen, sie stehen unten nach, sobald sie da
+sind):
+
+| Epoche | Welle 4 (Aufsicht, `3e6d08c`) | nachher, Runde A | Jahre < 1× |
+|---|---|---|---|
+| 1350 | +0,591 | **+0,591** | 0/14 |
+| 1600 | +0,231 | **+0,231** | 0/14 |
+| 1884 | +0,393 | **+0,393** | 1/14 |
+| 1970 | +0,108 | **+0,275** | 0/14 |
+
+**Drei von vier sind Ziffer fuer Ziffer unberuehrt.** 1970 ist es nicht, und
+die Ursache ist auf eine einzige Woche zurueckverfolgt.
+
+Die Kennzahlreihe von 1970, Jahr fuer Jahr, gegen die zwoelf Laeufe der
+Aufsicht am eingefrorenen Stand:
+
+```
+Aufsicht vorher : 2,25 2,36 3,13 2,29 6,41 2,75 2,12 2,30 [1,96 3,29 2,27] 9,14 2,15 4,26
+meins   nachher : 2,25 2,36 3,13 2,29 6,41 2,75 2,12 2,30 [2,37 3,69 2,46] 9,14 2,15 4,26
+```
+
+Elf von vierzehn Jahren sind identisch. Die drei eingeklammerten sind 1978,
+1979, 1980. Die erste Abweichung der ganzen Partie steht in Woche 240:
+
+```
+1978/1   Aufsicht  Kasse 41.240      meins  Kasse 50.000
+```
+
+50.000 DM ist der Notpfennig von 1970. **Der Boden hat genau einmal gegriffen,
+am aermsten Michaeli der Epoche, und zwar exakt auf die Zahl, auf die er
+greifen soll.** Was er dabei angehoben hat, ist der TIEFSTE Wert der Reihe:
+1,96× auf 2,37×. Das Minimum ueber die ganze Epoche steigt von 1,96 auf 2,12.
+
+**Der Preis dafuer steht daneben und ich rede ihn nicht klein: `rho` geht von
++0,108 auf +0,275.** Die Latte (|rho| < 0,7, hoechstens ein Jahr von sechs
+unter 1×) haelt mit Abstand, und kein Jahr faellt unter 1×. Aber die Zahl, die
+die Welle 4 erreicht hat, ist in dieser einen Epoche schlechter geworden, und
+das ist die unvermeidliche Kehrseite eines Bodens: er hebt die tiefen Jahre,
+und die tiefen Jahre lagen hier in der Mitte der Partie. Wer +0,108 halten
+will, muss den Boden in 1970 hoeher oder niedriger legen — er darf ihn nicht
+wegnehmen, denn 1,96× war die Stelle, an der die Epoche am naechsten am
+Stillstand stand.
+
+**Ein Nebenbefund ueber das Geraet, und er bestaetigt die Eichung oben:** mein
+PARALLEL gemessener Vorher-Lauf von 1970 wich schon im vierten Jahr von der
+Aufsicht ab (2,57 statt 2,29) und lieferte +0,305. Sequenziell stimmen elf von
+vierzehn Jahren Ziffer fuer Ziffer, und die drei uebrigen haengen an einer
+benannten Woche. Das ist der Unterschied zwischen einer Messung und einem
+Wuerfel.
+
+# LATTE 2 (a) (b) (c) — am Bildschirm gezaehlt, nachher
+
+`werkbank/schuss/preis-w5/latte2.mjs`, 62 Wochen je Epoche, grobe Hand
+(WEITER plus ein Zug), Zaehlung bei jedem Wochenanfang. **Gelesen wurde
+`data-soll-aus`, und die Zahl nach `disabled` steht daneben** (ZUSTAENDIGKEIT
+25). „Erreichbar UND aktiv" heisst hier: Preisschild vorhanden UND
+`data-soll-aus !== "1"` UND von `elementFromPoint` getroffen.
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| (a) Preisschilder gleichzeitig, Median | 32 | 27 | 37 | 39 |
+| (a) davon erreichbar+aktiv, Median — **nach `data-soll-aus`** | 11 | 12 | 12 | 13 |
+| (a) dieselbe Zahl — nach `disabled` | 11 | 12 | 12 | 13 |
+| (a) Hoechstwert erreichbar+aktiv | 16 | 16 | 20 | 18 |
+| (c) Protokollzeilen des Gegners in 62 Wochen | 42 | 37 | 36 | 83 |
+
+**Die beiden Lesarten sind hier deckungsgleich** (bis auf einen einzigen
+Hoechstwert in 1350: 16 gegen 15). Das ist die gute Nachricht zu
+ZUSTAENDIGKEIT 25 und zugleich der Grund, warum ich beide Zahlen nenne statt
+einer.
+
+Zwei Befunde, die dabei abgefallen sind und NICHT meine sind:
+
+* **Knoepfe ganz ohne `data-soll-aus`:** 768 / 714 / 760 Sichtungen in 62
+  Wochen. Die Kernaenderung `9868aaa` haengt an `B.knopf()`; was nicht durch
+  `B.knopf()` geht, traegt das Merkmal nicht. Wer nach `data-soll-aus` zaehlt,
+  zaehlt diese Zuege nicht mit.
+* **`disabled` mit `data-soll-aus="0"`** — nach ZUSTAENDIGKEIT 25 ein Fehler,
+  kein Zustand: 263 / 313 / 207 Sichtungen. Welchem Stueck sie gehoeren, habe
+  ich nicht auseinandersortiert; die Zahl steht hier, damit sie jemand
+  auseinandersortiert.
+
+**(b) ist mit dieser Hand nicht zaehlbar, und das ist selbst ein Befund:**
+`Siegelknoepfe gleichzeitig: hoechstens 0` in allen vier Epochen. Die
+Festlegungen stehen hinter EINEM Klick — `preis:tafel` —, und die Tafel ist
+beim Aufschlagen des Spiels zu. Eine Hand, die den Griff nicht findet, sieht
+von der unwiderruflichen Entscheidung dieses Stuecks NICHTS. Die sorgfaeltige
+Hand oeffnet ihn (`hand.mjs`, Woche 1) und sieht dann drei bis fuenf Karten
+nebeneinander. Fuer einen Kritiker mit der Maus heisst das: der Griff oben
+rechts ist der einzige Weg zu diesem Stueck.
+
 ## Fortschritt
 
 - [x] Werkzeug aufgesetzt, Messstand `3e6d08c` auf 8900, Geraet geeicht
