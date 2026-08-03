@@ -436,19 +436,32 @@
      um den Preis der unwiderruflichen Wahl ist kein Fortschritt, sondern ein
      Tausch: die zweite Messlatte zaehlt beides.
 
-     Der Boden steht deshalb auf dem Preis der billigsten Festlegung, die
-     dieser Zeit noch offen ist. Sachlich ist das dieselbe Regel wie oben, nur
-     zu Ende gedacht: angeschlagen wird, was NICHT gebraucht wird — und das
-     Geld fuer den Schritt, den der Rat selbst vom Haus verlangt, wird
-     gebraucht. `festBasis()` haengt an der Zeit und nicht am Vermoegen
-     (siehe dort), der Boden ist also frei von Rueckkopplung: er waechst mit
-     der Teuerung und nicht mit der Kasse. */
+     Der Boden steht deshalb auf dem Preis der BILLIGSTEN FESTLEGUNG DIESER
+     ZEIT. Sachlich ist das dieselbe Regel wie oben, nur zu Ende gedacht:
+     angeschlagen wird, was NICHT gebraucht wird — und das Geld fuer den
+     Schritt, den der Rat selbst vom Haus verlangt, wird gebraucht. Jede
+     Amtszeit hat wieder eine Festlegung; der Bedarf kehrt wieder.
+
+     ZWEI FALLEN, BEIDE GEMESSEN, BEIDE UMGANGEN:
+
+     1. Der Boden zaehlt ALLE Festlegungen der Epoche, nicht nur die noch
+        offenen. Mit den offenen sprang er in dem Augenblick, in dem die
+        billigste genommen war, auf die naechste — in 1600 von 280 fl auf
+        1,90 x 4.527 = 8.601 fl. Der Freibetrag lag damit hoeher als jede
+        Lade, die diese Epoche je sieht, und der Anschlag feuerte nie wieder:
+        gemessen 2,59x -> 63,91x, rho +0,947, also SCHLECHTER als ohne alles.
+        Ein Boden, der mit dem eigenen Greifen wegspringt, ist kein Boden.
+
+     2. Er haengt an `festBasis()` und damit an der ZEIT, nicht am Vermoegen
+        (Begruendung dort). Damit ist er frei von Rueckkopplung: er waechst
+        mit der Teuerung und nicht mit der Kasse. Haenge ihn an den Anschlag,
+        und der Freibetrag waechst mit genau dem, was er begrenzen soll. */
   function liegeFreibetrag() {
     var e = ep();
     if (!e.liegeSatz) return 0;
     var frei = Math.round((e.liegeFrei || 0) * pflichtSumme());
     var boden = 0;
-    festlegungen().forEach(function (f) {
+    (e.festlegungen || []).forEach(function (f) {
       var p = festPreis(f);
       if (p > 0 && (!boden || p < boden)) boden = p;
     });

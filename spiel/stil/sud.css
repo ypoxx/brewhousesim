@@ -508,11 +508,7 @@
   font-size: calc(var(--s) * 14);
   padding: calc(var(--s) * 3) calc(var(--s) * 5);
 }
-.knopf.sud-tat.voll.halb .wort {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+.knopf.sud-tat.voll.halb .wort { display: block; }
 
 .sud-zrangschild {
   font-family: var(--mono);

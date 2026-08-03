@@ -15,6 +15,14 @@
    Gezaehlt wird JEDE Woche am Bildschirm: welche sud-Knoepfe stehen da,
    welche sind aktiv, welche trifft die Maus. Dazu, was das Bier hinterher
    ist: hoechste Sorte, Guete, Bottiche, Sude, Fass, zurueckgestufte Bottiche.
+
+   ACHTUNG, GRENZE VON `braut` UND `billig`: sie suchen ihre Achsknoepfe unter
+   den NICHT abgeschalteten. Solange das Sudbrett zugeklappt liegt, sind seine
+   Knoepfe abgeschaltet — dieser Automat kauft die Festlegung also nur, wenn
+   ein anderer Griff das Brett vorher aufgeschlagen hat. Fuer den Vergleich
+   "zwei Partien, verschiedenes Bier" ist deshalb `zweipartien.mjs` zustaendig;
+   es schlaegt das eigene Brett ausdruecklich auf. `blind` ist von dieser
+   Grenze nicht beruehrt und ist die Zahl, um die es geht.
 */
 import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
 import fs from 'fs';
