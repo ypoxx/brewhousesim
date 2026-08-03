@@ -13,7 +13,7 @@ ziel = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else 'werkbank/schuss/klang
 ziel.mkdir(parents=True, exist_ok=True)
 
 dateien = sorted(roh.glob('*.wav'))
-random.Random(20260803).shuffle(dateien)
+random.Random(int(__import__("os").environ.get("SAAT","20260803"))).shuffle(dateien)
 
 schluessel = {}
 for i, q in enumerate(dateien, 1):

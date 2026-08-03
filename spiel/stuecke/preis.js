@@ -1124,6 +1124,12 @@
       billigst: billig ? billig.preis : 0,
       name: billig ? billig.a.name : '—',
       verhaeltnis: billig && billig.preis ? B.welt.haus.kasse / billig.preis : 0,
+      /* Was der Rat dieses Jahr auf den Notpfennig vorschiessen musste, und
+         was danach als Rueckstand offen steht — beides gehoert in die Reihe,
+         mit der nachgemessen wird, sonst laesst sich ein Boden, der greift,
+         nicht von einem Haus unterscheiden, das ihn nie gebraucht hat. */
+      vorgriff: Z.vorgriff || 0,
+      rueckstand: Math.round(Z.rueckstand),
       zugWas: null, zugPreis: 0, zugArt: null, zugVerh: 0, zugFest: false
     });
     if (Z.leiter.length > 24) Z.leiter.shift();
