@@ -1,0 +1,74 @@
+[
+ {
+  "datei": "e1-abfahrt.wav",
+  "zug": "fuhre:abschicken",
+  "t_klick": 6.07,
+  "ruf_nach_s": 0.04,
+  "akustischer_einsatz_s": 0.13,
+  "hub_gegen_ruhe": 7.5,
+  "ruhe_median": 0.02002
+ },
+ {
+  "datei": "e1-weiter.wav",
+  "zug": "weiter",
+  "t_klick": 6.05,
+  "ruf_nach_s": 0.06,
+  "akustischer_einsatz_s": 0.925,
+  "hub_gegen_ruhe": 5.66,
+  "ruhe_median": 0.02871
+ },
+ {
+  "datei": "e2-abfahrt.wav",
+  "zug": "fuhre:abschicken",
+  "t_klick": 6.05,
+  "ruf_nach_s": 0.06,
+  "akustischer_einsatz_s": 0.1,
+  "hub_gegen_ruhe": 9.27,
+  "ruhe_median": 0.02327
+ },
+ {
+  "datei": "e2-weiter.wav",
+  "zug": "weiter",
+  "t_klick": 6.07,
+  "ruf_nach_s": 0.05,
+  "akustischer_einsatz_s": 0.08,
+  "hub_gegen_ruhe": 7.99,
+  "ruhe_median": 0.03465
+ },
+ {
+  "datei": "e3-abfahrt.wav",
+  "zug": "fuhre:abschicken",
+  "t_klick": 6.08,
+  "ruf_nach_s": 0.06,
+  "akustischer_einsatz_s": 0.07,
+  "hub_gegen_ruhe": 13.29,
+  "ruhe_median": 0.02278
+ },
+ {
+  "datei": "e3-weiter.wav",
+  "zug": "weiter",
+  "t_klick": 6.08,
+  "ruf_nach_s": 0.06,
+  "akustischer_einsatz_s": 0.07,
+  "hub_gegen_ruhe": 9.39,
+  "ruhe_median": 0.03026
+ },
+ {
+  "datei": "e4-abfahrt.wav",
+  "zug": "fuhre:abschicken",
+  "t_klick": 6.07,
+  "ruf_nach_s": 0.06,
+  "akustischer_einsatz_s": 0.155,
+  "hub_gegen_ruhe": 9.56,
+  "ruhe_median": 0.01954
+ },
+ {
+  "datei": "e4-weiter.wav",
+  "zug": "weiter",
+  "t_klick": 6.02,
+  "ruf_nach_s": 0.05,
+  "akustischer_einsatz_s": 0.205,
+  "hub_gegen_ruhe": 8.03,
+  "ruhe_median": 0.02742
+ }
+]
