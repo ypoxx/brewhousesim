@@ -86,21 +86,62 @@ geänderten Dateien** (`preis.js`, `preis-daten.js`; `preis-zusatz.css` ist
 unverändert). Drei Läufe je Epoche und Stand, alle acht Läufe einer Welle
 nebeneinander bei Lastmittel 33.
 
-PLATZHALTER_TABELLE
+| Epoche | | Lauf A | Lauf B | Lauf C | **Spannweite** | Jahre <1× (A/B/C) | Festlegung | Seitenfehler |
+|---|---|---|---|---|---|---|---|---|
+| 1350 | vorher | +0,701 | +0,701 | +0,257 | 0,444 | 0/14 · 0/14 · 0/14 | 1/1/1× | 0 |
+| 1350 | nachher | **+0,288** | **+0,288** | **+0,288** | **0,000** | 0/14 · 0/14 · 0/14 | 1/1/1× | 0 |
+| 1600 | vorher | +0,231 | +0,231 | +0,231 | 0,000 | 0/14 · 0/14 · 0/14 | 1/1/1× | 0 |
+| 1600 | nachher | **+0,231** | **+0,231** | **+0,231** | **0,000** | 0/14 · 0/14 · 0/14 | 1/1/1× | 0 |
+| 1884 | vorher | +0,169 | +0,169 | +0,169 | 0,000 | 0/14 · 0/14 · 0/14 | 0/0/0× | 0 |
+| 1884 | nachher | **+0,169** | **+0,169** | **+0,169** | **0,000** | 0/14 · 0/14 · 0/14 | 0/0/0× | 0 |
+| 1970 | vorher | +0,108 | +0,108 | +0,108 | 0,000 | 0/14 · 0/14 · 0/14 | 0/0/0× | 0 |
+| 1970 | nachher | **+0,108** | **+0,108** | **+0,108** | **0,000** | 0/14 · 0/14 · 0/14 | 0/0/0× | 0 |
 
-**Zur Spannweite 0,000 — sie ist ein Ergebnis, keine Nachlässigkeit.** Der
-Kritiker hat über drei Läufe 0,041 (1350), 0,033 (1600), 0,047 (1884) und 0,386
-(1970) gemessen. **Diese Streuung ist die Klick-Lotterie aus §0 und nicht das
-Spiel:** der Würfel ist gesät (`kern/uhr.js:59`), also streut nur, welcher Klick
-in welcher Woche ankommt. Mit der beharrlichen Hand kommt jeder an, und drei
-Läufe desselben Standes sind Ziffer für Ziffer derselbe Lauf. **Damit die
-Messregel trotzdem greift, steht unten in §1.2 die zweite Klammer: dieselben
-vier Epochen mit der ORIGINALHAND** (einmal hinsehen, feste Wartezeiten) — das
-ist die Streuung, die es wirklich gibt, und beide Klammern müssen halten.
+| Epoche | | Kennzahl min–max | Kasse Jahresmedian | Pearson | wöchentlich |
+|---|---|---|---|---|---|
+| 1350 | vorher | 1,55–41,67× | 234 → 538 (×2,30) | +0,368 | +0,644 |
+| 1350 | nachher | 1,55–15,14× | 234 → 258 (×1,10) | +0,298 | -0,292 |
+| 1600 | vorher | 1,54–15,11× | 1360 → 824 (×0,61) | +0,002 | -0,046 |
+| 1600 | nachher | 1,54–15,11× | 1360 → 824 (×0,61) | +0,002 | -0,046 |
+| 1884 | vorher | 1,53–13,32× | 9508 → 20264 (×2,13) | +0,269 | +0,389 |
+| 1884 | nachher | 1,53–13,32× | 9508 → 20264 (×2,13) | +0,269 | +0,389 |
+| 1970 | vorher | 1,96–9,14× | 25273 → 47359 (×1,87) | +0,269 | +0,473 |
+| 1970 | nachher | 1,96–9,14× | 25273 → 47359 (×1,87) | +0,269 | +0,473 |
+
+**Zur Spannweite — sie ist selbst ein Ergebnis.** In fünfzehn der sechzehn
+Zeilen steht 0,000: mit der beharrlichen Hand sind drei Läufe desselben Standes
+Ziffer für Ziffer derselbe Lauf. Der Würfel ist gesät (`kern/uhr.js:59`), also
+streut ohnehin nur, welcher Klick in welcher Woche ankommt — und wenn keiner
+mehr ausfällt, streut nichts mehr. Die Spannweiten des Kritikers (0,041 · 0,033
+· 0,047 · 0,386) sind genau diese Klick-Lotterie.
+
+**Die eine Ausnahme steht in der Tabelle und wird nicht weggelassen:** *1350
+vorher, Lauf C* liest +0,257 statt +0,701, Spannweite **0,444**. Der Lauf lief
+zu acht nebeneinander bei Lastmittel 33, und ein Klick ist doch ausgefallen —
+die Reihe teilt sich im sechsten Jahr (5,39 statt 4,74) und das Haus bleibt
+ärmer (Kasse ×1,39 statt ×2,30). **Die beharrliche Hand macht den Ausfall
+selten, nicht unmöglich.** Zwei von drei Läufen und alle vier Läufe des
+Kritikers liegen bei +0,701; die Latte wird am schlechtesten Fall gemessen, und
+der ist +0,701. **Für die geheilte Seite gilt dieselbe Regel — dort liegen alle
+drei Läufe auf +0,288, und der schlechteste ist derselbe wie der beste.**
+
+**Die zweite Klammer steht in §1.2:** dieselben vier Epochen mit der
+ORIGINALHAND (einmal hinsehen, feste Wartezeiten) — die arme Partie. Beide
+Klammern müssen halten, sonst ist die Zahl an die Maschine geheftet und nicht
+an das Spiel.
 
 **Die Reihen, Jahr für Jahr:**
 
-PLATZHALTER_REIHEN
+```
+1350 vorher : 5,89 · 1,55 · 4,27 · 2,79 · 5,90 · 4,74 · 10,52 · 41,67 · 26,39 · 7,05 · 6,88 · 19,27 · 13,67 · 9,20
+1350 nachher: 5,89 · 1,55 · 4,10 · 4,39 · 5,93 · 3,97 · 15,14 · 5,00 · 5,50 · 3,33 · 4,87 · 10,23 · 9,65 · 4,62
+1600 vorher : 3,76 · 1,75 · 1,54 · 2,03 · 3,10 · 15,11 · 9,11 · 7,89 · 2,04 · 4,35 · 4,62 · 3,00 · 2,73 · 3,22
+1600 nachher: 3,76 · 1,75 · 1,54 · 2,03 · 3,10 · 15,11 · 9,11 · 7,89 · 2,04 · 4,35 · 4,62 · 3,00 · 2,73 · 3,22
+1884 vorher : 8,35 · 5,03 · 1,70 · 2,75 · 1,61 · 6,04 · 3,34 · 2,05 · 3,65 · 1,53 · 13,32 · 8,70 · 11,14 · 2,02
+1884 nachher: 8,35 · 5,03 · 1,70 · 2,75 · 1,61 · 6,04 · 3,34 · 2,05 · 3,65 · 1,53 · 13,32 · 8,70 · 11,14 · 2,02
+1970 vorher : 2,25 · 2,36 · 3,13 · 2,29 · 6,41 · 2,75 · 2,12 · 2,30 · 1,96 · 3,29 · 2,27 · 9,14 · 2,15 · 4,26
+1970 nachher: 2,25 · 2,36 · 3,13 · 2,29 · 6,41 · 2,75 · 2,12 · 2,30 · 1,96 · 3,29 · 2,27 · 9,14 · 2,15 · 4,26
+```
 
 **Was daran zu lesen ist:**
 
