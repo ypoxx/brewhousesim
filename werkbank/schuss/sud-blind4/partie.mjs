@@ -50,11 +50,28 @@ const AUFNAHME = () => {
     const drin = r.width >= 3 && r.height >= 3 && cx >= 0 && cy >= 0
       && cx <= innerWidth && cy <= innerHeight;
     const t = drin ? document.elementFromPoint(cx, cy) : null;
+    const trifft = !!(t && (t === k || k.contains(t)));
     const txt = (k.innerText || '').replace(/\s+/g, ' ').trim();
     const pm = txt.match(/−([\d.,]+)/);
+    /* Wer liegt darueber? Nur so laesst sich "das Stueck sagt nein" von
+       "ein fremdes Brett liegt darauf" unterscheiden — schalte() macht aus
+       beidem dasselbe disabled. */
+    let deckel = null;
+    if (!trifft && drin && t) {
+      let e = t, tief = 0;
+      while (e && tief < 6) {
+        if (e.getAttribute && (e.getAttribute('data-ort') || e.getAttribute('data-reiter')
+            || (e.className && typeof e.className === 'string' && /brett|tafel|blatt|band|zettel/.test(e.className)))) break;
+        e = e.parentElement; tief++;
+      }
+      deckel = e && e.className && typeof e.className === 'string'
+        ? (e.getAttribute('data-reiter') || e.className).slice(0, 40)
+        : (t.className && typeof t.className === 'string' ? t.className.slice(0, 40) : t.tagName);
+    }
     return {
       zug: k.getAttribute('data-zug'), aus: !!k.disabled,
-      trifft: !!(t && (t === k || k.contains(t))),
+      sollAus: k.getAttribute('data-soll-aus') === '1',
+      trifft, deckel, drin,
       preis: pm ? +pm[1].replace(/\./g, '').replace(',', '.') : 0,
       text: txt.slice(0, 70)
     };
