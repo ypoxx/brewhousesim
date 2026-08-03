@@ -1,0 +1,1033 @@
+{
+ "epoche": 1,
+ "hafen": "8900",
+ "fehler": [],
+ "abgebrochen": null,
+ "michaelis": [
+  {
+   "jahr": 1350,
+   "anschlag": 515,
+   "hoehe": 112,
+   "umsatz": 150,
+   "ertrag": 0,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": 0,
+   "umlage": 0,
+   "rate": 0,
+   "zeilen": [],
+   "kasse": 112,
+   "deckung": 5.894736842105263,
+   "nennerPreis": 19
+  },
+  {
+   "jahr": 1351,
+   "anschlag": 512,
+   "hoehe": 65,
+   "umsatz": 410,
+   "ertrag": 119,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -87,
+   "umlage": -96,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -14,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -8,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -17,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -10,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -38,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     17,
+     "ertrag",
+     ""
+    ],
+    [
+     "Handlohn beim Erbfall an den Grundherrn",
+     -96,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 65,
+   "deckung": 1.5476190476190477,
+   "nennerPreis": 42
+  },
+  {
+   "jahr": 1352,
+   "anschlag": 1008,
+   "hoehe": 205,
+   "umsatz": 790,
+   "ertrag": 71,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -90,
+   "umlage": -24,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -22,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -12,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -17,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -11,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -28,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     17,
+     "ertrag",
+     ""
+    ],
+    [
+     "Umlage für den Mauerbau",
+     -24,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 205,
+   "deckung": 4.270833333333333,
+   "nennerPreis": 48
+  },
+  {
+   "jahr": 1353,
+   "anschlag": 1082,
+   "hoehe": 201,
+   "umsatz": 907,
+   "ertrag": 89,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -98,
+   "umlage": -110,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -26,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -14,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -18,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -11,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -29,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     18,
+     "ertrag",
+     ""
+    ],
+    [
+     "Handlohn beim Erbfall an den Grundherrn",
+     -110,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 201,
+   "deckung": 2.7916666666666665,
+   "nennerPreis": 72
+  },
+  {
+   "jahr": 1354,
+   "anschlag": 1513,
+   "hoehe": 425,
+   "umsatz": 864,
+   "ertrag": 124,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -109,
+   "umlage": 0,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -29,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -16,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -19,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -12,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -33,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     19,
+     "ertrag",
+     ""
+    ]
+   ],
+   "kasse": 425,
+   "deckung": 5.902777777777778,
+   "nennerPreis": 72
+  },
+  {
+   "jahr": 1355,
+   "anschlag": 1488,
+   "hoehe": 341,
+   "umsatz": 845,
+   "ertrag": -27,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -77,
+   "umlage": -100,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Nachlass des Rats auf Zins und Wasser — das vorige Jahr trug nichts",
+     0,
+     "frei",
+     ""
+    ],
+    [
+     "Grutgeld an den Grutherrn",
+     -29,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -16,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -9,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -5,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -18,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     19,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     11,
+     "ertrag",
+     ""
+    ],
+    [
+     "Handlohn beim Erbfall an den Grundherrn",
+     -85,
+     "umlage",
+     ""
+    ],
+    [
+     "Landfriedensgeld",
+     -15,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 341,
+   "deckung": 4.736111111111111,
+   "nennerPreis": 72
+  },
+  {
+   "jahr": 1356,
+   "anschlag": 2157,
+   "hoehe": 652,
+   "umsatz": 1078,
+   "ertrag": 267,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -134,
+   "umlage": 0,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -32,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -18,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -20,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -13,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -51,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     20,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     11,
+     "ertrag",
+     ""
+    ]
+   ],
+   "kasse": 652,
+   "deckung": 10.516129032258064,
+   "nennerPreis": 62
+  },
+  {
+   "jahr": 1357,
+   "anschlag": 2134,
+   "hoehe": 625,
+   "umsatz": 919,
+   "ertrag": 103,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -126,
+   "umlage": -140,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -32,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -18,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -21,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -13,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -42,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     21,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     12,
+     "ertrag",
+     ""
+    ],
+    [
+     "Handlohn beim Erbfall an den Grundherrn",
+     -140,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 625,
+   "deckung": 41.666666666666664,
+   "nennerPreis": 15
+  },
+  {
+   "jahr": 1358,
+   "anschlag": 2605,
+   "hoehe": 871,
+   "umsatz": 972,
+   "ertrag": 111,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -132,
+   "umlage": 0,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -33,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -18,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -22,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -14,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -45,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     22,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     12,
+     "ertrag",
+     ""
+    ]
+   ],
+   "kasse": 871,
+   "deckung": 26.393939393939394,
+   "nennerPreis": 33
+  },
+  {
+   "jahr": 1359,
+   "anschlag": 2145,
+   "hoehe": 529,
+   "umsatz": 724,
+   "ertrag": -264,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -77,
+   "umlage": -135,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Nachlass des Rats auf Zins und Wasser — das vorige Jahr trug nichts",
+     0,
+     "frei",
+     ""
+    ],
+    [
+     "Grutgeld an den Grutherrn",
+     -28,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -16,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -10,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -6,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -17,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     23,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     13,
+     "ertrag",
+     ""
+    ],
+    [
+     "Handlohn beim Erbfall an den Grundherrn",
+     -85,
+     "umlage",
+     ""
+    ],
+    [
+     "Brandschatzung",
+     -50,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 529,
+   "deckung": 7.053333333333334,
+   "nennerPreis": 75
+  },
+  {
+   "jahr": 1360,
+   "anschlag": 2125,
+   "hoehe": 516,
+   "umsatz": 565,
+   "ertrag": -165,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -61,
+   "umlage": 0,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Nachlass des Rats auf Zins und Wasser — das vorige Jahr trug nichts",
+     0,
+     "frei",
+     ""
+    ],
+    [
+     "Grutgeld an den Grutherrn",
+     -23,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -13,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -11,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -7,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -7,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     24,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     13,
+     "ertrag",
+     ""
+    ]
+   ],
+   "kasse": 516,
+   "deckung": 6.88,
+   "nennerPreis": 75
+  },
+  {
+   "jahr": 1361,
+   "anschlag": 2325,
+   "hoehe": 501,
+   "umsatz": 841,
+   "ertrag": 193,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -109,
+   "umlage": -162,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Grutgeld an den Grutherrn",
+     -24,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -14,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -25,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -15,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -31,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     25,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     14,
+     "ertrag",
+     ""
+    ],
+    [
+     "Handlohn beim Erbfall an den Grundherrn",
+     -120,
+     "umlage",
+     ""
+    ],
+    [
+     "Zehnt auf das Braugerät",
+     -42,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 501,
+   "deckung": 19.26923076923077,
+   "nennerPreis": 26
+  },
+  {
+   "jahr": 1362,
+   "anschlag": 2718,
+   "hoehe": 656,
+   "umsatz": 819,
+   "ertrag": -38,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -79,
+   "umlage": 0,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Nachlass des Rats auf Zins und Wasser — das vorige Jahr trug nichts",
+     0,
+     "frei",
+     ""
+    ],
+    [
+     "Grutgeld an den Grutherrn",
+     -26,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -15,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -12,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -7,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -19,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     26,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     14,
+     "ertrag",
+     ""
+    ]
+   ],
+   "kasse": 656,
+   "deckung": 13.666666666666666,
+   "nennerPreis": 48
+  },
+  {
+   "jahr": 1363,
+   "anschlag": 2316,
+   "hoehe": 515,
+   "umsatz": 438,
+   "ertrag": -88,
+   "rueckstand": 0,
+   "gestundet": 0,
+   "pflicht": -64,
+   "umlage": -70,
+   "rate": 0,
+   "zeilen": [
+    [
+     "Nachlass des Rats auf Zins und Wasser — das vorige Jahr trug nichts",
+     0,
+     "frei",
+     ""
+    ],
+    [
+     "Grutgeld an den Grutherrn",
+     -21,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Mahlgeld an die Mühle",
+     -12,
+     "pflicht",
+     "menge"
+    ],
+    [
+     "Erbzins an den Grundherrn",
+     -12,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Wasserzins an die Stadt",
+     -7,
+     "pflicht",
+     "fest"
+    ],
+    [
+     "Schoss nach der Nahrung",
+     -12,
+     "pflicht",
+     "ertrag"
+    ],
+    [
+     "Das Dach über der Pfanne",
+     27,
+     "ertrag",
+     ""
+    ],
+    [
+     "Der feste Fasskauf bei der Zunft",
+     15,
+     "ertrag",
+     ""
+    ],
+    [
+     "Handlohn beim Erbfall an den Grundherrn",
+     -70,
+     "umlage",
+     ""
+    ]
+   ],
+   "kasse": 515,
+   "deckung": 9.196428571428571,
+   "nennerPreis": 56
+  }
+ ],
+ "leiterRoh": [
+  {
+   "jahr": 1350,
+   "kasse": 112,
+   "billigst": 36,
+   "name": "Das Dach über der Pfanne",
+   "verhaeltnis": 3.111111111111111,
+   "zugWas": "Zuvorkommen Klosterschenke Obernberg",
+   "zugPreis": 19,
+   "zugArt": "umkaempft",
+   "zugVerh": 5.894736842105263,
+   "zugFest": true
+  },
+  {
+   "jahr": 1351,
+   "kasse": 65,
+   "billigst": 45,
+   "name": "Ein zweiter Bottich aus Eichenholz",
+   "verhaeltnis": 1.4444444444444444,
+   "zugWas": "Ablösung Klosterschenke Obernberg",
+   "zugPreis": 42,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.5476190476190477,
+   "zugFest": true
+  },
+  {
+   "jahr": 1352,
+   "kasse": 205,
+   "billigst": 90,
+   "name": "Ein zweiter Bottich aus Eichenholz",
+   "verhaeltnis": 2.2777777777777777,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 48,
+   "zugArt": "umkaempft",
+   "zugVerh": 4.270833333333333,
+   "zugFest": true
+  },
+  {
+   "jahr": 1353,
+   "kasse": 201,
+   "billigst": 97,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 2.0721649484536084,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 72,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.7916666666666665,
+   "zugFest": true
+  },
+  {
+   "jahr": 1354,
+   "kasse": 425,
+   "billigst": 140,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 3.0357142857142856,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 72,
+   "zugArt": "umkaempft",
+   "zugVerh": 5.902777777777778,
+   "zugFest": true
+  },
+  {
+   "jahr": 1355,
+   "kasse": 341,
+   "billigst": 150,
+   "name": "Das Hausschild überm Tor",
+   "verhaeltnis": 2.2733333333333334,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 72,
+   "zugArt": "umkaempft",
+   "zugVerh": 4.736111111111111,
+   "zugFest": true
+  },
+  {
+   "jahr": 1356,
+   "kasse": 652,
+   "billigst": 220,
+   "name": "Das Hausschild überm Tor",
+   "verhaeltnis": 2.963636363636364,
+   "zugWas": "Zuvorkommen Zum Goldenen Ochsen",
+   "zugPreis": 62,
+   "zugArt": "umkaempft",
+   "zugVerh": 10.516129032258064,
+   "zugFest": true
+  },
+  {
+   "jahr": 1357,
+   "kasse": 625,
+   "billigst": 210,
+   "name": "Das Hausschild überm Tor",
+   "verhaeltnis": 2.9761904761904763,
+   "zugWas": "Zuvorkommen Fährhaus am Fluss",
+   "zugPreis": 15,
+   "zugArt": "umkaempft",
+   "zugVerh": 41.666666666666664,
+   "zugFest": true
+  },
+  {
+   "jahr": 1358,
+   "kasse": 871,
+   "billigst": 260,
+   "name": "Das Hausschild überm Tor",
+   "verhaeltnis": 3.35,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 33,
+   "zugArt": "umkaempft",
+   "zugVerh": 26.393939393939394,
+   "zugFest": true
+  },
+  {
+   "jahr": 1359,
+   "kasse": 529,
+   "billigst": 260,
+   "name": "Der Grutkasten unter Schloss",
+   "verhaeltnis": 2.0346153846153845,
+   "zugWas": "Ablösung Zum Goldenen Ochsen",
+   "zugPreis": 75,
+   "zugArt": "umkaempft",
+   "zugVerh": 7.053333333333334,
+   "zugFest": true
+  },
+  {
+   "jahr": 1360,
+   "kasse": 516,
+   "billigst": 260,
+   "name": "Der Grutkasten unter Schloss",
+   "verhaeltnis": 1.9846153846153847,
+   "zugWas": "Ablösung Zum Goldenen Ochsen",
+   "zugPreis": 75,
+   "zugArt": "umkaempft",
+   "zugVerh": 6.88,
+   "zugFest": true
+  },
+  {
+   "jahr": 1361,
+   "kasse": 501,
+   "billigst": 280,
+   "name": "Der Grutkasten unter Schloss",
+   "verhaeltnis": 1.7892857142857144,
+   "zugWas": "Zuvorkommen Schenke am Tor",
+   "zugPreis": 26,
+   "zugArt": "umkaempft",
+   "zugVerh": 19.26923076923077,
+   "zugFest": true
+  },
+  {
+   "jahr": 1362,
+   "kasse": 656,
+   "billigst": 330,
+   "name": "Der Grutkasten unter Schloss",
+   "verhaeltnis": 1.9878787878787878,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 48,
+   "zugArt": "umkaempft",
+   "zugVerh": 13.666666666666666,
+   "zugFest": true
+  },
+  {
+   "jahr": 1363,
+   "kasse": 515,
+   "billigst": 280,
+   "name": "Der Grutkasten unter Schloss",
+   "verhaeltnis": 1.8392857142857142,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 56,
+   "zugArt": "umkaempft",
+   "zugVerh": 9.196428571428571,
+   "zugFest": true
+  }
+ ]
+}

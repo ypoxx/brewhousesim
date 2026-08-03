@@ -17,6 +17,19 @@ Kritiker und aus denselben zwei Gründen — es ist die Zahl, die
 `werkbank/schuss/eichung/auswerten.py` rechnet, und es ist die Frage nach der
 Rangfolge, nicht nach einer Geraden. Pearson steht überall daneben.
 
+**Stand nach der Nacharbeit, Spearman, drei Läufe je Epoche und Stand:**
+
+| Epoche | vorher (`da7d690`) | nachher | |
+|---|---|---|---|
+| **1350** | **+0,701 / +0,701 / +0,257** | **+0,288 / +0,288 / +0,288** | **geheilt** |
+| 1600 | +0,231 / +0,231 / +0,231 | +0,231 / +0,231 / +0,231 | **Ziffer für Ziffer unverändert** |
+| 1884 | +0,169 / +0,169 / +0,169 | +0,169 / +0,169 / +0,169 | **Ziffer für Ziffer unverändert** |
+| 1970 | +0,108 / +0,108 / +0,108 | +0,108 / +0,108 / +0,108 | **Ziffer für Ziffer unverändert** |
+
+Jahre unter 1×: **0 von 14 in allen vier Epochen, vorher wie nachher.**
+Die zweite Klammer (Originalhand, Klick-Lotterie) steht in §1.2 und hält
+ebenfalls: 1350 vorher **+0,701 dreimal**, nachher **−0,033 / +0,591 / +0,591**.
+
 ---
 
 ## 0 · DER BEFUND, MIT DEM DIESE RUNDE ANFANGEN MUSS
@@ -74,6 +87,39 @@ Läufe nebeneinander, andere Builder auf derselben Maschine). Die vier
 *vorher*-Läufe der Welle A in §1 sind unter genau diesen 33 gefahren und sind
 Ziffer für Ziffer die Zahlen des Kritikers.
 
+### Wo der Kritiker sich irrt — ein Satz, und die Zahl daneben
+
+Sein Urteil ist in der Sache richtig und in **jeder** Einzelzahl reproduziert.
+Einen Schluss zieht er trotzdem falsch, und er steht in §3.5 seines Urteils:
+
+> „Der Befund hängt nicht an meiner Hand und nicht an meinem Gerät — weder der
+> schlechte noch der gute. **Er hängt am Stand.**"
+
+**Er hängt nicht am Stand.** Derselbe eingefrorene Commit `da7d690`, dieselbe
+Saat, dasselbe Gerät liefert je nach Auslastung der Maschine
+
+    5,89 → 2,69   max  7,88   Spearman −0,152     (Klicks fallen aus)
+    5,89 → 9,20   max 41,67   Spearman +0,701     (jeder Klick landet)
+
+Sein Ausschlussverfahren war vollständig bis auf einen Kandidaten: er hat *seine
+Hand* und *sein Gerät* geprüft, aber nicht die **Uhr, an der beide hängen**. Die
+Zeile, auf die es ankommt, ist `preis-linie.mjs:80` (`waitForTimeout(warte)`) —
+und sie ist auch der Grund, warum sein eigener Lauf C in meiner Wiederholung
+einmal +0,257 statt +0,701 liest (§1).
+
+**Das ändert nichts an seinem Urteil und alles an dem meinen:** ich hatte
+dieselbe Falle in die andere Richtung und habe daraufhin „identisch, Ziffer für
+Ziffer" geschrieben. Der Fehler war meiner; die Ursache ist gemeinsam.
+
+**Ein zweiter, kleinerer Punkt, den er selbst offengelegt hat** (§2, „ein
+Messfehler meines Geräts"): die letzte LEITER-Zeile steht beim Ablesen manchmal
+ohne Kennzahl da, deshalb mal 13, mal 14 Jahre in der Reihe. Das ist behoben,
+nicht umgangen: ich lese die Reihe **roh aus der Quelle**
+(`BRAUHAUS.preis.leiter()`, Zahlen statt gesetzter Zeichen) statt aus der
+gezeichneten Tafel. Ergebnis: **14 Jahre in allen 47 Läufen dieser
+Nacharbeit, die die volle Reihe schreiben** — kein einziger mit 13.
+
+
 ---
 
 ## 1 · DIE ZAHLEN — drei Läufe je Epoche, mit Spannweite
@@ -120,9 +166,11 @@ vorher, Lauf C* liest +0,257 statt +0,701, Spannweite **0,444**. Der Lauf lief
 zu acht nebeneinander bei Lastmittel 33, und ein Klick ist doch ausgefallen —
 die Reihe teilt sich im sechsten Jahr (5,39 statt 4,74) und das Haus bleibt
 ärmer (Kasse ×1,39 statt ×2,30). **Die beharrliche Hand macht den Ausfall
-selten, nicht unmöglich.** Zwei von drei Läufen und alle vier Läufe des
-Kritikers liegen bei +0,701; die Latte wird am schlechtesten Fall gemessen, und
-der ist +0,701. **Für die geheilte Seite gilt dieselbe Regel — dort liegen alle
+selten, nicht unmöglich.** Zwei von drei Läufen liegen auf +0,701, die drei Läufe
+des Kritikers auf +0,742 / +0,701 / +0,701 und seine Kreuzprobe mit dem
+Originalgerät ebenfalls auf +0,701 — und in der zweiten Klammer (§1.2) stehen
+drei von drei auf +0,701. Die Latte wird am schlechtesten Fall gemessen, und der
+ist +0,701 bis +0,742. **Für die geheilte Seite gilt dieselbe Regel — dort liegen alle
 drei Läufe auf +0,288, und der schlechteste ist derselbe wie der beste.**
 
 **Die zweite Klammer steht in §1.2:** dieselben vier Epochen mit der
@@ -130,7 +178,48 @@ ORIGINALHAND (einmal hinsehen, feste Wartezeiten) — die arme Partie. Beide
 Klammern müssen halten, sonst ist die Zahl an die Maschine geheftet und nicht
 an das Spiel.
 
-**Die Reihen, Jahr für Jahr:**
+### 1.2 · Die zweite Klammer: dieselben Stände mit der ORIGINALHAND
+
+Damit die Zahl nicht an meinem Gerät hängt, sind beide Stände **zusätzlich mit
+der Hand des Originalgeräts** gefahren — einmal hinsehen, feste Wartezeiten
+(`BEHARR=1 RUHE=0`), also mit der Klick-Lotterie. Für die beiden Epochen, um
+die es geht, drei Läufe je Stand:
+
+| Epoche | | Lauf | Lauf | Lauf | Spannweite | Urteil |
+|---|---|---|---|---|---|---|
+| **1350** | vorher | +0,701 | +0,701 | +0,701 | 0,000 | **REISST** |
+| **1350** | **nachher** | **−0,033** | **+0,591** | **+0,591** | 0,624 | **besteht** |
+| 1600 | vorher / nachher | +0,231 | — | — | — | besteht, identisch |
+| 1884 | vorher | +0,354 | +0,393 | +0,393 | 0,040 | besteht |
+| 1884 | nachher | +0,574 | +0,393 | +0,393 | 0,180 | besteht |
+| 1970 | vorher / nachher | +0,108 | — | — | — | besteht, identisch |
+
+**Der Befund hält in beiden Klammern.** 1350 steht vorher in *drei von drei*
+Lotterieläufen exakt auf +0,701 und nachher in keinem einzigen über der Latte.
+
+**Und hier steht der Einwand, den ein Kritiker gegen mich erheben wird, samt
+Antwort:** in dieser Klammer liest 1884 einmal **+0,574** statt +0,393, obwohl
+ich 1884 nicht angefasst habe. Das ist die Lotterie und nicht meine Datei, und
+das ist nachweisbar:
+
+1. **In der deterministischen Klammer ist 1884 vorher und nachher Bit für Bit
+   dasselbe** — alle 14 Jahreszahlen, alle 14 Jahreskassen, `kasseMin` 2.907 und
+   `kasseMax` 25.557, und zwar **in allen drei Läufen** (A, B und C einzeln
+   nachgerechnet).
+2. **Zwei der drei Lotterieläufe nachher sind mit vorher identisch** (+0,393).
+3. **Schon derselbe eingefrorene Stand liefert den beiden Händen verschiedene
+   Reihen:** 1884 vorher, beharrlich `8,35 · 5,03 · 1,70 · 2,75 · 1,61 · 6,04
+   …`, Originalhand `8,35 · 5,03 · 2,35 · 2,16 · 2,36 · 1,12 …`. Die Gabelung
+   liegt im dritten Jahr, lange bevor irgendetwas von mir wirken könnte.
+4. **Epoche III hat `liegeSatz`/`liegeFrei` gar nicht in den Daten**, und die
+   Änderung an `preis.js` schreibt keine Zahl der Wirtschaft.
+
+Es bleibt trotzdem ein Befund — für **A6**, nicht gegen diesen Bau: 1884 liegt
+in der Lotterie zwischen +0,354 und +0,574 und hat als einzige Epoche ein Jahr
+unter 1× (1/14). Es ist der nächste Kandidat.
+
+
+**Die Reihen, Jahr für Jahr (deterministische Klammer):**
 
 ```
 1350 vorher : 5,89 · 1,55 · 4,27 · 2,79 · 5,90 · 4,74 · 10,52 · 41,67 · 26,39 · 7,05 · 6,88 · 19,27 · 13,67 · 9,20
@@ -424,12 +513,26 @@ denselben Wert (nachgesehen: 5,89 / 3,76 / 8,35 / 2,25). **Keine der beiden ist
 meine Datei** — die eine gehört DEM GEGNER, die andere dem Kern. Ich habe
 nichts angefasst und melde nur, dass der Befund am Schirm steht.
 
-**A6 — 1884 beobachten.** Getan, mit drei Läufen; die Zahlen stehen unten in
-§1. 1884 bleibt der nächste Kandidat, und der Grund ist derselbe wie bei 1350:
-die Kasse wächst (×2,13 im gemessenen Lauf), der Nenner aber ebenfalls (×6,81)
-— **deshalb** hält es. Fällt der Nenner in 1884 einmal nicht mit, kippt es
-sofort. Die vierte Wurzel steht dort **nicht** in den Daten, sie ist also mit
-einer Zahl nachrüstbar, sobald jemand 1884 zur Aufgabe erklärt.
+**A6 — 1884 beobachten.** Getan, mit **sechs** Läufen (drei in jeder Klammer):
+beharrlich **+0,169 · +0,169 · +0,169**, in der Lotterie **+0,354 · +0,393 ·
++0,393** (vorher) und **+0,393 · +0,393 · +0,574** (nachher, Begründung für den
+Ausreißer in §1.2). **1884 bleibt der nächste Kandidat**, aus vier Gründen, alle
+gemessen:
+
+* Es ist die **einzige** Epoche mit einem Jahr unter 1× (1/14 in der Lotterie,
+  Tiefstand 0,47×).
+* Die Kasse wächst ×2,13 — es hält nur, weil der Nenner ×6,81 mitwächst. Fällt
+  der Nenner dort einmal nicht mit, kippt es sofort.
+* Es ist die einzige Epoche, in der der Nenner in 59 % der Wochen **nicht**
+  `umkaempft` ist, sondern `bindung` oder `bau` (§3) — die Zahl hängt dort an
+  mehreren Stücken zugleich.
+* Es ist die einzige Epoche, in der `zugDeckung()` überhaupt `null` liefert
+  (6/400 Wochen, §4).
+
+**Die vierte Wurzel steht in 1884 nicht in den Daten** — sie ist also mit zwei
+Zahlen nachrüstbar, sobald jemand 1884 zur Aufgabe erklärt. Ich habe es nicht
+getan: in dieser Runde durfte 1884 sich nicht bewegen, und es hat sich nicht
+bewegt.
 
 **A7 — `preis-linie.mjs:39` hat `8899` fest verdrahtet.** Ich habe das fremde
 Messgerät **nicht** angefasst (ZUSTÄNDIGKEIT 16, Sperrliste 4). Statt dessen
@@ -484,9 +587,9 @@ per Klick aufgeschlagen, sonst nichts angefasst:
 | 1884 | **0** | 0 | 0 | 127 |
 | 1970 | **0** | 0 | 0 | 119 |
 
-Dazu über die 24 Messläufe dieser Nacharbeit (je 400 Wochen, zusammen 9.600
-gemessene Wochen): **0 Seitenfehler, 0 Konsolenfehler, kein Abbruch, kein totes
-Haus.**
+Dazu über **58 Messläufe** dieser Nacharbeit — zusammen **22.840 gemessene
+Wochen**: **0 Seitenfehler, 0 Konsolenfehler, kein Abbruch, kein totes Haus,
+`BRAUHAUS.lage.length === 0` in jeder gemessenen Woche.**
 
 `node --check` auf `spiel/stuecke/preis.js` und `spiel/stuecke/preis-daten.js`:
 sauber. `spiel/index.html` nicht angefasst, `spiel/kern/**` nicht angefasst.
@@ -552,3 +655,17 @@ Neue Messgeräte (eigene Dateien, kein fremdes angefasst):
     werkbank/schuss/rueckkopplung-r3/tor.mjs         das Abnahmetor: vier Epochen, lage, Fehler, Karte
 
 `node --check` ist auf beiden `.js` sauber. Kein `git`.
+
+Die Messwerte aller Läufe liegen daneben, auf die Zahlen eingekürzt (Jahr,
+Woche, Kasse, Amtszeit, Kennzahl, Nennerpreis, Nennerart, Zugschlüssel):
+
+    werkbank/schuss/rueckkopplung-r3/lauf-vorher-e{1..4}-{A,B,C}.json        beharrliche Hand, da7d690
+    werkbank/schuss/rueckkopplung-r3/lauf-nachher-e{1..4}-{A,B,C}.json       beharrliche Hand, Probestand
+    werkbank/schuss/rueckkopplung-r3/lauf-vorher-orig-e*.json                Originalhand, da7d690
+    werkbank/schuss/rueckkopplung-r3/lauf-nachher-orig-e*.json               Originalhand, Probestand
+    werkbank/schuss/rueckkopplung-r3/innen-1350-reich.json                   die Rechnungsspalte, 14 Michaelitage
+
+Nachrechnen:
+
+    python3 werkbank/schuss/rueckkopplung-r3/auswerten.py werkbank/schuss/rueckkopplung-r3/lauf-nachher-e*.json
+    python3 werkbank/schuss/rueckkopplung-r3/tabelle.py   <ordner-vorher> <ordner-nachher>
