@@ -905,15 +905,18 @@
 
     buch.appendChild(B.el('p', 'erb-regel', e.erklaerung));
 
-    if (!Z.uebergeben) {
-      buch.appendChild(B.el('p', 'erb-frist',
-        'Die Stunde kommt in ' + wochenBisStunde()
-        + (wochenBisStunde() === 1 ? ' Woche' : ' Wochen') + ' — '
-        + B.uhr.datum(Z.stundeJahr, Z.stundeWoche).lang
-        + '. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen.'));
-    } else {
-      var f = e.formen[Z.form];
-      buch.appendChild(B.el('p', 'erb-frist',
+    buch.appendChild(B.el('p', 'erb-frist',
+      'Die Stunde kommt in ' + wochenBisStunde()
+      + (wochenBisStunde() === 1 ? ' Woche' : ' Wochen') + ' — '
+      + B.uhr.datum(Z.stundeJahr, Z.stundeWoche).lang
+      + '. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen.'
+      + (imAntritt() ? ' ' + (a.name || 'Die neue Hand') + ' ist beim Schreiber noch '
+         + 'unbekannt: bis Michaeli ' + jahr() + ' kostet jede Feder das Antrittsgeld mit, '
+         + B.zahl(feder(), 2) + '× statt ' + B.zahl(eig().faktor, 2) + '×.' : '')));
+
+    if (Z.erbfaelle) {
+      var f = e.formen[Z.letzteForm];
+      buch.appendChild(B.el('p', 'erb-frist erb-frist-alt',
         (Z.alt ? Z.alt.name : 'Die Hand davor') + ' hat übergeben — '
         + (f ? f.name + '. ' + f.satz : 'ohne Vereinbarung, weil die Stunde nicht wartete.')
         + (Z.vorher ? ' Am Haus ' + Z.vorher.haus + ' → ' + (Z.nachher ? Z.nachher.haus : '—')
@@ -929,10 +932,25 @@
       + ' — geht über, wer immer die Kelle hält'));
     if (!fest.length) lade.appendChild(B.el('div', 'erb-leer', 'Nichts. Alles hängt an einem Menschen.'));
     fest.forEach(function (x) {
-      var r = B.el('div', 'erb-satz');
+      var r = B.el('div', 'erb-satz greifbar');
       r.appendChild(B.el('span', 'n', x.name));
       r.appendChild(B.el('span', 'v', x.bindung.womit + ' bis ' + x.bindung.bis));
       if (ei.zug === 'zahlen') r.appendChild(B.el('span', 'p', geld(wert(x))));
+      /* Was am Haus haftet, haftet bis zu einem Tag — und die naechste Hand
+         erbt die Frist mit. Darum steht das Fortschreiben an jeder Zeile und
+         nicht nur beim naechstfaelligen Haus auf der Leiste. */
+      var pv = verlaengerPreis(x);
+      r.appendChild(B.knopf({
+        text: 'Fortschreiben',
+        zug: 'erbe:fortschreiben:' + x.schluessel,
+        preis: -pv,
+        klasse: 'erb-knopf erb-mini',
+        titel: x.name + ': ' + x.bindung.womit + ' läuft bis ' + x.bindung.bis
+          + '. ' + e.verb + ' ' + e.wo + ' bis ' + (jahr() + e.jahre) + ' — '
+          + geld(pv) + ', unwiderruflich.',
+        aus: !B.welt.kann(pv),
+        tu: function () { verlaengere(x.schluessel); }
+      }));
       lade.appendChild(r);
     });
     buch.appendChild(lade);
@@ -966,6 +984,43 @@
     });
     buch.appendChild(lade2);
 
+    /* AUFLAGE 1 — die dritte Lade. Datum, Grund und der gezahlte Betrag.
+       Solange die Adresse noch existiert und nicht dem Haus gehoert, steht
+       daneben der Widerspruch, auf den das Gezahlte angerechnet wird. */
+    if (Z.erloschen.length) {
+      var ladeE = B.el('div', 'erb-lade erb-lade-erloschen');
+      ladeE.appendChild(B.el('div', 'erb-ladekopf',
+        (e.erloschen || 'ERLOSCHEN') + ' · ' + Z.erloschen.length
+        + ' · ' + geld(erloschenSumme()) + ' bezahlt'));
+      Z.erloschen.forEach(function (x) {
+        var r = B.el('div', 'erb-satz' + (x.zurueck ? ' erb-zurueck' : ' greifbar'));
+        r.appendChild(B.el('span', 'n', x.name));
+        r.appendChild(B.el('span', 'v', x.wegJahr + '/' + x.wegWoche + ' · ' + x.grund));
+        r.appendChild(B.el('span', 'p', geld(x.preis)));
+        var ax = B.welt.adresse(x.schluessel);
+        var offenNoch = !x.zurueck && ax
+          && ax.ab <= B.welt.zeit.epoche && ax.bis >= B.welt.zeit.epoche
+          && (!ax.bindung || ax.bindung.wem !== 'haus' || !amHaus(ax.bindung.womit));
+        if (offenNoch) {
+          var pw = widerspruchPreis(x);
+          r.appendChild(B.knopf({
+            text: 'Widerspruch',
+            zug: 'erbe:widerspruch:' + x.schluessel,
+            preis: -pw,
+            klasse: 'erb-knopf erb-mini erb-streit',
+            titel: e.widerspruch.satz + ' ' + geld(x.preis) + ' von ' + x.jahr + '/'
+              + x.woche + ' werden angerechnet; zu zahlen bleiben ' + geld(pw) + '.',
+            aus: !B.welt.kann(pw),
+            tu: function () { widersprich(x.schluessel); }
+          }));
+        } else if (x.zurueck) {
+          r.appendChild(B.el('span', 'v', '· zurückgeholt'));
+        }
+        ladeE.appendChild(r);
+      });
+      buch.appendChild(ladeE);
+    }
+
     /* Was gefallen ist */
     if (Z.gefallen.length) {
       var lade3 = B.el('div', 'erb-lade erb-lade-weg');
@@ -994,18 +1049,29 @@
       buch.appendChild(lade4);
     }
 
-    /* Das Geschlecht */
-    if (Z.alt) {
+    /* DAS GESCHLECHT.  Auflage 2: der Kritiker hat drei von vierzehn
+       Uebergaengen gefunden, in denen der Erbe den Vornamen des Erblassers
+       trug — und bei gleichem Namen UND gleicher Eigenschaft war auch die
+       Feder unveraendert. Dann sei die Zeile "II. Hand" eine reine Behauptung.
+       Der Vorname wird in welt.neueAmtszeit gezogen und gehoert dem Kern; die
+       Bitte steht im Bericht. Was hier steht, ist die Feder, und die ist ab
+       jetzt nach jedem Erbfall eine andere — die Spalte rechts nennt sie fuer
+       jede Hand, und wo Name und Eigenschaft sich wiederholen, sagt das Buch
+       es hin. */
+    if (Z.haende.length) {
       var lade5 = B.el('div', 'erb-lade erb-lade-hand');
-      lade5.appendChild(B.el('div', 'erb-ladekopf', 'DIE HÄNDE'));
-      var r1 = B.el('div', 'erb-satz');
-      r1.appendChild(B.el('span', 'n', roem(Z.alt.nr) + ' ' + Z.alt.name));
-      r1.appendChild(B.el('span', 'v', Z.alt.eigenschaftName));
-      lade5.appendChild(r1);
-      var r2 = B.el('div', 'erb-satz');
-      r2.appendChild(B.el('span', 'n', roem(a.nr) + ' ' + a.name));
-      r2.appendChild(B.el('span', 'v', a.eigenschaftName));
-      lade5.appendChild(r2);
+      lade5.appendChild(B.el('div', 'erb-ladekopf', 'DIE HÄNDE · ' + Z.haende.length));
+      Z.haende.forEach(function (h, i) {
+        var vor = i > 0 ? Z.haende[i - 1] : null;
+        var gleich = vor && vor.name === h.name && vor.eigenschaft === h.eigenschaft;
+        var r = B.el('div', 'erb-satz' + (gleich ? ' erb-gleich' : ''));
+        r.appendChild(B.el('span', 'n', roem(h.nr) + ' ' + h.name));
+        r.appendChild(B.el('span', 'v', h.eigenschaftName
+          + (gleich ? ' · Name und Art wie davor' : '')
+          + (h.form ? ' · ' + h.form : '')));
+        r.appendChild(B.el('span', 'p', 'Feder ' + B.zahl(h.feder, 2) + '×'));
+        lade5.appendChild(r);
+      });
       buch.appendChild(lade5);
     }
 
