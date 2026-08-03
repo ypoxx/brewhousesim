@@ -106,6 +106,21 @@ der Platte und sind aus der `.webm` wiederherzustellen.
 > Aufnahmeformat einführt, prüft es gegen diese Regel, **bevor** der erste
 > Durchgang läuft. Zweimal an einem Tag ist genug.
 
+**OFFENER BEFUND AM MESSGERÄT — `werkbank/hoerer.py`, Zeile 181.** Echte
+Abbrüche behandelt es korrekt: dreimal fragen, dann „KEINE MESSUNG — nicht als
+Durchfallen werten“ (Zeile 157–170). Die Lücke liegt eine Stufe feiner: wenn das
+Ohr **antwortet**, die Antwort aber sinngemäß „keine Audiodatei übertragen“
+lautet und `sicher: 0` trägt, ist das kein Abbruch — `deute()` liest eine Ziffer
+heraus, und Zeile 181 wertet sie als geratene Epoche, also als
+**DURCHGEFALLEN**. Ein Übertragungsfehler wird damit zu einem schlechten Urteil
+über das Spiel. Der Builder von DER KLANG hat das an einer nachweislich intakten
+Datei erlebt und korrekt gemeldet, ohne selbst am Gerät zu drehen (§16).
+**Noch nicht behoben, mit Absicht:** der blinde Kritiker prüft das Gerät gerade
+selbst. Wer es repariert, wartet, bis kein Kritiker mehr daran misst — sonst
+ändert die Aufsicht das Maß, während gemessen wird. Richtig ist: `sicher == 0`
+zusammen mit einem Text, der fehlende Audiodaten nennt, zählt als **keine
+Messung**, nicht als Durchfallen.
+
 **Der Veröffentlicher sichert die Builder von selbst.** `werkbank/veroeffentlichen.sh`
 nimmt alle 180 s unter derselben Sperre `werkbank/stand.json spiel gauntlet
 werkbank/schuss werkbank/*.py|mjs|sh` und pusht. Schritt (a) des Selbst-Checks
