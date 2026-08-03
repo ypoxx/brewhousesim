@@ -2065,7 +2065,18 @@
       var brett = fach ? fach.firstElementChild : null;
       var zettel = document.querySelector('.sud-zettel');
       if (brett) {
-        Z.brettZu = brett.classList.contains('stadt-zugeklappt');
+        /* Der Rahmen der STADT stempelt `stadt-zugeklappt` erst in seinem
+           naechsten Takt (stadt.js: TAKT = 240 ms). Ein FRISCH GEZEICHNETES
+           Brett traegt also fuer einen Wimpernschlag gar nichts — und
+           "nichts" heisst hier nicht "offen": die STADT sagt selbst, ein
+           Brett liegt beim Laden zu. Wer das verwechselt, schickt den
+           Kesselzettel bei jedem Neuzeichnen kurz auf `display:none`, und
+           genau das hat eine Messung unter Last auch getroffen. Bis der
+           Stempel an DIESEM Brett einmal da war, gilt die alte Lage. */
+        var zu = brett.classList.contains('stadt-zugeklappt');
+        if (zu) brett.setAttribute('data-sud-gesehen', '1');
+        else if (!brett.hasAttribute('data-sud-gesehen')) zu = Z.brettZu;
+        Z.brettZu = zu;
         schalte(brett, Z.brettZu, 'brett-zugeklappt');
       }
       /* DER SUD zeigt genau EINE Flaeche. Der Kesselzettel haengt am
