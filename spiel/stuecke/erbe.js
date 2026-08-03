@@ -496,7 +496,7 @@
   function nachschriftPreis() {
     var s = 0;
     offeneNachschrift().forEach(function (a) { s += wert(a); });
-    return Math.max(1, Math.round(s * 1.4 * eig().faktor));
+    return Math.max(1, Math.round(s * 1.4 * feder()));
   }
   function schreibeNach() {
     var l = offeneNachschrift();
@@ -528,7 +528,7 @@
     return l.length ? l[0] : null;
   }
   function verlaengerPreis(a) {
-    return Math.max(1, Math.round(wert(a) * 0.6 * eig().faktor));
+    return Math.max(1, Math.round(wert(a) * 0.6 * feder()));
   }
   function verlaengere(schluessel) {
     var a = B.welt.adresse(schluessel);
