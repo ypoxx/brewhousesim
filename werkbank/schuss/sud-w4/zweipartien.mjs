@@ -88,17 +88,25 @@ async function partie(art) {
       /* NICHT auf !aus filtern: solange das Sudbrett zugeklappt liegt, sind
          ALLE seine Knoepfe abgeschaltet — klick() schlaegt es auf und sieht
          dann noch einmal hin. Wer hier vorher filtert, kauft nie etwas und
-         misst seinen eigenen Automaten. */
-      const fest = achsen.filter(x => x.preis);
+         misst seinen eigenen Automaten.
+         Genommen wird die TEUERSTE, die das Haus sich leisten kann, ohne
+         zahlungsunfaehig zu werden — sonst starrt die Hand in 1970 vier Jahre
+         auf den Prozessrechner fuer 118.000 DM und kauft gar nichts. */
+      const fest = achsen.filter(x => x.preis && Math.abs(x.preis) <= z.kasse * 0.6);
       if (fest.length) {
         const b = fest.reduce((a, x) => (Math.abs(x.preis) > Math.abs(a.preis) ? x : a));
         if (await klick(b.zug)) genommen.push(z.jahr + '/' + z.woche + ' ' + b.zug + ' ' + b.preis);
       }
       if (!(await klick('sud:hefe-fuehren'))) await klick('sud:zettel-anstich');
     } else {
-      const billig = achsen.filter(x => !x.preis && /Sack|Hafer|Kühlung|Naturtrüb|heimlich/i.test(x.text));
-      if (billig.length && !genommen.some(g => g.indexOf(billig[0].zug) >= 0)) {
-        if (await klick(billig[0].zug)) genommen.push(z.jahr + '/' + z.woche + ' ' + billig[0].zug);
+      /* Die billige Abkuerzung jeder Epoche, beim Namen genannt statt geraten:
+         ein Wortfilter uebersah in 1970 "Schoenen mit Kieselsol" und griff
+         statt dessen die Vorgabe, die ohnehin schon lief. */
+      const ABKUERZUNG = { 1: 'sud:wuerze:sack', 2: 'sud:schuettung:hafer',
+                           3: 'sud:kaelte:warm', 4: 'sud:behandlung:schoenen' };
+      const ziel = ABKUERZUNG[EP];
+      if (ziel && !genommen.some(g => g.indexOf(ziel) >= 0)) {
+        if (await klick(ziel)) genommen.push(z.jahr + '/' + z.woche + ' ' + ziel);
       }
     }
     /* --- der Betrieb, in beiden Partien gleich --- */
