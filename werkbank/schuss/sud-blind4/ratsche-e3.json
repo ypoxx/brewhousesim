@@ -1,0 +1,223 @@
+{
+ "epoche": 3,
+ "schritte": [
+  {
+   "achse": "kaelte",
+   "gekauft": "sud:kaelte:maschine",
+   "preis": 9800,
+   "kauf": {
+    "geklickt": true
+   },
+   "vor": {
+    "kaelte": "natureis",
+    "hefe": "betrieb"
+   },
+   "nach": {
+    "kaelte": "maschine",
+    "hefe": "betrieb"
+   },
+   "stand": {
+    "sud:kaelte:natureis": {
+     "x": 114.09375,
+     "y": 375.765625,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufträgt ExportbierHaltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum",
+     "text": "Natureis aus dem Fluss"
+    },
+    "sud:kaelte:warm": {
+     "x": 272.703125,
+     "y": 375.765625,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens SchankbierHaltbarkeit ×0,6 · Anzeige 8 % je Woche",
+     "text": "Ohne Kühlung durchgären lassen"
+    },
+    "sud:kaelte:maschine": {
+     "x": 432.3125,
+     "y": 376.765625,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte gewaehlt fest",
+     "marke": "läuftträgt ExportbierHaltbarkeit ×1,6 · +1 Wo. Gärung",
+     "text": "Lindesche Kältemaschine"
+    }
+   },
+   "wege": [
+    {
+     "ziel": "sud:kaelte:natureis",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufträgt ExportbierHaltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum"
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:kaelte:natureis",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:kaelte:natureis",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:kaelte:warm",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens SchankbierHaltbarkeit ×0,6 · Anzeige 8 % je Woche"
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:kaelte:warm",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:kaelte:warm",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    }
+   ]
+  },
+  {
+   "achse": "hefe",
+   "gekauft": "sud:hefe:reinzucht",
+   "preis": 3400,
+   "kauf": {
+    "geklickt": true
+   },
+   "vor": {
+    "kaelte": "maschine",
+    "hefe": "betrieb"
+   },
+   "nach": {
+    "kaelte": "maschine",
+    "hefe": "reinzucht"
+   },
+   "stand": {
+    "sud:hefe:betrieb": {
+     "x": 153.75,
+     "y": 724.4140625,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens Lagerbier",
+     "text": "Betriebshefe aus dem Bottich"
+    },
+    "sud:hefe:reinzucht": {
+     "x": 392.671875,
+     "y": 725.4140625,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte gewaehlt fest",
+     "marke": "läuftträgt ExportbierHaltbarkeit ×1,1",
+     "text": "Reinzuchthefe nach Hansen"
+    }
+   },
+   "wege": [
+    {
+     "ziel": "sud:hefe:betrieb",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens Lagerbier"
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:hefe:betrieb",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:hefe:betrieb",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    }
+   ]
+  }
+ ],
+ "fehler": [],
+ "optionen": [
+  {
+   "zug": "sud:kaelte:natureis",
+   "achse": "kaelte",
+   "k": "natureis",
+   "preis": 0,
+   "marke": "läuftträgt ExportbierHaltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum"
+  },
+  {
+   "zug": "sud:kaelte:warm",
+   "achse": "kaelte",
+   "k": "warm",
+   "preis": 0,
+   "marke": "ohne Ausgabehöchstens SchankbierHaltbarkeit ×0,6 · Anzeige 8 % je Woche"
+  },
+  {
+   "zug": "sud:kaelte:maschine",
+   "achse": "kaelte",
+   "k": "maschine",
+   "preis": 9800,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,6 · +1 Wo. Gärung"
+  },
+  {
+   "zug": "sud:hefe:betrieb",
+   "achse": "hefe",
+   "k": "betrieb",
+   "preis": 0,
+   "marke": "läufthöchstens Lagerbier"
+  },
+  {
+   "zug": "sud:hefe:reinzucht",
+   "achse": "hefe",
+   "k": "reinzucht",
+   "preis": 3400,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,1"
+  }
+ ]
+}

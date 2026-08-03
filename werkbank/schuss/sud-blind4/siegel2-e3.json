@@ -1,0 +1,384 @@
+{
+ "epoche": 3,
+ "achsen": [
+  {
+   "achse": "kaelte",
+   "optionen": [
+    {
+     "zug": "sud:kaelte:natureis",
+     "achse": "kaelte",
+     "k": "natureis",
+     "preis": 0,
+     "marke": "läuftträgt ExportbierHaltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum",
+     "text": "Natureis aus dem Fluss"
+    },
+    {
+     "zug": "sud:kaelte:warm",
+     "achse": "kaelte",
+     "k": "warm",
+     "preis": 0,
+     "marke": "ohne Ausgabehöchstens SchankbierHaltbarkeit ×0,6 · Anzeige 8 % je Woche",
+     "text": "Ohne Kühlung durchgären lassen"
+    },
+    {
+     "zug": "sud:kaelte:maschine",
+     "achse": "kaelte",
+     "k": "maschine",
+     "preis": 9800,
+     "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,6 · +1 Wo. Gärung",
+     "text": "Lindesche Kältemaschine −9.800 M"
+    }
+   ],
+   "festOptionen": [
+    "sud:kaelte:maschine"
+   ],
+   "stufen": [
+    {
+     "gekauft": "sud:kaelte:maschine",
+     "preis": 9800,
+     "kauf": {
+      "geklickt": true,
+      "text": "Lindesche Kältemaschine −9.800 M"
+     },
+     "vor": {
+      "verfahren": {
+       "kaelte": "natureis",
+       "hefe": "betrieb"
+      },
+      "fest": [],
+      "kasse": 14800,
+      "jahr": 1884,
+      "woche": 1,
+      "brettZu": false
+     },
+     "nach": {
+      "verfahren": {
+       "kaelte": "maschine",
+       "hefe": "betrieb"
+      },
+      "fest": [
+       "kaelte:maschine"
+      ],
+      "kasse": 5000,
+      "jahr": 1884,
+      "woche": 1,
+      "brettZu": false
+     },
+     "wege": [
+      {
+       "weg": "HINUNTER sud:kaelte:natureis — echte Maus",
+       "ergebnis": {
+        "weg": "abgeschaltet",
+        "trifft": true,
+        "sollAus": true
+       },
+       "vorher": "maschine",
+       "nachher": "maschine",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:kaelte:natureis — zwangsweise aktiviert, echte Maus",
+       "ergebnis": {
+        "geklickt": true,
+        "text": "Natureis aus dem Fluss"
+       },
+       "vorher": "maschine",
+       "nachher": "maschine",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:kaelte:natureis — synthetisches click-Ereignis",
+       "ergebnis": "abgeschickt",
+       "vorher": "maschine",
+       "nachher": "maschine",
+       "zurueck": false,
+       "schild": {
+        "klasse": "sud-karte weg",
+        "marke": "das Siegel liegt daraufträgt ExportbierHaltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum"
+       }
+      },
+      {
+       "weg": "HINUNTER sud:kaelte:warm — echte Maus",
+       "ergebnis": {
+        "weg": "abgeschaltet",
+        "trifft": true,
+        "sollAus": true
+       },
+       "vorher": "maschine",
+       "nachher": "maschine",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:kaelte:warm — zwangsweise aktiviert, echte Maus",
+       "ergebnis": {
+        "geklickt": true,
+        "text": "Ohne Kühlung durchgären lassen"
+       },
+       "vorher": "maschine",
+       "nachher": "maschine",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:kaelte:warm — synthetisches click-Ereignis",
+       "ergebnis": "abgeschickt",
+       "vorher": "maschine",
+       "nachher": "maschine",
+       "zurueck": false,
+       "schild": {
+        "klasse": "sud-karte weg",
+        "marke": "das Siegel liegt daraufhöchstens SchankbierHaltbarkeit ×0,6 · Anzeige 8 % je Woche"
+       }
+      },
+      {
+       "weg": "nach 12 Jahren: sud:kaelte:natureis zwangsweise aktiviert",
+       "ergebnis": {
+        "weg": "verdeckt",
+        "aus": false,
+        "sollAus": true
+       },
+       "vorher": "maschine",
+       "nachher": "maschine",
+       "zurueck": false
+      }
+     ],
+     "nachSechsWochen": {
+      "verfahren": {
+       "kaelte": "maschine",
+       "hefe": "betrieb"
+      },
+      "fest": [
+       "kaelte:maschine"
+      ],
+      "kasse": 3064,
+      "jahr": 1884,
+      "woche": 7,
+      "brettZu": false
+     },
+     "zettel": {
+      "frei": null,
+      "kauf": {
+       "x": 576,
+       "y": 316.8359375,
+       "aus": true,
+       "sollAus": true,
+       "trifft": true,
+       "text": "Reinzuchthefe nach Hansen −3.400 M trägt Exportbier"
+      },
+      "gaerraum": {
+       "x": 576,
+       "y": 343.2734375,
+       "aus": false,
+       "sollAus": false,
+       "trifft": true,
+       "text": "Gärbottich aufstellen · +60 hl −1.900 M"
+      }
+     },
+     "nachZwoelfJahren": {
+      "verfahren": {
+       "kaelte": "maschine",
+       "hefe": "betrieb"
+      },
+      "fest": [
+       "kaelte:maschine"
+      ],
+      "kasse": 518,
+      "jahr": 1887,
+      "woche": 11,
+      "brettZu": true
+     }
+    }
+   ]
+  },
+  {
+   "achse": "hefe",
+   "optionen": [
+    {
+     "zug": "sud:hefe:betrieb",
+     "achse": "hefe",
+     "k": "betrieb",
+     "preis": 0,
+     "marke": "läufthöchstens Lagerbier",
+     "text": "Betriebshefe aus dem Bottich"
+    },
+    {
+     "zug": "sud:hefe:reinzucht",
+     "achse": "hefe",
+     "k": "reinzucht",
+     "preis": 3400,
+     "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,1",
+     "text": "Reinzuchthefe nach Hansen −3.400 M"
+    }
+   ],
+   "festOptionen": [
+    "sud:hefe:reinzucht"
+   ],
+   "stufen": [
+    {
+     "gekauft": "sud:hefe:reinzucht",
+     "preis": 3400,
+     "kauf": {
+      "geklickt": true,
+      "text": "Reinzuchthefe nach Hansen −3.400 M"
+     },
+     "vor": {
+      "verfahren": {
+       "kaelte": "natureis",
+       "hefe": "betrieb"
+      },
+      "fest": [],
+      "kasse": 8400,
+      "jahr": 1884,
+      "woche": 1,
+      "brettZu": false
+     },
+     "nach": {
+      "verfahren": {
+       "kaelte": "natureis",
+       "hefe": "reinzucht"
+      },
+      "fest": [
+       "hefe:reinzucht"
+      ],
+      "kasse": 5000,
+      "jahr": 1884,
+      "woche": 1,
+      "brettZu": false
+     },
+     "wege": [
+      {
+       "weg": "HINUNTER sud:hefe:betrieb — echte Maus",
+       "ergebnis": {
+        "weg": "abgeschaltet",
+        "trifft": true,
+        "sollAus": true
+       },
+       "vorher": "reinzucht",
+       "nachher": "reinzucht",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:hefe:betrieb — zwangsweise aktiviert, echte Maus",
+       "ergebnis": {
+        "geklickt": true,
+        "text": "Betriebshefe aus dem Bottich"
+       },
+       "vorher": "reinzucht",
+       "nachher": "reinzucht",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:hefe:betrieb — synthetisches click-Ereignis",
+       "ergebnis": "abgeschickt",
+       "vorher": "reinzucht",
+       "nachher": "reinzucht",
+       "zurueck": false,
+       "schild": {
+        "klasse": "sud-karte weg",
+        "marke": "das Siegel liegt daraufhöchstens Lagerbier"
+       }
+      },
+      {
+       "weg": "nach 12 Jahren: sud:hefe:betrieb zwangsweise aktiviert",
+       "ergebnis": {
+        "weg": "verdeckt",
+        "aus": false,
+        "sollAus": true
+       },
+       "vorher": "reinzucht",
+       "nachher": "reinzucht",
+       "zurueck": false
+      }
+     ],
+     "nachSechsWochen": {
+      "verfahren": {
+       "kaelte": "natureis",
+       "hefe": "reinzucht"
+      },
+      "fest": [
+       "hefe:reinzucht"
+      ],
+      "kasse": 3064,
+      "jahr": 1884,
+      "woche": 7,
+      "brettZu": false
+     },
+     "zettel": {
+      "frei": {
+       "x": 576,
+       "y": 311.546875,
+       "aus": false,
+       "sollAus": false,
+       "trifft": true,
+       "text": "Ohne Kühlung durchgären lassen nur Schankbier"
+      },
+      "kauf": {
+       "x": 576,
+       "y": 339.59375,
+       "aus": true,
+       "sollAus": true,
+       "trifft": true,
+       "text": "Lindesche Kältemaschine −9.800 M trägt Exportbier"
+      },
+      "gaerraum": null
+     },
+     "nachZwoelfJahren": {
+      "verfahren": {
+       "kaelte": "natureis",
+       "hefe": "reinzucht"
+      },
+      "fest": [
+       "hefe:reinzucht"
+      ],
+      "kasse": 518,
+      "jahr": 1887,
+      "woche": 11,
+      "brettZu": true
+     }
+    }
+   ]
+  }
+ ],
+ "fehler": [],
+ "optionen": [
+  {
+   "zug": "sud:kaelte:natureis",
+   "achse": "kaelte",
+   "k": "natureis",
+   "preis": 0,
+   "marke": "läuftträgt ExportbierHaltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum",
+   "text": "Natureis aus dem Fluss"
+  },
+  {
+   "zug": "sud:kaelte:warm",
+   "achse": "kaelte",
+   "k": "warm",
+   "preis": 0,
+   "marke": "ohne Ausgabehöchstens SchankbierHaltbarkeit ×0,6 · Anzeige 8 % je Woche",
+   "text": "Ohne Kühlung durchgären lassen"
+  },
+  {
+   "zug": "sud:kaelte:maschine",
+   "achse": "kaelte",
+   "k": "maschine",
+   "preis": 9800,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,6 · +1 Wo. Gärung",
+   "text": "Lindesche Kältemaschine −9.800 M"
+  },
+  {
+   "zug": "sud:hefe:betrieb",
+   "achse": "hefe",
+   "k": "betrieb",
+   "preis": 0,
+   "marke": "läufthöchstens Lagerbier",
+   "text": "Betriebshefe aus dem Bottich"
+  },
+  {
+   "zug": "sud:hefe:reinzucht",
+   "achse": "hefe",
+   "k": "reinzucht",
+   "preis": 3400,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,1",
+   "text": "Reinzuchthefe nach Hansen −3.400 M"
+  }
+ ]
+}

@@ -102,6 +102,16 @@ for ep in sorted(proEpoche):
             print(f'                   Kasse {ks[0]:.0f}→{ks[-1]:.0f} (x{ks[-1]/max(1,ks[0]):.2f})  '
                   f'Nenner {ns[0]:.0f}→{ns[-1]:.0f} (x{ns[-1]/max(1,ns[0]):.2f})  '
                   f'rho Kennzahl↔Kasse {f(spearman(ks[:len(med)], med[:len(ks)]))}')
+        # DIE EHRLICHKEIT DES NENNERS — nicht meine Datei, aber meine Zahl.
+        w = d.get('reihe') or []
+        mit = [x for x in w if x.get('nennerPreis')]
+        ohne = [x for x in mit if not x.get('nennerZug')]
+        arten = collections.Counter(x.get('nennerArt') or '—' for x in mit)
+        print(f'                   Nenner genannt {len(mit)}/{len(w)} Wochen · '
+              f'OHNE Zugschluessel {len(ohne)} ({100*len(ohne)/max(1,len(mit)):.1f} %) · '
+              f'Arten ' + ' '.join(f'{k} {v}' for k, v in arten.most_common()))
+        ohneKz = sum(1 for x in w if not x.get('deckung'))
+        print(f'                   Wochen ohne Kennzahl (zugDeckung null): {ohneKz}/{len(w)}')
     gs = [s for s in sp_alle if s is not None]
     gp = [s for s in pe_alle if s is not None]
     if gs:

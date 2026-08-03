@@ -1,0 +1,574 @@
+{
+ "epoche": 1,
+ "jahre": 14,
+ "V": {
+  "art": "V",
+  "gewaehlt": [],
+  "nachWahl": {
+   "jahr": 1350,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 112,
+   "rohstoff": 40,
+   "verfahren": {
+    "wuerze": "grut"
+   },
+   "fest": [],
+   "lager": 4,
+   "sorten": {
+    "grut": 4
+   },
+   "stufen": {
+    "2": 4
+   },
+   "haltbarSchnitt": 6,
+   "sudDurch": 0,
+   "sude": 0,
+   "legte": 0,
+   "gesamtFass": 0,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1350 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Grut vom Grutamt läuft höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich ohne Ausgabe trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief −78 Pf unwiderruflich trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Grutbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern schlägt als Grutbier aus Klosterschenke Obernberg führt nur Starkbier und bekommt vom Anker nichts. DAS HEFEZEUG 70 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass. DER GÄRKELLER 0 von 10 Fass · 0 Bottiche Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. Kein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren Noch keine Eintragung.",
+    "sudzettel": "DER SUD · 1350 Grut vom Grutamt höchstens Grutbier Gärkeller 0/10 Fass Zeug 70 % · Fass ×1,05 Junges Fass anbrechen · +14 · 1 Fass Altes Fass anbrechen · +6 · 1 Fass Hopfen im Sack, heimlich trägt Starkbier Offen gehopft, mit Hopfenbrief −78 Pf trägt Starkbier",
+    "kopf": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 10 Ruf von 100 Bekanntheit 18 ↗ Einlösung 55 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 900 Pf mit dem Zeichen 907 Pf + 0,8 im Hundert · 7 Pf mehr für dieselbe Menge AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Umtrunk beim Wirt −9 Pf − 1 Fass Um das Zunftzeichen bitten −45 Pf Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Wer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal. Das Zeichen und das Register DAS ERBE noch 14 Wochen I. Kunigunde Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 2 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −13 Pf Abfertigung −64 Pf Mit leeren Händen 0 Pf SCHEIDING 1350 KASSE 112 Pf GRUT 40 KELLER 4/12 Fass WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1350/51 · Kunigunde Bruckner, sparsam · Das Recht WEITER nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×) ♪",
+    "buch": []
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1353,
+   "woche": 13,
+   "ende": true,
+   "endgrund": "braurecht-entzogen",
+   "kasse": 0,
+   "rohstoff": 37,
+   "verfahren": {
+    "wuerze": "grut"
+   },
+   "fest": [],
+   "lager": 3,
+   "sorten": {
+    "grut": 3
+   },
+   "stufen": {
+    "2": 3
+   },
+   "haltbarSchnitt": 7,
+   "sudDurch": 0,
+   "sude": 0,
+   "legte": 42,
+   "gesamtFass": 0,
+   "guete": 86,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1353 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Grut vom Grutamt läuft höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich ohne Ausgabe trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief −78 Pf unwiderruflich trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Grutbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern schlägt als Grutbier aus Klosterschenke Obernberg führt nur Starkbier und bekommt vom Anker nichts. DAS HEFEZEUG 86 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,13 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass. DER GÄRKELLER 0 von 10 Fass · 0 Bottiche Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. Kein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1353/13 Das Sudbuch wird geschlossen: 42 Sude, 0 Fass angestellt. 1353/6 Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14 1353/5 Hefezeug vom Fass abnehmen — junges Fass, 3 Wochen alt, +14",
+    "sudzettel": "DER SUD · 1353Grut vom Grutamthöchstens GrutbierGärkeller 0/10 FassZeug 86 % · Fass ×1,13Junges Fass anbrechen · +14 · 1 FassAltes Fass anbrechen · +6 · 1 FassHopfen im Sack, heimlichträgt StarkbierOffen gehopft, mit Hopfenbrief−78 Pfträgt Starkbier",
+    "kopf": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 16 Ruf von 100 NACHGEMACHT Bekanntheit 17 Einlösung 95 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 992 Pf mit dem Zeichen 1.005 Pf + 1,3 im Hundert · 13 Pf mehr für dieselbe Menge AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen Das Zeichen hängt, und der Keller taugt nicht — Güte 35 von 100. Seit 2 von 5 Wochen; danach steht es im Register. Nach der dritten solchen Zeile nimmt Der Rat das Zeichen — 0 von 3 stehen schon da. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET Umtrunk beim Wirt −9 Pf − 1 Fass Um das Zunftzeichen bitten −45 Pf Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Das Haus gegenüber führt jetzt dasselbe Zeichen. Das Zeichen und das Register DAS ERBE noch 34 Wochen III. Heinrich Bruckner · fromm · Feder 1,04× am Haus 0 · an der Person 0 nimmt 0 · 1 Fass Nachschrift · 1 Haus −12 Pf Leibgeding · jährlich −6 Pf Abfertigung −6 Pf Mit leeren Händen 0 Pf CHRISTMOND 1353 KASSE 0 Pf GRUT 37 KELLER 3/4 Fass WOCHE 13/30 CHRONIK 65 BUCH 461 Brauhaus zum Anker · 1353/54 · Heinrich Bruckner, fromm · Das Recht ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1353,
+      "woche": 2,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 3,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 1 Woche alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 4,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 2 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 5,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 3 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 6,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 13,
+      "text": "Das Sudbuch wird geschlossen: 42 Sude, 0 Fass angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1353,
+   "woche": 13,
+   "ende": true,
+   "endgrund": "braurecht-entzogen",
+   "kasse": 0,
+   "rohstoff": 37,
+   "verfahren": {
+    "wuerze": "grut"
+   },
+   "fest": [],
+   "lager": 3,
+   "sorten": {
+    "grut": 3
+   },
+   "stufen": {
+    "2": 3
+   },
+   "haltbarSchnitt": 7,
+   "sudDurch": 0,
+   "sude": 0,
+   "legte": 42,
+   "gesamtFass": 0,
+   "guete": 86,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1353 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Grut vom Grutamt läuft höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich ohne Ausgabe trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief −78 Pf unwiderruflich trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Grutbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern schlägt als Grutbier aus Klosterschenke Obernberg führt nur Starkbier und bekommt vom Anker nichts. DAS HEFEZEUG 86 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,13 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass. DER GÄRKELLER 0 von 10 Fass · 0 Bottiche Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. Kein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1353/13 Das Sudbuch wird geschlossen: 42 Sude, 0 Fass angestellt. 1353/6 Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14 1353/5 Hefezeug vom Fass abnehmen — junges Fass, 3 Wochen alt, +14",
+    "sudzettel": "DER SUD · 1353Grut vom Grutamthöchstens GrutbierGärkeller 0/10 FassZeug 86 % · Fass ×1,13Junges Fass anbrechen · +14 · 1 FassAltes Fass anbrechen · +6 · 1 FassHopfen im Sack, heimlichträgt StarkbierOffen gehopft, mit Hopfenbrief−78 Pfträgt Starkbier",
+    "kopf": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 16 Ruf von 100 NACHGEMACHT Bekanntheit 17 Einlösung 95 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 992 Pf mit dem Zeichen 1.005 Pf + 1,3 im Hundert · 13 Pf mehr für dieselbe Menge AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen Das Zeichen hängt, und der Keller taugt nicht — Güte 35 von 100. Seit 2 von 5 Wochen; danach steht es im Register. Nach der dritten solchen Zeile nimmt Der Rat das Zeichen — 0 von 3 stehen schon da. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET Umtrunk beim Wirt −9 Pf − 1 Fass Um das Zunftzeichen bitten −45 Pf Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Das Haus gegenüber führt jetzt dasselbe Zeichen. Das Zeichen und das Register DAS ERBE noch 34 Wochen III. Heinrich Bruckner · fromm · Feder 1,04× am Haus 0 · an der Person 0 nimmt 0 · 1 Fass Nachschrift · 1 Haus −12 Pf Leibgeding · jährlich −6 Pf Abfertigung −6 Pf Mit leeren Händen 0 Pf CHRISTMOND 1353 KASSE 0 Pf GRUT 37 KELLER 3/4 Fass WOCHE 13/30 CHRONIK 65 BUCH 461 Brauhaus zum Anker · 1353/54 · Heinrich Bruckner, fromm · Das Recht ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1353,
+      "woche": 2,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 3,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 1 Woche alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 4,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 2 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 5,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 3 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 6,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1353,
+      "woche": 13,
+      "text": "Das Sudbuch wird geschlossen: 42 Sude, 0 Fass angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 102
+ },
+ "A": {
+  "art": "A",
+  "gewaehlt": [
+   {
+    "zug": "sud:wuerze:sack",
+    "preis": 0,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1350,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 112,
+   "rohstoff": 38,
+   "verfahren": {
+    "wuerze": "sack"
+   },
+   "fest": [],
+   "lager": 0,
+   "sorten": {},
+   "stufen": {},
+   "haltbarSchnitt": 0,
+   "sudDurch": 0,
+   "sude": 1,
+   "legte": 0,
+   "gesamtFass": 4,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 4,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1350 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Grut vom Grutamt wie immer höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich läuft trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief −78 Pf unwiderruflich trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Starkbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern trägt die Pfanne DAS HEFEZEUG 70 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 4 von 10 Fass · 1 Bottich Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. 1 Grutbier 4 Fass reif in 1 Woche Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 1 Sude · 4 Fass · 0 verloren 1350/1 4 Fass in den Gärkeller — Hopfen im Sack, heimlich 1350/1 DIE WÜRZE: Hopfen im Sack, heimlich",
+    "sudzettel": "DER SUD · 1350Hopfen im Sack, heimlichhöchstens StarkbierGärkeller 4/10 FassZeug 70 % · Fass ×1,05Hefezeug aus dem Bottich heben · +8 · ohne FassJunges Fass anbrechen · +14 · 1 FassGrut vom Grutamtnur GrutbierOffen gehopft, mit Hopfenbrief−78 Pfträgt Starkbier",
+    "kopf": "♪ DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 10 Ruf von 100 Bekanntheit 18 ↗ Einlösung 55 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 900 Pf mit dem Zeichen 907 Pf + 0,8 im Hundert · 7 Pf mehr für dieselbe Menge AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen Das Zeichen hängt, und der Keller taugt nicht — Güte 0 von 100. Seit 1 von 5 Wochen; danach steht es im Register. Nach der dritten solchen Zeile nimmt Der Rat das Zeichen — 0 von 3 stehen schon da. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET Um das Zunftzeichen bitten −45 Pf Umtrunk beim Wirt −9 Pf − 1 Fass Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Wer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal. Das Zeichen und das Register DAS ERBE noch 14 Wochen I. Kunigunde Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 0 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −12 Pf Abfertigung −61 Pf Mit leeren Händen 0 Pf SCHEIDING 1350 KASSE 112 Pf GRUT 40 KELLER 4/12 Fass WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1350/51 · Kunigunde Bruckner, sparsam · Das Recht WEITER nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)",
+    "buch": [
+     {
+      "jahr": 1350,
+      "woche": 1,
+      "text": "DIE WÜRZE: Hopfen im Sack, heimlich"
+     },
+     {
+      "jahr": 1350,
+      "woche": 1,
+      "text": "4 Fass in den Gärkeller — Hopfen im Sack, heimlich"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1364,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 11,
+   "rohstoff": 41,
+   "verfahren": {
+    "wuerze": "sack"
+   },
+   "fest": [],
+   "lager": 0,
+   "sorten": {},
+   "stufen": {},
+   "haltbarSchnitt": 0,
+   "sudDurch": 0,
+   "sude": 221,
+   "legte": 243,
+   "gesamtFass": 781,
+   "guete": 100,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1364 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Grut vom Grutamt wie immer höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich läuft trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief −78 Pf unwiderruflich trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Starkbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern trägt die Pfanne DAS HEFEZEUG 100 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,20 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Es gärt nichts, und im Keller liegt nichts. DER GÄRKELLER 0 von 10 Fass · 0 Bottiche Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. Kein Bottich steht an. Was die Pfanne diese Woche ansetzt, kommt von selbst hierher. Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1364/1 Braujahr geschlossen: 19 Sude angestellt, 17 durch den Gärkeller (45 Fass), 0 verloren. 1363/30 Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14 1363/30 Der Grutherr war da — 0 Grut weg",
+    "sudzettel": "DER SUD · 1364Hopfen im Sack, heimlichhöchstens StarkbierGärkeller 0/10 FassZeug 100 % · Fass ×1,20Junges Fass anbrechen · +14 · 1 FassAltes Fass anbrechen · +6 · 1 FassGrut vom Grutamtnur GrutbierOffen gehopft, mit Hopfenbrief−78 Pfträgt Starkbier",
+    "kopf": "♪ DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 0 Ruf von 100 NACHGEMACHT Bekanntheit 0 Einlösung 100 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 1.440 Pf mit dem Zeichen 1.440 Pf + 0,0 im Hundert · 0 Pf mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht. AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Umtrunk beim Wirt −9 Pf − 1 Fass Um das Zunftzeichen bitten −45 Pf Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Zum Goldenen Ochsen ist weg. Der Name des Nachbarn stand besser da. Das Zeichen und das Register DAS ERBE noch 12 Wochen 8. Berthold Bruckner · wagemutig · Feder 1,56× am Haus 0 · an der Person 0 nimmt 0 · 0 Fass Nachschrift · 3 Häuser −70 Pf Leibgeding · jährlich −8 Pf Abfertigung −8 Pf Mit leeren Händen 0 Pf SCHEIDING 1364 KASSE 11 Pf GRUT 41 KELLER 0/4 Fass WOCHE 1/30 CHRONIK 272 BUCH 3085 Brauhaus zum Anker · 1364/65 · Berthold Bruckner, wagemutig · Das Recht WEITER nächster Zug: Ablösung Fährhaus am Fluss — 44 Pf (Kasse reicht 0,3×)",
+    "buch": [
+     {
+      "jahr": 1363,
+      "woche": 28,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Notdurft: 3 Fass in den Gärkeller — nach Vorgabe"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Der Grutherr war da — 0 Grut weg"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "Braujahr geschlossen: 19 Sude angestellt, 17 durch den Gärkeller (45 Fass), 0 verloren."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1364,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 11,
+   "rohstoff": 41,
+   "verfahren": {
+    "wuerze": "sack"
+   },
+   "fest": [],
+   "lager": 0,
+   "sorten": {},
+   "stufen": {},
+   "haltbarSchnitt": 0,
+   "sudDurch": 0,
+   "sude": 221,
+   "legte": 243,
+   "gesamtFass": 781,
+   "guete": 100,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1364 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Grut vom Grutamt wie immer höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich läuft trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief −78 Pf unwiderruflich trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Starkbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern trägt die Pfanne DAS HEFEZEUG 100 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,20 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Es gärt nichts, und im Keller liegt nichts. DER GÄRKELLER 0 von 10 Fass · 0 Bottiche Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. Kein Bottich steht an. Was die Pfanne diese Woche ansetzt, kommt von selbst hierher. Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1364/1 Braujahr geschlossen: 19 Sude angestellt, 17 durch den Gärkeller (45 Fass), 0 verloren. 1363/30 Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14 1363/30 Der Grutherr war da — 0 Grut weg",
+    "sudzettel": "DER SUD · 1364Hopfen im Sack, heimlichhöchstens StarkbierGärkeller 0/10 FassZeug 100 % · Fass ×1,20Junges Fass anbrechen · +14 · 1 FassAltes Fass anbrechen · +6 · 1 FassGrut vom Grutamtnur GrutbierOffen gehopft, mit Hopfenbrief−78 Pfträgt Starkbier",
+    "kopf": "♪ DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 0 Ruf von 100 NACHGEMACHT Bekanntheit 0 Einlösung 100 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 1.440 Pf mit dem Zeichen 1.440 Pf + 0,0 im Hundert · 0 Pf mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht. AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Umtrunk beim Wirt −9 Pf − 1 Fass Um das Zunftzeichen bitten −45 Pf Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Zum Goldenen Ochsen ist weg. Der Name des Nachbarn stand besser da. Das Zeichen und das Register DAS ERBE noch 12 Wochen 8. Berthold Bruckner · wagemutig · Feder 1,56× am Haus 0 · an der Person 0 nimmt 0 · 0 Fass Nachschrift · 3 Häuser −70 Pf Leibgeding · jährlich −8 Pf Abfertigung −8 Pf Mit leeren Händen 0 Pf SCHEIDING 1364 KASSE 11 Pf GRUT 41 KELLER 0/4 Fass WOCHE 1/30 CHRONIK 272 BUCH 3085 Brauhaus zum Anker · 1364/65 · Berthold Bruckner, wagemutig · Das Recht WEITER nächster Zug: Ablösung Fährhaus am Fluss — 44 Pf (Kasse reicht 0,3×)",
+    "buch": [
+     {
+      "jahr": 1363,
+      "woche": 28,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Notdurft: 3 Fass in den Gärkeller — nach Vorgabe"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Der Grutherr war da — 0 Grut weg"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "Braujahr geschlossen: 19 Sude angestellt, 17 durch den Gärkeller (45 Fass), 0 verloren."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 272
+ },
+ "B": {
+  "art": "B",
+  "gewaehlt": [
+   {
+    "zug": "sud:wuerze:brief",
+    "preis": 78,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1350,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 112,
+   "rohstoff": 38,
+   "verfahren": {
+    "wuerze": "brief"
+   },
+   "fest": [
+    "wuerze:brief"
+   ],
+   "lager": 0,
+   "sorten": {},
+   "stufen": {},
+   "haltbarSchnitt": 0,
+   "sudDurch": 0,
+   "sude": 1,
+   "legte": 0,
+   "gesamtFass": 4,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 4,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1350 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Ratsbrief, gesiegelt: Offen gehopft, mit Hopfenbrief. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Grut vom Grutamt das Siegel liegt darauf höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich das Siegel liegt darauf trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief läuft trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Starkbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern trägt die Pfanne DAS HEFEZEUG 70 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 4 von 10 Fass · 1 Bottich Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. 1 Grutbier 4 Fass reif in 1 Woche Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 1 Sude · 4 Fass · 0 verloren 1350/1 4 Fass in den Gärkeller — Offen gehopft, mit Hopfenbrief 1350/1 DIE WÜRZE: Offen gehopft, mit Hopfenbrief",
+    "sudzettel": "DER SUD · 1350 Offen gehopft, mit Hopfenbrief höchstens Starkbier Gärkeller 4/10 Fass Zeug 70 % · Fass ×1,05 Hefezeug aus dem Bottich heben · +8 · ohne Fass Junges Fass anbrechen · +14 · 1 Fass Bottich beim Küfer bestellen · +6 Fass −26 Pf",
+    "kopf": "♪ DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 10 Ruf von 100 Bekanntheit 18 ↗ Einlösung 55 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 900 Pf mit dem Zeichen 907 Pf + 0,8 im Hundert · 7 Pf mehr für dieselbe Menge AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen Das Zeichen hängt, und der Keller taugt nicht — Güte 0 von 100. Seit 1 von 5 Wochen; danach steht es im Register. Nach der dritten solchen Zeile nimmt Der Rat das Zeichen — 0 von 3 stehen schon da. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET Um das Zunftzeichen bitten −45 Pf Umtrunk beim Wirt −9 Pf − 1 Fass Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Wer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal. Das Zeichen und das Register DAS ERBE noch 14 Wochen I. Kunigunde Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 0 Fass Verschreiben · Zum Goldenen Ochsen −16 Pf Leibgeding · jährlich −12 Pf Abfertigung −61 Pf Mit leeren Händen 0 Pf SCHEIDING 1350 KASSE 112 Pf GRUT 40 KELLER 4/12 Fass WOCHE 1/30 CHRONIK 5 BUCH 2 Brauhaus zum Anker · 1350/51 · Kunigunde Bruckner, sparsam · Das Recht WEITER nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)",
+    "buch": [
+     {
+      "jahr": 1350,
+      "woche": 1,
+      "text": "DIE WÜRZE: Offen gehopft, mit Hopfenbrief"
+     },
+     {
+      "jahr": 1350,
+      "woche": 1,
+      "text": "4 Fass in den Gärkeller — Offen gehopft, mit Hopfenbrief"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1364,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 2,
+   "rohstoff": 53,
+   "verfahren": {
+    "wuerze": "brief"
+   },
+   "fest": [
+    "wuerze:brief"
+   ],
+   "lager": 3,
+   "sorten": {
+    "grut": 3
+   },
+   "stufen": {
+    "2": 3
+   },
+   "haltbarSchnitt": 14,
+   "sudDurch": 3,
+   "sude": 270,
+   "legte": 244,
+   "gesamtFass": 919,
+   "guete": 100,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1364 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Ratsbrief, gesiegelt: Offen gehopft, mit Hopfenbrief. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Grut vom Grutamt das Siegel liegt darauf höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich das Siegel liegt darauf trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief läuft trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Starkbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern trägt die Pfanne DAS HEFEZEUG 100 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,20 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Diese Woche ist die Hefe schon nachgeführt. DER GÄRKELLER 0 von 10 Fass · 0 Bottiche Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. Kein Bottich steht an. Was die Pfanne diese Woche ansetzt, kommt von selbst hierher. Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1364/1 Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14 1364/1 Braujahr geschlossen: 4 Sude angestellt, 4 durch den Gärkeller (16 Fass), 0 verloren. 1364/1 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass",
+    "sudzettel": "DER SUD · 1364Offen gehopft, mit Hopfenbriefhöchstens StarkbierGärkeller 0/10 FassZeug 100 % · Fass ×1,20Junges Fass anbrechen · +14 · 1 FassAltes Fass anbrechen · +6 · 1 FassBottich beim Küfer bestellen · +6 Fass−26 Pf",
+    "kopf": "♪ DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 0 Ruf von 100 NACHGEMACHT Bekanntheit 0 Einlösung 99 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 1.440 Pf mit dem Zeichen 1.440 Pf + 0,0 im Hundert · 0 Pf mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht. AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Umtrunk beim Wirt −9 Pf − 1 Fass Um das Zunftzeichen bitten −45 Pf Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Rat hat die Frist auslaufen lassen. Das Zeichen darf wieder hängen — was genommen wurde, ist damit nicht zurück. Das Zeichen und das Register DAS ERBE noch 17 Wochen 8. Mechthild Bruckner · wagemutig · Feder 1,56× am Haus 0 · an der Person 0 nimmt 0 · 1 Fass Nachschrift · 2 Häuser −122 Pf Leibgeding · jährlich −8 Pf Abfertigung −8 Pf Mit leeren Händen 0 Pf SCHEIDING 1364 KASSE 2 Pf GRUT 53 KELLER 3/6 Fass WOCHE 1/30 CHRONIK 238 BUCH 3595 Brauhaus zum Anker · 1364/65 · Mechthild Bruckner, wagemutig · Das Recht WEITER nächster Zug: Ablösung Fährhaus am Fluss — 44 Pf (Kasse reicht 0,0×)",
+    "buch": [
+     {
+      "jahr": 1363,
+      "woche": 28,
+      "text": "Hefezeug aus dem Bottich heben — Bottich 270, +8"
+     },
+     {
+      "jahr": 1363,
+      "woche": 29,
+      "text": "Hefezeug aus dem Bottich heben — Bottich 270, +8"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Hefezeug aus dem Bottich heben — Bottich 270, +8"
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "Braujahr geschlossen: 4 Sude angestellt, 4 durch den Gärkeller (16 Fass), 0 verloren."
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1364,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 2,
+   "rohstoff": 53,
+   "verfahren": {
+    "wuerze": "brief"
+   },
+   "fest": [
+    "wuerze:brief"
+   ],
+   "lager": 3,
+   "sorten": {
+    "grut": 3
+   },
+   "stufen": {
+    "2": 3
+   },
+   "haltbarSchnitt": 14,
+   "sudDurch": 3,
+   "sude": 270,
+   "legte": 244,
+   "gesamtFass": 919,
+   "guete": 100,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 10,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1364 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Ratsbrief, gesiegelt: Offen gehopft, mit Hopfenbrief. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Grut vom Grutamt das Siegel liegt darauf höchstens Grutbier Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus. Hopfen im Sack, heimlich das Siegel liegt darauf trägt Starkbier Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. Der Grutknecht sieht in die Pfanne, wann er will. Offen gehopft, mit Hopfenbrief läuft trägt Starkbier Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben. WAS BEIM WIRT ANKOMMT höchstens Starkbier Welches Haus ein Fass nimmt, entscheidet die Pfanne. D Dünnbier 7 von 10 Häusern trägt die Pfanne G Grutbier 8 von 10 Häusern trägt die Pfanne S Starkbier 3 von 10 Häusern trägt die Pfanne DAS HEFEZEUG 100 % Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um. Was jetzt eingelegt wird, hält ×1,20 — die Hefe steht. Hefezeug aus dem Bottich heben · +8 Junges Fass anbrechen · +14 Altes Fass anbrechen · +6 Diese Woche ist die Hefe schon nachgeführt. DER GÄRKELLER 0 von 10 Fass · 0 Bottiche Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass. Kein Bottich steht an. Was die Pfanne diese Woche ansetzt, kommt von selbst hierher. Bottich beim Küfer bestellen · +6 Fass −26 Pf Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1364/1 Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14 1364/1 Braujahr geschlossen: 4 Sude angestellt, 4 durch den Gärkeller (16 Fass), 0 verloren. 1364/1 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass",
+    "sudzettel": "DER SUD · 1364 Offen gehopft, mit Hopfenbrief höchstens Starkbier Gärkeller 0/10 Fass Zeug 100 % · Fass ×1,20 Junges Fass anbrechen · +14 · 1 Fass Altes Fass anbrechen · +6 · 1 Fass Bottich beim Küfer bestellen · +6 Fass −26 Pf",
+    "kopf": "♪ DER RUF DES HAUSES Bierzeiger und Zunftzeichen ▾ 0 Ruf von 100 NACHGEMACHT Bekanntheit 0 Einlösung 99 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 1.440 Pf mit dem Zeichen 1.440 Pf + 0,0 im Hundert · 0 Pf mehr für dieselbe Menge — aber nur, solange das Zeichen zu sehen ist. Es ist es gerade nicht. AUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 Pf BRAUJAHR 0 Pf SEIT 1350 0 Pf Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Umtrunk beim Wirt −9 Pf − 1 Fass Um das Zunftzeichen bitten −45 Pf Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Rat hat die Frist auslaufen lassen. Das Zeichen darf wieder hängen — was genommen wurde, ist damit nicht zurück. Das Zeichen und das Register DAS ERBE noch 17 Wochen 8. Mechthild Bruckner · wagemutig · Feder 1,56× am Haus 0 · an der Person 0 nimmt 0 · 1 Fass Nachschrift · 2 Häuser −122 Pf Leibgeding · jährlich −8 Pf Abfertigung −8 Pf Mit leeren Händen 0 Pf SCHEIDING 1364 KASSE 2 Pf GRUT 53 KELLER 3/6 Fass WOCHE 1/30 CHRONIK 238 BUCH 3595 Brauhaus zum Anker · 1364/65 · Mechthild Bruckner, wagemutig · Das Recht WEITER nächster Zug: Ablösung Fährhaus am Fluss — 44 Pf (Kasse reicht 0,0×)",
+    "buch": [
+     {
+      "jahr": 1363,
+      "woche": 28,
+      "text": "Hefezeug aus dem Bottich heben — Bottich 270, +8"
+     },
+     {
+      "jahr": 1363,
+      "woche": 29,
+      "text": "Hefezeug aus dem Bottich heben — Bottich 270, +8"
+     },
+     {
+      "jahr": 1363,
+      "woche": 30,
+      "text": "Hefezeug aus dem Bottich heben — Bottich 270, +8"
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "Braujahr geschlossen: 4 Sude angestellt, 4 durch den Gärkeller (16 Fass), 0 verloren."
+     },
+     {
+      "jahr": 1364,
+      "woche": 1,
+      "text": "Hefezeug vom Fass abnehmen — junges Fass, 0 Wochen alt, +14"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 250
+ }
+}

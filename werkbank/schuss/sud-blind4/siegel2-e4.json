@@ -1,0 +1,348 @@
+{
+ "epoche": 4,
+ "achsen": [
+  {
+   "achse": "fuehrung",
+   "optionen": [
+    {
+     "zug": "sud:fuehrung:erfahrung",
+     "achse": "fuehrung",
+     "k": "erfahrung",
+     "preis": 0,
+     "marke": "läufthöchstens PilsnerStreuung ±6 %",
+     "text": "Nach Erfahrung des Braumeisters"
+    },
+    {
+     "zug": "sud:fuehrung:labor",
+     "achse": "fuehrung",
+     "k": "labor",
+     "preis": 42000,
+     "marke": "unwiderruflichträgt ExportbierStreuung ±2 %",
+     "text": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 D"
+    },
+    {
+     "zug": "sud:fuehrung:rechner",
+     "achse": "fuehrung",
+     "k": "rechner",
+     "preis": 118000,
+     "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 %",
+     "text": "Prozessrechner am Sudwerk −118.000 DM"
+    }
+   ],
+   "festOptionen": [
+    "sud:fuehrung:labor",
+    "sud:fuehrung:rechner"
+   ],
+   "stufen": [
+    {
+     "gekauft": "sud:fuehrung:labor",
+     "preis": 42000,
+     "kauf": {
+      "geklickt": true,
+      "text": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM"
+     },
+     "vor": {
+      "verfahren": {
+       "fuehrung": "erfahrung",
+       "behandlung": "natur"
+      },
+      "fest": [],
+      "kasse": 47000,
+      "jahr": 1970,
+      "woche": 1,
+      "brettZu": false
+     },
+     "nach": {
+      "verfahren": {
+       "fuehrung": "labor",
+       "behandlung": "natur"
+      },
+      "fest": [
+       "fuehrung:labor"
+      ],
+      "kasse": 5000,
+      "jahr": 1970,
+      "woche": 1,
+      "brettZu": false
+     },
+     "wege": [
+      {
+       "weg": "HINUNTER sud:fuehrung:erfahrung — echte Maus",
+       "ergebnis": {
+        "weg": "abgeschaltet",
+        "trifft": true,
+        "sollAus": true
+       },
+       "vorher": "labor",
+       "nachher": "labor",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:fuehrung:erfahrung — zwangsweise aktiviert, echte Maus",
+       "ergebnis": {
+        "geklickt": true,
+        "text": "Nach Erfahrung des Braumeisters"
+       },
+       "vorher": "labor",
+       "nachher": "labor",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:fuehrung:erfahrung — synthetisches click-Ereignis",
+       "ergebnis": "abgeschickt",
+       "vorher": "labor",
+       "nachher": "labor",
+       "zurueck": false,
+       "schild": {
+        "klasse": "sud-karte weg",
+        "marke": "das Siegel liegt daraufhöchstens PilsnerStreuung ±6 %"
+       }
+      },
+      {
+       "weg": "HINAUF sud:fuehrung:rechner — echte Maus",
+       "ergebnis": {
+        "weg": "abgeschaltet",
+        "trifft": true,
+        "sollAus": true
+       },
+       "vorher": "labor",
+       "nachher": "labor",
+       "zurueck": false,
+       "schild": {
+        "klasse": "sud-karte fest",
+        "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 %"
+       }
+      },
+      {
+       "weg": "nach 12 Jahren: sud:fuehrung:erfahrung zwangsweise aktiviert",
+       "ergebnis": {
+        "weg": "verdeckt",
+        "aus": false,
+        "sollAus": true
+       },
+       "vorher": "labor",
+       "nachher": "labor",
+       "zurueck": false
+      }
+     ],
+     "nachSechsWochen": {
+      "verfahren": {
+       "fuehrung": "labor",
+       "behandlung": "natur"
+      },
+      "fest": [
+       "fuehrung:labor"
+      ],
+      "kasse": 9200,
+      "jahr": 1970,
+      "woche": 7,
+      "brettZu": false
+     },
+     "zettel": {
+      "frei": {
+       "x": 576,
+       "y": 407.84375,
+       "aus": false,
+       "sollAus": false,
+       "trifft": true,
+       "text": "Schönen mit Kieselsol nur Pilsner"
+      },
+      "kauf": {
+       "x": 576,
+       "y": 434.1484375,
+       "aus": true,
+       "sollAus": true,
+       "trifft": true,
+       "text": "Kieselgurfilter −26.000 DM trägt Exportbier"
+      },
+      "gaerraum": null
+     },
+     "nachZwoelfJahren": {
+      "verfahren": {
+       "fuehrung": "labor",
+       "behandlung": "natur"
+      },
+      "fest": [
+       "fuehrung:labor"
+      ],
+      "kasse": 18017,
+      "jahr": 1973,
+      "woche": 9,
+      "brettZu": true
+     }
+    },
+    {
+     "gekauft": "sud:fuehrung:rechner",
+     "preis": 118000,
+     "kauf": {
+      "weg": "abgeschaltet",
+      "trifft": false,
+      "sollAus": false
+     },
+     "vor": {
+      "verfahren": {
+       "fuehrung": "labor",
+       "behandlung": "natur"
+      },
+      "fest": [
+       "fuehrung:labor"
+      ],
+      "kasse": 123000,
+      "jahr": 1973,
+      "woche": 9,
+      "brettZu": false
+     },
+     "nach": {
+      "verfahren": {
+       "fuehrung": "labor",
+       "behandlung": "natur"
+      },
+      "fest": [
+       "fuehrung:labor"
+      ],
+      "kasse": 123000,
+      "jahr": 1973,
+      "woche": 9,
+      "brettZu": false
+     },
+     "wege": [],
+     "hinweis": "Kauf griff nicht"
+    }
+   ]
+  },
+  {
+   "achse": "behandlung",
+   "optionen": [
+    {
+     "zug": "sud:behandlung:natur",
+     "achse": "behandlung",
+     "k": "natur",
+     "preis": 0,
+     "marke": "läufthöchstens Pilsner",
+     "text": "Naturtrüb, unfiltriert"
+    },
+    {
+     "zug": "sud:behandlung:schoenen",
+     "achse": "behandlung",
+     "k": "schoenen",
+     "preis": 0,
+     "marke": "ohne Ausgabehöchstens PilsnerHaltbarkeit ×1,15 · −1,5 hl je Sud",
+     "text": "Schönen mit Kieselsol"
+    },
+    {
+     "zug": "sud:behandlung:filter",
+     "achse": "behandlung",
+     "k": "filter",
+     "preis": 26000,
+     "marke": "einmal zu zahlenträgt ExportbierHaltbarkeit ×1,4",
+     "text": "Kieselgurfilter −26.000 DM"
+    },
+    {
+     "zug": "sud:behandlung:pasteur",
+     "achse": "behandlung",
+     "k": "pasteur",
+     "preis": 74000,
+     "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×2 · −3,0 hl je Sud",
+     "text": "Tunnelpasteur −74.000 DM"
+    }
+   ],
+   "festOptionen": [
+    "sud:behandlung:pasteur"
+   ],
+   "stufen": [
+    {
+     "gekauft": "sud:behandlung:pasteur",
+     "preis": 74000,
+     "kauf": {
+      "weg": "abgeschaltet",
+      "trifft": false,
+      "sollAus": false
+     },
+     "vor": {
+      "verfahren": {
+       "fuehrung": "erfahrung",
+       "behandlung": "natur"
+      },
+      "fest": [],
+      "kasse": 79000,
+      "jahr": 1970,
+      "woche": 1,
+      "brettZu": true
+     },
+     "nach": {
+      "verfahren": {
+       "fuehrung": "erfahrung",
+       "behandlung": "natur"
+      },
+      "fest": [],
+      "kasse": 79000,
+      "jahr": 1970,
+      "woche": 1,
+      "brettZu": true
+     },
+     "wege": [],
+     "hinweis": "Kauf griff nicht"
+    }
+   ]
+  }
+ ],
+ "fehler": [],
+ "optionen": [
+  {
+   "zug": "sud:fuehrung:erfahrung",
+   "achse": "fuehrung",
+   "k": "erfahrung",
+   "preis": 0,
+   "marke": "läufthöchstens PilsnerStreuung ±6 %",
+   "text": "Nach Erfahrung des Braumeisters"
+  },
+  {
+   "zug": "sud:fuehrung:labor",
+   "achse": "fuehrung",
+   "k": "labor",
+   "preis": 42000,
+   "marke": "unwiderruflichträgt ExportbierStreuung ±2 %",
+   "text": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 D"
+  },
+  {
+   "zug": "sud:fuehrung:rechner",
+   "achse": "fuehrung",
+   "k": "rechner",
+   "preis": 118000,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 %",
+   "text": "Prozessrechner am Sudwerk −118.000 DM"
+  },
+  {
+   "zug": "sud:behandlung:natur",
+   "achse": "behandlung",
+   "k": "natur",
+   "preis": 0,
+   "marke": "läufthöchstens Pilsner",
+   "text": "Naturtrüb, unfiltriert"
+  },
+  {
+   "zug": "sud:behandlung:schoenen",
+   "achse": "behandlung",
+   "k": "schoenen",
+   "preis": 0,
+   "marke": "ohne Ausgabehöchstens PilsnerHaltbarkeit ×1,15 · −1,5 hl je Sud",
+   "text": "Schönen mit Kieselsol"
+  },
+  {
+   "zug": "sud:behandlung:filter",
+   "achse": "behandlung",
+   "k": "filter",
+   "preis": 26000,
+   "marke": "einmal zu zahlenträgt ExportbierHaltbarkeit ×1,4",
+   "text": "Kieselgurfilter −26.000 DM"
+  },
+  {
+   "zug": "sud:behandlung:pasteur",
+   "achse": "behandlung",
+   "k": "pasteur",
+   "preis": 74000,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×2 · −3,0 hl je Sud",
+   "text": "Tunnelpasteur −74.000 DM"
+  }
+ ]
+}

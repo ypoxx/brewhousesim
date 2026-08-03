@@ -1,0 +1,56 @@
+=== s2-e1.json  Epoche 1 / sorgfaeltig  286 gemessene Wochen, 1350–1364
+  Brett zugeklappt in 272/286 Wochen
+  sud:zettel-wechsel-frei      da  286  bedienbar  179 (62.6 %)  |  Spiel sagt nein    0  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms  107
+  sud:zettel-wechsel-kauf      da  286  bedienbar    5 (1.7 %)  |  Spiel sagt nein  252  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   29
+  sud:zettel-gaerraum          NIE am Schirm
+  sud:zettel-anstich           da  286  bedienbar  179 (62.6 %)  |  Spiel sagt nein    6  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms  101
+  sud:zettel-hefe-fass         da  286  bedienbar  179 (62.6 %)  |  Spiel sagt nein    6  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms  101
+  sud:zettel-charge-frei       NIE am Schirm
+  sud:zettel-charge-schnitt    NIE am Schirm
+  LATTE 2a — zwei Wahlen nebeneinander bedienbar: 5/286 (1.7 %), nur eine: 174, keine: 107
+  LATTE 2d — Kaufknopf bedienbar in 5 Wochen, Preis 78, Kasse >= Preis in 5 davon
+  Kasse min -1 max 171 Median 14
+  ENDE: {"jahr":1364,"kasse":48,"verfahren":{"wuerze":"grut"},"fest":[],"sude":0,"legte":218,"gesamtFass":0,"sorten":{},"stufen":{},"guete":42,"halt":0,"gestuftGesamt":0,"bottiche":0,"plaetze":10,"lage":0}
+  Konsolenfehler: 0
+=== s2-e2.json  Epoche 2 / sorgfaeltig  256 gemessene Wochen, 1600–1614
+  Brett zugeklappt in 252/256 Wochen
+  sud:zettel-wechsel-frei      da  256  bedienbar  164 (64.1 %)  |  Spiel sagt nein    0  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   92
+  sud:zettel-wechsel-kauf      da  256  bedienbar  118 (46.1 %)  |  Spiel sagt nein   94  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   44
+  sud:zettel-gaerraum          NIE am Schirm
+  sud:zettel-anstich           da  256  bedienbar  164 (64.1 %)  |  Spiel sagt nein    3  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   89
+  sud:zettel-hefe-fass         da  256  bedienbar  164 (64.1 %)  |  Spiel sagt nein    3  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   89
+  sud:zettel-charge-frei       NIE am Schirm
+  sud:zettel-charge-schnitt    NIE am Schirm
+  LATTE 2a — zwei Wahlen nebeneinander bedienbar: 118/256 (46.1 %), nur eine: 46, keine: 92
+  LATTE 2d — Kaufknopf bedienbar in 118 Wochen, Preis 260, Kasse >= Preis in 118 davon
+  Kasse min 0 max 747 Median 312
+  ENDE: {"jahr":1614,"kasse":78,"verfahren":{"schuettung":"rein","gaerung":"ober"},"fest":[],"sude":213,"legte":275,"gesamtFass":1278,"sorten":{},"stufen":{},"guete":40,"halt":0,"gestuftGesamt":0,"bottiche":0,"plaetze":16,"lage":0}
+  Konsolenfehler: 0
+=== s2-e3.json  Epoche 3 / sorgfaeltig  148 gemessene Wochen, 1884–1890  ABBRUCH: ende in Woche 148  endgrund=bank-verwertet
+  Brett zugeklappt in 142/148 Wochen
+  sud:zettel-wechsel-frei      da  148  bedienbar  107 (72.3 %)  |  Spiel sagt nein    0  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   41
+  sud:zettel-wechsel-kauf      da  148  bedienbar   61 (41.2 %)  |  Spiel sagt nein   62  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   25
+  sud:zettel-gaerraum          NIE am Schirm
+  sud:zettel-anstich           da  148  bedienbar  106 (71.6 %)  |  Spiel sagt nein    3  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   39
+  sud:zettel-hefe-fass         da  148  bedienbar  101 (68.2 %)  |  Spiel sagt nein   10  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   37
+  sud:zettel-charge-frei       NIE am Schirm
+  sud:zettel-charge-schnitt    NIE am Schirm
+  LATTE 2a — zwei Wahlen nebeneinander bedienbar: 61/148 (41.2 %), nur eine: 46, keine: 41
+  LATTE 2d — Kaufknopf bedienbar in 61 Wochen, Preis 3400, Kasse >= Preis in 61 davon
+  Kasse min 0 max 15472 Median 4843
+  ENDE: {"jahr":1890,"kasse":357,"verfahren":{"kaelte":"natureis","hefe":"betrieb"},"fest":[],"sude":117,"legte":104,"gesamtFass":1706,"sorten":{"lager":26},"stufen":{"2":26},"guete":60,"halt":23,"gestuftGesamt":0,"bottiche":2,"plaetze":48,"lage":0}
+  Konsolenfehler: 0
+=== s2-e4.json  Epoche 4 / sorgfaeltig  125 gemessene Wochen, 1970–1975  ABBRUCH: ende in Woche 125  endgrund=brauereisterben
+  Brett zugeklappt in 121/125 Wochen
+  sud:zettel-wechsel-frei      da   91  bedienbar   52 (41.6 %)  |  Spiel sagt nein    0  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   39
+  sud:zettel-wechsel-kauf      da  125  bedienbar   15 (12.0 %)  |  Spiel sagt nein   91  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   19
+  sud:zettel-gaerraum          NIE am Schirm
+  sud:zettel-anstich           da  125  bedienbar   69 (55.2 %)  |  Spiel sagt nein    3  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   53
+  sud:zettel-hefe-fass         da  125  bedienbar   69 (55.2 %)  |  Spiel sagt nein    3  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   53
+  sud:zettel-charge-frei       da   34  bedienbar   17 (13.6 %)  |  Spiel sagt nein    0  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   17
+  sud:zettel-charge-schnitt    da   34  bedienbar   17 (13.6 %)  |  Spiel sagt nein    0  |  FREMDES BRETT DARAUF    0  |  ausserhalb des Schirms   17
+  LATTE 2a — zwei Wahlen nebeneinander bedienbar: 7/125 (5.6 %), nur eine: 53, keine: 65
+  LATTE 2d — Kaufknopf bedienbar in 15 Wochen, Preis 26000, Kasse >= Preis in 15 davon
+  Kasse min 5 max 90875 Median 4037
+  ENDE: {"jahr":1975,"kasse":23517,"verfahren":{"fuehrung":"erfahrung","behandlung":"natur"},"fest":[],"sude":99,"legte":135,"gesamtFass":3970,"sorten":{"handel":60,"pils":200},"stufen":{"1":60,"2":200},"guete":92,"halt":26,"gestuftGesamt":0,"bottiche":3,"plaetze":200,"lage":0}
+  Konsolenfehler: 0

@@ -1,0 +1,117 @@
+{
+ "epoche": 2,
+ "schritte": [
+  {
+   "achse": "schuettung",
+   "hinweis": "keine unwiderrufliche Option"
+  },
+  {
+   "achse": "gaerung",
+   "gekauft": "sud:gaerung:keller",
+   "preis": 260,
+   "kauf": {
+    "geklickt": true
+   },
+   "vor": {
+    "schuettung": "rein",
+    "gaerung": "ober"
+   },
+   "nach": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   },
+   "stand": {
+    "sud:gaerung:ober": {
+     "x": 153.75,
+     "y": 663.6796875,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens Braunbier",
+     "text": "Obergärig, warm geführt"
+    },
+    "sud:gaerung:keller": {
+     "x": 392.671875,
+     "y": 664.6796875,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte gewaehlt fest",
+     "marke": "läuftträgt MärzenbierHaltbarkeit ×1,6 · +2 Wo. Gärung",
+     "text": "Kellergärung im Felsenkeller"
+    }
+   },
+   "wege": [
+    {
+     "ziel": "sud:gaerung:ober",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens Braunbier"
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:gaerung:ober",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:gaerung:ober",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    }
+   ]
+  }
+ ],
+ "fehler": [],
+ "optionen": [
+  {
+   "zug": "sud:schuettung:rein",
+   "achse": "schuettung",
+   "k": "rein",
+   "preis": 0,
+   "marke": "läuftträgt Märzenbier"
+  },
+  {
+   "zug": "sud:schuettung:weizen",
+   "achse": "schuettung",
+   "k": "weizen",
+   "preis": 0,
+   "marke": "ohne Ausgabeträgt MärzenbierHaltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche"
+  },
+  {
+   "zug": "sud:schuettung:hafer",
+   "achse": "schuettung",
+   "k": "hafer",
+   "preis": 0,
+   "marke": "ohne Ausgabehöchstens SchankbierHaltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche"
+  },
+  {
+   "zug": "sud:gaerung:ober",
+   "achse": "gaerung",
+   "k": "ober",
+   "preis": 0,
+   "marke": "läufthöchstens Braunbier"
+  },
+  {
+   "zug": "sud:gaerung:keller",
+   "achse": "gaerung",
+   "k": "keller",
+   "preis": 260,
+   "marke": "unwiderruflichträgt MärzenbierHaltbarkeit ×1,6 · +2 Wo. Gärung"
+  }
+ ]
+}

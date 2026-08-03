@@ -1,0 +1,18 @@
+{
+ "epoche": 1,
+ "abbruch": "ende haus-verloren",
+ "fehler": [],
+ "optionen": [
+  "sud:wuerze:grut",
+  "sud:wuerze:sack",
+  "sud:wuerze:brief"
+ ],
+ "wochen": 256,
+ "zettelBeiseite": 18,
+ "beideAmZettel": 5,
+ "brettGeprueft": 251,
+ "reiterVersagte": 1,
+ "brettZweiOptionen": 0,
+ "brettEineOption": 250,
+ "brettKeine": 1
+}

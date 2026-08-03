@@ -243,7 +243,7 @@
     'gegner:unglueck':    { datei: stets('brand'), laut: 1.1, fern: true, nachbar: true },
     'gegner:verlieren':   { datei: stets('unruhe'), laut: 0.7, fern: true },
     'gegner:zuvorkommen': { datei: altNeu('karren', 'telefon'), laut: 0.95, fern: true, nachbar: true },
-    'gegner:abloesen':    { datei: stets('handschlag'), laut: 0.9, fern: true, nachbar: true },
+    'gegner:abloesen':    { datei: altNeu('nachbar1', 'nachbar4'), laut: 0.95, laenge: 3.4, fern: true, nachbar: true },
     'gegner:festlegung':  { datei: altNeu('siegel', 'maschine'), laut: 0.85, fern: true, nachbar: true },
     'gegner:hinsehen':    { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.6 },
     /* Vier Namen, die DER GEGNER wirklich ruft und die bis Welle 4 alle im
@@ -265,8 +265,9 @@
        uebernahme · unglueck · verlieren · werben · zielen, dazu `binden` und
        `entreissen` aus Zeile 579. Alle neunzehn stehen jetzt oben oder hier.
        Abgenommen wird das nicht am Quelltext, sondern an `geraten()`. */
-    'gegner:uebernahme':  { datei: stets('handschlag'), laut: 1.0, fern: true, nachbar: true,
-                            sagt: 'Der Nachbar uebernimmt ein Haus — Handschlag von drueben.' },
+    'gegner:uebernahme':  { datei: altNeu('nachbar1', 'nachbar4'), laut: 1.0, laenge: 3.4,
+                            fern: true, nachbar: true,
+                            sagt: 'Der Nachbar uebernimmt ein Haus — drueben faellt ein Tor ins Schloss.' },
     'gegner:schluckt':    { datei: stets('unruhe'), laut: 1.0, fern: true, nachbar: true },
     'gegner:not':         { datei: altNeu('muenzen', 'kasse'), laut: 0.8, fern: true },
     'gegner:ende':        { datei: stets('brand'), laut: 1.0, fern: true, nachbar: true },
@@ -858,22 +859,25 @@
      "Geraeusch einer Handsaege" und nannte das den Gegenzug — zu Recht, denn
      es war genau derselbe Klang.
      Ein Zeichen, das sich eine Probe mit einem anderen Vorgang teilt, ist
-     kein Zeichen. DRITTER ANLAUF, und der zweite ist an derselben Klippe
-     gescheitert wie der erste: als das Zeichen "schnelles Klopfen auf Holz"
-     war, hat das Ohr in 1350 zweimal hintereinander Sekunde 13 genannt statt
-     24 — dort steht `sud:anstich`, der Kuefer, der den Zapfen ins Fass
-     schlaegt. Auch Klopfen auf Holz. Ein Hof ist voller Holz und voller
-     Haemmer; ein Zeichen darf sich nicht daraus bedienen.
-     Jetzt ist es ein TOR: es quietscht auf, etwas geht hindurch, es faellt
-     zu, der Riegel faellt ein. In den vier Epochen quietscht sonst nichts,
-     und ein Tor, das drueben auf- und zugeht, ist genau die Auskunft, um die
-     es geht — jemand anderes kommt und geht, ohne dass man ihn angestossen
-     hat. Einzeln vorgelegt: "quietschendes Tuerscharnier, schwere Holztuer,
-     lautes Zuschlagen, Riegel" (1350: nichts falsch) bzw. dasselbe in Metall
-     (1970: nichts falsch). */
-  var NACHBAR_DATEI = altNeu('nachbar1', 'nachbar4');
-  var NACHBAR_WERK = altNeu('bau1', 'bau4');
-  var NACHBAR_DAUER = 1.9;
+     schwach — aber ein Zeichen, das die gestellte Frage nicht beantwortet,
+     ist gar keines. Beides ist in dieser Runde gemessen worden.
+     Zweiter Anlauf: ein eigenes Tor, das drueben auf- und zugeht. Eindeutig
+     (sonst quietscht in keiner Epoche etwas) und im Pegel der lauteste
+     Ausschlag der halben Minute — und das Ohr hat es NICHT als Gegenzug
+     gemeldet, sondern als abfahrende Fuhre, denn ein Tor mit einem Karren
+     dahinter ist eine Abfahrt. Gefragt wird aber nach "Werben, Bauen,
+     Zugreifen im Nachbarhof".
+     Also bleibt es beim Bauen — mit dem Unterschied, der vorher fehlte:
+     das FREMDE Bauen liegt hinter der Wand, dauert 3,2 s, steht auf einem
+     eigenen Bus und laesst Bett, Hof und Werk unter sich zuruecktreten; das
+     EIGENE Bauen ist trocken, halb so laut (0,5 statt 0,85) und auf 1,8 s
+     geschnitten. Nicht ein anderer Klang, sondern ein anderer Ort und ein
+     anderes Gewicht.
+     Das Tor ist nicht weggeworfen: es ist jetzt der Klang, mit dem der
+     Nachbar ein Haus ABLOEST und UEBERNIMMT — dort ist es an seiner Stelle,
+     denn dann wechselt drueben wirklich ein Tor den Besitzer. */
+  var NACHBAR_DATEI = altNeu('bau1', 'bau4');
+  var NACHBAR_DAUER = 3.2;
   var NACHBAR_PAUSE = 4.5;
 
   function nachbarhof(w, epoche, wann) {
@@ -898,7 +902,7 @@
     /* Wie bei den Schleifen: die beiden Proben sind NICHT gleich laut aus dem
        Erzeuger gekommen (Effektivwert 0,044 gegen 0,100). Ein Zeichen, das in
        1350 halb so laut ist wie in 1970, ist in 1350 kein Zeichen. */
-    var laut = angleich(buf, 0.19);
+    var laut = angleich(buf, 0.21);
     g.gain.setValueAtTime(0.0001, wann);
     g.gain.linearRampToValueAtTime(laut, wann + 0.22);
     g.gain.setValueAtTime(laut, wann + d - 0.45);
@@ -906,33 +910,6 @@
     q.connect(g); g.connect(w.bus.nachbar);
     q.start(wann, ab);
     q.stop(wann + d + 0.05);
-
-    /* Und hinter dem Tor wird gearbeitet. Das Tor allein war eindeutig und
-       laut — im Pegel der lauteste Ausschlag der halben Minute — und das Ohr
-       hat es trotzdem nicht als Gegenzug gemeldet. Der Grund steht in der
-       Frage, die ihm gestellt wird: gesucht ist "Werben, Bauen, Zugreifen im
-       Nachbarhof". Ein Tor ist nichts davon. Also folgt dem Tor, was hinter
-       ihm geschieht: gedaempfte Hammer- und Saegeschlaege durch dieselbe
-       Wand. Zusammen ist es eindeutig (das Tor kommt sonst nirgends vor) UND
-       benennbar (es wird drueben gebaut). Der eigene Bauklang steht seit
-       dieser Runde bei 0,5 und ungefiltert daneben. */
-    var wdatei = NACHBAR_WERK(epoche), wb = fertig(ctx, wdatei);
-    if (!wb) {
-      ladeStill(ctx, wdatei);
-    } else {
-      var q2 = ctx.createBufferSource();
-      q2.buffer = wb;
-      var d2 = Math.min(2.3, Math.max(0.5, wb.duration - 0.2));
-      var l2 = angleich(wb, 0.16);
-      var g2 = ctx.createGain();
-      g2.gain.setValueAtTime(0.0001, wann + 1.25);
-      g2.gain.linearRampToValueAtTime(l2, wann + 1.55);
-      g2.gain.setValueAtTime(l2, wann + 1.25 + d2 - 0.5);
-      g2.gain.linearRampToValueAtTime(0.0001, wann + 1.25 + d2);
-      q2.connect(g2); g2.connect(w.bus.nachbar);
-      q2.start(wann + 1.25);
-      q2.stop(wann + 1.25 + d2 + 0.05);
-    }
 
     /* Bett und Hof gehen tief, das eigene WERK geht mit. Nicht so tief wie
        bei der Zaesur des Michaelitags — der Gegenzug unterbricht den Hof

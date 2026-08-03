@@ -1,0 +1,425 @@
+{
+ "epoche": 3,
+ "optionen": [
+  {
+   "zug": "sud:kaelte:natureis",
+   "achse": "kaelte",
+   "k": "natureis",
+   "preis": 0,
+   "text": "Natureis aus dem Fluss"
+  },
+  {
+   "zug": "sud:kaelte:warm",
+   "achse": "kaelte",
+   "k": "warm",
+   "preis": 0,
+   "text": "Ohne Kühlung durchgären lassen"
+  },
+  {
+   "zug": "sud:kaelte:maschine",
+   "achse": "kaelte",
+   "k": "maschine",
+   "preis": 9800,
+   "text": "Lindesche Kältemaschine −9.800 M"
+  },
+  {
+   "zug": "sud:hefe:betrieb",
+   "achse": "hefe",
+   "k": "betrieb",
+   "preis": 0,
+   "text": "Betriebshefe aus dem Bottich"
+  },
+  {
+   "zug": "sud:hefe:reinzucht",
+   "achse": "hefe",
+   "k": "reinzucht",
+   "preis": 3400,
+   "text": "Reinzuchthefe nach Hansen −3.400 M"
+  }
+ ],
+ "versuche": [
+  {
+   "achse": "kaelte",
+   "vorgabe": "sud:kaelte:natureis",
+   "gekauft": "sud:kaelte:maschine",
+   "preis": 9800,
+   "kauf": {
+    "geklickt": true,
+    "war": {
+     "x": 432.3125,
+     "y": 355,
+     "aus": false,
+     "trifft": true,
+     "text": "Lindesche Kältemaschine −9.800 M"
+    }
+   },
+   "vorKauf": {
+    "verfahren": {
+     "kaelte": "natureis",
+     "hefe": "betrieb"
+    },
+    "fest": [],
+    "kasse": 30400,
+    "jahr": 1884,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "nachKauf": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "betrieb"
+    },
+    "fest": [
+     "kaelte:maschine"
+    ],
+    "kasse": 20600,
+    "jahr": 1884,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "wege": [
+    {
+     "weg": "W1 Brettknopf Vorgabe, echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "trifft": true
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W2 Brettknopf Vorgabe, zwangsweise aktiviert, echte Maus",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 114.09375,
+       "y": 375.765625,
+       "aus": false,
+       "trifft": true,
+       "text": "Natureis aus dem Fluss"
+      }
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W3 Brettknopf Vorgabe, synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:kaelte:natureis zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 114.09375,
+       "y": 375.765625,
+       "aus": false,
+       "trifft": true,
+       "text": "Natureis aus dem Fluss"
+      }
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:kaelte:warm zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 272.703125,
+       "y": 375.765625,
+       "aus": false,
+       "trifft": true,
+       "text": "Ohne Kühlung durchgären lassen"
+      }
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W4 sud:zettel-wechsel-frei",
+     "ergebnis": {
+      "weg": "kein Knopf"
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W5 sud:zettel-wechsel-kauf",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 576,
+       "y": 316.8359375,
+       "aus": false,
+       "trifft": true,
+       "text": "Reinzuchthefe nach Hansen −3.400 M trägt Exportbier"
+      }
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W7 nach 12 Jahren (Erbfall) Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    },
+    {
+     "weg": "W8 nach Rohstoffmangel Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "maschine",
+     "nachher": "maschine",
+     "zurueck": false
+    }
+   ],
+   "nachSechsWochen": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "betrieb"
+    },
+    "fest": [
+     "kaelte:maschine"
+    ],
+    "kasse": 18664,
+    "jahr": 1884,
+    "woche": 7,
+    "meister": null,
+    "brettZu": false
+   },
+   "zettelNachSiegel": {
+    "frei": null,
+    "kauf": null,
+    "gaerraum": {
+     "x": 576,
+     "y": 320.3515625,
+     "aus": false,
+     "trifft": true,
+     "text": "Gärbottich aufstellen · +60 hl −1.900 M"
+    }
+   },
+   "nachErbfall": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "reinzucht"
+    },
+    "fest": [
+     "kaelte:maschine",
+     "hefe:reinzucht"
+    ],
+    "kasse": 9652,
+    "jahr": 1887,
+    "woche": 11,
+    "meister": null,
+    "brettZu": true
+   },
+   "nachNotsud": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "reinzucht"
+    },
+    "fest": [
+     "kaelte:maschine",
+     "hefe:reinzucht"
+    ],
+    "kasse": 9652,
+    "jahr": 1887,
+    "woche": 11,
+    "meister": null,
+    "brettZu": false
+   }
+  },
+  {
+   "achse": "hefe",
+   "vorgabe": "sud:hefe:betrieb",
+   "gekauft": "sud:hefe:reinzucht",
+   "preis": 3400,
+   "kauf": {
+    "weg": "abgeschaltet",
+    "trifft": false
+   },
+   "vorKauf": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "reinzucht"
+    },
+    "fest": [
+     "kaelte:maschine",
+     "hefe:reinzucht"
+    ],
+    "kasse": 11200,
+    "jahr": 1887,
+    "woche": 11,
+    "meister": null,
+    "brettZu": false
+   },
+   "nachKauf": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "reinzucht"
+    },
+    "fest": [
+     "kaelte:maschine",
+     "hefe:reinzucht"
+    ],
+    "kasse": 11200,
+    "jahr": 1887,
+    "woche": 11,
+    "meister": null,
+    "brettZu": false
+   },
+   "wege": [
+    {
+     "weg": "W1 Brettknopf Vorgabe, echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "trifft": false
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "weg": "W2 Brettknopf Vorgabe, zwangsweise aktiviert, echte Maus",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "weg": "W3 Brettknopf Vorgabe, synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:hefe:betrieb zwangsweise aktiviert",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "weg": "W4 sud:zettel-wechsel-frei",
+     "ergebnis": {
+      "weg": "kein Knopf"
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "weg": "W5 sud:zettel-wechsel-kauf",
+     "ergebnis": {
+      "weg": "kein Knopf"
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "weg": "W7 nach 12 Jahren (Erbfall) Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    },
+    {
+     "weg": "W8 nach Rohstoffmangel Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "reinzucht",
+     "nachher": "reinzucht",
+     "zurueck": false
+    }
+   ],
+   "nachSechsWochen": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "reinzucht"
+    },
+    "fest": [
+     "kaelte:maschine",
+     "hefe:reinzucht"
+    ],
+    "kasse": 11200,
+    "jahr": 1887,
+    "woche": 11,
+    "meister": null,
+    "brettZu": false
+   },
+   "zettelNachSiegel": {
+    "frei": null,
+    "kauf": null,
+    "gaerraum": {
+     "x": 0,
+     "y": 0,
+     "aus": true,
+     "trifft": false,
+     "text": "Gärbottich aufstellen · +60 hl−1.900 M"
+    }
+   },
+   "nachErbfall": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "reinzucht"
+    },
+    "fest": [
+     "kaelte:maschine",
+     "hefe:reinzucht"
+    ],
+    "kasse": 11200,
+    "jahr": 1887,
+    "woche": 11,
+    "meister": null,
+    "brettZu": true
+   },
+   "nachNotsud": {
+    "verfahren": {
+     "kaelte": "maschine",
+     "hefe": "reinzucht"
+    },
+    "fest": [
+     "kaelte:maschine",
+     "hefe:reinzucht"
+    ],
+    "kasse": 11200,
+    "jahr": 1887,
+    "woche": 11,
+    "meister": null,
+    "brettZu": false
+   }
+  }
+ ],
+ "fehler": []
+}

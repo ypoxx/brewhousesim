@@ -2050,10 +2050,22 @@
       z.appendChild(B.el('div', 'pr-satz-klein', f.regel));
       links.appendChild(z);
     });
+    /* Wie oft die Wahl wiederkommt, steht als gemessene Zahl da und nicht
+       als Versprechen — dieselbe Frist wie auf der Karte. Der blinde
+       Kritiker hat gezaehlt, dass eine sorgfaeltig gespielte Partie in
+       vierzehn Jahren nur eine oder gar keine Festlegung nimmt, obwohl acht
+       Amtszeiten vorbeigehen. Wer nicht weiss, dass die naechste Wahl in
+       zwei Jahren wiederkommt, spart auf die falsche. */
+    var fristC = amtszeitFrist();
     links.appendChild(B.el('div', 'pr-satz pr-klein',
-      festlegungOffen()
+      (festlegungOffen()
         ? amtszeit().name + ' hat die Festlegung dieser Amtszeit noch vor sich.'
-        : amtszeit().name + ' hat sich festgelegt. Die nächste Amtszeit wählt wieder — einmal.'));
+        : amtszeit().name + ' hat sich festgelegt. Die nächste Amtszeit wählt wieder — einmal.')
+      + (fristC
+          ? ' Bisher wechselte die Hand alle ' + fristC
+            + (fristC === 1 ? ' Braujahr' : ' Braujahre') + '; '
+            + Z.amtszeiten.length + ' Amtszeiten seit ' + Z.amtszeiten[0].seit + '.'
+          : '')));
     drei.appendChild(links);
 
     /* 2 — die laufende Rolle */

@@ -1,0 +1,137 @@
+{
+ "epoche": 1,
+ "schritte": [
+  {
+   "achse": "wuerze",
+   "gekauft": "sud:wuerze:brief",
+   "preis": 78,
+   "kauf": {
+    "geklickt": true
+   },
+   "vor": {
+    "wuerze": "grut"
+   },
+   "nach": {
+    "wuerze": "brief"
+   },
+   "stand": {
+    "sud:wuerze:grut": {
+     "x": 114.09375,
+     "y": 354.3828125,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens Grutbier",
+     "text": "Grut vom Grutamt"
+    },
+    "sud:wuerze:sack": {
+     "x": 272.703125,
+     "y": 360.953125,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufträgt StarkbierHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche",
+     "text": "Hopfen im Sack, heimlich"
+    },
+    "sud:wuerze:brief": {
+     "x": 432.3125,
+     "y": 361.953125,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte gewaehlt fest",
+     "marke": "läuftträgt StarkbierHaltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud",
+     "text": "Offen gehopft, mit Hopfenbrief"
+    }
+   },
+   "wege": [
+    {
+     "ziel": "sud:wuerze:grut",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens Grutbier"
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:wuerze:grut",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:wuerze:grut",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:wuerze:sack",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufträgt StarkbierHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche"
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:wuerze:sack",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:wuerze:sack",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "brief",
+     "nachher": "brief",
+     "zurueck": false
+    }
+   ]
+  }
+ ],
+ "fehler": [],
+ "optionen": [
+  {
+   "zug": "sud:wuerze:grut",
+   "achse": "wuerze",
+   "k": "grut",
+   "preis": 0,
+   "marke": "läufthöchstens Grutbier"
+  },
+  {
+   "zug": "sud:wuerze:sack",
+   "achse": "wuerze",
+   "k": "sack",
+   "preis": 0,
+   "marke": "ohne Ausgabeträgt StarkbierHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche"
+  },
+  {
+   "zug": "sud:wuerze:brief",
+   "achse": "wuerze",
+   "k": "brief",
+   "preis": 78,
+   "marke": "unwiderruflichträgt StarkbierHaltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud"
+  }
+ ]
+}

@@ -1,0 +1,600 @@
+{
+ "epoche": 2,
+ "jahre": 14,
+ "V": {
+  "art": "V",
+  "gewaehlt": [],
+  "nachWahl": {
+   "jahr": 1600,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 640,
+   "rohstoff": 65,
+   "verfahren": {
+    "schuettung": "rein",
+    "gaerung": "ober"
+   },
+   "fest": [],
+   "lager": 8,
+   "sorten": {
+    "braun": 8
+   },
+   "stufen": {
+    "2": 8
+   },
+   "haltbarSchnitt": 11,
+   "sudDurch": 0,
+   "sude": 0,
+   "legte": 0,
+   "gesamtFass": 0,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1600 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot läuft trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt ohne Ausgabe trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Obergärig, warm geführt läuft höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller −260 fl unwiderruflich trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Braunbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern schlägt als Braunbier aus Klosterschenke Obernberg führt nur Märzenbier und bekommt vom Anker nichts. DIE STELLHEFE 70 % Wer die Stellhefe nicht schöpft, braut nach Glück. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass. DER GÄRKELLER 0 von 16 Fass · 0 Gärbottiche Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. Kein Gärbottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Gärbottich setzen lassen · +10 Fass −78 fl Die Bauabnahme liegt bei der Zunftlade — derselben, die auch in den Kessel sieht. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren Noch keine Eintragung.",
+    "sudzettel": "DER SUD · 1600 Rein nach dem Gebot · Obergärig, warm geführt höchstens Braunbier Gärkeller 0/16 Fass Stellhefe 70 % · Fass ×1,05 Junges Fass anstechen · +14 · 1 Fass Altes Fass anstechen · +6 · 1 Fass Mit Weizen gestreckt trägt Märzenbier Kellergärung im Felsenkeller −260 fl trägt Märzenbier",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 16 Ruf von 100 Bekanntheit 27 ↘ Einlösung 58 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.200 fl mit dem Zeichen 2.246 fl + 2,1 im Hundert · 46 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 fl BRAUJAHR 0 fl SEIT 1600 0 fl Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 12 Wochen I. Barbara Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 3 Fass Verbriefen · Lindenhof −104 fl Ausgedinge · jährlich −76 fl Abfindung −379 fl Ohne Vergleich 0 fl SCHEIDING 1600 KASSE 640 fl HOPFEN 65 GEWÖLBE 8/24 Fass WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1600/01 · Barbara Bruckner, sparsam · Die Ordnung WEITER nächster Zug: Zuvorkommen Mühlschenke — 170 fl (Kasse reicht 3,8×)",
+    "buch": []
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1604,
+   "woche": 13,
+   "ende": true,
+   "endgrund": "reihe-gestrichen",
+   "kasse": 231,
+   "rohstoff": 33,
+   "verfahren": {
+    "schuettung": "rein",
+    "gaerung": "ober"
+   },
+   "fest": [],
+   "lager": 24,
+   "sorten": {
+    "braun": 24
+   },
+   "stufen": {
+    "2": 24
+   },
+   "haltbarSchnitt": 12,
+   "sudDurch": 24,
+   "sude": 49,
+   "legte": 53,
+   "gesamtFass": 294,
+   "guete": 76,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 5,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1604 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot läuft trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt ohne Ausgabe trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Obergärig, warm geführt läuft höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller −260 fl unwiderruflich trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Braunbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern schlägt als Braunbier aus Klosterschenke Obernberg führt nur Märzenbier und bekommt vom Anker nichts. DIE STELLHEFE 76 % Wer die Stellhefe nicht schöpft, braut nach Glück. Was jetzt eingelegt wird, hält ×1,08 — die Hefe steht. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 5 von 16 Fass · 1 Gärbottich Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. 49 Braunbier 5 Fass reif — kein Platz im Lager Gärbottich setzen lassen · +10 Fass −78 fl Die Bauabnahme liegt bei der Zunftlade — derselben, die auch in den Kessel sieht. DAS SUDBUCH 4 Sude · 24 Fass · 0 verloren 1604/13 Das Sudbuch wird geschlossen: 53 Sude, 294 Fass angestellt. 1604/6 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1604/5 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass",
+    "sudzettel": "DER SUD · 1604Rein nach dem Gebot · Obergärig, warm geführthöchstens BraunbierGärkeller 5/16 FassStellhefe 76 % · Fass ×1,08Stellhefe aus dem Gärbottich nehmen · +8 · ohne FassJunges Fass anstechen · +14 · 1 FassMit Weizen gestrecktträgt MärzenbierKellergärung im Felsenkeller−260 flträgt Märzenbier",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 10 Ruf von 100 Bekanntheit 10 Einlösung 95 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.288 fl mit dem Zeichen 2.318 fl + 1,3 im Hundert · 30 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 fl BRAUJAHR 0 fl SEIT 1600 +2 fl zuletzt 1600, W4: 1 fl auf 26 fl an Gasthof Lindenhof · 18 fl aufs Ziel · 2,1 im Hundert bei Ruf 14 und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 0 Wochen III. Veit Bruckner · streitbar · Feder 1,33× am Haus 0 · an der Person 0 nimmt 0 · 5 Fass Nachschrift · 3 Häuser −324 fl Ausgedinge · jährlich −22 fl Abfindung −22 fl Ohne Vergleich 0 fl CHRISTMOND 1604 KASSE 231 fl HOPFEN 33 GEWÖLBE 24/24 Fass WOCHE 13/30 CHRONIK 66 BUCH 766 Brauhaus zum Anker · 1604/05 · Veit Bruckner, streitbar · Die Ordnung ENDE",
+    "buch": [
+     {
+      "jahr": 1604,
+      "woche": 4,
+      "text": "6 Fass in den Gärkeller — Rein nach dem Gebot · Obergärig, warm geführt"
+     },
+     {
+      "jahr": 1604,
+      "woche": 4,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1604,
+      "woche": 5,
+      "text": "6 Fass in den Gärkeller — Rein nach dem Gebot · Obergärig, warm geführt"
+     },
+     {
+      "jahr": 1604,
+      "woche": 5,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1604,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1604,
+      "woche": 13,
+      "text": "Das Sudbuch wird geschlossen: 53 Sude, 294 Fass angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1604,
+   "woche": 13,
+   "ende": true,
+   "endgrund": "reihe-gestrichen",
+   "kasse": 231,
+   "rohstoff": 33,
+   "verfahren": {
+    "schuettung": "rein",
+    "gaerung": "ober"
+   },
+   "fest": [],
+   "lager": 24,
+   "sorten": {
+    "braun": 24
+   },
+   "stufen": {
+    "2": 24
+   },
+   "haltbarSchnitt": 12,
+   "sudDurch": 24,
+   "sude": 49,
+   "legte": 53,
+   "gesamtFass": 294,
+   "guete": 76,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 5,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1604 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot läuft trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt ohne Ausgabe trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Obergärig, warm geführt läuft höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller −260 fl unwiderruflich trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Braunbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern schlägt als Braunbier aus Klosterschenke Obernberg führt nur Märzenbier und bekommt vom Anker nichts. DIE STELLHEFE 76 % Wer die Stellhefe nicht schöpft, braut nach Glück. Was jetzt eingelegt wird, hält ×1,08 — die Hefe steht. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 5 von 16 Fass · 1 Gärbottich Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. 49 Braunbier 5 Fass reif — kein Platz im Lager Gärbottich setzen lassen · +10 Fass −78 fl Die Bauabnahme liegt bei der Zunftlade — derselben, die auch in den Kessel sieht. DAS SUDBUCH 4 Sude · 24 Fass · 0 verloren 1604/13 Das Sudbuch wird geschlossen: 53 Sude, 294 Fass angestellt. 1604/6 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1604/5 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass",
+    "sudzettel": "DER SUD · 1604Rein nach dem Gebot · Obergärig, warm geführthöchstens BraunbierGärkeller 5/16 FassStellhefe 76 % · Fass ×1,08Stellhefe aus dem Gärbottich nehmen · +8 · ohne FassJunges Fass anstechen · +14 · 1 FassMit Weizen gestrecktträgt MärzenbierKellergärung im Felsenkeller−260 flträgt Märzenbier",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 10 Ruf von 100 Bekanntheit 10 Einlösung 95 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.288 fl mit dem Zeichen 2.318 fl + 1,3 im Hundert · 30 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 fl BRAUJAHR 0 fl SEIT 1600 +2 fl zuletzt 1600, W4: 1 fl auf 26 fl an Gasthof Lindenhof · 18 fl aufs Ziel · 2,1 im Hundert bei Ruf 14 und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 0 Wochen III. Veit Bruckner · streitbar · Feder 1,33× am Haus 0 · an der Person 0 nimmt 0 · 5 Fass Nachschrift · 3 Häuser −324 fl Ausgedinge · jährlich −22 fl Abfindung −22 fl Ohne Vergleich 0 fl CHRISTMOND 1604 KASSE 231 fl HOPFEN 33 GEWÖLBE 24/24 Fass WOCHE 13/30 CHRONIK 66 BUCH 766 Brauhaus zum Anker · 1604/05 · Veit Bruckner, streitbar · Die Ordnung ENDE",
+    "buch": [
+     {
+      "jahr": 1604,
+      "woche": 4,
+      "text": "6 Fass in den Gärkeller — Rein nach dem Gebot · Obergärig, warm geführt"
+     },
+     {
+      "jahr": 1604,
+      "woche": 4,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1604,
+      "woche": 5,
+      "text": "6 Fass in den Gärkeller — Rein nach dem Gebot · Obergärig, warm geführt"
+     },
+     {
+      "jahr": 1604,
+      "woche": 5,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1604,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1604,
+      "woche": 13,
+      "text": "Das Sudbuch wird geschlossen: 53 Sude, 294 Fass angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 122
+ },
+ "A": {
+  "art": "A",
+  "gewaehlt": [
+   {
+    "zug": "sud:schuettung:weizen",
+    "preis": 0,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1600,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 640,
+   "rohstoff": 67,
+   "verfahren": {
+    "schuettung": "weizen",
+    "gaerung": "ober"
+   },
+   "fest": [],
+   "lager": 9,
+   "sorten": {
+    "braun": 9
+   },
+   "stufen": {
+    "2": 9
+   },
+   "haltbarSchnitt": 14,
+   "sudDurch": 9,
+   "sude": 1,
+   "legte": 0,
+   "gesamtFass": 9,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1600 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot wie immer trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt läuft trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Obergärig, warm geführt läuft höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller −260 fl unwiderruflich trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Braunbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern schlägt als Braunbier aus Klosterschenke Obernberg führt nur Märzenbier und bekommt vom Anker nichts. DIE STELLHEFE 70 % Wer die Stellhefe nicht schöpft, braut nach Glück. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass. DER GÄRKELLER 0 von 16 Fass · 0 Gärbottiche Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. Kein Gärbottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Gärbottich setzen lassen · +10 Fass −78 fl Die Zunftlade nimmt keinen Bau ab, solange in diesem Haus gestreckt gebraut wird. Erst rein nach dem Gebot, dann der Gärbottich. DAS SUDBUCH 1 Sude · 9 Fass · 0 verloren 1600/1 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1600/1 9 Fass in den Gärkeller — Mit Weizen gestreckt · Obergärig, warm geführt 1600/1 DIE SCHÜTTUNG: Mit Weizen gestreckt",
+    "sudzettel": "DER SUD · 1600Mit Weizen gestreckt · Obergärig, warm geführthöchstens BraunbierGärkeller 0/16 FassStellhefe 70 % · Fass ×1,05Junges Fass anstechen · +14 · 1 FassAltes Fass anstechen · +6 · 1 FassRein nach dem Gebotträgt MärzenbierKellergärung im Felsenkeller−260 flträgt Märzenbier",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 16 Ruf von 100 Bekanntheit 27 ↘ Einlösung 58 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.200 fl mit dem Zeichen 2.246 fl + 2,1 im Hundert · 46 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 fl BRAUJAHR 0 fl SEIT 1600 0 fl Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 12 Wochen I. Barbara Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 3 Fass Verbriefen · Lindenhof −104 fl Ausgedinge · jährlich −76 fl Abfindung −379 fl Ohne Vergleich 0 fl SCHEIDING 1600 KASSE 640 fl HOPFEN 65 GEWÖLBE 8/24 Fass WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1600/01 · Barbara Bruckner, sparsam · Die Ordnung WEITER nächster Zug: Zuvorkommen Mühlschenke — 170 fl (Kasse reicht 3,8×)",
+    "buch": [
+     {
+      "jahr": 1600,
+      "woche": 1,
+      "text": "DIE SCHÜTTUNG: Mit Weizen gestreckt"
+     },
+     {
+      "jahr": 1600,
+      "woche": 1,
+      "text": "9 Fass in den Gärkeller — Mit Weizen gestreckt · Obergärig, warm geführt"
+     },
+     {
+      "jahr": 1600,
+      "woche": 1,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1614,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 534,
+   "rohstoff": 84,
+   "verfahren": {
+    "schuettung": "weizen",
+    "gaerung": "ober"
+   },
+   "fest": [],
+   "lager": 7,
+   "sorten": {
+    "braun": 7
+   },
+   "stufen": {
+    "2": 7
+   },
+   "haltbarSchnitt": 14,
+   "sudDurch": 7,
+   "sude": 243,
+   "legte": 242,
+   "gesamtFass": 1676,
+   "guete": 98,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1614 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot wie immer trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt läuft trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Obergärig, warm geführt läuft höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller −260 fl unwiderruflich trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Braunbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern schlägt als Braunbier aus Klosterschenke Obernberg führt nur Märzenbier und bekommt vom Anker nichts. DIE STELLHEFE 98 % Wer die Stellhefe nicht schöpft, braut nach Glück. Was jetzt eingelegt wird, hält ×1,19 — die Hefe steht. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass. DER GÄRKELLER 0 von 16 Fass · 0 Gärbottiche Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. Kein Gärbottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Gärbottich setzen lassen · +10 Fass −78 fl Die Zunftlade nimmt keinen Bau ab, solange in diesem Haus gestreckt gebraut wird. Erst rein nach dem Gebot, dann der Gärbottich. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1614/1 Braujahr geschlossen: 22 Sude angestellt, 22 durch den Gärkeller (152 Fass), 1 verloren. 1614/1 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1613/30 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass",
+    "sudzettel": "DER SUD · 1614Mit Weizen gestreckt · Obergärig, warm geführthöchstens BraunbierGärkeller 0/16 FassStellhefe 98 % · Fass ×1,19Junges Fass anstechen · +14 · 1 FassAltes Fass anstechen · +6 · 1 FassRein nach dem Gebotträgt MärzenbierKellergärung im Felsenkeller−260 flträgt Märzenbier",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 9 Ruf von 100 Bekanntheit 10 Einlösung 93 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.577 fl mit dem Zeichen 2.607 fl + 1,2 im Hundert · 30 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE +1 fl BRAUJAHR 0 fl SEIT 1600 +93 fl zuletzt 1614, W1: 1 fl auf 30 fl an Gasthof Lindenhof · 20 fl aufs Ziel · 1,9 im Hundert bei Ruf 9 und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 11 Wochen 8. Barbara Bruckner · streitbar · Feder 1,79× am Haus 0 · an der Person 1 nimmt 1 · 2 Fass Verbriefen · Lindenhof −267 fl Ausgedinge · jährlich −35 fl Abfindung −96 fl Ohne Vergleich 0 fl SCHEIDING 1614 KASSE 534 fl HOPFEN 84 GEWÖLBE 7/24 Fass WOCHE 1/30 CHRONIK 241 BUCH 4187 Brauhaus zum Anker · 1614/15 · Barbara Bruckner, streitbar · Die Ordnung WEITER nächster Zug: Zuvorkommen Mühlschenke — 170 fl (Kasse reicht 3,1×)",
+    "buch": [
+     {
+      "jahr": 1613,
+      "woche": 29,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1613,
+      "woche": 29,
+      "text": "Stellhefe aus dem Gärbottich nehmen — Bottich 242, +8"
+     },
+     {
+      "jahr": 1613,
+      "woche": 30,
+      "text": "7 Fass in den Gärkeller — Mit Weizen gestreckt · Obergärig, warm geführt"
+     },
+     {
+      "jahr": 1613,
+      "woche": 30,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1614,
+      "woche": 1,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1614,
+      "woche": 1,
+      "text": "Braujahr geschlossen: 22 Sude angestellt, 22 durch den Gärkeller (152 Fass), 1 verloren."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1614,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 534,
+   "rohstoff": 84,
+   "verfahren": {
+    "schuettung": "weizen",
+    "gaerung": "ober"
+   },
+   "fest": [],
+   "lager": 7,
+   "sorten": {
+    "braun": 7
+   },
+   "stufen": {
+    "2": 7
+   },
+   "haltbarSchnitt": 14,
+   "sudDurch": 7,
+   "sude": 243,
+   "legte": 242,
+   "gesamtFass": 1676,
+   "guete": 98,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1614 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot wie immer trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt läuft trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Obergärig, warm geführt läuft höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller −260 fl unwiderruflich trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Braunbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern schlägt als Braunbier aus Klosterschenke Obernberg führt nur Märzenbier und bekommt vom Anker nichts. DIE STELLHEFE 98 % Wer die Stellhefe nicht schöpft, braut nach Glück. Was jetzt eingelegt wird, hält ×1,19 — die Hefe steht. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass. DER GÄRKELLER 0 von 16 Fass · 0 Gärbottiche Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. Kein Gärbottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Gärbottich setzen lassen · +10 Fass −78 fl Die Zunftlade nimmt keinen Bau ab, solange in diesem Haus gestreckt gebraut wird. Erst rein nach dem Gebot, dann der Gärbottich. DAS SUDBUCH 0 Sude · 0 Fass · 0 verloren 1614/1 Braujahr geschlossen: 22 Sude angestellt, 22 durch den Gärkeller (152 Fass), 1 verloren. 1614/1 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1613/30 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass",
+    "sudzettel": "DER SUD · 1614Mit Weizen gestreckt · Obergärig, warm geführthöchstens BraunbierGärkeller 0/16 FassStellhefe 98 % · Fass ×1,19Junges Fass anstechen · +14 · 1 FassAltes Fass anstechen · +6 · 1 FassRein nach dem Gebotträgt MärzenbierKellergärung im Felsenkeller−260 flträgt Märzenbier",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 9 Ruf von 100 Bekanntheit 10 Einlösung 93 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.577 fl mit dem Zeichen 2.607 fl + 1,2 im Hundert · 30 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE +1 fl BRAUJAHR 0 fl SEIT 1600 +93 fl zuletzt 1614, W1: 1 fl auf 30 fl an Gasthof Lindenhof · 20 fl aufs Ziel · 1,9 im Hundert bei Ruf 9 und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 11 Wochen 8. Barbara Bruckner · streitbar · Feder 1,79× am Haus 0 · an der Person 1 nimmt 1 · 2 Fass Verbriefen · Lindenhof −267 fl Ausgedinge · jährlich −35 fl Abfindung −96 fl Ohne Vergleich 0 fl SCHEIDING 1614 KASSE 534 fl HOPFEN 84 GEWÖLBE 7/24 Fass WOCHE 1/30 CHRONIK 241 BUCH 4187 Brauhaus zum Anker · 1614/15 · Barbara Bruckner, streitbar · Die Ordnung WEITER nächster Zug: Zuvorkommen Mühlschenke — 170 fl (Kasse reicht 3,1×)",
+    "buch": [
+     {
+      "jahr": 1613,
+      "woche": 29,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1613,
+      "woche": 29,
+      "text": "Stellhefe aus dem Gärbottich nehmen — Bottich 242, +8"
+     },
+     {
+      "jahr": 1613,
+      "woche": 30,
+      "text": "7 Fass in den Gärkeller — Mit Weizen gestreckt · Obergärig, warm geführt"
+     },
+     {
+      "jahr": 1613,
+      "woche": 30,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1614,
+      "woche": 1,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1614,
+      "woche": 1,
+      "text": "Braujahr geschlossen: 22 Sude angestellt, 22 durch den Gärkeller (152 Fass), 1 verloren."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 300
+ },
+ "B": {
+  "art": "B",
+  "gewaehlt": [
+   {
+    "zug": "sud:gaerung:keller",
+    "preis": 260,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1600,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 640,
+   "rohstoff": 65,
+   "verfahren": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   },
+   "fest": [
+    "gaerung:keller"
+   ],
+   "lager": 0,
+   "sorten": {},
+   "stufen": {},
+   "haltbarSchnitt": 0,
+   "sudDurch": 0,
+   "sude": 1,
+   "legte": 0,
+   "gesamtFass": 8,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 8,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1600 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot läuft trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt ohne Ausgabe trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Bauabnahme der Zunft: Kellergärung im Felsenkeller. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Obergärig, warm geführt das Siegel liegt darauf höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller läuft trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Märzenbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern trägt die Pfanne DIE STELLHEFE 70 % Wer die Stellhefe nicht schöpft, braut nach Glück. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 8 von 16 Fass · 1 Gärbottich Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. 1 Braunbier 8 Fass reif in 2 Wochen Gärbottich setzen lassen · +10 Fass −78 fl Die Bauabnahme liegt bei der Zunftlade — derselben, die auch in den Kessel sieht. DAS SUDBUCH 1 Sude · 8 Fass · 0 verloren 1600/1 8 Fass in den Gärkeller — Rein nach dem Gebot · Kellergärung im Felsenkeller 1600/1 DIE GÄRUNG: Kellergärung im Felsenkeller",
+    "sudzettel": "DER SUD · 1600 Rein nach dem Gebot · Kellergärung im Felsenkeller höchstens Märzenbier Gärkeller 8/16 Fass Stellhefe 70 % · Fass ×1,05 Stellhefe aus dem Gärbottich nehmen · +8 · ohne Fass Junges Fass anstechen · +14 · 1 Fass Mit Weizen gestreckt trägt Märzenbier Gärbottich setzen lassen · +10 Fass −78 fl",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 16 Ruf von 100 Bekanntheit 27 ↘ Einlösung 58 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.200 fl mit dem Zeichen 2.246 fl + 2,1 im Hundert · 46 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 fl BRAUJAHR 0 fl SEIT 1600 0 fl Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen Das Zeichen hängt, und der Keller taugt nicht — Güte 0 von 100. Seit 1 von 5 Wochen; danach steht es im Register. Nach der dritten solchen Zeile nimmt Die Zunft das Zeichen — 0 von 3 stehen schon da. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET Den gemarkten Krug einführen −260 fl Freitrunk zur Kirchweih geben −18 fl − 1 Fass Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 12 Wochen I. Barbara Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 0 Fass Verbriefen · Lindenhof −104 fl Ausgedinge · jährlich −73 fl Abfindung −367 fl Ohne Vergleich 0 fl SCHEIDING 1600 KASSE 640 fl HOPFEN 65 GEWÖLBE 8/24 Fass WOCHE 1/30 CHRONIK 5 BUCH 2 Brauhaus zum Anker · 1600/01 · Barbara Bruckner, sparsam · Die Ordnung WEITER nächster Zug: Zuvorkommen Mühlschenke — 170 fl (Kasse reicht 3,8×)",
+    "buch": [
+     {
+      "jahr": 1600,
+      "woche": 1,
+      "text": "DIE GÄRUNG: Kellergärung im Felsenkeller"
+     },
+     {
+      "jahr": 1600,
+      "woche": 1,
+      "text": "8 Fass in den Gärkeller — Rein nach dem Gebot · Kellergärung im Felsenkeller"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1611,
+   "woche": 13,
+   "ende": true,
+   "endgrund": "reihe-gestrichen",
+   "kasse": 264,
+   "rohstoff": 53,
+   "verfahren": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   },
+   "fest": [
+    "gaerung:keller"
+   ],
+   "lager": 24,
+   "sorten": {
+    "braun": 24
+   },
+   "stufen": {
+    "2": 24
+   },
+   "haltbarSchnitt": 19.75,
+   "sudDurch": 24,
+   "sude": 275,
+   "legte": 176,
+   "gesamtFass": 1018,
+   "guete": 60,
+   "gestuftGesamt": 0,
+   "bottiche": 2,
+   "gaerfass": 6,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1611 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot läuft trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt ohne Ausgabe trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Bauabnahme der Zunft: Kellergärung im Felsenkeller. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Obergärig, warm geführt das Siegel liegt darauf höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller läuft trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Märzenbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern trägt die Pfanne DIE STELLHEFE 60 % Wer die Stellhefe nicht schöpft, braut nach Glück. Ab 61 % hält jedes eingelegte Fass länger. Jetzt: ×1,00. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 6 von 16 Fass · 2 Gärbottiche Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. 272 Braunbier 4 Fass reif — kein Platz im Lager 275 Braunbier 2 Fass reif — kein Platz im Lager Gärbottich setzen lassen · +10 Fass −78 fl Die Bauabnahme liegt bei der Zunftlade — derselben, die auch in den Kessel sieht. DAS SUDBUCH 6 Sude · 24 Fass · 2 verloren 1611/13 Der Sud ist verdorben: Bottich 273 (4 Fass) 1611/13 Das Sudbuch wird geschlossen: 275 Sude, 1.018 Fass angestellt. 1611/7 Der Sud ist verdorben: Bottich 274 (2 Fass)",
+    "sudzettel": "DER SUD · 1611Rein nach dem Gebot · Kellergärung im Felsenkellerhöchstens MärzenbierGärkeller 6/16 FassStellhefe 60 %Stellhefe aus dem Gärbottich nehmen · +8 · ohne FassJunges Fass anstechen · +14 · 1 FassMit Weizen gestrecktträgt MärzenbierGärbottich setzen lassen · +10 Fass−78 fl",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 10 Ruf von 100 Bekanntheit 10 Einlösung 100 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.479 fl mit dem Zeichen 2.511 fl + 1,3 im Hundert · 32 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 fl BRAUJAHR 0 fl SEIT 1600 +37 fl zuletzt 1608, W1: 1 fl auf 72 fl an Gasthof Lindenhof · 48 fl aufs Ziel · 1,9 im Hundert bei Ruf 10 und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 35 Wochen 7. Ursula Bruckner · sparsam · Feder 1,04× am Haus 0 · an der Person 0 nimmt 0 · 4 Fass Nachschrift · 5 Häuser −421 fl Ausgedinge · jährlich −17 fl Abfindung −19 fl Ohne Vergleich 0 fl CHRISTMOND 1611 KASSE 264 fl HOPFEN 53 GEWÖLBE 24/24 Fass WOCHE 13/30 CHRONIK 177 BUCH 2972 Brauhaus zum Anker · 1611/12 · Ursula Bruckner, sparsam · Die Ordnung ENDE",
+    "buch": [
+     {
+      "jahr": 1611,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1611,
+      "woche": 6,
+      "text": "2 Fass in den Gärkeller — Rein nach dem Gebot · Kellergärung im Felsenkeller"
+     },
+     {
+      "jahr": 1611,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1611,
+      "woche": 7,
+      "text": "Der Sud ist verdorben: Bottich 274 (2 Fass)"
+     },
+     {
+      "jahr": 1611,
+      "woche": 13,
+      "text": "Das Sudbuch wird geschlossen: 275 Sude, 1.018 Fass angestellt."
+     },
+     {
+      "jahr": 1611,
+      "woche": 13,
+      "text": "Der Sud ist verdorben: Bottich 273 (4 Fass)"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1611,
+   "woche": 13,
+   "ende": true,
+   "endgrund": "reihe-gestrichen",
+   "kasse": 264,
+   "rohstoff": 53,
+   "verfahren": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   },
+   "fest": [
+    "gaerung:keller"
+   ],
+   "lager": 24,
+   "sorten": {
+    "braun": 24
+   },
+   "stufen": {
+    "2": 24
+   },
+   "haltbarSchnitt": 19.75,
+   "sudDurch": 24,
+   "sude": 275,
+   "legte": 176,
+   "gesamtFass": 1018,
+   "guete": 60,
+   "gestuftGesamt": 0,
+   "bottiche": 2,
+   "gaerfass": 6,
+   "plaetze": 16,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1611 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. Rein nach dem Gebot läuft trägt Märzenbier Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt. Mit Weizen gestreckt ohne Ausgabe trägt Märzenbier Haltbarkeit ×1,15 · −2 Hopfen je Sud · +1 Fass je Sud · Anzeige 10 % je Woche Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er gehört dem Bäcker — das Gebot von 1516 sagt es ausdrücklich. Die Bäckerzunft zeigt an, wenn Brotkorn im Kessel steht. Mit Hafer und Wicke gestreckt ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,75 · −4 Hopfen je Sud · +2 Fass je Sud · Anzeige 13 % je Woche Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan. Die Bierschau kostet das Haus mehr als den Hafer. DIE GÄRUNG Warm oder kalt? Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — und übersteht als einziges den Sommer. Bauabnahme der Zunft: Kellergärung im Felsenkeller. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Obergärig, warm geführt das Siegel liegt darauf höchstens Braunbier Vier Tage im Bottich, dann aufs Fass. Das Bier der Stadt seit je — und ein Märzenbier, das den Sommer übersteht, wird daraus nicht. Kellergärung im Felsenkeller läuft trägt Märzenbier Haltbarkeit ×1,6 · +2 Wo. Gärung Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwei Wochen länger, macht das Bier sommerfest — und erst sie trägt das Märzenbier, das der Gasthof und die Klosterschenke zahlen. Unwiderruflich — ein Felsenkeller wird nicht zurückgebaut. WAS BEIM WIRT ANKOMMT höchstens Märzenbier Gestrecktes Bier führt kein Gasthof, und er merkt es. S Schankbier 7 von 10 Häusern trägt die Pfanne B Braunbier 8 von 10 Häusern trägt die Pfanne M Märzenbier 3 von 10 Häusern trägt die Pfanne DIE STELLHEFE 60 % Wer die Stellhefe nicht schöpft, braut nach Glück. Ab 61 % hält jedes eingelegte Fass länger. Jetzt: ×1,00. Stellhefe aus dem Gärbottich nehmen · +8 Junges Fass anstechen · +14 Altes Fass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 6 von 16 Fass · 2 Gärbottiche Gärbottiche im Gewölbe: was gärt, belegt keinen Fassplatz mehr. 272 Braunbier 4 Fass reif — kein Platz im Lager 275 Braunbier 2 Fass reif — kein Platz im Lager Gärbottich setzen lassen · +10 Fass −78 fl Die Bauabnahme liegt bei der Zunftlade — derselben, die auch in den Kessel sieht. DAS SUDBUCH 6 Sude · 24 Fass · 2 verloren 1611/13 Der Sud ist verdorben: Bottich 273 (4 Fass) 1611/13 Das Sudbuch wird geschlossen: 275 Sude, 1.018 Fass angestellt. 1611/7 Der Sud ist verdorben: Bottich 274 (2 Fass)",
+    "sudzettel": "DER SUD · 1611Rein nach dem Gebot · Kellergärung im Felsenkellerhöchstens MärzenbierGärkeller 6/16 FassStellhefe 60 %Stellhefe aus dem Gärbottich nehmen · +8 · ohne FassJunges Fass anstechen · +14 · 1 FassMit Weizen gestrecktträgt MärzenbierGärbottich setzen lassen · +10 Fass−78 fl",
+    "kopf": "♪ DER RUF DES HAUSES Wirtshausschild und gemarkter Krug ▾ 10 Ruf von 100 Bekanntheit 10 Einlösung 100 GLEICHES BIER, 100 FASS, ZWEI PREISE ohne das Zeichen 2.479 fl mit dem Zeichen 2.511 fl + 1,3 im Hundert · 32 fl mehr für dieselbe Menge AUFGELD AUF DEN ANKER — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 fl BRAUJAHR 0 fl SEIT 1600 +37 fl zuletzt 1608, W1: 1 fl auf 72 fl an Gasthof Lindenhof · 48 fl aufs Ziel · 1,9 im Hundert bei Ruf 10 und einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET Freitrunk zur Kirchweih geben −18 fl − 1 Fass Den gemarkten Krug einführen −260 fl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Name wohnt jetzt in fremden Häusern. Jedes Schild ist ein Versprechen an einen Wirt, dem man nichts befehlen kann. Das Zeichen und das Register DAS ERBE noch 35 Wochen 7. Ursula Bruckner · sparsam · Feder 1,04× am Haus 0 · an der Person 0 nimmt 0 · 4 Fass Nachschrift · 5 Häuser −421 fl Ausgedinge · jährlich −17 fl Abfindung −19 fl Ohne Vergleich 0 fl CHRISTMOND 1611 KASSE 264 fl HOPFEN 53 GEWÖLBE 24/24 Fass WOCHE 13/30 CHRONIK 177 BUCH 2972 Brauhaus zum Anker · 1611/12 · Ursula Bruckner, sparsam · Die Ordnung ENDE",
+    "buch": [
+     {
+      "jahr": 1611,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1611,
+      "woche": 6,
+      "text": "2 Fass in den Gärkeller — Rein nach dem Gebot · Kellergärung im Felsenkeller"
+     },
+     {
+      "jahr": 1611,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1611,
+      "woche": 7,
+      "text": "Der Sud ist verdorben: Bottich 274 (2 Fass)"
+     },
+     {
+      "jahr": 1611,
+      "woche": 13,
+      "text": "Das Sudbuch wird geschlossen: 275 Sude, 1.018 Fass angestellt."
+     },
+     {
+      "jahr": 1611,
+      "woche": 13,
+      "text": "Der Sud ist verdorben: Bottich 273 (4 Fass)"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 268
+ }
+}

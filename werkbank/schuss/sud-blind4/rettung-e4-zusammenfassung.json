@@ -1,0 +1,22 @@
+{
+ "epoche": 4,
+ "abbruch": "ende brauereisterben",
+ "fehler": [],
+ "optionen": [
+  "sud:fuehrung:erfahrung",
+  "sud:fuehrung:labor",
+  "sud:fuehrung:rechner",
+  "sud:behandlung:natur",
+  "sud:behandlung:schoenen",
+  "sud:behandlung:filter",
+  "sud:behandlung:pasteur"
+ ],
+ "wochen": 123,
+ "zettelBeiseite": 7,
+ "beideAmZettel": 21,
+ "brettGeprueft": 102,
+ "reiterVersagte": 1,
+ "brettZweiOptionen": 6,
+ "brettEineOption": 95,
+ "brettKeine": 1
+}

@@ -1,0 +1,20 @@
+{
+ "epoche": 2,
+ "abbruch": null,
+ "fehler": [],
+ "optionen": [
+  "sud:schuettung:rein",
+  "sud:schuettung:weizen",
+  "sud:schuettung:hafer",
+  "sud:gaerung:ober",
+  "sud:gaerung:keller"
+ ],
+ "wochen": 271,
+ "zettelBeiseite": 21,
+ "beideAmZettel": 130,
+ "brettGeprueft": 141,
+ "reiterVersagte": 0,
+ "brettZweiOptionen": 141,
+ "brettEineOption": 0,
+ "brettKeine": 0
+}

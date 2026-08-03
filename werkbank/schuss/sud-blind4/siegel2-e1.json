@@ -1,0 +1,209 @@
+{
+ "epoche": 1,
+ "achsen": [
+  {
+   "achse": "wuerze",
+   "optionen": [
+    {
+     "zug": "sud:wuerze:grut",
+     "achse": "wuerze",
+     "k": "grut",
+     "preis": 0,
+     "marke": "läufthöchstens Grutbier",
+     "text": "Grut vom Grutamt"
+    },
+    {
+     "zug": "sud:wuerze:sack",
+     "achse": "wuerze",
+     "k": "sack",
+     "preis": 0,
+     "marke": "ohne Ausgabeträgt StarkbierHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche",
+     "text": "Hopfen im Sack, heimlich"
+    },
+    {
+     "zug": "sud:wuerze:brief",
+     "achse": "wuerze",
+     "k": "brief",
+     "preis": 78,
+     "marke": "unwiderruflichträgt StarkbierHaltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud",
+     "text": "Offen gehopft, mit Hopfenbrief −78 Pf"
+    }
+   ],
+   "festOptionen": [
+    "sud:wuerze:brief"
+   ],
+   "stufen": [
+    {
+     "gekauft": "sud:wuerze:brief",
+     "preis": 78,
+     "kauf": {
+      "geklickt": true,
+      "text": "Offen gehopft, mit Hopfenbrief −78 Pf"
+     },
+     "vor": {
+      "verfahren": {
+       "wuerze": "grut"
+      },
+      "fest": [],
+      "kasse": 5078,
+      "jahr": 1350,
+      "woche": 1,
+      "brettZu": false
+     },
+     "nach": {
+      "verfahren": {
+       "wuerze": "brief"
+      },
+      "fest": [
+       "wuerze:brief"
+      ],
+      "kasse": 5000,
+      "jahr": 1350,
+      "woche": 1,
+      "brettZu": false
+     },
+     "wege": [
+      {
+       "weg": "HINUNTER sud:wuerze:grut — echte Maus",
+       "ergebnis": {
+        "weg": "abgeschaltet",
+        "trifft": true,
+        "sollAus": true
+       },
+       "vorher": "brief",
+       "nachher": "brief",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:wuerze:grut — zwangsweise aktiviert, echte Maus",
+       "ergebnis": {
+        "geklickt": true,
+        "text": "Grut vom Grutamt"
+       },
+       "vorher": "brief",
+       "nachher": "brief",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:wuerze:grut — synthetisches click-Ereignis",
+       "ergebnis": "abgeschickt",
+       "vorher": "brief",
+       "nachher": "brief",
+       "zurueck": false,
+       "schild": {
+        "klasse": "sud-karte weg",
+        "marke": "das Siegel liegt daraufhöchstens Grutbier"
+       }
+      },
+      {
+       "weg": "HINUNTER sud:wuerze:sack — echte Maus",
+       "ergebnis": {
+        "weg": "abgeschaltet",
+        "trifft": true,
+        "sollAus": true
+       },
+       "vorher": "brief",
+       "nachher": "brief",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:wuerze:sack — zwangsweise aktiviert, echte Maus",
+       "ergebnis": {
+        "geklickt": true,
+        "text": "Hopfen im Sack, heimlich"
+       },
+       "vorher": "brief",
+       "nachher": "brief",
+       "zurueck": false
+      },
+      {
+       "weg": "HINUNTER sud:wuerze:sack — synthetisches click-Ereignis",
+       "ergebnis": "abgeschickt",
+       "vorher": "brief",
+       "nachher": "brief",
+       "zurueck": false,
+       "schild": {
+        "klasse": "sud-karte weg",
+        "marke": "das Siegel liegt daraufträgt StarkbierHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche"
+       }
+      },
+      {
+       "weg": "nach 12 Jahren: sud:wuerze:grut zwangsweise aktiviert",
+       "ergebnis": {
+        "weg": "verdeckt",
+        "aus": false,
+        "sollAus": true
+       },
+       "vorher": "brief",
+       "nachher": "brief",
+       "zurueck": false
+      }
+     ],
+     "nachSechsWochen": {
+      "verfahren": {
+       "wuerze": "brief"
+      },
+      "fest": [
+       "wuerze:brief"
+      ],
+      "kasse": 4970,
+      "jahr": 1350,
+      "woche": 7,
+      "brettZu": false
+     },
+     "zettel": {
+      "frei": null,
+      "kauf": null,
+      "gaerraum": {
+       "x": 576,
+       "y": 320.3515625,
+       "aus": false,
+       "sollAus": false,
+       "trifft": true,
+       "text": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+      }
+     },
+     "nachZwoelfJahren": {
+      "verfahren": {
+       "wuerze": "brief"
+      },
+      "fest": [
+       "wuerze:brief"
+      ],
+      "kasse": 36,
+      "jahr": 1353,
+      "woche": 13,
+      "brettZu": true
+     }
+    }
+   ]
+  }
+ ],
+ "fehler": [],
+ "optionen": [
+  {
+   "zug": "sud:wuerze:grut",
+   "achse": "wuerze",
+   "k": "grut",
+   "preis": 0,
+   "marke": "läufthöchstens Grutbier",
+   "text": "Grut vom Grutamt"
+  },
+  {
+   "zug": "sud:wuerze:sack",
+   "achse": "wuerze",
+   "k": "sack",
+   "preis": 0,
+   "marke": "ohne Ausgabeträgt StarkbierHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche",
+   "text": "Hopfen im Sack, heimlich"
+  },
+  {
+   "zug": "sud:wuerze:brief",
+   "achse": "wuerze",
+   "k": "brief",
+   "preis": 78,
+   "marke": "unwiderruflichträgt StarkbierHaltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud",
+   "text": "Offen gehopft, mit Hopfenbrief −78 Pf"
+  }
+ ]
+}

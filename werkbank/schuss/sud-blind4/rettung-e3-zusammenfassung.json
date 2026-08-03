@@ -1,0 +1,20 @@
+{
+ "epoche": 3,
+ "abbruch": "ende bank-verwertet",
+ "fehler": [],
+ "optionen": [
+  "sud:kaelte:natureis",
+  "sud:kaelte:warm",
+  "sud:kaelte:maschine",
+  "sud:hefe:betrieb",
+  "sud:hefe:reinzucht"
+ ],
+ "wochen": 116,
+ "zettelBeiseite": 8,
+ "beideAmZettel": 43,
+ "brettGeprueft": 73,
+ "reiterVersagte": 2,
+ "brettZweiOptionen": 4,
+ "brettEineOption": 67,
+ "brettKeine": 2
+}

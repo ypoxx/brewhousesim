@@ -1,0 +1,638 @@
+{
+ "epoche": 3,
+ "jahre": 14,
+ "V": {
+  "art": "V",
+  "gewaehlt": [],
+  "nachWahl": {
+   "jahr": 1884,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 14250,
+   "rohstoff": 120,
+   "verfahren": {
+    "kaelte": "natureis",
+    "hefe": "betrieb"
+   },
+   "fest": [],
+   "lager": 7,
+   "sorten": {
+    "lager": 7
+   },
+   "stufen": {
+    "2": 7
+   },
+   "haltbarSchnitt": 25,
+   "sudDurch": 0,
+   "sude": 1,
+   "legte": 0,
+   "gesamtFass": 24,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 24,
+   "plaetze": 24,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1884 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Natureis aus dem Fluss läuft trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine −9.800 M unwiderruflich trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Betriebshefe aus dem Bottich läuft höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen −3.400 M unwiderruflich trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Lagerbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern trägt die Pfanne E Exportbier 3 von 10 Häusern schlägt als Lagerbier aus DIE HEFEFÜHRUNG 70 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 36 von 36 hl · 1 Gärbottich Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. Warme Woche: ohne Maschine trägt der Gärkeller nur die Hälfte. 1 Lagerbier 36 hl reif in 2 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 1 Sude · 36 hl · 0 verloren 1884/1 36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich",
+    "sudzettel": "DER SUD · 1884 Natureis aus dem Fluss · Betriebshefe aus dem Bottich höchstens Lagerbier Gärkeller 36/36 hl Führung 70 % · Fass ×1,05 Hefe im Gärbottich abernten · +8 · ohne Fass Junges Lagerfass anstechen · +14 · 1,5 hl Ohne Kühlung durchgären lassen nur Schankbier Reinzuchthefe nach Hansen −3.400 M trägt Exportbier",
+    "kopf": "DER RUF DES HAUSES Etikett, Plakat, Litfaßsäule ▾ 25 Ruf von 100 Bekanntheit 41 ↘ Einlösung 60 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 4.800 M mit dem Zeichen 5.052 M + 5,3 im Hundert · 252 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 0 M Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 22 VON 40 BOGEN FREI Annonce im Wochenblatt −240 M Plakate anschlagen lassen −1.600 M Litfaßsäule mieten −2.400 M Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Zum ersten Mal reist der Name ohne das Fass. Und zum ersten Mal kann ihn jemand nachdrucken. Das Zeichen und das Register DAS ERBE noch 16 Wochen I. Wilhelmine Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 4,5 hl Eintragen · Bahnhofsgaststätte −2.280 M Leibrente · jährlich −1.657 M Abfindung −8.286 M Ohne Abfindung 0 M SEPTEMBER 1884 KASSE 14.250 M HOPFEN 120 EISKELLER 11/135 hl WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1884/85 · Wilhelmine Bruckner, sparsam · Die Maschine WEITER nächster Zug: Ablösung Ausschank am Markt — 1.706 M (Kasse reicht 8,4×) ♪",
+    "buch": [
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1888,
+   "woche": 11,
+   "ende": true,
+   "endgrund": "bank-verwertet",
+   "kasse": 85,
+   "rohstoff": 60,
+   "verfahren": {
+    "kaelte": "natureis",
+    "hefe": "betrieb"
+   },
+   "fest": [],
+   "lager": 40,
+   "sorten": {
+    "einfach": 16,
+    "lager": 24
+   },
+   "stufen": {
+    "1": 16,
+    "2": 24
+   },
+   "haltbarSchnitt": 17,
+   "sudDurch": 0,
+   "sude": 56,
+   "legte": 42,
+   "gesamtFass": 767,
+   "guete": 76,
+   "gestuftGesamt": 0,
+   "bottiche": 2,
+   "gaerfass": 48,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1888 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Natureis aus dem Fluss läuft trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine −9.800 M unwiderruflich trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Betriebshefe aus dem Bottich läuft höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen −3.400 M unwiderruflich trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Lagerbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern trägt die Pfanne E Exportbier 3 von 10 Häusern schlägt als Lagerbier aus DIE HEFEFÜHRUNG 76 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,08 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 72 von 72 hl · 2 Gärbottiche Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 55 Lagerbier 36 hl reif in 2 Wochen 56 Lagerbier 36 hl reif in 3 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 5 Sude · 120 hl · 0 verloren 1888/11 Das Sudbuch wird geschlossen: 56 Sude, 1.151 hl angestellt. 1888/10 36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich 1888/9 36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich",
+    "sudzettel": "DER SUD · 1888Natureis aus dem Fluss · Betriebshefe aus dem Bottichhöchstens LagerbierGärkeller 72/72 hlFührung 76 % · Fass ×1,08Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlOhne Kühlung durchgären lassennur SchankbierReinzuchthefe nach Hansen−3.400 Mträgt Exportbier",
+    "kopf": "DER RUF DES HAUSES GENOMMEN von Das Amtsgericht bis 1889 ▾ 1 Ruf von 100 NACHGEMACHT GENOMMEN BIS 1889 Bekanntheit 2 Einlösung 51 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 5.295 M mit dem Zeichen 5.306 M + 0,2 im Hundert · 11 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 +363 M zuletzt 1885, W15: 4 M auf 189 M an Bahnhofsgaststätte · 107 M aufs Zahlungsziel · 1,9 im Hundert bei Ruf 11 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen GENOMMEN · DAS AMTSGERICHT 1887 BIS 1889 Das Amtsgericht erkennt auf verfälschtes Bier und lässt das Urteil im Wochenblatt abdrucken — auf Kosten des Hauses. Die laufenden Auflagen sind damit wertlos und werden eingestellt. Die Gegendarstellung setzen lassen −2.800 M − 3,0 hl Der Keller taugt. Es kostet 2.800 M und 3,0 hl. WAS DER NAME JETZT KOSTET · 40 VON 40 BOGEN FREI Die Ausstellung beschicken −3.000 M − 3,0 hl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Das Urteil steht im Wochenblatt, zwischen den eigenen Annoncen. Das Zeichen und das Register DAS ERBE noch 7 Wochen III. Xaver Bruckner · sparsam · Feder 0,81× am Haus 0 · an der Person 0 nimmt 0 · 12 hl Nachschrift · 3 Häuser −3.540 M Leibrente · jährlich −132 M Abfindung −168 M Ohne Abfindung 0 M DEZEMBER 1888 KASSE 85 M HOPFEN 60 EISKELLER 60/135 hl WOCHE 11/30 CHRONIK 78 BUCH 799 Brauhaus zum Anker · 1888/89 · Xaver Bruckner, sparsam · Die Maschine ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1888,
+      "woche": 5,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1888,
+      "woche": 5,
+      "text": "Hefe im Gärbottich abernten — Bottich 54, +8"
+     },
+     {
+      "jahr": 1888,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1888,
+      "woche": 9,
+      "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1888,
+      "woche": 10,
+      "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1888,
+      "woche": 11,
+      "text": "Das Sudbuch wird geschlossen: 56 Sude, 1.151 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1888,
+   "woche": 11,
+   "ende": true,
+   "endgrund": "bank-verwertet",
+   "kasse": 85,
+   "rohstoff": 60,
+   "verfahren": {
+    "kaelte": "natureis",
+    "hefe": "betrieb"
+   },
+   "fest": [],
+   "lager": 40,
+   "sorten": {
+    "einfach": 16,
+    "lager": 24
+   },
+   "stufen": {
+    "1": 16,
+    "2": 24
+   },
+   "haltbarSchnitt": 17,
+   "sudDurch": 0,
+   "sude": 56,
+   "legte": 42,
+   "gesamtFass": 767,
+   "guete": 76,
+   "gestuftGesamt": 0,
+   "bottiche": 2,
+   "gaerfass": 48,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1888 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Natureis aus dem Fluss läuft trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen ohne Ausgabe höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine −9.800 M unwiderruflich trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Betriebshefe aus dem Bottich läuft höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen −3.400 M unwiderruflich trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Lagerbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern trägt die Pfanne E Exportbier 3 von 10 Häusern schlägt als Lagerbier aus DIE HEFEFÜHRUNG 76 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,08 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 72 von 72 hl · 2 Gärbottiche Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 55 Lagerbier 36 hl reif in 2 Wochen 56 Lagerbier 36 hl reif in 3 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 5 Sude · 120 hl · 0 verloren 1888/11 Das Sudbuch wird geschlossen: 56 Sude, 1.151 hl angestellt. 1888/10 36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich 1888/9 36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich",
+    "sudzettel": "DER SUD · 1888Natureis aus dem Fluss · Betriebshefe aus dem Bottichhöchstens LagerbierGärkeller 72/72 hlFührung 76 % · Fass ×1,08Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlOhne Kühlung durchgären lassennur SchankbierReinzuchthefe nach Hansen−3.400 Mträgt Exportbier",
+    "kopf": "DER RUF DES HAUSES GENOMMEN von Das Amtsgericht bis 1889 ▾ 1 Ruf von 100 NACHGEMACHT GENOMMEN BIS 1889 Bekanntheit 2 Einlösung 51 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 5.295 M mit dem Zeichen 5.306 M + 0,2 im Hundert · 11 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 +363 M zuletzt 1885, W15: 4 M auf 189 M an Bahnhofsgaststätte · 107 M aufs Zahlungsziel · 1,9 im Hundert bei Ruf 11 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen GENOMMEN · DAS AMTSGERICHT 1887 BIS 1889 Das Amtsgericht erkennt auf verfälschtes Bier und lässt das Urteil im Wochenblatt abdrucken — auf Kosten des Hauses. Die laufenden Auflagen sind damit wertlos und werden eingestellt. Die Gegendarstellung setzen lassen −2.800 M − 3,0 hl Der Keller taugt. Es kostet 2.800 M und 3,0 hl. WAS DER NAME JETZT KOSTET · 40 VON 40 BOGEN FREI Die Ausstellung beschicken −3.000 M − 3,0 hl Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Das Urteil steht im Wochenblatt, zwischen den eigenen Annoncen. Das Zeichen und das Register DAS ERBE noch 7 Wochen III. Xaver Bruckner · sparsam · Feder 0,81× am Haus 0 · an der Person 0 nimmt 0 · 12 hl Nachschrift · 3 Häuser −3.540 M Leibrente · jährlich −132 M Abfindung −168 M Ohne Abfindung 0 M DEZEMBER 1888 KASSE 85 M HOPFEN 60 EISKELLER 60/135 hl WOCHE 11/30 CHRONIK 78 BUCH 799 Brauhaus zum Anker · 1888/89 · Xaver Bruckner, sparsam · Die Maschine ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1888,
+      "woche": 5,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1888,
+      "woche": 5,
+      "text": "Hefe im Gärbottich abernten — Bottich 54, +8"
+     },
+     {
+      "jahr": 1888,
+      "woche": 6,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1888,
+      "woche": 9,
+      "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1888,
+      "woche": 10,
+      "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1888,
+      "woche": 11,
+      "text": "Das Sudbuch wird geschlossen: 56 Sude, 1.151 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 116
+ },
+ "A": {
+  "art": "A",
+  "gewaehlt": [
+   {
+    "zug": "sud:kaelte:warm",
+    "preis": 0,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1884,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 14250,
+   "rohstoff": 120,
+   "verfahren": {
+    "kaelte": "warm",
+    "hefe": "betrieb"
+   },
+   "fest": [],
+   "lager": 7,
+   "sorten": {
+    "schank": 7
+   },
+   "stufen": {
+    "1": 7
+   },
+   "haltbarSchnitt": 2,
+   "sudDurch": 7,
+   "sude": 2,
+   "legte": 0,
+   "gesamtFass": 31,
+   "guete": 70,
+   "gestuftGesamt": 1,
+   "bottiche": 1,
+   "gaerfass": 24,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1884 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Natureis aus dem Fluss wie immer trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen läuft höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine −9.800 M unwiderruflich trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Betriebshefe aus dem Bottich läuft höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen −3.400 M unwiderruflich trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Schankbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern schlägt als Schankbier aus E Exportbier 3 von 10 Häusern schlägt als Schankbier aus Gasthof Lindenhof und Landgasthof Hirsch und Bahnhofsgaststätte führen nur Exportbier und bekommen vom Anker nichts. Dieses Braujahr 1 Bottich zurückgestuft. DIE HEFEFÜHRUNG 70 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 36 von 72 hl · 1 Gärbottich Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 1 Lagerbier 36 hl reif in 2 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 2 Sude · 47 hl · 0 verloren · 1 gestuft 1884/1 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1884/1 Bottich 2: Lagerbier schlägt als Schankbier aus — die Pfanne trägt es nicht 1884/1 11 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich",
+    "sudzettel": "DER SUD · 1884Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottichhöchstens SchankbierGärkeller 36/72 hlFührung 70 % · Fass ×1,05Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlNatureis aus dem Flussträgt ExportbierReinzuchthefe nach Hansen−3.400 Mträgt Exportbier",
+    "kopf": "♪ DER RUF DES HAUSES Etikett, Plakat, Litfaßsäule ▾ 25 Ruf von 100 Bekanntheit 41 ↘ Einlösung 60 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 4.800 M mit dem Zeichen 5.052 M + 5,3 im Hundert · 252 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 0 M Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 22 VON 40 BOGEN FREI Annonce im Wochenblatt −240 M Plakate anschlagen lassen −1.600 M Litfaßsäule mieten −2.400 M Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Zum ersten Mal reist der Name ohne das Fass. Und zum ersten Mal kann ihn jemand nachdrucken. Das Zeichen und das Register DAS ERBE noch 16 Wochen I. Wilhelmine Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 4,5 hl Eintragen · Bahnhofsgaststätte −2.280 M Leibrente · jährlich −1.657 M Abfindung −8.286 M Ohne Abfindung 0 M SEPTEMBER 1884 KASSE 14.250 M HOPFEN 120 EISKELLER 11/135 hl WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1884/85 · Wilhelmine Bruckner, sparsam · Die Maschine WEITER nächster Zug: Ablösung Ausschank am Markt — 1.706 M (Kasse reicht 8,4×)",
+    "buch": [
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "DIE KÄLTE: Ohne Kühlung durchgären lassen"
+     },
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "11 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "Bottich 2: Lagerbier schlägt als Schankbier aus — die Pfanne trägt es nicht"
+     },
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1896,
+   "woche": 11,
+   "ende": true,
+   "endgrund": "bank-verwertet",
+   "kasse": 886,
+   "rohstoff": 92,
+   "verfahren": {
+    "kaelte": "warm",
+    "hefe": "betrieb"
+   },
+   "fest": [],
+   "lager": 16,
+   "sorten": {
+    "einfach": 16
+   },
+   "stufen": {
+    "1": 16
+   },
+   "haltbarSchnitt": 1,
+   "sudDurch": 16,
+   "sude": 257,
+   "legte": 219,
+   "gesamtFass": 4700,
+   "guete": 96,
+   "gestuftGesamt": 112,
+   "bottiche": 1,
+   "gaerfass": 24,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1896 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Natureis aus dem Fluss wie immer trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen läuft höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine −9.800 M unwiderruflich trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Betriebshefe aus dem Bottich läuft höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen −3.400 M unwiderruflich trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Schankbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern schlägt als Schankbier aus E Exportbier 3 von 10 Häusern schlägt als Schankbier aus Gasthof Lindenhof und Landgasthof Hirsch und Bahnhofsgaststätte führen nur Exportbier und bekommen vom Anker nichts. DIE HEFEFÜHRUNG 96 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,18 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 36 von 72 hl · 1 Gärbottich Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 256 Lagerbier → Schankbier 36 hl reif in 2 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 5 Sude · 132 hl · 0 verloren 1896/11 Das Sudbuch wird geschlossen: 257 Sude, 7.050 hl angestellt. 1896/11 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1896/11 24 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich",
+    "sudzettel": "DER SUD · 1896Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottichhöchstens SchankbierGärkeller 36/72 hlFührung 96 % · Fass ×1,18Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlNatureis aus dem Flussträgt ExportbierReinzuchthefe nach Hansen−3.400 Mträgt Exportbier",
+    "kopf": "♪ DER RUF DES HAUSES GENOMMEN von Das Amtsgericht bis 1897 ▾ 0 Ruf von 100 GENOMMEN BIS 1897 Bekanntheit 2 Einlösung 0 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 7.026 M mit dem Zeichen 7.026 M + 0,0 im Hundert · 0 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 +255 M zuletzt 1885, W30: 1 M auf 59 M an Brückenwirt · 33 M aufs Zahlungsziel · 1,0 im Hundert bei Ruf 5 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen GENOMMEN · DAS AMTSGERICHT 1895 BIS 1897 Das Amtsgericht erkennt auf verfälschtes Bier und lässt das Urteil im Wochenblatt abdrucken — auf Kosten des Hauses. Die laufenden Auflagen sind damit wertlos und werden eingestellt. Die Gegendarstellung setzen lassen −2.800 M − 3,0 hl Erst der Sud, dann die Abbitte: die Güte des Kellers ist 30, gebraucht werden 55. Das Zeichen hängt, und der Keller taugt nicht — Güte 30 von 100. Seit 5 von 5 Wochen; danach steht es im Register. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET · 40 VON 40 BOGEN FREI Die Ausstellung beschicken −3.000 M − 3,0 hl Das Warenzeichen eintragen −4.200 M Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Das Urteil steht im Wochenblatt, zwischen den eigenen Annoncen. Das Zeichen und das Register DAS ERBE noch 4 Wochen 7. Xaver Bruckner · sparsam · Feder 1,04× am Haus 0 · an der Person 0 nimmt 0 · 4,5 hl Nachschrift · 6 Häuser −14.030 M Leibrente · jährlich −169 M Abfindung −169 M Ohne Abfindung 0 M DEZEMBER 1896 KASSE 886 M HOPFEN 92 EISKELLER 24/47 hl WOCHE 11/30 CHRONIK 279 BUCH 2552 Brauhaus zum Anker · 1896/97 · Xaver Bruckner, sparsam · Die Maschine ENDE",
+    "buch": [
+     {
+      "jahr": 1896,
+      "woche": 9,
+      "text": "Hefe aus dem Fass abernten — junges Fass, 1 Woche alt, +14"
+     },
+     {
+      "jahr": 1896,
+      "woche": 10,
+      "text": "Hefe aus dem Fass abernten — junges Fass, 2 Wochen alt, +14"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "36 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "24 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "Das Sudbuch wird geschlossen: 257 Sude, 7.050 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1896,
+   "woche": 11,
+   "ende": true,
+   "endgrund": "bank-verwertet",
+   "kasse": 886,
+   "rohstoff": 92,
+   "verfahren": {
+    "kaelte": "warm",
+    "hefe": "betrieb"
+   },
+   "fest": [],
+   "lager": 16,
+   "sorten": {
+    "einfach": 16
+   },
+   "stufen": {
+    "1": 16
+   },
+   "haltbarSchnitt": 1,
+   "sudDurch": 16,
+   "sude": 257,
+   "legte": 219,
+   "gesamtFass": 4700,
+   "guete": 96,
+   "gestuftGesamt": 112,
+   "bottiche": 1,
+   "gaerfass": 24,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1896 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Natureis aus dem Fluss wie immer trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen läuft höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine −9.800 M unwiderruflich trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Betriebshefe aus dem Bottich läuft höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen −3.400 M unwiderruflich trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Schankbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern schlägt als Schankbier aus E Exportbier 3 von 10 Häusern schlägt als Schankbier aus Gasthof Lindenhof und Landgasthof Hirsch und Bahnhofsgaststätte führen nur Exportbier und bekommen vom Anker nichts. DIE HEFEFÜHRUNG 96 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,18 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 36 von 72 hl · 1 Gärbottich Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 256 Lagerbier → Schankbier 36 hl reif in 2 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 5 Sude · 132 hl · 0 verloren 1896/11 Das Sudbuch wird geschlossen: 257 Sude, 7.050 hl angestellt. 1896/11 1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass 1896/11 24 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich",
+    "sudzettel": "DER SUD · 1896Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottichhöchstens SchankbierGärkeller 36/72 hlFührung 96 % · Fass ×1,18Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlNatureis aus dem Flussträgt ExportbierReinzuchthefe nach Hansen−3.400 Mträgt Exportbier",
+    "kopf": "♪ DER RUF DES HAUSES GENOMMEN von Das Amtsgericht bis 1897 ▾ 0 Ruf von 100 GENOMMEN BIS 1897 Bekanntheit 2 Einlösung 0 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 7.026 M mit dem Zeichen 7.026 M + 0,0 im Hundert · 0 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 +255 M zuletzt 1885, W30: 1 M auf 59 M an Brückenwirt · 33 M aufs Zahlungsziel · 1,0 im Hundert bei Ruf 5 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen GENOMMEN · DAS AMTSGERICHT 1895 BIS 1897 Das Amtsgericht erkennt auf verfälschtes Bier und lässt das Urteil im Wochenblatt abdrucken — auf Kosten des Hauses. Die laufenden Auflagen sind damit wertlos und werden eingestellt. Die Gegendarstellung setzen lassen −2.800 M − 3,0 hl Erst der Sud, dann die Abbitte: die Güte des Kellers ist 30, gebraucht werden 55. Das Zeichen hängt, und der Keller taugt nicht — Güte 30 von 100. Seit 5 von 5 Wochen; danach steht es im Register. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET · 40 VON 40 BOGEN FREI Die Ausstellung beschicken −3.000 M − 3,0 hl Das Warenzeichen eintragen −4.200 M Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Das Urteil steht im Wochenblatt, zwischen den eigenen Annoncen. Das Zeichen und das Register DAS ERBE noch 4 Wochen 7. Xaver Bruckner · sparsam · Feder 1,04× am Haus 0 · an der Person 0 nimmt 0 · 4,5 hl Nachschrift · 6 Häuser −14.030 M Leibrente · jährlich −169 M Abfindung −169 M Ohne Abfindung 0 M DEZEMBER 1896 KASSE 886 M HOPFEN 92 EISKELLER 24/47 hl WOCHE 11/30 CHRONIK 279 BUCH 2552 Brauhaus zum Anker · 1896/97 · Xaver Bruckner, sparsam · Die Maschine ENDE",
+    "buch": [
+     {
+      "jahr": 1896,
+      "woche": 9,
+      "text": "Hefe aus dem Fass abernten — junges Fass, 1 Woche alt, +14"
+     },
+     {
+      "jahr": 1896,
+      "woche": 10,
+      "text": "Hefe aus dem Fass abernten — junges Fass, 2 Wochen alt, +14"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "36 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "24 hl in den Gärkeller — Ohne Kühlung durchgären lassen · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1896,
+      "woche": 11,
+      "text": "Das Sudbuch wird geschlossen: 257 Sude, 7.050 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 325
+ },
+ "B": {
+  "art": "B",
+  "gewaehlt": [
+   {
+    "zug": "sud:kaelte:maschine",
+    "preis": 9800,
+    "geklickt": true
+   },
+   {
+    "zug": "sud:hefe:reinzucht",
+    "preis": 3400,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1884,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 14250,
+   "rohstoff": 120,
+   "verfahren": {
+    "kaelte": "maschine",
+    "hefe": "reinzucht"
+   },
+   "fest": [
+    "kaelte:maschine",
+    "hefe:reinzucht"
+   ],
+   "lager": 0,
+   "sorten": {},
+   "stufen": {},
+   "haltbarSchnitt": 0,
+   "sudDurch": 0,
+   "sude": 2,
+   "legte": 0,
+   "gesamtFass": 31,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 2,
+   "gaerfass": 31,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1884 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Aufstellung abgenommen: Lindesche Kältemaschine. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Natureis aus dem Fluss das Siegel liegt darauf trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen das Siegel liegt darauf höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine läuft trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Reinzucht angestellt: Reinzuchthefe nach Hansen. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Betriebshefe aus dem Bottich das Siegel liegt darauf höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen läuft trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Exportbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern trägt die Pfanne E Exportbier 3 von 10 Häusern trägt die Pfanne DIE HEFEFÜHRUNG 70 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 47 von 72 hl · 2 Gärbottiche Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 1 Lagerbier 36 hl reif in 2 Wochen 2 Lagerbier 11 hl reif in 1 Woche Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 2 Sude · 47 hl · 0 verloren 1884/1 DIE HEFE: Reinzuchthefe nach Hansen 1884/1 11 hl in den Gärkeller — Lindesche Kältemaschine · Betriebshefe aus dem Bottich 1884/1 DIE KÄLTE: Lindesche Kältemaschine",
+    "sudzettel": "DER SUD · 1884 Lindesche Kältemaschine · Reinzuchthefe nach Hansen höchstens Exportbier Gärkeller 47/72 hl Führung 70 % · Fass ×1,05 Hefe im Gärbottich abernten · +8 · ohne Fass Junges Lagerfass anstechen · +14 · 1,5 hl Gärbottich aufstellen · +60 hl −1.900 M",
+    "kopf": "♪ DER RUF DES HAUSES Etikett, Plakat, Litfaßsäule ▾ 25 Ruf von 100 Bekanntheit 41 ↘ Einlösung 60 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 4.800 M mit dem Zeichen 5.052 M + 5,3 im Hundert · 252 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 0 M Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen Das Zeichen hängt, und der Keller taugt nicht — Güte 0 von 100. Seit 1 von 5 Wochen; danach steht es im Register. Nach der dritten solchen Zeile nimmt Das Amtsgericht das Zeichen — 0 von 3 stehen schon da. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET · 22 VON 40 BOGEN FREI Annonce im Wochenblatt −240 M Plakate anschlagen lassen −1.600 M Litfaßsäule mieten −2.400 M Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Zum ersten Mal reist der Name ohne das Fass. Und zum ersten Mal kann ihn jemand nachdrucken. Das Zeichen und das Register DAS ERBE noch 16 Wochen I. Wilhelmine Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 0,0 hl Eintragen · Bahnhofsgaststätte −2.280 M Leibrente · jährlich −1.633 M Abfindung −8.164 M Ohne Abfindung 0 M SEPTEMBER 1884 KASSE 14.250 M HOPFEN 120 EISKELLER 0,0/135 hl WOCHE 1/30 CHRONIK 6 BUCH 3 Brauhaus zum Anker · 1884/85 · Wilhelmine Bruckner, sparsam · Die Maschine WEITER nächster Zug: Ablösung Ausschank am Markt — 1.706 M (Kasse reicht 8,4×)",
+    "buch": [
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "36 hl in den Gärkeller — Natureis aus dem Fluss · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "DIE KÄLTE: Lindesche Kältemaschine"
+     },
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "11 hl in den Gärkeller — Lindesche Kältemaschine · Betriebshefe aus dem Bottich"
+     },
+     {
+      "jahr": 1884,
+      "woche": 1,
+      "text": "DIE HEFE: Reinzuchthefe nach Hansen"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1890,
+   "woche": 11,
+   "ende": true,
+   "endgrund": "bank-verwertet",
+   "kasse": 4084,
+   "rohstoff": 128,
+   "verfahren": {
+    "kaelte": "maschine",
+    "hefe": "reinzucht"
+   },
+   "fest": [
+    "kaelte:maschine",
+    "hefe:reinzucht"
+   ],
+   "lager": 27,
+   "sorten": {
+    "lager": 27
+   },
+   "stufen": {
+    "2": 27
+   },
+   "haltbarSchnitt": 29.78,
+   "sudDurch": 3,
+   "sude": 130,
+   "legte": 96,
+   "gesamtFass": 1855,
+   "guete": 98,
+   "gestuftGesamt": 0,
+   "bottiche": 2,
+   "gaerfass": 48,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1890 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Aufstellung abgenommen: Lindesche Kältemaschine. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Natureis aus dem Fluss das Siegel liegt darauf trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen das Siegel liegt darauf höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine läuft trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Reinzucht angestellt: Reinzuchthefe nach Hansen. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Betriebshefe aus dem Bottich das Siegel liegt darauf höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen läuft trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Exportbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern trägt die Pfanne E Exportbier 3 von 10 Häusern trägt die Pfanne DIE HEFEFÜHRUNG 98 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,19 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 72 von 72 hl · 2 Gärbottiche Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 129 Lagerbier 36 hl reif in 1 Woche 130 Lagerbier 36 hl reif in 2 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 2 Sude · 72 hl · 0 verloren 1890/11 Das Sudbuch wird geschlossen: 130 Sude, 2.783 hl angestellt. 1890/10 Hefe im Gärbottich abernten — Bottich 129, +8 1890/10 36 hl in den Gärkeller — Lindesche Kältemaschine · Reinzuchthefe nach Hansen",
+    "sudzettel": "DER SUD · 1890Lindesche Kältemaschine · Reinzuchthefe nach Hansenhöchstens ExportbierGärkeller 72/72 hlFührung 98 % · Fass ×1,19Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlGärbottich aufstellen · +60 hl−1.900 M",
+    "kopf": "♪ DER RUF DES HAUSES Etikett, Plakat, Litfaßsäule ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 100 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 5.928 M mit dem Zeichen 5.978 M + 0,8 im Hundert · 50 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 +920 M zuletzt 1887, W1: 1 M auf 123 M an Brückenwirt · 69 M aufs Zahlungsziel · 0,7 im Hundert bei Ruf 4 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 40 VON 40 BOGEN FREI Annonce im Wochenblatt −240 M Etiketten auflegen −900 M Plakate anschlagen lassen −1.600 M Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Bahnhofsgaststätte ist weg. Der Name des Nachbarn stand besser da. Das Zeichen und das Register DAS ERBE noch 6 Wochen IV. Xaver Bruckner · bequem · Feder 1,61× am Haus 0 · an der Person 0 nimmt 0 · 7,5 hl Nachschrift · 9 Häuser −37.933 M Leibrente · jährlich −262 M Abfindung −262 M Ohne Abfindung 0 M DEZEMBER 1890 KASSE 4.084 M HOPFEN 128 EISKELLER 41/135 hl WOCHE 11/30 CHRONIK 100 BUCH 2368 Brauhaus zum Anker · 1890/91 · Xaver Bruckner, bequem · Die Maschine ENDE",
+    "buch": [
+     {
+      "jahr": 1890,
+      "woche": 8,
+      "text": "Hefe aus dem Fass abernten — junges Fass, 7 Wochen alt, +14"
+     },
+     {
+      "jahr": 1890,
+      "woche": 9,
+      "text": "36 hl in den Gärkeller — Lindesche Kältemaschine · Reinzuchthefe nach Hansen"
+     },
+     {
+      "jahr": 1890,
+      "woche": 9,
+      "text": "Hefe im Gärbottich abernten — Bottich 129, +8"
+     },
+     {
+      "jahr": 1890,
+      "woche": 10,
+      "text": "36 hl in den Gärkeller — Lindesche Kältemaschine · Reinzuchthefe nach Hansen"
+     },
+     {
+      "jahr": 1890,
+      "woche": 10,
+      "text": "Hefe im Gärbottich abernten — Bottich 129, +8"
+     },
+     {
+      "jahr": 1890,
+      "woche": 11,
+      "text": "Das Sudbuch wird geschlossen: 130 Sude, 2.783 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1890,
+   "woche": 11,
+   "ende": true,
+   "endgrund": "bank-verwertet",
+   "kasse": 4084,
+   "rohstoff": 128,
+   "verfahren": {
+    "kaelte": "maschine",
+    "hefe": "reinzucht"
+   },
+   "fest": [
+    "kaelte:maschine",
+    "hefe:reinzucht"
+   ],
+   "lager": 27,
+   "sorten": {
+    "lager": 27
+   },
+   "stufen": {
+    "2": 27
+   },
+   "haltbarSchnitt": 29.78,
+   "sudDurch": 3,
+   "sude": 130,
+   "legte": 96,
+   "gesamtFass": 1855,
+   "guete": 98,
+   "gestuftGesamt": 0,
+   "bottiche": 2,
+   "gaerfass": 48,
+   "plaetze": 48,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDWERK · 1890 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der Kasse und läuft im Juli. Aufstellung abgenommen: Lindesche Kältemaschine. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Natureis aus dem Fluss das Siegel liegt darauf trägt Exportbier Haltbarkeit ×1,35 · +2 Wo. Gärung · warme Wochen: halber Gärraum Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei Wochen länger im Bottich, ein Drittel mehr Haltbarkeit. In den warmen Wochen trägt der Gärkeller nur die Hälfte. Ohne Kühlung durchgären lassen das Siegel liegt darauf höchstens Schankbier Haltbarkeit ×0,6 · Anzeige 8 % je Woche Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum mehr als ein Drittel — und ohne Kälte gibt es kein Lagerbier: was herauskommt, ist Schankbier, und der Gasthof nimmt es nicht. In einem Betrieb ohne Eis und ohne Geld ist das der Weg, auf dem trotzdem gebraut wird. Warm geführt kippt etwa jeder fünfzehnte Bottich in der Woche — und die Untersuchungsanstalt zieht Proben. Lindesche Kältemaschine läuft trägt Exportbier Haltbarkeit ×1,6 · +1 Wo. Gärung Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganze Jahr dieselbe Temperatur, die Gärung wird eine Woche kürzer als mit Eis, und das Bier hält länger. Unwiderruflich — der Eiskeller wird zum Maschinenhaus umgebaut. DIE HEFE Woher kommt die Hefe? Aus dem eigenen Bottich ist sie umsonst und bringt mit, was sonst noch drin war. Reinzucht angestellt: Reinzuchthefe nach Hansen. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Betriebshefe aus dem Bottich das Siegel liegt darauf höchstens Lagerbier Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas unsauberer — und ein Exportbier, das wochenlang fährt, ist damit nicht zu verbürgen: es schlägt als Lagerbier aus. Reinzuchthefe nach Hansen läuft trägt Exportbier Haltbarkeit ×1,1 Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Sud wird berechenbar, und erst damit steht ein Exportbier im Fass. Unwiderruflich — die alte Betriebshefe wird verworfen und ist nicht wiederzubeschaffen. WAS BEIM WIRT ANKOMMT höchstens Exportbier Ohne Kälte bleibt Schankbier — kein Gasthof nimmt es. S Schankbier 7 von 10 Häusern trägt die Pfanne L Lagerbier 9 von 10 Häusern trägt die Pfanne E Exportbier 3 von 10 Häusern trägt die Pfanne DIE HEFEFÜHRUNG 98 % Jede Ernte trägt mit, was im Bottich sonst noch lebte. Was jetzt eingelegt wird, hält ×1,19 — die Hefe steht. Hefe im Gärbottich abernten · +8 Junges Lagerfass anstechen · +14 Altes Lagerfass anstechen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 72 von 72 hl · 2 Gärbottiche Erst der eigene Gärkeller erlaubt Lagerzeiten in Monaten. 129 Lagerbier 36 hl reif in 1 Woche 130 Lagerbier 36 hl reif in 2 Wochen Gärbottich aufstellen · +60 hl −1.900 M Gekaufter Gärraum trägt nur, solange es kalt ist. DAS SUDBUCH 2 Sude · 72 hl · 0 verloren 1890/11 Das Sudbuch wird geschlossen: 130 Sude, 2.783 hl angestellt. 1890/10 Hefe im Gärbottich abernten — Bottich 129, +8 1890/10 36 hl in den Gärkeller — Lindesche Kältemaschine · Reinzuchthefe nach Hansen",
+    "sudzettel": "DER SUD · 1890Lindesche Kältemaschine · Reinzuchthefe nach Hansenhöchstens ExportbierGärkeller 72/72 hlFührung 98 % · Fass ×1,19Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlGärbottich aufstellen · +60 hl−1.900 M",
+    "kopf": "♪ DER RUF DES HAUSES Etikett, Plakat, Litfaßsäule ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 100 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 5.928 M mit dem Zeichen 5.978 M + 0,8 im Hundert · 50 M mehr für dieselbe Menge AUFGELD AUF DIE MARKE — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 M BRAUJAHR 0 M SEIT 1884 +920 M zuletzt 1887, W1: 1 M auf 123 M an Brückenwirt · 69 M aufs Zahlungsziel · 0,7 im Hundert bei Ruf 4 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 40 VON 40 BOGEN FREI Annonce im Wochenblatt −240 M Etiketten auflegen −900 M Plakate anschlagen lassen −1.600 M Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Bahnhofsgaststätte ist weg. Der Name des Nachbarn stand besser da. Das Zeichen und das Register DAS ERBE noch 6 Wochen IV. Xaver Bruckner · bequem · Feder 1,61× am Haus 0 · an der Person 0 nimmt 0 · 7,5 hl Nachschrift · 9 Häuser −37.933 M Leibrente · jährlich −262 M Abfindung −262 M Ohne Abfindung 0 M DEZEMBER 1890 KASSE 4.084 M HOPFEN 128 EISKELLER 41/135 hl WOCHE 11/30 CHRONIK 100 BUCH 2368 Brauhaus zum Anker · 1890/91 · Xaver Bruckner, bequem · Die Maschine ENDE",
+    "buch": [
+     {
+      "jahr": 1890,
+      "woche": 8,
+      "text": "Hefe aus dem Fass abernten — junges Fass, 7 Wochen alt, +14"
+     },
+     {
+      "jahr": 1890,
+      "woche": 9,
+      "text": "36 hl in den Gärkeller — Lindesche Kältemaschine · Reinzuchthefe nach Hansen"
+     },
+     {
+      "jahr": 1890,
+      "woche": 9,
+      "text": "Hefe im Gärbottich abernten — Bottich 129, +8"
+     },
+     {
+      "jahr": 1890,
+      "woche": 10,
+      "text": "36 hl in den Gärkeller — Lindesche Kältemaschine · Reinzuchthefe nach Hansen"
+     },
+     {
+      "jahr": 1890,
+      "woche": 10,
+      "text": "Hefe im Gärbottich abernten — Bottich 129, +8"
+     },
+     {
+      "jahr": 1890,
+      "woche": 11,
+      "text": "Das Sudbuch wird geschlossen: 130 Sude, 2.783 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 146
+ }
+}

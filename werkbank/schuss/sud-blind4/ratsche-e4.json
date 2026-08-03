@@ -1,0 +1,397 @@
+{
+ "epoche": 4,
+ "schritte": [
+  {
+   "achse": "fuehrung",
+   "gekauft": "sud:fuehrung:labor",
+   "preis": 42000,
+   "kauf": {
+    "geklickt": true
+   },
+   "vor": {
+    "fuehrung": "erfahrung",
+    "behandlung": "natur"
+   },
+   "nach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "stand": {
+    "sud:fuehrung:erfahrung": {
+     "x": 113.7578125,
+     "y": 360.953125,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens PilsnerStreuung ±6 %",
+     "text": "Nach Erfahrung des Braumeisters"
+    },
+    "sud:fuehrung:labor": {
+     "x": 272.6953125,
+     "y": 370.671875,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte gewaehlt fest",
+     "marke": "läuftträgt ExportbierStreuung ±2 %",
+     "text": "Betriebslabor, Stammwürze und Bittereinheiten"
+    },
+    "sud:fuehrung:rechner": {
+     "x": 432.6328125,
+     "y": 370.5,
+     "aus": false,
+     "sollAus": false,
+     "trifft": true,
+     "karte": "sud-karte fest",
+     "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 %",
+     "text": "Prozessrechner am Sudwerk −118.000 DM"
+    }
+   },
+   "wege": [
+    {
+     "ziel": "sud:fuehrung:erfahrung",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens PilsnerStreuung ±6 %"
+     },
+     "vorher": "labor",
+     "nachher": "labor",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:fuehrung:erfahrung",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "labor",
+     "nachher": "labor",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:fuehrung:erfahrung",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "labor",
+     "nachher": "labor",
+     "zurueck": false
+    }
+   ]
+  },
+  {
+   "achse": "fuehrung",
+   "gekauft": "sud:fuehrung:rechner",
+   "preis": 118000,
+   "kauf": {
+    "geklickt": true
+   },
+   "vor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "nach": {
+    "fuehrung": "rechner",
+    "behandlung": "natur"
+   },
+   "stand": {
+    "sud:fuehrung:erfahrung": {
+     "x": 113.7578125,
+     "y": 360.953125,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens PilsnerStreuung ±6 %",
+     "text": "Nach Erfahrung des Braumeisters"
+    },
+    "sud:fuehrung:labor": {
+     "x": 272.6953125,
+     "y": 370.671875,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte fest weg",
+     "marke": "das Siegel liegt daraufträgt ExportbierStreuung ±2 %",
+     "text": "Betriebslabor, Stammwürze und Bittereinheiten"
+    },
+    "sud:fuehrung:rechner": {
+     "x": 432.6328125,
+     "y": 361.953125,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte gewaehlt fest",
+     "marke": "läuftträgt ExportbierHaltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 %",
+     "text": "Prozessrechner am Sudwerk"
+    }
+   },
+   "wege": [
+    {
+     "ziel": "sud:fuehrung:erfahrung",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens PilsnerStreuung ±6 %"
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:fuehrung:erfahrung",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:fuehrung:erfahrung",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:fuehrung:labor",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufträgt ExportbierStreuung ±2 %"
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:fuehrung:labor",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:fuehrung:labor",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    }
+   ]
+  },
+  {
+   "achse": "behandlung",
+   "gekauft": "sud:behandlung:pasteur",
+   "preis": 74000,
+   "kauf": {
+    "geklickt": true
+   },
+   "vor": {
+    "fuehrung": "rechner",
+    "behandlung": "natur"
+   },
+   "nach": {
+    "fuehrung": "rechner",
+    "behandlung": "pasteur"
+   },
+   "stand": {
+    "sud:behandlung:natur": {
+     "x": 94.265625,
+     "y": 634.171875,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens Pilsner",
+     "text": "Naturtrüb, unfiltriert"
+    },
+    "sud:behandlung:schoenen": {
+     "x": 213.21875,
+     "y": 634.171875,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufhöchstens PilsnerHaltbarkeit ×1,15 · −1,5 hl je Sud",
+     "text": "Schönen mit Kieselsol"
+    },
+    "sud:behandlung:filter": {
+     "x": 332.171875,
+     "y": 634,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte weg",
+     "marke": "das Siegel liegt daraufträgt ExportbierHaltbarkeit ×1,4",
+     "text": "Kieselgurfilter −26.000 DM"
+    },
+    "sud:behandlung:pasteur": {
+     "x": 452.125,
+     "y": 628.6015625,
+     "aus": true,
+     "sollAus": true,
+     "trifft": true,
+     "karte": "sud-karte gewaehlt fest",
+     "marke": "läuftträgt ExportbierHaltbarkeit ×2 · −3,0 hl je Sud",
+     "text": "Tunnelpasteur"
+    }
+   },
+   "wege": [
+    {
+     "ziel": "sud:behandlung:natur",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens Pilsner"
+     },
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:natur",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:natur",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:schoenen",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufhöchstens PilsnerHaltbarkeit ×1,15 · −1,5 hl je Sud"
+     },
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:schoenen",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:schoenen",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:filter",
+     "art": "echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "sollAus": true,
+      "marke": "das Siegel liegt daraufträgt ExportbierHaltbarkeit ×1,4"
+     },
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:filter",
+     "art": "zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true
+     },
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    },
+    {
+     "ziel": "sud:behandlung:filter",
+     "art": "synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "pasteur",
+     "nachher": "pasteur",
+     "zurueck": false
+    }
+   ]
+  }
+ ],
+ "fehler": [],
+ "optionen": [
+  {
+   "zug": "sud:fuehrung:erfahrung",
+   "achse": "fuehrung",
+   "k": "erfahrung",
+   "preis": 0,
+   "marke": "läufthöchstens PilsnerStreuung ±6 %"
+  },
+  {
+   "zug": "sud:fuehrung:labor",
+   "achse": "fuehrung",
+   "k": "labor",
+   "preis": 42000,
+   "marke": "unwiderruflichträgt ExportbierStreuung ±2 %"
+  },
+  {
+   "zug": "sud:fuehrung:rechner",
+   "achse": "fuehrung",
+   "k": "rechner",
+   "preis": 118000,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 %"
+  },
+  {
+   "zug": "sud:behandlung:natur",
+   "achse": "behandlung",
+   "k": "natur",
+   "preis": 0,
+   "marke": "läufthöchstens Pilsner"
+  },
+  {
+   "zug": "sud:behandlung:schoenen",
+   "achse": "behandlung",
+   "k": "schoenen",
+   "preis": 0,
+   "marke": "ohne Ausgabehöchstens PilsnerHaltbarkeit ×1,15 · −1,5 hl je Sud"
+  },
+  {
+   "zug": "sud:behandlung:filter",
+   "achse": "behandlung",
+   "k": "filter",
+   "preis": 26000,
+   "marke": "einmal zu zahlenträgt ExportbierHaltbarkeit ×1,4"
+  },
+  {
+   "zug": "sud:behandlung:pasteur",
+   "achse": "behandlung",
+   "k": "pasteur",
+   "preis": 74000,
+   "marke": "unwiderruflichträgt ExportbierHaltbarkeit ×2 · −3,0 hl je Sud"
+  }
+ ]
+}

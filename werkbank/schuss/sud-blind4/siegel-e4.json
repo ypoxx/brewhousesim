@@ -1,0 +1,321 @@
+{
+ "epoche": 4,
+ "optionen": [
+  {
+   "zug": "sud:fuehrung:erfahrung",
+   "achse": "fuehrung",
+   "k": "erfahrung",
+   "preis": 0,
+   "text": "Nach Erfahrung des Braumeisters"
+  },
+  {
+   "zug": "sud:fuehrung:labor",
+   "achse": "fuehrung",
+   "k": "labor",
+   "preis": 42000,
+   "text": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM"
+  },
+  {
+   "zug": "sud:fuehrung:rechner",
+   "achse": "fuehrung",
+   "k": "rechner",
+   "preis": 118000,
+   "text": "Prozessrechner am Sudwerk −118.000 DM"
+  },
+  {
+   "zug": "sud:behandlung:natur",
+   "achse": "behandlung",
+   "k": "natur",
+   "preis": 0,
+   "text": "Naturtrüb, unfiltriert"
+  },
+  {
+   "zug": "sud:behandlung:schoenen",
+   "achse": "behandlung",
+   "k": "schoenen",
+   "preis": 0,
+   "text": "Schönen mit Kieselsol"
+  },
+  {
+   "zug": "sud:behandlung:filter",
+   "achse": "behandlung",
+   "k": "filter",
+   "preis": 26000,
+   "text": "Kieselgurfilter −26.000 DM"
+  },
+  {
+   "zug": "sud:behandlung:pasteur",
+   "achse": "behandlung",
+   "k": "pasteur",
+   "preis": 74000,
+   "text": "Tunnelpasteur −74.000 DM"
+  }
+ ],
+ "versuche": [
+  {
+   "achse": "fuehrung",
+   "vorgabe": "sud:fuehrung:erfahrung",
+   "gekauft": "sud:fuehrung:rechner",
+   "preis": 118000,
+   "kauf": {
+    "geklickt": true,
+    "war": {
+     "x": 432.6328125,
+     "y": 340.1875,
+     "aus": false,
+     "trifft": true,
+     "text": "Prozessrechner am Sudwerk −118.000 DM"
+    }
+   },
+   "vorKauf": {
+    "verfahren": {
+     "fuehrung": "erfahrung",
+     "behandlung": "natur"
+    },
+    "fest": [],
+    "kasse": 355000,
+    "jahr": 1970,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "nachKauf": {
+    "verfahren": {
+     "fuehrung": "rechner",
+     "behandlung": "natur"
+    },
+    "fest": [
+     "fuehrung:rechner"
+    ],
+    "kasse": 237000,
+    "jahr": 1970,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "wege": [
+    {
+     "weg": "W1 Brettknopf Vorgabe, echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "trifft": true
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W2 Brettknopf Vorgabe, zwangsweise aktiviert, echte Maus",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 113.7578125,
+       "y": 360.953125,
+       "aus": false,
+       "trifft": true,
+       "text": "Nach Erfahrung des Braumeisters"
+      }
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W3 Brettknopf Vorgabe, synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:fuehrung:erfahrung zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 113.7578125,
+       "y": 360.953125,
+       "aus": false,
+       "trifft": true,
+       "text": "Nach Erfahrung des Braumeisters"
+      }
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:fuehrung:labor zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 272.6953125,
+       "y": 379.21875,
+       "aus": false,
+       "trifft": true,
+       "text": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM"
+      }
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W4 sud:zettel-wechsel-frei",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 576,
+       "y": 401.8046875,
+       "aus": false,
+       "trifft": true,
+       "text": "Schönen mit Kieselsol nur Pilsner"
+      }
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W5 sud:zettel-wechsel-kauf",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 576,
+       "y": 434.1484375,
+       "aus": false,
+       "trifft": true,
+       "text": "Kieselgurfilter −26.000 DM trägt Exportbier"
+      }
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W7 nach 12 Jahren (Erbfall) Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    },
+    {
+     "weg": "W8 nach Rohstoffmangel Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "rechner",
+     "nachher": "rechner",
+     "zurueck": false
+    }
+   ],
+   "nachSechsWochen": {
+    "verfahren": {
+     "fuehrung": "rechner",
+     "behandlung": "natur"
+    },
+    "fest": [
+     "fuehrung:rechner"
+    ],
+    "kasse": 208200,
+    "jahr": 1970,
+    "woche": 7,
+    "meister": null,
+    "brettZu": false
+   },
+   "zettelNachSiegel": {
+    "frei": {
+     "x": 576,
+     "y": 401.8046875,
+     "aus": false,
+     "trifft": true,
+     "text": "Naturtrüb, unfiltriert nur Pilsner"
+    },
+    "kauf": {
+     "x": 576,
+     "y": 428.46875,
+     "aus": false,
+     "trifft": true,
+     "text": "Tunnelpasteur −74.000 DM trägt Exportbier"
+    },
+    "gaerraum": null
+   },
+   "nachErbfall": {
+    "verfahren": {
+     "fuehrung": "rechner",
+     "behandlung": "filter"
+    },
+    "fest": [
+     "fuehrung:rechner",
+     "behandlung:filter"
+    ],
+    "kasse": 61776,
+    "jahr": 1973,
+    "woche": 9,
+    "meister": null,
+    "brettZu": true
+   },
+   "nachNotsud": {
+    "verfahren": {
+     "fuehrung": "rechner",
+     "behandlung": "filter"
+    },
+    "fest": [
+     "fuehrung:rechner",
+     "behandlung:filter"
+    ],
+    "kasse": 61776,
+    "jahr": 1973,
+    "woche": 9,
+    "meister": null,
+    "brettZu": true
+   }
+  },
+  {
+   "achse": "behandlung",
+   "vorgabe": "sud:behandlung:natur",
+   "gekauft": "sud:behandlung:pasteur",
+   "preis": 74000,
+   "kauf": {
+    "weg": "abgeschaltet",
+    "trifft": false
+   },
+   "vorKauf": {
+    "verfahren": {
+     "fuehrung": "rechner",
+     "behandlung": "filter"
+    },
+    "fest": [
+     "fuehrung:rechner",
+     "behandlung:filter"
+    ],
+    "kasse": 223000,
+    "jahr": 1973,
+    "woche": 9,
+    "meister": null,
+    "brettZu": true
+   },
+   "nachKauf": {
+    "verfahren": {
+     "fuehrung": "rechner",
+     "behandlung": "filter"
+    },
+    "fest": [
+     "fuehrung:rechner",
+     "behandlung:filter"
+    ],
+    "kasse": 223000,
+    "jahr": 1973,
+    "woche": 9,
+    "meister": null,
+    "brettZu": true
+   },
+   "wege": [],
+   "hinweis": "Kauf hat nicht gegriffen"
+  }
+ ],
+ "fehler": []
+}

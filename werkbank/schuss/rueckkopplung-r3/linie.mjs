@@ -86,10 +86,30 @@ async function lage(zug) {
 const reiterListe = () => seite.evaluate(() =>
   [...document.querySelectorAll('[data-zug^="stadt:reiter:"]')].map(e => e.getAttribute('data-zug')));
 
+/* BEHARRLICH — die eine Aenderung, die aus der Wette eine Messung macht.
+
+   Das Originalgeraet sieht EINMAL hin. Ist der Knopf in dieser Millisekunde
+   noch nicht neu gezeichnet, gilt er als „nicht getroffen", und der Klick
+   faellt ersatzlos aus. Ob er ausfaellt, haengt an der Last der Maschine —
+   also entscheidet die Auslastung mit, wie reich das Haus wird. Genau daran
+   sind die Messungen dieser Welle auseinandergegangen: dieselbe Saat,
+   derselbe Commit, einmal 5,89 → 2,69 (max 7,88) und einmal 5,89 → 9,20
+   (max 41,67).
+
+   Eine Hand am Bildschirm wartet, bis das Bild steht, und klickt dann. Genau
+   das tut BEHARR: bis zu N-mal hinsehen, dazwischen einen Bildaufbau
+   abwarten. Nicht wiederholt wird bei `aus` — ein abgeschalteter Knopf ist
+   eine Aussage des Spiels und keine Verzoegerung. */
+const BEHARR = +(process.env.BEHARR || 6);
+
 async function klick(zug, warte = 60) {
-  let l = await lage(zug);
-  if (!l || !l.sichtbar || l.aus) return false;
-  if (!l.hit) {
+  let l = null;
+  for (let v = 0; v < BEHARR; v++) {
+    l = await lage(zug);
+    if (!l || !l.sichtbar) { if (v + 1 < BEHARR) await ruhe(60); continue; }
+    if (l.aus) return false;
+    if (l.hit) break;
+    /* Zugedeckt: erst das eigene Brett aufschlagen, dann noch einmal. */
     for (const r of await reiterListe()) {
       const rl = await lage(r);
       if (!rl || !rl.sichtbar || rl.aus || !rl.hit) continue;
@@ -98,6 +118,8 @@ async function klick(zug, warte = 60) {
       l = await lage(zug);
       if (l && l.hit) break;
     }
+    if (l && l.hit) break;
+    if (v + 1 < BEHARR) await ruhe(60);
   }
   if (!l || !l.sichtbar || l.aus || !l.hit) return false;
   await seite.mouse.click(l.x, l.y);

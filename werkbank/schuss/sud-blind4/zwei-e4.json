@@ -1,0 +1,622 @@
+{
+ "epoche": 4,
+ "jahre": 14,
+ "V": {
+  "art": "V",
+  "gewaehlt": [],
+  "nachWahl": {
+   "jahr": 1970,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 86000,
+   "rohstoff": 340,
+   "verfahren": {
+    "fuehrung": "erfahrung",
+    "behandlung": "natur"
+   },
+   "fest": [],
+   "lager": 140,
+   "sorten": {
+    "pils": 140
+   },
+   "stufen": {
+    "2": 140
+   },
+   "haltbarSchnitt": 42,
+   "sudDurch": 0,
+   "sude": 0,
+   "legte": 0,
+   "gesamtFass": 0,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gaerfass": 0,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1970 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Nach Erfahrung des Braumeisters läuft höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM unwiderruflich trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk −118.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Naturtrüb, unfiltriert läuft höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol ohne Ausgabe höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM einmal zu zahlen trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur −74.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Pilsner Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern schlägt als Pilsner aus DIE STREUUNG ±14 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1,5 hl. DER GÄRKELLER 0,0 von 300 hl · 0 Gärtanks Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. Kein Gärtank steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller. Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. DAS SUDBUCH 0 Sude · 0,0 hl · 0 verloren Noch keine Eintragung.",
+    "sudzettel": "DER SUD · 1970 Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert höchstens Pilsner Gärkeller 0,0/300 hl Streuung ±14 % · Fass ×1,05 Frisches Fass anzapfen · +14 · 1,5 hl Ältestes Fass anzapfen · +6 · 1,5 hl Schönen mit Kieselsol nur Pilsner Kieselgurfilter −26.000 DM trägt Exportbier",
+    "kopf": "DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 33 Ruf von 100 Bekanntheit 53 ↘ Einlösung 62 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 13.000 DM mit dem Zeichen 14.373 DM + 10,6 im Hundert · 1.373 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 0 DM Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 2 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Kastenaktion beim Handel −2.600 DM − 12 hl Anzeige im Anzeigenblatt −9.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Etat läuft jedes Jahr neu ab und trägt nur drei Posten. Und was der Spot verspricht, muss im Kasten sein — sonst hat man teuer dafür bezahlt, dass es alle merken. Das Zeichen und das Register DAS ERBE noch 11 Wochen I. Margarete Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 71 hl Festschreiben · Lindenhof −14.706 DM Versorgungszusage · jährlich −11.682 DM Abfindung −58.409 DM Ohne Abfindung 0 DM SEPTEMBER 1970 KASSE 86.000 DM HOPFEN 340 TANKS 210/600 hl WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1970/71 · Margarete Bruckner, sparsam · Die Marke WEITER nächster Zug: Ablösung Brückenwirt — 38.221 DM (Kasse reicht 2,3×) ♪",
+    "buch": []
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1974,
+   "woche": 9,
+   "ende": true,
+   "endgrund": "brauereisterben",
+   "kasse": 19545,
+   "rohstoff": 664,
+   "verfahren": {
+    "fuehrung": "erfahrung",
+    "behandlung": "natur"
+   },
+   "fest": [],
+   "lager": 260,
+   "sorten": {
+    "handel": 60,
+    "pils": 200
+   },
+   "stufen": {
+    "1": 60,
+    "2": 200
+   },
+   "haltbarSchnitt": 24.23,
+   "sudDurch": 200,
+   "sude": 63,
+   "legte": 72,
+   "gesamtFass": 2520,
+   "guete": 68,
+   "gestuftGesamt": 0,
+   "bottiche": 3,
+   "gaerfass": 120,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1974 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Nach Erfahrung des Braumeisters läuft höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM unwiderruflich trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk −118.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Naturtrüb, unfiltriert läuft höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol ohne Ausgabe höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM einmal zu zahlen trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur −74.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Pilsner Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern schlägt als Pilsner aus DIE STREUUNG ±14 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,04 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 180 von 300 hl · 3 Gärtanks Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 61 Pilsner 60 hl gesperrt ±14 % 62 Pilsner 60 hl reif in 1 Woche 63 Pilsner 60 hl reif in 2 Wochen Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. GESPERRTE CHARGEN Nichts geht ins Regal, ehe jemand unterschreibt. Beides kostet. 61 60 hl · ±14 % Freigeben Verschneiden · −20 hl DAS SUDBUCH 8 Sude · 480 hl · 0 verloren 1974/9 Das Sudbuch wird geschlossen: 72 Sude, 3.780 hl angestellt. 1974/9 Charge 61 gesperrt — Abweichung ±14 % 1974/9 60 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert",
+    "sudzettel": "DER SUD · 1974Nach Erfahrung des Braumeisters · Naturtrüb, unfiltrierthöchstens PilsnerGärkeller 180/300 hlStreuung ±14 % · Fass ×1,04Hefe aus dem Gärtank ziehen · +8 · ohne FassFrisches Fass anzapfen · +14 · 1,5 hlFreigeben · Charge 61 · ±14 %Verschneiden · −20 hlKieselgurfilter−26.000 DMträgt Exportbier",
+    "kopf": "DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 88 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 14.502 DM mit dem Zeichen 14.687 DM + 1,3 im Hundert · 185 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 +10.668 DM zuletzt 1972, W1: 852 DM auf 59.187 DM an Sommerabsatz · 1,4 im Hundert bei Ruf 6 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 0 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Kastenaktion beim Handel −2.600 DM − 12 hl Kronkorken bedrucken −5.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Ausgelaufen: Kronkorken bedrucken · Bandenwerbung mieten. Ein Etat verlängert sich nicht von selbst. Das Zeichen und das Register DAS ERBE noch 6 Wochen III. Hedwig Bruckner · bequem · Feder 1,51× am Haus 0 · an der Person 0 nimmt 0 · 78 hl Nachschrift · 5 Häuser −115.966 DM Versorgungszusage · jährlich −2.140 DM Abfindung −5.385 DM Ohne Abfindung 0 DM NOVEMBER 1974 KASSE 19.545 DM HOPFEN 664 TANKS 390/600 hl WOCHE 9/30 CHRONIK 102 BUCH 910 Brauhaus zum Anker · 1974/75 · Hedwig Bruckner, bequem · Die Marke ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1974,
+      "woche": 8,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1974,
+      "woche": 8,
+      "text": "Der Braumeister gibt von sich aus frei, was vier Wochen steht. (Charge 58)"
+     },
+     {
+      "jahr": 1974,
+      "woche": 8,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1974,
+      "woche": 9,
+      "text": "60 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert"
+     },
+     {
+      "jahr": 1974,
+      "woche": 9,
+      "text": "Charge 61 gesperrt — Abweichung ±14 %"
+     },
+     {
+      "jahr": 1974,
+      "woche": 9,
+      "text": "Das Sudbuch wird geschlossen: 72 Sude, 3.780 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1974,
+   "woche": 9,
+   "ende": true,
+   "endgrund": "brauereisterben",
+   "kasse": 19545,
+   "rohstoff": 664,
+   "verfahren": {
+    "fuehrung": "erfahrung",
+    "behandlung": "natur"
+   },
+   "fest": [],
+   "lager": 260,
+   "sorten": {
+    "handel": 60,
+    "pils": 200
+   },
+   "stufen": {
+    "1": 60,
+    "2": 200
+   },
+   "haltbarSchnitt": 24.23,
+   "sudDurch": 200,
+   "sude": 63,
+   "legte": 72,
+   "gesamtFass": 2520,
+   "guete": 68,
+   "gestuftGesamt": 0,
+   "bottiche": 3,
+   "gaerfass": 120,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1974 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Nach Erfahrung des Braumeisters läuft höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM unwiderruflich trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk −118.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Naturtrüb, unfiltriert läuft höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol ohne Ausgabe höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM einmal zu zahlen trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur −74.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Pilsner Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern schlägt als Pilsner aus DIE STREUUNG ±14 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,04 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 180 von 300 hl · 3 Gärtanks Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 61 Pilsner 60 hl gesperrt ±14 % 62 Pilsner 60 hl reif in 1 Woche 63 Pilsner 60 hl reif in 2 Wochen Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. GESPERRTE CHARGEN Nichts geht ins Regal, ehe jemand unterschreibt. Beides kostet. 61 60 hl · ±14 % Freigeben Verschneiden · −20 hl DAS SUDBUCH 8 Sude · 480 hl · 0 verloren 1974/9 Das Sudbuch wird geschlossen: 72 Sude, 3.780 hl angestellt. 1974/9 Charge 61 gesperrt — Abweichung ±14 % 1974/9 60 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert",
+    "sudzettel": "DER SUD · 1974Nach Erfahrung des Braumeisters · Naturtrüb, unfiltrierthöchstens PilsnerGärkeller 180/300 hlStreuung ±14 % · Fass ×1,04Hefe aus dem Gärtank ziehen · +8 · ohne FassFrisches Fass anzapfen · +14 · 1,5 hlFreigeben · Charge 61 · ±14 %Verschneiden · −20 hlKieselgurfilter−26.000 DMträgt Exportbier",
+    "kopf": "DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 88 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 14.502 DM mit dem Zeichen 14.687 DM + 1,3 im Hundert · 185 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 +10.668 DM zuletzt 1972, W1: 852 DM auf 59.187 DM an Sommerabsatz · 1,4 im Hundert bei Ruf 6 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 0 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Kastenaktion beim Handel −2.600 DM − 12 hl Kronkorken bedrucken −5.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Ausgelaufen: Kronkorken bedrucken · Bandenwerbung mieten. Ein Etat verlängert sich nicht von selbst. Das Zeichen und das Register DAS ERBE noch 6 Wochen III. Hedwig Bruckner · bequem · Feder 1,51× am Haus 0 · an der Person 0 nimmt 0 · 78 hl Nachschrift · 5 Häuser −115.966 DM Versorgungszusage · jährlich −2.140 DM Abfindung −5.385 DM Ohne Abfindung 0 DM NOVEMBER 1974 KASSE 19.545 DM HOPFEN 664 TANKS 390/600 hl WOCHE 9/30 CHRONIK 102 BUCH 910 Brauhaus zum Anker · 1974/75 · Hedwig Bruckner, bequem · Die Marke ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1974,
+      "woche": 8,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1974,
+      "woche": 8,
+      "text": "Der Braumeister gibt von sich aus frei, was vier Wochen steht. (Charge 58)"
+     },
+     {
+      "jahr": 1974,
+      "woche": 8,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1974,
+      "woche": 9,
+      "text": "60 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Naturtrüb, unfiltriert"
+     },
+     {
+      "jahr": 1974,
+      "woche": 9,
+      "text": "Charge 61 gesperrt — Abweichung ±14 %"
+     },
+     {
+      "jahr": 1974,
+      "woche": 9,
+      "text": "Das Sudbuch wird geschlossen: 72 Sude, 3.780 hl angestellt."
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 114
+ },
+ "A": {
+  "art": "A",
+  "gewaehlt": [
+   {
+    "zug": "sud:behandlung:schoenen",
+    "preis": 0,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1970,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 86000,
+   "rohstoff": 340,
+   "verfahren": {
+    "fuehrung": "erfahrung",
+    "behandlung": "schoenen"
+   },
+   "fest": [],
+   "lager": 1,
+   "sorten": {
+    "pils": 1
+   },
+   "stufen": {
+    "2": 1
+   },
+   "haltbarSchnitt": 42,
+   "sudDurch": 0,
+   "sude": 1,
+   "legte": 0,
+   "gesamtFass": 139,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 139,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1970 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Nach Erfahrung des Braumeisters läuft höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM unwiderruflich trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk −118.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Naturtrüb, unfiltriert wie immer höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol läuft höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM einmal zu zahlen trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur −74.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Pilsner Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern schlägt als Pilsner aus DIE STREUUNG ±14 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 209 von 300 hl · 1 Gärtank Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 1 Pilsner 209 hl gesperrt ±14 % Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. GESPERRTE CHARGEN Nichts geht ins Regal, ehe jemand unterschreibt. Beides kostet. 1 209 hl · ±14 % Freigeben Verschneiden · −69 hl DAS SUDBUCH 1 Sude · 209 hl · 0 verloren 1970/1 Charge 1 gesperrt — Abweichung ±14 % 1970/1 209 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol 1970/1 DIE BEHANDLUNG: Schönen mit Kieselsol",
+    "sudzettel": "DER SUD · 1970Nach Erfahrung des Braumeisters · Schönen mit Kieselsolhöchstens PilsnerGärkeller 209/300 hlStreuung ±14 % · Fass ×1,05Hefe aus dem Gärtank ziehen · +8 · ohne FassFrisches Fass anzapfen · +14 · 1,5 hlFreigeben · Charge 1 · ±14 %Verschneiden · −69 hlKieselgurfilter−26.000 DMträgt Exportbier",
+    "kopf": "DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 33 Ruf von 100 Bekanntheit 53 ↘ Einlösung 62 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 13.000 DM mit dem Zeichen 14.373 DM + 10,6 im Hundert · 1.373 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 0 DM Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 2 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Anzeige im Anzeigenblatt −9.000 DM Die eigene Flaschenform prägen lassen −32.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Etat läuft jedes Jahr neu ab und trägt nur drei Posten. Und was der Spot verspricht, muss im Kasten sein — sonst hat man teuer dafür bezahlt, dass es alle merken. Das Zeichen und das Register DAS ERBE noch 11 Wochen I. Margarete Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 1,5 hl Festschreiben · Lindenhof −14.706 DM Versorgungszusage · jährlich −9.892 DM Abfindung −49.461 DM Ohne Abfindung 0 DM SEPTEMBER 1970 KASSE 86.000 DM HOPFEN 340 TANKS 210/600 hl WOCHE 1/30 CHRONIK 4 BUCH 1 Brauhaus zum Anker · 1970/71 · Margarete Bruckner, sparsam · Die Marke WEITER nächster Zug: Ablösung Brückenwirt — 38.221 DM (Kasse reicht 2,3×) ♪",
+    "buch": [
+     {
+      "jahr": 1970,
+      "woche": 1,
+      "text": "DIE BEHANDLUNG: Schönen mit Kieselsol"
+     },
+     {
+      "jahr": 1970,
+      "woche": 1,
+      "text": "209 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol"
+     },
+     {
+      "jahr": 1970,
+      "woche": 1,
+      "text": "Charge 1 gesperrt — Abweichung ±14 %"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1975,
+   "woche": 9,
+   "ende": true,
+   "endgrund": "brauereisterben",
+   "kasse": 24753,
+   "rohstoff": 876,
+   "verfahren": {
+    "fuehrung": "erfahrung",
+    "behandlung": "schoenen"
+   },
+   "fest": [],
+   "lager": 239,
+   "sorten": {
+    "pils": 239
+   },
+   "stufen": {
+    "2": 239
+   },
+   "haltbarSchnitt": 33.32,
+   "sudDurch": 239,
+   "sude": 166,
+   "legte": 82,
+   "gesamtFass": 3420,
+   "guete": 66,
+   "gestuftGesamt": 0,
+   "bottiche": 3,
+   "gaerfass": 79,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1975 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Nach Erfahrung des Braumeisters läuft höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM unwiderruflich trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk −118.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Naturtrüb, unfiltriert wie immer höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol läuft höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM einmal zu zahlen trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur −74.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Pilsner Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern schlägt als Pilsner aus DIE STREUUNG ±15 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,03 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 119 von 300 hl · 3 Gärtanks Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 163 Pilsner 59 hl reif in 1 Woche 165 Pilsner 59 hl reif in 2 Wochen 166 Pilsner 1,5 hl reif in 2 Wochen DRAUSSEN, NOCH NICHT NACHGEMESSEN Freigegebene Chargen stehen beim Handel im Regal. Der Einkauf misst nach, wann er will — und schickt zurück, was ihm nicht passt. Charge 159 · 59 hl · ±12 % · nachgemessen in 4 Wochen Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. DAS SUDBUCH 16 Sude · 480 hl · 2 verloren 1975/9 Der Tank ist umgeschlagen: Bottich 164 (1,5 hl) 1975/9 1,5 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol 1975/9 Das Sudbuch wird geschlossen: 165 Sude, 5.129 hl angestellt.",
+    "sudzettel": "DER SUD · 1975Nach Erfahrung des Braumeisters · Schönen mit Kieselsolhöchstens PilsnerGärkeller 119/300 hlStreuung ±15 % · Fass ×1,03Hefe aus dem Gärtank ziehen · +8 · ohne FassFrisches Fass anzapfen · +14 · 1,5 hlNaturtrüb, unfiltriertnur PilsnerKieselgurfilter−26.000 DMträgt Exportbier",
+    "kopf": "DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 90 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 14.920 DM mit dem Zeichen 15.111 DM + 1,3 im Hundert · 191 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 +10.325 DM zuletzt 1972, W1: 1.278 DM auf 59.187 DM an Sommerabsatz · 2,2 im Hundert bei Ruf 9 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 0 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Kastenaktion beim Handel −2.600 DM − 12 hl Kronkorken bedrucken −5.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Ausgelaufen: Kronkorken bedrucken · Bandenwerbung mieten. Ein Etat verlängert sich nicht von selbst. Das Zeichen und das Register DAS ERBE noch 38 Wochen IV. Werner Bruckner · wagemutig · Feder 1,24× am Haus 0 · an der Person 0 nimmt 0 · 60 hl Nachschrift · 2 Häuser −26.340 DM Versorgungszusage · jährlich −1.705 DM Abfindung −6.855 DM Ohne Abfindung 0 DM NOVEMBER 1975 KASSE 24.753 DM HOPFEN 876 TANKS 359/600 hl WOCHE 9/30 CHRONIK 166 BUCH 1027 Brauhaus zum Anker · 1975/76 · Werner Bruckner, wagemutig · Die Marke ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1975,
+      "woche": 8,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "59 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "2 Bottiche ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "Das Sudbuch wird geschlossen: 165 Sude, 5.129 hl angestellt."
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "1,5 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "Der Tank ist umgeschlagen: Bottich 164 (1,5 hl)"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1975,
+   "woche": 9,
+   "ende": true,
+   "endgrund": "brauereisterben",
+   "kasse": 24753,
+   "rohstoff": 876,
+   "verfahren": {
+    "fuehrung": "erfahrung",
+    "behandlung": "schoenen"
+   },
+   "fest": [],
+   "lager": 239,
+   "sorten": {
+    "pils": 239
+   },
+   "stufen": {
+    "2": 239
+   },
+   "haltbarSchnitt": 33.32,
+   "sudDurch": 239,
+   "sude": 166,
+   "legte": 82,
+   "gesamtFass": 3420,
+   "guete": 66,
+   "gestuftGesamt": 0,
+   "bottiche": 3,
+   "gaerfass": 79,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1975 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Nach Erfahrung des Braumeisters läuft höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM unwiderruflich trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk −118.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Naturtrüb, unfiltriert wie immer höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol läuft höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM einmal zu zahlen trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur −74.000 DM unwiderruflich trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Pilsner Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern schlägt als Pilsner aus DIE STREUUNG ±15 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,03 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 119 von 300 hl · 3 Gärtanks Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 163 Pilsner 59 hl reif in 1 Woche 165 Pilsner 59 hl reif in 2 Wochen 166 Pilsner 1,5 hl reif in 2 Wochen DRAUSSEN, NOCH NICHT NACHGEMESSEN Freigegebene Chargen stehen beim Handel im Regal. Der Einkauf misst nach, wann er will — und schickt zurück, was ihm nicht passt. Charge 159 · 59 hl · ±12 % · nachgemessen in 4 Wochen Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. DAS SUDBUCH 16 Sude · 480 hl · 2 verloren 1975/9 Der Tank ist umgeschlagen: Bottich 164 (1,5 hl) 1975/9 1,5 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol 1975/9 Das Sudbuch wird geschlossen: 165 Sude, 5.129 hl angestellt.",
+    "sudzettel": "DER SUD · 1975Nach Erfahrung des Braumeisters · Schönen mit Kieselsolhöchstens PilsnerGärkeller 119/300 hlStreuung ±15 % · Fass ×1,03Hefe aus dem Gärtank ziehen · +8 · ohne FassFrisches Fass anzapfen · +14 · 1,5 hlNaturtrüb, unfiltriertnur PilsnerKieselgurfilter−26.000 DMträgt Exportbier",
+    "kopf": "DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 90 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 14.920 DM mit dem Zeichen 15.111 DM + 1,3 im Hundert · 191 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 +10.325 DM zuletzt 1972, W1: 1.278 DM auf 59.187 DM an Sommerabsatz · 2,2 im Hundert bei Ruf 9 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 0 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Kastenaktion beim Handel −2.600 DM − 12 hl Kronkorken bedrucken −5.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Ausgelaufen: Kronkorken bedrucken · Bandenwerbung mieten. Ein Etat verlängert sich nicht von selbst. Das Zeichen und das Register DAS ERBE noch 38 Wochen IV. Werner Bruckner · wagemutig · Feder 1,24× am Haus 0 · an der Person 0 nimmt 0 · 60 hl Nachschrift · 2 Häuser −26.340 DM Versorgungszusage · jährlich −1.705 DM Abfindung −6.855 DM Ohne Abfindung 0 DM NOVEMBER 1975 KASSE 24.753 DM HOPFEN 876 TANKS 359/600 hl WOCHE 9/30 CHRONIK 166 BUCH 1027 Brauhaus zum Anker · 1975/76 · Werner Bruckner, wagemutig · Die Marke ENDE ♪",
+    "buch": [
+     {
+      "jahr": 1975,
+      "woche": 8,
+      "text": "1 Bottich ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "59 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "2 Bottiche ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "Das Sudbuch wird geschlossen: 165 Sude, 5.129 hl angestellt."
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "1,5 hl in den Gärkeller — Nach Erfahrung des Braumeisters · Schönen mit Kieselsol"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "Der Tank ist umgeschlagen: Bottich 164 (1,5 hl)"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 155
+ },
+ "B": {
+  "art": "B",
+  "gewaehlt": [
+   {
+    "zug": "sud:fuehrung:rechner",
+    "preis": 118000,
+    "geklickt": true
+   },
+   {
+    "zug": "sud:behandlung:pasteur",
+    "preis": 74000,
+    "geklickt": true
+   }
+  ],
+  "nachWahl": {
+   "jahr": 1970,
+   "woche": 1,
+   "ende": false,
+   "endgrund": null,
+   "kasse": 86000,
+   "rohstoff": 340,
+   "verfahren": {
+    "fuehrung": "rechner",
+    "behandlung": "pasteur"
+   },
+   "fest": [
+    "fuehrung:rechner",
+    "behandlung:pasteur"
+   ],
+   "lager": 0,
+   "sorten": {},
+   "stufen": {},
+   "haltbarSchnitt": 0,
+   "sudDurch": 0,
+   "sude": 1,
+   "legte": 0,
+   "gesamtFass": 140,
+   "guete": 70,
+   "gestuftGesamt": 0,
+   "bottiche": 1,
+   "gaerfass": 140,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1970 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Anlage abgenommen: Prozessrechner am Sudwerk. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Nach Erfahrung des Braumeisters das Siegel liegt darauf höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM das Siegel liegt darauf trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk läuft trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Anlage abgenommen: Tunnelpasteur. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Naturtrüb, unfiltriert das Siegel liegt darauf höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol das Siegel liegt darauf höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM das Siegel liegt darauf trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur läuft trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Exportbier Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern trägt die Pfanne DIE STREUUNG ±8 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 210 von 300 hl · 1 Gärtank Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 1 Pilsner 210 hl gesperrt ±8 % Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. GESPERRTE CHARGEN Nichts geht ins Regal, ehe jemand unterschreibt. Beides kostet. 1 210 hl · ±8 % Freigeben Verschneiden · −71 hl DAS SUDBUCH 1 Sude · 210 hl · 0 verloren 1970/1 DIE BEHANDLUNG: Tunnelpasteur 1970/1 Charge 1 gesperrt — Abweichung ±8 % 1970/1 210 hl in den Gärkeller — Prozessrechner am Sudwerk · Naturtrüb, unfiltriert",
+    "sudzettel": "DER SUD · 1970 Prozessrechner am Sudwerk · Tunnelpasteur höchstens Exportbier Gärkeller 210/300 hl Streuung ±8 % · Fass ×1,05 Hefe aus dem Gärtank ziehen · +8 · ohne Fass Frisches Fass anzapfen · +14 · 1,5 hl Freigeben · Charge 1 · ±8 % Verschneiden · −71 hl",
+    "kopf": "♪ DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 33 Ruf von 100 Bekanntheit 53 ↘ Einlösung 62 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 13.000 DM mit dem Zeichen 14.373 DM + 10,6 im Hundert · 1.373 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 0 DM Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist. und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen Das Zeichen hängt, und der Keller taugt nicht — Güte 0 von 100. Seit 1 von 5 Wochen; danach steht es im Register. Nach der dritten solchen Zeile nimmt Der Handel das Zeichen — 0 von 3 stehen schon da. Unter dem Zeichen ausliefern Das Zeichen einziehen WAS DER NAME JETZT KOSTET · 2 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Anzeige im Anzeigenblatt −9.000 DM Die eigene Flaschenform prägen lassen −32.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Der Etat läuft jedes Jahr neu ab und trägt nur drei Posten. Und was der Spot verspricht, muss im Kasten sein — sonst hat man teuer dafür bezahlt, dass es alle merken. Das Zeichen und das Register DAS ERBE noch 11 Wochen I. Margarete Bruckner · sparsam · Feder 0,70× am Haus 0 · an der Person 4 nimmt 4 · 0,0 hl Festschreiben · Lindenhof −14.706 DM Versorgungszusage · jährlich −9.853 DM Abfindung −49.266 DM Ohne Abfindung 0 DM SEPTEMBER 1970 KASSE 86.000 DM HOPFEN 340 TANKS 0,0/600 hl WOCHE 1/30 CHRONIK 6 BUCH 3 Brauhaus zum Anker · 1970/71 · Margarete Bruckner, sparsam · Die Marke WEITER nächster Zug: Ablösung Brückenwirt — 38.221 DM (Kasse reicht 2,3×)",
+    "buch": [
+     {
+      "jahr": 1970,
+      "woche": 1,
+      "text": "DIE FÜHRUNG: Prozessrechner am Sudwerk"
+     },
+     {
+      "jahr": 1970,
+      "woche": 1,
+      "text": "210 hl in den Gärkeller — Prozessrechner am Sudwerk · Naturtrüb, unfiltriert"
+     },
+     {
+      "jahr": 1970,
+      "woche": 1,
+      "text": "Charge 1 gesperrt — Abweichung ±8 %"
+     },
+     {
+      "jahr": 1970,
+      "woche": 1,
+      "text": "DIE BEHANDLUNG: Tunnelpasteur"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "ende": {
+   "jahr": 1975,
+   "woche": 9,
+   "ende": true,
+   "endgrund": "brauereisterben",
+   "kasse": 24799,
+   "rohstoff": 1140,
+   "verfahren": {
+    "fuehrung": "rechner",
+    "behandlung": "pasteur"
+   },
+   "fest": [
+    "fuehrung:rechner",
+    "behandlung:pasteur"
+   ],
+   "lager": 299,
+   "sorten": {
+    "pils": 299
+   },
+   "stufen": {
+    "2": 299
+   },
+   "haltbarSchnitt": 66.22,
+   "sudDurch": 299,
+   "sude": 300,
+   "legte": 100,
+   "gesamtFass": 4139,
+   "guete": 98,
+   "gestuftGesamt": 0,
+   "bottiche": 3,
+   "gaerfass": 40,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1975 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Anlage abgenommen: Prozessrechner am Sudwerk. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Nach Erfahrung des Braumeisters das Siegel liegt darauf höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM das Siegel liegt darauf trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk läuft trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Anlage abgenommen: Tunnelpasteur. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Naturtrüb, unfiltriert das Siegel liegt darauf höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol das Siegel liegt darauf höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM das Siegel liegt darauf trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur läuft trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Exportbier Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern trägt die Pfanne DIE STREUUNG ±1 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,19 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 60 von 300 hl · 3 Gärtanks Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 298 Pilsner 57 hl reif in 1 Woche 299 Pilsner 1,5 hl reif in 1 Woche 300 Pilsner 1,5 hl reif in 1 Woche Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. DAS SUDBUCH 24 Sude · 480 hl · 0 verloren 1975/9 1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur 1975/9 1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur 1975/9 Das Sudbuch wird geschlossen: 298 Sude, 6.206 hl angestellt.",
+    "sudzettel": "DER SUD · 1975Prozessrechner am Sudwerk · Tunnelpasteurhöchstens ExportbierGärkeller 60/300 hlStreuung ±1 % · Fass ×1,19Hefe aus dem Gärtank ziehen · +8 · ohne FassFrisches Fass anzapfen · +14 · 1,5 hlGärtank bestellen · +270 hl−24.000 DM",
+    "kopf": "♪ DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 100 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 14.920 DM mit dem Zeichen 15.111 DM + 1,3 im Hundert · 191 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 +27.421 DM zuletzt 1972, W1: 301 DM auf 6.591 DM an Sommerabsatz · 4,6 im Hundert bei Ruf 19 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 0 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Kastenaktion beim Handel −2.600 DM − 12 hl Kronkorken bedrucken −5.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Mühlschenke ist weg. Der Name des Nachbarn stand besser da. Das Zeichen und das Register DAS ERBE noch 34 Wochen IV. Hedwig Bruckner · bequem · Feder 1,61× am Haus 0 · an der Person 0 nimmt 0 · 75 hl Nachschrift · 5 Häuser −126.276 DM Versorgungszusage · jährlich −2.094 DM Abfindung −7.921 DM Ohne Abfindung 0 DM NOVEMBER 1975 KASSE 24.799 DM HOPFEN 1.140 TANKS 449/600 hl WOCHE 9/30 CHRONIK 130 BUCH 1550 Brauhaus zum Anker · 1975/76 · Hedwig Bruckner, bequem · Die Marke ENDE",
+    "buch": [
+     {
+      "jahr": 1975,
+      "woche": 8,
+      "text": "Hefe aus dem Gärtank ziehen — Bottich 295, +8"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "57 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "3 Bottiche ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "Das Sudbuch wird geschlossen: 298 Sude, 6.206 hl angestellt."
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "endeZettel": {
+   "jahr": 1975,
+   "woche": 9,
+   "ende": true,
+   "endgrund": "brauereisterben",
+   "kasse": 24799,
+   "rohstoff": 1140,
+   "verfahren": {
+    "fuehrung": "rechner",
+    "behandlung": "pasteur"
+   },
+   "fest": [
+    "fuehrung:rechner",
+    "behandlung:pasteur"
+   ],
+   "lager": 299,
+   "sorten": {
+    "pils": 299
+   },
+   "stufen": {
+    "2": 299
+   },
+   "haltbarSchnitt": 66.22,
+   "sudDurch": 299,
+   "sude": 300,
+   "legte": 100,
+   "gesamtFass": 4139,
+   "guete": 98,
+   "gestuftGesamt": 0,
+   "bottiche": 3,
+   "gaerfass": 40,
+   "plaetze": 200,
+   "zusatz": 0,
+   "kaufNr": 0,
+   "schirm": {
+    "sudbrett": "DAS SUDHAUS · 1975 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Anlage abgenommen: Prozessrechner am Sudwerk. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Nach Erfahrung des Braumeisters das Siegel liegt darauf höchstens Pilsner Streuung ±6 % Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht — ein Exportbier will eine Zahl auf dem Protokoll, kein Urteil. Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM das Siegel liegt darauf trägt Exportbier Streuung ±2 % Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet. Prozessrechner am Sudwerk läuft trägt Exportbier Haltbarkeit ×1,05 · −1 Wo. Gärung · Streuung ±0 % Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich. DIE BEHANDLUNG Was geschieht vor der Abfüllung? Jede Stufe kauft Haltbarkeit — und keine ist umsonst. Anlage abgenommen: Tunnelpasteur. Diese Frage ist entschieden, für dieses Haus und diese Zeit. Naturtrüb, unfiltriert das Siegel liegt darauf höchstens Pilsner Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die Reise. Schönen mit Kieselsol das Siegel liegt darauf höchstens Pilsner Haltbarkeit ×1,15 · −1,5 hl je Sud Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als anderthalb Hektoliter Verlust je Sud und bringt fünfzehn Prozent Haltbarkeit. Der billigste Griff, den dieses Jahrzehnt kennt. Kieselgurfilter −26.000 DM das Siegel liegt darauf trägt Exportbier Haltbarkeit ×1,4 Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank filtriertes Bier geht als Export hinaus. Einmal bezahlt, danach jederzeit abzustellen. Tunnelpasteur läuft trägt Exportbier Haltbarkeit ×2 · −3,0 hl je Sud Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei Hektoliter je Sud gehen dabei verloren. Unwiderruflich — der Tunnel steht, wo vorher die Abfüllung stand. WAS BEIM WIRT ANKOMMT höchstens Exportbier Was im Kasten steht, entscheidet das Sudhaus. H Vollbier Hell 8 von 11 Häusern trägt die Pfanne P Pilsner 10 von 11 Häusern trägt die Pfanne E Exportbier 4 von 11 Häusern trägt die Pfanne DIE STREUUNG ±1 % Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach. Was jetzt eingelegt wird, hält ×1,19 — die Hefe steht. Hefe aus dem Gärtank ziehen · +8 Frisches Fass anzapfen · +14 Ältestes Fass anzapfen · +6 Einmal die Woche. Solange etwas gärt, kostet die Hefe kein Bier. DER GÄRKELLER 60 von 300 hl · 3 Gärtanks Gärtanks im Freien: die Reifung läuft im Tank, nicht im Lager. 298 Pilsner 57 hl reif in 1 Woche 299 Pilsner 1,5 hl reif in 1 Woche 300 Pilsner 1,5 hl reif in 1 Woche Gärtank bestellen · +270 hl −24.000 DM Bezahlt wird bei Bestellung, gestellt wird nach drei Wochen. DAS SUDBUCH 24 Sude · 480 hl · 0 verloren 1975/9 1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur 1975/9 1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur 1975/9 Das Sudbuch wird geschlossen: 298 Sude, 6.206 hl angestellt.",
+    "sudzettel": "DER SUD · 1975Prozessrechner am Sudwerk · Tunnelpasteurhöchstens ExportbierGärkeller 60/300 hlStreuung ±1 % · Fass ×1,19Hefe aus dem Gärtank ziehen · +8 · ohne FassFrisches Fass anzapfen · +14 · 1,5 hlGärtank bestellen · +270 hl−24.000 DM",
+    "kopf": "♪ DER RUF DES HAUSES Kronkorken, Bandenwerbung, Fernsehspot ▾ 4 Ruf von 100 NACHGEMACHT Bekanntheit 4 Einlösung 100 GLEICHES BIER, 100 HL, ZWEI PREISE ohne das Zeichen 14.920 DM mit dem Zeichen 15.111 DM + 1,3 im Hundert · 191 DM mehr für dieselbe Menge AUFGELD AUF DEN NAMEN — WAS DER RUF EINGEBRACHT HAT DIESE WOCHE 0 DM BRAUJAHR 0 DM SEIT 1970 +27.421 DM zuletzt 1972, W1: 301 DM auf 6.591 DM an Sommerabsatz · 4,6 im Hundert bei Ruf 19 und einen höheren Grundpreis je Hektoliter — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Hektoliterpreis. Das Aufgeld nachrechnen WAS DER NAME JETZT KOSTET · 0 VON 3 POSTEN IM ETAT BELEGT Bierdeckel drucken lassen −1.800 DM Kastenaktion beim Handel −2.600 DM − 12 hl Kronkorken bedrucken −5.000 DM Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\". Das Zeichen verdecken Herumgehen und den Namen sagen Mühlschenke ist weg. Der Name des Nachbarn stand besser da. Das Zeichen und das Register DAS ERBE noch 34 Wochen IV. Hedwig Bruckner · bequem · Feder 1,61× am Haus 0 · an der Person 0 nimmt 0 · 75 hl Nachschrift · 5 Häuser −126.276 DM Versorgungszusage · jährlich −2.094 DM Abfindung −7.921 DM Ohne Abfindung 0 DM NOVEMBER 1975 KASSE 24.799 DM HOPFEN 1.140 TANKS 449/600 hl WOCHE 9/30 CHRONIK 130 BUCH 1550 Brauhaus zum Anker · 1975/76 · Hedwig Bruckner, bequem · Die Marke ENDE",
+    "buch": [
+     {
+      "jahr": 1975,
+      "woche": 8,
+      "text": "Hefe aus dem Gärtank ziehen — Bottich 295, +8"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "57 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "3 Bottiche ausgeschlagen — die Haltbarkeit beginnt jetzt am Fass"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "Das Sudbuch wird geschlossen: 298 Sude, 6.206 hl angestellt."
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur"
+     },
+     {
+      "jahr": 1975,
+      "woche": 9,
+      "text": "1,5 hl in den Gärkeller — Prozessrechner am Sudwerk · Tunnelpasteur"
+     }
+    ]
+   },
+   "lage": 0
+  },
+  "fehler": [],
+  "runden": 131
+ }
+}

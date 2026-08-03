@@ -1,0 +1,240 @@
+{
+ "epoche": 2,
+ "optionen": [
+  {
+   "zug": "sud:schuettung:rein",
+   "achse": "schuettung",
+   "k": "rein",
+   "preis": 0,
+   "text": "Rein nach dem Gebot"
+  },
+  {
+   "zug": "sud:schuettung:weizen",
+   "achse": "schuettung",
+   "k": "weizen",
+   "preis": 0,
+   "text": "Mit Weizen gestreckt"
+  },
+  {
+   "zug": "sud:schuettung:hafer",
+   "achse": "schuettung",
+   "k": "hafer",
+   "preis": 0,
+   "text": "Mit Hafer und Wicke gestreckt"
+  },
+  {
+   "zug": "sud:gaerung:ober",
+   "achse": "gaerung",
+   "k": "ober",
+   "preis": 0,
+   "text": "Obergärig, warm geführt"
+  },
+  {
+   "zug": "sud:gaerung:keller",
+   "achse": "gaerung",
+   "k": "keller",
+   "preis": 260,
+   "text": "Kellergärung im Felsenkeller −260 fl"
+  }
+ ],
+ "versuche": [
+  {
+   "achse": "gaerung",
+   "vorgabe": "sud:gaerung:ober",
+   "gekauft": "sud:gaerung:keller",
+   "preis": 260,
+   "kauf": {
+    "geklickt": true,
+    "war": {
+     "x": 392.671875,
+     "y": 640.765625,
+     "aus": false,
+     "trifft": true,
+     "text": "Kellergärung im Felsenkeller −260 fl"
+    }
+   },
+   "vorKauf": {
+    "verfahren": {
+     "schuettung": "rein",
+     "gaerung": "ober"
+    },
+    "fest": [],
+    "kasse": 1780,
+    "jahr": 1600,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "nachKauf": {
+    "verfahren": {
+     "schuettung": "rein",
+     "gaerung": "keller"
+    },
+    "fest": [
+     "gaerung:keller"
+    ],
+    "kasse": 1520,
+    "jahr": 1600,
+    "woche": 1,
+    "meister": null,
+    "brettZu": false
+   },
+   "wege": [
+    {
+     "weg": "W1 Brettknopf Vorgabe, echte Maus",
+     "ergebnis": {
+      "weg": "abgeschaltet",
+      "trifft": true
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "weg": "W2 Brettknopf Vorgabe, zwangsweise aktiviert, echte Maus",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 153.75,
+       "y": 663.6796875,
+       "aus": false,
+       "trifft": true,
+       "text": "Obergärig, warm geführt"
+      }
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "weg": "W3 Brettknopf Vorgabe, synthetisches click-Ereignis",
+     "ergebnis": "abgeschickt",
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "weg": "W6 sud:gaerung:ober zwangsweise aktiviert",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 153.75,
+       "y": 663.6796875,
+       "aus": false,
+       "trifft": true,
+       "text": "Obergärig, warm geführt"
+      }
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "weg": "W4 sud:zettel-wechsel-frei",
+     "ergebnis": {
+      "geklickt": true,
+      "war": {
+       "x": 576,
+       "y": 310.8203125,
+       "aus": false,
+       "trifft": true,
+       "text": "Mit Weizen gestreckt trägt Märzenbier"
+      }
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "weg": "W5 sud:zettel-wechsel-kauf",
+     "ergebnis": {
+      "weg": "kein Knopf"
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "weg": "W7 nach 12 Jahren (Erbfall) Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    },
+    {
+     "weg": "W8 nach Rohstoffmangel Vorgabe zwangsweise",
+     "ergebnis": {
+      "weg": "verdeckt",
+      "aus": false
+     },
+     "vorher": "keller",
+     "nachher": "keller",
+     "zurueck": false
+    }
+   ],
+   "nachSechsWochen": {
+    "verfahren": {
+     "schuettung": "rein",
+     "gaerung": "keller"
+    },
+    "fest": [
+     "gaerung:keller"
+    ],
+    "kasse": 1448,
+    "jahr": 1600,
+    "woche": 7,
+    "meister": null,
+    "brettZu": false
+   },
+   "zettelNachSiegel": {
+    "frei": {
+     "x": 576,
+     "y": 310.8203125,
+     "aus": false,
+     "trifft": true,
+     "text": "Rein nach dem Gebot trägt Märzenbier"
+    },
+    "kauf": null,
+    "gaerraum": {
+     "x": 576,
+     "y": 330.109375,
+     "aus": true,
+     "trifft": true,
+     "text": "Gärbottich setzen lassen · +10 Fass −78 fl"
+    }
+   },
+   "nachErbfall": {
+    "verfahren": {
+     "schuettung": "weizen",
+     "gaerung": "keller"
+    },
+    "fest": [
+     "gaerung:keller"
+    ],
+    "kasse": 250,
+    "jahr": 1603,
+    "woche": 13,
+    "meister": null,
+    "brettZu": true
+   },
+   "nachNotsud": {
+    "verfahren": {
+     "schuettung": "weizen",
+     "gaerung": "keller"
+    },
+    "fest": [
+     "gaerung:keller"
+    ],
+    "kasse": 250,
+    "jahr": 1603,
+    "woche": 13,
+    "meister": null,
+    "brettZu": false
+   }
+  }
+ ],
+ "fehler": []
+}
