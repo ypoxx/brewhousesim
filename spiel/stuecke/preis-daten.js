@@ -404,7 +404,12 @@ var PREIS_DATEN = {
            den Wasserzins fuer immer. */
         { k: 'brunnen', name: 'Der eigene Brunnen im Hof', anteil: 0.34, ab: 1355,
           was: 'Ein Schacht durch den Lehm bis auf den Kies, ausgemauert, mit Rad und Eimer.',
-          regel: 'Der Wasserzins an die Stadt endet. Für immer. Das Haus schöpft aus dem eigenen Grund und hängt nicht mehr an der Röhre, die der Rat sperren kann.',
+          /* KURZ, und das ist am Bildschirm nachgesehen: `.pr-fest .pr-regel`
+             steht auf `overflow: hidden`. Der laengere Satz („…und hängt nicht
+             mehr an der Röhre, die der Rat sperren kann") brach in 1356 in der
+             letzten Zeile ab. Eine Regel, die man nicht zu Ende lesen kann,
+             ist keine. */
+          regel: 'Der Wasserzins an die Stadt endet. Für immer. Das Haus schöpft aus eigenem Grund.',
           wirkung: { pflichtWeg: 'wasserzins' } }
       ]
     },

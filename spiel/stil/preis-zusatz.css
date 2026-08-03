@@ -312,3 +312,26 @@
    des Rückstands, mit dem er nächstes Jahr zurückkommt. */
 .pr-zeile.pr-zufluss-geborgt .pr-zahl { color: var(--pr-tinte); }
 .pr-zeile.pr-zufluss-geborgt .pr-was { font-style: italic; }
+
+/* ----------------------------------------------------------------------
+   FÜNF SIEGELKARTEN NEBENEINANDER — und was dabei überlief.
+
+   Am Bildschirm nachgesehen (1600, Tafel aufgeschlagen, 2752×1536, fünf
+   Festlegungen, weil noch keine genommen war): der Satz „Preis dieser
+   Amtszeit … Die Festlegung überdauert die Amtszeit …" lief unten aus der
+   Karte heraus und LEGTE SICH ÜBER den Hinweis „Über der Kasse: es fehlen
+   6.060 fl" darunter. Zwei Sätze übereinander sind kein Satz.
+
+   Die Zusatzlage setzt seit Runde 1 `flex: 0 1 auto; min-height: 0` auf alle
+   Kinder der Karte — die Kästen schrumpfen also, aber der Text lief aus dem
+   geschrumpften Kasten heraus, weil bei diesem einen kein `overflow` stand.
+   Er steht jetzt da. Geklippt wird von unten: die erste Zeile („Preis dieser
+   Amtszeit: 6.700 fl") ist die, auf die es ankommt, und die bleibt.
+   ---------------------------------------------------------------------- */
+.pr-fest .pr-satz-klein { overflow: hidden; }
+/* Aus demselben Grund die beiden anderen Kinder, die noch ohne `overflow`
+   dastanden: die Zeile „Dafür neu und für immer: …" und der Hinweis „Über
+   der Kasse: es fehlen …". Bei fünf Karten nebeneinander legte sich sonst
+   jede über die nächste. */
+.pr-fest .pr-sperrt,
+.pr-fest .pr-hinweis { overflow: hidden; }
