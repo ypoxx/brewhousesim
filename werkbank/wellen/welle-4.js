@@ -193,8 +193,21 @@ const URTEIL_SCHEMA = {
 
 phase('Bauen')
 
+/* Ein Stueck auf einmal, wenn `args` einen Schluessel nennt.
+   Am 3. August sind drei Container-Resets in drei Stunden gekommen, einer davon
+   mitten in Welle 3 bei elf von zwoelf Ergebnissen — alles in Arbeit war weg.
+   Vier Stuecke gleichzeitig heisst: ein Reset kostet alle vier. Ein Stueck
+   allein braucht eine knappe Stunde und ist danach im Repo.
+     Workflow({scriptPath: "werkbank/wellen/welle-4.js", args: "rueckkopplung"})
+   Ohne args laufen alle vier. */
+const NUR = typeof args === 'string' ? args : null
+const LAUF = NUR ? STUECKE.filter(s => s.k === NUR) : STUECKE
+if (!LAUF.length) throw new Error(`Kein Stueck heisst "${NUR}" — bekannt sind: ` +
+  STUECKE.map(s => s.k).join(', '))
+log(NUR ? `Welle 4, nur ${LAUF[0].name}` : 'Welle 4, alle vier Stuecke')
+
 const ergebnisse = await pipeline(
-  STUECKE,
+  LAUF,
 
   (s) => agent(
     `Du bist der Builder fuer ${s.name}.\n${REGELN}\n${LATTE}\n\nDEIN AUFTRAG:\n${s.auftrag}\n\n` +
@@ -252,7 +265,7 @@ const ergebnisse = await pipeline(
 )
 
 const fertig = ergebnisse.filter(Boolean)
-log(`Welle 4 durch: ${fertig.length} von ${STUECKE.length} Stuecken`)
+log(`Welle 4 durch: ${fertig.length} von ${LAUF.length} Stuecken`)
 return {
   stuecke: fertig.map(r => ({
     stueck: r.stueck,
