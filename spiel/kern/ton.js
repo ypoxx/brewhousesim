@@ -58,8 +58,18 @@
      halben Minute: die Zeit und den Vorgang. Das Bett sagt die Zeit, der Hof
      sagt den Ort, das Werk sagt den Vorgang — und das Werk muss dabei oben
      liegen. Im ersten Durchgang stand das Bett zu laut, und das Ohr sagte
-     ueber 1350 nur noch "jemand spielt Floete". */
-  var PEGEL = { bett: 1.0, hof: 1.0, werk: 0.42 };
+     ueber 1350 nur noch "jemand spielt Floete".
+
+     WELLE 4, RUNDE 2 — DER BEFUND, DER DIESE ZAHLEN GEAENDERT HAT.
+     Der Kritiker hat dreissig Sekunden aufgenommen, in denen NICHTS geklickt
+     wurde, und sie gegen den gespielten Lauf gehalten: 94 / 97 / 59 / 75 %
+     des Pegels. Nichtstun klang fast so laut wie Spielen, und drei von drei
+     messbaren Betten haben die Epoche ohne einen einzigen Spielklang richtig
+     genannt. Die Epoche kam also aus der Kulisse, nicht aus dem Vorgang.
+     Das ist keine Geschmacksfrage und mit keinem einzelnen Klang zu heilen:
+     das Bett war schlicht zu laut und das Werk zu leise. Bett und Hof gehen
+     auf gut die Haelfte herunter, das Werk um das Zweieinhalbfache herauf. */
+  var PEGEL = { bett: 1.0, hof: 1.0, werk: 1.05 };
 
   /* Die vier Hofbaender und die vier Betten sind NICHT gleich laut aus dem
      Erzeuger gekommen — hof1 hatte den dreifachen Effektivwert von hof3.
@@ -68,7 +78,21 @@
      alles zugedeckt haben, was im Hof geschah. Deshalb wird jede Schleife
      beim Entschluesseln auf einen festen Effektivwert gezogen, statt sie
      je Epoche von Hand nachzustellen. */
-  var ZIEL = { bett: 0.055, hof: 0.075 };
+  var ZIEL = { bett: 0.027, hof: 0.035 };
+
+  /* DER ATEM DES HOFES — Auflage 2.
+     Epoche 4 war ein Dauerteppich: in acht Sekunden Nichtstun schwankte ihr
+     Bett um den Faktor 1,4, und sie hat ihren eigenen Michaelitag verschluckt
+     (Hub 0,87). Ein Band, das ohne Unterlass gleich laut laeuft, ist keine
+     Kulisse mehr, sondern eine Wand. Bett und Hof bekommen deshalb eine
+     langsame Kontur: der Hof kommt und geht, mit einer Runde von sieben
+     Sekunden — kurz genug, dass in JEDEM Achtsekundenfenster der hoechste
+     und der tiefste Punkt vorkommen, lang genug, dass es atmet und nicht
+     pumpt. Der Wert ist der TIEFSTE Punkt, 1 waere keine Bewegung.
+     1884 und besonders 1970 stehen am tiefsten: deren Baender sind aus dem
+     Erzeuger als gleichfoermiges Maschinenbrummen gekommen. */
+  var ATEM = { 1: 0.52, 2: 0.52, 3: 0.44, 4: 0.26 };
+  var ATEM_RUNDE = 7.0;
 
   function lautheit(buf) {
     if (buf.__lautheit !== undefined) return buf.__lautheit;
@@ -138,9 +162,23 @@
     'sommer:keller-leer': { ersatz: 'keller', laut: 0.5, schleife: true },
 
     /* --- DER PREIS ------------------------------------------------------ */
-    'preis:michaeli':    { datei: altNeu('glocke', 'telefon'), laut: 0.9,
-                           sagt: 'Michaeli: die Glocke, später das Telefon.' },
-    'preis:muenzen':     { datei: altNeu('muenzen', 'kasse'), laut: 0.9 },
+    /* Auflage 5. Das Telefon war fuer sich tadellos — einzeln vorgelegt nennt
+       das Ohr es "mechanisches Telefonklingeln, 20. Jahrhundert, nichts
+       falsch". In der Mischung von 1970 aber fielen bei Sekunde 16/17
+       'preis:michaeli' (Telefon) und 'preis:muenzen' (Registrierkasse) in
+       DIESELBE Sekunde, und aus Klingel plus Kassenglocke wurde fuer das
+       fremde Ohr ein "digitaler Handy-Klingelton" — ein Geraet ab 1990.
+       Zwei Aenderungen, und beide zaehlen: der Zahltag von 1970 ist jetzt die
+       Werkspfeife (die einzige Probe im Haus, die nirgends angeschlossen war,
+       Auflage 7), und das Geld kommt eine halbe Sekunde SPAETER statt
+       gleichzeitig. Damit ist es das, wonach das pruefende Ohr sucht:
+       "eine einzelne Glocke und danach gezaehltes Geld".
+       Der Michaelitag ist ausserdem der einzige Vorgang, den das Ohr heute
+       schon 4 von 4 Mal trifft; er traegt die Latte und wird laut gestellt. */
+    'preis:michaeli':    { datei: je('glocke', 'glocke', 'glocke', 'fabrikpfeife'),
+                           laut: 1.3, duck: 0.30, halt: 1.6,
+                           sagt: 'Michaeli: die Glocke, 1970 die Werkspfeife.' },
+    'preis:muenzen':     { datei: altNeu('muenzen', 'kasse'), laut: 1.05, versatz: 0.62 },
     'preis:siegel':      { datei: altNeu('siegel', 'maschine'), laut: 0.85 },
     'preis:handschlag':  { datei: stets('handschlag'), laut: 0.85 },
     'preis:fertig':      { datei: altNeu('bau1', 'bau4'), laut: 0.8 },
