@@ -2017,28 +2017,32 @@
      danebensteht. Ab jetzt steht der ganze Grund am Knopf:
 
        data-soll-aus="1"   das Spiel sagt nein (steht schon beim Zeichnen fest)
-       data-brett-zu="1"   das eigene Brett liegt zugeklappt
        data-verdeckt="1"   der Zug waere erlaubt, aber etwas liegt darueber
+       data-aus-grund      in Worten: "spiel" · "verdeckt" · "brett-zugeklappt"
+                           · "brett-offen" (der Zettel tritt hinter das eigene
+                           aufgeschlagene Brett zurueck)
 
      Ein Zaehler, der ehrlich messen will, nimmt `data-soll-aus`; wer die
-     Verdeckung sucht, nimmt `data-verdeckt`. `disabled` bleibt die Summe —
-     denn ein Knopf, den die Maus nicht trifft, ist wirklich kein Knopf, und
-     ihn aktiv stehen zu lassen waere die groessere Luege.
+     Verdeckung sucht, nimmt `data-verdeckt`; wer wissen will, warum, liest
+     `data-aus-grund`. `disabled` bleibt die Summe — denn ein Knopf, den die
+     Maus nicht trifft, ist wirklich kein Knopf, und ihn aktiv stehen zu
+     lassen waere die groessere Luege.
      ---------------------------------------------------------------------- */
-  function merke(k, name, an) {
-    if (an) { if (k.getAttribute(name) !== '1') k.setAttribute(name, '1'); }
+  function merke(k, name, wert) {
+    if (wert) { if (k.getAttribute(name) !== wert) k.setAttribute(name, wert); }
     else if (k.hasAttribute(name)) k.removeAttribute(name);
   }
 
-  function schalte(wurzel, tot) {
+  function schalte(wurzel, tot, grund) {
     if (!wurzel) return;
     var kn = wurzel.querySelectorAll('button[data-zug]');
     for (var i = 0; i < kn.length; i++) {
       var soll = kn[i].getAttribute('data-soll-aus') === '1';
       var verdeckt = !tot && !soll && !imBild(kn[i]);
       var neu = tot || soll || verdeckt;
-      merke(kn[i], 'data-brett-zu', !!tot);
-      merke(kn[i], 'data-verdeckt', verdeckt);
+      merke(kn[i], 'data-verdeckt', verdeckt ? '1' : null);
+      merke(kn[i], 'data-aus-grund',
+        tot ? (grund || 'brett-zugeklappt') : (soll ? 'spiel' : (verdeckt ? 'verdeckt' : null)));
       if (kn[i].disabled !== neu) {
         kn[i].disabled = neu;
         if (neu) kn[i].setAttribute('aria-disabled', 'true');
@@ -2054,7 +2058,7 @@
       var zettel = document.querySelector('.sud-zettel');
       if (brett) {
         Z.brettZu = brett.classList.contains('stadt-zugeklappt');
-        schalte(brett, Z.brettZu);
+        schalte(brett, Z.brettZu, 'brett-zugeklappt');
       }
       /* DER SUD zeigt genau EINE Flaeche. Der Kesselzettel haengt am
          Sudhaus, und das Sudhaus liegt unter dem eigenen Brett — steht
@@ -2087,7 +2091,7 @@
         if (zettel.classList.contains('gedraengt') !== eng) {
           zettel.classList.toggle('gedraengt', eng);
         }
-        schalte(zettel, brettOffen);
+        schalte(zettel, brettOffen, 'brett-offen');
       }
     });
   }
