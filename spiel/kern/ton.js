@@ -101,7 +101,10 @@
      bett4 haengt am Ende einen kurzen Signalton an, den das pruefende Ohr
      ungefragt als "modern, nicht 1970" geruegt hat. Er wird nie gespielt. */
   var SCHNITT = {
-    bett1: [0.8, 1.5], bett2: [0.8, 1.5], bett3: [0.8, 1.5], bett4: [0.8, 5.5],
+    /* bett3 endet bei 44,4 s mit einem elektronischen Meldeton, den das Ohr
+       ungefragt als "Smartphone-Piepen" benannt hat — in einer Aufnahme von
+       1884. Zwei Sekunden Schnitt halten ihn sicher heraus (Datei 45,04 s). */
+    bett1: [0.8, 1.5], bett2: [0.8, 1.5], bett3: [0.8, 2.5], bett4: [0.8, 5.5],
     hof1: [0.3, 0.8], hof2: [0.3, 0.8], hof3: [0.3, 0.8], hof4: [0.3, 0.8]
   };
   function schnitt(datei, buf) {
@@ -129,6 +132,8 @@
     /* Die Kerbe war nur ein Rauschstoss — das Ohr hat sie in 1350 als
        "Reissverschluss" gehoert. Jetzt ist es ein Messer in Eichenholz. */
     'fuhre:kerbe':       { datei: stets('kerbe'), ersatz: 'kerbe', laut: 0.7 },
+    'fuhre:probe':       { datei: je('anstich', 'anstich', 'anstich', 'flaschen'), laut: 0.6 },
+    'fuhre:listen':      { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
     'tafel:kreide':      { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
     'sommer:keller-leer': { ersatz: 'keller', laut: 0.5, schleife: true },
 
@@ -164,6 +169,68 @@
     'gegner:abloesen':    { datei: stets('handschlag'), laut: 0.7 },
     'gegner:festlegung':  { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
     'gegner:hinsehen':    { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.6 },
+    /* Vier Namen, die DER GEGNER wirklich ruft und die bis Welle 4 alle im
+       Notfallkasten landeten — also viermal dasselbe Hundebellen. Am
+       Mitschnitt gezaehlt: in 1970 kam 'gegner:zielen' allein sechsmal in
+       dreissig Sekunden. */
+    'gegner:zielen':      { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.45 },
+    'gegner:binden':      { datei: stets('handschlag'), laut: 0.65 },
+    'gegner:angebot':     { datei: altNeu('karren', 'telefon'), laut: 0.6 },
+    'gegner:hinhalten':   { datei: stets('papier'), ersatz: 'blatt', laut: 0.5 },
+    'gegner:mitbieten':   { datei: altNeu('muenzen', 'kasse'), laut: 0.75 },
+    'gegner:oeffnen':     { datei: stets('papier'), ersatz: 'blatt', laut: 0.4 },
+
+    /* --- DER SUD --------------------------------------------------------
+       Gebaut in Welle 2b, also nach dieser Datei. Bis Welle 4 fiel JEDER
+       Sud-Ruf in den Notfallkasten und klang nach der kochenden Pfanne —
+       auch das Anstechen, die Hefe und der Rueckruf. Der Sud ist der
+       Vorgang, nach dem die Latte fragt; er bekommt jetzt eigene Klaenge. */
+    'sud:anstellen':     { datei: je('sud2', 'sud2', 'sud3', 'sud4'), laut: 0.9,
+                           sagt: 'Angestellt wird: Holzfeuer, Dampf, Motor.' },
+    'sud:ausschlagen':   { datei: je('sud1', 'sud1', 'sud3', 'sud4'), laut: 0.8 },
+    'sud:anstich':       { datei: je('anstich', 'anstich', 'anstich', 'flaschen'), laut: 1.0,
+                           sagt: 'Das Fass wird angestochen — 1970 laeuft die Abfuellung.' },
+    'sud:hefe':          { datei: stets('hefe'), laut: 0.7 },
+    'sud:verschneiden':  { datei: altNeu('fassholz', 'fassstahl'), laut: 0.75 },
+    'sud:fehlsud':       { datei: stets('brand'), laut: 0.8 },
+    'sud:sperre':        { datei: stets('unruhe'), laut: 0.7 },
+    'sud:rueckruf':      { datei: altNeu('glocke', 'telefon'), laut: 0.8 },
+    'sud:freigabe':      { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
+    'sud:siegel':        { datei: altNeu('siegel', 'maschine'), laut: 0.75 },
+    'sud:kauf':          { datei: altNeu('muenzen', 'kasse'), laut: 0.85 },
+    'sud:umstellen':     { datei: altNeu('kreide', 'maschine'), laut: 0.6 },
+    'sud:bau':           { datei: altNeu('bau1', 'bau4'), laut: 0.8 },
+    'sud:anzeige':       { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
+
+    /* --- DER NAME ------------------------------------------------------- */
+    'name:anschlagen':   { datei: altNeu('bau1', 'bau4'), laut: 0.7 },
+    'name:aushaengen':   { datei: altNeu('bau1', 'bau4'), laut: 0.6 },
+    'name:einziehen':    { datei: stets('kerbe'), ersatz: 'kerbe', laut: 0.5 },
+    'name:siegel':       { datei: altNeu('siegel', 'maschine'), laut: 0.7 },
+    'name:aufgeld':      { datei: altNeu('muenzen', 'kasse'), laut: 0.8 },
+    'name:verkauf':      { datei: altNeu('muenzen', 'kasse'), laut: 0.7 },
+    'name:zulauf':       { datei: stets('unruhe'), laut: 0.6 },
+    'name:verlust':      { datei: stets('unruhe'), laut: 0.5 },
+    'name:mundpropaganda': { datei: stets('unruhe'), laut: 0.45 },
+    'name:urteil-gut':   { datei: altNeu('glocke', 'telefon'), laut: 0.55 },
+    'name:urteil-schlecht': { datei: stets('unruhe'), laut: 0.6 },
+    'name:entzug':       { datei: stets('unruhe'), laut: 0.7 },
+    'name:nachahmung':   { datei: altNeu('karren', 'telefon'), laut: 0.55 },
+    'name:rueckruf':     { datei: altNeu('glocke', 'telefon'), laut: 0.7 },
+    /* Werbung: der Ausrufer, der Druckstock, die Annonce, der Rundfunk. */
+    'name:druck':        { datei: je('feder', 'feder', 'maschine', 'maschine'), laut: 0.5 },
+    'name:spot':         { datei: altNeu('kreide', 'telefon'), laut: 0.55 },
+
+    /* --- DAS ERBE ------------------------------------------------------- */
+    'erbe:feder':        { datei: stets('feder'), laut: 0.6,
+                           sagt: 'Der Kiel im Hausbuch.' },
+    'erbe:fallen':       { datei: altNeu('glocke', 'telefon'), laut: 0.85 },
+    'erbe:spruch':       { datei: stets('unruhe'), laut: 0.6 },
+    'erbe:widerspruch':  { datei: stets('unruhe'), laut: 0.7 },
+    'erbe:uebergabe':    { datei: stets('handschlag'), laut: 0.8 },
+    'erbe:erbteil':      { datei: altNeu('muenzen', 'kasse'), laut: 0.7 },
+    'erbe:stiftung':     { datei: altNeu('glocke', 'telefon'), laut: 0.7 },
+    'erbe:stunde':       { datei: je('woche1', 'woche2', 'woche3', 'woche4'), laut: 0.45 },
 
     /* --- DER KERN -------------------------------------------------------
        Der haeufigste Ton im ganzen Spiel: der WEITER-Knopf. Er war zuerst
@@ -177,7 +244,12 @@
 
   /* Was ein unbekannter Name bekommt, damit kein Ruf ins Leere geht.
      Auch der Notfall greift zu einer wirklichen Probe: ein synthetischer
-     Piepser waere in jeder der vier Epochen ein Anachronismus. */
+     Piepser waere in jeder der vier Epochen ein Anachronismus.
+
+     Der Notfallkasten ist die zweite Wahl und muss die zweite Wahl bleiben:
+     wo ein Stueck einen Namen oft ruft, gehoert er nach oben in den Katalog.
+     `B.ton.geraten()` zaehlt, welche Namen hier gelandet sind — damit die
+     Luecke zaehlbar wird, statt nur nach Papier zu klingen. */
   var NOTFALL = {
     sud:    { datei: je('sud1', 'sud2', 'sud3', 'sud4'), laut: 0.6 },
     fuhre:  { datei: stets('kerbe'), laut: 0.6 },
@@ -185,12 +257,18 @@
     preis:  { datei: stets('papier'), laut: 0.5 },
     stadt:  { datei: stets('papier'), ersatz: 'blatt', laut: 0.45 },
     gegner: { datei: stets('horchen'), ersatz: 'aufmerken', laut: 0.55 },
+    name:   { datei: je('feder', 'feder', 'maschine', 'maschine'), laut: 0.5 },
+    erbe:   { datei: stets('feder'), laut: 0.5 },
     uhr:    { datei: je('woche1', 'woche2', 'woche3', 'woche4'), laut: 0.5 },
     sommer: { ersatz: 'keller', laut: 0.5 }
   };
 
+  /* Buchfuehrung ueber den Notfallkasten. Kein Ton haengt daran. */
+  var GERATEN = {};
+
   function eintrag(name) {
     if (KATALOG[name]) return KATALOG[name];
+    GERATEN[name] = (GERATEN[name] || 0) + 1;
     var kopf = String(name).split(':')[0];
     var n = NOTFALL[kopf];
     if (n) return { datei: n.datei, ersatz: n.ersatz, laut: n.laut, geraten: true };
@@ -388,7 +466,10 @@
       meister.connect(druck); druck.connect(ctx.destination);
     } catch (f) { meister.connect(ctx.destination); }
 
-    var w = { ctx: ctx, meister: meister, bus: {}, ruhe: {}, schleifen: {} };
+    /* Was wirklich zum Ausgang geht. Daran haengt der Pegelmesser — sonst
+       misst man den Wunsch und nicht den Ton. */
+    var w = { ctx: ctx, meister: meister, ausgang: druck || meister,
+              bus: {}, ruhe: {}, schleifen: {} };
     ['bett', 'hof', 'werk'].forEach(function (n) {
       w.ruhe[n] = PEGEL[n];
       var g = ctx.createGain(); g.gain.value = w.ruhe[n];
@@ -514,6 +595,20 @@
 
   function laeuft() {
     return !!(werk && werk.ctx && werk.ctx.state === 'running' && !STUMM);
+  }
+
+  /* Der Analyser haengt sich beim ersten Ablesen an und bleibt dann haengen.
+     Er hat keinen Ausgang — ein AnalyserNode misst auch ohne. */
+  var messwerk = null;
+  function messer() {
+    if (messwerk && messwerk.werk === werk) return messwerk;
+    if (!werk || !werk.ctx) return null;
+    var a = werk.ctx.createAnalyser();
+    a.fftSize = 2048;
+    werk.ausgang.connect(a);
+    messwerk = { werk: werk, knoten: a, feld: new Float32Array(a.fftSize),
+                 hoechste: 0, lauteste: 0 };
+    return messwerk;
   }
 
   /* Browser geben Ton erst nach einer Handlung frei. Wir warten darauf, statt
@@ -662,6 +757,53 @@
     get laut() { return LAUT; },
     bereit: function () { return laeuft(); },
     wecke: wecke,
+
+    /* ------------------------------------------------------------------
+       DER PEGELMESSER — der einzige Beleg, der "es klingt" wirklich stuetzt.
+
+       `bereit()` sagt nur, dass der Browser den Kontext laufen laesst. Das
+       ist nicht dasselbe wie Ton: ein Graph, dessen Puffer nie ankommen,
+       laeuft genauso. Deshalb haengt hier ein Analyser am WIRKLICHEN
+       Ausgang (hinter dem Kompressor), und `pegel()` liest ab, was
+       tatsaechlich hinausgeht.
+
+           BRAUHAUS.ton.pegel()
+           -> {zustand:'running', rms:0.043, spitze:0.31, hoechste:0.62, ...}
+
+       `hoechste` ist der hoechste je gemessene Ausschlag seit dem Laden —
+       damit ein Pruefer nicht im richtigen Millisekundenfenster abfragen
+       muss, um einen kurzen Schlag zu erwischen.
+       ------------------------------------------------------------------ */
+    pegel: function () {
+      var aus = { zustand: werk && werk.ctx ? werk.ctx.state : 'kein-werk',
+                  stumm: STUMM, laut: LAUT, rms: 0, spitze: 0, hoechste: 0 };
+      B.wage('ton.pegel', function () {
+        var m = messer();
+        if (!m) return;
+        m.knoten.getFloatTimeDomainData(m.feld);
+        var s = 0, h = 0, i, v, a;
+        for (i = 0; i < m.feld.length; i++) {
+          v = m.feld[i]; s += v * v; a = v < 0 ? -v : v; if (a > h) h = a;
+        }
+        aus.rms = Math.sqrt(s / m.feld.length);
+        aus.spitze = h;
+        if (h > m.hoechste) m.hoechste = h;
+        if (aus.rms > m.lauteste) m.lauteste = aus.rms;
+        aus.hoechste = m.hoechste;
+        aus.lauteste = m.lauteste;
+      });
+      return aus;
+    },
+
+    /* Der lebende Ausgangsknoten — damit ein Pruefstand von aussen einen
+       MediaStreamDestination anhaengen und wirklich MITSCHNEIDEN kann,
+       statt dem Offline-Renderer zu glauben. */
+    ausgang: function () { return werk ? werk.ausgang : null; },
+
+    /* Welche Namen im Notfallkasten gelandet sind, und wie oft. Eine leere
+       Rueckgabe heisst: jeder Ruf des Spiels hat einen eigenen Klang. */
+    geraten: function () { return Object.assign({}, GERATEN); },
+
     mitschnitt: function () { return mitschnitt.slice(); },
     beginneMitschnitt: function () { mitschnitt.length = 0; mitAnfang = jetztSek(); return true; },
     katalog: function () { return Object.keys(KATALOG).slice(); },

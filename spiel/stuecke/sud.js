@@ -1486,7 +1486,8 @@
     var paar = B.el('div', 'sud-zpaar');
     paar.appendChild(knopf({
       text: (ausBottich ? e.fuehren.text : (e.anstich.jung || 'Jüngstes Fass anbrechen'))
-          + ' · +' + (ausBottich ? (D.guete.fuehren || 8) : (D.guete.anstichJung || 14)),
+          + ' · +' + (ausBottich ? (D.guete.fuehren || 8) : (D.guete.anstichJung || 14))
+          + (ausBottich ? ' · ohne Fass' : ' · ' + einFass),
       zug: 'sud:zettel-anstich',
       klasse: 'sud-tat klein voll halb',
       titel: ausBottich ? e.fuehren.titel : (e.anstich.titel + ' Kostet ' + einFass + '.'),
@@ -1512,7 +1513,7 @@
        die naechste, die NICHTS kostet, und die naechste, die etwas kostet.
        Genau das ist die zweite Latte, und sie muss im VORGABESTAND stehen —
        ein Brett, das erst aufgeschlagen werden muss, zaehlt dort nicht. */
-    var ohne = null, mit = null;
+    var ohne = null, mit = null, zeilen = 0;
     achsen().forEach(function (a) {
       a.optionen.forEach(function (o) {
         if (gewaehlt(a) === o || verdraengt(a, o)) return;
@@ -1544,7 +1545,32 @@
         }
       }
       z.appendChild(kn);
+      zeilen++;
     });
+
+    /* ------------------------------------------------------------------
+       WENN DIE FRAGE ENTSCHIEDEN IST, STEHT DIE NAECHSTE DA.
+
+       Das Siegel haelt jetzt (siehe verdraengt()) — und damit verschwindet
+       in 1350 nach dem Hopfenbrief die letzte Zeile mit einem Preisschild
+       vom Zettel. Eine unwiderrufliche Festlegung darf das Brett nicht
+       leerraeumen. Der Gaerraum ist der Zug, der danach bleibt: er kostet,
+       er staffelt sich hinauf, er hat in jeder Epoche eine andere
+       Nebenbedingung, und er bewegt Fass — also gehoert er nach
+       ZUSTAENDIGKEIT §18 in den Nenner und auf den Zettel.
+       ------------------------------------------------------------------ */
+    if (zeilen < 2) {
+      var gp = kaufPreis(), gs = kaufSperre();
+      z.appendChild(knopf({
+        text: gk().kauf.text + ' · +' + B.welt.menge(gk().kauf.menge),
+        zug: 'sud:zettel-gaerraum',
+        preis: -gp,
+        klasse: 'sud-tat klein voll',
+        titel: gs || fuelle(gk().kauf.titel),
+        aus: !!gs || !B.welt.kann(gp),
+        tu: kaufeGaerraum
+      }));
+    }
 
     B.orte.setze(z, 'sudhaus', { anker: 'mitte', dy: 0 });
     fach.appendChild(z);
@@ -1688,7 +1714,8 @@
     });
     var p = kaufPreis();
     if (!kaufSperre() && (!bester || p < bester.preis)) {
-      bester = { was: gk().kauf.text, preis: p, art: 'bau', zuege: ['sud:gaerraum'] };
+      bester = { was: gk().kauf.text, preis: p, art: 'bau',
+                 zuege: ['sud:zettel-gaerraum', 'sud:gaerraum'] };
     }
     if (!bester) return;
     /* ZUSTAENDIGKEIT §24: wer seinen Zugschluessel mitschickt, wird beim Wort
