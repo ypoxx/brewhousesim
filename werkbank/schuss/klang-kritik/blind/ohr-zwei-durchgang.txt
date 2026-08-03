@@ -1,0 +1,71 @@
+── probe-alpha.wav
+       0s  Mechanisches Klackern und Rattern beginnt
+       1s  Dumpfes metallisches Schlagen/Einrasten
+       2s  Kurzes Hupen
+       3s  Metallisches Schlagen/Einrasten
+       6s  Schnelles, mehrfaches helles Hupen
+       7s  Tieferes Hupen
+       8s  Metallisches Schlagen/Einrasten
+      10s  Lautes Zischen (wie von einer Druckluftbremse)
+      13s  Metallisches Klirren und Klimpern (wie Ketten oder Werkzeug)
+      15s  Metallisches Schlagen/Einrasten
+      16s  Helles metallisches Klingeln (Ding-Geräusch)
+      17s  Mechanisches Surren eines Motors
+      18s  Metallisches Schlagen/Einrasten
+      20s  Metallisches Schlagen/Einrasten
+      21s  Kurzes Zischen
+      26s  Metallisches Schlagen/Einrasten
+      28s  Kurzes Hupen
+   dauerhaft: Ein tiefes, durchgehendes Motorenbrummen (wie von einem LKW im Leerlauf) und eine fröhliche, rhythmische Hintergrundmusik mit Bass und Schlagzeug.
+   aendert:   Nein, der Grundklang aus Motorbrummen und Musik bleibt über die gesamten 30 Sekunden konstant.
+   B KEINE MESSUNG: unlesbar
+
+── probe-beta.wav
+       0s  Laute Dampfpfeife ertönt, Musik und mechanische Geräusche beginnen
+       2s  Metallisches Klingeln
+       4s  Lautes Dampfzischen
+      12s  Dampfpfeife ertönt erneut
+      15s  Helles Klingeln einer Glocke
+      17s  Dampfpfeife ertönt
+      20s  Metallisches Klappern und Scheppern
+      22s  Kurzes Tuten einer Dampfpfeife
+      26s  Dampfpfeife ertönt
+      28s  Metallisches Klappern und Scheppern
+   dauerhaft: Schnelle Ragtime-Klaviermusik und mechanische Fabrikgeräusche wie Rattern, Stampfen und Zischen.
+   aendert:   Nein, der Grundklang aus Musik und Maschinenlärm bleibt im Verlauf konstant.
+   B KEINE MESSUNG: unlesbar
+
+── probe-gamma.wav
+       0s  Blubberndes, gluckerndes Geräusch und rhythmisches Schaben
+       4s  Schweres, knirschendes Geräusch von reibenden Steinen
+       7s  Erneutes steinernes Knirschen und Schieben
+      10s  Blubberndes, kochendes Geräusch setzt wieder ein
+      13s  Rhythmisches Schaben oder Sägen beginnt erneut
+      15s  Geräusch von umschüttender oder spritzender Flüssigkeit
+      16s  Ein helles Klingeln (Glocke)
+      17s  Weiteres Plätschern und Blubbern
+      20s  Erneutes rhythmisches Schaben und Blubbern
+      26s  Wiederholtes Geräusch von reibenden Steinen
+   dauerhaft: Knisterndes Feuer und eine ruhige Flötenmelodie
+   aendert:   Nein, der Grundklang von Feuer und Flöte bleibt durchgehend konstant
+   B KEINE MESSUNG: unlesbar
+
+── probe-delta.wav
+       0s  Rhythmisches Sägen von Holz
+       3s  Quietschendes Geräusch, ähnlich einem Holzrad oder Karren
+       6s  Schweres, tiefes Knarren von Holz
+       9s  Schnelles, rhythmisches Klopfen oder Hämmern
+      11s  Eine Glocke läutet
+      12s  Plätschern, eine Flüssigkeit wird eingegossen
+      15s  Ein Schaf blökt
+      16s  Eine Glocke läutet erneut
+      18s  Erneutes Quietschen eines Holzrades
+      20s  Helles, metallisches Hämmern (wie auf einem Amboss)
+      24s  Ein Schaf blökt
+      25s  Quietschendes Holzrad
+      27s  Eine Glocke läutet
+   dauerhaft: Eine ruhige, mittelalterlich klingende Melodie mit Zupfinstrumenten und Flöte.
+   aendert:   Nein, die Hintergrundmusik und die generelle Geräuschkulisse bleiben durchgehend konstant.
+   B KEINE MESSUNG: unlesbar
+
+{"probe-alpha.wav": {"offen": {"leiste": [{"sek": 0, "was": "Mechanisches Klackern und Rattern beginnt"}, {"sek": 1, "was": "Dumpfes metallisches Schlagen/Einrasten"}, {"sek": 2, "was": "Kurzes Hupen"}, {"sek": 3, "was": "Metallisches Schlagen/Einrasten"}, {"sek": 6, "was": "Schnelles, mehrfaches helles Hupen"}, {"sek": 7, "was": "Tieferes Hupen"}, {"sek": 8, "was": "Metallisches Schlagen/Einrasten"}, {"sek": 10, "was": "Lautes Zischen (wie von einer Druckluftbremse)"}, {"sek": 13, "was": "Metallisches Klirren und Klimpern (wie Ketten oder Werkzeug)"}, {"sek": 15, "was": "Metallisches Schlagen/Einrasten"}, {"sek": 16, "was": "Helles metallisches Klingeln (Ding-Geräusch)"}, {"sek": 17, "was": "Mechanisches Surren eines Motors"}, {"sek": 18, "was": "Metallisches Schlagen/Einrasten"}, {"sek": 20, "was": "Metallisches Schlagen/Einrasten"}, {"sek": 21, "was": "Kurzes Zischen"}, {"sek": 26, "was": "Metallisches Schlagen/Einrasten"}, {"sek": 28, "was": "Kurzes Hupen"}], "dauerhaft": "Ein tiefes, durchgehendes Motorenbrummen (wie von einem LKW im Leerlauf) und eine fröhliche, rhythmische Hintergrundmusik mit Bass und Schlagzeug.", "aenderung": "Nein, der Grundklang aus Motorbrummen und Musik bleibt über die gesamten 30 Sekunden konstant."}, "menue": {"abbruch": "unlesbar", "rohtext": "{\n  \"fuhre\": {\n    \"da\": true,\n    \"sek\": 28,\n    \"sicher\": 90\n  },\n  \"sud\": {\n    \"da\": true,\n    \"sek\": 11,\n    \"sicher\": 90\n  },\n  \"zahltag\": {\n    \"da\": true,\n    \"sek\": 16,\n    \"sicher\": 95\n  },\n  \"gegner\": {\n    \"da\": false,\n    \"sek\": -1,\n    \"sicher\": 0\n  },\n  \"blender_regen\": {\n    \"da\": fa"}}, "probe-beta.wav": {"offen": {"leiste": [{"sek": 0, "was": "Laute Dampfpfeife ertönt, Musik und mechanische Geräusche beginnen"}, {"sek": 2, "was": "Metallisches Klingeln"}, {"sek": 4, "was": "Lautes Dampfzischen"}, {"sek": 12, "was": "Dampfpfeife ertönt erneut"}, {"sek": 15, "was": "Helles Klingeln einer Glocke"}, {"sek": 17, "was": "Dampfpfeife ertönt"}, {"sek": 20, "was": "Metallisches Klappern und Scheppern"}, {"sek": 22, "was": "Kurzes Tuten einer Dampfpfeife"}, {"sek": 26, "was": "Dampfpfeife ertönt"}, {"sek": 28, "was": "Metallisches Klappern und Scheppern"}], "dauerhaft": "Schnelle Ragtime-Klaviermusik und mechanische Fabrikgeräusche wie Rattern, Stampfen und Zischen.", "aenderung": "Nein, der Grundklang aus Musik und Maschinenlärm bleibt im Verlauf konstant."}, "menue": {"abbruch": "unlesbar", "rohtext": "{\n  \"fuhre\": {\n    \"da\": true,\n    \"sek\": 14,\n    \"sicher\": 90\n  },\n  \"sud\": {\n    \"da\": true,\n    \"sek\": 4,\n    \"sicher\": 90\n  },\n  \"zahltag\": {\n    \"da\": true,\n    \"sek\": 16,\n    \"sicher\": 90\n  },\n  \"gegner\": {\n    \"da\": true,\n    \"sek\": 8,\n    \"sicher\": 80\n  },\n  \"blender_regen\": {\n    \"da\": fals"}}, "probe-gamma.wav": {"offen": {"leiste": [{"sek": 0, "was": "Blubberndes, gluckerndes Geräusch und rhythmisches Schaben"}, {"sek": 4, "was": "Schweres, knirschendes Geräusch von reibenden Steinen"}, {"sek": 7, "was": "Erneutes steinernes Knirschen und Schieben"}, {"sek": 10, "was": "Blubberndes, kochendes Geräusch setzt wieder ein"}, {"sek": 13, "was": "Rhythmisches Schaben oder Sägen beginnt erneut"}, {"sek": 15, "was": "Geräusch von umschüttender oder spritzender Flüssigkeit"}, {"sek": 16, "was": "Ein helles Klingeln (Glocke)"}, {"sek": 17, "was": "Weiteres Plätschern und Blubbern"}, {"sek": 20, "was": "Erneutes rhythmisches Schaben und Blubbern"}, {"sek": 26, "was": "Wiederholtes Geräusch von reibenden Steinen"}], "dauerhaft": "Knisterndes Feuer und eine ruhige Flötenmelodie", "aenderung": "Nein, der Grundklang von Feuer und Flöte bleibt durchgehend konstant"}, "menue": {"abbruch": "unlesbar", "rohtext": "{\n  \"fuhre\": {\n    \"da\": true,\n    \"sek\": 3,\n    \"sicher\": 90\n  },\n  \"sud\": {\n    \"da\": true,\n    \"sek\": 0,\n    \"sicher\": 100\n  },\n  \"zahltag\": {\n    \"da\": true,\n    \"sek\": 16,\n    \"sicher\": 100\n  },\n  \"gegner\": {\n    \"da\": true,\n    \"sek\": 7,\n    \"sicher\": 90\n  },\n  \"blender_regen\": {\n    \"da\": fal"}}, "probe-delta.wav": {"offen": {"leiste": [{"sek": 0, "was": "Rhythmisches Sägen von Holz"}, {"sek": 3, "was": "Quietschendes Geräusch, ähnlich einem Holzrad oder Karren"}, {"sek": 6, "was": "Schweres, tiefes Knarren von Holz"}, {"sek": 9, "was": "Schnelles, rhythmisches Klopfen oder Hämmern"}, {"sek": 11, "was": "Eine Glocke läutet"}, {"sek": 12, "was": "Plätschern, eine Flüssigkeit wird eingegossen"}, {"sek": 15, "was": "Ein Schaf blökt"}, {"sek": 16, "was": "Eine Glocke läutet erneut"}, {"sek": 18, "was": "Erneutes Quietschen eines Holzrades"}, {"sek": 20, "was": "Helles, metallisches Hämmern (wie auf einem Amboss)"}, {"sek": 24, "was": "Ein Schaf blökt"}, {"sek": 25, "was": "Quietschendes Holzrad"}, {"sek": 27, "was": "Eine Glocke läutet"}], "dauerhaft": "Eine ruhige, mittelalterlich klingende Melodie mit Zupfinstrumenten und Flöte.", "aenderung": "Nein, die Hintergrundmusik und die generelle Geräuschkulisse bleiben durchgehend konstant."}, "menue": {"abbruch": "unlesbar", "rohtext": "{\n  \"fuhre\": {\n    \"da\": true,\n    \"sek\": 6,\n    \"sicher\": 95\n  },\n  \"sud\": {\n    \"da\": true,\n    \"sek\": 14,\n    \"sicher\": 95\n  },\n  \"zahltag\": {\n    \"da\": true,\n    \"sek\": 17,\n    \"sicher\": 100\n  },\n  \"gegner\": {\n    \"da\": false,\n    \"sek\": -1,\n    \"sicher\": 0\n  },\n  \"blender_regen\": {\n    \"da\": fa"}}}

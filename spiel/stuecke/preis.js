@@ -405,10 +405,23 @@
      Freibetrag.
 
      MIT FREIBETRAG ist es keine Abgabe auf das Sparen mehr, sondern eine auf
-     das Liegenlassen: frei bleibt ein Vielfaches der Jahreslast — genug, um
-     die naechste Sprosse und die naechste Umlage zu bezahlen —, und
-     angeschlagen wird nur, was daruber hinaus Jahr fuer Jahr unberuehrt
-     liegt. Wer spart und dann kauft, zahlt nichts. Wer sitzt, zahlt.
+     das Liegenlassen: frei bleibt eine Jahreslast — genug fuer die naechste
+     Umlage —, mindestens aber der Preis der billigsten Festlegung dieser Zeit
+     (siehe `liegeFreibetrag`), und angeschlagen wird nur, was darueber hinaus
+     Jahr fuer Jahr unberuehrt liegt. Wer spart und dann kauft, zahlt nichts.
+     Wer sitzt, zahlt.
+
+     WAS DAS NICHT REPARIERT, und es gehoert in denselben Absatz: die
+     eigentliche Unwucht sitzt nicht in diesem Stueck. Der Nenner der Kennzahl
+     ist der billigste Zug der Art `umkaempft`, und den meldet DER GEGNER aus
+     `grundwert = menge(adresse) x satz(mittel)`. Beide Faktoren stehen in
+     seinen Daten fest; in 1600 benutzt er ueber vierzehn Jahre die billigen
+     Mittel (Zunftbrief 9, Heirat 7), und ein Zuvorkommen kostet 45 im Hundert
+     davon — 66 bis 336 fl, ohne jede Richtung. In 1884 eskaliert er dagegen
+     (Vertrag 45 -> Depot 70 -> Hypothek 110), und genau deshalb waechst dort
+     der Nenner mit. Dieses Stueck kann den Nenner nicht anfassen; es kann nur
+     den Zaehler daran hindern, davonzulaufen. Der Absatz „KERN/GEGNER" im
+     Bericht sagt, was die andere Haelfte waere.
 
      Historisch ist das keine Erfindung, sondern der Normalfall dieser
      Epoche. Der Anschlag steht laut den Daten dieser Epoche selbst „im
@@ -428,13 +441,13 @@
      ---------------------------------------------------------------------- */
   /* DER FREIBETRAG HAT EINEN BODEN, UND ER IST NICHT VERHANDELBAR.
 
-     Zwei Jahreslasten allein reichen nicht. Gemessen mit `liegeFrei` 1,5 und
-     `liegeSatz` 0,55: die Kennzahl steht dann in 1600 ueber vierzehn Jahre
-     bei 0,94x bis 3,93x (rho −0,25) — und der Automat nimmt in derselben
-     Partie KEINE EINZIGE FESTLEGUNG mehr, weil die billigste dieser Zeit
-     420 fl kostet und die Lade nie mehr so viel traegt. Eine Kennzahl im Band
-     um den Preis der unwiderruflichen Wahl ist kein Fortschritt, sondern ein
-     Tausch: die zweite Messlatte zaehlt beides.
+     Die Jahreslast allein reicht nicht. Gemessen mit `liegeFrei` 1,5 und
+     `liegeSatz` 0,55 und ohne Boden: die Kennzahl steht dann in 1600 ueber
+     vierzehn Jahre bei 0,94x bis 3,93x (rho −0,25) — und der Automat nimmt in
+     derselben Partie KEINE EINZIGE FESTLEGUNG mehr, weil die billigste dieser
+     Zeit damals 0,15 x Taxe = 420 fl kostete und die Lade nie mehr so viel
+     trug. Eine Kennzahl im Band um den Preis der unwiderruflichen Wahl ist
+     kein Fortschritt, sondern ein Tausch: die zweite Messlatte zaehlt beides.
 
      Der Boden steht deshalb auf dem Preis der BILLIGSTEN FESTLEGUNG DIESER
      ZEIT. Sachlich ist das dieselbe Regel wie oben, nur zu Ende gedacht:
