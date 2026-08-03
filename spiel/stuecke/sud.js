@@ -1563,6 +1563,46 @@
     }));
     z.appendChild(paar);
 
+    /* ------------------------------------------------------------------
+       DIE GESPERRTE CHARGE — 1970, und bis Welle 4 unerreichbar.
+
+       Gemessen (400 Wochen, sorgfaeltig gespielt, 1970): das Haus fuhr
+       50 Sude, der Handel sperrte Chargen — und die beiden Antworten
+       darauf standen in NULL von 400 Wochen bedienbar am Bildschirm. Sie
+       hingen allein am Brett, und das Brett liegt zugeklappt. Nach vier
+       Wochen gibt der Braumeister von selbst frei; die epocheneigene
+       Entscheidung von 1970 fiel also vierzehn Jahre lang ohne den
+       Spieler.
+
+       Sie steht jetzt auf dem Zettel, und zwar VOR der Umstellung: eine
+       Charge mit Frist ist dringender als ein Verfahren ohne.
+       ------------------------------------------------------------------ */
+    var chd = ep().charge;
+    var chb = null;
+    if (chd) {
+      for (var ci = 0; ci < Z.bottiche.length; ci++) {
+        if (Z.bottiche[ci].gesperrt) { chb = Z.bottiche[ci]; break; }
+      }
+    }
+    if (chb) {
+      var cp = B.el('div', 'sud-zpaar');
+      cp.appendChild(knopf({
+        text: chd.frei.text + ' · Charge ' + chb.nr + ' · ±' + chb.streuung + ' %',
+        zug: 'sud:zettel-charge-frei',
+        klasse: 'sud-tat klein voll halb',
+        titel: chd.frei.titel,
+        tu: function () { chargeFrei(chb); }
+      }));
+      cp.appendChild(knopf({
+        text: chd.schnitt.text + ' · −' + B.welt.menge(Math.max(1, Math.round(chb.fass / 3))),
+        zug: 'sud:zettel-charge-schnitt',
+        klasse: 'sud-tat klein voll halb',
+        titel: chd.schnitt.titel,
+        tu: function () { chargeSchnitt(chb); }
+      }));
+      z.appendChild(cp);
+    }
+
     /* Zwei Umstellungen, die einander ausschliessen, mit ihrem Preis daneben:
        die naechste, die NICHTS kostet, und die naechste, die etwas kostet.
        Genau das ist die zweite Latte, und sie muss im VORGABESTAND stehen —
@@ -1576,7 +1616,10 @@
         else if (!mit || p < mit.p) mit = { o: o, a: a, p: p };
       });
     });
-    [ohne, mit].forEach(function (kand, i) {
+    /* Steht eine Charge gesperrt, nimmt sie den Platz der freien
+       Umstellung — der Zettel bleibt unter der Ortsmarken-Schwelle der
+       STADT (2,4 % der Buehne), und die Frist geht vor. */
+    [chb ? null : ohne, mit].forEach(function (kand, i) {
       if (!kand) return;
       var kn = knopf({
         text: kand.o.name,
@@ -1613,7 +1656,7 @@
        Nebenbedingung, und er bewegt Fass — also gehoert er nach
        ZUSTAENDIGKEIT §18 in den Nenner und auf den Zettel.
        ------------------------------------------------------------------ */
-    if (zeilen < 2) {
+    if (zeilen < 2 && !chb) {
       var gp = kaufPreis(), gs = kaufSperre();
       z.appendChild(knopf({
         text: gk().kauf.text + ' · +' + B.welt.menge(gk().kauf.menge),

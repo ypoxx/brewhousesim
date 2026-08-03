@@ -426,10 +426,33 @@
      ein Nichtstuer, und die Rechnung dieser Epoche ist Zeile fuer Zeile
      dieselbe wie vorher. Nachgemessen: sie IST es (siehe Bericht).
      ---------------------------------------------------------------------- */
+  /* DER FREIBETRAG HAT EINEN BODEN, UND ER IST NICHT VERHANDELBAR.
+
+     Zwei Jahreslasten allein reichen nicht. Gemessen mit `liegeFrei` 1,5 und
+     `liegeSatz` 0,55: die Kennzahl steht dann in 1600 ueber vierzehn Jahre
+     bei 0,94x bis 3,93x (rho −0,25) — und der Automat nimmt in derselben
+     Partie KEINE EINZIGE FESTLEGUNG mehr, weil die billigste dieser Zeit
+     420 fl kostet und die Lade nie mehr so viel traegt. Eine Kennzahl im Band
+     um den Preis der unwiderruflichen Wahl ist kein Fortschritt, sondern ein
+     Tausch: die zweite Messlatte zaehlt beides.
+
+     Der Boden steht deshalb auf dem Preis der billigsten Festlegung, die
+     dieser Zeit noch offen ist. Sachlich ist das dieselbe Regel wie oben, nur
+     zu Ende gedacht: angeschlagen wird, was NICHT gebraucht wird — und das
+     Geld fuer den Schritt, den der Rat selbst vom Haus verlangt, wird
+     gebraucht. `festBasis()` haengt an der Zeit und nicht am Vermoegen
+     (siehe dort), der Boden ist also frei von Rueckkopplung: er waechst mit
+     der Teuerung und nicht mit der Kasse. */
   function liegeFreibetrag() {
     var e = ep();
     if (!e.liegeSatz) return 0;
-    return Math.round((e.liegeFrei || 0) * pflichtSumme());
+    var frei = Math.round((e.liegeFrei || 0) * pflichtSumme());
+    var boden = 0;
+    festlegungen().forEach(function (f) {
+      var p = festPreis(f);
+      if (p > 0 && (!boden || p < boden)) boden = p;
+    });
+    return Math.max(frei, boden);
   }
 
   function liegegeld() {
@@ -899,7 +922,8 @@
       buche(liege, liegeName(), 'pflicht', 'hoehe');
       chronik('pflicht', liegeName() + ': von ' + geld(barVorher) + ' bar bleiben '
         + geld(liegeFrei) + ' frei — ' + B.zahl(e.liegeFrei || 0, 1)
-        + ' Jahreslasten. Auf die ' + geld(barVorher - liegeFrei) + ', die darüber '
+        + ' Jahreslasten, mindestens aber der Preis der nächsten Festlegung. '
+        + 'Auf die ' + geld(barVorher - liegeFrei) + ', die darüber '
         + 'liegen blieben, schlägt der Rat ' + geld(liege) + ' an. '
         + 'Was im Haus verbaut ist, wird nicht angeschlagen.');
     }
