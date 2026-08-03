@@ -37,8 +37,22 @@
      an der Person: Gewohnheit · Anfrage · Probe · Lieferung · Der Ruf des
                Hauses · Der bessere Name · Gevatterschaft · Heirat ·
                Ratsspruch · Amtsgewalt
+
+     RUNDE 3, NACHGEMESSEN UND KORRIGIERT.  Die Liste war zu kurz — und das
+     traf ausgerechnet die eigenen Zuege dieses Stuecks. Der streitbaren Hand
+     gelingt das Anfechten, sie zahlt dafuer, `welt.binde` setzt die Adresse
+     auf das Haus um — mit 'Ratsspruch fuer das Haus' (1350), 'Urteil des
+     Stadtgerichts' (1600), 'Urteil des Landgerichts' (1884), 'Vergleich vor
+     dem Landgericht' (1970). KEINES dieser vier Woerter traf den Ausdruck.
+     Am Bildschirm gemessen: die teuer gewonnene Adresse stand danach unter
+     AN DER PERSON und fiel beim naechsten Erbfall wieder weg. Dasselbe waere
+     dem neuen Widerspruch passiert (gemessen: nach dem Klick stand 'am Haus'
+     weiter auf 0). Die Woerter der Gerichte stehen jetzt drin. 'Ratsspruch
+     fuer das Haus' heisst dazu 'Ratsurteil fuer das Haus' — der GEGNER nimmt
+     Adressen mit einem blanken 'Ratsspruch', und zwei Sachen mit demselben
+     Wort auseinanderzuhalten ist Sache des Wortes, nicht des Ausdrucks.
      ---------------------------------------------------------------------- */
-  D.AM_HAUS = /vertrag|brief|pfand|hypothek|konzession|bannrecht|vereinbarung|listung|pacht|exklusiv|verschreib|kontrakt|eintrag|zunft/i;
+  D.AM_HAUS = /vertrag|brief|pfand|hypothek|konzession|bannrecht|vereinbarung|listung|pacht|exklusiv|verschreib|kontrakt|eintrag|zunft|widerspruch|urteil|vergleich|vormerkung|verfügung|siegel/i;
 
   /* ----------------------------------------------------------------------
      DIE EIGENSCHAFT DER AMTSZEIT — der Hebel.
@@ -103,7 +117,7 @@
       stunde: 'Die Stunde kommt ohne Ansage. {alt} legt die Kelle hin, und '
             + 'was nur auf ihr Wort hin ging, geht nicht mehr.',
       seelgeraet: { name: 'Ein Seelgerät stiften', satz: 'Eine Jahrtagsmesse für das Haus.' },
-      anfechten: { name: 'Vor dem Rat anfechten', womit: 'Ratsspruch für das Haus' },
+      anfechten: { name: 'Vor dem Rat anfechten', womit: 'Ratsurteil für das Haus' },
       /* Was geschieht, wenn das Bezahlte doch verlorengeht — Auflage 1. */
       erloschen: 'ERLOSCHEN — bezahlt, im Stadtbuch, und doch verloren',
       widerspruch: { name: 'Widerspruch aus dem Stadtbuch',
