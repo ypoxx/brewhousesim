@@ -1,0 +1,242 @@
+[
+ {
+  "durchgang": 1,
+  "datei": "probe-01.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Im Brauhaus-Hof spielt eine Blaskapelle auf, während im Hintergrund dampfgetriebene Maschinen rhythmisch arbeiten.",
+  "woran": "Die typische Blechblasmusik der Gründerzeit mit Tuba und Trompeten kombiniert mit dem regelmäßigen Zischen und Stampfen einer industriellen Dampfmaschine.",
+  "stoert": "Keine störenden Anachronismen wahrnehmbar."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-02.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 95,
+  "vorgang": "Im Brauhaushof läuft ein funkiger Rock-Titel mit E-Bass, E-Gitarre und Schlagzeug, während im Hintergrund Stadt- und Fahrzeuggeräusche zu hören sind.",
+  "woran": "An den charakteristischen 1970er-Jahre-Instrumenten wie E-Bass, Schlagzeug-Rhythmus und E-Gitarre sowie modernen Motorengeräuschen im Hintergrund.",
+  "stoert": "Keine auffälligen Anachronismen vorhanden."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-03.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 90,
+  "vorgang": "Im Brauhaushof wird Bier gebraut und umgefüllt, während jemand auf einer Flöte und einer Harfe eine mittelalterliche Melodie spielt.",
+  "woran": "Charakteristische mittelalterliche Musik mit Holzwindinstrument (Flöte/Schalmei) und Zupfinstrument (Harfe/Laute) sowie einfache handwerkliche Braugeräusche (Blubber- und Eingießgeräusche).",
+  "stoert": "Keine störenden unpassenden Elemente; die Klänge wirken durchgehend authentisch für das Mittelalter."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-04.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 95,
+  "vorgang": "Ein Lieferwagen oder LKW rangiert auf dem Brauereihof, während Getränkekisten mit Glasflaschen bewegt und Reinigungsarbeiten durchgeführt werden.",
+  "woran": "An den deutlichen Geräuschen eines Verbrennungsmotors, einer Autohupe, dem Klirren von Glasflaschen in Kisten sowie einer Fahrradklingel.",
+  "stoert": "Nein, alle gehörten Elemente passen stimmig in das Jahr 1970."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-05.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 95,
+  "vorgang": "Im Hof herrscht eine düstere, seuchengeprägte Stimmung mit kranken Menschen, während eine mittelalterliche Flötenmelodie gespielt wird.",
+  "woran": "Das Summen von Fliegen, krankhaftes Husten, unheimliches Zischen und Geflüster sowie die einfache Holzflötenmelodie.",
+  "stoert": "Keine störenden Elemente; alle Klänge passen genau in die Zeit um 1350."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-06.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 90,
+  "vorgang": "Im Brauhaus-Hof geht jemand umher, während eine lebhafte Renaissance-Melodie auf einer Laute gespielt und dazu gepfiffen wird.",
+  "woran": "Die gezupfte Lautenmusik im Renaissance-Stil, das dazugehörige Pfeifen sowie das Klackern von Lederschuhen auf Steinboden.",
+  "stoert": "Nein, alle zu hörenden Klänge passen stimmig in das Jahr 1600."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-07.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Im Brauhaushof laufen dampfbetriebene Maschinen, während schweres Material bewegt wird.",
+  "woran": "Zischender Wasserdampf aus Druckventilen, Dampfmaschinen- und Fabrikgeräusche sowie metallisches Scheppern der Industrialisierung.",
+  "stoert": "Nein, alle Geräusche fügen sich stimmig in das Zeitalter der Dampfmaschinen ein."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-08.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 90,
+  "vorgang": "Ein pferdegezogener Holzwagen rumpelt über das Kopfsteinpflaster des Brauhaushofs, während im Hintergrund Kirchenglocken läuten und Lautenmusik ertönt.",
+  "woran": "An der Lauten- und Flötenmusik im Renaissance-Stil, dem Hufgeklapper und den Holzrädern der Kutsche sowie den Kirchenglocken ohne jegliche industrielle oder motorisierte Geräusche.",
+  "stoert": "Keine offensichtlichen störenden Geräusche; die Klangkulisse wirkt durchweg authentisch für die Zeit um 1600."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-01.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 90,
+  "vorgang": "Im Brauereihof spielt eine Blaskapelle traditionelle Musik, während im Vordergrund rhythmisch gearbeitet wird (z. B. das Ausspritzen oder Umpumpen von Fässern mit einer Handpumpe).",
+  "woran": "Die chromatische Blasmusik mit Ventilinstrumenten (wie Tuba und Flügelhorn) ist typisch für die Biergarten- und Brauhauskultur des späten 19. Jahrhunderts um 1884.",
+  "stoert": "Keine offensichtlichen Anachronismen hörbar; Musikstil und handwerkliche Arbeitsgeräusche passen stimmig zusammen."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-02.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 95,
+  "vorgang": "Ein Kraftfahrzeug mit Verbrennungsmotor läuft im Leerlauf im Hof, während Musik im Stil der 1970er Jahre zu hören ist.",
+  "woran": "Am deutlichen Motorengeräusch eines Autos oder Lasters sowie der typischen Pop-/Funk-Musik mit E-Bass, Schlagzeug und Bläsern.",
+  "stoert": "Nein, Geräusche und Musik passen perfekt in die 1970er Jahre."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-03.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 90,
+  "vorgang": "Im Brauhaushof wird Bier oder Würze umgefüllt, während eine einfache Flötenmelodie gespielt wird.",
+  "woran": "An der einfachen, mittelalterlichen Melodie auf einer Holzflöte sowie dem rein manuellen Plätschern und Umgießen von Flüssigkeit ohne jegliche maschinelle Geräusche.",
+  "stoert": "Nein, alle Töne passen stimmig in das Spätmittelalter um 1350."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-04.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 85,
+  "vorgang": "Ein Pferdefuhrwerk fährt über Kopfsteinpflaster in den Brauhaushof, ein Pferd wiehert und es wird Flüssigkeit umgefüllt.",
+  "woran": "Das Schlagen einer Turmuhr zu Beginn, das hölzerne Rumpeln des Fuhrwerks auf Kopfsteinpflaster, Hufgeklapper, Pferdewiehern und das Plätschern beim Umfüllen.",
+  "stoert": "Nein, alle hörbaren Elemente passen sehr gut in die Zeit um 1600."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-05.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 90,
+  "vorgang": "Im Brauhaushof wird unter Einsatz von Dampfmaschinen gebraut; eine Dampfpfeife ertönt zur Signalgebung, während Wasser plätschert und jemand Flöte spielt.",
+  "woran": "Das deutliche Zischen von entweichendem Wasserdampf und das schrille Signal einer Dampfpfeife weisen auf die Industrialisierung hin.",
+  "stoert": "Das einfache Holzflötenspiel am Ende wirkt musikalisch eher wie aus einer früheren Epoche (Mittelalter oder Renaissance)."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-06.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 90,
+  "vorgang": "Ein Musiker spielt im Brauhaushof auf einer Laute und Flöte, während Schritte von Passanten zu hören sind.",
+  "woran": "Akustische Lautenmusik und Flötenklänge im charakteristischen Renaissance-Stil sowie Schritte auf Hofpflaster.",
+  "stoert": "Nichts, die Klänge und das Instrumentarium passen stimmig in die Zeit um 1600."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-07.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Im Brauereihof werden dampfbetriebene Maschinen bedient oder ein Dampffahrzeug beladen. Zwischendurch hört man Hunde bellen und schwere mechanische Arbeiten.",
+  "woran": "Deutliches Dampfpfeifen (Steam Whistle), laut zischender Wasserdampfausstoß und charakteristische Rumpel- und Poltergeräusche der Industrialisierung.",
+  "stoert": "Nein, die Geräusche passen perfekt in das späte 19. Jahrhundert."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-08.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 85,
+  "vorgang": "Im Brauhaushof werden Fässer oder Karren bewegt, während im Hintergrund Lautenmusik gespielt wird und Kirchenglocken läuten.",
+  "woran": "Akustische Lautenmusik, ein holpriger Holzwagen/Fässer auf Kopfsteinpflaster, Tiergeräusche (Hund, Pferd) und eine Kirchenglocke ohne jegliche Maschinengeräusche.",
+  "stoert": "Keine offensichtlich unpassenden modernen Geräusche zu hören."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-01.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 90,
+  "vorgang": "Im Hof des Brauhauses wird mit einer Dampf- oder Handpumpe Wasser gespritzt und gereinigt, während im Hintergrund eine Blaskapelle spielt.",
+  "woran": "Die Verwendung von modernen Ventilblasinstrumenten (Tuba, Trompete) in der Blaskapelle sowie die rhythmischen Pump- und Spritzgeräusche verweisen auf das späte 19. Jahrhundert.",
+  "stoert": "Nein, alle Geräusche und die Instrumentierung passen stimmig in die Zeit um 1884."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-02.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 95,
+  "vorgang": "Im Brauhaushof läuft rhythmische Funk- oder Jazz-Rock-Musik, während im Hintergrund das Tuffen und Brummen eines Verbrennungsmotors zu hören ist.",
+  "woran": "An der modernen Musik mit Schlagzeug, E-Bass und E-Orgel/Gitarre sowie dem deutlichen Geräusch eines laufenden Motorfahrzeugs im Hintergrund.",
+  "stoert": "Keine auffälligen Geräusche, die nicht in die 1970er Jahre passen."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-03.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 85,
+  "vorgang": "Im Brauhaushof spielt ein Musiker eine Flötenmelodie, während Bier aus einem Gefäß eingeschenkt und getrunken wird.",
+  "woran": "Eine einfache mittelalterliche Flötenmelodie (Blockflöte/Pfeife) kombiniert mit dem traditionellen Gluckern und Eingießen von Flüssigkeiten ohne jegliche Maschinengeräusche.",
+  "stoert": "Keine störenden Anachronismen erkennbar; alle Geräusche passen stimmig in das Spätmittelalter."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-04.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Im Brauhaushof laufen dampfbetriebene Maschinen, eine Dampfpfeife ertönt und es werden handschriftliche Aufzeichnungen gemacht.",
+  "woran": "Das charakteristische Zischen von Dampf, das mechanische Stampfen einer Dampfmaschine und eine schrille Dampfpfeife verweisen eindeutig auf das Industriezeitalter.",
+  "stoert": "Keine auffälligen Anachronismen; die Dampf- und Schreibgeräusche passen stimmig ins späte 19. Jahrhundert."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-05.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 90,
+  "vorgang": "Auf dem Hof wird gearbeitet und Vieh gehalten, während im Hintergrund eine einfache Melodie auf einer Holzflöte gespielt wird.",
+  "woran": "Eine einfache mittelalterliche Holzflötenmelodie, das Quieken von Schweinen, fliegende Insekten und geschäftiges Geflüster/Murmeln im Hintergrund ohne jegliche Maschinen- oder Motorengeräusche.",
+  "stoert": "Es sind keine offensichtlichen Anachronismen zu hören."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-06.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 90,
+  "vorgang": "Im Brauhaushof spielen Musikanten eine lebhafte Melodie, während Schritte auf dem Untergrund zu hören sind.",
+  "woran": "Typische Renaissance-Musik mit Laute und Maultrommel sowie das Fehlen jeglicher industrieller oder moderner Hintergrundgeräusche.",
+  "stoert": "Keine störenden Anachronismen hörbar."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-07.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Im Brauhaushof werden schwere Fässer bewegt und verladen, während dampfbetriebene Maschinen oder eine Dampflokomotive im Einsatz sind.",
+  "woran": "Das markante Zischen von Dampfventilen, das Schallen einer Dampfpfeife sowie das typische Stampfen einer Dampfmaschine.",
+  "stoert": "Nein, alle Klänge passen stimmig in das Industriezeitalter des späten 19. Jahrhunderts."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-08.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 85,
+  "vorgang": "Ein pferdegezogenes Holzfuhrwerk rumpelt über das Kopfsteinpflaster des Brauhaushofs, während Kirchenglocken läuten und Musik gespielt wird.",
+  "woran": "An der Lauten- und Flötenmusik im Renaissance-Stil, den Pferdehufen und dem hölzernen Karren auf Kopfsteinpflaster sowie den Kirchenglocken ohne jegliche industrielle oder motorisierte Geräusche.",
+  "stoert": "Keine offensichtlichen Anachronismen hörbar; die Klänge passen stimmig in die Frühe Neuzeit."
+ }
+]

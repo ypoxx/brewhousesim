@@ -1,0 +1,390 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 95
+   },
+   "b": {
+    "da": true,
+    "sekunde": 19,
+    "sicher": 90
+   },
+   "c": {
+    "da": true,
+    "sekunde": 14,
+    "sicher": 95
+   },
+   "d": {
+    "da": true,
+    "sekunde": 10,
+    "sicher": 85
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e1-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": null,
+  "anachronismen": [],
+  "datei": "e1-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 5,
+    "sicher": 90
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 85
+   },
+   "c": {
+    "da": true,
+    "sekunde": 14,
+    "sicher": 95
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [
+   {
+    "sekunde": 21,
+    "klang": "Dampflokomotive / Dampfmaschine / Zisch- und Fahrgeräusch",
+    "warum": "Dampfmaschinen und Eisenbahnen existierten im Mittelalter bzw. der dargestellten Epoche noch nicht."
+   }
+  ],
+  "datei": "e2-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e2-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   },
+   "b": {
+    "da": true,
+    "sekunde": 1,
+    "sicher": 95
+   },
+   "c": {
+    "da": true,
+    "sekunde": 19,
+    "sicher": 95
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   },
+   "f": {
+    "da": true,
+    "sekunde": 14,
+    "sicher": 90
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   },
+   "h": {
+    "da": true,
+    "sekunde": 3,
+    "sicher": 95
+   }
+  },
+  "jahr_geschaetzt": 1404,
+  "anachronismen": [],
+  "datei": "e3-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e3-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 4,
+    "sicher": 95
+   },
+   "b": {
+    "da": true,
+    "sekunde": 1,
+    "sicher": 85
+   },
+   "c": {
+    "da": true,
+    "sekunde": 15,
+    "sicher": 95
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 80
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 95
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 85
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [
+   {
+    "sekunde": 5,
+    "klang": "Aufheulender Automotor / Verbrennungsmotor",
+    "warum": "Ein moderner Kraftfahrzeugmotor gehört nicht in ein mittelalterliches bzw. frühneuzeitliches Setting."
+   }
+  ],
+  "datei": "e4-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": null,
+  "anachronismen": [],
+  "datei": "e4-still.wav"
+ }
+]
