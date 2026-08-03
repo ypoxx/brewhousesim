@@ -195,6 +195,46 @@ haben** (sie klicken dann still ins Leere und melden 0 Klicks, ohne zu scheitern
 
 ---
 
+## BEFUND ÜBER DIE MESSLATTE SELBST — `disabled` misst zwei Dinge zugleich
+
+**Gemeldet vom blinden Kritiker DER SUD am 3. August, von der Aufsicht
+nachgemessen und bestätigt.** Das ist kein Stück-Befund, das ist ein Befund
+über das Messen in diesem ganzen Lauf.
+
+`schalte()` verwandelt **Verdeckung** in `disabled`. Damit misst jeder Zähler,
+der `disabled` liest, zwei völlig verschiedene Dinge in einer Zahl: *„das Spiel
+sagt nein"* und *„es ist gar nichts da"*. Genau diese Zahl ist **Spalte (a) der
+zweiten Messlatte** — „Entscheidungen mit Preisschild, erreichbar UND aktiv".
+
+Nachmessung der Aufsicht, Woche 1 je Epoche, am Arbeitsbaum:
+
+| Epoche | Züge | aktiv | gesperrt | davon `data-soll-aus="0"` | **ohne das Attribut** |
+|---|---|---|---|---|---|
+| 1350 | 102 | 82 | 20 | 5 | **13** |
+| 1600 | 112 | 83 | 29 | 6 | **20** |
+| 1884 | 116 | 87 | 29 | 7 | **20** |
+| 1970 | 107 | 82 | 25 | 7 | **14** |
+
+Die fünf bis sieben mit `soll-aus="0"` sind gesperrt, **obwohl das Spiel sie
+erlaubt**. Sämtliche Beispiele sind `sud:*` — das Attribut gibt es also
+offenbar **nur bei DER SUD**, weil dessen Builder es eingeführt hat. Für die
+**13 bis 20 anderen** gesperrten Züge je Epoche kann niemand die beiden Fälle
+trennen.
+
+> **Was das für alle bisherigen Zahlen dieses Laufs heißt:** jede gezählte
+> „aktive" Zugzahl ist eine **Untergrenze**, und um wie viel sie danebenliegt,
+> weiß man je Stück nicht. Wer künftig Spalte (a) zählt, sagt dazu, ob er
+> `disabled` oder `data-soll-aus` gelesen hat. **Das Abnahmetor der Aufsicht
+> ist davon nicht betroffen** — es zählt alle `[data-zug]` und behauptet nicht,
+> sie seien aktiv.
+
+**Offen, gehört in eine KERN-Änderung zwischen den Wellen:** `data-soll-aus`
+einheitlich für alle Stücke setzen, damit „das Spiel sagt nein" von „es ist
+verdeckt" überall unterscheidbar wird. Der SUD-Builder ist aufgefordert, dafür
+einen Vorschlag als `KERN:`-Absatz zu liefern, ohne fremde Dateien anzufassen.
+
+---
+
 ## RICHTUNGSENTSCHEIDUNG DES AUFTRAGGEBERS, 3. August 2026 — DER EPOCHENBOGEN
 
 **Das Spiel soll nicht über Jahrhunderte laufen.** Stattdessen Epochen nach Art

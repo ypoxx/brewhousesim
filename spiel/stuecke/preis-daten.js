@@ -142,19 +142,37 @@ var PREIS_DATEN = {
          neue Abgabe, sondern die zweite Haelfte einer Zahl, die diese Epoche
          von Anfang an nennt.
 
-         DER FREIBETRAG IST DERSELBE WIE IN 1600: eine Jahreslast, mindestens
-         aber der Preis der billigsten Festlegung dieser Zeit (85 bis 141 Pf
-         ueber vierzehn Jahre, siehe preis.js `liegeFreibetrag`). Damit wird
-         nicht angeschlagen, wer auf die unwiderrufliche Wahl spart — und
-         genau das ist in dieser Epoche der Fall: der Automat nimmt `vertrag`
-         1352 fuer 92 Pf, und der Boden haelt ihn erreichbar. Wer spart und
-         dann kauft, zahlt nichts; wer sitzt, zahlt.
+         DER FREIBETRAG IST HOEHER ALS IN 1600, UND DIE ZAHL IST ABGELESEN.
+         In 1600 bleibt EINE Jahreslast frei. Hier sind es ZWEI, weil hier
+         zwei Dinge nebeneinander faellig werden: die Rechnungsspalte
+         derselben vierzehn Michaelitage zeigt neben der Jahreslast (61 bis
+         134 Pf) in JEDEM ZWEITEN Jahr den Handlohn beim Erbfall (1,10
+         Jahreslasten — die Hand wechselt in dieser Partie alle zwei
+         Braujahre) und dazwischen die ausserordentliche Umlage:
 
-         `liegeSatz` ist hier 0,70 wie in 1600 und nicht hoeher: die Lade
-         dieser Epoche ist die duennste der vier, der Notpfennig steht bei 48
-         Pf, und `buche()` laesst ihn stehen. Die Zahlen sind gemessen, nicht
-         geraten — die Reihe der Laeufe steht im Bericht der Nacharbeit
-         (werkbank/urteile/welle4-rueckkopplung-nacharbeit.md). */
+           1351  Pflicht  87 + Handlohn  96      1358  Pflicht 132 + —
+           1352  Pflicht  90 + Umlage    24      1359  Pflicht  77 + Handlohn 135
+           1353  Pflicht  98 + Handlohn 110      1360  Pflicht  61 + —
+           1355  Pflicht  77 + Umlage   100      1361  Pflicht 109 + Handlohn 162
+           1357  Pflicht 126 + Handlohn 140      1363  Pflicht  64 + Handlohn  70
+
+         Ein schweres Jahr kostet also 1,8 bis 2,3 Jahreslasten. Wer weniger
+         als zwei bar haelt, ist im naechsten Erbfall zahlungsunfaehig — und
+         genau so viel bleibt frei. Darunter liegt weiter der Boden auf dem
+         Preis der billigsten Festlegung dieser Zeit (85 bis 140 Pf, siehe
+         preis.js `liegeFreibetrag`): wer auf die unwiderrufliche Wahl
+         spart, wird nicht angeschlagen.
+
+         `liegeSatz` ist 0,55 und nicht 0,70 wie in 1600. Auch das ist
+         gemessen und nicht gewaehlt: mit 0,70 und einer Jahreslast Freibetrag
+         faellt die Lade dieser Epoche auf 37 bis 74 Pf, VIER von vierzehn
+         Jahren stehen unter 1x, und der Automat nimmt keine einzige
+         Festlegung mehr — die zweite Haelfte der Latte waere kaputt, waehrend
+         die erste heil aussieht. Die Lade dieser Epoche ist die duennste der
+         vier, der Notpfennig steht bei 48 Pf, und eine Abgabe, die das Haus
+         auf den Notpfennig druckt, ist keine Rueckkopplung, sondern ein
+         Ende. Die Reihe aller gemessenen Paare steht im Bericht der
+         Nacharbeit (werkbank/urteile/welle4-rueckkopplung-nacharbeit.md). */
       liegeName: 'Anschlag auf das Geld in der Lade',
       liegeSagt: 'Zu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, '
                + 'was einer bar liegen hat. Was durch das Haus geht und was im Haus '
