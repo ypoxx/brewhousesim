@@ -141,6 +141,78 @@ var SUD_DATEN = {
                   + 'Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.',
               siegel: 'Ratsbrief, gesiegelt',
               wirkung: { haltbar: 2.0, gaer: 1, roh: 2, mehr: 0, risiko: 0.02 } }
+          ] },
+
+        /* ==============================================================
+           DIE ZWEITE FRAGE VON 1350 — Auflage 2 des blinden Kritikers.
+
+           Gemessen (`werkbank/schuss/sud-w4b/vorher-e1.txt`, 301 Wochen,
+           sorgfaeltig gespielt, beide Wege zusammen): eine Bierentscheidung
+           mit mehr als einem Knopf stand in 8 von 301 Wochen = 2,7 %. In
+           1600 stand sie in 99,7 %.
+
+           Der Unterschied ist NICHT der Preis, sondern die Bauart. 1350 hatte
+           EINE Frage mit drei Antworten: die laufende (gesperrt, richtig so),
+           eine kostenlose und eine fuer 78 Pf bei einer Kasse mit Median
+           14 Pf. Damit hatte der Spieler an der Bierfrage in 292 von 295
+           gepruefen Wochen genau EINEN druckbaren Knopf. 1600 hat ZWEI
+           Fragen, und beide haben eine Antwort, die nichts kostet.
+
+           Also bekommt 1350 seine zweite Frage. Sie kostet in ihrer
+           kostenlosen Antwort keinen Pfennig — sie kostet AUSBEUTE, und das
+           ist der Preis, den dieses Stueck nehmen darf (WELLE-2 §1: Welle 2
+           nimmt kein neues Geld aus der Kasse).
+
+           WARUM DAS WASSER. Es ist die Frage, die im 14. Jahrhundert wirklich
+           entschieden wurde, und sie ist in keiner anderen Epoche dieses
+           Spiels gestellt: Brauwasser aus dem Stadtbach ist gratis und laeuft
+           unterhalb der Lohgerber; der Ziehbrunnen im Hof gibt besseres und
+           kostet den halben Sudtag am Seil; das Roehrenrecht an der Quelle
+           vor dem Tor ist ein verbrieftes Recht des Rats, so wie der
+           Hopfenbrief eines ist — und wird so wenig zurueckgegeben wie er.
+           Der Ort steht schon im Verzeichnis (`kern/orte.js`: 'brunnen',
+           1350 bis 1884), das Stueck erfindet ihn nicht.
+
+           DER DECKEL BLEIBT, WO ER WAR. Alle drei Antworten tragen
+           `hoechst: 3`, decken also NICHTS. Sonst haette diese Achse dem
+           `sack` und dem `brief` ihre Wirkung genommen — `hoechsteStufe()`
+           nimmt das Minimum ueber alle Achsen, und eine neue Achse mit
+           `hoechst: 2` haette 1350 auf Grutbier festgenagelt, auch mit
+           Hopfenbrief. Der Vorgabestand deckelt weiter auf Stufe 2, und zwar
+           genau dort, wo er es vorher tat: an der Grut.
+
+           UND DIE VORGABE IST NEUTRAL. `bach` hat haltbar 1,0, gaer 0, roh 0,
+           risiko 0 — die gemessene Vorgabepartie von 1350 bleibt Zahl fuer
+           Zahl dieselbe, einschliesslich der null Sude durch den Gaerkeller,
+           die der Kritiker als schaerfsten Beleg dafuer zitiert, dass hier
+           ueberhaupt etwas entschieden wird.
+           ============================================================== */
+        { schluessel: 'wasser', name: 'DAS BRAUWASSER', frage: 'Woher kommt das Wasser?',
+          satz: 'Vier Fuenftel des Fasses sind Wasser. Wo es geschöpft wird, ist keine '
+              + 'Kleinigkeit — es ist die zweite Frage, die dieses Haus zu beantworten hat, '
+              + 'und sie kostet keinen Pfennig.',
+          optionen: [
+            { k: 'bach', name: 'Aus dem Stadtbach geschöpft', preis: 0, schild: 'wie immer',
+              hoechst: 3,
+              satz: 'Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt '
+                  + 'niemand, und die Lohgerber sitzen weiter oben am selben Wasser. So braut '
+                  + 'die ganze Reihe, und so hält das Bier, was es hält.',
+              wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0 } },
+            { k: 'brunnen', name: 'Aus dem Ziehbrunnen im Hof', preis: 0, schild: 'ohne Ausgabe',
+              hoechst: 3,
+              satz: 'Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das '
+                  + 'bessere Wasser hält das Bier ein Stück länger — und der halbe Sudtag '
+                  + 'fehlt hinten: ein Fass weniger geht aus jeder Pfanne in den Gärkeller.',
+              warnung: 'Der Brunnen im Hof gibt nicht jede Woche her, was die Pfanne braucht.',
+              wirkung: { haltbar: 1.15, gaer: 0, roh: 0, mehr: -1, risiko: 0 } },
+            { k: 'roehre', name: 'Röhrenrecht an der Quelle', preis: 30, fest: true, hoechst: 3,
+              satz: 'Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in '
+                  + 'den Hof: gebohrte Erlenstämme unter der Gasse durch. Das Wasser steht dann '
+                  + 'jeden Tag im Hof, ohne einen Gang und ohne den Bach. Unwiderruflich — die '
+                  + 'Röhre liegt unter der Stadtmauer, und was einmal gegraben ist, gräbt '
+                  + 'niemand zurück.',
+              siegel: 'Röhrenrecht, verbrieft',
+              wirkung: { haltbar: 1.35, gaer: 0, roh: 0, mehr: 0, risiko: 0, guetepin: 78 } }
           ] }
       ]
     },

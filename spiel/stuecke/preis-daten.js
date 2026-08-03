@@ -163,22 +163,39 @@ var PREIS_DATEN = {
          preis.js `liegeFreibetrag`): wer auf die unwiderrufliche Wahl
          spart, wird nicht angeschlagen.
 
-         `liegeSatz` ist 0,55 und nicht 0,70 wie in 1600. Auch das ist
-         gemessen und nicht gewaehlt: mit 0,70 und einer Jahreslast Freibetrag
-         faellt die Lade dieser Epoche auf 37 bis 74 Pf, VIER von vierzehn
-         Jahren stehen unter 1x, und der Automat nimmt keine einzige
-         Festlegung mehr — die zweite Haelfte der Latte waere kaputt, waehrend
-         die erste heil aussieht. Die Lade dieser Epoche ist die duennste der
-         vier, der Notpfennig steht bei 48 Pf, und eine Abgabe, die das Haus
-         auf den Notpfennig druckt, ist keine Rueckkopplung, sondern ein
-         Ende. Die Reihe aller gemessenen Paare steht im Bericht der
-         Nacharbeit (werkbank/urteile/welle4-rueckkopplung-nacharbeit.md). */
+         `liegeSatz` ist 0,30 und nicht 0,70 wie in 1600. DAS MASS DAFUER IST
+         NICHT rho, SONDERN DIE LADE SELBST: gesucht ist die Zahl, bei der die
+         Barschaft ueber vierzehn Jahre weder davonlaeuft noch eingeht. Vier
+         Laeufe derselben Linie am Probestand, je 400 Wochen, nur diese eine
+         Zahl veraendert:
+
+           liegeSatz   Lade Jahresmedian   Kennzahl       rho      Jahre <1x   Festlegung
+           — (ohne)      234 -> 538  x2,30   1,55–41,67   +0,701      0/14         1x
+           0,55          234 ->  89  x0,38   1,48–11,31   −0,473      0/14         1x
+           0,40          234 -> 131  x0,56   1,55–15,67   +0,569      0/14         1x
+           0,30          234 -> 258  x1,10   1,55–15,14   +0,288      0/14         1x
+
+         Bei 0,55 laeuft die Epoche in die andere Richtung davon — die Lade
+         schrumpft auf ein Drittel, und die woechentliche Gegenprobe steht bei
+         −0,763. Das ist derselbe Fehler wie vorher, nur mit umgekehrtem
+         Vorzeichen, und er wuerde beim naechsten Urteil genauso auffallen.
+         Bei 0,30 steht die Lade am Ende, wo sie angefangen hat (Faktor 1,10),
+         die Kennzahl bleibt im Band 1,55 bis 15,14 statt 1,55 bis 41,67, und
+         kein Jahr steht unter 1x.
+
+         Ein hoeherer Satz waere in dieser Epoche auch sachlich falsch: die
+         Lade ist die duennste der vier, der Notpfennig steht bei 48 Pf, und
+         eine Abgabe, die ein Haus auf den Notpfennig drueckt, ist keine
+         Rueckkopplung, sondern ein Ende. In 1600 darf 0,70 stehen, weil dort
+         das Anderthalbfache eines Jahresumsatzes bar in der Lade lag; hier
+         liegt ein Fuenftel. Die Laeufe stehen im Bericht der Nacharbeit
+         (werkbank/urteile/welle4-rueckkopplung-nacharbeit.md). */
       liegeName: 'Anschlag auf das Geld in der Lade',
       liegeSagt: 'Zu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, '
                + 'was einer bar liegen hat. Was durch das Haus geht und was im Haus '
                + 'liegt, steht beim Rat in derselben Zahl.',
       liegeFrei: 2.0,
-      liegeSatz: 0.55,
+      liegeSatz: 0.30,
 
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine

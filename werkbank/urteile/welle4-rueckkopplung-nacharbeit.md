@@ -277,3 +277,115 @@ gehört der Aufsicht.
    angegeben.
 
 ---
+
+## 8 · Was gebaut wurde — AUFLAGE A1, an der Kasse und nicht am Nenner
+
+### DIE VIERTE WURZEL, jetzt auch in 1350 — „Anschlag auf das Geld in der Lade"
+
+Dasselbe Werkzeug, mit dem 1600 geheilt wurde, mit **eigenen** Zahlen für diese
+Epoche. Fehlen `liegeSatz`/`liegeFrei` in den Daten einer Epoche, ist die
+Funktion ein Nichtstuer — 1884 und 1970 sind deshalb im Quelltext gar nicht
+berührt.
+
+```
+frei   = max( liegeFrei × Jahreslast , Preis der billigsten Festlegung dieser Zeit )
+Anlage = liegeSatz × (Barschaft nach dem Zahltag − frei)
+```
+
+**Warum sie in 1350 stehen darf, steht seit jeher im Text dieser Epoche
+selbst** (`preis-daten.js`, `anschlagSatz`, unverändert):
+
+> „Der Anschlag ist die Schätzung des Rats: was durch das Haus geht **und was
+> im Haus liegt**."
+
+Der Schoss des 14. Jahrhunderts war ein Vermögensschoss; zwei Ratsherren gingen
+durch die Häuser und schätzten Haus, Gerät und bares Geld. Was hier dazukommt,
+ist keine neue Abgabe, sondern die **zweite Hälfte einer Zahl, die diese Epoche
+von Anfang an nennt.**
+
+### Die beiden Zahlen sind abgelesen, nicht gewählt
+
+**`liegeFrei = 2,0` (in 1600: 1,0).** Grund ist die Rechnungsspalte derselben
+vierzehn Michaelitage, abgelesen mit
+`werkbank/schuss/rueckkopplung-r3/innen.mjs` am eingefrorenen Stand: neben der
+Jahreslast (61 bis 134 Pf) steht in **jedem zweiten Jahr** der Handlohn beim
+Erbfall (1,10 Jahreslasten — die Hand wechselt alle zwei Braujahre, siehe §4),
+dazwischen die außerordentliche Umlage.
+
+    1351  Pflicht  87 + Handlohn  96      1358  Pflicht 132 + —
+    1352  Pflicht  90 + Umlage    24      1359  Pflicht  77 + Handlohn 135
+    1353  Pflicht  98 + Handlohn 110      1360  Pflicht  61 + —
+    1355  Pflicht  77 + Umlage   100      1361  Pflicht 109 + Handlohn 162
+    1357  Pflicht 126 + Handlohn 140      1363  Pflicht  64 + Handlohn  70
+
+Ein schweres Jahr kostet 1,8 bis 2,3 Jahreslasten. Wer weniger als zwei bar
+hält, ist im nächsten Erbfall zahlungsunfähig — **genau so viel bleibt frei.**
+
+**`liegeSatz = 0,30` (in 1600: 0,70).** Das Maß dafür ist **nicht rho, sondern
+die Lade selbst**: gesucht ist die Zahl, bei der die Barschaft über vierzehn
+Jahre weder davonläuft noch eingeht. Vier Läufe derselben Linie, je 400 Wochen,
+nur diese eine Zahl verändert:
+
+| `liegeSatz` | Lade Jahresmedian | Kennzahl | Spearman | wöchentlich | Jahre <1× | Festlegung |
+|---|---|---|---|---|---|---|
+| — (ohne alles) | 234 → 538 **×2,30** | 1,55–41,67 | **+0,701** | +0,644 | 0/14 | 1× |
+| 0,55 | 234 → 89 **×0,38** | 1,48–11,31 | −0,473 | **−0,763** | 0/14 | 1× |
+| 0,40 | 234 → 131 ×0,56 | 1,55–15,67 | +0,569 | −0,116 | 0/14 | 1× |
+| **0,30** | 234 → **258 ×1,10** | **1,55–15,14** | **+0,288** | −0,266 | **0/14** | **1×** |
+
+Bei 0,55 läuft die Epoche in die **andere** Richtung davon — die Lade schrumpft
+auf ein Drittel und die wöchentliche Gegenprobe steht bei −0,763. Das ist
+derselbe Fehler mit umgekehrtem Vorzeichen, und er fiele beim nächsten Urteil
+genauso auf. Bei 0,30 steht die Lade am Ende, wo sie angefangen hat.
+
+Ein höherer Satz wäre hier auch sachlich falsch: in 1600 lag das
+Anderthalbfache eines Jahresumsatzes bar in der Lade, hier liegt ein Fünftel.
+
+### Was NICHT angefasst wurde
+
+Kein Preis eines Ablösens oder Zuvorkommens, keine Datei des GEGNERS, keine
+Zeile des Kerns, keine Zahl der Epochen II, III und IV. Der Nenner in 1350 läuft
+nachher wie vorher.
+
+---
+
+## 10 · Was offen bleibt
+
+1. **Der Nenner gehört weiter nicht diesem Stück.** `gegner.js` meldet ihn ohne
+   Zugschlüssel (§2), und `welt.js` prüft ihn nur halb (§3). Solange das so
+   ist, misst die Latte in 89,8 % der Wochen eine Zahl, an der der
+   Prüfschritt aus ZUSTÄNDIGKEIT 24 nicht ansetzt. **A2 und A3 sind nicht
+   erledigt, sie sind nur gemessen** — sie gehören DEM GEGNER, DER STADT und
+   dem Kern.
+2. **Die Festlegung in 1884 und 1970 ist zu teuer** (§5). Ein Griff wie bei
+   `vertrag` und `reinheit` steht dort aus; ich habe ihn nicht getan, weil er
+   die zwei Epochen bewegt, die ich in dieser Runde nicht anfassen darf.
+3. **1884 ist der nächste Kandidat** (§6, A6). Es hält, aber es hält aus
+   demselben Grund, aus dem 1350 nicht mehr hielt — und dort gibt es die
+   vierte Wurzel in den Daten noch nicht.
+4. **Eine Saat.** Alles hier ist `saat=1350`, wie beim Kritiker. Ein zweiter
+   Satz Saaten ist die nächste Härtung.
+5. **Das Messgerät der Welle ist noch das alte.** `eichung/preis-linie.mjs`
+   sieht weiter einmal hin und zeigt weiter fest auf 8899. Solange damit
+   gemessen wird, hängt jede Zahl dieser Welle an der Auslastung der Maschine
+   (§0). Ich habe es nicht angefasst; die Entscheidung gehört der Aufsicht.
+
+---
+
+## 11 · Geänderte Dateien
+
+| Datei | Was |
+|---|---|
+| `spiel/stuecke/preis.js` | `merkeAmtszeit()` · `amtszeitFrist()` · `naechsterErbfall()` · `Z.amtszeiten` · Aufruf in `michaeli()`, `richteEin()` und `erbfall` · Satz auf der Festlegungskarte (`festKarte`) · Handlohn-Zeile in `kommendeLasten()` · gezählte Frist in der Chronikspalte |
+| `spiel/stuecke/preis-daten.js` | **Epoche I**: `liegeName` · `liegeSagt` · `liegeFrei: 2.0` · `liegeSatz: 0.30`, mit der Messreihe als Begründung. **Epoche II, III und IV unberührt.** |
+
+Neue Messgeräte (eigene Dateien, kein fremdes angefasst):
+
+    werkbank/schuss/rueckkopplung-r3/linie.mjs       die Linie, Hafen waehlbar, beharrliche Hand
+    werkbank/schuss/rueckkopplung-r3/innen.mjs       dieselbe Hand, schreibt die Rechnungsspalte mit
+    werkbank/schuss/rueckkopplung-r3/auswerten.py    Spearman UND Pearson, Spannweite, Ehrlichkeit des Nenners
+    werkbank/schuss/rueckkopplung-r3/probestand.sh   da7d690 + nur meine Dateien, Hafen 8901
+    werkbank/schuss/rueckkopplung-r3/welle.sh        vier Epochen nebeneinander, ein Buchstabe je Lauf
+    werkbank/schuss/rueckkopplung-r3/tor.mjs         das Abnahmetor: vier Epochen, lage, Fehler, Karte
+
+`node --check` ist auf beiden `.js` sauber. Kein `git`.

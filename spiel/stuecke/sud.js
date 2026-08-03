@@ -92,6 +92,7 @@
     rueck: [],            /* freigegebene Chargen, die beim Handel stehen     */
     brettZu: true,        /* liegt das Brett als Reiter? (Vorgabestand: ja)   */
     zettelStelle: 0,      /* welcher Platz am Sudhaus gerade traegt           */
+    zettelSitz: { dx: 0, dy: 0, knapp: false },  /* ... und wo genau, in %    */
     gestuft: 0,           /* wie oft dieses Jahr zurueckgestuft wurde         */
     gestuftGesamt: 0,     /* ... und wie oft ueberhaupt (wird nie geleert)    */
     buch: [],             /* die letzten Zeilen des Sudbuchs                  */
@@ -1114,13 +1115,27 @@
 
       /* Das Preisschild dieses Stuecks: was fuer ein Bier dabei herauskommt.
          Es steht vor der Haltbarkeit, weil man es beim Wirt wiedersieht und
-         die Haltbarkeit nur im Keller. */
+         die Haltbarkeit nur im Keller.
+
+         AUFLAGE 3 des blinden Kritikers, und er hat recht: hier stand
+         „traegt Exportbier" auf einem Knopf, der kein Exportbier macht.
+         Gemessen 1970, drei Partien mit 0 / 0 / 192.000 DM: alle drei enden
+         mit `pils` auf Stufe 2. Das ist kein Fehler des Zuges — `hoechst`
+         DECKELT, es hebt nicht, und die Sorte bestellt DIE FUHRE. Es war ein
+         Fehler des Schildes. Ein Deckel, der oben offen steht, heisst jetzt
+         auch so: „laesst Exportbier zu". */
       if (o.hoechst !== undefined) {
         var zs = sorteAufStufe(o.hoechst);
         if (zs) {
-          var traegtAlles = o.hoechst >= obersteStufe();
-          marke.appendChild(B.el('span', 'sud-rang' + (traegtAlles ? ' hoch' : ' tief'),
-            (traegtAlles ? 'trägt ' : 'höchstens ') + zs.name));
+          var offenNachOben = o.hoechst >= obersteStufe();
+          var rs = B.el('span', 'sud-rang' + (offenNachOben ? ' hoch' : ' tief'),
+            offenNachOben ? ('lässt ' + zs.name + ' zu') : ('höchstens ' + zs.name));
+          rs.title = offenNachOben
+            ? ('Eine Obergrenze, kein Versprechen: dieses Verfahren steht ' + zs.name
+               + ' nicht im Weg. Bestellt wird die Sorte an der Fuhre — dieses Brett '
+               + 'deckelt nur, es hebt nie.')
+            : ('Was höher angesetzt wird, schlägt als ' + zs.name + ' aus.');
+          marke.appendChild(rs);
         }
       }
 
@@ -1303,6 +1318,12 @@
     kopf.appendChild(B.el('span', 'sud-frage', oben ? 'höchstens ' + oben.name : ''));
     kasten.appendChild(kopf);
     kasten.appendChild(zeile('sud-achssatz', w.satz));
+    /* Der Satz, ohne den jedes Schild an diesem Brett mehr verspricht, als
+       der Zug einloest (Auflage 3). Er steht hier und nicht im Kleingedruckten,
+       weil er die ganze Mechanik dieses Feldes ist. */
+    kasten.appendChild(zeile('sud-fussnote',
+      'Bestellt wird die Sorte an der Fuhre. Dieses Brett deckelt sie — es hebt sie nie: '
+      + 'was hier offen steht, wird nur dann gebraut, wenn es auch bestellt ist.'));
 
     l.forEach(function (s) {
       var geht = s.stufe <= hoch;
@@ -1319,6 +1340,31 @@
                              : 'Kein Haus in dieser Zeit führt es.';
       kasten.appendChild(r);
     });
+
+    /* ------------------------------------------------------------------
+       ... UND WAS DAVON WIRKLICH IM KELLER LIEGT — Auflage 3, zweite Haelfte.
+
+       Der Kritiker hat 1970 dreimal gespielt (0 / 0 / 192.000 DM) und alle
+       drei Partien enden mit `pils` auf Stufe 2, obwohl auf zwei gekauften
+       Knoepfen die hoechste Sorte stand. Das ist richtig so — `hoechst`
+       deckelt und hebt nie, bestellt wird an der Fuhre. Nur stand es
+       nirgends, und deshalb las sich das Schild wie ein Versprechen.
+
+       Jetzt steht es da, und zwar als Zahl aus dem eigenen Keller: was oben
+       offen ist und trotzdem nicht gebraut wird, sagt dieses Feld beim Namen.
+       ------------------------------------------------------------------ */
+    var spitze0 = l[l.length - 1];
+    if (spitze0 && spitze0.stufe <= hoch) {
+      var hat = 0;
+      B.welt.vorrat.faesser.forEach(function (f) { if ((f.stufe || 2) >= spitze0.stufe) hat++; });
+      Z.bottiche.forEach(function (b) { if ((b.stufe || 2) >= spitze0.stufe) hat += b.fass; });
+      if (!hat) {
+        kasten.appendChild(zeile('sud-warnung',
+          'Die Pfanne lässt ' + spitze0.name + ' zu — im Keller liegt keins. '
+          + 'Dieses Brett öffnet nur die Schranke; angesetzt wird ' + spitze0.name
+          + ' an der Fuhre, und dort kostet es Brautage.'));
+      }
+    }
 
     /* Wer wegfaellt, steht mit Namen da. Eine Zahl merkt sich niemand. */
     var spitze = l[l.length - 1];
@@ -1619,43 +1665,91 @@
        die naechste, die NICHTS kostet, und die naechste, die etwas kostet.
        Genau das ist die zweite Latte, und sie muss im VORGABESTAND stehen —
        ein Brett, das erst aufgeschlagen werden muss, zaehlt dort nicht. */
-    var ohne = null, mit = null, zeilen = 0;
+    var freie = [], mit = null, zeilen = 0;
     achsen().forEach(function (a) {
       a.optionen.forEach(function (o) {
         if (gewaehlt(a) === o || verdraengt(a, o)) return;
         var p = (o.preis && !bezahlt(a, o)) ? o.preis : 0;
-        if (p === 0) { if (!ohne) ohne = { o: o, a: a, p: 0 }; }
+        if (p === 0) freie.push({ o: o, a: a, p: 0 });
         else if (!mit || p < mit.p) mit = { o: o, a: a, p: p };
       });
     });
+
+    /* Die zweite kostenlose Umstellung soll moeglichst eine ANDERE Frage
+       beantworten — zwei Fragen sind mehr wert als zwei Antworten auf
+       dieselbe. Gibt es keine andere Achse, tut es die zweite Antwort
+       derselben: „Weizen oder Hafer" (1600) ist eine echte Wahl. */
+    var zweiteFrei = null, fi;
+    for (fi = 1; fi < freie.length; fi++) {
+      if (freie[fi].a !== freie[0].a) { zweiteFrei = freie[fi]; break; }
+    }
+    if (!zweiteFrei && freie.length > 1) zweiteFrei = freie[1];
+
+    /* ------------------------------------------------------------------
+       WAS IN DIE ZWEITE ZEILE KOMMT — Auflage 2 des blinden Kritikers.
+
+       Bis hierher stand dort IMMER die naechste bezahlte Umstellung, auch
+       wenn die Kasse sie nicht hergab. Gemessen in 1350: das war in 296 von
+       301 Wochen ein abgeschalteter Knopf, und der Spieler hatte an der
+       Bierfrage genau einen druckbaren.
+
+       Jetzt entscheidet die Kasse, was dort steht:
+         Kasse traegt den Preis   → die bezahlte Umstellung (`-kauf`)
+         Kasse traegt ihn nicht   → die naechste KOSTENLOSE Umstellung einer
+                                    ANDEREN Achse (`-frei2`)
+         beides gibt es nicht     → wieder die bezahlte, abgeschaltet, damit
+                                    der Preis wenigstens zu lesen ist
+
+       Der Schluessel wechselt mit: ein Knopf, der nichts kostet, heisst hier
+       nicht `-kauf`. Wer zaehlt, soll nicht raten muessen, was er zaehlt.
+       Was dabei vom Schirm faellt — der Preis der teuren Festlegung — steht
+       eine Zeile tiefer als Text.
+       ------------------------------------------------------------------ */
+    var kannKauf = !!(mit && B.welt.kann(mit.p));
+    var zweite = null, art = 'kauf';
+    if (kannKauf) { zweite = mit; art = 'kauf'; }
+    else if (zweiteFrei) { zweite = zweiteFrei; art = 'frei2'; }
+    else if (mit) { zweite = mit; art = 'kauf'; }
+
     /* Steht eine Charge gesperrt, nimmt sie den Platz der freien
        Umstellung — der Zettel bleibt unter der Ortsmarken-Schwelle der
        STADT (2,4 % der Buehne), und die Frist geht vor. */
-    [chb ? null : ohne, mit].forEach(function (kand, i) {
+    [{ k: chb ? null : freie[0], s: 'frei' }, { k: zweite, s: art }].forEach(function (x) {
+      var kand = x.k;
       if (!kand) return;
       var kn = knopf({
         text: kand.o.name,
-        zug: 'sud:zettel-wechsel-' + (i ? 'kauf' : 'frei'),
+        zug: 'sud:zettel-wechsel-' + x.s,
         preis: kand.p ? -kand.p : 0,
         klasse: 'sud-tat klein voll' + (kand.o.fest ? ' siegel' : ''),
-        titel: kand.o.satz + (kand.o.fest ? ' UNWIDERRUFLICH: danach ist diese Frage '
+        titel: kand.a.frage + ' ' + kand.o.satz
+             + (kand.o.fest ? ' UNWIDERRUFLICH: danach ist diese Frage '
              + 'entschieden, und die Vorgabe ist nicht mehr zu haben.' : ''),
         aus: !!(kand.p && !B.welt.kann(kand.p)),
         tu: function () { waehle(kand.a, kand.o); }
       });
       /* Was dabei herauskommt, steht AM KNOPF und nicht erst im Brett:
-         sonst ist die Wahl zwei Namen ohne Folge. */
+         sonst ist die Wahl zwei Namen ohne Folge. Und es steht als das da,
+         was es ist — ein DECKEL, kein Versprechen (Auflage 3). */
       if (kand.o.hoechst !== undefined) {
         var zs = sorteAufStufe(kand.o.hoechst);
         if (zs) {
           var hoch = kand.o.hoechst >= obersteStufe();
           kn.appendChild(B.el('span', 'sud-zrangschild' + (hoch ? ' hoch' : ' tief'),
-            (hoch ? 'trägt ' : 'nur ') + zs.name));
+            (hoch ? 'lässt ' + zs.name + ' zu' : 'nur ' + zs.name)));
         }
       }
       z.appendChild(kn);
       zeilen++;
     });
+
+    /* Der Preis, der gerade nicht auf einem Knopf steht — als Zeile, damit
+       der Spieler weiss, worauf er sparen wuerde. Nicht, solange eine Charge
+       mit Frist steht: dann ist der Zettel voll, und die Frist geht vor. */
+    if (mit && zweite !== mit && !chb) {
+      z.appendChild(B.el('div', 'sud-zpreiszeile',
+        mit.o.name + ' ' + B.welt.geld(mit.p) + ' — die Kasse trägt es noch nicht.'));
+    }
 
     /* ------------------------------------------------------------------
        WENN DIE FRAGE ENTSCHIEDEN IST, STEHT DIE NAECHSTE DA.
@@ -1681,8 +1775,12 @@
       }));
     }
 
-    B.orte.setze(z, 'sudhaus', { anker: 'mitte',
-      dx: ZETTELSTELLEN[Z.zettelStelle].dx, dy: ZETTELSTELLEN[Z.zettelStelle].dy });
+    /* Der frisch gezeichnete Zettel setzt sich dorthin, wo der vorige sass —
+       sonst springt er bei jedem Neuzeichnen an das Sudhaus zurueck und sucht
+       seinen Platz von vorn. */
+    if (Z.zettelSitz.knapp) z.classList.add('knapp');
+    B.orte.setze(z, 'sudhaus',
+      { anker: 'mitte', dx: Z.zettelSitz.dx, dy: Z.zettelSitz.dy });
     fach.appendChild(z);
     return z;
   }
@@ -1723,38 +1821,157 @@
     { dx: -15, dy: 9 }, { dx: 15, dy: 9 }, { dx: 0, dy: -22 }
   ];
 
+  /* ----------------------------------------------------------------------
+     ... UND WOHIN ER AUSWEICHT, WENN AM SUDHAUS NICHTS FREI IST — Welle 4,
+     Auflage 1 und 4 des blinden Kritikers.
+
+     Die acht Stellen oben reichen nicht. Gemessen (`rettung.mjs`, sorgfaeltig
+     gespielt, Vorgabestand): der Zettel trug in 1350 in 7,0 %, in 1600 in
+     7,7 %, in 1884 in 6,9 % und in 1970 in 5,7 % der Wochen `display: none`;
+     ohne das woechentliche Auf- und Zuklappen des Sudbretts waren es 28-42 %.
+     Und darunter waren 29 Wochen, in denen das Haus die 78 Pf fuer den
+     Hopfenbrief hatte und `data-soll-aus="0"` stand: das Spiel haette den Kauf
+     erlaubt, der Knopf war nur nicht da.
+
+     Der Kritiker hat die Ursache genauer benannt, als die eigene Meldung es
+     tat, und er hat recht: **in NULL Faellen lag ein fremdes Brett obenauf.**
+     Der Zettel nahm sich selbst weg. Die Regel dahinter war ehrlich gemeint
+     („lieber kein Zettel als drei Knoepfe, die keine sind"), aber sie ist die
+     falsche Antwort auf zu wenige Stellen. Die richtige ist: MEHR STELLEN.
+
+     Deshalb jetzt drei Stufen, in dieser Reihenfolge:
+
+       1  die acht Stellen am Sudhaus  (nah, wie bisher — der Regelfall)
+       2  ein Raster ueber die ganze Buehne, nach Entfernung vom Sudhaus
+          sortiert: der Zettel geht so weit weg, wie er muss, und keinen
+          Prozentpunkt weiter
+       3  KNAPP — er wirft Kopfzeile, Verfahrenszeile und Zahlen ab und
+          behaelt nur seine Knoepfe; damit passt er in Luecken, in die der
+          volle Zettel nicht passt, und sucht 1 und 2 noch einmal ab
+
+     Erst wenn auch das nichts findet, bleibt er stehen und traegt `gedraengt`
+     statt `beiseite` — sichtbar, mit `data-verdeckt` an seinen Knoepfen.
+     `display: none` bleibt genau EINEM Fall vorbehalten: das eigene Brett
+     liegt offen, dann ist der Zettel nicht weg, sondern gross.
+
+     Alle Stellen sind Prozentpunkte der Buehne und haengen am Ort 'sudhaus';
+     eigene Koordinaten gibt es hier nicht (LIESMICH: Orte). Das Raster ist
+     nach dem Quadrat der Entfernung sortiert, y mit 3,2 gewichtet, weil ein
+     Prozentpunkt der Hoehe (Bezug 2752 x 1536) nur 0,56 Prozentpunkte der
+     Breite lang ist.
+     ---------------------------------------------------------------------- */
+  var AUSWEICHSTELLEN = (function () {
+    var l = [], x, y;
+    for (y = -30; y <= 36; y += 6) {
+      for (x = -22; x <= 60; x += 6) {
+        if (Math.abs(x) <= 16 && Math.abs(y) <= 14) continue;   /* liegt schon oben */
+        l.push({ dx: x, dy: y });
+      }
+    }
+    l.sort(function (a, b) {
+      return (a.dx * a.dx + a.dy * a.dy * 3.2) - (b.dx * b.dx + b.dy * b.dy * 3.2);
+    });
+    return l;
+  })();
+
+  /* Die Mittelpunkte aller FREMDEN Zuege — einmal je Suche geholt und dann
+     wiederverwendet. Ohne diesen Vorrat kostet eine Suche ueber hundert
+     Stellen zehntausend elementFromPoint, und der Takt laeuft alle 320 ms. */
+  function fremdePunkte(zettel) {
+    var l = document.querySelectorAll('[data-zug]'), p = [];
+    for (var i = 0; i < l.length; i++) {
+      var el = l[i];
+      if (zettel.contains(el)) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < 3 || r.height < 3) continue;
+      p.push({ x: r.left + r.width / 2, y: r.top + r.height / 2 });
+    }
+    return p;
+  }
+
   /* Sitzt der Zettel gut: eigene Knoepfe treffbar, kein fremder begraben? */
-  function zettelSitzt(zettel) {
+  function zettelSitzt(zettel, punkte) {
     var kn = zettel.querySelectorAll('button[data-zug]'), i;
     for (i = 0; i < kn.length; i++) {
       if (kn[i].getAttribute('data-soll-aus') === '1') continue;
       if (!imBild(kn[i])) return false;
     }
     var q = zettel.getBoundingClientRect();
-    var l = document.querySelectorAll('[data-zug]');
-    for (i = 0; i < l.length; i++) {
-      var el = l[i];
-      if (zettel.contains(el)) continue;
-      var r = el.getBoundingClientRect();
-      if (r.width < 3 || r.height < 3) continue;
-      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-      if (cx < q.left || cx > q.right || cy < q.top || cy > q.bottom) continue;
-      var t = document.elementFromPoint(cx, cy);
+    var p = punkte || fremdePunkte(zettel);
+    for (i = 0; i < p.length; i++) {
+      if (p[i].x < q.left || p[i].x > q.right || p[i].y < q.top || p[i].y > q.bottom) continue;
+      var t = document.elementFromPoint(p[i].x, p[i].y);
       if (t && zettel.contains(t)) return false;
     }
     return true;
   }
 
-  function stelleZettel(zettel) {
-    if (zettelSitzt(zettel)) return true;
-    for (var n = 1; n <= ZETTELSTELLEN.length; n++) {
-      var i = (Z.zettelStelle + n) % ZETTELSTELLEN.length;
-      B.orte.setze(zettel, 'sudhaus',
-        { anker: 'mitte', dx: ZETTELSTELLEN[i].dx, dy: ZETTELSTELLEN[i].dy });
-      if (zettelSitzt(zettel)) { Z.zettelStelle = i; return true; }
+  function setzeStelle(zettel, s) {
+    B.orte.setze(zettel, 'sudhaus', { anker: 'mitte', dx: s.dx, dy: s.dy });
+  }
+
+  /* Wuerde der Zettel hier ueberhaupt auf die Buehne passen, ohne einen
+     fremden Knopf zu begraben? Rein gerechnet, ohne ihn zu bewegen. Was
+     diese Probe uebersteht, wird danach wirklich nachgemessen — was sie
+     nicht uebersteht, kostet keinen einzigen elementFromPoint. */
+  function grobFrei(zettel, s, punkte) {
+    var eltern = zettel.offsetParent || document.body;
+    var b = eltern.getBoundingClientRect();
+    var q = zettel.getBoundingClientRect();
+    var o = B.orte.hole('sudhaus');
+    if (!o || !b.width || !b.height || q.width < 3 || q.height < 3) return true;
+    var cx = b.left + b.width * (o.x + s.dx) / 100;      /* anker 'mitte' */
+    var cy = b.top + b.height * (o.y + s.dy) / 100;
+    var links = cx - q.width / 2, oben = cy - q.height / 2;
+    var rechts = links + q.width, unten = oben + q.height;
+    if (links < b.left || oben < b.top || rechts > b.right || unten > b.bottom) return false;
+    for (var i = 0; i < punkte.length; i++) {
+      if (punkte[i].x >= links && punkte[i].x <= rechts
+        && punkte[i].y >= oben && punkte[i].y <= unten) return false;
     }
-    B.orte.setze(zettel, 'sudhaus', { anker: 'mitte', dx: 0, dy: 0 });
-    Z.zettelStelle = 0;
+    return true;
+  }
+
+  /* Die erste Stelle der Liste, die wirklich traegt. `hoechstens` deckelt,
+     wie viele Stellen nachgemessen werden duerfen — der Takt laeuft alle
+     320 ms und darf keine Sekunde brauchen. */
+  function sucheStelle(zettel, liste, punkte, hoechstens) {
+    var echt = 0;
+    for (var i = 0; i < liste.length; i++) {
+      if (!grobFrei(zettel, liste[i], punkte)) continue;
+      if (echt >= hoechstens) break;
+      echt++;
+      setzeStelle(zettel, liste[i]);
+      if (zettelSitzt(zettel, punkte)) {
+        Z.zettelSitz = { dx: liste[i].dx, dy: liste[i].dy,
+                         knapp: zettel.classList.contains('knapp') };
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function stelleZettel(zettel) {
+    zettel.classList.remove('knapp');
+    var punkte = fremdePunkte(zettel);
+    if (zettelSitzt(zettel, punkte)) {
+      Z.zettelSitz.knapp = false;
+      return true;
+    }
+    if (sucheStelle(zettel, ZETTELSTELLEN, punkte, ZETTELSTELLEN.length)) return true;
+    if (sucheStelle(zettel, AUSWEICHSTELLEN, punkte, 20)) return true;
+
+    /* Der Zettel wird kleiner, ehe er geht. */
+    zettel.classList.add('knapp');
+    punkte = fremdePunkte(zettel);
+    if (sucheStelle(zettel, ZETTELSTELLEN, punkte, ZETTELSTELLEN.length)) return true;
+    if (sucheStelle(zettel, AUSWEICHSTELLEN, punkte, 28)) return true;
+
+    /* Nichts traegt. Er bleibt trotzdem stehen — an seinem Ort, klein, und
+       mit `data-verdeckt` an jedem Knopf, den die Maus nicht trifft. Wer
+       zaehlt, sieht den Unterschied; wer spielt, sieht, dass es ihn gibt. */
+    setzeStelle(zettel, ZETTELSTELLEN[0]);
+    Z.zettelSitz = { dx: 0, dy: 0, knapp: true };
     return false;
   }
 
@@ -1783,12 +2000,45 @@
     return !!(t && (t === el || el.contains(t)));
   }
 
+  /* ----------------------------------------------------------------------
+     WARUM EIN KNOPF AUS IST — Auflage 5 des Kritikers, Welle 4.
+
+     `schalte()` schaltet aus drei ganz verschiedenen Gruenden ab, und bis
+     hierher landeten alle drei in demselben `disabled`:
+
+       das SPIEL sagt nein      kein Geld, das Siegel liegt darauf, laeuft schon
+       das eigene BRETT ist zu  zugeklappte Bretter der STADT lassen ihre
+                                Knoepfe im DOM aktiv stehen (STAND.md §6.9)
+       es liegt etwas DARUEBER   ein fremdes Blatt, die Maus trifft nicht mehr
+
+     Gemessen hat der Kritiker das so: „Wer `disabled` zaehlt, kann ‚das Spiel
+     sagt nein' nicht von ‚da liegt etwas darueber' unterscheiden." Das stimmt
+     — und es war in diesem Stueck nur deshalb nachweisbar, weil `data-soll-aus`
+     danebensteht. Ab jetzt steht der ganze Grund am Knopf:
+
+       data-soll-aus="1"   das Spiel sagt nein (steht schon beim Zeichnen fest)
+       data-brett-zu="1"   das eigene Brett liegt zugeklappt
+       data-verdeckt="1"   der Zug waere erlaubt, aber etwas liegt darueber
+
+     Ein Zaehler, der ehrlich messen will, nimmt `data-soll-aus`; wer die
+     Verdeckung sucht, nimmt `data-verdeckt`. `disabled` bleibt die Summe —
+     denn ein Knopf, den die Maus nicht trifft, ist wirklich kein Knopf, und
+     ihn aktiv stehen zu lassen waere die groessere Luege.
+     ---------------------------------------------------------------------- */
+  function merke(k, name, an) {
+    if (an) { if (k.getAttribute(name) !== '1') k.setAttribute(name, '1'); }
+    else if (k.hasAttribute(name)) k.removeAttribute(name);
+  }
+
   function schalte(wurzel, tot) {
     if (!wurzel) return;
     var kn = wurzel.querySelectorAll('button[data-zug]');
     for (var i = 0; i < kn.length; i++) {
       var soll = kn[i].getAttribute('data-soll-aus') === '1';
-      var neu = tot || soll || !imBild(kn[i]);
+      var verdeckt = !tot && !soll && !imBild(kn[i]);
+      var neu = tot || soll || verdeckt;
+      merke(kn[i], 'data-brett-zu', !!tot);
+      merke(kn[i], 'data-verdeckt', verdeckt);
       if (kn[i].disabled !== neu) {
         kn[i].disabled = neu;
         if (neu) kn[i].setAttribute('aria-disabled', 'true');
@@ -1814,21 +2064,30 @@
          ihm seine Knoepfe. Genau der Fehler, den BEFUND-BRETTER.md misst,
          nur diesmal im eigenen Haus. */
       if (zettel) {
-        /* Erst umsetzen, dann urteilen: ein Zettel, der noch einen freien
-           Platz am Sudhaus hat, tritt nicht zurueck. Zurueck tritt er nur,
-           wenn KEINE der Stellen traegt — oder wenn das eigene Brett offen
-           liegt und er es ohnehin verdecken wuerde. */
-        var weg = !Z.brettZu;
-        /* Beiseite heisst 0x0 — daraus kommt er nie wieder heraus, wenn man
-           IHN in diesem Zustand misst. Also erst hervorholen, dann pruefen,
-           und nur zurueckstecken, wenn wirklich keine Stelle traegt. Alles
-           innerhalb eines Bildes, es blinkt nichts. */
-        if (!weg) {
+        /* `beiseite` (display:none) gilt ab Welle 4 fuer GENAU EINEN Fall:
+           das eigene Brett liegt offen. Dann ist der Zettel nicht weg,
+           sondern gross — und beide zugleich waeren dieselbe Selbstverdeckung
+           noch einmal.
+
+           Findet der Zettel dagegen keine Stelle, verschwindet er NICHT mehr.
+           Genau das war Auflage 1: gemessen 29 Wochen in 1350, in denen Geld
+           und Erlaubnis da waren und trotzdem kein Knopf am Schirm stand. Er
+           bleibt jetzt stehen, klein und `gedraengt`, und seine Knoepfe sagen
+           ueber `data-verdeckt`, woran es liegt. */
+        var brettOffen = !Z.brettZu;
+        var passt = true;
+        if (!brettOffen) {
           zettel.classList.remove('beiseite');
-          weg = !stelleZettel(zettel);
+          passt = stelleZettel(zettel);
         }
-        if (zettel.classList.contains('beiseite') !== weg) zettel.classList.toggle('beiseite', weg);
-        schalte(zettel, weg);
+        if (zettel.classList.contains('beiseite') !== brettOffen) {
+          zettel.classList.toggle('beiseite', brettOffen);
+        }
+        var eng = !brettOffen && !passt;
+        if (zettel.classList.contains('gedraengt') !== eng) {
+          zettel.classList.toggle('gedraengt', eng);
+        }
+        schalte(zettel, brettOffen);
       }
     });
   }

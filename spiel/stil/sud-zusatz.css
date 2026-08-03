@@ -94,6 +94,59 @@
    -------------------------------------------------------------------------- */
 .sud-zettel.beiseite { display: none; }
 
+/* --------------------------------------------------------------------------
+   ... UND SONST TRITT ER NICHT MEHR ZURUECK — Welle 4, Auflage 1 und 4.
+
+   Gemessen hat der blinde Kritiker, dass `display:none` in 1350 in 29 Wochen
+   ueber einem Zettel lag, an dem das Spiel den Kauf ausdruecklich erlaubt
+   haette (`data-soll-aus="0"`) und die Kasse die 78 Pf hatte, und dass in
+   1970 die Charge mit Frist in der Haelfte ihrer Wochen aus demselben Grund
+   keinen Knopf hatte. Ein Stueck, das sich selbst wegnimmt, ist kein Stueck.
+
+   Deshalb gilt `beiseite` ab jetzt nur noch fuer den einen Fall darueber —
+   das eigene Brett liegt offen. Findet der Zettel keine Stelle, wird er
+   erst KNAPP und bleibt dann GEDRAENGT stehen.
+   -------------------------------------------------------------------------- */
+
+/* KNAPP: er wirft alles ab, was kein Knopf ist. 11,5 % x 11 % = 1,27 % der
+   Buehne — noch weiter unter der Ortsmarken-Schwelle der STADT (2,4 %) als
+   der volle Zettel, und klein genug fuer Luecken, in die der nicht passt. */
+.sud-zettel.knapp {
+  width: 11.5%;
+  max-height: 11%;
+  gap: calc(var(--s) * 2);
+  padding: calc(var(--s) * 4) calc(var(--s) * 6);
+}
+.sud-zettel.knapp .sud-zverfahren,
+.sud-zettel.knapp .sud-zrang,
+.sud-zettel.knapp .sud-zzahlen,
+.sud-zettel.knapp .sud-zpreiszeile { display: none; }
+.sud-zettel.knapp .sud-zkopf {
+  font-size: calc(var(--s) * 14);
+  padding-bottom: calc(var(--s) * 1);
+}
+
+/* GEDRAENGT: keine Stelle traegt, und der Zettel bleibt trotzdem stehen.
+   Der gestrichelte Rand ist das einzige, was der Kritiker vermisst hat —
+   „der Spieler muss wissen, dass sein Zettel verschwunden ist, und genau
+   das sieht er nicht". Jetzt verschwindet er nicht, und man sieht, dass er
+   in der Klemme sitzt. Die Knoepfe darunter tragen data-verdeckt="1". */
+.sud-zettel.gedraengt {
+  outline: calc(var(--s) * 2) dashed #8a2f14;
+  outline-offset: calc(var(--s) * 2);
+}
+
+/* Der Preis, der gerade auf keinem Knopf steht: worauf gespart wird, wenn
+   die zweite Zeile die kostenlose Umstellung der anderen Achse traegt. */
+.sud-zpreiszeile {
+  font-family: var(--mono);
+  font-size: calc(var(--s) * 13);
+  line-height: 1.15;
+  color: #6b4a22;
+}
+#buehne[data-epoche="1"] .sud-zpreiszeile,
+#buehne[data-epoche="2"] .sud-zpreiszeile { color: #d8bf8c; }
+
 /* Der Rang auf dem Zettel — die eine Zahl dieses Stuecks, die auch im
    Vorgabestand im Bild steht. */
 .sud-zrang {
