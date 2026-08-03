@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-03T05:50:27+00:00",
- "phase": "Welle 3 nachgemessen: drei von vier Epochen bestehen die zweite Latte auf der sorgfältig gespielten Linie. 1600 kippt nach oben und ist der Befund für Welle 4.",
+ "stand": "2026-08-03T10:52:03+00:00",
+ "phase": "Welle 4 läuft — drei Builder gleichzeitig: DIE RÜCKKOPPLUNG (1600 läuft mit rho +0,873 nach oben davon), DER KLANG (dritte Latte, in drei Wellen nie gemessen), DER SUD (wird überhaupt entschieden?). DER PREIS folgt, sobald DIE RÜCKKOPPLUNG die preis*.js freigibt.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -826,6 +826,14 @@
   {
    "zeit": "2026-08-03T05:50:27+00:00",
    "text": "Welle 3 nachgemessen: drei von vier Epochen bestehen die zweite Latte auf der sorgfältig gespielten Linie. 1600 kippt nach oben und ist der Befund für Welle 4."
+  },
+  {
+   "zeit": "2026-08-03T10:52:03+00:00",
+   "text": "Welle 4 läuft — drei Builder gleichzeitig: DIE RÜCKKOPPLUNG (1600 läuft mit rho +0,873 nach oben davon), DER KLANG (dritte Latte, in drei Wellen nie gemessen), DER SUD (wird überhaupt entschieden?). DER PREIS folgt, sobald DIE RÜCKKOPPLUNG die preis*.js freigibt."
+  },
+  {
+   "zeit": "2026-08-03T10:52:03+00:00",
+   "text": "AUFSICHT, 3. August 2026, 10:50 UTC — DAS REPO IST WIEDER HERSTELLBAR. Fünf Container-Resets in vier Stunden liefen ins Leere, weil der Zweig nicht mehr zu holen war: 1217 Belegbilder unter werkbank/schuss/ wogen 2,94 GB der 3,3 GB Historie, alles Übrige 0,36 GB. Eingebettet in ein Dokument waren zwei der 1217. Komprimieren hätte nichts geholfen, denn Git behält jeden alten Blob; nur ein Umschreiben der Historie kommt daran. git filter-repo hat den Ordner aus 752 Commits entfernt (112 davon waren reine Bild-Commits und wurden leer, es bleiben 640). Die 243 Nicht-Bild-Dateien wurden zurückgeholt, denn dort lagen die MESSGERÄTE: eichung/preis-linie.mjs, aufsicht/messstand.sh und nenner.mjs, stadt-r6/lot.mjs, die neun Skripte des SUD-Kritikers — 105 Skripte und 138 Messwertdateien, alle syntaxgeprüft. Wer hier noch einmal aufräumt, filtert nach Endung, nicht nach Ordner. Ergebnis: Arbeitsbaum 3,4 GB auf 290 MB, frischer Klon in 18 Sekunden statt Abbruch. Abnahmetor danach: vier von vier Epochen laden, BRAUHAUS.lage 0, keine Konsolenfehler. Die Belegbilder sind entbehrlich, weil die Methode sie nicht braucht — der blinde Kritiker sieht das laufende Spiel, nie ein altes Bild; die Latte BILD vergleicht die laufende Aufnahme gegen zielbild/ (bleibt); das Ergebnis eines Urteils ist der Text in werkbank/urteile/ und die Zahl in der .json daneben."
   }
  ]
 }
