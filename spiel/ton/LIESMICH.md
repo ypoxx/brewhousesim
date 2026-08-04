@@ -28,7 +28,7 @@ einer Stelle, weil dieselbe Probe von mehreren Stücken gerufen wird.
 | **Grund** | `klang/grund.mp3` — **eine Datei für alle vier Epochen** | daß hier ein Hof ist, und sonst **nichts** | immer |
 | **Bett** | `klang/bett1..4.mp3` | die **Zeit** — Blockflöte · Laute · Blaskapelle · Funk | nur bei Arbeit |
 | **Hof** | `klang/hof1..4.mp3` | den **Ort** — Feuer unter der Pfanne · Küferei und Stall · Dampfmaschine · Diesel | nur bei Arbeit |
-| **Fremd** | `klang/drueben1,4.mp3` + Wand (Tiefpass 1100 Hz) | den **Gegenzug** — was drüben geschieht, hinter der Mauer | nur bei einem Zug des Nachbarn |
+| **Fremd** | `klang/drueben1,4.mp3` + Wand (Tiefpass 600 Hz, Ausgleich dahinter) | den **Gegenzug** — was drüben geschieht, hinter der Mauer | nur bei einem Zug des Nachbarn |
 | **Werk** | die übrigen ~40 Proben | den **Vorgang** — was der Spieler gerade getan hat | bei Arbeit |
 
 **Das ist seit Welle 5 umgebaut, und zwar gemessen.** Bis dahin trug das Bett

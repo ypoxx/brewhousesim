@@ -32,9 +32,11 @@ auf dem Commit, obwohl am Arbeitsbaum gleichzeitig gemessen wird.
 | `erzeuge.py` | die neuen Proben; jede Zeile traegt den Satz des Ohres, der die alte verurteilt hat. Hebt **jeden** Anlauf einzeln nach `alt/<name>.NN.mp3` |
 | `nachbarzahl.py` | zaehlt am Mitschnitt, wie oft das NACHBARHOF-Zeichen wirklich anschlaegt. Liest die `nachbar: true`-Namen und `NACHBAR_PAUSE` aus `kern/ton.js` selbst |
 | `zeichenhub.py` | wie hoch das Zeichen in der **Wellenform** steht: Effektivwert in den Sekunden des Zeichens gegen die Sekunden davor, dazu der Anteil unter 900 Hz |
+| `lautheit.mjs` | **wie laut eine Probe wirklich aus dem Erzeuger kam** — im Browser decodiert, nicht geschaetzt. Das Werkzeug, das gefunden hat, dass `angleich()` bei Faktor 6 kappt und `drueben1` deshalb nie seinen Zielpegel erreicht hat |
 | `nimm.sh` | acht Aufnahmen (vier gespielt, vier still) am Messstand |
 | `spiegle.sh` | spiegelt nur die eigenen Dateien in den Messstand |
 | `gegenzug.sh` + `vorgang-lies.py` | die Abnahme der Auflage 4, ausgezaehlt |
+| `gegenzug-wieder.sh` + `mehrheit.py` | dieselbe Abnahme in **drei Durchgaengen** mit Mehrheitsentscheid — Sperrliste 5 des Kritikers, auf seine Vorgangsfrage angewandt. In dieser Runde gebaut, aber nicht mehr zu Ende gemessen (siehe Bericht, Abschnitt 14) |
 | `epoche.sh` + `epoche-lies.py` | die dritte Latte nach dem Verfahren des Kritikers: mischen, drei Durchgaenge, auszaehlen |
 | `alt/` | jede ersetzte und jede verworfene Probe, **ausserhalb** von `spiel/`, damit keine tote Datei mitfaehrt |
 | `antworten/` | alle Rohantworten und alle Schluessel |
@@ -43,3 +45,15 @@ Die `.wav` liegen nicht im Baum (`.gitignore`). Sie sind aus dem Messstand und
 den hier abgelegten Zugplaenen nachstellbar; jedes `<name>.json` neben einer
 Aufnahme haelt Klickprotokoll, Pegelverlauf, `geraten()`, `lage` und
 Konsolenfehler fest.
+
+## Die sechs Staende
+
+| | was ihn ausmacht | Aufnahmen | GEGENZUG gespielt / still |
+|---|---|---|---|
+| `vorher` | Ausgangsstand `0058dd1` | `/tmp/klang6/vorher` | (Vorrunde: 1 / 0) |
+| A | eigene Zeichendatei, Wand 900 Hz, Pegel 0,27 | `/tmp/klang6/a` | 1 / 0 |
+| B | Pegel 0,55 (kam nicht an), Wand 1100 Hz, Dauer 4,2 s | `/tmp/klang6/b` | 1 / 0 |
+| C | `hebe()`, Vorhalt 0,35 s, kurze tiefe Senke | `/tmp/klang6/c` | 1 / 0 — **Anachronismus** |
+| D | Wand 600 Hz + Ausgleich 1,9x | `/tmp/klang6/d` | 2 / 0 — **Anachronismus** |
+| E | stimmloses `drueben1` | `/tmp/klang6/e` | 0 / 0 |
+| **F** | dazu `bus.fern` zurueck auf 2000 Hz — **ausgeliefert** | `/tmp/klang6/f` | **0 / 0** |
