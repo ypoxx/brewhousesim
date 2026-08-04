@@ -147,28 +147,6 @@ gehoben hat — der Boden waere per Bauart unsichtbar.
 trifft die Endkasse auf den Pfennig (E1: 112 + Σ3.696 Buchungen = 242, gemessen
 242). Der Boden wird deshalb hier **Buchung fuer Buchung** gezaehlt.
 
-### Zwischenbefund am Zaehler selbst (Quelltext, gegengelesen am Bildschirm)
-
-`spiel/stuecke/preis.js:2393` setzt den Griff-Text zusammen:
-
-```js
-text: 'Chronik des Hauses · ' + festlegungenGesamt() + ' Festlegungen · '
-      + Object.keys(Z.fertig).length + ' von dieser Tafel gebaut',
-```
-
-`festlegungenGesamt()` (Zeile 1502) zaehlt richtig — alle Chronikeintraege mit
-`art === 'festlegung'`, aus allen vier Stuecken. Die ZWEITE Zahl aber ist
-`Z.fertig` — das sind FERTIGE ANGEBOTE (Zeile 1177 `Z.fertig[k] = jahr()` in
-`fertigstellen`), nicht Festlegungen. Sie steht in einem Satz, der von
-Festlegungen handelt.
-
-Gemessen, Epoche 1600: das Haus nimmt **genau eine** Festlegung, und zwar
-`preis:festlege:reinheit` — von genau dieser Tafel. Der Griff sagt dazu:
-
-> `Chronik des Hauses · 1 Festlegungen · 0 von dieser Tafel gebaut`
-
-Wer das liest, schliesst: die eine Festlegung kam von woanders. Sie kam von hier.
-
 ---
 
 ## 2. DIE FRAGEN DES AUFTRAGS
@@ -313,14 +291,48 @@ Spearman ueber (Jahr, `BRAUHAUS.preis.leiter().zugVerh`), drei Laeufe je Epoche.
 | Kennzahl klein–gross | 1,55–18,44× | 1,54–15,11× | 0,51–11,97× | 2,25–80,13× |
 | Wochen ohne Kennzahl | 0/420 | 0/420 | 0/420 | 0/420 |
 
-**E1 und E2 reproduzieren den Stand auf die dritte Stelle.** Das ist der Beleg,
-dass er nicht kaputtgegangen ist — und zugleich der Beleg, dass diese Hand dort,
-wo es keine Plus-Preisschilder gibt, Zug fuer Zug die des Vorbilds ist.
+**Der Stand ist mit dem UNVERAENDERTEN Vorbild nachgemessen worden, nicht nur
+mit meiner Hand.** `werkbank/schuss/preis-kritik-w5/linie-vorbild.mjs` ist Byte
+fuer Byte `rueckkopplung-r3/linie.mjs`; 400 Wochen, Hafen 8906, `6b59a18`:
 
-**E3 und E4 weichen ab, und zwar aus einem genannten Grund:** dort nimmt diese
-Hand die Plus-Festlegung, die das Vorbild nicht sieht (2.1). Sie spielt also
-eine andere Partie. Die Gegenprobe mit wiederhergestellter `Math.abs()`-Falle
-(`ABS=1`) steht in Abschnitt 4.
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| **Vorbild-Hand auf `6b59a18`** | **+0,591** | **+0,231** | **+0,393** | **+0,275** |
+| eingetragener Stand | +0,591 | +0,231 | +0,393 | +0,108 |
+| Jahre unter 1× | 0/14 | 0/14 | 1/14 | 0/14 |
+| Festlegungen der Vorbild-Hand | 1 | 1 | **0** | **0** |
+
+**Drei von vier reproduzieren Ziffer fuer Ziffer. E4 steht auf +0,275 statt
++0,108 — und ich kann sagen, warum.**
+
+Dieselbe Vorbild-Hand auf dem VOR-Stand `3e6d08c` (der Server auf Hafen 8900
+trug ihn noch, `sha1 3ce38cf…`) liefert **+0,108 in E4 und +0,393 in E3** —
+also genau den eingetragenen Stand. Der eingetragene Stand ist der Stand VOR
+diesem Bau. Was ihn in E4 verschoben hat, ist der Kassenboden selbst, und zwar
+in drei Jahren:
+
+| Jahr | Kennzahl `3e6d08c` | Kennzahl `6b59a18` | Kasse vorher → nachher |
+|---|---|---|---|
+| 1978 | 1,955× | **2,371×** | 41.240 → **50.000** (= Notpfennig) |
+| 1979 | 3,289× | **3,688×** | 44.598 → **50.000** (= Notpfennig) |
+| 1980 | 2,265× | **2,462×** | 64.397 → 69.983 (Folgejahr) |
+
+Alle elf uebrigen Jahre sind unveraendert, Nenner in allen vierzehn Jahren
+identisch. **Der Vorgriff greift in E4 in zwei Jahren, hebt die Kasse beide Male
+auf exakt den Notpfennig, und diese zwei Zahlen verschieben rho um +0,167.**
+Der kleinste Wert der Reihe steigt dabei von 1,955× auf 2,124×.
+
+Das ist kein Bruch: **+0,275 liegt weit unter der Latte 0,700.** Es ist aber
+eine Bewegung, die in die Chronik gehoert — der Boden hebt das untere Ende der
+Kennzahl an und macht die Kurve damit ein Stueck weniger zweiseitig. Zweimal
+gemessen (`vorbild-e4.json`, `vorbild-e4-zweit.json`), Ziffer fuer Ziffer gleich.
+
+**Meine eigene Hand weicht in E3 und E4 aus einem genannten Grund ab:** dort
+nimmt sie die Plus-Festlegung, die das Vorbild nicht sieht (2.1) — sie spielt
+eine andere Partie. Mit wiederhergestellter `Math.abs()`-Falle (`ABS=1`) liefert
+sie E3 +0,393 und E4 +0,275, also genau die Zahlen des Vorbilds. Damit ist auch
+belegt, dass die drei Aenderungen an der Hand nichts anderes bewegen als das
+Vorzeichen (Abschnitt 3.2).
 
 **|rho| < 0,700 ist in allen vier Epochen und allen zwoelf Laeufen erfuellt.**
 Hoechster Betrag: +0,591 (E1, 14 Jahre). „Hoechstens ein Jahr von sechs unter
@@ -376,15 +388,14 @@ E4  1970:5  1971:0  1972:2  1973:0  1974:4  1975:0  1976:7  1977:0  1978:5  1979
 | Michaelitage mit genau 1 | 2 | 2 | 0 | 0 |
 | Michaelitage mit **≥2 — also „nebeneinander"** | **5/14** | **4/14** | **6/14** | **7/14** |
 
-Das Muster ist nicht zufaellig: es sind ausnahmslos die **ungeraden** Jahre, in
-allen vier Epochen dasselbe, und der Amtszeitwechsel laeuft im selben Takt
-(`erbe-daten.js` `STUNDE_ABSTAND = 2`, zitiert in `preis.js:117`). An diesen
-Tagen wird **keine einzige** der sieben bis neun Karten von `elementFromPoint`
-getroffen, obwohl sie Flaeche haben und teils nicht `disabled` sind. Sie liegen
-unter etwas. Alle Faecher haengen auf `#ebene-blatt` (`grund.css:104`,
-z-index 60) und stapeln sich in Ladereihenfolge — DAS ERBE laedt als letztes
-(`index.html:108`), sein Fach ist der letzte Bruder und liegt oben. Wer genau
-verdeckt, misst `decke.mjs` (Abschnitt 4).
+> **⚠ DIESE TABELLE HABE ICH SELBST WIDERLEGT.** Die Nullen sind zum groessten
+> Teil MEINE MESSHAND, nicht das Spiel. An jedem zweiten Michaeli liegt die
+> Tafel EINGEKLAPPT in der Reiterleiste der STADT
+> (`div.pr-tafel` traegt dann `stadt-zugeklappt`, und `stadt.css:186` setzt
+> darauf `clip-path: inset(50%) !important; pointer-events: none !important`).
+> Mein Zaehlblick hat die eingeklappte Tafel gezaehlt, statt vorher den Reiter
+> zu druecken. Die Aufloesung und die berichtigten Zahlen stehen in 3.3 — sie
+> bleiben hier stehen, damit der Fehler nachvollziehbar ist.
 
 **Die Eichung aus ZUSTAENDIGKEIT 17** („Barschaft ≥ zweitbilligstes Angebot in
 jedem der ersten fuenf Braujahre") ist zweimal gerissen:
@@ -466,10 +477,17 @@ nach gut drei Braujahren macht das Haus zu, statt ewig weiterzulaufen
 
 | | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
-| Festlegungen in 14 Jahren | **2** | **2** | **2** | s. u. |
-| genommen | `vertrag` 1350 −85 · `brunnen` 1356 −200 | `reinheit` 1600 −280 · `hofbefreiung` 1604 −650 | `aktien` 1884 **+11.000** · `konvention` 1886 −10.000 | |
-| Michaelitage danach mit ueberhaupt einer **aktiven** Festlegung | **0** von 7 (1357–1363) | **0** von 9 (1605–1613) | **0** von 11 (1887–1897) | |
-| Zaehler | `· 2 Festlegungen · 0 von dieser Tafel gebaut` | dito | dito | |
+| Festlegungen in 14 Jahren | **2** | **2** | **2** | **4** |
+| genommen | `vertrag` 1350 −85 · `brunnen` 1356 −200 | `reinheit` 1600 −280 · `hofbefreiung` 1604 −650 | `aktien` 1884 **+11.000** · `konvention` 1886 −10.000 | `konzern` 1970 **+65.000** · `handelsmarke` 1972 −120.000 · `privat` 1974 −66.000 · `genossenschaft` 1982 −190.000 |
+| Michaelitage danach mit ueberhaupt einer **aktiven** Festlegung | **0** von 7 (1357–1363) | **0** von 9 (1605–1613) | **0** von 11 (1887–1897) | 4 von 9, keiner erreichbar ausser 1982 |
+| Zaehler | `· 2 Festlegungen · 0 von dieser Tafel gebaut` | dito | dito | `· 4 Festlegungen · 0 von dieser Tafel gebaut` |
+| Kasse | 22–560 | 251–2.406 | 341–29.004 | 280–254.956 |
+
+**1970 ist die Ausnahme, und sie haengt am Plus-Preisschild.** Dort raeumt die
+Hand den **ganzen Katalog** der Epoche ab — alle vier Festlegungen, die
+`preis-daten.js` fuer 1970 kennt. Moeglich ist das nur, weil sie mit `konzern`
+(+65.000 DM) anfaengt; dieselbe Hand mit `Math.abs()` nimmt in 1970 **null**
+(3.2).
 
 **Das ist die Antwort auf Frage 1 in einer Zeile:** vierzehn Braujahre, acht
 Amtszeiten, jede mit Anspruch auf genau eine unwiderrufliche Wahl
@@ -480,7 +498,7 @@ der Teuerung haengt und nicht an der Kasse (`preis.js:1494 festBasis`), waehrend
 die Kasse nicht mitwaechst.
 
 Und der Zaehler sagt in allen drei Faellen `2 Festlegungen · **0** von dieser
-Tafel gebaut`, obwohl **beide** von dieser Tafel kamen (siehe 5.2).
+Tafel gebaut`, obwohl **beide** von dieser Tafel kamen (Abschnitt 5).
 
 ### 3.2 Die Plus-Falle, gemessen statt behauptet
 
@@ -504,17 +522,95 @@ falschen Vorzeichen liest. Der Zaehler hat die ganze Zeit die Wahrheit gesagt.
 Die Kasse in 1970 zeigt, was der Unterschied wert ist: **86.000 DM Hoechststand
 mit `Math.abs()`, 267.629 DM mit Vorzeichen.**
 
-### 3.3 Was auf der Michaelitafel liegt
+### 3.3 DIE VERDECKUNG WAR MEINE MESSHAND — Aufloesung, in drei Schritten
 
-`decke.mjs` (die Hand, die NICHT spielt, nur WEITER drueckt und die Tafel
-aufschlaegt) findet in **jedem** erreichten Michaeli **alle** Karten getroffen —
-8/8 · 9/9 · 8/8 · 9/9, ueber alle vier Epochen, auch in den Jahren mit
-Amtszeitwechsel (1351, 1353, 1601, 1603, …). Sie kommt allerdings nur bis zum
-dritten bis vierten Braujahr, weil das nicht spielende Haus dort zumacht (3.1).
+Der Befund aus (a) — „an sieben von vierzehn Michaelitagen ist keine Karte
+anzufassen" — **haelt nicht**. Ich habe ihn selbst zerlegt, und so ging es:
 
-Die Verdeckung entsteht also **erst in der gespielten Partie**. Welches Element
-dort ueber den Karten liegt, misst `decke2.mjs` (dieselbe spielende Hand,
-zusaetzlich der Elementpfad unter dem Mauspunkt) — Ergebnis unten.
+**Schritt 1 — `decke.mjs`, die Hand, die NICHT spielt.** Sie drueckt nur WEITER
+und schlaegt die Tafel auf. Sie findet in **jedem** erreichten Michaeli **alle**
+Karten getroffen: 8/8 · 9/9 · 8/8 · 9/9 in E1–E4, auch in den Jahren mit
+Amtszeitwechsel. Sie kommt allerdings nur bis zum dritten bis vierten Braujahr,
+weil das nicht spielende Haus dort zumacht (3.1). Erster Verdacht gegen die
+eigene Hand.
+
+**Schritt 2 — `decke2.mjs`, die spielende Hand mit Elementpfad.** Sie nennt,
+was `elementFromPoint` statt der Karte liefert. Zwei echte fremde Blaetter und
+ein Raetsel:
+
+| statt der Karte kommt | gehoert | wann |
+|---|---|---|
+| `div.erb-buch.blatt`, `div.erb-ladekopf` in `#fach-blatt-erbe` | DAS ERBE | in den Jahren nach jedem Amtszeitwechsel |
+| `button.knopf.gross.flach` = `fuhre:uebergabe:nein` / `fuhre:ausgang:nein` (`fuhre.js:3261`, `:3314`) | DIE FUHRE | ungerade Jahre ab dem 6. Braujahr |
+| **`div#buehne`** — die blanke Buehne | ? | genau die Jahre mit „0 anfassbar" |
+
+**Schritt 3 — `decke3.mjs`, derselbe Lauf plus dem Stil jedes Vorfahren.** Das
+Raetsel loest sich in einer Zeile. Die Kette ueber einer nicht getroffenen Karte
+zu Michaeli 1351:
+
+```
+button.knopf.pr-nehmen      pe auto  vis visible  op 1     ov visible   rect [387,532,147,26]
+div.pr-karte                pe none  vis visible  op 1     ov hidden
+div.pr-reihe                pe none  vis visible  op 1     ov visible
+div.pr-spalte.pr-mitte      pe none  vis visible  op 1     ov visible
+div.pr-leib                 pe none  vis visible  op 1     ov visible
+div.pr-tafel.pr-stil-pergament.STADT-ZUGEKLAPPT
+                            pe none  vis visible  op 0,346  ov hidden   clip-path: inset(50%)
+```
+
+`stadt.css:186`:
+
+```css
+.stadt-zugeklappt {
+  clip-path: inset(50%) !important;
+  pointer-events: none !important;
+}
+```
+
+**Die Tafel liegt an diesen Michaelitagen zusammengeklappt in der Reiterleiste
+der STADT.** Sie ist weggeschnitten, nicht verdeckt — „Zugeklappt heisst
+weggeschnitten, nicht versteckt", sagt der Kommentar darueber selbst. Im
+Bildschirmfoto `bild/e1-1280x800.png` steht der Reiter unten in der Leiste und
+heisst `MICHAE… / Der Rat setzt…`. Wer sie aufschlagen will, drueckt diesen
+Reiter. **Meine Zaehlhand hat das nicht getan** — sie hat den Griff des PREIS
+gedrueckt (der setzt nur dessen eigene Merker) und dann gezaehlt.
+
+**Schritt 4 — die Gegenprobe.** `frei.mjs` spielt dieselbe Partie, beantwortet
+aber zuerst die Blaetter der FUHRE und des ERBE, drueckt Escape und wartet, bis
+der Aufschlag durch ist. Ergebnis ueber 28 Michaelitage in E1 und E2:
+
+| Michaeli E1 | 1350 | 1351 | 1352 | 1353 | 1354 | 1355 | 1356 | 1357 | 1358 | 1359 | 1360 | 1361 | 1362 | 1363 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| erreichbar **und** aktiv | 3 | 2 | 4 | 2 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 2 | 2 | 1 |
+| verdeckte Karten | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+| Michaeli E2 | 1600 | 1601 | 1602 | 1603 | 1604 | 1605 | 1606 | 1607 | 1608 | 1609 | 1610 | 1611 | 1612 | 1613 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| erreichbar **und** aktiv | 4 | 2 | 2 | 1 | 3 | 4 | 4 | 3 | 2 | 2 | 2 | 2 | 1 | 2 |
+| verdeckte Karten | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+**Kein einziger verdeckter Knopf in 28 Michaelitagen.** Die Zahl der Karten, die
+nebeneinander liegen, erreichbar und aktiv, ist **1 bis 4** — nie 0, und an
+**24 von 28** Tagen mindestens zwei.
+
+**Damit ist Spalte (a) bestanden und mein eigener Befund kassiert.** Er steht
+oben trotzdem, weil er die eine Sache zeigt, vor der die Aufsicht gewarnt hat:
+wer nach einem Klick nur einmal hinsieht — und nicht nachsieht, ob das Blatt
+ueberhaupt aufgeschlagen ist —, misst seine Hand und nicht das Spiel.
+
+**Was von den drei Deckeln uebrig bleibt, ist klein, aber es bleibt:** DAS ERBE
+und DIE FUHRE legen ihre Blaetter tatsaechlich ueber die Michaelitafel (alle
+Faecher liegen auf `#ebene-blatt`, `grund.css:104`, und stapeln sich in
+Ladereihenfolge — DIE FUHRE `index.html:83`, DAS ERBE `index.html:108`, DER
+PREIS `index.html:88` darunter). Wer sie wegklickt, kommt an die Tafel; wer sie
+stehen laesst, nicht. Das ist genau die Sperrschicht mit Register, die
+ZUSTAENDIGKEIT 2 dem Kern aufgegeben hat und die es noch nicht gibt. Ein Fehler
+DIESES Stuecks ist es nicht.
+
+**Und ein kleiner Nebenertrag der aufgeraeumten Hand:** in 1350 nimmt sie
+**zwei** Festlegungen statt einer (`vertrag` und eine zweite), Kennzahl
+1,55–15,14×, Kasse 39–663. Wer die fremden Blaetter zuerst wegraeumt, spielt
+messbar besser.
 
 ## 4. AM BILDSCHIRM: laeuft Text ueber seinen Kasten?
 
@@ -578,6 +674,29 @@ wird, steht also nirgends, wie viele Festlegungen das Haus schon hat. Die Zahl
 erscheint erst, nachdem man die Tafel zugemacht hat. Nachgewiesen im Bild
 `bild/e2-1920x1080.png` und in der Messreihe: `zaehlerNachSchluss` ist in jedem
 zweiten Michaeli `None`, weil der Griff dann nicht erreichbar ist.
+
+## 5. DER ZWEITE ZAEHLER SAGT ETWAS ANDERES, ALS DANEBEN STEHT
+
+`spiel/stuecke/preis.js:2393` setzt den Griff-Text zusammen:
+
+```js
+text: 'Chronik des Hauses · ' + festlegungenGesamt() + ' Festlegungen · '
+      + Object.keys(Z.fertig).length + ' von dieser Tafel gebaut',
+```
+
+`festlegungenGesamt()` (Zeile 1502) zaehlt richtig — alle Chronikeintraege mit
+`art === 'festlegung'`, aus allen vier Stuecken. Die ZWEITE Zahl aber ist
+`Z.fertig` — das sind FERTIGE ANGEBOTE (Zeile 1177 `Z.fertig[k] = jahr()` in
+`fertigstellen`), nicht Festlegungen. Sie steht in einem Satz, der von
+Festlegungen handelt.
+
+Gemessen, Epoche 1600: das Haus nimmt **genau eine** Festlegung, und zwar
+`preis:festlege:reinheit` — von genau dieser Tafel. Der Griff sagt dazu:
+
+> `Chronik des Hauses · 1 Festlegungen · 0 von dieser Tafel gebaut`
+
+Wer das liest, schliesst: die eine Festlegung kam von woanders. Sie kam von hier.
+
 
 ## SPERRLISTE `design/PRUEFUNG.md` — nichts gefunden
 
