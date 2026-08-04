@@ -953,10 +953,52 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
   /* Die Knappheitszeile wurde nicht zu gross — sie wurde ZERDRUECKT: sie
      stand auf `flex: 0 1 auto` und war in einer ueberfuellten Tafel auf
      3 px zusammengeschoben, waehrend ihr Inhalt 19 px hoch war. Sie darf
-     nicht mehr schrumpfen; nachgeben soll die Sortenliste darueber, die
-     dafuer rollt (das ist ihr ausdruecklicher Bau, s. oben). Und sie
-     bekommt eine dritte Zeile, weil zwei bei 12 px knapp sind. */
+     nicht mehr schrumpfen. */
   .fu-tafel .fu-knappheit { flex: 0 0 auto; }
-  .fu-tafel .fu-knappheit span { -webkit-line-clamp: 3; }
-  .fu-tafel .fu-sorten { min-height: 0; }
+
+  /* --- Die Anschlagtafel bekommt EINEN Roller statt eines zerdrueckten ---
+     Rechnung fuer 1366x768, Epoche 1350, Kasten 327 px hoch. Was die Tafel
+     bei 12 px Mindestschrift braucht, ohne dass etwas abgeschnitten wird:
+
+       Kopf 34 · Budget 48 · Rohstoff 30 · Sorten 136 · Notsud 63 ·
+       Kerbholz 65 · Knappheit 51 · Kaufknoepfe 98        = 525 px
+
+     Das sind 198 px mehr, als die Platzordnung hergibt, und die Platzordnung
+     ist nicht meine allein: rechts daneben steht DIE ANSCHLAGTAFEL bei
+     27,4 %, unten der Keller bei 56,2 %, und was ich mir dort nehme, nehme
+     ich einem anderen Fach derselben FUHRE weg, das ebenso voll ist.
+
+     Bisher rollte NUR die Sortenliste (`overflow-y: auto`), und alles andere
+     stand auf `flex: 0 0 auto`. Bei 198 px Fehlbetrag heisst das: die
+     Sortenliste wird auf NULL zusammengeschoben — die drei Biere des Hauses,
+     das Herzstueck des Bretts, waren nicht mehr zu sehen — und der Rest
+     lief unten aus dem Brett heraus, mitsamt den Kaufknoepfen.
+
+     Deshalb rollt jetzt die TAFEL und nicht mehr die Liste darin. Ein
+     Roller statt zweier ineinander: alles bleibt vollstaendig lesbar und
+     mit dem Rad erreichbar, nichts wird abgeschnitten, und der Kopf mit
+     dem Namen des Bretts steht wieder oben statt zerdrueckt zu werden.
+     Oberhalb der Entwurfsleinwand passt die Tafel und rollt nicht. */
+  .fu-brett.fu-tafel { overflow-y: auto; }
+  .fu-tafel .fu-sorten { overflow-y: visible; min-height: 0; flex: 0 0 auto; }
+
+  /* --- Der Preis darf unter die Beschriftung ---------------------------
+     Alles, was in den vier Faechern der FUHRE noch ueber die RECHTE Kante
+     lief, war derselbe Fall: ein Knopf, dessen Beschriftung und dessen
+     Preisschild bei 12 px nicht mehr nebeneinander passen. Gemessen bei
+     1366x768:
+
+       Anschlagtafel 1350   +4 px   „+19 Pf"
+       Anschlagtafel 1884  +47 px   „−4.200 M"
+       Anschlagtafel 1970  +30 px   „−14.400 DM"
+       Wagen 1884          +68 px   „−210 M" hinter „Halber Wagen · bis 60 hl"
+
+     Der Preis ist nach Latte 2 der halbe Sinn des Knopfes („Optionen mit
+     Preisschild nebeneinander") und darf nicht wegfallen. Er rutscht
+     stattdessen unter die Beschriftung, wenn die Zeile nicht reicht —
+     rechtsbuendig, wie er war. Die Frachtstufen des Wagens duerfen aus
+     demselben Grund umbrechen. */
+  .fu-brett .knopf { flex-wrap: wrap; }
+  .fu-brett .knopf .preis { margin-left: auto; }
+  .fu-fracht { flex-wrap: wrap; }
 }
