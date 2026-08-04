@@ -980,33 +980,53 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
      das Herzstueck des Bretts, waren nicht mehr zu sehen — und der Rest
      lief unten aus dem Brett heraus, mitsamt den Kaufknoepfen.
 
-     Zwei Massnahmen, und die REIHENFOLGE ist der ganze Punkt:
+     Drei Massnahmen, und die dritte ist die wichtigste:
 
        1. Die Sortenliste rollt weiter zuerst — aber sie bekommt einen
           BODEN von 60 px, damit sie nicht mehr auf null zusammengeschoben
           werden kann. Eine Zeile bleibt immer stehen.
        2. Was danach noch fehlt, rollt die TAFEL selbst. Letzter Ausweg,
           nicht erster.
+       3. DIE KAUFKNOEPFE ROLLEN NICHT MIT. Sie kleben an der Unterkante
+          der Tafel und stehen damit immer im Bild.
 
-     WARUM DIESE REIHENFOLGE UND NICHT DIE UMGEKEHRTE — teuer gelernt.
-     Der erste Versuch liess die Tafel rollen und die Sortenliste stehen.
-     Bei 1920x1000 wuchs die Tafel damit auf 444–486 px in einem 426-px-
-     Kasten, und was unten hinausrollte, waren die KAUFKNOEPFE. Gemessen
-     an der Kennzahl (Latte 2), Epoche 1350, dieselbe Saat:
+     WARUM PUNKT 3 — teuer gelernt, in einer vollen Messung der Latte 2.
+     Der erste Versuch liess einfach die Tafel rollen. Bei 1920x1000 wuchs
+     sie im Lauf der Partie auf 444–486 px in einem 426-px-Kasten, und was
+     unten hinausrollte, waren die KAUFKNOEPFE — `fuhre:kauf:rohstoff` und
+     `fuhre:tafel-auf:*`, also der Sudplan und der Rohstoff. Gemessen an
+     der Kennzahl, Epoche 1350, dieselbe Saat 1350, dieselbe Hand:
 
-       Kennzahl 1350 → 1363   vorher  5,89 → 8,20 (Spitze 18,4)
-                              danach  5,89 → 0,89 (Spitze  5,9)
-       rho ueber 14 Jahre     vorher  +0,591      danach  −0,724
+       Kennzahl 1350 → 1363   vorher  5,89 → 8,20  (Spitze 18,4)
+                              danach  5,89 → 0,89  (Spitze  5,9)
+       rho ueber 14 Braujahre vorher  +0,591       danach  −0,724
 
      Das Haus konnte den Sudplan nicht mehr aufstocken und keinen Rohstoff
-     mehr kaufen — die Hand fand die Knoepfe nicht, weil sie unter der Kante
-     lagen. Eine Latte gegen eine andere getauscht, und die teurere
-     verloren. Mit dieser Fassung passt die Tafel bei 1920x1000 wieder in
-     ihren Kasten und die Knoepfe stehen im Bild.
+     mehr kaufen, weil die Knoepfe unter der Kante lagen. Latte 4 gewonnen,
+     Latte 2 dafuer gerissen — ein schlechtes Geschaeft, und eines, das man
+     nur sieht, wenn man beide misst.
 
-     Oberhalb der Entwurfsleinwand passt die Tafel ohnehin und rollt nicht. */
+     `position: sticky` loest das ohne eine einzige Zeile Javascript: die
+     Knopfzeile bleibt am unteren Rand des rollenden Kastens stehen,
+     waehrend alles darueber durchlaeuft. Sie braucht dafuer den Grund der
+     Tafel unter sich, sonst scheint der Text hindurch.
+
+     Oberhalb der Entwurfsleinwand passt die Tafel ohnehin und rollt nicht;
+     dort klebt nichts, weil es nichts zu rollen gibt. */
   .fu-tafel .fu-sorten { min-height: max(60px, calc(var(--s) * 60)); }
   .fu-brett.fu-tafel { overflow-y: auto; }
+  .fu-tafel .fu-kaeufe {
+    position: sticky;
+    bottom: calc(var(--s) * -8);
+    z-index: 2;
+    background: var(--fu-schiefer);
+    box-shadow: 0 calc(var(--s) * -6) calc(var(--s) * 10) var(--fu-schiefer);
+    padding-bottom: calc(var(--s) * 2);
+  }
+  #buehne[data-epoche="4"] .fu-tafel .fu-kaeufe {
+    background: var(--fu-brett);
+    box-shadow: 0 calc(var(--s) * -6) calc(var(--s) * 10) var(--fu-brett);
+  }
 
   /* --- Der Preis darf unter die Beschriftung ---------------------------
      Alles, was in den vier Faechern der FUHRE noch ueber die RECHTE Kante
