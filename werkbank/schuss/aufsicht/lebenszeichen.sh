@@ -53,3 +53,16 @@ done
 # In der Nacht zum 4. August hat das den Unterschied gemacht: der eine Agent
 # mass wirklich (linie-vorbild.mjs, Lauf 11 von 12), der andere war ohne
 # Meldung stehengeblieben. Beide sahen im Dateisystem gleich aus.
+
+# ------------------------------------------------------------------------
+# UND EIN VIERTES MAL, 4. August 2026: beim Aufraeumen der Messstaende hat die
+# Aufsicht eine Schleife geschrieben, deren `case`-Zeile selbst die Zeichenkette
+# "http.server" enthielt — sie passte auf die eigene Kommandozeile und
+# erschlug die eigene Shell (Exit 144). Dieselbe Falle steht seit dem 2. August
+# als Warnung in messstand.sh, und sie hat trotzdem wieder zugeschlagen.
+#
+# DIE LEHRE, endgueltig: Prozesse NIE ueber einen Mustervergleich auf
+# Kommandozeilen suchen. Ueber den HAFEN suchen — die eigene Shell hat keinen:
+#
+#   PID=$(fuser -n tcp <hafen> | tr -s " " "\n" | grep -E "^[0-9]+$" | head -1)
+#   [ -n "$PID" ] && kill "$PID"
