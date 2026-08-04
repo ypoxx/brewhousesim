@@ -2503,15 +2503,20 @@
      Deshalb 0,34 statt 0,62. Gemessen bei 1920x1000, Epoche 1970 (elf
      Adressen — der schlimmste Fall im Spiel):
 
-       Grenze   Karte   Liste noetig   von 11 Adressen sichtbar
-        0,62     56 px     623 px               7
-        0,34     41 px     461 px              11
+       Untergrenze   Faktor, bei dem   Liste     von 11 Adressen
+                     es zur Ruhe kam   noetig    sichtbar
+          0,62            0,620        623 px         7,0
+          0,34            0,474        520 px         9,8
+
+     Der Regelkreis laeuft also gar nicht bis 0,34 hinunter — er kommt bei
+     0,474 zur Ruhe. Die tiefere Grenze verbietet ihm nur nicht mehr, dorthin
+     zu gehen.
 
      Und die Knopfzeile bleibt dabei bei ihren 24 px: der Knopfboden aus
      grund.css ist ein absolutes Mass und schrumpft nicht mit. Das ist der
-     Grund, warum die Karte bei 41 px stehenbleibt und nicht weiter faellt —
-     tiefer als 15 px Textzeile plus 24 px Knopfzeile geht es nicht, und
-     genau da soll es auch aufhoeren.
+     Grund, warum die Karte bei rund 46 px stehenbleibt und nicht weiter
+     faellt — tiefer als 13 px Textzeile plus 24 px Knopfzeile plus die
+     Balkenreihe geht es nicht, und genau da soll es auch aufhoeren.
 
      Drei Blicke statt zwei: mit dem Boden trifft der erste Schaetzwert
      schlechter, weil ein Teil der Hoehe (Schrift, Knopf) gar nicht mehr
