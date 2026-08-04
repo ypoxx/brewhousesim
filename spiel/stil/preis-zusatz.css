@@ -68,9 +68,41 @@
 .pr-fest > * { flex: 0 1 auto; min-height: 0; }
 .pr-karte > .knopf,
 .pr-fest > .knopf { flex: 0 0 auto; }
-.pr-fest .pr-was-text,
-.pr-fest .pr-regel,
-.pr-fest .pr-folge { overflow: hidden; }
+
+/* --------------------------------------------------------------------------
+   AUFLAGE 3 DER WELLE 5 — DIE KARTE TRÄGT IHREN EIGENEN TEXT.
+
+   Bis hierher schnitt `.pr-fest { overflow: hidden }` (preis.css:224) zusammen
+   mit dem `flex: 0 1 auto` oben alles weg, was nicht in die Karte passte: die
+   Kinder schrumpften unter ihren Inhalt, und der Rest war fort. Gemessen 47
+   Sichtungen über zwölf Bildschirme; am Bildschirm zu sehen an der Stelle, die
+   am meisten weh tut — auf dem *Zunftbrief mit dem Ratssitz* endete die Regel
+   mitten in „Der Landesherr nimmt dafür jährlich seinen Teil".
+
+   Der Text steht jetzt in einem eigenen Kasten `.pr-karte-text`
+   (`stuecke/preis.js`, `karteText`). Er bekommt den ganzen übrigen Platz und
+   trägt seinen Überschuss SELBST — er scrollt, statt zu schneiden. Seine
+   Kinder schrumpfen nicht mehr (`flex: 0 0 auto`) und klippen deshalb auch
+   nichts mehr. Der Hinweis und der Knopf bleiben direkte Kinder der Karte und
+   damit immer sichtbar: die Handlung wird nie aus der Karte gedrückt und
+   scrollt auch nicht weg.
+   -------------------------------------------------------------------------- */
+.pr-karte > .pr-karte-text,
+.pr-fest  > .pr-karte-text {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 4);
+  /* Ein Rand, der die Rolle andeutet, ohne einen Balken zu erzwingen. */
+  scrollbar-width: thin;
+}
+.pr-karte > .pr-karte-text > *,
+.pr-fest  > .pr-karte-text > * { flex: 0 0 auto; min-height: 0; overflow: visible; }
+.pr-karte > .pr-hinweis,
+.pr-fest  > .pr-hinweis { flex: 0 0 auto; overflow: visible; }
 
 .pr-bestand { flex: 0 1 auto; }
 .pr-links > .pr-feld:last-child { margin-bottom: auto; }
@@ -327,11 +359,48 @@
    geschrumpften Kasten heraus, weil bei diesem einen kein `overflow` stand.
    Er steht jetzt da. Geklippt wird von unten: die erste Zeile („Preis dieser
    Amtszeit: 6.700 fl") ist die, auf die es ankommt, und die bleibt.
-   ---------------------------------------------------------------------- */
-.pr-fest .pr-satz-klein { overflow: hidden; }
-/* Aus demselben Grund die beiden anderen Kinder, die noch ohne `overflow`
-   dastanden: die Zeile „Dafür neu und für immer: …" und der Hinweis „Über
-   der Kasse: es fehlen …". Bei fünf Karten nebeneinander legte sich sonst
-   jede über die nächste. */
-.pr-fest .pr-sperrt,
-.pr-fest .pr-hinweis { overflow: hidden; }
+
+   ZURÜCKGENOMMEN IN WELLE 5, und zwar begründet: `overflow: hidden` war die
+   falsche Antwort auf das richtige Problem. Es hat die Überlagerung beseitigt,
+   indem es den Satz abgeschnitten hat — und der abgeschnittene Satz war
+   ausgerechnet der, der den Preis der unwiderruflichen Wahl nennt. Die
+   Überlagerung ist jetzt anders gelöst: der Text rollt in `.pr-karte-text`
+   (siehe oben), also überlagert nichts mehr UND es fehlt nichts mehr.
+   Die alten Regeln stehen als Kommentar hier, damit niemand sie
+   versehentlich wieder einführt:
+
+       .pr-fest .pr-satz-klein { overflow: hidden; }
+       .pr-fest .pr-sperrt,
+       .pr-fest .pr-hinweis    { overflow: hidden; }
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   DIE NAMEN DER RECHNUNG WERDEN NICHT MEHR MIT PUNKTEN ABGESCHNITTEN.
+
+   `preis.css:139` kürzt `.pr-zeile .pr-was` mit `text-overflow: ellipsis;
+   white-space: nowrap`. Gemessen (Auflage 3, zweiter Teil): in 1600 sind
+   dadurch VIER VON FÜNF Namen der Rechnung nicht mehr lesbar — am Bildschirm
+   steht „Grutgeld an den Grut…", „Malzaufschlag des Kur…" —, und die Wurzel
+   daneben („nach dem Ausstoß im Schnitt der letzten drei…") ebenso.
+
+   Eine Rechnung, deren Posten man nicht lesen kann, ist keine. Die Zeile darf
+   deshalb umbrechen, und die Wurzel bekommt ihre eigene Zeile darunter: sie
+   ist ohnehin keine Spalte, sondern ein Halbsatz zur Zeile darüber. Die ZAHL
+   bleibt, wo sie war — rechts, einzeilig, nie umgebrochen.
+   -------------------------------------------------------------------------- */
+.pr-zeile { flex-wrap: wrap; align-items: baseline; }
+.pr-zeile .pr-was {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.22;
+}
+.pr-zeile .pr-wurzel {
+  flex: 1 1 100%;
+  order: 3;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  padding-left: calc(var(--s) * 8);
+  line-height: 1.2;
+}

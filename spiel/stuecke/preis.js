@@ -1052,14 +1052,42 @@
 
        Der Notpfennig war bis heute nur eine SCHONUNG: `buche()` nimmt nie
        unter ihn. Kommt das Haus aber schon mit weniger an Michaeli an, gibt
-       ihm der Notpfennig nichts — und genau dieser Fall ist der haeufige.
-       Gemessen am eingefrorenen Stand `3e6d08c`, Buchung fuer Buchung
-       (`werkbank/schuss/preis-w5/boden.mjs`, 1350, grobe Hand): das Haus geht
-       mit 5 Pf in das Braujahr 1351, steht in Woche 16 auf null und bleibt
-       dort bis Woche 30 — fuenfzehn Wochen, in denen KEIN Zug etwas
-       veraendert, weil jeder Zug etwas kostet. Die Kennzahl der zweiten
-       Messlatte ist dann nicht klein, sondern NULL. Ein Zustand, aus dem
-       heraus es keinen Zug gibt, ist kein Spielzustand.
+       ihm der Notpfennig nichts.
+
+       MIT WELCHER HAND DAS GEMESSEN IST, GEHOERT IN DEN SATZ — Auflage 5
+       der Welle 5, und der Kritiker hat recht: der Satz unten stand hier
+       ohne seine Hand, und ohne die Hand ist er nicht nachstellbar.
+
+       GEMESSEN MIT DER GROBEN HAND (`werkbank/schuss/aufsicht/spielprobe.mjs`
+       bzw. `werkbank/schuss/preis-w5/boden.mjs`: WEITER druecken, jede Woche
+       irgendeinen bedienbaren Knopf, nie verkaufen), am eingefrorenen Stand
+       `3e6d08c`, Buchung fuer Buchung, Epoche 1350: das Haus geht mit 5 Pf
+       in das Braujahr 1351, steht in Woche 16 auf null und bleibt dort bis
+       Woche 30 — fuenfzehn Wochen, in denen KEIN Zug etwas veraendert, weil
+       jeder Zug etwas kostet. Die Kennzahl der zweiten Messlatte ist dann
+       nicht klein, sondern NULL. Ein Zustand, aus dem heraus es keinen Zug
+       gibt, ist kein Spielzustand.
+
+       MIT SORGFAELTIGER HAND GREIFT ER NICHT, und auch das gehoert dazu.
+       Der blinde Kritiker hat mit der Vorbild-Hand nachgezaehlt: `vorgriff`
+       ist in 60 von 60 Michaelitagen 0, und die Kasse beruehrt in 0 von
+       1.680 Wochen die Null. Der Boden ist damit kein Beweis gegen eine
+       kompetent gespielte Partie — er ist die Zusage, dass auch die andere
+       weiterspielen kann. Unter der faulen Hand greift er und tut, was auf
+       ihm steht (E1 1351/52/53: 49 / 46 / 35 Pf, Kasse danach genau 48;
+       E2 1602/03: 71 / 81 fl auf 280; E4 1973: 20.197 DM auf 50.000).
+
+       WAS ER GEKOSTET HAT, STEHT DANEBEN UND WIRD NICHT KLEINGEREDET:
+       in 1970 hebt er die Kasse in 1978 und 1979 auf genau den Notpfennig
+       (41.240 -> 50.000 und 44.598 -> 50.000) und in 1980 auf 69.983. Damit
+       steigt der kleinste Wert der Kennzahlreihe von 1,955x auf 2,124x —
+       und die WELLENZAHL von E4 wandert von +0,108 auf +0,275, also um
+       +0,167 (vierzehn Michaelitage, Vorbild-Hand, zweimal Ziffer fuer
+       Ziffer nachgemessen). Die Latte |rho| < 0,700 haelt weit; die Zahl
+       der Welle 4 ist in dieser einen Epoche trotzdem schlechter geworden.
+       Wer sie zurueckhaben will, muss den Notpfennig von 1970 verschieben —
+       nicht den Boden entfernen: 1,955x war die Stelle, an der die Epoche
+       dem Stillstand am naechsten stand.
 
        Der Satz, der daneben schon im Quelltext steht, verspricht das
        Gegenteil: „dem Handwerker blieb sein Werkzeug und der Vorrat, den er
@@ -1807,12 +1835,18 @@
     if (schon) karte.setAttribute('data-genommen', schon.jahr);
     if (zu) karte.setAttribute('data-ausgeschlossen', zu);
 
+    /* Auch hier traegt die Karte ihren Text selbst (Auflage 3, Begruendung
+       bei `karteText`): dieselben Kinder waren auf der Angebotsseite mit
+       `pr-folge-text` 16-, `pr-satz-klein` 9- und `pr-was-text` 8-mal
+       abgeschnitten. Das Preisschild bleibt darueber und schrumpft nie. */
+    var kt = karteText(karte);
+
     var kopf = B.el('div', 'pr-karte-kopf');
     kopf.appendChild(B.el('b', null, a.name));
-    karte.appendChild(kopf);
+    kt.appendChild(kopf);
 
-    if (schon) karte.appendChild(B.el('div', 'pr-karte-stempel', 'GENOMMEN'));
-    else if (zu) karte.appendChild(B.el('div', 'pr-karte-stempel pr-stempel-zu', 'AUSGESCHLOSSEN'));
+    if (schon) kt.appendChild(B.el('div', 'pr-karte-stempel', 'GENOMMEN'));
+    else if (zu) kt.appendChild(B.el('div', 'pr-karte-stempel pr-stempel-zu', 'AUSGESCHLOSSEN'));
 
     var schild = B.el('div', 'pr-schild');
     schild.appendChild(B.el('span', 'pr-schild-zahl', geld(plan.jetzt)));
@@ -1822,24 +1856,24 @@
     } else {
       schild.appendChild(B.el('span', 'pr-schild-rest', 'ganz, sofort'));
     }
-    karte.appendChild(schild);
+    kt.appendChild(schild);
 
-    karte.appendChild(B.el('div', 'pr-bauzeit', a.bauzeit
+    kt.appendChild(B.el('div', 'pr-bauzeit', a.bauzeit
       ? 'Bauzeit ' + a.bauzeit + ' Jahr' + (a.bauzeit > 1 ? 'e' : '') + ' · fertig ' + (jahr() + a.bauzeit)
       : 'Ohne Bauzeit · wirkt ab heute'));
 
-    karte.appendChild(B.el('div', 'pr-was-text', a.was));
+    kt.appendChild(B.el('div', 'pr-was-text', a.was));
     var f = B.el('div', 'pr-folge');
     f.appendChild(B.el('span', 'pr-folge-marke', 'Folge'));
     f.appendChild(B.el('span', 'pr-folge-text', folgeText(a) || a.satz));
-    karte.appendChild(f);
-    karte.appendChild(B.el('div', 'pr-satz-klein', a.satz));
+    kt.appendChild(f);
+    kt.appendChild(B.el('div', 'pr-satz-klein', a.satz));
 
     if (a.sperrt && a.sperrt.length) {
       var namen = a.sperrt.map(function (k) {
         var o = angebotVon(k); return o ? o.name : k;
       }).join(', ');
-      karte.appendChild(B.el('div', 'pr-sperrt', 'Schließt aus: ' + namen));
+      kt.appendChild(B.el('div', 'pr-sperrt', 'Schließt aus: ' + namen));
     }
 
     if (schon) {
@@ -2315,8 +2349,12 @@
       amtszeit().name + ', ' + amtszeit().nr + '. Amtszeit · Anschlag ' + geld(Math.round(Z.anschlag))));
     kopf.appendChild(rechts);
 
+    /* AUFLAGE 2 — auch dieser Knopf traegt die Zahlen. Er ist der einzige
+       Chronikknopf, den man am MICHAELITAG sieht: `zeichneGriff` kehrt bei
+       aufgeschlagener Tafel vorher zurueck, der Griff mit den Zahlen wird
+       dann gar nicht gezeichnet. Bis heute stand hier der blanke Text. */
     kopf.appendChild(B.knopf({
-      text: Z.seite === 'chronik' ? 'Zurück zur Tafel' : 'Chronik des Hauses',
+      text: Z.seite === 'chronik' ? 'Zurück zur Tafel' : chronikAufschrift(false),
       zug: 'preis:chronik',
       klasse: 'pr-reiter',
       titel: 'Was festgelegt wurde, steht dort unabänderlich.',
@@ -2475,22 +2513,23 @@
     griff.appendChild(stand);
 
     griff.appendChild(B.knopf({
-      /* ZWEI ZAHLEN, DIE VERSCHIEDENES ZAEHLEN, UND DAS STEHT JETZT DRAN.
+      /* DREI ZAHLEN, DREI DINGE, UND JEDE HEISST JETZT, WAS SIE ZAEHLT.
 
-         Der Zaehler las `Object.keys(Z.festGenommen)` — also nur die
+         Der Zaehler las einmal `Object.keys(Z.festGenommen)` — also nur die
          Festlegungen DIESER Tafel — und hiess trotzdem „Chronik des
          Hauses". Nach einem Gegenzug in 1970 steht in `welt.chronik` ein
          Eintrag mit `art='festlegung'`, und der Zaehler daneben blieb auf
-         0: die Zahl war da, der Zaehler las sie nicht (WELLE-3,
-         Kleinkram). Er zaehlt jetzt die Chronik des Hauses, so wie er
-         heisst — alle vier Stuecke.
+         0 (WELLE-3, Kleinkram). Er zaehlt seither die Chronik des ganzen
+         Hauses, so wie er heisst.
 
-         Die zweite Zahl bleibt bewusst eng und heisst jetzt auch so: „von
-         dieser Tafel gebaut". Sie ist der Beleg dafuer, ob DER PREIS
-         ueberhaupt stattgefunden hat, und den darf ein weiter gefasster
-         Zaehler nicht zudecken. */
-      text: 'Chronik des Hauses · ' + festlegungenGesamt() + ' Festlegungen · '
-            + Object.keys(Z.fertig).length + ' von dieser Tafel gebaut',
+         DANN ABER STAND DIE ZWEITE ZAHL FALSCH DA, und das ist Auflage 1
+         der Welle 5: „N Festlegungen · M von dieser Tafel gebaut", wobei M
+         `Object.keys(Z.fertig).length` war — FERTIGE ANGEBOTE. Gemessen:
+         „2 Festlegungen · 0 von dieser Tafel gebaut", obwohl beide von
+         dieser Tafel kamen. Jetzt zaehlt die zweite Zahl die Festlegungen
+         dieser Tafel (`festlegungenEigen`), und die Bauten stehen als
+         eigenes Satzglied mit eigenem Wort daneben. */
+      text: chronikAufschrift(true),
       zug: 'preis:chronik-auf',
       klasse: 'pr-griff-chronik',
       titel: 'Was festgelegt wurde, steht dort unabänderlich.',
