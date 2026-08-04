@@ -1,0 +1,1861 @@
+{
+ "epoche": 4,
+ "protokoll": [
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "erg": "geklickt",
+   "text": "DIE HÄUSER wollen 534 · im Keller liegen",
+   "nach": "1970/1 Kasse 86000"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "erg": "geklickt",
+   "text": "SUDPLAN im Schaltraum, auf Formica",
+   "nach": "1970/1 Kasse 86000"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "erg": "geklickt",
+   "text": "DIE TANKS 210 von 600 hl · 210 reif",
+   "nach": "1970/1 Kasse 86000"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/1 Kasse 86000"
+  },
+  {
+   "halt": 1,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000
+  },
+  {
+   "zug": "fuhre:ziel:borg",
+   "erg": "geklickt",
+   "text": "So verabreden",
+   "nach": "1970/1 Kasse 86000"
+  },
+  {
+   "zug": "fuhre:tafel-auf:export",
+   "erg": "geklickt (erst gerollt)",
+   "text": "+",
+   "nach": "1970/1 Kasse 86000"
+  },
+  {
+   "zug": "fuhre:tafel-auf:pils",
+   "erg": "geklickt",
+   "text": "+",
+   "nach": "1970/1 Kasse 86000"
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "erg": "geklickt",
+   "text": "Hopfen im Kontrakt · +1200 −14.400 DM",
+   "nach": "1970/1 Kasse 71600"
+  },
+  {
+   "zug": "fuhre:listen:faehrhaus",
+   "erg": "geklickt (erst gerollt)",
+   "text": "Regalmeter −8.573 DM",
+   "nach": "1970/1 Kasse 63027"
+  },
+  {
+   "halt": 2,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 63027
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/1 Kasse 63027"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/1 Kasse 63027"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/1 Kasse 63027"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/2 Kasse 49533"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/2 Kasse 49533"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/2 Kasse 49533"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 180 hl · bringt 22.54",
+   "nach": "1970/3 Kasse 41729"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/4 Kasse 28235"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/4 Kasse 28235"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/4 Kasse 28235"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/4 Kasse 28235"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/5 Kasse 14741"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/5 Kasse 14741"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/5 Kasse 14741"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 150 hl · bringt 18.90",
+   "nach": "1970/6 Kasse 5342"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/7 Kasse 2848"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/7 Kasse 2848"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/7 Kasse 2848"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/7 Kasse 2848"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/8 Kasse 2194"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/8 Kasse 2194"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/8 Kasse 2194"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 240 hl · bringt 29.22",
+   "nach": "1970/9 Kasse 6899"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/10 Kasse 8585"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/10 Kasse 8585"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/10 Kasse 8585"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/10 Kasse 8585"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/11 Kasse 7931"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/11 Kasse 7931"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/11 Kasse 7931"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 210 hl · bringt 25.78",
+   "nach": "1970/12 Kasse 2560"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/13 Kasse 4546"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/13 Kasse 4546"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/13 Kasse 4546"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/13 Kasse 4546"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/14 Kasse 3892"
+  },
+  {
+   "halt": 3,
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 3892
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/14 Kasse 3892"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/14 Kasse 3892"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 270 hl · bringt 32.92",
+   "nach": "1970/15 Kasse 11489"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/16 Kasse 10835"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/16 Kasse 10835"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/16 Kasse 10835"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/16 Kasse 10835"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/17 Kasse 10181"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/17 Kasse 10181"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/17 Kasse 10181"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 180 hl · bringt 22.08",
+   "nach": "1970/18 Kasse 14957"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/19 Kasse 14303"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/19 Kasse 14303"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/19 Kasse 14303"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/19 Kasse 14303"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/20 Kasse 13649"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/20 Kasse 13649"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/20 Kasse 13649"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 54 hl · bringt 6.652 ",
+   "nach": "1970/21 Kasse 14090"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/22 Kasse 13436"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/22 Kasse 13436"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/22 Kasse 13436"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/22 Kasse 13436"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/23 Kasse 12782"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/23 Kasse 12782"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/23 Kasse 12782"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 150 hl · bringt 15.24",
+   "nach": "1970/24 Kasse 15329"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/25 Kasse 14675"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/25 Kasse 14675"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/25 Kasse 14675"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/25 Kasse 14675"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/26 Kasse 14021"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/26 Kasse 14021"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/26 Kasse 14021"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.950 ",
+   "nach": "1970/27 Kasse 13791"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/28 Kasse 13137"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/28 Kasse 13137"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1970/28 Kasse 13137"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1970/28 Kasse 13137"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1970/29 Kasse 12483"
+  },
+  {
+   "halt": 4,
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 12483
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1970/29 Kasse 12483"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1970/29 Kasse 12483"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.950 ",
+   "nach": "1970/30 Kasse 12249"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "JAHR SCHLIESSEN",
+   "nach": "1971/1 Kasse 50000"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/1 Kasse 50000"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1971/1 Kasse 50000"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1971/1 Kasse 50000"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/2 Kasse 49333"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/2 Kasse 49333"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1971/2 Kasse 49333"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.800 ",
+   "nach": "1971/3 Kasse 48464"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/4 Kasse 47797"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/4 Kasse 47797"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1971/4 Kasse 47797"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1971/4 Kasse 47797"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/5 Kasse 47130"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/5 Kasse 47130"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1971/5 Kasse 47130"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.800 ",
+   "nach": "1971/6 Kasse 46261"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/7 Kasse 45594"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/7 Kasse 45594"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1971/7 Kasse 45594"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1971/7 Kasse 45594"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/8 Kasse 44927"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/8 Kasse 44927"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1971/8 Kasse 44927"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.800 ",
+   "nach": "1971/9 Kasse 44058"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/10 Kasse 43391"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/10 Kasse 43391"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1971/10 Kasse 43391"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1971/10 Kasse 43391"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/11 Kasse 42724"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/11 Kasse 42724"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1971/11 Kasse 42724"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.800 ",
+   "nach": "1971/12 Kasse 41855"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/13 Kasse 41188"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/13 Kasse 41188"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1971/13 Kasse 41188"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1971/13 Kasse 41188"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/14 Kasse 40521"
+  },
+  {
+   "halt": 5,
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 40521
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/14 Kasse 40521"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1971/14 Kasse 40521"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.800 ",
+   "nach": "1971/15 Kasse 39652"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/16 Kasse 38985"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/16 Kasse 38985"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1971/16 Kasse 38985"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1971/16 Kasse 38985"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/17 Kasse 38318"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+   "nach": "1971/17 Kasse 38318"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1971/17 Kasse 38318"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 45 hl · bringt 1.800 ",
+   "nach": "1971/18 Kasse 37580"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1971/19 Kasse 36913"
+  },
+  {
+   "halt": 6,
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 36913
+  }
+ ],
+ "schirm": {
+  "jahr": 1971,
+  "woche": 19,
+  "ende": false,
+  "kasse": 36913,
+  "rohstoff": 30,
+  "ansehen": 40,
+  "faesser": 30,
+  "plaetze": 400,
+  "lage": [],
+  "lageN": 0,
+  "chronik": [
+   "Klosterbräu Obernberg wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; über den Ausschank in der Stadt",
+   "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt.",
+   "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Brückenwirt.",
+   "Schenke am Tor ist wieder frei. Adler-Bräu AG hat die Bindung verloren.",
+   "Die Nordstern-Gruppe bietet 55.513 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und ",
+   "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+  ],
+  "zuege": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "ADLER-BRÄU AG Dr. Werner Feist · gelehrt · hält 3 Häus"
+   },
+   {
+    "zug": "gegner:oeffnen:konzern",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "NORDSTERN-GRUPPE Ute Nordstern · träge · hält 3 Häuser"
+   },
+   {
+    "zug": "gegner:abwehren:ochse",
+    "preis": -35154,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "verhandelt · noch 7 Wo. zuvorkommen 35.154 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:ochse",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:torschenke",
+    "preis": -32400,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "TOR · JVB ablösen 32.400 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:torschenke",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:muehlwirt",
+    "preis": -27455,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "MUE · LIS ablösen 27.455 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:muehlwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:brueckenwirt",
+    "preis": -63963,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BRU · JVB ablösen 63.963 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:brueckenwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:faehrhaus",
+    "preis": -24300,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "FAE · JVB ablösen 24.300 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:faehrhaus",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:bahnhofswirt",
+    "preis": -97200,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BHF · JVB ablösen 97.200 DM"
+   },
+   {
+    "zug": "gegner:hinhalten:bahnhofswirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Zuschuss in Bier 4,5 hl statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Anzeige beim Bundeskartellamt kostet kein Geld · vier "
+   },
+   {
+    "zug": "gegner:angebot-ja",
+    "preis": 55513,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Ein Viertel abtreten +55.513 DM"
+   },
+   {
+    "zug": "gegner:angebot-nein",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Ausschlagen"
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Haus gegenüber"
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Anzeige beim Bundeskartellamt"
+   },
+   {
+    "zug": "gegner:zeige:77",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:76",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:75",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Frisches Fass anzapfen · +14 · 1,5 hl"
+   },
+   {
+    "zug": "sud:zettel-hefe-fass",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Ältestes Fass anzapfen · +6 · 1,5 hl"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Schönen mit Kieselsol nur Pilsner"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -26000,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Kieselgurfilter −26.000 DM lässt Exportbier zu"
+   },
+   {
+    "zug": "name:anschlag:bierdeckel",
+    "preis": -1800,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Bierdeckel drucken lassen −1.800 DM"
+   },
+   {
+    "zug": "stadt:marke:gegner-lindenhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "frei geworden"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BHF"
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "So ist es verabredet"
+   },
+   {
+    "zug": "fuhre:laden:lindenhof",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:lindenhof",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:ochse",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:ochse",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:torschenke",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:torschenke",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:pfarrhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:pfarrhof",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:muehlwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:muehlwirt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:brueckenwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:brueckenwirt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:faehrhaus",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:faehrhaus",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:listen:hirsch",
+    "preis": -10459,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Regalmeter −10.459 DM"
+   },
+   {
+    "zug": "fuhre:listen:markt",
+    "preis": -10459,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Regalmeter −10.459 DM"
+   },
+   {
+    "zug": "fuhre:laden:markt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 30 hl"
+   },
+   {
+    "zug": "fuhre:abladen:markt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:listen:bahnhofswirt",
+    "preis": -10459,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Regalmeter −10.459 DM"
+   },
+   {
+    "zug": "fuhre:probe:neustadt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Aktionsware · 30 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:tafel-ab:hell",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:hell",
+    "preis": -2400,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −2.400 DM"
+   },
+   {
+    "zug": "fuhre:tafel-ab:pils",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:pils",
+    "preis": -2400,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −2.400 DM"
+   },
+   {
+    "zug": "fuhre:tafel-ab:export",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:export",
+    "preis": -2400,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −2.400 DM"
+   },
+   {
+    "zug": "fuhre:tafel-ab:handel",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:handel",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+"
+   },
+   {
+    "zug": "fuhre:kauf:lastzug",
+    "preis": -128000,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Zweiter Lastzug · +1 Halt −128.000 DM"
+   },
+   {
+    "zug": "fuhre:kauf:sudwerk",
+    "preis": -56000,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Sudhaus erweitern · +1 Sud je Woche · auf 2 Kerben −56"
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -14400,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Hopfen im Kontrakt · +1200 −14.400 DM"
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 7200,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Kontrakt abtreten · −1200 +7.200 DM"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Nach Durst füllen"
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Wie vorige Woche"
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Lastzug leeren"
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "FUHRE ABSCHICKEN"
+   },
+   {
+    "zug": "sud:fuehrung:erfahrung",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nach Erfahrung des Braumeisters"
+   },
+   {
+    "zug": "sud:fuehrung:labor",
+    "preis": -42000,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 "
+   },
+   {
+    "zug": "sud:fuehrung:rechner",
+    "preis": -118000,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Prozessrechner am Sudwerk −118.000 DM"
+   },
+   {
+    "zug": "sud:behandlung:natur",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Naturtrüb, unfiltriert"
+   },
+   {
+    "zug": "sud:behandlung:schoenen",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Schönen mit Kieselsol"
+   },
+   {
+    "zug": "sud:behandlung:filter",
+    "preis": -26000,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Kieselgurfilter −26.000 DM"
+   },
+   {
+    "zug": "sud:behandlung:pasteur",
+    "preis": -74000,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Tunnelpasteur −74.000 DM"
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Hefe aus dem Gärtank ziehen · +8"
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Frisches Fass anzapfen · +14 · 1,5 hl"
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Ältestes Fass anzapfen · +6 · 1,5 hl"
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -24000,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Gärtank bestellen · +270 hl −24.000 DM"
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:entzug-loesen",
+    "preis": -26000,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Neu listen lassen −26.000 DM − 12 hl"
+   },
+   {
+    "zug": "name:liefern",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Unter dem Zeichen ausliefern"
+   },
+   {
+    "zug": "name:zurueckhalten",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen einziehen"
+   },
+   {
+    "zug": "name:jetzt:bierdeckel",
+    "preis": -1800,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Bierdeckel drucken lassen −1.800 DM"
+   },
+   {
+    "zug": "name:jetzt:kronkorken",
+    "preis": -5000,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Kronkorken bedrucken −5.000 DM"
+   },
+   {
+    "zug": "name:jetzt:anzeige",
+    "preis": -9000,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Anzeige im Anzeigenblatt −9.000 DM"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -19020,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Nachschrift · 2 Häuser −19.020 DM"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -755,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Versorgungszusage · jährlich −755 DM"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -1789,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Abfindung −1.789 DM"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Ohne Abfindung 0 DM"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "CHRONIK 53"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BUCH 400"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "WEITER"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "♪"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OHNE DICH GESCHEHEN 77 Züge"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DIE HÄUSER wollen 914 · im Keller liegen 45 hl"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "SUDPLAN im Schaltraum, auf Formica"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DIE TANKS 45 von 600 hl · 45 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DER RUF DES HAUSES GENOMMEN von Der Handel bis 1974"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DAS ERBE liegt auf"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "ORTSMARKEN 7 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BAUHOF"
+   },
+   {
+    "zug": "stadt:abbruch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "ABBRUCH"
+   },
+   {
+    "zug": "stadt:bau:waage",
+    "preis": -9570,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Fahrzeugwaage −9.570 DM"
+   },
+   {
+    "zug": "stadt:bau:maelzerei",
+    "preis": -14790,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Mälzereiturm −14.790 DM"
+   },
+   {
+    "zug": "stadt:bau:verwaltung",
+    "preis": -15660,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Verwaltungsbau −15.660 DM"
+   },
+   {
+    "zug": "stadt:bau:sudhaus_neu",
+    "preis": -24360,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Neues Sudhaus −24.360 DM"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Michaelitafel 1971 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Taf"
+   }
+  ]
+ },
+ "fehler": []
+}

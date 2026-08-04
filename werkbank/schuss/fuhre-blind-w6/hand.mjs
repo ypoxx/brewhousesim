@@ -103,8 +103,10 @@ const klick = async (zug) => {
       const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
       const t = (cx >= 0 && cy >= 0 && cx <= innerWidth && cy <= innerHeight)
         ? document.elementFromPoint(cx, cy) : null;
+      const kette = []; for (let n = t; n && kette.length < 5; n = n.parentElement)
+        kette.push((typeof n.className === 'string' && n.className) || n.id || n.tagName);
       return { x: cx, y: cy, trifft: !!(t && (t === el || el.contains(t))),
-        wer: t ? ((typeof t.className === 'string' ? t.className : '') || t.tagName) : null };
+        wer: kette.join(' < ') };
     }, zug);
     if (!l2.trifft) return { zug, erg: 'VERDECKT', wer: l2.wer, text: l.text };
     await seite.mouse.click(l2.x, l2.y);
