@@ -404,13 +404,82 @@ var PREIS_DATEN = {
            den Wasserzins fuer immer. */
         { k: 'brunnen', name: 'Der eigene Brunnen im Hof', anteil: 0.34, ab: 1355,
           was: 'Ein Schacht durch den Lehm bis auf den Kies, ausgemauert, mit Rad und Eimer.',
-          /* KURZ, und das ist am Bildschirm nachgesehen: `.pr-fest .pr-regel`
-             steht auf `overflow: hidden`. Der laengere Satz („…und hängt nicht
-             mehr an der Röhre, die der Rat sperren kann") brach in 1356 in der
-             letzten Zeile ab. Eine Regel, die man nicht zu Ende lesen kann,
-             ist keine. */
+          /* Der laengere Satz („…und hängt nicht mehr an der Röhre, die der Rat
+             sperren kann") brach in 1356 in der letzten Kartenzeile ab, weil
+             `.pr-fest` alles wegschnitt, was nicht in die Karte passte. Der
+             Schnitt ist seit Welle 5 (Auflage 3) weg — die Karte traegt ihren
+             Text jetzt selbst. Der kurze Satz bleibt trotzdem: er ist der
+             bessere. */
           regel: 'Der Wasserzins an die Stadt endet. Für immer. Das Haus schöpft aus eigenem Grund.',
-          wirkung: { pflichtWeg: 'wasserzins' } }
+          wirkung: { pflichtWeg: 'wasserzins' } },
+
+        /* ==================================================================
+           DIE LUECKE IN DER LEITER — Auflage 4 der Welle 5.
+
+           GEZAEHLT hat der blinde Kritiker: acht Amtszeiten in vierzehn
+           Braujahren, jede mit Anspruch auf genau eine unwiderrufliche Wahl
+           (`preis.js`, `festlegungOffen`) — und eine Hand, die Festlegungen
+           ausdruecklich WILL, bekommt in dieser Epoche ZWEI. Ab dem siebten
+           Braujahr traegt jede Karte `disabled` mit `data-soll-aus="1"`.
+           Nachgemessen am eingefrorenen Arbeitsbaum, 400 Wochen: an
+           ELF VON VIERZEHN Michaelitagen ist keine Festlegung bezahlbar.
+
+           SEINE URSACHE HAELT IN DIESER EPOCHE NICHT, und die Zahl steht
+           daneben. Er nennt die Teuerung: „die Taxe waechst mit der Zeit, die
+           Kasse nicht". In 1350 waechst die Taxe ueber vierzehn Jahre um das
+           1,67fache (470 -> 783) und die Michaeli-Lade um das 3,4fache
+           (112 -> 498); der Abstand zum `realrecht` FAELLT von 8,9 auf 3,0
+           Laden. Und die Gegenrechnung ist entscheidbar, ohne dass man sie
+           spielen muss: friert man die Taxe auf das Eroeffnungsjahr ein — die
+           schaerfste Fassung von „haeng sie an etwas, das nicht davonlaeuft" —,
+           kostet das `realrecht` 800 Pf gegen eine hoechste Lade von 498. Es
+           waere keine einzige Festlegung mehr erreichbar als heute. Dasselbe
+           gilt in allen vier Epochen (5.300 > 997 · 31.500 > 23.761 ·
+           110.000 > 86.000).
+
+           DIE URSACHE IST DIE LUECKE. Die Anteile springen von 0,18 und 0,34
+           unmittelbar auf 1,70 — dazwischen liegt nichts. Deshalb kommen hier
+           zwei Sprossen dazu, und die Steigung bleibt, wie sie ist: jede
+           Verbilligung der BESTEHENDEN Karten haette die Vorbild-Hand (sie
+           greift bei „hoechstens 45 im Hundert der Lade") zugreifen lassen
+           und damit die Wellenzahl bewegt.
+
+           BEIDE NEUEN SPROSSEN LIEGEN IM BAND ZWISCHEN 45 UND 100 IM HUNDERT
+           DER GEMESSENEN LADE: teuer genug, dass eine Faustregel sie ablehnt,
+           billig genug, dass ein Spieler sie treffen kann. Und beide kosten
+           nicht einmal, sondern fuer immer — was sie eintragen, traegt das
+           Haus an jedem Michaelistag mit.
+           ================================================================== */
+
+        /* 0,42 x Taxe = 213 Pf in 1353 und 325 Pf in 1362, gegen eine
+           Michaeli-Lade von 246 bis 498. Der Ertrag ist FEST, das Standgeld
+           waechst mit der Teuerung: die Bank traegt sich in den ersten Jahren
+           und wird danach zur Last. Genau das soll eine Festlegung sein — im
+           Jahr des Kaufs ein gutes Geschaeft und nicht zurueckzunehmen.
+           Der Gegenstand ist gewoehnlich: Baenke und Staende im Kaufhaus
+           waren erbliches Gut, wurden gekauft, vererbt und mit Standgeld
+           belegt. */
+        { k: 'marktbank', name: 'Die Marktbank auf ewig', anteil: 0.42, ab: 1352,
+          was: 'Eine Bank im Kaufhaus, erblich gekauft, mit Brief und Siegel des Rats.',
+          regel: 'Das Haus schenkt von heute an am Markt selbst aus. Der Rat nimmt dafür an jedem Michaelistag sein Standgeld — ohne Ende.',
+          wirkung: { ertrag: 26, ansehen: 3,
+            pflichtNeu: { k: 'standgeld', name: 'Standgeld für die Bank im Kaufhaus', art: 'fest', teil: 0.62,
+              sagt: 'Der Preis des Platzes am Markt, jährlich, ohne Ende.' } } },
+
+        /* 0,50 x Taxe = 310 Pf in 1357 und 391 Pf in 1363, gegen eine Lade von
+           246 bis 498. `ab: 1357` haelt sie aus den ersten vier Amtszeiten
+           heraus, in denen `vertrag`, `brunnen` und die Marktbank die Wahl
+           sind: eine Leiter wird von unten gestiegen.
+           Der Gegenstand ist der haeufigste unwiderrufliche Rechtsakt eines
+           Buergerhauses dieser Zeit. Eine Jahrtagsstiftung wurde einmal
+           gestiftet, fuer ewige Zeiten gelesen — und fuer ewige Zeiten
+           bezahlt. */
+        { k: 'jahrtag', name: 'Der Jahrtag in der Pfarrkirche', anteil: 0.50, ab: 1357,
+          was: 'Ein Altar, eine Kerze, ein Eintrag ins Seelbuch: für ewige Zeiten wird für dieses Haus gelesen.',
+          regel: 'Das Haus steht von heute an im Seelbuch und im Ansehen der Stadt. Dafür geht an jedem Michaelistag der Jahrtag an die Pfarre.',
+          wirkung: { ansehen: 14,
+            pflichtNeu: { k: 'jahrtagzins', name: 'Jahrtag und Seelgerät an die Pfarre', art: 'fest', teil: 0.50,
+              sagt: 'Für ewige Zeiten gestiftet — der Pfarrer liest, das Haus zahlt.' } } }
       ]
     },
 
