@@ -32,6 +32,21 @@
 # hintereinander auf — nicht viermal gleichzeitig und hofft auf die Sperre.
 # Das wuerde funktionieren, aber die Wartezeit stuende dann im falschen Prozess
 # und niemand saehe mehr, wer worauf wartet.
+#
+# WAS ES NICHT KANN, ausdruecklich — damit niemand sich darauf verlaesst:
+# Es begrenzt die WARTENDEN, nicht den HALTENDEN. Haengt eine Messung fest,
+# waehrend sie das Fenster haelt, warten alle anderen die vollen 90 Minuten und
+# scheitern dann mit 75. Einen Totmannknopf gibt es nicht.
+#
+# Wer beim Selbst-Check einen langen Halter sieht, prueft ihn, statt ihn zu
+# erschlagen — am 4. August sah ein Lauf mit 20 Minuten Laufzeit und 4 Sekunden
+# CPU nach einem Haenger aus und arbeitete in Wirklichkeit: die Last liegt in
+# den Chromium-Kindern, nicht im Elternprozess. Der richtige Blick:
+#
+#   ps -eo pid,ppid,etime,time,cmd --forest | grep -A3 "<pid des halters>"
+#   → lebt der Browser? waechst die CPU-Zeit des Renderers?
+#   ls -la --time-style=+%H:%M:%S <zielverzeichnis>
+#   → kommen weiter Ergebnisdateien an?
 # ------------------------------------------------------------------------
 set -uo pipefail
 cd "$(dirname "$0")/../../.."

@@ -385,8 +385,42 @@ bei zwölf Braujahren mit +0,762 reißt, stand schon vor dieser Nacharbeit da un
 ist ausdrücklich nicht meine Baustelle — aber es steht hier mit seiner
 Laufzeit, wie die neue Regel es verlangt.
 
-*(1600, 1884 und 1970 werden gerade durch die Sperre gemessen; die Zahlen
-kommen unten dazu, sobald der Satz durch ist.)*
+**1600, zwei Läufe durch die Sperre:**
+
+| Schnitt | Spearman | Spannweite | Stand vorher |
+|---|---|---|---|
+| 12 Braujahre | **+0,189** | 0,000 | +0,371 |
+| 13 Braujahre | **−0,066** | 0,000 | +0,264 |
+| 14 Braujahre | **−0,156** | 0,000 | +0,231 |
+
+**Hier hat sich die Zahl bewegt, und das sage ich, statt es zu verschweigen.**
+Sie bleibt in allen drei Schnitten weit innerhalb der Latte — und weiter von
+0,7 entfernt als vorher —, aber sie ist nicht mehr dieselbe.
+
+**Warum, nachgeprüft und nicht vermutet.** `linie.mjs` klickt ausschließlich
+`fuhre:*`, `preis:*`, `weiter` und Reiter der STADT; kein einziger `sud:`-Zug
+steht in dieser Hand (Zeile für Zeile nachgesehen). Der Nenner ist außerdem in
+**allen vierzehn** Braujahren beider Läufe ein `umkaempft`-Zug der Wirtschaft —
+die Meldung DES SUD gewinnt ihn nie, weder vorher noch nachher. Der SUD
+verändert die Kurve also nicht über sein Geld.
+
+Er verändert sie über seine **Fläche**. Das Sudbrett von 1600 trägt eine Karte
+mehr und ist dadurch höher; die Platzordnung der STADT entscheidet nach
+verdeckten Zügen (`stadt.js`, `imStreit`), und ein höheres Brett klappt andere
+Bretter zu als ein niedrigeres. Dazu kommt die Klemmenbehebung: der Kesselzettel
+steht jetzt in anderen Wochen im Bild als vorher. Beides zusammen ändert, welchen
+Reiter die Messhand klickt, um an ihren Knopf zu kommen — und ab da läuft die
+Partie anders. Die erste Zeile beider Läufe ist identisch (1600: 3,76× bei
+170 fl, „Zuvorkommen Mühlschenke"), die Reihen laufen ab 1601 auseinander.
+
+Zum Vergleich: in **1350**, wo das Brett keine Karte dazubekommen hat, ist die
+Zahl über **fünf** Läufe Ziffer für Ziffer dieselbe geblieben. Das ist die
+Gegenprobe zur Erklärung.
+
+Jahre unter 1×: **1 von 14** in beiden 1600-Läufen (1612, 0,67×) gegen 0 von 14
+vorher.
+
+*(1884 und 1970 werden noch durch die Sperre gemessen.)*
 
 ## Die vier Auflagen — Vorprobe unter Fremdlast
 
