@@ -1,12 +1,232 @@
 # DER PREIS — Urteil des blinden Kritikers, Welle 5
 
+# URTEIL: BESTEHT MIT AUFLAGE
+
 **Gemessener Commit: `6b59a18`** ("DER PREIS, Welle 5: Kassenboden gebaut,
 Zaehler-Verdacht widerlegt"), eingefroren auf **eigenem Hafen 8906** ueber
-`werkbank/schuss/preis-kritik-w5/hafen.sh 6b59a18 8906`.
-Alle Zahlen dieses Urteils stammen von diesem Stand, nicht aus dem Arbeitsbaum
-(an `kern/ton.js` und `spiel/ton/**` schrieb waehrenddessen ein anderer Builder).
-Der einzige spaetere Commit `e372d8b` beruehrt keine Spieldatei
-(`werkbank/LAUFENDER-AUFTRAG.md`, `werkbank/stand.json`).
+`werkbank/schuss/preis-kritik-w5/hafen.sh 6b59a18 8906`. Der einzige spaetere
+Commit `e372d8b` beruehrt keine Spieldatei. Zum Vergleich einmal derselbe
+Vor-Stand `3e6d08c` (Hafen 8900), ausdruecklich als solcher benannt.
+Sequenziell gemessen, ein Browser nach dem anderen; 420 Wochen = vierzehn
+Braujahre je Epoche, drei Laeufe je Epoche.
+
+## Der Spruch in fuenf Saetzen
+
+1. **Die beiden Fragen des Auftrags sind beantwortet, und beide zugunsten des
+   Baus.** Der Zaehler „Chronik des Hauses · N Festlegungen" ist richtig und
+   laeuft Jahr fuer Jahr mit; die gemeldete Null in allen vier Epochen war die
+   `Math.abs()`-Falle der MESSHAND, nicht die Anzeige (3.2, mit ABS=1
+   nachgestellt). Die Kasse beruehrt unter sorgfaeltiger Hand in **0 von 1.680
+   gemessenen Wochen** die Null und unterschreitet sie **nie**; der gebaute
+   Vorgriff greift und hebt auf exakt den Notpfennig (3.1).
+2. **Die zweite Messlatte haelt in allen vier Epochen und allen zwoelf
+   Laeufen**, Spannweite **0,000**. Sie haelt aber unter einer Zaehlweise, und
+   das gehoert dazugesagt — siehe den naechsten Absatz.
+3. **Der eingetragene Stand +0,591 / +0,231 / +0,393 / +0,108 ist der Stand VOR
+   diesem Bau.** Drei Zahlen stehen unveraendert; **E4 ist durch diesen Bau von
+   +0,108 auf +0,275 gewandert**, nachgewiesen an drei Jahren und zweimal
+   gemessen (2.3d). Kein Bruch — 0,275 liegt weit unter 0,700 —, aber eine
+   Bewegung, die in die Chronik gehoert.
+4. **Mein eigener schwerster Befund hat nicht gehalten, und ich sage das hier
+   und nicht im Kleingedruckten.** „An jedem zweiten Michaeli ist keine Karte
+   anzufassen" war meine Messhand: die Tafel liegt dann eingeklappt in der
+   Reiterleiste der STADT (`stadt.css:186`, `clip-path: inset(50%)`), und ich
+   habe sie dort gezaehlt, statt den Reiter zu druecken. Nachgezaehlt mit dem
+   richtigen Handgriff: **0 verdeckte Karten in 56 Michaelitagen**, an 48 davon
+   mindestens zwei Karten nebeneinander (3.3).
+5. **Was bleibt, sind fuenf Auflagen** — vier kleine an der Anzeige und dem
+   Text, eine grosse am Entwurf: acht Amtszeiten in vierzehn Jahren, und das
+   Haus kann **zwei** unwiderrufliche Festlegungen bezahlen.
+
+## Die Latten, Zeile fuer Zeile
+
+| Latte | 1350 | 1600 | 1884 | 1970 | Urteil |
+|---|---|---|---|---|---|
+| **(d)** rho, Vorbild-Hand, 14 Michaelitage | +0,591 | +0,231 | +0,393 | +0,275 | **haelt** (|rho| < 0,700) |
+| **(d)** Spannweite ueber drei Laeufe | 0,000 | 0,000 | 0,000 | 0,000 | **haelt** |
+| **(d)** Jahre unter 1× | 0/14 | 0/14 | 1/14 | 0/14 | **haelt** (max. 1 von 6) |
+| **(d)** Wochen ohne Kennzahl | 0/420 | 0/420 | 0/420 | 0/420 | **haelt** |
+| **(a)** Preisschilder je Woche, erreichbar+aktiv (Median) | 18 | 22 | 20 | 14 | **haelt** |
+| **(a)** Michaelitage mit ≥2 anfassbaren Karten | 12/14 | 12/14 | 10/14 | **14/14** | **haelt** |
+| **(a)** Michaelitage mit 0 anfassbaren Karten | 0/14 | 0/14 | 0/14 | 0/14 | **haelt** |
+| **(b)** Festlegungen, sorgfaeltige Hand | 1 | 1 | 1 | 2 | **haelt knapp** |
+| **(b)** Festlegungen, Hand die sie WILL | 2 | 2 | 2 | 4 | siehe Auflage 4 |
+| **(c)** Gegnerzuege in 420 Wochen | 285 | 813 | 324 | 604 | **haelt**, mit Loch in E1 |
+| Kasse = 0 / < 0, sorgfaeltige Hand | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | **haelt** |
+| Vier Epochen laden, `lage.length` 0, Konsolenfehler | 0 | 0 | 0 | 0 | **haelt** |
+
+## DIE LATTE HAELT — UND DIE ZAEHLWEISE ENTSCHEIDET MIT
+
+Die Aufsicht hat ausdruecklich danach gefragt, also steht es hier vorn und
+nicht in einer Fussnote.
+
+`rho` ist eine Rangkorrelation ueber die Michaelijahre. **Ihr Wert haengt
+sichtbar daran, wie viele Michaelitage man zaehlt.** Dieselbe Partie, derselbe
+Commit `6b59a18`, Epoche 1350:
+
+| Michaelitage | 12 | 13 | **14** | 15 |
+|---|---|---|---|---|
+| **Spearman E1350** | **+0,762** | **+0,692** | **+0,591** | +0,421 |
+| Spearman E1884 | −0,119 | +0,055 | +0,108 | +0,275 |
+
+* Bei **vierzehn** Michaelitagen — das sind die 400 Wochen des Vorbilds und die
+  Zaehlweise, aus der der eingetragene Stand stammt — **haelt die Latte in allen
+  vier Epochen**, hoechster Betrag +0,591.
+* Bei **dreizehn** liegt E1 auf +0,692 und damit **acht Tausendstel unter der
+  Latte**.
+* Bei **zwoelf** liegt E1 auf **+0,762 und die Latte reisst**.
+
+**Mein Urteil lautet also praezise: die Latte haelt unter der Zaehlweise
+„vierzehn Michaelitage / 400 Wochen", und nur unter ihr mit Reserve.** Das ist
+keine Anklage gegen dieses Stueck — die Kurve in E1 steigt in den ersten
+Braujahren stark und faellt am Ende wieder, und wo man den Schnitt setzt,
+entscheidet ueber das Vorzeichen des Trends. Es ist eine Feststellung ueber die
+LATTE: **eine Messzahl, die von der Laufzeit abhaengt, muss die Laufzeit im
+Namen tragen.** Wer „rho = +0,591" schreibt, ohne „ueber 14 Michaelitage"
+danebenzuschreiben, hat keine Zahl aufgeschrieben, sondern eine Wahl.
+
+> **Auflage an die Aufsicht, nicht an dieses Stueck:** die Wellenzahl der
+> zweiten Messlatte bekommt die Laufzeit in den Namen, und die Laufzeit wird
+> festgeschrieben (Vorschlag: **420 Wochen = vierzehn volle Braujahre, gezaehlt
+> ueber die darin liegenden fuenfzehn Michaelitage**, weil das die Laufzeit ist,
+> die der Auftrag „vierzehn Jahre je Epoche" verlangt). Solange sie nicht
+> festgeschrieben ist, ist die Latte nicht nachstellbar.
+
+## DIE AUFLAGEN, im Wortlaut
+
+**Auflage 1 — Der zweite Zaehler zaehlt etwas anderes, als daneben steht.**
+`preis.js:2393-2394` setzt zusammen:
+`'Chronik des Hauses · ' + festlegungenGesamt() + ' Festlegungen · ' + Object.keys(Z.fertig).length + ' von dieser Tafel gebaut'`.
+`Z.fertig` sind FERTIGE ANGEBOTE (`preis.js:1177`), keine Festlegungen — die
+Zahl steht aber in einem Satz, der von Festlegungen handelt. Gemessen: die Hand,
+die Festlegungen will, nimmt in 1350, 1600 und 1884 je **zwei**, beide von
+dieser Tafel, und der Griff sagt
+`Chronik des Hauses · 2 Festlegungen · 0 von dieser Tafel gebaut`.
+**Zu tun:** entweder `Object.keys(Z.festGenommen).length` zaehlen (dann stimmt
+der Satz) oder die zweite Zahl aus dem Festlegungssatz herausnehmen und eigens
+beschriften. Eine Zahl, die im Satz ueber A steht und B zaehlt, ist keine
+Auskunft.
+
+**Auflage 2 — Die Zahl fehlt genau dann, wenn sie gebraucht wird.**
+Es gibt zwei Knoepfe „Chronik des Hauses": `preis.js:2393` auf dem Griff, MIT
+den Zahlen, gezeichnet **nur wenn die Tafel ZU ist** (`zeichneGriff` kehrt bei
+`sichtbar` in Zeile 2329 vorher zurueck), und `preis.js:2220` oben rechts IN der
+offenen Tafel, **ohne jede Zahl** (nachgewiesen im Bild
+`werkbank/schuss/preis-kritik-w5/bild/e2-1920x1080.png`). Am Michaelitag, im
+Augenblick der unwiderruflichen Wahl, steht also nirgends, wie viele
+Festlegungen das Haus schon hat.
+**Zu tun:** die Zahl auch auf den Knopf in der offenen Tafel setzen.
+
+**Auflage 3 — Der Satz, der den Preis der unwiderruflichen Wahl nennt, wird
+abgeschnitten.** `preis.css:224` gibt `.pr-fest` ein `overflow: hidden`; die
+Kinder `pr-fest-name`, `pr-was-text`, `pr-folge-text`, `pr-sperrt`,
+`pr-satz-klein` und `pr-hinweis` sind 2 bis 9 px hoeher als ihr Kasten
+(`ueberlauf.json`, 47 Sichtungen ueber zwoelf Bildschirme). Am Bildschirm
+sichtbar in `bild/e2-1920x1080.png`: auf *Der Zunftbrief mit dem Ratssitz* endet
+die Regel mitten in „Der Landesherr nimmt dafür jährlich **seinen Teil**", auf
+*Der Bierbann über vier Dörfer* bricht „Dafür neu und für immer: Bannzins an den
+**Landesherrn**" ab. Das ist die Zeile, die sagt, was die Entscheidung fuer den
+Rest der Partie kostet.
+**Zu tun:** die Karte muss ihren eigenen Text tragen — Hoehe mitwachsen lassen
+oder die Spalte scrollbar machen. Ein Preisschild, dessen Preis abgeschnitten
+ist, ist keins. (Dazu, kleiner: `preis.css:139` kuerzt `pr-was` mit Ellipse; in
+1600 sind dadurch **vier von fuenf** Namen der Rechnung nicht mehr lesbar.)
+
+**Auflage 4 — Acht Amtszeiten, zwei bezahlbare Festlegungen.**
+`preis.js:1479` gibt jeder Amtszeit genau eine unwiderrufliche Wahl; ueber 420
+Wochen laeuft `zeit.amtszeit.nr` in allen vier Epochen von 1 auf 8. Eine Hand,
+die Festlegungen ausdruecklich WILL und dafuer alle Angebote stehen laesst
+(`festhand.mjs`), bekommt **2 · 2 · 2 · 4**. Danach traegt in E1 ab 1357 (7
+Jahre), in E2 ab 1605 (9 Jahre) und in E3 ab 1887 (**11 Jahre**) **jede**
+Festlegungskarte `disabled` mit `data-soll-aus="1"`. Ursache ist gemessen und
+benannt: `festBasis()` (`preis.js:1494`) haengt die Taxe an
+`grund × teuerungJahr^Jahre` — sie waechst mit der Zeit, die Kasse waechst nicht
+mit. In 1350 kostet der `freikauf` 1364 rund 1.900 Pf gegen eine Kasse, die in
+vierzehn Jahren nie ueber 663 kommt.
+**Zu tun:** entweder mehr Festlegungen je Epoche in der bezahlbaren Spanne, oder
+die Taxe an etwas haengen, das mit dem Haus mitwaechst, oder die Regel „eine je
+Amtszeit" fallen lassen. So wie es steht, hat DIE FESTLEGUNG in elf von
+vierzehn Braujahren nichts anzubieten — und das ist die Sache, wegen der dieses
+Stueck DER PREIS heisst. **1970 ist die Ausnahme und zeigt, dass es geht:** dort
+raeumt dieselbe Hand den ganzen Katalog ab (4 von 4) — moeglich nur, weil sie
+mit `konzern` (+65.000 DM) anfaengt.
+
+**Auflage 5 — Der Kassenboden greift, aber nicht dort, wo er begruendet wurde;
+und er kostet die Kennzahl etwas. Beides gehoert in die Chronik.**
+Unter sorgfaeltiger Hand ist `vorgriff` in **60 von 60** gemessenen
+Michaelitagen **0** — die Behauptung, die den Bau traegt, ist mit guter Hand
+nicht nachstellbar. Unter der faulen Hand greift er und tut genau, was auf ihm
+steht (E1 1351/52/53: 49 / 46 / 35 Pf, Kasse danach genau 48; E2 1602/03: 71 /
+81 fl auf 280; E4 1973: 20.197 DM auf 50.000). Und mit der Vorbild-Hand
+verschiebt er in E4 die Kennzahl dreier Jahre nach oben (1978: 1,955 → 2,371;
+1979: 3,289 → 3,688; 1980: 2,265 → 2,462) und damit rho von +0,108 auf +0,275;
+der kleinste Wert der Reihe steigt von 1,955× auf 2,124×.
+**Zu tun:** nichts zurueckbauen. Aber der Satz „das Haus steht in Woche 16 auf
+null und bleibt dort bis Woche 30" (`preis.js:1057 ff.`) muss die Hand nennen,
+mit der er gemessen wurde, und die Chronik muss festhalten, dass dieser Bau die
+Wellenzahl von E4 um +0,167 bewegt hat.
+
+## BEFUNDE FUER ANDERE — nicht Auflagen an DER PREIS
+
+* **Aufsicht — `messstand.sh` ist in diesem Container blind kaputt.** `ss` fehlt;
+  unter `set -euo pipefail` reisst Zeile 32 ab, das Skript endet mit Exit 1 ohne
+  Ausgabe, und auf Hafen 8900 laeuft weiter, was vorher dort lief — am 3.8. der
+  Vor-Stand `3e6d08c`. Meine erste Messreihe lief eine Stunde gegen den falschen
+  Commit; aufgefallen ist es nur, weil ein Feld fehlte, das dieser Bau neu
+  schreibt. **Ein Messstand muss die AUSGELIEFERTE Datei gegen den Commit
+  pruefen, nicht `HTTP 200`.** `werkbank/schuss/preis-kritik-w5/hafen.sh` tut das
+  in elf Zeilen (drei Dateien, `sha1sum` gegen `git show`).
+* **DER SUD — ZUSTAENDIGKEIT 25.** In 62 Wochen je Epoche: **309 / 379 / 367 /
+  407** Sichtungen von `disabled` MIT `data-soll-aus="0"` — nach ZUSTAENDIGKEIT
+  25 ein Fehler, kein Zustand. **Alle** aus `sud:*` (`sud:wuerze:sack`,
+  `sud:wasser:brunnen`, `sud:anstich-jung/alt`, `sud:gaerraum`, …). Aus
+  `preis:*` kein einziger.
+* **DER GEGNER und DER KERN — Knoepfe ganz ohne `data-soll-aus`:** **822 / 848 /
+  838 / 914** Sichtungen. Alle aus `gegner:*` sowie `kern:chronik` und
+  `kern:protokoll` — letztere zwei, weil `kern/kopf.js:65,68` sie mit
+  `tafelKnopf()` selbst baut statt mit `B.knopf()`. Aus `preis:*` kein einziger.
+* **DER GEGNER — der Gegner verstummt in 1350 nach 1358.** `1350:31 … 1357:23,
+  1358:1, danach sieben Braujahre mit 0`. Letzter Eintrag: „Brauhaus zum Adler
+  gibt auf. Der Hof gegenüber steht leer." Die halbe Partie ohne einen Zug des
+  Gegners. In E2/E3/E4 laeuft er durch.
+* **DIE FUHRE — die Eichung aus ZUSTAENDIGKEIT 17 ist zweimal gerissen**
+  (§17 weist die Umsetzung ausdruecklich der FUHRE zu): 1350 im Jahr **1353**
+  (Kasse 246 gegen zweitbilligstes Angebot 280) und 1600 im Jahr **1603**
+  (Kasse 597 gegen 840). E3 und E4 erfuellen alle fuenf Jahre.
+* **KERN und DIE STADT — die Kennzahl selbst ist bei 1280×800 halb verdeckt.**
+  Im Bild `bild/e1-1280x800.png` liest man unten rechts nur
+  `g: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)`; „nächster
+  Zu" liegt hinter dem Reiter `STADT Z…`. Bei 1920×1080 steht die Zeile ganz da.
+  `kern/kopf.js:127` setzt sie auf `left:93%`.
+* **KERN — die Sperr-Ebene aus ZUSTAENDIGKEIT 2 fehlt weiterhin, und sie ist
+  messbar.** DAS ERBE (`div.erb-buch.blatt`, `index.html:108`) und DIE FUHRE
+  (`fuhre:uebergabe:nein` / `fuhre:ausgang:nein`, `fuhre.js:3261`, `:3314`) legen
+  ihre Blaetter ueber die Michaelitafel; wer sie nicht wegklickt, kommt nicht an
+  die Tafel. Alle Faecher haengen auf `#ebene-blatt` und stapeln sich in
+  Ladereihenfolge.
+* **KERN — die einzige Stelle, an der die Kasse rechnerisch negativ werden
+  kann,** liegt in `kern/welt.js:412-413`: `rechneJahrAb()` zieht den Unterhalt
+  **an `zahle()` vorbei und ohne Deckungspruefung** ab. In 4×14 Braujahren ist es
+  dazu nie gekommen (kleinster Zwischenstand 39 Pf), aber die Pruefung fehlt.
+
+## WAS ICH NICHT MEHR PRUEFEN KONNTE
+
+Ehrlich benannt, weil der Container Server und Haefen mitgerissen hat:
+
+1. ~~Die berichtigte Michaeli-Zaehlung fuer 1970 fehlt.~~ **NACHGETRAGEN.**
+   Der Hafen wurde neu eingefroren (`hafen.sh 6b59a18 8906`, drei Dateien
+   gegengeprueft) und `tafel.mjs 4` nachgefahren: **0 verdeckte Karten, 0 Tage
+   ohne anfassbare Karte, an allen 14 Michaelitagen mindestens zwei** (5·5·5·3·
+   4·4·6·7·6·3·2·4·5·5). Damit ist (a) in allen vier Epochen gemessen.
+2. **`decke3.mjs` (Stilkette) lief nur fuer 1350.** Die Ursache
+   `stadt-zugeklappt` ist dort Zeile fuer Zeile belegt; fuer 1600/1884/1970
+   stuetzt sich die Aussage auf `decke2.mjs` (gleiches Muster, gleiche Klassen)
+   und `frei.mjs`/`tafel.mjs` (Verdeckung verschwindet mit dem richtigen
+   Handgriff).
+3. **Die aufgeraeumte Hand `frei.mjs` lief nur fuer 1350 und 1600.**
+4. **Der Vor-Stand-Vergleich `3e6d08c`** liegt nur fuer E3 und E4 vor; fuer E1
+   und E2 stuetzt sich „unveraendert" darauf, dass die Vorbild-Hand auf
+   `6b59a18` genau die eingetragenen Zahlen liefert.
 
 > ## ⚠ ZUERST EIN BEFUND AM MESSSTAND DER AUFSICHT, weil er jede Zahl dieser Welle betrifft
 >
@@ -596,15 +816,15 @@ Epochen, vierzehn Michaelitage:
 
 | Karten erreichbar **und** aktiv | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
-| Michaelitag fuer Michaelitag | 3·2·4·2·3·3·3·3·2·2·1·2·2·1 | 4·2·2·1·3·4·4·3·2·2·2·2·1·2 | 6·4·3·3·1·2·1·1·2·1·2·2·3·5 | *(s. u.)* |
-| **verdeckte Karten insgesamt** | **0** | **0** | **0** | *(s. u.)* |
-| Tage mit **0** anfassbaren Karten | **0/14** | **0/14** | **0/14** | *(s. u.)* |
-| Tage mit **≥2 — „nebeneinander"** | **12/14** | **12/14** | **10/14** | *(s. u.)* |
+| Michaelitag fuer Michaelitag | 3·2·4·2·3·3·3·3·2·2·1·2·2·1 | 4·2·2·1·3·4·4·3·2·2·2·2·1·2 | 6·4·3·3·1·2·1·1·2·1·2·2·3·5 | 5·5·5·3·4·4·6·7·6·3·2·4·5·5 |
+| **verdeckte Karten insgesamt** | **0** | **0** | **0** | **0** |
+| Tage mit **0** anfassbaren Karten | **0/14** | **0/14** | **0/14** | **0/14** |
+| Tage mit **≥2 — „nebeneinander"** | **12/14** | **12/14** | **10/14** | **14/14** |
 
-**Kein einziger verdeckter Knopf in 42 nachgezaehlten Michaelitagen** (E1–E3 mit
-`tafel.mjs`, dazu E1/E2 unabhaengig mit `frei.mjs`). Die Zahl der Karten, die
-nebeneinander liegen, erreichbar und aktiv, ist **1 bis 6** — nie 0, und an
-**34 von 42** Tagen mindestens zwei.
+**Kein einziger verdeckter Knopf in 56 nachgezaehlten Michaelitagen** (alle vier
+Epochen mit `tafel.mjs`, dazu E1/E2 unabhaengig mit `frei.mjs`). Die Zahl der
+Karten, die nebeneinander liegen, erreichbar und aktiv, ist **1 bis 7** — nie 0,
+und an **48 von 56** Tagen mindestens zwei. In 1970 an **allen vierzehn**.
 
 **Damit ist Spalte (a) bestanden und mein eigener Befund kassiert.** Er steht
 oben trotzdem, weil er die eine Sache zeigt, vor der die Aufsicht gewarnt hat:
