@@ -1,0 +1,126 @@
+{
+ "breite": 1920,
+ "hoehe": 1080,
+ "epochen": {
+  "1": {
+   "adressen": {
+    "alle": 10,
+    "sicht": 9,
+    "drunter": [
+     "OBE Klosterschenke Obernberg 9 km "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "kaeufe": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 0,
+    "sicht": 0,
+    "drunter": []
+   }
+  },
+  "2": {
+   "adressen": {
+    "alle": 10,
+    "sicht": 9,
+    "drunter": [
+     "OBE Klosterschenke Obernberg 9 km "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 2,
+    "drunter": [
+     "M Märzenbier 40 fl je Fass 1 Sude "
+    ]
+   },
+   "kaeufe": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 0,
+    "sicht": 0,
+    "drunter": []
+   }
+  },
+  "3": {
+   "adressen": {
+    "alle": 10,
+    "sicht": 9,
+    "drunter": [
+     "BHF Bahnhofsgaststätte 5 km unser "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 2,
+    "drunter": [
+     "E Exportbier 72 M je hl → 27 hl 5 "
+    ]
+   },
+   "kaeufe": {
+    "alle": 5,
+    "sicht": 5,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   }
+  },
+  "4": {
+   "adressen": {
+    "alle": 11,
+    "sicht": 10,
+    "drunter": [
+     "NEU Gaststätte Neustadt 2 km frei "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "kaeufe": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 0,
+    "sicht": 0,
+    "drunter": []
+   }
+  }
+ }
+}
