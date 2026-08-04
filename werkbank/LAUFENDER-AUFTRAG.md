@@ -57,6 +57,58 @@ wer sie nicht nachschreibt, nimmt dem Nächsten die Grundlage.
 
 ---
 
+## DIE MESSLATTE HAT SEIT DEM 4. AUGUST VIER PUNKTE — und Latte 2 ist verschärft
+
+*Vom Auftraggeber freigegeben, nachdem er gefragt hatte, ob jemand auf
+Lesbarkeit, Usability und technische Effizienz achtet. Die ehrliche Antwort war
+**nein**. Der Wortlaut steht in [`../gauntlet/MESSLATTE.md`](../gauntlet/MESSLATTE.md).*
+
+**LATTE 4 — LESBARKEIT.** Gemessen bei **1366×768**, nicht auf der
+Entwurfsleinwand: keine Schrift unter 12 px, kein aktiver Knopf unter 24×24 px,
+kein abgeschnittener Text.
+
+Der Befund dahinter ist **eine Zeile**, `stil/grund.css:12`:
+`--s: min(calc(100vw / 2752), calc(100vh / 1536))`. Jede Schriftgröße steht als
+`calc(var(--s) * N)` — das Spiel ist auf 2752×1536 entworfen und skaliert alles
+proportional herunter. **Kein einziges CSS schreibt eine Größe unter 12 px;** sie
+entstehen erst beim Zeichnen.
+
+| Fenster | kleinste Schrift | Knöpfe unter 24 px |
+|---|---|---|
+| 2752×1536 *(Entwurf)* | 10,0 px | 1 von 87 |
+| 1920×1080 | 7,0 px | 40 von 87 |
+| **1366×768** | **5,0 px** | **64** von 87 |
+
+**SPERRLISTE, neu: DAS GEWICHT.** 23 MB in 85 Anfragen je Aufruf, Obergrenze
+**8 MB**. Veto, keine Latte — sonst würde es nach unten optimiert. Das **Tempo**
+ist ausdrücklich *nicht* betroffen: 16,7 ms Bildzeit im Median in allen vier
+Epochen, p95 unter 22 ms.
+
+**LATTE 2 VERSCHÄRFT — die Laufzeit gehört in die Zahl.** ρ hängt daran, wie
+viele Braujahre gezählt werden:
+
+| Epoche | 12 Jahre | 13 | 14 |
+|---|---|---|---|
+| **1350** | **+0,762** | **+0,692** | +0,591 |
+| 1884 | +0,168 | +0,346 | +0,393 |
+
+1884 läuft in die *andere* Richtung — es gibt keine freundlichste Laufzeit.
+**Ab jetzt wird über alle drei Schnitte gemessen, und die Latte reißt, sobald
+einer über 0,7 liegt.**
+
+> **Folge, die ausdrücklich gegen die eigene Erfolgsmeldung geht: das am
+> 3. August gemeldete „Wellenziel erreicht" gilt nach dieser Regel NICHT mehr.**
+> 1350 steht bei zwölf Jahren auf +0,762. Die Verschärfung ist beabsichtigt —
+> eine Zahl, die von der Wahl der Laufzeit lebt, ist keine bestandene Latte.
+
+**Zwei neue Messgeräte der Aufsicht**, beide im Repo:
+`werkbank/schuss/aufsicht/lesbarkeit.mjs` (statisch, ohne Klicks und ohne
+Zeitmessung, damit es neben einem laufenden Kritiker ehrlich bleibt) und
+`tempo.mjs` (**nur auf leerer Maschine** — ein fremder Browser verschiebt jede
+Zahl).
+
+---
+
 ## Die Grundaufgabe, unverändert
 
 `gauntlet/PROMPT.md` ist der Text, der den Lauf gestartet hat. Kern:
