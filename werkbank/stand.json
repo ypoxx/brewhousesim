@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T16:22:17+00:00",
- "phase": "Welle 6 — das Messfenster greift, nachgeprüft im laufenden Betrieb. DIE FUHRE hält die Sperre und misst, DER SUD wartet seit 1:21 min ordnungsgemäß am flock statt danebenzumessen. Load average von 3,8 auf 1,64 gefallen — das ist derselbe Unterschied, der zweimal falsche rho-Zahlen erzeugt hat. Beide Builder um 16:16 UTC lebendig, beide schreiben ihre Berichte laufend fort. Nichts liegt uncommittet, das Abnahmetor ist viermal offen.",
+ "stand": "2026-08-04T17:22:41+00:00",
+ "phase": "Welle 6 — die Sperre trägt, und sie kostet. DIE FUHRE und DER SUD messen jetzt nacheinander statt nebeneinander: ein Lauf hält das Fenster, zwei warten rund fünfzehn Minuten in der Schlange. Load average 1,66 statt 3,8. Das ist der richtige Preis — eine falsche rho-Zahl ist teurer als eine langsame. Beim Nachsehen sah ein Halter mit 20 Minuten Laufzeit und 4 Sekunden CPU nach einem Hänger aus und arbeitete in Wirklichkeit: die Last liegt in den Chromium-Kindern, nicht im Elternprozess. Die Lücke der Sperre steht jetzt in ihrem eigenen Kopf — sie begrenzt die Wartenden, nicht den Haltenden, einen Totmannknopf gibt es nicht. Beide Builder um 17:21 UTC lebendig.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T13:29:21+00:00",
-   "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 2 · läuft — Runde 2 gebaut und nachgemessen. Der Hof hat jetzt DREIZEHN Standplaetze in der Hofraute (W 17|64 · N 33|56 · O 48|66 · S 32|79), in drei Tiefenbaendern gestaffelt und in x versetzt; jeder Platz hat je Epoche genau EINEN Mieter, und jeder Platz wird ueber die Jahrhunderte neu besetzt (Malzboden 1350 → Darre 1600 → Maelzereiturm 1884/1970). Gemessen wird nicht behauptet: je Aufbau ein Schuss mit allem und einer ohne genau diesen einen, die Differenz ist die Flaeche, die er im fertigen Hof wirklich beitraegt. Vorher/nachher in 2752x1536: 1350 vier Bauten ueber 35.000 px, jetzt sechs; 1600 drei, jetzt sieben; 1884 sieben, jetzt acht; 1970 neun, jetzt neun — ueber 22.000 px sind es 8/11/11/12 statt 4/3/6/8. Der Hof deckt jetzt 9,1 / 10,5 / 12,1 / 12,2 Prozent des Bildes statt 5,8 / 6,1 / 8,6 / 9,0. bau=keine gegen bau=alle aendert eine zusammenhaengende Flaeche von 11,1 / 13,0 / 13,9 / 14,7 Prozent mitten im Bild. Kaufen, Bauvorschau und Epochenwechsel geprueft, keine Seitenfehler."
-  },
   {
    "zeit": "2026-08-01T13:33:04+00:00",
    "text": "AUFSICHT: drei weitere Entscheidungen in spiel/ZUSTAENDIGKEIT.md — (4) ABGABENDECKEL 18 Prozent des Umsatzes fuer ALLE Stuecke zusammen, aufgeteilt Fuhre 8 / Preis 5 / Gegner 3 / Stadt 2; niemand erhoeht still. Dazu die Regel: es darf keinen Zustand geben, aus dem heraus kein Zug mehr etwas veraendert. (5) DER PREIS oeffnet und schliesst sein Michaeli-Blatt ueber den Griff, statt es dauerhaft offen stehen zu lassen — es macht DIE FUHRE derzeit unbedienbar und damit unpruefbar. (6) Die drei Kernbitten (getrennter Gaerkeller, API fuer haus.rohstoff, Auswahl bei nimmHeraus) sind angenommen und gehen in die Zwischenwelle."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-04T16:22:17+00:00",
    "text": "Welle 6 — das Messfenster greift, nachgeprüft im laufenden Betrieb. DIE FUHRE hält die Sperre und misst, DER SUD wartet seit 1:21 min ordnungsgemäß am flock statt danebenzumessen. Load average von 3,8 auf 1,64 gefallen — das ist derselbe Unterschied, der zweimal falsche rho-Zahlen erzeugt hat. Beide Builder um 16:16 UTC lebendig, beide schreiben ihre Berichte laufend fort. Nichts liegt uncommittet, das Abnahmetor ist viermal offen."
+  },
+  {
+   "zeit": "2026-08-04T17:22:41+00:00",
+   "text": "Welle 6 — die Sperre trägt, und sie kostet. DIE FUHRE und DER SUD messen jetzt nacheinander statt nebeneinander: ein Lauf hält das Fenster, zwei warten rund fünfzehn Minuten in der Schlange. Load average 1,66 statt 3,8. Das ist der richtige Preis — eine falsche rho-Zahl ist teurer als eine langsame. Beim Nachsehen sah ein Halter mit 20 Minuten Laufzeit und 4 Sekunden CPU nach einem Hänger aus und arbeitete in Wirklichkeit: die Last liegt in den Chromium-Kindern, nicht im Elternprozess. Die Lücke der Sperre steht jetzt in ihrem eigenen Kopf — sie begrenzt die Wartenden, nicht den Haltenden, einen Totmannknopf gibt es nicht. Beide Builder um 17:21 UTC lebendig."
   }
  ]
 }
