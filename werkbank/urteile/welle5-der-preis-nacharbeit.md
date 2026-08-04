@@ -198,6 +198,11 @@ drei Aufloesungen, Michaelitafel aufgeschlagen, Hafen 8899):
 | **alle `pr-*` zusammen** | **119** | **0** |
 | alle Stuecke zusammen | 416 | 297 |
 
+*(Kleine Berichtigung an seiner Zahl, weil ich seine Datei nachgezaehlt habe:
+das Urteil sagt „an 415 Stellen"; `ueberlauf.json.gz` enthaelt **416**
+Sichtungen. An der Sache aendert das nichts — die 119 bei DER PREIS stimmen
+Ziffer fuer Ziffer.)*
+
 `BRAUHAUS.lage` = 0, Seitenfehler 0, Koerper nie breiter als das Fenster, auf
 allen zwoelf Seiten. **Die 297, die bleiben, gehoeren DEM SUD
 (`div.sud-kartensatz`), DEM GEGNER, DEM NAMEN und den Reitern der STADT
@@ -233,3 +238,159 @@ Kurfürsten", „Pachtzins ans Kloster", „Zunftumlage und Meisterbüchse",
 
 Das steht im Quelltext und nicht nur in einem Bericht, weil der Quelltext das
 einzige ist, was mit dem Bau mitwandert.
+
+---
+
+## 6. AUFLAGE 4 — WAS GEBAUT WURDE
+
+Nicht die Steigung, sondern die Leiter (Begruendung und Gegenrechnung in
+Abschnitt 1). **`festBasis()` ist unangetastet.** Dazugekommen sind sechs
+Sprossen, in `stuecke/preis-daten.js`, jede mit `ab:` gestaffelt, damit die
+Wahl ueber die acht Amtszeiten verteilt wiederkommt statt sich in den ersten
+zwei Jahren zu erschoepfen:
+
+| Epoche | neu | Anteil | ab | was sie kostet, fuer immer |
+|---|---|---|---|---|
+| 1350 | Die Marktbank auf ewig | 0,42 | 1352 | Standgeld an den Rat (`pflichtNeu`, fest) — **der Ertrag ist fest, das Standgeld waechst mit der Teuerung** |
+| 1350 | Der Jahrtag in der Pfarrkirche | 0,50 | 1357 | Jahrtag und Seelgerät an die Pfarre (`pflichtNeu`, fest) · +14 Ansehen |
+| 1600 | Die ewige Gült auf die Stadt | 0,15 | 1601 | nichts — aber das Geld ist aus dem Haus und kommt nie zurück (`ertrag` 150 fl) |
+| 1600 | **Der Gültbrief auf das Anwesen** | 0,0 | 1603 | **Zufluss** (`einmal: 5`) gegen eine ewige Gült, nicht ablösbar |
+| 1884 | Die Betriebskrankenkasse | 0,17 | 1885 | Beiträge (`pflichtNeu`, fest) · +14 Ansehen |
+| 1970 | Der Eintrag in die Denkmalliste | 0,085 | 1973 | Unterhalt nach Auflage (`pflichtNeu`, fest) · Wachstumsdeckel |
+
+**Der Gültbrief ist der Kern des Baus.** Der Kritiker hat selbst gezeigt, warum
+1970 als einzige Epoche funktioniert: „moeglich nur, weil sie mit `konzern`
+(+65.000 DM) anfaengt." 1884 hat dieselbe Karte (`aktien`). **1350 und 1600
+hatten keine** — und 1600 ist der aermste Fall von allen. Der Rentenkauf ist
+der historisch exakte Gegenstand dafuer: Zins nehmen war verboten, eine Gült
+kaufen nicht, und der ganze Kredit dieser Jahrhunderte lief ueber diesen einen
+Brief. Beide Seiten liegen jetzt nebeneinander auf der Tafel — kaufen oder
+verkaufen, und beides unwiderruflich, weil eine EWIGE Gült nicht ablösbar war.
+
+**Kein bestehender Preis ist gesenkt worden.** Das ist die eine Aenderung, die
+die Wellenzahl bewegen koennte: die Vorbild-Hand greift zu, sobald eine Karte
+hoechstens 45 im Hundert der Michaeli-Lade kostet. Jede neue Sprosse liegt
+darueber, und zwar gemessen an der Kassenreihe der Vorbild-Hand selbst:
+
+| neue Karte | engster Abstand zur 45-Prozent-Schwelle | Jahr | von der Vorbild-Hand genommen |
+|---|---|---|---|
+| `marktbank` | **+29 %** (290 gegen 224) | 1360 | nein |
+| `jahrtag` | +56 % (350 gegen 224) | 1360 | nein |
+| `stadtguelt` | **+14 %** (510 gegen 449) | 1605 | nein |
+| `krankenkasse` | +22 % (13.000 gegen 10.692) | 1896 | nein |
+| `denkmal` | +92 % (55.000 gegen 28.705) | 1976 | nein |
+
+Der engste Abstand ist die Gült der Stadt mit 14 im Hundert. Das ist knapp, und
+es steht hier, statt gerundet zu werden.
+
+### Ein zweiter Bau, der aus Auflage 3 folgt: die Tafel zeigt vier Karten
+
+Mit sechs bis sieben Festlegungen je Epoche waeren sieben Karten nebeneinander
+in eine Reihe geraten, die 35 im Hundert der Spalte hoch ist — und jede waere
+so schmal geworden, dass ihr Text wieder abgeschnitten haette. Die
+Angebotsseite loest dasselbe seit jeher mit `angeboteJeJahr: 4`.
+
+`festlegungenTafel()` zeigt deshalb **vier**: die **drei billigsten offenen** —
+das ist die Wahl, die heute wirklich zu treffen ist — und dazu die
+**teuerste**, denn sie ist das Ziel, auf das gespart wird, und ein Ziel, das
+man nicht mehr sieht, ist keines. **Der ganze Katalog mit Taxe steht
+unveraendert auf der Chronikseite** unter WAS DIESE ZEIT NOCH ANBIETET; dort
+wird nichts weggelassen.
+
+**Was diese Regel kostet, und ich sage es selbst:** sind mehr als drei Karten
+zugleich bezahlbar, liegt die vierte bezahlbare nicht auf der Tafel, sondern
+nur in der Chronik. Weil die drei gezeigten die BILLIGSTEN sind, ist jede
+verdeckte teurer als drei, die dastehen — der Spieler hat also nie weniger als
+drei bezahlbare Wahlen, aber er kann eine teure bezahlbare uebersehen. Das ist
+der Preis dafuer, dass keine Karte mehr abgeschnitten wird.
+
+---
+
+## 7. DIE WELLENZAHL — drei Laeufe je Epoche, 400 Wochen = vierzehn Michaelitage
+
+Gemessen mit dem **unveraenderten** Vorbild
+(`werkbank/schuss/preis-kritik-w5/linie-vorbild.mjs`, Byte fuer Byte
+`rueckkopplung-r3/linie.mjs` — ZUSTAENDIGKEIT 16), sequenziell, ein Browser
+nach dem anderen, Saat 1350, Hafen 8899.
+
+**Die Laufzeit steht in der Zahl:** vierzehn Michaelitage. Der Kritiker hat
+gezeigt, dass dieselbe Partie in E1 bei zwoelf Michaelitagen auf +0,762 steht
+und die Latte reisst, bei dreizehn auf +0,692, bei vierzehn auf +0,591, bei
+fuenfzehn auf +0,421. Ich messe ueber vierzehn, weil der eingetragene Stand aus
+dieser Zaehlweise stammt, und schreibe es an jede Zahl.
+
+### Eine Karte, die ich selbst zurueckgenommen habe, bevor sie gemessen war
+
+Die ewige Gült stand im ersten Ansatz auf `ertrag: 150` gegen eine Taxe von
+420 fl — **Ruecklauf 2,8 Jahre, das beste Geschaeft der ganzen Epoche**, besser
+als jedes Angebot ausser der Darre. Eine unwiderrufliche Wahl, die sich in drei
+Jahren bezahlt macht, ist keine Wahl, sondern ein Geschenk mit Siegel. Der
+Zins steht jetzt auf **45 fl** (Ruecklauf neun bis fuenfzehn Jahre, in der
+Nachbarschaft von `auswaertiger` 11,8 und `hopfenkontrakt` 15,7). Ihr Wert
+liegt woanders und ist eine Regel dieser Epoche: auf bares Geld schlaegt der
+Rat siebzig im Hundert dessen an, was ueber dem Freibetrag liegt — was in
+einer Guelt steckt, liegt nicht mehr bar in der Lade.
+
+Aus demselben Grund ist die Marktbank von `ertrag: 26` auf `44` gegangen: mit
+26 gegen ein Standgeld von 16 bis 27 Pf im Jahr trug sie sich **nie**, und
+eine Karte, die niemand nehmen kann wollen, fuellt keine Luecke. Der
+Messlauf, der auf dem ersten Ansatz schon zur Haelfte durch war, wurde
+weggeworfen und der ganze Satz neu gemessen — die Zahlen unten stehen alle auf
+demselben, letzten Stand.
+
+---
+
+## 9. KERN: die eine Zeile, die nicht mir gehoert — unveraendert offen
+
+`spiel/kern/welt.js:412-413`, `rechneJahrAb()`:
+
+```js
+var unterhalt = Math.round(W.haus.kasse * 0.04 + W.vorrat.plaetze * 0.6);
+W.haus.kasse -= unterhalt;                 // ungeprueft
+```
+
+`welt.zahle()` zwei Bildschirme darueber prueft die Deckung und gibt `false`
+zurueck, wenn die Lade nicht reicht. **Diese Zeile prueft nicht.** Sie ist die
+einzige Stelle im ganzen Spiel, an der die Kasse rechnerisch negativ werden
+kann; der Kritiker hat es unabhaengig gefunden und dieselbe Zeile genannt. In
+4 × 14 Braujahren ist es unter sorgfaeltiger Hand nie dazu gekommen (kleinster
+Zwischenstand 39 Pf), und mein Vorgriff faengt den Fall an Michaeli desselben
+Wochenwechsels ab (`uhr.js:160`: `rechneJahrAb()` laeuft VOR `sende('jahr')`).
+Er repariert aber nur: die Kasse war in der Zwischenzeit negativ, und ein
+Stueck, das in diesem Augenblick `welt.kann()` fragt, bekommt eine falsche
+Auskunft.
+
+**Vorschlag, unveraendert aus dem Bau der Welle 5:**
+
+```js
+var unterhalt = Math.min(Math.max(0, Math.floor(W.haus.kasse)),
+                         Math.round(W.haus.kasse * 0.04 + W.vorrat.plaetze * 0.6));
+```
+
+`spiel/kern/**` ist schreibgeschuetzt, `spiel/index.html` eingefroren — beides
+unberuehrt.
+
+## 10. Befunde des Kritikers, die DIESES Stueck betreffen und die ich NICHT geaendert habe
+
+* **ZUSTAENDIGKEIT 17, zweimal gerissen** (1350 im Jahr 1353: Kasse 246 gegen
+  zweitbilligstes Angebot 280; 1600 im Jahr 1603: 597 gegen 840). Die Eichung
+  weist die Umsetzung ausdruecklich DER FUHRE zu. Meine Laeufe reproduzieren
+  die Kassenreihe Ziffer fuer Ziffer, also steht der Befund unveraendert. Er
+  liesse sich von hier aus nur beheben, indem die Angebotspreise gesenkt
+  wuerden — und das ist genau die Aenderung, die die Kennzahl bewegt, weil das
+  billigste Angebot dieser Tafel in den Nenner geht. Ohne Auftrag fasse ich
+  das nicht an.
+* **DER GEGNER verstummt in 1350 nach 1358** — nicht dieses Stueck, und von
+  hier aus nicht erreichbar.
+* **`disabled` MIT `data-soll-aus="0"`** (309/379/367/407 Sichtungen) und
+  **Knoepfe ganz OHNE `data-soll-aus`** (822/848/838/914): der Kritiker hat
+  ausdruecklich gezaehlt, dass davon **aus `preis:*` kein einziger** kommt.
+  Alle neuen Knoepfe dieses Baus gehen wie alle bisherigen durch `B.knopf()`
+  und tragen das Merkmal (ZUSTAENDIGKEIT 25).
+* **Die Kennzahl ist bei 1280×800 halb hinter dem Reiter der STADT**
+  (`kern/kopf.js:127`, `left: 93%`) — KERN und STADT.
+
+### Der Stand, Lauf fuer Lauf
+
+(Wird beim Einlaufen der Laeufe fortgeschrieben; die Tabelle unten steht erst,
+wenn alle zwoelf da sind.)
