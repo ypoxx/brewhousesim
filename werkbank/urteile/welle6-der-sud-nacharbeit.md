@@ -567,7 +567,53 @@ darin. Die Anrechnung steht drei Zeilen tiefer und rechnet ausdrücklich nicht
 mit `o.preis`, sondern nur mit dem offenen Betrag — `gesiegelt()` und
 `verdraengt()` sehen weiter den Listenpreis.
 
-*(1600, 1884 und 1970 laufen; ihre Zeilen kommen hier dazu.)*
+| Epoche | mit der Maus gekauft | Versuche | zurückgekommen |
+|---|---|---|---|
+| 1600 | `schuettung:weizenbrief` · `gaerung:keller`, beide **[UNWIDERRUFLICH]** | 18 | **2 — beide Weg 6 (Konsole)** |
+| 1884 | `hefe:reinzucht` **[UNWIDERRUFLICH]** | 7 | **1 — Weg 6 (Konsole)** |
+| 1970 | `fuehrung:labor` **[UNWIDERRUFLICH]**, `behandlung:filter` **[nur bezahlt]** | 20 | 5 |
+
+**Die neue Karte hält wie die alten.** `schuettung:weizenbrief`, das Siegel, das
+ich für Auflage 2 gebaut habe, kommt auf keinem Weg der Maus, der Tastatur oder
+des synthetischen Klicks zurück — nur `weizenbrief → rein` aus der Konsole.
+Dasselbe für `gaerung:keller` daneben, das ich nicht angefasst habe.
+
+Die fünf Rückwege in 1970 sind **kein Siegelbruch**, und das ist derselbe Befund,
+den der Kritiker schon gemacht hat: drei davon bewegen `sud:behandlung:*`, wo
+`filter` `einmal: true` und **nicht** `fest: true` trägt — sein Schild heißt
+darum „einmal zu zahlen" und nie „unwiderruflich". Wer einmal bezahlt hat, darf
+danach wechseln; das ist die Ansage, und sie hält. Die beiden `fest`-Karten
+`fuehrung:labor` und `behandlung:pasteur` kommen auch dort **nur** über die
+Konsole zurück.
+
+**Zusammengezogen: fünf Karten mit dem Wort „unwiderruflich" in vier Epochen,
+63 Versuche, und kein einziger Weg der Maus führt zurück.** Der einzige Rückweg
+ist `BRAUHAUS.sud.zustand().verfahren[achse] = …` aus der Konsole — kein Zug des
+Spiels, und vom Kritiker ausdrücklich genannt und nicht beanstandet.
+
+---
+
+## Die beiden Pflichttore, nach dem Reset neu gefahren
+
+    node werkbank/schuss/aufsicht/tor.mjs
+      E1: OK   jahr=1350 zuege=105 lage=0 fehler=0
+      E2: OK   jahr=1600 zuege=113 lage=0 fehler=0
+      E3: OK   jahr=1884 zuege=116 lage=0 fehler=0
+      E4: OK   jahr=1970 zuege=107 lage=0 fehler=0
+      TOR OFFEN
+
+    node werkbank/schuss/aufsicht/spielprobe.mjs
+      E1: OK  60 Wochen, 60 Zuege, Jahr 1352, Kasse    48, lage 0, Fehler 0
+      E2: OK  60 Wochen, 60 Zuege, Jahr 1602, Kasse   280, lage 0, Fehler 0
+      E3: OK  60 Wochen, 60 Zuege, Jahr 1886, Kasse  4200, lage 0, Fehler 0
+      E4: OK  60 Wochen, 60 Zuege, Jahr 1972, Kasse 50000, lage 0, Fehler 0
+      SPIELPROBE BESTANDEN
+
+`node --check` läuft auf allen drei geänderten `.js` sauber durch
+(`sud.js`, `sud-daten.js`, `sud-zusatz.js`). **KERN:** `spiel/kern/**` und
+`spiel/index.html` sind unberührt; die drei neuen Preisfelder
+(`data-preis-art`, `-menge`, `-wort`) setzt DER SUD in seinem eigenen
+`knopf()`-Mantel, `kern/buehne.js` musste dafür nichts tun.
 
 ---
 
