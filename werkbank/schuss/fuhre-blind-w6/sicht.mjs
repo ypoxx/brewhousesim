@@ -51,7 +51,7 @@ const messung = (seite) => seite.evaluate(() => {
   };
 });
 
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.ECHTEBALKEN ? { ignoreDefaultArgs: ['--hide-scrollbars'] } : {});
 const alles = { breite: BREITE, hoehe: HOEHE, epochen: {} };
 for (const e of [1, 2, 3, 4]) {
   const seite = await browser.newPage({ viewport: { width: BREITE, height: HOEHE }, deviceScaleFactor: 1 });

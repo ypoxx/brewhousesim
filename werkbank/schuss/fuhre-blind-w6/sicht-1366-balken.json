@@ -1,0 +1,152 @@
+{
+ "breite": 1366,
+ "hoehe": 768,
+ "epochen": {
+  "1": {
+   "adressen": {
+    "alle": 10,
+    "sicht": 4,
+    "drunter": [
+     "MUE Mühlschenke 3 km frei will 1 F",
+     "BRU Brückenwirt 2 km frei will 2 F",
+     "FAE Fährhaus am Fluss 4 km adler w",
+     "HIR Landgasthof Hirsch 7 km unser ",
+     "MKT Ausschank am Markt 0,5 km unse",
+     "OBE Klosterschenke Obernberg 9 km "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 1,
+    "drunter": [
+     "G Grutbier 9 Pf je Fass 2 Brautage",
+     "S Starkbier 19 Pf je Fass 3 Brauta"
+    ]
+   },
+   "kaeufe": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 0,
+    "sicht": 0,
+    "drunter": []
+   }
+  },
+  "2": {
+   "adressen": {
+    "alle": 10,
+    "sicht": 5,
+    "drunter": [
+     "BRU Brückenwirt 2 km adler will 2 ",
+     "FAE Fährhaus am Fluss 4 km unser H",
+     "HIR Landgasthof Hirsch 7 km unser ",
+     "MKT Ausschank am Markt 0,5 km frei",
+     "OBE Klosterschenke Obernberg 9 km "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 1,
+    "drunter": [
+     "B Braunbier 22 fl je Fass 1 Sude d",
+     "M Märzenbier 40 fl je Fass 1 Sude "
+    ]
+   },
+   "kaeufe": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 0,
+    "sicht": 0,
+    "drunter": []
+   }
+  },
+  "3": {
+   "adressen": {
+    "alle": 10,
+    "sicht": 5,
+    "drunter": [
+     "BRU Brückenwirt 2 km unser Haus wi",
+     "FAE Fährhaus am Fluss 4 km frei wi",
+     "HIR Landgasthof Hirsch 7 km frei w",
+     "MKT Ausschank am Markt 0,5 km adle",
+     "BHF Bahnhofsgaststätte 5 km unser "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 1,
+    "drunter": [
+     "L Lagerbier 48 M je hl → 36 hl 2 W",
+     "E Exportbier 72 M je hl → 27 hl 5 "
+    ]
+   },
+   "kaeufe": {
+    "alle": 5,
+    "sicht": 5,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   }
+  },
+  "4": {
+   "adressen": {
+    "alle": 11,
+    "sicht": 5,
+    "drunter": [
+     "BRU Brückenwirt 2 km adler will 21",
+     "FAE Fährhaus am Fluss 4 km frei wi",
+     "HIR Landgasthof Hirsch 7 km adler ",
+     "MKT Ausschank am Markt 0,5 km unse",
+     "BHF Bahnhofsgaststätte 5 km adler ",
+     "NEU Gaststätte Neustadt 2 km frei "
+    ]
+   },
+   "sorten": {
+    "alle": 3,
+    "sicht": 1,
+    "drunter": [
+     "P Pilsner 130 DM je hl → 60 hl 2 W",
+     "E Exportbier 163 DM je hl → 45 hl "
+    ]
+   },
+   "kaeufe": {
+    "alle": 4,
+    "sicht": 4,
+    "drunter": []
+   },
+   "ziel": {
+    "alle": 3,
+    "sicht": 3,
+    "drunter": []
+   },
+   "fracht": {
+    "alle": 0,
+    "sicht": 0,
+    "drunter": []
+   }
+  }
+ }
+}

@@ -1,0 +1,923 @@
+{
+ "breite": 1600,
+ "hoehe": 1000,
+ "reiter": true,
+ "epochen": {
+  "1": {
+   "echt": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 109,
+      "t": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verk"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 85,
+      "t": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast d"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 133,
+      "t": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. De"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 85,
+      "t": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fra"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 97,
+      "t": "Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das b"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 145,
+      "t": "Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis"
+     },
+     {
+      "kl": "wort",
+      "w": 77,
+      "sw": 81,
+      "h": 14,
+      "sh": 14,
+      "t": "VERSATZ"
+     }
+    ]
+   },
+   "gerollt": {
+    "fuhre": [
+     {
+      "kl": "fu-liste",
+      "w": 379,
+      "sw": 379,
+      "h": 472,
+      "sh": 487,
+      "t": "LINGasthof Lindenhof0,2 kmfreiwill 4 Fass+ 1 Fass−2·3·4 von 31 FassOCH"
+     },
+     {
+      "kl": "fu-brett fu-tafel fu-schiefer",
+      "w": 354,
+      "sw": 354,
+      "h": 426,
+      "sh": 445,
+      "t": "ANSCHLAGTAFELmit Kreide an der SudhauswandBrautage: 44 übrigDieser Pla"
+     },
+     {
+      "kl": "fu-sorten",
+      "w": 325,
+      "sw": 325,
+      "h": 60,
+      "sh": 120,
+      "t": "DDünnbier5 Pf je Fass1 Brautage→ 5 Fasshält 3 Wo.−0+GGrutbier9 Pf je F"
+     }
+    ],
+    "fremd": 0
+   },
+   "ellipse": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "was",
+      "w": 425,
+      "sw": 1029,
+      "h": 13,
+      "sh": 13,
+      "t": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wi"
+     },
+     {
+      "kl": "wort",
+      "w": 126,
+      "sw": 159,
+      "h": 15,
+      "sh": 15,
+      "t": "OHNE DICH GESCHEHEN"
+     },
+     {
+      "kl": "wort",
+      "w": 63,
+      "sw": 80,
+      "h": 15,
+      "sh": 15,
+      "t": "DIE HÄUSER"
+     },
+     {
+      "kl": "zahl",
+      "w": 63,
+      "sw": 171,
+      "h": 10,
+      "sh": 10,
+      "t": "wollen 15 · im Keller liegen 4 Fass"
+     },
+     {
+      "kl": "wort",
+      "w": 90,
+      "sw": 114,
+      "h": 15,
+      "sh": 15,
+      "t": "ANSCHLAGTAFEL"
+     },
+     {
+      "kl": "zahl",
+      "w": 90,
+      "sw": 142,
+      "h": 10,
+      "sh": 10,
+      "t": "mit Kreide an der Sudhauswand"
+     },
+     {
+      "kl": "wort",
+      "w": 66,
+      "sw": 84,
+      "h": 15,
+      "sh": 15,
+      "t": "DER KELLER"
+     },
+     {
+      "kl": "zahl",
+      "w": 66,
+      "sw": 108,
+      "h": 10,
+      "sh": 10,
+      "t": "4 von 12 Fass · 4 reif"
+     },
+     {
+      "kl": "wort",
+      "w": 86,
+      "sw": 109,
+      "h": 15,
+      "sh": 15,
+      "t": "OCHSENKARREN"
+     },
+     {
+      "kl": "zahl",
+      "w": 86,
+      "sw": 142,
+      "h": 10,
+      "sh": 10,
+      "t": "0 von 5 Fass · 0 von 4 Halten"
+     },
+     {
+      "kl": "wort",
+      "w": 72,
+      "sw": 91,
+      "h": 15,
+      "sh": 15,
+      "t": "DAS SUDHAUS"
+     },
+     {
+      "kl": "wort",
+      "w": 111,
+      "sw": 140,
+      "h": 15,
+      "sh": 15,
+      "t": "DER RUF DES HAUSES"
+     },
+     {
+      "kl": "zahl",
+      "w": 111,
+      "sw": 132,
+      "h": 10,
+      "sh": 10,
+      "t": "Bierzeiger und Zunftzeichen"
+     },
+     {
+      "kl": "wort",
+      "w": 51,
+      "sw": 64,
+      "h": 15,
+      "sh": 15,
+      "t": "Das Erbe"
+     },
+     {
+      "kl": "wort",
+      "w": 84,
+      "sw": 106,
+      "h": 15,
+      "sh": 15,
+      "t": "Ortsmarken"
+     },
+     {
+      "kl": "wort",
+      "w": 76,
+      "sw": 95,
+      "h": 15,
+      "sh": 15,
+      "t": "Stadt zeigen"
+     }
+    ]
+   }
+  },
+  "2": {
+   "echt": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 48,
+      "t": "Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt."
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 85,
+      "t": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hä"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 133,
+      "t": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was s"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 254,
+      "t": "Der Rat schreibt dem Haus eine feste Weizenzuteilung ins Kornbuch, und"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 184,
+      "sw": 184,
+      "h": 36,
+      "sh": 72,
+      "t": "Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung "
+     },
+     {
+      "kl": "wort",
+      "w": 97,
+      "sw": 121,
+      "h": 14,
+      "sh": 14,
+      "t": "WIEDERKAUF"
+     }
+    ]
+   },
+   "gerollt": {
+    "fuhre": [
+     {
+      "kl": "fu-liste",
+      "w": 379,
+      "sw": 379,
+      "h": 452,
+      "sh": 478,
+      "t": "LINGasthof Lindenhof0,2 kmunser Hauswill 9 Fass+ 1 Fass−39·34·48 von 5"
+     },
+     {
+      "kl": "fu-brett fu-tafel fu-schiefer",
+      "w": 354,
+      "sw": 354,
+      "h": 426,
+      "sh": 458,
+      "t": "SUDORDNUNGauf der Tafel im SudhausSude der Reihe: 40 übrigDieser Plan "
+     },
+     {
+      "kl": "fu-sorten",
+      "w": 325,
+      "sw": 325,
+      "h": 60,
+      "sh": 159,
+      "t": "SSchankbier13 fl je Fass1 Sude der Reihe→ 8 Fasshält 4 Wo.−0+BBraunbie"
+     }
+    ],
+    "fremd": 0
+   },
+   "ellipse": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "was",
+      "w": 425,
+      "sw": 922,
+      "h": 13,
+      "sh": 13,
+      "t": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das Dach richt"
+     },
+     {
+      "kl": "nm-medium",
+      "w": 113,
+      "sw": 129,
+      "h": 11,
+      "sh": 11,
+      "t": "Wirtshausschild und gemarkter Krug"
+     },
+     {
+      "kl": "wort",
+      "w": 125,
+      "sw": 159,
+      "h": 15,
+      "sh": 15,
+      "t": "OHNE DICH GESCHEHEN"
+     },
+     {
+      "kl": "wort",
+      "w": 63,
+      "sw": 80,
+      "h": 15,
+      "sh": 15,
+      "t": "DIE HÄUSER"
+     },
+     {
+      "kl": "zahl",
+      "w": 63,
+      "sw": 171,
+      "h": 10,
+      "sh": 10,
+      "t": "wollen 28 · im Keller liegen 8 Fass"
+     },
+     {
+      "kl": "wort",
+      "w": 72,
+      "sw": 91,
+      "h": 15,
+      "sh": 15,
+      "t": "SUDORDNUNG"
+     },
+     {
+      "kl": "zahl",
+      "w": 72,
+      "sw": 117,
+      "h": 10,
+      "sh": 10,
+      "t": "auf der Tafel im Sudhaus"
+     },
+     {
+      "kl": "wort",
+      "w": 75,
+      "sw": 96,
+      "h": 15,
+      "sh": 15,
+      "t": "DAS GEWÖLBE"
+     },
+     {
+      "kl": "zahl",
+      "w": 75,
+      "sw": 108,
+      "h": 10,
+      "sh": 10,
+      "t": "8 von 24 Fass · 8 reif"
+     },
+     {
+      "kl": "wort",
+      "w": 100,
+      "sw": 127,
+      "h": 15,
+      "sh": 15,
+      "t": "PFERDEFUHRWERK"
+     },
+     {
+      "kl": "zahl",
+      "w": 100,
+      "sw": 142,
+      "h": 10,
+      "sh": 10,
+      "t": "0 von 8 Fass · 0 von 5 Halten"
+     },
+     {
+      "kl": "wort",
+      "w": 71,
+      "sw": 91,
+      "h": 15,
+      "sh": 15,
+      "t": "DAS SUDHAUS"
+     },
+     {
+      "kl": "wort",
+      "w": 110,
+      "sw": 140,
+      "h": 15,
+      "sh": 15,
+      "t": "DER RUF DES HAUSES"
+     },
+     {
+      "kl": "zahl",
+      "w": 110,
+      "sw": 166,
+      "h": 10,
+      "sh": 10,
+      "t": "Wirtshausschild und gemarkter Krug"
+     },
+     {
+      "kl": "wort",
+      "w": 51,
+      "sw": 64,
+      "h": 15,
+      "sh": 15,
+      "t": "Das Erbe"
+     },
+     {
+      "kl": "wort",
+      "w": 83,
+      "sw": 106,
+      "h": 15,
+      "sh": 15,
+      "t": "Ortsmarken"
+     },
+     {
+      "kl": "wort",
+      "w": 75,
+      "sw": 95,
+      "h": 15,
+      "sh": 15,
+      "t": "Stadt zeigen"
+     }
+    ]
+   }
+  },
+  "3": {
+   "echt": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 85,
+      "t": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert rich"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 133,
+      "t": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hä"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 118,
+      "sw": 118,
+      "h": 36,
+      "sh": 121,
+      "t": "Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller häl"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 184,
+      "sw": 184,
+      "h": 36,
+      "sh": 60,
+      "t": "Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes "
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 184,
+      "sw": 184,
+      "h": 36,
+      "sh": 72,
+      "t": "Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezog"
+     },
+     {
+      "kl": "wort",
+      "w": 86,
+      "sw": 99,
+      "h": 14,
+      "sh": 14,
+      "t": "HYPOTHEK"
+     }
+    ]
+   },
+   "gerollt": {
+    "fuhre": [
+     {
+      "kl": "fu-liste",
+      "w": 379,
+      "sw": 379,
+      "h": 472,
+      "sh": 487,
+      "t": "LINGasthof Lindenhof0,2 kmadlerwill 23 hl+ 6,0 hl−21·20·24 von 216 hlO"
+     },
+     {
+      "kl": "fu-brett fu-tafel fu-schiefer",
+      "w": 354,
+      "sw": 354,
+      "h": 426,
+      "sh": 457,
+      "t": "SUDPLANam schwarzen Brett der MälzereiSudhaus: 2 Sude je WocheMehr Pfa"
+     },
+     {
+      "kl": "fu-sorten",
+      "w": 325,
+      "sw": 325,
+      "h": 60,
+      "sh": 140,
+      "t": "SSchankbier29 M je hl→ 45 hlhält 3 Wo.1 Eis−0+LLagerbier48 M je hl→ 36"
+     }
+    ],
+    "fremd": 0
+   },
+   "ellipse": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "was",
+      "w": 425,
+      "sw": 634,
+      "h": 13,
+      "sh": 13,
+      "t": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein Darlehen u"
+     },
+     {
+      "kl": "wort",
+      "w": 131,
+      "sw": 159,
+      "h": 15,
+      "sh": 15,
+      "t": "OHNE DICH GESCHEHEN"
+     },
+     {
+      "kl": "wort",
+      "w": 66,
+      "sw": 80,
+      "h": 15,
+      "sh": 15,
+      "t": "DIE HÄUSER"
+     },
+     {
+      "kl": "zahl",
+      "w": 66,
+      "sw": 171,
+      "h": 10,
+      "sh": 10,
+      "t": "wollen 146 · im Keller liegen 11 hl"
+     },
+     {
+      "kl": "wort",
+      "w": 50,
+      "sw": 61,
+      "h": 15,
+      "sh": 15,
+      "t": "SUDPLAN"
+     },
+     {
+      "kl": "zahl",
+      "w": 50,
+      "sw": 152,
+      "h": 10,
+      "sh": 10,
+      "t": "am schwarzen Brett der Mälzerei"
+     },
+     {
+      "kl": "wort",
+      "w": 86,
+      "sw": 105,
+      "h": 15,
+      "sh": 15,
+      "t": "DER EISKELLER"
+     },
+     {
+      "kl": "zahl",
+      "w": 86,
+      "sw": 113,
+      "h": 10,
+      "sh": 10,
+      "t": "11 von 135 hl · 11 reif"
+     },
+     {
+      "kl": "wort",
+      "w": 86,
+      "sw": 105,
+      "h": 15,
+      "sh": 15,
+      "t": "HALBER WAGEN"
+     },
+     {
+      "kl": "zahl",
+      "w": 86,
+      "sw": 152,
+      "h": 10,
+      "sh": 10,
+      "t": "0,0 von 60 hl · 0 von 10 Halten"
+     },
+     {
+      "kl": "wort",
+      "w": 74,
+      "sw": 91,
+      "h": 15,
+      "sh": 15,
+      "t": "DAS SUDHAUS"
+     },
+     {
+      "kl": "wort",
+      "w": 115,
+      "sw": 140,
+      "h": 15,
+      "sh": 15,
+      "t": "DER RUF DES HAUSES"
+     },
+     {
+      "kl": "zahl",
+      "w": 115,
+      "sw": 137,
+      "h": 10,
+      "sh": 10,
+      "t": "Etikett, Plakat, Litfaßsäule"
+     },
+     {
+      "kl": "wort",
+      "w": 53,
+      "sw": 64,
+      "h": 15,
+      "sh": 15,
+      "t": "Das Erbe"
+     },
+     {
+      "kl": "wort",
+      "w": 87,
+      "sw": 106,
+      "h": 15,
+      "sh": 15,
+      "t": "Ortsmarken"
+     },
+     {
+      "kl": "wort",
+      "w": 78,
+      "sw": 95,
+      "h": 15,
+      "sh": 15,
+      "t": "Stadt zeigen"
+     }
+    ]
+   }
+  },
+  "4": {
+   "echt": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "sud-kartensatz",
+      "w": 117,
+      "sw": 117,
+      "h": 36,
+      "sh": 60,
+      "t": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Han"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 117,
+      "sw": 117,
+      "h": 36,
+      "sh": 60,
+      "t": "Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderru"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 117,
+      "sw": 117,
+      "h": 36,
+      "sh": 121,
+      "t": "Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 "
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 48,
+      "t": "Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Expo"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 133,
+      "t": "Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nic"
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 109,
+      "t": "Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht "
+     },
+     {
+      "kl": "sud-kartensatz",
+      "w": 84,
+      "sw": 84,
+      "h": 36,
+      "sh": 121,
+      "t": "Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, "
+     },
+     {
+      "kl": "wort",
+      "w": 80,
+      "sw": 86,
+      "h": 14,
+      "sh": 14,
+      "t": "ABBRUCH"
+     }
+    ]
+   },
+   "gerollt": {
+    "fuhre": [
+     {
+      "kl": "fu-liste",
+      "w": 379,
+      "sw": 379,
+      "h": 458,
+      "sh": 518,
+      "t": "LINGasthof Lindenhof0,2 kmunser Hauswill 69 hl+ 30 hl−500·491·486 von "
+     },
+     {
+      "kl": "fu-brett fu-tafel fu-schiefer",
+      "w": 354,
+      "sw": 354,
+      "h": 426,
+      "sh": 429,
+      "t": "SUDPLANim Schaltraum, auf FormicaSudhaus: 5 Sude je WocheMehr Pfannen "
+     },
+     {
+      "kl": "fu-sorten",
+      "w": 325,
+      "sw": 325,
+      "h": 60,
+      "sh": 140,
+      "t": "HVollbier Hell100 DM je hl→ 75 hl1 Wo. Lagerhält 18 Wo.−0+PPilsner130 "
+     }
+    ],
+    "fremd": 0
+   },
+   "ellipse": {
+    "fuhre": [],
+    "fremd": [
+     {
+      "kl": "was",
+      "w": 425,
+      "sw": 494,
+      "h": 13,
+      "sh": 13,
+      "t": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 11.491 DM"
+     },
+     {
+      "kl": "nm-medium",
+      "w": 113,
+      "sw": 150,
+      "h": 11,
+      "sh": 11,
+      "t": "Kronkorken, Bandenwerbung, Fernsehspot"
+     },
+     {
+      "kl": "wort",
+      "w": 92,
+      "sw": 147,
+      "h": 10,
+      "sh": 10,
+      "t": "Versorgungszusage · jährlich"
+     },
+     {
+      "kl": "wort",
+      "w": 139,
+      "sw": 159,
+      "h": 15,
+      "sh": 15,
+      "t": "OHNE DICH GESCHEHEN"
+     },
+     {
+      "kl": "wort",
+      "w": 72,
+      "sw": 80,
+      "h": 15,
+      "sh": 15,
+      "t": "DIE HÄUSER"
+     },
+     {
+      "kl": "zahl",
+      "w": 72,
+      "sw": 176,
+      "h": 10,
+      "sh": 10,
+      "t": "wollen 534 · im Keller liegen 210 hl"
+     },
+     {
+      "kl": "wort",
+      "w": 54,
+      "sw": 61,
+      "h": 15,
+      "sh": 15,
+      "t": "SUDPLAN"
+     },
+     {
+      "kl": "zahl",
+      "w": 54,
+      "sw": 127,
+      "h": 10,
+      "sh": 10,
+      "t": "im Schaltraum, auf Formica"
+     },
+     {
+      "kl": "wort",
+      "w": 62,
+      "sw": 70,
+      "h": 15,
+      "sh": 15,
+      "t": "DIE TANKS"
+     },
+     {
+      "kl": "zahl",
+      "w": 62,
+      "sw": 122,
+      "h": 10,
+      "sh": 10,
+      "t": "210 von 600 hl · 210 reif"
+     },
+     {
+      "kl": "wort",
+      "w": 55,
+      "sw": 61,
+      "h": 15,
+      "sh": 15,
+      "t": "LASTZUG"
+     },
+     {
+      "kl": "zahl",
+      "w": 55,
+      "sw": 152,
+      "h": 10,
+      "sh": 10,
+      "t": "0,0 von 450 hl · 0 von 3 Halten"
+     },
+     {
+      "kl": "wort",
+      "w": 81,
+      "sw": 91,
+      "h": 15,
+      "sh": 15,
+      "t": "DAS SUDHAUS"
+     },
+     {
+      "kl": "wort",
+      "w": 125,
+      "sw": 140,
+      "h": 15,
+      "sh": 15,
+      "t": "DER RUF DES HAUSES"
+     },
+     {
+      "kl": "zahl",
+      "w": 125,
+      "sw": 186,
+      "h": 10,
+      "sh": 10,
+      "t": "Kronkorken, Bandenwerbung, Fernsehspot"
+     },
+     {
+      "kl": "wort",
+      "w": 57,
+      "sw": 64,
+      "h": 15,
+      "sh": 15,
+      "t": "Das Erbe"
+     },
+     {
+      "kl": "wort",
+      "w": 95,
+      "sw": 106,
+      "h": 15,
+      "sh": 15,
+      "t": "Ortsmarken"
+     },
+     {
+      "kl": "wort",
+      "w": 85,
+      "sw": 95,
+      "h": 15,
+      "sh": 15,
+      "t": "Stadt zeigen"
+     }
+    ]
+   }
+  }
+ }
+}

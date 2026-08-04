@@ -137,7 +137,7 @@ const messung = (seite) => seite.evaluate(() => {
   return res;
 });
 
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.ECHTEBALKEN ? { ignoreDefaultArgs: ['--hide-scrollbars'] } : {});
 const alles = { hafen: HAFEN, breite: BREITE, hoehe: HOEHE, reiter: REITER, epochen: {} };
 for (const e of [1, 2, 3, 4]) {
   const seite = await browser.newPage({ viewport: { width: BREITE, height: HOEHE }, deviceScaleFactor: 1 });
