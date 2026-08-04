@@ -961,13 +961,31 @@
        auch er soll von drueben kommen —, aber nicht so tief wie das Zeichen:
        dort steht der Vorgang selbst, und der muss erkennbar bleiben. */
     w.bus.fern = baueWand(ctx, w.bus.fremd, 1500, 0.115, 0.28);
-    /* 1100 und nicht 900: bei 900 Hz hat das Zeichen die Haelfte seines
-       Pegels verloren (gemessen, siehe `nachbarhof()`), und ein Zeichen, das
-       niemand hoert, ist auch dann keins, wenn es schoen gedaempft ist.
-       Sprache bleibt auch bei 1100 Hz unverstaendlich — die Telefonbandbreite
-       beginnt bei 300 und endet bei 3400 Hz, und die zweiten und dritten
-       Formanten, an denen ein Ohr die Vokale unterscheidet, liegen darueber. */
-    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 1100, 0.135, 0.36);
+    /* 600 Hz UND EIN AUSGLEICH DAHINTER — und diese Zahl hat mich am meisten
+       gekostet, weil sie zweimal falsch war.
+       900 Hz (Stand A): das Zeichen verlor die Haelfte seines Pegels, denn was
+       ein Tiefpass wegnimmt, nimmt er auch der Lautstaerke.
+       1100 Hz (Stand B/C): der Pegel stand, aber das fremde Ohr hat in der
+       gespielten Aufnahme von 1350 bei Sekunde 7 — genau dort, wo das Zeichen
+       liegt — ungefragt gemeldet: "Gedaempfte Radio- oder Fernsehuebertragung
+       (englischer Sportkommentar)", und in 1884 bei Sekunde 2: "Englische
+       Radio-/Fernsehstimme ('go back and forth')". Die drei Woerter in
+       Anfuehrungszeichen stehen woertlich in meinem Erzeugungsprompt fuer
+       `drueben1.mp3` ("they go back and forth"): die Gegenstelle hat den Satz
+       nicht umgesetzt, sondern SPRECHEN LASSEN. Ich hatte behauptet, die
+       zweiten und dritten Formanten laegen ueber 1100 Hz und das Wort sei
+       damit weg. Das ist Halbwissen: die Grundfrequenz und der erste Formant
+       reichen, und ein Ohr, das Sprache erkennt, erkennt sie auch dumpf.
+       Eine erkennbare englische Rundfunkstimme in 1350 ist ein Anachronismus
+       und faellt unter Sperrliste 1 des Kritikers.
+       Also 600 Hz — dort bleibt von Sprache die Sprachmelodie und nicht das
+       Wort — und der Pegelverlust wird HINTER der Wand ausgeglichen, statt
+       den Filter aufzumachen. Der Ausgleich sitzt nur im Zeichenweg; die
+       uebrigen Klaenge des Nachbarn (`fern`) gehen unveraendert. */
+    var nachbarAusgleich = ctx.createGain();
+    nachbarAusgleich.gain.value = 1.9;
+    nachbarAusgleich.connect(w.bus.fremd);
+    w.bus.nachbar = baueWand(ctx, nachbarAusgleich, 600, 0.135, 0.36);
     return w;
   }
 
