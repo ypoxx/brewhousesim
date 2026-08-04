@@ -44,7 +44,8 @@ Die anderen drei Latten:
 | Sperrliste, Gewicht | +11 KB CSS-Text, keine neuen Anfragen |
 
 **Abnahme am laufenden Arbeitsbaum (Hafen 8899), jede Messung einzeln durch
-`werkbank/schuss/aufsicht/messfenster.sh`:**
+`werkbank/schuss/aufsicht/messfenster.sh` — zweimal gefahren, vor und nach dem
+Container-Reset von 20:21 UTC (§9), beide Male dieselben Zahlen:**
 
 ```
 node --check   fuhre.js · fuhre-daten.js · fuhre-zusatz.js     OK
@@ -523,8 +524,13 @@ Aufschlüsselung unter „Kern" stehen. Auflage 2 der LESBARKEIT nennt für
 `spiel/stuecke/fuhre-daten.js` und `spiel/stuecke/fuhre-zusatz.js` sind
 unverändert. `node --check` läuft auf allen drei `.js` sauber durch.
 
-Aufnahmen und Messreihen:
-`werkbank/schuss/fuhre-w6/{vorher,vorher-b,nachher,nachher-b}/E{1..4}-2752.png`.
+Dazu neu im Repo: `werkbank/schuss/fuhre-w6/schnitte.py` — die Auswertung über
+die drei Schnitte (12/13/14 Braujahre), die `auswerten.py` daneben nicht
+rechnet. Sie lag bis zum Reset nur im Scratchpad; Begründung in §9.3.
+
+Aufnahmen:
+`werkbank/schuss/fuhre-w6/{vorher,vorher-b,nachher,nachher-b}/E{1..4}-2752.png`
+(nicht eingecheckt — die Zahlen dazu stehen in §5 und §9.2).
 
 ---
 
@@ -542,7 +548,86 @@ Bildaufnahmen unter `werkbank/schuss/fuhre-w6/` (nicht eingecheckt).
 **Die Zahlen selbst sind nicht verloren — sie stehen in diesem Bericht**,
 und genau dafür wurde er laufend geschrieben.
 
-Neu gemessen nach dem Reset (Stände aus demselben Commit `3465eb3` neu
-aufgebaut, jede Messung durch `messfenster.sh`):
+Neu gemessen nach dem Reset — beide Stände aus demselben Commit `3465eb3` neu
+aufgebaut (Häfen 8961 = unangetastet, 8962 = mit meinen fünf Dateien), jede
+Messung durch `messfenster.sh`.
 
-*(wird eingetragen, sobald die Messungen durch das Fenster sind)*
+### 9.1 Die offene Zelle der Latte-2-Tabelle: 1884
+
+Sie war beim Reset gerade in der Warteschlange. Jetzt gemessen:
+
+| 1884 | 12 J | 13 J | 14 J | Kasse | Kennzahl |
+|---|---|---|---|---|---|
+| vorher | +0,168 | +0,346 | +0,393 | 1757–23789 | 0,84–9,40× |
+| **nachher** | **+0,168** | **+0,346** | **+0,393** | **1757–23789** | **0,84–9,40×** |
+
+**Dieselbe Partie, Ziffer für Ziffer** — und zugleich Ziffer für Ziffer
+dieselbe wie vor dem Reset. Damit sind **alle vier Epochen durch die Sperre
+gemessen**, und alle vier reproduzieren die Zahlen von vorher exakt.
+
+### 9.2 Die Bildlatte, neu aufgenommen
+
+Die Aufnahmen unter `werkbank/schuss/fuhre-w6/` waren nicht eingecheckt und
+sind weg gewesen. Neu aufgenommen, wieder je zweimal je Fassung:
+
+| Vergleich | E1 | E2 | E3 | E4 |
+|---|---|---|---|---|
+| alte Datei gegen sich selbst | identisch | identisch | identisch | 2.958 px, max 9 |
+| neue Datei gegen sich selbst | identisch | identisch | identisch | 4.811 px, max 17 |
+| **alt gegen neu** | **identisch** | **identisch** | **identisch** | **1.453 px, max 9** |
+
+Dieselbe Aussage wie vor dem Reset, diesmal noch schärfer: **die Abweichung
+zwischen alter und neuer Fassung ist kleiner als das Eigenrauschen jeder
+einzelnen Fassung mit sich selbst** (1.453 gegen 2.958 bzw. 4.811 Pixel), und
+sie liegt im selben Kasten in DER GEGNER (x 2.095–2.290, y 906–994).
+
+### 9.3 Was daraus für den Lauf folgt
+
+Zwei Dinge, die nicht mich betreffen, sondern die Werkbank:
+
+**Die Auswertung der drei Schnitte lag nur im Scratchpad.** Sie liegt jetzt
+unter `werkbank/schuss/fuhre-w6/schnitte.py` — aus demselben Grund, den
+`tor.mjs` schon im Kopf trägt: *ein Messgerät, das den nächsten Reset nicht
+übersteht, ist beim nächsten Mal keins.* `auswerten.py` daneben rechnet ρ nur
+über die volle Reihe; seit dem 4. August verlangt die Latte alle drei Schnitte.
+
+**Die Aufnahmen der Bildlatte sind nicht eingecheckt** (`.gitignore` schließt
+`werkbank/schuss/**/*.png` aus, mit gutem Grund: 3,1 GB Belegbilder haben
+dieses Repo schon einmal unklonbar gemacht). Für einen Blindvergleich ist das
+richtig — sie werden neu erzeugt —, aber es heißt: wer eine Bildlatte belegt,
+belegt sie mit **Zahlen im Bericht**, nicht mit Dateien. Dieser Bericht tut das
+(§5 und §9.2); ohne die Zahlen wäre der Beleg mit `/tmp` verschwunden.
+
+**Die Kennzahl-Läufe gehören dagegen ins Repo, und sie sind klein.** Dieselbe
+`.gitignore` sagt es ausdrücklich: *„Was bleibt, ist das Skript … und die Zahl
+(die .json neben dem Skript). Beides bleibt versioniert."* Ein Lauf ist 138 KB.
+Meine acht Läufe lagen trotzdem unter `/tmp` und sind bis auf das nachgeholte
+Paar 1884 weg. Das Paar liegt jetzt unter
+`werkbank/schuss/fuhre-w6/rho/e3-{vorher,nachher}.json`, prüfbar mit
+`python3 werkbank/schuss/fuhre-w6/schnitte.py werkbank/schuss/fuhre-w6/rho`.
+Die Zahlen der anderen drei Epochen stehen in §6.3 und §6.4 und sind dort
+dreimal unabhängig reproduziert; die Rohläufe dazu noch einmal zu fahren wären
+zwei Stunden für eine Zahl, die schon dreimal dieselbe war.
+
+---
+
+## 10 — Was ich nicht geschafft habe
+
+**1970 steht auf +0,699** (§6.5). Es besteht, aber um ein Tausendstel, und es
+ist durch meine Arbeit dorthin gewandert. Die Ursache ist benannt und
+gemessen — die Anschlagtafel zeigt bei 1920×1000 mit 12 px nur noch etwa drei
+ihrer vier Sorten —, aber nicht behoben. Wer daran weiterarbeitet, hat zwei
+Wege: der Anschlagtafel mehr Platz in der Platzordnung geben (er müsste von
+Keller oder Wagen kommen, die beide mit 212 von 228 px selbst voll sind), oder
+die Sortenzeile weiter verdichten.
+
+**Bei 1366×768 sieht man von elf Adressen noch fünf statt acht.** Die Liste
+rollt, alles ist erreichbar und nichts ist abgeschnitten — aber man sieht
+weniger auf einmal als vorher. Das ist der Preis von 12 px auf einem 768 px
+hohen Schirm und keine Umsetzungsfrage: elf Karten mit je einer Textzeile und
+einer 24-px-Knopfzeile sind 429 px, und das Brett hat 565 px für alles.
+
+**Die 1.128 verbliebenen Textknoten unter 12 px** liegen in den sechs anderen
+Stücken und im Kern. Auflage 2 von DIE LESBARKEIT gilt dort unverändert
+weiter; was sie kostet, steht in §4 dieses Berichts an einem durchgerechneten
+Beispiel.

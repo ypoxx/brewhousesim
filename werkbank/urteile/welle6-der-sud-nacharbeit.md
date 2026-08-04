@@ -528,6 +528,49 @@ weil es in meiner Ausgabedatei steht; beheben kann es dieses Stück nicht.
 
 ---
 
+## Container-Reset um 20:21 UTC — und was er über die Zahlen sagt
+
+Der Container wurde zurückgesetzt, `/tmp` ist dabei verschwunden, und mit ihm
+alle Ausgabedateien dieses Laufs. Der Arbeitsbaum wurde aus `origin`
+wiederhergestellt.
+
+**Die Marke sagt, dass es dieselbe Fassung ist.** Mein Hafen bildet einen md5
+über `sud.js`, `sud-daten.js`, `sud.css`, `sud-zusatz.css` und `grund.css`. Vor
+dem Reset lieferte er `582fdd6209cd`, nach dem Reset liefert er
+`582fdd6209cd`. Der Baum ist Byte für Byte derselbe, an dem oben gemessen
+wurde — die Zahlen in diesem Bericht sind Zahlen dieses Standes. Was fehlt,
+sind die Rohdateien, nicht die Messung.
+
+Neu gemessen nach dem Reset ist alles, was noch offen war; es steht unten.
+
+## DAS SIEGEL — neu geprüft, weil ich `waehle()` angefasst habe
+
+Das ist die Probe, die mir am wichtigsten war: Sperrliste 1 sagt, der Riegel
+bleibt, wo er ist, und ich habe in derselben Funktion die Anrechnung
+eingebaut. Also derselbe Angriff wie beim Kritiker, mit **seinem** Gerät
+(`werkbank/schuss/sud-w6/siegel.mjs`, unverändert): die Festlegung wird in der
+laufenden Partie **mit der Maus** gekauft, danach sechs Wege zurück.
+
+| Epoche | mit der Maus gekauft | Versuche | zurückgekommen |
+|---|---|---|---|
+| 1350 | `wasser:roehre` · `wuerze:brief`, beide **[UNWIDERRUFLICH]** | 18 | **2 — beide Weg 6 (Konsole)** |
+
+`roehre → bach` und `brief → grut` gelingen **nur** durch direktes Umschreiben
+von `BRAUHAUS.sud.zustand().verfahren` aus der Konsole. Geschwisterkarte,
+Kesselzettel, Tastatur, `disabled` entfernen plus `el.click()` plus
+`dispatchEvent(MouseEvent)`, echte Maus auf den entsperrten Knopf — **keiner
+kommt zurück.** Ziffer für Ziffer das Ergebnis des Kritikers.
+
+Der Riegel liegt weiter in `waehle()` (`sud.js:939`, erste Zeile:
+`if (verdraengt(a, o)) return;`) und damit **hinter** dem `disabled`, nicht
+darin. Die Anrechnung steht drei Zeilen tiefer und rechnet ausdrücklich nicht
+mit `o.preis`, sondern nur mit dem offenen Betrag — `gesiegelt()` und
+`verdraengt()` sehen weiter den Listenpreis.
+
+*(1600, 1884 und 1970 laufen; ihre Zeilen kommen hier dazu.)*
+
+---
+
 # Wo ich den Kritiker ergänze — und wo ich ihm widerspreche
 
 **Ich widerspreche ihm in keinem seiner vier Befunde.** Ich habe jeden davon
