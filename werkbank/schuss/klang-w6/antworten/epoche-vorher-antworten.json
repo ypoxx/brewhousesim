@@ -1,0 +1,242 @@
+[
+ {
+  "durchgang": 1,
+  "datei": "probe-01.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 85,
+  "vorgang": "Der Brauhaushof liegt still da. Es ist friedlich, während nur der Wind sanft durch den Hof zieht und vereinzelt Vögel zu hören sind.",
+  "woran": "An der absoluten Stille und den rein natürlichen Hintergrundgeräuschen wie sanftem Windwehen und leichtem Vogelgezwitscher, völlig ohne industriellen oder modernen Zivilisationslärm.",
+  "stoert": "Nein, alle hörbaren Klänge passen fügte sich harmonisch in diese frühe Zeit ein."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-02.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 85,
+  "vorgang": "Eine Person geht langsam und bedächtig über das Kopfsteinpflaster des verlassenen oder ruhigen Hofs, während leiser Wind pfeift.",
+  "woran": "An den isolierten, hallenden Schritten auf Steinpflaster und dem völligen Fehlen jeglicher mechanischer, industrieller oder moderner Verkehrsgeräusche.",
+  "stoert": "Nein, die Atmo ist stimmig und frei von unpassenden modernen Nebengeräuschen."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-03.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 90,
+  "vorgang": "Ein pferdegezogener Holzkarren poltert über das Kopfsteinpflaster des Brauhaushofs, während im Hintergrund Kirchenglocken läuten.",
+  "woran": "Das Geräusch von Pferdehufen, polternden Holzrädern auf Kopfsteinpflaster, Kirchenglocken und die eingespielte Lautenmusik im Renaissance-Stil.",
+  "stoert": "Nein, alle akustischen Elemente passen stimmig in die Zeit um 1600."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-04.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 90,
+  "vorgang": "Eine Person geht langsam durch den ruhigen Brauhaushof. Im Hintergrund ist ein dumpfes, fernes Verkehrs- und Stadtrauschen zu hören.",
+  "woran": "Am kontinuierlichen, tiefen Brummen des entfernten Motoren- und Straßenverkehrs.",
+  "stoert": "Keine offensichtlichen Anachronismen hörbar."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-05.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 95,
+  "vorgang": "Ein Kraftfahrzeug fährt mit laut aufheulendem Verbrennungsmotor am Brauhaushof vorbei, gefolgt vom Läuten einer Signalgloche.",
+  "woran": "Am eindeutigen Klang eines beschleunigenden Automotors sowie modernen Reifengeräuschen auf der Straße.",
+  "stoert": "Nein, die Geräusche eines modernen Verbrennungsmotors passen exakt in die Zeit um 1970."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-06.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 85,
+  "vorgang": "Eine Person geht langsam über den Hof.",
+  "woran": "Im Hintergrund ist ein dumpfes, kontinuierliches Stadt- und Verkehrsbrummen zu hören, wie es für ein modernes urbanes Umfeld typisch ist.",
+  "stoert": "Es gibt keine offensichtlichen Störgeräusche oder Anachronismen."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-07.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Eine dampfbetriebene Brauanlage oder Dampfmaschine ist im Hof in Betrieb, lässt unter großem Druck Dampf ab und betätigt schließlich eine Dampfpfeife.",
+  "woran": "Das charakteristische, laute Zischen von entweichendem Wasserdampf, das mechanische Klappern einer Dampfmaschine und der Sound einer klassischen Dampfpfeife.",
+  "stoert": "Es sind keine anachronistischen Geräusche zu hören."
+ },
+ {
+  "durchgang": 1,
+  "datei": "probe-08.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Ein Pferdefuhrwerk fährt über Kopfsteinpflaster, während im Hintergrund eine industrielle Dampfpfeife ertönt und ein Schienenfahrzeug quietscht.",
+  "woran": "Das schrille Quietschen von Rädern auf Schienen, eine tiefe Dampfpfeife, Pferdehufe auf Kopfsteinpflaster sowie das Schlagen einer Turmuhr zeugen vom späten 19. Jahrhundert.",
+  "stoert": "Keine offensichtlichen Anachronismen zu hören."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-01.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 85,
+  "vorgang": "Eine Person trägt mühsam eine schwere Last über den Pflasterboden des Hofes.",
+  "woran": "An den schweren Schritten auf Kopfsteinpflaster, dem angestrengten Atmen und Keuchen sowie der absoluten Stille ohne jeglichen Zivilisations- oder Maschinenlärm.",
+  "stoert": "Nein, die Geräuschkulisse wirkt durchgehend authentisch für das Spätmittelalter."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-02.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 85,
+  "vorgang": "Eine einzelne Person geht langsam mit festem Schritt über das Pflaster des ruhigen Brauhaushofs.",
+  "woran": "Die reinen Schrittgeräusche von Lederschuhen auf Stein ohne jegliche industrielle Hintergrundgeräusche, Dampfmaschinen oder Verkehrslärm.",
+  "stoert": "Keine unpassenden Geräusche hörbar."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-03.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 85,
+  "vorgang": "Ein pferdegezogener Holzfragen poltert über das Kopfsteinpflaster des Brauhaushofs, während im Hintergrund Kirchenglocken läuten und Fässer bewegt werden.",
+  "woran": "Hufgeklapper auf Pflastersteinen, das hölzerne Rumpeln von Wagenrädern und Fässern, Kirchenglocken sowie die kurze Lauten- oder Zupfmusik am Anfang.",
+  "stoert": "Nein, alle hörbaren Elemente fügen sich stimmig in das Jahr 1600 ein."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-04.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 90,
+  "vorgang": "Eine Person geht langsam über den Hof eines Brauhauses. Im Hintergrund ist das ruhige, dumpfe Kulissengeräusch einer modernen Stadt zu hören.",
+  "woran": "Am kontinuierlichen, tiefen Grollen von fernem Straßenverkehr und Motorengeräuschen im Hintergrund sowie den Schritten auf befestigtem Grund.",
+  "stoert": "Es sind keine offensichtlichen Anachronismen zu hören."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-05.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 95,
+  "vorgang": "Ein Kraftfahrzeug fährt mit aufheulendem Motor durch den Brauhaus-Hof, begleitet von einem hellen Glocken- oder Signal-Läuten.",
+  "woran": "Das deutliche Geräusch eines modernen Verbrennungsmotors (Aufheulen und Vorbeifahren eines Autos) sowie das Rollen von Reifen.",
+  "stoert": "Keine offensichtlichen Anachronismen zu hören."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-06.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 90,
+  "vorgang": "Im Brauhaushof herrscht eine ruhige Atmosphäre, während im Hintergrund der alltägliche Stadt- und Straßenverkehr zu hören ist.",
+  "woran": "Am kontinuierlichen, tieffrequenten Hintergrundrauschen von entfernt vorbeifahrenden Kraftfahrzeugen und modernem Stadtlärm.",
+  "stoert": "Keine störenden Anachronismen wahrnehmbar."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-07.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Im Brauhaus wird eine dampfbetriebene Maschine bedient, bei der mehrfach unter lautem Zischen Dampf abgelassen wird.",
+  "woran": "Der typische Klang von zischendem Hochdruckdampf, metallischen Dampfmechanismen und einer lauten Dampfpfeife.",
+  "stoert": "Nein, das gesamte Klangbild passt hervorragend zur Industrialisierung um 1884."
+ },
+ {
+  "durchgang": 2,
+  "datei": "probe-08.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Eine Dampflokomotive fährt nah am Brauhaus vorbei, während jemand ein frisches Bier eingeschenkt bekommt und genießt.",
+  "woran": "Das deutliche Pfeifen und Zischen einer Dampflokomotive sowie das Schienengeräusch der Eisenbahnräder in Kombination mit Kirchenglocken.",
+  "stoert": "Nein, alle Geräusche passen sehr gut in die Hochzeit der Industrialisierung um 1884."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-01.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 90,
+  "vorgang": "Es herrscht eine ruhige Atmosphäre im Hof. Man hört lediglich den Wind und das dumpfe Hintergrundbrummen einer modernen Stadt.",
+  "woran": "An dem tiefen, stetigen Straßenverkehrs- und Stadtbrummen im Hintergrund sowie den typischen modernen Umgebungsgeräuschen.",
+  "stoert": "Keine störenden Anachronismen erkennbar."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-02.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 1,
+  "sicher": 85,
+  "vorgang": "Eine einzelne Person geht langsam durch den ruhigen, windigen Innenhof.",
+  "woran": "Zu hören sind lediglich leises Windrächeln und hallende Einzelschritte auf Stein; es fehlen jeglicher Motorenlärm, Dampfmaschinen oder industrielle Hintergrundgeräusche.",
+  "stoert": "Keine unpassenden Geräusche hörbar."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-03.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 2,
+  "sicher": 90,
+  "vorgang": "Ein Pferdefuhrwerk fährt über das Kopfsteinpflaster in den Brauereihof, während Holzfässer bewegt werden und im Hintergrund Kirchenglocken läuten.",
+  "woran": "Das Geräusch von Pferdehufen auf Kopfsteinpflaster, das Poltern eines Holzwagens, das Hantieren mit Holzfässern sowie eine kurze Renaissance-Melodie (Laute/Flöte) und Kirchenglocken.",
+  "stoert": "Nein, alle hörbaren Elemente passen stimmig in die Frühe Neuzeit um 1600."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-04.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 90,
+  "vorgang": "Eine Person geht langsam durch den ruhigen Brauhaushof, während im Hintergrund die Umgebungsgeräusche der Stadt zu hören sind.",
+  "woran": "Am kontinuierlichen, dumpfen Straßen- und Verkehrslärm (Motoren und Reifenrollen) im Hintergrund sowie dem Schrittklang moderner Schuhe auf festem Untergrund.",
+  "stoert": "Nein, die Geräuschkulisse fügt sich stimmig in das Jahr 1970 ein."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-05.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 95,
+  "vorgang": "Ein Kraftfahrzeug fährt hochtourig am Hof des Brauhauses vorbei, und eine elektrische Signalglocke läutet.",
+  "woran": "Das deutliche Motorgeräusch eines vorbeifahrenden Verbrennungsmotors sowie das Schallen einer elektrischen Glocke.",
+  "stoert": "Keine offensichtlichen Unstimmigkeiten vorhanden."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-06.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 4,
+  "sicher": 90,
+  "vorgang": "Eine Person geht langsam über den ruhigen Innenhof des Brauhauses.",
+  "woran": "Das dumpfe, durchgehende Hintergrundbrummen von entferntem Straßenverkehr und moderner Anlagentechnik sowie das Geräusch von festen Schuhen auf Asphalt bzw. Pflaster.",
+  "stoert": "Keine störenden Anachronismen vorhanden."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-07.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "In der Brauerei wird eine dampfbetriebene Anlage gereinigt oder in Betrieb genommen, wobei unter hohem Druck Dampf abgelassen wird.",
+  "woran": "An den deutlichen Geräuschen von Hochdruckdampf, einer schrillen Dampfpfeife und dem rhythmischen Klappern und Zischen einer Dampfmaschine.",
+  "stoert": "Nein, das gesamte Klangbild passt hervorragend zu den dampfbetriebenen Industriebrauereien Ende des 19. Jahrhunderts."
+ },
+ {
+  "durchgang": 3,
+  "datei": "probe-08.wav",
+  "modell": "gemini-3.6-flash",
+  "epoche": 3,
+  "sicher": 95,
+  "vorgang": "Draußen fährt eine Dampflokomotive mit lauter Dampfpfeife vorbei, während im Hof ein Getränk eingeschenkt wird.",
+  "woran": "Das charakteristische Pfeifen und Zischen einer Dampflokomotive sowie das Rollen von Eisenrädern auf Schienen sind typisch für das späte 19. Jahrhundert.",
+  "stoert": "Keine auffälligen Anachronismen; alle Geräusche passen gut in die Zeit um 1884."
+ }
+]
