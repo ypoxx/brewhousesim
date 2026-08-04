@@ -16,9 +16,20 @@ ausliefert, und meldet `(Fassung geprueft)`.
 
 | Datei | was sie tut |
 |---|---|
-| `linie.mjs` | Byte fuer Byte die Vorbild-Hand (`preis-kritik-w5/linie-vorbild.mjs` = `rueckkopplung-r3/linie.mjs`), plus zweierlei, das das SPIEL nicht aendert: (1) je Michaeli wird `BRAUHAUS.preis.taxe()` und die Sichtlage jedes `preis:festlege:*`-Knopfes mitgeschrieben, (2) `WILL=1` tauscht die Festlegungsregel gegen „nimm die teuerste zulaessige, lass die Angebote stehen" — die Hand des Kritikers (`festhand.mjs`). Ohne `WILL` ist sie das Vorbild. |
+| `linie.mjs` | Byte fuer Byte die Vorbild-Hand (`preis-kritik-w5/linie-vorbild.mjs` = `rueckkopplung-r3/linie.mjs`), plus zweierlei, das das SPIEL nicht aendert: (1) je Michaeli wird `BRAUHAUS.preis.taxe()` und die Sichtlage jedes `preis:festlege:*`-Knopfes mitgeschrieben, (2) `WILL=1` tauscht die Festlegungsregel gegen „nimm die teuerste zulaessige, lass die Angebote stehen" — die Hand des Kritikers (`festhand.mjs`); `WILL=2` spielt die Vorbild-Linie vollstaendig und nimmt zusaetzlich die billigste Festlegung, die sie bezahlen kann. Ohne `WILL` ist sie Byte fuer Byte das Vorbild. |
 | `auswerten.py` | zaehlt, was Auflage 4 zaehlt: Festlegungen je Partie, Michaelitage ohne bezahlbare Festlegung, Michaelitage mit leerer Reihe, und je Karte die Jahre, in denen sie zu haben war. |
-| `bild/` | die zwoelf Seiten von `ueberlauf.mjs` (vier Epochen mal drei Aufloesungen) und sechs Michaelitafeln aus einzelnen Jahren. |
+| `bild/` | die zwoelf Seiten von `ueberlauf.mjs` (vier Epochen mal drei Aufloesungen), sechs Michaelitafeln aus einzelnen Jahren und vier Chronikseiten. PNG, per `.gitignore` nicht im Repo. |
+
+## Ergebnisse (`.json.gz`, mit `zcat` zu lesen)
+
+| Datei | was drinsteht |
+|---|---|
+| `nach-e{1..4}-{A,B,C}.json.gz` | zwoelf Laeufe der **unveraenderten Vorbild-Hand**, 400 Wochen, auf dem Stand vor der letzten Karte. Je Epoche Ziffer fuer Ziffer identisch. |
+| `end-e1-{A,B,C}.json.gz`, `end-e{2,3,4}-A.json.gz` | vier weitere Laeufe derselben Hand auf dem **allerletzten** Stand (mit der Pfruende in 1350). Ziffer fuer Ziffer dieselben Zahlen. |
+| `vorher-will-e{1..4}.json.gz` | die Hand, die Festlegungen WILL, **vor** dem Bau (`WILL=1`). |
+| `endwill-e{1..4}.json.gz` | dieselbe Hand **nach** dem Bau. |
+| `endwill2-e{1..4}.json.gz` | die Hand, die das Haus fuehrt UND ihre Amtszeit nutzt (`WILL=2`). |
+| `ueberlauf.json.gz` | zwoelf Bildschirmseiten, jede Stelle, an der Text ueber seinen Kasten laeuft. Aus `pr-*`: **null**. |
 
 Die rho-Zahlen dieses Berichts kommen **nicht** von `linie.mjs`, sondern vom
 **unveraenderten** `preis-kritik-w5/linie-vorbild.mjs` (ZUSTAENDIGKEIT 16: am
@@ -38,6 +49,7 @@ python3 werkbank/schuss/rueckkopplung-r3/auswerten.py /tmp/pn5/nach-e?-?.json
 # Auflage 4: die Hand, die Festlegungen WILL
 for e in 1 2 3 4; do
   WILL=1 HAFEN=8899 node werkbank/schuss/preis-w5b/linie.mjs $e 400 /tmp/pn5/nachher-will-e$e.json
+  WILL=2 HAFEN=8899 node werkbank/schuss/preis-w5b/linie.mjs $e 400 /tmp/pn5/nachher-will2-e$e.json
 done
 python3 werkbank/schuss/preis-w5b/auswerten.py /tmp/pn5
 
