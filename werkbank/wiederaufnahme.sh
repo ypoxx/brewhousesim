@@ -45,8 +45,27 @@ if [ "$OFFEN" -gt 0 ]; then
 else
   ok "nichts liegt herum"
 fi
+# ZUERST HOLEN, DANN VERGLEICHEN. Bis zum 4. August verglich diese Stelle HEAD
+# nur gegen die LOKALE Remote-Referenz. Nach einem Container-Reset, der einen
+# alten Klon zurueckbringt, ist die genauso alt wie der Baum — das Skript
+# meldete dann "origin ist auf Stand", waehrend origin zwei Commits VORAUS war.
+# In der Nacht zum 4.8. sah es deshalb so aus, als waeren die Reparatur von
+# messstand.sh und das fertige Urteil DER PREIS verloren; beide lagen laengst
+# auf origin. Wer daraufhin neu baut, macht die Arbeit doppelt — oder
+# ueberschreibt sie. Ein Holen kostet hier 14 Sekunden.
+[ $NUR_PRUEFEN -eq 1 ] || git fetch -q origin "$ZWEIG" 2>/dev/null || true
 VORAUS=$(git rev-list --count "origin/$ZWEIG..HEAD" 2>/dev/null || echo '?')
-[ "$VORAUS" = "0" ] && ok "origin ist auf Stand" || weh "$VORAUS Commit(s) noch nicht gepusht"
+ZURUECK=$(git rev-list --count "HEAD..origin/$ZWEIG" 2>/dev/null || echo '?')
+if [ "$VORAUS" = "0" ] && [ "$ZURUECK" = "0" ]; then
+  ok "origin ist auf Stand"
+elif [ "$ZURUECK" != "0" ] && [ "$ZURUECK" != "?" ]; then
+  weh "origin ist $ZURUECK Commit(s) VORAUS — der Baum ist alt, nicht origin"
+  echo "      → git fetch origin $ZWEIG && git reset --hard origin/$ZWEIG"
+  [ "$VORAUS" != "0" ] && [ "$VORAUS" != "?" ] && \
+    echo "      ACHTUNG: dazu $VORAUS eigene(r) Commit(s), die origin nicht hat — erst sichern"
+else
+  weh "$VORAUS Commit(s) noch nicht gepusht"
+fi
 
 # ------------------------------------------------- 3 · verwaiste Git-Sperre lösen
 if [ -f .git/index.lock ] && ! pgrep -x git >/dev/null 2>&1; then

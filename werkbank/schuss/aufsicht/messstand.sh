@@ -100,6 +100,6 @@ if ist_richtig; then
 fi
 
 echo "MESSSTAND FEHLGESCHLAGEN: Hafen $HAFEN liefert NICHT $SHA aus." >&2
-echo "  Erwartet md5 $SOLL fuer $PROBE" >&2
+echo "  Erwartete Marke: $SHA" >&2
 echo "  Nimm einen freien Hafen: $0 $WAS <anderer-hafen>" >&2
 exit 1
