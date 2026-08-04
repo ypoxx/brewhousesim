@@ -414,4 +414,153 @@ console.log(`E${ep}/${STIL}: ${reihe.length} W (${reihe[0] && reihe[0].jahr}-${s
   + `Kasse ${Math.min(...kassen)}-${Math.max(...kassen)} KENNZAHL ${rk.length ? Math.min(...rk).toFixed(2) + '-' + Math.max(...rk).toFixed(2) : '—'} ueber ${rk.length} J `
   + `Sudtaten ${sudtaten.length} verfahren=${JSON.stringify(schluss.sud && schluss.sud.verfahren)} `
   + `fest=${JSON.stringify(schluss.sud && schluss.sud.fest)} Fehler ${fehler.length}`, abgebrochen || '');
+
+/* ======================================================================
+   DER ANGRIFF AUFS SIEGEL
+
+   Gekauft ist mit der Maus (oben, in der laufenden Partie). Jetzt wird auf
+   JEDEM Weg versucht, zurueckzukommen:
+     1  Maus auf jede andere Karte derselben Achse
+     2  die beiden Umstellknoepfe des KESSELZETTELS (der zweite Weg, an dem
+        ein Kritiker dieses Laufs schon zu milde war)
+     3  Tastatur (kern/kopf.js kennt nur Leertaste/Eingabe auf `weiter`)
+     4  den gesperrten Knopf ENTSPERREN und ein synthetisches Klickereignis
+        schicken — einmal el.click(), einmal dispatchEvent(MouseEvent)
+     5  danach echte Maus auf den entsperrten Knopf
+     6  Zustand direkt umschreiben (BRAUHAUS.sud.zustand() gibt Z heraus)
+   Nach jedem Versuch: verfahren, fest, und was am Schirm steht.
+   ====================================================================== */
+const angriff = { epoche: ep, versuche: [], siegel: null };
+
+async function standSud() {
+  return await seite.evaluate(() => {
+    const z = window.BRAUHAUS.sud.zustand();
+    return { verfahren: JSON.parse(JSON.stringify(z.verfahren)),
+             fest: JSON.parse(JSON.stringify(z.fest)),
+             gewaehlt: [...document.querySelectorAll('.sud-karte.gewaehlt .knopf')]
+               .map(e => e.innerText.trim().replace(/\s+/g, ' ')),
+             siegelzeilen: [...document.querySelectorAll('.sud-siegelzeile')]
+               .map(e => e.innerText.trim().replace(/\s+/g, ' ')) };
+  });
+}
+
+await sudAuf();
+angriff.siegel = await standSud();
+
+const festSchluessel = Object.keys(angriff.siegel.fest || {});
+for (const fs2 of festSchluessel) {
+  const achse = fs2.split(':')[0], opt = fs2.split(':')[1];
+  const geschwister = (await sudBild())
+    .filter(b => b.zug.startsWith('sud:' + achse + ':') && b.zug !== 'sud:' + achse + ':' + opt);
+
+  /* 1 — Maus auf jede andere Karte derselben Achse */
+  for (const g of geschwister) {
+    await sudAuf();
+    const vor = await standSud();
+    const l = await lage(g.zug);
+    const ok = await klick(g.zug, 160);
+    const nach = await standSud();
+    angriff.versuche.push({ weg: '1 Maus auf Geschwisterkarte', achse, ziel: g.zug,
+      knopf: { aus: g.aus, soll: g.soll, grund: g.grund, verdeckt: g.verdeckt, hit: g.hit, text: g.text },
+      lage: l, geklickt: ok, vorher: vor.verfahren[achse], nachher: nach.verfahren[achse],
+      festNach: nach.fest, zurueck: vor.verfahren[achse] !== nach.verfahren[achse] });
+  }
+
+  /* 2 — die beiden Umstellknoepfe des KESSELZETTELS */
+  for (const zk of ['sud:zettel-wechsel-frei', 'sud:zettel-wechsel-kauf', 'sud:zettel-wechsel-frei2']) {
+    const vor = await standSud();
+    const l = await lage(zk);
+    if (!l) { angriff.versuche.push({ weg: '2 Kesselzettel', achse, ziel: zk, fehlt: true }); continue; }
+    const ok = await klick(zk, 160);
+    const nach = await standSud();
+    angriff.versuche.push({ weg: '2 Kesselzettel', achse, ziel: zk, lage: l, geklickt: ok,
+      vorher: vor.verfahren[achse], nachher: nach.verfahren[achse], festNach: nach.fest,
+      zurueck: vor.verfahren[achse] !== nach.verfahren[achse],
+      verfahrenVor: vor.verfahren, verfahrenNach: nach.verfahren });
+  }
+
+  /* 3 — Tastatur */
+  {
+    const vor = await standSud();
+    await seite.keyboard.press('Space');
+    await ruhe(200);
+    const nach = await standSud();
+    angriff.versuche.push({ weg: '3 Tastatur (Leertaste)', achse, vorher: vor.verfahren[achse],
+      nachher: nach.verfahren[achse], zurueck: vor.verfahren[achse] !== nach.verfahren[achse] });
+  }
+
+  /* 4/5 — entsperren und synthetisch klicken, dann echte Maus */
+  for (const g of geschwister) {
+    await sudAuf();
+    const vor = await standSud();
+    const erg = await seite.evaluate((z) => {
+      const el = document.querySelector('[data-zug="' + z + '"]');
+      if (!el) return { fehlt: true };
+      const warAus = !!el.disabled;
+      el.disabled = false; el.removeAttribute('aria-disabled');
+      el.setAttribute('data-soll-aus', '0'); el.removeAttribute('data-aus-grund');
+      let a = null, b = null;
+      try { el.click(); a = 'el.click() gelaufen'; } catch (e) { a = 'Fehler ' + e; }
+      try {
+        el.disabled = false;
+        el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+        b = 'MouseEvent gelaufen';
+      } catch (e) { b = 'Fehler ' + e; }
+      return { warAus, a, b };
+    }, g.zug);
+    let nach = await standSud();
+    const synth = { weg: '4 entsperrt + synthetischer Klick', achse, ziel: g.zug, erg,
+      vorher: vor.verfahren[achse], nachher: nach.verfahren[achse],
+      zurueck: vor.verfahren[achse] !== nach.verfahren[achse] };
+    /* 5 — echte Maus auf den entsperrten Knopf, ehe neu gezeichnet wird */
+    const l2 = await seite.evaluate((z) => {
+      const el = document.querySelector('[data-zug="' + z + '"]');
+      if (!el) return null;
+      el.disabled = false; el.removeAttribute('aria-disabled');
+      const r = el.getBoundingClientRect();
+      return { x: r.left + r.width / 2, y: r.top + r.height / 2, aus: !!el.disabled };
+    }, g.zug);
+    if (l2) { await seite.mouse.click(l2.x, l2.y); await ruhe(200); }
+    nach = await standSud();
+    synth.nachEchterMaus = nach.verfahren[achse];
+    synth.zurueckEchteMaus = vor.verfahren[achse] !== nach.verfahren[achse];
+    angriff.versuche.push(synth);
+  }
+
+  /* 6 — Zustand direkt umschreiben (kein Weg der Maus, aber ein Weg) */
+  {
+    const vor = await standSud();
+    const erg = await seite.evaluate((a, o) => {
+      const z = window.BRAUHAUS.sud.zustand();
+      const alt = z.verfahren[a];
+      z.verfahren[a] = o;
+      window.BRAUHAUS.sende('zeichne', { grund: 'probe' });
+      return { alt, gesetzt: z.verfahren[a] };
+    }, achse, geschwister.length ? geschwister[0].zug.split(':')[2] : opt);
+    await ruhe(300);
+    const nach = await standSud();
+    angriff.versuche.push({ weg: '6 Zustand direkt umgeschrieben (Konsole, keine Maus)', achse,
+      erg, vorher: vor.verfahren[achse], nachher: nach.verfahren[achse],
+      zurueck: vor.verfahren[achse] !== nach.verfahren[achse] });
+    /* wieder herstellen */
+    await seite.evaluate((a, o) => { window.BRAUHAUS.sud.zustand().verfahren[a] = o;
+      window.BRAUHAUS.sende('zeichne', { grund: 'probe' }); }, achse, vor.verfahren[achse]);
+  }
+}
+
+/* Und noch ein paar Wochen weiter: haelt es auch dann? */
+for (let w = 0; w < 6; w++) {
+  await klick('fuhre:wie-vorige', 60); await klick('fuhre:abschicken', 100);
+  if (!(await klick('weiter', 120))) break;
+}
+await sudAuf();
+angriff.nachSechsWochen = await standSud();
+const bild2 = await sudBild();
+angriff.knoepfeNachher = bild2.map(b => ({ z: b.zug, a: b.aus ? 1 : 0, s: b.soll, g: b.grund, h: b.hit ? 1 : 0, p: b.preis, t: b.text }));
+
+fs.writeFileSync(ZIEL.replace(/\.json$/, '-angriff.json'), JSON.stringify(angriff, null, 1));
+const zurueck = angriff.versuche.filter(v => v.zurueck || v.zurueckEchteMaus);
+console.log(`ANGRIFF E${ep}: ${angriff.versuche.length} Versuche, ZURUECK GEKOMMEN: ${zurueck.length}`);
+zurueck.forEach(v => console.log('   !! ' + v.weg + ' ' + (v.ziel || '') + ' ' + v.vorher + ' -> ' + (v.nachher || v.nachEchterMaus)));
+
 await browser.close();

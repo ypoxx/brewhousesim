@@ -1138,9 +1138,53 @@
      Das Tor ist nicht weggeworfen: es ist jetzt der Klang, mit dem der
      Nachbar ein Haus ABLOEST und UEBERNIMMT — dort ist es an seiner Stelle,
      denn dann wechselt drueben wirklich ein Tor den Besitzer. */
-  var NACHBAR_DATEI = altNeu('bau1', 'bau4');
-  var NACHBAR_DAUER = 3.2;
-  var NACHBAR_PAUSE = 4.5;
+  /* DRITTER ANLAUF — WELLE 6, AUFLAGE 4, und der Grund steht in einer DATEI.
+     Stand nach Welle 5: das Ohr bejaht den fremden Hof in 1350 und verneint
+     ihn in 1600, 1884 und 1970. Zwei Messungen dieser Runde erklaeren das,
+     und keine von beiden liegt an der Mischung:
+
+     1. `nachbar1.mp3` — das Tor von 1350 bis 1884 — war eine TROETE.
+        Einzeln vorgelegt, ohne Dateinamen: "Troete / Trillerpfeife
+        (Sekunde 0-1) · Tuerschliessen — Zeit: 20. oder 21. Jahrhundert."
+        Der zweite Anlauf oben ist also nicht an der Idee gescheitert,
+        sondern an der Probe: eine Troete vor einem zuschlagenden Tor ist
+        fuer ein Ohr eine HUPE an einem Fahrzeug — und genau als "abfahrende
+        Fuhre" ist das Zeichen damals gemeldet worden. Die Datei ist neu
+        erzeugt (jetzt: "Quietschen und Knarren einer Holztuer · Zuschlagen
+        einer schweren Holztuer — zeitlos") und bleibt beim Ablosen.
+     2. Das Zeichen selbst lief auf `bau1`/`bau4`, also auf DERSELBEN Datei
+        wie `stadt:bau` (das eigene Bauen), `preis:fertig`, `gegner:bauen`
+        und `gegner:aufstocken`. Einzeln vorgelegt heisst `bau1`
+        "rhythmisches Saegen, Feilen oder Schmirgeln von Hand". Das ist
+        richtig und trotzdem nutzlos: gefragt wird nach einem FREMDEN Hof,
+        und zwei Hoefe, die dasselbe Geraeusch machen, sind fuer ein blindes
+        Ohr ein Hof.
+
+     Das Zeichen bekommt deshalb eine EIGENE Datei, die kein anderer Eintrag
+     ruft: `drueben1`/`drueben4`. Was einen Hof fremd macht, sind nicht die
+     Werkzeuge, sondern die LEUTE — zwei Stimmen, die einander etwas zurufen,
+     zu weit weg, um die Worte zu verstehen. Der eigene Hof hat keine Stimme,
+     und eine undeutliche Zurufe verraet kein Jahrhundert.
+
+     Abstand und Dauer sind ebenfalls gemessen, nicht geschaetzt. Am
+     Mitschnitt der acht Vorher-Aufnahmen gezaehlt
+     (`werkbank/schuss/klang-w6/nachbarzahl.py`), wie oft das Zeichen mit
+     4,5 s Sperre ueberhaupt anschlug:
+
+         1350  4 Nachbarzuege -> 3 Zeichen   (das Ohr BEJAHT)
+         1600  2 Nachbarzuege -> 1 Zeichen   (verneint)
+         1884  3 Nachbarzuege -> 2 Zeichen   (verneint)
+         1970 13 Nachbarzuege -> 4 Zeichen   (verneint)
+
+     In 1884 lagen die Zuege bei 3,54 / 7,56 / 11,06 s — der mittlere fiel
+     unter die Sperre. 3,4 s laesst ihn durch und bleibt trotzdem hinter der
+     Dauer des Zeichens, sodass sich zwei Zeichen nie ueberlagern koennen
+     (das war der Grund fuer die Sperre und der bleibt). In 1600 handelt der
+     Nachbar im ganzen Fenster nur zweimal, 1,5 s auseinander; dort hilft
+     keine Sperre, dort muss das eine Zeichen tragen. */
+  var NACHBAR_DATEI = altNeu('drueben1', 'drueben4');
+  var NACHBAR_DAUER = 3.4;
+  var NACHBAR_PAUSE = 3.4;
 
   function nachbarhof(w, epoche, wann) {
     var ctx = w.ctx;

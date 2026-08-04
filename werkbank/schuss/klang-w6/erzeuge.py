@@ -57,18 +57,34 @@ GERAEUSCH = {
     #  erzeugt einen VORGANG. Die Wand steht ohnehin in kern/ton.js
     #  (`baueWand`, Tiefpass + kurzer Nachschlag); der Prompt darf sie nicht
     #  auch noch beschreiben, sonst nimmt sie ihm den Platz weg.
+    #  DRITTER ANLAUF. Der zweite hat die STIMMEN endlich geliefert — aber als
+    #  "JUBELN und Rufen von Menschen, 21. Jahrhundert". "Shouting and calling
+    #  to one another" liest die Gegenstelle als Menge im Stadion. Es sind
+    #  ZWEI Leute bei der Arbeit, kein Publikum; und was sie tun, muss neben
+    #  ihnen stehen, sonst fuellt der Jubel die ganze Probe.
+    #  VIERTER ANLAUF. Der dritte begann mit einer "lauten EXPLOSION /
+    #  KANONENSCHUSS, Sekunde 0-1, 20. Jahrhundert" — die gespaltene
+    #  Feuerholzscheit ist der Gegenstelle zum Schuss geraten. Jedes harte
+    #  Schlagwort ("crack", "split", "hard") holt einen Knall. Es bleiben die
+    #  Stimmen und das Leiseste, was ein Hof hergibt.
     "drueben1": (
-        "A crowded timber yard full of men at work: several workmen shouting "
-        "and calling to one another across the yard, their words not clear, "
-        "while one saws a plank with a long hand saw, another hammers pegs "
-        "with a wooden mallet, and a heavy cask is rolled over the ground.",
-        7, 0.55),
+        "Two men are talking to each other across a yard, too far away for "
+        "the words to be made out: one calls something over, the other "
+        "answers, they go back and forth. Slow footsteps on gravel, and a "
+        "wooden barrel shifted along the ground. "
+        "No bang, no explosion, no gunshot, no crowd, no cheering, "
+        "no music.", 7, 0.6),
 
+    #  VIERTER ANLAUF. Der dritte kam als reines "Schmieden am Amboss" ohne
+    #  jede Stimme zurueck: Hammer und Kette haben die zwei Leute verdraengt.
+    #  Also stehen die Stimmen vorn und das Werkzeug hinten.
     "drueben4": (
-        "A busy factory yard in 1970: workmen shouting and calling to one "
-        "another over the noise, their words not clear, a hammer striking a "
-        "steel plate again and again, a chain hoist clanking as it lifts, and "
-        "an empty steel drum set down hard on concrete.", 7, 0.55),
+        "Two men are talking to each other across a factory yard, too far "
+        "away for the words to be made out: one calls something over, the "
+        "other answers, they go back and forth. Behind them a metal hammer "
+        "taps steadily and a chain rattles. "
+        "No bang, no explosion, no crowd, no cheering, no music, "
+        "no radio.", 7, 0.6),
 
     # "Klaenge: Menschliche Schrei- und Ruflaute / KAMPFGESCHREI · Klirren von
     #  METALL- UND WAFFENAUFEINANDERTREFFEN · Schmerzenstoehnen — Zeit: Antike
@@ -94,12 +110,19 @@ GERAEUSCH = {
     # ZWEITER ANLAUF. Der erste kam als "Klopfen auf Holz · Knarren einer
     #  Holztuer" zurueck: der Tisch und der Krug am Ende des Prompts haben
     #  den Handschlag verdraengt. Jetzt steht nur noch die Hand darin.
+    #  DRITTER ANLAUF. Der zweite kam als "FINGERSCHNIPSEN" zurueck: ein
+    #  einzelner kurzer Schlag ist fuer die Gegenstelle ein Schnipsen. Also
+    #  nicht EIN Schlag, sondern das ganze Haendeschuetteln mit Stoff.
+    #  VIERTER UND LETZTER ANLAUF. Bisher: "Klopfen auf Holz" (1),
+    #  "Fingerschnipsen" (2), "Mischen von SPIELKARTEN, 21. Jahrhundert" (3).
+    #  Traegt auch dieser nicht, wird die alte Probe zurueckgeholt und der
+    #  Fehlschlag im Bericht genannt — eine Probe, die einen Anachronismus
+    #  einfuehrt, ist keine Verbesserung.
     "handschlag": (
-        "Two open hands clapped hard together in a single firm handshake: one "
-        "loud flat slap of palm against palm, the grip shaken twice with a "
-        "creak of leather, and a friendly flat pat on the back. "
-        "No wood, no table, no door, no knocking, no paper, no voices, "
-        "no music.", 4, 0.8),
+        "The sound of two people clapping their hands together once, loudly, "
+        "skin on skin, and then rubbing their palms together twice. "
+        "No cards, no shuffling, no paper, no snapping, no clicking, "
+        "no wood, no voices, no music.", 4, 0.7),
 
     # "Klaenge: RASSELGERAEUSCH (Schuetteln einer Rassel oder Maraca) ·
     #  Holzklacken — zeitlos." Keine einzige Muenze. Die Probe traegt in
@@ -109,13 +132,20 @@ GERAEUSCH = {
     #  zurueck — das GIESSEN in den Beutel am Ende ist fuer die Gegenstelle
     #  ein Schuetteln. Jetzt faellt jede Muenze einzeln, und es wird nichts
     #  geschuettet und nichts eingefuellt.
+    #  DRITTER ANLAUF. Zweimal kam "Rassel / Schellen" zurueck, obwohl weder
+    #  geschuettet noch geschuettelt wurde: mehrere Muenzen kurz nacheinander
+    #  SIND fuer die Gegenstelle eine Rassel. Also nur noch EINE Muenze auf
+    #  einmal, mit Pause dazwischen.
+    #  VIERTER UND LETZTER ANLAUF. Dreimal kam "Rassel / Schellen / Gloeckchen"
+    #  zurueck, auch als nur noch EINE Muenze mit Pause dazwischen fiel.
+    #  Letzter Versuch mit dem Gegenstand statt dem Vorgang; sonst bleibt die
+    #  alte Probe, und der Fehlschlag steht im Bericht.
     "muenzen": (
-        "Heavy silver coins dropped one after another onto a hard wooden "
-        "table top from a small height: each coin strikes with a bright "
-        "metallic ping, spins briefly on its edge with a rising ring and "
-        "settles flat, eight coins in all, unhurried. "
-        "No pouring, no shaking, no rattle, no bag, no purse, no bells, "
-        "no voices, no music.", 6, 0.85),
+        "A silver coin spinning on a hard stone floor: it wobbles faster and "
+        "faster with a rising metallic whirr and comes to rest flat with a "
+        "final tap. Then quiet. Then one more coin does the same. "
+        "No bells, no jingle bells, no sleigh bells, no rattle, no shaking, "
+        "no chimes, no voices, no music.", 6, 0.85),
 
     # "Klaenge: Schritte auf Holz oder festem Boden · Klopfen / Schliessen
     #  eines Holzgegenstandes — kann aus jedem Jahrhundert stammen."
@@ -138,6 +168,15 @@ GERAEUSCH = {
 
 
 def mach(name):
+    """Erzeugt die Probe neu und hebt JEDEN Anlauf einzeln auf.
+
+    Die erste Fassung dieses Werkzeugs schrieb nur den allerersten Stand nach
+    alt/ und ueberschrieb danach jeden Anlauf mit dem naechsten. Beim dritten
+    Versuch an `drueben4` war damit der ZWEITE weg — und ausgerechnet der war
+    der beste ("Rufen von Menschen"), waehrend der dritte keine Stimme mehr
+    enthielt. Wer drei Anlaeufe braucht, muss alle drei noch haben, sonst
+    kann er den besten nicht mehr waehlen.
+    """
     prompt, dauer, treue = GERAEUSCH[name]
     ziel = ZIEL / (name + ".mp3")
     if ziel.exists():
@@ -145,6 +184,10 @@ def mach(name):
         alt = ALT / (name + ".alt.mp3")
         if not alt.exists():
             shutil.copy(ziel, alt)
+        n = 1
+        while (ALT / ("%s.%02d.mp3" % (name, n))).exists():
+            n += 1
+        shutil.copy(ziel, ALT / ("%s.%02d.mp3" % (name, n)))
     r = subprocess.run([sys.executable, str(WERKZEUG), "geraeusch",
                         "--prompt", prompt, "--out", str(ziel),
                         "--dauer", str(dauer), "--treue", str(treue)],
