@@ -420,7 +420,51 @@ Gegenprobe zur Erklärung.
 Jahre unter 1×: **1 von 14** in beiden 1600-Läufen (1612, 0,67×) gegen 0 von 14
 vorher.
 
-*(1884 und 1970 werden noch durch die Sperre gemessen.)*
+**1884, ein Lauf durch die Sperre:** **+0,168 / +0,346 / +0,393** — Ziffer für
+Ziffer der Stand aus `MESSLATTE.md`. Unverändert.
+
+**1970, ein Lauf durch die Sperre:**
+
+| Schnitt | Spearman | Stand vorher |
+|---|---|---|
+| 12 Braujahre | **+0,699** | +0,427 |
+| 13 Braujahre | +0,637 | +0,154 |
+| 14 Braujahre | +0,653 | +0,275 |
+
+**+0,699 ist ein Tausendstel unter der Latte.** Eine solche Zahl darf niemand
+mit „hält" abhaken, und ich habe sie deshalb nicht abgehakt, sondern
+zugeordnet.
+
+## Die Gegenprobe: wessen Zahl ist das?
+
+Ich habe einen Hafen gebaut, der den **heutigen** Arbeitsbaum ausliefert —
+mit `stil/grund.css` in seinem neuen Stand, mit `kern/ton.js`, mit allem —,
+und in dem **nur meine fünf Dateien** auf `05af148` zurückgesetzt sind, den
+Stand, an dem der blinde Kritiker gemessen hat
+(`scratchpad/sudohne.sh`, Marke geprüft, Dateien per md5 gegen
+`/tmp/messstand/05af148/` bestätigt). Damit ist genau eine Sache verschieden:
+meine Nacharbeit.
+
+| 1970, 400 Wochen, durch die Sperre | 12 J | 13 J | 14 J |
+|---|---|---|---|
+| heutiger Baum **mit** meiner Nacharbeit | +0,699 | +0,637 | +0,653 |
+| heutiger Baum **ohne** meine Nacharbeit (SUD auf `05af148`) | **+0,699** | **+0,637** | **+0,653** |
+| Stand des Kritikers am Commit `05af148` | +0,427 | +0,154 | +0,275 |
+
+**Ziffer für Ziffer identisch. DER SUD hat an dieser Zahl keinen Anteil.** Die
+Verschiebung von +0,427 auf +0,699 ist zwischen `05af148` und heute in einer
+anderen Datei entstanden. Der wahrscheinlichste Kandidat steht in
+`gauntlet/MESSLATTE.md` selbst: der Knopfboden
+`#buehne .knopf { min-width: 24px; min-height: 24px }`, der seit heute
+unterhalb der Entwurfsleinwand **jeden Knopf des Spiels** vergrößert und damit
+jedes Brett, jede Platzordnung der STADT und damit jede Klickfolge der
+Messhand. Ich behaupte es nicht — ich habe nur ausgeschlossen, dass es an mir
+liegt, und lege die Zahl daneben.
+
+**Für die Aufsicht, weil es dringend ist:** nach der neuen Drei-Schnitte-Regel
+steht 1970 bei zwölf Braujahren auf **+0,699**, ein Tausendstel unter dem Riss,
+und 1350 auf **+0,762**, also gerissen. Zwei von vier Epochen stehen damit an
+oder über der Latte, und beide Male nicht wegen dieses Stücks.
 
 ## Die vier Auflagen — Vorprobe unter Fremdlast
 
