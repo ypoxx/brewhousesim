@@ -1015,6 +1015,27 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
      dort klebt nichts, weil es nichts zu rollen gibt. */
   .fu-tafel .fu-sorten { min-height: max(60px, calc(var(--s) * 60)); }
   .fu-brett.fu-tafel { overflow-y: auto; }
+
+  /* --- Die Sortenzeile wird zweispaltig statt zweizeilig ---------------
+     Eine Sorte stand in zwei Zeilen uebereinander: oben Name und Planzahl,
+     darunter die Kosten und daneben die Stellknoepfe. Bei 12 px sind das
+     15 px + 24 px (Knopfboden) = 39 px je Sorte, bei vier Sorten 164 px in
+     einem Kasten, der davon 122 hat — die vierte Sorte war nicht mehr zu
+     sehen, und mit ihr ihre beiden Stellknoepfe.
+
+     Die Stellknoepfe stehen jetzt RECHTS NEBEN beiden Textzeilen statt
+     unter der ersten. Damit ist die Zeile so hoch wie der Knopf und nicht
+     mehr Text PLUS Knopf: 30 px statt 39. Gewonnen: 36 px auf vier Sorten,
+     und die vierte steht wieder im Bild. Verloren: nichts — es ist
+     dasselbe in einer anderen Anordnung. */
+  .fu-tafel .fu-sorte { align-items: stretch; }
+  .fu-tafel .fu-sorte-kopf { grid-column: 1; grid-row: 1; }
+  .fu-tafel .fu-sorte-kosten { grid-column: 1; grid-row: 2; }
+  .fu-tafel .fu-stell { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+  .fu-notsud-kopf { grid-column: 1; grid-row: 1; }
+  .fu-notsud-zeile { grid-column: 1; grid-row: 2; }
+  .fu-notsud .fu-stell,
+  .fu-notsud > .knopf { grid-column: 2; grid-row: 1 / 3; align-self: center; }
   .fu-tafel .fu-kaeufe {
     position: sticky;
     bottom: calc(var(--s) * -8);
