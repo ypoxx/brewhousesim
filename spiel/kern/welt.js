@@ -408,10 +408,31 @@
         a.reihe.push(geliefert[a.schluessel] || 0);
       });
 
-      /* Der Sommer kostet: Unterhalt, Zins, Zehnt. */
-      var unterhalt = Math.round(W.haus.kasse * 0.04 + W.vorrat.plaetze * 0.6);
+      /* Der Sommer kostet: Unterhalt, Zins, Zehnt.
+         DIE EINZIGE STELLE IM SPIEL, AN DER DIE KASSE NEGATIV WERDEN KONNTE.
+         `W.zahle()` weiter oben prueft die Deckung und gibt `false` zurueck,
+         wenn die Lade nicht reicht — diese Zeile zog ungeprueft ab. Gemessen am
+         4. August 2026 (werkbank/schuss/aufsicht/kassenboden.mjs): in 1350
+         faellt der Zwischenstand auf -7 Pf, gebucht genau bei "Sommer:
+         Unterhalt und Abgaben". Wochenweise sieht man es NICHT, weil der
+         Vorgriff von DER PREIS es im selben Wochenwechsel abfaengt
+         (uhr.js:160 laesst rechneJahrAb() vor sende('jahr') laufen) — ein
+         Stueck aber, das in diesem Augenblick welt.kann() fragt, bekam eine
+         falsche Auskunft.
+         Der Unterhalt wird weiter voll erhoben, solange die Lade ihn traegt;
+         reicht sie nicht, nimmt er, was da ist, und die Kasse steht auf null
+         statt darunter. Was fehlte, steht im Protokoll — verschwiegen wird
+         nichts. Vorgeschlagen und gemessen begruendet von DER PREIS und
+         unabhaengig von dessen blindem Kritiker gefunden (Welle 5);
+         eingearbeitet von der Aufsicht, als kein Agent mehr lief. */
+      var faellig = Math.round(W.haus.kasse * 0.04 + W.vorrat.plaetze * 0.6);
+      var unterhalt = Math.min(Math.max(0, Math.floor(W.haus.kasse)), faellig);
       W.haus.kasse -= unterhalt;
       W.protokolliere({ wer: 'verfall', was: 'Sommer: Unterhalt und Abgaben', preis: -unterhalt });
+      if (faellig > unterhalt) {
+        W.protokolliere({ wer: 'verfall', misslungen: true, preis: 0,
+          was: 'Sommer: ' + W.geld(faellig - unterhalt) + ' blieben unbezahlt' });
+      }
 
       /* Bindungen laufen aus. */
       W.adressen.forEach(function (a) {
