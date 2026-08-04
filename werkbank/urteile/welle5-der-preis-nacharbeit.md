@@ -28,10 +28,12 @@ Jede rho-Zahl unten traegt diese Angabe.
 | 1 | Der zweite Zaehler zaehlt Angebote, heisst aber Festlegungen | **erledigt** |
 | 2 | Die Zahl fehlt in der offenen Tafel — also am Tag der Wahl | **erledigt** |
 | 3 | `.pr-fest` schneidet den Satz ab, der den Preis nennt | **erledigt, am Bildschirm nachgemessen: 119 → 0** |
-| 4 | Acht Amtszeiten, zwei bezahlbare Festlegungen | **gebaut, wird gemessen** |
+| 4 | Acht Amtszeiten, zwei bezahlbare Festlegungen | **erledigt: 2/2/2/4 → 4/4/3/4 Festlegungen, gemessen** |
 | 5 | Der Satz bei `preis.js:1057` nennt die Hand nicht; Chronik E4 | **erledigt** |
 
-*(Die Zeilen werden beim Abarbeiten fortgeschrieben.)*
+**Die Wellenzahl ist dabei Ziffer fuer Ziffer stehengeblieben:
++0,591 / +0,231 / +0,393 / +0,275 ueber vierzehn Michaelitage, Spannweite
+0,000 ueber drei Laeufe je Epoche, sechzehn Laeufe insgesamt.**
 
 ---
 
@@ -244,7 +246,7 @@ einzige ist, was mit dem Bau mitwandert.
 ## 6. AUFLAGE 4 — WAS GEBAUT WURDE
 
 Nicht die Steigung, sondern die Leiter (Begruendung und Gegenrechnung in
-Abschnitt 1). **`festBasis()` ist unangetastet.** Dazugekommen sind sechs
+Abschnitt 1). **`festBasis()` ist unangetastet.** Dazugekommen sind sieben
 Sprossen, in `stuecke/preis-daten.js`, jede mit `ab:` gestaffelt, damit die
 Wahl ueber die acht Amtszeiten verteilt wiederkommt statt sich in den ersten
 zwei Jahren zu erschoepfen:
@@ -252,13 +254,14 @@ zwei Jahren zu erschoepfen:
 | Epoche | neu | Anteil | ab | was sie kostet, fuer immer |
 |---|---|---|---|---|
 | 1350 | Die Marktbank auf ewig | 0,42 | 1352 | Standgeld an den Rat (`pflichtNeu`, fest) — **der Ertrag ist fest, das Standgeld waechst mit der Teuerung** |
-| 1350 | Der Jahrtag in der Pfarrkirche | 0,50 | 1357 | Jahrtag und Seelgerät an die Pfarre (`pflichtNeu`, fest) · +14 Ansehen |
-| 1600 | Die ewige Gült auf die Stadt | 0,15 | 1601 | nichts — aber das Geld ist aus dem Haus und kommt nie zurück (`ertrag` 150 fl) |
+| 1350 | **Die Pfründe im Haus** | 0,0 | 1353 | **Zufluss** (`einmal: 8`) gegen Kost und Pflege des Pfründners, ohne Ende |
+| 1350 | Der Jahrtag in der Pfarrkirche | 0,50 | 1357 | Jahrtag und Seelgerät an die Pfarre (`pflichtNeu`, fest) · +16 Ansehen · zwei Häuser gebunden |
+| 1600 | Die ewige Gült auf die Stadt | 0,15 | 1601 | nichts — aber das Geld ist aus dem Haus und kommt nie zurück (`ertrag` 45 fl) |
 | 1600 | **Der Gültbrief auf das Anwesen** | 0,0 | 1603 | **Zufluss** (`einmal: 5`) gegen eine ewige Gült, nicht ablösbar |
 | 1884 | Die Betriebskrankenkasse | 0,17 | 1885 | Beiträge (`pflichtNeu`, fest) · +14 Ansehen |
 | 1970 | Der Eintrag in die Denkmalliste | 0,085 | 1973 | Unterhalt nach Auflage (`pflichtNeu`, fest) · Wachstumsdeckel |
 
-**Der Gültbrief ist der Kern des Baus.** Der Kritiker hat selbst gezeigt, warum
+**ZWEI ZUFLUSS-KARTEN SIND DER KERN DES BAUS.** Der Kritiker hat selbst gezeigt, warum
 1970 als einzige Epoche funktioniert: „moeglich nur, weil sie mit `konzern`
 (+65.000 DM) anfaengt." 1884 hat dieselbe Karte (`aktien`). **1350 und 1600
 hatten keine** — und 1600 ist der aermste Fall von allen. Der Rentenkauf ist
@@ -266,6 +269,26 @@ der historisch exakte Gegenstand dafuer: Zins nehmen war verboten, eine Gült
 kaufen nicht, und der ganze Kredit dieser Jahrhunderte lief ueber diesen einen
 Brief. Beide Seiten liegen jetzt nebeneinander auf der Tafel — kaufen oder
 verkaufen, und beides unwiderruflich, weil eine EWIGE Gült nicht ablösbar war.
+
+Und 1350 hat seine eigene bekommen, nachdem der erste Messlauf gezeigt hat,
+dass zwei Sprossen dort nicht reichen: **Die Pfründe im Haus**. Es darf
+ausdruecklich NICHT derselbe Brief sein — die erste Regel von
+`preis-daten.js` verlangt, dass zwischen zwei Epochen nichts wiederzuerkennen
+ist ausser dem Ort. Der Rentenkauf gehoert der Ordnung des 16. Jahrhunderts.
+Das Recht des 14. hat einen eigenen, derberen Weg an Bargeld: man verkauft
+eine Pfruende. Ein alter Buerger legt sein Vermoegen auf den Tisch und isst
+dafuer am Tisch des Hauses. Der Brief lautet auf das HAUS und nicht auf den
+Mann — stirbt er, rueckt der naechste nach; deshalb ist die Last ewig und die
+Karte gehoert auf diese Tafel und nicht unter die Angebote.
+
+**Warum ueberhaupt eine Zufluss-Karte, gemessen:** mit den zwei
+Ausgabe-Sprossen allein kam 1350 von zwei auf **drei** Festlegungen und blieb
+bei elf von vierzehn Michaelitagen ohne bezahlbare Karte. Der Grund stand in
+den Zahlen: die Lade der Hand, die Festlegungen will, steht ab 1357 zwischen
+64 und 282 Pf, waehrend dieselbe Partie mit Angebotskaeufen 333 bis 498
+haelt — wer nichts kauft, erwirtschaftet nichts. Mit der Pfruende steht 1350
+bei **vier** Festlegungen. Das ist derselbe Hebel, den der Kritiker an 1970
+selbst benannt hat.
 
 **Kein bestehender Preis ist gesenkt worden.** Das ist die eine Aenderung, die
 die Wellenzahl bewegen koennte: die Vorbild-Hand greift zu, sobald eine Karte
@@ -279,6 +302,12 @@ darueber, und zwar gemessen an der Kassenreihe der Vorbild-Hand selbst:
 | `stadtguelt` | **+14 %** (510 gegen 449) | 1605 | nein |
 | `krankenkasse` | +22 % (13.000 gegen 10.692) | 1896 | nein |
 | `denkmal` | +92 % (55.000 gegen 28.705) | 1976 | nein |
+| `pfruende` · `gueltbrief` | Zufluss statt Taxe: `einmal × Jahreslast` liegt in jedem gemessenen Jahr ueber der Schwelle | — | nein |
+
+Gerechnet ist das gegen die Kassenreihe des Kritikers auf **seinem** Hafen
+(`preis-kritik-w5/vorbild-e?.json.gz`, `6b59a18`), nicht gegen meine eigene —
+und nachgemessen: die Vorbild-Hand nimmt nach dem Bau genau dieselben
+Festlegungen wie vorher (**1 / 1 / 0 / 0**).
 
 Der engste Abstand ist die Gült der Stadt mit 14 im Hundert. Das ist knapp, und
 es steht hier, statt gerundet zu werden.
@@ -331,6 +360,7 @@ Zwoelf Laeufe, drei je Epoche, sequenziell, auf dem **letzten** Stand
 | **Lauf B** | **+0,591** | **+0,231** | **+0,393** | **+0,275** |
 | **Lauf C** | **+0,591** | **+0,231** | **+0,393** | **+0,275** |
 | **Spannweite ueber drei Laeufe** | **0,000** | **0,000** | **0,000** | **0,000** |
+| **Bestaetigungslauf auf dem ALLERLETZTEN Stand** | **+0,591** ×3 | **+0,231** | **+0,393** | **+0,275** |
 | Jahre unter 1× | 0/14 | 0/14 | **1/14** | 0/14 |
 | Pearson (zum Vergleich) | +0,587 | +0,002 | +0,315 | +0,294 |
 | Kasse ueber 400 Wochen | 39–609 | 251–2.525 | 1.757–23.789 | 1.998–86.000 |
@@ -352,6 +382,17 @@ Schwelle, ab der diese Hand zugreift (Tabelle in Abschnitt 6). Was diese Hand
 nie anfasst, kann ihre Partie nicht veraendern — und genau das ist hier
 zwoelfmal nachgemessen statt behauptet.
 
+**Zur Buchfuehrung ueber die Laeufe, damit die Zahl nachstellbar ist.** Die
+zwoelf Laeufe oben liegen auf dem Stand, der alles ausser der letzten Karte
+enthaelt. Danach ist in 1350 die Pfruende dazugekommen (Begruendung in
+Abschnitt 6), und weil eine Zahl nur zaehlt, wenn sie den LETZTEN Stand misst,
+sind danach **drei weitere Laeufe fuer 1350** und **je einer fuer 1600, 1884
+und 1970** gelaufen: `+0,591 ×3 · +0,231 · +0,393 · +0,275`, Ziffer fuer
+Ziffer. Die neue Karte liegt allein im Datenblock der Epoche 1350; die drei
+anderen Epochen koennen sich davon nicht bewegen, und der Bestaetigungslauf
+zeigt, dass sie es nicht tun. **Insgesamt sechzehn Laeufe der Vorbild-Hand,
+alle sequenziell, alle mit Seitenfehler 0 und `lage` 0.**
+
 ### Eine Karte, die ich selbst zurueckgenommen habe, bevor sie gemessen war
 
 Die ewige Gült stand im ersten Ansatz auf `ertrag: 150` gegen eine Taxe von
@@ -370,6 +411,72 @@ eine Karte, die niemand nehmen kann wollen, fuellt keine Luecke. Der
 Messlauf, der auf dem ersten Ansatz schon zur Haelfte durch war, wurde
 weggeworfen und der ganze Satz neu gemessen — die Zahlen unten stehen alle auf
 demselben, letzten Stand.
+
+---
+
+## 8. AUFLAGE 4 — WAS DABEI HERAUSKOMMT, gezaehlt wie der Kritiker gezaehlt hat
+
+Zwei Haende, weil eine allein in die Irre fuehrt. Beide 400 Wochen = vierzehn
+Michaelitage, sequenziell, Saat 1350, Endstand.
+
+### (i) Die Hand des Kritikers — sie WILL Festlegungen und laesst die Angebote stehen
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Festlegungen in 14 Jahren, **vorher** | 2 | 2 | 2 | 4 |
+| Festlegungen in 14 Jahren, **nachher** | **4** | **4** | **3** | **4** |
+| Michaelitage ohne bezahlbare Festlegung, vorher | 11/14 | 12/14 | 11/14 | 8/14 |
+| Michaelitage ohne bezahlbare Festlegung, nachher | **7/14** | **8/14** | **9/14** | **7/14** |
+| Michaelitage mit **leerer** Festlegungsreihe, vorher | 0/14 | 0/14 | 0/14 | **5/14** |
+| dieselbe Zahl, nachher | 0/14 | 0/14 | 0/14 | **0/14** |
+
+**Der Befund, wegen dem der Kritiker durchgefallen waere, ist weg:** „danach
+traegt in E1 ab 1357, in E2 ab 1605 und in E3 ab 1887 JEDE Festlegungskarte
+`disabled`". In 1970 kam dazu, dass in den letzten fuenf Braujahren gar keine
+Karte mehr auf der Tafel lag — der Katalog war aufgebraucht. Beides ist
+gezaehlt behoben.
+
+**Diese Hand verarmt sich selbst, und das gehoert in den Befund.** Sie kauft
+grundsaetzlich kein Angebot, also waechst das Haus nicht; ihre Lade steht in
+1350 ab 1357 zwischen 64 und 282 Pf, waehrend dieselbe Partie mit
+Angebotskaeufen 333 bis 498 haelt. Die verbleibenden „Michaelitage ohne
+bezahlbare Festlegung" sind zum grossen Teil die Jahre unmittelbar NACH einer
+Festlegung — genau so soll ein Preis wirken.
+
+### (ii) Die Hand, die das Haus fuehrt UND ihre Amtszeit nutzt
+
+Wortgleich die Vorbild-Linie (Angebote, Sud, Fuhre — alles), nur ohne deren
+Faustregel „hoechstens 45 im Hundert der Lade": sie nimmt die billigste
+Festlegung, die das Spiel zulaesst. Das ist der Spieler, um den es geht.
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| **Festlegungen in 14 Jahren** | **4** | **4** | **3** | **4** |
+| Michaelitage MIT bezahlbarer Festlegung | 7/14 | 6/14 | 5/14 | 7/14 |
+| genommen | 1350 `vertrag` · 1354 `marktbank` · 1356 `brunnen` · 1358 `pfruende` | 1600 `reinheit` · 1602 `stadtguelt` · 1604 `hofbefreiung` · 1606 `gueltbrief` | 1884 `konvention` · 1886 `aktien` · 1888 `krankenkasse` | 1970 `privat` · 1972 `konzern` · 1974 `denkmal` · 1982 `handelsmarke` |
+| Kasse ueber 400 Wochen | 22–590 | 24–3.069 | 1.271–23.643 | 0–210.995 |
+| Seitenfehler · `lage` | 0 · 0 | 0 · 0 | 0 · 0 | 0 · 0 |
+
+**Vier von acht Amtszeiten treffen eine unwiderrufliche Wahl, und sie treffen
+sie im Abstand von zwei Jahren.** Das ist genau der Takt, den `festlegungOffen`
+vorgibt (eine je Amtszeit, acht Amtszeiten in vierzehn Jahren), und es ist der
+Stand, den der Kritiker an 1970 als den erreichbaren bezeichnet hat: „1970
+zeigt, dass es geht: dort raeumt dieselbe Hand 4 von 4 ab." Jetzt tun es drei
+von vier Epochen.
+
+**Was NICHT erreicht ist, und ich sage es selbst:** die grossen Festlegungen —
+`freikauf` 2,20 · `realrecht` 1,70 in 1350, `eigentum` 2,40 · `ratssitz`
+1,90 · `bierbann` 2,80 in 1600, `bahnvertrag` 0,75 · `marke` 0,62 in 1884 —
+bleiben in vierzehn Braujahren unerreichbar. Sie kosten das Zwei- bis
+Dreizehnfache der hoechsten Michaeli-Lade, die eine Epoche je sieht, und keine
+Zahlungsweise und keine Teuerungsbremse holt das in vierzehn Jahren ein
+(Rechnung in 1.2). Sie sind der Horizont dieses Stuecks und stehen auf der
+Tafel als vierte Karte, damit man sieht, worauf man spart — aber wer nach
+vierzehn Braujahren miszt, wird sie nie genommen sehen. Das ist eine
+Entwurfsentscheidung, keine Panne; wer sie anders will, muss den Anteil senken,
+und dann faellt die Karte in den Griff der Faustregel und bewegt die
+Wellenzahl.
+
 
 ---
 
@@ -423,3 +530,76 @@ unberuehrt.
 * **Die Kennzahl ist bei 1280×800 halb hinter dem Reiter der STADT**
   (`kern/kopf.js:127`, `left: 93%`) — KERN und STADT.
 
+
+---
+
+## 11. ABNAHME
+
+```
+node --check spiel/stuecke/preis.js         OK
+node --check spiel/stuecke/preis-daten.js   OK
+node --check spiel/stuecke/preis-zusatz.js  OK
+
+node werkbank/schuss/aufsicht/tor.mjs
+  E1: OK  jahr=1350  zuege=105  lage=0  fehler=0
+  E2: OK  jahr=1600  zuege=112  lage=0  fehler=0
+  E3: OK  jahr=1884  zuege=116  lage=0  fehler=0
+  E4: OK  jahr=1970  zuege=107  lage=0  fehler=0
+  TOR OFFEN
+
+node werkbank/schuss/aufsicht/spielprobe.mjs
+  E1: OK  60 Wochen, Jahr 1352, Kasse 48       lage 0, Fehler 0
+  E2: OK  60 Wochen, Jahr 1602, Kasse 280      lage 0, Fehler 0
+  E3: OK  60 Wochen, Jahr 1886, Kasse 4.200    lage 0, Fehler 0
+  E4: OK  60 Wochen, Jahr 1972, Kasse 50.000   lage 0, Fehler 0
+  SPIELPROBE BESTANDEN
+```
+
+Dazu **sechzehn Laeufe der Vorbild-Hand** zu 400 Wochen, **acht Laeufe** der
+beiden Festlegungs-Haende und **zwoelf Bildschirmseiten** von `ueberlauf.mjs`:
+null Seitenfehler, null Abbrueche, `BRAUHAUS.lage` = 0 in allen.
+
+**Angefasst wurden nur:** `spiel/stuecke/preis.js`,
+`spiel/stuecke/preis-daten.js`, `spiel/stil/preis-zusatz.css`.
+`spiel/index.html` und `spiel/kern/**` sind unberuehrt; kein `git`.
+
+## 12. WAS OFFEN BLEIBT — ehrlich aufgezaehlt
+
+1. **Die grossen Festlegungen bleiben in vierzehn Braujahren unerreichbar**
+   (Abschnitt 8, letzter Absatz). Sie sind der Horizont, nicht der Zug.
+2. **Die Tafel zeigt vier von bis zu sieben Karten.** Sind mehr als drei
+   zugleich bezahlbar, liegt die vierte bezahlbare nur in der Chronik
+   (Abschnitt 6). Der Grund ist Auflage 3: mehr Karten nebeneinander heisst
+   schmalere Karten, und schmalere Karten haben den Text abgeschnitten.
+3. **`kern/welt.js:412` ist weiter ungeprueft** (Abschnitt 9). KERN.
+4. **ZUSTAENDIGKEIT 17 ist in 1353 und 1603 weiter gerissen** (Abschnitt 10).
+   Von diesem Stueck aus nur zu beheben, indem die Angebotspreise fallen — und
+   die stehen im Nenner der Kennzahl.
+5. **Die Latte haengt weiter an der Laufzeit.** Bei zwoelf Michaelitagen steht
+   E1 auf +0,762 und reisst; bei vierzehn auf +0,591. Der Kritiker hat der
+   Aufsicht empfohlen, die Laufzeit in den Namen der Messlatte zu schreiben.
+   Ich schliesse mich an und habe jede Zahl dieses Berichts mit ihr versehen.
+6. **`wachstumsdeckel` ist im Kern kein Deckel, sondern eine Verguenstigung.**
+   `umsatzGewicht()` faellt damit von 0,30 auf 0,18, und der ANSCHLAG faellt
+   mit — die Angebote werden also billiger. Drei Karten dieses Stuecks
+   (`konvention`, `genossenschaft`, `privat`) benutzen ihn als STRAFE
+   („waechst nie wieder ueber seinen Bezirk hinaus"), und die neue Karte
+   `denkmal` tut es ihnen gleich. Der Befund ist aelter als dieser Bau und
+   nicht von ihm verursacht; ich habe ihn beim Nachrechnen gefunden und trage
+   ihn ein, statt ihn stehenzulassen.
+
+---
+
+## Fortschritt
+
+- [x] Urteil ganz gelesen, Belege des Kritikers nachgezaehlt (416 statt 415)
+- [x] Messstand `6b59a18` auf 8906, Geraet an +0,591 geeicht
+- [x] `BRAUHAUS.preis.taxe()` gebaut — der Griff, der dem Kritiker gefehlt hat
+- [x] AUFLAGE 1 — zweiter Zaehler zaehlt Festlegungen, Bauten stehen daneben
+- [x] AUFLAGE 2 — die Zahl steht am Michaelitag ueber der Siegelreihe
+- [x] AUFLAGE 3 — 119 `pr-*`-Ueberlaeufe → **0**, zweimal nachgemessen
+- [x] AUFLAGE 4 — sieben Sprossen, zwei davon mit Zufluss; 2/2/2/4 → 4/4/3/4
+- [x] AUFLAGE 5 — Hand im Satz, Wellenzahl-Kosten im Quelltext
+- [x] Wellenzahl: 16 Laeufe, +0,591 / +0,231 / +0,393 / +0,275, Spannweite 0,000
+- [x] TOR OFFEN, SPIELPROBE BESTANDEN, `node --check` auf allen drei .js
+- [x] Bericht laufend geschrieben
