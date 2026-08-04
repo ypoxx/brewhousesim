@@ -178,6 +178,41 @@
     return Math.max(0.15, Math.min(6, ziel / l));
   }
 
+  function spitze(buf) {
+    if (buf.__spitze !== undefined) return buf.__spitze;
+    var d = buf.getChannelData(0), n = d.length, schritt = Math.max(1, Math.floor(n / 200000));
+    var s = 0;
+    for (var i = 0; i < n; i += schritt) { var x = d[i] < 0 ? -d[i] : d[i]; if (x > s) s = x; }
+    buf.__spitze = s;
+    return s;
+  }
+
+  /* WIE LAUT DARF EINE PROBE HOECHSTENS WERDEN — WELLE 6.
+     `angleich()` kappt den Faktor bei 6. Das ist fuer Schleifen richtig, deren
+     Rohpegel dicht beieinander liegt, und es ist FALSCH fuer eine einzelne
+     Probe, die zu leise geliefert wurde: sie erreicht ihr Ziel nie, und
+     niemand sieht es — im Quelltext steht 0,55 und im Ton kommt 0,04 an.
+     Genau das ist mir in dieser Runde passiert. Im Browser nachgemessen
+     (`werkbank/schuss/klang-w6/lautheit.mjs`):
+
+         drueben1   rms 0,00722   Spitze 0,048   fuer 0,55 noetig: 76x
+         drueben4   rms 0,14058   Spitze 1,000   fuer 0,55 noetig:  3,9x
+
+     Die eine Datei des NACHBARHOF-Zeichens war also nach der Kappung bei 6
+     rund 0,043 laut und die andere 0,55 — der Faktor dreizehn zwischen 1350
+     und 1970 bei DEMSELBEN Zeichen. Das Ohr hat den Gegenzug entsprechend in
+     1970 gehoert und in 1350 nicht, und ich habe zwei Staende lang am Filter
+     und an der Sperre gedreht, wo eine Datei schlicht stumm war.
+     `hebe()` zieht deshalb auf den Zielwert, aber niemals ueber die Spitze
+     hinaus: mehr als bis knapp unter die Vollaussteuerung kann man eine Probe
+     nicht heben, ohne sie in die Bremse zu fahren. Was dann noch fehlt, fehlt
+     in der Datei und nicht im Regler. */
+  function hebe(buf, ziel, deckel) {
+    var l = lautheit(buf), s = spitze(buf);
+    if (!l || !s) return 1;
+    return Math.max(0.15, Math.min(ziel / l, (deckel || 0.9) / s));
+  }
+
   /* ======================================================================
      1 — DER KATALOG
      Ein Name aus einem Stueck -> eine Probe. Die Epoche entscheidet mit.
@@ -1259,8 +1294,20 @@
        unverstaendlich, siehe unten) und der Pegel auf 0,55 — das Doppelte
        des ersten Standes und mehr als das Doppelte des Ausgangs. Ein Zeichen,
        das nur in der leisesten Epoche durchkommt, ist kein Zeichen, sondern
-       ein Zufall. */
-    var laut = angleich(buf, 0.55);
+       ein Zufall.
+       DRITTER STAND, und er hat den eigentlichen Fehler gefunden: die 0,55
+       sind bei `drueben1` NIE ANGEKOMMEN. Die Probe kam mit einem
+       Effektivwert von 0,00722 aus dem Erzeuger — dem Zwanzigstel von
+       `drueben4` —, und `angleich()` kappt den Faktor bei 6. Das Zeichen
+       stand damit in 1350, 1600 und 1884 bei 0,043 und in 1970 bei 0,55.
+       Am Mitschnitt sieht man es: der Effektivwert der gespielten Aufnahme
+       von 1970 sprang von 0,17 auf 0,23 (die Bremse arbeitete), waehrend
+       1350 und 1600 sich um weniger als ein Zehntel bewegten.
+       Statt `angleich` steht hier jetzt `hebe()`: es zieht auf den Zielwert,
+       aber nie ueber die Spitze der Probe hinaus. Beide Dateien landen damit
+       bei einem Effektivwert um 0,13 — DASSELBE Zeichen ist in allen vier
+       Epochen gleich laut, und das war die ganze Absicht der Zeile darueber. */
+    var laut = hebe(buf, 0.30, 0.92);
     /* Der Einsatz liegt um den VORHALT hinter dem Zug — siehe oben. Und er
        ist schnell (0,08 s statt 0,22): wer erst ein Loch macht, darf nicht
        hineinschleichen, sonst ist das Loch die Auskunft und nicht der
