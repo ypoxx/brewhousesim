@@ -1,0 +1,416 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 90
+   },
+   "b": {
+    "da": true,
+    "sekunde": 18,
+    "sicher": 95
+   },
+   "c": {
+    "da": true,
+    "sekunde": 14,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e1-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 1,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1600,
+  "anachronismen": [
+   {
+    "sekunde": 15,
+    "klang": "Digitaler Wecker / Elektronisches Piepen",
+    "warum": "Ein elektronischer Wecker passt nicht in das historische Setting mit Pferdefuhrwerken, Münzgeld und Cembalomusik."
+   }
+  ],
+  "datei": "e2-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 18,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": true,
+    "sekunde": 10,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [
+   {
+    "sekunde": 14,
+    "klang": "Pfeife einer Dampflokomotive",
+    "warum": "Die Hintergrundmusik und die Handwerksgeräusche deuten auf ein Setting im Mittelalter oder der frühen Neuzeit hin. Dampflokomotiven wurden erst im 19. Jahrhundert erfunden."
+   },
+   {
+    "sekunde": 18,
+    "klang": "Mechanische Registrierkasse (Cha-Ching)",
+    "warum": "Das typische Geräusch einer mechanischen Kasse mit Klingel und aufspringender Schublade passt nicht in die Zeit vor dem späten 19. Jahrhundert."
+   }
+  ],
+  "datei": "e3-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "b": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 90
+   },
+   "c": {
+    "da": true,
+    "sekunde": 7,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [
+   {
+    "sekunde": 0,
+    "klang": "LKW-Motor / Verbrennungsmotor",
+    "warum": "Fahrzeuge mit Verbrennungsmotor gab es im Mittelalter bzw. der frühen Neuzeit noch nicht."
+   },
+   {
+    "sekunde": 6,
+    "klang": "Telefonklingeln",
+    "warum": "Das Telefon wurde erst im späten 19. Jahrhundert erfunden."
+   },
+   {
+    "sekunde": 7,
+    "klang": "Mechanische Registrierkasse (Ka-Ching)",
+    "warum": "Mechanische Kassen mit diesem typischen Klingelgeräusch stammen aus dem späten 19. Jahrhundert."
+   },
+   {
+    "sekunde": 14,
+    "klang": "Elektrische Alarmklingel / Schulgong",
+    "warum": "Elektrische Klingeln setzen ein Stromnetz voraus, das es in dieser Epoche nicht gab."
+   }
+  ],
+  "datei": "e4-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e1-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 0,
+  "anachronismen": [],
+  "datei": "e2-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [],
+  "datei": "e3-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e4-still.wav"
+ }
+]
