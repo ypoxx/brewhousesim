@@ -34,9 +34,17 @@ while [ "$(date +%s)" -lt "$ENDE" ]; do
     # Werkzeuge der Werkbank und die Gauntlet-Papiere gehoeren mit dazu: ein
     # Bauer, der sich ein Skript schreibt, legt es nach werkbank/ — das lag
     # sonst nur lokal und waere beim naechsten Container-Reset weg gewesen.
+    # werkbank/urteile GEHOERT DAZU, und das war es lange nicht. Die Laufregel
+    # sagt Buildern und Kritikern, sie sollen Teilergebnisse LAUFEND in ihre
+    # Urteils- oder Berichtsdatei schreiben, statt erst am Ende — weil Agenten
+    # mitten im Lauf sterben. Genau dieses Verzeichnis war als einziges unter
+    # werkbank/ von der Liste hier nicht gedeckt. Ein Kritiker, der zwei Stunden
+    # misst und laufend schreibt, haette bei einem Container-Reset alles
+    # verloren, waehrend die Regel ihm sagte, er sei sicher. Am 4. August von
+    # der Aufsicht bemerkt und geschlossen.
     PFADE=()
     shopt -s nullglob
-    for p in werkbank/stand.json werkbank/schuss spiel gauntlet \
+    for p in werkbank/stand.json werkbank/schuss werkbank/urteile spiel gauntlet \
              werkbank/*.py werkbank/*.mjs werkbank/*.sh; do
       [ -e "$p" ] && PFADE+=("$p")
     done

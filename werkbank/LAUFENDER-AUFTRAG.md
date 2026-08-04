@@ -215,9 +215,20 @@ Messung**, nicht als Durchfallen.
 
 **Der Veröffentlicher sichert die Builder von selbst.** `werkbank/veroeffentlichen.sh`
 nimmt alle 180 s unter derselben Sperre `werkbank/stand.json spiel gauntlet
-werkbank/schuss werkbank/*.py|mjs|sh` und pusht. Schritt (a) des Selbst-Checks
-läuft also fortlaufend — aber **ungeprüft**: der Veröffentlicher fährt kein
-Abnahmetor. Die Aufsicht fährt es trotzdem, und zwar bevor sie selbst committet.
+werkbank/schuss werkbank/urteile werkbank/*.py|mjs|sh` und pusht. Schritt (a) des
+Selbst-Checks läuft also fortlaufend — aber **ungeprüft**: der Veröffentlicher
+fährt kein Abnahmetor. Die Aufsicht fährt es trotzdem, und zwar bevor sie selbst
+committet.
+
+> **`werkbank/urteile` stand bis zum 4. August NICHT in dieser Liste** — als
+> einziges Verzeichnis unter `werkbank/`. Das ist genau die Stelle, an die die
+> Laufregel oben Builder und Kritiker schickt („Teilergebnisse **laufend** in die
+> Urteils- oder Berichtsdatei schreiben"). Ein Kritiker, der zwei Stunden misst
+> und brav laufend schreibt, hätte bei einem Container-Reset alles verloren,
+> während die Regel ihm sagte, er sei gesichert. Der Aufsicht fiel es beim
+> Selbst-Check auf, weil `welle6-die-fuhre-bau.md` nach einer Stunde immer noch
+> uncommittet dastand. Geschlossen. **Wer die Pfadliste ändert, prüft sie gegen
+> die Frage: schreibt hier jemand etwas hinein, das nur einmal entsteht?**
 
 **Eine Falle bleibt:** `pgrep -f "git fetch"` trifft die **eigene Warte-Shell**,
 deren Kommandozeile die Zeichenkette enthält. Ein toter Fetch sieht dann aus wie
