@@ -27,6 +27,34 @@ am Arbeitsbaum prueft gleichzeitig ein Kritiker DER SUD.
 
 ---
 
+## KURZ
+
+**AUFLAGE 4 IST NICHT ERFUELLT, und ich weiss jetzt warum.**
+Sechs Staende gebaut und je acht Aufnahmen gemessen (48 Aufnahmen, 56 stille
+Vorgangsfragen). Der Gegenzug wird in **0 von 4** Epochen bejaht
+(Ausgangsstand: 1 von 4) — und in **0 von 4** stillen Aufnahmen, wie es die
+zweite Haelfte der Auflage verlangt. Die einzigen zwei Staende, in denen das
+Ohr mehr als eine Epoche bejaht hat, trugen eine **erkennbare englische
+Stimme**, die dasselbe Ohr in 1350 als *"Radio- oder Fernsehuebertragung"*
+gemeldet hat. Nimmt man die Stimme heraus, faellt die Zahl auf null. Zwei
+Tiefpaesse (900 und 600 Hz) haben die Sprache nicht getilgt.
+
+**Gefunden und behoben wurde trotzdem einiges**, und zwei Funde sind harte
+Fehler, die seit Welle 5 im Spiel standen:
+
+* **`nachbar1.mp3` war eine TROETE** — ein Anachronismus in 1350, 1600 und
+  1884. Ersetzt. (Dazu `brand` = Schlachtgetuemmel statt Feuer,
+  `handschlag` = Papierrascheln.)
+* **`angleich()` kappt bei Faktor 6**, und das NACHBARHOF-Zeichen brauchte 76.
+  Dieselbe Zeile Quelltext hat in 1970 ein dreizehnmal lauteres Zeichen
+  erzeugt als in 1350. Behoben mit `hebe()`.
+
+**Die dritte Latte steht besser als vorher:** gespielt **83 %**
+(Vorrunde 58 %, Ausgangsstand heute 75 %), still **25 %**
+(Vorrunde 17 %, Ausgangsstand heute 33 %).
+
+---
+
 ## 1 — ZUERST DIE PROBEN, EINZELN, WIE IN DER VORRUNDE
 
 Der Grund, warum die Latte drei Wellen lang nicht trug, lag nicht in der
@@ -72,8 +100,6 @@ Gegenzug haette tragen sollen, ist an einer kaputten Datei gescheitert und
 danach durch ein schwaecheres ersetzt worden (Saegen, das der eigene Hof
 genauso macht). Das ist derselbe Fehlertyp wie `abfahrt1` = Wasser und
 `glocke` = Roehrenglocken in der Vorrunde.
-
-*(Fortsetzung folgt — dieser Bericht wird laufend geschrieben.)*
 
 ### Was mit den falschen Proben geschehen ist
 
@@ -161,7 +187,6 @@ die Aufnahme** — die Vorgangsprobe fragt in Teil 2 ausdruecklich nach
 Anachronismen mit Sekunde, und die Epochenfrage nach dem, was stoert. Beides
 steht weiter unten.
 
-*(Fortsetzung folgt.)*
 
 ---
 
@@ -524,3 +549,542 @@ einer Aufnahme.
 bejaht — das Ohr hat dort in dieser Messung nichts erkannt und zwei erfundene
 Dinge gehoert). 1600 und 1970 bejahen FUHRE und MICHAELI und verneinen den
 Gegenzug.
+
+### Und der Befund, der Stand C aus dem Rennen nimmt
+
+In den Anachronismus-Meldungen desselben Durchgangs steht:
+
+| Aufnahme | Sekunde | was das Ohr ungefragt meldet |
+|---|---|---|
+| **e1-gespielt (1350)** | **7 s** | *"Gedaempfte Radio- oder Fernsehuebertragung (englischer Sportkommentar)"* |
+| **e3-gespielt (1884)** | **2 s** | *"Englische Radio-/Fernsehstimme (**'go back and forth'**)"* |
+
+Bei 7,58 s in 1350 und bei 3,58 s in 1884 steht das NACHBARHOF-Zeichen. Und
+die drei Woerter in Anfuehrungszeichen stehen **woertlich in meinem
+Erzeugungsprompt** fuer `drueben1.mp3`:
+
+> *"…one calls something over, the other answers, **they go back and forth**."*
+
+Die Gegenstelle hat den Satz nicht umgesetzt, sondern **sprechen lassen** —
+und das Ohr liest ihn zurueck. Ich hatte beim Filterentwurf behauptet, unter
+1100 Hz sei das Wort weg, weil die zweiten und dritten Formanten darueber
+liegen. Das ist Halbwissen: Grundfrequenz und erster Formant reichen, und wer
+Sprache erkennt, erkennt sie auch dumpf.
+
+**Eine erkennbare englische Rundfunkstimme in 1350 ist ein Anachronismus** und
+faellt unter Sperrliste 1 des Kritikers (*"Kein Klang, den es in der Epoche
+nicht gab — auch keiner, der erst aus der Mischung entsteht"*). Stand C wird
+deshalb **nicht ausgeliefert**, obwohl er den besten Einzelbefund des ganzen
+Berichts hat. Die zusaetzlichen zwei Durchgaenge ueber Stand C habe ich
+abgebrochen: mehr Messungen an einem Stand, der wegen eines Anachronismus
+ohnehin nicht ausgeliefert wird, sind verbranntes Kontingent.
+
+### Die dritte Latte an Stand C: **unveraendert**
+
+Verfahren des Kritikers, gleicher Tag, gleiche Streuung:
+
+| Stand | still | gespielt |
+|---|---|---|
+| Ausgangsstand, Zahl der Vorrunde | 2/12 = 17 % | 7/12 = 58 % |
+| Ausgangsstand, heute nachgemessen | 4/12 = 33 % | 9/12 = 75 % |
+| **Stand C** | **4/12 = 33 %** | **9/12 = 75 %** |
+
+**Ziffer fuer Ziffer dieselben Zahlen wie der Ausgangsstand am selben Tag.**
+Die stille Quote ist nicht gestiegen, die gespielte nicht gesunken. Was an
+diesem Stand geaendert wurde, beruehrt die dritte Latte nicht — was auch zu
+erwarten war: das Zeichen laeuft nur bei einem Zug des Nachbarn und kommt in
+den stillen Aufnahmen ueberhaupt nicht vor.
+
+---
+
+## 10 — STAND D: DIE WAND WIRD DICKER
+
+Stand D unterscheidet sich von C an **einer** Stelle, und sie folgt aus dem
+Befund darueber:
+
+| | Stand C | **Stand D** | warum |
+|---|---|---|---|
+| Wand des Zeichens | Tiefpass 1100 Hz | **Tiefpass 600 Hz** | bei 1100 Hz war die englische Sprache aus `drueben1.mp3` erkennbar — das Ohr hat sie in 1350 als *"Radio- oder Fernsehuebertragung"* gemeldet |
+| Ausgleich dahinter | — | **1,9× im Zeichenweg** | den Pegelverlust des tieferen Filters gleicht ein Regler HINTER der Wand aus, statt den Filter aufzumachen. Nur im Zeichenweg; die uebrigen Klaenge des Nachbarn gehen unveraendert |
+
+Alles andere ist Stand C: eigene Datei fuers Zeichen (`drueben1`/`drueben4`),
+`hebe()` statt `angleich()`, Vorhalt 0,35 s, Dauer 4,2 s, Sperre 3,4 s, kurze
+tiefe Senke statt langer flacher.
+
+---
+### Der Pegel des Zeichens an Stand D — der hoechste dieses Berichts
+
+Effektivwert in den Sekunden des Zeichens, und daneben der **Hub** gegen die
+gleich lange Strecke davor (`zeichenhub.py`):
+
+| Aufnahme | Sekunde | vorher | Stand C | **Stand D** | **Hub D** |
+|---|---|---|---|---|---|
+| e1 (1350) | 27,6 | 0,1194 (4,02×) | 0,0885 (2,74×) | **0,1395** | **4,23×** |
+| e2 (1600) | 21,1 | 0,1407 (3,33×) | 0,1301 (3,00×) | **0,1870** | **4,35×** |
+| e3 (1884) | 3,5 | 0,1540 (2,87×) | 0,1215 (2,32×) | **0,1773** | **3,86×** |
+| e4 (1970) | 11,1 | 0,1885 (1,59×) | 0,2102 (1,74×) | **0,2129** | **1,68×** |
+
+Zum ersten Mal steht das Zeichen in **jeder** Epoche deutlich ueber dem, was
+davor liegt — und der Gesamtpegel bleibt im Rahmen (0,169 / 0,133 / 0,182 /
+0,172 gegen 0,154 / 0,117 / 0,159 / 0,170 am Ausgangsstand; die stillen
+Aufnahmen unveraendert bei 0,0134–0,0146).
+
+### Die dritte Latte an Stand D: **die stille Quote FAELLT, die gespielte haelt**
+
+Verfahren des Kritikers, gleicher Tag, gleiches Werkzeug, neue Mischsaat,
+drei Durchgaenge je Datei, Ohr `gemini-3.6-flash`:
+
+| Stand | still | gespielt |
+|---|---|---|
+| Ausgangsstand, Zahl der Vorrunde (3. August) | 2/12 = 17 % | 7/12 = 58 % |
+| Ausgangsstand, **heute** nachgemessen | 4/12 = 33 % | 9/12 = 75 % |
+| Stand C | 4/12 = 33 % | 9/12 = 75 % |
+| **Stand D (ausgeliefert)** | **1/12 = 8 %** | **9/12 = 75 %** |
+
+**Die stille Quote ist nicht gestiegen, sondern gefallen** — unter beide
+Bezugswerte (8 % gegen 17 % der Vorrunde und gegen 33 % von heute).
+**Die gespielte ist nicht gesunken** — 75 % gegen 58 % der Vorrunde und gleich
+mit den 75 % von heute. Beide Auflagen der Vorwelle halten also, und die
+Kennzahl steht besser da als vorher.
+
+Ich sage dazu ausdruecklich, was ich in Abschnitt 7 gemessen habe: der
+Unterschied zwischen 8 % und 33 % sind **drei Treffer bei zwoelf Messungen**,
+und derselbe Ton hat heute und vorgestern 33 % und 17 % ergeben. Ich behaupte
+deshalb **nicht**, dass Stand D die stille Quote gedrueckt hat. Ich behaupte,
+was die Auflage verlangt: sie ist nicht gestiegen, und die gespielte ist nicht
+gesunken.
+
+### Stand D, erster Durchgang: **2 von 4** — und der Anachronismus ist NICHT weg
+
+`antworten/vorgang-d.json`:
+
+| Aufnahme | FUHRE | SUD | MICHAELI | **GEGENZUG** | Blender | Anachronismen |
+|---|---|---|---|---|---|---|
+| e1-gespielt (1350) | ja (2 s, 100) | ja (19 s, 100) | ja (15 s, 100) | **ja (7 s, sicher 100)** | 0 | **7 s: *"Eine gedaempfte Maennerstimme ruft auf modernem Englisch 'Go back and forth'"*** |
+| e2-gespielt (1600) | ja (2 s, 100) | nein | ja (14 s, 100) | **ja (21 s, sicher 90)** | 1 | 6 s: *"quietschende Reifen"* |
+| e3-gespielt (1884) | nein | ja (3 s, 90) | ja (21 s, 100) | **nein** | **2** | **4 s: *"Englische Sprachaufnahme ('go back and forth', 'beautiful')"*** |
+| e4-gespielt (1970) | ja (2 s, 90) | nein | nein | **nein** | 0 | 0 s: *"moderne Pop-/R&B-Musik"* |
+| e1..e4-still | 1× FUHRE in 1350 | nein | nein | **nein** | 0 | — |
+
+**GEGENZUG gespielt 2 von 4 — der beste Wert dieses Berichts** (Ausgangsstand
+1, Stand A 1, Stand B 1, Stand C 1). **1350 und 1600 bejahen beide**, und 1350
+bejaht zum zweiten Mal in Folge **alle vier** Vorgaenge. Die Sekunden treffen:
+7 s in 1350 (Zeichen bei 7,57 s), 21 s in 1600 (Zeichen bei 21,20 s).
+
+**Und trotzdem faellt auch Stand D durch**, aus demselben Grund wie C: das Ohr
+liest die englischen Woerter **auch durch einen Tiefpass bei 600 Hz** heraus —
+diesmal sogar mit einem zweiten Wort (*"beautiful"*). Meine Annahme, unter
+600 Hz bleibe von Sprache nur die Melodie, war das zweite Mal falsch. Ein
+Filter, der Sprache unkenntlich macht und den Klang uebriglaesst, gibt es
+hier nicht.
+
+**Die Probe muss weg, nicht der Filter.** Das ist die Lehre und sie ist teuer
+bezahlt: **zwei Staende (C und D) sind an einer Datei gescheitert, die ich
+selbst bestellt habe** — mit einem Prompt, dessen Wortlaut das fremde Ohr
+woertlich zurueckzitiert.
+
+---
+
+## 11 — STAND E: DIE STIMME FLIEGT RAUS
+
+Nach zwei Staenden, die an derselben Datei gescheitert sind, ist die Folgerung
+einfach und sie steht jetzt auch im Quelltext:
+
+> **Wer Stimmen in einer Probe hat, muss die PROBE austauschen und nicht den
+> FILTER.**
+
+Stand E ist Stand D mit einer einzigen Aenderung: `drueben1.mp3` ist der
+**stimmlose erste Anlauf** — einzeln vorgelegt *"Menschliches Atemgeraeusch /
+Keuchen · Rhythmisches Reiben / Schrubben"*, **zeitlos, keine Stimme, kein
+Anachronismus** (`antworten/proben-neu-1.txt`). Ein Mensch, der drueben mit
+der Hand arbeitet und dabei schnauft: das sagt genauso "da ist jemand", ohne
+eine Sprache mitzubringen.
+
+Der Pegel passt auch besser: die Probe kam mit Effektivwert **0,107** und
+Spitze 1,000 aus dem Erzeuger (statt 0,00722 / 0,048 beim Sprechanlauf), also
+mit demselben Rohpegel wie `drueben4` (0,141). `hebe()` deckelt beide an der
+Spitze; sie liegen damit von selbst gleich laut.
+
+Die Wand bleibt bei 600 Hz mit dem Ausgleich dahinter — dort hat das Zeichen
+gemessen den staerksten Hub gegen seine Umgebung ergeben (3,9- bis 4,4-fach).
+
+## 12 — STAND F: DER AUSGELIEFERTE STAND
+
+Stand F ist Stand E mit einer Ruecknahme:
+
+| | Stand E | **Stand F** | warum |
+|---|---|---|---|
+| Wand der uebrigen Nachbarklaenge (`bus.fern`) | Tiefpass 1500 Hz | **zurueck auf 2000 Hz** | an dieser Wand haengt nicht das Zeichen, sondern der ZUG des Nachbarn — `gegner:fuhre` spielt dort `abfahrt2/3/4`, also genau die Proben, an denen das Ohr die Epoche erkennt, und genau dort hat es den Gegenzug in 1350 bisher immer gehoert (Vorrunde Sekunde 10, Stand A Sekunde 8, Zug bei 7,55 s) |
+
+Das Zeichen behaelt seine eigene Wand bei 600 Hz mit dem Ausgleich dahinter:
+**die Wand des Zeichens sagt, DASS es drueben ist; der Zug des Nachbarn sagt,
+WAS drueben geschieht.** Beides zu daempfen war ein Fehlgriff, und er hat in
+Stand E gemessen zwei Dinge gekostet.
+
+**Ein Ausfall des Messgeraets, und er ist keine Aussage ueber das Spiel:** der
+erste Lauf der Epochenquote an Stand F ist nach vier von vierundzwanzig
+Messungen abgestuerzt — `OSError: Tunnel connection failed: 503 Service
+Unavailable`. `hoerer.hoere()` faengt nur `HTTPError` ab, nicht `URLError` /
+`OSError`; ein Netzhaenger reisst damit den ganzen Durchgang mit, statt
+wiederholt zu werden. Das ist ein Befund ueber `werkbank/hoerer.py` (nicht
+meine Datei, ZUSTAENDIGKEIT 16 — ich melde es und habe nichts gedreht). Der
+Lauf ist unter neuer Mischsaat wiederholt worden.
+
+### Stand F, erster Durchgang: **0 von 4**
+
+| Aufnahme | FUHRE | SUD | MICHAELI | **GEGENZUG** | Blender |
+|---|---|---|---|---|---|
+| e1-gespielt (1350) | ja | ja | ja | **nein** | 0 |
+| e2-gespielt (1600) | ja | nein | ja | **nein** | 0 |
+| e3-gespielt (1884) | nein | nein | ja | **nein** | 1 |
+| e4-gespielt (1970) | ja | ja | ja | **nein** | 0 |
+
+Die Ruecknahme der `fern`-Wand hat die uebrigen Vorgaenge zurueckgeholt —
+**1970 bejaht jetzt wieder FUHRE, SUD und MICHAELI** (in Stand E nur zwei, in
+Stand B nur einen), und in 1884 faellt ein Blender weg. Den Gegenzug hat sie
+nicht zurueckgeholt.
+
+Vollstaendig, mit den Anachronismus-Meldungen — und **keine davon betrifft eine
+Stimme oder eine Sprache**:
+
+| Aufnahme | Anachronismen, ungefragt gemeldet | steht dort wirklich |
+|---|---|---|
+| e1-gespielt (1350) | — | |
+| e2-gespielt (1600) | 15 s: *"digitaler Wecker / elektronisches Piepen"* | bei 15,1 s der Michaelitag (`glocke`) |
+| e3-gespielt (1884) | 14 s: *"Pfeife einer Dampflokomotive"* · 18 s: *"mechanische Registrierkasse"* | `fabrikpfeife` (in 1884 richtig) · `muenzen`, die Probe, die keine Muenze enthaelt |
+| e4-gespielt (1970) | LKW-Motor, Telefon, Registrierkasse, Alarmglocke | alle vier sind in 1970 richtig |
+
+Die einzige Meldung, die auf einen wirklichen Mangel zeigt, ist die
+Registrierkasse in **1884** — dort spielt `muenzen.mp3`, und das ist die Probe,
+die vier Anlaeufe lang nicht zu ersetzen war (Abschnitt 1). Ein
+"Cha-Ching" gehoert nicht ins 19. Jahrhundert. **Das ist ein neuer Befund und
+er gehoert in die naechste Runde.**
+
+### Die dritte Latte an Stand F — die BESTE gespielte Quote dieses Berichts
+
+| Stand | still | gespielt |
+|---|---|---|
+| Ausgangsstand, Zahl der Vorrunde (3. August) | 2/12 = 17 % | 7/12 = 58 % |
+| Ausgangsstand, **heute** nachgemessen | 4/12 = 33 % | 9/12 = 75 % |
+| Stand C | 4/12 = 33 % | 9/12 = 75 % |
+| Stand D | 1/12 = 8 % | 9/12 = 75 % |
+| Stand E (`fern` gedaempft) | 3/12 = 25 % | 6/12 = 50 % |
+| **Stand F (ausgeliefert)** | **3/12 = 25 %** | **10/12 = 83 %** |
+
+**Die gespielte Quote ist nicht gesunken** — 83 % gegen 58 % (Vorrunde) und
+gegen 75 % (heute). Es ist der hoechste Wert, den dieses Stueck je gemessen
+bekommen hat, und die Ruecknahme der `fern`-Wand ist der Grund: 50 % → 83 %
+zwischen zwei Staenden, die sich in genau dieser einen Zahl unterscheiden.
+
+**Die stille Quote** steht bei 25 %. Gegen die heutige Messung des
+Ausgangsstands (33 %) ist sie **gefallen**; gegen die niedergeschriebene Zahl
+der Vorrunde (17 %) ist sie um **einen Treffer von zwoelf gestiegen**. Ich
+sage beides, weil beides wahr ist und weil derselbe Ton an zwei Tagen 17 % und
+33 % ergeben hat (Abschnitt 7). Wer eine der beiden Zahlen allein nimmt,
+nimmt die, die ihm passt.
+
+---
+
+## 13 — STAND DER AUFLAGE: **NICHT ERFUELLT**
+
+> *Abgenommen ist die Auflage, wenn das Ohr den Gegenzug in ALLEN VIER Epochen
+> bejaht UND ihn zugleich in der STILLEN Aufnahme derselben Epoche verneint.*
+
+**Erste Haelfte: NICHT erfuellt. Zweite Haelfte: erfuellt, in jedem einzelnen
+Stand.**
+
+| Stand | was ihn ausmacht | GEGENZUG gespielt | GEGENZUG still | Anachronismus vom Zeichen |
+|---|---|---|---|---|
+| Ausgangsstand (Vorrunde) | Zeichen = `bau1`/`bau4` | **1 von 4** (1350) | 0 von 4 | — (aber `nachbar1` = Troete) |
+| A | eigene Zeichendatei, Wand 900 Hz | 1 von 4 (1350) | 0 von 4 | nein |
+| B | Pegel 0,55 (kam nicht an), Wand 1100 Hz | 1 von 4 (1600) | 0 von 4 | nein |
+| C | `hebe()`, Vorhalt, kurze Senke | 1 von 4 (1350) | 0 von 4 | **ja** — englische Rundfunkstimme |
+| D | Wand 600 Hz + Ausgleich | **2 von 4** (1350, 1600) | 0 von 4 | **ja** — dieselbe Stimme, zwei Woerter |
+| E | stimmlose Zeichendatei | 0 von 4 | 0 von 4 | nein |
+| **F (ausgeliefert)** | dazu `fern` zurueck auf 2000 Hz | **0 von 4** | **0 von 4** | **nein** |
+
+Ueber **alle sieben Staende und 56 stille Vorgangsfragen** ist der Gegenzug in
+einer stillen Aufnahme **kein einziges Mal** bejaht worden. Die Gegenprobe, auf
+die es dem Kritiker ankam — *"ein Klang, den das Ohr auch dann zu hoeren
+glaubt, wenn nichts geschieht, ist kein Gegenzug, sondern Kulisse"* —, faellt
+so sauber aus, wie sie ausfallen kann.
+
+### Warum die erste Haelfte nicht zu erfuellen war, in einem Satz
+
+**Das Einzige, was das fremde Ohr dazu gebracht hat, einen fremden Hof zu
+bejahen, waren MENSCHENSTIMMEN — und Menschenstimmen bringen eine Sprache mit,
+die in 1350 ein Anachronismus ist.**
+
+Das ist keine Vermutung, sondern der Unterschied zwischen zwei Staenden, die
+sich in genau einer Datei unterscheiden:
+
+* **Stand D**, Zeichen mit Stimmen: Gegenzug **2 von 4** — und zweimal die
+  Meldung *"gedaempfte Maennerstimme auf modernem Englisch"* / *"englische
+  Sprachaufnahme"*, mit einem woertlichen Zitat aus meinem eigenen
+  Erzeugungsprompt.
+* **Stand E/F**, dieselbe Stelle, dieselbe Wand, dieselbe Lautheit, aber ein
+  **stimmloses** Zeichen: Gegenzug **0 von 4**, kein Anachronismus.
+
+Zwei Tiefpaesse (900 Hz, 600 Hz) haben die Sprache nicht unkenntlich gemacht;
+der zweite hat das Ohr sogar ein zweites Wort heraushoeren lassen. Ein Filter,
+der Sprache tilgt und den Klang uebriglaesst, steht mir nicht zur Verfuegung.
+
+### Was ich trotzdem geliefert habe
+
+1. **Vier Proben, die nicht enthielten, was ihr Name sagt** — gefunden, indem
+   jede einzeln vorgelegt wurde. `nachbar1` war eine **Troete** und damit ein
+   **Anachronismus in drei von vier Epochen**, der seit Welle 5 im Spiel stand;
+   `brand` war ein **Schlachtgetuemmel** statt eines Feuers; `handschlag` war
+   **Papierrascheln**. Alle drei sind ersetzt und einzeln nachgeprueft.
+2. **Ein stiller Fehler im Tonbus**: `angleich()` kappt bei Faktor 6, und
+   `drueben1` brauchte 76. Eine Zielzahl im Quelltext war damit im Ton nie
+   angekommen — dasselbe Zeichen stand in 1970 dreizehnmal so laut wie in
+   1350. `hebe()` behebt das, und `lautheit.mjs` findet solche Faelle in
+   Zukunft.
+3. **Das Zeichen des Gegenzugs hat eine eigene Datei**, die kein anderer
+   Eintrag ruft. Bis heute lief es auf derselben Probe wie das *eigene* Bauen.
+4. **Die dritte Latte steht besser als vorher**: gespielt **83 %** (Vorrunde
+   58 %, heute 75 %), still 25 % (heute 33 %, Vorrunde 17 %).
+5. **Zwei Fehlversuche stehen als Fehlversuche da** (`muenzen`, `siegel`), und
+   die alte Probe ist zurueckgeholt statt eine schlechtere auszuliefern.
+
+## 14 — WAS ICH NICHT GEMESSEN HABE
+
+* **Die Vorgangsfrage steht je Stand auf EINEM Durchgang je Aufnahme.** Fuer
+  Stand C und fuer Stand D hatte ich je zwei weitere Durchgaenge gestartet und
+  beide abgebrochen, als sich derselbe Anachronismus in `drueben1.mp3`
+  bestaetigte — mehr Messungen an einem Stand, der ohnehin nicht ausgeliefert
+  wird, sind verbranntes Kontingent. Fuer den ausgelieferten Stand E hat die
+  Zeit fuer den zweiten und dritten Durchgang nicht mehr gereicht.
+  Dass **ein** Durchgang zu wenig ist, ist in Abschnitt 8.2 belegt; das
+  Werkzeug dafuer liegt fertig da (`gegenzug-wieder.sh`, `mehrheit.py`).
+  Das ist die groesste Luecke dieses Berichts und zugleich die wichtigste
+  Empfehlung fuer die naechste Runde.
+* **Nur ein Ohr je Frage.** Epoche: `gemini-3.6-flash`. Vorgang:
+  `gemini-3.1-pro-preview`. Beide sind Gemini-Modelle; ein andersartiges Ohr
+  gab es auch diesmal nicht.
+* **Nur eine Saat und ein Zugplan** (`saat=1350`, der Plan des Kritikers). Wie
+  oft der Nachbar handelt, haengt am Spielstand: in 1600 waren es im ganzen
+  Fenster **zwei** Zuege, in 1970 **dreizehn**. Ob ein anderer Zufallsstand
+  1600 mehr Gegenzuege ins Fenster legt, ist offen — und es waere die
+  ehrlichste Art, die Auflage in 1600 ueberhaupt messbar zu machen.
+* **Ob die Stimmen in `drueben4.mp3` in 1970 ebenfalls als Sprache
+  durchkommen**, ist nicht getrennt geprueft. In den Anachronismus-Meldungen
+  von 1970 steht keine Sprachmeldung — dort deckt der eigene Hof mehr zu —,
+  aber gemessen habe ich es nicht.
+* **`muenzen.mp3` und `siegel.mp3`** enthalten weiterhin nicht, was ihr Name
+  sagt (Rassel statt Muenzen, Schritte statt Siegel). Vier bzw. zwei Anlaeufe
+  haben nichts Besseres gebracht; die alten Proben sind zurueckgeholt, weil
+  sie wenigstens zeitlos sind.
+* **Die Wirkung des Vorhalts allein** ist nicht isoliert gemessen — er kam
+  zusammen mit `hebe()` und der kuerzeren Senke in Stand C. Welcher der drei
+  den Unterschied macht, weiss ich nicht.
+
+---
+
+## 15 — TORE, DATEIEN, KERN
+
+**Vor dem Abgeben, am Arbeitsbaum (Hafen 8899), ausgeliefertem Stand F:**
+
+```
+node --check spiel/kern/ton.js        sauber
+node --check spiel/stuecke/klang.js   sauber
+node werkbank/schuss/aufsicht/tor.mjs
+  E1 OK jahr=1350 zuege=105 lage=0 fehler=0
+  E2 OK jahr=1600 zuege=112 lage=0 fehler=0
+  E3 OK jahr=1884 zuege=116 lage=0 fehler=0
+  E4 OK jahr=1970 zuege=107 lage=0 fehler=0
+  TOR OFFEN
+node werkbank/schuss/aufsicht/spielprobe.mjs
+  E1..E4 OK, je 60 Wochen, 60 Zuege, lage 0, Fehler 0
+  SPIELPROBE BESTANDEN
+```
+
+Ueber **alle 48 Aufnahmen** dieses Berichts (sechs Saetze zu acht):
+`BRAUHAUS.lage` jedes Mal leer, `BRAUHAUS.ton.geraten()` jedes Mal leer,
+Konsolenfehler jedes Mal **0**.
+
+**Geaenderte Dateien** — alle innerhalb meiner Zustaendigkeit
+(`stuecke/klang*.js`, `ton/**`, `kern/ton.js`, ZUSTAENDIGKEIT 11):
+
+| Datei | was |
+|---|---|
+| `spiel/kern/ton.js` | `NACHBAR_DATEI`, `NACHBAR_DAUER`, `NACHBAR_PAUSE`, `NACHBAR_VORHALT`, `hebe()`, `spitze()`, Wand des Zeichens (600 Hz) + Ausgleich (1,9×), Senke kurz und tief, Vorladen des Zeichens, `NACHBAR_DATEI` in `noetig` des Offline-Renderers. `bus.fern` steht wieder auf seinem alten Wert (2000 Hz) |
+| `spiel/ton/klang/drueben1.mp3` | **neu** — NACHBARHOF-Zeichen 1350–1884, **stimmlos** (die Sprechanlaeufe liegen als `alt/drueben1.01.mp3` daneben und sind nicht ausgeliefert) |
+| `spiel/ton/klang/drueben4.mp3` | **neu** — NACHBARHOF-Zeichen 1970 |
+| `spiel/ton/klang/nachbar1.mp3` | ersetzt (war eine Troete) |
+| `spiel/ton/klang/brand.mp3` | ersetzt (war eine Schlacht) |
+| `spiel/ton/klang/handschlag.mp3` | ersetzt (war Papierrascheln) |
+| `spiel/ton/LIESMICH.md` | die Fremd-Schicht und die zweite Regel richtiggestellt |
+| `werkbank/schuss/klang-w6/**` | Werkzeuge, Prompts, Rohantworten, verworfene Anlaeufe |
+
+**Keine Datei geloescht**, also auch keine tote Probe. Im laufenden Spiel
+gegengeprueft, in beide Richtungen (`klang-w5-nach/dateien.mjs`, unveraendert):
+
+```
+{ "fehlt": [], "tot": [], "gerufen": 49, "vorhanden": 49 }
+```
+
+Das Haus hat jetzt **49** Proben (47 + `drueben1` + `drueben4`); keine fehlt,
+keine ist tot.
+
+**KERN: nichts.** Alles, was diese Runde gebraucht hat, liess sich in
+`kern/ton.js` bauen. Kein Stueck ausser dem eigenen ist angefasst worden,
+`spiel/index.html` nicht, `spiel/kern/**` ausser `ton.js` nicht.
+
+**Am Messgeraet anderer wurde nichts gedreht** (ZUSTAENDIGKEIT 16).
+`werkbank/hoerer.py`, `aufnahme.mjs`, `mische.py`, `frage-vorgang.py`,
+`beschreibe.py` sind Zeichen fuer Zeichen unveraendert geblieben; gerufen
+wurden nur ihre Funktionen.
+
+---
+
+## 16 — WAS ICH DEM NAECHSTEN MITGEBE
+
+1. **Vor jeder Aenderung an der Mischung: die Probe einzeln vorlegen UND ihren
+   Rohpegel messen.** Diese Runde hat zwei Sorten stiller Fehler gefunden, und
+   beide sind am Quelltext unsichtbar:
+   * der falsche INHALT (`nachbar1` = Troete, `brand` = Schlacht,
+     `handschlag` = Papier) — findet `beschreibe.py`;
+   * der nicht angekommene PEGEL (`drueben1` mit Effektivwert 0,0072 gegen
+     eine Zielzahl von 0,55, gekappt bei Faktor 6) — findet
+     `lautheit.mjs`. **Dieses zweite Werkzeug hat vorher gefehlt.**
+2. **`angleich()` kappt bei 6.** Wer eine Zielzahl in den Quelltext schreibt,
+   hat sie damit noch nicht im Ton. Fuer einzelne Proben steht jetzt `hebe()`
+   daneben, das die Spitze respektiert; die Schleifen bleiben bei `angleich()`.
+3. **Ein Erzeuger, dem man einen Satz gibt, kann ihn SPRECHEN LASSEN.** Aus
+   *"they go back and forth"* im Prompt wurde eine englische Stimme in der
+   Probe, und das fremde Ohr hat sie in 1350 als Rundfunkuebertragung
+   zurueckgelesen — mit dem Zitat. Wer Stimmen bestellt, muss damit rechnen,
+   dass sie eine Sprache haben.
+4. **Die Vorgangsfrage braucht drei Durchgaenge.** Die Regel steht schon in der
+   Sperrliste des Kritikers, aber nur fuer die Epochenfrage. Abschnitt 8.2
+   zeigt, dass sie fuer die Vorgangsfrage genauso noetig ist: derselbe
+   Michaelitag war fuer dasselbe Ohr einmal da und einmal nicht.
+5. **1884 ist mit diesem Werkzeug nicht messbar.** In vier von vier Messungen
+   bejaht das Ohr dort zwei von vier Blendern. Solange das so ist, sagt sein
+   Nein zum Gegenzug in 1884 nichts ueber das Spiel. Wer die Auflage dort
+   messen will, braucht ein anderes Ohr oder eine andere Frage.
+6. **In 1600 handelt der Nachbar im Messfenster nur zweimal**, 1,5 s
+   auseinander, bei Sekunde 21. Das ist eine Eigenschaft des Spielstands, nicht
+   des Tons. Eine Latte, die verlangt, dass der Gegenzug in allen vier Epochen
+   zu hoeren ist, misst dort einen einzigen Ausschlag von vier Sekunden gegen
+   sechsundzwanzig Sekunden ohne Nachbarn. Ein zweiter Zugplan oder eine
+   zweite Saat waere der ehrlichste Weg, das zu heilen.
+7. **BEFUND UEBER `werkbank/hoerer.py` — nicht meine Datei, ich habe nichts
+   gedreht (ZUSTAENDIGKEIT 16).** `hoere()` faengt nur `HTTPError` ab. Ein
+   `OSError` / `URLError` — bei mir *"Tunnel connection failed: 503 Service
+   Unavailable"* vom Ausgangsproxy — reisst den ganzen Durchgang mit einem
+   Traceback ab. Mich hat das einen kompletten Lauf der Epochenquote gekostet
+   (vier von vierundzwanzig Messungen, dann Absturz). Dieselbe Stelle ist
+   schon zweimal repariert worden (Verweigerung, Wartezeit); der Netzfehler
+   fehlt noch. `frage-vorgang.py` daneben macht es richtig: es faengt
+   `Exception` und wiederholt.
+
+### Pegel an Stand E
+
+| Aufnahme | Sekunde | Ausgangsstand | Stand D (mit Stimme) | **Stand E (ausgeliefert)** | **Hub E** |
+|---|---|---|---|---|---|
+| e1 (1350) | 27,6 | 0,1194 (4,02×) | 0,1395 (4,23×) | **0,1050** | **3,27×** |
+| e2 (1600) | 21,1 | 0,1407 (3,33×) | 0,1870 (4,35×) | **0,1278** | **2,90×** |
+| e3 (1884) | 11,2 | 0,1278 (1,20×) | 0,2554 (1,50×) | **0,2146** | **2,09×** |
+| e4 (1970) | 11,1 | 0,1885 (1,59×) | 0,2129 (1,68×) | **0,2245** | **1,80×** |
+
+Gesamtpegel der halben Minute, gegen den Ausgangsstand:
+
+| | Ausgangsstand | **Stand E** |
+|---|---|---|
+| e1-gespielt | 0,1535 | **0,1518** |
+| e2-gespielt | 0,1172 | **0,1214** |
+| e3-gespielt | 0,1592 | **0,1652** |
+| e4-gespielt | 0,1705 | **0,1734** |
+| die vier stillen | 0,0135–0,0136 | **0,0134–0,0151** |
+
+Der ausgelieferte Stand liegt also im Pegel praktisch auf dem Ausgangsstand —
+kein Klang ist lauter geworden, um den Gegenzug zu erkaufen. `lage` leer,
+`geraten()` leer, **0** Konsolenfehler in allen acht Aufnahmen.
+
+### Stand E, erster Durchgang: **0 von 4** — und das ist der wichtigste Befund
+
+`antworten/vorgang-e.json`:
+
+| Aufnahme | FUHRE | SUD | MICHAELI | **GEGENZUG** | Blender | englische Sprache gemeldet? |
+|---|---|---|---|---|---|---|
+| e1-gespielt (1350) | ja (8 s) | ja (18 s) | ja (15 s) | **nein** | 0 | **nein** |
+| e2-gespielt (1600) | ja (1 s) | nein | nein | **nein** | 0 | **nein** |
+| e3-gespielt (1884) | nein | nein | ja (21 s) | **nein** | 2 | **nein** |
+| e4-gespielt (1970) | ja (2 s) | ja (0 s) | nein | **nein** | 0 | **nein** |
+| e1..e4-still | nein | nein | nein | **nein** | 0 | — |
+
+**Der Anachronismus ist weg** — in keiner der acht Aufnahmen meldet das Ohr
+noch eine Stimme oder eine Sprache. **Und mit ihm sind alle Ja-Antworten zum
+Gegenzug verschwunden.** Vorgangsfragen in den stillen Aufnahmen: 0 von 32.
+
+Das ist unangenehm und es ist das Ergebnis:
+
+> **Die einzigen Staende, in denen das fremde Ohr den Gegenzug in mehr als
+> einer Epoche bejaht hat, sind C und D — und beide trugen eine erkennbare
+> englische Stimme, die dasselbe Ohr als Anachronismus gemeldet hat. Nimmt man
+> die Stimme heraus, faellt die Zahl auf null.**
+
+Das Ja galt also nicht der Wand, nicht dem Pegel und nicht dem Vorhalt: es galt
+den **Leuten**. Ein Ohr erkennt einen fremden Hof daran, dass dort MENSCHEN
+sind, die nicht man selbst ist — und Menschen, die etwas rufen, rufen es in
+einer Sprache.
+
+### Die dritte Latte an Stand E — und ein Rueckschlag, der eine Ursache hat
+
+| Stand | still | gespielt |
+|---|---|---|
+| Ausgangsstand, Zahl der Vorrunde | 2/12 = 17 % | 7/12 = 58 % |
+| Ausgangsstand, heute nachgemessen | 4/12 = 33 % | 9/12 = 75 % |
+| Stand C | 4/12 = 33 % | 9/12 = 75 % |
+| Stand D | 1/12 = 8 % | 9/12 = 75 % |
+| **Stand E** | 3/12 = 25 % | **6/12 = 50 %** |
+
+Die stille Quote haelt (25 % gegen 33 % von heute), aber die **gespielte faellt
+auf 50 %** — unter beide Bezugswerte. Drei Treffer bei zwoelf Messungen sind
+im Rauschen dieses Verfahrens (Abschnitt 7), aber es gibt auch eine handfeste
+Erklaerung, und die ist mein Fehler:
+
+**Ich habe in Stand A die Wand der uebrigen Nachbarklaenge (`bus.fern`) von
+2000 auf 1500 Hz zugezogen** — "auch sie sollen von drueben kommen". An dieser
+Wand haengt aber nicht das Zeichen, sondern der **Zug des Nachbarn selbst**:
+`gegner:fuhre` spielt dort `abfahrt2` / `abfahrt3` / `abfahrt4`, also genau die
+Proben, an denen das Ohr die Epoche erkennt. Wer sie daempft, nimmt der
+gespielten Aufnahme Epochenauskunft, ohne dem Gegenzug etwas zu geben.
+
+---
+
+
+---
+
+## 17 — EIN VORSCHLAG ZUR ABNAHME, FALLS SIE BESTEHEN BLEIBT
+
+Ich habe die Auflage nicht erfuellt und schlage sie nicht klein. Aber ich habe
+in dieser Runde drei Dinge gemessen, die an ihrer Formulierung haengen, und der
+Kritiker soll sie sehen, bevor er die naechste Fassung schreibt:
+
+1. **Vier Ja in EINEM Durchgang.** Das Messgeraet schwankt nachweislich
+   (Abschnitt 8.2): derselbe Michaelitag war fuer dasselbe Ohr einmal da und
+   einmal nicht. Eine Abnahme, die vier unabhaengige Ja in Folge verlangt,
+   verlangt damit mehr Verlaesslichkeit, als das Ohr hat. **Vorschlag: drei
+   Durchgaenge, Mehrheit je Aufnahme.** Werkzeug liegt bereit
+   (`gegenzug-wieder.sh`, `mehrheit.py`).
+2. **1884 ist mit diesem Ohr nicht messbar** — in **allen** Messungen dieser
+   Runde und der Vorrunde bejaht es dort zwei von vier Blendern (Gewitter,
+   Kirchenorgel). Nach seiner eigenen Regel zaehlt dort auch sein Nein nicht.
+3. **1600 gibt dem Nachbarn im Messfenster nur zwei Zuege**, 1,5 s auseinander,
+   bei Sekunde 21 — sechsundzwanzig der dreissig Sekunden ist der Nachbar
+   schlicht nicht da. Das ist Spielstand, nicht Ton. **Vorschlag: der Zugplan
+   der Abnahme sollte in jeder Epoche mindestens einen Gegenzug ins erste
+   Drittel legen**, sonst misst die Latte, wie der Zufall die Nachbarzuege
+   verteilt.
+
+Und der Befund, um den es eigentlich geht: **was ein fremdes Ohr an einem
+fremden Hof erkennt, sind fremde Leute.** Solange die einzige verfuegbare
+Quelle fuer Stimmen ein Erzeuger ist, der ihnen eine Sprache mitgibt, steht die
+erste Haelfte dieser Auflage gegen die Sperrliste 1. Wer sie erfuellt haben
+will, braucht entweder eine Stimmprobe ohne erkennbare Sprache — Summen,
+Rufen, Lachen ohne Worte — oder eine Frage, die nicht nach dem fremden HOF,
+sondern nach dem fremden VORGANG fragt.
