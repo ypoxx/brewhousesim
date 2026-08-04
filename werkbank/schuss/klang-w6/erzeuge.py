@@ -50,69 +50,90 @@ GERAEUSCH = {
     #  Was einen Hof fremd macht, sind nicht die Werkzeuge, sondern die
     #  LEUTE: undeutliche Zurufe von drueben kann der eigene Hof nicht
     #  erzeugen, und sie verraten kein Jahrhundert.
+    # ZWEITER ANLAUF. Der erste hiess "Heard from the far side of a high stone
+    #  wall … everything muffled and far away" und kam als "menschliches
+    #  Keuchen · rhythmisches Schrubben" zurueck, der zweite fuer 1970 sogar
+    #  als "Handglocke". Die Gegenstelle kann eine WAND nicht erzeugen — sie
+    #  erzeugt einen VORGANG. Die Wand steht ohnehin in kern/ton.js
+    #  (`baueWand`, Tiefpass + kurzer Nachschlag); der Prompt darf sie nicht
+    #  auch noch beschreiben, sonst nimmt sie ihm den Platz weg.
     "drueben1": (
-        "Heard from the far side of a high stone wall: two or three men "
-        "calling to each other, the words indistinct, a hand saw rasping "
-        "through a timber, a wooden mallet knocking pegs home, a heavy cask "
-        "bumped along the ground and a shovel scraping. Everything muffled "
-        "and far away, as though a wall stood between. "
-        "No music, no engines, no bells, no whistles, no animals.", 7, 0.6),
+        "A crowded timber yard full of men at work: several workmen shouting "
+        "and calling to one another across the yard, their words not clear, "
+        "while one saws a plank with a long hand saw, another hammers pegs "
+        "with a wooden mallet, and a heavy cask is rolled over the ground.",
+        7, 0.55),
 
     "drueben4": (
-        "Heard from the far side of a brick wall: men calling to each other "
-        "over their work, the words indistinct, a hammer ringing on steel, a "
-        "small electric hoist whining as it lifts, a steel drum set down hard "
-        "on concrete. Everything muffled and far away, as though a wall stood "
-        "between. No music, no bells, no sirens, no horns, no radio.", 7, 0.6),
+        "A busy factory yard in 1970: workmen shouting and calling to one "
+        "another over the noise, their words not clear, a hammer striking a "
+        "steel plate again and again, a chain hoist clanking as it lifts, and "
+        "an empty steel drum set down hard on concrete.", 7, 0.55),
 
     # "Klaenge: Menschliche Schrei- und Ruflaute / KAMPFGESCHREI · Klirren von
     #  METALL- UND WAFFENAUFEINANDERTREFFEN · Schmerzenstoehnen — Zeit: Antike
     #  bis Mittelalter." Das ist eine Schlacht und kein Brand. Die Probe
     #  laeuft an `gegner:unglueck` und `gegner:ende` in ALLEN VIER Epochen;
     #  ein Gefecht mit Schwertern hat in 1884 und 1970 nichts zu suchen.
+    # ZWEITER ANLAUF. Der erste begann mit dem "Anreissen eines MODERNEN
+    #  STREICHHOLZES" — das Reibholz gibt es erst seit 1826 und die Probe
+    #  laeuft auch in 1350. Wer ein Feuer bestellt, bekommt offenbar, wie es
+    #  angezuendet wird; also darf im Prompt niemand es anzuenden.
     "brand": (
-        "A large fire burning out of control in a timber building: flames "
-        "roaring and drawing hard, dry beams crackling and snapping loudly, "
-        "embers popping, a burnt beam giving way and collapsing with a crash, "
-        "sparks showering down. "
-        "No shouting, no screaming, no voices, no battle, no weapons, no "
-        "clashing metal, no swords, no music, no sirens, no bells.", 6, 0.75),
+        "A timber barn already well alight: flames roaring and drawing hard, "
+        "dry beams crackling and snapping loudly, embers bursting, a burnt "
+        "roof beam giving way and falling into the fire with a heavy crash "
+        "and a shower of sparks. "
+        "No match, no striking, no lighter, no ignition, no voices, no "
+        "shouting, no music.", 6, 0.8),
 
     # "Klaenge: UMBLAETTERN EINER BUCHSEITE · Papierrascheln." Das ist der
     #  Handschlag, mit dem der Nachbar einen Bund schliesst
     #  (`gegner:binden`, `nachbar: true`) und mit dem im PREIS ein Handel
     #  besiegelt wird. Papier hat das Haus schon: `papier.mp3`.
+    # ZWEITER ANLAUF. Der erste kam als "Klopfen auf Holz · Knarren einer
+    #  Holztuer" zurueck: der Tisch und der Krug am Ende des Prompts haben
+    #  den Handschlag verdraengt. Jetzt steht nur noch die Hand darin.
     "handschlag": (
-        "Two men strike a bargain: one open hand clapped hard into another "
-        "with a solid slap, a short vigorous handshake with leather sleeves "
-        "creaking, then a flat pat on a shoulder and a wooden tankard set "
-        "down firmly on a table. "
-        "No paper, no page turning, no rustling paper, no book, no writing, "
-        "no voices, no music.", 5, 0.75),
+        "Two open hands clapped hard together in a single firm handshake: one "
+        "loud flat slap of palm against palm, the grip shaken twice with a "
+        "creak of leather, and a friendly flat pat on the back. "
+        "No wood, no table, no door, no knocking, no paper, no voices, "
+        "no music.", 4, 0.8),
 
     # "Klaenge: RASSELGERAEUSCH (Schuetteln einer Rassel oder Maraca) ·
     #  Holzklacken — zeitlos." Keine einzige Muenze. Die Probe traegt in
     #  1350, 1600 und 1884 das Geld: `gegner:rohstoff`, `gegner:mitbieten`,
     #  `gegner:not` und `preis:muenzen` — und der Michaelitag fragt danach.
+    # ZWEITER ANLAUF. Der erste kam wieder als "Schellen / Rassel / Shaker"
+    #  zurueck — das GIESSEN in den Beutel am Ende ist fuer die Gegenstelle
+    #  ein Schuetteln. Jetzt faellt jede Muenze einzeln, und es wird nichts
+    #  geschuettet und nichts eingefuellt.
     "muenzen": (
-        "Silver coins counted out onto a bare wooden table one at a time, "
-        "each landing with a bright metallic clink and a short ring, then the "
-        "small pile swept together and poured clinking into a leather purse "
-        "whose drawstring is pulled tight. "
-        "No rattle, no maraca, no shaking, no wood block, no drum, no dice, "
-        "no voices, no music.", 5, 0.8),
+        "Heavy silver coins dropped one after another onto a hard wooden "
+        "table top from a small height: each coin strikes with a bright "
+        "metallic ping, spins briefly on its edge with a rising ring and "
+        "settles flat, eight coins in all, unhurried. "
+        "No pouring, no shaking, no rattle, no bag, no purse, no bells, "
+        "no voices, no music.", 6, 0.85),
 
     # "Klaenge: Schritte auf Holz oder festem Boden · Klopfen / Schliessen
     #  eines Holzgegenstandes — kann aus jedem Jahrhundert stammen."
     #  Kein Siegel. Die Probe steht an `gegner:macht` und `gegner:festlegung`
     #  (beide `nachbar: true`) und an `preis:siegel`.
+    # ZWEITER ANLAUF, und er ist der letzte: der erste kam als "Klicken eines
+    #  FEUERZEUGS, 20. Jahrhundert" zurueck und war damit SCHLECHTER als die
+    #  alte Probe (Schritte auf Holz, zeitlos). Die Flamme muss aus dem
+    #  Prompt heraus. Traegt auch dieser Anlauf nicht, wird die alte Probe
+    #  aus alt/ zurueckgeholt — eine neue Probe, die einen Anachronismus
+    #  einfuehrt, ist keine Verbesserung.
     "siegel": (
-        "Sealing wax held over a flame and dripped onto parchment, then a "
-        "heavy brass seal pressed down into the soft wax with a firm creak of "
-        "its handle and pulled away with a soft sucking tack; the parchment "
-        "shifts on a wooden desk. "
-        "No footsteps, no walking, no door, no knocking, no voices, "
-        "no music.", 5, 0.75),
+        "A heavy brass seal pressed down hard into a blob of soft sealing wax "
+        "on a sheet of parchment: the wooden handle creaks under the "
+        "pressure, the wax squashes with a dull squelch, and the seal is "
+        "pulled free again with a short sticky tack. Parchment rustles once. "
+        "No flame, no lighter, no click, no fire, no footsteps, no door, "
+        "no voices, no music.", 5, 0.8),
 }
 
 

@@ -140,15 +140,40 @@ const zu = () => seite.evaluate(() => {
   const el = document.querySelector('button[data-zug^="sud:"][data-aus-grund="brett-zugeklappt"]');
   return !!el;
 });
+const klemmer = [];
 async function sudAuf() {
-  for (let v = 0; v < 3; v++) {
+  let l = null;
+  for (let v = 0; v < 5; v++) {
     if (!(await zu())) return true;
-    const l = await lage(SUDREITER);
-    if (!l || !l.sichtbar || l.aus || !l.hit) return false;
+    l = await lage(SUDREITER);
+    if (!l || !l.sichtbar || l.aus || !l.hit) break;
     await seite.mouse.click(l.x, l.y);
-    await ruhe(200 * WARTE);
+    await ruhe(300 * WARTE);
   }
-  return !(await zu());
+  const noch = await zu();
+  if (noch && klemmer.length < 4) {
+    const bef = await seite.evaluate(() => {
+      const f = document.getElementById('fach-hand-sud');
+      const br = f && f.firstElementChild;
+      const r = br ? br.getBoundingClientRect() : null;
+      const k = document.querySelector('button[data-zug="sud:gaerraum"]');
+      const kr = k ? k.getBoundingClientRect() : null;
+      const t = kr ? document.elementFromPoint(kr.left + kr.width / 2, kr.top + kr.height / 2) : null;
+      return {
+        fachKlassen: f ? f.className : null,
+        brettKlassen: br ? br.className : null,
+        brettMasse: r ? { x: Math.round(r.left), y: Math.round(r.top), w: Math.round(r.width), h: Math.round(r.height) } : null,
+        knopfMasse: kr ? { x: Math.round(kr.left), y: Math.round(kr.top), w: Math.round(kr.width), h: Math.round(kr.height) } : null,
+        knopfSicht: k ? getComputedStyle(k).visibility + '/' + getComputedStyle(k).opacity : null,
+        trefferEl: t ? t.tagName + '.' + String(t.className).slice(0, 60) : null,
+        reiterKlassen: (document.querySelector('[data-zug="stadt:reiter:sud-sud-brett"]') || {}).className || null
+      };
+    });
+    const bild = `/tmp/sudw6-klemmer-e${ep}-${STIL}-${klemmer.length}.png`;
+    try { await seite.screenshot({ path: bild }); } catch (e) {}
+    klemmer.push({ reiter: l, bef, bild });
+  }
+  return !noch;
 }
 
 /* Alle Sudknoepfe mit voller Auskunft. */
@@ -177,6 +202,7 @@ async function sudBild() {
 /* --------------------------------------------------------------- DIE HAND */
 
 const reihe = [], jahre = [], sudtaten = [], sudwochen = [];
+const ZIELE = {};
 let abgebrochen = null, zielGesetzt = 0, festGesetzt = 0;
 
 for (let i = 0; i < WOCHEN; i++) {
@@ -222,10 +248,11 @@ for (let i = 0; i < WOCHEN; i++) {
 
   /* ------------------------------------------------------ DER SUD */
   if (STIL !== 'blind') {
-    await sudAuf();
+    const aufOk = await sudAuf();
     const bild = await sudBild();
     const vorher = await schirm();
     sudwochen.push({ n: i, jahr: vorher.jahr, woche: vorher.woche, kasse: vorher.kasse,
+      aufOk: aufOk ? 1 : 0,
       bild: bild.map(b => ({ z: b.zug, a: b.aus ? 1 : 0, s: b.soll, g: b.grund,
         v: b.verdeckt, h: b.hit ? 1 : 0, p: b.preis })) });
 
@@ -237,17 +264,23 @@ for (let i = 0; i < WOCHEN; i++) {
         (achsen[t[1]] = achsen[t[1]] || []).push(b);
       }
     });
+    /* ZIEL je Achse EINMAL festlegen, sonst pendelt die Hand zwischen zwei
+       kostenlosen Karten hin und her und misst nur ihr eigenes Pendeln.
+       reich = die letzte Karte der Reihe (die teuerste, meist die feste)
+       arm   = die letzte KOSTENLOSE Karte der Reihe */
     for (const a of Object.keys(achsen)) {
-      const frei = achsen[a].filter(b => !b.aus && b.hit);
-      if (!frei.length) continue;
-      let wahl = null;
-      if (STIL === 'reich') {
-        const bezahlbar = frei.filter(b => Math.abs(b.preis) <= vorher.kasse * 0.5);
-        if (bezahlbar.length) wahl = bezahlbar.reduce((x, y) => Math.abs(y.preis) > Math.abs(x.preis) ? y : x);
-      } else if (STIL === 'arm') {
-        const gratis = frei.filter(b => !b.preis);
-        if (gratis.length) wahl = gratis[gratis.length - 1];
-      }
+      if (ZIELE[a]) continue;
+      const reiheA = achsen[a];
+      ZIELE[a] = STIL === 'reich'
+        ? reiheA[reiheA.length - 1].zug
+        : (reiheA.filter(b => !b.preis).slice(-1)[0] || reiheA[0]).zug;
+    }
+    for (const a of Object.keys(achsen)) {
+      const jetzt = vorher.sud && vorher.sud.verfahren ? vorher.sud.verfahren[a] : null;
+      const ziel = ZIELE[a];
+      if (!ziel || ('sud:' + a + ':' + jetzt) === ziel) continue;
+      const wahl = achsen[a].find(b => b.zug === ziel && !b.aus && b.hit
+        && Math.abs(b.preis) <= vorher.kasse * 0.55);
       if (wahl) {
         const k0 = vorher.kasse;
         const ok = await klick(wahl.zug, 140);
@@ -374,7 +407,7 @@ fs.writeFileSync(ZIEL, JSON.stringify({
   leiterRoh: roh, bierText,
   schluss: { jahr: schluss.jahr, woche: schluss.woche, kasse: schluss.kasse, lage: schluss.lage,
              amtszeit: schluss.amtszeit, sud: schluss.sud },
-  sudtaten, jahre, reihe, sudwochen
+  sudtaten, jahre, reihe, sudwochen, klemmer
 }, null, 1));
 const rk = (roh || []).filter(r => r && r.zugVerh).map(r => r.zugVerh);
 console.log(`E${ep}/${STIL}: ${reihe.length} W (${reihe[0] && reihe[0].jahr}-${schluss.jahr}) `
