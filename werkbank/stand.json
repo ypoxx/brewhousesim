@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T18:22:24+00:00",
- "phase": "Welle 6 — beide Builder messen weiter unter der Sperre, nacheinander statt nebeneinander, Load 1,65. DER SUD fährt eine Gegenprobe ohne sein eigenes Stück, DIE FUHRE ihre Wiederholung für 1350. Beide um 18:15 UTC lebendig, beide schreiben ihre Berichte fort. Aufgefallen und geschlossen: der Veröffentlicher hatte seine Laufzeit von vier Stunden erreicht und sich stumm beendet — zwischen 17:28 und 18:21 sicherte nichts automatisch, der Baubericht der FUHRE lag offen. Der Selbst-Check hat ihn aufgefangen und neu gestartet. Dass dieser Prozess planmäßig nach vier Stunden stirbt, steht jetzt im Gedächtnis und nicht mehr nur im Skript.",
+ "stand": "2026-08-04T19:22:14+00:00",
+ "phase": "Welle 6 — beide Builder arbeiten weiter, beide um 19:16 UTC lebendig, beide Berichte wachsen (SUD 19:10, FUHRE 19:02). DER SUD prüft gerade sein Siegel nach, 200 Wochen in 1350; das läuft bewusst ohne Messfenster, weil sechs Wege zurück an einer festen Karte nicht an der Maschinenlast hängen. Ein Neustart der Sitzung hat zwei Wartetasks der Aufsicht erschlagen, die Builder selbst nicht — die Maschine läuft seit 16 Stunden durch. Nichts liegt uncommittet, das Abnahmetor ist viermal offen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T13:45:30+00:00",
-   "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 2 · zurück an den Builder — ZAEHLUNG BESTANDEN, BILDLATTE NICHT. Der Vorwurf aus Runde 1 ist erledigt: bau=keine gegen bau=alle liefert 9 / 12 / 12 / 12 einzeln sichtbare Hofbauten (Latte: sechs). Blind gegen zielbild/ verliert das Gebaute aber weiter, und zwar an EINEM Bild: spiel/bild/hof/pfanne.png. Die zwei Brauerinnen an der Pfanne sind rund 300 px hoch, die Magd am Tor 6 m weiter vorn misst 73 px — Verhaeltnis 4:1, obwohl sie NAEHER an der Kamera steht und darum groesser sein muesste. Die Pfanne selbst ist etwa 190 px breit, also gut 2,5 Koerperlaengen: ein Sudkessel von rund 5 m Durchmesser im Jahr 1350. In 1600 wird es schlimmer, weil breite:14 fest steht, waehrend die Platte 1600 groesser gezeichnet ist: Feuer und Steinherd stehen dort MITTEN AUF EINEM ZIEGELDACH, die rechte Brauerin steht auf dem First, und das Fachwerkhaus daneben reicht ihr bis zur Huefte. Das ist die erste Stelle, auf die das Auge faellt, und sie steht im Vorgabestand beider fruehen Epochen. Zu beheben in eigenen Dateien: pfanne.png kleiner neu erzeugen (Figuren in der Groesse der Plattenfiguren) und breite je Epoche staffeln, so wie es fuer die uebrigen 30 Aufbauten offenbar schon stimmt — brunnen, malzboden, fasslager_holz, keller_gewoelbe, gaertanks, maelzerei, kastenlager, verladedock sitzen sauber im Raster. Zweitkleinste Luecke, gleiche Ursache: die Tafeln decken nur noch 9,1 / 9,4 / 9,4 / 10,1 Prozent des Stadtfensters (Runde 1: eine einzige Tafel 64 Prozent), aber ueber dem Bild schweben je Epoche 8 bis 12 kleine Ortsmarken (OCH, LIN, TOR-GEV, FAE-KON, OBE, MUE, BRU, BHF); im Blindvergleich lesen die sich als Schmutz auf der Platte. NICHT DIE SCHULD DIESES STUECKS, aber im Bild sichtbar und darum gemeldet: spiel/bild/gegner/hof3.png liegt in 1884 als graue, entsaettigte Attrappe genau ueber der Brauerei Adler der eigenen Platte, deren Backsteinfassade und zwei Schornsteine darunter hervorschauen — das gehoert DEM GEGNER. KEIN FUND AUS DER SPERRLISTE: die Pfanne ist eine offene Pfanne ueber offenem Feuer, kein Helm, kein Schwanenhals; in 1350/1600/1884 kein einziges Emailschild, alle Schilder sind gemalte Holztafeln."
-  },
   {
    "zeit": "2026-08-01T13:49:01+00:00",
    "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 3 · läuft — Runde 3 laeuft"
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-04T18:22:24+00:00",
    "text": "Welle 6 — beide Builder messen weiter unter der Sperre, nacheinander statt nebeneinander, Load 1,65. DER SUD fährt eine Gegenprobe ohne sein eigenes Stück, DIE FUHRE ihre Wiederholung für 1350. Beide um 18:15 UTC lebendig, beide schreiben ihre Berichte fort. Aufgefallen und geschlossen: der Veröffentlicher hatte seine Laufzeit von vier Stunden erreicht und sich stumm beendet — zwischen 17:28 und 18:21 sicherte nichts automatisch, der Baubericht der FUHRE lag offen. Der Selbst-Check hat ihn aufgefangen und neu gestartet. Dass dieser Prozess planmäßig nach vier Stunden stirbt, steht jetzt im Gedächtnis und nicht mehr nur im Skript."
+  },
+  {
+   "zeit": "2026-08-04T19:22:14+00:00",
+   "text": "Welle 6 — beide Builder arbeiten weiter, beide um 19:16 UTC lebendig, beide Berichte wachsen (SUD 19:10, FUHRE 19:02). DER SUD prüft gerade sein Siegel nach, 200 Wochen in 1350; das läuft bewusst ohne Messfenster, weil sechs Wege zurück an einer festen Karte nicht an der Maschinenlast hängen. Ein Neustart der Sitzung hat zwei Wartetasks der Aufsicht erschlagen, die Builder selbst nicht — die Maschine läuft seit 16 Stunden durch. Nichts liegt uncommittet, das Abnahmetor ist viermal offen."
   }
  ]
 }
