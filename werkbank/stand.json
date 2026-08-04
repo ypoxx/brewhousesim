@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T07:50:46+00:00",
- "phase": "WELLE 5 IST DURCH. Beide Stücke gebaut, blind geprüft, nachgearbeitet. Die Aufsicht hat unabhängig nachgemessen — zwölf Läufe sequenziell am eingefrorenen Stand, je drei pro Epoche: rho +0,591 / +0,231 / +0,393 / +0,275, Spannweite jeweils 0,000, höchstens ein Jahr von sechs unter 1x. Wellenziel bei vierzehn Braujahren erreicht, und drei Messungen — Builder, Kritiker, Aufsicht — kommen auf dieselben Ziffern. ABER: bei zwölf Braujahren steht 1350 auf +0,762 und reißt. Die Latte braucht eine Entscheidung über die Zählweise; das ändert die Messlatte, nicht das Spiel, und gehört dem Auftraggeber.",
+ "stand": "2026-08-04T08:31:08+00:00",
+ "phase": "Welle 6 läuft — zwei offene Enden aus den vorigen Wellen. DER KLANG arbeitet an der einzigen Auflage, die in Welle 5 offen blieb: der Gegenzug ist nur in 1350 zu hören. Abnahme ist streng gesetzt — das Ohr muss ihn in allen vier Epochen bejahen UND in der stillen Aufnahme derselben Epoche verneinen, sonst ist es Kulisse. DER SUD wird zum ersten Mal nach seiner Nacharbeit blind geprüft; bisher hat nur die Aufsicht seine Kernzahl nachgemessen, und selbst gemessen ist nicht geprüft. Alle KERN-Punkte aus Welle 4 und 5 sind eingearbeitet, zuletzt der ungeprüfte Unterhaltsabzug in welt.js:413 — die Kasse kann nicht mehr negativ werden, und die Wellenzahl blieb dabei Ziffer für Ziffer gleich.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -127,14 +127,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T19:20:00+00:00",
-   "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 1 · zurück an den Builder — Bild zu ~70% von Tafeln verdeckt: bau=keine vs bau=alle (12 Bauten) aendert im 2752x1536-Schuss nur Rauchfahne, einen Schornsteinschaft und die BAUHOF-Zeile. Kein Hofgebaeude wird sichtbar."
-  },
-  {
-   "zeit": "2026-07-31T19:47:44+00:00",
-   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 1 · bestanden — Das aufgeklappte Gegner-Panel 'Das Haus gegenueber' laesst sich nicht mehr schliessen: sein Schliessknopf wird von einem H2 ueberdeckt (elementFromPoint liefert H2 statt Button) — bei 1920x937, 1600x1000 und 2752x1536 gleichermassen. Escape tut nichts, die Seite scrollt nicht (body overflow hidden). Da localStorage leer bleibt und ein Reload auf Woche 1/30 zurueckwirft, beendet ein einziger Klick die Partie. Zweitens blockiert die Georgi-Tafel den Hintergrund nicht: WEITER blieb aktiv und hat mir das ganze Michaeli-1351-Kauffenster weggeklickt ('Michaeli ist vorueber' auf allen fuenf Angeboten)."
-  },
   {
    "zeit": "2026-07-31T19:53:05+00:00",
    "text": "DER GEGNER — die Züge, die ohne den Spieler geschahen · Runde 1 · läuft"
@@ -926,6 +918,14 @@
   {
    "zeit": "2026-08-04T07:50:46+00:00",
    "text": "WELLE 5 IST DURCH. Beide Stücke gebaut, blind geprüft, nachgearbeitet. Die Aufsicht hat unabhängig nachgemessen — zwölf Läufe sequenziell am eingefrorenen Stand, je drei pro Epoche: rho +0,591 / +0,231 / +0,393 / +0,275, Spannweite jeweils 0,000, höchstens ein Jahr von sechs unter 1x. Wellenziel bei vierzehn Braujahren erreicht, und drei Messungen — Builder, Kritiker, Aufsicht — kommen auf dieselben Ziffern. ABER: bei zwölf Braujahren steht 1350 auf +0,762 und reißt. Die Latte braucht eine Entscheidung über die Zählweise; das ändert die Messlatte, nicht das Spiel, und gehört dem Auftraggeber."
+  },
+  {
+   "zeit": "2026-08-04T08:31:08+00:00",
+   "text": "Welle 6 läuft — zwei offene Enden aus den vorigen Wellen. DER KLANG arbeitet an der einzigen Auflage, die in Welle 5 offen blieb: der Gegenzug ist nur in 1350 zu hören. Abnahme ist streng gesetzt — das Ohr muss ihn in allen vier Epochen bejahen UND in der stillen Aufnahme derselben Epoche verneinen, sonst ist es Kulisse. DER SUD wird zum ersten Mal nach seiner Nacharbeit blind geprüft; bisher hat nur die Aufsicht seine Kernzahl nachgemessen, und selbst gemessen ist nicht geprüft. Alle KERN-Punkte aus Welle 4 und 5 sind eingearbeitet, zuletzt der ungeprüfte Unterhaltsabzug in welt.js:413 — die Kasse kann nicht mehr negativ werden, und die Wellenzahl blieb dabei Ziffer für Ziffer gleich."
+  },
+  {
+   "zeit": "2026-08-04T08:31:08+00:00",
+   "text": "AUFSICHT — KERN welt.js:413: DIE KASSE KANN NICHT MEHR NEGATIV WERDEN. Die Zeile zog den Unterhalt ungeprüft ab und war die einzige Stelle im Spiel, an der die Kasse rechnerisch unter null fallen konnte; welt.zahle() zwei Bildschirme darüber prüft die Deckung und gibt false zurück, diese Zeile prüfte nicht. Vor der Änderung gemessen, mit einem eigens gebauten Gerät, das B.protokoll Buchung für Buchung nachrechnet: in 1350 fällt der Zwischenstand auf MINUS SIEBEN Pfennig, gebucht genau bei 'Sommer: Unterhalt und Abgaben'. Wochenweise ist das unsichtbar, weil der Vorgriff von DER PREIS es im selben Wochenwechsel abfängt — uhr.js:160 lässt rechneJahrAb() vor sende('jahr') laufen. Wer nur die Wochenkasse liest, sieht 0 und hält es für den Boden; ein Stück, das in genau diesem Augenblick welt.kann() fragt, bekam eine falsche Auskunft. Nach der Änderung: minus sieben auf null, die anderen drei Epochen Ziffer für Ziffer unverändert. Der Unterhalt wird weiter voll erhoben, solange die Lade ihn trägt; reicht sie nicht, nimmt er was da ist, und was fehlte steht als eigene Zeile im Protokoll — verschwiegen wird nichts. Gegenprobe mit acht Läufen sequenziell am eingefrorenen Stand: rho +0,591 / +0,231 / +0,393 / +0,275, Jahre unter 1x 0/0/1/0, null Seitenfehler — Ziffer für Ziffer wie vorher. Das ist die dritte Kernänderung in Folge, die den Prüfstein besteht: wo eine Aufräumaktion die Messzahl verbessert, ist sie verdächtig; wo sie sie unberührt lässt, hat sie nur aufgeräumt."
   }
  ]
 }
