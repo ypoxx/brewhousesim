@@ -462,7 +462,7 @@ var PREIS_DATEN = {
         { k: 'marktbank', name: 'Die Marktbank auf ewig', anteil: 0.42, ab: 1352,
           was: 'Eine Bank im Kaufhaus, erblich gekauft, mit Brief und Siegel des Rats.',
           regel: 'Das Haus schenkt von heute an am Markt selbst aus. Der Rat nimmt dafür an jedem Michaelistag sein Standgeld — ohne Ende.',
-          wirkung: { ertrag: 26, ansehen: 3,
+          wirkung: { ertrag: 44, ansehen: 3,
             pflichtNeu: { k: 'standgeld', name: 'Standgeld für die Bank im Kaufhaus', art: 'fest', teil: 0.62,
               sagt: 'Der Preis des Platzes am Markt, jährlich, ohne Ende.' } } },
 
@@ -476,8 +476,8 @@ var PREIS_DATEN = {
            bezahlt. */
         { k: 'jahrtag', name: 'Der Jahrtag in der Pfarrkirche', anteil: 0.50, ab: 1357,
           was: 'Ein Altar, eine Kerze, ein Eintrag ins Seelbuch: für ewige Zeiten wird für dieses Haus gelesen.',
-          regel: 'Das Haus steht von heute an im Seelbuch und im Ansehen der Stadt. Dafür geht an jedem Michaelistag der Jahrtag an die Pfarre.',
-          wirkung: { ansehen: 14,
+          regel: 'Das Haus steht von heute an im Seelbuch und im Ansehen der Stadt, und die Pfarre nimmt sein Bier. Dafür geht an jedem Michaelistag der Jahrtag an sie ab.',
+          wirkung: { ansehen: 16, bindung: { n: 2, jahre: 40 },
             pflichtNeu: { k: 'jahrtagzins', name: 'Jahrtag und Seelgerät an die Pfarre', art: 'fest', teil: 0.50,
               sagt: 'Für ewige Zeiten gestiftet — der Pfarrer liest, das Haus zahlt.' } } }
       ]
@@ -812,10 +812,23 @@ var PREIS_DATEN = {
            Beides war unwiderruflich: eine EWIGE Guelt war nicht ablösbar, und
            genau deshalb gehoert sie auf diese Tafel und nicht unter die
            Angebote. */
+        /* WARUM DER ZINS KLEIN IST UND DIE KARTE TROTZDEM ETWAS TAUGT.
+           Eine Guelt warf den Fuenfer ab, nicht das Doppelte; mit `ertrag: 45`
+           auf eine Taxe von 420 bis 680 fl braucht sie neun bis fuenfzehn
+           Jahre, bis sie sich getragen hat — langsamer als jedes Angebot
+           dieser Epoche ausser dem Hopfenkontrakt. Ihr Wert liegt woanders,
+           und er ist eine Regel DIESER Epoche: auf bares Geld in der Lade
+           schlaegt der Rat siebzig im Hundert dessen an, was ueber dem
+           Freibetrag liegt (`liegeSatz`). Was in einer Guelt steckt, steht
+           nicht mehr in der Lade. Wer 1601 vierhundert Gulden bar liegen
+           laesst, verliert daran mehr als die Guelt je einbringt.
+           (Ein erster Ansatz stand auf `ertrag: 150` — Ruecklauf 2,8 Jahre,
+           das beste Geschaeft der ganzen Epoche. Eine unwiderrufliche Wahl,
+           die sich in drei Jahren bezahlt macht, ist keine Wahl.) */
         { k: 'stadtguelt', name: 'Die ewige Gült auf die Stadt', anteil: 0.15, ab: 1601,
           was: 'Das Haus kauft dem Rat eine Gült ab: eine Summe hin, ein fester Zins zurück, Jahr für Jahr.',
-          regel: 'An jedem Michaelistag zahlt die Stadt an das Haus. Das Geld dafür ist aus dem Haus und kommt nie zurück.',
-          wirkung: { ertrag: 150, ansehen: 4 } },
+          regel: 'An jedem Michaelistag zahlt die Stadt an das Haus, und was in der Gült steckt, liegt nicht mehr bar in der Lade. Das Geld dafür kommt nie zurück.',
+          wirkung: { ertrag: 45, ansehen: 4 } },
 
         /* Die andere Seite desselben Briefes: das Geld ist heute da, die Guelt
            laeuft ewig. Der Zufluss haengt an der JAHRESLAST (`wirkung.einmal`,
