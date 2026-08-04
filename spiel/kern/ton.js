@@ -978,10 +978,19 @@
        reichen, und ein Ohr, das Sprache erkennt, erkennt sie auch dumpf.
        Eine erkennbare englische Rundfunkstimme in 1350 ist ein Anachronismus
        und faellt unter Sperrliste 1 des Kritikers.
-       Also 600 Hz — dort bleibt von Sprache die Sprachmelodie und nicht das
-       Wort — und der Pegelverlust wird HINTER der Wand ausgeglichen, statt
-       den Filter aufzumachen. Der Ausgleich sitzt nur im Zeichenweg; die
-       uebrigen Klaenge des Nachbarn (`fern`) gehen unveraendert. */
+       Also 600 Hz — und der Pegelverlust wird HINTER der Wand ausgeglichen,
+       statt den Filter aufzumachen. Der Ausgleich sitzt nur im Zeichenweg;
+       die uebrigen Klaenge des Nachbarn (`fern`) gehen unveraendert.
+       NACHTRAG, UND ER IST DAS EIGENTLICHE ERGEBNIS DIESER RUNDE: 600 Hz
+       haben es AUCH NICHT GETAN. Das Ohr hat dieselbe Stimme durch den
+       dickeren Filter erneut gemeldet, diesmal mit zwei Woertern
+       ("Go back and forth", "beautiful"). Zweimal habe ich geglaubt, ein
+       Tiefpass mache Sprache unkenntlich und lasse den Klang uebrig; zweimal
+       war es falsch. WER STIMMEN IN EINER PROBE HAT, MUSS DIE PROBE
+       AUSTAUSCHEN UND NICHT DEN FILTER. `drueben1.mp3` ist deshalb jetzt der
+       stimmlose erste Anlauf ("rhythmisches Reiben und Schrubben, schweres
+       Atmen — zeitlos, keine Stimme"); die Wand bleibt bei 600 Hz, weil sie
+       dort gemessen den staerksten Hub gegen die Umgebung ergeben hat. */
     var nachbarAusgleich = ctx.createGain();
     nachbarAusgleich.gain.value = 1.9;
     nachbarAusgleich.connect(w.bus.fremd);
