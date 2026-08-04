@@ -215,6 +215,49 @@ Festlegungen in 14 Jahren nur ein- bis nullmal genommen? Das ist zuerst eine
 Messfrage, keine Entwurfsfrage. Wer hier baut, ohne das gemessen zu haben,
 baut ein zweites ungenutztes System neben das erste.
 
+**(G) Fehlt eine fünfte Zeit — die Gegenwart?**
+*Frage des Auftraggebers vom 4. August 2026: „Seit 1970 hat sich doch bestimmt
+noch einiges verändert. Und es würde das Spiel auch in die heutige Zeit
+transportieren."* Die Aufsicht hat dazu gemessen, nicht entworfen:
+
+| Befund | Beleg |
+|---|---|
+| Epoche IV **beansprucht** 1914–2025 | `kern/welt.js:39` |
+| Ihr Schaujahr ist **1970** | dito |
+| Eine Partie trägt 3–14 Braujahre | Messung 3. 8., Frage (A) |
+| ⇒ **Kein Spielstand erreicht je ein Jahr nach ~1984.** Die letzten vierzig Jahre sind beansprucht und unbetretbar. | Rechnung aus beidem |
+| Die Währungstabelle hält D-Mark bis 2001 und Euro bis 9999 bereit — für Jahre, die niemand sieht | `kern/welt.js:51` |
+| Der **Regalmeter** — Handelsmacht, Listung, Einkaufspreis — liegt heute in **1970** | `stuecke/fuhre.js:2072` |
+
+**Und das Konzept hat den Befund selbst schon notiert**, im eigenen
+Korrekturteil (`KONZEPT.md`, „Drei Korrekturen an früheren Abschnitten"):
+
+> „Das Brauereisterben war ein Verdrängungskampf um Zapfhähne, nicht um
+> Identität. *Bedeuten* ist das Kernverb der **Gegenwart**, nicht der 1970er —
+> was zugleich erklärt, warum Epoche IV in allen sechs Entwürfen nur Epoche III
+> mit anderer Typografie war."
+
+Die Frage an den Loop ist deshalb **nicht** „hängen wir eine fünfte an", sondern:
+**trägt Epoche IV zwei Verben, und ist sie deshalb zu groß?** Wer sie teilt,
+muss beides beantworten — welches Verb 1970 bekommt, wenn *bedeuten* in die
+Gegenwart wandert, und woran der Spieler den Unterschied **auf dem Schirm**
+merkt, nicht im Handbuch.
+
+**Was eine fünfte Zeit kostet, gemessen — damit niemand „ist ja nur eine Zeile"
+sagt:** in `kern/welt.js` ist es wirklich eine Zeile. Aber **25 Datentabellen
+in acht Dateien tragen einen Schlüssel `4:`** (NAME 9, FUHRE 5, GEGNER 3, SUD 3,
+STADT 2, ERBE 1, PREIS 1, welt 1), dazu vier Stellen in `kern/ton.js`. Jede
+dieser Tabellen fällt per `|| [4]` **still** auf Epoche IV zurück. Eine fünfte
+Epoche ohne eigenes Material wäre also lautlos genau der Fehler, den das Konzept
+schon benannt hat: dieselbe Epoche mit anderer Typografie. Dazu kommen ein
+Zielbild (erste Messlatte) und ein Klangbild, das ein fremdes Ohr in 30 Sekunden
+benennen kann (dritte Messlatte) — was heute nicht einmal für 1884 gelingt.
+
+**Reihenfolge, die die Aufsicht daraus liest:** Frage (G) hängt an Frage (A).
+Solange eine Partie 14 Jahre trägt und die kürzeste Epoche 112 Jahre dauert,
+ändert eine fünfte Epoche am *Gespielten* nichts — sie fügt einen fünften
+Einstiegspunkt zum Anschauen hinzu. Erst der Bogen, dann die Gegenwart.
+
 ---
 
 ## 5 — Warum das nicht nebenbei in Welle 4 passiert
