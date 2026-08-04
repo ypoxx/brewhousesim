@@ -35,8 +35,20 @@ done
 # knappe Stunde lang gar nichts — das sieht genauso aus wie ein toter. Der
 # Unterschied steht in der Prozessliste, nicht im Dateisystem:
 #
-#   pgrep -af "node .*\.mjs"                     laeuft ein Messlauf?
+#   pgrep -af "node "                            laeuft ein Messlauf?
 #   curl -s http://127.0.0.1:<hafen>/.messstand-marke   steht sein Stand noch?
+#
+# ACHTUNG beim ersten Befehl: der Messlauf steckt oft in einer langen
+# Kommandozeile mit Schleife drumherum. Wer die Ausgabe filtert oder kuerzt,
+# sieht ihn nicht — am 4.8. um 06:24 sah es deshalb aus, als messe niemand,
+# waehrend zwei Prozesse liefen. NICHT kuerzen, und im Zweifel den dritten,
+# besten Weg nehmen:
+#
+#   ls -t <ausgabeordner>   wachsen die ERGEBNISDATEIEN?
+#
+# Das ist das ehrlichste Signal: ein Messlauf, der lebt, legt alle paar Minuten
+# eine Datei ab. Am 4.8. standen dort 06:11, 06:15, 06:19, 06:23 — ein Takt,
+# den kein toter Prozess erzeugt.
 #
 # In der Nacht zum 4. August hat das den Unterschied gemacht: der eine Agent
 # mass wirklich (linie-vorbild.mjs, Lauf 11 von 12), der andere war ohne
