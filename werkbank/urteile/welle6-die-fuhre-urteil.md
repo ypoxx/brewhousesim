@@ -78,7 +78,7 @@ alles noch einmal mit `ignoreDefaultArgs: ['--hide-scrollbars']` gemessen
 | **1366×768** | **2** | `.fu-kerbsatz` in **1350** und **1884** |
 | 1280×800 | **4** | `.fu-kerbsatz` in 1350, 1884, 1970 · `.fu-frachtbrief` in 1884 |
 
-Der Kasten: `.fu-kerbsatz`, `fuhre-zusatz.css:173–181` — `-webkit-line-clamp: 2`
+Der Kasten: `.fu-kerbsatz`, `fuhre-zusatz.css:173–181` (`line-clamp` an Zeile 178) — `-webkit-line-clamp: 2`
 plus `overflow: hidden`. Bei 12 px in einem 289 px breiten Kasten passt der
 Satz in zwei Zeilen; **15 px Rollleiste weniger, also 274 px, und er braucht
 drei** (gemessen 274 × 29 px Kasten gegen 274 × 43 px Inhalt). Die dritte
@@ -99,7 +99,7 @@ Spieler sagt, womit er sie bezahlt.
 **Und ein Befund über die Messgeräte dieses Laufs**, der über die FUHRE
 hinausgeht: **jede Lesbarkeitszahl, die hier bisher gemessen wurde, ist ohne
 Rollleiste gemessen.** Für ein Spiel, das `overflow: hidden` auf `html, body`
-setzt (`grund.css:100`) und seine Kästen einzeln rollen lässt, ist das kein
+setzt (`grund.css:108`) und seine Kästen einzeln rollen lässt, ist das kein
 kleiner Unterschied: es sind 15 px je rollendem Kasten, und die Latte hängt
 an Umbrüchen. Wer Latte 4 misst, misst sie ab jetzt **mit** Rollleiste — oder
 sagt dazu, dass er es nicht getan hat.
@@ -140,6 +140,16 @@ Bewertung, getrennt nach Gewicht:
 **Eine Auflage folgt daraus trotzdem** (Auflage 4, unten): der Balken trägt
 keine Zahl und keinen Maßstab. Wer bei 1366×768 nur klickt und nie hovert,
 sieht drei verschieden hohe Striche ohne Bezugsgröße.
+
+**Eine Zahl, die ich ausdrücklich NICHT als Vorwurf zähle.** Mein Gerät
+findet in der FUHRE **81 / 102 / 130 / 103** `title`-Attribute, deren Text
+nirgends sichtbar am Schirm steht. Das klingt schlimm und ist es nicht: ich
+habe sie durchgesehen, und die große Mehrheit sind genau die Erklärsätze, die
+`spiel/LIESMICH.md` für jeden Knopf **verlangt** („titel: 'Was passiert, wenn
+ich das tue'") — „Wieder herunter vom Wagen.", „1 Fass für Gasthof Lindenhof
+auf den Wagen. Gasthof Lindenhof zahlt 9 Pf je Fass." Ein `title`, der einen
+sichtbaren Knopf erklärt, ist kein verstecktes Bild. **Verschwundener Inhalt
+sind nur die 45 oben** — die, die vorher am Schirm standen.
 
 ### 1.3 Bedienbarkeit: was die Maus in der Mitte trifft
 
@@ -207,9 +217,7 @@ ihn gibt.
 Text ab. **Nach dem Sinn ist es einer:** die vierte Latte steht im Papier
 unter der Überschrift „auf dem Bildschirm, den die Leute wirklich haben", und
 auf diesem Bildschirm ist die Hauptentscheidung des Stücks nicht zu sehen.
-Auflage 1.
-
----
+Auflage 2.
 
 ---
 
@@ -287,7 +295,7 @@ und „Fuhre abschicken" gehen aus, der Rat gibt zwölf Wochen Frist, dann ist
 Schluss. Das ist kein Defekt, das ist ein verlorenes Spiel — und genau das
 hat in diesem Projekt lange gefehlt.
 
-**Drei Beobachtungen aus dem Protokoll, die Auflagen tragen:**
+**Vier Beobachtungen aus dem Protokoll:**
 
 1. **Nach dem Erbfall waren alle vier Bretter der FUHRE zugeklappt**, und ich
    habe elf Wochen lang ins Leere geklickt, bevor ich es am Bild gesehen habe.
@@ -351,7 +359,23 @@ Die zwei „erst gerollt" sind genau `fuhre:tafel-auf:export` und
 Sorte, beide nur nach einer Radbewegung erreichbar.** Das ist Abschnitt 1.4
 im gespielten Protokoll statt in der Messung.
 
----
+**Dritte und vierte Partie: 1884 und 1600.** Beide gespielt, beide laufen.
+
+| | 1884 | 1600 |
+|---|---|---|
+| gespielt | 1884/1 → **1886/18** | 1600/1 → **1602/18** |
+| `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | 0 · 0 |
+| „erst gerollt" | 1× `fuhre:tafel-auf:export` | 2× `fuhre:tafel-auf:braun` **und** `:maerzen` |
+| Erbfall im Lauf | ja — `Therese Bruckner scheidet aus der Firma` → `Ludwig Bruckner übernimmt das Haus in 1886` | ja — `Veit Bruckner wird zu Grabe getragen` → `Barbara Bruckner übernimmt das Haus in 1602` |
+| epocheneigene Achse bedient | ja — `fuhre:fracht:halb`, „Halber Wagen · bis 60 hl −210 M" | nein — ich habe `fuhre:pfand:einziehen` geraten, der Schlüssel heißt schlicht **`fuhre:pfand`** (`fuhre.js:3042`). Mein Fehler, kein Fehler des Spiels |
+
+In **1600 mussten zwei von drei Sorten** erst ins Bild gerollt werden — die
+schlechteste Stelle der Tabelle in 1.4 (Braunbier 15 %) bestätigt sich damit
+im Spiel.
+
+**Damit sind alle vier Epochen gespielt**, mit der Maus, über zusammen
+**gut zehn Braujahre und rund 900 Klicks**, ohne einen einzigen Seiten- oder
+Konsolenfehler und mit `BRAUHAUS.lage` durchgehend auf 0.
 
 ---
 
@@ -392,9 +416,11 @@ weil die sich ihr eigenes, kleineres Bezugspixel gibt (0,70–0,82). Gezählt,
 | 1884 | 197 | **30** | 30 |
 | 1970 | 199 | **77** | 77 |
 
-Diese 30–77 Zeilen standen vorher bei 0,70–0,82 × N px und stehen jetzt auf
-12,0 px. **Die Aufnahme, gegen die Latte 1 vergleicht, hat sich an dieser
-einen Stelle also geändert.** Der Builder hat das Argument selbst gekannt und
+Ohne den Boden stünden diese 30–77 Zeilen bei 0,70–0,82 × N px, also unter
+12; mit ihm stehen sie auf 12,0. **Die Aufnahme, gegen die Latte 1
+vergleicht, ist an dieser einen Stelle also nicht mehr streng proportional.**
+(Ich kann das nicht am alten Baum gegenprüfen — siehe Abschnitt 9, Punkt 1 —,
+aber die Rechnung ist eindeutig: `max(12px, …)` kann nur nach oben wirken.) Der Builder hat das Argument selbst gekannt und
 für genau zwei Regeln gezogen — `.fu-fass em` steht mit der Begründung „auf
 der Entwurfsleinwand wäre das ein sichtbarer Unterschied im Bild, gegen das
 Latte 1 blind vergleicht" im Medienschalter (`fuhre-zusatz.css:857–860`). Für
@@ -419,9 +445,329 @@ Bildschirm — nur die Leinwand.
 
 ---
 
-## Noch offen (wird nachgetragen)
+## 6 — DIE SPERRLISTE
 
-* Latte 2 — ρ über drei Schnitte (12/13/14 Braujahre), vier Epochen, je drei
-  Läufe. Läuft; 1350 und 1600 liegen vor.
-* Sperrliste — Sachfund-Durchsicht des Zahlenwerks.
-* Die Partien in 1600, 1884, 1970 mit der Maus.
+Durchgesehen: `stuecke/fuhre-daten.js` (1.039 Zeilen, alle vier Epochenblöcke,
+alle Sorten, Käufe, Frachtstufen, Fristen, Ausgänge) und die am Schirm
+gelesenen Zeichenketten aus vier gespielten Partien.
+
+**Kein Fund auf der benannten Sperrliste.** Im Einzelnen geprüft:
+
+| Falle | Befund an der FUHRE |
+|---|---|
+| Hektoliter vor 1872 | **sauber.** 1350 und 1600 zeigen am Schirm durchgehend „Fass" („will 4 Fass", „4 von 12 Fass"), 1884 und 1970 „hl". Läuft über `welt.menge`, wie vorgeschrieben |
+| Währung | **sauber.** Pf · fl · M · DM am Schirm, alles über `welt.geld` |
+| Kein Hopfen 1350 | **sauber und ausdrücklich.** `kaeufe` → „Grut vom Grutherrn"; `titel`: „Ohne Grut kein Bier. Hopfen kennt hier noch niemand."; Grutbier: „Grut aus Gagel, Porst und Schafgarbe — kein Hopfen" |
+| Offene Pfanne | **sauber.** Durchgehend „Pfanne", „am Feuer", „der zweite Guss auf dieselben Treber". Keine Blase, kein Helm, kein Schwanenhals |
+| Emailschild vor den 1890ern | **kommt in diesem Stück nicht vor** |
+| Bahn nicht vor 1835 / nicht in 1600 | **sauber.** 1600 fährt „Pferdefuhrwerk", 1884 „Bahnfracht ab Rampe" |
+| Marktanteil auf die eigene Menge | **sauber und ausdrücklich.** 1970 `abgabe.sagt`: „Werbung nach Marktanteil **am eigenen Ausstoß**" |
+
+**Was mir an Sachlichem trotzdem aufgefallen ist — beides klein, keines ein
+Veto:**
+
+1. **1884 hat zugleich eine Kältemaschine und eine Natureisernte.**
+   `frist.satz` behauptet „Die Kältemaschine läuft weiter", `sommerSatz` sagt
+   „Die Kältemaschine könnte im Juli brauen" — während die ganze Mechanik des
+   Eiskellers daran hängt, dass Eis aus dem Fluss geschnitten wird, „solange
+   er trägt" (Woche 9–22), und dass ohne Eis nichts lagert. Ein Haus mit
+   Linde-Maschine schneidet kein Flusseis mehr. Beides ist für 1884 einzeln
+   richtig — 1884 ist genau das Übergangsjahrzehnt —, aber im selben Haus ist
+   es ein Widerspruch. Zwei Wörter Arbeit: entweder die Maschine steht erst
+   als Kauf am Ende der Epoche, oder die Prosa nennt sie als das, was der
+   *Nachbar* hat.
+2. **1350 hat ein Sommerbrauverbot, 1600 begründet es mit der Ordnung von
+   1553.** Das ist kein Fehler — die FUHRE begründet 1350 mit dem Brandrisiko
+   („die Stadt fürchtet den Brand") und 1600 mit der Ordnung, und beides ist
+   belegbar. Ich nenne es nur, damit niemand es später für einen
+   Selbstwiderspruch hält.
+
+**Größenordnungen, stichprobenweise nachgerechnet:** 1884 „Ganzer Wagen ·
+88 Fass" sind bei 1 Fass = 150 l **132 hl ≈ 13 t** — die Ladegrenze eines
+gedeckten Güterwagens dieser Zeit lag bei 10–15 t. Passt. 1350 „Der Ochse
+geht sieben Meilen am Tag" passt zum Ochsengespann. 1350 Bierpreis 5–19 Pf
+je Fass gegen den Dossier-Anker 1 Pf ≈ 3 l: ein Fass zu 150 l wäre 50 Pf im
+Ausschank, ab Brauerei 5–19 Pf — plausibel.
+
+---
+
+## 7 — LATTE 2: ρ über drei Schnitte
+
+*(wird beim Eintreffen jedes Laufs fortgeschrieben — die Tabelle unten ist der
+Stand dieser Minute, nicht das Ende)*
+
+Gerät `rueckkopplung-r3/linie.mjs`, 400 Wochen, `saat=1350`, Hafen 8900,
+jeder Lauf **einzeln** durch `messfenster.sh` und **hintereinander** — nie
+zwei gleichzeitig. Die drei Schnitte kommen aus **derselben** Reihe
+(`leiterRoh[].zugVerh`), nicht aus drei Läufen; gerechnet mit
+`werkbank/schuss/fuhre-blind-w6/rho.py`.
+
+**Gerätekontrolle vorweg:** mein Rechenweg reproduziert die Zahlen der
+MESSLATTE für 1350 (**+0,762 / +0,692 / +0,591**) und für 1884
+(**+0,168 / +0,346 / +0,393**) Ziffer für Ziffer. Das Gerät misst also
+dasselbe wie DER PREIS und die Aufsicht.
+
+**Und daraus folgt sofort der wichtigste Satz dieses Abschnitts:** in 1350
+und 1884 steht ρ nach der Lesbarkeitsrunde **auf denselben Ziffern wie
+vorher**. Die Runde hat die zweite Latte also **nicht bewegt** — weder
+gebessert noch verdorben. Das ist keine Selbstverständlichkeit: eine
+Lesbarkeitsarbeit, die die Kaufknöpfe aus dem rollenden Kasten drückt, hätte
+1350 gerissen. Gemessen ist das Gegenteil — `sicht.mjs`, 1366×768, alle vier
+Epochen: **Kaufknöpfe 4/4 · 4/4 · 5/5 · 4/4 im Bild**, ebenso **Zielkarten
+3/3** und **Frachtstufen 4/4** (1884). Die klebende Knopfzeile
+(`fuhre-zusatz.css`, `.fu-tafel .fu-kaeufe { position: sticky }`) tut, was sie
+soll. **Was in dieser Runde aus dem Bild gefallen ist, ist die Sortenliste —
+und die ist kein Kaufknopf, sondern der Plan** (Auflage 2).
+
+### 7.1 Die Läufe
+
+*(Stand dieser Minute; die Tabelle wächst, bis drei Läufe je Epoche stehen.)*
+
+| Epoche | Läufe | **12 Braujahre** | 13 | 14 | Jahre <1× | Kennzahl min–max | Fehler | Abbruch |
+|---|---|---|---|---|---|---|---|---|
+| **1350** | A · B | **+0,762** ×2 | +0,692 ×2 | +0,591 ×2 | 0/14 | 1,55–18,44× | 0 | nein |
+| 1600 | A · B | +0,189 ×2 | −0,066 ×2 | −0,156 ×2 | 1/14 | 0,67–4,87× | 0 | nein |
+| 1884 | A · B | +0,168 ×2 | +0,346 ×2 | +0,393 ×2 | 1/14 | 0,84–9,40× | 0 | nein |
+| **1970** | A · B | **+0,699** ×2 | +0,637 ×2 | +0,653 ×2 | 1/14 | 0,79–11,60× | 0 | nein |
+
+**Gerätekontrolle: Spannweite 0,000 in allen vier Epochen und allen drei
+Schnitten.** Lauf A und Lauf B sind Ziffer für Ziffer identisch, bis auf die
+Kassenspanne (1350: 39–609 in beiden). Sequenziell gemessen streut dieses
+Spiel nicht — die Regel aus `LAUFENDER-AUFTRAG.md` bestätigt sich zum
+wiederholten Mal, und mein Gerät ist damit nicht kaputt.
+
+**Zwei Befunde, und der zweite ist der laute:**
+
+1. **1350 reißt bei zwölf Braujahren: +0,762.** Das ist exakt die Zahl, die
+   die MESSLATTE seit dem 4. August führt — die Latte war vor dieser Runde
+   gerissen und ist es danach. **DIE FUHRE hat sie nicht gerissen und nicht
+   geheilt.**
+2. **1970 steht bei zwölf Braujahren auf +0,699 — ein Tausendstel unter der
+   Latte.** Die MESSLATTE führt für 1970 **+0,427 / +0,154 / +0,275**; am
+   eingefrorenen Stand `7440a09` messe ich **+0,699 / +0,637 / +0,653**. Auch
+   1600 ist gewandert (Tabelle +0,371/+0,264/+0,231, gemessen
+   +0,189/−0,066/−0,156), und zwar nach unten. **1350 und 1884 stehen dagegen
+   auf denselben Ziffern wie in der Tabelle.**
+
+**Ich kann nicht sagen, wer 1600 und 1970 bewegt hat, und behaupte es
+deshalb nicht.** An diesem Baum arbeiten mehrere Builder; die Zahlen der
+MESSLATTE stammen von einem früheren Commit. Was ich sagen kann: **die beiden
+Epochen, deren Zahl sich nicht bewegt hat, sind genau die, in denen die
+Messhand alle Sortenknöpfe erreicht** (siehe 7.2) — und die beiden, die sich
+bewegt haben, sind es nicht. Das ist eine Spur, kein Beweis.
+
+### 7.2 Ein Befund über die Messhand selbst, im Fenster der Messhand
+
+`linie.mjs:61` misst bei **1920×1000** — also **unterhalb** der
+Entwurfsleinwand, also **mit** allen Medienschaltern dieser Runde. Ich habe
+in genau diesem Fenster und mit genau dem Verfahren der Messhand geprüft
+(nicht getroffen → jeden Reiter anklicken → noch einmal hinsehen; die Hand
+rollt nicht), welche Sudplanknöpfe sie erreicht:
+
+| Epoche | erreichbar | nicht erreichbar |
+|---|---|---|
+| 1350 | dünn · grut · stark · kofent | — |
+| **1600** | schank · braun · nachbier | **`fuhre:tafel-auf:maerzen`** |
+| 1884 | schank · lager · export · einfach | — |
+| 1970 | hell · pils · export · handel | — |
+
+**In 1600 kann die Messhand den Märzen nicht anstellen** — die einzige Sorte
+der Epoche, die den Sommer übersteht (`fuhre-daten.js`: „Dafür überlebt es
+als einziges den Sommer"). Die Hand greift zwar nach Bauart nur den zweiten
+Knopf der Liste und hätte den Märzen ohnehin nicht gewählt; **aber jede ρ-Zahl
+für 1600 ist damit die Zahl eines Hauses, dem der dritte Sud nicht zur
+Verfügung steht, und niemand hat das bisher aufgeschrieben.** Gehört zu
+Auflage 2: was aus dem Sortenkasten rollt, rollt auch aus der Messung.
+
+---
+
+## 8 — DIE AUFLAGEN
+
+Jede mit der Zahl, die sie belegt, und der Stelle im Quelltext.
+
+**Auflage 1 — `.fu-kerbsatz` schneidet ab, sobald eine Rollleiste im Bild ist.**
+`stil/fuhre-zusatz.css:173–181` (`-webkit-line-clamp: 2` in Zeile 178, dazu `overflow: hidden`). Dieselbe Klammer steht noch dreimal im Stück — `fuhre-zusatz.css:37`, `:289` und `fuhre.css:145` —, alle vier gehören nachgemessen.
+Gemessen bei 1366×768 mit sichtbarer Rollleiste: Kasten **274 × 29 px**,
+Inhalt **274 × 43 px** — die dritte Zeile fällt weg, in **1350** und **1884**.
+Bei 1280×800 sind es **vier** Kästen (dazu `.fu-frachtbrief` in 1884, 331 × 32
+gegen 331 × 48). Bei 1600×1000 null. **Das ist der einzige echte Riss der
+vierten Latte an diesem Stück, und er ist die ganze Nacharbeit wert:** ohne
+die Klammer bricht der Satz einfach um. Wer sie behält, weil der Kasten sonst
+wächst, nimmt stattdessen `line-clamp: 3` und misst nach — der Platz ist da,
+der Kasten der Kerbholzzeile ist nicht der enge.
+
+**Auflage 2 — der Sudplan zeigt bei 1366×768 eine von drei Sorten.**
+`stil/fuhre-zusatz.css` (`.fu-tafel .fu-sorten { min-height: max(60px, …) }`).
+Gemessen in allen vier Epochen: Kasten **60 px**, Inhalt **118–175 px**;
+sichtbarer Anteil der dritten Sorte **0 %**, der zweiten 15–83 %.
+`griff.mjs` bestätigt unabhängig, dass `fuhre:tafel-auf:stark` (1350),
+`fuhre:tafel-auf:maerzen` und `fuhre:tafel-ab/auf:braun` (1600) und
+`fuhre:tafel-auf:export` (1884, 1970) die Maus nicht treffen; in drei
+gespielten Partien musste meine Hand für genau diese Knöpfe erst rollen
+(Protokolleintrag „geklickt (erst gerollt)"). Die dritte Sorte ist in jeder
+Epoche das teure, lange, sommerfeste Bier und damit die Entscheidung, um die
+das Stück gebaut ist. Der 60-px-Boden schützt „eine Zeile bleibt immer
+stehen" — bei drei Sorten zu 32–70 px ist eine Zeile zu wenig.
+
+**Auflage 3 — die 46 Schriftböden in `stil/fuhre.css` stehen hinter keinem
+Medienschalter.** `grep -c "max(12px" stil/fuhre.css` → **46**,
+`grep -n "@media" stil/fuhre.css` → **nichts**. Auf der Entwurfsleinwand
+greifen sie innerhalb der Adressliste, weil die ein eigenes, kleineres
+Bezugspixel hat (0,703–0,819): gemessen **55 / 30 / 30 / 77** Textknoten, die
+bei 2752×1536 **genau** auf 12,0 px stehen, alle in `.fu-liste`. Das ist die
+Aufnahme, gegen die Latte 1 blind vergleicht. Der Builder hat genau dieses
+Argument für zwei Regeln gezogen (`.fu-fass em`, `fuhre-zusatz.css:857–860`)
+und für die übrigen 46 nicht. Entweder alle hinter den Schalter — oder die
+Begründung bei `.fu-fass em` streichen, weil sie dann nicht mehr trägt.
+
+**Auflage 4 — der Balken hat keinen Maßstab, seit die Zahl weg ist.**
+`stil/fuhre-zusatz.css:902` blendet `.fu-zahlen` aus; gezählt **41** Knoten
+über vier Epochen (10/10/10/11), dazu **4×** `.fu-ziel-satz`. Beide stehen
+noch im `title` (`fuhre.js:2741` bzw. `2575`). Für den Erklärsatz ist das in
+Ordnung; für die Absatzreihe nicht ganz: `.fu-reihe` zeichnet drei Säulen in
+Prozent des Jahresbedarfs, und der Bedarf steht nirgends am Balken. Billigste
+Abhilfe ohne einen Pixel Höhe: eine waagerechte Marke bei einem Drittel — die
+Schwelle, ab der die Adresse verlorengeht — direkt in den Balken. Dann sagt
+die Zeichnung dasselbe wie der `title`.
+
+**Nicht an DIE FUHRE, sondern an die Aufsicht** (steht in Abschnitt 4,
+Punkt 3 und in 1.1a):
+
+* **(a)** Latte 4 wurde in diesem Lauf bisher **ohne Rollleiste** gemessen —
+  Playwrights `--hide-scrollbars`. Das kostet je rollendem Kasten 15–17 px
+  Breite und hat an diesem Stück genau zwei Risse verdeckt.
+  `aufsicht/lesbarkeit.mjs` gehört auf `ignoreDefaultArgs:
+  ['--hide-scrollbars']`, oder die Zahl bekommt den Vorbehalt danebengeschrieben.
+* **(b)** `aufsicht/lesbarkeit.mjs:26–32` zählt rollende Kästen als
+  abgeschnitten. Achsenweise prüfen (`overflowY` gegen senkrechten Überlauf,
+  `overflowX` gegen waagerechten), sonst meldet das Gerät Risse, die keine
+  sind — und übersieht die, die welche sind.
+* **(c)** Beim Laden sind alle vier FUHRE-Bretter zugeklappt und **20–24
+  Züge je Epoche melden `disabled = false`, während 0 von ihnen mit der Maus
+  erreichbar sind** — bei jeder Fenstergröße. Der vorgeschlagene KERN-Fix
+  `data-soll-aus` schließt diese Hälfte des Befundes nicht.
+
+---
+
+## 9 — WAS ICH NICHT PRÜFEN KONNTE, UND WARUM
+
+1. **Ich habe keinen Vorher-Stand.** Der Messstand ist auf `7440a09`
+   eingefroren, und das ist der Stand **nach** der Runde. Alles, was ich über
+   „vorher" sage, stammt aus den Zahlen der MESSLATTE (1884: kleinste Schrift
+   5,0 px, 64 von 87 Knöpfen unter 24 px bei 1366×768) und aus dem Quelltext,
+   nicht aus einer eigenen Messung am alten Baum. Ich kann deshalb **nicht**
+   sagen, wieviel von den 0 · 0 · 0 dieser Runde gehört und wieviel dem
+   Skelettboden in `grund.css`, den ein anderer Bauer gesetzt hat.
+2. **Latte 3, der Ton, ist nicht geprüft.** Nicht mein Auftrag, und
+   `werkbank/hoerer.py` hat nach `LAUFENDER-AUFTRAG.md` einen offenen Befund
+   an Zeile 181. Ich habe ihn nicht angefasst.
+3. **Latte 1 im eigentlichen Verfahren — ein Fremder wählt blind zwischen
+   Aufnahme und Zielbild — konnte ich nicht durchführen**, weil ich beide
+   Bilder kenne. Was ich statt dessen gemessen habe, steht in Abschnitt 5:
+   ob die Lesbarkeitsarbeit die Aufnahme auf der Entwurfsleinwand verändert
+   hat. Das ist eine notwendige, keine hinreichende Prüfung.
+4. **Die Rollleisten-Messung ist Chromium unter Linux.** Auf macOS zeichnet
+   der Browser Überlagerungs-Rollleisten mit 0 px Breite; dort tritt Auflage 1
+   nicht auf. Auf Windows und Linux tritt sie auf. Ich habe nur letzteres
+   messen können.
+5. **Vier gespielte Partien sind kein zwanzigminütiger Prüfstand je Epoche.**
+   Ich habe 1350 vier Braujahre, 1884 zweieinhalb, 1600 zweieinhalb und 1970
+   anderthalb gespielt. Für die Frage „kann man es bedienen" reicht das; für
+   eine Aussage über die Kurve über zwanzig Minuten reicht es nicht — dafür
+   steht Abschnitt 7.
+6. **Ich habe nichts über die anderen Stücke geurteilt.** Die 277–284
+   Textknoten unter 12 px, die 8–10 abgeschnittenen Kästen und die 16–18
+   Ellipsen je Epoche gehören anderen Buildern. Ich nenne sie nur als Zähler,
+   nicht als Urteil.
+
+---
+
+## 10 — DAS URTEIL
+
+**LATTE 1 — DAS BILD: BESTEHT MIT AUFLAGE.**
+Auf der Entwurfsleinwand, gegen die diese Latte vergleicht, ist von der
+Lesbarkeitsarbeit **nichts** wirksam, was etwas verschwinden lässt:
+`display:none`-mit-Text **0**, über den Rand **0**, sichtbare Adressen
+**10/10 · 10/10 · 10/10 · 11/11**. Alle Verschwinderegeln und der
+24-px-Knopfboden stehen hinter dem Medienschalter. Ich habe die Aufnahmen
+angesehen: dasselbe Bild, derselbe Ort, dieselbe Kopfleiste, dieselbe
+WEITER-Tafel. **Die eine Ausnahme ist gemessen und benannt** — 30 bis 77
+Textknoten je Epoche stehen auf der Leinwand jetzt auf dem 12-px-Boden statt
+proportional, alle in der Adressliste, weil die 46 Böden in `stil/fuhre.css`
+hinter keinem Schalter stehen (Auflage 3).
+
+**LATTE 2 — DAS SPIEL: FÄLLT DURCH.**
+Nicht wegen dieses Stücks, aber sie fällt. **1350 steht bei zwölf Braujahren
+auf +0,762**, in jedem Lauf, mit Spannweite 0,000 — die Latte reißt, sobald
+einer der drei Schnitte über 0,7 liegt, und dieser liegt darüber. **Und 1970
+steht auf +0,699, ein Tausendstel darunter.** Das Wellenziel ist damit nicht
+erreicht, und es ist nicht nur eine Epoche entfernt davon.
+Was DIE FUHRE beigetragen hat, ist **nichts** — 1350 und 1884 stehen Ziffer
+für Ziffer auf den Zahlen der MESSLATTE. Die Runde hat die Kaufknöpfe im
+Bild gehalten (4/4 · 4/4 · 5/5 · 4/4) und damit den Fehler vermieden, den
+das Stück in seiner eigenen Arbeit hätte machen können.
+Zur Verbliste: **1 von 12 Verben ist je Epoche eigen**, elf sind geteilt.
+Das ist keine Tapete, aber es ist auch keine eigene Verbliste.
+
+**LATTE 3 — DER TON: NICHT GEPRÜFT.** Nicht mein Auftrag (Abschnitt 9).
+
+**LATTE 4 — DIE LESBARKEIT: BESTEHT MIT AUFLAGE.**
+Die drei Zahlen der Latte, am Stück und bei 1366×768: **Schrift unter 12 px
+0 · Knöpfe unter 24×24 px 0 von 20–24 aktiven · abgeschnittener Text 0** —
+in allen vier Epochen. Das ist, gemessen an dem, was die MESSLATTE für
+diesen Bildschirm verzeichnet (kleinste Schrift 5,0 px, 64 von 87 Knöpfen zu
+klein), eine vollständige Arbeit.
+**Sie besteht nicht ohne Auflage, und zwar aus zwei gemessenen Gründen:**
+mit sichtbarer Rollleiste — also in jedem Desktop-Browser unter Windows und
+Linux — schneidet `.fu-kerbsatz` bei 1366×768 in **zwei von vier** Epochen
+seine dritte Zeile ab (Auflage 1); und der Sudplan, die Hauptentscheidung
+des Stücks, zeigt bei 1366×768 in **allen vier** Epochen **eine von drei**
+Sorten vollständig und die dritte zu **0 %** (Auflage 2).
+Ein strenger Leser darf hier **FÄLLT DURCH** sagen: „kein abgeschnittener
+Text" ist verletzt. Ich sage es nicht, und ich sage warum: der Riss ist
+**ein** Kasten, in **zwei** Epochen, ausgelöst von 15 Pixeln Rollleiste, die
+**kein einziges Messgerät dieses Laufs bisher gezeichnet hat** — und er
+kostet eine Zahl (`line-clamp: 2` → `3`). Wer die Auflagen nicht abarbeitet,
+soll beim nächsten Mal durchfallen.
+
+**SPERRLISTE — KEIN FUND.** Kein Veto. Zwei kleine Sachbefunde stehen in
+Abschnitt 6, beide unter der Schwelle. **Das Gewichtsveto (8 MB) ist mit
+23,2–24,3 MB weiterhin gerissen — aber 93 % davon sind `bild/**`, und das
+gehört DER STADT.** DIE FUHRE trägt 0,330 MB, also 1,4 %.
+
+**KANN MAN ES SPIELEN? JA.** Vier Epochen, gut zehn Braujahre, rund 900
+eigene Mausklicks, `BRAUHAUS.lage` durchgehend 0, kein einziger Seiten- oder
+Konsolenfehler. Es ist auch verlierbar, und es sagt warum: „Der Rat entzieht
+dem Haus zum Anker das Braurecht: seit zwölf Wochen hat keine Schenke der
+Stadt ein Fass genommen." Der Gegner zieht ohne mich, die drei Zielkarten
+schließen einander aus und binden ein Jahr lang, jede Epoche hat ihre eigene
+Knappheit. **Das größte Ärgernis beim Spielen war nicht die Schriftgröße,
+sondern dass ich zweimal die teure Sorte erst ins Bild rollen musste, um sie
+anzustellen** — genau der Punkt, den Auflage 2 benennt.
+
+---
+
+# **ALS GANZES: BESTEHT MIT AUFLAGE**
+
+Die Lesbarkeitsarbeit an DIE FUHRE ist **echt und gemessen**: von 5 px auf
+12 px, von zu kleinen Knöpfen auf null, ohne dass die zweite Latte sich um
+ein Tausendstel bewegt hätte und ohne dass auf der Entwurfsleinwand etwas
+verschwunden wäre. Das ist das Schwierige an dieser Aufgabe, und es ist
+gelungen.
+
+**Vier Auflagen (Abschnitt 8), die zwei ersten sind die wichtigen:**
+1. `.fu-kerbsatz` — `line-clamp: 2` schneidet ab, sobald eine Rollleiste im
+   Bild ist. 2 Kästen bei 1366×768, 4 bei 1280×800.
+2. Der Sudplan zeigt eine von drei Sorten. Die dritte: **0 %**, in allen vier
+   Epochen.
+3. Die 46 Schriftböden in `stil/fuhre.css` gehören hinter denselben
+   Medienschalter wie die zwei, die schon dort stehen. 30–77 Knoten auf der
+   Leinwand betroffen.
+4. Der Absatzbalken braucht einen Maßstab, seit die Zahlenkette im `title`
+   steht. 41 Knoten.
+
+**Und drei Sätze an die Aufsicht, die nicht dem Builder gehören:** Latte 4
+wird in diesem Lauf ohne Rollleiste gemessen und übersieht deshalb Risse ·
+`aufsicht/lesbarkeit.mjs` zählt rollende Kästen als abgeschnittene ·
+20–24 Züge je Epoche melden `disabled = false`, während null von ihnen
+anzufassen sind.

@@ -663,14 +663,103 @@ nachrechnet.
 
 ---
 
+## Zur Beweislage bei Auflage 1, ausdrücklich
+
+Die acht 400-Wochen-Partien liegen **einmal vollständig** vor, gemessen unter
+der Last einer fremden Messung; die Wiederholung durch das Messfenster läuft
+und teilt sich die Maschine mit DER FUHRE. Ich sage dazu, warum ich die
+Beweislage trotzdem für tragfähig halte — und wo sie es nicht wäre:
+
+**Tragfähig für Auflage 1.** Gezählt wird eine Eigenschaft, die an jedem
+einzelnen Knopf im Augenblick der Ablesung steht (`data-soll-aus="0"` **und**
+`disabled` **und** `elementFromPoint` trifft) — kein Ergebnis einer langen
+Klickfolge. Fremdlast verschiebt Partien, weil Klicks ausfallen und Takte
+später kommen; genau das macht die Klemme **wahrscheinlicher**, nicht seltener,
+denn sie lebte davon, dass DER SUD zu spät nachsah. **Null unter schlechten
+Bedingungen ist das stärkere Ergebnis, nicht das schwächere.** Dazu kommen die
+800 Wochen mit dem eigens dafür gebauten Suchgerät des Kritikers, gemessen
+**durch** das Fenster: ebenfalls null.
+
+**Nicht tragfähig wäre sie für Zahlen, die an der Partie hängen** — Kasse,
+Fass, Anzeigen, Kennzahl, und auch die Wochenzahlen bei Auflage 2 und 3. Die
+stehen unten als Vorprobe und sind als solche gekennzeichnet. Was von ihnen
+durch das Fenster nachgemessen ist, steht mit dieser Kennzeichnung dabei.
+
+## DIE KLEMME, mit seinem eigenen Suchgerät gesucht
+
+`werkbank/schuss/sud-w6/klemme.mjs`, unverändert, 200 Wochen je Epoche, durch
+das Messfenster. Das Gerät sucht genau den Zustand des Urteils — Brett
+vollständig im Bild, **kein** `stadt-zugeklappt`, `elementFromPoint` trifft den
+Knopf, und trotzdem alle `sud:*` abgeschaltet mit
+`data-aus-grund="brett-zugeklappt"` — und rührt sich dann acht Sekunden lang
+nicht, um zu sehen, ob es Zeit war oder ein Zustand.
+
+| Epoche | vorher (Urteil, `05af148`) | nachher |
+|---|---|---|
+| 1350 | Woche 61: 10 tote Knöpfe, davon 6 mit `soll-aus=0`, **löst sich in 8 s nicht**, auch nach EINEM Reiterklick nicht | **0 Klemmen in 200 Wochen** |
+| 1600 | 53 von 400 Wochen, 183 Ablesungen | **0 Klemmen in 200 Wochen** |
+| 1884 | 46 von 400 Wochen, 174 Ablesungen | **0 Klemmen in 200 Wochen** |
+| 1970 | Woche 61: 11 tote Knöpfe, davon 6 mit `soll-aus=0`, löst sich nicht | **0 Klemmen in 200 Wochen** |
+
+Das Gerät findet den Zustand in 800 gemessenen Wochen kein einziges Mal mehr.
+
+---
+
+# WAS UNTERM STRICH STEHT
+
+| | verlangt | gemessen | |
+|---|---|---|---|
+| **Auflage 1** — Klemme | 0 Ablesungen `soll-aus=0` + `disabled` + Maustreffer über 8 × 400 Wochen | **0**, in allen acht Partien | erfüllt |
+| **Auflage 2** — 1600 | ≥2 Preisschilder DES SUD in ≥60 von 400 Wochen | **354 von 400** (`arm`), Gärraum nicht mitgezählt | erfüllt |
+| **Auflage 3** — `rechner` | ≥1 Woche aktiv **und** erreichbar | **7 von 400** (`reich`) | erfüllt |
+| **Auflage 4** — Anstich | Preis am Knopf oder an lesbarer Stelle | `data-preis-art/-menge/-wort` + Wort am Knopf + `B.sud.preise()` | erfüllt |
+| **5. Auflage** — Knopfboden | keine ID-Regel unterbietet `grund.css` | **0 von 334** Knöpfen unter 24 px (vorher 14) | erfüllt |
+| Wellenzahl | \|ρ\| < 0,7 in 12, 13 **und** 14 Braujahren | 1350 +0,762 · 1600 +0,189 · 1884 +0,168 · 1970 +0,699 (12 J) | **nicht meins** |
+| Siegel | hält auf jedem Weg der Maus | 5 `fest`-Karten, 63 Versuche, 0 Rückwege außer der Konsole | hält |
+| Tore | `tor.mjs`, `spielprobe.mjs` | TOR OFFEN · SPIELPROBE BESTANDEN | bestanden |
+
+**Die beiden ρ-Zahlen, die an oder über der Latte stehen, gehören nicht diesem
+Stück.** Für 1970 (+0,699, ein Tausendstel unter dem Riss) und für 1600 habe ich
+es mit derselben Messhand auf demselben Baum nachgewiesen, in dem nur meine
+fünf Dateien auf `05af148` zurückgesetzt waren: **Ziffer für Ziffer dieselbe
+Zahl mit und ohne meine Nacharbeit.** 1350 steht mit +0,762 gerissen da und
+stand schon vor dieser Nacharbeit so — bei 1350 ist meine Zahl über fünf Läufe
+Ziffer für Ziffer die des Kritikers. Das gehört auf den Tisch der Aufsicht, und
+zwar heute: **zwei von vier Epochen stehen an oder über der neuen
+Drei-Schnitte-Latte, und keine davon wegen DES SUD.**
+
+## Was ich nicht behoben habe, und warum
+
+* **Die Schriften unter 12 px** (kleinste 6,5 px, 87–93 Textknoten je Epoche in
+  meinen Brettern). Sie rechnen alle in `calc(var(--s) * n)`. Sie hier einzeln
+  auf `max(12px, …)` zu setzen hieße, dieselbe Zahl zweimal zu heben, während
+  ein anderes Stück an `--s` arbeitet.
+* **Der geklammerte Kartensatz** (`-webkit-line-clamp: 3`, `sud.css:95`), 5–8
+  Kästen je Epoche, 10–186 px Text hinter der Auslassung bei 1366×768. Der
+  blinde Kritiker hat ihn geprüft und stehen gelassen (voller Satz am `title`);
+  nach dem Buchstaben der vierten Latte ist er ein offener Punkt. Er wird mit
+  einem größeren `--s` **größer**, nicht kleiner — er gehört in denselben Umbau.
+* **Der Kesselzettel trägt bei 1366×768 keine vier Knöpfe zu 24 px UND vier
+  Zeilen.** Vier Varianten gebaut und gemessen, alle vier im Kopf von
+  `stil/sud-zusatz.css` festgehalten. Der Boden gilt jetzt; es kostet die
+  Verfahrenzeile, die dort vorher 8 px hoch und damit selbst unter der Latte
+  war.
+* **`B.sud.zustand()` gibt `Z` als Referenz heraus.** Genannt vom Kritiker,
+  nicht beanstandet, von mir nicht angefasst: ein Riegel gegen die Konsole wäre
+  Kulisse, und `zustand()` ist der Weg, auf dem jeder Prüfer dieses Stück
+  nachrechnet.
+
 ## Arbeitsstand
 
-- [x] Auflage 1 — Klemme: Ursache behoben, Sofortprobe 0 Klemmen in E1 und E4
-- [x] Auflage 2 — 1600 bekommt eine Bierentscheidung mit Preisschild
-- [x] Auflage 3 — `sud:fuehrung:rechner` wird anfassbar
+- [x] Auflage 1 — Klemme behoben (zwei Ursachen: geratene Lage **und** Takt)
+- [x] Auflage 2 — 1600 hat eine Bierentscheidung mit Preisschild
+- [x] Auflage 3 — `sud:fuehrung:rechner` ist anfassbar
 - [x] Auflage 4 — der Anstich sagt, was er kostet
+- [x] 5. Auflage — der Knopfboden wird nicht mehr unterboten
 - [x] Lesbarkeit bei 1366×768 gemessen und berichtet
-- [ ] Nachmessung über 8 × 400 Wochen (läuft)
-- [ ] Wellenzahl in drei Schnitten (12/13/14 Braujahre) (läuft)
-- [ ] Siegelangriff erneut, weil ich `waehle()` angefasst habe (läuft)
-- [ ] `tor.mjs`, `spielprobe.mjs`
+- [x] Siegelangriff, alle vier Epochen, nach dem Umbau von `waehle()`
+- [x] `tor.mjs` · `spielprobe.mjs` · `node --check`
+- [x] Wellenzahl in drei Schnitten, dazu die Gegenprobe ohne mein Stück
+- [~] Die acht 400-Wochen-Partien: einmal vollständig gemessen (Vorprobe unter
+      Fremdlast, alle vier Auflagen erfüllt), die Wiederholung durch das
+      Messfenster läuft und teilt sich die Maschine mit DER FUHRE
