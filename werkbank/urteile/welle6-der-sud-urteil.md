@@ -542,4 +542,63 @@ beide Partien enden bei `höchstens Schankbier`. Das steht am Knopf
 angesagt; es heisst aber, dass die einzige Kaufentscheidung dieser Epoche
 neben einer kostenlosen Karte verpuffen kann.
 
-*(Latte d folgt — zwoelf Laeufe laufen.)*
+## Die zweite Messlatte
+
+### (a) Entscheidungen mit Preisschild nebeneinander, erreichbar UND aktiv
+
+Gezaehlt wurde nur, was `data-preis` traegt, NICHT `disabled` ist und dessen
+Mittelpunkt `elementFromPoint` wirklich liefert. Zahlen oben; kurz:
+
+* **1970 traegt die Latte** — 3 Schilder in 189–241 von 400 Wochen, 4 in
+  48–87 Wochen.
+* **1884 traegt sie halb** — 2 Schilder in 48 (reich) bzw. 73 (arm) Wochen.
+* **1350 traegt sie halb** — 2 Schilder in 106 Wochen, aber nur solange nicht
+  gekauft ist; nach beiden Siegeln 2 Schilder in 2 von 400 Wochen.
+* **1600 traegt sie nicht** — 0 Schilder in 364 von 400 Wochen, 2 Schilder in
+  genau 1 Woche.
+
+### (b) unwiderrufliche Festlegungen, die eine gute Hand wirklich nimmt
+
+Gemessen mit der aufsteigenden Hand (nimmt jede Woche die teuerste Karte, die
+die Kasse zu 55 % traegt, und geht nie zurueck):
+
+| Epoche | `fest` im Angebot | davon genommen | wann | Anteil der Barschaft |
+|---|---|---|---|---|
+| 1350 | 2 (78 + 30 Pf) | **2** | 1350/1 und 1350/24 | 39 % und 54 % |
+| 1600 | 1 (260 fl) | **1** | 1601/9 | 53 % |
+| 1884 | 2 (9.800 + 3.400 M) | **2** | 1884/1 und **1896/1** | 30 % und 52 % |
+| 1970 | 3 (42.000 + 118.000 + 74.000 DM) | **1** (`labor`) | 1970/1 | 49 % |
+
+`sud:behandlung:pasteur` (74.000) stand in 87 von 400 Wochen aktiv und
+erreichbar, wurde von dieser Hand aber nie bezahlbar (braucht 134.545 bei
+55 % Rueckhalt; Kassenhoechststand 129.404). **`sud:fuehrung:rechner`
+(118.000 DM) war in 800 gemessenen Wochen kein einziges Mal aktiv und
+erreichbar.**
+
+### (d) Barschaft ÷ Preis des naechsten sinnvollen Zuges
+
+Zwei Fragen, zwei Messungen.
+
+**Leert eine Bierwahl die Kasse so, dass danach nichts mehr geht?** Nein.
+In 8 × 400 = 3.200 sorgfaeltig gespielten Wochen gab es **keinen einzigen
+Abbruch** („Haus zu", „WEITER nicht anzufassen", „kein Zug veraendert die
+Woche"). Der teuerste Kauf gemessen an der Kasse war `sud:wuerze:brief`
+(54 % der Barschaft, 1350/24): die Kennzahl fiel fuer wenige Wochen auf 0,53
+und war im Jahresmedian bei 0,86; das Haus spielte danach dreizehn weitere
+Braujahre. In 1350 stand die Kasse in 1 von 400 Wochen auf 0 (beide Haende),
+in allen anderen Epochen nie.
+
+**Ist die Wellenzahl unberuehrt?** Gemessen mit
+`werkbank/schuss/sud-w6/linie.mjs` — Byte fuer Byte die Kopie von
+`werkbank/schuss/rueckkopplung-r3/linie.mjs` (`md5 374727fc…`, beide gleich),
+drei Laeufe je Epoche, sequenziell, 400 Wochen = 14 Braujahre, ausgewertet mit
+`werkbank/schuss/rueckkopplung-r3/auswerten.py`:
+
+| Epoche | Stand laut Auftrag | hier gemessen (3 Laeufe) | Spannweite | Jahre unter 1× |
+|---|---|---|---|---|
+| 1350 | +0,591 | **+0,591** | **0,000** | 0/14 |
+| 1600 | +0,231 | *(laeuft)* | | |
+| 1884 | +0,393 | *(laeuft)* | | |
+| 1970 | +0,275 | *(laeuft)* | | |
+
+
