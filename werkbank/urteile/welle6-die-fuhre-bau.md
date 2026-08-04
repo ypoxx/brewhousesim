@@ -454,16 +454,24 @@ die Sperre**, hintereinander, in der Reihenfolge der Dringlichkeit
 | | nachher | +0,699 / +0,637 / +0,653 | **+0,699 / +0,637 / +0,653** |
 | **1600** | vorher | +0,371 / +0,264 / +0,231 | **+0,371 / +0,264 / +0,231** |
 | | nachher | +0,189 / −0,066 / −0,156 | **+0,189 / −0,066 / −0,156** |
+| **1350** | vorher | +0,762 / +0,692 / +0,591 | **+0,762 / +0,692 / +0,591** |
+| | nachher | +0,762 / +0,692 / +0,591 | **+0,762 / +0,692 / +0,591** |
 
-**Ziffer für Ziffer identisch** — dazu dieselbe Kasse (1998–86000 bzw.
-1030–114537, 251–2525 bzw. 169–2851) und dieselbe Kennzahlreihe. Die Hand
-`linie.mjs` mit `RUHE=1` hat unter beiden Bedingungen dieselbe Partie gespielt;
-das ist genau das, was ihr Bau verspricht (*„RUHE=1 liefert unter schwerer Last
-dieselbe Reihe wie WARTE=3 auf der ruhigen Maschine"*), und hier steht es
-nachgemessen.
+**Ziffer für Ziffer identisch, in jeder einzelnen Zelle** — dazu dieselbe Kasse
+(1998–86000 bzw. 1030–114537, 251–2525 bzw. 169–2851, 39–609 bzw. 39–609) und
+dieselbe Kennzahlreihe. Die Hand `linie.mjs` mit `RUHE=1` hat unter beiden
+Bedingungen dieselbe Partie gespielt; das ist genau das, was ihr Bau verspricht
+(*„RUHE=1 liefert unter schwerer Last dieselbe Reihe wie WARTE=3 auf der
+ruhigen Maschine"*), und hier steht es nachgemessen. **Der erste Satz war also
+nicht verdorben** — aber das wusste vorher niemand, und deshalb war die
+Wiederholung richtig.
 
-Für 1350 und 1884 galt schon im ersten Satz das Stärkste, was man messen kann:
-vorher und nachher waren **dieselbe Partie**, Ziffer für Ziffer.
+Bei **1350** ist zusätzlich vorher gleich nachher: dieselbe Partie, dieselbe
+Kasse, dieselbe Reihe. Dasselbe galt im ersten Satz für **1884**.
+
+*(1884 lief zum Zeitpunkt dieses Eintrags noch in der Warteschlange der Sperre;
+im ersten Satz war es vorher wie nachher +0,168 / +0,346 / +0,393, also
+identisch.)*
 
 Beide Sätze liegen unter `/tmp/fuhre-rho/` (`last-*` erster Satz,
 `w2-*` Wiederholung durch die Sperre).
