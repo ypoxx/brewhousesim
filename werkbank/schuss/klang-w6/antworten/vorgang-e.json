@@ -1,0 +1,422 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 8,
+    "sicher": 90
+   },
+   "b": {
+    "da": true,
+    "sekunde": 18,
+    "sicher": 95
+   },
+   "c": {
+    "da": true,
+    "sekunde": 15,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [
+   {
+    "sekunde": 21,
+    "klang": "Nadeldrucker / Matrixdrucker",
+    "warum": "Ein modernes elektronisches Gerät passt nicht in das ansonsten mittelalterliche Setting mit Fuhrwerken und Flötenmusik."
+   }
+  ],
+  "datei": "e1-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 1,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1600,
+  "anachronismen": [
+   {
+    "sekunde": 21,
+    "klang": "Ein vorbeifahrendes Auto mit Verbrennungsmotor und Reifengeräuschen",
+    "warum": "Autos gab es in der Frühen Neuzeit noch nicht."
+   },
+   {
+    "sekunde": 27,
+    "klang": "Ein elektronisches Piepen (wie von einer Digitaluhr oder einem modernen Gerät)",
+    "warum": "Elektronik und digitale Signaltöne existierten in dieser Epoche nicht."
+   }
+  ],
+  "datei": "e2-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 21,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": true,
+    "sekunde": 11,
+    "sicher": 100
+   },
+   "f": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [
+   {
+    "sekunde": 15,
+    "klang": "Modernes Zughorn / Diesellok-Hupe",
+    "warum": "Das laute Horn eines modernen Zuges passt technologisch nicht in das historische Setting (Mittelalter/Frühe Neuzeit), das durch die Orgel, das Handwerkszeug und die Münzen suggeriert wird."
+   }
+  ],
+  "datei": "e3-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 100
+   },
+   "b": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 90
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [
+   {
+    "sekunde": 2,
+    "klang": "Motorengeräusch eines modernen LKWs / Autos, das abfährt",
+    "warum": "Verbrennungsmotoren gab es im Mittelalter bzw. der frühen Neuzeit noch nicht."
+   },
+   {
+    "sekunde": 6,
+    "klang": "Klingeln eines modernen Telefons",
+    "warum": "Telefone wurden erst im späten 19. Jahrhundert erfunden und passen nicht zum historischen Holzmechanik-Hintergrund."
+   },
+   {
+    "sekunde": 12,
+    "klang": "Erneutes Motorengeräusch eines LKWs",
+    "warum": "Fahrzeuge mit Verbrennungsmotor fallen komplett aus der Zeit des historischen Settings."
+   },
+   {
+    "sekunde": 14,
+    "klang": "Elektrische Alarmglocke / Schulpausenglocke",
+    "warum": "Elektrische Klingeln und Alarmanlagen existierten in der vorindustriellen Epoche nicht."
+   }
+  ],
+  "datei": "e4-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e1-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e2-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": null,
+  "anachronismen": [],
+  "datei": "e3-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e4-still.wav"
+ }
+]

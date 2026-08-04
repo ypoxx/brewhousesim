@@ -960,7 +960,16 @@
        Der `fern`-Bus (jeder uebrige Klang des Nachbarn) geht mit auf 1500 —
        auch er soll von drueben kommen —, aber nicht so tief wie das Zeichen:
        dort steht der Vorgang selbst, und der muss erkennbar bleiben. */
-    w.bus.fern = baueWand(ctx, w.bus.fremd, 1500, 0.115, 0.28);
+    /* 2000 Hz, und diese Zahl geht ZURUECK auf ihren alten Wert. Zwischendurch
+       stand sie auf 1500 — "auch die uebrigen Klaenge des Nachbarn sollen von
+       drueben kommen". Gemessen war das ein Fehlgriff: an dieser Wand haengt
+       nicht das Zeichen, sondern der ZUG des Nachbarn selbst (`gegner:werben`
+       mit dem Karren, `gegner:entreissen` mit der Unruhe). Genau dort hat das
+       fremde Ohr den Gegenzug in 1350 bisher immer gehoert — in der Vorrunde
+       bei Sekunde 10, in Stand A bei Sekunde 8, wo bei 7,55 s `gegner:werben`
+       steht. Wer den Vorgang daempft, nimmt dem Ohr die Auskunft, WAS drueben
+       geschieht; die Wand des ZEICHENS sagt schon, DASS es drueben ist. */
+    w.bus.fern = baueWand(ctx, w.bus.fremd, 2000, 0.115, 0.28);
     /* 600 Hz UND EIN AUSGLEICH DAHINTER — und diese Zahl hat mich am meisten
        gekostet, weil sie zweimal falsch war.
        900 Hz (Stand A): das Zeichen verlor die Haelfte seines Pegels, denn was

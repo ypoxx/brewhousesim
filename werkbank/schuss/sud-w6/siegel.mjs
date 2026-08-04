@@ -552,23 +552,25 @@ for (const fs2 of festSchluessel) {
   /* 6 — Zustand direkt umschreiben (kein Weg der Maus, aber ein Weg) */
   {
     const vor = await standSud();
-    const erg = await seite.evaluate((a, o) => {
+    const erg = await seite.evaluate(({ a, o }) => {
       const z = window.BRAUHAUS.sud.zustand();
       const alt = z.verfahren[a];
       z.verfahren[a] = o;
       window.BRAUHAUS.sende('zeichne', { grund: 'probe' });
       return { alt, gesetzt: z.verfahren[a] };
-    }, achse, geschwister.length ? geschwister[0].zug.split(':')[2] : opt);
+    }, { a: achse, o: geschwister.length ? geschwister[0].zug.split(':')[2] : opt });
     await ruhe(300);
     const nach = await standSud();
     angriff.versuche.push({ weg: '6 Zustand direkt umgeschrieben (Konsole, keine Maus)', achse,
       erg, vorher: vor.verfahren[achse], nachher: nach.verfahren[achse],
       zurueck: vor.verfahren[achse] !== nach.verfahren[achse] });
     /* wieder herstellen */
-    await seite.evaluate((a, o) => { window.BRAUHAUS.sud.zustand().verfahren[a] = o;
-      window.BRAUHAUS.sende('zeichne', { grund: 'probe' }); }, achse, vor.verfahren[achse]);
+    await seite.evaluate(({ a, o }) => { window.BRAUHAUS.sud.zustand().verfahren[a] = o;
+      window.BRAUHAUS.sende('zeichne', { grund: 'probe' }); }, { a: achse, o: vor.verfahren[achse] });
   }
 }
+
+fs.writeFileSync(ZIEL.replace(/\.json$/, '-angriff.json'), JSON.stringify(angriff, null, 1));
 
 /* Und noch ein paar Wochen weiter: haelt es auch dann? */
 for (let w = 0; w < 6; w++) {
