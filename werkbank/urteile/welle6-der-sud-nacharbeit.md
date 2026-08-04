@@ -338,6 +338,128 @@ größer, nicht kleiner.
 
 ---
 
+# DIE NACHMESSUNG
+
+## Wie gemessen wurde, und was dabei schiefging
+
+Alle Zahlen von meinem eigenen eingefrorenen Hafen 8951, Marke geprüft, alle
+Läufe sequenziell. Gemessen wurde mit **den Geräten des Kritikers, unverändert**
+(`sud-w6/sudhand.mjs`, `klemme.mjs`, `siegel.mjs`) und mit dem Vorbild der
+zweiten Latte (`rueckkopplung-r3/linie.mjs`, md5 `374727fc…`). Nachgerechnet
+habe ich mit eigenen Geräten daneben (Sperrliste 7):
+
+* `werkbank/schuss/sud-w6-nach/nachpruefung.mjs` — die vier Auflagen an seinen
+  Ausgabedateien. `sud:gaerraum` zählt bei Auflage 2 **nicht** mit
+  (Sperrliste 3); seine Zählung mit Gärraum steht zum Vergleich daneben.
+* `werkbank/schuss/sud-w6-nach/schnitte.py` — ρ über 12, 13 und 14 Braujahre.
+  **Gegen die vorhandenen Zahlen geeicht:** an den Belegen des Kritikers
+  liefert es +0,762 / +0,692 / +0,591 für 1350 und reproduziert damit die
+  Tabelle in `gauntlet/MESSLATTE.md` Ziffer für Ziffer.
+* `werkbank/schuss/sud-w6-nach/lesbar-sud.mjs` — die vierte Latte, nur `.sud-*`.
+
+**Drei Sätze, und nur der dritte zählt.** Der erste lief unter der Last einer
+fremden 400-Wochen-Messung (DIE FUHRE, `linie.mjs 4 400`, Lastmittel 4,08,
+vierzehn Browser). Der zweite lief nach einer Absprache — und überlappte
+erneut, weil beide Builder gleichzeitig wiederholten. Seit dem dritten geht
+**jede** 400-Wochen-Messung durch die Sperre der Aufsicht,
+`werkbank/schuss/aufsicht/messfenster.sh`, ein Aufruf je Messung,
+hintereinander in der Schleife. Die ersten beiden Sätze stehen unten als
+**Vorprobe** und sind ausdrücklich keine Belegzahlen.
+
+## Die Wellenzahl, in drei Schnitten
+
+Drei Läufe je Epoche, 400 Wochen = 14 Braujahre, `linie.mjs` unverändert,
+ausgewertet mit `schnitte.py`.
+
+**1350, fünf unabhängige Läufe (drei vor der Sperre, zwei durch sie):**
+
+| Schnitt | Spearman | Spannweite |
+|---|---|---|
+| 12 Braujahre | **+0,762** | 0,000 |
+| 13 Braujahre | **+0,692** | 0,000 |
+| 14 Braujahre | **+0,591** | 0,000 |
+
+Ziffer für Ziffer der Stand aus `MESSLATTE.md` und aus dem Urteil des
+Kritikers. **DER SUD hat die Wellenzahl von 1350 nicht angefasst.** Dass 1350
+bei zwölf Braujahren mit +0,762 reißt, stand schon vor dieser Nacharbeit da und
+ist ausdrücklich nicht meine Baustelle — aber es steht hier mit seiner
+Laufzeit, wie die neue Regel es verlangt.
+
+*(1600, 1884 und 1970 werden gerade durch die Sperre gemessen; die Zahlen
+kommen unten dazu, sobald der Satz durch ist.)*
+
+## Die vier Auflagen — Vorprobe unter Fremdlast
+
+*Diese Tabelle stammt aus dem ersten Satz (Last 4,08). Sie ist keine Belegzahl.
+Sie steht hier, weil sie das Vorzeichen zeigt und weil ein Bericht, der eine
+Messung verwirft, sagen soll, was in ihr stand.*
+
+| Epoche · Hand | Auflage 1: Ablesungen `soll-aus=0` + `disabled` + Maustreffer | ≥2 Preisschilder DES SUD (ohne Gärraum) | Fehler | Abbruch |
+|---|---|---|---|---|
+| 1350 reich | **0** | 0/400 | 0 | nein |
+| 1350 arm | **0** | 117/400 | 0 | nein |
+| 1600 reich | **0** | 1/400 | 0 | nein |
+| 1600 arm | **0** | **354/400** | 0 | nein |
+| 1884 reich | **0** | 1/400 | 0 | nein |
+| 1884 arm | **0** | 2/400 | 0 | nein |
+| 1970 reich | **0** | **339/400** | 0 | nein |
+| 1970 arm | **0** | 65+/400 | 0 | nein |
+
+**Auflage 1: 0 Ablesungen über alle acht Partien** — gegen 24/38, 53/47, 46/39,
+20/21 Wochen im Urteil.
+**Auflage 2: 354 von 400 Wochen** in 1600 mit zwei Preisschilder DES SUD
+zugleich aktiv und von der Maus erreichbar, Gärraum ausdrücklich nicht
+mitgezählt. Die Latte war 60. Vorher: 0 Schilder in 364 von 400 Wochen.
+**Auflage 3: `sud:fuehrung:rechner` in 7 von 400 Wochen aktiv UND erreichbar**
+(vorher 0 von 800). Zum Vergleich `behandlung:pasteur` 85 Wochen.
+**Auflage 4:** an allen vier Epochen am Knopf abgelesen, siehe oben.
+
+### Was der erste Anlauf noch offen ließ — und was ihn geschlossen hat
+
+Die erste Fassung der Behebung (nur `rahmenWill()`) ließ **46 bzw. 69**
+Ablesungen übrig. Sie kamen nicht mehr aus dem alten Fehler, sondern aus dem
+**Takt**: `stadt.js:557 schalte()` dreht die Lage im Klickzuge um und nimmt die
+Klasse sofort ab, ohne ein `zeichne` zu schicken — DER SUD sah erst in seinem
+eigenen 320-ms-Takt nach. In diesem Fenster stand das Brett offen im Bild, die
+Maus traf seine Knöpfe, und sie waren noch alle abgeschaltet. Schlimmer: wer
+daraufhin ein zweites Mal auf den Reiter klickt, klappt das Brett wieder zu —
+genau dieses Pendeln stand in den Belegen (`aufOk: 0` nach fünf Klicks).
+
+Behoben mit einem Beobachter am Brett, der nur auf `class` hört und den Takt in
+denselben Mikrotask holt. Nachgemessen sofort danach, 120 Wochen:
+**0 Klemmen, Brett in 120 von 120 Wochen aufbekommen** (vorher: 0 von den
+betroffenen).
+
+## Was die Behebung nebenbei kostet und einbringt
+
+Der Klemmenfix gibt dem Spieler Züge zurück, die er vorher verloren hat, und
+das ist an den Partien abzulesen. 1350 `arm` (kauft nie) endete beim Kritiker
+mit `guete 90` und **zwei Anzeigen**; jetzt mit `guete 98` und **null**
+Anzeigen, bei 996 statt 945 Fass. Das ist kein Geschenk, sondern die Hefe, die
+der Spieler vorher nicht pflegen konnte, weil sein Brett tot dastand.
+
+In 1600 löst sich zugleich der „harte Befund" des Kritikers: beide Hände endeten
+vorher bei `höchstens Schankbier`, die 260 fl der Kellergärung waren am Deckel
+wertlos. Jetzt:
+
+| 1600 | Verfahren am Ende | Deckel | Stellhefe | Fassfaktor |
+|---|---|---|---|---|
+| reich | `weizenbrief` · `keller` | **Märzenbier** | 98 % | ×1,19 |
+| arm | `hafer` · `ober` | Schankbier | 92 % | ×1,16 |
+
+Zwei verschieden gespielte Partien derselben Epoche enden mit verschiedenem
+Bier, und es steht am Kesselzettel.
+
+## Eine Beobachtung, die nicht mir gehört
+
+In 1884 `reich` sprang die Kennzahl im Braujahr 1896 auf **234,06×**. Der
+Nenner war dort `Stückgut · bis 18 hl` für 52 M, Art `lage` — ein Zug DER
+FUHRE, nicht meiner. In diesem Jahr meldete kein Stück einen umkämpften Zug,
+und die Kennzahl misst dann den billigsten Zug, den es findet. Ich nenne es,
+weil es in meiner Ausgabedatei steht; beheben kann es dieses Stück nicht.
+
+---
+
 # Wo ich den Kritiker ergänze — und wo ich ihm widerspreche
 
 **Ich widerspreche ihm in keinem seiner vier Befunde.** Ich habe jeden davon
