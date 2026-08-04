@@ -789,7 +789,50 @@ var PREIS_DATEN = {
         { k: 'hofbefreiung', name: 'Der Hofbefreiungsbrief', anteil: 0.20, ab: 1604,
           was: 'Ein Patent aus der Residenz: das Haus liefert an den Hof und steht nicht mehr unter der Zunft.',
           regel: 'Zunftumlage und Meisterbüchse entfallen für immer. Die Meister der Stadt vergessen es nicht — sie gehen an diesem Haus vorbei.',
-          wirkung: { pflichtWeg: 'zunftumlage', ansehen: -5 } }
+          wirkung: { pflichtWeg: 'zunftumlage', ansehen: -5 } },
+
+        /* DIE LUECKE IN DER LEITER — 1600 ist der schaerfste der vier Faelle.
+           Gemessen ueber 400 Wochen mit der Hand, die Festlegungen WILL: an
+           ZWOELF VON VIERZEHN Michaelitagen ist keine bezahlbar. Nach
+           `reinheit` (0,10) und dem Hofbefreiungsbrief (0,20) springt die
+           Leiter auf 1,90 / 2,40 / 2,80 — 5.300 bis 13.000 fl gegen eine
+           Michaeli-Lade, die in vierzehn Jahren nie ueber 997 fl kommt. Die
+           drei grossen bleiben unberuehrt: sie sind das Ziel, und eingefroren
+           waeren sie genauso unerreichbar (5.300 > 997). Was fehlt, ist die
+           Sprosse dazwischen — und der Weg, ueberhaupt an Geld zu kommen.
+           0,15 x Taxe = 440 fl in 1601 und 680 fl in 1613; die Vorbild-Hand
+           greift bei hoechstens 45 im Hundert der Lade und kaeme in ihrem
+           besten Jahr auf 449 fl — der Abstand ist gemessen und gewollt.
+
+           BEIDE SEITEN DESSELBEN BRIEFES, und das ist der Gegenstand dieser
+           Ordnung: der Rentenkauf. Wer Geld hatte, kaufte eine ewige Guelt und
+           lebte vom Zins; wer keines hatte, verkaufte eine auf sein eigenes
+           Haus. Zins nehmen war verboten, eine Guelt kaufen nicht — deshalb
+           lief der ganze Kredit dieser Jahrhunderte ueber diesen einen Brief.
+           Beides war unwiderruflich: eine EWIGE Guelt war nicht ablösbar, und
+           genau deshalb gehoert sie auf diese Tafel und nicht unter die
+           Angebote. */
+        { k: 'stadtguelt', name: 'Die ewige Gült auf die Stadt', anteil: 0.15, ab: 1601,
+          was: 'Das Haus kauft dem Rat eine Gült ab: eine Summe hin, ein fester Zins zurück, Jahr für Jahr.',
+          regel: 'An jedem Michaelistag zahlt die Stadt an das Haus. Das Geld dafür ist aus dem Haus und kommt nie zurück.',
+          wirkung: { ertrag: 150, ansehen: 4 } },
+
+        /* Die andere Seite desselben Briefes: das Geld ist heute da, die Guelt
+           laeuft ewig. Der Zufluss haengt an der JAHRESLAST (`wirkung.einmal`,
+           siehe `wende` in preis.js) und ist damit ein Vielfaches dessen, was
+           das Haus im Jahr traegt; er liegt in jedem gemessenen Jahr weit ueber
+           45 im Hundert der Lade und wird von der Vorbild-Hand deshalb nie
+           genommen. Er ist die eine Karte, die in dieser armen Epoche
+           ueberhaupt Luft schafft — dieselbe Rolle, die `aktien` in 1884 und
+           `konzern` in 1970 spielen und die in 1600 bisher gefehlt hat. Der
+           Kritiker hat genau das an 1970 gezeigt: „moeglich nur, weil sie mit
+           konzern anfaengt." */
+        { k: 'gueltbrief', name: 'Der Gültbrief auf das Anwesen', anteil: 0.0, ab: 1603,
+          was: 'Ein Bürger legt eine Summe auf den Tisch und bekommt dafür eine ewige Gült auf Haus und Hof verschrieben.',
+          regel: 'Das Geld ist heute in der Lade. Die Gült darauf läuft an jedem Michaelistag, solange das Haus steht — sie ist nicht ablösbar.',
+          wirkung: { einmal: 5,
+            pflichtNeu: { k: 'gueltzins', name: 'Ewige Gült an den Briefinhaber', art: 'fest', teil: 0.85,
+              sagt: 'Der Preis des Geldes von heute, jährlich, ohne Ende.' } } }
       ]
     },
 
@@ -975,7 +1018,28 @@ var PREIS_DATEN = {
         { k: 'konvention', name: 'Der Beitritt zur Brauereikonvention', anteil: 0.22,
           was: 'Acht Brauereien setzen einen gemeinsamen Preis und teilen die Stadt in Bezirke.',
           regel: 'Ein sicherer Preis und ein fester Bezirk. Dafür wächst das Haus nie wieder über seinen Bezirk hinaus.',
-          wirkung: { preis: 0.09, wachstumsdeckel: true, ertrag: 900 } }
+          wirkung: { preis: 0.09, wachstumsdeckel: true, ertrag: 900 } },
+
+        /* Auch hier die Luecke, und hier ist sie eine Stufe: 0,22 und dann
+           0,62 / 0,75 — 42.000 bis 58.000 M gegen eine Michaeli-Lade von
+           4.562 bis 23.761. Gemessen: an ELF VON VIERZEHN Michaelitagen ist
+           keine Festlegung bezahlbar. Der Kopf dieser Epoche sagt selbst:
+           „Zum ersten Mal kosten Dinge mehr, als ein Haus je bar besitzt."
+           Das soll so bleiben — was fehlt, ist die Sprosse UNTER der
+           Konvention, damit die Amtszeiten fuenf bis acht nicht vor einer
+           Wand stehen. 0,17 x Taxe = 7.500 M in 1885 und 13.100 M in 1897,
+           im Band zwischen 45 und 100 im Hundert der gemessenen Lade.
+
+           Der Gegenstand ist der eine unwiderrufliche Schritt, den die
+           Gesetze dieser Jahre einem Werk dieser Groesse abverlangten: eine
+           eigene Kasse nach dem Krankenversicherungsgesetz von 1883. Einmal
+           errichtet, mit Statut und Vorstand — und die Beitraege laufen. */
+        { k: 'krankenkasse', name: 'Die Betriebskrankenkasse für die Mannschaft', anteil: 0.17, ab: 1885,
+          was: 'Eine eigene Kasse nach dem Gesetz von 1883: Statut, Beiträge, ein Vorstand aus Meistern und Mannschaft.',
+          regel: 'Die Mannschaft bleibt im Haus, und die Stadt weiß es. Die Beiträge laufen von nun an in jedem Michaeli mit.',
+          wirkung: { ansehen: 14, ertrag: 900,
+            pflichtNeu: { k: 'kassenbeitrag', name: 'Beiträge zur Betriebskrankenkasse', art: 'fest', teil: 0.34,
+              sagt: 'Zwei Drittel trägt das Haus, ein Drittel die Mannschaft — in jedem Jahr.' } } }
       ]
     },
 
@@ -1225,7 +1289,29 @@ var PREIS_DATEN = {
         { k: 'privat', name: 'Der Rückzug auf die eigene Braustätte', anteil: 0.11,
           was: 'Kein Handel mehr, kein Regal, keine Aktion. Nur noch Gastronomie und Werksverkauf.',
           regel: 'Die Listungsgebühr entfällt für immer, und jedes Hektoliter fängt deutlich mehr. Die großen Mengen sind damit vorbei.',
-          wirkung: { pflichtWeg: 'listung', preis: 0.30, wachstumsdeckel: true } }
+          wirkung: { pflichtWeg: 'listung', preis: 0.30, wachstumsdeckel: true } },
+
+        /* Diese Epoche ist der Fall, der zeigt, DASS ES GEHT: hier raeumt
+           eine Hand, die Festlegungen will, alle vier ab — weil `konzern`
+           ohne Ausgabe zu haben ist und Geld hereinbringt. Gezaehlt wurden
+           trotzdem acht von vierzehn Michaelitagen ohne bezahlbare Karte,
+           und die letzten fuenf Braujahre stehen mit einer LEEREN
+           Festlegungsreihe da: der Katalog ist aufgebraucht. Was fehlt, ist
+           die Sprosse zwischen 0,11 und 0,22 — 0,085 x Taxe = 49.000 DM in
+           1973 und 76.000 DM in 1983, gegen eine Michaeli-Lade von 50.000
+           bis 70.000.
+
+           Der Gegenstand: die Denkmalschutzgesetze der Laender kommen in
+           genau diesen Jahren (Bayern 1973). Wer sein Sudhaus eintragen
+           laesst, bekommt Zuschuss und Ansehen — und kann es nie wieder
+           abreissen, aufstocken oder durchbrechen. Die Anlage ist von da an,
+           was sie ist; deshalb der Wachstumsdeckel. */
+        { k: 'denkmal', name: 'Der Eintrag des Sudhauses in die Denkmalliste', anteil: 0.085, ab: 1973,
+          was: 'Kupferhelm, Klinkerfassade, Schornstein: das Sudhaus kommt unter Schutz — mit Zuschuss und mit Auflagen.',
+          regel: 'Das Sudhaus wird nie wieder abgerissen und nie wieder umgebaut. Der Unterhalt nach Auflage läuft in jedem Jahr mit.',
+          wirkung: { ansehen: 20, preis: 0.06, wachstumsdeckel: true,
+            pflichtNeu: { k: 'denkmalauflage', name: 'Unterhalt nach Denkmalauflage', art: 'fest', teil: 0.26,
+              sagt: 'Was unter Schutz steht, wird nach Auflage unterhalten — jedes Jahr, ohne Ende.' } } }
       ]
     }
   }

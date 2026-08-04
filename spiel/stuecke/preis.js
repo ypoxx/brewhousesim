@@ -1488,6 +1488,31 @@
     });
   }
 
+  /* WIE VIELE SIEGELKARTEN NEBENEINANDER LIEGEN — und warum nicht alle.
+
+     Mit den Sprossen aus Auflage 4 haelt eine Epoche sechs bis sieben
+     Festlegungen; nebeneinander in eine Reihe gelegt, die 35 im Hundert
+     der Spalte hoch ist, waere jede einzelne so schmal, dass ihr Text
+     wieder abgeschnitten wuerde — genau der Fehler aus Auflage 3, nur mit
+     mehr Karten. Die Angebotsseite loest dasselbe seit jeher mit
+     `angeboteJeJahr: 4`.
+
+     Gezeigt werden deshalb VIER: die drei billigsten offenen — das ist die
+     Wahl, die heute wirklich zu treffen ist — und dazu die TEUERSTE, denn
+     sie ist das Ziel, auf das gespart wird, und ein Ziel, das man nicht
+     mehr sieht, ist keines. Der ganze Katalog mit Taxe steht weiterhin auf
+     der Chronikseite unter WAS DIESE ZEIT NOCH ANBIETET; dort wird nichts
+     weggelassen. */
+  var FEST_JE_TAFEL = 4;
+  function festlegungenTafel() {
+    var l = festlegungen().slice();
+    if (l.length <= FEST_JE_TAFEL) return l;
+    l.sort(function (a, b) { return festPreis(a) - festPreis(b); });
+    var zeig = l.slice(0, FEST_JE_TAFEL - 1);
+    zeig.push(l[l.length - 1]);
+    return zeig;
+  }
+
   /* Eine Festlegung ist ein Rechtsakt, kein Kostenvoranschlag. Ihre Taxe haengt
      an der Zeit, nicht am Vermoegen des Hauses — sonst waere sie fuer ein
      wachsendes Haus nie erreichbar, weil sie mit der Kasse mitwuechse. */
@@ -1507,6 +1532,32 @@
     var n = 0;
     (B.welt.chronik || []).forEach(function (c) { if (c && c.art === 'festlegung') n++; });
     return Math.max(n, Object.keys(Z.festGenommen).length);
+  }
+
+  /* Und die Zahl daneben: wie viele davon von DIESER Tafel kamen.
+     AUFLAGE 1 DER WELLE 5. Danebengestanden hat bis heute
+     `Object.keys(Z.fertig).length` — das sind FERTIGE ANGEBOTE, Bottiche
+     und Keller, und sie standen in einem Satz, der von Festlegungen
+     handelt. Gemessen hat der Kritiker: „2 Festlegungen · 0 von dieser
+     Tafel gebaut", obwohl beide von dieser Tafel kamen. Eine Zahl, die im
+     Satz ueber A steht und B zaehlt, ist keine Auskunft.
+     Die Bautenzahl ist damit nicht verschwunden — sie steht weiter da, nur
+     in ihrem eigenen Satzglied und mit ihrem eigenen Wort. */
+  function festlegungenEigen() { return Object.keys(Z.festGenommen).length; }
+  function bautenFertig() { return Object.keys(Z.fertig).length; }
+
+  /* Der Satz, der ueber jeder Chronikaufschrift steht — an einer Stelle
+     geschrieben, damit der Griff (Tafel zu) und der Reiter (Tafel offen)
+     nie zwei verschiedene Dinge behaupten koennen. AUFLAGE 2: bis heute
+     trug NUR der Griff die Zahlen, und der Griff wird nur gezeichnet,
+     wenn die Tafel ZU ist — am Michaelitag, im Augenblick der
+     unwiderruflichen Wahl, stand nirgends, wie viele Festlegungen das
+     Haus hat. */
+  function chronikAufschrift(mitBauten) {
+    var g = festlegungenGesamt(), e = festlegungenEigen();
+    return 'Chronik des Hauses · ' + g + (g === 1 ? ' Festlegung' : ' Festlegungen')
+      + ' · ' + e + ' von dieser Tafel'
+      + (mitBauten ? ' · ' + bautenFertig() + ' Bauten stehen' : '');
   }
 
   function festlege(f) {
@@ -1836,6 +1887,35 @@
     return karte;
   }
 
+  /* ----------------------------------------------------------------------
+     AUFLAGE 3 DER WELLE 5 — EINE KARTE, DIE IHREN TEXT NICHT TRAEGT, IST
+     KEIN PREISSCHILD.
+
+     `preis.css:224` gibt `.pr-fest` ein `overflow: hidden`, und die
+     Zusatzlage setzt seit Runde 1 `flex: 0 1 auto; min-height: 0` auf alle
+     Kinder: die Kaesten schrumpfen unter ihren Inhalt, und was darunter
+     liegt, wird WEGGESCHNITTEN. Gemessen hat der Kritiker 47 Sichtungen
+     ueber zwoelf Bildschirme; am Bildschirm zu sehen war es an der Stelle,
+     die am meisten weh tut — auf dem Zunftbrief mit dem Ratssitz endete die
+     Regel mitten in „Der Landesherr nimmt dafür jährlich seinen Teil", auf
+     dem Bierbann brach „Dafür neu und für immer: Bannzins an den
+     Landesherrn" ab. Das ist der Satz, der sagt, was die unwiderrufliche
+     Entscheidung fuer den Rest der Partie KOSTET.
+
+     Der Text wandert deshalb in einen eigenen Kasten. Er bekommt den
+     ganzen uebrigen Platz der Karte und traegt seinen Ueberschuss selbst
+     (`overflow-y: auto`, stil/preis-zusatz.css); seine Kinder schrumpfen
+     nicht mehr und schneiden darum auch nichts mehr ab. Der Knopf und der
+     Hinweis darueber bleiben, wo sie waren — direkte Kinder der Karte,
+     `flex: 0 0 auto`: die Handlung wird nie aus der Karte gedrueckt und
+     scrollt auch nicht weg. Beides ist am Bildschirm nachgemessen
+     (`ueberlauf.mjs`, vier Epochen mal drei Aufloesungen). */
+  function karteText(karte) {
+    var t = B.el('div', 'pr-karte-text');
+    karte.appendChild(t);
+    return t;
+  }
+
   function festKarte(f) {
     var preis = festPreis(f);
     /* Was sie hereinbringt, mit derselben Rechnung wie beim Klick
@@ -1849,12 +1929,13 @@
 
     var karte = B.el('div', 'pr-fest' + (offen ? '' : ' pr-fest-zu'));
     karte.setAttribute('data-festlegung', f.k);
-    karte.appendChild(B.el('b', 'pr-fest-name', f.name));
-    karte.appendChild(B.el('div', 'pr-was-text', f.was));
+    var kt = karteText(karte);
+    kt.appendChild(B.el('b', 'pr-fest-name', f.name));
+    kt.appendChild(B.el('div', 'pr-was-text', f.was));
     var r = B.el('div', 'pr-regel');
     r.appendChild(B.el('span', 'pr-folge-marke', 'Regel'));
     r.appendChild(B.el('span', 'pr-folge-text', f.regel));
-    karte.appendChild(r);
+    kt.appendChild(r);
 
     /* Was sie in Zahlen tut — dieselbe Zeile wie bei einem Angebot, damit
        sich beides nebeneinanderlegen laesst. */
@@ -1863,10 +1944,10 @@
       var ff = B.el('div', 'pr-folge');
       ff.appendChild(B.el('span', 'pr-folge-marke', 'Folge'));
       ff.appendChild(B.el('span', 'pr-folge-text', fz));
-      karte.appendChild(ff);
+      kt.appendChild(ff);
     }
     if (f.wirkung && f.wirkung.pflichtNeu) {
-      karte.appendChild(B.el('div', 'pr-sperrt',
+      kt.appendChild(B.el('div', 'pr-sperrt',
         'Dafür neu und für immer: ' + f.wirkung.pflichtNeu.name + '.'));
     }
     /* Der Zeitraum auf der Karte — gemessen, nicht gewuerfelt. Begruendung
@@ -1874,7 +1955,7 @@
        war der einzige Satz, der einer unwiderruflichen Entscheidung ihre
        Frist angab, und er lag um den Faktor zehn bis achtzehn daneben. */
     var frist = amtszeitFrist();
-    karte.appendChild(B.el('div', 'pr-satz-klein',
+    kt.appendChild(B.el('div', 'pr-satz-klein',
       'Preis dieser Amtszeit: '
       + (preis ? geld(preis) : (zufluss ? geld(zufluss) + ' kommen herein' : 'keine Ausgabe'))
       + ' · ' + amtszeit().name + ' führt das Haus seit '
@@ -1913,10 +1994,11 @@
     var f = festlegungVon(k) || { name: k, regel: '' };
     var karte = B.el('div', 'pr-fest pr-fest-getroffen');
     karte.setAttribute('data-festlegung-getroffen', k);
-    karte.appendChild(B.el('div', 'pr-fest-stempel', 'UNABÄNDERLICH'));
-    karte.appendChild(B.el('b', 'pr-fest-name', f.name));
-    karte.appendChild(B.el('div', 'pr-regel', f.regel));
-    karte.appendChild(B.el('div', 'pr-satz-klein',
+    var kt = karteText(karte);
+    kt.appendChild(B.el('div', 'pr-fest-stempel', 'UNABÄNDERLICH'));
+    kt.appendChild(B.el('b', 'pr-fest-name', f.name));
+    kt.appendChild(B.el('div', 'pr-regel', f.regel));
+    kt.appendChild(B.el('div', 'pr-satz-klein',
       'Festgelegt zu Michaeli ' + g.jahr + ' von ' + g.amtszeit
       + (g.preis ? ' für ' + geld(g.preis) : '') + '. Steht in der Chronik.'));
     karte.appendChild(B.knopf({
@@ -1967,17 +2049,34 @@
 
     var fkopf = B.el('div', 'pr-abschnitt pr-abschnitt-fest');
     fkopf.appendChild(B.el('h3', null, 'DIE FESTLEGUNG'));
+    /* AUFLAGE 2 DER WELLE 5 — DIE ZAHL STEHT DORT, WO ENTSCHIEDEN WIRD.
+       Sie stand bisher nur auf dem GRIFF, und den zeichnet `zeichneGriff`
+       ausschliesslich, wenn die Tafel ZU ist. Am Michaelitag, im Augenblick
+       der unwiderruflichen Wahl, war sie nirgends zu lesen. Jetzt steht sie
+       ueber der Reihe der Siegelkarten — zwei Handbreit ueber dem Knopf,
+       der sie um eins erhoeht. */
+    var gz = festlegungenGesamt(), ez = festlegungenEigen();
+    var offenJetzt = festlegungenTafel().filter(function (f) {
+      var p = festPreis(f); return p === 0 || B.welt.kann(p);
+    }).length;
     fkopf.appendChild(B.el('span', 'pr-abschnitt-satz',
-      'Eine je Amtszeit. Sie ändert eine Regel für den Rest der Partie und wird nicht zurückgenommen.'));
+      'Eine je Amtszeit. Sie ändert eine Regel für den Rest der Partie und wird nicht zurückgenommen. · '
+      + 'Das Haus hat ' + gz + (gz === 1 ? ' Festlegung' : ' Festlegungen')
+      + ', ' + ez + ' davon von dieser Tafel · '
+      + (!festlegungOffen()
+          ? amtszeit().name + ' hat sich festgelegt'
+          : (offenJetzt
+              ? 'heute ' + offenJetzt + ' zu haben'
+              : 'heute reicht die Kasse für keine'))));
     sp.appendChild(fkopf);
 
     var freihe = B.el('div', 'pr-reihe pr-reihe-fest');
     if (!festlegungOffen()) {
       freihe.appendChild(festGetroffenKarte());
       /* Was diese Amtszeit nicht mehr waehlen kann, bleibt sichtbar. */
-      festlegungen().slice(0, 2).forEach(function (f) { freihe.appendChild(festKarte(f)); });
+      festlegungenTafel().slice(0, 2).forEach(function (f) { freihe.appendChild(festKarte(f)); });
     } else {
-      var l = festlegungen();
+      var l = festlegungenTafel();
       if (!l.length) {
         freihe.appendChild(B.el('div', 'pr-leer', 'Alle Festlegungen dieser Zeit sind getroffen.'));
       }
