@@ -6,8 +6,9 @@ Saat 1350, alle vier Epochen. Der Kritiker hat den Baubericht des Builders
 nicht gelesen und keine Commit-Historie eingesehen; gelesen hat er den
 Quelltext des Spiels, weil ein Urteil ohne Ursache nichts wert ist.*
 
-**Diese Datei wird laufend geschrieben, nicht am Ende.** Was hier steht, ist
-gemessen. Was noch fehlt, steht unter „Noch offen".
+**Diese Datei wurde laufend geschrieben, nicht am Ende.** Sie ist jetzt
+vollständig: zwölf ρ-Läufe (vier Epochen × drei), Lesbarkeit in vier
+Fensterbreiten mit und ohne Rollleiste, vier gespielte Partien mit der Maus.
 
 ---
 
@@ -16,7 +17,11 @@ gemessen. Was noch fehlt, steht unter „Noch offen".
 | | |
 |---|---|
 | Messstand | `:8900`, Marke `7440a09` |
-| ρ-Gerät | `werkbank/schuss/rueckkopplung-r3/linie.mjs`, 400 Wochen, je Epoche **drei** Läufe, jeder einzeln durch `messfenster.sh` |
+| ρ-Gerät | `werkbank/schuss/rueckkopplung-r3/linie.mjs`, 400 Wochen, je Epoche **drei** Läufe (12 insgesamt), jeder einzeln durch `messfenster.sh`, Rohdaten in `…/fuhre-blind-w6/rho/` |
+| ρ-Schnitte | eigenes Skript `…/rho.py` — 12/13/14 Braujahre aus **derselben** Reihe |
+| Gewicht | eigenes Gerät `…/gewicht.mjs` — Bytes je Aufruf, nach Stück aufgeschlüsselt |
+| Sicht | eigenes Gerät `…/sicht.mjs` — was beim Aufschlagen ohne Mausrad im Bild steht |
+| Hand | eigenes Gerät `…/hand.mjs` — meine Klickliste, Protokoll in `…/hand/` |
 | Lesbarkeit | eigenes Gerät `werkbank/schuss/fuhre-blind-w6/lesbar.mjs` — trennt **FUHRE** von **fremd** |
 | Griff | eigenes Gerät `…/griff.mjs` — `elementFromPoint` je Zug, je Reiterstellung |
 | Schnitt | eigenes Gerät `…/schnitt.mjs` — trennt **abgeschnitten** von **gerollt**, achsenweise |
@@ -493,9 +498,6 @@ Ausschank, ab Brauerei 5–19 Pf — plausibel.
 
 ## 7 — LATTE 2: ρ über drei Schnitte
 
-*(wird beim Eintreffen jedes Laufs fortgeschrieben — die Tabelle unten ist der
-Stand dieser Minute, nicht das Ende)*
-
 Gerät `rueckkopplung-r3/linie.mjs`, 400 Wochen, `saat=1350`, Hafen 8900,
 jeder Lauf **einzeln** durch `messfenster.sh` und **hintereinander** — nie
 zwei gleichzeitig. Die drei Schnitte kommen aus **derselben** Reihe
@@ -519,22 +521,30 @@ Epochen: **Kaufknöpfe 4/4 · 4/4 · 5/5 · 4/4 im Bild**, ebenso **Zielkarten
 soll. **Was in dieser Runde aus dem Bild gefallen ist, ist die Sortenliste —
 und die ist kein Kaufknopf, sondern der Plan** (Auflage 2).
 
-### 7.1 Die Läufe
+### 7.1 Die Läufe — VOLLSTÄNDIG: 12 Läufe, 4 Epochen, je 3, sequenziell
 
-*(Stand dieser Minute; die Tabelle wächst, bis drei Läufe je Epoche stehen.)*
+Rohdaten: `werkbank/schuss/fuhre-blind-w6/rho/e<1-4>-<A|B|C>.json`.
+Gelaufen 20:45 bis 23:38 UTC, jeder Lauf einzeln durch `messfenster.sh`; das
+Fenster war zwischendurch **864 s, 299 s und 233 s von DER SUD belegt** und
+hat mich sauber warten lassen, wie es soll.
 
-| Epoche | Läufe | **12 Braujahre** | 13 | 14 | Jahre <1× | Kennzahl min–max | Fehler | Abbruch |
+| Epoche | **12 Braujahre** | 13 | 14 | **Spannweite** | Jahre <1× | Kennzahl min–max | Seitenfehler | Abbruch |
 |---|---|---|---|---|---|---|---|---|
-| **1350** | A · B | **+0,762** ×2 | +0,692 ×2 | +0,591 ×2 | 0/14 | 1,55–18,44× | 0 | nein |
-| 1600 | A · B | +0,189 ×2 | −0,066 ×2 | −0,156 ×2 | 1/14 | 0,67–4,87× | 0 | nein |
-| 1884 | A · B | +0,168 ×2 | +0,346 ×2 | +0,393 ×2 | 1/14 | 0,84–9,40× | 0 | nein |
-| **1970** | A · B | **+0,699** ×2 | +0,637 ×2 | +0,653 ×2 | 1/14 | 0,79–11,60× | 0 | nein |
+| **1350** | **+0,762** ×3 | +0,692 ×3 | +0,591 ×3 | **0,000** | 0/14 | 1,55–18,44× | 0 | nein |
+| 1600 | +0,189 ×3 | −0,066 ×3 | −0,156 ×3 | **0,000** | 1/14 | 0,67–4,87× | 0 | nein |
+| 1884 | +0,168 ×3 | +0,346 ×3 | +0,393 ×3 | **0,000** | 1/14 | 0,84–9,40× | 0 | nein |
+| **1970** | **+0,699** ×3 | +0,637 ×3 | +0,653 ×3 | **0,000** | 1/14 | 0,79–11,60× | 0 | nein |
 
 **Gerätekontrolle: Spannweite 0,000 in allen vier Epochen und allen drei
-Schnitten.** Lauf A und Lauf B sind Ziffer für Ziffer identisch, bis auf die
-Kassenspanne (1350: 39–609 in beiden). Sequenziell gemessen streut dieses
-Spiel nicht — die Regel aus `LAUFENDER-AUFTRAG.md` bestätigt sich zum
-wiederholten Mal, und mein Gerät ist damit nicht kaputt.
+Schnitten, über je drei Läufe.** A, B und C sind Ziffer für Ziffer identisch,
+bis in die Kassenspanne hinein (1350: 39–609 dreimal). Sequenziell gemessen
+streut dieses Spiel nicht — die Regel aus `LAUFENDER-AUFTRAG.md` bestätigt
+sich zum wiederholten Mal, und mein Gerät ist damit nicht kaputt.
+
+**Die Latte:** sie reißt, sobald **einer** der drei Schnitte über 0,7 liegt.
+**1350 liegt bei zwölf Braujahren auf +0,762 — in drei von drei Läufen.**
+**Die Latte ist gerissen.** 1970 liegt mit +0,699 **ein Tausendstel**
+darunter; 1600 und 1884 sind komfortabel darunter.
 
 **Zwei Befunde, und der zweite ist der laute:**
 
@@ -698,10 +708,12 @@ hinter keinem Schalter stehen (Auflage 3).
 
 **LATTE 2 — DAS SPIEL: FÄLLT DURCH.**
 Nicht wegen dieses Stücks, aber sie fällt. **1350 steht bei zwölf Braujahren
-auf +0,762**, in jedem Lauf, mit Spannweite 0,000 — die Latte reißt, sobald
-einer der drei Schnitte über 0,7 liegt, und dieser liegt darüber. **Und 1970
-steht auf +0,699, ein Tausendstel darunter.** Das Wellenziel ist damit nicht
-erreicht, und es ist nicht nur eine Epoche entfernt davon.
+auf +0,762** — in **drei von drei** Läufen, Spannweite 0,000. Die Latte
+reißt, sobald einer der drei Schnitte über 0,7 liegt, und dieser liegt
+darüber. **Und 1970 steht auf +0,699, ein Tausendstel darunter** (ebenfalls
+dreimal identisch). Das Wellenziel ist damit nicht erreicht, und es ist nicht
+nur eine Epoche davon entfernt. Zwölf Läufe, 4.800 gemessene Wochen, null
+Seitenfehler, null Abbrüche, Spannweite 0,000 in allen zwölf.
 Was DIE FUHRE beigetragen hat, ist **nichts** — 1350 und 1884 stehen Ziffer
 für Ziffer auf den Zahlen der MESSLATTE. Die Runde hat die Kaufknöpfe im
 Bild gehalten (4/4 · 4/4 · 5/5 · 4/4) und damit den Fehler vermieden, den
@@ -749,11 +761,17 @@ anzustellen** — genau der Punkt, den Auflage 2 benennt.
 
 # **ALS GANZES: BESTEHT MIT AUFLAGE**
 
-Die Lesbarkeitsarbeit an DIE FUHRE ist **echt und gemessen**: von 5 px auf
-12 px, von zu kleinen Knöpfen auf null, ohne dass die zweite Latte sich um
-ein Tausendstel bewegt hätte und ohne dass auf der Entwurfsleinwand etwas
-verschwunden wäre. Das ist das Schwierige an dieser Aufgabe, und es ist
-gelungen.
+Die Lesbarkeitsarbeit an DIE FUHRE ist **echt und gemessen**: bei 1366×768
+trägt dieses Stück **0** Textknoten unter 12 px, **0** Knöpfe unter 24×24 px
+und **0** abgeschnittene Kästen, während im selben Bild 277–284 zu kleine
+Knoten anderer Stücke stehen. Auf der Entwurfsleinwand ist **nichts**
+verschwunden (0 `display:none`-mit-Text, 11 von 11 Adressen), und in **1350
+und 1884** steht ρ Ziffer für Ziffer auf den Zahlen der MESSLATTE — die
+Runde hat die zweite Latte dort nicht um ein Tausendstel bewegt, obwohl
+genau das der naheliegende Kollateralschaden gewesen wäre. (Für 1600 und
+1970 kann ich das nicht sagen; ihre Zahlen sind gewandert, und wer sie
+bewegt hat, weiß ich nicht — Abschnitt 7.1.) Das ist das Schwierige an
+dieser Aufgabe, und es ist zum größten Teil gelungen.
 
 **Vier Auflagen (Abschnitt 8), die zwei ersten sind die wichtigen:**
 1. `.fu-kerbsatz` — `line-clamp: 2` schneidet ab, sobald eine Rollleiste im
