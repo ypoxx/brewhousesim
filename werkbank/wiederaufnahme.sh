@@ -53,10 +53,35 @@ fi
 # messstand.sh und das fertige Urteil DER PREIS verloren; beide lagen laengst
 # auf origin. Wer daraufhin neu baut, macht die Arbeit doppelt — oder
 # ueberschreibt sie. Ein Holen kostet hier 14 Sekunden.
-[ $NUR_PRUEFEN -eq 1 ] || git fetch -q origin "$ZWEIG" 2>/dev/null || true
+# NACHTRAG 4. August, 20:23 UTC — DERSELBE FEHLER EINE EBENE TIEFER.
+# Nach dem sechsten Container-Reset stand der Baum auf einem Commit vom
+# 3. August 23:16, origin auf dem Stand von 19:2x — und dieses Skript meldete
+# "origin ist auf Stand". Ursache: `git fetch … 2>/dev/null || true` hat einen
+# FEHLGESCHLAGENEN Fetch verschluckt (zwei Minuten nach dem Boot gab es noch
+# kein Netz). Der Vergleich lief danach gegen die mitrestaurierte, genauso alte
+# Referenz origin/<zweig> — 0 voraus, 0 zurueck, gruener Haken.
+#
+# Ein Vergleich, der nicht holen konnte, ist KEIN Freibrief. Deshalb wird der
+# Fetch jetzt bis zu dreimal versucht und sein Scheitern LAUT gemeldet, statt
+# unter einem Haken zu verschwinden. Ein Messgeraet, das im Fehlerfall
+# schweigt, hat diesen Lauf schon fuenfmal in die Irre gefuehrt.
+GEHOLT=0
+if [ $NUR_PRUEFEN -eq 1 ]; then
+  GEHOLT=1
+else
+  for _v in 1 2 3; do
+    if git fetch -q origin "$ZWEIG" 2>/dev/null; then GEHOLT=1; break; fi
+    sleep $((_v * 3))
+  done
+fi
 VORAUS=$(git rev-list --count "origin/$ZWEIG..HEAD" 2>/dev/null || echo '?')
 ZURUECK=$(git rev-list --count "HEAD..origin/$ZWEIG" 2>/dev/null || echo '?')
-if [ "$VORAUS" = "0" ] && [ "$ZURUECK" = "0" ]; then
+if [ $GEHOLT -eq 0 ]; then
+  weh "origin NICHT erreichbar — dreimal versucht. Der Vergleich unten ist WERTLOS."
+  echo "      Der Baum kann beliebig alt sein und es sieht wie 'auf Stand' aus."
+  echo "      → später erneut: git fetch origin $ZWEIG && $0"
+  echo "      lokal: HEAD $(git rev-parse --short HEAD), letzte bekannte Referenz $(git rev-parse --short "origin/$ZWEIG" 2>/dev/null || echo '?')"
+elif [ "$VORAUS" = "0" ] && [ "$ZURUECK" = "0" ]; then
   ok "origin ist auf Stand"
 elif [ "$ZURUECK" != "0" ] && [ "$ZURUECK" != "?" ]; then
   weh "origin ist $ZURUECK Commit(s) VORAUS — der Baum ist alt, nicht origin"
