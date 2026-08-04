@@ -1,0 +1,407 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 100
+   },
+   "b": {
+    "da": true,
+    "sekunde": 19,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 15,
+    "sicher": 100
+   },
+   "d": {
+    "da": true,
+    "sekunde": 7,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [
+   {
+    "sekunde": 7,
+    "klang": "Eine gedämpfte Männerstimme ruft auf modernem Englisch 'Go back and forth'",
+    "warum": "Die moderne englische Sprache und der Akzent passen nicht in das historische, mittelalterliche Setting, das durch Flötenmusik, Federkiel und Pferdefuhrwerke etabliert wird."
+   }
+  ],
+  "datei": "e1-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 14,
+    "sicher": 100
+   },
+   "d": {
+    "da": true,
+    "sekunde": 21,
+    "sicher": 90
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": true,
+    "sekunde": 6,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1600,
+  "anachronismen": [
+   {
+    "sekunde": 6,
+    "klang": "Quietschende Reifen und ein moderner Autounfall (Blechschaden)",
+    "warum": "Das Geräusch von Gummireifen auf Asphalt und kollidierenden Autos passt nicht in das historische Setting (ca. 16./17. Jahrhundert), in dem Pferdefuhrwerke genutzt werden."
+   }
+  ],
+  "datei": "e2-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": true,
+    "sekunde": 3,
+    "sicher": 90
+   },
+   "c": {
+    "da": true,
+    "sekunde": 21,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": true,
+    "sekunde": 11,
+    "sicher": 100
+   },
+   "f": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1800,
+  "anachronismen": [
+   {
+    "sekunde": 4,
+    "klang": "Englische Sprachaufnahme ('go back and forth', 'beautiful')",
+    "warum": "Klingt wie ein moderner Radiomitschnitt oder Sportkommentator, was nicht in das historische Setting (ca. 19. Jahrhundert) passt."
+   }
+  ],
+  "datei": "e3-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 90
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 80
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1800,
+  "anachronismen": [
+   {
+    "sekunde": 0,
+    "klang": "Moderne Pop-/R&B-Musik im Hintergrund (durchgehend hörbar)",
+    "warum": "Synthesizer und moderne elektronische Beats existierten zur Zeit der Industrialisierung noch nicht."
+   },
+   {
+    "sekunde": 15,
+    "klang": "Klassisches Telefonklingeln",
+    "warum": "Das Telefon wurde erst im späten 19. Jahrhundert erfunden und passt nicht in das Setting der frühen Industrialisierung."
+   }
+  ],
+  "datei": "e4-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 85
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e1-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 0,
+  "anachronismen": [],
+  "datei": "e2-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e3-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 0,
+  "anachronismen": [],
+  "datei": "e4-still.wav"
+ }
+]
