@@ -220,6 +220,18 @@ Selbst-Checks läuft also fortlaufend — aber **ungeprüft**: der Veröffentlic
 fährt kein Abnahmetor. Die Aufsicht fährt es trotzdem, und zwar bevor sie selbst
 committet.
 
+> **DER VERÖFFENTLICHER STIRBT NACH VIER STUNDEN, planmäßig und stumm.**
+> `wiederaufnahme.sh:105` startet ihn mit `180 14400` — Takt 180 s, **Laufzeit
+> 14400 s = 4 h**. Danach beendet er sich ohne Meldung, und von da an sichert
+> **nur noch der Selbst-Check**. Am 4. August lag dazwischen ein Loch von 17:28
+> bis 18:21, in dem der Baubericht der FUHRE uncommittet dastand.
+>
+> **Folge, die man wissen muss:** der Selbst-Check ist nicht bloß Kontrolle, er
+> ist in diesen Lücken die *einzige* Sicherung. Wer ihn seltener als stündlich
+> fährt, verlässt sich auf einen Prozess, der schon abgelaufen sein kann.
+> `wiederaufnahme.sh` erkennt und startet ihn neu — das ist der Grund, warum es
+> **immer zuerst** läuft.
+
 > **`werkbank/urteile` stand bis zum 4. August NICHT in dieser Liste** — als
 > einziges Verzeichnis unter `werkbank/`. Das ist genau die Stelle, an die die
 > Laufregel oben Builder und Kritiker schickt („Teilergebnisse **laufend** in die
