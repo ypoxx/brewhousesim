@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T21:21:52+00:00",
- "phase": "Welle 6 — der blinde Kritiker für DIE FUHRE misst gegen den eingefrorenen Stand 7440a09, DER SUD arbeitet weiter an seiner Nacharbeit. Beide um 21:21 UTC lebendig. Das Messfenster serialisiert sie sichtbar: der Kritiker hält es und fährt seine rho-Reihe für 1970, DER SUD wartet seit zwölf Minuten mit seiner Klemmen-Messung davor statt danebenzumessen. Seine Messwerte legt der Kritiker als json ins Repo unter werkbank/schuss/fuhre-blind-w6/, nicht nach /tmp — die Lehre des Resets von gestern Abend, der Stunden an Messläufen vernichtet hat. Nichts liegt uncommittet, das Abnahmetor ist viermal offen.",
+ "stand": "2026-08-04T22:22:45+00:00",
+ "phase": "Welle 6 — der blinde Kritiker für DIE FUHRE misst weiter gegen den eingefrorenen Stand 7440a09, DER SUD an seiner Nacharbeit. Beide um 22:20 UTC lebendig. Das Messfenster hält, was es soll, und man sieht auch seinen Preis: DER SUD hält es seit 28 Minuten mit einem 400-Wochen-Lauf, der Kritiker wartet seit sechs Minuten davor statt danebenzumessen. Nachgesehen statt angenommen, ob der Halter hängt: sein Browser ist frisch und sein Renderer bei 43 Sekunden CPU — er arbeitet, hat aber innerhalb desselben Laufs mindestens einmal den Browser neu gestartet und noch keine Datei geschrieben. Nichts liegt uncommittet, das Abnahmetor ist viermal offen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T14:27:25+00:00",
-   "text": "DER GEGNER — die Züge, die ohne den Spieler geschahen · Runde 1 · läuft — Runde 1 fertig gebaut und selbst gemessen. Er zieht ohne Klick: 44/54/46/108 Züge in drei Braujahren (E1/E2/E3/E4), Zählwerk oben im Band, dazu 'diese Woche N'. Drei Bisse am eigenen Geschäft: (1) verlorene Häuser — sein Zeichen mit Ablösesumme am Giebel, in der Währung der Epoche; (2) unterbotener Preis — Abschlag bei JEDER Fuhre sofort im Buch, gedeckelt auf 3 vom Hundert des Jahresumsatzes (gemessen 2,48/2,94/2,98/2,98 %, ZUSTAENDIGKEIT §4 eingehalten); (3) Vorsprung — jeder seiner Bauten hat einen Spiegel im eigenen Hof, was er früher hat, kürzt seine Werbung um je eine Woche, Liste und Folge stehen im Blatt. Ein Zug ohne Bargeld je Braujahr (Klage/Zunftanzeige/Nachrechnen/Kartellamt), damit bei leerer Kasse nichts einfriert. AUFLAGE §1 erfüllt (min-width:0 im gg-bkopf; Schließknopf in 12 von 12 Fällen von elementFromPoint getroffen). BILDFEHLER DER STADT-KRITIK BEHOBEN: hof3/hof4 werden nicht mehr über die Platte gelegt — ab 1884 malt die Platte seine Brauerei selbst; Bild nur noch 1350/1600, dort wärmer gefiltert."
-  },
   {
    "zeit": "2026-08-01T14:27:25+00:00",
    "text": "GEGNER R1: Abschlag jetzt bei jeder Lieferung statt am Jahresende, hart gedeckelt auf 3 % des Jahresumsatzes (ZUSTAENDIGKEIT §4). Vorsprungs-Mechanik und ein kostenloser Zug je Braujahr eingebaut."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-04T21:21:52+00:00",
    "text": "Welle 6 — der blinde Kritiker für DIE FUHRE misst gegen den eingefrorenen Stand 7440a09, DER SUD arbeitet weiter an seiner Nacharbeit. Beide um 21:21 UTC lebendig. Das Messfenster serialisiert sie sichtbar: der Kritiker hält es und fährt seine rho-Reihe für 1970, DER SUD wartet seit zwölf Minuten mit seiner Klemmen-Messung davor statt danebenzumessen. Seine Messwerte legt der Kritiker als json ins Repo unter werkbank/schuss/fuhre-blind-w6/, nicht nach /tmp — die Lehre des Resets von gestern Abend, der Stunden an Messläufen vernichtet hat. Nichts liegt uncommittet, das Abnahmetor ist viermal offen."
+  },
+  {
+   "zeit": "2026-08-04T22:22:45+00:00",
+   "text": "Welle 6 — der blinde Kritiker für DIE FUHRE misst weiter gegen den eingefrorenen Stand 7440a09, DER SUD an seiner Nacharbeit. Beide um 22:20 UTC lebendig. Das Messfenster hält, was es soll, und man sieht auch seinen Preis: DER SUD hält es seit 28 Minuten mit einem 400-Wochen-Lauf, der Kritiker wartet seit sechs Minuten davor statt danebenzumessen. Nachgesehen statt angenommen, ob der Halter hängt: sein Browser ist frisch und sein Renderer bei 43 Sekunden CPU — er arbeitet, hat aber innerhalb desselben Laufs mindestens einmal den Browser neu gestartet und noch keine Datei geschrieben. Nichts liegt uncommittet, das Abnahmetor ist viermal offen."
   }
  ]
 }
