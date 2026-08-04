@@ -29,6 +29,16 @@ Es friert `spiel/` als Kopie ein, legt dieselbe Marke `.messstand-marke` (md5
 arbeitet) und **prüft am Ende, ob der Hafen sie wirklich ausliefert**. Alle
 Läufe sequenziell, nie zwei Browser zugleich.
 
+**Fremdlast, gemeldet von der Aufsicht während des Laufs.** Ein erster
+vollständiger Satz der acht Partien lief, während DIE FUHRE auf derselben
+Maschine `linie.mjs 4 400` fuhr (Lastmittel 4,08, vierzehn Browserprozesse).
+Das ist genau die Bedingung, unter der dieser Lauf schon zweimal falsche Zahlen
+bekommen hat. **Dieser Satz ist deshalb nicht die Belegzahl.** Er steht unten
+als Vorprobe, weil er trotzdem etwas zeigt (alle vier Auflagen bereits erfüllt),
+und der gewertete Satz wurde auf der freien Maschine wiederholt. Meine
+Kampagne wartet seither vor jedem Start selbst darauf, dass keine fremde
+Messung mehr läuft (`scratchpad`-Gerät `frei.sh`, prüft `ps` und `loadavg`).
+
 *Nebenbei, weil es genau der Fehler ist, den `messstand.sh` in seinem Kopf
 beschreibt: Ich habe mir beim Aufräumen zweimal mit `pkill -f` die eigene Shell
 erschlagen (Exit 144) — das Muster trifft die Shell, deren Kommandozeile die
