@@ -2220,6 +2220,45 @@
     return null;
   }
 
+  /* ------------------------------------------------------------------------
+     DIE ZWEITE HAELFTE DERSELBEN AUFLAGE — der Wimpernschlag nach dem
+     REITERKLICK.
+
+     Nach der Behebung oben war die Klemme als DAUERZUSTAND weg, und trotzdem
+     blieben in einer sorgfaeltig gespielten Partie Ablesungen uebrig:
+     1350 reich 46, 1350 arm 69, alle mit `data-aus-grund="brett-zugeklappt"`,
+     alle mit Maustreffer. Sie kamen nicht mehr aus dem alten Fehler, sondern
+     aus dem TAKT.
+
+     `stadt.js:557 schalte()` dreht die Lage im Klickzuge um und ruft
+     `pruefe()` — die Klasse `stadt-zugeklappt` ist damit SOFORT ab, noch im
+     Ereignis des Klicks, und ein `zeichne` schickt die STADT dabei nicht.
+     DER SUD sah bis hierher erst in seinem naechsten eigenen Takt nach
+     (320 ms, sud.js:2294). In diesem Fenster steht das Brett offen und
+     vollstaendig im Bild, die Maus trifft seine Knoepfe — und sie sind noch
+     alle abgeschaltet. Fuer den Spieler ist das derselbe Anblick wie die
+     Klemme, nur kuerzer; fuer einen Zaehler ist es dieselbe Ablesung.
+
+     Schlimmer noch: wer daraufhin ein zweites Mal auf den Reiter klickt —
+     und das tut jeder, dem der erste Klick nichts getan zu haben scheint —
+     klappt das Brett wieder zu. Genau dieses Pendeln stand in den Belegen
+     (`aufOk: 0` nach fuenf Klicks).
+
+     Also wird nicht mehr gewartet: DIE KLASSE SELBST LOEST DEN TAKT AUS. Ein
+     Beobachter am Brett, der nur auf `class` hoert, holt den Takt in denselben
+     Mikrotask. `schalte()` fasst ausschliesslich Knoepfe an und nie die Klasse
+     des Bretts — der Beobachter kann sich also nicht selbst wecken.
+     ------------------------------------------------------------------------ */
+  var brettBlick = null;
+  function beobachteBrett(brett) {
+    if (!window.MutationObserver || !brett) return;
+    if (brettBlick && brettBlick.ziel === brett) return;
+    if (brettBlick) brettBlick.o.disconnect();
+    var o = new MutationObserver(function () { taktZugeklappt(); });
+    o.observe(brett, { attributes: true, attributeFilter: ['class'] });
+    brettBlick = { o: o, ziel: brett };
+  }
+
   /* Der Gnadenschluss, falls die STADT gar nichts sagt (sie ist beim Laden
      noch nicht durch ihren ersten Takt, und ein Pruefstand ohne stadt.js
      sagt nie etwas). Solange gilt weiter die alte Lage — aber NICHT mehr
@@ -2240,6 +2279,7 @@
       var brett = fach ? fach.firstElementChild : null;
       var zettel = document.querySelector('.sud-zettel');
       if (brett) {
+        beobachteBrett(brett);
         /* Der Rahmen der STADT stempelt `stadt-zugeklappt` erst in seinem
            naechsten Takt (stadt.js: TAKT = 240 ms). Ein FRISCH GEZEICHNETES
            Brett traegt also fuer einen Wimpernschlag gar nichts — und

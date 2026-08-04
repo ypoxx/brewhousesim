@@ -820,3 +820,143 @@ html[data-hof-zu] .gg-kennzahl[data-umkaempft] { display: none !important; }
    war — sonst geriete ein offenes Gegner-Blatt unter einen Deckel, den man
    nicht mehr aufbekommt (ZUSTAENDIGKEIT 1 und 2). */
 html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
+
+/* ==========================================================================
+   DER PLATZ UNTER DER ENTWURFSLEINWAND — die Rechnung fuer den Schriftboden
+   ==========================================================================
+   Die vierte Latte misst bei 1366x768, nicht bei 2752x1536. Mit dem Boden
+   `font-size: max(12px, calc(var(--s) * N))` auf allen 100 Schriftregeln
+   dieses Stuecks sind die 771 zu kleinen Textknoten der FUHRE weg — und der
+   Platzbedarf des Bretts DIE HAEUSER ist dabei gewachsen. Gemessen, Epoche
+   1970, 1366x768, Brett 565 px hoch:
+
+                       vorher   nach dem Boden   nach diesem Abschnitt
+     DAS ZIEL           166 px       300 px            (s. unten)
+     eine Adresskarte     39 px        56 px
+     Liste frei/noetig  332/445     190/623
+
+   Das Brett ist 565 px hoch und in der Platzordnung festgenagelt (1,1 %
+   links, 25,6 % breit — rechts daneben beginnt DIE ANSCHLAGTAFEL bei
+   27,4 %, unten die Werkbank der STADT). ELF ADRESSKARTEN MIT EINER
+   24-px-KNOPFZEILE PASSEN DA NICHT HINEIN, und zwar auch dann nicht, wenn
+   DAS ZIEL ganz verschwaende: 11 x (15 px Textzeile + 24 px Knopfzeile) sind
+   schon 429 px. Die Liste rollt also — das tut sie bei 1366x768 heute
+   ebenfalls (332 frei gegen 445 noetig) und ist kein Rissgrund der Latte:
+   `overflow-y: auto` schneidet keinen Text ab, es legt ihn tiefer.
+
+   Was hier steht, holt so viel sichtbare Liste zurueck wie moeglich, ohne
+   eine der anderen drei Latten anzufassen. Alles hinter demselben
+   Medienschalter, den grund.css fuer den Knopfboden benutzt: OBERHALB der
+   Entwurfsleinwand aendert sich nichts, und dort vergleicht Latte 1 blind.
+   ========================================================================== */
+@media (max-width: 2751px), (max-height: 1535px) {
+
+  /* --- 1. Der Boden fuer die zwei Regeln mit N < 12 ---------------------
+     Nur hier, nicht in fuhre.css: auf der Entwurfsleinwand waeren das
+     10 px -> 12 px und 11 px -> 12 px, also ein sichtbarer Unterschied im
+     Bild, gegen das Latte 1 blind vergleicht. */
+  .fu-fass em { font-size: max(12px, calc(var(--s) * 11)); }
+  .fu-fass.klein em { font-size: max(12px, calc(var(--s) * 10)); }
+
+  /* --- 2. DAS ZIEL: 300 px -> gemessen s. Bericht -----------------------
+     Die drei Karten bleiben NEBENEINANDER. Das ist keine Gestaltungsfrage,
+     sondern Latte 2: „Optionen mit Preisschild nebeneinander, die einander
+     ausschliessen" ist genau das, was hier gezaehlt wird. Untereinander
+     gestapelt waeren es drei Angebote hintereinander und keine Wahl mehr.
+
+     Weichen muss stattdessen der ERKLAERSATZ ueber den Karten
+     (`.fu-ziel-satz`). Er beschreibt die Zahlungsweise im Allgemeinen; was
+     die drei Karten VONEINANDER unterscheidet — Text, drei Prozentzahlen,
+     Preis am Knopf — steht in den Karten selbst und bleibt vollstaendig
+     stehen. Bei 12 px in einer 336 px breiten Spalte braucht der Satz drei
+     Zeilen (44 px); das sind zwei Adresskarten. Er steht weiter im
+     `title` des Blocks (fuhre.js setzt ihn dort). */
+  .fu-ziel-satz { display: none; }
+
+  /* Der Fussvermerk sagt, OB noch zu aendern ist — das ist eine
+     unwiderrufliche Festlegung im Sinn von Latte 2 und bleibt stehen. Er
+     bekommt nur die engere Zeile. */
+  .fu-ziel-fuss { line-height: 1.15; }
+
+  /* Enger gesetzt, ohne dass etwas verschwindet. */
+  .fu-ziel { gap: calc(var(--s) * 3); padding: calc(var(--s) * 5) calc(var(--s) * 6); }
+  .fu-ziel-karte { gap: calc(var(--s) * 2); padding: calc(var(--s) * 4) calc(var(--s) * 5); }
+  .fu-ziel-was { min-height: 0; line-height: 1.12; }
+  .fu-ziel-zahlen { gap: 0 calc(var(--s) * 5); line-height: 1.12; }
+  .fu-ziel-kopf { flex-wrap: wrap; }
+
+  /* --- 3. Die Adresskarte: die dritte Zeile wird zur Zeichnung ----------
+     Zeile 3 traegt dieselbe Auskunft zweimal: als Balken (`.fu-reihe`, drei
+     Braujahre gegen den Bedarf) und daneben als Zahlenkette („12·9·7 von
+     30 hl"). Bei 1366x768 stand diese Kette bisher in 4,3 px — sie war
+     nicht Inhalt, sie war Muster. Auf 12 px gehoben kostet sie 9 px je
+     Karte, also bei elf Adressen rund zwei ganze Adresskarten aus der
+     sichtbaren Liste.
+
+     ENTSCHEIDUNG: die Zahlenkette weicht, die Balken bleiben — und die
+     Zahlen wandern vollstaendig in den `title` der Balkenreihe (fuhre.js).
+     Damit ist die Auskunft nicht verloren, sondern eine Mausbewegung
+     entfernt, und die zwei Adressen bleiben anfassbar. Ein Balken ist keine
+     Schrift und faellt nicht unter die 12-px-Regel; damit er trotzdem
+     etwas zeigt, bekommt er eine Untergrenze. */
+  .fu-z3 .fu-zahlen { display: none; }
+  .fu-reihe { height: max(11px, calc(var(--s) * 20)); }
+  .fu-reihe .fu-saeule { width: max(3px, calc(var(--s) * 9)); }
+  .fu-mahnung i { width: max(6px, calc(var(--s) * 10)); height: max(6px, calc(var(--s) * 10)); }
+  .fu-betten .fu-bett { width: max(5px, calc(var(--s) * 13)); height: max(7px, calc(var(--s) * 16)); }
+  .fu-z1, .fu-z2, .fu-z3 { min-height: 0; }
+  .fu-z3 { gap: calc(var(--s) * 4); }
+}
+
+/* ==========================================================================
+   DIE KAESTEN, DIE DER SCHRIFTBODEN AUFGERISSEN HAT
+   ==========================================================================
+   Zweite Haelfte derselben Rechnung. Der Boden hat in den drei anderen
+   Faechern der FUHRE — Anschlagtafel, Keller, Wagen — sechs Kaesten zum
+   Abschneiden gebracht, die vorher passten. Abgeschnittener Text ist ein
+   Rissgrund derselben Latte wie zu kleine Schrift; ein Kasten, der seinen
+   Text abschneidet, ist kein Fortschritt gegenueber einem Text, den man
+   nicht lesen kann.
+
+   Gemessen bei 1366x768, alle vier Epochen, VOR diesem Abschnitt:
+
+     .fu-brett.fu-haeuser   348 breit, Inhalt 353–360   (die Kopfzeile)
+     .fu-brett.fu-tafel     315x327,   Inhalt 347x352   (Kopf + Ueberfuellung)
+     .fu-brett.fu-wagen     365 breit, Inhalt 434       (die Kopfzeile)
+     .fu-notsud-zeile       225 breit, Inhalt 376–527
+     .fu-kerbzeile b         86 breit, Inhalt 178–255
+     .fu-knappheit          303x3,     Inhalt 303x19    (zusammengedrueckt)
+
+   Nichts davon verliert hier Inhalt: es bricht um statt abzuschneiden.
+   Wieder nur unter der Entwurfsleinwand.
+   ========================================================================== */
+@media (max-width: 2751px), (max-height: 1535px) {
+
+  /* Die Kopfzeile jedes Brettes: Name links, Stand rechts, beide bisher
+     `nowrap`. Bei 12 px passt der Stand („0,0 von 60 hl · 0 von 10 Halten")
+     nicht mehr neben den Namen und schob das ganze Brett auf. Er darf jetzt
+     umbrechen und unter den Namen rutschen — er bleibt rechtsbuendig und
+     vollstaendig lesbar. */
+  .fu-kopf { flex-wrap: wrap; row-gap: calc(var(--s) * 2); }
+  .fu-kopf span { white-space: normal; }
+
+  /* Die Notsudzeile ist der Weg aus der leeren Kasse. Abgeschnitten
+     („0 Pf · 0 Grut · 0 Brauta…") ist sie wertlos. Zwei Zeilen sind
+     billiger als der halbe Satz. */
+  .fu-notsud-zeile { white-space: normal; text-overflow: clip; }
+
+  /* Dasselbe fuer die Ueberschrift des Kerbholzes — „KONTOKORRENT BEI DER
+     HAUSBANK" braucht bei 12 px 224 px und hatte 57. */
+  .fu-kerbzeile { flex-wrap: wrap; row-gap: calc(var(--s) * 2); }
+  .fu-kerbzeile b { white-space: normal; text-overflow: clip; }
+
+  /* Die Knappheitszeile wurde nicht zu gross — sie wurde ZERDRUECKT: sie
+     stand auf `flex: 0 1 auto` und war in einer ueberfuellten Tafel auf
+     3 px zusammengeschoben, waehrend ihr Inhalt 19 px hoch war. Sie darf
+     nicht mehr schrumpfen; nachgeben soll die Sortenliste darueber, die
+     dafuer rollt (das ist ihr ausdruecklicher Bau, s. oben). Und sie
+     bekommt eine dritte Zeile, weil zwei bei 12 px knapp sind. */
+  .fu-tafel .fu-knappheit { flex: 0 0 auto; }
+  .fu-tafel .fu-knappheit span { -webkit-line-clamp: 3; }
+  .fu-tafel .fu-sorten { min-height: 0; }
+}

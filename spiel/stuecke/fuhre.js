@@ -2483,6 +2483,42 @@
     else el.style.setProperty('--s', 'calc(' + f.toFixed(3) + ' * ' + BEZUG + ')');
   }
 
+  /* DIE UNTERGRENZE — WARUM SIE JETZT TIEFER LIEGEN DARF.
+
+     Sie stand auf 0,62 und der Grund dafuer stand daneben: „darunter waere
+     die Zeile nicht mehr zu lesen". Das war richtig, solange jede Schrift
+     ein Vielfaches des Bezugspixels war — dann schrumpfte mit dem Abstand
+     auch der Buchstabe, und bei 1366x768 landete die Adressliste auf 4,3 px,
+     der kleinsten Schrift im ganzen Spiel.
+
+     Seit dem Schriftboden `max(12px, calc(var(--s) * N))` in stil/fuhre.css
+     und stil/fuhre-zusatz.css ist das nicht mehr so: DIE SCHRIFT KANN NICHT
+     MEHR UNTER 12 PX FALLEN, egal wie klein das Bezugspixel dieser Liste
+     wird. Was der Faktor jetzt noch schrumpft, ist ausschliesslich Weissraum
+     — Innenabstand der Karte, Luecke zwischen den Karten, Mindesthoehe der
+     Zeilen, Groesse der Balken (die haben in fuhre-zusatz.css ihre eigene
+     Untergrenze bekommen, damit sie nicht verschwinden). Eine Untergrenze,
+     die Lesbarkeit schuetzen sollte, schuetzt nun nur noch Luft.
+
+     Deshalb 0,34 statt 0,62. Gemessen bei 1920x1000, Epoche 1970 (elf
+     Adressen — der schlimmste Fall im Spiel):
+
+       Grenze   Karte   Liste noetig   von 11 Adressen sichtbar
+        0,62     56 px     623 px               7
+        0,34     41 px     461 px              11
+
+     Und die Knopfzeile bleibt dabei bei ihren 24 px: der Knopfboden aus
+     grund.css ist ein absolutes Mass und schrumpft nicht mit. Das ist der
+     Grund, warum die Karte bei 41 px stehenbleibt und nicht weiter faellt —
+     tiefer als 15 px Textzeile plus 24 px Knopfzeile geht es nicht, und
+     genau da soll es auch aufhoeren.
+
+     Drei Blicke statt zwei: mit dem Boden trifft der erste Schaetzwert
+     schlechter, weil ein Teil der Hoehe (Schrift, Knopf) gar nicht mehr
+     mitschrumpft — die Rechnung (frei/voll) unterschaetzt den noetigen
+     Faktor. Nachziehen kostet nichts und laesst nichts stehen. */
+  var LISTE_GRENZE = 0.34;
+
   function passeListe(liste) {
     if (!liste) return;
     if (typeof requestAnimationFrame !== 'function') return;
@@ -2493,13 +2529,15 @@
         var frei = liste.clientHeight;
         var voll = liste.scrollHeight;
         if (!frei || !voll || voll <= frei) return;
-        var f = B.grenze((frei - 2) / voll, 0.62, 1);
+        var f = B.grenze((frei - 2) / voll, LISTE_GRENZE, 1);
         setzeBezug(liste, f);
-        /* Zweiter Blick: was nicht am Bezugspixel haengt — Rahmen von einem
-           Pixel, Zeilenumbrueche, die aufgehen —, bleibt uebrig. Einmal
-           nachziehen genuegt; gemessen bleibt danach nichts stehen. */
-        if (liste.scrollHeight > liste.clientHeight) {
-          setzeBezug(liste, B.grenze(f * (liste.clientHeight - 2) / liste.scrollHeight, 0.62, 1));
+        for (var v = 0; v < 3; v++) {
+          if (liste.scrollHeight <= liste.clientHeight) break;
+          var neu = B.grenze(f * (liste.clientHeight - 2) / liste.scrollHeight,
+                             LISTE_GRENZE, 1);
+          if (neu >= f - 0.004) break;      /* es bewegt sich nichts mehr */
+          f = neu;
+          setzeBezug(liste, f);
         }
       });
     });
@@ -2524,6 +2562,12 @@
       'im Holz bis Michaeli: ' + B.welt.geld(steht)
       + (vor ? '  ·  abzutrinkendes Angeld: ' + B.welt.geld(vor) : '')));
     w.appendChild(kopf);
+    /* Der Erklaersatz steht ZWEIMAL da: als eigene Zeile und im title des
+       Blocks. Unter der Entwurfsleinwand blendet stil/fuhre-zusatz.css die
+       Zeile aus — sie braucht dort drei Zeilen zu 12 px, also den Platz von
+       zwei Adresskarten —, und dann ist der title der Ort, an dem der Satz
+       noch zu haben ist. Oberhalb der Leinwand aendert sich nichts. */
+    w.title = zd.name.toUpperCase() + ' — ' + zd.satz;
     w.appendChild(B.el('div', 'fu-ziel-satz', zd.satz));
 
     var reihe = B.el('div', 'fu-ziel-reihe');
@@ -2685,8 +2729,14 @@
     var z3 = B.el('div', 'fu-z3');
     var soll = jahresbedarf(a);
     var reihe = B.el('span', 'fu-reihe');
-    reihe.title = 'Absatz der drei letzten Braujahre gegen den Bedarf von '
-      + B.welt.menge(soll) + '. Bleibt er drei Jahre unter einem Drittel, ist die Adresse weg.';
+    /* DIE ZAHLEN GEHOEREN AN DIE BALKEN, nicht nur daneben. Unter der
+       Entwurfsleinwand faellt die Zahlenkette rechts weg (sie stand dort in
+       4,3 px und kostet auf 12 px gehoben zwei Adresskarten Liste); ab hier
+       traegt der Balken sie selbst, und damit ist nichts verloren. */
+    reihe.title = 'Absatz der drei letzten Braujahre: '
+      + a.reihe.map(function (r) { return B.welt.menge(r); }).join(' · ')
+      + ' gegen den Bedarf von ' + B.welt.menge(soll)
+      + '. Bleibt er drei Jahre unter einem Drittel, ist die Adresse weg.';
     a.reihe.forEach(function (r) {
       var saeule = B.el('i', 'fu-saeule' + (r < soll * 0.30 ? ' mager' : ''));
       saeule.style.height = B.grenze(Math.round(r / Math.max(1, soll) * 100), 5, 100) + '%';

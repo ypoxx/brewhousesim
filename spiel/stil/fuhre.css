@@ -423,9 +423,15 @@
 .fu-fass.s2 { background-color: var(--fu-s2); }
 .fu-fass.s3 { background-color: var(--fu-s3); }
 .fu-fass b { font-family: var(--fu-zahlen); font-size: max(12px, calc(var(--s) * 15)); line-height: 1; }
-.fu-fass em { font-family: var(--fu-zahlen); font-size: max(12px, calc(var(--s) * 11)); font-style: normal; opacity: 0.85; }
+/* DIE EINZIGEN ZWEI SCHRIFTREGELN DES STUECKS MIT N < 12 — und deshalb die
+   einzigen, die ein Boden von 12 px AUCH AUF DER ENTWURFSLEINWAND anheben
+   wuerde (dort ist --s = 1 px, also 11 px bzw. 10 px). Genau dort vergleicht
+   Latte 1 blind. Ihr Boden steht darum unten im Abschnitt
+   „DER PLATZ UNTER DER ENTWURFSLEINWAND" hinter demselben Medienschalter,
+   den grund.css fuer den Knopfboden benutzt. */
+.fu-fass em { font-family: var(--fu-zahlen); font-size: calc(var(--s) * 11); font-style: normal; opacity: 0.85; }
 .fu-fass.klein b { font-size: max(12px, calc(var(--s) * 13)); }
-.fu-fass.klein em { font-size: max(12px, calc(var(--s) * 10)); }
+.fu-fass.klein em { font-size: calc(var(--s) * 10); }
 
 /* Was noch nicht reif ist, belegt einen Platz und bringt nichts ein. */
 .fu-fass.fu-lagert {
