@@ -1209,6 +1209,19 @@
   var NACHBAR_DATEI = altNeu('drueben1', 'drueben4');
   var NACHBAR_DAUER = 4.2;
   var NACHBAR_PAUSE = 3.4;
+  /* DER VORHALT — die Stelle, an der ich vom MICHAELITAG abgeschrieben habe.
+     Von den vier Vorgaengen, nach denen die Latte fragt, trifft das fremde Ohr
+     zwei fast immer (FUHRE und MICHAELI) und zwei selten (SUD und GEGENZUG).
+     Der Michaelitag ist nicht deshalb sicher, weil er lauter waere, sondern
+     weil vor ihm eine ZAESUR steht: alles andere tritt zurueck, dann kommt
+     das Zeichen. Ein Ereignis in einem vollen Band ist kein Ereignis.
+     Also bekommt der Gegenzug dieselbe Behandlung, nur kleiner: der eigene
+     Hof geht 0,35 s VOR dem Zeichen herunter, und erst in dieses Loch hinein
+     kommt der Nachbar. In diesen 0,35 s steht der Zug des Nachbarn selbst
+     (`fern`-Bus) allein da — er wird von `senke()` nicht erfasst, das nur
+     Bett, Hof und Werk kennt. Erst hoert man ALSO, dass drueben etwas ist,
+     dann WAS es ist. */
+  var NACHBAR_VORHALT = 0.35;
 
   function nachbarhof(w, epoche, wann) {
     var ctx = w.ctx;
@@ -1248,31 +1261,40 @@
        das nur in der leisesten Epoche durchkommt, ist kein Zeichen, sondern
        ein Zufall. */
     var laut = angleich(buf, 0.55);
-    g.gain.setValueAtTime(0.0001, wann);
-    g.gain.linearRampToValueAtTime(laut, wann + 0.22);
-    g.gain.setValueAtTime(laut, wann + d - 0.45);
-    g.gain.linearRampToValueAtTime(0.0001, wann + d);
+    /* Der Einsatz liegt um den VORHALT hinter dem Zug — siehe oben. Und er
+       ist schnell (0,08 s statt 0,22): wer erst ein Loch macht, darf nicht
+       hineinschleichen, sonst ist das Loch die Auskunft und nicht der
+       Nachbar. */
+    var t = wann + NACHBAR_VORHALT;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.linearRampToValueAtTime(laut, t + 0.08);
+    g.gain.setValueAtTime(laut, t + d - 0.45);
+    g.gain.linearRampToValueAtTime(0.0001, t + d);
     q.connect(g); g.connect(w.bus.nachbar);
-    q.start(wann, ab);
-    q.stop(wann + d + 0.05);
+    q.start(t, ab);
+    q.stop(t + d + 0.05);
 
     /* Bett und Hof gehen tief, das eigene WERK geht mit. Nicht so tief wie
        bei der Zaesur des Michaelitags — der Gegenzug unterbricht den Hof
        nicht, er draengt sich nur davor. */
-    /* WELLE 6: das eigene WERK tritt weiter zurueck als bisher (0,42 -> 0,30),
-       Bett und Hof NICHT (0,28 und 0,34 bleiben). Das ist kein Geschmack,
-       sondern die Ruecksicht auf die dritte Latte: Bett und Hof tragen die
-       Epoche in der gespielten Aufnahme, und wer sie fuer jedes Zeichen tiefer
-       zieht, kauft den Gegenzug mit der Epoche. Das eigene Werk traegt die
-       Epoche nicht allein — es ist das, was den Nachbarn zudeckt. In 1600
-       liegt das einzige Zeichen des ganzen Fensters bei Sekunde 21, und
-       genau dort klickt der Zugplan viermal. */
-    var geste = NACHBAR_DAUER - 0.1;
-    w.duckBis = wann + 0.05 + geste + 0.70;
-    w.duckTiefe = 0.28;
-    senke(w, 'bett', wann, 0.28, geste, 0.70);
-    senke(w, 'hof', wann, 0.34, geste, 0.70);
-    senke(w, 'werk', wann, 0.30, geste, 0.70);
+    /* WELLE 6: TIEFER, ABER KUERZER. Bisher gingen alle drei Busse fuer die
+       ganze Dauer des Zeichens herunter. Beides zusammen — laenger (4,2 s
+       statt 3,2) und fuer alles — waere gegen die dritte Latte gegangen:
+       Bett und Hof tragen in der gespielten Aufnahme die Epoche, und in 1970
+       schlaegt das Zeichen viermal an. Vier mal fuenf Sekunden gedaempftes
+       Bett in einem Fenster von dreissig sind nicht mehr eine Geste, sondern
+       ein anderer Hof.
+       Deshalb jetzt: eine kurze, tiefe Senke statt einer langen, flachen.
+       Das eigene WERK geht am tiefsten (0,30) und am kuerzesten zurueck — es
+       ist das, was den Nachbarn zudeckt, und es traegt die Epoche nicht
+       allein. Bett und Hof gehen weniger tief als vorher (0,34 / 0,38 statt
+       0,28 / 0,34) und sind nach gut drei Sekunden wieder oben, waehrend der
+       Nachbar noch redet. */
+    w.duckBis = wann + 0.05 + 2.0 + 1.0;
+    w.duckTiefe = 0.30;
+    senke(w, 'bett', wann, 0.34, 2.0, 1.0);
+    senke(w, 'hof', wann, 0.38, 2.0, 1.0);
+    senke(w, 'werk', wann, 0.30, 1.4, 0.9);
     return true;
   }
 
