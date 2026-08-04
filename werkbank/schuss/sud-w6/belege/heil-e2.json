@@ -1,0 +1,385 @@
+{
+ "epoche": 2,
+ "hafen": "8917",
+ "messungen": [
+  {
+   "marke": "geladen, Sudbrett aufgeschlagen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1600,
+   "woche": 1,
+   "ueberlaufGesamt": 27,
+   "ueberlaufSud": 4,
+   "beispiele": [
+    {
+     "klasse": "gg-hof amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 10,
+     "dy": 0,
+     "w": 238,
+     "h": 166,
+     "ov": "visible/visible",
+     "text": "Vorsprung: 1 Ding · wirbt 1 Woche kürzer"
+    },
+    {
+     "klasse": "was",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 513,
+     "dy": 0,
+     "w": 520,
+     "h": 14,
+     "ov": "hidden/hidden",
+     "text": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das Dach richten und sch"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:gegner-marktplatz",
+     "dx": 55,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "Adler-Ausschank am Mar"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-fluss",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "FAE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-oben",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OBE"
+    },
+    {
+     "klasse": "fu-notsud-zeile",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 25,
+     "dy": 0,
+     "w": 347,
+     "h": 11,
+     "ov": "hidden/hidden",
+     "text": "0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · nur die Pfanne"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er geh"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut "
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "fu-notsud-zeile",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 25,
+     "dy": 0,
+     "w": 347,
+     "h": 11,
+     "ov": "hidden/hidden",
+     "text": "0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · nur die Pfanne"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er geh"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 40,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwe"
+    }
+   ]
+  },
+  {
+   "marke": "nach 30 gespielten Wochen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1601,
+   "woche": 1,
+   "ueberlaufGesamt": 28,
+   "ueberlaufSud": 4,
+   "beispiele": [
+    {
+     "klasse": "gg-hof amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 16,
+     "dy": 0,
+     "w": 238,
+     "h": 166,
+     "ov": "visible/visible",
+     "text": "Vorsprung: 3 Dinge · wirbt 3 Wochen kürzer"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:gegner-marktplatz",
+     "dx": 55,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "Adler-Ausschank am Mar"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-fluss",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "FAE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-oben",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OBE"
+    },
+    {
+     "klasse": "fu-notsud-zeile",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 25,
+     "dy": 0,
+     "w": 347,
+     "h": 11,
+     "ov": "hidden/hidden",
+     "text": "0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · nur die Pfanne"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er geh"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 40,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwe"
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "fu-notsud-zeile",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 25,
+     "dy": 0,
+     "w": 347,
+     "h": 11,
+     "ov": "hidden/hidden",
+     "text": "0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · nur die Pfanne"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hält. Er geh"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 144,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was so gebraut "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 40,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung dauert zwe"
+    }
+   ]
+  }
+ ],
+ "fehler": []
+}

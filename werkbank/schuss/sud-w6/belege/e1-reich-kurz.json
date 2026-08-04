@@ -1,0 +1,500 @@
+{
+ "epoche": 1,
+ "stil": "reich",
+ "wochen": 400,
+ "fehler": [],
+ "abgebrochen": null,
+ "kasseMin": 0,
+ "kasseMax": 144,
+ "schluss": {
+  "jahr": 1363,
+  "woche": 11,
+  "kasse": 62,
+  "lage": 0,
+  "amtszeit": 8,
+  "sud": {
+   "verfahren": {
+    "wuerze": "brief",
+    "wasser": "roehre"
+   },
+   "fest": {
+    "wasser:roehre": true,
+    "wuerze:brief": true
+   },
+   "guete": 98,
+   "zusatz": 12,
+   "gesamtSude": 326,
+   "gesamtFass": 1027,
+   "jahrFehl": 0,
+   "jahrAnzeige": 0,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gemeldet": {},
+   "kalt": 0,
+   "gesamtLegte": 325
+  }
+ },
+ "bierText": {
+  "siegelzeilen": [
+   "Ratsbrief, gesiegelt: Offen gehopft, mit Hopfenbrief. Diese Frage ist entschieden, für dieses Haus und diese Zeit.",
+   "Röhrenrecht, verbrieft: Röhrenrecht an der Quelle. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ],
+  "schilder": [
+   "das Siegel liegt darauf",
+   "das Siegel liegt darauf",
+   "läuft",
+   "das Siegel liegt darauf",
+   "das Siegel liegt darauf",
+   "läuft"
+  ],
+  "gewaehlt": [
+   "Offen gehopft, mit Hopfenbrief",
+   "Röhrenrecht an der Quelle"
+  ],
+  "kessel": "DER SUD · 1363Offen gehopft, mit Hopfenbrief · Röhrenrecht an der Quellehöchstens StarkbierGärkeller 0/22 FassZeug 98 % · Fass ×1,19Junges Fass anbrechen · +14 · 1 FassAltes Fass anbrechen · +6 · 1 FassBottich beim Küfer bestellen · +6 Fass−41 Pf",
+  "brett": "DAS SUDHAUS · 1363 Die offene Pfanne über offenem Feuer Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts. DIE WÜRZE Womit wird gewürzt? Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf. Rats"
+ },
+ "sudtaten": [
+  {
+   "n": 0,
+   "jahr": 1350,
+   "woche": 1,
+   "zug": "sud:wasser:roehre",
+   "preis": -30,
+   "kasseVor": 76,
+   "kasseNach": 46,
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "festNach": {
+    "wasser:roehre": true
+   },
+   "gueteVor": 70,
+   "gueteNach": 70
+  },
+  {
+   "n": 4,
+   "jahr": 1350,
+   "woche": 5,
+   "zug": "sud:gaerraum",
+   "preis": -26,
+   "kasseVor": 70,
+   "kasseNach": 44,
+   "plaetzeVor": 12,
+   "plaetzeNach": 12
+  },
+  {
+   "n": 8,
+   "jahr": 1350,
+   "woche": 9,
+   "zug": "sud:gaerraum",
+   "preis": -33,
+   "kasseVor": 85,
+   "kasseNach": 52,
+   "plaetzeVor": 12,
+   "plaetzeNach": 12
+  },
+  {
+   "n": 23,
+   "jahr": 1350,
+   "woche": 24,
+   "zug": "sud:wuerze:brief",
+   "preis": -78,
+   "kasseVor": 144,
+   "kasseNach": 66,
+   "verfahrenNach": {
+    "wuerze": "brief",
+    "wasser": "roehre"
+   },
+   "festNach": {
+    "wasser:roehre": true,
+    "wuerze:brief": true
+   },
+   "gueteVor": 98,
+   "gueteNach": 98
+  }
+ ],
+ "leiterRoh": [
+  {
+   "jahr": 1350,
+   "kasse": 112,
+   "billigst": 36,
+   "name": "Das Dach über der Pfanne",
+   "verhaeltnis": 3.111111111111111,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Zuvorkommen Klosterschenke Obernberg",
+   "zugPreis": 19,
+   "zugArt": "umkaempft",
+   "zugVerh": 5.894736842105263,
+   "zugFest": true
+  },
+  {
+   "jahr": 1351,
+   "kasse": 48,
+   "billigst": 47,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.0212765957446808,
+   "vorgriff": 0,
+   "rueckstand": 61,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 56,
+   "zugArt": "umkaempft",
+   "zugVerh": 0.8571428571428571,
+   "zugFest": true
+  },
+  {
+   "jahr": 1352,
+   "kasse": 56,
+   "billigst": 42,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.3333333333333333,
+   "vorgriff": 0,
+   "rueckstand": 19,
+   "zugWas": "Ablösung Ausschank am Markt",
+   "zugPreis": 27,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.074074074074074,
+   "zugFest": true
+  },
+  {
+   "jahr": 1353,
+   "kasse": 48,
+   "billigst": 42,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.1428571428571428,
+   "vorgriff": 0,
+   "rueckstand": 71,
+   "zugWas": "Ablösung Ausschank am Markt",
+   "zugPreis": 27,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.7777777777777777,
+   "zugFest": true
+  },
+  {
+   "jahr": 1354,
+   "kasse": 67,
+   "billigst": 45,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.488888888888889,
+   "vorgriff": 0,
+   "rueckstand": 2,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 42,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.5952380952380953,
+   "zugFest": true
+  },
+  {
+   "jahr": 1355,
+   "kasse": 48,
+   "billigst": 42,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.1428571428571428,
+   "vorgriff": 0,
+   "rueckstand": 7,
+   "zugWas": "Ablösung Mühlschenke",
+   "zugPreis": 48,
+   "zugArt": "umkaempft",
+   "zugVerh": 1,
+   "zugFest": true
+  },
+  {
+   "jahr": 1356,
+   "kasse": 68,
+   "billigst": 49,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.3877551020408163,
+   "vorgriff": 0,
+   "rueckstand": 11,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 56,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.2142857142857142,
+   "zugFest": true
+  },
+  {
+   "jahr": 1357,
+   "kasse": 48,
+   "billigst": 42,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.1428571428571428,
+   "vorgriff": 0,
+   "rueckstand": 17,
+   "zugWas": "Zuvorkommen Landgasthof Hirsch",
+   "zugPreis": 32,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.5,
+   "zugFest": true
+  },
+  {
+   "jahr": 1358,
+   "kasse": 87,
+   "billigst": 64,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.359375,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Zuvorkommen Mühlschenke",
+   "zugPreis": 29,
+   "zugArt": "umkaempft",
+   "zugVerh": 3,
+   "zugFest": true
+  },
+  {
+   "jahr": 1359,
+   "kasse": 48,
+   "billigst": 59,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 0.8135593220338984,
+   "vorgriff": 0,
+   "rueckstand": 60,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 56,
+   "zugArt": "umkaempft",
+   "zugVerh": 0.8571428571428571,
+   "zugFest": true
+  },
+  {
+   "jahr": 1360,
+   "kasse": 72,
+   "billigst": 64,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.125,
+   "vorgriff": 0,
+   "rueckstand": 17,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 44,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.6363636363636365,
+   "zugFest": true
+  },
+  {
+   "jahr": 1361,
+   "kasse": 48,
+   "billigst": 50,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 0.96,
+   "vorgriff": 0,
+   "rueckstand": 73,
+   "zugWas": "Ablösung Mühlschenke",
+   "zugPreis": 48,
+   "zugArt": "umkaempft",
+   "zugVerh": 1,
+   "zugFest": true
+  },
+  {
+   "jahr": 1362,
+   "kasse": 74,
+   "billigst": 68,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 1.088235294117647,
+   "vorgriff": 0,
+   "rueckstand": 25,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 42,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.7619047619047619,
+   "zugFest": true
+  },
+  {
+   "jahr": 1363,
+   "kasse": 48,
+   "billigst": 53,
+   "name": "Der feste Fasskauf bei der Zunft",
+   "verhaeltnis": 0.9056603773584906,
+   "vorgriff": 0,
+   "rueckstand": 73,
+   "zugWas": "Zuvorkommen Mühlschenke",
+   "zugPreis": 22,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.1818181818181817,
+   "zugFest": true
+  }
+ ],
+ "jahre": [
+  {
+   "jahr": 1350,
+   "kasseMichaeli": 76
+  },
+  {
+   "jahr": 1351,
+   "kasseMichaeli": 48
+  },
+  {
+   "jahr": 1352,
+   "kasseMichaeli": 56
+  },
+  {
+   "jahr": 1353,
+   "kasseMichaeli": 48
+  },
+  {
+   "jahr": 1354,
+   "kasseMichaeli": 67
+  },
+  {
+   "jahr": 1355,
+   "kasseMichaeli": 48
+  },
+  {
+   "jahr": 1356,
+   "kasseMichaeli": 68
+  },
+  {
+   "jahr": 1357,
+   "kasseMichaeli": 48
+  },
+  {
+   "jahr": 1358,
+   "kasseMichaeli": 87
+  },
+  {
+   "jahr": 1359,
+   "kasseMichaeli": 48
+  },
+  {
+   "jahr": 1360,
+   "kasseMichaeli": 72
+  },
+  {
+   "jahr": 1361,
+   "kasseMichaeli": 48
+  },
+  {
+   "jahr": 1362,
+   "kasseMichaeli": 74
+  },
+  {
+   "jahr": 1363,
+   "kasseMichaeli": 48
+  }
+ ],
+ "klemmer": [
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 693.6328125,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 686
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 634,
+     "w": 283,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e1-reich-0.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 693.6328125,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 710
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 620,
+     "w": 283,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e1-reich-1.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 693.6328125,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 710
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 619,
+     "w": 283,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e1-reich-2.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 693.6328125,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 710
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 666,
+     "w": 283,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e1-reich-3.png"
+  }
+ ]
+}

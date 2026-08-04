@@ -1,0 +1,407 @@
+{
+ "epoche": 3,
+ "hafen": "8917",
+ "messungen": [
+  {
+   "marke": "geladen, Sudbrett aufgeschlagen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1884,
+   "woche": 1,
+   "ueberlaufGesamt": 25,
+   "ueberlaufSud": 5,
+   "beispiele": [
+    {
+     "klasse": "was",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 190,
+     "dy": 0,
+     "w": 520,
+     "h": 14,
+     "ov": "hidden/hidden",
+     "text": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein Darlehen und lässt d"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-fluss",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "FAE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bahnhof",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BHF"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 94,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum me"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 81,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganz"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Su"
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 94,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum me"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 81,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganz"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Su"
+    }
+   ]
+  },
+  {
+   "marke": "nach 30 gespielten Wochen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1885,
+   "woche": 1,
+   "ueberlaufGesamt": 30,
+   "ueberlaufSud": 5,
+   "beispiele": [
+    {
+     "klasse": "gg-hof amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 10,
+     "dy": 0,
+     "w": 238,
+     "h": 37,
+     "ov": "visible/visible",
+     "text": "Vorsprung: 1 Ding · wirbt 1 Woche kürzer"
+    },
+    {
+     "klasse": "was",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 195,
+     "dy": 0,
+     "w": 520,
+     "h": 14,
+     "ov": "hidden/hidden",
+     "text": "Der Adler baut dem Brückenwirt den Eiskeller und schreibt sich zwölf Jahre hinei"
+    },
+    {
+     "klasse": "was",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 155,
+     "dy": 0,
+     "w": 520,
+     "h": 14,
+     "ov": "hidden/hidden",
+     "text": "Kesselschaden beim Adler. Die Versicherung zahlt später als der Kesselschmied re"
+    },
+    {
+     "klasse": "knopf stadt-pflock amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:gegner-fluss",
+     "dx": 32,
+     "dy": 19,
+     "w": 10,
+     "h": 10,
+     "ov": "visible/visible",
+     "text": "frei geworden"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-fluss",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "FAE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bahnhof",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BHF"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 94,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum me"
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert richtig: zwei "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 94,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hält kaum me"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 81,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller hält das ganz"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes Mal etwas "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 223,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezogen. Der Su"
+    }
+   ]
+  }
+ ],
+ "fehler": []
+}

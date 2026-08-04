@@ -1,0 +1,456 @@
+{
+ "epoche": 1,
+ "versuche": [
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "wasser",
+   "ziel": "sud:wasser:bach",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Wasser aus dem Stadtbach"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 112.8125,
+    "y": 652.34375,
+    "preis": null,
+    "text": "Wasser aus dem Stadtbach"
+   },
+   "geklickt": false,
+   "vorher": "roehre",
+   "nachher": "roehre",
+   "festNach": {
+    "wasser:roehre": true,
+    "wuerze:brief": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "wasser",
+   "ziel": "sud:wasser:brunnen",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Wasser aus dem Ziehbrunnen"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 272.140625,
+    "y": 652.34375,
+    "preis": null,
+    "text": "Wasser aus dem Ziehbrunnen"
+   },
+   "geklickt": false,
+   "vorher": "roehre",
+   "nachher": "roehre",
+   "festNach": {
+    "wasser:roehre": true,
+    "wuerze:brief": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "wasser",
+   "ziel": "sud:zettel-wechsel-frei",
+   "fehlt": true
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "wasser",
+   "ziel": "sud:zettel-wechsel-kauf",
+   "fehlt": true
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "wasser",
+   "ziel": "sud:zettel-wechsel-frei2",
+   "fehlt": true
+  },
+  {
+   "weg": "3 Tastatur (Leertaste)",
+   "achse": "wasser",
+   "vorher": "roehre",
+   "nachher": "roehre",
+   "zurueck": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "wasser",
+   "ziel": "sud:wasser:bach",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "roehre",
+   "nachher": "roehre",
+   "zurueck": false,
+   "nachEchterMaus": "roehre",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "wasser",
+   "ziel": "sud:wasser:brunnen",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "roehre",
+   "nachher": "roehre",
+   "zurueck": false,
+   "nachEchterMaus": "roehre",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "6 Zustand direkt umgeschrieben (Konsole, keine Maus)",
+   "achse": "wasser",
+   "erg": {
+    "alt": "roehre",
+    "gesetzt": "bach"
+   },
+   "vorher": "roehre",
+   "nachher": "bach",
+   "zurueck": true
+  },
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "wuerze",
+   "ziel": "sud:wuerze:grut",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Grut vom Grutamt"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 112.8125,
+    "y": 328.84375,
+    "preis": null,
+    "text": "Grut vom Grutamt"
+   },
+   "geklickt": false,
+   "vorher": "brief",
+   "nachher": "brief",
+   "festNach": {
+    "wasser:roehre": true,
+    "wuerze:brief": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "wuerze",
+   "ziel": "sud:wuerze:sack",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Hopfen im Sack, heimlich"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 272.140625,
+    "y": 335.03125,
+    "preis": null,
+    "text": "Hopfen im Sack, heimlich"
+   },
+   "geklickt": false,
+   "vorher": "brief",
+   "nachher": "brief",
+   "festNach": {
+    "wasser:roehre": true,
+    "wuerze:brief": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "wuerze",
+   "ziel": "sud:zettel-wechsel-frei",
+   "fehlt": true
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "wuerze",
+   "ziel": "sud:zettel-wechsel-kauf",
+   "fehlt": true
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "wuerze",
+   "ziel": "sud:zettel-wechsel-frei2",
+   "fehlt": true
+  },
+  {
+   "weg": "3 Tastatur (Leertaste)",
+   "achse": "wuerze",
+   "vorher": "brief",
+   "nachher": "brief",
+   "zurueck": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "wuerze",
+   "ziel": "sud:wuerze:grut",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "brief",
+   "nachher": "brief",
+   "zurueck": false,
+   "nachEchterMaus": "brief",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "wuerze",
+   "ziel": "sud:wuerze:sack",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "brief",
+   "nachher": "brief",
+   "zurueck": false,
+   "nachEchterMaus": "brief",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "6 Zustand direkt umgeschrieben (Konsole, keine Maus)",
+   "achse": "wuerze",
+   "erg": {
+    "alt": "brief",
+    "gesetzt": "grut"
+   },
+   "vorher": "brief",
+   "nachher": "grut",
+   "zurueck": true
+  }
+ ],
+ "siegel": {
+  "verfahren": {
+   "wuerze": "brief",
+   "wasser": "roehre"
+  },
+  "fest": {
+   "wasser:roehre": true,
+   "wuerze:brief": true
+  },
+  "gewaehlt": [
+   "Offen gehopft, mit Hopfenbrief",
+   "Röhrenrecht an der Quelle"
+  ],
+  "siegelzeilen": [
+   "Ratsbrief, gesiegelt: Offen gehopft, mit Hopfenbrief. Diese Frage ist entschieden, für dieses Haus und diese Zeit.",
+   "Röhrenrecht, verbrieft: Röhrenrecht an der Quelle. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ]
+ },
+ "datenFest": {
+  "wuerze:grut": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 2,
+   "sperrt": null
+  },
+  "wuerze:sack": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "wuerze:brief": {
+   "fest": true,
+   "einmal": false,
+   "preis": 78,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "wasser:bach": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "wasser:brunnen": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "wasser:roehre": {
+   "fest": true,
+   "einmal": false,
+   "preis": 30,
+   "hoechst": 3,
+   "sperrt": null
+  }
+ },
+ "nachSechsWochen": {
+  "verfahren": {
+   "wuerze": "brief",
+   "wasser": "roehre"
+  },
+  "fest": {
+   "wasser:roehre": true,
+   "wuerze:brief": true
+  },
+  "gewaehlt": [
+   "Offen gehopft, mit Hopfenbrief",
+   "Röhrenrecht an der Quelle"
+  ],
+  "siegelzeilen": [
+   "Ratsbrief, gesiegelt: Offen gehopft, mit Hopfenbrief. Diese Frage ist entschieden, für dieses Haus und diese Zeit.",
+   "Röhrenrecht, verbrieft: Röhrenrecht an der Quelle. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ]
+ },
+ "knoepfeNachher": [
+  {
+   "z": "sud:zettel-anstich",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Junges Fass anbrechen · +14 · 1 Fass"
+  },
+  {
+   "z": "sud:zettel-hefe-fass",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Altes Fass anbrechen · +6 · 1 Fass"
+  },
+  {
+   "z": "sud:zettel-gaerraum",
+   "a": 1,
+   "s": "1",
+   "g": "brett-offen",
+   "h": 0,
+   "p": -41,
+   "t": "Bottich beim Küfer bestellen · +6 Fass−41 Pf"
+  },
+  {
+   "z": "sud:wuerze:grut",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Grut vom Grutamt"
+  },
+  {
+   "z": "sud:wuerze:sack",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Hopfen im Sack, heimlich"
+  },
+  {
+   "z": "sud:wuerze:brief",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Offen gehopft, mit Hopfenbrief"
+  },
+  {
+   "z": "sud:wasser:bach",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Wasser aus dem Stadtbach"
+  },
+  {
+   "z": "sud:wasser:brunnen",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Wasser aus dem Ziehbrunnen"
+  },
+  {
+   "z": "sud:wasser:roehre",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Röhrenrecht an der Quelle"
+  },
+  {
+   "z": "sud:hefe-fuehren",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Hefezeug aus dem Bottich heben · +8"
+  },
+  {
+   "z": "sud:anstich-jung",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Junges Fass anbrechen · +14"
+  },
+  {
+   "z": "sud:anstich-alt",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Altes Fass anbrechen · +6"
+  },
+  {
+   "z": "sud:gaerraum",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": -41,
+   "t": "Bottich beim Küfer bestellen · +6 Fass −41 Pf"
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # DER SUD — blindes Urteil, Welle 6
 
-*(IN ARBEIT — wird laufend fortgeschrieben.)*
+**Fertig.** Alle Zahlen gemessen, alle vier Epochen, vierzehn Braujahre je Partie.
 
 **Gemessener Commit:** `05af148` ("Nachmessung: die Kernaenderung laesst die
 Wellenzahl unberuehrt"), eingefroren mit
@@ -509,6 +509,13 @@ selbst nein). **Kein einziger Zug ist dem Spieler dadurch verlorengegangen** —
 aber er muss ihn auf dem Zettel suchen, waehrend das Brett offen und tot vor
 ihm steht.
 
+Das ist kein Zufall, sondern dieselbe Ursache: weil `Z.brettZu` faelschlich
+`true` steht, haelt DAS STUECK das Brett fuer zugeklappt und stellt darum den
+Kesselzettel hin (`taktZugeklappt`: `var brettOffen = !Z.brettZu`). Der
+Spieler sieht in diesen Wochen beides zugleich — ein offenes, totes Brett und
+einen lebendigen Zettel davor. Der Schaden ist damit ein Schaden am
+Verstaendnis, nicht an der Bedienbarkeit; klein wird er dadurch nicht.
+
 ## Frage 4 — traegt die Partie ein eigenes Bier?
 
 **Ja, und es steht in vier Zahlen am Kesselzettel.** Dieselbe Epoche, drei
@@ -585,8 +592,8 @@ Abbruch** („Haus zu", „WEITER nicht anzufassen", „kein Zug veraendert die
 Woche"). Der teuerste Kauf gemessen an der Kasse war `sud:wuerze:brief`
 (54 % der Barschaft, 1350/24): die Kennzahl fiel fuer wenige Wochen auf 0,53
 und war im Jahresmedian bei 0,86; das Haus spielte danach dreizehn weitere
-Braujahre. In 1350 stand die Kasse in 1 von 400 Wochen auf 0 (beide Haende),
-in allen anderen Epochen nie.
+Braujahre. Die Kasse stand nur in 1350 je auf 0 — 1 von 400 Wochen (reich),
+17 von 400 (arm); in 1600, 1884 und 1970 nie (Tiefstaende 124 / 13 / 304).
 
 **Ist die Wellenzahl unberuehrt?** Gemessen mit
 `werkbank/schuss/sud-w6/linie.mjs` — Byte fuer Byte die Kopie von
@@ -597,8 +604,191 @@ drei Laeufe je Epoche, sequenziell, 400 Wochen = 14 Braujahre, ausgewertet mit
 | Epoche | Stand laut Auftrag | hier gemessen (3 Laeufe) | Spannweite | Jahre unter 1× |
 |---|---|---|---|---|
 | 1350 | +0,591 | **+0,591** | **0,000** | 0/14 |
-| 1600 | +0,231 | *(laeuft)* | | |
-| 1884 | +0,393 | *(laeuft)* | | |
-| 1970 | +0,275 | *(laeuft)* | | |
+| 1600 | +0,231 | **+0,231** | **0,000** | 0/14 |
+| 1884 | +0,393 | **+0,393** | **0,000** | 1/14 |
+| 1970 | +0,275 | **+0,275** | **0,000** | 0/14 |
+
+**Alle vier Ziffern reproduziert, jede Spannweite 0,000. Die Wellenzahl ist
+unberuehrt; DER SUD hat sie nicht kaputtgemacht.**
+
+Eine Warnung dazu, die dieser Lauf sich selbst eingehandelt hat: der erste
+Dreisatz fuer 1970 lieferte **+0,275 / +0,112 / +0,275**, Spannweite 0,163.
+Waehrend dieser drei Laeufe lief auf derselben Maschine ein fremder Browser
+(`werkbank/schuss/klang-blind-w5/aufnahme.mjs`, ein anderer Builder). Auf der
+leeren Maschine, unmittelbar danach, drei Laeufe:
+**+0,275 / +0,275 / +0,275**, Spannweite 0,000
+(`/tmp/sudw6/rho2/e4-{D,E,F}.json`). Der Ausreisser war die Last, nicht das
+Spiel — die Messregel dieses Laufs ist damit ein zweites Mal von aussen
+bestaetigt. Gezaehlt ist der saubere Dreisatz.
+
+---
+
+# URTEIL: **BESTEHT MIT AUFLAGE**
+
+Das Stueck tut, wozu es da ist. Es wird beim Bier etwas entschieden, die
+Entscheidung kostet zwischen 30 und 54 Prozent der Barschaft, sie aendert
+messbar etwas, und das Wort „unwiderruflich" **haelt** — auf jedem Weg, den
+Maus, Tastatur und ein synthetisches Klickereignis kennen. Zwei verschieden
+gespielte Partien derselben Epoche enden mit verschiedenem Bier, und das ist
+am Kesselzettel abzulesen, ohne den Quelltext zu oeffnen. In ueber 4.000
+gespielten Wochen kein Konsolenfehler, kein `BRAUHAUS.lage`, kein Abbruch.
+
+Dagegen stehen vier Befunde, die es nicht durchfallen lassen, aber
+nachgearbeitet gehoeren:
+
+* das Sudbrett steht in 20 bis 53 von 400 Wochen offen im Bild und ist tot,
+  und der Zustand geht von selbst nicht mehr weg;
+* eine ganze Epoche (1600) traegt in 364 von 400 Wochen kein einziges
+  Preisschild;
+* die teuerste unwiderrufliche Karte des Spiels ist in vierzehn Braujahren
+  nicht einmal anzufassen;
+* die haeufigste Bierentscheidung ueberhaupt traegt kein Preisschild, obwohl
+  sie kostet.
+
+## AUFLAGEN
+
+**AUFLAGE 1 — DIE KLEMME: ein offenes Brett, das nichts kann.**
+Gemessen: in 1350 24/38, in 1600 53/47, in 1884 46/39, in 1970 20/21 von je
+400 Wochen (reich/arm) steht das Sudbrett vollstaendig im Bild
+(902 × 594–710 px), traegt **nicht** `stadt-zugeklappt`, der Reiter der STADT
+sagt `liegt auf`, `elementFromPoint` auf dem Knopf trifft den Knopf — und alle
+`sud:*`-Knoepfe sind `disabled` mit `data-aus-grund="brett-zugeklappt"`,
+bis zu 192 Ablesungen davon mit `data-soll-aus="0"`, also gegen den erklaerten
+Willen des Spiels (ZUSTAENDIGKEIT 25: „**Das ist ein Fehler**, kein
+Zustand."). Der Zustand loest sich in **8 Sekunden ohne Eingabe nicht**
+(40 Proben alle 200 ms, `/tmp/sudw6/klemme-e1-0.png`, `…-e4-0.png`), auch
+nicht nach EINEM Klick auf den Reiter, sondern erst nach zweien.
+Ursache lesbar in `spiel/stuecke/sud.js:2074–2078`: der `else`-Zweig
+uebernimmt `Z.brettZu` von einem frisch gezeichneten Knoten, der
+`data-sud-gesehen` nie bekommen hat, und schreibt den alten Wert damit endlos
+fort.
+*Abnahme:* ueber je 400 Wochen in allen vier Epochen, gespielt mit
+`werkbank/schuss/sud-w6/sudhand.mjs` in beiden STIL, **null** Ablesungen eines
+`sud:*`-Knopfes mit `data-soll-aus="0"` **und** `disabled` **und**
+`elementFromPoint`-Treffer, solange das Brett kein `stadt-zugeklappt` traegt.
+
+**AUFLAGE 2 — 1600 hat keine Bierentscheidung mit Preisschild.**
+Gemessen ueber 400 Wochen, beide Haende: `sud:gaerung:*` hat in **0 von 400**
+Wochen zwei Karten zugleich aktiv und erreichbar (`ober` laeuft und ist
+deshalb aus, `keller` steht allein); `sud:schuettung:*` hat in **0 von 400**
+Wochen ueberhaupt ein Preisschild (alle drei Karten kosten 0). Preisschilder
+des SUD nebeneinander: **0 in 364 von 400 Wochen, 1 in 35, 2 in genau 1
+Woche**. Zum Vergleich 1970: 3 Schilder in 189, 4 in 87 Wochen.
+*Abnahme:* in 1600, 400 Wochen, sorgfaeltig gespielt, stehen in mindestens
+60 von 400 Wochen **zwei** Preisschilder DES SUD zugleich aktiv und von der
+Maus erreichbar — gemessen mit demselben Geraet.
+
+**AUFLAGE 3 — `sud:fuehrung:rechner` ist in vierzehn Braujahren nicht
+anzufassen.** 118.000 DM, `fest: true`, `hoechst: 3`, die teuerste
+unwiderrufliche Karte des ganzen Spiels. In **0 von 800** gemessenen Wochen
+(reich und arm, je 400) war sie aktiv **und** erreichbar; die Kasse stand in
+2 von 400 Wochen ueber 118.000 (`kern/welt.js:261`: `kann` ist schlicht
+`kasse >= betrag`), und in keiner davon war die Karte offen. Auch
+`sud:behandlung:pasteur` (74.000) blieb der aufsteigenden Hand unbezahlbar.
+*Abnahme:* eine sorgfaeltig gespielte Partie ueber 400 Wochen in 1970 findet
+`sud:fuehrung:rechner` mindestens einmal aktiv und erreichbar — oder die
+Epochendaten sagen, warum die Karte trotzdem dasteht (dann gehoert das an den
+Knopf, nicht in den Quelltext).
+
+**AUFLAGE 4 — die haeufigste Bierentscheidung traegt kein Preisschild.**
+`sud:anstich-jung` (+14 Zeug) gegen `sud:anstich-alt` (+6 Zeug) steht in
+309 bis 369 von 400 Wochen in allen vier Epochen als echte Zweiknopffrage da
+und ist die einzige Bierentscheidung, die in jeder Woche wiederkehrt. Beide
+Knoepfe kosten laut ihrem eigenen Titel `B.welt.menge(1)` — ein Fass, beim
+jungen „und es wäre noch lange zu verkaufen gewesen" (`sud.js:1428`) — und
+tragen trotzdem beide `data-preis` 0. Fuer jede Zaehlung nach Spalte (a) ist
+diese Wahl unsichtbar.
+*Abnahme:* entweder tragen beide Knoepfe den Preis, den sie wirklich kosten,
+oder das Stueck sagt an einer Stelle, die ein Zaehler liest, dass hier ein
+Fass und kein Geld bezahlt wird.
+
+## SPERRLISTE (im Wortlaut)
+
+1. **Das Siegel wird nicht angefasst.** `verdraengt()` (`sud.js:174`) und der
+   Riegel in `waehle()` (`sud.js:939`) bleiben, wie sie sind. Keine
+   Rueckgabe, keine Frist, kein „im selben Jahr noch umstellbar", keine
+   Erstattung. Der Riegel bleibt HINTER dem `disabled` und nicht darin.
+2. **Die Klemme wird nicht durch Wegsehen behoben.** `data-soll-aus`,
+   `data-aus-grund` und `data-verdeckt` bleiben an jedem Knopf und behalten
+   ihre Bedeutung. Es ist verboten, `data-soll-aus` auf `1` zu setzen, um die
+   Ablesung sauber zu machen, oder `schalte()` das Melden abzugewoehnen. Der
+   ZUSTAND muss richtig werden, nicht die Auskunft leiser.
+3. **Auflage 2 wird nicht mit einem Scheinpreis erfuellt.** Es ist verboten,
+   einer kostenlosen Karte ein `data-preis` zu geben, das sie nicht abbucht,
+   und es ist verboten, `sud:gaerraum` als zweites Preisschild zu zaehlen —
+   das ist ein Kauf, keine Gegenkarte zu einer Wahl.
+4. **Auflage 3 wird nicht durch Abraeumen erfuellt.** `sud:fuehrung:labor`
+   darf nicht verschwinden, damit `rechner` billiger wirkt, und die Ratsche
+   („Zurück geht es nicht — nur noch weiter hinauf") darf dabei nicht
+   gelockert werden.
+5. **`spiel/kern/ton.js` und `spiel/ton/**` bleiben unberuehrt** — dort
+   arbeitet in dieser Welle ein anderer Builder.
+6. **Die Wellenzahl wird nicht neu definiert.** Die zweite Latte (d) wird
+   weiter mit `werkbank/schuss/rueckkopplung-r3/linie.mjs` und
+   `…/auswerten.py` bei 400 Wochen = vierzehn Braujahren gemessen, sequenziell,
+   drei Laeufe je Epoche. Wer nacharbeitet, misst nach und nennt die
+   Spannweite.
+7. **Fremde Messgeraete werden nicht gedreht.** `linie.mjs`, `nenner.mjs`,
+   `messstand.sh` gehoeren anderen; wer etwas anderes messen will, stellt sein
+   Geraet daneben.
+8. **`design/PRUEFUNG.md` ist Sperrliste, keine Latte.** Es ist gegen dieses
+   Stueck nicht gemessen worden und darf in der Nacharbeit nicht als Massstab
+   zitiert werden.
+
+## Was ich NICHT beanstande, obwohl es auffaellt
+
+* **Drei von acht Achsen sind nie eine Wahl zwischen zwei Knoepfen**
+  (`gaerung` 1600, `hefe` 1884, `fuehrung` 1970 — je 0 von 400 Wochen). Das
+  folgt sauber aus `sud.js:1094` (`aus: … || (ist && !offenPreis)`): die
+  laufende kostenlose Karte ist abgeschaltet und traegt das Schild „läuft".
+  Es ist ehrlich und lesbar; bei zwei Karten bleibt dann eben eine druckbar.
+  In 1600 wird daraus zusammen mit dem fehlenden Preisschild ein Befund —
+  siehe Auflage 2. Fuer sich genommen ist es keiner.
+* **Der Kesselzettel ist abgeschaltet, solange das Brett offen liegt**
+  (1.047–1.502 Ablesungen je Partie mit `data-soll-aus="0"`,
+  `data-aus-grund="brett-offen"`). Nach dem Buchstaben von ZUSTAENDIGKEIT 25
+  ist das ein Fehler; in der Sache ist es die Vermeidung der
+  Selbstverdeckung: der Zettel hat dann **keine Flaeche** (`display:none`,
+  `hit: false` in allen Ablesungen), und derselbe Zug steht am offenen Brett.
+  Das Stueck nennt den Grund. Ich lasse es stehen.
+* **Der `verdeckt`-Fall wird selbst angemeldet**: 38 (1970 reich) und 14
+  (1970 arm) Ablesungen mit `data-verdeckt="1"`, `data-aus-grund="verdeckt"`,
+  `data-soll-aus="0"` und ohne Maustreffer. Das ist der Fehler, den
+  ZUSTAENDIGKEIT 25 meint — und das Stueck schreibt ihn selbst an den Knopf,
+  statt ihn zu verschweigen. Genau so soll es sein.
+* **Der abgeschnittene Kartentext.** 4 bis 7 `.sud-kartensatz` je Epoche haben
+  40 bis 108 px Text hinter der Auslassung. Das ist kein Ueberlauf, sondern
+  `-webkit-line-clamp: 3` (`spiel/stil/sud.css:95`), und der volle Satz haengt
+  am `title` des Knopfes (`sud.js:1085`).
+* **`B.sud.zustand()` gibt `Z` als Referenz heraus** (`sud.js:931`), also
+  laesst sich aus der Konsole jedes Siegel umschreiben. Das ist kein Weg der
+  Maus; jedes Spiel im Browser laesst sich so bedienen. Genannt, nicht
+  beanstandet.
+
+## Wie gemessen wurde
+
+* Commit **`05af148`**, eingefroren auf eigenem Hafen 8917 mit
+  `werkbank/schuss/aufsicht/messstand.sh HEAD 8917`; die Marke
+  `http://127.0.0.1:8917/.messstand-marke` lieferte waehrend der ganzen
+  Messung `05af148`, auch nachdem der Arbeitsbaum auf `faf4328`
+  weitergelaufen war. Zwischen `05af148` und `faf4328` sind an `spiel/` nur
+  `kern/ton.js` und `ton/**` geaendert — DER SUD ist unberuehrt.
+* Alles SEQUENZIELL, nie zwei Browser derselben Messung zugleich. Die drei
+  gewerteten Laeufe je Epoche der Latte d haben Spannweite 0,000 — fuer 1970
+  erst der zweite Dreisatz auf der leeren Maschine; der erste stand unter der
+  Last eines fremden Browsers und streute 0,163. Wer Streuung misst, misst
+  seinen Browser: hier noch einmal nachgewiesen.
+* Belege liegen unter **`werkbank/schuss/sud-w6/`**:
+  * die Geraete: `blick.mjs`, `sudhand.mjs`, `siegel.mjs`, `heil.mjs`,
+    `klemme.mjs`, `auswerten.mjs`, `linie.mjs` (unveraenderte Kopie).
+  * `belege/` — `e{1..4}-{reich,arm}-kurz.json` (die acht 400-Wochen-Partien,
+    ohne die Wochenrohtabellen), `siegel2-e{1..4}-angriff.json` (die vier
+    Siegelangriffe, vollstaendig), `heil-e{1..4}.json`,
+    `klemme-e{1,4}.json` mit `klemme-e1-0.png` und `klemme-e4-0.png`,
+    `rho/e{1..4}-{A,B,C}.json` und `rho/e4-{D,E,F}.json` (die zwoelf plus drei
+    Laeufe der Latte d), sowie `lauf1.log`, `lauf5.log`, `lauf6.log`.
+  * Die vollen Wochentabellen der acht Partien (je ~1,1 MB) stehen in
+    `/tmp/sudw6/e{1..4}-{reich,arm}.json`; jede Zahl dieses Urteils ist mit
+    `node werkbank/schuss/sud-w6/auswerten.mjs <datei>` nachzurechnen.
 
 

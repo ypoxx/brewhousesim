@@ -1,0 +1,458 @@
+{
+ "epoche": 2,
+ "stil": "reich",
+ "wochen": 400,
+ "fehler": [],
+ "abgebrochen": null,
+ "kasseMin": 124,
+ "kasseMax": 955,
+ "schluss": {
+  "jahr": 1613,
+  "woche": 11,
+  "kasse": 344,
+  "lage": 0,
+  "amtszeit": 8,
+  "sud": {
+   "verfahren": {
+    "schuettung": "hafer",
+    "gaerung": "keller"
+   },
+   "fest": {
+    "gaerung:keller": true
+   },
+   "guete": 62,
+   "zusatz": 0,
+   "gesamtSude": 299,
+   "gesamtFass": 1661,
+   "jahrFehl": 0,
+   "jahrAnzeige": 3,
+   "gestuftGesamt": 196,
+   "bottiche": 2,
+   "gemeldet": {
+    "gestuft": true
+   },
+   "kalt": 0,
+   "gesamtLegte": 310
+  }
+ },
+ "bierText": {
+  "siegelzeilen": [
+   "Bauabnahme der Zunft: Kellergärung im Felsenkeller. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ],
+  "schilder": [
+   "wie immer",
+   "ohne Ausgabe",
+   "läuft",
+   "das Siegel liegt darauf",
+   "läuft"
+  ],
+  "gewaehlt": [
+   "Mit Hafer und Wicke gestreckt",
+   "Kellergärung im Felsenkeller"
+  ],
+  "kessel": "DER SUD · 1613 Mit Hafer und Wicke gestreckt · Kellergärung im Felsenkeller höchstens Schankbier Gärkeller 16/16 Fass Stellhefe 62 % · Fass ×1,01 Stellhefe aus dem Gärbottich nehmen · +8 · ohne Fass Junges Fass anstechen · +14 · 1 Fass Rein nach dem Gebot lässt Märzenbier zu Mit Weizen gestreckt lässt Märzenbier zu",
+  "brett": "DAS SUDHAUS · 1613 Die offene Pfanne unter dem Kamin Rein oder gestreckt — und warm oder kalt? Das Gebot von 1516 nimmt dem Brauer den Weizen und gibt ihn dem Bäcker. Es ist Rohstoffpolitik, kein Gütesiegel. Und die kalte Kellergärung dauert Wochen statt Tage — dafür übersteht ihr Bier als einziges den Sommer. DIE SCHÜTTUNG Was kommt in den Sud? Gerste ist teuer, Weizen ist verboten, Hafer ist bil"
+ },
+ "sudtaten": [
+  {
+   "n": 38,
+   "jahr": 1601,
+   "woche": 9,
+   "zug": "sud:gaerung:keller",
+   "preis": -260,
+   "kasseVor": 492,
+   "kasseNach": 232,
+   "verfahrenNach": {
+    "schuettung": "hafer",
+    "gaerung": "keller"
+   },
+   "festNach": {
+    "gaerung:keller": true
+   },
+   "gueteVor": 90,
+   "gueteNach": 90
+  }
+ ],
+ "leiterRoh": [
+  {
+   "jahr": 1600,
+   "kasse": 640,
+   "billigst": 210,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 3.0476190476190474,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Zuvorkommen Mühlschenke",
+   "zugPreis": 170,
+   "zugArt": "umkaempft",
+   "zugVerh": 3.764705882352941,
+   "zugFest": true
+  },
+  {
+   "jahr": 1601,
+   "kasse": 280,
+   "billigst": 180,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.5555555555555556,
+   "vorgriff": 0,
+   "rueckstand": 55,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 216,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.2962962962962963,
+   "zugFest": true
+  },
+  {
+   "jahr": 1602,
+   "kasse": 280,
+   "billigst": 180,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.5555555555555556,
+   "vorgriff": 42,
+   "rueckstand": 176,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 294,
+   "zugArt": "umkaempft",
+   "zugVerh": 0.9523809523809523,
+   "zugFest": true
+  },
+  {
+   "jahr": 1603,
+   "kasse": 280,
+   "billigst": 180,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.5555555555555556,
+   "vorgriff": 0,
+   "rueckstand": 327,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 162,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.728395061728395,
+   "zugFest": true
+  },
+  {
+   "jahr": 1604,
+   "kasse": 340,
+   "billigst": 180,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.8888888888888888,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 189,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.7989417989417988,
+   "zugFest": true
+  },
+  {
+   "jahr": 1605,
+   "kasse": 280,
+   "billigst": 180,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.5555555555555556,
+   "vorgriff": 0,
+   "rueckstand": 8,
+   "zugWas": "Zuvorkommen Schenke am Tor",
+   "zugPreis": 76,
+   "zugArt": "umkaempft",
+   "zugVerh": 3.6842105263157894,
+   "zugFest": true
+  },
+  {
+   "jahr": 1606,
+   "kasse": 481,
+   "billigst": 260,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.85,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 126,
+   "zugArt": "umkaempft",
+   "zugVerh": 3.8174603174603177,
+   "zugFest": true
+  },
+  {
+   "jahr": 1607,
+   "kasse": 280,
+   "billigst": 180,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.5555555555555556,
+   "vorgriff": 0,
+   "rueckstand": 212,
+   "zugWas": "Ablösung Brückenwirt",
+   "zugPreis": 297,
+   "zugArt": "umkaempft",
+   "zugVerh": 0.9427609427609428,
+   "zugFest": true
+  },
+  {
+   "jahr": 1608,
+   "kasse": 280,
+   "billigst": 210,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.3333333333333333,
+   "vorgriff": 0,
+   "rueckstand": 106,
+   "zugWas": "Zuvorkommen Fährhaus am Fluss",
+   "zugPreis": 57,
+   "zugArt": "umkaempft",
+   "zugVerh": 4.912280701754386,
+   "zugFest": true
+  },
+  {
+   "jahr": 1609,
+   "kasse": 280,
+   "billigst": 190,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.4736842105263157,
+   "vorgriff": 0,
+   "rueckstand": 271,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 126,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.2222222222222223,
+   "zugFest": true
+  },
+  {
+   "jahr": 1610,
+   "kasse": 280,
+   "billigst": 200,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.4,
+   "vorgriff": 0,
+   "rueckstand": 101,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 252,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.1111111111111112,
+   "zugFest": true
+  },
+  {
+   "jahr": 1611,
+   "kasse": 280,
+   "billigst": 200,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.4,
+   "vorgriff": 0,
+   "rueckstand": 386,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 252,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.1111111111111112,
+   "zugFest": true
+  },
+  {
+   "jahr": 1612,
+   "kasse": 280,
+   "billigst": 220,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.2727272727272727,
+   "vorgriff": 0,
+   "rueckstand": 170,
+   "zugWas": "Ablösung Mühlschenke",
+   "zugPreis": 189,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.4814814814814814,
+   "zugFest": true
+  },
+  {
+   "jahr": 1613,
+   "kasse": 280,
+   "billigst": 220,
+   "name": "Die Darre überm Malzboden",
+   "verhaeltnis": 1.2727272727272727,
+   "vorgriff": 0,
+   "rueckstand": 159,
+   "zugWas": "Ablösung Mühlschenke",
+   "zugPreis": 189,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.4814814814814814,
+   "zugFest": true
+  }
+ ],
+ "jahre": [
+  {
+   "jahr": 1600,
+   "kasseMichaeli": 360
+  },
+  {
+   "jahr": 1601,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1602,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1603,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1604,
+   "kasseMichaeli": 340
+  },
+  {
+   "jahr": 1605,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1606,
+   "kasseMichaeli": 481
+  },
+  {
+   "jahr": 1607,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1608,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1609,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1610,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1611,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1612,
+   "kasseMichaeli": 280
+  },
+  {
+   "jahr": 1613,
+   "kasseMichaeli": 280
+  }
+ ],
+ "klemmer": [
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 758.5234375,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 609
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 634,
+     "w": 265,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e2-reich-0.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 694.5,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 649
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 635,
+     "w": 265,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e2-reich-1.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 694.5,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 649
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 635,
+     "w": 265,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e2-reich-2.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 694.5,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 649
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 635,
+     "w": 265,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e2-reich-3.png"
+  }
+ ]
+}

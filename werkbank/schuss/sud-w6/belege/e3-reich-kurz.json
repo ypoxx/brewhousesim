@@ -1,0 +1,532 @@
+{
+ "epoche": 3,
+ "stil": "reich",
+ "wochen": 400,
+ "fehler": [],
+ "abgebrochen": null,
+ "kasseMin": 209,
+ "kasseMax": 18682,
+ "schluss": {
+  "jahr": 1897,
+  "woche": 11,
+  "kasse": 5438,
+  "lage": 0,
+  "amtszeit": 8,
+  "sud": {
+   "verfahren": {
+    "kaelte": "maschine",
+    "hefe": "reinzucht"
+   },
+   "fest": {
+    "hefe:reinzucht": true,
+    "kaelte:maschine": true
+   },
+   "guete": 98,
+   "zusatz": 200,
+   "gesamtSude": 240,
+   "gesamtFass": 4043,
+   "jahrFehl": 0,
+   "jahrAnzeige": 0,
+   "gestuftGesamt": 0,
+   "bottiche": 6,
+   "gemeldet": {},
+   "kalt": 0,
+   "gesamtLegte": 187
+  }
+ },
+ "bierText": {
+  "siegelzeilen": [
+   "Aufstellung abgenommen: Lindesche Kältemaschine. Diese Frage ist entschieden, für dieses Haus und diese Zeit.",
+   "Reinzucht angestellt: Reinzuchthefe nach Hansen. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ],
+  "schilder": [
+   "das Siegel liegt darauf",
+   "das Siegel liegt darauf",
+   "läuft",
+   "das Siegel liegt darauf",
+   "läuft"
+  ],
+  "gewaehlt": [
+   "Lindesche Kältemaschine",
+   "Reinzuchthefe nach Hansen"
+  ],
+  "kessel": "DER SUD · 1897Lindesche Kältemaschine · Reinzuchthefe nach Hansenhöchstens ExportbierGärkeller 216/372 hlFührung 98 % · Fass ×1,19Hefe im Gärbottich abernten · +8 · ohne FassJunges Lagerfass anstechen · +14 · 1,5 hlGärbottich aufstellen · +60 hl−7.055 M",
+  "brett": "DAS SUDWERK · 1897 Die Sudpfanne unter dem Kupferhelm Eis oder Maschine? Untergäriges Lagerbier braucht Kälte, und Kälte kam bis eben aus dem Fluss. Seit Linde 1873 kommt sie aus der Maschine — wer sie hat, gärt auch im Sommer. Und seit Hansen 1883 ist Hefe kein Glücksfall mehr. DIE KÄLTE Woher kommt die Kälte? Das Natureis kommt aus dem Winter und ist im September alle. Die Maschine kommt aus der"
+ },
+ "sudtaten": [
+  {
+   "n": 0,
+   "jahr": 1884,
+   "woche": 1,
+   "zug": "sud:hefe:reinzucht",
+   "preis": -3400,
+   "kasseVor": 11150,
+   "kasseNach": 7750,
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "festNach": {
+    "hefe:reinzucht": true
+   },
+   "gueteVor": 70,
+   "gueteNach": 70
+  },
+  {
+   "n": 2,
+   "jahr": 1884,
+   "woche": 3,
+   "zug": "sud:gaerraum",
+   "preis": -1900,
+   "kasseVor": 6658,
+   "kasseNach": 4758,
+   "plaetzeVor": 90,
+   "plaetzeNach": 90
+  },
+  {
+   "n": 81,
+   "jahr": 1886,
+   "woche": 22,
+   "zug": "sud:gaerraum",
+   "preis": -2470,
+   "kasseVor": 6816,
+   "kasseNach": 4346,
+   "plaetzeVor": 90,
+   "plaetzeNach": 90
+  },
+  {
+   "n": 203,
+   "jahr": 1890,
+   "woche": 24,
+   "zug": "sud:gaerraum",
+   "preis": -3211,
+   "kasseVor": 8149,
+   "kasseNach": 4938,
+   "plaetzeVor": 90,
+   "plaetzeNach": 90
+  },
+  {
+   "n": 263,
+   "jahr": 1892,
+   "woche": 24,
+   "zug": "sud:gaerraum",
+   "preis": -4174,
+   "kasseVor": 10775,
+   "kasseNach": 6601,
+   "plaetzeVor": 90,
+   "plaetzeNach": 90
+  },
+  {
+   "n": 327,
+   "jahr": 1894,
+   "woche": 28,
+   "zug": "sud:gaerraum",
+   "preis": -5427,
+   "kasseVor": 13847,
+   "kasseNach": 8420,
+   "plaetzeVor": 90,
+   "plaetzeNach": 90
+  },
+  {
+   "n": 360,
+   "jahr": 1896,
+   "woche": 1,
+   "zug": "sud:kaelte:maschine",
+   "preis": -9800,
+   "kasseVor": 18682,
+   "kasseNach": 8882,
+   "verfahrenNach": {
+    "kaelte": "maschine",
+    "hefe": "reinzucht"
+   },
+   "festNach": {
+    "hefe:reinzucht": true,
+    "kaelte:maschine": true
+   },
+   "gueteVor": 100,
+   "gueteNach": 100
+  }
+ ],
+ "leiterRoh": [
+  {
+   "jahr": 1884,
+   "kasse": 14250,
+   "billigst": 3100,
+   "name": "Ein Braumeister aus Weihenstephan",
+   "verhaeltnis": 4.596774193548387,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Ausschank am Markt",
+   "zugPreis": 1706,
+   "zugArt": "umkaempft",
+   "zugVerh": 8.352872215709262,
+   "zugFest": true
+  },
+  {
+   "jahr": 1885,
+   "kasse": 6237,
+   "billigst": 1400,
+   "name": "Das Dach der Krone",
+   "verhaeltnis": 4.455,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Ausschank am Markt",
+   "zugPreis": 1570,
+   "zugArt": "umkaempft",
+   "zugVerh": 3.972611464968153,
+   "zugFest": true
+  },
+  {
+   "jahr": 1886,
+   "kasse": 6119,
+   "billigst": 1400,
+   "name": "Das Dach der Krone",
+   "verhaeltnis": 4.3707142857142856,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Ausschank am Markt",
+   "zugPreis": 1444,
+   "zugArt": "umkaempft",
+   "zugVerh": 4.240997229916897,
+   "zugFest": true
+  },
+  {
+   "jahr": 1887,
+   "kasse": 4271,
+   "billigst": 3200,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.3346875,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Ausschank am Markt",
+   "zugPreis": 2618,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.6352177234530176,
+   "zugFest": true
+  },
+  {
+   "jahr": 1888,
+   "kasse": 5599,
+   "billigst": 3400,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.646764705882353,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 2968,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.886455525606469,
+   "zugFest": true
+  },
+  {
+   "jahr": 1889,
+   "kasse": 4200,
+   "billigst": 3200,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.3125,
+   "vorgriff": 0,
+   "rueckstand": 1044,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 3319,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.2657426935824043,
+   "zugFest": true
+  },
+  {
+   "jahr": 1890,
+   "kasse": 4325,
+   "billigst": 2000,
+   "name": "Die Darre mit Warmluft",
+   "verhaeltnis": 2.1625,
+   "vorgriff": 0,
+   "rueckstand": 821,
+   "zugWas": "Ablösung Schenke am Tor",
+   "zugPreis": 3053,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.4169669177857844,
+   "zugFest": true
+  },
+  {
+   "jahr": 1891,
+   "kasse": 5127,
+   "billigst": 4100,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.2504878048780488,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 5019,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.0231121737397888,
+   "zugFest": true
+  },
+  {
+   "jahr": 1892,
+   "kasse": 10977,
+   "billigst": 6100,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.7995081967213116,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Eintragen Zum Goldenen Ochsen",
+   "zugPreis": 2261,
+   "zugArt": "bindung",
+   "zugVerh": 4.857585139318886,
+   "zugFest": true
+  },
+  {
+   "jahr": 1893,
+   "kasse": 8145,
+   "billigst": 5500,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.480909090909091,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Eintragen Zum Goldenen Ochsen",
+   "zugPreis": 2394,
+   "zugArt": "bindung",
+   "zugVerh": 3.4030910609857976,
+   "zugFest": true
+  },
+  {
+   "jahr": 1894,
+   "kasse": 13344,
+   "billigst": 7300,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.827945205479452,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Eintragen Zum Goldenen Ochsen",
+   "zugPreis": 2394,
+   "zugArt": "bindung",
+   "zugVerh": 5.574770258980785,
+   "zugFest": true
+  },
+  {
+   "jahr": 1895,
+   "kasse": 11994,
+   "billigst": 7200,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.6658333333333333,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Eintragen Schenke am Tor",
+   "zugPreis": 2085,
+   "zugArt": "bindung",
+   "zugVerh": 5.753477218225419,
+   "zugFest": true
+  },
+  {
+   "jahr": 1896,
+   "kasse": 18677,
+   "billigst": 9700,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.9254639175257733,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Eintragen Zum Goldenen Ochsen",
+   "zugPreis": 3648,
+   "zugArt": "bindung",
+   "zugVerh": 5.121162280701754,
+   "zugFest": true
+  },
+  {
+   "jahr": 1897,
+   "kasse": 9232,
+   "billigst": 6800,
+   "name": "Der Kontrakt mit der Handelsmälzerei",
+   "verhaeltnis": 1.3576470588235294,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Eintragen Zum Goldenen Ochsen",
+   "zugPreis": 2527,
+   "zugArt": "bindung",
+   "zugVerh": 3.6549267906608627,
+   "zugFest": true
+  }
+ ],
+ "jahre": [
+  {
+   "jahr": 1884,
+   "kasseMichaeli": 11150
+  },
+  {
+   "jahr": 1885,
+   "kasseMichaeli": 6237
+  },
+  {
+   "jahr": 1886,
+   "kasseMichaeli": 4724
+  },
+  {
+   "jahr": 1887,
+   "kasseMichaeli": 4281
+  },
+  {
+   "jahr": 1888,
+   "kasseMichaeli": 5599
+  },
+  {
+   "jahr": 1889,
+   "kasseMichaeli": 4201
+  },
+  {
+   "jahr": 1890,
+   "kasseMichaeli": 4326
+  },
+  {
+   "jahr": 1891,
+   "kasseMichaeli": 5135
+  },
+  {
+   "jahr": 1892,
+   "kasseMichaeli": 10983
+  },
+  {
+   "jahr": 1893,
+   "kasseMichaeli": 8147
+  },
+  {
+   "jahr": 1894,
+   "kasseMichaeli": 13346
+  },
+  {
+   "jahr": 1895,
+   "kasseMichaeli": 11996
+  },
+  {
+   "jahr": 1896,
+   "kasseMichaeli": 18682
+  },
+  {
+   "jahr": 1897,
+   "kasseMichaeli": 9236
+  }
+ ],
+ "klemmer": [
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 744.28125,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 594
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 606,
+     "w": 250,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e3-reich-0.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 687.8359375,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 649
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 633,
+     "w": 250,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e3-reich-1.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 687.8359375,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 682
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 666,
+     "w": 250,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e3-reich-2.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 687.8359375,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 706
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 690,
+     "w": 250,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e3-reich-3.png"
+  }
+ ]
+}

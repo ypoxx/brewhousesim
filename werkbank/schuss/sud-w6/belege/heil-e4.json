@@ -1,0 +1,451 @@
+{
+ "epoche": 4,
+ "hafen": "8917",
+ "messungen": [
+  {
+   "marke": "geladen, Sudbrett aufgeschlagen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1970,
+   "woche": 1,
+   "ueberlaufGesamt": 31,
+   "ueberlaufSud": 7,
+   "beispiele": [
+    {
+     "klasse": "stadt-schildwerk amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 2,
+     "w": 144,
+     "h": 76,
+     "ov": "visible/visible",
+     "text": "BRAUHAUS ZUM ANKER"
+    },
+    {
+     "klasse": "gg-feld",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 13,
+     "dy": 0,
+     "w": 72,
+     "h": 23,
+     "ov": "visible/visible",
+     "text": "1.193.110 DM KASSE"
+    },
+    {
+     "klasse": "",
+     "tag": "B",
+     "zug": null,
+     "dx": 13,
+     "dy": 0,
+     "w": 72,
+     "h": 13,
+     "ov": "visible/visible",
+     "text": "1.193.110 DM"
+    },
+    {
+     "klasse": "gg-feld",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 13,
+     "dy": 0,
+     "w": 72,
+     "h": 23,
+     "ov": "visible/visible",
+     "text": "4.200.000 DM KASSE"
+    },
+    {
+     "klasse": "",
+     "tag": "B",
+     "zug": null,
+     "dx": 13,
+     "dy": 0,
+     "w": 72,
+     "h": 13,
+     "ov": "visible/visible",
+     "text": "4.200.000 DM"
+    },
+    {
+     "klasse": "was",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 33,
+     "dy": 0,
+     "w": 520,
+     "h": 14,
+     "ov": "hidden/hidden",
+     "text": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 11.491 DM. Ablösen "
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bahnhof",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BHF"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht "
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ei"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das ne"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 81,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als an"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Er"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei H"
+    }
+   ]
+  },
+  {
+   "marke": "nach 30 gespielten Wochen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1971,
+   "woche": 1,
+   "ueberlaufGesamt": 32,
+   "ueberlaufSud": 7,
+   "beispiele": [
+    {
+     "klasse": "stadt-schildwerk amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 2,
+     "w": 144,
+     "h": 76,
+     "ov": "visible/visible",
+     "text": "BRAUHAUS ZUM ANKER"
+    },
+    {
+     "klasse": "gg-hof amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 16,
+     "dy": 0,
+     "w": 238,
+     "h": 37,
+     "ov": "visible/visible",
+     "text": "Vorsprung: 2 Dinge · wirbt 2 Wochen kürzer"
+    },
+    {
+     "klasse": "gg-feld",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 13,
+     "dy": 0,
+     "w": 72,
+     "h": 23,
+     "ov": "visible/visible",
+     "text": "2.882.060 DM KASSE"
+    },
+    {
+     "klasse": "",
+     "tag": "B",
+     "zug": null,
+     "dx": 13,
+     "dy": 0,
+     "w": 72,
+     "h": 13,
+     "ov": "visible/visible",
+     "text": "2.882.060 DM"
+    },
+    {
+     "klasse": "was",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 35,
+     "dy": 0,
+     "w": 520,
+     "h": 14,
+     "ov": "hidden/hidden",
+     "text": "Der Adler erhöht den Werbekostenzuschuss beim Gasthof Lindenhof um 11.449 DM. Ab"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 11,
+     "dy": 19,
+     "w": 10,
+     "h": 10,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bahnhof",
+     "dx": 11,
+     "dy": 19,
+     "w": 10,
+     "h": 10,
+     "ov": "visible/visible",
+     "text": "BHF"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ei"
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Handel nicht "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderruflich — ei"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 27,
+     "w": 142,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 ist das ne"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 13,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Export auf die"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 81,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nichts als an"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Er"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 103,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, und drei H"
+    }
+   ]
+  }
+ ],
+ "fehler": []
+}

@@ -1,0 +1,429 @@
+{
+ "epoche": 1,
+ "hafen": "8917",
+ "messungen": [
+  {
+   "marke": "geladen, Sudbrett aufgeschlagen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1350,
+   "woche": 1,
+   "ueberlaufGesamt": 29,
+   "ueberlaufSud": 6,
+   "beispiele": [
+    {
+     "klasse": "gg-hof amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 16,
+     "dy": 0,
+     "w": 238,
+     "h": 158,
+     "ov": "visible/visible",
+     "text": "Vorsprung: 2 Dinge · wirbt 2 Wochen kürzer"
+    },
+    {
+     "klasse": "was",
+     "tag": "SPAN",
+     "zug": null,
+     "dx": 632,
+     "dy": 0,
+     "w": 520,
+     "h": 14,
+     "ov": "hidden/hidden",
+     "text": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fa"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:gegner-marktplatz",
+     "dx": 55,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "Adler-Ausschank am Mar"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-fluss",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "FAE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-oben",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OBE"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 108,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr"
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 108,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 40,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das bessere Was"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 108,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in den Ho"
+    }
+   ]
+  },
+  {
+   "marke": "nach 30 gespielten Wochen",
+   "lage": 0,
+   "lageTexte": [],
+   "jahr": 1351,
+   "woche": 1,
+   "ueberlaufGesamt": 30,
+   "ueberlaufSud": 6,
+   "beispiele": [
+    {
+     "klasse": "gg-hof amort",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 16,
+     "dy": 0,
+     "w": 238,
+     "h": 158,
+     "ov": "visible/visible",
+     "text": "Vorsprung: 2 Dinge · wirbt 2 Wochen kürzer"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:gegner-marktplatz",
+     "dx": 55,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "Adler-Ausschank am Mar"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "dx": 6,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "LIN"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OCH"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-muehle",
+     "dx": 9,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "MUE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "BRU"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-fluss",
+     "dx": 7,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "FAE"
+    },
+    {
+     "klasse": "knopf stadt-pflock ruht amort",
+     "tag": "BUTTON",
+     "zug": "stadt:marke:fuhre-bruecke-oben",
+     "dx": 8,
+     "dy": 19,
+     "w": 17,
+     "h": 17,
+     "ov": "visible/visible",
+     "text": "OBE"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 108,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 40,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand"
+    }
+   ],
+   "sudBeispiele": [
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 67,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so "
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 108,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 40,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 54,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das bessere Was"
+    },
+    {
+     "klasse": "sud-kartensatz",
+     "tag": "DIV",
+     "zug": null,
+     "dx": 0,
+     "dy": 108,
+     "w": 143,
+     "h": 41,
+     "ov": "hidden/hidden",
+     "text": "Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in den Ho"
+    }
+   ]
+  }
+ ],
+ "fehler": []
+}

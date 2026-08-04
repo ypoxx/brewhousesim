@@ -1,0 +1,311 @@
+{
+ "epoche": 2,
+ "versuche": [
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "gaerung",
+   "ziel": "sud:gaerung:ober",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Obergärig, warm geführt"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 152.640625,
+    "y": 605.640625,
+    "preis": null,
+    "text": "Obergärig, warm geführt"
+   },
+   "geklickt": false,
+   "vorher": "keller",
+   "nachher": "keller",
+   "festNach": {
+    "gaerung:keller": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "gaerung",
+   "ziel": "sud:zettel-wechsel-frei",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "keller",
+   "nachher": "keller",
+   "festNach": {
+    "gaerung:keller": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   }
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "gaerung",
+   "ziel": "sud:zettel-wechsel-kauf",
+   "fehlt": true
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "gaerung",
+   "ziel": "sud:zettel-wechsel-frei2",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "keller",
+   "nachher": "keller",
+   "festNach": {
+    "gaerung:keller": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "rein",
+    "gaerung": "keller"
+   }
+  },
+  {
+   "weg": "3 Tastatur (Leertaste)",
+   "achse": "gaerung",
+   "vorher": "keller",
+   "nachher": "keller",
+   "zurueck": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "gaerung",
+   "ziel": "sud:gaerung:ober",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "keller",
+   "nachher": "keller",
+   "zurueck": false,
+   "nachEchterMaus": "keller",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "6 Zustand direkt umgeschrieben (Konsole, keine Maus)",
+   "achse": "gaerung",
+   "erg": {
+    "alt": "keller",
+    "gesetzt": "ober"
+   },
+   "vorher": "keller",
+   "nachher": "ober",
+   "zurueck": true
+  }
+ ],
+ "siegel": {
+  "verfahren": {
+   "schuettung": "rein",
+   "gaerung": "keller"
+  },
+  "fest": {
+   "gaerung:keller": true
+  },
+  "gewaehlt": [
+   "Rein nach dem Gebot",
+   "Kellergärung im Felsenkeller"
+  ],
+  "siegelzeilen": [
+   "Bauabnahme der Zunft: Kellergärung im Felsenkeller. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ]
+ },
+ "datenFest": {
+  "schuettung:rein": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "schuettung:weizen": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "schuettung:hafer": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 1,
+   "sperrt": null
+  },
+  "gaerung:ober": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 2,
+   "sperrt": null
+  },
+  "gaerung:keller": {
+   "fest": true,
+   "einmal": false,
+   "preis": 260,
+   "hoechst": 3,
+   "sperrt": null
+  }
+ },
+ "nachSechsWochen": {
+  "verfahren": {
+   "schuettung": "rein",
+   "gaerung": "keller"
+  },
+  "fest": {
+   "gaerung:keller": true
+  },
+  "gewaehlt": [
+   "Rein nach dem Gebot",
+   "Kellergärung im Felsenkeller"
+  ],
+  "siegelzeilen": [
+   "Bauabnahme der Zunft: Kellergärung im Felsenkeller. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ]
+ },
+ "knoepfeNachher": [
+  {
+   "z": "sud:zettel-anstich",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Stellhefe aus dem Gärbottich nehmen · +8 · ohne Fass"
+  },
+  {
+   "z": "sud:zettel-hefe-fass",
+   "a": 1,
+   "s": "1",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Junges Fass anstechen · +14 · 1 Fass"
+  },
+  {
+   "z": "sud:zettel-wechsel-frei",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Mit Weizen gestrecktlässt Märzenbier zu"
+  },
+  {
+   "z": "sud:zettel-wechsel-frei2",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Mit Hafer und Wicke gestrecktnur Schankbier"
+  },
+  {
+   "z": "sud:schuettung:rein",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Rein nach dem Gebot"
+  },
+  {
+   "z": "sud:schuettung:weizen",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Mit Weizen gestreckt"
+  },
+  {
+   "z": "sud:schuettung:hafer",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Mit Hafer und Wicke gestreckt"
+  },
+  {
+   "z": "sud:gaerung:ober",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Obergärig, warm geführt"
+  },
+  {
+   "z": "sud:gaerung:keller",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Kellergärung im Felsenkeller"
+  },
+  {
+   "z": "sud:hefe-fuehren",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Stellhefe aus dem Gärbottich nehmen · +8"
+  },
+  {
+   "z": "sud:anstich-jung",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Junges Fass anstechen · +14"
+  },
+  {
+   "z": "sud:anstich-alt",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Altes Fass anstechen · +6"
+  },
+  {
+   "z": "sud:gaerraum",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": -298,
+   "t": "Gärbottich setzen lassen · +10 Fass −298 fl"
+  }
+ ]
+}

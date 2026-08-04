@@ -1,0 +1,91 @@
+{
+ "epoche": 1,
+ "wochen": 200,
+ "faelle": [
+  {
+   "woche": 61,
+   "geloestNachMs": null,
+   "reihe": [
+    {
+     "ms": 0,
+     "brettKlassen": "sud-brett",
+     "brettMasse": [
+      23,
+      124,
+      902,
+      645
+     ],
+     "sichtbar": true,
+     "knopfTrifft": true,
+     "totMitGrundZugeklappt": 10,
+     "davonSollJa": 6,
+     "brettZu": true,
+     "reiterAuf": true
+    },
+    {
+     "ms": 200,
+     "tot": 10,
+     "sichtbar": true,
+     "trifft": true,
+     "klassen": "sud-brett",
+     "brettZu": true
+    },
+    {
+     "ms": 400,
+     "tot": 10,
+     "sichtbar": true,
+     "trifft": true,
+     "klassen": "sud-brett",
+     "brettZu": true
+    },
+    {
+     "ms": 600,
+     "tot": 10,
+     "sichtbar": true,
+     "trifft": true,
+     "klassen": "sud-brett",
+     "brettZu": true
+    },
+    {
+     "ms": 800,
+     "tot": 10,
+     "sichtbar": true,
+     "trifft": true,
+     "klassen": "sud-brett",
+     "brettZu": true
+    },
+    {
+     "ms": 1000,
+     "tot": 10,
+     "sichtbar": true,
+     "trifft": true,
+     "klassen": "sud-brett",
+     "brettZu": true
+    }
+   ],
+   "nachKlick": {
+    "einKlick": 10,
+    "zweiKlicks": 0,
+    "sichtbarDanach": true,
+    "trifftDanach": true
+   },
+   "bild": "/tmp/sudw6/klemme-e1-0.png",
+   "start": {
+    "brettKlassen": "sud-brett",
+    "brettMasse": [
+     23,
+     124,
+     902,
+     645
+    ],
+    "sichtbar": true,
+    "knopfTrifft": true,
+    "totMitGrundZugeklappt": 10,
+    "davonSollJa": 6,
+    "brettZu": true,
+    "reiterAuf": true
+   }
+  }
+ ],
+ "fehler": []
+}

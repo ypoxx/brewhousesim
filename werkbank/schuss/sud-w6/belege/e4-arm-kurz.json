@@ -1,0 +1,435 @@
+{
+ "epoche": 4,
+ "stil": "arm",
+ "wochen": 400,
+ "fehler": [],
+ "abgebrochen": null,
+ "kasseMin": 304,
+ "kasseMax": 112763,
+ "schluss": {
+  "jahr": 1983,
+  "woche": 11,
+  "kasse": 64110,
+  "lage": 0,
+  "amtszeit": 8,
+  "sud": {
+   "verfahren": {
+    "fuehrung": "erfahrung",
+    "behandlung": "schoenen"
+   },
+   "fest": {},
+   "guete": 92,
+   "zusatz": 0,
+   "gesamtSude": 527,
+   "gesamtFass": 9185,
+   "jahrFehl": 0,
+   "jahrAnzeige": 0,
+   "gestuftGesamt": 0,
+   "bottiche": 0,
+   "gemeldet": {},
+   "kalt": 0,
+   "gesamtLegte": 296
+  }
+ },
+ "bierText": {
+  "siegelzeilen": [],
+  "schilder": [
+   "läuft",
+   "unwiderruflich",
+   "unwiderruflich",
+   "wie immer",
+   "läuft",
+   "einmal zu zahlen",
+   "unwiderruflich"
+  ],
+  "gewaehlt": [
+   "Nach Erfahrung des Braumeisters",
+   "Schönen mit Kieselsol"
+  ],
+  "kessel": "DER SUD · 1983Nach Erfahrung des Braumeisters · Schönen mit Kieselsolhöchstens PilsnerGärkeller 0,0/300 hlStreuung ±8 % · Fass ×1,16Frisches Fass anzapfen · +14 · 1,5 hlÄltestes Fass anzapfen · +6 · 1,5 hlNaturtrüb, unfiltriertnur PilsnerKieselgurfilter−26.000 DMlässt Exportbier zu",
+  "brett": "DAS SUDHAUS · 1983 Das Sudwerk im Schaltraum Wie gleich ist gleich genug? Der Sud muss nicht mehr gut sein, er muss jedes Mal gleich sein. Das ist eine andere Aufgabe: Stammwürze messen, filtrieren, pasteurisieren, rechnen. Was hier zählt, ist nicht der beste Sud, sondern der schlechteste. DIE FÜHRUNG Wonach wird gefahren? Erfahrung ist umsonst und schwankt. Messen kostet und schwankt weniger. Nac"
+ },
+ "sudtaten": [],
+ "leiterRoh": [
+  {
+   "jahr": 1970,
+   "kasse": 86000,
+   "billigst": 25000,
+   "name": "Die Schankanlagen in den Wirtschaften",
+   "verhaeltnis": 3.44,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Brückenwirt",
+   "zugPreis": 38221,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.2500719499751445,
+   "zugFest": true
+  },
+  {
+   "jahr": 1971,
+   "kasse": 50000,
+   "billigst": 26000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 1.9230769230769231,
+   "vorgriff": 0,
+   "rueckstand": 488,
+   "zugWas": "Zuvorkommen Mühlschenke",
+   "zugPreis": 13559,
+   "zugArt": "umkaempft",
+   "zugVerh": 3.845416328637805,
+   "zugFest": true
+  },
+  {
+   "jahr": 1972,
+   "kasse": 58913,
+   "billigst": 26000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 2.2658846153846155,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Zuvorkommen Schenke am Tor",
+   "zugPreis": 25272,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.340732826843938,
+   "zugFest": true
+  },
+  {
+   "jahr": 1973,
+   "kasse": 50000,
+   "billigst": 26000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 1.9230769230769231,
+   "vorgriff": 0,
+   "rueckstand": 14079,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 24300,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.059423868312757,
+   "zugFest": true
+  },
+  {
+   "jahr": 1974,
+   "kasse": 50000,
+   "billigst": 26000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 1.9230769230769231,
+   "vorgriff": 4438,
+   "rueckstand": 12700,
+   "zugWas": "Zuvorkommen Pfarrschenke St. Michael",
+   "zugPreis": 7655,
+   "zugArt": "umkaempft",
+   "zugVerh": 6.531678641410843,
+   "zugFest": true
+  },
+  {
+   "jahr": 1975,
+   "kasse": 50000,
+   "billigst": 26000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 1.9230769230769231,
+   "vorgriff": 21298,
+   "rueckstand": 32789,
+   "zugWas": "Mitbieten Ausschank am Markt",
+   "zugPreis": 18144,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.755731922398589,
+   "zugFest": true
+  },
+  {
+   "jahr": 1976,
+   "kasse": 61878,
+   "billigst": 27000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 2.291777777777778,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Brückenwirt",
+   "zugPreis": 26730,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.3149270482603814,
+   "zugFest": true
+  },
+  {
+   "jahr": 1977,
+   "kasse": 68809,
+   "billigst": 23000,
+   "name": "Das Kellerbier in der Bügelflasche",
+   "verhaeltnis": 2.991695652173913,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Zuvorkommen Gaststätte Neustadt",
+   "zugPreis": 60264,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.141792778441524,
+   "zugFest": true
+  },
+  {
+   "jahr": 1978,
+   "kasse": 56399,
+   "billigst": 27000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 2.0888518518518517,
+   "vorgriff": 0,
+   "rueckstand": 2774,
+   "zugWas": "Ablösung Mühlschenke",
+   "zugPreis": 36450,
+   "zugArt": "umkaempft",
+   "zugVerh": 1.5472976680384087,
+   "zugFest": true
+  },
+  {
+   "jahr": 1979,
+   "kasse": 50000,
+   "billigst": 27000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 1.8518518518518519,
+   "vorgriff": 0,
+   "rueckstand": 14390,
+   "zugWas": "Mitbieten Fährhaus am Fluss",
+   "zugPreis": 21773,
+   "zugArt": "umkaempft",
+   "zugVerh": 2.2964221742525144,
+   "zugFest": true
+  },
+  {
+   "jahr": 1980,
+   "kasse": 58705,
+   "billigst": 31000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 1.893709677419355,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Zuvorkommen Fährhaus am Fluss",
+   "zugPreis": 6561,
+   "zugArt": "umkaempft",
+   "zugVerh": 8.9475689681451,
+   "zugFest": true
+  },
+  {
+   "jahr": 1981,
+   "kasse": 60021,
+   "billigst": 33000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 1.818818181818182,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 14580,
+   "zugArt": "umkaempft",
+   "zugVerh": 4.116666666666666,
+   "zugFest": true
+  },
+  {
+   "jahr": 1982,
+   "kasse": 112763,
+   "billigst": 49000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 2.301285714285714,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Pfarrschenke St. Michael",
+   "zugPreis": 17010,
+   "zugArt": "umkaempft",
+   "zugVerh": 6.629218106995885,
+   "zugFest": true
+  },
+  {
+   "jahr": 1983,
+   "kasse": 82026,
+   "billigst": 41000,
+   "name": "Der eigene Mehrwegkasten",
+   "verhaeltnis": 2.000634146341463,
+   "vorgriff": 0,
+   "rueckstand": 0,
+   "zugWas": "Ablösung Fährhaus am Fluss",
+   "zugPreis": 24300,
+   "zugArt": "umkaempft",
+   "zugVerh": 3.3755555555555556,
+   "zugFest": true
+  }
+ ],
+ "jahre": [
+  {
+   "jahr": 1970,
+   "kasseMichaeli": 61000
+  },
+  {
+   "jahr": 1971,
+   "kasseMichaeli": 52140
+  },
+  {
+   "jahr": 1972,
+   "kasseMichaeli": 59155
+  },
+  {
+   "jahr": 1973,
+   "kasseMichaeli": 50044
+  },
+  {
+   "jahr": 1974,
+   "kasseMichaeli": 50000
+  },
+  {
+   "jahr": 1975,
+   "kasseMichaeli": 50000
+  },
+  {
+   "jahr": 1976,
+   "kasseMichaeli": 61878
+  },
+  {
+   "jahr": 1977,
+   "kasseMichaeli": 68809
+  },
+  {
+   "jahr": 1978,
+   "kasseMichaeli": 56399
+  },
+  {
+   "jahr": 1979,
+   "kasseMichaeli": 50000
+  },
+  {
+   "jahr": 1980,
+   "kasseMichaeli": 58705
+  },
+  {
+   "jahr": 1981,
+   "kasseMichaeli": 60021
+  },
+  {
+   "jahr": 1982,
+   "kasseMichaeli": 112763
+  },
+  {
+   "jahr": 1983,
+   "kasseMichaeli": 82026
+  }
+ ],
+ "klemmer": [
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 760.453125,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 710
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 738,
+     "w": 252,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e4-arm-0.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 786.015625,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 710
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 809,
+     "w": 252,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e4-arm-1.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 744.890625,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 710
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 746,
+     "w": 252,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e4-arm-2.png"
+  },
+  {
+   "reiter": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 744.890625,
+    "y": 887.6875,
+    "preis": null,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   "bef": {
+    "fachKlassen": "fach fach-sud fach-hand-sud",
+    "brettKlassen": "sud-brett",
+    "brettMasse": {
+     "x": 23,
+     "y": 124,
+     "w": 902,
+     "h": 710
+    },
+    "knopfMasse": {
+     "x": 520,
+     "y": 720,
+     "w": 252,
+     "h": 25
+    },
+    "knopfSicht": "visible/0.5",
+    "trefferEl": "SPAN.wort",
+    "reiterKlassen": "knopf stadt-reiter auf"
+   },
+   "bild": "/tmp/sudw6-klemmer-e4-arm-3.png"
+  }
+ ]
+}

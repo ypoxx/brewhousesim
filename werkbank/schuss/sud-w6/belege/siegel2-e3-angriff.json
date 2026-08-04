@@ -1,0 +1,313 @@
+{
+ "epoche": 3,
+ "versuche": [
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "hefe",
+   "ziel": "sud:hefe:betrieb",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Betriebshefe aus dem Bottich"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 152.640625,
+    "y": 608.328125,
+    "preis": null,
+    "text": "Betriebshefe aus dem Bottich"
+   },
+   "geklickt": false,
+   "vorher": "reinzucht",
+   "nachher": "reinzucht",
+   "festNach": {
+    "hefe:reinzucht": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "hefe",
+   "ziel": "sud:zettel-wechsel-frei",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "reinzucht",
+   "nachher": "reinzucht",
+   "festNach": {
+    "hefe:reinzucht": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   }
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "hefe",
+   "ziel": "sud:zettel-wechsel-kauf",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "reinzucht",
+   "nachher": "reinzucht",
+   "festNach": {
+    "hefe:reinzucht": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   }
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "hefe",
+   "ziel": "sud:zettel-wechsel-frei2",
+   "fehlt": true
+  },
+  {
+   "weg": "3 Tastatur (Leertaste)",
+   "achse": "hefe",
+   "vorher": "reinzucht",
+   "nachher": "reinzucht",
+   "zurueck": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "hefe",
+   "ziel": "sud:hefe:betrieb",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "reinzucht",
+   "nachher": "reinzucht",
+   "zurueck": false,
+   "nachEchterMaus": "reinzucht",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "6 Zustand direkt umgeschrieben (Konsole, keine Maus)",
+   "achse": "hefe",
+   "erg": {
+    "alt": "reinzucht",
+    "gesetzt": "betrieb"
+   },
+   "vorher": "reinzucht",
+   "nachher": "betrieb",
+   "zurueck": true
+  }
+ ],
+ "siegel": {
+  "verfahren": {
+   "kaelte": "natureis",
+   "hefe": "reinzucht"
+  },
+  "fest": {
+   "hefe:reinzucht": true
+  },
+  "gewaehlt": [
+   "Natureis aus dem Fluss",
+   "Reinzuchthefe nach Hansen"
+  ],
+  "siegelzeilen": [
+   "Reinzucht angestellt: Reinzuchthefe nach Hansen. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ]
+ },
+ "datenFest": {
+  "kaelte:natureis": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "kaelte:warm": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 1,
+   "sperrt": null
+  },
+  "kaelte:maschine": {
+   "fest": true,
+   "einmal": false,
+   "preis": 9800,
+   "hoechst": 3,
+   "sperrt": [
+    "natureis"
+   ]
+  },
+  "hefe:betrieb": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 2,
+   "sperrt": null
+  },
+  "hefe:reinzucht": {
+   "fest": true,
+   "einmal": false,
+   "preis": 3400,
+   "hoechst": 3,
+   "sperrt": null
+  }
+ },
+ "nachSechsWochen": {
+  "verfahren": {
+   "kaelte": "natureis",
+   "hefe": "reinzucht"
+  },
+  "fest": {
+   "hefe:reinzucht": true
+  },
+  "gewaehlt": [
+   "Natureis aus dem Fluss",
+   "Reinzuchthefe nach Hansen"
+  ],
+  "siegelzeilen": [
+   "Reinzucht angestellt: Reinzuchthefe nach Hansen. Diese Frage ist entschieden, für dieses Haus und diese Zeit."
+  ]
+ },
+ "knoepfeNachher": [
+  {
+   "z": "sud:zettel-anstich",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Hefe im Gärbottich abernten · +8 · ohne Fass"
+  },
+  {
+   "z": "sud:zettel-hefe-fass",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Junges Lagerfass anstechen · +14 · 1,5 hl"
+  },
+  {
+   "z": "sud:zettel-wechsel-frei",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Ohne Kühlung durchgären lassennur Schankbier"
+  },
+  {
+   "z": "sud:zettel-wechsel-kauf",
+   "a": 1,
+   "s": "1",
+   "g": "brett-offen",
+   "h": 0,
+   "p": -9800,
+   "t": "Lindesche Kältemaschine−9.800 Mlässt Exportbier zu"
+  },
+  {
+   "z": "sud:kaelte:natureis",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Natureis aus dem Fluss"
+  },
+  {
+   "z": "sud:kaelte:warm",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Ohne Kühlung durchgären lassen"
+  },
+  {
+   "z": "sud:kaelte:maschine",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": -9800,
+   "t": "Lindesche Kältemaschine −9.800 M"
+  },
+  {
+   "z": "sud:hefe:betrieb",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Betriebshefe aus dem Bottich"
+  },
+  {
+   "z": "sud:hefe:reinzucht",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Reinzuchthefe nach Hansen"
+  },
+  {
+   "z": "sud:hefe-fuehren",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Hefe im Gärbottich abernten · +8"
+  },
+  {
+   "z": "sud:anstich-jung",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Junges Lagerfass anstechen · +14"
+  },
+  {
+   "z": "sud:anstich-alt",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Altes Lagerfass anstechen · +6"
+  },
+  {
+   "z": "sud:gaerraum",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": -3211,
+   "t": "Gärbottich aufstellen · +60 hl −3.211 M"
+  }
+ ]
+}

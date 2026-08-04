@@ -1,0 +1,604 @@
+{
+ "epoche": 4,
+ "versuche": [
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "behandlung",
+   "ziel": "sud:behandlung:natur",
+   "knopf": {
+    "aus": false,
+    "soll": "0",
+    "grund": null,
+    "verdeckt": null,
+    "hit": true,
+    "text": "Naturtrüb, unfiltriert"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 92.8984375,
+    "y": 574.046875,
+    "preis": null,
+    "text": "Naturtrüb, unfiltriert"
+   },
+   "geklickt": true,
+   "vorher": "filter",
+   "nachher": "natur",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": true
+  },
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "behandlung",
+   "ziel": "sud:behandlung:schoenen",
+   "knopf": {
+    "aus": false,
+    "soll": "0",
+    "grund": null,
+    "verdeckt": null,
+    "hit": true,
+    "text": "Schönen mit Kieselsol"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": false,
+    "hit": true,
+    "x": 212.3984375,
+    "y": 574.046875,
+    "preis": null,
+    "text": "Schönen mit Kieselsol"
+   },
+   "geklickt": true,
+   "vorher": "natur",
+   "nachher": "schoenen",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": true
+  },
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "behandlung",
+   "ziel": "sud:behandlung:pasteur",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Tunnelpasteur −74.000 DM"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 452.3984375,
+    "y": 574.8828125,
+    "preis": -74000,
+    "text": "Tunnelpasteur −74.000 DM"
+   },
+   "geklickt": false,
+   "vorher": "schoenen",
+   "nachher": "schoenen",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "behandlung",
+   "ziel": "sud:zettel-wechsel-frei",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "schoenen",
+   "nachher": "schoenen",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   }
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "behandlung",
+   "ziel": "sud:zettel-wechsel-kauf",
+   "fehlt": true
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "behandlung",
+   "ziel": "sud:zettel-wechsel-frei2",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "schoenen",
+   "nachher": "schoenen",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   }
+  },
+  {
+   "weg": "3 Tastatur (Leertaste)",
+   "achse": "behandlung",
+   "vorher": "schoenen",
+   "nachher": "schoenen",
+   "zurueck": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "behandlung",
+   "ziel": "sud:behandlung:natur",
+   "erg": {
+    "warAus": false,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "schoenen",
+   "nachher": "natur",
+   "zurueck": true,
+   "nachEchterMaus": "natur",
+   "zurueckEchteMaus": true
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "behandlung",
+   "ziel": "sud:behandlung:schoenen",
+   "erg": {
+    "warAus": false,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "natur",
+   "nachher": "schoenen",
+   "zurueck": true,
+   "nachEchterMaus": "schoenen",
+   "zurueckEchteMaus": true
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "behandlung",
+   "ziel": "sud:behandlung:pasteur",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "schoenen",
+   "nachher": "schoenen",
+   "zurueck": false,
+   "nachEchterMaus": "schoenen",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "6 Zustand direkt umgeschrieben (Konsole, keine Maus)",
+   "achse": "behandlung",
+   "erg": {
+    "alt": "schoenen",
+    "gesetzt": "natur"
+   },
+   "vorher": "schoenen",
+   "nachher": "natur",
+   "zurueck": true
+  },
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "fuehrung",
+   "ziel": "sud:fuehrung:erfahrung",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Nach Erfahrung des Braumeisters"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 112.4765625,
+    "y": 335.03125,
+    "preis": null,
+    "text": "Nach Erfahrung des Braumeisters"
+   },
+   "geklickt": false,
+   "vorher": "labor",
+   "nachher": "labor",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "1 Maus auf Geschwisterkarte",
+   "achse": "fuehrung",
+   "ziel": "sud:fuehrung:rechner",
+   "knopf": {
+    "aus": true,
+    "soll": "1",
+    "grund": "spiel",
+    "verdeckt": null,
+    "hit": true,
+    "text": "Prozessrechner am Sudwerk −118.000 DM"
+   },
+   "lage": {
+    "sichtbar": true,
+    "aus": true,
+    "hit": true,
+    "x": 432.7890625,
+    "y": 344,
+    "preis": -118000,
+    "text": "Prozessrechner am Sudwerk −118.000 DM"
+   },
+   "geklickt": false,
+   "vorher": "labor",
+   "nachher": "labor",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": false
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "fuehrung",
+   "ziel": "sud:zettel-wechsel-frei",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "labor",
+   "nachher": "labor",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   }
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "fuehrung",
+   "ziel": "sud:zettel-wechsel-kauf",
+   "fehlt": true
+  },
+  {
+   "weg": "2 Kesselzettel",
+   "achse": "fuehrung",
+   "ziel": "sud:zettel-wechsel-frei2",
+   "lage": {
+    "sichtbar": false,
+    "aus": true,
+    "hit": false
+   },
+   "geklickt": false,
+   "vorher": "labor",
+   "nachher": "labor",
+   "festNach": {
+    "behandlung:filter": true,
+    "fuehrung:labor": true
+   },
+   "zurueck": false,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   }
+  },
+  {
+   "weg": "3 Tastatur (Leertaste)",
+   "achse": "fuehrung",
+   "vorher": "labor",
+   "nachher": "labor",
+   "zurueck": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "fuehrung",
+   "ziel": "sud:fuehrung:erfahrung",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "labor",
+   "nachher": "labor",
+   "zurueck": false,
+   "nachEchterMaus": "labor",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "4 entsperrt + synthetischer Klick",
+   "achse": "fuehrung",
+   "ziel": "sud:fuehrung:rechner",
+   "erg": {
+    "warAus": true,
+    "a": "el.click() gelaufen",
+    "b": "MouseEvent gelaufen"
+   },
+   "vorher": "labor",
+   "nachher": "labor",
+   "zurueck": false,
+   "nachEchterMaus": "labor",
+   "zurueckEchteMaus": false
+  },
+  {
+   "weg": "6 Zustand direkt umgeschrieben (Konsole, keine Maus)",
+   "achse": "fuehrung",
+   "erg": {
+    "alt": "labor",
+    "gesetzt": "erfahrung"
+   },
+   "vorher": "labor",
+   "nachher": "erfahrung",
+   "zurueck": true
+  }
+ ],
+ "siegel": {
+  "verfahren": {
+   "fuehrung": "labor",
+   "behandlung": "filter"
+  },
+  "fest": {
+   "behandlung:filter": true,
+   "fuehrung:labor": true
+  },
+  "gewaehlt": [
+   "Betriebslabor, Stammwürze und Bittereinheiten",
+   "Kieselgurfilter"
+  ],
+  "siegelzeilen": [
+   "Labor eingerichtet: Betriebslabor, Stammwürze und Bittereinheiten. Zurück geht es nicht — nur noch weiter hinauf."
+  ]
+ },
+ "datenFest": {
+  "fuehrung:erfahrung": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 2,
+   "sperrt": null
+  },
+  "fuehrung:labor": {
+   "fest": true,
+   "einmal": false,
+   "preis": 42000,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "fuehrung:rechner": {
+   "fest": true,
+   "einmal": false,
+   "preis": 118000,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "behandlung:natur": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 2,
+   "sperrt": null
+  },
+  "behandlung:schoenen": {
+   "fest": false,
+   "einmal": false,
+   "preis": 0,
+   "hoechst": 2,
+   "sperrt": null
+  },
+  "behandlung:filter": {
+   "fest": false,
+   "einmal": true,
+   "preis": 26000,
+   "hoechst": 3,
+   "sperrt": null
+  },
+  "behandlung:pasteur": {
+   "fest": true,
+   "einmal": false,
+   "preis": 74000,
+   "hoechst": 3,
+   "sperrt": null
+  }
+ },
+ "nachSechsWochen": {
+  "verfahren": {
+   "fuehrung": "labor",
+   "behandlung": "schoenen"
+  },
+  "fest": {
+   "behandlung:filter": true,
+   "fuehrung:labor": true
+  },
+  "gewaehlt": [
+   "Betriebslabor, Stammwürze und Bittereinheiten",
+   "Schönen mit Kieselsol"
+  ],
+  "siegelzeilen": [
+   "Labor eingerichtet: Betriebslabor, Stammwürze und Bittereinheiten. Zurück geht es nicht — nur noch weiter hinauf."
+  ]
+ },
+ "knoepfeNachher": [
+  {
+   "z": "sud:zettel-anstich",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Frisches Fass anzapfen · +14 · 1,5 hl"
+  },
+  {
+   "z": "sud:zettel-hefe-fass",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Ältestes Fass anzapfen · +6 · 1,5 hl"
+  },
+  {
+   "z": "sud:zettel-wechsel-frei",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Naturtrüb, unfiltriertnur Pilsner"
+  },
+  {
+   "z": "sud:zettel-wechsel-frei2",
+   "a": 1,
+   "s": "0",
+   "g": "brett-offen",
+   "h": 0,
+   "p": 0,
+   "t": "Kieselgurfilterlässt Exportbier zu"
+  },
+  {
+   "z": "sud:fuehrung:erfahrung",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Nach Erfahrung des Braumeisters"
+  },
+  {
+   "z": "sud:fuehrung:labor",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Betriebslabor, Stammwürze und Bittereinheiten"
+  },
+  {
+   "z": "sud:fuehrung:rechner",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": -118000,
+   "t": "Prozessrechner am Sudwerk −118.000 DM"
+  },
+  {
+   "z": "sud:behandlung:natur",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Naturtrüb, unfiltriert"
+  },
+  {
+   "z": "sud:behandlung:schoenen",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Schönen mit Kieselsol"
+  },
+  {
+   "z": "sud:behandlung:filter",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Kieselgurfilter"
+  },
+  {
+   "z": "sud:behandlung:pasteur",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": -74000,
+   "t": "Tunnelpasteur −74.000 DM"
+  },
+  {
+   "z": "sud:hefe-fuehren",
+   "a": 1,
+   "s": "1",
+   "g": "spiel",
+   "h": 0,
+   "p": 0,
+   "t": "Hefe aus dem Gärtank ziehen · +8"
+  },
+  {
+   "z": "sud:anstich-jung",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Frisches Fass anzapfen · +14"
+  },
+  {
+   "z": "sud:anstich-alt",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": 0,
+   "t": "Ältestes Fass anzapfen · +6"
+  },
+  {
+   "z": "sud:gaerraum",
+   "a": 1,
+   "s": "0",
+   "g": "verdeckt",
+   "h": 0,
+   "p": -24000,
+   "t": "Gärtank bestellen · +270 hl −24.000 DM"
+  }
+ ]
+}
