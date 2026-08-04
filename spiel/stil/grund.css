@@ -14,26 +14,48 @@
    im Spiel als calc(var(--s) * N) steht, hiess das: kleinste Schrift 5,0 px,
    246 von 334 aktiven Knoepfen unter 24x24 px, 1.893 Textknoten unter 12 px.
 
-   Nur EINE Zahl anzuheben geht nicht: --s traegt auch die Bretter, die
-   Tafeln und die Abstaende. Eine Untergrenze von 1,21x kostet bereits
-   messbar Ueberlauf; die 2,42x, die noetig waeren, damit das kleinste
-   Vielfache (N=10) 12 px erreicht, verschieben 35 Dinge ueber den Rand.
+   NUR EINE ZAHL ANZUHEBEN GEHT NICHT, und das ist gemessen. --s traegt auch
+   die Bretter, die Tafeln und jeden Abstand. Damit das kleinste Vielfache
+   (N=10) auf 12 px kaeme, braeuchte es Faktor 2,42 — gemessen bei 1366x768,
+   Epoche 1884, per --s hochgezogen:
 
-   Deshalb ZWEI Masse:
+     Faktor   kleinste   <12px   Ueberlauf   Knopf<24   ueber den Rand
+      1,00      5,0px     474       20         64/87          1
+      1,20      5,7px     452       27         50/87          1
+      1,40      5,7px     368       42         40/87          4
+      1,60      5,7px     262       44         31/86          8
+      2,00      5,7px      85       54         11/87         20
+      2,42      5,7px      80       64          9/88         35
+
+   Der Ueberlauf — auch er ein Rissgrund der Latte — waechst schneller als
+   die Schrift gewinnt, und unter 5,7 px kommt der Weg gar nicht: dort steht
+   DIE FUHRE, die ihrem Unterbaum ein eigenes Bezugspixel gibt und die Formel
+   dafuer nachrechnet statt sie zu lesen (fuhre.js:2460).
+
+   Deshalb ZWEI Masse statt eines — und der Boden bleibt vorerst AUS:
 
      --s0  das reine Buehnenpixel, streng proportional, OHNE Untergrenze.
            Daran haengt alles, was zu einem BILD passen muss: die Platte,
            die Hofbauten, der Rauch. Ein Boden hier wuerde die Bauten von
            ihrer gemalten Flaeche loesen — genau der Fehler, vor dem die
            Bildlatte steht.
-     --s   dasselbe Mass MIT Boden, fuer alles Beschriftete und Bedienbare.
-           Oberhalb von 2296 x 1282 sind beide identisch; die Aufnahme in
-           2752 x 1536, gegen die Latte 1 blind vergleicht, ist Pixel fuer
-           Pixel unveraendert.
+     --s   dasselbe Mass, aber mit einem Boden davor, den jeder anheben kann,
+           ohne die Formel zu suchen. Alles Beschriftete und Bedienbare
+           liest --s.
 
    Ein Stueck, das seinem Unterbaum ein eigenes Bezugspixel gibt (DIE FUHRE
-   tut das in fuhre.js), rechnet NICHT die Formel nach, sondern schreibt
-   calc(<faktor> * var(--s0)) — sonst faellt der Boden unter ihm weg.
+   tut das), rechnet die Formel NICHT nach, sondern schreibt
+   calc(<faktor> * var(--s0)). Nachgerechnet bricht jede Aenderung hier.
+
+   WAS DIE SCHRIFT WIRKLICH BRAUCHT, steht nicht in dieser Datei: jede
+   Schriftregel eines Stuecks braucht einen eigenen Boden,
+       font-size: max(12px, calc(var(--s) * N))
+   Mit allen 354 Schriftregeln so umgeschrieben und dem Knopfboden unten
+   gemessen: kleinste Schrift 12,0 px, 0 Textknoten darunter, 2 von 328
+   Knoepfen unter der Zielflaeche — dafuer 151 abgeschnittene Kaesten statt
+   81 und 31 Dinge ueber dem Rand. Die Kaesten sind der Rest der Arbeit, und
+   er gehoert den Stuecken. Die Auflagen stehen namentlich in
+   werkbank/urteile/welle6-die-lesbarkeit-bau.md.
    =========================================================================== */
 
 :root {
