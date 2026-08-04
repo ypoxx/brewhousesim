@@ -94,7 +94,7 @@ drei Antworten auf die leere Kasse und die Stelle, an der das Spiel dem
 Spieler sagt, womit er sie bezahlt.
 
 **Damit reißt Latte 4 an diesem Stück — in zwei von vier Epochen, bei
-1366×768, auf jedem Bildschirm mit sichtbarer Rollleiste.** Auflage 2.
+1366×768, auf jedem Bildschirm mit sichtbarer Rollleiste.** Auflage 1.
 
 **Und ein Befund über die Messgeräte dieses Laufs**, der über die FUHRE
 hinausgeht: **jede Lesbarkeitszahl, die hier bisher gemessen wurde, ist ohne
@@ -137,7 +137,7 @@ Bewertung, getrennt nach Gewicht:
   Für die Entscheidung „wen belade ich" reicht das; für „wie knapp steht es"
   muss man hovern.
 
-**Eine Auflage folgt daraus trotzdem** (Auflage 1, unten): der Balken trägt
+**Eine Auflage folgt daraus trotzdem** (Auflage 4, unten): der Balken trägt
 keine Zahl und keinen Maßstab. Wer bei 1366×768 nur klickt und nie hovert,
 sieht drei verschieden hohe Striche ohne Bezugsgröße.
 
@@ -167,7 +167,7 @@ die zweite:** die Hälfte der Adressen — und mit ihnen in 1970 vier von fünf
 Bretts nicht im Bild und wird von keiner Zahl angekündigt. Die Kopfzeile
 sagt „wollen 15 · im Keller liegen 4 Fass", nicht „10 Adressen".
 
-Siehe Auflage 2.
+Siehe Auflage 4.
 
 ### 1.4 Der teuerste Fund: der Sudplan zeigt bei 1366×768 ein Drittel von sich
 
@@ -297,7 +297,7 @@ hat in diesem Projekt lange gefehlt.
    `disabled`, und `disabled` heißt hier zweierlei (LAUFENDER-AUFTRAG,
    „`disabled` misst zwei Dinge zugleich"). **Am Bildschirm ist „das Brett
    liegt unter dem Erbeblatt" nicht von „der Keller ist leer" zu
-   unterscheiden.** Auflage 3.
+   unterscheiden.** Kein Auftrag an DIE FUHRE — an die Aufsicht.
 2. **Züge des Gegners geschehen ohne den Spieler** und stehen in der Chronik:
    `Gasthof Lindenhof geht an Brauhaus zum Adler. Gebunden mit Konzession des
    Rats bis 1355.` · `Mühlschenke nimmt nichts mehr.` · `Zum Goldenen Ochsen
@@ -405,7 +405,7 @@ worden.
 Zielbild wählt — und `zielbild/04-1970.jpg` enthält diese Adressliste
 überhaupt nicht; sie ist eigene Erfindung des Bretts. Größere Schrift in
 einem Brett macht das Bild nicht unähnlicher. **Es ist eine Auflage, keine
-Latte** (Auflage 4).
+Latte** (Auflage 3).
 
 **Ein zweiter Fund auf der Leinwand, und der ist unbequemer:** in 1970 sind
 dort **11 von 22 aktiven Knöpfen** 22,6 px hoch, also unter der Zielfläche —
