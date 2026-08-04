@@ -9,6 +9,52 @@ sie in meinen Dateien liegt — und die drei anderen Latten dabei nicht reissen.
 
 ---
 
+## Das Ergebnis in einer Tabelle
+
+Alle vier Epochen, 1366×768, `werkbank/schuss/aufsicht/lesbarkeit.mjs` der
+Aufsicht (unangetastet benutzt), gemessen auf zwei eingefrorenen Ständen
+desselben Commits — und am Ende noch einmal am laufenden Arbeitsbaum auf 8899,
+Ziffer für Ziffer dasselbe:
+
+| Kriterium der vierten Latte | vorher | **nachher** |
+|---|---|---|
+| Textknoten unter 12 px, ganzes Spiel | 1.899 | **1.128** |
+| davon in **DIE FUHRE** | **771** | **0** |
+| kleinste Schrift in DIE FUHRE | **4,3 px** | **12,0 px** |
+| abgeschnittene Kästen, ganzes Spiel | 97 | **92** |
+| davon in **DIE FUHRE** | **5** | **0** |
+| aktive Knöpfe unter 24×24 px | 0 / 334 | 0 / 334 |
+
+**Beide Zahlen sind gefallen** — die zu kleinen Textknoten *und* die
+abgeschnittenen Kästen. Das war der ausdrückliche Auftrag und nicht
+selbstverständlich: die mechanische Umstellung allein hätte die Kästen von 97
+auf 117 getrieben (§4).
+
+Die übrigen 1.128 Knoten liegen in DER SUD (356), DIE STADT (191), DER GEGNER
+(172), DAS ERBE (164), DER NAME (149), Kern (48) und DER PREIS (48) — nicht in
+meinen Dateien.
+
+Die anderen drei Latten:
+
+| | Stand |
+|---|---|
+| **Latte 1, das Bild** | unberührt — E1/E2/E3 Byte für Byte identisch, E4 nachweislich Eigenrauschen (§5) |
+| **Latte 2, die Kennzahl** | einmal von mir gerissen, gefunden, repariert, nachgemessen — kein Schnitt über 0,700, aber 1970 steht auf **+0,699** (§6) |
+| **Latte 3, der Ton** | nicht berührt, keine Datei des KLANG angefasst |
+| Sperrliste, Gewicht | +11 KB CSS-Text, keine neuen Anfragen |
+
+**Abnahme am laufenden Arbeitsbaum (Hafen 8899), jede Messung einzeln durch
+`werkbank/schuss/aufsicht/messfenster.sh`:**
+
+```
+node --check   fuhre.js · fuhre-daten.js · fuhre-zusatz.js     OK
+tor.mjs        E1–E4 OK, lage=0, 105–116 Zuege, 0 Fehler       TOR OFFEN
+spielprobe.mjs E1–E4 OK, je 60 Wochen, 60 Zuege, 0 Fehler      BESTANDEN
+lesbarkeit.mjs 92 Ueberlaeufe · 1128 <12px · 0/334 Knoepfe     (1366x768)
+```
+
+---
+
 ## Der Messstand — zuerst, weil ohne ihn keine Zahl trägt
 
 Drei Builder schreiben gleichzeitig. Das ist keine Vermutung: zwischen meinem
@@ -391,18 +437,53 @@ Der Riss bei **1350 / 12 Braujahre (+0,762) bestand schon vorher** und steht so
 auch in `MESSLATTE.md`; er ist nicht meiner und meine Arbeit verschiebt ihn um
 keine Stelle.
 
-**Der Vorbehalt, und er ist nicht klein:** dieser Satz ist unter **Fremdlast**
-entstanden — DER SUD hat auf derselben Maschine `sudhand.mjs 4 400` gefahren,
-Load average 3,7 bis 4,3. Die Aufsicht hat belegt, dass dieselbe Hand unter
-parallelen Browsern schon abweichende Zahlen geliefert hat. Ein Hinweis darauf
-steht auch in meinen eigenen Zahlen: meine Vorher-Reihe für **1970**
-(+0,427 / +0,379 / +0,455) trifft bei zwölf Jahren die Zahl aus `MESSLATTE.md`
-(+0,427) genau, weicht bei dreizehn und vierzehn aber ab (+0,154 / +0,275).
-1350, 1600 und 1884 stimmen dort auf allen drei Schnitten.
+### 6.4 Der Satz ist wiederholt — durch die Sperre, und er reproduziert sich
 
-→ **Der Satz wird wiederholt, sobald die Maschine ruhig ist**, und die
-Wiederholung ist die Belegzahl. Beide Sätze liegen unter
-`/tmp/fuhre-rho/`.
+Der erste Satz ist unter **Fremdlast** entstanden (DER SUD fuhr daneben
+`sudhand.mjs 4 400`, Load average 3,7 bis 4,3). Die Aufsicht hat das gemeldet
+und dafür `werkbank/schuss/aufsicht/messfenster.sh` eingeführt — eine echte
+Sperre, die immer nur eine Messung auf der Maschine zulässt.
+
+Der Satz ist damit wiederholt worden, **jede Messung ein eigener Aufruf durch
+die Sperre**, hintereinander, in der Reihenfolge der Dringlichkeit
+(1970 zuerst — die einzige Zahl nahe der Latte):
+
+| Epoche | | erster Satz (Fremdlast) | Wiederholung (durch die Sperre) |
+|---|---|---|---|
+| **1970** | vorher | +0,427 / +0,379 / +0,455 | **+0,427 / +0,379 / +0,455** |
+| | nachher | +0,699 / +0,637 / +0,653 | **+0,699 / +0,637 / +0,653** |
+| **1600** | vorher | +0,371 / +0,264 / +0,231 | **+0,371 / +0,264 / +0,231** |
+| | nachher | +0,189 / −0,066 / −0,156 | **+0,189 / −0,066 / −0,156** |
+
+**Ziffer für Ziffer identisch** — dazu dieselbe Kasse (1998–86000 bzw.
+1030–114537, 251–2525 bzw. 169–2851) und dieselbe Kennzahlreihe. Die Hand
+`linie.mjs` mit `RUHE=1` hat unter beiden Bedingungen dieselbe Partie gespielt;
+das ist genau das, was ihr Bau verspricht (*„RUHE=1 liefert unter schwerer Last
+dieselbe Reihe wie WARTE=3 auf der ruhigen Maschine"*), und hier steht es
+nachgemessen.
+
+Für 1350 und 1884 galt schon im ersten Satz das Stärkste, was man messen kann:
+vorher und nachher waren **dieselbe Partie**, Ziffer für Ziffer.
+
+Beide Sätze liegen unter `/tmp/fuhre-rho/` (`last-*` erster Satz,
+`w2-*` Wiederholung durch die Sperre).
+
+### 6.5 Die eine Zahl, die ich hervorheben muss
+
+**1970 steht bei zwölf Braujahren auf +0,699.** Die Latte reißt bei 0,700. Das
+ist ein Tausendstel Abstand, und vorher war dieselbe Zahl +0,427. Sie besteht,
+aber sie besteht knapp, und sie ist durch meine Arbeit dorthin gewandert.
+
+Woher sie kommt, ist gemessen und nicht geraten: bei 1920×1000 zeigt die
+Anschlagtafel mit 12 px Mindestschrift nur noch etwa drei ihrer vier Sorten —
+eine Sortenzeile ist dort 30 px hoch statt 28, und der Kasten dafür ist von
+114 px auf ~100 px geschrumpft, weil Kerbholz, Knappheit und Notsud darüber
+alle gewachsen sind. Die Hand greift dadurch seltener zum letzten Sud
+(`fuhre:tafel-ab:` wählt den letzten der Liste), und das Haus wird am Ende
+reicher (114.537 statt 86.000) statt gleichmäßig.
+
+**Das ist kein Rest, den man wegdiskutieren kann.** Wenn die Aufsicht
+nachmisst, ist das die Zahl, auf die sie sehen sollte.
 
 ---
 
