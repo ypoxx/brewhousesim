@@ -1044,9 +1044,37 @@
      DAS BILD
      ====================================================================== */
 
+  /* ------------------------------------------------------------------------
+     AUFLAGE 4 DES BLINDEN KRITIKERS (Welle 6), und er hat recht: die
+     haeufigste Bierentscheidung des ganzen Spiels — `sud:anstich-jung` gegen
+     `sud:anstich-alt`, in 309 bis 369 von je 400 Wochen offen, in allen vier
+     Epochen — trug auf BEIDEN Knoepfen `data-preis` 0, obwohl beide ein Fass
+     kosten. Fuer eine Zaehlung nach Preisschildern war die Wahl unsichtbar.
+
+     `data-preis` bleibt trotzdem 0, und zwar mit Absicht: der Kern schreibt
+     es als MUENZE (`kern/buehne.js:166` rendert `B.welt.geld(...)`), und
+     dieses Stueck nimmt kein Geld aus der Kasse (WELLE-2 §1, Abgabendeckel
+     §4). Eine Zahl in dieses Feld zu schreiben, die nie abgebucht wird, waere
+     genau der Scheinpreis, den Sperrliste 3 verbietet — nur an einer anderen
+     Karte.
+
+     Also sagt der Knopf, WAS er kostet, in einem eigenen Feld daneben:
+
+       data-preis-art="fass"     bezahlt wird in Bier, nicht in Muenze
+       data-preis-menge="1"      wie viele Fass
+       data-preis-wort="1 Fass"  wie es am Schirm heisst (epochengerecht)
+
+     Dazu steht es im Wort auf dem Knopf, und `B.sud.preise()` gibt beides
+     zusammen heraus, damit ein Zaehler nicht raten muss.
+     ------------------------------------------------------------------------ */
   function knopf(opt) {
     var k = B.knopf(opt);
     k.setAttribute('data-soll-aus', opt.aus ? '1' : '0');
+    if (opt.fass) {
+      k.setAttribute('data-preis-art', 'fass');
+      k.setAttribute('data-preis-menge', String(opt.fass));
+      k.setAttribute('data-preis-wort', B.welt.menge(opt.fass));
+    }
     return k;
   }
 
@@ -1424,17 +1452,21 @@
       aus: !frei || !Z.bottiche.length,
       tu: fuehreHefe
     }));
+    /* Beide Knoepfe kosten ein Fass, und beide sagen es jetzt auch — im Wort
+       und in `data-preis-art` (Auflage 4). */
     reihe.appendChild(knopf({
-      text: (a.jung || 'Jüngstes Fass anbrechen') + ' · +' + (D.guete.anstichJung || 14),
-      zug: 'sud:anstich-jung', klasse: 'sud-tat',
+      text: (a.jung || 'Jüngstes Fass anbrechen') + ' · +' + (D.guete.anstichJung || 14)
+          + ' · ' + B.welt.menge(1),
+      zug: 'sud:anstich-jung', klasse: 'sud-tat', fass: 1,
       titel: a.titel + ' Das jüngste Fass gibt das kräftigste Zeug — und es wäre noch '
            + 'lange zu verkaufen gewesen. Kostet ' + B.welt.menge(1) + '.',
       aus: !frei || !lager,
       tu: function () { anstich(true); }
     }));
     reihe.appendChild(knopf({
-      text: (a.alt || 'Ältestes Fass anbrechen') + ' · +' + (D.guete.anstichAlt || 6),
-      zug: 'sud:anstich-alt', klasse: 'sud-tat',
+      text: (a.alt || 'Ältestes Fass anbrechen') + ' · +' + (D.guete.anstichAlt || 6)
+          + ' · ' + B.welt.menge(1),
+      zug: 'sud:anstich-alt', klasse: 'sud-tat', fass: 1,
       titel: a.titel + ' Das älteste Fass wäre ohnehin bald verdorben — dafür gibt es nur '
            + 'die Hälfte her. Kostet ' + B.welt.menge(1) + '.',
       aus: !frei || !lager,
@@ -2059,6 +2091,67 @@
     }
   }
 
+  /* ------------------------------------------------------------------------
+     WAS DIE STADT MIT DIESEM BRETT VORHAT — ihre eigene Buchfuehrung.
+
+     AUFLAGE 1 DES BLINDEN KRITIKERS (Welle 6), und er hat recht. Die alte
+     Fassung schloss aus zwei Zeichen auf eine Lage:
+
+       Klasse `stadt-zugeklappt` da   -> zu, und diesen Knoten merken
+       Klasse weg, Knoten gemerkt     -> auf
+       Klasse weg, Knoten NICHT gemerkt -> die ALTE Lage weiterschreiben
+
+     Die dritte Zeile war die Klemme. `klappeAuf()` der STADT (stadt.js:526)
+     nimmt die Klasse nur ab, wenn sie DA ist — an einem frisch gezeichneten
+     Brett war sie nie da, also raeumt die STADT dort nichts ab und stempelt
+     auch nichts. Der Merker kommt damit NIE an den neuen Knoten, und die
+     dritte Zeile schreibt ein `true` von einem laengst weggeklappten
+     Vorgaenger endlos fort. Gemessen: in 20 bis 53 von je 400 Wochen stand
+     das Sudbrett offen, vollstaendig im Bild, von der Maus zu treffen — und
+     alle seine Knoepfe abgeschaltet, bis zu 192 Ablesungen davon mit
+     `data-soll-aus="0"`, also gegen den erklaerten Willen des Spiels.
+     Es loeste sich in 8 Sekunden ohne Eingabe nicht und auch nach einem
+     Reiterklick nicht, erst nach zweien: erst der erste bringt die Klasse
+     zurueck, und erst dann kann der zweite sie abnehmen.
+
+     Der Fehler war nicht der Merker, sondern DASS GERATEN WURDE. DIE STADT
+     fuehrt Buch darueber, was offen liegt, und sie gibt es ausdruecklich
+     heraus (`B.stadt.rahmen.lage()`, stadt.js:1576: „Kleiner Lesezugriff
+     fuer die anderen drei Stuecke: steht das schon? Niemand muss dafuer in
+     fremdes DOM sehen."). Also wird gefragt statt geraten. Der Schluessel
+     ist `wer|Klassen ohne stadt-zugeklappt` (stadt.js:494), fuer dieses
+     Brett `sud|sud-brett`.
+
+     Nichts davon wird leiser gemeldet: `data-soll-aus`, `data-aus-grund`
+     und `data-verdeckt` bleiben Wort fuer Wort, wo sie waren. Richtig wird
+     der ZUSTAND, nicht die Auskunft (Sperrliste 2). */
+  function rahmenWill() {
+    try {
+      if (!B.stadt || !B.stadt.rahmen || !B.stadt.rahmen.lage) return null;
+      var l = B.stadt.rahmen.lage();
+      if (!l) return null;
+      var k = Object.keys(l);
+      for (var i = 0; i < k.length; i++) {
+        if (k[i].indexOf('sud|') === 0 && k[i].indexOf('sud-brett') > 0) return l[k[i]];
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  /* Der Gnadenschluss, falls die STADT gar nichts sagt (sie ist beim Laden
+     noch nicht durch ihren ersten Takt, und ein Pruefstand ohne stadt.js
+     sagt nie etwas). Solange gilt weiter die alte Lage — aber NICHT mehr
+     unbegrenzt: nach zwei Takten der STADT (240 ms) plus Rest ist ein Brett
+     ohne Klasse ein offenes Brett. So kann kein Zustand mehr endlos
+     fortgeschrieben werden, auch wenn die STADT einmal ausbleibt. */
+  var GNADE = 700;
+  function nochJung(brett) {
+    var t = +brett.getAttribute('data-sud-frisch') || 0;
+    var jetzt = Date.now();
+    if (!t) { brett.setAttribute('data-sud-frisch', String(jetzt)); return true; }
+    return (jetzt - t) <= GNADE;
+  }
+
   function taktZugeklappt() {
     B.wage('sud.takt', function () {
       var fach = document.getElementById('fach-hand-sud');
@@ -2071,11 +2164,16 @@
            "nichts" heisst hier nicht "offen": die STADT sagt selbst, ein
            Brett liegt beim Laden zu. Wer das verwechselt, schickt den
            Kesselzettel bei jedem Neuzeichnen kurz auf `display:none`, und
-           genau das hat eine Messung unter Last auch getroffen. Bis der
-           Stempel an DIESEM Brett einmal da war, gilt die alte Lage. */
+           genau das hat eine Messung unter Last auch getroffen. Also wird
+           in diesem Wimpernschlag die STADT gefragt — und erst wenn auch
+           sie schweigt, gilt die alte Lage, und die nur auf Frist. */
         var zu = brett.classList.contains('stadt-zugeklappt');
         if (zu) brett.setAttribute('data-sud-gesehen', '1');
-        else if (!brett.hasAttribute('data-sud-gesehen')) zu = Z.brettZu;
+        else if (!brett.hasAttribute('data-sud-gesehen')) {
+          var will = rahmenWill();
+          if (will) zu = (will === 'zu');
+          else zu = Z.brettZu && nochJung(brett);
+        }
         Z.brettZu = zu;
         schalte(brett, Z.brettZu, 'brett-zugeklappt');
       }
