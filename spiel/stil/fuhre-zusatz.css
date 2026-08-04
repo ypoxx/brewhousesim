@@ -968,10 +968,11 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
        Kopf 34 · Budget 48 · Rohstoff 30 · Sorten 136 · Notsud 63 ·
        Kerbholz 65 · Knappheit 51 · Kaufknoepfe 98        = 525 px
 
-     Das sind 198 px mehr, als die Platzordnung hergibt, und die Platzordnung
-     ist nicht meine allein: rechts daneben steht DIE ANSCHLAGTAFEL bei
-     27,4 %, unten der Keller bei 56,2 %, und was ich mir dort nehme, nehme
-     ich einem anderen Fach derselben FUHRE weg, das ebenso voll ist.
+     Das sind 198 px mehr, als die Platzordnung hergibt. Groesser machen laesst
+     sich die Tafel nicht: links steht DIE HAEUSER (bis 26,7 %), rechts der
+     Wagen (ab 51,3 %), unten der Keller (ab 56,2 %) — und der Keller ist mit
+     212 von 228 px selbst voll. Was ich mir dort nehme, nehme ich einem
+     anderen Fach derselben FUHRE weg.
 
      Bisher rollte NUR die Sortenliste (`overflow-y: auto`), und alles andere
      stand auf `flex: 0 0 auto`. Bei 198 px Fehlbetrag heisst das: die
