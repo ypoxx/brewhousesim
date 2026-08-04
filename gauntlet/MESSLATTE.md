@@ -53,6 +53,33 @@ Der vierte Punkt ist der teuerste und deshalb der wichtigste: **Kommt in 1350, 1
 1970 dieselbe Verbliste heraus, ist das Spiel viermal dasselbe Spiel mit anderer
 Typografie** — genau der Vorwurf, an dem hier schon drei Entwurfswellen gescheitert sind.
 
+### Die Laufzeit gehört in die Zahl — nachgetragen am 4. August 2026
+
+Die Kurve wird als ρ (Spearman) über die Braujahre gerechnet, und **ρ hängt
+daran, wie viele Braujahre man zählt**. Vom blinden Kritiker DER PREIS gemessen
+und von der Aufsicht unabhängig nachgestellt, dieselbe Reihe, nur anders
+geschnitten:
+
+| Epoche | 12 Braujahre | 13 | 14 |
+|---|---|---|---|
+| **1350** | **+0,762** | **+0,692** | +0,591 |
+| 1600 | +0,371 | +0,264 | +0,231 |
+| 1884 | +0,168 | +0,346 | +0,393 |
+| 1970 | +0,427 | +0,154 | +0,275 |
+
+**Bei zwölf Braujahren reißt 1350.** Und 1884 läuft in die *andere* Richtung —
+es gibt also keine Laufzeit, die für alle vier die freundlichste wäre; wer eine
+kürt, kürt sie für eine Epoche.
+
+> **Ab jetzt bindend:** Wer ρ nennt, nennt die Laufzeit dazu, und misst über
+> **alle drei Schnitte** (12, 13, 14 Braujahre). Die Latte ist gerissen, sobald
+> **einer** davon über 0,7 liegt. Die 400 Wochen des ersten Messgeräts sind eine
+> Konvention, kein Argument.
+>
+> **Nach dieser Regel ist das Ziel derzeit NICHT erreicht** — 1350 steht bei
+> zwölf Jahren auf +0,762. Das ist strenger als die Meldung „Wellenziel
+> erreicht" vom 3. August, und die Verschärfung ist beabsichtigt.
+
 ## 3 — Der Ton: dreißig Sekunden ohne Bild
 
 > Ein fremdes Ohr — Gemini nimmt Audio entgegen — hört dreißig Sekunden Spielton **ohne
@@ -61,11 +88,54 @@ Typografie** — genau der Vorwurf, an dem hier schon drei Entwurfswellen gesche
 Billig, blind, falsifizierbar. Sie misst genau das, was Musik und Effekte hier leisten
 müssen: dass 1350 nicht klingt wie 1970, obwohl es derselbe Hof ist.
 
+## 4 — Die Lesbarkeit: auf dem Bildschirm, den die Leute wirklich haben
+
+*Aufgenommen am 4. August 2026 auf Nachfrage des Auftraggebers. Bis dahin prüfte
+keine der drei Latten, ob man das Spiel überhaupt lesen und treffen kann —
+„Typografie" kam in diesem Papier genau einmal vor, und zwar als Spott.*
+
+> Gemessen wird bei **1366×768**, nicht auf der Entwurfsleinwand. Keine Schrift
+> unter **12 px**, kein aktiver Knopf unter **24×24 px**, kein abgeschnittener
+> Text. Ein Riss geht zurück an den Builder.
+
+**Warum 1366×768 und nicht die Referenz:** das Spiel ist auf eine Leinwand von
+2752×1536 entworfen, und `--s` in `stil/grund.css:12` skaliert jede Schrift
+proportional dazu herunter. Was im Entwurf 15 px ist, ist auf einem gewöhnlichen
+Notebook 7 px. **Eine Latte, die auf der Entwurfsgröße misst, misst nichts.**
+
+Erste Messung, `werkbank/schuss/aufsicht/lesbarkeit.mjs`, Epoche 1884:
+
+| Fenster | kleinste Schrift | Knöpfe unter 24 px |
+|---|---|---|
+| 2752×1536 *(Entwurf)* | 10,0 px | **1** von 87 |
+| 1920×1080 | 7,0 px | 40 von 87 |
+| 1600×1000 | 5,8 px | 48 von 87 |
+| **1366×768** | **5,0 px** | **64** von 87 |
+| 1280×800 | 4,7 px | 65 von 87 |
+
+Über alle vier Epochen bei 1600×1000: **1.800 Textknoten unter 12 px** (davon
+1.427 unter 10 px), **77 abgeschnittene Kästen**, **189 von 334 aktiven Knöpfen**
+unter der Zielfläche.
+
+**Das ist ein Befund über EINE Zeile, nicht über 349 Regeln.** Kein einziges CSS
+schreibt eine Größe unter 12 px; sie entstehen alle erst beim Zeichnen. Wer hier
+baut, fasst zuerst `--s` an — und misst danach nach, ob die Bilder noch zu ihrer
+Fläche passen.
+
 ## Sperrliste — keine Latte
 
 > Der Braukessel ist eine **offene Pfanne** und keine Destillierblase. Emailschilder gibt es
 > erst ab den 1890ern. Ein Marktanteil wird auf die **eigene** Gesamtmenge bezogen.
 > Ein Fund dieser Art **disqualifiziert** einen Durchgang, gewinnt ihn aber nie.
+>
+> **Neu am 4. August 2026: das Gewicht.** Ein Aufruf lädt derzeit **23 MB** in
+> 85 Anfragen. Über Mobilfunk ist das eine halbe Minute Warten, bevor irgendetwas
+> zu sehen ist. **Obergrenze 8 MB** für den ersten Aufruf; was darüber hinaus
+> nötig ist, wird nachgeladen. Wie die Faktenfunde ist das ein **Veto**, keine
+> Latte — es soll nicht nach unten optimiert werden, es soll nur die
+> Peinlichkeit verhindern. *Nicht* betroffen ist das Tempo: gemessen 16,7 ms
+> Bildzeit im Median in allen vier Epochen, p95 unter 22 ms, also volle sechzig
+> Bilder je Sekunde (`werkbank/schuss/aufsicht/tempo.mjs`).
 
 Bewusst Veto statt Latte: Der Auftraggeber will „fast lehrreich". Eine Faktenlatte würde
 nach oben optimiert und machte aus dem Spiel ein Lehrmittel. Ein Veto verhindert nur die
