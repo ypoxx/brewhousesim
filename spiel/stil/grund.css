@@ -214,16 +214,28 @@ button {
 .knopf:hover { background: linear-gradient(180deg, #fff6e4 0%, #eddcbb 100%); }
 
 /* DAS MINDESTZIEL — vierte Latte: kein aktiver Knopf unter 24 x 24 px.
-   Das ist ein Boden des Skeletts, keine Gestaltung: er steht hier, weil
+   Ein Boden des Skeletts, keine Gestaltung. Er steht hier, weil
    'min-height: calc(var(--s) * 46)' auf 1366x768 nur 22,8 px ergibt und weil
-   jedes Stueck seine eigenen Knopfmasse setzt. Die ID im Selektor gibt der
-   Regel Vorrang vor den Klassenregeln der Stuecke — absichtlich, damit kein
-   Stueck den Boden aus Versehen unterschreitet.
-   Nur die AEUSSERE Marke bekommt den Boden, nicht was in ihr steht. */
-#buehne .knopf,
-#buehne [data-zug] {
-  min-width: 24px;
-  min-height: 24px;
+   jedes Stueck seine Knopfmasse selbst setzt — gemessen waren 246 von 334
+   aktiven Knoepfen unter der Zielflaeche, danach 14.
+
+   WARUM DER MEDIENSCHALTER: eine Regel wie 'min-height: 24px' ERSETZT den
+   Wert des Stuecks, sie hebt ihn nicht an. Auf der Entwurfsleinwand
+   2752x1536 waere das eine Verkleinerung — dort ist calc(var(--s) * 46)
+   volle 46 px. Der Boden gilt deshalb nur UNTERHALB der Entwurfsleinwand,
+   also genau dort, wo er gebraucht wird; die Aufnahme, gegen die Latte 1
+   blind vergleicht, faellt nicht darunter und bleibt unberuehrt.
+   Nachgewiesen: pixelgleiche Aufnahme, siehe Bericht.
+
+   Die ID im Selektor gibt der Regel Vorrang vor den Klassenregeln der
+   Stuecke. Wer sie mit einer eigenen ID-Regel wieder unterbietet, reisst die
+   Latte — DER SUD tut das in sud.css:526 und behaelt 14 Knoepfe unter 24 px. */
+@media (max-width: 2751px), (max-height: 1535px) {
+  #buehne .knopf,
+  #buehne [data-zug] {
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
 
 /* ACHTUNG, gilt fuer ALLE vier Stuecke:

@@ -271,8 +271,43 @@ var SUD_DATEN = {
       wirte: { name: 'WAS BEIM WIRT ANKOMMT',
                satz: 'Gestrecktes Bier führt kein Gasthof, und er merkt es.' },
       achsen: [
+        /* ==============================================================
+           AUFLAGE 2 DES BLINDEN KRITIKERS (Welle 6) — und sie sitzt.
+
+           Gemessen ueber 400 Wochen und beide Haende: `sud:schuettung:*`
+           hatte in 0 von 400 Wochen ueberhaupt ein Preisschild (alle drei
+           Karten kosteten 0), `sud:gaerung:*` in 0 von 400 Wochen zwei
+           Karten zugleich aktiv. Preisschilder DES SUD nebeneinander:
+           0 in 364 von 400 Wochen, 2 in genau EINER. 1600 war damit die
+           einzige Epoche ohne Bierentscheidung mit Preisschild.
+
+           Der Grund war nicht Sparsamkeit, sondern eine Luecke in der
+           eigenen Grammatik. 1350 hat sie schon richtig: eine kostenlose
+           Vorgabe, eine kostenlose HEIMLICHE Abkuerzung, und daneben den
+           BRIEF, der dieselbe Sache legal macht und deshalb Geld kostet
+           (`grut` · `sack` · `brief`). 1600 hatte die ersten beiden und
+           den dritten nicht — Weizen war hier nur zu stehlen, nie zu
+           kaufen.
+
+           `weizenbrief` schliesst die Luecke. Er ist KEIN Scheinpreis
+           (Sperrliste 3): er wird bei der Wahl wirklich abgebucht, wie
+           jede andere Festlegung dieses Stuecks, und er verhaelt sich
+           danach wie der Hopfenbrief von 1350.
+
+           WAS ER HISTORISCH IST — und was er ausdruecklich NICHT ist. Er
+           ist keine Aussage ueber ein landesherrliches Weissbierregal
+           (das lag anderswo und stand einem Buergerhaus nicht offen). Er
+           ist das, was das Brett dieser Epoche ohnehin schon beschreibt:
+           das Korn ist bewirtschaftet, es liegt im Kornhaus der Stadt, und
+           der Rat gibt daraus zu, was er zugeben will. Ein Haus, das eine
+           Zuteilung kauft und in das Kornbuch eintragen laesst, braut
+           dasselbe Bier wie das Haus nebenan — nur kommt keine Bierschau
+           mehr. Bezahlt wird die ZUTEILUNG und das Schweigen der
+           Baeckerzunft, nicht das Recht eines Fuersten.
+           ============================================================== */
         { schluessel: 'schuettung', name: 'DIE SCHÜTTUNG', frage: 'Was kommt in den Sud?',
-          satz: 'Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht.',
+          satz: 'Gerste ist teuer, Weizen ist verboten, Hafer ist billig und schlecht. '
+              + 'Verboten heißt nicht unverkäuflich — es heißt nur, dass es einen Brief kostet.',
           optionen: [
             { k: 'rein', name: 'Rein nach dem Gebot', preis: 0, schild: 'wie immer', hoechst: 3,
               satz: 'Gerste, Hopfen, Wasser. Die Zunft sieht nichts, der Bäcker schweigt.',
@@ -287,7 +322,22 @@ var SUD_DATEN = {
                   + 'gebraut wird, ist Gesindebier — es schlägt als dünnste Sorte aus, und der '
                   + 'Gasthof führt es nicht. In einem schlechten Jahr hat das jedes Haus getan.',
               warnung: 'Die Bierschau kostet das Haus mehr als den Hafer.',
-              wirkung: { haltbar: 0.75, gaer: 0, roh: -4, mehr: 2, risiko: 0.05, anzeige: 0.13 } }
+              wirkung: { haltbar: 0.75, gaer: 0, roh: -4, mehr: 2, risiko: 0.05, anzeige: 0.13 } },
+            /* Die bezahlte Karte steht ans Ende der Reihe, wie in allen drei
+               anderen Epochen: kostenlos zuerst, dann aufsteigend nach Preis
+               (1350 grut·sack·brief, 1884 natureis·warm·maschine, 1970
+               natur·schoenen·filter·pasteur). Wer die Reihe von links liest,
+               liest sie als Leiter. */
+            { k: 'weizenbrief', name: 'Weizen aus dem Kornhaus, mit Brief', preis: 180, fest: true,
+              hoechst: 3,
+              satz: 'Der Rat schreibt dem Haus eine feste Weizenzuteilung ins Kornbuch, und die '
+                  + 'Bäckerzunft setzt ihr Siegel darunter. Dasselbe gestreckte Bier wie beim '
+                  + 'heimlichen Sud — nur kommt keine Schau mehr, das Korn liegt bereit statt '
+                  + 'gesucht zu werden, und es hält ein Stück länger. '
+                  + 'Unwiderruflich — die Zuteilung wird auf das Haus geschrieben, nicht auf den '
+                  + 'Brauer, und aus dem Kornbuch wird nichts gestrichen.',
+              siegel: 'Weizenzuteilung, ins Kornbuch eingetragen',
+              wirkung: { haltbar: 1.2, gaer: 0, roh: -2, mehr: 1, risiko: 0.02, guetepin: 80 } }
           ] },
         { schluessel: 'gaerung', name: 'DIE GÄRUNG', frage: 'Warm oder kalt?',
           satz: 'Warm ist schnell und braucht keinen Bau. Kalt braucht Wochen, Fels und Eis — '
@@ -477,9 +527,38 @@ var SUD_DATEN = {
                   + 'Unwiderruflich — ein Labor wird eingerichtet, nicht gemietet.',
               siegel: 'Labor eingerichtet',
               wirkung: { haltbar: 1.0, gaer: 0, roh: 0, mehr: 0, risiko: 0.01, streuung: 2, guetepin: 84 } },
+            /* ==========================================================
+               AUFLAGE 3 DES BLINDEN KRITIKERS (Welle 6): diese Karte —
+               die teuerste unwiderrufliche des ganzen Spiels — war in
+               800 gemessenen Wochen NIE zugleich aktiv und von der Maus
+               erreichbar. `B.welt.kann` ist schlicht `kasse >= betrag`
+               (kern/welt.js:261); die Kasse stand in 2 von 400 Wochen
+               ueber 118.000 DM, und in keiner davon lag das Brett so,
+               dass man die Karte haette anfassen koennen. Eine Wahl, die
+               eine sorgfaeltige Hand in vierzehn Braujahren nicht einmal
+               ANFASST, ist keine.
+
+               Der Preis bleibt, wo er war. Was fehlte, war die ANRECHNUNG.
+               Ein Prozessrechner von 1970 wird nicht neben ein Labor
+               gestellt, er wird DARAUFGESETZT: Fuehler, Messumformer und
+               Schreiber sind schon da und bezahlt, der Rechner rechnet
+               damit. Wer das Labor hat, zahlt die Differenz — 76.000 DM.
+
+               Damit kostet der Weg ueber die Leiter (42.000 + 76.000)
+               genau so viel wie der Sprung (118.000), und die Ratsche
+               („Zurueck geht es nicht — nur noch weiter hinauf") ist zum
+               ersten Mal ein Angebot und keine Drohung. `labor` bleibt
+               stehen und wird nicht billiger gemacht, indem man etwas
+               abraeumt (Sperrliste 4): `preis` bleibt 118.000, und die
+               Rangfolge des Siegels rechnet weiter mit dieser Zahl —
+               sonst liesse sich vom Rechner zurueck auf das Labor.
+               ========================================================== */
             { k: 'rechner', name: 'Prozessrechner am Sudwerk', preis: 118000, fest: true, hoechst: 3,
+              anrechnung: ['labor'],
               satz: 'Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. '
-                  + '1970 ist das neu, und es kostet, was ein Sudhaus kostet. Unwiderruflich.',
+                  + '1970 ist das neu, und es kostet, was ein Sudhaus kostet. Er wird auf das '
+                  + 'Betriebslabor aufgesetzt: wo dessen Fühler und Schreiber schon hängen, ist '
+                  + 'nur die Differenz zu zahlen. Unwiderruflich.',
               siegel: 'Anlage abgenommen',
               wirkung: { haltbar: 1.05, gaer: -1, roh: 0, mehr: 0, risiko: 0.005, streuung: 0, guetepin: 96 } }
           ] },

@@ -135,6 +135,39 @@
   function bezahlt(a, o) { return !o.preis || Z.fest[a.schluessel + ':' + o.k] === true; }
 
   /* ----------------------------------------------------------------------
+     DIE ANRECHNUNG — was schon im Haus steht, wird nicht zweimal bezahlt.
+
+     AUFLAGE 3 des blinden Kritikers (Welle 6). `sud:fuehrung:rechner`
+     (118.000 DM) war in 800 gemessenen Wochen kein einziges Mal aktiv UND
+     erreichbar. Der Prozessrechner wird auf das Betriebslabor aufgesetzt;
+     wer es hat, zahlt die Differenz.
+
+     WICHTIG, und deshalb an zwei Stellen getrennt gehalten:
+       o.preis            der LISTENPREIS. Er bleibt, was er ist, und nur
+                          mit ihm rechnen `gesiegelt()` und `verdraengt()`.
+                          Sonst waere der Rechner nach der Anrechnung
+                          „billiger" als das Labor und die Ratsche liesse
+                          sich rueckwaerts gehen — genau das, was
+                          Sperrliste 4 verbietet.
+       offenerPreis(a,o)  was JETZT abzubuchen ist. Nur damit rechnen
+                          `kann()`, `zahle()` und das Preisschild am Knopf.
+     ---------------------------------------------------------------------- */
+  function angerechnet(a, o) {
+    if (!o.anrechnung || !o.anrechnung.length) return 0;
+    var s = 0;
+    for (var i = 0; i < a.optionen.length; i++) {
+      var x = a.optionen[i];
+      if (x !== o && x.preis && o.anrechnung.indexOf(x.k) >= 0 && bezahlt(a, x)) s += x.preis;
+    }
+    return s;
+  }
+
+  function offenerPreis(a, o) {
+    if (!o.preis || bezahlt(a, o)) return 0;
+    return Math.max(0, o.preis - angerechnet(a, o));
+  }
+
+  /* ----------------------------------------------------------------------
      DAS SIEGEL — und warum es bis Welle 4 keins war.
 
      Gemessen am Stand vor dieser Runde (werkbank/schuss/sud-w4/siegel.mjs,
@@ -354,7 +387,11 @@
     if (b.art === 'grenze') return Z.kaufNr >= b.wert ? b.zu : null;
     if (b.art === 'kopplung') {
       var a = achseVon(b.achse);
-      if (a && Z.verfahren[b.achse] !== b.option) return b.zu;
+      /* `option` darf eine Antwort sein oder mehrere — 1600 laesst die Lade
+         den Bau sowohl beim reinen Sud abnehmen als auch beim verbrieften
+         (Auflage 2, Welle 6). Eine Zeichenkette bleibt eine Zeichenkette. */
+      var ok = Array.isArray(b.option) ? b.option : [b.option];
+      if (a && ok.indexOf(Z.verfahren[b.achse]) < 0) return b.zu;
     }
     return null;
   }
@@ -964,12 +1001,21 @@
   function waehle(a, o) {
     if (verdraengt(a, o)) return;
     if (o.preis && !bezahlt(a, o)) {
-      if (!B.welt.kann(o.preis)) return;
-      if (!B.welt.zahle(o.preis, 'DER SUD: ' + o.name, 'spieler')) return;
+      /* Gezahlt wird der OFFENE Preis (Listenpreis abzueglich Anrechnung),
+         nicht der Listenpreis. Am Riegel darueber aendert das nichts: er
+         steht vor dieser Zeile und bleibt, wo er ist (Sperrliste 1). */
+      var p = offenerPreis(a, o);
+      var ang = o.preis - p;
+      if (p) {
+        if (!B.welt.kann(p)) return;
+        if (!B.welt.zahle(p, 'DER SUD: ' + o.name, 'spieler')) return;
+      }
       Z.fest[a.schluessel + ':' + o.k] = true;
       B.ton.spiele(o.fest ? 'sud:siegel' : 'sud:kauf', { ort: 'sudhaus' });
       B.welt.schreibe((o.fest ? 'Unwiderruflich festgelegt: ' : 'Angeschafft: ')
-        + o.name + '. ' + o.satz, 'sud');
+        + o.name + '. ' + o.satz
+        + (ang > 0 ? ' Bezahlt ' + B.welt.geld(p) + ' von ' + B.welt.geld(o.preis)
+                   + ' — ' + B.welt.geld(ang) + ' waren schon im Haus.' : ''), 'sud');
     } else {
       B.ton.spiele('sud:umstellen', { ort: 'sudhaus' });
     }
@@ -1140,7 +1186,8 @@
     a.optionen.forEach(function (o) {
       var ist = gewaehlt(a) === o;
       var weg = verdraengt(a, o);
-      var offenPreis = (o.preis && !bezahlt(a, o)) ? o.preis : 0;
+      var offenPreis = offenerPreis(a, o);
+      var angerech = (o.preis && !bezahlt(a, o)) ? (o.preis - offenPreis) : 0;
       var kannNicht = weg || (offenPreis && !B.welt.kann(offenPreis));
 
       var karte = B.el('div', 'sud-karte'
@@ -1160,6 +1207,11 @@
       karte.appendChild(k);
 
       var marke = B.el('div', 'sud-marke');
+      /* Was der Knopf abbucht, steht auf dem Knopf; was er in der Liste
+         kostet, gehoert daneben — sonst liest ein Spieler „−76.000 DM" und
+         glaubt, die teuerste Karte des Spiels sei billiger geworden. */
+      if (angerech > 0) marke.appendChild(B.el('span', 'sud-schild angerechnet',
+        'Liste ' + B.welt.geld(o.preis) + ' · ' + B.welt.geld(angerech) + ' angerechnet'));
       if (weg) marke.appendChild(B.el('span', 'sud-schild weg',
         sieg && sieg !== o ? 'das Siegel liegt darauf' : 'nicht mehr zu haben'));
       else if (ist) marke.appendChild(B.el('span', 'sud-schild ist', 'läuft'));
@@ -1735,7 +1787,7 @@
     achsen().forEach(function (a) {
       a.optionen.forEach(function (o) {
         if (gewaehlt(a) === o || verdraengt(a, o)) return;
-        var p = (o.preis && !bezahlt(a, o)) ? o.preis : 0;
+        var p = offenerPreis(a, o);
         if (p === 0) freie.push({ o: o, a: a, p: 0 });
         else if (!mit || p < mit.p) mit = { o: o, a: a, p: p };
       });

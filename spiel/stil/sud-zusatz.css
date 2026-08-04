@@ -157,3 +157,20 @@
 }
 #buehne[data-epoche="1"] .sud-zrang,
 #buehne[data-epoche="2"] .sud-zrang { color: #e0c894; }
+
+/* Die ANRECHNUNG — Auflage 3 des blinden Kritikers, Welle 6.
+   Der Knopf traegt, was abgebucht wird; dieses Schild traegt daneben, was
+   die Karte in der Liste kostet und was schon im Haus steht. Beides muss
+   nebeneinander lesbar sein, sonst sieht der Spieler die teuerste
+   unwiderrufliche Karte des Spiels ploetzlich billiger werden und weiss
+   nicht, warum. Gestrichelt wie `weg`, aber in der Farbe des Siegels: es
+   ist keine Sperre, es ist eine Gutschrift. */
+.sud-schild.angerechnet {
+  border-style: dashed;
+  border-color: #7a3f22;
+  color: #5a2c15;
+}
+#buehne[data-epoche="4"] .sud-schild.angerechnet {
+  border-color: #8a7350;
+  color: #6b5a3d;
+}
