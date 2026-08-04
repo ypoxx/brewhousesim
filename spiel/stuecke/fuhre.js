@@ -2456,8 +2456,27 @@
      einer Tabelle, damit er auch bei anderer Fensterhoehe und bei mehr
      Adressen stimmt. Untergrenze 0,62: darunter waere die Zeile nicht mehr
      zu lesen, und dann ist Rollen das kleinere Uebel.
+
+     ---------------------------------------------------------------------
+     4. AUGUST 2026 — DAS BEZUGSPIXEL WIRD GELESEN, NICHT NACHGERECHNET.
+     Hier stand bis heute die Formel aus stil/grund.css ABGESCHRIEBEN:
+
+         var BEZUG = 'min(calc(100vw / 2752), calc(100vh / 1536))';
+
+     Solange sie abgeschrieben war, war unter .fu-liste JEDE Aenderung am
+     Bezugspixel wirkungslos — das Brett rechnete sich sein eigenes aus.
+     DIE LESBARKEIT hat das an der vierten Latte gemessen: bei Faktor 2,42
+     auf --s blieben genau deshalb 80 Textknoten unter 10 px stehen, und
+     771 der 1.899 zu kleinen Knoten des ganzen Spiels lagen unter diesem
+     einen Brett.
+
+     --s0 aus grund.css ist das reine Buehnenpixel, streng proportional und
+     ohne Boden — also genau das, was hier von Hand nachgebaut wurde. Es
+     GELESEN statt nachgerechnet heisst: jede kuenftige Aenderung an der
+     Skalierung wirkt auch hier. Ein Selbstbezug (--s: calc(f * var(--s)))
+     waere nach CSS-Regel ungueltig; darum --s0 und nicht --s.
      ==================================================================== */
-  var BEZUG = 'min(calc(100vw / 2752), calc(100vh / 1536))';
+  var BEZUG = 'var(--s0)';
 
   function setzeBezug(el, f) {
     if (f >= 0.999) el.style.removeProperty('--s');

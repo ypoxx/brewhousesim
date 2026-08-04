@@ -19,9 +19,9 @@
    -------------------------------------------------------------------------- */
 .fu-tafel { gap: calc(var(--s) * 4); padding-top: calc(var(--s) * 8); }
 .fu-tafel .fu-budget { padding: calc(var(--s) * 2) calc(var(--s) * 8); }
-.fu-tafel .fu-budget b { font-size: calc(var(--s) * 19); }
-.fu-tafel .fu-budget span { font-size: calc(var(--s) * 14); }
-.fu-tafel .fu-rohstoff { font-size: calc(var(--s) * 14); }
+.fu-tafel .fu-budget b { font-size: max(12px, calc(var(--s) * 19)); }
+.fu-tafel .fu-budget span { font-size: max(12px, calc(var(--s) * 14)); }
+.fu-tafel .fu-rohstoff { font-size: max(12px, calc(var(--s) * 14)); }
 /* Die drei Biere des Hauses duerfen rollen, wenn das Brett eng wird.
    Der Notsud darunter nie — er ist der Weg aus der leeren Kasse und muss
    ohne Rollen im Bild stehen. */
@@ -54,14 +54,14 @@
 .fu-tafel .fu-sorte-kosten,
 .fu-notsud-zeile { grid-column: 1; grid-row: 2; min-width: 0; }
 .fu-tafel .fu-stell { grid-column: 2; grid-row: 2; justify-self: end; }
-.fu-tafel .fu-sorte-kopf b { font-size: calc(var(--s) * 17); }
-.fu-tafel .fu-sorte-kosten span { font-size: calc(var(--s) * 13); }
-.fu-tafel .fu-erloes { font-size: calc(var(--s) * 14); }
-.fu-tafel .fu-planzahl { font-size: calc(var(--s) * 19); }
-.fu-tafel .fu-sudmeldung { font-size: calc(var(--s) * 13); padding-top: calc(var(--s) * 3); }
+.fu-tafel .fu-sorte-kopf b { font-size: max(12px, calc(var(--s) * 17)); }
+.fu-tafel .fu-sorte-kosten span { font-size: max(12px, calc(var(--s) * 13)); }
+.fu-tafel .fu-erloes { font-size: max(12px, calc(var(--s) * 14)); }
+.fu-tafel .fu-planzahl { font-size: max(12px, calc(var(--s) * 19)); }
+.fu-tafel .fu-sudmeldung { font-size: max(12px, calc(var(--s) * 13)); padding-top: calc(var(--s) * 3); }
 .fu-tafel .fu-knappheit { padding: calc(var(--s) * 3) calc(var(--s) * 8); }
-.fu-tafel .fu-knappheit b { font-size: calc(var(--s) * 14); }
-.fu-tafel .fu-knappheit span { font-size: calc(var(--s) * 14); line-height: 1.2; }
+.fu-tafel .fu-knappheit b { font-size: max(12px, calc(var(--s) * 14)); }
+.fu-tafel .fu-knappheit span { font-size: max(12px, calc(var(--s) * 14)); line-height: 1.2; }
 .fu-tafel .fu-kaeufe { gap: calc(var(--s) * 4); }
 /* Die Kaufknoepfe der Tafel duerfen umbrechen. Sonst stapelt sich in 1884
    jeder der fuenf Knoepfe auf eine eigene Zeile, und die Sortenliste
@@ -70,8 +70,8 @@
 .fu-tafel .fu-kaeufe .knopf .wort { white-space: normal; line-height: 1.12; }
 .fu-tafel .fu-stell .knopf,
 .fu-tafel .fu-kaeufe .knopf { min-height: calc(var(--s) * 30); padding: calc(var(--s) * 3) calc(var(--s) * 9); }
-.fu-tafel .fu-kaeufe .knopf .wort { font-size: calc(var(--s) * 15); }
-.fu-tafel .fu-kaeufe .knopf .preis { font-size: calc(var(--s) * 14); padding-left: calc(var(--s) * 8); }
+.fu-tafel .fu-kaeufe .knopf .wort { font-size: max(12px, calc(var(--s) * 15)); }
+.fu-tafel .fu-kaeufe .knopf .preis { font-size: max(12px, calc(var(--s) * 14)); padding-left: calc(var(--s) * 8); }
 
 /* --------------------------------------------------------------------------
    DER NOTSUD — mit Kreide unter den Strich geschrieben
@@ -96,7 +96,7 @@
 }
 .fu-notsud-kopf { display: flex; align-items: center; gap: calc(var(--s) * 7); }
 .fu-notsud-kopf b {
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   flex: 1 1 auto;
   white-space: nowrap;
   letter-spacing: calc(var(--s) * 1);
@@ -108,12 +108,12 @@
   width: calc(var(--s) * 20);
   height: calc(var(--s) * 20);
   line-height: calc(var(--s) * 17);
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
 }
 #buehne[data-epoche="4"] .fu-notsud .fu-zeichen { border-color: rgba(35, 32, 25, 0.5); }
 .fu-notsud-zeile {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
   opacity: 0.85;
   white-space: nowrap;
   overflow: hidden;
@@ -143,7 +143,7 @@
 .fu-kerbzeile { display: flex; align-items: center; gap: calc(var(--s) * 7); min-width: 0; }
 .fu-kerbzeile b {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
   letter-spacing: calc(var(--s) * 1);
   white-space: nowrap;
   overflow: hidden;
@@ -164,14 +164,14 @@
 .fu-kerben i.an { background: #e0b070; box-shadow: 0 0 calc(var(--s) * 4) rgba(224, 176, 112, 0.7); }
 .fu-kerbzahl {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
   opacity: 0.8;
   margin-left: auto;
   white-space: nowrap;
   flex: 0 0 auto;
 }
 .fu-kerbsatz {
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
   line-height: 1.2;
   opacity: 0.8;
   display: -webkit-box;
@@ -180,7 +180,7 @@
   overflow: hidden;
 }
 .fu-kerbholz .knopf { min-height: calc(var(--s) * 30); padding: calc(var(--s) * 3) calc(var(--s) * 9); }
-.fu-kerbholz .knopf .wort { font-size: calc(var(--s) * 14); }
+.fu-kerbholz .knopf .wort { font-size: max(12px, calc(var(--s) * 14)); }
 
 /* Knoepfe, die auf Kerbe gehen: der Preis bleibt stehen, die Waehrung
    wechselt. Deshalb eine andere Kante, kein anderer Preis. */
@@ -206,16 +206,16 @@
 }
 .fu-ausgelaufen b {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 16);
+  font-size: max(12px, calc(var(--s) * 16));
   letter-spacing: calc(var(--s) * 1);
   line-height: 1.2;
 }
-.fu-ausgelaufen span { font-size: calc(var(--s) * 15); line-height: 1.25; opacity: 0.92; }
+.fu-ausgelaufen span { font-size: max(12px, calc(var(--s) * 15)); line-height: 1.25; opacity: 0.92; }
 
 /* Die Abrechnung des Kerbholzes auf dem Georgi-Blatt */
 .fu-kerbabrechnung {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   line-height: 1.35;
   border: calc(var(--s) * 2) dashed #e0b070;
   border-radius: calc(var(--s) * 3);
@@ -245,7 +245,7 @@
    falsche Wahl — die Dringlichkeit traegt der Balken, nicht die Schrift. */
 .fu-frist b {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 16);
+  font-size: max(12px, calc(var(--s) * 16));
   letter-spacing: calc(var(--s) * 0.5);
   color: inherit;
   line-height: 1.15;
@@ -269,7 +269,7 @@
    Preisschild. */
 .fu-weg-zurueck {
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 14) !important;
+  font-size: max(12px, calc(var(--s) * 14)) !important;
   line-height: 1.3;
   color: inherit;
   background: rgba(120, 170, 96, 0.22);
@@ -300,7 +300,7 @@
 .fu-umkehrmeldung {
   flex: 0 0 auto;
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 14));
   color: var(--fu-gut);
   background: rgba(74, 107, 58, 0.14);
   border-radius: calc(var(--s) * 2);
@@ -368,7 +368,7 @@
 }
 
 .fu-schluss-these {
-  font-size: calc(var(--s) * 20);
+  font-size: max(12px, calc(var(--s) * 20));
   line-height: 1.35;
   border-left: calc(var(--s) * 4) solid var(--rot, #9d3520);
   padding: calc(var(--s) * 4) calc(var(--s) * 10);
@@ -380,7 +380,7 @@
   flex-direction: column;
   gap: calc(var(--s) * 3);
   font-family: var(--mono);
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
 }
 .fu-schlusszeile { display: flex; align-items: baseline; gap: calc(var(--s) * 8); }
 .fu-schlusszeile .w { flex: 1 1 auto; }
@@ -398,11 +398,11 @@
   border-top: calc(var(--s) * 2) solid var(--linie, rgba(43, 29, 16, 0.25));
   padding-top: calc(var(--s) * 6);
 }
-.fu-geschlecht b { letter-spacing: calc(var(--s) * 1); font-size: calc(var(--s) * 19); }
+.fu-geschlecht b { letter-spacing: calc(var(--s) * 1); font-size: max(12px, calc(var(--s) * 19)); }
 .fu-gen {
   display: flex;
   gap: calc(var(--s) * 10);
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
   align-items: baseline;
 }
 .fu-gen .j { font-family: var(--mono); flex: 0 0 calc(var(--s) * 130); }
@@ -435,19 +435,19 @@
 }
 .fu-ziel-kopf { display: flex; align-items: baseline; gap: calc(var(--s) * 8); }
 .fu-ziel-kopf b {
-  font-size: calc(var(--s) * 19);
+  font-size: max(12px, calc(var(--s) * 19));
   letter-spacing: calc(var(--s) * 2);
   white-space: nowrap;
 }
 .fu-ziel-stand {
   margin-left: auto;
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 16);
+  font-size: max(12px, calc(var(--s) * 16));
   opacity: 0.85;
   text-align: right;
 }
 .fu-ziel-satz {
-  font-size: calc(var(--s) * 16);
+  font-size: max(12px, calc(var(--s) * 16));
   line-height: 1.22;
   opacity: 0.8;
 }
@@ -472,9 +472,9 @@
   box-shadow: 0 0 0 calc(var(--s) * 2) rgba(74, 107, 58, 0.35),
               0 calc(var(--s) * 3) calc(var(--s) * 7) rgba(0, 0, 0, 0.32);
 }
-.fu-ziel-name { font-size: calc(var(--s) * 16); line-height: 1.16; }
+.fu-ziel-name { font-size: max(12px, calc(var(--s) * 16)); line-height: 1.16; }
 .fu-ziel-was {
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   line-height: 1.18;
   opacity: 0.78;
   min-height: calc(var(--s) * 34);
@@ -484,13 +484,13 @@
   flex-wrap: wrap;
   gap: calc(var(--s) * 3) calc(var(--s) * 7);
   font-family: var(--fu-zahlen);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
 }
 .fu-ziel-zahlen .gut  { color: var(--fu-gut); }
 .fu-ziel-zahlen .schlecht { color: var(--fu-warn); }
 .fu-ziel-karte .knopf { margin-top: auto; }
 .fu-ziel-fuss {
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   font-family: var(--fu-zahlen);
   opacity: 0.72;
 }
@@ -506,20 +506,20 @@
   border-top: calc(var(--s) * 2) solid var(--linie, rgba(43, 29, 16, 0.25));
   padding-top: calc(var(--s) * 6);
 }
-.fu-zahltag > b { letter-spacing: calc(var(--s) * 1); font-size: calc(var(--s) * 19); }
+.fu-zahltag > b { letter-spacing: calc(var(--s) * 1); font-size: max(12px, calc(var(--s) * 19)); }
 .fu-zahltag-liste { display: flex; flex-direction: column; gap: calc(var(--s) * 2); }
 .fu-zahltag-zeile {
   display: flex;
   align-items: baseline;
   gap: calc(var(--s) * 8);
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
 }
 .fu-zahltag-zeile .n { flex: 1 1 auto; }
 .fu-zahltag-zeile .g { flex: 0 0 auto; font-family: var(--mono); font-weight: 700; }
 .fu-zahltag-zeile .a {
   flex: 0 0 calc(var(--s) * 250);
   font-family: var(--mono);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   opacity: 0.72;
   text-align: right;
 }
@@ -537,7 +537,7 @@
   margin-top: calc(var(--s) * 3);
   padding-top: calc(var(--s) * 2);
   border-top: calc(var(--s) * 1) dotted rgba(255, 255, 255, 0.22);
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
   line-height: 1.35;
   opacity: 0.92;
 }
@@ -614,7 +614,7 @@
 /* Auf der Georgi-Tafel, einmal im Jahr: wie weit das Haus vom guten Ende weg
    ist. Gruen, weil es das einzige Ende ist, nach dem weitergebraut wird. */
 .fu-sommer-uebergabe {
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
   line-height: 1.4;
   padding: calc(var(--s) * 4) calc(var(--s) * 10);
   border-left: calc(var(--s) * 4) solid var(--fu-gut, #4a6b3a);
@@ -623,7 +623,7 @@
 
 /* Die Elle dieser Zeit: warum das Haus gerade JETZT uebergeben werden darf. */
 .fu-ausgang-mass {
-  font-size: calc(var(--s) * 19);
+  font-size: max(12px, calc(var(--s) * 19));
   line-height: 1.4;
   font-style: italic;
   opacity: 0.9;
@@ -641,7 +641,7 @@
 .fu-ausgang-bestand > div { flex: 1 1 0; min-width: 0; }
 .fu-ausgang-bestand b {
   display: block;
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   letter-spacing: calc(var(--s) * 1);
   margin-bottom: calc(var(--s) * 4);
 }
@@ -649,7 +649,7 @@
   display: flex;
   align-items: baseline;
   gap: calc(var(--s) * 8);
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   line-height: 1.45;
 }
 .fu-bestandzeile .w { flex: 1 1 auto; min-width: 0; }
@@ -659,7 +659,7 @@
 /* Die Lage in einer Zeile: wie viel Zeit noch bleibt, oder wie gut es steht. */
 .fu-ausgang-lage {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
   line-height: 1.35;
   padding: calc(var(--s) * 4) calc(var(--s) * 10);
   border-left: calc(var(--s) * 4) solid var(--rot, #9d3520);
@@ -678,15 +678,15 @@
   flex-direction: column;
   gap: calc(var(--s) * 6);
 }
-.fu-ausgang-wahl > .knopf { width: 100%; font-size: calc(var(--s) * 26); }
+.fu-ausgang-wahl > .knopf { width: 100%; font-size: max(12px, calc(var(--s) * 26)); }
 .fu-ausgang-wahl > .knopf.flach {
-  font-size: calc(var(--s) * 22);
+  font-size: max(12px, calc(var(--s) * 22));
   background: linear-gradient(180deg, #e6dcc4 0%, #d3c5a4 100%);
 }
 
 .fu-ausgang-fuss {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   color: #7a6a4e;
   line-height: 1.4;
 }
@@ -709,19 +709,19 @@
 .fu-ende-gut { border-top-color: var(--fu-gut, #4a6b3a); }
 
 .fu-ende-folge {
-  font-size: calc(var(--s) * 20);
+  font-size: max(12px, calc(var(--s) * 20));
   line-height: 1.4;
 }
 .fu-ende-summe {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 20);
+  font-size: max(12px, calc(var(--s) * 20));
   font-weight: 700;
   color: var(--gruen, #4a6b3a);
   padding: calc(var(--s) * 3) 0;
   border-top: calc(var(--s) * 1) dotted var(--linie);
   border-bottom: calc(var(--s) * 1) dotted var(--linie);
 }
-.fu-ende-gut .fu-satz { font-size: calc(var(--s) * 22); }
+.fu-ende-gut .fu-satz { font-size: max(12px, calc(var(--s) * 22)); }
 
 /* ==========================================================================
    DER GESCHLOSSENE HOF — Schloss 3 der Versiegelung
@@ -781,7 +781,7 @@ html[data-hof-zu] .gg-kennzahl[data-umkaempft] { display: none !important; }
    Schlussblatt, nicht am Hof, damit es mit ihm zusammen beiseitegeht. */
 .fu-schluss-siegel {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
   letter-spacing: calc(var(--s) * 1);
   color: #6b4a2a;
   padding: calc(var(--s) * 4) 0 0;

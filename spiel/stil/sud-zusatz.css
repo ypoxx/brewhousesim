@@ -177,46 +177,57 @@
 
 /* --------------------------------------------------------------------------
    DIE VIERTE LATTE — Lesbarkeit bei 1366x768 (MESSLATTE.md §4, 4. August).
-   GEMESSEN UND ABSICHTLICH NICHT HIER BEHOBEN. Die Zahlen stehen hier, damit
-   der naechste, der `--s` anfasst, sie nicht noch einmal erheben muss.
 
-   Gemessen an meinem eigenen Kesselzettel, 1366x768, Vorgabestand:
+   DER KNOPFBODEN GEHOERT NICHT MEHR HIERHER. Das Stueck DIE LESBARKEIT hat
+   ihn in `stil/grund.css` eingezogen — `#buehne .knopf { min-height: 24px }`,
+   medien-geschaltet unterhalb der Entwurfsleinwand. DER SUD hat ihn als
+   einziges Stueck unterboten, weil `sud.css:526` eine eigene ID-Regel trug;
+   die rechnet jetzt mit `max(..., 24px)` und laesst ihn durch. Gemessen mit
+   `aufsicht/lesbarkeit.mjs` bei 1366x768, ueber alle vier Epochen:
 
-     Kasten .sud-zettel          178 x 127 px   (13 % x 16,5 % der Buehne)
-     sud:zettel-anstich           83 x 20 px
-     sud:zettel-hefe-fass         83 x 20 px
-     sud:zettel-wechsel-frei     168 x 13 px  (1970)  bis  168 x 22 px
-     sud:zettel-wechsel-kauf     168 x 22 px  bis  168 x 23 px
-     kleinste Schrift im Stueck    6,5 px
+     aktive Knoepfe unter 24 px   14 von 334   ->   0 von 334
 
-   Vier aktive Knoepfe unter 24x24 px, in allen vier Epochen, genau dort, wo
-   ein Spieler zuerst hinfasst. Auf der Entwurfsleinwand 2752x1536 sind
-   dieselben Knoepfe 41 bis 47 px hoch — es ist kein Fehler einer Regel,
-   sondern der Massstab: `--s` in `stil/grund.css` skaliert alles
-   proportional herunter, und an dieser Zeile arbeitet in dieser Welle ein
-   anderer Builder. Sie wird hier nicht angefasst.
+   WAS ES KOSTET, damit es niemand zweimal ausrechnen muss. Der Kesselzettel
+   ist ein FLEXKASTEN MIT FESTER HOEHE (`max-height: 16.5%`,
+   `overflow: hidden`), und diese Hoehe ist gedeckelt, damit die Flaeche
+   2,145 % bleibt und unter der Ortsmarken-Schwelle der STADT (2,4 %). Bei
+   1366x768 sind das 178 x 127 px fuer vier Knoepfe und vier Zeilen. Der
+   Kasten ist dort immer schon ueberfuellt: jeder Pixel, den ein Knopf
+   gewinnt, wird einem anderen Kind genommen. Gemessen, nicht vermutet:
 
-   WARUM AUCH DER BODEN NICHT HILFT — nachgemessen, nicht vermutet. Ein
-   `min-height: max(calc(var(--s) * 24), 24px)` an den Zettelknoepfen wurde
-   gebaut und in allen vier Epochen bei 1366x768 gemessen. Der Zettel ist ein
-   FLEXKASTEN MIT FESTER HOEHE (`max-height: 16.5%`, `overflow: hidden`), und
-   diese Hoehe ist gedeckelt, damit die Flaeche 2,145 % bleibt und unter der
-   Ortsmarken-Schwelle der STADT (2,4 %). Der Kasten ist bei 1366x768 immer
-   schon ueberfuellt. Jeder Pixel, den ein Knopf gewinnt, wird einem anderen
-   Kind genommen:
+     Kind          Entwurf 2752x1536      1366x768 vorher      1366x768 jetzt
+     sud-zkopf              24 px                13 px               13 px
+     sud-zverfahren      16-32 px                 8 px             ** 0 px **
+     sud-zrang              19 px                 9 px                9 px
+     sud-zzahlen            38 px                19 px               19 px
+     die vier Knoepfe    25-56 px             13-23 px            24-28 px
 
-     Vorgabe                anstich 20 · hefe-fass 20 · frei 22 · kauf 22
-     mit Boden am Paar      anstich 24 · hefe-fass 24 · frei 19 · kauf 19
-     mit Boden an allen     alle vier 24, dafuer faellt die Zeile mit den
-                            laufenden Verfahren auf 0 px — und das ist die
-                            Zeile, an der ein Fremder das Bier dieses Hauses
-                            abliest (Latte 2, Frage 4)
-     dazu Zeile geschuetzt  der LETZTE Knopf wird abgeschnitten (E3, E4)
+   Es faellt also die Zeile mit den laufenden Verfahren heraus — und das ist
+   die Zeile, an der ein Fremder das Bier dieses Hauses abliest. Sie war bei
+   1366x768 allerdings schon vorher nur 8 px hoch und damit selbst unter der
+   Latte; was hier verloren geht, war dort nie zu lesen. Auf der
+   Entwurfsleinwand aendert sich NICHTS (Zettel 358x253, alle Kinder Pixel
+   fuer Pixel wie vorher) — Latte 1 bleibt unberuehrt. Und sobald `--s`
+   steigt, kommt die Zeile von selbst zurueck.
 
-   Zwei Knoepfe zu retten, indem zwei andere kleiner werden, ist keine
-   Behebung, und ein abgeschnittener Knopf ist schlechter als ein kleiner.
-   Der Zettel traegt bei 1366x768 nicht vier Knoepfe zu 24 px. Wer das
-   aendern will, hat genau zwei Hebel, und beide liegen ausserhalb dieser
+   ZWEI WEGE, DIE GEBAUT UND WIEDER AUSGEBAUT WURDEN, weil sie schlechter
+   waren als das, was jetzt dasteht:
+     * `sud-zverfahren` gegen das Schrumpfen schuetzen (`flex-shrink: 0`)
+       -> der LETZTE Knopf wird abgeschnitten (1884 und 1970). Ein
+          abgeschnittener Knopf ist schlechter als eine fehlende Zeile.
+     * `sud-zzahlen` auf eine Zeile zwingen (`nowrap`) -> gewinnt die 11 px
+       zurueck, schneidet aber ebenfalls den letzten Knopf ab (1884, 1970)
+       UND aendert die Entwurfsleinwand (Zettel 247 -> 237 px hoch). Damit
+       ruehrte es an Latte 1.
+
+   Wer den Zettel bei 1366x768 wirklich vier Knoepfe UND vier Zeilen tragen
+   lassen will, hat genau zwei Hebel, und beide liegen ausserhalb dieser
    Datei: `--s` heben, oder den Flaechendeckel des Zettels neu verhandeln —
    und der haengt an einer Zahl der STADT, nicht an einer dieses Stuecks.
+
+   NICHT ANGEFASST sind die Schriftgroessen dieses Stuecks (kleinste 6,5 px,
+   87 bis 93 Textknoten unter 12 px). Sie rechnen alle in `calc(var(--s) * n)`
+   und heben sich mit `--s`; sie hier einzeln auf `max(12px, ...)` zu setzen
+   hiesse, dem Stueck DIE LESBARKEIT ins Handwerk zu pfuschen und dieselbe
+   Zahl zweimal zu heben.
    -------------------------------------------------------------------------- */

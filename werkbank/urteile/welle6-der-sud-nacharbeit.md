@@ -226,83 +226,151 @@ Am laufenden Spiel geprüft (1970, mit der Maus gekauft):
 
 ---
 
-# DIE VIERTE LATTE — Lesbarkeit bei 1366×768
+# DIE FÜNFTE AUFLAGE — der Knopfboden der vierten Latte
 
-*Gemessen, und absichtlich nicht hier behoben. Begründung unten.*
+*Kam von der Aufsicht, während ich arbeitete, und ist eine Zeile.*
 
-## Das gemeinsame Gerät, wie im Auftrag verlangt
+Das Stück DIE LESBARKEIT hat in `stil/grund.css` einen Boden eingezogen —
+`#buehne .knopf, #buehne [data-zug] { min-width: 24px; min-height: 24px }`,
+mediengeschaltet unterhalb der Entwurfsleinwand — und die aktiven Knöpfe unter
+der Zielfläche von 246 auf 14 von 334 gesenkt. **DER SUD hat ihn als einziges
+Stück unterboten:** `sud.css:526` trug eine eigene ID-Regel
+(`#buehne .sud-zettel .knopf.sud-tat.klein.voll { min-height: calc(var(--s) * 24) }`),
+und eine ID sticht jede Klassenregel. `--s * 24` sind bei 1366×768 rund 13 px.
+Die Aufsicht hat richtig gemessen: die Hälfte der verbliebenen 14 waren meine.
 
-    HAFEN=8951 BREITE=1366 HOEHE=768 node werkbank/schuss/aufsicht/lesbarkeit.mjs
+**Behoben, an genau der Stelle, an der es entstanden ist:**
 
-| Epoche | abgeschnittene Kästen | Textknoten < 12 px | aktive Knöpfe < 24 px |
+    #buehne .sud-zettel .knopf.sud-tat.klein.voll {
+      min-height: max(calc(var(--s) * 24), 24px);
+    }
+
+`max()` und nicht Löschen, weil die Regel einen eigenen Zweck hat (der Zettel
+trägt vier Knöpfe statt drei und darf nicht mehr Luft nehmen als vorher): auf
+der Entwurfsleinwand gewinnt weiter die eigene Rechnung — dort sind `--s * 24`
+rund 47 px —, unterhalb davon gewinnt der fremde Boden. `stil/grund.css` habe
+ich nicht angefasst.
+
+Nachgemessen mit dem verlangten Aufruf, Hafen 8951, alle vier Epochen:
+
+    BREITE=1366 HOEHE=768 node werkbank/schuss/aufsicht/lesbarkeit.mjs
+
+| | vorher | nachher |
+|---|---|---|
+| aktive Knöpfe unter 24 px | **14 von 334** | **0 von 334** |
+| abgeschnittene Kästen | 93 | 97 |
+| Textknoten unter 12 px | 1.899 | 1.899 |
+
+Je Epoche nachher: **0 von 82 · 0 von 83 · 0 von 87 · 0 von 82.**
+
+## Was es kostet, gemessen und nicht verschwiegen
+
+Die vier Überläufe mehr sind meine, und sie gehören zur Sache. Der Kesselzettel
+ist ein **Flexkasten mit fester Höhe** (`max-height: 16.5 %`,
+`overflow: hidden`), gedeckelt auf 2,145 % der Bühne, damit er unter der
+Ortsmarken-Schwelle der STADT (2,4 %) bleibt. Bei 1366×768 sind das 178 × 127 px
+für vier Knöpfe und vier Zeilen — der Kasten ist dort immer schon überfüllt, und
+jeder Pixel, den ein Knopf gewinnt, wird einem anderen Kind genommen:
+
+| Kind | Entwurf 2752×1536 | 1366×768 vorher | 1366×768 jetzt |
 |---|---|---|---|
-| 1350 | 24 (davon `sud` 6) | 462 (440 < 10 px) | 4 von 82 |
-| 1600 | 25 (davon `sud` 5) | 477 (453 < 10 px) | 4 von 83 |
-| 1884 | 24 (davon `sud` 6) | 476 (452 < 10 px) | 2 von 87 |
-| 1970 | 20 (davon `sud` 7) | 484 (461 < 10 px) | 4 von 82 |
-| **Summe** | **93** | **1.899** | **14 von 334** |
+| `sud-zkopf` | 24 px | 13 px | 13 px |
+| `sud-zverfahren` | 16–32 px | 8 px | **0 px** |
+| `sud-zrang` | 19 px | 9 px | 9 px |
+| `sud-zzahlen` | 38 px | 19 px | 19 px |
+| die vier Knöpfe | 25–56 px | **13–23 px** | **24–28 px** |
 
-## Und was davon MIR gehört
+Es fällt also die Zeile mit den laufenden Verfahren heraus — die Zeile, an der
+ein Fremder das Bier dieses Hauses abliest. Sie war bei 1366×768 vorher 8 px
+hoch und damit selbst weit unter der Latte; **was hier verloren geht, war dort
+nie zu lesen.** Auf der Entwurfsleinwand ändert sich nichts: Zettel 358 × 253 px,
+alle Kinder Pixel für Pixel wie vorher, `scroll == client`. **Latte 1 bleibt
+unberührt.** Sobald `--s` steigt, kommt die Zeile von selbst zurück.
+
+Zwei Wege, sie trotzdem zu retten, habe ich gebaut und gemessen und wieder
+ausgebaut, weil beide schlechter sind als das, was jetzt dasteht:
+
+* `sud-zverfahren` gegen das Schrumpfen schützen (`flex-shrink: 0`) → der
+  **letzte Knopf wird abgeschnitten** (1884 und 1970). Ein abgeschnittener
+  Knopf ist schlechter als eine fehlende Zeile.
+* `sud-zzahlen` auf eine Zeile zwingen → holt die 11 px zurück, schneidet
+  ebenfalls den letzten Knopf ab (1884, 1970) **und** ändert die
+  Entwurfsleinwand (Zettel 247 → 237 px hoch). Damit rührte es an Latte 1.
+
+Beide Messreihen stehen im Kopf von `stil/sud-zusatz.css`, damit sie niemand
+zweimal erheben muss.
+
+# DIE VIERTE LATTE — was meine Bretter sonst zeigen
 
 `werkbank/schuss/sud-w6-nach/lesbar-sud.mjs` misst nur `.sud-*`, einmal mit
-zugeklapptem Brett (Vorgabestand) und einmal aufgeschlagen:
+zugeklapptem Brett (Vorgabestand) und einmal aufgeschlagen, 1366×768:
 
 | | Vorgabestand | Brett aufgeschlagen |
 |---|---|---|
 | kleinste Schrift | **6,5 px** | 6,5 px |
 | Textknoten < 12 px | 87–93 | 87–93 |
-| aktive `sud:*`-Knöpfe < 24 px | **4 von 4** | **0 von 7** |
-| abgeschnittene Kästen | 5–7 | 5–7 |
+| aktive `sud:*`-Knöpfe < 24 px | 0 von 4 *(nach der Behebung)* | 0 von 7 |
+| abgeschnittene Kästen | 5–8 | 5–7 |
 
-Die vier zu kleinen Knöpfe sind **alle vier Knöpfe des Kesselzettels**, also
-genau die, die im Vorgabestand dastehen:
-
-    Kasten .sud-zettel        178 × 127 px   (13 % × 16,5 % der Bühne)
-    sud:zettel-anstich         83 × 20 px
-    sud:zettel-hefe-fass       83 × 20 px
-    sud:zettel-wechsel-frei   168 × 13 px (1970) bis 168 × 22 px
-    sud:zettel-wechsel-kauf   168 × 22 px bis 168 × 23 px
-
-Auf der Entwurfsleinwand 2752×1536 sind dieselben Knöpfe 41 bis 47 px hoch. Es
-ist kein Fehler einer Regel, sondern der Maßstab — `--s` in `stil/grund.css`.
-**Die Datei habe ich nicht angefasst.**
+**Die Schriften habe ich nicht angefasst**, und zwar mit Absicht. Sie rechnen
+ausnahmslos in `calc(var(--s) * n)` und heben sich mit `--s`; sie hier einzeln
+auf `max(12px, …)` zu setzen hieße, dem Stück DIE LESBARKEIT ins Handwerk zu
+pfuschen und dieselbe Zahl zweimal zu heben — und es kostet Überläufe, wie die
+Aufsicht selbst schreibt. Die Hauptursache liegt ohnehin woanders
+(`stuecke/fuhre.js:2460` schreibt die `--s`-Formel ab, statt sie zu lesen).
 
 Die abgeschnittenen Kästen sind ausnahmslos `.sud-kartensatz`, also das
-`-webkit-line-clamp: 3` aus `sud.css:95`, das der Kritiker geprüft und stehen
-gelassen hat (der volle Satz hängt am `title`). Bei 1366×768 sind 10 bis 186 px
-Text hinter der Auslassung.
+`-webkit-line-clamp: 3` aus `sud.css:95`, das der blinde Kritiker geprüft und
+stehen gelassen hat (der volle Satz hängt am `title`). Bei 1366×768 sind 10 bis
+186 px Text hinter der Auslassung. Das bleibt ein offener Punkt der vierten
+Latte, und er gehört mit dem `--s`-Umbau zusammen: ein größeres `--s` macht ihn
+größer, nicht kleiner.
 
-## Warum ich den Boden gebaut, gemessen und wieder ausgebaut habe
+---
 
-Ein `min-height: max(calc(var(--s) * 24), 24px)` an den Zettelknöpfen liegt
-nahe: auf der Entwurfsleinwand gewinnt die alte Rechnung, auf dem Notebook der
-Boden, und wer `--s` hebt, hebt beides mit. Ich habe ihn gebaut und in allen
-vier Epochen bei 1366×768 **und** bei 2752×1536 gemessen. Er hilft nicht.
+# Wo ich den Kritiker ergänze — und wo ich ihm widerspreche
 
-Der Zettel ist ein **Flexkasten mit fester Höhe** (`max-height: 16.5%`,
-`overflow: hidden`), und diese Höhe ist gedeckelt, damit die Fläche 2,145 %
-bleibt und unter der Ortsmarken-Schwelle der STADT (2,4 %). Bei 1366×768 ist der
-Kasten immer schon überfüllt. Jeder Pixel, den ein Knopf gewinnt, wird einem
-anderen Kind genommen — gemessen, nicht vermutet:
+**Ich widerspreche ihm in keinem seiner vier Befunde.** Ich habe jeden davon
+mit seinem eigenen Gerät nachgestellt, bevor ich etwas angefasst habe, und die
+Klemme kam Ziffer für Ziffer wieder (E1, Woche 61, 10 tote Knöpfe, davon 6 mit
+`data-soll-aus="0"`, löst sich in 8 s nicht, erst nach zwei Reiterklicks). Das
+ist selten genug, dass es dasteht.
 
-| Variante | anstich | hefe-fass | wechsel-frei | wechsel-kauf | Verfahrenzeile |
-|---|---|---|---|---|---|
-| Vorgabe | 20 | 20 | 22 | 22 | 8 px |
-| Boden nur am Paar | **24** | **24** | 19 | 19 | 11 px |
-| Boden an allen vieren | **24** | **24** | **24** | **24** | **0 px** |
-| … dazu die Zeile geschützt | 24 | 24 | 24 | 24 **abgeschnitten** | 11 px |
+Drei Ergänzungen, die seine Zahlen nicht ändern, aber ihre Lesart:
 
-Zwei Knöpfe zu retten, indem zwei andere kleiner werden, ist keine Behebung. Ein
-**abgeschnittener** Knopf ist schlechter als ein kleiner. Und die Zeile, die in
-der dritten Variante auf 0 px fällt, ist genau die, an der ein Fremder das Bier
-dieses Hauses abliest (`Offen gehopft, mit Hopfenbrief · Röhrenrecht an der
-Quelle`) — Latte 2, Frage 4.
+**1. Sein Nebenbefund „drei von acht Achsen sind nie eine Wahl zwischen zwei
+Knöpfen" ist jetzt zwei von neun.** Er hat ihn ausdrücklich *nicht* beanstandet
+und richtig hergeleitet (`sud.js:1094`: die laufende kostenlose Karte ist
+abgeschaltet, und wo nur zwei Karten stehen, bleibt eine druckbar). In 1600 hat
+`schuettung` jetzt vier Karten statt drei — die Achse bleibt eine echte Wahl,
+auch nachdem eine Karte läuft. `gaerung` (1600), `hefe` (1884) und `fuehrung`
+(1970) haben weiter zwei bzw. drei Karten, von denen eine läuft; daran ändert
+diese Nacharbeit nichts, und sie soll es auch nicht.
 
-**Der Zettel trägt bei 1366×768 keine vier Knöpfe zu 24 px.** Wer das ändern
-will, hat genau zwei Hebel, und beide liegen außerhalb meiner Dateien: `--s`
-heben, oder den Flächendeckel des Zettels neu verhandeln — und der hängt an
-einer Zahl der STADT. Beide Zahlen und die vier gemessenen Varianten stehen
-jetzt im Kopf von `stil/sud-zusatz.css`, damit sie niemand zweimal erheben muss.
+**2. Sein „harter Befund an 1600" löst sich mit auf.** Er schreibt: die 260 fl
+der Kellergärung haben am Bier nichts geändert, weil `schuettung:hafer`
+(kostenlos, `hoechst 1`) den Deckel setzt und der Deckel das Minimum ist — „wer
+in 1600 auf einer Achse die schlechte KOSTENLOSE Karte nimmt, macht die
+teuerste Festlegung der Epoche wertlos". Das stimmt und war das eigentliche
+Problem hinter Auflage 2. Der Weizenbrief gibt der Achse zum ersten Mal eine
+Karte, die man KAUFT und die `hoechst 3` trägt; die 260 fl der Kellergärung
+haben damit ein Gegenüber, mit dem sie zusammen etwas bewirken.
+
+**3. `data-preis` ist kein vollständiger Zähler, und das ist keine Schwäche des
+Zählers.** Der Kritiker zählt Preisschilder als `data-preis`, und das ist die
+richtige Zählung für Münze. Dieses Stück bezahlt drei seiner häufigsten Züge
+aber in BIER (WELLE-2 §1 verbietet ihm die Kasse). Wer diese Zählung ehrlich
+führen will, braucht beide Spalten — `data-preis` **und** `data-preis-art`. Die
+zweite gibt es seit dieser Nacharbeit; `BRAUHAUS.sud.preise()` liefert sie
+zusammen. Das ist keine Korrektur an ihm, sondern die Zeile, die ihm gefehlt
+hat und die er in seiner Abnahme selbst verlangt.
+
+Und eine Sache, in der ich ihm ausdrücklich zustimme, obwohl sie unbequem ist:
+`B.sud.zustand()` gibt `Z` als Referenz heraus (`sud.js:931`), also lässt sich
+aus der Konsole jedes Siegel umschreiben. Er nennt es und beanstandet es nicht.
+Ich habe es ebenfalls nicht angefasst — ein Riegel gegen die Konsole wäre eine
+Kulisse, und `zustand()` ist der Weg, auf dem jeder Prüfer dieses Stück
+nachrechnet.
 
 ---
 
