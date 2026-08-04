@@ -1,0 +1,427 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 95
+   },
+   "b": {
+    "da": true,
+    "sekunde": 17,
+    "sicher": 95
+   },
+   "c": {
+    "da": true,
+    "sekunde": 15,
+    "sicher": 100
+   },
+   "d": {
+    "da": true,
+    "sekunde": 7,
+    "sicher": 90
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [
+   {
+    "sekunde": 7,
+    "klang": "Gedämpfte Radio- oder Fernsehübertragung (englischer Sportkommentar)",
+    "warum": "Rundfunk, Fernsehen und elektronische Lautsprecher existierten im Mittelalter bzw. der frühen Neuzeit noch nicht."
+   },
+   {
+    "sekunde": 21,
+    "klang": "Schnelles Tippen auf einer Computertastatur",
+    "warum": "Computer und moderne Tastaturen passen nicht in das historische Setting, das durch die Flötenmusik und das Fuhrwerk etabliert wird."
+   }
+  ],
+  "datei": "e1-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 1,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 16,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": true,
+    "sekunde": 8,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [
+   {
+    "sekunde": 8,
+    "klang": "Autounfall mit quietschenden Reifen und Blechschaden",
+    "warum": "Autos und Autoreifen gab es im Mittelalter bzw. der frühen Neuzeit noch nicht."
+   },
+   {
+    "sekunde": 21,
+    "klang": "Moderner Polizeifunk / Funkspruch",
+    "warum": "Elektronische Funkgeräte und englischer Polizeifunk existierten in diesem historischen Setting nicht."
+   }
+  ],
+  "datei": "e2-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "e": {
+    "da": true,
+    "sekunde": 11,
+    "sicher": 100
+   },
+   "f": {
+    "da": true,
+    "sekunde": 18,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1850,
+  "anachronismen": [
+   {
+    "sekunde": 2,
+    "klang": "Englische Radio-/Fernsehstimme ('go back and forth')",
+    "warum": "Rundfunkübertragungen und moderne Kommentatorenstimmen gab es im 19. Jahrhundert (Zeitalter der Dampflokomotiven) noch nicht."
+   }
+  ],
+  "datei": "e3-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 1,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 6,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [
+   {
+    "sekunde": 4,
+    "klang": "Ein Auto beschleunigt mit quietschenden Reifen",
+    "warum": "Verbrennungsmotoren und Autos gab es im Mittelalter bzw. der frühen Neuzeit noch nicht."
+   },
+   {
+    "sekunde": 7,
+    "klang": "Ein klassisches Telefonklingeln",
+    "warum": "Telefone wurden erst im späten 19. Jahrhundert erfunden."
+   },
+   {
+    "sekunde": 11,
+    "klang": "Ein Auto beschleunigt mit quietschenden Reifen",
+    "warum": "Verbrennungsmotoren und Autos gab es im Mittelalter bzw. der frühen Neuzeit noch nicht."
+   },
+   {
+    "sekunde": 15,
+    "klang": "Eine laute, elektrische Alarmglocke / Schulpausenklingel",
+    "warum": "Elektrische Klingeln passen nicht in das historische Setting der Zeit."
+   }
+  ],
+  "datei": "e4-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 0,
+  "anachronismen": [],
+  "datei": "e1-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e2-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e3-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e4-still.wav"
+ }
+]
