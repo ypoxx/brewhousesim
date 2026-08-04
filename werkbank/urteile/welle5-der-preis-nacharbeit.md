@@ -319,6 +319,39 @@ und die Latte reisst, bei dreizehn auf +0,692, bei vierzehn auf +0,591, bei
 fuenfzehn auf +0,421. Ich messe ueber vierzehn, weil der eingetragene Stand aus
 dieser Zaehlweise stammt, und schreibe es an jede Zahl.
 
+### DIE LATTE HAELT, UND SIE HAELT ZIFFER FUER ZIFFER
+
+Zwoelf Laeufe, drei je Epoche, sequenziell, auf dem **letzten** Stand
+(alle Aenderungen dieser Nacharbeit eingebaut):
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| eingetragener Stand (`6b59a18`) | +0,591 | +0,231 | +0,393 | +0,275 |
+| **Lauf A** | **+0,591** | **+0,231** | **+0,393** | **+0,275** |
+| **Lauf B** | **+0,591** | **+0,231** | **+0,393** | **+0,275** |
+| **Lauf C** | **+0,591** | **+0,231** | **+0,393** | **+0,275** |
+| **Spannweite ueber drei Laeufe** | **0,000** | **0,000** | **0,000** | **0,000** |
+| Jahre unter 1× | 0/14 | 0/14 | **1/14** | 0/14 |
+| Pearson (zum Vergleich) | +0,587 | +0,002 | +0,315 | +0,294 |
+| Kasse ueber 400 Wochen | 39–609 | 251–2.525 | 1.757–23.789 | 1.998–86.000 |
+| Kennzahl klein–gross | 1,55–18,44× | 1,54–15,11× | 0,84–9,40× | 2,12–9,14× |
+| Wochen ohne Kennzahl (`zugDeckung` null) | 0/400 | 0/400 | 0/400 | 0/400 |
+| Seitenfehler · Abbrueche · `lage` | 0 · 0 · 0 | 0 · 0 · 0 | 0 · 0 · 0 | 0 · 0 · 0 |
+| Festlegungen der Vorbild-Hand | 1 | 1 | 0 | 0 |
+
+**|rho| < 0,700 in allen vier Epochen und allen zwoelf Laeufen.** Hoechster
+Betrag +0,591 (E1). „Hoechstens ein Jahr von sechs unter 1×" ist erfuellt:
+0 / 0 / 1 / 0 von je vierzehn.
+
+**Die Zahlen sind nicht nur innerhalb der Latte — sie sind Ziffer fuer Ziffer
+dieselben wie vor dem Bau**, in allen vier Epochen. Auch die Kassenreihe, die
+Kennzahlreihe und die Zahl der Festlegungen der Vorbild-Hand (1/1/0/0) sind
+unveraendert. Das ist kein Zufall, sondern die Bauregel: kein bestehender
+Preis ist gesenkt worden, und jede neue Karte liegt gemessen ueber der
+Schwelle, ab der diese Hand zugreift (Tabelle in Abschnitt 6). Was diese Hand
+nie anfasst, kann ihre Partie nicht veraendern — und genau das ist hier
+zwoelfmal nachgemessen statt behauptet.
+
 ### Eine Karte, die ich selbst zurueckgenommen habe, bevor sie gemessen war
 
 Die ewige Gült stand im ersten Ansatz auf `ertrag: 150` gegen eine Taxe von
@@ -390,7 +423,3 @@ unberuehrt.
 * **Die Kennzahl ist bei 1280×800 halb hinter dem Reiter der STADT**
   (`kern/kopf.js:127`, `left: 93%`) — KERN und STADT.
 
-### Der Stand, Lauf fuer Lauf
-
-(Wird beim Einlaufen der Laeufe fortgeschrieben; die Tabelle unten steht erst,
-wenn alle zwoelf da sind.)
