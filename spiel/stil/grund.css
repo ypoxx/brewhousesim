@@ -45,7 +45,7 @@
      2296 x 1282 und wirkt damit auf 1366x768 als Faktor 1,21.
      Wer ihn anhebt, misst danach Ueberlauf und Ueberdeckung nach; die Reihe
      steht in werkbank/urteile/welle6-die-lesbarkeit-bau.md. */
-  --s-boden: 0.6px;
+  --s-boden: 0px;
   --s: max(var(--s-boden), var(--s0));
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
@@ -135,6 +135,14 @@ html, body {
 
 #ebene-platte { z-index: 10; }
 #ebene-bau    { z-index: 20; }
+
+/* DIE BILDEBENEN BEKOMMEN DEN BODEN NICHT.
+   Platte und Bauten sind ein Bild; ihre Groessen stehen in Prozent der Buehne
+   oder in Vielfachen des Bezugspixels, und beides muss streng proportional
+   bleiben, sonst steht ein Haus neben seiner gemalten Flaeche. Hier gilt
+   deshalb wieder das reine Mass. Alles Beschriftete und Bedienbare liegt in
+   'marken', 'hand', 'kopf' oder 'blatt' und behaelt den Boden. */
+#ebene-platte, #ebene-bau { --s: var(--s0); }
 #ebene-marken { z-index: 30; }
 #ebene-hand   { z-index: 40; }
 #ebene-kopf   { z-index: 50; }
@@ -204,6 +212,19 @@ button {
 }
 
 .knopf:hover { background: linear-gradient(180deg, #fff6e4 0%, #eddcbb 100%); }
+
+/* DAS MINDESTZIEL — vierte Latte: kein aktiver Knopf unter 24 x 24 px.
+   Das ist ein Boden des Skeletts, keine Gestaltung: er steht hier, weil
+   'min-height: calc(var(--s) * 46)' auf 1366x768 nur 22,8 px ergibt und weil
+   jedes Stueck seine eigenen Knopfmasse setzt. Die ID im Selektor gibt der
+   Regel Vorrang vor den Klassenregeln der Stuecke — absichtlich, damit kein
+   Stueck den Boden aus Versehen unterschreitet.
+   Nur die AEUSSERE Marke bekommt den Boden, nicht was in ihr steht. */
+#buehne .knopf,
+#buehne [data-zug] {
+  min-width: 24px;
+  min-height: 24px;
+}
 
 /* ACHTUNG, gilt fuer ALLE vier Stuecke:
    Ein Element mit .amort wird ueber 'transform' auf seinem Ort gehalten.

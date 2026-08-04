@@ -239,12 +239,22 @@ var SUD_DATEN = {
                 /* Die Nebenbedingung der Epoche — eine KOPPLUNG an die eigene
                    Achse. Die Bauabnahme liegt bei derselben Lade, die auch
                    die Schuettung beschaut; wer streckt, bekommt sie nicht. */
-                bedingung: { art: 'kopplung', achse: 'schuettung', option: 'rein',
+                bedingung: { art: 'kopplung', achse: 'schuettung',
+                             /* Zwei Antworten genuegen der Lade, nicht eine: sie
+                                sieht in den Kessel und nimmt Anstoss am HEIMLICH
+                                Gestreckten. Was im Kornbuch steht, hat sie selbst
+                                mitgesiegelt — dagegen kann sie schlecht sein.
+                                (Auflage 2, Welle 6: ohne diese zweite Antwort
+                                haette der Weizenbrief dem Haus den Gaerbottich
+                                fuer immer genommen, und eine Karte, die eine
+                                andere Kaufentscheidung stilllegt, ist keine
+                                Wahl, sondern eine Falle.) */
+                             option: ['rein', 'weizenbrief'],
                              satz: 'Die Bauabnahme liegt bei der Zunftlade — derselben, die '
                                  + 'auch in den Kessel sieht.',
                              zu: 'Die Zunftlade nimmt keinen Bau ab, solange in diesem Haus '
-                               + 'gestreckt gebraut wird. Erst rein nach dem Gebot, dann der '
-                               + 'Gärbottich.' } }
+                               + 'heimlich gestreckt gebraut wird. Erst rein nach dem Gebot '
+                               + 'oder mit dem Brief, dann der Gärbottich.' } }
       },
       guete: { name: 'Die Stellhefe', kurz: 'Stellhefe', invers: false,
                satz: 'Wer die Stellhefe nicht schöpft, braut nach Glück.' },
