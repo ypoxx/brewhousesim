@@ -313,4 +313,97 @@ Die zwei Regeln mit N < 12 stehen deshalb ebenfalls hinter dem Medienschalter
 
 ---
 
-*(Latte 2 wird gerade gemessen — acht Läufe zu 400 Wochen, sequenziell)*
+## 6 — Latte 2, die Kennzahl: der teuerste Befund dieses Baus
+
+**Ich habe Latte 2 einmal gerissen und es an der Messung gemerkt.** Das gehört
+an den Anfang dieses Abschnitts, weil es die Lehre des ganzen Auftrags ist:
+*wer nur die eigene Latte misst, tauscht sie gegen eine andere.*
+
+### 6.1 Der Riss — und woran er lag
+
+Erster Anlauf beim Aufräumen: die Anschlagtafel bekam `overflow-y: auto`, damit
+nichts mehr abgeschnitten wird. Bei 1366×768 war das richtig. Bei **1920×1000**
+— dem Fenster, in dem die Kennzahl gemessen wird — wuchs die Tafel im Lauf der
+Partie auf 444…486 px in einem 426-px-Kasten, und was unten hinausrollte, waren
+die **Kaufknöpfe**: `fuhre:kauf:rohstoff` und `fuhre:tafel-auf:*`, also
+Rohstoff und Sudplan.
+
+Eine Hand, die einen Knopf nicht trifft, klickt ihn nicht — `linie.mjs` prüft
+vor jedem Klick mit `elementFromPoint`, genau wie ein Mensch, der nur sieht,
+was im Bild ist. Ergebnis, Epoche 1350, dieselbe Saat, dieselbe Hand:
+
+| | Kennzahl 1350 → 1363 | Spitze | ρ über 14 Braujahre |
+|---|---|---|---|
+| vorher | 5,89 → 8,20 | 18,4 | **+0,591** |
+| erster Anlauf | 5,89 → 0,89 | 5,9 | **−0,724** |
+
+Das Haus konnte den Sudplan nicht mehr aufstocken und keinen Rohstoff mehr
+kaufen. **Latte 4 gewonnen, Latte 2 dafür gerissen.** Gefunden wurde es nur,
+weil die Vorher/Nachher-Reihe Woche für Woche verglichen wurde: die erste
+Abweichung stand in Woche 4 des ersten Jahres — Rohstoff 62 gegen 22, Kasse 97
+gegen 131, also ein ausgefallener Rohstoffkauf.
+
+### 6.2 Die Reparatur: die Knöpfe rollen nicht mit
+
+`position: sticky; bottom: …` auf `.fu-tafel .fu-kaeufe`. Die Knopfzeile bleibt
+am unteren Rand des rollenden Kastens stehen, während alles darüber
+durchläuft — keine Zeile Javascript, und die Züge bleiben im Bild. Dazu ein
+Boden von 60 px für die Sortenliste (damit sie nicht mehr auf null
+zusammengeschoben wird) und eine zweispaltige statt zweizeilige Sortenzeile
+(die Stellknöpfe stehen rechts neben beiden Textzeilen statt unter der ersten:
+30 px statt 39 px je Sorte).
+
+Nachgemessen, 1920×1000, je 40 Wochen mit `WEITER` durchgespielt, alle vier
+Epochen — **160 Wochen je Epoche geprüft**:
+
+| | Tafel rollt | Kaufknopf unter der Kante |
+|---|---|---|
+| vorher | 0 von 160 Wochen | 0 |
+| erster Anlauf | 66 von 160 Wochen | **16** |
+| **jetzt** | 56 von 160 Wochen | **0** |
+
+Die Tafel rollt weiterhin — das lässt sich bei 12 px nicht vermeiden —, aber
+kein Zug verschwindet mehr aus dem Bild.
+
+### 6.3 Was am Ende herauskam
+
+Vier Epochen, drei Schnitte (12, 13, 14 Braujahre), Spearman über
+(Jahresnummer, Kennzahl) aus `BRAUHAUS.preis.leiter()`, Hand
+`werkbank/schuss/rueckkopplung-r3/linie.mjs` (kopiert benutzt, nicht
+angefasst), 400 Wochen je Lauf, Saat 1350, **sequenziell**:
+
+| Epoche | | 12 J | 13 J | 14 J | |
+|---|---|---|---|---|---|
+| **1350** | vorher | +0,762 | +0,692 | +0,591 | *reißt schon vorher* |
+| | nachher | **+0,762** | **+0,692** | **+0,591** | **Ziffer für Ziffer identisch** |
+| **1600** | vorher | +0,371 | +0,264 | +0,231 | |
+| | nachher | +0,189 | −0,066 | −0,156 | näher an null |
+| **1884** | vorher | +0,168 | +0,346 | +0,393 | |
+| | nachher | **+0,168** | **+0,346** | **+0,393** | **Ziffer für Ziffer identisch** |
+| **1970** | vorher | +0,427 | +0,379 | +0,455 | |
+| | nachher | +0,699 | +0,637 | +0,653 | unter 0,700, aber knapp |
+
+**1350 und 1884 sind Ziffer für Ziffer dieselbe Partie wie vorher** — dieselbe
+Kasse (39–609 bzw. 1757–23789), dieselbe Kennzahlreihe. Das ist der stärkste
+mögliche Beleg dafür, dass die Hand dieselben Züge gefunden hat.
+
+Der Riss bei **1350 / 12 Braujahre (+0,762) bestand schon vorher** und steht so
+auch in `MESSLATTE.md`; er ist nicht meiner und meine Arbeit verschiebt ihn um
+keine Stelle.
+
+**Der Vorbehalt, und er ist nicht klein:** dieser Satz ist unter **Fremdlast**
+entstanden — DER SUD hat auf derselben Maschine `sudhand.mjs 4 400` gefahren,
+Load average 3,7 bis 4,3. Die Aufsicht hat belegt, dass dieselbe Hand unter
+parallelen Browsern schon abweichende Zahlen geliefert hat. Ein Hinweis darauf
+steht auch in meinen eigenen Zahlen: meine Vorher-Reihe für **1970**
+(+0,427 / +0,379 / +0,455) trifft bei zwölf Jahren die Zahl aus `MESSLATTE.md`
+(+0,427) genau, weicht bei dreizehn und vierzehn aber ab (+0,154 / +0,275).
+1350, 1600 und 1884 stimmen dort auf allen drei Schnitten.
+
+→ **Der Satz wird wiederholt, sobald die Maschine ruhig ist**, und die
+Wiederholung ist die Belegzahl. Beide Sätze liegen unter
+`/tmp/fuhre-rho/`.
+
+---
+
+*(Wiederholung von Latte 2 läuft — Abschluss folgt)*
