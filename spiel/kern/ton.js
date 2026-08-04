@@ -926,7 +926,13 @@
        auch er soll von drueben kommen —, aber nicht so tief wie das Zeichen:
        dort steht der Vorgang selbst, und der muss erkennbar bleiben. */
     w.bus.fern = baueWand(ctx, w.bus.fremd, 1500, 0.115, 0.28);
-    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 900, 0.135, 0.36);
+    /* 1100 und nicht 900: bei 900 Hz hat das Zeichen die Haelfte seines
+       Pegels verloren (gemessen, siehe `nachbarhof()`), und ein Zeichen, das
+       niemand hoert, ist auch dann keins, wenn es schoen gedaempft ist.
+       Sprache bleibt auch bei 1100 Hz unverstaendlich — die Telefonbandbreite
+       beginnt bei 300 und endet bei 3400 Hz, und die zweiten und dritten
+       Formanten, an denen ein Ohr die Vokale unterscheidet, liegen darueber. */
+    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 1100, 0.135, 0.36);
     return w;
   }
 
@@ -1190,13 +1196,18 @@
          1970 13 Nachbarzuege -> 4 Zeichen   (verneint)
 
      In 1884 lagen die Zuege bei 3,54 / 7,56 / 11,06 s — der mittlere fiel
-     unter die Sperre. 3,4 s laesst ihn durch und bleibt trotzdem hinter der
-     Dauer des Zeichens, sodass sich zwei Zeichen nie ueberlagern koennen
-     (das war der Grund fuer die Sperre und der bleibt). In 1600 handelt der
-     Nachbar im ganzen Fenster nur zweimal, 1,5 s auseinander; dort hilft
-     keine Sperre, dort muss das eine Zeichen tragen. */
+     unter die Sperre. 3,4 s laesst ihn durch. In 1600 handelt der Nachbar im
+     ganzen Fenster nur zweimal, 1,5 s auseinander; dort hilft keine Sperre,
+     dort muss das eine Zeichen tragen — und deshalb ist es 4,2 s lang.
+     Dass die Dauer damit ueber der Sperre liegt, ist Absicht und kein
+     Versehen: wenn der Nachbar dreimal kurz hintereinander handelt, sollen
+     seine Zeichen sich um bis zu 0,8 s ueberlappen und EINE laengere Passage
+     von drueben ergeben statt drei Stuecke. Ein Kammfilter (Auflage 3) ist
+     das nicht — der kleinste Versatz betraegt 3,4 s und damit das
+     Siebzigfache der 50 ms, unterhalb derer zwei Kopien zu einem Filter
+     verschmelzen. */
   var NACHBAR_DATEI = altNeu('drueben1', 'drueben4');
-  var NACHBAR_DAUER = 3.4;
+  var NACHBAR_DAUER = 4.2;
   var NACHBAR_PAUSE = 3.4;
 
   function nachbarhof(w, epoche, wann) {
@@ -1221,13 +1232,22 @@
     /* Wie bei den Schleifen: die beiden Proben sind NICHT gleich laut aus dem
        Erzeuger gekommen (Effektivwert 0,044 gegen 0,100). Ein Zeichen, das in
        1350 halb so laut ist wie in 1970, ist in 1350 kein Zeichen. */
-    /* 0,27 statt 0,21 — WELLE 6, AUFLAGE 4. Das Zeichen geht durch einen
-       Tiefpass bei 1800 Hz, und was ein Tiefpass wegnimmt, nimmt er auch dem
-       Pegel. In 1350 hat es trotzdem getragen, weil dort der Hof am tiefsten
-       steht (ZIEL_HOF 0,034 gegen 0,048); in den anderen drei Epochen liegt
-       ueber dem Zeichen ein Fuenftel mehr Hof. Ein Zeichen, das nur in der
-       leisesten Epoche durchkommt, ist kein Zeichen, sondern ein Zufall. */
-    var laut = angleich(buf, 0.27);
+    /* 0,55 — WELLE 6, AUFLAGE 4, ZWEITER STAND, und die Zahl ist zweimal
+       gemessen worden statt einmal geraten.
+       Erster Stand: 0,21 -> 0,27 zusammen mit der dickeren Wand (1800 -> 900
+       Hz). Am Mitschnitt nachgerechnet (`zeichenhub.py`) war das Zeichen
+       danach NICHT lauter, sondern LEISER — der Effektivwert in den Sekunden,
+       in denen es liegt, fiel in 1350 von 0,1191 auf 0,0656 und von 0,1194
+       auf 0,0574, also auf etwa die Haelfte. Was ein Filter bei 900 Hz
+       wegnimmt statt bei 1800, nimmt er auch dem Pegel; die Anhebung um ein
+       Sechstel hat eine Halbierung nicht aufgewogen. Das Ohr hat den
+       Gegenzug daraufhin weiter nur in 1350 bejaht.
+       Zweiter Stand: die Wand geht auf 1100 Hz zurueck (Sprache bleibt
+       unverstaendlich, siehe unten) und der Pegel auf 0,55 — das Doppelte
+       des ersten Standes und mehr als das Doppelte des Ausgangs. Ein Zeichen,
+       das nur in der leisesten Epoche durchkommt, ist kein Zeichen, sondern
+       ein Zufall. */
+    var laut = angleich(buf, 0.55);
     g.gain.setValueAtTime(0.0001, wann);
     g.gain.linearRampToValueAtTime(laut, wann + 0.22);
     g.gain.setValueAtTime(laut, wann + d - 0.45);
@@ -1239,12 +1259,20 @@
     /* Bett und Hof gehen tief, das eigene WERK geht mit. Nicht so tief wie
        bei der Zaesur des Michaelitags — der Gegenzug unterbricht den Hof
        nicht, er draengt sich nur davor. */
-    var geste = 3.3;
+    /* WELLE 6: das eigene WERK tritt weiter zurueck als bisher (0,42 -> 0,30),
+       Bett und Hof NICHT (0,28 und 0,34 bleiben). Das ist kein Geschmack,
+       sondern die Ruecksicht auf die dritte Latte: Bett und Hof tragen die
+       Epoche in der gespielten Aufnahme, und wer sie fuer jedes Zeichen tiefer
+       zieht, kauft den Gegenzug mit der Epoche. Das eigene Werk traegt die
+       Epoche nicht allein — es ist das, was den Nachbarn zudeckt. In 1600
+       liegt das einzige Zeichen des ganzen Fensters bei Sekunde 21, und
+       genau dort klickt der Zugplan viermal. */
+    var geste = NACHBAR_DAUER - 0.1;
     w.duckBis = wann + 0.05 + geste + 0.70;
     w.duckTiefe = 0.28;
     senke(w, 'bett', wann, 0.28, geste, 0.70);
     senke(w, 'hof', wann, 0.34, geste, 0.70);
-    senke(w, 'werk', wann, 0.42, geste, 0.70);
+    senke(w, 'werk', wann, 0.30, geste, 0.70);
     return true;
   }
 

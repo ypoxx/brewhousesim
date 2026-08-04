@@ -264,16 +264,24 @@ for (let i = 0; i < WOCHEN; i++) {
         (achsen[t[1]] = achsen[t[1]] || []).push(b);
       }
     });
-    /* ZIEL je Achse EINMAL festlegen, sonst pendelt die Hand zwischen zwei
-       kostenlosen Karten hin und her und misst nur ihr eigenes Pendeln.
-       reich = die letzte Karte der Reihe (die teuerste, meist die feste)
-       arm   = die letzte KOSTENLOSE Karte der Reihe */
+    /* EINE GUTE HAND, die nie zurueckgeht: jede Woche die TEUERSTE Karte, die
+       die Kasse gerade traegt (mit Rueckhalt: hoechstens 55 % der Barschaft).
+       Sie steigt also mit dem Vermoegen auf und faellt nie zurueck — anders
+       als ein fester Zielwert, der eine unbezahlbare Karte ewig anstarrt.
+       arm bleibt beim festen Ziel: die letzte KOSTENLOSE Karte. */
     for (const a of Object.keys(achsen)) {
-      if (ZIELE[a]) continue;
       const reiheA = achsen[a];
-      ZIELE[a] = STIL === 'reich'
-        ? reiheA[reiheA.length - 1].zug
-        : (reiheA.filter(b => !b.preis).slice(-1)[0] || reiheA[0]).zug;
+      if (STIL === 'reich') {
+        const jetztK = vorher.sud && vorher.sud.verfahren ? vorher.sud.verfahren[a] : null;
+        const jetztP = Math.abs((reiheA.find(b => b.zug === 'sud:' + a + ':' + jetztK) || {}).preis || 0);
+        const kandidaten = reiheA.filter(b => !b.aus && b.hit
+          && Math.abs(b.preis) <= vorher.kasse * 0.55 && Math.abs(b.preis) > jetztP);
+        ZIELE[a] = kandidaten.length
+          ? kandidaten.reduce((x, y) => Math.abs(y.preis) > Math.abs(x.preis) ? y : x).zug
+          : ('sud:' + a + ':' + jetztK);
+      } else if (!ZIELE[a]) {
+        ZIELE[a] = (reiheA.filter(b => !b.preis).slice(-1)[0] || reiheA[0]).zug;
+      }
     }
     for (const a of Object.keys(achsen)) {
       const jetzt = vorher.sud && vorher.sud.verfahren ? vorher.sud.verfahren[a] : null;

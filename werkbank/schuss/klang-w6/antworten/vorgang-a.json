@@ -1,0 +1,384 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 15,
+    "sicher": 100
+   },
+   "d": {
+    "da": true,
+    "sekunde": 8,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [],
+  "datei": "e1-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 9,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 7,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1404,
+  "anachronismen": [],
+  "datei": "e2-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 95
+   },
+   "b": {
+    "da": true,
+    "sekunde": 6,
+    "sicher": 95
+   },
+   "c": {
+    "da": true,
+    "sekunde": 5,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": true,
+    "sekunde": 11,
+    "sicher": 100
+   },
+   "f": {
+    "da": true,
+    "sekunde": 18,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1404,
+  "anachronismen": [
+   {
+    "sekunde": 14,
+    "klang": "Pfeife einer Dampflokomotive / eines Zuges",
+    "warum": "Das Geräusch einer modernen Eisenbahn passt nicht in das historische, mittelalterliche Setting (Pferdefuhrwerk, einfache Orgelmusik), in dem das Spiel angesiedelt ist."
+   }
+  ],
+  "datei": "e3-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 4,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 7,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1995,
+  "anachronismen": [],
+  "datei": "e4-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [],
+  "datei": "e1-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e2-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1000,
+  "anachronismen": [],
+  "datei": "e3-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e4-still.wav"
+ }
+]
