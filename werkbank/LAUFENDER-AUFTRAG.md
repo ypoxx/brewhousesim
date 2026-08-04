@@ -611,6 +611,33 @@ Aufsicht ihre Zahlen hatte — zwei Wege, ein Befund.
 > 400-Wochen-Messung brauchen, gehören nicht gleichzeitig in die Welle — oder
 > die Welle gibt ihnen getrennte Messfenster. Sonst ist die Zahl am Ende der
 > Runde nicht die des Spiels, sondern die der Maschine.
+>
+> **NACHTRAG 15:22 UTC — die Meldung hat nicht gereicht, jetzt gibt es eine
+> Sperre.** Beide Builder haben auf die Meldung richtig reagiert und ihren Satz
+> wiederholt. Eine Stunde später überlappten die *Wiederholungen* erneut: DIE
+> FUHRE fuhr `linie.mjs 4 400`, DER SUD `linie.mjs 2 400`. Das ist kein
+> Ungehorsam, das ist die Lage — **jeder wartet auf den anderen, keiner hat den
+> Vortritt, und eine Bitte ist kein Schiedsrichter.**
+>
+> Deshalb **`werkbank/schuss/aufsicht/messfenster.sh`**: führt den übergebenen
+> Befehl unverändert aus, sobald das Fenster frei ist, und blockiert solange ein
+> anderer misst (`flock` auf `werkbank/.messsperre`, in `.gitignore`).
+>
+> ```
+> HAFEN=8961 werkbank/schuss/aufsicht/messfenster.sh \
+>   node werkbank/schuss/rueckkopplung-r3/linie.mjs 4 400 /tmp/e4.json
+> ```
+>
+> **Gegen beide Fälle geprüft, bevor es verteilt wurde** — die Regel aus Welle 5,
+> dass ein Messgerät im Fehlerfall nicht schweigen darf, gilt auch für dieses:
+> der zweite Aufruf wartet wirklich (belegt → frei nach 4 s), und bei Zeitablauf
+> misst er **nicht**, sondern endet mit Code 75 und nennt per `fuser`, wer das
+> Fenster hält. Voreingestellt sind 90 Minuten (`MESSFENSTER_WARTE`).
+>
+> **Kein Ersatz für sequenzielles Messen innerhalb eines Satzes.** Wer vier
+> Epochen misst, ruft es viermal nacheinander auf — nicht viermal gleichzeitig
+> und hofft auf die Sperre. Das liefe zwar, aber die Wartezeit stünde im falschen
+> Prozess und niemand sähe mehr, wer worauf wartet.
 
 > **ZWEITE MESSREGEL, 3. August spätabends: SEQUENZIELL MESSEN, NIE PARALLEL.**
 > Gemeldet von DER PREIS und mit Zahlen belegt: dieselbe Hand lieferte bei
