@@ -685,6 +685,57 @@ Fass, Anzeigen, Kennzahl, und auch die Wochenzahlen bei Auflage 2 und 3. Die
 stehen unten als Vorprobe und sind als solche gekennzeichnet. Was von ihnen
 durch das Fenster nachgemessen ist, steht mit dieser Kennzeichnung dabei.
 
+## Die acht Partien, durch das Messfenster nachgemessen
+
+*Wird fortgeschrieben, sobald eine Partie durch ist. Jede Zeile ist ein Lauf
+durch `messfenster.sh` auf ruhiger Maschine.*
+
+| Epoche · Hand | Auflage 1: Ablesungen | ≥2 Preisschilder DES SUD (ohne Gärraum) | Fehler | Abbruch |
+|---|---|---|---|---|
+| 1600 arm | **0** von 400 W | **324 von 400 W** | 0 | nein |
+| 1350 arm | **0** von 400 W | 50 von 400 W | 0 | nein |
+| 1970 arm | **0** von 400 W | **269 von 400 W** | 0 | nein |
+| 1884 arm | **0** von 400 W | 2 von 400 W | 0 | nein |
+| | | | | |
+| **alle vier `arm`-Hände** | **0 von 1.600 Wochen** | | **0** | **keiner** |
+
+Die 1600-Zeile ist die Abnahme von **Auflage 2**: verlangt waren 60 von 400
+Wochen mit zwei Preisschildern DES SUD zugleich aktiv und von der Maus
+erreichbar, `sud:gaerraum` ausdrücklich nicht mitgezählt (Sperrliste 3).
+Gemessen **324**. Der Stand im Urteil war 0 Preisschilder in 364 von 400 Wochen
+und zwei in genau einer.
+
+Die Vorprobe unter Fremdlast hatte für dieselbe Partie 354 Wochen — dieselbe
+Größenordnung, andere Partie. Das ist genau der Unterschied, den die Fremdlast
+macht, und genau der Grund, warum die Wochenzahlen aus der Vorprobe keine
+Belegzahlen sind und diese hier es ist.
+
+## Auflage 3, am Bildschirm belegt — die Anrechnung wirkt
+
+Der Siegelangriff auf 1970 spielt eine aufsteigende Hand, die auf jeder Achse
+die teuerste bezahlbare Karte nimmt — also genau die Hand, für die die Ratsche
+gedacht ist. Sie kauft `fuehrung:labor` mit der Maus. Alle 200 Ablesungen des
+Knopfes `sud:fuehrung:rechner` aus diesem Lauf, nach Preis und Zustand sortiert:
+
+| was am Knopf steht | abgeschaltet | Maus trifft | Ablesungen |
+|---|---|---|---|
+| `−118.000 DM` (vor dem Labor) | ja | ja | 151 |
+| `−76.000 DM` (nach dem Labor, Kasse reicht nicht) | ja | ja | 29 |
+| **`−76.000 DM`** (nach dem Labor, Kasse reicht) | **nein** | **ja** | **20** |
+
+**Die teuerste unwiderrufliche Karte des Spiels steht in 20 Ablesungen aktiv
+und von der Maus erreichbar da** — die Karte, die der Kritiker in 800
+gemessenen Wochen kein einziges Mal anfassen konnte. Der Weg dorthin ist die
+Leiter: erst das Labor für 42.000, dann der Rechner für die Differenz. Beides
+zusammen kostet 118.000 — genau den Listenpreis, der weiter am Schild steht.
+
+Dazu die 400-Wochen-Partie der *reichen* Hand, die auf jeder Achse die letzte
+Karte anpeilt und das Labor deshalb überspringt: dort stand `rechner` in
+**7 von 400** Wochen aktiv und erreichbar, weil die Kasse 118.000 überschritt
+(Vorprobe). Die *arme* Hand erreicht ihn erwartungsgemäß nie — sie kauft nichts,
+ihre Kasse bleibt unter 86.000, und ohne Labor gibt es keine Anrechnung. Das ist
+kein Mangel, sondern die Aussage der Karte.
+
 ## DIE KLEMME, mit seinem eigenen Suchgerät gesucht
 
 `werkbank/schuss/sud-w6/klemme.mjs`, unverändert, 200 Wochen je Epoche, durch
