@@ -1001,4 +1001,9 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
   .fu-brett .knopf { flex-wrap: wrap; }
   .fu-brett .knopf .preis { margin-left: auto; }
   .fu-fracht { flex-wrap: wrap; }
+  /* „Halber Wagen · bis 60 hl" ist bei 12 px 132 px breit und stand in
+     einer Zeile, die 117 px hatte. Nur der Wagen — auf den Adresskarten
+     sind die Beschriftungen kurz, und dort kostet jede zweite Zeile eine
+     ganze Adresse aus der sichtbaren Liste. */
+  .fu-wagen .knopf .wort { white-space: normal; line-height: 1.14; }
 }

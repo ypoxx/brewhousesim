@@ -439,6 +439,51 @@ Ein zweiter ungenutzter Baum neben dem ersten hilft niemandem.
 und fünf Stücke zugleich; Welle 4 hat vier offene Stücke und die Wellenzahl ist
 nicht erreicht.
 
+### NACHTRAG 4. August — Frage (G) und das fünfte Zielbild
+
+Der Auftraggeber hat gefragt, ob eine weitere Epoche fehlt, weil sich seit 1970
+viel geändert hat. Die Aufsicht hat gemessen statt entworfen, Befund in
+`EPOCHENBOGEN.md` §4 (G):
+
+| | |
+|---|---|
+| Epoche IV beansprucht **1914–2025** | `kern/welt.js:39` |
+| ihr Schaujahr ist **1970** | dito |
+| eine Partie trägt 3–14 Braujahre | Messung 3.8. |
+| ⇒ **kein Spielstand erreicht je ein Jahr nach ~1984** | Rechnung aus beidem |
+
+`KONZEPT.md` trägt den Befund im eigenen Korrekturteil längst: *„Bedeuten ist das
+Kernverb der Gegenwart, nicht der 1970er — was zugleich erklärt, warum Epoche IV
+in allen sechs Entwürfen nur Epoche III mit anderer Typografie war."* Die Frage
+ist deshalb nicht „hängen wir eine fünfte an", sondern ob Epoche IV **zwei Verben
+trägt und darum zu groß ist**. Kosten gezählt, damit niemand „ist ja nur eine
+Zeile" sagt: **25 Datentabellen in acht Dateien** tragen einen Schlüssel `4:` und
+fallen per `|| [4]` **still** zurück; dazu vier Stellen in `kern/ton.js`.
+
+**Gebaut wurde davon nichts.** Was es gibt, ist die Latte dafür:
+**`zielbild/05-2025.jpg`** — derselbe Ort in der Gegenwart. Drei Würfe, alle drei
+im `zielbild/README.md` verzeichnet; der erste ging gegen den Stilanker `03-1884`
+und **baute die Stadtmauer wieder geschlossen auf**. Deshalb ist dieses eine
+Blatt von `04-1970.jpg` abgeleitet: die Gegenwart schreibt 1970 fort.
+
+Zwei Nebenbefunde aus derselben Arbeit, beide im `zielbild/README.md`:
+1. Der Nachbesserungsschritt hat zwei Schilder zerwürfelt (Kirche → „CU NEHKER",
+   „BRAUEREI ADLER" verschwunden). **Bewusst nicht nachgewürfelt** — ein vierter
+   Wurf setzt die Kopfleiste und vier korrekte Schilder aufs Spiel. Dieselbe
+   Abwägung wie bei „GEGR. 1356" im 1884er Blatt.
+2. **Die HUD-Zahlen der Zielbilder stimmen nur bei zwei von vier** mit
+   `kern/welt.js:140` überein — 1350 und 1884 ja, 1600 und 1970 nein. Genau die
+   beiden, die damals neu erzeugt wurden. Sie sind Anschauung, keine
+   Spezifikation; wer sie für Startwerte hält, irrt.
+
+**Ein PR lässt sich für diesen Zweig nicht mehr anlegen.** GitHub lehnt ab:
+*„has no history in common with `claude/project-setup-apis-p51a0f`"*. Die
+Wurzel-Commits sind verschieden (`cf4a54e` gegen `1a3badd`); PR #2 war noch
+möglich und wurde am 3.8. ohne Merge geschlossen. Reparieren ginge nur mit
+`merge --allow-unrelated-histories` oder einem Rebase auf die fremde Wurzel —
+beides schreibt die Laufgeschichte um und ist **nicht** die Entscheidung der
+Aufsicht. Dem Auftraggeber gemeldet, unangetastet gelassen.
+
 ---
 
 ## WELLE 4 IST DURCH — DAS WELLENZIEL IST ERREICHT (3. August 2026, abends)

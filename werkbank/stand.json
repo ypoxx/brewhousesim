@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T12:01:22+00:00",
- "phase": "Welle 6 — vier Builder. DIE LESBARKEIT hat die vierte Latte zum ersten Mal bearbeitet: Knöpfe unter der Zielfläche von 246 auf 14 von 334, aber die Schriftzahl blieb bei 1.899 stehen, weil stuecke/fuhre.js:2460 die Skalierungsformel abschreibt statt sie zu lesen — 771 der zu kleinen Knoten liegen allein dort. DIE FUHRE arbeitet jetzt an dieser einen Zeile und an ihren eigenen Schriftregeln. DER SUD hat vier Auflagen plus eine fünfte nachgereicht: seine CSS-Datei unterbietet den neuen Knopfboden und behält als einziges Stück sieben Knöpfe unter 24 px. DER KLANG arbeitet weiter an der Tonfrage.",
+ "stand": "2026-08-04T12:26:28+00:00",
+ "phase": "Welle 6 — zwei Builder schreiben noch (DER SUD r3, DIE FUHRE), beide um 12:26 UTC lebendig. Zwischenstände laufend gesichert, das Abnahmetor lief vor jedem Commit: vier Epochen laden, lage=0, keine Konsolenfehler. Neu daneben: das fünfte Zielbild zielbild/05-2025.jpg — derselbe Ort in der Gegenwart, mit Verbrauchermarkt, Solar auf jedem Dach und einer Adler-Anlage, die inzwischen größer ist als die eigene. Es entscheidet nichts, es macht Frage (G) des Epochenbogens prüfbar: Epoche IV beansprucht 1914–2025, hat aber Schaujahr 1970 — und weil eine Partie 3 bis 14 Braujahre trägt, erreicht kein Spielstand je ein Jahr nach ~1984.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T11:57:38+00:00",
-   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 2 · läuft — Fehler 2 behoben und mit 69 Pruefungen bei 1920x937, 1600x1000 und 2752x1536 belegt: die Georgi-Tafel sperrt den Hintergrund jetzt wirklich (Deckel .fu-sperre ueber der ganzen Buehne, WEITER wird von elementFromPoint nicht mehr getroffen, Mausklick UND Leertaste UND Eingabetaste bewegen die Uhr nicht mehr), Schliessweg per KLICK (Knopf klebt im Fuss, scrollt nicht weg) UND per ESCAPE. Fehler 1 ist NICHT die Fuhre: der deckende H2 und der gedeckte Schliessknopf liegen beide in fach-blatt-gegner > .gg-blatt > .gg-bkopf, also in gegner.js/gegner.css — Regel 3 verbietet der Fuhre diese Dateien. Er reproduziert auch nicht mehr (12 Epochen-x-Aufloesungs-Kombinationen plus erzwungener Langtext: Knopf immer erreichbar, Klick schliesst immer)."
-  },
   {
    "zeit": "2026-08-01T11:57:54+00:00",
    "text": "ZUSTAENDIGKEIT (Aufsicht bitte schlichten) — Fehler 1 gehoert DEM GEGNER, nicht der Fuhre. Gemessen mit Playwright: der deckende H2 ist 'fach-blatt-gegner > div.blatt.gg-blatt > div.gg-bkopf > div > h2', der gedeckte Knopf ist 'div.gg-bkopf > div.gg-reiter > button' — beide in spiel/stuecke/gegner.js und spiel/stil/gegner.css. Regel 3 verbietet der Fuhre diese Dateien; sie hat sie nicht angefasst. Zwei Befunde fuer den Gegner-Builder: (1) Der Fehler reproduziert im heutigen Stand NICHT mehr — 4 Epochen x 3 Aufloesungen, dazu beide Haeuser in 1970, Schliessknopf in allen 14 Faellen von elementFromPoint getroffen und per Klick geschlossen; die Runde-2-Arbeit der STADT hat die Kopfzeile mitverschoben. (2) Die Anfaelligkeit steht aber noch im Blatt: '.gg-bkopf' ist ein Flex-Streifen, der Textblock daneben hat 'min-width:auto' und '.gg-reiter' hat 'flex:none' — wird der Erbspruch in .gg-unter einmal laenger als der Platz, schiebt sich der Textblock ueber die Reiterknoepfe statt zu schrumpfen. Ein 'min-width:0' auf dem Textblock macht den Fehler dauerhaft unmoeglich."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-04T12:01:22+00:00",
    "text": "Welle 6 — vier Builder. DIE LESBARKEIT hat die vierte Latte zum ersten Mal bearbeitet: Knöpfe unter der Zielfläche von 246 auf 14 von 334, aber die Schriftzahl blieb bei 1.899 stehen, weil stuecke/fuhre.js:2460 die Skalierungsformel abschreibt statt sie zu lesen — 771 der zu kleinen Knoten liegen allein dort. DIE FUHRE arbeitet jetzt an dieser einen Zeile und an ihren eigenen Schriftregeln. DER SUD hat vier Auflagen plus eine fünfte nachgereicht: seine CSS-Datei unterbietet den neuen Knopfboden und behält als einziges Stück sieben Knöpfe unter 24 px. DER KLANG arbeitet weiter an der Tonfrage."
+  },
+  {
+   "zeit": "2026-08-04T12:26:28+00:00",
+   "text": "Welle 6 — zwei Builder schreiben noch (DER SUD r3, DIE FUHRE), beide um 12:26 UTC lebendig. Zwischenstände laufend gesichert, das Abnahmetor lief vor jedem Commit: vier Epochen laden, lage=0, keine Konsolenfehler. Neu daneben: das fünfte Zielbild zielbild/05-2025.jpg — derselbe Ort in der Gegenwart, mit Verbrauchermarkt, Solar auf jedem Dach und einer Adler-Anlage, die inzwischen größer ist als die eigene. Es entscheidet nichts, es macht Frage (G) des Epochenbogens prüfbar: Epoche IV beansprucht 1914–2025, hat aber Schaujahr 1970 — und weil eine Partie 3 bis 14 Braujahre trägt, erreicht kein Spielstand je ein Jahr nach ~1984."
   }
  ]
 }
