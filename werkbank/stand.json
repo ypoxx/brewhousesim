@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T22:22:45+00:00",
- "phase": "Welle 6 — der blinde Kritiker für DIE FUHRE misst weiter gegen den eingefrorenen Stand 7440a09, DER SUD an seiner Nacharbeit. Beide um 22:20 UTC lebendig. Das Messfenster hält, was es soll, und man sieht auch seinen Preis: DER SUD hält es seit 28 Minuten mit einem 400-Wochen-Lauf, der Kritiker wartet seit sechs Minuten davor statt danebenzumessen. Nachgesehen statt angenommen, ob der Halter hängt: sein Browser ist frisch und sein Renderer bei 43 Sekunden CPU — er arbeitet, hat aber innerhalb desselben Laufs mindestens einmal den Browser neu gestartet und noch keine Datei geschrieben. Nichts liegt uncommittet, das Abnahmetor ist viermal offen.",
+ "stand": "2026-08-04T23:22:16+00:00",
+ "phase": "Welle 6 — der blinde Kritiker für DIE FUHRE ist bei den letzten rho-Läufen seiner Geräteprobe, DER SUD misst weiter an seiner Nacharbeit. Beide um 23:21 UTC lebendig, das Messfenster serialisiert sie unverändert: der Kritiker hält es, DER SUD wartet davor. Sein Urteil steht bereits mit 43 Kilobyte geschrieben und wird laufend gesichert — was in der Datei steht, überlebt einen Reset, sein Prozess nicht. Nichts liegt uncommittet, das Abnahmetor ist viermal offen, der eingefrorene Stand liefert weiterhin 7440a09.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T14:27:25+00:00",
-   "text": "GEGNER R1: Abschlag jetzt bei jeder Lieferung statt am Jahresende, hart gedeckelt auf 3 % des Jahresumsatzes (ZUSTAENDIGKEIT §4). Vorsprungs-Mechanik und ein kostenloser Zug je Braujahr eingebaut."
-  },
   {
    "zeit": "2026-08-01T14:27:35+00:00",
    "text": "GEGNER R1 meldet an die Aufsicht: (a) welt.js schreibt Adressnamen ohne Umlaute — 'Faehrhaus am Fluss', 'Brueckenwirt', 'Muehlschenke', 'Bahnhofsgaststaette', 'Adler-Braeu AG'. Sie stehen in jedem Stück im Bild; nur der Kern kann sie richtigstellen. (b) DIE FUHRE löst nach drei mageren Jahren die Bindung einer Adresse per welt.binde(k,null) — auch dann, wenn die Bindung dem Adler gehört. Der Gegner verliert dadurch Besitz, den nicht der Spieler ihm genommen hat. (c) DIE STADT legt fremde Ortsmarken auf Pflöcke und lässt sie beim Laden ruhen; DER GEGNER hat sich mit dem vorgesehenen data-frei nur für Sitz, Hof, Band und Zeiger abgemeldet, die Giebelschilder bleiben im Pflock-System."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-04T22:22:45+00:00",
    "text": "Welle 6 — der blinde Kritiker für DIE FUHRE misst weiter gegen den eingefrorenen Stand 7440a09, DER SUD an seiner Nacharbeit. Beide um 22:20 UTC lebendig. Das Messfenster hält, was es soll, und man sieht auch seinen Preis: DER SUD hält es seit 28 Minuten mit einem 400-Wochen-Lauf, der Kritiker wartet seit sechs Minuten davor statt danebenzumessen. Nachgesehen statt angenommen, ob der Halter hängt: sein Browser ist frisch und sein Renderer bei 43 Sekunden CPU — er arbeitet, hat aber innerhalb desselben Laufs mindestens einmal den Browser neu gestartet und noch keine Datei geschrieben. Nichts liegt uncommittet, das Abnahmetor ist viermal offen."
+  },
+  {
+   "zeit": "2026-08-04T23:22:16+00:00",
+   "text": "Welle 6 — der blinde Kritiker für DIE FUHRE ist bei den letzten rho-Läufen seiner Geräteprobe, DER SUD misst weiter an seiner Nacharbeit. Beide um 23:21 UTC lebendig, das Messfenster serialisiert sie unverändert: der Kritiker hält es, DER SUD wartet davor. Sein Urteil steht bereits mit 43 Kilobyte geschrieben und wird laufend gesichert — was in der Datei steht, überlebt einen Reset, sein Prozess nicht. Nichts liegt uncommittet, das Abnahmetor ist viermal offen, der eingefrorene Stand liefert weiterhin 7440a09."
   }
  ]
 }
