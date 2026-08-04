@@ -122,6 +122,37 @@ schreibt eine Größe unter 12 px; sie entstehen alle erst beim Zeichnen. Wer hi
 baut, fasst zuerst `--s` an — und misst danach nach, ob die Bilder noch zu ihrer
 Fläche passen.
 
+> ### DIESE LATTE MISST OHNE ROLLLEISTE — ein Befund über sie selbst
+>
+> *Gemeldet vom blinden Kritiker DIE FUHRE am 4. August, von der Aufsicht im
+> Quelltext nachgeprüft und bestätigt.*
+>
+> **`--hide-scrollbars` ist Playwrights eigene Startvorgabe**
+> (`playwright-core/lib/server/chromium/chromium.js:284`) — niemand hat sie
+> gesetzt, und niemand hat sie bemerkt. Damit ist **jede Zahl dieser Latte in
+> einem Browser entstanden, der keine Rollleiste zeichnet**: die Erstmessung
+> oben, die Zahlen der Builder und die Gegenmessung der Aufsicht gleichermaßen.
+>
+> Ein echter Browser nimmt rund 15 px Breite weg. Der Kritiker hat mit
+> gezeichneter Rollleiste gemessen: `.fu-kerbsatz` (`fuhre-zusatz.css:178`,
+> `line-clamp: 2`) schneidet bei **1366×768** in **1350 und 1884** seine dritte
+> Zeile ab, bei 1280×800 sind es vier Kästen — alles Kästen, die ohne Rollleiste
+> als passend gelten.
+>
+> **Folge, bis das Gerät repariert ist:** jede Zahl dieser Latte ist eine
+> **Untergrenze**, kein Ergebnis. Wer sie zitiert, schreibt „ohne Rollleiste
+> gemessen" dazu. Ein bestandener Wert beweist nichts.
+>
+> **Zweiter Fund am selben Gerät:** `lesbarkeit.mjs:26–32` prüft
+> `overflow === 'hidden' || overflowY === 'hidden'`. Ein Kasten mit
+> `overflow-y: hidden` und `overflow-x: auto` **rollt** und wird trotzdem als
+> abgeschnitten gezählt. Die Überlaufzahlen sind dadurch nach oben verfälscht,
+> während die Schriftzahlen nach unten verfälscht sind.
+>
+> **Repariert wird, wenn kein Agent daran misst** — die Regel dieses Laufs, und
+> sie gilt gerade hier: das Maß zu ändern, während gemessen wird, entwertet beide
+> Messungen.
+
 ## Sperrliste — keine Latte
 
 > Der Braukessel ist eine **offene Pfanne** und keine Destillierblase. Emailschilder gibt es

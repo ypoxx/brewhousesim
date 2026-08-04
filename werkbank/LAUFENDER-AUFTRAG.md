@@ -46,6 +46,61 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DIE FUHRE IST DURCH, BLIND GEPRÜFT — 4. August, 23:5x UTC
+
+**Urteil: BESTEHT MIT AUFLAGE**, vier Auflagen, in
+`werkbank/urteile/welle6-die-fuhre-urteil.md` (45 KB). Gemessen durchgehend am
+eingefrorenen Stand `7440a09`, Marke vor und nach dem Lauf geprüft, Messwerte als
+`.json` unter `werkbank/schuss/fuhre-blind-w6/` — nicht in `/tmp`.
+
+**Was das Stück erreicht hat**, vom Kritiker am Stück getrennt gezählt: **0
+Textknoten unter 12 px · 0 von 20–24 aktiven Knöpfen unter der Zielfläche · 0
+abgeschnittene Kästen**, in allen vier Epochen, während im selben Bild 277–284 zu
+kleine Knoten fremder Stücke stehen. Die Aufsicht hat die Gesamtzahlen
+unabhängig nachgemessen: **92 / 1128 / 0** bei 1366×768, Ziffer für Ziffer wie
+gemeldet, und `fu:` taucht in der Aufschlüsselung nirgends mehr auf.
+
+**ZWEI BEFUNDE ÜBER DIE MESSGERÄTE DER AUFSICHT SELBST — der wichtigere Teil.**
+Beide stehen im Wortlaut in `gauntlet/MESSLATTE.md` bei Latte 4:
+
+1. **`--hide-scrollbars` ist Playwrights Startvorgabe**
+   (`chromium.js:284`), von der Aufsicht im Quelltext bestätigt. **Jede
+   Lesbarkeitszahl dieses Laufs ist ohne Rollleiste entstanden** — die des
+   Builders, die der Latte und die Gegenmessung der Aufsicht gleichermaßen. Mit
+   gezeichneter Rollleiste schneidet `.fu-kerbsatz` bei 1366×768 in 1350 und 1884
+   ab. **Jede Zahl dieser Latte ist damit eine Untergrenze, kein Ergebnis.**
+2. `lesbarkeit.mjs:26–32` zählt einen Kasten mit `overflow-y: hidden` und
+   `overflow-x: auto` als abgeschnitten, obwohl er rollt.
+
+> **Repariert wird beides erst, wenn kein Agent daran misst.** DER SUD läuft
+> noch. Wer das Maß ändert, während gemessen wird, entwertet beide Messungen.
+
+**LATTE 2 — der Kritiker sagt FÄLLT DURCH, und er widerspricht der eingetragenen
+Tabelle.** Zwölf Läufe, sequenziell durchs Messfenster, Spannweite 0,000:
+
+| Epoche | 12 Braujahre | 13 | 14 | in MESSLATTE eingetragen |
+|---|---|---|---|---|
+| **1350** | **+0,762** | +0,692 | +0,591 | gleich |
+| 1600 | +0,189 | −0,066 | −0,156 | **gewandert** |
+| 1884 | +0,168 | +0,346 | +0,393 | gleich |
+| **1970** | **+0,699** | +0,637 | +0,653 | **+0,427 / +0,154 / +0,275** |
+
+1350 reißt bei zwölf Braujahren, 1970 steht **ein Tausendstel** unter der Latte.
+Zwei Epochen sind gewandert, und **wer sie bewegt hat, ist nicht feststellbar** —
+genau der schon dokumentierte Fall „zwei Stücke füttern dieselbe Kennzahl".
+**Die Aufsicht misst 1350 und 1970 gerade selbst nach**, drei Läufe je Epoche,
+sequenziell durchs Fenster, am selben eingefrorenen Stand; Rohdaten nach
+`werkbank/schuss/aufsicht/welle6-fuhre-nach/rho/`.
+
+**BEFUND AUSDRÜCKLICH AN DIE AUFSICHT, nicht an einen Builder:** beim Laden sind
+alle vier FUHRE-Bretter zugeklappt, und dabei melden **20–24 Züge je Epoche
+`disabled = false`, während 0 davon mit der Maus erreichbar sind** — bei jeder
+Fenstergröße. **Die geplante `data-soll-aus`-Kernänderung schließt diese Hälfte
+nicht:** sie trennt „das Spiel sagt nein" von „verdeckt", aber nicht „bedienbar"
+von „nur im DOM". Wer Spalte (a) der zweiten Latte zählt, zählt weiter zu viel.
+
+---
+
 ## SECHSTER CONTAINER-RESET, 4. August 20:21 UTC — und der grüne Haken dazu
 
 **Der Reset hat eine ALTE PLATTE zurückgespielt.** Der Arbeitsbaum stand danach
