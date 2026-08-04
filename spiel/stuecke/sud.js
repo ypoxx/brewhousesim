@@ -928,6 +928,32 @@
       return o;
     },
     guete: function () { return Z.guete; },
+
+    /* WAS EIN ZUG DIESES STUECKS WIRKLICH KOSTET — Muenze und Bier
+       nebeneinander, fuer jeden Zaehler in einer Zeile:
+         BRAUHAUS.sud.preise()
+       Auflage 4 des blinden Kritikers. `data-preis` allein sagt es nicht:
+       der Anstich kostet ein FASS und keinen Pfennig, und ein Zaehler, der
+       nur Muenze liest, haelt die haeufigste Bierentscheidung des Spiels
+       fuer kostenlos. Gelesen wird der Bildschirm, nicht der Quelltext —
+       damit die Zahl dieselbe ist, die ein Kritiker mit der Maus findet. */
+    preise: function () {
+      var l = [];
+      document.querySelectorAll('button[data-zug^="sud:"]').forEach(function (el) {
+        var geld = el.getAttribute('data-preis');
+        var art = el.getAttribute('data-preis-art');
+        if (!geld && !art) return;
+        l.push({
+          zug: el.getAttribute('data-zug'),
+          geld: geld ? Math.abs(+geld) : 0,
+          fass: art === 'fass' ? +el.getAttribute('data-preis-menge') : 0,
+          wort: el.getAttribute('data-preis-wort') || (geld ? B.welt.geld(Math.abs(+geld)) : ''),
+          offen: !el.disabled,
+          sollAus: el.getAttribute('data-soll-aus') === '1'
+        });
+      });
+      return l;
+    },
     zustand: function () { return Z; }
   };
 
@@ -1311,6 +1337,7 @@
         z.appendChild(knopf({
           text: ch.schnitt.text + ' · −' + B.welt.menge(Math.max(1, Math.round(b.fass / 3))),
           zug: 'sud:charge-schnitt:' + b.nr, klasse: 'sud-tat klein',
+          fass: Math.max(1, Math.round(b.fass / 3)),
           titel: ch.schnitt.titel, tu: function () { chargeSchnitt(b); }
         }));
         ck.appendChild(z);
@@ -1638,6 +1665,7 @@
           + (ausBottich ? ' · ohne Fass' : ' · ' + einFass),
       zug: 'sud:zettel-anstich',
       klasse: 'sud-tat klein voll halb',
+      fass: ausBottich ? 0 : 1,
       titel: ausBottich ? e.fuehren.titel : (e.anstich.titel + ' Kostet ' + einFass + '.'),
       aus: !frei || (!ausBottich && !lager),
       tu: function () { if (ausBottich) fuehreHefe(); else anstich(true); }
@@ -1649,6 +1677,7 @@
           + ' · ' + einFass,
       zug: 'sud:zettel-hefe-fass',
       klasse: 'sud-tat klein voll halb',
+      fass: 1,
       titel: e.anstich.titel + ' Kostet ' + einFass + ' aus dem Keller — '
            + (ausBottich ? 'mehr als die Erntehefe hergibt, und es ist verkäufliches Bier.'
                          : 'das älteste wäre ohnehin bald verdorben, gibt dafür nur die Hälfte.'),
@@ -1691,6 +1720,7 @@
         text: chd.schnitt.text + ' · −' + B.welt.menge(Math.max(1, Math.round(chb.fass / 3))),
         zug: 'sud:zettel-charge-schnitt',
         klasse: 'sud-tat klein voll halb',
+        fass: Math.max(1, Math.round(chb.fass / 3)),
         titel: chd.schnitt.titel,
         tu: function () { chargeSchnitt(chb); }
       }));

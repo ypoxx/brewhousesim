@@ -6,10 +6,47 @@
    Bezugsformat der Buehne: 2752 x 1536.
    --s ist EIN Bezugspixel. Alle Groessen in Vielfachen davon, dann waechst
    die Schrift mit dem Fenster mit und die Aufnahme in 2752x1536 stimmt.
+
+   ---------------------------------------------------------------------------
+   DIE LESBARKEIT (vierte Latte, 4. August 2026) — zwei Bezugspixel statt einem
+   ---------------------------------------------------------------------------
+   Gemessen wird bei 1366x768. Dort war --s = 0,496 px, und weil JEDE Schrift
+   im Spiel als calc(var(--s) * N) steht, hiess das: kleinste Schrift 5,0 px,
+   246 von 334 aktiven Knoepfen unter 24x24 px, 1.893 Textknoten unter 12 px.
+
+   Nur EINE Zahl anzuheben geht nicht: --s traegt auch die Bretter, die
+   Tafeln und die Abstaende. Eine Untergrenze von 1,21x kostet bereits
+   messbar Ueberlauf; die 2,42x, die noetig waeren, damit das kleinste
+   Vielfache (N=10) 12 px erreicht, verschieben 35 Dinge ueber den Rand.
+
+   Deshalb ZWEI Masse:
+
+     --s0  das reine Buehnenpixel, streng proportional, OHNE Untergrenze.
+           Daran haengt alles, was zu einem BILD passen muss: die Platte,
+           die Hofbauten, der Rauch. Ein Boden hier wuerde die Bauten von
+           ihrer gemalten Flaeche loesen — genau der Fehler, vor dem die
+           Bildlatte steht.
+     --s   dasselbe Mass MIT Boden, fuer alles Beschriftete und Bedienbare.
+           Oberhalb von 2296 x 1282 sind beide identisch; die Aufnahme in
+           2752 x 1536, gegen die Latte 1 blind vergleicht, ist Pixel fuer
+           Pixel unveraendert.
+
+   Ein Stueck, das seinem Unterbaum ein eigenes Bezugspixel gibt (DIE FUHRE
+   tut das in fuhre.js), rechnet NICHT die Formel nach, sondern schreibt
+   calc(<faktor> * var(--s0)) — sonst faellt der Boden unter ihm weg.
    =========================================================================== */
 
 :root {
-  --s: min(calc(100vw / 2752), calc(100vh / 1536));
+  /* Das reine Buehnenpixel. Bilder und Bauten. Nie mit Boden. */
+  --s0: min(calc(100vw / 2752), calc(100vh / 1536));
+
+  /* DER BODEN. 0,60 px ist der gemessene Punkt, an dem die Bedienung so viel
+     gewinnt wie das Bild verliert — er entspricht einer Buehne von
+     2296 x 1282 und wirkt damit auf 1366x768 als Faktor 1,21.
+     Wer ihn anhebt, misst danach Ueberlauf und Ueberdeckung nach; die Reihe
+     steht in werkbank/urteile/welle6-die-lesbarkeit-bau.md. */
+  --s-boden: 0.6px;
+  --s: max(var(--s-boden), var(--s0));
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
