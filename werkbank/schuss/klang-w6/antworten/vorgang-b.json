@@ -1,0 +1,411 @@
+[
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 2,
+    "sicher": 90
+   },
+   "b": {
+    "da": true,
+    "sekunde": 6,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 14,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [
+   {
+    "sekunde": 21,
+    "klang": "Schnelles Klicken einer Computermaus / Tastatur",
+    "warum": "Das mechanische Klickgeräusch moderner Computereingabegeräte existierte im dargestellten mittelalterlichen Setting noch nicht."
+   }
+  ],
+  "datei": "e1-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 1,
+    "sicher": 90
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": true,
+    "sekunde": 7,
+    "sicher": 95
+   },
+   "d": {
+    "da": true,
+    "sekunde": 24,
+    "sicher": 90
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [],
+  "datei": "e2-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "c": {
+    "da": true,
+    "sekunde": 21,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": true,
+    "sekunde": 10,
+    "sicher": 100
+   },
+   "f": {
+    "da": true,
+    "sekunde": 18,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1800,
+  "anachronismen": [
+   {
+    "sekunde": 14,
+    "klang": "Modernes Zughorn / Drucklufthorn",
+    "warum": "Die Geräuschkulisse (Dampfmaschinen, Webstühle) deutet auf das 19. Jahrhundert (Industrialisierung) hin, in dem Züge mit Dampfpfeifen ausgestattet waren. Das hier zu hörende laute Signal stammt jedoch von einem modernen, mehrklangigen Drucklufthorn, wie es erst bei Diesellokomotiven im 20. Jahrhundert aufkam."
+   }
+  ],
+  "datei": "e3-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 90
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [
+   {
+    "sekunde": 0,
+    "klang": "Moderner LKW-Motor / Verbrennungsmotor",
+    "warum": "Ein motorisiertes Fahrzeug passt nicht in ein historisches/mittelalterliches Setting, in dem eigentlich Pferdefuhrwerke genutzt wurden."
+   },
+   {
+    "sekunde": 0,
+    "klang": "Funk/Pop-Hintergrundmusik mit Schlagzeug und Bass",
+    "warum": "Moderne elektronische Beats und Instrumente fallen komplett aus der historischen Zeit."
+   },
+   {
+    "sekunde": 6,
+    "klang": "Elektronisches Telefonklingeln",
+    "warum": "Telefone und elektronische Klingeltöne wurden erst im späten 19. bzw. 20. Jahrhundert erfunden."
+   },
+   {
+    "sekunde": 15,
+    "klang": "Elektrische Alarmglocke / Schulgong",
+    "warum": "Eine laute, elektrisch betriebene Klingel gab es im Mittelalter noch nicht."
+   }
+  ],
+  "datei": "e4-gespielt.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e1-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": true,
+    "sekunde": 0,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e2-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1500,
+  "anachronismen": [],
+  "datei": "e3-still.wav"
+ },
+ {
+  "punkte": {
+   "a": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "b": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "c": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "d": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "e": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "f": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "g": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   },
+   "h": {
+    "da": false,
+    "sekunde": null,
+    "sicher": 100
+   }
+  },
+  "jahr_geschaetzt": 1400,
+  "anachronismen": [],
+  "datei": "e4-still.wav"
+ }
+]
