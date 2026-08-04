@@ -589,6 +589,29 @@ Aufsicht ihre Zahlen hatte — zwei Wege, ein Befund.
 > **Kontrolle des Geräts**. Wer jetzt Streuung misst, hat ein kaputtes Messgerät
 > und soll es suchen, statt die Streuung hinzunehmen.
 
+> **ERWEITERUNG, 4. August 14:22 UTC — DIE REGEL BINDET AUCH DIE BUILDER
+> UNTEREINANDER, und niemand erzwingt das.** Beim Selbst-Check gefunden: DIE
+> FUHRE fuhr `linie.mjs 4 400` (13:20 min gelaufen) und DER SUD gleichzeitig
+> `sudhand.mjs 4 400` (8:42 min), Load average 3,8. **Jeder für sich sequenziell
+> — zueinander parallel.** Genau die Bedingung, die unten mit Zahlen belegt ist.
+> Die Regel war bisher an die Aufsicht adressiert („nicht selbst messen, solange
+> ein Kritiker misst"); dass **zwei Builder derselben Welle** einander die
+> Messung verderben, stand nirgends, und der Wellenplan trennt sie nicht.
+>
+> **Was die Aufsicht getan hat:** beide Läufe *nicht* abgebrochen (das hätte 22
+> Minuten Messung vernichtet), sondern beiden Buildern die Bedingung gemeldet
+> mit drei Punkten — laufen lassen, die Zahlen aus diesem Satz **nicht** als
+> Belegzahl nehmen, den Satz wiederholen, sobald der andere fertig ist. Dazu die
+> Trennung, was überhaupt betroffen ist: **alles, was an einer Klickfolge über
+> viele Wochen hängt** (ρ, Wochenzählungen, Trefferquoten über 400 Wochen) — und
+> was nicht: statische Ablesungen, Knopf- und Schriftgrößen, ein einzelner
+> Bildschirm in Woche 1, der Byte-für-Byte-Vergleich der ersten Latte.
+>
+> **Für den nächsten Wellenplan:** zwei Stücke, die beide eine
+> 400-Wochen-Messung brauchen, gehören nicht gleichzeitig in die Welle — oder
+> die Welle gibt ihnen getrennte Messfenster. Sonst ist die Zahl am Ende der
+> Runde nicht die des Spiels, sondern die der Maschine.
+
 > **ZWEITE MESSREGEL, 3. August spätabends: SEQUENZIELL MESSEN, NIE PARALLEL.**
 > Gemeldet von DER PREIS und mit Zahlen belegt: dieselbe Hand lieferte bei
 > **vier gleichzeitigen Browsern** ρ **+0,354 statt +0,393** und **+0,305 statt
