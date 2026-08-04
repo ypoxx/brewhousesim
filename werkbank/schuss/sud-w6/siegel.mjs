@@ -455,6 +455,20 @@ async function standSud() {
 await sudAuf();
 angriff.siegel = await standSud();
 
+/* Welche Karten das WORT „unwiderruflich" tragen — nur die zaehlen fuers
+   Siegel. `Z.fest` merkt sich jede BEZAHLTE Karte, auch eine `einmal`-Karte
+   (1970: `behandlung:filter`), und die darf man danach verlassen. */
+angriff.datenFest = await seite.evaluate(() => {
+  const e = window.BRAUHAUS.welt.zeit.epoche;
+  const E = window.SUD_DATEN.epochen[e];
+  const raus = {};
+  (E.achsen || []).forEach(a => a.optionen.forEach(o => {
+    raus[a.schluessel + ':' + o.k] = { fest: !!o.fest, einmal: !!o.einmal, preis: o.preis || 0,
+                                       hoechst: o.hoechst, sperrt: o.sperrt || null };
+  }));
+  return raus;
+});
+
 const festSchluessel = Object.keys(angriff.siegel.fest || {});
 for (const fs2 of festSchluessel) {
   const achse = fs2.split(':')[0], opt = fs2.split(':')[1];
@@ -570,5 +584,7 @@ fs.writeFileSync(ZIEL.replace(/\.json$/, '-angriff.json'), JSON.stringify(angrif
 const zurueck = angriff.versuche.filter(v => v.zurueck || v.zurueckEchteMaus);
 console.log(`ANGRIFF E${ep}: ${angriff.versuche.length} Versuche, ZURUECK GEKOMMEN: ${zurueck.length}`);
 zurueck.forEach(v => console.log('   !! ' + v.weg + ' ' + (v.ziel || '') + ' ' + v.vorher + ' -> ' + (v.nachher || v.nachEchterMaus)));
+console.log('   bezahlte Karten: ' + Object.keys(angriff.siegel.fest || {}).map(k =>
+  k + (angriff.datenFest[k] && angriff.datenFest[k].fest ? ' [UNWIDERRUFLICH]' : ' [nur bezahlt]')).join(', '));
 
 await browser.close();
