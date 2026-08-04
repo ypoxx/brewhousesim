@@ -2330,11 +2330,16 @@
     achsen().forEach(function (a) {
       a.optionen.forEach(function (o) {
         if (!o.preis || bezahlt(a, o) || verdraengt(a, o)) return;
-        if (!bester || o.preis < bester.preis) {
+        /* Gemeldet wird, was WIRKLICH abzubuchen ist — der Listenpreis
+           abzueglich der Anrechnung. In den Nenner der zweiten Latte gehoert
+           die Zahl, die am Knopf steht, sonst ist die Kennzahl eine
+           Behauptung (ZUSTAENDIGKEIT §24). */
+        var op = offenerPreis(a, o);
+        if (!bester || op < bester.preis) {
           /* Das Verfahren bewegt Rohstoff, Haltbarkeit und die Sorte im
              Fass — Lage, nicht Beiwerk. Getragen wird der Zug im
              Vorgabestand vom Kesselzettel, aufgeschlagen vom Brett. */
-          bester = { was: o.name, preis: o.preis, art: 'lage',
+          bester = { was: o.name, preis: op, art: 'lage',
                      zuege: ['sud:zettel-wechsel-kauf', 'sud:' + a.schluessel + ':' + o.k] };
         }
       });

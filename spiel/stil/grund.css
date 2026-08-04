@@ -62,11 +62,19 @@
   /* Das reine Buehnenpixel. Bilder und Bauten. Nie mit Boden. */
   --s0: min(calc(100vw / 2752), calc(100vh / 1536));
 
-  /* DER BODEN. 0,60 px ist der gemessene Punkt, an dem die Bedienung so viel
-     gewinnt wie das Bild verliert — er entspricht einer Buehne von
-     2296 x 1282 und wirkt damit auf 1366x768 als Faktor 1,21.
-     Wer ihn anhebt, misst danach Ueberlauf und Ueberdeckung nach; die Reihe
-     steht in werkbank/urteile/welle6-die-lesbarkeit-bau.md. */
+  /* DER BODEN — STEHT AUF NULL, UND ZWAR GEMESSEN.
+     Alle vier Epochen bei 1366x768, jeweils MIT dem Knopfboden weiter unten:
+
+       Boden      --s     <12px   <10px   Ueberlauf   Knopf<24   ueber Rand
+       aus      0,496px    1885    1800       91        14/334        1
+       0,55px   0,550px    1816    1561      121         8/332        2
+       0,60px   0,600px    1743    1262      131         8/332        8
+
+     Der Boden kauft 142 Textknoten und sechs Knoepfe — und bezahlt sie mit
+     vierzig abgeschnittenen Kaesten und sieben Dingen ueber dem Rand. Beides
+     sind Rissgruende derselben Latte. Solange die Stuecke ihre Schriftboeden
+     nicht gesetzt haben, ist das ein schlechtes Geschaeft.
+     Wer ihn anhebt, misst danach Ueberlauf UND Rand nach. */
   --s-boden: 0px;
   --s: max(var(--s-boden), var(--s0));
 
@@ -157,18 +165,21 @@ html, body {
 
 #ebene-platte { z-index: 10; }
 #ebene-bau    { z-index: 20; }
-
-/* DIE BILDEBENEN BEKOMMEN DEN BODEN NICHT.
-   Platte und Bauten sind ein Bild; ihre Groessen stehen in Prozent der Buehne
-   oder in Vielfachen des Bezugspixels, und beides muss streng proportional
-   bleiben, sonst steht ein Haus neben seiner gemalten Flaeche. Hier gilt
-   deshalb wieder das reine Mass. Alles Beschriftete und Bedienbare liegt in
-   'marken', 'hand', 'kopf' oder 'blatt' und behaelt den Boden. */
-#ebene-platte, #ebene-bau { --s: var(--s0); }
 #ebene-marken { z-index: 30; }
 #ebene-hand   { z-index: 40; }
 #ebene-kopf   { z-index: 50; }
 #ebene-blatt  { z-index: 60; }
+
+/* DIE BILDEBENEN BEKOMMEN DEN BODEN NIE.
+   Platte, Hofbauten und Rauch sind ein BILD; ihre Groessen stehen in Prozent
+   der Buehne oder in Vielfachen des Bezugspixels, und beides muss streng
+   proportional bleiben, sonst steht ein Haus neben seiner gemalten Flaeche —
+   genau der Fehler, vor dem die Bildlatte steht. Hier gilt deshalb immer das
+   reine Mass, auch wenn --s-boden oben eines Tages angehoben wird.
+   Alles Beschriftete und Bedienbare liegt in 'marken', 'hand', 'kopf' oder
+   'blatt' und liest --s. Solange der Boden 0 ist, aendert diese Zeile nichts;
+   sie ist die Sicherung, damit er ohne Nachdenken angehoben werden kann. */
+#ebene-platte, #ebene-bau { --s: var(--s0); }
 
 /* Ein Fach ist der Container GENAU EINES Stuecks in GENAU EINER Ebene.
    BRAUHAUS.ebene('marken','gegner') liefert es. */
