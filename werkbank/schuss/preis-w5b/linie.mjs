@@ -50,8 +50,19 @@ const WARTE = +(process.env.WARTE || 1);
    WARTE=3 auf der ruhigen Maschine, und beide sind Ziffer fuer Ziffer die
    des Kritikers. */
 const RUHE = process.env.RUHE !== '0';
-/* Die Hand, die Festlegungen WILL (Gegenprobe zu Auflage 4). */
+/* DIE HAND, DIE FESTLEGUNGEN WILL — in zwei Fassungen, weil die eine allein
+   in die Irre fuehrt.
+
+   WILL=1  die Hand des Kritikers (`festhand.mjs`): teuerste zulaessige
+           Festlegung, und die Angebote bleiben stehen, damit das Geld dafuer
+           da ist. Sie zeigt, was die Tafel HERGIBT — und sie verarmt dabei,
+           weil ein Haus, das nichts kauft, nichts erwirtschaftet.
+   WILL=2  dieselbe Linie wie das Vorbild, Angebote und alles — nur nimmt sie
+           zusaetzlich die BILLIGSTE Festlegung, die sie bezahlen kann, statt
+           nur die unter 45 im Hundert der Lade. Das ist der Spieler, der sein
+           Haus fuehrt UND seine Amtszeit nutzt. */
 const WILL = process.env.WILL === '1';
+const WILL2 = process.env.WILL === '2';
 async function ruhe(ms) {
   if (!RUHE) { await seite.waitForTimeout(ms); return; }
   await seite.waitForTimeout(Math.min(ms, 40));
@@ -234,6 +245,14 @@ for (let i = 0; i < WOCHEN; i++) {
         const b = feste.reduce((a, z) => (z.preis < a.preis ? z : a));   /* teuerste = kleinstes Vorzeichen */
         if (await klick(b.zug, 220)) { festGesetzt++; genommeneFest = b.zug; m = await schirm(); }
       }
+    } else if (WILL2) {
+      /* Alles wie das Vorbild — nur ohne die 45-Prozent-Faustregel: was das
+         Spiel zulaesst, nimmt diese Hand, und zwar das billigste davon. */
+      const feste = alle(m, /^preis:festlege:/).filter(z => z.preis !== null);
+      if (feste.length) {
+        const b = feste.reduce((a, z) => (Math.abs(z.preis) < Math.abs(a.preis) ? z : a));
+        if (await klick(b.zug, 220)) { festGesetzt++; genommeneFest = b.zug; m = await schirm(); }
+      }
     } else {
       const feste = alle(m, /^preis:festlege:/).filter(z => z.preis && Math.abs(z.preis) <= m.kasse * 0.45);
       if (feste.length) {
@@ -320,7 +339,7 @@ verh.forEach(v => { if (!eindeutig.some(e => e.jahr === v.jahr)) eindeutig.push(
 
 fs.writeFileSync(ZIEL, JSON.stringify({
   epoche: ep, hafen: HAFEN, saat: SAAT, wochen: reihe.length, fehler, abgebrochen,
-  will: WILL, zielGesetzt, festGesetzt, taxen,
+  will: WILL ? 1 : (WILL2 ? 2 : 0), zielGesetzt, festGesetzt, taxen,
   kasseMin: Math.min(...kassen), kasseMax: Math.max(...kassen),
   leiter: eindeutig,
   leiterRoh: roh,

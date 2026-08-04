@@ -474,6 +474,44 @@ var PREIS_DATEN = {
            Buergerhauses dieser Zeit. Eine Jahrtagsstiftung wurde einmal
            gestiftet, fuer ewige Zeiten gelesen — und fuer ewige Zeiten
            bezahlt. */
+        /* UND DIE KARTE, DIE 1350 GEFEHLT HAT WIE 1600 DER GUELTBRIEF.
+
+           Nachgemessen mit der Hand, die Festlegungen WILL: mit den beiden
+           Sprossen oben nimmt sie in vierzehn Jahren DREI statt zwei — und
+           steht danach trotzdem vor einer Wand, weil sie arm ist. Ihre Lade
+           steht ab 1357 zwischen 64 und 282 Pf, waehrend eine Hand, die
+           daneben auch noch Angebote nimmt, in denselben Jahren 333 bis 498
+           haelt. Der Grund ist die Hand und nicht die Tafel: wer nichts
+           kauft, erwirtschaftet nichts. Aber eine Tafel, auf der nur ein
+           reiches Haus je etwas anfassen kann, ist die Haelfte einer Tafel.
+
+           Der Kritiker hat selbst gesagt, woran es liegt: „1970 raeumt
+           dieselbe Hand 4 von 4 ab — moeglich nur, weil sie mit `konzern`
+           (+65.000 DM) anfaengt." 1884 hat `aktien`. 1600 hat seit heute den
+           Guelt­brief. **1350 hatte nichts.**
+
+           Und es darf NICHT derselbe Brief sein wie in 1600 — die erste
+           Regel dieser Datei sagt, dass zwischen zwei Epochen nichts
+           wiederzuerkennen sein darf ausser dem Ort. Der Rentenkauf gehoert
+           der Ordnung des 16. Jahrhunderts. Das Recht des 14. hat einen
+           eigenen Weg an Bargeld, und er ist derber: man verkauft eine
+           Pfruende. Ein alter Buerger legt sein Vermoegen auf den Tisch und
+           isst dafuer am Tisch des Hauses, bis er stirbt. Der Brief lautet
+           auf das HAUS und nicht auf den Mann — stirbt er, rueckt der
+           naechste nach. Deshalb ist die Last ewig und die Karte gehoert auf
+           diese Tafel.
+
+           `einmal: 8` — der Zufluss haengt an der Jahreslast, nicht am
+           Anschlag (`wende` in preis.js), und liegt damit in jedem
+           gemessenen Jahr weit ueber 45 im Hundert der Lade: die Vorbild-Hand
+           sieht ihn als Ausgabe und ruehrt ihn nie an. */
+        { k: 'pfruende', name: 'Die Pfründe im Haus', anteil: 0.0, ab: 1353,
+          was: 'Ein alter Bürger kauft sich ein: sein Vermögen heute, dafür Kost, Bett und Pflege bis an sein Ende.',
+          regel: 'Das Geld liegt heute in der Lade. Der Brief lautet auf das Haus und nicht auf den Mann — stirbt er, rückt der nächste nach.',
+          wirkung: { einmal: 8, ansehen: 4,
+            pflichtNeu: { k: 'pfruendkost', name: 'Kost und Pflege des Pfründners', art: 'fest', teil: 1.50,
+              sagt: 'Er isst mit, jeden Tag, und nach ihm der nächste.' } } },
+
         { k: 'jahrtag', name: 'Der Jahrtag in der Pfarrkirche', anteil: 0.50, ab: 1357,
           was: 'Ein Altar, eine Kerze, ein Eintrag ins Seelbuch: für ewige Zeiten wird für dieses Haus gelesen.',
           regel: 'Das Haus steht von heute an im Seelbuch und im Ansehen der Stadt, und die Pfarre nimmt sein Bier. Dafür geht an jedem Michaelistag der Jahrtag an sie ab.',
