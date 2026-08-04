@@ -1,0 +1,3092 @@
+[
+ {
+  "epoche": 1,
+  "breite": 1920,
+  "hoehe": 1080,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 1235,
+    "cw": 510,
+    "sh": 15,
+    "ch": 15,
+    "text": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wi"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "div.fu-notsud-zeile",
+    "zug": null,
+    "sw": 354,
+    "cw": 339,
+    "sh": 11,
+    "ch": 11,
+    "text": "0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die Pfanne"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 131,
+    "ch": 44,
+    "text": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verk"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 102,
+    "ch": 44,
+    "text": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast d"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 160,
+    "ch": 44,
+    "text": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. De"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 102,
+    "ch": 44,
+    "text": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fra"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 116,
+    "ch": 44,
+    "text": "Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das b"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 174,
+    "ch": 44,
+    "text": "Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "b",
+    "zug": null,
+    "sw": 32,
+    "cw": 32,
+    "sh": 34,
+    "ch": 32,
+    "text": "10"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 191,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 96,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 205,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "wollen 15 · im Keller liegen 4 Fass"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 137,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "ANSCHLAGTAFEL"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 170,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "mit Kreide an der Sudhauswand"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 101,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DER KELLER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 129,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "4 von 12 Fass · 4 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 131,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "OCHSENKARREN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 170,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "0 von 5 Fass · 0 von 4 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 109,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 168,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 159,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Bierzeiger und Zunftzeichen"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+    "sw": 118,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "MICHAELI 1350"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+    "sw": 258,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Der Rat setzt den Bierpfennig. Wer darüber g"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 127,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 94,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "7 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 115,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 1,
+  "breite": 1440,
+  "hoehe": 900,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 926,
+    "cw": 382,
+    "sh": 11,
+    "ch": 11,
+    "text": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wi"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "div.fu-notsud-zeile",
+    "zug": null,
+    "sw": 266,
+    "cw": 254,
+    "sh": 8,
+    "ch": 8,
+    "text": "0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die Pfanne"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 98,
+    "ch": 33,
+    "text": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verk"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 76,
+    "ch": 33,
+    "text": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast d"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 120,
+    "ch": 33,
+    "text": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. De"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 76,
+    "ch": 33,
+    "text": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fra"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 87,
+    "ch": 33,
+    "text": "Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das b"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 131,
+    "ch": 33,
+    "text": "Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 143,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 72,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 154,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "wollen 15 · im Keller liegen 4 Fass"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 103,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "ANSCHLAGTAFEL"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 128,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "mit Kreide an der Sudhauswand"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 76,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DER KELLER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 97,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "4 von 12 Fass · 4 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 98,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "OCHSENKARREN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 128,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "0 von 5 Fass · 0 von 4 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 82,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 126,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 119,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Bierzeiger und Zunftzeichen"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+    "sw": 88,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "MICHAELI 1350"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+    "sw": 194,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Der Rat setzt den Bierpfennig. Wer darüber g"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 95,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 70,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "7 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 86,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 1,
+  "breite": 1280,
+  "hoehe": 800,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 823,
+    "cw": 339,
+    "sh": 10,
+    "ch": 10,
+    "text": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wi"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "div.fu-notsud-zeile",
+    "zug": null,
+    "sw": 236,
+    "cw": 225,
+    "sh": 8,
+    "ch": 8,
+    "text": "0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die Pfanne"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 87,
+    "ch": 29,
+    "text": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verk"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 68,
+    "ch": 29,
+    "text": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast d"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 106,
+    "ch": 29,
+    "text": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. De"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 68,
+    "ch": 29,
+    "text": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fra"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 77,
+    "ch": 29,
+    "text": "Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das b"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 116,
+    "ch": 29,
+    "text": "Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 128,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 64,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 137,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "wollen 15 · im Keller liegen 4 Fass"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 91,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "ANSCHLAGTAFEL"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 114,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "mit Kreide an der Sudhauswand"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 67,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DER KELLER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 86,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "4 von 12 Fass · 4 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 87,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "OCHSENKARREN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 114,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "0 von 5 Fass · 0 von 4 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 73,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 112,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 106,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Bierzeiger und Zunftzeichen"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+    "sw": 78,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "MICHAELI 1350"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+    "sw": 172,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Der Rat setzt den Bierpfennig. Wer darüber g"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 85,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 63,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "7 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 76,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 2,
+  "breite": 1920,
+  "hoehe": 1080,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 1107,
+    "cw": 510,
+    "sh": 15,
+    "ch": 15,
+    "text": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das Dach richt"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "div.fu-notsud-zeile",
+    "zug": null,
+    "sw": 398,
+    "cw": 339,
+    "sh": 11,
+    "ch": 11,
+    "text": "0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · nur die Pfa"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 142,
+    "cw": 142,
+    "sh": 73,
+    "ch": 44,
+    "text": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hä"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 142,
+    "cw": 142,
+    "sh": 116,
+    "ch": 44,
+    "text": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was s"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 221,
+    "cw": 221,
+    "sh": 87,
+    "ch": 44,
+    "text": "Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.nm-medium",
+    "zug": null,
+    "sw": 154,
+    "cw": 146,
+    "sh": 13,
+    "ch": 13,
+    "text": "Wirtshausschild und gemarkter Krug"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "b",
+    "zug": null,
+    "sw": 32,
+    "cw": 32,
+    "sh": 34,
+    "ch": 32,
+    "text": "16"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 191,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 96,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 205,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "wollen 28 · im Keller liegen 8 Fass"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 110,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "SUDORDNUNG"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 141,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "auf der Tafel im Sudhaus"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 115,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DAS GEWÖLBE"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 129,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "8 von 24 Fass · 8 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 153,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "PFERDEFUHRWERK"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 170,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "0 von 8 Fass · 0 von 5 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 109,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 168,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 200,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Wirtshausschild und gemarkter Krug"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-kanzlei-pr-tafel",
+    "sw": 118,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "MICHAELI 1600"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-kanzlei-pr-tafel",
+    "sw": 252,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Die Zunft hält den Preis. Ausbrechen kostet"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 127,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 94,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "7 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 115,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 2,
+  "breite": 1440,
+  "hoehe": 900,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 830,
+    "cw": 382,
+    "sh": 11,
+    "ch": 11,
+    "text": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das Dach richt"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "div.fu-notsud-zeile",
+    "zug": null,
+    "sw": 299,
+    "cw": 254,
+    "sh": 8,
+    "ch": 8,
+    "text": "0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · nur die Pfa"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 106,
+    "cw": 106,
+    "sh": 54,
+    "ch": 33,
+    "text": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hä"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 106,
+    "cw": 106,
+    "sh": 87,
+    "ch": 33,
+    "text": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was s"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 165,
+    "cw": 165,
+    "sh": 65,
+    "ch": 33,
+    "text": "Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.nm-medium",
+    "zug": null,
+    "sw": 116,
+    "cw": 110,
+    "sh": 10,
+    "ch": 10,
+    "text": "Wirtshausschild und gemarkter Krug"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 143,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 72,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 154,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "wollen 28 · im Keller liegen 8 Fass"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 82,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "SUDORDNUNG"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 106,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "auf der Tafel im Sudhaus"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 86,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DAS GEWÖLBE"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 97,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "8 von 24 Fass · 8 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 114,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "PFERDEFUHRWERK"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 128,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "0 von 8 Fass · 0 von 5 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 82,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 126,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 150,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Wirtshausschild und gemarkter Krug"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-kanzlei-pr-tafel",
+    "sw": 88,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "MICHAELI 1600"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-kanzlei-pr-tafel",
+    "sw": 189,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Die Zunft hält den Preis. Ausbrechen kostet"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 95,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 70,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "7 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 86,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 2,
+  "breite": 1280,
+  "hoehe": 800,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 738,
+    "cw": 339,
+    "sh": 10,
+    "ch": 10,
+    "text": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das Dach richt"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "div.fu-notsud-zeile",
+    "zug": null,
+    "sw": 265,
+    "cw": 225,
+    "sh": 8,
+    "ch": 8,
+    "text": "0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · nur die Pfa"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 48,
+    "ch": 29,
+    "text": "Weizen gibt mehr Fass aus derselben Pfanne und ein Bier, das länger hä"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 77,
+    "ch": 29,
+    "text": "Zwei Fass mehr aus jedem Sud, und ein Bier, das in Wochen kippt. Was s"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 147,
+    "cw": 147,
+    "sh": 58,
+    "ch": 29,
+    "text": "Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte Gärung "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.nm-medium",
+    "zug": null,
+    "sw": 103,
+    "cw": 97,
+    "sh": 9,
+    "ch": 9,
+    "text": "Wirtshausschild und gemarkter Krug"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 128,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 64,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 137,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "wollen 28 · im Keller liegen 8 Fass"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 73,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "SUDORDNUNG"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 94,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "auf der Tafel im Sudhaus"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 77,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DAS GEWÖLBE"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 86,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "8 von 24 Fass · 8 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 102,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "PFERDEFUHRWERK"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 114,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "0 von 8 Fass · 0 von 5 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 73,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 112,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 133,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Wirtshausschild und gemarkter Krug"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-kanzlei-pr-tafel",
+    "sw": 78,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "MICHAELI 1600"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-kanzlei-pr-tafel",
+    "sw": 168,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Die Zunft hält den Preis. Ausbrechen kostet"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 85,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 63,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "7 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 76,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 3,
+  "breite": 1920,
+  "hoehe": 1080,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 761,
+    "cw": 510,
+    "sh": 15,
+    "ch": 15,
+    "text": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein Darlehen u"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 102,
+    "ch": 44,
+    "text": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert rich"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 160,
+    "ch": 44,
+    "text": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hä"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 145,
+    "ch": 44,
+    "text": "Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller häl"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 221,
+    "cw": 221,
+    "sh": 73,
+    "ch": 44,
+    "text": "Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes "
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 221,
+    "cw": 221,
+    "sh": 87,
+    "ch": 44,
+    "text": "Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezog"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "b",
+    "zug": null,
+    "sw": 32,
+    "cw": 32,
+    "sh": 34,
+    "ch": 32,
+    "text": "25"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 191,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 96,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 205,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "wollen 146 · im Keller liegen 11 hl"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 182,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "am schwarzen Brett der Mälzerei"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 126,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DER EISKELLER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 135,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "11 von 135 hl · 11 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 126,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "HALBER WAGEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 182,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "0,0 von 60 hl · 0 von 10 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 109,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 168,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 164,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Etikett, Plakat, Litfaßsäule"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-kontor-pr-tafel",
+    "sw": 118,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "MICHAELI 1884"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-kontor-pr-tafel",
+    "sw": 252,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Jetzt entscheidet die Menge, nicht der Rat."
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 127,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 94,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "6 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 115,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 3,
+  "breite": 1440,
+  "hoehe": 900,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 571,
+    "cw": 382,
+    "sh": 11,
+    "ch": 11,
+    "text": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein Darlehen u"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 76,
+    "ch": 33,
+    "text": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert rich"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 120,
+    "ch": 33,
+    "text": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hä"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 109,
+    "ch": 33,
+    "text": "Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller häl"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 165,
+    "cw": 165,
+    "sh": 54,
+    "ch": 33,
+    "text": "Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes "
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 165,
+    "cw": 165,
+    "sh": 65,
+    "ch": 33,
+    "text": "Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezog"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 143,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 72,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 154,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "wollen 146 · im Keller liegen 11 hl"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 136,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "am schwarzen Brett der Mälzerei"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 95,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DER EISKELLER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 101,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "11 von 135 hl · 11 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 95,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "HALBER WAGEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 136,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "0,0 von 60 hl · 0 von 10 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 82,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 126,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 123,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Etikett, Plakat, Litfaßsäule"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-kontor-pr-tafel",
+    "sw": 88,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "MICHAELI 1884"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-kontor-pr-tafel",
+    "sw": 189,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Jetzt entscheidet die Menge, nicht der Rat."
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 95,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 70,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "6 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 86,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 3,
+  "breite": 1280,
+  "hoehe": 800,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 507,
+    "cw": 339,
+    "sh": 10,
+    "ch": 10,
+    "text": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein Darlehen u"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 68,
+    "ch": 29,
+    "text": "Im Winter geschnitten, im Keller gestapelt. Wer so lagert, lagert rich"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 106,
+    "ch": 29,
+    "text": "Der Bottich läuft warm durch. Eine Woche schneller fertig, das Bier hä"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 97,
+    "ch": 29,
+    "text": "Ammoniak-Kompression, Antrieb von der Dampfmaschine. Der Gärkeller häl"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 147,
+    "cw": 147,
+    "sh": 48,
+    "ch": 29,
+    "text": "Geerntet und wieder angestellt, Sud um Sud. Kostet nichts, wird jedes "
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 147,
+    "cw": 147,
+    "sh": 58,
+    "ch": 29,
+    "text": "Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu bezog"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 128,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 64,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 137,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "wollen 146 · im Keller liegen 11 hl"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 121,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "am schwarzen Brett der Mälzerei"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 84,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DER EISKELLER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 90,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "11 von 135 hl · 11 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 84,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "HALBER WAGEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 121,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "0,0 von 60 hl · 0 von 10 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 73,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 112,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 110,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Etikett, Plakat, Litfaßsäule"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-kontor-pr-tafel",
+    "sw": 78,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "MICHAELI 1884"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-kontor-pr-tafel",
+    "sw": 168,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Jetzt entscheidet die Menge, nicht der Rat."
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 85,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 63,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "6 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 76,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Stadt zeigen"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 4,
+  "breite": 1920,
+  "hoehe": 1080,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": "gegner:oeffnen:adler",
+    "sw": 91,
+    "cw": 76,
+    "sh": 14,
+    "ch": 14,
+    "text": "1.193.110 DM"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": "gegner:oeffnen:konzern",
+    "sw": 91,
+    "cw": 76,
+    "sh": 14,
+    "ch": 14,
+    "text": "4.200.000 DM"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 592,
+    "cw": 510,
+    "sh": 15,
+    "ch": 15,
+    "text": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 11.491 DM"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 73,
+    "ch": 44,
+    "text": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Han"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 73,
+    "ch": 44,
+    "text": "Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderru"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 141,
+    "cw": 141,
+    "sh": 73,
+    "ch": 44,
+    "text": "Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 "
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 102,
+    "cw": 102,
+    "sh": 58,
+    "ch": 44,
+    "text": "Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Expo"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 102,
+    "cw": 102,
+    "sh": 160,
+    "ch": 44,
+    "text": "Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nic"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 102,
+    "cw": 102,
+    "sh": 131,
+    "ch": 44,
+    "text": "Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht "
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 102,
+    "cw": 102,
+    "sh": 145,
+    "ch": 44,
+    "text": "Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.nm-medium",
+    "zug": null,
+    "sw": 180,
+    "cw": 146,
+    "sh": 13,
+    "ch": 13,
+    "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "b",
+    "zug": null,
+    "sw": 32,
+    "cw": 32,
+    "sh": 34,
+    "ch": 32,
+    "text": "33"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "erbe:uebergabe:leibgeding",
+    "sw": 176,
+    "cw": 111,
+    "sh": 12,
+    "ch": 12,
+    "text": "Versorgungszusage · jährlich"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 191,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 96,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 211,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "wollen 534 · im Keller liegen 210 hl"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 153,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "im Schaltraum, auf Formica"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 147,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "210 von 600 hl · 210 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 182,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "0,0 von 450 hl · 0 von 3 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 109,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 168,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 223,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-offset-pr-tafel",
+    "sw": 118,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "MICHAELI 1970"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-offset-pr-tafel",
+    "sw": 258,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "Der Preis steht im Regal, und das Regal gehö"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 127,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 94,
+    "cw": 87,
+    "sh": 12,
+    "ch": 12,
+    "text": "6 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 115,
+    "cw": 87,
+    "sh": 17,
+    "ch": 17,
+    "text": "Stadt zeigen"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": null,
+    "sw": 165,
+    "cw": 147,
+    "sh": 48,
+    "ch": 48,
+    "text": "Der Getränkefachgroßhandel als Partner"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 4,
+  "breite": 1440,
+  "hoehe": 900,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": "gegner:oeffnen:adler",
+    "sw": 68,
+    "cw": 58,
+    "sh": 10,
+    "ch": 10,
+    "text": "1.193.110 DM"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": "gegner:oeffnen:konzern",
+    "sw": 68,
+    "cw": 58,
+    "sh": 10,
+    "ch": 10,
+    "text": "4.200.000 DM"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 444,
+    "cw": 382,
+    "sh": 11,
+    "ch": 11,
+    "text": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 11.491 DM"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 54,
+    "ch": 33,
+    "text": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Han"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 54,
+    "ch": 33,
+    "text": "Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderru"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 105,
+    "cw": 105,
+    "sh": 54,
+    "ch": 33,
+    "text": "Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 "
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 76,
+    "cw": 76,
+    "sh": 54,
+    "ch": 33,
+    "text": "Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Expo"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 76,
+    "cw": 76,
+    "sh": 120,
+    "ch": 33,
+    "text": "Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nic"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 76,
+    "cw": 76,
+    "sh": 98,
+    "ch": 33,
+    "text": "Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.sud-schild.fest",
+    "zug": null,
+    "sw": 76,
+    "cw": 74,
+    "sh": 10,
+    "ch": 10,
+    "text": "unwiderruflich"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 76,
+    "cw": 76,
+    "sh": 109,
+    "ch": 33,
+    "text": "Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.nm-medium",
+    "zug": null,
+    "sw": 135,
+    "cw": 110,
+    "sh": 10,
+    "ch": 10,
+    "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "erbe:uebergabe:leibgeding",
+    "sw": 132,
+    "cw": 82,
+    "sh": 9,
+    "ch": 9,
+    "text": "Versorgungszusage · jährlich"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 143,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 72,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 159,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "wollen 534 · im Keller liegen 210 hl"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 114,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "im Schaltraum, auf Formica"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 110,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "210 von 600 hl · 210 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 136,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "0,0 von 450 hl · 0 von 3 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 82,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 126,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 167,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-offset-pr-tafel",
+    "sw": 88,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "MICHAELI 1970"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-offset-pr-tafel",
+    "sw": 194,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "Der Preis steht im Regal, und das Regal gehö"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 95,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 70,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "6 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 86,
+    "cw": 66,
+    "sh": 13,
+    "ch": 13,
+    "text": "Stadt zeigen"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": null,
+    "sw": 124,
+    "cw": 110,
+    "sh": 36,
+    "ch": 36,
+    "text": "Der Getränkefachgroßhandel als Partner"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ },
+ {
+  "epoche": 4,
+  "breite": 1280,
+  "hoehe": 800,
+  "fehler": [],
+  "raus": [
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": "gegner:oeffnen:adler",
+    "sw": 60,
+    "cw": 51,
+    "sh": 9,
+    "ch": 9,
+    "text": "1.193.110 DM"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": "gegner:oeffnen:konzern",
+    "sw": 60,
+    "cw": 51,
+    "sh": 9,
+    "ch": 9,
+    "text": "4.200.000 DM"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.was",
+    "zug": null,
+    "sw": 395,
+    "cw": 339,
+    "sh": 10,
+    "ch": 10,
+    "text": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 11.491 DM"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 48,
+    "ch": 29,
+    "text": "Er riecht, er schmeckt, er trifft es meistens. Meistens reicht dem Han"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 48,
+    "ch": 29,
+    "text": "Zwei Chemikerinnen, ein Saccharometer, ein Protokoll je Sud. Unwiderru"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 94,
+    "cw": 94,
+    "sh": 48,
+    "ch": 29,
+    "text": "Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. 1970 "
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 68,
+    "cw": 68,
+    "sh": 48,
+    "ch": 29,
+    "text": "Wie im Keller, so ins Fass. Hält, was es hält, und geht nicht als Expo"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 68,
+    "cw": 68,
+    "sh": 106,
+    "ch": 29,
+    "text": "Ein Klärmittel in den Lagertank, absetzen lassen, abziehen. Kostet nic"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 68,
+    "cw": 68,
+    "sh": 87,
+    "ch": 29,
+    "text": "Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.sud-schild.fest",
+    "zug": null,
+    "sw": 68,
+    "cw": 66,
+    "sh": 9,
+    "ch": 9,
+    "text": "unwiderruflich"
+   },
+   {
+    "art": "hoeher als der Kasten",
+    "wo": "div.sud-kartensatz",
+    "zug": null,
+    "sw": 68,
+    "cw": 68,
+    "sh": 97,
+    "ch": 29,
+    "text": "Die Flasche läuft durch heißes Wasser. Das Bier hält doppelt so lang, "
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.nm-medium",
+    "zug": null,
+    "sw": 120,
+    "cw": 97,
+    "sh": 9,
+    "ch": 9,
+    "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "erbe:uebergabe:leibgeding",
+    "sw": 117,
+    "cw": 73,
+    "sh": 8,
+    "ch": 8,
+    "text": "Versorgungszusage · jährlich"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sw": 128,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "OHNE DICH GESCHEHEN"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 64,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DIE HÄUSER"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sw": 141,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "wollen 534 · im Keller liegen 210 hl"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sw": 102,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "im Schaltraum, auf Formica"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sw": 98,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "210 von 600 hl · 210 reif"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sw": 121,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "0,0 von 450 hl · 0 von 3 Halten"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sw": 73,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DAS SUDHAUS"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 112,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "DER RUF DES HAUSES"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:name-nm-band",
+    "sw": 149,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:reiter:preis-pr-stil-offset-pr-tafel",
+    "sw": 78,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "MICHAELI 1970"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:reiter:preis-pr-stil-offset-pr-tafel",
+    "sw": 172,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "Der Preis steht im Regal, und das Regal gehö"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:ortsmarken",
+    "sw": 85,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Ortsmarken"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.zahl",
+    "zug": "stadt:ortsmarken",
+    "sw": 63,
+    "cw": 58,
+    "sh": 8,
+    "ch": 8,
+    "text": "6 auf dem Pflock"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "span.wort",
+    "zug": "stadt:alles-zuklappen",
+    "sw": 76,
+    "cw": 58,
+    "sh": 12,
+    "ch": 12,
+    "text": "Stadt zeigen"
+   },
+   {
+    "art": "breiter als der Kasten",
+    "wo": "b",
+    "zug": null,
+    "sw": 110,
+    "cw": 97,
+    "sh": 32,
+    "ch": 32,
+    "text": "Der Getränkefachgroßhandel als Partner"
+   }
+  ],
+  "lage": 0,
+  "koerperBreiter": false
+ }
+]
