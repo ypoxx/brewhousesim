@@ -1,0 +1,2172 @@
+{
+ "epoche": 3,
+ "protokoll": [
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "erg": "geklickt",
+   "text": "DIE HÄUSER wollen 146 · im Keller liegen",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "erg": "geklickt",
+   "text": "SUDPLAN am schwarzen Brett der Mälzerei",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "erg": "geklickt",
+   "text": "DER EISKELLER 11 von 135 hl · 11 reif",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "HALBER WAGEN 0,0 von 60 hl · 0 von 10 Ha",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "halt": 1,
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 14250
+  },
+  {
+   "zug": "fuhre:ziel:ziel",
+   "erg": "GESPERRT",
+   "text": "So ist es verabredet",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "fuhre:fracht:halb",
+   "erg": "geklickt",
+   "text": "Halber Wagen · bis 60 hl −210 M",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "fuhre:tafel-auf:lager",
+   "erg": "geklickt",
+   "text": "+",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "fuhre:tafel-auf:export",
+   "erg": "geklickt (erst gerollt)",
+   "text": "+",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "fuhre:kauf:eis",
+   "erg": "GESPERRT",
+   "text": "Eis schneiden · +42 Fuder −420 M",
+   "nach": "1884/1 Kasse 14250"
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "erg": "geklickt",
+   "text": "Hopfen aus der Hallertau · +300 −1.150 M",
+   "nach": "1884/1 Kasse 13100"
+  },
+  {
+   "halt": 2,
+   "jahr": 1884,
+   "woche": 1,
+   "kasse": 13100
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/1 Kasse 13100"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 11 hl · bringt 504 M ",
+   "nach": "1884/2 Kasse 12273"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/3 Kasse 11243"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/3 Kasse 11243"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1884/3 Kasse 11243"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/4 Kasse 11219"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/4 Kasse 11219"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 60 hl · bringt 2.744 ",
+   "nach": "1884/5 Kasse 12177"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/6 Kasse 11705"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/6 Kasse 11705"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 36 hl · bringt 1.624 ",
+   "nach": "1884/7 Kasse 11978"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/8 Kasse 11954"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/8 Kasse 11954"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 60 hl · bringt 3.320 ",
+   "nach": "1884/9 Kasse 12817"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/10 Kasse 12793"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/10 Kasse 12793"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 60 hl · bringt 2.744 ",
+   "nach": "1884/11 Kasse 13284"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/12 Kasse 12702"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/12 Kasse 12702"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 18 hl · bringt 848 M ",
+   "nach": "1884/13 Kasse 12504"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/14 Kasse 12480"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/14 Kasse 12480"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 57 hl · bringt 2.600 ",
+   "nach": "1884/15 Kasse 13798"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/16 Kasse 13774"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/16 Kasse 13774"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 48 hl · bringt 2.184 ",
+   "nach": "1884/17 Kasse 14803"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/18 Kasse 14779"
+  },
+  {
+   "halt": 3,
+   "jahr": 1884,
+   "woche": 18,
+   "kasse": 14779
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/18 Kasse 14779"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 21 hl · bringt 974 M ",
+   "nach": "1884/19 Kasse 15100"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/20 Kasse 15076"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/20 Kasse 15076"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 39 hl · bringt 1.332 ",
+   "nach": "1884/21 Kasse 15617"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/22 Kasse 15593"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/22 Kasse 15593"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 48 hl · bringt 704 M ",
+   "nach": "1884/23 Kasse 15769"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/24 Kasse 15745"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/24 Kasse 15745"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 24 hl · bringt 360 M ",
+   "nach": "1884/25 Kasse 15723"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/26 Kasse 15699"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/26 Kasse 15699"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 24 hl · bringt 352 M ",
+   "nach": "1884/27 Kasse 15680"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/28 Kasse 15656"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/28 Kasse 15656"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 24 hl · bringt 344 M ",
+   "nach": "1884/29 Kasse 15636"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1884/30 Kasse 15612"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "geklickt",
+   "text": "Nach Durst füllen",
+   "nach": "1884/30 Kasse 15612"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 12 hl · bringt 184 M ",
+   "nach": "1885/1 Kasse 12677"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/2 Kasse 12653"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/2 Kasse 12653"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/2 Kasse 12653"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/3 Kasse 12629"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/3 Kasse 12629"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/3 Kasse 12629"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/4 Kasse 12605"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/4 Kasse 12605"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/4 Kasse 12605"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/5 Kasse 12581"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/5 Kasse 12581"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/5 Kasse 12581"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/6 Kasse 12557"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/6 Kasse 12557"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/6 Kasse 12557"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/7 Kasse 12533"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/7 Kasse 12533"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/7 Kasse 12533"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/8 Kasse 12509"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/8 Kasse 12509"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/8 Kasse 12509"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/9 Kasse 12485"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/9 Kasse 12485"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/9 Kasse 12485"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/10 Kasse 12461"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/10 Kasse 12461"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/10 Kasse 12461"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/11 Kasse 12437"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/11 Kasse 12437"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/11 Kasse 12437"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/12 Kasse 12413"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/12 Kasse 12413"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/12 Kasse 12413"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/13 Kasse 12389"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/13 Kasse 12389"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/13 Kasse 12389"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/14 Kasse 12365"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/14 Kasse 12365"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/14 Kasse 12365"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/15 Kasse 12341"
+  },
+  {
+   "halt": 4,
+   "jahr": 1885,
+   "woche": 15,
+   "kasse": 12341
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/15 Kasse 12341"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/15 Kasse 12341"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/16 Kasse 12317"
+  },
+  {
+   "halt": 5,
+   "jahr": 1885,
+   "woche": 16,
+   "kasse": 12317
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/16 Kasse 12317"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/16 Kasse 12317"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/17 Kasse 12293"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/17 Kasse 12293"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/17 Kasse 12293"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/18 Kasse 12269"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/18 Kasse 12269"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/18 Kasse 12269"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/19 Kasse 12245"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/19 Kasse 12245"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/19 Kasse 12245"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/20 Kasse 12221"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/20 Kasse 12221"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/20 Kasse 12221"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/21 Kasse 12197"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/21 Kasse 12197"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/21 Kasse 12197"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/22 Kasse 12173"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/22 Kasse 12173"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/22 Kasse 12173"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/23 Kasse 12149"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/23 Kasse 12149"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/23 Kasse 12149"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/24 Kasse 12125"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/24 Kasse 12125"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/24 Kasse 12125"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/25 Kasse 12101"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/25 Kasse 12101"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/25 Kasse 12101"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/26 Kasse 12077"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/26 Kasse 12077"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/26 Kasse 12077"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/27 Kasse 12053"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/27 Kasse 12053"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/27 Kasse 12053"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/28 Kasse 12029"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/28 Kasse 12029"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/28 Kasse 12029"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/29 Kasse 12005"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/29 Kasse 12005"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/29 Kasse 12005"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1885/30 Kasse 11981"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1885/30 Kasse 11981"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1885/30 Kasse 11981"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "JAHR SCHLIESSEN",
+   "nach": "1886/1 Kasse 9188"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "fu-sommer-hinweis < fu-sommer-fuss < blatt fu-sommerblatt fu-georgi-1886 < fach fach-fuhre fach-blatt-fuhre < ebene",
+   "text": "Nach Durst füllen",
+   "nach": "1886/1 Kasse 9188"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/1 Kasse 9188"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/2 Kasse 9164"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/2 Kasse 9164"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/2 Kasse 9164"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/3 Kasse 9140"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/3 Kasse 9140"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/3 Kasse 9140"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/4 Kasse 9116"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/4 Kasse 9116"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/4 Kasse 9116"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/5 Kasse 9092"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/5 Kasse 9092"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/5 Kasse 9092"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/6 Kasse 9068"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/6 Kasse 9068"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/6 Kasse 9068"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/7 Kasse 9044"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/7 Kasse 9044"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/7 Kasse 9044"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/8 Kasse 9020"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/8 Kasse 9020"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/8 Kasse 9020"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/9 Kasse 8996"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/9 Kasse 8996"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/9 Kasse 8996"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/10 Kasse 8972"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/10 Kasse 8972"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/10 Kasse 8972"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/11 Kasse 8948"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/11 Kasse 8948"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/11 Kasse 8948"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/12 Kasse 8924"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/12 Kasse 8924"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/12 Kasse 8924"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/13 Kasse 8900"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/13 Kasse 8900"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/13 Kasse 8900"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/14 Kasse 8876"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/14 Kasse 8876"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/14 Kasse 8876"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/15 Kasse 8852"
+  },
+  {
+   "halt": 6,
+   "jahr": 1886,
+   "woche": 15,
+   "kasse": 8852
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/15 Kasse 8852"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/15 Kasse 8852"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/16 Kasse 8828"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/16 Kasse 8828"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/16 Kasse 8828"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/17 Kasse 8804"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "erg": "VERDECKT",
+   "wer": "buehne < BODY < HTML",
+   "text": "Nach Durst füllen",
+   "nach": "1886/17 Kasse 8804"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1886/17 Kasse 8804"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1886/18 Kasse 8780"
+  },
+  {
+   "halt": 7,
+   "jahr": 1886,
+   "woche": 18,
+   "kasse": 8780
+  }
+ ],
+ "schirm": {
+  "jahr": 1886,
+  "woche": 18,
+  "ende": false,
+  "kasse": 8780,
+  "rohstoff": 18,
+  "ansehen": 35,
+  "faesser": 24,
+  "plaetze": 90,
+  "lage": [],
+  "lageN": 0,
+  "chronik": [
+   "Zum Goldenen Ochsen ist wieder frei. Brauerei Adler hat die Bindung verloren.",
+   "Ein Bottich mit Fremdhefe. Er geht in den Ausguss. 24 hl Einfachbier sind verloren — kein Pfennig, aber die Pf",
+   "Therese Bruckner scheidet aus der Firma, und was auf ihren Namen lief, steht in keinem Buch.",
+   "Ludwig Bruckner übernimmt das Haus in 1886. Man sagt: Lässt laufen. Manchmal ist das richtig.",
+   "Die Miterben nehmen ihren Teil in Naturalien: 12 hl gehen aus dem Eiskeller.",
+   "Das Haus geht auf Ludwig Bruckner über. Vorher hafteten 0 Bindungen am Haus und 0 an der Person; jetzt sind es"
+  ],
+  "zuege": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BRAUEREI ADLER Kommerzienrat Alois Feist · gelehrt · h"
+   },
+   {
+    "zug": "gegner:abloesen:pfarrhof",
+    "preis": -2822,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "PFA · VER ablösen 2.822 M"
+   },
+   {
+    "zug": "gegner:hinhalten:pfarrhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:brueckenwirt",
+    "preis": -6694,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BRU · VER ablösen 6.694 M"
+   },
+   {
+    "zug": "gegner:hinhalten:brueckenwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:bahnhofswirt",
+    "preis": -21762,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BHF · HYP ablösen 21.762 M"
+   },
+   {
+    "zug": "gegner:hinhalten:bahnhofswirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Freibier 3,0 hl statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Dem Wirt die Restschuld nachrechnen kostet kein Geld ·"
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Haus gegenüber"
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Dem Wirt die Restschuld nachrechnen"
+   },
+   {
+    "zug": "gegner:zeige:47",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:46",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:45",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "aus": true,
+    "flaeche": false,
+    "trifft": false,
+    "text": "Junges Lagerfass anstechen · +14 · 1,5 hl"
+   },
+   {
+    "zug": "sud:zettel-hefe-fass",
+    "preis": null,
+    "aus": true,
+    "flaeche": false,
+    "trifft": false,
+    "text": "Altes Lagerfass anstechen · +6 · 1,5 hl"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "aus": true,
+    "flaeche": false,
+    "trifft": false,
+    "text": "Ohne Kühlung durchgären lassennur Schankbier"
+   },
+   {
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -3400,
+    "aus": true,
+    "flaeche": false,
+    "trifft": false,
+    "text": "Reinzuchthefe nach Hansen−3.400 Mlässt Exportbier zu"
+   },
+   {
+    "zug": "name:anschlag:ausstellung",
+    "preis": -3000,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Die Ausstellung beschicken −3.000 M − 3,0 hl"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BHF"
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "So ist es verabredet"
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:probe:lindenhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:laden:ochse",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 6,0 hl"
+   },
+   {
+    "zug": "fuhre:abladen:ochse",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:torschenke",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 6,0 hl"
+   },
+   {
+    "zug": "fuhre:abladen:torschenke",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:pfarrhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 6,0 hl"
+   },
+   {
+    "zug": "fuhre:abladen:pfarrhof",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:muehlwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 6,0 hl"
+   },
+   {
+    "zug": "fuhre:abladen:muehlwirt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:brueckenwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 6,0 hl"
+   },
+   {
+    "zug": "fuhre:abladen:brueckenwirt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:faehrhaus",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 6,0 hl"
+   },
+   {
+    "zug": "fuhre:abladen:faehrhaus",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:probe:hirsch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:markt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Probefass · 6,0 hl · 0/4"
+   },
+   {
+    "zug": "fuhre:laden:bahnhofswirt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 6,0 hl"
+   },
+   {
+    "zug": "fuhre:abladen:bahnhofswirt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-ab:schank",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:schank",
+    "preis": -260,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −260 M"
+   },
+   {
+    "zug": "fuhre:tafel-ab:lager",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:lager",
+    "preis": -260,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −260 M"
+   },
+   {
+    "zug": "fuhre:tafel-ab:export",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:export",
+    "preis": -260,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −260 M"
+   },
+   {
+    "zug": "fuhre:tafel-ab:einfach",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:einfach",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+"
+   },
+   {
+    "zug": "fuhre:kauf:eis",
+    "preis": -420,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Eis schneiden · +42 Fuder −420 M"
+   },
+   {
+    "zug": "fuhre:kauf:eiskeller",
+    "preis": -1800,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Eiskeller vergrößern · +20 −1.800 M"
+   },
+   {
+    "zug": "fuhre:kauf:sudwerk",
+    "preis": -4200,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Dampfsudwerk · +1 Sud je Woche −4.200 M"
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -1150,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Hopfen aus der Hallertau · +300 −1.150 M"
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 633,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Hopfen zurück an den Händler · −300 +633 M"
+   },
+   {
+    "zug": "fuhre:fracht:rollfuhr",
+    "preis": -58,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Eigene Rollfuhre · bis 12 hl −58 M"
+   },
+   {
+    "zug": "fuhre:fracht:stueck",
+    "preis": -52,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Stückgut · bis 18 hl −52 M"
+   },
+   {
+    "zug": "fuhre:fracht:halb",
+    "preis": -210,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Halber Wagen · bis 60 hl −210 M"
+   },
+   {
+    "zug": "fuhre:fracht:ganz",
+    "preis": -328,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Ganzer Wagen · bis 132 hl −328 M"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nach Durst füllen"
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Wie vorige Woche"
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Rampe räumen"
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "FUHRE ABSCHICKEN"
+   },
+   {
+    "zug": "sud:kaelte:natureis",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Natureis aus dem Fluss"
+   },
+   {
+    "zug": "sud:kaelte:warm",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Ohne Kühlung durchgären lassen"
+   },
+   {
+    "zug": "sud:kaelte:maschine",
+    "preis": -9800,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Lindesche Kältemaschine −9.800 M"
+   },
+   {
+    "zug": "sud:hefe:betrieb",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Betriebshefe aus dem Bottich"
+   },
+   {
+    "zug": "sud:hefe:reinzucht",
+    "preis": -3400,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Reinzuchthefe nach Hansen −3.400 M"
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Hefe im Gärbottich abernten · +8"
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Junges Lagerfass anstechen · +14 · 1,5 hl"
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Altes Lagerfass anstechen · +6 · 1,5 hl"
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -1900,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Gärbottich aufstellen · +60 hl −1.900 M"
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:entzug-loesen",
+    "preis": -2800,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Die Gegendarstellung setzen lassen −2.800 M − 3,0 hl"
+   },
+   {
+    "zug": "name:liefern",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Unter dem Zeichen ausliefern"
+   },
+   {
+    "zug": "name:zurueckhalten",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen einziehen"
+   },
+   {
+    "zug": "name:jetzt:ausstellung",
+    "preis": -3000,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Die Ausstellung beschicken −3.000 M − 3,0 hl"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -5744,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Nachschrift · 2 Häuser −5.744 M"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -308,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Leibrente · jährlich −308 M"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -467,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Abfindung −467 M"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Ohne Abfindung 0 M"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "CHRONIK 65"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BUCH 686"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "WEITER"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "♪"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OHNE DICH GESCHEHEN 47 Züge"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DIE HÄUSER wollen 194 · im Keller liegen 36 hl"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "SUDPLAN am schwarzen Brett der Mälzerei"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DER EISKELLER 36 von 135 hl · 36 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "HALBER WAGEN 0,0 von 60 hl · 0 von 10 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DAS SUDHAUS liegt auf"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DER RUF DES HAUSES GENOMMEN von Das Amtsgericht bis 18"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DAS ERBE zugeklappt"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "ORTSMARKEN 6 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BAUHOF"
+   },
+   {
+    "zug": "stadt:hypothek",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "HYPOTHEK"
+   },
+   {
+    "zug": "stadt:bau:kontor",
+    "preis": -1406,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Kontor −1.406 M"
+   },
+   {
+    "zug": "stadt:bau:hopfenlager",
+    "preis": -1480,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Hopfenlager −1.480 M"
+   },
+   {
+    "zug": "stadt:bau:pferdestall",
+    "preis": -1628,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Pferdestall −1.628 M"
+   },
+   {
+    "zug": "stadt:bau:maelzerei",
+    "preis": -3145,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Mälzereiturm −3.145 M"
+   },
+   {
+    "zug": "stadt:bau:flaschenhalle",
+    "preis": -3700,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Flaschenhalle −3.700 M"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Michaelitafel 1886 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Taf"
+   }
+  ]
+ },
+ "fehler": []
+}
