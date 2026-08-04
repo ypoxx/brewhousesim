@@ -522,8 +522,26 @@
 .sud-zrangschild.tief { background: #efdcc6; border: 1px solid #a9764a; color: #7a3f22; }
 
 /* Der Zettel traegt vier Knoepfe statt drei; die Zeilen duerfen deshalb
-   nicht mehr Luft nehmen als vorher. */
-#buehne .sud-zettel .knopf.sud-tat.klein.voll { min-height: calc(var(--s) * 24); }
+   nicht mehr Luft nehmen als vorher.
+
+   ABER SIE DUERFEN AUCH NICHT UNTER DEN BODEN. Diese Zeile hatte eine ID im
+   Selektor und damit Vorrang vor dem Mindestziel der vierten Latte
+   (`stil/grund.css`: `#buehne .knopf { min-height: 24px }`, unterhalb der
+   Entwurfsleinwand). `calc(var(--s) * 24)` sind bei 1366x768 rund 13 px —
+   dieses Stueck war damit als einziges unter der Zielflaeche und hat als
+   einziges die Latte gerissen. Gemeldet vom Stueck DIE LESBARKEIT, von der
+   Aufsicht unabhaengig nachgemessen: 14 von 334 Knoepfen im ganzen Spiel,
+   die Haelfte davon meine.
+
+   `max()` loest es an genau der Stelle, an der es entstanden ist, und ohne
+   dem fremden Boden ins Handwerk zu pfuschen: auf der Entwurfsleinwand
+   gewinnt weiter die eigene Rechnung (dort sind `--s * 24` rund 47 px, und
+   die Aufnahme fuer Latte 1 bleibt Pixel fuer Pixel dieselbe), unterhalb
+   davon gewinnt der Boden. Wer `--s` hebt, hebt diese Knoepfe wieder mit.
+   Was es kostet, steht gemessen im Kopf von stil/sud-zusatz.css. */
+#buehne .sud-zettel .knopf.sud-tat.klein.voll {
+  min-height: max(calc(var(--s) * 24), 24px);
+}
 #buehne .sud-zettel { gap: calc(var(--s) * 2); }
 
 /* Was die Hefe am Fass wert ist — Welle 4. */
