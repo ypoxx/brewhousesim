@@ -1,0 +1,2528 @@
+{
+ "hafen": "8900",
+ "breite": 1366,
+ "hoehe": 768,
+ "reiter": false,
+ "epochen": {
+  "1": {
+   "klein": {
+    "fuhre": [],
+    "fremd": 276
+   },
+   "knopf": {
+    "fuhre": [],
+    "fremd": 0
+   },
+   "schnitt": {
+    "fuhre": [
+     {
+      "kl": "fu-brett",
+      "w": 315,
+      "sw": 315,
+      "h": 327,
+      "sh": 479,
+      "t": "ANSCHLAGTAFELmit Kreide an der SudhauswandBrautage: 44 übrig"
+     }
+    ],
+    "fremd": 24
+   },
+   "rand": {
+    "fuhre": [
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 757,
+      "rr": 358,
+      "b": 802,
+      "t": "HIRLandgasthof Hirsch7 kmunser Hauswill "
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 803,
+      "rr": 358,
+      "b": 849,
+      "t": "MKTAusschank am Markt0,5 kmunser Hauswil"
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 849,
+      "rr": 358,
+      "b": 895,
+      "t": "OBEKlosterschenke Obernberg9 kmfreiwill "
+     }
+    ],
+    "fremd": 0
+   },
+   "versteckt": [
+    {
+     "kl": "fu-ziel-satz",
+     "t": "Der Wirt zahlt nicht am Tor. Er lässt anschreiben, und am Michaelistag geht der Knecht mit"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "2·3·4 von 31 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "18·16·22 von 25 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "1·1·1 von 14 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "7·9·8 von 12 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "1·1·1 von 16 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "2·2·2 von 19 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "1·1·1 von 11 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "13·12·16 von 18 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "6·6·8 von 9 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "1·1·1 von 14 Fass"
+    }
+   ],
+   "nurTitel": [
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Gasthof Lindenhof · will 4 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Zum Goldenen Ochsen · will 2 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Mühlschenke · will 1 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Brückenwirt · will 2 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Fährhaus am Fluss · will 1 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Klosterschenke Obernberg · will 1 Fass"
+    },
+    {
+     "kl": "fu-ziel",
+     "zug": null,
+     "t": "DAS KERBHOLZ BEIM WIRT — Der Wirt zahlt nicht am Tor. Er lässt anschreiben, und am Michaelistag geht der Knecht mit dem "
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:bar",
+     "t": "Sicher und klein: wer bar zahlen muss, bestellt weniger. Verabredet wird bis zur siebten Woche des Braujahres; danach gi"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:ziel",
+     "t": "Das Übliche. Das meiste Geld kommt am Zahltag, ein Teil kommt nie. Verabredet wird bis zur siebten Woche des Braujahres;"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:borg",
+     "t": "Der Ausschank wächst, und das ganze Jahr hängt an einem Tag. Verabredet wird bis zur siebten Woche des Braujahres; danac"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:lindenhof",
+     "t": "1 Fass für Gasthof Lindenhof auf den Wagen. Gasthof Lindenhof zahlt 9 Pf je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:lindenhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 2 Fass · 3 Fass · 4 Fass gegen den Bedarf von 31 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:ochse",
+     "t": "1 Fass für Zum Goldenen Ochsen auf den Wagen. Zum Goldenen Ochsen zahlt 9 Pf je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:ochse",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 18 Fass · 16 Fass · 22 Fass gegen den Bedarf von 25 Fass. Bleibt er drei Jahre unter "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:torschenke",
+     "t": "1 Fass für Schenke am Tor auf den Wagen. Schenke am Tor zahlt 8 Pf je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:torschenke",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 1 Fass · 1 Fass · 1 Fass gegen den Bedarf von 14 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:pfarrhof",
+     "t": "1 Fass für Pfarrschenke St. Michael auf den Wagen. Pfarrschenke St. Michael zahlt 8 Pf je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:pfarrhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 7 Fass · 9 Fass · 8 Fass gegen den Bedarf von 12 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:bann:muehlwirt",
+     "t": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Mühlschenke liegt 3 km außerhalb."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 1 Fass · 1 Fass · 1 Fass gegen den Bedarf von 16 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "2 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:bann:brueckenwirt",
+     "t": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Brückenwirt liegt 2 km außerhalb."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 2 Fass · 2 Fass · 2 Fass gegen den Bedarf von 19 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:bann:faehrhaus",
+     "t": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Fährhaus am Fluss liegt 4 km außerhalb."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 1 Fass · 1 Fass · 1 Fass gegen den Bedarf von 11 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:bann:hirsch",
+     "t": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Landgasthof Hirsch liegt 7 km außerhalb."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 13 Fass · 12 Fass · 16 Fass gegen den Bedarf von 18 Fass. Bleibt er drei Jahre unter "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:markt",
+     "t": "Ausschank: nimmt keine der Sorten, die reif im Keller liegen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:markt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 6 Fass · 6 Fass · 8 Fass gegen den Bedarf von 9 Fass. Bleibt er drei Jahre unter eine"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:bann:obernberg",
+     "t": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Klosterschenke Obernberg liegt 9 km außerhalb."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 1 Fass · 1 Fass · 1 Fass gegen den Bedarf von 14 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Ein Tag am Kessel, fünf Fass. In drei Wochen ist es sauer. Der Gasthof nimmt es nicht."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:duenn",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:duenn",
+     "t": "Zu Michaeli steht die Tafel frei. Ein Tag am Kessel, fünf Fass. In drei Wochen ist es sauer. Der Gasthof nimmt es nicht."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Das Bier des Hauses. Grut aus Gagel, Porst und Schafgarbe — kein Hopfen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:grut",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:grut",
+     "t": "Zu Michaeli steht die Tafel frei. Das Bier des Hauses. Grut aus Gagel, Porst und Schafgarbe — kein Hopfen."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Drei Tage für drei Fass. Dafür hält es bis in den Sommer, und das Kloster zahlt."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:stark",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:stark",
+     "t": "Zu Michaeli steht die Tafel frei. Drei Tage für drei Fass. Dafür hält es bis in den Sommer, und das Kloster zahlt."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:kofent",
+     "t": "Einen Notsud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:kofent",
+     "t": "Der zweite Guss auf dieselben Treber. Kein Pfennig, kein Korn Grut, und der Rat zählt ihn nicht auf die Brautage — Nachb"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:budget",
+     "t": "Sechs zusätzliche Brautage in diesem Braujahr. Der Rat verkauft sie ungern und teuer."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:rohstoff",
+     "t": "Ohne Grut kein Bier. Hopfen kennt hier noch niemand."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:rueckkauf:rohstoff",
+     "t": "Vierzig Grut gehen zurück. Der Grutherr nimmt sie, aber nicht zum Einkaufspreis — und ohne Grut steht die Pfanne bald an"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:fass",
+     "t": "Drei Fässer mehr im Umlauf."
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Grutbier · gebraut 1350, Woche 1 · reif, hält noch 6 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Grutbier · gebraut 1350, Woche 1 · reif, hält noch 6 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Grutbier · gebraut 1350, Woche 1 · reif, hält noch 6 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Grutbier · gebraut 1350, Woche 1 · reif, hält noch 6 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Keller — Fass"
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fuellen",
+     "t": "Eine Faustregel, kein Rat: der Fuhrmann lädt für die Dürstenden. Der weite Weg und der zahlende Wirt stehen da nicht dri"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:wie-vorige",
+     "t": "Dieselbe Verteilung wie bei der letzten Fuhre."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:leeren",
+     "t": "Alles wieder in den Keller."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abschicken",
+     "t": "Erst beladen. Jedes Fass bekommt ein Haus."
+    }
+   ],
+   "knoepfeFuhre": 21,
+   "knoepfeAlle": 81,
+   "groessen": {
+    "12.0": 172,
+    "12.9": 1
+   },
+   "fehler": []
+  },
+  "2": {
+   "klein": {
+    "fuhre": [],
+    "fremd": 280
+   },
+   "knopf": {
+    "fuhre": [],
+    "fremd": 0
+   },
+   "schnitt": {
+    "fuhre": [
+     {
+      "kl": "fu-brett",
+      "w": 315,
+      "sw": 315,
+      "h": 327,
+      "sh": 463,
+      "t": "SUDORDNUNGauf der Tafel im SudhausSude der Reihe: 40 übrigDi"
+     }
+    ],
+    "fremd": 24
+   },
+   "rand": {
+    "fuhre": [
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 744,
+      "rr": 358,
+      "b": 789,
+      "t": "HIRLandgasthof Hirsch7 kmunser Hauswill "
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 790,
+      "rr": 358,
+      "b": 835,
+      "t": "MKTAusschank am Markt0,5 kmfreiwill 1 Fa"
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 836,
+      "rr": 358,
+      "b": 881,
+      "t": "OBEKlosterschenke Obernberg9 kmadlerwill"
+     }
+    ],
+    "fremd": 0
+   },
+   "versteckt": [
+    {
+     "kl": "fu-ziel-satz",
+     "t": "Die Ordnung kennt das Ziel: geliefert wird das Jahr über, gerechnet wird zu Michaeli. Wer "
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "39·34·48 von 54 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "4·4·4 von 42 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "14·18·16 von 24 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "2·2·2 von 21 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "2·2·3 von 27 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "3·3·4 von 33 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "13·12·16 von 18 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "19·20·25 von 30 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "1·1·2 von 15 Fass"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "2·2·3 von 24 Fass"
+    }
+   ],
+   "nurTitel": [
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Gasthof Lindenhof · will 9 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Zum Goldenen Ochsen · will 2 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Mühlschenke · will 3 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Brückenwirt · will 2 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Fährhaus am Fluss · will 2 Fass"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Klosterschenke Obernberg · will 3 Fass"
+    },
+    {
+     "kl": "fu-ziel",
+     "zug": null,
+     "t": "DAS SCHULDBUCH DER WIRTE — Die Ordnung kennt das Ziel: geliefert wird das Jahr über, gerechnet wird zu Michaeli. Wer vor"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:bar",
+     "t": "Der Zunft ist es recht. Dem Wirt nicht — er bestellt kleiner. Verabredet wird bis zur siebten Woche des Braujahres; dana"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:ziel",
+     "t": "Das Übliche. Das Buch trägt das Jahr, der Zahltag trägt das Haus. Verabredet wird bis zur siebten Woche des Braujahres; "
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:borg",
+     "t": "Der Absatz wächst schneller als die Kasse. Beides ist wahr. Verabredet wird bis zur siebten Woche des Braujahres; danach"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:lindenhof",
+     "t": "1 Fass für Gasthof Lindenhof auf den Wagen. Gasthof Lindenhof zahlt 22 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:lindenhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 39 Fass · 34 Fass · 48 Fass gegen den Bedarf von 54 Fass. Bleibt er drei Jahre unter "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:ochse",
+     "t": "1 Fass für Zum Goldenen Ochsen auf den Wagen. Zum Goldenen Ochsen zahlt 21 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:ochse",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 4 Fass · 4 Fass · 4 Fass gegen den Bedarf von 42 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "2 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:torschenke",
+     "t": "1 Fass für Schenke am Tor auf den Wagen. Schenke am Tor zahlt 19 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:torschenke",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 14 Fass · 18 Fass · 16 Fass gegen den Bedarf von 24 Fass. Bleibt er drei Jahre unter "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:pfarrhof",
+     "t": "1 Fass für Pfarrschenke St. Michael auf den Wagen. Pfarrschenke St. Michael zahlt 19 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:pfarrhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 2 Fass · 2 Fass · 2 Fass gegen den Bedarf von 21 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:muehlwirt",
+     "t": "1 Fass für Mühlschenke auf den Wagen. Mühlschenke zahlt 21 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:muehlwirt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 2 Fass · 2 Fass · 3 Fass gegen den Bedarf von 27 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:brueckenwirt",
+     "t": "1 Fass für Brückenwirt auf den Wagen. Brückenwirt zahlt 21 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:brueckenwirt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 3 Fass · 3 Fass · 4 Fass gegen den Bedarf von 33 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:faehrhaus",
+     "t": "1 Fass für Fährhaus am Fluss auf den Wagen. Fährhaus am Fluss zahlt 21 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:faehrhaus",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 13 Fass · 12 Fass · 16 Fass gegen den Bedarf von 18 Fass. Bleibt er drei Jahre unter "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:hirsch",
+     "t": "1 Fass für Landgasthof Hirsch auf den Wagen. Landgasthof Hirsch zahlt 22 fl je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:hirsch",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 19 Fass · 20 Fass · 25 Fass gegen den Bedarf von 30 Fass. Bleibt er drei Jahre unter "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:markt",
+     "t": "Ausschank: nimmt keine der Sorten, die reif im Keller liegen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:markt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 1 Fass · 1 Fass · 2 Fass gegen den Bedarf von 15 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:obernberg",
+     "t": "Klosterschenke: nimmt keine der Sorten, die reif im Keller liegen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:obernberg",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 2 Fass · 2 Fass · 3 Fass gegen den Bedarf von 24 Fass. Bleibt er drei Jahre unter ein"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Dünn, schnell, acht Fass aus einem Sud. Füllt den Wagen, füllt nicht die Kasse."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:schank",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:schank",
+     "t": "Zu Michaeli steht die Tafel frei. Dünn, schnell, acht Fass aus einem Sud. Füllt den Wagen, füllt nicht die Kasse."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Das Bier der Zunft. Sechs Fass, eine Woche Lager, jeder Wirt nimmt es."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:braun",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:braun",
+     "t": "Zu Michaeli steht die Tafel frei. Das Bier der Zunft. Sechs Fass, eine Woche Lager, jeder Wirt nimmt es."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Fünf Wochen im Fass, ehe es taugt — fünf Wochen belegter Fassplatz. Dafür überlebt es als einziges den Sommer."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:maerzen",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:maerzen",
+     "t": "Zu Michaeli steht die Tafel frei. Fünf Wochen im Fass, ehe es taugt — fünf Wochen belegter Fassplatz. Dafür überlebt es "
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:nachbier",
+     "t": "Einen Notsud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:nachbier",
+     "t": "Konventbier vom zweiten Guss. Die Ordnung erlaubt es fürs Gesinde und rechnet es nicht auf die Reihe an — es kostet kein"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:budget",
+     "t": "Ein Zunftgenosse tritt vier Sude seiner Reihe ab. Gilt nur für dieses Braujahr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:fass",
+     "t": "Vier Fässer mehr im Umlauf. Das ist in dieser Epoche die eigentliche Währung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:rohstoff",
+     "t": "Reinheitsgebot: Gerste, Hopfen, Wasser. Grut ist verboten."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:rueckkauf:rohstoff",
+     "t": "Sechzig Hopfen gehen zurück an den Markt. Der Händler zahlt bar und schlecht. Einkauf 120 fl, Rückgabe 66 fl. In der Kam"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Braunbier · gebraut 1600, Woche 1 · reif, hält noch 11 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Das Gewölbe — Fass"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:pfand",
+     "t": "Der Knecht fährt die Runde und holt die leeren Fässer zurück, ehe sie fällig sind. Kostet einen Tag und ein paar Gulden "
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fuellen",
+     "t": "Eine Faustregel, kein Rat: der Fuhrmann lädt für die Dürstenden. Der weite Weg und der zahlende Wirt stehen da nicht dri"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:wie-vorige",
+     "t": "Dieselbe Verteilung wie bei der letzten Fuhre."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:leeren",
+     "t": "Alles wieder in den Keller."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abschicken",
+     "t": "Erst beladen. Jedes Fass bekommt ein Haus."
+    }
+   ],
+   "knoepfeFuhre": 20,
+   "knoepfeAlle": 82,
+   "groessen": {
+    "12.0": 183,
+    "12.9": 1
+   },
+   "fehler": []
+  },
+  "3": {
+   "klein": {
+    "fuhre": [],
+    "fremd": 276
+   },
+   "knopf": {
+    "fuhre": [],
+    "fremd": 0
+   },
+   "schnitt": {
+    "fuhre": [
+     {
+      "kl": "fu-brett",
+      "w": 315,
+      "sw": 315,
+      "h": 327,
+      "sh": 474,
+      "t": "SUDPLANam schwarzen Brett der MälzereiSudhaus: 2 Sude je Woc"
+     }
+    ],
+    "fremd": 24
+   },
+   "rand": {
+    "fuhre": [
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 725,
+      "rr": 358,
+      "b": 770,
+      "t": "HIRLandgasthof Hirsch7 kmfreiwill 7,5 hl"
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 771,
+      "rr": 358,
+      "b": 816,
+      "t": "MKTAusschank am Markt0,5 kmadlerwill 4,5"
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 817,
+      "rr": 358,
+      "b": 862,
+      "t": "BHFBahnhofsgaststätte5 kmunser Hauswill "
+     }
+    ],
+    "fremd": 1
+   },
+   "versteckt": [
+    {
+     "kl": "fu-ziel-satz",
+     "t": "Die Rechnung läuft, das Bier ist längst getrunken. Der Jahresabschluss der Wirtschaften fä"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "21·20·24 von 216 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "123·116·147 von 168 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "63·65·80 von 96 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "7,5·7,5·9,0 von 84 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "7,5·7,5·12 von 108 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "104·77·105 von 132 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "4,5·7,5·7,5 von 72 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "12·9,0·12 von 120 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "4,5·4,5·7,5 von 60 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "156·188·243 von 288 hl"
+    }
+   ],
+   "nurTitel": [
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Gasthof Lindenhof · will 23 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Zum Goldenen Ochsen · will 9,0 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Mühlschenke · will 15 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Brückenwirt · will 6,0 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Fährhaus am Fluss · will 9,0 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Bahnhofsgaststätte · will 51 hl"
+    },
+    {
+     "kl": "fu-ziel",
+     "zug": null,
+     "t": "DAS KUNDENKONTO — Die Rechnung läuft, das Bier ist längst getrunken. Der Jahresabschluss der Wirtschaften fällt auf Mich"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:bar",
+     "t": "Das Geld ist sofort da. Der Wirt bestellt dafür knapper. Verabredet wird bis zur siebten Woche des Braujahres; danach gi"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:ziel",
+     "t": "Das Übliche im Handel. Ein Rest bleibt immer bis zum Herbst stehen. Verabredet wird bis zur siebten Woche des Braujahres"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:borg",
+     "t": "Bindet die Wirtschaft ans Haus — und das Haus an einen einzigen Tag. Verabredet wird bis zur siebten Woche des Braujahre"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:lindenhof",
+     "t": "6,0 hl für Gasthof Lindenhof auf den Wagen. Gasthof Lindenhof zahlt 72 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:lindenhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 21 hl · 20 hl · 24 hl gegen den Bedarf von 216 hl. Bleibt er drei Jahre unter einem D"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:ochse",
+     "t": "6,0 hl für Zum Goldenen Ochsen auf den Wagen. Zum Goldenen Ochsen zahlt 68 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:ochse",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 123 hl · 116 hl · 147 hl gegen den Bedarf von 168 hl. Bleibt er drei Jahre unter eine"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:torschenke",
+     "t": "6,0 hl für Schenke am Tor auf den Wagen. Schenke am Tor zahlt 63 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:torschenke",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 63 hl · 65 hl · 80 hl gegen den Bedarf von 96 hl. Bleibt er drei Jahre unter einem Dr"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:pfarrhof",
+     "t": "6,0 hl für Pfarrschenke St. Michael auf den Wagen. Pfarrschenke St. Michael zahlt 63 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:pfarrhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 7,5 hl · 7,5 hl · 9,0 hl gegen den Bedarf von 84 hl. Bleibt er drei Jahre unter einem"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:muehlwirt",
+     "t": "6,0 hl für Mühlschenke auf den Wagen. Mühlschenke zahlt 68 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:muehlwirt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 7,5 hl · 7,5 hl · 12 hl gegen den Bedarf von 108 hl. Bleibt er drei Jahre unter einem"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:brueckenwirt",
+     "t": "6,0 hl für Brückenwirt auf den Wagen. Brückenwirt zahlt 68 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:brueckenwirt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 104 hl · 77 hl · 105 hl gegen den Bedarf von 132 hl. Bleibt er drei Jahre unter einem"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:faehrhaus",
+     "t": "6,0 hl für Fährhaus am Fluss auf den Wagen. Fährhaus am Fluss zahlt 68 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:faehrhaus",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 4,5 hl · 7,5 hl · 7,5 hl gegen den Bedarf von 72 hl. Bleibt er drei Jahre unter einem"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:hirsch",
+     "t": "6,0 hl für Landgasthof Hirsch auf den Wagen. Landgasthof Hirsch zahlt 72 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:hirsch",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 12 hl · 9,0 hl · 12 hl gegen den Bedarf von 120 hl. Bleibt er drei Jahre unter einem "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:markt",
+     "t": "Ausschank: nimmt keine der Sorten, die reif im Keller liegen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:markt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 4,5 hl · 4,5 hl · 7,5 hl gegen den Bedarf von 60 hl. Bleibt er drei Jahre unter einem"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:bahnhofswirt",
+     "t": "6,0 hl für Bahnhofsgaststätte auf den Wagen. Bahnhofsgaststätte zahlt 72 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:bahnhofswirt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 156 hl · 188 hl · 243 hl gegen den Bedarf von 288 hl. Bleibt er drei Jahre unter eine"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Dreißig Fass aus einem Sud, sofort lieferbar, drei Wochen haltbar. Ein Fuder Eis, nicht zwei — dafür ist es in drei Woch"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:schank",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:schank",
+     "t": "Zu Michaeli steht die Tafel frei. Dreißig Fass aus einem Sud, sofort lieferbar, drei Wochen haltbar. Ein Fuder Eis, nich"
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Zwei Wochen auf Eis. Das Bier, an dem die Kältemaschine hängt."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:lager",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:lager",
+     "t": "Zu Michaeli steht die Tafel frei. Zwei Wochen auf Eis. Das Bier, an dem die Kältemaschine hängt."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Fünf Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:export",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:export",
+     "t": "Zu Michaeli steht die Tafel frei. Fünf Wochen Eis und Platz. Es fährt weit, es hält lang, es frisst den Eiskeller."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:einfach",
+     "t": "Einen Notsud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:einfach",
+     "t": "Der Nachguss auf den ausgelaugten Treber. Kein Hopfenzukauf, kein Fuder Eis, keine neue Rechnung beim Mälzer — nur die P"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:eis",
+     "t": "Der Fluss trägt nicht mehr. Eis gibt es von Woche 9 bis 22 und sonst nie."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:eiskeller",
+     "t": "Mehr Fuder Fassungsraum. Unwiderruflich gebaut."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:sudwerk",
+     "t": "Eine zweite Pfanne unter Dampf. Unwiderruflich."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:rohstoff",
+     "t": "Waggonweise, ab Bahnhof."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:rueckkauf:rohstoff",
+     "t": "Dreihundert Hopfen gehen zurück nach Nürnberg. Der Händler zahlt bar und behält die Hälfte der Spanne. Einkauf 1.150 M, "
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Lagerbier · gebraut 1884, Woche 1 · reif, hält noch 25 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Lagerbier · gebraut 1884, Woche 1 · reif, hält noch 25 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Lagerbier · gebraut 1884, Woche 1 · reif, hält noch 25 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Lagerbier · gebraut 1884, Woche 1 · reif, hält noch 25 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Der Eiskeller — Lagerfass"
+    },
+    {
+     "kl": "fu-eis",
+     "zug": null,
+     "t": "Eis wird aus dem Fluss geschnitten, solange er trägt. Danach nicht mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fracht:rollfuhr",
+     "t": "Kaltblut und Bierkutscher, die Wirtschaften der Stadt. Weit kommt er nicht. Bei der jetzigen Ladung: 58 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fracht:stueck",
+     "t": "Jede Menge, jede Woche — und je Fass am teuersten. Bei der jetzigen Ladung: 52 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fracht:halb",
+     "t": "Pauschale. Vierzig Fass passen hinein; bezahlt wird der Wagen, nicht die Ladung. Bei der jetzigen Ladung: 210 M je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fracht:ganz",
+     "t": "Achtundachtzig Fass. Halb gefüllt ist er das teuerste Geschäft des Hauses. Bei der jetzigen Ladung: 328 M je Fass."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fuellen",
+     "t": "Eine Faustregel, kein Rat: der Fuhrmann lädt für die Dürstenden. Der weite Weg und der zahlende Wirt stehen da nicht dri"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:wie-vorige",
+     "t": "Dieselbe Verteilung wie bei der letzten Fuhre."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:leeren",
+     "t": "Alles wieder in den Keller."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abschicken",
+     "t": "Erst beladen. Jedes Fass bekommt ein Haus."
+    }
+   ],
+   "knoepfeFuhre": 24,
+   "knoepfeAlle": 86,
+   "groessen": {
+    "12.0": 185,
+    "12.9": 1
+   },
+   "fehler": []
+  },
+  "4": {
+   "klein": {
+    "fuhre": [],
+    "fremd": 283
+   },
+   "knopf": {
+    "fuhre": [],
+    "fremd": 0
+   },
+   "schnitt": {
+    "fuhre": [
+     {
+      "kl": "fu-brett",
+      "w": 315,
+      "sw": 315,
+      "h": 327,
+      "sh": 448,
+      "t": "SUDPLANim Schaltraum, auf FormicaSudhaus: 5 Sude je WocheMeh"
+     }
+    ],
+    "fremd": 20
+   },
+   "rand": {
+    "fuhre": [
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 739,
+      "rr": 358,
+      "b": 784,
+      "t": "HIRLandgasthof Hirsch7 kmadlerwill 26 hl"
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 785,
+      "rr": 358,
+      "b": 830,
+      "t": "MKTAusschank am Markt0,5 kmunser Hauswil"
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 831,
+      "rr": 358,
+      "b": 876,
+      "t": "BHFBahnhofsgaststätte5 kmadlerwill 56 hl"
+     },
+     {
+      "kl": "fu-haus",
+      "l": 22,
+      "t2": 877,
+      "rr": 358,
+      "b": 922,
+      "t": "NEUGaststätte Neustadt2 kmfreiwill 230 h"
+     }
+    ],
+    "fremd": 0
+   },
+   "versteckt": [
+    {
+     "kl": "fu-ziel-satz",
+     "t": "Zahlungsziel, Bonus, Jahresgespräch: der Handel zahlt schnell und nimmt sich den Rest am J"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "500·491·486 von 729 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "45·54·50 von 567 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "180·248·216 von 324 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "27·27·27 von 284 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "230·284·252 von 365 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "36·36·41 von 446 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "23·23·23 von 243 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "32·41·45 von 405 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "153·149·144 von 203 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "68·90·117 von 972 hl"
+    },
+    {
+     "kl": "fu-zahlen",
+     "t": "153·131·135 von 1.620 hl"
+    }
+   ],
+   "nurTitel": [
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Gasthof Lindenhof · will 69 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Zum Goldenen Ochsen · will 39 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Mühlschenke · will 18 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Brückenwirt · will 21 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Fährhaus am Fluss · will 23 hl"
+    },
+    {
+     "kl": "fu-marke",
+     "zug": null,
+     "t": "Bahnhofsgaststätte · will 56 hl"
+    },
+    {
+     "kl": "fu-ziel",
+     "zug": null,
+     "t": "DIE DEBITOREN — Zahlungsziel, Bonus, Jahresgespräch: der Handel zahlt schnell und nimmt sich den Rest am Jahresende zurü"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:bar",
+     "t": "Liquide und unbeliebt: der Einkauf listet dafür weniger. Verabredet wird bis zur siebten Woche des Braujahres; danach gi"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:ziel",
+     "t": "Das Übliche. Der Bonus wird zum Jahresgespräch abgerechnet. Verabredet wird bis zur siebten Woche des Braujahres; danach"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:ziel:borg",
+     "t": "Die Menge steigt sofort, das Geld kommt im Herbst — wenn es kommt. Verabredet wird bis zur siebten Woche des Braujahres;"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:lindenhof",
+     "t": "30 hl für Gasthof Lindenhof auf den Wagen. Gasthof Lindenhof zahlt 195 DM je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:lindenhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 500 hl · 491 hl · 486 hl gegen den Bedarf von 729 hl. Bleibt er drei Jahre unter eine"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:ochse",
+     "t": "30 hl für Zum Goldenen Ochsen auf den Wagen. Zum Goldenen Ochsen zahlt 185 DM je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:ochse",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 45 hl · 54 hl · 50 hl gegen den Bedarf von 567 hl. Bleibt er drei Jahre unter einem D"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:torschenke",
+     "t": "30 hl für Schenke am Tor auf den Wagen. Schenke am Tor zahlt 172 DM je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:torschenke",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 180 hl · 248 hl · 216 hl gegen den Bedarf von 324 hl. Bleibt er drei Jahre unter eine"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:pfarrhof",
+     "t": "30 hl für Pfarrschenke St. Michael auf den Wagen. Pfarrschenke St. Michael zahlt 172 DM je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:pfarrhof",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 27 hl · 27 hl · 27 hl gegen den Bedarf von 284 hl. Bleibt er drei Jahre unter einem D"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:muehlwirt",
+     "t": "30 hl für Mühlschenke auf den Wagen. Mühlschenke zahlt 185 DM je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:muehlwirt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 230 hl · 284 hl · 252 hl gegen den Bedarf von 365 hl. Bleibt er drei Jahre unter eine"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:laden:brueckenwirt",
+     "t": "30 hl für Brückenwirt auf den Wagen. Brückenwirt zahlt 185 DM je Fass."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abladen:brueckenwirt",
+     "t": "Wieder herunter vom Wagen."
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 36 hl · 36 hl · 41 hl gegen den Bedarf von 446 hl. Bleibt er drei Jahre unter einem D"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:listen:faehrhaus",
+     "t": "Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. Zu Georgi fällt sie, wenn nichts geliefert wurde. Gel"
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 23 hl · 23 hl · 23 hl gegen den Bedarf von 243 hl. Bleibt er drei Jahre unter einem D"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:listen:hirsch",
+     "t": "Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. Zu Georgi fällt sie, wenn nichts geliefert wurde. Gel"
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 32 hl · 41 hl · 45 hl gegen den Bedarf von 405 hl. Bleibt er drei Jahre unter einem D"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:listen:markt",
+     "t": "Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. Zu Georgi fällt sie, wenn nichts geliefert wurde. Gel"
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 153 hl · 149 hl · 144 hl gegen den Bedarf von 203 hl. Bleibt er drei Jahre unter eine"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "Keine Mahnung."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:listen:bahnhofswirt",
+     "t": "Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. Zu Georgi fällt sie, wenn nichts geliefert wurde. Gel"
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 68 hl · 90 hl · 117 hl gegen den Bedarf von 972 hl. Bleibt er drei Jahre unter einem "
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "1 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:listen:neustadt",
+     "t": "Werbekostenzuschuss. Ein Regalmeter für eine Sorte, ein Jahr lang. Zu Georgi fällt sie, wenn nichts geliefert wurde. Gel"
+    },
+    {
+     "kl": "fu-reihe",
+     "zug": null,
+     "t": "Absatz der drei letzten Braujahre: 153 hl · 131 hl · 135 hl gegen den Bedarf von 1.620 hl. Bleibt er drei Jahre unter ei"
+    },
+    {
+     "kl": "fu-mahnung",
+     "zug": null,
+     "t": "2 magere Jahre in Folge. Beim dritten nimmt das Haus nichts mehr."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Die Menge. Fünfzig Fass je Sud, eine Woche Reife, jedes Regal nimmt es."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:hell",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:hell",
+     "t": "Zu Michaeli steht die Tafel frei. Die Menge. Fünfzig Fass je Sud, eine Woche Reife, jedes Regal nimmt es."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Die Marke. Zwei Wochen Reife, und der Meter im Regal kostet extra."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:pils",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:pils",
+     "t": "Zu Michaeli steht die Tafel frei. Die Marke. Zwei Wochen Reife, und der Meter im Regal kostet extra."
+    },
+    {
+     "kl": "fu-sorte",
+     "zug": null,
+     "t": "Vier Wochen Reife, dreißig Fass. Die Gaststätte zahlt es, der Markt nicht."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:export",
+     "t": "Einen Sud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:export",
+     "t": "Zu Michaeli steht die Tafel frei. Vier Wochen Reife, dreißig Fass. Die Gaststätte zahlt es, der Markt nicht."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-ab:handel",
+     "t": "Einen Notsud weniger je Woche."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:tafel-auf:handel",
+     "t": "Weißes Etikett für das Handelshaus: der Kunde stellt Malz, Etikett und Kasten, das Haus stellt Sud und Pfanne. Keine eig"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:lastzug",
+     "t": "Ein Halt mehr je Woche. Das ist in dieser Epoche die einzige echte Vergrößerung. Die Kasse reicht nicht: das geht auf 4 "
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:sudwerk",
+     "t": "Mehr Sude je Woche. Unwiderruflich."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:kauf:rohstoff",
+     "t": "Jahreskontrakt mit der Hallertau."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:rueckkauf:rohstoff",
+     "t": "Der Jahreskontrakt geht an eine andere Brauerei. Sofort Geld, und der Hopfen ist weg. Einkauf 14.400 DM, Rückgabe 7.200 "
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Pilsner · gebraut 1970, Woche 1 · reif, hält noch 42 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Pilsner · gebraut 1970, Woche 1 · reif, hält noch 42 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Pilsner · gebraut 1970, Woche 1 · reif, hält noch 42 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Pilsner · gebraut 1970, Woche 1 · reif, hält noch 42 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Pilsner · gebraut 1970, Woche 1 · reif, hält noch 42 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Pilsner · gebraut 1970, Woche 1 · reif, hält noch 42 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Pilsner · gebraut 1970, Woche 1 · reif, hält noch 42 Wochen"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-fass",
+     "zug": null,
+     "t": "Leerer Platz im Die Tanks — Drucktank"
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "fu-wbett",
+     "zug": null,
+     "t": "Freier Platz auf dem Wagen."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:fuellen",
+     "t": "Eine Faustregel, kein Rat: der Fuhrmann lädt für die Dürstenden. Der weite Weg und der zahlende Wirt stehen da nicht dri"
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:wie-vorige",
+     "t": "Dieselbe Verteilung wie bei der letzten Fuhre."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:leeren",
+     "t": "Alles wieder in den Keller."
+    },
+    {
+     "kl": "knopf",
+     "zug": "fuhre:abschicken",
+     "t": "Erst beladen. Jedes Fass bekommt ein Haus."
+    }
+   ],
+   "knoepfeFuhre": 22,
+   "knoepfeAlle": 81,
+   "groessen": {
+    "12.0": 186,
+    "12.9": 1
+   },
+   "fehler": []
+  }
+ }
+}
