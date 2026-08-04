@@ -84,12 +84,32 @@ def hoere(pfad, modell, schluessel):
         URL.format(modell=modell) + "?key=" + schluessel,
         data=json.dumps(körper).encode(),
         headers={"Content-Type": "application/json"})
+    # EIN NETZFEHLER IST KEIN URTEIL, UND ER DARF KEINEN LAUF TOETEN.
+    # Bis zum 4. August 2026 stand hier nur `except urllib.error.HTTPError`,
+    # und darin `sys.exit(2)`. Zwei Fehler in vier Zeilen:
+    #   · Ein OSError (Proxy-503, Verbindungsabbruch, Zeitueberschreitung) wurde
+    #     gar nicht gefangen und riss den Durchgang mit einem Traceback ab.
+    #   · Selbst der gefangene Fall beendete den GANZEN Lauf, statt die
+    #     Wiederholungsschleife greifen zu lassen, die es weiter unten gibt.
+    # Den Builder von DER KLANG hat das einen kompletten Quotenlauf gekostet —
+    # ein einziger 503 nach zwanzig gelungenen Abfragen, und alles war weg.
+    # Jetzt wird der Fehler als `abbruch` zurueckgegeben: die Schleife
+    # wiederholt mit 5 und 10 Sekunden Abstand, und erst wenn auch das
+    # dreimal scheitert, zaehlt die Datei als "keine Messung" — nicht als
+    # Urteil ueber das Spiel.
     try:
         with urllib.request.urlopen(anfrage, timeout=180) as antwort:
             roh = json.load(antwort)
     except urllib.error.HTTPError as f:
-        sys.stderr.write("API %s: %s\n" % (f.code, f.read().decode()[:400]))
-        sys.exit(2)
+        try:
+            leib = f.read().decode()[:300]
+        except Exception:
+            leib = "(Leib nicht lesbar)"
+        return {"abbruch": "API %s: %s" % (f.code, leib)}
+    except (urllib.error.URLError, OSError, TimeoutError) as f:
+        return {"abbruch": "Netz: %s" % str(f)[:300]}
+    except json.JSONDecodeError as f:
+        return {"abbruch": "Antwort war kein JSON: %s" % str(f)[:200]}
 
     kand = (roh.get("candidates") or [{}])[0]
     teile = (kand.get("content") or {}).get("parts") or []

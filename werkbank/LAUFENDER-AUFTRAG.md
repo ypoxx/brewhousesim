@@ -235,6 +235,48 @@ einen Vorschlag als `KERN:`-Absatz zu liefern, ohne fremde Dateien anzufassen.
 
 ---
 
+## OFFEN AN DEN AUFTRAGGEBER — die dritte Latte stösst an eine Grenze
+
+**DER KLANG hat Auflage 4 nicht erfüllt, und der Grund ist gemessen, nicht
+vermutet.** Sechs Stände gebaut, 48 Aufnahmen, 56 stille Vorgangsfragen:
+**Gegenzug 0 von 4 gespielt, 0 von 4 still.**
+
+Die einzigen Stände, in denen das Ohr den fremden Hof öfter bejahte, trugen
+eine erkennbare **englische Stimme** im Zeichen — dasselbe Ohr meldete sie als
+*„Radio-/Fernsehübertragung"*, mit wörtlichem Zitat aus dem Erzeugungsprompt.
+Zwei Tiefpässe tilgten die Sprache nicht; stimmlos: 0 von 4.
+
+> **Der Kern der Sache:** Was ein Ohr an einem fremden Hof erkennt, sind fremde
+> **Leute** — und die bringen eine Sprache mit. Eine Sprache, die in 1350
+> erkennbar ist, ist ein Anachronismus; eine, die es nicht ist, hört das Ohr
+> nicht als Nachbarn. Die Auflage könnte in dieser Form unerfüllbar sein.
+
+**Zwei weitere Befunde, die die Latte selbst betreffen:**
+
+1. **1884 ist mit diesem Ohr nicht messbar.** In *allen* Messungen — Vorrunde
+   und vier Stände — bejaht es dort **zwei von vier Blendern**. Nach der Regel
+   des Kritikers zählt dort damit auch sein *Nein* nicht. Eine Epoche, in der
+   das Messgerät rät, kann die dritte Latte weder bestehen noch reißen.
+2. **Derselbe Ton ergab an zwei Tagen 17 % und 33 %** stille Trefferquote. Die
+   Vorgangsfrage braucht dieselbe Mehrheitsregel aus drei Durchgängen, die für
+   die Epochenfrage schon gilt (Sperrliste 5) — sonst ist eine Einzelmessung
+   Zufall.
+
+**Zu entscheiden, weil es die Messlatte ändert und nicht das Spiel:** ob der
+Gegenzug als hörbarer Vorgang fallen gelassen wird, ob die Latte ihn anders
+prüft (etwa an einer Veränderung im Klangbild statt an einem benannten
+Ereignis), oder ob ein anderes Ohr gesucht wird. **Nicht die Aufgabe eines
+Builders.**
+
+*Was in derselben Runde gelang:* die gespielte Trefferquote stieg auf **10 von
+12** — der beste je gemessene Wert. Und wieder lagen **vier Proben falsch**:
+`nachbar1` war eine **Tröte** aus dem 20./21. Jahrhundert und lief seit Welle 5
+in drei Epochen mit. Dazu ein stiller Fehler im Tonbus — `angleich()` kappte
+bei Faktor 6, `drueben1` brauchte 76, und das Nachbarzeichen stand in 1970
+**dreizehnmal lauter** als in 1350.
+
+---
+
 ## WELLE 5 IST DURCH — 4. August 2026
 
 Zwei Stücke, je Builder → blinder Kritiker → Nacharbeit. Beide Nacharbeiten
