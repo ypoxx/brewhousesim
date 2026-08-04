@@ -41,14 +41,18 @@ if [ ! -d "$ORT" ] || [ ! -f "$ORT/spiel/index.html" ]; then
   git archive "$WAS" | tar -x -C "$ORT" || { echo "git archive fehlgeschlagen" >&2; exit 1; }
 fi
 
-# Eine Datei, an der sich der Commit erkennen laesst — ohne `ss`, ohne pidfile,
-# ohne Vertrauen. Wir fragen den SERVER, nicht das Betriebssystem.
-PROBE=spiel/kern/welt.js
-SOLL=$(git show "$WAS:$PROBE" | md5sum | cut -d' ' -f1)
+# DIE MARKE. Wir fragen den SERVER, welchen Stand er ausliefert — nicht das
+# Betriebssystem, nicht eine pidfile, nicht `ss`.
+#
+# Erster Versuch war, eine Spieldatei (kern/welt.js) gegen den Commit zu
+# pruefen. Das TRUEGT: aendert sich diese Datei zwischen zwei Commits nicht,
+# meldet das Skript "steht bereits", waehrend es einen ganz anderen Stand
+# ausliefert — genau der Fehler, den es beheben soll, nur eine Ebene tiefer.
+# Beim Selbsttest am 4.8. sofort aufgefallen. Die Marke traegt den Commit
+# selbst und ist deshalb immer verschieden.
+echo "$SHA" > "$ORT/.messstand-marke"
 ist_richtig() {
-  local h
-  h=$(curl -s -m 5 "http://127.0.0.1:$HAFEN/$PROBE" 2>/dev/null | md5sum | cut -d' ' -f1)
-  [ "$h" = "$SOLL" ]
+  [ "$(curl -s -m 5 "http://127.0.0.1:$HAFEN/.messstand-marke" 2>/dev/null)" = "$SHA" ]
 }
 
 starte() {
