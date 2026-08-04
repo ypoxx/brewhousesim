@@ -589,9 +589,22 @@ der Aufschlag durch ist. Ergebnis ueber 28 Michaelitage in E1 und E2:
 | erreichbar **und** aktiv | 4 | 2 | 2 | 1 | 3 | 4 | 4 | 3 | 2 | 2 | 2 | 2 | 1 | 2 |
 | verdeckte Karten | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Kein einziger verdeckter Knopf in 28 Michaelitagen.** Die Zahl der Karten, die
-nebeneinander liegen, erreichbar und aktiv, ist **1 bis 4** — nie 0, und an
-**24 von 28** Tagen mindestens zwei.
+**Schritt 5 — `tafel.mjs`, die Gegenprobe mit dem richtigen Handgriff.**
+Dieselbe spielende Hand, ein Zusatz: ist `div.pr-tafel.stadt-zugeklappt` da,
+wird der **Reiter der STADT** gedrueckt, nicht der Griff des PREIS. Alle vier
+Epochen, vierzehn Michaelitage:
+
+| Karten erreichbar **und** aktiv | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Michaelitag fuer Michaelitag | 3·2·4·2·3·3·3·3·2·2·1·2·2·1 | 4·2·2·1·3·4·4·3·2·2·2·2·1·2 | 6·4·3·3·1·2·1·1·2·1·2·2·3·5 | *(s. u.)* |
+| **verdeckte Karten insgesamt** | **0** | **0** | **0** | *(s. u.)* |
+| Tage mit **0** anfassbaren Karten | **0/14** | **0/14** | **0/14** | *(s. u.)* |
+| Tage mit **≥2 — „nebeneinander"** | **12/14** | **12/14** | **10/14** | *(s. u.)* |
+
+**Kein einziger verdeckter Knopf in 42 nachgezaehlten Michaelitagen** (E1–E3 mit
+`tafel.mjs`, dazu E1/E2 unabhaengig mit `frei.mjs`). Die Zahl der Karten, die
+nebeneinander liegen, erreichbar und aktiv, ist **1 bis 6** — nie 0, und an
+**34 von 42** Tagen mindestens zwei.
 
 **Damit ist Spalte (a) bestanden und mein eigener Befund kassiert.** Er steht
 oben trotzdem, weil er die eine Sache zeigt, vor der die Aufsicht gewarnt hat:

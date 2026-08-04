@@ -235,6 +235,37 @@ einen Vorschlag als `KERN:`-Absatz zu liefern, ohne fremde Dateien anzufassen.
 
 ---
 
+## OFFENER BEFUND AM MASSSTAB SELBST — die Wellenzahl hängt an der Laufzeit
+
+**Gemeldet vom blinden Kritiker DER PREIS in der Nacht zum 4. August**, gemessen
+an `6b59a18`, dieselbe Reihe, Epoche 1:
+
+| Michaelitage | 13 | 14 | 15 |
+|---|---|---|---|
+| ρ Spearman | **+0,692** | **+0,591** | **+0,421** |
+
+Der von der Aufsicht als erreicht gemeldete Stand **+0,591 ist der Wert bei
+vierzehn Michaelitagen** — das sind die 400 Wochen des Vorbilds
+`preis-linie.mjs`. Bei dreizehn steht dieselbe Partie auf **+0,692**, also
+**acht Tausendstel unter der Latte**.
+
+> **|ρ| < 0,7 wird in 1350 nicht mit Abstand bestanden, sondern mit der Wahl der
+> Laufzeit.** Das gehört ab jetzt neben jede Zahl geschrieben, die diese Latte
+> nennt — auch neben die Meldung „Wellenziel erreicht".
+
+**Was daraus folgt und noch nicht entschieden ist:** die Latte braucht eine
+festgelegte Zählweise, sonst misst jeder Lauf etwas anderes. 400 Wochen sind
+eine Konvention aus dem ersten Messgerät, kein Argument. Wer sie festschreibt,
+begründet sie — oder die Latte wird über mehrere Laufzeiten gemittelt und die
+Spannweite mitgenannt. **Das ist keine Aufgabe für einen Builder, sondern für
+die Aufsicht und den Auftraggeber**, weil es die Messlatte ändert und nicht das
+Spiel.
+
+Der Kritiker hat im selben Abschnitt außerdem bestätigt: **sequenziell gemessen
+streut dieses Spiel gar nicht.** Wer Streuung meldet, misst seinen Browser.
+
+---
+
 ## RICHTUNGSENTSCHEIDUNG DES AUFTRAGGEBERS, 3. August 2026 — DER EPOCHENBOGEN
 
 **Das Spiel soll nicht über Jahrhunderte laufen.** Stattdessen Epochen nach Art

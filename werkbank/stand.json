@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-03T23:40:12+00:00",
+ "stand": "2026-08-04T02:25:14+00:00",
  "phase": "Welle 5 — DER KLANG ist durch: vier von fünf Auflagen abgenommen, die dritte Messlatte trägt zum ersten Mal wirklich den VORGANG statt der Kulisse (still 12/12 auf 2/12, gespielt 3/12 auf 7/12). DER PREIS wird gerade blind geprüft. Die Aufsicht misst bewusst nicht mit, solange ein Agent misst — gleichzeitige Browser verfälschen die Zahlen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -127,10 +127,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T18:57:29+00:00",
-   "text": "KERN (Bitte fuer die Zwischenwelle): 1. vorrat.plaetze ist mit 90/400 Fass in 1884/1970 zu klein — Sudgroesse mal Lagerzeit passt nicht hinein, die Reifezeiten mussten auf 2-5 Wochen gekuerzt werden. Ein getrennter Gaerkeller (reifendes Bier) neben dem Lagerkeller (lieferbares Bier) waere die saubere Loesung. 2. Es fehlt eine API fuer haus.rohstoff; DIE FUHRE zieht ihn beim Sud direkt ab. 3. nimmHeraus() nimmt immer das aelteste Fass — DIE FUHRE sortiert dafuer die gewuenschten Faesser nach vorn und ruft dann die API."
-  },
   {
    "zeit": "2026-07-31T19:00:03+00:00",
    "text": "DIE FUHRE R1 gemessen (Playwright, gesaete Partie ?saat=1350): Fuhren je 160 Wochen — 1350: 127 · 1600: 111 · 1884: 130 · 1970: 136. In 90 von 90 geprueften Wochen will je Epoche mindestens ein Haus mehr, als im Keller liegt (am Bildschirm nachzaehlbar: Kopfzeile 'wollen N · im Keller liegen M', Fassbetten unter jedem Haus gegen Faesser im Gitter). Barschaft ueber fuenf Braujahre in keiner Epoche monoton. Adressen ohne Zutun des Gegners verloren: 1350 vier, 1600 drei, 1884 eine, 1970 sieben — der Verlust steht auf dem Georgi-Blatt mit der dreijaehrigen Reihe daneben. Keine Seitenfehler, BRAUHAUS.lage leer, in allen vier Epochen."
@@ -926,6 +922,10 @@
   {
    "zeit": "2026-08-03T23:40:12+00:00",
    "text": "DER KLANG r2 — DIE URSACHE LAG IN DEN DATEIEN, UND SIE WAR DREI WELLEN LANG UNSICHTBAR. Der Builder hat jede epochentragende Tonprobe EINZELN einem fremden Ohr vorgelegt, statt nur die Mischung zu messen. Sieben von ihnen enthielten etwas anderes, als ihr Dateiname verspricht: abfahrt1 — die Ochsenfuhre von 1350, der Hauptvorgang der ersten Epoche — war Wasserplätschern. sud3 enthielt eine Sprühdose, die es erst ab 1927 gibt, in einer Aufnahme von 1884. fassstahl war ein Gong. abfahrt3 war ein gepfiffenes Liedchen, und daher kam die mittelalterliche Holzflöte, die das Ohr in 1884 gehört hatte. glocke waren Röhrenglocken — und daher kam die Fahrradklingel und die Autohupe, die in Welle 4 fälschlich karren.mp3 angelastet worden war. DIE FUHRE HATTE IN DREI VON VIER EPOCHEN GAR KEINEN ABFAHRTSKLANG. Damit ist auch erklärt, warum drei Wellen lang niemand den Fehler fand: gemessen wurde immer die Mischung, nie die einzelne Probe. Dazu der mechanische Grund: Bett und Hof liefen ohne Zutun und duckten sich unter jeden Zug weg — die einzige Schicht, die die Zeit sagte, war genau dann weg, wenn jemand spielte. Ergebnis mit dem Verfahren des Kritikers, drei Durchgänge am selben Tag: still von 12/12 auf 2/12, gespielt von 3/12 auf 7/12. Der Befund des Kritikers stimmte und war zu milde — die gespielte Aufnahme war nicht schlechter erkennbar, sie war Raten. Zwei Dinge, die der Builder gegen sich selbst getan hat: er liefert ausdrücklich NICHT den Stand mit der besten Zahl aus, sondern den einzigen, der Auflage 2 erfüllt, und sagt das so; und ein Fund des Ohres, den er in der Wellenform nicht bestätigen konnte, steht als unbelegt im Bericht, statt dass daraufhin etwas geändert wurde. Zwei neu erzeugte Proben, die nach elf Versuchen nicht stimmten, hat er gelöscht statt geschönt."
+  },
+  {
+   "zeit": "2026-08-04T02:25:14+00:00",
+   "text": "BEFUND AM MASSSTAB SELBST — DIE WELLENZAHL HÄNGT AN DER LAUFZEIT. Der blinde Kritiker DER PREIS hat in der Nacht zum 4. August dieselbe Reihe der Epoche 1 nach verschiedener Anzahl Michaelitage ausgewertet: bei dreizehn steht rho auf +0,692, bei vierzehn auf +0,591, bei fünfzehn auf +0,421. Der von der Aufsicht als erreicht gemeldete Stand +0,591 ist der Wert bei VIERZEHN — das sind die 400 Wochen des Vorbilds. Bei dreizehn liegt dieselbe Partie acht Tausendstel unter der Latte. Damit wird |rho| unter 0,7 in 1350 nicht mit Abstand bestanden, sondern mit der Wahl der Laufzeit, und das gehört ab jetzt neben jede Zahl geschrieben, die diese Latte nennt — auch neben die Meldung 'Wellenziel erreicht'. Was daraus folgt, ist noch nicht entschieden: die Latte braucht eine festgelegte Zählweise, sonst misst jeder Lauf etwas anderes. 400 Wochen sind eine Konvention aus dem ersten Messgerät, kein Argument. Das ist keine Aufgabe für einen Builder, sondern für die Aufsicht und den Auftraggeber, weil es die Messlatte ändert und nicht das Spiel. Im selben Abschnitt bestätigt der Kritiker außerdem: sequenziell gemessen streut dieses Spiel gar nicht — wer Streuung meldet, misst seinen Browser."
   }
  ]
 }
