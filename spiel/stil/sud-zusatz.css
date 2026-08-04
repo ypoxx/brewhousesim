@@ -177,47 +177,46 @@
 
 /* --------------------------------------------------------------------------
    DIE VIERTE LATTE — Lesbarkeit bei 1366x768 (MESSLATTE.md §4, 4. August).
+   GEMESSEN UND ABSICHTLICH NICHT HIER BEHOBEN. Die Zahlen stehen hier, damit
+   der naechste, der `--s` anfasst, sie nicht noch einmal erheben muss.
 
-   Gemessen an meinem eigenen Zettel, Hafen 8951, 1366x768:
-     sud:zettel-anstich        83x20 px
-     sud:zettel-hefe-fass      83x20 px
-     sud:zettel-wechsel-frei  168x13 px   (1970)
-     sud:zettel-wechsel-kauf  168x23 px
-   Vier aktive Knoepfe unter 24x24 px, in allen vier Epochen, im
-   VORGABESTAND — also genau dort, wo ein Spieler zuerst hinfasst.
+   Gemessen an meinem eigenen Kesselzettel, 1366x768, Vorgabestand:
 
-   Die Ursache ist `--s` in `stil/grund.css`: alles in diesem Haus rechnet
-   in `calc(var(--s) * n)`, und `--s` skaliert von der Entwurfsleinwand
-   2752x1536 herunter. An dieser Zeile arbeitet in dieser Welle ein anderer
-   Builder; sie wird hier NICHT angefasst.
+     Kasten .sud-zettel          178 x 127 px   (13 % x 16,5 % der Buehne)
+     sud:zettel-anstich           83 x 20 px
+     sud:zettel-hefe-fass         83 x 20 px
+     sud:zettel-wechsel-frei     168 x 13 px  (1970)  bis  168 x 22 px
+     sud:zettel-wechsel-kauf     168 x 22 px  bis  168 x 23 px
+     kleinste Schrift im Stueck    6,5 px
 
-   Was hier steht, ist deshalb kein Gegenentwurf, sondern ein BODEN:
-   `max(calc(var(--s) * n), 24px)` nimmt, was groesser ist. Auf der
-   Entwurfsleinwand gewinnt weiter die alte Rechnung (dort ist
-   `--s * 24` groesser als 24 px), auf einem Notebook gewinnt der Boden.
-   Wer `--s` hebt, hebt damit auch diese Knoepfe wieder mit — die beiden
-   Aenderungen stehen einander nicht im Weg.
+   Vier aktive Knoepfe unter 24x24 px, in allen vier Epochen, genau dort, wo
+   ein Spieler zuerst hinfasst. Auf der Entwurfsleinwand 2752x1536 sind
+   dieselben Knoepfe 41 bis 47 px hoch — es ist kein Fehler einer Regel,
+   sondern der Massstab: `--s` in `stil/grund.css` skaliert alles
+   proportional herunter, und an dieser Zeile arbeitet in dieser Welle ein
+   anderer Builder. Sie wird hier nicht angefasst.
+
+   WARUM AUCH DER BODEN NICHT HILFT — nachgemessen, nicht vermutet. Ein
+   `min-height: max(calc(var(--s) * 24), 24px)` an den Zettelknoepfen wurde
+   gebaut und in allen vier Epochen bei 1366x768 gemessen. Der Zettel ist ein
+   FLEXKASTEN MIT FESTER HOEHE (`max-height: 16.5%`, `overflow: hidden`), und
+   diese Hoehe ist gedeckelt, damit die Flaeche 2,145 % bleibt und unter der
+   Ortsmarken-Schwelle der STADT (2,4 %). Der Kasten ist bei 1366x768 immer
+   schon ueberfuellt. Jeder Pixel, den ein Knopf gewinnt, wird einem anderen
+   Kind genommen:
+
+     Vorgabe                anstich 20 · hefe-fass 20 · frei 22 · kauf 22
+     mit Boden am Paar      anstich 24 · hefe-fass 24 · frei 19 · kauf 19
+     mit Boden an allen     alle vier 24, dafuer faellt die Zeile mit den
+                            laufenden Verfahren auf 0 px — und das ist die
+                            Zeile, an der ein Fremder das Bier dieses Hauses
+                            abliest (Latte 2, Frage 4)
+     dazu Zeile geschuetzt  der LETZTE Knopf wird abgeschnitten (E3, E4)
+
+   Zwei Knoepfe zu retten, indem zwei andere kleiner werden, ist keine
+   Behebung, und ein abgeschnittener Knopf ist schlechter als ein kleiner.
+   Der Zettel traegt bei 1366x768 nicht vier Knoepfe zu 24 px. Wer das
+   aendern will, hat genau zwei Hebel, und beide liegen ausserhalb dieser
+   Datei: `--s` heben, oder den Flaechendeckel des Zettels neu verhandeln —
+   und der haengt an einer Zahl der STADT, nicht an einer dieses Stuecks.
    -------------------------------------------------------------------------- */
-#buehne .sud-zettel .knopf.sud-tat,
-#buehne .sud-zettel .knopf.sud-tat.klein.voll,
-#buehne .sud-zettel .knopf.sud-tat.voll.halb {
-  min-height: max(calc(var(--s) * 24), 24px);
-}
-
-/* Und der Preis dafuer, gemessen und hier festgehalten, weil er nicht
-   verschwiegen gehoert: der Zettel ist auf 13 % x 16,5 % der Buehne
-   gedeckelt (= 2,145 % Flaeche, die Ortsmarken-Schwelle der STADT liegt bei
-   2,4 %), und bei 1366x768 sind das 178 x 127 px. Vier Knoepfe zu 24 px
-   passen da nur hinein, wenn die Zeile mit den laufenden Verfahren
-   zusammengedrueckt wird — und genau die ist die Zeile, an der ein Fremder
-   das Bier dieses Hauses abliest.
-
-   Also bekommt sie einen eigenen Boden und wird NICHT mehr weggedrueckt.
-   Sie klemmt sich damit eine Zeile ab statt zwei; der volle Satz steht wie
-   bisher am Knopf und auf dem Brett. Nachgemessen bei 1366x768: vier
-   Knoepfe zu 24 px, Verfahrenzeile 11 px, alle vier Knoepfe ganz im Kasten. */
-#buehne .sud-zettel .sud-zverfahren {
-  flex: 0 0 auto;
-  min-height: max(calc(var(--s) * 18), 11px);
-  max-height: max(calc(var(--s) * 36), 11px);
-}
