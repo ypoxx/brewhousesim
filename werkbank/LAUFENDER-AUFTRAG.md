@@ -235,6 +235,53 @@ einen Vorschlag als `KERN:`-Absatz zu liefern, ohne fremde Dateien anzufassen.
 
 ---
 
+## WELLE 5 IST DURCH — 4. August 2026
+
+Zwei Stücke, je Builder → blinder Kritiker → Nacharbeit. Beide Nacharbeiten
+liegen vor, beide Kritiker haben **besteht mit Auflage** gesprochen.
+
+**Von der Aufsicht selbst nachgemessen**, zwölf Läufe à 400 Wochen, sequenziell,
+eingefrorener Stand `916004d`, je drei pro Epoche. Rohdaten in
+`werkbank/schuss/aufsicht/welle5-schluss/`.
+
+| Epoche | ρ | Spannweite | Jahre < 1× |
+|---|---|---|---|
+| 1350 | +0,591 | 0,000 | 0/14 |
+| 1600 | +0,231 | 0,000 | 0/14 |
+| 1884 | +0,393 | 0,000 | 1/14 |
+| 1970 | +0,275 | 0,000 | 0/14 |
+
+**Wellenziel bei vierzehn Braujahren erreicht.** Drei Messungen — Builder,
+blinder Kritiker, Aufsicht — kommen auf dieselben Ziffern.
+
+**DER KLANG:** die dritte Latte trägt zum ersten Mal den *Vorgang* statt der
+Kulisse (still 12/12 → 2/12, gespielt 3/12 → 7/12). Ursache war, dass **sieben
+Tonproben nicht enthielten, was ihr Name verspricht** — `abfahrt1`, die
+Ochsenfuhre von 1350, war Wasserplätschern; DIE FUHRE hatte in drei von vier
+Epochen gar keinen Abfahrtsklang. Offen: Auflage 4, der Gegenzug ist nur in
+1350 hörbar.
+
+**DER PREIS:** beide Auftragsfragen fielen zugunsten des Baus — der Zähler war
+nie blind, der Kassenboden liegt in 0 von 1.680 Wochen auf null. Sieben neue
+Sprossen gegen die leere Festlegungstafel: Michaelitage ohne bezahlbare
+Festlegung 11/12/11/8 → **7/8/9/7**. Offen: KERN `welt.js:412`.
+
+**Was in dieser Welle über das MESSEN gelernt wurde** — vier Werkzeuge waren
+kaputt, alle vier haben *geschwiegen statt zu scheitern*:
+1. `hoerer.py --blind` mischte nicht, sondern unterstellte 1,2,3,4.
+2. `messstand.sh` wechselte den Hafen nie (`ss` fehlt, `set -e` bricht still ab).
+3. `wiederaufnahme.sh` meldete „origin ist auf Stand", ohne zu holen.
+4. Der Lebenszeichen-Test der Aufsicht lag dreimal daneben — erst sortierte er
+   Zeichenketten, dann glaubte er Dateizeiten, dann kürzte er die Prozessliste.
+
+> **Ein Messgerät, das im Fehlerfall nichts sagt, ist gefährlicher als keins.**
+> Alle vier sind repariert und mit einer Gegenprobe belegt.
+
+Dazu: **sequenziell messen, nie parallel** — vier gleichzeitige Browser lieferten
+ρ +0,354 statt +0,393. Sequenziell streut dieses Spiel **gar nicht**.
+
+---
+
 ## OFFENER BEFUND AM MASSSTAB SELBST — die Wellenzahl hängt an der Laufzeit
 
 **Gemeldet vom blinden Kritiker DER PREIS in der Nacht zum 4. August**, gemessen

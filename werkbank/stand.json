@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T03:27:45+00:00",
- "phase": "Welle 5, dritte Runde — DER PREIS arbeitet an fünf Auflagen nach; die schwerste: acht Amtszeiten, aber nur zwei bezahlbare Festlegungen, weil die Taxe mit der Teuerung wächst und die Kasse nicht. DER KLANG ist durch (vier von fünf Auflagen). Über Nacht sind drei Werkzeuge der Aufsicht als kaputt aufgeflogen und repariert: hoerer.py mischte bei --blind gar nicht, messstand.sh wechselte den Hafen nie und schwieg dazu, und wiederaufnahme.sh meldete 'origin ist auf Stand', ohne zu holen — nach einem Reset sah damit alles verloren aus, was längst gepusht war.",
+ "stand": "2026-08-04T07:50:46+00:00",
+ "phase": "WELLE 5 IST DURCH. Beide Stücke gebaut, blind geprüft, nachgearbeitet. Die Aufsicht hat unabhängig nachgemessen — zwölf Läufe sequenziell am eingefrorenen Stand, je drei pro Epoche: rho +0,591 / +0,231 / +0,393 / +0,275, Spannweite jeweils 0,000, höchstens ein Jahr von sechs unter 1x. Wellenziel bei vierzehn Braujahren erreicht, und drei Messungen — Builder, Kritiker, Aufsicht — kommen auf dieselben Ziffern. ABER: bei zwölf Braujahren steht 1350 auf +0,762 und reißt. Die Latte braucht eine Entscheidung über die Zählweise; das ändert die Messlatte, nicht das Spiel, und gehört dem Auftraggeber.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -120,21 +120,13 @@
   },
   {
    "name": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderr",
-   "status": "zurueck",
+   "status": "bestanden",
    "runde": 2,
-   "luecke": "BESTEHT MIT AUFLAGE, fünf Auflagen, in Nacharbeit. Beide Auftragsfragen fielen zugunsten des Baus: der Zähler ist richtig und läuft Jahr für Jahr mit — die gemeldete Null war die Math.abs()-Falle der MESSHAND, vom Kritiker mit ABS=1 nachgestellt; und der Kassenboden liegt unter sorgfältiger Hand in 0 von 1.680 Wochen auf null und nie darunter, Buchung für Buchung aus B.protokoll rekonstruiert. Die zweite Latte hält in allen vier, Spannweite 0,000: +0,591 / +0,231 / +0,393 / +0,275. DIE SCHWERSTE AUFLAGE: acht Amtszeiten, aber nur zwei bezahlbare Festlegungen. Jede Amtszeit bekommt genau eine unwiderrufliche Wahl, eine Hand die sie ausdrücklich will bekommt 2/2/2/4 — danach trägt in 1350 ab 1357 sieben Jahre, in 1600 ab 1605 neun Jahre und in 1884 ab 1887 ELF JAHRE jede Festlegungskarte disabled. Ursache gemessen: die Taxe hängt an grund mal Teuerung hoch Jahre, wächst also mit der Zeit, während die Kasse nicht mitwächst; in 1350 kostet der Freikauf 1364 rund 1.900 Pf gegen eine Kasse, die nie über 663 kommt. In Worten des Kritikers: das Stück heißt DER PREIS und hat in elf von vierzehn Braujahren nichts anzubieten. Weiter: der zweite Zähler zählt fertige Angebote, steht aber im Satz über Festlegungen; die Zahl fehlt genau am Michaelitag, weil der Griff mit den Zahlen nur bei GESCHLOSSENER Tafel gezeichnet wird; und overflow:hidden schneidet ausgerechnet den Satz ab, der sagt, was die Entscheidung für den Rest der Partie kostet.",
+   "luecke": "NACHGEARBEITET, alle fünf Auflagen erledigt und je gemessen. Die schwerste — acht Amtszeiten, nur zwei bezahlbare Festlegungen — mit sieben neuen Sprossen behoben, zwei davon mit Zufluss: Michaelitage ohne bezahlbare Festlegung 11/12/11/8 auf 7/8/9/7, die leere Tafel von 1970 in den letzten fünf Jahren von 5 von 14 auf 0 von 14. Überläufe der eigenen Klassen von 119 auf 0. WO DER BUILDER DEN KRITIKER WIDERLEGT, mit Zahl: dessen Ursache 'die Taxe wächst, die Kasse nicht' gilt in 1600, 1884 und 1970, NICHT in 1350 — dort wächst die Lade um das 3,4-fache gegen eine Taxe um das 1,67-fache, der Abstand fällt. Gegenprobe: eine auf das Eröffnungsjahr eingefrorene Taxe hätte in ALLEN VIER Epochen NULL zusätzliche Festlegungen erreichbar gemacht. Die Ursache ist die Lücke in der Leiter, nicht ihre Steigung — deshalb wurde die Leiter gefüllt und der Kern nicht angefasst. Der Builder hat den vorgeschlagenen Eingriff also geprüft und widerlegt, statt ihn auszuführen. Selbst zurückgenommen: die erste Fassung einer neuen Karte wäre das beste Geschäft der Epoche gewesen und wurde gesenkt, eine zweite trug sich nie und wurde gehoben; der halb gelaufene Messsatz wurde weggeworfen und neu gemessen. Offen: KERN welt.js:412 zieht den Unterhalt ohne Deckungsprüfung ab.",
    "gebaut": "werkbank/beleg/preis-e3.jpg"
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T19:13:14+00:00",
-   "text": "DER PREIS Runde 1: Michaelitafel steht. 5 Angebote nebeneinander je Epoche, 4 getrennte Listen, eine Festlegung je Amtszeit mit Chronik. Leiter faellt in allen vier Epochen ueber fuenf Jahre."
-  },
-  {
-   "zeit": "2026-07-31T19:14:41+00:00",
-   "text": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderruflich · Runde 1 · läuft"
-  },
   {
    "zeit": "2026-07-31T19:20:00+00:00",
    "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 1 · zurück an den Builder — Bild zu ~70% von Tafeln verdeckt: bau=keine vs bau=alle (12 Bauten) aendert im 2752x1536-Schuss nur Rauchfahne, einen Schornsteinschaft und die BAUHOF-Zeile. Kein Hofgebaeude wird sichtbar."
@@ -926,6 +918,14 @@
   {
    "zeit": "2026-08-04T03:27:45+00:00",
    "text": "AUFSICHT — DREI EIGENE WERKZEUGE WAREN KAPUTT, alle drei in einer Nacht aufgeflogen. (1) hoerer.py mischte bei --blind gar nicht, sondern unterstellte die Reihenfolge 1,2,3,4 — die Aufrufzeile in der eigenen Dokumentation lud genau dazu ein. (2) messstand.sh wechselte den Hafen NIE: 'ss' gibt es in diesem Container nicht, und set -euo pipefail ließ das Skript genau dort still mit Exit 1 abbrechen. 'Frier X ein' und 'miss X' waren zwei verschiedene Dinge, und nichts sagte es — den blinden Kritiker DER PREIS hat das eine Stunde gekostet, gemerkt hat er es nur, weil er die ausgelieferte Datei gegengeprüft hat. Beim Reparieren fiel im Selbsttest sofort ein zweiter Fehler auf: die erste Fassung prüfte eine SPIELDATEI gegen den Commit, was trügt, wenn die Datei zwischen zwei Commits gleich blieb — derselbe Fehler eine Ebene tiefer. Jetzt trägt eine Marke den Commit selbst, dreimal belegt A auf B auf A. (3) wiederaufnahme.sh meldete 'origin ist auf Stand', ohne vorher zu holen: es verglich HEAD nur gegen die LOKALE Remote-Referenz, und die ist nach einem Container-Reset genauso alt wie der Baum. In der Nacht zum 4. August sah es deshalb so aus, als wären die Reparatur von messstand.sh und das fertige 946-Zeilen-Urteil verloren — beide lagen längst auf origin. Wer daraufhin neu baut, macht die Arbeit doppelt oder überschreibt sie. Jetzt wird zuerst geholt und in BEIDE Richtungen verglichen; belegt an einem künstlich zurückgesetzten Baum: 'origin ist 2 Commit(s) VORAUS — der Baum ist alt, nicht origin'. Ein Muster über alle drei: jedes Werkzeug hat geschwiegen statt zu scheitern. Ein Messgerät, das im Fehlerfall nichts sagt, ist gefährlicher als keins."
+  },
+  {
+   "zeit": "2026-08-04T07:50:46+00:00",
+   "text": "DER PREIS — Michaeli, Angebote nebeneinander, eines unwiderr · Runde 2 · bestanden — NACHGEARBEITET, alle fünf Auflagen erledigt und je gemessen. Die schwerste — acht Amtszeiten, nur zwei bezahlbare Festlegungen — mit sieben neuen Sprossen behoben, zwei davon mit Zufluss: Michaelitage ohne bezahlbare Festlegung 11/12/11/8 auf 7/8/9/7, die leere Tafel von 1970 in den letzten fünf Jahren von 5 von 14 auf 0 von 14. Überläufe der eigenen Klassen von 119 auf 0. WO DER BUILDER DEN KRITIKER WIDERLEGT, mit Zahl: dessen Ursache 'die Taxe wächst, die Kasse nicht' gilt in 1600, 1884 und 1970, NICHT in 1350 — dort wächst die Lade um das 3,4-fache gegen eine Taxe um das 1,67-fache, der Abstand fällt. Gegenprobe: eine auf das Eröffnungsjahr eingefrorene Taxe hätte in ALLEN VIER Epochen NULL zusätzliche Festlegungen erreichbar gemacht. Die Ursache ist die Lücke in der Leiter, nicht ihre Steigung — deshalb wurde die Leiter gefüllt und der Kern nicht angefasst. Der Builder hat den vorgeschlagenen Eingriff also geprüft und widerlegt, statt ihn auszuführen. Selbst zurückgenommen: die erste Fassung einer neuen Karte wäre das beste Geschäft der Epoche gewesen und wurde gesenkt, eine zweite trug sich nie und wurde gehoben; der halb gelaufene Messsatz wurde weggeworfen und neu gemessen. Offen: KERN welt.js:412 zieht den Unterhalt ohne Deckungsprüfung ab."
+  },
+  {
+   "zeit": "2026-08-04T07:50:46+00:00",
+   "text": "WELLE 5 IST DURCH. Beide Stücke gebaut, blind geprüft, nachgearbeitet. Die Aufsicht hat unabhängig nachgemessen — zwölf Läufe sequenziell am eingefrorenen Stand, je drei pro Epoche: rho +0,591 / +0,231 / +0,393 / +0,275, Spannweite jeweils 0,000, höchstens ein Jahr von sechs unter 1x. Wellenziel bei vierzehn Braujahren erreicht, und drei Messungen — Builder, Kritiker, Aufsicht — kommen auf dieselben Ziffern. ABER: bei zwölf Braujahren steht 1350 auf +0,762 und reißt. Die Latte braucht eine Entscheidung über die Zählweise; das ändert die Messlatte, nicht das Spiel, und gehört dem Auftraggeber."
   }
  ]
 }
