@@ -912,8 +912,21 @@
        durch einen Tiefpass gejagt macht sie aus dem rhythmischen Saegen des
        Nachbarn ein gleichmaessiges Brummen. Genau das hat das fremde Ohr in
        1350 als Motor gemeldet. Eine Wand ist keine Halle. */
-    w.bus.fern = baueWand(ctx, w.bus.fremd, 2000, 0.115, 0.28);
-    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 1800, 0.135, 0.36);
+    /* WELLE 6, AUFLAGE 4 — die Wand des Nachbarhofs wird DICKER, und zwar
+       aus zwei Gruenden, die beide gemessen sind.
+       Erstens fragt die Latte woertlich nach "gedaempft WIE DURCH EINE WAND".
+       1800 Hz sind kein Mauerwerk, sondern ein halb offenes Fenster.
+       Zweitens traegt das neue Zeichen (`drueben1`/`drueben4`) Stimmen — das
+       ist sein ganzer Zweck, denn der eigene Hof hat keine —, und einzeln
+       vorgelegt hat das fremde Ohr an `drueben1` genau eine Sache geruegt:
+       "Neuenglische Sprache (modernes Englisch) ab Sekunde 0". Eine Sprache
+       ist ein Anachronismus, ein Stimmengemurmel ist keiner. Unterhalb von
+       rund 900 Hz bleibt von Sprache die Melodie und nicht das Wort.
+       Der `fern`-Bus (jeder uebrige Klang des Nachbarn) geht mit auf 1500 —
+       auch er soll von drueben kommen —, aber nicht so tief wie das Zeichen:
+       dort steht der Vorgang selbst, und der muss erkennbar bleiben. */
+    w.bus.fern = baueWand(ctx, w.bus.fremd, 1500, 0.115, 0.28);
+    w.bus.nachbar = baueWand(ctx, w.bus.fremd, 900, 0.135, 0.36);
     return w;
   }
 
@@ -1208,7 +1221,13 @@
     /* Wie bei den Schleifen: die beiden Proben sind NICHT gleich laut aus dem
        Erzeuger gekommen (Effektivwert 0,044 gegen 0,100). Ein Zeichen, das in
        1350 halb so laut ist wie in 1970, ist in 1350 kein Zeichen. */
-    var laut = angleich(buf, 0.21);
+    /* 0,27 statt 0,21 — WELLE 6, AUFLAGE 4. Das Zeichen geht durch einen
+       Tiefpass bei 1800 Hz, und was ein Tiefpass wegnimmt, nimmt er auch dem
+       Pegel. In 1350 hat es trotzdem getragen, weil dort der Hof am tiefsten
+       steht (ZIEL_HOF 0,034 gegen 0,048); in den anderen drei Epochen liegt
+       ueber dem Zeichen ein Fuenftel mehr Hof. Ein Zeichen, das nur in der
+       leisesten Epoche durchkommt, ist kein Zeichen, sondern ein Zufall. */
+    var laut = angleich(buf, 0.27);
     g.gain.setValueAtTime(0.0001, wann);
     g.gain.linearRampToValueAtTime(laut, wann + 0.22);
     g.gain.setValueAtTime(laut, wann + d - 0.45);
@@ -1424,6 +1443,15 @@
     /* Jede Epoche atmet anders tief — 1970 am tiefsten, weil ihr Band als
        gleichfoermiges Maschinenbrummen aus dem Erzeuger kam. */
     B.wage('ton.atem', function () { setzeAtem(w, epoche); });
+
+    /* Das NACHBARHOF-Zeichen wird VORGELADEN. `nachbarhof()` gibt auf, wenn
+       der Puffer noch nicht steht (`if (!buf) { ladeStill(...); return false; }`)
+       — der erste Gegenzug einer Partie faellt damit stumm aus. Solange das
+       Zeichen auf `bau1`/`bau4` lief, fiel das nicht auf, weil dieselbe Datei
+       schon am eigenen Bauen hing und laengst geladen war. Seit Welle 6 ruft
+       `drueben1`/`drueben4` KEIN anderer Eintrag; ohne diese Zeile waere der
+       erste fremde Zug jeder Partie der einzige, den niemand hoert. */
+    B.wage('ton.nachbar.laden', function () { ladeStill(w.ctx, NACHBAR_DATEI(epoche)); });
 
     var jetzt = w.ctx.currentTime;
     blendeAus(w, liegend.bett, jetzt);
@@ -1694,6 +1722,13 @@
         if (d) noetig[d] = 1;
         var z = e.dazu && dateiVon(e.dazu, epoche);
         if (z) noetig[z] = 1;
+        /* Das NACHBARHOF-Zeichen haengt an keinem Katalogeintrag, sondern an
+           `nachbar: true`. Es fehlte hier von Anfang an — im Offline-Renderer
+           ist der Gegenzug deshalb bisher IMMER stumm geblieben. Gemessen wird
+           er hier ohnehin nicht (Sperrliste 4 des Kritikers: nur ein Mitschnitt
+           am lebenden Ausgang zaehlt), aber wer den Renderer zum Anhoeren
+           benutzt, hoerte den halben Vorgang. */
+        if (e.nachbar) noetig[NACHBAR_DATEI(epoche)] = 1;
       });
 
       return Promise.all(Object.keys(noetig).map(function (d) {

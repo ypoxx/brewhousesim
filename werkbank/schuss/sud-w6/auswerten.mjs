@@ -56,6 +56,18 @@ for (const p of dateien) {
   console.log(`    Wochen mit mindestens einer offenen Frage: ${wochenMitFrage}/${d.sudwochen.length}`
     + `  · davon mit Preisschild: ${wochenMitPreisFrage}`);
 
+  /* (a) der zweiten Latte: Preisschilder NEBENEINANDER, erreichbar UND aktiv */
+  const preisVert = {};
+  let maxPreis = 0;
+  for (const w of d.sudwochen) {
+    const n = w.bild.filter(b => b.p && !b.a && b.h).length;
+    preisVert[n] = (preisVert[n] || 0) + 1;
+    maxPreis = Math.max(maxPreis, n);
+  }
+  console.log(`    (a) Preisschilder im SUD zugleich aktiv+erreichbar: `
+    + Object.keys(preisVert).sort((x, y) => x - y).map(k => `${k} Stueck in ${preisVert[k]} W`).join(' · ')
+    + `   (hoechstens ${maxPreis})`);
+
   /* --- was WIRKLICH getan wurde, und was es gekostet hat --------------- */
   const nachZug = {};
   d.sudtaten.forEach(t => {
@@ -96,24 +108,28 @@ for (const p of dateien) {
   });
 
   /* --- 3  SICHTBAR ABER NICHT BEDIENBAR ------------------------------- */
-  let verdeckt = 0, zugeklappt = 0, sollJa = 0, gesamtKnopf = 0, hitAberTot = 0;
-  const grundZaehler = {};
+  let verdeckt = 0, sollJa = 0, gesamtKnopf = 0, hitAberTot = 0;
+  const kreuz = {};
   const wochenZugeklappt = new Set();
   for (const w of d.sudwochen) {
     for (const b of w.bild) {
       gesamtKnopf++;
-      if (b.a) grundZaehler[b.g || '(ohne Grund)'] = (grundZaehler[b.g || '(ohne Grund)'] || 0) + 1;
+      const art = /^sud:zettel-/.test(b.z) ? 'zettel' : 'brett';
+      if (b.a) {
+        const k = `${art} · grund=${b.g || '(ohne)'} · soll=${b.s} · maus=${b.h ? 'trifft' : 'trifft nicht'}`;
+        kreuz[k] = (kreuz[k] || 0) + 1;
+      }
       if (b.a && b.s === '0') { sollJa++; if (b.h) hitAberTot++; }
       if (b.v === '1') verdeckt++;
-      if (b.g === 'brett-zugeklappt') { zugeklappt++; wochenZugeklappt.add(w.n); }
+      if (b.g === 'brett-zugeklappt') wochenZugeklappt.add(w.n);
     }
   }
   console.log('  --- 3 SICHTBAR, ABER BEDIENBAR? ---');
   console.log(`    Knopfablesungen gesamt ${gesamtKnopf}; `
     + `abgeschaltet mit data-soll-aus="0" (also NICHT vom Spiel): ${sollJa} `
     + `(${(100 * sollJa / gesamtKnopf).toFixed(1)} %), davon von der Maus erreichbar: ${hitAberTot}`);
-  console.log(`    data-verdeckt="1": ${verdeckt}   data-aus-grund-Verteilung: `
-    + Object.entries(grundZaehler).map(([k, v]) => `${k} ${v}`).join(' · '));
+  console.log(`    data-verdeckt="1": ${verdeckt}`);
+  Object.keys(kreuz).sort().forEach(k => console.log(`      ${k}: ${kreuz[k]}`));
   console.log(`    Wochen, in denen trotz Aufschlagen "brett-zugeklappt" stand: `
     + `${wochenZugeklappt.size}/${d.sudwochen.length}  `
     + `(Brett konnte nicht aufgeschlagen werden: ${d.sudwochen.filter(w => !w.aufOk).length})`);
@@ -131,6 +147,28 @@ for (const p of dateien) {
 
   /* --- d  Barschaft / Preis des naechsten sinnvollen Zuges ------------- */
   const roh = (d.leiterRoh || []).filter(r => r && r.zugVerh);
+  const werte = roh.map(r => r.zugVerh), js = roh.map(r => r.jahr);
   console.log('  --- d KENNZAHL (Barschaft / Preis des naechsten sinnvollen Zuges) ---');
-  console.log(`    ${roh.length} Jahre: ` + roh.map(r => r.zugVerh.toFixed(2)).join(' · '));
+  console.log(`    ${roh.length} Jahre: ` + werte.map(v => v.toFixed(2)).join(' · '));
+  console.log(`    Spearman rho ${sp(js, werte) === null ? '—' : sp(js, werte).toFixed(3)}   `
+    + `Jahre unter 1x: ${werte.filter(v => v < 1).length}/${werte.length}`);
+  const kassen = d.reihe.map(r => r.kasse);
+  console.log(`    Kasse je Woche: min ${Math.min(...kassen)} · Wochen mit Kasse 0: `
+    + `${kassen.filter(k => k <= 0).length}/${kassen.length}`);
 }
+
+function pe(xs, ys) {
+  const n = xs.length; if (n < 3) return null;
+  const mx = xs.reduce((a, b) => a + b, 0) / n, my = ys.reduce((a, b) => a + b, 0) / n;
+  let z = 0, a = 0, b = 0;
+  for (let i = 0; i < n; i++) { z += (xs[i] - mx) * (ys[i] - my); a += (xs[i] - mx) ** 2; b += (ys[i] - my) ** 2; }
+  return a && b ? z / Math.sqrt(a * b) : null;
+}
+function rang(v) {
+  const s = [...v.keys()].sort((i, j) => v[i] - v[j]); const r = new Array(v.length);
+  let i = 0;
+  while (i < s.length) { let j = i; while (j + 1 < s.length && v[s[j + 1]] === v[s[i]]) j++;
+    const m = (i + j) / 2 + 1; for (let k = i; k <= j; k++) r[s[k]] = m; i = j + 1; }
+  return r;
+}
+function sp(xs, ys) { return xs.length < 3 ? null : pe(rang(xs), rang(ys)); }
