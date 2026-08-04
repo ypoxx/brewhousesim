@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T08:31:08+00:00",
- "phase": "Welle 6 läuft — zwei offene Enden aus den vorigen Wellen. DER KLANG arbeitet an der einzigen Auflage, die in Welle 5 offen blieb: der Gegenzug ist nur in 1350 zu hören. Abnahme ist streng gesetzt — das Ohr muss ihn in allen vier Epochen bejahen UND in der stillen Aufnahme derselben Epoche verneinen, sonst ist es Kulisse. DER SUD wird zum ersten Mal nach seiner Nacharbeit blind geprüft; bisher hat nur die Aufsicht seine Kernzahl nachgemessen, und selbst gemessen ist nicht geprüft. Alle KERN-Punkte aus Welle 4 und 5 sind eingearbeitet, zuletzt der ungeprüfte Unterhaltsabzug in welt.js:413 — die Kasse kann nicht mehr negativ werden, und die Wellenzahl blieb dabei Ziffer für Ziffer gleich.",
+ "stand": "2026-08-04T11:23:11+00:00",
+ "phase": "Welle 6 — die Messlatte ist um zwei Punkte gewachsen, auf Freigabe des Auftraggebers. VIERTE LATTE: Lesbarkeit, gemessen bei 1366x768 statt auf der Entwurfsleinwand — keine Schrift unter 12 px, kein Knopf unter 24 px, kein abgeschnittener Text. Der Befund dahinter ist EINE Zeile: das Spiel ist auf 2752x1536 entworfen, --s skaliert alles proportional herunter, und auf einem gewöhnlichen Notebook ist die kleinste Schrift 5 px und 64 von 87 Knöpfen sind unter der Zielfläche. SPERRLISTE neu: das Gewicht, 23 MB je Aufruf, Obergrenze 8 MB. Das Tempo ist dagegen einwandfrei — 16,7 ms Bildzeit im Median, volle 60 Bilder je Sekunde. LATTE 2 verschärft: rho wird über drei Schnitte gemessen (12, 13, 14 Braujahre) und reißt, sobald einer über 0,7 liegt — damit ist das Wellenziel derzeit NICHT erreicht, weil 1350 bei zwölf Jahren auf +0,762 steht. Drei Builder arbeiten: DIE LESBARKEIT (neues Stück), DER SUD an vier Auflagen, DER KLANG an der Tonfrage.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -127,14 +127,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-07-31T19:53:05+00:00",
-   "text": "DER GEGNER — die Züge, die ohne den Spieler geschahen · Runde 1 · läuft"
-  },
-  {
-   "zeit": "2026-07-31T19:53:05+00:00",
-   "text": "GEGNER Runde 1: Adlerbrauerei jenseits des Flusses mit eigener Kasse, Erben, Hof und Untergang; ab 1970 dazu die Nordstern-Gruppe. In 24 Klicks 14 bis 30 Züge ohne Zutun des Spielers, je Epoche eine andere Zugliste. Die Währung der Bindung wechselt: Konzession/Bannmeile/Ratsspruch/Gevatterschaft — Zunftbrief/Pacht/Heirat/Bürgermeisteramt — Bierlieferungsvertrag mit Darlehen und Ablösesumme — Listung mit Konditionen und Auslistung."
-  },
   {
    "zeit": "2026-07-31T20:25:21+00:00",
    "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 2 · läuft"
@@ -926,6 +918,14 @@
   {
    "zeit": "2026-08-04T08:31:08+00:00",
    "text": "AUFSICHT — KERN welt.js:413: DIE KASSE KANN NICHT MEHR NEGATIV WERDEN. Die Zeile zog den Unterhalt ungeprüft ab und war die einzige Stelle im Spiel, an der die Kasse rechnerisch unter null fallen konnte; welt.zahle() zwei Bildschirme darüber prüft die Deckung und gibt false zurück, diese Zeile prüfte nicht. Vor der Änderung gemessen, mit einem eigens gebauten Gerät, das B.protokoll Buchung für Buchung nachrechnet: in 1350 fällt der Zwischenstand auf MINUS SIEBEN Pfennig, gebucht genau bei 'Sommer: Unterhalt und Abgaben'. Wochenweise ist das unsichtbar, weil der Vorgriff von DER PREIS es im selben Wochenwechsel abfängt — uhr.js:160 lässt rechneJahrAb() vor sende('jahr') laufen. Wer nur die Wochenkasse liest, sieht 0 und hält es für den Boden; ein Stück, das in genau diesem Augenblick welt.kann() fragt, bekam eine falsche Auskunft. Nach der Änderung: minus sieben auf null, die anderen drei Epochen Ziffer für Ziffer unverändert. Der Unterhalt wird weiter voll erhoben, solange die Lade ihn trägt; reicht sie nicht, nimmt er was da ist, und was fehlte steht als eigene Zeile im Protokoll — verschwiegen wird nichts. Gegenprobe mit acht Läufen sequenziell am eingefrorenen Stand: rho +0,591 / +0,231 / +0,393 / +0,275, Jahre unter 1x 0/0/1/0, null Seitenfehler — Ziffer für Ziffer wie vorher. Das ist die dritte Kernänderung in Folge, die den Prüfstein besteht: wo eine Aufräumaktion die Messzahl verbessert, ist sie verdächtig; wo sie sie unberührt lässt, hat sie nur aufgeräumt."
+  },
+  {
+   "zeit": "2026-08-04T11:23:11+00:00",
+   "text": "Welle 6 — die Messlatte ist um zwei Punkte gewachsen, auf Freigabe des Auftraggebers. VIERTE LATTE: Lesbarkeit, gemessen bei 1366x768 statt auf der Entwurfsleinwand — keine Schrift unter 12 px, kein Knopf unter 24 px, kein abgeschnittener Text. Der Befund dahinter ist EINE Zeile: das Spiel ist auf 2752x1536 entworfen, --s skaliert alles proportional herunter, und auf einem gewöhnlichen Notebook ist die kleinste Schrift 5 px und 64 von 87 Knöpfen sind unter der Zielfläche. SPERRLISTE neu: das Gewicht, 23 MB je Aufruf, Obergrenze 8 MB. Das Tempo ist dagegen einwandfrei — 16,7 ms Bildzeit im Median, volle 60 Bilder je Sekunde. LATTE 2 verschärft: rho wird über drei Schnitte gemessen (12, 13, 14 Braujahre) und reißt, sobald einer über 0,7 liegt — damit ist das Wellenziel derzeit NICHT erreicht, weil 1350 bei zwölf Jahren auf +0,762 steht. Drei Builder arbeiten: DIE LESBARKEIT (neues Stück), DER SUD an vier Auflagen, DER KLANG an der Tonfrage."
+  },
+  {
+   "zeit": "2026-08-04T11:23:11+00:00",
+   "text": "AUFTRAGGEBER, 4. August 2026 — DIE MESSLATTE WÄCHST UM ZWEI PUNKTE. Auf die Frage, ob es Augenmerk auf Lesbarkeit, Usability und technische Effizienz gibt, war die ehrliche Antwort nein: keine der drei Latten prüfte es, und das Wort Typografie kam im Messlatten-Papier genau einmal vor, und zwar als Spott. Gemessen statt vermutet, mit zwei neu gebauten Geräten. LESBARKEIT: das Spiel ist auf eine Leinwand von 2752x1536 entworfen, und eine einzige Zeile in stil/grund.css skaliert jede Schrift proportional dazu herunter. Auf der Entwurfsgröße ist die kleinste Schrift 10 px und genau ein Knopf von 87 unter der Zielfläche; auf 1366x768, einem gewöhnlichen Notebook, sind es 5 px und 64 von 87. Über alle vier Epochen bei 1600x1000: 1.800 Textknoten unter 12 px, davon 1.427 unter 10 px, 77 abgeschnittene Kästen, 189 von 334 aktiven Knöpfen unter 24 px. Bemerkenswert daran: KEIN EINZIGES CSS schreibt eine Größe unter 12 px — sie entstehen alle erst beim Zeichnen. Es ist ein Befund über eine Zeile, nicht über 349 Regeln. Das ist jetzt die vierte Latte, gemessen bei 1366x768. TEMPO: einwandfrei, 16,7 ms Bildzeit im Median in allen vier Epochen, p95 unter 22 ms, also volle sechzig Bilder je Sekunde. Das GEWICHT ist es nicht: 23 MB in 85 Anfragen je Aufruf, über Mobilfunk eine halbe Minute Warten. Als Veto in die Sperrliste, Obergrenze 8 MB — nicht als Latte, weil es sonst nach unten optimiert würde. UND LATTE 2 IST VERSCHÄRFT: rho hängt an der Laufzeit, 1350 steht bei zwölf Braujahren auf +0,762 und bei vierzehn auf +0,591. Ab jetzt wird über alle drei Schnitte gemessen und die Latte reißt, sobald einer über 0,7 liegt. Damit ist das am 3. August gemeldete Wellenziel nach neuer Regel NICHT mehr erreicht — die Verschärfung ist beabsichtigt und geht gegen die eigene Erfolgsmeldung."
   }
  ]
 }
