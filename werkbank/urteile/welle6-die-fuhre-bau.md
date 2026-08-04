@@ -406,4 +406,38 @@ Wiederholung ist die Belegzahl. Beide Sätze liegen unter
 
 ---
 
-*(Wiederholung von Latte 2 läuft — Abschluss folgt)*
+## 7 — Was in fremden Dateien liegen bliebe (KERN und Nachbarn)
+
+**KERN:** keiner. `spiel/index.html` und `spiel/kern/**` sind unberührt, und es
+gab keinen Anlass, sie anzufassen. Der Knopfboden, den DIE FUHRE gebraucht
+hätte, steht bereits in `grund.css` (DIE LESBARKEIT, Welle 6) und wirkt; in
+allen vier Epochen sind **0 von 334** aktiven Knöpfen unter 24×24 px.
+
+**Was in `grund.css` auffiel, aber nicht meine Datei ist** (kein Auftrag, nur
+zur Kenntnis der Aufsicht): `.knopf` selbst trägt dort noch
+`font-size: calc(var(--s) * 24)` und `.knopf .preis`
+`font-size: calc(var(--s) * 20)` ohne Boden. Bei 1366×768 sind das 11,9 px
+bzw. 9,9 px. Sie sind Teil der 48 Kern-Textknoten unter 12 px, die in meiner
+Aufschlüsselung unter „Kern" stehen. Auflage 2 der LESBARKEIT nennt für
+`grund.css` zwölf Regeln; diese beiden gehören dazu.
+
+---
+
+## 8 — Geänderte Dateien
+
+| Datei | Art der Änderung |
+|---|---|
+| `spiel/stuecke/fuhre.js` | `BEZUG = 'var(--s0)'`; Untergrenze der Adressliste 0,62 → 0,34 mit drei statt zwei Anläufen; zwei `title`-Texte (Zielblock, Balkenreihe), die den ausgeblendeten Inhalt tragen |
+| `spiel/stil/fuhre.css` | 48 Schriftregeln auf `max(12px, …)`; die zwei Regeln mit N < 12 bleiben hier ohne Boden |
+| `spiel/stil/fuhre-zusatz.css` | 52 Schriftregeln auf `max(12px, …)`; zwei neue Blöcke am Ende, beide hinter `@media (max-width: 2751px), (max-height: 1535px)` |
+
+`spiel/stuecke/fuhre-daten.js` und `spiel/stuecke/fuhre-zusatz.js` sind
+unverändert. `node --check` läuft auf allen drei `.js` sauber durch.
+
+Aufnahmen und Messreihen:
+`werkbank/schuss/fuhre-w6/{vorher,vorher-b,nachher,nachher-b}/E{1..4}-2752.png`.
+
+---
+
+*(Latte 2 wird durch `werkbank/schuss/aufsicht/messfenster.sh` wiederholt —
+Belegzahlen folgen)*
