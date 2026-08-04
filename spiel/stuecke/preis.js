@@ -2465,7 +2465,34 @@
   B.preis = {
     lage: function () { return Z; },
     anschlag: function () { return Z.anschlag; },
-    leiter: function () { return Z.leiter.slice(); }
+    leiter: function () { return Z.leiter.slice(); },
+    /* DIE TAXE, aufgeschluesselt — der Griff, der beim Urteil der Welle 5
+       gefehlt hat. Der Kritiker konnte „jede Festlegungskarte ist disabled"
+       am Bildschirm zaehlen, aber nicht sagen, WIE WEIT sie danebenliegt;
+       dafuer musste er die Taxe von Hand nachrechnen. Sie steht jetzt da:
+       je Karte die Taxe, die Kasse, der Abstand und die Latte, an der
+       `festKarte` entscheidet. Nur gelesen, von nichts benutzt. */
+    taxe: function () {
+      return {
+        jahr: jahr(),
+        kasse: Math.round(B.welt.haus.kasse),
+        jahreslast: Math.round(pflichtSumme()),
+        basis: Math.round(festBasis()),
+        offen: festlegungOffen(),
+        karten: (ep().festlegungen || []).map(function (f) {
+          var p = festPreis(f);
+          return {
+            k: f.k, anteil: f.anteil || 0, ab: f.ab || null,
+            preis: p,
+            zufluss: (f.wirkung && f.wirkung.einmal)
+              ? rundePreis(f.wirkung.einmal * pflichtSumme()) : 0,
+            genommen: !!Z.festGenommen[f.k],
+            aufTafel: !(f.ab && jahr() < f.ab) && !Z.festGenommen[f.k],
+            bezahlbar: p === 0 || B.welt.kann(p)
+          };
+        })
+      };
+    }
   };
 
   /* ----------------------------------------------------------------------
