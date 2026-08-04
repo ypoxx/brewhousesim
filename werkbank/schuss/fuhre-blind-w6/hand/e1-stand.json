@@ -1,0 +1,1560 @@
+{
+ "epoche": 1,
+ "protokoll": [
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "erg": "geklickt",
+   "text": "DIE HÄUSER wollen 15 · im Keller liegen ",
+   "nach": "1350/1 Kasse 112"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "erg": "geklickt",
+   "text": "ANSCHLAGTAFEL mit Kreide an der Sudhausw",
+   "nach": "1350/1 Kasse 112"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "erg": "geklickt",
+   "text": "DER KELLER 4 von 12 Fass · 4 reif",
+   "nach": "1350/1 Kasse 112"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/1 Kasse 112"
+  },
+  {
+   "halt": 1,
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 112
+  },
+  {
+   "zug": "fuhre:ziel:borg",
+   "erg": "geklickt",
+   "text": "So verabreden",
+   "nach": "1350/1 Kasse 112"
+  },
+  {
+   "zug": "fuhre:tafel-auf:grut",
+   "erg": "geklickt",
+   "text": "+",
+   "nach": "1350/1 Kasse 112"
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "erg": "geklickt",
+   "text": "Grut vom Grutherrn · +40 −34 Pf",
+   "nach": "1350/1 Kasse 78"
+  },
+  {
+   "halt": 2,
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 78
+  },
+  {
+   "zug": "fuhre:laden:lindenhof",
+   "erg": "geklickt",
+   "text": "+ 1 Fass",
+   "nach": "1350/1 Kasse 78"
+  },
+  {
+   "zug": "fuhre:laden:ochse",
+   "erg": "geklickt",
+   "text": "+ 1 Fass",
+   "nach": "1350/1 Kasse 78"
+  },
+  {
+   "zug": "fuhre:laden:torschenke",
+   "erg": "geklickt",
+   "text": "+ 1 Fass",
+   "nach": "1350/1 Kasse 78"
+  },
+  {
+   "zug": "fuhre:laden:pfarrhof",
+   "erg": "geklickt",
+   "text": "+ 1 Fass",
+   "nach": "1350/1 Kasse 78"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/2 Kasse 60"
+  },
+  {
+   "halt": 3,
+   "jahr": 1350,
+   "woche": 2,
+   "kasse": 60
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/3 Kasse 51"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/4 Kasse 50"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/5 Kasse 49"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/5 Kasse 49"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/6 Kasse 40"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/7 Kasse 39"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/7 Kasse 39"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/8 Kasse 30"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/9 Kasse 29"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/9 Kasse 29"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/10 Kasse 20"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/11 Kasse 19"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/11 Kasse 19"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/12 Kasse 10"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/13 Kasse 9"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/13 Kasse 9"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/14 Kasse 0"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/15 Kasse 0"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/15 Kasse 0"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/16 Kasse 7"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/17 Kasse 6"
+  },
+  {
+   "halt": 4,
+   "jahr": 1350,
+   "woche": 17,
+   "kasse": 6
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/17 Kasse 6"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/18 Kasse 21"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/19 Kasse 20"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/19 Kasse 20"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/20 Kasse 10"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/21 Kasse 9"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/21 Kasse 9"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/22 Kasse 0"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/23 Kasse 0"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/23 Kasse 0"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/24 Kasse 16"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/25 Kasse 15"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/25 Kasse 15"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/26 Kasse 5"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/27 Kasse 4"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/27 Kasse 4"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/28 Kasse 20"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/29 Kasse 19"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/29 Kasse 19"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/30 Kasse 9"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "JAHR SCHLIESSEN",
+   "nach": "1351/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/1 Kasse 48"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/2 Kasse 30"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/2 Kasse 30"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/2 Kasse 30"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/3 Kasse 21"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/3 Kasse 21"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/3 Kasse 21"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/4 Kasse 20"
+  },
+  {
+   "halt": 5,
+   "jahr": 1351,
+   "woche": 4,
+   "kasse": 20
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/4 Kasse 20"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/4 Kasse 20"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/5 Kasse 19"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/5 Kasse 19"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/5 Kasse 19"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/6 Kasse 18"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/6 Kasse 18"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/6 Kasse 18"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/7 Kasse 17"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/7 Kasse 17"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/7 Kasse 17"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/8 Kasse 16"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/8 Kasse 16"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/8 Kasse 16"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/9 Kasse 15"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/9 Kasse 15"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/9 Kasse 15"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/10 Kasse 0"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/10 Kasse 0"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/10 Kasse 0"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/11 Kasse 16"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/11 Kasse 16"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/11 Kasse 16"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/12 Kasse 15"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/12 Kasse 15"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/12 Kasse 15"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/13 Kasse 14"
+  },
+  {
+   "halt": 6,
+   "jahr": 1351,
+   "woche": 13,
+   "kasse": 14
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/13 Kasse 14"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/13 Kasse 14"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/14 Kasse 13"
+  },
+  {
+   "halt": 7,
+   "jahr": 1351,
+   "woche": 14,
+   "kasse": 13
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/14 Kasse 13"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/14 Kasse 13"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/15 Kasse 12"
+  },
+  {
+   "halt": 8,
+   "jahr": 1351,
+   "woche": 15,
+   "kasse": 12
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/15 Kasse 12"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/15 Kasse 12"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/16 Kasse 11"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/16 Kasse 11"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/16 Kasse 11"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/17 Kasse 10"
+  }
+ ],
+ "schirm": {
+  "jahr": 1351,
+  "woche": 17,
+  "ende": false,
+  "kasse": 10,
+  "rohstoff": 11,
+  "ansehen": 25,
+  "faesser": 12,
+  "plaetze": 12,
+  "lage": [],
+  "lageN": 0,
+  "chronik": [
+   "Der Umgang vor Michaeli: 356 Pf kommen herein, 102 Pf sind nicht einzutreiben. Damit steht das Haus vor der Mi",
+   "Mühlschenke nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen.",
+   "Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer u",
+   "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 2× Grutbier — wie im vorigen Jahr, bis jemand es ändert",
+   "Gasthof Lindenhof geht an Brauhaus zum Adler. Gebunden mit Konzession des Rats bis 1355. Ablösen kostet 124 Pf",
+   "Der Name des Hauses: Der Bierkieser des Rats lobt den Sud vor Zeugen."
+  ],
+  "zuege": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 5"
+   },
+   {
+    "zug": "gegner:abloesen:lindenhof",
+    "preis": -124,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "LIN · KON ablösen 124 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:lindenhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:torschenke",
+    "preis": -56,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "TOR · KON ablösen 56 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:torschenke",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:pfarrhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "PFA · RAT nicht ablösbar"
+   },
+   {
+    "zug": "gegner:hinhalten:pfarrhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:muehlwirt",
+    "preis": -48,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "MUE · GEV ablösen 48 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:muehlwirt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:abloesen:faehrhaus",
+    "preis": -66,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "FAE · BAN ablösen 66 Pf"
+   },
+   {
+    "zug": "gegner:hinhalten:faehrhaus",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Fass an den Wirt 1 Fass statt Geld"
+   },
+   {
+    "zug": "gegner:beschwerde-bild",
+    "preis": 0,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Klage vor dem Stadtgericht kostet kein Geld · vier Ans"
+   },
+   {
+    "zug": "gegner:blatt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Haus gegenüber"
+   },
+   {
+    "zug": "gegner:beschwerde",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Klage vor dem Stadtgericht"
+   },
+   {
+    "zug": "gegner:zeige:24",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:23",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "gegner:zeige:22",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "zeigen"
+   },
+   {
+    "zug": "sud:zettel-anstich",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Junges Fass anbrechen · +14 · 1 Fass"
+   },
+   {
+    "zug": "sud:zettel-hefe-fass",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Altes Fass anbrechen · +6 · 1 Fass"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Hopfen im Sack, heimlich lässt Starkbier zu"
+   },
+   {
+    "zug": "sud:zettel-wechsel-frei2",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Wasser aus dem Ziehbrunnen lässt Starkbier zu"
+   },
+   {
+    "zug": "name:anschlag:umtrunk",
+    "preis": -9,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Adler-Ausschank am Mar"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "LIN"
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OCH"
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "MUE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BRU"
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "FAE"
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OBE"
+   },
+   {
+    "zug": "fuhre:ziel:bar",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:ziel",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nicht mehr zu ändern"
+   },
+   {
+    "zug": "fuhre:ziel:borg",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "So ist es verabredet"
+   },
+   {
+    "zug": "fuhre:laden:lindenhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 1 Fass"
+   },
+   {
+    "zug": "fuhre:abladen:lindenhof",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:ochse",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 1 Fass"
+   },
+   {
+    "zug": "fuhre:abladen:ochse",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:torschenke",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 1 Fass"
+   },
+   {
+    "zug": "fuhre:abladen:torschenke",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:laden:pfarrhof",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 1 Fass"
+   },
+   {
+    "zug": "fuhre:abladen:pfarrhof",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:probe:muehlwirt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:bann:brueckenwirt",
+    "preis": -60,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Bannbrief · auf 2 Kerben −60 Pf"
+   },
+   {
+    "zug": "fuhre:bann:faehrhaus",
+    "preis": -60,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Bannbrief · auf 2 Kerben −60 Pf"
+   },
+   {
+    "zug": "fuhre:bann:hirsch",
+    "preis": -60,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Bannbrief · auf 2 Kerben −60 Pf"
+   },
+   {
+    "zug": "fuhre:laden:markt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ 1 Fass"
+   },
+   {
+    "zug": "fuhre:abladen:markt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:bann:obernberg",
+    "preis": -60,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Bannbrief · auf 2 Kerben −60 Pf"
+   },
+   {
+    "zug": "fuhre:tafel-ab:duenn",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:duenn",
+    "preis": -4,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −4 Pf"
+   },
+   {
+    "zug": "fuhre:tafel-ab:grut",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:grut",
+    "preis": -4,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −4 Pf"
+   },
+   {
+    "zug": "fuhre:tafel-ab:stark",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:stark",
+    "preis": -4,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+ −4 Pf"
+   },
+   {
+    "zug": "fuhre:tafel-ab:kofent",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "−"
+   },
+   {
+    "zug": "fuhre:tafel-auf:kofent",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "+"
+   },
+   {
+    "zug": "fuhre:kerbe-loeschen",
+    "preis": -25,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Eine Kerbe löschen −25 Pf"
+   },
+   {
+    "zug": "fuhre:kauf:budget",
+    "preis": -90,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Brautage vom Rat · +6 · auf 4 Kerben −90 Pf"
+   },
+   {
+    "zug": "fuhre:kauf:rohstoff",
+    "preis": -34,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Grut vom Grutherrn · +40 · auf 1 Kerbe −34 Pf"
+   },
+   {
+    "zug": "fuhre:rueckkauf:rohstoff",
+    "preis": 19,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Grut zurück an den Grutherrn · −40 +19 Pf"
+   },
+   {
+    "zug": "fuhre:kauf:fass",
+    "preis": -34,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Fass vom Böttcher · +3 · auf 1 Kerbe −34 Pf"
+   },
+   {
+    "zug": "fuhre:fuellen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nach Durst füllen"
+   },
+   {
+    "zug": "fuhre:wie-vorige",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Wie vorige Woche"
+   },
+   {
+    "zug": "fuhre:leeren",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Karren leeren"
+   },
+   {
+    "zug": "fuhre:abschicken",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "FUHRE ABSCHICKEN"
+   },
+   {
+    "zug": "sud:wuerze:grut",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Grut vom Grutamt"
+   },
+   {
+    "zug": "sud:wuerze:sack",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Hopfen im Sack, heimlich"
+   },
+   {
+    "zug": "sud:wuerze:brief",
+    "preis": -78,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Offen gehopft, mit Hopfenbrief −78 Pf"
+   },
+   {
+    "zug": "sud:wasser:bach",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Wasser aus dem Stadtbach"
+   },
+   {
+    "zug": "sud:wasser:brunnen",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Wasser aus dem Ziehbrunnen"
+   },
+   {
+    "zug": "sud:wasser:roehre",
+    "preis": -30,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Röhrenrecht an der Quelle −30 Pf"
+   },
+   {
+    "zug": "sud:hefe-fuehren",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Hefezeug aus dem Bottich heben · +8"
+   },
+   {
+    "zug": "sud:anstich-jung",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Junges Fass anbrechen · +14 · 1 Fass"
+   },
+   {
+    "zug": "sud:anstich-alt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Altes Fass anbrechen · +6 · 1 Fass"
+   },
+   {
+    "zug": "sud:gaerraum",
+    "preis": -26,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+   },
+   {
+    "zug": "name:band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:liefern",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Unter dem Zeichen ausliefern"
+   },
+   {
+    "zug": "name:zurueckhalten",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen einziehen"
+   },
+   {
+    "zug": "name:jetzt:umtrunk",
+    "preis": -9,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+   },
+   {
+    "zug": "name:jetzt:zunftzeichen",
+    "preis": -45,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Um das Zunftzeichen bitten −45 Pf"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -31,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Nachschrift · 2 Häuser −31 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -5,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Leibgeding · jährlich −5 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -5,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Abfertigung −5 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Mit leeren Händen 0 Pf"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "CHRONIK 23"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BUCH 296"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "WEITER"
+   },
+   {
+    "zug": "klang:ton",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "♪"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OHNE DICH GESCHEHEN 24 Züge"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DIE HÄUSER wollen 38 · im Keller liegen 12 Fass"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DER KELLER 12 von 12 Fass · 12 reif"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DAS SUDHAUS zugeklappt"
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "DAS ERBE liegt auf"
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "ORTSMARKEN 7 auf dem Pflock"
+   },
+   {
+    "zug": "stadt:alles-zuklappen",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "STADT ZEIGEN"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BAUHOF"
+   },
+   {
+    "zug": "stadt:versatz",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "VERSATZ"
+   },
+   {
+    "zug": "stadt:versatz:malzboden",
+    "preis": 9,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Malzboden auf Stelzen +9 Pf"
+   },
+   {
+    "zug": "stadt:versatz:pfanne",
+    "preis": 7,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Braupfanne im Hof +7 Pf"
+   },
+   {
+    "zug": "stadt:versatz:fasslager_holz",
+    "preis": 6,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Fassschuppen +6 Pf"
+   },
+   {
+    "zug": "stadt:versatz:brunnen",
+    "preis": 5,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Ziehbrunnen +5 Pf"
+   },
+   {
+    "zug": "preis:tafel",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Michaelitafel 1351 · 5 Angebote"
+   },
+   {
+    "zug": "preis:chronik-auf",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Taf"
+   }
+  ]
+ },
+ "fehler": []
+}
