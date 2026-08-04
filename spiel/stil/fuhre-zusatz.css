@@ -900,7 +900,12 @@ html[data-hof-zu] #fach-blatt-fuhre { z-index: 200; }
      Schrift und faellt nicht unter die 12-px-Regel; damit er trotzdem
      etwas zeigt, bekommt er eine Untergrenze. */
   .fu-z3 .fu-zahlen { display: none; }
-  .fu-reihe { height: max(11px, calc(var(--s) * 20)); }
+  .fu-reihe { height: max(8px, calc(var(--s) * 20)); }
+  /* Die beiden Textzeilen der Karte stehen bei 12 px mit 1,25 Zeilenabstand
+     auf 15 px. Bei elf Adressen sind das 33 px — zwei Drittel einer weiteren
+     Adresskarte, nur fuer Luft zwischen den Buchstaben. 1,05 ist eng, aber
+     die Zeile steht allein und stoesst an keine zweite. */
+  .fu-z1, .fu-z3 { line-height: 1.05; }
   .fu-reihe .fu-saeule { width: max(3px, calc(var(--s) * 9)); }
   .fu-mahnung i { width: max(6px, calc(var(--s) * 10)); height: max(6px, calc(var(--s) * 10)); }
   .fu-betten .fu-bett { width: max(5px, calc(var(--s) * 13)); height: max(7px, calc(var(--s) * 16)); }
