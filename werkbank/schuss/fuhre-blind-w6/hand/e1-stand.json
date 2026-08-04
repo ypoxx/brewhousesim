@@ -92,57 +92,132 @@
    "kasse": 60
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/2 Kasse 60"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
+   "text": "Wie vorige Woche",
+   "nach": "1350/2 Kasse 60"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/2 Kasse 60"
+  },
+  {
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
    "nach": "1350/3 Kasse 51"
   },
   {
-   "zug": "weiter",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
    "erg": "geklickt",
-   "text": "WEITER",
-   "nach": "1350/4 Kasse 50"
-  },
-  {
-   "zug": "weiter",
-   "erg": "geklickt",
-   "text": "WEITER",
-   "nach": "1350/5 Kasse 49"
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/3 Kasse 51"
   },
   {
    "zug": "fuhre:wie-vorige",
    "erg": "geklickt",
    "text": "Wie vorige Woche",
-   "nach": "1350/5 Kasse 49"
+   "nach": "1350/3 Kasse 51"
   },
   {
    "zug": "fuhre:abschicken",
    "erg": "geklickt",
    "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/4 Kasse 42"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/5 Kasse 41"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/5 Kasse 41"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
+   "text": "Wie vorige Woche",
+   "nach": "1350/5 Kasse 41"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/5 Kasse 41"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
    "nach": "1350/6 Kasse 40"
   },
   {
-   "zug": "weiter",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
    "erg": "geklickt",
-   "text": "WEITER",
-   "nach": "1350/7 Kasse 39"
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/6 Kasse 40"
   },
   {
    "zug": "fuhre:wie-vorige",
    "erg": "geklickt",
    "text": "Wie vorige Woche",
-   "nach": "1350/7 Kasse 39"
+   "nach": "1350/6 Kasse 40"
   },
   {
    "zug": "fuhre:abschicken",
    "erg": "geklickt",
    "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/7 Kasse 31"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/8 Kasse 30"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/8 Kasse 30"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
+   "text": "Wie vorige Woche",
+   "nach": "1350/8 Kasse 30"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
    "nach": "1350/8 Kasse 30"
   },
   {
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
+   "nach": "1350/9 Kasse 29"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
    "nach": "1350/9 Kasse 29"
   },
   {
@@ -164,39 +239,83 @@
    "nach": "1350/11 Kasse 19"
   },
   {
-   "zug": "fuhre:wie-vorige",
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
    "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/11 Kasse 19"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
    "text": "Wie vorige Woche",
    "nach": "1350/11 Kasse 19"
   },
   {
    "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/12 Kasse 10"
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/11 Kasse 19"
   },
   {
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
-   "nach": "1350/13 Kasse 9"
+   "nach": "1350/12 Kasse 10"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/12 Kasse 10"
   },
   {
    "zug": "fuhre:wie-vorige",
    "erg": "geklickt",
    "text": "Wie vorige Woche",
-   "nach": "1350/13 Kasse 9"
+   "nach": "1350/12 Kasse 10"
   },
   {
    "zug": "fuhre:abschicken",
    "erg": "geklickt",
    "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/13 Kasse 1"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/14 Kasse 0"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/14 Kasse 0"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
+   "text": "Wie vorige Woche",
+   "nach": "1350/14 Kasse 0"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
    "nach": "1350/14 Kasse 0"
   },
   {
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
+   "nach": "1350/15 Kasse 0"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
    "nach": "1350/15 Kasse 0"
   },
   {
@@ -218,153 +337,254 @@
    "nach": "1350/17 Kasse 6"
   },
   {
-   "halt": 4,
-   "jahr": 1350,
-   "woche": 17,
-   "kasse": 6
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/17 Kasse 6"
   },
   {
    "zug": "fuhre:wie-vorige",
-   "erg": "geklickt",
+   "erg": "VERDECKT",
+   "wer": "DIV",
    "text": "Wie vorige Woche",
    "nach": "1350/17 Kasse 6"
   },
   {
    "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/18 Kasse 21"
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/17 Kasse 6"
   },
   {
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
+   "nach": "1350/18 Kasse 5"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/18 Kasse 5"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/18 Kasse 5"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
    "nach": "1350/19 Kasse 20"
   },
   {
-   "zug": "fuhre:wie-vorige",
-   "erg": "geklickt",
-   "text": "Wie vorige Woche",
-   "nach": "1350/19 Kasse 20"
-  },
-  {
-   "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/20 Kasse 10"
-  },
-  {
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
-   "nach": "1350/21 Kasse 9"
+   "nach": "1350/20 Kasse 19"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/20 Kasse 19"
   },
   {
    "zug": "fuhre:wie-vorige",
-   "erg": "geklickt",
+   "erg": "VERDECKT",
+   "wer": "DIV",
    "text": "Wie vorige Woche",
-   "nach": "1350/21 Kasse 9"
-  },
-  {
-   "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/22 Kasse 0"
-  },
-  {
-   "zug": "weiter",
-   "erg": "geklickt",
-   "text": "WEITER",
-   "nach": "1350/23 Kasse 0"
-  },
-  {
-   "zug": "fuhre:wie-vorige",
-   "erg": "geklickt",
-   "text": "Wie vorige Woche",
-   "nach": "1350/23 Kasse 0"
-  },
-  {
-   "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/24 Kasse 16"
-  },
-  {
-   "zug": "weiter",
-   "erg": "geklickt",
-   "text": "WEITER",
-   "nach": "1350/25 Kasse 15"
-  },
-  {
-   "zug": "fuhre:wie-vorige",
-   "erg": "geklickt",
-   "text": "Wie vorige Woche",
-   "nach": "1350/25 Kasse 15"
-  },
-  {
-   "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/26 Kasse 5"
-  },
-  {
-   "zug": "weiter",
-   "erg": "geklickt",
-   "text": "WEITER",
-   "nach": "1350/27 Kasse 4"
-  },
-  {
-   "zug": "fuhre:wie-vorige",
-   "erg": "geklickt",
-   "text": "Wie vorige Woche",
-   "nach": "1350/27 Kasse 4"
-  },
-  {
-   "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/28 Kasse 20"
-  },
-  {
-   "zug": "weiter",
-   "erg": "geklickt",
-   "text": "WEITER",
-   "nach": "1350/29 Kasse 19"
-  },
-  {
-   "zug": "fuhre:wie-vorige",
-   "erg": "geklickt",
-   "text": "Wie vorige Woche",
-   "nach": "1350/29 Kasse 19"
-  },
-  {
-   "zug": "fuhre:abschicken",
-   "erg": "geklickt",
-   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
-   "nach": "1350/30 Kasse 9"
-  },
-  {
-   "zug": "weiter",
-   "erg": "geklickt",
-   "text": "JAHR SCHLIESSEN",
-   "nach": "1351/1 Kasse 48"
-  },
-  {
-   "zug": "fuhre:wie-vorige",
-   "erg": "GESPERRT",
-   "text": "Wie vorige Woche",
-   "nach": "1351/1 Kasse 48"
+   "nach": "1350/20 Kasse 19"
   },
   {
    "zug": "fuhre:abschicken",
    "erg": "GESPERRT",
    "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/20 Kasse 19"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/21 Kasse 18"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/21 Kasse 18"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/21 Kasse 18"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/22 Kasse 8"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/23 Kasse 7"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/23 Kasse 7"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
+   "text": "Wie vorige Woche",
+   "nach": "1350/23 Kasse 7"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/23 Kasse 7"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/24 Kasse 0"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/24 Kasse 0"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/24 Kasse 0"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/25 Kasse 16"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/26 Kasse 15"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/26 Kasse 15"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
+   "text": "Wie vorige Woche",
+   "nach": "1350/26 Kasse 15"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/26 Kasse 15"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/27 Kasse 14"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/27 Kasse 14"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/27 Kasse 14"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
+   "nach": "1350/28 Kasse 4"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/29 Kasse 3"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/29 Kasse 3"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "VERDECKT",
+   "wer": "DIV",
+   "text": "Wie vorige Woche",
+   "nach": "1350/29 Kasse 3"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1350/29 Kasse 3"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1350/30 Kasse 2"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1350/30 Kasse 2"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "geklickt",
+   "text": "Wie vorige Woche",
+   "nach": "1350/30 Kasse 2"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "geklickt",
+   "text": "FUHRE ABSCHICKEN · 4 Fass · bringt 34 Pf",
    "nach": "1351/1 Kasse 48"
   },
   {
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
+   "nach": "1351/2 Kasse 30"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
    "nach": "1351/2 Kasse 30"
   },
   {
@@ -386,6 +606,12 @@
    "nach": "1351/3 Kasse 21"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/3 Kasse 21"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -404,10 +630,10 @@
    "nach": "1351/4 Kasse 20"
   },
   {
-   "halt": 5,
-   "jahr": 1351,
-   "woche": 4,
-   "kasse": 20
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/4 Kasse 20"
   },
   {
    "zug": "fuhre:wie-vorige",
@@ -428,6 +654,12 @@
    "nach": "1351/5 Kasse 19"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/5 Kasse 19"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -446,6 +678,12 @@
    "nach": "1351/6 Kasse 18"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/6 Kasse 18"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -464,6 +702,12 @@
    "nach": "1351/7 Kasse 17"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/7 Kasse 17"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -482,6 +726,12 @@
    "nach": "1351/8 Kasse 16"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/8 Kasse 16"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -500,6 +750,12 @@
    "nach": "1351/9 Kasse 15"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/9 Kasse 15"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -518,6 +774,12 @@
    "nach": "1351/10 Kasse 0"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/10 Kasse 0"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -536,6 +798,18 @@
    "nach": "1351/11 Kasse 16"
   },
   {
+   "halt": 4,
+   "jahr": 1351,
+   "woche": 11,
+   "kasse": 16
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/11 Kasse 16"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -554,6 +828,12 @@
    "nach": "1351/12 Kasse 15"
   },
   {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/12 Kasse 15"
+  },
+  {
    "zug": "fuhre:wie-vorige",
    "erg": "GESPERRT",
    "text": "Wie vorige Woche",
@@ -572,10 +852,10 @@
    "nach": "1351/13 Kasse 14"
   },
   {
-   "halt": 6,
-   "jahr": 1351,
-   "woche": 13,
-   "kasse": 14
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/13 Kasse 14"
   },
   {
    "zug": "fuhre:wie-vorige",
@@ -596,10 +876,10 @@
    "nach": "1351/14 Kasse 13"
   },
   {
-   "halt": 7,
-   "jahr": 1351,
-   "woche": 14,
-   "kasse": 13
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/14 Kasse 13"
   },
   {
    "zug": "fuhre:wie-vorige",
@@ -620,10 +900,10 @@
    "nach": "1351/15 Kasse 12"
   },
   {
-   "halt": 8,
-   "jahr": 1351,
-   "woche": 15,
-   "kasse": 12
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/15 Kasse 12"
   },
   {
    "zug": "fuhre:wie-vorige",
@@ -641,6 +921,12 @@
    "zug": "weiter",
    "erg": "geklickt",
    "text": "WEITER",
+   "nach": "1351/16 Kasse 11"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
    "nach": "1351/16 Kasse 11"
   },
   {
@@ -660,26 +946,2108 @@
    "erg": "geklickt",
    "text": "WEITER",
    "nach": "1351/17 Kasse 10"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/17 Kasse 10"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/17 Kasse 10"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/17 Kasse 10"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/18 Kasse 17"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/18 Kasse 17"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/18 Kasse 17"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/18 Kasse 17"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/19 Kasse 8"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/19 Kasse 8"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/19 Kasse 8"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/19 Kasse 8"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/20 Kasse 7"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/20 Kasse 7"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/20 Kasse 7"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/20 Kasse 7"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/21 Kasse 6"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/21 Kasse 6"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/21 Kasse 6"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/21 Kasse 6"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/22 Kasse 5"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/22 Kasse 5"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/22 Kasse 5"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/22 Kasse 5"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/23 Kasse 4"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/23 Kasse 4"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/23 Kasse 4"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/23 Kasse 4"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/24 Kasse 3"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/24 Kasse 3"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/24 Kasse 3"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/24 Kasse 3"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/25 Kasse 2"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/25 Kasse 2"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/25 Kasse 2"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/25 Kasse 2"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/26 Kasse 9"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/26 Kasse 9"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/26 Kasse 9"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/26 Kasse 9"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/27 Kasse 8"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/27 Kasse 8"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/27 Kasse 8"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/27 Kasse 8"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/28 Kasse 7"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/28 Kasse 7"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/28 Kasse 7"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/28 Kasse 7"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/29 Kasse 6"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/29 Kasse 6"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/29 Kasse 6"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/29 Kasse 6"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1351/30 Kasse 5"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1351/30 Kasse 5"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1351/30 Kasse 5"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1351/30 Kasse 5"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "JAHR SCHLIESSEN",
+   "nach": "1352/1 Kasse 48"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/1 Kasse 48"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/2 Kasse 39"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/2 Kasse 39"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/2 Kasse 39"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/2 Kasse 39"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/3 Kasse 38"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/3 Kasse 38"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/3 Kasse 38"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/3 Kasse 38"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/4 Kasse 37"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/4 Kasse 37"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/4 Kasse 37"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/4 Kasse 37"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/5 Kasse 36"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/5 Kasse 36"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/5 Kasse 36"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/5 Kasse 36"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/6 Kasse 35"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/6 Kasse 35"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/6 Kasse 35"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/6 Kasse 35"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/7 Kasse 34"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/7 Kasse 34"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/7 Kasse 34"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/7 Kasse 34"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/8 Kasse 33"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/8 Kasse 33"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/8 Kasse 33"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/8 Kasse 33"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/9 Kasse 32"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/9 Kasse 32"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/9 Kasse 32"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/9 Kasse 32"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/10 Kasse 31"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/10 Kasse 31"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/10 Kasse 31"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/10 Kasse 31"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/11 Kasse 30"
+  },
+  {
+   "halt": 5,
+   "jahr": 1352,
+   "woche": 11,
+   "kasse": 30
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/11 Kasse 30"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/11 Kasse 30"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/11 Kasse 30"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/12 Kasse 29"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/12 Kasse 29"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/12 Kasse 29"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/12 Kasse 29"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/13 Kasse 28"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/13 Kasse 28"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/13 Kasse 28"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/13 Kasse 28"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/14 Kasse 27"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/14 Kasse 27"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/14 Kasse 27"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/14 Kasse 27"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/15 Kasse 26"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/15 Kasse 26"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/15 Kasse 26"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/15 Kasse 26"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/16 Kasse 25"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/16 Kasse 25"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/16 Kasse 25"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/16 Kasse 25"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/17 Kasse 24"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/17 Kasse 24"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/17 Kasse 24"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/17 Kasse 24"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/18 Kasse 23"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/18 Kasse 23"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/18 Kasse 23"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/18 Kasse 23"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/19 Kasse 22"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/19 Kasse 22"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/19 Kasse 22"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/19 Kasse 22"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/20 Kasse 21"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/20 Kasse 21"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/20 Kasse 21"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/20 Kasse 21"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/21 Kasse 20"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/21 Kasse 20"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/21 Kasse 20"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/21 Kasse 20"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/22 Kasse 19"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/22 Kasse 19"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/22 Kasse 19"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/22 Kasse 19"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/23 Kasse 18"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/23 Kasse 18"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/23 Kasse 18"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/23 Kasse 18"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/24 Kasse 17"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/24 Kasse 17"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/24 Kasse 17"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/24 Kasse 17"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/25 Kasse 16"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/25 Kasse 16"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/25 Kasse 16"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/25 Kasse 16"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/26 Kasse 15"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/26 Kasse 15"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/26 Kasse 15"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/26 Kasse 15"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/27 Kasse 14"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/27 Kasse 14"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/27 Kasse 14"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/27 Kasse 14"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/28 Kasse 13"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/28 Kasse 13"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/28 Kasse 13"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/28 Kasse 13"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/29 Kasse 12"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/29 Kasse 12"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/29 Kasse 12"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/29 Kasse 12"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1352/30 Kasse 11"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1352/30 Kasse 11"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1352/30 Kasse 11"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1352/30 Kasse 11"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "JAHR SCHLIESSEN",
+   "nach": "1353/1 Kasse 48"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/1 Kasse 48"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/2 Kasse 47"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/2 Kasse 47"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/2 Kasse 47"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/2 Kasse 47"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/3 Kasse 46"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/3 Kasse 46"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/3 Kasse 46"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/3 Kasse 46"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/4 Kasse 45"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/4 Kasse 45"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/4 Kasse 45"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/4 Kasse 45"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/5 Kasse 44"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/5 Kasse 44"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/5 Kasse 44"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/5 Kasse 44"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/6 Kasse 43"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/6 Kasse 43"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/6 Kasse 43"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/6 Kasse 43"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/7 Kasse 42"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/7 Kasse 42"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/7 Kasse 42"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/7 Kasse 42"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/8 Kasse 41"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/8 Kasse 41"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/8 Kasse 41"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/8 Kasse 41"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/9 Kasse 40"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/9 Kasse 40"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/9 Kasse 40"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/9 Kasse 40"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/10 Kasse 39"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/10 Kasse 39"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/10 Kasse 39"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/10 Kasse 39"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/11 Kasse 38"
+  },
+  {
+   "halt": 6,
+   "jahr": 1353,
+   "woche": 11,
+   "kasse": 38
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/11 Kasse 38"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/11 Kasse 38"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/11 Kasse 38"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/12 Kasse 37"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/12 Kasse 37"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/12 Kasse 37"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/12 Kasse 37"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/13 Kasse 36"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/13 Kasse 36"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/13 Kasse 36"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/13 Kasse 36"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/14 Kasse 35"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/14 Kasse 35"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/14 Kasse 35"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/14 Kasse 35"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/15 Kasse 34"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/15 Kasse 34"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/15 Kasse 34"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/15 Kasse 34"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/16 Kasse 33"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/16 Kasse 33"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/16 Kasse 33"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/16 Kasse 33"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/17 Kasse 32"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/17 Kasse 32"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/17 Kasse 32"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/17 Kasse 32"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/18 Kasse 31"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/18 Kasse 31"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/18 Kasse 31"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/18 Kasse 31"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/19 Kasse 30"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/19 Kasse 30"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/19 Kasse 30"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/19 Kasse 30"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/20 Kasse 29"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/20 Kasse 29"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/20 Kasse 29"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/20 Kasse 29"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/21 Kasse 28"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/21 Kasse 28"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/21 Kasse 28"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/21 Kasse 28"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/22 Kasse 27"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/22 Kasse 27"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/22 Kasse 27"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/22 Kasse 27"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/23 Kasse 26"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/23 Kasse 26"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/23 Kasse 26"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/23 Kasse 26"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/24 Kasse 25"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/24 Kasse 25"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/24 Kasse 25"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/24 Kasse 25"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/25 Kasse 24"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/25 Kasse 24"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/25 Kasse 24"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/25 Kasse 24"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/26 Kasse 23"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/26 Kasse 23"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/26 Kasse 23"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/26 Kasse 23"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/27 Kasse 22"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/27 Kasse 22"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/27 Kasse 22"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/27 Kasse 22"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/28 Kasse 21"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/28 Kasse 21"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/28 Kasse 21"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/28 Kasse 21"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/29 Kasse 20"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/29 Kasse 20"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/29 Kasse 20"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/29 Kasse 20"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1353/30 Kasse 19"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1353/30 Kasse 19"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1353/30 Kasse 19"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1353/30 Kasse 19"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "JAHR SCHLIESSEN",
+   "nach": "1354/1 Kasse 48"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/1 Kasse 48"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/1 Kasse 48"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/2 Kasse 47"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/2 Kasse 47"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/2 Kasse 47"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/2 Kasse 47"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/3 Kasse 46"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/3 Kasse 46"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/3 Kasse 46"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/3 Kasse 46"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/4 Kasse 45"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/4 Kasse 45"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/4 Kasse 45"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/4 Kasse 45"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/5 Kasse 44"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/5 Kasse 44"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/5 Kasse 44"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/5 Kasse 44"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/6 Kasse 43"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/6 Kasse 43"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/6 Kasse 43"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/6 Kasse 43"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/7 Kasse 42"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/7 Kasse 42"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/7 Kasse 42"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/7 Kasse 42"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/8 Kasse 41"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/8 Kasse 41"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/8 Kasse 41"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/8 Kasse 41"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/9 Kasse 40"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/9 Kasse 40"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/9 Kasse 40"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/9 Kasse 40"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/10 Kasse 39"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/10 Kasse 39"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/10 Kasse 39"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/10 Kasse 39"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/11 Kasse 38"
+  },
+  {
+   "halt": 7,
+   "jahr": 1354,
+   "woche": 11,
+   "kasse": 38
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/11 Kasse 38"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/11 Kasse 38"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/11 Kasse 38"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/12 Kasse 37"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "erg": "geklickt",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+   "nach": "1354/12 Kasse 37"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "erg": "GESPERRT",
+   "text": "Wie vorige Woche",
+   "nach": "1354/12 Kasse 37"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "erg": "GESPERRT",
+   "text": "FUHRE ABSCHICKEN",
+   "nach": "1354/12 Kasse 37"
+  },
+  {
+   "zug": "weiter",
+   "erg": "geklickt",
+   "text": "WEITER",
+   "nach": "1354/13 Kasse 36"
   }
  ],
  "schirm": {
-  "jahr": 1351,
-  "woche": 17,
-  "ende": false,
-  "kasse": 10,
-  "rohstoff": 11,
+  "jahr": 1354,
+  "woche": 13,
+  "ende": true,
+  "kasse": 36,
+  "rohstoff": 0,
   "ansehen": 25,
-  "faesser": 12,
+  "faesser": 3,
   "plaetze": 12,
   "lage": [],
   "lageN": 0,
   "chronik": [
-   "Der Umgang vor Michaeli: 356 Pf kommen herein, 102 Pf sind nicht einzutreiben. Damit steht das Haus vor der Mi",
-   "Mühlschenke nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen.",
-   "Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer u",
-   "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 2× Grutbier — wie im vorigen Jahr, bis jemand es ändert",
-   "Gasthof Lindenhof geht an Brauhaus zum Adler. Gebunden mit Konzession des Rats bis 1355. Ablösen kostet 124 Pf",
-   "Der Name des Hauses: Der Bierkieser des Rats lobt den Sud vor Zeugen."
+   "Der Rat schießt dem Haus 37 Pf auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+   "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Kofent an, den zweiten Guss auf dieselb",
+   "Der Rat bietet den Abstand. Der Stadtschreiber steht im Hof. Ein Braurecht ist geliehen, nicht gekauft: wessen",
+   "Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben.",
+   "Der Rat entzieht dem Haus zum Anker das Braurecht: seit 12 Wochen hat keine Schenke der Stadt ein Fass genomme",
+   "Zum Goldenen Ochsen ist wieder frei. Brauhaus zum Adler hat die Bindung verloren."
   ],
   "zuege": [
    {
@@ -687,87 +3055,71 @@
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 5"
-   },
-   {
-    "zug": "gegner:abloesen:lindenhof",
-    "preis": -124,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "LIN · KON ablösen 124 Pf"
-   },
-   {
-    "zug": "gegner:hinhalten:lindenhof",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "Fass an den Wirt 1 Fass statt Geld"
+    "trifft": false,
+    "text": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 4"
    },
    {
     "zug": "gegner:abloesen:torschenke",
-    "preis": -56,
+    "preis": -42,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "TOR · KON ablösen 56 Pf"
+    "trifft": false,
+    "text": "TOR · GEV ablösen 42 Pf"
    },
    {
     "zug": "gegner:hinhalten:torschenke",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Fass an den Wirt 1 Fass statt Geld"
    },
    {
     "zug": "gegner:abloesen:pfarrhof",
-    "preis": null,
+    "preis": -48,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "PFA · RAT nicht ablösbar"
+    "trifft": false,
+    "text": "PFA · KON ablösen 48 Pf"
    },
    {
     "zug": "gegner:hinhalten:pfarrhof",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Fass an den Wirt 1 Fass statt Geld"
    },
    {
-    "zug": "gegner:abloesen:muehlwirt",
-    "preis": -48,
+    "zug": "gegner:abloesen:brueckenwirt",
+    "preis": -76,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "MUE · GEV ablösen 48 Pf"
+    "trifft": false,
+    "text": "BRU · KON ablösen 76 Pf"
    },
    {
-    "zug": "gegner:hinhalten:muehlwirt",
+    "zug": "gegner:hinhalten:brueckenwirt",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Fass an den Wirt 1 Fass statt Geld"
    },
    {
     "zug": "gegner:abloesen:faehrhaus",
-    "preis": -66,
+    "preis": -33,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "FAE · BAN ablösen 66 Pf"
+    "trifft": false,
+    "text": "FAE · GEV ablösen 33 Pf"
    },
    {
     "zug": "gegner:hinhalten:faehrhaus",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Fass an den Wirt 1 Fass statt Geld"
    },
    {
@@ -775,13 +3127,13 @@
     "preis": 0,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Klage vor dem Stadtgericht kostet kein Geld · vier Ans"
    },
    {
     "zug": "gegner:blatt",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "Das Haus gegenüber"
@@ -789,31 +3141,31 @@
    {
     "zug": "gegner:beschwerde",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "Klage vor dem Stadtgericht"
    },
    {
-    "zug": "gegner:zeige:24",
+    "zug": "gegner:zeige:61",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "zeigen"
    },
    {
-    "zug": "gegner:zeige:23",
+    "zug": "gegner:zeige:60",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "zeigen"
    },
    {
-    "zug": "gegner:zeige:22",
+    "zug": "gegner:zeige:59",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "zeigen"
@@ -821,98 +3173,82 @@
    {
     "zug": "sud:zettel-anstich",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Junges Fass anbrechen · +14 · 1 Fass"
    },
    {
     "zug": "sud:zettel-hefe-fass",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Altes Fass anbrechen · +6 · 1 Fass"
    },
    {
     "zug": "sud:zettel-wechsel-frei",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Hopfen im Sack, heimlich lässt Starkbier zu"
    },
    {
-    "zug": "sud:zettel-wechsel-frei2",
-    "preis": null,
-    "aus": false,
+    "zug": "sud:zettel-wechsel-kauf",
+    "preis": -30,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
-    "text": "Wasser aus dem Ziehbrunnen lässt Starkbier zu"
+    "trifft": false,
+    "text": "Röhrenrecht an der Quelle −30 Pf lässt Starkbier zu"
    },
    {
     "zug": "name:anschlag:umtrunk",
     "preis": -9,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Umtrunk beim Wirt −9 Pf − 1 Fass"
-   },
-   {
-    "zug": "stadt:marke:gegner-marktplatz",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "Adler-Ausschank am Mar"
-   },
-   {
-    "zug": "stadt:marke:fuhre-lindenhof",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "LIN"
-   },
-   {
-    "zug": "stadt:marke:fuhre-marktplatz",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "OCH"
    },
    {
     "zug": "stadt:marke:fuhre-muehle",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "MUE"
    },
    {
     "zug": "stadt:marke:fuhre-bruecke-unten",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "BRU"
    },
    {
     "zug": "stadt:marke:fuhre-fluss",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "FAE"
    },
    {
     "zug": "stadt:marke:fuhre-bruecke-oben",
     "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "OBE"
+   },
+   {
+    "zug": "fuhre:schluss-auf",
+    "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "OBE"
+    "trifft": false,
+    "text": "Das Schlussblatt aufschlagen"
    },
    {
     "zug": "fuhre:ziel:bar",
@@ -939,71 +3275,23 @@
     "text": "So ist es verabredet"
    },
    {
-    "zug": "fuhre:laden:lindenhof",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "+ 1 Fass"
-   },
-   {
-    "zug": "fuhre:abladen:lindenhof",
+    "zug": "fuhre:probe:lindenhof",
     "preis": null,
     "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "−"
+    "text": "auf Probe · 1 Fass · 0/4"
    },
    {
-    "zug": "fuhre:laden:ochse",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "+ 1 Fass"
-   },
-   {
-    "zug": "fuhre:abladen:ochse",
+    "zug": "fuhre:probe:ochse",
     "preis": null,
     "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "−"
+    "text": "auf Probe · 1 Fass · 0/4"
    },
    {
-    "zug": "fuhre:laden:torschenke",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "+ 1 Fass"
-   },
-   {
-    "zug": "fuhre:abladen:torschenke",
-    "preis": null,
-    "aus": true,
-    "flaeche": true,
-    "trifft": false,
-    "text": "−"
-   },
-   {
-    "zug": "fuhre:laden:pfarrhof",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "+ 1 Fass"
-   },
-   {
-    "zug": "fuhre:abladen:pfarrhof",
-    "preis": null,
-    "aus": true,
-    "flaeche": true,
-    "trifft": false,
-    "text": "−"
-   },
-   {
-    "zug": "fuhre:probe:muehlwirt",
+    "zug": "fuhre:probe:torschenke",
     "preis": null,
     "aus": true,
     "flaeche": true,
@@ -1011,52 +3299,60 @@
     "text": "auf Probe · 1 Fass · 0/6"
    },
    {
-    "zug": "fuhre:bann:brueckenwirt",
-    "preis": -60,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Bannbrief · auf 2 Kerben −60 Pf"
-   },
-   {
-    "zug": "fuhre:bann:faehrhaus",
-    "preis": -60,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Bannbrief · auf 2 Kerben −60 Pf"
-   },
-   {
-    "zug": "fuhre:bann:hirsch",
-    "preis": -60,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Bannbrief · auf 2 Kerben −60 Pf"
-   },
-   {
-    "zug": "fuhre:laden:markt",
+    "zug": "fuhre:probe:pfarrhof",
     "preis": null,
     "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "+ 1 Fass"
+    "text": "auf Probe · 1 Fass · 0/6"
    },
    {
-    "zug": "fuhre:abladen:markt",
+    "zug": "fuhre:probe:muehlwirt",
     "preis": null,
     "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "−"
+    "text": "auf Probe · 1 Fass · 0/4"
    },
    {
-    "zug": "fuhre:bann:obernberg",
-    "preis": -60,
-    "aus": false,
+    "zug": "fuhre:probe:brueckenwirt",
+    "preis": null,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "Bannbrief · auf 2 Kerben −60 Pf"
+    "text": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:faehrhaus",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "auf Probe · 1 Fass · 0/6"
+   },
+   {
+    "zug": "fuhre:probe:hirsch",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "auf Probe · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:markt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "auf Probe · 1 Fass · 0/4"
+   },
+   {
+    "zug": "fuhre:probe:obernberg",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "auf Probe · 1 Fass · 0/4"
    },
    {
     "zug": "fuhre:tafel-ab:duenn",
@@ -1069,7 +3365,7 @@
    {
     "zug": "fuhre:tafel-auf:duenn",
     "preis": -4,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "+ −4 Pf"
@@ -1077,7 +3373,7 @@
    {
     "zug": "fuhre:tafel-ab:grut",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "−"
@@ -1085,7 +3381,7 @@
    {
     "zug": "fuhre:tafel-auf:grut",
     "preis": -4,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "+ −4 Pf"
@@ -1101,7 +3397,7 @@
    {
     "zug": "fuhre:tafel-auf:stark",
     "preis": -4,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "+ −4 Pf"
@@ -1117,34 +3413,26 @@
    {
     "zug": "fuhre:tafel-auf:kofent",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "+"
    },
    {
-    "zug": "fuhre:kerbe-loeschen",
-    "preis": -25,
+    "zug": "fuhre:kauf:budget",
+    "preis": -90,
     "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "Eine Kerbe löschen −25 Pf"
-   },
-   {
-    "zug": "fuhre:kauf:budget",
-    "preis": -90,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Brautage vom Rat · +6 · auf 4 Kerben −90 Pf"
+    "text": "Brautage vom Rat · +6 · auf 3 Kerben −90 Pf"
    },
    {
     "zug": "fuhre:kauf:rohstoff",
     "preis": -34,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "Grut vom Grutherrn · +40 · auf 1 Kerbe −34 Pf"
+    "text": "Grut vom Grutherrn · +40 −34 Pf"
    },
    {
     "zug": "fuhre:rueckkauf:rohstoff",
@@ -1157,15 +3445,15 @@
    {
     "zug": "fuhre:kauf:fass",
     "preis": -34,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
-    "text": "Fass vom Böttcher · +3 · auf 1 Kerbe −34 Pf"
+    "text": "Fass vom Böttcher · +3 −34 Pf"
    },
    {
     "zug": "fuhre:fuellen",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
     "trifft": false,
     "text": "Nach Durst füllen"
@@ -1275,134 +3563,6 @@
     "text": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
    },
    {
-    "zug": "name:band",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "▾"
-   },
-   {
-    "zug": "name:aufgeldbuch",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Das Aufgeld nachrechnen"
-   },
-   {
-    "zug": "name:liefern",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Unter dem Zeichen ausliefern"
-   },
-   {
-    "zug": "name:zurueckhalten",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Das Zeichen einziehen"
-   },
-   {
-    "zug": "name:jetzt:umtrunk",
-    "preis": -9,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Umtrunk beim Wirt −9 Pf − 1 Fass"
-   },
-   {
-    "zug": "name:jetzt:zunftzeichen",
-    "preis": -45,
-    "aus": true,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Um das Zunftzeichen bitten −45 Pf"
-   },
-   {
-    "zug": "name:ruhe",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Das Zeichen verdecken"
-   },
-   {
-    "zug": "name:herumgehen",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Herumgehen und den Namen sagen"
-   },
-   {
-    "zug": "name:blatt",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": false,
-    "text": "Das Zeichen und das Register"
-   },
-   {
-    "zug": "erbe:nachschrift",
-    "preis": -31,
-    "aus": true,
-    "flaeche": true,
-    "trifft": true,
-    "text": "Nachschrift · 2 Häuser −31 Pf"
-   },
-   {
-    "zug": "erbe:uebergabe:leibgeding",
-    "preis": -5,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "Leibgeding · jährlich −5 Pf"
-   },
-   {
-    "zug": "erbe:uebergabe:abfindung",
-    "preis": -5,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "Abfertigung −5 Pf"
-   },
-   {
-    "zug": "erbe:uebergabe:bruch",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "Mit leeren Händen 0 Pf"
-   },
-   {
-    "zug": "kern:chronik",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "CHRONIK 23"
-   },
-   {
-    "zug": "kern:protokoll",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "BUCH 296"
-   },
-   {
-    "zug": "weiter",
-    "preis": null,
-    "aus": false,
-    "flaeche": true,
-    "trifft": true,
-    "text": "WEITER"
-   },
-   {
     "zug": "klang:ton",
     "preis": null,
     "aus": false,
@@ -1411,12 +3571,124 @@
     "text": "♪"
    },
    {
+    "zug": "name:band",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "▾"
+   },
+   {
+    "zug": "name:aufgeldbuch",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Aufgeld nachrechnen"
+   },
+   {
+    "zug": "name:entzug-loesen",
+    "preis": -36,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Vor dem Rat abbitten −36 Pf − 1 Fass"
+   },
+   {
+    "zug": "name:jetzt:umtrunk",
+    "preis": -9,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+   },
+   {
+    "zug": "name:ruhe",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen verdecken"
+   },
+   {
+    "zug": "name:herumgehen",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Herumgehen und den Namen sagen"
+   },
+   {
+    "zug": "name:blatt",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Das Zeichen und das Register"
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": -72,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Nachschrift · 3 Häuser −72 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": -5,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Leibgeding · jährlich −5 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:abfindung",
+    "preis": -5,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Abfertigung −5 Pf"
+   },
+   {
+    "zug": "erbe:uebergabe:bruch",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Mit leeren Händen 0 Pf"
+   },
+   {
+    "zug": "kern:chronik",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "CHRONIK 68"
+   },
+   {
+    "zug": "kern:protokoll",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": true,
+    "text": "BUCH 458"
+   },
+   {
+    "zug": "weiter",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": true,
+    "text": "ENDE"
+   },
+   {
     "zug": "stadt:reiter:gegner-amort-gg-band",
     "preis": null,
     "aus": false,
     "flaeche": true,
     "trifft": true,
-    "text": "OHNE DICH GESCHEHEN 24 Züge"
+    "text": "OHNE DICH GESCHEHEN 61 Züge"
    },
    {
     "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
@@ -1424,7 +3696,7 @@
     "aus": false,
     "flaeche": true,
     "trifft": true,
-    "text": "DIE HÄUSER wollen 38 · im Keller liegen 12 Fass"
+    "text": "DIE HÄUSER wollen 0 · im Keller liegen 3 Fass"
    },
    {
     "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
@@ -1440,14 +3712,14 @@
     "aus": false,
     "flaeche": true,
     "trifft": true,
-    "text": "DER KELLER 12 von 12 Fass · 12 reif"
+    "text": "DER KELLER 3 von 12 Fass · 3 reif"
    },
    {
     "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten"
    },
    {
@@ -1455,7 +3727,7 @@
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "DAS SUDHAUS zugeklappt"
    },
    {
@@ -1463,96 +3735,128 @@
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen"
+    "trifft": false,
+    "text": "DER RUF DES HAUSES GENOMMEN von Der Rat bis 1355"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-blatt-fu-ende-entzogen-fu-schlussblatt",
+    "preis": null,
+    "aus": false,
+    "flaeche": true,
+    "trifft": false,
+    "text": "DAS ENDE DES HAUSES liegt auf"
    },
    {
     "zug": "stadt:reiter:erbe-blatt-erb-buch",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "DAS ERBE liegt auf"
+    "trifft": false,
+    "text": "DAS ERBE zugeklappt"
    },
    {
     "zug": "stadt:ortsmarken",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
-    "text": "ORTSMARKEN 7 auf dem Pflock"
+    "trifft": false,
+    "text": "ORTSMARKEN 8 auf dem Pflock"
    },
    {
     "zug": "stadt:alles-zuklappen",
     "preis": null,
     "aus": false,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "STADT ZEIGEN"
    },
    {
     "zug": "stadt:bau:seite",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "BAUHOF"
    },
    {
     "zug": "stadt:versatz",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "VERSATZ"
    },
    {
-    "zug": "stadt:versatz:malzboden",
-    "preis": 9,
-    "aus": false,
+    "zug": "stadt:bau:grutkammer",
+    "preis": -13,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
-    "text": "Malzboden auf Stelzen +9 Pf"
+    "trifft": false,
+    "text": "Grutkammer −13 Pf"
    },
    {
-    "zug": "stadt:versatz:pfanne",
-    "preis": 7,
-    "aus": false,
+    "zug": "stadt:bau:gaerbottiche",
+    "preis": -15,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
-    "text": "Braupfanne im Hof +7 Pf"
+    "trifft": false,
+    "text": "Gärbottiche −15 Pf"
    },
    {
-    "zug": "stadt:versatz:fasslager_holz",
-    "preis": 6,
-    "aus": false,
+    "zug": "stadt:bau:ochsenstall",
+    "preis": -18,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
-    "text": "Fassschuppen +6 Pf"
+    "trifft": false,
+    "text": "Ochsenstall −18 Pf"
    },
    {
-    "zug": "stadt:versatz:brunnen",
-    "preis": 5,
+    "zug": "stadt:bau:keller_gewoelbe",
+    "preis": -21,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Gewölbekeller −21 Pf"
+   },
+   {
+    "zug": "stadt:bau:kueferei",
+    "preis": -23,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Küferei −23 Pf"
+   },
+   {
+    "zug": "fuhre:wiederanfang",
+    "preis": null,
     "aus": false,
     "flaeche": true,
     "trifft": true,
-    "text": "Ziehbrunnen +5 Pf"
+    "text": "Von vorn anfangen — dieselbe Stadt, andere Würfel"
    },
    {
     "zug": "preis:tafel",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
-    "text": "Michaelitafel 1351 · 5 Angebote"
+    "trifft": false,
+    "text": "Michaelitafel 1354 · 5 Angebote"
    },
    {
     "zug": "preis:chronik-auf",
     "preis": null,
-    "aus": false,
+    "aus": true,
     "flaeche": true,
-    "trifft": true,
+    "trifft": false,
     "text": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Taf"
+   },
+   {
+    "zug": "sud:schluss-auf",
+    "preis": null,
+    "aus": true,
+    "flaeche": true,
+    "trifft": false,
+    "text": "Sudbuch aufschlagen"
    }
   ]
  },
