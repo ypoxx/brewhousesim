@@ -46,6 +46,37 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## SECHSTER CONTAINER-RESET, 4. August 20:21 UTC — und der grüne Haken dazu
+
+**Der Reset hat eine ALTE PLATTE zurückgespielt.** Der Arbeitsbaum stand danach
+auf `78c79bb` vom **3. August 23:16**; origin lag auf `8ded043` von 19:2x des
+4. August. Weg im Baum waren: die ganze Welle 6, das fünfte Zielbild, Frage (G),
+das Messfenster, sämtliche Gedächtniseinträge des Tages. **Verloren war nichts** —
+alles lag auf origin, weil die Aufsicht stündlich committet.
+
+> **Und `wiederaufnahme.sh` hat dazu „✓ origin ist auf Stand" gemeldet.**
+> Ursache: `git fetch … 2>/dev/null || true` verschluckte den **gescheiterten**
+> Fetch — zwei Minuten nach dem Boot gab es noch kein Netz. Der Vergleich lief
+> danach gegen die **mitrestaurierte, genauso alte** Referenz `origin/<zweig>`:
+> 0 voraus, 0 zurück, grüner Haken. Das ist derselbe Fehler wie in der Nacht zum
+> 4.8., nur eine Ebene tiefer — damals holte es gar nicht, jetzt holte es
+> vergeblich und schwieg darüber.
+>
+> **Behoben und gegen BEIDE Fälle geprüft:** mit Netz grüner Haken, ohne Netz
+> „origin NICHT erreichbar — dreimal versucht. Der Vergleich unten ist WERTLOS."
+> Geprüft wurde mit einer vorübergehend verbogenen Remote-URL, danach die echte
+> nachweislich zurückgesetzt.
+
+**`/tmp` ÜBERLEBT DEN RESET NICHT.** Sämtliche Messergebnisse beider Builder
+unter `/tmp/sudnach/` und `/tmp/fuhre-rho/` waren weg — Stunden an ρ-Läufen. Die
+**Berichte** unter `werkbank/urteile/` überlebten, weil sie committet waren.
+Das ist der ganze Grund für die Regel „Teilergebnisse laufend hineinschreiben":
+von beiden Buildern war je **eine Stunde** verloren statt eines ganzen Tages.
+
+**Beide Builder waren tot und wurden per `SendMessage` an dieselbe
+Agenten-Kennung wieder aufgenommen** — mit vollem Kontext, samt der Ansage, was
+im Baum steht, was unter `/tmp` weg ist und dass das Messfenster weiter gilt.
+
 **Wer hier ankommt, tut zuerst dies:**
 
 ```

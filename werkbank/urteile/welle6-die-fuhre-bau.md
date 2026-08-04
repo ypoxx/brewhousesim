@@ -528,5 +528,21 @@ Aufnahmen und Messreihen:
 
 ---
 
-*(Latte 2 wird durch `werkbank/schuss/aufsicht/messfenster.sh` wiederholt —
-Belegzahlen folgen)*
+## 9 — Der Container-Reset vom 4. August, 20:21 UTC
+
+Der Container wurde zurückgesetzt und hat eine Platte vom 3. August
+zurückgespielt. Wiederhergestellt aus `origin` (Stand `8ded043`).
+
+**Was überlebt hat:** alle drei geänderten Dateien und dieser Bericht mit
+Stand 19:02 UTC — weil die Aufsicht ihn laufend committet.
+
+**Was verloren ist:** alles unter `/tmp` — die beiden eingefrorenen Messstände
+(Häfen 8961/8952), die Kennzahl-Läufe unter `/tmp/fuhre-rho/` und die
+Bildaufnahmen unter `werkbank/schuss/fuhre-w6/` (nicht eingecheckt).
+**Die Zahlen selbst sind nicht verloren — sie stehen in diesem Bericht**,
+und genau dafür wurde er laufend geschrieben.
+
+Neu gemessen nach dem Reset (Stände aus demselben Commit `3465eb3` neu
+aufgebaut, jede Messung durch `messfenster.sh`):
+
+*(wird eingetragen, sobald die Messungen durch das Fenster sind)*
