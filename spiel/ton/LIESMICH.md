@@ -28,7 +28,7 @@ einer Stelle, weil dieselbe Probe von mehreren Stücken gerufen wird.
 | **Grund** | `klang/grund.mp3` — **eine Datei für alle vier Epochen** | daß hier ein Hof ist, und sonst **nichts** | immer |
 | **Bett** | `klang/bett1..4.mp3` | die **Zeit** — Blockflöte · Laute · Blaskapelle · Funk | nur bei Arbeit |
 | **Hof** | `klang/hof1..4.mp3` | den **Ort** — Feuer unter der Pfanne · Küferei und Stall · Dampfmaschine · Diesel | nur bei Arbeit |
-| **Fremd** | `klang/nachbar1,4.mp3` + Wand | den **Gegenzug** — was drüben geschieht, hinter der Mauer | bei Arbeit |
+| **Fremd** | `klang/drueben1,4.mp3` + Wand (Tiefpass 1100 Hz) | den **Gegenzug** — was drüben geschieht, hinter der Mauer | nur bei einem Zug des Nachbarn |
 | **Werk** | die übrigen ~40 Proben | den **Vorgang** — was der Spieler gerade getan hat | bei Arbeit |
 
 **Das ist seit Welle 5 umgebaut, und zwar gemessen.** Bis dahin trug das Bett
@@ -106,6 +106,17 @@ In allen vier Aufnahmen der Welle 4 ist diese Rückgabe leer.
    gezogen** (`angleich()`). `hof1` kam mit dem dreifachen Pegel von `hof3` aus
    dem Erzeuger; das Ohr hörte daraufhin in 1350 einen Bauernhof („Flöte und
    Gänse") statt eines Brauhauses, weil die Gänse alles zudeckten.
+
+   **Auch diese Regel stimmte nicht — bis Welle 6.** `angleich()` kappt den
+   Faktor bei 6, und `drueben1.mp3` kam mit einem Effektivwert von **0,00722**
+   aus dem Erzeuger, dem Zwanzigstel von `drueben4.mp3`. Das NACHBARHOF-Zeichen
+   stand damit in 1350, 1600 und 1884 bei 0,043 und in 1970 bei 0,55 — derselbe
+   Klang, Faktor dreizehn. Im Quelltext stand die Zielzahl, im Ton kam sie nie
+   an, und nirgends war es abzulesen. Für einzelne Proben steht daneben jetzt
+   `hebe(buf, ziel, deckel)`: es zieht auf den Zielwert, aber nie über die
+   Spitze der Probe hinaus. Nachgemessen wird der Rohpegel einer Probe mit
+   `werkbank/schuss/klang-w6/lautheit.mjs` — im Browser decodiert, nicht
+   geschätzt. *Eine Zahl im Quelltext ist keine Zahl im Ton.*
 
 ## Wie man dreißig Sekunden als Datei herausbekommt — ohne ffmpeg
 
