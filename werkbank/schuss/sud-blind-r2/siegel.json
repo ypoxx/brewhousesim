@@ -90,14 +90,14 @@
     {
      "zug": "sud:zettel-wechsel-frei",
      "aus": false,
-     "text": "Wasser aus dem Ziehbrunnen lässt Starkbier zu",
+     "text": "Wasser aus dem Ziehbrunnen",
      "verfahrenDanach": "brief",
      "entkommen": false
     },
     {
      "zug": "sud:zettel-wechsel-kauf",
      "aus": false,
-     "text": "Röhrenrecht an der Quelle −30 Pf lässt Starkbier z",
+     "text": "Röhrenrecht an der Quelle −30 Pf",
      "verfahrenDanach": "brief",
      "entkommen": false
     }
@@ -105,7 +105,7 @@
    "hinauf": [
     {
      "zug": "sud:wuerze:grut",
-     "aus": false,
+     "aus": true,
      "preis": 0,
      "weg": false
     },
@@ -214,7 +214,7 @@
    "hinauf": [
     {
      "zug": "sud:wasser:bach",
-     "aus": true,
+     "aus": false,
      "preis": 0,
      "weg": false
     },
@@ -353,7 +353,7 @@
     {
      "zug": "sud:zettel-wechsel-kauf",
      "aus": false,
-     "text": "Kellergärung im Felsenkeller −260 fl lässt Märzenb",
+     "text": "Kellergärung im Felsenkeller −260 fl",
      "verfahrenDanach": "weizenbrief",
      "entkommen": false
     }
@@ -361,7 +361,7 @@
    "hinauf": [
     {
      "zug": "sud:schuettung:rein",
-     "aus": false,
+     "aus": true,
      "preis": 0,
      "weg": false
     },
@@ -549,7 +549,7 @@
     {
      "zug": "sud:zettel-wechsel-kauf",
      "aus": false,
-     "text": "Reinzuchthefe nach Hansen −3.400 M lässt Exportbie",
+     "text": "Reinzuchthefe nach Hansen −3.400 M",
      "verfahrenDanach": "maschine",
      "entkommen": false
     }
@@ -557,7 +557,7 @@
    "hinauf": [
     {
      "zug": "sud:kaelte:natureis",
-     "aus": true,
+     "aus": false,
      "preis": 0,
      "weg": false
     },
@@ -739,14 +739,14 @@
     {
      "zug": "sud:zettel-wechsel-frei",
      "aus": false,
-     "text": "Schönen mit Kieselsol nur Pilsner",
+     "text": "Schönen mit Kieselsol",
      "verfahrenDanach": "rechner",
      "entkommen": true
     },
     {
      "zug": "sud:zettel-wechsel-kauf",
      "aus": false,
-     "text": "Kieselgurfilter −26.000 DM lässt Exportbier zu",
+     "text": "Kieselgurfilter −26.000 DM",
      "verfahrenDanach": "rechner",
      "entkommen": true
     }
@@ -781,106 +781,106 @@
    "zielText": "Tunnelpasteur −74.000 DM",
    "preis": 74000,
    "vorher": "filter",
-   "gesetzt": true,
-   "kasseVor": 272800,
-   "kasseNach": 198800,
+   "gesetzt": false,
+   "kasseVor": 386800,
+   "kasseNach": 312800,
    "abgebucht": true,
    "versuche": [
     {
      "name": "1 Maus auf natur",
      "getan": "disabled",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "filter",
+     "entkommen": true
     },
     {
      "name": "2 disabled weg + Maus auf natur",
      "getan": "geklickt",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "filter",
+     "entkommen": true
     },
     {
      "name": "3 el.click() auf natur",
      "getan": "el.click()",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "natur",
+     "entkommen": true
     },
     {
      "name": "4 dispatchEvent auf natur",
      "getan": "dispatchEvent",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "natur",
+     "entkommen": true
     },
     {
      "name": "5 Tastatur auf natur",
      "getan": "Enter+Space",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "natur",
+     "entkommen": true
     },
     {
      "name": "1 Maus auf schoenen",
      "getan": "disabled",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "natur",
+     "entkommen": true
     },
     {
      "name": "2 disabled weg + Maus auf schoenen",
      "getan": "geklickt",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "natur",
+     "entkommen": true
     },
     {
      "name": "3 el.click() auf schoenen",
      "getan": "el.click()",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "schoenen",
+     "entkommen": true
     },
     {
      "name": "4 dispatchEvent auf schoenen",
      "getan": "dispatchEvent",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "schoenen",
+     "entkommen": true
     },
     {
      "name": "5 Tastatur auf schoenen",
      "getan": "Enter+Space",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "schoenen",
+     "entkommen": true
     },
     {
      "name": "1 Maus auf filter",
      "getan": "disabled",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "schoenen",
+     "entkommen": true
     },
     {
      "name": "2 disabled weg + Maus auf filter",
      "getan": "geklickt",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "schoenen",
+     "entkommen": true
     },
     {
      "name": "3 el.click() auf filter",
      "getan": "el.click()",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "filter",
+     "entkommen": true
     },
     {
      "name": "4 dispatchEvent auf filter",
      "getan": "dispatchEvent",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "filter",
+     "entkommen": true
     },
     {
      "name": "5 Tastatur auf filter",
      "getan": "Enter+Space",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "filter",
+     "entkommen": true
     },
     {
      "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
      "getan": "disabled",
-     "verfahrenDanach": "pasteur",
-     "entkommen": false
+     "verfahrenDanach": "filter",
+     "entkommen": true
     },
     {
      "name": "8 pointer-events frei, Klick auf die Karte",
@@ -889,13 +889,28 @@
      "entkommen": false
     }
    ],
-   "zettel": [],
+   "zettel": [
+    {
+     "zug": "sud:zettel-wechsel-frei",
+     "aus": false,
+     "text": "Naturtrüb, unfiltriert",
+     "verfahrenDanach": "natur",
+     "entkommen": true
+    },
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "aus": false,
+     "text": "Tunnelpasteur −74.000 DM",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    }
+   ],
    "hinauf": [
     {
      "zug": "sud:behandlung:natur",
-     "aus": false,
+     "aus": true,
      "preis": 0,
-     "weg": false
+     "weg": true
     },
     {
      "zug": "sud:behandlung:schoenen",
@@ -917,7 +932,7 @@
     }
    ],
    "verfahrenAmEnde": "pasteur",
-   "gehalten": true
+   "gehalten": false
   }
  ]
 }
