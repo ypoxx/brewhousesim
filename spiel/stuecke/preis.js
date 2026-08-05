@@ -467,6 +467,56 @@
     return s;
   }
 
+  /* ======================================================================
+     WORAUF DER RAT SEINE AUSSERORDENTLICHEN FORDERUNGEN BEMISST.
+
+     AUFLAGE 6 des blinden Kritikers, und sie ist die teuerste der Runde.
+     Bis heute hingen `umlageBetrag()` und `handlohnBetrag()` an
+     `pflichtSumme()` — und `pflichtSumme()` traegt seit Welle 7 auch den
+     UNTERHALT der eigenen Bauten. Am Bildschirm nachgerechnet, Michaelitag
+     1363 der Kritikerpartie:
+
+       Jahreslast gesamt        214 Pf
+         davon Basispflichten    88 Pf
+         davon Unterhalt        126 Pf  (59 %)
+       Handlohn desselben Tages 240 Pf = 1,10 x 214
+         davon aus dem Unterhalt 139 Pf
+
+     Die Karte verspricht „−26 Pf in jedem Michaeli" fuer den Ochsenstall.
+     Wirklich gekostet hat er 26 x (1 + 1,10/2 + 0,35 x 1,11/3,2) = 26 x 1,67
+     ≈ 44 Pf. **Ein angeschriebener Pfennig kostete 1,67 Pfennig**, und der
+     Aufschlag stand auf keiner Karte, in keiner Spalte und in keinem Satz.
+
+     Das ist nicht bloss eine falsche Zahl, es ist die falsche BEMESSUNG.
+     Eine Brandschatzung, ein Landfriedensgeld, ein Laudemium bemessen sich
+     nach dem, was der Rat oder der Grundherr am Haus anschlaegt — nach dem
+     Steuerbuch. Sie bemessen sich NICHT nach dem, was das Haus seinem
+     Boettcher an Lohn und seinem Ochsen an Futter zahlt. Wer sich einen
+     Knecht haelt, wird davon nicht brandschatzungspflichtiger.
+
+     `pflichtBasis()` ist deshalb die Jahreslast OHNE alles, was das Haus
+     sich selbst aufgeladen hat (`Z.pflichtNeu` — Unterhalt der Bauten und
+     die dauerhaften Lasten der Festlegungen). Die Rechnungsspalte zeigt
+     weiter die volle Jahreslast; sie ist auch weiter voll zu zahlen. Nur
+     die beiden Zahlen, die ein VIELFACHES davon nehmen, nehmen es jetzt vom
+     Anschlag des Rats.
+
+     WAS DAS AN DER WIRTSCHAFT AENDERT, und es ist nicht nichts: die Last
+     faellt. Gemessen wird vorher und nachher, alle vier Epochen — der
+     Bericht nennt beide Zahlen. */
+  function pflichtBasis() {
+    var e = ep(), s = 0;
+    e.pflichten.forEach(function (p) {
+      if (Z.pflichtWeg[p.k]) return;
+      var z = pflichtZeile(p);
+      if (z.betrag > 0) s += z.betrag;
+    });
+    return s;
+  }
+
+  /* Was das Haus sich selbst aufgeladen hat — fuer die Anzeige. */
+  function eigenLast() { return pflichtSumme() - pflichtBasis(); }
+
   /* Jede Umlage hat ihr eigenes Gewicht. Eine Brandschatzung ist keine
      Brueckenumlage — stuenden fuenf gleiche Zahlen untereinander, waere die
      Spalte offensichtlich eine Formel und kein Kalender. */
@@ -479,7 +529,7 @@
      Gegenbewegung (gemessen: 1350 rho +0,94 statt +0,66). */
   function umlageBetrag(u) {
     var teil = (u && u.teil) ? u.teil : 1;
-    return rundePreis(ep().umlageAnteil * teil * pflichtSumme() * (Z.umlageHalb ? 0.5 : 1));
+    return rundePreis(ep().umlageAnteil * teil * pflichtBasis() * (Z.umlageHalb ? 0.5 : 1));
   }
 
   function handlohnBetrag() {
@@ -846,6 +896,9 @@
      ---------------------------------------------------------------------- */
   function wende(quelle, w) {
     if (!w) return;
+    /* Die Jahreslast, BEVOR diese Wirkung sie veraendert — das Schild hat mit
+       ihr gerechnet (Auflage 3, Begruendung unten beim Zufluss). */
+    var lastVorher = pflichtSumme();
     if (w.ertrag) Z.ertraege.push({ k: quelle.k, name: quelle.name, betrag: w.ertrag });
     if (w.rohstoff) Z.rohstoffe.push({ k: quelle.k, name: quelle.name, menge: w.rohstoff });
     if (w.plaetze) B.welt.vorrat.plaetze += w.plaetze;
@@ -868,8 +921,20 @@
       }
     }
     /* Der Zufluss ist ein Vielfaches der JAHRESLAST, nicht des Anschlags —
-       sonst schwemmt eine einzige Festlegung die ganze Partie weg. */
-    if (w.einmal) loese(rundePreis(w.einmal * pflichtSumme()), quelle.name + ' — Zufluss', 'zufluss');
+       sonst schwemmt eine einzige Festlegung die ganze Partie weg.
+
+       AUFLAGE 3: er wird jetzt aus `vorher` gerechnet und nicht neu.
+       Gemessen hat der Kritiker `preis:festlege:aktien` in 1884: Schild
+       +11.000 M, gebucht +13.000 M — 18,2 im Hundert daneben. Die Ursache
+       ist die Reihenfolge in dieser Funktion: `Z.pflichtNeu.push(...)` steht
+       oben, `pflichtSumme()` unten — der Zufluss wurde also mit der neuen
+       Pflicht schon in der Summe gerechnet, waehrend das Schild
+       (`festKarte`) sie noch nicht kannte. Betroffen war genau eine Karte im
+       ganzen Spiel: `aktien` ist die einzige mit `einmal` UND `pflichtNeu`.
+       Der Quelltext hat an dieser Stelle immer schon gesagt, was er will —
+       „damit auf dem Schild dieselbe Zahl steht, die gleich in der Kasse
+       landet". Jetzt tut er es. */
+    if (w.einmal) loese(rundePreis(w.einmal * lastVorher), quelle.name + ' — Zufluss', 'zufluss');
     setzeBierpreis();
   }
 
@@ -1746,7 +1811,14 @@
   function folgeText(a) {
     var w = a.wirkung || {};
     var t = [];
-    if (w.ertrag) t.push('+' + geld(w.ertrag) + ' in jedem Michaeli');
+    /* AUFLAGE 4: MIT der Teuerung, weil Schritt 4 der Michaeli-Abrechnung
+       sie mitbucht (`loese(Math.round(t.betrag * teuerung()))`). Der Ertrag
+       stand hier nominal, die Last darunter mit Teuerung — auf DERSELBEN
+       Zeile. Gemessen: die Karte „Das Dach ueber der Pfanne" versprach zu
+       Michaeli 1362 „+16 Pf in jedem Michaeli", die Rechnung 1363 buchte
+       +27 Pf. 69 im Hundert daneben, zugunsten des Spielers, und damit
+       genau die Sorte Zahl, die eine Kaufentscheidung unbrauchbar macht. */
+    if (w.ertrag) t.push('+' + geld(Math.round(w.ertrag * teuerung())) + ' in jedem Michaeli');
     if (w.rohstoff) t.push('+' + B.zahl(w.rohstoff) + ' ' + B.welt.epoche().rohstoff + ' im Jahr');
     if (w.plaetze) t.push('+' + B.welt.menge(w.plaetze) + ' Lagerplatz');
     if (w.preis) t.push((w.preis > 0 ? '+' : '') + B.zahl(w.preis * 100, 0) + ' im Hundert je '
