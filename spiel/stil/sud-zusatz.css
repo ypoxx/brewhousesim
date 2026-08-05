@@ -301,8 +301,21 @@
      gegen die Schwelle der STADT von 3,5 % des Stadtfensters — gemessen
      3,0 %, also weiter eine Ortsmarke und kein Brett. Bei 232 px Breite ist
      jede Haelfte 112 px und bricht nicht mehr um. */
-  #buehne .sud-zettel { width: 17%; max-height: 13.5%; }
-  #buehne .sud-zettel.knapp { width: 15%; max-height: 12%; }
+  /* Die Flaeche bleibt, wo sie war. Ein Versuch mit 15 % x 16,5 % (2,475 %)
+     ist gemessen gescheitert: die STADT hat den Zettel prompt als BRETT
+     eingestuft und zugeklappt (`stadt-zugeklappt` am Kasten). Der Deckel im
+     Kopf dieser Datei ist keine Vorsicht, er ist eine Grenze. */
+  #buehne .sud-zettel { gap: 0; }
+
+  /* Stattdessen stehen die beiden Hefeknoepfe UNTEREINANDER statt
+     nebeneinander. Gemessen: nebeneinander ist eine Haelfte 83 px breit,
+     „Hefezeug aus dem Bottich heben · +8 · ohne Fass" braucht bei 12 px rund
+     270 px und bricht dort auf drei Zeilen um — das Paar wurde 45 px hoch
+     und schob den letzten Knopf aus dem Kasten. Ueber die volle Breite sind
+     es zwei Zeilen und 29 px. Vier Knoepfe untereinander sind schmaler zu
+     lesen, aber alle vier sind da, alle vier ueber 24 px und alle vier ganz
+     im Kasten — und das ist die Reihenfolge, in der es zaehlt. */
+  #buehne .sud-zettel .sud-zpaar { flex-direction: column; gap: 0; }
 
   /* --- 2. Was dafuer zuruecktritt ---------------------------------------
      Die vier Textzeilen des Zettels. Sie sind NICHT verloren: die

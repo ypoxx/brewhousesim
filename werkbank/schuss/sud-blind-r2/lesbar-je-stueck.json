@@ -43,10 +43,10 @@
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
-    "knoepfe": 3,
+    "knoepfe": 4,
     "zuKlein": 0,
     "beispiele": [
-     "sud-zettel amort gedraengt knapp :: DER SUD · 1350Grut vom Grutamt · Wasser aus dem St"
+     "sud-zettel amort :: DER SUD · 1350Grut vom Grutamt · Wasser aus dem St"
     ]
    },
    "name": {
@@ -71,15 +71,6 @@
      "fu-kerbsatz :: Der Grutherr schneidet die Kerbe ins Holz und zahl"
     ]
    },
-   "klang": {
-    "ueber": 0,
-    "klein": 1,
-    "winzig": 0,
-    "kleinste": 10.9,
-    "knoepfe": 1,
-    "zuKlein": 0,
-    "beispiele": []
-   },
    "erbe": {
     "ueber": 0,
     "klein": 41,
@@ -95,6 +86,15 @@
     "winzig": 8,
     "kleinste": 9.4,
     "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
@@ -150,10 +150,10 @@
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
-    "knoepfe": 3,
+    "knoepfe": 4,
     "zuKlein": 0,
     "beispiele": [
-     "sud-zettel amort gedraengt knapp :: DER SUD · 1600Rein nach dem Gebot · Obergärig, war",
+     "sud-zettel amort :: DER SUD · 1600Rein nach dem Gebot · Obergärig, war",
      "sud-kartensatz :: Der Rat schreibt dem Haus eine feste Weizenzuteilu"
     ]
    },
@@ -178,6 +178,15 @@
     "zuKlein": 0,
     "beispiele": []
    },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
+    "zuKlein": 0,
+    "beispiele": []
+   },
    "erbe": {
     "ueber": 0,
     "klein": 41,
@@ -193,15 +202,6 @@
     "winzig": 8,
     "kleinste": 9.4,
     "knoepfe": 3,
-    "zuKlein": 0,
-    "beispiele": []
-   },
-   "klang": {
-    "ueber": 0,
-    "klein": 1,
-    "winzig": 0,
-    "kleinste": 10.9,
-    "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
@@ -257,10 +257,10 @@
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
-    "knoepfe": 2,
+    "knoepfe": 4,
     "zuKlein": 0,
     "beispiele": [
-     "sud-zettel amort gedraengt knapp :: DER SUD · 1884Natureis aus dem Fluss · Betriebshef"
+     "sud-zettel amort :: DER SUD · 1884Natureis aus dem Fluss · Betriebshef"
     ]
    },
    "name": {
@@ -364,10 +364,10 @@
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
-    "knoepfe": 2,
+    "knoepfe": 4,
     "zuKlein": 0,
     "beispiele": [
-     "sud-zettel amort gedraengt knapp :: DER SUD · 1970Nach Erfahrung des Braumeisters · Na"
+     "sud-zettel amort :: DER SUD · 1970Nach Erfahrung des Braumeisters · Na"
     ]
    },
    "name": {
@@ -509,7 +509,7 @@
    "klein": 0,
    "winzig": 0,
    "zuKlein": 0,
-   "knoepfe": 10,
+   "knoepfe": 16,
    "kleinste": 999
   }
  }

@@ -106,11 +106,12 @@ var SUD_DATEN = {
       },
       guete: { name: 'Das Hefezeug', kurz: 'Zeug', invers: false,
                satz: 'Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um.' },
-      fuehren: { text: 'Hefezeug aus dem Bottich heben',
+      fuehren: { text: 'Hefezeug aus dem Bottich heben', kurz: 'Hefezeug heben',
                  titel: 'Solange ein Bottich gärt, hebt der Brauer die Hefe von oben ab. '
                       + 'Das kostet kein Fass — es geht nur, solange etwas gärt.' },
       anstich: { text: 'Hefezeug vom Fass abnehmen', zug: 'sud:anstich',
                  jung: 'Junges Fass anbrechen', alt: 'Altes Fass anbrechen',
+                 jungKurz: 'Junges Fass', altKurz: 'Altes Fass',
                  titel: 'Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass '
                       + 'gibt kräftiges Zeug, ein altes müdes.',
                  satz: 'Der Brauer bricht ein Fass an und schöpft die Hefe ab.' },
@@ -258,11 +259,12 @@ var SUD_DATEN = {
       },
       guete: { name: 'Die Stellhefe', kurz: 'Stellhefe', invers: false,
                satz: 'Wer die Stellhefe nicht schöpft, braut nach Glück.' },
-      fuehren: { text: 'Stellhefe aus dem Gärbottich nehmen',
+      fuehren: { text: 'Stellhefe aus dem Gärbottich nehmen', kurz: 'Stellhefe nehmen',
                  titel: 'Aus dem gärenden Bottich geschöpft, wie es die Ordnung vorsieht. '
                       + 'Kostet kein Fass — geht nur, solange ein Bottich steht.' },
       anstich: { text: 'Stellhefe vom Fass schöpfen', zug: 'sud:anstich',
                  jung: 'Junges Fass anstechen', alt: 'Altes Fass anstechen',
+                 jungKurz: 'Junges Fass', altKurz: 'Altes Fass',
                  titel: 'Ein Fass wird angebrochen und die Hefe geschöpft. Ein junges Fass '
                       + 'gibt kräftige Stellhefe, ein altes müde.',
                  satz: 'Der Braumeister bricht ein Fass an und schöpft die Stellhefe.' },
@@ -391,11 +393,12 @@ var SUD_DATEN = {
       },
       guete: { name: 'Die Hefeführung', kurz: 'Führung', invers: false,
                satz: 'Jede Ernte trägt mit, was im Bottich sonst noch lebte.' },
-      fuehren: { text: 'Hefe im Gärbottich abernten',
+      fuehren: { text: 'Hefe im Gärbottich abernten', kurz: 'Hefe abernten',
                  titel: 'Erntehefe von der Decke des Gärbottichs, wie in jedem Betrieb dieser '
                       + 'Zeit. Kostet kein Bier — geht nur, solange ein Bottich gärt.' },
       anstich: { text: 'Hefe aus dem Fass abernten', zug: 'sud:anstich',
                  jung: 'Junges Lagerfass anstechen', alt: 'Altes Lagerfass anstechen',
+                 jungKurz: 'Junges Fass', altKurz: 'Altes Fass',
                  titel: 'Ein Fass wird angestochen und die Hefe geerntet. Junges Fass, '
                       + 'kräftige Hefe.',
                  satz: 'Der Braumeister sticht ein Fass an und erntet die Hefe.' },
@@ -477,11 +480,12 @@ var SUD_DATEN = {
       },
       guete: { name: 'Die Streuung', kurz: 'Streuung', invers: true,
                satz: 'Wie weit eine Charge von der vorigen abweicht. Der Handel misst nach.' },
-      fuehren: { text: 'Hefe aus dem Gärtank ziehen',
+      fuehren: { text: 'Hefe aus dem Gärtank ziehen', kurz: 'Hefe ziehen',
                  titel: 'Erntehefe aus dem Konus, gekühlt gelagert, neu angestellt. '
                       + 'Kostet kein Bier — geht nur, solange ein Tank gärt.' },
       anstich: { text: 'Hefe aus dem Tank zusetzen', zug: 'sud:anstich',
                  jung: 'Frisches Fass anzapfen', alt: 'Ältestes Fass anzapfen',
+                 jungKurz: 'Frisches Fass', altKurz: 'Ältestes Fass',
                  titel: 'Hefe wird aus einem Tank gezogen und neu angestellt.',
                  satz: 'Der Braumeister zieht Hefe und stellt neu an.' },
       fehlsud: { name: 'Der Tank ist umgeschlagen', kurz: 'umgeschlagen',
