@@ -1,0 +1,146 @@
+{
+  "stand": "2026-08-05T18:56:17.472Z",
+  "feld": {
+    "x0": 8,
+    "x1": 62,
+    "y0": 55,
+    "y1": 85
+  },
+  "e1": {
+    "drittel_hinten_mitte_vorn": [
+      93.2,
+      75.1,
+      35
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 93.7
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 86.8
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 74.1
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 60.8
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 0
+      }
+    ]
+  },
+  "e2": {
+    "drittel_hinten_mitte_vorn": [
+      88.1,
+      76,
+      42.2
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 86.7
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 83.8
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 77.2
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 71.1
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 1.7
+      }
+    ]
+  },
+  "e3": {
+    "drittel_hinten_mitte_vorn": [
+      92.3,
+      69.4,
+      29.2
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 94.2
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 80.4
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 68.8
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 52.6
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 0.3
+      }
+    ]
+  },
+  "e4": {
+    "drittel_hinten_mitte_vorn": [
+      92.4,
+      71.7,
+      54.5
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 97.1
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 78.1
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 70.8
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 78.4
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 22.4
+      }
+    ]
+  },
+  "seitenfehler": 0
+}

@@ -191,9 +191,21 @@ ist `pflichtBasis()` dort gleich `pflichtSumme()`, und die neuen Aufschriften
 (Laudemium, Landesordnung) sind reiner Text. Die Wirtschaft hat sich nicht
 bewegt, obwohl acht Zeichenketten und eine Rechenfunktion anders sind.
 
-*(1884 und 1970 laufen noch — sie stehen im Fenster hinter 1600. Zahlen werden
-nachgetragen, sobald sie da sind; die Läufe schreiben selbsttätig nach
-`werkbank/schuss/preis-w7/rho/nacharbeit/e3-A.json` und `e4-A.json`.)*
+| **1884** | vorher | +0,168 | +0,346 | +0,393 | 1757–23789 | 0 |
+| | **nachher** | **+0,168** | **+0,346** | **+0,393** | 1757–23789 | 0 |
+
+**1884 ebenfalls Ziffer für Ziffer unverändert** — und diese Epoche trägt die
+Karte, an der Auflage 3 gemessen wurde (`aktien`, Schild +11.000 M gegen
+gebuchte +13.000 M). Die Behebung ändert die **Buchung** um 2.000 M, sobald
+die Karte genommen wird; die Messhand nimmt sie in diesem Lauf nicht
+(`festGesetzt` = 0, siehe Auflage 10), deshalb steht die Reihe still. Das ist
+kein Beweis, dass die Behebung wirkt — der Beweis dafür ist der Quelltext und
+die Rechnung des Kritikers —, sondern der Beweis, dass sie **nichts anderes**
+bewegt hat.
+
+*(1970 läuft noch, als letztes im Satz. Die Zahl schreibt sich selbsttätig nach
+`werkbank/schuss/preis-w7/rho/nacharbeit/e4-A.json`; Auswertung mit*
+`python3 werkbank/schuss/fuhre-w6/schnitte.py werkbank/schuss/preis-w7/rho/nacharbeit`*.)*
 
 ---
 
