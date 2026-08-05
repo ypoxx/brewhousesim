@@ -373,35 +373,40 @@ var STADT_DATEN = {
   fracht: [
     /* --- Die Fassreihe vorn am Wall. In I bis III dieselbe Stelle. --- */
     { schluessel: 'faesser', bild: 'fracht_faesser_alt', bilder: { 3: 'fracht_faesser_neu' },
-      ort: 'fasslager', dx: -1.5, dy: -2,
+      ort: 'fasslager', dx: 1, dy: -2.5,
       breite: 6.5, breiten: { 3: 7.4 },
       von: 1, bis: 3, wenn: 'immer',
       sagt: 'Leergut und volle Fässer, wie sie im Hof liegen.' },
 
     /* Der zweite Stapel kommt erst, wenn der Keller ihn hergibt. */
     { schluessel: 'faesser2', bild: 'fracht_faesser_alt', bilder: { 3: 'fracht_faesser_neu' },
-      ort: 'fasslager', dx: 4.5, dy: 0.5,
+      ort: 'fasslager', dx: 3, dy: -1,
       breite: 5.6, breiten: { 3: 6.4 },
       von: 1, bis: 3, wenn: 'kellervoll',
       sagt: 'Was der Keller nicht mehr fasst, liegt im Hof.' },
 
     /* --- Die Leute, die den Hof zum Hof machen. --- */
     { schluessel: 'leute', bild: 'fracht_leute_alt', bilder: { 3: 'fracht_leute_neu' },
-      ort: 'kesselstelle', dx: 1.5, dy: 9,
+      ort: 'kesselstelle', dx: 1, dy: 8.5,
       breite: 4.8, breiten: { 3: 5.4 },
       von: 1, bis: 3, wenn: 'immer',
       sagt: 'Zwei Knechte rollen ein Fass über den Hof.' },
 
     { schluessel: 'karre', bild: 'fracht_karre_alt', bilder: { 3: 'fracht_karre_neu' },
-      ort: 'keller', dx: 0.5, dy: 1,
+      ort: 'keller', dx: 2, dy: 0,
       breite: 5, breiten: { 3: 4.2 },
       von: 1, bis: 3, wenn: 'immer',
       sagt: 'Die Handkarre steht bereit, wo sie gebraucht wird.' },
 
     { schluessel: 'bank', bild: 'fracht_bank',
-      ort: 'kesselstelle', dx: 5, dy: 7.5,
+      ort: 'kesselstelle', dx: 3.5, dy: 6,
       breite: 5.2,
-      von: 1, bis: 2, wenn: 'immer',
+      /* NUR 1350. Das Zielblatt 1600 traegt vorn Fassreihen, eine Handkarre
+         und vier Maenner — keine Bank; das Blatt 1350 traegt "Bank, Trog".
+         Und 1600 ist die schwerste Epoche am Gewichtsveto (7,42 von 8 MB
+         vor dieser Welle): eine Datei, die dort nichts belegt, wird dort
+         auch nicht geladen. */
+      von: 1, bis: 1, wenn: 'immer',
       sagt: 'Bank und Tränktrog am Hofrand.' },
 
     /* --- 1970: Kästen auf Paletten, zwei Mann im Blaumann. --- */
@@ -412,7 +417,7 @@ var STADT_DATEN = {
       sagt: 'Vollgut auf Paletten, zwei Mann beim Umsetzen.' },
 
     { schluessel: 'kasten2', bild: 'fracht_kasten',
-      ort: 'fasslager', dx: -1, dy: -2,
+      ort: 'fasslager', dx: 1, dy: -3.5,
       breite: 5.4,
       von: 4, bis: 4, wenn: 'kellervoll',
       sagt: 'Der zweite Palettenstapel — der Keller ist voll.' },
