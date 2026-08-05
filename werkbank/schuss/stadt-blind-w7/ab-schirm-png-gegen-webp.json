@@ -1,0 +1,42 @@
+{
+ "e1": {
+  "psnr_ganzer_schirm": 56.52,
+  "maxdiff": 17,
+  "px_gleich_%": 96.587,
+  "px>4": 15864,
+  "px>8": 1117,
+  "px>16": 3,
+  "px>32": 0,
+  "anteil_px>8_%": 0.0264
+ },
+ "e2": {
+  "psnr_ganzer_schirm": 56.74,
+  "maxdiff": 22,
+  "px_gleich_%": 96.836,
+  "px>4": 14897,
+  "px>8": 1872,
+  "px>16": 37,
+  "px>32": 0,
+  "anteil_px>8_%": 0.0443
+ },
+ "e3": {
+  "psnr_ganzer_schirm": 52.61,
+  "maxdiff": 21,
+  "px_gleich_%": 92.699,
+  "px>4": 40870,
+  "px>8": 4896,
+  "px>16": 54,
+  "px>32": 0,
+  "anteil_px>8_%": 0.1158
+ },
+ "e4": {
+  "psnr_ganzer_schirm": 53.58,
+  "maxdiff": 21,
+  "px_gleich_%": 93.684,
+  "px>4": 31997,
+  "px>8": 3387,
+  "px>16": 33,
+  "px>32": 0,
+  "anteil_px>8_%": 0.0801
+ }
+}
