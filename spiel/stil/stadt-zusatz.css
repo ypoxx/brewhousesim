@@ -227,14 +227,12 @@
 .knopf.stadt-reiter {
   min-width: calc(var(--s) * 150);
   max-width: calc(var(--s) * 262);
-  /* GLEICH BREIT statt inhaltsproportional. Mit `flex: 0 1 auto` bekommt ein
-     Reiter Breite nach der Laenge seiner Ueberschrift und wird dann mit
-     allen anderen im selben Verhaeltnis geschrumpft — ein kurzer Name wie
-     "DER EISKELLER" landete dadurch in einem Kasten, der noch nicht einmal
-     fuer ihn reichte ("DER …"), waehrend "DER RUF DES HAUSES" ganz dastand.
-     Zehn gleich breite Reiter geben jedem 165 px auf der Entwurfsleinwand;
-     damit passen sieben von zehn Ueberschriften ganz hinein statt vier. */
-  flex: 1 1 0;
+  /* VERWORFEN, weil gemessen: `flex: 1 1 0` (alle Reiter gleich breit) macht
+     es auf der Entwurfsleinwand SCHLECHTER, nicht besser — vier ganze
+     Ueberschriften statt sechs. Gleiche Breite hilft dem kurzen Namen und
+     nimmt dem langen mehr weg, als der kurze gewinnt. Es bleibt bei der
+     inhaltsproportionalen Aufteilung. */
+  flex: 0 1 auto;
   /* AUFLAGE 2, Welle 7 — der Reiter gibt Polster ab, damit die Aufschrift
      Platz hat. Der blinde Kritiker hat gezaehlt, dass auf der ENTWURFS-
      LEINWAND 2752x1536 acht von zwoelf Reitern ihre UEBERSCHRIFT verlieren
