@@ -1,0 +1,146 @@
+{
+  "fenster": "1920x1080",
+  "stand": "2026-08-05T19:00:45.598Z",
+  "e1": {
+    "gesamt": 2,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "15x1235",
+        "kasten": "15x510",
+        "zuviel_y": 0,
+        "zuviel_x": 725,
+        "text": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er ste"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "9x197",
+        "kasten": "7x197",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      }
+    ]
+  },
+  "e2": {
+    "gesamt": 3,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "15x1107",
+        "kasten": "15x510",
+        "zuviel_y": 0,
+        "zuviel_x": 597,
+        "text": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das "
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-kopf > .nm-medium",
+        "richtung": "x",
+        "drin": "13x154",
+        "kasten": "13x139",
+        "zuviel_y": 0,
+        "zuviel_x": 15,
+        "text": "Wirtshausschild und gemarkter Krug"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "9x197",
+        "kasten": "7x197",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      }
+    ]
+  },
+  "e3": {
+    "gesamt": 2,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "15x761",
+        "kasten": "15x510",
+        "zuviel_y": 0,
+        "zuviel_x": 251,
+        "text": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein "
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "9x197",
+        "kasten": "7x197",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      }
+    ]
+  },
+  "e4": {
+    "gesamt": 4,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "15x592",
+        "kasten": "15x510",
+        "zuviel_y": 0,
+        "zuviel_x": 82,
+        "text": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-kopf > .nm-medium",
+        "richtung": "x",
+        "drin": "13x180",
+        "kasten": "13x139",
+        "zuviel_y": 0,
+        "zuviel_x": 41,
+        "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "9x197",
+        "kasten": "7x197",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      },
+      {
+        "stueck": "erbe",
+        "kette": ".erb-leiste > .erb-knoepfe > .knopf.erb-knopf.erb-uebergabe > .wort",
+        "richtung": "x",
+        "drin": "12x176",
+        "kasten": "12x111",
+        "zuviel_y": 0,
+        "zuviel_x": 65,
+        "text": "Versorgungszusage · jährlich"
+      }
+    ]
+  },
+  "summe": 11,
+  "summe_je_stueck": {
+    "name": 6,
+    "gegner": 4,
+    "erbe": 1
+  },
+  "summe_je_kette": {
+    "gegner · .gg-bandzeile.neu > .was": 4,
+    "name · .nm-balken.nm-bekannt > .nm-schiene": 4,
+    "name · .nm-kopf > .nm-medium": 2,
+    "erbe · .knopf.erb-knopf.erb-uebergabe > .wort": 1
+  }
+}
