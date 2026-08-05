@@ -46,6 +46,43 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## SIEBTER RESET, 5. August 05:2x UTC — und warum die Reparatur nicht half
+
+**Wieder eine alte Platte, wieder `78c79bb` vom 3. August.** Origin stand auf
+`5aba483` — **169 Commits** voraus. Und `wiederaufnahme.sh` meldete erneut
+„✓ origin ist auf Stand", obwohl die Reparatur vom Vortag genau das verhindern
+sollte.
+
+> **Der Grund ist bitter und muss jedem klar sein, der hier ankommt: der Reset
+> hat den Baum auf einen Stand VOR der Reparatur zurückgesetzt. Es lief also die
+> ALTE Fassung des Skripts, die den gescheiterten Fetch verschluckt.** Eine
+> Reparatur, die im Baum liegt, kann den Reset nicht abfangen, der sie selbst
+> zurücknimmt. **Nach JEDEM Reset gilt daher: der Meldung nicht glauben, sondern
+> von Hand nachsehen** —
+> `git fetch origin <zweig> && git rev-list --count HEAD..origin/<zweig>`.
+> Steht dort etwas anderes als 0, ist der Baum alt, egal was das Skript sagt.
+
+**Was überlebt hat und was nicht** — dieselbe Trennlinie wie beim sechsten Reset,
+und sie hat sich wieder ausgezahlt:
+
+| | |
+|---|---|
+| überlebt | alles Committete: sieben Welle-6-Urteile, `werkbank/schuss/**`, die Messgeräte |
+| **weg** | `/tmp` vollständig, alle laufenden Messungen, **alle drei Messstände** (8900/8901/8902) |
+
+**Der Messstand des laufenden Kritikers war weg.** Er misst gegen `8901`; ohne
+den Hafen hätte er ins Leere gemessen oder falsch gemeldet. Die Aufsicht hat ihn
+**vor** der Wiederaufnahme neu aufgesetzt, gleichen Commit, Marke geprüft — und
+dem Kritiker in derselben Nachricht gesagt, er solle die Marke selbst
+gegenprüfen, bevor er misst.
+
+> **Regel, die daraus folgt:** Wer nach einem Reset einen Agenten wieder
+> aufnimmt, stellt ihm ZUERST seinen Messstand wieder her. Ein Agent, der gegen
+> einen toten Hafen misst, liefert kein Nichts — er liefert Zahlen aus einem
+> Fehlerpfad.
+
+---
+
 ## DIE FUHRE IST DURCH, BLIND GEPRÜFT — 4. August, 23:5x UTC
 
 **Urteil: BESTEHT MIT AUFLAGE**, vier Auflagen, in
