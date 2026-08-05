@@ -1,0 +1,180 @@
+{
+  "fenster": "1366x768",
+  "stand": "2026-08-05T18:59:53.315Z",
+  "e1": {
+    "gesamt": 3,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x878",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 516,
+        "text": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er ste"
+      },
+      {
+        "stueck": "fuhre",
+        "kette": ".fach.fach-fuhre.fach-hand-fuhre > .fu-brett.fu-tafel.fu-schiefer.stadt-zugeklappt > .fu-kerbholz > .fu-kerbsatz",
+        "richtung": "y",
+        "drin": "43x274",
+        "kasten": "29x274",
+        "zuviel_y": 14,
+        "zuviel_x": 0,
+        "text": "Der Grutherr schneidet die Kerbe ins Holz und zahlt aus. Zu "
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      }
+    ]
+  },
+  "e2": {
+    "gesamt": 4,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x787",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 425,
+        "text": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das "
+      },
+      {
+        "stueck": "sud",
+        "kette": ".sud-achse > .sud-optionen > .sud-karte.fest > .sud-kartensatz",
+        "richtung": "x",
+        "drin": "374x80",
+        "kasten": "70x70",
+        "zuviel_y": 304,
+        "zuviel_x": 10,
+        "text": "Der Rat schreibt dem Haus eine feste Weizenzuteilung ins Kor"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-kopf > .nm-medium",
+        "richtung": "x",
+        "drin": "9x110",
+        "kasten": "9x93",
+        "zuviel_y": 0,
+        "zuviel_x": 17,
+        "text": "Wirtshausschild und gemarkter Krug"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      }
+    ]
+  },
+  "e3": {
+    "gesamt": 3,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x541",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 179,
+        "text": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein "
+      },
+      {
+        "stueck": "fuhre",
+        "kette": ".fach.fach-fuhre.fach-hand-fuhre > .fu-brett.fu-tafel.fu-schiefer.stadt-zugeklappt > .fu-kerbholz > .fu-kerbsatz",
+        "richtung": "y",
+        "drin": "43x274",
+        "kasten": "29x274",
+        "zuviel_y": 14,
+        "zuviel_x": 0,
+        "text": "Ein Wechsel auf drei Monate, akzeptiert vom Malzhändler. Fäl"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      }
+    ]
+  },
+  "e4": {
+    "gesamt": 4,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x421",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 59,
+        "text": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-kopf > .nm-medium",
+        "richtung": "x",
+        "drin": "9x128",
+        "kasten": "9x93",
+        "zuviel_y": 0,
+        "zuviel_x": 35,
+        "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      },
+      {
+        "stueck": "erbe",
+        "kette": ".erb-leiste > .erb-knoepfe > .knopf.erb-knopf.erb-uebergabe > .wort",
+        "richtung": "x",
+        "drin": "8x125",
+        "kasten": "8x78",
+        "zuviel_y": 0,
+        "zuviel_x": 47,
+        "text": "Versorgungszusage · jährlich"
+      }
+    ]
+  },
+  "summe": 14,
+  "summe_je_stueck": {
+    "name": 6,
+    "gegner": 4,
+    "fuhre": 2,
+    "sud": 1,
+    "erbe": 1
+  },
+  "summe_je_kette": {
+    "gegner · .gg-bandzeile.neu > .was": 4,
+    "name · .nm-balken.nm-bekannt > .nm-schiene": 4,
+    "fuhre · .fu-kerbholz > .fu-kerbsatz": 2,
+    "name · .nm-kopf > .nm-medium": 2,
+    "sud · .sud-karte.fest > .sud-kartensatz": 1,
+    "erbe · .knopf.erb-knopf.erb-uebergabe > .wort": 1
+  }
+}

@@ -593,6 +593,76 @@
     return 'stadt:reiter:' + s.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
   }
 
+  /* --------------------------------------------------------------------
+     DIE AUFSCHRIFT DES REITERS SCHNEIDET NICHT MEHR MITTEN IN EINE ZAHL.
+     AUFLAGE 2 des blinden Kritikers, Welle 7.
+
+     Sein Befund, woertlich und mit der Zahl daneben: auf dem Reiter DIE
+     HAEUSER stand `wollen 14…`, waehrend der wirkliche Wert `wollen 146 ·
+     im Keller liegen 11 hl` ist. **Eine gekuerzte Zahl liest sich wie eine
+     vollstaendige** — der Nachfragewert erscheint um eine Zehnerpotenz zu
+     niedrig. Das ist keine gekuerzte Beschriftung mehr, das ist eine
+     falsche Ablesung. 37 von 51 abgeschnittenen Kaesten des ganzen Spiels
+     waren Reiter, und zwar auf JEDER Fenstergroesse: 48 bei 2752x1536,
+     53 bei 1920x1080, 37 bei 1366x768.
+
+     Der Grund war `text-overflow: ellipsis`: der Browser schneidet dort,
+     wo der Platz endet, und das ist mitten im Wort und mitten in der Zahl.
+
+     Jetzt schneidet nicht mehr der Browser, sondern das Stueck — und zwar
+     NUR AN EINER GRENZE, die einen wahren Satz uebrig laesst:
+       1. der ganze Text, wenn er passt;
+       2. sonst so viele vollstaendige Abschnitte (` · `), wie hineingehen,
+          mit nachgestelltem Auslassungszeichen;
+       3. sonst so viele vollstaendige Woerter;
+       4. sonst nur das Auslassungszeichen.
+     `wollen 146 …` ist wahr. `wollen 14…` war es nicht.
+
+     WARUM DAS NICHTS AN DER GEOMETRIE AENDERT — und damit nichts an rho:
+     der Kasten behaelt seine Groesse, es aendert sich nur, welche Zeichen
+     darin stehen. Der Knopfboden-Befund der Aufsicht (Groessen bewegen die
+     Wirtschaft, 1970 +0,699 gegen -0,112) ist hier nicht beruehrt.
+
+     GEMESSEN UND NICHT GERATEN wird mit `scrollWidth`, also an dem, was der
+     Browser wirklich malt. Damit das nicht bei jedem Takt (240 ms) zehn
+     Reiter neu vermisst, merkt sich jeder Kasten Text und Breite; nur wenn
+     sich eines von beiden aendert, wird neu gerechnet.
+     -------------------------------------------------------------------- */
+  function setzeAufschrift(el, text) {
+    if (!el) return;
+    text = String(text == null ? '' : text);
+    /* Der Merker haelt den QUELLTEXT und die Breite NACH dem Einpassen.
+       Haelte er die Breite davor, wuerde jeder Takt neu rechnen: ein
+       gekuerztes .wort ist schmaler als das ungekuerzte, und der Vergleich
+       schluege beim naechsten Blick wieder fehl. */
+    if (el._stadtText === text && el._stadtBreite === el.clientWidth) return;
+    el._stadtText = text;
+    el.title = text;
+    el.textContent = text;
+    var breite = el.clientWidth;
+    var fertig = function () { el._stadtBreite = el.clientWidth; };
+
+    if (!breite || el.scrollWidth <= breite + 1) { fertig(); return; }
+
+    /* 2. so viele ganze Abschnitte, wie hineingehen */
+    var teile = text.split(' · ');
+    while (teile.length > 1) {
+      teile.pop();
+      el.textContent = teile.join(' · ') + ' …';
+      if (el.scrollWidth <= breite + 1) { fertig(); return; }
+    }
+    /* 3. so viele ganze Woerter, wie hineingehen */
+    var worte = teile[0].split(' ');
+    while (worte.length > 1) {
+      worte.pop();
+      el.textContent = worte.join(' ') + ' …';
+      if (el.scrollWidth <= breite + 1) { fertig(); return; }
+    }
+    /* 4. gar nichts geht mehr — dann steht wenigstens kein halbes Wort da. */
+    el.textContent = '…';
+    fertig();
+  }
+
   function zeichneReiter(liste, ruhend) {
     var zeile = werkbank().querySelector('.stadt-reiterzeile');
     var offenDa = liste.some(function (b) { return !b.zu; });
@@ -666,11 +736,8 @@
         ? b.titel + kennzahl
           + '. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.'
         : b.titel + kennzahl + '. Zuklappen — dann sieht man die Stadt wieder.';
-      var wort = k.querySelector('.wort');
-      if (wort && wort.textContent !== b.titel) wort.textContent = b.titel;
-      var zahl = k.querySelector('.zahl');
-      var text = b.unter || (b.zu ? 'zugeklappt' : 'liegt auf');
-      if (zahl && zahl.textContent !== text) zahl.textContent = text;
+      setzeAufschrift(k.querySelector('.wort'), b.titel);
+      setzeAufschrift(k.querySelector('.zahl'), b.unter || (b.zu ? 'zugeklappt' : 'liegt auf'));
     });
 
     var mk = reiterKnopf['~marken'];
@@ -683,13 +750,29 @@
           + 'Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.'
         : 'Legt alle Ortsmarken zurück auf ihre Pflöcke — dann steht nur noch '
           + 'die Stadt im Bild.';
-      var mz = mk.querySelector('.zahl');
-      var mt = ruht ? markenZahl + ' auf dem Pflock' : markenZahl + ' im Bild';
-      if (mz && mz.textContent !== mt) mz.textContent = mt;
+      setzeAufschrift(mk.querySelector('.wort'), 'Ortsmarken');
+      setzeAufschrift(mk.querySelector('.zahl'),
+        ruht ? markenZahl + ' auf dem Pflock' : markenZahl + ' im Bild');
     }
 
+    /* AUFLAGE 5: "Stadt zeigen" wird nicht nur ausgeblendet, sondern auch
+       GESPERRT, solange kein Brett offen ist. Der Kritiker hat mit einem
+       echten page.click nachgewiesen, dass der Knopf in dieser Lage in den
+       Zeitablauf laeuft. Ausgeblendet war er schon (`.frei.aus`), aber er
+       stand weiter als AKTIVER Zug im DOM und wurde von jedem Zaehler
+       mitgezaehlt, der `disabled` liest — genau der Befund ueber `disabled`,
+       den DER SUD am 3. August gemeldet hat, nur diesmal in meinem Stueck.
+       Ein Knopf, der nichts zuzuklappen hat, sagt das jetzt selbst. */
     var zk = reiterKnopf['~zeigen'];
-    if (zk) zk.classList.toggle('aus', !offenDa);
+    if (zk) {
+      zk.classList.toggle('aus', !offenDa);
+      zk.disabled = !offenDa;
+      if (zk.hasAttribute('data-soll-aus')) zk.setAttribute('data-soll-aus', offenDa ? '1' : '0');
+      else zk.setAttribute('data-soll-aus', offenDa ? '1' : '0');
+      zk.title = offenDa
+        ? 'Klappt alle Bretter zu. Danach steht nur noch der Hof im Bild.'
+        : 'Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.';
+    }
   }
 
   /* ====================================================================
