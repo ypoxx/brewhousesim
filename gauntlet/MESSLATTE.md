@@ -60,12 +60,43 @@ daran, wie viele Braujahre man zählt**. Vom blinden Kritiker DER PREIS gemessen
 und von der Aufsicht unabhängig nachgestellt, dieselbe Reihe, nur anders
 geschnitten:
 
-| Epoche | 12 Braujahre | 13 | 14 | Stand |
-|---|---|---|---|---|
-| **1350** | **−0,259** | **−0,236** | **−0,380** | **behoben in Welle 7**, dreimal byteweise identisch nachgemessen (vorher +0,762 / +0,692 / +0,591) |
-| 1600 | +0,189 | −0,066 | −0,156 | **berichtigt** (vorher +0,371 / +0,264 / +0,231) |
-| 1884 | +0,168 | +0,346 | +0,393 | unverändert |
-| **1970** | **+0,699** | +0,637 | +0,653 | **berichtigt** (vorher +0,427 / +0,154 / +0,275) |
+| Epoche | 12 Braujahre | 13 | 14 | Jahre < 1× | Stand |
+|---|---|---|---|---|---|
+| **1350** | **−0,259** | **−0,236** | **−0,380** | 1/14 | **behoben in Welle 7**, dreimal byteweise identisch (vorher +0,762 / +0,692 / +0,591) |
+| 1600 | +0,189 | −0,066 | −0,156 | 1/14 | unverändert |
+| 1884 | +0,168 | +0,346 | +0,393 | 1/14 | unverändert |
+| **1970** | **+0,699** | +0,637 | +0,653 | 1/14 | unverändert — **ein Tausendstel unter der Latte** |
+
+> ## DAS WELLENZIEL IST ERREICHT — 5. August 2026, von der Aufsicht nachgemessen
+>
+> **|ρ| < 0,700 in allen vier Epochen über alle drei Schnitte, und 1 von 14
+> Braujahren unter 1× (erlaubt: eines von sechs).** Gemessen am eingefrorenen
+> Stand `b6b06bb` auf Hafen 8903, sequenziell durchs Messfenster, mit dem
+> vorhandenen Gerät `rueckkopplung-r3/auswerten.py` — nicht mit einer eigens
+> gewählten Lesart. Rohdaten `werkbank/schuss/aufsicht/welle7-schluss/rho/`.
+>
+> **Zum ersten Mal unter der am 4. August verschärften Zählweise.** Die Meldung
+> vom 3. August („Wellenziel erreicht") galt nach der Verschärfung nicht mehr;
+> diese hier gilt nach ihr.
+>
+> **Drei Dinge gehören unmittelbar daneben, sonst ist die Meldung geschönt:**
+> 1. **1970 steht auf +0,699.** Ein Tausendstel. Wer sich darauf verlässt,
+>    verlässt sich auf 0,001.
+> 2. **Gerätekontrolle nur für 1350** (drei Läufe, gleiche Prüfsumme). 1600,
+>    1884 und 1970 haben je *einen* Lauf — aber jeder reproduziert den zuvor
+>    eingetragenen Wert Ziffer für Ziffer, also stimmen zwei zu verschiedenen
+>    Zeiten erhobene Messungen überein.
+> 3. **Kein blinder Kritiker hat Welle 7 gesehen.** Die zweite Latte ist eine
+>    Zahl; das Spiel ist damit nicht abgenommen. Offen bleiben Latte 1 nach der
+>    WebP-Umstellung, Latte 4 bei 505 Textknoten und Latte 3 ganz.
+>
+> **Eine Falle, in die die Aufsicht dabei fast getappt wäre und die hier steht,
+> damit es niemand wiederholt:** „Jahre unter 1×" lässt sich verschieden lesen.
+> Wochenweise gerechnet ergibt dieselbe Messung **4 von 14** für 1350 und
+> **6 von 14** für 1970 — die Latte wäre gerissen. Maßgeblich ist die
+> **jahrweise** Reihe aus `leiterRoh`, wie sie `auswerten.py` seit Welle 4
+> rechnet und wie jede frühere Zahl dieses Laufs erhoben wurde. **Wer eine
+> Lesart wählt, nachdem er die Zahlen kennt, misst sich selbst.**
 
 > **NACHGETRAGEN am 5. August, 16:3x — 1350 REISST NICHT MEHR.** DER PREIS hat
 > in Welle 7 zwei Anschläge getrennt (Handwerk nach der **Taxe**, also nach Zeit;
