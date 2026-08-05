@@ -23,9 +23,10 @@ const ZIEL = process.argv[2];
 if (!ZIEL) { console.error('Aufruf: aufnahme.mjs <ordner>'); process.exit(1); }
 mkdirSync(ZIEL, { recursive: true });
 
-const b = await chromium.launch();
+const BR = +(process.env.BREITE || 2752), HO = +(process.env.HOEHE || 1536);
+const b = await chromium.launch(process.env.LEISTE ? { ignoreDefaultArgs: ['--hide-scrollbars'] } : {});
 for (const e of [1, 2, 3, 4]) {
-  const s = await b.newPage({ viewport: { width: 2752, height: 1536 } });
+  const s = await b.newPage({ viewport: { width: BR, height: HO } });
   const fehler = [];
   s.on('console', m => { if (m.type() === 'error') fehler.push(m.text()); });
   s.on('pageerror', x => fehler.push('pageerror: ' + x.message));

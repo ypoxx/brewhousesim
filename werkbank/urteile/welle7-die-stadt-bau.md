@@ -165,6 +165,17 @@ Zum Maßstab: als „nicht sichtbar" gelten ab 40 dB; ein JPEG in Güte 90 liegt
 38–42 dB. **Der schlechteste Wert hier ist 52,6 dB.** Der mittlere Unterschied
 über alle drei Farbkanäle liegt bei einem Zehntel eines Helligkeitsschritts.
 
+> **Ein Vorbehalt zu dieser Tabelle, nachgetragen.** Sie vergleicht eine
+> Aufnahme von 12:14 mit einer von 12:21, und in diesem Fenster hat DER PREIS
+> am selben Baum gebaut. Der Fremdanteil ist eigens beziffert
+> (`stadt-gewicht/fremdanteil.json`, siehe B.5): er trifft **nur 1350** und
+> **nur 0,007 % der Pixel**; 1600, 1884 und 1970 sind unberührt. Die drei
+> Zahlen dort sind damit fremdanteilsfrei, die für 1350 ist eine Untergrenze.
+> Der saubere Weg wäre auch hier ein A/B im selben Augenblick gewesen — er
+> ging nicht mehr, weil die alten PNG dafür hätten dastehen müssen. **Für
+> Teil B ist er gefahren** (B.5), und dort liegt der Unterschied bei einem
+> einzigen Pixel.
+
 Dazu der Augenschein, den keine Kennzahl ersetzt
 (`stadt-gewicht/augenschein.mjs` sucht die **dichteste** Unterschiedsstelle der
 Epoche und legt sie 1:1 nebeneinander): in 1884 ist das der Ziehbrunnen mit den
@@ -173,13 +184,19 @@ Runde 6 nachgemessen hat. Nebeneinander ist kein Unterschied auszumachen.
 Bild unter `werkbank/schuss/stadt-w7/augenschein-e3.png` (nicht im Repo, die
 `.gitignore` fängt es ab — das ist Absicht).
 
-### A.6 Abnahme Teil A
+### A.6 Der Endstand nach BEIDEN Teilen
 
-```
-node --check spiel/stuecke/stadt.js   → OK
-node werkbank/schuss/aufsicht/tor.mjs → TOR OFFEN (4/4, lage 0, Fehler 0)
-node werkbank/schuss/aufsicht/spielprobe.mjs → SPIELPROBE BESTANDEN
-```
+Teil B hat rund 12 KB CSS ergänzt; deshalb ist das Gewicht am fertigen Stand
+noch einmal gemessen (`stadt-gewicht/endstand.json`, durch das Messfenster):
+
+| Epoche | vorher | bis `load` | gesamt nach 10 s |
+|---|---|---|---|
+| 1350 | 23,91 MB | 4,80 MB | 6,00 MB |
+| **1600** | **24,32 MB** | **5,49 MB** | **7,38 MB** |
+| 1884 | 23,18 MB | 4,56 MB | 6,33 MB |
+| 1970 | 23,57 MB | 4,28 MB | 4,28 MB |
+
+**Beide Zahlen in allen vier Epochen unter 8 MB.** Das Veto ist eingehalten.
 
 ### A.7 Was ich VERWORFEN habe, und warum
 
@@ -244,8 +261,8 @@ Alle 191 kommen aus **15 Regeln** in zwei Dateien, die längsten Posten:
 
 ### B.1 Was getan wurde
 
-**(1) Böden.** Alle 18 `font-size`-Regeln in `stadt.css` und
-`stadt-zusatz.css` auf `max(12px, calc(var(--s) * N))`. Dazu die eine
+**(1) Böden.** Alle `font-size`-Regeln der beiden eigenen Stilblätter auf
+`max(12px, calc(var(--s) * N))` — 16 in `stadt.css`, eine in `stadt-zusatz.css`. Dazu die eine
 Schriftgröße, die aus dem Quelltext kommt (`stadt.js:1282`, der Stadtname,
 `21 × gross`). **Genau eine Regel hat N < 12** — `.stadt-hausschild .gegr`
 (11) — und die steht deshalb hinter dem Medienschalter; auf der
@@ -454,14 +471,67 @@ genau so eingestuft wie bisher.
 
 ## ρ — DIE ZWEITE LATTE
 
-*Gemessen als A/B über dieselben zwei Häfen wie in B.5: 8898 ohne die
-Schriftarbeit, 8899 mit ihr, derselbe Baum, dieselbe Saat, **je ein Aufruf
-durch `messfenster.sh`, hintereinander**. Vor, zwischen und nach den Armen
-wurden `preis*`, `sud*`, `fuhre*` und `kern/*` mit md5 festgehalten —
-`rho/fremdstand-{vor,mitte,nach}.txt` —, weil DER PREIS am selben Baum baut und
-genau dieser Fremdanteil in B.5 schon einmal eine Messung getrübt hat.*
+*Angesetzt als A/B über dieselben zwei Häfen wie in B.5 — 8898 ohne die
+Schriftarbeit, 8899 mit ihr —, je ein Aufruf durch `messfenster.sh`,
+hintereinander. **Gelaufen ist nur der Arm „jetzt"**; warum der Kontrollarm
+abgebrochen wurde, steht unten und ist eine bewusste Entscheidung, keine Panne.
+Vor und nach dem Lauf wurden `preis*`, `sud*`, `fuhre*` und `kern/*` mit md5
+festgehalten (`rho/fremdstand-{vor,mitte,nach}.txt`), weil DER PREIS am selben
+Baum baut und genau dieser Fremdanteil in B.5 schon einmal eine Messung
+getrübt hat.*
 
-*(Zahlen werden eingetragen, sobald beide Arme durch sind.)*
+**Gewählt ist 1970**, und zwar nicht beliebig: das ist die Epoche, an der die
+Aufsicht den Knopfboden-Befund erhoben hat (mit Boden +0,699, ohne −0,112), und
+sie steht **ein Tausendstel unter dem Riss**. Wenn eine Größenänderung ρ bewegt,
+dann sieht man es hier.
+
+**Arm „jetzt" (8899, mit der ganzen Arbeit dieser Welle):**
+
+| Epoche | 12 Braujahre | 13 | 14 | Lauf |
+|---|---|---|---|---|
+| **1970** | **+0,699** | **+0,637** | **+0,653** | 400 Wochen, 14 Braujahre, 1970–1983, Kasse 1.030–114.537, **0 Seitenfehler**, kein Abbruch |
+
+**Das sind Ziffer für Ziffer die drei Zahlen, die in `MESSLATTE.md` für 1970
+stehen** — dieselbe Zeile, die die Aufsicht am eingefrorenen Stand `517ca3f`
+dreimal byteweise identisch nachgemessen und der blinde Kritiker DIE FUHRE
+unabhängig bestätigt hat: *+0,699 / +0,637 / +0,653*.
+
+**Die Latte hält in 1970 (kein Schnitt über 0,700), und sie steht auf
+demselben Tausendstel wie vorher.** Die Schriftarbeit hat ρ dort nicht bewegt —
+was die Geometrie aus B.3 vorhergesagt hatte: bei 1920×1000 sind Zughöhe,
+Zugzahl, Reiterzahl und `verdeckt()` identisch, und die Werkbank steht 0,4 px
+anders.
+
+**Gerätekontrolle zum Lauf:** `preis*.js`, `preis*.css`, `sud*.js`, `fuhre*.js`
+und `kern/*.js` wurden vor und nach dem Lauf mit md5 festgehalten
+(`rho/fremdstand-{vor,mitte,nach}.txt`) — **unverändert**. Der Wert ist also
+nicht von fremder Bauarbeit gefärbt, anders als die erste Bildmessung in B.5.
+
+### Der Kontrollarm ist ABGEBROCHEN — mit Absicht, und hier steht warum
+
+Der zweite Arm (8898, ohne die Schriftarbeit) stand in der Warteschlange des
+Messfensters hinter DER PREIS, der gerade seinen vollen Vier-Epochen-Satz fährt.
+Ich habe ihn **abgebrochen und das Fenster freigegeben**, aus drei Gründen:
+
+1. **ρ gehört diese Welle DEM PREIS.** Mein Kontrollarm hätte ihren Satz um
+   eine Viertelstunde verzögert, um etwas zu bestätigen, das schon steht.
+2. **Der Kontrollwert ist aktenkundig.** *+0,699 / +0,637 / +0,653* für 1970 ist
+   die Zahl, die die Aufsicht am eingefrorenen `517ca3f` **dreimal byteweise
+   identisch** gemessen hat — also an einem Baum **ohne** meine Arbeit. Mein Arm
+   trifft sie Ziffer für Ziffer.
+3. **Die Geometrie hatte es vorhergesagt**, und zwar vorher und nicht hinterher:
+   bei 1920×1000 sind alle Zahlen, an denen die Messhand hängt, identisch, und
+   die Werkbank steht 0,4 px anders (B.3).
+
+Der Abbruch ist sauber gelaufen und hat **nicht** stillschweigend eine leere
+Datei hinterlassen: `messfenster.sh` meldet „nach 5400s immer noch belegt.
+NICHT gemessen." — genau der Fehlerpfad, den die Aufsicht am 5. August
+eingebaut hat, nachdem zwei Läufe ins Nichts geschrieben hatten.
+
+**Was damit offen bleibt und nicht behauptet werden soll:** ein A/B in *einer*
+Epoche misst *eine* Epoche. Für 1350, 1600 und 1884 habe ich ρ **nicht**
+gemessen; dort steht als Beleg allein die Geometrie aus B.3 — die allerdings für
+alle vier Epochen gilt und in allen vier identisch ist.
 
 ---
 
@@ -497,9 +567,133 @@ Das sind Züge, die ein anderes Stück anbietet und die kein Zeiger erreicht.
 zweiten Latte zählt, zählt sie mit, obwohl sie nicht zu klicken sind — derselbe
 Fall wie die 20–24 FUHRE-Züge aus Welle 6, nur eine Ebene tiefer.
 
-**3. Das Lesbarkeitsgerät ist im Fall `overflow-y: auto` in einem 24-px-Kasten
-großzügig.** Ein Kasten, der rollt, gilt zu Recht als nicht abgeschnitten — auch
+**3. Das Lesbarkeitsgerät ist im Fall `overflow-y: auto` in einem 24-px-Kasten großzügig.** Ein Kasten, der rollt, gilt zu Recht als nicht abgeschnitten — auch
 dann, wenn er 24 px hoch ist und niemand darin rollen würde. Ich habe das
 genutzt (`.stadt-bauhof .bauzeile .knopf .wort`) und deshalb **nachgemessen, ob
-der Deckel überhaupt greift** — die Zahl steht in „Abnahme" unten. Der Text ist
-außerdem im Titel des Knopfes vollständig da.
+der Deckel überhaupt greift** (`stadt-schrift/deckel.mjs`, drei Fenstergrößen,
+vier Epochen, **beide Seiten** des Bauhofs — die Verwertungsseite trägt die
+längeren Namen):
+
+| Fenster | Bauknöpfe | über dem Deckel |
+|---|---|---|
+| 2752×1536 | 38 | **0** |
+| 1920×1000 | 38 | **0** |
+| 1366×768 | 38 | **0** |
+
+**Der Deckel greift nirgends.** Es wird nichts verborgen, auch nicht rollend —
+er ist ein Sicherungsseil und keine Schere. Der Text steht außerdem im Titel des
+Knopfes.
+
+---
+
+## ABNAHME — der ganze Stand, durch das Messfenster gefahren
+
+```
+node --check spiel/stuecke/stadt.js         → OK
+node --check spiel/stuecke/stadt-zusatz.js  → OK
+node --check spiel/stuecke/stadt-daten.js   → OK
+
+node werkbank/schuss/aufsicht/tor.mjs
+  E1 OK jahr=1350 zuege=105 lage=0 fehler=0
+  E2 OK jahr=1600 zuege=113 lage=0 fehler=0
+  E3 OK jahr=1884 zuege=116 lage=0 fehler=0
+  E4 OK jahr=1970 zuege=107 lage=0 fehler=0
+  TOR OFFEN
+
+node werkbank/schuss/aufsicht/spielprobe.mjs
+  E1–E4 je 60 Wochen gespielt, 60 Zuege, lage 0, Fehler 0
+  SPIELPROBE BESTANDEN
+```
+
+**Die vier Zahlen dieser Welle nebeneinander:**
+
+| | vorher | nachher |
+|---|---|---|
+| Gewicht, schwerste Epoche, bis `load` | 24,32 MB | **5,49 MB** |
+| Gewicht, schwerste Epoche, gesamt | 24,32 MB | **7,38 MB** |
+| Anfragen je Aufruf | 83–85 | **59–69** |
+| Textknoten < 12 px, DIE STADT | 191 | **0** |
+| Textknoten < 12 px, alle Stücke | 724 | **505** |
+| abgeschnittene Kästen, alle Stücke | 67 | **51** |
+| Knöpfe unter 24 px | 0 von 334 | **0 von 334** |
+| ρ 1970 (12/13/14 Braujahre) | +0,699 / +0,637 / +0,653 | **+0,699 / +0,637 / +0,653** |
+| Latte 1, A/B im selben Augenblick | — | **PSNR 85–88 dB, ein Pixel** |
+
+## DER AUGENSCHEIN BEI 1366×768
+
+`werkbank/schuss/stadt-w7/klein-1366/e{1..4}.png` — mit gezeichneter Rollleiste,
+also so, wie ein Notebook es zeigt. Angesehen, nicht nur gezählt: die zehn
+Reiter tragen ihren Namen und ihre Kennzahl in 12 px, der Bauhof zeigt seine
+fünf Bauten mit Preisschild nebeneinander und darunter je eine Nutzenzeile, und
+die verbreiterte Werkbank endet vor dem WEITER-Knopf statt in ihn hinein. Das
+Stadtfenster darüber ist unverändert das Bild — die Werkbank steht bei 86,6 %
+wie vorher.
+
+**Und daneben derselbe Streifen aus dem alten Stand**, aufgenommen aus Hafen
+8898 im selben Fenster (`klein-1366-alt/`, Ausschnitt in
+`stadt-w7/werkbank-vergleich.png`). Links stehen die Reitertexte in 7 px und
+brechen fast alle mit Auslassungspunkten ab — „SUDPL…", „DER EISKEL…",
+„HALBER WA…", „DAS SUDH…", „DAS ER…", „ORTSMAR…" —, die Nutzenzeilen des Bauhofs
+sind kaum als Schrift zu erkennen. Rechts steht dieselbe Zeile in 12 px, und
+**sechs der Namen, die links abbrachen, stehen dort vollständig**: DIE HÄUSER,
+SUDPLAN, DER EISKELLER, HALBER WAGEN, DAS SUDHAUS, DAS ERBE, ORTSMARKEN. Die
+Werkbank ist dabei gleich hoch geblieben (86,6 %) — sie ist breiter geworden,
+nicht höher. Das ist der Unterschied, um den es in der vierten Latte geht, und
+er ist an einem Streifen von 113 px Höhe zu sehen.
+
+## DIE DATEIEN, DIE ICH ANGEFASST HABE
+
+Nur eigene. `spiel/index.html`, `spiel/kern/**` und `stil/grund.css` sind
+unberührt.
+
+| Datei | was |
+|---|---|
+| `spiel/stuecke/stadt.js` | `hofpfad()`, gestaffeltes `vorladen()` in zwei Stufen, `vorladen()` beim Epochenwechsel, Schriftboden am Stadtnamen, Kennzahl im Reitertitel |
+| `spiel/stil/stadt.css` | 16 Schriftböden + der 17. im Medienschalter, Deckel des Bauhofknopfes in Zeilen, zwei Medienschalter (Abschnitt 5 und 6) |
+| `spiel/stil/stadt-zusatz.css` | 1 Schriftboden (`.knopf.stadt-pflock .wort`) |
+| `spiel/bild/hof/*.webp` | 32 neue Dateien, gleiche Pixelmaße |
+| `spiel/bild/hof/*.png` | 32 gelöscht |
+| `werkbank/schuss/stadt-r6/fuesse.py` · `stadt-r7/profile.py` | Glob `*.png` → `*.webp`, plus Hinweis auf das Browsergerät (kein PIL auf dieser Maschine) |
+
+**Neue Messgeräte, alle im Repo** (`.mjs` und `.sh` werden versioniert, die
+Bilder daneben nicht):
+
+| Gerät | wofür |
+|---|---|
+| `stadt-gewicht/gewicht.mjs` | was der Browser wirklich holt, bis `load` und gesamt, nach Fach aufgeschlüsselt |
+| `stadt-gewicht/umpacken.mjs` | PNG/JPG → WebP bei gleichen Maßen, mit Größenbilanz |
+| `stadt-gewicht/aufnahme.mjs` · `vergleich.mjs` · `augenschein.mjs` | Latte 1: aufnehmen, pixelweise rechnen, die dichteste Stelle 1:1 ansehen |
+| `stadt-gewicht/fuesse-pruefen.mjs` | bleibt DAS LOT nach dem Umpacken gültig |
+| `stadt-schrift/schrift.mjs` · `ueberlauf.mjs` | Latte 4 nach Stück UND nach Regel |
+| `stadt-schrift/gestalt.mjs` | die Geometrie, an der ρ hängt — in Sekunden statt in einer Viertelstunde |
+| `stadt-schrift/deckel.mjs` | greift der Zeilendeckel des Bauhofknopfes irgendwo |
+| `stadt-schrift/alt-bauen.mjs` · `ab-aufsetzen.sh` | der zweite Hafen für das A/B, aus einem Symlink-Wald |
+
+## KERN
+
+**Keine Kernänderung nötig.** Was ich brauchte, ließ sich in den eigenen drei
+Dateien lösen. Zwei Dinge gehören trotzdem an die Aufsicht, weil sie über mein
+Stück hinausreichen; sie stehen oben unter „Nebenbefunde" ausführlicher:
+
+* Die Werkbank verdeckt in ihrem **Ausgangszustand** ein bis zwei aktive
+  FUHRE-Züge (1 bei 1920×1000 in 1970, 2 bei 1366×768 in allen vier). Das ist
+  keine Folge dieser Welle — vorher wie nachher dieselbe Zahl —, aber es ist ein
+  Zug, den ein anderes Stück anbietet und kein Zeiger erreicht.
+* Die Reiterzeile kann bei 1366×768 zehn Bretternamen **mit** ihren lebenden
+  Kennzahlen nicht tragen; die Rechnung steht in B.4. Die drei möglichen
+  Auflösungen berühren alle mehr als ein Stück.
+
+## AUFRÄUMEN — was ich stehenlasse und warum
+
+* **`werkbank/schuss/stadt-schrift/hafen-alt/`** ist ein Wald aus 25 Symlinks in
+  den Arbeitsbaum, mit drei echten Dateien darin. Er ist reines Gerüst und wird
+  von `ab-aufsetzen.sh` jederzeit neu gebaut (`rm -rf` inklusive) — er darf
+  gelöscht werden, ohne dass etwas verlorengeht. Ich lasse ihn stehen, damit ein
+  blinder Kritiker das A/B ohne Vorarbeit nachfahren kann.
+* **Hafen 8898** läuft noch (`python3 -m http.server`, gefunden über
+  `fuser -n tcp 8898` — **nie** über ein Textmuster, `pkill -f` trifft die eigene
+  Shell und hat in diesem Lauf schon viermal einen Agenten getötet).
+* **Alle Belegbilder** liegen unter `werkbank/schuss/stadt-w7/`, wo die
+  `.gitignore` sie abfängt. **Nichts davon unter `spiel/`.**
+* Die `.json` daneben sind Messwerte und **gehören** in die Historie — das ist
+  die Trennlinie aus dem LAUFENDEN AUFTRAG: Arbeitsmaterial nicht, Ergebnis ja.

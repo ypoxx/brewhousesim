@@ -1,3 +1,29 @@
+### 3.9 ALLE VIER EPOCHEN, gemessen am Schlussstand
+
+| Epoche | 12 J | 13 J | 14 J | in `MESSLATTE.md` | Fehler |
+|---|---|---|---|---|---|
+| **1350** | **−0,259** | **−0,236** | **−0,380** | war +0,762 / +0,692 / +0,591 — **GERISSEN** | 0 |
+| 1600 | +0,189 | −0,066 | −0,156 | **gleich** | 0 |
+| 1884 | +0,168 | +0,346 | +0,393 | **gleich** | 0 |
+| 1970 | +0,699 | +0,637 | +0,653 | **gleich** | 0 |
+
+**LATTE HÄLT, 0 von 4 Läufen über 0,700.** Zum ersten Mal seit der Verschärfung
+vom 4. August besteht die zweite Latte in allen vier Epochen über alle drei
+Schnitte.
+
+**Die drei nicht angefassten Epochen liefern Ziffer für Ziffer dieselben Zahlen
+wie in `MESSLATTE.md`** — auch 1970, das dort auf +0,699 steht. Damit ist
+zweierlei belegt: die neue Zeile auf der Festlegungskarte bewegt die Wirtschaft
+nicht, und das Messgerät liefert an einem anderen Tag, bei anderer
+Maschinenlast, dieselben Ziffern (**Spannweite 0,000 über sechs Läufe**:
+1350 dreimal identisch vor der Nacharbeit, 1600 / 1884 / 1970 je gleich der
+eingetragenen Zahl).
+
+> **Ausdrücklich stehen bleibt:** 1970 steht weiter **ein Tausendstel** unter
+> dem Riss. Daran hat diese Welle nichts geändert und sollte es auch nicht —
+> das ist DER SUDs und des GEGNERs Epoche. Wer sie anfasst, misst vorher und
+> nachher.
+
 # DER PREIS — Bau der Welle 7
 
 *Laufend geschrieben, nicht am Ende. Der Container wird stündlich zurückgesetzt.*
@@ -509,8 +535,8 @@ höher, und die Michaelitafel ist während der Messung **aufgeschlagen**. Nach
 dem Knopfboden-A/B der Aufsicht ist eine Layoutänderung unter der Hand kein
 Nullereignis. Deshalb sind alle vier Epochen neu gemessen.
 
-**1600 gemessen: `+0,189 / −0,066 / −0,156` — Ziffer für Ziffer die Zahlen aus
-`MESSLATTE.md`.** Die Kartenzeile bewegt dort nichts. (Kasse 169–2851,
+**1600 gemessen: `+0,189 / −0,066 / −0,156` und 1884 `+0,168 / +0,346 /
++0,393` — beide Ziffer für Ziffer die Zahlen aus `MESSLATTE.md`.** Die Kartenzeile bewegt dort nichts. (Kasse 169–2851,
 Kennzahl 0,67–4,87×, 400 Wochen, 0 Seitenfehler.) Das ist zugleich eine vierte
 Gerätekontrolle: dieselbe Reihe, anderer Tag, andere Maschinenlast, gleiche
 Ziffern.
@@ -527,7 +553,8 @@ Ziffern.
 | Latte 4, 1366×768, mit Rollleiste | DER PREIS **0** Textknoten < 12 px · **0** abgeschnittene Kästen · **0 von 34** Knöpfen < 24 px, Tafel auf UND zu |
 | Latte 1, Entwurfsleinwand 2752×1536 | `leinwand-vorher.json` = `leinwand-nachher.json`, Knoten für Knoten |
 | Latte 2, 1350 | **+0,762 / +0,692 / +0,591 → −0,259 / −0,236 / −0,380** |
-| Latte 2, 1600 | +0,189 / −0,066 / −0,156 — **unverändert** |
+| Latte 2, 1600 · 1884 · 1970 | +0,189/−0,066/−0,156 · +0,168/+0,346/+0,393 · +0,699/+0,637/+0,653 — **alle drei Ziffer für Ziffer unverändert** |
+| Latte 2, alle vier Epochen | **LATTE HÄLT, 0 von 4 Läufen über 0,700** |
 
 **Kein `Math.random()`** in `preis*.js` (der Würfel bleibt `B.wuerfel`).
 **Keine Bilder, keine `.wav`** angelegt. **Kein `git`** benutzt.
@@ -548,3 +575,44 @@ Ziffern.
 | `werkbank/schuss/preis-w7/lesbar-preis.mjs` | Latte 4 je Stück **und** nach Klasse; `TAFEL=auf` schlägt die Michaelitafel auf |
 | `werkbank/schuss/preis-w7/leinwand-gleich.mjs` | beweist, dass die Entwurfsleinwand unberührt bleibt — hat einen echten Fehler von mir gefunden |
 | `werkbank/schuss/preis-w7/LIESMICH.md` | hält den Ordner über den nächsten Container-Reset am Leben |
+
+### 3.9 OFFEN, und es läuft: 1884 und 1970
+
+Der Satz `for E in 1 2 3 4` läuft weiter und wartet seit 13:08 UTC am
+Messfenster — DIE STADT misst. **Die Läufe für 1884 und 1970 schreiben ihre
+Ergebnisse selbsttätig nach `werkbank/schuss/preis-w7/rho/schluss/e3-A.json`
+und `e4-A.json`**; der Veröffentlicher sichert sie. Auswertung:
+
+```bash
+python3 werkbank/schuss/fuhre-w6/schnitte.py werkbank/schuss/preis-w7/rho/schluss
+```
+
+**Was dort erwartet wird und was zu prüfen ist:** an den Daten dieser beiden
+Epochen ist kein Zeichen geändert; die einzige Änderung, die sie erreicht, ist
+die neue Zeile auf der Festlegungskarte (`folgeText` nennt `pflichtNeu`). In
+1600 hat sie **nichts** bewegt — dort stehen die Zahlen Ziffer für Ziffer wie
+in `MESSLATTE.md`. Bewegt sie 1884 oder 1970, ist das ein Befund über die
+Empfindlichkeit der Latte gegen Kartenhöhe, kein Befund über die Wirtschaft,
+und die Zeile ließe sich einzeilig zurücknehmen (dann verschweigt die Karte
+aber wieder, was eine Festlegung für immer kostet — das ist die Abwägung).
+**1970 stand vor dieser Welle auf +0,699, also ein Tausendstel unter dem Riss;
+dort ist jede Bewegung ernst zu nehmen.**
+
+---
+
+## 7. Was der nächste wissen muss
+
+1. **`satzFolgt: 0,70` messen.** Zwischen 0,60 (−0,26/−0,24/−0,38) und 0,82
+   (+0,46/+0,56/+0,65) liegt der Nulldurchgang. 0,70 ist die ruhigste Zahl der
+   Reihe und ließe dem Haus mehr Luft; sie ist **nicht gemessen**, deshalb
+   steht sie nicht drin. Ein Lauf, keine Herleitung.
+2. **Der Unterhalt gehört auch nach 1600, 1884 und 1970.** Dort ist jeder Bau
+   weiterhin eine ewige Rente ohne Gegenrechnung. Nicht in dieser Welle
+   gemacht, weil drei passende Epochen nicht zugleich mit der einen gerissenen
+   angefasst werden (Regel aus Welle 4). **Wer es tut, misst alle vier.**
+3. **Die Taxe-Sprosse (`nachZeit`) ebenso.** Prüfbar mit einer Zeile: steht in
+   `leiterRoh` über zwölf Jahre derselbe Name in `name`, geht die Leiter mit
+   dem Haus mit und wird nie gestiegen.
+4. **Die KERN-Zeile aus §4** (`grund.css:294`) erledigt 65 der 505 verbliebenen
+   Textknoten auf einen Schlag — und bewegt dabei drei fremde Bretter. Zwischen
+   zwei Wellen, mit Messung davor und danach.
