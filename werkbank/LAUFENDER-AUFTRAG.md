@@ -46,6 +46,34 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DIE RESETS KOMMEN JETZT STÜNDLICH — was daraus folgt
+
+Am 4./5. August: **Reset 6 bis 9 innerhalb von zwölf Stunden**, zuletzt im
+Stundentakt, jedes Mal auf denselben alten Commit `78c79bb`. Verloren ging nie
+etwas Committetes. Verloren ging jedes Mal dasselbe:
+
+| | |
+|---|---|
+| überlebt | alles unter Versionskontrolle |
+| **weg** | `/tmp`, **alle Messstände**, alle laufenden Messungen, alle Agentenprozesse |
+
+**Drei Regeln, jede einzeln bezahlt:**
+
+1. **Der Meldung von `wiederaufnahme.sh` nach einem Reset nicht glauben.** Sie
+   sagt „origin ist auf Stand", weil der Reset auch die Reparatur zurücknimmt,
+   die das verhindern sollte. Von Hand:
+   `git fetch origin <zweig> && git rev-list --count HEAD..origin/<zweig>`.
+   **Hat bei Reset 8 und 9 funktioniert und den Baum gerettet.**
+2. **Wer einen Agenten wieder aufnimmt, stellt ihm ZUERST seinen Messstand her.**
+3. **Kein Aufbau darf nur im Kopf stehen.** Was nach einem Reset von Hand
+   nachgebaut werden muss, gehört als Skript ins Repo. Die Knopfboden-Probe
+   wurde dreimal von Hand nachgebaut, bevor
+   `knopfboden-probe/aufsetzen.sh` daraus wurde — ein Aufruf stellt beide Häfen
+   her, prüft beide Marken und startet nur, wenn nicht schon etwas läuft.
+   **Zweimal von Hand ist einmal zu oft.**
+
+---
+
 ## DIE VIERTE LATTE, DER STAND IN ZAHLEN — 5. August, nach der Nacharbeit r4
 
 Alle Zahlen bei **1366×768** mit dem **reparierten** Gerät (zeichnet seit dem
