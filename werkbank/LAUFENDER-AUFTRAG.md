@@ -46,6 +46,65 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DIE ERSTE LATTE IST GERISSEN — und die Ursache ist nicht, was sieben Wellen lang angenommen wurde
+
+**Blindvergleich am eingefrorenen Stand `08baf32`, 5. August, von einem fremden
+Auge, das keinen einzigen Builder-Bericht sehen durfte.** Je Epoche zwei
+Zustände: nach dem Laden und nach 21–30 gespielten Wochen mit echten Klicks.
+
+| Epoche | Urteil |
+|---|---|
+| 1350 | **das Zielbild gewinnt** |
+| 1600 | **das Zielbild gewinnt** (weitester Abstand) |
+| 1884 | unentschieden |
+| 1970 | **das Zielbild gewinnt** |
+
+**Als Ganzes: 3 : 0 bei einem Unentschieden.**
+
+> ### DIE BÜHNE VERLIERT NICHT. WAS AUF IHR LIEGT, VERLIERT.
+>
+> Der Kritiker hat Kamera und Ort **pixelgenau** nachgemessen: St. Michael im
+> selben Kasten auf derselben Höhe, Mauerscheitel **838|1242 im Zielbild gegen
+> 838|1231 im Spiel**. Das 620-Jahre-Wachstum hält über alle vier Epochen —
+> Holzsteg → Steinbogen an derselben Stelle, Mühle → Adler → Adler-Bräu, Bahn ab
+> 1884, Fahrleitung 1970, geschlossene Mauer → Fragment im Park. **In 1884 und
+> 1970 ist die nackte Bühne nach seinem Urteil besser als das Zielbild.**
+>
+> **Was verliert, ist die Bedienoberfläche darüber: sie deckt 27–28 % der Fläche
+> und 60 % des untersten Sechstels** — genau dort, wo jedes Zielblatt seinen
+> Vordergrund trägt (Marktstand und Fuhre in 1350, Asphalt mit Autos in 1970).
+>
+> **Das stellt die Annahme von sieben Wellen auf den Kopf.** Es wurde immer
+> gebaut, als fehle dem Bild *Inhalt*. Der Inhalt ist weitgehend da und wird
+> **zugedeckt**.
+
+**Belege, die niemand wegdiskutieren kann:**
+- Das eigene Schild **BRAUHAUS ZUM ANKER** ist zu **65,7 % beim Laden und 75,6 %
+  nach dem Spielen** von der Karte `DER SUD · 1350` verdeckt. Pixelgemessen
+  gegen dieselbe Seite mit ausgeblendeten Oberflächen.
+- In 1600 trägt der SUD-Kasten nach 21 Wochen **eine Zeile mehr, als er hoch
+  ist**, und zeichnet vier Textzeilen durcheinander.
+- In 1970 schneidet die **Fahrzeugwaage** — der billigste Kauf der Epoche, in
+  Woche 1 gekauft — durch die Kastenpaletten, und ihr Wiegehäuschen steht **in
+  der Fahrerkabine des Lastwagens**.
+
+**Der zweite Abstand ist Fracht, keine Bauten.** In allen vier Epochen bleibt die
+vordere Hofhälfte auch voll ausgebaut leer, in dreien ist das Tor leer. Das
+Zielbild hat in jedem Blatt drei bis fünf Leute, die im Hof arbeiten; das Spiel
+hat zwei.
+
+> **Das ist kein Befund über ein Stück.** Die deckenden Flächen gehören SUD,
+> ERBE, FUHRE, PREIS und GEGNER; die Schichtung gehört dem Skelett. Wer das einem
+> Builder allein gibt, gibt ihm etwas, das er nicht besitzt.
+
+**Zwei Verdächtigungen hat der Kritiker geprüft und ZURÜCKGEZOGEN:** nichts steht
+auf der Hofmauer (spaltenweise gegen die Mauerformel gerechnet; die einzigen
+Verstöße sind die, die der Quelltext selbst als gewollt ausweist), und die Kamera
+ist nicht zurückgezogen. **Wer eine Vermutung prüft und fallen lässt, ist mehr
+wert als einer, der zehn behauptet.**
+
+---
+
 ## DIE TOTE LEITERSPROSSE — und warum die Zahl an der Hand hängt
 
 **Der Befund des blinden Kritikers DER PREIS, Welle 7:** in 1600 und 1970 steht
