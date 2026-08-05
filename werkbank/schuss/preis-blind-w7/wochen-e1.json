@@ -1,0 +1,1045 @@
+{
+ "epoche": 1,
+ "breite": 1366,
+ "hoehe": 768,
+ "fehler": [],
+ "reihe": [
+  {
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 112,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−64 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 10,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf",
+     "preis:nimm:dach=−33 Pf",
+     "preis:nimm:bottich=−42 Pf",
+     "preis:nimm:ochsenstall=−110 Pf",
+     "preis:festlege:vertrag=−85 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 2,
+   "kasse": 103,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−62 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 3,
+   "kasse": 94,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−61 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 4,
+   "kasse": 93,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−58 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 5,
+   "kasse": 92,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−56 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 6,
+   "kasse": 91,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−53 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 7,
+   "kasse": 90,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−50 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 8,
+   "kasse": 89,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−48 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 9,
+   "kasse": 80,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−45 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 10,
+   "kasse": 71,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−16 Pf",
+     "erbe:uebergabe:leibgeding=−13 Pf",
+     "erbe:uebergabe:abfindung=−42 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 11,
+   "kasse": 62,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−11 Pf",
+     "erbe:uebergabe:leibgeding=−8 Pf",
+     "erbe:uebergabe:abfindung=−26 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 12,
+   "kasse": 61,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−11 Pf",
+     "erbe:uebergabe:leibgeding=−8 Pf",
+     "erbe:uebergabe:abfindung=−24 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 13,
+   "kasse": 60,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−11 Pf",
+     "erbe:uebergabe:leibgeding=−8 Pf",
+     "erbe:uebergabe:abfindung=−22 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 14,
+   "kasse": 59,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 11,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:tafel:verschreibe=−11 Pf",
+     "erbe:uebergabe:leibgeding=−8 Pf",
+     "erbe:uebergabe:abfindung=−21 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 15,
+   "kasse": 58,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": false,
+   "ohneTafel": {
+    "bepreist": 10,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 16,
+   "kasse": 49,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 10,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 17,
+   "kasse": 48,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 10,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 18,
+   "kasse": 39,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 10,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 19,
+   "kasse": 30,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 10,
+    "liste": [
+     "sud:zettel-wechsel-kauf=−30 Pf",
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 20,
+   "kasse": 29,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 9,
+    "liste": [
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 21,
+   "kasse": 28,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": false,
+   "ohneTafel": {
+    "bepreist": 9,
+    "liste": [
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 22,
+   "kasse": 27,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 9,
+    "liste": [
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 23,
+   "kasse": 26,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": false,
+   "ohneTafel": {
+    "bepreist": 9,
+    "liste": [
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 24,
+   "kasse": 17,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 6,
+    "liste": [
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 3,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 25,
+   "kasse": 16,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 6,
+    "liste": [
+     "name:anschlag:umtrunk=−9 Pf",
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 3,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 26,
+   "kasse": 7,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 7,
+    "liste": [
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:abfindung=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 5,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 27,
+   "kasse": 0,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 5,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 28,
+   "kasse": 0,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 5,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 29,
+   "kasse": 0,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 5,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1350,
+   "woche": 30,
+   "kasse": 0,
+   "tafelOffenBeimAufschlagen": false,
+   "unterhaltOhneTafel": false,
+   "unterhaltMitTafel": true,
+   "ohneTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:leibgeding=−7 Pf",
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   },
+   "mitTafel": {
+    "bepreist": 5,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:versatz:malzboden=+9 Pf",
+     "stadt:versatz:pfanne=+7 Pf",
+     "stadt:versatz:fasslager_holz=+6 Pf",
+     "stadt:versatz:brunnen=+5 Pf"
+    ]
+   }
+  },
+  {
+   "jahr": 1351,
+   "woche": 1,
+   "kasse": 48,
+   "tafelOffenBeimAufschlagen": true,
+   "unterhaltOhneTafel": true,
+   "unterhaltMitTafel": null,
+   "ohneTafel": {
+    "bepreist": 7,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf",
+     "preis:nimm:dach=−34 Pf"
+    ]
+   },
+   "mitTafel": null
+  },
+  {
+   "jahr": 1351,
+   "woche": 2,
+   "kasse": 39,
+   "tafelOffenBeimAufschlagen": true,
+   "unterhaltOhneTafel": true,
+   "unterhaltMitTafel": null,
+   "ohneTafel": {
+    "bepreist": 6,
+    "liste": [
+     "erbe:uebergabe:bruch=0 Pf",
+     "stadt:bau:grutkammer=−13 Pf",
+     "stadt:bau:gaerbottiche=−15 Pf",
+     "stadt:bau:ochsenstall=−18 Pf",
+     "stadt:bau:keller_gewoelbe=−21 Pf",
+     "stadt:bau:kueferei=−23 Pf"
+    ]
+   },
+   "mitTafel": null
+  }
+ ]
+}
