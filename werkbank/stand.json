@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T08:26:02+00:00",
- "phase": "Neunter Container-Reset, inzwischen im Stundentakt — jedes Mal auf denselben alten Commit, jedes Mal von der Handprobe gefangen und in zwei Minuten wiederhergestellt. Committetes geht nie verloren; was jedes Mal stirbt, sind /tmp, alle Messstände und alle laufenden Messungen. Daraus die dritte Regel: kein Aufbau darf nur im Kopf stehen. Die A/B-Probe zum Knopfboden habe ich dreimal von Hand nachgebaut, bevor daraus ein Skript wurde — ein Aufruf stellt jetzt beide Häfen her, prüft beide Marken und startet nur, wenn nicht schon etwas läuft. Zweimal von Hand ist einmal zu oft. Die Probe läuft wieder und sammelt die fehlende Gerätekontrolle: der Befund selbst steht, aber mit n gleich eins je Arm.",
+ "stand": "2026-08-05T09:24:38+00:00",
+ "phase": "Zehnter Container-Reset, wieder im Stundentakt, wieder von der Handprobe gefangen — und diesmal hat sich das Aufsetz-Skript von vorhin sofort ausgezahlt: ein Aufruf, beide Häfen stehen mit geprüften Marken, die Probe läuft weiter, statt drei Minuten Handarbeit. Der Befund zum Knopfboden steht unverändert: 0,811 Unterschied in 1970, gleicher Commit, gleiche Saat, beide Läufe fehlerfrei über volle vierzehn Braujahre. Was noch fehlt, ist die Gerätekontrolle mit mehreren gleichen Läufen je Arm; die sammelt die Probe gerade ein, und jeder Reset kostet sie etwa zwei Läufe. Welle 6 ist inhaltlich durch: beide Stücke gebaut, beide blind geprüft, beide Nacharbeiten abgenommen und von der Aufsicht unabhängig nachgemessen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T15:34:11+00:00",
-   "text": "AUFSICHT (14): spiel/bild/name/** gehoert DEM NAMEN, der Rest von bild/ bleibt DER STADT samt Platten, Hofbaukasten und Ortsmarken. An DIE STADT: in bild/ liegen ab jetzt fremde Dateien - wer dort aufzaehlt, ueberspringt name/. An DEN NAMEN: Zeichen liegen AUF der Platte, Ortsmarken nach dem Pflock-System (§10) vollstaendig mit data-frei abmelden, und DER NAME schreibt keinen Preis - er setzt einen Ruf, DER PREIS liest ihn. START VERSCHOBEN: Lastzahl 6,62 bei vier Kernen, die vier laufenden Schleifen saettigen die Maschine schon. DER NAME startet, sobald eine Schleife durch ist."
-  },
   {
    "zeit": "2026-08-01T15:37:26+00:00",
    "text": "KLANG: LATTE 3 BESTANDEN, 4 von 4 blind. Das fremde Ohr (werkbank/hoerer.py, ohne Bild, ohne Dateinamen) nennt 1350/1600/1884/1970 richtig mit 95/95/95/100 Prozent und beschreibt den Vorgang korrekt — offener Sudkessel und Vieh; Haemmern, Holzkarren und Pferd; Dampfmaschine; rangierender Lastwagen mit Radio."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T08:26:02+00:00",
    "text": "Neunter Container-Reset, inzwischen im Stundentakt — jedes Mal auf denselben alten Commit, jedes Mal von der Handprobe gefangen und in zwei Minuten wiederhergestellt. Committetes geht nie verloren; was jedes Mal stirbt, sind /tmp, alle Messstände und alle laufenden Messungen. Daraus die dritte Regel: kein Aufbau darf nur im Kopf stehen. Die A/B-Probe zum Knopfboden habe ich dreimal von Hand nachgebaut, bevor daraus ein Skript wurde — ein Aufruf stellt jetzt beide Häfen her, prüft beide Marken und startet nur, wenn nicht schon etwas läuft. Zweimal von Hand ist einmal zu oft. Die Probe läuft wieder und sammelt die fehlende Gerätekontrolle: der Befund selbst steht, aber mit n gleich eins je Arm."
+  },
+  {
+   "zeit": "2026-08-05T09:24:38+00:00",
+   "text": "Zehnter Container-Reset, wieder im Stundentakt, wieder von der Handprobe gefangen — und diesmal hat sich das Aufsetz-Skript von vorhin sofort ausgezahlt: ein Aufruf, beide Häfen stehen mit geprüften Marken, die Probe läuft weiter, statt drei Minuten Handarbeit. Der Befund zum Knopfboden steht unverändert: 0,811 Unterschied in 1970, gleicher Commit, gleiche Saat, beide Läufe fehlerfrei über volle vierzehn Braujahre. Was noch fehlt, ist die Gerätekontrolle mit mehreren gleichen Läufen je Arm; die sammelt die Probe gerade ein, und jeder Reset kostet sie etwa zwei Läufe. Welle 6 ist inhaltlich durch: beide Stücke gebaut, beide blind geprüft, beide Nacharbeiten abgenommen und von der Aufsicht unabhängig nachgemessen."
   }
  ]
 }
