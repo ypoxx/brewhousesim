@@ -1,0 +1,166 @@
+{
+  "stand": "2026-08-05T18:39:14.240Z",
+  "feld": {
+    "x0": 8,
+    "x1": 62,
+    "y0": 55,
+    "y1": 85
+  },
+  "e1": {
+    "drittel_hinten_mitte_vorn": [
+      57.6,
+      48.5,
+      7.7
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 64.2
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 50.9
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 52.1
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 44.8
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 15.4
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "e2": {
+    "drittel_hinten_mitte_vorn": [
+      71.4,
+      50.7,
+      9.4
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 79.6
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 63
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 55.5
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 45.7
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 18.8
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "e3": {
+    "drittel_hinten_mitte_vorn": [
+      79.1,
+      48.6,
+      7.7
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 88.7
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 69.3
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 53.7
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 43.2
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 15.3
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "e4": {
+    "drittel_hinten_mitte_vorn": [
+      63.9,
+      39.8,
+      10.9
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 79.7
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 47.7
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 33
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 46.8
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 21.8
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "seitenfehler": 0
+}
