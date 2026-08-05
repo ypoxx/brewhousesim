@@ -1,0 +1,266 @@
+[
+ {
+  "epoche": 1,
+  "fehler": [],
+  "schritte": [
+   {
+    "was": "nach dem Laden",
+    "klasseZu": true,
+    "clip": "inset(50%)",
+    "brettTrifft": false,
+    "knoepfe": 10,
+    "bedienbar": 0,
+    "sollAus0UndAus": 7,
+    "gruende": {
+     "brett-zugeklappt": 10
+    }
+   },
+   {
+    "was": "Klick 1, sofort (0 ms)",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   },
+   {
+    "was": "Klick 1, +120 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   },
+   {
+    "was": "Klick 1, +620 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   },
+   {
+    "was": "Klick 1, +2,6 s",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   }
+  ]
+ },
+ {
+  "epoche": 2,
+  "fehler": [],
+  "schritte": [
+   {
+    "was": "nach dem Laden",
+    "klasseZu": true,
+    "clip": "inset(50%)",
+    "brettTrifft": false,
+    "knoepfe": 10,
+    "bedienbar": 0,
+    "sollAus0UndAus": 7,
+    "gruende": {
+     "brett-zugeklappt": 10
+    }
+   },
+   {
+    "was": "Klick 1, sofort (0 ms)",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   },
+   {
+    "was": "Klick 1, +120 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   },
+   {
+    "was": "Klick 1, +620 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   },
+   {
+    "was": "Klick 1, +2,6 s",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 10,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 3
+    }
+   }
+  ]
+ },
+ {
+  "epoche": 3,
+  "fehler": [],
+  "schritte": [
+   {
+    "was": "nach dem Laden",
+    "klasseZu": true,
+    "clip": "inset(50%)",
+    "brettTrifft": false,
+    "knoepfe": 9,
+    "bedienbar": 0,
+    "sollAus0UndAus": 7,
+    "gruende": {
+     "brett-zugeklappt": 9
+    }
+   },
+   {
+    "was": "Klick 1, sofort (0 ms)",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 9,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 2
+    }
+   },
+   {
+    "was": "Klick 1, +120 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 9,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 2
+    }
+   },
+   {
+    "was": "Klick 1, +620 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 9,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 2
+    }
+   },
+   {
+    "was": "Klick 1, +2,6 s",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 9,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 2
+    }
+   }
+  ]
+ },
+ {
+  "epoche": 4,
+  "fehler": [],
+  "schritte": [
+   {
+    "was": "nach dem Laden",
+    "klasseZu": true,
+    "clip": "inset(50%)",
+    "brettTrifft": false,
+    "knoepfe": 11,
+    "bedienbar": 0,
+    "sollAus0UndAus": 7,
+    "gruende": {
+     "brett-zugeklappt": 11
+    }
+   },
+   {
+    "was": "Klick 1, sofort (0 ms)",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 11,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 4
+    }
+   },
+   {
+    "was": "Klick 1, +120 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 11,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 4
+    }
+   },
+   {
+    "was": "Klick 1, +620 ms",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 11,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 4
+    }
+   },
+   {
+    "was": "Klick 1, +2,6 s",
+    "klasseZu": false,
+    "clip": "none",
+    "brettTrifft": true,
+    "knoepfe": 11,
+    "bedienbar": 7,
+    "sollAus0UndAus": 0,
+    "gruende": {
+     "spiel": 4
+    }
+   }
+  ]
+ }
+]

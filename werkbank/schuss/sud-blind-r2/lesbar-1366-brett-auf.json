@@ -1,0 +1,533 @@
+{
+ "fenster": "1366x768",
+ "jeEpoche": {
+  "e1": {
+   "(ohne)": {
+    "ueber": 0,
+    "klein": 2,
+    "winzig": 0,
+    "kleinste": 11.9,
+    "knoepfe": 0,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "stadt": {
+    "ueber": 16,
+    "klein": 49,
+    "winzig": 46,
+    "kleinste": 5.5,
+    "knoepfe": 24,
+    "zuKlein": 0,
+    "beispiele": [
+     "wort :: OHNE DICH GESCHEHEN",
+     "wort :: DIE HÄUSER",
+     "zahl :: wollen 15 · im Keller liegen 4 Fass",
+     "wort :: ANSCHLAGTAFEL",
+     "zahl :: mit Kreide an der Sudhauswand",
+     "wort :: DER KELLER"
+    ]
+   },
+   "gegner": {
+    "ueber": 1,
+    "klein": 40,
+    "winzig": 39,
+    "kleinste": 6.5,
+    "knoepfe": 11,
+    "zuKlein": 0,
+    "beispiele": [
+     "was :: Brauhaus zum Adler wirbt um Klosterschenke Obernbe"
+    ]
+   },
+   "sud": {
+    "ueber": 6,
+    "klein": 88,
+    "winzig": 81,
+    "kleinste": 6.5,
+    "knoepfe": 7,
+    "zuKlein": 0,
+    "beispiele": [
+     "sud-kartensatz :: Gagel, Porst, Schafgarbe — gekauft beim Grutherrn,",
+     "sud-kartensatz :: Hopfen vom Fernhändler, unter der Grut versteckt. ",
+     "sud-kartensatz :: Der Rat erlaubt dem Haus, gehopftes Bier zu brauen",
+     "sud-kartensatz :: Geschöpft, wo der Bach durch die Gasse läuft. Es k",
+     "sud-kartensatz :: Eimer für Eimer aus dem eigenen Brunnen, den halbe",
+     "sud-kartensatz :: Der Rat verbrieft dem Haus eine Deichel von der Qu"
+    ]
+   },
+   "name": {
+    "ueber": 1,
+    "klein": 37,
+    "winzig": 35,
+    "kleinste": 6.5,
+    "knoepfe": 8,
+    "zuKlein": 0,
+    "beispiele": [
+     "nm-schiene :: "
+    ]
+   },
+   "fuhre": {
+    "ueber": 1,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
+    "knoepfe": 21,
+    "zuKlein": 0,
+    "beispiele": [
+     "fu-kerbsatz :: Der Grutherr schneidet die Kerbe ins Holz und zahl"
+    ]
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "erbe": {
+    "ueber": 0,
+    "klein": 41,
+    "winzig": 40,
+    "kleinste": 6.9,
+    "knoepfe": 8,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "kern": {
+    "ueber": 0,
+    "klein": 9,
+    "winzig": 8,
+    "kleinste": 9.4,
+    "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "preis": {
+    "ueber": 0,
+    "klein": 12,
+    "winzig": 12,
+    "kleinste": 6.5,
+    "knoepfe": 2,
+    "zuKlein": 0,
+    "beispiele": []
+   }
+  },
+  "e2": {
+   "(ohne)": {
+    "ueber": 0,
+    "klein": 2,
+    "winzig": 0,
+    "kleinste": 11.9,
+    "knoepfe": 0,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "stadt": {
+    "ueber": 16,
+    "klein": 49,
+    "winzig": 44,
+    "kleinste": 5.5,
+    "knoepfe": 24,
+    "zuKlein": 0,
+    "beispiele": [
+     "wort :: OHNE DICH GESCHEHEN",
+     "wort :: DIE HÄUSER",
+     "zahl :: wollen 28 · im Keller liegen 8 Fass",
+     "wort :: SUDORDNUNG",
+     "zahl :: auf der Tafel im Sudhaus",
+     "wort :: DAS GEWÖLBE"
+    ]
+   },
+   "gegner": {
+    "ueber": 1,
+    "klein": 44,
+    "winzig": 43,
+    "kleinste": 6.5,
+    "knoepfe": 13,
+    "zuKlein": 0,
+    "beispiele": [
+     "was :: Braustatt Adler wirbt um Mühlschenke: Er lässt dem"
+    ]
+   },
+   "sud": {
+    "ueber": 5,
+    "klein": 88,
+    "winzig": 81,
+    "kleinste": 6.5,
+    "knoepfe": 7,
+    "zuKlein": 0,
+    "beispiele": [
+     "sud-kartensatz :: Gerste, Hopfen, Wasser. Die Zunft sieht nichts, de",
+     "sud-kartensatz :: Weizen gibt mehr Fass aus derselben Pfanne und ein",
+     "sud-kartensatz :: Zwei Fass mehr aus jedem Sud, und ein Bier, das in",
+     "sud-kartensatz :: Der Rat schreibt dem Haus eine feste Weizenzuteilu",
+     "sud-kartensatz :: Ein Keller in den Fels gebrochen, mit Eis beschick"
+    ]
+   },
+   "name": {
+    "ueber": 2,
+    "klein": 37,
+    "winzig": 35,
+    "kleinste": 6.5,
+    "knoepfe": 8,
+    "zuKlein": 0,
+    "beispiele": [
+     "nm-medium :: Wirtshausschild und gemarkter Krug",
+     "nm-schiene :: "
+    ]
+   },
+   "fuhre": {
+    "ueber": 0,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
+    "knoepfe": 20,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "erbe": {
+    "ueber": 0,
+    "klein": 41,
+    "winzig": 40,
+    "kleinste": 6.9,
+    "knoepfe": 8,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "kern": {
+    "ueber": 0,
+    "klein": 9,
+    "winzig": 8,
+    "kleinste": 9.4,
+    "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "preis": {
+    "ueber": 0,
+    "klein": 12,
+    "winzig": 12,
+    "kleinste": 6.5,
+    "knoepfe": 2,
+    "zuKlein": 0,
+    "beispiele": []
+   }
+  },
+  "e3": {
+   "(ohne)": {
+    "ueber": 0,
+    "klein": 2,
+    "winzig": 0,
+    "kleinste": 11.9,
+    "knoepfe": 0,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "stadt": {
+    "ueber": 16,
+    "klein": 49,
+    "winzig": 44,
+    "kleinste": 5.5,
+    "knoepfe": 23,
+    "zuKlein": 0,
+    "beispiele": [
+     "wort :: OHNE DICH GESCHEHEN",
+     "wort :: DIE HÄUSER",
+     "zahl :: wollen 146 · im Keller liegen 11 hl",
+     "wort :: SUDPLAN",
+     "zahl :: am schwarzen Brett der Mälzerei",
+     "wort :: DER EISKELLER"
+    ]
+   },
+   "gegner": {
+    "ueber": 1,
+    "klein": 42,
+    "winzig": 41,
+    "kleinste": 6.5,
+    "knoepfe": 13,
+    "zuKlein": 0,
+    "beispiele": [
+     "was :: Brauerei Adler wirbt um Brückenwirt: Er bietet dem"
+    ]
+   },
+   "sud": {
+    "ueber": 5,
+    "klein": 87,
+    "winzig": 80,
+    "kleinste": 6.5,
+    "knoepfe": 7,
+    "zuKlein": 0,
+    "beispiele": [
+     "sud-kartensatz :: Im Winter geschnitten, im Keller gestapelt. Wer so",
+     "sud-kartensatz :: Der Bottich läuft warm durch. Eine Woche schneller",
+     "sud-kartensatz :: Ammoniak-Kompression, Antrieb von der Dampfmaschin",
+     "sud-kartensatz :: Geerntet und wieder angestellt, Sud um Sud. Kostet",
+     "sud-kartensatz :: Ein einziger Hefestamm, im Laboratorium vermehrt, "
+    ]
+   },
+   "name": {
+    "ueber": 1,
+    "klein": 37,
+    "winzig": 35,
+    "kleinste": 6.5,
+    "knoepfe": 9,
+    "zuKlein": 0,
+    "beispiele": [
+     "nm-schiene :: "
+    ]
+   },
+   "fuhre": {
+    "ueber": 1,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
+    "knoepfe": 24,
+    "zuKlein": 0,
+    "beispiele": [
+     "fu-kerbsatz :: Ein Wechsel auf drei Monate, akzeptiert vom Malzhä"
+    ]
+   },
+   "erbe": {
+    "ueber": 0,
+    "klein": 41,
+    "winzig": 40,
+    "kleinste": 6.9,
+    "knoepfe": 8,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "kern": {
+    "ueber": 0,
+    "klein": 9,
+    "winzig": 8,
+    "kleinste": 9.4,
+    "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "preis": {
+    "ueber": 0,
+    "klein": 12,
+    "winzig": 12,
+    "kleinste": 6.5,
+    "knoepfe": 2,
+    "zuKlein": 0,
+    "beispiele": []
+   }
+  },
+  "e4": {
+   "(ohne)": {
+    "ueber": 0,
+    "klein": 2,
+    "winzig": 0,
+    "kleinste": 11.9,
+    "knoepfe": 0,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "stadt": {
+    "ueber": 16,
+    "klein": 44,
+    "winzig": 41,
+    "kleinste": 6.9,
+    "knoepfe": 21,
+    "zuKlein": 0,
+    "beispiele": [
+     "wort :: OHNE DICH GESCHEHEN",
+     "wort :: DIE HÄUSER",
+     "zahl :: wollen 534 · im Keller liegen 210 hl",
+     "wort :: SUDPLAN",
+     "zahl :: im Schaltraum, auf Formica",
+     "wort :: DIE TANKS"
+    ]
+   },
+   "gegner": {
+    "ueber": 1,
+    "klein": 46,
+    "winzig": 44,
+    "kleinste": 6.5,
+    "knoepfe": 12,
+    "zuKlein": 0,
+    "beispiele": [
+     "was :: Der Adler erhöht den Werbekostenzuschuss beim Brüc"
+    ]
+   },
+   "sud": {
+    "ueber": 7,
+    "klein": 93,
+    "winzig": 86,
+    "kleinste": 6.5,
+    "knoepfe": 7,
+    "zuKlein": 0,
+    "beispiele": [
+     "sud-kartensatz :: Er riecht, er schmeckt, er trifft es meistens. Mei",
+     "sud-kartensatz :: Zwei Chemikerinnen, ein Saccharometer, ein Protoko",
+     "sud-kartensatz :: Ein Rechner fährt das Maischprogramm und schreibt ",
+     "sud-kartensatz :: Wie im Keller, so ins Fass. Hält, was es hält, und",
+     "sud-kartensatz :: Ein Klärmittel in den Lagertank, absetzen lassen, ",
+     "sud-kartensatz :: Blank filtriert. Vierzig Prozent mehr Haltbarkeit,"
+    ]
+   },
+   "name": {
+    "ueber": 2,
+    "klein": 38,
+    "winzig": 36,
+    "kleinste": 6.5,
+    "knoepfe": 9,
+    "zuKlein": 0,
+    "beispiele": [
+     "nm-medium :: Kronkorken, Bandenwerbung, Fernsehspot",
+     "nm-schiene :: "
+    ]
+   },
+   "fuhre": {
+    "ueber": 0,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
+    "knoepfe": 22,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "erbe": {
+    "ueber": 1,
+    "klein": 41,
+    "winzig": 40,
+    "kleinste": 6.9,
+    "knoepfe": 8,
+    "zuKlein": 0,
+    "beispiele": [
+     "wort :: Versorgungszusage · jährlich"
+    ]
+   },
+   "kern": {
+    "ueber": 0,
+    "klein": 9,
+    "winzig": 8,
+    "kleinste": 9.4,
+    "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "preis": {
+    "ueber": 0,
+    "klein": 12,
+    "winzig": 12,
+    "kleinste": 6.5,
+    "knoepfe": 2,
+    "zuKlein": 0,
+    "beispiele": []
+   }
+  }
+ },
+ "summe": {
+  "(ohne)": {
+   "ueber": 0,
+   "klein": 8,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 0,
+   "kleinste": 11.9
+  },
+  "erbe": {
+   "ueber": 1,
+   "klein": 164,
+   "winzig": 160,
+   "zuKlein": 0,
+   "knoepfe": 32,
+   "kleinste": 6.9
+  },
+  "fuhre": {
+   "ueber": 2,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 87,
+   "kleinste": 999
+  },
+  "gegner": {
+   "ueber": 4,
+   "klein": 172,
+   "winzig": 167,
+   "zuKlein": 0,
+   "knoepfe": 49,
+   "kleinste": 6.5
+  },
+  "kern": {
+   "ueber": 0,
+   "klein": 36,
+   "winzig": 32,
+   "zuKlein": 0,
+   "knoepfe": 12,
+   "kleinste": 9.4
+  },
+  "klang": {
+   "ueber": 0,
+   "klein": 4,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 4,
+   "kleinste": 10.9
+  },
+  "name": {
+   "ueber": 6,
+   "klein": 149,
+   "winzig": 141,
+   "zuKlein": 0,
+   "knoepfe": 34,
+   "kleinste": 6.5
+  },
+  "preis": {
+   "ueber": 0,
+   "klein": 48,
+   "winzig": 48,
+   "zuKlein": 0,
+   "knoepfe": 8,
+   "kleinste": 6.5
+  },
+  "stadt": {
+   "ueber": 64,
+   "klein": 191,
+   "winzig": 175,
+   "zuKlein": 0,
+   "knoepfe": 92,
+   "kleinste": 5.5
+  },
+  "sud": {
+   "ueber": 23,
+   "klein": 356,
+   "winzig": 328,
+   "zuKlein": 0,
+   "knoepfe": 28,
+   "kleinste": 6.5
+  }
+ }
+}

@@ -1,0 +1,923 @@
+{
+ "fehler": [],
+ "bericht": [
+  {
+   "epoche": 1,
+   "achse": "wuerze",
+   "ziel": "brief",
+   "zielText": "Offen gehopft, mit Hopfenbrief −78 Pf",
+   "preis": 78,
+   "vorher": "grut",
+   "gesetzt": true,
+   "kasseVor": 1346,
+   "kasseNach": 1268,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf grut",
+     "getan": "disabled",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf grut",
+     "getan": "geklickt",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf grut",
+     "getan": "el.click()",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf grut",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf grut",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf sack",
+     "getan": "disabled",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf sack",
+     "getan": "geklickt",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf sack",
+     "getan": "el.click()",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf sack",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf sack",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    }
+   ],
+   "zettel": [
+    {
+     "zug": "sud:zettel-wechsel-frei",
+     "aus": false,
+     "text": "Wasser aus dem Ziehbrunnen lässt Starkbier zu",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    },
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "aus": false,
+     "text": "Röhrenrecht an der Quelle −30 Pf lässt Starkbier z",
+     "verfahrenDanach": "brief",
+     "entkommen": false
+    }
+   ],
+   "hinauf": [
+    {
+     "zug": "sud:wuerze:grut",
+     "aus": false,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:wuerze:sack",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:wuerze:brief",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "brief",
+   "gehalten": true
+  },
+  {
+   "epoche": 1,
+   "achse": "wasser",
+   "ziel": "roehre",
+   "zielText": "Röhrenrecht an der Quelle −30 Pf",
+   "preis": 30,
+   "vorher": "roehre",
+   "gesetzt": true,
+   "kasseVor": 2330,
+   "kasseNach": 2300,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf bach",
+     "getan": "disabled",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf bach",
+     "getan": "geklickt",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf bach",
+     "getan": "el.click()",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf bach",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf bach",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf brunnen",
+     "getan": "disabled",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf brunnen",
+     "getan": "geklickt",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf brunnen",
+     "getan": "el.click()",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf brunnen",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf brunnen",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "roehre",
+     "entkommen": false
+    }
+   ],
+   "zettel": [],
+   "hinauf": [
+    {
+     "zug": "sud:wasser:bach",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:wasser:brunnen",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:wasser:roehre",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "roehre",
+   "gehalten": true
+  },
+  {
+   "epoche": 2,
+   "achse": "schuettung",
+   "ziel": "weizenbrief",
+   "zielText": "Weizen aus dem Kornhaus, mit Brief −180 fl",
+   "preis": 180,
+   "vorher": "rein",
+   "gesetzt": true,
+   "kasseVor": 2180,
+   "kasseNach": 2000,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf rein",
+     "getan": "disabled",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf rein",
+     "getan": "geklickt",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf rein",
+     "getan": "el.click()",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf rein",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf rein",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf weizen",
+     "getan": "disabled",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf weizen",
+     "getan": "geklickt",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf weizen",
+     "getan": "el.click()",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf weizen",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf weizen",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf hafer",
+     "getan": "disabled",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf hafer",
+     "getan": "geklickt",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf hafer",
+     "getan": "el.click()",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf hafer",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf hafer",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    }
+   ],
+   "zettel": [
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "aus": false,
+     "text": "Kellergärung im Felsenkeller −260 fl lässt Märzenb",
+     "verfahrenDanach": "weizenbrief",
+     "entkommen": false
+    }
+   ],
+   "hinauf": [
+    {
+     "zug": "sud:schuettung:rein",
+     "aus": false,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:schuettung:weizen",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:schuettung:hafer",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:schuettung:weizenbrief",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "weizenbrief",
+   "gehalten": true
+  },
+  {
+   "epoche": 2,
+   "achse": "gaerung",
+   "ziel": "keller",
+   "zielText": "Kellergärung im Felsenkeller −260 fl",
+   "preis": 260,
+   "vorher": "keller",
+   "gesetzt": true,
+   "kasseVor": 3708,
+   "kasseNach": 3448,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf ober",
+     "getan": "disabled",
+     "verfahrenDanach": "keller",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf ober",
+     "getan": "geklickt",
+     "verfahrenDanach": "keller",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf ober",
+     "getan": "el.click()",
+     "verfahrenDanach": "keller",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf ober",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "keller",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf ober",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "keller",
+     "entkommen": false
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "keller",
+     "entkommen": false
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "keller",
+     "entkommen": false
+    }
+   ],
+   "zettel": [],
+   "hinauf": [
+    {
+     "zug": "sud:gaerung:ober",
+     "aus": false,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:gaerung:keller",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "keller",
+   "gehalten": true
+  },
+  {
+   "epoche": 3,
+   "achse": "kaelte",
+   "ziel": "maschine",
+   "zielText": "Lindesche Kältemaschine −9.800 M",
+   "preis": 9800,
+   "vorher": "natureis",
+   "gesetzt": true,
+   "kasseVor": 44650,
+   "kasseNach": 34850,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf natureis",
+     "getan": "disabled",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf natureis",
+     "getan": "geklickt",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf natureis",
+     "getan": "el.click()",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf natureis",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf natureis",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf warm",
+     "getan": "disabled",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf warm",
+     "getan": "geklickt",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf warm",
+     "getan": "el.click()",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf warm",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf warm",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    }
+   ],
+   "zettel": [
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "aus": false,
+     "text": "Reinzuchthefe nach Hansen −3.400 M lässt Exportbie",
+     "verfahrenDanach": "maschine",
+     "entkommen": false
+    }
+   ],
+   "hinauf": [
+    {
+     "zug": "sud:kaelte:natureis",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:kaelte:warm",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:kaelte:maschine",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "maschine",
+   "gehalten": true
+  },
+  {
+   "epoche": 3,
+   "achse": "hefe",
+   "ziel": "reinzucht",
+   "zielText": "Reinzuchthefe nach Hansen −3.400 M",
+   "preis": 3400,
+   "vorher": "reinzucht",
+   "gesetzt": true,
+   "kasseVor": 44162,
+   "kasseNach": 40762,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf betrieb",
+     "getan": "disabled",
+     "verfahrenDanach": "reinzucht",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf betrieb",
+     "getan": "geklickt",
+     "verfahrenDanach": "reinzucht",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf betrieb",
+     "getan": "el.click()",
+     "verfahrenDanach": "reinzucht",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf betrieb",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "reinzucht",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf betrieb",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "reinzucht",
+     "entkommen": false
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "reinzucht",
+     "entkommen": false
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "reinzucht",
+     "entkommen": false
+    }
+   ],
+   "zettel": [],
+   "hinauf": [
+    {
+     "zug": "sud:hefe:betrieb",
+     "aus": false,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:hefe:reinzucht",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "reinzucht",
+   "gehalten": true
+  },
+  {
+   "epoche": 4,
+   "achse": "fuehrung",
+   "ziel": "labor",
+   "zielText": "Betriebslabor, Stammwürze und Bittereinheiten −42.",
+   "preis": 42000,
+   "vorher": "erfahrung",
+   "gesetzt": true,
+   "kasseVor": 213000,
+   "kasseNach": 171000,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf erfahrung",
+     "getan": "disabled",
+     "verfahrenDanach": "labor",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf erfahrung",
+     "getan": "geklickt",
+     "verfahrenDanach": "labor",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf erfahrung",
+     "getan": "el.click()",
+     "verfahrenDanach": "labor",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf erfahrung",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "labor",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf erfahrung",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "labor",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf rechner",
+     "getan": "geklickt",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    },
+    {
+     "name": "2 disabled weg + Maus auf rechner",
+     "getan": "geklickt",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    },
+    {
+     "name": "3 el.click() auf rechner",
+     "getan": "el.click()",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    },
+    {
+     "name": "4 dispatchEvent auf rechner",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    },
+    {
+     "name": "5 Tastatur auf rechner",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    }
+   ],
+   "zettel": [
+    {
+     "zug": "sud:zettel-wechsel-frei",
+     "aus": false,
+     "text": "Schönen mit Kieselsol nur Pilsner",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    },
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "aus": false,
+     "text": "Kieselgurfilter −26.000 DM lässt Exportbier zu",
+     "verfahrenDanach": "rechner",
+     "entkommen": true
+    }
+   ],
+   "hinauf": [
+    {
+     "zug": "sud:fuehrung:erfahrung",
+     "aus": false,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:fuehrung:labor",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:fuehrung:rechner",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "rechner",
+   "gehalten": false
+  },
+  {
+   "epoche": 4,
+   "achse": "behandlung",
+   "ziel": "pasteur",
+   "zielText": "Tunnelpasteur −74.000 DM",
+   "preis": 74000,
+   "vorher": "filter",
+   "gesetzt": true,
+   "kasseVor": 272800,
+   "kasseNach": 198800,
+   "abgebucht": true,
+   "versuche": [
+    {
+     "name": "1 Maus auf natur",
+     "getan": "disabled",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf natur",
+     "getan": "geklickt",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf natur",
+     "getan": "el.click()",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf natur",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf natur",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf schoenen",
+     "getan": "disabled",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf schoenen",
+     "getan": "geklickt",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf schoenen",
+     "getan": "el.click()",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf schoenen",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf schoenen",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "1 Maus auf filter",
+     "getan": "disabled",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "2 disabled weg + Maus auf filter",
+     "getan": "geklickt",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "3 el.click() auf filter",
+     "getan": "el.click()",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "4 dispatchEvent auf filter",
+     "getan": "dispatchEvent",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "5 Tastatur auf filter",
+     "getan": "Enter+Space",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "6 Reiter zu/auf, dann Maus auf Vorgabe",
+     "getan": "disabled",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    },
+    {
+     "name": "8 pointer-events frei, Klick auf die Karte",
+     "getan": "geklickt",
+     "verfahrenDanach": "pasteur",
+     "entkommen": false
+    }
+   ],
+   "zettel": [],
+   "hinauf": [
+    {
+     "zug": "sud:behandlung:natur",
+     "aus": false,
+     "preis": 0,
+     "weg": false
+    },
+    {
+     "zug": "sud:behandlung:schoenen",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:behandlung:filter",
+     "aus": true,
+     "preis": 0,
+     "weg": true
+    },
+    {
+     "zug": "sud:behandlung:pasteur",
+     "aus": true,
+     "preis": 0,
+     "weg": false
+    }
+   ],
+   "verfahrenAmEnde": "pasteur",
+   "gehalten": true
+  }
+ ]
+}
