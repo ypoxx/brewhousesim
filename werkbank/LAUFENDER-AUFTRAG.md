@@ -46,6 +46,50 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DIE TOTE LEITERSPROSSE — und warum die Zahl an der Hand hängt
+
+**Der Befund des blinden Kritikers DER PREIS, Welle 7:** in 1600 und 1970 steht
+dieselbe unterste Leitersprosse Runde um Runde oben und wird **nie genommen**.
+Das ist derselbe Zustand, den DER PREIS in 1350 behoben hat — die Behebung
+(`nachZeit` plus Unterhalt je Sprosse) ist **epochenspezifisch geblieben**.
+
+> **ρ deckt das nicht auf.** In 1600 und 1970 liegt die Zahl ohnehin unter der
+> Latte; eine Leiter, die niemand steigt, sieht dort aus wie eine gesunde. Der
+> Befund wird erst beim **Spielen** sichtbar. Genau dafür gibt es den Kritiker.
+
+**Und dann hat der Builder sein eigenes Zählgerät gegen die Zahlen des Kritikers
+gehalten** — und einen Befund über die Messgröße selbst gefunden:
+
+| | Hand des Kritikers (gierig) | Hand der Aufsicht (`linie.mjs`) |
+|---|---|---|
+| **1600** | 14× dieselbe Sprosse | **14×** |
+| **1970** | 10 von 14 | **4** |
+| 1350 | sechs Namen | fünf |
+
+> **1600 stimmt auf die Ziffer — eine tote Leiter ist unter jeder Hand tot, und
+> das ist der harte Teil des Befunds.** In 1970 hängt die Zahl dagegen an der
+> Kaufregel: mit der sparsamen Hand sieht die Epoche halb so schlimm aus, wie
+> sie ist.
+>
+> **Bindend für die nächste Runde: wer diese Zahl nennt, nennt seine Hand dazu
+> und misst mit beiden.** Sonst wiederholt sich der Welle-6-Fall, in dem zwei
+> Tabellenzeilen unbrauchbar wurden, weil niemand sagen konnte, wer sie bewegt
+> hat. Das Gerät liegt im Repo: `werkbank/schuss/preis-w7/sprossen.py`, mit der
+> Begründung im Kopf, warum ρ die Frage nicht beantwortet.
+
+**Offen aus Welle 7, bewusst in eine eigene Runde verschoben** (Begründung des
+Builders, von der Aufsicht angenommen: ein Veto muss *messbar folgenlos* behoben
+werden, und vierzig Karten in drei Epochen im selben Zug hätten genau das
+unmöglich gemacht):
+- **Auflage 9** — die tote Sprosse in 1600 und 1970.
+- **Auflage 8** — die obere Leiterhälfte ist in 1350 nie bezahlbar.
+- **Auflage 10** — `festGesetzt` = 0 in 1884 und 1970.
+
+**Alle drei bewegen ρ. 1970 steht bei +0,699.** Drei Läufe je Epoche vorher und
+nachher, sonst ist die Runde nicht auswertbar.
+
+---
+
 ## DER VERÖFFENTLICHER LIEF MIT EINER ALTEN FASSUNG SEINER SELBST
 
 *Gefunden am 5. August vom blinden Kritiker DER PREIS — er fand seine eigene
