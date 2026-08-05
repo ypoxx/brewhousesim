@@ -1,0 +1,1017 @@
+{
+ "stand": "2026-08-05T22:53:00.059Z",
+ "fenster": {
+  "2752x1536": {
+   "e1": {
+    "zeile": {
+     "x": 33,
+     "y": 120,
+     "w": 908,
+     "h": 228
+    },
+    "werkbank": {
+     "x": 33,
+     "y": 120,
+     "w": 1266,
+     "h": 442
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 262,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 15 · im Keller liegen 4 Fass",
+      "titel": "DIE HÄUSER — wollen 15 · im Keller liegen 4 Fass",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "ANSCHLAGTAFEL",
+      "zahl": "mit Kreide an der Sudhauswand",
+      "titel": "ANSCHLAGTAFEL — mit Kreide an der Sudhauswand",
+      "breite": 200,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER KELLER",
+      "zahl": "4 von 12 Fass · 4 reif",
+      "titel": "DER KELLER — 4 von 12 Fass · 4 reif",
+      "breite": 151,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "OCHSENKARREN",
+      "zahl": "0 von 5 Fass · 0 von 4 Halten",
+      "titel": "OCHSENKARREN — 0 von 5 Fass · 0 von 4 Halten",
+      "breite": 192,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 161,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Bierzeiger und Zunftzeichen",
+      "titel": "DER RUF DES HAUSES — Bierzeiger und Zunftzeichen",
+      "breite": 241,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 150,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "7 auf dem Pflock",
+      "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 189,
+      "hoehe": 57,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   },
+   "e2": {
+    "zeile": {
+     "x": 33,
+     "y": 120,
+     "w": 908,
+     "h": 228
+    },
+    "werkbank": {
+     "x": 33,
+     "y": 120,
+     "w": 1266,
+     "h": 442
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 262,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 28 · im Keller liegen 8 Fass",
+      "titel": "DIE HÄUSER — wollen 28 · im Keller liegen 8 Fass",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "SUDORDNUNG",
+      "zahl": "auf der Tafel im Sudhaus",
+      "titel": "SUDORDNUNG — auf der Tafel im Sudhaus",
+      "breite": 163,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS GEWÖLBE",
+      "zahl": "8 von 24 Fass · 8 reif",
+      "titel": "DAS GEWÖLBE — 8 von 24 Fass · 8 reif",
+      "breite": 170,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "PFERDEFUHRWERK",
+      "zahl": "0 von 8 Fass · 0 von 5 Halten",
+      "titel": "PFERDEFUHRWERK — 0 von 8 Fass · 0 von 5 Halten",
+      "breite": 222,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 161,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Wirtshausschild und gemarkter Krug",
+      "titel": "DER RUF DES HAUSES — Wirtshausschild und gemarkter Krug",
+      "breite": 241,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 150,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "7 auf dem Pflock",
+      "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 189,
+      "hoehe": 57,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   },
+   "e3": {
+    "zeile": {
+     "x": 33,
+     "y": 120,
+     "w": 908,
+     "h": 228
+    },
+    "werkbank": {
+     "x": 33,
+     "y": 120,
+     "w": 1266,
+     "h": 442
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 262,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 146 · im Keller liegen 11 hl",
+      "titel": "DIE HÄUSER — wollen 146 · im Keller liegen 11 hl",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "SUDPLAN",
+      "zahl": "am schwarzen Brett der Mälzerei",
+      "titel": "SUDPLAN — am schwarzen Brett der Mälzerei",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER EISKELLER",
+      "zahl": "11 von 135 hl · 11 reif",
+      "titel": "DER EISKELLER — 11 von 135 hl · 11 reif",
+      "breite": 185,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "HALBER WAGEN",
+      "zahl": "0,0 von 60 hl · 0 von 10 Halten",
+      "titel": "HALBER WAGEN — 0,0 von 60 hl · 0 von 10 Halten",
+      "breite": 186,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 161,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Etikett, Plakat, Litfaßsäule",
+      "titel": "DER RUF DES HAUSES — Etikett, Plakat, Litfaßsäule",
+      "breite": 241,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 150,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "6 auf dem Pflock",
+      "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 189,
+      "hoehe": 57,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   },
+   "e4": {
+    "zeile": {
+     "x": 33,
+     "y": 120,
+     "w": 908,
+     "h": 169
+    },
+    "werkbank": {
+     "x": 33,
+     "y": 120,
+     "w": 1266,
+     "h": 382
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 262,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 534 · im Keller liegen 210 hl",
+      "titel": "DIE HÄUSER — wollen 534 · im Keller liegen 210 hl",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "SUDPLAN",
+      "zahl": "im Schaltraum, auf Formica",
+      "titel": "SUDPLAN — im Schaltraum, auf Formica",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE TANKS",
+      "zahl": "210 von 600 hl · 210 reif",
+      "titel": "DIE TANKS — 210 von 600 hl · 210 reif",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "LASTZUG",
+      "zahl": "0,0 von 450 hl · 0 von 3 Halten",
+      "titel": "LASTZUG — 0,0 von 450 hl · 0 von 3 Halten",
+      "breite": 150,
+      "hoehe": 92,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 161,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Kronkorken, Bandenwerbung, Fernsehspot",
+      "titel": "DER RUF DES HAUSES — Kronkorken, Bandenwerbung, Fernsehspot",
+      "breite": 241,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 150,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "6 auf dem Pflock",
+      "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 189,
+      "hoehe": 74,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   }
+  },
+  "1366x768": {
+   "e1": {
+    "zeile": {
+     "x": 16,
+     "y": 60,
+     "w": 451,
+     "h": 174
+    },
+    "werkbank": {
+     "x": 16,
+     "y": 60,
+     "w": 628,
+     "h": 293
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 130,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 15 · im Keller liegen 4 Fass",
+      "titel": "DIE HÄUSER — wollen 15 · im Keller liegen 4 Fass",
+      "breite": 82,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "ANSCHLAGTAFEL",
+      "zahl": "mit Kreide an der Sudhauswand",
+      "titel": "ANSCHLAGTAFEL — mit Kreide an der Sudhauswand",
+      "breite": 116,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER KELLER",
+      "zahl": "4 von 12 Fass · 4 reif",
+      "titel": "DER KELLER — 4 von 12 Fass · 4 reif",
+      "breite": 86,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "OCHSENKARREN",
+      "zahl": "0 von 5 Fass · 0 von 4 Halten",
+      "titel": "OCHSENKARREN — 0 von 5 Fass · 0 von 4 Halten",
+      "breite": 111,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 93,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Bierzeiger und Zunftzeichen",
+      "titel": "DER RUF DES HAUSES — Bierzeiger und Zunftzeichen",
+      "breite": 130,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 67,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "7 auf dem Pflock",
+      "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 107,
+      "hoehe": 40,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   },
+   "e2": {
+    "zeile": {
+     "x": 16,
+     "y": 60,
+     "w": 451,
+     "h": 187
+    },
+    "werkbank": {
+     "x": 16,
+     "y": 60,
+     "w": 628,
+     "h": 306
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 130,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 28 · im Keller liegen 8 Fass",
+      "titel": "DIE HÄUSER — wollen 28 · im Keller liegen 8 Fass",
+      "breite": 82,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "SUDORDNUNG",
+      "zahl": "auf der Tafel im Sudhaus",
+      "titel": "SUDORDNUNG — auf der Tafel im Sudhaus",
+      "breite": 94,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS GEWÖLBE",
+      "zahl": "8 von 24 Fass · 8 reif",
+      "titel": "DAS GEWÖLBE — 8 von 24 Fass · 8 reif",
+      "breite": 98,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "PFERDEFUHRWERK",
+      "zahl": "0 von 8 Fass · 0 von 5 Halten",
+      "titel": "PFERDEFUHRWERK — 0 von 8 Fass · 0 von 5 Halten",
+      "breite": 128,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 93,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Wirtshausschild und gemarkter Krug",
+      "titel": "DER RUF DES HAUSES — Wirtshausschild und gemarkter Krug",
+      "breite": 130,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 67,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "7 auf dem Pflock",
+      "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 107,
+      "hoehe": 40,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   },
+   "e3": {
+    "zeile": {
+     "x": 16,
+     "y": 60,
+     "w": 451,
+     "h": 174
+    },
+    "werkbank": {
+     "x": 16,
+     "y": 60,
+     "w": 628,
+     "h": 293
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 130,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 146 · im Keller liegen 11 hl",
+      "titel": "DIE HÄUSER — wollen 146 · im Keller liegen 11 hl",
+      "breite": 82,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "SUDPLAN",
+      "zahl": "am schwarzen Brett der Mälzerei",
+      "titel": "SUDPLAN — am schwarzen Brett der Mälzerei",
+      "breite": 64,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER EISKELLER",
+      "zahl": "11 von 135 hl · 11 reif",
+      "titel": "DER EISKELLER — 11 von 135 hl · 11 reif",
+      "breite": 106,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "HALBER WAGEN",
+      "zahl": "0,0 von 60 hl · 0 von 10 Halten",
+      "titel": "HALBER WAGEN — 0,0 von 60 hl · 0 von 10 Halten",
+      "breite": 107,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 93,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Etikett, Plakat, Litfaßsäule",
+      "titel": "DER RUF DES HAUSES — Etikett, Plakat, Litfaßsäule",
+      "breite": 130,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 67,
+      "hoehe": 53,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "6 auf dem Pflock",
+      "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 107,
+      "hoehe": 40,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   },
+   "e4": {
+    "zeile": {
+     "x": 16,
+     "y": 60,
+     "w": 451,
+     "h": 146
+    },
+    "werkbank": {
+     "x": 16,
+     "y": 60,
+     "w": 628,
+     "h": 265
+    },
+    "reiter": [
+     {
+      "wort": "OHNE DICH GESCHEHEN",
+      "zahl": "1 Zug",
+      "titel": "OHNE DICH GESCHEHEN — 1 Zug",
+      "breite": 130,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE HÄUSER",
+      "zahl": "wollen 534 · im Keller liegen 210 hl",
+      "titel": "DIE HÄUSER — wollen 534 · im Keller liegen 210 hl",
+      "breite": 82,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "SUDPLAN",
+      "zahl": "im Schaltraum, auf Formica",
+      "titel": "SUDPLAN — im Schaltraum, auf Formica",
+      "breite": 64,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DIE TANKS",
+      "zahl": "210 von 600 hl · 210 reif",
+      "titel": "DIE TANKS — 210 von 600 hl · 210 reif",
+      "breite": 72,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "LASTZUG",
+      "zahl": "0,0 von 450 hl · 0 von 3 Halten",
+      "titel": "LASTZUG — 0,0 von 450 hl · 0 von 3 Halten",
+      "breite": 65,
+      "hoehe": 79,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DAS SUDHAUS",
+      "zahl": "zugeklappt",
+      "titel": "DAS SUDHAUS",
+      "breite": 93,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "DER RUF DES HAUSES",
+      "zahl": "Kronkorken, Bandenwerbung, Fernsehspot",
+      "titel": "DER RUF DES HAUSES — Kronkorken, Bandenwerbung, Fernsehspot",
+      "breite": 130,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Das Erbe",
+      "zahl": "zugeklappt",
+      "titel": "Das Erbe",
+      "breite": 67,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Ortsmarken",
+      "zahl": "6 auf dem Pflock",
+      "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken",
+      "breite": 107,
+      "hoehe": 66,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     },
+     {
+      "wort": "Stadt zeigen",
+      "zahl": "",
+      "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+      "breite": 0,
+      "hoehe": 0,
+      "gekuerztWort": false,
+      "gekuerztZahl": false,
+      "ueberWort": false,
+      "ueberZahl": false
+     }
+    ]
+   }
+  }
+ }
+}

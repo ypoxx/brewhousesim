@@ -295,26 +295,40 @@
   overflow: hidden;
 }
 
+/* Auch die Ueberschrift bricht um. (Welle 8, aus demselben Grund wie die
+   Kennzahl darunter.) "OHNE DICH GESCHEHEN" braucht mehr als die 262
+   Bezugspixel, die ein Reiter hoechstens breit werden darf, und stand
+   deshalb auf der ENTWURFSLEINWAND als "OHNE DICH …" da — bei 1366x768
+   dazu "DER RUF DES …". Zwei Zeilen kosten Hoehe, und Hoehe hat die
+   Werkbank oben. `setzeAufschrift()` kuerzt nur, wenn scrollWidth die
+   Breite uebersteigt; mit Umbruch tut sie das nie, der Name steht ganz. */
 .knopf.stadt-reiter .wort {
   font-family: var(--serif);
   font-weight: 700;
   font-size: max(12px, calc(var(--s) * 20));
   letter-spacing: calc(var(--s) * 2.5);
   text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: break-word;
   max-width: 100%;
 }
 
+/* Die lebende Kennzahl BRICHT UM, seit die Zeile selbst umbricht. (Welle 8)
+
+   Sieben Wellen lang stand hier `white-space: nowrap` mit Auslassungspunkten,
+   weil die Werkbank EINE Zeile hoch sein musste — sie lag am unteren Rand und
+   waere sonst ins Stadtfenster gewachsen. Oben ist das kein Vertrag mehr: die
+   Werkbank haengt an der Kopfleiste und waechst nach unten in ihren eigenen
+   Streifen. Also darf "wollen 15 · im Keller liegen 4 Fass" auf zwei Zeilen
+   ganz dastehen, statt auf einer als "wollen 15 …".
+   Der Name darueber bleibt einzeilig — er ist die Ueberschrift. */
 .knopf.stadt-reiter .zahl {
   font-family: var(--mono);
   font-size: max(12px, calc(var(--s) * 14));
   letter-spacing: 0;
   color: #cba777;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: break-word;
   width: 0;
   min-width: 100%;
 }
