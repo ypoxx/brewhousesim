@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T20:09:38+00:00",
- "phase": "Die letzte offene Frage der Welle 7 läuft: ein fremdes Auge legt den laufenden Bildschirm blind neben die Zielbilder, je Epoche zweimal — einmal nach dem Laden und einmal nach zwanzig gespielten Wochen, weil ein leerer Hof nicht dasselbe ist wie ein bespielter. Es darf keinen einzigen Bericht der Builder sehen; dort steht, was sie getan zu haben glauben, und sehen soll es, was da ist. Vorher hat die Aufsicht die Nacharbeit von DER PREIS abgeschlossen nachgemessen: 1350 steht bei minus 0,245 / minus 0,170 / minus 0,336, drei byteweise identische Läufe. Damit ist auch die Gerätekontrolle geschlossen, die der Builder selbst als offen gemeldet hatte. Und DIE STADT hat die Aufsicht korrigiert: es sind drei Bauten mit epochenweisem Versatz, nicht zwei — der dritte kam ungefragt nachgemeldet, geprüft gegen die neue Regel, dass Gegrabenes bleibt und Gebautes umziehen darf. Kein gegrabenes Ding trägt noch einen Versatz. Am eingefrorenen Baum hat er dafür kein Byte verändert und alle fünf Dateien per Prüfsumme auf ihren alten Stand zurückgeprüft, weil der Blindvergleich aussteht.",
+ "stand": "2026-08-05T20:22:10+00:00",
+ "phase": "Der Blindvergleich der ersten Latte läuft, um 20:16 UTC lebendig. Daneben misst die Aufsicht noch 1970 nach der Nacharbeit von DER PREIS — und das ist eine Dehnung der eigenen Regel: dieser Lauf verbietet es, selbst zu messen, während ein Kritiker misst, weil parallele Browser die Zahl nachweislich verschieben. Die Aufnahmen eines Bildvergleichs sind kurz, aber sie sind Browser. Die Zahl für 1970 wird deshalb nur dann angenommen, wenn sie den dreifach belegten Wert Ziffer für Ziffer trifft; weicht sie ab, wird sie verworfen und nach dem Kritiker neu gefahren. 1350 ist bereits abgeschlossen und steht bei minus 0,245 / minus 0,170 / minus 0,336, drei byteweise identische Läufe.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T16:42:45+00:00",
-   "text": "NAME R1: Ruf = Bekanntheit x Deckung / 100. Bekanntheit waechst hoechstens 0,9 in der Woche (ein Braujahr hat 30) und ist je Epoche gedeckelt: 55 / 68 / 86 / 92 — 1350 kennen einen drei Gassen weit, 1970 die Republik. Deckung faellt in EINEM Urteil um 6 bis 22 und heilt umso schneller, je tiefer sie steht. Das ist 'langsam zu bauen, schnell zu verlieren' als Zahl statt als Behauptung."
-  },
   {
    "zeit": "2026-08-01T16:42:45+00:00",
    "text": "NAME R1: DER RUF IST KEINE ZAHL, DIE MIR GEHOERT (persona-markenstrategin: 'Marke ist eine Zahl, die jemand anders haelt'). Statt eines Punktekontos gibt es DAS REGISTER: datierte Urteile Fremder, nur wachsend, nichts loeschbar — und eine neue schwere Zeile KNIPST AELTERE GUTE AUS, die bleiben durchgestrichen stehen und ihr Gewicht wird der Deckung wieder abgezogen. Belegt am Schirm: werkbank/schuss/name-register-e1.png zeigt zwei erloschene Lobzeilen von 1350 unter zwei Tadelzeilen von 1351."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T20:09:38+00:00",
    "text": "Die letzte offene Frage der Welle 7 läuft: ein fremdes Auge legt den laufenden Bildschirm blind neben die Zielbilder, je Epoche zweimal — einmal nach dem Laden und einmal nach zwanzig gespielten Wochen, weil ein leerer Hof nicht dasselbe ist wie ein bespielter. Es darf keinen einzigen Bericht der Builder sehen; dort steht, was sie getan zu haben glauben, und sehen soll es, was da ist. Vorher hat die Aufsicht die Nacharbeit von DER PREIS abgeschlossen nachgemessen: 1350 steht bei minus 0,245 / minus 0,170 / minus 0,336, drei byteweise identische Läufe. Damit ist auch die Gerätekontrolle geschlossen, die der Builder selbst als offen gemeldet hatte. Und DIE STADT hat die Aufsicht korrigiert: es sind drei Bauten mit epochenweisem Versatz, nicht zwei — der dritte kam ungefragt nachgemeldet, geprüft gegen die neue Regel, dass Gegrabenes bleibt und Gebautes umziehen darf. Kein gegrabenes Ding trägt noch einen Versatz. Am eingefrorenen Baum hat er dafür kein Byte verändert und alle fünf Dateien per Prüfsumme auf ihren alten Stand zurückgeprüft, weil der Blindvergleich aussteht."
+  },
+  {
+   "zeit": "2026-08-05T20:22:10+00:00",
+   "text": "Der Blindvergleich der ersten Latte läuft, um 20:16 UTC lebendig. Daneben misst die Aufsicht noch 1970 nach der Nacharbeit von DER PREIS — und das ist eine Dehnung der eigenen Regel: dieser Lauf verbietet es, selbst zu messen, während ein Kritiker misst, weil parallele Browser die Zahl nachweislich verschieben. Die Aufnahmen eines Bildvergleichs sind kurz, aber sie sind Browser. Die Zahl für 1970 wird deshalb nur dann angenommen, wenn sie den dreifach belegten Wert Ziffer für Ziffer trifft; weicht sie ab, wird sie verworfen und nach dem Kritiker neu gefahren. 1350 ist bereits abgeschlossen und steht bei minus 0,245 / minus 0,170 / minus 0,336, drei byteweise identische Läufe."
   }
  ]
 }
