@@ -31,4 +31,43 @@ Klickprotokoll 1350 (33 Klicks, keine Seitenfehler): Grutkammer −13 Pf, Gärbo
 −15 Pf, Gewölbekeller −21 Pf, Ochsenstall −18 Pf gekauft; Rest WEITER bis Woche 30/30.
 Küferei blieb ungekauft — die Kasse trug sie nicht.
 
+| `spiel-e2-gespielt.png` | `4ab0b6ad3288856365c0e42f1b95b64e` |
+
+## Was zuerst auffällt, in allen vier Epochen gleich
+
+**Die Bühne ist gut. Was darüber liegt, ist das Problem.**
+
+Wenn man die drei Ebenen `ebene-marken`, `ebene-kopf`, `ebene-blatt` unsichtbar
+schaltet und sonst nichts ändert, steht ein Bild da, das dem Zielbild in Kamera, Ort,
+Farbe und Strich sehr nahe kommt — in 1970 stellenweise besser (die Mauerruine liegt
+dort in einer Grünanlage mit Bänken, der Schornstein raucht nicht mehr, die Straße hat
+Mittelstreifen und Autos). Das ist gemessen, nicht geschätzt:
+
+| | UI deckt die Fläche | unteres Drittel | unteres Sechstel |
+|---|---|---|---|
+| 1350 | **28,0 %** | 41,4 % | **61,0 %** |
+| 1600 | 28,4 % | 40,9 % | 59,8 % |
+| 1884 | 27,2 % | 41,7 % | 60,2 % |
+| 1970 | 28,0 % | 43,0 % | **59,9 %** |
+
+*(Bildpunktvergleich derselben Seite mit und ohne die drei Ebenen, Schwelle 18.)*
+
+**Das untere Sechstel ist die teuerste Stelle.** Genau dort trägt jedes Zielblatt seinen
+Vordergrund: 1350 der Marktstand mit gelber Plane, der Pferdefuhrwerk mit Fässern, die
+Gasse; 1970 die **Asphaltstraße mit Mittelstreifen, Käfer, Limousinen, Laterne** — das,
+was die Epoche IV im README ausmacht („Autos auf Asphalt"). Im Spiel liegen dort zwei
+durchgehende braune Bänder (Reiterzeile + BAUHOF-Lade), die 60 % dieses Streifens
+zudecken. Die Autos sind auf der Platte gemalt und im Spiel teilweise zu sehen — der
+Straßenrand davor ist es nicht.
+
+## Der Ort über 620 Jahre — das hält
+
+Die härteste Einzelforderung ist **erfüllt**. Flussbogen, Steinbrücke unten rechts,
+Mühlensteg oben rechts, `ST. MICHAEL`, `GASTHOF LINDENHOF`, die Hügelkette und die
+Kameraposition stehen in allen vier Epochen an derselben Stelle und wachsen richtig mit:
+Holzsteg 1350 → Steinbogen ab 1600 an derselben Stelle, Mühle 1350/1600 → Brauerei Adler
+1884 → Adler-Bräu mit Stahltanks 1970, Bahn und Bahnhof ab 1884, Fahrleitung 1970,
+Stadtmauer geschlossen 1350 → Ruine/Fragment in der Grünanlage 1970. Das ist eine echte
+Leistung und wird von keinem der Funde unten in Frage gestellt.
+
 *(wird laufend fortgeschrieben)*
