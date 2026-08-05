@@ -1,0 +1,845 @@
+{
+  "fenster": "1366x768",
+  "stand": "2026-08-05T12:49:39.538Z",
+  "e1": {
+    "gesamt": 20,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x878",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 516,
+        "text": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er ste"
+      },
+      {
+        "stueck": "fuhre",
+        "kette": ".fach.fach-fuhre.fach-hand-fuhre > .fu-brett.fu-tafel.fu-schiefer.stadt-zugeklappt > .fu-kerbholz > .fu-kerbsatz",
+        "richtung": "y",
+        "drin": "43x274",
+        "kasten": "29x274",
+        "zuviel_y": 14,
+        "zuviel_x": 0,
+        "text": "Der Grutherr schneidet die Kerbe ins Holz und zahlt aus. Zu "
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x152",
+        "kasten": "13x118",
+        "zuviel_y": 0,
+        "zuviel_x": 34,
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x76",
+        "kasten": "13x61",
+        "zuviel_y": 0,
+        "zuviel_x": 15,
+        "text": "DIE HÄUSER"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x253",
+        "kasten": "13x61",
+        "zuviel_y": 0,
+        "zuviel_x": 192,
+        "text": "wollen 15 · im Keller liegen 4 Fass"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x110",
+        "kasten": "13x87",
+        "zuviel_y": 0,
+        "zuviel_x": 23,
+        "text": "ANSCHLAGTAFEL"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x210",
+        "kasten": "13x87",
+        "zuviel_y": 0,
+        "zuviel_x": 123,
+        "text": "mit Kreide an der Sudhauswand"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x80",
+        "kasten": "13x64",
+        "zuviel_y": 0,
+        "zuviel_x": 16,
+        "text": "DER KELLER"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x159",
+        "kasten": "13x64",
+        "zuviel_y": 0,
+        "zuviel_x": 95,
+        "text": "4 von 12 Fass · 4 reif"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x105",
+        "kasten": "13x83",
+        "zuviel_y": 0,
+        "zuviel_x": 22,
+        "text": "OCHSENKARREN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x210",
+        "kasten": "13x83",
+        "zuviel_y": 0,
+        "zuviel_x": 127,
+        "text": "0 von 5 Fass · 0 von 4 Halten"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x87",
+        "kasten": "13x69",
+        "zuviel_y": 0,
+        "zuviel_x": 18,
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x72",
+        "kasten": "13x69",
+        "zuviel_y": 0,
+        "zuviel_x": 3,
+        "text": "zugeklappt"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x134",
+        "kasten": "13x106",
+        "zuviel_y": 0,
+        "zuviel_x": 28,
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x195",
+        "kasten": "13x106",
+        "zuviel_y": 0,
+        "zuviel_x": 89,
+        "text": "Bierzeiger und Zunftzeichen"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x61",
+        "kasten": "13x49",
+        "zuviel_y": 0,
+        "zuviel_x": 12,
+        "text": "Das Erbe"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x72",
+        "kasten": "13x49",
+        "zuviel_y": 0,
+        "zuviel_x": 23,
+        "text": "zugeklappt"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .wort",
+        "richtung": "x",
+        "drin": "13x101",
+        "kasten": "13x80",
+        "zuviel_y": 0,
+        "zuviel_x": 21,
+        "text": "Ortsmarken"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .zahl",
+        "richtung": "x",
+        "drin": "13x116",
+        "kasten": "13x80",
+        "zuviel_y": 0,
+        "zuviel_x": 36,
+        "text": "7 auf dem Pflock"
+      }
+    ]
+  },
+  "e2": {
+    "gesamt": 21,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x787",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 425,
+        "text": "Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das "
+      },
+      {
+        "stueck": "sud",
+        "kette": ".sud-achse > .sud-optionen > .sud-karte.fest > .sud-kartensatz",
+        "richtung": "x",
+        "drin": "374x80",
+        "kasten": "70x70",
+        "zuviel_y": 304,
+        "zuviel_x": 10,
+        "text": "Der Rat schreibt dem Haus eine feste Weizenzuteilung ins Kor"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-kopf > .nm-medium",
+        "richtung": "x",
+        "drin": "9x110",
+        "kasten": "9x93",
+        "zuviel_y": 0,
+        "zuviel_x": 17,
+        "text": "Wirtshausschild und gemarkter Krug"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x152",
+        "kasten": "13x118",
+        "zuviel_y": 0,
+        "zuviel_x": 34,
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x76",
+        "kasten": "13x60",
+        "zuviel_y": 0,
+        "zuviel_x": 16,
+        "text": "DIE HÄUSER"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x253",
+        "kasten": "13x60",
+        "zuviel_y": 0,
+        "zuviel_x": 193,
+        "text": "wollen 28 · im Keller liegen 8 Fass"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x88",
+        "kasten": "13x69",
+        "zuviel_y": 0,
+        "zuviel_x": 19,
+        "text": "SUDORDNUNG"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x173",
+        "kasten": "13x69",
+        "zuviel_y": 0,
+        "zuviel_x": 104,
+        "text": "auf der Tafel im Sudhaus"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x92",
+        "kasten": "13x72",
+        "zuviel_y": 0,
+        "zuviel_x": 20,
+        "text": "DAS GEWÖLBE"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x159",
+        "kasten": "13x72",
+        "zuviel_y": 0,
+        "zuviel_x": 87,
+        "text": "8 von 24 Fass · 8 reif"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x122",
+        "kasten": "13x96",
+        "zuviel_y": 0,
+        "zuviel_x": 26,
+        "text": "PFERDEFUHRWERK"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x210",
+        "kasten": "13x96",
+        "zuviel_y": 0,
+        "zuviel_x": 114,
+        "text": "0 von 8 Fass · 0 von 5 Halten"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x87",
+        "kasten": "13x68",
+        "zuviel_y": 0,
+        "zuviel_x": 19,
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x72",
+        "kasten": "13x68",
+        "zuviel_y": 0,
+        "zuviel_x": 4,
+        "text": "zugeklappt"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x134",
+        "kasten": "13x105",
+        "zuviel_y": 0,
+        "zuviel_x": 29,
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x246",
+        "kasten": "13x105",
+        "zuviel_y": 0,
+        "zuviel_x": 141,
+        "text": "Wirtshausschild und gemarkter Krug"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x61",
+        "kasten": "13x48",
+        "zuviel_y": 0,
+        "zuviel_x": 13,
+        "text": "Das Erbe"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x72",
+        "kasten": "13x48",
+        "zuviel_y": 0,
+        "zuviel_x": 24,
+        "text": "zugeklappt"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .wort",
+        "richtung": "x",
+        "drin": "13x101",
+        "kasten": "13x79",
+        "zuviel_y": 0,
+        "zuviel_x": 22,
+        "text": "Ortsmarken"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .zahl",
+        "richtung": "x",
+        "drin": "13x116",
+        "kasten": "13x79",
+        "zuviel_y": 0,
+        "zuviel_x": 37,
+        "text": "7 auf dem Pflock"
+      }
+    ]
+  },
+  "e3": {
+    "gesamt": 19,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x541",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 179,
+        "text": "Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein "
+      },
+      {
+        "stueck": "fuhre",
+        "kette": ".fach.fach-fuhre.fach-hand-fuhre > .fu-brett.fu-tafel.fu-schiefer.stadt-zugeklappt > .fu-kerbholz > .fu-kerbsatz",
+        "richtung": "y",
+        "drin": "43x274",
+        "kasten": "29x274",
+        "zuviel_y": 14,
+        "zuviel_x": 0,
+        "text": "Ein Wechsel auf drei Monate, akzeptiert vom Malzhändler. Fäl"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x152",
+        "kasten": "13x118",
+        "zuviel_y": 0,
+        "zuviel_x": 34,
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x76",
+        "kasten": "13x64",
+        "zuviel_y": 0,
+        "zuviel_x": 12,
+        "text": "DIE HÄUSER"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x253",
+        "kasten": "13x64",
+        "zuviel_y": 0,
+        "zuviel_x": 189,
+        "text": "wollen 146 · im Keller liegen 11 hl"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x58",
+        "kasten": "13x48",
+        "zuviel_y": 0,
+        "zuviel_x": 10,
+        "text": "SUDPLAN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x224",
+        "kasten": "13x48",
+        "zuviel_y": 0,
+        "zuviel_x": 176,
+        "text": "am schwarzen Brett der Mälzerei"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x100",
+        "kasten": "13x84",
+        "zuviel_y": 0,
+        "zuviel_x": 16,
+        "text": "DER EISKELLER"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x166",
+        "kasten": "13x84",
+        "zuviel_y": 0,
+        "zuviel_x": 82,
+        "text": "11 von 135 hl · 11 reif"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x101",
+        "kasten": "13x84",
+        "zuviel_y": 0,
+        "zuviel_x": 17,
+        "text": "HALBER WAGEN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x224",
+        "kasten": "13x84",
+        "zuviel_y": 0,
+        "zuviel_x": 140,
+        "text": "0,0 von 60 hl · 0 von 10 Halten"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x87",
+        "kasten": "13x72",
+        "zuviel_y": 0,
+        "zuviel_x": 15,
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x134",
+        "kasten": "13x111",
+        "zuviel_y": 0,
+        "zuviel_x": 23,
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x202",
+        "kasten": "13x111",
+        "zuviel_y": 0,
+        "zuviel_x": 91,
+        "text": "Etikett, Plakat, Litfaßsäule"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x61",
+        "kasten": "13x51",
+        "zuviel_y": 0,
+        "zuviel_x": 10,
+        "text": "Das Erbe"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x72",
+        "kasten": "13x51",
+        "zuviel_y": 0,
+        "zuviel_x": 21,
+        "text": "zugeklappt"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .wort",
+        "richtung": "x",
+        "drin": "13x101",
+        "kasten": "13x84",
+        "zuviel_y": 0,
+        "zuviel_x": 17,
+        "text": "Ortsmarken"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .zahl",
+        "richtung": "x",
+        "drin": "13x116",
+        "kasten": "13x84",
+        "zuviel_y": 0,
+        "zuviel_x": 32,
+        "text": "6 auf dem Pflock"
+      }
+    ]
+  },
+  "e4": {
+    "gesamt": 20,
+    "kaesten": [
+      {
+        "stueck": "gegner",
+        "kette": ".fach.fach-gegner.fach-marken-gegner > .gg-band.amort.stadt-zugeklappt > .gg-bandzeile.neu > .was",
+        "richtung": "x",
+        "drin": "11x421",
+        "kasten": "11x362",
+        "zuviel_y": 0,
+        "zuviel_x": 59,
+        "text": "Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-kopf > .nm-medium",
+        "richtung": "x",
+        "drin": "9x128",
+        "kasten": "9x93",
+        "zuviel_y": 0,
+        "zuviel_x": 35,
+        "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+      },
+      {
+        "stueck": "name",
+        "kette": ".fach.fach-name.fach-kopf-name > .nm-band.stadt-zugeklappt > .nm-balken.nm-bekannt > .nm-schiene",
+        "richtung": "y",
+        "drin": "6x140",
+        "kasten": "4x140",
+        "zuviel_y": 2,
+        "zuviel_x": 0,
+        "text": ""
+      },
+      {
+        "stueck": "erbe",
+        "kette": ".erb-leiste > .erb-knoepfe > .knopf.erb-knopf.erb-uebergabe > .wort",
+        "richtung": "x",
+        "drin": "8x125",
+        "kasten": "8x78",
+        "zuviel_y": 0,
+        "zuviel_x": 47,
+        "text": "Versorgungszusage · jährlich"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x152",
+        "kasten": "13x118",
+        "zuviel_y": 0,
+        "zuviel_x": 34,
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x76",
+        "kasten": "13x72",
+        "zuviel_y": 0,
+        "zuviel_x": 4,
+        "text": "DIE HÄUSER"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x260",
+        "kasten": "13x72",
+        "zuviel_y": 0,
+        "zuviel_x": 188,
+        "text": "wollen 534 · im Keller liegen 210 hl"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x58",
+        "kasten": "13x55",
+        "zuviel_y": 0,
+        "zuviel_x": 3,
+        "text": "SUDPLAN"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x188",
+        "kasten": "13x55",
+        "zuviel_y": 0,
+        "zuviel_x": 133,
+        "text": "im Schaltraum, auf Formica"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x66",
+        "kasten": "13x63",
+        "zuviel_y": 0,
+        "zuviel_x": 3,
+        "text": "DIE TANKS"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x181",
+        "kasten": "13x63",
+        "zuviel_y": 0,
+        "zuviel_x": 118,
+        "text": "210 von 600 hl · 210 reif"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x59",
+        "kasten": "13x56",
+        "zuviel_y": 0,
+        "zuviel_x": 3,
+        "text": "LASTZUG"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x224",
+        "kasten": "13x56",
+        "zuviel_y": 0,
+        "zuviel_x": 168,
+        "text": "0,0 von 450 hl · 0 von 3 Halten"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x87",
+        "kasten": "13x82",
+        "zuviel_y": 0,
+        "zuviel_x": 5,
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x134",
+        "kasten": "13x118",
+        "zuviel_y": 0,
+        "zuviel_x": 16,
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x275",
+        "kasten": "13x118",
+        "zuviel_y": 0,
+        "zuviel_x": 157,
+        "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .wort",
+        "richtung": "x",
+        "drin": "13x61",
+        "kasten": "13x58",
+        "zuviel_y": 0,
+        "zuviel_x": 3,
+        "text": "Das Erbe"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter > .zahl",
+        "richtung": "x",
+        "drin": "13x72",
+        "kasten": "13x58",
+        "zuviel_y": 0,
+        "zuviel_x": 14,
+        "text": "zugeklappt"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .wort",
+        "richtung": "x",
+        "drin": "13x101",
+        "kasten": "13x95",
+        "zuviel_y": 0,
+        "zuviel_x": 6,
+        "text": "Ortsmarken"
+      },
+      {
+        "stueck": "stadt",
+        "kette": ".stadt-werkbank > .stadt-reiterzeile.greifbar > .knopf.stadt-reiter.marken > .zahl",
+        "richtung": "x",
+        "drin": "13x116",
+        "kasten": "13x95",
+        "zuviel_y": 0,
+        "zuviel_x": 21,
+        "text": "6 auf dem Pflock"
+      }
+    ]
+  },
+  "summe": 80,
+  "summe_je_stueck": {
+    "stadt": 66,
+    "name": 6,
+    "gegner": 4,
+    "fuhre": 2,
+    "sud": 1,
+    "erbe": 1
+  },
+  "summe_je_kette": {
+    "stadt · .knopf.stadt-reiter > .wort": 32,
+    "stadt · .knopf.stadt-reiter > .zahl": 26,
+    "gegner · .gg-bandzeile.neu > .was": 4,
+    "name · .nm-balken.nm-bekannt > .nm-schiene": 4,
+    "stadt · .knopf.stadt-reiter.marken > .wort": 4,
+    "stadt · .knopf.stadt-reiter.marken > .zahl": 4,
+    "fuhre · .fu-kerbholz > .fu-kerbsatz": 2,
+    "name · .nm-kopf > .nm-medium": 2,
+    "sud · .sud-karte.fest > .sud-kartensatz": 1,
+    "erbe · .knopf.erb-knopf.erb-uebergabe > .wort": 1
+  }
+}

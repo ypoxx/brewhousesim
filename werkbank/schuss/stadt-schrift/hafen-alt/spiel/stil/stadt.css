@@ -117,10 +117,10 @@
 .stadt-hausschild .zeile {
   font-weight: 700;
   letter-spacing: calc(var(--s) * 1.5);
-  font-size: max(12px, calc(var(--s) * 21));
+  font-size: calc(var(--s) * 21);
   white-space: nowrap;
 }
-.stadt-hausschild.klein .zeile { font-size: max(12px, calc(var(--s) * 17)); }
+.stadt-hausschild.klein .zeile { font-size: calc(var(--s) * 17); }
 .stadt-hausschild .mitte {
   display: block;
   margin: calc(var(--s) * 1) 0;
@@ -153,7 +153,7 @@
 .stadt-hausschild.hell .zeile {
   font-family: var(--sans);
   font-weight: 700;
-  font-size: max(12px, calc(var(--s) * 20));
+  font-size: calc(var(--s) * 20);
   letter-spacing: calc(var(--s) * 0.5);
 }
 
@@ -243,7 +243,7 @@
 .knopf.stadt-reiter .wort {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: max(12px, calc(var(--s) * 20));
+  font-size: calc(var(--s) * 20);
   letter-spacing: calc(var(--s) * 2.5);
   text-transform: uppercase;
   white-space: nowrap;
@@ -254,7 +254,7 @@
 
 .knopf.stadt-reiter .zahl {
   font-family: var(--mono);
-  font-size: max(12px, calc(var(--s) * 14));
+  font-size: calc(var(--s) * 14);
   letter-spacing: 0;
   color: #cba777;
   white-space: nowrap;
@@ -269,7 +269,7 @@
   position: absolute;
   right: calc(var(--s) * 7);
   top: calc(var(--s) * 5);
-  font-size: max(12px, calc(var(--s) * 12));
+  font-size: calc(var(--s) * 12);
   color: rgba(242, 220, 178, 0.5);
 }
 
@@ -318,7 +318,7 @@
 .stadt-bauhof .kopf .wort {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: max(12px, calc(var(--s) * 24));
+  font-size: calc(var(--s) * 24);
   letter-spacing: calc(var(--s) * 4);
   color: #f6e3bd;
 }
@@ -336,7 +336,7 @@
   padding: 0 calc(var(--s) * 9) calc(var(--s) * 1);
   font-family: var(--serif);
   font-weight: 700;
-  font-size: max(12px, calc(var(--s) * 22));
+  font-size: calc(var(--s) * 22);
   letter-spacing: calc(var(--s) * 3);
   color: #c9a877;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.22));
@@ -365,7 +365,7 @@
 .stadt-bauhof .bauzeile .nutzen { color: #e3c79a; }
 .stadt-bauhof .kopf .zahl {
   font-family: var(--mono);
-  font-size: max(12px, calc(var(--s) * 16));
+  font-size: calc(var(--s) * 16);
   color: #d5b183;
 }
 
@@ -389,7 +389,7 @@
   height: calc(var(--s) * 46);
   min-height: 0;
   padding: calc(var(--s) * 4) calc(var(--s) * 10);
-  font-size: max(12px, calc(var(--s) * 19));
+  font-size: calc(var(--s) * 19);
   gap: calc(var(--s) * 6);
   border-radius: calc(var(--s) * 3);
   white-space: normal;
@@ -416,18 +416,16 @@
    mit dem Boden mit, und was darueber hinausgeht, ist mit `overflow-y: auto`
    ERREICHBAR statt verschwiegen. Denselben Weg ist DER SUD in Welle 6
    gegangen; er ist hier nachgemessen und nicht abgeschrieben. */
-.stadt-bauhof .bauzeile .knopf .wort {
+.stadt-bauhof .knopf .wort {
   flex: 1 1 auto;
-  min-width: 0;
-  max-height: 2em;              /* zwei Zeilen bei line-height 1.0 — in ZEILEN, nicht in --s */
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  scrollbar-width: none;        /* der Kasten rollt, er zeigt nur keinen Balken */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: calc(var(--s) * 38);
 }
-.stadt-bauhof .bauzeile .knopf .wort::-webkit-scrollbar { width: 0; height: 0; }
 .stadt-bauhof .knopf .preis {
-  font-size: max(12px, calc(var(--s) * 19));
+  font-size: calc(var(--s) * 19);
   padding-left: calc(var(--s) * 8);
   white-space: nowrap;
 }
@@ -435,7 +433,7 @@
 .stadt-bauhof .nutzen {
   padding: calc(var(--s) * 2) calc(var(--s) * 4) 0;
   font-family: var(--mono);
-  font-size: max(12px, calc(var(--s) * 15));
+  font-size: calc(var(--s) * 15);
   color: #e3c79a;
   letter-spacing: calc(var(--s) * 0.5);
   white-space: nowrap;
@@ -444,7 +442,7 @@
 }
 
 .stadt-bauhof .leer {
-  font-size: max(12px, calc(var(--s) * 17));
+  font-size: calc(var(--s) * 17);
   line-height: 1.25;
   color: #dcbe92;
   font-style: italic;
@@ -488,7 +486,7 @@
 .kopfleiste .tafel::after {
   color: #b98d55;
   font-family: var(--serif);
-  font-size: max(12px, calc(var(--s) * 25));
+  font-size: calc(var(--s) * 25);
   line-height: 1;
 }
 .kopfleiste .tafel::before { content: "["; }
@@ -496,7 +494,7 @@
 
 .kopfleiste .tafel .marke {
   font-family: var(--serif);
-  font-size: max(12px, calc(var(--s) * 19));
+  font-size: calc(var(--s) * 19);
   letter-spacing: calc(var(--s) * 3);
   color: #dcb180;
   opacity: 1;
@@ -504,7 +502,7 @@
 .kopfleiste .tafel .wert {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: max(12px, calc(var(--s) * 26));
+  font-size: calc(var(--s) * 26);
   letter-spacing: calc(var(--s) * 1.5);
   color: #fbeccb;
 }
@@ -561,169 +559,3 @@
   pointer-events: none;
 }
 
-/* ==========================================================================
-   5 — UNTERHALB DER ENTWURFSLEINWAND: WAS DER SCHRIFTBODEN KOSTET, UND WER
-       IHN BEZAHLT.  (Welle 7)
-
-   Jede Schriftregel dieser Datei traegt jetzt max(12px, calc(var(--s) * N)).
-   Auf der Entwurfsleinwand 2752x1536 aendert das nichts — dort ist --s = 1,
-   und jedes N dieser Datei ist >= 12. Latte 1 vergleicht dort blind und
-   bleibt unberuehrt; nachgemessen, siehe Bericht.
-
-   DARUNTER aendert es sehr wohl etwas, und zwar nicht nur die Schrift. Bei
-   1366x768 ist --s = 0,496: die Kennzahl im Reiter stand bei 6,9 px und
-   steht jetzt bei 12, der Nutzen im Bauhof bei 7,4 und steht bei 12. Ohne
-   Gegenrechnung wuchs die Werkbank gemessen von 12,66 auf 14,56 Prozent der
-   Buehnenhoehe — sie haette sich 1,9 Punkte ins Stadtfenster geschoben, und
-   in 1884 verdeckte sie prompt einen dritten fremden Zug (2 -> 3).
-
-   DAS IST DER PUNKT, AN DEM DIESE ARBEIT AN DIE ZWEITE LATTE STOESST.
-   Die Aufsicht hat am 5. August mit einem A/B am selben Commit gezeigt, dass
-   Groessen die Wirtschaft bewegen: 1970 mit Knopfboden rho +0,699, ohne
-   -0,112. Der Mechanismus ist Geometrie. Wer hier Schrift vergroessert, ohne
-   den Platz zurueckzugeben, dreht an rho — und rho gehoert in dieser Welle
-   einem anderen Stueck.
-
-   Also gibt der Bau zurueck, was die Schrift nimmt: Polster, Abstaende und
-   Zeilenhoehen weichen, die Schrift bleibt bei 12 px. Der Deckel des
-   Bauhofknopfes steht in ZEILEN (2em) und nicht mehr in Bezugspixeln,
-   waechst also mit dem Boden mit statt gegen ihn.
-
-   Gemessen mit werkbank/schuss/stadt-schrift/gestalt.mjs, vier Epochen,
-   beide Fenster; die Zahlen stehen im Bericht.
-   ========================================================================== */
-@media (max-width: 2751px), (max-height: 1535px) {
-
-  /* WIE DIE GEGENRECHNUNG GEBAUT IST — und warum sie nicht einfach ein paar
-     kleinere Zahlen sind.
-
-     Der Boden legt genau `max(0px, 12px - var(--s) * N)` je Schriftregel zu.
-     Diese Zulage ist bei 1366x768 gross und bei 1920x1000 fast null: die
-     Kennzahl im Reiter (N = 14) gewinnt dort 2,9 px, hier 5,1. Eine
-     Gegenrechnung in festen Bezugspixeln waere deshalb an einem der beiden
-     Fenster immer falsch — und zwar in beide Richtungen zugleich: erst
-     gemessen wuchs die Werkbank bei 1366 um 14,6 px, waehrend dieselbe
-     Gegenrechnung sie bei 1920 um 6,7 px SCHRUMPFEN liess. Beides bewegt
-     die Geometrie, und Geometrie bewegt rho.
-
-     Also rechnet die Gegenrechnung dieselbe Formel nach: sie nimmt genau so
-     viel Polster weg, wie der Boden an Schrift zugelegt hat, und wird auf
-     der Entwurfsleinwand von selbst null. */
-  #buehne .stadt-werkbank {
-    --zu-reiter: calc(max(0px, 12px - var(--s) * 20) + max(0px, 12px - var(--s) * 14));
-  }
-
-  /* --- Der Reiter: zwei Zeilen Schrift, das Polster weicht. --- */
-  #buehne .knopf.stadt-reiter {
-    padding-top: max(0px, calc(var(--s) * 4 - 0.45 * var(--zu-reiter)));
-    padding-bottom: max(0px, calc(var(--s) * 6 - 0.80 * var(--zu-reiter)));
-    gap: 0;
-  }
-
-  /* --- Der Bauhof: Kopfzeile, fuenf Knoepfe, fuenf Nutzenzeilen. --- */
-  #buehne .stadt-bauhof {
-    padding-top: calc(var(--s) * 2.5);
-    padding-bottom: calc(var(--s) * 2.5);
-  }
-  #buehne .stadt-bauhof .kopf {
-    padding-bottom: 0;
-    margin-bottom: calc(var(--s) * 3);
-  }
-
-  /* Die feste Hoehe der Bauzeile — der Vertrag der Werkbank. Sie stand in
-     Bezugspixeln (46) und steht jetzt in Zeilen: zwei Zeilen Name plus
-     Polster und Rand. Damit ist sie auf beiden Seiten des Kastens gleich,
-     wie es der Vertrag verlangt, UND sie schneidet den Namen nicht mehr ab,
-     sobald der Boden greift. */
-  #buehne .stadt-bauhof .bauzeile .knopf { height: calc(2em + var(--s) * 12); }
-
-  #buehne .stadt-bauhof .nutzen { padding-top: 0; }
-
-  #buehne .stadt-werkbank { gap: calc(var(--s) * 3); }
-
-  /* Der Grunderwerbsvermerk auf dem Hausschild — die einzige Schriftregel
-     mit N < 12 und deshalb die einzige, deren Boden hier unten steht. */
-  #buehne .stadt-hausschild .gegr { font-size: 12px; }
-}
-
-/* ==========================================================================
-   6 — UND WENN DIE BUEHNE WIRKLICH NIEDRIG WIRD: PLATZ SCHLAEGT GRUNDLINIE.
-
-   Der Schalter oben greift ueberall unterhalb der Entwurfsleinwand — auch
-   bei 1920x1000, wo die Werkbank 125 px Budget hat und 123 braucht. Bei
-   1366x768 sind es nur noch 95 px Budget bei 762 px Buehnenhoehe, und dort
-   reicht die Gegenrechnung oben nicht: gemessen 112,8 px, also 17,8 zu viel.
-   Die Werkbank schob sich damit 2,0 Punkte weiter ins Stadtfenster und
-   verdeckte in 1884 einen dritten fremden Zug (fuhre:laden:hirsch) — das
-   ist kein Schoenheitsfehler, das ist ein Zug, den ein anderes Stueck
-   verliert.
-
-   DIE SCHWELLE IST GERECHNET, NICHT GEWAEHLT: 900 Bezugspixel Buehnenhoehe.
-   1536 * (900/1536) = 900 px hoch, und dieselbe Buehne ist dann
-   2752 * (900/1536) = 1612 px breit. Oberhalb davon — 1920x1000 gehoert
-   dazu, also das Fenster der Messhand — aendert sich hier nichts, und die
-   Geometrie, an der rho haengt, bleibt unberuehrt. Nachgemessen: 12,344 %
-   gegen 12,320 % vorher, ein Unterschied von 0,2 px.
-
-   Was hier weicht, ist ausschliesslich Zwischenraum. Keine Zeile, kein
-   Knopf, keine Zahl verschwindet.
-   ========================================================================== */
-@media (max-width: 1612px), (max-height: 900px) {
-
-  /* Die Kopfzeile des Bauhofs richtete sich an der GRUNDLINIE aus. Das ist
-     schoen und kostet hier 7 px: die beiden Seitenknoepfe liegen auf dem
-     Knopfboden (24 px), und die Grundlinie schiebt die Zahlenzeile daneben
-     noch einmal nach unten. Mittig ausgerichtet ist die Zeile so hoch wie
-     ihr hoechstes Kind und keinen Punkt hoeher. */
-  #buehne .stadt-bauhof .kopf { align-items: center; }
-
-  /* Zwei Zeilen Reiterschrift mit dem engsten Zeilenabstand, der noch nicht
-     zusammenklebt (1,08 statt der Vorgabe 1,25 der Serifenschrift). */
-  #buehne .knopf.stadt-reiter .wort,
-  #buehne .knopf.stadt-reiter .zahl { line-height: 1.08; }
-
-  /* Die Nutzenzeile ist einzeilig und braucht keinen Durchschuss. */
-  #buehne .stadt-bauhof .nutzen { line-height: 1; }
-
-  /* Der Bauknopf traegt zwei Zeilen Name plus seinen Rand — und nichts
-     sonst. Das Polster oben und unten faellt weg; links und rechts bleibt
-     es, sonst klebt der Name am Rand. Die Hoehe steht weiter in ZEILEN,
-     ist also auf beiden Seiten des Kastens dieselbe. */
-  #buehne .stadt-bauhof .bauzeile .knopf {
-    padding-top: 0;
-    padding-bottom: 0;
-    height: calc(2em + var(--s) * 4);
-  }
-
-  /* --- DIE SPERRUNG, die der Boden nach sich zieht -----------------------
-     Der Boden macht die Schrift breiter, nicht nur hoeher, und drei Kaesten
-     liefen daran ueber, die vorher passten. Die Sperrung ist Gestaltung und
-     kein Inhalt — sie weicht als erste. Gemessen bei 1366x768:
-       .knopf.stadt-seite .wort  ("VERSATZ", "ABBRUCH")   4–5 px zu breit
-       .bauzeile .nutzen                                 bis 26 px zu breit
-     Mit 1 statt 3 bzw. 0 statt 0,5 Bezugspixeln Sperrung passen sie wieder. */
-  #buehne .knopf.stadt-seite { letter-spacing: calc(var(--s) * 1); }
-  /* Die Nutzenzeile stand in der Schreibmaschine. Bei 12 px braucht
-     "fährt, wann das Haus will" darin 185 px und hat 169 — drei Zeichen
-     fielen weg. Es ist ein SATZ und keine Zahlenspalte; in der serifenlosen
-     Schrift misst er 145 px und steht ganz da. Die Zahlen der Nutzenzeile
-     stehen ohnehin einzeln ("+4 Plätze"), nicht untereinander. */
-  #buehne .stadt-bauhof .nutzen { letter-spacing: 0; font-family: var(--sans); }
-  #buehne .knopf.stadt-reiter .wort { letter-spacing: calc(var(--s) * 0.4); }
-
-  /* --- DIE WERKBANK WIRD BREITER, WEIL RECHTS PLATZ IST --------------------
-     Zehn Reiter teilen sich bei 1366x768 eine Zeile von 843 px, also 84 px
-     je Reiter. "DER RUF DES HAUSES" braucht bei 12 px 142 px, die Kennzahl
-     darunter ("wollen 15 · im Keller liegen 4 Fass") 253. Beides steht mit
-     Auslassungspunkten da, und das zaehlt die vierte Latte als
-     abgeschnittenen Text — zu Recht.
-
-     Die Werkbank reichte von 1,2 bis 63,8 Prozent der Breite. Der
-     WEITER-Knopf beginnt bei 83,8. Dazwischen lagen zwanzig Prozentpunkte
-     ungenutzter Breite, waehrend die Reiter oben Buchstaben verloren. Nur
-     unterhalb der Schwelle, also dort, wo der Boden greift; oberhalb bleibt
-     die Aufteilung des Entwurfs unangetastet, und mit ihr die Geometrie,
-     an der rho haengt. */
-  #buehne .stadt-werkbank { width: 80%; }
-  #buehne .stadt-reiterzeile { padding-left: 0; padding-right: 0; }
-}

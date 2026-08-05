@@ -62,14 +62,18 @@ for (const e of [1, 2, 3, 4]) {
       /* Welche Regel greift? Die zuletzt passende gewinnt in der Reihenfolge
          der Blaetter — genau das macht der Browser auch, solange keine
          Spezifitaet dazwischenkommt. Zusaetzlich der Stilwert am Element. */
-      let quelle = el.style && el.style.fontSize ? 'style="" ' + el.style.fontSize : null;
-      const passend = [];
-      for (const rg of regeln) {
-        try { if (el.matches(rg.sel)) passend.push(rg); } catch (x) { /* :hover u.ae. */ }
-      }
-      if (!quelle && passend.length) {
-        const z = passend[passend.length - 1];
-        quelle = z.datei + ' { ' + z.sel + ' } ' + z.wert + (z.medien ? '  @media ' + z.medien : '');
+      let quelle = null;
+      for (let k = el; k && k.nodeType === 1 && !quelle; k = k.parentElement) {
+        if (k.style && k.style.fontSize) { quelle = 'style="" ' + k.style.fontSize + (k === el ? '' : '  (geerbt)'); break; }
+        const passend = [];
+        for (const rg of regeln) {
+          try { if (k.matches(rg.sel)) passend.push(rg); } catch (x) { /* :hover u.ae. */ }
+        }
+        if (passend.length) {
+          const z = passend[passend.length - 1];
+          quelle = z.datei + ' { ' + z.sel + ' } ' + z.wert +
+                   (z.medien ? '  @media ' + z.medien : '') + (k === el ? '' : '  (geerbt)');
+        }
       }
       treffer.push({
         px: +px.toFixed(1),

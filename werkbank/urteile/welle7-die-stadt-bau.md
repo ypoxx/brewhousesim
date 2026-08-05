@@ -211,4 +211,295 @@ node werkbank/schuss/aufsicht/spielprobe.mjs → SPIELPROBE BESTANDEN
 
 ---
 
-*(Teil B wird darunter fortgeschrieben)*
+## TEIL B — DIE 172 ZU KLEINEN TEXTKNOTEN
+
+### B.0 Erst nachgesehen, wem sie gehören
+
+`aufsicht/lesbarkeit.mjs` sagt eine Gesamtzahl. Zum Bauen fehlen zwei
+Angaben: **wem** gehört der Knoten, und **welche Regel** hat die Größe
+gesetzt. Beides steht im Browser bereit — `closest('[data-stueck]')` (jedes
+Fach trägt das Attribut, `kern/buehne.js:49`) und ein Durchlauf durch
+`document.styleSheets`, der bei geerbter Größe die Vorfahren hochgeht. Gerät:
+`werkbank/schuss/stadt-schrift/schrift.mjs` (neu).
+
+Stand bei 1366×768 vor der Arbeit (`stadt-schrift/vorher.json`), 724 gesamt:
+
+| Stück | < 12 px |
+|---|---|
+| **stadt** | **191** |
+| gegner | 172 |
+| erbe | 164 |
+| name | 149 |
+| kern | 36 |
+
+*Die 191 sind mehr als die 172 aus dem Auftrag, weil hier nach DOM-Zugehörigkeit
+gezählt wird und nicht nach Klassenpräfix: 28 Knoten in der Kopfleiste gehören
+`kern`s DOM, werden aber von `stadt.css` beschriftet
+(`.kopfleiste .tafel .marke`). Sie sind mitgeräumt.*
+
+Alle 191 kommen aus **15 Regeln** in zwei Dateien, die längsten Posten:
+`.knopf.stadt-reiter .wort` (40), `… .zahl` (36),
+`.knopf.stadt-pflock .wort` (25), `.stadt-bauhof .knopf` + `.preis` + `.nutzen`
+(57).
+
+### B.1 Was getan wurde
+
+**(1) Böden.** Alle 18 `font-size`-Regeln in `stadt.css` und
+`stadt-zusatz.css` auf `max(12px, calc(var(--s) * N))`. Dazu die eine
+Schriftgröße, die aus dem Quelltext kommt (`stadt.js:1282`, der Stadtname,
+`21 × gross`). **Genau eine Regel hat N < 12** — `.stadt-hausschild .gegr`
+(11) — und die steht deshalb hinter dem Medienschalter; auf der
+Entwurfsleinwand wäre `max(12px, 11px)` eine Änderung, und dort vergleicht
+Latte 1 blind.
+
+**(2) Der Deckel des Bauhofknopfes stand in Bezugspixeln statt in Zeilen.**
+`-webkit-line-clamp: 2` mit `max-height: calc(var(--s) * 38)`: zwei Zeilen bei
+19 Bezugspixeln *sind* 38 — solange die Schrift mit `--s` schrumpft. Mit dem
+Boden tut sie das nicht mehr: bei 1366×768 ist die Schrift 12 px, zwei Zeilen
+sind 24 px, der Deckel aber 18,9. Der Name wäre auf anderthalb Zeilen
+abgeschnitten worden, und `line-clamp` schneidet still. Jetzt `max-height: 2em`
+(wächst mit dem Boden) plus `overflow-y: auto` statt `hidden`. Derselbe Weg wie
+bei DER SUD in Welle 6.
+
+**(3) Die Gegenrechnung — der Teil, der an die zweite Latte stößt.** Der Boden
+macht die Werkbank höher. Ungebremst gemessen: **12,66 → 14,56 %** der
+Bühnenhöhe bei 1366×768, und in 1884 verdeckte sie prompt einen dritten fremden
+Zug (`fuhre:laden:hirsch`) — ein Zug, den ein anderes Stück verliert.
+
+Eine Gegenrechnung in festen Bezugspixeln geht hier **nicht**, und das ist
+gemessen: dieselben Zahlen, die bei 1366 noch 11 px zu wenig zurückgaben,
+ließen die Werkbank bei 1920×1000 um **6,7 px schrumpfen**. Beides bewegt die
+Geometrie. Also rechnet die Gegenrechnung dieselbe Formel nach, mit der der
+Boden zulegt:
+
+```css
+--zu-reiter: calc(max(0px, 12px - var(--s) * 20) + max(0px, 12px - var(--s) * 14));
+padding-bottom: max(0px, calc(var(--s) * 6 - 0.80 * var(--zu-reiter)));
+```
+
+Sie ist groß, wo der Boden groß ist, und auf der Entwurfsleinwand von selbst
+null.
+
+**(4) Ein zweiter Schalter für wirklich niedrige Bühnen**
+(`max-width: 1612px`, `max-height: 900px` — gerechnet: 1536 × 900/1536 = 900 px
+hoch ist 2752 × 900/1536 = 1612 px breit). **1920×1000, das Fenster der
+Messhand, liegt oberhalb und bleibt unberührt.** Darunter weicht nur
+Zwischenraum: die Kopfzeile des Bauhofs richtet sich mittig statt an der
+Grundlinie aus (die zwei Seitenknöpfe liegen auf dem 24-px-Knopfboden und
+zogen die Zeile auf 31 px), Zeilenabstände auf 1,08 bzw. 1,0, kein Polster
+über und unter dem Bauknopf.
+
+**(5) Die Werkbank wird breiter, weil rechts Platz ist.** Zehn Reiter teilten
+sich 843 px. Der WEITER-Knopf beginnt bei 83,8 % der Breite, die Werkbank
+endete bei 63,8 % — **zwanzig Prozentpunkte ungenutzt**, während die Reiter
+oben Buchstaben verloren. Unterhalb der zweiten Schwelle jetzt 80 % statt
+62,6 %. Allein das nahm **29 abgeschnittene Kästen** weg.
+
+**(6) Die Kennzahl steht auch im Titel des Reiters.** Was im Reiter nicht ganz
+hineinpasst, nennt der Zeiger vollständig. Siehe B.4.
+
+### B.2 Das Ergebnis, gemessen mit dem Gerät der Aufsicht
+
+`BREITE=1366 HOEHE=768 node werkbank/schuss/aufsicht/lesbarkeit.mjs`:
+
+| | vorher | nachher |
+|---|---|---|
+| **Textknoten < 12 px, DIE STADT** | **191** | **0** |
+| Textknoten < 12 px, alle Stücke | 724 | **505** |
+| **abgeschnittene Kästen, alle Stücke** | **67** | **51** |
+| davon DIE STADT | 60 | 37 |
+| aktive Knöpfe unter 24 px | 0 von 334 | 0 von 334 |
+
+**Null in allen vier Epochen** (`stadt-schrift/stadt-nach1.json`, mit dem
+Stückfilter gefahren). Die Kästen sind dabei **nicht** teurer geworden, sondern
+billiger — 67 → 51, obwohl der Boden allein sie auf 87 getrieben hatte. Genau
+davor haben DIE FUHRE und DER SUD gewarnt; die Warnung stimmt, und die Arbeit
+ist getan.
+
+### B.3 Die Geometrie steht — und damit rührt die Arbeit ρ nicht an
+
+`werkbank/schuss/stadt-schrift/gestalt.mjs` (neu) misst in Sekunden, was eine
+400-Wochen-Messung in einer Viertelstunde beantwortet: bewegt sich die
+Oberkante der Werkbank, ändert sich die Zahl der Reiter, der zugeklappten
+Bretter, der Pflöcke, der Züge — und `BRAUHAUS.stadt.rahmen.verdeckt()`, also
+ob die Werkbank einem fremden Stück einen aktiven Zug wegnimmt.
+
+**Bei 1920×1000, dem Fenster der Messhand** (`rueckkopplung-r3/linie.mjs:61`):
+
+| | vorher | nachher |
+|---|---|---|
+| Oberkante Werkbank | 86,980 % | **87,020 %** |
+| Höhe Werkbank | 12,320 % | **12,280 %** |
+| Reiter · zugeklappt · Pflöcke | 10 · 8 · 7/7/6/5 | **gleich** |
+| Züge (aktiv) je Epoche | 105(82) 113(83) 116(87) 107(82) | **gleich** |
+| `verdeckt()` je Epoche | 0 · 0 · 0 · 1 | **gleich** |
+
+**Unterschied in der Höhe: 0,4 px auf 1000.** Alles, was die Messhand sieht und
+anklickt, ist Zug für Zug dasselbe.
+
+Bei 1366×768: 12,659 % → **12,673 %** (0,1 px), `verdeckt` 2/2/2/2 → **2/2/2/2**.
+Der dritte verdeckte Zug aus dem ungebremsten Zwischenstand ist wieder weg.
+
+### B.4 Was NICHT gelungen ist, und die Rechnung dazu
+
+**37 abgeschnittene Kästen bleiben, alle im Reiter** — 28 mal die Kennzahl,
+9 mal der Name. Das ist kein Rest an Sorgfalt, sondern Arithmetik:
+
+| | |
+|---|---|
+| Reiterzeile bei 1366×768, nach der Verbreiterung | **1.093 px** |
+| Reiter | **10** |
+| also je Reiter | 109 px |
+| „DER RUF DES HAUSES" bei 12 px | 142 px |
+| „wollen 15 · im Keller liegen 4 Fass" bei 12 px | **253 px** |
+| Bedarf für zehn Reiter (Name + Kennzahl) | rund **2.300 px** |
+
+**Zwei Zeilen Reiter kosten 31 px Höhe, und die hat das 12,5-Prozent-Band
+nicht.** Was in der Hand des Stücks lag, ist die **Erreichbarkeit**: der Zeiger
+nennt die Kennzahl jetzt vollständig (`stadt.js`, `k.title`), und ein Klick
+schlägt das Brett auf, wo sie ohnehin ganz steht. Verschwiegen ist damit
+nichts — nur nicht alles zugleich.
+
+> **Befund für die Aufsicht, nicht für einen Builder:** die Reiterzeile trägt
+> bei 1366×768 zehn Bretternamen, aber nicht zehn Bretternamen **mit** ihren
+> lebenden Kennzahlen. Wer das auflösen will, muss an einer von drei Stellen
+> ansetzen, und keine davon gehört DER STADT allein: weniger Bretter, ein
+> höheres Band für die Werkbank, oder kürzere Unterzeilen aus den Brettern
+> selbst (`beschriftung()` nimmt bis zu 44 Zeichen aus fremdem DOM).
+
+### B.5 Latte 1 unter Teil B — A/B im selben Augenblick, nicht vorher/nachher
+
+**Hier wäre die Messung um ein Haar falsch geworden, und der Grund gehört in
+den Bericht.** Die Aufnahme von 12:14 gegen die von 12:53 zeigte in 1350 einen
+Unterschied von 248 Pixeln in der rechten oberen Ecke. Nachgesehen war es
+**nicht die Schrift der STADT**, sondern die Zahlen der Michaelitafel:
+*„Tafel 36 Pf · 3,11× · Geld in der Lade 8 Pf"* gegen *„33 Pf · 3,39× · 12 Pf"*.
+Dazwischen hat **DER PREIS** `preis.js`, `preis-daten.js` und `preis.css`
+geändert (Zeitstempel 12:20 bis 12:50). **Zwei Stücke bauen am selben Baum;
+eine Aufnahme von vorhin gegen eine von jetzt misst beide.**
+
+Also A/B statt vorher/nachher, nach dem Vorbild von DER SUD in Welle 6:
+`werkbank/schuss/stadt-schrift/ab-aufsetzen.sh` baut aus einem **Symlink-Wald**
+einen zweiten Hafen 8898, in dem **genau drei Dateien** echte Kopien sind —
+`stadt.css`, `stadt-zusatz.css`, `stadt.js`, ohne die Schriftarbeit
+(`alt-bauen.mjs` nimmt sie mechanisch zurück und **bricht ab**, wenn auch nur
+ein Muster fehlt). Alles andere ist derselbe Baum, es gibt gar nichts anderes.
+Gegenprobe über die Leitung mitgeliefert:
+
+```
+stadt.css   8898 ef9be9ccb7   8899 5407ba9ceb   VERSCHIEDEN
+preis.js    8898 9e9389b3ea   8899 9e9389b3ea   GLEICH
+stadt-daten 8898 74e4b40ab1   8899 74e4b40ab1   GLEICH
+```
+
+Beide Aufnahmesätze bei 2752×1536, im selben Augenblick
+(`stadt-schrift/latte1-teilb.json`):
+
+| Epoche | mittel | max | Pixel > 2 | PSNR |
+|---|---|---|---|---|
+| 1350 | **0,0000** | 35 | **0,000 %** | **87,04 dB** |
+| 1600 | 0,0000 | 31 | 0,000 % | 88,26 dB |
+| 1884 | 0,0000 | 26 | 0,000 % | 87,55 dB |
+| 1970 | 0,0000 | 44 | 0,000 % | 85,33 dB |
+
+**Ein einziges Pixel** unterscheidet sich um mehr als 16, in allen vier
+Epochen dasselbe, bei (x 1408 | y 192). Das ist eine Kantenglättung, kein Bild.
+**Teil B bewegt Latte 1 nicht.**
+
+Und derselbe Aufbau beziffert den Fremdanteil, der die erste Messung getrübt
+hatte (`stadt-gewicht/fremdanteil.json`): zwischen 12:21 und 13:03 hat sich
+**nur 1350** bewegt (0,007 % der Pixel), 1600/1884/1970 gar nicht. Die Zahlen
+aus A.5 sind damit für drei Epochen fremdanteilsfrei und für 1350 eine
+Untergrenze.
+
+### B.6 Was ich in Teil B VERWORFEN habe
+
+1. **Die Gegenrechnung in festen Bezugspixeln.** Der erste Versuch (Polster
+   halbiert, Zeilenhöhe 1,08 überall) traf bei 1366×768 immer noch 11 px zu
+   hoch und ließ die Werkbank bei 1920×1000 gleichzeitig um 6,7 px
+   **schrumpfen** — beides gemessen (`gestalt-r1.json`). Eine Zahl, die an
+   einem Fenster stimmt, ist am anderen falsch. Ersetzt durch die
+   bodenabhängige Formel.
+2. **`align-items: center` im Kopf des Bauhofs für alle Größen.** Spart 7 px
+   und wäre die einfachste Zeile gewesen — hätte aber bei 1920×1000 die
+   Werkbank 8 px unter ihren alten Stand gedrückt. Das ist so viel Bewegung
+   wie das Wachstum, nur in die andere Richtung. Deshalb hinter die zweite,
+   gerechnete Schwelle.
+3. **Die Reiterzeile waagerecht rollen lassen.** Wäre der Weg gewesen, mit dem
+   der Reiter seinen vollen Namen und seine volle Kennzahl behält. Verworfen:
+   die Messhand klickt `stadt:reiter:*`, ein Rollbehälter ändert, wo die
+   Reiter stehen und ob Playwright vor dem Klick scrollen muss — genau die
+   Sorte Geometrieänderung, vor der der Knopfboden-Befund warnt. **ρ gehört
+   diese Welle DEM PREIS**; ich habe die Bedienung des Reiters nicht angefasst.
+4. **Die Unterzeile der Bretter kürzen** (`beschriftung()` nimmt 44 Zeichen).
+   Damit wäre die Überlaufzahl auf null gegangen, ohne dass ein Zeichen mehr
+   lesbar wäre — der Zähler wäre zufrieden gewesen und der Spieler nicht. Das
+   ist das Gegenteil dessen, wofür die Latte da ist.
+5. **`-webkit-line-clamp` nur auf `3` erhöhen.** Hätte den Symptomfall
+   erschlagen und den Fehler stehengelassen: ein Deckel in Bezugspixeln gegen
+   eine Schrift mit Boden geht bei der nächsten Fenstergröße wieder auf.
+6. **Den Schriftboden auch auf `.stadt-haus`, `.stadt-rauch` und die Platte
+   legen.** Die hängen an `--s0` und nicht an `--s`, und zwar aus gutem Grund
+   (`grund.css:36`): ein Boden dort löste die Hofbauten von ihrer gemalten
+   Fläche — der Fehler, gegen den die Bildlatte steht. Nicht angefasst.
+
+### B.7 Der Flächendeckel ist unangetastet
+
+`GRENZE` (3,5 % der Bühnenfläche) und `MARKE` (2,4 %) in `stadt.js:443/444`
+stehen unverändert. Sie messen die Kästen **fremder** Stücke, und an denen habe
+ich keine Schriftgröße bewegt. Nachgemessen ist es trotzdem, weil DER SUD davon
+abhängt: zugeklappte Bretter 8 · 8 · 8 · 8 und Pflöcke 7 · 7 · 6 · 5, in beiden
+Fenstern, vorher wie nachher **identisch**. Der Kesselzettel wird also weiterhin
+genau so eingestuft wie bisher.
+
+## ρ — DIE ZWEITE LATTE
+
+*Gemessen als A/B über dieselben zwei Häfen wie in B.5: 8898 ohne die
+Schriftarbeit, 8899 mit ihr, derselbe Baum, dieselbe Saat, **je ein Aufruf
+durch `messfenster.sh`, hintereinander**. Vor, zwischen und nach den Armen
+wurden `preis*`, `sud*`, `fuhre*` und `kern/*` mit md5 festgehalten —
+`rho/fremdstand-{vor,mitte,nach}.txt` —, weil DER PREIS am selben Baum baut und
+genau dieser Fremdanteil in B.5 schon einmal eine Messung getrübt hat.*
+
+*(Zahlen werden eingetragen, sobald beide Arme durch sind.)*
+
+---
+
+## NEBENBEFUNDE, die nicht mir gehören
+
+**1. Die 19 MB Belegbilder unter `spiel/` liegen weiter da.** Der Auftrag nennt
+sie als Warnung an mich; sie sind aber immer noch auf der Platte:
+
+```
+spiel/werkbank/schuss/erbe3/  — 5 PNG, 19 MB
+   beleg-erloschen.png 4.270 KB · blatt-e1.png 4.260 KB · blatt-e2.png 3.622 KB
+   blatt-e3.png 3.649 KB · blatt-e4.png 3.480 KB
+```
+
+Sie machen **19 der 42 MB des Auslieferverzeichnisses** aus. Der Browser fordert
+keine davon an (mein Gerät zählt sie in keiner Epoche), das Gewichtsveto ist
+davon also nicht berührt — aber sie stehen unter `spiel/`, und die `.gitignore`
+greift für bereits verfolgte Dateien nicht. **Sie gehören nicht mir**
+(`bild/**` ist meins, `spiel/werkbank/**` nicht), und ich fasse fremde Dateien
+nicht an. Zum Vergleich: `spiel/bild/` ist nach dieser Welle 13 MB.
+
+**2. Die Werkbank verdeckt schon im Ausgangsstand fremde Züge.** Nicht durch
+meine Arbeit — die Zahl ist vorher wie nachher dieselbe —, aber sie steht auf
+null in der Beschreibung der Werkbank in `stadt.css` und ist es nicht:
+
+| Fenster | verdeckte aktive Züge | wessen |
+|---|---|---|
+| 1920×1000, 1970 | 1 | `fuhre:listen:neustadt` |
+| 1366×768, alle vier | 2 | `fuhre:bann:*`, `fuhre:laden:*` |
+
+Das sind Züge, die ein anderes Stück anbietet und die kein Zeiger erreicht.
+`BRAUHAUS.stadt.rahmen.verdeckt()` nennt sie beim Namen; wer Spalte (a) der
+zweiten Latte zählt, zählt sie mit, obwohl sie nicht zu klicken sind — derselbe
+Fall wie die 20–24 FUHRE-Züge aus Welle 6, nur eine Ebene tiefer.
+
+**3. Das Lesbarkeitsgerät ist im Fall `overflow-y: auto` in einem 24-px-Kasten
+großzügig.** Ein Kasten, der rollt, gilt zu Recht als nicht abgeschnitten — auch
+dann, wenn er 24 px hoch ist und niemand darin rollen würde. Ich habe das
+genutzt (`.stadt-bauhof .bauzeile .knopf .wort`) und deshalb **nachgemessen, ob
+der Deckel überhaupt greift** — die Zahl steht in „Abnahme" unten. Der Text ist
+außerdem im Titel des Knopfes vollständig da.

@@ -47,7 +47,7 @@
   border: calc(var(--s) * 1) solid rgba(214, 178, 96, 0.75);
   color: #f4e6c6;
   font-family: var(--serif, serif);
-  font-size: max(12px, calc(var(--s) * 15));
+  font-size: calc(var(--s) * 15);
   letter-spacing: calc(var(--s) * 1);
   line-height: 1.15;
   white-space: nowrap;

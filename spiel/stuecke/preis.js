@@ -257,8 +257,70 @@
     return summe;
   }
 
-  /* Preis eines Angebots in diesem Jahr. */
-  function preisVon(a) { return rundePreis(a.anteil * Z.anschlag); }
+  /* ======================================================================
+     PREIS EINES ANGEBOTS — UND WARUM ES SEIT WELLE 7 ZWEI ANSCHLAEGE GIBT.
+
+     GEMESSEN, nicht vermutet. Die vierzehn Michaelitage der sorgfaeltig
+     gespielten Linie in 1350, Stand `e117042`
+     (`werkbank/schuss/preis-w7/rho/vorher/e1-A.json`, Spalten `kasse`,
+     `billigst`, `name`):
+
+       Jahr  Lade  billigste Sprosse            was sie kostet   Lade/Preis
+       1350   112  Das Dach ueber der Pfanne          36           3,11x
+       1351    65  Ein zweiter Bottich                45           1,44x
+       1352   197  Der feste Fasskauf bei der Zunft   89           2,21x
+       1353   246  Der feste Fasskauf                110           2,24x
+       1354   393  Der feste Fasskauf                130           3,02x
+       …      …    Der feste Fasskauf                 …            …
+       1363   246  Der feste Fasskauf                140           1,76x
+
+     ZWEI BEFUNDE IN EINER TABELLE.
+
+     (1) ZWOELF MICHAELITAGE HINTEREINANDER STEHT DIESELBE ZEILE OBEN, und
+         sie wird nie genommen. Die Einstiegssprosse dieser Epoche ist ab dem
+         dritten Braujahr eine Tafel an der Wand.
+
+     (2) DAS VERHAELTNIS Lade zu billigster Sprosse steht ueber vierzehn
+         Jahre bei 1,44 bis 3,11 — OHNE RICHTUNG. Das klingt nach einer gut
+         gestellten Leiter und ist der Fehler: `preisVon` haengt jeden Preis
+         an `Z.anschlag`, und `Z.anschlag` haengt ueber `ausBarschaft()` an
+         der Lade. Die Leiter geht also mit dem Haus mit. Ein Haus kann die
+         unterste Sprosse nie hinter sich lassen — sie kostet immer rund ein
+         Drittel des Kastens, in Jahr 1 wie in Jahr 14. Wer nichts hinter
+         sich lassen kann, kauft nichts; wer nichts kauft, sammelt.
+
+     UND GENAU DARAN HAENGT DIE ZWEITE LATTE. Die Lade laeuft von 112 auf
+     498 Pf, weil sie keine Verwendung findet: rho(Kennzahl) = +0,762 und
+     rho(Kasse) = +0,741 sind bei zwoelf Braujahren dieselbe Zahl.
+
+     WAS SICH AENDERT, UND ES IST KEINE VERBILLIGUNG. Es gibt zwei Sorten
+     Sachen, und sie werden von zwei verschiedenen Leuten angeschlagen:
+
+       nach der TAXE  Ein Boettcher rechnet fuer den Bottich, ein Schmied
+                      fuer das Hausschild, ein Zimmermann fuer das Dach. Sie
+                      nehmen den Preis der Sache, nicht den Preis des
+                      Kunden. Er steigt mit der Teuerung und mit nichts
+                      sonst — dieselbe Grundlage wie die Taxe der
+                      Festlegung (`festBasis`).
+       nach der       Ein Ratsbrief ueber die Bannmeile, ein Achtel an der
+       SCHAETZUNG     Stadtmuehle, ein gewoelbter Keller unter dem ganzen
+                      Hof: was der Rat verleiht und was nach Mass gebaut
+                      wird, wird nach dem angeschlagen, was das Haus wert
+                      ist. Das bleibt, wie es war.
+
+     Damit laesst ein wachsendes Haus die unteren Sprossen tatsaechlich
+     hinter sich, kauft sie — und der Kasten leert sich in den Hof statt in
+     die Kennzahl. Die grossen Sprossen bleiben, wo sie sind: sie sind das
+     Ziel, auf das man spart, und sie werden mit jedem Kauf teurer
+     (`teuerungKauf^kaeufe`, unveraendert).
+
+     Ohne `nachZeit` in den Daten ist diese Funktion Zeile fuer Zeile die
+     alte. In 1600, 1884 und 1970 steht das Merkmal nirgends — dort ist
+     nichts geaendert, weil dort nichts gerissen ist (Regel aus Welle 4:
+     nicht zwei Sachen zugleich an derselben Kennzahl drehen). */
+  function preisVon(a) {
+    return rundePreis(a.anteil * (a.nachZeit ? festBasis() : Z.anschlag));
+  }
 
   /* Was jetzt zu zahlen ist, wenn gebaut wird (Anzahlung), und die Raten. */
   function zahlplan(a) {
@@ -1629,6 +1691,18 @@
     if (w.ansehen) t.push((w.ansehen > 0 ? '+' : '') + w.ansehen + ' Ansehen');
     if (w.pflichtWeg) t.push('kein ' + pflichtName(w.pflichtWeg) + ' mehr');
     if (w.bindung) t.push(w.bindung.n + ' Häuser gebunden, ' + w.bindung.jahre + ' Jahre');
+    /* WAS ES FUER IMMER KOSTET, GEHOERT AUF DIESELBE ZEILE WIE DAS, WAS ES
+       BRINGT. Seit Welle 7 traegt auch ein ANGEBOT eine neue Pflicht (der
+       Unterhalt, siehe preis-daten.js). Stuende nur der Ertrag da, waere das
+       Preisschild unvollstaendig: die Karte verspraeche „+16 Pf in jedem
+       Michaeli" und verschwiege „−9 Pf in jedem Michaeli". Genau diese Zeile
+       gab es fuer die Festlegungen schon (`festKarte`: „Dafuer neu und fuer
+       immer"); die Angebote hatten sie nicht, weil sie bis heute keine
+       dauerhafte Last hatten. */
+    if (w.pflichtNeu) {
+      var p = pflichtZeile(w.pflichtNeu);
+      t.push('−' + geld(p.betrag) + ' in jedem Michaeli: ' + w.pflichtNeu.name);
+    }
     return t.join(' · ');
   }
 
@@ -1767,6 +1841,19 @@
     an.appendChild(zeile('Teuerung seit ' + Z.startjahr
         + (amBoden() ? ' — nicht auf den Mindestansatz' : ''),
       '+' + B.zahl((Math.pow(ep().teuerungJahr, B.grenze(jahr() - Z.startjahr, 0, 40)) - 1) * 100, 0) + '%'));
+    /* Der Anschlag gilt nicht fuer alles, was heute auf dem Tisch liegt —
+       und wenn nicht, gehoert das hierher und nicht in den Quelltext. */
+    var nachTaxe = lebendeAngebote().filter(function (k) {
+      var o = angebotVon(k); return o && o.nachZeit;
+    }).length;
+    if (nachTaxe) {
+      var tz = zeile(nachTaxe + ' von ' + lebendeAngebote().length
+        + ' Sachen nach der Taxe', geld(Math.round(festBasis())));
+      tz.title = 'Was ein Handwerker nach Mass und Gewicht liefert, kostet, was es kostet: '
+        + 'die Taxe steigt mit der Teuerung und nicht mit dem Haus. '
+        + 'Was der Rat verleiht und was nach Mass gebaut wird, wird nach dem Anschlag bedient.';
+      an.appendChild(tz);
+    }
     an.appendChild(B.el('div', 'pr-satz pr-klein', e.anschlagSatz));
     sp.appendChild(an);
 
@@ -1857,6 +1944,12 @@
       schild.appendChild(B.el('span', 'pr-schild-rest', 'ganz, sofort'));
     }
     kt.appendChild(schild);
+
+    /* Woran der Preis haengt, steht an der Karte — sonst ist die Zahl eine
+       Behauptung. Die lange Begruendung steht bei `preisVon`. */
+    kt.appendChild(B.el('div', 'pr-hinweis', a.nachZeit
+      ? 'Nach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.'
+      : 'Nach dem Anschlag von ' + jahr() + ' — was das Haus wert ist, wird mit angeschlagen.'));
 
     kt.appendChild(B.el('div', 'pr-bauzeit', a.bauzeit
       ? 'Bauzeit ' + a.bauzeit + ' Jahr' + (a.bauzeit > 1 ? 'e' : '') + ' · fertig ' + (jahr() + a.bauzeit)

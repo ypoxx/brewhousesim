@@ -1,0 +1,7392 @@
+{
+  "stand": "2026-08-05T12:35:59.548Z",
+  "1920x1000_e1": {
+    "verdeckt": 0,
+    "verdeckt_wer": [],
+    "werkbank": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 12.963
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 3.941
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 90.603,
+      "b": 62.599,
+      "h": 8.697
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 7,
+    "weiter": {
+      "x": 84.434,
+      "y": 93.671,
+      "b": 8.566,
+      "h": 4.658
+    },
+    "bretter": {},
+    "zuege_n": 105,
+    "zuege_aktiv": 82,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 238,
+        "h": 110,
+        "x": 1378,
+        "y": 380
+      },
+      {
+        "zug": "gegner:abloesen:torschenke",
+        "aus": false,
+        "b": 100,
+        "h": 33,
+        "x": 802,
+        "y": 539
+      },
+      {
+        "zug": "gegner:hinhalten:torschenke",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 802,
+        "y": 574
+      },
+      {
+        "zug": "gegner:abloesen:faehrhaus",
+        "aus": false,
+        "b": 100,
+        "h": 33,
+        "x": 1666,
+        "y": 499
+      },
+      {
+        "zug": "gegner:hinhalten:faehrhaus",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 1666,
+        "y": 534
+      },
+      {
+        "zug": "gegner:zuvorkommen:obernberg",
+        "aus": false,
+        "b": 145,
+        "h": 33,
+        "x": 1655,
+        "y": 389
+      },
+      {
+        "zug": "gegner:hinhalten:obernberg",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 1655,
+        "y": 424
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 185,
+        "h": 44,
+        "x": 771,
+        "y": 440
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 118,
+        "h": 24,
+        "x": 1506,
+        "y": 140
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 154,
+        "h": 24,
+        "x": 987,
+        "y": 191
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 48,
+        "h": 24,
+        "x": 1577,
+        "y": 222
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 542
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 566
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 590
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 614
+      },
+      {
+        "zug": "name:anschlag:umtrunk",
+        "aus": false,
+        "b": 184,
+        "h": 35,
+        "x": 1021,
+        "y": 389
+      },
+      {
+        "zug": "stadt:marke:gegner-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1071,
+        "y": 478
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1294,
+        "y": 458
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1017,
+        "y": 448
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1620,
+        "y": 418
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1678,
+        "y": 688
+      },
+      {
+        "zug": "stadt:marke:fuhre-fluss",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1562,
+        "y": 648
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-oben",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1601,
+        "y": 308
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 39,
+        "y": 324
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 144,
+        "h": 24,
+        "x": 195,
+        "y": 324
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 351,
+        "y": 324
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 389
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 389
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 439
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 439
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 488
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 488
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 538
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 538
+      },
+      {
+        "zug": "fuhre:bann:muehlwirt",
+        "aus": false,
+        "b": 115,
+        "h": 24,
+        "x": 370,
+        "y": 587
+      },
+      {
+        "zug": "fuhre:bann:brueckenwirt",
+        "aus": false,
+        "b": 115,
+        "h": 24,
+        "x": 370,
+        "y": 637
+      },
+      {
+        "zug": "fuhre:bann:faehrhaus",
+        "aus": false,
+        "b": 115,
+        "h": 24,
+        "x": 370,
+        "y": 686
+      },
+      {
+        "zug": "fuhre:bann:hirsch",
+        "aus": false,
+        "b": 115,
+        "h": 24,
+        "x": 370,
+        "y": 736
+      },
+      {
+        "zug": "fuhre:laden:markt",
+        "aus": true,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 785
+      },
+      {
+        "zug": "fuhre:abladen:markt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 785
+      },
+      {
+        "zug": "fuhre:bann:obernberg",
+        "aus": false,
+        "b": 115,
+        "h": 24,
+        "x": 370,
+        "y": 835
+      },
+      {
+        "zug": "fuhre:tafel-ab:duenn",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-auf:duenn",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-ab:grut",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 251
+      },
+      {
+        "zug": "fuhre:tafel-auf:grut",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 251
+      },
+      {
+        "zug": "fuhre:tafel-ab:stark",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 296
+      },
+      {
+        "zug": "fuhre:tafel-auf:stark",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 296
+      },
+      {
+        "zug": "fuhre:tafel-ab:kofent",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 887,
+        "y": 348
+      },
+      {
+        "zug": "fuhre:tafel-auf:kofent",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 934,
+        "y": 348
+      },
+      {
+        "zug": "fuhre:kauf:budget",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 535,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 643,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 750,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:kauf:fass",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 858,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 112,
+        "h": 24,
+        "x": 994,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 114,
+        "h": 24,
+        "x": 1110,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 89,
+        "h": 24,
+        "x": 1228,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 499,
+        "h": 36,
+        "x": 994,
+        "y": 818
+      },
+      {
+        "zug": "sud:wuerze:grut",
+        "aus": true,
+        "b": 142,
+        "h": 27,
+        "x": 41,
+        "y": 287
+      },
+      {
+        "zug": "sud:wuerze:sack",
+        "aus": true,
+        "b": 142,
+        "h": 44,
+        "x": 200,
+        "y": 287
+      },
+      {
+        "zug": "sud:wuerze:brief",
+        "aus": true,
+        "b": 142,
+        "h": 60,
+        "x": 359,
+        "y": 288
+      },
+      {
+        "zug": "sud:wasser:bach",
+        "aus": true,
+        "b": 142,
+        "h": 44,
+        "x": 41,
+        "y": 683
+      },
+      {
+        "zug": "sud:wasser:brunnen",
+        "aus": true,
+        "b": 142,
+        "h": 44,
+        "x": 200,
+        "y": 683
+      },
+      {
+        "zug": "sud:wasser:roehre",
+        "aus": true,
+        "b": 142,
+        "h": 60,
+        "x": 359,
+        "y": 684
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 222,
+        "h": 25,
+        "x": 516,
+        "y": 534
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 219,
+        "h": 25,
+        "x": 516,
+        "y": 564
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 205,
+        "h": 25,
+        "x": 516,
+        "y": 594
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 291,
+        "h": 25,
+        "x": 516,
+        "y": 746
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 391,
+        "y": 88
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 373,
+        "h": 24,
+        "x": 36,
+        "y": 348
+      },
+      {
+        "zug": "name:jetzt:umtrunk",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 403
+      },
+      {
+        "zug": "name:jetzt:zunftzeichen",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 431
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 475
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 503
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 569
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 244,
+        "h": 24,
+        "x": 1046,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1293,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1488,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1682,
+        "y": 746
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 125,
+        "h": 30,
+        "x": 1229,
+        "y": 36
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 98,
+        "h": 30,
+        "x": 1361,
+        "y": 36
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 164,
+        "h": 47,
+        "x": 1621,
+        "y": 937
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 26,
+        "h": 24,
+        "x": 23,
+        "y": 24
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 171,
+        "h": 39,
+        "x": 31,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 103,
+        "h": 39,
+        "x": 205,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 141,
+        "h": 39,
+        "x": 311,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 108,
+        "h": 39,
+        "x": 456,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 135,
+        "h": 39,
+        "x": 566,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 115,
+        "h": 39,
+        "x": 705,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 170,
+        "h": 39,
+        "x": 823,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 86,
+        "h": 39,
+        "x": 996,
+        "y": 863
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 132,
+        "h": 39,
+        "x": 1086,
+        "y": 863
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 102,
+        "h": 30,
+        "x": 31,
+        "y": 909
+      },
+      {
+        "zug": "stadt:versatz",
+        "aus": false,
+        "b": 102,
+        "h": 30,
+        "x": 135,
+        "y": 909
+      },
+      {
+        "zug": "stadt:bau:grutkammer",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 31,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:gaerbottiche",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 269,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:ochsenstall",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 508,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:keller_gewoelbe",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 746,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:kueferei",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 984,
+        "y": 944
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 246,
+        "h": 24,
+        "x": 1648,
+        "y": 35
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 246,
+        "h": 37,
+        "x": 1648,
+        "y": 153
+      },
+      {
+        "zug": "erbe:verschreibe:ochse",
+        "aus": false,
+        "b": 110,
+        "h": 24,
+        "x": 716,
+        "y": 347
+      },
+      {
+        "zug": "erbe:verschreibe:pfarrhof",
+        "aus": false,
+        "b": 105,
+        "h": 24,
+        "x": 721,
+        "y": 373
+      },
+      {
+        "zug": "erbe:verschreibe:hirsch",
+        "aus": false,
+        "b": 110,
+        "h": 24,
+        "x": 716,
+        "y": 400
+      },
+      {
+        "zug": "erbe:verschreibe:markt",
+        "aus": false,
+        "b": 105,
+        "h": 24,
+        "x": 721,
+        "y": 427
+      }
+    ]
+  },
+  "1920x1000_e2": {
+    "verdeckt": 0,
+    "verdeckt_wer": [],
+    "werkbank": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 12.963
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 3.941
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 90.603,
+      "b": 62.599,
+      "h": 8.697
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 7,
+    "weiter": {
+      "x": 84.434,
+      "y": 93.671,
+      "b": 8.566,
+      "h": 4.658
+    },
+    "bretter": {},
+    "zuege_n": 113,
+    "zuege_aktiv": 83,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 238,
+        "h": 94,
+        "x": 1378,
+        "y": 380
+      },
+      {
+        "zug": "gegner:abloesen:ochse",
+        "aus": false,
+        "b": 100,
+        "h": 33,
+        "x": 955,
+        "y": 299
+      },
+      {
+        "zug": "gegner:hinhalten:ochse",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 955,
+        "y": 334
+      },
+      {
+        "zug": "gegner:zuvorkommen:muehlwirt",
+        "aus": false,
+        "b": 145,
+        "h": 33,
+        "x": 1655,
+        "y": 279
+      },
+      {
+        "zug": "gegner:hinhalten:muehlwirt",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 1655,
+        "y": 314
+      },
+      {
+        "zug": "gegner:abloesen:brueckenwirt",
+        "aus": false,
+        "b": 100,
+        "h": 33,
+        "x": 1627,
+        "y": 599
+      },
+      {
+        "zug": "gegner:hinhalten:brueckenwirt",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 1627,
+        "y": 634
+      },
+      {
+        "zug": "gegner:abloesen:obernberg",
+        "aus": false,
+        "b": 100,
+        "h": 33,
+        "x": 1666,
+        "y": 389
+      },
+      {
+        "zug": "gegner:hinhalten:obernberg",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 1666,
+        "y": 424
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 185,
+        "h": 44,
+        "x": 771,
+        "y": 440
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 118,
+        "h": 24,
+        "x": 1506,
+        "y": 140
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 147,
+        "h": 24,
+        "x": 987,
+        "y": 191
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 48,
+        "h": 24,
+        "x": 1577,
+        "y": 222
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 841,
+        "y": 537
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 841,
+        "y": 561
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 841,
+        "y": 585
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 237,
+        "h": 35,
+        "x": 841,
+        "y": 609
+      },
+      {
+        "zug": "name:anschlag:kirchweih",
+        "aus": false,
+        "b": 184,
+        "h": 48,
+        "x": 1252,
+        "y": 553
+      },
+      {
+        "zug": "stadt:marke:gegner-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1071,
+        "y": 478
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1294,
+        "y": 458
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1017,
+        "y": 448
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1620,
+        "y": 418
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1678,
+        "y": 688
+      },
+      {
+        "zug": "stadt:marke:fuhre-fluss",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1562,
+        "y": 648
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-oben",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1601,
+        "y": 308
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 39,
+        "y": 324
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 144,
+        "h": 24,
+        "x": 195,
+        "y": 324
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 351,
+        "y": 324
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 389
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 389
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 439
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 439
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 488
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 488
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 538
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 538
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 587
+      },
+      {
+        "zug": "fuhre:abladen:muehlwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 587
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 637
+      },
+      {
+        "zug": "fuhre:abladen:brueckenwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 637
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 686
+      },
+      {
+        "zug": "fuhre:abladen:faehrhaus",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 686
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 736
+      },
+      {
+        "zug": "fuhre:abladen:hirsch",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 736
+      },
+      {
+        "zug": "fuhre:laden:markt",
+        "aus": true,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 785
+      },
+      {
+        "zug": "fuhre:abladen:markt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 785
+      },
+      {
+        "zug": "fuhre:laden:obernberg",
+        "aus": true,
+        "b": 55,
+        "h": 24,
+        "x": 404,
+        "y": 835
+      },
+      {
+        "zug": "fuhre:abladen:obernberg",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 835
+      },
+      {
+        "zug": "fuhre:tafel-ab:schank",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-auf:schank",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-ab:braun",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 261
+      },
+      {
+        "zug": "fuhre:tafel-auf:braun",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 261
+      },
+      {
+        "zug": "fuhre:tafel-ab:maerzen",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 316
+      },
+      {
+        "zug": "fuhre:tafel-auf:maerzen",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 316
+      },
+      {
+        "zug": "fuhre:tafel-ab:nachbier",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 887,
+        "y": 317
+      },
+      {
+        "zug": "fuhre:tafel-auf:nachbier",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 934,
+        "y": 317
+      },
+      {
+        "zug": "fuhre:kauf:budget",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 535,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:kauf:fass",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 643,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 750,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 858,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:pfand",
+        "aus": true,
+        "b": 204,
+        "h": 24,
+        "x": 535,
+        "y": 830
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 112,
+        "h": 24,
+        "x": 994,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 114,
+        "h": 24,
+        "x": 1110,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 88,
+        "h": 24,
+        "x": 1228,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 499,
+        "h": 36,
+        "x": 994,
+        "y": 818
+      },
+      {
+        "zug": "sud:schuettung:rein",
+        "aus": true,
+        "b": 102,
+        "h": 44,
+        "x": 41,
+        "y": 302
+      },
+      {
+        "zug": "sud:schuettung:weizen",
+        "aus": true,
+        "b": 102,
+        "h": 44,
+        "x": 160,
+        "y": 302
+      },
+      {
+        "zug": "sud:schuettung:hafer",
+        "aus": true,
+        "b": 102,
+        "h": 60,
+        "x": 279,
+        "y": 302
+      },
+      {
+        "zug": "sud:schuettung:weizenbrief",
+        "aus": true,
+        "b": 102,
+        "h": 92,
+        "x": 398,
+        "y": 303
+      },
+      {
+        "zug": "sud:gaerung:ober",
+        "aus": true,
+        "b": 221,
+        "h": 27,
+        "x": 41,
+        "y": 823
+      },
+      {
+        "zug": "sud:gaerung:keller",
+        "aus": true,
+        "b": 221,
+        "h": 44,
+        "x": 280,
+        "y": 824
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 247,
+        "h": 25,
+        "x": 516,
+        "y": 550
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 217,
+        "h": 25,
+        "x": 516,
+        "y": 580
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 203,
+        "h": 25,
+        "x": 516,
+        "y": 610
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 273,
+        "h": 25,
+        "x": 516,
+        "y": 762
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 391,
+        "y": 88
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 373,
+        "h": 24,
+        "x": 36,
+        "y": 348
+      },
+      {
+        "zug": "name:jetzt:kirchweih",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 403
+      },
+      {
+        "zug": "name:jetzt:krug",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 431
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 475
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 503
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 569
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 243,
+        "h": 24,
+        "x": 1049,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 190,
+        "h": 24,
+        "x": 1295,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 190,
+        "h": 24,
+        "x": 1489,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 190,
+        "h": 24,
+        "x": 1683,
+        "y": 746
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 125,
+        "h": 30,
+        "x": 1243,
+        "y": 36
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 98,
+        "h": 30,
+        "x": 1375,
+        "y": 36
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 164,
+        "h": 47,
+        "x": 1621,
+        "y": 937
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 26,
+        "h": 24,
+        "x": 23,
+        "y": 24
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 171,
+        "h": 39,
+        "x": 31,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 103,
+        "h": 39,
+        "x": 205,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 115,
+        "h": 39,
+        "x": 311,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 120,
+        "h": 39,
+        "x": 429,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 154,
+        "h": 39,
+        "x": 552,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 114,
+        "h": 39,
+        "x": 709,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 169,
+        "h": 39,
+        "x": 826,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 85,
+        "h": 39,
+        "x": 998,
+        "y": 863
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 131,
+        "h": 39,
+        "x": 1087,
+        "y": 863
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 31,
+        "y": 909
+      },
+      {
+        "zug": "stadt:wiederkauf",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 158,
+        "y": 909
+      },
+      {
+        "zug": "stadt:bau:gaerbottiche",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 31,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:waschhaus",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 269,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:kontor",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 508,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:rossmuehle",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 746,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:hopfenlager",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 984,
+        "y": 944
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 246,
+        "h": 24,
+        "x": 1648,
+        "y": 35
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 246,
+        "h": 37,
+        "x": 1648,
+        "y": 153
+      },
+      {
+        "zug": "erbe:verschreibe:lindenhof",
+        "aus": false,
+        "b": 105,
+        "h": 24,
+        "x": 722,
+        "y": 346
+      },
+      {
+        "zug": "erbe:verschreibe:torschenke",
+        "aus": false,
+        "b": 99,
+        "h": 24,
+        "x": 728,
+        "y": 373
+      },
+      {
+        "zug": "erbe:verschreibe:faehrhaus",
+        "aus": false,
+        "b": 99,
+        "h": 24,
+        "x": 728,
+        "y": 401
+      },
+      {
+        "zug": "erbe:verschreibe:hirsch",
+        "aus": false,
+        "b": 99,
+        "h": 24,
+        "x": 728,
+        "y": 429
+      }
+    ]
+  },
+  "1920x1000_e3": {
+    "verdeckt": 0,
+    "verdeckt_wer": [],
+    "werkbank": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 12.963
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 3.941
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 90.603,
+      "b": 62.599,
+      "h": 8.697
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 6,
+    "weiter": {
+      "x": 84.434,
+      "y": 93.671,
+      "b": 8.566,
+      "h": 4.658
+    },
+    "bretter": {},
+    "zuege_n": 116,
+    "zuege_aktiv": 87,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 238,
+        "h": 106,
+        "x": 1378,
+        "y": 380
+      },
+      {
+        "zug": "gegner:abloesen:lindenhof",
+        "aus": false,
+        "b": 105,
+        "h": 33,
+        "x": 1215,
+        "y": 369
+      },
+      {
+        "zug": "gegner:hinhalten:lindenhof",
+        "aus": false,
+        "b": 72,
+        "h": 30,
+        "x": 1215,
+        "y": 404
+      },
+      {
+        "zug": "gegner:abloesen:muehlwirt",
+        "aus": false,
+        "b": 100,
+        "h": 33,
+        "x": 1678,
+        "y": 279
+      },
+      {
+        "zug": "gegner:hinhalten:muehlwirt",
+        "aus": false,
+        "b": 72,
+        "h": 30,
+        "x": 1678,
+        "y": 314
+      },
+      {
+        "zug": "gegner:zuvorkommen:brueckenwirt",
+        "aus": false,
+        "b": 145,
+        "h": 33,
+        "x": 1617,
+        "y": 599
+      },
+      {
+        "zug": "gegner:hinhalten:brueckenwirt",
+        "aus": false,
+        "b": 72,
+        "h": 30,
+        "x": 1617,
+        "y": 634
+      },
+      {
+        "zug": "gegner:abloesen:markt",
+        "aus": false,
+        "b": 100,
+        "h": 33,
+        "x": 103,
+        "y": 698
+      },
+      {
+        "zug": "gegner:hinhalten:markt",
+        "aus": false,
+        "b": 72,
+        "h": 30,
+        "x": 103,
+        "y": 733
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 185,
+        "h": 44,
+        "x": 771,
+        "y": 440
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 118,
+        "h": 24,
+        "x": 1506,
+        "y": 140
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 208,
+        "h": 24,
+        "x": 987,
+        "y": 191
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 48,
+        "h": 24,
+        "x": 1577,
+        "y": 222
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 302
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 326
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 350
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 374
+      },
+      {
+        "zug": "name:anschlag:annonce",
+        "aus": false,
+        "b": 184,
+        "h": 35,
+        "x": 1098,
+        "y": 469
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1294,
+        "y": 458
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1006,
+        "y": 448
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1620,
+        "y": 418
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1678,
+        "y": 688
+      },
+      {
+        "zug": "stadt:marke:fuhre-fluss",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1562,
+        "y": 648
+      },
+      {
+        "zug": "stadt:marke:fuhre-bahnhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1812,
+        "y": 258
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 39,
+        "y": 311
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 144,
+        "h": 24,
+        "x": 195,
+        "y": 311
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 351,
+        "y": 311
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 376
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 376
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 426
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 426
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 477
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 477
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 527
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 527
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 578
+      },
+      {
+        "zug": "fuhre:abladen:muehlwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 578
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 628
+      },
+      {
+        "zug": "fuhre:abladen:brueckenwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 628
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 679
+      },
+      {
+        "zug": "fuhre:abladen:faehrhaus",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 679
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 729
+      },
+      {
+        "zug": "fuhre:abladen:hirsch",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 729
+      },
+      {
+        "zug": "fuhre:laden:markt",
+        "aus": true,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 779
+      },
+      {
+        "zug": "fuhre:abladen:markt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 779
+      },
+      {
+        "zug": "fuhre:laden:bahnhofswirt",
+        "aus": false,
+        "b": 53,
+        "h": 24,
+        "x": 406,
+        "y": 830
+      },
+      {
+        "zug": "fuhre:abladen:bahnhofswirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 461,
+        "y": 830
+      },
+      {
+        "zug": "fuhre:tafel-ab:schank",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-auf:schank",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-ab:lager",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 251
+      },
+      {
+        "zug": "fuhre:tafel-auf:lager",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 251
+      },
+      {
+        "zug": "fuhre:tafel-ab:export",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 872,
+        "y": 296
+      },
+      {
+        "zug": "fuhre:tafel-auf:export",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 919,
+        "y": 296
+      },
+      {
+        "zug": "fuhre:tafel-ab:einfach",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 887,
+        "y": 321
+      },
+      {
+        "zug": "fuhre:tafel-auf:einfach",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 934,
+        "y": 321
+      },
+      {
+        "zug": "fuhre:kauf:eis",
+        "aus": true,
+        "b": 105,
+        "h": 65,
+        "x": 535,
+        "y": 453
+      },
+      {
+        "zug": "fuhre:kauf:eiskeller",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 643,
+        "y": 453
+      },
+      {
+        "zug": "fuhre:kauf:sudwerk",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 750,
+        "y": 453
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 858,
+        "y": 453
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": true,
+        "b": 428,
+        "h": 24,
+        "x": 535,
+        "y": 521
+      },
+      {
+        "zug": "fuhre:fracht:rollfuhr",
+        "aus": false,
+        "b": 164,
+        "h": 53,
+        "x": 994,
+        "y": 596
+      },
+      {
+        "zug": "fuhre:fracht:stueck",
+        "aus": false,
+        "b": 164,
+        "h": 53,
+        "x": 1161,
+        "y": 596
+      },
+      {
+        "zug": "fuhre:fracht:halb",
+        "aus": false,
+        "b": 164,
+        "h": 53,
+        "x": 1328,
+        "y": 596
+      },
+      {
+        "zug": "fuhre:fracht:ganz",
+        "aus": false,
+        "b": 499,
+        "h": 24,
+        "x": 994,
+        "y": 653
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 112,
+        "h": 24,
+        "x": 994,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 114,
+        "h": 24,
+        "x": 1110,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 96,
+        "h": 24,
+        "x": 1228,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 499,
+        "h": 36,
+        "x": 994,
+        "y": 818
+      },
+      {
+        "zug": "sud:kaelte:natureis",
+        "aus": true,
+        "b": 142,
+        "h": 44,
+        "x": 41,
+        "y": 302
+      },
+      {
+        "zug": "sud:kaelte:warm",
+        "aus": true,
+        "b": 142,
+        "h": 44,
+        "x": 200,
+        "y": 302
+      },
+      {
+        "zug": "sud:kaelte:maschine",
+        "aus": true,
+        "b": 142,
+        "h": 60,
+        "x": 359,
+        "y": 303
+      },
+      {
+        "zug": "sud:hefe:betrieb",
+        "aus": true,
+        "b": 221,
+        "h": 27,
+        "x": 41,
+        "y": 663
+      },
+      {
+        "zug": "sud:hefe:reinzucht",
+        "aus": true,
+        "b": 221,
+        "h": 44,
+        "x": 280,
+        "y": 664
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 199,
+        "h": 25,
+        "x": 516,
+        "y": 519
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 243,
+        "h": 25,
+        "x": 516,
+        "y": 549
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 228,
+        "h": 25,
+        "x": 516,
+        "y": 579
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 258,
+        "h": 25,
+        "x": 516,
+        "y": 716
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 391,
+        "y": 88
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 373,
+        "h": 24,
+        "x": 36,
+        "y": 348
+      },
+      {
+        "zug": "name:jetzt:annonce",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 403
+      },
+      {
+        "zug": "name:jetzt:plakat",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 431
+      },
+      {
+        "zug": "name:jetzt:saeule",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 459
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 503
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 531
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 596
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 244,
+        "h": 24,
+        "x": 1046,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1293,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1488,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1682,
+        "y": 746
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 125,
+        "h": 30,
+        "x": 1268,
+        "y": 36
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 98,
+        "h": 30,
+        "x": 1400,
+        "y": 36
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 164,
+        "h": 47,
+        "x": 1621,
+        "y": 937
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 26,
+        "h": 24,
+        "x": 23,
+        "y": 24
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 171,
+        "h": 39,
+        "x": 31,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 105,
+        "h": 39,
+        "x": 205,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 83,
+        "h": 39,
+        "x": 313,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 133,
+        "h": 39,
+        "x": 399,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 133,
+        "h": 39,
+        "x": 535,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 117,
+        "h": 39,
+        "x": 671,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 171,
+        "h": 39,
+        "x": 791,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 87,
+        "h": 39,
+        "x": 965,
+        "y": 863
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 133,
+        "h": 39,
+        "x": 1055,
+        "y": 863
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 112,
+        "h": 30,
+        "x": 31,
+        "y": 909
+      },
+      {
+        "zug": "stadt:hypothek",
+        "aus": false,
+        "b": 112,
+        "h": 30,
+        "x": 146,
+        "y": 909
+      },
+      {
+        "zug": "stadt:bau:kontor",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 31,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:hopfenlager",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 269,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:pferdestall",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 508,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:maelzerei",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 746,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:flaschenhalle",
+        "aus": false,
+        "b": 232,
+        "h": 30,
+        "x": 984,
+        "y": 944
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 246,
+        "h": 24,
+        "x": 1648,
+        "y": 35
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 246,
+        "h": 37,
+        "x": 1648,
+        "y": 153
+      },
+      {
+        "zug": "erbe:verschreibe:ochse",
+        "aus": false,
+        "b": 106,
+        "h": 24,
+        "x": 720,
+        "y": 343
+      },
+      {
+        "zug": "erbe:verschreibe:torschenke",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 731,
+        "y": 370
+      },
+      {
+        "zug": "erbe:verschreibe:brueckenwirt",
+        "aus": false,
+        "b": 106,
+        "h": 24,
+        "x": 720,
+        "y": 398
+      },
+      {
+        "zug": "erbe:verschreibe:bahnhofswirt",
+        "aus": false,
+        "b": 106,
+        "h": 24,
+        "x": 720,
+        "y": 425
+      }
+    ]
+  },
+  "1920x1000_e4": {
+    "verdeckt": 1,
+    "verdeckt_wer": [
+      {
+        "zug": "fuhre:listen:neustadt",
+        "unter": "reiterzeile"
+      }
+    ],
+    "werkbank": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 12.963
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 86.338,
+      "b": 62.599,
+      "h": 3.941
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 90.603,
+      "b": 62.599,
+      "h": 8.697
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 5,
+    "weiter": {
+      "x": 84.434,
+      "y": 93.671,
+      "b": 8.566,
+      "h": 4.658
+    },
+    "bretter": {},
+    "zuege_n": 107,
+    "zuege_aktiv": 82,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 238,
+        "h": 94,
+        "x": 1378,
+        "y": 380
+      },
+      {
+        "zug": "gegner:oeffnen:konzern",
+        "aus": false,
+        "b": 238,
+        "h": 75,
+        "x": 1647,
+        "y": 500
+      },
+      {
+        "zug": "gegner:abloesen:brueckenwirt",
+        "aus": false,
+        "b": 112,
+        "h": 33,
+        "x": 1474,
+        "y": 599
+      },
+      {
+        "zug": "gegner:hinhalten:brueckenwirt",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 1474,
+        "y": 634
+      },
+      {
+        "zug": "gegner:abloesen:hirsch",
+        "aus": false,
+        "b": 112,
+        "h": 33,
+        "x": 898,
+        "y": 708
+      },
+      {
+        "zug": "gegner:hinhalten:hirsch",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 898,
+        "y": 743
+      },
+      {
+        "zug": "gegner:abloesen:bahnhofswirt",
+        "aus": false,
+        "b": 112,
+        "h": 33,
+        "x": 1762,
+        "y": 169
+      },
+      {
+        "zug": "gegner:hinhalten:bahnhofswirt",
+        "aus": false,
+        "b": 124,
+        "h": 30,
+        "x": 1762,
+        "y": 204
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 185,
+        "h": 44,
+        "x": 771,
+        "y": 440
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 118,
+        "h": 24,
+        "x": 1506,
+        "y": 140
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 176,
+        "h": 24,
+        "x": 987,
+        "y": 191
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 48,
+        "h": 24,
+        "x": 1577,
+        "y": 222
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 482
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 506
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 530
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 237,
+        "h": 24,
+        "x": 957,
+        "y": 554
+      },
+      {
+        "zug": "name:anschlag:bierdeckel",
+        "aus": false,
+        "b": 184,
+        "h": 35,
+        "x": 1041,
+        "y": 659
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1294,
+        "y": 458
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1006,
+        "y": 448
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1620,
+        "y": 418
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1678,
+        "y": 688
+      },
+      {
+        "zug": "stadt:marke:fuhre-bahnhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1812,
+        "y": 258
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 39,
+        "y": 339
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 144,
+        "h": 24,
+        "x": 195,
+        "y": 339
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 144,
+        "h": 24,
+        "x": 351,
+        "y": 339
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 416,
+        "y": 404
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 462,
+        "y": 404
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 416,
+        "y": 451
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 462,
+        "y": 451
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 416,
+        "y": 498
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 462,
+        "y": 498
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 416,
+        "y": 546
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 462,
+        "y": 546
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 416,
+        "y": 593
+      },
+      {
+        "zug": "fuhre:abladen:muehlwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 462,
+        "y": 593
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 416,
+        "y": 640
+      },
+      {
+        "zug": "fuhre:abladen:brueckenwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 462,
+        "y": 640
+      },
+      {
+        "zug": "fuhre:listen:faehrhaus",
+        "aus": false,
+        "b": 139,
+        "h": 24,
+        "x": 348,
+        "y": 688
+      },
+      {
+        "zug": "fuhre:listen:hirsch",
+        "aus": false,
+        "b": 139,
+        "h": 24,
+        "x": 348,
+        "y": 735
+      },
+      {
+        "zug": "fuhre:listen:markt",
+        "aus": false,
+        "b": 139,
+        "h": 24,
+        "x": 348,
+        "y": 783
+      },
+      {
+        "zug": "fuhre:listen:bahnhofswirt",
+        "aus": false,
+        "b": 139,
+        "h": 24,
+        "x": 348,
+        "y": 830
+      },
+      {
+        "zug": "fuhre:listen:neustadt",
+        "aus": false,
+        "b": 139,
+        "h": 24,
+        "x": 348,
+        "y": 877
+      },
+      {
+        "zug": "fuhre:tafel-ab:hell",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 887,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-auf:hell",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 934,
+        "y": 217
+      },
+      {
+        "zug": "fuhre:tafel-ab:pils",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 887,
+        "y": 251
+      },
+      {
+        "zug": "fuhre:tafel-auf:pils",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 934,
+        "y": 251
+      },
+      {
+        "zug": "fuhre:tafel-ab:export",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 887,
+        "y": 286
+      },
+      {
+        "zug": "fuhre:tafel-auf:export",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 934,
+        "y": 286
+      },
+      {
+        "zug": "fuhre:tafel-ab:handel",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 887,
+        "y": 331
+      },
+      {
+        "zug": "fuhre:tafel-auf:handel",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 934,
+        "y": 331
+      },
+      {
+        "zug": "fuhre:kauf:lastzug",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 535,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:kauf:sudwerk",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 643,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 105,
+        "h": 65,
+        "x": 750,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": true,
+        "b": 105,
+        "h": 65,
+        "x": 858,
+        "y": 479
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 112,
+        "h": 24,
+        "x": 994,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 114,
+        "h": 24,
+        "x": 1110,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 94,
+        "h": 24,
+        "x": 1228,
+        "y": 790
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 499,
+        "h": 36,
+        "x": 994,
+        "y": 818
+      },
+      {
+        "zug": "sud:fuehrung:erfahrung",
+        "aus": true,
+        "b": 141,
+        "h": 44,
+        "x": 41,
+        "y": 287
+      },
+      {
+        "zug": "sud:fuehrung:labor",
+        "aus": true,
+        "b": 141,
+        "h": 76,
+        "x": 200,
+        "y": 288
+      },
+      {
+        "zug": "sud:fuehrung:rechner",
+        "aus": true,
+        "b": 141,
+        "h": 60,
+        "x": 359,
+        "y": 288
+      },
+      {
+        "zug": "sud:behandlung:natur",
+        "aus": true,
+        "b": 102,
+        "h": 44,
+        "x": 41,
+        "y": 606
+      },
+      {
+        "zug": "sud:behandlung:schoenen",
+        "aus": true,
+        "b": 102,
+        "h": 44,
+        "x": 160,
+        "y": 606
+      },
+      {
+        "zug": "sud:behandlung:filter",
+        "aus": true,
+        "b": 102,
+        "h": 44,
+        "x": 279,
+        "y": 606
+      },
+      {
+        "zug": "sud:behandlung:pasteur",
+        "aus": true,
+        "b": 102,
+        "h": 44,
+        "x": 398,
+        "y": 607
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 203,
+        "h": 25,
+        "x": 516,
+        "y": 519
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 218,
+        "h": 25,
+        "x": 516,
+        "y": 549
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 210,
+        "h": 25,
+        "x": 516,
+        "y": 579
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 261,
+        "h": 25,
+        "x": 516,
+        "y": 731
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 391,
+        "y": 88
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 373,
+        "h": 24,
+        "x": 36,
+        "y": 348
+      },
+      {
+        "zug": "name:jetzt:bierdeckel",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 415
+      },
+      {
+        "zug": "name:jetzt:kastenaktion",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 442
+      },
+      {
+        "zug": "name:jetzt:anzeige",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 470
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 514
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 542
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 386,
+        "h": 24,
+        "x": 30,
+        "y": 608
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 244,
+        "h": 24,
+        "x": 1046,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1293,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1488,
+        "y": 746
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 191,
+        "h": 24,
+        "x": 1682,
+        "y": 746
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 125,
+        "h": 30,
+        "x": 1263,
+        "y": 36
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 98,
+        "h": 30,
+        "x": 1395,
+        "y": 36
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 164,
+        "h": 47,
+        "x": 1621,
+        "y": 937
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 26,
+        "h": 24,
+        "x": 23,
+        "y": 24
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 171,
+        "h": 39,
+        "x": 31,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 105,
+        "h": 39,
+        "x": 205,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 83,
+        "h": 39,
+        "x": 313,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 93,
+        "h": 39,
+        "x": 399,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 84,
+        "h": 39,
+        "x": 495,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 117,
+        "h": 39,
+        "x": 582,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 171,
+        "h": 39,
+        "x": 702,
+        "y": 863
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 87,
+        "h": 39,
+        "x": 876,
+        "y": 863
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 133,
+        "h": 39,
+        "x": 966,
+        "y": 863
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 104,
+        "h": 30,
+        "x": 31,
+        "y": 909
+      },
+      {
+        "zug": "stadt:abbruch",
+        "aus": false,
+        "b": 104,
+        "h": 30,
+        "x": 138,
+        "y": 909
+      },
+      {
+        "zug": "stadt:bau:waage",
+        "aus": false,
+        "b": 292,
+        "h": 30,
+        "x": 31,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:maelzerei",
+        "aus": false,
+        "b": 292,
+        "h": 30,
+        "x": 329,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:verwaltung",
+        "aus": false,
+        "b": 292,
+        "h": 30,
+        "x": 627,
+        "y": 944
+      },
+      {
+        "zug": "stadt:bau:sudhaus_neu",
+        "aus": false,
+        "b": 292,
+        "h": 30,
+        "x": 925,
+        "y": 944
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 246,
+        "h": 24,
+        "x": 1648,
+        "y": 35
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 246,
+        "h": 37,
+        "x": 1648,
+        "y": 153
+      },
+      {
+        "zug": "erbe:verschreibe:lindenhof",
+        "aus": false,
+        "b": 161,
+        "h": 24,
+        "x": 666,
+        "y": 359
+      },
+      {
+        "zug": "erbe:verschreibe:torschenke",
+        "aus": false,
+        "b": 155,
+        "h": 24,
+        "x": 671,
+        "y": 386
+      },
+      {
+        "zug": "erbe:verschreibe:muehlwirt",
+        "aus": false,
+        "b": 155,
+        "h": 24,
+        "x": 671,
+        "y": 414
+      },
+      {
+        "zug": "erbe:verschreibe:markt",
+        "aus": false,
+        "b": 155,
+        "h": 24,
+        "x": 671,
+        "y": 441
+      }
+    ]
+  },
+  "1366x768_e1": {
+    "verdeckt": 2,
+    "verdeckt_wer": [
+      {
+        "zug": "fuhre:bann:brueckenwirt",
+        "unter": "bauhof"
+      },
+      {
+        "zug": "fuhre:bann:faehrhaus",
+        "unter": "bauhof"
+      }
+    ],
+    "werkbank": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 14.561
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 4.744
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 89.805,
+      "b": 62.6,
+      "h": 9.495
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 7,
+    "weiter": {
+      "x": 83.779,
+      "y": 93.656,
+      "b": 9.221,
+      "h": 4.683
+    },
+    "bretter": {},
+    "zuege_n": 105,
+    "zuege_aktiv": 82,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 182,
+        "h": 85,
+        "x": 975,
+        "y": 292
+      },
+      {
+        "zug": "gegner:abloesen:torschenke",
+        "aus": false,
+        "b": 77,
+        "h": 26,
+        "x": 567,
+        "y": 413
+      },
+      {
+        "zug": "gegner:hinhalten:torschenke",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 567,
+        "y": 440
+      },
+      {
+        "zug": "gegner:abloesen:faehrhaus",
+        "aus": false,
+        "b": 77,
+        "h": 26,
+        "x": 1182,
+        "y": 382
+      },
+      {
+        "zug": "gegner:hinhalten:faehrhaus",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 1182,
+        "y": 409
+      },
+      {
+        "zug": "gegner:zuvorkommen:obernberg",
+        "aus": false,
+        "b": 111,
+        "h": 26,
+        "x": 1174,
+        "y": 297
+      },
+      {
+        "zug": "gegner:hinhalten:obernberg",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 1174,
+        "y": 325
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 141,
+        "h": 34,
+        "x": 544,
+        "y": 338
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 91,
+        "h": 24,
+        "x": 1065,
+        "y": 108
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 118,
+        "h": 24,
+        "x": 703,
+        "y": 153
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 37,
+        "h": 24,
+        "x": 1118,
+        "y": 182
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 681,
+        "y": 400
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 681,
+        "y": 424
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 681,
+        "y": 448
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 168,
+        "h": 33,
+        "x": 681,
+        "y": 472
+      },
+      {
+        "zug": "name:anschlag:umtrunk",
+        "aus": false,
+        "b": 140,
+        "h": 27,
+        "x": 722,
+        "y": 299
+      },
+      {
+        "zug": "stadt:marke:gegner-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 759,
+        "y": 364
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 917,
+        "y": 349
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 720,
+        "y": 341
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1149,
+        "y": 318
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1190,
+        "y": 526
+      },
+      {
+        "zug": "stadt:marke:fuhre-fluss",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1108,
+        "y": 495
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-oben",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1135,
+        "y": 234
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 29,
+        "y": 372
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 115,
+        "h": 24,
+        "x": 132,
+        "y": 372
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 257,
+        "y": 372
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 447
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 447
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 493
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 493
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 540
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 540
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 586
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 586
+      },
+      {
+        "zug": "fuhre:bann:muehlwirt",
+        "aus": false,
+        "b": 102,
+        "h": 24,
+        "x": 240,
+        "y": 632
+      },
+      {
+        "zug": "fuhre:bann:brueckenwirt",
+        "aus": false,
+        "b": 102,
+        "h": 24,
+        "x": 240,
+        "y": 678
+      },
+      {
+        "zug": "fuhre:bann:faehrhaus",
+        "aus": false,
+        "b": 102,
+        "h": 24,
+        "x": 240,
+        "y": 724
+      },
+      {
+        "zug": "fuhre:bann:hirsch",
+        "aus": false,
+        "b": 102,
+        "h": 24,
+        "x": 240,
+        "y": 770
+      },
+      {
+        "zug": "fuhre:laden:markt",
+        "aus": true,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 816
+      },
+      {
+        "zug": "fuhre:abladen:markt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 816
+      },
+      {
+        "zug": "fuhre:bann:obernberg",
+        "aus": false,
+        "b": 102,
+        "h": 24,
+        "x": 240,
+        "y": 862
+      },
+      {
+        "zug": "fuhre:tafel-ab:duenn",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 234
+      },
+      {
+        "zug": "fuhre:tafel-auf:duenn",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 234
+      },
+      {
+        "zug": "fuhre:tafel-ab:grut",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 286
+      },
+      {
+        "zug": "fuhre:tafel-auf:grut",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 286
+      },
+      {
+        "zug": "fuhre:tafel-ab:stark",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 348
+      },
+      {
+        "zug": "fuhre:tafel-auf:stark",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 348
+      },
+      {
+        "zug": "fuhre:tafel-ab:kofent",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 600,
+        "y": 302
+      },
+      {
+        "zug": "fuhre:tafel-auf:kofent",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 642,
+        "y": 302
+      },
+      {
+        "zug": "fuhre:kauf:budget",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 381,
+        "y": 333
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 478,
+        "y": 333
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 575,
+        "y": 333
+      },
+      {
+        "zug": "fuhre:kauf:fass",
+        "aus": false,
+        "b": 288,
+        "h": 24,
+        "x": 381,
+        "y": 398
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 106,
+        "h": 24,
+        "x": 708,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 109,
+        "h": 24,
+        "x": 817,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 84,
+        "h": 24,
+        "x": 929,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 354,
+        "h": 28,
+        "x": 708,
+        "y": 628
+      },
+      {
+        "zug": "sud:wuerze:grut",
+        "aus": true,
+        "b": 100,
+        "h": 39,
+        "x": 31,
+        "y": 249
+      },
+      {
+        "zug": "sud:wuerze:sack",
+        "aus": true,
+        "b": 100,
+        "h": 39,
+        "x": 144,
+        "y": 249
+      },
+      {
+        "zug": "sud:wuerze:brief",
+        "aus": true,
+        "b": 100,
+        "h": 55,
+        "x": 256,
+        "y": 249
+      },
+      {
+        "zug": "sud:wasser:bach",
+        "aus": true,
+        "b": 100,
+        "h": 39,
+        "x": 31,
+        "y": 671
+      },
+      {
+        "zug": "sud:wasser:brunnen",
+        "aus": true,
+        "b": 100,
+        "h": 39,
+        "x": 144,
+        "y": 671
+      },
+      {
+        "zug": "sud:wasser:roehre",
+        "aus": true,
+        "b": 100,
+        "h": 55,
+        "x": 256,
+        "y": 671
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 213,
+        "h": 24,
+        "x": 368,
+        "y": 514
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 210,
+        "h": 24,
+        "x": 368,
+        "y": 542
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 196,
+        "h": 24,
+        "x": 368,
+        "y": 570
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 274,
+        "h": 38,
+        "x": 368,
+        "y": 755
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 271,
+        "y": 67
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 263,
+        "h": 24,
+        "x": 27,
+        "y": 272
+      },
+      {
+        "zug": "name:jetzt:umtrunk",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 321
+      },
+      {
+        "zug": "name:jetzt:zunftzeichen",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 347
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 386
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 413
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 469
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 173,
+        "h": 24,
+        "x": 745,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 920,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1058,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1196,
+        "y": 570
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 108,
+        "h": 24,
+        "x": 903,
+        "y": 28
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 82,
+        "h": 24,
+        "x": 1016,
+        "y": 28
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 126,
+        "h": 36,
+        "x": 1144,
+        "y": 719
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 16,
+        "y": 16
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 130,
+        "h": 36,
+        "x": 22,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 73,
+        "h": 36,
+        "x": 155,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 99,
+        "h": 36,
+        "x": 230,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 76,
+        "h": 36,
+        "x": 331,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 95,
+        "h": 36,
+        "x": 410,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 81,
+        "h": 36,
+        "x": 507,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 119,
+        "h": 36,
+        "x": 590,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 61,
+        "h": 36,
+        "x": 711,
+        "y": 651
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 91,
+        "h": 36,
+        "x": 774,
+        "y": 651
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 78,
+        "h": 24,
+        "x": 23,
+        "y": 692
+      },
+      {
+        "zug": "stadt:versatz",
+        "aus": false,
+        "b": 78,
+        "h": 24,
+        "x": 103,
+        "y": 692
+      },
+      {
+        "zug": "stadt:bau:grutkammer",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 23,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:gaerbottiche",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 192,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:ochsenstall",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 362,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:keller_gewoelbe",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 531,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:kueferei",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 700,
+        "y": 720
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 174,
+        "h": 36,
+        "x": 1173,
+        "y": 27
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 174,
+        "h": 51,
+        "x": 1173,
+        "y": 205
+      },
+      {
+        "zug": "erbe:verschreibe:ochse",
+        "aus": false,
+        "b": 84,
+        "h": 24,
+        "x": 503,
+        "y": 265
+      },
+      {
+        "zug": "erbe:verschreibe:pfarrhof",
+        "aus": false,
+        "b": 80,
+        "h": 24,
+        "x": 507,
+        "y": 291
+      },
+      {
+        "zug": "erbe:verschreibe:hirsch",
+        "aus": false,
+        "b": 84,
+        "h": 24,
+        "x": 503,
+        "y": 317
+      },
+      {
+        "zug": "erbe:verschreibe:markt",
+        "aus": false,
+        "b": 80,
+        "h": 24,
+        "x": 507,
+        "y": 343
+      }
+    ]
+  },
+  "1366x768_e2": {
+    "verdeckt": 2,
+    "verdeckt_wer": [
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "unter": "reiterzeile"
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "unter": "bauhof"
+      }
+    ],
+    "werkbank": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 14.561
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 4.744
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 89.805,
+      "b": 62.6,
+      "h": 9.495
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 7,
+    "weiter": {
+      "x": 83.779,
+      "y": 93.656,
+      "b": 9.221,
+      "h": 4.683
+    },
+    "bretter": {},
+    "zuege_n": 113,
+    "zuege_aktiv": 83,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 182,
+        "h": 73,
+        "x": 975,
+        "y": 292
+      },
+      {
+        "zug": "gegner:abloesen:ochse",
+        "aus": false,
+        "b": 77,
+        "h": 26,
+        "x": 676,
+        "y": 228
+      },
+      {
+        "zug": "gegner:hinhalten:ochse",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 676,
+        "y": 256
+      },
+      {
+        "zug": "gegner:zuvorkommen:muehlwirt",
+        "aus": false,
+        "b": 111,
+        "h": 26,
+        "x": 1174,
+        "y": 213
+      },
+      {
+        "zug": "gegner:hinhalten:muehlwirt",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 1174,
+        "y": 240
+      },
+      {
+        "zug": "gegner:abloesen:brueckenwirt",
+        "aus": false,
+        "b": 77,
+        "h": 26,
+        "x": 1154,
+        "y": 459
+      },
+      {
+        "zug": "gegner:hinhalten:brueckenwirt",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 1154,
+        "y": 486
+      },
+      {
+        "zug": "gegner:abloesen:obernberg",
+        "aus": false,
+        "b": 77,
+        "h": 26,
+        "x": 1182,
+        "y": 297
+      },
+      {
+        "zug": "gegner:hinhalten:obernberg",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 1182,
+        "y": 325
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 141,
+        "h": 34,
+        "x": 544,
+        "y": 338
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 91,
+        "h": 24,
+        "x": 1065,
+        "y": 108
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 112,
+        "h": 24,
+        "x": 703,
+        "y": 153
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 37,
+        "h": 24,
+        "x": 1118,
+        "y": 182
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 599,
+        "y": 394
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 599,
+        "y": 418
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 599,
+        "y": 442
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 168,
+        "h": 47,
+        "x": 599,
+        "y": 466
+      },
+      {
+        "zug": "name:anschlag:kirchweih",
+        "aus": false,
+        "b": 140,
+        "h": 37,
+        "x": 886,
+        "y": 424
+      },
+      {
+        "zug": "stadt:marke:gegner-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 759,
+        "y": 364
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 917,
+        "y": 349
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 720,
+        "y": 341
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1149,
+        "y": 318
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1190,
+        "y": 526
+      },
+      {
+        "zug": "stadt:marke:fuhre-fluss",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1108,
+        "y": 495
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-oben",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1135,
+        "y": 234
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 29,
+        "y": 358
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 115,
+        "h": 24,
+        "x": 132,
+        "y": 358
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 257,
+        "y": 358
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 434
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 434
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 480
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 480
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 526
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 526
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 572
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 572
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 618
+      },
+      {
+        "zug": "fuhre:abladen:muehlwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 618
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 664
+      },
+      {
+        "zug": "fuhre:abladen:brueckenwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 664
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 710
+      },
+      {
+        "zug": "fuhre:abladen:faehrhaus",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 710
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "aus": false,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 757
+      },
+      {
+        "zug": "fuhre:abladen:hirsch",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 757
+      },
+      {
+        "zug": "fuhre:laden:markt",
+        "aus": true,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 803
+      },
+      {
+        "zug": "fuhre:abladen:markt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 803
+      },
+      {
+        "zug": "fuhre:laden:obernberg",
+        "aus": true,
+        "b": 47,
+        "h": 24,
+        "x": 270,
+        "y": 849
+      },
+      {
+        "zug": "fuhre:abladen:obernberg",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 849
+      },
+      {
+        "zug": "fuhre:tafel-ab:schank",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 218
+      },
+      {
+        "zug": "fuhre:tafel-auf:schank",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 218
+      },
+      {
+        "zug": "fuhre:tafel-ab:braun",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 270
+      },
+      {
+        "zug": "fuhre:tafel-auf:braun",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 270
+      },
+      {
+        "zug": "fuhre:tafel-ab:maerzen",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 332
+      },
+      {
+        "zug": "fuhre:tafel-auf:maerzen",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 332
+      },
+      {
+        "zug": "fuhre:tafel-ab:nachbier",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 600,
+        "y": 286
+      },
+      {
+        "zug": "fuhre:tafel-auf:nachbier",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 642,
+        "y": 286
+      },
+      {
+        "zug": "fuhre:kauf:budget",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 381,
+        "y": 333
+      },
+      {
+        "zug": "fuhre:kauf:fass",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 478,
+        "y": 333
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 575,
+        "y": 333
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": false,
+        "b": 288,
+        "h": 24,
+        "x": 381,
+        "y": 398
+      },
+      {
+        "zug": "fuhre:pfand",
+        "aus": true,
+        "b": 194,
+        "h": 24,
+        "x": 381,
+        "y": 632
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 106,
+        "h": 24,
+        "x": 708,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 109,
+        "h": 24,
+        "x": 817,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 83,
+        "h": 24,
+        "x": 929,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 354,
+        "h": 28,
+        "x": 708,
+        "y": 628
+      },
+      {
+        "zug": "sud:schuettung:rein",
+        "aus": true,
+        "b": 72,
+        "h": 39,
+        "x": 31,
+        "y": 264
+      },
+      {
+        "zug": "sud:schuettung:weizen",
+        "aus": true,
+        "b": 72,
+        "h": 54,
+        "x": 115,
+        "y": 264
+      },
+      {
+        "zug": "sud:schuettung:hafer",
+        "aus": true,
+        "b": 72,
+        "h": 54,
+        "x": 200,
+        "y": 264
+      },
+      {
+        "zug": "sud:schuettung:weizenbrief",
+        "aus": true,
+        "b": 72,
+        "h": 85,
+        "x": 284,
+        "y": 264
+      },
+      {
+        "zug": "sud:gaerung:ober",
+        "aus": true,
+        "b": 156,
+        "h": 24,
+        "x": 31,
+        "y": 825
+      },
+      {
+        "zug": "sud:gaerung:keller",
+        "aus": true,
+        "b": 156,
+        "h": 55,
+        "x": 200,
+        "y": 825
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 237,
+        "h": 24,
+        "x": 368,
+        "y": 514
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 208,
+        "h": 24,
+        "x": 368,
+        "y": 542
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 194,
+        "h": 24,
+        "x": 368,
+        "y": 570
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 259,
+        "h": 24,
+        "x": 368,
+        "y": 755
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 271,
+        "y": 67
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 263,
+        "h": 24,
+        "x": 27,
+        "y": 288
+      },
+      {
+        "zug": "name:jetzt:kirchweih",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 336
+      },
+      {
+        "zug": "name:jetzt:krug",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 363
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 402
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 428
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 484
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 172,
+        "h": 24,
+        "x": 747,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 921,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1059,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1197,
+        "y": 570
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 108,
+        "h": 24,
+        "x": 917,
+        "y": 28
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 82,
+        "h": 24,
+        "x": 1030,
+        "y": 28
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 126,
+        "h": 36,
+        "x": 1144,
+        "y": 719
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 16,
+        "y": 16
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 130,
+        "h": 36,
+        "x": 22,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 72,
+        "h": 36,
+        "x": 155,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 81,
+        "h": 36,
+        "x": 230,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 84,
+        "h": 36,
+        "x": 313,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 108,
+        "h": 36,
+        "x": 399,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 80,
+        "h": 36,
+        "x": 510,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 118,
+        "h": 36,
+        "x": 592,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 60,
+        "h": 36,
+        "x": 712,
+        "y": 651
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 90,
+        "h": 36,
+        "x": 775,
+        "y": 651
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 23,
+        "y": 692
+      },
+      {
+        "zug": "stadt:wiederkauf",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 120,
+        "y": 692
+      },
+      {
+        "zug": "stadt:bau:gaerbottiche",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 23,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:waschhaus",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 192,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:kontor",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 362,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:rossmuehle",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 531,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:hopfenlager",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 700,
+        "y": 720
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 174,
+        "h": 36,
+        "x": 1173,
+        "y": 27
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 174,
+        "h": 51,
+        "x": 1173,
+        "y": 171
+      },
+      {
+        "zug": "erbe:verschreibe:lindenhof",
+        "aus": false,
+        "b": 80,
+        "h": 24,
+        "x": 507,
+        "y": 265
+      },
+      {
+        "zug": "erbe:verschreibe:torschenke",
+        "aus": false,
+        "b": 76,
+        "h": 24,
+        "x": 511,
+        "y": 292
+      },
+      {
+        "zug": "erbe:verschreibe:faehrhaus",
+        "aus": false,
+        "b": 76,
+        "h": 24,
+        "x": 511,
+        "y": 319
+      },
+      {
+        "zug": "erbe:verschreibe:hirsch",
+        "aus": false,
+        "b": 76,
+        "h": 24,
+        "x": 511,
+        "y": 346
+      }
+    ]
+  },
+  "1366x768_e3": {
+    "verdeckt": 3,
+    "verdeckt_wer": [
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "unter": "reiterzeile"
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "unter": "bauhof"
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "unter": "bauhof"
+      }
+    ],
+    "werkbank": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 14.561
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 4.744
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 89.805,
+      "b": 62.6,
+      "h": 9.495
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 6,
+    "weiter": {
+      "x": 83.779,
+      "y": 93.656,
+      "b": 9.221,
+      "h": 4.683
+    },
+    "bretter": {},
+    "zuege_n": 116,
+    "zuege_aktiv": 87,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 182,
+        "h": 82,
+        "x": 975,
+        "y": 292
+      },
+      {
+        "zug": "gegner:abloesen:lindenhof",
+        "aus": false,
+        "b": 80,
+        "h": 26,
+        "x": 861,
+        "y": 282
+      },
+      {
+        "zug": "gegner:hinhalten:lindenhof",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 861,
+        "y": 309
+      },
+      {
+        "zug": "gegner:abloesen:muehlwirt",
+        "aus": false,
+        "b": 77,
+        "h": 26,
+        "x": 1191,
+        "y": 213
+      },
+      {
+        "zug": "gegner:hinhalten:muehlwirt",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 1191,
+        "y": 240
+      },
+      {
+        "zug": "gegner:zuvorkommen:brueckenwirt",
+        "aus": false,
+        "b": 111,
+        "h": 26,
+        "x": 1147,
+        "y": 459
+      },
+      {
+        "zug": "gegner:hinhalten:brueckenwirt",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 1147,
+        "y": 486
+      },
+      {
+        "zug": "gegner:abloesen:markt",
+        "aus": false,
+        "b": 77,
+        "h": 26,
+        "x": 71,
+        "y": 535
+      },
+      {
+        "zug": "gegner:hinhalten:markt",
+        "aus": false,
+        "b": 55,
+        "h": 24,
+        "x": 71,
+        "y": 562
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 141,
+        "h": 34,
+        "x": 544,
+        "y": 338
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 91,
+        "h": 24,
+        "x": 1065,
+        "y": 108
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 159,
+        "h": 24,
+        "x": 703,
+        "y": 153
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 37,
+        "h": 24,
+        "x": 1118,
+        "y": 182
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 1091,
+        "y": 351
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 1091,
+        "y": 375
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 168,
+        "h": 31,
+        "x": 1091,
+        "y": 399
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 168,
+        "h": 33,
+        "x": 1091,
+        "y": 430
+      },
+      {
+        "zug": "name:anschlag:annonce",
+        "aus": false,
+        "b": 140,
+        "h": 27,
+        "x": 777,
+        "y": 360
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 917,
+        "y": 349
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 712,
+        "y": 341
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1149,
+        "y": 318
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1190,
+        "y": 526
+      },
+      {
+        "zug": "stadt:marke:fuhre-fluss",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1108,
+        "y": 495
+      },
+      {
+        "zug": "stadt:marke:fuhre-bahnhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1286,
+        "y": 195
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 29,
+        "y": 340
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 115,
+        "h": 24,
+        "x": 132,
+        "y": 340
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 257,
+        "y": 340
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 415
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 415
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 461
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 461
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 507
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 507
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 553
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 553
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 599
+      },
+      {
+        "zug": "fuhre:abladen:muehlwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 599
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 645
+      },
+      {
+        "zug": "fuhre:abladen:brueckenwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 645
+      },
+      {
+        "zug": "fuhre:laden:faehrhaus",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 691
+      },
+      {
+        "zug": "fuhre:abladen:faehrhaus",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 691
+      },
+      {
+        "zug": "fuhre:laden:hirsch",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 738
+      },
+      {
+        "zug": "fuhre:abladen:hirsch",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 738
+      },
+      {
+        "zug": "fuhre:laden:markt",
+        "aus": true,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 784
+      },
+      {
+        "zug": "fuhre:abladen:markt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 784
+      },
+      {
+        "zug": "fuhre:laden:bahnhofswirt",
+        "aus": false,
+        "b": 44,
+        "h": 24,
+        "x": 273,
+        "y": 830
+      },
+      {
+        "zug": "fuhre:abladen:bahnhofswirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 830
+      },
+      {
+        "zug": "fuhre:tafel-ab:schank",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 224
+      },
+      {
+        "zug": "fuhre:tafel-auf:schank",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 224
+      },
+      {
+        "zug": "fuhre:tafel-ab:lager",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 267
+      },
+      {
+        "zug": "fuhre:tafel-auf:lager",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 267
+      },
+      {
+        "zug": "fuhre:tafel-ab:export",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 329
+      },
+      {
+        "zug": "fuhre:tafel-auf:export",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 329
+      },
+      {
+        "zug": "fuhre:tafel-ab:einfach",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 600,
+        "y": 294
+      },
+      {
+        "zug": "fuhre:tafel-auf:einfach",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 642,
+        "y": 294
+      },
+      {
+        "zug": "fuhre:kauf:eis",
+        "aus": true,
+        "b": 95,
+        "h": 63,
+        "x": 381,
+        "y": 307
+      },
+      {
+        "zug": "fuhre:kauf:eiskeller",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 478,
+        "y": 307
+      },
+      {
+        "zug": "fuhre:kauf:sudwerk",
+        "aus": false,
+        "b": 95,
+        "h": 63,
+        "x": 575,
+        "y": 307
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 143,
+        "h": 50,
+        "x": 381,
+        "y": 372
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": true,
+        "b": 143,
+        "h": 50,
+        "x": 526,
+        "y": 372
+      },
+      {
+        "zug": "fuhre:fracht:rollfuhr",
+        "aus": false,
+        "b": 116,
+        "h": 51,
+        "x": 708,
+        "y": 459
+      },
+      {
+        "zug": "fuhre:fracht:stueck",
+        "aus": false,
+        "b": 116,
+        "h": 51,
+        "x": 826,
+        "y": 459
+      },
+      {
+        "zug": "fuhre:fracht:halb",
+        "aus": false,
+        "b": 116,
+        "h": 51,
+        "x": 945,
+        "y": 459
+      },
+      {
+        "zug": "fuhre:fracht:ganz",
+        "aus": false,
+        "b": 354,
+        "h": 24,
+        "x": 708,
+        "y": 513
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 106,
+        "h": 24,
+        "x": 708,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 109,
+        "h": 24,
+        "x": 817,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 91,
+        "h": 24,
+        "x": 929,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 354,
+        "h": 28,
+        "x": 708,
+        "y": 628
+      },
+      {
+        "zug": "sud:kaelte:natureis",
+        "aus": true,
+        "b": 100,
+        "h": 39,
+        "x": 31,
+        "y": 249
+      },
+      {
+        "zug": "sud:kaelte:warm",
+        "aus": true,
+        "b": 100,
+        "h": 54,
+        "x": 144,
+        "y": 249
+      },
+      {
+        "zug": "sud:kaelte:maschine",
+        "aus": true,
+        "b": 100,
+        "h": 55,
+        "x": 256,
+        "y": 249
+      },
+      {
+        "zug": "sud:hefe:betrieb",
+        "aus": true,
+        "b": 156,
+        "h": 39,
+        "x": 31,
+        "y": 669
+      },
+      {
+        "zug": "sud:hefe:reinzucht",
+        "aus": true,
+        "b": 156,
+        "h": 55,
+        "x": 200,
+        "y": 669
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 190,
+        "h": 24,
+        "x": 368,
+        "y": 483
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 233,
+        "h": 24,
+        "x": 368,
+        "y": 511
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 219,
+        "h": 24,
+        "x": 368,
+        "y": 538
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 245,
+        "h": 24,
+        "x": 368,
+        "y": 710
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 271,
+        "y": 67
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 263,
+        "h": 24,
+        "x": 27,
+        "y": 281
+      },
+      {
+        "zug": "name:jetzt:annonce",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 329
+      },
+      {
+        "zug": "name:jetzt:plakat",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 356
+      },
+      {
+        "zug": "name:jetzt:saeule",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 382
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 422
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 448
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 504
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 173,
+        "h": 24,
+        "x": 745,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 920,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1058,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1196,
+        "y": 570
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 108,
+        "h": 24,
+        "x": 938,
+        "y": 28
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 82,
+        "h": 24,
+        "x": 1050,
+        "y": 28
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 126,
+        "h": 36,
+        "x": 1144,
+        "y": 719
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 16,
+        "y": 16
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 130,
+        "h": 36,
+        "x": 22,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 76,
+        "h": 36,
+        "x": 155,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 60,
+        "h": 36,
+        "x": 233,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 96,
+        "h": 36,
+        "x": 296,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 96,
+        "h": 36,
+        "x": 394,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 84,
+        "h": 36,
+        "x": 492,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 124,
+        "h": 36,
+        "x": 579,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 63,
+        "h": 36,
+        "x": 705,
+        "y": 651
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 95,
+        "h": 36,
+        "x": 771,
+        "y": 651
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 86,
+        "h": 24,
+        "x": 23,
+        "y": 692
+      },
+      {
+        "zug": "stadt:hypothek",
+        "aus": false,
+        "b": 86,
+        "h": 24,
+        "x": 111,
+        "y": 692
+      },
+      {
+        "zug": "stadt:bau:kontor",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 23,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:hopfenlager",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 192,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:pferdestall",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 362,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:maelzerei",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 531,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:flaschenhalle",
+        "aus": false,
+        "b": 165,
+        "h": 24,
+        "x": 700,
+        "y": 720
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 174,
+        "h": 36,
+        "x": 1173,
+        "y": 27
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 174,
+        "h": 51,
+        "x": 1173,
+        "y": 205
+      },
+      {
+        "zug": "erbe:verschreibe:ochse",
+        "aus": false,
+        "b": 82,
+        "h": 24,
+        "x": 506,
+        "y": 263
+      },
+      {
+        "zug": "erbe:verschreibe:torschenke",
+        "aus": false,
+        "b": 73,
+        "h": 24,
+        "x": 514,
+        "y": 290
+      },
+      {
+        "zug": "erbe:verschreibe:brueckenwirt",
+        "aus": false,
+        "b": 82,
+        "h": 24,
+        "x": 506,
+        "y": 317
+      },
+      {
+        "zug": "erbe:verschreibe:bahnhofswirt",
+        "aus": false,
+        "b": 82,
+        "h": 24,
+        "x": 506,
+        "y": 344
+      }
+    ]
+  },
+  "1366x768_e4": {
+    "verdeckt": 2,
+    "verdeckt_wer": [
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "unter": "reiterzeile"
+      },
+      {
+        "zug": "fuhre:listen:faehrhaus",
+        "unter": "bauhof"
+      }
+    ],
+    "werkbank": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 14.561
+    },
+    "reiterzeile": {
+      "x": 1.2,
+      "y": 84.739,
+      "b": 62.6,
+      "h": 4.744
+    },
+    "bauhof": {
+      "x": 1.2,
+      "y": 89.805,
+      "b": 62.6,
+      "h": 9.495
+    },
+    "reiter": 10,
+    "zugeklappt": 8,
+    "pfloecke": 5,
+    "weiter": {
+      "x": 83.779,
+      "y": 93.656,
+      "b": 9.221,
+      "h": 4.683
+    },
+    "bretter": {},
+    "zuege_n": 107,
+    "zuege_aktiv": 82,
+    "zuege": [
+      {
+        "zug": "gegner:oeffnen:adler",
+        "aus": false,
+        "b": 182,
+        "h": 73,
+        "x": 975,
+        "y": 292
+      },
+      {
+        "zug": "gegner:oeffnen:konzern",
+        "aus": false,
+        "b": 182,
+        "h": 58,
+        "x": 1166,
+        "y": 384
+      },
+      {
+        "zug": "gegner:abloesen:brueckenwirt",
+        "aus": false,
+        "b": 86,
+        "h": 26,
+        "x": 1045,
+        "y": 459
+      },
+      {
+        "zug": "gegner:hinhalten:brueckenwirt",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 1045,
+        "y": 486
+      },
+      {
+        "zug": "gegner:abloesen:hirsch",
+        "aus": false,
+        "b": 86,
+        "h": 26,
+        "x": 635,
+        "y": 543
+      },
+      {
+        "zug": "gegner:hinhalten:hirsch",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 635,
+        "y": 570
+      },
+      {
+        "zug": "gegner:abloesen:bahnhofswirt",
+        "aus": false,
+        "b": 86,
+        "h": 26,
+        "x": 1250,
+        "y": 128
+      },
+      {
+        "zug": "gegner:hinhalten:bahnhofswirt",
+        "aus": false,
+        "b": 95,
+        "h": 24,
+        "x": 1250,
+        "y": 156
+      },
+      {
+        "zug": "gegner:beschwerde-bild",
+        "aus": false,
+        "b": 141,
+        "h": 34,
+        "x": 544,
+        "y": 338
+      },
+      {
+        "zug": "gegner:blatt",
+        "aus": false,
+        "b": 91,
+        "h": 24,
+        "x": 1065,
+        "y": 108
+      },
+      {
+        "zug": "gegner:beschwerde",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 703,
+        "y": 153
+      },
+      {
+        "zug": "gegner:zeige:1",
+        "aus": false,
+        "b": 37,
+        "h": 24,
+        "x": 1118,
+        "y": 182
+      },
+      {
+        "zug": "sud:zettel-anstich",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 599,
+        "y": 400
+      },
+      {
+        "zug": "sud:zettel-hefe-fass",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 599,
+        "y": 424
+      },
+      {
+        "zug": "sud:zettel-wechsel-frei",
+        "aus": false,
+        "b": 168,
+        "h": 24,
+        "x": 599,
+        "y": 448
+      },
+      {
+        "zug": "sud:zettel-wechsel-kauf",
+        "aus": false,
+        "b": 168,
+        "h": 33,
+        "x": 599,
+        "y": 472
+      },
+      {
+        "zug": "name:anschlag:bierdeckel",
+        "aus": false,
+        "b": 140,
+        "h": 27,
+        "x": 736,
+        "y": 506
+      },
+      {
+        "zug": "stadt:marke:fuhre-lindenhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 917,
+        "y": 349
+      },
+      {
+        "zug": "stadt:marke:fuhre-marktplatz",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 712,
+        "y": 341
+      },
+      {
+        "zug": "stadt:marke:fuhre-muehle",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1149,
+        "y": 318
+      },
+      {
+        "zug": "stadt:marke:fuhre-bruecke-unten",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1190,
+        "y": 526
+      },
+      {
+        "zug": "stadt:marke:fuhre-bahnhof",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 1286,
+        "y": 195
+      },
+      {
+        "zug": "fuhre:ziel:bar",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 29,
+        "y": 353
+      },
+      {
+        "zug": "fuhre:ziel:ziel",
+        "aus": true,
+        "b": 115,
+        "h": 24,
+        "x": 132,
+        "y": 353
+      },
+      {
+        "zug": "fuhre:ziel:borg",
+        "aus": false,
+        "b": 93,
+        "h": 24,
+        "x": 257,
+        "y": 353
+      },
+      {
+        "zug": "fuhre:laden:lindenhof",
+        "aus": false,
+        "b": 41,
+        "h": 24,
+        "x": 276,
+        "y": 429
+      },
+      {
+        "zug": "fuhre:abladen:lindenhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 429
+      },
+      {
+        "zug": "fuhre:laden:ochse",
+        "aus": false,
+        "b": 41,
+        "h": 24,
+        "x": 276,
+        "y": 475
+      },
+      {
+        "zug": "fuhre:abladen:ochse",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 475
+      },
+      {
+        "zug": "fuhre:laden:torschenke",
+        "aus": false,
+        "b": 41,
+        "h": 24,
+        "x": 276,
+        "y": 521
+      },
+      {
+        "zug": "fuhre:abladen:torschenke",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 521
+      },
+      {
+        "zug": "fuhre:laden:pfarrhof",
+        "aus": false,
+        "b": 41,
+        "h": 24,
+        "x": 276,
+        "y": 567
+      },
+      {
+        "zug": "fuhre:abladen:pfarrhof",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 567
+      },
+      {
+        "zug": "fuhre:laden:muehlwirt",
+        "aus": false,
+        "b": 41,
+        "h": 24,
+        "x": 276,
+        "y": 613
+      },
+      {
+        "zug": "fuhre:abladen:muehlwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 613
+      },
+      {
+        "zug": "fuhre:laden:brueckenwirt",
+        "aus": false,
+        "b": 41,
+        "h": 24,
+        "x": 276,
+        "y": 659
+      },
+      {
+        "zug": "fuhre:abladen:brueckenwirt",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 317,
+        "y": 659
+      },
+      {
+        "zug": "fuhre:listen:faehrhaus",
+        "aus": false,
+        "b": 131,
+        "h": 24,
+        "x": 210,
+        "y": 705
+      },
+      {
+        "zug": "fuhre:listen:hirsch",
+        "aus": false,
+        "b": 131,
+        "h": 24,
+        "x": 210,
+        "y": 751
+      },
+      {
+        "zug": "fuhre:listen:markt",
+        "aus": false,
+        "b": 131,
+        "h": 24,
+        "x": 210,
+        "y": 798
+      },
+      {
+        "zug": "fuhre:listen:bahnhofswirt",
+        "aus": false,
+        "b": 131,
+        "h": 24,
+        "x": 210,
+        "y": 844
+      },
+      {
+        "zug": "fuhre:listen:neustadt",
+        "aus": false,
+        "b": 131,
+        "h": 24,
+        "x": 210,
+        "y": 890
+      },
+      {
+        "zug": "fuhre:tafel-ab:hell",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 218
+      },
+      {
+        "zug": "fuhre:tafel-auf:hell",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 218
+      },
+      {
+        "zug": "fuhre:tafel-ab:pils",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 270
+      },
+      {
+        "zug": "fuhre:tafel-auf:pils",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 270
+      },
+      {
+        "zug": "fuhre:tafel-ab:export",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 585,
+        "y": 322
+      },
+      {
+        "zug": "fuhre:tafel-auf:export",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 627,
+        "y": 322
+      },
+      {
+        "zug": "fuhre:tafel-ab:handel",
+        "aus": true,
+        "b": 24,
+        "h": 24,
+        "x": 600,
+        "y": 278
+      },
+      {
+        "zug": "fuhre:tafel-auf:handel",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 642,
+        "y": 278
+      },
+      {
+        "zug": "fuhre:kauf:lastzug",
+        "aus": false,
+        "b": 95,
+        "h": 77,
+        "x": 381,
+        "y": 319
+      },
+      {
+        "zug": "fuhre:kauf:sudwerk",
+        "aus": false,
+        "b": 95,
+        "h": 77,
+        "x": 478,
+        "y": 319
+      },
+      {
+        "zug": "fuhre:kauf:rohstoff",
+        "aus": false,
+        "b": 95,
+        "h": 77,
+        "x": 575,
+        "y": 319
+      },
+      {
+        "zug": "fuhre:rueckkauf:rohstoff",
+        "aus": true,
+        "b": 288,
+        "h": 24,
+        "x": 381,
+        "y": 398
+      },
+      {
+        "zug": "fuhre:fuellen",
+        "aus": false,
+        "b": 106,
+        "h": 24,
+        "x": 708,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:wie-vorige",
+        "aus": true,
+        "b": 109,
+        "h": 24,
+        "x": 817,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:leeren",
+        "aus": true,
+        "b": 89,
+        "h": 24,
+        "x": 929,
+        "y": 601
+      },
+      {
+        "zug": "fuhre:abschicken",
+        "aus": true,
+        "b": 354,
+        "h": 28,
+        "x": 708,
+        "y": 628
+      },
+      {
+        "zug": "sud:fuehrung:erfahrung",
+        "aus": true,
+        "b": 100,
+        "h": 54,
+        "x": 31,
+        "y": 249
+      },
+      {
+        "zug": "sud:fuehrung:labor",
+        "aus": true,
+        "b": 100,
+        "h": 85,
+        "x": 144,
+        "y": 249
+      },
+      {
+        "zug": "sud:fuehrung:rechner",
+        "aus": true,
+        "b": 100,
+        "h": 55,
+        "x": 256,
+        "y": 249
+      },
+      {
+        "zug": "sud:behandlung:natur",
+        "aus": true,
+        "b": 72,
+        "h": 39,
+        "x": 31,
+        "y": 602
+      },
+      {
+        "zug": "sud:behandlung:schoenen",
+        "aus": true,
+        "b": 72,
+        "h": 54,
+        "x": 115,
+        "y": 602
+      },
+      {
+        "zug": "sud:behandlung:filter",
+        "aus": true,
+        "b": 72,
+        "h": 55,
+        "x": 200,
+        "y": 602
+      },
+      {
+        "zug": "sud:behandlung:pasteur",
+        "aus": true,
+        "b": 72,
+        "h": 55,
+        "x": 284,
+        "y": 602
+      },
+      {
+        "zug": "sud:hefe-fuehren",
+        "aus": true,
+        "b": 195,
+        "h": 24,
+        "x": 368,
+        "y": 498
+      },
+      {
+        "zug": "sud:anstich-jung",
+        "aus": true,
+        "b": 209,
+        "h": 24,
+        "x": 368,
+        "y": 526
+      },
+      {
+        "zug": "sud:anstich-alt",
+        "aus": true,
+        "b": 201,
+        "h": 24,
+        "x": 368,
+        "y": 553
+      },
+      {
+        "zug": "sud:gaerraum",
+        "aus": true,
+        "b": 248,
+        "h": 24,
+        "x": 368,
+        "y": 739
+      },
+      {
+        "zug": "name:band",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 271,
+        "y": 67
+      },
+      {
+        "zug": "name:aufgeldbuch",
+        "aus": false,
+        "b": 263,
+        "h": 24,
+        "x": 27,
+        "y": 296
+      },
+      {
+        "zug": "name:jetzt:bierdeckel",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 354
+      },
+      {
+        "zug": "name:jetzt:kastenaktion",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 380
+      },
+      {
+        "zug": "name:jetzt:anzeige",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 407
+      },
+      {
+        "zug": "name:ruhe",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 446
+      },
+      {
+        "zug": "name:herumgehen",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 472
+      },
+      {
+        "zug": "name:blatt",
+        "aus": false,
+        "b": 273,
+        "h": 24,
+        "x": 22,
+        "y": 538
+      },
+      {
+        "zug": "erbe:tafel:verschreibe",
+        "aus": false,
+        "b": 173,
+        "h": 24,
+        "x": 745,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:leibgeding",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 920,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:abfindung",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1058,
+        "y": 570
+      },
+      {
+        "zug": "erbe:uebergabe:bruch",
+        "aus": false,
+        "b": 135,
+        "h": 24,
+        "x": 1196,
+        "y": 570
+      },
+      {
+        "zug": "kern:chronik",
+        "aus": false,
+        "b": 108,
+        "h": 24,
+        "x": 931,
+        "y": 28
+      },
+      {
+        "zug": "kern:protokoll",
+        "aus": false,
+        "b": 82,
+        "h": 24,
+        "x": 1044,
+        "y": 28
+      },
+      {
+        "zug": "weiter",
+        "aus": false,
+        "b": 126,
+        "h": 36,
+        "x": 1144,
+        "y": 719
+      },
+      {
+        "zug": "klang:ton",
+        "aus": false,
+        "b": 24,
+        "h": 24,
+        "x": 16,
+        "y": 16
+      },
+      {
+        "zug": "stadt:reiter:gegner-amort-gg-band",
+        "aus": false,
+        "b": 130,
+        "h": 36,
+        "x": 22,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+        "aus": false,
+        "b": 84,
+        "h": 36,
+        "x": 155,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+        "aus": false,
+        "b": 67,
+        "h": 36,
+        "x": 242,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+        "aus": false,
+        "b": 75,
+        "h": 36,
+        "x": 311,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+        "aus": false,
+        "b": 67,
+        "h": 36,
+        "x": 388,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:sud-sud-brett",
+        "aus": false,
+        "b": 94,
+        "h": 36,
+        "x": 458,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:name-nm-band",
+        "aus": false,
+        "b": 130,
+        "h": 36,
+        "x": 554,
+        "y": 651
+      },
+      {
+        "zug": "stadt:reiter:erbe-blatt-erb-buch",
+        "aus": false,
+        "b": 70,
+        "h": 36,
+        "x": 687,
+        "y": 651
+      },
+      {
+        "zug": "stadt:ortsmarken",
+        "aus": false,
+        "b": 106,
+        "h": 36,
+        "x": 759,
+        "y": 651
+      },
+      {
+        "zug": "stadt:alles-zuklappen",
+        "aus": false,
+        "b": 0,
+        "h": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "zug": "stadt:bau:seite",
+        "aus": false,
+        "b": 80,
+        "h": 24,
+        "x": 23,
+        "y": 692
+      },
+      {
+        "zug": "stadt:abbruch",
+        "aus": false,
+        "b": 80,
+        "h": 24,
+        "x": 105,
+        "y": 692
+      },
+      {
+        "zug": "stadt:bau:waage",
+        "aus": false,
+        "b": 207,
+        "h": 24,
+        "x": 23,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:maelzerei",
+        "aus": false,
+        "b": 207,
+        "h": 24,
+        "x": 235,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:verwaltung",
+        "aus": false,
+        "b": 207,
+        "h": 24,
+        "x": 446,
+        "y": 720
+      },
+      {
+        "zug": "stadt:bau:sudhaus_neu",
+        "aus": false,
+        "b": 207,
+        "h": 24,
+        "x": 658,
+        "y": 720
+      },
+      {
+        "zug": "preis:tafel",
+        "aus": false,
+        "b": 174,
+        "h": 36,
+        "x": 1173,
+        "y": 27
+      },
+      {
+        "zug": "preis:chronik-auf",
+        "aus": false,
+        "b": 174,
+        "h": 51,
+        "x": 1173,
+        "y": 205
+      },
+      {
+        "zug": "erbe:verschreibe:lindenhof",
+        "aus": false,
+        "b": 123,
+        "h": 24,
+        "x": 464,
+        "y": 287
+      },
+      {
+        "zug": "erbe:verschreibe:torschenke",
+        "aus": false,
+        "b": 119,
+        "h": 24,
+        "x": 468,
+        "y": 314
+      },
+      {
+        "zug": "erbe:verschreibe:muehlwirt",
+        "aus": false,
+        "b": 119,
+        "h": 24,
+        "x": 468,
+        "y": 341
+      },
+      {
+        "zug": "erbe:verschreibe:markt",
+        "aus": false,
+        "b": 119,
+        "h": 24,
+        "x": 468,
+        "y": 368
+      }
+    ]
+  }
+}

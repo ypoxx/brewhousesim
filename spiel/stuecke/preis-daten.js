@@ -96,7 +96,58 @@ var PREIS_DATEN = {
          Kornpreis gebunden und wurde zwischen den grossen Erneuerungen
          nachgesetzt — aber der Rat setzte ihn spaeter nach, als das Korn
          stieg, und nie ganz: die Buerger sollten billig trinken. */
-      satzFolgt: 0.82,
+      /* NACHGEFUEHRT IN WELLE 7: 0,82 -> 0,45.
+
+         0,82 war der HOECHSTE Wert der vier Epochen (1600: 0,25 · 1884: 0,50
+         · 1970: 0,60), und das war schon vorher schwer zu halten. Die
+         Bierordnung dieser Epoche hat ihre Stufen 41, 53 und 46 Jahre
+         auseinander — der traegste Rat der vier. Ein Rat, der den
+         Bierpfennig einmal in zwei Menschenaltern anruehrt, ist nicht der,
+         der der Teuerung am dichtesten folgt.
+
+         WOFUER DIE ZAHL EINGEFUEHRT WURDE, gehoert daneben, damit niemand
+         sie fuer eine Laune haelt: sie stammt aus Welle 4 und hat 1350 aus
+         dem Sterben geholt (Barschaft 112 -> 12 ueber vierzehn Braujahre,
+         weil das Einkommen je Fass nominal stand, waehrend alles andere mit
+         `teuerungJahr` stieg). Diese Gefahr ist heute eine andere: mit der
+         Taxe-Sprosse und dem Unterhalt (unten) steht die Michaeli-Lade in
+         denselben vierzehn Jahren zwischen 57 und 357 Pf und in 0 von 14
+         Jahren unter der einfachen Deckung. Und unter allem liegt seit
+         Welle 5 der Vorgriff auf den Notpfennig, den es damals nicht gab.
+
+         WAS SIE TUT, und darum steht sie hier und nicht bei den Knoepfen,
+         die nur ein Niveau verschieben: die Luecke zwischen dem, was das
+         Haus je Fass loest, und dem, was alles kostet, WAECHST mit jedem
+         Jahr — 0,37 x 4 Hundertstel, zinseszinslich. Im ersten Braujahr ist
+         sie null, im vierzehnten rund ein Sechstel des Einkommens. Das ist
+         die einzige Groesse in diesem Stueck, deren Wirkung mit der Laufzeit
+         zunimmt statt sich auf ein Plateau zu legen — und genau daran misst
+         die zweite Latte.
+
+         WIE DIE ZAHL GEFUNDEN WURDE — vier Laeufe derselben Linie, je 400
+         Wochen, saat=1350, sequenziell durchs Messfenster, alles andere
+         gleich (`werkbank/schuss/preis-w7/rho/`):
+
+           satzFolgt   12 J     13 J     14 J    Kennzahlband   Jahre <1x
+             0,82    +0,490   +0,599   +0,679    1,36–11,59x       0/14
+             0,82*   +0,462   +0,560   +0,648    1,36– 8,58x       0/14
+             0,45    −0,392   −0,341   −0,464    0,48– 6,81x       1/14
+             0,60      —        —        —          —               —
+           (* mit nachgefuehrtem Freibetrag, siehe `liegeFrei` oben)
+
+         0,45 kippt die Epoche in die andere Richtung und drueckt ein
+         Braujahr unter die einfache Deckung — dieselbe Sorte Fehler wie
+         `liegeSatz` 0,55, nur an einer anderen Schraube. Genommen ist
+         deshalb 0,60: derselbe Wert wie 1970, weiter ueber 1884 (0,50) und
+         weit ueber 1600 (0,25). Die historische Ueberlegung gibt die
+         RICHTUNG her (0,82 war der hoechste der vier, bei der traegsten
+         Bierordnung der vier) — die GROESSE gibt die Messung her, und die
+         vier Zeilen oben stehen hier, damit der naechste sie nicht noch
+         einmal erheben muss.
+
+         Was zur Teuerung fehlt, bleibt das, was nur der AUFSCHLAG schliesst,
+         und der ist nur zu bauen. */
+      satzFolgt: 0.60,
       pflichtHoehe: 0.20,
       /* Die Umlage lag bei 0,80 der Jahreslast und mit `teil` bis 1,85 bei
          dem Anderthalbfachen davon — in der aermsten der vier Epochen die
@@ -194,8 +245,39 @@ var PREIS_DATEN = {
       liegeSagt: 'Zu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, '
                + 'was einer bar liegen hat. Was durch das Haus geht und was im Haus '
                + 'liegt, steht beim Rat in derselben Zahl.',
-      liegeFrei: 2.0,
-      liegeSatz: 0.30,
+      /* NACHGEFUEHRT IN WELLE 7, und die beiden Zahlen haengen zusammen.
+
+         (1) `liegeFrei` 2,0 -> 1,3. Das Polster war auf „ein ganzes schweres
+             Jahr" bemessen (1,8 bis 2,3 Jahreslasten, Tabelle oben). Seit
+             Welle 5 ist ein schweres Jahr, das die Lade uebersteigt, nicht
+             mehr toedlich: was nicht bezahlt werden kann, wird ANGESCHRIEBEN
+             und kommt mit einem Zehntel Aufschlag wieder (`buche`, „Gemahnt
+             wird zuerst, gepfaendet danach"), und unter allem liegt der
+             Vorgriff auf den Notpfennig. Ein Polster, das den ganzen Zahltag
+             deckt, ist seitdem doppelt gesichert.
+             Dazu kommt der Grund, der ohne Welle 7 nicht bestuende: DER
+             UNTERHALT (unten an den Angeboten) steht in `pflichtSumme`, und
+             die Jahreslast eines gebauten Hauses ist damit rund doppelt so
+             gross wie die, an der 2,0 gemessen wurde. Zwei Jahreslasten waren
+             danach ein Freibetrag, der mit dem Besitz mitwuchs — genau das,
+             wogegen der Absatz bei `liegeFreibetrag` in preis.js selbst
+             argumentiert („Haenge ihn an den Anschlag, und der Freibetrag
+             waechst mit genau dem, was er begrenzen soll"). 1,3 haelt den
+             Freibetrag in der Groessenordnung, in der er gemessen wurde, und
+             bleibt ueber dem Wert von 1600 (1,0).
+             Der Boden auf dem Preis der billigsten Festlegung bleibt
+             unangetastet: wer auf die unwiderrufliche Wahl spart, wird nicht
+             angeschlagen.
+
+         (2) `liegeSatz` 0,30 -> 0,45. Er greift ausschliesslich oberhalb des
+             Freibetrags, also nur in den Jahren, in denen die Lade ueber dem
+             liegt, was das Haus fuer den naechsten Zahltag braucht. In den
+             mageren Jahren ist er weiter genau null — gemessen: 0 von 14
+             Braujahren unter 1x. 0,55 ist ausdruecklich nicht genommen; dort
+             schrumpft die Lade ueber die Partie auf ein Drittel (Tabelle
+             oben), und das ist kein Gegengewicht mehr, sondern ein Ende. */
+      liegeFrei: 1.3,
+      liegeSatz: 0.45,
 
       /* Ausserordentliche Umlagen kamen haeufiger als alle sieben Jahre:
          Mauerbau, Landfriedensgeld, Brandschatzung, Siechenhaus — eine
@@ -240,55 +322,77 @@ var PREIS_DATEN = {
            + 'auf fünf Jahre dem Adler zugesprochen.',
 
       angebote: [
-        { k: 'dach', name: 'Das Dach über der Pfanne', anteil: 0.07, bauzeit: 0,
+        { k: 'dach', name: 'Das Dach über der Pfanne', anteil: 0.07, bauzeit: 0, nachZeit: true,
           was: 'Ein Schindeldach auf vier Ständern, über der offenen Pfanne.',
           satz: 'Regen löscht das Feuer nicht mehr, und der Sud fällt nicht aus.',
-          wirkung: { ertrag: 16 } },
+          wirkung: { ertrag: 16,
+            pflichtNeu: { k: 'schindeln', name: 'Schindeln und Lattung für das Dach', art: 'fest', teil: 0.22,
+              sagt: 'Ein Schindeldach hält zehn Jahre und will jedes Jahr geflickt werden.' } } },
 
-        { k: 'grutkasten', name: 'Der Grutkasten unter Schloss', anteil: 0.12, bauzeit: 0,
+        { k: 'grutkasten', name: 'Der Grutkasten unter Schloss', anteil: 0.12, bauzeit: 0, nachZeit: true,
           was: 'Eine verschlossene Truhe für die Grut, mit dem Maß daneben.',
           satz: 'Gewogen ausgegeben, gewogen abgerechnet.',
-          wirkung: { rohstoff: 14 } },
+          wirkung: { rohstoff: 14,
+            pflichtNeu: { k: 'grutmass', name: 'Eichung des Maßes am Grutkasten', art: 'fest', teil: 0.10,
+              sagt: 'Der Rat eicht das Maß und lässt sich das Eichen bezahlen.' } } },
 
-        { k: 'schild', name: 'Das Hausschild überm Tor', anteil: 0.10, bauzeit: 0,
+        { k: 'schild', name: 'Das Hausschild überm Tor', anteil: 0.10, bauzeit: 0, nachZeit: true,
           was: 'Ein geschmiedeter Anker an einem Ausleger, weithin sichtbar.',
           satz: 'Wer vorbeikommt, weiß von nun an, wo er ist — und fragt nach dem Haus, nicht nach dem Bier.',
-          wirkung: { ansehen: 8, preis: 0.05 } },
+          wirkung: { ansehen: 8, preis: 0.05,
+            pflichtNeu: { k: 'ausleger', name: 'Der Schmied richtet Anker und Ausleger', art: 'fest', teil: 0.14,
+              sagt: 'Eisen am Wetter rostet. Einmal im Jahr kommt der Schmied.' } } },
 
-        { k: 'bottich', name: 'Ein zweiter Bottich aus Eichenholz', anteil: 0.20, bauzeit: 1,
+        { k: 'bottich', name: 'Ein zweiter Bottich aus Eichenholz', anteil: 0.20, bauzeit: 1, nachZeit: true,
           was: 'Ein Gärbottich vom Küfer, mit Weidenreifen gebunden.',
           satz: 'Zwei Bottiche heißen: der zweite Sud muss nicht warten — und der erste '
               + 'darf ausgären, statt jung aus dem Haus zu gehen.',
-          wirkung: { plaetze: 3, preis: 0.04 } },
+          wirkung: { plaetze: 3, preis: 0.04,
+            pflichtNeu: { k: 'reifen', name: 'Weidenreifen und Dauben für den zweiten Bottich', art: 'fest', teil: 0.30,
+              sagt: 'Ein Bottich, der nicht gebunden und gewässert wird, leckt im dritten Jahr.' } } },
 
-        { k: 'ochsenstall', name: 'Der Ochsenstall am Tor', anteil: 0.24, bauzeit: 0,
+        { k: 'ochsenstall', name: 'Der Ochsenstall am Tor', anteil: 0.24, bauzeit: 0, nachZeit: true,
           was: 'Ein eigener Stall statt des geliehenen Gespanns.',
           satz: 'Der Ochse steht im Haus und wartet nicht auf den Nachbarn.',
           sperrt: ['karrengaul'],
-          wirkung: { ertrag: 34 } },
+          wirkung: { ertrag: 34,
+            pflichtNeu: { k: 'ochsenfutter', name: 'Futter und Streu für den Ochsen', art: 'fest', teil: 0.60,
+              sagt: 'Ein Ochse frisst auch in der Woche, in der er nicht zieht.' } } },
 
-        { k: 'karrengaul', name: 'Ein Karrengaul statt des Ochsen', anteil: 0.42, bauzeit: 0,
+        /* „dreimal so teuer im Futter" stand seit Welle 1 auf dieser Karte
+           und wurde nie abgebucht. Ein Preis, den der Text verspricht und die
+           Rechnung nie nennt, ist ein Scheinpreis — dieselbe Sorte Fund, die
+           DER SUD in 1970 gemacht hat, nur andersherum. Jetzt steht er in der
+           Rechnungsspalte, und zwar dreimal so hoch wie das Futter des Ochsen
+           (0,60), wie der Satz es sagt. */
+        { k: 'karrengaul', name: 'Ein Karrengaul statt des Ochsen', anteil: 0.42, bauzeit: 0, nachZeit: true,
           was: 'Ein kaltblütiges Pferd, Geschirr, Hufbeschlag.',
           satz: 'Doppelt so schnell wie der Ochse und dreimal so teuer im Futter.',
           sperrt: ['ochsenstall'],
-          wirkung: { ertrag: 62 } },
+          wirkung: { ertrag: 62,
+            pflichtNeu: { k: 'gaulfutter', name: 'Hafer, Beschlag und Geschirr für den Gaul', art: 'fest', teil: 1.80,
+              sagt: 'Dreimal so teuer im Futter wie der Ochse — der Satz auf der Karte, jetzt in der Rechnung.' } } },
 
         /* Klein und sicher gegen groß und langsam: der Kauf beim Zunftbüttner
            wirkt heute und kostet ein Achtel; die eigene Werkstatt braucht ein
            Jahr und trägt danach dreifach. Beides zugleich duldet die Zunft
            nicht — wer bindet, kauft nicht, und wer kauft, bindet nicht. */
-        { k: 'fasskauf', name: 'Der feste Fasskauf bei der Zunft', anteil: 0.09, bauzeit: 0,
+        { k: 'fasskauf', name: 'Der feste Fasskauf bei der Zunft', anteil: 0.09, bauzeit: 0, nachZeit: true,
           was: 'Ein Brief über zwölf Fässer im Jahr, zum Zunftpreis, gegen Vorauszahlung.',
           satz: 'Heute unterschrieben, morgen stehen die Fässer im Hof. Gebunden ist gebunden.',
           sperrt: ['boettcher'],
-          wirkung: { plaetze: 2, ertrag: 9 } },
+          wirkung: { plaetze: 2, ertrag: 9,
+            pflichtNeu: { k: 'fassgeld', name: 'Vorauszahlung für zwölf Fässer im Jahr', art: 'fest', teil: 0.38,
+              sagt: 'Der Brief läuft weiter, ob die Fässer gebraucht werden oder nicht.' } } },
 
-        { k: 'boettcher', name: 'Der Böttcher im Haus', anteil: 0.34, bauzeit: 1,
+        { k: 'boettcher', name: 'Der Böttcher im Haus', anteil: 0.34, bauzeit: 1, nachZeit: true,
           was: 'Eine Werkstatt im Hof, Daubenholz unterm Vordach.',
           satz: 'Fässer werden nicht mehr gekauft, sondern gebunden. Ein dichtes Fass '
               + 'kommt voll beim Wirt an, und der Wirt rechnet danach.',
           sperrt: ['fasskauf'],
-          wirkung: { plaetze: 4, ertrag: 26, preis: 0.03 } },
+          wirkung: { plaetze: 4, ertrag: 26, preis: 0.03,
+            pflichtNeu: { k: 'boettcherlohn', name: 'Lohn des Böttchers und Daubenholz', art: 'fest', teil: 0.80,
+              sagt: 'Ein Handwerker im Haus wird bezahlt, auch wenn nichts zu binden ist.' } } },
 
         { k: 'brunnen', name: 'Der Ziehbrunnen im Hof', anteil: 0.55, bauzeit: 1,
           was: 'Achtzehn Klafter durch den Lehm bis auf den Kies.',
@@ -303,11 +407,13 @@ var PREIS_DATEN = {
         /* Dasselbe Übel, zwei Wege: die Handmühle drückt das Mahlgeld heute
            für ein Sechstel des Preises, das Achtel an der Stadtmühle nimmt es
            ganz weg. Wer selbst mahlt, bekommt vom Müller keinen Anteilbrief. */
-        { k: 'handmuehle', name: 'Die Handmühle im Hof', anteil: 0.17, bauzeit: 0,
+        { k: 'handmuehle', name: 'Die Handmühle im Hof', anteil: 0.17, bauzeit: 0, nachZeit: true,
           was: 'Zwei Steine unter einem Schutzdach, von zwei Knechten getreten.',
           satz: 'Der Müller merkt es und rechnet weniger. Ganz los wird man ihn damit nicht.',
           sperrt: ['muehlanteil'],
-          wirkung: { ertrag: 18, rohstoff: 6 } },
+          wirkung: { ertrag: 18, rohstoff: 6,
+            pflichtNeu: { k: 'knechtslohn', name: 'Zwei Knechte an der Handmühle', art: 'fest', teil: 0.75,
+              sagt: 'Die Steine treten sich nicht von selbst. Zwei Knechte, das ganze Jahr.' } } },
 
         { k: 'muehlanteil', name: 'Ein Achtel an der Stadtmühle', anteil: 1.05, bauzeit: 0,
           was: 'Ein Anteilbrief, im Ratsbuch eingetragen.',

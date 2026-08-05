@@ -661,11 +661,9 @@
          Zeiger nennt die Kennzahl vollstaendig, und ein Klick schlaegt das
          Brett auf, wo sie ohnehin ganz steht. Verschwiegen ist sie damit
          nicht — nur nicht alles zugleich. */
-      var kennzahl = b.unter ? ' — ' + b.unter : '';
       k.title = b.zu
-        ? b.titel + kennzahl
-          + '. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.'
-        : b.titel + kennzahl + '. Zuklappen — dann sieht man die Stadt wieder.';
+        ? b.titel + ' aufschlagen. Es legt sich über die Stadt, bis man es wieder zuklappt.'
+        : b.titel + ' zuklappen — dann sieht man die Stadt wieder.';
       var wort = k.querySelector('.wort');
       if (wort && wort.textContent !== b.titel) wort.textContent = b.titel;
       var zahl = k.querySelector('.zahl');
@@ -1298,7 +1296,7 @@
          Faktor in K.namen ist 0,85 -> 17,85, also ueber 12: auf der
          Entwurfsleinwand aendert der Boden nichts, und Latte 1 bleibt, wo
          sie ist. Unterhalb davon steht der Stadtname mit 12 px statt 8,9. */
-      el.style.fontSize = 'max(12px, calc(var(--s) * ' + B.rund(21 * (n.gross || 1), 2) + '))';
+      el.style.fontSize = 'calc(var(--s) * ' + B.rund(21 * (n.gross || 1), 2) + ')';
       el.style.zIndex = '960';
       el.appendChild(B.el('span', 'wort', n.text));
       B.orte.setze(el, n.ort, { anker: 'mitte', dx: n.dx || 0, dy: n.dy || 0 });
