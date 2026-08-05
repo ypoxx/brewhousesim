@@ -542,25 +542,48 @@ var SUD_DATEN = {
                eine sorgfaeltige Hand in vierzehn Braujahren nicht einmal
                ANFASST, ist keine.
 
-               Der Preis bleibt, wo er war. Was fehlte, war die ANRECHNUNG.
-               Ein Prozessrechner von 1970 wird nicht neben ein Labor
-               gestellt, er wird DARAUFGESETZT: Fuehler, Messumformer und
-               Schreiber sind schon da und bezahlt, der Rechner rechnet
-               damit. Wer das Labor hat, zahlt die Differenz — 76.000 DM.
+               ERSTER ANLAUF: die ANRECHNUNG. Ein Prozessrechner von 1970
+               wird nicht neben ein Labor gestellt, er wird DARAUFGESETZT —
+               Fuehler, Messumformer und Schreiber sind schon da und
+               bezahlt, der Rechner rechnet damit. Wer das Labor hat, zahlt
+               die Differenz. Sie rechnet richtig und sie steht am Schirm
+               (−118.000 vor dem Labor, −76.000 danach), und der blinde
+               Kritiker der zweiten Runde hat beides ausdruecklich bestaetigt.
 
-               Damit kostet der Weg ueber die Leiter (42.000 + 76.000)
-               genau so viel wie der Sprung (118.000), und die Ratsche
-               („Zurueck geht es nicht — nur noch weiter hinauf") ist zum
-               ersten Mal ein Angebot und keine Drohung. `labor` bleibt
-               stehen und wird nicht billiger gemacht, indem man etwas
-               abraeumt (Sperrliste 4): `preis` bleibt 118.000, und die
-               Rangfolge des Siegels rechnet weiter mit dieser Zahl —
-               sonst liesse sich vom Rechner zurueck auf das Labor.
+               SIE HAT DIE LUECKE HALBIERT UND NICHT GESCHLOSSEN, und das
+               ist nachgemessen — von ihm in drei Spielstilen ueber zusammen
+               300 Wochen (Kassenhoechststaende 86.000 fallend · 61.776 ·
+               52.396 gegen 76.000 noetig, Rechner in 0 von 98 und 0 von 99
+               Wochen bedienbar) und von mir mit seinem eigenen Geraet
+               (`sud-blind-r2/rechner.mjs`, 400 Wochen, Stil „spart auf den
+               Rechner": Kasse nie ueber 86.000, Labor in Woche 1, danach
+               nie 76.000 zusammen — Rechner in 0 Wochen bedienbar).
+
+               ALSO DER PREIS. 118.000 DM war die ehrliche Zahl fuer eine
+               ganze neue Sudwerkssteuerung — und sie war zugleich eine
+               Zahl, die in dieser Epoche NIEMAND je in der Kasse hat: das
+               Haus von 1970 startet mit 86.000 DM und kommt in vierzehn
+               Braujahren nicht darueber. Ein Schild, das mehr fordert, als
+               das Spiel je hergibt, ist kein Preis, sondern Kulisse. Der
+               Rechner kostet jetzt 78.000 DM Liste, nach Anrechnung des
+               Labors 36.000 DM — die Nachruestung auf eine vorhandene
+               Messtechnik, und das ist auch sachlich die richtigere Zahl:
+               1970 wurde ein Prozessrechner an bestehende Fuehler
+               angeschlossen, nicht ein zweites Sudhaus gebaut.
+
+               Er bleibt damit die teuerste unwiderrufliche Karte des Spiels
+               (78.000 gegen 74.000 fuer den Tunnelpasteur), und die Leiter
+               kostet ueber beide Stufen 42.000 + 36.000 = 78.000, also
+               genau den Listenpreis. `labor` bleibt stehen und wird nicht
+               billiger gemacht, indem man etwas abraeumt (Sperrliste 4);
+               die Rangfolge des Siegels rechnet weiter mit dem LISTENPREIS
+               und nicht mit dem angerechneten — sonst liesse sich vom
+               Rechner zurueck auf das Labor.
                ========================================================== */
-            { k: 'rechner', name: 'Prozessrechner am Sudwerk', preis: 118000, fest: true, hoechst: 3,
+            { k: 'rechner', name: 'Prozessrechner am Sudwerk', preis: 78000, fest: true, hoechst: 3,
               anrechnung: ['labor'],
               satz: 'Ein Rechner fährt das Maischprogramm und schreibt jede Rast mit. '
-                  + '1970 ist das neu, und es kostet, was ein Sudhaus kostet. Er wird auf das '
+                  + '1970 ist das neu, und es kostet, was eine Nachrüstung kostet. Er wird auf das '
                   + 'Betriebslabor aufgesetzt: wo dessen Fühler und Schreiber schon hängen, ist '
                   + 'nur die Differenz zu zahlen. Unwiderruflich.',
               siegel: 'Anlage abgenommen',
