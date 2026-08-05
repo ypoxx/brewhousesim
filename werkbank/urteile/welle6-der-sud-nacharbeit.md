@@ -696,8 +696,28 @@ durch `messfenster.sh` auf ruhiger Maschine.*
 | 1350 arm | **0** von 400 W | 50 von 400 W | 0 | nein |
 | 1970 arm | **0** von 400 W | **269 von 400 W** | 0 | nein |
 | 1884 arm | **0** von 400 W | 2 von 400 W | 0 | nein |
+| 1600 reich | **0** von 400 W | 1 von 400 W | 0 | nein |
+| 1350 reich | **0** von 400 W | 0 von 400 W | 0 | nein |
 | | | | | |
-| **alle vier `arm`-Hände** | **0 von 1.600 Wochen** | | **0** | **keiner** |
+| **sechs Partien, 2.400 Wochen** | **0 Ablesungen** | | **0** | **keiner** |
+
+Die 1600-`reich`-Zeile zeigt die Ratsche bei der Arbeit und ist kein Mangel:
+diese Hand kauft **beide** Siegel sofort — `schuettung:weizenbrief` in
+1600/1 für 180 fl (**50 % der Barschaft**) und `gaerung:keller` in 1600/9 für
+260 fl (**53 %**) — und danach gibt es auf diesen Achsen nichts mehr zu kaufen,
+also auch kein Preisschild mehr. Genau so hat der Kritiker es für 1350 `reich`
+gelesen und stehen gelassen. Die Abnahme von Auflage 2 hängt an der Hand, die
+noch wählen kann, und die steht mit 324 von 400 Wochen darüber.
+
+**Und das ist zugleich die Antwort auf seinen „harten Befund an 1600":** dieselbe
+Epoche, zwei Hände, zwei verschiedene Biere, beide am Kesselzettel abzulesen —
+
+    reich  weizenbrief · keller   höchstens Märzenbier   Stellhefe 96 %   ×1,19
+    arm    hafer       · ober     höchstens Schankbier   Stellhefe 98 %   ×1,16
+
+Vorher endeten **beide** bei `höchstens Schankbier`, und die 260 fl der
+Kellergärung waren am Deckel wertlos. Jetzt trägt die Epoche zwei
+unwiderrufliche Festlegungen zu zusammen 440 fl, und man sieht, wofür.
 
 Die 1600-Zeile ist die Abnahme von **Auflage 2**: verlangt waren 60 von 400
 Wochen mit zwei Preisschildern DES SUD zugleich aktiv und von der Maus
@@ -799,6 +819,34 @@ Drei-Schnitte-Latte, und keine davon wegen DES SUD.**
   nicht beanstandet, von mir nicht angefasst: ein Riegel gegen die Konsole wäre
   Kulisse, und `zustand()` ist der Weg, auf dem jeder Prüfer dieses Stück
   nachrechnet.
+
+## Was ich angefasst habe, und was nicht
+
+Geändert sind vier Dateien, alle im Besitzstand DES SUD:
+
+    spiel/stuecke/sud.js         rahmenWill() · beobachteBrett() · angerechnet()
+                                 offenerPreis() · knopf(fass) · B.sud.preise()
+                                 Kopplung nimmt eine Liste · meldeZug meldet den
+                                 offenen Preis
+    spiel/stuecke/sud-daten.js   1600 schuettung:weizenbrief · Kopplung
+                                 ['rein','weizenbrief'] · 1970 rechner.anrechnung
+    spiel/stil/sud.css           die eine ID-Regel, die den Knopfboden unterbot
+    spiel/stil/sud-zusatz.css    Schild `angerechnet` · der Messbericht zur
+                                 vierten Latte im Kopf
+
+Nachgeprüft, nicht behauptet: die Marken dieser Nacharbeit (`rahmenWill`,
+`beobachteBrett`, `weizenbrief`, `data-preis-art`, `offenerPreis`) stehen in
+keiner fremden Datei. `spiel/kern/**` ist unberührt — `kern/buehne.js` kennt
+`data-preis-art` nicht, DER SUD setzt es in seinem eigenen `knopf()`-Mantel.
+`spiel/index.html` ist unberührt. `stil/grund.css` ist unberührt: der Boden dort
+gehört DER LESBARKEIT, meine Zeile steht in `sud.css` und lässt ihn nur durch.
+`kern/ton.js` und `ton/**` sind unberührt (Sperrliste 5). Fremde Messgeräte
+sind unberührt (Sperrliste 7): `linie.mjs`, `nenner.mjs`, `messstand.sh`,
+`messfenster.sh` und die Geräte des Kritikers unter `sud-w6/` habe ich benutzt,
+nicht gedreht; was ich selbst brauchte, steht daneben in
+`werkbank/schuss/sud-w6-nach/`.
+
+`design/PRUEFUNG.md` habe ich als Maßstab nicht zitiert (Sperrliste 8).
 
 ## Arbeitsstand
 
