@@ -135,6 +135,25 @@ Marktanteil wird auf die **eigene** Gesamtmenge bezogen.
 > `PRUEFUNG.md` zitiert, zitiert sie **wörtlich und mit Stelle**. Eine
 > zusammengefasste Sperrliste, die nachdichtet, ist gefährlicher als keine.
 
+> ### WAS GEGRABEN WIRD, BLEIBT — Entscheidung der Aufsicht vom 5. August 2026
+>
+> Der blinde Kritiker DIE STADT fand, dass drei Bauten je Epoche einen
+> `versatz` trugen — darunter der **Ziehbrunnen**: 110 px rechts und 138 px
+> tiefer in 1600, in 1884 zurück. Der Builder hatte einen guten Grund
+> (in 1600 waren von den 9.200 Pixeln des Brunnens nur 824 sichtbar, weil
+> Waschhaus und Hopfenlager davorstanden — und ein Kauf, den man nicht sieht,
+> ist kein Kauf). **Das Problem war richtig erkannt, die Lösung war die
+> falsche.**
+>
+> *„Die Stadt muss über 620 Jahre wachsen, ohne den Ort zu wechseln"* ist die
+> härteste Einzelforderung des Auftrags, und `kern/orte.js` ist genau dafür
+> festgeschrieben.
+>
+> **Die Regel: Was gegraben wird, bleibt — Brunnen, Keller, Grube. Was gebaut
+> wird, darf umziehen.** Die Probe, wenn man unsicher ist: *könnte man es an
+> einem Tag abreißen und woanders wieder aufstellen?* Eine Küferei ja, ein
+> Brunnen nein. Steht etwas davor, rückt das, was davorsteht.
+
 ## Uhr, Würfel, Ereignisse
 
 ```js
