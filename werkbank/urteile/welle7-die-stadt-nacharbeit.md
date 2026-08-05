@@ -302,3 +302,49 @@ node werkbank/schuss/stadt-r7/pruefe.mjs alle → BODEN 0 · REIHENFOLGE 0 · Su
 
 Die 0,03 MB mehr sind der gewachsene Quelltext von `stadt.js` und
 `stadt-daten.js`. Das Veto bleibt mit **0,59 MB Luft** gehalten.
+
+## ρ — die zweite Latte, nach der Nacharbeit noch einmal gemessen
+
+**Warum überhaupt:** Auflage 5 nimmt einen Knopf aus den aktiven Zügen
+(`stadt:alles-zuklappen`), und die Messhand zählt aktive Züge. Der
+Knopfboden-Befund der Aufsicht (1970 mit Boden +0,699, ohne −0,112) sagt, dass
+so etwas ρ bewegen *kann*. Also gemessen und nicht angenommen.
+
+400 Wochen, Epoche 1970, durch `messfenster.sh`, `preis*` und `kern/*` vor und
+nach dem Lauf mit md5 festgehalten — **unverändert**:
+
+| Epoche | 12 Braujahre | 13 | 14 | Lauf |
+|---|---|---|---|---|
+| **1970** | **+0,699** | **+0,637** | **+0,653** | 1970–1983, Kasse 1.030–114.537, **0 Seitenfehler** |
+
+**Wieder Ziffer für Ziffer die Zahl aus `MESSLATTE.md`** — dieselbe, die die
+Aufsicht am eingefrorenen `517ca3f` dreimal byteweise identisch gemessen hat,
+und dieselbe, die mein Lauf vor der Nacharbeit ergab. **Die Latte hält, und
+weder die Schriftarbeit noch der Hofumbau haben sie bewegt.**
+
+*Einschränkung, die dazugehört:* gemessen ist **eine** Epoche. Für 1350, 1600
+und 1884 steht als Beleg die Geometrie (`gestalt.mjs`: Werkbank-Oberkante,
+Reiterzahl, zugeklappte Bretter, Pflöcke und `verdeckt()` in allen vier Epochen
+unverändert) — und der Umstand, dass der Hofumbau nur Bilder in der Ebene `bau`
+bewegt, in der kein einziger `data-zug` liegt.
+
+*Zweite Einschränkung, ehrlich:* die Reklametafel von 1970 wurde **nach** dem
+Start dieses Laufs verschoben. Sie trägt keinen `data-zug` und liegt in
+derselben Ebene wie die Hofbilder; auf die Zugfolge kann sie nicht wirken. Wer
+es genau nimmt, misst 1970 nach dem Einfrieren noch einmal.
+
+---
+
+## WAS OFFEN BLEIBT
+
+1. **Auflage 4 ist gemeldet, nicht erledigt** — `bild/name/` und
+   `bild/gegner/` gehören mir nicht. 3,3 MB liegen dort ungehoben, das Werkzeug
+   ist fertig.
+2. **Das vordere Hofdrittel ist gefüllt, aber es ist ein Keil.** Die Mauerraute
+   lässt zwischen x 26 und 34 Platz für **ein** Ding je Epoche; alles darüber
+   hinaus steht nachweislich auf der Mauer (DAS LOT meldet es px-genau). Wer
+   mehr Vordergrund will, braucht nicht andere Positionen, sondern **andere
+   Bilder**: flache Dinge, die auf dem Hofboden liegen statt darauf zu stehen —
+   Fassreihen, eine Bank, ein Karren. Das ist die Stelle, an der das Zielbild
+   noch etwas hat, was das Spiel nicht hat.
+3. **Ein Lauf, eine Epoche für ρ.** Siehe oben.
