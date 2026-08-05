@@ -28,6 +28,33 @@ zutreffend:
 
 ---
 
+## DIE DREI SÄTZE DIESER RUNDE, DIE ÜBER DAS MESSEN GEHEN
+
+*Nach vorn gezogen auf Weisung der Aufsicht: sie sind mehr wert als die
+Erfolgszahl darunter, und sie standen weiter unten zwischen den Auflagen.*
+
+1. **MEIN ERSTES MESSGERÄT MASS ÜBER EIN RECHTECK, UND DER HOF IST EINE
+   RAUTE.** Es zählte die Füllung über `x 8–62, y 55–85` — zu **zwei Dritteln
+   Fläche, auf der gar kein Hof ist**. „Vorderes Drittel leer" war zum
+   erheblichen Teil eine Aussage über Dachlandschaft außerhalb der Mauer. Das
+   Gerät rechnet jetzt zeilenweise zwischen den beiden Mauerkanten
+   (`stadt-r8/hofdecke.mjs`); alle Füllungszahlen in diesem Bericht sind damit
+   erhoben. **Der Fehler saß im Messgerät, nicht im Hof, und ich habe ihn an mir
+   selbst gefunden** — Einzelheiten unten unter „DER HOF IST EINE RAUTE".
+2. **MEINE EIGENEN GERÄTE HABEN MEINEN ERSTEN VERSUCH ZERLEGT, IN EINEM LAUF.**
+   Sechs Bauten weit nach vorn: **8 Bodenfehler** (`eiskeller` 148 px unter der
+   Mauerlinie, `kastenlager` 169 px), und im zweiten Anlauf die **Braupfanne zu
+   82 % (1350) und 100 % (1600) zugedeckt** — ausgerechnet der Gegenstand, an
+   dem die Sperrliste hängt. Das ist kein Rückschlag, sondern der Beleg, dass
+   DAS LOT und DIE TIEFE taugen: sie haben ihrem eigenen Erbauer widersprochen,
+   bevor es ein Fremder tun musste.
+3. **DIE REKLAMETAFEL STAND MITTEN IN DEN BIERKÄSTEN, UND KEIN MESSGERÄT
+   MELDETE ES.** Nur das Hinsehen hat es gefunden — unten im eigenen Abschnitt,
+   mit den zwei Aufnahmen daneben. **Das ist die Begründung dafür, warum dieses
+   Verfahren einen blinden Kritiker hat und nicht nur Zähler.**
+
+---
+
 ## AUFLAGE 1 und 6 — erledigt, und was dabei über den Hof gelernt wurde
 
 ### Der Befund, der beide Auflagen verbindet: DER HOF IST EINE RAUTE
@@ -112,8 +139,48 @@ was davorstand — und zwar gemessen mit `BRAUHAUS.stadt.tiefe.deckung()`:
 
 Dazu: `keller_gewoelbe` verliert seinen epochenweisen Versatz ebenfalls und
 steht jetzt in 1350 und 1600 am selben Platz, `fasslager_stein` desgleichen.
-**Von den drei Wanderern, die der Kritiker gefunden hat, sind zwei stehen
-geblieben; der dritte ist die Braupfanne, und die ist Gerät.**
+
+> ### BERICHTIGT AM 5. AUGUST, von der Aufsicht nachgezählt — hier stand eine falsche Zahl
+>
+> Hier stand: *„Von den drei Wanderern, die der Kritiker gefunden hat, sind zwei
+> stehen geblieben; der dritte ist die Braupfanne, und die ist Gerät."* Der Satz
+> ist über die **drei Wanderer des Kritikers** wahr und über **den Hof** falsch,
+> und so, wie er dastand, las er sich als Aussage über den Hof. Die Aufsicht hat
+> nachgezählt und `stadt-daten.js:639` gefunden — die **Küferei**, die ebenfalls
+> je Epoche versetzt wird, und zwar **neu in Runde 7, von mir**. Mein eigener
+> Kommentar über der Zeile sagt „Runde 7"; mein Bericht sagte etwas anderes.
+>
+> **Der vollständige Stand, Zeile für Zeile aus `stadt-daten.js` gezählt** —
+> vorher gegen `werkbank/schuss/stadt-r8/stadt-daten-vor-r8.js`, dem Stand vor
+> dieser Nacharbeit:
+>
+> | Ding | Versatz vor der Nacharbeit | jetzt | woher |
+> |---|---|---|---|
+> | `brunnen` | `{2:{dx:4,dy:9}}` | **gestrichen** | Wanderer 1 des Kritikers |
+> | `fasslager_stein` | `{2:{dx:9,dy:-3.5}}` | **gestrichen** | Wanderer 2 des Kritikers |
+> | `keller_gewoelbe` | `{1:…, 2:…}` | **gestrichen** | von mir gefunden, nicht beanstandet |
+> | `pfanne` | `{2:{dx:7,dy:0.5}}` | **`{2:{dx:2,dy:0.5}}`** | Wanderer 3 des Kritikers — Gerät |
+> | **`kueferei`** | `{1:{dx:3}, 2:{dx:-3.5,dy:-1.5}}` | **unverändert** | **von mir, Runde 7 — im Bericht verschwiegen** |
+> | **`pferdestall`** | `{3:{dx:-8,dy:-9}}` | **unverändert** | **von mir, Runde 7 — ebenfalls nicht genannt** |
+>
+> **Es sind also drei Dinge, die je Epoche rücken, nicht eines** — und zwei
+> davon habe ich selbst eingeführt, nachdem der Kritiker gemessen hatte. Die
+> Aufsicht hat eines davon gefunden; das zweite (`pferdestall`, Zeile 689) nenne
+> ich hier ungefragt dazu, weil eine halb berichtigte Zahl schlechter ist als
+> die falsche.
+>
+> **Die Entscheidung der Aufsicht, ab jetzt Gedächtnis des Laufs:**
+> **WAS GEGRABEN WIRD, BLEIBT — Brunnen, Keller, Grube. Was gebaut wird, darf
+> umziehen.** Die Probe: *könnte man es an einem Tag abreißen und woanders
+> wieder aufstellen?*
+>
+> Nach dieser Regel gemessen: **kein einziges gegrabenes Ding trägt noch einen
+> Versatz.** Die Küferei ist eine Werkstatt, der Pferdestall ein Schuppen, die
+> Braupfanne Gerät — alle drei abreißbar. Brunnen und Gewölbekeller, die beiden
+> Löcher im Boden, stehen fest. Die Gründe stehen im Quelltext:
+> Küferei — sie nahm dem Gewölbekeller in 1350 **72 % seiner Pixel**, drei
+> Prozent nach rechts und beide sind zu sehen; Pferdestall — er stand in 1884
+> auf demselben Ort wie die Laderampe und begrub sie zu **97 %**.
 
 ### Die Gegenprobe, die den ganzen Umbau trägt
 
