@@ -33,6 +33,19 @@
   function daten(nr) { return K.epochen[nr || e()] || K.epochen[1]; }
   function hat(schluessel) { return !!gebaut[schluessel]; }
 
+  /* --------------------------------------------------------------------
+     DER PFAD ZU EINEM HOFBILD — eine Stelle, nicht vier.  (Welle 7)
+
+     Die 32 Hofbilder lagen als PNG mit 17,5 MB auf der Leitung; als WebP
+     bei gleicher Pixelgroesse sind es 4,5 MB. Gleiche Groesse ist kein
+     Zufall, sondern Bedingung: K.fuesse und K.bildmass stehen in Pixeln
+     bzw. als Anteil der Bildhoehe, und DAS LOT rechnet daraus, was vor was
+     steht. Nachgemessen mit stadt-gewicht/fuesse-pruefen.mjs: groesster
+     Abstand ueber 32 Bilder x 24 Spalten 0,0001 — derselbe Wert wie beim
+     alten PNG gegen die eingetragene Tabelle, also reine Rundung.
+     -------------------------------------------------------------------- */
+  function hofpfad(name) { return 'bild/hof/' + name + '.webp'; }
+
   function katalog(nr) {
     var ep = nr || e();
     return K.aufbauten.filter(function (a) { return a.von <= ep && a.bis >= ep; });
@@ -1185,7 +1198,7 @@
     el.alt = '';
     el.setAttribute('draggable', 'false');
     el.setAttribute('data-bau', a.schluessel);
-    el.src = 'bild/hof/' + a.bild + '.png';
+    el.src = hofpfad(a.bild);
     el.style.width = m.breite + '%';
     /* Nicht (ort.y + dy) — das ist die Unterkante des RAHMENS. Der z-Index
        gehoert dem Fuss; siehe DIE TIEFE weiter oben. */
@@ -1249,7 +1262,7 @@
       if (a.schluessel === 'schornstein' && e() === 3) {
         var rauch = B.el('img', 'stadt-rauch');
         rauch.alt = '';
-        rauch.src = 'bild/hof/rauch.png';
+        rauch.src = hofpfad('rauch');
         rauch.style.width = '9%';
         rauch.style.zIndex = '900';
         /* Der Fuss der Fahne sitzt auf der Krone des Schafts: der Schaft ist
@@ -1492,6 +1505,96 @@
   }
 
   /* --------------------------------------------------------------------
+     DAS VORLADEN, IN DREI STUFEN.  (Welle 7)
+
+     Hier stand bis zum 5. August "Alles vorladen" — vier Platten und alle
+     32 Hofbilder, bei jedem Aufruf, in jeder Epoche. Gemessen an der
+     Resource-Timing-API des Browsers waren das 21,58 der 24,32 MB, die ein
+     Aufruf ueber die Leitung zog; die Sperrliste erlaubt 8. Der Absicht
+     nach war es freundlich (der Hof soll beim Kauf sofort dastehen), in der
+     Wirkung war es eine halbe Minute Warten ueber Mobilfunk, bevor
+     irgendetwas zu sehen ist — und zwar fuer 20 bis 23 Bilder, die in
+     dieser Epoche gar nicht vorkommen koennen.
+
+     Also gestaffelt statt weggelassen. Was gebraucht wird, wird weiter
+     vorgeladen, nur nicht mehr alles zugleich:
+
+       Stufe 0, sofort:  Platte und GANZER Katalog dieser Epoche. Nur diese
+                         Bilder koennen jetzt in den Hof kommen, und die
+                         Bauvorschau unter der Maus darf nicht warten.
+       Stufe 1, nach 'load' + Leerlauf:  die Platte der naechsten Epoche und
+                         die Bauten, die beim Wechsel SOFORT dastehen
+                         (K.epochen[n].stand). Der Epochenwechsel ist der
+                         eine Augenblick, in dem ein Flackern wehtaete.
+
+     WEITER NICHT. Der Rest des naechsten Jahrhunderts kommt, wenn er
+     gebraucht wird — er wird gekauft, und Kaufen ist ein Klick mit
+     Bedenkzeit. Rueckwaerts geht niemand, und wer mit ?epoche= springt,
+     laedt die Seite ohnehin neu. Das ist der Unterschied zwischen 8,35 MB
+     und 7,72 MB in der schwersten Epoche, also zwischen ueber und unter dem
+     Veto — gemessen, nicht geschaetzt.
+
+     Stufe 1 haengt an 'load' und an requestIdleCallback: sie faengt erst an,
+     wenn die Seite steht und der Rechner nichts Besseres zu tun hat. Kein
+     Netzzugriff nach aussen, wie vorher.
+
+     Beim Epochenwechsel laeuft vorladen() erneut: dann ist die neue Epoche
+     "diese", ihr ganzer Katalog kommt sofort, und die uebernaechste wird
+     wieder vorbereitet.
+     -------------------------------------------------------------------- */
+  var vorgeladen = {};
+
+  function hole(pfad) {
+    if (vorgeladen[pfad]) return;
+    vorgeladen[pfad] = true;
+    (new Image()).src = pfad;
+  }
+
+  /* Alles, was in Epoche nr im Hof stehen oder gebaut werden kann. */
+  function bilderDerEpoche(nr) {
+    var l = katalog(nr).map(function (a) { return hofpfad(a.bild); });
+    if (nr === 3) l.push(hofpfad('rauch'));   /* nur 1884 raucht */
+    return l;
+  }
+
+  /* Was beim Sprung in Epoche nr im selben Augenblick dasteht — der Hof,
+     den die Vorfahren hinterlassen haben. Alles Uebrige wird gekauft. */
+  function bilderDesStands(nr) {
+    var stand = (K.epochen[nr] && K.epochen[nr].stand) || [];
+    var l = K.aufbauten
+      .filter(function (a) { return stand.indexOf(a.schluessel) >= 0; })
+      .map(function (a) { return hofpfad(a.bild); });
+    if (nr === 3) l.push(hofpfad('rauch'));
+    return l;
+  }
+
+  function spaeter(fn) {
+    var los = function () {
+      if (window.requestIdleCallback) window.requestIdleCallback(fn, { timeout: 4000 });
+      else window.setTimeout(fn, 1200);
+    };
+    if (document.readyState === 'complete') window.setTimeout(los, 400);
+    else window.addEventListener('load', function () { window.setTimeout(los, 400); });
+  }
+
+  function vorladen() {
+    var jetzt = e();
+
+    /* Stufe 0 — die eigene Epoche. Die Platte selbst haengt schon im DOM
+       (zeichnePlatte), sie steht hier nur der Vollstaendigkeit halber. */
+    hole(daten(jetzt).platte);
+    bilderDerEpoche(jetzt).forEach(hole);
+
+    spaeter(function () {
+      /* Stufe 1 — die naechste Epoche: ihre Platte und ihr Erbe. */
+      var naechste = jetzt + 1;
+      if (!K.epochen[naechste]) return;
+      hole(K.epochen[naechste].platte);
+      bilderDesStands(naechste).forEach(hole);
+    });
+  }
+
+  /* --------------------------------------------------------------------
      ANMELDUNG
      -------------------------------------------------------------------- */
   BRAUHAUS.stueck('stadt', {
@@ -1501,16 +1604,7 @@
       merkeKoennen();
       werkbank();
 
-      /* Alles vorladen: der Hof soll beim Kauf sofort dastehen, und der
-         Epochenwechsel darf nicht flackern. Kein Netzzugriff nach aussen. */
-      Object.keys(K.epochen).forEach(function (nr) {
-        (new Image()).src = K.epochen[nr].platte;
-      });
-      K.aufbauten.forEach(function (a) {
-        (new Image()).src = 'bild/hof/' + a.bild + '.png';
-      });
-      (new Image()).src = 'bild/hof/rauch.png';
-
+      vorladen();
       starteRahmen();
     },
 
@@ -1536,6 +1630,9 @@
       bauhofSeite = 'bau';
       belastet = {};
       merkeKoennen();
+      /* Jetzt ist die neue Epoche "diese": ihr ganzer Katalog sofort, die
+         uebernaechste wieder im Leerlauf. Siehe DAS VORLADEN weiter oben. */
+      vorladen();
       Object.keys(gebaut).forEach(function (s) {
         var a = K.aufbauten.filter(function (x) { return x.schluessel === s; })[0];
         if (!a) return;

@@ -1,0 +1,530 @@
+{
+ "fenster": "1366x768",
+ "stueck": "preis",
+ "jeEpoche": {
+  "e1": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 51,
+     "winzig": 48,
+     "kleinste": 5.5,
+     "knoepfe": 25,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 40,
+     "winzig": 39,
+     "kleinste": 6.5,
+     "knoepfe": 11,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 1,
+     "klein": 37,
+     "winzig": 35,
+     "kleinste": 6.5,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 21,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 9,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 7,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1350Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass9 PfDer Rat setzt": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1350515 Pfaus dem Umsatz des": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1,
+    "pr-karte-text [X] :: Ein zweiter Bottich aus Eichenholz45 Pfvon 1": 1,
+    "pr-karte-text [X] :: Die Bannmeile auf zehn Jahre1.300 Pfganz, so": 1,
+    "pr-feld [Y] :: WAS FÄLLIG WIRD1351Anschlag auf das Geld in ": 1,
+    "pr-last-name [X] :: Der Notpfennig — was NICHT genommen wird": 1,
+    "pr-feld pr-leiter [Y] :: DIE LEITERLinks die Kennzahl: Barschaft zu M": 1
+   }
+  },
+  "e2": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 51,
+     "winzig": 46,
+     "kleinste": 5.5,
+     "knoepfe": 25,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 44,
+     "winzig": 43,
+     "kleinste": 6.5,
+     "knoepfe": 13,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 2,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 2,
+     "klein": 37,
+     "winzig": 35,
+     "kleinste": 6.5,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 20,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 10,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 8,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1600Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass22 flDie Bierordn": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 16003.306 flaus dem Umsatz d": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1,
+    "pr-karte pr-zuteuer [X] :: Das Braurecht des Klosters Obernberg11.000 f": 1,
+    "pr-karte-text [X] :: Das Braurecht des Klosters Obernberg11.000 f": 1,
+    "pr-karte-text [X] :: Der Zunftbrief mit dem RatssitzDas Haus stel": 1,
+    "pr-feld [Y] :: WAS FÄLLIG WIRD1601Türkensteuer55 flDer Reic": 1,
+    "pr-last-name [X] :: Der Notpfennig — was NICHT genommen wird": 1,
+    "pr-feld pr-leiter [Y] :: DIE LEITERLinks die Kennzahl: Barschaft zu M": 1
+   }
+  },
+  "e3": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 51,
+     "winzig": 46,
+     "kleinste": 5.5,
+     "knoepfe": 24,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 42,
+     "winzig": 41,
+     "kleinste": 6.5,
+     "knoepfe": 13,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 4,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 1,
+     "klein": 37,
+     "winzig": 35,
+     "kleinste": 6.5,
+     "knoepfe": 9,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 24,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 12,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 10,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1884Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl48 MReichsgründung.": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 188456.090 Maus dem Umsatz d": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1,
+    "pr-karte-text [X] :: Der Kontrakt mit der Handelsmälzerei4.200 Mg": 1,
+    "pr-karte-text [X] :: Die Mälzerei mit Weichstock5.900 Mvon 13.000": 1,
+    "pr-karte pr-zuteuer [X] :: Eine Niederlage in der Kreisstadt24.000 Mvon": 1,
+    "pr-karte-text [X] :: Eine Niederlage in der Kreisstadt24.000 Mvon": 1,
+    "pr-feld [Y] :: WAS FÄLLIG WIRD1886Kesselschaden und Neuabna": 1,
+    "pr-last-name [X] :: Bankenkrach — der Wechsel wird fällig": 1,
+    "pr-last-name [X] :: Der Notpfennig — was NICHT genommen wird": 1,
+    "pr-feld pr-leiter [Y] :: DIE LEITERLinks die Kennzahl: Barschaft zu M": 1
+   }
+  },
+  "e4": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 47,
+     "winzig": 44,
+     "kleinste": 6.9,
+     "knoepfe": 23,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 46,
+     "winzig": 44,
+     "kleinste": 6.5,
+     "knoepfe": 12,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 2,
+     "klein": 38,
+     "winzig": 36,
+     "kleinste": 6.5,
+     "knoepfe": 9,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 22,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 1,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 19,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 9,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1970Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl130 DMDer Handel di": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1970500.000 DMaus dem Umsatz": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1,
+    "pr-karte [X] :: Die Schankanlagen in den Wirtschaften25.000 ": 1,
+    "pr-karte [X] :: Der Getränkefachgroßhandel als Partner48.000": 1,
+    "pr-karte-text [X] :: Der Getränkefachgroßhandel als Partner48.000": 1,
+    "pr-karte [X] :: Zwei Lastzüge mit Anhänger75.000 DMganz, sof": 1,
+    "pr-karte-text [X] :: Zwei Lastzüge mit Anhänger75.000 DMganz, sof": 1,
+    "pr-karte pr-zuteuer [X] :: Die Abfüllanlage, 24.000 Flaschen je Stunde1": 1,
+    "pr-karte-text [X] :: Die Abfüllanlage, 24.000 Flaschen je Stunde1": 1,
+    "pr-karte pr-zuteuer [X] :: Das Logistikzentrum an der Bundesstraße180.0": 1,
+    "pr-karte-text [X] :: Das Logistikzentrum an der Bundesstraße180.0": 1,
+    "pr-karte-text [X] :: Die Genossenschaft der GastwirteVierzig Wirt": 1,
+    "pr-karte-text [X] :: Der Rückzug auf die eigene BraustätteKein Ha": 1,
+    "pr-feld [Y] :: WAS FÄLLIG WIRD1973Energie- und Frachtenkris": 1,
+    "pr-last-name [X] :: Umstellung auf den Einheitskasten": 1,
+    "pr-last-name [X] :: Der Notpfennig — was NICHT genommen wird": 1,
+    "pr-feld pr-leiter [Y] :: DIE LEITERLinks die Kennzahl: Barschaft zu M": 1
+   }
+  }
+ },
+ "summe": {
+  "(ohne)": {
+   "ueber": 0,
+   "klein": 8,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 0,
+   "kleinste": 11.9
+  },
+  "erbe": {
+   "ueber": 1,
+   "klein": 164,
+   "winzig": 160,
+   "zuKlein": 0,
+   "knoepfe": 32,
+   "kleinste": 6.9
+  },
+  "fuhre": {
+   "ueber": 2,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 87,
+   "kleinste": 999
+  },
+  "gegner": {
+   "ueber": 4,
+   "klein": 172,
+   "winzig": 167,
+   "zuKlein": 0,
+   "knoepfe": 49,
+   "kleinste": 6.5
+  },
+  "kern": {
+   "ueber": 0,
+   "klein": 36,
+   "winzig": 32,
+   "zuKlein": 0,
+   "knoepfe": 12,
+   "kleinste": 9.4
+  },
+  "klang": {
+   "ueber": 0,
+   "klein": 4,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 4,
+   "kleinste": 10.9
+  },
+  "name": {
+   "ueber": 6,
+   "klein": 149,
+   "winzig": 141,
+   "zuKlein": 0,
+   "knoepfe": 34,
+   "kleinste": 6.5
+  },
+  "preis": {
+   "ueber": 50,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 34,
+   "kleinste": 999
+  },
+  "stadt": {
+   "ueber": 72,
+   "klein": 200,
+   "winzig": 184,
+   "zuKlein": 0,
+   "knoepfe": 97,
+   "kleinste": 5.5
+  },
+  "sud": {
+   "ueber": 4,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 4,
+   "kleinste": 999
+  }
+ },
+ "klassen": {},
+ "ueberKlassen": {
+  "pr-feld [Y] :: DIE RECHNUNG 1350Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass9 PfDer Rat setzt": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1350515 Pfaus dem Umsatz des": 1,
+  "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 4,
+  "pr-karte-text [X] :: Ein zweiter Bottich aus Eichenholz45 Pfvon 1": 1,
+  "pr-karte-text [X] :: Die Bannmeile auf zehn Jahre1.300 Pfganz, so": 1,
+  "pr-feld [Y] :: WAS FÄLLIG WIRD1351Anschlag auf das Geld in ": 1,
+  "pr-last-name [X] :: Der Notpfennig — was NICHT genommen wird": 4,
+  "pr-feld pr-leiter [Y] :: DIE LEITERLinks die Kennzahl: Barschaft zu M": 4,
+  "pr-feld [Y] :: DIE RECHNUNG 1600Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass22 flDie Bierordn": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 16003.306 flaus dem Umsatz d": 1,
+  "pr-karte pr-zuteuer [X] :: Das Braurecht des Klosters Obernberg11.000 f": 1,
+  "pr-karte-text [X] :: Das Braurecht des Klosters Obernberg11.000 f": 1,
+  "pr-karte-text [X] :: Der Zunftbrief mit dem RatssitzDas Haus stel": 1,
+  "pr-feld [Y] :: WAS FÄLLIG WIRD1601Türkensteuer55 flDer Reic": 1,
+  "pr-feld [Y] :: DIE RECHNUNG 1884Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl48 MReichsgründung.": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 188456.090 Maus dem Umsatz d": 1,
+  "pr-karte-text [X] :: Der Kontrakt mit der Handelsmälzerei4.200 Mg": 1,
+  "pr-karte-text [X] :: Die Mälzerei mit Weichstock5.900 Mvon 13.000": 1,
+  "pr-karte pr-zuteuer [X] :: Eine Niederlage in der Kreisstadt24.000 Mvon": 1,
+  "pr-karte-text [X] :: Eine Niederlage in der Kreisstadt24.000 Mvon": 1,
+  "pr-feld [Y] :: WAS FÄLLIG WIRD1886Kesselschaden und Neuabna": 1,
+  "pr-last-name [X] :: Bankenkrach — der Wechsel wird fällig": 1,
+  "pr-feld [Y] :: DIE RECHNUNG 1970Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl130 DMDer Handel di": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1970500.000 DMaus dem Umsatz": 1,
+  "pr-karte [X] :: Die Schankanlagen in den Wirtschaften25.000 ": 1,
+  "pr-karte [X] :: Der Getränkefachgroßhandel als Partner48.000": 1,
+  "pr-karte-text [X] :: Der Getränkefachgroßhandel als Partner48.000": 1,
+  "pr-karte [X] :: Zwei Lastzüge mit Anhänger75.000 DMganz, sof": 1,
+  "pr-karte-text [X] :: Zwei Lastzüge mit Anhänger75.000 DMganz, sof": 1,
+  "pr-karte pr-zuteuer [X] :: Die Abfüllanlage, 24.000 Flaschen je Stunde1": 1,
+  "pr-karte-text [X] :: Die Abfüllanlage, 24.000 Flaschen je Stunde1": 1,
+  "pr-karte pr-zuteuer [X] :: Das Logistikzentrum an der Bundesstraße180.0": 1,
+  "pr-karte-text [X] :: Das Logistikzentrum an der Bundesstraße180.0": 1,
+  "pr-karte-text [X] :: Die Genossenschaft der GastwirteVierzig Wirt": 1,
+  "pr-karte-text [X] :: Der Rückzug auf die eigene BraustätteKein Ha": 1,
+  "pr-feld [Y] :: WAS FÄLLIG WIRD1973Energie- und Frachtenkris": 1,
+  "pr-last-name [X] :: Umstellung auf den Einheitskasten": 1
+ }
+}

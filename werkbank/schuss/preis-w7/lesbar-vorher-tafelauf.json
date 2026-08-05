@@ -1,0 +1,666 @@
+{
+ "fenster": "1366x768",
+ "stueck": "preis",
+ "jeEpoche": {
+  "e1": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 20,
+     "klein": 51,
+     "winzig": 48,
+     "kleinste": 5.5,
+     "knoepfe": 25,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 40,
+     "winzig": 39,
+     "kleinste": 6.5,
+     "knoepfe": 11,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 1,
+     "klein": 37,
+     "winzig": 35,
+     "kleinste": 6.5,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 21,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 4,
+     "klein": 187,
+     "winzig": 186,
+     "kleinste": 5.5,
+     "knoepfe": 7,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {
+    "wort @7.4px": 1,
+    "pr-kopf-epoche @8.9px": 1,
+    "pr-kopf-kasse @11.9px": 1,
+    "pr-kopf-klein @7.4px": 1,
+    "wort @8.4px": 9,
+    "h3 @8.4px": 6,
+    "pr-satz @7.4px": 3,
+    "pr-was @7.9px": 17,
+    "pr-zahl @7.9px": 15,
+    "pr-wurzel @5.5px": 5,
+    "pr-was @9.4px": 1,
+    "pr-zahl @9.4px": 1,
+    "pr-satz pr-klein @6.5px": 13,
+    "pr-satz pr-klein pr-liege @6.5px": 1,
+    "pr-was @6.9px": 2,
+    "pr-zahl @6.9px": 2,
+    "h3 @9.9px": 2,
+    "pr-abschnitt-satz @6.9px": 2,
+    "b @9.9px": 5,
+    "pr-schild-rest @6px": 5,
+    "pr-bauzeit @6.5px": 5,
+    "pr-was-text @6.9px": 8,
+    "pr-folge-marke @5.5px": 10,
+    "pr-folge-text @6.9px": 10,
+    "pr-satz-klein @6.5px": 8,
+    "preis @7.9px": 8,
+    "pr-sperrt @6px": 2,
+    "pr-hinweis pr-hinweis-oben @6px": 5,
+    "pr-fest-name @9.4px": 3,
+    "pr-last-jahr @7.4px": 7,
+    "pr-last-name @7.4px": 7,
+    "pr-zahl @7.4px": 7,
+    "span @6.5px": 9,
+    "pr-verh pr-verh-kennzahl @6.5px": 1,
+    "pr-leiter-eigen @6.5px": 1,
+    "pr-verh pr-leiter-eigen @6.5px": 1,
+    "pr-fuss-satz @6.9px": 1,
+    "wort @8.9px": 1
+   },
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1350Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass9 PfDer Rat setzt": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1350515 Pfaus dem Umsatz des": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1
+   }
+  },
+  "e2": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 20,
+     "klein": 51,
+     "winzig": 46,
+     "kleinste": 5.5,
+     "knoepfe": 25,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 44,
+     "winzig": 43,
+     "kleinste": 6.5,
+     "knoepfe": 13,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 2,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 2,
+     "klein": 37,
+     "winzig": 35,
+     "kleinste": 6.5,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 20,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 4,
+     "klein": 197,
+     "winzig": 196,
+     "kleinste": 5.5,
+     "knoepfe": 8,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {
+    "wort @7.4px": 1,
+    "pr-kopf-epoche @8.9px": 1,
+    "pr-kopf-kasse @11.9px": 1,
+    "pr-kopf-klein @7.4px": 1,
+    "wort @8.4px": 10,
+    "h3 @8.4px": 6,
+    "pr-satz @7.4px": 3,
+    "pr-was @7.9px": 17,
+    "pr-zahl @7.9px": 15,
+    "pr-wurzel @5.5px": 5,
+    "pr-was @9.4px": 1,
+    "pr-zahl @9.4px": 1,
+    "pr-satz pr-klein @6.5px": 13,
+    "pr-satz pr-klein pr-liege @6.5px": 1,
+    "pr-was @6.9px": 2,
+    "pr-zahl @6.9px": 2,
+    "h3 @9.9px": 2,
+    "pr-abschnitt-satz @6.9px": 2,
+    "b @9.9px": 5,
+    "pr-schild-rest @6px": 5,
+    "pr-bauzeit @6.5px": 5,
+    "pr-was-text @6.9px": 9,
+    "pr-folge-marke @5.5px": 12,
+    "pr-folge-text @6.9px": 12,
+    "pr-satz-klein @6.5px": 9,
+    "preis @7.9px": 9,
+    "pr-sperrt @6px": 3,
+    "pr-hinweis pr-hinweis-oben @6px": 5,
+    "pr-fest-name @9.4px": 4,
+    "pr-last-jahr @7.4px": 7,
+    "pr-last-name @7.4px": 7,
+    "pr-zahl @7.4px": 7,
+    "span @6.5px": 9,
+    "pr-verh pr-verh-kennzahl @6.5px": 1,
+    "pr-leiter-eigen @6.5px": 1,
+    "pr-verh pr-leiter-eigen @6.5px": 1,
+    "pr-fuss-satz @6.9px": 1,
+    "wort @8.9px": 1
+   },
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1600Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass22 flDie Bierordn": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 16003.306 flaus dem Umsatz d": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1
+   }
+  },
+  "e3": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 19,
+     "klein": 51,
+     "winzig": 46,
+     "kleinste": 5.5,
+     "knoepfe": 24,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 42,
+     "winzig": 41,
+     "kleinste": 6.5,
+     "knoepfe": 13,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 4,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 1,
+     "klein": 37,
+     "winzig": 35,
+     "kleinste": 6.5,
+     "knoepfe": 9,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 24,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 4,
+     "klein": 181,
+     "winzig": 180,
+     "kleinste": 5.5,
+     "knoepfe": 10,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {
+    "wort @7.4px": 1,
+    "pr-kopf-epoche @8.9px": 1,
+    "pr-kopf-kasse @11.9px": 1,
+    "pr-kopf-klein @7.4px": 1,
+    "wort @8.4px": 9,
+    "h3 @8.4px": 6,
+    "pr-satz @7.4px": 3,
+    "pr-was @7.9px": 16,
+    "pr-zahl @7.9px": 14,
+    "pr-wurzel @5.5px": 4,
+    "pr-was @9.4px": 1,
+    "pr-zahl @9.4px": 1,
+    "pr-satz pr-klein @6.5px": 13,
+    "pr-was @6.9px": 2,
+    "pr-zahl @6.9px": 2,
+    "h3 @9.9px": 2,
+    "pr-abschnitt-satz @6.9px": 2,
+    "b @9.9px": 5,
+    "pr-schild-rest @6px": 5,
+    "pr-bauzeit @6.5px": 5,
+    "pr-was-text @6.9px": 8,
+    "pr-folge-marke @5.5px": 10,
+    "pr-folge-text @6.9px": 10,
+    "pr-satz-klein @6.5px": 8,
+    "preis @7.9px": 7,
+    "pr-sperrt @6px": 3,
+    "pr-hinweis pr-hinweis-oben @6px": 2,
+    "pr-fest-name @9.4px": 3,
+    "preis einnahme @7.9px": 1,
+    "pr-last-jahr @7.4px": 7,
+    "pr-last-name @7.4px": 7,
+    "pr-zahl @7.4px": 7,
+    "span @6.5px": 9,
+    "pr-verh pr-verh-kennzahl @6.5px": 1,
+    "pr-leiter-eigen @6.5px": 1,
+    "pr-verh pr-leiter-eigen @6.5px": 1,
+    "pr-fuss-satz @6.9px": 1,
+    "wort @8.9px": 1
+   },
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1884Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl48 MReichsgründung.": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 188456.090 Maus dem Umsatz d": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1
+   }
+  },
+  "e4": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 2,
+     "winzig": 0,
+     "kleinste": 11.9,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 47,
+     "winzig": 44,
+     "kleinste": 6.9,
+     "knoepfe": 23,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 46,
+     "winzig": 44,
+     "kleinste": 6.5,
+     "knoepfe": 12,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 1,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 2,
+     "klein": 38,
+     "winzig": 36,
+     "kleinste": 6.5,
+     "knoepfe": 9,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 22,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 1,
+     "klein": 41,
+     "winzig": 40,
+     "kleinste": 6.9,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 9,
+     "winzig": 8,
+     "kleinste": 9.4,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 1,
+     "winzig": 0,
+     "kleinste": 10.9,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 5,
+     "klein": 200,
+     "winzig": 199,
+     "kleinste": 5.5,
+     "knoepfe": 9,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {
+    "wort @7.4px": 1,
+    "pr-kopf-epoche @8.9px": 1,
+    "pr-kopf-kasse @11.9px": 1,
+    "pr-kopf-klein @7.4px": 1,
+    "wort @8.4px": 10,
+    "h3 @8.4px": 6,
+    "pr-satz @7.4px": 3,
+    "pr-was @7.9px": 18,
+    "pr-zahl @7.9px": 16,
+    "pr-wurzel @5.5px": 5,
+    "pr-was @9.4px": 1,
+    "pr-zahl @9.4px": 1,
+    "pr-satz pr-klein @6.5px": 13,
+    "pr-was @6.9px": 2,
+    "pr-zahl @6.9px": 2,
+    "h3 @9.9px": 2,
+    "pr-abschnitt-satz @6.9px": 2,
+    "b @9.9px": 5,
+    "pr-schild-rest @6px": 5,
+    "pr-bauzeit @6.5px": 5,
+    "pr-was-text @6.9px": 9,
+    "pr-folge-marke @5.5px": 13,
+    "pr-folge-text @6.9px": 13,
+    "pr-satz-klein @6.5px": 9,
+    "preis @7.9px": 8,
+    "pr-sperrt @6px": 4,
+    "pr-hinweis pr-hinweis-oben @6px": 4,
+    "pr-fest-name @9.4px": 4,
+    "preis einnahme @7.9px": 1,
+    "pr-last-jahr @7.4px": 7,
+    "pr-last-name @7.4px": 7,
+    "pr-zahl @7.4px": 7,
+    "span @6.5px": 9,
+    "pr-verh pr-verh-kennzahl @6.5px": 1,
+    "pr-leiter-eigen @6.5px": 1,
+    "pr-verh pr-leiter-eigen @6.5px": 1,
+    "pr-fuss-satz @6.9px": 1,
+    "wort @8.9px": 1
+   },
+   "ueberKlassen": {
+    "pr-feld [Y] :: DIE RECHNUNG 1970Zu diesem Michaeli war nich": 1,
+    "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl130 DMDer Handel di": 1,
+    "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1970500.000 DMaus dem Umsatz": 1,
+    "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 1,
+    "pr-karte-text [X] :: Der Getränkefachgroßhandel als Partner48.000": 1
+   }
+  }
+ },
+ "summe": {
+  "(ohne)": {
+   "ueber": 0,
+   "klein": 8,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 0,
+   "kleinste": 11.9
+  },
+  "erbe": {
+   "ueber": 1,
+   "klein": 164,
+   "winzig": 160,
+   "zuKlein": 0,
+   "knoepfe": 32,
+   "kleinste": 6.9
+  },
+  "fuhre": {
+   "ueber": 2,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 87,
+   "kleinste": 999
+  },
+  "gegner": {
+   "ueber": 4,
+   "klein": 172,
+   "winzig": 167,
+   "zuKlein": 0,
+   "knoepfe": 49,
+   "kleinste": 6.5
+  },
+  "kern": {
+   "ueber": 0,
+   "klein": 36,
+   "winzig": 32,
+   "zuKlein": 0,
+   "knoepfe": 12,
+   "kleinste": 9.4
+  },
+  "klang": {
+   "ueber": 0,
+   "klein": 4,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 4,
+   "kleinste": 10.9
+  },
+  "name": {
+   "ueber": 6,
+   "klein": 149,
+   "winzig": 141,
+   "zuKlein": 0,
+   "knoepfe": 34,
+   "kleinste": 6.5
+  },
+  "preis": {
+   "ueber": 17,
+   "klein": 765,
+   "winzig": 761,
+   "zuKlein": 0,
+   "knoepfe": 34,
+   "kleinste": 5.5
+  },
+  "stadt": {
+   "ueber": 77,
+   "klein": 200,
+   "winzig": 184,
+   "zuKlein": 0,
+   "knoepfe": 97,
+   "kleinste": 5.5
+  },
+  "sud": {
+   "ueber": 4,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 4,
+   "kleinste": 999
+  }
+ },
+ "klassen": {
+  "wort @7.4px": 4,
+  "pr-kopf-epoche @8.9px": 4,
+  "pr-kopf-kasse @11.9px": 4,
+  "pr-kopf-klein @7.4px": 4,
+  "wort @8.4px": 38,
+  "h3 @8.4px": 24,
+  "pr-satz @7.4px": 12,
+  "pr-was @7.9px": 68,
+  "pr-zahl @7.9px": 60,
+  "pr-wurzel @5.5px": 19,
+  "pr-was @9.4px": 4,
+  "pr-zahl @9.4px": 4,
+  "pr-satz pr-klein @6.5px": 52,
+  "pr-satz pr-klein pr-liege @6.5px": 2,
+  "pr-was @6.9px": 8,
+  "pr-zahl @6.9px": 8,
+  "h3 @9.9px": 8,
+  "pr-abschnitt-satz @6.9px": 8,
+  "b @9.9px": 20,
+  "pr-schild-rest @6px": 20,
+  "pr-bauzeit @6.5px": 20,
+  "pr-was-text @6.9px": 34,
+  "pr-folge-marke @5.5px": 45,
+  "pr-folge-text @6.9px": 45,
+  "pr-satz-klein @6.5px": 34,
+  "preis @7.9px": 32,
+  "pr-sperrt @6px": 12,
+  "pr-hinweis pr-hinweis-oben @6px": 16,
+  "pr-fest-name @9.4px": 14,
+  "pr-last-jahr @7.4px": 28,
+  "pr-last-name @7.4px": 28,
+  "pr-zahl @7.4px": 28,
+  "span @6.5px": 36,
+  "pr-verh pr-verh-kennzahl @6.5px": 4,
+  "pr-leiter-eigen @6.5px": 4,
+  "pr-verh pr-leiter-eigen @6.5px": 4,
+  "pr-fuss-satz @6.9px": 4,
+  "wort @8.9px": 4,
+  "preis einnahme @7.9px": 2
+ },
+ "ueberKlassen": {
+  "pr-feld [Y] :: DIE RECHNUNG 1350Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass9 PfDer Rat setzt": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1350515 Pfaus dem Umsatz des": 1,
+  "pr-feld pr-bestand [Y] :: WAS SCHON STEHTVon heute an nichts. Was die ": 4,
+  "pr-feld [Y] :: DIE RECHNUNG 1600Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je Fass22 flDie Bierordn": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 16003.306 flaus dem Umsatz d": 1,
+  "pr-feld [Y] :: DIE RECHNUNG 1884Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl48 MReichsgründung.": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 188456.090 Maus dem Umsatz d": 1,
+  "pr-feld [Y] :: DIE RECHNUNG 1970Zu diesem Michaeli war nich": 1,
+  "pr-feld pr-ordnung [Y] :: DIE BIERORDNUNGSatz je hl130 DMDer Handel di": 1,
+  "pr-feld pr-anschlag [Y] :: DER ANSCHLAGFür 1970500.000 DMaus dem Umsatz": 1,
+  "pr-karte-text [X] :: Der Getränkefachgroßhandel als Partner48.000": 1
+ }
+}

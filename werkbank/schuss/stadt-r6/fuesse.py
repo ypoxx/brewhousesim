@@ -6,6 +6,12 @@ Zeile, als Anteil der Bildhoehe. Damit kann das Stueck zur Zeichenzeit sagen,
 wo ein Aufbau den Boden beruehrt — ohne Schuss, ohne Python, im Spiel.
 
     python3 werkbank/schuss/stadt-r6/fuesse.py > /dev/stdout
+
+Seit Welle 7 liegen die Hofbilder als .webp statt .png (gleiche Pixelgroesse,
+Alphakanal verlustfrei). Auf dieser Maschine ist weder PIL noch numpy
+installiert; wer die Fussprofile nachmessen will, ohne beides nachzuruesten,
+nimmt werkbank/schuss/stadt-gewicht/fuesse-pruefen.mjs — das misst dasselbe im
+Browser und vergleicht gleich gegen die eingetragene Tabelle.
 """
 import pathlib
 import numpy as np
@@ -14,7 +20,7 @@ from PIL import Image
 N = 24
 ORDNER = pathlib.Path('spiel/bild/hof')
 zeilen = []
-for p in sorted(ORDNER.glob('*.png')):
+for p in sorted(ORDNER.glob('*.webp')):
     a = np.asarray(Image.open(p).convert('RGBA'))[:, :, 3] > 60
     h, w = a.shape
     werte = []

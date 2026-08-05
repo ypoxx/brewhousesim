@@ -1,0 +1,42 @@
+{
+  "e1": {
+    "breite": 2752,
+    "hoehe": 1536,
+    "mittel": 0.0496,
+    "max": 17,
+    "ueber2_prozent": 1.362,
+    "ueber8_prozent": 0.026,
+    "psnr_db": 56.52
+  },
+  "e2": {
+    "breite": 2752,
+    "hoehe": 1536,
+    "mittel": 0.045,
+    "max": 22,
+    "ueber2_prozent": 1.106,
+    "ueber8_prozent": 0.044,
+    "psnr_db": 56.74
+  },
+  "e3": {
+    "breite": 2752,
+    "hoehe": 1536,
+    "mittel": 0.1097,
+    "max": 21,
+    "ueber2_prozent": 2.78,
+    "ueber8_prozent": 0.116,
+    "psnr_db": 52.61
+  },
+  "e4": {
+    "breite": 2752,
+    "hoehe": 1536,
+    "mittel": 0.092,
+    "max": 21,
+    "ueber2_prozent": 2.335,
+    "ueber8_prozent": 0.08,
+    "psnr_db": 53.58
+  },
+  "vorher": "werkbank/schuss/stadt-w7/vorher",
+  "nachher": "werkbank/schuss/stadt-w7/nachher-a",
+  "stand": "2026-08-05T12:22:07.168Z",
+  "urteil": "DIE AUFNAHME STEHT"
+}

@@ -1,0 +1,296 @@
+{
+  "Q": 0.92,
+  "modus": "schreibe",
+  "vorher": 18341912,
+  "nachher": 4666996,
+  "zeilen": [
+    {
+      "von": "spiel/bild/hof/laderampe.png",
+      "nach": "spiel/bild/hof/laderampe.webp",
+      "w": 2076,
+      "h": 2076,
+      "kb_alt": 3740,
+      "kb_neu": 407,
+      "anteil": 0.109
+    },
+    {
+      "von": "spiel/bild/hof/brunnen.png",
+      "nach": "spiel/bild/hof/brunnen.webp",
+      "w": 1928,
+      "h": 2041,
+      "kb_alt": 3086,
+      "kb_neu": 294,
+      "anteil": 0.095
+    },
+    {
+      "von": "spiel/bild/hof/hopfenlager.png",
+      "nach": "spiel/bild/hof/hopfenlager.webp",
+      "w": 642,
+      "h": 790,
+      "kb_alt": 729,
+      "kb_neu": 143,
+      "anteil": 0.196
+    },
+    {
+      "von": "spiel/bild/hof/fasslager_holz.png",
+      "nach": "spiel/bild/hof/fasslager_holz.webp",
+      "w": 790,
+      "h": 713,
+      "kb_alt": 697,
+      "kb_neu": 134,
+      "anteil": 0.192
+    },
+    {
+      "von": "spiel/bild/hof/fasslager_stein.png",
+      "nach": "spiel/bild/hof/fasslager_stein.webp",
+      "w": 790,
+      "h": 627,
+      "kb_alt": 679,
+      "kb_neu": 131,
+      "anteil": 0.193
+    },
+    {
+      "von": "spiel/bild/hof/kueferei.png",
+      "nach": "spiel/bild/hof/kueferei.webp",
+      "w": 790,
+      "h": 672,
+      "kb_alt": 677,
+      "kb_neu": 147,
+      "anteil": 0.217
+    },
+    {
+      "von": "spiel/bild/hof/flaschenhalle.png",
+      "nach": "spiel/bild/hof/flaschenhalle.webp",
+      "w": 790,
+      "h": 609,
+      "kb_alt": 661,
+      "kb_neu": 119,
+      "anteil": 0.18
+    },
+    {
+      "von": "spiel/bild/hof/sudhaus_neu.png",
+      "nach": "spiel/bild/hof/sudhaus_neu.webp",
+      "w": 790,
+      "h": 597,
+      "kb_alt": 592,
+      "kb_neu": 113,
+      "anteil": 0.19
+    },
+    {
+      "von": "spiel/bild/hof/abfuellhalle.png",
+      "nach": "spiel/bild/hof/abfuellhalle.webp",
+      "w": 790,
+      "h": 607,
+      "kb_alt": 515,
+      "kb_neu": 75,
+      "anteil": 0.146
+    },
+    {
+      "von": "spiel/bild/hof/kastenlager.png",
+      "nach": "spiel/bild/hof/kastenlager.webp",
+      "w": 790,
+      "h": 449,
+      "kb_alt": 504,
+      "kb_neu": 119,
+      "anteil": 0.236
+    },
+    {
+      "von": "spiel/bild/hof/verladedock.png",
+      "nach": "spiel/bild/hof/verladedock.webp",
+      "w": 700,
+      "h": 427,
+      "kb_alt": 407,
+      "kb_neu": 90,
+      "anteil": 0.221
+    },
+    {
+      "von": "spiel/bild/hof/malzboden.png",
+      "nach": "spiel/bild/hof/malzboden.webp",
+      "w": 762,
+      "h": 778,
+      "kb_alt": 388,
+      "kb_neu": 220,
+      "anteil": 0.566
+    },
+    {
+      "von": "spiel/bild/hof/keller_gewoelbe.png",
+      "nach": "spiel/bild/hof/keller_gewoelbe.webp",
+      "w": 780,
+      "h": 462,
+      "kb_alt": 373,
+      "kb_neu": 68,
+      "anteil": 0.182
+    },
+    {
+      "von": "spiel/bild/hof/grutkammer.png",
+      "nach": "spiel/bild/hof/grutkammer.webp",
+      "w": 752,
+      "h": 740,
+      "kb_alt": 347,
+      "kb_neu": 172,
+      "anteil": 0.496
+    },
+    {
+      "von": "spiel/bild/hof/ochsenstall.png",
+      "nach": "spiel/bild/hof/ochsenstall.webp",
+      "w": 778,
+      "h": 663,
+      "kb_alt": 347,
+      "kb_neu": 166,
+      "anteil": 0.479
+    },
+    {
+      "von": "spiel/bild/hof/gaertanks.png",
+      "nach": "spiel/bild/hof/gaertanks.webp",
+      "w": 744,
+      "h": 780,
+      "kb_alt": 342,
+      "kb_neu": 164,
+      "anteil": 0.48
+    },
+    {
+      "von": "spiel/bild/hof/gaerbottiche.png",
+      "nach": "spiel/bild/hof/gaerbottiche.webp",
+      "w": 778,
+      "h": 716,
+      "kb_alt": 323,
+      "kb_neu": 194,
+      "anteil": 0.602
+    },
+    {
+      "von": "spiel/bild/hof/waschhaus.png",
+      "nach": "spiel/bild/hof/waschhaus.webp",
+      "w": 778,
+      "h": 698,
+      "kb_alt": 317,
+      "kb_neu": 161,
+      "anteil": 0.506
+    },
+    {
+      "von": "spiel/bild/hof/pferdestall.png",
+      "nach": "spiel/bild/hof/pferdestall.webp",
+      "w": 790,
+      "h": 669,
+      "kb_alt": 292,
+      "kb_neu": 144,
+      "anteil": 0.492
+    },
+    {
+      "von": "spiel/bild/hof/pfanne.png",
+      "nach": "spiel/bild/hof/pfanne.webp",
+      "w": 900,
+      "h": 428,
+      "kb_alt": 289,
+      "kb_neu": 141,
+      "anteil": 0.49
+    },
+    {
+      "von": "spiel/bild/hof/kesselhaus.png",
+      "nach": "spiel/bild/hof/kesselhaus.webp",
+      "w": 778,
+      "h": 662,
+      "kb_alt": 284,
+      "kb_neu": 139,
+      "anteil": 0.488
+    },
+    {
+      "von": "spiel/bild/hof/rossmuehle.png",
+      "nach": "spiel/bild/hof/rossmuehle.webp",
+      "w": 779,
+      "h": 675,
+      "kb_alt": 277,
+      "kb_neu": 148,
+      "anteil": 0.536
+    },
+    {
+      "von": "spiel/bild/hof/maschinenhaus.png",
+      "nach": "spiel/bild/hof/maschinenhaus.webp",
+      "w": 779,
+      "h": 652,
+      "kb_alt": 271,
+      "kb_neu": 148,
+      "anteil": 0.545
+    },
+    {
+      "von": "spiel/bild/hof/verwaltung.png",
+      "nach": "spiel/bild/hof/verwaltung.webp",
+      "w": 778,
+      "h": 716,
+      "kb_alt": 269,
+      "kb_neu": 139,
+      "anteil": 0.517
+    },
+    {
+      "von": "spiel/bild/hof/kontor.png",
+      "nach": "spiel/bild/hof/kontor.webp",
+      "w": 605,
+      "h": 779,
+      "kb_alt": 258,
+      "kb_neu": 123,
+      "anteil": 0.477
+    },
+    {
+      "von": "spiel/bild/hof/eiskeller.png",
+      "nach": "spiel/bild/hof/eiskeller.webp",
+      "w": 780,
+      "h": 736,
+      "kb_alt": 248,
+      "kb_neu": 118,
+      "anteil": 0.474
+    },
+    {
+      "von": "spiel/bild/hof/stahltanks.png",
+      "nach": "spiel/bild/hof/stahltanks.webp",
+      "w": 779,
+      "h": 633,
+      "kb_alt": 247,
+      "kb_neu": 125,
+      "anteil": 0.507
+    },
+    {
+      "von": "spiel/bild/hof/darre.png",
+      "nach": "spiel/bild/hof/darre.webp",
+      "w": 684,
+      "h": 780,
+      "kb_alt": 223,
+      "kb_neu": 110,
+      "anteil": 0.493
+    },
+    {
+      "von": "spiel/bild/hof/maelzerei.png",
+      "nach": "spiel/bild/hof/maelzerei.webp",
+      "w": 430,
+      "h": 776,
+      "kb_alt": 199,
+      "kb_neu": 111,
+      "anteil": 0.558
+    },
+    {
+      "von": "spiel/bild/hof/schornstein.png",
+      "nach": "spiel/bild/hof/schornstein.webp",
+      "w": 218,
+      "h": 779,
+      "kb_alt": 125,
+      "kb_neu": 68,
+      "anteil": 0.548
+    },
+    {
+      "von": "spiel/bild/hof/waage.png",
+      "nach": "spiel/bild/hof/waage.webp",
+      "w": 777,
+      "h": 503,
+      "kb_alt": 114,
+      "kb_neu": 72,
+      "anteil": 0.633
+    },
+    {
+      "von": "spiel/bild/hof/rauch.png",
+      "nach": "spiel/bild/hof/rauch.webp",
+      "w": 779,
+      "h": 676,
+      "kb_alt": 94,
+      "kb_neu": 56,
+      "anteil": 0.6
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "e1": {
+    "anfragen": 85,
+    "encodedBodySize": 11402822,
+    "transferSize": 11428322,
+    "mb_enc": 10.87,
+    "mb_tra": 10.9,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 32,
+        "mb": 4.45
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "bild/gegner": {
+        "n": 1,
+        "mb": 0.4
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.34
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/gegner/hof1.png",
+        "kb": 408
+      },
+      {
+        "datei": "spiel/bild/hof/laderampe.webp",
+        "kb": 407
+      },
+      {
+        "datei": "spiel/bild/name/zeiger1.png",
+        "kb": 344
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.webp",
+        "kb": 294
+      },
+      {
+        "datei": "spiel/bild/hof/malzboden.webp",
+        "kb": 220
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/bild/hof/gaerbottiche.webp",
+        "kb": 194
+      },
+      {
+        "datei": "spiel/bild/hof/grutkammer.webp",
+        "kb": 172
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e2": {
+    "anfragen": 84,
+    "encodedBodySize": 11689195,
+    "transferSize": 11714395,
+    "mb_enc": 11.15,
+    "mb_tra": 11.17,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 31,
+        "mb": 4.31
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.67
+      },
+      "bild/gegner": {
+        "n": 1,
+        "mb": 0.48
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/name/schild2.png",
+        "kb": 683
+      },
+      {
+        "datei": "spiel/bild/gegner/hof2.png",
+        "kb": 489
+      },
+      {
+        "datei": "spiel/bild/hof/laderampe.webp",
+        "kb": 407
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.webp",
+        "kb": 294
+      },
+      {
+        "datei": "spiel/bild/hof/malzboden.webp",
+        "kb": 220
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/bild/hof/gaerbottiche.webp",
+        "kb": 194
+      },
+      {
+        "datei": "spiel/bild/hof/grutkammer.webp",
+        "kb": 172
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e3": {
+    "anfragen": 83,
+    "encodedBodySize": 10632415,
+    "transferSize": 10657315,
+    "mb_enc": 10.14,
+    "mb_tra": 10.16,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 32,
+        "mb": 4.45
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/hof/laderampe.webp",
+        "kb": 407
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.webp",
+        "kb": 294
+      },
+      {
+        "datei": "spiel/bild/hof/malzboden.webp",
+        "kb": 220
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/bild/hof/gaerbottiche.webp",
+        "kb": 194
+      },
+      {
+        "datei": "spiel/bild/hof/grutkammer.webp",
+        "kb": 172
+      },
+      {
+        "datei": "spiel/bild/hof/ochsenstall.webp",
+        "kb": 166
+      },
+      {
+        "datei": "spiel/bild/hof/gaertanks.webp",
+        "kb": 164
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e4": {
+    "anfragen": 84,
+    "encodedBodySize": 11044847,
+    "transferSize": 11070047,
+    "mb_enc": 10.53,
+    "mb_tra": 10.56,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 32,
+        "mb": 4.45
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.39
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/hof/laderampe.webp",
+        "kb": 407
+      },
+      {
+        "datei": "spiel/bild/name/tafel4.png",
+        "kb": 403
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.webp",
+        "kb": 294
+      },
+      {
+        "datei": "spiel/bild/hof/malzboden.webp",
+        "kb": 220
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/bild/hof/gaerbottiche.webp",
+        "kb": 194
+      },
+      {
+        "datei": "spiel/bild/hof/grutkammer.webp",
+        "kb": 172
+      },
+      {
+        "datei": "spiel/bild/hof/ochsenstall.webp",
+        "kb": 166
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "stand": "2026-08-05T12:18:38.694Z",
+  "hafen": "8899",
+  "fenster": "1366x768",
+  "ruhe_s": 8
+}

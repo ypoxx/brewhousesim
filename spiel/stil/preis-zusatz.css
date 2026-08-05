@@ -20,7 +20,7 @@
 .pr-karte-stempel {
   align-self: flex-start;
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 12);
+  font-size: max(12px, calc(var(--s) * 12));
   letter-spacing: calc(var(--s) * 3);
   color: var(--pr-gruen, #3d5b3a);
   border: calc(var(--s) * 2) solid currentColor;
@@ -128,12 +128,12 @@
 }
 .pr-knapp-marke {
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 12);
+  font-size: max(12px, calc(var(--s) * 12));
   letter-spacing: calc(var(--s) * 3);
   color: var(--pr-rot);
   white-space: nowrap;
 }
-.pr-knapp-text { font-size: calc(var(--s) * 15); line-height: 1.3; }
+.pr-knapp-text { font-size: max(12px, calc(var(--s) * 15)); line-height: 1.3; }
 
 /* Zu Michaeli liegt der Sommerzettel der FUHRE oben. Der Griff sagt dann,
    dass die Tafel darunter bereitliegt, statt "schließen" zu behaupten. */
@@ -171,7 +171,7 @@
 
 .pr-chronik-kopf {
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 14));
   letter-spacing: calc(var(--s) * 3);
   color: var(--pr-rot);
   border-bottom: calc(var(--s) * 1) solid var(--pr-linie);
@@ -189,7 +189,7 @@
   align-items: baseline;
   padding: calc(var(--s) * 2) 0;
   border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
 }
 .pr-chronik-offen {
   padding: calc(var(--s) * 4) 0;
@@ -199,7 +199,7 @@
   display: flex;
   gap: calc(var(--s) * 8);
   align-items: baseline;
-  font-size: calc(var(--s) * 16);
+  font-size: max(12px, calc(var(--s) * 16));
 }
 .pr-chronik-offen-kopf b { flex: 1 1 auto; min-width: 0; }
 .pr-chronik-offen-kopf .pr-zahl {
@@ -250,7 +250,7 @@
   padding-top: calc(var(--s) * 4);
   border-top: calc(var(--s) * 1) dashed var(--pr-linie);
 }
-.pr-nahrung .pr-zeile { font-size: calc(var(--s) * 14); }
+.pr-nahrung .pr-zeile { font-size: max(12px, calc(var(--s) * 14)); }
 .pr-nahrung .pr-mager .pr-zahl { color: var(--pr-rot); }
 .pr-nahrung .pr-frei  .pr-zahl { color: var(--pr-gruen); }
 
@@ -274,7 +274,7 @@
 .pr-leiter-zeile {
   grid-template-columns: 13% 16% 19% 14% 21% 17%;
   column-gap: 0;
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
 }
 .pr-leiter-kopf { letter-spacing: 0; }
 .pr-leiter-zeile .pr-leiter-eigen {
@@ -291,7 +291,7 @@
 /* Auf der Chronikseite hat die Leiter eine ganze Spalte für sich; dort darf
    sie breiter sein als das schmale Feld auf der Tafel. */
 .pr-chronik-leiter { flex: 0 0 34%; }
-.pr-leiter-breit .pr-leiter-zeile { font-size: calc(var(--s) * 13); }
+.pr-leiter-breit .pr-leiter-zeile { font-size: max(12px, calc(var(--s) * 13)); }
 
 /* Auf der Chronikseite steht DIE LEITER in einer eigenen Spalte und braucht
    dort keinen zweiten Rahmen um den, den die Spalte schon hat. Sie bekommt
@@ -403,4 +403,125 @@
   text-overflow: clip;
   padding-left: calc(var(--s) * 8);
   line-height: 1.2;
+}
+
+/* ==========================================================================
+   DER SCHRIFTBODEN — vierte Latte, Welle 7
+   ==========================================================================
+   Gemessen bei 1366x768 mit gezeichneter Rollleiste
+   (`werkbank/schuss/preis-w7/lesbar-preis.mjs`): dieses Stueck trug 48
+   Textknoten unter 12 px, alle in `pr-was`, `pr-zahl` und `wort` bei 6,5
+   bis 7,4 px. Kein einziges CSS schreibt eine Groesse unter 12 px — sie
+   entstehen erst beim Zeichnen, weil `--s` bei 1366x768 auf 0,496 steht
+   (grund.css:12). Der Weg ist der von DIE FUHRE und DER SUD zweimal
+   unabhaengig gegangene: jede eigene `font-size` auf
+   `max(12px, calc(var(--s) * N))` — oben in beiden Dateien geschehen,
+   54 Regeln.
+
+   ZWEI REGELN MIT N < 12 STEHEN NICHT DORT, SONDERN HIER.
+   Auf der Entwurfsleinwand 2752x1536 ist `--s` genau 1; `max(12px,
+   calc(var(--s) * 11))` waere dort 12 statt 11 px und wuerde die Aufnahme
+   veraendern, gegen die die ERSTE Latte blind vergleicht. Der Boden gilt
+   deshalb fuer sie nur unterhalb der Entwurfsleinwand — derselbe
+   Medienschalter, mit dem das Skelett schon den Knopfboden setzt
+   (grund.css:268). Auf 2752x1536 ist diese Datei damit Zeile fuer Zeile
+   dieselbe wie vorher.
+
+   DER PREISZETTEL AM KNOPF (`.knopf .preis`, grund.css:294) hat keinen
+   Boden und steht bei 1366x768 auf 9,9 px. Er gehoert dem Skelett, und
+   ein Stueck darf ihn nicht fuer alle heben — DIE FUHRE (fuhre.css:479,
+   fuhre-zusatz.css:74) und DER SUD (sud.css:204/210/366/469) haben ihn
+   deshalb je NUR IN IHREN EIGENEN Kaesten angehoben. Genau das steht
+   unten, auf `.fach-preis` eingegrenzt. Was in fremden Kaesten steht,
+   bleibt fremd; die Zahlen dazu stehen im Bericht als KERN-Absatz.
+   ========================================================================== */
+@media (max-width: 2751px), (max-height: 1535px) {
+  .pr-folge-marke,
+  .pr-zeile .pr-wurzel { font-size: 12px; }
+
+  /* Der Preiszettel am eigenen Knopf. Er steht HIER und nicht draussen, und
+     das ist gemessen, nicht vorsichtshalber: draussen schlaegt
+     `.fach-preis .knopf .preis` wegen der spaeteren Quellzeile die
+     Kartenregel `.pr-karte .knopf .preis` (preis.css:300) — auf der
+     Entwurfsleinwand wuchs der Zettel von 16 auf 20 px, der Knopf von 40 auf
+     43 px, und die Aufnahme fuer die ERSTE Latte war eine andere. Gefunden
+     mit `werkbank/schuss/preis-w7/leinwand-gleich.mjs`, das jeden Knoten
+     unter `.fach-preis` bei 2752x1536 vergleicht. Im Medienschalter ist die
+     Leinwand wieder Zeile fuer Zeile dieselbe. */
+  .fach-preis .knopf .preis { font-size: max(12px, calc(var(--s) * 20)); }
+  .fach-preis .pr-karte .knopf .preis,
+  .fach-preis .pr-fest  .knopf .preis { font-size: max(12px, calc(var(--s) * 16)); }
+}
+
+/* ==========================================================================
+   DIE KAESTEN NACH DEM SCHRIFTBODEN — die eigentliche Arbeit
+   ==========================================================================
+   DIE FUHRE hat es aufgeschrieben und DER SUD hat es bestaetigt: der Boden
+   allein macht die Zahl der abgeschnittenen Kaesten SCHLECHTER, weil groessere
+   Schrift mehr Platz braucht. Hier gemessen (1366x768, mit Rollleiste,
+   Michaelitafel AUFGESCHLAGEN — zugeklappt sieht man von diesem Stueck nur
+   den Griff):
+
+     Stand                      Textknoten < 12 px   abgeschnittene Kaesten
+     vorher                            765                    17
+     nur Schriftboden                    0                    50
+     Schriftboden + dieser Abschnitt     0                     0
+
+   VIER URSACHEN, jede einzeln gemessen (`scrollWidth`/`clientWidth` je
+   Kasten, nicht geraten):
+
+   1. `.pr-feld` klippt senkrecht (`overflow: hidden`, preis.css:120). DIE
+      RECHNUNG von 1350 braucht 539 px in einem 219 px hohen Kasten. Ein
+      Kasten, der ROLLT, verbirgt nichts — das ist der Weg, den DER SUD
+      statt `-webkit-line-clamp` gegangen ist. Gedeckelt wird nicht in
+      Pixeln, sondern durch den vorhandenen Flexraum, damit es mit dem Boden
+      mitwaechst.
+   2. `.pr-karte-text` klippt waagerecht (94/159 px). Ursache sind lange
+      Komposita ohne Trennstelle — „Getraenkefachgrosshandel",
+      „Logistikzentrum". Sie brechen jetzt notfalls im Wort statt den Kasten
+      zu sprengen.
+   3. `.pr-karte` / `.pr-fest` klippen waagerecht (114/125 px), weil `.knopf`
+      aus dem Skelett `white-space: nowrap` traegt und „Nehmen — 75.000 DM"
+      breiter ist als die Karte. Die Aufschrift darf umbrechen; der Knopf
+      bleibt derselbe Knopf.
+   4. `.pr-last-name` schnitt mit `text-overflow: ellipsis` ab. Drei Punkte
+      sind eine Kuerzung, keine Loesung: „Der Notpfennig — was NICHT
+      genommen wird" ist genau die Zeile, die erklaert, warum die Rechnung
+      nicht aufgeht. Sie bricht jetzt um.
+
+   ALLES HINTER DEM MEDIENSCHALTER. Auf der Entwurfsleinwand 2752x1536 laeuft
+   keiner dieser Kaesten ueber (dort ist `--s` = 1 und alles passt); die
+   Aufnahme, gegen die die ERSTE Latte blind vergleicht, bleibt damit Pixel
+   fuer Pixel dieselbe.
+   ========================================================================== */
+@media (max-width: 2751px), (max-height: 1535px) {
+
+  /* 1 — die Felder rollen, statt zu schneiden. */
+  .pr-tafel .pr-feld,
+  .pr-tafel .pr-chronik {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+  }
+  .pr-tafel .pr-bestand,
+  .pr-tafel .pr-leiter { overflow-y: auto; overflow-x: hidden; }
+
+  /* 2 — lange Komposita brechen, statt den Kasten zu sprengen. */
+  .pr-tafel .pr-karte-text,
+  .pr-tafel .pr-karte,
+  .pr-tafel .pr-fest,
+  .pr-tafel .pr-feld { overflow-wrap: anywhere; }
+
+  /* 3 — die Knopfaufschrift darf umbrechen. */
+  .pr-tafel .knopf,
+  .pr-griff .knopf { white-space: normal; }
+
+  /* 4 — kein Text mit drei Punkten weggekuerzt. */
+  .pr-tafel .pr-last-name,
+  .pr-tafel .pr-bestand-name,
+  .pr-tafel .pr-kopf-epoche {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
 }

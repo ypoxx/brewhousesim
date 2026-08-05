@@ -1,0 +1,350 @@
+{
+  "e1": {
+    "anfragen": 85,
+    "encodedBodySize": 25071495,
+    "transferSize": 25096995,
+    "mb_enc": 23.91,
+    "mb_tra": 23.93,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 32,
+        "mb": 17.49
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "bild/gegner": {
+        "n": 1,
+        "mb": 0.4
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.34
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/hof/laderampe.png",
+        "kb": 3740
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.png",
+        "kb": 3086
+      },
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/hof/hopfenlager.png",
+        "kb": 729
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_holz.png",
+        "kb": 697
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_stein.png",
+        "kb": 679
+      },
+      {
+        "datei": "spiel/bild/hof/kueferei.png",
+        "kb": 677
+      },
+      {
+        "datei": "spiel/bild/hof/flaschenhalle.png",
+        "kb": 661
+      },
+      {
+        "datei": "spiel/bild/hof/sudhaus_neu.png",
+        "kb": 592
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e2": {
+    "anfragen": 85,
+    "encodedBodySize": 25500620,
+    "transferSize": 25526120,
+    "mb_enc": 24.32,
+    "mb_tra": 24.34,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 32,
+        "mb": 17.49
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.67
+      },
+      "bild/gegner": {
+        "n": 1,
+        "mb": 0.48
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/hof/laderampe.png",
+        "kb": 3740
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.png",
+        "kb": 3086
+      },
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/hof/hopfenlager.png",
+        "kb": 729
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_holz.png",
+        "kb": 697
+      },
+      {
+        "datei": "spiel/bild/name/schild2.png",
+        "kb": 683
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_stein.png",
+        "kb": 679
+      },
+      {
+        "datei": "spiel/bild/hof/kueferei.png",
+        "kb": 677
+      },
+      {
+        "datei": "spiel/bild/hof/flaschenhalle.png",
+        "kb": 661
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e3": {
+    "anfragen": 83,
+    "encodedBodySize": 24301088,
+    "transferSize": 24325988,
+    "mb_enc": 23.18,
+    "mb_tra": 23.2,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 32,
+        "mb": 17.49
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/hof/laderampe.png",
+        "kb": 3740
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.png",
+        "kb": 3086
+      },
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/hof/hopfenlager.png",
+        "kb": 729
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_holz.png",
+        "kb": 697
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_stein.png",
+        "kb": 679
+      },
+      {
+        "datei": "spiel/bild/hof/kueferei.png",
+        "kb": 677
+      },
+      {
+        "datei": "spiel/bild/hof/flaschenhalle.png",
+        "kb": 661
+      },
+      {
+        "datei": "spiel/bild/hof/sudhaus_neu.png",
+        "kb": 592
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e4": {
+    "anfragen": 84,
+    "encodedBodySize": 24713520,
+    "transferSize": 24738720,
+    "mb_enc": 23.57,
+    "mb_tra": 23.59,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 32,
+        "mb": 17.49
+      },
+      "bild/platte": {
+        "n": 4,
+        "mb": 4.09
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.32
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.39
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.27
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/hof/laderampe.png",
+        "kb": 3740
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.png",
+        "kb": 3086
+      },
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/hof/hopfenlager.png",
+        "kb": 729
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_holz.png",
+        "kb": 697
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_stein.png",
+        "kb": 679
+      },
+      {
+        "datei": "spiel/bild/hof/kueferei.png",
+        "kb": 677
+      },
+      {
+        "datei": "spiel/bild/hof/flaschenhalle.png",
+        "kb": 661
+      },
+      {
+        "datei": "spiel/bild/hof/sudhaus_neu.png",
+        "kb": 592
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "stand": "2026-08-05T12:09:46.291Z",
+  "hafen": "8899",
+  "fenster": "1366x768",
+  "ruhe_s": 8
+}

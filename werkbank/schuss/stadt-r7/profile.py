@@ -21,7 +21,7 @@ N = 24
 ORDNER = pathlib.Path('spiel/bild/hof')
 
 fuesse, masse = [], []
-for p in sorted(ORDNER.glob('*.png')):
+for p in sorted(ORDNER.glob('*.webp')):
     bild = Image.open(p).convert('RGBA')
     a = np.asarray(bild)[:, :, 3] > 60
     h, w = a.shape

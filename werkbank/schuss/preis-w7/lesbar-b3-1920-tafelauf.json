@@ -1,0 +1,434 @@
+{
+ "fenster": "1920x1000",
+ "stueck": "preis",
+ "jeEpoche": {
+  "e1": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 26,
+     "winzig": 23,
+     "kleinste": 7.2,
+     "knoepfe": 25,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 36,
+     "winzig": 19,
+     "kleinste": 8.5,
+     "knoepfe": 11,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 1,
+     "klein": 35,
+     "winzig": 15,
+     "kleinste": 8.5,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 21,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 30,
+     "winzig": 16,
+     "kleinste": 9.1,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 7,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {}
+  },
+  "e2": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 24,
+     "winzig": 23,
+     "kleinste": 7.2,
+     "knoepfe": 25,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 40,
+     "winzig": 21,
+     "kleinste": 8.5,
+     "knoepfe": 13,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 1,
+     "klein": 35,
+     "winzig": 15,
+     "kleinste": 8.5,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 20,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 30,
+     "winzig": 16,
+     "kleinste": 9.1,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 8,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {}
+  },
+  "e3": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 24,
+     "winzig": 22,
+     "kleinste": 7.2,
+     "knoepfe": 24,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 38,
+     "winzig": 19,
+     "kleinste": 8.5,
+     "knoepfe": 13,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 1,
+     "klein": 35,
+     "winzig": 13,
+     "kleinste": 8.5,
+     "knoepfe": 9,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 24,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 0,
+     "klein": 30,
+     "winzig": 16,
+     "kleinste": 9.1,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 10,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {}
+  },
+  "e4": {
+   "st": {
+    "(ohne)": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "stadt": {
+     "ueber": 18,
+     "klein": 21,
+     "winzig": 19,
+     "kleinste": 9.1,
+     "knoepfe": 22,
+     "zuKlein": 0
+    },
+    "gegner": {
+     "ueber": 1,
+     "klein": 41,
+     "winzig": 20,
+     "kleinste": 8.5,
+     "knoepfe": 12,
+     "zuKlein": 0
+    },
+    "sud": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 0,
+     "zuKlein": 0
+    },
+    "name": {
+     "ueber": 2,
+     "klein": 36,
+     "winzig": 14,
+     "kleinste": 8.5,
+     "knoepfe": 9,
+     "zuKlein": 0
+    },
+    "fuhre": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 22,
+     "zuKlein": 0
+    },
+    "erbe": {
+     "ueber": 1,
+     "klein": 30,
+     "winzig": 16,
+     "kleinste": 9.1,
+     "knoepfe": 8,
+     "zuKlein": 0
+    },
+    "kern": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 3,
+     "zuKlein": 0
+    },
+    "klang": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 1,
+     "zuKlein": 0
+    },
+    "preis": {
+     "ueber": 0,
+     "klein": 0,
+     "winzig": 0,
+     "kleinste": 999,
+     "knoepfe": 9,
+     "zuKlein": 0
+    }
+   },
+   "klassen": {},
+   "ueberKlassen": {}
+  }
+ },
+ "summe": {
+  "(ohne)": {
+   "ueber": 0,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 0,
+   "kleinste": 999
+  },
+  "erbe": {
+   "ueber": 1,
+   "klein": 120,
+   "winzig": 64,
+   "zuKlein": 0,
+   "knoepfe": 32,
+   "kleinste": 9.1
+  },
+  "fuhre": {
+   "ueber": 0,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 87,
+   "kleinste": 999
+  },
+  "gegner": {
+   "ueber": 4,
+   "klein": 155,
+   "winzig": 79,
+   "zuKlein": 0,
+   "knoepfe": 49,
+   "kleinste": 8.5
+  },
+  "kern": {
+   "ueber": 0,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 12,
+   "kleinste": 999
+  },
+  "klang": {
+   "ueber": 0,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 4,
+   "kleinste": 999
+  },
+  "name": {
+   "ueber": 5,
+   "klein": 141,
+   "winzig": 57,
+   "zuKlein": 0,
+   "knoepfe": 34,
+   "kleinste": 8.5
+  },
+  "preis": {
+   "ueber": 0,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 34,
+   "kleinste": 999
+  },
+  "stadt": {
+   "ueber": 72,
+   "klein": 95,
+   "winzig": 87,
+   "zuKlein": 0,
+   "knoepfe": 96,
+   "kleinste": 7.2
+  },
+  "sud": {
+   "ueber": 0,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 0,
+   "kleinste": 999
+  }
+ },
+ "klassen": {},
+ "ueberKlassen": {}
+}

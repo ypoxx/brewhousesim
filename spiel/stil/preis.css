@@ -68,13 +68,13 @@
 }
 .pr-kopf-links { display: flex; align-items: baseline; gap: calc(var(--s) * 14); min-width: 0; }
 .pr-kopf-tag {
-  font-size: calc(var(--s) * 34);
+  font-size: max(12px, calc(var(--s) * 34));
   letter-spacing: calc(var(--s) * 5);
   white-space: nowrap;
   color: var(--pr-rot);
 }
 .pr-kopf-epoche {
-  font-size: calc(var(--s) * 18);
+  font-size: max(12px, calc(var(--s) * 18));
   color: var(--pr-schwach);
   font-style: italic;
   overflow: hidden;
@@ -89,13 +89,13 @@
   gap: calc(var(--s) * 2);
   white-space: nowrap;
 }
-.pr-kopf-kasse { font-family: var(--pr-zahlen); font-size: calc(var(--s) * 24); }
-.pr-kopf-klein { font-size: calc(var(--s) * 15); color: var(--pr-schwach); }
+.pr-kopf-kasse { font-family: var(--pr-zahlen); font-size: max(12px, calc(var(--s) * 24)); }
+.pr-kopf-klein { font-size: max(12px, calc(var(--s) * 15)); color: var(--pr-schwach); }
 .knopf.pr-reiter {
   margin-left: calc(var(--s) * 14);
   padding: calc(var(--s) * 6) calc(var(--s) * 12);
   min-height: 0;
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
 }
 
 /* --------------------------------------------------------------------------
@@ -122,7 +122,7 @@
 .pr-feld h3,
 .pr-chronik h3 {
   margin: 0 0 calc(var(--s) * 5) 0;
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   letter-spacing: calc(var(--s) * 3);
   color: var(--pr-rot);
   border-bottom: calc(var(--s) * 1) solid var(--pr-linie);
@@ -133,7 +133,7 @@
   display: flex;
   gap: calc(var(--s) * 8);
   align-items: baseline;
-  font-size: calc(var(--s) * 16);
+  font-size: max(12px, calc(var(--s) * 16));
   padding: calc(var(--s) * 2) 0;
 }
 .pr-zeile .pr-was { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -142,9 +142,9 @@
   border-top: calc(var(--s) * 2) solid var(--pr-linie);
   margin-top: calc(var(--s) * 3);
   padding-top: calc(var(--s) * 4);
-  font-size: calc(var(--s) * 19);
+  font-size: max(12px, calc(var(--s) * 19));
 }
-.pr-zeile.pr-gross .pr-zahl { font-size: calc(var(--s) * 26); }
+.pr-zeile.pr-gross .pr-zahl { font-size: max(12px, calc(var(--s) * 26)); }
 .pr-zeile.pr-ertrag .pr-zahl,
 .pr-zeile.pr-zufluss .pr-zahl { color: var(--pr-gruen); }
 .pr-zeile.pr-umlage .pr-zahl,
@@ -152,7 +152,7 @@
 .pr-zeile.pr-offen { text-decoration: none; }
 .pr-marke {
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 12);
+  font-size: max(12px, calc(var(--s) * 12));
   color: var(--pr-rot);
   border: calc(var(--s) * 1) solid var(--pr-rot);
   border-radius: calc(var(--s) * 3);
@@ -164,17 +164,17 @@
 .pr-bestand-zeile {
   display: flex;
   gap: calc(var(--s) * 8);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   padding: calc(var(--s) * 2) 0;
   border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
 }
-.pr-bestand-jahr { font-family: var(--pr-zahlen); font-size: calc(var(--s) * 13); color: var(--pr-schwach); flex: 0 0 calc(var(--s) * 58); }
+.pr-bestand-jahr { font-family: var(--pr-zahlen); font-size: max(12px, calc(var(--s) * 13)); color: var(--pr-schwach); flex: 0 0 calc(var(--s) * 58); }
 .pr-bestand-name { flex: 1 1 auto; min-width: 0; }
 .pr-bestand-zeile.pr-imbau .pr-bestand-jahr { color: var(--pr-rot); }
 
-.pr-satz { font-size: calc(var(--s) * 15); line-height: 1.32; color: var(--pr-schwach); margin: calc(var(--s) * 3) 0; }
-.pr-satz.pr-klein { font-size: calc(var(--s) * 13); }
-.pr-satz-klein { font-size: calc(var(--s) * 13); line-height: 1.3; color: var(--pr-schwach); }
+.pr-satz { font-size: max(12px, calc(var(--s) * 15)); line-height: 1.32; color: var(--pr-schwach); margin: calc(var(--s) * 3) 0; }
+.pr-satz.pr-klein { font-size: max(12px, calc(var(--s) * 13)); }
+.pr-satz-klein { font-size: max(12px, calc(var(--s) * 13)); line-height: 1.3; color: var(--pr-schwach); }
 
 /* --------------------------------------------------------------------------
    DIE ANGEBOTE — nebeneinander, mit Preisschild
@@ -187,13 +187,13 @@
 }
 .pr-abschnitt h3 {
   margin: 0;
-  font-size: calc(var(--s) * 20);
+  font-size: max(12px, calc(var(--s) * 20));
   letter-spacing: calc(var(--s) * 4);
   color: var(--pr-tinte);
   white-space: nowrap;
 }
 .pr-abschnitt-satz {
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 14));
   color: var(--pr-schwach);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -227,7 +227,7 @@
 
 .pr-karte-kopf b {
   display: block;
-  font-size: calc(var(--s) * 20);
+  font-size: max(12px, calc(var(--s) * 20));
   line-height: 1.15;
   min-height: calc(var(--s) * 46);
 }
@@ -245,25 +245,25 @@
 }
 .pr-schild-zahl {
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 27);
+  font-size: max(12px, calc(var(--s) * 27));
   letter-spacing: calc(var(--s) * -0.5);
   color: var(--pr-rot);
   white-space: nowrap;
 }
-.pr-schild-rest { font-size: calc(var(--s) * 12); color: var(--pr-schwach); }
+.pr-schild-rest { font-size: max(12px, calc(var(--s) * 12)); color: var(--pr-schwach); }
 
 .pr-bauzeit {
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
   color: var(--pr-tinte);
   opacity: 0.85;
 }
-.pr-was-text { font-size: calc(var(--s) * 14); line-height: 1.3; font-style: italic; color: var(--pr-schwach); }
+.pr-was-text { font-size: max(12px, calc(var(--s) * 14)); line-height: 1.3; font-style: italic; color: var(--pr-schwach); }
 
 .pr-folge, .pr-regel {
   display: flex;
   gap: calc(var(--s) * 6);
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 14));
   line-height: 1.28;
   padding: calc(var(--s) * 4) 0;
   border-top: calc(var(--s) * 1) dotted var(--pr-linie);
@@ -279,11 +279,11 @@
 }
 .pr-folge-text { flex: 1 1 auto; min-width: 0; }
 .pr-sperrt {
-  font-size: calc(var(--s) * 12);
+  font-size: max(12px, calc(var(--s) * 12));
   color: var(--pr-rot);
   font-family: var(--pr-zahlen);
 }
-.pr-hinweis { font-size: calc(var(--s) * 12); color: var(--pr-schwach); font-family: var(--pr-zahlen); }
+.pr-hinweis { font-size: max(12px, calc(var(--s) * 12)); color: var(--pr-schwach); font-family: var(--pr-zahlen); }
 .pr-hinweis-oben { margin-top: auto; padding-top: calc(var(--s) * 6); }
 .pr-hinweis-oben + .knopf { margin-top: calc(var(--s) * 4) !important; }
 
@@ -293,19 +293,19 @@
   width: 100%;
   justify-content: space-between;
   white-space: normal;
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   padding: calc(var(--s) * 7) calc(var(--s) * 10);
   min-height: calc(var(--s) * 40);
 }
 .pr-karte .knopf .preis,
-.pr-fest .knopf .preis { font-size: calc(var(--s) * 16); }
+.pr-fest .knopf .preis { font-size: max(12px, calc(var(--s) * 16)); }
 
 .pr-leer {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(var(--s) * 17);
+  font-size: max(12px, calc(var(--s) * 17));
   color: var(--pr-schwach);
   font-style: italic;
   text-align: center;
@@ -320,7 +320,7 @@
   border-color: var(--pr-rot);
   border-width: calc(var(--s) * 3);
 }
-.pr-fest-name { font-size: calc(var(--s) * 19); line-height: 1.15; }
+.pr-fest-name { font-size: max(12px, calc(var(--s) * 19)); line-height: 1.15; }
 .pr-fest.pr-fest-zu { opacity: 0.55; }
 .pr-fest-getroffen {
   background:
@@ -332,7 +332,7 @@
 .pr-fest-stempel {
   align-self: flex-start;
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 12);
+  font-size: max(12px, calc(var(--s) * 12));
   letter-spacing: calc(var(--s) * 3);
   color: var(--pr-rot);
   border: calc(var(--s) * 2) solid var(--pr-rot);
@@ -352,10 +352,10 @@
   padding: calc(var(--s) * 4) 0;
   border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
 }
-.pr-last-kopf { display: flex; gap: calc(var(--s) * 7); align-items: baseline; font-size: calc(var(--s) * 15); }
+.pr-last-kopf { display: flex; gap: calc(var(--s) * 7); align-items: baseline; font-size: max(12px, calc(var(--s) * 15)); }
 .pr-last-jahr {
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   color: var(--pr-rot);
   flex: 0 0 auto;
   min-width: calc(var(--s) * 46);
@@ -369,12 +369,12 @@
   display: grid;
   grid-template-columns: 22% 26% 28% 24%;
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 14));
   padding: calc(var(--s) * 2) 0;
   border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
 }
 .pr-leiter-zeile span:not(:first-child) { text-align: right; }
-.pr-leiter-kopf { color: var(--pr-schwach); font-size: calc(var(--s) * 12); letter-spacing: calc(var(--s) * 1); }
+.pr-leiter-kopf { color: var(--pr-schwach); font-size: max(12px, calc(var(--s) * 12)); letter-spacing: calc(var(--s) * 1); }
 .pr-verh { color: var(--pr-rot); }
 
 /* --------------------------------------------------------------------------
@@ -392,17 +392,17 @@
 }
 .pr-chronik-jahr {
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 19);
+  font-size: max(12px, calc(var(--s) * 19));
   color: var(--pr-rot);
   flex: 0 0 calc(var(--s) * 70);
 }
-.pr-chronik-text { flex: 1 1 auto; min-width: 0; font-size: calc(var(--s) * 17); line-height: 1.3; }
-.pr-chronik-text b { font-size: calc(var(--s) * 21); }
+.pr-chronik-text { flex: 1 1 auto; min-width: 0; font-size: max(12px, calc(var(--s) * 17)); line-height: 1.3; }
+.pr-chronik-text b { font-size: max(12px, calc(var(--s) * 21)); }
 .pr-chronik-rolle { flex: 1 1 auto; overflow-y: auto; min-height: 0; }
 .pr-chronik-zeile {
   display: flex;
   gap: calc(var(--s) * 12);
-  font-size: calc(var(--s) * 16);
+  font-size: max(12px, calc(var(--s) * 16));
   padding: calc(var(--s) * 3) 0;
   border-bottom: calc(var(--s) * 1) dotted var(--pr-linie);
 }
@@ -423,7 +423,7 @@
 .pr-fuss-satz {
   flex: 1 1 auto;
   min-width: 0;
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 14));
   color: var(--pr-schwach);
   font-style: italic;
   line-height: 1.25;
@@ -431,11 +431,11 @@
 .pr-meldung {
   flex: 0 0 auto;
   font-family: var(--pr-zahlen);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   color: var(--pr-gruen);
 }
-.knopf.pr-nichts { font-size: calc(var(--s) * 18); }
-.knopf.pr-weiter { font-size: calc(var(--s) * 26); }
+.knopf.pr-nichts { font-size: max(12px, calc(var(--s) * 18)); }
+.knopf.pr-weiter { font-size: max(12px, calc(var(--s) * 26)); }
 
 /* --------------------------------------------------------------------------
    DER GRIFF — rechts oben, immer sichtbar
@@ -472,12 +472,12 @@
 .knopf.pr-griff-chronik {
   width: 100%;
   white-space: normal;
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   padding: calc(var(--s) * 4) calc(var(--s) * 8);
   min-height: calc(var(--s) * 30);
 }
 .pr-griff-stand { display: flex; flex-direction: column; }
-.pr-griff-stand .pr-zeile { font-size: calc(var(--s) * 13); }
+.pr-griff-stand .pr-zeile { font-size: max(12px, calc(var(--s) * 13)); }
 .pr-griff-stand .pr-last-zeile { color: var(--pr-rot); border-top: calc(var(--s) * 1) dotted var(--pr-linie); }
 
 /* ==========================================================================
@@ -582,7 +582,7 @@
 .pr-stil-offset .pr-kopf-tag {
   font-weight: 700;
   letter-spacing: calc(var(--s) * -1);
-  font-size: calc(var(--s) * 36);
+  font-size: max(12px, calc(var(--s) * 36));
   color: #16181a;
 }
 .pr-stil-offset .pr-karte,
