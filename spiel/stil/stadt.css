@@ -230,7 +230,11 @@
    Pixeldeckung ALLER Stuecke, `stadt-w8/freiflaeche.mjs` die Kastenmasse):
 
      1. rechts von x = 941 px beginnt die HAUSZEILE des Skeletts
-        (x 952 y 160, 847 x 39). Deshalb hoert die Werkbank bei 34 % auf.
+        (x 952 y 160, 847 x 39). Deshalb hoert die REITERZEILE bei 33 % der
+        Breite auf (33 + 1,2 % Rand = 941 px). Die Lade darunter faengt erst
+        bei y 246 an, also UNTER der Hauszeile, und darf die vollen 46 %
+        nehmen — das sind 410 statt 299 Bezugspixel je Bauknopf und damit
+        der Unterschied zwischen "Verwaltungsbau" und "Verwaltungsba".
      2. y = 120 liegt 7 px unter der Kopfleiste (endet 113) — hoeher geht
         nicht, tiefer kostet Bild.
      3. Sie liegt vollstaendig ueber dem Hausschild (y 957), ueber dem
@@ -248,10 +252,13 @@
    die billigste, die 8 % traegt.
 
    UND ES IST KEIN VERLUST AM SCHIRM, SONDERN EIN GEWINN: die Zeile bricht
-   jetzt um. Zehn Reiter brauchen rund 2.300 Bezugspixel; in EINER Zeile von
-   1.688 standen drei bis vier Namen und vier bis fuenf Kennzahlen mit
-   Auslassungspunkten da (`stadt-w8/reiterprobe-vorher.json`). Drei Zeilen zu
-   je 936 px sind 2.808.
+   jetzt um, und Name wie Kennzahl brechen mit. In EINER Zeile von 1.688 px
+   standen auf der Entwurfsleinwand ein bis vier Namen und vier bis fuenf
+   Kennzahlen mit Auslassungspunkten da; bei 1366x768 zwei Namen und sieben
+   Kennzahlen. Jetzt sind es in beiden Fenstern und allen vier Epochen
+   NULL und NULL, bei weiterhin null Ueberlaeufen.
+   Gemessen mit `stadt-w8/reiterprobe.mjs`, vorher gegen nachher
+   (`reiterprobe-vorher.json` gegen `reiterprobe-a4.json`).
    ========================================================================== */
 .stadt-werkbank {
   position: absolute;

@@ -156,3 +156,105 @@ und dort deckt es nichts mehr zu, weil die Werkbank aus dem Streifen weg ist.
 
 Gemessen mit `aufsicht/gewicht-gegenprobe.mjs`, dem Gerät der Aufsicht, nicht
 mit dem eigenen. **0,37 MB Luft.**
+
+---
+
+## Zahlen NACHHER — dasselbe Gerät, derselbe Hafen, dieselbe Saat
+
+`aufsicht/deckung-je-stueck.mjs`, 2752×1536:
+
+| Epoche | Oberfläche gesamt | unterstes Sechstel | DIE STADT gesamt | DIE STADT unten |
+|---|---|---|---|---|
+| 1350 | 27,8 → **29,6 %** | 60,7 → **13,4 %** | 8,0 → 10,6 % | 47,1 → **0,0 %** |
+| 1600 | 28,2 → **30,3 %** | 59,6 → **11,9 %** | 8,0 → 11,2 % | 47,3 → **0,0 %** |
+| 1884 | 27,1 → **29,1 %** | 60,1 → **12,5 %** | 8,0 → 10,8 % | 47,2 → **0,0 %** |
+| 1970 | 27,7 → **29,8 %** | 59,5 → **11,9 %** | 8,0 → 10,6 % | 47,1 → **0,0 %** |
+
+**Das unterste Sechstel fällt von 59,5–60,7 % auf 11,9–13,4 %.** Was dort noch
+liegt, ist die Kopfleiste mit ihrem WEITER-Knopf (8,6–9,4 %) und rund drei
+Punkte, die keinem Stück zugeordnet sind. **DIE STADT trägt dort null.**
+
+> ### UND DER PREIS DAFÜR, weil er sonst geschönt wäre
+>
+> **Die Gesamtdeckung steigt um 1,8 bis 2,1 Punkte**, von 27,1–28,2 % auf
+> 29,1–30,3 %. Das ist kein Messfehler, das ist Arithmetik: die Werkbank zeigt
+> jetzt **jeden** Namen und **jede** Kennzahl ganz (vorher 7 bis 9 gekürzte
+> Zeilen je Epoche), und mehr Schrift braucht mehr Fläche. Der Kasten ist von
+> 1723 × 194 auf 1266 × 442 gewachsen.
+>
+> Wer die 1,8 Punkte nicht will, hat sie mit **einer** Zeile zurück:
+> `.knopf.stadt-reiter .zahl { white-space: nowrap; }` in `stil/stadt.css`.
+> Das kostet die vier bis fünf gekürzten Kennzahlen von Welle 7 zurück — genau
+> den Stand, den Welle 8 ausdrücklich nicht zurücknehmen soll. Deshalb steht
+> die Zeile so, wie sie steht, und der Preis steht hier.
+>
+> Die Rechnung, die ich für richtig halte: **1,8 Punkte Deckung in der
+> Hügellinie gegen 47 Punkte im Vordergrund** — dort, wo jedes Zielblatt
+> Marktstand, Fuhrwerk und Asphalt trägt.
+
+## Was diese Welle NEBENBEI bewegt hat, ohne dass es beauftragt war
+
+**Das Hausschild ist frei.** Der Blindvergleich hatte in 1350 gemessen, dass
+die Karte `DER SUD · 1350` **65,7 % beim Laden und 75,6 % nach dem Spielen**
+des Schildes `BRAUHAUS ZUM ANKER · GEGR. 1350` zudeckt — sein erster Punkt
+unter „damit es kippt". Der ist erledigt, aber **nicht von mir**: DER SUD sucht
+für seinen Kesselzettel selbst eine freie Stelle (`sud.js:stelleZettel`), und
+weil die Werkbank den unteren Rand geräumt hat, hat er eine andere gefunden.
+Im Schuss `stadt-w8/a4-e1.png` steht das Schild vollständig da.
+
+**Und dieselbe Ursache kostet in 1884 einen Pflock.** Bei 1366×768 sitzt der
+Kesselzettel jetzt 46 px höher (y 347 → 301) und liegt damit auf dem Pflock
+`stadt:marke:fuhre-muehle`. Der Abräumer der STADT nimmt einen Pflock weg, den
+die Maus nicht trifft (die Regel „KEIN TOTER KNOPF IM BILD", Auflage 3 aus
+Welle 7) — **die Marke selbst bleibt stehen, die Auskunft geht nicht
+verloren**, aber die Zahl der erreichbaren Züge in 1884 fällt von 86 auf 85.
+Gemessen mit einem Zugvergleich über beide Häfen, alle vier Epochen; die
+anderen drei sind Ziffer für Ziffer gleich (105 / 113 / 107).
+
+> Das ist ein **fremder** Befund und wird deshalb gemeldet und nicht geheilt:
+> die Stelle liegt in `sud.js`, und am fremden Stück wird nicht gedreht.
+
+## Ein offener Befund am eigenen Stück: `FENSTER` stimmt nicht mehr
+
+`stadt.js:442` hält `FENSTER = { x0: 0, y0: 11,2, x1: 100, y1: 87,5 }` — das
+„Stadtfenster", in dem fremde Bretter ruhen dürfen und in das die Pflöcke
+ausweichen. **Die 87,5 waren die Oberkante der alten Werkbank, die 11,2 die
+Unterkante der Kopfleiste.** Beides beschreibt die Bühne nicht mehr: unten ist
+jetzt frei, oben liegt die Werkbank.
+
+Ich habe es **absichtlich nicht geändert.** `FENSTER` geht über `anteil()` in
+die Schwellen GRENZE (0,035) und MARKE (0,024) ein und entscheidet damit, ob
+ein fremdes Brett aufliegt oder als Reiter ruht — das bewegt das Bild jeder
+Epoche und damit ρ. Eine solche Änderung gehört in eine Runde, in der sie
+allein gemessen wird, nicht in dieselbe wie zwei andere.
+
+## Abnahme
+
+| | |
+|---|---|
+| `node --check` auf `stadt.js`, `stadt-daten.js`, `stadt-zusatz.js` | OK |
+| `tor.mjs` | **TOR OFFEN** — vier Epochen, `lage` 0, 0 Fehler |
+| `spielprobe.mjs` | **BESTANDEN** — 4 × 60 Wochen, 0 Fehler |
+| `lesbarkeit.mjs` 1366×768 | **14 Überläufe · 505 Textknoten · 0 von 329 Knöpfen** — vorher 14 / 505 / 0 von 330 |
+| Gewichtsveto | 7,63 MB in der schwersten Epoche gegen 8 |
+
+Die Lesbarkeitszahlen sind **an beiden Häfen im selben Lauf** erhoben; der
+Vorher-Hafen liefert Ziffer für Ziffer die in WELLE-8.md eingetragenen
+14 / 505 / 0 von 330. Das ist die Gerätekontrolle für diesen A/B.
+
+## BEFUND ZUM GEWICHT, wie beauftragt gemeldet und NICHT angefasst
+
+In der schwersten Epoche (1600) liegen unter den 7,63 MB **1,17 MB in zwei
+nicht umgestellten PNG fremder Stücke**:
+
+| Datei | Größe | gehört |
+|---|---|---|
+| `spiel/bild/name/schild2.png` | **683 KB** | DER NAME |
+| `spiel/bild/gegner/hof2.png` | **489 KB** | DER GEGNER |
+
+Zum Vergleich: die zwölf neuen Frachtbilder dieser Welle wiegen zusammen
+640 KB, und in der schwersten Epoche laden davon vier mit 203 KB. **Eine
+einzige fremde Datei wiegt mehr als die ganze Hoffracht.** Die Umstellung von
+PNG auf WebP hat in Welle 7 für die 32 Hofbilder 27 → 13 MB gebracht;
+dasselbe Gerät (`stadt-gewicht/umpacken.mjs`) liegt im Repo und ist auf jeden
+Ordner anwendbar.
