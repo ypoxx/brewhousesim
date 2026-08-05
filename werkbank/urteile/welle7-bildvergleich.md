@@ -32,6 +32,21 @@ Klickprotokoll 1350 (33 Klicks, keine Seitenfehler): Grutkammer −13 Pf, Gärbo
 Küferei blieb ungekauft — die Kasse trug sie nicht.
 
 | `spiel-e2-gespielt.png` | `4ab0b6ad3288856365c0e42f1b95b64e` |
+| `spiel-e3-gespielt.png` | `c65a5f5208153afd8d325befffba9edd` |
+| `spiel-e4-gespielt.png` | `e0a460490bd14c04a70bf4a2f152cd79` |
+
+Klickprotokolle der übrigen drei, alle ohne Seitenfehler, alle bis Woche 21/30:
+1600 — Waschhaus 96 fl, Pferdestall 132 fl, Kontor 114 fl, Hopfenlager 120 fl (25 Klicks);
+1884 — Flaschenhalle 3.700 M, Mälzereiturm 3.145 M, Pferdestall 1.628 M, Kontor 1.406 M,
+Hopfenlager 1.480 M, danach meldet die Lade „Der Hof ist für diese Zeit fertig gebaut"
+(25 Klicks); 1970 — Fahrzeugwaage 9.570 DM, Mälzereiturm 14.790 DM, Verwaltungsbau
+15.660 DM (23 Klicks). Zur Gegenprobe habe ich jede Epoche zusätzlich mit `bau=alle`
+gerendert, damit kein Fund an meiner Kaufreihenfolge hängt.
+
+Die Aufnahmen der Epochen 2–4 liefen sequenziell durch
+`werkbank/schuss/aufsicht/messfenster.sh` und haben hinter den 400-Wochen-Läufen der
+Aufsicht gewartet; parallel gemessen wurde nicht. Die Marke `/.messstand-marke` sagte vor
+und nach allen Aufnahmen `08baf32`.
 
 ## Was zuerst auffällt, in allen vier Epochen gleich
 
@@ -117,4 +132,197 @@ nur in einer schwebenden weißen Auskunftskarte darunter. Eine leere Tafel in de
 Bildmitte liest sich als nicht fertiges Bildteil — und ausgerechnet dort, wo das
 Zielbild den Gegner benennt.
 
-*(wird laufend fortgeschrieben)*
+## Das Hausschild — nur in 1350, und dort schwer
+
+Das Schild `BRAUHAUS ZUM ANKER · GEGR. 1350` ist der Gegenstand des ganzen Bildes. Ich
+habe seinen Kasten aus dem DOM geholt und in Bildpunkten nachgemessen, wieviel davon
+die UI zudeckt (Vergleich der laufenden Seite mit derselben Seite ohne die drei Ebenen):
+
+| Epoche | Schild bei | nach dem Laden | nach ~20 Wochen |
+|---|---|---|---|
+| **1350** | (1330\|957) 175×99 | **65,7 %** | **75,6 %** |
+| 1600 | (1132\|888) 217×116 | 0,0 % | 8,1 % |
+| 1884 | (1258\|957) 228×117 | 0,0 % | 0,0 % |
+| 1970 | (470\|904) 207×117 | 0,0 % | 0,8 % |
+
+In 1350 liegt der Kasten `DER SUD · 1350` darauf. Sichtbar bleibt der untere Rand mit
+`GEGR. 1350`; die beiden Zeilen mit dem Namen und der Anker sind weg. Das ist kein
+Randfall: es ist der Startzustand.
+
+## Textkästen, die einander zerschneiden
+
+Der DOM meldet null abgeschnittene Knoten und fast keine überlappenden Kästen — die
+Überlappungen entstehen erst beim Zeichnen, zwischen Geschwistern und zwischen UI und
+Kulisse, und sind deshalb nur im Bild zu sehen. Gefunden habe ich sie in drei von vier
+Epochen, und immer erst im **bespielten** Zustand:
+
+**1600, Woche 21, Kasten `DER SUD · 1600` bei (1355\|780)–(1725\|1040).** Der Kasten trägt
+eine Zeile mehr, als er hoch ist. Vier Reihen liegen übereinander:
+- Unterzeile „Rein nach dem Gebot · Obergärig, warm geführt" — Unterlängen abgeschnitten
+  von „höchstens Braunbier";
+- grüne Marke „lässt Märzenbier zu" — **mittig durchschnitten** vom Knopf „Mit Hafer und
+  Wicke gestreckt";
+- Marke „nur Schankbier" — **mittig durchschnitten** vom Satz „Weizen aus dem Kornhaus,
+  mit Brief 180 fl";
+- derselbe Satz läuft hinter der Marke durch, „Weizen aus dem Kornhaus" ist halb verdeckt.
+
+Nach dem Laden ist der Kasten sauber. Es ist also nichts, was ein Bau-Bericht zeigen
+würde — nur ein bespieltes Bild.
+
+**1970, Woche 21, rechts, Fläche (1950\|700)–(2752\|1230).** Fünf Textstellen zerschneiden
+einander auf 800×530 Bildpunkten:
+- im Kasten `NORDSTERN-GRUPPE` liegt das Wappen auf der eigenen Kennzahl, „20 / ZÜGE"
+  ist halb hinter dem Schild;
+- ein grauer LKW-Bildstempel schwebt frei über der Flussböschung, sein Merkzettel
+  „Adler → Brückenwirt" wird vom Kartenrand abgeschnitten;
+- „frei geworden" ist von der Marke `FAE` in der Mitte durchtrennt („frei gewor" + Marke);
+- die Zeile „50.000 DM für ein Viertel des Hauses · Antwort binnen 7 Wochen, dann nimmt
+  sie" ist von der Marke `BRU` durchschlagen und unten vom Band `DAS ERBE` abgeschnitten;
+- das Band `DAS ERBE` ist am linken Rand angeschnitten („ge ·… −3.269 DM").
+
+**1970, am Hoftor bei (1150\|1030).** Die rote Ankertafel des Hauses ist **über** zwei UI-
+Karten gezeichnet und schneidet deren Text: aus `HIR · EXK / ablösen 70.200 DM` bleibt
+„…EXK / …70.200 DM", aus `Zuschuss in Bier` bleibt „s in Bier". Kulisse und Schrift liegen
+in derselben Ebene und hacken einander ab.
+
+**1970, Kasten auf Kasten, bei (1470\|980).** Die Karte `DER ANKER · RUF 32` liegt auf der
+untersten Zeile des Kastens `DER SUD · 1970` und schneidet sie waagerecht mitten durch die
+Buchstaben: von „Kieselgurfilter … 26.000 DM / lässt Exportbier zu" bleiben nur die oberen
+Hälften der Zeichen stehen.
+
+**1350, unten rechts.** Der **Holzsteg** — im README eine der Konstanten des Ortes — wird
+von drei waagerechten Bändern (`DAS ERBE`, `UMKÄMPFT …`, `nächster Zug: …`) in drei
+Stücke geschnitten. Der Steg ist da und steht richtig; man sieht ihn nur nicht mehr am
+Stück.
+
+**1884** ist die einzige Epoche, in der ich nichts dieser Art gefunden habe: der Kasten
+`DER SUD · 1884` sitzt sauber, die Karten am Bahnhof überlappen einander nur an den Rändern.
+
+## Ein Bau steckt in einem anderen — 1970, Fahrzeugwaage
+
+Der schwerste Einzelfund der Sorte „etwas mitten in etwas anderem", und er trifft den
+**billigsten Bau der Epoche** (Fahrzeugwaage 9.570 DM gegen 86.000 DM Barschaft — fast
+jede Partie kauft ihn in den ersten Wochen; meine hat es in Woche 1 getan).
+
+Bei (560\|930)–(1120\|1180):
+- die obere Kante des Waagedecks **schneidet einen Palettenstapel roter Kästen** in der
+  Mitte durch; die Kästen dahinter verschwinden unter dem Deck, obwohl sie in der
+  Bodenebene davor liegen;
+- die linke Auffahrt beginnt **über** einer Palette, deren vordere Hälfte unter dem
+  Rampenblech verschwindet;
+- **das Waagehäuschen steht im Lastwagen**: seine rechte Wand geht durch das
+  Führerhaus, Windschutzscheibe und Tür des Wagens treten genau an der Häuschenecke
+  wieder hervor, und das Vorderrad liegt hinter der Rampenkante.
+
+Das ist im bespielten Bild zu sehen (`spiel-e4-gespielt.png`) und ebenso mit `bau=alle`
+(`w-alle-4.png`) — also kein Zufall meiner Klickfolge.
+
+---
+
+# DIE URTEILE
+
+## Epoche I — 1350
+
+Der Hof trägt nach 30 Wochen mehr als das Zielblatt: Grutkammer, Gärbottiche,
+Gewölbekeller, Ochsenstall mit Karren, Ziehbrunnen, Fassschuppen, offene Pfanne über
+offenem Feuer, zwei Brauerinnen. Der Ort stimmt. Und trotzdem: **das Haus, um das es
+geht, hat keinen Namen mehr** — 76 % des Schildes liegen unter dem Sud-Kasten, der Steg
+ist dreigeteilt, 61 % des unteren Sechstels (Marktplane, Fuhrwerk, Gasse) liegen unter
+zwei braunen Balken. Nebenbei: die Braupfanne steht mit dem Feuerring **in der
+Hofpfütze** der Platte — ein offenes Feuer im Wasser.
+
+> ### DAS ZIELBILD GEWINNT
+> **Damit es kippt:** den Kasten `DER SUD` in 1350 vom Hausschild wegrücken (er darf
+> überall hin, nur nicht auf (1330\|957)–(1505\|1056)), die drei Bänder unten rechts vom
+> Holzsteg wegnehmen, und die Braupfanne einen Schritt aus der Pfütze setzen.
+
+## Epoche II — 1600
+
+Die schwächste der vier. Der Kasten `DER SUD · 1600` zeichnet nach 21 Wochen vier
+Textreihen durcheinander. Und der Hof: selbst mit `bau=alle` bleibt seine **ganze vordere
+Hälfte blanker Pflasterhof**, während das Zielblatt dort zwei Fassreihen à sechs, eine
+Handkarre mit Fass und **vier Männer, die Fässer rollen** trägt; das Tor ist leer, wo im
+Zielbild das Zweigespann mit der Fassladung herausfährt. Der Marktplatz der Platte ist
+dagegen ausgezeichnet — Brunnen, Stände, Volk, Hunde — das Können ist da, es ist nur
+nicht im Hof.
+
+> ### DAS ZIELBILD GEWINNT
+> **Damit es kippt:** den Sud-Kasten so hoch machen, wie sein Inhalt ist, und in die
+> vordere Hofhälfte legen, was das Zielbild dort hat — liegende Fassreihen, zwei bis drei
+> arbeitende Leute und ein Gespann im Tor, das mit der Menge im Keller wächst.
+
+## Epoche III — 1884
+
+Hier ist es eng. Der Hof ist dicht und schön: Schornstein mit Rauch, Kesselhaus mit
+Dampftrommel, Flaschenhalle mit Oberlicht, Mälzereiturm, Gärtanks, Eiskeller mit zwei
+Eisblöcken auf dem Schlitten, Brunnen mit Magd, Fassstapel, Schild frei und lesbar. Kein
+zerschnittener Text. Gegen den Sieg stehen drei Dinge: der **leere Vorplatz** (im
+Zielbild ~20 Lagerfässer, eine Handkarre und drei Arbeiter), das **leere Tor** (im
+Zielbild fährt das Gespann heraus), und die **große leere Tafel** am Haus des Gegners bei
+(2080\|900), wo das Zielbild `BRAUEREI ADLER` schreibt.
+
+> ### UNENTSCHIEDEN
+> **Damit es kippt:** `BRAUEREI ADLER` auf die leere Tafel schreiben und den Vorplatz mit
+> dem füllen, was ohnehin schon gebraut ist — Lagerfässer, die mit dem Keller wachsen,
+> und ein Gespann im Tor.
+
+## Epoche IV — 1970
+
+Die Platte ist die beste der vier und stellenweise besser als das Zielblatt: die
+Mauerruine liegt in einer Grünanlage mit Bänken, der Schornstein raucht nicht mehr,
+die Straße hat Mittelstreifen, Bus, Tankstelle, Laternen. Dagegen steht der schwerste
+Bau-Fehler des Laufs — die **Fahrzeugwaage schneidet durch den Kastenstapel und ihr
+Häuschen steht im Lastwagen** — und rechts ein Feld von fünf einander zerschneidenden
+Textstellen, dazu die Ankertafel, die zwei Karten den Anfang abhackt.
+
+> ### DAS ZIELBILD GEWINNT
+> **Damit es kippt:** die Fahrzeugwaage aus dem Kastenlager und aus dem Lastwagen
+> herausrücken (sie braucht einen eigenen freien Platz an der Ausfahrt), und rechts die
+> Marken (`FAE`, `BRU`) und Bänder so stapeln, dass keine über fremdem Text liegt.
+
+---
+
+# ALS GANZES: DAS ZIELBILD GEWINNT
+
+Drei zu null bei einem Unentschieden. **Aber der Abstand ist nicht mehr der von Runde 1.**
+
+Der Ort steht: derselbe Flussbogen, dieselbe Brücke, dieselbe Kirche, dieselbe Kamera,
+620 Jahre lang, und die Stadt wächst richtig darüber. Das ist die härteste
+Einzelforderung des Auftrags, und sie ist erfüllt. Die Bühne verliert **nicht** gegen die
+Zielbilder — in 1884 und 1970 verliert sie gar nicht.
+
+**Was verliert, ist alles, was über der Bühne liegt.** 28 % der Fläche, 60 % des unteren
+Sechstels, und drei Sorten Fehler, die alle dasselbe sagen: es gibt keine Ordnung, die
+festlegt, was über was liegen darf. Deshalb liegt ein Kasten auf dem Hausschild, eine
+Kulissentafel auf zwei Karten, eine Marke auf einer Zeile, ein Band auf einem Steg. Ein
+einziger Rangplan für die Ebenen plus zwei verbotene Rechtecke (Hausschild, Hoftor)
+räumt die Hälfte dieser Liste ab.
+
+**Und was fehlt, ist Arbeit im Hof.** In jedem Zielblatt rollen Leute Fässer, ein Gespann
+fährt aus dem Tor, die vordere Hofhälfte ist voll. Im Spiel steht dort in drei von vier
+Epochen nichts. Der Hof hat Gebäude bekommen und keine Fracht.
+
+---
+
+## Was ausdrücklich NICHT gegen das Spiel gezählt wurde
+
+- Die zerfallenen Beschriftungen der Zielbilder (`CU NEHKER`, `GEGR. 1356`) — im Spiel
+  ist Text echter Text, und er ist es tatsächlich; `ST. MICHAEL`, `GASTHOF LINDENHOF`,
+  `BAHNHOF`, `BRAUHAUS ZUM ANKER` stehen korrekt.
+- Die Kopfleistenzahlen der Zielbilder.
+- Dass das Spiel eine Bedienoberfläche hat und das Zielbild keine. Gemessen wurde nicht
+  „viel UI", sondern **wo** sie liegt und **ob sie sich selbst zerschneidet**.
+- „Etwas steht auf der Hofmauer" — geprüft, widerlegt (siehe oben).
+- Die Kameraentfernung — geprüft, sie stimmt bildpunktgenau.
+
+## Aufnahmen zum Nachsehen
+
+Alle in `werkbank/schuss/bild-w7/`, nicht versioniert:
+
+| Datei | md5 | was sie zeigt |
+|---|---|---|
+| `spiel-e3-gespielt.png` | `c65a5f5208153afd8d325befffba9edd` | 1884, Woche 21, Hof fertig gebaut |
+| `spiel-e4-gespielt.png` | `e0a460490bd14c04a70bf4a2f152cd79` | 1970, Woche 21, Fahrzeugwaage im LKW |
+| `d-ohne-1..4.png` | — | dieselbe Seite ohne die drei UI-Ebenen |
+| `w-alle-1..4.png` / `w-keine-1..4.png` | — | Hof voll / Hof leer, für die Mauerprobe |
+| `p-1350/1600/1884/1970.png` | — | die Blindpaare, oben Spiel, unten Zielbild |
