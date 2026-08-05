@@ -81,7 +81,12 @@ var STADT_DATEN = {
          also 61 px INNERHALB des Hofes. Der Mann mit der Sackkarre am
          Verladedock steht damit frei. Und der Fuss wirft einen Schatten —
          'ohne Schatten, ohne Perspektive' war der halbe Befund. */
-      schild: { ort: 'tor', dx: -15, dy: 8, breite: 7.4, dreh: -2,
+      /* Welle 7: das Schild raeumt die Hofspitze. Seit Kastenlager und
+         Verladedock vorn stehen (Auflage 6), stand die Reklametafel mitten
+         in den Kaesten und ueber dem Lastwagen. Sie geht nach links und ein
+         Band zurueck — dort ist der Hof in 1970 frei, und die Kaesten
+         stehen dann davor statt dahinter. */
+      schild: { ort: 'tor', dx: -24, dy: 2, breite: 7.4, dreh: -2,
                 hell: true, gestell: 3.4 }
     }
   },

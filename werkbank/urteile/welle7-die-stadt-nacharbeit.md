@@ -217,3 +217,88 @@ lief zuerst in `zeichnePfloecke` — die baut nur neu, wenn sich die Markenliste
 |---|---|---|
 | nicht treffbare STADT-Züge, 1366×768 | 1884: 1 · 1970: 1 | **0 · 0 · 0 · 0** |
 | dito 2752×1536 | 0 | **0** |
+
+---
+
+## AUFLAGE 4 — `bild/name/` und `bild/gegner/`: gemeldet, nicht angefasst
+
+Der Kritiker hat recht mit der Zahl: **11 PNG mit 4,4 MB**, davon holt 1600
+allein 1,14 MB (`name/schild2.png` 683 kB, `gegner/hof2.png` 489 kB). Dieselbe
+WebP-Umstellung darauf angewandt hätte den Abstand zur Obergrenze etwa
+verdoppelt.
+
+**Die Aufsicht hat entschieden, dass sie mir nicht gehören** — `spiel/LIESMICH.md`
+regelt `bild/<stück>/` nach Vorsilbe, und `bild/name/**` steht dort in der
+Zeile von DER NAME, `bild/gegner/**` in der von DER GEGNER. Ich habe sie nicht
+angefasst. **Als Befund weitergereicht:**
+
+| Ordner | Dateien | auf der Platte | was eine Umstellung brächte |
+|---|---|---|---|
+| `bild/name/` | 4 PNG | 1,8 MB | rund −75 %, gemessen am eigenen Ergebnis (17,49 → 4,45 MB) |
+| `bild/gegner/` | 7 PNG | 2,6 MB | dito |
+
+Das Werkzeug dafür liegt fertig da und ist für jeden Ordner brauchbar:
+`WAS=… node werkbank/schuss/stadt-gewicht/umpacken.mjs schreibe` bei Güte 0,92,
+gleiche Pixelmaße. Wer es fährt, misst danach mit `fuesse-pruefen.mjs`, ob seine
+eigenen Alphatabellen noch stimmen — bei mir war der größte Abstand 0,0001.
+
+## Der Vorgriff auf die nächste Platte — die Frage der Aufsicht
+
+**Ja, es werden immer zwei Platten geladen, und nein, der Vorgriff ist nicht
+nötig — er ist aber billiger als das, was er verhindert.**
+
+Was er kostet, hat der Kritiker beziffert: 1,9–2,3 MB von 8, und er ist der
+Grund, warum 1600 nur noch 0,62 MB Luft hat. Was er verhindert: beim
+Epochenwechsel wechselt die Platte — 100 % der Bildfläche — und ohne Vorgriff
+steht dort für die Dauer eines Netzabrufs **nichts**. Das ist der eine
+Augenblick im Spiel, in dem ein Flackern das ganze Bild trifft.
+
+**Meine Empfehlung, und ich melde sie als Frage und nicht als Tat:** der
+Vorgriff bleibt, solange das Veto mit 0,62 MB Luft gehalten ist. Fällt es enger
+aus — etwa weil ein anderes Stück Gewicht dazulegt —, ist er die erste Stelle,
+an der gespart wird, und er ist mit einer Zeile abzuschalten (`vorladen()`,
+Stufe 1 in `stadt.js`). **Besser wäre, `bild/name/` und `bild/gegner/`
+umzustellen: das bringt rund 3,3 MB und kostet gar nichts.**
+
+---
+
+## EIN NEBENSCHADEN, den erst der Augenschein gezeigt hat
+
+Nachdem Kastenlager und Verladedock in 1970 nach vorn gerückt waren, stand die
+**Reklametafel „BRAUHAUS ZUM ANKER" mitten in den Bierkästen und über dem
+Lastwagen** — kein Messgerät hat das gemeldet, weder DAS LOT (sie ist kein Bau)
+noch die Hofdecke (sie zählt nur, ob sich etwas geändert hat, nicht ob es sich
+sinnvoll überlagert). **Nur das Hinsehen hat es gefunden.**
+
+Sie steht jetzt links im Hof und ein Band zurück (`schild: dx −15 → −24,
+dy 8 → 2`), wo 1970 Platz ist; die Kästen stehen davor statt dahinter. Das ist
+die Sorte Fehler, gegen die keine Zahl schützt — und der Grund, warum in dieser
+Nacharbeit **jede Epoche einzeln angesehen** wurde, nicht nur gemessen.
+
+## ABNAHME DER NACHARBEIT
+
+```
+node --check spiel/stuecke/stadt.js · stadt-zusatz.js · stadt-daten.js  → OK
+node werkbank/schuss/aufsicht/tor.mjs         → TOR OFFEN (4/4, lage 0, Fehler 0)
+node werkbank/schuss/aufsicht/spielprobe.mjs  → SPIELPROBE BESTANDEN
+node werkbank/schuss/stadt-r7/pruefe.mjs alle → BODEN 0 · REIHENFOLGE 0 · Summe 0
+```
+
+| | vor der Nacharbeit | nach der Nacharbeit |
+|---|---|---|
+| abgeschnittene Kästen DER STADT, 2752×1536 | 48 | **0** |
+| dito 1920×1080 | 53 | **0** |
+| dito 1366×768 | 37 | **0** |
+| abgeschnittene Kästen, alle Stücke, 1366×768 | 51 | **14** |
+| Textknoten < 12 px, alle Stücke | 505 | **505** |
+| Knöpfe unter 24 px | 0 von 334 | **0 von 330** |
+| nicht treffbare STADT-Züge | 1 (1884) + 1 (1970) | **0** |
+| Bodenfehler / Reihenfolgefehler | 0 / 0 | **0 / 0** |
+| Ziehbrunnen zugedeckt, 1600 | **91 %** | **3 %** |
+| Braupfanne zugedeckt, 1350 / 1600 | — | **0 % / 0 %** |
+| vorderes Hofdrittel gefüllt (1350/1600/1884/1970) | 4,8 / 3,7 / 16,4 / 42,2 % | **35,0 / 42,2 / 29,2 / 54,5 %** |
+| Gewicht, schwerste Epoche bis `load` | 5,49 MB | **5,52 MB** |
+| Gewicht, schwerste Epoche gesamt | 7,38 MB | **7,41 MB** |
+
+Die 0,03 MB mehr sind der gewachsene Quelltext von `stadt.js` und
+`stadt-daten.js`. Das Veto bleibt mit **0,59 MB Luft** gehalten.
