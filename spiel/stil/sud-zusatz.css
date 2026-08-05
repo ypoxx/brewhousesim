@@ -252,3 +252,53 @@
    weiter unten hinter dem Medienschalter, den `grund.css` fuer den Knopfboden
    benutzt.
    -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   UNTERHALB DER ENTWURFSLEINWAND — das Aufraeumen nach dem Schriftboden.
+
+   Der Boden ist die halbe Arbeit; die andere Haelfte ist, was er umwirft.
+   Gemessen nach dem Setzen der 41 Boeden bei 1366x768: 0 Textknoten unter
+   12 px (vorher 356) — und der Kesselzettel in ALLEN VIER Epochen in
+   `gedraengt knapp`, also im Notzustand mit gestricheltem Rand. Vorher war
+   er das in keiner.
+
+   Die Ursache ist gerechnet, nicht geraten. Der Zettel ist auf 13 % x 16,5 %
+   der Buehne gedeckelt, damit seine Flaeche (2,145 %) unter der Schwelle der
+   STADT bleibt und er eine Ortsmarke bleibt statt ein Brett. Ein Prozentsatz
+   schrumpft mit dem Schirm, ein 12-px-Boden nicht: bei 1366x768 sind das
+   178 x 127 px fuer vier Zeilen Text UND vier Knoepfe zu 24 px. Die unteren
+   Knoepfe rutschten dadurch aus dem Kasten, `zettelSitzt()` fand sie nicht
+   mehr im Bild und schickte den Zettel auf Stellensuche, bis nichts mehr
+   trug.
+
+   DEN KASTEN GROESSER MACHEN GEHT NICHT: bei 12 px braeuchte der volle
+   Inhalt rund 178 x 179 px, das sind 4,0 % des Stadtfensters gegen eine
+   Schwelle von 3,5 % (stadt.js:430). Der Zettel waere dann ein Brett, bekaeme
+   einen Reiter und naehme dem eigenen Sudbrett den Platz.
+
+   Also weicht der Text und nicht der Knopf. Unterhalb der Entwurfsleinwand
+   traegt der Zettel Kopf, Zahlen und seine vier Knoepfe; die Verfahrennamen,
+   der Deckel und die Sparzeile treten zurueck. Sie sind nicht verloren —
+   alle drei stehen vollstaendig auf dem Sudbrett, einen Reiterklick weit,
+   und der Deckel steht ausserdem als `sud-zrangschild` auf jedem
+   Umstellknopf des Zettels selbst. Was bleibt, ist das, was man ohne
+   Aufschlagen braucht: welches Bier gerade herauskommt (Zahlen) und die
+   vier Zuege.
+
+   Auf der Entwurfsleinwand 2752x1536 aendert sich nichts — dort passt alles,
+   und dort vergleicht Latte 1 blind.
+   ========================================================================== */
+@media (max-width: 2751px), (max-height: 1535px) {
+  #buehne .sud-zettel .sud-zverfahren,
+  #buehne .sud-zettel .sud-zrang,
+  #buehne .sud-zettel .sud-zpreiszeile { display: none; }
+
+  /* Der Kopf darf umbrechen statt den Zettel aufzuschieben. */
+  #buehne .sud-zettel .sud-zkopf { white-space: normal; }
+
+  /* Die Zahlenzeile ist der Grund, warum der Zettel ueberhaupt stehenbleibt:
+     „Gärkeller 8/16 Fass · Stellhefe 92 % · Fass ×1,16". Bei 12 px passt sie
+     nicht mehr in eine Zeile und darf deshalb umbrechen, statt sich zu
+     zerdruecken. */
+  #buehne .sud-zettel .sud-zzahlen { flex-wrap: wrap; row-gap: calc(var(--s) * 2); }
+}
