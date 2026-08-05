@@ -46,6 +46,33 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DER VERÖFFENTLICHER LIEF MIT EINER ALTEN FASSUNG SEINER SELBST
+
+*Gefunden am 5. August vom blinden Kritiker DER PREIS — er fand seine eigene
+Urteilsdatei nicht in den Commits wieder und legte sich vorsorglich eine
+Zweitschrift an, bevor er es meldete.*
+
+**Der Fehler steckt im Wiederherstellungsablauf, nicht im Veröffentlicher:**
+`wiederaufnahme.sh` startet ihn **bevor** der Baum aus origin zurückgeholt ist.
+Nach einem Container-Reset liest er also die **alte** Fassung seines eigenen
+Skripts — die ohne `werkbank/urteile` — und behält sie, auch nachdem die neue
+längst im Baum steht. Belegt an drei Commits des 5. August: sie nahmen
+ausschließlich `werkbank/schuss/` mit, während **zwei fertige Urteile stundenlang
+uncommittet** dastanden.
+
+> **Behoben an der Wurzel:** der Veröffentlicher **lädt sich am Ende jedes Takts
+> selbst neu** (`exec "$0" "$TAKT" "$REST"`, verbleibende Laufzeit
+> weitergereicht). Damit heilt jede Baum-Wiederherstellung auch diesen Prozess,
+> **ohne dass jemand daran denken muss** — und genau darum geht es: eine Regel,
+> an die man sich erinnern muss, ist nach fünfzehn Resets keine Regel mehr.
+>
+> **Die allgemeine Lehre, teuer bezahlt:** ein Prozess, der eine Datei beim Start
+> liest und dann behält, überlebt einen Reset als **Zombie mit altem Wissen**.
+> Wer einen langlaufenden Prozess baut, fragt sich: *was passiert, wenn der Baum
+> unter ihm ausgetauscht wird?*
+
+---
+
 ## WELLE 7, BAUPHASE DURCH — 5. August, 14:0x UTC
 
 Zwei Builder, beide fertig, **noch kein blinder Kritiker**. Was die Aufsicht
@@ -491,8 +518,7 @@ committet.
 > `wiederaufnahme.sh` erkennt und startet ihn neu — das ist der Grund, warum es
 > **immer zuerst** läuft.
 
-> **`werkbank/urteile` stand bis zum 4. August NICHT in dieser Liste** — als
-> einziges Verzeichnis unter `werkbank/`. Das ist genau die Stelle, an die die
+> **`werkbank/urteile` stand bis zum 4. August NICHT in dieser Liste** — als> einziges Verzeichnis unter `werkbank/`. Das ist genau die Stelle, an die die
 > Laufregel oben Builder und Kritiker schickt („Teilergebnisse **laufend** in die
 > Urteils- oder Berichtsdatei schreiben"). Ein Kritiker, der zwei Stunden misst
 > und brav laufend schreibt, hätte bei einem Container-Reset alles verloren,

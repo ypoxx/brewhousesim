@@ -131,9 +131,6 @@ der ohne Bildverlust wegfällt.
 
 ---
 
-*(weiter unten: Latte 1 — der eigentliche Blindvergleich gegen `zielbild/`,
-das Gewicht, Latte 4, die Sperrliste, das Spielen)*
-
 ## 2 — DAS GEWICHT (Sperrliste, Veto)
 
 Eigenes Gerät, eigener Weg: `gewicht.mjs` zählt die **Antworten**, die
@@ -343,7 +340,9 @@ Bühne**, für jeden Ort der Punkt aus `BRAUHAUS.orte`, für jede Marke die Mitt
 in allen vier Epochen, und dann alles verglichen, was in mehr als einer Epoche
 vorkommt.
 
-**Die 28 Orte selbst sind treu: 0 von 28 haben sich bewegt.** Auch die Marken
+**Die 28 Orte selbst sind treu: 0 von 28 haben sich bewegt, und zwar exakt —
+die größte Abweichung über alle vier Epochen ist 0,00 % der Bühne, bei
+identischer Schlüsselmenge (28/28/28/28).** Auch die Marken
 stehen (die einzige Abweichung, `fuhre-marktplatz`, sind 0,58 % und stammt aus
 einer anderen Beschriftungsbreite). Das Fundament stimmt.
 
@@ -630,6 +629,8 @@ das Hoffeld gezählt):
 |---|---|---|---|
 | 1350, nach 3 Braujahren und 5 Bauten | 73,2 % | 30,3 % | **0,2 %** |
 | 1600, nach 3 Braujahren und 6 Bauten | 82,8 % | 42,9 % | **3,6 %** |
+| 1884, nach 4 Braujahren und 5 Bauten | 89,4 % | 49,6 % | **0,0 %** |
+| 1970 | *nicht messbar* — die Partie war zu Ende und das Schlussblatt lag über dem Bild |
 
 **Das vordere Drittel des Hofes ist unberührte Platte** — dieselbe Pfütze, mit
 der die Partie anfängt, liegt nach dem sechsten Kauf noch da. Im Zielbild trägt
@@ -639,6 +640,11 @@ dort der belebteste Teil des Bildes.
 **Stelle:** `spiel/stuecke/stadt-daten.js` — die `ort`/`dy`-Angaben aller
 31 Einträge; `spiel/kern/orte.js` hat Orte bis y 96 %, aber kein Hofbau
 benutzt einen unterhalb von 73,5 %.
+
+**1970 konnte ich nicht messen**, weil der Aufbaulauf dort im Jahr 1973 endete
+und das Schlussblatt („DER HOF IST GESCHLOSSEN") die Bühne bedeckte. Die
+Fußpunkte der 1970er Bauten liegen aber im selben Band (60–70 %), es gibt also
+keinen Grund, dort ein anderes Ergebnis zu erwarten.
 
 **Warum es die erste Latte entscheidet:** ein Spiel, das nach sechs Käufen die
 untere Hälfte seines Spielplatzes leer lässt, sieht neben einem Bild, in dem
@@ -657,11 +663,22 @@ aufgenommen — mit der Maus, ohne Eingriff, alles durch das Messfenster:
 | 1350 | 5 (Grutkammer, Gärbottiche, Ochsenstall, Gewölbekeller, Küferei) | 1353/13 | 9 | 0 | 0 |
 | 1600 | 6 (Gärbottiche, Waschhaus, Kontor, Rossmühle, Hopfenlager, Pferdestall) | 1603/13 | 12 | 0 | 0 |
 | 1884 | 5 (Kontor, Hopfenlager, Pferdestall, Mälzereiturm, Flaschenhalle) | 1887/11 | 12 | 0 | 0 |
+| 1970 | 4 (Fahrzeugwaage, Mälzereiturm, Verwaltungsbau, Neues Sudhaus) | 1973/9 — **Partie zu Ende** | 10 | 0 | 0 |
+
+**Die Partie endet, und sie endet gut.** In 1970 lief mein Aufbaulauf in das
+Schlussblatt: *„DER HOF IST GESCHLOSSEN"*, darunter „DIE, DIE ES GEFÜHRT HABEN"
+mit drei Namen und Amtszeiten und „WIE DAS AUFTRAGSBUCH LEER WURDE" mit elf
+Zeilen — *„1972 Pfarrschenke St. Michael — niemand hat sie genommen"*,
+*„1973 Schenke am Tor — der Gegner stand schon da"*. Und darunter: *„Von vorn
+anfangen — dieselbe Stadt, andere Wirte."* Das ist ein Schluss, kein
+Abbruch, und der Satz sagt genau das, worauf dieses ganze Stück gebaut ist.
 
 **1884 hält dem Zielbild stand** und geht im Gesamtbild darüber hinaus: der
 Schornstein, das Sudhaus mit Kupferhaube, die Gärtanks, der Eiskeller mit
 Grashügel, der Mälzereiturm, dazu Bahnhof mit Zug, Brauerei Adler und die halbe
-Stadt dahinter. Dort würde ich blind nicht mehr sicher das Zielbild wählen.
+Stadt dahinter. Dort würde ich blind nicht mehr sicher das Zielbild wählen —
+obwohl auch dort das vordere Hofdrittel zu **0,0 %** bebaut ist. Es gewinnt
+also *trotz* Auflage 6, weil um den Hof herum so viel passiert.
 **1350 und 1600 gewinnt das Zielbild** — und zwar an genau der Stelle, die
 Auflage 6 benennt: im vorderen Drittel des Hofes, das leer bleibt.
 

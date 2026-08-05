@@ -75,6 +75,25 @@ print(f\"{d.get('phase','')} — {fertig}/{len(s)} bestanden\" if s else d.get('
       sleep $(( 2 ** i ))
     done
   ) 9>"$SPERRE"
+
+  # SICH SELBST NEU LADEN. Bis zum 5. August lief dieser Prozess mit der
+  # Fassung, die beim Start auf der Platte lag — und `wiederaufnahme.sh`
+  # startet ihn, BEVOR der Baum aus origin zurueckgeholt ist. Nach einem
+  # Container-Reset lief also die ALTE Fassung weiter, auch nachdem die neue
+  # laengst im Baum stand.
+  #
+  # Gekostet hat das die Sicherung von `werkbank/urteile/`: drei Commits am
+  # Nachmittag des 5. August nahmen ausschliesslich `werkbank/schuss/` mit,
+  # waehrend zwei fertige Urteile stundenlang uncommittet dastanden. Gefunden
+  # hat es der blinde Kritiker DER PREIS, der seine eigene Datei nicht in den
+  # Commits wiederfand — und sich vorsorglich eine Zweitschrift anlegte.
+  #
+  # `exec` ersetzt den Prozess durch die Fassung, die JETZT auf der Platte
+  # liegt. Damit heilt jeder Baum-Wiederherstellung auch diesen Prozess, ohne
+  # dass jemand daran denken muss. Die verbleibende Laufzeit wird
+  # weitergereicht, damit die vier Stunden nicht bei jedem Takt neu beginnen.
+  REST=$(( ENDE - $(date +%s) ))
+  [ "$REST" -gt "$TAKT" ] && exec "$0" "$TAKT" "$REST"
 done
 
 echo "fertig"
