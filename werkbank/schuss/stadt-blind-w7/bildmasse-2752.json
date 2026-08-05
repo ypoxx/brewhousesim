@@ -1,0 +1,439 @@
+{
+ "e1": [
+  {
+   "src": "bild/platte-1350.jpg",
+   "nat": [
+    2752,
+    1536
+   ],
+   "auf": [
+    2752,
+    1536
+   ],
+   "faktor": 1,
+   "opac": "1"
+  },
+  {
+   "src": "hof/pfanne.webp",
+   "nat": [
+    900,
+    428
+   ],
+   "auf": [
+    244.9,
+    116.5
+   ],
+   "faktor": 0.272,
+   "opac": "1"
+  },
+  {
+   "src": "hof/malzboden.webp",
+   "nat": [
+    762,
+    778
+   ],
+   "auf": [
+    385.3,
+    393.3
+   ],
+   "faktor": 0.506,
+   "opac": "1"
+  },
+  {
+   "src": "hof/brunnen.webp",
+   "nat": [
+    1928,
+    2041
+   ],
+   "auf": [
+    178.9,
+    189.3
+   ],
+   "faktor": 0.093,
+   "opac": "1"
+  },
+  {
+   "src": "hof/fasslager_holz.webp",
+   "nat": [
+    790,
+    713
+   ],
+   "auf": [
+    357.8,
+    322.9
+   ],
+   "faktor": 0.453,
+   "opac": "1"
+  },
+  {
+   "src": "gegner/hof1.png",
+   "nat": [
+    518,
+    560
+   ],
+   "auf": [
+    168,
+    181.6
+   ],
+   "faktor": 0.324,
+   "opac": "1"
+  },
+  {
+   "src": "name/zeiger1.png",
+   "nat": [
+    757,
+    760
+   ],
+   "auf": [
+    151.4,
+    152
+   ],
+   "faktor": 0.2,
+   "opac": "1"
+  }
+ ],
+ "e2": [
+  {
+   "src": "bild/platte-1600.jpg",
+   "nat": [
+    2752,
+    1536
+   ],
+   "auf": [
+    2752,
+    1536
+   ],
+   "faktor": 1,
+   "opac": "1"
+  },
+  {
+   "src": "hof/pfanne.webp",
+   "nat": [
+    900,
+    428
+   ],
+   "auf": [
+    244.9,
+    116.5
+   ],
+   "faktor": 0.272,
+   "opac": "1"
+  },
+  {
+   "src": "hof/brunnen.webp",
+   "nat": [
+    1928,
+    2041
+   ],
+   "auf": [
+    148.6,
+    157.3
+   ],
+   "faktor": 0.077,
+   "opac": "1"
+  },
+  {
+   "src": "hof/keller_gewoelbe.webp",
+   "nat": [
+    780,
+    462
+   ],
+   "auf": [
+    302.7,
+    179.3
+   ],
+   "faktor": 0.388,
+   "opac": "1"
+  },
+  {
+   "src": "hof/kueferei.webp",
+   "nat": [
+    790,
+    672
+   ],
+   "auf": [
+    200.9,
+    170.9
+   ],
+   "faktor": 0.254,
+   "opac": "1"
+  },
+  {
+   "src": "hof/darre.webp",
+   "nat": [
+    684,
+    780
+   ],
+   "auf": [
+    412.8,
+    470.7
+   ],
+   "faktor": 0.604,
+   "opac": "1"
+  },
+  {
+   "src": "hof/fasslager_stein.webp",
+   "nat": [
+    790,
+    627
+   ],
+   "auf": [
+    277.9,
+    220.6
+   ],
+   "faktor": 0.352,
+   "opac": "1"
+  },
+  {
+   "src": "gegner/hof2.png",
+   "nat": [
+    485,
+    560
+   ],
+   "auf": [
+    168,
+    194
+   ],
+   "faktor": 0.346,
+   "opac": "1"
+  },
+  {
+   "src": "name/schild2.png",
+   "nat": [
+    760,
+    732
+   ],
+   "auf": [
+    66,
+    63.6
+   ],
+   "faktor": 0.087,
+   "opac": "1"
+  }
+ ],
+ "e3": [
+  {
+   "src": "bild/platte-1884.jpg",
+   "nat": [
+    2752,
+    1536
+   ],
+   "auf": [
+    2752,
+    1536
+   ],
+   "faktor": 1,
+   "opac": "1"
+  },
+  {
+   "src": "hof/brunnen.webp",
+   "nat": [
+    1928,
+    2041
+   ],
+   "auf": [
+    170.6,
+    180.6
+   ],
+   "faktor": 0.088,
+   "opac": "1"
+  },
+  {
+   "src": "hof/fasslager_stein.webp",
+   "nat": [
+    790,
+    627
+   ],
+   "auf": [
+    385.3,
+    305.8
+   ],
+   "faktor": 0.488,
+   "opac": "1"
+  },
+  {
+   "src": "hof/schornstein.webp",
+   "nat": [
+    218,
+    779
+   ],
+   "auf": [
+    206.4,
+    737.5
+   ],
+   "faktor": 0.947,
+   "opac": "1"
+  },
+  {
+   "src": "hof/rauch.webp",
+   "nat": [
+    779,
+    676
+   ],
+   "auf": [
+    247.7,
+    214.9
+   ],
+   "faktor": 0.318,
+   "opac": "0.82"
+  },
+  {
+   "src": "hof/gaertanks.webp",
+   "nat": [
+    744,
+    780
+   ],
+   "auf": [
+    385.3,
+    403.9
+   ],
+   "faktor": 0.518,
+   "opac": "1"
+  },
+  {
+   "src": "hof/eiskeller.webp",
+   "nat": [
+    780,
+    736
+   ],
+   "auf": [
+    357.8,
+    337.6
+   ],
+   "faktor": 0.459,
+   "opac": "1"
+  },
+  {
+   "src": "hof/laderampe.webp",
+   "nat": [
+    2076,
+    2076
+   ],
+   "auf": [
+    258.7,
+    258.7
+   ],
+   "faktor": 0.125,
+   "opac": "1"
+  },
+  {
+   "src": "hof/maschinenhaus.webp",
+   "nat": [
+    779,
+    652
+   ],
+   "auf": [
+    344,
+    287.9
+   ],
+   "faktor": 0.442,
+   "opac": "1"
+  }
+ ],
+ "e4": [
+  {
+   "src": "bild/platte-1970.jpg",
+   "nat": [
+    2752,
+    1536
+   ],
+   "auf": [
+    2752,
+    1536
+   ],
+   "faktor": 1,
+   "opac": "1"
+  },
+  {
+   "src": "hof/schornstein.webp",
+   "nat": [
+    218,
+    779
+   ],
+   "auf": [
+    206.4,
+    737.5
+   ],
+   "faktor": 0.947,
+   "opac": "1"
+  },
+  {
+   "src": "hof/abfuellhalle.webp",
+   "nat": [
+    790,
+    607
+   ],
+   "auf": [
+    412.8,
+    317.2
+   ],
+   "faktor": 0.523,
+   "opac": "1"
+  },
+  {
+   "src": "hof/stahltanks.webp",
+   "nat": [
+    779,
+    633
+   ],
+   "auf": [
+    412.8,
+    335.4
+   ],
+   "faktor": 0.53,
+   "opac": "1"
+  },
+  {
+   "src": "hof/verladedock.webp",
+   "nat": [
+    700,
+    427
+   ],
+   "auf": [
+    242.2,
+    147.7
+   ],
+   "faktor": 0.346,
+   "opac": "1"
+  },
+  {
+   "src": "hof/kastenlager.webp",
+   "nat": [
+    790,
+    449
+   ],
+   "auf": [
+    228.4,
+    129.8
+   ],
+   "faktor": 0.289,
+   "opac": "1"
+  },
+  {
+   "src": "hof/kesselhaus.webp",
+   "nat": [
+    778,
+    662
+   ],
+   "auf": [
+    344,
+    292.7
+   ],
+   "faktor": 0.442,
+   "opac": "1"
+  },
+  {
+   "src": "name/tafel4.png",
+   "nat": [
+    662,
+    760
+   ],
+   "auf": [
+    126.6,
+    145.3
+   ],
+   "faktor": 0.191,
+   "opac": "1"
+  }
+ ]
+}
