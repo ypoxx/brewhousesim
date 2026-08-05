@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T01:23:04+00:00",
- "phase": "Die Aufsicht hat ihre eigene Gegenmessung abgeschlossen, und sie entscheidet die strittige Zahl. 1350 steht auf +0,762 / +0,692 / +0,591 und REISST bei zwölf Braujahren, dreimal gemessen. 1970 steht auf +0,699 / +0,637 / +0,653 und besteht um ein Tausendstel — nicht auf den eingetragenen +0,427. Die Ergebnisdateien sind byteweise identisch, gleiche Prüfsumme, das ist die strengste Form der Gerätekontrolle. Drei Wege kommen damit auf dieselben Ziffern: der blinde Kritiker, die Aufsicht und DER SUD, der zusätzlich belegt hat, dass 1970 sich mit und ohne seine Nacharbeit gleich verhält. Die Messlatte ist entsprechend berichtigt: zwei ihrer vier Zeilen waren veraltet. Das Wellenziel ist damit NICHT erreicht — nicht wegen eines Stücks dieser Welle, sondern weil 1350 schon vorher gerissen war und niemand feststellen kann, wer 1600 und 1970 bewegt hat. Der Verdacht des SUD, der neue Knopfboden vergrößere unterhalb der Entwurfsleinwand jedes Brett, ist ungeprüft und der nächste Auftrag.",
+ "stand": "2026-08-05T02:22:35+00:00",
+ "phase": "Die Gegenmessung der Aufsicht ist vollständig: je drei Läufe für 1350 und 1970, und alle drei Ergebnisdateien einer Epoche tragen dieselbe Prüfsumme — nicht Spannweite null gerechnet, sondern derselbe Datenstrom. 1350 bleibt bei +0,762 / +0,692 / +0,591 und reißt bei zwölf Braujahren, 1970 bei +0,699 / +0,637 / +0,653 und besteht um ein Tausendstel. Die Messlatte ist berichtigt, zwei ihrer vier Zeilen waren veraltet. Der blinde Kritiker für DER SUD misst weiter gegen den eingefrorenen Stand 517ca3f und ist um 02:19 UTC lebendig. Offen und als nächster Auftrag vermerkt: wer 1600 und 1970 bewegt hat, ist nicht feststellbar — beide Builder haben ihre eigene Unschuld belegt, und der Verdacht auf den neuen Knopfboden ist ungeprüft.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T14:46:54+00:00",
-   "text": "Welle 1 laeuft · Welle 2 begonnen"
-  },
   {
    "zeit": "2026-08-01T14:46:54+00:00",
    "text": "AUFSICHT — DER KLANG gestartet (Welle 2). Das fremde Ohr ist gebaut und vorgeprueft: es erkannte 1350 und 1970 blind mit 95 Prozent und ruegte ungefragt den Synthwave als anachronistisch fuer 1970 und den Kathedralenhall als unpassend fuer einen Hof. Die Tonlatte ist damit zum ersten Mal seit dem ersten Tag wirklich messbar."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T01:23:04+00:00",
    "text": "Die Aufsicht hat ihre eigene Gegenmessung abgeschlossen, und sie entscheidet die strittige Zahl. 1350 steht auf +0,762 / +0,692 / +0,591 und REISST bei zwölf Braujahren, dreimal gemessen. 1970 steht auf +0,699 / +0,637 / +0,653 und besteht um ein Tausendstel — nicht auf den eingetragenen +0,427. Die Ergebnisdateien sind byteweise identisch, gleiche Prüfsumme, das ist die strengste Form der Gerätekontrolle. Drei Wege kommen damit auf dieselben Ziffern: der blinde Kritiker, die Aufsicht und DER SUD, der zusätzlich belegt hat, dass 1970 sich mit und ohne seine Nacharbeit gleich verhält. Die Messlatte ist entsprechend berichtigt: zwei ihrer vier Zeilen waren veraltet. Das Wellenziel ist damit NICHT erreicht — nicht wegen eines Stücks dieser Welle, sondern weil 1350 schon vorher gerissen war und niemand feststellen kann, wer 1600 und 1970 bewegt hat. Der Verdacht des SUD, der neue Knopfboden vergrößere unterhalb der Entwurfsleinwand jedes Brett, ist ungeprüft und der nächste Auftrag."
+  },
+  {
+   "zeit": "2026-08-05T02:22:35+00:00",
+   "text": "Die Gegenmessung der Aufsicht ist vollständig: je drei Läufe für 1350 und 1970, und alle drei Ergebnisdateien einer Epoche tragen dieselbe Prüfsumme — nicht Spannweite null gerechnet, sondern derselbe Datenstrom. 1350 bleibt bei +0,762 / +0,692 / +0,591 und reißt bei zwölf Braujahren, 1970 bei +0,699 / +0,637 / +0,653 und besteht um ein Tausendstel. Die Messlatte ist berichtigt, zwei ihrer vier Zeilen waren veraltet. Der blinde Kritiker für DER SUD misst weiter gegen den eingefrorenen Stand 517ca3f und ist um 02:19 UTC lebendig. Offen und als nächster Auftrag vermerkt: wer 1600 und 1970 bewegt hat, ist nicht feststellbar — beide Builder haben ihre eigene Unschuld belegt, und der Verdacht auf den neuen Knopfboden ist ungeprüft."
   }
  ]
 }

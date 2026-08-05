@@ -74,15 +74,15 @@ kürt, kürt sie für eine Epoche.
 > **BERICHTIGUNG vom 5. August 2026 — zwei Zeilen dieser Tabelle waren veraltet.**
 > Der blinde Kritiker DIE FUHRE hat 1600 und 1970 anders gemessen als hier
 > stand. **Die Aufsicht hat 1350 und 1970 unabhängig nachgemessen**, am
-> eingefrorenen Stand `7440a09`, sequenziell durchs Messfenster, drei bzw. zwei
-> Läufe — und die Ergebnisdateien sind **byteweise identisch** (gleiche md5),
+> eingefrorenen Stand `7440a09`, sequenziell durchs Messfenster, **je drei
+> Läufe** — und die Ergebnisdateien sind **byteweise identisch** (gleiche md5),
 > die strengste Form der Gerätekontrolle. Rohdaten:
 > `werkbank/schuss/aufsicht/welle6-fuhre-nach/rho/`.
 >
 > | | Kritiker | Aufsicht | DER SUD, mit und ohne seine Nacharbeit |
 > |---|---|---|---|
-> | 1350 | +0,762 / +0,692 / +0,591 | **gleich** | gleich |
-> | 1970 | +0,699 / +0,637 / +0,653 | **gleich** | **gleich in beiden Fassungen** |
+> | 1350 | +0,762 / +0,692 / +0,591 | **gleich, 3 von 3 Läufen** | gleich |
+> | 1970 | +0,699 / +0,637 / +0,653 | **gleich, 3 von 3 Läufen** | **gleich in beiden Fassungen** |
 >
 > **1970 steht ein Tausendstel unter dem Riss.** Wer sich darauf verlässt,
 > verlässt sich auf 0,001.
