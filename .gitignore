@@ -57,6 +57,20 @@ werkbank/schuss/*.jpeg
 werkbank/schuss/*.webp
 werkbank/schuss/*.gif
 
+# DIESELBE REGEL, EGAL WO DER ORDNER LIEGT. Am 5. August 2026 fanden sich
+# FUENF verfolgte PNG mit 19 MB unter spiel/werkbank/schuss/erbe3/ — ein
+# Builder hatte seinen Schussordner im Spielverzeichnis angelegt, und die
+# Regeln oben sind auf werkbank/schuss/ in der WURZEL verankert. Damit lagen
+# Belegbilder einer Messung in der Historie UND im ausgelieferten Verzeichnis.
+# Genau der Fehler, der am 3. August vier Stunden gekostet hat, nur an einer
+# Stelle, an die niemand geschaut hat.
+**/schuss/**/*.png
+**/schuss/**/*.jpg
+**/schuss/**/*.jpeg
+**/schuss/**/*.webp
+**/schuss/**/*.gif
+**/schuss/**/*.wav
+
 # Und dasselbe fuer unkomprimierten Ton. DER KLANG hatte nach keiner halben
 # Stunde 12 .wav-Blobs mit 20,2 MB in der Historie — je Durchgang eine neue
 # Fassung, jede 1,9 MB. Die .webm daneben traegt dieselbe Aufnahme mit 236 KB,
