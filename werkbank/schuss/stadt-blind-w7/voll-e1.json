@@ -1,0 +1,21 @@
+{
+ "epoche": 1,
+ "gebaut": 5,
+ "gescheitert": 43,
+ "gekauft": [
+  "stadt:bau:grutkammer",
+  "stadt:bau:gaerbottiche",
+  "stadt:bau:ochsenstall",
+  "stadt:bau:keller_gewoelbe",
+  "stadt:bau:kueferei"
+ ],
+ "lage": {
+  "jahr": 1353,
+  "woche": 13,
+  "epoche": 1,
+  "kasse": 36,
+  "bauten": 9,
+  "lagefehler": 0
+ },
+ "fehler": []
+}
