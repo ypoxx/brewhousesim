@@ -1,5 +1,114 @@
 # DER SUD — Nacharbeit zum blinden Urteil, Welle 6
 
+---
+
+# ZWEITE RUNDE — die Auflagen des zweiten blinden Urteils
+
+*Urteil: `werkbank/urteile/welle6-der-sud-urteil-r2.md` — **BESTEHT MIT
+AUFLAGE**. Er bestätigt die Arbeit der ersten Runde am laufenden Spiel: Klemme
+**0 von 386 Wochen**, ein Reiterklick genügt (bei 0 ms, zwanzigmal von
+zwanzig), 1600 von der leersten zur **dichtesten** Epoche (98 von 103 Wochen
+mit zwei Preisschildern), das Siegel hält bei **102 Fluchtversuchen gegen acht
+Festlegungen null Rückwege**, kein Scheinpreis in 784 Klicks. Drei Auflagen
+sind meine.*
+
+## AUFLAGE 1 — der Schriftboden. Ich hatte unrecht, und zwar ausdrücklich.
+
+In `stil/sud-zusatz.css` stand von meiner Hand, ich fasse die Schriftgrößen
+nicht an, weil das DIE LESBARKEIT zu tun habe. Der Kritiker hat den Satz
+zitiert und danebengelegt, was er kostet: **356 von 1.128 Textknoten unter
+12 px — 31,6 %, mehr als jedes der acht anderen Stücke**, kleinste Schrift
+6,5 px, **0 von 41** meiner `font-size`-Regeln mit einem Boden. DIE FUHRE stand
+im selben Bild bei null.
+
+**Die Aufsicht hat die Zuständigkeit entschieden, und gegen mich.**
+`spiel/LIESMICH.md` regelt Datei-Eigentum nach Vorsilbe; `sud*` gehört diesem
+Stück, also gehören ihm auch seine Schriftregeln. `stil/grund.css` sagt es
+sogar selbst und misst es vor: der zentrale Boden auf `--s` steht mit
+Begründung auf null, und der Weg für ein Stück ist
+`font-size: max(12px, calc(var(--s) * N))` je Regel. Wer seine eigenen Regeln
+darunter lässt, unterbietet einen Boden, den außer ihm niemand anfassen darf.
+Der falsche Absatz ist ersetzt, mit der Zahl, die er gekostet hat.
+
+**Alle 41 Regeln tragen den Boden.** Ohne Medienschalter, und das ist gerechnet:
+meine Faktoren laufen von N = 13 bis N = 30, auf der Entwurfsleinwand sind das
+13 bis 30 px, und `max(12px, …)` ändert dort an keiner einzigen etwas — Latte 1
+vergleicht blind gegen genau dieses Bild.
+
+### Gemessen, mit dem Gerät des Kritikers (`sud-blind-r2/lesbar-je-stueck.mjs`)
+
+| DER SUD bei 1366×768 | vorher | nachher |
+|---|---|---|
+| Textknoten unter 12 px | **356** | **0** |
+| davon unter 10 px | 328 | **0** |
+| kleinste Schrift | 6,5 px | **keine unter 12 px** |
+| abgeschnittene Kästen | 28 | **1** |
+| aktive Knöpfe unter 24 px | 0 von 16 | **0 von 16** |
+| **ganzes Spiel: Textknoten < 12 px** | 1.128 | **772** |
+| **ganzes Spiel: abgeschnittene Kästen** | 94 | **67** |
+
+Der eine verbliebene Kasten ist `.sud-kartensatz` in 1600 — und der **schneidet
+nicht mehr, er rollt** (siehe Auflage 2).
+
+### Das Aufräumen danach war die eigentliche Arbeit
+
+Der Boden allein warf den Kesselzettel um: mit 12 px stand er in **allen vier**
+Epochen in `gedraengt knapp`, also im Notzustand mit gestricheltem Rand, in dem
+er vorher in keiner stand. Die Ursache ist gerechnet, nicht geraten — der
+Zettel ist auf 13 % × 16,5 % der Bühne gedeckelt, damit die STADT ihn als
+Ortsmarke behandelt und nicht als Brett. Ein Prozentsatz schrumpft mit dem
+Schirm, ein 12-px-Boden nicht: 178 × 126 px für Inhalt, der bei 12 px **163 px**
+braucht.
+
+Drei Wege habe ich gebaut und gemessen, zwei davon verworfen:
+
+* **Kasten größer** (15 % × 16,5 % = 2,475 %): die STADT stufte den Zettel
+  prompt als BRETT ein und klappte ihn zu — `stadt-zugeklappt` am Kasten,
+  gemessen. Der Deckel im Kopf der Datei ist keine Vorsicht, er ist eine
+  Grenze.
+* **Knöpfe nebeneinander lassen**: eine Hälfte ist 83 px breit, und
+  „Hefezeug aus dem Bottich heben · +8 · ohne Fass" bricht dort bei 12 px auf
+  **drei** Zeilen um; das Paar wurde 45 px hoch und schob den letzten Knopf
+  aus dem Kasten.
+* **Was jetzt steht:** die beiden Hefeknöpfe untereinander, Stempelworte statt
+  voller Sätze (`kurz`/`jungKurz`/`altKurz` in `sud-daten.js`, **der Preis wird
+  nicht gekürzt**), und unterhalb der Entwurfsleinwand treten Kopf,
+  Verfahrenzeile, Deckelzeile, Zahlenzeile und das Deckelschild an den
+  Umstellknöpfen zurück. Ergebnis gemessen: `scrollHeight == clientHeight`,
+  **kein Kind ragt heraus**, alle vier Knöpfe ≥ 24 px und alle vier von der
+  Maus zu treffen, kein `gedraengt`, kein `knapp`.
+
+**Was dabei vom Zettel fällt, steht vollständig auf dem Brett** — einen
+Reiterklick weit, und das Brett ist seit dieser Runde selbst vollständig lesbar.
+Die Reihenfolge ist nicht Geschmack: ein Knopf, der aus dem Kasten fällt, ist
+ein verlorener Zug; eine Zeile, die anderswo ganz dasteht, ist keiner.
+
+## AUFLAGE 2 — der abgeschnittene Erklärsatz
+
+`-webkit-line-clamp: 3` mit `overflow: hidden` in beide Richtungen: **23 von 52
+Erklärkästen** beschnitten, schlimmster Fall **3 von 21 Zeilen** (Weizenbrief,
+1600 — 86 % verdeckt), und bei **allen acht** unwiderruflichen Karten lag der
+Satz „Unwiderruflich — …" unter dem Schnitt. Der Kritiker hat recht, dass das
+kein `--s`-Problem ist: auf der Entwurfsleinwand sind es dieselben Zeilen, nur
+bei 16 px. Das ist verschwiegener Inhalt.
+
+**Zwei Änderungen, und der Deckel bleibt trotzdem.** Der Grund für ihn war
+richtig — ein Satz, der ins Endlose wächst, schiebt die Knöpfe darunter unter
+den Rand.
+
+1. **Er schneidet nicht mehr, er legt tiefer.** `max-height: calc(1.3em * 4.5)`
+   plus `overflow-y: auto` — derselbe Weg, den DIE FUHRE für ihre Listen
+   gegangen ist („overflow-y: auto schneidet keinen Text ab, es legt ihn
+   tiefer"). Der Deckel rechnet in **Zeilen** statt Pixeln und wächst deshalb
+   mit dem Schriftboden mit; die halbe Zeile ist Absicht, ein angeschnittener
+   Buchstabenrand ist das Zeichen, dass da noch etwas ist.
+2. **Der Satz „Unwiderruflich — …" steht nicht mehr im Deckel.** `sud.js`
+   trennt ihn ab (`teileSatz()`) und stellt ihn als eigene Zeile `.sud-festsatz`
+   darunter — eingerückt, in der Farbe des Siegels, **ohne jeden Deckel**. Er
+   ist die einzige Zeile der Karte, die etwas kostet, wenn man sie nicht liest.
+   Die Trennung verliert keinen Text: `satz + fest` ergibt wieder das Original.
+
+
 *Laufend geschrieben.*
 
 Gemessenes Urteil: `werkbank/urteile/welle6-der-sud-urteil.md`, Commit `05af148`,
