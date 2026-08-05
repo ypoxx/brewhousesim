@@ -71,6 +71,15 @@
      "fu-kerbsatz :: Der Grutherr schneidet die Kerbe ins Holz und zahl"
     ]
    },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
+    "zuKlein": 0,
+    "beispiele": []
+   },
    "erbe": {
     "ueber": 0,
     "klein": 41,
@@ -86,15 +95,6 @@
     "winzig": 8,
     "kleinste": 9.4,
     "knoepfe": 3,
-    "zuKlein": 0,
-    "beispiele": []
-   },
-   "klang": {
-    "ueber": 0,
-    "klein": 1,
-    "winzig": 0,
-    "kleinste": 10.9,
-    "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
@@ -391,15 +391,6 @@
     "zuKlein": 0,
     "beispiele": []
    },
-   "klang": {
-    "ueber": 0,
-    "klein": 1,
-    "winzig": 0,
-    "kleinste": 10.9,
-    "knoepfe": 1,
-    "zuKlein": 0,
-    "beispiele": []
-   },
    "erbe": {
     "ueber": 1,
     "klein": 41,
@@ -417,6 +408,15 @@
     "winzig": 8,
     "kleinste": 9.4,
     "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 10.9,
+    "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
