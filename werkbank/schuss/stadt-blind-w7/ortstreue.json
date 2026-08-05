@@ -1,0 +1,787 @@
+{
+ "alles": {
+  "e1": {
+   "bauten": {
+    "pfanne": {
+     "fussX": 24,
+     "fussY": 69,
+     "br": 8.9
+    },
+    "malzboden": {
+     "fussX": 44,
+     "fussY": 61,
+     "br": 14
+    },
+    "brunnen": {
+     "fussX": 21,
+     "fussY": 62,
+     "br": 6.5
+    },
+    "fasslager_holz": {
+     "fussX": 39,
+     "fussY": 68.5,
+     "br": 13
+    }
+   },
+   "orte": {
+    "hof": {
+     "x": 33,
+     "y": 62
+    },
+    "sudhaus": {
+     "x": 30,
+     "y": 47
+    },
+    "kesselstelle": {
+     "x": 33,
+     "y": 64
+    },
+    "tor": {
+     "x": 45,
+     "y": 64
+    },
+    "fasslager": {
+     "x": 27,
+     "y": 76
+    },
+    "keller": {
+     "x": 22,
+     "y": 70
+    },
+    "rampe": {
+     "x": 40,
+     "y": 72
+    },
+    "schornstein": {
+     "x": 17,
+     "y": 28
+    },
+    "gaertanks": {
+     "x": 45,
+     "y": 50
+    },
+    "brunnen": {
+     "x": 17,
+     "y": 62
+    },
+    "malzboden": {
+     "x": 44,
+     "y": 42
+    },
+    "stadtmauer": {
+     "x": 25,
+     "y": 21
+    },
+    "kirche": {
+     "x": 59,
+     "y": 26
+    },
+    "marktplatz": {
+     "x": 53,
+     "y": 40
+    },
+    "lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "strasse": {
+     "x": 50,
+     "y": 89
+    },
+    "marktstand": {
+     "x": 8,
+     "y": 96
+    },
+    "hopfengarten": {
+     "x": 10,
+     "y": 30
+    },
+    "fluss": {
+     "x": 82,
+     "y": 60
+    },
+    "bruecke_unten": {
+     "x": 88,
+     "y": 70
+    },
+    "bruecke_oben": {
+     "x": 84,
+     "y": 40
+    },
+    "muehle": {
+     "x": 85,
+     "y": 38
+    },
+    "bahnhof": {
+     "x": 95,
+     "y": 27
+    },
+    "konkurrenz": {
+     "x": 80,
+     "y": 32
+    },
+    "wohnblock": {
+     "x": 12,
+     "y": 45
+    },
+    "kopfleiste": {
+     "x": 50,
+     "y": 3
+    },
+    "weiter": {
+     "x": 93,
+     "y": 96
+    },
+    "mitte": {
+     "x": 50,
+     "y": 50
+    }
+   },
+   "marken": {
+    "stadt:marke:gegner-marktplatz": {
+     "x": 56.43,
+     "y": 49
+    },
+    "stadt:marke:fuhre-lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "stadt:marke:fuhre-marktplatz": {
+     "x": 53.58,
+     "y": 46
+    },
+    "stadt:marke:fuhre-muehle": {
+     "x": 85,
+     "y": 43
+    },
+    "stadt:marke:fuhre-bruecke-unten": {
+     "x": 88,
+     "y": 70
+    },
+    "stadt:marke:fuhre-fluss": {
+     "x": 82,
+     "y": 66
+    },
+    "stadt:marke:fuhre-bruecke-oben": {
+     "x": 84,
+     "y": 32
+    }
+   }
+  },
+  "e2": {
+   "bauten": {
+    "pfanne": {
+     "fussX": 31,
+     "fussY": 69.5,
+     "br": 8.9
+    },
+    "brunnen": {
+     "fussX": 25,
+     "fussY": 71,
+     "br": 5.4
+    },
+    "keller_gewoelbe": {
+     "fussX": 24,
+     "fussY": 69,
+     "br": 11
+    },
+    "kueferei": {
+     "fussX": 27.5,
+     "fussY": 70.5,
+     "br": 7.3
+    },
+    "darre": {
+     "fussX": 44,
+     "fussY": 61,
+     "br": 15
+    },
+    "fasslager_stein": {
+     "fussX": 41,
+     "fussY": 70,
+     "br": 10.1
+    }
+   },
+   "orte": {
+    "hof": {
+     "x": 33,
+     "y": 62
+    },
+    "sudhaus": {
+     "x": 30,
+     "y": 47
+    },
+    "kesselstelle": {
+     "x": 33,
+     "y": 64
+    },
+    "tor": {
+     "x": 45,
+     "y": 64
+    },
+    "fasslager": {
+     "x": 27,
+     "y": 76
+    },
+    "keller": {
+     "x": 22,
+     "y": 70
+    },
+    "rampe": {
+     "x": 40,
+     "y": 72
+    },
+    "schornstein": {
+     "x": 17,
+     "y": 28
+    },
+    "gaertanks": {
+     "x": 45,
+     "y": 50
+    },
+    "brunnen": {
+     "x": 17,
+     "y": 62
+    },
+    "malzboden": {
+     "x": 44,
+     "y": 42
+    },
+    "stadtmauer": {
+     "x": 25,
+     "y": 21
+    },
+    "kirche": {
+     "x": 59,
+     "y": 26
+    },
+    "marktplatz": {
+     "x": 53,
+     "y": 40
+    },
+    "lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "strasse": {
+     "x": 50,
+     "y": 89
+    },
+    "marktstand": {
+     "x": 8,
+     "y": 96
+    },
+    "hopfengarten": {
+     "x": 10,
+     "y": 30
+    },
+    "fluss": {
+     "x": 82,
+     "y": 60
+    },
+    "bruecke_unten": {
+     "x": 88,
+     "y": 70
+    },
+    "bruecke_oben": {
+     "x": 84,
+     "y": 40
+    },
+    "muehle": {
+     "x": 85,
+     "y": 38
+    },
+    "bahnhof": {
+     "x": 95,
+     "y": 27
+    },
+    "konkurrenz": {
+     "x": 80,
+     "y": 32
+    },
+    "wohnblock": {
+     "x": 12,
+     "y": 45
+    },
+    "kopfleiste": {
+     "x": 50,
+     "y": 3
+    },
+    "weiter": {
+     "x": 93,
+     "y": 96
+    },
+    "mitte": {
+     "x": 50,
+     "y": 50
+    }
+   },
+   "marken": {
+    "stadt:marke:gegner-marktplatz": {
+     "x": 56.43,
+     "y": 49
+    },
+    "stadt:marke:fuhre-lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "stadt:marke:fuhre-marktplatz": {
+     "x": 53.58,
+     "y": 46
+    },
+    "stadt:marke:fuhre-muehle": {
+     "x": 85,
+     "y": 43
+    },
+    "stadt:marke:fuhre-bruecke-unten": {
+     "x": 88,
+     "y": 70
+    },
+    "stadt:marke:fuhre-fluss": {
+     "x": 82,
+     "y": 66
+    },
+    "stadt:marke:fuhre-bruecke-oben": {
+     "x": 84,
+     "y": 32
+    }
+   }
+  },
+  "e3": {
+   "bauten": {
+    "brunnen": {
+     "fussX": 21,
+     "fussY": 62,
+     "br": 6.2
+    },
+    "fasslager_stein": {
+     "fussX": 32,
+     "fussY": 73.5,
+     "br": 14
+    },
+    "schornstein": {
+     "fussX": 20,
+     "fussY": 60,
+     "br": 7.5
+    },
+    "gaertanks": {
+     "fussX": 47,
+     "fussY": 65,
+     "br": 14
+    },
+    "eiskeller": {
+     "fussX": 26,
+     "fussY": 70,
+     "br": 13
+    },
+    "laderampe": {
+     "fussX": 41,
+     "fussY": 68.5,
+     "br": 9.4
+    },
+    "maschinenhaus": {
+     "fussX": 27,
+     "fussY": 68,
+     "br": 12.5
+    }
+   },
+   "orte": {
+    "hof": {
+     "x": 33,
+     "y": 62
+    },
+    "sudhaus": {
+     "x": 30,
+     "y": 47
+    },
+    "kesselstelle": {
+     "x": 33,
+     "y": 64
+    },
+    "tor": {
+     "x": 45,
+     "y": 64
+    },
+    "fasslager": {
+     "x": 27,
+     "y": 76
+    },
+    "keller": {
+     "x": 22,
+     "y": 70
+    },
+    "rampe": {
+     "x": 40,
+     "y": 72
+    },
+    "schornstein": {
+     "x": 17,
+     "y": 28
+    },
+    "gaertanks": {
+     "x": 45,
+     "y": 50
+    },
+    "brunnen": {
+     "x": 17,
+     "y": 62
+    },
+    "malzboden": {
+     "x": 44,
+     "y": 42
+    },
+    "stadtmauer": {
+     "x": 25,
+     "y": 21
+    },
+    "kirche": {
+     "x": 59,
+     "y": 26
+    },
+    "marktplatz": {
+     "x": 53,
+     "y": 40
+    },
+    "lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "strasse": {
+     "x": 50,
+     "y": 89
+    },
+    "marktstand": {
+     "x": 8,
+     "y": 96
+    },
+    "hopfengarten": {
+     "x": 10,
+     "y": 30
+    },
+    "fluss": {
+     "x": 82,
+     "y": 60
+    },
+    "bruecke_unten": {
+     "x": 88,
+     "y": 70
+    },
+    "bruecke_oben": {
+     "x": 84,
+     "y": 40
+    },
+    "muehle": {
+     "x": 85,
+     "y": 38
+    },
+    "bahnhof": {
+     "x": 95,
+     "y": 27
+    },
+    "konkurrenz": {
+     "x": 80,
+     "y": 32
+    },
+    "wohnblock": {
+     "x": 12,
+     "y": 45
+    },
+    "kopfleiste": {
+     "x": 50,
+     "y": 3
+    },
+    "weiter": {
+     "x": 93,
+     "y": 96
+    },
+    "mitte": {
+     "x": 50,
+     "y": 50
+    }
+   },
+   "marken": {
+    "stadt:marke:fuhre-lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "stadt:marke:fuhre-marktplatz": {
+     "x": 53,
+     "y": 46
+    },
+    "stadt:marke:fuhre-muehle": {
+     "x": 85,
+     "y": 43
+    },
+    "stadt:marke:fuhre-bruecke-unten": {
+     "x": 88,
+     "y": 70
+    },
+    "stadt:marke:fuhre-fluss": {
+     "x": 82,
+     "y": 66
+    },
+    "stadt:marke:fuhre-bahnhof": {
+     "x": 95,
+     "y": 27
+    }
+   }
+  },
+  "e4": {
+   "bauten": {
+    "schornstein": {
+     "fussX": 20,
+     "fussY": 60,
+     "br": 7.5
+    },
+    "abfuellhalle": {
+     "fussX": 41,
+     "fussY": 68,
+     "br": 15
+    },
+    "stahltanks": {
+     "fussX": 47,
+     "fussY": 65,
+     "br": 15
+    },
+    "verladedock": {
+     "fussX": 35,
+     "fussY": 70,
+     "br": 8.8
+    },
+    "kastenlager": {
+     "fussX": 21,
+     "fussY": 68,
+     "br": 8.3
+    },
+    "kesselhaus": {
+     "fussX": 21,
+     "fussY": 63,
+     "br": 12.5
+    }
+   },
+   "orte": {
+    "hof": {
+     "x": 33,
+     "y": 62
+    },
+    "sudhaus": {
+     "x": 30,
+     "y": 47
+    },
+    "kesselstelle": {
+     "x": 33,
+     "y": 64
+    },
+    "tor": {
+     "x": 45,
+     "y": 64
+    },
+    "fasslager": {
+     "x": 27,
+     "y": 76
+    },
+    "keller": {
+     "x": 22,
+     "y": 70
+    },
+    "rampe": {
+     "x": 40,
+     "y": 72
+    },
+    "schornstein": {
+     "x": 17,
+     "y": 28
+    },
+    "gaertanks": {
+     "x": 45,
+     "y": 50
+    },
+    "brunnen": {
+     "x": 17,
+     "y": 62
+    },
+    "malzboden": {
+     "x": 44,
+     "y": 42
+    },
+    "stadtmauer": {
+     "x": 25,
+     "y": 21
+    },
+    "kirche": {
+     "x": 59,
+     "y": 26
+    },
+    "marktplatz": {
+     "x": 53,
+     "y": 40
+    },
+    "lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "strasse": {
+     "x": 50,
+     "y": 89
+    },
+    "marktstand": {
+     "x": 8,
+     "y": 96
+    },
+    "hopfengarten": {
+     "x": 10,
+     "y": 30
+    },
+    "fluss": {
+     "x": 82,
+     "y": 60
+    },
+    "bruecke_unten": {
+     "x": 88,
+     "y": 70
+    },
+    "bruecke_oben": {
+     "x": 84,
+     "y": 40
+    },
+    "muehle": {
+     "x": 85,
+     "y": 38
+    },
+    "bahnhof": {
+     "x": 95,
+     "y": 27
+    },
+    "konkurrenz": {
+     "x": 80,
+     "y": 32
+    },
+    "wohnblock": {
+     "x": 12,
+     "y": 45
+    },
+    "kopfleiste": {
+     "x": 50,
+     "y": 3
+    },
+    "weiter": {
+     "x": 93,
+     "y": 96
+    },
+    "mitte": {
+     "x": 50,
+     "y": 50
+    }
+   },
+   "marken": {
+    "stadt:marke:fuhre-lindenhof": {
+     "x": 68,
+     "y": 47
+    },
+    "stadt:marke:fuhre-marktplatz": {
+     "x": 53,
+     "y": 46
+    },
+    "stadt:marke:fuhre-muehle": {
+     "x": 85,
+     "y": 43
+    },
+    "stadt:marke:fuhre-bruecke-unten": {
+     "x": 88,
+     "y": 70
+    },
+    "stadt:marke:fuhre-bahnhof": {
+     "x": 95,
+     "y": 27
+    }
+   }
+  }
+ },
+ "bericht": {
+  "wanderer": [
+   {
+    "feld": "bauten",
+    "name": "brunnen",
+    "dx": 4,
+    "dy": 9,
+    "ep": {
+     "e1": {
+      "fussX": 21,
+      "fussY": 62,
+      "br": 6.5
+     },
+     "e2": {
+      "fussX": 25,
+      "fussY": 71,
+      "br": 5.4
+     },
+     "e3": {
+      "fussX": 21,
+      "fussY": 62,
+      "br": 6.2
+     }
+    }
+   },
+   {
+    "feld": "bauten",
+    "name": "fasslager_stein",
+    "dx": 9,
+    "dy": 3.5,
+    "ep": {
+     "e2": {
+      "fussX": 41,
+      "fussY": 70,
+      "br": 10.1
+     },
+     "e3": {
+      "fussX": 32,
+      "fussY": 73.5,
+      "br": 14
+     }
+    }
+   },
+   {
+    "feld": "bauten",
+    "name": "pfanne",
+    "dx": 7,
+    "dy": 0.5,
+    "ep": {
+     "e1": {
+      "fussX": 24,
+      "fussY": 69,
+      "br": 8.9
+     },
+     "e2": {
+      "fussX": 31,
+      "fussY": 69.5,
+      "br": 8.9
+     }
+    }
+   },
+   {
+    "feld": "marken",
+    "name": "stadt:marke:fuhre-marktplatz",
+    "dx": 0.58,
+    "dy": 0,
+    "ep": {
+     "e1": {
+      "x": 53.58,
+      "y": 46
+     },
+     "e2": {
+      "x": 53.58,
+      "y": 46
+     },
+     "e3": {
+      "x": 53,
+      "y": 46
+     },
+     "e4": {
+      "x": 53,
+      "y": 46
+     }
+    }
+   }
+  ],
+  "treu": 36
+ }
+}
