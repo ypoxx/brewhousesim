@@ -23,11 +23,15 @@ await s.waitForTimeout(1500);
 let gebaut = 0, gescheitert = 0;
 const gekauft = [];
 for (let w = 0; w < WOCHEN; w++) {
+  /* ACHTUNG: `stadt:bau:seite` ist der Seitenumschlag des Bauhofs, kein Bau.
+     Wer ihn mitzaehlt, klickt 200-mal die Seite um und baut nichts — mir
+     genau einmal passiert, deshalb steht es hier. */
   const kauf = await s.evaluate(() => {
     const l = [];
     for (const el of document.querySelectorAll('button[data-zug^="stadt:bau:"]')) {
       if (el.disabled) continue;
       if (!/^stadt:bau:[a-z_]+$/.test(el.dataset.zug)) continue;
+      if (el.dataset.zug === 'stadt:bau:seite') continue;
       const r = el.getBoundingClientRect(); if (r.width < 1) continue;
       l.push(el.dataset.zug);
     }
