@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T09:24:38+00:00",
- "phase": "Zehnter Container-Reset, wieder im Stundentakt, wieder von der Handprobe gefangen — und diesmal hat sich das Aufsetz-Skript von vorhin sofort ausgezahlt: ein Aufruf, beide Häfen stehen mit geprüften Marken, die Probe läuft weiter, statt drei Minuten Handarbeit. Der Befund zum Knopfboden steht unverändert: 0,811 Unterschied in 1970, gleicher Commit, gleiche Saat, beide Läufe fehlerfrei über volle vierzehn Braujahre. Was noch fehlt, ist die Gerätekontrolle mit mehreren gleichen Läufen je Arm; die sammelt die Probe gerade ein, und jeder Reset kostet sie etwa zwei Läufe. Welle 6 ist inhaltlich durch: beide Stücke gebaut, beide blind geprüft, beide Nacharbeiten abgenommen und von der Aufsicht unabhängig nachgemessen.",
+ "stand": "2026-08-05T10:35:41+00:00",
+ "phase": "Elfter Container-Reset, Baum in zwei Minuten wiederhergestellt, Probe mit einem Aufruf wieder aufgesetzt. Nachgesehen statt blind neu gestartet, warum die A/B-Probe seit drei Fenstern bei vier Dateien steht: ihr Protokoll endet jedes Mal bei MESSFENSTER OFFEN, der Lauf wird also mitten drin erwischt. Ein Lauf über 400 Wochen braucht hier zwanzig bis dreißig Minuten, ein Reset kommt etwa stündlich, und der Veröffentlicher sichert alle drei Minuten — rechnerisch geht es sich aus, gemessen bisher nicht. Diesmal beobachte ich es zu Ende, statt es wieder zu vermuten. In das laufende Skript greife ich dabei nicht ein: eine Bash-Datei zu ändern, während sie läuft, verschiebt ihren Lesezeiger und hat hier schon einmal Zeit gekostet.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T15:37:26+00:00",
-   "text": "KLANG: LATTE 3 BESTANDEN, 4 von 4 blind. Das fremde Ohr (werkbank/hoerer.py, ohne Bild, ohne Dateinamen) nennt 1350/1600/1884/1970 richtig mit 95/95/95/100 Prozent und beschreibt den Vorgang korrekt — offener Sudkessel und Vieh; Haemmern, Holzkarren und Pferd; Dampfmaschine; rangierender Lastwagen mit Radio."
-  },
   {
    "zeit": "2026-08-01T15:37:26+00:00",
    "text": "KLANG: Der Weg zur Datei ohne ffmpeg steht. Das Spiel rendert seinen EIGENEN Tongraph mit OfflineAudioContext und reicht WAV heraus: BRAUHAUS.ton.wav(30). werkbank/ohrprobe.mjs klickt dazu 30 Sekunden lang echte data-zug-Knoepfe und holt die Bytes ab — geprueft wird das laufende Spiel, nicht die Dateiablage. Vier Dateien liegen in werkbank/ohr/."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T09:24:38+00:00",
    "text": "Zehnter Container-Reset, wieder im Stundentakt, wieder von der Handprobe gefangen — und diesmal hat sich das Aufsetz-Skript von vorhin sofort ausgezahlt: ein Aufruf, beide Häfen stehen mit geprüften Marken, die Probe läuft weiter, statt drei Minuten Handarbeit. Der Befund zum Knopfboden steht unverändert: 0,811 Unterschied in 1970, gleicher Commit, gleiche Saat, beide Läufe fehlerfrei über volle vierzehn Braujahre. Was noch fehlt, ist die Gerätekontrolle mit mehreren gleichen Läufen je Arm; die sammelt die Probe gerade ein, und jeder Reset kostet sie etwa zwei Läufe. Welle 6 ist inhaltlich durch: beide Stücke gebaut, beide blind geprüft, beide Nacharbeiten abgenommen und von der Aufsicht unabhängig nachgemessen."
+  },
+  {
+   "zeit": "2026-08-05T10:35:41+00:00",
+   "text": "Elfter Container-Reset, Baum in zwei Minuten wiederhergestellt, Probe mit einem Aufruf wieder aufgesetzt. Nachgesehen statt blind neu gestartet, warum die A/B-Probe seit drei Fenstern bei vier Dateien steht: ihr Protokoll endet jedes Mal bei MESSFENSTER OFFEN, der Lauf wird also mitten drin erwischt. Ein Lauf über 400 Wochen braucht hier zwanzig bis dreißig Minuten, ein Reset kommt etwa stündlich, und der Veröffentlicher sichert alle drei Minuten — rechnerisch geht es sich aus, gemessen bisher nicht. Diesmal beobachte ich es zu Ende, statt es wieder zu vermuten. In das laufende Skript greife ich dabei nicht ein: eine Bash-Datei zu ändern, während sie läuft, verschiebt ihren Lesezeiger und hat hier schon einmal Zeit gekostet."
   }
  ]
 }
