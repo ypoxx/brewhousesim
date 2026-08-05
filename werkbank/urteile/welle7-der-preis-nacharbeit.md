@@ -203,9 +203,29 @@ kein Beweis, dass die Behebung wirkt — der Beweis dafür ist der Quelltext und
 die Rechnung des Kritikers —, sondern der Beweis, dass sie **nichts anderes**
 bewegt hat.
 
-*(1970 läuft noch, als letztes im Satz. Die Zahl schreibt sich selbsttätig nach
-`werkbank/schuss/preis-w7/rho/nacharbeit/e4-A.json`; Auswertung mit*
-`python3 werkbank/schuss/fuhre-w6/schnitte.py werkbank/schuss/preis-w7/rho/nacharbeit`*.)*
+| **1970** | vorher | +0,699 | +0,637 | +0,653 | 1030–114537 | 0 |
+| | **nachher** | **+0,699** | **+0,637** | **+0,653** | 1030–114537 | 0 |
+
+**1970 ebenfalls Ziffer für Ziffer unverändert** — und das war die Zahl, um die
+es ging: sie steht **ein Tausendstel** unter dem Riss. Die feudale Aufschrift,
+die dort −13.000 DM „an den Grundherrn" schrieb, heißt jetzt
+„Erbschaftsteuer und Übertragungskosten", der Betrag ist derselbe, und die
+Reihe steht still.
+
+### Das Ergebnis in einem Satz
+
+**LATTE HÄLT, 0 von 4 Läufen über 0,700 — in beiden Ständen.** Drei von vier
+Epochen sind Ziffer für Ziffer unverändert; nur 1350 bewegt sich, dort und nur
+dort greift `pflichtBasis()`. **Die zwei Sperrlisten-Funde sind weg, ohne dass
+eine einzige ρ-Zahl gekippt ist.**
+
+> **Gerätekontrolle:** Für 1600, 1884 und 1970 liegen damit **je zwei Läufe an
+> zwei verschiedenen Tagen mit identischen Ziffern** vor (Spannweite 0,000).
+> Für 1350 gibt es **einen** Lauf am neuen Stand — hier ist n = 1, und das
+> gehört gesagt: die Aufsicht hat drei byteweise identische Läufe am
+> *vorherigen* Stand, nicht an diesem. Der Abstand zur Latte ist mit **0,336**
+> so groß, dass eine Wiederholung die Aussage nicht kippen kann; sie steht
+> trotzdem aus.
 
 ---
 
