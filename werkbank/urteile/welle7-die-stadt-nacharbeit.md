@@ -506,6 +506,20 @@ aufstellen? Damit ist die Küferei ausdrücklich freigegeben; der Brunnen war es
 nie. Nachgezählt gegen die Regel: **kein gegrabenes Ding trägt noch einen
 Versatz.**
 
+**VERWORFEN, und zwar nachdem ich es schon geschrieben hatte:** die Regel
+gehört eigentlich als Kommentar an die Stelle, an der `versatz` erklärt wird
+(`stadt-daten.js`, „DER MASSSTAB"), damit der nächste Builder sie am Ort der
+Benutzung findet und nicht in einem Bericht. Ich habe sie dort eingefügt,
+`node --check` gefahren — und dann **zurückgenommen**: der Kommentar ändert die
+md5 von `stadt-daten.js` (`bab88be9…` → `65f4e2ad…`), und der Messstand ist
+**eingefroren**, weil der Blindvergleich noch aussteht. Eine Datei nach dem
+Einfrieren anzufassen, und sei es nur ein Kommentar, macht den Baum, den der
+fremde Blick sieht, verschieden von dem, den die Aufsicht nachgemessen hat.
+Geprüft: alle fünf Dateien stehen wieder auf ihrer alten md5
+(`stadt-daten.js bab88be9…`). **Der Text der Regel steht hier; wo er hingehört,
+gehört er nach dem Blindvergleich hingeschrieben** — das ist ein Vorschlag an
+die Aufsicht, keine Tat von mir.
+
 **Und die Lehre für mich, die teurer ist als die Regel:** meine Zusammenfassung
 stimmte nicht mit meinem eigenen Quelltext überein — der Kommentar über der
 Zeile sagte „Runde 7", der Bericht sagte „nur die Pfanne". Hätte die Aufsicht
