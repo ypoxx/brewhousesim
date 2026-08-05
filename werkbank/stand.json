@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-04T23:43:18+00:00",
- "phase": "DIE FUHRE ist blind geprüft: BESTEHT MIT AUFLAGE, vier Auflagen. Am Stück gezählt hat der Kritiker null zu kleine Schriften, null zu kleine Knöpfe und null abgeschnittene Kästen in allen vier Epochen — während im selben Bild 277 bis 284 zu kleine Knoten fremder Stücke stehen. Wichtiger als das Urteil sind zwei Funde über die MESSGERÄTE selbst: erstens ist hide-scrollbars Playwrights eigene Startvorgabe, also ist jede Lesbarkeitszahl dieses Laufs ohne Rollleiste entstanden, auch die der Aufsicht — mit gezeichneter Rollleiste schneidet ein Kasten in 1350 und 1884 ab. Jede Zahl dieser Latte ist damit eine Untergrenze, kein Ergebnis. Zweitens zählt lesbarkeit.mjs rollende Kästen als abgeschnitten. Repariert wird beides erst, wenn kein Agent daran misst. Bei Latte 2 widerspricht der Kritiker der eingetragenen Tabelle: 1350 reißt bei zwölf Braujahren mit +0,762, und 1970 steht mit +0,699 ein Tausendstel unter der Latte statt bei den eingetragenen +0,427. Die Aufsicht misst 1350 und 1970 gerade selbst nach, drei Läufe je Epoche, sequenziell durchs Messfenster am selben eingefrorenen Stand.",
+ "stand": "2026-08-05T00:22:20+00:00",
+ "phase": "Welle 6 — die Aufsicht hat den ersten Teil ihrer Gegenmessung: 1350 steht bei +0,762 / +0,692 / +0,591 über die drei Schnitte, zweimal identisch, Spannweite 0,000, keine Seitenfehler. Das sind Ziffer für Ziffer die Zahlen des blinden Kritikers — Latte 2 reißt in 1350 bei zwölf Braujahren, unabhängig bestätigt. Die strittige Epoche 1970 steht noch in der Warteschlange am Messfenster, hinter einem Lauf des SUD. DER SUD arbeitet weiter an seiner Nacharbeit und ist um 00:21 UTC lebendig. Die zwei Befunde über die Messgeräte selbst stehen unverändert offen: ohne Rollleiste gemessen, und rollende Kästen als abgeschnitten gezählt — repariert wird erst, wenn kein Agent daran misst.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T14:33:08+00:00",
-   "text": "AUFSICHT (8,9,10): KERN GEAENDERT — (8) welt.binde loest eine bestehende Bindung nur noch fuer den, dem sie gehoert; neu welt.gebunden(schluessel). Die Drei-Jahre-Regel der FUHRE wirkt weiter, aber nur auf eigene Adressen; eine Adresse des Adlers muss man gewinnen, nicht loeschen. (9) Zwoelf Anzeigetexte im Kern auf echte Umlaute gebracht (Muehlschenke, Brueckenwirt, Faehrhaus, Bahnhofsgaststaette, Adler-Braeu, dazu Epochensaetze und Charakterzuege); Bezeichner bleiben umlautfrei. Syntax geprueft, alle vier Epochen laden fehlerfrei. (10) Pflock-System der STADT bleibt; DER GEGNER meldet auch die Giebelschilder mit data-frei ab. Alles in spiel/ZUSTAENDIGKEIT.md."
-  },
   {
    "zeit": "2026-08-01T14:39:49+00:00",
    "text": "AUFSICHT — Welle 2 steht in gauntlet/WELLE-2.md: DER SUD (was fuer ein Bier - Grut/Hopfen, Reinheitsgebot, Eis/Maschine, Gleichmass), DER NAME (Vermarktung: Bierzeiger, Wirtshausschild, Litfasssaeule, Fernsehspot), DAS ERBE (was ueber den Epochenschnitt geht - bricht die Wohlstandssingularitaet), DER KLANG (Latte 3, bisher gegen nichts gemessen). Nicht starten vor der Glaettung von Welle 1."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-04T23:43:18+00:00",
    "text": "DIE FUHRE ist blind geprüft: BESTEHT MIT AUFLAGE, vier Auflagen. Am Stück gezählt hat der Kritiker null zu kleine Schriften, null zu kleine Knöpfe und null abgeschnittene Kästen in allen vier Epochen — während im selben Bild 277 bis 284 zu kleine Knoten fremder Stücke stehen. Wichtiger als das Urteil sind zwei Funde über die MESSGERÄTE selbst: erstens ist hide-scrollbars Playwrights eigene Startvorgabe, also ist jede Lesbarkeitszahl dieses Laufs ohne Rollleiste entstanden, auch die der Aufsicht — mit gezeichneter Rollleiste schneidet ein Kasten in 1350 und 1884 ab. Jede Zahl dieser Latte ist damit eine Untergrenze, kein Ergebnis. Zweitens zählt lesbarkeit.mjs rollende Kästen als abgeschnitten. Repariert wird beides erst, wenn kein Agent daran misst. Bei Latte 2 widerspricht der Kritiker der eingetragenen Tabelle: 1350 reißt bei zwölf Braujahren mit +0,762, und 1970 steht mit +0,699 ein Tausendstel unter der Latte statt bei den eingetragenen +0,427. Die Aufsicht misst 1350 und 1970 gerade selbst nach, drei Läufe je Epoche, sequenziell durchs Messfenster am selben eingefrorenen Stand."
+  },
+  {
+   "zeit": "2026-08-05T00:22:20+00:00",
+   "text": "Welle 6 — die Aufsicht hat den ersten Teil ihrer Gegenmessung: 1350 steht bei +0,762 / +0,692 / +0,591 über die drei Schnitte, zweimal identisch, Spannweite 0,000, keine Seitenfehler. Das sind Ziffer für Ziffer die Zahlen des blinden Kritikers — Latte 2 reißt in 1350 bei zwölf Braujahren, unabhängig bestätigt. Die strittige Epoche 1970 steht noch in der Warteschlange am Messfenster, hinter einem Lauf des SUD. DER SUD arbeitet weiter an seiner Nacharbeit und ist um 00:21 UTC lebendig. Die zwei Befunde über die Messgeräte selbst stehen unverändert offen: ohne Rollleiste gemessen, und rollende Kästen als abgeschnitten gezählt — repariert wird erst, wenn kein Agent daran misst."
   }
  ]
 }
