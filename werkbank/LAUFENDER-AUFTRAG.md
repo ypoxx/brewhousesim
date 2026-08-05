@@ -46,6 +46,38 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DIE VIERTE LATTE, DER STAND IN ZAHLEN — 5. August, nach der Nacharbeit r4
+
+Alle Zahlen bei **1366×768** mit dem **reparierten** Gerät (zeichnet seit dem
+5. August eine Rollleiste), von der Aufsicht je selbst nachgemessen:
+
+| Stand | Textknoten < 12 px | abgeschnittene Kästen |
+|---|---|---|
+| vor Welle 6 | 1.899 | — |
+| nach DIE FUHRE | 1.128 | 94 |
+| **nach DER SUD r4** | **772** | **67** |
+
+**Zwei Stücke haben ihre Schriftregeln erledigt, die anderen nicht.** In der
+Aufschlüsselung nach Stück tauchen `fu:` und `sud:` praktisch nicht mehr auf;
+was bleibt, verteilt sich auf **`wort` (10), `zahl` (5), `nm` (2), `was` (1)**
+je Epoche. **Latte 4 ist damit weiter GERISSEN** — sie ist von 1.899 auf 772
+gefallen, und das ist ein Fortschritt, kein Bestehen.
+
+> **Der Weg, der funktioniert hat, zweimal unabhängig gegangen:** alle
+> `font-size`-Regeln des eigenen Stücks auf `max(12px, …)`, Regeln mit N < 12
+> hinter den Medienschalter — und **danach die überlaufenden Kästen aufräumen,
+> denn das ist die eigentliche Arbeit.** Beide Builder haben das unabhängig
+> berichtet. Wer als nächstes drankommt, fängt nicht bei null an.
+
+> **ACHTUNG für die nächste ρ-Messung:** DER SUD hat in r4 einen **Preis**
+> geändert (Prozessrechner 118.000 → 78.000 DM, nach Anrechnung 36.000), weil
+> 118.000 in 1970 nie erreichbar waren — Startkasse 86.000, nie überschritten.
+> Das ist die richtige Behebung eines Scheinpreises, aber es **speist Latte 2**.
+> Die dreifach bestätigten ρ-Zahlen gelten für `517ca3f`, also VOR dieser
+> Änderung. Am neuen Stand ist neu zu messen.
+
+---
+
 ## SIEBTER RESET, 5. August 05:2x UTC — und warum die Reparatur nicht half
 
 **Wieder eine alte Platte, wieder `78c79bb` vom 3. August.** Origin stand auf
