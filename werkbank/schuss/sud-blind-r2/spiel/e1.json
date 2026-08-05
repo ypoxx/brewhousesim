@@ -1,0 +1,3944 @@
+{
+ "epoche": 1,
+ "wochen": 150,
+ "abbruch": "Partie beendet",
+ "fehler": [],
+ "reiterKlicks": [
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "schluss": {
+  "jahr": 1353,
+  "woche": 13,
+  "ende": true,
+  "kasse": 36,
+  "rohstoff": 0,
+  "faesser": 2,
+  "plaetze": 12,
+  "guete": 96,
+  "verfahren": {
+   "wuerze": "sack",
+   "wasser": "roehre"
+  },
+  "gaerfrei": 10,
+  "chronik": 64,
+  "lage": 0
+ },
+ "klicks": 166,
+ "scheinpreise": [],
+ "protokoll": [
+  {
+   "jahr": 1350,
+   "woche": 1,
+   "zug": "sud:wasser:roehre",
+   "warum": "unwiderrufliche Festlegung kaufen",
+   "aufschrift": "Röhrenrecht an der Quelle −30 Pf",
+   "preisschild": -30,
+   "fassschild": null,
+   "kasseVor": 112,
+   "kasseNach": 82,
+   "abgebucht": 30,
+   "faesserVor": 4,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "bach"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Unwiderruflich festgelegt: Röhrenrecht an der Quelle. Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor"
+   ],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1350,
+   "woche": 1,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 82,
+   "kasseNach": 82,
+   "abgebucht": 0,
+   "faesserVor": 4,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 82,
+   "kasseNach": 73,
+   "abgebucht": 9,
+   "faesserVor": 3,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 73,
+   "kasseNach": 73,
+   "abgebucht": 0,
+   "faesserVor": 7,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 73,
+   "kasseNach": 64,
+   "abgebucht": 9,
+   "faesserVor": 6,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 3,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 64,
+   "kasseNach": 64,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 64,
+   "kasseNach": 63,
+   "abgebucht": 1,
+   "faesserVor": 9,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: Der Bierkieser des Rats lobt den Sud vor Zeugen."
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 4,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 63,
+   "kasseNach": 63,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 63,
+   "kasseNach": 63,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 63,
+   "kasseNach": 54,
+   "abgebucht": 9,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 5,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 54,
+   "kasseNach": 54,
+   "abgebucht": 0,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 54,
+   "kasseNach": 45,
+   "abgebucht": 9,
+   "faesserVor": 8,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 6,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45,
+   "kasseNach": 45,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45,
+   "kasseNach": 44,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 7,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44,
+   "kasseNach": 44,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44,
+   "kasseNach": 43,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Brauhaus zum Adler: Ein Feist wird in den Rat gewählt. Solange er darin sitzt, ist kein Ratsspruch ablösbar."
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 8,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 43,
+   "kasseNach": 43,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 43,
+   "kasseNach": 42,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 9,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42,
+   "kasseNach": 42,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42,
+   "kasseNach": 41,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 10,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41,
+   "kasseNach": 41,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41,
+   "kasseNach": 40,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 11,
+   "zug": "sud:wuerze:grut",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Grut vom Grutamt",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40,
+   "kasseNach": 40,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 11,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40,
+   "kasseNach": 40,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40,
+   "kasseNach": 39,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 12,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39,
+   "kasseNach": 39,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39,
+   "kasseNach": 38,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 13,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 38,
+   "kasseNach": 38,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38,
+   "kasseNach": 29,
+   "abgebucht": 9,
+   "faesserVor": 9,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 14,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 29,
+   "kasseNach": 29,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 29,
+   "kasseNach": 28,
+   "abgebucht": 1,
+   "faesserVor": 10,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Die Stunde kommt ohne Ansage. Kunigunde Bruckner legt die Kelle hin, und was nur auf ihr Wort hin ging, geht nicht mehr.",
+    "Heinrich Bruckner übernimmt das Haus in 1350. Man sagt: Gewinnt Prozesse und verliert Freunde.",
+    "Mit der Hand fällt, was nur an ihr hing — 4 Häuser halten nicht mehr: Zum Goldenen Ochsen, Pfarrschenke St. Michael, Lan",
+    "Die Miterben nehmen ihren Teil in Naturalien: 4 Fass gehen aus dem Keller.",
+    "Das Haus geht auf Heinrich Bruckner über. Vorher hafteten 0 Bindungen am Haus und 4 an der Person; jetzt sind es 0 und 0"
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 15,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 28,
+   "kasseNach": 28,
+   "abgebucht": 0,
+   "faesserVor": 6,
+   "faesserNach": 5,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 28,
+   "kasseNach": 19,
+   "abgebucht": 9,
+   "faesserVor": 5,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: Der Bierkieser des Rats lobt den Sud vor Zeugen."
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 19,
+   "kasseNach": 19,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 19,
+   "kasseNach": 10,
+   "abgebucht": 9,
+   "faesserVor": 8,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 17,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 10,
+   "kasseNach": 10,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 10,
+   "kasseNach": 9,
+   "abgebucht": 1,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 18,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 9,
+   "kasseNach": 9,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 18,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 9,
+   "kasseNach": 9,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 9,
+   "kasseNach": 8,
+   "abgebucht": 1,
+   "faesserVor": 10,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Brauhaus zum Adler hängt denselben Strohkranz aus."
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 19,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 8,
+   "kasseNach": 8,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8,
+   "kasseNach": 7,
+   "abgebucht": 1,
+   "faesserVor": 9,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 20,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 7,
+   "kasseNach": 7,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 7,
+   "kasseNach": 0,
+   "abgebucht": 7,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 21,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 0,
+   "kasseNach": 0,
+   "abgebucht": 0,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 0,
+   "kasseNach": 16,
+   "abgebucht": -16,
+   "faesserVor": 8,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 22,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 16,
+   "kasseNach": 16,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 16,
+   "kasseNach": 15,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 23,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 15,
+   "kasseNach": 15,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 15,
+   "kasseNach": 14,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Mühlschenke ist wieder frei. Brauhaus zum Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 24,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 14,
+   "kasseNach": 14,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 14,
+   "kasseNach": 13,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 25,
+   "zug": "sud:wuerze:grut",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Grut vom Grutamt",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 13,
+   "kasseNach": 13,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 25,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 13,
+   "kasseNach": 13,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 13,
+   "kasseNach": 12,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Landgasthof Hirsch ist wieder frei. Brauhaus zum Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 26,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 12,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 11,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Fährhaus am Fluss ist wieder frei. Brauhaus zum Adler hat die Bindung verloren.",
+    "Der Name des Hauses: Der Bierkieser findet den Sud dünn — und der Zeiger hängt."
+   ]
+  },
+  {
+   "jahr": 1350,
+   "woche": 27,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefezeug aus dem Bottich heben · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 11,
+   "kasseNach": 11,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 11,
+   "kasseNach": 10,
+   "abgebucht": 1,
+   "faesserVor": 12,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 28,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 10,
+   "kasseNach": 10,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 10,
+   "kasseNach": 9,
+   "abgebucht": 1,
+   "faesserVor": 10,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 9,
+   "kasseNach": 9,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 9,
+   "kasseNach": 0,
+   "abgebucht": 9,
+   "faesserVor": 9,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 0,
+   "kasseNach": 0,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1350,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 0,
+   "kasseNach": 48,
+   "abgebucht": -48,
+   "faesserVor": 9,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Kerbholz beim Grutherrn: 1 Kerbe steht noch im Holz. Je offener Kerbe nimmt der Grutherr drei Brautage des neuen Jahres.",
+    "Mühlschenke nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer unter der P",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Grutbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Der Rat schießt dem Haus 48 Pf auf den Notpfennig vor — angeschrieben, nicht geschenkt."
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48,
+   "kasseNach": 40,
+   "abgebucht": 8,
+   "faesserVor": 0,
+   "faesserNach": 5,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 2,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40,
+   "kasseNach": 40,
+   "abgebucht": 0,
+   "faesserVor": 5,
+   "faesserNach": 5,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 40,
+   "kasseNach": 40,
+   "abgebucht": 0,
+   "faesserVor": 5,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40,
+   "kasseNach": 39,
+   "abgebucht": 1,
+   "faesserVor": 4,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 3,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 39,
+   "kasseNach": 39,
+   "abgebucht": 0,
+   "faesserVor": 4,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39,
+   "kasseNach": 38,
+   "abgebucht": 1,
+   "faesserVor": 3,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 38,
+   "kasseNach": 38,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38,
+   "kasseNach": 37,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37,
+   "kasseNach": 36,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: In der Gasse spricht es sich herum: unter dem Zeiger kam dünnes Bier."
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 36,
+   "kasseNach": 35,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 35,
+   "kasseNach": 34,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 34,
+   "kasseNach": 33,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Kofent an, den zweiten Guss auf dieselben Treber."
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 9,
+   "zug": "sud:wuerze:grut",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Grut vom Grutamt",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 33,
+   "kasseNach": 33,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 9,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 33,
+   "kasseNach": 33,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 33,
+   "kasseNach": 32,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 32,
+   "kasseNach": 31,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: In der Gasse spricht es sich herum: unter dem Zeiger kam dünnes Bier.",
+    "Der Rat nimmt dem Haus das Zeichen: Der Rat nimmt dem Haus den Bierzeiger ab. Wer dreimal dünnes Bier unter dem Kranz au",
+    "Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben."
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 31,
+   "kasseNach": 30,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 30,
+   "kasseNach": 29,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 13,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 29,
+   "kasseNach": 29,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 29,
+   "kasseNach": 28,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 28,
+   "kasseNach": 27,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 27,
+   "kasseNach": 26,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 16,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 26,
+   "kasseNach": 26,
+   "abgebucht": 0,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 26,
+   "kasseNach": 25,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 25,
+   "kasseNach": 24,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 24,
+   "kasseNach": 23,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 19,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 23,
+   "kasseNach": 23,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 23,
+   "kasseNach": 22,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben."
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 22,
+   "kasseNach": 21,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 21,
+   "kasseNach": 20,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 20,
+   "kasseNach": 19,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 23,
+   "zug": "sud:wuerze:grut",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Grut vom Grutamt",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 19,
+   "kasseNach": 19,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 23,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 19,
+   "kasseNach": 19,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 19,
+   "kasseNach": 18,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 18,
+   "kasseNach": 17,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 17,
+   "kasseNach": 16,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 16,
+   "kasseNach": 15,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 27,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 15,
+   "kasseNach": 15,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 15,
+   "kasseNach": 14,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 14,
+   "kasseNach": 13,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 13,
+   "kasseNach": 12,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben."
+   ]
+  },
+  {
+   "jahr": 1351,
+   "woche": 30,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 12,
+   "abgebucht": 0,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1351,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 48,
+   "abgebucht": -36,
+   "faesserVor": 2,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Gasthof Lindenhof nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die",
+    "Schenke am Tor nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Re",
+    "Brückenwirt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe",
+    "Fährhaus am Fluss nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die",
+    "Klosterschenke Obernberg nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lass",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer unter der P",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Grutbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Umlage für den Mauerbau: 4 Pf angeschlagen. 20 Pf bleiben als Rückstand stehen.",
+    "Der Rat schießt dem Haus 44 Pf auf den Notpfennig vor — angeschrieben, nicht geschenkt."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48,
+   "kasseNach": 47,
+   "abgebucht": 1,
+   "faesserVor": 0,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Kofent an, den zweiten Guss auf dieselben Treber."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 47,
+   "kasseNach": 47,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47,
+   "kasseNach": 46,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46,
+   "kasseNach": 45,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45,
+   "kasseNach": 44,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44,
+   "kasseNach": 43,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 43,
+   "kasseNach": 43,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 43,
+   "kasseNach": 42,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 7,
+   "zug": "sud:wuerze:grut",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Grut vom Grutamt",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42,
+   "kasseNach": 42,
+   "abgebucht": 0,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42,
+   "kasseNach": 41,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41,
+   "kasseNach": 40,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Ausschank am Markt ist wieder frei. Brauhaus zum Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40,
+   "kasseNach": 39,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 10,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 39,
+   "kasseNach": 39,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39,
+   "kasseNach": 38,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38,
+   "kasseNach": 37,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Die Stunde kommt ohne Ansage. Heinrich Bruckner legt die Kelle hin, und was nur auf ihr Wort hin ging, geht nicht mehr.",
+    "Mechthild Bruckner übernimmt das Haus in 1352. Man sagt: Baut, bevor gerechnet ist.",
+    "Die Miterben nehmen ihren Teil in Naturalien: 1 Fass gehen aus dem Keller.",
+    "Das Haus geht auf Mechthild Bruckner über. Vorher hafteten 0 Bindungen am Haus und 0 an der Person; jetzt sind es 0 und "
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37,
+   "kasseNach": 36,
+   "abgebucht": 1,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 36,
+   "kasseNach": 35,
+   "abgebucht": 1,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 14,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 35,
+   "kasseNach": 35,
+   "abgebucht": 0,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 35,
+   "kasseNach": 34,
+   "abgebucht": 1,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 34,
+   "kasseNach": 33,
+   "abgebucht": 1,
+   "faesserVor": 1,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Grutknecht hat den Hopfen unter der Grut gefunden. Der Grutherr lässt die Kammer räumen und einen Bottich ausgießen."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 33,
+   "kasseNach": 33,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 33,
+   "kasseNach": 32,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Grutknecht hat den Hopfen unter der Grut gefunden. Der Grutherr lässt die Kammer räumen und einen Bottich ausgießen."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 32,
+   "kasseNach": 31,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 31,
+   "kasseNach": 30,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Klosterschenke Obernberg ist wieder frei. Brauhaus zum Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 30,
+   "kasseNach": 29,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 20,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 29,
+   "kasseNach": 29,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 29,
+   "kasseNach": 28,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 21,
+   "zug": "sud:wuerze:grut",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Grut vom Grutamt",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 28,
+   "kasseNach": 28,
+   "abgebucht": 0,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 28,
+   "kasseNach": 27,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 27,
+   "kasseNach": 26,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 26,
+   "kasseNach": 25,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 24,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 25,
+   "kasseNach": 25,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 25,
+   "kasseNach": 24,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 24,
+   "kasseNach": 23,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 23,
+   "kasseNach": 22,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 22,
+   "kasseNach": 21,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 28,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 21,
+   "kasseNach": 21,
+   "abgebucht": 0,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 21,
+   "kasseNach": 20,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 20,
+   "kasseNach": 20,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1352,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 20,
+   "kasseNach": 19,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Name des Hauses: Der Bierkieser war da. Der Zeiger hing nicht — er hat nichts aufgeschrieben."
+   ]
+  },
+  {
+   "jahr": 1352,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 19,
+   "kasseNach": 48,
+   "abgebucht": -29,
+   "faesserVor": 2,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Zum Goldenen Ochsen nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. D",
+    "Pfarrschenke St. Michael nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lass",
+    "Landgasthof Hirsch nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Ausschank am Markt nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 8 · 0 · 0 von 9 Fass",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Sommerbrauverbot. Zwischen Georgi und Michaeli brennt kein Feuer unter der P",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Grutbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, aber es liefert nirgendwohin mehr. Nicht das Geld ist aus",
+    "Der Rat schießt dem Haus 37 Pf auf den Notpfennig vor — angeschrieben, nicht geschenkt."
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48,
+   "kasseNach": 47,
+   "abgebucht": 1,
+   "faesserVor": 0,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Kofent an, den zweiten Guss auf dieselben Treber."
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 47,
+   "kasseNach": 47,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47,
+   "kasseNach": 46,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46,
+   "kasseNach": 45,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45,
+   "kasseNach": 44,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Grutknecht hat den Hopfen unter der Grut gefunden. Der Grutherr lässt die Kammer räumen und einen Bottich ausgießen."
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 5,
+   "zug": "sud:wuerze:grut",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Grut vom Grutamt",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44,
+   "kasseNach": 44,
+   "abgebucht": 0,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44,
+   "kasseNach": 43,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 43,
+   "kasseNach": 43,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 43,
+   "kasseNach": 42,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Rat bietet den Abstand. Der Stadtschreiber steht im Hof. Ein Braurecht ist geliehen, nicht gekauft: wessen Bier kein"
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42,
+   "kasseNach": 41,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41,
+   "kasseNach": 40,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40,
+   "kasseNach": 39,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39,
+   "kasseNach": 38,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 11,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anbrechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 38,
+   "kasseNach": 38,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38,
+   "kasseNach": 37,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Klosterschenke Obernberg ist wieder frei. Brauhaus zum Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1353,
+   "woche": 12,
+   "zug": "sud:wuerze:sack",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Hopfen im Sack, heimlich",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37,
+   "kasseNach": 37,
+   "abgebucht": 0,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "grut",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1353,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37,
+   "kasseNach": 36,
+   "abgebucht": 1,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "verfahrenNach": {
+    "wuerze": "sack",
+    "wasser": "roehre"
+   },
+   "chronik": [
+    "Der Rat entzieht dem Haus zum Anker das Braurecht: seit 12 Wochen hat keine Schenke der Stadt ein Fass genommen. Ein Bra"
+   ]
+  }
+ ]
+}

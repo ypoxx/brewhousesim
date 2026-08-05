@@ -467,3 +467,73 @@ nichts. Bei allen acht unwiderruflichen Karten liegt der Satz
 *Wichtig:* das ist **kein** `--s`-Problem — auf der Entwurfsleinwand
 2752x1536 sind es dieselben 3 von 21 Zeilen, nur bei 16 px. Es wird also von
 keiner Lesbarkeitsrunde nebenbei mitgeheilt.
+
+---
+
+## 1 — DIE KLEMME (b): alle vier Epochen, ueber die ganze Partie
+
+`werkbank/schuss/sud-blind-r2/lage/auf-e1..4.json`, 1366x768, Sudbrett
+aufgeschlagen und offen gehalten, sonst nur WEITER, jeder Lauf einzeln durchs
+Messfenster. **0 Seitenfehler, `BRAUHAUS.lage` durchgehend 0 in allen vier.**
+
+| Epoche | Wochen | Brett **im Bild** | **KLEMME** | dabei `soll-aus=0` und aus | Brett fiel zu | Reiterklicks bis offen **und bedienbar** |
+|---|---|---|---|---|---|---|
+| 1350 | 103 | 98 | **0** | **0** | 5x | 1 · 1 · 1 · 1 · 1 |
+| 1600 | 103 | 98 | **0** | **0** | 5x | 1 · 1 · 1 · 1 · 1 |
+| 1884 | 101 | 96 | **0** | **0** | 5x | 1 · 1 · 1 · 1 · 1 |
+| 1970 | 99 | 94 | **0** | **0** | 5x | 1 · 1 · 1 · 1 · 1 |
+
+**Die Klemme gibt es nicht mehr. 0 von 386 Wochen, in denen das Brett im Bild
+stand.** Kein einziger Knopf war je gegen den erklaerten Willen des Spiels
+abgeschaltet, waehrend das Brett offen und treffbar dastand. Und **kein
+einziger** der zwanzig Faelle, in denen das Brett zufiel, brauchte einen
+zweiten Reiterklick.
+
+Die Gruende der abgeschalteten Knoepfe sind in allen vier Epochen dieselben
+drei, und alle drei treffen zu: `spiel` (309–478) — die Kasse traegt es nicht
+oder das Siegel liegt darauf · `brett-offen` (384–392) — der Kesselzettel
+tritt hinter das eigene aufgeschlagene Brett zurueck · `brett-zugeklappt`
+(45–55) — die fuenf Wochen, in denen das Brett wirklich zu war. Dazu 3 bis 16
+`verdeckt`.
+
+**LATTE-2-Spalte „erreichbar UND aktiv": diese Zahl ist an DER SUD jetzt
+ehrlich.** `disabled` und `data-soll-aus` sagen dasselbe, wenn das Brett offen
+ist, und `data-aus-grund` nennt den Unterschied, wenn nicht.
+
+---
+
+## 2 — DIE PREISSCHILDER (b): ueber die ganze Partie gezaehlt
+
+Gezaehlt je Woche: `button[data-zug^="sud:"]`, die **zugleich** sichtbar,
+`disabled=false` und per `elementFromPoint` von der Maus erreichbar sind.
+**Muenze** = `data-preis`; **Bier** = `data-preis-art="fass"`.
+
+| Epoche | Wochen | 0 Schilder | 1 | 2 | 3+ | **Wochen mit ≥ 2 (Muenze)** | ≥ 2 mit Bier |
+|---|---|---|---|---|---|---|---|
+| 1350 | 103 | 38 | 16 | 40 | 9 | **49 (48 %)** | 99 (96 %) |
+| **1600** | 103 | 1 | 4 | 34 | 64 | **98 (95 %)** | 99 (96 %) |
+| 1884 | 101 | 1 | 4 | 37 | 59 | **96 (95 %)** | 97 (96 %) |
+| 1970 | 99 | 1 | 4 | 17 | 77 | **94 (95 %)** | 95 (96 %) |
+
+**1600 ist nicht mehr leer — es ist jetzt die dichteste Epoche.** Der
+Quelltext des Stuecks nennt als Ausgangslage *„Preisschilder DES SUD
+nebeneinander: 0 in 364 von 400 Wochen, 2 in genau EINER"*
+(`sud-daten.js:277–282`). Gemessen am laufenden Spiel: **98 von 103 Wochen mit
+zwei oder mehr, davon 64 mit dreien.** Die getragene Karte ist der
+`weizenbrief` (98 Wochen mit Schild), daneben der `keller` (64) und der
+Gaerbottich (98).
+
+**Die schwaechste Epoche ist jetzt 1350 mit 48 %**, und der Grund ist nicht
+die Bauart, sondern die Armut: die Kasse faellt im sparsamen Stil auf **0**
+(min 0 von 112), und ein Preisschild, das die Kasse nicht traegt, schaltet
+sich ab. Der Hopfenbrief (78 Pf) steht in nur 9 der 103 Wochen bedienbar da.
+Das ist eine ehrliche Enge und keine leere Tafel — in denselben 103 Wochen
+stehen in **99** von ihnen zwei einander ausschliessende Entscheidungen mit
+Preisschild am Schirm, wenn man die in **Bier** bezahlten mitzaehlt (die
+beiden Anstich-Knoepfe).
+
+**Vier verschiedene Verblisten:** 1350 wuerzen/schoepfen · 1600
+schuetten/gaeren · 1884 kuehlen/anstellen · 1970 fuehren/behandeln, dazu vier
+verschiedene Nebenbedingungen am Gaerraum. **Keine Epoche traegt die Karten
+einer anderen.**
+

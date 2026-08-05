@@ -1,0 +1,4767 @@
+{
+ "epoche": 2,
+ "wochen": 150,
+ "abbruch": "Partie beendet",
+ "fehler": [],
+ "reiterKlicks": [
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "schluss": {
+  "jahr": 1603,
+  "woche": 13,
+  "ende": true,
+  "kasse": 435,
+  "rohstoff": 3,
+  "faesser": 21,
+  "plaetze": 24,
+  "guete": 98,
+  "verfahren": {
+   "schuettung": "weizenbrief",
+   "gaerung": "keller"
+  },
+  "gaerfrei": 36,
+  "chronik": 62,
+  "lage": 0
+ },
+ "klicks": 202,
+ "scheinpreise": [],
+ "protokoll": [
+  {
+   "jahr": 1600,
+   "woche": 1,
+   "zug": "sud:schuettung:weizenbrief",
+   "warum": "unwiderrufliche Festlegung kaufen",
+   "aufschrift": "Weizen aus dem Kornhaus, mit Brief −180 fl",
+   "preisschild": -180,
+   "fassschild": null,
+   "kasseVor": 640,
+   "kasseNach": 460,
+   "abgebucht": 180,
+   "faesserVor": 8,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "schuettung": "rein",
+    "gaerung": "ober"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "ober"
+   },
+   "chronik": [
+    "Unwiderruflich festgelegt: Weizen aus dem Kornhaus, mit Brief. Der Rat schreibt dem Haus eine feste Weizenzuteilung ins "
+   ],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1600,
+   "woche": 1,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 460,
+   "kasseNach": 460,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "ober"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "ober"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 460,
+   "kasseNach": 438,
+   "abgebucht": 22,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "ober"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "ober"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 2,
+   "zug": "sud:gaerung:keller",
+   "warum": "unwiderrufliche Festlegung kaufen",
+   "aufschrift": "Kellergärung im Felsenkeller −260 fl",
+   "preisschild": -260,
+   "fassschild": null,
+   "kasseVor": 438,
+   "kasseNach": 178,
+   "abgebucht": 260,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "ober"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Unwiderruflich festgelegt: Kellergärung im Felsenkeller. Ein Keller in den Fels gebrochen, mit Eis beschickt. Die kalte "
+   ],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1600,
+   "woche": 2,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 178,
+   "kasseNach": 178,
+   "abgebucht": 0,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 178,
+   "kasseNach": 156,
+   "abgebucht": 22,
+   "faesserVor": 8,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 3,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 156,
+   "kasseNach": 156,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 156,
+   "kasseNach": 134,
+   "abgebucht": 22,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 4,
+   "zug": "sud:gaerraum",
+   "warum": "Gaerraum wird eng",
+   "aufschrift": "Gärbottich setzen lassen · +10 Fass −78 fl",
+   "preisschild": -78,
+   "fassschild": null,
+   "kasseVor": 134,
+   "kasseNach": 56,
+   "abgebucht": 78,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1600,
+   "woche": 4,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 56,
+   "kasseNach": 56,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 56,
+   "kasseNach": 34,
+   "abgebucht": 22,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 5,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 34,
+   "kasseNach": 34,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 34,
+   "kasseNach": 12,
+   "abgebucht": 22,
+   "faesserVor": 15,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 6,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 12,
+   "abgebucht": 0,
+   "faesserVor": 22,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 10,
+   "abgebucht": 2,
+   "faesserVor": 22,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 7,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 10,
+   "kasseNach": 10,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 10,
+   "kasseNach": 8,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Gasthof Lindenhof geht an Braustatt Adler. Gebunden mit Pachtvertrag bis 1612. Ablösen kostet 756 fl.",
+    "Brückenwirt ist wieder frei. Braustatt Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 8,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8,
+   "kasseNach": 8,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8,
+   "kasseNach": 6,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 9,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6,
+   "kasseNach": 6,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6,
+   "kasseNach": 4,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Schenke am Tor geht an Braustatt Adler. Gebunden mit Pachtvertrag bis 1612. Ablösen kostet 336 fl."
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 10,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4,
+   "kasseNach": 4,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4,
+   "kasseNach": 2,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 11,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 2,
+   "kasseNach": 2,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 2,
+   "kasseNach": 0,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Braustatt Adler: Ein Feist wird Bürgermeister. Solange er es ist, schreibt die Kanzlei für ihn."
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 12,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 0,
+   "kasseNach": 0,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 0,
+   "kasseNach": 0,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Barbara Bruckner wird zu Grabe getragen, und mit ihr jedes Wort, das nie ins Briefbuch kam.",
+    "Magdalena Bruckner übernimmt das Haus in 1600. Man sagt: Hat die Kirche im Rücken und die Zunft im Nacken.",
+    "Mit der Hand fällt, was nur an ihr hing — 2 Häuser halten nicht mehr: Fährhaus am Fluss, Landgasthof Hirsch.",
+    "Die Miterben nehmen ihren Teil in Naturalien: 8 Fass gehen aus dem Gewölbe.",
+    "Das Haus geht auf Magdalena Bruckner über. Vorher hafteten 0 Bindungen am Haus und 2 an der Person; jetzt sind es 0 und "
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 13,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 0,
+   "kasseNach": 0,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 0,
+   "kasseNach": 58,
+   "abgebucht": -58,
+   "faesserVor": 16,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 14,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 58,
+   "kasseNach": 58,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 58,
+   "kasseNach": 56,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 15,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 56,
+   "kasseNach": 56,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 56,
+   "kasseNach": 54,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 16,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 54,
+   "kasseNach": 54,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 54,
+   "kasseNach": 52,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 17,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 52,
+   "kasseNach": 52,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 52,
+   "kasseNach": 50,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 18,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 50,
+   "kasseNach": 50,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 50,
+   "kasseNach": 28,
+   "abgebucht": 22,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 19,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 28,
+   "kasseNach": 28,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 28,
+   "kasseNach": 26,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 20,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 26,
+   "kasseNach": 26,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 26,
+   "kasseNach": 24,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 21,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 24,
+   "kasseNach": 24,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 24,
+   "kasseNach": 22,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 22,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 22,
+   "kasseNach": 22,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 22,
+   "kasseNach": 20,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Schenke am Tor ist wieder frei. Braustatt Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 23,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 20,
+   "kasseNach": 20,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 20,
+   "kasseNach": 18,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Zum Goldenen Ochsen ist wieder frei. Braustatt Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1600,
+   "woche": 24,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 18,
+   "kasseNach": 18,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 18,
+   "kasseNach": 16,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 25,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 16,
+   "kasseNach": 16,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 16,
+   "kasseNach": 14,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 26,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 14,
+   "kasseNach": 14,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 14,
+   "kasseNach": 12,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 27,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 12,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 12,
+   "kasseNach": 10,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 28,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 10,
+   "kasseNach": 10,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 10,
+   "kasseNach": 8,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 29,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8,
+   "kasseNach": 8,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8,
+   "kasseNach": 6,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 30,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6,
+   "kasseNach": 6,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1600,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6,
+   "kasseNach": 280,
+   "abgebucht": -274,
+   "faesserVor": 24,
+   "faesserNach": 18,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Anschrift bei Mälzer und Böttcher: 1 Kerbe steht noch im Holz. Je offener Kerbe zieht die Zunft zwei Sude der Reihe ein.",
+    "Zum Goldenen Ochsen nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. D",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Das Sommerbrauverbot steht seit 1553 in der Ordnung: von Georgi bis Michaeli",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Braunbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Türkensteuer: 14 fl angeschlagen. 98 fl bleiben als Rückstand stehen.",
+    "Der Rat schießt dem Haus 280 fl auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Sommer über: 3 Gärbottiche werden ausgeschlagen und aufs Fass gelegt.",
+    "Der Name des Hauses: Die Zunftschau nennt das Haus unter den ordentlichen."
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 1,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 280,
+   "kasseNach": 280,
+   "abgebucht": 0,
+   "faesserVor": 18,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 280,
+   "kasseNach": 258,
+   "abgebucht": 22,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 2,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 258,
+   "kasseNach": 258,
+   "abgebucht": 0,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 258,
+   "kasseNach": 236,
+   "abgebucht": 22,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 3,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 236,
+   "kasseNach": 236,
+   "abgebucht": 0,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 236,
+   "kasseNach": 214,
+   "abgebucht": 22,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 4,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 214,
+   "kasseNach": 214,
+   "abgebucht": 0,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 214,
+   "kasseNach": 192,
+   "abgebucht": 22,
+   "faesserVor": 17,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 5,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 192,
+   "kasseNach": 192,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 192,
+   "kasseNach": 190,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 6,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 190,
+   "kasseNach": 190,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 190,
+   "kasseNach": 188,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Klosterschenke Obernberg ist wieder frei. Braustatt Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 7,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 188,
+   "kasseNach": 188,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 188,
+   "kasseNach": 186,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 8,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 186,
+   "kasseNach": 186,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 186,
+   "kasseNach": 184,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 9,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 184,
+   "kasseNach": 184,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 184,
+   "kasseNach": 182,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen. 5 Fass Braunbier sind verloren — kein Pfennig, aber die Pf"
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 10,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 182,
+   "kasseNach": 182,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 182,
+   "kasseNach": 180,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 11,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 180,
+   "kasseNach": 180,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 180,
+   "kasseNach": 178,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 12,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 178,
+   "kasseNach": 178,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 178,
+   "kasseNach": 176,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 13,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 176,
+   "kasseNach": 176,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 176,
+   "kasseNach": 174,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 14,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 174,
+   "kasseNach": 174,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 174,
+   "kasseNach": 172,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 15,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 172,
+   "kasseNach": 172,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 172,
+   "kasseNach": 170,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 16,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 170,
+   "kasseNach": 170,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 170,
+   "kasseNach": 168,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Mühlschenke ist wieder frei. Braustatt Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 17,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 168,
+   "kasseNach": 168,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 168,
+   "kasseNach": 166,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 18,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 166,
+   "kasseNach": 166,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 166,
+   "kasseNach": 164,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 19,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 164,
+   "kasseNach": 164,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 164,
+   "kasseNach": 162,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 20,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 162,
+   "kasseNach": 162,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 162,
+   "kasseNach": 160,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 21,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 160,
+   "kasseNach": 160,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 160,
+   "kasseNach": 158,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 22,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 158,
+   "kasseNach": 158,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 158,
+   "kasseNach": 156,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 23,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 156,
+   "kasseNach": 156,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 156,
+   "kasseNach": 154,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 24,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 154,
+   "kasseNach": 154,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 154,
+   "kasseNach": 152,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 25,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 152,
+   "kasseNach": 152,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 152,
+   "kasseNach": 135,
+   "abgebucht": 17,
+   "faesserVor": 24,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 26,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 135,
+   "kasseNach": 135,
+   "abgebucht": 0,
+   "faesserVor": 22,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 135,
+   "kasseNach": 133,
+   "abgebucht": 2,
+   "faesserVor": 22,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen. 9 Fass Schankbier sind verloren — kein Pfennig, aber die P"
+   ]
+  },
+  {
+   "jahr": 1601,
+   "woche": 27,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 133,
+   "kasseNach": 133,
+   "abgebucht": 0,
+   "faesserVor": 22,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 133,
+   "kasseNach": 131,
+   "abgebucht": 2,
+   "faesserVor": 21,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 28,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 131,
+   "kasseNach": 131,
+   "abgebucht": 0,
+   "faesserVor": 21,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 131,
+   "kasseNach": 129,
+   "abgebucht": 2,
+   "faesserVor": 20,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 129,
+   "kasseNach": 129,
+   "abgebucht": 0,
+   "faesserVor": 20,
+   "faesserNach": 19,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 129,
+   "kasseNach": 127,
+   "abgebucht": 2,
+   "faesserVor": 19,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 127,
+   "kasseNach": 127,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1601,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 127,
+   "kasseNach": 280,
+   "abgebucht": -153,
+   "faesserVor": 11,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Pfarrschenke St. Michael nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lass",
+    "Mühlschenke nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe",
+    "Brückenwirt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe",
+    "Ausschank am Markt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Klosterschenke Obernberg nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lass",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Das Sommerbrauverbot steht seit 1553 in der Ordnung: von Georgi bis Michaeli",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Braunbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Der Rat schießt dem Haus 172 fl auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Die Wirte reden: unter dem Schild kam schlechtes Bier."
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 280,
+   "kasseNach": 278,
+   "abgebucht": 2,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Nachbier an, den zweiten Guss auf dieselben Trebe"
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 2,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 278,
+   "kasseNach": 278,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 278,
+   "kasseNach": 276,
+   "abgebucht": 2,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 3,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 276,
+   "kasseNach": 276,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 276,
+   "kasseNach": 259,
+   "abgebucht": 17,
+   "faesserVor": 0,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 4,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 259,
+   "kasseNach": 259,
+   "abgebucht": 0,
+   "faesserVor": 6,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 259,
+   "kasseNach": 257,
+   "abgebucht": 2,
+   "faesserVor": 6,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen. 6 Fass Nachbier sind verloren — kein Pfennig, aber die Pfa"
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 5,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 257,
+   "kasseNach": 257,
+   "abgebucht": 0,
+   "faesserVor": 6,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 257,
+   "kasseNach": 255,
+   "abgebucht": 2,
+   "faesserVor": 6,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 255,
+   "kasseNach": 255,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 255,
+   "kasseNach": 253,
+   "abgebucht": 2,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 7,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 253,
+   "kasseNach": 253,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 253,
+   "kasseNach": 251,
+   "abgebucht": 2,
+   "faesserVor": 13,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 8,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 251,
+   "kasseNach": 251,
+   "abgebucht": 0,
+   "faesserVor": 13,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 251,
+   "kasseNach": 249,
+   "abgebucht": 2,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 9,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 249,
+   "kasseNach": 249,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 249,
+   "kasseNach": 247,
+   "abgebucht": 2,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 10,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 247,
+   "kasseNach": 247,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 247,
+   "kasseNach": 245,
+   "abgebucht": 2,
+   "faesserVor": 10,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 11,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 245,
+   "kasseNach": 245,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 245,
+   "kasseNach": 243,
+   "abgebucht": 2,
+   "faesserVor": 9,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 12,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 243,
+   "kasseNach": 243,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 243,
+   "kasseNach": 241,
+   "abgebucht": 2,
+   "faesserVor": 8,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Magdalena Bruckner wird zu Grabe getragen, und mit ihr jedes Wort, das nie ins Briefbuch kam.",
+    "Kaspar Bruckner übernimmt das Haus in 1602. Man sagt: Baut, bevor gerechnet ist.",
+    "Die Miterben nehmen ihren Teil in Naturalien: 1 Fass gehen aus dem Gewölbe.",
+    "Das Haus geht auf Kaspar Bruckner über. Vorher hafteten 0 Bindungen am Haus und 0 an der Person; jetzt sind es 0 und 0. "
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 241,
+   "kasseNach": 239,
+   "abgebucht": 2,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 239,
+   "kasseNach": 237,
+   "abgebucht": 2,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 237,
+   "kasseNach": 235,
+   "abgebucht": 2,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 235,
+   "kasseNach": 233,
+   "abgebucht": 2,
+   "faesserVor": 1,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 17,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 233,
+   "kasseNach": 233,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 233,
+   "kasseNach": 216,
+   "abgebucht": 17,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 18,
+   "zug": "sud:gaerraum",
+   "warum": "Gaerraum wird eng",
+   "aufschrift": "Gärbottich setzen lassen · +10 Fass −98 fl",
+   "preisschild": -98,
+   "fassschild": null,
+   "kasseVor": 216,
+   "kasseNach": 118,
+   "abgebucht": 98,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1602,
+   "woche": 18,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 118,
+   "kasseNach": 118,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 118,
+   "kasseNach": 101,
+   "abgebucht": 17,
+   "faesserVor": 0,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 19,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 101,
+   "kasseNach": 101,
+   "abgebucht": 0,
+   "faesserVor": 6,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 101,
+   "kasseNach": 99,
+   "abgebucht": 2,
+   "faesserVor": 6,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen. 9 Fass Schankbier sind verloren — kein Pfennig, aber die P"
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 20,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 99,
+   "kasseNach": 99,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 99,
+   "kasseNach": 97,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 21,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 97,
+   "kasseNach": 97,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 97,
+   "kasseNach": 95,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 22,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 95,
+   "kasseNach": 95,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 95,
+   "kasseNach": 93,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 23,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 93,
+   "kasseNach": 93,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 93,
+   "kasseNach": 91,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 24,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 91,
+   "kasseNach": 91,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 91,
+   "kasseNach": 89,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 25,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 89,
+   "kasseNach": 89,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 89,
+   "kasseNach": 87,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 26,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 87,
+   "kasseNach": 87,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 87,
+   "kasseNach": 85,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Der Name des Hauses: Zwei Wirte schicken das Fass zurück — unter dem Anker war es nicht dasselbe."
+   ]
+  },
+  {
+   "jahr": 1602,
+   "woche": 27,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 85,
+   "kasseNach": 85,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 85,
+   "kasseNach": 83,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 28,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 83,
+   "kasseNach": 83,
+   "abgebucht": 0,
+   "faesserVor": 20,
+   "faesserNach": 19,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 83,
+   "kasseNach": 81,
+   "abgebucht": 2,
+   "faesserVor": 19,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 81,
+   "kasseNach": 81,
+   "abgebucht": 0,
+   "faesserVor": 8,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 81,
+   "kasseNach": 79,
+   "abgebucht": 2,
+   "faesserVor": 7,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Fass anstechen · +14 · 1 Fass",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 79,
+   "kasseNach": 79,
+   "abgebucht": 0,
+   "faesserVor": 7,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1602,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 79,
+   "kasseNach": 280,
+   "abgebucht": -201,
+   "faesserVor": 6,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Gasthof Lindenhof nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 48 · 0 · 0 von 54 Fas",
+    "Schenke am Tor nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Re",
+    "Fährhaus am Fluss nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 16 · 0 · 0 von 18 Fas",
+    "Landgasthof Hirsch nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Das Sommerbrauverbot steht seit 1553 in der Ordnung: von Georgi bis Michaeli",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Braunbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, aber es liefert nirgendwohin mehr. Nicht das Geld ist aus",
+    "Kriegskontribution: 51 fl angeschlagen. 152 fl bleiben als Rückstand stehen.",
+    "Der Rat schießt dem Haus 219 fl auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Die Wirte reden: unter dem Schild kam schlechtes Bier.",
+    "Die Zunft nimmt dem Haus das Zeichen: Die Zunft streicht das Haus aus der Ordnung und nimmt das Zunftzeichen ab. Die Wir"
+   ]
+  },
+  {
+   "jahr": 1603,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 280,
+   "kasseNach": 278,
+   "abgebucht": 2,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Nachbier an, den zweiten Guss auf dieselben Trebe"
+   ]
+  },
+  {
+   "jahr": 1603,
+   "woche": 2,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 278,
+   "kasseNach": 278,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 278,
+   "kasseNach": 261,
+   "abgebucht": 17,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 3,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 261,
+   "kasseNach": 261,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 261,
+   "kasseNach": 244,
+   "abgebucht": 17,
+   "faesserVor": 0,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 4,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 244,
+   "kasseNach": 244,
+   "abgebucht": 0,
+   "faesserVor": 6,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 244,
+   "kasseNach": 242,
+   "abgebucht": 2,
+   "faesserVor": 6,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 5,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 242,
+   "kasseNach": 242,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 242,
+   "kasseNach": 240,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Ein Bottich verdorben. Die Ordnung verlangt, ihn auszugießen. 9 Fass Schankbier sind verloren — kein Pfennig, aber die P"
+   ]
+  },
+  {
+   "jahr": 1603,
+   "woche": 6,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 240,
+   "kasseNach": 240,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 240,
+   "kasseNach": 238,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Der Mühlbräu bietet auf die Gerechtigkeit. Die Braugerechtigkeit klebt am Haus und ist verkäuflich — das ist der ganze U"
+   ]
+  },
+  {
+   "jahr": 1603,
+   "woche": 7,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 238,
+   "kasseNach": 238,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 238,
+   "kasseNach": 236,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Brückenwirt ist wieder frei. Braustatt Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1603,
+   "woche": 8,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 236,
+   "kasseNach": 236,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 236,
+   "kasseNach": 234,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 9,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 234,
+   "kasseNach": 234,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 234,
+   "kasseNach": 232,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 10,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 232,
+   "kasseNach": 232,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 232,
+   "kasseNach": 230,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 11,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 230,
+   "kasseNach": 230,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 230,
+   "kasseNach": 228,
+   "abgebucht": 2,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 12,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Stellhefe aus dem Gärbottich nehmen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 228,
+   "kasseNach": 228,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1603,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 228,
+   "kasseNach": 435,
+   "abgebucht": -207,
+   "faesserVor": 24,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "verfahrenNach": {
+    "schuettung": "weizenbrief",
+    "gaerung": "keller"
+   },
+   "chronik": [
+    "Die Zunft streicht das Haus zum Anker aus der Reihe: seit 12 Wochen hat kein Wirt der Stadt ein Fass genommen. Die Reihe"
+   ]
+  }
+ ]
+}

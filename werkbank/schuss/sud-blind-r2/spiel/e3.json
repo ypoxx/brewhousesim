@@ -1,0 +1,4968 @@
+{
+ "epoche": 3,
+ "wochen": 150,
+ "abbruch": "Partie beendet",
+ "fehler": [],
+ "reiterKlicks": [
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "schluss": {
+  "jahr": 1887,
+  "woche": 11,
+  "ende": true,
+  "kasse": 3960,
+  "rohstoff": 0,
+  "faesser": 16,
+  "plaetze": 90,
+  "guete": 98,
+  "verfahren": {
+   "kaelte": "natureis",
+   "hefe": "reinzucht"
+  },
+  "gaerfrei": 136,
+  "chronik": 72,
+  "lage": 0
+ },
+ "klicks": 210,
+ "scheinpreise": [],
+ "protokoll": [
+  {
+   "jahr": 1884,
+   "woche": 1,
+   "zug": "sud:hefe:reinzucht",
+   "warum": "unwiderrufliche Festlegung kaufen",
+   "aufschrift": "Reinzuchthefe nach Hansen −3.400 M",
+   "preisschild": -3400,
+   "fassschild": null,
+   "kasseVor": 14250,
+   "kasseNach": 10850,
+   "abgebucht": 3400,
+   "faesserVor": 7,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "betrieb"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Unwiderruflich festgelegt: Reinzuchthefe nach Hansen. Ein einziger Hefestamm, im Laboratorium vermehrt, jedes Jahr neu b"
+   ],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1884,
+   "woche": 1,
+   "zug": "sud:gaerraum",
+   "warum": "Gaerraum wird eng",
+   "aufschrift": "Gärbottich aufstellen · +60 hl −1.900 M",
+   "preisschild": -1900,
+   "fassschild": null,
+   "kasseVor": 10850,
+   "kasseNach": 8950,
+   "abgebucht": 1900,
+   "faesserVor": 7,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1884,
+   "woche": 1,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8950,
+   "kasseNach": 8950,
+   "abgebucht": 0,
+   "faesserVor": 7,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8950,
+   "kasseNach": 8478,
+   "abgebucht": 472,
+   "faesserVor": 7,
+   "faesserNach": 31,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 2,
+   "zug": "sud:gaerraum",
+   "warum": "Gaerraum wird eng",
+   "aufschrift": "Gärbottich aufstellen · +60 hl −2.470 M",
+   "preisschild": -2470,
+   "fassschild": null,
+   "kasseVor": 8478,
+   "kasseNach": 6008,
+   "abgebucht": 2470,
+   "faesserVor": 31,
+   "faesserNach": 31,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1884,
+   "woche": 2,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6008,
+   "kasseNach": 6008,
+   "abgebucht": 0,
+   "faesserVor": 31,
+   "faesserNach": 31,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6008,
+   "kasseNach": 5536,
+   "abgebucht": 472,
+   "faesserVor": 31,
+   "faesserNach": 55,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 3,
+   "zug": "sud:gaerraum",
+   "warum": "Gaerraum wird eng",
+   "aufschrift": "Gärbottich aufstellen · +60 hl −3.211 M",
+   "preisschild": -3211,
+   "fassschild": null,
+   "kasseVor": 5536,
+   "kasseNach": 2325,
+   "abgebucht": 3211,
+   "faesserVor": 55,
+   "faesserNach": 55,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1884,
+   "woche": 3,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 2325,
+   "kasseNach": 2325,
+   "abgebucht": 0,
+   "faesserVor": 55,
+   "faesserNach": 55,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 2325,
+   "kasseNach": 1853,
+   "abgebucht": 472,
+   "faesserVor": 55,
+   "faesserNach": 79,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Brückenwirt geht an Brauerei Adler. Gebunden mit Bierlieferungsvertrag bis 1894. Ablösen kostet 4.435 M."
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 4,
+   "zug": "sud:kaelte:warm",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Ohne Kühlung durchgären lassen",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1853,
+   "kasseNach": 1853,
+   "abgebucht": 0,
+   "faesserVor": 79,
+   "faesserNach": 79,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Bottich war als Lagerbier angesetzt und schlägt als Schankbier aus: das Verfahren des Hauses trägt nicht höher. Gast"
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 4,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1853,
+   "kasseNach": 1853,
+   "abgebucht": 0,
+   "faesserVor": 79,
+   "faesserNach": 55,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1853,
+   "kasseNach": 1381,
+   "abgebucht": 472,
+   "faesserVor": 55,
+   "faesserNach": 48,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Ein Bottich mit Fremdhefe. Er geht in den Ausguss. 36 hl Lagerbier sind verloren — kein Pfennig, aber die Pfanne hat ums"
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 5,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1381,
+   "kasseNach": 1381,
+   "abgebucht": 0,
+   "faesserVor": 48,
+   "faesserNach": 48,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1381,
+   "kasseNach": 1357,
+   "abgebucht": 24,
+   "faesserVor": 48,
+   "faesserNach": 72,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 6,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1357,
+   "kasseNach": 1357,
+   "abgebucht": 0,
+   "faesserVor": 72,
+   "faesserNach": 72,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1357,
+   "kasseNach": 1333,
+   "abgebucht": 24,
+   "faesserVor": 72,
+   "faesserNach": 90,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 7,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1333,
+   "kasseNach": 1333,
+   "abgebucht": 0,
+   "faesserVor": 90,
+   "faesserNach": 90,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1333,
+   "kasseNach": 1309,
+   "abgebucht": 24,
+   "faesserVor": 90,
+   "faesserNach": 79,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Schenke am Tor geht an Brauerei Adler. Gebunden mit Depotvertrag bis 1896. Ablösen kostet 5.018 M.",
+    "Mühlschenke ist wieder frei. Brauerei Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 8,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1309,
+   "kasseNach": 1309,
+   "abgebucht": 0,
+   "faesserVor": 79,
+   "faesserNach": 78,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1309,
+   "kasseNach": 1285,
+   "abgebucht": 24,
+   "faesserVor": 78,
+   "faesserNach": 78,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Fluss trägt. Die Knechte schneiden Eis und fahren es in den Keller — 4 Fuder in der Woche, solange der Frost hält. M"
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 9,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1285,
+   "kasseNach": 1285,
+   "abgebucht": 0,
+   "faesserVor": 78,
+   "faesserNach": 77,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1285,
+   "kasseNach": 1261,
+   "abgebucht": 24,
+   "faesserVor": 77,
+   "faesserNach": 53,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 10,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1261,
+   "kasseNach": 1261,
+   "abgebucht": 0,
+   "faesserVor": 53,
+   "faesserNach": 52,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1261,
+   "kasseNach": 1237,
+   "abgebucht": 24,
+   "faesserVor": 52,
+   "faesserNach": 34,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 11,
+   "zug": "sud:kaelte:natureis",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Natureis aus dem Fluss",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1237,
+   "kasseNach": 1237,
+   "abgebucht": 0,
+   "faesserVor": 34,
+   "faesserNach": 34,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 11,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1237,
+   "kasseNach": 1237,
+   "abgebucht": 0,
+   "faesserVor": 34,
+   "faesserNach": 33,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1237,
+   "kasseNach": 1213,
+   "abgebucht": 24,
+   "faesserVor": 33,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 12,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1213,
+   "kasseNach": 1213,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1213,
+   "kasseNach": 1189,
+   "abgebucht": 24,
+   "faesserVor": 23,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Brauerei Adler druckt ein Etikett, das dem eigenen bis auf die Farbe gleicht."
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 13,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1189,
+   "kasseNach": 1189,
+   "abgebucht": 0,
+   "faesserVor": 23,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1189,
+   "kasseNach": 1165,
+   "abgebucht": 24,
+   "faesserVor": 22,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Bahnhofsgaststätte geht an Brauerei Adler. Gebunden mit Bierlieferungsvertrag bis 1894. Ablösen kostet 9.677 M."
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 14,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1165,
+   "kasseNach": 1165,
+   "abgebucht": 0,
+   "faesserVor": 22,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1165,
+   "kasseNach": 1141,
+   "abgebucht": 24,
+   "faesserVor": 21,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 15,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1141,
+   "kasseNach": 1141,
+   "abgebucht": 0,
+   "faesserVor": 21,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1141,
+   "kasseNach": 1117,
+   "abgebucht": 24,
+   "faesserVor": 20,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1117,
+   "kasseNach": 1117,
+   "abgebucht": 0,
+   "faesserVor": 20,
+   "faesserNach": 19,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1117,
+   "kasseNach": 1093,
+   "abgebucht": 24,
+   "faesserVor": 19,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Wilhelmine Bruckner scheidet aus der Firma, und was auf ihren Namen lief, steht in keinem Buch.",
+    "Ludwig Bruckner übernimmt das Haus in 1884. Man sagt: Hat die Kirche im Rücken und die Zunft im Nacken.",
+    "Mit der Hand fällt, was nur an ihr hing — 1 Haus hält nicht mehr: Zum Goldenen Ochsen.",
+    "Die Miterben nehmen ihren Teil in Naturalien: 11 hl gehen aus dem Eiskeller.",
+    "Das Haus geht auf Ludwig Bruckner über. Vorher hafteten 0 Bindungen am Haus und 1 an der Person; jetzt sind es 0 und 0. "
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 17,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1093,
+   "kasseNach": 1093,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1093,
+   "kasseNach": 1069,
+   "abgebucht": 24,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 18,
+   "zug": "sud:kaelte:warm",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Ohne Kühlung durchgären lassen",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1069,
+   "kasseNach": 1069,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 18,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1069,
+   "kasseNach": 1069,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1069,
+   "kasseNach": 1045,
+   "abgebucht": 24,
+   "faesserVor": 10,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein Befund, und das Gesetz von 1879 gibt ihm den Bo"
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 19,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1045,
+   "kasseNach": 1045,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1045,
+   "kasseNach": 1021,
+   "abgebucht": 24,
+   "faesserVor": 9,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 20,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 1021,
+   "kasseNach": 1021,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1021,
+   "kasseNach": 997,
+   "abgebucht": 24,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 21,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 997,
+   "kasseNach": 997,
+   "abgebucht": 0,
+   "faesserVor": 8,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 997,
+   "kasseNach": 973,
+   "abgebucht": 24,
+   "faesserVor": 7,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 22,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 973,
+   "kasseNach": 973,
+   "abgebucht": 0,
+   "faesserVor": 7,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 973,
+   "kasseNach": 949,
+   "abgebucht": 24,
+   "faesserVor": 6,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 23,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 949,
+   "kasseNach": 949,
+   "abgebucht": 0,
+   "faesserVor": 6,
+   "faesserNach": 5,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 949,
+   "kasseNach": 925,
+   "abgebucht": 24,
+   "faesserVor": 5,
+   "faesserNach": 5,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Schenke am Tor ist wieder frei. Brauerei Adler hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1884,
+   "woche": 24,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 925,
+   "kasseNach": 925,
+   "abgebucht": 0,
+   "faesserVor": 5,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 925,
+   "kasseNach": 901,
+   "abgebucht": 24,
+   "faesserVor": 4,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 25,
+   "zug": "sud:kaelte:natureis",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Natureis aus dem Fluss",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 901,
+   "kasseNach": 901,
+   "abgebucht": 0,
+   "faesserVor": 4,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 25,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 901,
+   "kasseNach": 901,
+   "abgebucht": 0,
+   "faesserVor": 4,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 901,
+   "kasseNach": 877,
+   "abgebucht": 24,
+   "faesserVor": 3,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 26,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 877,
+   "kasseNach": 877,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 877,
+   "kasseNach": 853,
+   "abgebucht": 24,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 853,
+   "kasseNach": 829,
+   "abgebucht": 24,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 829,
+   "kasseNach": 805,
+   "abgebucht": 24,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 805,
+   "kasseNach": 781,
+   "abgebucht": 24,
+   "faesserVor": 2,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1884,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 781,
+   "kasseNach": 4200,
+   "abgebucht": -3419,
+   "faesserVor": 2,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Die Kältemaschine könnte im Juli brauen. Der Sommerabsatz kommt trotzdem aus",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Lagerbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Der Rat schießt dem Haus 3.504 M auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Das Wochenblatt meldet verdorbenes Bier unter dem Anker."
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4200,
+   "kasseNach": 4176,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Einfachbier an, den zweiten Guss auf dieselben Tr"
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 2,
+   "zug": "sud:kaelte:warm",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Ohne Kühlung durchgären lassen",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4176,
+   "kasseNach": 4176,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 2,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4176,
+   "kasseNach": 4176,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4176,
+   "kasseNach": 4152,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 3,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4152,
+   "kasseNach": 4152,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4152,
+   "kasseNach": 4128,
+   "abgebucht": 24,
+   "faesserVor": 16,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4128,
+   "kasseNach": 4128,
+   "abgebucht": 0,
+   "faesserVor": 32,
+   "faesserNach": 31,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4128,
+   "kasseNach": 4104,
+   "abgebucht": 24,
+   "faesserVor": 31,
+   "faesserNach": 31,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 5,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4104,
+   "kasseNach": 4104,
+   "abgebucht": 0,
+   "faesserVor": 31,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4104,
+   "kasseNach": 4080,
+   "abgebucht": 24,
+   "faesserVor": 30,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4080,
+   "kasseNach": 4080,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4080,
+   "kasseNach": 4056,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 7,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4056,
+   "kasseNach": 4056,
+   "abgebucht": 0,
+   "faesserVor": 13,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4056,
+   "kasseNach": 4032,
+   "abgebucht": 24,
+   "faesserVor": 12,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 8,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4032,
+   "kasseNach": 4032,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4032,
+   "kasseNach": 4008,
+   "abgebucht": 24,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 9,
+   "zug": "sud:kaelte:natureis",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Natureis aus dem Fluss",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4008,
+   "kasseNach": 4008,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 9,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4008,
+   "kasseNach": 4008,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4008,
+   "kasseNach": 3984,
+   "abgebucht": 24,
+   "faesserVor": 10,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 10,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3984,
+   "kasseNach": 3984,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3984,
+   "kasseNach": 3960,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 11,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3960,
+   "kasseNach": 3960,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3960,
+   "kasseNach": 3936,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 12,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3936,
+   "kasseNach": 3936,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3936,
+   "kasseNach": 3912,
+   "abgebucht": 24,
+   "faesserVor": 16,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 13,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3912,
+   "kasseNach": 3912,
+   "abgebucht": 0,
+   "faesserVor": 32,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3912,
+   "kasseNach": 3888,
+   "abgebucht": 24,
+   "faesserVor": 32,
+   "faesserNach": 48,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 14,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3888,
+   "kasseNach": 3888,
+   "abgebucht": 0,
+   "faesserVor": 48,
+   "faesserNach": 47,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3888,
+   "kasseNach": 3864,
+   "abgebucht": 24,
+   "faesserVor": 47,
+   "faesserNach": 47,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 15,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3864,
+   "kasseNach": 3864,
+   "abgebucht": 0,
+   "faesserVor": 47,
+   "faesserNach": 46,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3864,
+   "kasseNach": 3840,
+   "abgebucht": 24,
+   "faesserVor": 46,
+   "faesserNach": 46,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers.",
+    "Das Amtsgericht nimmt dem Haus das Zeichen: Das Amtsgericht erkennt auf verfälschtes Bier und lässt das Urteil im Wochen"
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 16,
+   "zug": "sud:kaelte:warm",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Ohne Kühlung durchgären lassen",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3840,
+   "kasseNach": 3840,
+   "abgebucht": 0,
+   "faesserVor": 46,
+   "faesserNach": 46,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3840,
+   "kasseNach": 3840,
+   "abgebucht": 0,
+   "faesserVor": 46,
+   "faesserNach": 45,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3840,
+   "kasseNach": 3816,
+   "abgebucht": 24,
+   "faesserVor": 45,
+   "faesserNach": 45,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 17,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3816,
+   "kasseNach": 3816,
+   "abgebucht": 0,
+   "faesserVor": 45,
+   "faesserNach": 44,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3816,
+   "kasseNach": 3792,
+   "abgebucht": 24,
+   "faesserVor": 44,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 18,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3792,
+   "kasseNach": 3792,
+   "abgebucht": 0,
+   "faesserVor": 28,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3792,
+   "kasseNach": 3768,
+   "abgebucht": 24,
+   "faesserVor": 27,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 19,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3768,
+   "kasseNach": 3768,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3768,
+   "kasseNach": 3744,
+   "abgebucht": 24,
+   "faesserVor": 10,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein Befund, und das Gesetz von 1879 gibt ihm den Bo"
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 20,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3744,
+   "kasseNach": 3744,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3744,
+   "kasseNach": 3720,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Zum Goldenen Ochsen ist wieder frei. Brauerei Adler hat die Bindung verloren.",
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1885,
+   "woche": 21,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3720,
+   "kasseNach": 3720,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3720,
+   "kasseNach": 3696,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 22,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3696,
+   "kasseNach": 3696,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3696,
+   "kasseNach": 3672,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 23,
+   "zug": "sud:kaelte:natureis",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Natureis aus dem Fluss",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3672,
+   "kasseNach": 3672,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 23,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3672,
+   "kasseNach": 3672,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3672,
+   "kasseNach": 3648,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 24,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3648,
+   "kasseNach": 3648,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3648,
+   "kasseNach": 3624,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 25,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3624,
+   "kasseNach": 3624,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3624,
+   "kasseNach": 3600,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 26,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3600,
+   "kasseNach": 3600,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3600,
+   "kasseNach": 3576,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 27,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3576,
+   "kasseNach": 3576,
+   "abgebucht": 0,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3576,
+   "kasseNach": 3552,
+   "abgebucht": 24,
+   "faesserVor": 8,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 28,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3552,
+   "kasseNach": 3552,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3552,
+   "kasseNach": 3528,
+   "abgebucht": 24,
+   "faesserVor": 16,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 29,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3528,
+   "kasseNach": 3528,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3528,
+   "kasseNach": 3504,
+   "abgebucht": 24,
+   "faesserVor": 24,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 30,
+   "zug": "sud:kaelte:warm",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Ohne Kühlung durchgären lassen",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3504,
+   "kasseNach": 3504,
+   "abgebucht": 0,
+   "faesserVor": 32,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3504,
+   "kasseNach": 3504,
+   "abgebucht": 0,
+   "faesserVor": 32,
+   "faesserNach": 31,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1885,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3504,
+   "kasseNach": 4200,
+   "abgebucht": -696,
+   "faesserVor": 31,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Gasthof Lindenhof nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die",
+    "Pfarrschenke St. Michael nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lass",
+    "Mühlschenke nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe",
+    "Fährhaus am Fluss nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die",
+    "Landgasthof Hirsch nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Ausschank am Markt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Die Kältemaschine könnte im Juli brauen. Der Sommerabsatz kommt trotzdem aus",
+    "Die Wagenstellung für 1886/87 ist vereinbart: Stückgut statt Halber Wagen — Jede Menge, jede Woche — und je Fass am teue",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Lagerbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Kesselschaden und Neuabnahme: 170 M angeschlagen. 601 M bleiben als Rückstand stehen.",
+    "Der Rat schießt dem Haus 890 M auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Das Wochenblatt meldet verdorbenes Bier unter dem Anker."
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4200,
+   "kasseNach": 4176,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Einfachbier an, den zweiten Guss auf dieselben Tr",
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4176,
+   "kasseNach": 4176,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4176,
+   "kasseNach": 4152,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 3,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4152,
+   "kasseNach": 4152,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4152,
+   "kasseNach": 4128,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4128,
+   "kasseNach": 4128,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4128,
+   "kasseNach": 4104,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 5,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4104,
+   "kasseNach": 4104,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4104,
+   "kasseNach": 4080,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein Befund, und das Gesetz von 1879 gibt ihm den Bo"
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4080,
+   "kasseNach": 4080,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4080,
+   "kasseNach": 4056,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 7,
+   "zug": "sud:kaelte:natureis",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Natureis aus dem Fluss",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4056,
+   "kasseNach": 4056,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 7,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4056,
+   "kasseNach": 4056,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4056,
+   "kasseNach": 4032,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 8,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4032,
+   "kasseNach": 4032,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4032,
+   "kasseNach": 4008,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 9,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4008,
+   "kasseNach": 4008,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4008,
+   "kasseNach": 3984,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 10,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3984,
+   "kasseNach": 3984,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3984,
+   "kasseNach": 3960,
+   "abgebucht": 24,
+   "faesserVor": 16,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 11,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3960,
+   "kasseNach": 3960,
+   "abgebucht": 0,
+   "faesserVor": 32,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3960,
+   "kasseNach": 3936,
+   "abgebucht": 24,
+   "faesserVor": 32,
+   "faesserNach": 48,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 12,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3936,
+   "kasseNach": 3936,
+   "abgebucht": 0,
+   "faesserVor": 48,
+   "faesserNach": 47,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3936,
+   "kasseNach": 3912,
+   "abgebucht": 24,
+   "faesserVor": 47,
+   "faesserNach": 47,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 13,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3912,
+   "kasseNach": 3912,
+   "abgebucht": 0,
+   "faesserVor": 47,
+   "faesserNach": 46,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3912,
+   "kasseNach": 3888,
+   "abgebucht": 24,
+   "faesserVor": 46,
+   "faesserNach": 46,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 14,
+   "zug": "sud:kaelte:warm",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Ohne Kühlung durchgären lassen",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3888,
+   "kasseNach": 3888,
+   "abgebucht": 0,
+   "faesserVor": 46,
+   "faesserNach": 46,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 14,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3888,
+   "kasseNach": 3888,
+   "abgebucht": 0,
+   "faesserVor": 46,
+   "faesserNach": 45,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3888,
+   "kasseNach": 3864,
+   "abgebucht": 24,
+   "faesserVor": 45,
+   "faesserNach": 45,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 15,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3864,
+   "kasseNach": 3864,
+   "abgebucht": 0,
+   "faesserVor": 45,
+   "faesserNach": 44,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3864,
+   "kasseNach": 3840,
+   "abgebucht": 24,
+   "faesserVor": 44,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Ludwig Bruckner scheidet aus der Firma, und was auf ihren Namen lief, steht in keinem Buch.",
+    "Karoline Bruckner übernimmt das Haus in 1886. Man sagt: Baut, bevor gerechnet ist.",
+    "Die Miterben nehmen ihren Teil in Naturalien: 11 hl gehen aus dem Eiskeller.",
+    "Das Haus geht auf Karoline Bruckner über. Vorher hafteten 0 Bindungen am Haus und 0 an der Person; jetzt sind es 0 und 0"
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3840,
+   "kasseNach": 3840,
+   "abgebucht": 0,
+   "faesserVor": 21,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3840,
+   "kasseNach": 3816,
+   "abgebucht": 24,
+   "faesserVor": 20,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 17,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3816,
+   "kasseNach": 3816,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3816,
+   "kasseNach": 3792,
+   "abgebucht": 24,
+   "faesserVor": 10,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 18,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3792,
+   "kasseNach": 3792,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3792,
+   "kasseNach": 3768,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 19,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3768,
+   "kasseNach": 3768,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3768,
+   "kasseNach": 3744,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 20,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3744,
+   "kasseNach": 3744,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3744,
+   "kasseNach": 3720,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 21,
+   "zug": "sud:kaelte:natureis",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Natureis aus dem Fluss",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3720,
+   "kasseNach": 3720,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 21,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3720,
+   "kasseNach": 3720,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3720,
+   "kasseNach": 3696,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 22,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3696,
+   "kasseNach": 3696,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3696,
+   "kasseNach": 3672,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 23,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3672,
+   "kasseNach": 3672,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3672,
+   "kasseNach": 3648,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 24,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3648,
+   "kasseNach": 3648,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3648,
+   "kasseNach": 3624,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 25,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3624,
+   "kasseNach": 3624,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3624,
+   "kasseNach": 3600,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 26,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3600,
+   "kasseNach": 3600,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3600,
+   "kasseNach": 3576,
+   "abgebucht": 24,
+   "faesserVor": 24,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 27,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3576,
+   "kasseNach": 3576,
+   "abgebucht": 0,
+   "faesserVor": 32,
+   "faesserNach": 32,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3576,
+   "kasseNach": 3552,
+   "abgebucht": 24,
+   "faesserVor": 32,
+   "faesserNach": 40,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 28,
+   "zug": "sud:kaelte:warm",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Ohne Kühlung durchgären lassen",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3552,
+   "kasseNach": 3552,
+   "abgebucht": 0,
+   "faesserVor": 40,
+   "faesserNach": 40,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 28,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3552,
+   "kasseNach": 3552,
+   "abgebucht": 0,
+   "faesserVor": 40,
+   "faesserNach": 40,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3552,
+   "kasseNach": 3528,
+   "abgebucht": 24,
+   "faesserVor": 40,
+   "faesserNach": 40,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein Befund, und das Gesetz von 1879 gibt ihm den Bo"
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3528,
+   "kasseNach": 3528,
+   "abgebucht": 0,
+   "faesserVor": 40,
+   "faesserNach": 39,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3528,
+   "kasseNach": 3504,
+   "abgebucht": 24,
+   "faesserVor": 39,
+   "faesserNach": 39,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein Befund, und das Gesetz von 1879 gibt ihm den Bo",
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1886,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 3504,
+   "kasseNach": 3504,
+   "abgebucht": 0,
+   "faesserVor": 39,
+   "faesserNach": 38,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1886,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3504,
+   "kasseNach": 4200,
+   "abgebucht": -696,
+   "faesserVor": 38,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Zum Goldenen Ochsen nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 147 · 0,0 · 0,0 von",
+    "Schenke am Tor nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Re",
+    "Brückenwirt nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 105 · 0,0 · 0,0 von 132 hl.",
+    "Bahnhofsgaststätte nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 243 · 0,0 · 0,0 von ",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Die Kältemaschine könnte im Juli brauen. Der Sommerabsatz kommt trotzdem aus",
+    "Die Wagenstellung für 1887/88 ist vereinbart: Eigene Rollfuhre statt Stückgut — Kaltblut und Bierkutscher, die Wirtschaf",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Lagerbier — wie im vorigen Jahr, bis jemand es ändert.",
+    "Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, aber es liefert nirgendwohin mehr. Nicht das Geld ist aus",
+    "Der Rat schießt dem Haus 890 M auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Das Wochenblatt meldet verdorbenes Bier unter dem Anker."
+   ]
+  },
+  {
+   "jahr": 1887,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4200,
+   "kasseNach": 4176,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Einfachbier an, den zweiten Guss auf dieselben Tr"
+   ]
+  },
+  {
+   "jahr": 1887,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4176,
+   "kasseNach": 4176,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4176,
+   "kasseNach": 4152,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 3,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4152,
+   "kasseNach": 4152,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4152,
+   "kasseNach": 4128,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Beamte hat im Gärkeller Proben gezogen. Warm durchgegoren, sagt sein Befund, und das Gesetz von 1879 gibt ihm den Bo"
+   ]
+  },
+  {
+   "jahr": 1887,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4128,
+   "kasseNach": 4128,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4128,
+   "kasseNach": 4104,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 5,
+   "zug": "sud:kaelte:natureis",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Natureis aus dem Fluss",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4104,
+   "kasseNach": 4104,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "warm",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 5,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4104,
+   "kasseNach": 4104,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4104,
+   "kasseNach": 4080,
+   "abgebucht": 24,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Die Aktienbrauerei legt ein Angebot vor. Der Direktor der Aktienbrauerei kommt mit dem Notar. Er kauft nicht das Bier, e",
+    "Der Name des Hauses: Die Händler melden Reklamationen auf Ware mit dem Etikett des Ankers."
+   ]
+  },
+  {
+   "jahr": 1887,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4080,
+   "kasseNach": 4080,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4080,
+   "kasseNach": 4056,
+   "abgebucht": 24,
+   "faesserVor": 14,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 7,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Junges Lagerfass anstechen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 4056,
+   "kasseNach": 4056,
+   "abgebucht": 0,
+   "faesserVor": 14,
+   "faesserNach": 13,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4056,
+   "kasseNach": 4032,
+   "abgebucht": 24,
+   "faesserVor": 13,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Ein Bottich mit Fremdhefe. Er geht in den Ausguss. 24 hl Einfachbier sind verloren — kein Pfennig, aber die Pfanne hat u"
+   ]
+  },
+  {
+   "jahr": 1887,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4032,
+   "kasseNach": 4008,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 9,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4008,
+   "kasseNach": 4008,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 4008,
+   "kasseNach": 3984,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 10,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe im Gärbottich abernten · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3984,
+   "kasseNach": 3984,
+   "abgebucht": 0,
+   "faesserVor": 0,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1887,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3984,
+   "kasseNach": 3960,
+   "abgebucht": 24,
+   "faesserVor": 0,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "verfahrenNach": {
+    "kaelte": "natureis",
+    "hefe": "reinzucht"
+   },
+   "chronik": [
+    "Der Malzhändler kündigt die Wechsel, die Bank zieht die Linie ein: seit 10 Wochen geht kein Fass über die Rampe. Ein vol"
+   ]
+  }
+ ]
+}

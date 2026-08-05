@@ -1,0 +1,2034 @@
+{
+ "epoche": 4,
+ "hafen": "8901",
+ "saat": "1350",
+ "brett": "auf",
+ "fenster": "1366x768",
+ "abgebrochen": false,
+ "fehler": [],
+ "reiterproben": [
+  {
+   "woche": 0,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 30,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 60,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 90,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 94,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  }
+ ],
+ "auswertung": {
+  "wochen": 99,
+  "jahre": 4,
+  "brettImBild": 94,
+  "klemme": 0,
+  "klemmeSollAus0": 0,
+  "klemmeAnteil": 0,
+  "gruende": {
+   "spiel": 478,
+   "brett-offen": 384,
+   "verdeckt": 16,
+   "brett-zugeklappt": 55
+  },
+  "preisWochen": {
+   "n0": 1,
+   "n1": 4,
+   "n2": 17,
+   "n3plus": 77,
+   "mitFass2plus": 95
+  },
+  "wochenMitZweiPlus": 94,
+  "maxPreisSchilder": 4,
+  "preisSaetze": {
+   "sud:behandlung:filter + sud:behandlung:pasteur + sud:fuehrung:labor + sud:gaerraum": 3,
+   "sud:behandlung:filter + sud:fuehrung:labor + sud:gaerraum": 74,
+   "sud:zettel-wechsel-kauf": 4,
+   "sud:behandlung:filter + sud:gaerraum": 17
+  },
+  "preisZuege": {
+   "sud:fuehrung:labor": 77,
+   "sud:behandlung:filter": 94,
+   "sud:behandlung:pasteur": 3,
+   "sud:gaerraum": 94,
+   "sud:zettel-wechsel-kauf": 4
+  }
+ },
+ "klemmeWochen": [],
+ "reihe": [
+  {
+   "w": 0,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 4,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:behandlung:pasteur",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 1,
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 81200,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 4,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:behandlung:pasteur",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 2,
+   "jahr": 1970,
+   "woche": 3,
+   "kasse": 76400,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 4,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:behandlung:pasteur",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 3,
+   "jahr": 1970,
+   "woche": 4,
+   "kasse": 71600,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 4,
+   "jahr": 1970,
+   "woche": 5,
+   "kasse": 66800,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 13,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 2,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 5,
+   "jahr": 1970,
+   "woche": 6,
+   "kasse": 62000,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 13,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 2,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 6,
+   "jahr": 1970,
+   "woche": 7,
+   "kasse": 57200,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 7,
+   "jahr": 1970,
+   "woche": 8,
+   "kasse": 56580,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 13,
+   "bedienbar": 9,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 8,
+   "jahr": 1970,
+   "woche": 9,
+   "kasse": 55960,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 15,
+   "bedienbar": 9,
+   "klemme": false,
+   "sollAus0UndAus": 2,
+   "muenzschilder": 3,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 9,
+   "jahr": 1970,
+   "woche": 10,
+   "kasse": 55340,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 15,
+   "bedienbar": 9,
+   "klemme": false,
+   "sollAus0UndAus": 2,
+   "muenzschilder": 3,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 10,
+   "jahr": 1970,
+   "woche": 11,
+   "kasse": 54720,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 15,
+   "bedienbar": 9,
+   "klemme": false,
+   "sollAus0UndAus": 2,
+   "muenzschilder": 3,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 11,
+   "jahr": 1970,
+   "woche": 12,
+   "kasse": 54100,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 15,
+   "bedienbar": 9,
+   "klemme": false,
+   "sollAus0UndAus": 2,
+   "muenzschilder": 3,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 12,
+   "jahr": 1970,
+   "woche": 13,
+   "kasse": 53480,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 13,
+   "bedienbar": 9,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 6,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 13,
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 52860,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 14,
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 52240,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 15,
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 51620,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 16,
+   "jahr": 1970,
+   "woche": 17,
+   "kasse": 51000,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 17,
+   "jahr": 1970,
+   "woche": 18,
+   "kasse": 50380,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 18,
+   "jahr": 1970,
+   "woche": 19,
+   "kasse": 49760,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 19,
+   "jahr": 1970,
+   "woche": 20,
+   "kasse": 49140,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 20,
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 48520,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 21,
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 47900,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 22,
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 47280,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 23,
+   "jahr": 1970,
+   "woche": 24,
+   "kasse": 46660,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 24,
+   "jahr": 1970,
+   "woche": 25,
+   "kasse": 46040,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 25,
+   "jahr": 1970,
+   "woche": 26,
+   "kasse": 45420,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 26,
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 44800,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 27,
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 44180,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 28,
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 43560,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 29,
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 42940,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 30,
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 72132,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 11,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 4,
+   "muenzschilder": 1,
+   "muenzUndBier": 1,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 31,
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 71500,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 32,
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 70868,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 33,
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 70236,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 34,
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 69604,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 35,
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 68972,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 36,
+   "jahr": 1971,
+   "woche": 7,
+   "kasse": 68340,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 37,
+   "jahr": 1971,
+   "woche": 8,
+   "kasse": 67708,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 38,
+   "jahr": 1971,
+   "woche": 9,
+   "kasse": 67076,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 39,
+   "jahr": 1971,
+   "woche": 10,
+   "kasse": 66444,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 40,
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 65812,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 41,
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 65180,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 42,
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 64548,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 43,
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 63916,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 44,
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 63284,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 45,
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 62652,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 46,
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 62020,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 47,
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 61388,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 48,
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 60756,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 49,
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 60124,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 50,
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 59492,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 51,
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 58860,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 52,
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 58228,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 53,
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 57596,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 54,
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 56964,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 55,
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 56332,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 56,
+   "jahr": 1971,
+   "woche": 27,
+   "kasse": 55700,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 57,
+   "jahr": 1971,
+   "woche": 28,
+   "kasse": 55068,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 58,
+   "jahr": 1971,
+   "woche": 29,
+   "kasse": 54436,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 59,
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 53804,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 60,
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 50000,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 11,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 4,
+   "muenzschilder": 1,
+   "muenzUndBier": 1,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 61,
+   "jahr": 1972,
+   "woche": 2,
+   "kasse": 49355,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 62,
+   "jahr": 1972,
+   "woche": 3,
+   "kasse": 48710,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 63,
+   "jahr": 1972,
+   "woche": 4,
+   "kasse": 48065,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 64,
+   "jahr": 1972,
+   "woche": 5,
+   "kasse": 47420,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 65,
+   "jahr": 1972,
+   "woche": 6,
+   "kasse": 46775,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 66,
+   "jahr": 1972,
+   "woche": 7,
+   "kasse": 46130,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 67,
+   "jahr": 1972,
+   "woche": 8,
+   "kasse": 45485,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 68,
+   "jahr": 1972,
+   "woche": 9,
+   "kasse": 44840,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 69,
+   "jahr": 1972,
+   "woche": 10,
+   "kasse": 44195,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 70,
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 43550,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 71,
+   "jahr": 1972,
+   "woche": 12,
+   "kasse": 42905,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 72,
+   "jahr": 1972,
+   "woche": 13,
+   "kasse": 42260,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 73,
+   "jahr": 1972,
+   "woche": 14,
+   "kasse": 41615,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 74,
+   "jahr": 1972,
+   "woche": 15,
+   "kasse": 40970,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 75,
+   "jahr": 1972,
+   "woche": 16,
+   "kasse": 40325,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 76,
+   "jahr": 1972,
+   "woche": 17,
+   "kasse": 39680,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 77,
+   "jahr": 1972,
+   "woche": 18,
+   "kasse": 39035,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 78,
+   "jahr": 1972,
+   "woche": 19,
+   "kasse": 38390,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 79,
+   "jahr": 1972,
+   "woche": 20,
+   "kasse": 37745,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 80,
+   "jahr": 1972,
+   "woche": 21,
+   "kasse": 37100,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 81,
+   "jahr": 1972,
+   "woche": 22,
+   "kasse": 36455,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 82,
+   "jahr": 1972,
+   "woche": 23,
+   "kasse": 35810,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 83,
+   "jahr": 1972,
+   "woche": 24,
+   "kasse": 35165,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 84,
+   "jahr": 1972,
+   "woche": 25,
+   "kasse": 34520,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 85,
+   "jahr": 1972,
+   "woche": 26,
+   "kasse": 33875,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 86,
+   "jahr": 1972,
+   "woche": 27,
+   "kasse": 33230,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 87,
+   "jahr": 1972,
+   "woche": 28,
+   "kasse": 32585,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 88,
+   "jahr": 1972,
+   "woche": 29,
+   "kasse": 31940,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 89,
+   "jahr": 1972,
+   "woche": 30,
+   "kasse": 31295,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 5,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 90,
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 50000,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 11,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 4,
+   "muenzschilder": 1,
+   "muenzUndBier": 1,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 91,
+   "jahr": 1973,
+   "woche": 2,
+   "kasse": 49342,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 92,
+   "jahr": 1973,
+   "woche": 3,
+   "kasse": 48684,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 93,
+   "jahr": 1973,
+   "woche": 4,
+   "kasse": 48026,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 94,
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 47368,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 11,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 6,
+   "muenzschilder": 1,
+   "muenzUndBier": 3,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 95,
+   "jahr": 1973,
+   "woche": 6,
+   "kasse": 46710,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 96,
+   "jahr": 1973,
+   "woche": 7,
+   "kasse": 46052,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 97,
+   "jahr": 1973,
+   "woche": 8,
+   "kasse": 45394,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 11,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:fuehrung:labor",
+    "sud:behandlung:filter",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 98,
+   "jahr": 1973,
+   "woche": 9,
+   "kasse": 61776,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 11,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 6,
+   "muenzschilder": 0,
+   "muenzUndBier": 0,
+   "schilder": []
+  }
+ ]
+}

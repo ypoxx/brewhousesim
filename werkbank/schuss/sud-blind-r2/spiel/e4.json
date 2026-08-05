@@ -1,0 +1,4923 @@
+{
+ "epoche": 4,
+ "wochen": 150,
+ "abbruch": "Partie beendet",
+ "fehler": [],
+ "reiterKlicks": [
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "schluss": {
+  "jahr": 1973,
+  "woche": 9,
+  "ende": true,
+  "kasse": 61776,
+  "rohstoff": 28,
+  "faesser": 23,
+  "plaetze": 400,
+  "guete": 98,
+  "verfahren": {
+   "fuehrung": "labor",
+   "behandlung": "schoenen"
+  },
+  "gaerfrei": 200,
+  "chronik": 99,
+  "lage": 0
+ },
+ "klicks": 206,
+ "scheinpreise": [],
+ "protokoll": [
+  {
+   "jahr": 1970,
+   "woche": 1,
+   "zug": "sud:behandlung:filter",
+   "warum": "unwiderrufliche Festlegung kaufen",
+   "aufschrift": "Kieselgurfilter −26.000 DM",
+   "preisschild": -26000,
+   "fassschild": null,
+   "kasseVor": 86000,
+   "kasseNach": 60000,
+   "abgebucht": 26000,
+   "faesserVor": 140,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "fuehrung": "erfahrung",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "erfahrung",
+    "behandlung": "filter"
+   },
+   "chronik": [
+    "Angeschafft: Kieselgurfilter. Blank filtriert. Vierzig Prozent mehr Haltbarkeit, und im Regal sieht man es. Erst blank f"
+   ],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1970,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 60000,
+   "kasseNach": 55200,
+   "abgebucht": 4800,
+   "faesserVor": 0,
+   "faesserNach": 60,
+   "verfahrenVor": {
+    "fuehrung": "erfahrung",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "erfahrung",
+    "behandlung": "filter"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Handelsmarke an, den zweiten Guss auf dieselben T",
+    "Die Nordstern-Gruppe bietet 437.280 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und keine Ant"
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 2,
+   "zug": "sud:charge-frei:1",
+   "warum": "gesperrte Charge entscheiden",
+   "aufschrift": "Freigeben",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 55200,
+   "kasseNach": 55200,
+   "abgebucht": 0,
+   "faesserVor": 60,
+   "faesserNach": 200,
+   "verfahrenVor": {
+    "fuehrung": "erfahrung",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "erfahrung",
+    "behandlung": "filter"
+   },
+   "chronik": [
+    "Charge 1 geht mit ±14 % hinaus. Wenn der Einkauf nachmisst, steht das Haus in seinem Buch."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 2,
+   "zug": "sud:fuehrung:labor",
+   "warum": "unwiderrufliche Festlegung kaufen",
+   "aufschrift": "Betriebslabor, Stammwürze und Bittereinheiten −42.000 DM",
+   "preisschild": -42000,
+   "fassschild": null,
+   "kasseVor": 55200,
+   "kasseNach": 13200,
+   "abgebucht": 42000,
+   "faesserVor": 200,
+   "faesserNach": 200,
+   "verfahrenVor": {
+    "fuehrung": "erfahrung",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "chronik": [
+    "Unwiderruflich festgelegt: Betriebslabor, Stammwürze und Bittereinheiten. Zwei Chemikerinnen, ein Saccharometer, ein Pro"
+   ],
+   "preisEingeloest": true
+  },
+  {
+   "jahr": 1970,
+   "woche": 2,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe aus dem Gärtank ziehen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 13200,
+   "kasseNach": 13200,
+   "abgebucht": 0,
+   "faesserVor": 200,
+   "faesserNach": 200,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 13200,
+   "kasseNach": 8400,
+   "abgebucht": 4800,
+   "faesserVor": 200,
+   "faesserNach": 200,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "chronik": [
+    "Brauerei Nachtigall im Nachbartal wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; über den Ausschank in der Sta"
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 3,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe aus dem Gärtank ziehen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8400,
+   "kasseNach": 8400,
+   "abgebucht": 0,
+   "faesserVor": 200,
+   "faesserNach": 200,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 8400,
+   "kasseNach": 3600,
+   "abgebucht": 4800,
+   "faesserVor": 200,
+   "faesserNach": 170,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal.",
+    "Der Einkauf hat Charge {nr} nachgemessen: ±{ab} % und damit außerhalb der Vereinbarung. Er nimmt sie aus dem Regal und h"
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 4,
+   "zug": "sud:behandlung:natur",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Naturtrüb, unfiltriert",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3600,
+   "kasseNach": 3600,
+   "abgebucht": 0,
+   "faesserVor": 170,
+   "faesserNach": 170,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "filter"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 4,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe aus dem Gärtank ziehen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3600,
+   "kasseNach": 3600,
+   "abgebucht": 0,
+   "faesserVor": 170,
+   "faesserNach": 170,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 3600,
+   "kasseNach": 200,
+   "abgebucht": 3400,
+   "faesserVor": 170,
+   "faesserNach": 210,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 5,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe aus dem Gärtank ziehen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 200,
+   "kasseNach": 200,
+   "abgebucht": 0,
+   "faesserVor": 210,
+   "faesserNach": 210,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 200,
+   "kasseNach": 6400,
+   "abgebucht": -6200,
+   "faesserVor": 210,
+   "faesserNach": 250,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 6,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe aus dem Gärtank ziehen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6400,
+   "kasseNach": 6400,
+   "abgebucht": 0,
+   "faesserVor": 250,
+   "faesserNach": 250,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 6400,
+   "kasseNach": 1600,
+   "abgebucht": 4800,
+   "faesserVor": 250,
+   "faesserNach": 290,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 7,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe aus dem Gärtank ziehen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1600,
+   "kasseNach": 1600,
+   "abgebucht": 0,
+   "faesserVor": 290,
+   "faesserNach": 290,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 1600,
+   "kasseNach": 980,
+   "abgebucht": 620,
+   "faesserVor": 290,
+   "faesserNach": 330,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 8,
+   "zug": "sud:hefe-fuehren",
+   "warum": "Hefe fuehren, kostet kein Fass",
+   "aufschrift": "Hefe aus dem Gärtank ziehen · +8",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 980,
+   "kasseNach": 980,
+   "abgebucht": 0,
+   "faesserVor": 330,
+   "faesserNach": 330,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 980,
+   "kasseNach": 360,
+   "abgebucht": 620,
+   "faesserVor": 330,
+   "faesserNach": 370,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 9,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 370,
+   "faesserNach": 369,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 369,
+   "faesserNach": 369,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Brückenwirt.",
+    "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 10,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 369,
+   "faesserNach": 368,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 368,
+   "faesserNach": 368,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 11,
+   "zug": "sud:behandlung:schoenen",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Schönen mit Kieselsol",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 368,
+   "faesserNach": 368,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 11,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 368,
+   "faesserNach": 367,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 367,
+   "faesserNach": 244,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Gasthof Lindenhof geht an Adler-Bräu AG. Gebunden mit Listung bis 1973. Ablösen kostet 43.740 DM.",
+    "Mühlschenke geht an Nordstern-Gruppe. Gebunden mit Jahresvereinbarung bis 1975. Ablösen kostet 36.450 DM.",
+    "Landgasthof Hirsch ist wieder frei. Adler-Bräu AG hat die Bindung verloren.",
+    "Margarete Bruckner übergibt und geht, ohne dass jemand etwas vereinbart hätte. Was ihr gehörte, gehörte nie dem Haus.",
+    "Sabine Bruckner übernimmt das Haus in 1970. Man sagt: Hat die Kirche im Rücken und die Zunft im Nacken.",
+    "Mit der Hand fällt, was nur an ihr hing — 2 Häuser halten nicht mehr: Schenke am Tor, Ausschank am Markt.",
+    "Die Miterben nehmen ihren Teil in Naturalien: 185 hl gehen aus den Tanks.",
+    "Das Haus geht auf Sabine Bruckner über. Vorher hafteten 0 Bindungen am Haus und 2 an der Person; jetzt sind es 0 und 0. "
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 12,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 244,
+   "faesserNach": 243,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 243,
+   "faesserNach": 243,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 13,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 243,
+   "faesserNach": 242,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 242,
+   "faesserNach": 242,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 14,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 242,
+   "faesserNach": 241,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 241,
+   "faesserNach": 241,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 15,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 241,
+   "faesserNach": 240,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 240,
+   "faesserNach": 240,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe bietet 50.000 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und keine Antw"
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 240,
+   "faesserNach": 239,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 239,
+   "faesserNach": 239,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Adler-Bräu AG schaltet einen Spot mit einem Anker im Kreis."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 17,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 239,
+   "faesserNach": 238,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 238,
+   "faesserNach": 238,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 18,
+   "zug": "sud:behandlung:natur",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Naturtrüb, unfiltriert",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 238,
+   "faesserNach": 238,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 18,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 238,
+   "faesserNach": 237,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 237,
+   "faesserNach": 237,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 19,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 237,
+   "faesserNach": 236,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 236,
+   "faesserNach": 236,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 20,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 236,
+   "faesserNach": 235,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 235,
+   "faesserNach": 235,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 21,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 235,
+   "faesserNach": 234,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 234,
+   "faesserNach": 234,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 22,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 234,
+   "faesserNach": 233,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 233,
+   "faesserNach": 233,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 23,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 233,
+   "faesserNach": 232,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 232,
+   "faesserNach": 232,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Gaststätte Neustadt."
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 24,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 232,
+   "faesserNach": 231,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 231,
+   "faesserNach": 231,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 25,
+   "zug": "sud:behandlung:schoenen",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Schönen mit Kieselsol",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 231,
+   "faesserNach": 231,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 25,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 231,
+   "faesserNach": 230,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 230,
+   "faesserNach": 230,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 26,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 230,
+   "faesserNach": 229,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 229,
+   "faesserNach": 229,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe bietet 50.000 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und keine Antw"
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 27,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 229,
+   "faesserNach": 228,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 228,
+   "faesserNach": 228,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 28,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 228,
+   "faesserNach": 227,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 227,
+   "faesserNach": 227,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Brauerei Nachtigall im Nachbartal wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; über den Ausschank in der Sta"
+   ]
+  },
+  {
+   "jahr": 1970,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 227,
+   "faesserNach": 226,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 226,
+   "faesserNach": 226,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 360,
+   "kasseNach": 360,
+   "abgebucht": 0,
+   "faesserVor": 226,
+   "faesserNach": 225,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1970,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 360,
+   "kasseNach": 52059,
+   "abgebucht": -51699,
+   "faesserVor": 225,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Gaststätte Neustadt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. D",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Die Sudpfanne steht im Sommer für die Wartung still. Der Sommerabsatz kommt ",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Pilsner — wie im vorigen Jahr, bis jemand es ändert.",
+    "Der Rat schießt dem Haus 30.462 DM auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Der Verbrauchertest setzt den Anker auf den letzten Platz."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 52059,
+   "kasseNach": 51427,
+   "abgebucht": 632,
+   "faesserVor": 0,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Handelsmarke an, den zweiten Guss auf dieselben T"
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 2,
+   "zug": "sud:behandlung:natur",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Naturtrüb, unfiltriert",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 51427,
+   "kasseNach": 51427,
+   "abgebucht": 0,
+   "faesserVor": 30,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 51427,
+   "kasseNach": 51427,
+   "abgebucht": 0,
+   "faesserVor": 30,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 51427,
+   "kasseNach": 50795,
+   "abgebucht": 632,
+   "faesserVor": 29,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 3,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 50795,
+   "kasseNach": 50795,
+   "abgebucht": 0,
+   "faesserVor": 29,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 50795,
+   "kasseNach": 50163,
+   "abgebucht": 632,
+   "faesserVor": 28,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Gaststätte Neustadt ist wieder frei. Nordstern-Gruppe hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 50163,
+   "kasseNach": 50163,
+   "abgebucht": 0,
+   "faesserVor": 28,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 50163,
+   "kasseNach": 49531,
+   "abgebucht": 632,
+   "faesserVor": 27,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Pfarrschenke St. Michael.",
+    "Gasthof Lindenhof ist wieder frei. Adler-Bräu AG hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 5,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 49531,
+   "kasseNach": 49531,
+   "abgebucht": 0,
+   "faesserVor": 27,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 49531,
+   "kasseNach": 48899,
+   "abgebucht": 632,
+   "faesserVor": 26,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 48899,
+   "kasseNach": 48899,
+   "abgebucht": 0,
+   "faesserVor": 26,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48899,
+   "kasseNach": 48267,
+   "abgebucht": 632,
+   "faesserVor": 25,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 7,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 48267,
+   "kasseNach": 48267,
+   "abgebucht": 0,
+   "faesserVor": 25,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48267,
+   "kasseNach": 47635,
+   "abgebucht": 632,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 8,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 47635,
+   "kasseNach": 47635,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47635,
+   "kasseNach": 47003,
+   "abgebucht": 632,
+   "faesserVor": 23,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 9,
+   "zug": "sud:behandlung:schoenen",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Schönen mit Kieselsol",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47003,
+   "kasseNach": 47003,
+   "abgebucht": 0,
+   "faesserVor": 23,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 9,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 47003,
+   "kasseNach": 47003,
+   "abgebucht": 0,
+   "faesserVor": 23,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47003,
+   "kasseNach": 46371,
+   "abgebucht": 632,
+   "faesserVor": 22,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 10,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 46371,
+   "kasseNach": 46371,
+   "abgebucht": 0,
+   "faesserVor": 22,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46371,
+   "kasseNach": 45739,
+   "abgebucht": 632,
+   "faesserVor": 21,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt.",
+    "Der Handel nimmt dem Haus das Zeichen: Nach dem dritten Verbrauchertest listet die Handelskette den Anker aus. Das Regal"
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 11,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 45739,
+   "kasseNach": 45739,
+   "abgebucht": 0,
+   "faesserVor": 21,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45739,
+   "kasseNach": 45107,
+   "abgebucht": 632,
+   "faesserVor": 20,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 12,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 45107,
+   "kasseNach": 45107,
+   "abgebucht": 0,
+   "faesserVor": 20,
+   "faesserNach": 19,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45107,
+   "kasseNach": 44475,
+   "abgebucht": 632,
+   "faesserVor": 19,
+   "faesserNach": 19,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe bietet 62.265 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und keine Antw"
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 13,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 44475,
+   "kasseNach": 44475,
+   "abgebucht": 0,
+   "faesserVor": 19,
+   "faesserNach": 18,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44475,
+   "kasseNach": 43843,
+   "abgebucht": 632,
+   "faesserVor": 18,
+   "faesserNach": 18,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 14,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 43843,
+   "kasseNach": 43843,
+   "abgebucht": 0,
+   "faesserVor": 18,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 43843,
+   "kasseNach": 43211,
+   "abgebucht": 632,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 15,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 43211,
+   "kasseNach": 43211,
+   "abgebucht": 0,
+   "faesserVor": 17,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 43211,
+   "kasseNach": 42579,
+   "abgebucht": 632,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 16,
+   "zug": "sud:behandlung:natur",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Naturtrüb, unfiltriert",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42579,
+   "kasseNach": 42579,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 42579,
+   "kasseNach": 42579,
+   "abgebucht": 0,
+   "faesserVor": 16,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42579,
+   "kasseNach": 41947,
+   "abgebucht": 632,
+   "faesserVor": 15,
+   "faesserNach": 15,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 17,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 41947,
+   "kasseNach": 41947,
+   "abgebucht": 0,
+   "faesserVor": 15,
+   "faesserNach": 14,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41947,
+   "kasseNach": 41315,
+   "abgebucht": 632,
+   "faesserVor": 14,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41315,
+   "kasseNach": 40683,
+   "abgebucht": 632,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40683,
+   "kasseNach": 40051,
+   "abgebucht": 632,
+   "faesserVor": 1,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40051,
+   "kasseNach": 39419,
+   "abgebucht": 632,
+   "faesserVor": 1,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Zum Goldenen Ochsen.",
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 21,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 39419,
+   "kasseNach": 39419,
+   "abgebucht": 0,
+   "faesserVor": 30,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39419,
+   "kasseNach": 38787,
+   "abgebucht": 632,
+   "faesserVor": 29,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Zum Goldenen Ochsen ist wieder frei. Nordstern-Gruppe hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 22,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 38787,
+   "kasseNach": 38787,
+   "abgebucht": 0,
+   "faesserVor": 29,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38787,
+   "kasseNach": 38155,
+   "abgebucht": 632,
+   "faesserVor": 28,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 23,
+   "zug": "sud:behandlung:schoenen",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Schönen mit Kieselsol",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38155,
+   "kasseNach": 38155,
+   "abgebucht": 0,
+   "faesserVor": 28,
+   "faesserNach": 1,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 23,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 38155,
+   "kasseNach": 38155,
+   "abgebucht": 0,
+   "faesserVor": 1,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38155,
+   "kasseNach": 37523,
+   "abgebucht": 632,
+   "faesserVor": 0,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Adler-Bräu AG: Der Adler schaltet einen Werbespot im Abendprogramm. Man kennt den Namen jetzt auch dort, wo er nicht lie"
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 24,
+   "zug": "sud:charge-frei:13",
+   "warum": "gesperrte Charge entscheiden",
+   "aufschrift": "Freigeben",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37523,
+   "kasseNach": 37523,
+   "abgebucht": 0,
+   "faesserVor": 30,
+   "faesserNach": 57,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Charge 13 geht mit ±3 % hinaus. Wenn der Einkauf nachmisst, steht das Haus in seinem Buch."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37523,
+   "kasseNach": 36891,
+   "abgebucht": 632,
+   "faesserVor": 57,
+   "faesserNach": 57,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 25,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 36891,
+   "kasseNach": 36891,
+   "abgebucht": 0,
+   "faesserVor": 57,
+   "faesserNach": 56,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 36891,
+   "kasseNach": 36259,
+   "abgebucht": 632,
+   "faesserVor": 56,
+   "faesserNach": 56,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Bürgerbräu Neustadt wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; über den Ausschank in der Stadt — Mühlschen",
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 26,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 36259,
+   "kasseNach": 36259,
+   "abgebucht": 0,
+   "faesserVor": 56,
+   "faesserNach": 55,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 36259,
+   "kasseNach": 35627,
+   "abgebucht": 632,
+   "faesserVor": 55,
+   "faesserNach": 55,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe übernimmt eine kleine Brauerei im Nachbartal."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 27,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 35627,
+   "kasseNach": 35627,
+   "abgebucht": 0,
+   "faesserVor": 55,
+   "faesserNach": 54,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 35627,
+   "kasseNach": 34995,
+   "abgebucht": 632,
+   "faesserVor": 54,
+   "faesserNach": 54,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 28,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 34995,
+   "kasseNach": 34995,
+   "abgebucht": 0,
+   "faesserVor": 54,
+   "faesserNach": 53,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 34995,
+   "kasseNach": 34363,
+   "abgebucht": 632,
+   "faesserVor": 53,
+   "faesserNach": 53,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 34363,
+   "kasseNach": 34363,
+   "abgebucht": 0,
+   "faesserVor": 53,
+   "faesserNach": 52,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 34363,
+   "kasseNach": 33731,
+   "abgebucht": 632,
+   "faesserVor": 52,
+   "faesserNach": 52,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Fährhaus am Fluss ist wieder frei. Nordstern-Gruppe hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1971,
+   "woche": 30,
+   "zug": "sud:behandlung:natur",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Naturtrüb, unfiltriert",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 33731,
+   "kasseNach": 33731,
+   "abgebucht": 0,
+   "faesserVor": 52,
+   "faesserNach": 52,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 33731,
+   "kasseNach": 33731,
+   "abgebucht": 0,
+   "faesserVor": 52,
+   "faesserNach": 51,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1971,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 33731,
+   "kasseNach": 50000,
+   "abgebucht": -16269,
+   "faesserVor": 51,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Zum Goldenen Ochsen nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. D",
+    "Pfarrschenke St. Michael nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lass",
+    "Brückenwirt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe",
+    "Fährhaus am Fluss nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die",
+    "Landgasthof Hirsch nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Bahnhofsgaststätte nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Die Sudpfanne steht im Sommer für die Wartung still. Der Sommerabsatz kommt ",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Pilsner — wie im vorigen Jahr, bis jemand es ändert.",
+    "Der Rat schießt dem Haus 17.858 DM auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Der Verbrauchertest setzt den Anker auf den letzten Platz."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 50000,
+   "kasseNach": 49355,
+   "abgebucht": 645,
+   "faesserVor": 0,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Handelsmarke an, den zweiten Guss auf dieselben T",
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 49355,
+   "kasseNach": 49355,
+   "abgebucht": 0,
+   "faesserVor": 30,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 49355,
+   "kasseNach": 48710,
+   "abgebucht": 645,
+   "faesserVor": 29,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe bietet 68.194 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und keine Antw"
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 3,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 48710,
+   "kasseNach": 48710,
+   "abgebucht": 0,
+   "faesserVor": 29,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48710,
+   "kasseNach": 48065,
+   "abgebucht": 645,
+   "faesserVor": 28,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 48065,
+   "kasseNach": 48065,
+   "abgebucht": 0,
+   "faesserVor": 28,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48065,
+   "kasseNach": 47420,
+   "abgebucht": 645,
+   "faesserVor": 27,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 5,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 47420,
+   "kasseNach": 47420,
+   "abgebucht": 0,
+   "faesserVor": 27,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47420,
+   "kasseNach": 46775,
+   "abgebucht": 645,
+   "faesserVor": 26,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 46775,
+   "kasseNach": 46775,
+   "abgebucht": 0,
+   "faesserVor": 26,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46775,
+   "kasseNach": 46130,
+   "abgebucht": 645,
+   "faesserVor": 25,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 7,
+   "zug": "sud:behandlung:schoenen",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Schönen mit Kieselsol",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46130,
+   "kasseNach": 46130,
+   "abgebucht": 0,
+   "faesserVor": 25,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 7,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 46130,
+   "kasseNach": 46130,
+   "abgebucht": 0,
+   "faesserVor": 25,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46130,
+   "kasseNach": 45485,
+   "abgebucht": 645,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 8,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 45485,
+   "kasseNach": 45485,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45485,
+   "kasseNach": 44840,
+   "abgebucht": 645,
+   "faesserVor": 23,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 9,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 44840,
+   "kasseNach": 44840,
+   "abgebucht": 0,
+   "faesserVor": 23,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 9,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44840,
+   "kasseNach": 44195,
+   "abgebucht": 645,
+   "faesserVor": 22,
+   "faesserNach": 22,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Bahnhofsgaststätte ist wieder frei. Nordstern-Gruppe hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 10,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 44195,
+   "kasseNach": 44195,
+   "abgebucht": 0,
+   "faesserVor": 22,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 10,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 44195,
+   "kasseNach": 43550,
+   "abgebucht": 645,
+   "faesserVor": 21,
+   "faesserNach": 21,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Pfarrschenke St. Michael."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 11,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 43550,
+   "kasseNach": 43550,
+   "abgebucht": 0,
+   "faesserVor": 21,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 11,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 43550,
+   "kasseNach": 42905,
+   "abgebucht": 645,
+   "faesserVor": 20,
+   "faesserNach": 20,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 12,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 42905,
+   "kasseNach": 42905,
+   "abgebucht": 0,
+   "faesserVor": 20,
+   "faesserNach": 19,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 12,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42905,
+   "kasseNach": 42260,
+   "abgebucht": 645,
+   "faesserVor": 19,
+   "faesserNach": 19,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe bietet 59.164 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und keine Antw"
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 13,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 42260,
+   "kasseNach": 42260,
+   "abgebucht": 0,
+   "faesserVor": 19,
+   "faesserNach": 18,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 13,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 42260,
+   "kasseNach": 41615,
+   "abgebucht": 645,
+   "faesserVor": 18,
+   "faesserNach": 18,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 14,
+   "zug": "sud:behandlung:natur",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Naturtrüb, unfiltriert",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41615,
+   "kasseNach": 41615,
+   "abgebucht": 0,
+   "faesserVor": 18,
+   "faesserNach": 18,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 14,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 41615,
+   "kasseNach": 41615,
+   "abgebucht": 0,
+   "faesserVor": 18,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 14,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 41615,
+   "kasseNach": 40970,
+   "abgebucht": 645,
+   "faesserVor": 17,
+   "faesserNach": 17,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 15,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 40970,
+   "kasseNach": 40970,
+   "abgebucht": 0,
+   "faesserVor": 17,
+   "faesserNach": 16,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 15,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40970,
+   "kasseNach": 40325,
+   "abgebucht": 645,
+   "faesserVor": 16,
+   "faesserNach": 12,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Sabine Bruckner übergibt und geht, ohne dass jemand etwas vereinbart hätte. Was ihr gehörte, gehörte nie dem Haus.",
+    "Sabine Bruckner übernimmt das Haus in 1972. Man sagt: Hat die Kirche im Rücken und die Zunft im Nacken.",
+    "Die Miterben nehmen ihren Teil in Naturalien: 6,0 hl gehen aus den Tanks.",
+    "Das Haus geht auf Sabine Bruckner über. Vorher hafteten 0 Bindungen am Haus und 0 an der Person; jetzt sind es 0 und 0. "
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 16,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 40325,
+   "kasseNach": 40325,
+   "abgebucht": 0,
+   "faesserVor": 12,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 16,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 40325,
+   "kasseNach": 39680,
+   "abgebucht": 645,
+   "faesserVor": 11,
+   "faesserNach": 11,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 17,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 39680,
+   "kasseNach": 39680,
+   "abgebucht": 0,
+   "faesserVor": 11,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 17,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39680,
+   "kasseNach": 39035,
+   "abgebucht": 645,
+   "faesserVor": 10,
+   "faesserNach": 10,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 18,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 39035,
+   "kasseNach": 39035,
+   "abgebucht": 0,
+   "faesserVor": 10,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 18,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 39035,
+   "kasseNach": 38390,
+   "abgebucht": 645,
+   "faesserVor": 9,
+   "faesserNach": 9,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 19,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 38390,
+   "kasseNach": 38390,
+   "abgebucht": 0,
+   "faesserVor": 9,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 19,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 38390,
+   "kasseNach": 37745,
+   "abgebucht": 645,
+   "faesserVor": 8,
+   "faesserNach": 8,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 20,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 37745,
+   "kasseNach": 37745,
+   "abgebucht": 0,
+   "faesserVor": 8,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 20,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37745,
+   "kasseNach": 37100,
+   "abgebucht": 645,
+   "faesserVor": 7,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Zum Goldenen Ochsen."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 21,
+   "zug": "sud:behandlung:schoenen",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Schönen mit Kieselsol",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37100,
+   "kasseNach": 37100,
+   "abgebucht": 0,
+   "faesserVor": 7,
+   "faesserNach": 7,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 21,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 37100,
+   "kasseNach": 37100,
+   "abgebucht": 0,
+   "faesserVor": 7,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 21,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 37100,
+   "kasseNach": 36455,
+   "abgebucht": 645,
+   "faesserVor": 6,
+   "faesserNach": 6,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe bietet 51.037 DM für ein Viertel des Hauses. Die Antwort wird nicht zurückgenommen — und keine Antw",
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 22,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 36455,
+   "kasseNach": 36455,
+   "abgebucht": 0,
+   "faesserVor": 6,
+   "faesserNach": 5,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 22,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 36455,
+   "kasseNach": 35810,
+   "abgebucht": 645,
+   "faesserVor": 5,
+   "faesserNach": 5,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 23,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 35810,
+   "kasseNach": 35810,
+   "abgebucht": 0,
+   "faesserVor": 5,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 23,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 35810,
+   "kasseNach": 35165,
+   "abgebucht": 645,
+   "faesserVor": 4,
+   "faesserNach": 4,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 24,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 35165,
+   "kasseNach": 35165,
+   "abgebucht": 0,
+   "faesserVor": 4,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 24,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 35165,
+   "kasseNach": 34520,
+   "abgebucht": 645,
+   "faesserVor": 3,
+   "faesserNach": 3,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 25,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 34520,
+   "kasseNach": 34520,
+   "abgebucht": 0,
+   "faesserVor": 3,
+   "faesserNach": 2,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 25,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 34520,
+   "kasseNach": 33875,
+   "abgebucht": 645,
+   "faesserVor": 2,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Brauerei Nachtigall im Nachbartal wird verkauft. Der Betrieb geht an die Nordstern-Gruppe; über den Ausschank in der Sta"
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 26,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 33875,
+   "kasseNach": 33875,
+   "abgebucht": 0,
+   "faesserVor": 30,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 26,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 33875,
+   "kasseNach": 33230,
+   "abgebucht": 645,
+   "faesserVor": 29,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 27,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 33230,
+   "kasseNach": 33230,
+   "abgebucht": 0,
+   "faesserVor": 29,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 27,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 33230,
+   "kasseNach": 32585,
+   "abgebucht": 645,
+   "faesserVor": 28,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Bahnhofsgaststätte ist wieder frei. Adler-Bräu AG hat die Bindung verloren."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 28,
+   "zug": "sud:behandlung:natur",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Naturtrüb, unfiltriert",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 32585,
+   "kasseNach": 32585,
+   "abgebucht": 0,
+   "faesserVor": 28,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 28,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 32585,
+   "kasseNach": 32585,
+   "abgebucht": 0,
+   "faesserVor": 28,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 28,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 32585,
+   "kasseNach": 31940,
+   "abgebucht": 645,
+   "faesserVor": 27,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 29,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 31940,
+   "kasseNach": 31940,
+   "abgebucht": 0,
+   "faesserVor": 27,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 29,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 31940,
+   "kasseNach": 31295,
+   "abgebucht": 645,
+   "faesserVor": 26,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Anfrage der Nordstern-Gruppe ist verfallen. Ungefragt genommen hat sie sich Pfarrschenke St. Michael."
+   ]
+  },
+  {
+   "jahr": 1972,
+   "woche": 30,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 31295,
+   "kasseNach": 31295,
+   "abgebucht": 0,
+   "faesserVor": 26,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1972,
+   "woche": 30,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "JAHR SCHLIESSEN",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 31295,
+   "kasseNach": 50000,
+   "abgebucht": -18705,
+   "faesserVor": 25,
+   "faesserNach": 0,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Gasthof Lindenhof nimmt nichts mehr. Der Gegner stand schon vor der Tür, als es anfing. Die Reihe: 486 · 93 · 0,0 von 72",
+    "Schenke am Tor nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Re",
+    "Mühlschenke nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Die Reihe",
+    "Ausschank am Markt nimmt nichts mehr. Niemand hat die Adresse genommen — wir haben sie drei Jahre lang liegen lassen. Di",
+    "Georgi. Die Tafel am Sudhaus wird gewischt. Die Sudpfanne steht im Sommer für die Wartung still. Der Sommerabsatz kommt ",
+    "Michaeli. Die Tafel am Sudhaus wird neu angeschrieben: 1× Pilsner — wie im vorigen Jahr, bis jemand es ändert.",
+    "Die letzte Adresse ist weg. Das Brauhaus zum Anker braut noch, aber es liefert nirgendwohin mehr. Nicht das Geld ist aus",
+    "Energie- und Frachtenkrise: 1.800 DM angeschlagen. 9.571 DM bleiben als Rückstand stehen.",
+    "Der Rat schießt dem Haus 20.197 DM auf den Notpfennig vor — angeschrieben, nicht geschenkt.",
+    "Der Name des Hauses: Der Verbrauchertest setzt den Anker auf den letzten Platz."
+   ]
+  },
+  {
+   "jahr": 1973,
+   "woche": 1,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 50000,
+   "kasseNach": 49342,
+   "abgebucht": 658,
+   "faesserVor": 0,
+   "faesserNach": 30,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Der Keller steht leer, und der Plan trägt nicht: der Braumeister setzt Handelsmarke an, den zweiten Guss auf dieselben T"
+   ]
+  },
+  {
+   "jahr": 1973,
+   "woche": 2,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 49342,
+   "kasseNach": 49342,
+   "abgebucht": 0,
+   "faesserVor": 30,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 2,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 49342,
+   "kasseNach": 48684,
+   "abgebucht": 658,
+   "faesserVor": 29,
+   "faesserNach": 29,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1973,
+   "woche": 3,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 48684,
+   "kasseNach": 48684,
+   "abgebucht": 0,
+   "faesserVor": 29,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 3,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48684,
+   "kasseNach": 48026,
+   "abgebucht": 658,
+   "faesserVor": 28,
+   "faesserNach": 28,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 4,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 48026,
+   "kasseNach": 48026,
+   "abgebucht": 0,
+   "faesserVor": 28,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 4,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 48026,
+   "kasseNach": 47368,
+   "abgebucht": 658,
+   "faesserVor": 27,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "chronik": [
+    "Die Nordstern-Gruppe bietet auf die Marke. Die Nordstern-Gruppe schickt keinen Direktor mehr, sondern einen Justitiar. D"
+   ]
+  },
+  {
+   "jahr": 1973,
+   "woche": 5,
+   "zug": "sud:behandlung:schoenen",
+   "warum": "kostenlose Umstellung probieren",
+   "aufschrift": "Schönen mit Kieselsol",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47368,
+   "kasseNach": 47368,
+   "abgebucht": 0,
+   "faesserVor": 27,
+   "faesserNach": 27,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "natur"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 5,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 47368,
+   "kasseNach": 47368,
+   "abgebucht": 0,
+   "faesserVor": 27,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 5,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 47368,
+   "kasseNach": 46710,
+   "abgebucht": 658,
+   "faesserVor": 26,
+   "faesserNach": 26,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 6,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 46710,
+   "kasseNach": 46710,
+   "abgebucht": 0,
+   "faesserVor": 26,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 6,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46710,
+   "kasseNach": 46052,
+   "abgebucht": 658,
+   "faesserVor": 25,
+   "faesserNach": 25,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 7,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 46052,
+   "kasseNach": 46052,
+   "abgebucht": 0,
+   "faesserVor": 25,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 7,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 46052,
+   "kasseNach": 45394,
+   "abgebucht": 658,
+   "faesserVor": 24,
+   "faesserNach": 24,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Der Name des Hauses: In den Gaststätten redet man: der Anker ist nicht mehr das, was der Spot sagt."
+   ]
+  },
+  {
+   "jahr": 1973,
+   "woche": 8,
+   "zug": "sud:anstich-jung",
+   "warum": "Hefe vom Fass, kostet ein Fass",
+   "aufschrift": "Frisches Fass anzapfen · +14 · 1,5 hl",
+   "preisschild": null,
+   "fassschild": 1,
+   "kasseVor": 45394,
+   "kasseNach": 45394,
+   "abgebucht": 0,
+   "faesserVor": 24,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": []
+  },
+  {
+   "jahr": 1973,
+   "woche": 8,
+   "zug": "weiter",
+   "warum": "Woche weiter",
+   "aufschrift": "WEITER",
+   "preisschild": null,
+   "fassschild": null,
+   "kasseVor": 45394,
+   "kasseNach": 61776,
+   "abgebucht": -16382,
+   "faesserVor": 23,
+   "faesserNach": 23,
+   "verfahrenVor": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "verfahrenNach": {
+    "fuehrung": "labor",
+    "behandlung": "schoenen"
+   },
+   "chronik": [
+    "Der Handel nimmt das Brauhaus zum Anker aus dem Sortiment: seit 8 Wochen hat kein Einkauf mehr bestellt. Zwischen 1960 u"
+   ]
+  }
+ ]
+}
