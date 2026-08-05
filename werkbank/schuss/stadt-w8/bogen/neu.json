@@ -1,0 +1,7 @@
+{ "cfg": { "aus": 70, "an": 18, "leer": 2, "weich": 8 },
+  "teile": [
+    { "name": "lagerfaesser", "k": [0.02, 0.04, 0.49, 0.42], "breite": 620, "ziel": "spiel/bild/hof/fracht_faesser_neu.webp" },
+    { "name": "leute_1884",   "k": [0.50, 0.06, 0.98, 0.40], "breite": 580, "ziel": "spiel/bild/hof/fracht_leute_neu.webp" },
+    { "name": "sackkarre",    "k": [0.02, 0.52, 0.49, 0.92], "breite": 520, "ziel": "spiel/bild/hof/fracht_karre_neu.webp" },
+    { "name": "kasten_1970",  "k": [0.49, 0.52, 0.99, 0.95], "breite": 620, "ziel": "spiel/bild/hof/fracht_kasten.webp" }
+  ] }

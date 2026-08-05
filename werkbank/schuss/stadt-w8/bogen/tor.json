@@ -1,0 +1,7 @@
+{ "cfg": { "aus": 70, "an": 18, "leer": 2, "weich": 8 },
+  "teile": [
+    { "name": "gespann_1600", "k": [0.015, 0.03, 0.485, 0.45], "breite": 620, "ziel": "spiel/bild/hof/tor_gespann_alt.webp" },
+    { "name": "gespann_1884", "k": [0.515, 0.03, 0.985, 0.45], "breite": 620, "ziel": "spiel/bild/hof/tor_gespann_neu.webp" },
+    { "name": "ochsenkarren", "k": [0.015, 0.55, 0.485, 0.97], "breite": 580, "ziel": "spiel/bild/hof/tor_ochse.webp" },
+    { "name": "lkw_1970",     "k": [0.515, 0.55, 0.985, 0.97], "breite": 620, "ziel": "spiel/bild/hof/tor_lkw.webp" }
+  ] }

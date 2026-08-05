@@ -1,0 +1,7 @@
+{ "cfg": { "aus": 70, "an": 18, "leer": 2, "weich": 8 },
+  "teile": [
+    { "name": "fassreihe_holz", "k": [0.02, 0.05, 0.49, 0.46], "breite": 620, "ziel": "spiel/bild/hof/fracht_faesser_alt.webp" },
+    { "name": "rollen_alt",     "k": [0.50, 0.05, 0.98, 0.40], "breite": 560, "ziel": "spiel/bild/hof/fracht_leute_alt.webp" },
+    { "name": "karre_alt",      "k": [0.02, 0.52, 0.49, 0.98], "breite": 560, "ziel": "spiel/bild/hof/fracht_karre_alt.webp" },
+    { "name": "bank_trog",      "k": [0.50, 0.52, 0.98, 0.92], "breite": 520, "ziel": "spiel/bild/hof/fracht_bank.webp" }
+  ] }
