@@ -1,0 +1,330 @@
+{
+ "e1": {
+  "bis_load": {
+   "byte": 4117142,
+   "anfragen": 56,
+   "mb": 3.926
+  },
+  "bis_ruhe": {
+   "byte": 6288555,
+   "anfragen": 62,
+   "mb": 5.997
+  },
+  "nach_klick": {
+   "byte": 9836998,
+   "anfragen": 90,
+   "mb": 9.381
+  },
+  "nach_typ": {
+   "html": {
+    "n": 1,
+    "byte": 4879
+   },
+   "css": {
+    "n": 16,
+    "byte": 297883
+   },
+   "js": {
+    "n": 30,
+    "byte": 1401345
+   },
+   "webp": {
+    "n": 11,
+    "byte": 1819016
+   },
+   "jpg": {
+    "n": 2,
+    "byte": 1995025
+   },
+   "png": {
+    "n": 2,
+    "byte": 770407
+   },
+   "mp3": {
+    "n": 28,
+    "byte": 3548443
+   }
+  },
+  "schwerste": [
+   [
+    "/spiel/bild/platte-1600.jpg",
+    1004546
+   ],
+   [
+    "/spiel/bild/platte-1350.jpg",
+    990479
+   ],
+   [
+    "/spiel/ton/klang/bett1.mp3",
+    639522
+   ],
+   [
+    "/spiel/bild/gegner/hof1.png",
+    418024
+   ],
+   [
+    "/spiel/ton/klang/grund.mp3",
+    353219
+   ],
+   [
+    "/spiel/ton/klang/hof1.mp3",
+    353219
+   ],
+   [
+    "/spiel/bild/name/zeiger1.png",
+    352383
+   ],
+   [
+    "/spiel/bild/hof/brunnen.webp",
+    300626
+   ]
+  ],
+  "fehlstatus": [],
+  "ms_bis_load": 619
+ },
+ "e2": {
+  "bis_load": {
+   "byte": 5753923,
+   "anfragen": 62,
+   "mb": 5.487
+  },
+  "bis_ruhe": {
+   "byte": 7739299,
+   "anfragen": 69,
+   "mb": 7.381
+  },
+  "nach_klick": {
+   "byte": 11305714,
+   "anfragen": 97,
+   "mb": 10.782
+  },
+  "nach_typ": {
+   "html": {
+    "n": 1,
+    "byte": 4879
+   },
+   "css": {
+    "n": 16,
+    "byte": 297883
+   },
+   "js": {
+    "n": 30,
+    "byte": 1401345
+   },
+   "jpg": {
+    "n": 2,
+    "byte": 2005490
+   },
+   "webp": {
+    "n": 18,
+    "byte": 2830170
+   },
+   "png": {
+    "n": 2,
+    "byte": 1199532
+   },
+   "mp3": {
+    "n": 28,
+    "byte": 3566415
+   }
+  },
+  "schwerste": [
+   [
+    "/spiel/bild/platte-1600.jpg",
+    1004546
+   ],
+   [
+    "/spiel/bild/platte-1884.jpg",
+    1000944
+   ],
+   [
+    "/spiel/bild/name/schild2.png",
+    699245
+   ],
+   [
+    "/spiel/ton/klang/bett2.mp3",
+    641194
+   ],
+   [
+    "/spiel/bild/gegner/hof2.png",
+    500287
+   ],
+   [
+    "/spiel/bild/hof/laderampe.webp",
+    417052
+   ],
+   [
+    "/spiel/ton/klang/hof2.mp3",
+    353219
+   ],
+   [
+    "/spiel/ton/klang/grund.mp3",
+    353219
+   ]
+  ],
+  "fehlstatus": [],
+  "ms_bis_load": 2681
+ },
+ "e3": {
+  "bis_load": {
+   "byte": 4214049,
+   "anfragen": 56,
+   "mb": 4.019
+  },
+  "bis_ruhe": {
+   "byte": 6634404,
+   "anfragen": 67,
+   "mb": 6.327
+  },
+  "nach_klick": {
+   "byte": 10330892,
+   "anfragen": 97,
+   "mb": 9.852
+  },
+  "nach_typ": {
+   "html": {
+    "n": 1,
+    "byte": 4879
+   },
+   "css": {
+    "n": 16,
+    "byte": 297883
+   },
+   "js": {
+    "n": 30,
+    "byte": 1401345
+   },
+   "webp": {
+    "n": 18,
+    "byte": 2634688
+   },
+   "jpg": {
+    "n": 2,
+    "byte": 2295609
+   },
+   "mp3": {
+    "n": 30,
+    "byte": 3696488
+   }
+  },
+  "schwerste": [
+   [
+    "/spiel/bild/platte-1970.jpg",
+    1294665
+   ],
+   [
+    "/spiel/bild/platte-1884.jpg",
+    1000944
+   ],
+   [
+    "/spiel/ton/klang/bett3.mp3",
+    641194
+   ],
+   [
+    "/spiel/bild/hof/laderampe.webp",
+    417052
+   ],
+   [
+    "/spiel/ton/klang/hof3.mp3",
+    353219
+   ],
+   [
+    "/spiel/ton/klang/grund.mp3",
+    353219
+   ],
+   [
+    "/spiel/bild/hof/brunnen.webp",
+    300626
+   ],
+   [
+    "/spiel/stuecke/fuhre.js",
+    208833
+   ]
+  ],
+  "fehlstatus": [],
+  "ms_bis_load": 541
+ },
+ "e4": {
+  "bis_load": {
+   "byte": 2057079,
+   "anfragen": 51,
+   "mb": 1.962
+  },
+  "bis_ruhe": {
+   "byte": 4487596,
+   "anfragen": 59,
+   "mb": 4.28
+  },
+  "nach_klick": {
+   "byte": 7922686,
+   "anfragen": 85,
+   "mb": 7.556
+  },
+  "nach_typ": {
+   "html": {
+    "n": 1,
+    "byte": 4879
+   },
+   "css": {
+    "n": 16,
+    "byte": 297883
+   },
+   "js": {
+    "n": 30,
+    "byte": 1401345
+   },
+   "webp": {
+    "n": 10,
+    "byte": 1076392
+   },
+   "jpg": {
+    "n": 1,
+    "byte": 1294665
+   },
+   "png": {
+    "n": 1,
+    "byte": 412432
+   },
+   "mp3": {
+    "n": 26,
+    "byte": 3435090
+   }
+  },
+  "schwerste": [
+   [
+    "/spiel/bild/platte-1970.jpg",
+    1294665
+   ],
+   [
+    "/spiel/ton/klang/bett4.mp3",
+    720606
+   ],
+   [
+    "/spiel/bild/name/tafel4.png",
+    412432
+   ],
+   [
+    "/spiel/ton/klang/grund.mp3",
+    353219
+   ],
+   [
+    "/spiel/ton/klang/hof4.mp3",
+    353219
+   ],
+   [
+    "/spiel/stuecke/fuhre.js",
+    208833
+   ],
+   [
+    "/spiel/bild/hof/verwaltung.webp",
+    142752
+   ],
+   [
+    "/spiel/bild/hof/kesselhaus.webp",
+    141858
+   ]
+  ],
+  "fehlstatus": [],
+  "ms_bis_load": 600
+ }
+}
