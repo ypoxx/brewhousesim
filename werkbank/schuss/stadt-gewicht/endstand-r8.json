@@ -1,0 +1,362 @@
+{
+  "e1": {
+    "anfragen": 62,
+    "anfragen_bis_load": 59,
+    "encodedBodySize_bis_load": 5071116,
+    "mb_bis_load": 4.84,
+    "encodedBodySize": 6321970,
+    "transferSize": 6340570,
+    "mb_enc": 6.03,
+    "mb_tra": 6.05,
+    "nach_fach": {
+      "bild/platte": {
+        "n": 2,
+        "mb": 1.9
+      },
+      "bild/hof": {
+        "n": 11,
+        "mb": 1.73
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.37
+      },
+      "bild/gegner": {
+        "n": 1,
+        "mb": 0.4
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.34
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.29
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1350.jpg",
+        "kb": 967
+      },
+      {
+        "datei": "spiel/bild/gegner/hof1.png",
+        "kb": 408
+      },
+      {
+        "datei": "spiel/bild/name/zeiger1.png",
+        "kb": 344
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.webp",
+        "kb": 294
+      },
+      {
+        "datei": "spiel/bild/hof/malzboden.webp",
+        "kb": 220
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/bild/hof/gaerbottiche.webp",
+        "kb": 194
+      },
+      {
+        "datei": "spiel/bild/hof/grutkammer.webp",
+        "kb": 172
+      },
+      {
+        "datei": "spiel/bild/hof/ochsenstall.webp",
+        "kb": 166
+      },
+      {
+        "datei": "spiel/bild/hof/kueferei.webp",
+        "kb": 147
+      },
+      {
+        "datei": "spiel/stuecke/preis.js",
+        "kb": 143
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e2": {
+    "anfragen": 69,
+    "anfragen_bis_load": 62,
+    "encodedBodySize_bis_load": 5787338,
+    "mb_bis_load": 5.52,
+    "encodedBodySize": 7772714,
+    "transferSize": 7793414,
+    "mb_enc": 7.41,
+    "mb_tra": 7.43,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 18,
+        "mb": 2.7
+      },
+      "bild/platte": {
+        "n": 2,
+        "mb": 1.91
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.37
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.67
+      },
+      "bild/gegner": {
+        "n": 1,
+        "mb": 0.48
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.29
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1600.jpg",
+        "kb": 981
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/name/schild2.png",
+        "kb": 683
+      },
+      {
+        "datei": "spiel/bild/gegner/hof2.png",
+        "kb": 489
+      },
+      {
+        "datei": "spiel/bild/hof/laderampe.webp",
+        "kb": 407
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.webp",
+        "kb": 294
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/bild/hof/gaerbottiche.webp",
+        "kb": 194
+      },
+      {
+        "datei": "spiel/bild/hof/gaertanks.webp",
+        "kb": 164
+      },
+      {
+        "datei": "spiel/bild/hof/waschhaus.webp",
+        "kb": 161
+      },
+      {
+        "datei": "spiel/bild/hof/rossmuehle.webp",
+        "kb": 148
+      },
+      {
+        "datei": "spiel/bild/hof/maschinenhaus.webp",
+        "kb": 148
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e3": {
+    "anfragen": 67,
+    "anfragen_bis_load": 61,
+    "encodedBodySize_bis_load": 4812406,
+    "mb_bis_load": 4.59,
+    "encodedBodySize": 6667819,
+    "transferSize": 6687919,
+    "mb_enc": 6.36,
+    "mb_tra": 6.38,
+    "nach_fach": {
+      "bild/hof": {
+        "n": 18,
+        "mb": 2.51
+      },
+      "bild/platte": {
+        "n": 2,
+        "mb": 2.19
+      },
+      "js": {
+        "n": 30,
+        "mb": 1.37
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.29
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/platte-1884.jpg",
+        "kb": 977
+      },
+      {
+        "datei": "spiel/bild/hof/laderampe.webp",
+        "kb": 407
+      },
+      {
+        "datei": "spiel/bild/hof/brunnen.webp",
+        "kb": 294
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/bild/hof/gaertanks.webp",
+        "kb": 164
+      },
+      {
+        "datei": "spiel/bild/hof/maschinenhaus.webp",
+        "kb": 148
+      },
+      {
+        "datei": "spiel/bild/hof/pferdestall.webp",
+        "kb": 144
+      },
+      {
+        "datei": "spiel/stuecke/preis.js",
+        "kb": 143
+      },
+      {
+        "datei": "spiel/bild/hof/hopfenlager.webp",
+        "kb": 143
+      },
+      {
+        "datei": "spiel/bild/hof/kesselhaus.webp",
+        "kb": 139
+      },
+      {
+        "datei": "spiel/bild/hof/fasslager_stein.webp",
+        "kb": 131
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "e4": {
+    "anfragen": 59,
+    "anfragen_bis_load": 59,
+    "encodedBodySize_bis_load": 4521011,
+    "mb_bis_load": 4.31,
+    "encodedBodySize": 4521011,
+    "transferSize": 4538711,
+    "mb_enc": 4.31,
+    "mb_tra": 4.33,
+    "nach_fach": {
+      "js": {
+        "n": 30,
+        "mb": 1.37
+      },
+      "bild/platte": {
+        "n": 1,
+        "mb": 1.23
+      },
+      "bild/hof": {
+        "n": 10,
+        "mb": 1.03
+      },
+      "bild/name": {
+        "n": 1,
+        "mb": 0.39
+      },
+      "css": {
+        "n": 16,
+        "mb": 0.29
+      },
+      "rest": {
+        "n": 1,
+        "mb": 0
+      }
+    },
+    "groesste": [
+      {
+        "datei": "spiel/bild/platte-1970.jpg",
+        "kb": 1264
+      },
+      {
+        "datei": "spiel/bild/name/tafel4.png",
+        "kb": 403
+      },
+      {
+        "datei": "spiel/stuecke/fuhre.js",
+        "kb": 204
+      },
+      {
+        "datei": "spiel/stuecke/preis.js",
+        "kb": 143
+      },
+      {
+        "datei": "spiel/bild/hof/verwaltung.webp",
+        "kb": 139
+      },
+      {
+        "datei": "spiel/bild/hof/kesselhaus.webp",
+        "kb": 139
+      },
+      {
+        "datei": "spiel/stuecke/gegner.js",
+        "kb": 126
+      },
+      {
+        "datei": "spiel/bild/hof/stahltanks.webp",
+        "kb": 125
+      },
+      {
+        "datei": "spiel/bild/hof/kastenlager.webp",
+        "kb": 119
+      },
+      {
+        "datei": "spiel/stuecke/sud.js",
+        "kb": 118
+      },
+      {
+        "datei": "spiel/bild/hof/sudhaus_neu.webp",
+        "kb": 113
+      },
+      {
+        "datei": "spiel/bild/hof/maelzerei.webp",
+        "kb": 111
+      }
+    ],
+    "seitenfehler": 0,
+    "fehler": []
+  },
+  "stand": "2026-08-05T19:22:27.508Z",
+  "hafen": "8899",
+  "fenster": "1366x768",
+  "ruhe_s": 10
+}

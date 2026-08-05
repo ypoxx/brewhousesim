@@ -291,3 +291,63 @@ und damit wieder ρ. Gehört in dieselbe Runde.
 
 Geändert nur `spiel/stuecke/preis.js`, `spiel/stuecke/preis-daten.js`,
 `spiel/stil/preis-zusatz.css`. Kein `Math.random()`, keine Bilder, kein `git`.
+
+---
+
+## 12 · Nachtrag der Aufsicht, und was daraus ins Repo gehört
+
+**Der Veröffentlicher ist an der Wurzel geheilt** — nicht am Skript, sondern an
+der Reihenfolge: `wiederaufnahme.sh` startete ihn, *bevor* der Baum aus origin
+zurückgeholt war, also las er nach jedem Reset die alte Fassung seiner selbst.
+Er lädt sich jetzt am Ende jedes Takts selbst neu (`exec`, verbleibende
+Laufzeit weitergereicht). Gegengeprüft an Commit `8442f0d`. **Der Befund des
+blinden Kritikers in seinem §11 ist damit erledigt; wer ihn dort liest, muss
+nicht noch einmal nachsehen.**
+
+**Die Nacharbeit ist angenommen**, mit der Einschränkung, die ich selbst
+genannt habe (1350 am neuen Stand n = 1). Die Aufsicht misst am eingefrorenen
+Stand `54517b9` nach: 1350 dreimal, die anderen drei je einmal.
+
+**Auflage 9 bleibt offen und bekommt eine eigene Runde**, zusammen mit
+Auflage 8 und 10.
+
+### DIE ZAHL, GEGEN DIE AUFLAGE 9 GEBAUT WIRD — und es ist nicht ρ
+
+Ansage der Aufsicht, wörtlich: *„Wenn du an Auflage 9 gehst, ist das die Zahl,
+gegen die du baust — nicht ρ. ρ liegt dort ohnehin unter der Latte und würde
+dir nichts sagen."*
+
+Gemeint ist die Wiederholung der **untersten Leitersprosse**. Damit die nächste
+Runde sie nicht von Hand nachbauen muss — *zweimal von Hand ist einmal zu oft* —
+steht sie jetzt als Gerät im Repo:
+
+```
+python3 werkbank/schuss/preis-w7/sprossen.py <ordner mit e*-A.json>
+```
+
+Es liest `leiterRoh[].name` jedes 400-Wochen-Laufs und zählt: verschiedene
+Namen · **längste ununterbrochene Reihe** · Wechsel. Am Schlussstand dieser
+Nacharbeit:
+
+| Epoche | Jahre | Namen | **längste Reihe** | Wechsel | |
+|---|---:|---:|---:|---:|---|
+| **1350** | 14 | 5 | 7 | 5 | *(geheilt in Welle 7)* |
+| **1600** | 14 | **1** | **14** | **0** | **TOTE LEITER** |
+| 1884 | 14 | 4 | 3 | 8 | |
+| **1970** | 14 | 3 | 4 | 5 | |
+
+**Und hier steht ein Befund über die Messgröße selbst, den ich melde, bevor
+jemand die Zahlen nebeneinanderlegt und sich wundert:**
+
+| | Hand des Kritikers (`GIER=1`, teuerstes bezahlbare) | Hand der Aufsicht (`linie.mjs`, billigstes mit doppelter Rücklage) |
+|---|---|---|
+| **1600** | 14× dieselbe Sprosse | **14× dieselbe Sprosse** |
+| **1970** | 10 von 14 | **4** |
+| 1350 | sechs verschiedene Namen | fünf |
+
+**1600 stimmt exakt — eine tote Leiter ist unter jeder Hand tot, und das ist
+der harte Teil des Befunds.** 1970 nicht: dort hängt die Zahl an der Kaufregel.
+Wer Auflage 9 misst, **nennt seine Hand dazu**, so wie der Kritiker es getan
+hat, und misst am besten mit beiden. Sonst wiederholt sich der Fall aus
+Welle 6, in dem zwei Tabellenzeilen unbrauchbar wurden, weil niemand sagen
+konnte, wer sie bewegt hat.
