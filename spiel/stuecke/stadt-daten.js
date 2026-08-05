@@ -438,10 +438,34 @@ var STADT_DATEN = {
        der Pfanne 57 px — 77 Prozent davon. Der Faktor ist 74/57 = 1,30, und
        weil eine Figur weiter hinten eher zu klein als zu gross sein soll,
        steht hier 8,9 statt 9,1: das sind 72 px erwartete 74. */
+    /* DIE PFANNE GEHOERT NACH VORN. AUFLAGE 6, Welle 7.
+
+       Der blinde Kritiker hat das vordere Hofdrittel als leer gemessen und
+       daran festgemacht, dass das Zielbild in 1350 und 1600 noch gewinnt.
+       Beim Nachmessen mit DEM LOT stellte sich heraus, dass der Hof eine
+       RAUTE ist: die Mauerlinie hat ihren Scheitel bei (29,9|78,5) und
+       faellt nach beiden Seiten mit 0,49 bzw. 0,45 ab (K.boden). Vorn ist
+       also nur in einem schmalen Keil zwischen x 26 und 34 ueberhaupt
+       Platz — und dort passt genau EIN Ding.
+
+       Der erste Versuch stellte den Fassschuppen hinein. Das Lot hat ihn
+       widerlegt: die Pfanne war danach zu 82 % (1350) und zu 100 % (1600)
+       zugedeckt. Das ist der Gegenstand, an dem die Sperrliste haengt —
+       offene Pfanne statt Destillierblase — und der Blickpunkt, den das
+       Zielbild im Vordergrund hat.
+
+       Also steht die Pfanne selbst im Keil. Sie ist Geraet und darf
+       ruecken (anders als der Ziehbrunnen, Auflage 1), sie ist flach
+       (900x428, das flachste Bild im Katalog) und deckt deshalb nichts zu,
+       und sie ist das Richtige: im Zielbild steht der Kessel mit den zwei
+       Brauerinnen vorn.
+
+       Breite 8,9 -> 10,3 nach derselben Perspektive, mit der sie geeicht
+       ist (31 px/m bei y 910, 47 bei y 1082): Fuss 69 -> 74. */
     { schluessel: 'pfanne', name: 'Braupfanne im Hof', bild: 'pfanne',
-      ort: 'kesselstelle', dx: -9, dy: 5,
-      breite: 8.9, breiten: { 1: 8.9, 2: 8.9 },
-      versatz: { 2: { dx: 7, dy: 0.5 } },
+      ort: 'kesselstelle', dx: -4, dy: 10,
+      breite: 10.3, breiten: { 1: 10.3, 2: 10.3 },
+      versatz: { 2: { dx: 2, dy: 0.5 } },
       von: 1, bis: 2, grund: 26,
       sagt: 'Die offene Pfanne über offenem Feuer, daneben Maischbottich und '
           + 'Kühlschiff, zwei Brauerinnen mit Holzschaufeln. Kein Helm, kein '
@@ -515,7 +539,7 @@ var STADT_DATEN = {
          Die Breite waechst mit der Tiefe, nach derselben Perspektive, mit
          der die Braupfanne geeicht ist (31 px/m bei y 910, 47 bei y 1082,
          linear): 68,5 % -> 77,5 % ist Faktor 1,29, also 13 -> 15. */
-      ort: 'fasslager', dx: 3, dy: 0, breite: 15, von: 1, bis: 1, grund: 22,
+      ort: 'fasslager', dx: 10, dy: -5, breite: 12.5, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach über den Fässern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
@@ -540,7 +564,7 @@ var STADT_DATEN = {
          jetzt in 1350 und 1600 an derselben Stelle — ein Loch im Boden
          wandert nicht, und das war der Kern der Auflage.
          Breite 11 -> 14 nach derselben Perspektive (Fuss 70 -> 79). */
-      ort: 'keller', dx: 3, dy: 3, breite: 12.5, breiten: { 1: 13, 2: 13 },
+      ort: 'keller', dx: 4, dy: 1, breite: 12.5, breiten: { 1: 11.5, 2: 11.5 },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
@@ -629,7 +653,7 @@ var STADT_DATEN = {
          Brunnen, der sich ohne Not bewegte.
          Breiten nach der Tiefe: 1600 10,1 -> 12,4 (Fuss 70 -> 77,5),
          1884 14 -> 15,6 (Fuss 73,5 -> 77,5). */
-      ort: 'fasslager', dx: 3, dy: 0, breite: 14, breiten: { 2: 12.4, 3: 15.6 },
+      ort: 'fasslager', dx: 10, dy: -5, breite: 14, breiten: { 2: 11, 3: 13 },
       von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat wächst, der Schwund fällt.',
       nutzen: { platz: 10 } },
@@ -732,7 +756,7 @@ var STADT_DATEN = {
          das, was vorn stehen kann, ohne die Reihe dahinter zuzudecken. Er
          steht in 1884 von Anfang an da (`stand`), das vordere Drittel ist
          also nicht erst nach dem fuenften Kauf belegt. */
-      ort: 'keller', dx: 4, dy: 3, breite: 13, von: 3, bis: 3, grund: 70,
+      ort: 'keller', dx: 4, dy: 1, breite: 13, von: 3, bis: 3, grund: 70,
       sagt: 'Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergäriges Lagerbier möglich.',
       nutzen: { platz: 30 } },
 
@@ -812,7 +836,7 @@ var STADT_DATEN = {
       /* VORN IM HOF. AUFLAGE 6, Welle 7. Das Dock ist die Stelle, an der
          das Bier den Hof verlaesst — es gehoert nach vorn zur Ausfahrt und
          nicht in die zweite Reihe. Breite 8,8 -> 11 (Fuss 70 -> 78). */
-      ort: 'rampe', dx: -8, dy: 3, breite: 11, von: 4, bis: 4, grund: 95,
+      ort: 'rampe', dx: -8, dy: 2, breite: 10.5, von: 4, bis: 4, grund: 95,
       sagt: 'Zwei Lastzüge geladen, zwei Mann dabei, einer mit der Sackkarre. '
           + 'Was hier abfährt, ist am Abend zweihundert Kilometer weit.',
       nutzen: {}, wirkt: 'zwei Lastzüge gleichzeitig' },
@@ -832,7 +856,7 @@ var STADT_DATEN = {
       /* VORN IM HOF. AUFLAGE 6, Welle 7. Die Kastenwand ist flach
          (790x449) und deckt deshalb vorn nichts zu; sie steht in 1970 von
          Anfang an da. Breite 8,3 -> 11,5 nach der Tiefe (Fuss 68 -> 79). */
-      ort: 'fasslager', dx: -1, dy: -2, breite: 11.5, von: 4, bis: 4, grund: 70,
+      ort: 'fasslager', dx: -1, dy: -3, breite: 10.5, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
