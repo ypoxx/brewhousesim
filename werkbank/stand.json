@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T11:26:33+00:00",
- "phase": "Zwölfter Reset, und diesmal mit einer guten Nachricht: der Lauf aus dem letzten Fenster hat es in einen Commit geschafft. Meine Sorge, die Probe verliere ihre Ergebnisse, war unbegründet — sie braucht nur länger als ein einzelner Bash-Aufruf, gesichert wird sie zuverlässig. Damit hat der Arm MIT Knopfboden zwei byteweise identische Läufe, gleiche Prüfsumme, also dieselbe strenge Gerätekontrolle wie bei den rho-Zahlen davor. Der Arm OHNE Boden steht noch bei einem Lauf; jeder Reset kostet etwa einen. Der Befund selbst hängt nicht daran: 0,811 ist kein Streuungsabstand, sondern der Unterschied zwischen zwei fehlerfreien Partien über je vierzehn Braujahre.",
+ "stand": "2026-08-05T12:07:29+00:00",
+ "phase": "Welle 7 läuft: zwei Builder, beide auf gemessenen Befunden. DER PREIS nimmt sich die zweite Latte in 1350 vor — sie steht bei +0,762 über zwölf Braujahre und ist damit das seit dem 4. August verfehlte Wellenziel, dreifach unabhängig bestätigt. DIE STADT nimmt das Gewichtsveto und ihre 172 zu kleinen Textknoten. Nur DER PREIS fasst die Wirtschaft an, damit am Ende feststellbar bleibt, wer die Kennzahl bewegt hat — genau daran ist Welle 6 gescheitert. Vorher hat die Aufsicht gezählt, wo die verbliebenen 772 zu kleinen Textknoten liegen: STADT 172, GEGNER 172, NAME 135, ERBE 132, PREIS 113, KLANG 4. FUHRE und SUD stehen auf null. Und ein Fund nebenbei: fünf verfolgte Bilder mit 19 MB lagen unter spiel/werkbank/schuss/ — Messmaterial im ausgelieferten Verzeichnis und in der Historie, weil die gitignore-Regeln auf den Wurzelordner verankert waren. Aus der Verfolgung genommen, Regel für jeden Ordner dieses Namens erweitert, mit git check-ignore gegengeprüft.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T15:37:27+00:00",
-   "text": "KLANG: Vier Ruegen des pruefenden Ohres behoben, alle waren Anachronismen im eigenen Bau — 'moderne UI-Pieptoene' (Oszillatoren fuer den WEITER-Knopf), 'Klicken eines Fotoapparats' (Rauschstoss fuer stadt:reiter), 'Reissverschluss' (Rauschstoss fuer fuhre:kerbe) und 'Fahrradklingel' (Handglocke in 1600). In kern/ton.js steht jetzt kein einziger Oszillator mehr."
-  },
   {
    "zeit": "2026-08-01T15:37:27+00:00",
    "text": "KLANG an die AUFSICHT: werkbank/hoerer.py bricht bei etwa jeder zweiten Antwort mitten im JSON ab und meldet dann faelschlich DURCHGEFALLEN, obwohl die richtige Epoche im Rohtext steht; einmal kam eine Liste statt eines Objekts und das Skript warf einen Traceback. hoerer.py gehoert nicht dem KLANG und wurde nicht angefasst. Bis dahin: je Datei einzeln rufen und bei 'kein JSON' wiederholen."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T11:26:33+00:00",
    "text": "Zwölfter Reset, und diesmal mit einer guten Nachricht: der Lauf aus dem letzten Fenster hat es in einen Commit geschafft. Meine Sorge, die Probe verliere ihre Ergebnisse, war unbegründet — sie braucht nur länger als ein einzelner Bash-Aufruf, gesichert wird sie zuverlässig. Damit hat der Arm MIT Knopfboden zwei byteweise identische Läufe, gleiche Prüfsumme, also dieselbe strenge Gerätekontrolle wie bei den rho-Zahlen davor. Der Arm OHNE Boden steht noch bei einem Lauf; jeder Reset kostet etwa einen. Der Befund selbst hängt nicht daran: 0,811 ist kein Streuungsabstand, sondern der Unterschied zwischen zwei fehlerfreien Partien über je vierzehn Braujahre."
+  },
+  {
+   "zeit": "2026-08-05T12:07:29+00:00",
+   "text": "Welle 7 läuft: zwei Builder, beide auf gemessenen Befunden. DER PREIS nimmt sich die zweite Latte in 1350 vor — sie steht bei +0,762 über zwölf Braujahre und ist damit das seit dem 4. August verfehlte Wellenziel, dreifach unabhängig bestätigt. DIE STADT nimmt das Gewichtsveto und ihre 172 zu kleinen Textknoten. Nur DER PREIS fasst die Wirtschaft an, damit am Ende feststellbar bleibt, wer die Kennzahl bewegt hat — genau daran ist Welle 6 gescheitert. Vorher hat die Aufsicht gezählt, wo die verbliebenen 772 zu kleinen Textknoten liegen: STADT 172, GEGNER 172, NAME 135, ERBE 132, PREIS 113, KLANG 4. FUHRE und SUD stehen auf null. Und ein Fund nebenbei: fünf verfolgte Bilder mit 19 MB lagen unter spiel/werkbank/schuss/ — Messmaterial im ausgelieferten Verzeichnis und in der Historie, weil die gitignore-Regeln auf den Wurzelordner verankert waren. Aus der Verfolgung genommen, Regel für jeden Ordner dieses Namens erweitert, mit git check-ignore gegengeprüft."
   }
  ]
 }
