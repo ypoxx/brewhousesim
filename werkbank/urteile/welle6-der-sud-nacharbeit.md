@@ -698,8 +698,9 @@ durch `messfenster.sh` auf ruhiger Maschine.*
 | 1884 arm | **0** von 400 W | 2 von 400 W | 0 | nein |
 | 1600 reich | **0** von 400 W | 1 von 400 W | 0 | nein |
 | 1350 reich | **0** von 400 W | 0 von 400 W | 0 | nein |
+| 1970 reich | **0** von 400 W | **363 von 400 W** | 0 | nein |
 | | | | | |
-| **sechs Partien, 2.400 Wochen** | **0 Ablesungen** | | **0** | **keiner** |
+| **sieben Partien, 2.800 Wochen** | **0 Ablesungen** | | **0** | **keiner** |
 
 Die 1600-`reich`-Zeile zeigt die Ratsche bei der Arbeit und ist kein Mangel:
 diese Hand kauft **beide** Siegel sofort — `schuettung:weizenbrief` in
@@ -749,12 +750,34 @@ gemessenen Wochen kein einziges Mal anfassen konnte. Der Weg dorthin ist die
 Leiter: erst das Labor für 42.000, dann der Rechner für die Differenz. Beides
 zusammen kostet 118.000 — genau den Listenpreis, der weiter am Schild steht.
 
-Dazu die 400-Wochen-Partie der *reichen* Hand, die auf jeder Achse die letzte
-Karte anpeilt und das Labor deshalb überspringt: dort stand `rechner` in
-**7 von 400** Wochen aktiv und erreichbar, weil die Kasse 118.000 überschritt
-(Vorprobe). Die *arme* Hand erreicht ihn erwartungsgemäß nie — sie kauft nichts,
-ihre Kasse bleibt unter 86.000, und ohne Labor gibt es keine Anrechnung. Das ist
-kein Mangel, sondern die Aussage der Karte.
+### Und die unbequeme Hälfte derselben Messung
+
+Die `reich`-Hand von `sudhand.mjs` peilt auf jeder Achse die **letzte** Karte an
+und überspringt das Labor deshalb. Ohne Labor gibt es keine Anrechnung, und die
+Karte kostet die vollen 118.000 DM — genau an der Decke, die diese Hand
+erreicht. Zwei Läufe derselben Hand, und sie fallen auf verschiedene Seiten:
+
+| 1970 `reich`, 400 Wochen | Kassenhöchststand | `rechner` aktiv **und** erreichbar |
+|---|---|---|
+| Vorprobe (unter Fremdlast) | 133.635 DM | **7 von 400 Wochen** |
+| durch das Messfenster | 117.812 DM | **0 von 400 Wochen** |
+
+**Ich nenne beide, weil das Herauspicken des freundlichen Laufs hier besonders
+billig wäre.** Was die Zahlen sagen, ist nicht „mal so, mal so", sondern etwas
+Genaueres: **wer den Rechner zum Listenpreis will, steht immer auf der Kippe —
+und genau dagegen ist die Anrechnung gebaut.** Wer die Leiter geht, zahlt
+42.000 und dann 76.000, und dann steht die Karte offen da (die 20 Ablesungen
+oben). Wer sie überspringt, hängt an einem Kassenhöchststand, der um 188 DM
+kippt.
+
+Die *arme* Hand erreicht ihn erwartungsgemäß nie: sie kauft nichts, ihre Kasse
+bleibt unter 86.000. Das ist kein Mangel, sondern die Aussage der Karte.
+
+**Für die Abnahme von Auflage 3** — „eine sorgfältig gespielte Partie über 400
+Wochen in 1970 findet `sud:fuehrung:rechner` mindestens einmal aktiv und
+erreichbar" — liegt der Beleg damit bei der aufsteigenden Hand des
+Siegelangriffs: 20 Ablesungen aktiv und von der Maus erreichbar, gegen 0 von 800
+im Urteil. Das ist die Hand, die eine Ratsche überhaupt benutzt.
 
 ## DIE KLEMME, mit seinem eigenen Suchgerät gesucht
 
@@ -780,9 +803,9 @@ Das Gerät findet den Zustand in 800 gemessenen Wochen kein einziges Mal mehr.
 
 | | verlangt | gemessen | |
 |---|---|---|---|
-| **Auflage 1** — Klemme | 0 Ablesungen `soll-aus=0` + `disabled` + Maustreffer über 8 × 400 Wochen | **0**, in allen acht Partien | erfüllt |
-| **Auflage 2** — 1600 | ≥2 Preisschilder DES SUD in ≥60 von 400 Wochen | **354 von 400** (`arm`), Gärraum nicht mitgezählt | erfüllt |
-| **Auflage 3** — `rechner` | ≥1 Woche aktiv **und** erreichbar | **7 von 400** (`reich`) | erfüllt |
+| **Auflage 1** — Klemme | 0 Ablesungen `soll-aus=0` + `disabled` + Maustreffer über 8 × 400 Wochen | **0** in 15 Partien (8 Vorprobe + 7 durch das Messfenster) und in 800 Wochen mit seinem Suchgerät | erfüllt |
+| **Auflage 2** — 1600 | ≥2 Preisschilder DES SUD in ≥60 von 400 Wochen | **324 von 400** (`arm`, durch das Messfenster), Gärraum nicht mitgezählt — vorher 0 in 364 von 400 | erfüllt |
+| **Auflage 3** — `rechner` | ≥1 Woche aktiv **und** erreichbar | **20 Ablesungen** bei der aufsteigenden Hand (nach der Anrechnung, −76.000 DM); die `reich`-Hand, die das Labor überspringt, steht auf der Kippe: 7 bzw. 0 von 400 | erfüllt |
 | **Auflage 4** — Anstich | Preis am Knopf oder an lesbarer Stelle | `data-preis-art/-menge/-wort` + Wort am Knopf + `B.sud.preise()` | erfüllt |
 | **5. Auflage** — Knopfboden | keine ID-Regel unterbietet `grund.css` | **0 von 334** Knöpfen unter 24 px (vorher 14) | erfüllt |
 | Wellenzahl | \|ρ\| < 0,7 in 12, 13 **und** 14 Braujahren | 1350 +0,762 · 1600 +0,189 · 1884 +0,168 · 1970 +0,699 (12 J) | **nicht meins** |
@@ -859,6 +882,9 @@ nicht gedreht; was ich selbst brauchte, steht daneben in
 - [x] Siegelangriff, alle vier Epochen, nach dem Umbau von `waehle()`
 - [x] `tor.mjs` · `spielprobe.mjs` · `node --check`
 - [x] Wellenzahl in drei Schnitten, dazu die Gegenprobe ohne mein Stück
-- [~] Die acht 400-Wochen-Partien: einmal vollständig gemessen (Vorprobe unter
-      Fremdlast, alle vier Auflagen erfüllt), die Wiederholung durch das
-      Messfenster läuft und teilt sich die Maschine mit DER FUHRE
+- [x] Die 400-Wochen-Partien: einmal vollständig als Vorprobe unter Fremdlast
+      (acht Partien), dazu **sieben von acht durch das Messfenster** auf ruhiger
+      Maschine — in allen fünfzehn Partien **null** Klemmen-Ablesungen, null
+      Fehler, kein Abbruch. Die achte (1884 `reich`) läuft noch und teilt sich
+      die Maschine mit DER FUHRE; sie kann an Auflage 1 nichts mehr drehen,
+      und ihre Zeile trägt keine Abnahme.
