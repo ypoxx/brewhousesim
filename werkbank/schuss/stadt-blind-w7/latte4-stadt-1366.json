@@ -1,0 +1,1246 @@
+{
+ "e1": {
+  "klein": {
+   "?": 5,
+   "gegner": 39,
+   "stadt": 1,
+   "name": 37,
+   "erbe": 41
+  },
+  "ueber": {
+   "gegner": 1,
+   "fuhre": 1,
+   "name": 1,
+   "stadt": 9
+  },
+  "stadt_klein": [
+   {
+    "px": 6.9,
+    "kl": "gg-stammhaus amort stadt-marke-ruht",
+    "t": "Adler-Ausschank am Markt"
+   }
+  ],
+  "stadt_ueber": [
+   {
+    "kl": "wort",
+    "t": "OHNE DICH GESCHEHEN",
+    "fehltY": 0,
+    "fehltX": 34
+   },
+   {
+    "kl": "zahl",
+    "t": "wollen 15 · im Keller liegen 4 Fass",
+    "fehltY": 0,
+    "fehltX": 177
+   },
+   {
+    "kl": "zahl",
+    "t": "mit Kreide an der Sudhauswand",
+    "fehltY": 0,
+    "fehltX": 100
+   },
+   {
+    "kl": "zahl",
+    "t": "4 von 12 Fass · 4 reif",
+    "fehltY": 0,
+    "fehltX": 79
+   },
+   {
+    "kl": "zahl",
+    "t": "0 von 5 Fass · 0 von 4 Halten",
+    "fehltY": 0,
+    "fehltX": 105
+   },
+   {
+    "kl": "wort",
+    "t": "DER RUF DES HAUSES",
+    "fehltY": 0,
+    "fehltX": 16
+   },
+   {
+    "kl": "zahl",
+    "t": "Bierzeiger und Zunftzeichen",
+    "fehltY": 0,
+    "fehltX": 77
+   },
+   {
+    "kl": "zahl",
+    "t": "zugeklappt",
+    "fehltY": 0,
+    "fehltX": 11
+   },
+   {
+    "kl": "zahl",
+    "t": "7 auf dem Pflock",
+    "fehltY": 0,
+    "fehltX": 15
+   }
+  ],
+  "stadt_knoepfe": 24,
+  "stadt_zu_klein": 0,
+  "stadt_nicht_treffbar": [
+   "stadt:alles-zuklappen"
+  ],
+  "nurTitel": [
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Braupfanne im Hof — Die offene Pfanne über offenem Feuer, daneben Maischbottich und Kühlsc"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Malzboden auf Stelzen — Der Speicher steht auf Steinstümpfen: Ratten können nicht hinauf."
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Ziehbrunnen — Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbrin"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Fassschuppen — Ein Pultdach über den Fässern. Sonne ist der Feind des Bieres."
+   },
+   {
+    "zug": "",
+    "sicht": "Adler-Ausschank am Markt",
+    "titel": "Sein Ausschank in der Stadt. Der Hof liegt jenseits des Flusses."
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "sicht": "Adler-Ausschank am Mar",
+    "titel": "Adler-Ausschank am Mar — Ortsmarke von gegner. Zeiger darauf zeigt sie, Klick heftet sie f"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "sicht": "LIN",
+    "titel": "LIN — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "sicht": "OCH",
+    "titel": "OCH — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "sicht": "MUE",
+    "titel": "MUE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "sicht": "BRU",
+    "titel": "BRU — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "sicht": "FAE",
+    "titel": "FAE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "sicht": "OBE",
+    "titel": "OBE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "",
+    "sicht": "LIN",
+    "titel": "Gasthof Lindenhof · will 4 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "OCH",
+    "titel": "Zum Goldenen Ochsen · will 2 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "MUE",
+    "titel": "Mühlschenke · will 1 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "BRU",
+    "titel": "Brückenwirt · will 2 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "FAE",
+    "titel": "Fährhaus am Fluss · will 1 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "OBE",
+    "titel": "Klosterschenke Obernberg · will 1 Fass"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sicht": "OHNE DICH GESCHEHEN 1 Zug",
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über die Stadt, bis man es wieder z"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sicht": "DIE HÄUSER wollen 15 · im Keller liegen ",
+    "titel": "DIE HÄUSER — wollen 15 · im Keller liegen 4 Fass. Aufschlagen: es legt sich über die Stadt"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sicht": "ANSCHLAGTAFEL mit Kreide an der Sudhausw",
+    "titel": "ANSCHLAGTAFEL — mit Kreide an der Sudhauswand. Aufschlagen: es legt sich über die Stadt, b"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sicht": "DER KELLER 4 von 12 Fass · 4 reif",
+    "titel": "DER KELLER — 4 von 12 Fass · 4 reif. Aufschlagen: es legt sich über die Stadt, bis man es "
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sicht": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halt",
+    "titel": "OCHSENKARREN — 0 von 5 Fass · 0 von 4 Halten. Aufschlagen: es legt sich über die Stadt, bi"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sicht": "DAS SUDHAUS zugeklappt",
+    "titel": "DAS SUDHAUS. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "sicht": "DER RUF DES HAUSES Bierzeiger und Zunftz",
+    "titel": "DER RUF DES HAUSES — Bierzeiger und Zunftzeichen. Aufschlagen: es legt sich über die Stadt"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "sicht": "DAS ERBE zugeklappt",
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "sicht": "ORTSMARKEN 7 auf dem Pflock",
+    "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. Ein Zeiger auf einen Pflock zei"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "sicht": "BAUHOF",
+    "titel": "Was in dieser Zeit im Hof noch zu bauen ist."
+   },
+   {
+    "zug": "stadt:versatz",
+    "sicht": "VERSATZ",
+    "titel": "was der Lombarde am Markt in Satz nimmt. Der Lombarde nimmt Stein und Holz in Satz und zäh"
+   },
+   {
+    "zug": "stadt:bau:grutkammer",
+    "sicht": "Grutkammer −13 Pf",
+    "titel": "Porst, Gagel, Schafgarbe. Wer die Grut hat, hat das Bier — Hopfen kommt später. [+20 Grut]"
+   },
+   {
+    "zug": "stadt:bau:gaerbottiche",
+    "sicht": "Gärbottiche −15 Pf",
+    "titel": "Offene Holzbottiche unter einem Schutzdach. Was hier gärt, ist obergärig. [+4 Fass Lagerpl"
+   },
+   {
+    "zug": "stadt:bau:ochsenstall",
+    "sicht": "Ochsenstall −18 Pf",
+    "titel": "Ein eigenes Zugtier. Danach fährt die Fuhre, wann das Haus es will. [fährt, wann das Haus "
+   },
+   {
+    "zug": "stadt:bau:keller_gewoelbe",
+    "sicht": "Gewölbekeller −21 Pf",
+    "titel": "Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr. [+8 Fass Lagerpl"
+   },
+   {
+    "zug": "stadt:bau:kueferei",
+    "sicht": "Küferei −23 Pf",
+    "titel": "Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz. [+4 Fass Lagerplatz]"
+   }
+  ],
+  "gekappt": [
+   {
+    "kl": "wort",
+    "voll": "OHNE DICH GESCHEHEN",
+    "fehlt": 34,
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über "
+   },
+   {
+    "kl": "zahl",
+    "voll": "wollen 15 · im Keller liegen 4 Fass",
+    "fehlt": 177,
+    "titel": "DIE HÄUSER — wollen 15 · im Keller liegen 4 Fass. Aufschlage"
+   },
+   {
+    "kl": "zahl",
+    "voll": "mit Kreide an der Sudhauswand",
+    "fehlt": 100,
+    "titel": "ANSCHLAGTAFEL — mit Kreide an der Sudhauswand. Aufschlagen: "
+   },
+   {
+    "kl": "zahl",
+    "voll": "4 von 12 Fass · 4 reif",
+    "fehlt": 79,
+    "titel": "DER KELLER — 4 von 12 Fass · 4 reif. Aufschlagen: es legt si"
+   },
+   {
+    "kl": "zahl",
+    "voll": "0 von 5 Fass · 0 von 4 Halten",
+    "fehlt": 105,
+    "titel": "OCHSENKARREN — 0 von 5 Fass · 0 von 4 Halten. Aufschlagen: e"
+   },
+   {
+    "kl": "wort",
+    "voll": "DER RUF DES HAUSES",
+    "fehlt": 16,
+    "titel": "DER RUF DES HAUSES — Bierzeiger und Zunftzeichen. Aufschlage"
+   },
+   {
+    "kl": "zahl",
+    "voll": "Bierzeiger und Zunftzeichen",
+    "fehlt": 77,
+    "titel": "DER RUF DES HAUSES — Bierzeiger und Zunftzeichen. Aufschlage"
+   },
+   {
+    "kl": "zahl",
+    "voll": "zugeklappt",
+    "fehlt": 11,
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man "
+   },
+   {
+    "kl": "zahl",
+    "voll": "7 auf dem Pflock",
+    "fehlt": 15,
+    "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. E"
+   }
+  ]
+ },
+ "e2": {
+  "klein": {
+   "?": 5,
+   "gegner": 43,
+   "stadt": 1,
+   "name": 37,
+   "erbe": 41
+  },
+  "ueber": {
+   "gegner": 1,
+   "sud": 1,
+   "name": 2,
+   "stadt": 10
+  },
+  "stadt_klein": [
+   {
+    "px": 6.9,
+    "kl": "gg-stammhaus amort stadt-marke-ruht",
+    "t": "Adler-Ausschank am Markt"
+   }
+  ],
+  "stadt_ueber": [
+   {
+    "kl": "wort",
+    "t": "OHNE DICH GESCHEHEN",
+    "fehltY": 0,
+    "fehltX": 34
+   },
+   {
+    "kl": "zahl",
+    "t": "wollen 28 · im Keller liegen 8 Fass",
+    "fehltY": 0,
+    "fehltX": 177
+   },
+   {
+    "kl": "zahl",
+    "t": "auf der Tafel im Sudhaus",
+    "fehltY": 0,
+    "fehltX": 85
+   },
+   {
+    "kl": "zahl",
+    "t": "8 von 24 Fass · 8 reif",
+    "fehltY": 0,
+    "fehltX": 67
+   },
+   {
+    "kl": "wort",
+    "t": "PFERDEFUHRWERK",
+    "fehltY": 0,
+    "fehltX": 4
+   },
+   {
+    "kl": "zahl",
+    "t": "0 von 8 Fass · 0 von 5 Halten",
+    "fehltY": 0,
+    "fehltX": 92
+   },
+   {
+    "kl": "wort",
+    "t": "DER RUF DES HAUSES",
+    "fehltY": 0,
+    "fehltX": 16
+   },
+   {
+    "kl": "zahl",
+    "t": "Wirtshausschild und gemarkter Krug",
+    "fehltY": 0,
+    "fehltX": 128
+   },
+   {
+    "kl": "zahl",
+    "t": "zugeklappt",
+    "fehltY": 0,
+    "fehltX": 11
+   },
+   {
+    "kl": "zahl",
+    "t": "7 auf dem Pflock",
+    "fehltY": 0,
+    "fehltX": 15
+   }
+  ],
+  "stadt_knoepfe": 24,
+  "stadt_zu_klein": 0,
+  "stadt_nicht_treffbar": [
+   "stadt:alles-zuklappen"
+  ],
+  "nurTitel": [
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Braupfanne im Hof — Die offene Pfanne über offenem Feuer, daneben Maischbottich und Kühlsc"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Ziehbrunnen — Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbrin"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Gewölbekeller — Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr."
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Küferei — Ein eigener Küfer. Fassband und Daube kosten dann nur noch Holz."
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Darre — Über dem Rauch wird das Malz trocken. Wie heiß man darrt, entscheidet die Farbe."
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Fasslager aus Stein — Steinwand statt Bretterwand. Der Vorrat wächst, der Schwund fällt."
+   },
+   {
+    "zug": "",
+    "sicht": "Adler-Ausschank am Markt",
+    "titel": "Sein Ausschank in der Stadt. Der Hof liegt jenseits des Flusses."
+   },
+   {
+    "zug": "stadt:marke:gegner-marktplatz",
+    "sicht": "Adler-Ausschank am Mar",
+    "titel": "Adler-Ausschank am Mar — Ortsmarke von gegner. Zeiger darauf zeigt sie, Klick heftet sie f"
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "sicht": "LIN",
+    "titel": "LIN — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "sicht": "OCH",
+    "titel": "OCH — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "sicht": "MUE",
+    "titel": "MUE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "sicht": "BRU",
+    "titel": "BRU — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "sicht": "FAE",
+    "titel": "FAE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-oben",
+    "sicht": "OBE",
+    "titel": "OBE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "",
+    "sicht": "LIN",
+    "titel": "Gasthof Lindenhof · will 9 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "OCH",
+    "titel": "Zum Goldenen Ochsen · will 2 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "MUE",
+    "titel": "Mühlschenke · will 3 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "BRU",
+    "titel": "Brückenwirt · will 2 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "FAE",
+    "titel": "Fährhaus am Fluss · will 2 Fass"
+   },
+   {
+    "zug": "",
+    "sicht": "OBE",
+    "titel": "Klosterschenke Obernberg · will 3 Fass"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sicht": "OHNE DICH GESCHEHEN 1 Zug",
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über die Stadt, bis man es wieder z"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sicht": "DIE HÄUSER wollen 28 · im Keller liegen ",
+    "titel": "DIE HÄUSER — wollen 28 · im Keller liegen 8 Fass. Aufschlagen: es legt sich über die Stadt"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sicht": "SUDORDNUNG auf der Tafel im Sudhaus",
+    "titel": "SUDORDNUNG — auf der Tafel im Sudhaus. Aufschlagen: es legt sich über die Stadt, bis man e"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sicht": "DAS GEWÖLBE 8 von 24 Fass · 8 reif",
+    "titel": "DAS GEWÖLBE — 8 von 24 Fass · 8 reif. Aufschlagen: es legt sich über die Stadt, bis man es"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sicht": "PFERDEFUHRWERK 0 von 8 Fass · 0 von 5 Ha",
+    "titel": "PFERDEFUHRWERK — 0 von 8 Fass · 0 von 5 Halten. Aufschlagen: es legt sich über die Stadt, "
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sicht": "DAS SUDHAUS zugeklappt",
+    "titel": "DAS SUDHAUS. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "sicht": "DER RUF DES HAUSES Wirtshausschild und g",
+    "titel": "DER RUF DES HAUSES — Wirtshausschild und gemarkter Krug. Aufschlagen: es legt sich über di"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "sicht": "DAS ERBE zugeklappt",
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "sicht": "ORTSMARKEN 7 auf dem Pflock",
+    "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. Ein Zeiger auf einen Pflock zei"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "sicht": "BAUHOF",
+    "titel": "Was in dieser Zeit im Hof noch zu bauen ist."
+   },
+   {
+    "zug": "stadt:wiederkauf",
+    "sicht": "WIEDERKAUF",
+    "titel": "Verkauf mit Wiederkaufsrecht, vor dem Rat verbrieft. Verkauft auf Wiederkauf, mit Brief un"
+   },
+   {
+    "zug": "stadt:bau:gaerbottiche",
+    "sicht": "Gärbottiche −72 fl",
+    "titel": "Offene Holzbottiche unter einem Schutzdach. Was hier gärt, ist obergärig. [+4 Fass Lagerpl"
+   },
+   {
+    "zug": "stadt:bau:waschhaus",
+    "sicht": "Waschhaus −96 fl",
+    "titel": "Heißes Wasser für Fass und Bottich. Sauberkeit ist die halbe Haltbarkeit. [das Fass bleibt"
+   },
+   {
+    "zug": "stadt:bau:kontor",
+    "sicht": "Kontor −114 fl",
+    "titel": "Wer schreibt, weiß im Herbst, was der Frühling gekostet hat. [Ordnung im Buch]"
+   },
+   {
+    "zug": "stadt:bau:rossmuehle",
+    "sicht": "Rossmühle −120 fl",
+    "titel": "Schroten im eigenen Hof, statt in der Mühle am Fluss zu warten. [+1 Sud je Woche]"
+   },
+   {
+    "zug": "stadt:bau:hopfenlager",
+    "sicht": "Hopfenlager −120 fl",
+    "titel": "Hopfen im Sack, trocken und dunkel. Erst mit dem Hopfen hält Bier eine Reise aus. [+60 Hop"
+   }
+  ],
+  "gekappt": [
+   {
+    "kl": "wort",
+    "voll": "OHNE DICH GESCHEHEN",
+    "fehlt": 34,
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über "
+   },
+   {
+    "kl": "zahl",
+    "voll": "wollen 28 · im Keller liegen 8 Fass",
+    "fehlt": 177,
+    "titel": "DIE HÄUSER — wollen 28 · im Keller liegen 8 Fass. Aufschlage"
+   },
+   {
+    "kl": "zahl",
+    "voll": "auf der Tafel im Sudhaus",
+    "fehlt": 85,
+    "titel": "SUDORDNUNG — auf der Tafel im Sudhaus. Aufschlagen: es legt "
+   },
+   {
+    "kl": "zahl",
+    "voll": "8 von 24 Fass · 8 reif",
+    "fehlt": 67,
+    "titel": "DAS GEWÖLBE — 8 von 24 Fass · 8 reif. Aufschlagen: es legt s"
+   },
+   {
+    "kl": "wort",
+    "voll": "PFERDEFUHRWERK",
+    "fehlt": 4,
+    "titel": "PFERDEFUHRWERK — 0 von 8 Fass · 0 von 5 Halten. Aufschlagen:"
+   },
+   {
+    "kl": "zahl",
+    "voll": "0 von 8 Fass · 0 von 5 Halten",
+    "fehlt": 92,
+    "titel": "PFERDEFUHRWERK — 0 von 8 Fass · 0 von 5 Halten. Aufschlagen:"
+   },
+   {
+    "kl": "wort",
+    "voll": "DER RUF DES HAUSES",
+    "fehlt": 16,
+    "titel": "DER RUF DES HAUSES — Wirtshausschild und gemarkter Krug. Auf"
+   },
+   {
+    "kl": "zahl",
+    "voll": "Wirtshausschild und gemarkter Krug",
+    "fehlt": 128,
+    "titel": "DER RUF DES HAUSES — Wirtshausschild und gemarkter Krug. Auf"
+   },
+   {
+    "kl": "zahl",
+    "voll": "zugeklappt",
+    "fehlt": 11,
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man "
+   },
+   {
+    "kl": "zahl",
+    "voll": "7 auf dem Pflock",
+    "fehlt": 15,
+    "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. E"
+   }
+  ]
+ },
+ "e3": {
+  "klein": {
+   "?": 5,
+   "gegner": 42,
+   "name": 37,
+   "erbe": 41
+  },
+  "ueber": {
+   "gegner": 1,
+   "fuhre": 1,
+   "name": 1,
+   "stadt": 9
+  },
+  "stadt_klein": [],
+  "stadt_ueber": [
+   {
+    "kl": "wort",
+    "t": "OHNE DICH GESCHEHEN",
+    "fehltY": 0,
+    "fehltX": 34
+   },
+   {
+    "kl": "zahl",
+    "t": "wollen 146 · im Keller liegen 11 hl",
+    "fehltY": 0,
+    "fehltX": 177
+   },
+   {
+    "kl": "zahl",
+    "t": "am schwarzen Brett der Mälzerei",
+    "fehltY": 0,
+    "fehltX": 166
+   },
+   {
+    "kl": "zahl",
+    "t": "11 von 135 hl · 11 reif",
+    "fehltY": 0,
+    "fehltX": 66
+   },
+   {
+    "kl": "zahl",
+    "t": "0,0 von 60 hl · 0 von 10 Halten",
+    "fehltY": 0,
+    "fehltX": 123
+   },
+   {
+    "kl": "wort",
+    "t": "DER RUF DES HAUSES",
+    "fehltY": 0,
+    "fehltX": 16
+   },
+   {
+    "kl": "zahl",
+    "t": "Etikett, Plakat, Litfaßsäule",
+    "fehltY": 0,
+    "fehltX": 84
+   },
+   {
+    "kl": "zahl",
+    "t": "zugeklappt",
+    "fehltY": 0,
+    "fehltX": 11
+   },
+   {
+    "kl": "zahl",
+    "t": "6 auf dem Pflock",
+    "fehltY": 0,
+    "fehltX": 15
+   }
+  ],
+  "stadt_knoepfe": 23,
+  "stadt_zu_klein": 0,
+  "stadt_nicht_treffbar": [
+   "stadt:marke:fuhre-bahnhof",
+   "stadt:alles-zuklappen"
+  ],
+  "nurTitel": [
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Ziehbrunnen — Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbrin"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Fasslager aus Stein — Steinwand statt Bretterwand. Der Vorrat wächst, der Schwund fällt."
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Schornstein und Dampfmaschine — Dampf statt Arm. Der Schornstein ist das Zeichen, dass hie"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Gärtanks — Genietetes Eisen statt Holz. Was im Tank gärt, schmeckt jede Woche gleich."
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Eiskeller — Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergäriges Lagerbier m"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Laderampe — Auf Wagenhöhe, mit Gleis und Vordach. Zwei Mann rollen ein Fass, einer schiebt"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Maschinenhaus — Lindes Kältemaschine. Ab jetzt braucht der Sommer keine Erlaubnis mehr."
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "sicht": "LIN",
+    "titel": "LIN — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "sicht": "OCH",
+    "titel": "OCH — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "sicht": "MUE",
+    "titel": "MUE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "sicht": "BRU",
+    "titel": "BRU — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-fluss",
+    "sicht": "FAE",
+    "titel": "FAE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "sicht": "BHF",
+    "titel": "BHF — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "",
+    "sicht": "LIN",
+    "titel": "Gasthof Lindenhof · will 23 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "OCH",
+    "titel": "Zum Goldenen Ochsen · will 9,0 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "MUE",
+    "titel": "Mühlschenke · will 15 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "BRU",
+    "titel": "Brückenwirt · will 6,0 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "FAE",
+    "titel": "Fährhaus am Fluss · will 9,0 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "BHF",
+    "titel": "Bahnhofsgaststätte · will 51 hl"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sicht": "OHNE DICH GESCHEHEN 1 Zug",
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über die Stadt, bis man es wieder z"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sicht": "DIE HÄUSER wollen 146 · im Keller liegen",
+    "titel": "DIE HÄUSER — wollen 146 · im Keller liegen 11 hl. Aufschlagen: es legt sich über die Stadt"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sicht": "SUDPLAN am schwarzen Brett der Mälzerei",
+    "titel": "SUDPLAN — am schwarzen Brett der Mälzerei. Aufschlagen: es legt sich über die Stadt, bis m"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sicht": "DER EISKELLER 11 von 135 hl · 11 reif",
+    "titel": "DER EISKELLER — 11 von 135 hl · 11 reif. Aufschlagen: es legt sich über die Stadt, bis man"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sicht": "HALBER WAGEN 0,0 von 60 hl · 0 von 10 Ha",
+    "titel": "HALBER WAGEN — 0,0 von 60 hl · 0 von 10 Halten. Aufschlagen: es legt sich über die Stadt, "
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sicht": "DAS SUDHAUS zugeklappt",
+    "titel": "DAS SUDHAUS. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "sicht": "DER RUF DES HAUSES Etikett, Plakat, Litf",
+    "titel": "DER RUF DES HAUSES — Etikett, Plakat, Litfaßsäule. Aufschlagen: es legt sich über die Stad"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "sicht": "DAS ERBE zugeklappt",
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "sicht": "ORTSMARKEN 6 auf dem Pflock",
+    "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. Ein Zeiger auf einen Pflock zei"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "sicht": "BAUHOF",
+    "titel": "Was in dieser Zeit im Hof noch zu bauen ist."
+   },
+   {
+    "zug": "stadt:hypothek",
+    "sicht": "HYPOTHEK",
+    "titel": "Eintrag ins Hypothekenbuch — das Gebäude bleibt stehen. Eingetragen im Hypothekenbuch. Das"
+   },
+   {
+    "zug": "stadt:bau:kontor",
+    "sicht": "Kontor −1.406 M",
+    "titel": "Wer schreibt, weiß im Herbst, was der Frühling gekostet hat. [Ordnung im Buch]"
+   },
+   {
+    "zug": "stadt:bau:hopfenlager",
+    "sicht": "Hopfenlager −1.480 M",
+    "titel": "Hopfen im Sack, trocken und dunkel. Erst mit dem Hopfen hält Bier eine Reise aus. [+60 Hop"
+   },
+   {
+    "zug": "stadt:bau:pferdestall",
+    "sicht": "Pferdestall −1.628 M",
+    "titel": "Zwei Kaltblüter. Der Ochse zieht mehr, das Pferd zieht schneller. [die Fuhre fährt schnell"
+   },
+   {
+    "zug": "stadt:bau:maelzerei",
+    "sicht": "Mälzereiturm −3.145 M",
+    "titel": "Fünf Böden übereinander. Das Haus mälzt sein Malz wieder selbst. [+120 Hopfen]"
+   },
+   {
+    "zug": "stadt:bau:flaschenhalle",
+    "sicht": "Flaschenhalle −3.700 M",
+    "titel": "Bier in Flaschen geht dorthin, wo kein Fass mehr hinkommt: nach Hause. [+20 Fass Lagerplat"
+   }
+  ],
+  "gekappt": [
+   {
+    "kl": "wort",
+    "voll": "OHNE DICH GESCHEHEN",
+    "fehlt": 34,
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über "
+   },
+   {
+    "kl": "zahl",
+    "voll": "wollen 146 · im Keller liegen 11 hl",
+    "fehlt": 177,
+    "titel": "DIE HÄUSER — wollen 146 · im Keller liegen 11 hl. Aufschlage"
+   },
+   {
+    "kl": "zahl",
+    "voll": "am schwarzen Brett der Mälzerei",
+    "fehlt": 166,
+    "titel": "SUDPLAN — am schwarzen Brett der Mälzerei. Aufschlagen: es l"
+   },
+   {
+    "kl": "zahl",
+    "voll": "11 von 135 hl · 11 reif",
+    "fehlt": 66,
+    "titel": "DER EISKELLER — 11 von 135 hl · 11 reif. Aufschlagen: es leg"
+   },
+   {
+    "kl": "zahl",
+    "voll": "0,0 von 60 hl · 0 von 10 Halten",
+    "fehlt": 123,
+    "titel": "HALBER WAGEN — 0,0 von 60 hl · 0 von 10 Halten. Aufschlagen:"
+   },
+   {
+    "kl": "wort",
+    "voll": "DER RUF DES HAUSES",
+    "fehlt": 16,
+    "titel": "DER RUF DES HAUSES — Etikett, Plakat, Litfaßsäule. Aufschlag"
+   },
+   {
+    "kl": "zahl",
+    "voll": "Etikett, Plakat, Litfaßsäule",
+    "fehlt": 84,
+    "titel": "DER RUF DES HAUSES — Etikett, Plakat, Litfaßsäule. Aufschlag"
+   },
+   {
+    "kl": "zahl",
+    "voll": "zugeklappt",
+    "fehlt": 11,
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man "
+   },
+   {
+    "kl": "zahl",
+    "voll": "6 auf dem Pflock",
+    "fehlt": 15,
+    "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. E"
+   }
+  ]
+ },
+ "e4": {
+  "klein": {
+   "?": 5,
+   "gegner": 46,
+   "name": 38,
+   "erbe": 41
+  },
+  "ueber": {
+   "gegner": 1,
+   "name": 2,
+   "erbe": 1,
+   "stadt": 9
+  },
+  "stadt_klein": [],
+  "stadt_ueber": [
+   {
+    "kl": "wort",
+    "t": "OHNE DICH GESCHEHEN",
+    "fehltY": 0,
+    "fehltX": 34
+   },
+   {
+    "kl": "zahl",
+    "t": "wollen 534 · im Keller liegen 210 hl",
+    "fehltY": 0,
+    "fehltX": 184
+   },
+   {
+    "kl": "zahl",
+    "t": "im Schaltraum, auf Formica",
+    "fehltY": 0,
+    "fehltX": 130
+   },
+   {
+    "kl": "zahl",
+    "t": "210 von 600 hl · 210 reif",
+    "fehltY": 0,
+    "fehltX": 115
+   },
+   {
+    "kl": "zahl",
+    "t": "0,0 von 450 hl · 0 von 3 Halten",
+    "fehltY": 0,
+    "fehltX": 165
+   },
+   {
+    "kl": "wort",
+    "t": "DER RUF DES HAUSES",
+    "fehltY": 0,
+    "fehltX": 16
+   },
+   {
+    "kl": "zahl",
+    "t": "Kronkorken, Bandenwerbung, Fernsehspot",
+    "fehltY": 0,
+    "fehltX": 157
+   },
+   {
+    "kl": "zahl",
+    "t": "zugeklappt",
+    "fehltY": 0,
+    "fehltX": 11
+   },
+   {
+    "kl": "zahl",
+    "t": "6 auf dem Pflock",
+    "fehltY": 0,
+    "fehltX": 15
+   }
+  ],
+  "stadt_knoepfe": 21,
+  "stadt_zu_klein": 0,
+  "stadt_nicht_treffbar": [
+   "stadt:marke:fuhre-bahnhof",
+   "stadt:alles-zuklappen"
+  ],
+  "nurTitel": [
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Schornstein und Dampfmaschine — Dampf statt Arm. Der Schornstein ist das Zeichen, dass hie"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Abfüllhalle — Vierzigtausend Flaschen in der Stunde. Der Takt der Halle ist der Takt des H"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Stahltanks im Freien — Zylindrokonisch, im Freien, aus Edelstahl. Gärkeller braucht das ke"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Verladedock — Zwei Lastzüge geladen, zwei Mann dabei, einer mit der Sackkarre. Was hier ab"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Kastenlager — Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Verspreche"
+   },
+   {
+    "zug": "",
+    "sicht": "",
+    "titel": "Kesselhaus — Ölfeuerung. Der alte Schornstein bleibt stehen und bleibt kalt."
+   },
+   {
+    "zug": "stadt:marke:fuhre-lindenhof",
+    "sicht": "LIN",
+    "titel": "LIN — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-marktplatz",
+    "sicht": "OCH",
+    "titel": "OCH — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-muehle",
+    "sicht": "MUE",
+    "titel": "MUE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bruecke-unten",
+    "sicht": "BRU",
+    "titel": "BRU — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "stadt:marke:fuhre-bahnhof",
+    "sicht": "BHF",
+    "titel": "BHF — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest."
+   },
+   {
+    "zug": "",
+    "sicht": "LIN",
+    "titel": "Gasthof Lindenhof · will 69 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "OCH",
+    "titel": "Zum Goldenen Ochsen · will 39 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "MUE",
+    "titel": "Mühlschenke · will 18 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "BRU",
+    "titel": "Brückenwirt · will 21 hl"
+   },
+   {
+    "zug": "",
+    "sicht": "BHF",
+    "titel": "Bahnhofsgaststätte · will 56 hl"
+   },
+   {
+    "zug": "stadt:reiter:gegner-amort-gg-band",
+    "sicht": "OHNE DICH GESCHEHEN 1 Zug",
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über die Stadt, bis man es wieder z"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+    "sicht": "DIE HÄUSER wollen 534 · im Keller liegen",
+    "titel": "DIE HÄUSER — wollen 534 · im Keller liegen 210 hl. Aufschlagen: es legt sich über die Stad"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+    "sicht": "SUDPLAN im Schaltraum, auf Formica",
+    "titel": "SUDPLAN — im Schaltraum, auf Formica. Aufschlagen: es legt sich über die Stadt, bis man es"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+    "sicht": "DIE TANKS 210 von 600 hl · 210 reif",
+    "titel": "DIE TANKS — 210 von 600 hl · 210 reif. Aufschlagen: es legt sich über die Stadt, bis man e"
+   },
+   {
+    "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+    "sicht": "LASTZUG 0,0 von 450 hl · 0 von 3 Halten",
+    "titel": "LASTZUG — 0,0 von 450 hl · 0 von 3 Halten. Aufschlagen: es legt sich über die Stadt, bis m"
+   },
+   {
+    "zug": "stadt:reiter:sud-sud-brett",
+    "sicht": "DAS SUDHAUS zugeklappt",
+    "titel": "DAS SUDHAUS. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:reiter:name-nm-band",
+    "sicht": "DER RUF DES HAUSES Kronkorken, Bandenwer",
+    "titel": "DER RUF DES HAUSES — Kronkorken, Bandenwerbung, Fernsehspot. Aufschlagen: es legt sich übe"
+   },
+   {
+    "zug": "stadt:reiter:erbe-blatt-erb-buch",
+    "sicht": "DAS ERBE zugeklappt",
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt."
+   },
+   {
+    "zug": "stadt:ortsmarken",
+    "sicht": "ORTSMARKEN 6 auf dem Pflock",
+    "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. Ein Zeiger auf einen Pflock zei"
+   },
+   {
+    "zug": "stadt:bau:seite",
+    "sicht": "BAUHOF",
+    "titel": "Was in dieser Zeit im Hof noch zu bauen ist."
+   },
+   {
+    "zug": "stadt:abbruch",
+    "sicht": "ABBRUCH",
+    "titel": "Abbruch und Grundstück — was hier weggeht, kommt nicht wieder. Bagger, Bauschutt, Grundstü"
+   },
+   {
+    "zug": "stadt:bau:waage",
+    "sicht": "Fahrzeugwaage −9.570 DM",
+    "titel": "Voll rein, leer raus, alles gewogen. Wer nicht wiegt, verliert im Kleinen. [kein Schwund b"
+   },
+   {
+    "zug": "stadt:bau:maelzerei",
+    "sicht": "Mälzereiturm −14.790 DM",
+    "titel": "Fünf Böden übereinander. Das Haus mälzt sein Malz wieder selbst. [+120 Hopfen]"
+   },
+   {
+    "zug": "stadt:bau:verwaltung",
+    "sicht": "Verwaltungsbau −15.660 DM",
+    "titel": "Drei Geschosse Schreibtisch. Ein Haus, das eine Marke ist, wird verwaltet. [Ordnung im Buc"
+   },
+   {
+    "zug": "stadt:bau:sudhaus_neu",
+    "sicht": "Neues Sudhaus −24.360 DM",
+    "titel": "Vier kupferne Pfannen hinter Glas, damit man sie von der Strasse sieht. Das ist nicht Tech"
+   }
+  ],
+  "gekappt": [
+   {
+    "kl": "wort",
+    "voll": "OHNE DICH GESCHEHEN",
+    "fehlt": 34,
+    "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über "
+   },
+   {
+    "kl": "zahl",
+    "voll": "wollen 534 · im Keller liegen 210 hl",
+    "fehlt": 184,
+    "titel": "DIE HÄUSER — wollen 534 · im Keller liegen 210 hl. Aufschlag"
+   },
+   {
+    "kl": "zahl",
+    "voll": "im Schaltraum, auf Formica",
+    "fehlt": 130,
+    "titel": "SUDPLAN — im Schaltraum, auf Formica. Aufschlagen: es legt s"
+   },
+   {
+    "kl": "zahl",
+    "voll": "210 von 600 hl · 210 reif",
+    "fehlt": 115,
+    "titel": "DIE TANKS — 210 von 600 hl · 210 reif. Aufschlagen: es legt "
+   },
+   {
+    "kl": "zahl",
+    "voll": "0,0 von 450 hl · 0 von 3 Halten",
+    "fehlt": 165,
+    "titel": "LASTZUG — 0,0 von 450 hl · 0 von 3 Halten. Aufschlagen: es l"
+   },
+   {
+    "kl": "wort",
+    "voll": "DER RUF DES HAUSES",
+    "fehlt": 16,
+    "titel": "DER RUF DES HAUSES — Kronkorken, Bandenwerbung, Fernsehspot."
+   },
+   {
+    "kl": "zahl",
+    "voll": "Kronkorken, Bandenwerbung, Fernsehspot",
+    "fehlt": 157,
+    "titel": "DER RUF DES HAUSES — Kronkorken, Bandenwerbung, Fernsehspot."
+   },
+   {
+    "kl": "zahl",
+    "voll": "zugeklappt",
+    "fehlt": 11,
+    "titel": "Das Erbe. Aufschlagen: es legt sich über die Stadt, bis man "
+   },
+   {
+    "kl": "zahl",
+    "voll": "6 auf dem Pflock",
+    "fehlt": 15,
+    "titel": "6 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. E"
+   }
+  ]
+ }
+}
