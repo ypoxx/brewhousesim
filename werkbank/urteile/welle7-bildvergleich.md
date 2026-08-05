@@ -70,4 +70,51 @@ Holzsteg 1350 → Steinbogen ab 1600 an derselben Stelle, Mühle 1350/1600 → B
 Stadtmauer geschlossen 1350 → Ruine/Fragment in der Grünanlage 1970. Das ist eine echte
 Leistung und wird von keinem der Funde unten in Frage gestellt.
 
+Nachgemessen, weil der erste Eindruck etwas anderes sagte: **Kamera und Ort stimmen
+bildpunktgenau.** Der Kirchturm St. Michael liegt in `03-1884.jpg` und im laufenden Spiel
+im selben Kasten (1450,80–1850,800) an derselben Stelle und in derselben Höhe; der
+Scheitel der Hofmauer liegt im Zielbild bei (838|1242), im Spiel bei (838|1231). Ein
+Verdacht auf verschobene Kamera hat sich damit **nicht** bestätigt.
+
+Ebenfalls geprüft und **nicht** bestätigt: „etwas steht auf der Mauer". Ich habe die
+Mauerlinie aus `stadt-daten.js:168` genommen (Scheitel 823|1205, links −0,49, rechts
+−0,45) und je Spalte die unterste veränderte Zeile zwischen `bau=keine` und `bau=alle`
+dagegen gerechnet. Die Unterschreitungen liegen nur dort, wo der Quelltext sie selbst als
+gewollt verzeichnet (Kontor vor dem Tor, Hopfenlager in der Häuserzeile, Stall/Dock in
+der Tordurchfahrt). Kein Hofbau steht auf dem Mauerkopf.
+
+## Was der Hof NICHT trägt — der teuerste Fund, in allen vier Epochen
+
+Ich habe je Epoche mit `bau=alle` gerendert, also mit dem **vollen** Hof, damit es
+kein Vorwurf gegen mein Spielprotokoll ist. Ergebnis, in allen vier Epochen dasselbe:
+
+**Die vordere Hälfte des ummauerten Hofes bleibt leer.** Zwischen der Bauzeile
+(Fußpunkte in 60–73,5 % der Bühnenhöhe) und der Mauerkante (Scheitel 78,5 %) liegt ein
+Streifen blanker Boden über die ganze Hofbreite. Genau dort trägt **jedes** Zielblatt
+seine Fracht:
+
+| | Zielbild trägt dort | Spiel trägt dort |
+|---|---|---|
+| 1350 | 14 liegende Fässer in zwei Reihen, Bank, Trog | Gras, Pfütze, sonst nichts |
+| 1600 | zwei Fassreihen à 6, Handkarre mit Fass, **vier Männer, die Fässer rollen** | leerer Pflasterhof |
+| 1884 | ~20 Lagerfässer in zwei Stapeln, Handkarre, **drei Arbeiter** | leerer Vorplatz, ein Schlitten mit zwei Eisblöcken |
+| 1970 | Kastenstapel bis an die Mauer, PKW am Bordstein | leerer Beton |
+
+**Und der Torwagen fehlt.** In 1350, 1600 und 1884 zieht im Zielbild ein zweispänniger
+Fuhrwagen mit Fässern aus dem Hoftor — dasselbe Gespann an derselben Stelle, das dritte
+Zeichen des durchlaufenden Ortes neben Fluss und Kirche. Im Spiel steht in 1350 ein
+Ochsenkarren vor dem Tor; in **1600 und 1884 ist das Tor leer**, in 1970 fährt nichts
+aus. Was das kostet: der Hof sieht in drei von vier Epochen aus, als arbeite dort
+niemand. Im Zielbild arbeiten in jedem Blatt drei bis fünf Leute im Hof, im Spiel sind
+es zwei (die Brauerinnen bzw. die Magd am Brunnen) — der Rest der Fläche ist Kulisse.
+
+## Ein leeres Schild mitten im Bild
+
+`BRAUEREI ADLER` steht im Zielbild 1600, 1884 und 1970 **auf dem Haus** des Gegners.
+Im Spiel trägt dieses Haus in 1884 eine **große, leere cremefarbene Tafel**
+(um 2 080|900, gut sichtbar), in 1600 und 1970 gar keine; der Name des Gegners steht
+nur in einer schwebenden weißen Auskunftskarte darunter. Eine leere Tafel in der
+Bildmitte liest sich als nicht fertiges Bildteil — und ausgerechnet dort, wo das
+Zielbild den Gegner benennt.
+
 *(wird laufend fortgeschrieben)*
