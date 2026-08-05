@@ -482,6 +482,37 @@ Vergrößerung der schlechtesten Kachel nicht auseinanderhalten, es gibt keinen
 Farbsaum, kein Banding, keine zerfressene Kante, keinen Halo an der
 Halbtransparenz und keinen Farbstich.
 
+### 6.3 Der gebaute Hof, Epoche für Epoche
+
+Weil das Zielbild einen **gehenden Betrieb** zeigt und die Platte einen leeren
+Hof mit einer Pfütze, ist ein Vergleich in Woche 1 unfair. `aufbauen.mjs` hat
+deshalb jede Epoche gespielt, bis nichts mehr zu bauen war, und dann
+aufgenommen — mit der Maus, ohne Eingriff, alles durch das Messfenster:
+
+| Epoche | gebaut | Ende | Bauten im Hof | `BRAUHAUS.lage` | Konsolenfehler |
+|---|---|---|---|---|---|
+| 1350 | 5 (Grutkammer, Gärbottiche, Ochsenstall, Gewölbekeller, Küferei) | 1353/13 | 9 | 0 | 0 |
+| 1600 | 6 (Gärbottiche, Waschhaus, Kontor, Rossmühle, Hopfenlager, Pferdestall) | 1603/13 | 12 | 0 | 0 |
+| 1884 | 5 (Kontor, Hopfenlager, Pferdestall, Mälzereiturm, Flaschenhalle) | 1887/11 | 12 | 0 | 0 |
+| 1970 | 4 (Fahrzeugwaage, Mälzereiturm, Verwaltungsbau, Neues Sudhaus) | 1973/9 — **Partie zu Ende** | 10 | 0 | 0 |
+
+**Die Partie endet, und sie endet gut.** In 1970 lief mein Aufbaulauf in das
+Schlussblatt: *„DER HOF IST GESCHLOSSEN"*, darunter „DIE, DIE ES GEFÜHRT HABEN"
+mit drei Namen und Amtszeiten und „WIE DAS AUFTRAGSBUCH LEER WURDE" mit elf
+Zeilen — *„1972 Pfarrschenke St. Michael — niemand hat sie genommen"*,
+*„1973 Schenke am Tor — der Gegner stand schon da"*. Und darunter: *„Von vorn
+anfangen — dieselbe Stadt, andere Wirte."* Das ist ein Schluss, kein
+Abbruch, und der Satz sagt genau das, worauf dieses ganze Stück gebaut ist.
+
+**1884 hält dem Zielbild stand** und geht im Gesamtbild darüber hinaus: der
+Schornstein, das Sudhaus mit Kupferhaube, die Gärtanks, der Eiskeller mit
+Grashügel, der Mälzereiturm, dazu Bahnhof mit Zug, Brauerei Adler und die halbe
+Stadt dahinter. Dort würde ich blind nicht mehr sicher das Zielbild wählen —
+obwohl auch dort das vordere Hofdrittel zu **0,0 %** bebaut ist. Es gewinnt
+also *trotz* Auflage 6, weil um den Hof herum so viel passiert.
+**1350 und 1600 gewinnt das Zielbild** — und zwar an genau der Stelle, die
+Auflage 6 benennt: im vorderen Drittel des Hofes, das leer bleibt.
+
 ---
 
 ## 7 — AUFLAGEN
@@ -578,35 +609,7 @@ der Reiter außerhalb des sichtbaren Streifens.
 **Gering, aber es ist ein sichtbarer Knopf, der nichts tut** — genau die Sorte,
 die ein Spieler für kaputt hält.
 
----
-
-## 8 — WAS ICH NICHT PRÜFEN KONNTE, UND WARUM
-
-1. **Die zweite Latte (ρ).** Ausdrücklich nicht mein Auftrag; die Aufsicht hat
-   sie an diesem Commit selbst gemessen. Ich habe in 480 gespielten Zügen
-   nichts gesehen, was den eingetragenen Zahlen widerspricht. *Eine
-   Beobachtung, die ich melde, ohne sie zu einem Befund zu machen:* ein
-   gieriger Spieler steht in 1350 nach der ersten Woche bei 22 Pf und danach
-   41 von 95 Wochen auf null — die Kennzahl „Jahre unter 1×" hängt in dieser
-   Epoche sehr stark an der Spielweise, nicht nur an der Laufzeit.
-2. **Die dritte Latte (Ton).** Nicht beauftragt, kein fremdes Ohr zur Hand.
-   Gemessen ist nur, **wann** der Ton lädt (nach dem ersten Klick, nie davor).
-3. **Der Epochenwechsel im laufenden Spiel.** Epoche I reicht nach
-   `spiel/kern/welt.js:30` von 1350 bis 1516; eine Partie trägt 3–14 Braujahre.
-   **Ein Spieler erlebt den Wechsel also gar nicht** — die vier Epochen werden
-   über `?epoche=` betreten. Die Brunnenwanderung aus Auflage 1 sieht deshalb
-   nur, wer die Epochen nebeneinanderlegt — was Latte 1 genau tut.
-4. **Ob die Umstellung dem PNG gegenüber wirklich nichts verloren hat, konnte
-   ich nur prüfen, weil unter `/tmp/messstand/3e6d08c/` noch ein alter
-   Messstand mit den 32 PNG lag.** Das ist Zufall und überlebt den nächsten
-   Container-Reset nicht. Wer den A/B wiederholen will, braucht die PNG von
-   irgendwoher — `ab-webp-aufsetzen.sh` sagt es und bricht sonst ab, statt
-   still etwas anderes zu messen.
-5. **Die Epochenplatten** waren nie PNG und sind keine WebP; an ihnen war
-   nichts zu prüfen. Sie sind mit 4,19 MB fast so schwer wie alle 32 Hofbilder
-   zusammen (4,56 MB) und der eigentliche Brocken des Gewichts.
-
-### Auflage 6 — Das vordere Drittel des Hofes bleibt in allen vier Epochen leer
+### Auflage 6 — Das vordere Drittel des Hofes bleibt leer
 
 **Das ist der Grund, aus dem das Zielbild den Blindvergleich noch gewinnt, und
 er ist messbar, nicht Geschmack.**
@@ -651,36 +654,33 @@ untere Hälfte seines Spielplatzes leer lässt, sieht neben einem Bild, in dem
 sie voll ist, immer ärmer aus — unabhängig davon, wie gut die einzelnen Bauten
 gezeichnet sind. Und sie **sind** gut gezeichnet; das ist ja der Punkt.
 
-### 6.3 Der gebaute Hof, Epoche für Epoche
+---
 
-Weil das Zielbild einen **gehenden Betrieb** zeigt und die Platte einen leeren
-Hof mit einer Pfütze, ist ein Vergleich in Woche 1 unfair. `aufbauen.mjs` hat
-deshalb jede Epoche gespielt, bis nichts mehr zu bauen war, und dann
-aufgenommen — mit der Maus, ohne Eingriff, alles durch das Messfenster:
+## 8 — WAS ICH NICHT PRÜFEN KONNTE, UND WARUM
 
-| Epoche | gebaut | Ende | Bauten im Hof | `BRAUHAUS.lage` | Konsolenfehler |
-|---|---|---|---|---|---|
-| 1350 | 5 (Grutkammer, Gärbottiche, Ochsenstall, Gewölbekeller, Küferei) | 1353/13 | 9 | 0 | 0 |
-| 1600 | 6 (Gärbottiche, Waschhaus, Kontor, Rossmühle, Hopfenlager, Pferdestall) | 1603/13 | 12 | 0 | 0 |
-| 1884 | 5 (Kontor, Hopfenlager, Pferdestall, Mälzereiturm, Flaschenhalle) | 1887/11 | 12 | 0 | 0 |
-| 1970 | 4 (Fahrzeugwaage, Mälzereiturm, Verwaltungsbau, Neues Sudhaus) | 1973/9 — **Partie zu Ende** | 10 | 0 | 0 |
-
-**Die Partie endet, und sie endet gut.** In 1970 lief mein Aufbaulauf in das
-Schlussblatt: *„DER HOF IST GESCHLOSSEN"*, darunter „DIE, DIE ES GEFÜHRT HABEN"
-mit drei Namen und Amtszeiten und „WIE DAS AUFTRAGSBUCH LEER WURDE" mit elf
-Zeilen — *„1972 Pfarrschenke St. Michael — niemand hat sie genommen"*,
-*„1973 Schenke am Tor — der Gegner stand schon da"*. Und darunter: *„Von vorn
-anfangen — dieselbe Stadt, andere Wirte."* Das ist ein Schluss, kein
-Abbruch, und der Satz sagt genau das, worauf dieses ganze Stück gebaut ist.
-
-**1884 hält dem Zielbild stand** und geht im Gesamtbild darüber hinaus: der
-Schornstein, das Sudhaus mit Kupferhaube, die Gärtanks, der Eiskeller mit
-Grashügel, der Mälzereiturm, dazu Bahnhof mit Zug, Brauerei Adler und die halbe
-Stadt dahinter. Dort würde ich blind nicht mehr sicher das Zielbild wählen —
-obwohl auch dort das vordere Hofdrittel zu **0,0 %** bebaut ist. Es gewinnt
-also *trotz* Auflage 6, weil um den Hof herum so viel passiert.
-**1350 und 1600 gewinnt das Zielbild** — und zwar an genau der Stelle, die
-Auflage 6 benennt: im vorderen Drittel des Hofes, das leer bleibt.
+1. **Die zweite Latte (ρ).** Ausdrücklich nicht mein Auftrag; die Aufsicht hat
+   sie an diesem Commit selbst gemessen. Ich habe in 480 gespielten Zügen
+   nichts gesehen, was den eingetragenen Zahlen widerspricht. *Eine
+   Beobachtung, die ich melde, ohne sie zu einem Befund zu machen:* ein
+   gieriger Spieler steht in 1350 nach der ersten Woche bei 22 Pf und danach
+   41 von 95 Wochen auf null — die Kennzahl „Jahre unter 1×" hängt in dieser
+   Epoche sehr stark an der Spielweise, nicht nur an der Laufzeit.
+2. **Die dritte Latte (Ton).** Nicht beauftragt, kein fremdes Ohr zur Hand.
+   Gemessen ist nur, **wann** der Ton lädt (nach dem ersten Klick, nie davor).
+3. **Der Epochenwechsel im laufenden Spiel.** Epoche I reicht nach
+   `spiel/kern/welt.js:30` von 1350 bis 1516; eine Partie trägt 3–14 Braujahre.
+   **Ein Spieler erlebt den Wechsel also gar nicht** — die vier Epochen werden
+   über `?epoche=` betreten. Die Brunnenwanderung aus Auflage 1 sieht deshalb
+   nur, wer die Epochen nebeneinanderlegt — was Latte 1 genau tut.
+4. **Ob die Umstellung dem PNG gegenüber wirklich nichts verloren hat, konnte
+   ich nur prüfen, weil unter `/tmp/messstand/3e6d08c/` noch ein alter
+   Messstand mit den 32 PNG lag.** Das ist Zufall und überlebt den nächsten
+   Container-Reset nicht. Wer den A/B wiederholen will, braucht die PNG von
+   irgendwoher — `ab-webp-aufsetzen.sh` sagt es und bricht sonst ab, statt
+   still etwas anderes zu messen.
+5. **Die Epochenplatten** waren nie PNG und sind keine WebP; an ihnen war
+   nichts zu prüfen. Sie sind mit 4,19 MB fast so schwer wie alle 32 Hofbilder
+   zusammen (4,56 MB) und der eigentliche Brocken des Gewichts.
 
 ---
 
