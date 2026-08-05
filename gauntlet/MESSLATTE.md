@@ -121,10 +121,14 @@ kürt, kürt sie für eine Epoche.
 > 46 % unter der Zielfläche lagen** — an einem Brett also, das so kein Mensch
 > bedient. Sie waren freundlicher, weil ein Teil des Spiels unerreichbar war.
 >
-> **Noch offen:** ein Paar je Arm ist erst n=1. Die Gerätekontrolle mit drei
-> gleichen Läufen fehlt — der achte Container-Reset hat die übrigen vernichtet.
-> Die Probe läuft weiter, Skript und Rohdaten in
-> `werkbank/schuss/aufsicht/knopfboden-probe/`.
+> **Gerätekontrolle, Stand 5. August 11:3x:** der Arm **mit** Boden hat jetzt
+> **zwei byteweise identische Läufe** (gleiche md5) — dieselbe Form der
+> Kontrolle wie oben. Der Arm **ohne** Boden steht weiter bei n=1; die
+> Container-Resets kommen stündlich und kosten je etwa einen Lauf. Der Befund
+> selbst hängt nicht daran: 0,811 ist kein Streuungsabstand, sondern der
+> Unterschied zwischen zwei fehlerfreien Partien. Skript und Rohdaten in
+> `werkbank/schuss/aufsicht/knopfboden-probe/`; `aufsetzen.sh` stellt beide
+> Häfen mit einem Aufruf wieder her.
 
 > **Ab jetzt bindend:** Wer ρ nennt, nennt die Laufzeit dazu, und misst über
 > **alle drei Schnitte** (12, 13, 14 Braujahre). Die Latte ist gerissen, sobald

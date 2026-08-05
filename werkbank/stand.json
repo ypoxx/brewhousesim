@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T10:35:41+00:00",
- "phase": "Elfter Container-Reset, Baum in zwei Minuten wiederhergestellt, Probe mit einem Aufruf wieder aufgesetzt. Nachgesehen statt blind neu gestartet, warum die A/B-Probe seit drei Fenstern bei vier Dateien steht: ihr Protokoll endet jedes Mal bei MESSFENSTER OFFEN, der Lauf wird also mitten drin erwischt. Ein Lauf über 400 Wochen braucht hier zwanzig bis dreißig Minuten, ein Reset kommt etwa stündlich, und der Veröffentlicher sichert alle drei Minuten — rechnerisch geht es sich aus, gemessen bisher nicht. Diesmal beobachte ich es zu Ende, statt es wieder zu vermuten. In das laufende Skript greife ich dabei nicht ein: eine Bash-Datei zu ändern, während sie läuft, verschiebt ihren Lesezeiger und hat hier schon einmal Zeit gekostet.",
+ "stand": "2026-08-05T11:26:33+00:00",
+ "phase": "Zwölfter Reset, und diesmal mit einer guten Nachricht: der Lauf aus dem letzten Fenster hat es in einen Commit geschafft. Meine Sorge, die Probe verliere ihre Ergebnisse, war unbegründet — sie braucht nur länger als ein einzelner Bash-Aufruf, gesichert wird sie zuverlässig. Damit hat der Arm MIT Knopfboden zwei byteweise identische Läufe, gleiche Prüfsumme, also dieselbe strenge Gerätekontrolle wie bei den rho-Zahlen davor. Der Arm OHNE Boden steht noch bei einem Lauf; jeder Reset kostet etwa einen. Der Befund selbst hängt nicht daran: 0,811 ist kein Streuungsabstand, sondern der Unterschied zwischen zwei fehlerfreien Partien über je vierzehn Braujahre.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T15:37:26+00:00",
-   "text": "KLANG: Der Weg zur Datei ohne ffmpeg steht. Das Spiel rendert seinen EIGENEN Tongraph mit OfflineAudioContext und reicht WAV heraus: BRAUHAUS.ton.wav(30). werkbank/ohrprobe.mjs klickt dazu 30 Sekunden lang echte data-zug-Knoepfe und holt die Bytes ab — geprueft wird das laufende Spiel, nicht die Dateiablage. Vier Dateien liegen in werkbank/ohr/."
-  },
   {
    "zeit": "2026-08-01T15:37:27+00:00",
    "text": "KLANG: Vier Ruegen des pruefenden Ohres behoben, alle waren Anachronismen im eigenen Bau — 'moderne UI-Pieptoene' (Oszillatoren fuer den WEITER-Knopf), 'Klicken eines Fotoapparats' (Rauschstoss fuer stadt:reiter), 'Reissverschluss' (Rauschstoss fuer fuhre:kerbe) und 'Fahrradklingel' (Handglocke in 1600). In kern/ton.js steht jetzt kein einziger Oszillator mehr."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T10:35:41+00:00",
    "text": "Elfter Container-Reset, Baum in zwei Minuten wiederhergestellt, Probe mit einem Aufruf wieder aufgesetzt. Nachgesehen statt blind neu gestartet, warum die A/B-Probe seit drei Fenstern bei vier Dateien steht: ihr Protokoll endet jedes Mal bei MESSFENSTER OFFEN, der Lauf wird also mitten drin erwischt. Ein Lauf über 400 Wochen braucht hier zwanzig bis dreißig Minuten, ein Reset kommt etwa stündlich, und der Veröffentlicher sichert alle drei Minuten — rechnerisch geht es sich aus, gemessen bisher nicht. Diesmal beobachte ich es zu Ende, statt es wieder zu vermuten. In das laufende Skript greife ich dabei nicht ein: eine Bash-Datei zu ändern, während sie läuft, verschiebt ihren Lesezeiger und hat hier schon einmal Zeit gekostet."
+  },
+  {
+   "zeit": "2026-08-05T11:26:33+00:00",
+   "text": "Zwölfter Reset, und diesmal mit einer guten Nachricht: der Lauf aus dem letzten Fenster hat es in einen Commit geschafft. Meine Sorge, die Probe verliere ihre Ergebnisse, war unbegründet — sie braucht nur länger als ein einzelner Bash-Aufruf, gesichert wird sie zuverlässig. Damit hat der Arm MIT Knopfboden zwei byteweise identische Läufe, gleiche Prüfsumme, also dieselbe strenge Gerätekontrolle wie bei den rho-Zahlen davor. Der Arm OHNE Boden steht noch bei einem Lauf; jeder Reset kostet etwa einen. Der Befund selbst hängt nicht daran: 0,811 ist kein Streuungsabstand, sondern der Unterschied zwischen zwei fehlerfreien Partien über je vierzehn Braujahre."
   }
  ]
 }
