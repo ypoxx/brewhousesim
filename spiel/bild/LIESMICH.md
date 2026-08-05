@@ -99,6 +99,54 @@ sie vorher frei.
 
 Die drei anderen Stücke legen ihr Material unter `fuhre/`, `preis/`, `gegner/` ab.
 
+### `hof/fracht_*` und `hof/tor_*` — die Hoffracht (Welle 8)
+
+> **Ein Hof ohne Fracht sieht aus, als arbeite dort niemand.**
+
+Der Blindvergleich vom 5. August fand in **allen vier** Epochen dasselbe, auch
+bei voll ausgebautem Hof: *„Die vordere Hälfte des ummauerten Hofes bleibt
+leer … Im Zielbild arbeiten in jedem Blatt drei bis fünf Leute im Hof, im
+Spiel sind es zwei."* Und er sagte gleich dazu, was **nicht** hilft: weitere
+Bauten. Der Hof ist eine Raute mit Scheitel (29,9|78,5) und trägt vorn nur
+zwischen x 26 und x 34 — dort passt kein Haus mehr, aber flache Dinge auf dem
+Boden schon.
+
+Zwölf neue Dateien, aus **drei 2×2-Bögen** erzeugt (`--aspect 1:1
+--resolution 2K`, `--ref` auf die eigene Platte der passenden Epoche), Grund
+**reines Magenta** statt Weiß:
+
+| Bogen | Referenz | woraus geschnitten |
+|---|---|---|
+| `alt` | `platte-1600.jpg` | `fracht_faesser_alt` · `fracht_leute_alt` · `fracht_karre_alt` · `fracht_bank` |
+| `neu` | `platte-1884.jpg` | `fracht_faesser_neu` · `fracht_leute_neu` · `fracht_karre_neu` · `fracht_kasten` |
+| `tor` | `platte-1600.jpg` | `tor_gespann_alt` · `tor_gespann_neu` · `tor_ochse` · `tor_lkw` |
+
+**Warum Magenta und nicht Weiß:** im Hof kommen brauner Holzton *und weiße
+Leinenhemden* vor. Der Weiß-Schlüssel von `stadt-r6/freistellen.py` hätte die
+Hemden aufgefressen. Das Maß ist `m = min(r,b) − g` — für reines Magenta 255,
+für Braun −40, für Haut −30, für Grau 0.
+
+**Warum ein neues Werkzeug:** `freistellen.py` läuft auf dieser Maschine nicht
+mehr, weder `numpy` noch `PIL` noch `scipy` sind installiert (geprüft). Das
+Schneiden, Freistellen, Beschneiden und WebP-Schreiben macht deshalb
+`werkbank/schuss/stadt-w8/schneiden.mjs` im Canvas von Chromium — derselbe
+Weg, den `stadt-gewicht/umpacken.mjs` seit Welle 7 geht.
+
+**Die Fugennaht-Regel gilt weiter:** äußerste zwei Reihen ganz leer, die
+nächsten acht weich anlaufend, Kante nachweislich Alpha 0.
+
+**Kein Eintrag in `K.fuesse` und `K.bildmass`.** Die beiden Tabellen gehören
+den *Aufbauten* und dem LOT. Die Frachtbilder sind auf den Kasten ihrer
+deckenden Pixel beschnitten, ihr Fuß liegt bis auf den Fugenrand auf der
+Unterkante — `stadt.js:frachtbild()` rechnet den z-Index deshalb direkt aus
+der Stelle. Wer ein Frachtbild austauscht, muss also **weder `fuesse.py` noch
+`profile.py`** laufen lassen; wer ein *Aufbau*-Bild austauscht, weiter beide.
+
+**Das Gewicht:** zwölf Dateien, zusammen 640 KB (Güte 0,78). In der schwersten
+Epoche (1600) laden davon vier mit 203 KB; sie steht damit bei 7,63 MB gegen
+eine Obergrenze von 8. `fracht_bank` liegt nur in 1350, weil das Zielblatt
+1600 vorn keine Bank trägt und 1600 die Epoche am Veto ist.
+
 ### Der Boden und der Maßstab (Runde 6)
 
 > **Ein Bild, das keinen Menschen zeigt, hat keinen Maßstab — und wird deshalb

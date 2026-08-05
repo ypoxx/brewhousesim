@@ -34,10 +34,12 @@ und mit den Kastenmaßen aus dem DOM:
 | davon Reiterzeile | 1723 × 56 | 1,94 % | **11,6 %** |
 | davon Bauhof-Lade | 1723 × 132 | 5,91 % | **35,5 %** |
 
-*(Pixelvergleich je Kasten, `stadt-w8/deckkarte.mjs`, alle vier Epochen
-gleich auf zwei Stellen. Ein erster Anlauf des Geräts lieferte für alle drei
-Zeilen dieselbe Zahl: er schaltete die Kette nach oben sichtbar und damit die
-Geschwister mit. Verzeichnet, damit es niemand wiederholt.)*
+*(Pixelvergleich je Kasten, `stadt-w8/deckkarte.mjs`, Zahlen aus 1350; über
+alle vier Epochen streut die Reiterzeile gar nicht (1,94 % / 11,6 %) und die
+Lade um zwei Hundertstel (5,91–5,94 % / 35,5–35,6 %). Ein erster Anlauf des
+Geräts lieferte für alle drei Zeilen dieselbe Zahl: er schaltete die Kette
+nach oben sichtbar und damit die Geschwister mit. Verzeichnet, damit es
+niemand wiederholt.)*
 
 Die von `deckung-je-stueck.mjs` gemessenen 8,0 % / 47,1 % sind **Ziffer für
 Ziffer die Werkbank** — DIE STADT deckt außerhalb dieses einen Kastens nichts
