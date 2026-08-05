@@ -160,3 +160,27 @@ Hopfendolde ausdrücklich für **1300–1420**, *„Hopfenbier verdrängt Grut i
 14. Jh."*
 
 **Der Rest von Auflage 8 ist NICHT behoben** — siehe §10.
+
+---
+
+## 9 · DIE MESSUNG — bewegt die Nacharbeit ρ?
+
+Alle Läufe durch `werkbank/schuss/aufsicht/messfenster.sh` mit
+`rueckkopplung-r3/linie.mjs <epoche> 400`, ausgewertet mit
+`fuhre-w6/schnitte.py`. Rohdaten `werkbank/schuss/preis-w7/rho/nacharbeit/`,
+Vergleichsstand `../schluss/`.
+
+| Epoche | | 12 J | 13 J | 14 J | Kasse | Fehler |
+|---|---|---|---|---|---|---|
+| **1350** | vorher | −0,259 | −0,236 | −0,380 | 26–517 | 0 |
+| | **nachher** | **−0,245** | **−0,170** | **−0,336** | 28–524 | 0 |
+
+**1350 bewegt sich, und zwar in die erwartete Richtung.** `pflichtBasis()`
+nimmt Handlohn und Umlage vom Anschlag des Rats statt von der vollen
+Jahreslast; die Last fällt damit, das Haus behält mehr, und ρ rückt um
+**+0,014 / +0,066 / +0,044** näher an null. Der Abstand zur Latte bleibt
+**0,336** am schlechtesten Schnitt (vorher 0,320 — der Abstand ist also sogar
+*gewachsen*, weil der schlechteste Schnitt näher an null liegt).
+
+*(1600 / 1884 / 1970 laufen noch — sie stehen im Fenster hinter 1350. Zahlen
+werden nachgetragen, sobald sie da sind.)*

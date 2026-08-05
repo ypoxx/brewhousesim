@@ -475,12 +475,28 @@ var STADT_DATEN = {
     { schluessel: 'brunnen', name: 'Ziehbrunnen', bild: 'brunnen',
       ort: 'brunnen', dx: 4, dy: 0,
       breite: 6.5, breiten: { 1: 6.5, 2: 5.4, 3: 6.2 },
-      /* Runde 7: in 1600 waren von seinen 9.200 eigenen Pixeln noch 824
-         zu sehen — Waschhaus und Hopfenlager standen davor. Ein Kauf, den
-         man nicht sieht, ist kein Kauf. Der Brunnen geht deshalb in II auf
-         den freien Hofboden davor (21|62 -> 25|71); in I und III bleibt er,
-         wo er ist. */
-      versatz: { 2: { dx: 4, dy: 9 } },
+      /* DER BRUNNEN STEHT. AUFLAGE 1, Welle 7.
+
+         Hier stand bis zum 5. August `versatz: { 2: { dx: 4, dy: 9 } }` —
+         110 px nach rechts und 138 px nach unten in 1600, und in 1884
+         wieder zurueck. Der Grund war gut und ist gemessen: in 1600 waren
+         von den 9.200 eigenen Bildpunkten des Brunnens noch 824 zu sehen,
+         weil Waschhaus, Gewoelbekeller und Hopfenlager davorstanden. Ein
+         Kauf, den man nicht sieht, ist kein Kauf.
+
+         Der blinde Kritiker hat es trotzdem als Riss an der haertesten
+         Einzelforderung gezaehlt, und die Aufsicht hat entschieden:
+         DER ORT GEWINNT. "Die Stadt muss ueber 620 Jahre wachsen, ohne den
+         Ort zu wechseln" ist die haerteste Forderung des Auftrags; ein
+         Fasslager darf umziehen, eine Braupfanne ist Geraet — EIN BRUNNEN
+         IST EIN LOCH IM BODEN. Er wird einmal gegraben.
+
+         Die Antwort auf "mein Kauf ist verdeckt" ist deshalb nicht, den
+         Brunnen zu verlegen, sondern das zu ruecken, was davorsteht. Genau
+         das ist geschehen: der Gewoelbekeller steht jetzt vorn im Hof
+         (Auflage 6), das Hopfenlager ist weiter nach Westen gerueckt, das
+         Waschhaus nach rechts. Nachgemessen mit stadt-r8/brunnen.mjs — die
+         Zahl steht im Bericht. */
       von: 1, bis: 3, grund: 18,
       sagt: 'Eigenes Wasser im Hof. Wer es aus dem Bach holt, braut, was der Bach mitbringt.',
       nutzen: { sud: 1 } },
@@ -489,7 +505,17 @@ var STADT_DATEN = {
        112 px unter die Mauerkante — sie standen auf dem Mauerkopf. Jetzt
        rechts neben der Braustelle (36|68,5), wo der Hof noch Boden hat. */
     { schluessel: 'fasslager_holz', name: 'Fassschuppen', bild: 'fasslager_holz',
-      ort: 'fasslager', dx: 12, dy: -7.5, breite: 13, von: 1, bis: 1, grund: 22,
+      /* VORN IM HOF. AUFLAGE 6, Welle 7.
+         Der Fussgrund: alle Fusspunkte aller Hofbauten lagen in 60,0 bis
+         73,5 % der Buehnenhoehe, der Hof reicht bis 85 — das vordere
+         Drittel war in 1350/1600/1884 zu 0,0 % beruehrt, blanke Platte mit
+         der Startpfuetze. Genau dort traegt das Zielbild seine Fassreihen.
+         Der Fassschuppen ist das, was dort hingehoert, und er ist in 1350
+         von Anfang an da (`stand`).
+         Die Breite waechst mit der Tiefe, nach derselben Perspektive, mit
+         der die Braupfanne geeicht ist (31 px/m bei y 910, 47 bei y 1082,
+         linear): 68,5 % -> 77,5 % ist Faktor 1,29, also 13 -> 15. */
+      ort: 'fasslager', dx: 8, dy: 1.5, breite: 15, von: 1, bis: 1, grund: 22,
       sagt: 'Ein Pultdach über den Fässern. Sonne ist der Feind des Bieres.',
       nutzen: { platz: 6 } },
 
@@ -503,10 +529,18 @@ var STADT_DATEN = {
        der angeschnittene, ist die Breite mitgewachsen (11 statt 9,5/8,6);
        das Tor misst in 1350 rund 75 px neben Leuten von 76-80 px. */
     { schluessel: 'keller_gewoelbe', name: 'Gewölbekeller', bild: 'keller_gewoelbe',
-      ort: 'keller', dx: 1, dy: 6, breite: 12.5, breiten: { 1: 11, 2: 11 },
-      /* Runde 6: der Huegel raeumt der Kueferei die Hoftasche und geht in
-         1350 ein Band zurueck (32|72,5 -> 29|70). */
-      versatz: { 1: { dx: 6, dy: -6 }, 2: { dx: 1, dy: -7 } },
+      /* VORN IM HOF, UND IN BEIDEN EPOCHEN AM SELBEN PLATZ. Welle 7.
+         Zwei Auflagen in einer Aenderung:
+         · AUFLAGE 6 — das vordere Hofdrittel war leer. Ein Kellerhals
+           gehoert an den Hofrand, wo die Faesser hinuntergehen.
+         · AUFLAGE 1 — in 1600 stand dieser Huegel mit vor dem Ziehbrunnen
+           (Fuss 69, x 24, Bild 12,5 breit: er deckte den Brunnen ganz).
+           Vorn im Hof steht er UNTER ihm und nicht mehr davor.
+         Nebenbei faellt der epochenweise Versatz weg: der Keller steht
+         jetzt in 1350 und 1600 an derselben Stelle — ein Loch im Boden
+         wandert nicht, und das war der Kern der Auflage.
+         Breite 11 -> 14 nach derselben Perspektive (Fuss 70 -> 79). */
+      ort: 'keller', dx: -7, dy: 9, breite: 12.5, breiten: { 1: 14, 2: 14 },
       von: 1, bis: 2, grund: 34,
       sagt: 'Kühl und dunkel. Jede Woche, die ein Fass länger hält, ist ein Fass mehr.',
       nutzen: { platz: 8 } },
@@ -587,8 +621,15 @@ var STADT_DATEN = {
     /* Dieselbe Wanderung wie der Fassschuppen: von C2 (35|78) auf die
        Hoftasche (30|73,5). In 1600 sitzt es weiter rechts an der Mauer. */
     { schluessel: 'fasslager_stein', name: 'Fasslager aus Stein', bild: 'fasslager_stein',
-      ort: 'fasslager', dx: 5, dy: -2.5, breite: 14, breiten: { 2: 10.1 },
-      versatz: { 2: { dx: 9, dy: -3.5 } },
+      /* VORN IM HOF, in BEIDEN Epochen am selben Platz. AUFLAGE 6, Welle 7.
+         Das Fasslager ist der Nachfolger des Fassschuppens und steht, wo
+         der stand: vorn im Hof, wo im Zielbild die Fassreihen liegen. Der
+         epochenweise Versatz faellt damit weg — es war der zweite der drei
+         Wanderer, die der Kritiker gefunden hat, und der einzige neben dem
+         Brunnen, der sich ohne Not bewegte.
+         Breiten nach der Tiefe: 1600 10,1 -> 12,4 (Fuss 70 -> 77,5),
+         1884 14 -> 15,6 (Fuss 73,5 -> 77,5). */
+      ort: 'fasslager', dx: 10, dy: 1.5, breite: 14, breiten: { 2: 12.4, 3: 15.6 },
       von: 2, bis: 3, grund: 46,
       sagt: 'Steinwand statt Bretterwand. Der Vorrat wächst, der Schwund fällt.',
       nutzen: { platz: 10 } },
@@ -640,7 +681,12 @@ var STADT_DATEN = {
        Zielbild 04 den Blindvergleich gewonnen hat. 1970 kommt der Hopfen
        als Pellet in den Kuehlraum, nicht als Sack unter den Dachstuhl. */
     { schluessel: 'hopfenlager', name: 'Hopfenlager', bild: 'hopfenlager',
-      ort: 'keller', dx: -6, dy: 0, breite: 9, von: 2, bis: 3, grund: 40,
+      /* AUFLAGE 1: weiter nach Westen. Bei dx -6 (x 16) reichte der
+         Speicher bis x 20,5 und deckte 42 % der Brunnenbreite; bei dx -11
+         (x 11) endet er bei 15,5 und laesst ihn ganz frei. Er steht
+         ohnehin jenseits der Hofmauer in der Haeuserzeile — dort ist
+         westlich Platz. */
+      ort: 'keller', dx: -11, dy: 0, breite: 9, von: 2, bis: 3, grund: 40,
       boden: 'gasse', warum: 'Der Speicher steht westlich der Hofmauer in der '
         + 'Haeuserzeile — dort ist der Hof zu Ende und die Gasse faengt an. '
         + 'Ein Haus, das dem Brauhaus gehoert, aber nicht im Hof steht.',
@@ -652,7 +698,11 @@ var STADT_DATEN = {
        lag, deckte es die halbe Hofraute. Jetzt im Hof, in der Groesse der
        Platte 1600. */
     { schluessel: 'waschhaus', name: 'Waschhaus', bild: 'waschhaus',
-      ort: 'hof', dx: -9, dy: 6, breite: 9.4, von: 2, bis: 2, grund: 32,
+      /* AUFLAGE 1: nach rechts geruecht, damit der Ziehbrunnen frei steht.
+         Bei dx -9 (x 24) deckte das Waschhaus den Brunnen (x 17,8–24,3)
+         zu drei Vierteln seiner Breite; bei dx -5 (x 28) faengt es erst
+         bei 23,3 an. Nicht der Brunnen weicht, sondern das Haus davor. */
+      ort: 'hof', dx: -5, dy: 6, breite: 9.4, von: 2, bis: 2, grund: 32,
       sagt: 'Heißes Wasser für Fass und Bottich. Sauberkeit ist die halbe Haltbarkeit.',
       nutzen: {}, wirkt: 'das Fass bleibt sauber' },
 
@@ -677,7 +727,12 @@ var STADT_DATEN = {
        er jetzt mit einer Zeile in der Chronik, wie jeder Bau, der seine Zeit
        hinter sich hat. */
     { schluessel: 'eiskeller', name: 'Eiskeller', bild: 'eiskeller',
-      ort: 'keller', dx: 4, dy: 0, breite: 13, von: 3, bis: 3, grund: 70,
+      /* VORN IM HOF. AUFLAGE 6, Welle 7. Der Eiskeller ist ein Erdhuegel
+         mit Grasnarbe — das flachste Ding im Katalog von 1884 und damit
+         das, was vorn stehen kann, ohne die Reihe dahinter zuzudecken. Er
+         steht in 1884 von Anfang an da (`stand`), das vordere Drittel ist
+         also nicht erst nach dem fuenften Kauf belegt. */
+      ort: 'keller', dx: -9, dy: 9, breite: 13, von: 3, bis: 3, grund: 70,
       sagt: 'Natureis aus dem Weiher, in Stroh gepackt. Damit wird untergäriges Lagerbier möglich.',
       nutzen: { platz: 30 } },
 
@@ -754,7 +809,10 @@ var STADT_DATEN = {
        13 Meter Bildbreite fuer zwei Sechsmeterwagen; bei 8,8 misst der
        Mann mit der Sackkarre 55 px wie die Leute der Platte 1970. */
     { schluessel: 'verladedock', name: 'Verladedock', bild: 'verladedock',
-      ort: 'rampe', dx: -5, dy: -2, breite: 8.8, von: 4, bis: 4, grund: 95,
+      /* VORN IM HOF. AUFLAGE 6, Welle 7. Das Dock ist die Stelle, an der
+         das Bier den Hof verlaesst — es gehoert nach vorn zur Ausfahrt und
+         nicht in die zweite Reihe. Breite 8,8 -> 11 (Fuss 70 -> 78). */
+      ort: 'rampe', dx: -3, dy: 6, breite: 11, von: 4, bis: 4, grund: 95,
       sagt: 'Zwei Lastzüge geladen, zwei Mann dabei, einer mit der Sackkarre. '
           + 'Was hier abfährt, ist am Abend zweihundert Kilometer weit.',
       nutzen: {}, wirkt: 'zwei Lastzüge gleichzeitig' },
@@ -771,7 +829,10 @@ var STADT_DATEN = {
        kann. Neun Stapel statt vier, damit aus dem richtigen Mass kein
        Spielzeug wird: bei breite 8,3 misst der Mann 55 px. */
     { schluessel: 'kastenlager', name: 'Kastenlager', bild: 'kastenlager',
-      ort: 'fasslager', dx: -6, dy: -8, breite: 8.3, von: 4, bis: 4, grund: 70,
+      /* VORN IM HOF. AUFLAGE 6, Welle 7. Die Kastenwand ist flach
+         (790x449) und deckt deshalb vorn nichts zu; sie steht in 1970 von
+         Anfang an da. Breite 8,3 -> 11,5 nach der Tiefe (Fuss 68 -> 79). */
+      ort: 'fasslager', dx: -6, dy: 3, breite: 11.5, von: 4, bis: 4, grund: 70,
       sagt: 'Der Kasten ist die neue Verpackung — und das Pfand darauf ist ein Versprechen.',
       nutzen: { platz: 90 } },
 
