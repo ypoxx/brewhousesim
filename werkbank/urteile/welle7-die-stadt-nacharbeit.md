@@ -126,3 +126,94 @@ REIHENFOLGE:  0 Fehler   (nichts liegt vor dem, hinter dem es steht)
 Braupfanne:   0 % zugedeckt in 1350 und 1600
 Summe aller Beanstandungen: 0
 ```
+
+---
+
+## AUFLAGE 2 — der Reiter schneidet keine Zahl mehr an
+
+**Der Kern des Befundes, und er ist der wichtigste des ganzen Urteils:**
+auf dem Reiter DIE HÄUSER stand `wollen 14…`, während der Wert
+`wollen 146 · im Keller liegen 11 hl` ist. *„Eine gekürzte Zahl liest sich wie
+eine vollständige"* — der Nachfragewert erschien um eine Zehnerpotenz zu
+niedrig. Das ist keine Kürzung, das ist eine falsche Ablesung.
+
+**Jetzt schneidet nicht mehr der Browser, sondern das Stück — und nur an einer
+Grenze, die einen wahren Satz übriglässt** (`stadt.js`, `setzeAufschrift()`):
+
+1. der ganze Text, wenn er passt;
+2. sonst so viele vollständige Abschnitte (` · `), wie hineingehen, mit
+   nachgestelltem Auslassungszeichen;
+3. sonst so viele vollständige Wörter;
+4. sonst nur das Auslassungszeichen.
+
+Gemessen wird mit `scrollWidth`, also an dem, was der Browser wirklich malt,
+und gemerkt wird Text **und Breite nach dem Einpassen** — sonst rechnete jeder
+Takt neu, weil ein gekürztes Wort schmaler ist als das ungekürzte.
+
+| Reiter, 1884 | vorher | nachher |
+|---|---|---|
+| DIE HÄUSER | `wollen 14…` | **`wollen 146 …`** |
+| DER EISKELLER | `11 von 135 h…` | **`11 von 135 hl …`** |
+| HALBER WAGEN | `0,0 von 60 hl…` | **`0,0 von 60 hl …`** |
+
+**`wollen 146 …` ist wahr. `wollen 14…` war es nicht.**
+
+Dazu hat der Reiter Polster abgegeben, weil der Kritiker nachgewiesen hat, dass
+es **auf der Entwurfsleinwand am schlimmsten** ist (48 Kästen dort gegen 37 bei
+1366×768): Polster 20 → 8 Bezugspixel, Sperrung 14 → 6, Abstand 5 → 3. Das
+sind rund 240 px zurück von 1.654 — und die Werkbank wird davon **nicht höher**.
+
+### Das Ergebnis, mit dem Gerät des Kritikers gezählt
+
+| Fenster | abgeschnittene Kästen DER STADT vorher | nachher | alle Stücke |
+|---|---|---|---|
+| **2752×1536** | **48** | **0** | 15 |
+| **1920×1080** | **53** | **0** | 11 |
+| **1366×768** | **37** | **0** | 14 |
+
+**Null auf jeder gemessenen Fenstergröße.** Von den 51 abgeschnittenen Kästen
+des ganzen Spiels bleiben 14, und keiner davon gehört DER STADT.
+
+**Verworfen, weil gemessen:** `flex: 1 1 0` (alle Reiter gleich breit) macht es
+auf der Entwurfsleinwand **schlechter** — vier ganze Überschriften statt sechs.
+Gleiche Breite hilft dem kurzen Namen und nimmt dem langen mehr weg, als der
+kurze gewinnt. Ebenfalls verworfen: die Reiterzeile rollbar machen (der zweite
+Vorschlag des Kritikers) — das ändert, wo die Reiter stehen und ob Playwright
+vor dem Klick scrollen muss, und damit die Geometrie, an der ρ hängt.
+
+## AUFLAGE 5 — „STADT ZEIGEN" sagt jetzt selbst, dass es nichts zu tun gibt
+
+Ausgeblendet war der Knopf schon (`.frei.aus { display: none }`) — deshalb lief
+der echte Klick des Kritikers in den Zeitablauf. **Er stand aber weiter als
+AKTIVER Zug im DOM** und wurde von jedem Zähler mitgezählt, der `disabled`
+liest. Das ist genau der Befund über `disabled`, den DER SUD am 3. August
+gemeldet hat, nur diesmal in meinem Stück.
+
+Jetzt: `zk.disabled = !offenDa`, dazu `data-soll-aus` und ein Titel, der den
+Grund nennt. **Gemessen mit `gestalt.mjs`: die Zahl der aktiven Züge sinkt in
+jeder Epoche um genau eins** (82→81, 83→82, 87→86, 82→81) — der eine Zug, der
+keiner war.
+
+## AUFLAGE 3 — die Ortsmarke weicht aus, statt unerreichbar zu bleiben
+
+Nachgemessen ist der Deckel **der Chronikgriff DES PREISES**: 182×237 px auf
+(1169|23), der Pflock sitzt auf (1286|195) mitten darin. Er liegt in
+`ebene-blatt`, also über `ebene-marken` — von meinem Stück aus mit keinem
+z-index einzuholen.
+
+Der vorhandene Abräumer („KEIN TOTER KNOPF IM BILD", Runde 5) kannte nur drei
+Deckel — `data-frei`, eigener Hof, eigenes Blatt — und ließ diesen deshalb
+stehen. Jetzt wird **zuerst ausgewichen**: der Schritt wird aus dem Rechteck
+des Deckels gerechnet, knapp an seiner nächsten Kante vorbei, mit `translate`
+und nie mit `transform` (der Pflock hängt über `transform` an seinem Ort).
+Erst wenn nichts hilft, wird abgeräumt.
+
+**Zwei Fehlversuche, beide gemessen und beide lehrreich:** feste Schritte von
+30 px reichen nicht gegen einen Deckel von 237 px, und der Ausweichschritt
+lief zuerst in `zeichnePfloecke` — die baut nur neu, wenn sich die Markenliste
+ändert, und beim ersten Bau gab es den fremden Griff noch gar nicht.
+
+| | vorher | nachher |
+|---|---|---|
+| nicht treffbare STADT-Züge, 1366×768 | 1884: 1 · 1970: 1 | **0 · 0 · 0 · 0** |
+| dito 2752×1536 | 0 | **0** |
