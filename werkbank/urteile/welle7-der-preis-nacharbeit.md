@@ -194,3 +194,68 @@ bewegt, obwohl acht Zeichenketten und eine Rechenfunktion anders sind.
 *(1884 und 1970 laufen noch — sie stehen im Fenster hinter 1600. Zahlen werden
 nachgetragen, sobald sie da sind; die Läufe schreiben selbsttätig nach
 `werkbank/schuss/preis-w7/rho/nacharbeit/e3-A.json` und `e4-A.json`.)*
+
+---
+
+## 10 · WAS ICH NICHT BEHOBEN HABE, und warum
+
+**AUFLAGE 9 — `nachZeit` fehlt in 1600, 1884 und 1970.** Der Kritiker nennt
+es den stärksten Einzelbefund, und er hat recht: in 1600 heißt die unterste
+Sprosse **vierzehnmal** hintereinander „Die Darre überm Malzboden" und wird nie
+genommen, in 1970 **zehnmal von vierzehn** „Der eigene Mehrwegkasten". Das ist
+Ziffer für Ziffer das Bild, das für 1350 als Fehler erkannt und behoben wurde.
+
+**Nicht gemacht, und es ist eine Abwägung, keine Bequemlichkeit.** Der Umbau
+ist nicht `nachZeit` allein — er ist `nachZeit` **plus** ein Unterhalt je
+Sprosse, sonst bekommen drei Epochen billige Sprossen ohne Gegenrechnung und
+die Lade läuft davon. Das sind rund 40 Karten in drei Epochen, und **jede
+einzelne davon speist Latte 2**. In dieser Runde stand die Sperrliste, und
+zwei Sperrlisten-Funde sind ein Veto, keine Latte — sie mussten zuerst weg und
+sie mussten **messbar folgenlos** bleiben. Genau das ist jetzt belegt
+(1600 unverändert, Ziffer für Ziffer).
+
+Wer es angeht, geht es als **eigene Runde** an, mit drei Läufen je Epoche
+vorher und nachher. **1970 steht bei +0,699** — ein Tausendstel unter dem
+Riss. Eine Epoche, deren Leiter man plötzlich steigen kann, ändert dort jede
+Zahl, und ich lasse diese Zahl nicht nebenbei kippen.
+
+**AUFLAGE 8, der große Teil — die obere Hälfte der Leiter.** Nie bezahlbar in
+1350: `freikauf` 1.000→1.700 · `realrecht` 800→930 · `marktbank` 220→330 und
+alle fünf nach der Schätzung bepreisten Angebote bis `bannmeile`
+1.300→**3.400**, gegen eine höchste Lade von 384 (Kritikerhand) bzw. 517 Pf
+(Aufsichtshand). Behoben ist nur die Karte, die **gar nie erschien** (`hopfen`,
+§8). Der Rest ist eine Entwurfsfrage: entweder eine Zwischensprosse zwischen
+0,50 und 1,70 × Taxe, oder Raten für die großen Angebote (die Mechanik ist da:
+`zahlplan` kann 45 % Anzahlung + Raten, `bannmeile` hat nur `bauzeit: 0`), oder
+die ehrliche Ansage auf der Karte, für welches Jahrhundert sie gedacht ist.
+**Alle drei bewegen ρ.**
+
+**AUFLAGE 10 — null Festlegungen in 1884 und 1970.** Derselbe Befund eine
+Etage höher und dieselbe Antwort: `handelsmarke` und `genossenschaft` kosten
+110.000→140.000 DM gegen eine höchste Lade von 114.537. Gehört in dieselbe
+Runde wie Auflage 8.
+
+**Nebenbefund 5.2 des Kritikers — „Nehmen" bricht mitten im Wort.** Ursache
+ist `overflow-wrap: anywhere` auf `.pr-tafel .pr-karte`, das ich in Welle 7
+für lange Komposita gesetzt habe und das auch ein Wort mit sechs Buchstaben
+trifft. Nicht behoben: die Regel steht dort, weil ohne sie
+„Getränkefachgroßhandel" die Karte sprengt und die vierte Latte reißt. Die
+saubere Fassung wäre `overflow-wrap: anywhere` nur auf `.pr-karte-text` und
+`hyphens: auto` auf dem Knopf — eine Zeile, aber sie ändert die Kartenhöhe
+und damit wieder ρ. Gehört in dieselbe Runde.
+
+---
+
+## 11 · Abnahme
+
+| Prüfung | Ergebnis |
+|---|---|
+| `node --check` auf `preis.js`, `preis-daten.js` | ok |
+| `node werkbank/schuss/aufsicht/tor.mjs` | **TOR OFFEN** — vier Epochen, `lage` 0, 0 Konsolenfehler |
+| Latte 4, 1366×768, Rollleiste, **Tafel auf** | DER PREIS **0** Textknoten < 12 px · **0** abgeschnittene Kästen · **0 von 35** Knöpfen < 24 px |
+| Entwurfsleinwand 2752×1536 | **0 Schriftgrößenänderungen**; Unterschied ist ausschließlich neuer Inhalt |
+| Sperrliste 6.1 (Grundherr) | **behoben** — je Epoche aus den Daten |
+| Sperrliste 6.2 (Rat setzt 1970 den Bierpreis) | **behoben** — je Epoche aus den Daten |
+
+Geändert nur `spiel/stuecke/preis.js`, `spiel/stuecke/preis-daten.js`,
+`spiel/stil/preis-zusatz.css`. Kein `Math.random()`, keine Bilder, kein `git`.
