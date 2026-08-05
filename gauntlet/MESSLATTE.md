@@ -149,9 +149,23 @@ Fläche passen.
 > abgeschnitten gezählt. Die Überlaufzahlen sind dadurch nach oben verfälscht,
 > während die Schriftzahlen nach unten verfälscht sind.
 >
-> **Repariert wird, wenn kein Agent daran misst** — die Regel dieses Laufs, und
-> sie gilt gerade hier: das Maß zu ändern, während gemessen wird, entwertet beide
-> Messungen.
+> **BEIDES REPARIERT am 5. August**, in dem Fenster, in dem kein Agent maß —
+> und die Wirkung gemessen, nicht behauptet, am selben Baum und derselben
+> Fenstergröße:
+>
+> | | Überläufe | Schrift < 12 px | Knöpfe < 24 px |
+> |---|---|---|---|
+> | ohne Rollleiste *(alt, `OHNE_LEISTE=1`)* | 92 | 1128 | 0 von 334 |
+> | **mit Rollleiste** *(jetzt Vorgabe)* | **94** | 1128 | 0 von 334 |
+>
+> Die zwei zusätzlichen Kästen liegen in **1350 und 1884** — genau die beiden
+> Epochen, die der Kritiker benannt hatte. Schrift- und Knopfzahlen bleiben
+> gleich, wie sie müssen: eine Rollleiste ändert keine Schriftgröße.
+>
+> **Der Riss ist real, aber klein** — zwei Kästen, nicht zwei Dutzend. Beides
+> gehört gesagt: dass das Gerät falsch maß, und wie viel es ausmachte.
+> `OHNE_LEISTE=1` stellt das alte Verhalten her, nur um alte Zahlen
+> nachzustellen, nie um neue zu erheben.
 
 ## Sperrliste — keine Latte
 

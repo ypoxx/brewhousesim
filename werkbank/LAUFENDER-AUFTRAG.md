@@ -72,8 +72,11 @@ Beide stehen im Wortlaut in `gauntlet/MESSLATTE.md` bei Latte 4:
 2. `lesbarkeit.mjs:26–32` zählt einen Kasten mit `overflow-y: hidden` und
    `overflow-x: auto` als abgeschnitten, obwohl er rollt.
 
-> **Repariert wird beides erst, wenn kein Agent daran misst.** DER SUD läuft
-> noch. Wer das Maß ändert, während gemessen wird, entwertet beide Messungen.
+> **Beides repariert am 5. August**, sobald DER SUD fertig war und kein Agent
+> mehr maß. Wirkung gemessen: **92 → 94 Überläufe**, die zwei zusätzlichen in
+> 1350 und 1884 — genau den Epochen des Kritikers. Schrift (1128) und Knöpfe
+> (0 von 334) unverändert, wie sie müssen. Der Riss war real und **klein**;
+> beides gehört gesagt.
 
 **LATTE 2 — der Kritiker sagt FÄLLT DURCH, und er widerspricht der eingetragenen
 Tabelle.** Zwölf Läufe, sequenziell durchs Messfenster, Spannweite 0,000:
