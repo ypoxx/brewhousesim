@@ -12,6 +12,110 @@ mit zwei Preisschildern), das Siegel hält bei **102 Fluchtversuchen gegen acht
 Festlegungen null Rückwege**, kein Scheinpreis in 784 Klicks. Drei Auflagen
 sind meine.*
 
+## Was unterm Strich steht, zweite Runde
+
+| Auflage | verlangt | gemessen | |
+|---|---|---|---|
+| **1** Schriftboden | jede Schriftregel `max(12px, …)` | **41 von 41**; Textknoten unter 12 px **356 → 0**, kleinste Schrift 6,5 px → **keine unter 12** | erfüllt |
+| **2** Erklärsatz | nicht mehr kappen ohne zweiten Weg zum Text | **geschnittene Erklärkästen 23 → 0**; alle rollen statt zu schneiden, „Unwiderruflich — …" als eigene Zeile an allen acht Karten | erfüllt |
+| **3** Prozessrechner | mindestens einmal bedienbar | **bedienbar**, mit seinem Gerät: 0 → **1 Woche**; Leiter 42.000 + 36.000 mit der Maus nachgespielt | erfüllt |
+| Nebenwirkung | Schriftboden wirft Kästen um | **abgeschnittene Kästen DES SUD 28 → 1**, und der eine rollt | aufgeräumt |
+| Siegel | hält nach dem Umbau weiter | 6 von 8 Zeilen `GEHALTEN=true`; die zwei gemeldeten nachgesehen und beide erklärt (Ratsche hinauf bzw. Siegel gar nicht gesetzt), `pasteur` von Hand versiegelt: **kein Rückweg** | hält |
+| Tore | `tor.mjs` · `spielprobe.mjs` · `node --check` | TOR OFFEN · SPIELPROBE BESTANDEN · sauber | bestanden |
+
+**Nicht meine Auflagen, und ich habe nicht daran gearbeitet:** Auflage 4 (der
+Widerspruch `LIESMICH.md` gegen `PRUEFUNG.md` zum Hopfen in 1350) und Auflage 5
+(`MESSLATTE.md` §2 ist für 1600 und 1970 veraltet) richten sich an die
+Aufsicht. Den Hopfen-Widerspruch hatte ich in der ersten Runde gemeldet statt
+selbst entschieden; er ist inzwischen zugunsten von `PRUEFUNG.md` geklärt, und
+die erste Achse von 1350 bleibt.
+
+**Das ganze Spiel bei 1366×768**, gemessen mit `aufsicht/lesbarkeit.mjs`:
+Textknoten unter 12 px **1.128 → 772**, abgeschnittene Kästen **94 → 67**,
+Knöpfe unter 24 px 0 von 334. Die Differenz ist in beiden Zeilen fast
+vollständig meine.
+
+**Der Kesselzettel, alle vier Epochen, beide Größen nachgemessen:**
+
+| | 1366×768 | 2752×1536 |
+|---|---|---|
+| Kasten | 178 × 113…126 px | 358 × 253 px *(unverändert)* |
+| Inhalt passt (`scrollHeight ≤ clientHeight`) | **ja, 4/4** | **ja, 4/4** |
+| Knöpfe · davon unter 24 px · außerhalb · treffbar | 4 · **0** · **0** · **4** | 4 · **0** · **0** · **4** |
+| Notzustand `gedraengt`/`knapp` | **keiner** | **keiner** |
+
+## Das Siegel, nach dem Umbau erneut angegriffen
+
+Ich habe an einem Preis und an der Kartendarstellung gearbeitet, also den
+Siegelangriff des Kritikers (`sud-blind-r2/siegel.mjs`, unverändert) noch
+einmal gefahren. **Sechs der acht Festlegungen: `GEHALTEN=true`, keine
+Ausnahme** — darunter `schuettung:weizenbrief`, die Karte, die ich in der
+ersten Runde gebaut habe. 0 Seitenfehler.
+
+Zwei Zeilen meldet sein Zähler als „entkommen". Beide habe ich nachgesehen,
+statt sie zu glauben:
+
+**1970 `fuehrung:labor`.** Alle sieben gemeldeten Fluchten enden laut seiner
+eigenen Rohdatei bei `verfahrenDanach: "rechner"` — also **hinauf** auf die
+teurere, ebenfalls unwiderrufliche Karte. Das ist die angeschriebene Ratsche
+(„Zurück geht es nicht — nur noch weiter hinauf"). Die fünf Versuche auf die
+**kostenlose Vorgabe** `erfahrung` stehen alle auf `verfahrenDanach: "labor"`,
+`entkommen: false`. `verfahrenAmEnde: rechner`, und `labor` trägt danach
+`weg: true`. Der Kritiker hat genau diesen Zählerfehler in seinem eigenen
+Urteil beschrieben und zurückgezogen; mit dem billigeren Rechner tritt er nun
+öfter auf, weil der Aufstieg jetzt bezahlbar ist. **Das ist die Ratsche bei der
+Arbeit, kein Rückweg.**
+
+**1970 `behandlung:pasteur`.** Hier steht in seiner Rohdatei `gesetzt: false` —
+**das Siegel wurde in diesem Lauf gar nicht gesetzt.** Die anschließende
+Wanderung zwischen `natur`, `schoenen` und `filter` ist deshalb völlig
+regelgerecht: das sind zwei kostenlose Karten und eine mit `einmal: true`, auf
+denen kein Siegel liegt. Erst der letzte Versuch landete auf `pasteur`, und
+danach tragen alle drei anderen `weg: true`.
+
+Damit das nicht an einer Auslegung hängt, habe ich es selbst hergestellt —
+1970, mit der Maus, `pasteur` für 74.000 DM gekauft:
+
+| | Kasse | `verfahren` | die drei anderen Karten |
+|---|---|---|---|
+| vorher | 86.000 | `natur` | schoenen „ohne Ausgabe", filter „einmal zu zahlen", pasteur „unwiderruflich" |
+| gesiegelt | **12.000** (−74.000 auf den Pfennig) | `pasteur` | **alle drei: „das Siegel liegt darauf", gesperrt** |
+| zurück auf natur / schoenen / filter | — | **`pasteur`** | nicht anklickbar |
+| `disabled` entfernt, `pointer-events` frei, echte Maus **plus** `el.click()` **plus** `dispatchEvent` | — | **`pasteur`** | unverändert |
+
+**Kein Weg zurück, auf keinem der Wege.** Der Riegel steht weiter als erste
+Zeile in `waehle()`, vor der Zahlung, und ich habe ihn nicht angefasst
+(Sperrliste 1).
+
+## Was ich an der Entwurfsleinwand bewusst geändert habe
+
+Der Schriftboden ändert dort nichts (alle N ≥ 13), die Aufräumregeln stehen
+hinter dem Medienschalter, und die Stempelworte des Zettels lesen denselben
+Schalter über `matchMedia`. **Zwei Dinge ändern sich dort trotzdem, und beide
+sind genau das, was Auflage 2 verlangt hat:** der Erklärsatz wird nicht mehr
+nach drei Zeilen abgeschnitten, und der Satz „Unwiderruflich — …" steht als
+eigene Zeile darunter. Der Kritiker hat ausdrücklich festgehalten, dass das
+**kein `--s`-Problem** ist und auf der Entwurfsleinwand dieselben 3 von 21
+Zeilen betrifft — es wäre also falsch gewesen, es dort stehen zu lassen.
+
+## Was ich in dieser Runde angefasst habe
+
+    spiel/stuecke/sud.js         teileSatz() · stempelkurz() · Stempelworte
+                                 auf dem Zettel · die Festzeile an der Karte
+    spiel/stuecke/sud-daten.js   kurz/jungKurz/altKurz je Epoche ·
+                                 rechner 118.000 -> 78.000 (Anrechnung bleibt)
+    spiel/stil/sud.css           41 Schriftboeden · .sud-kartensatz rollt
+                                 statt zu schneiden · .sud-festsatz
+    spiel/stil/sud-zusatz.css    der berichtigte Zustaendigkeitsabsatz ·
+                                 der Medienschalter mit dem Aufraeumen
+
+`spiel/kern/**`, `spiel/index.html`, `stil/grund.css`, `kern/ton.js` und
+`ton/**` sind unberührt; fremde Messgeräte habe ich benutzt und nicht gedreht.
+Mein Hafen liegt jetzt unter `werkbank/schuss/sud-w6-nach/sudstand.sh` statt im
+Scratchpad — der hat zwei Container-Resets nicht überlebt, `werkbank/` schon.
+
+---
+
 ## AUFLAGE 1 — der Schriftboden. Ich hatte unrecht, und zwar ausdrücklich.
 
 In `stil/sud-zusatz.css` stand von meiner Hand, ich fasse die Schriftgrößen
@@ -83,6 +187,48 @@ Reiterklick weit, und das Brett ist seit dieser Runde selbst vollständig lesbar
 Die Reihenfolge ist nicht Geschmack: ein Knopf, der aus dem Kasten fällt, ist
 ein verlorener Zug; eine Zeile, die anderswo ganz dasteht, ist keiner.
 
+## AUFLAGE 3 — der Prozessrechner ist nicht zu drücken
+
+Der Kritiker hat es in drei Spielstilen über zusammen 300 Wochen gemessen:
+`sud:fuehrung:rechner` in **0 von 98** und **0 von 99** Wochen bedienbar,
+Kassenhöchststände 86.000 (fallend) · 61.776 · 52.396 gegen 76.000 nötig. Mit
+**seinem** Gerät (`sud-blind-r2/rechner.mjs`, 400 Wochen) auf meinem Stand
+nachgestellt: Kasse nie über 86.000, Labor in Woche 1, danach nie wieder
+genug — **Rechner in 0 Wochen bedienbar.** Er hat recht.
+
+**Was funktioniert hat und bleibt: die Anrechnung.** Sie rechnet richtig, sie
+steht am Schirm, sie ist kein Scheinpreis — das bestätigt er ausdrücklich. Sie
+hat die Lücke halbiert und nicht geschlossen.
+
+**Was falsch war: der Preis.** 118.000 DM war die ehrliche Zahl für eine ganze
+neue Sudwerkssteuerung — und zugleich eine Zahl, die in dieser Epoche
+**niemand je in der Kasse hat**: das Haus von 1970 startet mit 86.000 DM und
+kommt in vierzehn Braujahren nicht darüber. Ein Schild, das mehr fordert, als
+das Spiel je hergibt, ist kein Preis, sondern Kulisse. Sachlich ist die
+kleinere Zahl ohnehin die richtigere: 1970 wurde ein Prozessrechner an
+**vorhandene** Fühler angeschlossen, nicht ein zweites Sudhaus gebaut.
+
+**Neu: 78.000 DM Liste, nach Anrechnung des Labors 36.000 DM.** Er bleibt damit
+die teuerste unwiderrufliche Karte des Spiels (78.000 gegen 74.000 für den
+Tunnelpasteur), und die Leiter kostet über beide Stufen 42.000 + 36.000 =
+**genau den Listenpreis**.
+
+### Mit der Maus nachgespielt, 1970, Klick für Klick
+
+| | Kasse | `labor` | `rechner` |
+|---|---|---|---|
+| Start | 86.000 | −42.000, aktiv, trifft | −78.000, aktiv, trifft |
+| Labor gekauft | **44.000** | „läuft", gesperrt | **−36.000, aktiv, trifft** · Schild „Liste 78.000 DM · 42.000 DM angerechnet" |
+| Rechner gekauft | **8.000** | „das Siegel liegt darauf" | „läuft" · Siegelzeile „Anlage abgenommen" |
+| zurück auf `labor` | — | **Klick tut nichts**, `verfahren` bleibt `rechner` | |
+
+42.000 und 36.000 auf den Pfennig abgebucht, 0 Seitenfehler. Und mit **seinem**
+Gerät nachgemessen: **„Wochen, in denen der Rechner bedienbar war: 1"** statt 0
+— gekauft in Woche 1 für 78.000 auf dem direkten Weg, und über die Leiter
+ebenso. **Die Ratsche hält dabei unverändert** (Sperrliste 4): `labor`
+verschwindet nicht, und `gesiegelt()`/`verdraengt()` rechnen weiter mit dem
+Listenpreis, nicht mit dem angerechneten.
+
 ## AUFLAGE 2 — der abgeschnittene Erklärsatz
 
 `-webkit-line-clamp: 3` mit `overflow: hidden` in beide Richtungen: **23 von 52
@@ -108,6 +254,10 @@ den Rand.
    ist die einzige Zeile der Karte, die etwas kostet, wenn man sie nicht liest.
    Die Trennung verliert keinen Text: `satz + fest` ergibt wieder das Original.
 
+
+---
+
+# ERSTE RUNDE — die Nacharbeit zum ersten Urteil
 
 *Laufend geschrieben.*
 
@@ -303,6 +453,12 @@ was sie selbst mitgesiegelt hat.
 ---
 
 # AUFLAGE 3 — `sud:fuehrung:rechner` ist nicht anzufassen
+
+> *Nachtrag aus der zweiten Runde: die hier beschriebene Anrechnung ist
+> bestätigt worden — sie rechnet richtig und steht am Schirm —, hat die Lücke
+> aber nur halbiert. Der Listenpreis von 118.000 DM ist deshalb inzwischen auf
+> 78.000 DM gesenkt (offen nach Anrechnung: 36.000). Die Begründung steht oben
+> unter „AUFLAGE 3 — der Prozessrechner ist nicht zu drücken".*
 
 118.000 DM, die teuerste unwiderrufliche Karte des Spiels, in **0 von 800**
 gemessenen Wochen aktiv **und** erreichbar.
