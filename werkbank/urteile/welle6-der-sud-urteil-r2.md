@@ -18,13 +18,13 @@ Marke geprueft: `curl -s http://127.0.0.1:8901/.messstand-marke` → `517ca3f`
 
 | Frage | Stand |
 |---|---|
-| 1 — DIE KLEMME | offen |
-| 2 — Entscheidung ueber das Bier je Epoche | offen |
-| 3 — DAS SIEGEL | offen |
+| 1 — DIE KLEMME | **weg: 0 von 386 Wochen** |
+| 2 — Entscheidung je Epoche | **ja, auch 1600: 98 von 103 Wochen** |
+| 3 — DAS SIEGEL | **haelt: 102 Versuche, 0 Rueckwege** |
 | 4 — LATTE 4 (Lesbarkeit, 1366x768) | **gemessen — REISST** |
-| 5 — LATTE 2 (rho, 4 Epochen x 3 Laeufe x 3 Schnitte) | laeuft |
-| 6 — Sperrliste | offen |
-| 7 — Kann man es spielen? | offen |
+| 5 — LATTE 2 (rho) | **gemessen: 1350 reisst (+0,762), nicht dem SUD anzulasten** |
+| 6 — Sperrliste | **kein Veto** |
+| 7 — Kann man es spielen? | **ja: 784 Klicks, 0 Fehler** |
 
 **Messgeraet, selbst gebaut:** `werkbank/schuss/sud-blind-r2/sudlage.mjs`.
 Liest je Woche das Sudbrett (Klasse `stadt-zugeklappt`, `clip-path`,
@@ -597,19 +597,28 @@ Karte des ganzen Spiels**. Der Quelltext nennt sie als Auflage 3 der Vorrunde
 und loest sie mit einer **Anrechnung**: wer das Labor hat, zahlt nur die
 Differenz von 76.000 DM (`sud-daten.js:530–557`).
 
-**Zwei unabhaengige Messungen sagen: sie ist immer noch nicht zu haben.**
+**Drei unabhaengige Spielstile sagen: sie ist immer noch nicht zu haben.**
 
-| | |
+| Stil | Ergebnis |
 |---|---|
-| sparsamer Stil, 99 Wochen, Brett offen | `sud:fuehrung:rechner` in **0 von 99 Wochen** sichtbar+aktiv+erreichbar (`labor` dagegen in 77) |
-| gespielt, 206 Klicks, 4 Braujahre | hoechste je erreichte Kasse **61.776 DM** — nach dem Labor fehlen 14.224 DM zu den 76.000 |
-| Kasse im sparsamen Stil | faellt monoton von 86.000; **Hoechststand ist der Startwert** |
+| sparsam (nur WEITER), 99 Wochen, Brett offen | `sud:fuehrung:rechner` in **0 von 99 Wochen** bedienbar (`labor` dagegen in 77). Kasse faellt monoton von 86.000; **Hoechststand ist der Startwert** |
+| kaufend (guenstigste Karte zuerst), 206 Klicks, 4 Braujahre | kaufte Filter (26.000) und Labor (42.000); hoechste Kasse danach **61.776 DM** |
+| **auf den Rechner sparend** (`rechner.mjs`, 98 Wochen, kauft NUR die Achse `fuehrung`, kein Filter, kein Pasteur, kein Gaertank) | Labor in Woche 1 fuer 42.000 gekauft, danach Kasse **nie ueber 52.396 DM** — es fehlen 23.604 DM. **Rechner in 0 von 98 Wochen bedienbar** |
 
-Die Anrechnung hat die Luecke halbiert (118.000 → 76.000) und sie nicht
-geschlossen. **Auflage 3 der Vorrunde ist damit gemildert, nicht erledigt.**
-Ich kann nicht ausschliessen, dass ein anderer Spielstil dort hinkommt — aber
-weder der sparsame noch der kaufende tut es, und die Vorrunde hat es ueber 800
-Wochen auch nicht geschafft.
+**Was dabei nachweislich FUNKTIONIERT — die Anrechnung, und sie steht am
+Schirm:** vor dem Laborkauf traegt der Knopf `−118.000 DM`, unmittelbar danach
+`−76.000 DM`. Die Rechnung stimmt, sie ist sichtbar, und sie ist kein
+Scheinpreis. **Was nicht funktioniert, ist die Kasse dahinter.** Die
+Anrechnung hat die Luecke halbiert und nicht geschlossen.
+
+**Fair und ausdruecklich dazu:** die kompetent gespielte Linie (`linie.mjs`,
+die Hand der zweiten Latte) erreicht in 1970 einen **Kassenhoechststand von
+114.537 DM** — sie kauft dabei allerdings gar keine SUD-Karte. Ein Spieler,
+der die Handelsseite so gut spielt **und** frueh das Labor kauft, koennte die
+76.000 erreichen. **Diese Kombination habe ich nicht herstellen koennen**, und
+ich behaupte deshalb nicht, die Karte sei tot — ich sage: in drei Stilen,
+zusammen 300 gespielten Wochen, war sie **kein einziges Mal** zu druecken.
+**Auflage 3 der Vorrunde ist damit gemildert, nicht nachweislich erledigt.**
 
 
 ---
@@ -710,4 +719,141 @@ feststellbar — genau der schon dokumentierte Fall. Ich kann nur sagen: **DER
 SUD meldet in den Nenner** (`sud.js:2368–2404`, `meldeZug`), und er meldet
 seit dieser Runde **nur noch, wenn wirklich ein bedienbarer Knopf dazu steht**
 (`lebt()`, `sud.js:2362`). Das macht die Zahl ehrlicher, nicht kleiner.
+
+
+---
+---
+
+# DAS URTEIL
+
+Gemessen ausschliesslich am eingefrorenen Stand **`517ca3f`** auf Hafen 8901,
+Marke vor dem Lauf und nach dem siebten Container-Reset erneut geprueft.
+Alle Wochenlaeufe einzeln durchs Messfenster. Rohdaten unter
+`werkbank/schuss/sud-blind-r2/`.
+
+**Die Gesamtbilanz in einer Zeile:** 386 Wochen mit offenem Sudbrett, 784
+Klicks mit der Maus, 102 Fluchtversuche gegen acht Siegel, zwoelf
+400-Wochen-Laeufe — **0 Klemmwochen · 0 Rueckwege · 0 Scheinpreise · 0
+Seitenfehler · `BRAUHAUS.lage` durchgehend 0** — und **356 Textknoten unter
+12 px**.
+
+## Je Latte
+
+### LATTE 2 — das Spiel · Spalte (a) Entscheidungen, (b) unwiderrufliche Festlegungen, (c) Zuege des Gegners: **BESTEHT**
+
+* **(a)** Wochen mit ≥ 2 gleichzeitig sichtbaren, aktiven, erreichbaren
+  Muenz-Preisschildern DES SUD: **49/103 · 98/103 · 96/101 · 94/99**. Mit den
+  in Bier bezahlten Zuegen: **99 · 99 · 97 · 95**. **1600 war die leere
+  Epoche und ist jetzt die dichteste.** Vier verschiedene Verblisten, vier
+  verschiedene Nebenbedingungen am Gaerraum — keine Epoche ist das Kostuem
+  einer anderen.
+* **(b)** Acht unwiderrufliche Festlegungen, **102 Fluchtversuche, null
+  Rueckwege.** Der Riegel sitzt in `waehle()` und nicht am Attribut: auch mit
+  entferntem `disabled`, freigeraeumten `pointer-events`, `el.click()`,
+  `dispatchEvent` und Tastatur bewegt sich nichts. Jede Festlegung wurde auf
+  den Pfennig abgebucht.
+* **(c)** Drei Sorten Gegenzug ohne den Spieler, alle mit Eintrag in Chronik
+  und Protokoll — Fehlsud, die Anzeige-Instanz der Epoche, und der Einkauf der
+  Handelskette, der zwei bis fuenf Wochen spaeter nachmisst.
+
+### LATTE 2 — die Kurve rho: **REISST, aber nicht an diesem Stueck**
+
+Zwoelf Laeufe, drei je Epoche, **Spannweite 0,000**. **1350 steht bei
++0,762 / +0,692 / +0,591 und reisst bei zwoelf Braujahren.** Das ist Ziffer
+fuer Ziffer der Stand, den die Aufsicht als **vor** dieser Nacharbeit bestehend
+bezeichnet hat; ich bestaetige ihn unabhaengig. 1600 (+0,189) und 1884
+(+0,168) halten deutlich, 1970 (+0,699) haelt um ein Tausendstel.
+**Fuer DER SUD: kein Riss, den ich diesem Stueck zurechnen kann.**
+
+### LATTE 4 — Lesbarkeit bei 1366x768: **FAELLT DURCH**
+
+**356 Textknoten unter 12 px** (davon 328 unter 10 px), kleinste Schrift
+**6,5 px** — 31,6 % der Gesamtlast des Spiels und mehr als jedes andere der
+neun Stuecke. **28 von 94 abgeschnittenen Kaesten.** Knopfflaechen dagegen
+sauber: **0 von 16 (bzw. 28 bei offenem Brett) unter 24 px.**
+
+### SPERRLISTE — Veto: **KEINES**
+
+Offene Braupfanne in allen vier Epochen ausdruecklich benannt · keine
+Emailschilder · kein Marktanteil · Hektoliter nur ab 1872 · jede Zahl durch
+`welt.geld()`/`welt.menge()` · **kein Scheinpreis in 784 Klicks** · Gewicht des
+Stuecks 0,13 MB. Sachlich nachgeprueft und nichts falsch gefunden.
+
+### LATTE 1 (Bild) und LATTE 3 (Ton): **NICHT GEPRUEFT** — nicht mein Auftrag, und beide brauchen ein fremdes Auge bzw. Ohr.
+
+## ALS GANZES: **BESTEHT MIT AUFLAGE**
+
+Das Stueck ist spielbar, es entscheidet, es haelt seine Siegel, es luegt bei
+keinem Preis, und die drei Fragen, mit denen ich angetreten bin — die Klemme,
+die leere Epoche 1600, das haltlose Siegel — sind **alle drei geschlossen**,
+jede mit einer Null belegt. Was durchfaellt, ist die vierte Latte, und sie
+faellt an einer Stelle durch, an der das Stueck ausdruecklich sagt, dass es
+nicht anfassen wollte.
+
+## DIE AUFLAGEN
+
+**AUFLAGE 1 — Schriftboden.** Jede Schriftregel bekommt
+`font-size: max(12px, calc(var(--s) * N))`.
+*Beleg:* 356 Knoten < 12 px, kleinste 6,5 px, **0 von 41 `font-size`-Regeln**
+in `stil/sud.css` + `stil/sud-zusatz.css` haben heute einen Boden; erst ab
+N = 25 wird eine Regel bei 1366x768 zu 12 px, und nur `sud.css:57` (N = 30)
+kommt dorthin. `stil/fuhre-zusatz.css` zeigt dieselbe Zeile in gemachter Form
+und steht bei 0.
+*Vorher zu klaeren:* das Stueck begruendet in `stil/sud-zusatz.css:227–232`,
+warum es das absichtlich unterlaesst (DIE LESBARKEIT solle es tun). **Diese
+Zustaendigkeit gehoert von der Aufsicht entschieden, ehe die Auflage vergeben
+wird** — sonst heben zwei Stuecke dieselbe Zahl oder keines.
+
+**AUFLAGE 2 — der abgeschnittene Erklaersatz.** `.sud-kartensatz` kappt bei
+drei Zeilen ohne Rollmoeglichkeit.
+*Beleg:* **23 von 52 Erklaerkaesten** beschnitten, schlimmster Fall **3 von 21
+Zeilen sichtbar** (Weizenbrief, 1600 — 86 % verdeckt); bei **allen acht**
+unwiderruflichen Karten liegt der Satz „Unwiderruflich — …" unter dem Schnitt.
+`overflow` ist in beiden Richtungen `hidden`.
+*Stelle:* `stil/sud.css:95–100`.
+*Wichtig:* **kein `--s`-Problem.** Auf der Entwurfsleinwand 2752x1536 sind es
+dieselben 3 von 21 Zeilen bei 16 px — keine Lesbarkeitsrunde heilt das
+nebenbei.
+
+**AUFLAGE 3 — der Prozessrechner ist weiter nicht zu druecken.**
+*Beleg:* `sud:fuehrung:rechner` in **0 von 98** und **0 von 99** Wochen
+bedienbar; drei Spielstile ueber zusammen 300 Wochen erreichten die noetige
+Kasse nie (Hoechststaende 86.000 fallend · 61.776 · 52.396 gegen 76.000
+noetig).
+*Was schon geht und bleiben soll:* die Anrechnung rechnet richtig und **steht
+am Schirm** (−118.000 vor dem Labor, −76.000 danach).
+*Stelle:* `sud-daten.js:525–563` (Preise) — die Loesung liegt aber
+moeglicherweise nicht hier, sondern in der Kasse von 1970.
+*Einschraenkung, die dazugehoert:* die kompetente Handelslinie erreicht in
+1970 114.537 DM, ohne SUD-Karten zu kaufen. Ich konnte die Kombination
+„gut handeln **und** frueh Labor kaufen" nicht herstellen.
+
+**AUFLAGE 4 (an die AUFSICHT, nicht an den Builder) — zwei Vorgaben
+widersprechen sich.** `spiel/LIESMICH.md:119` fuehrt *„kein Hopfen in 1350"*
+als Sperrliste; `design/PRUEFUNG.md` §1.2 A12 sagt das Gegenteil
+(*„Hopfendolde zwischen 1300 und 1420 (richtig)"*), und die Sperrliste in
+`MESSLATTE.md` nennt Hopfen gar nicht. **Die gesamte erste Achse von 1350 in
+diesem Stueck ist „Grut oder Hopfen".** Ich werte es nach `PRUEFUNG.md` als
+korrekt und **nicht** als Veto. Eine der beiden Dateien muss geaendert werden.
+
+**AUFLAGE 5 (an die AUFSICHT) — `MESSLATTE.md` §2 ist fuer 1600 und 1970
+veraltet.** Gemessen: 1600 **+0,189 / −0,066 / −0,156** statt eingetragener
++0,371 / +0,264 / +0,231; 1970 **+0,699 / +0,637 / +0,653** statt
++0,427 / +0,154 / +0,275. Spannweite 0,000 ueber je drei Laeufe. Das sind
+dieselben Ziffern, die der Kritiker DIE FUHRE unabhaengig gemeldet hat.
+**1970 ist damit um 0,272 naeher an die Latte gewandert und steht ein
+Tausendstel darunter.**
+
+## Was ich NICHT pruefen konnte
+
+Zusaetzlich zu der Liste weiter oben: **den siebten Container-Reset um 05:2x
+UTC** — er hat meinen Messstand und `/tmp` erschlagen, mitten in der letzten
+Messung. Alle zwoelf rho-Dateien, alle acht Wochenlaeufe und die Siegelprobe
+haben ueberlebt, weil sie unter `werkbank/schuss/` lagen; nur die
+Rechnerprobe musste ich wiederholen, und sie ist nachgeholt. Die Marke des neu
+aufgesetzten Standes habe ich vor dem Weitermessen geprueft: `517ca3f`.
+
+**Offengelegt:** ein 25-Wochen-Probelauf meines eigenen Geraets lief um
+00:4x UTC ohne Messfenster, waehrend die Aufsicht mass (~40 s). Keine Zahl
+dieses Urteils stammt daraus.
 
