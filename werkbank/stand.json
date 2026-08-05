@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T22:26:06+00:00",
- "phase": "Welle 8 läuft, und sie hat bewusst nur EIN Stück. DIE STADT nimmt sich die erste Latte vor, die der Blindvergleich gerissen hat. Der Auftrag steht auf zwei unabhängig gemessenen Zahlen: die Bedienoberfläche deckt 27 bis 28 Prozent der Fläche und 60 Prozent des untersten Sechstels, und davon deckt allein die Reiterzeile der STADT 47 Prozent des untersten Sechstels — bei nur 8 Prozent der Gesamtfläche. Sie liegt quer über genau dem Streifen, in dem jedes Zielblatt seinen Vordergrund trägt. Dazu der zweite Abstand: der vordere Hof bleibt auch voll ausgebaut leer, und wo das Zielbild drei bis fünf Leute im Hof arbeiten lässt, hat das Spiel zwei. Warum nur ein Stück: seit dem 5. August ist gemessen, dass Layout die zweite Latte bewegt — der Knopfboden verschob 1970 um 0,811 bei null Fehlern in beiden Läufen. Wer am Bild arbeitet, arbeitet an der Kennzahl mit, ob er will oder nicht. Ein zweites Stück daneben würde am Ende unauswertbar machen, wer welche Zahl bewegt hat. Genau daran hat Welle 6 zwei Tabellenzeilen verloren.",
+ "stand": "2026-08-05T23:22:17+00:00",
+ "phase": "Welle 8 arbeitet. DIE STADT ist um 23:22 UTC lebendig und schreibt ihren Bericht laufend fort. Der Auftrag ist eng und gemessen: die Reiterzeile deckt allein 47 Prozent des untersten Sechstels, und dort trägt jedes Zielblatt seinen Vordergrund. Nicht weniger anzeigen, sondern woanders — was in Welle 7 erkämpft wurde, zehn Reiter mit Namen und lebender Kennzahl ohne einen abgeschnittenen Kasten, darf nicht zurückgenommen werden. Dazu der leere Hof: das Zielbild lässt drei bis fünf Leute darin arbeiten, das Spiel zwei. Kein Reset seit einer Stunde, nichts liegt uncommittet, das Abnahmetor ist viermal offen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T16:43:06+00:00",
-   "text": "NAME R1: DIE KLEMME steht als Knopfpaar am Schirm, sobald das Zeichen haengt und der Keller nicht taugt (Guete unter 40): 'Unter dem Zeichen ausliefern' gegen 'Das Zeichen einziehen'. Beide kosten kein Geld, beide schliessen einander aus, und die Tafel zaehlt die Wochen bis zum Registereintrag mit. Ein leerer Keller bricht das Versprechen NUR, wenn ein gebundenes Haus zehn Wochen vergeblich gewartet hat — sonst wuerde ein Haus ohne Kundschaft fuer etwas bestraft, das niemand gemerkt hat."
-  },
   {
    "zeit": "2026-08-01T16:43:06+00:00",
    "text": "NAME R1: DER GEGNER hat eine Handhabe ueber den vorhandenen Weltzustand bekommen, OHNE dass eine seiner Dateien angefasst wurde. Der Adler ahmt das Zeichen nach (billiger als besser brauen), was die eigene Reichweite auf 72 Prozent drueckt und ihm Ruf zuwachsen laesst; steht sein Ruf 8 ueber dem eigenen, holt er sich hoechstens EINE gebundene Adresse im Braujahr per welt.binde — protokolliert mit wer:'gegner', also zaehlbar unter 'ohne dich geschehen', und zurueckzugewinnen. Das Mittel dagegen ist je Epoche ein anderes: Klage vor dem Rat (55 von 100) / Zunftspruch (85) / Warenzeichen ab 1894 (sicher) / Unterlassung (sicher)."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T22:26:06+00:00",
    "text": "Welle 8 läuft, und sie hat bewusst nur EIN Stück. DIE STADT nimmt sich die erste Latte vor, die der Blindvergleich gerissen hat. Der Auftrag steht auf zwei unabhängig gemessenen Zahlen: die Bedienoberfläche deckt 27 bis 28 Prozent der Fläche und 60 Prozent des untersten Sechstels, und davon deckt allein die Reiterzeile der STADT 47 Prozent des untersten Sechstels — bei nur 8 Prozent der Gesamtfläche. Sie liegt quer über genau dem Streifen, in dem jedes Zielblatt seinen Vordergrund trägt. Dazu der zweite Abstand: der vordere Hof bleibt auch voll ausgebaut leer, und wo das Zielbild drei bis fünf Leute im Hof arbeiten lässt, hat das Spiel zwei. Warum nur ein Stück: seit dem 5. August ist gemessen, dass Layout die zweite Latte bewegt — der Knopfboden verschob 1970 um 0,811 bei null Fehlern in beiden Läufen. Wer am Bild arbeitet, arbeitet an der Kennzahl mit, ob er will oder nicht. Ein zweites Stück daneben würde am Ende unauswertbar machen, wer welche Zahl bewegt hat. Genau daran hat Welle 6 zwei Tabellenzeilen verloren."
+  },
+  {
+   "zeit": "2026-08-05T23:22:17+00:00",
+   "text": "Welle 8 arbeitet. DIE STADT ist um 23:22 UTC lebendig und schreibt ihren Bericht laufend fort. Der Auftrag ist eng und gemessen: die Reiterzeile deckt allein 47 Prozent des untersten Sechstels, und dort trägt jedes Zielblatt seinen Vordergrund. Nicht weniger anzeigen, sondern woanders — was in Welle 7 erkämpft wurde, zehn Reiter mit Namen und lebender Kennzahl ohne einen abgeschnittenen Kasten, darf nicht zurückgenommen werden. Dazu der leere Hof: das Zielbild lässt drei bis fünf Leute darin arbeiten, das Spiel zwei. Kein Reset seit einer Stunde, nichts liegt uncommittet, das Abnahmetor ist viermal offen."
   }
  ]
 }
