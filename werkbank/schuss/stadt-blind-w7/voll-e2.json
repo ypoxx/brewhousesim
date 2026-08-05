@@ -1,0 +1,22 @@
+{
+ "epoche": 2,
+ "gebaut": 6,
+ "gescheitert": 42,
+ "gekauft": [
+  "stadt:bau:gaerbottiche",
+  "stadt:bau:waschhaus",
+  "stadt:bau:kontor",
+  "stadt:bau:rossmuehle",
+  "stadt:bau:hopfenlager",
+  "stadt:bau:pferdestall"
+ ],
+ "lage": {
+  "jahr": 1603,
+  "woche": 13,
+  "epoche": 2,
+  "kasse": 484,
+  "bauten": 12,
+  "lagefehler": 0
+ },
+ "fehler": []
+}
