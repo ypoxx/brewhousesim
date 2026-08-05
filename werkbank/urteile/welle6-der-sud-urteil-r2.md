@@ -648,3 +648,66 @@ Aufsicht, nicht fuer einen Builder.
 
 *(1884 und 1970 laufen noch — nachgetragen, sobald sie durch sind.)*
 
+
+---
+
+## 5 — LATTE 2, die Kurve: ALLE VIER EPOCHEN, DREI SCHNITTE, DREI LAEUFE
+
+*Nachgetragen nach dem siebten Container-Reset (05:2x UTC). Alle zwoelf
+Laufdateien haben ueberlebt, weil sie unter `werkbank/schuss/` lagen; die
+Marke des neu aufgesetzten Messstands wurde vor dem Weitermessen erneut
+geprueft und sagt `517ca3f`.*
+
+Geraet: `werkbank/schuss/rueckkopplung-r3/linie.mjs`, **unveraendert**, je 400
+Wochen, `saat=1350`, Hafen 8901, **jeder Lauf einzeln durchs Messfenster**.
+Gerechnet mit `werkbank/schuss/fuhre-w6/schnitte.py`.
+Rohdaten: `werkbank/schuss/sud-blind-r2/rho/e1..4-A|B|C.json`.
+
+| Epoche | 12 Braujahre | 13 | 14 | Spannweite ueber 3 Laeufe | Kasse min–max | Fehler | Urteil |
+|---|---|---|---|---|---|---|---|
+| **1350** | **+0,762** | **+0,692** | +0,591 | **0,000** | 39–609 | 0 | **REISST** |
+| 1600 | +0,189 | −0,066 | −0,156 | **0,000** | 169–2 851 | 0 | besteht |
+| 1884 | +0,168 | +0,346 | +0,393 | **0,000** | 1 757–23 789 | 0 | besteht |
+| 1970 | +0,699 | +0,637 | +0,653 | **0,000** | 1 030–114 537 | 0 | besteht |
+
+**GERAETEKONTROLLE BESTANDEN.** Zwoelf Laeufe, drei je Epoche, sequenziell
+durchs Fenster: **Spannweite 0,000**, in jeder Epoche und jedem Schnitt.
+Ziffer fuer Ziffer identisch, 0 Seitenfehler in allen zwoelf. Mein Geraet ist
+in Ordnung, und dieses Spiel wuerfelt nicht.
+
+**DIE LATTE IST GERISSEN — in 1350, bei zwoelf Braujahren, mit +0,762.**
+Das ist **Ziffer fuer Ziffer die Zahl, die die Aufsicht mir als Stand VOR
+dieser Nacharbeit genannt hat** (+0,762 / +0,692 / +0,591). Ich bestaetige sie
+unabhaengig am eingefrorenen Stand `517ca3f`. **Sie ist damit auch nicht dieser
+Nacharbeit anzulasten** — sie war vorher da und ist unveraendert.
+
+**1970 steht bei +0,699 — ein Tausendstel unter der Latte.** Das haelt, aber
+es haelt nicht mit Abstand, und es ist die Zahl, die als naechste kippt.
+
+### ZWEI BEFUNDE UEBER DIE MESSLATTE SELBST, an die Aufsicht
+
+**Die Tabelle in `gauntlet/MESSLATTE.md` §2 ist fuer zwei von vier Epochen
+veraltet.** Eingetragen stehen dort:
+
+| Epoche | in MESSLATTE.md | von mir gemessen (3 Laeufe, Spannweite 0,000) |
+|---|---|---|
+| 1350 | +0,762 / +0,692 / +0,591 | **gleich** |
+| 1600 | +0,371 / +0,264 / +0,231 | **+0,189 / −0,066 / −0,156** |
+| 1884 | +0,168 / +0,346 / +0,393 | **gleich** |
+| 1970 | +0,427 / +0,154 / +0,275 | **+0,699 / +0,637 / +0,653** |
+
+Genau die beiden Epochen, die der Kritiker DIE FUHRE als „gewandert" gemeldet
+hat, und meine Zahlen sind seine. **Zwei unabhaengige Messungen an zwei
+verschiedenen Staenden kommen auf dieselben Ziffern; die Eintragung ist die
+Ausreisserin.** Wer aus `MESSLATTE.md` zitiert, zitiert fuer 1600 und 1970
+etwas, das es nicht mehr gibt.
+
+**Und der Grund, warum das ein Befund fuer die Aufsicht ist und nicht fuer
+einen Builder:** 1970 ist von +0,427 auf **+0,699** gewandert, also **um
+0,272 naeher an die Latte**, waehrend zwei Stuecke gleichzeitig dieselbe
+Kennzahl fuettern. Wer es bewegt hat, ist aus dem laufenden Spiel nicht
+feststellbar — genau der schon dokumentierte Fall. Ich kann nur sagen: **DER
+SUD meldet in den Nenner** (`sud.js:2368–2404`, `meldeZug`), und er meldet
+seit dieser Runde **nur noch, wenn wirklich ein bedienbarer Knopf dazu steht**
+(`lebt()`, `sud.js:2362`). Das macht die Zahl ehrlicher, nicht kleiner.
+
