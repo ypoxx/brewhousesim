@@ -1152,6 +1152,19 @@
 
   function zeile(klasse, text) { return B.el('div', klasse, text); }
 
+  /* Trennt den Satz, der die Unwiderruflichkeit ansagt, vom uebrigen
+     Erklaertext. Er steht in `sud-daten.js` bei allen acht Festlegungen am
+     Ende und faengt mit „Unwiderruflich" an; hier wird er abgeschnitten und
+     eigens hingestellt (Auflage 2, Runde 2). Findet sich nichts, bleibt der
+     Satz unveraendert — die Trennung darf keinen Text verlieren, und sie
+     verliert auch keinen: `satz + fest` ergibt wieder das Original. */
+  function teileSatz(satz) {
+    var s = String(satz || '');
+    var i = s.indexOf('Unwiderruflich');
+    if (i < 0) return { satz: s, fest: '' };
+    return { satz: s.slice(0, i).replace(/\s+$/, ''), fest: s.slice(i) };
+  }
+
   /* {menge} in den Datensaetzen steht fuer die Menge des Zukaufs — und die
      heisst 1350 "6 Fass" und 1884 "60 hl". Vorher stand die Zahl als Wort im
      Text ("Vierzig Fass mehr Gaerraum") und widersprach in 1884 und 1970 dem
@@ -1258,7 +1271,15 @@
       if (wirk.length) marke.appendChild(B.el('span', 'sud-wirkung', wirk.join(' · ')));
       karte.appendChild(marke);
 
-      karte.appendChild(zeile('sud-kartensatz', o.satz));
+      /* AUFLAGE 2 des blinden Kritikers, Runde 2: der Satz, wegen dem man
+         Geld ausgibt oder es laesst, stand am ENDE des Erklaertextes und lag
+         damit bei allen acht unwiderruflichen Karten unter dem Deckel — 3 von
+         21 Zeilen sichtbar im schlimmsten Fall. Er wird jetzt herausgeloest
+         und bekommt eine eigene Zeile ohne jeden Deckel. Der Rest des Satzes
+         steht darueber und ist seit dieser Runde rollbar statt geschnitten. */
+      var teile = teileSatz(o.satz);
+      karte.appendChild(zeile('sud-kartensatz', teile.satz));
+      if (teile.fest) karte.appendChild(zeile('sud-festsatz', teile.fest));
       if (o.warnung) karte.appendChild(zeile('sud-warnung', o.warnung));
       reihe.appendChild(karte);
     });

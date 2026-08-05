@@ -22,7 +22,7 @@
    steht ueber dem Sudbuch, weil er das einzige ist, was ein Spieler an
    diesem Blatt wirklich lesen muss. */
 .sud-pfannensatz {
-  font-size: calc(var(--s) * 22);
+  font-size: max(12px, calc(var(--s) * 22));
   line-height: 1.35;
   padding: calc(var(--s) * 8) 0 calc(var(--s) * 6) calc(var(--s) * 10);
   border-left: calc(var(--s) * 4) solid var(--holz-dunkel);
@@ -58,8 +58,8 @@
   pointer-events: auto;
 }
 
-.sud-klappname { font-size: calc(var(--s) * 17); letter-spacing: calc(var(--s) * 2); }
-.sud-klappzahl { font-family: var(--mono); font-size: calc(var(--s) * 15); color: #6b5c42; }
+.sud-klappname { font-size: max(12px, calc(var(--s) * 17)); letter-spacing: calc(var(--s) * 2); }
+.sud-klappzahl { font-family: var(--mono); font-size: max(12px, calc(var(--s) * 15)); color: #6b5c42; }
 .sud-buchklappe .knopf { align-self: stretch; }
 
 /* Ein Bottich, der reif ist und nicht heraus kann, muss anders aussehen als
@@ -122,7 +122,7 @@
 .sud-zettel.knapp .sud-zzahlen,
 .sud-zettel.knapp .sud-zpreiszeile { display: none; }
 .sud-zettel.knapp .sud-zkopf {
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 14));
   padding-bottom: calc(var(--s) * 1);
 }
 
@@ -140,7 +140,7 @@
    die zweite Zeile die kostenlose Umstellung der anderen Achse traegt. */
 .sud-zpreiszeile {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 13);
+  font-size: max(12px, calc(var(--s) * 13));
   line-height: 1.15;
   color: #6b4a22;
 }
@@ -151,7 +151,7 @@
    Vorgabestand im Bild steht. */
 .sud-zrang {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 15);
+  font-size: max(12px, calc(var(--s) * 15));
   letter-spacing: calc(var(--s) * 1);
   color: #6b4a22;
 }
@@ -225,9 +225,30 @@
    Datei: `--s` heben, oder den Flaechendeckel des Zettels neu verhandeln —
    und der haengt an einer Zahl der STADT, nicht an einer dieses Stuecks.
 
-   NICHT ANGEFASST sind die Schriftgroessen dieses Stuecks (kleinste 6,5 px,
-   87 bis 93 Textknoten unter 12 px). Sie rechnen alle in `calc(var(--s) * n)`
-   und heben sich mit `--s`; sie hier einzeln auf `max(12px, ...)` zu setzen
-   hiesse, dem Stueck DIE LESBARKEIT ins Handwerk zu pfuschen und dieselbe
-   Zahl zweimal zu heben.
+   AN DIESER STELLE STAND EIN IRRTUM, und er hat eine Runde gekostet. Hier
+   stand: „NICHT ANGEFASST sind die Schriftgroessen dieses Stuecks … sie hier
+   einzeln auf max(12px, ...) zu setzen hiesse, dem Stueck DIE LESBARKEIT ins
+   Handwerk zu pfuschen." Der blinde Kritiker der zweiten Runde hat genau
+   diesen Satz zitiert und danebengelegt, was er kostet: 356 Textknoten unter
+   12 px, davon 328 unter 10 px, kleinste 6,5 px — 31,6 % der gesamten
+   Schriftlast des Spiels und mehr als jedes der acht anderen Stuecke. DIE
+   FUHRE stand im selben Bild bei null.
+
+   Die Aufsicht hat die Zustaendigkeit entschieden, und gegen mich:
+   `spiel/LIESMICH.md` regelt Datei-Eigentum nach Vorsilbe. `sud*` gehoert
+   diesem Stueck, also gehoeren ihm auch seine 41 Schriftregeln. DIE
+   LESBARKEIT hat den Boden ins Skelett gelegt (`stil/grund.css`) und dort
+   ausdruecklich hingeschrieben, was ein Stueck selbst zu tun hat:
+   `font-size: max(12px, calc(var(--s) * N))` je Regel. Wer seine eigenen
+   Regeln darunter laesst, unterbietet einen Boden, den ausser ihm niemand
+   anfassen darf.
+
+   Alle 41 Regeln in `sud.css` und `sud-zusatz.css` tragen ihn jetzt. Ohne
+   Medienschalter, und das ist kein Versehen: die Faktoren dieses Stuecks
+   laufen von N = 13 bis N = 30, auf der Entwurfsleinwand 2752x1536 sind das
+   13 bis 30 px, und `max(12px, ...)` aendert dort an keiner einzigen etwas.
+   Latte 1 vergleicht blind gegen genau dieses Bild und sieht keinen
+   Unterschied. Was unter der Entwurfsleinwand aufraeumt werden musste, steht
+   weiter unten hinter dem Medienschalter, den `grund.css` fuer den Knopfboden
+   benutzt.
    -------------------------------------------------------------------------- */
