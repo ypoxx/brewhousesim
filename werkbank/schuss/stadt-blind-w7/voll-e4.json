@@ -1,0 +1,20 @@
+{
+ "epoche": 4,
+ "gebaut": 4,
+ "gescheitert": 48,
+ "gekauft": [
+  "stadt:bau:waage",
+  "stadt:bau:maelzerei",
+  "stadt:bau:verwaltung",
+  "stadt:bau:sudhaus_neu"
+ ],
+ "lage": {
+  "jahr": 1973,
+  "woche": 9,
+  "epoche": 4,
+  "kasse": 61776,
+  "bauten": 10,
+  "lagefehler": 0
+ },
+ "fehler": []
+}
