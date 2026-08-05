@@ -3,3 +3,8 @@ MESSFENSTER: frei nach 205s
 MESSFENSTER offen — load 1.35 1.33 1.14
 E1: 32 Wochen · Unterhalt ohne Tafel in 2, mit aufgeschlagener Tafel in 27 · bepreist+treffbar Median ohne 10 / mit 6
 MESSFENSTER: belegt, warte (max 5400s) …
+MESSFENSTER: frei nach 335s
+MESSFENSTER offen — load 1.06 1.28 1.20
+preis:nimm:dach  Schild −33 Pf (data-preis -33)  Kasse 112 → 79  Δ -33  GENAU
+preis:nimm:bottich  Schild −42 Pf (data-preis -42)  Kasse 79 → 37  Δ -42  GENAU
+MESSFENSTER: belegt, warte (max 5400s) …

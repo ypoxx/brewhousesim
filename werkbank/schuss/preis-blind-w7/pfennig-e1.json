@@ -1,0 +1,48 @@
+{
+ "epoche": 1,
+ "fehler": [],
+ "proben": [
+  {
+   "zug": "preis:nimm:dach",
+   "schild": "−33 Pf",
+   "dataPreis": -33,
+   "text": "Nehmen −33 Pf",
+   "kasseVor": 112,
+   "kasseNach": 79,
+   "veraenderung": -33,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Das Dach über der Pfanne",
+     "p": -33
+    }
+   ]
+  },
+  {
+   "zug": "preis:nimm:bottich",
+   "schild": "−42 Pf",
+   "dataPreis": -42,
+   "text": "Nehmen −42 Pf",
+   "kasseVor": 79,
+   "kasseNach": 37,
+   "veraenderung": -42,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Ein zweiter Bottich aus Eichenholz — Anzahlung",
+     "p": -42
+    }
+   ]
+  },
+  {
+   "zug": "preis:nimm:ochsenstall",
+   "uebersprungen": "nicht treffbar"
+  },
+  {
+   "zug": "preis:festlege:vertrag",
+   "uebersprungen": "nicht treffbar"
+  }
+ ]
+}
