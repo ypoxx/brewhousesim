@@ -19,7 +19,7 @@ async function klickeMaus(el, was) {
     await p.mouse.move(bb.x + bb.width / 2, bb.y + bb.height / 2);
     await p.mouse.down(); await p.waitForTimeout(40); await p.mouse.up();
     await p.waitForTimeout(220);
-    log.push(was);
+    log.push(was); if(process.env.LAUT) console.error('  · '+was);
     return true;
   } catch (e) { return false; }
 }
