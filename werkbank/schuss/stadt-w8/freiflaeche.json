@@ -1,0 +1,1181 @@
+{
+ "stand": "2026-08-05T22:32:25.073Z",
+ "epochen": {
+  "e1": {
+   "raster": [
+    "K|.|.|.|.|.|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "KN|N|N|N|N|N|NK|NK|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "SN|SN|SN|SN|SN|SN|SN|SN|S|S|S|SK|SK|SK|SK|SK|K|K|K|K|K|.|.|.|.|.|.|P|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSKE|FSKE|FSKE|FSKE|FSK|GFK|GK|GK|GK|GK|G|G|G|G|G|G|GP|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|.|.|.|.|.|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|NFSE|NFSE|NFSE|FSE|FSE|FSE|FS|F|.|.|.|.|.|G|G|G|G|GS|GS|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|NFSE|NFSE|NFSE|FSE|FSE|FSE|FS|NF|N|N|N|N|.|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|NFSE|NFSE|NFSE|FSE|FSE|FSE|FS|NF|N|N|N|N|.|G|G|G|G|G|G|G|G|G|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GFS|GNF|NS|N|N|N|.|G|G|G|G|G|GS|G|G|G|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GFS|GF|S|S|.|.|S|G|G|G|G|G|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|GFSE|GFSE|GSF|SF|S|S|S|.|.|.|.|.|.|.|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|GFSE|GFSE|GSF|SF|SF|SF|SF|F|F|F|F|F|F|.|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|GFSE|GFSE|GSF|SF|SF|SF|SF|F|F|F|F|F|F|.|.|.|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|SF|SF|SF|F|F|F|F|F|F|S|.|.|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|SF|SF|SF|F|F|F|F|F|F|S|.|S|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|FE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|FE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|.|.|.|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|FS|FS|FS|GFS|GFS|GF|GF|GF|GF|GF|G|G|G|G|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|KS|KS|KS|K|K|K|K|K|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|."
+   ],
+   "kaesten": [
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 33,
+     "y": 35,
+     "w": 40,
+     "h": 40
+    },
+    {
+     "wem": "kopf",
+     "klasse": "kopfleiste",
+     "x": 592,
+     "y": 46,
+     "w": 1569,
+     "h": 67
+    },
+    {
+     "wem": "preis",
+     "klasse": "pr-griff",
+     "x": 2356,
+     "y": 46,
+     "w": 366,
+     "h": 209
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-band",
+     "x": 30,
+     "y": 123,
+     "w": 578,
+     "h": 809
+    },
+    {
+     "wem": "kopf",
+     "klasse": "hauszeile",
+     "x": 952,
+     "y": 160,
+     "w": 847,
+     "h": 39
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-brett",
+     "x": 33,
+     "y": 190,
+     "w": 1293,
+     "h": 1091
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 30,
+     "y": 194,
+     "w": 705,
+     "h": 1130
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 194,
+     "w": 638,
+     "h": 657
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-band",
+     "x": 1404,
+     "y": 207,
+     "w": 936,
+     "h": 158
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-buch",
+     "x": 55,
+     "y": 207,
+     "w": 1156,
+     "h": 1075
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-hof",
+     "x": 1964,
+     "y": 343,
+     "w": 366,
+     "h": 241
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-zeichen",
+     "x": 805,
+     "y": 478,
+     "w": 151,
+     "h": 152
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2299,
+     "y": 479,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-anschlag",
+     "x": 1446,
+     "y": 567,
+     "w": 300,
+     "h": 95
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-sitz",
+     "x": 1964,
+     "y": 584,
+     "w": 366,
+     "h": 171
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2365,
+     "y": 595,
+     "w": 224,
+     "h": 103
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2326,
+     "y": 647,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-amt",
+     "x": 1096,
+     "y": 676,
+     "w": 285,
+     "h": 68
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1462,
+     "y": 694,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1858,
+     "y": 709,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1540,
+     "y": 740,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2381,
+     "y": 764,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-zettel",
+     "x": 1362,
+     "y": 780,
+     "w": 358,
+     "h": 253
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 1142,
+     "y": 825,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 863,
+     "w": 638,
+     "h": 461
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 1412,
+     "y": 863,
+     "w": 740,
+     "h": 461
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2244,
+     "y": 1001,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2409,
+     "y": 1062,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-leiste",
+     "x": 1486,
+     "y": 1100,
+     "w": 1211,
+     "h": 104
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-kennzahl",
+     "x": 1710,
+     "y": 1282,
+     "w": 849,
+     "h": 32
+    },
+    {
+     "wem": "stadt",
+     "klasse": "stadt-werkbank",
+     "x": 33,
+     "y": 1331,
+     "w": 1723,
+     "h": 194
+    },
+    {
+     "wem": "kopf",
+     "klasse": "deckung",
+     "x": 1600,
+     "y": 1364,
+     "w": 959,
+     "h": 38
+    },
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 2303,
+     "y": 1437,
+     "w": 257,
+     "h": 75
+    }
+   ]
+  },
+  "e2": {
+   "raster": [
+    "K|.|.|.|.|.|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "NK|N|N|N|N|N|NK|NK|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "SN|SN|SN|SN|SN|SN|SN|SN|S|S|S|SK|SK|SK|SK|SK|K|K|K|K|K|.|.|.|.|.|.|P|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSKE|FSKE|FSKE|FSKE|FSK|GFK|GK|GK|GK|GK|G|G|G|G|G|G|GP|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|.|.|.|.|.|G|G|G|G|G|G|G|G|G|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|GFS|GF|G|G|.|.|.|G|G|G|G|GS|GS|G|G|G|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|GFS|GF|G|G|.|.|.|G|G|G|G|G|G|G|G|G|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|.|.|.|.|.|G|G|G|G|G|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GFS|GF|S|.|.|.|.|G|G|G|G|G|GS|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GFS|GF|S|S|.|.|S|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|N|N|N|N|N|.|.|.|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|SF|SF|SNF|NF|NF|NF|NF|NF|F|.|.|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|SF|SF|SNF|NF|NF|NF|NF|NF|F|.|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|SF|SF|SF|F|F|F|F|F|F|S|G|G|G|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|SF|SF|SF|F|F|F|F|F|F|S|.|S|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|FE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|FE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|.|.|.|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|FS|FS|FS|FS|FS|GF|GF|GF|GF|GF|G|G|G|G|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|KS|K|K|K|K|K|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|."
+   ],
+   "kaesten": [
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 33,
+     "y": 35,
+     "w": 40,
+     "h": 40
+    },
+    {
+     "wem": "kopf",
+     "klasse": "kopfleiste",
+     "x": 570,
+     "y": 46,
+     "w": 1613,
+     "h": 67
+    },
+    {
+     "wem": "preis",
+     "klasse": "pr-griff",
+     "x": 2356,
+     "y": 46,
+     "w": 366,
+     "h": 209
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-band",
+     "x": 30,
+     "y": 123,
+     "w": 578,
+     "h": 840
+    },
+    {
+     "wem": "kopf",
+     "klasse": "hauszeile",
+     "x": 954,
+     "y": 160,
+     "w": 844,
+     "h": 39
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-brett",
+     "x": 33,
+     "y": 190,
+     "w": 1293,
+     "h": 1091
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 30,
+     "y": 194,
+     "w": 705,
+     "h": 1130
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 194,
+     "w": 638,
+     "h": 657
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-band",
+     "x": 1404,
+     "y": 207,
+     "w": 936,
+     "h": 158
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-buch",
+     "x": 55,
+     "y": 207,
+     "w": 1156,
+     "h": 1075
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-hof",
+     "x": 1964,
+     "y": 330,
+     "w": 366,
+     "h": 253
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2365,
+     "y": 426,
+     "w": 224,
+     "h": 103
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 1362,
+     "y": 457,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2299,
+     "y": 479,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-sitz",
+     "x": 1964,
+     "y": 584,
+     "w": 366,
+     "h": 145
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2381,
+     "y": 595,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2326,
+     "y": 647,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-amt",
+     "x": 1096,
+     "y": 676,
+     "w": 285,
+     "h": 68
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1462,
+     "y": 694,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1858,
+     "y": 709,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1540,
+     "y": 740,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-zettel",
+     "x": 1362,
+     "y": 780,
+     "w": 358,
+     "h": 253
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-anschlag",
+     "x": 1776,
+     "y": 818,
+     "w": 300,
+     "h": 115
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-zeichen",
+     "x": 1701,
+     "y": 850,
+     "w": 66,
+     "h": 64
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 863,
+     "w": 638,
+     "h": 461
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 1412,
+     "y": 863,
+     "w": 740,
+     "h": 461
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2326,
+     "y": 917,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2244,
+     "y": 1001,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2409,
+     "y": 1062,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-leiste",
+     "x": 1486,
+     "y": 1100,
+     "w": 1211,
+     "h": 104
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-kennzahl",
+     "x": 1848,
+     "y": 1282,
+     "w": 712,
+     "h": 32
+    },
+    {
+     "wem": "stadt",
+     "klasse": "stadt-werkbank",
+     "x": 33,
+     "y": 1331,
+     "w": 1723,
+     "h": 194
+    },
+    {
+     "wem": "kopf",
+     "klasse": "deckung",
+     "x": 1743,
+     "y": 1364,
+     "w": 816,
+     "h": 38
+    },
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 2303,
+     "y": 1437,
+     "w": 257,
+     "h": 75
+    }
+   ]
+  },
+  "e3": {
+   "raster": [
+    "K|.|.|.|.|.|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "NK|N|N|N|N|N|NK|NK|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "SN|SN|SN|SN|SN|SN|SN|SN|S|S|SK|SK|SK|SK|SK|SK|K|K|K|K|K|K|.|.|.|.|.|P|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSKE|FSKE|FSKE|FSKE|FSKE|FSK|GFK|GK|GK|GK|GK|GK|G|G|G|G|G|GP|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|.|.|.|.|.|.|.|G|G|G|S|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|.|.|.|.|.|.|.|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|G|G|G|G|G|G|G|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|G|G|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GSF|GSF|S|SN|SN|GN|GN|G|G|G|G|G|GS|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GFS|GSF|S|N|N|N|NS|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|.|N|N|N|N|.|.|.|.|.|.|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|.|.|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|G|G|G|G|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|GS|G|G|G|.|.",
+    "FSE|GFSE|GFSE|GFSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|S|.|S|.|.|.",
+    "FSE|GFSE|GFSE|GFSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|FE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|GFSE|GFSE|GFSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|FE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|.|.|.|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|FS|FS|FS|FS|GFS|GF|GF|GF|GF|GF|G|G|G|G|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|KS|KS|K|K|K|K|K|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|."
+   ],
+   "kaesten": [
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 33,
+     "y": 35,
+     "w": 40,
+     "h": 40
+    },
+    {
+     "wem": "kopf",
+     "klasse": "kopfleiste",
+     "x": 531,
+     "y": 46,
+     "w": 1691,
+     "h": 67
+    },
+    {
+     "wem": "preis",
+     "klasse": "pr-griff",
+     "x": 2356,
+     "y": 46,
+     "w": 366,
+     "h": 209
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-band",
+     "x": 30,
+     "y": 123,
+     "w": 578,
+     "h": 870
+    },
+    {
+     "wem": "kopf",
+     "klasse": "hauszeile",
+     "x": 930,
+     "y": 160,
+     "w": 892,
+     "h": 39
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-brett",
+     "x": 33,
+     "y": 190,
+     "w": 1293,
+     "h": 1057
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 30,
+     "y": 194,
+     "w": 705,
+     "h": 1130
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 194,
+     "w": 638,
+     "h": 657
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-band",
+     "x": 1404,
+     "y": 207,
+     "w": 936,
+     "h": 158
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-buch",
+     "x": 55,
+     "y": 207,
+     "w": 1156,
+     "h": 1075
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2601,
+     "y": 402,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-zettel",
+     "x": 1362,
+     "y": 411,
+     "w": 358,
+     "h": 253
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2399,
+     "y": 426,
+     "w": 155,
+     "h": 103
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-hof",
+     "x": 1964,
+     "y": 554,
+     "w": 366,
+     "h": 30
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 1735,
+     "y": 564,
+     "w": 162,
+     "h": 103
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-sitz",
+     "x": 1964,
+     "y": 584,
+     "w": 366,
+     "h": 164
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2326,
+     "y": 647,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-amt",
+     "x": 1096,
+     "y": 676,
+     "w": 285,
+     "h": 68
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-anschlag",
+     "x": 1556,
+     "y": 690,
+     "w": 300,
+     "h": 95
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1446,
+     "y": 694,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1858,
+     "y": 709,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 863,
+     "w": 638,
+     "h": 461
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 1412,
+     "y": 863,
+     "w": 740,
+     "h": 461
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2310,
+     "y": 917,
+     "w": 224,
+     "h": 103
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2244,
+     "y": 1001,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2409,
+     "y": 1062,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 143,
+     "y": 1069,
+     "w": 155,
+     "h": 103
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-leiste",
+     "x": 1486,
+     "y": 1100,
+     "w": 1211,
+     "h": 104
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-kennzahl",
+     "x": 1791,
+     "y": 1282,
+     "w": 769,
+     "h": 32
+    },
+    {
+     "wem": "stadt",
+     "klasse": "stadt-werkbank",
+     "x": 33,
+     "y": 1331,
+     "w": 1723,
+     "h": 194
+    },
+    {
+     "wem": "kopf",
+     "klasse": "deckung",
+     "x": 1684,
+     "y": 1364,
+     "w": 876,
+     "h": 38
+    },
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 2303,
+     "y": 1437,
+     "w": 257,
+     "h": 75
+    }
+   ]
+  },
+  "e4": {
+   "raster": [
+    "K|.|.|.|.|.|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "NK|N|N|N|N|N|NK|NK|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|K|.|P|P|P|P|P",
+    "SN|SN|SN|SN|SN|SN|SN|SN|S|S|S|SK|SK|SK|SK|SK|K|K|K|K|K|.|.|.|.|.|.|P|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSKE|FSKE|FSKE|FSKE|FSK|GFK|GK|GK|GK|GK|G|G|G|G|G|G|GP|P|P|P|P",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|G|G|G",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|GF|G|G|G|G|G|G|G|G|G|G|G|.|G|G|G",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|.|.|.|.|.|.|.|.|.|.|S|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|.|.|.|.|.|.|.|.|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|.|.|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|SF|SF|S|S|S|.|.|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GSF|GSF|S|S|S|.|.|G|G|G|G|G|GS|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|GFSE|GFSE|GFSE|GFS|GSF|S|.|.|.|S|G|G|G|G|G|G|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|.|.|.|.|.|.|.|.|.|.|G|G|G|G|G",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|F|F|.|G|G|G|G|G",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|F|F|F|F|F|F|F|GF|GF|G|.|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|F|NF|NF|NF|NF|F|F|F|GF|GF|GF|.|.|.|.|.",
+    "FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSNE|FSE|FSE|FSE|FSE|FSE|FSE|GFSE|GFS|GF|GNF|NF|NF|NF|F|F|F|F|F|F|.|S|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|GNFSE|GNFS|GNF|GFE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|GNFSE|GNFS|GNF|GFE|FE|FE|FE|FE|FE|FE|FE|FE|E|E|E|E|E|E",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|NFSE|NFS|NF|F|F|F|F|F|F|F|F|F|.|.|.|.|.|.",
+    "FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FSE|FS|FS|FS|FS|FS|FS|GF|GF|GF|GF|GF|G|G|G|G|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|KS|K|K|K|K|K|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|.",
+    "S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|S|.|.|.|.|.|K|K|K|K|.|."
+   ],
+   "kaesten": [
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 33,
+     "y": 35,
+     "w": 40,
+     "h": 40
+    },
+    {
+     "wem": "kopf",
+     "klasse": "kopfleiste",
+     "x": 538,
+     "y": 46,
+     "w": 1675,
+     "h": 67
+    },
+    {
+     "wem": "preis",
+     "klasse": "pr-griff",
+     "x": 2356,
+     "y": 46,
+     "w": 366,
+     "h": 209
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-band",
+     "x": 30,
+     "y": 123,
+     "w": 578,
+     "h": 939
+    },
+    {
+     "wem": "kopf",
+     "klasse": "hauszeile",
+     "x": 954,
+     "y": 160,
+     "w": 843,
+     "h": 39
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-brett",
+     "x": 33,
+     "y": 190,
+     "w": 1293,
+     "h": 1091
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 30,
+     "y": 194,
+     "w": 705,
+     "h": 1130
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 194,
+     "w": 638,
+     "h": 657
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-band",
+     "x": 1404,
+     "y": 207,
+     "w": 936,
+     "h": 158
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-buch",
+     "x": 55,
+     "y": 207,
+     "w": 1156,
+     "h": 1075
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2518,
+     "y": 257,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2601,
+     "y": 402,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "sud",
+     "klasse": "sud-zettel",
+     "x": 1362,
+     "y": 411,
+     "w": 358,
+     "h": 253
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-hof",
+     "x": 1964,
+     "y": 554,
+     "w": 366,
+     "h": 30
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-sitz",
+     "x": 1964,
+     "y": 584,
+     "w": 366,
+     "h": 145
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2326,
+     "y": 647,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-amt",
+     "x": 1096,
+     "y": 676,
+     "w": 285,
+     "h": 68
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1446,
+     "y": 694,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 1858,
+     "y": 709,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-sitz",
+     "x": 2349,
+     "y": 768,
+     "w": 366,
+     "h": 118
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 754,
+     "y": 863,
+     "w": 638,
+     "h": 461
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-brett",
+     "x": 1412,
+     "y": 863,
+     "w": 740,
+     "h": 461
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 2106,
+     "y": 917,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-anschlag",
+     "x": 1474,
+     "y": 982,
+     "w": 300,
+     "h": 95
+    },
+    {
+     "wem": "fu",
+     "klasse": "fu-marke",
+     "x": 2233,
+     "y": 992,
+     "w": 48,
+     "h": 43
+    },
+    {
+     "wem": "stadt",
+     "klasse": "knopf",
+     "x": 2409,
+     "y": 1062,
+     "w": 26,
+     "h": 26
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-paar",
+     "x": 1280,
+     "y": 1086,
+     "w": 192,
+     "h": 103
+    },
+    {
+     "wem": "nm",
+     "klasse": "nm-zeichen",
+     "x": 1258,
+     "y": 1099,
+     "w": 127,
+     "h": 145
+    },
+    {
+     "wem": "erb",
+     "klasse": "erb-leiste",
+     "x": 1486,
+     "y": 1100,
+     "w": 1211,
+     "h": 104
+    },
+    {
+     "wem": "gg",
+     "klasse": "gg-kennzahl",
+     "x": 1848,
+     "y": 1282,
+     "w": 712,
+     "h": 32
+    },
+    {
+     "wem": "stadt",
+     "klasse": "stadt-werkbank",
+     "x": 33,
+     "y": 1331,
+     "w": 1723,
+     "h": 194
+    },
+    {
+     "wem": "kopf",
+     "klasse": "deckung",
+     "x": 1743,
+     "y": 1364,
+     "w": 816,
+     "h": 38
+    },
+    {
+     "wem": "kopf",
+     "klasse": "knopf",
+     "x": 2303,
+     "y": 1437,
+     "w": 257,
+     "h": 75
+    }
+   ]
+  }
+ }
+}
