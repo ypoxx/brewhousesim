@@ -81,6 +81,24 @@ gegenprüfen, bevor er misst.
 > einen toten Hafen misst, liefert kein Nichts — er liefert Zahlen aus einem
 > Fehlerpfad.
 
+**UND DIE AUFSICHT IST DERSELBEN FALLE SELBST AUFGESESSEN, eine Stunde später.**
+Ihr eigenes Probenskript zum Knopfboden schrieb **zwei Läufe zu je zwanzig
+Minuten ins Nichts** und meldete beide Male „fertig". Ursache: der Reset hatte
+`knopfboden-probe/ohne/` mitgenommen — **Git kennt keine leeren Ordner** —, und
+das Skript sah den Exitcode nie an. Im Protokoll stand `ENOENT`, im Fortschritt
+stand ein Haken.
+
+> **Das ist exakt die Sorte Fehler, gegen die dieser Lauf sonst prüft**, und sie
+> traf das Werkzeug dessen, der prüft. Behoben: das Skript sieht jetzt nach, ob
+> die Datei entstanden ist, meldet sonst „KEINE DATEI — Lauf verworfen", und
+> prüft vorher, ob der Hafen überhaupt eine Marke liefert. Ein `LIESMICH.md` in
+> beiden Ordnern hält sie über den nächsten Reset am Leben.
+>
+> **Allgemein, für jedes Skript dieses Laufs:** ein Ordner, den ein Messlauf
+> braucht, muss eine **versionierte Datei** enthalten, sonst ist er nach dem
+> nächsten Reset weg. Und kein Skript meldet Erfolg, ohne das Ergebnis
+> anzusehen.
+
 ---
 
 ## DIE FUHRE IST DURCH, BLIND GEPRÜFT — 4. August, 23:5x UTC
