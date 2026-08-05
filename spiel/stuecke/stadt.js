@@ -1207,15 +1207,15 @@
      Die Platzordnung regelt Brett gegen Brett. Eine Partei war nie dabei:
      die Werkbank der STADT. Sie liegt ueber allem (das muss sie, sonst waeren
      die Reiter unter einem Brett nicht mehr zu treffen) und sie klappt nie
-     zu. Ihr Vertrag steht im Kopf von stil/stadt.css — sie faengt erst bei
-     87,5 Prozent der Hoehe an, und darueber ist Stadtfenster.
+     zu. Ihr Vertrag steht im Kopf von stil/stadt.css — seit Welle 8 haengt
+     sie oben und endet vor der Dachlinie.
 
-     Nachgemessen haelt sie ihn: Reiterzeile 87,11 / 87,43 / 87,40 Prozent,
-     Bauhof 91,11 / 91,34 / 91,31 in 2752x1536, 1920x1000 und 1366x768. Aber
-     der Vertrag hat eine zweite Haelfte, die niemand geprueft hat — dass
-     unter ihr auch nichts LIEGT. In 1970 liegt dort etwas: drei Zuege der
-     FUHRE sitzen bei 87,7 bis 98,9 Prozent der Hoehe, also unter der
-     Reiterzeile und unter dem Bauhof, und sind fuer die Maus nicht da.
+     Der Vertrag hat eine zweite Haelfte, die niemand geprueft hat — dass
+     unter ihr auch nichts LIEGT. In 1970 lag dort etwas, solange sie unten
+     lag: drei Zuege der FUHRE sassen bei 87,7 bis 98,9 Prozent der Hoehe,
+     also unter der Reiterzeile und unter dem Bauhof, und waren fuer die
+     Maus nicht da. Diese Zaehlung bleibt stehen, weil sie nicht am Ort
+     haengt, sondern an der Frage.
 
      Das ist ein fremder Befund und wird deshalb gemeldet, nicht geheilt: den
      Bauhof durchlaessig zu machen hiesse, einen Klick auf ein gemaltes Brett
@@ -1422,9 +1422,17 @@
     return t;
   }
 
-  /* DIE WERKBANK am unteren Rand — ueber allem, was sonst auf der Buehne
-     liegt, damit die Reiter erreichbar bleiben, wenn ein Brett aufliegt.
-     Sie beginnt bei 87,5 % der Hoehe: darueber ist Stadtfenster. */
+  /* DIE WERKBANK HAENGT UNTER DER KOPFLEISTE — ueber allem, was sonst auf
+     der Buehne liegt, damit die Reiter erreichbar bleiben, wenn ein Brett
+     aufliegt.
+
+     BIS WELLE 7 STAND HIER: "am unteren Rand … sie beginnt bei 87,5 % der
+     Hoehe: darueber ist Stadtfenster." Der Blindvergleich hat genau diesen
+     Vertrag als teuerste Flaeche des Spiels benannt — 47,1 % des untersten
+     Sechstels, und dort traegt jedes Zielblatt seinen Vordergrund. Der
+     Vertrag ist umgedreht: sie beginnt bei 7,8 % der Hoehe und waechst nach
+     UNTEN, in ihren eigenen Streifen zwischen Kopfleiste und Dachlinie.
+     Die Begruendung mit allen Massen steht im Kopf von stil/stadt.css. */
   function werkbank() {
     var fach = B.ebene('blatt', 'stadt');
     var w = fach.querySelector('.stadt-werkbank');
