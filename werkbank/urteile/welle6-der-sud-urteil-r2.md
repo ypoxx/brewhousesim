@@ -537,3 +537,77 @@ schuetten/gaeren · 1884 kuehlen/anstellen · 1970 fuehren/behandeln, dazu vier
 verschiedene Nebenbedingungen am Gaerraum. **Keine Epoche traegt die Karten
 einer anderen.**
 
+
+---
+
+## 7 — KANN MAN ES SPIELEN? Vier echte Klickprotokolle
+
+`werkbank/schuss/sud-blind-r2/spielen.mjs` → `spiel/e1..4.json`. Gespielt wird
+mit der **Maus** bei 1366x768: Brett aufschlagen, jede Woche sehen, was
+bedienbar ist, kostenlose Umstellungen probieren, die guenstigste bezahlte
+Festlegung nehmen, Gaerraum kaufen wenn der Keller eng wird, Hefe fuehren oder
+ein Fass anstechen, gesperrte Chargen abwechselnd freigeben und verschneiden,
+dann WEITER. Jeder Klick mit Woche, Aufschrift, Preisschild, Kasse davor und
+danach und den neuen Chronikzeilen protokolliert.
+
+| Epoche | Klicks | Partie endet | Kasse am Ende | Guete | `BRAUHAUS.lage` | Seitenfehler | **Scheinpreise** |
+|---|---|---|---|---|---|---|---|
+| 1350 | **166** | 1353 W13 | 36 Pf | 96 | 0 | 0 | **0** |
+| 1600 | **202** | 1603 W13 | 435 fl | 98 | 0 | 0 | **0** |
+| 1884 | **210** | 1887 W11 | 3.960 M | 98 | 0 | 0 | **0** |
+| 1970 | **206** | 1973 W9 | 61.776 DM | 98 | 0 | 0 | **0** |
+
+**784 Klicks mit der Maus, kein einziger Fehlschlag, kein Seitenfehler.** Das
+Stueck ist mit dem Zeiger vollstaendig bedienbar — nichts hing an Ziehen,
+nichts an einem Schwebemenue, jeder Zug hatte ein echtes `<button>` mit
+sichtbarem deutschem Text.
+
+**Jedes Muenz-Preisschild wurde auf den Pfennig eingeloest** (11 Kaeufe ueber
+vier Epochen): 30 · 180 · 260 · 78 · 98 · 3.400 · 1.900 · 2.470 · 3.211 ·
+26.000 · 42.000 — jedes Mal genau der Betrag vom Schild. Die Staffel des
+Gaerraums ist am Schirm zu sehen (1884: 1.900 → 2.470 → 3.211, Faktor 1,3) und
+in der Kasse nachzurechnen. **Kein Scheinpreis, in keiner Epoche.** Die 196
+Zuege mit **Bier**-Preis nahmen jedes Mal genau die angeschriebene Fassmenge
+aus dem Keller.
+
+**Die vier Partien enden verschieden und aus verschiedenen Gruenden** — der
+Rat entzieht das Braurecht (1350) · die Zunft streicht das Haus aus der Reihe
+(1600) · die Bank zieht die Linie ein (1884) · die Adressen sind eine nach der
+anderen weggeblieben (1970). Das ist nicht dieses Stueck, aber es ist der
+Rahmen, in dem es spielt, und er traegt.
+
+**Was sich beim Spielen wirklich anfuehlt wie eine Entscheidung:** in 1600 die
+Frage, ob man den Weizen stiehlt oder den Brief kauft, und ob der Felsenkeller
+die 260 fl wert ist, bevor der Sommer kommt. In 1884 die Kaeltefrage gegen den
+zugekauften Gaerraum, der ohne Maschine in den warmen Wochen leer steht — das
+ist eine Kopplung, die man erst merkt, wenn sie zuschlaegt. In 1970 die
+gesperrte Charge: freigeben ist schneller, und zwei bis fuenf Wochen spaeter
+misst der Einkauf nach und holt sich das Bier aus dem Lager. **Das sind echte
+Entscheidungen mit Preis und Folge.**
+
+**Was sich nicht so anfuehlt:** 1350. Die Kasse steht bei 112 Pf, der
+Hopfenbrief kostet 78, und ausser dem Roehrenrecht (30) war in vier
+Braujahren kein zweiter Kauf drin. Man liest zwei schoene Fragen und darf eine
+davon halb beantworten.
+
+### EIN LOCH, DAS NOCH OFFEN IST — der Prozessrechner
+
+`sud:fuehrung:rechner`, 118.000 DM Listenpreis, die **teuerste unwiderrufliche
+Karte des ganzen Spiels**. Der Quelltext nennt sie als Auflage 3 der Vorrunde
+und loest sie mit einer **Anrechnung**: wer das Labor hat, zahlt nur die
+Differenz von 76.000 DM (`sud-daten.js:530–557`).
+
+**Zwei unabhaengige Messungen sagen: sie ist immer noch nicht zu haben.**
+
+| | |
+|---|---|
+| sparsamer Stil, 99 Wochen, Brett offen | `sud:fuehrung:rechner` in **0 von 99 Wochen** sichtbar+aktiv+erreichbar (`labor` dagegen in 77) |
+| gespielt, 206 Klicks, 4 Braujahre | hoechste je erreichte Kasse **61.776 DM** — nach dem Labor fehlen 14.224 DM zu den 76.000 |
+| Kasse im sparsamen Stil | faellt monoton von 86.000; **Hoechststand ist der Startwert** |
+
+Die Anrechnung hat die Luecke halbiert (118.000 → 76.000) und sie nicht
+geschlossen. **Auflage 3 der Vorrunde ist damit gemildert, nicht erledigt.**
+Ich kann nicht ausschliessen, dass ein anderer Spielstil dort hinkommt — aber
+weder der sparsame noch der kaufende tut es, und die Vorrunde hat es ueber 800
+Wochen auch nicht geschafft.
+
