@@ -13,7 +13,9 @@ der Quelltext des Spiels.
 Messwerte als `.json` neben dieser Datei unter
 `werkbank/schuss/stadt-blind-w7/`.
 
-*Diese Datei wird laufend geschrieben, nicht erst am Ende.*
+**Marke nach dem Lauf erneut geprüft: `b6b06bb`.** Der A/B-Hafen 8907 ist nach
+Abschluss wieder abgeräumt; `ab-webp-aufsetzen.sh` stellt ihn mit einem Aufruf
+her. Kein `git` benutzt, keine Datei des Spiels angefasst.
 
 ---
 
