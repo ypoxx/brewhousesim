@@ -182,5 +182,15 @@ Jahreslast; die Last fällt damit, das Haus behält mehr, und ρ rückt um
 **0,336** am schlechtesten Schnitt (vorher 0,320 — der Abstand ist also sogar
 *gewachsen*, weil der schlechteste Schnitt näher an null liegt).
 
-*(1600 / 1884 / 1970 laufen noch — sie stehen im Fenster hinter 1350. Zahlen
-werden nachgetragen, sobald sie da sind.)*
+| **1600** | vorher | +0,189 | −0,066 | −0,156 | 169–2851 | 0 |
+| | **nachher** | **+0,189** | **−0,066** | **−0,156** | 169–2851 | 0 |
+
+**1600 ist Ziffer für Ziffer unverändert** — und das ist genau die Gegenprobe,
+die die Änderung braucht: dort gibt es keinen Unterhalt an den Angeboten, also
+ist `pflichtBasis()` dort gleich `pflichtSumme()`, und die neuen Aufschriften
+(Laudemium, Landesordnung) sind reiner Text. Die Wirtschaft hat sich nicht
+bewegt, obwohl acht Zeichenketten und eine Rechenfunktion anders sind.
+
+*(1884 und 1970 laufen noch — sie stehen im Fenster hinter 1600. Zahlen werden
+nachgetragen, sobald sie da sind; die Läufe schreiben selbsttätig nach
+`werkbank/schuss/preis-w7/rho/nacharbeit/e3-A.json` und `e4-A.json`.)*
