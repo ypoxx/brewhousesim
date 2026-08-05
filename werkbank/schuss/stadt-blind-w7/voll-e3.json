@@ -1,0 +1,21 @@
+{
+ "epoche": 3,
+ "gebaut": 5,
+ "gescheitert": 45,
+ "gekauft": [
+  "stadt:bau:kontor",
+  "stadt:bau:hopfenlager",
+  "stadt:bau:pferdestall",
+  "stadt:bau:maelzerei",
+  "stadt:bau:flaschenhalle"
+ ],
+ "lage": {
+  "jahr": 1887,
+  "woche": 11,
+  "epoche": 3,
+  "kasse": 3960,
+  "bauten": 12,
+  "lagefehler": 0
+ },
+ "fehler": []
+}
