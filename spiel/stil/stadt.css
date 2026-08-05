@@ -243,13 +243,22 @@
   position: absolute;
   left: 1.2%;
   top: 7.8%;
-  width: 34%;
+  width: 46%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: calc(var(--s) * 5);
   pointer-events: none;
 }
+
+/* Die Reiterzeile ist SCHMALER als die Lade darunter, und das ist gerechnet:
+   die Reiter liegen auf der Hoehe der Hauszeile des Skeletts (x 952 bis
+   1799, y 160 bis 199) und muessen vor ihr enden — 33 % der Buehne sind
+   941 px. Die Lade beginnt erst bei y 246, also UNTER der Hauszeile, und
+   darf deshalb die vollen 46 % nehmen. Das ist der Unterschied zwischen
+   410 und 299 Bezugspixeln je Bauknopf, und damit zwischen
+   "Verwaltungsbau" und "Verwaltungsba". */
+.stadt-werkbank > .stadt-reiterzeile { max-width: 71.7%; }
 
 /* --- Die Reiter: ein Klick schlaegt auf, ein zweiter klappt zu. --- */
 .stadt-reiterzeile {
@@ -415,15 +424,23 @@
   color: #d5b183;
 }
 
+/* Die Lade ist ein Drittel so breit wie frueher und traegt dieselben vier
+   bis sechs Bauten. Ein Raster mit DREI gleichen Spalten statt einer Reihe:
+   jede Zelle bekommt 299 statt 330 Bezugspixel, und die Zeile bricht um,
+   statt den Namen enger zu quetschen. Raster und nicht `flex-wrap`, weil
+   ein umgebrochenes Flexkind die letzte Zeile auf volle Breite aufblaest —
+   vier Bauten stuenden dann als 3 + 1 da, der vierte dreimal so breit wie
+   seine Nachbarn. (Welle 8) */
 .stadt-bauhof .reihe {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   gap: calc(var(--s) * 9);
 }
 .stadt-bauhof .bauzeile {
-  flex: 1 1 0;
   min-width: 0;
 }
+.stadt-bauhof .reihe > .leer { grid-column: 1 / -1; }
 
 /* Feste Hoehe, nicht Mindesthoehe: beide Seiten des Kastens muessen gleich
    hoch sein, sonst wandert die Werkbank beim Umschlagen ins Stadtfenster.
@@ -465,6 +482,12 @@
 .stadt-bauhof .bauzeile .knopf .wort {
   flex: 1 1 auto;
   min-width: 0;
+  /* Ein einzelnes langes Wort kann nicht umbrechen und wird von
+     `overflow-x: hidden` still abgeschnitten — "Verwaltungsba" statt
+     "Verwaltungsbau". Das ist derselbe stille Schnitt, den Welle 7 beim
+     `line-clamp` gefunden hat, nur waagerecht. Es bricht jetzt lieber im
+     Wort um, als ein Zeichen zu verschlucken. (Welle 8) */
+  overflow-wrap: break-word;
   max-height: 2em;              /* zwei Zeilen bei line-height 1.0 — in ZEILEN, nicht in --s */
   overflow-y: auto;
   overflow-x: hidden;
@@ -769,7 +792,16 @@
      ungenutzter Breite, waehrend die Reiter oben Buchstaben verloren. Nur
      unterhalb der Schwelle, also dort, wo der Boden greift; oberhalb bleibt
      die Aufteilung des Entwurfs unangetastet, und mit ihr die Geometrie,
-     an der rho haengt. */
-  #buehne .stadt-werkbank { width: 80%; }
+     an der rho haengt.
+
+     WELLE 8 — DIESE ZEILE IST ZURUECKGENOMMEN, und zwar ersatzlos.
+     `width: 80 %` war richtig, solange die Werkbank am unteren Rand lag und
+     rechts von ihr nur der WEITER-Knopf stand. Oben liegt bei 34,6 bis
+     65,4 % der Breite die HAUSZEILE des Skeletts; eine 80 % breite Werkbank
+     legte sich in JEDER Fenstergroesse darauf. Was die Breite frueher
+     leisten musste — Platz fuer zehn Reiter —, leistet jetzt der Umbruch:
+     bei 1366x768 fallen sie in vier Zeilen statt in eine, und keine Zeile
+     ist enger als vorher. Nachgemessen mit `stadt-w8/reiterprobe.mjs` in
+     beiden Fenstern. */
   #buehne .stadt-reiterzeile { padding-left: 0; padding-right: 0; }
 }
