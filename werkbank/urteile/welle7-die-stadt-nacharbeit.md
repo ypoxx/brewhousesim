@@ -329,18 +329,51 @@ umzustellen: das bringt rund 3,3 MB und kostet gar nichts.**
 
 ---
 
-## EIN NEBENSCHADEN, den erst der Augenschein gezeigt hat
+## DIE REKLAMETAFEL IN DEN BIERKÄSTEN — KEIN MESSGERÄT MELDETE ES
+
+*Der wichtigste Einzelbefund dieser Nacharbeit, und er ist keiner über den Hof,
+sondern einer über das Prüfen.*
 
 Nachdem Kastenlager und Verladedock in 1970 nach vorn gerückt waren, stand die
 **Reklametafel „BRAUHAUS ZUM ANKER" mitten in den Bierkästen und über dem
-Lastwagen** — kein Messgerät hat das gemeldet, weder DAS LOT (sie ist kein Bau)
-noch die Hofdecke (sie zählt nur, ob sich etwas geändert hat, nicht ob es sich
-sinnvoll überlagert). **Nur das Hinsehen hat es gefunden.**
+Lastwagen.**
+
+**Kein Messgerät meldete es.** Und zwar nicht, weil eines versagt hätte, sondern
+weil keines danach fragt:
+
+| Gerät | was es prüft | warum es schwieg |
+|---|---|---|
+| DAS LOT (`stadt-r7/pruefe.mjs`) | steht ein **Bau** auf der Mauer oder im Torfeld | die Tafel ist kein Bau — sie steht in keiner Bautabelle |
+| DIE TIEFE (`tiefe.deckung()`) | ist ein **benanntes** Ding zugedeckt | gefragt war nach Brunnen und Braupfanne, nicht nach Kästen |
+| die Hofdecke (`stadt-r8/hofdecke.mjs`) | **wie viel** Fläche gefüllt ist | eine Überlagerung füllt Fläche — sie zählte als Erfolg |
+| `lesbarkeit.mjs`, `tor.mjs`, `spielprobe.mjs` | Schrift, Fehler, Bedienbarkeit | ein Bild über einem Bild ist keines von dreien |
+
+Vier grüne Geräte, ein Bild, das falsch war. **Nur das Hinsehen hat es
+gefunden.**
+
+**Der Beleg, zwei Aufnahmen desselben Hafens, 1970, 1926×768** (Arbeitsmaterial,
+nach `.gitignore:67` bewusst nicht versioniert — die md5 stehen hier, damit
+nachprüfbar bleibt, welche Datei gemeint war):
+
+| Aufnahme | md5 | was zu sehen ist |
+|---|---|---|
+| `werkbank/schuss/stadt-r8/schluss-e4.png` | `a4757f9d…` | die Tafel liegt quer über der vorderen Kastenreihe und schneidet die Fahrerkabine an; von den Kästen darunter bleibt ein Streifen |
+| `werkbank/schuss/stadt-r8/schluss2-e4.png` | `825d0fcd…` | dieselbe Stelle: Kästen, Verladedock und Lastwagen frei; die Tafel steht links im Hof frei vor der Mauer und ist ganz lesbar |
+
+*(`hof2-e4.png` und `hof3-e4.png` tragen dieselbe md5 wie `schluss-e4.png` —
+es ist derselbe Stand, dreimal geschossen.)*
 
 Sie steht jetzt links im Hof und ein Band zurück (`schild: dx −15 → −24,
 dy 8 → 2`), wo 1970 Platz ist; die Kästen stehen davor statt dahinter. Das ist
 die Sorte Fehler, gegen die keine Zahl schützt — und der Grund, warum in dieser
 Nacharbeit **jede Epoche einzeln angesehen** wurde, nicht nur gemessen.
+
+> **Was daraus für das Verfahren folgt, und es ist nicht meine Entscheidung:**
+> Ein Zähler prüft, was jemand vorher zu fragen wusste. Diese Tafel hat niemand
+> vorhergesehen, weil sie erst durch eine *richtige* Änderung falsch wurde. Ein
+> blinder Kritiker, der zwanzig Minuten hinsieht, ist deshalb kein Zusatz zu den
+> Messgeräten, sondern das einzige Werkzeug im Lauf, das Fragen stellen kann,
+> die vorher niemand hatte.
 
 ## ABNAHME DER NACHARBEIT
 
@@ -400,6 +433,34 @@ Start dieses Laufs verschoben. Sie trägt keinen `data-zug` und liegt in
 derselben Ebene wie die Hofbilder; auf die Zugfolge kann sie nicht wirken. Wer
 es genau nimmt, misst 1970 nach dem Einfrieren noch einmal.
 
+> **Nachtrag, 5. August — dieser Vorbehalt wird gerade eingelöst, und zwar
+> nicht von mir.** Die Aufsicht hat ihn angenommen („ich nehme es genau"). Beim
+> Blick auf das Messfenster hielt es
+> `node werkbank/schuss/rueckkopplung-r3/linie.mjs 4 400
+> werkbank/schuss/aufsicht/welle7-nach-preis/rho/e4-A.json` — **genau die Epoche
+> 1970 am heutigen Baum**. Ich habe deshalb **nicht** nachgemessen: derselbe
+> Lauf zweimal zu fahren hätte das Fenster 7–15 Minuten blockiert, ohne eine
+> Ziffer hinzuzufügen, und ein zweiter Browser neben einer laufenden Messung ist
+> genau der Fehler, gegen den das Fenster gebaut ist (ρ +0,354 statt +0,393,
+> 3. August).
+>
+> **Was diese Zahl beantworten wird und was nicht:** der Baum trägt inzwischen
+> auch die Nacharbeit von DER PREIS. Der Lauf misst also den **ausgelieferten
+> Stand**, kann aber die Tafel nicht von der Wirtschaftsarbeit trennen. Für die
+> Tafel allein bleibt das Argument aus der Geometrie: sie liegt in `bau`, in
+> dieser Ebene liegt kein einziger `data-zug`, und sie ändert die Lage keines
+> Knopfes.
+>
+> **Was ich in diesem Fenster ausdrücklich NICHT gefahren habe:** `tor.mjs`,
+> `spielprobe.mjs` und `lesbarkeit.mjs`. Alle drei starten Chromium; alle drei
+> hätten die fremde Messung belastet. Sie sind vor dem Einfrieren gefahren und
+> von der Aufsicht unabhängig nachgemessen (14 Überläufe von 51 · 505
+> Textknoten · 0 von 330 Knöpfen · 7,41 MB · TOR OFFEN). Ohne Browser geprüft
+> und danach unverändert: `node --check` auf alle drei `stadt*.js` → OK,
+> md5 `stadt-daten.js bab88be9…` · `stadt.js 06f7565d…` ·
+> `stadt-zusatz.js d4257777…` · `stadt.css 5407ba9c…` ·
+> `stadt-zusatz.css ffd1f8fc…`.
+
 ---
 
 ## WAS OFFEN BLEIBT
@@ -414,4 +475,42 @@ es genau nimmt, misst 1970 nach dem Einfrieren noch einmal.
    Bilder**: flache Dinge, die auf dem Hofboden liegen statt darauf zu stehen —
    Fassreihen, eine Bank, ein Karren. Das ist die Stelle, an der das Zielbild
    noch etwas hat, was das Spiel nicht hat.
-3. **Ein Lauf, eine Epoche für ρ.** Siehe oben.
+3. **Ein Lauf, eine Epoche für ρ.** Siehe oben. Die Nachmessung von 1970 am
+   heutigen Baum lief beim Schreiben dieser Zeile im Messfenster — durch die
+   Aufsicht, nicht durch mich.
+4. **Ob das Bild jetzt gewinnt, sagt keine meiner Zahlen.** Füllung, Deckung
+   und Bodenfehler sind Belege dafür, dass der Umbau *tut, was er soll*; die
+   erste Latte entscheidet ein fremdes Auge im Blindvergleich gegen
+   `zielbild/`. Meine 35,0 / 42,2 / 29,2 / 54,5 % sind kein Ersatz dafür und
+   sollen keiner sein.
+
+---
+
+## NACHTRAG 5. AUGUST — die drei Punkte der Aufsicht, eingearbeitet
+
+Die Aufsicht hat die Nacharbeit angenommen (Zahlen unabhängig nachgemessen:
+14 Überläufe von 51 · 505 Textknoten · 0 von 330 Knöpfen · 7,41 MB in der
+schwersten Epoche · TOR OFFEN) und drei Dinge verlangt. Alle drei stehen jetzt
+in diesem Bericht:
+
+| Punkt | wo er jetzt steht |
+|---|---|
+| **Berichtigung „drei Wanderer"** — es sind **drei Dinge, die rücken**, nicht eines; `kueferei` (:639) und `pferdestall` (:689) sind **von mir**, neu in Runde 7 | Kasten unter AUFLAGE 1, mit Tabelle vorher/nachher aus `stadt-daten-vor-r8.js` |
+| **Die Raute ist der bessere Fund als die Füllungszahl** — mein erstes Gerät maß über ein Rechteck, zu zwei Dritteln über Nicht-Hof; und meine eigenen Geräte haben meinen ersten Versuch zerlegt (8 Bodenfehler, Pfanne 82 %/100 % zugedeckt) | ganz oben, „DIE DREI SÄTZE DIESER RUNDE" (1) und (2), Einzelheiten unverändert weiter unten |
+| **„Kein Messgerät meldete es"** — die Reklametafel in den Bierkästen, mit Bildbeleg | eigener Abschnitt, mit Gerätetabelle und den zwei md5-benannten Aufnahmen |
+
+**Die Regel, die die Aufsicht dazu entschieden hat, gilt über mein Stück
+hinaus:** *WAS GEGRABEN WIRD, BLEIBT — Brunnen, Keller, Grube. Was gebaut wird,
+darf umziehen.* Probe: könnte man es an einem Tag abreißen und woanders wieder
+aufstellen? Damit ist die Küferei ausdrücklich freigegeben; der Brunnen war es
+nie. Nachgezählt gegen die Regel: **kein gegrabenes Ding trägt noch einen
+Versatz.**
+
+**Und die Lehre für mich, die teurer ist als die Regel:** meine Zusammenfassung
+stimmte nicht mit meinem eigenen Quelltext überein — der Kommentar über der
+Zeile sagte „Runde 7", der Bericht sagte „nur die Pfanne". Hätte die Aufsicht
+nicht nachgezählt, stünde jetzt eine falsche Zahl im Gedächtnis des Laufs.
+**Ein Bericht, der die eigene Datei nicht mehr trifft, ist gefährlicher als
+eine gerissene Latte:** die Latte misst jemand nach, den Bericht glaubt man.
+Für die nächste Runde: **vor dem Melden `grep` auf die Eigenschaft, über die
+man eine Zahl behauptet**, nicht auf das Gedächtnis.
