@@ -194,11 +194,56 @@
 
 .fach-blatt-stadt { z-index: 80; }
 
+/* ==========================================================================
+   DIE WERKBANK HAENGT UNTER DER KOPFLEISTE.  (Welle 8, Teil A)
+
+   Sie lag sieben Wellen lang am unteren Rand: `bottom: 0.7 %`, `width:
+   62,6 %`, Kasten 1723 x 194 px auf 2752 x 1536. Der Blindvergleich hat
+   genau diesen Kasten als teuerste Flaeche des Spiels benannt, und die
+   Nachmessung nennt ihn Ziffer fuer Ziffer:
+
+     .stadt-werkbank   7,85 % der Flaeche   47,1 % des untersten Sechstels
+       Reiterzeile     1,94 %               11,6 %
+       Bauhof-Lade     5,91 %               35,5 %
+
+   Das unterste Sechstel ist der Streifen, in dem JEDES Zielblatt seinen
+   Vordergrund traegt — Marktstand und Fuhrwerk in 1350, Asphalt mit Autos
+   in 1970. Also zieht die Werkbank dorthin, wo alle vier Zielblaetter
+   Himmel, Huegel und ferne Dachlinie haben: unter die Kopfleiste.
+
+   WARUM GENAU HIER, und nicht irgendwo oben — vier Bedingungen, jede
+   gemessen (`stadt-w8/deckkarte.mjs` liefert je Rasterzelle die
+   Pixeldeckung ALLER Stuecke, `stadt-w8/freiflaeche.mjs` die Kastenmasse):
+
+     1. rechts von x = 941 px beginnt die HAUSZEILE des Skeletts
+        (x 952 y 160, 847 x 39). Deshalb hoert die Werkbank bei 34 % auf.
+     2. y = 120 liegt 7 px unter der Kopfleiste (endet 113) — hoeher geht
+        nicht, tiefer kostet Bild.
+     3. Sie liegt vollstaendig ueber dem Hausschild (y 957), ueber dem
+        Hoftor, ueber der Hofraute (Scheitel 823|1206) und ueber allem, was
+        Teil B in den vorderen Hof legt. Nichts davon wird zugedeckt.
+     4. St. Michael (x 1587-1680), Gasthof Lindenhof, Fluss und Bruecke —
+        die vier Wahrzeichen, die der Blindvergleich ausdruecklich als
+        richtig abgenommen hat — liegen alle rechts oder unterhalb.
+
+   WAS ES KOSTET, und es ist keine Kleinigkeit: in III und IV stehen der
+   Wasserturm (x 241-366) und der Schornstein (x 490-620) in diesem
+   Streifen; ihre oberen zwei Drittel liegen jetzt hinter der Werkbank.
+   Das steht so im Bericht. Es gibt auf einer randlosen Illustration keine
+   freie Flaeche — es gibt nur teure und billige, und die Huegellinie ist
+   die billigste, die 8 % traegt.
+
+   UND ES IST KEIN VERLUST AM SCHIRM, SONDERN EIN GEWINN: die Zeile bricht
+   jetzt um. Zehn Reiter brauchen rund 2.300 Bezugspixel; in EINER Zeile von
+   1.688 standen drei bis vier Namen und vier bis fuenf Kennzahlen mit
+   Auslassungspunkten da (`stadt-w8/reiterprobe-vorher.json`). Drei Zeilen zu
+   je 936 px sind 2.808.
+   ========================================================================== */
 .stadt-werkbank {
   position: absolute;
   left: 1.2%;
-  bottom: 0.7%;
-  width: 62.6%;
+  top: 7.8%;
+  width: 34%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -209,12 +254,13 @@
 /* --- Die Reiter: ein Klick schlaegt auf, ein zweiter klappt zu. --- */
 .stadt-reiterzeile {
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: flex-start;
   gap: calc(var(--s) * 7);
   padding-left: calc(var(--s) * 12);
   padding-right: calc(var(--s) * 12);
   min-height: calc(var(--s) * 8);
-  overflow: hidden;
 }
 
 .knopf.stadt-reiter {

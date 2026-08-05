@@ -19,15 +19,25 @@ const B = 2752, H = 1536, SX = 32, SY = 24;
 const EPOCHEN = (process.argv.slice(2).length ? process.argv.slice(2) : ['1', '2', '3', '4']).map(Number);
 
 const alleWeg = () => {
+  document.querySelectorAll('[data-w8]').forEach(el => { el.style.visibility = ''; el.removeAttribute('data-w8'); });
   const ebenen = [...document.querySelectorAll('.ebene')];
-  ebenen.forEach((w, i) => { if (i >= 2) [...w.children].forEach(el => { el.style.visibility = 'hidden'; }); });
+  ebenen.forEach((w, i) => { if (i >= 2) [...w.children].forEach(el => { el.style.visibility = 'hidden'; el.setAttribute('data-w8', '1'); }); });
 };
+/* Nur EIN Kasten bleibt stehen. Der erste Anlauf hat die Kette nach oben
+   sichtbar geschaltet und damit alle Geschwister wieder mit — die drei
+   Messungen lieferten dieselbe Zahl. Jetzt wird auf jeder Stufe der Kette
+   jedes Geschwister ausdruecklich verborgen. */
 const nurDies = (wahl) => {
+  document.querySelectorAll('[data-w8]').forEach(el => { el.style.visibility = ''; el.removeAttribute('data-w8'); });
   const ebenen = [...document.querySelectorAll('.ebene')];
-  ebenen.forEach((w, i) => { if (i >= 2) [...w.children].forEach(el => { el.style.visibility = 'hidden'; }); });
+  ebenen.forEach((w, i) => { if (i >= 2) [...w.children].forEach(el => { el.style.visibility = 'hidden'; el.setAttribute('data-w8', '1'); }); });
   document.querySelectorAll(wahl).forEach(el => {
-    el.style.visibility = 'visible';
-    for (let p = el.parentElement; p; p = p.parentElement) if (p.classList && p.classList.contains('fach')) p.style.visibility = 'visible';
+    let k = el;
+    for (let p = el.parentElement; p && !p.classList.contains('ebene'); k = p, p = p.parentElement) {
+      [...p.children].forEach(g => { if (g !== k) { g.style.visibility = 'hidden'; g.setAttribute('data-w8', '1'); } });
+      p.style.visibility = 'visible'; p.setAttribute('data-w8', '1');
+    }
+    el.style.visibility = 'visible'; el.setAttribute('data-w8', '1');
   });
 };
 
