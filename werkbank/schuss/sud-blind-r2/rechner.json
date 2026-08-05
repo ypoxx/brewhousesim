@@ -1,0 +1,125 @@
+{
+ "kasseMax": 86000,
+ "laborAb": {
+  "jahr": 1970,
+  "woche": 1,
+  "schild": -42000,
+  "abgebucht": 42000,
+  "text": "Betriebslabor, Stammwürze und Bittereinheiten −42."
+ },
+ "rechnerAb": null,
+ "rechnerJeSichtbar": 0,
+ "ende": {
+  "j": 1973,
+  "w": 9,
+  "ende": true,
+  "v": "labor"
+ },
+ "fehler": [],
+ "log": [
+  {
+   "w": 0,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "verfahren": "erfahrung",
+   "rechnerSchild": -118000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 10,
+   "jahr": 1970,
+   "woche": 11,
+   "kasse": 12720,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 20,
+   "jahr": 1970,
+   "woche": 21,
+   "kasse": 6520,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 30,
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 52396,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 40,
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 46076,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 50,
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 39756,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 60,
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 50000,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 70,
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 43550,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 80,
+   "jahr": 1972,
+   "woche": 21,
+   "kasse": 37100,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 90,
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 50000,
+   "verfahren": "labor",
+   "rechnerSchild": -76000,
+   "rechnerAus": true,
+   "rechnerHit": true
+  },
+  {
+   "w": 98,
+   "ende": true
+  }
+ ]
+}
