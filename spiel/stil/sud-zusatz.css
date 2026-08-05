@@ -329,11 +329,40 @@
      Der Vorrang ist nicht Geschmack: ein Knopf, der aus dem Kasten faellt,
      ist ein verlorener Zug; eine Zeile, die anderswo vollstaendig steht,
      ist keiner. */
+  #buehne .sud-zettel .sud-zkopf,
   #buehne .sud-zettel .sud-zverfahren,
   #buehne .sud-zettel .sud-zrang,
   #buehne .sud-zettel .sud-zzahlen,
-  #buehne .sud-zettel .sud-zpreiszeile { display: none; }
+  #buehne .sud-zettel .sud-zpreiszeile,
+  #buehne .sud-zettel .sud-zrangschild { display: none; }
 
-  /* Der Kopf darf umbrechen statt den Zettel aufzuschieben. */
-  #buehne .sud-zettel .sud-zkopf { white-space: normal; }
+  /* --- 3. Die Rechnung dahinter, damit sie niemand nachschlagen muss -----
+     Kasten bei 1366x768: 178 x 126 px (13 % x 16,5 %, Flaeche 2,145 %).
+     Was der Inhalt bei 12 px braucht, gemessen Kind fuer Kind:
+
+       sud-zkopf                          17 px
+       sud-zpaar (zwei Stempelknoepfe)    48 px
+       Umstellung frei  (Name + Schild)   32 px
+       Umstellung kauf  (Name+Preis+Schild) 60 px
+       Polster                             6 px
+                                        = 163 px  gegen 126 verfuegbar
+
+     Die beiden Umstellknoepfe schnitten daraufhin ihren eigenen Text ab —
+     der Preis „−180 fl" hing 10 px unter dem Kasten, das Deckelschild 27 px.
+     Ohne Kopf und ohne Deckelschild sind es 123 px, und dann steht alles
+     ganz im Kasten.
+
+     WAS DAMIT UNTER DER ENTWURFSLEINWAND VOM ZETTEL FAELLT und wo es
+     stattdessen steht — vollstaendig, nicht gekuerzt:
+       der Kopf „DER SUD · 1600"      -> der Reiter der STADT nennt das Stueck
+       die Verfahrennamen             -> auf dem Brett, an jeder Karte
+       „höchstens Märzenbier"         -> auf dem Brett, an jeder Karte
+       „Stellhefe 92 % · Fass ×1,16"  -> auf dem Brett, im Hefefeld
+       „lässt Märzenbier zu"          -> auf dem Brett, an derselben Karte
+     Alles einen Reiterklick weit, und das Brett ist seit dieser Runde
+     vollstaendig lesbar (12 px, kein Deckel auf dem Erklaersatz).
+
+     WAS BLEIBT: vier Zuege mit Namen und Preis, alle vier ueber 24 px, alle
+     vier ganz im Kasten, keiner mit abgeschnittenem Text. Der Zettel ist im
+     Vorgabestand die Handflaeche des Stuecks; das Lesen gehoert dem Brett. */
 }

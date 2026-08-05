@@ -1677,6 +1677,37 @@
           — oder, solange eine Charge gesperrt steht (1970), deren beide
           Antworten; oder, wenn alles entschieden ist, der Gaerraum.
      ---------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------
+     DER ZETTEL IST EIN STEMPEL, KEIN BRETT — und unter der Entwurfsleinwand
+     muss er sich das auch sagen lassen.
+
+     Mit dem Schriftboden der vierten Latte (12 px je Regel) wurde bei
+     1366x768 gemessen: der Zettelkasten haelt 178 x 126 px — mehr darf er
+     nicht, sonst stuft die STADT ihn als BRETT ein und klappt ihn zu (mit
+     15 % Breite ausprobiert und prompt `stadt-zugeklappt` kassiert). Seine
+     vier Knopfaufschriften brauchen bei 12 px zusammen rund 145 px, weil
+     „Hefezeug aus dem Bottich heben · +8 · ohne Fass" ueber drei Zeilen
+     laeuft. Die Knoepfe schnitten daraufhin ihren eigenen Text ab — genau
+     der Fehler, den Auflage 2 am Kartensatz beanstandet, nur eine Ebene
+     tiefer.
+
+     Also bekommt der Stempel Stempelworte: `kurz`, `jungKurz`, `altKurz` aus
+     `sud-daten.js`. Der volle Wortlaut steht unveraendert auf dem Brett,
+     einen Reiterklick weit, und im `title` des Knopfes. Der PREIS wird nicht
+     gekuerzt — er ist der Grund, warum der Knopf ein Preisschild traegt
+     (Auflage 4 der Vorrunde).
+
+     Gelesen wird derselbe Medienschalter, den `grund.css` fuer den
+     Knopfboden und `sud-zusatz.css` fuer das Aufraeumen benutzt. Oberhalb
+     der Entwurfsleinwand aendert sich nichts, und dort vergleicht Latte 1
+     blind. */
+  function stempelkurz() {
+    try {
+      if (!window.matchMedia) return false;
+      return window.matchMedia('(max-width: 2751px), (max-height: 1535px)').matches;
+    } catch (e) { return false; }
+  }
+
   function zeichneZettel() {
     var fach = B.ebene('marken', 'sud');
     B.leere(fach);
@@ -1731,9 +1762,15 @@
     var frei = anstichFrei(), lager = B.welt.vorrat.faesser.length;
     var ausBottich = Z.bottiche.length > 0;
     var einFass = B.welt.menge(1);
+    /* Stempelworte unter der Entwurfsleinwand, voller Wortlaut darueber.
+       Der Preis bleibt in beiden Faellen stehen. */
+    var kz = stempelkurz();
+    var wFuehren = (kz && e.fuehren.kurz) || e.fuehren.text;
+    var wJung = (kz && e.anstich.jungKurz) || e.anstich.jung || 'Jüngstes Fass anbrechen';
+    var wAlt = (kz && e.anstich.altKurz) || e.anstich.alt || 'Ältestes Fass anbrechen';
     var paar = B.el('div', 'sud-zpaar');
     paar.appendChild(knopf({
-      text: (ausBottich ? e.fuehren.text : (e.anstich.jung || 'Jüngstes Fass anbrechen'))
+      text: (ausBottich ? wFuehren : wJung)
           + ' · +' + (ausBottich ? (D.guete.fuehren || 8) : (D.guete.anstichJung || 14))
           + (ausBottich ? ' · ohne Fass' : ' · ' + einFass),
       zug: 'sud:zettel-anstich',
@@ -1744,8 +1781,7 @@
       tu: function () { if (ausBottich) fuehreHefe(); else anstich(true); }
     }));
     paar.appendChild(knopf({
-      text: (ausBottich ? (e.anstich.jung || 'Jüngstes Fass anbrechen')
-                        : (e.anstich.alt || 'Ältestes Fass anbrechen'))
+      text: (ausBottich ? wJung : wAlt)
           + ' · +' + (ausBottich ? (D.guete.anstichJung || 14) : (D.guete.anstichAlt || 6))
           + ' · ' + einFass,
       zug: 'sud:zettel-hefe-fass',
