@@ -97,6 +97,38 @@ hat zwei.
 > ERBE, FUHRE, PREIS und GEGNER; die Schichtung gehört dem Skelett. Wer das einem
 > Builder allein gibt, gibt ihm etwas, das er nicht besitzt.
 
+### Die Aufsicht hat die Deckung selbst nachgemessen — und ihr erstes Gerät verworfen
+
+**Die Gesamtzahl ist unabhängig bestätigt**, auf einem anderen Weg als der
+Kritiker: dieselbe Seite zweimal aufgenommen, einmal mit ausgeblendeter
+Oberfläche, und die abweichenden Pixel gezählt
+(`werkbank/schuss/aufsicht/deckung-je-stueck.mjs`, dazu ein selbstgeschriebener
+PNG-Leser, weil im Container keiner liegt).
+
+| | Kritiker | Aufsicht |
+|---|---|---|
+| der Fläche | 27–28 % | **27,1 – 28,2 %** |
+| des untersten Sechstels | 60 % | **59,5 – 60,7 %** |
+
+**Und die Aufteilung nennt den Hauptdecker: DIE STADT deckt allein 47 % des
+untersten Sechstels** — bei nur 8 % der Gesamtfläche. Es ist ihre Reiterzeile,
+und sie liegt quer über genau dem Streifen, in dem jedes Zielblatt seinen
+Vordergrund trägt. Danach die Kopfleiste mit 8,6–9,4 %; alle übrigen Stücke
+tragen dort **null**.
+
+> **Zwei Ehrlichkeiten dazu, sonst wäre die Tabelle geschönt:**
+> 1. **Die Aufteilung ist unvollständig.** Die Summe der Stücke ergibt rund
+>    21,6 % gegen 27,7 % gemessene Gesamtdeckung — etwa **6 % sind keinem Stück
+>    zugeordnet**, weil das Gerät die Vorsilbe am direkten Kind der Ebene sucht
+>    und nicht jede Fläche eine trägt. Die Gesamtzahl stimmt, die Zeilen darunter
+>    sind eine Untergrenze.
+> 2. **Das erste Gerät der Aufsicht war falsch und kam auf 72–74 %.** Es zählte
+>    Rechteck-Hüllen statt Pixel — und eine Hülle deckt nicht, was in ihr
+>    durchsichtig ist. Zuerst zählte es sogar die Epochenplatte als Deckung der
+>    Bühne mit. **Die Lehre steht im Kopf des Geräts: wer Deckung misst,
+>    vergleicht Pixel, nicht Kästen.** Der Kritiker hatte es von Anfang an
+>    richtig gemacht; die Aufsicht hat zwei Anläufe gebraucht.
+
 **Zwei Verdächtigungen hat der Kritiker geprüft und ZURÜCKGEZOGEN:** nichts steht
 auf der Hofmauer (spaltenweise gegen die Mauerformel gerechnet; die einzigen
 Verstöße sind die, die der Quelltext selbst als gewollt ausweist), und die Kamera
