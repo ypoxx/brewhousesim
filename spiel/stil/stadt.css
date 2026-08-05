@@ -232,7 +232,7 @@
      1. rechts von x = 941 px beginnt die HAUSZEILE des Skeletts
         (x 952 y 160, 847 x 39). Deshalb hoert die REITERZEILE bei 33 % der
         Breite auf (33 + 1,2 % Rand = 941 px). Die Lade darunter faengt erst
-        bei y 246 an, also UNTER der Hauszeile, und darf die vollen 46 %
+        bei y 353 an, also weit UNTER der Hauszeile, und darf die vollen 46 %
         nehmen — das sind 410 statt 299 Bezugspixel je Bauknopf und damit
         der Unterschied zwischen "Verwaltungsbau" und "Verwaltungsba".
      2. y = 120 liegt 7 px unter der Kopfleiste (endet 113) — hoeher geht
@@ -275,7 +275,7 @@
 /* Die Reiterzeile ist SCHMALER als die Lade darunter, und das ist gerechnet:
    die Reiter liegen auf der Hoehe der Hauszeile des Skeletts (x 952 bis
    1799, y 160 bis 199) und muessen vor ihr enden — 33 % der Buehne sind
-   941 px. Die Lade beginnt erst bei y 246, also UNTER der Hauszeile, und
+   941 px. Die Lade beginnt erst bei y 353, also weit UNTER der Hauszeile, und
    darf deshalb die vollen 46 % nehmen. Das ist der Unterschied zwischen
    410 und 299 Bezugspixeln je Bauknopf, und damit zwischen
    "Verwaltungsbau" und "Verwaltungsba". */

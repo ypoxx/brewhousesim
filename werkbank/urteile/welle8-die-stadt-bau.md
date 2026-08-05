@@ -51,12 +51,19 @@ Daraus folgt für Teil A: es muss die **ganze Werkbank** umziehen.
 
 ## BEFUND 2 — der Stand der Reiter war NICHT „alles steht"
 
-Auf der Entwurfsleinwand 2752×1536 zeigen zwei der zehn Reiter als Namen nur
-„…" (im Bildschirmfoto `stadt-w8/vor-e1.png` der dritte und der fünfte).
+Auf der Entwurfsleinwand 2752×1536 stehen in 1350 **drei von zehn Namen und
+vier von zehn Kennzahlen gekürzt** da; zwei der drei Namen sind auf ein blankes
+„…" zusammengeschrumpft (im Bildschirmfoto `stadt-w8/vor-e1.png` der dritte und
+der fünfte Reiter). Bei 1366×768 sind es zwei Namen und sieben Kennzahlen.
 `setzeAufschrift()` (stadt.js:640) kürzt sauber statt abzuschneiden — die
 vierte Latte zählt deshalb null Überläufe —, aber **auf dem Schirm steht
 weniger als der volle Name.** Zehn Reiter brauchen rund 2.300 Bezugspixel und
 haben in der Zeile 1.688.
+
+> **Ein Überlaufzähler kann diese Regression nicht sehen.** Deshalb steht
+> `stadt-w8/reiterprobe.mjs` daneben: es liest den *gezeigten* Text gegen den
+> vollen Titel. Ohne dieses Gerät hätte ich Teil A für erledigt halten können,
+> während auf dem Schirm „…" steht.
 
 Das ist die eigentliche Chance von Teil A: eine Werkbank, die **umbricht**,
 hat mehr Zeilenlänge als eine, die in einer Zeile bleibt.
@@ -73,9 +80,9 @@ hat mehr Zeilenlänge als eine, die in einer Zeile bleibt.
 | 1970 | 27,7 % | 59,5 % | 8,0 % | **47,1 %** |
 
 Roh: `werkbank/schuss/stadt-w8/deckung-vorher.txt`,
-`werkbank/schuss/stadt-w8/deckkarte-vorher.json`.
-
-*(wird fortgeschrieben)*
+`werkbank/schuss/stadt-w8/deckkarte-vorher.json`. Die Zahlen stimmen mit denen
+der Aufsicht (27,1–28,2 % / 59,5–60,7 %) Ziffer für Ziffer überein — das ist
+die Gerätekontrolle vor dem ersten Handgriff.
 
 ---
 
@@ -94,7 +101,7 @@ drei gleichen Spalten.
 
 1. Rechts von x = 941 px beginnt die **Hauszeile des Skeletts** (x 952, y 160,
    847 × 39). Deshalb endet die *Reiterzeile* bei 33 %. Die *Lade* beginnt erst
-   bei y 246, also unter der Hauszeile, und darf die vollen 46 % nehmen — das
+   bei y 353, also weit unter der Hauszeile, und darf die vollen 46 % nehmen — das
    ist der Unterschied zwischen 410 und 299 Bezugspixeln je Bauknopf und damit
    zwischen „Verwaltungsbau" und „Verwaltungsba".
 2. y = 120 liegt 7 px unter der Kopfleiste (endet bei 113).
@@ -260,3 +267,18 @@ einzige fremde Datei wiegt mehr als die ganze Hoffracht.** Die Umstellung von
 PNG auf WebP hat in Welle 7 für die 32 Hofbilder 27 → 13 MB gebracht;
 dasselbe Gerät (`stadt-gewicht/umpacken.mjs`) liegt im Repo und ist auf jeden
 Ordner anwendbar.
+
+## „Was gegraben wird, bleibt" — nachgewiesen, nicht behauptet
+
+`diff` der gesicherten Fassung gegen die neue, Block `aufbauten` in
+`stadt-daten.js`: **byteweise identisch**. Über die ganze Datei gibt es
+**null entfernte Zeilen** — die Welle hat nur die Tabelle `fracht` hinzugefügt.
+Kein Ort, kein `dx`, kein `dy`, keine `breite` eines Aufbaus ist angefasst.
+Der Ziehbrunnen steht, wo er 1350 gegraben wurde.
+
+In `stadt.js` sind elf Zeilen entfernt, alle in **zwei Kommentaren**, die den
+alten Vertrag der Werkbank beschrieben („sie fängt erst bei 87,5 Prozent der
+Höhe an"). In `stadt.css` sind es vierzehn Zeilen, alle in den drei Regeln,
+die diese Welle absichtlich umschreibt (`bottom`/`width` der Werkbank,
+`nowrap`+`ellipsis` an Reitername und Kennzahl, `flex` der Bauzeile) plus die
+zurückgenommene 80-%-Zeile. `stadt-zusatz.js`: unverändert.
