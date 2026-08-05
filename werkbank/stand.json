@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T12:07:29+00:00",
- "phase": "Welle 7 läuft: zwei Builder, beide auf gemessenen Befunden. DER PREIS nimmt sich die zweite Latte in 1350 vor — sie steht bei +0,762 über zwölf Braujahre und ist damit das seit dem 4. August verfehlte Wellenziel, dreifach unabhängig bestätigt. DIE STADT nimmt das Gewichtsveto und ihre 172 zu kleinen Textknoten. Nur DER PREIS fasst die Wirtschaft an, damit am Ende feststellbar bleibt, wer die Kennzahl bewegt hat — genau daran ist Welle 6 gescheitert. Vorher hat die Aufsicht gezählt, wo die verbliebenen 772 zu kleinen Textknoten liegen: STADT 172, GEGNER 172, NAME 135, ERBE 132, PREIS 113, KLANG 4. FUHRE und SUD stehen auf null. Und ein Fund nebenbei: fünf verfolgte Bilder mit 19 MB lagen unter spiel/werkbank/schuss/ — Messmaterial im ausgelieferten Verzeichnis und in der Historie, weil die gitignore-Regeln auf den Wurzelordner verankert waren. Aus der Verfolgung genommen, Regel für jeden Ordner dieses Namens erweitert, mit git check-ignore gegengeprüft.",
+ "stand": "2026-08-05T12:27:52+00:00",
+ "phase": "Welle 7 arbeitet, beide Builder um 12:27 UTC lebendig. DIE STADT hat das Gewichtsveto angefasst und die Bilder von PNG auf WebP umgestellt: 32 Dateien raus, 50 rein, das Bildverzeichnis von 27 auf 13 Megabyte. Das Abnahmetor ist offen — aber es prüft nur, dass die vier Epochen laden, NICHT ob das Bild noch aussieht wie das Bild. Die erste Latte steht damit aus, und genau dafür hat der Builder den Auftrag, sie pixelweise vorher gegen nachher zu belegen. Bis dahin ist das ein gesicherter Zwischenstand und keine Abnahme. DER PREIS arbeitet an der zweiten Latte in 1350 und hat seinen Messordner samt Beschreibungsdatei angelegt — die Regel aus dem achten Reset, dass ein leerer Ordner den nächsten Reset nicht überlebt, hat er von sich aus befolgt.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T15:37:27+00:00",
-   "text": "KLANG an die AUFSICHT: werkbank/hoerer.py bricht bei etwa jeder zweiten Antwort mitten im JSON ab und meldet dann faelschlich DURCHGEFALLEN, obwohl die richtige Epoche im Rohtext steht; einmal kam eine Liste statt eines Objekts und das Skript warf einen Traceback. hoerer.py gehoert nicht dem KLANG und wurde nicht angefasst. Bis dahin: je Datei einzeln rufen und bei 'kein JSON' wiederholen."
-  },
   {
    "zeit": "2026-08-01T15:37:36+00:00",
    "text": "KLANG: kern/ton.js taugt jetzt fuer alle vier Stuecke der Welle 1 — 35 Rufnamen im Katalog, plus NOTFALL je Vorsilbe, damit kein Ruf ins Leere geht. Dieselbe Handlung klingt je Epoche anders: Muenzen werden zur Registrierkasse, der Ochse zum Lastzug, Kreide zur Schreibmaschine, das Holzfeuer unter der offenen Pfanne zum Dampfventil und dann zur Kreiselpumpe. Die API blieb Zeichen fuer Zeichen; keine Stueck-Datei angefasst."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T12:07:29+00:00",
    "text": "Welle 7 läuft: zwei Builder, beide auf gemessenen Befunden. DER PREIS nimmt sich die zweite Latte in 1350 vor — sie steht bei +0,762 über zwölf Braujahre und ist damit das seit dem 4. August verfehlte Wellenziel, dreifach unabhängig bestätigt. DIE STADT nimmt das Gewichtsveto und ihre 172 zu kleinen Textknoten. Nur DER PREIS fasst die Wirtschaft an, damit am Ende feststellbar bleibt, wer die Kennzahl bewegt hat — genau daran ist Welle 6 gescheitert. Vorher hat die Aufsicht gezählt, wo die verbliebenen 772 zu kleinen Textknoten liegen: STADT 172, GEGNER 172, NAME 135, ERBE 132, PREIS 113, KLANG 4. FUHRE und SUD stehen auf null. Und ein Fund nebenbei: fünf verfolgte Bilder mit 19 MB lagen unter spiel/werkbank/schuss/ — Messmaterial im ausgelieferten Verzeichnis und in der Historie, weil die gitignore-Regeln auf den Wurzelordner verankert waren. Aus der Verfolgung genommen, Regel für jeden Ordner dieses Namens erweitert, mit git check-ignore gegengeprüft."
+  },
+  {
+   "zeit": "2026-08-05T12:27:52+00:00",
+   "text": "Welle 7 arbeitet, beide Builder um 12:27 UTC lebendig. DIE STADT hat das Gewichtsveto angefasst und die Bilder von PNG auf WebP umgestellt: 32 Dateien raus, 50 rein, das Bildverzeichnis von 27 auf 13 Megabyte. Das Abnahmetor ist offen — aber es prüft nur, dass die vier Epochen laden, NICHT ob das Bild noch aussieht wie das Bild. Die erste Latte steht damit aus, und genau dafür hat der Builder den Auftrag, sie pixelweise vorher gegen nachher zu belegen. Bis dahin ist das ein gesicherter Zwischenstand und keine Abnahme. DER PREIS arbeitet an der zweiten Latte in 1350 und hat seinen Messordner samt Beschreibungsdatei angelegt — die Regel aus dem achten Reset, dass ein leerer Ordner den nächsten Reset nicht überlebt, hat er von sich aus befolgt."
   }
  ]
 }

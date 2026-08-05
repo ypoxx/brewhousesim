@@ -1,0 +1,5265 @@
+{
+  "fenster": "1366x768",
+  "stand": "2026-08-05T12:27:34.540Z",
+  "e1": {
+    "gesamt": 179,
+    "je_stueck": {
+      "(ohne Stueck)": 2,
+      "stadt": 49,
+      "gegner": 40,
+      "name": 37,
+      "erbe": 41,
+      "kern": 9,
+      "klang": 1
+    },
+    "knoten": [
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "title",
+        "regel": "(geerbt)",
+        "text": "Brauhaus zum Anker — Das Recht (1350)"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "ST. MICHAEL"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "GASTHOF LINDENHOF"
+      },
+      {
+        "px": 8.4,
+        "stueck": "stadt",
+        "klasse": "zeile eins",
+        "regel": "stadt.css { .stadt-hausschild.klein .zeile } calc(var(--s) * 17)",
+        "text": "BRAUHAUS"
+      },
+      {
+        "px": 8.4,
+        "stueck": "stadt",
+        "klasse": "zeile zwei",
+        "regel": "stadt.css { .stadt-hausschild.klein .zeile } calc(var(--s) * 17)",
+        "text": "ZUM ANKER"
+      },
+      {
+        "px": 5.5,
+        "stueck": "stadt",
+        "klasse": "gegr",
+        "regel": "stadt.css { .stadt-hausschild .gegr } calc(var(--s) * 11)",
+        "text": "GEGR. 1350"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-vorschild",
+        "regel": "gegner.css { .gg-vorschild } calc(var(--s) * 14)",
+        "text": "Vorsprung: 2 Dinge · wirbt 2 Wochen kürz"
+      },
+      {
+        "px": 11.9,
+        "stueck": "gegner",
+        "klasse": "gg-name",
+        "regel": "gegner.css { .gg-name } calc(var(--s) * 24)",
+        "text": "Brauhaus zum Adler"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-erbe",
+        "regel": "gegner.css { .gg-erbe } calc(var(--s) * 16)",
+        "text": "Hartmann Feist · streitbar · hält 2 Häus"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "1"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Züge"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "320 Pf"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Kasse"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "9 Pf"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "sein Preis"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-zchip b } calc(var(--s) * 15)",
+        "text": "wirbt"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-zchip i } calc(var(--s) * 13)",
+        "text": "W1"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-stammhaus amort stadt-marke-ruht",
+        "regel": "gegner.css { .gg-stammhaus } calc(var(--s) * 14)",
+        "text": "Adler-Ausschank am Markt"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "TOR · KON"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 56 Pf"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Fass an den Wirt"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "1 Fass statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "FAE · BAN"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 66 Pf"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Fass an den Wirt"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "1 Fass statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-wimpeltext b } calc(var(--s) * 17)",
+        "text": "wirbt · noch 4 Wo."
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-wimpeltext i } calc(var(--s) * 15)",
+        "text": "zuvorkommen 19 Pf"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Fass an den Wirt"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "1 Fass statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-amttext b } calc(var(--s) * 17)",
+        "text": "Klage vor dem Stadtgericht"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-amttext i } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "em",
+        "regel": "gegner-zusatz.css { .gg-amttext em } calc(var(--s) * 14)",
+        "text": "gegen Klosterschenke Obernberg"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-bandtitel",
+        "regel": "gegner.css { .gg-bandtitel } calc(var(--s) * 16)",
+        "text": "Ohne dich geschehen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "gg-bandzahl",
+        "regel": "gegner.css { .gg-bandzahl } calc(var(--s) * 19)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Haus gegenüber"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "(geerbt)",
+        "text": "Gebunden wird hier mit Recht und Gunst"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "gegner.css { .gg-bandwaehrung span } calc(var(--s) * 16)",
+        "text": "Ablösung 56 Pf bis 66 Pf"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Klage vor dem Stadtgericht"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-ohnegeld",
+        "regel": "gegner.css { .gg-ohnegeld } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen · einmal"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "wann",
+        "regel": "gegner.css { .gg-bandzeile .wann } calc(var(--s) * 15)",
+        "text": "1350 W1"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "was",
+        "regel": "(geerbt)",
+        "text": "Brauhaus zum Adler wirbt um Klosterschen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "zeigen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-kennzahl b } calc(var(--s) * 15)",
+        "text": "umkämpft"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "(geerbt)",
+        "text": "Zuvorkommen Klosterschenke Obernberg — 1"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "(geerbt)",
+        "text": "Kasse reicht 5,9×"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-anschlagkopf",
+        "regel": "name.css { .nm-anschlagkopf } calc(var(--s) * 14)",
+        "text": "DER ANKER · Ruf 10"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Umtrunk beim Wirt"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−9 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-fasspreis",
+        "regel": "name.css { .nm-fasspreis } calc(var(--s) * 15)",
+        "text": "− 1 Fass"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "Adler-Ausschank am Mar"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "LIN"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "OCH"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "MUE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "BRU"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "FAE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "OBE"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-titel",
+        "regel": "name.css { .nm-titel } calc(var(--s) * 21)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-medium",
+        "regel": "name.css { .nm-medium } calc(var(--s) * 15)",
+        "text": "Bierzeiger und Zunftzeichen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "▾"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-von",
+        "regel": "name.css { .nm-von } calc(var(--s) * 16)",
+        "text": "Ruf von 100"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Bekanntheit"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "18 ↗"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Einlösung"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "55"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "Gleiches Bier, 100 Fass, zwei Preise"
+      },
+      {
+        "px": 8.4,
+        "stueck": "name",
+        "klasse": "nm-ohne",
+        "regel": "name.css { .nm-ohne } calc(var(--s) * 17)",
+        "text": "ohne das Zeichen 900 Pf"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-mit",
+        "regel": "name.css { .nm-mit } calc(var(--s) * 21)",
+        "text": "mit dem Zeichen 907 Pf"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "+ 0,8 im Hundert · 7 Pf mehr für dieselb"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "AUFGELD AUF DEN ZEIGER — was der Ruf ein"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "diese Woche"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 Pf"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "Braujahr"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 Pf"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "seit 1350"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 Pf"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Noch nichts. Es fällt an, sobald ausgeli"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "s",
+        "regel": "(geerbt)",
+        "text": "und einen höheren Grundpreis je Fass"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Aufgeld nachrechnen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "WAS DER NAME JETZT KOSTET"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Umtrunk beim Wirt"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−9 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-fasspreis",
+        "regel": "name.css { .nm-fasspreis } calc(var(--s) * 15)",
+        "text": "− 1 Fass"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Um das Zunftzeichen bitten"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−45 Pf"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Die ganze Liste dieser Epoche, der Nacha"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen verdecken"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Herumgehen und den Namen sagen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-meldung",
+        "regel": "name.css { .nm-meldung } calc(var(--s) * 16)",
+        "text": "Wer den Zeiger aushängt, hat gesagt, das"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen und das Register"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wort",
+        "regel": "erbe.css { .erb-wort } calc(var(--s) * 19)",
+        "text": "DAS ERBE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-uhr",
+        "regel": "(geerbt)",
+        "text": "noch 14 Wochen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-hand",
+        "regel": "(geerbt)",
+        "text": "I. Kunigunde Bruckner · sparsam · Feder "
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-stand",
+        "regel": "(geerbt)",
+        "text": "am Haus 0 · an der Person 4"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-nimmt",
+        "regel": "(geerbt)",
+        "text": "nimmt 4 · 2 Fass"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verschreiben · Zum Goldenen Ochsen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−16 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Leibgeding · jährlich"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−13 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Abfertigung"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−64 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Mit leeren Händen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis einnahme",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "0 Pf"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "SCHEIDING"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Kasse"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Grut"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Keller"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Woche"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Chronik"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Buch"
+      },
+      {
+        "px": 10.9,
+        "stueck": "kern",
+        "klasse": "hauszeile",
+        "regel": "style=\"\" calc(var(--s)*22)",
+        "text": "Brauhaus zum Anker · 1350/51 · Kunigunde"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "deckung",
+        "regel": "style=\"\" calc(var(--s)*19)",
+        "text": "nächster Zug: Zuvorkommen Klosterschenke"
+      },
+      {
+        "px": 10.9,
+        "stueck": "klang",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "♪"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DIE HÄUSER"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "wollen 15 · im Keller liegen 4 Fass"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "ANSCHLAGTAFEL"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "mit Kreide an der Sudhauswand"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DER KELLER"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "4 von 12 Fass · 4 reif"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "OCHSENKARREN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "0 von 5 Fass · 0 von 4 Halten"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "Bierzeiger und Zunftzeichen"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Das Erbe"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Ortsmarken"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "7 auf dem Pflock"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Stadt zeigen"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "BAUHOF"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "VERSATZ"
+      },
+      {
+        "px": 7.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .stadt-bauhof .kopf .zahl } calc(var(--s) * 16)",
+        "text": "4 Bauten im Hof · gebaut wird einmal, es"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Grutkammer"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−13 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+20 Grut"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Gärbottiche"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−15 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+4 Fass Lagerplatz"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Ochsenstall"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−18 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "fährt, wann das Haus will"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Gewölbekeller"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−21 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+8 Fass Lagerplatz"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Küferei"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−23 Pf"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+4 Fass Lagerplatz"
+      },
+      {
+        "px": 11.9,
+        "stueck": "erbe",
+        "klasse": "erb-name",
+        "regel": "erbe.css { .erb-name } calc(var(--s) * 24)",
+        "text": "Kunigunde Bruckner · sparsam"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-sagt",
+        "regel": "erbe.css { .erb-sagt } calc(var(--s) * 19)",
+        "text": "„Hält das Geld zusammen, versäumt die Ge"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wirkt",
+        "regel": "erbe.css { .erb-wirkt } calc(var(--s) * 19)",
+        "text": "Schreibgeld um ein Drittel billiger — si"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-regel",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Was im Stadtbuch steht, haftet am Haus. "
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-frist",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Die Stunde kommt in 14 Wochen — 5. Jänne"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AM HAUS · 0 — geht über, wer immer die K"
+      },
+      {
+        "px": 8.9,
+        "stueck": "erbe",
+        "klasse": "erb-leer",
+        "regel": "erbe.css { .erb-leer } calc(var(--s) * 18)",
+        "text": "Nichts. Alles hängt an einem Menschen."
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AN DER PERSON · 4 — fällt mit der Hand, "
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Zum Goldenen Ochsen"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−16 Pf"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Pfarrschenke St. Michael"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−8 Pf"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Landgasthof Hirsch"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−11 Pf"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Ausschank am Markt"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−6 Pf"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "DIE HÄNDE · 1"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "I. Kunigunde Bruckner"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "sparsam"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "p",
+        "regel": "erbe.css { .erb-satz .p } calc(var(--s) * 17)",
+        "text": "Feder 0,70×"
+      },
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "noscript",
+        "regel": "(geerbt)",
+        "text": "<p class=\"ohne-skript\">Dieses Spiel brau"
+      }
+    ]
+  },
+  "e2": {
+    "gesamt": 183,
+    "je_stueck": {
+      "(ohne Stueck)": 2,
+      "stadt": 49,
+      "gegner": 44,
+      "name": 37,
+      "erbe": 41,
+      "kern": 9,
+      "klang": 1
+    },
+    "knoten": [
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "title",
+        "regel": "(geerbt)",
+        "text": "Brauhaus zum Anker — Die Ordnung (1600)"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "ST. MICHAEL"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "GASTHOF LINDENHOF"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "zeile eins",
+        "regel": "stadt.css { .stadt-hausschild .zeile } calc(var(--s) * 21)",
+        "text": "BRAUHAUS"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "zeile zwei",
+        "regel": "stadt.css { .stadt-hausschild .zeile } calc(var(--s) * 21)",
+        "text": "ZUM ANKER"
+      },
+      {
+        "px": 5.5,
+        "stueck": "stadt",
+        "klasse": "gegr",
+        "regel": "stadt.css { .stadt-hausschild .gegr } calc(var(--s) * 11)",
+        "text": "GEGR. 1350"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-vorschild",
+        "regel": "gegner.css { .gg-vorschild } calc(var(--s) * 14)",
+        "text": "Vorsprung: 1 Ding · wirbt 1 Woche kürzer"
+      },
+      {
+        "px": 11.9,
+        "stueck": "gegner",
+        "klasse": "gg-name",
+        "regel": "gegner.css { .gg-name } calc(var(--s) * 24)",
+        "text": "Braustatt Adler"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-erbe",
+        "regel": "gegner.css { .gg-erbe } calc(var(--s) * 16)",
+        "text": "Sebastian Feist · streitbar · hält 3 Häu"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "1"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Züge"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "2.200 fl"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Kasse"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "22 fl"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "sein Preis"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-zchip b } calc(var(--s) * 15)",
+        "text": "wirbt"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-zchip i } calc(var(--s) * 13)",
+        "text": "W1"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-stammhaus amort stadt-marke-ruht",
+        "regel": "gegner.css { .gg-stammhaus } calc(var(--s) * 14)",
+        "text": "Adler-Ausschank am Markt"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "OCH · PAC"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 588 fl"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Fass in die Lade"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "1 Fass statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-wimpeltext b } calc(var(--s) * 17)",
+        "text": "wirbt · noch 6 Wo."
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-wimpeltext i } calc(var(--s) * 15)",
+        "text": "zuvorkommen 170 fl"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Fass in die Lade"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "1 Fass statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "BRU · HEI"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 231 fl"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Fass in die Lade"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "1 Fass statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "OBE · ZUN"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 216 fl"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Fass in die Lade"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "1 Fass statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-amttext b } calc(var(--s) * 17)",
+        "text": "Anzeige bei der Zunftlade"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-amttext i } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "em",
+        "regel": "gegner-zusatz.css { .gg-amttext em } calc(var(--s) * 14)",
+        "text": "gegen Mühlschenke"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-bandtitel",
+        "regel": "gegner.css { .gg-bandtitel } calc(var(--s) * 16)",
+        "text": "Ohne dich geschehen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "gg-bandzahl",
+        "regel": "gegner.css { .gg-bandzahl } calc(var(--s) * 19)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Haus gegenüber"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "(geerbt)",
+        "text": "Gebunden wird hier mit Recht und Gunst —"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "gegner.css { .gg-bandwaehrung span } calc(var(--s) * 16)",
+        "text": "Ablösung 216 fl bis 588 fl"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Anzeige bei der Zunftlade"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-ohnegeld",
+        "regel": "gegner.css { .gg-ohnegeld } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen · einmal"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "wann",
+        "regel": "gegner.css { .gg-bandzeile .wann } calc(var(--s) * 15)",
+        "text": "1600 W1"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "was",
+        "regel": "(geerbt)",
+        "text": "Braustatt Adler wirbt um Mühlschenke: Er"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "zeigen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-kennzahl b } calc(var(--s) * 15)",
+        "text": "umkämpft"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "(geerbt)",
+        "text": "Zuvorkommen Mühlschenke — 170 fl ·"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "(geerbt)",
+        "text": "Kasse reicht 3,8×"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-anschlagkopf",
+        "regel": "name.css { .nm-anschlagkopf } calc(var(--s) * 14)",
+        "text": "DER ANKER · Ruf 16"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Freitrunk zur Kirchweih geben"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−18 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-fasspreis",
+        "regel": "name.css { .nm-fasspreis } calc(var(--s) * 15)",
+        "text": "− 1 Fass"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "Adler-Ausschank am Mar"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "LIN"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "OCH"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "MUE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "BRU"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "FAE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "OBE"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-titel",
+        "regel": "name.css { .nm-titel } calc(var(--s) * 21)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-medium",
+        "regel": "name.css { .nm-medium } calc(var(--s) * 15)",
+        "text": "Wirtshausschild und gemarkter Krug"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "▾"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-von",
+        "regel": "name.css { .nm-von } calc(var(--s) * 16)",
+        "text": "Ruf von 100"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Bekanntheit"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "27 ↘"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Einlösung"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "58"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "Gleiches Bier, 100 Fass, zwei Preise"
+      },
+      {
+        "px": 8.4,
+        "stueck": "name",
+        "klasse": "nm-ohne",
+        "regel": "name.css { .nm-ohne } calc(var(--s) * 17)",
+        "text": "ohne das Zeichen 2.200 fl"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-mit",
+        "regel": "name.css { .nm-mit } calc(var(--s) * 21)",
+        "text": "mit dem Zeichen 2.246 fl"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "+ 2,1 im Hundert · 46 fl mehr für diesel"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "AUFGELD AUF DEN ANKER — was der Ruf eing"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "diese Woche"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 fl"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "Braujahr"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 fl"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "seit 1600"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 fl"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Noch nichts. Es fällt an, sobald ausgeli"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "s",
+        "regel": "(geerbt)",
+        "text": "und einen höheren Grundpreis je Fass"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Aufgeld nachrechnen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "WAS DER NAME JETZT KOSTET"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Freitrunk zur Kirchweih geben"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−18 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-fasspreis",
+        "regel": "name.css { .nm-fasspreis } calc(var(--s) * 15)",
+        "text": "− 1 Fass"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Den gemarkten Krug einführen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−260 fl"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Die ganze Liste dieser Epoche, der Nacha"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen verdecken"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Herumgehen und den Namen sagen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-meldung",
+        "regel": "name.css { .nm-meldung } calc(var(--s) * 16)",
+        "text": "Der Name wohnt jetzt in fremden Häusern."
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen und das Register"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wort",
+        "regel": "erbe.css { .erb-wort } calc(var(--s) * 19)",
+        "text": "DAS ERBE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-uhr",
+        "regel": "(geerbt)",
+        "text": "noch 12 Wochen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-hand",
+        "regel": "(geerbt)",
+        "text": "I. Barbara Bruckner · sparsam · Feder 0,"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-stand",
+        "regel": "(geerbt)",
+        "text": "am Haus 0 · an der Person 4"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-nimmt",
+        "regel": "(geerbt)",
+        "text": "nimmt 4 · 3 Fass"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verbriefen · Lindenhof"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−104 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Ausgedinge · jährlich"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−76 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Abfindung"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−379 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Ohne Vergleich"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis einnahme",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "0 fl"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "SCHEIDING"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Kasse"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Hopfen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Gewölbe"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Woche"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Chronik"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Buch"
+      },
+      {
+        "px": 10.9,
+        "stueck": "kern",
+        "klasse": "hauszeile",
+        "regel": "style=\"\" calc(var(--s)*22)",
+        "text": "Brauhaus zum Anker · 1600/01 · Barbara B"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "deckung",
+        "regel": "style=\"\" calc(var(--s)*19)",
+        "text": "nächster Zug: Zuvorkommen Mühlschenke — "
+      },
+      {
+        "px": 10.9,
+        "stueck": "klang",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "♪"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DIE HÄUSER"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "wollen 28 · im Keller liegen 8 Fass"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "SUDORDNUNG"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "auf der Tafel im Sudhaus"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DAS GEWÖLBE"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "8 von 24 Fass · 8 reif"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "PFERDEFUHRWERK"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "0 von 8 Fass · 0 von 5 Halten"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "Wirtshausschild und gemarkter Krug"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Das Erbe"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Ortsmarken"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "7 auf dem Pflock"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Stadt zeigen"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "BAUHOF"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "WIEDERKAUF"
+      },
+      {
+        "px": 7.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .stadt-bauhof .kopf .zahl } calc(var(--s) * 16)",
+        "text": "6 Bauten im Hof · gebaut wird einmal, es"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Gärbottiche"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−72 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+4 Fass Lagerplatz"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Waschhaus"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−96 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "das Fass bleibt sauber"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Kontor"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−114 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "Ordnung im Buch"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Rossmühle"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−120 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+1 Sud je Woche"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Hopfenlager"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−120 fl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+60 Hopfen"
+      },
+      {
+        "px": 11.9,
+        "stueck": "erbe",
+        "klasse": "erb-name",
+        "regel": "erbe.css { .erb-name } calc(var(--s) * 24)",
+        "text": "Barbara Bruckner · sparsam"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-sagt",
+        "regel": "erbe.css { .erb-sagt } calc(var(--s) * 19)",
+        "text": "„Hält das Geld zusammen, versäumt die Ge"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wirkt",
+        "regel": "erbe.css { .erb-wirkt } calc(var(--s) * 19)",
+        "text": "Schreibgeld um ein Drittel billiger — si"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-regel",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Ein Brief mit Siegel hängt am Anwesen un"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-frist",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Die Stunde kommt in 12 Wochen — 22. Chri"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AM HAUS · 0 — geht über, wer immer die K"
+      },
+      {
+        "px": 8.9,
+        "stueck": "erbe",
+        "klasse": "erb-leer",
+        "regel": "erbe.css { .erb-leer } calc(var(--s) * 18)",
+        "text": "Nichts. Alles hängt an einem Menschen."
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AN DER PERSON · 4 — fällt mit der Hand, "
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Gasthof Lindenhof"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verbriefen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−104 fl"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Schenke am Tor"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verbriefen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−46 fl"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Fährhaus am Fluss"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verbriefen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−35 fl"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Landgasthof Hirsch"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verbriefen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−58 fl"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "DIE HÄNDE · 1"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "I. Barbara Bruckner"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "sparsam"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "p",
+        "regel": "erbe.css { .erb-satz .p } calc(var(--s) * 17)",
+        "text": "Feder 0,70×"
+      },
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "noscript",
+        "regel": "(geerbt)",
+        "text": "<p class=\"ohne-skript\">Dieses Spiel brau"
+      }
+    ]
+  },
+  "e3": {
+    "gesamt": 181,
+    "je_stueck": {
+      "(ohne Stueck)": 2,
+      "stadt": 49,
+      "gegner": 42,
+      "name": 37,
+      "erbe": 41,
+      "kern": 9,
+      "klang": 1
+    },
+    "knoten": [
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "title",
+        "regel": "(geerbt)",
+        "text": "Brauhaus zum Anker — Die Maschine (1884)"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "ST. MICHAEL"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "GASTHOF LINDENHOF"
+      },
+      {
+        "px": 8.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "BAHNHOF"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "zeile eins",
+        "regel": "stadt.css { .stadt-hausschild .zeile } calc(var(--s) * 21)",
+        "text": "BRAUHAUS"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "zeile zwei",
+        "regel": "stadt.css { .stadt-hausschild .zeile } calc(var(--s) * 21)",
+        "text": "ZUM ANKER"
+      },
+      {
+        "px": 5.5,
+        "stueck": "stadt",
+        "klasse": "gegr",
+        "regel": "stadt.css { .stadt-hausschild .gegr } calc(var(--s) * 11)",
+        "text": "GEGR. 1350"
+      },
+      {
+        "px": 11.9,
+        "stueck": "gegner",
+        "klasse": "gg-name",
+        "regel": "gegner.css { .gg-name } calc(var(--s) * 24)",
+        "text": "Brauerei Adler"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-erbe",
+        "regel": "gegner.css { .gg-erbe } calc(var(--s) * 16)",
+        "text": "Kommerzienrat Alois Feist · gelehrt · hä"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "1"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Züge"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "62.000 M"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Kasse"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "48 M"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "sein Preis"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-zchip b } calc(var(--s) * 15)",
+        "text": "wirbt"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-zchip i } calc(var(--s) * 13)",
+        "text": "W1"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "LIN · HYP"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 17.741 M"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Freibier"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "3,0 hl statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "MUE · DEP"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 5.193 M"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Freibier"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "3,0 hl statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-wimpeltext b } calc(var(--s) * 17)",
+        "text": "wirbt · noch 3 Wo."
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-wimpeltext i } calc(var(--s) * 15)",
+        "text": "zuvorkommen 1.782 M"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Freibier"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "3,0 hl statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "MKT · VER"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 1.706 M"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Freibier"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "3,0 hl statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-amttext b } calc(var(--s) * 17)",
+        "text": "Dem Wirt die Restschuld nachrechnen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-amttext i } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "em",
+        "regel": "gegner-zusatz.css { .gg-amttext em } calc(var(--s) * 14)",
+        "text": "gegen Brückenwirt"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-bandtitel",
+        "regel": "gegner.css { .gg-bandtitel } calc(var(--s) * 16)",
+        "text": "Ohne dich geschehen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "gg-bandzahl",
+        "regel": "gegner.css { .gg-bandzahl } calc(var(--s) * 19)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Haus gegenüber"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "(geerbt)",
+        "text": "Gebunden wird jetzt mit Der Vertrag — Da"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "gegner.css { .gg-bandwaehrung span } calc(var(--s) * 16)",
+        "text": "Ablösung 1.706 M bis 17.741 M"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Dem Wirt die Restschuld nachrechnen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-ohnegeld",
+        "regel": "gegner.css { .gg-ohnegeld } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen · einmal"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "wann",
+        "regel": "gegner.css { .gg-bandzeile .wann } calc(var(--s) * 15)",
+        "text": "1884 W1"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "was",
+        "regel": "(geerbt)",
+        "text": "Brauerei Adler wirbt um Brückenwirt: Er "
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "zeigen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-kennzahl b } calc(var(--s) * 15)",
+        "text": "umkämpft"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "(geerbt)",
+        "text": "Ablösung Ausschank am Markt — 1.706 M ·"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "(geerbt)",
+        "text": "Kasse reicht 8,4×"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-anschlagkopf",
+        "regel": "name.css { .nm-anschlagkopf } calc(var(--s) * 14)",
+        "text": "DER ANKER · Ruf 25"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Annonce im Wochenblatt"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−240 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "LIN"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "OCH"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "MUE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "BRU"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "FAE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "BHF"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-titel",
+        "regel": "name.css { .nm-titel } calc(var(--s) * 21)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-medium",
+        "regel": "name.css { .nm-medium } calc(var(--s) * 15)",
+        "text": "Etikett, Plakat, Litfaßsäule"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "▾"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-von",
+        "regel": "name.css { .nm-von } calc(var(--s) * 16)",
+        "text": "Ruf von 100"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Bekanntheit"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "41 ↘"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Einlösung"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "60"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "Gleiches Bier, 100 hl, zwei Preise"
+      },
+      {
+        "px": 8.4,
+        "stueck": "name",
+        "klasse": "nm-ohne",
+        "regel": "name.css { .nm-ohne } calc(var(--s) * 17)",
+        "text": "ohne das Zeichen 4.800 M"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-mit",
+        "regel": "name.css { .nm-mit } calc(var(--s) * 21)",
+        "text": "mit dem Zeichen 5.052 M"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "+ 5,3 im Hundert · 252 M mehr für diesel"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "AUFGELD AUF DIE MARKE — was der Ruf eing"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "diese Woche"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 M"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "Braujahr"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 M"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "seit 1884"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 M"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Noch nichts. Es fällt an, sobald ausgeli"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "s",
+        "regel": "(geerbt)",
+        "text": "und einen höheren Grundpreis je Hektolit"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Aufgeld nachrechnen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "WAS DER NAME JETZT KOSTET · 22 von 40 Bo"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Annonce im Wochenblatt"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−240 M"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Plakate anschlagen lassen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−1.600 M"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Litfaßsäule mieten"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−2.400 M"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Die ganze Liste dieser Epoche, der Nacha"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen verdecken"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Herumgehen und den Namen sagen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-meldung",
+        "regel": "name.css { .nm-meldung } calc(var(--s) * 16)",
+        "text": "Zum ersten Mal reist der Name ohne das F"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen und das Register"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wort",
+        "regel": "erbe.css { .erb-wort } calc(var(--s) * 19)",
+        "text": "DAS ERBE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-uhr",
+        "regel": "(geerbt)",
+        "text": "noch 16 Wochen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-hand",
+        "regel": "(geerbt)",
+        "text": "I. Wilhelmine Bruckner · sparsam · Feder"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-stand",
+        "regel": "(geerbt)",
+        "text": "am Haus 0 · an der Person 4"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-nimmt",
+        "regel": "(geerbt)",
+        "text": "nimmt 4 · 4,5 hl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Eintragen · Bahnhofsgaststätte"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−2.280 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Leibrente · jährlich"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−1.657 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Abfindung"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−8.286 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Ohne Abfindung"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis einnahme",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "0 M"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "SEPTEMBER"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Kasse"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Hopfen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Eiskeller"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Woche"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Chronik"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Buch"
+      },
+      {
+        "px": 10.9,
+        "stueck": "kern",
+        "klasse": "hauszeile",
+        "regel": "style=\"\" calc(var(--s)*22)",
+        "text": "Brauhaus zum Anker · 1884/85 · Wilhelmin"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "deckung",
+        "regel": "style=\"\" calc(var(--s)*19)",
+        "text": "nächster Zug: Ablösung Ausschank am Mark"
+      },
+      {
+        "px": 10.9,
+        "stueck": "klang",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "♪"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DIE HÄUSER"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "wollen 146 · im Keller liegen 11 hl"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "SUDPLAN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "am schwarzen Brett der Mälzerei"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DER EISKELLER"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "11 von 135 hl · 11 reif"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "HALBER WAGEN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "0,0 von 60 hl · 0 von 10 Halten"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "Etikett, Plakat, Litfaßsäule"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Das Erbe"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Ortsmarken"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "6 auf dem Pflock"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Stadt zeigen"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "BAUHOF"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "HYPOTHEK"
+      },
+      {
+        "px": 7.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .stadt-bauhof .kopf .zahl } calc(var(--s) * 16)",
+        "text": "7 Bauten im Hof · gebaut wird einmal, es"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Kontor"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−1.406 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "Ordnung im Buch"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Hopfenlager"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−1.480 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+60 Hopfen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Pferdestall"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−1.628 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "die Fuhre fährt schneller"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Mälzereiturm"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−3.145 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+120 Hopfen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Flaschenhalle"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−3.700 M"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+20 Fass Lagerplatz"
+      },
+      {
+        "px": 11.9,
+        "stueck": "erbe",
+        "klasse": "erb-name",
+        "regel": "erbe.css { .erb-name } calc(var(--s) * 24)",
+        "text": "Wilhelmine Bruckner · sparsam"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-sagt",
+        "regel": "erbe.css { .erb-sagt } calc(var(--s) * 19)",
+        "text": "„Hält das Geld zusammen, versäumt die Ge"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wirkt",
+        "regel": "erbe.css { .erb-wirkt } calc(var(--s) * 19)",
+        "text": "Schreibgeld um ein Drittel billiger — si"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-regel",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Was im Hypothekenbuch steht, geht mit de"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-frist",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Die Stunde kommt in 16 Wochen — 19. Janu"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AM HAUS · 0 — geht über, wer immer die K"
+      },
+      {
+        "px": 8.9,
+        "stueck": "erbe",
+        "klasse": "erb-leer",
+        "regel": "erbe.css { .erb-leer } calc(var(--s) * 18)",
+        "text": "Nichts. Alles hängt an einem Menschen."
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AN DER PERSON · 4 — fällt mit der Hand, "
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Zum Goldenen Ochsen"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Eintragen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−1.330 M"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Schenke am Tor"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Eintragen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−760 M"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Brückenwirt"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Eintragen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−1.045 M"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Bahnhofsgaststätte"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Eintragen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−2.280 M"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "DIE HÄNDE · 1"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "I. Wilhelmine Bruckner"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "sparsam"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "p",
+        "regel": "erbe.css { .erb-satz .p } calc(var(--s) * 17)",
+        "text": "Feder 0,70×"
+      },
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "noscript",
+        "regel": "(geerbt)",
+        "text": "<p class=\"ohne-skript\">Dieses Spiel brau"
+      }
+    ]
+  },
+  "e4": {
+    "gesamt": 181,
+    "je_stueck": {
+      "(ohne Stueck)": 2,
+      "stadt": 44,
+      "gegner": 46,
+      "name": 38,
+      "erbe": 41,
+      "kern": 9,
+      "klang": 1
+    },
+    "knoten": [
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "title",
+        "regel": "(geerbt)",
+        "text": "Brauhaus zum Anker — Die Marke (1970)"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "ST. MICHAEL"
+      },
+      {
+        "px": 10.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "GASTHOF LINDENHOF"
+      },
+      {
+        "px": 8.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "BAHNHOF"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "zeile eins",
+        "regel": "stadt.css { .stadt-hausschild.hell .zeile } calc(var(--s) * 20)",
+        "text": "BRAUHAUS"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "zeile zwei",
+        "regel": "stadt.css { .stadt-hausschild.hell .zeile } calc(var(--s) * 20)",
+        "text": "ZUM ANKER"
+      },
+      {
+        "px": 11.9,
+        "stueck": "gegner",
+        "klasse": "gg-name",
+        "regel": "gegner.css { .gg-name } calc(var(--s) * 24)",
+        "text": "Adler-Bräu AG"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-erbe",
+        "regel": "gegner.css { .gg-erbe } calc(var(--s) * 16)",
+        "text": "Dr. Werner Feist · gelehrt · hält 3 Häus"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "1"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Züge"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "1.193.110 DM"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Kasse"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "130 DM"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "sein Preis"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-zchip b } calc(var(--s) * 15)",
+        "text": "kauft sich ins Regal"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-zchip i } calc(var(--s) * 13)",
+        "text": "W1"
+      },
+      {
+        "px": 11.9,
+        "stueck": "gegner",
+        "klasse": "gg-name",
+        "regel": "gegner.css { .gg-name } calc(var(--s) * 24)",
+        "text": "Nordstern-Gruppe"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-erbe",
+        "regel": "gegner.css { .gg-erbe } calc(var(--s) * 16)",
+        "text": "Ute Nordstern · träge · hält 0 Häuser"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "0"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Züge"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "4.200.000 DM"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Kasse"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-feld b } calc(var(--s) * 18)",
+        "text": "0"
+      },
+      {
+        "px": 6.5,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-feld i } calc(var(--s) * 13)",
+        "text": "Brauereien"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "BRU · LIS"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 38.221 DM"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Zuschuss in Bier"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "4,5 hl statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "HIR · JVB"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 40.500 DM"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Zuschuss in Bier"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "4,5 hl statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner.css { .gg-schildtext b } calc(var(--s) * 17)",
+        "text": "BHF · LIS"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner.css { .gg-schildtext i } calc(var(--s) * 15)",
+        "text": "ablösen 58.320 DM"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)",
+        "text": "Zuschuss in Bier"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)",
+        "text": "4,5 hl statt Geld"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-amttext b } calc(var(--s) * 17)",
+        "text": "Anzeige beim Bundeskartellamt"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "gegner-zusatz.css { .gg-amttext i } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "em",
+        "regel": "gegner-zusatz.css { .gg-amttext em } calc(var(--s) * 14)",
+        "text": "gegen Bahnhofsgaststätte"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "gg-bandtitel",
+        "regel": "gegner.css { .gg-bandtitel } calc(var(--s) * 16)",
+        "text": "Ohne dich geschehen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "gg-bandzahl",
+        "regel": "gegner.css { .gg-bandzahl } calc(var(--s) * 19)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Haus gegenüber"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "(geerbt)",
+        "text": "Gebunden wird jetzt mit Die Listung — Ge"
+      },
+      {
+        "px": 7.9,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "gegner.css { .gg-bandwaehrung span } calc(var(--s) * 16)",
+        "text": "Ablösung 38.221 DM bis 58.320 DM"
+      },
+      {
+        "px": 8.4,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Anzeige beim Bundeskartellamt"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "gg-ohnegeld",
+        "regel": "gegner.css { .gg-ohnegeld } calc(var(--s) * 14)",
+        "text": "kostet kein Geld · vier Ansehen · einmal"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "wann",
+        "regel": "gegner.css { .gg-bandzeile .wann } calc(var(--s) * 15)",
+        "text": "1970 W1"
+      },
+      {
+        "px": 8.9,
+        "stueck": "gegner",
+        "klasse": "was",
+        "regel": "(geerbt)",
+        "text": "Der Adler erhöht den Werbekostenzuschuss"
+      },
+      {
+        "px": 6.9,
+        "stueck": "gegner",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "zeigen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "gegner",
+        "klasse": "b",
+        "regel": "gegner-zusatz.css { .gg-kennzahl b } calc(var(--s) * 15)",
+        "text": "umkämpft"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "span",
+        "regel": "(geerbt)",
+        "text": "Ablösung Brückenwirt — 38.221 DM ·"
+      },
+      {
+        "px": 9.4,
+        "stueck": "gegner",
+        "klasse": "i",
+        "regel": "(geerbt)",
+        "text": "Kasse reicht 2,3×"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-anschlagkopf",
+        "regel": "name.css { .nm-anschlagkopf } calc(var(--s) * 14)",
+        "text": "DER ANKER · Ruf 33"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Bierdeckel drucken lassen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−1.800 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "LIN"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "OCH"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "MUE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "BRU"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)",
+        "text": "BHF"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-titel",
+        "regel": "name.css { .nm-titel } calc(var(--s) * 21)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-medium",
+        "regel": "name.css { .nm-medium } calc(var(--s) * 15)",
+        "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "▾"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-von",
+        "regel": "name.css { .nm-von } calc(var(--s) * 16)",
+        "text": "Ruf von 100"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Bekanntheit"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "53 ↘"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bname",
+        "regel": "(geerbt)",
+        "text": "Einlösung"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-bwert",
+        "regel": "(geerbt)",
+        "text": "62"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "Gleiches Bier, 100 hl, zwei Preise"
+      },
+      {
+        "px": 8.4,
+        "stueck": "name",
+        "klasse": "nm-ohne",
+        "regel": "name.css { .nm-ohne } calc(var(--s) * 17)",
+        "text": "ohne das Zeichen 13.000 DM"
+      },
+      {
+        "px": 10.4,
+        "stueck": "name",
+        "klasse": "nm-mit",
+        "regel": "name.css { .nm-mit } calc(var(--s) * 21)",
+        "text": "mit dem Zeichen 14.373 DM"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "+ 10,6 im Hundert · 1.373 DM mehr für di"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "AUFGELD AUF DEN NAMEN — was der Ruf eing"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "diese Woche"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 DM"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "Braujahr"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 DM"
+      },
+      {
+        "px": 6.5,
+        "stueck": "name",
+        "klasse": "i",
+        "regel": "name.css { .nm-geldpost i } calc(var(--s) * 13)",
+        "text": "seit 1970"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "b",
+        "regel": "name.css { .nm-geldpost b } calc(var(--s) * 18)",
+        "text": "0 DM"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Noch nichts. Es fällt an, sobald ausgeli"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "s",
+        "regel": "(geerbt)",
+        "text": "und einen höheren Grundpreis je Hektolit"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Aufgeld nachrechnen"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-satzkopf",
+        "regel": "name.css { .nm-satzkopf } calc(var(--s) * 14)",
+        "text": "WAS DER NAME JETZT KOSTET · 2 von 3 Post"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Bierdeckel drucken lassen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−1.800 DM"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Kastenaktion beim Handel"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−2.600 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "name",
+        "klasse": "nm-fasspreis",
+        "regel": "name.css { .nm-fasspreis } calc(var(--s) * 15)",
+        "text": "− 12 hl"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Anzeige im Anzeigenblatt"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "preis",
+        "regel": "name.css { .nm-knopf .preis } calc(var(--s) * 16)",
+        "text": "−9.000 DM"
+      },
+      {
+        "px": 6.9,
+        "stueck": "name",
+        "klasse": "nm-klein",
+        "regel": "name.css { .nm-klein } calc(var(--s) * 14)",
+        "text": "Die ganze Liste dieser Epoche, der Nacha"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen verdecken"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Herumgehen und den Namen sagen"
+      },
+      {
+        "px": 7.9,
+        "stueck": "name",
+        "klasse": "nm-meldung",
+        "regel": "name.css { .nm-meldung } calc(var(--s) * 16)",
+        "text": "Der Etat läuft jedes Jahr neu ab und trä"
+      },
+      {
+        "px": 8.9,
+        "stueck": "name",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Das Zeichen und das Register"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wort",
+        "regel": "erbe.css { .erb-wort } calc(var(--s) * 19)",
+        "text": "DAS ERBE"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-uhr",
+        "regel": "(geerbt)",
+        "text": "noch 11 Wochen"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-hand",
+        "regel": "(geerbt)",
+        "text": "I. Margarete Bruckner · sparsam · Feder "
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-stand",
+        "regel": "(geerbt)",
+        "text": "am Haus 0 · an der Person 4"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "erb-nimmt",
+        "regel": "(geerbt)",
+        "text": "nimmt 4 · 71 hl"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Festschreiben · Lindenhof"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−14.706 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Versorgungszusage · jährlich"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−11.682 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Abfindung"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−58.409 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Ohne Abfindung"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis einnahme",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "0 DM"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "SEPTEMBER"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Kasse"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Hopfen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Tanks"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Woche"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Chronik"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "marke",
+        "regel": "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)",
+        "text": "Buch"
+      },
+      {
+        "px": 10.9,
+        "stueck": "kern",
+        "klasse": "hauszeile",
+        "regel": "style=\"\" calc(var(--s)*22)",
+        "text": "Brauhaus zum Anker · 1970/71 · Margarete"
+      },
+      {
+        "px": 9.4,
+        "stueck": "kern",
+        "klasse": "deckung",
+        "regel": "style=\"\" calc(var(--s)*19)",
+        "text": "nächster Zug: Ablösung Brückenwirt — 38."
+      },
+      {
+        "px": 10.9,
+        "stueck": "klang",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "♪"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "OHNE DICH GESCHEHEN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "1 Zug"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DIE HÄUSER"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "wollen 534 · im Keller liegen 210 hl"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "SUDPLAN"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "im Schaltraum, auf Formica"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DIE TANKS"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "210 von 600 hl · 210 reif"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "LASTZUG"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "0,0 von 450 hl · 0 von 3 Halten"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DAS SUDHAUS"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "DER RUF DES HAUSES"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "Kronkorken, Bandenwerbung, Fernsehspot"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Das Erbe"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "zugeklappt"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Ortsmarken"
+      },
+      {
+        "px": 6.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)",
+        "text": "6 auf dem Pflock"
+      },
+      {
+        "px": 9.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)",
+        "text": "Stadt zeigen"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "BAUHOF"
+      },
+      {
+        "px": 11.9,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)",
+        "text": "ABBRUCH"
+      },
+      {
+        "px": 7.9,
+        "stueck": "stadt",
+        "klasse": "zahl",
+        "regel": "stadt.css { .stadt-bauhof .kopf .zahl } calc(var(--s) * 16)",
+        "text": "6 Bauten im Hof · gebaut wird einmal, es"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Fahrzeugwaage"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−9.570 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "kein Schwund beim Wiegen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Mälzereiturm"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−14.790 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+120 Hopfen"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Verwaltungsbau"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−15.660 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "Ordnung im Buch"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Neues Sudhaus"
+      },
+      {
+        "px": 9.4,
+        "stueck": "stadt",
+        "klasse": "preis",
+        "regel": "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)",
+        "text": "−24.360 DM"
+      },
+      {
+        "px": 7.4,
+        "stueck": "stadt",
+        "klasse": "nutzen",
+        "regel": "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)",
+        "text": "+16 Sud je Woche"
+      },
+      {
+        "px": 11.9,
+        "stueck": "erbe",
+        "klasse": "erb-name",
+        "regel": "erbe.css { .erb-name } calc(var(--s) * 24)",
+        "text": "Margarete Bruckner · sparsam"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-sagt",
+        "regel": "erbe.css { .erb-sagt } calc(var(--s) * 19)",
+        "text": "„Hält das Geld zusammen, versäumt die Ge"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-wirkt",
+        "regel": "erbe.css { .erb-wirkt } calc(var(--s) * 19)",
+        "text": "Schreibgeld um ein Drittel billiger — si"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-regel",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Ein Vertrag mit Laufzeit überdauert den "
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "erb-frist",
+        "regel": "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)",
+        "text": "Die Stunde kommt in 11 Wochen — 15. Deze"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AM HAUS · 0 — geht über, wer immer die K"
+      },
+      {
+        "px": 8.9,
+        "stueck": "erbe",
+        "klasse": "erb-leer",
+        "regel": "erbe.css { .erb-leer } calc(var(--s) * 18)",
+        "text": "Nichts. Alles hängt an einem Menschen."
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "AN DER PERSON · 4 — fällt mit der Hand, "
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Gasthof Lindenhof"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Festschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−14.706 DM"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Schenke am Tor"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Festschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−6.536 DM"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Mühlschenke"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Festschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−7.353 DM"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "Ausschank am Markt"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "Gewohnheit"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "wort",
+        "regel": "(geerbt)",
+        "text": "Festschreiben"
+      },
+      {
+        "px": 6.9,
+        "stueck": "erbe",
+        "klasse": "preis",
+        "regel": "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)",
+        "text": "−4.085 DM"
+      },
+      {
+        "px": 7.9,
+        "stueck": "erbe",
+        "klasse": "erb-ladekopf",
+        "regel": "erbe.css { .erb-ladekopf } calc(var(--s) * 16)",
+        "text": "DIE HÄNDE · 1"
+      },
+      {
+        "px": 9.4,
+        "stueck": "erbe",
+        "klasse": "n",
+        "regel": "(geerbt)",
+        "text": "I. Margarete Bruckner"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "v",
+        "regel": "erbe.css { .erb-satz .v } calc(var(--s) * 17)",
+        "text": "sparsam"
+      },
+      {
+        "px": 8.4,
+        "stueck": "erbe",
+        "klasse": "p",
+        "regel": "erbe.css { .erb-satz .p } calc(var(--s) * 17)",
+        "text": "Feder 0,70×"
+      },
+      {
+        "px": 11.9,
+        "stueck": "(ohne Stueck)",
+        "klasse": "noscript",
+        "regel": "(geerbt)",
+        "text": "<p class=\"ohne-skript\">Dieses Spiel brau"
+      }
+    ]
+  },
+  "summe": 724,
+  "summe_je_stueck": {
+    "stadt": 191,
+    "gegner": 172,
+    "erbe": 164,
+    "name": 149,
+    "kern": 36,
+    "(ohne Stueck)": 8,
+    "klang": 4
+  },
+  "summe_je_regel": {
+    "(geerbt)": 191,
+    "stadt.css { .knopf.stadt-reiter .wort } calc(var(--s) * 20)": 40,
+    "stadt.css { .knopf.stadt-reiter .zahl } calc(var(--s) * 14)": 36,
+    "erbe.css { .knopf.erb-knopf .preis } calc(var(--s) * 14)": 32,
+    "stadt.css { .kopfleiste .tafel .marke } calc(var(--s) * 19)": 28,
+    "stadt-zusatz.css { .knopf.stadt-pflock .wort } calc(var(--s) * 15)": 25,
+    "erbe.css { .erb-satz .v } calc(var(--s) * 17)": 20,
+    "stadt.css { .stadt-bauhof .knopf .preis } calc(var(--s) * 19)": 19,
+    "stadt.css { .stadt-bauhof .nutzen } calc(var(--s) * 15)": 19,
+    "gegner.css { .gg-feld b } calc(var(--s) * 18)": 15,
+    "gegner.css { .gg-feld i } calc(var(--s) * 13)": 15,
+    "gegner-zusatz.css { .gg-fasstext b } calc(var(--s) * 16)": 14,
+    "gegner-zusatz.css { .gg-fasstext i } calc(var(--s) * 14)": 14,
+    "name.css { .nm-knopf .preis } calc(var(--s) * 16)": 14,
+    "name.css { .nm-satzkopf } calc(var(--s) * 14)": 12,
+    "name.css { .nm-klein } calc(var(--s) * 14)": 12,
+    "name.css { .nm-geldpost i } calc(var(--s) * 13)": 12,
+    "name.css { .nm-geldpost b } calc(var(--s) * 18)": 12,
+    "erbe.css { .erb-ladekopf } calc(var(--s) * 16)": 12,
+    "gegner.css { .gg-schildtext b } calc(var(--s) * 17)": 11,
+    "gegner.css { .gg-schildtext i } calc(var(--s) * 15)": 11,
+    "stadt.css { .stadt-bauhof .kopf .wort } calc(var(--s) * 24)": 8,
+    "erbe.css { .erb-regel, .erb-frist } calc(var(--s) * 19)": 8,
+    "gegner.css { .gg-name } calc(var(--s) * 24)": 5,
+    "gegner.css { .gg-erbe } calc(var(--s) * 16)": 5,
+    "name.css { .nm-fasspreis } calc(var(--s) * 15)": 5,
+    "gegner-zusatz.css { .gg-zchip b } calc(var(--s) * 15)": 4,
+    "gegner-zusatz.css { .gg-zchip i } calc(var(--s) * 13)": 4,
+    "gegner-zusatz.css { .gg-amttext b } calc(var(--s) * 17)": 4,
+    "gegner-zusatz.css { .gg-amttext i } calc(var(--s) * 14)": 4,
+    "gegner-zusatz.css { .gg-amttext em } calc(var(--s) * 14)": 4,
+    "gegner.css { .gg-bandtitel } calc(var(--s) * 16)": 4,
+    "gegner.css { .gg-bandzahl } calc(var(--s) * 19)": 4,
+    "gegner.css { .gg-bandwaehrung span } calc(var(--s) * 16)": 4,
+    "gegner.css { .gg-ohnegeld } calc(var(--s) * 14)": 4,
+    "gegner.css { .gg-bandzeile .wann } calc(var(--s) * 15)": 4,
+    "gegner-zusatz.css { .gg-kennzahl b } calc(var(--s) * 15)": 4,
+    "name.css { .nm-anschlagkopf } calc(var(--s) * 14)": 4,
+    "name.css { .nm-titel } calc(var(--s) * 21)": 4,
+    "name.css { .nm-medium } calc(var(--s) * 15)": 4,
+    "name.css { .nm-von } calc(var(--s) * 16)": 4,
+    "name.css { .nm-ohne } calc(var(--s) * 17)": 4,
+    "name.css { .nm-mit } calc(var(--s) * 21)": 4,
+    "name.css { .nm-meldung } calc(var(--s) * 16)": 4,
+    "erbe.css { .erb-wort } calc(var(--s) * 19)": 4,
+    "style=\"\" calc(var(--s)*22)": 4,
+    "style=\"\" calc(var(--s)*19)": 4,
+    "stadt.css { .stadt-bauhof .kopf .zahl } calc(var(--s) * 16)": 4,
+    "erbe.css { .erb-name } calc(var(--s) * 24)": 4,
+    "erbe.css { .erb-sagt } calc(var(--s) * 19)": 4,
+    "erbe.css { .erb-wirkt } calc(var(--s) * 19)": 4,
+    "erbe.css { .erb-leer } calc(var(--s) * 18)": 4,
+    "erbe.css { .erb-satz .p } calc(var(--s) * 17)": 4,
+    "stadt.css { .stadt-hausschild .zeile } calc(var(--s) * 21)": 4,
+    "stadt.css { .stadt-hausschild .gegr } calc(var(--s) * 11)": 3,
+    "gegner.css { .gg-wimpeltext b } calc(var(--s) * 17)": 3,
+    "gegner.css { .gg-wimpeltext i } calc(var(--s) * 15)": 3,
+    "stadt.css { .stadt-hausschild.klein .zeile } calc(var(--s) * 17)": 2,
+    "gegner.css { .gg-vorschild } calc(var(--s) * 14)": 2,
+    "gegner.css { .gg-stammhaus } calc(var(--s) * 14)": 2,
+    "stadt.css { .stadt-hausschild.hell .zeile } calc(var(--s) * 20)": 2
+  },
+  "summe_je_klasse": {
+    "stadt · wort": 102,
+    "gegner · b": 59,
+    "gegner · i": 55,
+    "stadt · zahl": 40,
+    "name · wort": 34,
+    "erbe · wort": 32,
+    "erbe · preis": 28,
+    "kern · marke": 28,
+    "erbe · n": 20,
+    "erbe · v": 20,
+    "stadt · preis": 19,
+    "stadt · nutzen": 19,
+    "name · preis": 14,
+    "gegner · wort": 12,
+    "name · nm-satzkopf": 12,
+    "name · nm-klein": 12,
+    "name · i": 12,
+    "name · b": 12,
+    "erbe · erb-ladekopf": 12,
+    "gegner · span": 8,
+    "name · nm-bname": 8,
+    "name · nm-bwert": 8,
+    "gegner · gg-name": 5,
+    "gegner · gg-erbe": 5,
+    "name · nm-fasspreis": 5,
+    "(ohne Stueck) · title": 4,
+    "stadt · zeile eins": 4,
+    "stadt · zeile zwei": 4,
+    "gegner · em": 4,
+    "gegner · gg-bandtitel": 4,
+    "gegner · gg-bandzahl": 4,
+    "gegner · gg-ohnegeld": 4,
+    "gegner · wann": 4,
+    "gegner · was": 4,
+    "name · nm-anschlagkopf": 4,
+    "name · nm-titel": 4,
+    "name · nm-medium": 4,
+    "name · nm-von": 4,
+    "name · nm-ohne": 4,
+    "name · nm-mit": 4,
+    "name · s": 4,
+    "name · nm-meldung": 4,
+    "erbe · erb-wort": 4,
+    "erbe · erb-uhr": 4,
+    "erbe · erb-hand": 4,
+    "erbe · erb-stand": 4,
+    "erbe · erb-nimmt": 4,
+    "erbe · preis einnahme": 4,
+    "kern · hauszeile": 4,
+    "kern · deckung": 4,
+    "klang · wort": 4,
+    "erbe · erb-name": 4,
+    "erbe · erb-sagt": 4,
+    "erbe · erb-wirkt": 4,
+    "erbe · erb-regel": 4,
+    "erbe · erb-frist": 4,
+    "erbe · erb-leer": 4,
+    "erbe · p": 4,
+    "(ohne Stueck) · noscript": 4,
+    "stadt · gegr": 3,
+    "gegner · gg-vorschild": 2,
+    "gegner · gg-stammhaus amort stadt-marke-ruht": 2
+  }
+}
