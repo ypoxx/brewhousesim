@@ -46,6 +46,61 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## WELLE 7, BAUPHASE DURCH — 5. August, 14:0x UTC
+
+Zwei Builder, beide fertig, **noch kein blinder Kritiker**. Was die Aufsicht
+selbst nachgemessen hat, steht hier; was sie nicht nachgemessen hat, steht
+ebenfalls hier.
+
+**DAS GEWICHTSVETO IST GEFALLEN — von der Aufsicht mit einem EIGENEN Gerät
+bestätigt.** DIE STADT misst über die Resource-Timing-API des Fensters, die
+Aufsicht zählt mit `aufsicht/gewicht-gegenprobe.mjs` die **Antworten**, die
+Playwright selbst sieht. Zwei verschiedene Wege:
+
+| | vorher | nachher (Builder) | nachher (Aufsicht) |
+|---|---|---|---|
+| schwerste Epoche, gesamt | 24,32 MB | 7,38 MB | **7,38 MB** |
+| Anfragen | 83–85 | 59–69 | 59–69 |
+| `spiel/bild/` auf der Platte | 27 MB | 13 MB | 13 MB |
+
+**Alle vier Epochen unter 8 MB.** Die Ursache lag nicht in den Bildern allein:
+`stadt.js` lud in `aufbau` **alle** vier Platten und **alle** 32 Hofbilder, auch
+die 20–23, die in der Epoche gar nicht vorkommen können.
+
+**LATTE 4, der Stand: 1.899 → 1.128 → 772 → 505.** Von der Aufsicht bei 1366×768
+nachgemessen: **505 Textknoten · 51 Überläufe · 0 von 334 Knöpfen**, Ziffer für
+Ziffer wie gemeldet. Vier Stücke stehen jetzt auf null (FUHRE, SUD, PREIS,
+STADT); offen bleiben GEGNER, NAME, ERBE.
+
+> **Ein Befund über die Zuordnung, gemeldet von DER PREIS und wichtig für jeden
+> weiteren Auftrag:** die Tabelle „Textknoten je Stück" ordnet nach
+> **Klassennamen**, nicht nach Fach. **65 der 772 Knoten, die WELLE-7.md dem
+> PREIS zurechnete, liegen in Kästen von ERBE (32), STADT (19) und NAME (14).**
+> Wer die Restliste abarbeitet, prüft zuerst, wem der Kasten wirklich gehört.
+
+**LATTE 2 — noch offen, die Aufsicht misst gerade.** DER PREIS meldet 1350 von
+**+0,762 auf −0,259 / −0,236 / −0,380** und die anderen drei Epochen unverändert.
+Das wäre das seit dem 4. August verfehlte **Wellenziel**. Die Aufsicht misst
+vier Epochen à drei Läufe am eingefrorenen Stand `b6b06bb`, Hafen 8903;
+Rohdaten und wiederaufnehmbares Skript in
+`werkbank/schuss/aufsicht/welle7-schluss/`.
+
+**WAS DIE AUFSICHT NICHT GEPRÜFT HAT:** die **erste Latte**. DIE STADT hat 32
+PNG in WebP umgewandelt und belegt sie mit PSNR 52,6–56,7 dB (unsichtbar ab 40)
+bei exakt gleichen Pixelmaßen. Das ist eine Zahl, kein fremdes Auge — und die
+erste Latte ist ausdrücklich ein **Blindvergleich durch einen Fremden**. Sie
+gehört dem Kritiker, nicht dem Zähler.
+
+**Offen aus dieser Welle, beides nicht von einem Builder zu lösen:**
+1. **37 Reiter-Kästen bleiben abgeschnitten, und das ist Arithmetik:** zehn
+   Reiter auf 1.093 px brauchen rund 2.300 px für Name und lebende Kennzahl.
+   Zwei Zeilen kosten 31 px, die das Band nicht hat. Berührt mehr als ein Stück.
+2. **KERN `grund.css:294`** — `.knopf .preis` hat keinen Boden, 9,9 px bei
+   1366×768. Der Fix bewegt drei fremde Bretter, gehört also zwischen zwei
+   Wellen und mit Messung.
+
+---
+
 ## DIE RESETS KOMMEN JETZT STÜNDLICH — was daraus folgt
 
 Am 4./5. August: **Reset 6 bis 9 innerhalb von zwölf Stunden**, zuletzt im
