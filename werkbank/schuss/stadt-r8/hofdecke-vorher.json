@@ -1,0 +1,166 @@
+{
+  "stand": "2026-08-05T18:33:26.480Z",
+  "feld": {
+    "x0": 8,
+    "x1": 62,
+    "y0": 55,
+    "y1": 85
+  },
+  "e1": {
+    "drittel_hinten_mitte_vorn": [
+      58,
+      18.9,
+      0
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 64
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 51.8
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 33.4
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 3.9
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 0
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "e2": {
+    "drittel_hinten_mitte_vorn": [
+      72.3,
+      28.6,
+      0
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 78.9
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 65.5
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 52.4
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 4
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 0
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "e3": {
+    "drittel_hinten_mitte_vorn": [
+      75.7,
+      29.9,
+      0
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 82.4
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 68.8
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 49.1
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 10
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 0
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "e4": {
+    "drittel_hinten_mitte_vorn": [
+      67.8,
+      27,
+      0.9
+    ],
+    "baender": [
+      {
+        "von": 55,
+        "bis": 60,
+        "fuellung": 79.7
+      },
+      {
+        "von": 60,
+        "bis": 65,
+        "fuellung": 55.7
+      },
+      {
+        "von": 65,
+        "bis": 70,
+        "fuellung": 38.5
+      },
+      {
+        "von": 70,
+        "bis": 75,
+        "fuellung": 15.1
+      },
+      {
+        "von": 75,
+        "bis": 80,
+        "fuellung": 1.8
+      },
+      {
+        "von": 80,
+        "bis": 85,
+        "fuellung": 0
+      }
+    ]
+  },
+  "seitenfehler": 0
+}
