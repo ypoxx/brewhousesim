@@ -2101,6 +2101,7 @@
       }).join(', ');
       kt.appendChild(B.el('div', 'pr-sperrt', 'Schließt aus: ' + namen));
     }
+    dauerZeile(karte, a.wirkung);
 
     if (schon) {
       karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
@@ -2176,6 +2177,44 @@
     return t;
   }
 
+  /* ======================================================================
+     DIE ANDERE HAELFTE DES PREISSCHILDS — und sie steht jetzt AUF der Karte.
+
+     AUFLAGE 7 des blinden Kritikers, gemessen bei 1366x768: **30 von 30**
+     FOLGE-Zeilen liegen ausserhalb ihres Kastens, in allen vier Epochen. Die
+     Karte „Das Dach ueber der Pfanne" endet bei y ≈ 400 px, ihre FOLGE-Zeile
+     steht bei y = 493 px — 93 px unter dem Kartenrand, in einem 150 px hohen
+     Rollfenster, dessen Inhalt das Vierfache braucht. Am Bildschirmfoto endet
+     der sichtbare Kartentext mitten durch die Buchstaben von „Ohne Bauzeit ·".
+
+     Die vierte Latte zaehlt das NICHT als abgeschnitten, und mit gutem Grund:
+     `.pr-karte-text` rollt, verbirgt also nichts. Der Kritiker hat trotzdem
+     recht — „das ist der Unterschied zwischen benannt und am Schirm", und was
+     dort unten liegt, ist das, was ein Kauf FUER IMMER kostet.
+
+     Der ganze Text bleibt, wo er ist (er ist zu lang fuer eine Karte, die
+     einen Knopf tragen muss). Was hier dazukommt, ist die kurze Zeile mit den
+     beiden Zahlen, direkt unter dem Preisschild und AUSSERHALB des
+     Rollfensters — dort, wo Preisschild und Knopf schon stehen. Ein
+     Preisschild, das nur die Anzahlung nennt, ist ein halbes Preisschild. */
+  function dauerZeile(karte, w) {
+    if (!w) return;
+    var traegt = w.ertrag ? Math.round(w.ertrag * teuerung()) : 0;
+    var kostet = w.pflichtNeu ? pflichtZeile(w.pflichtNeu).betrag : 0;
+    if (!traegt && !kostet) return;
+    var d = B.el('div', 'pr-dauer');
+    d.appendChild(B.el('span', 'pr-dauer-marke', 'in jedem Michaeli'));
+    if (traegt) d.appendChild(B.el('span', 'pr-dauer-plus', '+' + geld(traegt)));
+    if (kostet) d.appendChild(B.el('span', 'pr-dauer-minus', '−' + geld(kostet)));
+    if (traegt && kostet) {
+      d.appendChild(B.el('span', 'pr-dauer-netto',
+        '= ' + (traegt - kostet >= 0 ? '+' : '') + geld(traegt - kostet)));
+    }
+    d.title = (traegt ? 'Trägt ' + geld(traegt) + ' in jedem Michaeli. ' : '')
+      + (kostet ? w.pflichtNeu.name + ': ' + geld(kostet) + ' in jedem Michaeli, für immer.' : '');
+    karte.appendChild(d);
+  }
+
   function festKarte(f) {
     var preis = festPreis(f);
     /* Was sie hereinbringt, mit derselben Rechnung wie beim Klick
@@ -2226,6 +2265,8 @@
             + 'sie gilt für den Rest der Partie.'
           : 'Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, '
             + 'auch wenn das Haus die Hand wechselt.')));
+
+    dauerZeile(karte, f.wirkung);
 
     if (!offen) karte.appendChild(B.el('div', 'pr-hinweis pr-hinweis-oben',
       'Diese Amtszeit hat sich bereits festgelegt. Die nächste hat wieder eine Wahl.'));
@@ -2365,6 +2406,29 @@
       z.appendChild(B.el('div', 'pr-satz pr-klein', l.sagt));
       f.appendChild(z);
     });
+    /* AUFLAGE 5 — DER VORBEHALT, DEN DIESE SPALTE BRAUCHT.
+
+       Gemessen hat der blinde Kritiker: Mauerbau 1352 angekuendigt 9 Pf,
+       gebucht 32 Pf · Landfriedensgeld 1355 angekuendigt 7, gebucht 31 ·
+       Zehnt 1361 angekuendigt 13, gebucht 52. Das Drei- bis Vierfache, und
+       „eine Vorschau, die um das Vierfache danebenliegt, ist schlimmer als
+       keine".
+
+       Die Ursache war zur Haelfte die Bemessung (siehe `pflichtBasis`, jetzt
+       behoben — die Umlage folgt nicht mehr dem Unterhalt der eigenen
+       Bauten). Die andere Haelfte bleibt und ist nicht wegzurechnen: Umlage
+       und Erbfall sind ein Vielfaches der Jahreslast, und die Jahreslast
+       eines wachsenden Hauses ist im Jahr der Faelligkeit eine andere als
+       heute. Was NICHT bleiben darf, ist eine Zahl ohne Vorbehalt in
+       derselben Schrift wie die Rechnung, die wirklich abgebucht wird.
+       In der zugeklappten Tafel ist sie 29 von 30 Wochen die einzige Zahl
+       ueber kommende Lasten, die der Spieler zu sehen bekommt. */
+    if (lasten.some(function (l) { return l.art === 'umlage' || l.art === 'erbfall'; })) {
+      f.appendChild(B.el('div', 'pr-satz pr-klein pr-vorbehalt',
+        'Umlage und Erbfall sind ein Vielfaches der Jahreslast — hier steht die '
+        + 'von heute (' + geld(pflichtBasis()) + ' Anschlag des Rats). Wächst das Haus '
+        + 'bis zur Fälligkeit, wächst der Betrag mit.'));
+    }
     f.appendChild(B.el('div', 'pr-satz pr-klein', ep().pfand));
     /* DER NOTPFENNIG — die einzige Zahl des Blattes, die nach UNTEN begrenzt,
        und bis heute die einzige, die nirgends am Bildschirm stand: der Spieler

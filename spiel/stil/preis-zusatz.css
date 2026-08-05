@@ -525,3 +525,49 @@
     text-overflow: clip;
   }
 }
+
+/* ==========================================================================
+   DIE DAUERZEILE — Auflage 7 des blinden Kritikers
+   ==========================================================================
+   Gemessen bei 1366×768: **30 von 30** FOLGE-Zeilen liegen ausserhalb ihres
+   Kastens, in allen vier Epochen. `.pr-karte-text` rollt (`overflow-y: auto`,
+   oben) und verbirgt damit formal nichts — die vierte Latte zaehlt es
+   ausdruecklich nicht als abgeschnitten, und das ist richtig so. Trotzdem
+   stand die Zeile, auf der steht, was ein Kauf FUER IMMER kostet, 93 px
+   unter dem Kartenrand in einem 150 px hohen Rollfenster.
+
+   Die kurze Zeile mit den beiden Zahlen ist deshalb ein direktes Kind der
+   Karte, ausserhalb des Rollbereichs, direkt ueber Hinweis und Knopf —
+   genau dort, wo Preisschild und Knopf schon stehen. Sie schrumpft nie
+   (`flex: 0 0 auto`), sie bricht nie um (eine Zeile, drei kurze Zahlen) und
+   sie hat den Schriftboden der vierten Latte.
+   ========================================================================== */
+.pr-karte > .pr-dauer,
+.pr-fest  > .pr-dauer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--s) * 6);
+  flex-wrap: wrap;
+  margin-top: calc(var(--s) * 3);
+  padding-top: calc(var(--s) * 3);
+  border-top: calc(var(--s) * 1) dotted var(--pr-linie);
+  font-family: var(--pr-zahlen);
+  font-size: max(12px, calc(var(--s) * 14));
+  line-height: 1.15;
+}
+.pr-dauer-marke {
+  flex: 0 0 100%;
+  font-family: var(--pr-schrift);
+  font-size: max(12px, calc(var(--s) * 12));
+  letter-spacing: calc(var(--s) * 1);
+  text-transform: uppercase;
+  color: var(--pr-schwach);
+}
+.pr-dauer-plus  { color: var(--pr-gruen); }
+.pr-dauer-minus { color: var(--pr-rot); }
+.pr-dauer-netto { margin-left: auto; font-weight: 600; }
+
+@media (max-width: 2751px), (max-height: 1535px) {
+  .pr-dauer-marke { font-size: 12px; }
+}

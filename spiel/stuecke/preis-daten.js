@@ -465,7 +465,16 @@ var PREIS_DATEN = {
           regel: 'Kein Handlohn mehr bei jedem Erbfall. Wer erbt, erbt auch die Pfanne.',
           wirkung: { handlohnWeg: true } },
 
-        { k: 'hopfen', name: 'Hopfen statt Grut', anteil: 1.40, ab: 1380,
+        /* `ab: 1380` hiess: NIE. Eine Partie in 1350 laeuft vierzehn Braujahre
+           und endet 1363 — der blinde Kritiker hat diese Karte deshalb als
+           einzige gefunden, die „in keinem Spielstand je zu sehen" ist
+           (Auflage 8). Historisch ist der Hopfen frueher da, als diese Zeile
+           unterstellt: `design/PRUEFUNG.md` §1.2 A12 bescheinigt die
+           Hopfendolde ausdruecklich fuer 1300–1420, „Hopfenbier verdraengt
+           Grut im 14. Jh." 1356 haelt sie aus den ersten drei Amtszeiten
+           heraus, in denen `vertrag` und `brunnen` die Wahl sind, und laesst
+           sie danach wirklich auf dem Tisch liegen. */
+        { k: 'hopfen', name: 'Hopfen statt Grut', anteil: 1.40, ab: 1356,
           was: 'Der Grutzwang wird abgelöst, Hopfen aus Böhmen kommt auf den Wagen.',
           regel: 'Das Grutgeld entfällt. Das Bier hält länger, reist weiter und fängt mehr.',
           wirkung: { pflichtWeg: 'grutgeld', rohstoff: 26, preis: 0.09 } },
