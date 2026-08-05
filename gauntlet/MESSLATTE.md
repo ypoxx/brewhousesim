@@ -91,8 +91,40 @@ kürt, kürt sie für eine Epoche.
 > ausgeschlossen, dass es an ihm liegt — er hat einen Hafen gebaut, der den
 > heutigen Baum mit nur seinen fünf Dateien ausliefert, und bekommt dieselben
 > Ziffern. Sein Verdacht ist der neue **Knopfboden** aus der Lesbarkeitsarbeit,
-> der unterhalb der Entwurfsleinwand jedes Brett vergrößert. **Ungeprüft** —
-> und der nächste Auftrag, der aus dieser Tabelle folgt.
+> der unterhalb der Entwurfsleinwand jedes Brett vergrößert.
+>
+> ### DER VERDACHT IST BESTÄTIGT — A/B der Aufsicht, 5. August
+>
+> Gemessen am **selben Commit `517ca3f`**, derselben Saat, zwei Häfen: 8901 mit
+> Boden, 8902 mit ausgebautem Boden. Dass sich sonst nichts unterscheidet, ist
+> vorher geprüft (`git diff --stat` über `spiel/` leer).
+>
+> | 1970 | 12 Braujahre | 13 | 14 | Kasse nach 400 Wochen |
+> |---|---|---|---|---|
+> | **mit** Knopfboden | **+0,699** | +0,637 | +0,653 | 62.758 |
+> | **ohne** Knopfboden | **−0,112** | −0,236 | −0,304 | 48.032 |
+>
+> **Unterschied 0,811 bei zwölf Braujahren.**
+>
+> **Es ist keine kaputte Messung, sondern eine andere Partie.** Beide Läufe
+> gehen über volle 400 Wochen und 14 Braujahre, enden in 1983/11, `lage` 0,
+> **null Fehler**; kein Klick ist ausgefallen. Der Mechanismus: die Messhand
+> spielt bei **1920×1000** (`rueckkopplung-r3/linie.mjs:61`), also *unterhalb*
+> der Entwurfsleinwand, wo der Boden greift. Er vergrößert jeden Knopf, die
+> Bretter fließen um — und damit ändert sich, welcher Zug der nächste sinnvolle
+> ist. Der Nennerpreis steigt im Median von 21.092 auf 29.757.
+>
+> **Was daraus folgt, und es ist nicht „den Boden wieder ausbauen":** der Boden
+> ist die ausgelieferte Fassung und der Grund, warum das Spiel auf einem
+> gewöhnlichen Bildschirm überhaupt bedienbar ist. Der Befund heißt vielmehr:
+> **die ρ-Zahlen von vorher wurden an einer Fassung erhoben, deren Knöpfe zu
+> 46 % unter der Zielfläche lagen** — an einem Brett also, das so kein Mensch
+> bedient. Sie waren freundlicher, weil ein Teil des Spiels unerreichbar war.
+>
+> **Noch offen:** ein Paar je Arm ist erst n=1. Die Gerätekontrolle mit drei
+> gleichen Läufen fehlt — der achte Container-Reset hat die übrigen vernichtet.
+> Die Probe läuft weiter, Skript und Rohdaten in
+> `werkbank/schuss/aufsicht/knopfboden-probe/`.
 
 > **Ab jetzt bindend:** Wer ρ nennt, nennt die Laufzeit dazu, und misst über
 > **alle drei Schnitte** (12, 13, 14 Braujahre). Die Latte ist gerissen, sobald
