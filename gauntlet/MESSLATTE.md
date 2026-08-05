@@ -62,10 +62,27 @@ geschnitten:
 
 | Epoche | 12 Braujahre | 13 | 14 | Stand |
 |---|---|---|---|---|
-| **1350** | **+0,762** | **+0,692** | +0,591 | am 5. 8. dreimal bestätigt |
+| **1350** | **−0,259** | **−0,236** | **−0,380** | **behoben in Welle 7**, dreimal byteweise identisch nachgemessen (vorher +0,762 / +0,692 / +0,591) |
 | 1600 | +0,189 | −0,066 | −0,156 | **berichtigt** (vorher +0,371 / +0,264 / +0,231) |
 | 1884 | +0,168 | +0,346 | +0,393 | unverändert |
 | **1970** | **+0,699** | +0,637 | +0,653 | **berichtigt** (vorher +0,427 / +0,154 / +0,275) |
+
+> **NACHGETRAGEN am 5. August, 16:3x — 1350 REISST NICHT MEHR.** DER PREIS hat
+> in Welle 7 zwei Anschläge getrennt (Handwerk nach der **Taxe**, also nach Zeit;
+> Ratsbriefe und Bauten weiter nach der **Schätzung**) und den Unterhalt
+> eingezogen. Die Aufsicht hat am eingefrorenen Stand `b6b06bb` **drei Läufe**
+> gefahren, alle drei mit **derselben Prüfsumme**: **−0,259 / −0,236 / −0,380**,
+> 0 Seitenfehler, 1 von 14 Jahren unter 1×. Rohdaten in
+> `werkbank/schuss/aufsicht/welle7-schluss/rho/`.
+>
+> Der Befund darunter, der den Ausschlag gab: **in 14 von 14 Braujahren stellte
+> DER GEGNER den Nenner**, und ρ(Kennzahl) = +0,762 lag praktisch auf
+> ρ(Kasse) = +0,741 — *die Kennzahl war die Kasse mit anderer Beschriftung*.
+> Dazu ein Sperrlisten-Fund nebenbei: der **Karrengaul** trug seit Welle 1 auf
+> der Karte „dreimal so teuer im Futter" und wurde nie abgebucht.
+>
+> **Die anderen drei Epochen sind noch nicht nachgemessen** — der Builder meldet
+> sie unverändert. Erst wenn alle vier stehen, ist das Wellenziel erreicht.
 
 **Bei zwölf Braujahren reißt 1350.** Und 1884 läuft in die *andere* Richtung —
 es gibt also keine Laufzeit, die für alle vier die freundlichste wäre; wer eine

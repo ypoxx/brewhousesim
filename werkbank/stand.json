@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T15:26:36+00:00",
- "phase": "Vierzehnter Container-Reset, Baum und Messstand in drei Minuten wieder hergestellt, Schlussmessung nimmt wieder auf — vom Satz hatte ein Lauf überlebt, das Skript liegt im Repo und überspringt Fertiges. Der Stand der Welle 7 unverändert: Gewichtsveto gefallen und mit einem eigenen Gerät bestätigt (7,38 Megabyte statt 24,32, alle vier Epochen unter acht), vierte Latte bei 505 Textknoten statt ursprünglich 1899, und der erste eigene Lauf für 1350 bestätigt DEN PREIS Ziffer für Ziffer mit minus 0,259 statt plus 0,762. Offen bleibt, was offen bleiben muss: die Gerätekontrolle über drei gleiche Läufe, die anderen drei Epochen, und die erste Latte, die einem fremden Auge gehört und keinem Zähler.",
+ "stand": "2026-08-05T16:24:28+00:00",
+ "phase": "1350 reißt nicht mehr. Die Aufsicht hat am eingefrorenen Stand drei Läufe gefahren, alle drei mit derselben Prüfsumme: minus 0,259 / minus 0,236 / minus 0,380 über die drei Schnitte, wo vorher plus 0,762 stand. Das ist die Epoche, an der das Wellenziel seit dem 4. August hing. Der Befund darunter ist der eigentliche: in vierzehn von vierzehn Braujahren stellte DER GEGNER den Nenner, und die Kennzahl lag praktisch auf der Kasse — sie war die Kasse mit anderer Beschriftung. DER PREIS hat daraufhin zwei Anschläge getrennt, Handwerk nach der Taxe und damit nach Zeit, Ratsbriefe und Bauten weiter nach der Schätzung, und den Unterhalt eingezogen. Nebenbei fand er einen Scheinpreis, der seit Welle 1 auf einer Karte stand: der Karrengaul war dreimal so teuer im Futter und wurde nie abgebucht. Die anderen drei Epochen sind noch nicht nachgemessen; erst wenn alle vier stehen, ist das Wellenziel erreicht.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T15:46:19+00:00",
-   "text": "DIE FUHRE — die Woche und die Knappheit, die kein Geld ist · Runde 4 · läuft — Runde 4 laeuft"
-  },
   {
    "zeit": "2026-08-01T15:47:50+00:00",
    "text": "AUFSICHT — DER NAME gestartet (Welle 2, zweites Stueck). Die Latte: ein Ruf ist langsam zu bauen und schnell zu verlieren, und solange man ihn hat, darf man teurer sein als der Nachbar bei gleichem Bier. Vier verschiedene Traeger-Medien, nicht viermal dasselbe Brett: Bierzeiger und Zunftzeichen / Wirtshausschild und Krug / Etikett, Plakat, Litfasssaeule / Kronkorken, Bandenwerbung, Fernsehspot. Der Pruefer muss den Ruf in ZWEI Zustaenden desselben Spiels belegen - aufgebaut und verspielt -, nicht behaupten. DER NAME schreibt keinen Preis, er setzt einen Ruf; DER PREIS liest ihn. Kein neues Geld aus der Kasse: der 18-Prozent-Deckel bleibt."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T15:26:36+00:00",
    "text": "Vierzehnter Container-Reset, Baum und Messstand in drei Minuten wieder hergestellt, Schlussmessung nimmt wieder auf — vom Satz hatte ein Lauf überlebt, das Skript liegt im Repo und überspringt Fertiges. Der Stand der Welle 7 unverändert: Gewichtsveto gefallen und mit einem eigenen Gerät bestätigt (7,38 Megabyte statt 24,32, alle vier Epochen unter acht), vierte Latte bei 505 Textknoten statt ursprünglich 1899, und der erste eigene Lauf für 1350 bestätigt DEN PREIS Ziffer für Ziffer mit minus 0,259 statt plus 0,762. Offen bleibt, was offen bleiben muss: die Gerätekontrolle über drei gleiche Läufe, die anderen drei Epochen, und die erste Latte, die einem fremden Auge gehört und keinem Zähler."
+  },
+  {
+   "zeit": "2026-08-05T16:24:28+00:00",
+   "text": "1350 reißt nicht mehr. Die Aufsicht hat am eingefrorenen Stand drei Läufe gefahren, alle drei mit derselben Prüfsumme: minus 0,259 / minus 0,236 / minus 0,380 über die drei Schnitte, wo vorher plus 0,762 stand. Das ist die Epoche, an der das Wellenziel seit dem 4. August hing. Der Befund darunter ist der eigentliche: in vierzehn von vierzehn Braujahren stellte DER GEGNER den Nenner, und die Kennzahl lag praktisch auf der Kasse — sie war die Kasse mit anderer Beschriftung. DER PREIS hat daraufhin zwei Anschläge getrennt, Handwerk nach der Taxe und damit nach Zeit, Ratsbriefe und Bauten weiter nach der Schätzung, und den Unterhalt eingezogen. Nebenbei fand er einen Scheinpreis, der seit Welle 1 auf einer Karte stand: der Karrengaul war dreimal so teuer im Futter und wurde nie abgebucht. Die anderen drei Epochen sind noch nicht nachgemessen; erst wenn alle vier stehen, ist das Wellenziel erreicht."
   }
  ]
 }
