@@ -483,7 +483,41 @@
   }
 
   function handlohnBetrag() {
-    return rundePreis(ep().handlohnAnteil * pflichtSumme() * (Z.handlohnHalb ? 0.5 : 1));
+    return rundePreis(ep().handlohnAnteil * pflichtBasis() * (Z.handlohnHalb ? 0.5 : 1));
+  }
+
+  /* ======================================================================
+     WIE DIE ABGABE BEIM ERBFALL HEISST — je Epoche aus den Daten.
+
+     AUFLAGE 1 des blinden Kritikers, und sie ist ein SPERRLISTEN-Fund.
+     Hier stand bis heute in allen vier Epochen dieselbe Zeichenkette:
+     `'Handlohn beim Erbfall an den Grundherrn'`. Handlohn (Laudemium) und
+     Grundherr sind Grundherrschaft; in Bayern ist sie mit der
+     Grundlastenabloesung ab 1848 abgeloest und in den 1870er Jahren
+     erledigt. Am Bildschirm gemessen hat der Kritiker deshalb
+
+       1884  −12.100 M  „Handlohn beim Erbfall an den Grundherrn"
+       1970   −8.300 DM dieselbe Zeile, in einer Rechnung, deren uebrige
+                        Posten „Biersteuer und Umsatzsteuer" und
+                        „Koerperschaft- und Gewerbeertragsteuer" heissen.
+
+     Dass es nicht bloss eine Aufschrift war, sagt das Stueck selbst:
+     `realrecht` (`handlohnWeg`) steht NUR in 1350 auf der Tafel — in 1884
+     und 1970 konnte der Spieler die feudale Abgabe nicht einmal loswerden.
+
+     Die BETRAEGE bleiben, wo sie waren (`handlohnAnteil` unveraendert in
+     allen vier Epochen): beim Uebergang eines Familienbetriebs wird auch
+     1884 und 1970 gezahlt, nur heisst es dann Erbschaftsteuer und
+     Umschreibung. Geaendert ist die Aufschrift, nicht die Wirtschaft —
+     deshalb darf sich an rho nichts bewegen, und genau das wird gemessen. */
+  function handlohnName() {
+    return ep().handlohnName || 'Abgabe beim Übergang des Hauses';
+  }
+  function handlohnKurz() {
+    return ep().handlohnKurz || handlohnName();
+  }
+  function handlohnFreiName() {
+    return ep().handlohnFrei || (handlohnKurz() + ' — entfällt');
   }
 
   /* ----------------------------------------------------------------------
@@ -669,6 +703,35 @@
   function satzFolgt() {
     var f = ep().satzFolgt;
     return (typeof f === 'number') ? B.grenze(f, 0, 1) : 0;
+  }
+
+  /* ======================================================================
+     WER DEN SATZ SETZT — je Epoche aus den Daten.
+
+     AUFLAGE 2 des blinden Kritikers, ebenfalls SPERRLISTE. Hier stand
+     unbedingt „vom Rat gesetzt <Jahr>" und „Zwischen den Stufen setzt der
+     Rat nach dem Korn nach". `satzFolgt` ist in allen vier Epochen groesser
+     als null (0,60 · 0,25 · 0,50 · 0,60), die Saetze standen also ueberall.
+
+     Am Bildschirm, Michaelitafel 1970, in DEMSELBEN Kasten, drei Zeilen
+     auseinander:
+
+       DIE BIERORDNUNG · Satz je hl 130 DM
+       „Der Handel diktiert die Aktionspreise. Der Listenpreis ist Zierde."
+       vom Rat gesetzt 1970 · 130 DM
+       … Zwischen den Stufen setzt der Rat nach dem Korn nach, aber nicht ganz.
+
+     Das Stueck widerspricht sich auf demselben Schirm, und ein Rat, der 1970
+     den Bierpreis nach dem Kornpreis nachsetzt, ist derselbe Fehlertyp wie
+     eine Bahnlinie in 1600. Die Mechanik (`satzFolgt`, `nachfuehrung`)
+     bleibt Zeichen fuer Zeichen; nur wer es tut, kommt jetzt aus der
+     Epoche. */
+  function satzSetzer() { return ep().satzSetzer || 'gesetzt'; }
+  function satzNachSatz() {
+    return ep().satzNachSatz || 'Zwischen den Stufen wird nachgesetzt, aber nicht ganz.';
+  }
+  function satzHaeltSatz() {
+    return ep().satzHaeltSatz || 'Zwischen den Stufen rührt hier niemand den Satz an.';
   }
 
   /* Der Faktor, um den der Rat den Satz seit dem Antritt dieses Hauses
@@ -1016,10 +1079,10 @@
       Z.handlohnFaellig = false;
       if (!Z.handlohnWeg) {
         var h = handlohnBetrag();
-        buche(h, 'Handlohn beim Erbfall an den Grundherrn', 'umlage');
-        chronik('pflicht', 'Handlohn beim Erbfall: ' + geld(h) + '.');
+        buche(h, handlohnName(), 'umlage');
+        chronik('pflicht', handlohnKurz() + ': ' + geld(h) + '.');
       } else {
-        Z.rechnung.push({ name: 'Handlohn beim Erbfall — entfällt (Braurecht am Haus)', betrag: 0, art: 'frei' });
+        Z.rechnung.push({ name: handlohnFreiName(), betrag: 0, art: 'frei' });
       }
     }
 
@@ -1312,7 +1375,7 @@
     var erb = naechsterErbfall();
     if (!Z.handlohnWeg && erb) {
       l.push({
-        jahr: erb, name: 'Handlohn beim Erbfall',
+        jahr: erb, name: handlohnKurz(),
         sagt: amtszeit().name + ' führt das Haus seit ' + (amtszeit().seit || Z.startjahr)
             + '; die bisherigen Amtszeiten hielten je ' + amtszeitFrist()
             + (amtszeitFrist() === 1 ? ' Braujahr.' : ' Braujahre.'),
@@ -1802,7 +1865,7 @@
     ord.appendChild(zeile('Satz je ' + e.einheit, geld(Math.round(satzJetzt())), 'pr-gross'));
     ord.appendChild(B.el('div', 'pr-satz', o.sagt));
     var nf = nachfuehrung();
-    ord.appendChild(zeile('vom Rat gesetzt ' + o.ab, geld(o.preis), 'pr-satzteil'));
+    ord.appendChild(zeile(satzSetzer() + ' ' + o.ab, geld(o.preis), 'pr-satzteil'));
     ord.appendChild(zeile(satzFolgt()
         ? 'seither nachgesetzt (' + B.zahl(satzFolgt() * 100, 0) + ' im Hundert der Teuerung)'
         : 'seither nachgesetzt — in dieser Zeit nie',
@@ -1813,9 +1876,7 @@
     ord.appendChild(B.el('div', 'pr-satz pr-klein',
       (jahr() - o.ab <= 0 ? 'In diesem Jahr gesetzt. '
         : 'Gesetzt ' + o.ab + ' — die Stufe steht seit ' + (jahr() - o.ab) + ' Jahren. ')
-      + (satzFolgt()
-          ? 'Zwischen den Stufen setzt der Rat nach dem Korn nach, aber nicht ganz. '
-          : 'Zwischen den Stufen rührt hier niemand den Satz an. ')
+      + (satzFolgt() ? satzNachSatz() + ' ' : satzHaeltSatz() + ' ')
       + 'Was zur Teuerung fehlt, ist der Teil, den nur das Haus selbst zubauen kann.'));
     sp.appendChild(ord);
 
