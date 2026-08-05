@@ -1,21 +1,21 @@
 {
- "fenster": "1366x768",
+ "fenster": "2752x1536",
  "jeEpoche": {
   "e1": {
    "(ohne)": {
     "ueber": 0,
-    "klein": 2,
+    "klein": 0,
     "winzig": 0,
-    "kleinste": 11.9,
+    "kleinste": 999,
     "knoepfe": 0,
     "zuKlein": 0,
     "beispiele": []
    },
    "stadt": {
-    "ueber": 15,
-    "klein": 49,
-    "winzig": 46,
-    "kleinste": 5.5,
+    "ueber": 13,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 11,
     "knoepfe": 23,
     "zuKlein": 0,
     "beispiele": [
@@ -29,11 +29,11 @@
    },
    "gegner": {
     "ueber": 1,
-    "klein": 40,
-    "winzig": 39,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 11,
-    "zuKlein": 0,
+    "zuKlein": 1,
     "beispiele": [
      "was :: Brauhaus zum Adler wirbt um Klosterschenke Obernbe"
     ]
@@ -49,9 +49,9 @@
    },
    "name": {
     "ueber": 1,
-    "klein": 37,
-    "winzig": 35,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 8,
     "zuKlein": 0,
     "beispiele": [
@@ -60,47 +60,47 @@
    },
    "fuhre": {
     "ueber": 1,
-    "klein": 0,
+    "klein": 4,
     "winzig": 0,
-    "kleinste": 999,
+    "kleinste": 11,
     "knoepfe": 21,
     "zuKlein": 0,
     "beispiele": [
-     "fu-kerbsatz :: Der Grutherr schneidet die Kerbe ins Holz und zahl"
+     "fu-notsud-zeile :: 0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. ·"
     ]
-   },
-   "klang": {
-    "ueber": 0,
-    "klein": 1,
-    "winzig": 0,
-    "kleinste": 10.9,
-    "knoepfe": 1,
-    "zuKlein": 0,
-    "beispiele": []
    },
    "erbe": {
     "ueber": 0,
-    "klein": 41,
-    "winzig": 40,
-    "kleinste": 6.9,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 8,
     "zuKlein": 0,
     "beispiele": []
    },
    "kern": {
     "ueber": 0,
-    "klein": 9,
-    "winzig": 8,
-    "kleinste": 9.4,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
+    "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
    "preis": {
     "ueber": 0,
-    "klein": 12,
-    "winzig": 12,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 2,
     "zuKlein": 0,
     "beispiele": []
@@ -109,18 +109,18 @@
   "e2": {
    "(ohne)": {
     "ueber": 0,
-    "klein": 2,
+    "klein": 0,
     "winzig": 0,
-    "kleinste": 11.9,
+    "kleinste": 999,
     "knoepfe": 0,
     "zuKlein": 0,
     "beispiele": []
    },
    "stadt": {
-    "ueber": 15,
-    "klein": 49,
-    "winzig": 44,
-    "kleinste": 5.5,
+    "ueber": 13,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 11,
     "knoepfe": 23,
     "zuKlein": 0,
     "beispiele": [
@@ -134,31 +134,29 @@
    },
    "gegner": {
     "ueber": 1,
-    "klein": 44,
-    "winzig": 43,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 13,
-    "zuKlein": 0,
+    "zuKlein": 1,
     "beispiele": [
      "was :: Braustatt Adler wirbt um Mühlschenke: Er lässt dem"
     ]
    },
    "sud": {
-    "ueber": 1,
+    "ueber": 0,
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
     "knoepfe": 4,
     "zuKlein": 0,
-    "beispiele": [
-     "sud-kartensatz :: Der Rat schreibt dem Haus eine feste Weizenzuteilu"
-    ]
+    "beispiele": []
    },
    "name": {
     "ueber": 2,
-    "klein": 37,
-    "winzig": 35,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 8,
     "zuKlein": 0,
     "beispiele": [
@@ -167,46 +165,48 @@
     ]
    },
    "fuhre": {
+    "ueber": 1,
+    "klein": 8,
+    "winzig": 0,
+    "kleinste": 11,
+    "knoepfe": 20,
+    "zuKlein": 0,
+    "beispiele": [
+     "fu-notsud-zeile :: 0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält"
+    ]
+   },
+   "erbe": {
     "ueber": 0,
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
-    "knoepfe": 20,
-    "zuKlein": 0,
-    "beispiele": []
-   },
-   "klang": {
-    "ueber": 0,
-    "klein": 1,
-    "winzig": 0,
-    "kleinste": 10.9,
-    "knoepfe": 1,
-    "zuKlein": 0,
-    "beispiele": []
-   },
-   "erbe": {
-    "ueber": 0,
-    "klein": 41,
-    "winzig": 40,
-    "kleinste": 6.9,
     "knoepfe": 8,
     "zuKlein": 0,
     "beispiele": []
    },
    "kern": {
     "ueber": 0,
-    "klein": 9,
-    "winzig": 8,
-    "kleinste": 9.4,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
+    "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
    "preis": {
     "ueber": 0,
-    "klein": 12,
-    "winzig": 12,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 2,
     "zuKlein": 0,
     "beispiele": []
@@ -215,54 +215,56 @@
   "e3": {
    "(ohne)": {
     "ueber": 0,
-    "klein": 2,
+    "klein": 0,
     "winzig": 0,
-    "kleinste": 11.9,
+    "kleinste": 999,
     "knoepfe": 0,
     "zuKlein": 0,
     "beispiele": []
    },
    "stadt": {
-    "ueber": 15,
-    "klein": 49,
-    "winzig": 44,
-    "kleinste": 5.5,
+    "ueber": 12,
+    "klein": 1,
+    "winzig": 0,
+    "kleinste": 11,
     "knoepfe": 22,
     "zuKlein": 0,
     "beispiele": [
      "wort :: OHNE DICH GESCHEHEN",
      "wort :: DIE HÄUSER",
      "zahl :: wollen 146 · im Keller liegen 11 hl",
-     "wort :: SUDPLAN",
      "zahl :: am schwarzen Brett der Mälzerei",
-     "wort :: DER EISKELLER"
+     "wort :: DER EISKELLER",
+     "zahl :: 11 von 135 hl · 11 reif"
     ]
    },
    "gegner": {
     "ueber": 1,
-    "klein": 42,
-    "winzig": 41,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 13,
-    "zuKlein": 0,
+    "zuKlein": 1,
     "beispiele": [
      "was :: Brauerei Adler wirbt um Brückenwirt: Er bietet dem"
     ]
    },
    "sud": {
-    "ueber": 0,
+    "ueber": 1,
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
     "knoepfe": 4,
     "zuKlein": 0,
-    "beispiele": []
+    "beispiele": [
+     "sud-zverfahren :: Natureis aus dem Fluss · Betriebshefe aus dem Bott"
+    ]
    },
    "name": {
     "ueber": 1,
-    "klein": 37,
-    "winzig": 35,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 9,
     "zuKlein": 0,
     "beispiele": [
@@ -270,48 +272,46 @@
     ]
    },
    "fuhre": {
-    "ueber": 1,
-    "klein": 0,
+    "ueber": 0,
+    "klein": 4,
     "winzig": 0,
-    "kleinste": 999,
+    "kleinste": 10,
     "knoepfe": 24,
     "zuKlein": 0,
-    "beispiele": [
-     "fu-kerbsatz :: Ein Wechsel auf drei Monate, akzeptiert vom Malzhä"
-    ]
+    "beispiele": []
    },
    "erbe": {
     "ueber": 0,
-    "klein": 41,
-    "winzig": 40,
-    "kleinste": 6.9,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 8,
     "zuKlein": 0,
     "beispiele": []
    },
    "kern": {
     "ueber": 0,
-    "klein": 9,
-    "winzig": 8,
-    "kleinste": 9.4,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 3,
     "zuKlein": 0,
     "beispiele": []
    },
    "klang": {
     "ueber": 0,
-    "klein": 1,
+    "klein": 0,
     "winzig": 0,
-    "kleinste": 10.9,
+    "kleinste": 999,
     "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
    "preis": {
     "ueber": 0,
-    "klein": 12,
-    "winzig": 12,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 2,
     "zuKlein": 0,
     "beispiele": []
@@ -320,54 +320,56 @@
   "e4": {
    "(ohne)": {
     "ueber": 0,
-    "klein": 2,
+    "klein": 0,
     "winzig": 0,
-    "kleinste": 11.9,
+    "kleinste": 999,
     "knoepfe": 0,
     "zuKlein": 0,
     "beispiele": []
    },
    "stadt": {
-    "ueber": 8,
-    "klein": 44,
-    "winzig": 41,
-    "kleinste": 6.9,
+    "ueber": 10,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 20,
     "zuKlein": 0,
     "beispiele": [
      "wort :: OHNE DICH GESCHEHEN",
+     "wort :: DIE HÄUSER",
      "zahl :: wollen 534 · im Keller liegen 210 hl",
      "zahl :: im Schaltraum, auf Formica",
      "zahl :: 210 von 600 hl · 210 reif",
-     "zahl :: 0,0 von 450 hl · 0 von 3 Halten",
-     "wort :: DER RUF DES HAUSES"
+     "zahl :: 0,0 von 450 hl · 0 von 3 Halten"
     ]
    },
    "gegner": {
     "ueber": 1,
-    "klein": 46,
-    "winzig": 44,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 12,
-    "zuKlein": 0,
+    "zuKlein": 1,
     "beispiele": [
      "was :: Der Adler erhöht den Werbekostenzuschuss beim Brüc"
     ]
    },
    "sud": {
-    "ueber": 0,
+    "ueber": 1,
     "klein": 0,
     "winzig": 0,
     "kleinste": 999,
     "knoepfe": 4,
     "zuKlein": 0,
-    "beispiele": []
+    "beispiele": [
+     "sud-zverfahren :: Nach Erfahrung des Braumeisters · Naturtrüb, unfil"
+    ]
    },
    "name": {
     "ueber": 2,
-    "klein": 38,
-    "winzig": 36,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 9,
     "zuKlein": 0,
     "beispiele": [
@@ -377,27 +379,18 @@
    },
    "fuhre": {
     "ueber": 0,
-    "klein": 0,
+    "klein": 7,
     "winzig": 0,
-    "kleinste": 999,
+    "kleinste": 10,
     "knoepfe": 22,
-    "zuKlein": 0,
-    "beispiele": []
-   },
-   "klang": {
-    "ueber": 0,
-    "klein": 1,
-    "winzig": 0,
-    "kleinste": 10.9,
-    "knoepfe": 1,
-    "zuKlein": 0,
+    "zuKlein": 11,
     "beispiele": []
    },
    "erbe": {
     "ueber": 1,
-    "klein": 41,
-    "winzig": 40,
-    "kleinste": 6.9,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 8,
     "zuKlein": 0,
     "beispiele": [
@@ -406,18 +399,27 @@
    },
    "kern": {
     "ueber": 0,
-    "klein": 9,
-    "winzig": 8,
-    "kleinste": 9.4,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 3,
+    "zuKlein": 0,
+    "beispiele": []
+   },
+   "klang": {
+    "ueber": 0,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
+    "knoepfe": 1,
     "zuKlein": 0,
     "beispiele": []
    },
    "preis": {
     "ueber": 0,
-    "klein": 12,
-    "winzig": 12,
-    "kleinste": 6.5,
+    "klein": 0,
+    "winzig": 0,
+    "kleinste": 999,
     "knoepfe": 2,
     "zuKlein": 0,
     "beispiele": []
@@ -427,78 +429,78 @@
  "summe": {
   "(ohne)": {
    "ueber": 0,
-   "klein": 8,
-   "winzig": 0,
-   "zuKlein": 0,
-   "knoepfe": 0,
-   "kleinste": 11.9
-  },
-  "erbe": {
-   "ueber": 1,
-   "klein": 164,
-   "winzig": 160,
-   "zuKlein": 0,
-   "knoepfe": 32,
-   "kleinste": 6.9
-  },
-  "fuhre": {
-   "ueber": 2,
    "klein": 0,
    "winzig": 0,
    "zuKlein": 0,
-   "knoepfe": 87,
+   "knoepfe": 0,
    "kleinste": 999
+  },
+  "erbe": {
+   "ueber": 1,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 0,
+   "knoepfe": 32,
+   "kleinste": 999
+  },
+  "fuhre": {
+   "ueber": 2,
+   "klein": 23,
+   "winzig": 0,
+   "zuKlein": 11,
+   "knoepfe": 87,
+   "kleinste": 10
   },
   "gegner": {
    "ueber": 4,
-   "klein": 172,
-   "winzig": 167,
-   "zuKlein": 0,
+   "klein": 0,
+   "winzig": 0,
+   "zuKlein": 4,
    "knoepfe": 49,
-   "kleinste": 6.5
+   "kleinste": 999
   },
   "kern": {
    "ueber": 0,
-   "klein": 36,
-   "winzig": 32,
+   "klein": 0,
+   "winzig": 0,
    "zuKlein": 0,
    "knoepfe": 12,
-   "kleinste": 9.4
+   "kleinste": 999
   },
   "klang": {
    "ueber": 0,
-   "klein": 4,
+   "klein": 0,
    "winzig": 0,
    "zuKlein": 0,
    "knoepfe": 4,
-   "kleinste": 10.9
+   "kleinste": 999
   },
   "name": {
    "ueber": 6,
-   "klein": 149,
-   "winzig": 141,
+   "klein": 0,
+   "winzig": 0,
    "zuKlein": 0,
    "knoepfe": 34,
-   "kleinste": 6.5
+   "kleinste": 999
   },
   "preis": {
    "ueber": 0,
-   "klein": 48,
-   "winzig": 48,
+   "klein": 0,
+   "winzig": 0,
    "zuKlein": 0,
    "knoepfe": 8,
-   "kleinste": 6.5
+   "kleinste": 999
   },
   "stadt": {
-   "ueber": 53,
-   "klein": 191,
-   "winzig": 175,
+   "ueber": 48,
+   "klein": 3,
+   "winzig": 0,
    "zuKlein": 0,
    "knoepfe": 88,
-   "kleinste": 5.5
+   "kleinste": 11
   },
   "sud": {
-   "ueber": 1,
+   "ueber": 2,
    "klein": 0,
    "winzig": 0,
    "zuKlein": 0,
