@@ -115,8 +115,25 @@ BRAUHAUS.welt.meldeZug('Sud', 30)             // Preis deines nächsten sinnvoll
   Fass (1 Fass = 150 l).
 
 Weiteres aus `design/PRUEFUNG.md`: offene Braupfanne statt Destillierblase · Emailschilder
-erst ab den 1890ern · keine Bahn vor 1835/nicht in 1600 · kein Hopfen in 1350 · ein
+erst ab den 1890ern · keine Bahn vor 1835/nicht in 1600 · ein
 Marktanteil wird auf die **eigene** Gesamtmenge bezogen.
+
+> **BERICHTIGT am 5. August 2026 — hier stand „kein Hopfen in 1350", und das war
+> falsch.** Gemeldet vom blinden Kritiker DER SUD als Widerspruch zwischen zwei
+> Vorgabedateien, von der Aufsicht nachgeschlagen und entschieden: **`PRUEFUNG.md`
+> verbietet Hopfen in 1350 nirgends.** §1.2 A12 bescheinigt die Hopfendolde für
+> **1300–1420** ausdrücklich als richtig — *„Hopfenbier verdrängt Grut im
+> 14. Jh."* Diese Zeile hatte eine Regel erfunden und sie der Prüfung in den Mund
+> gelegt.
+>
+> **Was auf dem Spiel stand:** die erste Achse von 1350 heißt *Grut oder Hopfen*.
+> Ein Builder, der dieser Zeile gefolgt wäre, hätte eine historisch richtige und
+> spielerisch interessante Entscheidung entfernt — und wäre dafür auch noch von
+> der Sperrliste gedeckt gewesen.
+>
+> **Die Lehre gilt über diesen Fall hinaus:** wer hier eine Regel aus
+> `PRUEFUNG.md` zitiert, zitiert sie **wörtlich und mit Stelle**. Eine
+> zusammengefasste Sperrliste, die nachdichtet, ist gefährlicher als keine.
 
 ## Uhr, Würfel, Ereignisse
 
