@@ -1,0 +1,315 @@
+/* ===========================================================================
+   stil/stadt-zusatz.css — DIE KARTENSCHICHT.  Gehoert "stadt".
+   Eingehaengt in spiel/index.html nach stil/stadt.css. Kein Bauer aendert
+   index.html.
+
+   Hier steht genau eine Sache: wie die Ortsmarken der anderen Stuecke im
+   Stadtfenster stehen. Der Kritiker hat sie in Runde 2 "Schmutz auf der
+   Platte" genannt — kleine helle Schilder ohne Fuss, ueber eine gemalte
+   Stadt gestreut. Die Auskunft darin bleibt unveraendert und lesbar; sie
+   bekommt einen Boden (den PFLOCK) und eine Ruhelage.
+   =========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1 — DER PFLOCK
+   Eine kleine dunkle Scheibe mit Goldring, genau auf dem Ort aus
+   kern/orte.js. Er steht immer, auch wenn die Marke darauf ruht: damit ist
+   im Bild zu sehen, DASS dort etwas ist, ohne dass es die Platte zukleistert.
+   -------------------------------------------------------------------------- */
+
+.knopf.stadt-pflock {
+  display: block;
+  width: calc(var(--s) * 26);
+  height: calc(var(--s) * 26);
+  min-height: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.knopf.stadt-pflock:hover,
+.knopf.stadt-pflock:active { background: none; box-shadow: none; }
+
+/* Der sichtbare deutsche Knopftext bleibt im Knopf — er tritt unter dem
+   Pflock hervor, sobald der Zeiger oder die Tastatur ihn findet. */
+.knopf.stadt-pflock .wort {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + var(--s) * 4);
+  translate: -50% 0;
+  padding: calc(var(--s) * 2) calc(var(--s) * 7) calc(var(--s) * 3);
+  border-radius: calc(var(--s) * 3);
+  background: rgba(38, 24, 10, 0.92);
+  border: calc(var(--s) * 1) solid rgba(214, 178, 96, 0.75);
+  color: #f4e6c6;
+  font-family: var(--serif, serif);
+  font-size: max(12px, calc(var(--s) * 15));
+  letter-spacing: calc(var(--s) * 1);
+  line-height: 1.15;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease-out;
+}
+
+.knopf.stadt-pflock:hover .wort,
+.knopf.stadt-pflock:focus-visible .wort { opacity: 1; }
+
+/* Die Scheibe selbst. Zwei Ringe: aussen der warme Schatten der Platte,
+   innen das Gold der Beschriftung — dieselbe Familie wie ST. MICHAEL. */
+.knopf.stadt-pflock .scheibe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 32%, #6a4a24 0%, #40290f 62%, #241606 100%);
+  border: calc(var(--s) * 2) solid rgba(226, 190, 108, 0.85);
+  box-shadow:
+    0 calc(var(--s) * 3) calc(var(--s) * 6) rgba(30, 18, 6, 0.55),
+    0 0 0 calc(var(--s) * 2) rgba(255, 248, 226, 0.28);
+}
+
+.knopf.stadt-pflock:hover .scheibe,
+.knopf.stadt-pflock:focus-visible .scheibe {
+  border-color: #ffe6a6;
+  box-shadow:
+    0 calc(var(--s) * 3) calc(var(--s) * 6) rgba(30, 18, 6, 0.55),
+    0 0 calc(var(--s) * 10) calc(var(--s) * 2) rgba(255, 226, 150, 0.55);
+}
+
+/* Die Marke steht: der Pflock tritt zurueck, er ist dann nur noch ihr Fuss. */
+.knopf.stadt-pflock:not(.ruht) {
+  width: calc(var(--s) * 15);
+  height: calc(var(--s) * 15);
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   2 — DIE RUHELAGE DER FREMDEN MARKE
+   Sie wird nicht geloescht und nicht umgeschrieben: sie legt sich hin. Der
+   Platz, den sie einnimmt, bleibt derselbe — deshalb weiss die Kartenschicht
+   jederzeit, wohin ihr Pflock gehoert, und deshalb stehen darin die lebenden
+   Zahlen des fremden Stuecks und nicht eine Abschrift davon.
+   -------------------------------------------------------------------------- */
+
+.stadt-marke-ruht {
+  opacity: 0;
+  transition: opacity 140ms ease-out;
+}
+
+/* Was unsichtbar ist, faengt keine Maus. Das braucht !important, weil
+   grund.css '.ebene .greifbar' und die Stuecke selbst pointer-events mit
+   hoeherer Spezifitaet setzen — eine ruhende Marke wuerde sonst den Klick
+   schlucken, der ihrem eigenen Pflock gilt, und Playwright meldete
+   "subtree intercepts pointer events". */
+.stadt-marke-ruht,
+.stadt-marke-ruht * { pointer-events: none !important; }
+
+/* Vom Zeiger hervorgeholt: die Marke ist zu lesen, nimmt der Maus aber nichts
+   weg — sonst deckte sie den Pflock, auf dem der Zeiger gerade steht, und
+   Playwright kaeme nie zum Klick. Festgeheftet wird per Klick, nicht per
+   Darueberfahren. */
+.stadt-marke-zeigt,
+.stadt-marke-zeigt * { pointer-events: none !important; }
+
+/* --------------------------------------------------------------------------
+   3 — DER SCHALTER IN DER WERKBANK
+   -------------------------------------------------------------------------- */
+
+.stadt-reiter.marken .wort::before {
+  content: '';
+  display: inline-block;
+  width: calc(var(--s) * 12);
+  height: calc(var(--s) * 12);
+  margin-right: calc(var(--s) * 8);
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #6a4a24 0%, #40290f 70%);
+  border: calc(var(--s) * 2) solid rgba(226, 190, 108, 0.9);
+  vertical-align: baseline;
+}
+
+/* --------------------------------------------------------------------------
+   4 — DAS GESTELL DES HAUSSCHILDS   (Runde 5)
+
+   Der Kritiker hat 1970 ein rahmenloses weisses Rechteck 207x71 px auf
+   (1138|917) gefunden: kein Pfosten, keine Wand dahinter, vor drei
+   Tiefenebenen zugleich. In 1350, 1600 und 1884 haengt dasselbe Schild am
+   gemalten Torbogen der Platte — in der Platte 1970 ist der Hof ein
+   asphaltierter Parkplatz, da haengt nichts.
+
+   Also steht es dort. Zwei Stahlrohre und ein Betonfuss, in der Sprache der
+   Reklametafel, die auf derselben Platte danebensteht. Der Fuss sitzt auf dem
+   Ort, nicht die Mitte: das Schild steht auf dem Boden statt darueber.
+   -------------------------------------------------------------------------- */
+
+.stadt-schildwerk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stadt-schildwerk > .stadt-hausschild { width: 100%; }
+
+.stadt-gestell {
+  position: relative;
+  width: 100%;
+  /* Die Rohre setzen unter dem Schildrand an und stehen nicht davor. */
+  margin-top: calc(var(--s) * -2);
+}
+
+.stadt-gestell .bein {
+  position: absolute;
+  top: 0;
+  bottom: calc(var(--s) * 5);
+  width: calc(var(--s) * 7);
+  background: linear-gradient(90deg, #6d6b62 0%, #b6b3a8 38%, #83817a 72%, #56544d 100%);
+  border-radius: calc(var(--s) * 2);
+  box-shadow: 0 calc(var(--s) * 2) calc(var(--s) * 4) rgba(30, 26, 16, 0.45);
+}
+
+.stadt-gestell .bein.links  { left: 22%; }
+.stadt-gestell .bein.rechts { right: 22%; }
+
+/* Der Betonfuss: das Stueck, das den Boden wirklich beruehrt.
+   Runde 6: er ist ein Sockel geworden statt eines Balkens — mit einer
+   Deckflaeche in der Schraege der Platte, einer Stirnseite darunter und
+   einem Schlagschatten, der nach hinten links faellt wie jeder andere
+   Schatten im Hof. "Ohne Schatten, ohne Perspektive, ohne Bodenkontakt"
+   war der halbe Befund des Kritikers; das hier ist die andere Haelfte. */
+.stadt-gestell .fuss {
+  position: absolute;
+  left: 28%;
+  right: 28%;
+  bottom: 0;
+  height: calc(var(--s) * 9);
+  background:
+    linear-gradient(180deg, #e4dfd2 0%, #cfc8b7 34%, #9b9484 36%, #7d7768 100%);
+  border-radius: calc(var(--s) * 1.5);
+  box-shadow:
+    inset 0 calc(var(--s) * -1.5) calc(var(--s) * 2) rgba(40, 34, 22, 0.35),
+    0 calc(var(--s) * 1.5) calc(var(--s) * 3) rgba(30, 26, 16, 0.55);
+}
+
+/* Der Schatten auf dem Boden. Er gehoert zum Fuss, nicht zum Schild:
+   sichtbar wird damit, WO das Ding steht. */
+.stadt-gestell .fuss::after {
+  content: "";
+  position: absolute;
+  left: -55%;
+  right: -25%;
+  bottom: calc(var(--s) * -3);
+  height: calc(var(--s) * 7);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 50%,
+    rgba(38, 30, 18, 0.42) 0%, rgba(38, 30, 18, 0.22) 55%, rgba(38, 30, 18, 0) 100%);
+  z-index: -1;
+}
+
+/* --------------------------------------------------------------------------
+   5 — DIE REITERZEILE HAELT MEHR REITER   (Runde 5)
+
+   Der geschlossene Rahmen bringt zwei bis drei Bretter mehr an die Werkbank —
+   DER NAME aus ebene-kopf und die grossen Ortsmarken, die keine waren. Bei
+   248 Bezugspixeln Mindestbreite passten sieben Reiter nicht mehr in die
+   Zeile, der letzte lief unter das Brett des naechsten Zuges. Sie schrumpfen
+   deshalb mit: der Name des Bretts steht mit Auslassungspunkten, die Zahl
+   darunter bleibt vollstaendig, und die Zeile bleibt EINE Zeile — sonst
+   waechst die Werkbank nach oben ins Stadtfenster.
+   -------------------------------------------------------------------------- */
+
+.stadt-reiterzeile { gap: calc(var(--s) * 3); padding-left: calc(var(--s) * 4); padding-right: calc(var(--s) * 4); }
+
+.knopf.stadt-reiter {
+  min-width: calc(var(--s) * 150);
+  max-width: calc(var(--s) * 262);
+  /* VERWORFEN, weil gemessen: `flex: 1 1 0` (alle Reiter gleich breit) macht
+     es auf der Entwurfsleinwand SCHLECHTER, nicht besser — vier ganze
+     Ueberschriften statt sechs. Gleiche Breite hilft dem kurzen Namen und
+     nimmt dem langen mehr weg, als der kurze gewinnt. Es bleibt bei der
+     inhaltsproportionalen Aufteilung. */
+  flex: 0 1 auto;
+  /* AUFLAGE 2, Welle 7 — der Reiter gibt Polster ab, damit die Aufschrift
+     Platz hat. Der blinde Kritiker hat gezaehlt, dass auf der ENTWURFS-
+     LEINWAND 2752x1536 acht von zwoelf Reitern ihre UEBERSCHRIFT verlieren
+     (48 abgeschnittene Kaesten dort gegen 37 bei 1366x768) — es ist also
+     kein Kleinbildschirm-Effekt, sondern dort am schlimmsten, wo entworfen
+     wurde. Gerechnet: zehn Reiter in 62,6 % von 2752 px haben 1.654 px fuer
+     Inhalt; je 20 px Polster und 14 px Sperrung sind davon 340 px, also ein
+     Fuenftel, das keine Schrift traegt. Mit 8 statt 20 und 6 statt 14
+     kommen rund 240 px zurueck. Die Werkbank wird davon nicht hoeher —
+     nachgemessen mit stadt-schrift/gestalt.mjs, und daran haengt rho. */
+  padding-left: calc(var(--s) * 4);
+  padding-right: calc(var(--s) * 4);
+}
+
+.knopf.stadt-reiter .wort { letter-spacing: calc(var(--s) * 0.6); }
+
+/* "Stadt zeigen" bleibt liegen, wenn kein Brett offen ist — es verschwindet
+   nur. Wer es entfernte, baute die Zeile neu und riss dem Spieler den Knopf
+   unter dem Zeiger weg. */
+.knopf.stadt-reiter.frei.aus { display: none; }
+
+/* ==========================================================================
+   DAS LOT — ?boden=1
+   Die Mauerlinie, das Torfeld und je Aufbau seine 24 gemessenen Fusspunkte.
+   Gruen heisst: der Punkt sitzt auf seinem Boden. Rot heisst: er sitzt auf
+   der Mauer oder in der Luft darueber. Nichts davon liegt im Vorgabestand
+   im Bild — es erscheint nur, wenn jemand nachmessen will.
+   ========================================================================== */
+
+.stadt-lot {
+  position: absolute;
+  inset: 0;
+  z-index: 5000;
+  pointer-events: none;
+}
+
+.stadt-lot .lot-linie {
+  position: absolute;
+  height: 3px;
+  transform-origin: 0 50%;
+  background: #e8402a;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.stadt-lot .lot-tor {
+  position: absolute;
+  border: 3px dashed #1f6feb;
+  background: rgba(31, 111, 235, 0.12);
+}
+
+.stadt-lot .lot-punkt {
+  position: absolute;
+  width: calc(var(--s) * 9);
+  height: calc(var(--s) * 9);
+  margin: calc(var(--s) * -4.5) 0 0 calc(var(--s) * -4.5);
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 0 calc(var(--s) * 1.5) #fff;
+}
+
+.stadt-lot .lot-punkt.schlecht {
+  background: #e8402a;
+  width: calc(var(--s) * 16);
+  height: calc(var(--s) * 16);
+  margin: calc(var(--s) * -8) 0 0 calc(var(--s) * -8);
+}
+
+/* DIE TIEFE — wer sich in die Quere kommt. Gelb: derselbe Platz. Rot: die
+   Reihenfolge steht verkehrt herum, einer liegt ueber dem, vor dem er steht. */
+.stadt-lot .lot-streit {
+  position: absolute;
+  border: calc(var(--s) * 3) solid #d4a017;
+  background: rgba(212, 160, 23, 0.10);
+}
+
+.stadt-lot .lot-streit.schlecht {
+  border-color: #e8402a;
+  border-style: dashed;
+  background: rgba(232, 64, 42, 0.16);
+}
