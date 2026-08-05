@@ -1,0 +1,427 @@
+{
+ "breite": 1366,
+ "hoehe": 768,
+ "hafen": "8903",
+ "erg": {
+  "e1": {
+   "zu": {
+    "knoten": 21,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 2,
+    "zuKlein": [],
+    "karten": 0,
+    "unterhalt": []
+   },
+   "auf": {
+    "knoten": 308,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 8,
+    "zuKlein": [],
+    "karten": 18,
+    "unterhalt": [
+     {
+      "t": "Was von heute an dazukommt, steht hier und trägt in jedem Michaeli.",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-feld pr-bestand",
+      "px": 12,
+      "y": 679,
+      "h": 32
+     },
+     {
+      "t": "+16 Pf in jedem Michaeli · −6 Pf in jedem Michaeli: Schindeln und Lattung für das Dach",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 493,
+      "h": 169
+     },
+     {
+      "t": "+3 Fass Lagerplatz · +4 im Hundert je Fass · −8 Pf in jedem Michaeli: Weidenreifen und Dau",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 522,
+      "h": 215
+     },
+     {
+      "t": "+34 Pf in jedem Michaeli · −16 Pf in jedem Michaeli: Futter und Streu für den Ochsen",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 493,
+      "h": 154
+     },
+     {
+      "t": "+62 Pf in jedem Michaeli · −47 Pf in jedem Michaeli: Hafer, Beschlag und Geschirr für den ",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 477,
+      "h": 184
+     }
+    ]
+   },
+   "geoeffnet": true
+  },
+  "e2": {
+   "zu": {
+    "knoten": 21,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 2,
+    "zuKlein": [],
+    "karten": 0,
+    "unterhalt": []
+   },
+   "auf": {
+    "knoten": 321,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 8,
+    "zuKlein": [],
+    "karten": 19,
+    "unterhalt": [
+     {
+      "t": "Was von heute an dazukommt, steht hier und trägt in jedem Michaeli.",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-feld pr-bestand",
+      "px": 12,
+      "y": 679,
+      "h": 32
+     },
+     {
+      "t": "+60 fl in jedem Michaeli · +20 Hopfen im Jahr",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 463,
+      "h": 92
+     },
+     {
+      "t": "+45 fl in jedem Michaeli · +5 im Hundert je Fass",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 463,
+      "h": 92
+     },
+     {
+      "t": "+40 fl in jedem Michaeli",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 479,
+      "h": 46
+     },
+     {
+      "t": "+380 fl in jedem Michaeli · 2 Häuser gebunden, 40 Jahre",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 492,
+      "h": 108
+     },
+     {
+      "t": "4 Häuser gebunden, 200 Jahre · −12 fl in jedem Michaeli: Bannzins an den Landesherrn",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 689,
+      "h": 123
+     }
+    ]
+   },
+   "geoeffnet": true
+  },
+  "e3": {
+   "zu": {
+    "knoten": 21,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 2,
+    "zuKlein": [],
+    "karten": 0,
+    "unterhalt": []
+   },
+   "auf": {
+    "knoten": 302,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 10,
+    "zuKlein": [],
+    "karten": 18,
+    "unterhalt": [
+     {
+      "t": "Was von heute an dazukommt, steht hier und trägt in jedem Michaeli.",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-feld pr-bestand",
+      "px": 12,
+      "y": 668,
+      "h": 32
+     },
+     {
+      "t": "+400 M in jedem Michaeli · +7 im Hundert je hl",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 492,
+      "h": 92
+     },
+     {
+      "t": "+500 M in jedem Michaeli · +180 Hopfen im Jahr",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 492,
+      "h": 92
+     },
+     {
+      "t": "+1.500 M in jedem Michaeli · +260 Hopfen im Jahr",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 477,
+      "h": 108
+     },
+     {
+      "t": "+1.800 M in jedem Michaeli · +8 im Hundert je hl",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 477,
+      "h": 108
+     },
+     {
+      "t": "+5.200 M in jedem Michaeli · 2 Häuser gebunden, 25 Jahre",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 509,
+      "h": 123
+     },
+     {
+      "t": "Sofort viel Geld in der Kasse. Dafür geht in jedem Michaeli eine Dividende aus dem Haus — ",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 543,
+      "h": 92
+     },
+     {
+      "t": "−320 M in jedem Michaeli: Dividende an die Aktionäre",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 643,
+      "h": 46
+     },
+     {
+      "t": "+2.400 M in jedem Michaeli",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 597,
+      "h": 31
+     },
+     {
+      "t": "+900 M in jedem Michaeli · +9 im Hundert je hl",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 628,
+      "h": 46
+     }
+    ]
+   },
+   "geoeffnet": true
+  },
+  "e4": {
+   "zu": {
+    "knoten": 21,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 2,
+    "zuKlein": [],
+    "karten": 0,
+    "unterhalt": []
+   },
+   "auf": {
+    "knoten": 326,
+    "klein": 0,
+    "kleinSicht": 0,
+    "winzig": 0,
+    "ueber": 0,
+    "kleinListe": [],
+    "ueberListe": [],
+    "knoepfe": 9,
+    "zuKlein": [],
+    "karten": 19,
+    "unterhalt": [
+     {
+      "t": "Was von heute an dazukommt, steht hier und trägt in jedem Michaeli.",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-feld pr-bestand",
+      "px": 12,
+      "y": 672,
+      "h": 32
+     },
+     {
+      "t": "+4.500 DM in jedem Michaeli · +4 im Hundert je hl",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 539,
+      "h": 108
+     },
+     {
+      "t": "+9.000 DM in jedem Michaeli · 2 Häuser gebunden, 20 Jahre",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 493,
+      "h": 138
+     },
+     {
+      "t": "+12.000 DM in jedem Michaeli",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 496,
+      "h": 61
+     },
+     {
+      "t": "+34.000 DM in jedem Michaeli · +1.350 hl Lagerplatz",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 523,
+      "h": 123
+     },
+     {
+      "t": "+60.000 DM in jedem Michaeli · +3.300 hl Lagerplatz",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 538,
+      "h": 123
+     },
+     {
+      "t": "+28.000 DM in jedem Michaeli",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 725,
+      "h": 46
+     },
+     {
+      "t": "Vier Häuser bleiben dem Haus. Dafür geht in jedem Michaeli eine Rückvergütung an die Wirte",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 549,
+      "h": 123
+     },
+     {
+      "t": "4 Häuser gebunden, 60 Jahre · −1.200 DM in jedem Michaeli: Rückvergütung an die Genossen",
+      "sicht": true,
+      "imFenster": true,
+      "geschnitten": true,
+      "wodurch": "pr-karte-text",
+      "px": 12,
+      "y": 680,
+      "h": 138
+     }
+    ]
+   },
+   "geoeffnet": true
+  }
+ }
+}

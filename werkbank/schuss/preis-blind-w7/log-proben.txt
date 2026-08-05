@@ -8,3 +8,27 @@ MESSFENSTER offen — load 1.06 1.28 1.20
 preis:nimm:dach  Schild −33 Pf (data-preis -33)  Kasse 112 → 79  Δ -33  GENAU
 preis:nimm:bottich  Schild −42 Pf (data-preis -42)  Kasse 79 → 37  Δ -42  GENAU
 MESSFENSTER: belegt, warte (max 5400s) …
+MESSFENSTER: frei nach 340s
+MESSFENSTER offen — load 0.92 1.05 1.12
+preis:nimm:darre  Schild −210 fl (data-preis -210)  Kasse 640 → 430  Δ -210  GENAU
+preis:festlege:reinheit  Schild −280 fl (data-preis -280)  Kasse 430 → 150  Δ -280  GENAU
+MESSFENSTER: belegt, warte (max 5400s) …
+MESSFENSTER: frei nach 6s
+MESSFENSTER offen — load 0.93 1.05 1.12
+preis:nimm:braumeister  Schild −3.100 M (data-preis -3100)  Kasse 14250 → 11150  Δ -3100  GENAU
+preis:nimm:malzkontrakt  Schild −4.200 M (data-preis -4200)  Kasse 11150 → 6950  Δ -4200  GENAU
+preis:festlege:aktien  Schild +11.000 M (data-preis 11000)  Kasse 6950 → 19950  Δ 13000  ABWEICHUNG 2000
+MESSFENSTER offen — load 1.09 1.08 1.13
+preis:nimm:schankanlage  Schild −25.000 DM (data-preis -25000)  Kasse 86000 → 61000  Δ -25000  GENAU
+preis:nimm:grosshandel  Schild −48.000 DM (data-preis -48000)  Kasse 61000 → 13000  Δ -48000  GENAU
+preis:festlege:konzern  Schild +65.000 DM (data-preis 65000)  Kasse 13000 → 78000  Δ 65000  GENAU
+MESSFENSTER offen — load 1.09 1.08 1.13
+E1 1366x768  geladen: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/2 Knoepfe <24px
+      Tafel auf: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/8 Knoepfe <24px · Unterhalt-Zeilen 5 (davon geschnitten 5, ausserhalb Fenster 0)
+E2 1366x768  geladen: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/2 Knoepfe <24px
+      Tafel auf: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/8 Knoepfe <24px · Unterhalt-Zeilen 6 (davon geschnitten 6, ausserhalb Fenster 0)
+E3 1366x768  geladen: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/2 Knoepfe <24px
+      Tafel auf: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/10 Knoepfe <24px · Unterhalt-Zeilen 10 (davon geschnitten 10, ausserhalb Fenster 0)
+E4 1366x768  geladen: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/2 Knoepfe <24px
+      Tafel auf: 0 <12px (0 sichtbar) · 0 Ueberlauf · 0/9 Knoepfe <24px · Unterhalt-Zeilen 9 (davon geschnitten 9, ausserhalb Fenster 0)
+PROBENFERTIG

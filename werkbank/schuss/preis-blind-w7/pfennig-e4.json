@@ -1,0 +1,70 @@
+{
+ "epoche": 4,
+ "fehler": [],
+ "proben": [
+  {
+   "zug": "preis:nimm:schankanlage",
+   "schild": "−25.000 DM",
+   "dataPreis": -25000,
+   "text": "Nehmen −25.000 DM",
+   "kasseVor": 86000,
+   "kasseNach": 61000,
+   "veraenderung": -25000,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Die Schankanlagen in den Wirtschaften",
+     "p": -25000
+    }
+   ]
+  },
+  {
+   "zug": "preis:nimm:grosshandel",
+   "schild": "−48.000 DM",
+   "dataPreis": -48000,
+   "text": "Nehmen −48.000 DM",
+   "kasseVor": 61000,
+   "kasseNach": 13000,
+   "veraenderung": -48000,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Der Getränkefachgroßhandel als Partner",
+     "p": -48000
+    }
+   ]
+  },
+  {
+   "zug": "preis:nimm:lastzug",
+   "uebersprungen": "nicht treffbar"
+  },
+  {
+   "zug": "preis:festlege:konzern",
+   "schild": "+65.000 DM",
+   "dataPreis": 65000,
+   "text": "Festlegen — Geld herein +65.000 DM",
+   "kasseVor": 13000,
+   "kasseNach": 78000,
+   "veraenderung": 65000,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Der Liefervertrag mit der Nordstern-Gruppe — Zufluss",
+     "p": 65000
+    },
+    {
+     "w": "spieler",
+     "s": "Festlegung: Der Liefervertrag mit der Nordstern-Gruppe (unabänderlich)",
+     "p": 0
+    }
+   ]
+  },
+  {
+   "zug": "preis:festlege:privat",
+   "uebersprungen": "nicht treffbar"
+  }
+ ]
+}

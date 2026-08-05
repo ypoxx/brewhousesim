@@ -1,0 +1,74 @@
+{
+ "epoche": 3,
+ "fehler": [],
+ "proben": [
+  {
+   "zug": "preis:nimm:braumeister",
+   "schild": "−3.100 M",
+   "dataPreis": -3100,
+   "text": "Nehmen −3.100 M",
+   "kasseVor": 14250,
+   "kasseNach": 11150,
+   "veraenderung": -3100,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Ein Braumeister aus Weihenstephan",
+     "p": -3100
+    }
+   ]
+  },
+  {
+   "zug": "preis:nimm:malzkontrakt",
+   "schild": "−4.200 M",
+   "dataPreis": -4200,
+   "text": "Nehmen −4.200 M",
+   "kasseVor": 11150,
+   "kasseNach": 6950,
+   "veraenderung": -4200,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Der Kontrakt mit der Handelsmälzerei",
+     "p": -4200
+    }
+   ]
+  },
+  {
+   "zug": "preis:nimm:maelzerei",
+   "uebersprungen": "nicht treffbar"
+  },
+  {
+   "zug": "preis:nimm:flaschen",
+   "uebersprungen": "nicht treffbar"
+  },
+  {
+   "zug": "preis:festlege:aktien",
+   "schild": "+11.000 M",
+   "dataPreis": 11000,
+   "text": "Festlegen — Geld herein +11.000 M",
+   "kasseVor": 6950,
+   "kasseNach": 19950,
+   "veraenderung": 13000,
+   "stimmt": false,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Die Umwandlung in eine Aktiengesellschaft — Zufluss",
+     "p": 13000
+    },
+    {
+     "w": "spieler",
+     "s": "Festlegung: Die Umwandlung in eine Aktiengesellschaft (unabänderlich)",
+     "p": 0
+    }
+   ]
+  },
+  {
+   "zug": "preis:festlege:konvention",
+   "uebersprungen": "nicht treffbar"
+  }
+ ]
+}

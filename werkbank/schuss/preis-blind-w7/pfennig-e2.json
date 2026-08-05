@@ -1,0 +1,53 @@
+{
+ "epoche": 2,
+ "fehler": [],
+ "proben": [
+  {
+   "zug": "preis:nimm:darre",
+   "schild": "−210 fl",
+   "dataPreis": -210,
+   "text": "Nehmen −210 fl",
+   "kasseVor": 640,
+   "kasseNach": 430,
+   "veraenderung": -210,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Die Darre überm Malzboden",
+     "p": -210
+    }
+   ]
+  },
+  {
+   "zug": "preis:nimm:wappenbrief",
+   "uebersprungen": "nicht treffbar"
+  },
+  {
+   "zug": "preis:nimm:auswaertiger",
+   "uebersprungen": "nicht treffbar"
+  },
+  {
+   "zug": "preis:festlege:reinheit",
+   "schild": "−280 fl",
+   "dataPreis": -280,
+   "text": "Festlegen −280 fl",
+   "kasseVor": 430,
+   "kasseNach": 150,
+   "veraenderung": -280,
+   "stimmt": true,
+   "buchungen": [
+    {
+     "w": "spieler",
+     "s": "Festlegung: Das Reinheitsgebot annehmen",
+     "p": -280
+    },
+    {
+     "w": "spieler",
+     "s": "Festlegung: Das Reinheitsgebot annehmen (unabänderlich)",
+     "p": 0
+    }
+   ]
+  }
+ ]
+}
