@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-05T19:23:21+00:00",
- "phase": "Kein Reset seit drei Stunden. Die Gegenmessung der Aufsicht nach der Nacharbeit von DER PREIS läuft am eingefrorenen Stand 54517b9: 1350 dreimal, die anderen drei je einmal. Der Builder hatte selbst offengelegt, dass seine eigene Gerätekontrolle dort bei n gleich eins steht — deshalb wird 1350 dreifach gefahren und die übrigen nur auf Unverändertheit geprüft. DIE STADT arbeitet weiter an ihren sechs Auflagen, die schwerste ist das leere vordere Drittel des Hofes: alle Fußpunkte aller Bauten liegen im oberen Bereich, und dort, wo das Zielbild seine Fassreihen trägt, bleibt über die ganze Partie unberührte Platte liegen.",
+ "stand": "2026-08-05T20:09:38+00:00",
+ "phase": "Die letzte offene Frage der Welle 7 läuft: ein fremdes Auge legt den laufenden Bildschirm blind neben die Zielbilder, je Epoche zweimal — einmal nach dem Laden und einmal nach zwanzig gespielten Wochen, weil ein leerer Hof nicht dasselbe ist wie ein bespielter. Es darf keinen einzigen Bericht der Builder sehen; dort steht, was sie getan zu haben glauben, und sehen soll es, was da ist. Vorher hat die Aufsicht die Nacharbeit von DER PREIS abgeschlossen nachgemessen: 1350 steht bei minus 0,245 / minus 0,170 / minus 0,336, drei byteweise identische Läufe. Damit ist auch die Gerätekontrolle geschlossen, die der Builder selbst als offen gemeldet hatte. Und DIE STADT hat die Aufsicht korrigiert: es sind drei Bauten mit epochenweisem Versatz, nicht zwei — der dritte kam ungefragt nachgemeldet, geprüft gegen die neue Regel, dass Gegrabenes bleibt und Gebautes umziehen darf. Kein gegrabenes Ding trägt noch einen Versatz. Am eingefrorenen Baum hat er dafür kein Byte verändert und alle fünf Dateien per Prüfsumme auf ihren alten Stand zurückgeprüft, weil der Blindvergleich aussteht.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T16:42:45+00:00",
-   "text": "NAME R1 GEBAUT. Der Ruf liegt in VIER NEUEN Feldern auf welt.haus, die sonst niemand beschreibt: haus.ruf, haus.rufBekannt, haus.rufDeckung, haus.rufAufschlag (0..0,32). welt.haus.preis wird NICHT angefasst — DER PREIS haengt das Stueck mit EINER Zeile ein: setzeBierpreis() -> o.preis * (1 + Z.aufschlag) * (1 + (B.welt.haus.rufAufschlag || 0)). Bis dahin wirkt der Ruf ueber Adressen (welt.binde), und das ist Geld, nur ueber DIE FUHRE gerechnet. KEINE Abgabe, KEIN automatischer Abzug: jeder Pfennig haengt an einem angeklickten Knopf, der Deckel aus Zustaendigkeit 4 bleibt unberuehrt."
-  },
   {
    "zeit": "2026-08-01T16:42:45+00:00",
    "text": "NAME R1: Ruf = Bekanntheit x Deckung / 100. Bekanntheit waechst hoechstens 0,9 in der Woche (ein Braujahr hat 30) und ist je Epoche gedeckelt: 55 / 68 / 86 / 92 — 1350 kennen einen drei Gassen weit, 1970 die Republik. Deckung faellt in EINEM Urteil um 6 bis 22 und heilt umso schneller, je tiefer sie steht. Das ist 'langsam zu bauen, schnell zu verlieren' als Zahl statt als Behauptung."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-05T19:23:21+00:00",
    "text": "Kein Reset seit drei Stunden. Die Gegenmessung der Aufsicht nach der Nacharbeit von DER PREIS läuft am eingefrorenen Stand 54517b9: 1350 dreimal, die anderen drei je einmal. Der Builder hatte selbst offengelegt, dass seine eigene Gerätekontrolle dort bei n gleich eins steht — deshalb wird 1350 dreifach gefahren und die übrigen nur auf Unverändertheit geprüft. DIE STADT arbeitet weiter an ihren sechs Auflagen, die schwerste ist das leere vordere Drittel des Hofes: alle Fußpunkte aller Bauten liegen im oberen Bereich, und dort, wo das Zielbild seine Fassreihen trägt, bleibt über die ganze Partie unberührte Platte liegen."
+  },
+  {
+   "zeit": "2026-08-05T20:09:38+00:00",
+   "text": "Die letzte offene Frage der Welle 7 läuft: ein fremdes Auge legt den laufenden Bildschirm blind neben die Zielbilder, je Epoche zweimal — einmal nach dem Laden und einmal nach zwanzig gespielten Wochen, weil ein leerer Hof nicht dasselbe ist wie ein bespielter. Es darf keinen einzigen Bericht der Builder sehen; dort steht, was sie getan zu haben glauben, und sehen soll es, was da ist. Vorher hat die Aufsicht die Nacharbeit von DER PREIS abgeschlossen nachgemessen: 1350 steht bei minus 0,245 / minus 0,170 / minus 0,336, drei byteweise identische Läufe. Damit ist auch die Gerätekontrolle geschlossen, die der Builder selbst als offen gemeldet hatte. Und DIE STADT hat die Aufsicht korrigiert: es sind drei Bauten mit epochenweisem Versatz, nicht zwei — der dritte kam ungefragt nachgemeldet, geprüft gegen die neue Regel, dass Gegrabenes bleibt und Gebautes umziehen darf. Kein gegrabenes Ding trägt noch einen Versatz. Am eingefrorenen Baum hat er dafür kein Byte verändert und alle fünf Dateien per Prüfsumme auf ihren alten Stand zurückgeprüft, weil der Blindvergleich aussteht."
   }
  ]
 }
