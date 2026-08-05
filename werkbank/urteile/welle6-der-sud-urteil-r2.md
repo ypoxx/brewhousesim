@@ -611,3 +611,40 @@ Ich kann nicht ausschliessen, dass ein anderer Spielstil dort hinkommt — aber
 weder der sparsame noch der kaufende tut es, und die Vorrunde hat es ueber 800
 Wochen auch nicht geschafft.
 
+
+---
+
+## 5 — LATTE 2, die Kurve: rho selbst gemessen
+
+Geraet: `werkbank/schuss/rueckkopplung-r3/linie.mjs`, **unveraendert**, je 400
+Wochen, `saat=1350`, Hafen 8901 (Stand `517ca3f`), **jeder Lauf einzeln durchs
+Messfenster**, nie zwei nebeneinander. Gerechnet mit
+`werkbank/schuss/fuhre-w6/schnitte.py` ueber **alle drei Schnitte**.
+Rohdaten: `werkbank/schuss/sud-blind-r2/rho/`.
+
+| Epoche | Lauf | 12 Braujahre | 13 | 14 | Kasse min–max | Fehler | Urteil |
+|---|---|---|---|---|---|---|---|
+| **1350** | A | **+0,762** | **+0,692** | +0,591 | 39–609 | 0 | **REISST** |
+| 1350 | B | **+0,762** | **+0,692** | +0,591 | 39–609 | 0 | **REISST** |
+| 1350 | C | **+0,762** | **+0,692** | +0,591 | 39–609 | 0 | **REISST** |
+| 1600 | A | +0,189 | −0,066 | −0,156 | 169–2851 | 0 | besteht |
+| 1600 | B | +0,189 | −0,066 | −0,156 | 169–2851 | 0 | besteht |
+| 1600 | C | +0,189 | −0,066 | −0,156 | 169–2851 | 0 | besteht |
+
+**GERAETEKONTROLLE BESTANDEN: Spannweite 0,000 ueber je drei Laeufe.** Dieses
+Spiel streut sequenziell gemessen nicht, wie es soll. Wer hier Streuung meldet,
+misst seinen Browser.
+
+**1350 REISST, und meine Zahl ist Ziffer fuer Ziffer die der Aufsicht**
+(+0,762 / +0,692 / +0,591). Damit ist der Hinweis der Aufsicht am eingefrorenen
+Stand `517ca3f` unabhaengig bestaetigt — **die Latte ist bei zwoelf Braujahren
+gerissen**, und zwar in 1350.
+
+**1600 steht bei +0,189 / −0,066 / −0,156** und deckt sich mit dem, was zuletzt
+vom Kritiker DIE FUHRE gemeldet wurde — nicht mit der aelteren Eintragung in
+`MESSLATTE.md` (+0,371 / +0,264 / +0,231). **Die Tabelle in `MESSLATTE.md` ist
+fuer 1600 veraltet; die Reihe ist gewandert.** Das ist ein Befund fuer die
+Aufsicht, nicht fuer einen Builder.
+
+*(1884 und 1970 laufen noch — nachgetragen, sobald sie durch sind.)*
+
