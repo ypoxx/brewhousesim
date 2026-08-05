@@ -76,6 +76,20 @@
   user-select: none;
 }
 
+/* Die Hoffracht (Welle 8): flache Dinge auf dem Hofboden. Sie steht mit
+   beiden Fuessen auf demselben Boden wie die Aufbauten und bekommt deshalb
+   denselben Schatten — nur den kurzen, harten. Der lange, weiche gehoert
+   einem Bauwerk, nicht einem Fass; mit beiden schwebte die Fassreihe. */
+.stadt-fracht {
+  display: block;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  filter: drop-shadow(calc(var(--s) * -2) calc(var(--s) * 2) calc(var(--s) * 2)
+                      rgba(42, 27, 13, 0.48));
+}
+
 /* ==========================================================================
    2 — DIE BESCHRIFTUNG: echter Text auf gemalten Tafeln
    ========================================================================== */

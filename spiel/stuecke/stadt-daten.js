@@ -335,6 +335,102 @@ var STADT_DATEN = {
     tor: { x0: 41.4, x1: 48.3, y1: 81.4 }
   },
 
+  /* --------------------------------------------------------------------
+     DIE HOFFRACHT.  (Welle 8, Teil B)
+
+     Der Blindvergleich hat in ALLEN VIER Epochen dasselbe gefunden, auch
+     bei voll ausgebautem Hof:
+
+       "Die vordere Haelfte des ummauerten Hofes bleibt leer … Im Zielbild
+        arbeiten in jedem Blatt drei bis fuenf Leute im Hof, im Spiel sind
+        es zwei."
+
+     Und er hat gleich dazugesagt, was NICHT hilft: weitere Bauten. Die
+     Welle-7-Messung des Builders sagt dasselbe von der anderen Seite — der
+     Hof ist eine RAUTE mit Scheitel (29,9|78,5), und vorn traegt er nur
+     zwischen x 26 und x 34. Dort passt kein Haus mehr, aber sehr wohl das,
+     was das Zielblatt dort hat: FLACHE DINGE AUF DEM HOFBODEN.
+
+     WAS FRACHT VON EINEM AUFBAU UNTERSCHEIDET, und warum sie eine eigene
+     Tabelle hat statt eines Eintrags in `aufbauten`:
+       · Fracht kostet nichts und wird nie gekauft. Sie steht im Hof, weil
+         dort gearbeitet wird, nicht weil jemand sie bestellt hat.
+       · Fracht traegt keinen `data-zug`. Sie erscheint in keiner Zaehlung
+         der zweiten Latte und blaeht Spalte (a) nicht auf.
+       · Fracht liegt in der Ebene 'bau' — sie ist BILD und keine
+         Oberflaeche. Genau das ist der Unterschied, um den es in Welle 8
+         geht: die Werkbank ist aus dem Vordergrund heraus, die Fracht
+         hinein.
+
+     `wenn` bindet sie an den Spielstand, damit sie Kulisse bleibt und
+     keine Luege wird:
+       'immer'      — steht in jeder Woche dieser Epoche.
+       'keller'     — nur, wenn ueberhaupt Fass im Keller liegen.
+       'kellervoll' — nur ab der Haelfte des Lagerplatzes.
+     Das ist der Vorschlag des Kritikers woertlich: "Lagerfaesser, die mit
+     dem Keller wachsen, und ein Gespann im Tor".
+     -------------------------------------------------------------------- */
+  fracht: [
+    /* --- Die Fassreihe vorn am Wall. In I bis III dieselbe Stelle. --- */
+    { schluessel: 'faesser', bild: 'fracht_faesser_alt', bilder: { 3: 'fracht_faesser_neu' },
+      ort: 'fasslager', dx: -0.5, dy: -1.5,
+      breite: 6.5, breiten: { 3: 7.4 },
+      von: 1, bis: 3, wenn: 'immer',
+      sagt: 'Leergut und volle Fässer, wie sie im Hof liegen.' },
+
+    /* Der zweite Stapel kommt erst, wenn der Keller ihn hergibt. */
+    { schluessel: 'faesser2', bild: 'fracht_faesser_alt', bilder: { 3: 'fracht_faesser_neu' },
+      ort: 'kesselstelle', dx: -6, dy: 11,
+      breite: 5.6, breiten: { 3: 6.4 },
+      von: 1, bis: 3, wenn: 'kellervoll',
+      sagt: 'Was der Keller nicht mehr fasst, liegt im Hof.' },
+
+    /* --- Die Leute, die den Hof zum Hof machen. --- */
+    { schluessel: 'leute', bild: 'fracht_leute_alt', bilder: { 3: 'fracht_leute_neu' },
+      ort: 'kesselstelle', dx: 1, dy: 9.5,
+      breite: 4.8, breiten: { 3: 5.4 },
+      von: 1, bis: 3, wenn: 'immer',
+      sagt: 'Zwei Knechte rollen ein Fass über den Hof.' },
+
+    { schluessel: 'karre', bild: 'fracht_karre_alt', bilder: { 3: 'fracht_karre_neu' },
+      ort: 'tor', dx: -9.5, dy: 7,
+      breite: 5, breiten: { 3: 4.2 },
+      von: 1, bis: 3, wenn: 'immer',
+      sagt: 'Die Handkarre steht bereit, wo sie gebraucht wird.' },
+
+    { schluessel: 'bank', bild: 'fracht_bank',
+      ort: 'brunnen', dx: 7, dy: 9,
+      breite: 5.2,
+      von: 1, bis: 2, wenn: 'immer',
+      sagt: 'Bank und Tränktrog am Hofrand.' },
+
+    /* --- 1970: Kästen auf Paletten, zwei Mann im Blaumann. --- */
+    { schluessel: 'kasten', bild: 'fracht_kasten',
+      ort: 'hof', dx: -2, dy: 11,
+      breite: 6.4,
+      von: 4, bis: 4, wenn: 'immer',
+      sagt: 'Vollgut auf Paletten, zwei Mann beim Umsetzen.' },
+
+    { schluessel: 'kasten2', bild: 'fracht_kasten',
+      ort: 'fasslager', dx: 1, dy: -2,
+      breite: 5.4,
+      von: 4, bis: 4, wenn: 'kellervoll',
+      sagt: 'Der zweite Palettenstapel — der Keller ist voll.' },
+
+    /* --- Das Gespann im Tor. Es faehrt nur, wenn es etwas zu fahren gibt.
+       Es steht in der Torgasse und deshalb VOR der Mauer; ohne 'gasse'
+       laege der Wagen hinter dem eigenen Torbogen. --- */
+    { schluessel: 'torfuhre', bild: 'tor_ochse',
+      bilder: { 2: 'tor_gespann_alt', 3: 'tor_gespann_neu', 4: 'tor_lkw' },
+      ort: 'tor', dx: -1, dy: 8,
+      breite: 7.5, breiten: { 2: 11, 3: 11.5, 4: 8.6 },
+      von: 1, bis: 4, wenn: 'keller',
+      boden: 'gasse',
+      warum: 'Das Gespann faehrt aus dem Tor heraus, steht also in der '
+        + 'Gasse und nicht im Hof — genau wie im Zielbild jeder Epoche.',
+      sagt: 'Die Fuhre verlässt den Hof.' }
+  ],
+
 
   /* --------------------------------------------------------------------
      DIE FUSSPROFILE.  (Runde 6)

@@ -1454,6 +1454,68 @@
     if (v) geist.appendChild(hausbild(v, true));
   }
 
+  /* ====================================================================
+     DIE HOFFRACHT.  (Welle 8, Teil B)
+
+     Flache Dinge auf dem Hofboden: Fassreihen, Handkarre, Bank und Trog,
+     Palettenstapel, arbeitende Leute, das Gespann im Tor. Sie kosten
+     nichts, sie tragen keinen `data-zug`, und sie liegen in derselben
+     Ebene wie die Aufbauten — sie sind BILD. Die Tabelle mit der
+     Begruendung steht in stadt-daten.js unter `fracht`.
+
+     Der z-Index kommt aus der Stelle, an der die Fracht steht, und nicht
+     aus dem Bildrahmen. Das ist dieselbe Regel wie bei DIE TIEFE, nur
+     einfacher zu rechnen: die Frachtbilder sind auf den Kasten ihrer
+     deckenden Pixel beschnitten (stadt-w8/schneiden.mjs), ihr Fuss liegt
+     also bis auf den Fugenrand auf der Unterkante. Sie brauchen deshalb
+     KEINEN Eintrag in K.fuesse und K.bildmass — die beiden Tabellen
+     gehoeren den Aufbauten und dem LOT, und sie bleiben unberuehrt. */
+  var FRACHTRAND = 0.02;    /* leerer Fugenrand unten, Anteil der Bildhoehe */
+
+  function frachtBild(a) { return (a.bilder && a.bilder[e()]) || a.bild; }
+
+  function frachtFaellig(a) {
+    var v = B.welt.vorrat;
+    var n = (v && v.faesser) ? v.faesser.length : 0;
+    var p = (v && v.plaetze) ? v.plaetze : 0;
+    if (a.wenn === 'keller') return n > 0;
+    if (a.wenn === 'kellervoll') return p > 0 && n >= p / 2;
+    return true;
+  }
+
+  function frachtDerEpoche(nr) {
+    var ep = nr || e();
+    return K.fracht.filter(function (a) {
+      if (ep < a.von || ep > a.bis) return false;
+      return B.orte.da(a.ort, ep);
+    });
+  }
+
+  function frachtbild(a) {
+    var m = masse(a);
+    var el = B.el('img', 'stadt-fracht');
+    el.alt = '';
+    el.setAttribute('draggable', 'false');
+    el.setAttribute('data-fracht', a.schluessel);
+    el.src = hofpfad(frachtBild(a));
+    el.style.width = m.breite + '%';
+    var ort = B.orte.hole(a.ort);
+    var f = (ort ? ort.y : 50) + m.dy - FRACHTRAND;
+    if (a.boden === 'gasse') f = Math.max(f, mauerhoehe((ort ? ort.x : 50) + m.dx) + 0.4);
+    el.style.zIndex = String(Math.round(f * 10));
+    el.setAttribute('data-tiefe', B.rund(f, 2));
+    B.orte.setze(el, a.ort, { anker: 'unten', dx: m.dx, dy: m.dy });
+    el.title = a.sagt;
+    return el;
+  }
+
+  function zeichneFracht(fach) {
+    frachtDerEpoche().forEach(function (a) {
+      if (!frachtFaellig(a)) return;
+      fach.appendChild(frachtbild(a));
+    });
+  }
+
   function zeichneHof(fach) {
     stehend().forEach(function (a) {
       fach.appendChild(hausbild(a, false));
@@ -1703,6 +1765,7 @@
     B.leere(t.geist);
     vorschau = null;
     zeichneHof(t.hof);
+    zeichneFracht(t.hof);
     zeichneNamen(t.hof);
     zeichneHausschild(t.hof);
     zeichneBauhof(werkbank().querySelector('.stadt-bauhof'));
@@ -1759,6 +1822,13 @@
   function bilderDerEpoche(nr) {
     var l = katalog(nr).map(function (a) { return hofpfad(a.bild); });
     if (nr === 3) l.push(hofpfad('rauch'));   /* nur 1884 raucht */
+    /* Die Hoffracht steht vom ersten Bild an da und wird deshalb in Stufe 0
+       geladen. Sie wird NICHT in Stufe 1 fuer die naechste Epoche
+       vorgeladen — das Gewichtsveto zaehlt jede Antwort, und was man beim
+       Epochenwechsel eine Sekunde spaeter braucht, holt man dann. */
+    frachtDerEpoche(nr).forEach(function (a) {
+      l.push(hofpfad((a.bilder && a.bilder[nr]) || a.bild));
+    });
     return l;
   }
 
