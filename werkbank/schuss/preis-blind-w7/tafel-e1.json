@@ -1,0 +1,3553 @@
+{
+ "url": "http://127.0.0.1:8903/spiel/?epoche=1&saat=1350",
+ "fehler": [],
+ "spur": [
+  {
+   "schritt": "start",
+   "kasse": 112,
+   "rohstoff": 40,
+   "ansehen": 25,
+   "zeit": {
+    "jahr": 1350,
+    "woche": 1,
+    "epoche": 1
+   },
+   "protokollN": 1,
+   "protokollEnde": [
+    {
+     "nr": 1,
+     "jahr": 1350,
+     "woche": 1,
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.",
+     "preis": 0,
+     "menge": 0,
+     "adresse": "obernberg",
+     "misslungen": false
+    }
+   ],
+   "chronikN": 4,
+   "chronikEnde": [
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "anfang",
+     "text": "Das Haus Brauhaus zum Anker, gegründet 1350. Kunigunde Bruckner fuehrt es."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "gegner",
+     "text": "Gegenüber steht Brauhaus zum Adler. Hartmann Feist führt es. Gebunden wird in dieser Zeit mit Recht und Gunst."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "sud",
+     "text": "Im Sudhaus hängt ein neuer Zettel: Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "anfang",
+     "text": "Die Hand am Haus ist Kunigunde Bruckner, sparsam. Was sie nur mit einem Handschlag hält, hält das Haus nicht. Was im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab."
+    }
+   ],
+   "lage": 0,
+   "zuege": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 182,
+     "h": 85,
+     "tx": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 2 Häuser 1 ZÜGE 320 Pf KASSE 9 Pf SEI"
+    },
+    {
+     "zug": "gegner:abloesen:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 77,
+     "h": 26,
+     "tx": "TOR · KON ablösen 56 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 77,
+     "h": 26,
+     "tx": "FAE · BAN ablösen 66 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:zuvorkommen:obernberg",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 111,
+     "h": 26,
+     "tx": "wirbt · noch 4 Wo. zuvorkommen 19 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 141,
+     "h": 34,
+     "tx": "Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Klosterschenke Obernberg"
+    },
+    {
+     "zug": "gegner:blatt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 91,
+     "h": 24,
+     "tx": "Das Haus gegenüber"
+    },
+    {
+     "zug": "gegner:beschwerde",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 118,
+     "h": 24,
+     "tx": "Klage vor dem Stadtgericht"
+    },
+    {
+     "zug": "gegner:zeige:1",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 37,
+     "h": 24,
+     "tx": "zeigen"
+    },
+    {
+     "zug": "sud:zettel-anstich",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 168,
+     "h": 24,
+     "tx": "Junges Fass · +14 · 1 Fass"
+    },
+    {
+     "zug": "sud:zettel-hefe-fass",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 168,
+     "h": 24,
+     "tx": "Altes Fass · +6 · 1 Fass"
+    },
+    {
+     "zug": "sud:zettel-wechsel-frei",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 168,
+     "h": 24,
+     "tx": "Hopfen im Sack, heimlich"
+    },
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "p": "−30 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 168,
+     "h": 33,
+     "tx": "Röhrenrecht an der Quelle −30 Pf"
+    },
+    {
+     "zug": "name:anschlag:umtrunk",
+     "p": "−9 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 140,
+     "h": 27,
+     "tx": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+    },
+    {
+     "zug": "stadt:marke:gegner-marktplatz",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "Adler-Ausschank am Mar"
+    },
+    {
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "LIN"
+    },
+    {
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "OCH"
+    },
+    {
+     "zug": "stadt:marke:fuhre-muehle",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "MUE"
+    },
+    {
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "BRU"
+    },
+    {
+     "zug": "stadt:marke:fuhre-fluss",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "FAE"
+    },
+    {
+     "zug": "stadt:marke:fuhre-bruecke-oben",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "OBE"
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 93,
+     "h": 24,
+     "tx": "So verabreden"
+    },
+    {
+     "zug": "fuhre:ziel:ziel",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 115,
+     "h": 24,
+     "tx": "So ist es verabredet"
+    },
+    {
+     "zug": "fuhre:ziel:borg",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 93,
+     "h": 24,
+     "tx": "So verabreden"
+    },
+    {
+     "zug": "fuhre:laden:lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:ochse",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:ochse",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:pfarrhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:pfarrhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:bann:muehlwirt",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:brueckenwirt",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:faehrhaus",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:hirsch",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:laden:markt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:markt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:bann:obernberg",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:tafel-ab:duenn",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:duenn",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:stark",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:stark",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:kofent",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:kofent",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:kauf:budget",
+     "p": "−90 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Brautage vom Rat · +6 −90 Pf"
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "p": "−34 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Grut vom Grutherrn · +40 −34 Pf"
+    },
+    {
+     "zug": "fuhre:rueckkauf:rohstoff",
+     "p": "+19 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Grut zurück an den Grutherrn · −40 +19 Pf"
+    },
+    {
+     "zug": "fuhre:kauf:fass",
+     "p": "−34 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 303,
+     "h": 24,
+     "tx": "Fass vom Böttcher · +3 −34 Pf"
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 106,
+     "h": 24,
+     "tx": "Nach Durst füllen"
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 109,
+     "h": 24,
+     "tx": "Wie vorige Woche"
+    },
+    {
+     "zug": "fuhre:leeren",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 84,
+     "h": 24,
+     "tx": "Karren leeren"
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 354,
+     "h": 28,
+     "tx": "FUHRE ABSCHICKEN"
+    },
+    {
+     "zug": "sud:wuerze:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Grut vom Grutamt"
+    },
+    {
+     "zug": "sud:wuerze:sack",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Hopfen im Sack, heimlich"
+    },
+    {
+     "zug": "sud:wuerze:brief",
+     "p": "−78 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 55,
+     "tx": "Offen gehopft, mit Hopfenbrief −78 Pf"
+    },
+    {
+     "zug": "sud:wasser:bach",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Wasser aus dem Stadtbach"
+    },
+    {
+     "zug": "sud:wasser:brunnen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Wasser aus dem Ziehbrunnen"
+    },
+    {
+     "zug": "sud:wasser:roehre",
+     "p": "−30 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 55,
+     "tx": "Röhrenrecht an der Quelle −30 Pf"
+    },
+    {
+     "zug": "sud:hefe-fuehren",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 213,
+     "h": 24,
+     "tx": "Hefezeug aus dem Bottich heben · +8"
+    },
+    {
+     "zug": "sud:anstich-jung",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 210,
+     "h": 24,
+     "tx": "Junges Fass anbrechen · +14 · 1 Fass"
+    },
+    {
+     "zug": "sud:anstich-alt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 196,
+     "h": 24,
+     "tx": "Altes Fass anbrechen · +6 · 1 Fass"
+    },
+    {
+     "zug": "sud:gaerraum",
+     "p": "−26 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 276,
+     "h": 38,
+     "tx": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+    },
+    {
+     "zug": "name:band",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "▾"
+    },
+    {
+     "zug": "name:aufgeldbuch",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 263,
+     "h": 24,
+     "tx": "Das Aufgeld nachrechnen"
+    },
+    {
+     "zug": "name:jetzt:umtrunk",
+     "p": "−9 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+    },
+    {
+     "zug": "name:jetzt:zunftzeichen",
+     "p": "−45 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Um das Zunftzeichen bitten −45 Pf"
+    },
+    {
+     "zug": "name:ruhe",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Das Zeichen verdecken"
+    },
+    {
+     "zug": "name:herumgehen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Herumgehen und den Namen sagen"
+    },
+    {
+     "zug": "name:blatt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Das Zeichen und das Register"
+    },
+    {
+     "zug": "erbe:tafel:verschreibe",
+     "p": "−16 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 173,
+     "h": 24,
+     "tx": "Verschreiben · Zum Goldenen Ochsen −16 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "p": "−13 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Leibgeding · jährlich −13 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "p": "−64 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Abfertigung −64 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "p": "0 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Mit leeren Händen 0 Pf"
+    },
+    {
+     "zug": "kern:chronik",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 108,
+     "h": 24,
+     "tx": "CHRONIK 4"
+    },
+    {
+     "zug": "kern:protokoll",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 82,
+     "h": 24,
+     "tx": "BUCH 1"
+    },
+    {
+     "zug": "weiter",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 126,
+     "h": 36,
+     "tx": "WEITER"
+    },
+    {
+     "zug": "klang:ton",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "♪"
+    },
+    {
+     "zug": "stadt:reiter:gegner-amort-gg-band",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 130,
+     "h": 27,
+     "tx": "OHNE DICH GESCHEHEN 1 Zug"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 88,
+     "h": 27,
+     "tx": "DIE HÄUSER wollen 15 · im Keller liegen 4 Fass"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 122,
+     "h": 27,
+     "tx": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 92,
+     "h": 27,
+     "tx": "DER KELLER 4 von 12 Fass · 4 reif"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 117,
+     "h": 27,
+     "tx": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten"
+    },
+    {
+     "zug": "stadt:reiter:sud-sud-brett",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 98,
+     "h": 27,
+     "tx": "DAS SUDHAUS zugeklappt"
+    },
+    {
+     "zug": "stadt:reiter:name-nm-band",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 130,
+     "h": 27,
+     "tx": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen"
+    },
+    {
+     "zug": "stadt:reiter:erbe-blatt-erb-buch",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 73,
+     "h": 27,
+     "tx": "DAS ERBE zugeklappt"
+    },
+    {
+     "zug": "stadt:ortsmarken",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 113,
+     "h": 27,
+     "tx": "ORTSMARKEN 7 auf dem Pflock"
+    },
+    {
+     "zug": "stadt:alles-zuklappen",
+     "p": "",
+     "s": 0,
+     "t": 0,
+     "d": 0,
+     "w": 0,
+     "h": 0,
+     "tx": "Stadt zeigen"
+    },
+    {
+     "zug": "stadt:bau:seite",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 78,
+     "h": 24,
+     "tx": "BAUHOF"
+    },
+    {
+     "zug": "stadt:versatz",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 78,
+     "h": 24,
+     "tx": "VERSATZ"
+    },
+    {
+     "zug": "stadt:bau:grutkammer",
+     "p": "−13 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Grutkammer −13 Pf"
+    },
+    {
+     "zug": "stadt:bau:gaerbottiche",
+     "p": "−15 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Gärbottiche −15 Pf"
+    },
+    {
+     "zug": "stadt:bau:ochsenstall",
+     "p": "−18 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Ochsenstall −18 Pf"
+    },
+    {
+     "zug": "stadt:bau:keller_gewoelbe",
+     "p": "−21 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Gewölbekeller −21 Pf"
+    },
+    {
+     "zug": "stadt:bau:kueferei",
+     "p": "−23 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Küferei −23 Pf"
+    },
+    {
+     "zug": "preis:tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 174,
+     "h": 36,
+     "tx": "Michaelitafel 1350 · 5 Angebote"
+    },
+    {
+     "zug": "preis:chronik-auf",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 174,
+     "h": 51,
+     "tx": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Tafel · 0 Bauten stehen"
+    },
+    {
+     "zug": "erbe:verschreibe:ochse",
+     "p": "−16 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 84,
+     "h": 24,
+     "tx": "Verschreiben −16 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:pfarrhof",
+     "p": "−8 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 80,
+     "h": 24,
+     "tx": "Verschreiben −8 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:hirsch",
+     "p": "−11 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 84,
+     "h": 24,
+     "tx": "Verschreiben −11 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:markt",
+     "p": "−6 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 80,
+     "h": 24,
+     "tx": "Verschreiben −6 Pf"
+    }
+   ],
+   "text": "ST. MICHAEL\nGASTHOF LINDENHOF\nBRAUHAUS\nZUM ANKER\nGEGR. 1350\nVorsprung: 2 Dinge · wirbt 2 Wochen kürzer\nBRAUHAUS ZUM ADLER\nHartmann Feist · streitbar · hält 2 Häuser\n1\nZÜGE\n320 Pf\nKASSE\n9 Pf\nSEIN PREIS\nwirbt\nW1\nAdler-Ausschank am Markt\nTOR · KON\nablösen 56 Pf\nFass an den Wirt\n1 Fass statt Geld\nFAE · BAN\nablösen 66 Pf\nFass an den Wirt\n1 Fass statt Geld\nwirbt · noch 4 Wo.\nzuvorkommen 19 Pf\nFass an den Wirt\n1 Fass statt Geld\nKlage vor dem Stadtgericht\nkostet kein Geld · vier Ansehen\ngegen Klosterschenke Obernberg\nOHNE DICH GESCHEHEN\n1 Zug\nDas Haus gegenüber\nGebunden wird hier mit Recht und Gunst\nAblösung 56 Pf bis 66 Pf\nKlage vor dem Stadtgericht\nkostet kein Geld · vier Ansehen · einmal im Braujahr\n1350 W1\nBrauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.\nzeigen\nUMKÄMPFT\nZuvorkommen Klosterschenke Obernberg — 19 Pf ·\nKasse reicht 5,9×\nJunges Fass · +14 · 1 Fass\nAltes Fass · +6 · 1 Fass\nHopfen im Sack, heimlich\nRöhrenrecht an der Quelle\n−30 Pf\nDER ANKER · RUF 10\nUmtrunk beim Wirt\n−9 Pf\n− 1 Fass\nAdler-Ausschank am Mar\nLIN\nOCH\nMUE\nBRU\nFAE\nOBE\nLIN\nOCH\nMUE\nBRU\nFAE\nOBE\nDIE HÄUSER\nwollen 15 · im Keller liegen 4 Fass\n„Der Schankknecht vom Gasthof Lindenhof war am Tor. Er ist ohne Fass wieder gegangen.\"\nDAS KERBHOLZ BEIM WIRT\nim Holz bis Michaeli: 0 Pf\nBar auf die Hand\nKein Fass verlässt den Hof ohne Münze.\nbar 100 %\nBestellung 66 %\nAusfall 0 %\nSo verabreden\nAufs Kerbholz, fällig zu Michaeli\nZwei Hölzer, ein Schnitt: eines beim Wirt, eines im Haus.\nbar 40 %\nBestellung 100 %\nAusfall 5 %\nSo ist es verabredet\nAuf Borg bis Michaeli\nDer Wirt nimmt, so viel er ausschenken kann, und rechnet im Herbst.\nbar 12 %\nBestellung 132 %\nAusfall 15 %\nSo verabreden\nNoch 7 Wochen, dann gilt das Wort bis Michaeli.\nLIN\nGasthof Lindenhof\n0,2 km\nfrei\nwill 4 Fass\n+ 1 Fass\n−\nOCH\nZum Goldenen Ochsen\n0,6 km\nunser Haus\nwill 2 Fass\n+ 1 Fass\n−\nTOR\nSchenke am Tor\n0,1 km\nadler\nwill 1 Fass\n+ 1 Fass\n−\nPFA\nPfarrschenke St. Michael\n0,8 km\nunser Haus\nwill 1 Fass\n+ 1 Fass\n−\nMUE\nMühlschenke\n3 km\nfrei\nwill 1 Fass\nBannbrief\n−60 Pf\nBRU\nBrückenwirt\n2 km\nfrei\nwill 2 Fass\nBannbrief\n−60 Pf\nFAE\nFährhaus am Fluss\n4 km\nadler\nwill 1 Fass\nBannbrief\n−60 Pf\nHIR\nLandgasthof Hirsch\n7 km\nunser Haus\nwill 1 Fass\nBannbrief\n−60 Pf\nMKT\nAusschank am Markt\n0,5 km\nunser Haus\nwill 1 Fass\n+ 1 Fass\n−\nOBE\nKlosterschenke Obernberg\n9 km\nfrei\nwill 1 Fass\nBannbrief\n−60 Pf\nANSCHLAGTAFEL\nmit Kreide an der Sudhauswand\nBrautage: 44 übrig\nDieser Plan frisst 2 je Woche — reicht 22 Wochen\nGrut in der Kammer: 40 — reicht für 13 Sude\nD\nDünnbier\n5 Pf je Fass\n1 Brautage\n→ 5 Fass\nhält 3 Wo.\n−\n0\n+\nG\nGrutbier\n9 Pf je Fass\n2 Brautage\n→ 4 Fass\nhält 6 Wo.\n−\n1\n+\nS\nStarkbier\n19 Pf je Fass\n3 Brautage\n→ 3 Fass\n2 Wo. Lager\nhält 16 Wo.\nsommerfest\n−\n0\n+\nK\nKofent\n3 Pf je Fass\n0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die Pfanne\n−\n0\n+\nKERBHOLZ BEIM GRUTHERRN\n0 von 6 · 1 Kerbe = 25 Pf\nDer Grutherr schneidet die Kerbe ins Holz und zahlt aus. Zu Georgi wird gelöscht — in Geld, wenn welches da ist.\nKNAPP IN DIESER ZEIT: Brautage · Bannmeile\nDer Rat verleiht Tage, nicht Geld. Und die Meile ist eine Mauer.\nBrautage vom Rat · +6\n−90 Pf\nGrut vom Grutherrn · +40\n−34 Pf\nGrut zurück an den Grutherrn · −40\n+19 Pf\nFass vom Böttcher · +3\n−34 Pf\nDER KELLER\n4 von 12 Fass · 4 reif\nG\nW1\nG\nW1\nG\nW1\nG\nW1\nFässer des Hauses: 22 eigene · 4 gefüllt · 0 beim Wirt · 18 leer\nOCHSENKARREN\n0 von 5 Fass · 0 von 4 Halten\nFünf Plätze, vier Halte. Der Ochse geht sieben Meilen am Tag und keine mehr.\nDer Wagen steht. Jedes Fass bekommt ein Haus — dann fährt er.\nNach Durst füllen\nWie vorige Woche\nKarren leeren\nFUHRE ABSCHICKEN\nDAS SUDHAUS · 1350\nDie offene Pfanne über offenem Feuer\nGrut oder Hopfen?\nDie Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts.\nDIE WÜRZE\nWomit wird gewürzt?\nEs ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.\nGrut vom Grutamt\nläuft\nhöchstens Grutbier\nGagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus.\nHopfen im Sack, heimlich\nohne Ausgabe\nlässt Starkbier zu\nHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche\nHopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt.\nDer Grutknecht sieht in die Pfanne, wann er will.\nOffen gehopft, mit Hopfenbrief\n−78 Pf\nunwiderruflich\nlässt Starkbier zu\nHaltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud\nDer Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne.\nUnwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.\nDAS BRAUWASSER\nWoher kommt das Wasser?\nVier Fuenftel des Fasses sind Wasser. Wo es geschöpft wird, ist keine Kleinigkeit — es ist die zweite Frage, die dieses Haus zu beantworten hat, und sie kostet keinen Pfennig.\nWasser aus dem Stadtbach\nläuft\nlässt Starkbier zu\nGeschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand, und die Lohgerber sitzen weiter oben am selben Wasser. So braut die ganze Reihe, und so hält das Bier, was es hält.\nWasser aus dem Ziehbrunnen\nohne Ausgabe\nlässt Starkbier zu\nHaltbarkeit ×1,15 · −1 Fass je Sud\nEimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das bessere Wasser hält das Bier ein Stück länger — und der halbe Sudtag fehlt hinten: ein Fass weniger geht aus jeder Pfanne in den Gärkeller.\nDer Brunnen im Hof gibt nicht jede Woche her, was die Pfanne braucht.\nRöhrenrecht an der Quelle\n−30 Pf\nunwiderruflich\nlässt Starkbier zu\nHaltbarkeit ×1,35\nDer Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in den Hof: gebohrte Erlenstämme unter der Gasse durch. Das Wasser steht dann jeden Tag im Hof, ohne einen Gang und ohne den Bach.\nUnwiderruflich — die Röhre liegt unter der Stadtmauer, und was einmal gegraben ist, gräbt niemand zurück.\nWAS BEIM WIRT ANKOMMT\nhöchstens Grutbier\nWelches Haus ein Fass nimmt, entscheidet die Pfanne.\nBestellt wird die Sorte an der Fuhre. Dieses Brett deckelt sie — es hebt sie nie: was hier offen steht, wird nur dann gebraut, wenn es auch bestellt ist.\nD\nDünnbier\n7 von 10 Häusern\nträgt die Pfanne\nG\nGrutbier\n8 von 10 Häusern\nträgt die Pfanne\nS\nStarkbier\n3 von 10 Häusern\nschlägt als Grutbier aus\nKlosterschenke Obernberg führt nur Starkbier und bekommt vom Anker nichts.\nDAS HEFEZEUG\n70 %\nHefe vom vorigen Sud. Ohne Pflege schlägt der Sud um.\nWas jetzt eingelegt wird, hält ×1,05 — die Hefe steht.\nHefezeug aus dem Bottich heben · +8\nJunges Fass anbrechen · +14 · 1 Fass\nAltes Fass anbrechen · +6 · 1 Fass\nEinmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass.\nDER GÄRKELLER\n0 von 10 Fass · 0 Bottiche\nOffene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass.\nKein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller.\nBottich beim Küfer bestellen · +6 Fass\n−26 Pf\nDie Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche.\nDAS SUDBUCH\n0 Sude · 0 Fass · 0 verloren\nNoch keine Eintragung.\nDER RUF DES HAUSES\nBierzeiger und Zunftzeichen\n▾\n10\nRuf von 100\nBekanntheit\n18 ↗\nEinlösung\n55\nGLEICHES BIER, 100 FASS, ZWEI PREISE\nohne das Zeichen 900 Pf\nmit dem Zeichen 907 Pf\n+ 0,8 im Hundert · 7 Pf mehr für dieselbe Menge\nAUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT\nDIESE WOCHE\n0 Pf\nBRAUJAHR\n0 Pf\nSEIT 1350\n0 Pf\nNoch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist.\nund einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis.\nDas Aufgeld nachrechnen\nWAS DER NAME JETZT KOSTET\nUmtrunk beim Wirt\n−9 Pf\n− 1 Fass\nUm das Zunftzeichen bitten\n−45 Pf\nDie ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\".\nDas Zeichen verdecken\nHerumgehen und den Namen sagen\nWer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal.\nDas Zeichen und das Register\nDAS ERBE\nnoch 14 Wochen\nI. Kunigunde Bruckner · sparsam · Feder 0,70×\nam Haus 0 · an der Person 4\nnimmt 4 · 2 Fass\nVerschreiben · Zum Goldenen Ochsen\n−16 Pf\nLeibgeding · jährlich\n−13 Pf\nAbfertigung\n−64 Pf\nMit leeren Händen\n0 Pf\nSCHEIDING\n1350\nKASSE\n112 Pf\nGRUT\n40\nKELLER\n4/12 Fass\nWOCHE\n1/30\nCHRONIK\n4\nBUCH\n1\nBrauhaus zum Anker · 1350/51 · Kunigunde Bruckner, sparsam · Das Recht\nWEITER\nnächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)\n♪\nOHNE DICH GESCHEHEN\n1 Zug\nDIE HÄUSER\nwollen 15 · im Keller liegen 4 Fass\nANSCHLAGTAFEL\nmit Kreide an der Sudhauswand\nDER KELLER\n4 von 12 Fass · 4 reif\nOCHSENKARREN\n0 von 5 Fass · 0 von 4 Halten\nDAS SUDHAUS\nzugeklappt\nDER RUF DES HAUSES\nBierzeiger und Zunftzeichen\nDAS ERBE\nzugeklappt\nORTSMARKEN\n7 auf dem Pflock\nBAUHOF\nVERSATZ\n4 Bauten im Hof · gebaut wird einmal, es steht auch für die Enkel\nGrutkammer\n−13 Pf\n+20 Grut\nGärbottiche\n−15 Pf\n+4 Fass Lagerplatz\nOchsenstall\n−18 Pf\nfährt, wann das Haus will\nGewölbekeller\n−21 Pf\n+8 Fass Lagerplatz\nKüferei\n−23 Pf\n+4 Fass Lagerplatz\nMichaelitafel 1350 · 5 Angebote\nBierordnung je Fass\n9 Pf\nAnschlag 1350\n515 Pf\nbilligstes Angebot dieser Tafel\n33 Pf\nKasse : dieses Angebot\n3,39×\n1351 · Anschlag auf das Geld in der Lade\n12 Pf\nChronik des Hauses · 0 Festlegungen · 0 von dieser Tafel · 0 Bauten stehen\nDAS ERBE — Verschreiben vor dem Rat ins Stadtbuch · I. Hand\nKunigunde Bruckner · sparsam\n„Hält das Geld zusammen, versäumt die Gelegenheit.\"\nSchreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber.\n\nWas im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab.\n\nDie Stunde kommt in 14 Wochen — 5. Jänner 1351. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen.\n\nAM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT\nNichts. Alles hängt an einem Menschen.\nAN DER PERSON · 4 — FÄLLT MIT DER HAND, DIE ES GAB\nZum Goldenen Ochsen\nGewohnheit\nVerschreiben\n−16 Pf\nPfarrschenke St. Michael\nGewohnheit\nVerschreiben\n−8 Pf\nLandgasthof Hirsch\nGewohnheit\nVerschreiben\n−11 Pf\nAusschank am Markt\nGewohnheit\nVerschreiben\n−6 Pf\nDIE HÄNDE · 1\nI. Kunigunde Bruckner\nsparsam\nFeder 0,70×"
+  },
+  {
+   "schritt": "preis:tafel",
+   "i": 0,
+   "erg": {
+    "ok": true
+   },
+   "kasse": 112,
+   "rohstoff": 40,
+   "ansehen": 25,
+   "zeit": {
+    "jahr": 1350,
+    "woche": 1,
+    "epoche": 1
+   },
+   "protokollN": 1,
+   "protokollEnde": [
+    {
+     "nr": 1,
+     "jahr": 1350,
+     "woche": 1,
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.",
+     "preis": 0,
+     "menge": 0,
+     "adresse": "obernberg",
+     "misslungen": false
+    }
+   ],
+   "chronikN": 4,
+   "chronikEnde": [
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "anfang",
+     "text": "Das Haus Brauhaus zum Anker, gegründet 1350. Kunigunde Bruckner fuehrt es."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "gegner",
+     "text": "Gegenüber steht Brauhaus zum Adler. Hartmann Feist führt es. Gebunden wird in dieser Zeit mit Recht und Gunst."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "sud",
+     "text": "Im Sudhaus hängt ein neuer Zettel: Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "anfang",
+     "text": "Die Hand am Haus ist Kunigunde Bruckner, sparsam. Was sie nur mit einem Handschlag hält, hält das Haus nicht. Was im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab."
+    }
+   ],
+   "lage": 0,
+   "zuege": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 182,
+     "h": 85,
+     "tx": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 2 Häuser 1 ZÜGE 320 Pf KASSE 9 Pf SEI"
+    },
+    {
+     "zug": "gegner:abloesen:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 77,
+     "h": 26,
+     "tx": "TOR · KON ablösen 56 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 77,
+     "h": 26,
+     "tx": "FAE · BAN ablösen 66 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:zuvorkommen:obernberg",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 111,
+     "h": 26,
+     "tx": "wirbt · noch 4 Wo. zuvorkommen 19 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 141,
+     "h": 34,
+     "tx": "Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Klosterschenke Obernberg"
+    },
+    {
+     "zug": "gegner:blatt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 91,
+     "h": 24,
+     "tx": "Das Haus gegenüber"
+    },
+    {
+     "zug": "gegner:beschwerde",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 118,
+     "h": 24,
+     "tx": "Klage vor dem Stadtgericht"
+    },
+    {
+     "zug": "gegner:zeige:1",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 37,
+     "h": 24,
+     "tx": "zeigen"
+    },
+    {
+     "zug": "sud:zettel-anstich",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Junges Fass · +14 · 1 Fass"
+    },
+    {
+     "zug": "sud:zettel-hefe-fass",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Altes Fass · +6 · 1 Fass"
+    },
+    {
+     "zug": "sud:zettel-wechsel-frei",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Hopfen im Sack, heimlich"
+    },
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "p": "−30 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Röhrenrecht an der Quelle −30 Pf"
+    },
+    {
+     "zug": "name:anschlag:umtrunk",
+     "p": "−9 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 140,
+     "h": 27,
+     "tx": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+    },
+    {
+     "zug": "stadt:marke:gegner-marktplatz",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "Adler-Ausschank am Mar"
+    },
+    {
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "LIN"
+    },
+    {
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "OCH"
+    },
+    {
+     "zug": "stadt:marke:fuhre-muehle",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "MUE"
+    },
+    {
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "BRU"
+    },
+    {
+     "zug": "stadt:marke:fuhre-fluss",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "FAE"
+    },
+    {
+     "zug": "stadt:marke:fuhre-bruecke-oben",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "OBE"
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 93,
+     "h": 24,
+     "tx": "So verabreden"
+    },
+    {
+     "zug": "fuhre:ziel:ziel",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 115,
+     "h": 24,
+     "tx": "So ist es verabredet"
+    },
+    {
+     "zug": "fuhre:ziel:borg",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 93,
+     "h": 24,
+     "tx": "So verabreden"
+    },
+    {
+     "zug": "fuhre:laden:lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:ochse",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:ochse",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:pfarrhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:pfarrhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:bann:muehlwirt",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:brueckenwirt",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:faehrhaus",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:hirsch",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:laden:markt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:markt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:bann:obernberg",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:tafel-ab:duenn",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:duenn",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:stark",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:stark",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:kofent",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:kofent",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:kauf:budget",
+     "p": "−90 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Brautage vom Rat · +6 −90 Pf"
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "p": "−34 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Grut vom Grutherrn · +40 −34 Pf"
+    },
+    {
+     "zug": "fuhre:rueckkauf:rohstoff",
+     "p": "+19 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Grut zurück an den Grutherrn · −40 +19 Pf"
+    },
+    {
+     "zug": "fuhre:kauf:fass",
+     "p": "−34 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 303,
+     "h": 24,
+     "tx": "Fass vom Böttcher · +3 −34 Pf"
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 106,
+     "h": 24,
+     "tx": "Nach Durst füllen"
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 109,
+     "h": 24,
+     "tx": "Wie vorige Woche"
+    },
+    {
+     "zug": "fuhre:leeren",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 84,
+     "h": 24,
+     "tx": "Karren leeren"
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 354,
+     "h": 28,
+     "tx": "FUHRE ABSCHICKEN"
+    },
+    {
+     "zug": "sud:wuerze:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Grut vom Grutamt"
+    },
+    {
+     "zug": "sud:wuerze:sack",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Hopfen im Sack, heimlich"
+    },
+    {
+     "zug": "sud:wuerze:brief",
+     "p": "−78 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 55,
+     "tx": "Offen gehopft, mit Hopfenbrief −78 Pf"
+    },
+    {
+     "zug": "sud:wasser:bach",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Wasser aus dem Stadtbach"
+    },
+    {
+     "zug": "sud:wasser:brunnen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Wasser aus dem Ziehbrunnen"
+    },
+    {
+     "zug": "sud:wasser:roehre",
+     "p": "−30 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 55,
+     "tx": "Röhrenrecht an der Quelle −30 Pf"
+    },
+    {
+     "zug": "sud:hefe-fuehren",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 213,
+     "h": 24,
+     "tx": "Hefezeug aus dem Bottich heben · +8"
+    },
+    {
+     "zug": "sud:anstich-jung",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 210,
+     "h": 24,
+     "tx": "Junges Fass anbrechen · +14 · 1 Fass"
+    },
+    {
+     "zug": "sud:anstich-alt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 196,
+     "h": 24,
+     "tx": "Altes Fass anbrechen · +6 · 1 Fass"
+    },
+    {
+     "zug": "sud:gaerraum",
+     "p": "−26 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 276,
+     "h": 38,
+     "tx": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+    },
+    {
+     "zug": "name:band",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "▾"
+    },
+    {
+     "zug": "name:aufgeldbuch",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 263,
+     "h": 24,
+     "tx": "Das Aufgeld nachrechnen"
+    },
+    {
+     "zug": "name:jetzt:umtrunk",
+     "p": "−9 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+    },
+    {
+     "zug": "name:jetzt:zunftzeichen",
+     "p": "−45 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Um das Zunftzeichen bitten −45 Pf"
+    },
+    {
+     "zug": "name:ruhe",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Das Zeichen verdecken"
+    },
+    {
+     "zug": "name:herumgehen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Herumgehen und den Namen sagen"
+    },
+    {
+     "zug": "name:blatt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Das Zeichen und das Register"
+    },
+    {
+     "zug": "erbe:tafel:verschreibe",
+     "p": "−16 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 173,
+     "h": 24,
+     "tx": "Verschreiben · Zum Goldenen Ochsen −16 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "p": "−13 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Leibgeding · jährlich −13 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "p": "−64 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Abfertigung −64 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "p": "0 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Mit leeren Händen 0 Pf"
+    },
+    {
+     "zug": "kern:chronik",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 108,
+     "h": 24,
+     "tx": "CHRONIK 4"
+    },
+    {
+     "zug": "kern:protokoll",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 82,
+     "h": 24,
+     "tx": "BUCH 1"
+    },
+    {
+     "zug": "weiter",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 126,
+     "h": 36,
+     "tx": "WEITER"
+    },
+    {
+     "zug": "klang:ton",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "♪"
+    },
+    {
+     "zug": "stadt:reiter:gegner-amort-gg-band",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 130,
+     "h": 27,
+     "tx": "OHNE DICH GESCHEHEN 1 Zug"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 79,
+     "h": 27,
+     "tx": "DIE HÄUSER wollen 15 · im Keller liegen 4 Fass"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 108,
+     "h": 27,
+     "tx": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 82,
+     "h": 27,
+     "tx": "DER KELLER 4 von 12 Fass · 4 reif"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 27,
+     "tx": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten"
+    },
+    {
+     "zug": "stadt:reiter:sud-sud-brett",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 88,
+     "h": 27,
+     "tx": "DAS SUDHAUS zugeklappt"
+    },
+    {
+     "zug": "stadt:reiter:name-nm-band",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 129,
+     "h": 27,
+     "tx": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen"
+    },
+    {
+     "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 93,
+     "h": 27,
+     "tx": "MICHAELI 1350 Der Rat setzt den Bierpfennig. Wer darüber g"
+    },
+    {
+     "zug": "stadt:reiter:erbe-blatt-erb-buch",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 65,
+     "h": 27,
+     "tx": "DAS ERBE zugeklappt"
+    },
+    {
+     "zug": "stadt:ortsmarken",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 100,
+     "h": 27,
+     "tx": "ORTSMARKEN 7 auf dem Pflock"
+    },
+    {
+     "zug": "stadt:alles-zuklappen",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 91,
+     "h": 24,
+     "tx": "STADT ZEIGEN"
+    },
+    {
+     "zug": "stadt:bau:seite",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 78,
+     "h": 24,
+     "tx": "BAUHOF"
+    },
+    {
+     "zug": "stadt:versatz",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 78,
+     "h": 24,
+     "tx": "VERSATZ"
+    },
+    {
+     "zug": "stadt:bau:grutkammer",
+     "p": "−13 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Grutkammer −13 Pf"
+    },
+    {
+     "zug": "stadt:bau:gaerbottiche",
+     "p": "−15 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Gärbottiche −15 Pf"
+    },
+    {
+     "zug": "stadt:bau:ochsenstall",
+     "p": "−18 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Ochsenstall −18 Pf"
+    },
+    {
+     "zug": "stadt:bau:keller_gewoelbe",
+     "p": "−21 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Gewölbekeller −21 Pf"
+    },
+    {
+     "zug": "stadt:bau:kueferei",
+     "p": "−23 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Küferei −23 Pf"
+    },
+    {
+     "zug": "preis:tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 174,
+     "h": 24,
+     "tx": "Michaelitafel schließen"
+    },
+    {
+     "zug": "preis:chronik",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 317,
+     "h": 24,
+     "tx": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Tafel"
+    },
+    {
+     "zug": "preis:nimm:dach",
+     "p": "−33 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −33 Pf"
+    },
+    {
+     "zug": "preis:nimm:bottich",
+     "p": "−42 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −42 Pf"
+    },
+    {
+     "zug": "preis:nimm:ochsenstall",
+     "p": "−110 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −110 Pf"
+    },
+    {
+     "zug": "preis:nimm:karrengaul",
+     "p": "−200 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −200 Pf"
+    },
+    {
+     "zug": "preis:nimm:bannmeile",
+     "p": "−1.300 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −1.300 Pf"
+    },
+    {
+     "zug": "preis:festlege:freikauf",
+     "p": "−1.000 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 184,
+     "h": 24,
+     "tx": "Festlegen −1.000 Pf"
+    },
+    {
+     "zug": "preis:festlege:realrecht",
+     "p": "−800 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 184,
+     "h": 24,
+     "tx": "Festlegen −800 Pf"
+    },
+    {
+     "zug": "preis:festlege:vertrag",
+     "p": "−85 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 184,
+     "h": 24,
+     "tx": "Festlegen −85 Pf"
+    },
+    {
+     "zug": "preis:nichts",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 226,
+     "h": 26,
+     "tx": "Nichts nehmen · das Geld bleibt liegen"
+    },
+    {
+     "zug": "preis:tafel-zu",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 152,
+     "h": 32,
+     "tx": "Das Jahr beginnen"
+    },
+    {
+     "zug": "erbe:verschreibe:ochse",
+     "p": "−16 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 84,
+     "h": 24,
+     "tx": "Verschreiben −16 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:pfarrhof",
+     "p": "−8 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 80,
+     "h": 24,
+     "tx": "Verschreiben −8 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:hirsch",
+     "p": "−11 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 84,
+     "h": 24,
+     "tx": "Verschreiben −11 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:markt",
+     "p": "−6 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 80,
+     "h": 24,
+     "tx": "Verschreiben −6 Pf"
+    }
+   ],
+   "text": "ST. MICHAEL\nGASTHOF LINDENHOF\nBRAUHAUS\nZUM ANKER\nGEGR. 1350\nVorsprung: 2 Dinge · wirbt 2 Wochen kürzer\nBRAUHAUS ZUM ADLER\nHartmann Feist · streitbar · hält 2 Häuser\n1\nZÜGE\n320 Pf\nKASSE\n9 Pf\nSEIN PREIS\nwirbt\nW1\nAdler-Ausschank am Markt\nTOR · KON\nablösen 56 Pf\nFass an den Wirt\n1 Fass statt Geld\nFAE · BAN\nablösen 66 Pf\nFass an den Wirt\n1 Fass statt Geld\nwirbt · noch 4 Wo.\nzuvorkommen 19 Pf\nFass an den Wirt\n1 Fass statt Geld\nKlage vor dem Stadtgericht\nkostet kein Geld · vier Ansehen\ngegen Klosterschenke Obernberg\nOHNE DICH GESCHEHEN\n1 Zug\nDas Haus gegenüber\nGebunden wird hier mit Recht und Gunst\nAblösung 56 Pf bis 66 Pf\nKlage vor dem Stadtgericht\nkostet kein Geld · vier Ansehen · einmal im Braujahr\n1350 W1\nBrauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.\nzeigen\nUMKÄMPFT\nZuvorkommen Klosterschenke Obernberg — 19 Pf ·\nKasse reicht 5,9×\nJunges Fass · +14 · 1 Fass\nAltes Fass · +6 · 1 Fass\nHopfen im Sack, heimlich\nRöhrenrecht an der Quelle\n−30 Pf\nDER ANKER · RUF 10\nUmtrunk beim Wirt\n−9 Pf\n− 1 Fass\nAdler-Ausschank am Mar\nLIN\nOCH\nMUE\nBRU\nFAE\nOBE\nLIN\nOCH\nMUE\nBRU\nFAE\nOBE\nDIE HÄUSER\nwollen 15 · im Keller liegen 4 Fass\n„Der Schankknecht vom Gasthof Lindenhof war am Tor. Er ist ohne Fass wieder gegangen.\"\nDAS KERBHOLZ BEIM WIRT\nim Holz bis Michaeli: 0 Pf\nBar auf die Hand\nKein Fass verlässt den Hof ohne Münze.\nbar 100 %\nBestellung 66 %\nAusfall 0 %\nSo verabreden\nAufs Kerbholz, fällig zu Michaeli\nZwei Hölzer, ein Schnitt: eines beim Wirt, eines im Haus.\nbar 40 %\nBestellung 100 %\nAusfall 5 %\nSo ist es verabredet\nAuf Borg bis Michaeli\nDer Wirt nimmt, so viel er ausschenken kann, und rechnet im Herbst.\nbar 12 %\nBestellung 132 %\nAusfall 15 %\nSo verabreden\nNoch 7 Wochen, dann gilt das Wort bis Michaeli.\nLIN\nGasthof Lindenhof\n0,2 km\nfrei\nwill 4 Fass\n+ 1 Fass\n−\nOCH\nZum Goldenen Ochsen\n0,6 km\nunser Haus\nwill 2 Fass\n+ 1 Fass\n−\nTOR\nSchenke am Tor\n0,1 km\nadler\nwill 1 Fass\n+ 1 Fass\n−\nPFA\nPfarrschenke St. Michael\n0,8 km\nunser Haus\nwill 1 Fass\n+ 1 Fass\n−\nMUE\nMühlschenke\n3 km\nfrei\nwill 1 Fass\nBannbrief\n−60 Pf\nBRU\nBrückenwirt\n2 km\nfrei\nwill 2 Fass\nBannbrief\n−60 Pf\nFAE\nFährhaus am Fluss\n4 km\nadler\nwill 1 Fass\nBannbrief\n−60 Pf\nHIR\nLandgasthof Hirsch\n7 km\nunser Haus\nwill 1 Fass\nBannbrief\n−60 Pf\nMKT\nAusschank am Markt\n0,5 km\nunser Haus\nwill 1 Fass\n+ 1 Fass\n−\nOBE\nKlosterschenke Obernberg\n9 km\nfrei\nwill 1 Fass\nBannbrief\n−60 Pf\nANSCHLAGTAFEL\nmit Kreide an der Sudhauswand\nBrautage: 44 übrig\nDieser Plan frisst 2 je Woche — reicht 22 Wochen\nGrut in der Kammer: 40 — reicht für 13 Sude\nD\nDünnbier\n5 Pf je Fass\n1 Brautage\n→ 5 Fass\nhält 3 Wo.\n−\n0\n+\nG\nGrutbier\n9 Pf je Fass\n2 Brautage\n→ 4 Fass\nhält 6 Wo.\n−\n1\n+\nS\nStarkbier\n19 Pf je Fass\n3 Brautage\n→ 3 Fass\n2 Wo. Lager\nhält 16 Wo.\nsommerfest\n−\n0\n+\nK\nKofent\n3 Pf je Fass\n0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die Pfanne\n−\n0\n+\nKERBHOLZ BEIM GRUTHERRN\n0 von 6 · 1 Kerbe = 25 Pf\nDer Grutherr schneidet die Kerbe ins Holz und zahlt aus. Zu Georgi wird gelöscht — in Geld, wenn welches da ist.\nKNAPP IN DIESER ZEIT: Brautage · Bannmeile\nDer Rat verleiht Tage, nicht Geld. Und die Meile ist eine Mauer.\nBrautage vom Rat · +6\n−90 Pf\nGrut vom Grutherrn · +40\n−34 Pf\nGrut zurück an den Grutherrn · −40\n+19 Pf\nFass vom Böttcher · +3\n−34 Pf\nDER KELLER\n4 von 12 Fass · 4 reif\nG\nW1\nG\nW1\nG\nW1\nG\nW1\nFässer des Hauses: 22 eigene · 4 gefüllt · 0 beim Wirt · 18 leer\nOCHSENKARREN\n0 von 5 Fass · 0 von 4 Halten\nFünf Plätze, vier Halte. Der Ochse geht sieben Meilen am Tag und keine mehr.\nDer Wagen steht. Jedes Fass bekommt ein Haus — dann fährt er.\nNach Durst füllen\nWie vorige Woche\nKarren leeren\nFUHRE ABSCHICKEN\nDAS SUDHAUS · 1350\nDie offene Pfanne über offenem Feuer\nGrut oder Hopfen?\nDie Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts.\nDIE WÜRZE\nWomit wird gewürzt?\nEs ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.\nGrut vom Grutamt\nläuft\nhöchstens Grutbier\nGagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus.\nHopfen im Sack, heimlich\nohne Ausgabe\nlässt Starkbier zu\nHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche\nHopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt.\nDer Grutknecht sieht in die Pfanne, wann er will.\nOffen gehopft, mit Hopfenbrief\n−78 Pf\nunwiderruflich\nlässt Starkbier zu\nHaltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud\nDer Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne.\nUnwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.\nDAS BRAUWASSER\nWoher kommt das Wasser?\nVier Fuenftel des Fasses sind Wasser. Wo es geschöpft wird, ist keine Kleinigkeit — es ist die zweite Frage, die dieses Haus zu beantworten hat, und sie kostet keinen Pfennig.\nWasser aus dem Stadtbach\nläuft\nlässt Starkbier zu\nGeschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand, und die Lohgerber sitzen weiter oben am selben Wasser. So braut die ganze Reihe, und so hält das Bier, was es hält.\nWasser aus dem Ziehbrunnen\nohne Ausgabe\nlässt Starkbier zu\nHaltbarkeit ×1,15 · −1 Fass je Sud\nEimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das bessere Wasser hält das Bier ein Stück länger — und der halbe Sudtag fehlt hinten: ein Fass weniger geht aus jeder Pfanne in den Gärkeller.\nDer Brunnen im Hof gibt nicht jede Woche her, was die Pfanne braucht.\nRöhrenrecht an der Quelle\n−30 Pf\nunwiderruflich\nlässt Starkbier zu\nHaltbarkeit ×1,35\nDer Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in den Hof: gebohrte Erlenstämme unter der Gasse durch. Das Wasser steht dann jeden Tag im Hof, ohne einen Gang und ohne den Bach.\nUnwiderruflich — die Röhre liegt unter der Stadtmauer, und was einmal gegraben ist, gräbt niemand zurück.\nWAS BEIM WIRT ANKOMMT\nhöchstens Grutbier\nWelches Haus ein Fass nimmt, entscheidet die Pfanne.\nBestellt wird die Sorte an der Fuhre. Dieses Brett deckelt sie — es hebt sie nie: was hier offen steht, wird nur dann gebraut, wenn es auch bestellt ist.\nD\nDünnbier\n7 von 10 Häusern\nträgt die Pfanne\nG\nGrutbier\n8 von 10 Häusern\nträgt die Pfanne\nS\nStarkbier\n3 von 10 Häusern\nschlägt als Grutbier aus\nKlosterschenke Obernberg führt nur Starkbier und bekommt vom Anker nichts.\nDAS HEFEZEUG\n70 %\nHefe vom vorigen Sud. Ohne Pflege schlägt der Sud um.\nWas jetzt eingelegt wird, hält ×1,05 — die Hefe steht.\nHefezeug aus dem Bottich heben · +8\nJunges Fass anbrechen · +14 · 1 Fass\nAltes Fass anbrechen · +6 · 1 Fass\nEinmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass.\nDER GÄRKELLER\n0 von 10 Fass · 0 Bottiche\nOffene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass.\nKein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller.\nBottich beim Küfer bestellen · +6 Fass\n−26 Pf\nDie Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche.\nDAS SUDBUCH\n0 Sude · 0 Fass · 0 verloren\nNoch keine Eintragung.\nDER RUF DES HAUSES\nBierzeiger und Zunftzeichen\n▾\n10\nRuf von 100\nBekanntheit\n18 ↗\nEinlösung\n55\nGLEICHES BIER, 100 FASS, ZWEI PREISE\nohne das Zeichen 900 Pf\nmit dem Zeichen 907 Pf\n+ 0,8 im Hundert · 7 Pf mehr für dieselbe Menge\nAUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT\nDIESE WOCHE\n0 Pf\nBRAUJAHR\n0 Pf\nSEIT 1350\n0 Pf\nNoch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist.\nund einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis.\nDas Aufgeld nachrechnen\nWAS DER NAME JETZT KOSTET\nUmtrunk beim Wirt\n−9 Pf\n− 1 Fass\nUm das Zunftzeichen bitten\n−45 Pf\nDie ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\".\nDas Zeichen verdecken\nHerumgehen und den Namen sagen\nWer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal.\nDas Zeichen und das Register\nDAS ERBE\nnoch 14 Wochen\nI. Kunigunde Bruckner · sparsam · Feder 0,70×\nam Haus 0 · an der Person 4\nnimmt 4 · 2 Fass\nVerschreiben · Zum Goldenen Ochsen\n−16 Pf\nLeibgeding · jährlich\n−13 Pf\nAbfertigung\n−64 Pf\nMit leeren Händen\n0 Pf\nSCHEIDING\n1350\nKASSE\n112 Pf\nGRUT\n40\nKELLER\n4/12 Fass\nWOCHE\n1/30\nCHRONIK\n4\nBUCH\n1\nBrauhaus zum Anker · 1350/51 · Kunigunde Bruckner, sparsam · Das Recht\nWEITER\nnächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)\n♪\nOHNE DICH GESCHEHEN\n1 Zug\nDIE HÄUSER\nwollen 15 · im Keller liegen 4 Fass\nANSCHLAGTAFEL\nmit Kreide an der Sudhauswand\nDER KELLER\n4 von 12 Fass · 4 reif\nOCHSENKARREN\n0 von 5 Fass · 0 von 4 Halten\nDAS SUDHAUS\nzugeklappt\nDER RUF DES HAUSES\nBierzeiger und Zunftzeichen\nMICHAELI 1350\nDer Rat setzt den Bierpfennig. Wer darüber g\nDAS ERBE\nzugeklappt\nORTSMARKEN\n7 auf dem Pflock\nSTADT ZEIGEN\nBAUHOF\nVERSATZ\n4 Bauten im Hof · gebaut wird einmal, es steht auch für die Enkel\nGrutkammer\n−13 Pf\n+20 Grut\nGärbottiche\n−15 Pf\n+4 Fass Lagerplatz\nOchsenstall\n−18 Pf\nfährt, wann das Haus will\nGewölbekeller\n−21 Pf\n+8 Fass Lagerplatz\nKüferei\n−23 Pf\n+4 Fass Lagerplatz\nMichaelitafel schließen\nMICHAELI 1350\nDer Rat setzt den Bierpfennig. Wer darüber geht, wird gestraft.\nKasse 112 Pf\nKunigunde Bruckner, 1. Amtszeit · Anschlag 515 Pf\nChronik des Hauses · 0 Festlegungen · 0 von dieser Tafel\nDIE RECHNUNG 1350\nZu diesem Michaeli war nichts abzutragen. Ab Michaeli 1351 laufen:\nGrutgeld an den Grutherrn\n−5 Pf\nnach dem Ausstoß im Schnitt der letzten drei Jahre\nMahlgeld an die Mühle\n−3 Pf\nnach dem Ausstoß im Schnitt der letzten drei Jahre\nErbzins an den Grundherrn\n−16 Pf\nläuft weiter, auch wenn nicht gebraut wird\nWasserzins an die Stadt\n−10 Pf\nläuft weiter, auch wenn nicht gebraut wird\nSchoss nach der Nahrung\n−1 Pf\nnach dem, was die letzten drei Jahre übrig ließen\nZusammen im Jahr\n−35 Pf\nDrei Wurzeln: was weiterläuft, wenn die Pfanne kalt bleibt · was am Ausstoß hängt · was der Rat nach der Nahrung des Jahres veranlagt. Und in dieser Zeit eine vierte: was bar liegen bleibt.\nAnschlag auf das Geld in der Lade: frei bleiben 1,3 Jahreslasten, mindestens der Preis der nächsten Festlegung — 85 Pf. Auf alles, was zu Michaeli darüber hinaus bar liegt, schlägt der Rat 45 im Hundert an. Was verbaut, gebunden oder festgelegt ist, zählt nicht mit.\nAusstoß des vergangenen Jahres\n150 Pf\ndavon übrig geblieben\n0 Pf\nDIE BIERORDNUNG\nSatz je Fass\n9 Pf\nDer Rat setzt den Bierpfennig auf neun je Fass.\nvom Rat gesetzt 1350\n9 Pf\nseither nachgesetzt (60 im Hundert der Teuerung)\n0%\nAufschlag des Hauses — selbst gebaut\n0%\nIn diesem Jahr gesetzt. Zwischen den Stufen setzt der Rat nach dem Korn nach, aber nicht ganz. Was zur Teuerung fehlt, ist der Teil, den nur das Haus selbst zubauen kann.\nDER ANSCHLAG\nFür 1350\n515 Pf\naus dem Umsatz des Vorjahrs\n45 Pf\naus der Barschaft\n470 Pf\nTeuerung seit 1350\n+0%\n4 von 5 Sachen nach der Taxe\n470 Pf\nDer Anschlag ist die Schätzung des Rats: was durch das Haus geht und was im Haus liegt. Böttcher, Maurer und Grutherr rechnen mit derselben Zahl.\nWAS SCHON STEHT\nVon heute an nichts. Was die Vorfahren hinterlassen haben:\nLagerplatz im Keller\n12 Fass\nSud in der Woche\n1\nBraurecht\nvom Rat verliehen\nAnsehen in der Stadt\n25\nWas von heute an dazukommt, steht hier und trägt in jedem Michaeli.\nDIE ANGEBOTE ZU MICHAELI 1350\n5 nebeneinander, 5 heute noch zu haben · Kasse 112 Pf · was hier weggeht, kommt in diesem Jahr nicht wieder\nDas Dach über der Pfanne\n33 Pf\nganz, sofort\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nOhne Bauzeit · wirkt ab heute\nEin Schindeldach auf vier Ständern, über der offenen Pfanne.\nFOLGE\n+16 Pf in jedem Michaeli · −6 Pf in jedem Michaeli: Schindeln und Lattung für das Dach\nRegen löscht das Feuer nicht mehr, und der Sud fällt nicht aus.\nNehmen\n−33 Pf\nEin zweiter Bottich aus Eichenholz\n42 Pf\nvon 94 Pf · dann 1 × 52 Pf\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nBauzeit 1 Jahr · fertig 1351\nEin Gärbottich vom Küfer, mit Weidenreifen gebunden.\nFOLGE\n+3 Fass Lagerplatz · +4 im Hundert je Fass · −8 Pf in jedem Michaeli: Weidenreifen und Dauben für den zweiten Bottich\nZwei Bottiche heißen: der zweite Sud muss nicht warten — und der erste darf ausgären, statt jung aus dem Haus zu gehen.\nNehmen\n−42 Pf\nDer Ochsenstall am Tor\n110 Pf\nganz, sofort\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nOhne Bauzeit · wirkt ab heute\nEin eigener Stall statt des geliehenen Gespanns.\nFOLGE\n+34 Pf in jedem Michaeli · −16 Pf in jedem Michaeli: Futter und Streu für den Ochsen\nDer Ochse steht im Haus und wartet nicht auf den Nachbarn.\nSchließt aus: Ein Karrengaul statt des Ochsen\nNehmen\n−110 Pf\nEin Karrengaul statt des Ochsen\n200 Pf\nganz, sofort\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nOhne Bauzeit · wirkt ab heute\nEin kaltblütiges Pferd, Geschirr, Hufbeschlag.\nFOLGE\n+62 Pf in jedem Michaeli · −47 Pf in jedem Michaeli: Hafer, Beschlag und Geschirr für den Gaul\nDoppelt so schnell wie der Ochse und dreimal so teuer im Futter.\nSchließt aus: Der Ochsenstall am Tor\nÜber der Kasse: es fehlen 88 Pf.\nNehmen\n−200 Pf\nDie Bannmeile auf zehn Jahre\n1.300 Pf\nganz, sofort\nNach dem Anschlag von 1350 — was das Haus wert ist, wird mit angeschlagen.\nOhne Bauzeit · wirkt ab heute\nEin Ratsbrief: kein fremdes Bier innerhalb einer Meile.\nFOLGE\n3 Häuser gebunden, 10 Jahre\nDrei Häuser dürfen zehn Jahre lang nichts anderes ausschenken.\nÜber der Kasse: es fehlen 1.188 Pf.\nNehmen\n−1.300 Pf\nDIE FESTLEGUNG\nEine je Amtszeit. Sie ändert eine Regel für den Rest der Partie und wird nicht zurückgenommen. · Das Haus hat 0 Festlegungen, 0 davon von dieser Tafel · heute 1 zu haben\nDer Freikauf vom Grundherrn\nEine Ablosesumme, ein Siegel, ein Eintrag im Salbuch.\nREGEL\nDer Erbzins endet. Für immer. Das Haus gehört von heute an dem Haus.\nFOLGE\nkein Erbzins an den Grundherrn mehr\nPreis dieser Amtszeit: 1.000 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, auch wenn das Haus die Hand wechselt.\nÜber der Kasse: es fehlen 888 Pf.\nFestlegen\n−1.000 Pf\nDas Braurecht ans Haus\nDas Recht wird vom Menschen gelöst und auf die Hofstatt geschrieben.\nREGEL\nKein Handlohn mehr bei jedem Erbfall. Wer erbt, erbt auch die Pfanne.\nPreis dieser Amtszeit: 800 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, auch wenn das Haus die Hand wechselt.\nÜber der Kasse: es fehlen 688 Pf.\nFestlegen\n−800 Pf\nVertrag statt Gunst\nVier Wirte setzen ihr Zeichen unter einen Brief auf fünfundzwanzig Jahre.\nREGEL\nVier Häuser nehmen nur noch Bier dieses Hauses. Die übrigen merken sich, dass sie nicht gefragt wurden.\nFOLGE\n-6 Ansehen · 4 Häuser gebunden, 25 Jahre\nPreis dieser Amtszeit: 85 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, auch wenn das Haus die Hand wechselt.\nFestlegen\n−85 Pf\nWAS FÄLLIG WIRD\n1351\nAnschlag auf das Geld in der Lade\n12 Pf\nZu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, was einer bar liegen hat. Was durch das Haus geht und was im Haus liegt, steht beim Rat in derselben Zahl. Frei bleiben 85 Pf — heute liegen 112 Pf bar im Haus.\n1352\nUmlage für den Mauerbau\n9 Pf\nDie Stadt schließt den Ring nach Süden.\n1355\nLandfriedensgeld\n7 Pf\nDer Bund der Städte hält Reisige. Bezahlt wird von den Häusern.\n1359\nBrandschatzung\n23 Pf\nEin Heerhaufe steht vor dem Tor und zieht gegen Geld weiter.\n1361\nZehnt auf das Braugerät\n13 Pf\nDer Rat besteuert Pfanne, Bottich und Fass nach Schätzung.\n1364\nUmlage für die Brücke\n11 Pf\nDas Hochwasser hat den Steg genommen.\nWer den Anschlag nicht abträgt, dem nimmt der Rat ein Pfand: eine Wirtschaft wird auf fünf Jahre dem Adler zugesprochen.\nimmer\nDer Notpfennig — was NICHT genommen wird\n48 Pf\nSo weit und nicht weiter nimmt der Rat. Liegt zu Michaeli weniger im Kasten, schießt er auf diese Zahl vor — angeschrieben, nicht geschenkt.\nDIE LEITER\nLinks die Kennzahl: Barschaft zu Michaeli gegen den Preis des nächsten sinnvollen Zuges — dieselbe Zahl, die unten rechts am Bildschirm steht, aus derselben Quelle abgelesen. Rechts die eigene Preisleiter: was das billigste Angebot DIESER Tafel am selben Tag kostete. Die rechte Spalte ist keine Kennzahl — diese Tafel liegt an 29 von 30 Wochen zu, und sie fällt, sobald die billigen Sprossen genommen sind. Das ist keine Verschlechterung, sondern der Grund, warum es Sprossen gibt.\nJahr\nKasse\nnächster Zug\nreicht\neigene Tafel\nreicht\n1350\n112\n19\n5,89×\n33\n3,39×\nAm Michaelistag, dem 29. September, wird fällig, was das Jahr über gestundet war. Danach steht die Pfanne wieder kalt, bis der Zins bezahlt ist.\nNichts nehmen · das Geld bleibt liegen\nDas Jahr beginnen\nDAS ERBE — Verschreiben vor dem Rat ins Stadtbuch · I. Hand\nKunigunde Bruckner · sparsam\n„Hält das Geld zusammen, versäumt die Gelegenheit.\"\nSchreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber.\n\nWas im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab.\n\nDie Stunde kommt in 14 Wochen — 5. Jänner 1351. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen.\n\nAM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT\nNichts. Alles hängt an einem Menschen.\nAN DER PERSON · 4 — FÄLLT MIT DER HAND, DIE ES GAB\nZum Goldenen Ochsen\nGewohnheit\nVerschreiben\n−16 Pf\nPfarrschenke St. Michael\nGewohnheit\nVerschreiben\n−8 Pf\nLandgasthof Hirsch\nGewohnheit\nVerschreiben\n−11 Pf\nAusschank am Markt\nGewohnheit\nVerschreiben\n−6 Pf\nDIE HÄNDE · 1\nI. Kunigunde Bruckner\nsparsam\nFeder 0,70×"
+  },
+  {
+   "schritt": "preis:chronik-auf",
+   "i": 0,
+   "erg": {
+    "ok": false,
+    "grund": "nicht im DOM"
+   },
+   "kasse": 112,
+   "rohstoff": 40,
+   "ansehen": 25,
+   "zeit": {
+    "jahr": 1350,
+    "woche": 1,
+    "epoche": 1
+   },
+   "protokollN": 1,
+   "protokollEnde": [
+    {
+     "nr": 1,
+     "jahr": 1350,
+     "woche": 1,
+     "wer": "gegner",
+     "was": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.",
+     "preis": 0,
+     "menge": 0,
+     "adresse": "obernberg",
+     "misslungen": false
+    }
+   ],
+   "chronikN": 4,
+   "chronikEnde": [
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "anfang",
+     "text": "Das Haus Brauhaus zum Anker, gegründet 1350. Kunigunde Bruckner fuehrt es."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "gegner",
+     "text": "Gegenüber steht Brauhaus zum Adler. Hartmann Feist führt es. Gebunden wird in dieser Zeit mit Recht und Gunst."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "sud",
+     "text": "Im Sudhaus hängt ein neuer Zettel: Grut oder Hopfen? Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts."
+    },
+    {
+     "jahr": 1350,
+     "woche": 1,
+     "art": "anfang",
+     "text": "Die Hand am Haus ist Kunigunde Bruckner, sparsam. Was sie nur mit einem Handschlag hält, hält das Haus nicht. Was im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab."
+    }
+   ],
+   "lage": 0,
+   "zuege": [
+    {
+     "zug": "gegner:oeffnen:adler",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 182,
+     "h": 85,
+     "tx": "BRAUHAUS ZUM ADLER Hartmann Feist · streitbar · hält 2 Häuser 1 ZÜGE 320 Pf KASSE 9 Pf SEI"
+    },
+    {
+     "zug": "gegner:abloesen:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 77,
+     "h": 26,
+     "tx": "TOR · KON ablösen 56 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:abloesen:faehrhaus",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 77,
+     "h": 26,
+     "tx": "FAE · BAN ablösen 66 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:faehrhaus",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:zuvorkommen:obernberg",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 111,
+     "h": 26,
+     "tx": "wirbt · noch 4 Wo. zuvorkommen 19 Pf"
+    },
+    {
+     "zug": "gegner:hinhalten:obernberg",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 95,
+     "h": 24,
+     "tx": "Fass an den Wirt 1 Fass statt Geld"
+    },
+    {
+     "zug": "gegner:beschwerde-bild",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 141,
+     "h": 34,
+     "tx": "Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Klosterschenke Obernberg"
+    },
+    {
+     "zug": "gegner:blatt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 91,
+     "h": 24,
+     "tx": "Das Haus gegenüber"
+    },
+    {
+     "zug": "gegner:beschwerde",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 118,
+     "h": 24,
+     "tx": "Klage vor dem Stadtgericht"
+    },
+    {
+     "zug": "gegner:zeige:1",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 37,
+     "h": 24,
+     "tx": "zeigen"
+    },
+    {
+     "zug": "sud:zettel-anstich",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Junges Fass · +14 · 1 Fass"
+    },
+    {
+     "zug": "sud:zettel-hefe-fass",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Altes Fass · +6 · 1 Fass"
+    },
+    {
+     "zug": "sud:zettel-wechsel-frei",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Hopfen im Sack, heimlich"
+    },
+    {
+     "zug": "sud:zettel-wechsel-kauf",
+     "p": "−30 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 149,
+     "h": 24,
+     "tx": "Röhrenrecht an der Quelle −30 Pf"
+    },
+    {
+     "zug": "name:anschlag:umtrunk",
+     "p": "−9 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 140,
+     "h": 27,
+     "tx": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+    },
+    {
+     "zug": "stadt:marke:gegner-marktplatz",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "Adler-Ausschank am Mar"
+    },
+    {
+     "zug": "stadt:marke:fuhre-lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "LIN"
+    },
+    {
+     "zug": "stadt:marke:fuhre-marktplatz",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "OCH"
+    },
+    {
+     "zug": "stadt:marke:fuhre-muehle",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "MUE"
+    },
+    {
+     "zug": "stadt:marke:fuhre-bruecke-unten",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "BRU"
+    },
+    {
+     "zug": "stadt:marke:fuhre-fluss",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "FAE"
+    },
+    {
+     "zug": "stadt:marke:fuhre-bruecke-oben",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "OBE"
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 93,
+     "h": 24,
+     "tx": "So verabreden"
+    },
+    {
+     "zug": "fuhre:ziel:ziel",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 115,
+     "h": 24,
+     "tx": "So ist es verabredet"
+    },
+    {
+     "zug": "fuhre:ziel:borg",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 93,
+     "h": 24,
+     "tx": "So verabreden"
+    },
+    {
+     "zug": "fuhre:laden:lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:lindenhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:ochse",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:ochse",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:torschenke",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:laden:pfarrhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:pfarrhof",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:bann:muehlwirt",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:brueckenwirt",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:faehrhaus",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:bann:hirsch",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:laden:markt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 47,
+     "h": 24,
+     "tx": "+ 1 Fass"
+    },
+    {
+     "zug": "fuhre:abladen:markt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:bann:obernberg",
+     "p": "−60 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 102,
+     "h": 24,
+     "tx": "Bannbrief −60 Pf"
+    },
+    {
+     "zug": "fuhre:tafel-ab:duenn",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:duenn",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:stark",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:stark",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:tafel-ab:kofent",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 24,
+     "h": 24,
+     "tx": "−"
+    },
+    {
+     "zug": "fuhre:tafel-auf:kofent",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "+"
+    },
+    {
+     "zug": "fuhre:kauf:budget",
+     "p": "−90 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Brautage vom Rat · +6 −90 Pf"
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "p": "−34 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Grut vom Grutherrn · +40 −34 Pf"
+    },
+    {
+     "zug": "fuhre:rueckkauf:rohstoff",
+     "p": "+19 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 100,
+     "h": 63,
+     "tx": "Grut zurück an den Grutherrn · −40 +19 Pf"
+    },
+    {
+     "zug": "fuhre:kauf:fass",
+     "p": "−34 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 303,
+     "h": 24,
+     "tx": "Fass vom Böttcher · +3 −34 Pf"
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 106,
+     "h": 24,
+     "tx": "Nach Durst füllen"
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 109,
+     "h": 24,
+     "tx": "Wie vorige Woche"
+    },
+    {
+     "zug": "fuhre:leeren",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 84,
+     "h": 24,
+     "tx": "Karren leeren"
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 354,
+     "h": 28,
+     "tx": "FUHRE ABSCHICKEN"
+    },
+    {
+     "zug": "sud:wuerze:grut",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Grut vom Grutamt"
+    },
+    {
+     "zug": "sud:wuerze:sack",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Hopfen im Sack, heimlich"
+    },
+    {
+     "zug": "sud:wuerze:brief",
+     "p": "−78 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 55,
+     "tx": "Offen gehopft, mit Hopfenbrief −78 Pf"
+    },
+    {
+     "zug": "sud:wasser:bach",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Wasser aus dem Stadtbach"
+    },
+    {
+     "zug": "sud:wasser:brunnen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 39,
+     "tx": "Wasser aus dem Ziehbrunnen"
+    },
+    {
+     "zug": "sud:wasser:roehre",
+     "p": "−30 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 101,
+     "h": 55,
+     "tx": "Röhrenrecht an der Quelle −30 Pf"
+    },
+    {
+     "zug": "sud:hefe-fuehren",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 213,
+     "h": 24,
+     "tx": "Hefezeug aus dem Bottich heben · +8"
+    },
+    {
+     "zug": "sud:anstich-jung",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 210,
+     "h": 24,
+     "tx": "Junges Fass anbrechen · +14 · 1 Fass"
+    },
+    {
+     "zug": "sud:anstich-alt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 196,
+     "h": 24,
+     "tx": "Altes Fass anbrechen · +6 · 1 Fass"
+    },
+    {
+     "zug": "sud:gaerraum",
+     "p": "−26 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 1,
+     "w": 276,
+     "h": 38,
+     "tx": "Bottich beim Küfer bestellen · +6 Fass −26 Pf"
+    },
+    {
+     "zug": "name:band",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "▾"
+    },
+    {
+     "zug": "name:aufgeldbuch",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 263,
+     "h": 24,
+     "tx": "Das Aufgeld nachrechnen"
+    },
+    {
+     "zug": "name:jetzt:umtrunk",
+     "p": "−9 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Umtrunk beim Wirt −9 Pf − 1 Fass"
+    },
+    {
+     "zug": "name:jetzt:zunftzeichen",
+     "p": "−45 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Um das Zunftzeichen bitten −45 Pf"
+    },
+    {
+     "zug": "name:ruhe",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Das Zeichen verdecken"
+    },
+    {
+     "zug": "name:herumgehen",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Herumgehen und den Namen sagen"
+    },
+    {
+     "zug": "name:blatt",
+     "p": "",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 273,
+     "h": 24,
+     "tx": "Das Zeichen und das Register"
+    },
+    {
+     "zug": "erbe:tafel:verschreibe",
+     "p": "−16 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 173,
+     "h": 24,
+     "tx": "Verschreiben · Zum Goldenen Ochsen −16 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "p": "−13 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Leibgeding · jährlich −13 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "p": "−64 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Abfertigung −64 Pf"
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "p": "0 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 135,
+     "h": 24,
+     "tx": "Mit leeren Händen 0 Pf"
+    },
+    {
+     "zug": "kern:chronik",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 108,
+     "h": 24,
+     "tx": "CHRONIK 4"
+    },
+    {
+     "zug": "kern:protokoll",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 82,
+     "h": 24,
+     "tx": "BUCH 1"
+    },
+    {
+     "zug": "weiter",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 126,
+     "h": 36,
+     "tx": "WEITER"
+    },
+    {
+     "zug": "klang:ton",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 24,
+     "h": 24,
+     "tx": "♪"
+    },
+    {
+     "zug": "stadt:reiter:gegner-amort-gg-band",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 130,
+     "h": 27,
+     "tx": "OHNE DICH GESCHEHEN 1 Zug"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 79,
+     "h": 27,
+     "tx": "DIE HÄUSER wollen 15 · im Keller liegen 4 Fass"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 108,
+     "h": 27,
+     "tx": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 82,
+     "h": 27,
+     "tx": "DER KELLER 4 von 12 Fass · 4 reif"
+    },
+    {
+     "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 27,
+     "tx": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten"
+    },
+    {
+     "zug": "stadt:reiter:sud-sud-brett",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 88,
+     "h": 27,
+     "tx": "DAS SUDHAUS zugeklappt"
+    },
+    {
+     "zug": "stadt:reiter:name-nm-band",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 129,
+     "h": 27,
+     "tx": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen"
+    },
+    {
+     "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 93,
+     "h": 27,
+     "tx": "MICHAELI 1350 Der Rat setzt den Bierpfennig. Wer darüber g"
+    },
+    {
+     "zug": "stadt:reiter:erbe-blatt-erb-buch",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 65,
+     "h": 27,
+     "tx": "DAS ERBE zugeklappt"
+    },
+    {
+     "zug": "stadt:ortsmarken",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 100,
+     "h": 27,
+     "tx": "ORTSMARKEN 7 auf dem Pflock"
+    },
+    {
+     "zug": "stadt:alles-zuklappen",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 91,
+     "h": 24,
+     "tx": "STADT ZEIGEN"
+    },
+    {
+     "zug": "stadt:bau:seite",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 78,
+     "h": 24,
+     "tx": "BAUHOF"
+    },
+    {
+     "zug": "stadt:versatz",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 78,
+     "h": 24,
+     "tx": "VERSATZ"
+    },
+    {
+     "zug": "stadt:bau:grutkammer",
+     "p": "−13 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Grutkammer −13 Pf"
+    },
+    {
+     "zug": "stadt:bau:gaerbottiche",
+     "p": "−15 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Gärbottiche −15 Pf"
+    },
+    {
+     "zug": "stadt:bau:ochsenstall",
+     "p": "−18 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Ochsenstall −18 Pf"
+    },
+    {
+     "zug": "stadt:bau:keller_gewoelbe",
+     "p": "−21 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Gewölbekeller −21 Pf"
+    },
+    {
+     "zug": "stadt:bau:kueferei",
+     "p": "−23 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 212,
+     "h": 26,
+     "tx": "Küferei −23 Pf"
+    },
+    {
+     "zug": "preis:tafel",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 174,
+     "h": 24,
+     "tx": "Michaelitafel schließen"
+    },
+    {
+     "zug": "preis:chronik",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 317,
+     "h": 24,
+     "tx": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Tafel"
+    },
+    {
+     "zug": "preis:nimm:dach",
+     "p": "−33 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −33 Pf"
+    },
+    {
+     "zug": "preis:nimm:bottich",
+     "p": "−42 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −42 Pf"
+    },
+    {
+     "zug": "preis:nimm:ochsenstall",
+     "p": "−110 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −110 Pf"
+    },
+    {
+     "zug": "preis:nimm:karrengaul",
+     "p": "−200 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −200 Pf"
+    },
+    {
+     "zug": "preis:nimm:bannmeile",
+     "p": "−1.300 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 104,
+     "h": 39,
+     "tx": "Nehmen −1.300 Pf"
+    },
+    {
+     "zug": "preis:festlege:freikauf",
+     "p": "−1.000 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 184,
+     "h": 24,
+     "tx": "Festlegen −1.000 Pf"
+    },
+    {
+     "zug": "preis:festlege:realrecht",
+     "p": "−800 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 1,
+     "w": 184,
+     "h": 24,
+     "tx": "Festlegen −800 Pf"
+    },
+    {
+     "zug": "preis:festlege:vertrag",
+     "p": "−85 Pf",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 184,
+     "h": 24,
+     "tx": "Festlegen −85 Pf"
+    },
+    {
+     "zug": "preis:nichts",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 226,
+     "h": 26,
+     "tx": "Nichts nehmen · das Geld bleibt liegen"
+    },
+    {
+     "zug": "preis:tafel-zu",
+     "p": "",
+     "s": 1,
+     "t": 1,
+     "d": 0,
+     "w": 152,
+     "h": 32,
+     "tx": "Das Jahr beginnen"
+    },
+    {
+     "zug": "erbe:verschreibe:ochse",
+     "p": "−16 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 84,
+     "h": 24,
+     "tx": "Verschreiben −16 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:pfarrhof",
+     "p": "−8 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 80,
+     "h": 24,
+     "tx": "Verschreiben −8 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:hirsch",
+     "p": "−11 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 84,
+     "h": 24,
+     "tx": "Verschreiben −11 Pf"
+    },
+    {
+     "zug": "erbe:verschreibe:markt",
+     "p": "−6 Pf",
+     "s": 1,
+     "t": 0,
+     "d": 0,
+     "w": 80,
+     "h": 24,
+     "tx": "Verschreiben −6 Pf"
+    }
+   ],
+   "text": "ST. MICHAEL\nGASTHOF LINDENHOF\nBRAUHAUS\nZUM ANKER\nGEGR. 1350\nVorsprung: 2 Dinge · wirbt 2 Wochen kürzer\nBRAUHAUS ZUM ADLER\nHartmann Feist · streitbar · hält 2 Häuser\n1\nZÜGE\n320 Pf\nKASSE\n9 Pf\nSEIN PREIS\nwirbt\nW1\nAdler-Ausschank am Markt\nTOR · KON\nablösen 56 Pf\nFass an den Wirt\n1 Fass statt Geld\nFAE · BAN\nablösen 66 Pf\nFass an den Wirt\n1 Fass statt Geld\nwirbt · noch 4 Wo.\nzuvorkommen 19 Pf\nFass an den Wirt\n1 Fass statt Geld\nKlage vor dem Stadtgericht\nkostet kein Geld · vier Ansehen\ngegen Klosterschenke Obernberg\nOHNE DICH GESCHEHEN\n1 Zug\nDas Haus gegenüber\nGebunden wird hier mit Recht und Gunst\nAblösung 56 Pf bis 66 Pf\nKlage vor dem Stadtgericht\nkostet kein Geld · vier Ansehen · einmal im Braujahr\n1350 W1\nBrauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie stehen. Zuvorkommen kostet 19 Pf. Er braucht 2 Wochen weniger als sonst — er hat, was das Haus nicht hat.\nzeigen\nUMKÄMPFT\nZuvorkommen Klosterschenke Obernberg — 19 Pf ·\nKasse reicht 5,9×\nJunges Fass · +14 · 1 Fass\nAltes Fass · +6 · 1 Fass\nHopfen im Sack, heimlich\nRöhrenrecht an der Quelle\n−30 Pf\nDER ANKER · RUF 10\nUmtrunk beim Wirt\n−9 Pf\n− 1 Fass\nAdler-Ausschank am Mar\nLIN\nOCH\nMUE\nBRU\nFAE\nOBE\nLIN\nOCH\nMUE\nBRU\nFAE\nOBE\nDIE HÄUSER\nwollen 15 · im Keller liegen 4 Fass\n„Der Schankknecht vom Gasthof Lindenhof war am Tor. Er ist ohne Fass wieder gegangen.\"\nDAS KERBHOLZ BEIM WIRT\nim Holz bis Michaeli: 0 Pf\nBar auf die Hand\nKein Fass verlässt den Hof ohne Münze.\nbar 100 %\nBestellung 66 %\nAusfall 0 %\nSo verabreden\nAufs Kerbholz, fällig zu Michaeli\nZwei Hölzer, ein Schnitt: eines beim Wirt, eines im Haus.\nbar 40 %\nBestellung 100 %\nAusfall 5 %\nSo ist es verabredet\nAuf Borg bis Michaeli\nDer Wirt nimmt, so viel er ausschenken kann, und rechnet im Herbst.\nbar 12 %\nBestellung 132 %\nAusfall 15 %\nSo verabreden\nNoch 7 Wochen, dann gilt das Wort bis Michaeli.\nLIN\nGasthof Lindenhof\n0,2 km\nfrei\nwill 4 Fass\n+ 1 Fass\n−\nOCH\nZum Goldenen Ochsen\n0,6 km\nunser Haus\nwill 2 Fass\n+ 1 Fass\n−\nTOR\nSchenke am Tor\n0,1 km\nadler\nwill 1 Fass\n+ 1 Fass\n−\nPFA\nPfarrschenke St. Michael\n0,8 km\nunser Haus\nwill 1 Fass\n+ 1 Fass\n−\nMUE\nMühlschenke\n3 km\nfrei\nwill 1 Fass\nBannbrief\n−60 Pf\nBRU\nBrückenwirt\n2 km\nfrei\nwill 2 Fass\nBannbrief\n−60 Pf\nFAE\nFährhaus am Fluss\n4 km\nadler\nwill 1 Fass\nBannbrief\n−60 Pf\nHIR\nLandgasthof Hirsch\n7 km\nunser Haus\nwill 1 Fass\nBannbrief\n−60 Pf\nMKT\nAusschank am Markt\n0,5 km\nunser Haus\nwill 1 Fass\n+ 1 Fass\n−\nOBE\nKlosterschenke Obernberg\n9 km\nfrei\nwill 1 Fass\nBannbrief\n−60 Pf\nANSCHLAGTAFEL\nmit Kreide an der Sudhauswand\nBrautage: 44 übrig\nDieser Plan frisst 2 je Woche — reicht 22 Wochen\nGrut in der Kammer: 40 — reicht für 13 Sude\nD\nDünnbier\n5 Pf je Fass\n1 Brautage\n→ 5 Fass\nhält 3 Wo.\n−\n0\n+\nG\nGrutbier\n9 Pf je Fass\n2 Brautage\n→ 4 Fass\nhält 6 Wo.\n−\n1\n+\nS\nStarkbier\n19 Pf je Fass\n3 Brautage\n→ 3 Fass\n2 Wo. Lager\nhält 16 Wo.\nsommerfest\n−\n0\n+\nK\nKofent\n3 Pf je Fass\n0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die Pfanne\n−\n0\n+\nKERBHOLZ BEIM GRUTHERRN\n0 von 6 · 1 Kerbe = 25 Pf\nDer Grutherr schneidet die Kerbe ins Holz und zahlt aus. Zu Georgi wird gelöscht — in Geld, wenn welches da ist.\nKNAPP IN DIESER ZEIT: Brautage · Bannmeile\nDer Rat verleiht Tage, nicht Geld. Und die Meile ist eine Mauer.\nBrautage vom Rat · +6\n−90 Pf\nGrut vom Grutherrn · +40\n−34 Pf\nGrut zurück an den Grutherrn · −40\n+19 Pf\nFass vom Böttcher · +3\n−34 Pf\nDER KELLER\n4 von 12 Fass · 4 reif\nG\nW1\nG\nW1\nG\nW1\nG\nW1\nFässer des Hauses: 22 eigene · 4 gefüllt · 0 beim Wirt · 18 leer\nOCHSENKARREN\n0 von 5 Fass · 0 von 4 Halten\nFünf Plätze, vier Halte. Der Ochse geht sieben Meilen am Tag und keine mehr.\nDer Wagen steht. Jedes Fass bekommt ein Haus — dann fährt er.\nNach Durst füllen\nWie vorige Woche\nKarren leeren\nFUHRE ABSCHICKEN\nDAS SUDHAUS · 1350\nDie offene Pfanne über offenem Feuer\nGrut oder Hopfen?\nDie Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppelt so lang und macht es reisefähig — er wächst hier aber nicht und kommt teuer von auswärts.\nDIE WÜRZE\nWomit wird gewürzt?\nEs ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.\nGrut vom Grutamt\nläuft\nhöchstens Grutbier\nGagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus.\nHopfen im Sack, heimlich\nohne Ausgabe\nlässt Starkbier zu\nHaltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche\nHopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt.\nDer Grutknecht sieht in die Pfanne, wann er will.\nOffen gehopft, mit Hopfenbrief\n−78 Pf\nunwiderruflich\nlässt Starkbier zu\nHaltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud\nDer Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne.\nUnwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.\nDAS BRAUWASSER\nWoher kommt das Wasser?\nVier Fuenftel des Fasses sind Wasser. Wo es geschöpft wird, ist keine Kleinigkeit — es ist die zweite Frage, die dieses Haus zu beantworten hat, und sie kostet keinen Pfennig.\nWasser aus dem Stadtbach\nläuft\nlässt Starkbier zu\nGeschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand, und die Lohgerber sitzen weiter oben am selben Wasser. So braut die ganze Reihe, und so hält das Bier, was es hält.\nWasser aus dem Ziehbrunnen\nohne Ausgabe\nlässt Starkbier zu\nHaltbarkeit ×1,15 · −1 Fass je Sud\nEimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das bessere Wasser hält das Bier ein Stück länger — und der halbe Sudtag fehlt hinten: ein Fass weniger geht aus jeder Pfanne in den Gärkeller.\nDer Brunnen im Hof gibt nicht jede Woche her, was die Pfanne braucht.\nRöhrenrecht an der Quelle\n−30 Pf\nunwiderruflich\nlässt Starkbier zu\nHaltbarkeit ×1,35\nDer Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in den Hof: gebohrte Erlenstämme unter der Gasse durch. Das Wasser steht dann jeden Tag im Hof, ohne einen Gang und ohne den Bach.\nUnwiderruflich — die Röhre liegt unter der Stadtmauer, und was einmal gegraben ist, gräbt niemand zurück.\nWAS BEIM WIRT ANKOMMT\nhöchstens Grutbier\nWelches Haus ein Fass nimmt, entscheidet die Pfanne.\nBestellt wird die Sorte an der Fuhre. Dieses Brett deckelt sie — es hebt sie nie: was hier offen steht, wird nur dann gebraut, wenn es auch bestellt ist.\nD\nDünnbier\n7 von 10 Häusern\nträgt die Pfanne\nG\nGrutbier\n8 von 10 Häusern\nträgt die Pfanne\nS\nStarkbier\n3 von 10 Häusern\nschlägt als Grutbier aus\nKlosterschenke Obernberg führt nur Starkbier und bekommt vom Anker nichts.\nDAS HEFEZEUG\n70 %\nHefe vom vorigen Sud. Ohne Pflege schlägt der Sud um.\nWas jetzt eingelegt wird, hält ×1,05 — die Hefe steht.\nHefezeug aus dem Bottich heben · +8\nJunges Fass anbrechen · +14 · 1 Fass\nAltes Fass anbrechen · +6 · 1 Fass\nEinmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass.\nDER GÄRKELLER\n0 von 10 Fass · 0 Bottiche\nOffene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass.\nKein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält entsprechend kurz. Wer länger liegen lässt, füllt diesen Keller.\nBottich beim Küfer bestellen · +6 Fass\n−26 Pf\nDie Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche.\nDAS SUDBUCH\n0 Sude · 0 Fass · 0 verloren\nNoch keine Eintragung.\nDER RUF DES HAUSES\nBierzeiger und Zunftzeichen\n▾\n10\nRuf von 100\nBekanntheit\n18 ↗\nEinlösung\n55\nGLEICHES BIER, 100 FASS, ZWEI PREISE\nohne das Zeichen 900 Pf\nmit dem Zeichen 907 Pf\n+ 0,8 im Hundert · 7 Pf mehr für dieselbe Menge\nAUFGELD AUF DEN ZEIGER — WAS DER RUF EINGEBRACHT HAT\nDIESE WOCHE\n0 Pf\nBRAUJAHR\n0 Pf\nSEIT 1350\n0 Pf\nNoch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist.\nund einen höheren Grundpreis je Fass — den setzt der Markt. Das Aufgeld steht unter dem Strich der Rechnung, nicht darüber: wer den Anker nicht kennt, zahlt den blanken Fasspreis.\nDas Aufgeld nachrechnen\nWAS DER NAME JETZT KOSTET\nUmtrunk beim Wirt\n−9 Pf\n− 1 Fass\nUm das Zunftzeichen bitten\n−45 Pf\nDie ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\".\nDas Zeichen verdecken\nHerumgehen und den Namen sagen\nWer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein Versprechen vor der ganzen Gasse — und es kostet nichts, es zu brechen. Einmal.\nDas Zeichen und das Register\nDAS ERBE\nnoch 14 Wochen\nI. Kunigunde Bruckner · sparsam · Feder 0,70×\nam Haus 0 · an der Person 4\nnimmt 4 · 2 Fass\nVerschreiben · Zum Goldenen Ochsen\n−16 Pf\nLeibgeding · jährlich\n−13 Pf\nAbfertigung\n−64 Pf\nMit leeren Händen\n0 Pf\nSCHEIDING\n1350\nKASSE\n112 Pf\nGRUT\n40\nKELLER\n4/12 Fass\nWOCHE\n1/30\nCHRONIK\n4\nBUCH\n1\nBrauhaus zum Anker · 1350/51 · Kunigunde Bruckner, sparsam · Das Recht\nWEITER\nnächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)\n♪\nOHNE DICH GESCHEHEN\n1 Zug\nDIE HÄUSER\nwollen 15 · im Keller liegen 4 Fass\nANSCHLAGTAFEL\nmit Kreide an der Sudhauswand\nDER KELLER\n4 von 12 Fass · 4 reif\nOCHSENKARREN\n0 von 5 Fass · 0 von 4 Halten\nDAS SUDHAUS\nzugeklappt\nDER RUF DES HAUSES\nBierzeiger und Zunftzeichen\nMICHAELI 1350\nDer Rat setzt den Bierpfennig. Wer darüber g\nDAS ERBE\nzugeklappt\nORTSMARKEN\n7 auf dem Pflock\nSTADT ZEIGEN\nBAUHOF\nVERSATZ\n4 Bauten im Hof · gebaut wird einmal, es steht auch für die Enkel\nGrutkammer\n−13 Pf\n+20 Grut\nGärbottiche\n−15 Pf\n+4 Fass Lagerplatz\nOchsenstall\n−18 Pf\nfährt, wann das Haus will\nGewölbekeller\n−21 Pf\n+8 Fass Lagerplatz\nKüferei\n−23 Pf\n+4 Fass Lagerplatz\nMichaelitafel schließen\nMICHAELI 1350\nDer Rat setzt den Bierpfennig. Wer darüber geht, wird gestraft.\nKasse 112 Pf\nKunigunde Bruckner, 1. Amtszeit · Anschlag 515 Pf\nChronik des Hauses · 0 Festlegungen · 0 von dieser Tafel\nDIE RECHNUNG 1350\nZu diesem Michaeli war nichts abzutragen. Ab Michaeli 1351 laufen:\nGrutgeld an den Grutherrn\n−5 Pf\nnach dem Ausstoß im Schnitt der letzten drei Jahre\nMahlgeld an die Mühle\n−3 Pf\nnach dem Ausstoß im Schnitt der letzten drei Jahre\nErbzins an den Grundherrn\n−16 Pf\nläuft weiter, auch wenn nicht gebraut wird\nWasserzins an die Stadt\n−10 Pf\nläuft weiter, auch wenn nicht gebraut wird\nSchoss nach der Nahrung\n−1 Pf\nnach dem, was die letzten drei Jahre übrig ließen\nZusammen im Jahr\n−35 Pf\nDrei Wurzeln: was weiterläuft, wenn die Pfanne kalt bleibt · was am Ausstoß hängt · was der Rat nach der Nahrung des Jahres veranlagt. Und in dieser Zeit eine vierte: was bar liegen bleibt.\nAnschlag auf das Geld in der Lade: frei bleiben 1,3 Jahreslasten, mindestens der Preis der nächsten Festlegung — 85 Pf. Auf alles, was zu Michaeli darüber hinaus bar liegt, schlägt der Rat 45 im Hundert an. Was verbaut, gebunden oder festgelegt ist, zählt nicht mit.\nAusstoß des vergangenen Jahres\n150 Pf\ndavon übrig geblieben\n0 Pf\nDIE BIERORDNUNG\nSatz je Fass\n9 Pf\nDer Rat setzt den Bierpfennig auf neun je Fass.\nvom Rat gesetzt 1350\n9 Pf\nseither nachgesetzt (60 im Hundert der Teuerung)\n0%\nAufschlag des Hauses — selbst gebaut\n0%\nIn diesem Jahr gesetzt. Zwischen den Stufen setzt der Rat nach dem Korn nach, aber nicht ganz. Was zur Teuerung fehlt, ist der Teil, den nur das Haus selbst zubauen kann.\nDER ANSCHLAG\nFür 1350\n515 Pf\naus dem Umsatz des Vorjahrs\n45 Pf\naus der Barschaft\n470 Pf\nTeuerung seit 1350\n+0%\n4 von 5 Sachen nach der Taxe\n470 Pf\nDer Anschlag ist die Schätzung des Rats: was durch das Haus geht und was im Haus liegt. Böttcher, Maurer und Grutherr rechnen mit derselben Zahl.\nWAS SCHON STEHT\nVon heute an nichts. Was die Vorfahren hinterlassen haben:\nLagerplatz im Keller\n12 Fass\nSud in der Woche\n1\nBraurecht\nvom Rat verliehen\nAnsehen in der Stadt\n25\nWas von heute an dazukommt, steht hier und trägt in jedem Michaeli.\nDIE ANGEBOTE ZU MICHAELI 1350\n5 nebeneinander, 5 heute noch zu haben · Kasse 112 Pf · was hier weggeht, kommt in diesem Jahr nicht wieder\nDas Dach über der Pfanne\n33 Pf\nganz, sofort\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nOhne Bauzeit · wirkt ab heute\nEin Schindeldach auf vier Ständern, über der offenen Pfanne.\nFOLGE\n+16 Pf in jedem Michaeli · −6 Pf in jedem Michaeli: Schindeln und Lattung für das Dach\nRegen löscht das Feuer nicht mehr, und der Sud fällt nicht aus.\nNehmen\n−33 Pf\nEin zweiter Bottich aus Eichenholz\n42 Pf\nvon 94 Pf · dann 1 × 52 Pf\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nBauzeit 1 Jahr · fertig 1351\nEin Gärbottich vom Küfer, mit Weidenreifen gebunden.\nFOLGE\n+3 Fass Lagerplatz · +4 im Hundert je Fass · −8 Pf in jedem Michaeli: Weidenreifen und Dauben für den zweiten Bottich\nZwei Bottiche heißen: der zweite Sud muss nicht warten — und der erste darf ausgären, statt jung aus dem Haus zu gehen.\nNehmen\n−42 Pf\nDer Ochsenstall am Tor\n110 Pf\nganz, sofort\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nOhne Bauzeit · wirkt ab heute\nEin eigener Stall statt des geliehenen Gespanns.\nFOLGE\n+34 Pf in jedem Michaeli · −16 Pf in jedem Michaeli: Futter und Streu für den Ochsen\nDer Ochse steht im Haus und wartet nicht auf den Nachbarn.\nSchließt aus: Ein Karrengaul statt des Ochsen\nNehmen\n−110 Pf\nEin Karrengaul statt des Ochsen\n200 Pf\nganz, sofort\nNach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.\nOhne Bauzeit · wirkt ab heute\nEin kaltblütiges Pferd, Geschirr, Hufbeschlag.\nFOLGE\n+62 Pf in jedem Michaeli · −47 Pf in jedem Michaeli: Hafer, Beschlag und Geschirr für den Gaul\nDoppelt so schnell wie der Ochse und dreimal so teuer im Futter.\nSchließt aus: Der Ochsenstall am Tor\nÜber der Kasse: es fehlen 88 Pf.\nNehmen\n−200 Pf\nDie Bannmeile auf zehn Jahre\n1.300 Pf\nganz, sofort\nNach dem Anschlag von 1350 — was das Haus wert ist, wird mit angeschlagen.\nOhne Bauzeit · wirkt ab heute\nEin Ratsbrief: kein fremdes Bier innerhalb einer Meile.\nFOLGE\n3 Häuser gebunden, 10 Jahre\nDrei Häuser dürfen zehn Jahre lang nichts anderes ausschenken.\nÜber der Kasse: es fehlen 1.188 Pf.\nNehmen\n−1.300 Pf\nDIE FESTLEGUNG\nEine je Amtszeit. Sie ändert eine Regel für den Rest der Partie und wird nicht zurückgenommen. · Das Haus hat 0 Festlegungen, 0 davon von dieser Tafel · heute 1 zu haben\nDer Freikauf vom Grundherrn\nEine Ablosesumme, ein Siegel, ein Eintrag im Salbuch.\nREGEL\nDer Erbzins endet. Für immer. Das Haus gehört von heute an dem Haus.\nFOLGE\nkein Erbzins an den Grundherrn mehr\nPreis dieser Amtszeit: 1.000 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, auch wenn das Haus die Hand wechselt.\nÜber der Kasse: es fehlen 888 Pf.\nFestlegen\n−1.000 Pf\nDas Braurecht ans Haus\nDas Recht wird vom Menschen gelöst und auf die Hofstatt geschrieben.\nREGEL\nKein Handlohn mehr bei jedem Erbfall. Wer erbt, erbt auch die Pfanne.\nPreis dieser Amtszeit: 800 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, auch wenn das Haus die Hand wechselt.\nÜber der Kasse: es fehlen 688 Pf.\nFestlegen\n−800 Pf\nVertrag statt Gunst\nVier Wirte setzen ihr Zeichen unter einen Brief auf fünfundzwanzig Jahre.\nREGEL\nVier Häuser nehmen nur noch Bier dieses Hauses. Die übrigen merken sich, dass sie nicht gefragt wurden.\nFOLGE\n-6 Ansehen · 4 Häuser gebunden, 25 Jahre\nPreis dieser Amtszeit: 85 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie gilt für den Rest der Partie, auch wenn das Haus die Hand wechselt.\nFestlegen\n−85 Pf\nWAS FÄLLIG WIRD\n1351\nAnschlag auf das Geld in der Lade\n12 Pf\nZu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, was einer bar liegen hat. Was durch das Haus geht und was im Haus liegt, steht beim Rat in derselben Zahl. Frei bleiben 85 Pf — heute liegen 112 Pf bar im Haus.\n1352\nUmlage für den Mauerbau\n9 Pf\nDie Stadt schließt den Ring nach Süden.\n1355\nLandfriedensgeld\n7 Pf\nDer Bund der Städte hält Reisige. Bezahlt wird von den Häusern.\n1359\nBrandschatzung\n23 Pf\nEin Heerhaufe steht vor dem Tor und zieht gegen Geld weiter.\n1361\nZehnt auf das Braugerät\n13 Pf\nDer Rat besteuert Pfanne, Bottich und Fass nach Schätzung.\n1364\nUmlage für die Brücke\n11 Pf\nDas Hochwasser hat den Steg genommen.\nWer den Anschlag nicht abträgt, dem nimmt der Rat ein Pfand: eine Wirtschaft wird auf fünf Jahre dem Adler zugesprochen.\nimmer\nDer Notpfennig — was NICHT genommen wird\n48 Pf\nSo weit und nicht weiter nimmt der Rat. Liegt zu Michaeli weniger im Kasten, schießt er auf diese Zahl vor — angeschrieben, nicht geschenkt.\nDIE LEITER\nLinks die Kennzahl: Barschaft zu Michaeli gegen den Preis des nächsten sinnvollen Zuges — dieselbe Zahl, die unten rechts am Bildschirm steht, aus derselben Quelle abgelesen. Rechts die eigene Preisleiter: was das billigste Angebot DIESER Tafel am selben Tag kostete. Die rechte Spalte ist keine Kennzahl — diese Tafel liegt an 29 von 30 Wochen zu, und sie fällt, sobald die billigen Sprossen genommen sind. Das ist keine Verschlechterung, sondern der Grund, warum es Sprossen gibt.\nJahr\nKasse\nnächster Zug\nreicht\neigene Tafel\nreicht\n1350\n112\n19\n5,89×\n33\n3,39×\nAm Michaelistag, dem 29. September, wird fällig, was das Jahr über gestundet war. Danach steht die Pfanne wieder kalt, bis der Zins bezahlt ist.\nNichts nehmen · das Geld bleibt liegen\nDas Jahr beginnen\nDAS ERBE — Verschreiben vor dem Rat ins Stadtbuch · I. Hand\nKunigunde Bruckner · sparsam\n„Hält das Geld zusammen, versäumt die Gelegenheit.\"\nSchreibgeld um ein Drittel billiger — sie feilscht mit dem Schreiber.\n\nWas im Stadtbuch steht, haftet am Haus. Was auf Treu und Glauben geht, stirbt mit der Hand, die es gab.\n\nDie Stunde kommt in 14 Wochen — 5. Jänner 1351. Wer bis dahin nichts vereinbart hat, übergibt mit leeren Händen.\n\nAM HAUS · 0 — GEHT ÜBER, WER IMMER DIE KELLE HÄLT\nNichts. Alles hängt an einem Menschen.\nAN DER PERSON · 4 — FÄLLT MIT DER HAND, DIE ES GAB\nZum Goldenen Ochsen\nGewohnheit\nVerschreiben\n−16 Pf\nPfarrschenke St. Michael\nGewohnheit\nVerschreiben\n−8 Pf\nLandgasthof Hirsch\nGewohnheit\nVerschreiben\n−11 Pf\nAusschank am Markt\nGewohnheit\nVerschreiben\n−6 Pf\nDIE HÄNDE · 1\nI. Kunigunde Bruckner\nsparsam\nFeder 0,70×"
+  }
+ ]
+}
