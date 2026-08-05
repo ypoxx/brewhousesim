@@ -43,6 +43,7 @@ async function kaufen() {
     const t = (await el.textContent().catch(() => '') || '').trim().replace(/\s+/g, ' ');
     const dis = await el.evaluate(e => e.disabled || e.classList.contains('gesperrt') || e.classList.contains('aus') || getComputedStyle(e).pointerEvents === 'none').catch(() => true);
     if (dis) continue;
+    if (/WEITER|JAHR SCHLIESSEN|SPIEL/i.test(t)) continue;
     await klickeMaus(el, 'KAUF ' + t);
   }
 }
