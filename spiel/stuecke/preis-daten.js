@@ -156,6 +156,27 @@ var PREIS_DATEN = {
          nicht mehr das Ende. */
       umlageAnteil: 0.35,
       handlohnAnteil: 1.10,
+      /* WIE DIE ABGABE BEIM ERBFALL HEISST — und warum sie ueberhaupt in
+         die Daten muss. Auflage 1 des blinden Kritikers, Sperrliste:
+         preis.js schrieb sie in ALLEN VIER Epochen als „Handlohn beim
+         Erbfall an den Grundherrn". Handlohn (Laudemium) und Grundherr
+         sind Grundherrschaft; in Bayern ist sie ab 1848 abgeloest und in
+         den 1870er Jahren erledigt. Gemessen am Schirm stand deshalb
+         −8.300 DM „an den Grundherrn" in der Rechnung von 1973, direkt
+         neben „Koerperschaft- und Gewerbeertragsteuer". In DIESER Epoche
+         ist der Name richtig — hier gibt es den Grundherrn wirklich, und
+         `realrecht` kauft ihn ab. */
+      handlohnName: 'Handlohn beim Erbfall an den Grundherrn',
+      handlohnKurz: 'Handlohn beim Erbfall',
+      handlohnFrei: 'Handlohn beim Erbfall — entfällt (Braurecht am Haus)',
+      /* WER DEN SATZ SETZT — Auflage 2, Sperrliste. preis.js schrieb
+         „vom Rat gesetzt" und „Zwischen den Stufen setzt der Rat nach dem
+         Korn nach" unbedingt, also auch 1970, drei Zeilen unter dem
+         eigenen Epochensatz „Der Handel diktiert die Aktionspreise".
+         Hier stimmt der Rat: die Bierordnung ist eine Ratssatzung. */
+      satzSetzer: 'vom Rat gesetzt',
+      satzNachSatz: 'Zwischen den Stufen setzt der Rat nach dem Korn nach, aber nicht ganz.',
+      satzHaeltSatz: 'Zwischen den Stufen rührt hier niemand den Satz an.',
 
       /* DIE VIERTE WURZEL, ZUM ZWEITEN MAL — UND SIE STEHT JETZT AUCH HIER.
 
@@ -665,6 +686,16 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.155,
       umlageAnteil: 0.52,
       handlohnAnteil: 1.15,
+      /* Die Hofstatt ist Klosterlehen (`rechtSatz`), das Laudemium geht
+         also an das Kloster und nicht an einen Grundherrn schlechthin. */
+      handlohnName: 'Laudemium an das Kloster beim Handwechsel',
+      handlohnKurz: 'Laudemium beim Handwechsel',
+      handlohnFrei: 'Laudemium beim Handwechsel — entfällt (das Haus ist frei)',
+      /* Die Bierordnung dieser Zeit ist kurfürstliche Satzung, verkündet
+         durch den Rat; das Ungeld setzt die Landschaft. */
+      satzSetzer: 'von der Landesordnung gesetzt',
+      satzNachSatz: 'Zwischen den Stufen setzt der Kurfürst nach dem Korn nach, aber nicht ganz.',
+      satzHaeltSatz: 'Zwischen den Stufen rührt hier niemand den Satz an.',
 
       /* DIE VIERTE WURZEL — UND SIE STEHT NUR HIER.
 
@@ -1031,6 +1062,23 @@ var PREIS_DATEN = {
       pflichtHoehe: 0.175,
       umlageAnteil: 0.62,
       handlohnAnteil: 1.10,
+      /* 1884: das Anwesen ist „eigen, im Grundbuch" (`rechtSatz`). Es gibt
+         keinen Grundherrn mehr — die Grundlasten sind in Bayern ab 1848
+         abgeloest und in den 1870er Jahren erledigt. Was beim Handwechsel
+         wirklich faellig wurde, ist die Erbschaftsteuer und die
+         Umschreibung im Grundbuch. Gemessen hat der blinde Kritiker hier
+         −12.100 M unter der Aufschrift „an den Grundherrn". */
+      handlohnName: 'Erbschaftsteuer und Umschreibung im Grundbuch',
+      handlohnKurz: 'Erbschaftsteuer beim Übergang',
+      handlohnFrei: 'Erbschaftsteuer beim Übergang — entfällt',
+      /* Der Satz steht 1884 nicht mehr beim Rat: „Jetzt entscheidet die
+         Menge, nicht der Rat." Die Stufen sind Vereinbarungen des
+         Brauerbundes, und die eigene Ordnungszeile sagt es schon:
+         „Der Landesherr setzt den Bierpreis noch, aber nur noch dem Namen
+         nach." */
+      satzSetzer: 'vom Brauerbund vereinbart',
+      satzNachSatz: 'Zwischen den Stufen zieht der Bund nach den Gerstenpreisen nach, aber nicht ganz.',
+      satzHaeltSatz: 'Zwischen den Stufen rührt hier niemand den Satz an.',
       abstaende: [2, 4, 3, 5, 4, 3, 4],
 
       ordnung: [
@@ -1260,6 +1308,17 @@ var PREIS_DATEN = {
          zehn Jahren nicht zurueckgekommen. */
       umlageAnteil: 0.36,
       handlohnAnteil: 1.05,
+      /* 1970: „eigen · Konzession". Beim Generationswechsel eines
+         Familienbetriebs faellt Erbschaftsteuer an, dazu Notar und
+         Handelsregister — kein Handlohn und kein Grundherr. */
+      handlohnName: 'Erbschaftsteuer und Übertragungskosten',
+      handlohnKurz: 'Erbschaftsteuer beim Übergang',
+      handlohnFrei: 'Erbschaftsteuer beim Übergang — entfällt',
+      /* Der Epochensatz sagt: „Der Handel diktiert die Aktionspreise. Der
+         Listenpreis ist Zierde." Genau das muss hier stehen und kein Rat. */
+      satzSetzer: 'Listenpreis, verbandsweit empfohlen',
+      satzNachSatz: 'Zwischen den Stufen zieht der Verband die Liste nach, der Handel nur zum Teil.',
+      satzHaeltSatz: 'Zwischen den Stufen rührt hier niemand die Liste an.',
       abstaende: [3, 4, 3, 5, 4, 3, 5, 4],
 
       ordnung: [
