@@ -187,15 +187,23 @@ Punkte, die keinem Stück zugeordnet sind. **DIE STADT trägt dort null.**
 >
 > **Die Gesamtdeckung steigt um 1,8 bis 2,1 Punkte**, von 27,1–28,2 % auf
 > 29,1–30,3 %. Das ist kein Messfehler, das ist Arithmetik: die Werkbank zeigt
-> jetzt **jeden** Namen und **jede** Kennzahl ganz (vorher 7 bis 9 gekürzte
-> Zeilen je Epoche), und mehr Schrift braucht mehr Fläche. Der Kasten ist von
-> 1723 × 194 auf 1266 × 442 gewachsen.
+> jetzt **jeden** Namen und **jede** Kennzahl ganz (vorher sechs bis neun
+> gekürzte Zeilen je Epoche: 3+4 in 1350, 4+5 in 1600, 3+5 in 1884, 1+5 in
+> 1970), und mehr Schrift braucht mehr Fläche. Der Kasten ist von 1723 × 194
+> auf 1266 × 442 gewachsen.
 >
-> Wer die 1,8 Punkte nicht will, hat sie mit **einer** Zeile zurück:
-> `.knopf.stadt-reiter .zahl { white-space: nowrap; }` in `stil/stadt.css`.
-> Das kostet die vier bis fünf gekürzten Kennzahlen von Welle 7 zurück — genau
-> den Stand, den Welle 8 ausdrücklich nicht zurücknehmen soll. Deshalb steht
-> die Zeile so, wie sie steht, und der Preis steht hier.
+> **Wo die 1,8 Punkte genau liegen, mit dem Messband nachgehalten:** derselbe
+> Kasten maß auf dem Weg dorthin 1266 × **330**, solange Name und Kennzahl noch
+> einzeilig mit Auslassungspunkten standen (`reiterprobe-a2.json`), 1266 × 382
+> mit umbrechender Kennzahl (`-a3`) und 1266 × 442 mit beidem (`-a4`).
+> **Die beiden `white-space: normal` sind der ganze Aufschlag**; ohne sie läge
+> die Werkbank bei rund 8,8 % statt 11,2 % und die Gesamtdeckung wieder bei
+> 28–29 %.
+>
+> Zwei Zeilen in `stil/stadt.css` nehmen ihn zurück
+> (`.knopf.stadt-reiter .wort` und `.zahl` auf `white-space: nowrap`) — und mit
+> ihm genau den Stand, den Welle 8 ausdrücklich **nicht** zurücknehmen soll.
+> Deshalb stehen sie, wie sie stehen, und der Preis steht hier.
 >
 > Die Rechnung, die ich für richtig halte: **1,8 Punkte Deckung in der
 > Hügellinie gegen 47 Punkte im Vordergrund** — dort, wo jedes Zielblatt
@@ -209,7 +217,8 @@ des Schildes `BRAUHAUS ZUM ANKER · GEGR. 1350` zudeckt — sein erster Punkt
 unter „damit es kippt". Der ist erledigt, aber **nicht von mir**: DER SUD sucht
 für seinen Kesselzettel selbst eine freie Stelle (`sud.js:stelleZettel`), und
 weil die Werkbank den unteren Rand geräumt hat, hat er eine andere gefunden.
-Im Schuss `stadt-w8/a4-e1.png` steht das Schild vollständig da.
+In den Schüssen `stadt-w8/a4-e1.png` (nur Teil A) und `stadt-w8/b3-e1.png`
+(mit Hoffracht) steht das Schild vollständig da.
 
 **Und dieselbe Ursache kostet in 1884 einen Pflock.** Bei 1366×768 sitzt der
 Kesselzettel jetzt 46 px höher (y 347 → 301) und liegt damit auf dem Pflock
@@ -282,3 +291,34 @@ Höhe an"). In `stadt.css` sind es vierzehn Zeilen, alle in den drei Regeln,
 die diese Welle absichtlich umschreibt (`bottom`/`width` der Werkbank,
 `nowrap`+`ellipsis` an Reitername und Kennzahl, `flex` der Bauzeile) plus die
 zurückgenommene 80-%-Zeile. `stadt-zusatz.js`: unverändert.
+
+---
+
+## ρ — VORHER UND NACHHER, als A/B im selben Augenblick
+
+**Warum A/B und nicht nacheinander:** seit dem 5. August ist gemessen, dass
+**Layout ρ bewegt** — der Knopfboden verschob 1970 um 0,811 bei null Fehlern in
+beiden Läufen. Diese Welle verschiebt einen Kasten von 1723 × 194 px vom
+unteren an den oberen Rand. Wer vorher und nachher zu verschiedenen Zeiten
+misst, kann hinterher nicht mehr sagen, was die Zahl bewegt hat.
+
+Also zwei Häfen aus **demselben Baum**, die sich in **genau fünf Dateien**
+unterscheiden:
+
+| | |
+|---|---|
+| Hafen 8908 „vor" | Symlinkwald `stadt-w8/hafen-vor/`; nur `stadt.js`, `stadt-daten.js`, `stadt-zusatz.js`, `stadt.css`, `stadt-zusatz.css` kommen aus `stadt-w8/vor/` (Stand `76f3ca4`) |
+| Hafen 8907 „nach" | der Arbeitsbaum |
+
+**Gerätekontrolle des Vorher-Hafens, bevor eine einzige ρ-Zahl fiel:**
+`lesbarkeit.mjs` bei 1366×768 liefert dort **14 Überläufe · 505 Textknoten ·
+0 von 330 Knöpfen** — Ziffer für Ziffer die in `gauntlet/WELLE-8.md`
+eingetragenen Zahlen. Der Hafen ist damit nachweislich der Stand von vorher.
+
+Skript `stadt-w8/rho/lauf.sh`, wiederaufnehmbar, jeder Aufruf einzeln durch
+`aufsicht/messfenster.sh`, Reihenfolge Satz A über alle vier Epochen auf beiden
+Häfen, dann B, dann C — wer mitten im Lauf abbricht, hat trotzdem ein
+gepaartes Bild. Rohdaten `stadt-w8/rho/*.json`, gerechnet mit dem vorhandenen
+Gerät `sud-w6-nach/schnitte.py` über alle drei Schnitte.
+
+*(Ergebnis folgt, sobald der Satz durch ist.)*

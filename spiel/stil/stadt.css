@@ -174,28 +174,32 @@
 /* ==========================================================================
    3 — DER RAHMEN UND DIE WERKBANK
 
-   Die Buehne hat eine Ordnung, und DIE STADT haelt sie:
-     oben   0   – 11,2 %  Kopfleiste
-     Mitte 11,2 – 87,5 %  DAS STADTFENSTER — gehoert der Platte und dem Hof
-     unten 87,5 – 100  %  Die Werkbank: Reiter, Bauhof, WEITER
+   DIE ORDNUNG IST IN WELLE 8 UMGEDREHT WORDEN. So steht sie jetzt:
+     oben   0   –  7,8 %  Kopfleiste
+     dann   7,8 – ~29 %   DIE WERKBANK: Reiter und Bauhof-Lade
+     Mitte ~29  – 100  %  DAS BILD — Platte, Hof, Hoffracht, WEITER-Tafel
+
+   Bis Welle 7 lag die Werkbank unten (87,5 – 100 %) und das Stadtfenster in
+   der Mitte (11,2 – 87,5). Der Blindvergleich hat genau diesen unteren
+   Streifen als teuerste Flaeche des Spiels benannt: 47,1 % des untersten
+   Sechstels, und dort traegt jedes Zielblatt seinen Vordergrund. Die
+   Begruendung mit allen Massen steht unten beim Kasten selbst.
 
    Die Werkbank liegt UEBER allen anderen Ebenen (z-index am Fach), damit die
-   Reiter erreichbar bleiben, wenn ein Brett aufgeschlagen ist. Sie beginnt
-   erst bei 87,5 % — kein aufgeschlagenes Brett reicht so weit herunter, also
-   deckt sie nie eine fremde Schaltflaeche zu.
+   Reiter erreichbar bleiben, wenn ein Brett aufgeschlagen ist.
 
-   RUNDE 7, nachgemessen statt behauptet. Seit der Bauhof zwei Seiten hat,
-   ist die zweite Haelfte des Vertrags die wichtigere: die Werkbank muss auf
-   BEIDEN Seiten gleich hoch sein. Ungebremst war sie es nicht — mit
-   aufgeschlagener Verwertungsseite stand ihre Oberkante in 1884 bei 84,59
-   statt 87,17 Prozent, weil 'Schornstein und Dampfmaschine' zwei Zeilen
-   braucht und 'Kontor' eine. Jetzt hat jede Zeile eine feste Hoehe.
+   WAS VOM ALTEN VERTRAG BLEIBT — die Hoehengleichheit beider Bauhofseiten.
+   Sie war unten Bedingung, damit die Werkbank nicht ins Stadtfenster wuchs
+   (mit aufgeschlagener Verwertungsseite stand ihre Oberkante in 1884 bei
+   84,59 statt 87,17 Prozent, weil 'Schornstein und Dampfmaschine' zwei
+   Zeilen braucht und 'Kontor' eine). Oben waere ein Wachsen nach unten
+   weniger schlimm — aber ein Kasten, der beim Umschlagen springt, ist
+   trotzdem ein springender Kasten. Die feste Zeilenhoehe bleibt.
 
-   Gemessen an vier Formaten und in allen vier Epochen, beide Seiten:
-     2752x1536  86,65 %      1366x768  86,95 %
-     1920x1000  86,98 %      1280x720  86,92 %
-   Vier Zahlen, kein Unterschied zwischen den Seiten und keiner zwischen den
-   Epochen. BRAUHAUS.stadt.rahmen.verdeckt() ist dabei ueberall 0.
+   WAS NICHT MEHR STIMMT und ausdruecklich hier steht, damit es niemand fuer
+   gemessen haelt: die vier Prozentzahlen der Runde 7 (86,65 / 86,95 / 86,98 /
+   86,92) galten fuer die Oberkante der UNTEN liegenden Werkbank. Sie sind
+   gegenstandslos. Die neuen Masse stehen im Baubericht der Welle 8.
    ========================================================================== */
 
 /* Zugeklappt heisst weggeschnitten, nicht versteckt: Platz, Groesse und
