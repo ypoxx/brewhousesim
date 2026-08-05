@@ -289,16 +289,38 @@
    und dort vergleicht Latte 1 blind.
    ========================================================================== */
 @media (max-width: 2751px), (max-height: 1535px) {
+
+  /* --- 1. Der Zettel wird BREITER und flacher, bei gleicher Flaeche ------
+     Gemessen, warum: bei 13 % Breite ist eine Haelfte des Knopfpaars 74 px
+     breit, und „Hefezeug aus dem Bottich heben · +8 · ohne Fass" bricht dort
+     bei 12 px auf drei Zeilen um — das Paar wurde 45 px hoch statt 24, der
+     letzte Knopf rutschte aus dem Kasten, und der ganze Zettel ging in den
+     Notzustand.
+
+     17 % x 13,5 % = 2,295 % der Buehne (vorher 13 % x 16,5 % = 2,145 %),
+     gegen die Schwelle der STADT von 3,5 % des Stadtfensters — gemessen
+     3,0 %, also weiter eine Ortsmarke und kein Brett. Bei 232 px Breite ist
+     jede Haelfte 112 px und bricht nicht mehr um. */
+  #buehne .sud-zettel { width: 17%; max-height: 13.5%; }
+  #buehne .sud-zettel.knapp { width: 15%; max-height: 12%; }
+
+  /* --- 2. Was dafuer zuruecktritt ---------------------------------------
+     Die vier Textzeilen des Zettels. Sie sind NICHT verloren: die
+     Verfahrennamen, der Deckel und die Zahlen stehen vollstaendig auf dem
+     Sudbrett, einen Reiterklick weit, und der Deckel steht ausserdem als
+     `sud-zrangschild` auf jedem Umstellknopf des Zettels selbst. Was bleibt,
+     ist das, wofuer der Zettel im Vorgabestand ueberhaupt da ist: der Name
+     des Hauses und die vier Zuege, alle vier zu 24 px und alle vier ganz im
+     Kasten.
+
+     Der Vorrang ist nicht Geschmack: ein Knopf, der aus dem Kasten faellt,
+     ist ein verlorener Zug; eine Zeile, die anderswo vollstaendig steht,
+     ist keiner. */
   #buehne .sud-zettel .sud-zverfahren,
   #buehne .sud-zettel .sud-zrang,
+  #buehne .sud-zettel .sud-zzahlen,
   #buehne .sud-zettel .sud-zpreiszeile { display: none; }
 
   /* Der Kopf darf umbrechen statt den Zettel aufzuschieben. */
   #buehne .sud-zettel .sud-zkopf { white-space: normal; }
-
-  /* Die Zahlenzeile ist der Grund, warum der Zettel ueberhaupt stehenbleibt:
-     „Gärkeller 8/16 Fass · Stellhefe 92 % · Fass ×1,16". Bei 12 px passt sie
-     nicht mehr in eine Zeile und darf deshalb umbrechen, statt sich zu
-     zerdruecken. */
-  #buehne .sud-zettel .sud-zzahlen { flex-wrap: wrap; row-gap: calc(var(--s) * 2); }
 }
