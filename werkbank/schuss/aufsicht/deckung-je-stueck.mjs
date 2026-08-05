@@ -1,90 +1,90 @@
-/* DIE DECKUNG — wieviel der Bühne deckt welches Stück zu?
+/* DIE DECKUNG — wieviel des BILDES deckt welches Stück wirklich zu?
      HAFEN=8899 node werkbank/schuss/aufsicht/deckung-je-stueck.mjs
 
-   WARUM ES DAS GIBT: Der Blindvergleich vom 5. August 2026 hat die erste
-   Latte gerissen und die Ursache benannt — nicht die Bühne verliert, sondern
-   was auf ihr liegt. Er nennt 27-28 % der Fläche und 60 % des untersten
-   Sechstels, aber NICHT, welches Stück davon wieviel deckt.
+   WARUM ES DAS GIBT: Der Blindvergleich vom 5. August 2026 hat die erste Latte
+   gerissen und die Ursache benannt — nicht die Bühne verliert, sondern was auf
+   ihr liegt: 27-28 % der Fläche, 60 % des untersten Sechstels. Er nennt aber
+   nicht, WELCHES STÜCK wieviel deckt, und ohne das wäre der nächste Auftrag
+   geraten.
 
-   Ohne diese Aufteilung waere der naechste Auftrag geraten. Datei-Eigentum
-   geht in diesem Lauf nach Vorsilbe (spiel/LIESMICH.md) — also muss auch die
-   Deckung nach Vorsilbe gezaehlt werden, sonst bekommt ein Builder eine Zahl,
-   die zur Haelfte einem anderen gehoert. Genau dieser Fehler ist am 5. August
-   schon einmal passiert: die Textknoten-Tabelle ordnete nach Klassennamen,
-   und 65 der DEM PREIS zugerechneten Knoten lagen in Kaesten von ERBE, STADT
-   und NAME.
+   EIN VERWORFENER ERSTER ANLAUF, verzeichnet, damit ihn niemand wiederholt:
+   Das Gerät zählte zuerst die Rechteck-Hüllen aller Elemente mit Hintergrund
+   in ein Raster. Ergebnis 72-74 % — mehr als das Doppelte der gemessenen
+   Deckung. Zwei Fehler steckten darin:
+     1. Die EPOCHENPLATTE selbst wurde mitgezählt, also die Bühne als Deckung
+        der Bühne. DIE STADT stand dadurch bei 47 % des untersten Sechstels,
+        und das ist der Hof.
+     2. Auch nach dem Ausschluss der Bildebenen blieb es bei 72 %: eine
+        Rechteck-Hülle deckt nicht, was in ihr durchsichtig ist. Ein Kasten mit
+        Rundung, Polster und halbdurchsichtigem Grund zählt voll, deckt aber
+        wenig.
+   Die Lehre: WER DECKUNG MESSEN WILL, VERGLEICHT PIXEL, NICHT KÄSTEN. Genau
+   das hat der blinde Kritiker getan, und deshalb stimmt seine Zahl.
 
-   GEZAEHLT WIRD, WAS DER SPIELER SIEHT: nur sichtbare Elemente mit Flaeche,
-   die ueber der Buehne liegen. Ueberlappen sich zwei Kaesten desselben
-   Stuecks, zaehlt die Flaeche EINMAL — deshalb ein Raster statt einer Summe
-   von Rechtecken. Das Raster ist 8 px grob; feiner kostet Zeit und aendert
-   die Aussage nicht.                                                        */
+   SO MISST DIESES GERÄT: dieselbe Seite zweimal aufgenommen — einmal mit
+   ausgeblendeter Oberfläche (das nackte Bild), einmal mit. Was sich
+   unterscheidet, ist gedeckt. Je Stück wird die Oberfläche bis auf dieses eine
+   Stück ausgeblendet; die Summe der Stücke darf die Gesamtdeckung übersteigen,
+   weil Stücke einander überlappen — das ist selbst ein Befund.               */
 import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
+import { pngLesen } from './png-lesen.mjs';
+
 const HAFEN = process.env.HAFEN || '8899';
 const BREITE = +(process.env.BREITE || 2752), HOEHE = +(process.env.HOEHE || 1536);
-const WOCHEN = +(process.env.WOCHEN || 0);
-
-const b = await chromium.launch();
+const STUECKE = ['stadt','fu','preis','gg','sud','nm','erb','kopf'];
 const namen = { stadt:'DIE STADT', fu:'DIE FUHRE', preis:'DER PREIS', gg:'DER GEGNER',
                 sud:'DER SUD', nm:'DER NAME', erb:'DAS ERBE', kopf:'die Kopfleiste' };
+
+/* Die Bildebenen (platte, bau) sind das BILD und werden nie ausgeblendet.
+   spiel/LIESMICH.md nennt die z-Ordnung platte < bau < marken < hand < kopf
+   < blatt. */
+const blende = (nur) => {
+  const ebenen = [...document.querySelectorAll('.ebene')];
+  const bild = ebenen.slice(0, 2);                 // platte, bau
+  ebenen.forEach(w => {
+    if (bild.includes(w)) return;
+    [...w.children].forEach(el => {
+      const c = (el.className && typeof el.className === 'string') ? el.className : '';
+      const m = c.match(/\b(stadt|fu|preis|gg|sud|nm|erb|kopf)[-\w]*/);
+      const wem = m ? m[1] : null;
+      el.style.visibility = (nur === null || wem === nur) ? (nur === null ? 'hidden' : 'visible')
+                                                          : 'hidden';
+      if (nur === '*') el.style.visibility = 'visible';
+    });
+  });
+};
+
+const anders = (a, b, nurUnten) => {
+  const A = pngLesen(a), B = pngLesen(b);
+  let n = 0, ges = 0;
+  const y0 = nurUnten ? Math.floor(A.hoehe * 5/6) : 0;
+  for (let y = y0; y < A.hoehe; y++) for (let x = 0; x < A.breite; x++) {
+    const i = (y*A.breite + x) * 4; ges++;
+    if (Math.abs(A.daten[i]-B.daten[i]) > 8 || Math.abs(A.daten[i+1]-B.daten[i+1]) > 8 ||
+        Math.abs(A.daten[i+2]-B.daten[i+2]) > 8) n++;
+  }
+  return n/ges;
+};
+
+const b = await chromium.launch();
 for (const e of [1,2,3,4]) {
   const s = await b.newPage({ viewport: { width: BREITE, height: HOEHE } });
   await s.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${e}&saat=1350`, { waitUntil:'networkidle' });
   await s.waitForTimeout(1200);
-  for (let w = 0; w < WOCHEN; w++) {
-    const k = await s.$('[data-zug="weiter"]:not([disabled])');
-    if (!k) break;
-    await k.click().catch(()=>{});
-    await s.waitForTimeout(120);
-  }
-  const r = await s.evaluate(() => {
-    const R = 8, sp = Math.ceil(innerWidth / R), ze = Math.ceil(innerHeight / R);
-    const feld = {};                       // stueck -> Set von Rasterzellen
-    const treffer = el => {
-      let n = el, k = null;
-      while (n && n !== document.body) {
-        const c = (n.className && typeof n.className === 'string') ? n.className : '';
-        const m = c.match(/\b(stadt|fu|preis|gg|sud|nm|erb|kopf)[-\w]*/);
-        if (m) { k = m[1]; break; }
-        n = n.parentElement;
-      }
-      return k;
-    };
-    document.querySelectorAll('*').forEach(el => {
-      const c = getComputedStyle(el);
-      if (c.visibility === 'hidden' || c.display === 'none' || +c.opacity === 0) return;
-      /* Nur Deckendes: es muss einen eigenen Grund oder Rahmen haben, sonst
-         ist es durchsichtig und deckt nichts. */
-      const grund = c.backgroundColor, bild = c.backgroundImage;
-      const deckt = (grund && !/rgba\(0, 0, 0, 0\)|transparent/.test(grund)) ||
-                    (bild && bild !== 'none');
-      if (!deckt) return;
-      const q = el.getBoundingClientRect();
-      if (q.width < 4 || q.height < 4) return;
-      if (q.bottom < 0 || q.top > innerHeight || q.right < 0 || q.left > innerWidth) return;
-      const k = treffer(el); if (!k) return;
-      (feld[k] = feld[k] || new Set());
-      for (let x = Math.max(0, Math.floor(q.left/R)); x < Math.min(sp, Math.ceil(q.right/R)); x++)
-        for (let y = Math.max(0, Math.floor(q.top/R)); y < Math.min(ze, Math.ceil(q.bottom/R)); y++)
-          feld[k].add(y*sp + x);
-    });
-    const unten = Math.floor(ze * 5/6);   // unterstes Sechstel
-    const aus = {};
-    for (const k in feld) {
-      const z = [...feld[k]];
-      aus[k] = { ganz: z.length / (sp*ze),
-                 unten: z.filter(i => Math.floor(i/sp) >= unten).length / (sp*(ze-unten)) };
-    }
-    const alle = new Set(); for (const k in feld) for (const i of feld[k]) alle.add(i);
-    aus._summe = { ganz: alle.size/(sp*ze),
-                   unten: [...alle].filter(i=>Math.floor(i/sp)>=unten).length/(sp*(ze-unten)) };
-    return aus;
-  });
+  const voll = await s.screenshot();
+  await s.evaluate(blende, null);  await s.waitForTimeout(200);
+  const nackt = await s.screenshot();
   const p = n => (n*100).toFixed(1).padStart(5) + ' %';
-  console.log(`E${e}${WOCHEN?` nach ${WOCHEN} Wochen`:''}:  ` +
-    `gesamt ${p(r._summe.ganz)} der Flaeche, ${p(r._summe.unten)} des untersten Sechstels`);
-  Object.entries(r).filter(([k])=>k!=='_summe').sort((a,b)=>b[1].unten-a[1].unten)
-    .forEach(([k,v]) => console.log(`     ${(namen[k]||k).padEnd(14)} ${p(v.ganz)}   unten ${p(v.unten)}`));
+  console.log(`E${e}:  gesamt ${p(anders(voll,nackt,false))} der Flaeche, ` +
+              `${p(anders(voll,nackt,true))} des untersten Sechstels`);
+  const zeilen = [];
+  for (const k of STUECKE) {
+    await s.evaluate(blende, k); await s.waitForTimeout(150);
+    const nur = await s.screenshot();
+    zeilen.push([k, anders(nur,nackt,false), anders(nur,nackt,true)]);
+  }
+  zeilen.sort((x,y) => y[2]-x[2]).forEach(([k,g,u]) =>
+    console.log(`     ${(namen[k]||k).padEnd(14)} ${p(g)}   unten ${p(u)}`));
   await s.close();
 }
 await b.close();
