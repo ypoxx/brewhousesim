@@ -60,16 +60,39 @@ daran, wie viele Braujahre man zählt**. Vom blinden Kritiker DER PREIS gemessen
 und von der Aufsicht unabhängig nachgestellt, dieselbe Reihe, nur anders
 geschnitten:
 
-| Epoche | 12 Braujahre | 13 | 14 |
-|---|---|---|---|
-| **1350** | **+0,762** | **+0,692** | +0,591 |
-| 1600 | +0,371 | +0,264 | +0,231 |
-| 1884 | +0,168 | +0,346 | +0,393 |
-| 1970 | +0,427 | +0,154 | +0,275 |
+| Epoche | 12 Braujahre | 13 | 14 | Stand |
+|---|---|---|---|---|
+| **1350** | **+0,762** | **+0,692** | +0,591 | am 5. 8. dreimal bestätigt |
+| 1600 | +0,189 | −0,066 | −0,156 | **berichtigt** (vorher +0,371 / +0,264 / +0,231) |
+| 1884 | +0,168 | +0,346 | +0,393 | unverändert |
+| **1970** | **+0,699** | +0,637 | +0,653 | **berichtigt** (vorher +0,427 / +0,154 / +0,275) |
 
 **Bei zwölf Braujahren reißt 1350.** Und 1884 läuft in die *andere* Richtung —
 es gibt also keine Laufzeit, die für alle vier die freundlichste wäre; wer eine
 kürt, kürt sie für eine Epoche.
+
+> **BERICHTIGUNG vom 5. August 2026 — zwei Zeilen dieser Tabelle waren veraltet.**
+> Der blinde Kritiker DIE FUHRE hat 1600 und 1970 anders gemessen als hier
+> stand. **Die Aufsicht hat 1350 und 1970 unabhängig nachgemessen**, am
+> eingefrorenen Stand `7440a09`, sequenziell durchs Messfenster, drei bzw. zwei
+> Läufe — und die Ergebnisdateien sind **byteweise identisch** (gleiche md5),
+> die strengste Form der Gerätekontrolle. Rohdaten:
+> `werkbank/schuss/aufsicht/welle6-fuhre-nach/rho/`.
+>
+> | | Kritiker | Aufsicht | DER SUD, mit und ohne seine Nacharbeit |
+> |---|---|---|---|
+> | 1350 | +0,762 / +0,692 / +0,591 | **gleich** | gleich |
+> | 1970 | +0,699 / +0,637 / +0,653 | **gleich** | **gleich in beiden Fassungen** |
+>
+> **1970 steht ein Tausendstel unter dem Riss.** Wer sich darauf verlässt,
+> verlässt sich auf 0,001.
+>
+> **Wer die beiden Zeilen bewegt hat, ist nicht feststellbar.** DER SUD hat
+> ausgeschlossen, dass es an ihm liegt — er hat einen Hafen gebaut, der den
+> heutigen Baum mit nur seinen fünf Dateien ausliefert, und bekommt dieselben
+> Ziffern. Sein Verdacht ist der neue **Knopfboden** aus der Lesbarkeitsarbeit,
+> der unterhalb der Entwurfsleinwand jedes Brett vergrößert. **Ungeprüft** —
+> und der nächste Auftrag, der aus dieser Tabelle folgt.
 
 > **Ab jetzt bindend:** Wer ρ nennt, nennt die Laufzeit dazu, und misst über
 > **alle drei Schnitte** (12, 13, 14 Braujahre). Die Latte ist gerissen, sobald

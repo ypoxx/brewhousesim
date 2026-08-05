@@ -1,0 +1,2092 @@
+{
+ "epoche": 2,
+ "hafen": "8901",
+ "saat": "1350",
+ "brett": "auf",
+ "fenster": "1366x768",
+ "abgebrochen": false,
+ "fehler": [],
+ "reiterproben": [
+  {
+   "woche": 0,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 30,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 60,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 90,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  },
+  {
+   "woche": 96,
+   "klicks": 1,
+   "offenNach": 1,
+   "bedienbarNach": 1
+  }
+ ],
+ "auswertung": {
+  "wochen": 103,
+  "jahre": 4,
+  "brettImBild": 98,
+  "klemme": 0,
+  "klemmeSollAus0": 0,
+  "klemmeAnteil": 0,
+  "gruende": {
+   "spiel": 309,
+   "brett-offen": 392,
+   "brett-zugeklappt": 50,
+   "verdeckt": 4
+  },
+  "preisWochen": {
+   "n0": 1,
+   "n1": 4,
+   "n2": 34,
+   "n3plus": 64,
+   "mitFass2plus": 99
+  },
+  "wochenMitZweiPlus": 98,
+  "maxPreisSchilder": 3,
+  "preisSaetze": {
+   "sud:gaerraum + sud:gaerung:keller + sud:schuettung:weizenbrief": 64,
+   "sud:zettel-wechsel-kauf": 4,
+   "sud:gaerraum + sud:schuettung:weizenbrief": 34
+  },
+  "preisZuege": {
+   "sud:schuettung:weizenbrief": 98,
+   "sud:gaerung:keller": 64,
+   "sud:gaerraum": 98,
+   "sud:zettel-wechsel-kauf": 4
+  }
+ },
+ "klemmeWochen": [],
+ "reihe": [
+  {
+   "w": 0,
+   "jahr": 1600,
+   "woche": 1,
+   "kasse": 640,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 1,
+   "jahr": 1600,
+   "woche": 2,
+   "kasse": 618,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 2,
+   "jahr": 1600,
+   "woche": 3,
+   "kasse": 596,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 3,
+   "jahr": 1600,
+   "woche": 4,
+   "kasse": 574,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 4,
+   "jahr": 1600,
+   "woche": 5,
+   "kasse": 572,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 5,
+   "jahr": 1600,
+   "woche": 6,
+   "kasse": 570,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 6,
+   "jahr": 1600,
+   "woche": 7,
+   "kasse": 568,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 7,
+   "jahr": 1600,
+   "woche": 8,
+   "kasse": 566,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 8,
+   "jahr": 1600,
+   "woche": 9,
+   "kasse": 564,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 9,
+   "jahr": 1600,
+   "woche": 10,
+   "kasse": 562,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 10,
+   "jahr": 1600,
+   "woche": 11,
+   "kasse": 560,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 11,
+   "jahr": 1600,
+   "woche": 12,
+   "kasse": 558,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 12,
+   "jahr": 1600,
+   "woche": 13,
+   "kasse": 556,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 13,
+   "jahr": 1600,
+   "woche": 14,
+   "kasse": 534,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 14,
+   "jahr": 1600,
+   "woche": 15,
+   "kasse": 512,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 15,
+   "jahr": 1600,
+   "woche": 16,
+   "kasse": 490,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 16,
+   "jahr": 1600,
+   "woche": 17,
+   "kasse": 468,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 17,
+   "jahr": 1600,
+   "woche": 18,
+   "kasse": 466,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 18,
+   "jahr": 1600,
+   "woche": 19,
+   "kasse": 464,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 19,
+   "jahr": 1600,
+   "woche": 20,
+   "kasse": 462,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 20,
+   "jahr": 1600,
+   "woche": 21,
+   "kasse": 460,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 21,
+   "jahr": 1600,
+   "woche": 22,
+   "kasse": 458,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 22,
+   "jahr": 1600,
+   "woche": 23,
+   "kasse": 456,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 23,
+   "jahr": 1600,
+   "woche": 24,
+   "kasse": 454,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 24,
+   "jahr": 1600,
+   "woche": 25,
+   "kasse": 452,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 25,
+   "jahr": 1600,
+   "woche": 26,
+   "kasse": 450,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 26,
+   "jahr": 1600,
+   "woche": 27,
+   "kasse": 428,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 8,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 27,
+   "jahr": 1600,
+   "woche": 28,
+   "kasse": 426,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 28,
+   "jahr": 1600,
+   "woche": 29,
+   "kasse": 424,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 29,
+   "jahr": 1600,
+   "woche": 30,
+   "kasse": 422,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 30,
+   "jahr": 1601,
+   "woche": 1,
+   "kasse": 291,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 10,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 5,
+   "muenzschilder": 1,
+   "muenzUndBier": 1,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 31,
+   "jahr": 1601,
+   "woche": 2,
+   "kasse": 289,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 32,
+   "jahr": 1601,
+   "woche": 3,
+   "kasse": 287,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 33,
+   "jahr": 1601,
+   "woche": 4,
+   "kasse": 285,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 34,
+   "jahr": 1601,
+   "woche": 5,
+   "kasse": 283,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 35,
+   "jahr": 1601,
+   "woche": 6,
+   "kasse": 281,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 36,
+   "jahr": 1601,
+   "woche": 7,
+   "kasse": 279,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 37,
+   "jahr": 1601,
+   "woche": 8,
+   "kasse": 277,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 38,
+   "jahr": 1601,
+   "woche": 9,
+   "kasse": 275,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 39,
+   "jahr": 1601,
+   "woche": 10,
+   "kasse": 273,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 40,
+   "jahr": 1601,
+   "woche": 11,
+   "kasse": 271,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 41,
+   "jahr": 1601,
+   "woche": 12,
+   "kasse": 269,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 42,
+   "jahr": 1601,
+   "woche": 13,
+   "kasse": 267,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 43,
+   "jahr": 1601,
+   "woche": 14,
+   "kasse": 265,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 44,
+   "jahr": 1601,
+   "woche": 15,
+   "kasse": 263,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 45,
+   "jahr": 1601,
+   "woche": 16,
+   "kasse": 261,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 46,
+   "jahr": 1601,
+   "woche": 17,
+   "kasse": 259,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 47,
+   "jahr": 1601,
+   "woche": 18,
+   "kasse": 257,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 48,
+   "jahr": 1601,
+   "woche": 19,
+   "kasse": 255,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 49,
+   "jahr": 1601,
+   "woche": 20,
+   "kasse": 253,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 50,
+   "jahr": 1601,
+   "woche": 21,
+   "kasse": 251,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 51,
+   "jahr": 1601,
+   "woche": 22,
+   "kasse": 249,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 52,
+   "jahr": 1601,
+   "woche": 23,
+   "kasse": 247,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 53,
+   "jahr": 1601,
+   "woche": 24,
+   "kasse": 245,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 54,
+   "jahr": 1601,
+   "woche": 25,
+   "kasse": 243,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 55,
+   "jahr": 1601,
+   "woche": 26,
+   "kasse": 241,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 56,
+   "jahr": 1601,
+   "woche": 27,
+   "kasse": 239,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 57,
+   "jahr": 1601,
+   "woche": 28,
+   "kasse": 237,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 58,
+   "jahr": 1601,
+   "woche": 29,
+   "kasse": 235,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 59,
+   "jahr": 1601,
+   "woche": 30,
+   "kasse": 233,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 60,
+   "jahr": 1602,
+   "woche": 1,
+   "kasse": 280,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 10,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 5,
+   "muenzschilder": 1,
+   "muenzUndBier": 1,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 61,
+   "jahr": 1602,
+   "woche": 2,
+   "kasse": 278,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 62,
+   "jahr": 1602,
+   "woche": 3,
+   "kasse": 276,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 63,
+   "jahr": 1602,
+   "woche": 4,
+   "kasse": 274,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 64,
+   "jahr": 1602,
+   "woche": 5,
+   "kasse": 272,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 65,
+   "jahr": 1602,
+   "woche": 6,
+   "kasse": 270,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 66,
+   "jahr": 1602,
+   "woche": 7,
+   "kasse": 268,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 67,
+   "jahr": 1602,
+   "woche": 8,
+   "kasse": 266,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 68,
+   "jahr": 1602,
+   "woche": 9,
+   "kasse": 264,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 69,
+   "jahr": 1602,
+   "woche": 10,
+   "kasse": 262,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 70,
+   "jahr": 1602,
+   "woche": 11,
+   "kasse": 260,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 71,
+   "jahr": 1602,
+   "woche": 12,
+   "kasse": 258,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 72,
+   "jahr": 1602,
+   "woche": 13,
+   "kasse": 256,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 73,
+   "jahr": 1602,
+   "woche": 14,
+   "kasse": 254,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 74,
+   "jahr": 1602,
+   "woche": 15,
+   "kasse": 252,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 75,
+   "jahr": 1602,
+   "woche": 16,
+   "kasse": 250,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 76,
+   "jahr": 1602,
+   "woche": 17,
+   "kasse": 248,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 77,
+   "jahr": 1602,
+   "woche": 18,
+   "kasse": 246,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 78,
+   "jahr": 1602,
+   "woche": 19,
+   "kasse": 244,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 79,
+   "jahr": 1602,
+   "woche": 20,
+   "kasse": 242,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 80,
+   "jahr": 1602,
+   "woche": 21,
+   "kasse": 240,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 81,
+   "jahr": 1602,
+   "woche": 22,
+   "kasse": 238,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 82,
+   "jahr": 1602,
+   "woche": 23,
+   "kasse": 236,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 83,
+   "jahr": 1602,
+   "woche": 24,
+   "kasse": 234,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 84,
+   "jahr": 1602,
+   "woche": 25,
+   "kasse": 232,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 85,
+   "jahr": 1602,
+   "woche": 26,
+   "kasse": 230,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 86,
+   "jahr": 1602,
+   "woche": 27,
+   "kasse": 228,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 87,
+   "jahr": 1602,
+   "woche": 28,
+   "kasse": 226,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 88,
+   "jahr": 1602,
+   "woche": 29,
+   "kasse": 224,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 89,
+   "jahr": 1602,
+   "woche": 30,
+   "kasse": 222,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 90,
+   "jahr": 1603,
+   "woche": 1,
+   "kasse": 280,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 10,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 5,
+   "muenzschilder": 1,
+   "muenzUndBier": 1,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 91,
+   "jahr": 1603,
+   "woche": 2,
+   "kasse": 278,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 92,
+   "jahr": 1603,
+   "woche": 3,
+   "kasse": 276,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 93,
+   "jahr": 1603,
+   "woche": 4,
+   "kasse": 274,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 94,
+   "jahr": 1603,
+   "woche": 5,
+   "kasse": 272,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 95,
+   "jahr": 1603,
+   "woche": 6,
+   "kasse": 270,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 96,
+   "jahr": 1603,
+   "woche": 7,
+   "kasse": 268,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 10,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 7,
+   "muenzschilder": 1,
+   "muenzUndBier": 3,
+   "schilder": [
+    "sud:zettel-wechsel-kauf"
+   ]
+  },
+  {
+   "w": 97,
+   "jahr": 1603,
+   "woche": 8,
+   "kasse": 266,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 98,
+   "jahr": 1603,
+   "woche": 9,
+   "kasse": 264,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 99,
+   "jahr": 1603,
+   "woche": 10,
+   "kasse": 262,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 100,
+   "jahr": 1603,
+   "woche": 11,
+   "kasse": 260,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 7,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 3,
+   "muenzUndBier": 5,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerung:keller",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 101,
+   "jahr": 1603,
+   "woche": 12,
+   "kasse": 258,
+   "lage": 0,
+   "brettOffen": true,
+   "brettZu": false,
+   "knoepfe": 10,
+   "bedienbar": 6,
+   "klemme": false,
+   "sollAus0UndAus": 0,
+   "muenzschilder": 2,
+   "muenzUndBier": 4,
+   "schilder": [
+    "sud:schuettung:weizenbrief",
+    "sud:gaerraum"
+   ]
+  },
+  {
+   "w": 102,
+   "jahr": 1603,
+   "woche": 13,
+   "kasse": 465,
+   "lage": 0,
+   "brettOffen": false,
+   "brettZu": true,
+   "knoepfe": 10,
+   "bedienbar": 0,
+   "klemme": false,
+   "sollAus0UndAus": 7,
+   "muenzschilder": 0,
+   "muenzUndBier": 0,
+   "schilder": []
+  }
+ ]
+}
