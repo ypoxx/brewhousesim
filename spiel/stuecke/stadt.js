@@ -945,6 +945,27 @@
        genau das), waere ein Knopf, an dem ein Kritiker mit Playwright
        haengenbleibt. Der wird wieder abgeraeumt — und seine Marke darf dann
        stehen, damit keine Auskunft verlorengeht. */
+    /* AUFLAGE 3, Welle 7 — ERST AUSWEICHEN, DANN ABRAEUMEN.
+
+       Der blinde Kritiker hat mit einem echten page.click nachgewiesen, dass
+       `stadt:marke:fuhre-bahnhof` bei 1366x768 in 1884 nicht zu treffen ist:
+       24x24 px, und die Mitte liegt unter einem fremden SPAN.wort. Nachgesehen
+       ist der Deckel der Chronikgriff DES PREISES
+       (`.fach-blatt-preis > .pr-griff > button[data-zug="preis:chronik-auf"]`)
+       — eine Ebene ueber den Marken, also nichts, was ein z-index von hier
+       aus ueberholen koennte.
+
+       Der Abraeumer darunter kannte nur drei Deckel (data-frei, eigener Hof,
+       eigenes Blatt) und liess den Pflock deshalb stehen: einen Knopf, den
+       kein Zeiger erreicht. Jetzt wird zuerst versucht, ihn ein Stueck zur
+       Seite zu setzen — der Ort bleibt derselbe, nur der Pflock sitzt nicht
+       mehr genau darunter. Erst wenn auch das nicht hilft, wird er abgeraeumt
+       und seine Marke bleibt stehen, damit keine Auskunft verlorengeht.
+
+       GERUECKT WIRD MIT `translate`, NICHT MIT `transform`: der Pflock
+       traegt `.amort` und haengt ueber transform an seinem Ort. Wer transform
+       ueberschreibt, reisst ihn weg — genau daran ist der WEITER-Knopf beim
+       ersten Playwright-Lauf gescheitert (LIESMICH.md). */
     for (var i = fach.children.length - 1; i >= 0; i--) {
       var el = fach.children[i];
       var r = el.getBoundingClientRect();
@@ -961,6 +982,79 @@
       var s = el.getAttribute('data-marke');
       if (s && markenLage[s] === 'ruht') markenLage[s] = 'steht';
       fach.removeChild(el);
+    }
+  }
+
+  /* Trifft der Zeiger diesen Pflock? Gefragt wird an seiner Mitte, genau wie
+     ein echter Klick es tut. */
+  function pflockTrifft(el) {
+    var r = el.getBoundingClientRect();
+    if (r.width < 2 || r.height < 2) return true;
+    var t = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+    return !!(t && el.contains(t));
+  }
+
+  /* AUFLAGE 3, Welle 7 — DER PFLOCK WEICHT AUS, STATT UNERREICHBAR ZU BLEIBEN.
+
+     Der blinde Kritiker: `stadt:marke:fuhre-bahnhof` ist bei 1366x768 in 1884
+     und 1970 nicht anzuklicken — 24x24 px, Mitte von einem fremden SPAN.wort
+     verdeckt, echter page.click laeuft in den Zeitablauf. Bei 2752x1536 nicht.
+
+     Nachgemessen ist der Deckel der Chronikgriff DES PREISES: 182x237 px auf
+     (1169|23), und der Pflock sitzt auf (1286|195) mitten darin. Er liegt in
+     `ebene-blatt`, also ueber `ebene-marken` — von hier aus ist das mit
+     keinem z-index einzuholen.
+
+     ZWEI GRUENDE, WARUM ES DEN ERSTEN VERSUCH NICHT GETAN HAT, beide gemessen:
+     · Der Ausweichschritt lief in `zeichnePfloecke`, und die baut nur neu,
+       wenn sich die Markenliste aendert. Beim ersten Bau gab es den Griff
+       noch gar nicht — danach sah niemand mehr hin.
+     · Feste Schritte von 30 px reichen nicht gegen einen Deckel von 237 px.
+     Jetzt laeuft es bei JEDEM Takt, und der Schritt wird aus dem RECHTECK DES
+     DECKELS gerechnet: knapp an seiner naechsten Kante vorbei.
+
+     Gerueckt wird mit `translate`, nie mit `transform` — der Pflock haengt
+     ueber transform an seinem Ort (`.amort`), und wer das ueberschreibt,
+     reisst ihn weg (LIESMICH.md). Der ORT bleibt unberuehrt; es rueckt nur
+     der Griff, mit dem man ihn anfasst. */
+  function pfloeckeFreiRuecken() {
+    var fach = document.getElementById('fach-marken-stadt');
+    if (!fach) return;
+    var buehne = B.buehne && B.buehne.el ? B.buehne.el.getBoundingClientRect() : null;
+    for (var i = 0; i < fach.children.length; i++) {
+      var el = fach.children[i];
+      if (!el.classList || !el.classList.contains('stadt-pflock')) continue;
+      if (pflockTrifft(el)) continue;                 /* sitzt gut, wie es steht */
+      var alt = el.style.translate || '';
+      el.style.translate = '';                        /* erst zurueck auf den Ort */
+      if (pflockTrifft(el)) continue;
+
+      var r = el.getBoundingClientRect();
+      var t = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+      var d = t ? t.getBoundingClientRect() : null;
+      var wege = [];
+      if (d) {
+        wege.push([0, d.bottom - r.top + 4]);         /* unter dem Deckel hindurch */
+        wege.push([0, d.top - r.bottom - 4]);         /* darueber */
+        wege.push([d.right - r.left + 4, 0]);         /* rechts daneben */
+        wege.push([d.left - r.right - 4, 0]);         /* links daneben */
+        wege.sort(function (a, b) { return Math.abs(a[0] + a[1]) - Math.abs(b[0] + b[1]); });
+      }
+      wege.push([0, 34], [34, 0], [0, -34], [-34, 0]);
+      var frei = false;
+      for (var v = 0; v < wege.length && !frei; v++) {
+        var dx = wege[v][0], dy = wege[v][1];
+        if (buehne) {
+          /* im Stadtfenster bleiben — darunter faengt die Werkbank die Maus ab */
+          var ny = r.top + dy, nx = r.left + dx;
+          if (ny < buehne.top + buehne.height * (FENSTER.y0 / 100) ||
+              ny + r.height > buehne.top + buehne.height * (FENSTER.y1 / 100) ||
+              nx < buehne.left || nx + r.width > buehne.left + buehne.width) continue;
+        }
+        el.style.translate = Math.round(dx) + 'px ' + Math.round(dy) + 'px';
+        frei = pflockTrifft(el);
+      }
+      if (!frei) el.style.translate = alt;            /* nichts hilft — der Abraeumer nimmt ihn */
     }
   }
 
@@ -1018,6 +1112,7 @@
     markenDa = daJetzt;
     markenZahl = reihe.length;
     zeichnePfloecke(reihe);
+    pfloeckeFreiRuecken();
     return reihe.filter(function (m) { return m.ruht; }).length;
   }
 
