@@ -391,6 +391,21 @@ Hand mitschreiben lassen, und an fremden Messgeraeten wird nicht gedreht.
   Nachher-Lauf liegt auf genau diesem Ast.
 
 
+### 3.8 Welche Fassung gemessen wurde
+
+Der Nachstand auf Hafen 8952 traegt die Marke `7896ee6+118b191467`. Die
+Dateien im Arbeitsbaum sind seither noch einmal angefasst worden — **nur
+Kommentare**, nachpruefbar mit
+
+```
+diff /tmp/fuhrestand/7896ee6+118b191467/spiel/stuecke/fuhre.js spiel/stuecke/fuhre.js
+diff /tmp/fuhrestand/7896ee6+118b191467/spiel/stil/fuhre.css  spiel/stil/fuhre.css
+```
+
+Beide Diffs enthalten ausschliesslich Text innerhalb von `/* … */`
+(Zahlen in den Kommentaren, die nach der Messung berichtigt wurden). Keine
+Regel, kein Selektor, keine Anweisung ist verschieden.
+
 ---
 
 ## 4 — Was DIE FUHRE weiter offen laesst, mit Datei, Zahl und Abnahme
@@ -435,3 +450,50 @@ leer, wenn `BRAUHAUS.fuhre.stand().antrag` nicht null ist.
 | `vorher.sh` · `nachher.sh` · `rho.sh` | die Messsaetze, jeder Lauf einzeln durchs Messfenster |
 | `messungen/` | alle Rohdaten. `vorher-*` = `7896ee6`, `nachher-*` = Nachstand |
 | `bilder/` | `blick-*` bei 2752×1536, `klein-*` bei 1366×768, `warum-*` fuer §1.2 |
+
+
+---
+
+## 6 — Was diese Runde fuer ANDERE gefunden hat
+
+1. **`gauntlet/WELLE-11.md`, Spalte „heute": die Zahlen des Ladezustands
+   sind zu hoch, und zwar systematisch.** `rahmen-w10/messen.mjs` schreibt
+   jedem Stueck die Aenderung zu, die das Ausblenden seiner Schrift in der
+   **Reiterzeile der STADT** ausloest. Fuer DIE FUHRE sind das die vollen
+   169.305 px (nachgewiesen: die Huelle ist 0 px, und die Zahl ist vorher
+   wie nachher dieselbe). Jedes Stueck, dessen Bretter die STADT zuklappt,
+   traegt denselben Aufschlag. Wer nach diesen Zahlen baut, jagt zum Teil
+   ein Messgeraet. `BRAUHAUS.haushalt.miss()` ist die verlaessliche Zahl.
+
+2. **Auflage 7 des blinden Kritikers ist kein Schriftproblem** (§1.3). Die
+   „zwei leeren Rechtecke in Rot" unter „FAE" und „BRU" sind
+   `.fu-marke .fu-mbetten i` DER FUHRE. Behoben. Der Rahmen hat in Welle 10
+   richtig gemessen, dass kein Zeichen fehlt — es fehlte auch keines.
+
+3. **DER GEGNER und DAS ERBE bekommen durch meine Arbeit mehr Flaeche, nicht
+   weniger** (§3.2). Was unter der grossen Georgi-Tafel lag, liegt jetzt
+   frei: in 1970 waechst DER GEGNER von 319.548 auf 554.170 px, in 1350 DAS
+   ERBE von 142.518 auf 208.703 px — auf einem Stand, auf dem beide
+   Stuecke unveraendert sind. Beide raeumen in derselben Welle; die Rechnung
+   geht erst zusammen auf.
+
+4. **`erb-buch` schlaegt bei 1366×768 nach 30 Wochen auf, sobald es nicht
+   mehr zugedeckt wird** (§2, F2). Auf dem Vorzustand blieb es zu — aber
+   nur, weil die grosse Sommertafel es ueber `DECKGRENZE` verdeckte und die
+   Platzordnung es deshalb zuklappte. Das ist kein Verschluss, das ist ein
+   Zufall. DAS ERBE sollte es wissen.
+
+5. **`raeumeAuf(false)` des Rahmens entscheidet den Gleichstand nach der
+   DOM-Reihenfolge der Faecher** und bevorzugt damit systematisch das Fach,
+   das spaeter in `index.html` steht. Bei 1366×768 hat das die
+   Jahresentscheidung DER FUHRE gegen ein Buch verloren, das keinen eigenen
+   Schliessknopf hat (§2, F2). Wenn Welle 12 „hoechstens ein ganzseitiges
+   Blatt" lueckenlos will, braucht der Tiebreak ein besseres Mass als die
+   Ladereihenfolge — zum Beispiel „das juengste zuletzt aufgeschlagene",
+   wie es die STADT mit `aufZeit` schon fuehrt.
+
+6. **`linie.mjs` ist layoutempfindlich, und das ist die Erklaerung fuer
+   1350** (§3.7). Ihr `klick()` klickt bei einem nicht getroffenen Knopf
+   der Reihe nach JEDEN Reiter der STADT — jeder davon ein Umschalter. Wie
+   oft dieser Notweg noetig ist, haengt daran, was gerade wie gross wo
+   liegt. Eine Kennzahl, die davon abhaengt, misst das Spiel nur zum Teil.
