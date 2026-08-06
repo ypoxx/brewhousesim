@@ -157,18 +157,33 @@
   align-items: baseline;
   flex-wrap: wrap;
   gap: calc(var(--s) * 2) calc(var(--s) * 8);
-  font-size: calc(var(--s) * 15);
+  font-size: calc(var(--s) * 16);
+  font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
   /* DER LICHTHOF — er ersetzt das Papier, das unter dieser Zeile lag.
      Dasselbe Mittel, mit dem der Rahmen in Welle 10 Hauszeile und
      Deckungsband ueber die gemalte Welt gelegt hat (kern/kopf.js:83,141).
-     Zwei Radien: der weite traegt ueber ein dunkles Dach, der enge haelt die
-     Buchstabenkante scharf. */
+
+     ER WAR BEIM ERSTEN ANLAUF ZU SCHWACH, UND ICH HABE ES AM BILD GESEHEN,
+     NICHT AN EINER ZAHL. `bilder/nach-e1-leiste.png` zeigt die Zeile ueber
+     den Daechern des Brauhofs in 1350: „DAS ERBE" stand, der Rest —
+     „noch 14 Wochen", die Hand, der Stand, was die Stunde nimmt — verschwamm
+     mit dem Dach dahinter. Drei Lagen Lichthof bei 15 px und normaler Strichstaerke
+     reichen ueber einem MITTELtonigen Grund; ueber einem dunklen reichen sie
+     nicht. Kein Zaehler dieser Welle haette das gemeldet: die Zeile ist kein
+     Kasten mehr und faellt aus jeder Kastenliste heraus. Genau davor warnt
+     der Rahmen in seinem eigenen Bericht („weniger ruhig als auf Papier"),
+     und hier war es mehr als unruhig.
+
+     Jetzt: eine Stufe groesser, fett, vier Lagen mit voller Deckkraft und
+     dunklere Tinte in den Spalten (siehe unten). Das ist teurer an Schrift
+     und billiger an Papier — und es ist die richtige Reihenfolge. */
   text-shadow:
-    0 0 calc(var(--s) * 9) rgba(255, 248, 230, 0.98),
-    0 0 calc(var(--s) * 4) rgba(255, 248, 230, 0.98),
-    0 0 calc(var(--s) * 2) rgba(255, 248, 230, 0.98);
+    0 0 calc(var(--s) * 12) rgba(255, 250, 238, 1),
+    0 0 calc(var(--s) * 7) rgba(255, 250, 238, 1),
+    0 0 calc(var(--s) * 4) rgba(255, 250, 238, 1),
+    0 0 calc(var(--s) * 2) rgba(255, 250, 238, 1);
 }
 
 .erb-band > span { overflow: hidden; text-overflow: ellipsis; }
@@ -200,21 +215,24 @@
   flex: 0 0 auto;
 }
 
-.erb-uhr      { font-family: var(--mono); color: var(--rot); flex: 0 0 auto; }
-.erb-hand     { color: #6b4d1f; font-style: italic; flex: 0 0 auto; }
-.erb-stand    { font-family: var(--mono); color: var(--gruen); flex: 0 0 auto; }
+/* Die Farben sind eine Stufe dunkler als die der Palette (--rot #9d3520,
+   --gruen #4a6b3a). Auf Papier war der Unterschied Zierat; ohne Papier ist er
+   der Unterschied zwischen lesbar und nicht lesbar. */
+.erb-uhr      { font-family: var(--mono); color: #8a2c18; flex: 0 0 auto; }
+.erb-hand     { color: #4a3410; font-style: italic; flex: 0 0 auto; }
+.erb-stand    { font-family: var(--mono); color: #33502a; flex: 0 0 auto; }
 .erb-nimmt,
-.erb-gefallen { font-family: var(--mono); color: var(--rot); flex: 0 1 auto; }
+.erb-gefallen { font-family: var(--mono); color: #8a2c18; flex: 0 1 auto; }
 /* Auflage 1: was bezahlt und doch verloren ist, steht auf der Leiste. */
 .erb-erloschen {
   font-family: var(--mono);
-  color: var(--rot);
+  color: #8a2c18;
   text-decoration: line-through;
   text-decoration-thickness: 1px;
   flex: 0 0 auto;
 }
 .erb-form     { font-family: var(--mono); color: var(--tinte); flex: 0 0 auto; }
-.erb-last     { font-family: var(--mono); color: #6b4d1f; flex: 0 0 auto; }
+.erb-last     { font-family: var(--mono); color: #4a3410; flex: 0 0 auto; }
 
 /* Vier Preisschilder in einer Reihe. Jeder Knopf bekommt gleich viel Platz,
    der Preis steht rechts und wird NIE abgeschnitten — er ist die Latte. */
@@ -386,7 +404,17 @@
   left: 2%;
   top: 17.5%;
   width: 40%;
-  height: 54%;
+  /* NACH INHALT, HOECHSTENS 54 %.  Erst stand hier `height: 54%` fest — und
+     `bilder/nach-e1-buch.png` zeigte prompt wieder das, was der Kritiker
+     angestrichen hat: unten 254 von 829 px leeres Papier, weil im
+     Ladezustand nur zwei Laden gefuellt sind. Ein kuerzeres Blatt mit
+     demselben Fehler ist kein besseres Blatt.
+     Mit `height: auto` misst sich das Buch an seinem Inhalt: im Ladezustand
+     rund 700 px, spaeter — mit ERLOSCHEN, GEFALLEN, GESCHRIEBEN und der
+     Liste der Haende — waechst es bis 54 % und rollt danach im Koerper. Es
+     ist nie leer und nie abgeschnitten. */
+  height: auto;
+  max-height: 54%;
   display: flex;
   flex-direction: column;
   gap: calc(var(--s) * 7);
