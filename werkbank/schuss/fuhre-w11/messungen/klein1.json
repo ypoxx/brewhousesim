@@ -1,0 +1,50 @@
+{
+ "1": {
+  "jahr": 1351,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 4,
+   "px": 4642,
+   "anteil": 0.1098159671753876,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": -29358,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 2246986,
+   "anteil": 53.1570316285126
+  },
+  "oben": {
+   "px": 398480,
+   "anteil": 56.561137354651166
+  },
+  "tafeln": [
+   "erbe .erb-buch blatt NaN×NaN = 308428"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "erbe: 1407606/28000 px  oben 65436/6000 px",
+   "gegner: 228283/28000 px",
+   "stadt: 231055/40000 px  oben 141315/26000 px",
+   "preis: 169036/24000 px  oben 80070/20000 px",
+   "sud: 84131/34000 px",
+   "name: 29398/20000 px",
+   "kern: 129130/120000 px  oben 108501/80000 px",
+   "klang: 3159/4000 px  oben 3159/3000 px"
+  ],
+  "gross": [],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": false,
+  "sommerblatt": false,
+  "stand": "null blaetter erbe.erb-buch blatt",
+  "planKnoepfe": [],
+  "seitenfehler": 0
+ }
+}

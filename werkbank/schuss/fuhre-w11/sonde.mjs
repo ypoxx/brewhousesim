@@ -18,7 +18,7 @@ import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
 import { writeFileSync, mkdirSync } from 'node:fs';
 
 const HAFEN  = process.env.HAFEN || '8951';
-const W = 2752, H = 1536;
+const W = +(process.env.BREITE || 2752), H = +(process.env.HOEHE || 1536);
 const WOCHEN = +(process.env.WOCHEN || 0);
 const ESC    = +(process.env.ESC || 0);
 const NAME   = process.argv[2] || 'sonde';
@@ -83,6 +83,8 @@ const schau = () => {
     verdeckt: (function () { try { return BRAUHAUS.stadt.rahmen.verdeckt().length; } catch (e) { return 'FEHLER'; } })(),
     sommerZug: !!document.querySelector('[data-zug="fuhre:sommer-zu"]'),
     sommerblatt: !!document.querySelector('.fu-sommerblatt'),
+    stand: (function () { try { return JSON.stringify(BRAUHAUS.fuhre.stand().antrag) + ' blaetter '
+      + h.blaetter().map(function (x) { return x.stueck + '.' + x.klasse; }).join(','); } catch (e) { return 'x'; } })(),
     planKnoepfe: [...document.querySelectorAll('[data-zug^="fuhre:jahresplan:"]')].map(k => {
       const r = k.getBoundingClientRect();
       const x = r.left + r.width / 2, y = r.top + r.height / 2;
