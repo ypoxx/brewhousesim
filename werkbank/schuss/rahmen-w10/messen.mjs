@@ -205,9 +205,11 @@ for (const e of [1, 2, 3, 4]) {
      was sich dort dennoch bewegt, ist Restbewegung und wird nicht gezaehlt. */
   const maske = (kaesten) => {
     const m = new Uint8Array(W * H);
-    for (const q of kaesten) {
-      /* Schattenrand: box-shadow faellt neben die Huelle. */
-      q.x -= 40; q.y -= 40; q.b += 80; q.h += 80;
+    for (const q0 of kaesten) {
+      /* Schattenrand: box-shadow faellt neben die Huelle. NICHT den Eintrag
+         selbst veraendern — maske() laeuft mehrfach ueber dieselbe Liste, und
+         beim ersten Versuch wanderten dadurch die gemeldeten Koordinaten. */
+      const q = { x: q0.x - 30, y: q0.y - 30, b: q0.b + 60, h: q0.h + 60 };
       const x0 = Math.max(0, q.x), y0 = Math.max(0, q.y);
       const x1 = Math.min(W, q.x + q.b), y1 = Math.min(H, q.y + q.h);
       for (let y = y0; y < y1; y++) { const z = y * W; for (let x = x0; x < x1; x++) m[z + x] = 1; }
