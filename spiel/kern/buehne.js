@@ -163,8 +163,20 @@
 
     if (opt.preis !== undefined && opt.preis !== null && opt.preis !== 0) {
       var einnahme = opt.preis > 0;
+      /* PREIS UND WAEHRUNG NIE TRENNEN.  (Auflage R4/A10, Welle 10)
+         Der blinde Kritiker fand „−9 / Pf", „−240 / M", „−1.800 / DM" — die
+         Einheit allein auf der zweiten Zeile. Nachgestellt mit
+         werkbank/schuss/rahmen-w10/blattprobe.mjs: je Epoche genau EIN Bruch,
+         und immer an `name:anschlag:*`; dort steht `white-space: normal`
+         sowohl am Preisschild als auch am Knopf. Eine CSS-Regel des Rahmens
+         muesste das ueberbieten und traefe damit jeden Knopf jedes Stuecks.
+         Das GESCHUETZTE LEERZEICHEN wirkt unabhaengig von `white-space` und
+         nur dort, wo das Schild entsteht — hier, in der Knopffabrik des
+         Rahmens. Der Text bleibt Zeichen fuer Zeichen derselbe; nur die
+         Stelle, an der er brechen darf, ist fort. */
+      var schild = (einnahme ? '+' : '−') + B.welt.geld(Math.abs(opt.preis));
       var p = B.el('span', 'preis' + (einnahme ? ' einnahme' : ''),
-        (einnahme ? '+' : '−') + B.welt.geld(Math.abs(opt.preis)));
+        schild.replace(/ /g, ' '));
       k.appendChild(p);
       k.setAttribute('data-preis', String(opt.preis));
     }

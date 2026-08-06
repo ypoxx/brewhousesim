@@ -80,9 +80,39 @@
   --s-boden: 0px;
   --s: max(var(--s-boden), var(--s0));
 
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  /* DIE SCHRIFTKETTEN ENDEN IN EINEM NETZ.  (Auflage R5, Welle 10)
+
+     Der blinde Kritiker der Welle 9 fand in 1970 zwei LEERE RECHTECKE in Rot
+     — die Ersatzdarstellung fuer ein Zeichen, das keine geladene Schrift
+     zeichnen kann. Kein Netzzugriff, keine Web-Fonts: geladen ist nur, was im
+     Behaelter liegt. `fc-list :charset=…` sagt, wo die Luecke ist:
+
+       U+25B8 ▸  (stuecke/name.js)   fehlt in Liberation Serif/Sans/Mono
+       U+25BE ▾  (stuecke/name.js)   fehlt in Liberation Serif/Sans/Mono
+       U+2726 ✦  (stil/stadt.css)    fehlt in Liberation UND in Bitstream Charter
+
+     Und genau auf Liberation bildet fontconfig „Times New Roman", „Helvetica"
+     und „Arial" ab — die drei Namen, an denen diese Ketten bisher endeten.
+     Faellt ein Browser fuer ein einzelnes Zeichen nicht selbst weiter, steht
+     das Rechteck da.
+
+     Deshalb haengt hinter jeder Kette jetzt ein NETZ: DejaVu (weite Deckung),
+     FreeSerif/FreeSans/FreeMono, und zuletzt UNIFONT, das die ganze
+     mehrsprachige Ebene traegt. Ein Zeichen, das keine dieser Schriften hat,
+     gibt es in diesem Spiel nicht.
+
+     WAS DAS NETZ NICHT AENDERT: die gesetzte Schrift. Der Rueckgriff gilt in
+     CSS je ZEICHEN — jedes Zeichen, das die erste Familie hat, kommt weiter
+     aus der ersten Familie. Der Blindvergleich sieht dieselbe Seite; nur die
+     Rechtecke sind fort. Das ist die Loesung „in der Schriftkette", die die
+     Auflage neben „im Zeichen selbst" stellt: sie wirkt fuer JEDES Zeichen,
+     auch fuer eines, das ein Stueck in Welle 11 erst einbaut. */
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif,
+           "DejaVu Serif", "FreeSerif", "Unifont";
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif,
+          "DejaVu Sans", "FreeSans", "Unifont";
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace,
+          "DejaVu Sans Mono", "FreeMono", "Unifont";
 
   /* Holz und Tinte der Kopfleiste — in allen Epochen dieselbe Tafel. */
   --holz: #6b4526;
@@ -451,6 +481,143 @@ button {
   padding: 2rem;
   font-family: var(--serif);
   text-align: center;
+}
+
+/* ==========================================================================
+   WELLE 10 — DER FLAECHENHAUSHALT DES RAHMENS.
+   Was hier steht, ist das einzige im ganzen Spiel, das ueber alle acht
+   Stuecke zugleich wirkt. Jede Regel traegt deshalb ihre Zahl.
+
+   ---------------------------------------------------------------------------
+   WARUM DIE SELEKTOREN EINE ID TRAGEN
+   ---------------------------------------------------------------------------
+   `stil/stadt.css` 669–770 gestaltet die Kopfleiste des Rahmens mit —
+   `.kopfleiste`, `.kopfleiste .tafel`, `.marke`, `.wert`, `::before/::after`,
+   `.hauszeile`, `.deckung` (zweimal mit `!important`). Das ist gewachsen und
+   es ist SCHOEN; der blinde Kritiker hat das Holz der Leiste ausdruecklich
+   nicht beanstandet, sondern ihre GROESSE. Diese Datei nimmt der STADT
+   deshalb nicht die Farbe, sondern nur das Mass — und dafuer braucht sie
+   Vorrang. Denselben Weg geht der Knopfboden weiter oben (Zeile 268 ff.):
+   die ID `#buehne` im Selektor schlaegt jede Klassenregel eines Stuecks.
+
+   FUER WELLE 11 heisst das: `stil/stadt.css` darf diese Masse gerne selbst
+   setzen, dann faellt der Vorrang hier weg. Was sie NICHT mehr darf, ist sie
+   ueberbieten — der Haushalt (`BRAUHAUS.haushalt.pruefe()`) meldet es.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   R1 — DIE KOPFLEISTE.  26,0 % des obersten Sechstels beim blinden Kritiker,
+   19,6–21,0 % beim Gerät dieser Welle. Auflage: unter 12 %.
+
+   GEMESSEN, Ladezustand, `rahmen-w10/messen.mjs`, Bildpunkte:
+     .kopfleiste  1569x67 = 105.123 px (E1) … 1675x67 = 112.225 px (E4)
+     .hauszeile    847x39 =  33.033 px
+     kern gesamt im obersten Sechstel: 138.084 px = 19,6 %
+   Die Summe der beiden Huellen ist 138.156 px — 0,05 % neben dem
+   photographischen Wert. Der Schlagschatten kostet nichts Messbares, die
+   FLAECHE kostet alles. Also wird die Flaeche kleiner, und zwar so:
+
+     Hoehe der Tafel   47 -> 38 px   (Polster 5/13 -> 4/10, Rand 2 -> 1,
+                                      Wert 26 -> 22, Marke 19 -> 16)
+     Hoehe der Leiste  67 -> 52 px   (Polster 7/12 -> 5/9, Rand 3 -> 2)
+     Breite            1569 -> ~1320 (E1), 1675 -> ~1410 (E4)
+     erwartete Deckung ~68.600 px = 9,7 % (E1) … ~73.400 px = 10,4 % (E4)
+
+   KEINE ANGABE VERSCHWINDET. Es stehen weiter dieselben sieben Felder da:
+   Monat/Jahr, Kasse, Rohstoff, Lager, Woche, Chronik, Buch. „Weniger
+   anzeigen ist keine Loesung, anders anzeigen schon" — das ist das „anders".
+
+   DER SCHRIFTBODEN BLEIBT. max(12px, …) an Marke und Wert: auf der
+   Entwurfsleinwand 2752x1536 ist --s = 1 und der Boden ohne Wirkung
+   (16 und 22 sind groesser als 12); bei 1366x768 faengt er die Schrift auf,
+   wo sie sonst bei 7,9 und 10,9 px stuende. Die vierte Latte zaehlt dort.
+   -------------------------------------------------------------------------- */
+
+#buehne .kopfleiste {
+  gap: calc(var(--s) * 8);
+  padding: calc(var(--s) * 5) calc(var(--s) * 9);
+  border-width: calc(var(--s) * 2);
+  border-radius: calc(var(--s) * 6);
+  /* Der Schlagschatten faellt bis zu 23 px unter die Leiste und liegt damit
+     mitten im obersten Sechstel. Der Glanz nach innen kostet keine Flaeche
+     und bleibt. */
+  box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255, 226, 178, 0.35);
+}
+
+#buehne .kopfleiste .tafel {
+  gap: calc(var(--s) * 5);
+  padding: calc(var(--s) * 4) calc(var(--s) * 10);
+  border-width: calc(var(--s) * 1);
+  border-radius: calc(var(--s) * 3);
+}
+
+#buehne .kopfleiste .tafel .marke {
+  font-size: max(12px, calc(var(--s) * 16));
+  letter-spacing: calc(var(--s) * 2);
+}
+
+#buehne .kopfleiste .tafel .wert {
+  font-size: max(12px, calc(var(--s) * 22));
+  letter-spacing: calc(var(--s) * 1);
+}
+
+#buehne .kopfleiste .tafel::before,
+#buehne .kopfleiste .tafel::after {
+  font-size: max(10px, calc(var(--s) * 15));
+}
+
+/* --------------------------------------------------------------------------
+   R1 (zweiter Teil) — DIE HAUSZEILE IST EIN SATZ, KEIN SCHILD.
+
+   847x39 = 33.033 px, das sind 4,7 % des obersten Sechstels fuer eine Zeile
+   Text. Das Papier darunter kam aus `stadt.css:725`. Der Lichthof, den
+   `kern/kopf.js` der Zeile ohnehin mitgibt
+   (`text-shadow: 0 0 10px rgba(255,248,230,.95)`), traegt sie auch ohne
+   Papier — und nach der Regel des blinden Kritikers selbst ist eine Schrift
+   ohne deckenden Grund WELT und kein Kasten. Genau das ist der Unterschied,
+   den die Zielblaetter machen: sie tragen Schrift im Bild, aber keine Kaesten
+   ueber dem Bild.
+   -------------------------------------------------------------------------- */
+#buehne .hauszeile {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   R6 — DAS DECKUNGSBAND (Barschaft gegen den naechsten Zug).
+
+   959x38 = 36.442 px (E1), 816x38 = 31.008 px (E4) im UNTERSTEN Sechstel —
+   dort, wo jedes Zielblatt seinen Vordergrund traegt (Asphalt, Wagen, Fluss).
+   Zusammen mit WEITER stand der Rahmen dort bei 7,1–9,6 %; das Zielblatt bei
+   2,3 %. Die ZAHL bleibt auf dem Schirm — sie ist die zweite Messlatte —,
+   das Papier geht.
+   `stadt.css:757` setzt Grund und Polster mit `!important`; deshalb steht
+   hier `!important` daneben, und die ID entscheidet.
+   -------------------------------------------------------------------------- */
+#buehne .deckung {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   R2 — DIE KLEMME DER BLATTAUFSICHT.
+
+   `kern/haushalt.js` schliesst ein ganzseitiges Blatt zuerst mit dem
+   Schliessknopf des Stuecks, dann mit seinem Reiter. Findet es keinen von
+   beiden, klemmt es das Blatt weg — weggeschnitten, nicht versteckt, genau
+   wie `.stadt-zugeklappt` es seit Welle 8 tut: Platz, Groesse und Umbruch
+   bleiben stehen, gedeckt wird nichts, und die Klemme faellt beim naechsten
+   Neuzeichnen des Stuecks von selbst ab.
+   WELLE 11: ein Stueck, dessen Blatt hier landet, bekommt einen eigenen
+   Schliessknopf; dann greift die Klemme nie.
+   -------------------------------------------------------------------------- */
+.kern-blatt-zu {
+  clip-path: inset(50%) !important;
+  pointer-events: none !important;
 }
 
 /* Ein Stueck, das beim Aufbau geworfen hat, wird hier vermerkt statt die

@@ -71,10 +71,15 @@
 
     fach.appendChild(leiste);
 
-    /* Haus und Generation, klein unter der Leiste. */
+    /* Haus und Generation, klein unter der Leiste.
+       WELLE 10, Auflage R1/R6: der Schriftboden max(12px, …) kam dazu — die
+       Zeile stand bei 1366x768 auf 10,9 px und zaehlte als einer der 505
+       Textknoten der vierten Latte. Auf der Entwurfsleinwand aendert er
+       nichts (dort ist calc(var(--s)*22) = 22 px). Das Papier hinter der
+       Zeile nimmt ihr `grund.css` ab; der Lichthof hier traegt sie allein. */
     var haus = B.el('div', 'hauszeile');
     haus.style.cssText = 'position:absolute;left:50%;top:10.4%;transform:translateX(-50%);'
-      + 'font-size:calc(var(--s)*22);color:#2b1d10;letter-spacing:calc(var(--s)*2);'
+      + 'font-size:max(12px,calc(var(--s)*22));color:#2b1d10;letter-spacing:calc(var(--s)*2);'
       + 'text-shadow:0 0 calc(var(--s)*10) rgba(255,248,230,.95);white-space:nowrap;';
     haus.textContent = B.welt.haus.name + ' · ' + B.uhr.braujahr() + ' · '
       + z.amtszeit.name + ', ' + z.amtszeit.eigenschaftName
@@ -122,11 +127,21 @@
     var deckung = B.welt.zugDeckung();
     if (deckung === null) return;
 
+    /* WELLE 10 — DIESES BAND WAR EIN KASTEN, UND ES MUSS KEINER SEIN.
+       Gemessen im Ladezustand (rahmen-w10/messen.mjs, Verfahren des blinden
+       Kritikers): das Band deckte 959x38 = 36.442 px (E1) bzw. 816x38 =
+       31.008 px (E4) — 5,2 bzw. 4,4 Punkte des UNTERSTEN SECHSTELS, wo jedes
+       Zielblatt seinen Vordergrund traegt. Zusammen mit WEITER stand der
+       Rahmen dort bei 7,1–9,6 %; das Zielblatt bei 2,3 %.
+       Die ZAHL bleibt (sie ist die zweite Messlatte und gehoert auf den
+       Bildschirm, nicht in den Quelltext) — das PAPIER geht. Der Lichthof
+       traegt die Schrift, wie er die Hauszeile traegt. */
     var w = B.el('div', 'deckung');
     w.style.cssText = 'position:absolute;left:93%;top:90%;transform:translate(-100%,-50%);'
-      + 'font-family:var(--mono);font-size:calc(var(--s)*19);color:#2b1d10;'
-      + 'background:rgba(255,248,230,.75);padding:calc(var(--s)*4) calc(var(--s)*10);'
-      + 'border-radius:calc(var(--s)*4);white-space:nowrap;';
+      + 'font-family:var(--mono);font-size:max(12px,calc(var(--s)*19));color:#2b1d10;'
+      + 'font-weight:700;'
+      + 'text-shadow:0 0 calc(var(--s)*9) rgba(255,248,230,.98),'
+      + '0 0 calc(var(--s)*4) rgba(255,248,230,.98);white-space:nowrap;';
     w.setAttribute('data-deckung', B.rund(deckung, 2));
     w.textContent = 'nächster Zug: ' + B.welt.naechsterZug.was + ' — '
       + B.welt.geld(B.welt.naechsterZug.preis)
