@@ -429,7 +429,21 @@ var STADT_DATEN = {
       bilder: { 2: 'tor_gespann_alt', 3: 'tor_gespann_neu', 4: 'tor_lkw' },
       ort: 'tor', dx: -3, dy: 16,
       breite: 8, breiten: { 2: 12.5, 3: 13, 4: 9 },
-      von: 1, bis: 4, wenn: 'keller',
+      /* AUFLAGE A9, Welle 9 — 'keller' -> 'immer'.
+         Der blinde Kritiker: "1884: beim Laden steht das Zweigespann mit
+         Fuhrmann (x 960…1250, y 960…1145), nach 30 Wochen ist es weg, weil
+         der Keller leer ist. Das Zielblatt hat dort dauerhaft Gespann,
+         Fuhrmann, Hund, eine Frau mit Korb und zwei Kinder."
+         Er hat recht, und der Fehler war meine eigene Regel: ein leerer
+         Keller ist im gewoehnlichen Spiel der NORMALFALL — die Hand liefert
+         jede Woche aus, und danach liegt nichts mehr da. Die Bedingung war
+         also nicht "meistens wahr", sondern "meistens falsch", und sie nahm
+         dem Vordergrund seine einzige Bewegung genau dann, wenn man spielt.
+         Ein Fuhrwerk im Tor ist ausserdem keine Aussage ueber den Vorrat:
+         es faehrt LEER hinein und VOLL hinaus, und beides gehoert ins Bild.
+         Was mit dem Keller waechst, bleibt der zweite Fassstapel
+         ('kellervoll') — dort ist die Aussage wahr. */
+      von: 1, bis: 4, wenn: 'immer',
       boden: 'gasse',
       warum: 'Das Gespann faehrt aus dem Tor heraus, steht also in der '
         + 'Gasse und nicht im Hof — genau wie im Zielbild jeder Epoche.',
@@ -578,8 +592,19 @@ var STADT_DATEN = {
           + 'Schwanenhals — das wäre eine Blase und kein Sudkessel.',
       nutzen: { sud: 1 } },
 
+    /* AUFLAGE A7, Welle 9 — DER MALZBODEN STEHT IM HOF, NICHT DAHINTER.
+       Der Fuss lag bei (44|61). Die Hofraute hat an x 44 ihre HINTERE Kante
+       bei y 63,3 (N 33|56 -> O 48|66) und ihre vordere bei 67,1
+       (K.boden: 78,5 - 14,1 * 0,806). Ein Fuss auf 61 steht also HINTER dem
+       Hof, in der Stadt — und der Ochsenstall, der davor steht, deckte
+       genau seine Stelzen zu. Der Kritiker hat das Bild beschrieben, ohne
+       die Zahl zu haben: "der Malzboden auf Stelzen, der in der Aufnahme vor
+       den Kaeufen noch frei auf seinen Steinpfeilern steht und danach nicht
+       mehr zu erkennen ist".
+       dy 19 -> 22 setzt den Fuss auf 64, also in den Hof. Er ist eines der
+       drei Motive, die zielbild/prompts/1350.txt namentlich verlangt. */
     { schluessel: 'malzboden', name: 'Malzboden auf Stelzen', bild: 'malzboden',
-      ort: 'malzboden', dx: 0, dy: 19, breite: 14, von: 1, bis: 1, grund: 30,
+      ort: 'malzboden', dx: 0, dy: 22, breite: 14, von: 1, bis: 1, grund: 30,
       sagt: 'Der Speicher steht auf Steinstümpfen: Ratten können nicht hinauf.',
       nutzen: { platz: 4 } },
 
@@ -683,15 +708,37 @@ var STADT_DATEN = {
     /* Runde 6: dy -4 -> -7. Das Lot fand ihn mit 76 von 393 Spalten bis zu
        37 px unter der Mauerlinie — die rechte Ecke des Stalls stand auf dem
        Mauerkopf neben dem Tor. Jetzt liegt sein tiefster Punkt 14 px darueber. */
+    /* AUFLAGE A7, Welle 9 — DAS STROHDACH LAEUFT NICHT MEHR UEBER DEN
+       MALZBODEN. Der Kritiker: "das strohgedeckte Dach des Ochsenstalls
+       (x 1040…1250, y 680…820) schneidet quer ueber das Schindeldach des
+       Brauhauses und ueber den Malzboden auf Stelzen."
+       Der Stall stand bei (41|65) und war 14 % breit, also x 34…48 — genau
+       ueber den Stelzen (x 37…51). Er geht nach WESTEN in die leere Haelfte
+       des Hofes: (34|71), 12,5 % breit, also x 27,75…40,25. Zwischen ihm
+       und dem Malzboden bleibt damit Hofboden stehen, und er fuellt einen
+       Teil dessen, was der Kritiker als "unbespielte Wiese und Erde"
+       gemessen hat (x 320…700, y 780…1120).
+       Hofprobe: an x 34 liegt die hintere Kante bei 56,7 und die
+       Mauerlinie bei 75,2 — Fuss 71 steht im Hof. */
     { schluessel: 'ochsenstall', name: 'Ochsenstall', bild: 'ochsenstall',
-      ort: 'rampe', dx: 1, dy: -7, breite: 14, von: 1, bis: 1, grund: 28,
+      ort: 'rampe', dx: -6, dy: -1, breite: 12.5, von: 1, bis: 1, grund: 28,
       sagt: 'Ein eigenes Zugtier. Danach fährt die Fuhre, wann das Haus es will.',
       nutzen: {}, wirkt: 'fährt, wann das Haus will' },
 
     /* Runde 6: dy 15 -> 13. Das Lot fand 38 Spalten bis zu 23 px unter der
        Mauerlinie; die vordere Bottichreihe stand auf der Mauer. */
+    /* AUFLAGE A6, Welle 9 — DIE BOTTICHE RAEUMEN DEN MARKTPLATZ.
+       Der Kritiker, mit zwei Ausschnitten belegt (schnitte/e2-hofrand-roh.png
+       gegen e2-hofrand.png): "Eine Fachwerkhalle mit grossem Holzbottich
+       (1600, x 1130…1510, y 650…910) begraebt den Marktbrunnen, einen Hund,
+       ein Pferdefuhrwerk und drei Marktleute."
+       Nachgerechnet: Fuss (47|63). Die hintere Hofkante liegt an x 47 bei
+       65,3 — der Fuss stand also 2,3 Punkte DAHINTER, auf dem Platz der
+       Stadt, und die Halle reichte mit 13,5 % Breite bis x 53,8.
+       Jetzt (41|66): hintere Kante 61,3, Mauerlinie 69,6 — mitten im Hof,
+       und mit 12 % Breite endet sie bei 47, also vor der Ost-Ecke (48,3). */
     { schluessel: 'gaerbottiche', name: 'Gärbottiche', bild: 'gaerbottiche',
-      ort: 'gaertanks', dx: 2, dy: 13, breite: 13.5, von: 1, bis: 2, grund: 24,
+      ort: 'gaertanks', dx: -4, dy: 16, breite: 12, von: 1, bis: 2, grund: 24,
       sagt: 'Offene Holzbottiche unter einem Schutzdach. Was hier gärt, ist obergärig.',
       nutzen: { platz: 4 } },
 
@@ -743,8 +790,10 @@ var STADT_DATEN = {
       nutzen: { platz: 4 } },
 
     /* --- Epoche II --------------------------------------------------- */
+    /* Dieselbe Rechnung wie beim Malzboden (A7): Fuss 61 lag hinter der
+       Hofkante (63,3 an x 44). dy 19 -> 22. */
     { schluessel: 'darre', name: 'Darre', bild: 'darre',
-      ort: 'malzboden', dx: 0, dy: 19, breite: 15, von: 2, bis: 2, grund: 42,
+      ort: 'malzboden', dx: 0, dy: 22, breite: 15, von: 2, bis: 2, grund: 42,
       sagt: 'Über dem Rauch wird das Malz trocken. Wie heiß man darrt, entscheidet die Farbe.',
       nutzen: { rohstoff: 40 } },
 
@@ -901,8 +950,16 @@ var STADT_DATEN = {
       sagt: 'Lindes Kältemaschine. Ab jetzt braucht der Sommer keine Erlaubnis mehr.',
       nutzen: { sud: 4 } },
 
+    /* AUFLAGE A6, Welle 9 — DER MAELZEREITURM STEHT IM HOF.
+       Der Kritiker: "Der Maelzereiturm (1970 und 1884, ort: 'malzboden' =
+       44 % / 42 % -> x 1050…1340, y 600…745) steht mitten in der Stadt und
+       begraebt eine Ladenzeile samt geparktem rotem Wagen."
+       Nachgerechnet stimmt es: Fuss (44|61), hintere Hofkante an x 44 ist
+       63,3. dy 19 -> 23 setzt den Fuss auf 65 — zwischen hintere Kante 63,3
+       und Mauerlinie 67,1, also im Hof. Ein Turm darf umziehen; gegraben
+       wird an ihm nichts (spiel/LIESMICH.md). */
     { schluessel: 'maelzerei', name: 'Mälzereiturm', bild: 'maelzerei',
-      ort: 'malzboden', dx: 0, dy: 19, breite: 10.5, von: 3, bis: 4, grund: 85,
+      ort: 'malzboden', dx: 0, dy: 23, breite: 10.5, von: 3, bis: 4, grund: 85,
       sagt: 'Fünf Böden übereinander. Das Haus mälzt sein Malz wieder selbst.',
       nutzen: { rohstoff: 120 } },
 
@@ -990,11 +1047,26 @@ var STADT_DATEN = {
           + 'Das ist nicht Technik, das ist Werbung.',
       nutzen: { sud: 16 } },
 
+    /* AUFLAGE A6, Welle 9 — DER VERWALTUNGSBAU KOMMT IN DEN HOF ZURUECK.
+       Der Kritiker, mit zwei Ausschnitten belegt (schnitte/e4-markt-roh.png
+       gegen e4-markt-spiel.png): "Der Verwaltungsbau (blauer Glasbau,
+       x 1420…1610, y 675…930) haengt am Ort tor (45 % / 64 %) mit dx: 8 und
+       steht damit acht Prozent rechts vom eigenen Hoftor, auf der
+       Stadtstrasse. Vor dem Kauf liegen dort das Vordach und die Zapfsaeule
+       der Tankstelle; danach sind sie weg."
+       Das war Absicht ("an der Strasse, wo man ihn sieht") und trotzdem
+       falsch: die Regel dieses Spiels heisst nicht "wo man ihn sieht",
+       sondern "die Stadt gehoert der Stadt". Ein Buerohaus ist gebaut und
+       nicht gegraben, es darf also umziehen (spiel/LIESMICH.md).
+       Neu (42|65): hintere Hofkante an x 42 ist 62, Mauerlinie 68,4 — der
+       Fuss steht im Hof, gleich innen neben dem Tor, wo an einer Brauerei
+       auch das Pfoertnerhaus steht. Breite 11 -> 9,5, damit er mit
+       x 37,25…46,75 vor der Ost-Ecke (48,3) endet. `boden: 'gasse'` faellt
+       weg — er steht jetzt auf dem Hof und nicht in der Gasse. */
     { schluessel: 'verwaltung', name: 'Verwaltungsbau', bild: 'verwaltung',
-      ort: 'tor', dx: 8, dy: -3, breite: 11, von: 4, bis: 4, grund: 90,
-      boden: 'gasse', warum: 'Derselbe Platz wie das Kontor von 1600, drei '
-        + 'Geschosse hoeher: an der Strasse, wo man ihn sieht.',
-      sagt: 'Drei Geschosse Schreibtisch. Ein Haus, das eine Marke ist, wird verwaltet.',
+      ort: 'tor', dx: -3, dy: 1, breite: 9.5, von: 4, bis: 4, grund: 90,
+      sagt: 'Drei Geschosse Schreibtisch, gleich innen neben dem Tor. '
+          + 'Ein Haus, das eine Marke ist, wird verwaltet.',
       nutzen: {}, wirkt: 'Ordnung im Buch' }
   ]
 };
