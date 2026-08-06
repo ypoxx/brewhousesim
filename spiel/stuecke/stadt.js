@@ -502,8 +502,30 @@
      verschoben, ohne dass sich am Spiel etwas geaendert haette. */
   var bauhofZu = true;
 
+  /* AUFLAGE A3, dritter Fall — GEFUNDEN BEIM PRUEFEN DER EIGENEN ABHILFE,
+     und deshalb steht er hier und nicht in der Meldung.
+
+     Die zugeklappte Lade deckt nichts zu. Die AUFGESCHLAGENE tat es sehr
+     wohl: `stadt-w9/gespielt.mjs` (dreissig echte Klicks, Lade offen) fand
+     in allen vier Epochen den Kopf des FUHRE-Bretts (x 578…2174, y 169…229)
+     unter ihr und dazu den Chronikgriff DES PREISES. Es waere albern, den
+     Kasten wegzuraeumen, der andere zerschneidet, und den neuen genauso
+     zerschneiden zu lassen.
+
+     Also gilt fuer die Lade wortwoertlich die Regel, die A3 vorschlaegt:
+     EIN AUFLIEGENDES BLATT SCHLIESST DIE BRETTER DARUNTER. Wer die Lade
+     aufschlaegt, klappt damit die fremden Bretter zu; wer ein fremdes Brett
+     aufschlaegt, klappt die Lade zu. Das ist dieselbe Ordnung, nach der die
+     Bretter untereinander schon seit Runde 7 verfahren (`platzordnung`) —
+     wer zuletzt aufschlaegt, liegt oben —, nur dass die Lade bis Welle 9
+     nicht mitspielte, weil sie nie zuklappte. */
   function bauhofSchalten() {
     bauhofZu = !bauhofZu;
+    if (!bauhofZu) {
+      Object.keys(lage).forEach(function (k) {
+        if (lage[k] === 'auf') { lage[k] = 'zu'; aufZeit[k] = 0; }
+      });
+    }
     handZeit = Date.now();
     if (B.ton && B.ton.spiele) B.ton.spiele('stadt:reiter');
     B.sende('zeichne', { grund: 'stadt:bauhof' });
