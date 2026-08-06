@@ -210,9 +210,14 @@
 .gg-hofbau { position: absolute; width: calc(var(--s) * 160); pointer-events: none;
              display: flex; justify-content: center; }
 
+/* 340 und nicht 250: `.gg-vorschild` ist einzeilig (damit der Block flach
+   bleibt und in 1884 unter dem gemalten Ortsschild Platz hat) und misst
+   gemessene 325 px. Ein Kind, das breiter ist als sein Kasten, quillt heraus
+   — und dann rechnet die Randwache mit der falschen Zahl. Wer diese Breite
+   aendert, aendert die Zahl in zeichneHof (randDx) mit. */
 .gg-hof {
   position: absolute;
-  width: calc(var(--s) * 250);
+  width: calc(var(--s) * 340);
   display: flex;
   flex-direction: column;
   align-items: center;

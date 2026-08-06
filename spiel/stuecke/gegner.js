@@ -1930,7 +1930,7 @@
     /* Bauten und Vorsprung stehen zwischen dem gemalten Ortsschild und
        seinem Namensschild: unten verankert, damit sie nach oben wachsen und
        dem Namensschild nie ins Gesicht rutschen. */
-    B.orte.setze(hof, s.ort, { anker: 'unten', dx: randDx(s.ort, s.dx || 0, 250),
+    B.orte.setze(hof, s.ort, { anker: 'unten', dx: randDx(s.ort, s.dx || 0, 340),
       dy: (s.hofDy === undefined ? 4 : s.hofDy) });
     hof.setAttribute('data-frei', 'gegner');
     fach.appendChild(hof);

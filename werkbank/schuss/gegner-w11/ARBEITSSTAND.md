@@ -81,6 +81,122 @@ Wochenzugzeile und frisst sie auf. Genau das hat der Kritiker gesehen.**
 Der Auftrag nennt 1810 px für 1970 — das ist ein anderer Spielstand, aber
 dasselbe Verhältnis: mehr als die Hälfte des Satzes fehlt.
 
+### 1.4 Was in den anderen Zuständen dazukommt
+
+`sonde.mjs` mit `BAUEN=34 ESC=1` (der Zustand, in dem der blinde Kritiker
+gemessen hat) und mit `WOCHEN=30`:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| gegner, 34 Baurunden + Escape | 187.216 | 211.056 | 211.824 | **265.232** px |
+| davon oberstes ⅙ | 0 | 0 | 0 | **16.576** px |
+| gegner, 30 Wochen | — | — | — | **419.568** px |
+
+**`haushalt.ueberRand()` im gebauten Zustand, 1970 — der Befund des Rahmens ist
+nachgestellt:**
+
+```
+{"stueck":"gegner","klasse":"gg-ziel gg-konzern zuteuer",
+ "mass":"312×52 @2458,202","text":"verhandelt · noch 6 Wo.zuvorkommen 60.26…"}
+```
+
+2458 + 312 = 2770, also 18 px über die 2752 hinaus. Genau die Stelle, an der
+der Kritiker nur noch „Wo" sah.
+
+**A3, gemessen statt vermutet** (jedes Ding des GEGNERS gegen jede gemalte
+Beschriftung, im gebauten Zustand):
+
+| Epoche | Treffer | Fläche | wer auf wem |
+|---|---|---|---|
+| 1350 | 4 | 3.024 px² | `img.gg-hofbild` auf „BRAUHAUS ZUM ADLER" |
+| 1600 | 4 | 2.652 px² | `img.gg-hofbild` auf „BRAUSTATT ADLER" |
+| **1884** | **3** | **634 px²** | **`button.gg-sitz` 366×218 @1964,584 auf „GASTHOF LINDENHOF"** |
+| 1970 | 1 | 475 px² | `div.gg-paar` auf „ST. MICHAEL" |
+
+Die dritte Zeile ist Befund (C) des Kritikers, Ziffer für Ziffer: die Karte ist
+im gebauten Zustand 218 px hoch statt 164, ihre Unterkante steht bei y = 802,
+und „GASTHOF LINDENHOF" beginnt bei y = 787.
+
+**A10, zweite Hälfte, gemessen:** in 1970 trägt `.gg-feld b` den Text
+`2.637.150 DM` mit 130 px Bedarf in einem 109 px breiten Kasten, `text-overflow:
+clip` — **abgeschnitten ohne Auslassungspunkte**, in jedem gemessenen Zustand.
+
+### 1.5 Welche Schicht welches Schild trägt — der Grund, warum (C) möglich war
+
+Nachgelesen in `stuecke/stadt.js`:
+
+* `zeichneNamen` und `zeichneHausschild` malen **ST. MICHAEL · GASTHOF
+  LINDENHOF · BAHNHOF · das Hoftorschild** in die Ebene **`bau`**
+  (`teile()`, Zeile 1620) — also **unter** die Ebene `marken`, in der DER
+  GEGNER steht. Diese drei kann dieses Stück anschneiden, und genau das ist
+  passiert.
+* `zeichneGegnername` malt **BRAUEREI ADLER / ADLER-BRÄU AG /
+  NORDSTERN-GRUPPE** in die Ebene **`hand`** mit `z-index: 962` — also
+  **über** DEN GEGNER. Diese kann dieses Stück geometrisch überlagern, aber
+  nicht anschneiden: der Name bleibt lesbar, verdeckt wird das eigene Zeichen.
+
+Das ist keine Ausrede, sondern die Trennlinie für die Abnahme: **die drei
+Schilder in `bau` müssen frei bleiben, und sie sind es.**
+
 ---
 
-*(Fortsetzung wird während der Arbeit geschrieben.)*
+## 2 — Was gebaut wurde
+
+### Der Satz, aus dem alles folgt
+
+> **Der Gegner klebt keine Karteikarten mehr auf die Stadt. Er hängt Schilder,
+> und ein Schild ist gemalt.**
+
+Der Haushalt begründet die Grenze mit drei Worten: *gegner | 28.000 | 8.000 |
+„die Gegnerkarte"*. Also **ein** Kasten je Haus gegenüber — sein Namensschild —
+und alles andere gemalt: Schrift mit heller Strichkontur (`paint-order: stroke
+fill`) und Lichthof, kein Papier, kein Rahmen, kein Schlagschatten.
+
+**Was das NICHT ist: weniger anzeigen.** Kein Satz, keine Zahl und kein Knopf
+ist vom Schirm verschwunden. Gemessen, nicht behauptet — `sonde.mjs` listet
+jeden `[data-zug^="gegner:"]` mit Maße, Preisschild und Treffbarkeit, vorher
+und nachher, auf zwei eingefrorenen Ständen:
+
+| Epoche | Züge vorher | nachher | von der Maus zu treffen | mit Preisschild |
+|---|---|---|---|---|
+| 1350 | 11 | **11** | 8 → **8** | 4 → **4** |
+| 1600 | 13 | **13** | 10 → **10** | 5 → **5** |
+| 1884 | 13 | **13** | 10 → **10** | 5 → **5** |
+| 1970 | 12 | **12** | 9 → **9** | 4 → **4** |
+
+Kein `data-zug` ist hinzugekommen, keiner ist fort, keiner ist unerreichbar
+geworden.
+
+### Die sechs Änderungen, jede mit ihrer Auflage
+
+| # | Was | Auflage | Datei |
+|---|---|---|---|
+| 1 | Die Gegnerkarte wird ein Namensschild: 366×171 → 268×39, ohne Schlagschatten, feste Höhe | Haushalt, A3 | `gegner.js` `zeichneSitz`, `gegner.css` `.gg-sitz` |
+| 2 | Kasse, Züge, sein Preis: eine gemalte Zeile mit unzerbrechlichen Feldern statt drei enger Spalten | **A10** | `gegner.css` `.gg-zahlen/.gg-feld` |
+| 3 | Das Hofbild steht über dem gemalten Ortsschild statt darauf | **A3** | `gegner.js` `zeichneHof`, `.gg-hofbau` |
+| 4 | „umkämpft" verlässt das unterste Sechstel und hängt an dem Giebel, um den gestritten wird | **A6** | `gegner.js` `meldeZug/kennzahlZeile/zeichneAdressen` |
+| 5 | `.gg-bandzeile .was` bricht um statt zu kürzen; die Liste wird ein Rollkasten | **A10** | `gegner.css` `.gg-bandliste/.was` |
+| 6 | Randwache: jedes Zeichen hält sich selbst im Bild (`randDx`) | `ueberRand()` | `gegner.js` `amRand/randDx/BREIT` |
+
+### Zwei eigene Fehler beim Bauen, gefunden und behoben
+
+**F1 — Das Hofbild ist zuerst zur Seite gerückt, und das war falsch.**
+Der erste Anlauf gegen A3 hat `gg-hof` um 9 Prozentpunkte nach links gesetzt.
+Die Zahl stimmte danach (0 Treffer), das Bild nicht: seine Brauerei stand
+mitten in der Stadt statt jenseits des Flusses. *Ich habe es nur gesehen, weil
+ich das PNG angesehen habe und nicht nur die Zahl.* Jetzt steht der Stapel am
+selben Ort senkrecht gestaffelt — Hofbild, darunter das gemalte Ortsschild,
+darunter Bauten und Vorsprung, darunter sein Namensschild.
+
+**F2 — Ein Trennpunkt sah aus wie ein leeres Rechteck.**
+Die gemalte Zahlenzeile trennte ihre Felder mit `.gg-feld + .gg-feld::before {
+content: '· ' }`. Bricht die Zeile um, stand der Mittelpunkt **allein am
+Zeilenanfang** — und ein Mittelpunkt mit heller Strichkontur sieht bei
+siebenfacher Vergrößerung aus wie ein kleines leeres Rechteck. Das ist genau
+das, wonach Auflage 7 des Urteils fragt. Der Punkt hängt jetzt **hinten** am
+Feld (`:not(:last-child)::after`); `.gg-feld` ist `nowrap`, also kann er nie
+allein stehen.
+
+---
+
+*(Fortsetzung wird während der Arbeit geschrieben — Messungen laufen.)*
