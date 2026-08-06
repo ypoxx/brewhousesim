@@ -595,3 +595,35 @@ Epochen auf dem Nachstand 8931, jeder Satz durch das Messfenster.
 | `alles-messen.sh` | der ganze Satz, sequenziell durchs Messfenster |
 | `rho-auswerten.sh` | drei Schnitte + Jahre unter 1× |
 | `messungen/` | alle Rohdaten, `vorher2-*` = `37f4b44`, `nachher-*` = Nachstand `1f1e9c9b5452` |
+## Satz A — und er ist Ziffer für Ziffer der Vorzustand
+
+| Epoche | 12 J | 13 J | 14 J | Jahre < 1× | Kasse | Fehler |
+|---|---|---|---|---|---|---|
+| 1350 vorher | −0,245 | −0,170 | −0,336 | 2/14 | 28–524 | 0 |
+| **1350 nachher A** | **−0,245** | **−0,170** | **−0,336** | **2/14** | **28–524** | **0** |
+| 1600 vorher | −0,189 | +0,049 | −0,116 | 0/14 | 291–2851 | 0 |
+| **1600 nachher A** | **−0,189** | **+0,049** | **−0,116** | **0/14** | **291–2851** | **0** |
+| 1884 vorher | +0,168 | +0,346 | +0,393 | 1/14 | 1757–23789 | 0 |
+| **1884 nachher A** | **+0,168** | **+0,346** | **+0,393** | **1/14** | **1757–23789** | **0** |
+| 1970 vorher | −0,112 | −0,236 | −0,304 | 1/14 | 320–95857 | 0 |
+| **1970 nachher A** | **−0,112** | **−0,236** | **−0,304** | **1/14** | **320–95857** | **0** |
+
+**Keine einzige Ziffer hat sich bewegt** — nicht ρ, nicht die Jahre unter 1×,
+nicht einmal die Spannweite der Kasse. Das ist der Satz, auf den es bei
+dieser Welle ankam: *„Layout bewegt die Kennzahl"* — hier hat es das nicht
+getan, und zwar messbar nicht. Größter Wert 0,393 (1884, 14 Jahre); die
+Latte liegt bei 0,700. Jahre unter 1×: 2/0/1/1 von 14, erlaubt ist eines
+von sechs (= 2,33 von 14).
+
+## Greift die Wache beim Spielen ein? Nein — gemessen
+
+`messungen/wache-w30-ohne-escape.txt`: 30 × WEITER, **kein** Escape, alle
+vier Epochen. In jeder: `geklemmt() {}` · `ohneGriff() {}` · `spur() []` ·
+`lage` 0 · Seitenfehler 0 · `verdeckt()` 0. Offen ist jeweils **genau ein**
+ganzseitiges Blatt — die Sommertafel der FUHRE (1596×847 bis 1596×943) —,
+also hatte die Regel „höchstens eines" nichts zu tun.
+
+Das ist der Beleg, den die zweite Messlatte braucht: **die Blattaufsicht
+fasst während des Spielens nichts an.** Sie greift nur, wenn der Spieler
+Escape drückt, und die messende Hand (`linie.mjs`) drückt Escape nie. Genau
+deshalb steht ρ unverändert.
