@@ -1,0 +1,15 @@
+MESSFENSTER offen — load 1.05 0.78 0.46
+E1 XX  30 Klicks -> 1351/1 · lage=0 fehler=0 · Lade auf · schneidet 1 · verdeckt 1 · offene Bretter 1 · verdeckte Karten 0 · BLATT-KINDER 6
+    ! [{"wer":"fuhre","unter":".stadt-bauhof","kopf":[578,169,2174,229]}]
+    ! [{"zug":"preis:chronik-auf","unter":"bauhof"}]
+E2 XX  30 Klicks -> 1601/1 · lage=0 fehler=0 · Lade auf · schneidet 1 · verdeckt 1 · offene Bretter 1 · verdeckte Karten 0 · BLATT-KINDER 6
+    ! [{"wer":"fuhre","unter":".stadt-bauhof","kopf":[578,169,2174,229]}]
+    ! [{"zug":"preis:chronik-auf","unter":"bauhof"}]
+E3 XX  30 Klicks -> 1885/1 · lage=0 fehler=0 · Lade auf · schneidet 1 · verdeckt 2 · offene Bretter 1 · verdeckte Karten 0 · BLATT-KINDER 6
+    ! [{"wer":"fuhre","unter":".stadt-bauhof","kopf":[578,169,2174,229]}]
+    ! [{"zug":"gegner:abloesen:bahnhofswirt","unter":"bauhof"},{"zug":"preis:chronik-auf","unter":"bauhof"}]
+E4 XX  30 Klicks -> 1971/1 · lage=0 fehler=0 · Lade auf · schneidet 1 · verdeckt 2 · offene Bretter 2 · verdeckte Karten 1 · BLATT-KINDER 6
+    ! [{"wer":"fuhre","unter":".stadt-bauhof","kopf":[578,169,2174,229]}]
+    ! [{"zug":"gegner:abloesen:pfarrhof","unter":"bauhof"},{"zug":"preis:chronik-auf","unter":"bauhof"}]
+    verdeckte Karten: erb-leiste stadt-verdeckt
+4 Epochen mit Befund

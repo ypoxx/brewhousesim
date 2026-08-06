@@ -1,0 +1,274 @@
+[
+ {
+  "epoche": 1,
+  "wochen": 0,
+  "kaesten": {
+   "gesamt": 21.3,
+   "oben": 50.6,
+   "mitte": 15.9,
+   "unten": 13.4
+  },
+  "alles": {
+   "gesamt": 22,
+   "oben": 50.6,
+   "mitte": 17,
+   "unten": 13.4
+  },
+  "je": {
+   "stadt": {
+    "gesamt": 2.8,
+    "oben": 15.7,
+    "mitte": 0.2,
+    "unten": 0
+   },
+   "fu": {
+    "gesamt": 0,
+    "oben": 0,
+    "mitte": 0,
+    "unten": 0
+   },
+   "pr": {
+    "gesamt": 2.1,
+    "oben": 11.7,
+    "mitte": 0.2,
+    "unten": 0
+   },
+   "gg": {
+    "gesamt": 4.6,
+    "oben": 0,
+    "mitte": 5.9,
+    "unten": 4
+   },
+   "sud": {
+    "gesamt": 2.2,
+    "oben": 0,
+    "mitte": 3.3,
+    "unten": 0
+   },
+   "nm": {
+    "gesamt": 0.8,
+    "oben": 0,
+    "mitte": 1.2,
+    "unten": 0
+   },
+   "erb": {
+    "gesamt": 3.4,
+    "oben": 0,
+    "mitte": 5.1,
+    "unten": 0
+   },
+   "kopf": {
+    "gesamt": 5.9,
+    "oben": 26,
+    "mitte": 0,
+    "unten": 9.4
+   }
+  },
+  "lage": 0,
+  "fehler": []
+ },
+ {
+  "epoche": 2,
+  "wochen": 0,
+  "kaesten": {
+   "gesamt": 21.6,
+   "oben": 51.2,
+   "mitte": 16.7,
+   "unten": 11.9
+  },
+  "alles": {
+   "gesamt": 22.3,
+   "oben": 51.2,
+   "mitte": 17.7,
+   "unten": 11.9
+  },
+  "je": {
+   "stadt": {
+    "gesamt": 2.5,
+    "oben": 13.7,
+    "mitte": 0.4,
+    "unten": 0
+   },
+   "fu": {
+    "gesamt": 0,
+    "oben": 0,
+    "mitte": 0,
+    "unten": 0
+   },
+   "pr": {
+    "gesamt": 2.1,
+    "oben": 11.8,
+    "mitte": 0.2,
+    "unten": 0
+   },
+   "gg": {
+    "gesamt": 4.7,
+    "oben": 0,
+    "mitte": 6.3,
+    "unten": 3.3
+   },
+   "sud": {
+    "gesamt": 2.3,
+    "oben": 0,
+    "mitte": 3.5,
+    "unten": 0
+   },
+   "nm": {
+    "gesamt": 0.9,
+    "oben": 0,
+    "mitte": 1.4,
+    "unten": 0
+   },
+   "erb": {
+    "gesamt": 3.4,
+    "oben": 0,
+    "mitte": 5.1,
+    "unten": 0
+   },
+   "kopf": {
+    "gesamt": 5.9,
+    "oben": 26.6,
+    "mitte": 0,
+    "unten": 8.6
+   }
+  },
+  "lage": 0,
+  "fehler": []
+ },
+ {
+  "epoche": 3,
+  "wochen": 0,
+  "kaesten": {
+   "gesamt": 21.2,
+   "oben": 52.1,
+   "mitte": 15.7,
+   "unten": 12.5
+  },
+  "alles": {
+   "gesamt": 21.2,
+   "oben": 52.1,
+   "mitte": 15.7,
+   "unten": 12.5
+  },
+  "je": {
+   "stadt": {
+    "gesamt": 2.7,
+    "oben": 15.5,
+    "mitte": 0.2,
+    "unten": 0
+   },
+   "fu": {
+    "gesamt": 0,
+    "oben": 0,
+    "mitte": 0,
+    "unten": 0
+   },
+   "pr": {
+    "gesamt": 2.1,
+    "oben": 11.7,
+    "mitte": 0.2,
+    "unten": 0
+   },
+   "gg": {
+    "gesamt": 4.3,
+    "oben": 0,
+    "mitte": 5.6,
+    "unten": 3.6
+   },
+   "sud": {
+    "gesamt": 2.3,
+    "oben": 0,
+    "mitte": 3.5,
+    "unten": 0
+   },
+   "nm": {
+    "gesamt": 0.8,
+    "oben": 0,
+    "mitte": 1.2,
+    "unten": 0
+   },
+   "erb": {
+    "gesamt": 3.4,
+    "oben": 0,
+    "mitte": 5.2,
+    "unten": 0
+   },
+   "kopf": {
+    "gesamt": 6.1,
+    "oben": 27.8,
+    "mitte": 0,
+    "unten": 8.9
+   }
+  },
+  "lage": 0,
+  "fehler": []
+ },
+ {
+  "epoche": 4,
+  "wochen": 0,
+  "kaesten": {
+   "gesamt": 21.8,
+   "oben": 53.1,
+   "mitte": 16.4,
+   "unten": 11.9
+  },
+  "alles": {
+   "gesamt": 22.1,
+   "oben": 53.1,
+   "mitte": 16.9,
+   "unten": 11.9
+  },
+  "je": {
+   "stadt": {
+    "gesamt": 2.7,
+    "oben": 15.5,
+    "mitte": 0.2,
+    "unten": 0
+   },
+   "fu": {
+    "gesamt": 0.1,
+    "oben": 0,
+    "mitte": 0.1,
+    "unten": 0
+   },
+   "pr": {
+    "gesamt": 2.1,
+    "oben": 11.7,
+    "mitte": 0.2,
+    "unten": 0
+   },
+   "gg": {
+    "gesamt": 5,
+    "oben": 0,
+    "mitte": 6.7,
+    "unten": 3.3
+   },
+   "sud": {
+    "gesamt": 2.3,
+    "oben": 0,
+    "mitte": 3.5,
+    "unten": 0
+   },
+   "nm": {
+    "gesamt": 0.8,
+    "oben": 0,
+    "mitte": 1.2,
+    "unten": 0
+   },
+   "erb": {
+    "gesamt": 3.2,
+    "oben": 0,
+    "mitte": 4.8,
+    "unten": 0
+   },
+   "kopf": {
+    "gesamt": 6,
+    "oben": 27.3,
+    "mitte": 0,
+    "unten": 8.6
+   }
+  },
+  "lage": 0,
+  "fehler": []
+ }
+]
