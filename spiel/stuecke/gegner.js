@@ -1635,7 +1635,14 @@
      umkaempfte Zug an einer Adresse haengt, die gerade KEIN Zeichen im Bild
      hat (der Notartermin ist so ein Fall). Dann steht sie am Ort, mit
      demselben Wortlaut. */
-  function kennzahlZeile() {
+  /* `amSchild` heisst: die Zeile haengt unmittelbar unter dem Preisschild,
+     das sie meint. Dann steht „Ablösung Ausschank am Markt — 1.706 M" schon
+     eine Zeile darueber, samt Ort im Bild — ein zweites Mal daneben wuerde
+     dasselbe zweimal auf die Platte schreiben. Der Wortlaut ist nicht fort:
+     er steht am Schild, und im `title` dieser Zeile steht er noch einmal
+     ganz. Steht die Zeile FREI (kein Zeichen an dieser Adresse, etwa beim
+     Notartermin), traegt sie den vollen Satz wie bisher. */
+  function kennzahlZeile(amSchild) {
     var u = Z.umkaempft;
     if (!u || !u.preis) return null;
     var q = B.welt.haus.kasse / u.preis;
@@ -1643,10 +1650,11 @@
     el.setAttribute('data-umkaempft', B.rund(q, 2));
     el.setAttribute('data-umkaempft-preis', String(u.preis));
     el.appendChild(B.el('b', null, 'umkämpft'));
-    el.appendChild(B.el('span', null, u.was + ' — ' + B.welt.geld(u.preis)));
+    if (!amSchild) el.appendChild(B.el('span', null, u.was + ' — ' + B.welt.geld(u.preis)));
     el.appendChild(B.el('i', null, 'Kasse reicht ' + B.zahl(q, 1) + '×'));
-    el.title = 'Der billigste Zug, um den gegenüber jemand mitbietet — nicht der '
-      + 'billigste Posten auf dem Brett. Barschaft geteilt durch diese Summe.';
+    el.title = 'Umkämpft: ' + u.was + ' — ' + B.welt.geld(u.preis) + '. Die Kasse reicht '
+      + B.zahl(q, 1) + '× dafür. Das ist der billigste Zug, um den gegenüber jemand '
+      + 'mitbietet — nicht der billigste Posten auf dem Brett.';
     return el;
   }
 

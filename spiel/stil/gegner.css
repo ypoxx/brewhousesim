@@ -62,13 +62,30 @@
   /* Der Lichthof. Er traegt dunkle Schrift ueber jedem Untergrund der
      Platte — heller Himmel, dunkles Dach, gruene Wiese — ohne dass Papier
      daruntergelegt werden muss. Derselbe Kunstgriff, mit dem der Rahmen in
-     Welle 10 die Hauszeile vom Papier genommen hat. */
+     Welle 10 die Hauszeile vom Papier genommen hat.
+
+     ERSTER ANLAUF WAR ZU SCHWACH, und das steht hier, weil ich es am Bild
+     gesehen habe und nicht an einer Zahl: mit blossem `text-shadow` war
+     „Fass an den Wirt" ueber dem Muehlrad und „3,0 hl statt Geld" ueber dem
+     Zug nicht mehr zu lesen. Ein Schatten verwischt, er trennt nicht.
+     Was trennt, ist eine STRICHKONTUR um jede Letter — der Kunstgriff, mit
+     dem seit jeher Namen in Landkarten stehen: `paint-order: stroke fill`
+     zeichnet erst die helle Kontur, dann die dunkle Schrift darauf. Der
+     Schatten bleibt zusaetzlich, als weicher Rand nach aussen. */
   --gg-lichthof:
-      0 0 calc(var(--s) * 3) rgba(253, 248, 236, 0.98),
-      0 0 calc(var(--s) * 6) rgba(253, 248, 236, 0.95),
-      0 0 calc(var(--s) * 11) rgba(253, 248, 236, 0.85),
-      0 calc(var(--s) * 1) 0 rgba(255, 255, 255, 0.9),
-      0 calc(var(--s) * -1) 0 rgba(255, 255, 255, 0.9);
+      0 0 calc(var(--s) * 4) rgba(253, 248, 236, 0.95),
+      0 0 calc(var(--s) * 9) rgba(253, 248, 236, 0.9),
+      0 0 calc(var(--s) * 16) rgba(253, 248, 236, 0.75);
+}
+
+/* Die Kontur. Sie haengt an der Schriftgroesse: rund ein Fuenftel davon,
+   sonst werden die Lettern klumpig. Vererbt sich auf die Kinder, deshalb
+   steht sie einmal am aeusseren Zeichen und nicht an jeder Zeile. */
+.gg-schild, .gg-wimpel, .gg-ziel, .gg-fass, .gg-amt, .gg-spur, .gg-zahlen,
+.gg-zettel, .gg-marken, .gg-kennzahl, .gg-vorschild, .gg-stammhaus,
+.gg-gewonnen, .gg-frei, .gg-wagenzettel, .gg-zeigertext, .gg-gzblock {
+  -webkit-text-stroke: calc(var(--s) * 3.4) rgba(252, 247, 234, 0.96);
+  paint-order: stroke fill;
 }
 
 .fach-gegner { color: var(--gg-tinte); }
@@ -155,11 +172,13 @@
   gap: calc(var(--s) * 1) calc(var(--s) * 9);
   font-family: var(--mono);
   font-size: max(12px, calc(var(--s) * 14));
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.25;
   color: var(--gg-tinte);
   text-shadow: var(--gg-lichthof);
 }
 .gg-feld { white-space: nowrap; }
+.gg-feld + .gg-feld::before { content: '· '; opacity: 0.55; }
 
 .gg-marken {
   display: flex; flex-wrap: wrap; justify-content: center;

@@ -3945,17 +3945,44 @@
     bl.appendChild(fuss);
 
     fach.appendChild(bl);
-
-    /* DER SAUBERE WEG, den der Rahmen in Welle 10 gebaut und fuer Welle 11
-       ausgeschrieben hat: das Stueck sagt selbst, wie sein Blatt zugeht.
-       Damit braucht die Blattaufsicht keine Klemme und findet den Griff
-       auch dann, wenn ein Reiter gerade nicht dasteht.
-       (`kern/haushalt.js`: „Ein Stueck kann sein Blatt zusaetzlich mit
-       BRAUHAUS.blatt.melde() anmelden.") */
-    if (B.blatt && B.blatt.melde) {
-      B.blatt.melde(bl, function () { schliesseSommer('fuhre-sommer-aufsicht'); });
-    }
   }
+
+  /* ======================================================================
+     WARUM DIESE TAFEL SICH NICHT MIT `BRAUHAUS.blatt.melde()` ANMELDET —
+     gebaut, gemessen und wieder ausgebaut, und deshalb steht es hier.
+
+     Der Rahmen bietet den Stuecken an, ihr Blatt anzumelden; die Aufsicht
+     laeuft dann in dem Augenblick, in dem es aufschlaegt, und haelt
+     „hoechstens ein ganzseitiges Blatt". Diese Tafel hat es getan, und es
+     hat sie das Leben gekostet. Gemessen bei 1366x768, 30 Wochen ohne
+     Escape (`messungen/klein1.txt` gegen `messungen/vorher-klein1.txt`):
+
+       vorher   Sommerblatt 792x492 offen · erb-buch zu
+       mit melde()  Sommerblatt FORT · erb-buch 308.428 px^2 offen
+
+     Die Kette dahinter, Glied fuer Glied:
+       1. Der Anschlag ist klein. Damit klappt die Platzordnung der STADT
+          das Erbe-Buch nicht mehr zu — vorher ueberdeckte die grosse Tafel
+          es um mehr als DECKGRENZE, und das aeltere Brett fiel.
+       2. Unterhalb der Entwurfsleinwand skaliert die Blattgrenze mit der
+          Flaeche: bei 1366x768 sind 200.000 px^2 nur noch 49.632 px^2. Der
+          Anschlag (700x265 = 185.500) ist dort ein „ganzseitiges Blatt".
+       3. `raeumeAuf(false)` behaelt das ZULETZT ins DOM gehaengte Blatt.
+          Das Fach DES ERBEN steht hinter dem der FUHRE — also blieb das
+          Buch liegen und die Jahresentscheidung ging zu.
+
+     Dazu kaeme ein zweiter Preis, den der Rahmen selbst aufgeschrieben
+     hat: `melde()` laeuft bei JEDEM Zeichnen und erzwingt dabei ein Layout
+     ueber die ganze Buehne. Genau diese Arbeit je Bildaufbau hat der
+     Rahmen in Welle 10 wieder ausgebaut, weil sie 1350 zwischen zwei
+     Laeufen derselben Saat auseinandergehen liess (ρ −0,336 gegen +0,270).
+
+     Die Tafel braucht die Aufsicht auch nicht: sie hat einen sichtbaren
+     Schliessknopf mit dem Wort darauf (`fuhre:sommer-zu`), Escape,
+     WEITER, den Reiter der STADT und den Wochenwechsel — fuenf Wege
+     hinaus. Angemeldet gehoert ein Blatt, das KEINEN hat; das ist die
+     Auflage an DAS ERBE, nicht an dieses Stueck.
+     ====================================================================== */
 
   /* ======================================================================
      DIE VERSIEGELUNG — das Ende haelt nicht nur die Uhr an.

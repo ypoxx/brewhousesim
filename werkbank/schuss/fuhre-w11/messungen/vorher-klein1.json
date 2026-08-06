@@ -1,0 +1,113 @@
+{
+ "1": {
+  "jahr": 1351,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 15,
+   "px": 1594887,
+   "anteil": 37.73030125817587,
+   "obenPx": 141122,
+   "obenAnteil": 20.031170512354652,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 1560887,
+   "ueberOben": 131122
+  },
+  "gesamt": {
+   "px": 2211012,
+   "anteil": 52.305993368459305
+  },
+  "oben": {
+   "px": 473392,
+   "anteil": 67.19431322674419
+  },
+  "tafeln": [
+   "fuhre .blatt fu-sommerblatt fu-georgi-1351 NaN×NaN = 390129",
+   "fuhre .fu-sommer-fuss NaN×NaN = 58005"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "fuhre: 1594887/34000 px  oben 141122/10000 px",
+   "stadt: 244465/40000 px  oben 158335/26000 px",
+   "gegner: 228283/28000 px",
+   "preis: 169036/24000 px  oben 80070/20000 px",
+   "sud: 87033/34000 px  oben 8703/6000 px",
+   "name: 29398/20000 px",
+   "kern: 129130/120000 px  oben 108501/80000 px",
+   "klang: 3159/4000 px  oben 3159/3000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1351",
+    "mass": "792×492 @287,84",
+    "flaeche": 390129,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "764×76 @301,489",
+    "flaeche": 58005,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "fu-verlust",
+    "mass": "764×40 @301,298",
+    "flaeche": 30424,
+    "text": "Eine Adresse ist weg:Mühlschenke —"
+   },
+   {
+    "klasse": "fu-sommer-uebergabe",
+    "mass": "764×38 @301,448",
+    "flaeche": 28716,
+    "text": "Weitergeben statt hergeben: Noch 4"
+   },
+   {
+    "klasse": "knopf gross",
+    "mass": "764×37 @301,494",
+    "flaeche": 28262,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "",
+    "mass": "764×25 @301,96",
+    "flaeche": 18981,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "stand": "null blaetter fuhre.blatt fu-sommerblatt fu-georgi-1351",
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:duenn",
+    "b": 234,
+    "h": 26,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:grut",
+    "b": 229,
+    "h": 26,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:stark",
+    "b": 311,
+    "h": 26,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:kofent",
+    "b": 177,
+    "h": 26,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ }
+}
