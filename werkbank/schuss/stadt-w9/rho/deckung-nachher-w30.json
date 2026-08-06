@@ -3,7 +3,7 @@
   "epoche": 1,
   "wochen": 30,
   "kaesten": {
-   "gesamt": 50.7,
+   "gesamt": 50.8,
    "oben": 63.1,
    "mitte": 57.1,
    "unten": 13
@@ -16,9 +16,9 @@
   },
   "je": {
    "stadt": {
-    "gesamt": 2.3,
+    "gesamt": 2.2,
     "oben": 12.5,
-    "mitte": 0.3,
+    "mitte": 0.2,
     "unten": 0
    },
    "fu": {
@@ -40,9 +40,9 @@
     "unten": 3.8
    },
    "sud": {
-    "gesamt": 2.2,
+    "gesamt": 1.4,
     "oben": 0,
-    "mitte": 3.2,
+    "mitte": 2.1,
     "unten": 0
    },
    "nm": {
@@ -145,7 +145,7 @@
    "unten": 12
   },
   "alles": {
-   "gesamt": 46.6,
+   "gesamt": 46.5,
    "oben": 64.2,
    "mitte": 50.8,
    "unten": 12
@@ -176,9 +176,9 @@
     "unten": 3.4
    },
    "sud": {
-    "gesamt": 2.3,
+    "gesamt": 1.4,
     "oben": 0,
-    "mitte": 3.5,
+    "mitte": 2.1,
     "unten": 0
    },
    "nm": {
@@ -207,15 +207,15 @@
   "epoche": 4,
   "wochen": 30,
   "kaesten": {
-   "gesamt": 55.3,
+   "gesamt": 55.4,
    "oben": 66.5,
-   "mitte": 63,
+   "mitte": 63.1,
    "unten": 13.6
   },
   "alles": {
    "gesamt": 55.6,
    "oben": 66.5,
-   "mitte": 63.3,
+   "mitte": 63.4,
    "unten": 13.6
   },
   "je": {
