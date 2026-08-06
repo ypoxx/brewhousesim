@@ -1,0 +1,274 @@
+
+=== EPOCHE 1 nach 30 Wochen  lage 0 Seitenfehler 0 verdeckt  Zuege 105
+  HAUSHALT gesamt 1930128 px (45.7 %)  oben 367392 px (52.1 %)
+  GEGNER   219584/28000 px   oben 0/8000 px   21 Kaesten
+  pruefe(): ["fuhre: 1359296/34000 px  oben 140800/10000 px","gegner: 219584/28000 px","erbe: 136192/28000 px","stadt: 118432/40000 px  oben 66944/26000 px","sud: 89280/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px"]
+  ueberRand(): []
+  tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1351","blatt":true,"mass":"1596×847 @578,169","flaeche":1351246}]
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+      72765 px²   366×199 @1964,584  .gg-sitz gg-adler amort  „Brauhaus zum AdlerHartmann Feist · streitbar ·"
+      25864 px²   815× 32 @1745,1282  .gg-kennzahl amort  „umkämpftAblösung Klosterschenke Obernberg — 42"
+      19472 px²   285× 68 @1096,676  .gg-amt amort  „Klage vor dem Stadtgerichtkostet kein Geld · v"
+      14128 px²   336× 42 @1979,671  .gg-zahlen  „19Züge240 PfKasse7 Pfsein Preis"
+       9729 px²   414× 24 @1940,560  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wochen kürzer"
+       9126 px²   192× 48 @1362,512  .gg-fass zuteuer  „Fass an den WirtVorrat reicht nicht"
+       9126 px²   192× 48 @1142,880  .gg-fass zuteuer  „Fass an den WirtVorrat reicht nicht"
+       9126 px²   192× 48 @2381,819  .gg-fass zuteuer  „Fass an den WirtVorrat reicht nicht"
+       9126 px²   192× 48 @2381,650  .gg-fass zuteuer  „Fass an den WirtVorrat reicht nicht"
+       8911 px²   159× 56 @1362,453  .gg-schild gg-adler fest  „OCH · RATnicht ablösbar"
+       8067 px²   155× 52 @1142,825  .gg-schild gg-adler zuteuer  „TOR · KONablösen 56 Pf"
+       8067 px²   155× 52 @2381,764  .gg-schild gg-adler zuteuer  „FAE · BANablösen 66 Pf"
+       8067 px²   155× 52 @2381,595  .gg-schild gg-adler  „OBE · GEVablösen 42 Pf"
+       4701 px²   168× 28 @2393,624  .gg-spur gg-adler alt amort  „kauft die Grut wegW29"
+       3512 px²   154× 23 @1979,718  .gg-zchip  „kauft die Grut wegW29"
+       3200 px²   149× 22 @2210,546  .gg-wagenzettel  „Adler → Rohstoff"
+       2472 px²   111× 22 @1979,747  .gg-siegel  „Sitz im Rat"
+        900 px²    30× 30 @2082,527  .gg-bau vor  „"
+        900 px²    30× 30 @2115,527  .gg-bau vor  „"
+        900 px²    30× 30 @2148,527  .gg-bau  „"
+        900 px²    30× 30 @2181,527  .gg-bau  „"
+    (21 Kaesten, Summe der Huellen 229059 px²)
+  A3 — GEGNER auf gemalter Beschriftung: 6
+    „BRAUHAUS ZUM ADLER"  3438 px² unter div.gg-hof amort  366×241 @1964,343
+    „BRAUHAUS ZUM ADLER"  3024 px² unter img.gg-hofbild  168×182 @2063,343
+    „ST. MICHAEL"  106 px² unter div.gg-paar amort  192×107 @1362,453
+    „ST. MICHAEL"  106 px² unter button.gg-fass zuteuer  192×48 @1362,512
+    „BRAUHAUS ZUM ADLER"  591 px² unter div.gg-wagen  150×124 @2209,444
+    „BRAUHAUS ZUM ADLER"  591 px² unter img.gg-wagenbild  150×100 @2209,444
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
+    412 px in 412 px QUILLT  clip  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wochen kürz"
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+     155× 25 @1339,965  „BRAUHAUS"  .zeile eins
+     155× 25 @1341,1008  „ZUM ANKER"  .zeile zwei
+     155× 19 @1342,1027  „GEGR. 1350"  .gegr
+     194× 24 @1456,770  „Adler-Ausschank am Mar"  .wort
+      44× 24 @1849,739  „LIN"  .wort
+      51× 24 @1449,724  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      50× 24 @2397,1092  „BRU"  .wort
+      46× 24 @2234,1031  „FAE"  .wort
+      49× 24 @2287,509  „OBE"  .wort
+     191× 18 @2051,461  „BRAUHAUS ZUM ADLER"  .wort
+      72× 17 @44,126  „BAUHOF"  .wort
+     210× 17 @197,126  „OHNE DICH GESCHEHEN"  .wort
+     105× 17 @424,126  „DIE HÄUSER"  .wort
+     151× 17 @577,126  „ANSCHLAGTAFEL"  .wort
+     110× 17 @744,126  „DER KELLER"  .wort
+     144× 17 @897,126  „OCHSENKARREN"  .wort
+     119× 17 @1058,126  „DAS SUDHAUS"  .wort
+     184× 17 @1211,126  „DER RUF DES HAUSES"  .wort
+     236× 17 @1412,126  „Georgi 1351 · Jahresplan"  .wort
+      84× 17 @1666,126  „Das Erbe"  .wort
+     146× 20 @1819,125  „Ortsmarken"  .wort
+     125× 17 @1982,126  „Stadt zeigen"  .wort
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+    fuhre     509 px in  482 px  ellipsis  .fu-notsud-zeile  „0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die P"
+
+=== EPOCHE 2 nach 30 Wochen  lage 0 Seitenfehler 0 verdeckt  Zuege 112
+  HAUSHALT gesamt 1890304 px (44.7 %)  oben 371232 px (52.7 %)
+  GEGNER   212688/28000 px   oben 0/8000 px   20 Kaesten
+  pruefe(): ["fuhre: 1356800/34000 px  oben 140800/10000 px","gegner: 212688/28000 px","erbe: 136192/28000 px","stadt: 126288/40000 px  oben 67200/26000 px","sud: 90272/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 29184/20000 px","kern: 102192/120000 px  oben 82432/80000 px"]
+  ueberRand(): []
+  tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1601","blatt":true,"mass":"1596×847 @578,169","flaeche":1351246}]
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+      53390 px²   366×146 @1964,584  .gg-sitz gg-adler amort  „Braustatt AdlerSebastian Feist · streitbar · h"
+      24048 px²   757× 32 @1802,1282  .gg-kennzahl amort  „umkämpftAblösung Ausschank am Markt — 210 fl ·"
+      19472 px²   285× 68 @1096,676  .gg-amt amort  „Anzeige bei der Zunftladekostet kein Geld · vi"
+      14128 px²   336× 42 @1979,646  .gg-zahlen  „19Züge1.880 flKasse15 flsein Preis"
+       9729 px²   414× 24 @1940,560  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wochen kürzer"
+       9126 px²   192× 48 @1720,619  .gg-fass zuteuer  „Fass in die LadeVorrat reicht nicht"
+       9126 px²   192× 48 @1362,512  .gg-fass zuteuer  „Fass in die LadeVorrat reicht nicht"
+       9126 px²   192× 48 @2381,481  .gg-fass zuteuer  „Fass in die LadeVorrat reicht nicht"
+       9126 px²   192× 48 @1280,1141  .gg-fass zuteuer  „Fass in die LadeVorrat reicht nicht"
+       9126 px²   192× 48 @124,1124  .gg-fass zuteuer  „Fass in die LadeVorrat reicht nicht"
+       8067 px²   155× 52 @1720,564  .gg-schild gg-adler zuteuer  „LIN · ZUNablösen 486 fl"
+       8067 px²   155× 52 @1362,457  .gg-schild gg-adler zuteuer  „OCH · PACablösen 588 fl"
+       8067 px²   155× 52 @2381,426  .gg-schild gg-adler zuteuer  „MUE · PACablösen 378 fl"
+       8067 px²   155× 52 @1280,1086  .gg-schild gg-adler zuteuer  „HIR · PACablösen 420 fl"
+       8067 px²   155× 52 @124,1069  .gg-schild gg-adler  „MKT · PACablösen 210 fl"
+       2865 px²   129× 22 @1979,694  .gg-siegel  „Bürgermeister"
+        900 px²    30× 30 @2082,527  .gg-bau  „"
+        900 px²    30× 30 @2115,527  .gg-bau vor  „"
+        900 px²    30× 30 @2148,527  .gg-bau  „"
+        900 px²    30× 30 @2181,527  .gg-bau vor  „"
+    (20 Kaesten, Summe der Huellen 213197 px²)
+  A3 — GEGNER auf gemalter Beschriftung: 4
+    „BRAUSTATT ADLER"  2652 px² unter div.gg-hof amort  366×253 @1964,330
+    „BRAUSTATT ADLER"  2652 px² unter img.gg-hofbild  168×194 @2063,330
+    „ST. MICHAEL"  106 px² unter div.gg-paar amort  192×103 @1362,457
+    „ST. MICHAEL"  106 px² unter button.gg-fass zuteuer  192×48 @1362,512
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
+    412 px in 412 px QUILLT  clip  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wochen kürz"
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+     194× 38 @1140,897  „BRAUHAUS"  .zeile eins
+     194× 38 @1144,944  „ZUM ANKER"  .zeile zwei
+     193× 28 @1146,967  „GEGR. 1350"  .gegr
+     194× 24 @1456,770  „Adler-Ausschank am Mar"  .wort
+      44× 24 @1849,739  „LIN"  .wort
+      51× 24 @1449,724  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      50× 24 @2397,1092  „BRU"  .wort
+      46× 24 @2234,1031  „FAE"  .wort
+      49× 24 @2287,509  „OBE"  .wort
+     156× 17 @2068,446  „BRAUSTATT ADLER"  .wort
+      72× 17 @44,126  „BAUHOF"  .wort
+     210× 17 @197,126  „OHNE DICH GESCHEHEN"  .wort
+     105× 17 @424,126  „DIE HÄUSER"  .wort
+     121× 17 @577,126  „SUDORDNUNG"  .wort
+     126× 17 @730,126  „DAS GEWÖLBE"  .wort
+     168× 17 @883,126  „PFERDEFUHRWERK"  .wort
+     119× 17 @1068,126  „DAS SUDHAUS"  .wort
+     184× 17 @1221,126  „DER RUF DES HAUSES"  .wort
+     236× 17 @1422,126  „Georgi 1601 · Jahresplan"  .wort
+      84× 17 @1675,126  „Das Erbe"  .wort
+     146× 20 @1828,125  „Ortsmarken"  .wort
+     125× 17 @1991,126  „Stadt zeigen"  .wort
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+    fuhre     571 px in  482 px  ellipsis  .fu-notsud-zeile  „0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · n"
+    name      221 px in  208 px  ellipsis  .nm-medium  „Wirtshausschild und gemarkter Krug"
+
+=== EPOCHE 3 nach 30 Wochen  lage 0 Seitenfehler 0 verdeckt  Zuege 114
+  HAUSHALT gesamt 1744944 px (41.3 %)  oben 373408 px (53.0 %)
+  GEGNER   192288/28000 px   oben 0/8000 px   21 Kaesten
+  pruefe(): ["fuhre: 1152000/34000 px  oben 140800/10000 px","gegner: 192288/28000 px","erbe: 136192/28000 px","stadt: 128320/40000 px  oben 66304/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 105264/120000 px  oben 85504/80000 px"]
+  ueberRand(): []
+  tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1885","blatt":true,"mass":"1596×718 @578,169","flaeche":1145541}]
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+      59938 px²   366×164 @1964,584  .gg-sitz gg-adler amort  „Brauerei AdlerKommerzienrat Alois Feist · gele"
+      22958 px²   723× 32 @1836,1282  .gg-kennzahl amort  „umkämpftAblösung Schenke am Tor — 4.616 M ·Kas"
+      19484 px²   285× 68 @1096,676  .gg-amt amort  „Dem Wirt die Restschuld nachrechnenkostet kein"
+      14128 px²   336× 42 @1979,665  .gg-zahlen  „21Züge21.730 MKasse45 Msein Preis"
+       9729 px²   414× 24 @1940,560  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wochen kürzer"
+       8420 px²   162× 52 @1735,564  .gg-schild gg-adler zuteuer  „LIN · HYPablösen 32.999 M"
+       8067 px²   155× 52 @1381,457  .gg-schild gg-adler  „OCH · VERablösen 5.193 M"
+       8067 px²   155× 52 @1161,825  .gg-schild gg-adler  „TOR · DEPablösen 4.616 M"
+       8067 px²   155× 52 @2537,257  .gg-schild gg-adler  „BHF · VERablösen 8.903 M"
+       5871 px²   124× 48 @1735,619  .gg-fass zuteuer  „FreibierVorrat reicht nicht"
+       5871 px²   124× 48 @1381,512  .gg-fass zuteuer  „FreibierVorrat reicht nicht"
+       5871 px²   124× 48 @1161,880  .gg-fass zuteuer  „FreibierVorrat reicht nicht"
+       5871 px²   124× 48 @2537,312  .gg-fass zuteuer  „FreibierVorrat reicht nicht"
+       4712 px²   147× 32 @2348,988  .gg-frei amort  „frei geworden"
+       2119 px²    93× 23 @1979,712  .gg-zchip  „UnglückW29"
+        900 px²    30× 30 @2049,527  .gg-bau  „"
+        900 px²    30× 30 @2082,527  .gg-bau  „"
+        900 px²    30× 30 @2115,527  .gg-bau vor  „"
+        900 px²    30× 30 @2148,527  .gg-bau vor  „"
+        900 px²    30× 30 @2181,527  .gg-bau  „"
+        900 px²    30× 30 @2214,527  .gg-bau  „"
+    (21 Kaesten, Summe der Huellen 194573 px²)
+  A3 — GEGNER auf gemalter Beschriftung: 0
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 2
+    412 px in 412 px QUILLT  clip  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wochen kürz"
+    1038 px in 731 px  ellipsis  .was  „Kesselschaden beim Adler. Die Versicheru"
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+      89× 17 @2616,386  „BAHNHOF"  .wort
+     205× 39 @1267,966  „BRAUHAUS"  .zeile eins
+     205× 39 @1271,1013  „ZUM ANKER"  .zeile zwei
+     204× 29 @1273,1036  „GEGR. 1350"  .gegr
+     113× 24 @2350,1031  „frei geworden"  .wort
+      44× 24 @1849,739  „LIN"  .wort
+      51× 24 @1433,724  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      50× 24 @2413,1092  „BRU"  .wort
+      46× 24 @2234,1031  „FAE"  .wort
+      48× 24 @2590,432  „BHF"  .wort
+     145× 17 @2176,489  „BRAUEREI ADLER"  .wort
+      72× 17 @44,126  „BAUHOF"  .wort
+     210× 17 @197,126  „OHNE DICH GESCHEHEN"  .wort
+     105× 17 @424,126  „DIE HÄUSER"  .wort
+      80× 17 @577,126  „SUDPLAN"  .wort
+     138× 17 @730,126  „DER EISKELLER"  .wort
+     139× 17 @885,126  „HALBER WAGEN"  .wort
+     119× 17 @1041,126  „DAS SUDHAUS"  .wort
+     184× 17 @1194,126  „DER RUF DES HAUSES"  .wort
+     236× 17 @1395,126  „Georgi 1885 · Jahresplan"  .wort
+      84× 17 @1648,126  „Das Erbe"  .wort
+     146× 20 @1801,125  „Ortsmarken"  .wort
+     125× 17 @1964,126  „Stadt zeigen"  .wort
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+    gegner   1038 px in  731 px  ellipsis  .was  „Kesselschaden beim Adler. Die Versicherung zahlt später als "
+
+=== EPOCHE 4 nach 30 Wochen  lage 0 Seitenfehler 0 verdeckt  Zuege 117
+  HAUSHALT gesamt 2152080 px (50.9 %)  oben 417760 px (59.3 %)
+  GEGNER   419568/28000 px   oben 2880/8000 px   29 Kaesten
+  pruefe(): ["fuhre: 1515184/34000 px  oben 140800/10000 px","gegner: 419568/28000 px","stadt: 173728/40000 px  oben 122112/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 88816/34000 px","name: 35264/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+  ueberRand(): []
+  tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1971","blatt":true,"mass":"1596×943 @578,169","flaeche":1504427}]
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+     112312 px²   578×194 @2119,1055  .gg-gzblock gg-gzangebot amort  „Die Gruppe fragt an60.116 DM für ein Viertel d"
+      63547 px²   366×174 @1964,584  .gg-sitz gg-adler amort  „Adler-Bräu AGDr. Werner Feist · gelehrt · hält"
+      62998 px²   366×172 @2349,768  .gg-sitz gg-konzern amort  „Nordstern-GruppeUte Nordstern · träge · hält 3"
+      28907 px²   556× 52 @2130,1131  .knopf  „Ein Viertel abtreten+60.116 DM"
+      28907 px²   556× 52 @2130,1187  .knopf  „Ausschlagen"
+      27316 px²   860× 32 @1699,1282  .gg-kennzahl amort  „umkämpftAblösung Pfarrschenke St. Michael — 17"
+      19472 px²   285× 68 @1096,676  .gg-amt amort  „Anzeige beim Bundeskartellamtkostet kein Geld "
+      14128 px²   336× 42 @1979,646  .gg-zahlen  „12Züge774.460 DMKasse119 DMsein Preis"
+      14128 px²   336× 42 @2364,831  .gg-zahlen  „16Züge2.910.070 DMKasse4Brauereien"
+       9286 px²   395× 24 @1949,560  .gg-vorschild  „Vorsprung: 1 Ding · wirbt 1 Woche kürzer"
+       9126 px²   192× 48 @1720,619  .gg-fass zuteuer  „Zuschuss in BierVorrat reicht nicht"
+       9126 px²   192× 48 @1528,297  .gg-fass zuteuer  „Zuschuss in BierVorrat reicht nicht"
+       9126 px²   192× 48 @2381,481  .gg-fass zuteuer  „Zuschuss in BierVorrat reicht nicht"
+       9126 px²   192× 48 @2106,972  .gg-fass zuteuer  „Zuschuss in BierVorrat reicht nicht"
+       9126 px²   192× 48 @1280,1141  .gg-fass zuteuer  „Zuschuss in BierVorrat reicht nicht"
+       8983 px²   173× 52 @1720,564  .gg-schild gg-adler  „LIN · LISablösen 43.740 DM"
+       8983 px²   173× 52 @1528,242  .gg-schild gg-adler  „PFA · LISablösen 17.010 DM"
+       8983 px²   173× 52 @2381,426  .gg-schild gg-konzern frisch  „MUE · JVBablösen 36.450 DM"
+       8983 px²   173× 52 @2106,917  .gg-schild gg-konzern zuteuer  „BRU · EXKablösen 77.220 DM"
+       8983 px²   173× 52 @1280,1086  .gg-schild gg-konzern  „HIR · EXKablösen 70.200 DM"
+       7644 px²   336× 23 @1979,693  .gg-wochenzug  „diese Woche 2 Züge ohne dich"
+       5966 px²   262× 23 @2364,904  .gg-zchip  „unterschreibt die JahresvereinbarungW30"
+    (29 Kaesten, Summe der Huellen 498638 px²)
+  A3 — GEGNER auf gemalter Beschriftung: 4
+    „NORDSTERN-GRUPPE"  1324 px² unter div.gg-paar amort  192×103 @2381,426
+    „NORDSTERN-GRUPPE"  1100 px² unter button.gg-fass zuteuer  192×48 @2381,481
+    „NORDSTERN-GRUPPE"  610 px² unter span.gg-fasstext  170×38 @2392,486
+    „NORDSTERN-GRUPPE"  610 px² unter b.  170×20 @2392,486
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 4
+    393 px in 393 px QUILLT  clip  .gg-vorschild  „Vorsprung: 1 Ding · wirbt 1 Woche kürzer"
+    130 px in 109 px  clip  .  „2.910.070 DM"
+    1216 px in 731 px  ellipsis  .was  „Die Nordstern-Gruppe lässt anfragen, ob "
+    1608 px in 731 px  ellipsis  .was  „Die Nordstern-Gruppe übernimmt Klosterbr"
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+      89× 17 @2616,386  „BAHNHOF"  .wort
+     171× 23 @1155,1000  „BRAUHAUS"  .zeile eins
+     171× 23 @1155,1020  „ZUM ANKER"  .zeile zwei
+     113× 24 @2542,371  „frei geworden"  .wort
+      44× 24 @1849,1146  „LIN"  .wort
+      51× 24 @1433,724  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      48× 24 @2606,432  „BHF"  .wort
+     135× 16 @2181,489  „ADLER-BRÄU AG"  .wort
+     172× 17 @2495,478  „NORDSTERN-GRUPPE"  .wort
+      72× 17 @44,133  „BAUHOF"  .wort
+     196× 17 @197,133  „DIE GRUPPE FRAGT AN"  .wort
+     248× 34 @410,125  „MITBIETEN · GASTHOF LINDENHOF"  .wort
+     210× 17 @675,133  „OHNE DICH GESCHEHEN"  .wort
+     105× 17 @901,133  „DIE HÄUSER"  .wort
+      80× 17 @1054,133  „SUDPLAN"  .wort
+      92× 17 @1207,133  „DIE TANKS"  .wort
+      81× 17 @1360,133  „LASTZUG"  .wort
+     119× 17 @1513,133  „DAS SUDHAUS"  .wort
+     184× 17 @1666,133  „DER RUF DES HAUSES"  .wort
+     236× 17 @1867,133  „Georgi 1971 · Jahresplan"  .wort
+      84× 17 @2121,133  „Das Erbe"  .wort
+     146× 20 @2274,132  „Ortsmarken"  .wort
+     125× 17 @2436,133  „Stadt zeigen"  .wort
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+    gegner   1905 px in  731 px  ellipsis  .was  „Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht a"
+    gegner   1608 px in  731 px  ellipsis  .was  „Die Nordstern-Gruppe übernimmt Klosterbräu Obernberg. Sie za"
+    gegner   1216 px in  731 px  ellipsis  .was  „Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich"
+    erbe      253 px in  201 px  ellipsis  .wort  „Versorgungszusage · jährlich"
+    name      258 px in  208 px  ellipsis  .nm-medium  „Kronkorken, Bandenwerbung, Fernsehspot"
+    erbe      199 px in  176 px  ellipsis  .wort  „Nachschrift · 2 Häuser"

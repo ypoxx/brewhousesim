@@ -729,15 +729,46 @@
 
   function ohneArtikel(t) { return String(t).replace(/^(Das|Der|Die)\s+/, ''); }
 
-  /* Der lange Name eines Wirtshauses sprengt einen Knopf, der ein Viertel der
-     Leiste breit ist. Gekuerzt wird von vorn — 'Gasthof Lindenhof' heisst
-     dann 'Lindenhof', nicht 'Gasthof Linden…'. */
+  /* Der lange Name eines Wirtshauses sprengt einen Knopf. Gekuerzt wird von
+     vorn — 'Gasthof Lindenhof' heisst dann 'Lindenhof', nicht 'Gasthof
+     Linden…'.
+
+     WELLE 11, AUFLAGE 9 DES BLINDEN KRITIKERS — HIER STAND EIN
+     AUSLASSUNGSZEICHEN, UND ES DURFTE NIE EINES SEIN.
+     Bis hierher endete diese Funktion mit `n.slice(0,20) + '…'`. Der einzige
+     Name, der die Grenze ueberhaupt erreichte, war 'Pfarrschenke St. Michael'
+     (24 Zeichen) — er stand als 'Pfarrschenke St. Mic…' auf einem Knopf mit
+     Preisschild. Genau das verbietet die Auflage: „kein Knopf mit Preisschild
+     traegt '…'".
+
+     Jetzt wird der GATTUNGSNAME abgeworfen statt der Rest des Wortes
+     ('Pfarrschenke St. Michael' -> 'St. Michael'), und danach ist der
+     laengste Name des Spiels 'Zum Goldenen Ochsen' mit 19 Zeichen. Die
+     Notbremse darunter schneidet an einer WORTGRENZE und ohne Zeichen — ein
+     halber Name ist eine Luege, ein ganzer kurzer Name nicht.
+     Nachgezaehlt ueber alle zwoelf Adressen aus kern/welt.js:61–72:
+       Lindenhof 9 · Zum Goldenen Ochsen 19 · Schenke am Tor 14 ·
+       St. Michael 11 · Muehlschenke 11 · Brueckenwirt 11 ·
+       Faehrhaus am Fluss 17 · Hirsch 6 · Ausschank am Markt 18 ·
+       Obernberg 9 · Bahnhofsgaststaette 18 · Neustadt 8.
+     Die Notbremse ist damit unerreichbar und steht nur fuer den Fall, dass
+     jemand eine dreizehnte Adresse einhaengt. */
   function kurzName(a) {
-    var n = String(a.name || '')
-      .replace(/^(Gasthof|Landgasthof|Gaststätte|Klosterschenke)\s+/i, '')
+    var n = String((a && a.name) || '')
+      .replace(/^(Gasthof|Landgasthof|Gaststätte|Klosterschenke|Pfarrschenke)\s+/i, '')
       .trim();
-    if (!n) n = a.name;
-    return n.length > 21 ? n.slice(0, 20) + '…' : n;
+    if (!n) n = (a && a.name) || '';
+    if (n.length <= 22) return n;
+    var schnitt = n.slice(0, 22);
+    var luecke = schnitt.lastIndexOf(' ');
+    return luecke > 6 ? schnitt.slice(0, luecke) : schnitt;
+  }
+
+  /* Dasselbe fuer die Woerter der Epoche: 'Eine Stiftung ans Kloster' ist als
+     Knopfaufschrift zu lang, 'Stiftung ans Kloster' ist es nicht. Der Artikel
+     traegt nichts, und der Knopf hat kein Pixel zu verschenken. */
+  function knapp(t) {
+    return String(t || '').replace(/^(Eine|Ein|Das|Der|Die|Den)\s+/, '').trim();
   }
 
   /* ======================================================================
@@ -771,8 +802,11 @@
     var w = widerspruchListe();
     if (w.length) {
       var x = w[0], ax = B.welt.adresse(x.schluessel), pw = widerspruchPreis(x);
+      /* AUFLAGE 9: die Aufschrift nennt jetzt das HAUS, um das gestritten
+         wird, nicht das Buch, in dem es steht — das Buch steht ohnehin im
+         Titel. Das ist kuerzer UND sagt mehr. */
       l.push({ zug: 'erbe:widerspruch', art: 'umkaempft', klasse: 'erb-knopf erb-streit',
-        text: e.widerspruch.name.replace(/^(Widerspruch aus dem|Auf den)\s+/, 'Widerspruch · '),
+        text: 'Widerspruch · ' + kurzName(ax),
         kurz: e.widerspruch.name + ' ' + ax.name, preis: pw,
         titel: ax.name + ': ' + geld(x.preis) + ' sind ' + x.jahr + '/' + x.woche
           + ' dafür bezahlt worden, ' + x.wegJahr + '/' + x.wegWoche + ' war es fort ('
@@ -835,7 +869,7 @@
       if (fremd.length) {
         var f = fremd[0], pf = Math.round(wert(f) * 2.2);
         l.push({ zug: 'erbe:anfechten', art: 'umkaempft', klasse: 'erb-knopf erb-streit',
-          text: e.anfechten.name + ' · ' + kurzName(f),
+          text: 'Anfechten · ' + kurzName(f),
           kurz: e.anfechten.name + ' ' + f.name, preis: pf,
           titel: f.name + ' hängt bei ' + wemName(f.bindung.wem) + ' nur an einer Person ('
             + f.bindung.womit + '). Das lässt sich anfechten.',
@@ -847,7 +881,7 @@
       var ps = seelgeraetPreis();
       if (ps > 0) {
         l.push({ zug: 'erbe:seelgeraet', art: 'bindung', klasse: 'erb-knopf',
-          text: e.seelgeraet.name, kurz: e.seelgeraet.name, preis: ps,
+          text: knapp(e.seelgeraet.name), kurz: e.seelgeraet.name, preis: ps,
           titel: e.seelgeraet.satz + ' ' + geistlicheHaeuser().map(function (a) { return a.name; }).join(', ')
             + ' hängen danach am Haus.',
           aus: !B.welt.kann(ps),
