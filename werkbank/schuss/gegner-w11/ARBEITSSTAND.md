@@ -313,6 +313,29 @@ und kauft dafür 60 % eines Satzes zurück.
 Giebel, den sie meint, und ist dort **kein Kasten mehr**. Die Deckung des
 untersten Sechstels durch DEN GEGNER: siehe §5.5.
 
+### 5.5 ρ — die zweite Messlatte
+
+Gemessen mit `rueckkopplung-r3/linie.mjs <epoche> 400`, **einzeln**, jeder Lauf
+allein durch das Messfenster (der Rahmen hat in Welle 10 nachgewiesen, dass
+`welle.sh` die vier Epochen nebeneinander fährt und dabei auf demselben Stand
+eine andere Partie liefert). Ausgewertet mit `fuhre-w6/schnitte.py` (drei
+Schnitte) und `rueckkopplung-r3/auswerten.py` (Jahre unter 1×).
+
+**VORHER, Messstand `7896ee6` auf Hafen 8961:**
+
+| Epoche | 12 J | 13 J | 14 J | Jahre < 1× | Kasse | Fehler |
+|---|---|---|---|---|---|---|
+| 1350 | −0,245 | −0,170 | −0,336 | 2/14 | 28–524 | 0 |
+| 1600 | −0,189 | +0,049 | −0,116 | 0/14 | 291–2851 | 0 |
+| 1884 | +0,168 | +0,346 | +0,393 | 1/14 | 1757–23789 | 0 |
+| 1970 | *(läuft)* | | | | | |
+
+**Und das ist zugleich eine Gerätekontrolle:** diese drei Zeilen sind Ziffer
+für Ziffer die, die der Rahmen in Welle 10 für den Vorzustand gemessen hat —
+dieselben ρ, dieselben Jahre unter 1×, dieselben Kassenspannen. Meine Kette
+misst also dasselbe wie seine.
+
 ---
 
-*(Die photographischen Zahlen und ρ folgen, sobald die Läufe durch sind.)*
+*(Die photographischen Zahlen, ρ nachher und die vierte Latte folgen, sobald
+die Läufe durch sind.)*
