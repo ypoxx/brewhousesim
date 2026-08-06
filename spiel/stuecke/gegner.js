@@ -2459,11 +2459,27 @@
     kopf.appendChild(auf);
     band.appendChild(kopf);
 
+    /* DER KOERPER DES BANDES ROLLT, DER KOPF BLEIBT STEHEN.
+
+       Gemessen, nachdem der Satz umbrechen durfte: das Brett wuchs im
+       gespielten Zustand von 936x158 auf 936x260 = 243.041 px² (1970, 30
+       Wochen) — ueber die 200.000, ab denen der Haushalt des Rahmens von
+       einer TAFEL spricht. Es liegt zwar hinter einem Reiter DER STADT und
+       ist weggeschnitten, taucht also in `haushalt.tafeln()` nie auf; aber
+       ein Brett, das beim Aufschlagen die Schwelle der eigenen Welle reisst,
+       ist ein Fund und keine Feinheit.
+
+       Der Kopf bleibt ausserhalb des Rollkastens, weil in ihm der Knopf
+       „Das Haus gegenueber" sitzt: ein Knopf, der aus dem Sichtfeld rollt,
+       ist mit der Maus nicht mehr zu treffen, und genau danach zaehlt die
+       zweite Messlatte. */
+    var koerper = B.el('div', 'gg-bandkoerper');
+
     var wz = B.el('div', 'gg-bandwaehrung');
     wz.appendChild(B.el('b', null, 'Gebunden wird ' + (epNr() <= 2 ? 'hier' : 'jetzt') + ' mit '
       + ep().waehrung));
     wz.appendChild(B.el('span', null, abloesespanne()));
-    band.appendChild(wz);
+    koerper.appendChild(wz);
 
     /* Der Zug, der kein Geld kostet — er steht hier oben, damit man ihn auch
        bei leerer Kasse findet, ohne ein Blatt zu oeffnen. */
@@ -2486,10 +2502,10 @@
         bz.appendChild(B.el('span', 'gg-ohnegeld',
           bs.name + ': erst, wenn er etwas hält oder um etwas wirbt'));
       }
-      band.appendChild(bz);
+      koerper.appendChild(bz);
     }
 
-    if (Z.meldung) band.appendChild(B.el('div', 'gg-bandmeldung', Z.meldung));
+    if (Z.meldung) koerper.appendChild(B.el('div', 'gg-bandmeldung', Z.meldung));
 
     /* AUFLAGE 10, erste Haelfte — DER SATZ, DER NICHT MEHR GEKUERZT WIRD.
 
@@ -2529,7 +2545,8 @@
       }));
       liste.appendChild(z);
     });
-    band.appendChild(liste);
+    koerper.appendChild(liste);
+    band.appendChild(koerper);
     B.orte.setze(band, 'kopfleiste', { anker: 'oben', dx: 18, dy: 10.5 });
     /* Kein Ortszeichen, sondern die Liste selbst: "Ohne dich geschehen" ist
        die eine Zahl, die dieses Stueck zu zeigen hat. Sie ruht nie. */

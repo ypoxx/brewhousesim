@@ -536,11 +536,18 @@
    alles — die vierte Latte zaehlt ihn ausdruecklich nicht als Abschnitt
    (`aufsicht/lesbarkeit.mjs`: `kappt()` fragt je Richtung, ob sie NICHT
    rollbar ist). */
-.gg-bandliste {
-  max-height: calc(var(--s) * 128);
+/* Der Rollkasten sitzt am KOERPER und nicht an der Liste: die Meldung und
+   die Klagezeile wachsen mit, und gemessen wurde das Brett im gespielten
+   Zustand mit 936x260 = 243.041 px² — ueber der 200.000er Schwelle, ab der
+   diese Welle von einer Tafel spricht. Mit gedeckeltem Koerper bleibt es in
+   jedem gemessenen Zustand zwischen MARKE (101.376, sonst verliert es seinen
+   Reiter) und der Tafelschwelle. */
+.gg-bandkoerper {
+  max-height: calc(var(--s) * 140);
   overflow-y: auto;
   overflow-x: hidden;
 }
+.gg-bandliste { overflow-x: hidden; }
 .gg-bandzeile {
   display: flex;
   align-items: baseline;
