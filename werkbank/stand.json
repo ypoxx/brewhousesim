@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-06T16:56:22+00:00",
- "phase": "Welle 11 läuft: drei Stücke räumen gleichzeitig in ihre Grenzen. Der Rahmen hat in Welle 10 den Flächenhaushalt gebaut — jedes der neun Stücke hat jetzt eine Obergrenze in Bildpunkten, im Spiel selbst abfragbar —, und er ist als einziges schon darin. Die restlichen 1,19 Millionen Bildpunkte gehören den Stücken. Diese Welle nimmt sich die drei größten vor: DAS ERBE mit 240000 Bildpunkten bei erlaubten 28000, DER GEGNER mit 215000 bei 28000, DIE FUHRE mit 169000 bei 34000. Zusammen ist das knapp die Hälfte des Überhangs. Die sichtbarste Aufgabe hat DIE FUHRE: ihr ganzseitiges Sommerblatt ist der Grund, warum das Spiel nach dreißig gespielten Wochen 45 bis 53 Prozent der Fläche deckt, solange niemand Escape drückt. Der Rahmen hat erreicht, dass Escape wirklich aufräumt, aber eine Tafel, die man erst wegdrücken muss, liegt eben trotzdem da. Für alle drei gilt dieselbe Regel: weniger anzeigen ist keine Lösung, anders anzeigen schon — was am Schirm steht, muss erreichbar bleiben.",
+ "stand": "2026-08-06T18:22:11+00:00",
+ "phase": "Welle 11 arbeitet: drei Stücke räumen gleichzeitig in ihre Grenzen aus dem Flächenhaushalt, den der Rahmen in Welle 10 gebaut hat. DAS ERBE hat aufgeschrieben, woher seine 240000 Bildpunkte kommen, Kasten für Kasten, und muss auf 28000. DER GEGNER nennt seinen Schnitt selbst beim Namen: von 215000 auf 28000 ist ein Siebtel. DIE FUHRE meldet schon jetzt etwas gegen den Auftrag — ihr Ladezustand war bereits innerhalb ihrer Grenze; die 169000 Bildpunkte stammen aus dem gespielten Zustand, nicht aus dem Ladezustand. Das prüfe ich nach, wenn sie fertig ist. Ihre eigentliche Aufgabe bleibt das ganzseitige Sommerblatt, das nach dreißig Wochen die halbe Fläche deckt, solange niemand Escape drückt. Alle drei messen einzeln durch das Messfenster gegen den eingefrorenen Vorzustand; die Dreifachprobe macht am Ende die Aufsicht.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T18:14:48+00:00",
-   "text": "DER NAME — warum jemand mehr zahlt · Runde 2 · bestanden — 1884 ist die einzige Epoche ohne Zeichen des Hauses auf der Platte: im Startzustand liefert bild/name/ dort kein einziges Bild (E1 zeiger1.png, E2 schild2.png, E4 tafel4.png — E3 nichts), und das per Vorgabe aktive Medium 'Etiketten' ist auf der Platte unsichtbar. Erst 2.400 M fuer die Litfasssaeule setzen saeule3.png in die Stadt. Latte 1 in drei von vier Epochen erfuellt."
-  },
   {
    "zeit": "2026-08-01T18:15:02+00:00",
    "text": "NAME Runde 2: BESTANDEN. Ruf wirkt in Zahlen, belegt an zwei Zustaenden desselben Spiels (saat=1350, E4, je 56 Maus-Klicks bis W29): mit Zeichen +17.701 DM Aufgeld, nach 'Das Zeichen verdecken' 0 DM — Kassendifferenz in W3 exakt 2.380 DM = die erste Buchung. Unter Wert verkauft (Sudplan auf Handelsmarke) faellt Ruf 33 auf 14 statt auf 28, Guete 100 auf 29, Register 1 auf 5 Zeilen. Vier eigene Verblisten (Zeiger/Zunftzeichen/Umtrunk 3 je Amtszeit; Schild an 6 fremden Tueren/Krug/Kirchweih; Annonce 240 M, Plakat 1.600 M, Saeule 2.400 M, Ausstellung 3.000 M; Etat 3 Posten, jede weitere Karte 'tauscht Bierdeckel heraus'). Sperrliste sauber: Emailschild nur in 1884 und dort grau mit Sperrgrund, kein Marktanteil, keine Destillierblase. BRAUHAUS.lage leer, keine Fehler in allen vier Epochen. Kasse auf 0 gesetzt: 'Das Zeichen verdecken' und der Wochenlauf aendern weiter Ruf, kein Todzustand. Luecke: 1884 hat im Startzustand kein Zeichen auf der Platte."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-06T16:56:22+00:00",
    "text": "Welle 11 läuft: drei Stücke räumen gleichzeitig in ihre Grenzen. Der Rahmen hat in Welle 10 den Flächenhaushalt gebaut — jedes der neun Stücke hat jetzt eine Obergrenze in Bildpunkten, im Spiel selbst abfragbar —, und er ist als einziges schon darin. Die restlichen 1,19 Millionen Bildpunkte gehören den Stücken. Diese Welle nimmt sich die drei größten vor: DAS ERBE mit 240000 Bildpunkten bei erlaubten 28000, DER GEGNER mit 215000 bei 28000, DIE FUHRE mit 169000 bei 34000. Zusammen ist das knapp die Hälfte des Überhangs. Die sichtbarste Aufgabe hat DIE FUHRE: ihr ganzseitiges Sommerblatt ist der Grund, warum das Spiel nach dreißig gespielten Wochen 45 bis 53 Prozent der Fläche deckt, solange niemand Escape drückt. Der Rahmen hat erreicht, dass Escape wirklich aufräumt, aber eine Tafel, die man erst wegdrücken muss, liegt eben trotzdem da. Für alle drei gilt dieselbe Regel: weniger anzeigen ist keine Lösung, anders anzeigen schon — was am Schirm steht, muss erreichbar bleiben."
+  },
+  {
+   "zeit": "2026-08-06T18:22:11+00:00",
+   "text": "Welle 11 arbeitet: drei Stücke räumen gleichzeitig in ihre Grenzen aus dem Flächenhaushalt, den der Rahmen in Welle 10 gebaut hat. DAS ERBE hat aufgeschrieben, woher seine 240000 Bildpunkte kommen, Kasten für Kasten, und muss auf 28000. DER GEGNER nennt seinen Schnitt selbst beim Namen: von 215000 auf 28000 ist ein Siebtel. DIE FUHRE meldet schon jetzt etwas gegen den Auftrag — ihr Ladezustand war bereits innerhalb ihrer Grenze; die 169000 Bildpunkte stammen aus dem gespielten Zustand, nicht aus dem Ladezustand. Das prüfe ich nach, wenn sie fertig ist. Ihre eigentliche Aufgabe bleibt das ganzseitige Sommerblatt, das nach dreißig Wochen die halbe Fläche deckt, solange niemand Escape drückt. Alle drei messen einzeln durch das Messfenster gegen den eingefrorenen Vorzustand; die Dreifachprobe macht am Ende die Aufsicht."
   }
  ]
 }

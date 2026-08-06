@@ -125,8 +125,16 @@
    Namen — deshalb `width:auto` und nicht 366: ein Schild ist so breit wie
    das, was daraufsteht.
    -------------------------------------------------------------------------- */
+/* DIE VIERTE LATTE HAENGT AN DIESER ZEILE. Ohne `min-height` misst das
+   Schild bei 1366x768 nur 19,7 px hoch — die Latte will 24x24 fuer jeden
+   aktiven Knopf, und heute stehen dort 0 von 307 zu kleine. Auf der
+   Entwurfsleinwand 2752x1536 ist 24px kleiner als 40*--s und aendert
+   nichts; bei 1366 greift der Boden. Dieselbe Bauart wie der Schriftboden
+   `max(12px, …)` daneben. */
 .gg-sitz {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: max(24px, calc(var(--s) * 40));
   max-width: 100%;
   padding: calc(var(--s) * 4) calc(var(--s) * 9) calc(var(--s) * 5);
   background: linear-gradient(180deg, #eceef0 0%, #c9ced3 62%, #b3b9bf 100%);
@@ -303,6 +311,7 @@
   background: none;
   border: 0;
   max-width: calc(var(--s) * 250);      /* = BREIT.paar in stuecke/gegner.js */
+  min-height: 24px;
   cursor: pointer;
   font-family: var(--serif);
   color: var(--gg-tinte);

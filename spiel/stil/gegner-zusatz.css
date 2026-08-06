@@ -55,6 +55,7 @@
   background: none;
   border: 0;
   max-width: calc(var(--s) * 250);
+  min-height: 24px;
   cursor: pointer;
   font-family: var(--serif);
   color: var(--gg-tinte);
@@ -94,6 +95,7 @@
   background: none;
   border: 0;
   max-width: calc(var(--s) * 250);
+  min-height: 24px;
   cursor: pointer;
   font-family: var(--serif);
   color: #3a2c16;
@@ -162,6 +164,7 @@
   background: none;
   border: 0;
   max-width: calc(var(--s) * 250);      /* = BREIT.paar in stuecke/gegner.js */
+  min-height: 24px;
   color: #24381f;
   cursor: pointer;
   text-align: left;
@@ -279,7 +282,10 @@
    man anfassen kann. */
 .gg-gzreihe .knopf {
   padding: 0;
-  min-height: 0;
+  /* Vierte Latte: ein Knopf ohne Kasten hat auch keine Polsterung mehr und
+     waere bei 1366x768 nur 14 px hoch. Der Boden steht deshalb hier. */
+  min-height: max(24px, calc(var(--s) * 30));
+  align-items: center;
   background: none;
   border: 0;
   box-shadow: none;
