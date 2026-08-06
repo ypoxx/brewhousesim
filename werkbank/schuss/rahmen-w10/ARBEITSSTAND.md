@@ -448,3 +448,108 @@ vier Klickprotokolle).
   Band „nächster Zug: … (Kasse reicht 5,9×)" liegt in 1350 über einem
   dunklen Dach. Fett und mit doppeltem Lichthof ist es lesbar, aber es ist
   weniger ruhig als auf Papier. Das steht hier, weil es gegen mich spricht.
+
+## Die vierte Latte (Lesbarkeit, 1366×768) und das Gewichtsveto
+
+| | vorher (`37f4b44`) | nachher |
+|---|---|---|
+| Überläufe | 14 | **14** |
+| Textknoten unter 12 px | 505 | **497** |
+| Knöpfe unter 24 px | 0 von 307 | **0 von 307** |
+| abgeschnittene Kästen je Epoche | 3/4/3/4 | 3/4/3/4 |
+
+Nichts ist schlechter geworden; acht Textknoten sind aus dem Keller heraus
+(die Hauszeile und das Deckungsband haben Schriftböden bekommen, weil ihnen
+das Papier fehlt und sie es sich nicht leisten können, klein zu sein).
+**Das geschützte Leerzeichen hat KEINEN Überlauf erzeugt** — das war die
+Sorge bei R4, und sie war unbegründet: die Überläufe stehen Stück für Stück
+an denselben Stellen (`was`, `fu`, `nm`, `sud`, `wort`).
+
+Gewicht (`aufsicht/gewicht-gegenprobe.mjs`, Veto bei 8 MB je Epoche):
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| vorher (Auftrag) | 6,29 | 7,66 | 6,61 | 4,67 MB |
+| nachher | **6,33** | **7,70** | **6,65** | **4,71 MB** |
+
++0,04 MB je Epoche — das ist `kern/haushalt.js`. Alle vier unter dem Veto;
+1600 liegt mit 7,70 MB am nächsten daran, wie schon vorher.
+
+---
+
+# JEDE ZEILE, DIE GEÄNDERT WURDE, MIT GRUND
+
+`git diff --stat 37f4b44 HEAD -- spiel/`:
+`index.html` +7 · `kern/buehne.js` +13/−1 · `kern/haushalt.js` +670 (neu) ·
+`kern/kopf.js` +20/−5 · `stil/grund.css` +171/−3.
+**Keine Datei eines Stücks ist berührt.**
+
+## `spiel/index.html` — EINE funktionale Zeile
+
+```html
+<script src="kern/haushalt.js"></script>
+```
+plus sechs Zeilen Kommentar darüber. **Grund:** R2 (Blattaufsicht), R3
+(Randwache) und R6 (Flächenhaushalt) brauchen ein Modul des Rahmens, das
+VOR allen Stücken lädt — sonst kommt der Escape-Horcher zu spät in die
+Fangphase (siehe F3). Es steht hinter `kern/kopf.js`, damit der Rahmen
+zuerst sein eigenes Blatt schließt. Kein `<script>`- oder `<link>`-Tag eines
+Stücks ist angefasst, die Ladereihenfolge der acht Stücke ist unverändert.
+
+## `spiel/kern/buehne.js` — eine Zeile in `B.knopf`
+
+Das Preisschild bekommt ein **geschütztes Leerzeichen** zwischen Zahl und
+Währung. **Grund:** R4. Der Bruch saß an `name:anschlag:*`, wo
+`stil/name.css:210` `white-space: normal` setzt — eine CSS-Regel des Rahmens
+hätte jeden Knopf jedes Stücks getroffen. Gemessen: 1 Bruch je Epoche → 0,
+und **kein zusätzlicher Überlauf** in der vierten Latte.
+
+## `spiel/kern/kopf.js` — zwei Stellen
+
+1. **Hauszeile**: `font-size: calc(var(--s)*22)` → `max(12px, calc(var(--s)*22))`.
+   **Grund:** sie verliert ihr Papier (grund.css) und darf dann bei 1366×768
+   nicht auf 10,9 px stehen. Auf der Entwurfsleinwand ändert es nichts.
+2. **Deckungsband**: Grund, Polster und Eckenradius aus dem Inline-Stil
+   entfernt, dafür fett und mit doppeltem Lichthof, plus Schriftboden.
+   **Grund:** R6. Das Band deckte 31.008–36.442 px im UNTERSTEN Sechstel —
+   4,4 bis 6,3 Prozentpunkte dort, wo jedes Zielblatt seinen Vordergrund
+   trägt. Die Zahl der zweiten Messlatte bleibt Wort für Wort auf dem
+   Bildschirm; nur das Papier ist fort.
+
+## `spiel/stil/grund.css` — fünf Blöcke
+
+1. **Schriftketten** enden jetzt in `"DejaVu …", "Free…", "Unifont"`.
+   **Grund:** R5. Unifont trägt die ganze mehrsprachige Ebene; ein leeres
+   Rechteck ist damit für jedes Zeichen ausgeschlossen. Der Rückgriff gilt je
+   Zeichen — die gesetzte Schrift ändert sich nicht.
+2. **`#buehne .kopfleiste` / `.tafel` / `.marke` / `.wert` / `::before,::after`**:
+   Maße des Rahmens, Schlagschatten fort. **Grund:** R1. Die ID im Selektor
+   ist nötig, weil `stil/stadt.css:669–712` dieselben Klassen gestaltet; der
+   Weg ist derselbe wie beim Knopfboden in Zeile 268 dieser Datei. Die STADT
+   behält Holz, Klammern und Farbe — nur das Maß kommt vom Rahmen.
+   Gemessen: 137.866 → 73.404 px (1350), 19,6 % → 10,4 % des obersten ⅙.
+3. **`#buehne .hauszeile`**: kein Papier. **Grund:** R1/R6, 41.052 → 6.102 px.
+4. **`#buehne .deckung`**: kein Papier, mit `!important`, weil
+   `stil/stadt.css:757` Grund und Polster mit `!important` setzt.
+   **Grund:** R6, 44.145 → 17.966 px im untersten Sechstel.
+5. **`.kern-blatt-zu`**: die Klemme der Blattaufsicht (`clip-path: inset(50%)`,
+   `pointer-events: none`) — dasselbe Verfahren wie `.stadt-zugeklappt`.
+   **Grund:** R2.
+
+## `spiel/kern/haushalt.js` — neu, 670 Zeilen
+
+Flächenhaushalt (R6), Blattaufsicht (R2), Randwache (R3). Vollständig
+kommentiert, mit den drei eigenen Fehlern und ihren Messungen im Quelltext.
+
+---
+
+# WAS DIE SECHS AUFLAGEN JETZT SIND
+
+| | Auflage | Stand |
+|---|---|---|
+| **R1** | Kopfleiste allein unter 12 % des obersten Sechstels | **erledigt** — 19,6–21,0 % → **10,4 / 10,7 / 11,3 / 11,2 %**, alle sieben Felder unverändert |
+| **R2** | Escape räumt auf; höchstens ein ganzseitiges Blatt | **Mechanismus steht, Zahl nicht erreicht** — nach 30 × WEITER und EINEM Escape ist die Erbe-Tafel fort (Gesamtdeckung 51,1 → 18,0 %), aber die Latte will unter 12 %; der Rest ist der Ruhezustand der Stücke. Tafeln: 3 → 2, und die zwei sind ein Zählfehler (siehe oben) |
+| **R3** | kein Kasten über dem Bildrand | **erfüllt in beiden geforderten Zuständen** (Laden und 30 Wochen: 0 vorher wie nachher). Im Zustand des Kritikers (34 Baurunden) bleibt **einer** in 1970: `gegner .gg-ziel` 312×52 @2458,202 — benannt, nicht behebbar ohne fremdes DOM |
+| **R4** | Preis und Währung nie trennen | **erledigt** — 1 Bruch je Epoche → **0** in allen vier, in beiden Zuständen, ohne neuen Überlauf |
+| **R5** | keine leeren Rechtecke | **Ursache nicht nachstellbar, Abhilfe gebaut** — 0 fehlende Zeichen in allen Zuständen, auch auf dem Vorzustand; die Schriftketten enden jetzt in Unifont, womit ein leeres Rechteck ausgeschlossen ist |
+| **R6** | Flächenhaushalt: eine Regel und ein Gerät | **erledigt** — `BRAUHAUS.haushalt` mit Grenzen je Stück, gemessen im Spiel, `pruefe()` wie `verdeckt()`; je Stück steht die Zahl oben |
