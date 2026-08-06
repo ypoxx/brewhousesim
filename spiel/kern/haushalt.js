@@ -592,25 +592,49 @@
      und damit die zweite Messlatte bewegen. Sie bremst nichts, solange
      nichts zu tun ist: der Blick kostet einen Durchgang durch die Kaesten,
      hoechstens dreimal in der Sekunde. */
-  /* SCHONFRIST. Der Rahmen der STADT klappt beim Laden alle Bretter zu, und
-     er nimmt sich dafuer 2500 ms (`stadt.js:LADEZEIT`). Wer vorher eingreift,
-     greift in einen Aufbau ein, der noch laeuft. Drei Sekunden Ruhe. */
-  var LADERUHE = 3000;
-  var gestartet = Date.now();
+  /* ======================================================================
+     HOECHSTENS EIN GANZSEITIGES BLATT — UND WARUM KEINE UHR DAHINTERSTEHT.
 
-  var letzterBlick = 0;
-  function wache() {
-    var jetzt = Date.now();
-    if (jetzt - gestartet < LADERUHE) return;
-    if (jetzt - letzterBlick < 350) return;
-    letzterBlick = jetzt;
-    B.wage('haushalt:wache', function () { raeumeAuf(false); });
-  }
+     ERSTE FASSUNG, UND SIE WAR FALSCH: eine Wache lief bei jedem 'zeichne'
+     (gedrosselt auf 350 ms) durch die Kaesten der Buehne und schloss das
+     aeltere Blatt, wenn zwei zugleich auflagen. Gemessen hat sie NIE
+     eingegriffen — `geklemmt()`, `ohneGriff()` und `spur()` blieben in allen
+     vier Epochen ueber 30 Wochen leer, weil der Rahmen der STADT das schon
+     haelt. Was sie tat, war trotzdem etwas: sie ERZWANG bei jedem Neuzeichnen
+     ein Layout ueber die ganze Buehne, und sie tat es nach einer Uhr.
 
-  B.auf('zeichne', function () {
-    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(wache);
-    else wache();
-  });
+     Was das kostet, steht in der Messung: bei gesaetem Wuerfel
+     (`?saat=1350`) hat 1350 zwischen zwei 400-Wochen-Laeufen desselben
+     Standes AUSEINANDERGELEGEN — ρ(14 J) −0,336 gegen +0,270, Kasse 28–524
+     gegen 34–583. Auf dem Vorzustand `37f4b44` war dieselbe Reihe dreimal
+     dieselbe. **Dieselbe Saat muss dieselbe Partie ergeben**
+     (`spiel/LIESMICH.md`: „Der Wuerfel ist gesaet … sonst kann der Kritiker
+     seine Zaehlung nicht wiederholen"). Ein Verhalten, das an einer Wanduhr
+     haengt statt an einem Zustand, ist genau die Abhaengigkeit, die zwei
+     gleiche Saaten auseinanderlaufen laesst — der Rahmen der STADT sieht
+     alle 240 ms nach, haelt 1400 ms und 1800 ms lange Fristen, und wer ihm
+     Arbeit je Bildaufbau danebenlegt, verschiebt die Phase gegen diese
+     Fristen.
+
+     DESHALB LAEUFT WAEHREND DES SPIELENS NICHTS MEHR VOM RAHMEN.
+     Die Regel bleibt, sie haengt nur nicht mehr an der Uhr:
+
+       * ESCAPE raeumt den Tisch — dort greift sie, und die messende Hand
+         drueckt nie Escape.
+       * Ein Stueck, das sein Blatt mit `BRAUHAUS.blatt.melde()` anmeldet,
+         laesst die Aufsicht IN DEM AUGENBLICK laufen, in dem es aufschlaegt
+         — an einem Ereignis, nicht an einer Frist.
+       * `BRAUHAUS.haushalt.blaetter()` sagt jederzeit auf Zuruf, ob mehr als
+         eines aufliegt; der blinde Kritiker und die Aufsicht koennen es
+         damit abnehmen, ohne dass das Spiel dafuer etwas tun muss.
+
+     WAS DAMIT OFFEN BLEIBT, und es steht hier statt in einer Fussnote: der
+     Rahmen ERZWINGT „hoechstens eines" nicht mehr ununterbrochen, er erzwingt
+     es bei Escape und bei jeder angemeldeten Oeffnung. Gemessen liegt heute
+     ohnehin nie mehr als eines auf. Wer es lueckenlos will, meldet sein Blatt
+     an — das ist die Auflage an die Stuecke fuer Welle 11, und sie kostet
+     eine Zeile je Blatt.
+     ====================================================================== */
 
   /* ---------------------------------------------------------------------- */
 
