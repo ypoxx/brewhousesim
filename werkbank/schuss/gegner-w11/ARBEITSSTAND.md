@@ -328,12 +328,12 @@ Schnitte) und `rueckkopplung-r3/auswerten.py` (Jahre unter 1×).
 | 1350 | −0,245 | −0,170 | −0,336 | 2/14 | 28–524 | 0 |
 | 1600 | −0,189 | +0,049 | −0,116 | 0/14 | 291–2851 | 0 |
 | 1884 | +0,168 | +0,346 | +0,393 | 1/14 | 1757–23789 | 0 |
-| 1970 | *(läuft)* | | | | | |
+| 1970 | −0,112 | −0,236 | −0,304 | 1/14 | 320–95857 | 0 |
 
-**Und das ist zugleich eine Gerätekontrolle:** diese drei Zeilen sind Ziffer
+**Und das ist zugleich eine Gerätekontrolle:** diese vier Zeilen sind Ziffer
 für Ziffer die, die der Rahmen in Welle 10 für den Vorzustand gemessen hat —
-dieselben ρ, dieselben Jahre unter 1×, dieselben Kassenspannen. Meine Kette
-misst also dasselbe wie seine.
+dieselben ρ, dieselben Jahre unter 1×, dieselben Kassenspannen, alle vier
+Epochen. Meine Kette misst also dasselbe wie seine, und sie misst es einzeln.
 
 ---
 
