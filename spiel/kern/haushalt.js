@@ -457,25 +457,50 @@
     return null;
   }
 
-  /* Schliesst EIN Blatt mit dem Griff DES STUECKS. `klemmen` erlaubt als
-     letzten Weg die Klemme des Rahmens — das tut nur Escape, nie die Wache. */
+  /* Schliesst EIN Blatt. `klemmen` (nur Escape, nie die Wache) legt zuerst
+     die Klemme des Rahmens an und sucht DANN den Griff des Stuecks.
+
+     WARUM ZUERST DIE KLEMME, UND WARUM UEBERHAUPT EINE:
+     Der Rahmen der STADT hat eine Regel, die genau hier dagegensteht —
+     `stadt.js:1408`: „Ein formatfuellendes Blatt zum Jahreswechsel ist eine
+     Entscheidung", `if (jetzt - jahrZeit < JAHRESFRIST && anteil > 0.25)
+     lage[s] = 'auf'`. JAHRESFRIST sind 1800 ms. Der Abnahmefall der Auflage
+     A16 — dreissig WEITER, dann Escape — faellt mit dem Jahreswechsel
+     zusammen: der dreissigste Klick schliesst das Braujahr, Escape kommt
+     Sekundenbruchteile spaeter, und waehrend der ganzen Aufraeumzeit
+     schlaegt die STADT das Erbe-Buch (28 % der Flaeche) immer wieder auf.
+     Gemessen: ohne Klemme steht `erb-buch` 1156x1075 nach Escape wieder da,
+     und `geklemmt`/`ohneGriff` bleiben leer — der Reiterklick war
+     erfolgreich UND wirkungslos.
+     Die Klemme wirkt sofort und im selben Bildaufbau. Sie ist
+     weggeschnitten, nicht versteckt (wie `.stadt-zugeklappt`): Platz,
+     Groesse und Umbruch bleiben stehen, gedeckt wird nichts. Und sie faellt
+     von selbst ab, sobald das Stueck sein Blatt neu zeichnet — Escape legt
+     beiseite, es loescht nicht.
+
+     DER REITERKLICK BLEIBT TROTZDEM, weil er als einziger den ZUSTAND
+     aendert. Er ist ein Umschalter (`stadt.js:636`), also darf er nur
+     fallen, solange das Blatt wirklich offen ist — und das ist es, denn
+     `blaetter()` sieht weggeschnittene Blaetter gar nicht erst. Nach dem
+     ersten Anlauf traegt das Blatt die Klemme, faellt aus `blaetter()`
+     heraus und wird nicht ein zweites Mal umgeschaltet. */
   function schliesse(k, klemmen) {
-    var eigen = eigenerGriff(k.el);
-    if (eigen) { B.wage('haushalt:griff', eigen); return 'griff'; }
-    var kn = knopfImBlatt(k.el);
-    if (kn) { kn.click(); return 'knopf:' + kn.getAttribute('data-zug'); }
-    var r = reiterZu(k);
-    if (r) { r.click(); return 'reiter:' + r.getAttribute('data-zug'); }
     var name = k.stueck + ' .' + k.klasse;
-    if (!klemmen) { ohneGriff[name] = (ohneGriff[name] || 0) + 1; return 'kein-griff'; }
-    /* Letzter Weg: wegklemmen. Weggeschnitten, nicht versteckt — Platz,
-       Groesse und Umbruch bleiben stehen, gedeckt wird nichts, und die
-       Klemme faellt beim naechsten Neuzeichnen des Stuecks von selbst ab.
-       Wer hier landet, steht im Bericht und bekommt in Welle 11 einen
-       eigenen Schliessknopf. */
-    if (k.el.classList) k.el.classList.add('kern-blatt-zu');
-    geklemmt[name] = (geklemmt[name] || 0) + 1;
-    return 'klemme';
+    var wie = [];
+    if (klemmen && k.el.classList) {
+      k.el.classList.add('kern-blatt-zu');
+      geklemmt[name] = (geklemmt[name] || 0) + 1;
+      wie.push('klemme');
+    }
+    var eigen = eigenerGriff(k.el);
+    if (eigen) { B.wage('haushalt:griff', eigen); wie.push('griff'); return wie.join('+'); }
+    var kn = knopfImBlatt(k.el);
+    if (kn) { kn.click(); wie.push('knopf:' + kn.getAttribute('data-zug')); return wie.join('+'); }
+    var r = reiterZu(k);
+    if (r) { r.click(); wie.push('reiter:' + r.getAttribute('data-zug')); return wie.join('+'); }
+    if (!wie.length) { ohneGriff[name] = (ohneGriff[name] || 0) + 1; wie.push('kein-griff'); }
+    else ohneGriff[name] = (ohneGriff[name] || 0) + 1;
+    return wie.join('+');
   }
 
   /* Raeumt den Tisch. `alles` = jedes ganzseitige Blatt (Escape);
@@ -504,19 +529,28 @@
     return getan;
   }
 
-  /* Escape: nachfassen, bis der Tisch leer ist. Der Rahmen der STADT sieht
-     alle 240 ms nach und kann ein Brett aufschlagen, nachdem der Rahmen es
-     geschlossen hat — also wird in mehreren Anlaeufen geraeumt, die diesen
-     Takt ueberspannen. Sieben Anlaeufe ueber 1,3 s; danach steht der Tisch. */
-  var ANLAEUFE = [0, 60, 140, 260, 420, 640, 900, 1300];
+  /* Escape: nachfassen, bis der Tisch leer ist und bleibt.
+     Der Rahmen der STADT sieht alle 240 ms nach (`TAKT`), haelt ein frisch
+     geholtes Brett 1400 ms lang fuer geholt (`HANDFRIST`) und schlaegt
+     1800 ms nach einem Jahreswechsel jedes formatfuellende Blatt wieder auf
+     (`JAHRESFRIST`). Die Anlaeufe spannen deshalb ueber 2,6 s — der erste
+     bei 0 ms raeumt das Bild sofort, die spaeteren halten es geraeumt. */
+  var ANLAEUFE = [0, 80, 180, 320, 500, 760, 1100, 1500, 2000, 2600];
   var laeuft = 0;
+  var spur = [];
 
   function tischLeeren() {
     var marke = ++laeuft;
     ANLAEUFE.forEach(function (ms) {
       setTimeout(function () {
         if (marke !== laeuft) return;          /* ein neuer Escape hat uebernommen */
-        B.wage('haushalt:escape', function () { raeumeAuf(true); });
+        B.wage('haushalt:escape', function () {
+          var getan = raeumeAuf(true);
+          if (getan.length) {
+            spur.push(ms + 'ms: ' + getan.join(' · '));
+            if (spur.length > 40) spur.shift();
+          }
+        });
       }, ms);
     });
   }
@@ -589,6 +623,7 @@
     raeumeAuf: raeumeAuf,
     geklemmt: function () { return geklemmt; },
     ohneGriff: function () { return ohneGriff; },
+    spur: function () { return spur.slice(); },
     /* Kurzfassung fuer die Konsole — eine Zeile je Stueck. */
     tafel: function () {
       var m = miss();
