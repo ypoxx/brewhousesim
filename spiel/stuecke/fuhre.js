@@ -3610,46 +3610,66 @@
     });
   }
 
-  function zeichneSommer(fach) {
-    if (!sommerLiegtOben()) return;
-    var s = Z.sommer, e = ep();
+  /* ======================================================================
+     DIE GEORGI-TAFEL — EIN ANSCHLAG, KEIN AUSHANG.   (Welle 11)
 
-    /* Kein Deckel mehr ueber der Buehne — siehe den Block bei
-       schliesseSommer(). Die Tafel ist ein Blatt auf dem Tisch, kein Riegel
-       vor der Tuer: sie liegt zwischen x 21 und 79 Prozent und endet bei
-       89 Prozent Hoehe, WEITER steht bei 84–93 / 94–98 Prozent. Die beiden
-       Rechtecke beruehren einander nicht, in keiner Aufloesung. */
-    /* JEDES GEORGI IST EIN EIGENES BLATT, und es sagt das auch.
+     WAS GEMESSEN WAR, und es ist die groesste Einzelzahl dieser Welle:
+     `werkbank/schuss/fuhre-w11/messungen/vorher-sonde-w30.txt`, dreissig
+     WEITER ohne Escape, Vorzustand 7896ee6, 2752x1536 —
 
-       Die Platzordnung der STADT erkennt ein Brett an seiner Klassenliste
-       und merkt sich, wann es zuletzt aufgeschlagen hat; wer zuletzt
-       aufschlug, liegt oben. Ein Brett, das verschwindet und ein Jahr
-       spaeter wiederkommt, behielt dabei seinen alten Zeitstempel — es war
-       damit das aelteste auf dem Tisch und wurde von jedem juengeren Brett
-       zugeklappt. Gemessen: die Georgi-Tafel lag in 9 von 12 Jahreswechseln
-       als Reiter, obwohl DIE STADT den Jahreswechsel ausdruecklich
-       aufschlagen laesst ("Ein formatfuellendes Blatt zum Jahreswechsel ist
-       eine Entscheidung").
+       .fu-sommerblatt   1596x847 = 1.351.246 px^2   (1350, 1600)
+                         1596x718 = 1.145.541        (1884)
+                         1596x943 = 1.504.427        (1970)
+       DIE FUHRE gesamt  1,15 bis 1,52 Mio Bildpunkte = 27 bis 36 % der Flaeche
+       alle neun Stuecke 41 bis 51 % (Huellen) bzw. 44,8 bis 53,3 %
+                         (photographisch, bild-w9/deckung.mjs)
 
-       Die Jahreszahl in der Klasse ist keine List, sondern die Wahrheit:
-       die Tafel von 1352 ist nicht die Tafel von 1351. Damit ist sie jedes
-       Jahr neu auf dem Tisch und liegt oben, solange die Entscheidung
-       ansteht. data-reiter beschriftet ihren Reiter, falls die Platzordnung
-       sie danach doch zuklappt — dann ist der Weg zurueck beschriftet und
-       nicht zu erraten. */
-    var bl = B.el('div', {
-      klasse: 'blatt fu-sommerblatt fu-georgi-' + s.jahr,
-      daten: { frei: '1', reiter: 'Georgi ' + s.jahr + ' · Jahresplan' }
-    });
-    bl.setAttribute('role', 'dialog');
-    bl.setAttribute('aria-modal', 'true');
-    bl.setAttribute('aria-label', 'Georgi ' + s.jahr);
-    /* Das Blatt liegt zwischen den beiden Zinstagen und heisst deshalb nach
-       beiden: zu Georgi wird die Tafel gewischt, zu Michaeli wird gerechnet
-       und neu angeschrieben. */
-    bl.appendChild(B.el('h2', null, 'Von Georgi ' + s.jahr + ' bis Michaeli — der Sommer und der Zahltag'));
-    bl.appendChild(B.el('div', 'fu-satz', e.sommerSatz));
-    bl.appendChild(B.el('div', 'fu-satz stark',
+     Dieses eine Blatt war der Grund. Und es war kein Unrat: es traegt die
+     Rechenschaft ueber den Sommer UND die einzige Jahresentscheidung des
+     Hauses. Der blinde Kritiker hat das ausdruecklich anerkannt („Das ist
+     ein Modal, kein Unrat, und ich rechne es dem Spiel nicht als Schmutz
+     an") und trotzdem 45 bis 53 Prozent gezaehlt. Beides ist wahr.
+
+     DIE TRENNUNG, DIE DARAUS FOLGT — und sie ist nicht „weniger anzeigen":
+
+       DER ANSCHLAG liegt.  Er traegt den Tag, den Sommer in einer Zeile,
+       die vier Sudknoepfe mit ihren Preisschildern nebeneinander, den
+       Stand der Tafel und die beiden Griffe. Das ist die ENTSCHEIDUNG,
+       und sie liegt weiter formatfuellend genug, um eine zu sein: sie
+       haelt die Woche an, sie liegt oben, sie geht mit Escape, WEITER und
+       ihrem eigenen Knopf wieder weg.
+
+       DER BERICHT klappt auf.  Monat fuer Monat, Zahltag, Abgabe,
+       Kerbholz, Notsude, verlorene Adressen, der Weg zum guten Ende —
+       jede Zeile, die vorher dalag, steht weiter da, hinter EINEM Knopf,
+       der sie aufschlaegt und wieder zuklappt. Nichts ist fort, nichts
+       ist gekuerzt, nichts steht nur noch im Titelfeld.
+
+     WAS DABEI NICHT ANGEFASST WURDE, weil daran die zweite Messlatte
+     haengt: die Klasse `.fu-sommerblatt`, die Zugschluessel
+     `fuhre:jahresplan:*` und `fuhre:sommer-zu`, die Reihenfolge der
+     Sorten und die Wirkung jedes Knopfes. Die messende Hand
+     (`rueckkopplung-r3/linie.mjs`, Woche 1 jedes Braujahres) sucht genau
+     diese drei Dinge; wer eines davon umbenennt, aendert die Partie.
+
+     UND WARUM DER ANSCHLAG SEINE MASSE AUS DEM STILBLATT NIMMT: er ist
+     dort auf `max(20%, 560px)` Breite und `max(21%, 330px)` Hoehe
+     gedeckelt — auf der Entwurfsleinwand 550x323 = 177.559 px^2, also
+     4,2 % der Flaeche und sicher unter der Schwelle von 200.000 px^2, die
+     `BRAUHAUS.haushalt.tafeln()` zieht. Der Deckel ist eine CSS-Zusage und
+     keine Rechnung im Kopf: was auch immer eine Epoche in die Zeile
+     schreibt, groesser wird der Kasten nicht. Damit die Entscheidung
+     davon nichts abbekommt, kleben Kopf und Fuss (`position: sticky`) —
+     was ueberlaeuft, ist der Sommersatz in der Mitte, nie ein Knopf.
+     ====================================================================== */
+
+  /* DER BERICHT. Jede Zeile stand vorher auf dem Blatt; hier steht sie
+     unveraendert, nur eben hinter einem Knopf. */
+  function sommerBericht(s, e) {
+    var k = B.el('div', 'fu-sommer-bericht');
+
+    k.appendChild(B.el('div', 'fu-satz', e.sommerSatz));
+    k.appendChild(B.el('div', 'fu-satz stark',
       'Der Aprilbestand: ' + B.welt.menge(s.april) + '. Davon sommerfest: '
       + B.welt.menge(s.sommerfest) + '. Gekippt in der ersten Hitze: ' + B.welt.menge(s.gekippt) + '.'));
 
@@ -3666,13 +3686,13 @@
         + ' · Schwund ' + B.welt.menge(t.schwund) + ' · im Keller ' + B.welt.menge(t.rest)));
       tab.appendChild(z);
     });
-    bl.appendChild(tab);
+    k.appendChild(tab);
 
-    bl.appendChild(B.el('div', 'fu-satz stark',
+    k.appendChild(B.el('div', 'fu-satz stark',
       'Sommerabsatz: ' + B.welt.menge(s.verkauft) + ' für ' + B.welt.geld(s.geld)
       + '. Übrig und wertlos: ' + B.welt.menge(s.rest) + '.'));
     if (s.abgabe) {
-      bl.appendChild(B.el('div', 'fu-abgabe',
+      k.appendChild(B.el('div', 'fu-abgabe',
         s.abgabeName + ' auf einen Umsatz von ' + B.welt.geld(s.umsatz) + ': −'
         + B.welt.geld(s.abgabe) + '   ·   ' + s.abgabeSatz
         + '  Genommen wurde sie Woche für Woche, bei jeder Einnahme — nicht heute.'));
@@ -3708,12 +3728,12 @@
         + (t.ausgefallen ? '. Nicht einzutreiben: ' + B.welt.geld(t.ausgefallen) : '')
         + '. Damit geht das Haus morgen an die Michaelitafel.'));
       if (t.angeld) zt.appendChild(B.el('div', 'fu-satz', t.angeldSatz));
-      bl.appendChild(zt);
+      k.appendChild(zt);
     }
 
     /* Die Auflage der Aufsicht, nachrechenbar auf dem Blatt: was diese Woche
        einbrachte, und was sie forderte. */
-    bl.appendChild(B.el('div', 'fu-satz stark',
+    k.appendChild(B.el('div', 'fu-satz stark',
       'Die Woche vor Michaeli: ' + B.welt.geld(s.georgiEin) + ' herein, '
       + B.welt.geld(s.georgiAus) + ' hinaus.'));
 
@@ -3733,11 +3753,11 @@
       } else {
         kz.appendChild(B.el('div', null, 'Das Holz ist glatt. Nichts genommen.'));
       }
-      bl.appendChild(kz);
+      k.appendChild(kz);
     }
 
     if (s.notsude) {
-      bl.appendChild(B.el('div', 'fu-satz',
+      k.appendChild(B.el('div', 'fu-satz',
         'Aus der Not gebraut: ' + s.notsude + ' Sud '
         + (notSorte() ? notSorte().name : 'Notbier') + ' in diesem Braujahr. '
         + 'Ohne Barauslage — und ohne dass jemand dafür Geld gesehen hätte, das nicht da war.'));
@@ -3753,30 +3773,8 @@
           : 'niemand hat sie genommen; wir haben drei Jahre lang nichts geliefert')
           + '   ·   Reihe ' + v.reihe.map(function (r) { return B.welt.menge(r, true); }).join(' · ')));
       });
-      bl.appendChild(vl);
+      k.appendChild(vl);
     }
-
-    /* Und gleich hier die eine Jahresentscheidung: was wird gebraut? */
-    bl.appendChild(B.el('h3', null, 'Was steht ' + B.uhr.braujahr() + ' an der Tafel?'));
-    var wahl = B.el('div', 'fu-sommer-wahl');
-    sorten().forEach(function (so) {
-      wahl.appendChild(B.knopf({
-        text: so.name + ' · ' + (e.budget ? budgetKosten(so) + ' ' + e.budget.name + ' → ' : '')
-              + B.welt.menge(so.fass) + (so.sommer ? ' · sommerfest' : ''),
-        zug: 'fuhre:jahresplan:' + so.k,
-        preis: -so.kosten,
-        titel: so.satz,
-        tu: function () { Z.plan[so.k] = (Z.plan[so.k] || 0) + 1; Z.tafelGewischt = false;
-          B.sende('zeichne', { grund: 'fuhre-jahresplan' }); }
-      }));
-    });
-    bl.appendChild(wahl);
-    var stand = B.el('div', 'fu-satz', 'An der Tafel steht: ' + (planSummeSude()
-      ? sorten().filter(function (x) { return Z.plan[x.k]; })
-          .map(function (x) { return Z.plan[x.k] + '× ' + x.name; }).join(' · ')
-        + '  — der Braumeister hat angeschrieben, was voriges Jahr dort stand.'
-      : 'nichts. Dann steht die Pfanne kalt.'));
-    bl.appendChild(stand);
 
     /* WIE WEIT DAS HAUS VOM GUTEN ENDE WEG IST.
 
@@ -3789,7 +3787,7 @@
        Blatt, das die Platzordnung in einen Reiter klappen kann. */
     if (!B.welt.zeit.ende) {
       var fehltU = Z.uebergabe ? null : uebergabeFehlt();
-      bl.appendChild(B.el('div', 'fu-sommer-uebergabe', Z.uebergabe
+      k.appendChild(B.el('div', 'fu-sommer-uebergabe', Z.uebergabe
         ? uebergabeDef().wort + ' liegt auf dem Tisch: das Haus steht gut genug, um es '
           + 'weiterzugeben. Das Blatt trägt die beiden Knöpfe; sein Reiter heißt „'
           + uebergabeDef().wort + '".'
@@ -3797,26 +3795,151 @@
           + ' ' + uebergabeMass().satz));
     }
 
-    /* Der Ausgang klebt am Fuss der Tafel. Er scrollt nicht mit: sonst haengt
-       er bei einem vollen Georgi-Blatt (viele verlorene Adressen, viele
-       Sorten) unter der Kante und ist bei 1920x937 nicht mehr zu treffen.
-       So steht er bei jeder Aufloesung an derselben Stelle. */
+    return k;
+  }
+
+  /* DER SOMMER IN EINER ZEILE — was auf dem Anschlag steht, wenn der
+     Bericht zugeklappt ist. Es ist keine Kuerzung des Berichts, sondern
+     seine Summe: was hinausging, was es einbrachte, was verdarb, was in
+     die Lade kam. Wer eine der vier Zahlen nachrechnen will, klappt auf. */
+  function sommerZeile(s) {
+    var t = [];
+    t.push('ausgeliefert ' + B.welt.menge(s.verkauft) + ' für ' + B.welt.geld(s.geld));
+    if (s.gekippt) t.push('gekippt ' + B.welt.menge(s.gekippt));
+    if (s.rest) t.push('übrig ' + B.welt.menge(s.rest));
+    if (s.zahltag && s.zahltag.gesamt) t.push('in die Lade ' + B.welt.geld(s.zahltag.gesamt));
+    if (s.abgabe) t.push(s.abgabeName + ' −' + B.welt.geld(s.abgabe));
+    return 'Der Sommer ' + s.jahr + ': ' + t.join(' · ') + '.';
+  }
+
+  function zeichneSommer(fach) {
+    if (!sommerLiegtOben()) return;
+    var s = Z.sommer, e = ep();
+    var weit = !!Z.berichtOffen;
+
+    /* Kein Deckel mehr ueber der Buehne — siehe den Block bei
+       schliesseSommer(). Die Tafel ist ein Blatt auf dem Tisch, kein Riegel
+       vor der Tuer, und seit Welle 11 ist sie ausserdem so schmal, dass
+       WEITER (84–93 / 94–98 Prozent) nicht einmal in ihre Naehe kommt. */
+    /* JEDES GEORGI IST EIN EIGENES BLATT, und es sagt das auch.
+
+       Die Platzordnung der STADT erkennt ein Brett an seiner Klassenliste
+       und merkt sich, wann es zuletzt aufgeschlagen hat; wer zuletzt
+       aufschlug, liegt oben. Ein Brett, das verschwindet und ein Jahr
+       spaeter wiederkommt, behielt dabei seinen alten Zeitstempel — es war
+       damit das aelteste auf dem Tisch und wurde von jedem juengeren Brett
+       zugeklappt. Gemessen: die Georgi-Tafel lag in 9 von 12 Jahreswechseln
+       als Reiter, obwohl DIE STADT den Jahreswechsel ausdruecklich
+       aufschlagen laesst ("Ein formatfuellendes Blatt zum Jahreswechsel
+       ist eine Entscheidung").
+
+       Die Jahreszahl in der Klasse ist keine List, sondern die Wahrheit:
+       die Tafel von 1352 ist nicht die Tafel von 1351. Damit ist sie jedes
+       Jahr neu auf dem Tisch und liegt oben, solange die Entscheidung
+       ansteht. data-reiter beschriftet ihren Reiter, falls die Platzordnung
+       sie danach doch zuklappt — dann ist der Weg zurueck beschriftet und
+       nicht zu erraten.
+
+       WELLE 11, ZWEITER TEIL DERSELBEN REGEL: die Tafel deckt jetzt 4,2 %
+       der Flaeche statt 32 bis 36 %. Die Regel der STADT, die ein Blatt zum
+       Jahreswechsel aufschlaegt, greift ab 25 % (`stadt.js:1408`) — diese
+       hier ist also zu klein dafuer. Sie liegt trotzdem auf, und zwar aus
+       dem Grund darueber: ein Brett, das WAEHREND des Spiels neu auftaucht,
+       gilt der Platzordnung als eben geholt und schlaegt auf. Nachgemessen
+       in `messungen/nachher-sonde-w30.txt`: `Sommerblatt true`, alle vier
+       Planknoepfe „trifft" in allen vier Epochen. */
+    var bl = B.el('div', {
+      klasse: 'blatt fu-sommerblatt fu-georgi-' + s.jahr + (weit ? ' fu-weit' : ''),
+      daten: { frei: '1', reiter: 'Georgi ' + s.jahr + ' · Jahresplan' }
+    });
+    bl.setAttribute('role', 'dialog');
+    bl.setAttribute('aria-modal', 'true');
+    bl.setAttribute('aria-label', 'Georgi ' + s.jahr);
+
+    /* DER KOPF klebt oben. Das Blatt liegt zwischen den beiden Zinstagen und
+       heisst deshalb nach beiden: zu Georgi wird die Tafel gewischt, zu
+       Michaeli wird gerechnet und neu angeschrieben. */
+    var kopf = B.el('div', 'fu-sommer-kopf');
+    kopf.appendChild(B.el('h2', null,
+      'Von Georgi ' + s.jahr + ' bis Michaeli — der Sommer und der Zahltag'));
+    kopf.appendChild(B.el('div', 'fu-sommer-kurz', sommerZeile(s)));
+    bl.appendChild(kopf);
+
+    if (weit) bl.appendChild(sommerBericht(s, e));
+
+    /* DER FUSS klebt unten und traegt die Entscheidung.
+
+       Er scrollt nicht mit — sonst haengt er bei einem aufgeschlagenen
+       Bericht (viele verlorene Adressen, viele Sorten) unter der Kante und
+       ist bei 1920x937 nicht mehr zu treffen. So steht er bei jeder
+       Aufloesung an derselben Stelle. Seit Welle 11 steht dort nicht mehr
+       nur der Ausgang, sondern die ganze Jahresentscheidung: sie ist das
+       eine, was diese Tafel unbedingt zeigen muss. */
     var fuss = B.el('div', 'fu-sommer-fuss');
-    fuss.appendChild(B.knopf({
+    fuss.appendChild(B.el('h3', null, 'Was steht ' + B.uhr.braujahr() + ' an der Tafel?'));
+
+    var wahl = B.el('div', 'fu-sommer-wahl');
+    sorten().forEach(function (so) {
+      wahl.appendChild(B.knopf({
+        text: so.name + ' · ' + (e.budget ? budgetKosten(so) + ' ' + e.budget.name + ' → ' : '')
+              + B.welt.menge(so.fass) + (so.sommer ? ' · sommerfest' : ''),
+        zug: 'fuhre:jahresplan:' + so.k,
+        preis: -so.kosten,
+        titel: so.satz,
+        tu: function () { Z.plan[so.k] = (Z.plan[so.k] || 0) + 1; Z.tafelGewischt = false;
+          B.sende('zeichne', { grund: 'fuhre-jahresplan' }); }
+      }));
+    });
+    fuss.appendChild(wahl);
+
+    fuss.appendChild(B.el('div', 'fu-sommer-stand', 'An der Tafel steht: ' + (planSummeSude()
+      ? sorten().filter(function (x) { return Z.plan[x.k]; })
+          .map(function (x) { return Z.plan[x.k] + '× ' + x.name; }).join(' · ')
+        + '  — der Braumeister hat angeschrieben, was voriges Jahr dort stand.'
+      : 'nichts. Dann steht die Pfanne kalt.')));
+
+    var griffe = B.el('div', 'fu-sommer-griffe');
+    griffe.appendChild(B.knopf({
+      /* Der eine Knopf, hinter dem der ganze Bericht liegt. Er sagt, was
+         er aufschlaegt — ein Knopf, der „mehr" heisst, ist keiner. */
+      text: weit ? 'Sommerbericht zuklappen'
+                 : 'Sommerbericht: Monat für Monat, Zahltag, Kerbholz',
+      zug: 'fuhre:sommer-bericht',
+      klasse: 'fu-klein',
+      titel: weit
+        ? 'Zurück auf den Anschlag. Die Entscheidung bleibt stehen.'
+        : 'Der Sommer Monat für Monat, der Umgang vor Michaeli, die Abgabe, '
+          + 'das Kerbholz, die Notsude, verlorene Adressen und der Weg zum guten Ende.',
+      tu: function () { Z.berichtOffen = !Z.berichtOffen;
+        B.sende('zeichne', { grund: 'fuhre-sommer-bericht' }); }
+    }));
+    griffe.appendChild(B.knopf({
       /* ZUSTAENDIGKEIT 23, zweiter Teil: ein sichtbarer Knopf mit dem Wort
          darauf, das ihn schliesst. Das Wort steht vorn, damit es auch dann
          zu lesen ist, wenn die Zeile schmal wird. */
       text: 'Tafel schließen — Michaeli, das Jahr beginnt',
-      zug: 'fuhre:sommer-zu', klasse: 'gross',
+      zug: 'fuhre:sommer-zu', klasse: 'fu-klein',
       titel: 'Zurück auf den Hof. WEITER und die Taste Escape tun dasselbe.',
       tu: function () { schliesseSommer('fuhre-sommer-zu'); }
     }));
+    fuss.appendChild(griffe);
+
     fuss.appendChild(B.el('div', 'fu-sommer-hinweis',
       'Solange die Tafel auf dem Tisch liegt, ruht die Woche. '
       + 'WEITER und die Taste Escape legen sie ebenfalls beiseite.'));
     bl.appendChild(fuss);
 
     fach.appendChild(bl);
+
+    /* DER SAUBERE WEG, den der Rahmen in Welle 10 gebaut und fuer Welle 11
+       ausgeschrieben hat: das Stueck sagt selbst, wie sein Blatt zugeht.
+       Damit braucht die Blattaufsicht keine Klemme und findet den Griff
+       auch dann, wenn ein Reiter gerade nicht dasteht.
+       (`kern/haushalt.js`: „Ein Stueck kann sein Blatt zusaetzlich mit
+       BRAUHAUS.blatt.melde() anmelden.") */
+    if (B.blatt && B.blatt.melde) {
+      B.blatt.melde(bl, function () { schliesseSommer('fuhre-sommer-aufsicht'); });
+    }
   }
 
   /* ======================================================================

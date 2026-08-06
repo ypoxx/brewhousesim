@@ -98,13 +98,51 @@
    ---------------------------------------------------------------------------
    PLATZ.  Zwei Dinge, und beide halten sich an die Ordnung DER STADT.
    ---------------------------------------------------------------------------
-   · .erb-leiste steht dauernd, unten quer: 44 % x 5,6 % = 2,46 % der Buehne
+   · .erb-leiste steht dauernd, unten quer: 44 % x 6,8 % = 2,99 % der Buehne
      und damit unter GRENZE (3,5 %) — DIE STADT laesst sie in Ruhe. Sie traegt
      die drei Uebergabeknoepfe nebeneinander, weil sie das Herz des Stuecks
      sind und nicht hinter einem Reiter liegen duerfen. Der Platz ist ueber
      alle vier Epochen als frei gemessen; die Begruendung steht in erbe.css.
-   · .erb-buch   ist ein richtiges Brett und bekommt von der STADT einen
-     Reiter wie jedes andere. Dort steht die volle Liste.
+   · .erb-buch   traegt die volle Liste. Auf und Zu gehoeren seit Welle 11 dem
+     Stueck selbst.
+
+   ---------------------------------------------------------------------------
+   WELLE 11 — DER FLAECHENHAUSHALT, UND WAS ER DIESEM STUECK ABVERLANGT HAT
+   ---------------------------------------------------------------------------
+   Der Rahmen hat in Welle 10 jedem Stueck eine Obergrenze in Bildpunkten
+   gegeben (BRAUHAUS.haushalt.GRENZEN, im Spiel abfragbar). DAS ERBE bekam
+   28.000 gesamt und 6.000 im obersten Sechstel — und deckte 239.643. Das war
+   der groesste Ueberhang aller neun Stuecke. Dazu zwei benannte Maengel:
+
+     Auflage 9 des blinden Kritikers — „Nachschrift · 2 Hä…" und
+     „Versorgungszusage · j…" tragen ein Auslassungszeichen, keinen
+     Rollkasten. Ein Knopf mit Preisschild darf nicht gekuerzt sein: der
+     Spieler sieht den Preis, aber nicht, wofuer.
+
+     Auflage 2 des Rahmens — `erb-buch` hat NULL Elemente mit `data-zug`,
+     also keinen eigenen Schliessknopf; der einzige Griff ist ein Reiter der
+     STADT. Deren Jahreswechselregel schlug das Buch nach jedem Escape wieder
+     auf, und der Rahmen musste es klemmen.
+
+   VIER AENDERUNGEN, UND KEINE DAVON NIMMT ETWAS VOM SCHIRM:
+
+     (a) Das Papier der Leiste ist fort (erbe.css). Jede Spalte, jede Zahl
+         und jeder Knopf stehen unveraendert da — mit Lichthof statt Grund,
+         genau wie der Rahmen es in Welle 10 mit Hauszeile und Deckungsband
+         gemacht hat. Was nur Schrift traegt, ist Welt.
+     (b) Die Knoepfe messen sich an ihrem Inhalt (`flex: 0 0 auto`) statt an
+         einem Viertel der Leiste. Ein zu schmaler Knopf ist damit nicht mehr
+         moeglich; das Auslassungszeichen hat keine Stelle mehr, an der es
+         entstehen koennte. Dazu sind drei Aufschriften kuerzer — „· jaehrlich"
+         steht ohnehin als Spalte im Band, der Buchname des Widerspruchs steht
+         im Titel, und der Artikel vor „Eine Stiftung …" traegt nichts.
+     (c) Das Buch gehoert sich selbst: Griff auf der Leiste, Schliessknopf im
+         Buchkopf, `BRAUHAUS.blatt.melde()` beim Aufschlagen — und zugeklappt
+         steht es nicht im DOM. Damit kann kein fremdes Stueck es aufschlagen
+         und der Rahmen nie mehr klemmen.
+     (d) Das Buch ist kuerzer (54 % statt 70 % Hoehe) und rollt, statt zu
+         schneiden. Gemessen war sein Inhalt 49 bis 62 % seiner Hoehe — der
+         Kritiker hat das leere untere Drittel richtig gesehen.
    =========================================================================== */
 
 (function (B) {

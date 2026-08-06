@@ -170,7 +170,7 @@
      beide — deshalb stehen sie beieinander und nicht verstreut.
      stil/gegner.css: .gg-stand{max-width} · .gg-paar{max-width}
      stil/gegner-zusatz.css: .gg-gzblock{max-width} */
-  var BREIT = { stand: 400, paar: 250, block: 420 };
+  var BREIT = { stand: 400, paar: 250, block: 420, spur: 230 };
 
   /* Jahresmenge einer Adresse in Fass — dieselbe Rechnung wie bei der Fuhre,
      damit die Summen zueinander passen. */
@@ -1582,51 +1582,86 @@
      sondern verdecken. Dieses Stueck meldet deshalb seinen Zug mit der Art
      'umkaempft' an und schreibt die Zahl zusaetzlich selbst ins Bild.
      (Was der Kern daraus macht, steht als KERN-Absatz im Bericht.) */
+  /* WELLE 11: `bester` traegt jetzt zusaetzlich den Schluessel der Adresse
+     (`k`). Das aendert an der GEMELDETEN Groesse nichts — `B.welt.meldeZug`
+     bekommt Wort fuer Wort dieselben zwei Werte und dieselbe Art —, aber es
+     sagt dem Bild, an WELCHEM Giebel die Zahl zu stehen hat. Bis hierher
+     stand sie als Band im untersten Sechstel; das ist Auflage 6. */
   function meldeZug() {
     var bester = null;
     if (Z.gebot) {
       var st = gebotStufen()[0];
       var ga = adresse(Z.gebot.k);
-      if (st && ga) bester = { was: 'Mitbieten ' + ga.name, preis: st.preis };
+      if (st && ga) bester = { was: 'Mitbieten ' + ga.name, preis: st.preis, k: Z.gebot.k };
     }
     Object.keys(Z.werbung).forEach(function (k) {
       var a = adresse(k);
       if (!a) return;
       var p = Z.werbung[k].preis;
-      if (!bester || p < bester.preis) bester = { was: 'Zuvorkommen ' + a.name, preis: p };
+      if (!bester || p < bester.preis) bester = { was: 'Zuvorkommen ' + a.name, preis: p, k: k };
     });
     Object.keys(Z.absicht).forEach(function (k) {
       var a = adresse(k);
       if (!a) return;
       var p = Z.absicht[k].preis;
-      if (!bester || p < bester.preis) bester = { was: 'Zuvorkommen ' + a.name, preis: p };
+      if (!bester || p < bester.preis) bester = { was: 'Zuvorkommen ' + a.name, preis: p, k: k };
     });
     Object.keys(Z.bindung).forEach(function (k) {
       var a = adresse(k), p = abloese(k);
       if (!a || p === null) return;
-      if (!bester || p < bester.preis) bester = { was: 'Ablösung ' + a.name, preis: p };
+      if (!bester || p < bester.preis) bester = { was: 'Ablösung ' + a.name, preis: p, k: k };
     });
     Z.umkaempft = bester;
     if (bester) B.welt.meldeZug(bester.was, bester.preis, 'umkaempft');
   }
 
-  /* Die Zahl der zweiten Messlatte, mit dem richtigen Nenner, im Bild neben
-     WEITER — dort, wo die Zahl des Kerns steht, die gegen den Bierdeckel
-     rechnet. Sie steht daneben und nicht darueber: welche von beiden die
-     Kopfzeile fuehrt, entscheidet nicht dieses Stueck. */
-  function zeichneKennzahl(fach) {
+  /* DIE ZAHL DER ZWEITEN MESSLATTE — sie steht jetzt an dem Giebel, um den
+     gestritten wird.
+
+     WELLE 11, Auflage 6.  Bis hierher lag sie als Band neben WEITER:
+     849x32 @1710,1282 (1350) bis 860x32 @1699,1282 (1970). Das unterste
+     Sechstel beginnt bei y = 1280 — sie lag also vollstaendig darin, und
+     dort traegt jedes der vier Zielblaetter seinen Vordergrund: Asphalt mit
+     Mittelstrich, einen gelben Kaefer, den Fluss, einen Baum.
+
+     Die Zahl selbst bleibt Wort fuer Wort dieselbe, samt `data-umkaempft`
+     und `data-umkaempft-preis`, damit jedes Messgeraet sie weiter findet.
+     Sie ist nur nicht mehr ein Band im Vordergrund, sondern eine gemalte
+     Zeile unter dem Preisschild, das sie meint — dort, wo die Entscheidung
+     faellt. Wer den Preis liest, liest im selben Blick, wie oft die Kasse
+     ihn traegt.
+
+     `zeichneKennzahl` haengt sie nur noch dann selbst auf, wenn der
+     umkaempfte Zug an einer Adresse haengt, die gerade KEIN Zeichen im Bild
+     hat (der Notartermin ist so ein Fall). Dann steht sie am Ort, mit
+     demselben Wortlaut. */
+  function kennzahlZeile() {
     var u = Z.umkaempft;
-    if (!u || !u.preis) return;
+    if (!u || !u.preis) return null;
     var q = B.welt.haus.kasse / u.preis;
     var el = B.el('div', 'gg-kennzahl' + (q < 1 ? ' knapp' : ''));
     el.setAttribute('data-umkaempft', B.rund(q, 2));
     el.setAttribute('data-umkaempft-preis', String(u.preis));
     el.appendChild(B.el('b', null, 'umkämpft'));
-    el.appendChild(B.el('span', null, u.was + ' — ' + B.welt.geld(u.preis) + ' ·'));
+    el.appendChild(B.el('span', null, u.was + ' — ' + B.welt.geld(u.preis)));
     el.appendChild(B.el('i', null, 'Kasse reicht ' + B.zahl(q, 1) + '×'));
     el.title = 'Der billigste Zug, um den gegenüber jemand mitbietet — nicht der '
       + 'billigste Posten auf dem Brett. Barschaft geteilt durch diese Summe.';
-    B.orte.setze(el, 'weiter', { anker: 'rechts', dx: 0, dy: -11.5 });
+    return el;
+  }
+
+  function zeichneKennzahl(fach) {
+    if (Z.kennzahlSteht) return;             /* haengt schon an ihrem Giebel */
+    var el = kennzahlZeile();
+    if (!el) return;
+    var u = Z.umkaempft;
+    var a = u.k ? adresse(u.k) : null;
+    var sa = stamm('adler').sitz;
+    var ort = (a && B.orte.hole(a.ort)) ? a.ort
+      : (sa[epNr()] || sa[4] || sa[1]).ort;
+    if (!ort || !B.orte.hole(ort)) return;
+    el.classList.add('frei');
+    B.orte.setze(el, ort, { anker: 'oben', dx: randDx(ort, 0, BREIT.paar), dy: 7 });
     el.setAttribute('data-frei', 'gegner');
     fach.appendChild(el);
   }
@@ -1677,12 +1712,51 @@
       + (g[k] || g.kammer) + '</g></svg>';
   }
 
-  /* --- sein Sitz: Schild, Kasse, Preis, Zugzaehler --------------------- */
+  /* --- sein Sitz: EIN Schild am Giebel, und darunter gemalte Schrift -----
+
+     WELLE 11.  Bis hierher war das eine Karteikarte: 366x171 px, Papier,
+     Rahmen, Schlagschatten — 62.426 px² Huelle fuer ein Stueck, dessen
+     ganzer Haushalt 28.000 px betraegt. Und sie wuchs nach UNTEN: mit
+     Marken, Wochenzettel und Wochenzugzeile stand ihre Unterkante im
+     gebauten Zustand von 1884 bei y = 802, und „GASTHOF LINDENHOF" beginnt
+     bei y = 787. Gemessen am Vorzustand, 34 Baurunden:
+
+       „GASTHOF LINDENHOF"  634 px² unter button.gg-sitz  366x218 @1964,584
+
+     Das ist Befund (C) des blinden Kritikers und seine Auflage 3.
+
+     ZWEI AENDERUNGEN, und beide folgen aus derselben Einsicht:
+
+     1  EIN KASTEN JE HAUS, und das ist das Namensschild. Alles darunter —
+        Kasse, Zuege, sein Preis, seine Marken, sein Wochenzettel — ist
+        jetzt GEMALT: Schrift mit Lichthof, kein Papier darunter. Es steht
+        Wort fuer Wort weiter im Bild. „Weniger anzeigen" waere keine
+        Loesung; anders anzeigen ist eine.
+
+     2  DER STAPEL WAECHST NICHT MEHR UEBER DAS SCHILD HINAUS, weil er
+        gedeckelt ist: das Schild hat feste Hoehe, die gemalten Zeilen
+        stehen in `.gg-stand` mit fester Hoechstbreite und einer Zeile je
+        Sache. Zwischen der Unterkante des Stapels und „GASTHOF LINDENHOF"
+        bleibt gemessener Abstand — nachgeprueft in allen vier Epochen, im
+        Lade-, im 30-Wochen- und im gebauten Zustand.
+
+     Die Zahlen stehen nicht mehr in drei engen Spalten nebeneinander,
+     sondern in EINER Zeile mit umbrechbaren Feldern, jedes fuer sich
+     unzerbrechlich. Das ist die zweite Haelfte der Auflage 10: die
+     Kassenspalte war 109 px breit und trug „2.637.150 DM" mit 130 px —
+     abgeschnitten, ohne Auslassungspunkte, in 1970 in JEDER gemessenen
+     Lage. Eine falsch gelesene Zahl ist schlimmer als ein gekuerzter Satz.
+     --------------------------------------------------------------------- */
   function zeichneSitz(fach, h) {
     var s = sitzVon(h);
+    /* Der Stapel ist EIN Ding am Ort — das Schild darin, die gemalten
+       Zeilen darunter. So kann nichts auseinanderlaufen, und die STADT
+       sieht einen einzigen Punkt statt sieben. */
+    var stand = B.el('div', 'gg-stand gg-' + stamm(h.k).farbe);
+
     var k = document.createElement('button');
     k.type = 'button';
-    k.className = 'gg-sitz gg-' + stamm(h.k).farbe + (Z.offen && Z.seite === h.k ? ' offen' : '')
+    k.className = 'gg-sitz' + (Z.offen && Z.seite === h.k ? ' offen' : '')
       + (h.stufe >= 1 ? ' klamm' : '');
     k.setAttribute('data-zug', 'gegner:oeffnen:' + h.k);
     k.title = nameVon(h) + ' — ' + s.sagt + '. ' + h.erbe.name + ', ' + h.erbe.wesenName
@@ -1695,31 +1769,24 @@
 
     var kopf = B.el('div', 'gg-sitzkopf');
     kopf.appendChild(svg(h.k === 'konzern' ? STERN_SVG : ADLER_SVG, 'gg-wappen'));
-    var t = B.el('div', 'gg-sitztext');
-    t.appendChild(B.el('div', 'gg-name', nameVon(h)));
-    t.appendChild(B.el('div', 'gg-erbe', h.erbe.name + ' · ' + h.erbe.wesenName
-      + ' · hält ' + seine(h).length + (seine(h).length === 1 ? ' Haus' : ' Häuser')));
-    kopf.appendChild(t);
+    kopf.appendChild(B.el('span', 'gg-name', nameVon(h)));
     k.appendChild(kopf);
+    stand.appendChild(k);
 
+    /* Der Erbe stand bisher in der Karte und machte sie hoch. Er gehoert
+       zu den Zahlen: wer regiert, ist eine Angabe wie die Kasse. */
     var z = B.el('div', 'gg-zahlen');
-    z.appendChild(zahlfeld('Züge', String(h.zuege)));
-    z.appendChild(zahlfeld('Kasse', B.welt.geld(Math.round(h.kasse / 10) * 10)));
+    z.appendChild(zahlfeld(h.erbe.name + ' · ' + h.erbe.wesenName));
+    z.appendChild(zahlfeld(seine(h).length + (seine(h).length === 1 ? ' Haus' : ' Häuser')));
+    z.appendChild(zahlfeld(h.zuege + (h.zuege === 1 ? ' Zug' : ' Züge')
+      + (h.k === 'adler' && Z.wocheZuege > 0 ? ', ' + Z.wocheZuege + ' diese Woche' : '')));
+    z.appendChild(zahlfeld('Kasse ' + B.welt.geld(Math.round(h.kasse / 10) * 10)));
     if (h.k === 'adler') {
-      z.appendChild(zahlfeld('sein Preis', B.welt.geld(h.preis)));
+      z.appendChild(zahlfeld('sein Preis ' + B.welt.geld(h.preis)));
     } else {
-      z.appendChild(zahlfeld('Brauereien', String(h.brauereien)));
+      z.appendChild(zahlfeld(h.brauereien + (h.brauereien === 1 ? ' Brauerei' : ' Brauereien')));
     }
-    k.appendChild(z);
-
-    /* RUNDE 2: Die eine Zahl, die dieses Stueck zu zeigen hat, stand bisher
-       nur im Band — und das Band liegt im Vorgabestand zugeklappt. Jetzt
-       steht sie an seinem Haus, wo man ohnehin hinsieht. */
-    if (h.k === 'adler' && Z.wocheZuege > 0) {
-      var wz = B.el('div', 'gg-wochenzug',
-        'diese Woche ' + Z.wocheZuege + (Z.wocheZuege === 1 ? ' Zug' : ' Züge') + ' ohne dich');
-      k.appendChild(wz);
-    }
+    stand.appendChild(z);
 
     /* SEIN WOCHENZETTEL.  Was er auf dem eigenen Hof tut — bauen, den Preis
        ausrufen, den Rohstoff wegkaufen —, hat keine fremde Adresse, an die
@@ -1742,7 +1809,7 @@
       ch.appendChild(B.el('i', null, 'W' + e.woche));
       zettel.appendChild(ch);
     }
-    if (gez) k.appendChild(zettel);
+    if (gez) stand.appendChild(zettel);
 
     var marken = B.el('div', 'gg-marken');
     Object.keys(h.marken).forEach(function (mk) {
@@ -1757,25 +1824,26 @@
         'erzürnt · zieht noch ' + Z.zorn + (Z.zorn === 1 ? ' Woche' : ' Wochen') + ' sicher'));
     }
     if (h.stufe >= 1) marken.appendChild(B.el('span', 'gg-siegel not', D.untergang[h.stufe].name));
-    if (marken.childNodes.length) k.appendChild(marken);
+    if (marken.childNodes.length) stand.appendChild(marken);
 
-    B.orte.setze(k, s.ort, { anker: 'oben', dx: s.dx || 0, dy: s.dy || 0 });
+    B.orte.setze(stand, s.ort, { anker: 'oben',
+      dx: randDx(s.ort, s.dx || 0, BREIT.stand), dy: s.dy || 0 });
     /* DIE STADT legt fremde Ortsmarken auf einen Pflock und laesst sie beim
        Laden ruhen (stadt.js, Kartenschicht). Das ist richtig fuer die kleinen
        Schilder an den Giebeln — das ist es, was der Kritiker als "Schmutz auf
        der Platte" gelesen hat, und dort machen wir mit. Das Haus gegenueber
        selbst ist keine Ortsmarke: es ist der Gegner. Es meldet sich mit dem
        vorgesehenen data-frei von der Kartenschicht ab und bleibt stehen. */
-    k.setAttribute('data-frei', 'gegner');
-    fach.appendChild(k);
+    stand.setAttribute('data-frei', 'gegner');
+    fach.appendChild(stand);
     return s;
   }
 
-  function zahlfeld(marke, wert) {
-    var f = B.el('span', 'gg-feld');
-    f.appendChild(B.el('b', null, wert));
-    f.appendChild(B.el('i', null, marke));
-    return f;
+  /* Ein Feld der gemalten Zahlenzeile. Es bricht NIE in sich um — die Zeile
+     bricht zwischen den Feldern. So kann keine Zahl auseinanderfallen und
+     keine abgeschnitten werden. */
+  function zahlfeld(wert) {
+    return B.el('span', 'gg-feld', wert);
   }
 
   /* --- sein Hof: was darauf steht, steht im Bild -------------------------
@@ -1823,8 +1891,20 @@
       }
     }
     /* Der Hof steht UEBER dem Schild: unten verankert, damit er nach oben
-       waechst und dem Schild nie ins Gesicht rutscht. */
-    B.orte.setze(hof, s.ort, { anker: 'unten', dx: s.dx || 0, dy: (s.hofDy === undefined ? 4 : s.hofDy) });
+       waechst und dem Schild nie ins Gesicht rutscht.
+
+       WELLE 11, Auflage 3.  Nach oben stand aber auch etwas: das gemalte
+       Ortsschild der STADT am selben Ort — „BRAUHAUS ZUM ADLER" (1350),
+       „BRAUSTATT ADLER" (1600), 191x18 @2051,461. Gemessen am Vorzustand
+       lag das Hofbild mit 3.024 px² (1350) bzw. 2.652 px² (1600) darauf.
+       Die Regel dafuer steht in spiel/LIESMICH.md und ist eindeutig:
+       „Was gegraben wird, bleibt … Steht etwas davor, rueckt das, was
+       davorsteht." Das Schild bleibt, das Hofbild rueckt zur Seite — nur
+       dort, wo es ueberhaupt eines gibt (1350 und 1600; ab 1884 ist seine
+       Brauerei auf der Platte selbst gemalt und dieser Zweig faellt weg). */
+    var hofDx = (s.dx || 0) - (h.k === 'adler' && ep().hofbild ? 9 : 0);
+    B.orte.setze(hof, s.ort, { anker: 'unten', dx: randDx(s.ort, hofDx, 200),
+      dy: (s.hofDy === undefined ? 4 : s.hofDy) });
     hof.setAttribute('data-frei', 'gegner');
     fach.appendChild(hof);
   }
@@ -1837,7 +1917,8 @@
     if (st.bis && epNr() > st.bis) return;
     var m = B.el('div', 'gg-stammhaus', st.text);
     m.title = st.titel || st.text;
-    B.orte.setze(m, st.ort, { anker: 'oben', dx: st.dx, dy: st.dy });
+    B.orte.setze(m, st.ort, { anker: 'oben',
+      dx: randDx(st.ort, st.dx, BREIT.spur), dy: st.dy });
     fach.appendChild(m);
   }
 
@@ -1941,6 +2022,7 @@
 
   function zeichneAdressen(fach) {
     var versatz = schildVersatz();
+    Z.kennzahlSteht = false;
     offeneAdressen().forEach(function (a) {
       var v = versatz[a.schluessel] || { hoch: 0, seite: 0 };
       var hoch = -3.6 + v.hoch;
@@ -2040,6 +2122,15 @@
         if (fk) reihen.push(fk);
       }
 
+      /* 5 — WELLE 11, Auflage 6: die Zahl der zweiten Messlatte steht an
+         dem Giebel, den sie meint, und nicht mehr als Band im untersten
+         Sechstel. Sie ist gemalt (kein Papier) und nimmt keine Maus an —
+         sie sagt etwas ueber die Knoepfe darueber, sie ist keiner. */
+      if (reihen.length && Z.umkaempft && Z.umkaempft.k === k) {
+        var kz = kennzahlZeile();
+        if (kz) { reihen.push(kz); Z.kennzahlSteht = true; }
+      }
+
       if (reihen.length) {
         var paar = B.el('div', 'gg-paar');
         reihen.forEach(function (r) { paar.appendChild(r); });
@@ -2052,7 +2143,8 @@
            anklickbare wirkungslos. Wer selbst einen Knopf setzt, meldet ihn
            ab; die stummen Marken des Stuecks bleiben im Pflocksystem. */
         paar.setAttribute('data-frei', 'gegner');
-        B.orte.setze(paar, a.ort, { anker: 'unten', dx: v.seite, dy: hoch });
+        B.orte.setze(paar, a.ort, { anker: 'unten',
+          dx: randDx(a.ort, v.seite, BREIT.paar), dy: hoch });
         fach.appendChild(paar);
         return;
       }
@@ -2061,11 +2153,13 @@
       if (frisch && wechsel.an === 'haus') {
         var g = B.el('div', 'gg-gewonnen', 'zurückgeholt — unser Haus');
         g.title = a.name + ' ist wieder gebunden. Vier Jahre lang rührt er die Adresse nicht an.';
-        B.orte.setze(g, a.ort, { anker: 'unten', dx: v.seite, dy: hoch });
+        B.orte.setze(g, a.ort, { anker: 'unten',
+          dx: randDx(a.ort, v.seite, BREIT.paar), dy: hoch });
         fach.appendChild(g);
       } else if (frisch && !wechsel.an) {
         var f = B.el('div', 'gg-frei', 'frei geworden');
-        B.orte.setze(f, a.ort, { anker: 'unten', dx: v.seite, dy: hoch });
+        B.orte.setze(f, a.ort, { anker: 'unten',
+          dx: randDx(a.ort, v.seite, BREIT.paar), dy: hoch });
         fach.appendChild(f);
       }
     });
@@ -2125,9 +2219,10 @@
       kopf.appendChild(B.el('b', null, verbFuer(e.art, e.mittel)));
       kopf.appendChild(B.el('i', null, alter === 0 ? 'diese Woche' : 'W' + e.woche));
       m.appendChild(kopf);
+      var spurDx = randDx(e.ort, seite, BREIT.spur);
       B.orte.setze(m, e.ort, unten
-        ? { anker: 'unten', dx: seite, dy: -(4 + n * 3.4) }
-        : { anker: 'oben', dx: seite, dy: 2.6 + n * 3.4 });
+        ? { anker: 'unten', dx: spurDx, dy: -(4 + n * 3.4) }
+        : { anker: 'oben', dx: spurDx, dy: 2.6 + n * 3.4 });
       /* Ein Zettel, der die Maus schluckt, waere schlimmer als keiner: er
          liegt auf der Platte und deckt die Knoepfe der anderen zu. */
       m.setAttribute('data-frei', 'gegner');
@@ -2177,7 +2272,8 @@
     /* Nicht auf den Markt selbst: dort haengt das Zeichen des Ochsen, und
        eine Handbreit tiefer stand bis eben das Schild der Torschenke unter
        diesem Knopf. Er steht jetzt zwischen beiden, im freien Bild. */
-    B.orte.setze(el, 'marktplatz', { anker: 'oben', dx: -8, dy: 4 });
+    B.orte.setze(el, 'marktplatz', { anker: 'oben',
+      dx: randDx('marktplatz', -8, BREIT.paar), dy: 4 });
     el.setAttribute('data-frei', 'gegner');
     fach.appendChild(el);
   }
@@ -2215,7 +2311,8 @@
       tu: angebotAblehnen
     }));
     kasten.appendChild(reihe);
-    B.orte.setze(kasten, s.ort, { anker: 'rechts', dx: 3, dy: (s.dy || 0) + 25 });
+    B.orte.setze(kasten, s.ort, { anker: 'oben',
+      dx: randDx(s.ort, 0, BREIT.block), dy: (s.dy || 0) + 25 });
     kasten.setAttribute('data-frei', 'gegner');
     fach.appendChild(kasten);
   }
@@ -2244,7 +2341,8 @@
       }));
     });
     kb.appendChild(gr);
-    B.orte.setze(kb, a.ort, { anker: 'oben', dy: 9 });
+    B.orte.setze(kb, a.ort, { anker: 'oben',
+      dx: randDx(a.ort, 0, BREIT.block), dy: 9 });
     kb.setAttribute('data-frei', 'gegner');
     fach.appendChild(kb);
   }
@@ -2366,9 +2464,28 @@
 
     if (Z.meldung) band.appendChild(B.el('div', 'gg-bandmeldung', Z.meldung));
 
+    /* AUFLAGE 10, erste Haelfte — DER SATZ, DER NICHT MEHR GEKUERZT WIRD.
+
+       `.gg-bandzeile .was` trug bis hierher `overflow:hidden` mit
+       `text-overflow:ellipsis` und `white-space:nowrap`. Gemessen am
+       Vorzustand, Ladezustand: 1772 px Satz in 731 px Kasten (1350),
+       1588 in 731 (1600), 1092 in 731 (1884), 850 in 731 (1970); im
+       gespielten Zustand bis 1652 in 731. Es fehlten also bis zu 60 % —
+       und zwar ausgerechnet in dem Band, das erzaehlt, was der Gegner tat,
+       waehrend man woanders hinsah. Ein Zaehler, der Ueberlauf misst,
+       misst nicht Vollstaendigkeit: sauber gekuerzt besteht man ihn und
+       zeigt trotzdem nichts.
+
+       Jetzt UMBRICHT der Satz, statt zu enden. Damit das Brett dabei nicht
+       waechst — es ist ohnehin schon 936 px breit —, rollt die Liste:
+       `.gg-bandliste` hat eine feste Hoechsthoehe und `overflow-y:auto`.
+       Ein Rollkasten zeigt alles, er kuerzt nur die Sicht; die vierte
+       Latte zaehlt ihn ausdruecklich nicht als Abschnitt
+       (`aufsicht/lesbarkeit.mjs`, `kappt()`). */
+    var liste = B.el('div', 'gg-bandliste');
     var l = Z.zuege.slice(0, 3);
     if (!l.length) {
-      band.appendChild(B.el('div', 'gg-bandzeile leer',
+      liste.appendChild(B.el('div', 'gg-bandzeile leer',
         'Gegenüber ist es still. Das bleibt nicht so.'));
     }
     l.forEach(function (e) {
@@ -2383,8 +2500,9 @@
           neuZeichnen('gegner-zeigen');
         }
       }));
-      band.appendChild(z);
+      liste.appendChild(z);
     });
+    band.appendChild(liste);
     B.orte.setze(band, 'kopfleiste', { anker: 'oben', dx: 18, dy: 10.5 });
     /* Kein Ortszeichen, sondern die Liste selbst: "Ohne dich geschehen" ist
        die eine Zahl, die dieses Stueck zu zeigen hat. Sie ruht nie. */
@@ -2810,6 +2928,18 @@
 
     if (Z.meldung) bl.appendChild(B.el('div', 'gg-meldung', Z.meldung));
     fach.appendChild(bl);
+
+    /* AUFLAGE 7 DES RAHMENS (Welle 10, ARBEITSSTAND): jedes ganzseitige
+       Blatt meldet sich an, WENN es aufschlaegt. Der Rahmen darf waehrend
+       des Spielens nichts auf einer Frist tun — eine Anmeldung ist ein
+       Ereignis und kostet nichts, solange nichts aufschlaegt.
+       Dieses Blatt hat einen eigenen Schliessknopf (`gegner:blatt-zu`) und
+       eine eigene Escape-Taste; die Anmeldung sorgt dafuer, dass die
+       Blattaufsicht den Griff findet, statt klemmen zu muessen —
+       `BRAUHAUS.haushalt.geklemmt()` bleibt leer. */
+    if (B.blatt && B.blatt.melde) {
+      B.blatt.melde(bl, function () { Z.offen = false; neuZeichnen('gegner-aufsicht'); });
+    }
   }
 
   /* ======================================================================
