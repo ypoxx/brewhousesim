@@ -295,3 +295,65 @@ Brett, `stadt-zugeklappt`); die übrigen sieben müssen ihn benutzen.
    Werkbankbreite. A12 des Kritikers verlangt einzeilig und unter 50 % der
    BILDbreite, auch nach 30 Wochen.
    *Abnahme:* `BRAUHAUS.haushalt.miss().je.stadt.obenPx <= 26000`.
+
+---
+
+# DIE ZAHLEN — vorher gegen nachher, beide mit demselben Gerät auf eingefrorenen Ständen
+
+`werkbank/schuss/rahmen-w10/messen.mjs` (Verfahren des blinden Kritikers,
+Bildpunkte, Trennung nach Eigenschaft), 2752×1536, `?saat=1350`.
+VORHER = Messstand `37f4b44` auf Hafen 8930 · NACHHER = Nachstand
+`1f1e9c9b5452` auf Hafen 8931.
+
+## Ladezustand
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Deckung gesamt **vorher** | 22,0 % | 22,6 % | 22,3 % | 22,7 % |
+| Deckung gesamt **nachher** | **18,4 %** | **19,3 %** | **18,7 %** | **19,3 %** |
+| oberstes ⅙ **vorher** | 50,6 % | 51,2 % | 52,1 % | 53,1 % |
+| oberstes ⅙ **nachher** | **35,6 %** | **36,0 %** | **36,3 %** | **37,7 %** |
+| unterstes ⅙ **vorher** | 13,4 % | 11,9 % | 12,5 % | 11,9 % |
+| unterstes ⅙ **nachher** | **7,1 %** | **6,5 %** | **6,8 %** | **6,5 %** |
+| `kern` gesamt vorher → nachher | 5,8 → **2,3 %** | 5,7 → **2,3 %** | 6,0 → **2,4 %** | 5,9 → **2,4 %** |
+| `kern` oberstes ⅙ vorher → nachher | 25,4 → **10,4 %** | 25,9 → **10,7 %** | 27,1 → **11,3 %** | 26,6 → **11,2 %** |
+| `kern` unterstes ⅙ vorher → nachher | 9,4 → **3,2 %** | 8,6 → **3,2 %** | 8,9 → **3,2 %** | 8,6 → **3,2 %** |
+| Währungsbruch vorher → nachher | 1 → **0** | 1 → **0** | 1 → **0** | 1 → **0** |
+| über dem Rand | 0 → 0 | 0 → 0 | 0 → 0 | 0 → 0 |
+| fehlende Zeichen | 0 → 0 | 0 → 0 | 0 → 0 | 0 → 0 |
+| `lage` / Seitenfehler / `verdeckt()` | 0/0/0 | 0/0/0 | 0/0/0 | 0/0/0 |
+
+**R1 gemessen.** `einzeln.mjs` nimmt die Kopfleiste allein weg:
+vorher **19,6 / 20,1 / 21,0 / 20,9 %** des obersten Sechstels
+(137.866 / 141.749 / 148.023 / 146.903 px — die Hülle ist nur 105.123 px,
+den Rest macht der Schlagschatten). Nachher trägt der ganze `kern` im
+obersten Sechstel **10,4–11,3 %**, und die Hauszeile ist kein Kasten mehr —
+die Kopfleiste allein ist also **unter 12 %**. Auflage erfüllt.
+
+## R1 in einer Zeile, photographisch, `einzeln.mjs` — und was daneben ehrlich dazugehört
+
+| gedeckte Bildpunkte | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| `.kopfleiste` **vorher** | 137.866 = **19,6 %** | 141.749 = **20,1 %** | 148.023 = **21,0 %** | 146.903 = **20,9 %** |
+| `.kopfleiste` **nachher** | 73.404 = **10,4 %** | 75.573 = **10,7 %** | 79.342 = **11,3 %** | 78.694 = **11,2 %** |
+| `.hauszeile` vorher → nachher | 41.052 → **6.102** | 40.769 → 6.074 | 42.658 → 6.646 | 40.703 → 5.809 |
+| `.deckung` vorher → nachher (unterstes ⅙) | 44.145 → **17.966** | 37.956 → 14.966 | 40.648 → 16.048 | 38.015 → 14.993 |
+| WEITER (unverändert) | 22.286 | 22.366 | 22.313 | 22.372 |
+
+Zwei Dinge dazu, damit die Zahl nicht schöner aussieht, als sie ist:
+
+**Erstens: der Schlagschatten war ein Drittel der Kopfleiste.** Vorher deckte
+die Leiste 137.866 px bei einer Hülle von 105.123 px — 32.743 px fielen
+NEBEN den Kasten. Nachher deckt sie 73.404 px bei einer Hülle von 73.380 px:
+Hülle und Deckung sind auf 24 px genau gleich, weil kein Schatten mehr da ist.
+Von den 9,2 Prozentpunkten Gewinn sind also rund 4,6 die kleinere Leiste und
+rund 4,6 der Schatten.
+
+**Zweitens: Hauszeile und Deckungsband zählen jetzt nicht mehr mit, aber sie
+stehen weiter im Bild.** Sie sind keine Kästen mehr (kein deckender Grund,
+kein Rahmen) und fallen deshalb aus der Zählung des blinden Kritikers heraus.
+Sie decken aber weiter **6.102** bzw. **17.966** Bildpunkte mit Schrift und
+Lichthof — zusammen 0,57 % der Fläche. Das ist ein echter Gewinn (vorher
+85.197 px, also 2,0 %), aber es ist **nicht null**, und der Zähler sagt null.
+Wer die Zahl zitiert, zitiert eine Regel — die des Kritikers: „was nur Schrift
+trägt, ist Welt".
