@@ -466,5 +466,21 @@ Randwache **seitlich** gebaut (`randDx`), weil der Rahmen die Klage seitlich
 gefunden hatte. Sobald die Ausweiche wirklich läuft, bewegt dieses Stück auch
 **senkrecht** — und eine Randwache, die nur eine Achse kennt, ist keine.
 
-*(Messung folgt; die Läufe gehen einzeln durchs Messfenster. Es hält gerade
-DIE FUHRE mit einer 400-Wochen-Linie, DAS ERBE wartet ebenfalls.)*
+| # | Was | Warum | Datei |
+|---|---|---|---|
+| 11 | Die **freistehende** „umkämpft"-Zeile weicht aus (Anker `oben`, also einmal hin und zurück gerechnet) | Sie steht frei nur, wenn an der umkämpften Adresse gerade kein Zeichen hängt — genau ein Zustand, den keine der acht Messungen dieser Welle im Bild hatte | `gegner.js` `zeichneKennzahl` |
+
+### 6.7 Was ich bewusst NICHT ausweichen lasse — und dazu stehe
+
+**`zeichneZugmarken` (die Spurzettel) bleiben, wie sie sind.** Sie stapeln sich
+zu zweit an einem Ort (`dy: -(4 + n·3,4)` bzw. `2,6 + n·3,4`) und benutzen je
+nach Bildtiefe **beide** Anker. Eine Ausweiche würde jeden Zettel des Stapels
+einzeln verschieben — und zwei Zettel, die einem Schild ausweichen, weichen
+danach womöglich einander nicht mehr aus. **Ich habe Messungen dafür, dass sie
+in keinem der acht abgetasteten Zustände ein Schild treffen, und keine dafür,
+dass das Verschieben gefahrlos ist.** In dieser Lage ist Nichtstun die
+belegte Wahl und Handeln die Vermutung. Das steht hier, damit es der nächste
+findet, statt es für abgedeckt zu halten.
+
+*(Messung läuft. Der Nachstand ist `7896ee6+gegner-f921d8abdd12`, der Code ist
+ab hier eingefroren — jede Zahl unten gehört zu genau dieser Marke.)*

@@ -1779,7 +1779,15 @@
       : (sa[epNr()] || sa[4] || sa[1]).ort;
     if (!ort || !B.orte.hole(ort)) return;
     el.classList.add('frei');
-    B.orte.setze(el, ort, { anker: 'oben', dx: randDx(ort, 0, BREIT.paar), dy: 7 });
+    /* Auch diese Zeile weicht aus. Sie steht frei nur dann, wenn an der
+       umkaempften Adresse gerade KEIN Zeichen haengt (der Notartermin ist so
+       ein Fall) — also genau in einem Zustand, den keine der acht Messungen
+       dieser Welle im Bild hatte. Der Anker ist hier 'oben', nicht 'unten':
+       `weicheAus` rechnet mit der UNTERKANTE, also einmal hin und zurueck.
+       Eine Zeile ist rund 1,4 % hoch; 1,7 % ist die Schaetzung nach oben. */
+    var o = B.orte.hole(ort), hh = 1.7;
+    var dyF = weicheAus(o.x, BREIT.paar / 2 / 2752 * 100, o.y + 7 + hh, hh) - hh - o.y;
+    B.orte.setze(el, ort, { anker: 'oben', dx: randDx(ort, 0, BREIT.paar), dy: dyF });
     el.setAttribute('data-frei', 'gegner');
     fach.appendChild(el);
   }

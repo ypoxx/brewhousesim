@@ -293,15 +293,37 @@ Huellen, im Spiel gemessen (`sonde.mjs`), 2752×1536:
 | | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
 | `.fu-sommerblatt` vorher | 1.351.246 | 1.351.246 | 1.145.541 | 1.504.427 px² |
-| `.fu-sommerblatt` **nachher** | **189.612** | **189.612** | **182.803** | **182.803 px²** |
+| `.fu-sommerblatt` **nachher** | **181.909** | **181.909** | **171.288** | **171.288 px²** |
 | `haushalt.tafeln()` vorher | 1 | 1 | 1 | 1 |
 | `haushalt.tafeln()` **nachher** | **0** | **0** | **0** | **0** |
 | DIE FUHRE vorher | 1.375.264 | 1.356.800 | 1.152.000 | 1.515.184 px |
-| DIE FUHRE **nachher** | **195.456** | **196.480** | **187.200** | **191.984 px** |
+| DIE FUHRE **nachher** | **189.696** | **190.464** | **175.680** | **180.880 px** |
 | oberstes ⅙ DER FUHRE vorher → nachher | 140.800 → **0** | 140.800 → **0** | 140.800 → **0** | 140.800 → **0** |
 | alle neun (Huellen) vorher | 44,1 % | 44,7 % | 41,3 % | 50,9 % |
-| alle neun (Huellen) **nachher** | **21,8 %** | **22,4 %** | **21,7 %** | **26,5 %** |
+| alle neun (Huellen) **nachher** | **21,7 %** | **22,2 %** | **21,4 %** | **26,4 %** |
+| `ueberRand()` / `geklemmt()` nachher | 0 / leer | 0 / leer | 0 / leer | 0 / leer |
 | `verdeckt()` / `lage` / Seitenfehler | 0/0/0 | 0/0/0 | 0/0/0 | 0/0/0 |
+| alle vier Planknoepfe „trifft" | ja | ja | ja | ja |
+
+> **BERICHTIGUNG (Neuanlauf) — diese Tabelle stand mit falschen
+> Nachher-Zahlen da, und der Fehler ist meiner.** Vier Zeilen waren nicht
+> aus dem Schlusslauf `messungen/nachher-sonde-w30.txt` abgeschrieben,
+> sondern aus `messungen/probe2.txt` — einem Zwischenstand von der
+> Bauprobe, ein Bauschritt vor dem gemessenen Stand:
+>
+> | Zeile | stand da (aus `probe2.txt`) | richtig (aus `nachher-sonde-w30.txt`) |
+> |---|---|---|
+> | `.fu-sommerblatt` | 189.612 / 189.612 / 182.803 / 182.803 px² (716×265, 716×255) | **181.909 / 181.909 / 171.288 / 171.288 px²** (716×254, 716×239) |
+> | DIE FUHRE | 195.456 / 196.480 / 187.200 / 191.984 px | **189.696 / 190.464 / 175.680 / 180.880 px** |
+> | alle neun | 21,8 / 22,4 / 21,7 / 26,5 % | **21,7 / 22,2 / 21,4 / 26,4 %** |
+>
+> Die richtigen Zahlen sind durchweg **kleiner** — die Berichtigung faellt
+> also zu meinen Gunsten aus, und genau deshalb gehoert sie erst recht
+> hierher: eine Tabelle, in der Zeilen aus zwei Staenden nebeneinander
+> stehen, ist keine Messung, auch wenn sie guenstig ausgeht. Die
+> Vorher-Zeilen und `tafeln()` waren richtig. Nachgeprueft auf dem
+> ausgelieferten Stand `3082041165` (§3.9), wo dieselben Zahlen noch einmal
+> herauskommen.
 
 ### 3.2 Dieselbe Lage photographisch — das Geraet des blinden Kritikers
 
@@ -624,12 +646,21 @@ unter 1× bleiben in jedem Lauf bei hoechstens 2 von 14 (erlaubt 2,33).
   0,393 (1884).
 * Die Jahre unter 1× sind **besser** geworden: 2/0/1/1 → **0/0/1/1** von
   14, erlaubt sind 2,33.
-* 1600, 1884 und 1970 sind Ziffer fuer Ziffer unveraendert.
+* **1600, 1884 und 1970 sind nicht nur „Ziffer fuer Ziffer" gleich, sondern
+  im Rohdatenfeldvergleich bis auf die Hafennummer identisch** — 400 von
+  400 Wochen dieselbe Partie. Die Aussage steht auf drei eigenen
+  Vorher-Laeufen, nicht auf den Zahlen des Rahmens.
 * 1350 ist die Epoche, die schon beim Rahmen auf dem UNVERAENDERTEN Stand
-  zwischen zwei Laeufen umgesprungen ist (Satz B: +0,270, 0/14).
-* Der Vorher-Satz ist auch mit eigenen Laeufen bestaetigt: 1600
-  (−0,189/+0,049/−0,116) und 1884 (+0,168/+0,346/+0,393) sind auf
-  `7896ee6` Ziffer fuer Ziffer dieselben wie auf dem Nachstand.
+  zwischen zwei Laeufen umgesprungen ist (Satz B: +0,270, 0/14). Meine
+  Abweichung beginnt dort in Woche 61.
+* Der Vorher-Satz reproduziert die Grundlinie des Auftrags punktgenau:
+  Jahre unter 1× **2/0/1/1 von 14**, groesster Wert **0,393** (1884) —
+  beides die Zahlen aus `gauntlet/WELLE-11.md`.
+
+**Damit ist die zweite Messlatte fuer DIE FUHRE so belegt, wie sie zu
+belegen ist:** in drei Epochen durch Gleichheit der Partie, in der vierten
+durch Abstand zur Latte (groesster Betrag 0,336 von 0,700) bei einer
+Epoche, die auch unveraendert nicht stabil ist.
 
 
 ### 3.8 Welche Fassung gemessen wurde — jetzt in `git` nachstellbar
@@ -662,20 +693,35 @@ zwei Commits, und sie enthalten ausschliesslich Kommentar:**
 git diff 91fb766 HEAD -- spiel/stuecke/fuhre.js spiel/stil/fuhre.css
 ```
 
-Der Diff ist 42 Zeilen lang und liegt **vollstaendig innerhalb von
-`/* … */`**: berichtigte Zahlen in den Erklaerkoepfen (`20%/560px` →
-`26%/700px`, `4,2 %` → `4,5 %`, der Hinweis auf F1, dass nur noch der Fuss
-klebt). Keine Regel, kein Selektor, keine Anweisung, keine Zeile Code ist
-verschieden. Die alte Fassung dieses Abschnitts verwies auf zwei Diffs
+Der Diff liegt **vollstaendig innerhalb von `/* … */`**: berichtigte Zahlen
+in den Erklaerkoepfen (`20%/560px` → `26%/700px`, `4,2 %` → `4,5 %`, der
+Hinweis auf F1, dass nur noch der Fuss klebt) und die Berichtigung aus §2.
+
+**Und das ist nicht nach Augenschein gesagt, sondern ausgerechnet.** Ein
+kleiner Schnitzer entfernt aus beiden Fassungen jeden Kommentar (`/*…*/`
+und `//`, Zeichenketten dabei geschont) und presst den Rest auf einfache
+Leerzeichen:
+
+| ohne Kommentare, `91fb766` gegen Arbeitsbaum | |
+|---|---|
+| `spiel/stuecke/fuhre.js` | **IDENTISCH**, 110.490 gegen 110.490 Zeichen |
+| `spiel/stil/fuhre.css` | **IDENTISCH**, 22.498 gegen 22.498 Zeichen |
+
+Keine Regel, kein Selektor, keine Anweisung, kein Zeichen Code ist
+verschieden. Die Zahlen aus §3.1–3.7 gelten damit unveraendert fuer den
+Stand, der ausgeliefert wird. Die alte Fassung dieses Abschnitts verwies auf zwei Diffs
 gegen `/tmp/fuhrestand/…`; die hat der Container-Reset genommen, und ein
 Beleg, der einen Neustart nicht ueberlebt, ist kein Beleg. Der Weg ueber
 `git` ist von jedem Behaelter aus derselbe.
 
-**Der Hafen 8952 traegt seit dem Neuanlauf `7896ee6+cf76271455`**, also den
-Arbeitsbaum von heute. Alle Zahlen, die ab dem Neuanlauf dazukommen (§3.9),
-stehen auf dieser Marke; die aelteren auf `118b191467`. Da die beiden sich
-nur im Kommentar unterscheiden, sind sie vergleichbar — nachgemessen ist es
-trotzdem, siehe §3.9.
+**Beim Neuanlauf ist noch ein dritter Kommentar dazugekommen** — die
+Berichtigung von „nichts steht nur noch im Titelfeld" (§2). Der Stand, auf
+dem die Abnahme des Neuanlaufs (§3.9) laeuft, traegt deshalb die Marke
+**`7896ee6+3082041165`** (`messungen/abn-marke.txt`). Die drei Marken
+`118b191467` → `cf76271455` → `3082041165` unterscheiden sich untereinander
+**ausschliesslich** im Text zwischen `/* … */`; nachzurechnen mit dem
+`git diff` oben. Weil „sollte dasselbe messen" kein Messwert ist, ist auf
+der letzten Marke noch einmal gemessen worden — §3.9.
 
 ---
 
