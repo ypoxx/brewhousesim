@@ -76,11 +76,64 @@ const lies = () => {
     schilder.push({ text: t.slice(0, 40), klasse: String(el.className || '').slice(0, 40),
       x: Math.round(r.x), y: Math.round(r.y), b: Math.round(r.width), h: Math.round(r.height) });
   });
+
+  /* A3 — schneidet IRGENDEIN Ding des GEGNERS eine gemalte Beschriftung an?
+     Gefragt sind die vier, die die Auflage nennt, und zwar unabhaengig davon,
+     ob das Ding ein Kasten ist: ein Hofbild deckt genauso zu wie eine Karte. */
+  const VIER = /ST\. MICHAEL|GASTHOF LINDENHOF|BRAUEREI ADLER|BRAUSTATT ADLER|BRAUHAUS ZUM ADLER|ADLER-BR|NORDSTERN-GRUPPE|BRAUHAUS$|ZUM ANKER|GEGR\./i;
+  const ziele = schilder.filter(v => VIER.test(v.text));
+  const treffer = [];
+  document.querySelectorAll('#buehne .fach[data-stueck="gegner"] *').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.width < 6 || r.height < 6) return;
+    const c = getComputedStyle(el);
+    if (c.visibility === 'hidden' || c.display === 'none') return;
+    if (parseFloat(c.opacity) < 0.05) return;
+    let n = el, weg = false;
+    while (n && n.nodeType === 1 && n.id !== 'buehne') {
+      const cc = getComputedStyle(n);
+      if (/inset\(\s*50%/.test(cc.clipPath || '')) { weg = true; break; }
+      n = n.parentElement;
+    }
+    if (weg) return;
+    const kl = String(el.className && el.className.baseVal !== undefined
+      ? el.className.baseVal : (el.className || ''));
+    ziele.forEach(v => {
+      const ux = Math.max(0, Math.min(r.right, v.x + v.b) - Math.max(r.x, v.x));
+      const uy = Math.max(0, Math.min(r.bottom, v.y + v.h) - Math.max(r.y, v.y));
+      if (ux > 1 && uy > 1) treffer.push({ schild: v.text, ueber: Math.round(ux * uy),
+        klasse: kl.slice(0, 40), tag: el.tagName.toLowerCase(),
+        mass: `${Math.round(r.width)}×${Math.round(r.height)} @${Math.round(r.x)},${Math.round(r.y)}` });
+    });
+  });
+
+  /* A10 — abgeschnittene ZAHLEN. Ein Text, dessen Kasten schmaler ist als
+     sein Inhalt, gilt hier auch dann als abgeschnitten, wenn er ueber den
+     Rand seines Elternteils quillt statt weggeschnitten zu werden — beides
+     macht eine Zahl unlesbar oder falsch lesbar. */
+  const zahlen = [];
+  document.querySelectorAll('#buehne .fach[data-stueck="gegner"] *').forEach(el => {
+    if (el.children.length) return;
+    const t = (el.textContent || '').trim();
+    if (!t || !/\d/.test(t)) return;
+    const c = getComputedStyle(el);
+    if (c.visibility === 'hidden' || c.display === 'none') return;
+    const eng = el.scrollWidth > el.clientWidth + 1 && el.clientWidth > 0;
+    const p = el.parentElement;
+    let quillt = false;
+    if (p) {
+      const r = el.getBoundingClientRect(), q = p.getBoundingClientRect();
+      quillt = r.right > q.right + 1.5 || r.x < q.x - 1.5;
+    }
+    if (eng || quillt) zahlen.push({ klasse: String(el.className || '').slice(0, 30),
+      soll: el.scrollWidth, ist: el.clientWidth, quillt, ellipse: c.textOverflow,
+      text: t.slice(0, 40) });
+  });
   const h = (BRAUHAUS.haushalt ? BRAUHAUS.haushalt.miss() : null);
   return {
     kaesten: kaesten.sort((a, b) => b.flaeche - a.flaeche),
     schnitt: schnitt.sort((a, b) => (b.soll - b.ist) - (a.soll - a.ist)).slice(0, 24),
-    schilder,
+    schilder, treffer, zahlen,
     haushalt: h ? { gesamt: h.gesamt, oben: h.oben, gegner: h.je.gegner || null } : null,
     pruefe: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.pruefe() : null,
     ueberRand: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.ueberRand() : null,
@@ -143,6 +196,10 @@ for (const e of EPOCHEN) {
     `    ${String(k.flaeche).padStart(7)} px²  ${String(k.b).padStart(4)}×${String(k.h).padStart(3)} @${k.x},${k.y}`
     + `${k.raus ? ' RAUS' : ''}  .${k.klasse}  „${k.text}"`));
   aus.push(`    (${d.kaesten.length} Kaesten, Summe der Huellen ${d.kaesten.reduce((a, k) => a + k.flaeche, 0)} px²)`);
+  aus.push(`  A3 — GEGNER auf gemalter Beschriftung: ${d.treffer.length}`);
+  d.treffer.forEach(t => aus.push(`    „${t.schild}"  ${t.ueber} px² unter ${t.tag}.${t.klasse}  ${t.mass}`));
+  aus.push(`  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: ${d.zahlen.length}`);
+  d.zahlen.forEach(z => aus.push(`    ${z.soll} px in ${z.ist} px${z.quillt ? ' QUILLT' : ''}  ${z.ellipse}  .${z.klasse}  „${z.text}"`));
   aus.push(`  ORTSSCHILDER der STADT:`);
   d.schilder.forEach(v => aus.push(`    ${String(v.b).padStart(4)}×${String(v.h).padStart(3)} @${v.x},${v.y}  „${v.text}"  .${v.klasse}`));
   aus.push(`  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):`);

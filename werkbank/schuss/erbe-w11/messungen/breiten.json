@@ -1,0 +1,1396 @@
+[
+ {
+  "epoche": 1,
+  "laden": {
+   "knoepfe": [
+    {
+     "zug": "erbe:tafel:verschreibe",
+     "text": "Verschreiben · Zum Goldenen Ochsen",
+     "wortNoetig": 230,
+     "wortHat": 230,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−16 Pf",
+     "br": 347,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Leibgeding · jährlich",
+     "wortNoetig": 127,
+     "wortHat": 127,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−13 Pf",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfertigung",
+     "wortNoetig": 73,
+     "wortHat": 73,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−64 Pf",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Mit leeren Händen",
+     "wortNoetig": 112,
+     "wortHat": 112,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 Pf",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:verschreibe:ochse",
+     "text": "Verschreiben",
+     "wortNoetig": 89,
+     "wortHat": 89,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−16 Pf",
+     "br": 170,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:pfarrhof",
+     "text": "Verschreiben",
+     "wortNoetig": 89,
+     "wortHat": 89,
+     "gekuerzt": false,
+     "preisBr": 48,
+     "preisText": "−8 Pf",
+     "br": 162,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:hirsch",
+     "text": "Verschreiben",
+     "wortNoetig": 89,
+     "wortHat": 89,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−11 Pf",
+     "br": 170,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:markt",
+     "text": "Verschreiben",
+     "wortNoetig": 89,
+     "wortHat": 89,
+     "gekuerzt": false,
+     "preisBr": 48,
+     "preisText": "−6 Pf",
+     "br": 162,
+     "ho": 31
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 532,
+    "kastenHoehe": 1075,
+    "scrollH": 1067,
+    "clientH": 1067,
+    "zuege": 4,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 171,
+      "n": 4
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 58,
+      "n": 1
+     }
+    ]
+   },
+   "band": {
+    "br": 1181,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 14 WochenI. Kunigunde Bruckner · sparsam · Feder 0,70×am Haus 0 · an der Person 4nimmt 4 · 2 Fass"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 9,
+    "px": 136192,
+    "anteil": 3.2218992248062017,
+    "obenPx": 0,
+    "obenAnteil": 0,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 108192,
+    "ueberOben": -6000
+   },
+   "stand": {
+    "erbfaelle": 0,
+    "taten": [
+     "erbe:tafel:verschreibe 16"
+    ]
+   }
+  },
+  "w30": {
+   "knoepfe": [
+    {
+     "zug": "erbe:nachschrift",
+     "text": "Nachschrift · 3 Häuser",
+     "wortNoetig": 136,
+     "wortHat": 136,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−48 Pf",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Leibgeding · jährlich",
+     "wortNoetig": 127,
+     "wortHat": 127,
+     "gekuerzt": false,
+     "preisBr": 48,
+     "preisText": "−5 Pf",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfertigung",
+     "wortNoetig": 73,
+     "wortHat": 73,
+     "gekuerzt": false,
+     "preisBr": 48,
+     "preisText": "−5 Pf",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Mit leeren Händen",
+     "wortNoetig": 112,
+     "wortHat": 112,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 Pf",
+     "br": 291,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 618,
+    "kastenHoehe": 1075,
+    "scrollH": 1067,
+    "clientH": 1067,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 113,
+      "n": 3
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 86,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1181,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 42 WochenII. Berthold Bruckner · fromm · Feder 0,97×am Haus 0 · an der Person 0nimmt 0 · 0 Fass"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 9,
+    "px": 136192,
+    "anteil": 3.2218992248062017,
+    "obenPx": 0,
+    "obenAnteil": 0,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 108192,
+    "ueberOben": -6000
+   },
+   "stand": {
+    "erbfaelle": 1,
+    "taten": [
+     "erbe:nachschrift 48",
+     "erbe:seelgeraet 37"
+    ]
+   }
+  },
+  "buchOffen": {
+   "knoepfe": [
+    {
+     "zug": "erbe:nachschrift",
+     "text": "Nachschrift · 3 Häuser",
+     "wortNoetig": 136,
+     "wortHat": 136,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−48 Pf",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Leibgeding · jährlich",
+     "wortNoetig": 127,
+     "wortHat": 127,
+     "gekuerzt": false,
+     "preisBr": 48,
+     "preisText": "−5 Pf",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfertigung",
+     "wortNoetig": 73,
+     "wortHat": 73,
+     "gekuerzt": false,
+     "preisBr": 48,
+     "preisText": "−5 Pf",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Mit leeren Händen",
+     "wortNoetig": 112,
+     "wortHat": 112,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 Pf",
+     "br": 291,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 618,
+    "kastenHoehe": 1075,
+    "scrollH": 1067,
+    "clientH": 1067,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 113,
+      "n": 3
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 86,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1181,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 42 WochenII. Berthold Bruckner · fromm · Feder 0,97×am Haus 0 · an der Person 0nimmt 0 · 0 Fass"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 16,
+    "px": 1388992,
+    "anteil": 32.859435562015506,
+    "obenPx": 60320,
+    "obenAnteil": 8.561954941860465,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 1360992,
+    "ueberOben": 54320
+   },
+   "stand": {
+    "erbfaelle": 1,
+    "taten": [
+     "erbe:nachschrift 48",
+     "erbe:seelgeraet 37"
+    ]
+   }
+  }
+ },
+ {
+  "epoche": 2,
+  "laden": {
+   "knoepfe": [
+    {
+     "zug": "erbe:tafel:verschreibe",
+     "text": "Verbriefen · Lindenhof",
+     "wortNoetig": 138,
+     "wortHat": 138,
+     "gekuerzt": false,
+     "preisBr": 65,
+     "preisText": "−104 fl",
+     "br": 346,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Ausgedinge · jährlich",
+     "wortNoetig": 130,
+     "wortHat": 130,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−76 fl",
+     "br": 271,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 65,
+     "wortHat": 65,
+     "gekuerzt": false,
+     "preisBr": 65,
+     "preisText": "−379 fl",
+     "br": 271,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Vergleich",
+     "wortNoetig": 93,
+     "wortHat": 93,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 fl",
+     "br": 271,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:verschreibe:lindenhof",
+     "text": "Verbriefen",
+     "wortNoetig": 72,
+     "wortHat": 72,
+     "gekuerzt": false,
+     "preisBr": 65,
+     "preisText": "−104 fl",
+     "br": 162,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:torschenke",
+     "text": "Verbriefen",
+     "wortNoetig": 72,
+     "wortHat": 72,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−46 fl",
+     "br": 153,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:faehrhaus",
+     "text": "Verbriefen",
+     "wortNoetig": 72,
+     "wortHat": 72,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−35 fl",
+     "br": 153,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:hirsch",
+     "text": "Verbriefen",
+     "wortNoetig": 72,
+     "wortHat": 72,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−58 fl",
+     "br": 153,
+     "ho": 31
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 535,
+    "kastenHoehe": 1075,
+    "scrollH": 1071,
+    "clientH": 1071,
+    "zuege": 4,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 175,
+      "n": 4
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 59,
+      "n": 1
+     }
+    ]
+   },
+   "band": {
+    "br": 1177,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 12 WochenI. Barbara Bruckner · sparsam · Feder 0,70×am Haus 0 · an der Person 4nimmt 4 · 3 Fass"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 9,
+    "px": 136192,
+    "anteil": 3.2218992248062017,
+    "obenPx": 0,
+    "obenAnteil": 0,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 108192,
+    "ueberOben": -6000
+   },
+   "stand": {
+    "erbfaelle": 0,
+    "taten": [
+     "erbe:tafel:verschreibe 104"
+    ]
+   }
+  },
+  "w30": {
+   "knoepfe": [
+    {
+     "zug": "erbe:nachschrift",
+     "text": "Nachschrift · 2 Häuser",
+     "wortNoetig": 136,
+     "wortHat": 136,
+     "gekuerzt": false,
+     "preisBr": 65,
+     "preisText": "−175 fl",
+     "br": 290,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Ausgedinge · jährlich",
+     "wortNoetig": 130,
+     "wortHat": 130,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−18 fl",
+     "br": 290,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 65,
+     "wortHat": 65,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−18 fl",
+     "br": 290,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Vergleich",
+     "wortNoetig": 93,
+     "wortHat": 93,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 fl",
+     "br": 290,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 592,
+    "kastenHoehe": 1075,
+    "scrollH": 1071,
+    "clientH": 1071,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 88,
+      "n": 2
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 88,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1177,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 43 WochenII. Veit Bruckner · wagemutig · Feder 1,08×am Haus 0 · an der Person 0nimmt 0 · 0 Fass"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 9,
+    "px": 136192,
+    "anteil": 3.2218992248062017,
+    "obenPx": 0,
+    "obenAnteil": 0,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 108192,
+    "ueberOben": -6000
+   },
+   "stand": {
+    "erbfaelle": 1,
+    "taten": [
+     "erbe:nachschrift 175"
+    ]
+   }
+  },
+  "buchOffen": {
+   "knoepfe": [
+    {
+     "zug": "erbe:nachschrift",
+     "text": "Nachschrift · 2 Häuser",
+     "wortNoetig": 136,
+     "wortHat": 136,
+     "gekuerzt": false,
+     "preisBr": 65,
+     "preisText": "−175 fl",
+     "br": 290,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Ausgedinge · jährlich",
+     "wortNoetig": 130,
+     "wortHat": 130,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−18 fl",
+     "br": 290,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 65,
+     "wortHat": 65,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−18 fl",
+     "br": 290,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Vergleich",
+     "wortNoetig": 93,
+     "wortHat": 93,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 fl",
+     "br": 290,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 592,
+    "kastenHoehe": 1075,
+    "scrollH": 1071,
+    "clientH": 1071,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 88,
+      "n": 2
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 88,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1177,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 43 WochenII. Veit Bruckner · wagemutig · Feder 1,08×am Haus 0 · an der Person 0nimmt 0 · 0 Fass"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 20,
+    "px": 1388992,
+    "anteil": 32.859435562015506,
+    "obenPx": 60320,
+    "obenAnteil": 8.561954941860465,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 1360992,
+    "ueberOben": 54320
+   },
+   "stand": {
+    "erbfaelle": 1,
+    "taten": [
+     "erbe:nachschrift 175"
+    ]
+   }
+  }
+ },
+ {
+  "epoche": 3,
+  "laden": {
+   "knoepfe": [
+    {
+     "zug": "erbe:tafel:verschreibe",
+     "text": "Eintragen · Bahnhofsgaststätte",
+     "wortNoetig": 184,
+     "wortHat": 184,
+     "gekuerzt": false,
+     "preisBr": 73,
+     "preisText": "−2.280 M",
+     "br": 348,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Leibrente · jährlich",
+     "wortNoetig": 116,
+     "wortHat": 116,
+     "gekuerzt": false,
+     "preisBr": 73,
+     "preisText": "−1.657 M",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 65,
+     "wortHat": 65,
+     "gekuerzt": false,
+     "preisBr": 73,
+     "preisText": "−8.286 M",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Abfindung",
+     "wortNoetig": 100,
+     "wortHat": 100,
+     "gekuerzt": false,
+     "preisBr": 31,
+     "preisText": "0 M",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:verschreibe:ochse",
+     "text": "Eintragen",
+     "wortNoetig": 66,
+     "wortHat": 66,
+     "gekuerzt": false,
+     "preisBr": 73,
+     "preisText": "−1.330 M",
+     "br": 165,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:torschenke",
+     "text": "Eintragen",
+     "wortNoetig": 66,
+     "wortHat": 66,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−760 M",
+     "br": 148,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:brueckenwirt",
+     "text": "Eintragen",
+     "wortNoetig": 66,
+     "wortHat": 66,
+     "gekuerzt": false,
+     "preisBr": 73,
+     "preisText": "−1.045 M",
+     "br": 165,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:bahnhofswirt",
+     "text": "Eintragen",
+     "wortNoetig": 66,
+     "wortHat": 66,
+     "gekuerzt": false,
+     "preisBr": 73,
+     "preisText": "−2.280 M",
+     "br": 165,
+     "ho": 31
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 530,
+    "kastenHoehe": 1075,
+    "scrollH": 1071,
+    "clientH": 1071,
+    "zuege": 4,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 175,
+      "n": 4
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 59,
+      "n": 1
+     }
+    ]
+   },
+   "band": {
+    "br": 1183,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 16 WochenI. Wilhelmine Bruckner · sparsam · Feder 0,70×am Haus 0 · an der Person 4nimmt 4 · 4,5 hl"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 9,
+    "px": 136192,
+    "anteil": 3.2218992248062017,
+    "obenPx": 0,
+    "obenAnteil": 0,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 108192,
+    "ueberOben": -6000
+   },
+   "stand": {
+    "erbfaelle": 0,
+    "taten": [
+     "erbe:tafel:verschreibe 2280"
+    ]
+   }
+  },
+  "w30": {
+   "knoepfe": [
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Leibrente · jährlich",
+     "wortNoetig": 116,
+     "wortHat": 116,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−176 M",
+     "br": 390,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 65,
+     "wortHat": 65,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−279 M",
+     "br": 390,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Abfindung",
+     "wortNoetig": 100,
+     "wortHat": 100,
+     "gekuerzt": false,
+     "preisBr": 31,
+     "preisText": "0 M",
+     "br": 390,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 558,
+    "kastenHoehe": 1075,
+    "scrollH": 1071,
+    "clientH": 1071,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 59,
+      "n": 1
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 88,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1183,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 47 WochenII. Therese Bruckner · wagemutig · Feder 1,08×am Haus 0 · an der Person 0nimmt 0 · 0,0 hl"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 8,
+    "px": 136192,
+    "anteil": 3.2218992248062017,
+    "obenPx": 0,
+    "obenAnteil": 0,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 108192,
+    "ueberOben": -6000
+   },
+   "stand": {
+    "erbfaelle": 1,
+    "taten": []
+   }
+  },
+  "buchOffen": {
+   "knoepfe": [
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Leibrente · jährlich",
+     "wortNoetig": 116,
+     "wortHat": 116,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−176 M",
+     "br": 390,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 65,
+     "wortHat": 65,
+     "gekuerzt": false,
+     "preisBr": 56,
+     "preisText": "−279 M",
+     "br": 390,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Abfindung",
+     "wortNoetig": 100,
+     "wortHat": 100,
+     "gekuerzt": false,
+     "preisBr": 31,
+     "preisText": "0 M",
+     "br": 390,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 558,
+    "kastenHoehe": 1075,
+    "scrollH": 1071,
+    "clientH": 1071,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 59,
+      "n": 1
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 88,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1183,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 47 WochenII. Therese Bruckner · wagemutig · Feder 1,08×am Haus 0 · an der Person 0nimmt 0 · 0,0 hl"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 20,
+    "px": 1388992,
+    "anteil": 32.859435562015506,
+    "obenPx": 60320,
+    "obenAnteil": 8.561954941860465,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 1360992,
+    "ueberOben": 54320
+   },
+   "stand": {
+    "erbfaelle": 1,
+    "taten": []
+   }
+  }
+ },
+ {
+  "epoche": 4,
+  "laden": {
+   "knoepfe": [
+    {
+     "zug": "erbe:tafel:verschreibe",
+     "text": "Festschreiben · Lindenhof",
+     "wortNoetig": 226,
+     "wortHat": 226,
+     "gekuerzt": false,
+     "preisBr": 90,
+     "preisText": "−14.706 DM",
+     "br": 348,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Versorgungszusage · jährlich",
+     "wortNoetig": 253,
+     "wortHat": 157,
+     "gekuerzt": true,
+     "preisBr": 90,
+     "preisText": "−11.682 DM",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 81,
+     "wortHat": 81,
+     "gekuerzt": false,
+     "preisBr": 90,
+     "preisText": "−58.409 DM",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Abfindung",
+     "wortNoetig": 126,
+     "wortHat": 126,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 DM",
+     "br": 272,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:verschreibe:lindenhof",
+     "text": "Festschreiben",
+     "wortNoetig": 133,
+     "wortHat": 133,
+     "gekuerzt": false,
+     "preisBr": 90,
+     "preisText": "−14.706 DM",
+     "br": 248,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:torschenke",
+     "text": "Festschreiben",
+     "wortNoetig": 133,
+     "wortHat": 133,
+     "gekuerzt": false,
+     "preisBr": 81,
+     "preisText": "−6.536 DM",
+     "br": 240,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:muehlwirt",
+     "text": "Festschreiben",
+     "wortNoetig": 133,
+     "wortHat": 133,
+     "gekuerzt": false,
+     "preisBr": 81,
+     "preisText": "−7.353 DM",
+     "br": 240,
+     "ho": 31
+    },
+    {
+     "zug": "erbe:verschreibe:markt",
+     "text": "Festschreiben",
+     "wortNoetig": 133,
+     "wortHat": 133,
+     "gekuerzt": false,
+     "preisBr": 81,
+     "preisText": "−4.085 DM",
+     "br": 240,
+     "ho": 31
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 578,
+    "kastenHoehe": 1075,
+    "scrollH": 1073,
+    "clientH": 1073,
+    "zuege": 4,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 175,
+      "n": 4
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 59,
+      "n": 1
+     }
+    ]
+   },
+   "band": {
+    "br": 1183,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 11 WochenI. Margarete Bruckner · sparsam · Feder 0,70×am Haus 0 · an der Person 4nimmt 4 · 71 hl"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 9,
+    "px": 136192,
+    "anteil": 3.2218992248062017,
+    "obenPx": 0,
+    "obenAnteil": 0,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 108192,
+    "ueberOben": -6000
+   },
+   "stand": {
+    "erbfaelle": 0,
+    "taten": [
+     "erbe:tafel:verschreibe 14706"
+    ]
+   }
+  },
+  "w30": {
+   "knoepfe": [
+    {
+     "zug": "erbe:nachschrift",
+     "text": "Nachschrift · 2 Häuser",
+     "wortNoetig": 199,
+     "wortHat": 176,
+     "gekuerzt": true,
+     "preisBr": 90,
+     "preisText": "−20.605 DM",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Versorgungszusage · jährlich",
+     "wortNoetig": 253,
+     "wortHat": 201,
+     "gekuerzt": true,
+     "preisBr": 65,
+     "preisText": "−755 DM",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 81,
+     "wortHat": 81,
+     "gekuerzt": false,
+     "preisBr": 81,
+     "preisText": "−1.799 DM",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Abfindung",
+     "wortNoetig": 126,
+     "wortHat": 126,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 DM",
+     "br": 291,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 664,
+    "kastenHoehe": 1075,
+    "scrollH": 1073,
+    "clientH": 1073,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt stadt-zugeklappt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 116,
+      "n": 3
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 88,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1183,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 43 WochenII. Sabine Bruckner · fromm · Feder 0,97×am Haus 0 · an der Person 0nimmt 0 · 0,0 hl"
+   },
+   "erbe": null,
+   "stand": {
+    "erbfaelle": 1,
+    "taten": [
+     "erbe:nachschrift 20605",
+     "erbe:seelgeraet 12680"
+    ]
+   }
+  },
+  "buchOffen": {
+   "knoepfe": [
+    {
+     "zug": "erbe:nachschrift",
+     "text": "Nachschrift · 2 Häuser",
+     "wortNoetig": 199,
+     "wortHat": 176,
+     "gekuerzt": true,
+     "preisBr": 90,
+     "preisText": "−20.605 DM",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:leibgeding",
+     "text": "Versorgungszusage · jährlich",
+     "wortNoetig": 253,
+     "wortHat": 201,
+     "gekuerzt": true,
+     "preisBr": 65,
+     "preisText": "−755 DM",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:abfindung",
+     "text": "Abfindung",
+     "wortNoetig": 81,
+     "wortHat": 81,
+     "gekuerzt": false,
+     "preisBr": 81,
+     "preisText": "−1.799 DM",
+     "br": 291,
+     "ho": 29
+    },
+    {
+     "zug": "erbe:uebergabe:bruch",
+     "text": "Ohne Abfindung",
+     "wortNoetig": 126,
+     "wortHat": 126,
+     "gekuerzt": false,
+     "preisBr": 39,
+     "preisText": "0 DM",
+     "br": 291,
+     "ho": 29
+    }
+   ],
+   "buch": {
+    "mass": "1156x1075",
+    "flaecheAnteil": 29.4,
+    "inhaltHoehe": 664,
+    "kastenHoehe": 1075,
+    "scrollH": 1073,
+    "clientH": 1073,
+    "zuege": 0,
+    "zugeklappt": "erb-buch blatt",
+    "laden": [
+     {
+      "k": "erb-lade-fest",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-lose",
+      "h": 53,
+      "n": 0
+     },
+     {
+      "k": "erb-lade-weg",
+      "h": 116,
+      "n": 3
+     },
+     {
+      "k": "erb-lade-hand",
+      "h": 88,
+      "n": 2
+     }
+    ]
+   },
+   "band": {
+    "br": 1183,
+    "ho": 21,
+    "spalten": 5,
+    "text": "DAS ERBEnoch 43 WochenII. Sabine Bruckner · fromm · Feder 0,97×am Haus 0 · an der Person 0nimmt 0 · 0,0 hl"
+   },
+   "erbe": {
+    "stueck": "erbe",
+    "kaesten": 12,
+    "px": 1252800,
+    "anteil": 29.6375363372093,
+    "obenPx": 60320,
+    "obenAnteil": 8.561954941860465,
+    "grenze": 28000,
+    "grenzeOben": 6000,
+    "bekannt": true,
+    "ueber": 1224800,
+    "ueberOben": 54320
+   },
+   "stand": {
+    "erbfaelle": 1,
+    "taten": [
+     "erbe:nachschrift 20605",
+     "erbe:seelgeraet 12680"
+    ]
+   }
+  }
+ }
+]
