@@ -46,6 +46,72 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DAS URTEIL DER WELLE 8 IST DA — das Zielbild gewinnt weiter, aber der Grund ist ein anderer
+
+*Blinder Bildvergleich am Stand `8b81250`, Hafen 8906, Marke vor und nach den
+Aufnahmen geprüft. `werkbank/urteile/welle8-bildvergleich.md`, 586 Zeilen,
+10 Auflagen mit Koordinaten. 34 Aufnahmen, 140 echte Mausklicks, 0 Seitenfehler.*
+
+| | I · 1350 | II · 1600 | III · 1884 | IV · 1970 |
+|---|---|---|---|---|
+| Urteil | Zielbild gewinnt (knapp) | Zielbild gewinnt | **unentschieden** | Zielbild gewinnt |
+
+**Der Satz, der die Welle zusammenfasst:** *Das Spiel hat das Zielbild beim
+Malen eingeholt und verliert es unter seiner eigenen Oberfläche wieder.*
+
+**Der Kritiker hat die Trennung geleistet, an der ich selbst vorbeigemessen
+habe.** Die Ebenengrenze `platte/bau` gegen den Rest trägt nicht: `marken` hält
+den **Gegnerhof** (gemalte Welt) *und* seine Karteikarten, `hand` die Fuhrwerke
+*und* die Bretter. Er ist in die Falle gelaufen, hat es gemerkt, und sie durch
+eine **Eigenschaftstrennung** ersetzt — ausgeblendet wird, was deckenden Grund
+oder Rahmen hat, ein Kasten also; freigestellte Bilder bleiben stehen:
+
+| | Verdeckung gesamt | davon **Kästen** | davon **gemalte Sprites** |
+|---|---|---|---|
+| 1350 | 29,6 % | **29,0 %** | 0,7 % |
+| 1600 | 30,3 % | **29,5 %** | 0,7 % |
+| 1884 | 29,1 % | **29,1 %** | 0,0 % |
+| 1970 | 29,8 % | **29,5 %** | 0,3 % |
+
+Seine Gesamtzahlen (29,1–30,3 %) treffen meine eigenen (29,1–30,3 %) — zwei
+Geräte, zwei Sitzungen, dieselben Zehntel. **Der Einwand „ihr habt die gemalte
+Welt mitgemessen" ist damit erledigt: sie kostet höchstens sieben Zehntel eines
+Prozents.** Das Zielblatt trägt Kopfleiste und WEITER-Tafel, zusammen **unter
+4 %**. Verhältnis rund **1 : 7,5**.
+
+> ### DER FUND, DEN MEINE EIGENE MESSUNG NICHT HATTE
+>
+> Ich hatte nur den Zustand **nach dem Laden** gemessen. Der Kritiker hat
+> weitergespielt: nach 30 Wochen deckt die Oberfläche **54,7 – 58,5 %** des
+> Rahmens, weil das Spiel nach dem Jahreswechsel **mehrere Blätter
+> hintereinander** auflegt. Und selbst nachdem er sie mit dem Schließen-Knopf
+> und viermal Escape weggelegt hat, bleiben **51,0 %** — Escape blättert nur
+> weiter, `BLATT-KINDER` steht danach immer noch bei 7. **Wer nur den
+> Ladezustand misst, misst den günstigsten Augenblick des Spiels.**
+
+**Von der Aufsicht am Quelltext nachgeprüft und bestätigt:** der Verwaltungsbau
+hängt an `ort:'tor', dx:8` (`stadt-daten.js:994`) und der Mälzereiturm an
+`ort:'malzboden'` (905) — beide **außerhalb der Hofmauer**, deshalb begraben sie
+Tankstelle und Ladenzeile; es gibt genau **drei** Ortsmarken (96–103) und für den
+Gegner keine; und `.gg-bandzeile .was` kürzt mit `text-overflow: ellipsis`
+(`gegner.css:414`) — **zum dritten Mal in diesem Lauf derselbe saubere Schnitt,
+den kein Überlaufzähler sieht**, diesmal 1810 px Text in einem 731 px breiten
+Kasten, ausgerechnet im Band OHNE DICH GESCHEHEN.
+
+**Wo das Spiel das Zielbild schlägt** (der Kritiker nennt es von selbst): scharfe
+echte Schrift statt Buchstabensuppe · „GEGR. **1350**", wo das Zielblatt 1356
+schreibt · das Industriedetail 1884 · das Mauerfragment in der Grünanlage 1970 ·
+das gläserne Sudhaus, das im Zielblatt fehlt · 0 Seitenfehler über 140 Klicks.
+
+**Er legt seine eigene Schwäche offen** (§7): eine Partie je Epoche, eine Saat;
+die 4 % des Zielblatts abgeschätzt statt gemessen (kein JPEG-Dekoder außerhalb
+des Browsers); und er hat einen **eigenen Fehlalarm berichtigt** — sechs
+angeblich gekürzte Textknoten in 1350 sind `.sud-kartensatz` mit
+`overflow-y: auto`, also Rollkästen. Genau der Fehler, vor dem die vierte Latte
+warnt.
+
+---
+
 ## 1350 IST VERARMT — der Befund, den ρ allein NICHT gezeigt hätte
 
 *6. August 2026, von der Aufsicht am eingefrorenen Stand `8b81250` gemessen und
