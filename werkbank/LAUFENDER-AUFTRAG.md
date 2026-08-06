@@ -46,6 +46,48 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## 1350 IST VERARMT — der Befund, den ρ allein NICHT gezeigt hätte
+
+*6. August 2026, von der Aufsicht am eingefrorenen Stand `8b81250` gemessen und
+gegen die Rohdaten von Welle 7 (`welle7-schluss/rho/`) gehalten.*
+
+| 1350, dieselbe Saat, dieselbe Hand | Welle 7 (`b6b06bb`) | Welle 8 (`8b81250`) |
+|---|---|---|
+| **Wochen mit Kasse genau 0** | **0** von 400 | **70** von 400, in 8 Braujahren (1353–1361) |
+| Kasse: min – max | 26 – 517 | **0 – 143** |
+| Kasse, Median über 400 Wochen | 227 | **32** |
+| **Braujahre unter 1×** | 1 von 14 | **3 von 14** (erlaubt: eines von sechs, also zwei) |
+| Kennzahl wöchentlich, Median | 5,74 | **0,85** |
+| Ziel gesetzt · Festlegung | 1× · 1× | **0× · 0×** |
+| ρ über 12 / 13 / 14 Braujahre | −0,259 / −0,236 / −0,380 | −0,014 / +0,137 / −0,007 |
+| Seitenfehler | 0 | 0 |
+
+**Das Wellenziel ist damit in 1350 gerissen** — nicht an |ρ| < 0,700, das hält
+überall, sondern an der Nebenbedingung.
+
+> ### UND DAS IST DER EIGENTLICHE FUND: ρ WURDE BESSER, WEIL DER SPIELER PLEITE IST
+>
+> ρ ist in 1350 von −0,380 auf −0,007 gewandert und liest sich damit **besser**.
+> Die Ursache ist keine Verbesserung: **eine flache Elendskurve hat keine
+> Steigung.** Wer nichts hat, hat auch kein Verhältnis, das kippt.
+>
+> Die zweite Latte misst die *Steigung*, nicht die *Höhe*. Allein gelesen hätte
+> sie diese Welle als Fortschritt ausgewiesen. Was den Befund überhaupt sichtbar
+> macht, ist die Nebenbedingung „höchstens ein Jahr von sechs unter 1×" — am
+> 4. August nachgetragen, und heute zum ersten Mal das Instrument, das den
+> Ausschlag gibt. **Sie bleibt, und sie wird nie wieder als Beiwerk behandelt.**
+
+**Wem gehört es? Noch offen — und das ist selbst ein Befund.** Zwischen den
+beiden Ständen liegen **zwei** Stücke: DIE STADT (Welle 8) *und* die Nacharbeit
+von DER PREIS aus Welle 7 (`f63d40e`, `preis.js` +223, `preis-daten.js` +70).
+Die Regel „zwei Stücke, die dieselbe Kennzahl füttern, nicht gleichzeitig
+arbeiten lassen" ist eingehalten worden — aber die **Messstände** liegen so weit
+auseinander, dass beide dazwischenfallen. *Ein Messstand je Welle genügt nicht;
+er muss je **Stück** stehen.* Die Trennung leistet
+`werkbank/schuss/aufsicht/welle8-trennprobe/`.
+
+---
+
 ## WELLE 8: DER STREIFEN IST FREI — und zwei Berichtigungen an der Aufsicht
 
 **Von der Aufsicht unabhängig nachgemessen am eingefrorenen Stand `8b81250`:**
