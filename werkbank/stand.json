@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-06T00:21:35+00:00",
- "phase": "Welle 8 arbeitet weiter. DIE STADT ist um 00:18 UTC lebendig, ihr Bericht steht bei 16 Kilobyte, und sie misst gerade ihre Vorher-Reihe für 1970 — sie nimmt den Auftrag also von der richtigen Seite: erst messen, was ist, dann bauen. Das ist die Regel, an der Welle 6 zwei Tabellenzeilen verloren hat, und sie befolgt sie ungefragt. Kein Reset seit zwei Stunden, nichts liegt uncommittet, das Abnahmetor ist viermal offen.",
+ "stand": "2026-08-06T01:22:03+00:00",
+ "phase": "Welle 8 arbeitet, DIE STADT um 01:15 UTC lebendig. Sie hat inzwischen Vorher- und Nachher-Reihen für alle vier Epochen im Messordner liegen, dazu ein eigenes Auswertungsskript — sie misst also paarweise gegen ihren eigenen Ausgangsstand, statt sich auf die eingetragenen Zahlen zu verlassen. Das ist die strengere Art und die richtige, weil Layout die Kennzahl nachweislich bewegt. Kein Reset seit drei Stunden, Zwischenstand gesichert, das Abnahmetor ist viermal offen.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T16:43:06+00:00",
-   "text": "NAME R1: SPERRLISTE eingebaut statt versprochen. 'Emailschilder ausgeben' und 'Das Warenzeichen eintragen' tragen ab:1894 und stehen vorher als GESPERRTER Knopf mit dem Grund darauf im Blatt — nachgewiesen im Klickprotokoll von 1884: beide [aus]. Preise und Mengen kommen ausnahmslos aus welt.geld() und welt.menge(); in name-daten.js steht keine Waehrung und keine Einheit."
-  },
   {
    "zeit": "2026-08-01T16:43:06+00:00",
    "text": "NAME R1: HARTE REGEL geprueft, nicht behauptet. BRAUHAUS.ruf.lebendig() zaehlt am DOM die freien, wirksamen Zuege des Stuecks (Blattschalter zaehlen NICHT mit) — in allen vier Epochen 3 von 3, auch bei Kasse minus 7. Der Zeiger laesst sich immer aus- und einziehen, das Zeichen immer verdecken und wieder zeigen, und 'Herumgehen und den Namen sagen' kostet einmal im Braujahr nur einen Nachmittag."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-06T00:21:35+00:00",
    "text": "Welle 8 arbeitet weiter. DIE STADT ist um 00:18 UTC lebendig, ihr Bericht steht bei 16 Kilobyte, und sie misst gerade ihre Vorher-Reihe für 1970 — sie nimmt den Auftrag also von der richtigen Seite: erst messen, was ist, dann bauen. Das ist die Regel, an der Welle 6 zwei Tabellenzeilen verloren hat, und sie befolgt sie ungefragt. Kein Reset seit zwei Stunden, nichts liegt uncommittet, das Abnahmetor ist viermal offen."
+  },
+  {
+   "zeit": "2026-08-06T01:22:03+00:00",
+   "text": "Welle 8 arbeitet, DIE STADT um 01:15 UTC lebendig. Sie hat inzwischen Vorher- und Nachher-Reihen für alle vier Epochen im Messordner liegen, dazu ein eigenes Auswertungsskript — sie misst also paarweise gegen ihren eigenen Ausgangsstand, statt sich auf die eingetragenen Zahlen zu verlassen. Das ist die strengere Art und die richtige, weil Layout die Kennzahl nachweislich bewegt. Kein Reset seit drei Stunden, Zwischenstand gesichert, das Abnahmetor ist viermal offen."
   }
  ]
 }
