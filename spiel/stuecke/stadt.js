@@ -466,6 +466,45 @@
   var reiterStand = '';         /* Satz der Bretter — nur er baut die Zeile neu */
   var reiterKnopf = {};         /* schluessel -> der stehende Knopf */
 
+  /* ====================================================================
+     DIE BAUHOF-LADE IST EIN BRETT WIE JEDES ANDERE.  (Welle 9)
+
+     Sie lag acht Wellen lang offen — erst unten, seit Welle 8 oben. Zwei
+     Messungen haben sie zur teuersten Einzelflaeche des Spiels gemacht:
+
+       · Bildpunkte (`stadt-w9/deckung.mjs`, Verfahren des blinden
+         Kritikers): DIE STADT deckt im Ladezustand 10,6 % des Rahmens,
+         davon rund 6,3 Punkte die Lade allein — ein Fuenftel der ganzen
+         Verdeckung des Spiels, und die Auflage A1 will die Haelfte weg.
+       · Und sie hat eine Partie verdorben, was schwerer wiegt: bei
+         1920x1000, der Fenstergroesse der messenden Hand, liegt
+         `.stadt-bauhof .bauzeile .nutzen` auf (31|334)-(316|349) und
+         damit genau auf `fuhre:ziel:bar` (39|324)-(183|348). Der Klick
+         fiel aus, das Ziel der Fuhre wurde in 400 Wochen NIE gesetzt, und
+         1350 stand danach in 70 von 400 Wochen auf null Kasse.
+         Beleg mit beiden Staenden nebeneinander:
+         `werkbank/schuss/stadt-w9/BEFUND-RUECKVERSCHLECHTERUNG.md`.
+
+     Die Lade weicht damit nicht aus, sie wird zu dem, was jedes andere
+     Brett dieses Spiels ist: zugeklappt beim Laden, ein Reiter darueber,
+     ein Klick schlaegt sie auf. Das ist keine Verkleinerung der Bedienung
+     — der Zug `stadt:bau:*` bleibt Wort fuer Wort derselbe, er liegt nur
+     einen Klick tiefer, genau wie DER SUD, DIE FUHRE und DAS ERBE.
+
+     WAS DABEI NICHT VERLORENGEHEN DARF und deshalb ausserhalb des
+     Zuklappens steht: `B.welt.meldeZug('Bau …')`. Das ist der Nenner der
+     zweiten Latte. Er wird auch bei zugeklappter Lade gemeldet — sonst
+     misst die Messlatte einen anderen naechsten Zug, und rho waere
+     verschoben, ohne dass sich am Spiel etwas geaendert haette. */
+  var bauhofZu = true;
+
+  function bauhofSchalten() {
+    bauhofZu = !bauhofZu;
+    handZeit = Date.now();
+    if (B.ton && B.ton.spiele) B.ton.spiele('stadt:reiter');
+    B.sende('zeichne', { grund: 'stadt:bauhof' });
+  }
+
   /* Die beiden Ausnahmen — und ihre Obergrenze. Ein Ding, das an einem Ort
      haengt (.amort) oder sich selbst abgemeldet hat (data-frei), bleibt
      unangetastet, SOLANGE ES EIN PUNKT IST. Ueber MARKE ist es ein Brett und
@@ -577,6 +616,10 @@
 
   function alleZuklappen() {
     Object.keys(lage).forEach(function (k) { lage[k] = 'zu'; aufZeit[k] = 0; });
+    /* Die eigene Lade gehoert seit Welle 9 dazu — "Stadt zeigen" heisst
+       Stadt zeigen, nicht "alles ausser meinem eigenen Kasten". */
+    bauhofZu = true;
+    B.sende('zeichne', { grund: 'stadt:alles-zu' });
     pruefe();
   }
 
@@ -665,14 +708,25 @@
 
   function zeichneReiter(liste, ruhend) {
     var zeile = werkbank().querySelector('.stadt-reiterzeile');
-    var offenDa = liste.some(function (b) { return !b.zu; });
+    var offenDa = liste.some(function (b) { return !b.zu; }) || !bauhofZu;
     var satz = liste.map(function (b) { return b.schluessel; }).join('|')
-      + '|' + (markenZahl ? 'marken' : '');
+      + '|' + (markenZahl ? 'marken' : '') + '|bauhof';
 
     if (satz !== reiterStand) {
       reiterStand = satz;
       reiterKnopf = {};
       B.leere(zeile);
+
+      /* Der eigene Reiter steht vorn: es ist der Hof, um den es geht. */
+      var bh = B.knopf({
+        text: 'BAUHOF',
+        zug: 'stadt:bauhof',
+        klasse: 'stadt-reiter',
+        tu: bauhofSchalten
+      });
+      bh.appendChild(B.el('span', 'zahl', ''));
+      reiterKnopf['~bauhof'] = bh;
+      zeile.appendChild(bh);
 
       liste.forEach(function (b) {
         var s = b.schluessel;
@@ -713,6 +767,18 @@
     }
 
     /* Aufschrift und Lage — jedes Mal frisch, aber ohne einen Knopf anzufassen. */
+    var bhk = reiterKnopf['~bauhof'];
+    if (bhk) {
+      var bz = bauhofKennzahl();
+      bhk.classList.toggle('auf', !bauhofZu);
+      bhk.setAttribute('aria-expanded', bauhofZu ? 'false' : 'true');
+      bhk.title = bz + (bauhofZu
+        ? '. Aufschlagen: die Lade legt sich über die Stadt, bis man sie wieder zuklappt.'
+        : '. Zuklappen — dann sieht man die Stadt wieder.');
+      setzeAufschrift(bhk.querySelector('.wort'), 'BAUHOF');
+      setzeAufschrift(bhk.querySelector('.zahl'), bz);
+    }
+
     liste.forEach(function (b) {
       var k = reiterKnopf[b.schluessel];
       if (!k) return;
