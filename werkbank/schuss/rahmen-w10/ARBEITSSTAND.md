@@ -754,3 +754,27 @@ Hafen 8932) noch einmal: `tor.mjs` · `spielprobe.mjs` ·
 30-Wochen-Zustand. Ergebnisse in `messungen/*-ohnewache-*`.
 Erwartung: **identisch mit dem Stand mit Wache**, weil die Wache in keinem
 gemessenen Zustand je eingegriffen hat. Wenn nicht, steht es hier.
+
+## Auflage 7 für Welle 11 — sie ersetzt die Uhr durch ein Ereignis
+
+**Jedes ganzseitige Blatt meldet sich beim Rahmen an, wenn es aufschlägt.**
+Eine Zeile je Blatt, direkt nach dem Einhängen:
+
+```js
+BRAUHAUS.blatt.melde(el, function () { /* … das Blatt zumachen … */ });
+```
+
+*Betrifft:* `stuecke/fuhre.js` (`fu-sommerblatt`, `fu-schlussblatt`),
+`stuecke/erbe.js` (`erb-buch` — dort auch der fehlende Schließknopf),
+`stuecke/preis.js` und `stuecke/gegner.js`, sobald sie ein Blatt über
+200.000 px² aufschlagen.
+
+*Warum es der einzig richtige Weg ist:* der Rahmen darf während des Spielens
+nichts auf einer Frist tun — die Saatprobe dieser Welle zeigt, was das
+kostet. Eine Anmeldung ist ein **Ereignis**: sie kostet nichts, solange
+nichts aufschlägt, und sie ist unabhängig von der Last der Maschine.
+
+*Abnahme:* nach 30 × WEITER meldet `BRAUHAUS.haushalt.blaetter()` in allen
+vier Epochen höchstens **einen** Eintrag, und nach einem Escape **keinen**,
+ohne dass `BRAUHAUS.haushalt.geklemmt()` etwas enthält. Und: `?saat=1350`
+über 400 Wochen ergibt dreimal dieselbe Prüfsumme.
