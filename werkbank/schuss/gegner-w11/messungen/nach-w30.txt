@@ -7,8 +7,8 @@
   tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1351","blatt":true,"mass":"1596×847 @578,169","flaeche":1351246}]
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-      10453 px²   268× 39 @2013,584  .gg-sitz  „Brauhaus zum Adler"
-    (1 Kaesten, Summe der Huellen 10453 px²)
+      10721 px²   268× 40 @2013,584  .gg-sitz  „Brauhaus zum Adler"
+    (1 Kaesten, Summe der Huellen 10721 px²)
   BEDIENUNG des GEGNERS: 15 Zuege, 4 von der Maus zu treffen, 4 abgeschaltet, 4 mit Preisschild, 3 unter 24 px
       gegner:abloesen:faehrhaus       110× 33           -66  „FAE · BANablösen 66 Pf"
       gegner:abloesen:obernberg       110× 33           -42  „OBE · GEVablösen 42 Pf"
@@ -21,15 +21,18 @@
       gegner:hinhalten:obernberg      143× 31 AUS            „Fass an den WirtVorrat reicht nicht"
     ! gegner:hinhalten:ochse          143× 31 AUS            „Fass an den WirtVorrat reicht nicht"
     ! gegner:hinhalten:torschenke     143× 31 AUS            „Fass an den WirtVorrat reicht nicht"
-    ! gegner:oeffnen:adler            268× 39                „Brauhaus zum Adler"
+    ! gegner:oeffnen:adler            268× 40                „Brauhaus zum Adler"
     ! gegner:zeige:17                  73× 22                „zeigen"
     ! gegner:zeige:18                  73× 22                „zeigen"
     ! gegner:zeige:19                  73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×214 @1404,207 = 200468 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Der Adler kauft die Grut auf dem Ried weg, ehe das Haus am Ried ist."
+      ganz     731 px in  731 px  „Der Rat entzieht dem Adler die Konzession für Mühlschenke. Der Wirt ha"
+      ganz     731 px in  731 px  „Brauhaus zum Adler baut auf dem eigenen Hof: Eigener Brunnen für 38 Pf"
   A3 — GEGNER auf gemalter Beschriftung: 2
-    „BRAUHAUS ZUM ADLER"  591 px² unter div.gg-wagen  150×118 @2209,448
-    „BRAUHAUS ZUM ADLER"  591 px² unter img.gg-wagenbild  150×100 @2209,448
-  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
-    325 px in 325 px QUILLT  clip  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wo. kürzer"
+    „BRAUHAUS ZUM ADLER"  591 px² unter div.gg-wagen  150×118 @2209,449
+    „BRAUHAUS ZUM ADLER"  591 px² unter img.gg-wagenbild  150×100 @2209,449
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
      146× 23 @1550,527  „ST. MICHAEL"  .wort
      269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
@@ -67,8 +70,8 @@
   tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1601","blatt":true,"mass":"1596×847 @578,169","flaeche":1351246}]
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-       8785 px²   225× 39 @2034,584  .gg-sitz  „Braustatt Adler"
-    (1 Kaesten, Summe der Huellen 8785 px²)
+       9010 px²   225× 40 @2034,584  .gg-sitz  „Braustatt Adler"
+    (1 Kaesten, Summe der Huellen 9010 px²)
   BEDIENUNG des GEGNERS: 17 Zuege, 6 von der Maus zu treffen, 5 abgeschaltet, 6 mit Preisschild, 3 unter 24 px
       gegner:abloesen:hirsch          110× 33          -420  „HIR · PACablösen 420 fl"
     ! gegner:abloesen:lindenhof       110× 33          -486  „LIN · ZUNablösen 486 fl"
@@ -83,13 +86,16 @@
       gegner:hinhalten:markt          143× 31 AUS            „Fass in die LadeVorrat reicht nicht"
       gegner:hinhalten:muehlwirt      143× 31 AUS            „Fass in die LadeVorrat reicht nicht"
     ! gegner:hinhalten:ochse          143× 31 AUS            „Fass in die LadeVorrat reicht nicht"
-    ! gegner:oeffnen:adler            225× 39                „Braustatt Adler"
+    ! gegner:oeffnen:adler            225× 40                „Braustatt Adler"
     ! gegner:zeige:17                  73× 22                „zeigen"
     ! gegner:zeige:18                  73× 22                „zeigen"
     ! gegner:zeige:19                  73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×214 @1404,207 = 200468 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Braustatt Adler baut auf dem eigenen Hof: Rossmühle für 220 fl."
+      ganz     731 px in  731 px  „Der Adler schenkt aus zu 14 fl je Fass und legt die Zeche drauf."
+      ganz     731 px in  731 px  „Ein grauer Wagen des Hauses gegenüber fährt zum Mühlschenke."
   A3 — GEGNER auf gemalter Beschriftung: 0
-  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
-    325 px in 325 px QUILLT  clip  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wo. kürzer"
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
      146× 23 @1550,527  „ST. MICHAEL"  .wort
      269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
@@ -128,8 +134,8 @@
   tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1885","blatt":true,"mass":"1596×718 @578,169","flaeche":1145541}]
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-       8288 px²   213× 39 @2040,584  .gg-sitz  „Brauerei Adler"
-    (1 Kaesten, Summe der Huellen 8288 px²)
+       8501 px²   213× 40 @2040,584  .gg-sitz  „Brauerei Adler"
+    (1 Kaesten, Summe der Huellen 8501 px²)
   BEDIENUNG des GEGNERS: 15 Zuege, 3 von der Maus zu treffen, 4 abgeschaltet, 5 mit Preisschild, 3 unter 24 px
       gegner:abloesen:bahnhofswirt    121× 33         -8903  „BHF · VERablösen 8.903 M"
     ! gegner:abloesen:lindenhof       128× 33        -32999  „LIN · HYPablösen 32.999 M"
@@ -142,13 +148,16 @@
     ! gegner:hinhalten:lindenhof       94× 31 AUS            „FreibierVorrat reicht nicht"
     ! gegner:hinhalten:ochse           94× 31 AUS            „FreibierVorrat reicht nicht"
       gegner:hinhalten:torschenke      94× 31 AUS            „FreibierVorrat reicht nicht"
-    ! gegner:oeffnen:adler            213× 39                „Brauerei Adler"
+    ! gegner:oeffnen:adler            213× 40                „Brauerei Adler"
     ! gegner:zeige:19                  73× 22                „zeigen"
     ! gegner:zeige:20                  73× 22                „zeigen"
     ! gegner:zeige:21                  73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×236 @1404,207 = 220585 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Kesselschaden beim Adler. Die Versicherung zahlt später als der Kessel"
+      ganz     731 px in  731 px  „Der Wirt zum Brückenwirt löst sein Darlehen ab. Der Adler verliert die"
+      ganz     731 px in  731 px  „Brauerei Adler baut auf dem eigenen Hof: Flaschenfüllerei für 5.200 M."
   A3 — GEGNER auf gemalter Beschriftung: 0
-  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
-    325 px in 325 px QUILLT  clip  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wo. kürzer"
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
      146× 23 @1550,527  „ST. MICHAEL"  .wort
      269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
@@ -186,17 +195,17 @@
   tafeln(): [{"stueck":"fuhre","klasse":"blatt fu-sommerblatt fu-georgi-1971","blatt":true,"mass":"1596×943 @578,169","flaeche":1504427}]
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-       9478 px²   243× 39 @2410,768  .gg-sitz  „Nordstern-Gruppe"
-       7957 px²   204× 39 @2045,584  .gg-sitz  „Adler-Bräu AG"
-    (2 Kaesten, Summe der Huellen 17435 px²)
+       9721 px²   243× 40 @2410,768  .gg-sitz  „Nordstern-Gruppe"
+       8161 px²   204× 40 @2045,584  .gg-sitz  „Adler-Bräu AG"
+    (2 Kaesten, Summe der Huellen 17882 px²)
   BEDIENUNG des GEGNERS: 23 Zuege, 9 von der Maus zu treffen, 7 abgeschaltet, 10 mit Preisschild, 3 unter 24 px
       gegner:abloesen:brueckenwirt    138× 33        -77220  „BRU · EXKablösen 77.220 DM"
       gegner:abloesen:hirsch          138× 33        -70200  „HIR · EXKablösen 70.200 DM"
     ! gegner:abloesen:lindenhof       138× 33        -43740  „LIN · LISablösen 43.740 DM"
       gegner:abloesen:muehlwirt       138× 33        -36450  „MUE · JVBablösen 36.450 DM"
     ! gegner:abloesen:pfarrhof        138× 33        -17010  „PFA · LISablösen 17.010 DM"
-      gegner:angebot-ja               297× 25         60116  „Ein Viertel abtreten+60.116 DM"
-      gegner:angebot-nein              91× 25                „Ausschlagen"
+      gegner:angebot-ja               297× 30         60116  „Ein Viertel abtreten+60.116 DM"
+      gegner:angebot-nein              91× 30                „Ausschlagen"
     ! gegner:beschwerde               272× 33                „Anzeige beim Bundeskartellamt"
     ! gegner:beschwerde-bild          243× 48             0  „Anzeige beim Bundeskartellamtkostet kein Gel"
     ! gegner:blatt                    183× 33                „Das Haus gegenüber"
@@ -205,21 +214,24 @@
     ! gegner:hinhalten:lindenhof      143× 31 AUS            „Zuschuss in BierVorrat reicht nicht"
       gegner:hinhalten:muehlwirt      143× 31 AUS            „Zuschuss in BierVorrat reicht nicht"
     ! gegner:hinhalten:pfarrhof       143× 31 AUS            „Zuschuss in BierVorrat reicht nicht"
-    ! gegner:mitbieten:0              260× 25        -65318  „knapp darüber−65.318 DM"
-    ! gegner:mitbieten:1              273× 25 AUS    -84564  „deutlich darüber−84.564 DM"
-    ! gegner:mitbieten:2              395× 25 AUS   -110808  „so, dass niemand mehr überlegt−110.808 DM"
-    ! gegner:oeffnen:adler            204× 39                „Adler-Bräu AG"
-      gegner:oeffnen:konzern          243× 39                „Nordstern-Gruppe"
+    ! gegner:mitbieten:0              260× 30        -65318  „knapp darüber−65.318 DM"
+    ! gegner:mitbieten:1              273× 30 AUS    -84564  „deutlich darüber−84.564 DM"
+    ! gegner:mitbieten:2              395× 30 AUS   -110808  „so, dass niemand mehr überlegt−110.808 DM"
+    ! gegner:oeffnen:adler            204× 40                „Adler-Bräu AG"
+      gegner:oeffnen:konzern          243× 40                „Nordstern-Gruppe"
     ! gegner:zeige:26                  73× 22                „zeigen"
     ! gegner:zeige:27                  73× 22                „zeigen"
     ! gegner:zeige:28                  73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×260 @1404,207 = 243041 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Die Nordstern-Gruppe lässt anfragen, ob das Haus verkäuflich sei. Sie "
+      ganz     731 px in  731 px  „Die Gruppe zieht die Anfrage zurück. Wer acht Wochen nicht antwortet, "
+      ganz     731 px in  731 px  „Die Nordstern-Gruppe übernimmt Klosterbräu Obernberg. Sie zahlt 216.46"
   A3 — GEGNER auf gemalter Beschriftung: 4
     „NORDSTERN-GRUPPE"  905 px² unter div.gg-paar amort  143×71 @2405,457
     „NORDSTERN-GRUPPE"  596 px² unter button.gg-schild gg-konzern frisch  138×33 @2405,457
     „NORDSTERN-GRUPPE"  596 px² unter span.gg-schildtext  114×33 @2429,457
     „NORDSTERN-GRUPPE"  596 px² unter i.  114×16 @2429,474
-  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
-    316 px in 316 px QUILLT  clip  .gg-vorschild  „Vorsprung: 1 Ding · wirbt 1 Wo. kürzer"
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
      146× 23 @1550,527  „ST. MICHAEL"  .wort
      269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
