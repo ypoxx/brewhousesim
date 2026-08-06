@@ -209,6 +209,28 @@ Punkte, die keinem Stück zugeordnet sind. **DIE STADT trägt dort null.**
 > Hügellinie gegen 47 Punkte im Vordergrund** — dort, wo jedes Zielblatt
 > Marktstand, Fuhrwerk und Asphalt trägt.
 
+## Das Hausschild — pixelgemessen, nicht behauptet
+
+Der Blindvergleich hatte für 1350 gemessen: die Karte `DER SUD · 1350` deckt
+das Schild `BRAUHAUS ZUM ANKER · GEGR. 1350` zu **65,7 % beim Laden und 75,6 %
+nach dem Spielen** zu. Das war der erste Punkt seiner Liste „damit es kippt".
+
+Nachgestellt mit `stadt-w8/schild.mjs` (Kasten aus dem DOM, Pixelvergleich
+derselben Seite mit und ohne die Oberflächenebenen), beim Laden, beide Häfen:
+
+| Epoche | Kasten | vor Welle 8 | nach Welle 8 |
+|---|---|---|---|
+| **1350** | (1330\|957) 175×99 | **66,9 %** | **0,0 %** |
+| 1600 | (1132\|888) 217×116 | 0,0 % | 0,0 % |
+| 1884 | (1258\|957) 228×117 | 0,0 % | 0,0 % |
+| 1970 | (470\|904) 206×67 | 0,0 % | 0,0 % |
+
+Der Kasten stimmt auf den Pixel mit dem überein, den der Kritiker angegeben
+hat — (1330|957), 175×99. Der Vorher-Wert 66,9 % gegen seine 65,7 % ist der
+Unterschied zwischen `b6b06bb` und `76f3ca4`, nicht zwischen zwei Geräten.
+
+**Das eigene Schild ist frei. Aber nicht durch mich** — siehe gleich darunter.
+
 ## Was diese Welle NEBENBEI bewegt hat, ohne dass es beauftragt war
 
 **Das Hausschild ist frei.** Der Blindvergleich hatte in 1350 gemessen, dass
@@ -265,10 +287,10 @@ Vorher-Hafen liefert Ziffer für Ziffer die in WELLE-8.md eingetragenen
 In der schwersten Epoche (1600) liegen unter den 7,63 MB **1,17 MB in zwei
 nicht umgestellten PNG fremder Stücke**:
 
-| Datei | Größe | gehört |
-|---|---|---|
-| `spiel/bild/name/schild2.png` | **683 KB** | DER NAME |
-| `spiel/bild/gegner/hof2.png` | **489 KB** | DER GEGNER |
+| Datei | über die Leitung | auf der Platte | gehört |
+|---|---|---|---|
+| `spiel/bild/name/schild2.png` | **683 KB** | 682 KB | DER NAME |
+| `spiel/bild/gegner/hof2.png` | **489 KB** | 488 KB | DER GEGNER |
 
 Zum Vergleich: die zwölf neuen Frachtbilder dieser Welle wiegen zusammen
 640 KB, und in der schwersten Epoche laden davon vier mit 203 KB. **Eine
@@ -384,13 +406,14 @@ nachher.** Null Seitenfehler, kein Abbruch, alle Läufe volle 400 Wochen und
 >    Sechstels frei, und darunter liegen fremde Züge, die vorher nicht
 >    erreichbar waren.
 
-### Satz B, ebenfalls durch — 6. August, 02:03 UTC: BYTEWEISE IDENTISCH
+### Satz B UND Satz C durch — 6. August, 03:23 UTC: BYTEWEISE IDENTISCH
 
-Alle acht Läufe des zweiten Satzes liefern dieselben Ziffern wie der erste,
-und zwar nicht nur auf drei Nachkommastellen: **die acht Ergebnisdateien
-haben paarweise dieselbe md5** (`stadt-w8/rho/pruefsummen.txt`).
+**Alle 24 Läufe sind durch: drei je Epoche, vorher und nachher.** Die Sätze B
+und C liefern dieselben Ziffern wie A, und zwar nicht nur auf drei
+Nachkommastellen: **die Ergebnisdateien jeder Zelle haben in allen drei Sätzen
+dieselbe md5** (`stadt-w8/rho/pruefsummen.txt`).
 
-| | A = B |
+| | A = B = C |
 |---|---|
 | vor e1 | `ae23f4f661f23c2abd6c32864cbb6043` |
 | vor e2 | `9265842fd8a5f97430b538a1d0f87cc6` |
@@ -403,8 +426,92 @@ haben paarweise dieselbe md5** (`stadt-w8/rho/pruefsummen.txt`).
 
 Das ist die strengste Form der Gerätekontrolle, die dieser Lauf kennt — dieselbe,
 mit der die Aufsicht am 5. August 1350 und 1970 abgenommen hat. Die Zahlen oben
-stehen damit auf **zwei** unabhängigen Läufen je Zelle, nicht auf einem.
-Roh: `stadt-w8/rho/ergebnis-AB.txt`.
+stehen damit auf **drei** unabhängigen Läufen je Zelle. Spannweite 0,000 in
+allen 24 Läufen, null Seitenfehler, kein Abbruch, jeder Lauf volle 400 Wochen
+und 14 Braujahre. Roh: `stadt-w8/rho/ergebnis-ABC.txt`, `pruefsummen.txt`,
+`lauf.log`.
 
-*(Satz C läuft weiter; `stadt-w8/rho/lauf.sh` ist wiederaufnehmbar und
-überspringt, was schon dasteht.)*
+> **Was die byteweise Gleichheit NICHT beweist**, damit sie niemand
+> überliest: sie zeigt, dass das Gerät reproduzierbar ist, nicht dass die Zahl
+> richtig ist. Der Würfel ist gesät, die Hand ist dieselbe, die Maschine war
+> allein — drei gleiche Läufe sind unter diesen Bedingungen zu erwarten. Der
+> Beleg für die *Richtigkeit* ist ein anderer: dass der Vorher-Hafen die
+> eingetragenen Zahlen dreier Epochen Ziffer für Ziffer trifft.
+
+
+---
+
+## WAS ICH VERWORFEN HABE — und warum
+
+**1 — Nur die Reiterzeile verschieben.** Der Auftrag nennt sie als Verursacher.
+Die Messung sagt: sie trägt 11,6 % des untersten Sechstels, die Bauhof-Lade
+35,5 %. Wer nur den Reiter verschiebt, kommt auf 35 statt auf 0. Verworfen,
+bevor die erste Zeile CSS geschrieben war — das ist der Wert von BEFUND 1.
+
+**2 — Die Werkbank NACH OBEN, aber schmal und hoch am linken Rand (eine
+senkrechte Reiterleiste).** Gerechnet und verworfen: ein senkrechter Reiter
+braucht die volle Spaltenbreite für seinen Namen. Zehn Reiter à 330 × 56 sind
+194.000 px² gegen 96.000 waagerecht — **doppelte Fläche für denselben Text.**
+Waagerechte Schrift ist flächeneffizient; das ist keine Geschmacksfrage.
+
+**3 — Die Werkbank NUR nach oben schieben und sonst nichts.** Bei 62,6 %
+Breite hätte sie ab x = 952 auf der Hauszeile des Skeletts gelegen. Fremde
+Oberfläche zu verdecken senkt die Deckungszahl nicht (die Fläche war schon
+gedeckt) und nimmt einem anderen Stück seine Zeile. Deshalb die Zweiteilung
+33 % / 46 %.
+
+**4 — Die Werkbank in die Mitte zwischen Schornstein und Kirchturm
+(x 622 – 1572).** Das hätte den Wasserturm und den Schornstein von 1884/1970
+freigelassen — die Lücke zwischen beiden ist 967 px breit und der Kasten
+braucht 950. Verworfen, weil in 1350 bei (805|478) das **Hauszeichen des
+NAMEN** steht: der Kasten hätte es zu zwei Dritteln zugedeckt. Fremdes UI
+zudecken war Fund Nummer eins des Blindvergleichs; ich baue ihn nicht nach.
+Der Preis dafür steht im Kopf von `stil/stadt.css`: Wasserturm und
+Schornstein liegen jetzt zu zwei Dritteln hinter der Werkbank.
+
+**5 — Die Werkbank so hoch schieben, dass ihre Unterkante genau auf dem
+untersten Sechstel sitzt (y 1086–1280).** Gerechnet: die Hofraute trägt
+zwischen y 1086 und ihrem Scheitel (823|1206) die Fläche x 578–1090 — **genau
+den vorderen Hof, den Teil B füllen soll.** Teil A hätte Teil B erschlagen.
+
+**6 — Die zwei fetten eigenen Hofbilder dichter packen, um Luft für die
+Fracht zu schaffen** (`laderampe` 407 KB, `brunnen` 294 KB). Gerät gebaut
+(`stadt-w8/nachpacken.mjs`), gemessen, **verworfen**: die Gegenprobe kommt bei
+Güte 0,80 auf **36,1 und 37,8 dB PSNR**, unter der 40-dB-Schwelle, die dieser
+Lauf für „unsichtbar" benutzt. Ursache ist, dass diese Dateien seit Welle 7
+schon WebP sind — ein zweiter verlustbehafteter Durchgang addiert sich.
+Stattdessen: die Frachtbilder selbst von Güte 0,86 auf 0,78 (740 → 640 KB) und
+`fracht_bank` nur in 1350. Damit hält das Veto ohne einen Eingriff in
+bestehende Bilder.
+
+**7 — `FENSTER` in `stadt.js:442` an die neue Lage anpassen.** Wäre richtig
+(die 87,5 % waren die Oberkante der alten Werkbank), bewegt aber über
+`anteil()` die Schwellen, ab denen fremde Bretter ruhen — und damit das Bild
+jeder Epoche und ρ. In derselben Welle wie zwei andere Änderungen wäre nicht
+mehr trennbar, was was bewegt hat. Als offener Befund gemeldet.
+
+**8 — Die Hoffracht als kaufbare Aufbauten in `K.aufbauten`.** Verworfen: sie
+hätte `data-zug` getragen und Spalte (a) der zweiten Latte um acht Einträge
+aufgebläht, die keine Entscheidung sind. Fracht ist Bild und liegt deshalb in
+der Ebene `bau`, ohne Knopf, ohne Preis, ohne Zeiger.
+
+## OFFEN, mit Koordinaten, damit es billig zu beheben ist
+
+**`faesser2` und `kasten2` sind dasselbe Bild wie `faesser` und `kasten`** und
+überlappen es zu rund zwei Dritteln (Fuß 28|73,5 gegen 30|75 bzw. 31|73 gegen
+28|72,5). Sie erscheinen nur ab halbvollem Keller. Ein `scale: -1 1` auf dem
+zweiten Stück (NICHT `transform` — daran hängt `.amort`) und ein Schritt nach
+rechts würden zwei Haufen daraus machen statt eines dickeren. **Nicht getan**,
+weil jede Änderung an `spiel/` die zwölf bereits gemessenen Nachher-Läufe
+entwertet hätte, und das für einen Schönheitsfehler in einem seltenen Zustand
+zu teuer ist.
+
+## Der Messstand bleibt stehen
+
+Beide Häfen laufen weiter (8907 Arbeitsbaum, 8908 der Stand vor Welle 8). Nach
+einem Container-Reset stellt **ein Aufruf** den Vorher-Hafen wieder her:
+
+    werkbank/schuss/stadt-w8/hafen-vor-aufsetzen.sh 8908
+
+Das Skript prüft selbst, ob der Hafen wirklich `bottom: 0.7%` ausliefert, und
+bricht sonst ab. „Zweimal von Hand ist einmal zu oft."

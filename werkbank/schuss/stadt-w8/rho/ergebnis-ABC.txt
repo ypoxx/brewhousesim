@@ -1,0 +1,28 @@
+
+################ vor ################
+  vor-e4-C.json  14 J   12J +0,699   13J +0,637   14J +0,653   <1x 1/14   Fehler 0   Abbruch nein
+                 2,25 · 0,79 · 1,99 · 1,44 · 2,38 · 2,83 · 2,78 · 4,15 · 2,61 · 11,60 · 5,43 · 2,26 · 2,65 · 2,85
+  >> 12 Braujahre: Spearman +0,699 bis +0,699  Spannweite 0,000  haelt
+  >> 13 Braujahre: Spearman +0,637 bis +0,637  Spannweite 0,000  haelt
+  >> 14 Braujahre: Spearman +0,653 bis +0,653  Spannweite 0,000  haelt
+  >> Jahre unter 1x: [1, 1, 1]   >> LATTE ueber alle drei Schnitte: BESTEHT
+============================================================================================
+Epoche                 12 Braujahre                         13                         14
+1350     -0,245 bis -0,245 (±0,000) -0,170 bis -0,170 (±0,000) -0,336 bis -0,336 (±0,000)   besteht
+1600     +0,189 bis +0,189 (±0,000) -0,066 bis -0,066 (±0,000) -0,156 bis -0,156 (±0,000)   besteht
+1884     +0,168 bis +0,168 (±0,000) +0,346 bis +0,346 (±0,000) +0,393 bis +0,393 (±0,000)   besteht
+1970     +0,699 bis +0,699 (±0,000) +0,637 bis +0,637 (±0,000) +0,653 bis +0,653 (±0,000)   besteht
+
+################ nach ################
+  nach-e4-C.json 14 J   12J +0,692   13J +0,330   14J +0,116   <1x 0/14   Fehler 0   Abbruch nein
+                 2,25 · 3,49 · 2,00 · 2,37 · 2,48 · 8,09 · 5,13 · 6,80 · 11,65 · 4,71 · 9,99 · 4,02 · 1,54 · 2,13
+  >> 12 Braujahre: Spearman +0,692 bis +0,692  Spannweite 0,000  haelt
+  >> 13 Braujahre: Spearman +0,330 bis +0,330  Spannweite 0,000  haelt
+  >> 14 Braujahre: Spearman +0,116 bis +0,116  Spannweite 0,000  haelt
+  >> Jahre unter 1x: [0, 0, 0]   >> LATTE ueber alle drei Schnitte: BESTEHT
+============================================================================================
+Epoche                 12 Braujahre                         13                         14
+1350     -0,014 bis -0,014 (±0,000) +0,137 bis +0,137 (±0,000) -0,007 bis -0,007 (±0,000)   besteht
+1600     +0,476 bis +0,476 (±0,000) +0,297 bis +0,297 (±0,000) +0,160 bis +0,160 (±0,000)   besteht
+1884     -0,210 bis -0,210 (±0,000) -0,016 bis -0,016 (±0,000) +0,130 bis +0,130 (±0,000)   besteht
+1970     +0,692 bis +0,692 (±0,000) +0,330 bis +0,330 (±0,000) +0,116 bis +0,116 (±0,000)   besteht
