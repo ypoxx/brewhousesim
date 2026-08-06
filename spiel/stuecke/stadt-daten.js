@@ -86,8 +86,26 @@ var STADT_DATEN = {
          in den Kaesten und ueber dem Lastwagen. Sie geht nach links und ein
          Band zurueck — dort ist der Hof in 1970 frei, und die Kaesten
          stehen dann davor statt dahinter. */
-      schild: { ort: 'tor', dx: -24, dy: 2, breite: 7.4, dreh: -2,
-                hell: true, gestell: 3.4 }
+      /* AUFLAGE A4, Welle 9 — DAS DRITTE LEERE SCHILD WIRD BESCHRIFTET.
+         Der blinde Kritiker: "Auf der Hofmauer rechts vom Tor (x 1145…1340,
+         y 990…1090) liegt eine grosse cremefarbene Tafel, in 1884 mit
+         'BRAUHAUS ZUM ANKER' beschriftet, in 1970 LEER. Der Hausname steht
+         stattdessen weit links auf einem kleinen weissen Rechteck
+         (x 475…675, y 915…965) in schwarzer Groteske, flach und ohne
+         Rahmen."
+         Beide Haelften des Befunds erledigt derselbe Griff: das Schild geht
+         auf die gemalte Tafel. Nachgesehen im Ausschnitt
+         (stadt-w9/bild/schnitt-e4-mauer.png, doppelt vergroessert) ist die
+         Tafel das helle Feld ueber dem Torbogen; ihr oberer Teil ist frei,
+         der untere wird vom Lastwagen im Tor (`torfuhre`) angeschnitten.
+         Also Mitte (45,1 | 66,4) statt (45|66,4) mit Breite 6,8 % = 187 px
+         in einer 195 px breiten Tafel, Hoehe rund 60 px in y 990…1050 —
+         ueber dem Wagen.
+         Das GESTELL faellt weg: es war 1970 noetig, weil das Schild auf dem
+         Hofbeton stand und dort nichts hatte, woran es haengen konnte. Auf
+         einer gemalten Wandtafel haengt es. */
+      schild: { ort: 'tor', dx: 0.1, dy: 2.4, breite: 6.8, dreh: -1,
+                hell: true }
     }
   },
 
@@ -99,8 +117,50 @@ var STADT_DATEN = {
   namen: [
     { text: 'ST. MICHAEL',       ort: 'kirche',     dy: 9,   gross: 0.9 },
     { text: 'GASTHOF LINDENHOF', ort: 'lindenhof',  dy: 5,   gross: 1 },
-    { text: 'BAHNHOF',           ort: 'bahnhof',    dy: 5.5, gross: 0.85, ab: 3 }
+    /* AUFLAGE A4, Welle 9 — DER NAME GEHOERT AUF DIE TAFEL, NICHT DANEBEN.
+       Der blinde Kritiker: "1884, Bahnhofsdach: x 2610…2740, y 380…425 →
+       gehoert 'BAHNHOF' (der Name haengt derzeit als eigener Zettel daneben
+       in der Luft, x 2562…2667, y 490…511)."
+       Nachgemessen im Ausschnitt (stadt-w9/bild/schnitt-e3-bhf.png, vierfach
+       vergroessert) liegt die leere Tafel auf dem Dachfirst bei
+       x 2609…2712, y 374…414, also (96,66 | 25,65) % der Buehne. Der Ort
+       'bahnhof' steht auf (95|27); dx 1,66 / dy -1,35 setzt den Namen genau
+       darauf. gross 0,85 -> 0,7, damit die Schrift in die 103 px breite
+       Tafel passt statt darueber hinauszustehen. */
+    { text: 'BAHNHOF',           ort: 'bahnhof',    dx: 1.66, dy: -1.35,
+      gross: 0.7, ab: 3 }
   ],
+
+  /* --------------------------------------------------------------------
+     DER NAME DES GEGNERS IM BILD.  AUFLAGE A5, Welle 9.
+
+     Der blinde Kritiker, zweimal und in zwei Epochen: "'BRAUEREI ADLER'
+     fehlt als Schild im Bild. Das Zielblatt traegt jenseits des Flusses ein
+     grosses ockerfarbenes Brauhaus mit gemaltem Schild 'BRAUEREI ADLER'.
+     Das Spiel zeichnet dort zwar einen Gegnerhof, aber OHNE jede
+     Beschriftung. Der Name steht ausschliesslich auf einer schwebenden
+     Karteikarte der Bedienoberflaeche." Und: "1884, Gegnerwerk jenseits des
+     Flusses: x 2170…2320, y 480…525 → gehoert 'BRAUEREI ADLER'." (A4)
+
+     Beide Auflagen treffen dieselbe Stelle, also erledigt sie EIN Schild.
+     Nachgemessen im Ausschnitt (stadt-w9/bild/schnitt-e3-adler.png, doppelt
+     vergroessert) liegt die leere Tafel auf dem Gegnerwerk bei
+     x 2175…2332, y 480…512 — Mitte (81,88 | 32,29) %.
+
+     Der Text wird NICHT hier festgeschrieben, sondern bei jedem Zeichnen aus
+     `BRAUHAUS.welt.gegnerName()` gelesen: BRAUHAUS ZUM ADLER · BRAUSTATT
+     ADLER · BRAUEREI ADLER · ADLER-BRAEU AG. Ein zweiter Ort desselben
+     Namens kann nicht veralten, wenn es ihn nicht gibt.
+
+     Je Ort ein Versatz, weil der zweite Gegner (Nordstern, ab 1970) am
+     Bahnhof sitzt und nicht jenseits des Flusses. Sein Schild steht dort,
+     wo bis Welle 8 der schwebende BAHNHOF-Zettel hing — der ist jetzt auf
+     dem Dach (siehe oben), die Stelle ist frei.
+     -------------------------------------------------------------------- */
+  gegnername: {
+    konkurrenz: { dx: 1.7, dy: 0.3, gross: 0.62 },
+    bahnhof:    { dx: -1.2, dy: 4.6, gross: 0.62 }
+  },
 
   /* --------------------------------------------------------------------
      DIE STANDPLAETZE IM HOF.  (Runde 2)
@@ -384,6 +444,33 @@ var STADT_DATEN = {
       breite: 5.6, breiten: { 3: 6.4 },
       von: 1, bis: 3, wenn: 'kellervoll',
       sagt: 'Was der Keller nicht mehr fasst, liegt im Hof.' },
+
+    /* AUFLAGE A7, zweite Haelfte, Welle 9 — DIE WEST-ECKE DES HOFES.
+
+       Der blinde Kritiker: "Die linke Haelfte des ummauerten Hofes bleibt
+       leer. x 320…700, y 780…1120 ist im Spiel unbespielte Wiese und Erde.
+       Im Zielblatt liegt dort ein Stapel von rund zehn Faessern und ein
+       Bohlentisch." Und er hat dazugesagt, was NICHT hilft: mehr Bauten —
+       bei ?bau=alle sieht dasselbe Feld genauso leer aus.
+
+       Also Fracht statt Bauten, mit Bildern, die schon geladen sind: kein
+       Kilobyte mehr am Gewichtsveto, kein `data-zug` mehr in der Zaehlung
+       der zweiten Latte. Die Hofprobe fuer beide Stellen:
+         (19|68): hintere Kante 63,0 · Mauerlinie 68,9  -> im Hof
+         (23|72): hintere Kante 61,0 · Mauerlinie 72,5  -> im Hof
+       Dazu ist der Ochsenstall in derselben Welle nach Westen gerueckt
+       (x 27,75…40,25, Fuss 71) — zusammen ist das Feld belegt. */
+    { schluessel: 'faesser_west', bild: 'fracht_faesser_alt', bilder: { 3: 'fracht_faesser_neu' },
+      ort: 'brunnen', dx: 2, dy: 6,
+      breite: 5.2, breiten: { 3: 5.8 },
+      von: 1, bis: 3, wenn: 'immer',
+      sagt: 'Leergut in der West-Ecke des Hofes, wo der Schatten steht.' },
+
+    { schluessel: 'leute_west', bild: 'fracht_leute_alt', bilder: { 3: 'fracht_leute_neu' },
+      ort: 'keller', dx: 1, dy: 2,
+      breite: 4.4, breiten: { 3: 5 },
+      von: 1, bis: 3, wenn: 'immer',
+      sagt: 'Zwei Knechte am Kellerhals.' },
 
     /* --- Die Leute, die den Hof zum Hof machen. --- */
     { schluessel: 'leute', bild: 'fracht_leute_alt', bilder: { 3: 'fracht_leute_neu' },

@@ -1705,9 +1705,45 @@
   }
 
   /* Die Namen der Stadt: echter Text an einem Ort. */
+  /* AUFLAGE A5, Welle 9 — DER GEGNER BEKOMMT EINEN NAMEN IM BILD.
+
+     Der Name wird bei jedem Zeichnen aus der Welt gelesen, nicht in
+     stadt-daten.js abgeschrieben: `gegnerName` liefert je Epoche
+     BRAUHAUS ZUM ADLER · BRAUSTATT ADLER · BRAUEREI ADLER · ADLER-BRÄU AG,
+     und der Ort kommt aus `gegnerOrt`. Ein zweiter Ort desselben Namens
+     kann nicht veralten, wenn es ihn nicht gibt.
+
+     Warum `B.orte.da()` hier NICHT gefragt wird: der Ort 'konkurrenz' traegt
+     in kern/orte.js `ab: 3` ("Vor 1884 sitzt er in der Stadt"), waehrend DER
+     GEGNER seinen Hof in allen vier Epochen dorthin setzt
+     (gegner-daten.js: sitz 1..4, alle 'konkurrenz'). Wer hier `da()` fragte,
+     liesse das Schild genau in den beiden Epochen weg, in denen der Kritiker
+     es vermisst hat. Der Ort selbst bewegt sich nicht — es haengt nur ein
+     zweites Ding daran. */
+  function zeichneGegnername(fach) {
+    if (!K.gegnername || !B.welt.gegnerJetzt) return;
+    var gesehen = {};
+    B.welt.gegnerJetzt().forEach(function (g) {
+      var ort = B.welt.gegnerOrt(g);
+      var s = K.gegnername[ort];
+      if (!s || gesehen[ort]) return;
+      gesehen[ort] = true;
+      var text = String(B.welt.gegnerName(g) || '').toUpperCase();
+      if (!text) return;
+      var el = B.el('div', 'stadt-name stadt-name-gegner');
+      el.style.fontSize = 'max(12px, calc(var(--s) * ' + B.rund(21 * (s.gross || 1), 2) + '))';
+      el.style.zIndex = '962';
+      el.appendChild(B.el('span', 'wort', text));
+      el.title = 'Das Haus gegenüber: ' + B.welt.gegnerName(g) + '.';
+      B.orte.setze(el, ort, { anker: 'mitte', dx: s.dx || 0, dy: s.dy || 0 });
+      fach.appendChild(el);
+    });
+  }
+
   function zeichneNamen(fach) {
     K.namen.forEach(function (n) {
       if (n.ab && e() < n.ab) return;
+      if (n.bis && e() > n.bis) return;
       if (!B.orte.da(n.ort)) return;
       var el = B.el('div', 'stadt-name');
       /* Boden wie in jeder Schriftregel des Stuecks (Welle 7). Der kleinste
@@ -1720,6 +1756,7 @@
       B.orte.setze(el, n.ort, { anker: 'mitte', dx: n.dx || 0, dy: n.dy || 0 });
       fach.appendChild(el);
     });
+    zeichneGegnername(fach);
   }
 
   var ANKER = '<svg class="anker" viewBox="0 0 24 24" aria-hidden="true">'
