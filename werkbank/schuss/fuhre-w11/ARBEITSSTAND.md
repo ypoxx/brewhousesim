@@ -160,7 +160,10 @@ dessen Brett er aufklappt (`b.schluessel` weiss es bereits). Das ist eine
 Aenderung am Skelett und gehoert dem Rahmen, nicht mir.
 
 **Die Gegenprobe ist inzwischen gefahren und sie ist eindeutig.**
-`messungen/nachher-laden.log`, derselbe Ladezustand auf dem Nachstand:
+`messungen/vorher-laden.txt` gegen `messungen/nachher-laden.txt`, derselbe
+Ladezustand auf Vorzustand und Nachstand (der Hinweis auf eine Datei
+`nachher-laden.log` war falsch — die gibt es nicht, die Zahlen stehen in
+`.txt`, Zeile `fuhre` des Blocks `EPOCHE 1`):
 
 | Ladezustand, photographisch | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
@@ -408,10 +411,52 @@ geaendert), 30 × WEITER **ohne** Escape:
 Zwei unabhaengig gefahrene Geraete, dieselbe Zahl auf die Zehntelstelle
 (`messen.mjs` sagt 22,0 / 22,7 / 21,9 / 26,7).
 
-**Die Latte „unter 20 %" ist damit NICHT genommen** — allein DIE FUHRE
-bringt sie auf 21,9 bis 26,7 %. Was fehlt, ist der Ruhezustand der anderen
-Stuecke; in 1970 traegt allein DER GEGNER 13,1 % (554.170 px, Grenze
-28.000). Beide Nachbarn raeumen in derselben Welle.
+**Die Latte „unter 20 %" ist von DER FUHRE ALLEIN nicht genommen** — allein
+DIE FUHRE bringt sie auf 21,9 bis 26,7 %. Was fehlt, ist der Ruhezustand der
+anderen Stuecke; in 1970 traegt allein DER GEGNER 13,1 % (554.170 px, Grenze
+28.000). Beide Nachbarn raeumen in derselben Welle. **Zusammen ist sie
+genommen — gemessen, nicht gehofft: §3.3b.**
+
+### 3.3b Die Latte „unter 20 %" — zusammen genommen, mit Zahl
+
+Der Satz oben („NICHT genommen") stand da, weil zur Zeit des Schreibens nur
+DIE FUHRE allein gemessen war. Der Lauf, der die andere Haelfte misst, war
+im `abnahme.sh` schon vorgesehen und ist am Ende des zweiten Anlaufs
+durchgelaufen — sein Ergebnis hat es aber in keinen Abschnitt mehr
+geschafft, weil die Sitzung vorher endete. Es steht in
+`messungen/deckung-gemeinsam-w30.txt`.
+
+`deckung.mjs`, 30 × WEITER **ohne** Escape, 2752×1536, auf einem
+eingefrorenen Stand des **ganzen** Arbeitsbaums (`messstand.sh 6ace3a0 8953`)
+— also alle drei Stuecke der Welle mit ihrer Nacharbeit:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Vorzustand `7896ee6` (nur `bild-w9/deckung.mjs`) | 48,8 % | 48,1 % | 44,8 % | 53,3 % |
+| DIE FUHRE allein (§3.3) | 22,1 % | 22,7 % | 21,9 % | 26,7 % |
+| **alle drei zusammen** | **14,5 %** | **15,0 %** | **14,8 %** | **13,8 %** |
+| oberstes ⅙ zusammen | 29,9 % | 30,5 % | 30,5 % | 30,7 % |
+| Mittelband zusammen | 13,5 % | 14,1 % | 13,8 % | 12,2 % |
+| unterstes ⅙ zusammen | 3,2 % | 3,2 % | 3,2 % | 3,2 % |
+
+**Die Latte ist in allen vier Epochen genommen** — 13,8 bis 15,0 % gegen
+eine Grenze von 20 %, und die schwerste Epoche des Vorzustands (1970,
+53,3 %) ist am Ende die leichteste.
+
+**Drei Dinge, die dazu gehoeren und gegen die schoene Zahl sprechen:**
+
+1. **Das ist nicht meine Zahl allein.** Von 48,8 → 14,5 % (1350) traegt DIE
+   FUHRE den Weg bis 22,1 %; die letzten 7,6 Punkte sind die Arbeit DES
+   GEGNERS und DES ERBEN. In 1970 ist es umgekehrt deutlicher: DIE FUHRE
+   kommt auf 26,7 %, zusammen sind es 13,8 % — dort traegt der Nachbar mehr
+   als ich. Wer diese Zeile zitiert, zitiert drei Stuecke.
+2. **Der Stand der beiden anderen ist ein Zwischenstand.** `6ace3a0` ist der
+   Commit der Aufsicht von diesem Abend, nicht ihre Fertigmeldung. Die Zahl
+   kann sich noch bewegen, in beide Richtungen.
+3. **Das oberste ⅙ bleibt bei 30 %.** Die Deckung faellt in der Mitte und
+   unten; oben liegt weiter die Reiterzeile der STADT (§1.2b). DIE FUHRE
+   traegt dort nach der Nacharbeit **0 px von 10.000** — die 30 % gehoeren
+   anderen.
 
 ### 3.4 Ladezustand — unveraendert, und das ist die Absicht
 
@@ -455,15 +500,107 @@ Dazu in allen vier: `lage` 0 · Seitenfehler 0 · `verdeckt()` 0.
 
 Das ist genau der Wortlaut der Auflage: *„mit aufliegender Sommertafel
 schliesst Escape sie UND der Chronikgriff des Rahmens (`kern:chronik`)
-laesst sich weiter mit Escape schliessen."* Dass `spur()` nicht leer ist,
-ist der zweite Teil: die Blattaufsicht des Rahmens **sieht** den Anschlag
-jetzt, weil `stopPropagation()` ihr die Taste nicht mehr abnimmt.
+laesst sich weiter mit Escape schliessen."*
+
+> **BERICHTIGUNG (Neuanlauf 3) — der Satz, der hier stand, war eine
+> Fehldeutung meiner eigenen Messung, und er sprach zu meinen Gunsten.**
+> Hier stand: *„Dass `spur()` nicht leer ist, ist der zweite Teil: die
+> Blattaufsicht des Rahmens sieht den Anschlag jetzt, weil
+> `stopPropagation()` ihr die Taste nicht mehr abnimmt."* Das ist aus zwei
+> Gruenden nicht haltbar:
+>
+> 1. **Der eine Eintrag in `spur()` nennt gar nicht meinen Anschlag.** Er
+>    lautet wortwoertlich `erbe .erb-buch blatt -> klemme+reiter:stadt:
+>    reiter:erbe-blatt-erb-buch` — das ist das Buch DES ERBEN. Ueber die
+>    Sommertafel steht in der Spur kein Wort.
+> 2. **Dieselbe Spur steht Zeichen fuer Zeichen auf dem VORZUSTAND**, auf
+>    dem `stopImmediatePropagation()` noch drin ist (§3.5b). Ein Merkmal,
+>    das auf beiden Staenden gleich aussieht, kann den Unterschied zwischen
+>    ihnen nicht belegen.
+>
+> Was von der Auflage bleibt: sie ist **erfuellt** — die drei Aufrufe in
+> `tastenSperre` sind umgestellt, und die Probe besteht. Was faellt: der
+> Nachweis, dass man den Unterschied an dieser Probe SIEHT. Man sieht ihn
+> nicht; die Probe ist auf beiden Staenden gleich (§3.5b). Die Auflage ist
+> eine Auflage an den Quelltext, und als solche ist sie abgehakt.
 
 *(Beim ersten Anlauf war der Chronik-Teil dieser Probe falsch gemessen:
 ich habe die Chronik 600 ms nach Escape aufgeschlagen und damit mitten in
 das Nachfassen des Rahmens hinein, das ueber 2,6 s laeuft — `spur()` zeigte
 „760ms: kern .blatt rolle -> klemme+knopf:kern:blatt-zu". Die Probe wartet
 jetzt 3,2 s. Der Fehler lag in meinem Messgeraet, nicht im Spiel.)*
+
+### 3.5b Dieselbe Escape-Probe auf dem VORZUSTAND — und sie entlastet mich nicht, sie entlastet nur meine Arbeit
+
+Die Nachher-Zeile aus §3.5 meldet `geklemmt {"erbe .erb-buch blatt":1}`.
+Ohne einen Vergleichslauf ist nicht zu sagen, ob DIE FUHRE das verursacht
+hat — und weil es die Abnahme DES ERBEN beruehrt („`haushalt.geklemmt()`
+bleibt nach Escape leer"), gehoert es gemessen statt vermutet. Der Lauf war
+im `abnahme.sh` vorgesehen und ist durchgelaufen; sein Ergebnis stand bis
+jetzt in keinem Abschnitt.
+
+`escapeprobe.mjs` auf Hafen **8951** (Vorzustand `7896ee6`, ohne eine Zeile
+DER FUHRE) gegen denselben Lauf auf dem Nachstand
+(`messungen/vorher-escape.txt` gegen `messungen/nachher-escape.txt`):
+
+| je Epoche E1–E4 | Vorzustand `7896ee6` | Nachstand |
+|---|---|---|
+| Sommertafel vor → nach Escape | true → **false** | true → **false** |
+| Chronik geklickt, offen → nach Escape | true → **zu** | true → **zu** |
+| `haushalt.tafeln()` | 0 | 0 |
+| `geklemmt()` | `{"erbe .erb-buch blatt":1}` | `{"erbe .erb-buch blatt":1}` |
+| `spur()` | `0ms: erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch` | wortgleich |
+| `lage` · `verdeckt()` · Seitenfehler | 0 · 0 · 0 | 0 · 0 · 0 |
+
+**Die beiden Dateien sind Zeichen fuer Zeichen gleich** (`cmp` meldet keinen
+Unterschied; acht Zeilen, vier je Datei). Daraus folgt zweierlei, und das
+zweite ist mir unangenehm:
+
+* **Die Klemme am `erb-buch` ist nicht meine.** Sie steht auf dem
+  Vorzustand genauso da, auf dem DIE FUHRE keine geaenderte Zeile hat.
+  Punkt 8 in §6 ist damit belegt statt behauptet.
+* **Die Sommertafel schloss auch schon VORHER auf Escape**, und die Chronik
+  liess sich auch vorher danach noch schliessen. Die Auflage des Rahmens
+  (`stopImmediatePropagation()` → `stopPropagation()`) ist also **nicht**
+  daran zu erkennen, dass diese Probe jetzt besteht — sie bestand vorher
+  auch, und zwar in jeder der vier Epochen. **Diese Probe misst die Auflage
+  nicht.** Sie zeigt, dass die Umstellung nichts kaputtgemacht hat, mehr
+  nicht. Wer §3.5 in der alten Fassung las, konnte das Gegenteil
+  herauslesen; das ist oben berichtigt.
+
+**Warum die Probe blind ist, laesst sich am Quelltext zu Ende lesen — ohne
+Browser, und es faellt eindeutig aus:** die beiden Aufrufe sind auf dem
+heutigen Stand **wirkungsgleich**. Alle Escape-Horcher, die es gibt:
+
+| Horcher | Datei · Zeile | Phase | geladen |
+|---|---|---|---|
+| Blattaufsicht des Rahmens (`tischLeeren`) | `kern/haushalt.js:588` | **Fangphase** (`true`) | `index.html:81` — **vor jedem Stueck** |
+| `zeigeBlatt(null)` des Kopfes | `kern/kopf.js:220` | Blasenphase | `index.html:74` |
+| `tastenSperre` DER FUHRE | `fuhre.js:4431` | Fangphase (`true`) | `index.html:90` |
+| DER GEGNER | `gegner.js:3239` | Blasenphase | `index.html:100` |
+| DER NAME | `name.js:2349` | Blasenphase | `index.html:110` |
+
+* Der **Rahmen** haengt in derselben Phase am selben Knoten, ist aber
+  **frueher** angemeldet und hat die Taste deshalb schon gesehen, bevor
+  `tastenSperre` ueberhaupt laeuft — `stopImmediatePropagation()` konnte ihm
+  nie etwas abnehmen. Der Rahmen schreibt das selbst hin (`haushalt.js:578`:
+  „weil `kern/haushalt.js` VOR jedem Stueck geladen wird, ist er dort der
+  erste. Er nimmt niemandem etwas ab").
+* **Kopf, GEGNER und NAME** haengen in der **Blasenphase**. Ein
+  `stopPropagation()` in der Fangphase auf `document` verhindert schon den
+  Abstieg zum Ziel und damit die ganze Blasenphase — sie sind also **so wie
+  so** abgeschnitten, mit beiden Aufrufen gleich.
+* **Ein weiterer Fangphasen-Horcher auf `document`, der nach der FUHRE
+  angemeldet waere, existiert im ganzen Spiel nicht.** Nur er koennte den
+  Unterschied sehen.
+
+**Daraus folgt, und es steht hier, weil es meine eigene Zeile kleiner
+macht:** die Umstellung aendert auf dem heutigen Stand **kein beobachtbares
+Verhalten**. Sie ist Vorsorge — der naechste, der einen Fangphasen-Horcher
+nach der FUHRE anmeldet, wird nicht mehr verschluckt. Die Auflage ist damit
+dem Wortlaut nach erfuellt und die Probe besteht; **eine Messung, die den
+Unterschied ZEIGT, gibt es nicht und kann es auf diesem Stand nicht geben.**
+Das ist weniger, als §3.5 vorher behauptet hat.
 
 ### 3.6 Die vierte Latte und das Tor
 

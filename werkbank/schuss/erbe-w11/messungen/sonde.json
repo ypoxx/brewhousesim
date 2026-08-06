@@ -1,0 +1,321 @@
+[
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 5,
+   "px": 19296,
+   "anteil": 0.45648619186046513,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": -8704,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 467104,
+   "anteil": 11.050296753875969
+  },
+  "obenGesamt": {
+   "px": 252432,
+   "anteil": 35.83075944767442
+  },
+  "kaesten": [
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "285x22 @1486,1153",
+    "px": 6287,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "159x22 @2061,1153",
+    "px": 3519,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "138x22 @1916,1153",
+    "px": 3058,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "134x22 @1777,1153",
+    "px": 2955,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-griff",
+    "tag": "button",
+    "mass": "72x22 @2226,1153",
+    "px": 1591,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "stadt: 144784/40000 px  oben 93296/26000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 95,
+  "epoche": 1,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 5,
+   "px": 17184,
+   "anteil": 0.40652252906976744,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": -10816,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 492320,
+   "anteil": 11.646832606589147
+  },
+  "obenGesamt": {
+   "px": 255216,
+   "anteil": 36.22592659883721
+  },
+  "kaesten": [
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "209x22 @1486,1153",
+    "px": 4614,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "143x22 @1992,1153",
+    "px": 3166,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "140x22 @1846,1153",
+    "px": 3103,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "139x22 @1701,1153",
+    "px": 3068,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-griff",
+    "tag": "button",
+    "mass": "73x22 @2142,1153",
+    "px": 1618,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "stadt: 152608/40000 px  oben 93520/26000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 41344/20000 px",
+   "kern: 100656/120000 px  oben 80896/80000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 103,
+  "epoche": 2,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 5,
+   "px": 19488,
+   "anteil": 0.4610283430232558,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": -8512,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 484224,
+   "anteil": 11.455305232558139
+  },
+  "obenGesamt": {
+   "px": 257856,
+   "anteil": 36.600654069767444
+  },
+  "kaesten": [
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "257x22 @1486,1153",
+    "px": 5688,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "146x22 @1895,1153",
+    "px": 3232,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "140x22 @2047,1153",
+    "px": 3098,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "139x22 @1750,1153",
+    "px": 3077,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-griff",
+    "tag": "button",
+    "mass": "110x22 @2193,1153",
+    "px": 2432,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "stadt: 153760/40000 px  oben 92064/26000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 106,
+  "epoche": 3,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 5,
+   "px": 24960,
+   "anteil": 0.5904796511627907,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": -3040,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 501152,
+   "anteil": 11.85577156007752
+  },
+  "obenGesamt": {
+   "px": 267312,
+   "anteil": 37.94285973837209
+  },
+  "kaesten": [
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "312x22 @1486,1153",
+    "px": 6893,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "245x22 @1804,1153",
+    "px": 5404,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "177x22 @2055,1153",
+    "px": 3914,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "172x22 @2238,1153",
+    "px": 3807,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-griff",
+    "tag": "button",
+    "mass": "117x22 @2416,1153",
+    "px": 2588,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "stadt: 155472/40000 px  oben 102544/26000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px",
+   "kern: 103728/120000 px  oben 83968/80000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 99,
+  "epoche": 4,
+  "fehler": []
+ }
+]
