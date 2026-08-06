@@ -74,6 +74,31 @@ Saat, dieselbe Partie.* Ist sie nicht herstellbar, geht sie als eigene Runde in
 den Loop — aber keine Welle wird abgenommen, deren Zahlen sich nicht
 wiederholen lassen.
 
+> ### AUFGEKLÄRT — UND ES LAG AM MESSWERKZEUG, NICHT AM SPIEL
+>
+> Der Builder ist der Frage nachgegangen und hat sie beantwortet: **einzeln
+> gemessen spielt 1350 auf dem ausgelieferten Stand dreimal dieselbe Partie mit
+> derselben Prüfsumme — und es ist dieselbe wie auf dem Vorzustand `37f4b44`.**
+> Auseinander gehen die Reihen nur, wenn `rueckkopplung-r3/welle.sh` die **vier
+> Epochen nebeneinander** fährt. Mein Verdacht (das 2,6-s-Fenster im Rahmen) war
+> falsch; die Ursache lag im Gerät der Aufsicht.
+>
+> **`welle.sh` trug im Kopf eine Zusage, die nicht hält:** *„Die beharrliche Hand
+> ist von der Last der Maschine unabhängig, also dürfen die vier Epochen
+> nebeneinander laufen. Nachgewiesen: dieselbe Reihe bei Lastmittel 1,5 und bei
+> 13,7."* **Zwei Lastpunkte sind kein Nachweis.** Repariert: die vier Epochen
+> laufen jetzt **nacheinander**; die alte Art gibt es nur noch unter
+> `NEBENEINANDER=1`, mit lauter Warnung. Das kostet knapp eine Stunde statt einer
+> Viertelstunde — **billiger als eine Viertelstunde für eine Zahl, die sich nicht
+> wiederholen lässt.**
+>
+> **Was davon NICHT betroffen ist:** jede Gegenmessung der Aufsicht seit Welle 7
+> (`welle7-schluss`, `welle8-schluss`, `welle9-schluss`) hat **einen Lauf nach
+> dem anderen** durch `messfenster.sh` gefahren, nie mehrere gleichzeitig. Diese
+> Zahlen stehen. `welle.sh` selbst taucht in den Urteilen der Wellen 4 und 5 auf
+> — was dort nebeneinander gemessen wurde, ist mit dem heutigen Wissen nicht
+> als reproduziert zu zitieren.
+
 *(Zweiter Fund desselben Absatzes: Escape legt die Erbe-Tafel beiseite, aber
 nur bis das Stück neu zeichnet — die Klemme des Rahmens hängt am Element, und
 beim Neuzeichnen ist das Element neu. Wer nach Escape drei Sekunden wartet und
