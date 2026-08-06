@@ -109,6 +109,14 @@ mein Urteil nachprüfbar bleibt:**
 3. `gauntlet/MESSLATTE.md` (erlaubt) ist voll von ρ-Zahlen früherer Wellen. Sie berühren die
    Bildlatte nicht.
 
+**Und eine vierte Sache, die auffiel und gemeldet gehört:** `git status --porcelain` führt
+genau diese Datei als ` M` — es gibt zu diesem Pfad also eine Fassung im Bestand. Ich habe
+sie **nicht angesehen** (`werkbank/urteile/**` ist für mich gesperrt, und Verlauf ebenso).
+Auf der Platte lag nichts Beschriebenes: das Schreibwerkzeug verweigert das Überschreiben
+einer vorhandenen, ungelesenen Datei, und es hat nicht verweigert. Zerstört ist damit
+nichts — wer den Verlauf sehen darf, möge trotzdem nachsehen. `git add`, `git commit` und
+`git push` sind in diesem Lauf nicht ausgeführt worden.
+
 ---
 
 ## 2 · Die eine Trennung, an der frühere Kritiker gescheitert sind
@@ -463,9 +471,11 @@ Gemessen: 29,0 / 29,5 / 29,1 / 29,5 % Kästen, oberstes Sechstel 51,7 / 52,2 / 5
 Ziel: **≤ 15 % gesamt und ≤ 25 % im obersten Sechstel** in allen vier Epochen, gleich nach
 dem Laden. Gemessen wird mit dem Verfahren aus §2 (dieselbe Seite mit und ohne Kästen,
 Bildpunkte zählen) — `werkbank/schuss/bild-w8/bauorte.mjs` + `deckung.mjs` tun das bereits.
-*Der billigste Weg steht im Bild:* in jeder Epoche liegen im obersten Sechstel acht bis zehn
-Reiterkacheln (`stadt:reiter:*`, x 37…810, y 120…290) ausgeklappt neben der Kopfleiste,
-obwohl sie zugeklappt genauso bedienbar wären.
+*Der billigste Weg steht im Bild:* in jeder Epoche liegen im obersten Sechstel **acht
+Reiterkacheln** (`stadt:reiter:*`) plus die Kachel `stadt:ortsmarken` als geschlossener
+brauner Block bei x 37…810, y 120…350, dazu darunter die aufgeklappte BAUHOF-Lade
+(x 20…1300, y 355…560). Zusammen rund **0,44 Mio Bildpunkte** — knapp das Dreifache der
+gesamten Oberfläche eines Zielblatts (Leiste + WEITER-Tafel ≈ 0,16 Mio).
 
 **A2 — Die schwebenden Marken bekommen eine Kontur oder einen Platz.**
 `ebene-marken` trägt 62 / 67 / 63 / 66 Textknoten je Epoche; ein Teil davon liegt frei in

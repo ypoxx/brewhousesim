@@ -65,6 +65,22 @@ gegen die Rohdaten von Welle 7 (`welle7-schluss/rho/`) gehalten.*
 **Das Wellenziel ist damit in 1350 gerissen** — nicht an |ρ| < 0,700, das hält
 überall, sondern an der Nebenbedingung.
 
+**Alle vier Epochen am Stand `8b81250`, von der Aufsicht gemessen** (1600 und
+1970 dreifach, je eine md5; 1350 und 1884 einfach):
+
+| | ρ 12 / 13 / 14 J | Jahre < 1× | Kasse min – max | Welle 7 zum Vergleich |
+|---|---|---|---|---|
+| **1350** | −0,014 / +0,137 / −0,007 | **3/14 ✗** | **0** – 143 | 1/14, 26 – 517 |
+| 1600 | +0,476 / +0,297 / +0,160 | 1/14 | 218 – 2 026 | 1/14, 169 – 2 851 |
+| 1884 | −0,210 / −0,016 / +0,130 | **2/14** (Grenze) | 399 – 17 619 | 1/14, 1 757 – 23 789 |
+| 1970 | +0,692 / +0,330 / +0,116 | 0/14 | 206 – 194 942 | 1/14, 1 030 – 114 537 |
+
+**Acht von acht Läufen unter 0,700** — die erste Hälfte des Wellenziels hält in
+allen vier Epochen über alle drei Schnitte, und jede der vier ρ-Reihen
+reproduziert die Meldung des Builders Ziffer für Ziffer. **Die zweite Hälfte ist
+in 1350 gerissen**, und 1884 steht mit 2/14 auf der Grenze — auch dort ist die
+Kasse gefallen (Startjahr 1 757 → 399). Nur 1970 ist reicher geworden.
+
 > ### UND DAS IST DER EIGENTLICHE FUND: ρ WURDE BESSER, WEIL DER SPIELER PLEITE IST
 >
 > ρ ist in 1350 von −0,380 auf −0,007 gewandert und liest sich damit **besser**.
