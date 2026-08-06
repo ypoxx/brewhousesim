@@ -661,3 +661,28 @@ man daraus nicht, welcher Kasten es ist, um wieviel er kappt und ob eine
 `gegner-w11/schmal.mjs` geschrieben: dieselbe Prüfung Zeichen für Zeichen
 (`kappt()` je Richtung), aber mit Name, Maß, Fehlbetrag und einem Merker, ob
 Ziffern im Text stehen. Das Ergebnis steht in §7.7.
+
+### 7.7 Die Gegenprobe zur Neutralität der Ausweiche — belegt, nicht vermutet
+
+§7.4 hat angekündigt, e2 auf dem heutigen Stand nachzumessen, obwohl
+`nach-e2.json` schon dalag. Ergebnis:
+
+```
+bd2fc100d315fe6850e866dfa580ab02  nach-e2.json    (gemessen VOR der Reparatur, Satz `nach`)
+bd2fc100d315fe6850e866dfa580ab02  nach2-e2.json   (gemessen HEUTE, Satz `nach2`)
+cmp: BYTEWEISE GLEICH
+```
+
+400 Wochen, 14 Braujahre, jede Wochenzahl, jede Kassenstellung, jeder
+Kennzahlwert — **identisch über zwei Fassungen des Codes hinweg.** Dasselbe
+gilt für e1 (md5 `236412a2…`), und Tor wie Spielprobe liefern in beiden Sätzen
+dieselben Zahlen. **Die Änderungen 7–11 verschieben Zeichen und bewegen keinen
+Preis.** Damit ist der ρ-Satz `nach2` = {e1, e2 aus `nach`, neu gemessen und
+bestätigt; e3, e4 heute} ein einziger, in sich stimmiger Satz und keine
+Mischung.
+
+Das ist zugleich die Antwort auf eine Frage, die ein Prüfer stellen würde:
+zwei gleiche Dateien könnten auch heißen, dass jemand kopiert hat. Sie sind
+hier **unabhängig entstanden** — `nach-e2` auf Hafen 8962 vor der Reparatur,
+`nach2-e2` heute auf demselben Hafen, aber aus einem neu aufgesetzten Nachstand
+(der Container ist zwischendurch zurückgesetzt worden, `/tmp` war leer).

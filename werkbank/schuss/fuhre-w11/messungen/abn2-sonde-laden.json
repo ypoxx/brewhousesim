@@ -1,0 +1,145 @@
+{
+ "1": {
+  "jahr": 1350,
+  "woche": 1,
+  "fuhre": null,
+  "gesamt": {
+   "px": 769312,
+   "anteil": 18.19964268410853
+  },
+  "oben": {
+   "px": 260336,
+   "anteil": 36.95267078488372
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 189632/28000 px",
+   "stadt: 152688/40000 px  oben 101200/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px"
+  ],
+  "gross": [],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": false,
+  "sommerblatt": false,
+  "stand": "null blaetter ",
+  "planKnoepfe": [],
+  "seitenfehler": 0
+ },
+ "2": {
+  "jahr": 1600,
+  "woche": 1,
+  "fuhre": null,
+  "gesamt": {
+   "px": 802192,
+   "anteil": 18.977486070736433
+  },
+  "oben": {
+   "px": 263328,
+   "anteil": 37.37736191860465
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 193840/28000 px",
+   "stadt: 160720/40000 px  oben 101632/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 41344/20000 px",
+   "kern: 100656/120000 px  oben 80896/80000 px"
+  ],
+  "gross": [],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": false,
+  "sommerblatt": false,
+  "stand": "null blaetter ",
+  "planKnoepfe": [],
+  "seitenfehler": 0
+ },
+ "3": {
+  "jahr": 1884,
+  "woche": 1,
+  "fuhre": null,
+  "gesamt": {
+   "px": 776288,
+   "anteil": 18.36467417635659
+  },
+  "oben": {
+   "px": 265760,
+   "anteil": 37.72256540697674
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 177216/28000 px",
+   "stadt: 161664/40000 px  oben 99968/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "gross": [],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": false,
+  "sommerblatt": false,
+  "stand": "null blaetter ",
+  "planKnoepfe": [],
+  "seitenfehler": 0
+ },
+ "4": {
+  "jahr": 1970,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 2,
+   "px": 2704,
+   "anteil": 0.06396862887596899,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": -31296,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 813472,
+   "anteil": 19.244337451550386
+  },
+  "oben": {
+   "px": 277920,
+   "anteil": 39.44858284883721
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 209664/28000 px",
+   "stadt: 165184/40000 px  oben 113152/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px",
+   "kern: 103728/120000 px  oben 83968/80000 px"
+  ],
+  "gross": [],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": false,
+  "sommerblatt": false,
+  "stand": "null blaetter ",
+  "planKnoepfe": [],
+  "seitenfehler": 0
+ }
+}
