@@ -242,7 +242,82 @@ ihre Grenzen (28.000 px); danach faellt die Summe entsprechend. Die Zahl
 und nicht meines allein: allein DIE FUHRE bringt sie auf **21,9 bis
 26,7 %**.
 
-*(Fortsetzung: ρ, Lesbarkeit und Abnahme weiter unten.)*
+### 3.3 Dieselbe Zahl mit dem Geraet des blinden Kritikers
+
+`fuhre-w11/deckung.mjs` (= `bild-w9/deckung.mjs`, nur der Zielordner ist
+geaendert), 30 × WEITER **ohne** Escape:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| **vorher** | 48,8 % | 48,1 % | 44,8 % | 53,3 % |
+| **nachher** | **22,1 %** | **22,7 %** | **21,9 %** | **26,7 %** |
+
+Zwei unabhaengig gefahrene Geraete, dieselbe Zahl auf die Zehntelstelle
+(`messen.mjs` sagt 22,0 / 22,7 / 21,9 / 26,7).
+
+**Die Latte „unter 20 %" ist damit NICHT genommen** — allein DIE FUHRE
+bringt sie auf 21,9 bis 26,7 %. Was fehlt, ist der Ruhezustand der anderen
+Stuecke; in 1970 traegt allein DER GEGNER 13,1 % (554.170 px, Grenze
+28.000). Beide Nachbarn raeumen in derselben Welle.
+
+### 3.4 Ladezustand — unveraendert, und das ist die Absicht
+
+`deckung.mjs` ohne `WOCHEN`, Nachstand:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| gesamt vorher (Welle 10) | 18,1–19,3 % | | | |
+| gesamt **nachher** | **18,4 %** | **19,3 %** | **18,7 %** | **19,2 %** |
+| oberstes ⅙ nachher | 35,6 % | 36,0 % | 36,3 % | 37,7 % |
+
+Ziffer fuer Ziffer der Vorzustand. Die Georgi-Tafel liegt im Ladezustand
+nicht, also kann sich dort nichts bewegen.
+
+### 3.5 Escape — die Abnahme der Auflage des Rahmens
+
+`escapeprobe.mjs`, 30 × WEITER, dann Escape, dann Chronik auf, dann Escape:
+
+| Epoche | Sommertafel vor → nach Escape | Chronik offen → nach Escape | `tafeln()` | `spur()` des Rahmens |
+|---|---|---|---|---|
+| alle vier | **true → false** | **true → zu** | **0** | nicht leer (`erb-buch -> klemme+reiter`) |
+
+Dazu in allen vier: `lage` 0 · Seitenfehler 0 · `verdeckt()` 0.
+
+Das ist genau der Wortlaut der Auflage: *„mit aufliegender Sommertafel
+schliesst Escape sie UND der Chronikgriff des Rahmens (`kern:chronik`)
+laesst sich weiter mit Escape schliessen."* Dass `spur()` nicht leer ist,
+ist der zweite Teil: die Blattaufsicht des Rahmens **sieht** den Anschlag
+jetzt, weil `stopPropagation()` ihr die Taste nicht mehr abnimmt.
+
+*(Beim ersten Anlauf war der Chronik-Teil dieser Probe falsch gemessen:
+ich habe die Chronik 600 ms nach Escape aufgeschlagen und damit mitten in
+das Nachfassen des Rahmens hinein, das ueber 2,6 s laeuft — `spur()` zeigte
+„760ms: kern .blatt rolle -> klemme+knopf:kern:blatt-zu". Die Probe wartet
+jetzt 3,2 s. Der Fehler lag in meinem Messgeraet, nicht im Spiel.)*
+
+### 3.6 Die vierte Latte und das Tor
+
+`aufsicht/lesbarkeit.mjs` bei **1366×768**, Nachstand:
+
+| | vorher (Welle 10) | nachher |
+|---|---|---|
+| Ueberlaeufe | 14 | **14** |
+| Textknoten unter 12 px | 497 | **497** |
+| Knoepfe unter 24 px | 0 von 307 | **0 von 307** |
+| abgeschnittene Kaesten je Epoche | 3/4/3/4 | **3/4/3/4** |
+
+Nichts ist schlechter geworden, nichts besser — die Georgi-Tafel liegt im
+Ladezustand nicht, und `lesbarkeit.mjs` misst nur den Ladezustand. **Der
+Anschlag selbst ist deshalb gesondert bei 1366×768 geprueft** (`sonde.mjs`,
+`messungen/klein2.txt`, 30 Wochen): 700×162, alle vier Sudknoepfe 342×24 —
+genau auf dem Knopfboden — und alle vier „trifft".
+
+`aufsicht/tor.mjs`: **TOR OFFEN**, E1–E4 je `lage=0 fehler=0`,
+99/107/110/102 Zuege.
+`aufsicht/spielprobe.mjs`: **BESTANDEN**, 60 Wochen je Epoche, `lage 0`,
+`Fehler 0`.
+
+*(Fortsetzung: ρ weiter unten.)*
 
 
 ---
