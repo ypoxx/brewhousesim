@@ -27,7 +27,7 @@
     "mitte": 0,
     "unten": 0
    },
-   "preis": {
+   "pr": {
     "gesamt": 2.1,
     "oben": 11.7,
     "mitte": 0.2,
@@ -95,7 +95,7 @@
     "mitte": 0,
     "unten": 0
    },
-   "preis": {
+   "pr": {
     "gesamt": 2.1,
     "oben": 11.8,
     "mitte": 0.2,
@@ -108,9 +108,9 @@
     "unten": 3.3
    },
    "sud": {
-    "gesamt": 2.3,
+    "gesamt": 1.4,
     "oben": 0,
-    "mitte": 3.4,
+    "mitte": 2.1,
     "unten": 0
    },
    "nm": {
@@ -163,7 +163,7 @@
     "mitte": 0,
     "unten": 0
    },
-   "preis": {
+   "pr": {
     "gesamt": 2.1,
     "oben": 11.7,
     "mitte": 0.2,
@@ -176,9 +176,9 @@
     "unten": 3.6
    },
    "sud": {
-    "gesamt": 1.4,
+    "gesamt": 2.3,
     "oben": 0,
-    "mitte": 2.1,
+    "mitte": 3.5,
     "unten": 0
    },
    "nm": {
@@ -231,22 +231,22 @@
     "mitte": 0.1,
     "unten": 0
    },
-   "preis": {
+   "pr": {
     "gesamt": 2.1,
     "oben": 11.7,
     "mitte": 0.2,
     "unten": 0
    },
    "gg": {
-    "gesamt": 5,
+    "gesamt": 5.1,
     "oben": 0,
-    "mitte": 6.7,
+    "mitte": 6.8,
     "unten": 3.3
    },
    "sud": {
-    "gesamt": 2.3,
+    "gesamt": 1.4,
     "oben": 0,
-    "mitte": 3.5,
+    "mitte": 2.1,
     "unten": 0
    },
    "nm": {

@@ -40,8 +40,15 @@ mkdirSync(AUS, { recursive: true });
 
 /* Die acht Stuecke, an ihrem Klassenpraefix erkannt — wie in
    aufsicht/deckung-je-stueck.mjs. */
-const STUECKE = ['stadt', 'fu', 'preis', 'gg', 'sud', 'nm', 'erb', 'kopf'];
-const NAMEN = { stadt: 'DIE STADT', fu: 'DIE FUHRE', preis: 'DER PREIS', gg: 'DER GEGNER',
+/* ACHTUNG, EIN FEHLER DES VORGAENGERGERAETS, hier behoben und gemeldet:
+   `aufsicht/deckung-je-stueck.mjs` sucht das Praefix `preis`. DER PREIS
+   schreibt seine Klassen aber `pr-` (33 Regeln `.pr-stil`, `.pr-chronik`,
+   `.pr-zeile` …). Die Folge: `.pr-kopf` traf die Alternative `kopf` — der
+   Kasten DES PREISES wurde DER KOPFLEISTE DES SKELETTS zugerechnet. Genau
+   deshalb stand die Kopfleiste zuerst bei 26 % des obersten Sechstels,
+   waehrend ihre eigene Huelle nur 14,8 % misst. Mit `pr` stimmt die Summe. */
+const STUECKE = ['stadt', 'fu', 'pr', 'gg', 'sud', 'nm', 'erb', 'kopf'];
+const NAMEN = { stadt: 'DIE STADT', fu: 'DIE FUHRE', pr: 'DER PREIS', gg: 'DER GEGNER',
                 sud: 'DER SUD', nm: 'DER NAME', erb: 'DAS ERBE', kopf: 'die Kopfleiste' };
 
 /* art: 'voll' | 'nackt' | 'kaesten-weg' | ('nur:' + schluessel)
@@ -57,10 +64,10 @@ const setze = (art) => {
     let n = el;
     while (n && n.nodeType === 1) {
       const c = (n.className && typeof n.className === 'string') ? n.className : '';
-      const m = c.match(/\b(stadt|fu|preis|gg|sud|nm|erb|kopf)[-\w]*/);
+      const m = c.match(/\b(stadt|fu|pr|gg|sud|nm|erb|kopf)[-\w]*/);
       if (m) return m[1];
       const id = n.id || '';
-      const mi = id.match(/\b(?:fach-\w+-)(stadt|fu|preis|gg|sud|nm|erb|kopf)\b/);
+      const mi = id.match(/\b(?:fach-\w+-)(stadt|fu|pr|preis|gg|sud|nm|erb|kopf)\b/);
       if (mi) return mi[1];
       n = n.parentNode;
     }
