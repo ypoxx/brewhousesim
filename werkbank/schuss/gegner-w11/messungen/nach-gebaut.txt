@@ -1,0 +1,309 @@
+
+=== EPOCHE 1 nach 34 Baurunden +1× Esc  lage 0 Seitenfehler 0 verdeckt  Zuege 99
+  HAUSHALT gesamt 742400 px (17.6 %)  oben 263888 px (37.5 %)
+  GEGNER   11968/28000 px   oben 0/8000 px   1 Kaesten
+  pruefe(): ["stadt: 293888/40000 px  oben 104240/26000 px","erbe: 136192/28000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 88816/34000 px","name: 30656/20000 px"]
+  ueberRand(): []
+  tafeln(): []
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+      10721 px²   268× 40 @2013,584  .gg-sitz  „Brauhaus zum Adler"
+    (1 Kaesten, Summe der Huellen 10721 px²)
+  BEDIENUNG des GEGNERS: 13 Zuege, 8 von der Maus zu treffen, 0 abgeschaltet, 4 mit Preisschild, 3 unter 24 px
+      gegner:abloesen:hirsch          110× 33          -108  „HIR · BANablösen 108 Pf"
+      gegner:abloesen:lindenhof       110× 33          -124  „LIN · KONablösen 124 Pf"
+      gegner:abloesen:ochse           110× 33           -75  „OCH · GEVablösen 75 Pf"
+    ! gegner:beschwerde               237× 33                „Klage vor dem Stadtgericht"
+      gegner:beschwerde-bild          243× 48             0  „Klage vor dem Stadtgerichtkostet kein Geld ·"
+    ! gegner:blatt                    183× 33                „Das Haus gegenüber"
+      gegner:hinhalten:hirsch         143× 31                „Fass an den Wirt1 Fass statt Geld"
+      gegner:hinhalten:lindenhof      143× 31                „Fass an den Wirt1 Fass statt Geld"
+      gegner:hinhalten:ochse          143× 31                „Fass an den Wirt1 Fass statt Geld"
+      gegner:oeffnen:adler            268× 40                „Brauhaus zum Adler"
+    ! gegner:zeige:24                  73× 22                „zeigen"
+    ! gegner:zeige:25                  73× 22                „zeigen"
+    ! gegner:zeige:26                  73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×199 @1404,207 = 186433 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Der Adler ruft am Markt aus: 7 Pf je Fass, einen Pfennig unter dem Sat"
+      ganz     731 px in  731 px  „Der Adler ruft am Markt aus: 8 Pf je Fass, einen Pfennig unter dem Sat"
+      ganz     731 px in  731 px  „Der Rat entzieht dem Adler die Konzession für Pfarrschenke St. Michael"
+  A3 — GEGNER auf gemalter Beschriftung: 3
+    „ST. MICHAEL"  511 px² unter div.gg-paar amort  227×94 @1345,465
+    „ST. MICHAEL"  144 px² unter div.gg-kennzahl knapp  227×16 @1345,544
+    „ST. MICHAEL"  144 px² unter i.  133×16 @1439,544
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+     155× 25 @1339,965  „BRAUHAUS"  .zeile eins
+     155× 25 @1341,1008  „ZUM ANKER"  .zeile zwei
+     155× 19 @1342,1027  „GEGR. 1350"  .gegr
+     194× 24 @1456,770  „Adler-Ausschank am Mar"  .wort
+      44× 24 @1849,739  „LIN"  .wort
+      51× 24 @1449,724  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      50× 24 @2397,1092  „BRU"  .wort
+      46× 24 @2234,1031  „FAE"  .wort
+      49× 24 @2287,509  „OBE"  .wort
+     191× 18 @2051,461  „BRAUHAUS ZUM ADLER"  .wort
+      72× 17 @44,131  „BAUHOF"  .wort
+     136× 25 @44,148  „fertig gebaut · 9 zu versatz"  .zahl
+     210× 17 @197,138  „OHNE DICH GESCHEHEN"  .wort
+     210× 13 @197,154  „26 Züge"  .zahl
+     105× 17 @424,125  „DIE HÄUSER"  .wort
+     136× 38 @424,142  „wollen 31 · im Keller liegen 4 Fass"  .zahl
+     151× 17 @577,131  „ANSCHLAGTAFEL"  .wort
+     151× 25 @577,148  „mit Kreide an der Sudhauswand"  .zahl
+     110× 17 @744,131  „DER KELLER"  .wort
+     136× 25 @744,148  „4 von 28 Fass · 4 reif"  .zahl
+     144× 17 @44,191  „OCHSENKARREN"  .wort
+     144× 25 @44,208  „0 von 5 Fass · 0 von 4 Halten"  .zahl
+     119× 17 @205,197  „DAS SUDHAUS"  .wort
+     136× 13 @205,214  „zugeklappt"  .zahl
+     184× 17 @358,191  „DER RUF DES HAUSES"  .wort
+     184× 25 @358,208  „Bierzeiger und Zunftzeichen"  .zahl
+      84× 17 @559,197  „Das Erbe"  .wort
+     136× 13 @559,214  „zugeklappt"  .zahl
+     146× 20 @712,196  „Ortsmarken"  .wort
+     146× 13 @712,215  „7 auf dem Pflock"  .zahl
+     125× 17 @44,244  „Stadt zeigen"  .wort
+     127× 24 @59,286  „BAUHOF"  .wort
+     140× 24 @214,286  „VERSATZ"  .wort
+     771× 20 @514,291  „Die Kasse trägt keinen dieser Bauten. Wa"  .zahl
+    1238× 37 @47,329  „Der Hof ist für diese Zeit fertig gebaut"  .leer
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+    fuhre     509 px in  482 px  ellipsis  .fu-notsud-zeile  „0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die P"
+
+=== EPOCHE 2 nach 34 Baurunden +1× Esc  lage 0 Seitenfehler 0 verdeckt  Zuege 109
+  HAUSHALT gesamt 795632 px (18.8 %)  oben 267904 px (38.0 %)
+  GEGNER   10032/28000 px   oben 0/8000 px   1 Kaesten
+  pruefe(): ["stadt: 337424/40000 px  oben 104672/26000 px","erbe: 136192/28000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 88816/34000 px","name: 41344/20000 px","kern: 102192/120000 px  oben 82432/80000 px"]
+  ueberRand(): []
+  tafeln(): []
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+       9010 px²   225× 40 @2034,584  .gg-sitz  „Braustatt Adler"
+    (1 Kaesten, Summe der Huellen 9010 px²)
+  BEDIENUNG des GEGNERS: 17 Zuege, 12 von der Maus zu treffen, 0 abgeschaltet, 6 mit Preisschild, 3 unter 24 px
+      gegner:abloesen:hirsch          110× 33          -420  „HIR · PACablösen 420 fl"
+      gegner:abloesen:lindenhof       110× 33          -486  „LIN · ZUNablösen 486 fl"
+      gegner:abloesen:markt           110× 33          -210  „MKT · PACablösen 210 fl"
+      gegner:abloesen:muehlwirt       110× 33          -378  „MUE · PACablösen 378 fl"
+      gegner:abloesen:ochse           110× 33          -588  „OCH · PACablösen 588 fl"
+    ! gegner:beschwerde               227× 33                „Anzeige bei der Zunftlade"
+      gegner:beschwerde-bild          243× 48             0  „Anzeige bei der Zunftladekostet kein Geld · "
+    ! gegner:blatt                    183× 33                „Das Haus gegenüber"
+      gegner:hinhalten:hirsch         143× 31                „Fass in die Lade1 Fass statt Geld"
+      gegner:hinhalten:lindenhof      143× 31                „Fass in die Lade1 Fass statt Geld"
+      gegner:hinhalten:markt          143× 31                „Fass in die Lade1 Fass statt Geld"
+      gegner:hinhalten:muehlwirt      143× 31                „Fass in die Lade1 Fass statt Geld"
+      gegner:hinhalten:ochse          143× 31                „Fass in die Lade1 Fass statt Geld"
+      gegner:oeffnen:adler            225× 40                „Braustatt Adler"
+    ! gegner:zeige:18                  73× 22                „zeigen"
+    ! gegner:zeige:19                  73× 22                „zeigen"
+    ! gegner:zeige:20                  73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×199 @1404,207 = 186433 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Einquartierung beim Adler: eine Kompanie sauft den Keller leer. Es kos"
+      ganz     731 px in  731 px  „Braustatt Adler baut auf dem eigenen Hof: Rossmühle für 220 fl."
+      ganz     731 px in  731 px  „Der Adler schenkt aus zu 14 fl je Fass und legt die Zeche drauf."
+  A3 — GEGNER auf gemalter Beschriftung: 0
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+     194× 38 @1140,897  „BRAUHAUS"  .zeile eins
+     194× 38 @1144,944  „ZUM ANKER"  .zeile zwei
+     193× 28 @1146,967  „GEGR. 1350"  .gegr
+     194× 24 @1456,770  „Adler-Ausschank am Mar"  .wort
+      44× 24 @1849,739  „LIN"  .wort
+      51× 24 @1449,724  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      50× 24 @2397,1092  „BRU"  .wort
+      46× 24 @2234,1031  „FAE"  .wort
+      49× 24 @2287,509  „OBE"  .wort
+     156× 17 @2068,446  „BRAUSTATT ADLER"  .wort
+      72× 17 @44,131  „BAUHOF"  .wort
+     136× 25 @44,148  „1 offen · ab 132 fl · 1 bezahlbar"  .zahl
+     210× 17 @197,138  „OHNE DICH GESCHEHEN"  .wort
+     210× 13 @197,154  „20 Züge"  .zahl
+     105× 17 @424,125  „DIE HÄUSER"  .wort
+     136× 38 @424,142  „wollen 67 · im Keller liegen 26 Fass"  .zahl
+     121× 17 @577,131  „SUDORDNUNG"  .wort
+     136× 25 @577,148  „auf der Tafel im Sudhaus"  .zahl
+     126× 17 @730,131  „DAS GEWÖLBE"  .wort
+     136× 25 @730,148  „26 von 28 Fass · 26 reif"  .zahl
+     168× 17 @44,191  „PFERDEFUHRWERK"  .wort
+     168× 25 @44,208  „0 von 8 Fass · 0 von 5 Halten"  .zahl
+     119× 17 @229,197  „DAS SUDHAUS"  .wort
+     136× 13 @229,214  „zugeklappt"  .zahl
+     184× 17 @382,191  „DER RUF DES HAUSES"  .wort
+     184× 25 @382,208  „Wirtshausschild und gemarkter Krug"  .zahl
+      84× 17 @583,197  „Das Erbe"  .wort
+     136× 13 @583,214  „zugeklappt"  .zahl
+     146× 20 @736,196  „Ortsmarken"  .wort
+     146× 13 @736,215  „7 auf dem Pflock"  .zahl
+     125× 17 @44,244  „Stadt zeigen"  .wort
+     127× 24 @59,286  „BAUHOF"  .wort
+     208× 24 @214,286  „WIEDERKAUF"  .wort
+     636× 20 @649,291  „11 Bauten im Hof · gebaut wird einmal, e"  .zahl
+     282× 19 @59,342  „Pferdestall"  .wort
+      95× 19 @347,342  „−132 fl"  .preis
+     407× 21 @47,375  „die Fuhre fährt schneller"  .nutzen
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+    fuhre     571 px in  482 px  ellipsis  .fu-notsud-zeile  „0 fl · 0 Hopfen · 0 Sude der Reihe → 5 Fass · hält 3 Wo. · n"
+    name      221 px in  208 px  ellipsis  .nm-medium  „Wirtshausschild und gemarkter Krug"
+
+=== EPOCHE 3 nach 34 Baurunden +1× Esc  lage 0 Seitenfehler 0 verdeckt  Zuege 114
+  HAUSHALT gesamt 750752 px (17.8 %)  oben 267264 px (37.9 %)
+  GEGNER   9504/28000 px   oben 0/8000 px   1 Kaesten
+  pruefe(): ["stadt: 302080/40000 px  oben 103008/26000 px","erbe: 136192/28000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 103216/120000 px  oben 83456/80000 px"]
+  ueberRand(): []
+  tafeln(): []
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+       8501 px²   213× 40 @2040,584  .gg-sitz  „Brauerei Adler"
+    (1 Kaesten, Summe der Huellen 8501 px²)
+  BEDIENUNG des GEGNERS: 17 Zuege, 12 von der Maus zu treffen, 0 abgeschaltet, 6 mit Preisschild, 3 unter 24 px
+      gegner:abloesen:brueckenwirt    121× 33         -6764  „BRU · VERablösen 6.764 M"
+      gegner:abloesen:lindenhof       128× 33        -20395  „LIN · HYPablösen 20.395 M"
+      gegner:abloesen:markt           121× 33         -2171  „MKT · VERablösen 2.171 M"
+      gegner:abloesen:muehlwirt       121× 33         -4778  „MUE · DEPablösen 4.778 M"
+      gegner:abloesen:torschenke      121× 33         -4616  „TOR · DEPablösen 4.616 M"
+    ! gegner:beschwerde               320× 33                „Dem Wirt die Restschuld nachrechnen"
+      gegner:beschwerde-bild          250× 67             0  „Dem Wirt die Restschuld nachrechnenkostet ke"
+    ! gegner:blatt                    183× 33                „Das Haus gegenüber"
+      gegner:hinhalten:brueckenwirt    83× 31                „Freibier3,0 hl statt Geld"
+      gegner:hinhalten:lindenhof       83× 31                „Freibier3,0 hl statt Geld"
+      gegner:hinhalten:markt           83× 31                „Freibier3,0 hl statt Geld"
+      gegner:hinhalten:muehlwirt       83× 31                „Freibier3,0 hl statt Geld"
+      gegner:hinhalten:torschenke      83× 31                „Freibier3,0 hl statt Geld"
+      gegner:oeffnen:adler            213× 40                „Brauerei Adler"
+    ! gegner:zeige:17                  73× 22                „zeigen"
+    ! gegner:zeige:18                  73× 22                „zeigen"
+    ! gegner:zeige:19                  73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×199 @1404,207 = 186433 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Der Adler stockt das Darlehen beim Ausschank am Markt um 689 M auf. Di"
+      ganz     731 px in  731 px  „Brauerei Adler baut auf dem eigenen Hof: Malzturm für 8.100 M."
+      ganz     731 px in  731 px  „Der Adler stockt das Darlehen beim Brückenwirt um 1.363 M auf. Die Abl"
+  A3 — GEGNER auf gemalter Beschriftung: 0
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+      89× 17 @2616,386  „BAHNHOF"  .wort
+     205× 39 @1267,966  „BRAUHAUS"  .zeile eins
+     205× 39 @1271,1013  „ZUM ANKER"  .zeile zwei
+     204× 29 @1273,1036  „GEGR. 1350"  .gegr
+      44× 24 @1849,739  „LIN"  .wort
+      51× 24 @1433,1040  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      50× 24 @2397,1092  „BRU"  .wort
+      46× 24 @2234,1031  „FAE"  .wort
+      48× 24 @2590,432  „BHF"  .wort
+     145× 17 @2176,489  „BRAUEREI ADLER"  .wort
+      72× 17 @44,131  „BAUHOF"  .wort
+     136× 25 @44,148  „fertig gebaut · 12 zu hypothek"  .zahl
+     210× 17 @197,138  „OHNE DICH GESCHEHEN"  .wort
+     210× 13 @197,154  „19 Züge"  .zahl
+     105× 17 @424,125  „DIE HÄUSER"  .wort
+     136× 38 @424,142  „wollen 279 · im Keller liegen 24 hl"  .zahl
+      80× 17 @577,131  „SUDPLAN"  .wort
+     136× 25 @577,148  „am schwarzen Brett der Mälzerei"  .zahl
+     138× 17 @730,131  „DER EISKELLER"  .wort
+     138× 25 @730,148  „24 von 165 hl · 24 reif"  .zahl
+     139× 17 @44,191  „HALBER WAGEN"  .wort
+     139× 25 @44,208  „0,0 von 60 hl · 0 von 10 Halten"  .zahl
+     119× 17 @200,197  „DAS SUDHAUS"  .wort
+     136× 13 @200,214  „zugeklappt"  .zahl
+     184× 17 @353,191  „DER RUF DES HAUSES"  .wort
+     184× 25 @353,208  „Etikett, Plakat, Litfaßsäule"  .zahl
+      84× 17 @554,197  „Das Erbe"  .wort
+     136× 13 @554,214  „zugeklappt"  .zahl
+     146× 20 @707,196  „Ortsmarken"  .wort
+     146× 13 @707,215  „6 auf dem Pflock"  .zahl
+     125× 17 @44,244  „Stadt zeigen"  .wort
+     127× 24 @59,286  „BAUHOF"  .wort
+     171× 24 @214,286  „HYPOTHEK"  .wort
+     780× 20 @505,291  „Die Kasse trägt keinen dieser Bauten. Wa"  .zahl
+    1238× 37 @47,329  „Der Hof ist für diese Zeit fertig gebaut"  .leer
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+
+=== EPOCHE 4 nach 34 Baurunden +1× Esc  lage 0 Seitenfehler 0 verdeckt  Zuege 110
+  HAUSHALT gesamt 767168 px (18.1 %)  oben 278016 px (39.5 %)
+  GEGNER   19072/28000 px   oben 0/8000 px   2 Kaesten
+  pruefe(): ["stadt: 306784/40000 px  oben 113760/26000 px","erbe: 136192/28000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 88816/34000 px","name: 30400/20000 px","kern: 103216/120000 px  oben 83456/80000 px"]
+  ueberRand(): []
+  tafeln(): []
+  geklemmt(): {}
+  Kaesten des GEGNERS (Huelle, groesste zuerst):
+       9721 px²   243× 40 @2410,768  .gg-sitz  „Nordstern-Gruppe"
+       8161 px²   204× 40 @2045,584  .gg-sitz  „Adler-Bräu AG"
+    (2 Kaesten, Summe der Huellen 17882 px²)
+  BEDIENUNG des GEGNERS: 15 Zuege, 10 von der Maus zu treffen, 0 abgeschaltet, 5 mit Preisschild, 3 unter 24 px
+      gegner:abloesen:bahnhofswirt    138× 33        -70400  „BHF · LISablösen 70.400 DM"
+      gegner:abloesen:torschenke      138× 33        -32400  „TOR · JVBablösen 32.400 DM"
+      gegner:abwehren:bahnhofswirt    243× 33        -60264  „verhandelt · noch 6 Wo.zuvorkommen 60.264 DM"
+    ! gegner:beschwerde               272× 33                „Anzeige beim Bundeskartellamt"
+      gegner:beschwerde-bild          243× 48             0  „Anzeige beim Bundeskartellamtkostet kein Gel"
+    ! gegner:blatt                    183× 33                „Das Haus gegenüber"
+      gegner:hinhalten:bahnhofswirt   143× 31                „Zuschuss in Bier4,5 hl statt Geld"
+      gegner:hinhalten:ochse          143× 31                „Zuschuss in Bier4,5 hl statt Geld"
+      gegner:hinhalten:torschenke     143× 31                „Zuschuss in Bier4,5 hl statt Geld"
+      gegner:oeffnen:adler            204× 40                „Adler-Bräu AG"
+      gegner:oeffnen:konzern          243× 40                „Nordstern-Gruppe"
+    ! gegner:zeige:47                  73× 22                „zeigen"
+    ! gegner:zeige:48                  73× 22                „zeigen"
+    ! gegner:zeige:49                  73× 22                „zeigen"
+      gegner:zuvorkommen:ochse        172× 33        -15309  „wirbt · noch 1 Wo.zuvorkommen 15.309 DM"
+  BAND „Ohne dich geschehen": 936×199 @1404,207 = 186433 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Sein Außendienst sitzt beim Einkauf des Bahnhofsgaststätte und verhand"
+      ganz     731 px in  731 px  „Der Adler erhöht den Werbekostenzuschuss beim Bahnhofsgaststätte um 12"
+      ganz     731 px in  731 px  „Der Einkauf des Bahnhofsgaststätte listet das Haus aus und nimmt den A"
+  A3 — GEGNER auf gemalter Beschriftung: 3
+    „ST. MICHAEL"  511 px² unter div.gg-paar amort  227×94 @1345,465
+    „ST. MICHAEL"  144 px² unter div.gg-kennzahl  227×16 @1345,544
+    „ST. MICHAEL"  144 px² unter i.  133×16 @1439,544
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
+  ORTSSCHILDER der STADT:
+     146× 23 @1550,527  „ST. MICHAEL"  .wort
+     269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
+      89× 17 @2616,386  „BAHNHOF"  .wort
+     171× 23 @1155,1000  „BRAUHAUS"  .zeile eins
+     171× 23 @1155,1020  „ZUM ANKER"  .zeile zwei
+      44× 24 @1849,739  „LIN"  .wort
+      51× 24 @1433,724  „OCH"  .wort
+      52× 24 @2313,677  „MUE"  .wort
+      50× 24 @2397,1092  „BRU"  .wort
+      46× 24 @2234,1025  „FAE"  .wort
+      48× 24 @2590,432  „BHF"  .wort
+     135× 16 @2181,489  „ADLER-BRÄU AG"  .wort
+     172× 17 @2495,478  „NORDSTERN-GRUPPE"  .wort
+      72× 17 @44,131  „BAUHOF"  .wort
+     136× 25 @44,148  „fertig gebaut · 10 zu abbruch"  .zahl
+     210× 17 @197,138  „OHNE DICH GESCHEHEN"  .wort
+     210× 13 @197,154  „49 Züge"  .zahl
+     105× 17 @424,125  „DIE HÄUSER"  .wort
+     136× 38 @424,142  „wollen 773 · im Keller liegen 45 hl"  .zahl
+      80× 17 @577,131  „SUDPLAN"  .wort
+     136× 25 @577,148  „im Schaltraum, auf Formica"  .zahl
+      92× 17 @730,131  „DIE TANKS"  .wort
+     136× 25 @730,148  „45 von 600 hl · 45 reif"  .zahl
+      81× 17 @44,197  „LASTZUG"  .wort
+     136× 25 @44,214  „0,0 von 450 hl · 0 von 3 Halten"  .zahl
+     119× 17 @197,203  „DAS SUDHAUS"  .wort
+     136× 13 @197,220  „zugeklappt"  .zahl
+     184× 17 @350,191  „DER RUF DES HAUSES"  .wort
+     184× 38 @350,208  „Kronkorken, Bandenwerbung, Fernsehspot"  .zahl
+      84× 17 @551,203  „Das Erbe"  .wort
+     136× 13 @551,220  „zugeklappt"  .zahl
+     146× 20 @704,202  „Ortsmarken"  .wort
+     146× 13 @704,222  „6 auf dem Pflock"  .zahl
+     125× 17 @44,257  „Stadt zeigen"  .wort
+     127× 24 @59,299  „BAUHOF"  .wort
+     148× 24 @214,299  „ABBRUCH"  .wort
+     771× 20 @514,304  „Die Kasse trägt keinen dieser Bauten. Wa"  .zahl
+    1238× 37 @47,342  „Der Hof ist für diese Zeit fertig gebaut"  .leer
+  ABGESCHNITTENER TEXT (alle Stuecke, groesster Verlust zuerst):
+    erbe      253 px in  201 px  ellipsis  .wort  „Versorgungszusage · jährlich"
+    name      258 px in  208 px  ellipsis  .nm-medium  „Kronkorken, Bandenwerbung, Fernsehspot"
+    erbe      199 px in  176 px  ellipsis  .wort  „Nachschrift · 2 Häuser"
