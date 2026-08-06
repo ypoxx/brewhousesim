@@ -353,7 +353,7 @@ gegen 1.351.246 bzw. 1.504.427 px² vorher.
 **Zwei Dinge, die gegen die schoene Zahl sprechen, und sie stehen hier:**
 
 **Erstens: photographisch deckt DIE FUHRE 342.331 px, die Huelle nur
-195.456.** Der Unterschied sind Schlagschatten und der Aufschlag aus §1.2 —
+189.696.** Der Unterschied sind Schlagschatten und der Aufschlag aus §1.2 —
 die Reiterzeile der STADT aendert sich, wenn man der FUHRE die Schrift
 wegnimmt. Der Anteil DER FUHRE ist damit weiter zu hoch angesetzt, und zwar
 in beiden Spalten gleichermassen; das Verhaeltnis 1.476.519 → 342.331

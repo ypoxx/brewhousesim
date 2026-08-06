@@ -3683,8 +3683,20 @@
      keine Rechnung im Kopf: was auch immer eine Epoche in die Zeilen
      schreibt, groesser wird der Kasten nicht. Damit die Entscheidung davon
      nichts abbekommt, klebt der Fuss (`position: sticky`), auf dem sie
-     steht — was ueberlaeuft, ist der Kopf, nie ein Knopf. Gemessen:
-     189.612 px^2 (1350, 1600) und 182.803 px^2 (1884, 1970).
+     steht — was ueberlaeuft, ist der Kopf, nie ein Knopf.
+
+     GEMESSEN, nach 30 x WEITER ohne Escape, 2752x1536
+     (`werkbank/schuss/fuhre-w11/messungen/nachher-sonde-w30.txt`, auf dem
+     ausgelieferten Stand noch einmal in `abn-sonde-w30.txt`):
+
+       716x254 = 181.909 px^2   (1350, 1600)
+       716x239 = 171.288 px^2   (1884, 1970)
+
+     Der Deckel von 265 px wird also gar nicht ausgeschoepft; die Tafel
+     endet bei 254 bzw. 239 px, weil der Inhalt vorher aufhoert. Hier stand
+     bis zum Neuanlauf 189.612/182.803 px^2 — das waren die Masse eines
+     Zwischenstands der Bauprobe (`messungen/probe2.txt`, 716x265 und
+     716x255) und nicht die des gemessenen Standes.
      ====================================================================== */
 
   /* DER BERICHT. Jede Zeile stand vorher auf dem Blatt; hier steht sie
