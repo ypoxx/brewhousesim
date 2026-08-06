@@ -604,3 +604,60 @@ heutigen Stand nach**, obwohl `nach-e2.json` schon dasteht: stimmt es
 byteweise mit `nach-e2` überein, ist die Neutralität der Ausweiche belegt statt
 vermutet, und `nach-e1/e2` dürfen im Satz stehen. Weicht es ab, gilt allein der
 neu gemessene Satz `nach2`.
+
+### 7.5 Auflage 6, auf den Bildpunkt genau
+
+Nicht „0,0 %" aus einer gerundeten Spalte, sondern die rohe Zahl aus
+`gegnerw11-*-laden.json`, Feld `jeStueck.gegner.unten.punkte`:
+
+| unterstes ⅙, gegner | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| vorher | 27.988 px | 23.502 px | 25.379 px | 23.502 px |
+| **nachher** | **0** | **0** | **0** | **0** |
+| nachher, 30 Wochen | **0** | **0** | **0** | **0** |
+
+Und dazu das oberste Sechstel, ebenfalls roh: vorher 0 · 0 · 0 · **154 px**
+(1970), nachher **0 in allen vier Epochen und allen gemessenen Zuständen**,
+Grenze 8.000. Die ganze Fläche dieses Stücks liegt jetzt im Mittelband —
+`ges.punkte` und `mitte.punkte` sind in jeder Zeile dieselbe Zahl.
+
+### 7.6 Das Tor, die Spielprobe und die vierte Latte
+
+`aufsicht/tor.mjs` auf dem Nachstand, alle vier Epochen:
+
+```
+E1: OK  jahr=1350 zuege=99   lage=0 fehler=0
+E2: OK  jahr=1600 zuege=107  lage=0 fehler=0
+E3: OK  jahr=1884 zuege=110  lage=0 fehler=0
+E4: OK  jahr=1970 zuege=103  lage=0 fehler=0
+TOR OFFEN
+```
+
+`aufsicht/spielprobe.mjs`, 60 Wochen je Epoche: **BESTANDEN**, 60 von 60 Zügen
+in jeder Epoche, Kasse 48 · 280 · 4.200 · 50.000, `lage 0`, 0 Fehler. Beide
+Zahlenreihen sind **Ziffer für Ziffer dieselben** wie im Satz `nach`, also vor
+der Reparatur der Ausweiche — der erste Beleg dafür, dass die Änderungen 7–11
+die Partie nicht bewegen.
+
+**Die vierte Latte bei 1366×768** (`aufsicht/lesbarkeit.mjs`), gegen die Zahl,
+die `WELLE-11.md` als Stand nennt:
+
+| | Überläufe | Textknoten < 12 px | Knöpfe < 24 px |
+|---|---|---|---|
+| Vorzustand (Auftrag: „14 · 497 · 0 von 307") | 14 | 497 | 0 von 307 |
+| **Nachstand** | **13** | **365** | **0 von 308** |
+
+132 Textknoten unter 12 px weniger — das ist die Umstellung von Papierkästchen
+auf gemalte Schrift, die keine eigenen `<span>` mehr braucht. Ein Knopf mehr:
+der wiederbelebte `stadt:marke:fuhre-fluss` aus §4(1).
+
+**Ein Überlauf dieses Stücks bleibt, und ich melde ihn, bevor ihn jemand
+findet.** Vorher stand in der Aufschlüsselung je Epoche `was:1` — das war
+`.gg-bandzeile .was`, also genau der gekürzte Satz der Auflage 10. Der ist
+fort. An seiner Stelle steht in 1350/1600/1884 jetzt `gg:1`; in **1970 gar
+keiner mehr**. `lesbarkeit.mjs` nennt nur das erste Wort der Klasse, also weiß
+man daraus nicht, welcher Kasten es ist, um wieviel er kappt und ob eine
+**Zahl** darunter leidet — und genau das unterscheidet Auflage 10. Dafür ist
+`gegner-w11/schmal.mjs` geschrieben: dieselbe Prüfung Zeichen für Zeichen
+(`kappt()` je Richtung), aber mit Name, Maß, Fehlbetrag und einem Merker, ob
+Ziffern im Text stehen. Das Ergebnis steht in §7.7.
