@@ -321,4 +321,68 @@ Häfen, dann B, dann C — wer mitten im Lauf abbricht, hat trotzdem ein
 gepaartes Bild. Rohdaten `stadt-w8/rho/*.json`, gerechnet mit dem vorhandenen
 Gerät `sud-w6-nach/schnitte.py` über alle drei Schnitte.
 
-*(Ergebnis folgt, sobald der Satz durch ist.)*
+### Satz A, alle acht Läufe durch — 6. August, 00:44 UTC
+
+| Epoche | 12 Braujahre | 13 | 14 | Jahre < 1× |
+|---|---|---|---|---|
+| **1350 vor** | −0,245 | −0,170 | −0,336 | 1/14 |
+| **1350 nach** | **−0,014** | **+0,137** | **−0,007** | 1/14 |
+| **1600 vor** | +0,189 | −0,066 | −0,156 | 1/14 |
+| **1600 nach** | **+0,476** | **+0,297** | **+0,160** | 1/14 |
+| **1884 vor** | +0,168 | +0,346 | +0,393 | 1/14 |
+| **1884 nach** | **−0,210** | **−0,016** | **+0,130** | 1/14 |
+| **1970 vor** | **+0,699** | +0,637 | +0,653 | 1/14 |
+| **1970 nach** | **+0,692** | **+0,330** | **+0,116** | **0/14** |
+
+**|ρ| < 0,700 in allen vier Epochen über alle drei Schnitte, vorher wie
+nachher.** Null Seitenfehler, kein Abbruch, alle Läufe volle 400 Wochen und
+14 Braujahre. Roh: `stadt-w8/rho/ergebnis-A.txt`.
+
+> ### DIE GERÄTEKONTROLLE, und sie ist so gut, wie sie sein kann
+>
+> Der Vorher-Hafen liefert für **1600, 1884 und 1970 Ziffer für Ziffer die in
+> `gauntlet/MESSLATTE.md` eingetragenen Zahlen** — +0,189 / −0,066 / −0,156,
+> +0,168 / +0,346 / +0,393 und **+0,699 / +0,637 / +0,653**. Das ist keine
+> Näherung, das sind dieselben drei Nachkommastellen. Damit ist bewiesen: der
+> Vorher-Hafen ist der Stand von vorher, und das Gerät misst, was es messen
+> soll.
+>
+> **1350 weicht ab** — −0,245 / −0,170 / −0,336 gegen die eingetragenen
+> −0,259 / −0,236 / −0,380. Der Unterschied ist nicht meiner: die
+> eingetragenen Zahlen stammen vom eingefrorenen Stand `b6b06bb`, meine vom
+> Baum `76f3ca4`. Dazwischen liegt Arbeit anderer Stücke. Beide Reihen liegen
+> weit unter der Latte, und der Abstand nach oben ist in derselben Größenordnung.
+
+> ### WAS ICH BEWEGT HABE — und ich sage es, bevor der Kritiker es sagt
+>
+> **Layout bewegt ρ, und diese Welle verschiebt einen Kasten von 1723 × 194 px
+> über die halbe Bühne.** Der Ausschlag ist gemessen, nicht geschätzt, und er
+> ist in jeder Epoche anders:
+>
+> | Epoche | Δρ bei 12 Braujahren | Richtung |
+> |---|---|---|
+> | 1350 | **+0,231** | von −0,245 auf −0,014 — näher an null |
+> | 1600 | **+0,287** | von +0,189 auf +0,476 — **weiter von null weg** |
+> | 1884 | **−0,378** | von +0,168 auf −0,210 — Vorzeichen gedreht |
+> | 1970 | **−0,007** | von +0,699 auf +0,692 |
+>
+> **Drei Dinge gehören unmittelbar daneben, sonst ist die Meldung geschönt:**
+>
+> 1. **1600 ist um 0,287 schlechter geworden.** Es steht bei +0,476 und damit
+>    weiter unter der Latte, aber der Abstand ist von 0,511 auf 0,224
+>    geschrumpft. Wer als nächster an dieser Epoche baut, muss das wissen.
+> 2. **1970 steht weiter auf einem Tausendstel-Rand** — +0,692 statt +0,699.
+>    Der Riss ist nicht behoben, er ist um sieben Tausendstel weiter weg.
+>    Wer sich darauf verlässt, verlässt sich auf 0,008. Dafür sind die
+>    Schnitte 13 und 14 deutlich besser (+0,637 → +0,330, +0,653 → +0,116),
+>    und **1970 hat zum ersten Mal null Braujahre unter 1×** statt einem.
+> 3. **Der Ausschlag geht in beide Richtungen und ist in 1884 größer als der
+>    Abstand zur Latte in 1600.** Das ist kein Zufallsrauschen: die Spannweite
+>    innerhalb eines Laufs ist 0,000, und beide Läufe jeder Zeile sind
+>    fehlerfrei über volle 400 Wochen. Es ist eine **andere Partie**, genau wie
+>    beim Knopfboden am 5. August — die Werkbank gibt 47 Punkte des unteren
+>    Sechstels frei, und darunter liegen fremde Züge, die vorher nicht
+>    erreichbar waren.
+
+*(Sätze B und C laufen weiter; `stadt-w8/rho/lauf.sh` ist wiederaufnehmbar und
+überspringt, was schon dasteht.)*
