@@ -91,9 +91,36 @@ byteweise identisch:
 | 1884 | +0,168 / +0,346 / +0,393 | −0,210 / −0,016 / +0,130 | Vorzeichen gedreht |
 | **1970** | +0,699 / +0,637 / +0,653 | **+0,692** / +0,330 / +0,116 | 0 statt 1 Jahr unter 1× |
 
-**Alle vier bleiben unter 0,700, aber 1600 hat die halbe Reserve verloren.** Die
-Aufsicht misst 1600 und 1970 selbst nach, drei Läufe je Epoche
-(`werkbank/schuss/aufsicht/welle8-schluss/`).
+**Alle vier bleiben unter 0,700, aber 1600 hat die halbe Reserve verloren.**
+
+> ### DIE GEGENMESSUNG DER AUFSICHT IST DURCH — 6. August, 06:00 UTC
+>
+> Sechs Läufe am eingefrorenen Stand `8b81250` (Hafen 8906, Marke vor jedem Lauf
+> geprüft), drei je Epoche, `werkbank/schuss/aufsicht/welle8-schluss/`:
+>
+> | | 12 J | 13 J | 14 J | Jahre unter 1× | Seitenfehler |
+> |---|---|---|---|---|---|
+> | **1600**, 3 Läufe | +0,476 | +0,297 | +0,160 | 1 von 14 | 0 |
+> | **1970**, 3 Läufe | +0,692 | +0,330 | +0,116 | 0 von 14 | 0 |
+>
+> **Ziffernweise das, was der Builder selbst gemeldet hat.** Die drei Läufe je
+> Epoche haben je **eine einzige md5** — und zwischen ihnen hat jedes Mal der
+> Browser des blinden Bildkritikers gemessen. Das ist der erste Beleg dieses
+> Laufs dafür, dass ein **fremder Browser die Kennzahl nicht verschiebt**,
+> solange das Messfenster die Läufe trennt; die Vorsichtsregel bleibt trotzdem,
+> weil ein Beleg an zwei Epochen keine Zusage für alle ist.
+>
+> Nebenbefund für die offene Auflage 10 von DER PREIS: **`festGesetzt` ist nicht
+> mehr 0** — 1600 zählt eine unwiderrufliche Festlegung, 1970 drei.
+
+**Ein zweiter Befund, ohne Browser gemessen:** Welle 8 hat **614 KB** Bilder
+hinzugefügt (12 neue `bild/hof/*.webp`), aber sauber nach Epochen getrennt —
+höchstens **+214 KB** in einer einzelnen (1350; 1600 +204, 1884 +204, 1970 +128).
+Der Builder hat das Veto selbst mitgedacht, nachlesbar in `stadt-daten.js`: die
+Bank liegt nur in 1350, *weil* 1600 die schwerste Epoche ist. **Das Veto hält
+rechnerisch (1600 ~7,61 von 8 MB), aber die Luft ist von 0,59 auf 0,39 MB
+geschrumpft.** Mit dem Browsergerät gegenzuprüfen, sobald das Messfenster frei
+ist.
 
 **Drei Dinge, die der Builder gemeldet hat, ohne dass sie seine waren:** das
 Hausschild ist frei **durch DER SUD** (dessen Kesselzettel sucht sich selbst eine
