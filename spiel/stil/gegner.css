@@ -178,7 +178,7 @@
   text-shadow: var(--gg-lichthof);
 }
 .gg-feld { white-space: nowrap; }
-.gg-feld + .gg-feld::before { content: '· '; opacity: 0.55; }
+.gg-feld + .gg-feld::before { content: '· '; }
 
 .gg-marken {
   display: flex; flex-wrap: wrap; justify-content: center;
@@ -193,15 +193,20 @@
   color: var(--gg-schiefer);
   text-shadow: var(--gg-lichthof);
 }
-.gg-siegel::before { content: '· '; opacity: 0.5; }
+.gg-siegel::before { content: '· '; }
 .gg-siegel.not { color: var(--gg-warn); font-weight: 700; }
 
 /* --------------------------------------------------------------------------
    SEIN HOF — was er gebaut hat, steht da. Jeder Bau ein Zug.
    -------------------------------------------------------------------------- */
+/* Sein Hofbild — ein eigener Block ueber dem gemalten Ortsschild, siehe
+   die Begruendung in stuecke/gegner.js (zeichneHof). */
+.gg-hofbau { position: absolute; width: calc(var(--s) * 160); pointer-events: none;
+             display: flex; justify-content: center; }
+
 .gg-hof {
   position: absolute;
-  width: calc(var(--s) * 200);
+  width: calc(var(--s) * 250);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,7 +220,7 @@
    ein Aufkleber auf einer warmen Aquarellplatte. Kuehler als das eigene Haus,
    aber aus demselben Papier. */
 .gg-hofbild {
-  width: calc(var(--s) * 150);
+  width: calc(var(--s) * 132);
   height: auto;
   filter: drop-shadow(0 calc(var(--s) * 4) calc(var(--s) * 8) rgba(0, 0, 0, 0.4))
           sepia(0.42) saturate(1.45) hue-rotate(-12deg) brightness(1.04) contrast(0.96);
@@ -242,6 +247,7 @@
 .gg-bau.vor .gg-glyph { stroke: var(--gg-warn); stroke-width: 3.4; }
 .gg-vorschild {
   font-family: var(--mono);
+  white-space: nowrap;
   font-size: max(12px, calc(var(--s) * 13));
   letter-spacing: calc(var(--s) * 0.5);
   line-height: 1.15;

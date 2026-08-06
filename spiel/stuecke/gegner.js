@@ -1864,13 +1864,42 @@
      nur noch, was NEU dazugekommen ist. */
   function zeichneHof(fach, h) {
     var s = sitzVon(h);
-    var hof = B.el('div', 'gg-hof');
+    /* AUFLAGE 3 — DAS HOFBILD STEHT JETZT UEBER DEM SCHILD, NICHT DARAUF.
+
+       Gemessen am Vorzustand, gebauter Zustand: `img.gg-hofbild` lag mit
+       3.024 px² (1350) bzw. 2.652 px² (1600) auf dem gemalten Ortsschild
+       DER STADT — „BRAUHAUS ZUM ADLER" / „BRAUSTATT ADLER", 191x18 @2051,461.
+       Es ist zwar selbst ein gemaltes Ding und kein Kasten; die Auflage
+       fragt aber nicht nach der Sorte, sondern danach, ob eine gemalte
+       Beschriftung angeschnitten wird. Sie wurde.
+
+       Ein erster Anlauf hat das Bild um 9 Prozentpunkte nach links gerueckt.
+       Die Zahl stimmte danach (0 Treffer), das Bild nicht: seine Brauerei
+       stand mitten in der Stadt statt jenseits des Flusses. So sieht es aus,
+       wenn man einen Messwert bedient und nicht ein Bild — deshalb steht es
+       hier und nicht nur im Bericht.
+
+       Jetzt steht der Stapel am Ort in der Reihenfolge, die er im Bild
+       ohnehin haben will, von oben nach unten:
+
+           sein Hofbild            (eigener Block, Unterkante bei 27,5 %)
+           BRAUEREI ADLER          (gemalt von der STADT, bleibt unberuehrt)
+           seine Bauten + Vorsprung
+           sein Namensschild + seine Zahlen
+
+       Der ORT ist derselbe geblieben — das Bild rueckt nur senkrecht, und
+       das darf es: „Was gebaut wird, darf umziehen." (spiel/LIESMICH.md) */
     if (h.k === 'adler' && ep().hofbild) {
+      var bh = B.el('div', 'gg-hofbau');
       var bild = B.el('img', 'gg-hofbild');
       bild.src = BILD + ep().hofbild + '.png';
       bild.alt = '';
-      hof.appendChild(bild);
+      bh.appendChild(bild);
+      B.orte.setze(bh, s.ort, { anker: 'unten', dx: randDx(s.ort, s.dx || 0, 160), dy: -4.5 });
+      bh.setAttribute('data-frei', 'gegner');
+      fach.appendChild(bh);
     }
+    var hof = B.el('div', 'gg-hof');
     var reihe = B.el('div', 'gg-bauten');
     var namen = {};
     ep().bauten.forEach(function (b) { namen[b.k] = b; });
@@ -1898,20 +1927,10 @@
         hof.appendChild(v);
       }
     }
-    /* Der Hof steht UEBER dem Schild: unten verankert, damit er nach oben
-       waechst und dem Schild nie ins Gesicht rutscht.
-
-       WELLE 11, Auflage 3.  Nach oben stand aber auch etwas: das gemalte
-       Ortsschild der STADT am selben Ort — „BRAUHAUS ZUM ADLER" (1350),
-       „BRAUSTATT ADLER" (1600), 191x18 @2051,461. Gemessen am Vorzustand
-       lag das Hofbild mit 3.024 px² (1350) bzw. 2.652 px² (1600) darauf.
-       Die Regel dafuer steht in spiel/LIESMICH.md und ist eindeutig:
-       „Was gegraben wird, bleibt … Steht etwas davor, rueckt das, was
-       davorsteht." Das Schild bleibt, das Hofbild rueckt zur Seite — nur
-       dort, wo es ueberhaupt eines gibt (1350 und 1600; ab 1884 ist seine
-       Brauerei auf der Platte selbst gemalt und dieser Zweig faellt weg). */
-    var hofDx = (s.dx || 0) - (h.k === 'adler' && ep().hofbild ? 9 : 0);
-    B.orte.setze(hof, s.ort, { anker: 'unten', dx: randDx(s.ort, hofDx, 200),
+    /* Bauten und Vorsprung stehen zwischen dem gemalten Ortsschild und
+       seinem Namensschild: unten verankert, damit sie nach oben wachsen und
+       dem Namensschild nie ins Gesicht rutschen. */
+    B.orte.setze(hof, s.ort, { anker: 'unten', dx: randDx(s.ort, s.dx || 0, 250),
       dy: (s.hofDy === undefined ? 4 : s.hofDy) });
     hof.setAttribute('data-frei', 'gegner');
     fach.appendChild(hof);

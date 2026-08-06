@@ -650,17 +650,26 @@
      Flaeche    186.745 px^2 = 4,42 % — mit 7 % Abstand unter der Schwelle
 
    Was auch immer eine Epoche in die Zeilen schreibt: groesser wird der
-   Kasten nicht. Er rollt dann, und was rollt, ist der Sommersatz in der
-   Mitte — nie ein Knopf. Kopf und Fuss kleben (`position: sticky`).
+   Kasten nicht. Er rollt dann — und was rollt, ist der KOPF, nie ein
+   Knopf: der Fuss, auf dem die Entscheidung steht, klebt
+   (`position: sticky`). Warum nicht auch der Kopf, steht bei
+   `.fu-sommer-kopf` weiter unten; es hat einen Messwert gekostet.
 
    WARUM ZWEI ZAHLEN JE MASS (`max(20%, 560px)`): unterhalb der
    Entwurfsleinwand haben Schrift und Knopf einen absoluten Boden (12 px
    und 24 px, vierte Latte). Ein Kasten, der rein prozentual mitschrumpft,
-   traegt dort weniger Zeilen als hier — bei 1366x768 waeren aus 550x323
-   noch 273x161, und in 161 px stehen keine vier Sudknoepfe mit 24 px
-   Boden. Die zweite Zahl ist derselbe Boden, eine Ebene hoeher. Gemessen
-   wird die Schwelle von 200.000 px^2 auf 2752x1536, und dort gilt die
-   Prozentzahl.
+   traegt dort weniger Zeilen als hier — bei 1366x768 waeren aus 716x265
+   noch 355x131, und in 131 px stehen keine vier Sudknoepfe mit 24 px
+   Boden nebst Kopf, Frage, Griffen und Hinweis. Die zweite Zahl ist
+   derselbe Boden, eine Ebene hoeher; gemessen bei 1366x768 steht die
+   Tafel damit auf 700x162 und alle vier Sudknoepfe treffen sich selbst
+   (`messungen/klein2.txt`). Die Schwelle von 200.000 px^2 wird auf
+   2752x1536 gemessen, und dort gilt die Prozentzahl.
+
+   WAS DAS EHRLICHERWEISE HEISST: unterhalb der Entwurfsleinwand nimmt der
+   Anschlag RELATIV mehr Flaeche — bei 1366x768 sind 700x162 zehn Prozent
+   des Bildes statt 4,5. Das ist der Preis der absoluten Boeden, und er
+   ist derselbe, den jede Schrift im Spiel mit `max(12px, …)` zahlt.
 
    WAS AN DER SPERRE NICHT WIEDER EINGEBAUT WURDE: hier lag bis
    ZUSTAENDIGKEIT 23 ein Deckel ueber der ganzen Buehne (.fu-sperre). Er
