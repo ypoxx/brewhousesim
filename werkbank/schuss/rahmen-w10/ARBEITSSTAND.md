@@ -926,3 +926,30 @@ Läufe stehen in `rho-ohnewache/`; 1600 und 1970 fehlen dort und werden
 einzeln gemessen. Beim Abbrechen habe ich mit `pkill -f` fast die eigene
 Shell erschlagen — genau der Fehler, vor dem `aufsicht/messstand.sh` in
 seinem Kopf warnt. Danach über die PID.)*
+
+## Was zum Zeitpunkt des Berichts noch läuft
+
+`werkbank/schuss/rahmen-w10/saatprobe2.sh` misst 1600, 1884 und 1970
+**einzeln** auf beiden Ständen, abwechselnd (`saat/VOR-e2-A.json`,
+`saat/OHNE-e2-A.json`, …). Ein Lauf in 1600 dauert allein rund elf Minuten;
+die sechs Läufe sind bei Abgabe dieses Berichts noch nicht durch. Die
+Ergebnisse landen im Repo und sind mit
+`python3 werkbank/schuss/rahmen-w10/saat-je-epoche.py` auszuwerten — das
+Skript vergleicht je Epoche, ob VOR und OHNE dieselbe Partie spielen, und
+rechnet die drei Schnitte gleich mit.
+
+**Was damit heute belegt ist und was nicht:**
+
+* **Belegt (einzeln gemessen, das strenge Protokoll):** 1350 spielt auf dem
+  ausgelieferten Stand dreimal dieselbe Partie, mit derselben Prüfsumme, und
+  es ist **dieselbe Partie wie auf dem Vorzustand** `37f4b44` (der dort
+  ebenfalls dreimal dieselbe Prüfsumme liefert). ρ −0,245 / −0,170 / −0,336,
+  2 von 14 Jahren unter 1×, Kasse 28–524, 0 Fehler.
+* **Belegt (nebeneinander gemessen, `welle.sh`, drei Sätze):** 1600, 1884 und
+  1970 liefern auf dem Stand mit Wache **dreimal Ziffer für Ziffer** dieselben
+  Werte wie der Vorzustand — −0,189/+0,049/−0,116 · +0,168/+0,346/+0,393 ·
+  −0,112/−0,236/−0,304, Jahre unter 1× 0/1/1 von 14, Kassenspannen gleich.
+* **Nicht belegt:** dass diese drei Epochen auch **einzeln** gemessen dieselbe
+  Partie spielen wie der Vorzustand. Das misst `saatprobe2.sh` gerade nach.
+  Nach allem, was gemessen ist, erwarte ich dasselbe Bild wie in 1350 —
+  aber erwarten ist nicht messen, und deshalb steht es hier so.
