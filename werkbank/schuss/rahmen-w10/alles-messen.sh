@@ -29,6 +29,10 @@ echo "### $(date -u +%H:%M:%S) Deckung NACHHER (Arbeitsbaum eingefroren, Hafen 8
 HAFEN=8931 $MF node $Z/messen.mjs nachher-laden        > $Z/messungen/lauf-nachher-laden.log 2>&1
 HAFEN=8931 WOCHEN=30 ESC=1 $MF node $Z/messen.mjs nachher-w30-esc1 > $Z/messungen/lauf-nachher-w30.log 2>&1
 
+echo "### $(date -u +%H:%M:%S) Zustand des blinden Kritikers (34 Baurunden + Escape)"
+HAFEN=8930 NAME=vorher2 $MF node $Z/gebautprobe.mjs > $Z/messungen/lauf-vorher2-gebaut.log 2>&1
+HAFEN=8931 NAME=nachher $MF node $Z/gebautprobe.mjs > $Z/messungen/lauf-nachher-gebaut.log 2>&1
+
 echo "### $(date -u +%H:%M:%S) Lesbarkeit (vierte Latte, 1366x768)"
 HAFEN=8930 BREITE=1366 HOEHE=768 $MF node werkbank/schuss/aufsicht/lesbarkeit.mjs > $Z/messungen/lesbarkeit-vorher.txt 2>&1
 HAFEN=8931 BREITE=1366 HOEHE=768 $MF node werkbank/schuss/aufsicht/lesbarkeit.mjs > $Z/messungen/lesbarkeit-nachher.txt 2>&1

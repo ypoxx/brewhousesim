@@ -85,3 +85,68 @@ Abhilfe des Rahmens ist ein Netz am Ende jeder Kette.
 | `kern/kopf.js` | Schriftboden der Hauszeile, Deckungsband ohne Papier | R1/R6 |
 | `kern/haushalt.js` (neu) | Flächenhaushalt + Blattaufsicht + Randwache | R2/R3/R6 |
 | `index.html` | **eine** `<script>`-Zeile für `kern/haushalt.js` | R2/R3/R6 |
+
+---
+
+# Was gebaut wurde, und was beim Bauen gemessen wurde
+
+## Drei Fehler des eigenen Baus, gefunden und behoben — sie stehen hier, weil sie die teuersten Stellen sind
+
+**F1 — Die Blattaufsicht hat dem Spieler die Bedienung abgeräumt.**
+Erste Fassung: „ganzseitiges Blatt" = jeder Kasten über 200.000 px². Gemessen
+im **Ladezustand** (`rahmenprobe.mjs`, E1 und E4) hat sie daraufhin **vier
+`.sud-achse`** — die Entscheidungsspalten DES SUD, 677×503 px — und ein
+`.pr-feld` DES PREISES weggeklemmt. `BRAUHAUS.lage` blieb leer, `verdeckt()`
+blieb 0; der Schaden war **nur im Bild** zu sehen. Ein Blatt ist jetzt, was
+die Rahmenklasse `blatt` trägt (`fu-sommerblatt` und `erb-buch` tragen sie
+beide) — Bretter bleiben unberührt und stehen nur in der Liste
+`haushalt.tafeln()`.
+
+**F2 — Der Haushalt hat um das Zweieinhalbfache danebengelegen, weil
+`clip-path` sich nicht vererbt.** Erste Fassung fragte nur das Element
+selbst nach `clip-path: inset(50%)`. Für jedes **Kind** eines zugeklappten
+Bretts meldet `getComputedStyle` aber brav `none`. Ergebnis im Ladezustand
+E1: Haushalt **54,4 %** gesamt und **1.442.176 px** für DEN SUD, während das
+photographische Gerät **19,9 %** und **87.981 px** misst. Nach dem Weg nach
+oben (mit Gedächtnis für gemeinsame Vorfahren): **18,2 %** gesamt — 1,7
+Punkte unter dem photographischen Wert, und das ist die richtige Richtung,
+denn Hüllen kennen keine Schlagschatten.
+
+**F3 — Escape kam beim Rahmen nie an.** Erste Fassung: gewöhnlicher Horcher
+in der Blasenphase. `spur()` und `geklemmt()` blieben leer, das Erbe-Buch
+stand nach Escape unverändert da. Grund: `stuecke/fuhre.js:3517`
+(`tastenSperre`) hängt in der **Fangphase** an `document` und ruft
+`stopImmediatePropagation()`, solange ihre Tafel obenauf liegt — das nimmt
+jedem späteren Horcher die Taste ab, auch dem des Rahmens in `kern/kopf.js`.
+Der Rahmen hängt jetzt selbst in der Fangphase und ist dort der erste, weil
+`kern/haushalt.js` vor jedem Stück geladen wird. Er hält die Taste nicht auf.
+
+## Ein vierter Befund, der kein Fehler von mir ist, sondern der Grund für R2
+
+`stadt.js:1408` — *„Ein formatfüllendes Blatt zum Jahreswechsel ist eine
+Entscheidung"*: `if (jetzt - jahrZeit < 1800 && anteil > 0.25) lage[s] = 'auf'`.
+Der Abnahmefall der Auflage A16 fällt genau damit zusammen: der dreißigste
+WEITER schließt das Braujahr, Escape kommt Sekundenbruchteile später, und
+während der ganzen Aufräumzeit schlägt die STADT das Erbe-Buch (28 % der
+Fläche) wieder auf. Der Reiterklick des Rahmens war **erfolgreich und
+wirkungslos**. Deshalb legt Escape zuerst die Klemme an (wirkt im selben
+Bildaufbau) und sucht **danach** den Griff des Stücks; und deshalb fasst er
+über 2,6 s nach, was JAHRESFRIST (1800 ms) und HANDFRIST (1400 ms) überspannt.
+
+## Gemessen am Arbeitsbaum, 2752×1536, Hüllen (Innensicht des Haushalts)
+
+| | E1 laden | E4 laden | E1 w30+esc1 | E4 w30+esc1 |
+|---|---|---|---|---|
+| `.kopfleiste` | 1223×60 = 73.390 px = **10,4 %** des obersten ⅙ | 1311×60 = 78.672 = **11,2 %** | 73.463 = 10,4 % | 79.637 = 11,3 % |
+| `.hauszeile` | kein Kasten mehr | kein Kasten mehr | — | — |
+| `.deckung` | kein Kasten mehr | kein Kasten mehr | — | — |
+| `[data-zug=weiter]` | 257×75 = 19.134 px | dito | dito | dito |
+| Tafeln > 200.000 px² | **0** | **0** | **0** | **0** |
+| über dem Rand | **0** | **0** | **0** | **0** |
+| Währungsbruch | **0** | **0** | **0** | **0** |
+| `lage` / Seitenfehler / `verdeckt()` | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 | 0 / 0 / 0 |
+
+Vorher (Gerät des Vorgängers, dieselbe Fläche): `.kopfleiste` 1569×67 =
+105.123 px und `.hauszeile` 847×39 = 33.033 px, zusammen 19,6 % des obersten
+Sechstels; `.deckung` 959×38 = 36.442 px im untersten Sechstel; nach 30
+Wochen + einem Escape **drei** Tafeln über 200.000 px².
