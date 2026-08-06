@@ -46,6 +46,51 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DAS WELLENZIEL IST ERREICHT, MIT ABSTAND — 6. August 2026, 11:14 UTC
+
+*Von der Aufsicht am eingefrorenen Stand `37f4b44` nachgemessen (Hafen 8907,
+Marke vor jedem Lauf geprüft), 1350 dreifach mit **einer einzigen md5**, die
+übrigen je einmal. Rohdaten `werkbank/schuss/aufsicht/welle9-schluss/rho/`.*
+
+| | ρ 12 / 13 / 14 J | Jahre < 1× | Kasse min – max | Fehler |
+|---|---|---|---|---|
+| 1350 | −0,245 / −0,170 / −0,336 | 2/14 | 28 – 524 | 0 |
+| 1600 | −0,189 / +0,049 / −0,116 | **0/14** | 291 – 2 851 | 0 |
+| 1884 | +0,168 / +0,346 / +0,393 | 1/14 | 1 757 – 23 789 | 0 |
+| 1970 | −0,112 / −0,236 / −0,304 | 1/14 | 320 – 95 857 | 0 |
+
+**|ρ| < 0,700 in allen vier Epochen über alle drei Schnitte — der größte Wert
+ist 0,393 — und die Nebenbedingung hält überall** (erlaubt: eines von sechs,
+bei 14 Braujahren also zwei). Jeder Wert trifft die Meldung des Builders Ziffer
+für Ziffer.
+
+**Was sich gegenüber dem letzten Mal geändert hat, ist der Abstand.** 1970 stand
+in Welle 7 auf **+0,699** und in Welle 8 auf **+0,692** — ein Tausendstel unter
+der Latte, sieben Wellen lang. Jetzt steht es auf **−0,304**. Aus einem
+Tausendstel Reserve sind 0,307 geworden.
+
+**1350 ist geheilt:** 70 pleite Wochen → **0**, wöchentlicher Median 0,85 →
+5,79, Ziel und Festlegung wieder je 1×. Die Jahresreihe ist **identisch** mit
+der des Mischstands ohne DIE STADT — die Heilung stellt genau den Zustand
+wieder her, den die Trennprobe als gesund ausgewiesen hatte.
+
+**Der Builder hat zwei Dinge gegen sich selbst gemeldet**, beide nachgeprüft:
+der Rest-Unterschied in 1350 (1/14 → 2/14 gegenüber Welle 7) steht genauso im
+Vorzustand ohne DIE STADT, gehört also nicht ihm; und **ρ hat sich in allen vier
+Epochen bewegt** — es ist eine andere Partie, nicht dieselbe „nur besser".
+
+> ### OFFEN UND ALS `KERN:` GEMELDET — A1 IST VON EINEM STÜCK ALLEIN NICHT ERREICHBAR
+>
+> Die Deckung im Ladezustand fiel von 29,0/29,5/29,1/29,5 % auf
+> **21,4/21,8/21,4/22,0 %**, der Anteil der STADT von 10,6 % auf **2,9 %**. Die
+> Auflage verlangt **≤ 15 % gesamt und ≤ 25 % im obersten Sechstel**. Im obersten
+> Sechstel liegen aber **Kopfleiste des Skeletts 26,0 %**, **Chronikgriff DES
+> PREISES 11,7 %**, DIE STADT 15,7 % — **selbst bei STADT = 0 blieben oben rund
+> 37 % und gesamt 19 %.** Die erste Latte ist damit keine Aufgabe der STADT mehr,
+> sondern eine des Skeletts und der Verteilung zwischen den Stücken.
+
+---
+
 ## DAS URTEIL DER WELLE 8 IST DA — das Zielbild gewinnt weiter, aber der Grund ist ein anderer
 
 *Blinder Bildvergleich am Stand `8b81250`, Hafen 8906, Marke vor und nach den
