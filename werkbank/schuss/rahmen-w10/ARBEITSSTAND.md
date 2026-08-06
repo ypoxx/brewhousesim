@@ -953,3 +953,19 @@ rechnet die drei Schnitte gleich mit.
   Partie spielen wie der Vorzustand. Das misst `saatprobe2.sh` gerade nach.
   Nach allem, was gemessen ist, erwarte ich dasselbe Bild wie in 1350 —
   aber erwarten ist nicht messen, und deshalb steht es hier so.
+
+### Zwischenstand der zweiten Saatprobe (einzeln gemessen)
+
+| Epoche | VOR (`37f4b44`) | OHNE (ausgeliefert) | dieselbe Partie? |
+|---|---|---|---|
+| **1350** (3+3 Läufe) | −0,245 / −0,170 / −0,336 · 2/14 · Kasse 28–524 | **gleich, dreimal dieselbe md5** | **JA** |
+| **1600** (1+1 Lauf) | −0,189 / +0,049 / −0,116 · 0/14 · Kasse 291–2851 | **gleich** | **JA** |
+| 1884 | läuft | läuft | — |
+| 1970 | läuft | läuft | — |
+
+Und beide stimmen mit dem überein, was `welle.sh` nebeneinander gemessen hat
+und was der Vorgänger im Vorzustand erhoben hat. Für 1600 sind sich also
+**drei Protokolle einig**: einzeln auf dem Vorzustand, einzeln auf dem
+ausgelieferten Stand, und dreimal nebeneinander.
+Laufende Ausgabe: `werkbank/schuss/rahmen-w10/saat-je-epoche.txt`
+(neu erzeugen mit `python3 werkbank/schuss/rahmen-w10/saat-je-epoche.py`).

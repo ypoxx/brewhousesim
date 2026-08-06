@@ -1,0 +1,14 @@
+Epoche  Stand  Lauf     12 J     13 J     14 J    <1x          Kasse  Urteil
+----------------------------------------------------------------------------------------
+1350    OHNE   A      -0,245   -0,170   -0,336   2/14         28–524  besteht  Fehler 0
+1350    OHNE   B      -0,245   -0,170   -0,336   2/14         28–524  besteht  Fehler 0
+1350    OHNE   C      -0,245   -0,170   -0,336   2/14         28–524  besteht  Fehler 0
+1350    VOR    A      -0,245   -0,170   -0,336   2/14         28–524  besteht  Fehler 0
+1350    VOR    B      -0,245   -0,170   -0,336   2/14         28–524  besteht  Fehler 0
+1350    VOR    C      -0,245   -0,170   -0,336   2/14         28–524  besteht  Fehler 0
+  -> 1350: VOR und OHNE spielen DIESELBE Partie   (VOR 1 Partie(n) in 3 Laeufen, OHNE 1 in 3)
+----------------------------------------------------------------------------------------
+1600    OHNE   A      -0,189   +0,049   -0,116   0/14       291–2851  besteht  Fehler 0
+1600    VOR    A      -0,189   +0,049   -0,116   0/14       291–2851  besteht  Fehler 0
+  -> 1600: VOR und OHNE spielen DIESELBE Partie   (VOR 1 Partie(n) in 1 Laeufen, OHNE 1 in 1)
+----------------------------------------------------------------------------------------
