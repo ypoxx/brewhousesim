@@ -1,0 +1,463 @@
+[
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 9,
+   "px": 136192,
+   "anteil": 3.2218992248062017,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": 108192,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 769312,
+   "anteil": 18.19964268410853
+  },
+  "obenGesamt": {
+   "px": 260336,
+   "anteil": 36.95267078488372
+  },
+  "kaesten": [
+   {
+    "klasse": "erb-leiste",
+    "tag": "div",
+    "mass": "1211x104 @1486,1100",
+    "px": 126461,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "347x29 @1501,1150",
+    "px": 9889,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "272x29 @1854,1150",
+    "px": 7751,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "272x29 @2132,1150",
+    "px": 7751,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "272x29 @2410,1150",
+    "px": 7751,
+    "oben": false
+   },
+   {
+    "klasse": "erb-hand",
+    "tag": "span",
+    "mass": "297x17 @1774,1127",
+    "px": 4903,
+    "oben": false
+   },
+   {
+    "klasse": "erb-stand",
+    "tag": "span",
+    "mass": "254x17 @2080,1127",
+    "px": 4188,
+    "oben": false
+   },
+   {
+    "klasse": "erb-nimmt",
+    "tag": "span",
+    "mass": "155x17 @2343,1127",
+    "px": 2549,
+    "oben": false
+   },
+   {
+    "klasse": "erb-uhr",
+    "tag": "span",
+    "mass": "136x17 @1629,1127",
+    "px": 2251,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "gegner: 189632/28000 px",
+   "stadt: 152688/40000 px  oben 101200/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": 4,
+  "buchMass": "1156x1075",
+  "zuege": 99,
+  "epoche": 1,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 9,
+   "px": 136192,
+   "anteil": 3.2218992248062017,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": 108192,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 802192,
+   "anteil": 18.977486070736433
+  },
+  "obenGesamt": {
+   "px": 263328,
+   "anteil": 37.37736191860465
+  },
+  "kaesten": [
+   {
+    "klasse": "erb-leiste",
+    "tag": "div",
+    "mass": "1211x104 @1486,1100",
+    "px": 126461,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "346x29 @1505,1150",
+    "px": 9854,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "271x29 @1857,1150",
+    "px": 7725,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "271x29 @2134,1150",
+    "px": 7725,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "271x29 @2411,1150",
+    "px": 7725,
+    "oben": false
+   },
+   {
+    "klasse": "erb-hand",
+    "tag": "span",
+    "mass": "282x17 @1776,1127",
+    "px": 4656,
+    "oben": false
+   },
+   {
+    "klasse": "erb-stand",
+    "tag": "span",
+    "mass": "254x17 @2067,1127",
+    "px": 4188,
+    "oben": false
+   },
+   {
+    "klasse": "erb-nimmt",
+    "tag": "span",
+    "mass": "155x17 @2330,1127",
+    "px": 2549,
+    "oben": false
+   },
+   {
+    "klasse": "erb-uhr",
+    "tag": "span",
+    "mass": "136x17 @1630,1127",
+    "px": 2251,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "gegner: 193840/28000 px",
+   "stadt: 160720/40000 px  oben 101632/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 41344/20000 px",
+   "kern: 100656/120000 px  oben 80896/80000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": 4,
+  "buchMass": "1156x1075",
+  "zuege": 107,
+  "epoche": 2,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 9,
+   "px": 136192,
+   "anteil": 3.2218992248062017,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": 108192,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 776288,
+   "anteil": 18.36467417635659
+  },
+  "obenGesamt": {
+   "px": 265760,
+   "anteil": 37.72256540697674
+  },
+  "kaesten": [
+   {
+    "klasse": "erb-leiste",
+    "tag": "div",
+    "mass": "1211x104 @1486,1100",
+    "px": 126461,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "348x29 @1500,1150",
+    "px": 9906,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "272x29 @1854,1150",
+    "px": 7764,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "272x29 @2132,1150",
+    "px": 7764,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "272x29 @2411,1150",
+    "px": 7764,
+    "oben": false
+   },
+   {
+    "klasse": "erb-hand",
+    "tag": "span",
+    "mass": "299x17 @1757,1127",
+    "px": 4931,
+    "oben": false
+   },
+   {
+    "klasse": "erb-stand",
+    "tag": "span",
+    "mass": "254x17 @2065,1127",
+    "px": 4188,
+    "oben": false
+   },
+   {
+    "klasse": "erb-nimmt",
+    "tag": "span",
+    "mass": "155x17 @2328,1127",
+    "px": 2549,
+    "oben": false
+   },
+   {
+    "klasse": "erb-uhr",
+    "tag": "span",
+    "mass": "136x17 @1612,1127",
+    "px": 2251,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "gegner: 177216/28000 px",
+   "stadt: 161664/40000 px  oben 99968/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": 4,
+  "buchMass": "1156x1075",
+  "zuege": 110,
+  "epoche": 3,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 9,
+   "px": 136192,
+   "anteil": 3.2218992248062017,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": 108192,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 813264,
+   "anteil": 19.2394167877907
+  },
+  "obenGesamt": {
+   "px": 277920,
+   "anteil": 39.44858284883721
+  },
+  "kaesten": [
+   {
+    "klasse": "erb-leiste",
+    "tag": "div",
+    "mass": "1211x104 @1486,1100",
+    "px": 126461,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-weit",
+    "tag": "button",
+    "mass": "348x29 @1500,1150",
+    "px": 9906,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "272x29 @1854,1150",
+    "px": 7764,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "272x29 @2132,1150",
+    "px": 7764,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "272x29 @2411,1150",
+    "px": 7764,
+    "oben": false
+   },
+   {
+    "klasse": "erb-hand",
+    "tag": "span",
+    "mass": "416x17 @1754,1128",
+    "px": 6870,
+    "oben": false
+   },
+   {
+    "klasse": "erb-stand",
+    "tag": "span",
+    "mass": "254x17 @2179,1128",
+    "px": 4188,
+    "oben": false
+   },
+   {
+    "klasse": "erb-nimmt",
+    "tag": "span",
+    "mass": "145x17 @2442,1128",
+    "px": 2400,
+    "oben": false
+   },
+   {
+    "klasse": "erb-uhr",
+    "tag": "span",
+    "mass": "136x17 @1609,1128",
+    "px": 2251,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "gegner: 209664/28000 px",
+   "stadt: 165184/40000 px  oben 113152/26000 px",
+   "erbe: 136192/28000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px",
+   "kern: 103728/120000 px  oben 83968/80000 px"
+  ],
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [
+   {
+    "zug": "gegner:oeffnen:adler",
+    "preis": false,
+    "text": "1.193.110 DM",
+    "scroll": 130,
+    "client": 109
+   },
+   {
+    "zug": "gegner:oeffnen:konzern",
+    "preis": false,
+    "text": "4.200.000 DM",
+    "scroll": 130,
+    "client": 109
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": true,
+    "text": "Versorgungszusage · jährlich",
+    "scroll": 253,
+    "client": 157
+   }
+  ],
+  "buchZuege": 4,
+  "buchMass": "1156x1075",
+  "zuege": 102,
+  "epoche": 4,
+  "fehler": []
+ }
+]
