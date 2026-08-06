@@ -686,3 +686,102 @@ Stücke, die diese Welle nicht angefasst hat (STADT, SUD, PREIS, NAME) und der
 Nebenbefund aus derselben Aufnahme: die Kastendeckung der ganzen Bühne im
 Ladezustand liegt auf `8de274d` bei **11,1 %** (E1) gegen **15,2 %** auf meinem
 isolierten Nachstand — die Arbeit der anderen beiden Stücke, nicht meine.
+
+## MEINE AUFLAGE AN DEN SUD — auf dem Auslieferungsstand nachgeprüft, sie steht noch
+
+Ich habe in dieser Welle eine Auflage gegen ein fremdes Stück erhoben. Eine
+solche Meldung ungeprüft stehen zu lassen, nachdem die anderen beiden Stücke
+fertig geworden sind, wäre ein blinder Alarm. Also `brettprobe.mjs` auf
+`8de274d` wiederholt (`messungen/nach3-brettprobe-HEAD.txt`):
+
+| 30 × WEITER, `?saat=1350` | E1 | E4 |
+|---|---|---|
+| **ohne** Escape — Gesamtdeckung | **14,3 %** | **14,0 %** |
+| ohne Escape — `tafeln()` | **[]** | **[]** |
+| **mit** einem Escape — Gesamtdeckung | **43,1 %** | **42,1 %** |
+| mit Escape — `sud` | 87.840 → **1.474.816 px** | 87.840 → **1.423.136 px** |
+| mit Escape — `erbe` | 16.800 | 23.712 px |
+| `verdeckt()` / `lage` | [] / 0 | [] / 0 |
+
+**Zwei Befunde, und der zweite ist unbequem.**
+
+**Erstens: DIE FUHRE hat ihre Abnahme erfüllt.** Ihr Wortlaut war „nach
+30 × WEITER, **ohne** Escape, liegt keine Tafel über 200.000 px² mehr, und die
+Gesamtdeckung liegt unter 20 %". Auf `8de274d` steht es bei **14,3 % / 14,0 %
+und `tafeln() = []`** — vorher waren es 45–53 %. Das ist sauber erreicht.
+
+**Zweitens: genau dieser Zustand wird durch einen Escape-Druck schlechter, und
+zwar auf 43,1 %.** `.sud-brett` (1293x1091 = 33,4 % der Bühne) **liegt dann
+offen**, dazu `.sud-rolle` (26,8 %) und beide `.sud-spalte`. Der Mechanismus ist
+derselbe, den ich oben aus dem Quelltext hergeleitet habe, nur ist er jetzt
+ungedeckt sichtbar: Escape räumt das oberste Blatt weg, die STADT
+(`stadt.js:1408`) schlägt daraufhin das nächste Brett über 25 % der Bühne von
+selbst auf — und das ist `.sud-brett`. **Es trägt die Klasse `blatt` nicht,
+also erreicht ein zweiter Escape es nicht.** Der Spieler kann es nicht mehr
+zumachen.
+
+Vorher war das unsichtbar, weil zuerst mein `erb-buch` und dann das
+Sommerblatt der FUHRE darüber lagen. **Beide Deckel sind in dieser Welle
+entfernt worden — meiner und ihrer —, und darunter kam dasselbe Brett zum
+Vorschein.** Das ist kein Argument gegen die Welle; es ist das, was Aufräumen
+freilegt.
+
+**Die Auflage bleibt also bestehen und gehört unverändert DEM SUD**
+(`stil/sud.css`, `.sud-brett`): entweder unter 25 % der Bühne bleiben — dann
+schlägt die STADT es nicht mehr von selbst auf —, oder die Klasse `blatt`
+tragen und `BRAUHAUS.blatt.melde()` benutzen — dann räumt Escape es weg.
+*Abnahme:* nach 30 × WEITER **und einem Escape** ist `haushalt.tafeln()` leer
+und die Gesamtdeckung liegt unter 20 %.
+
+**Und der Vorschlag an die AUFSICHT, der daraus folgt:** die Abnahmeformel
+dieser Welle sagt „ohne Escape". Der Spieler drückt aber Escape — dafür ist die
+Taste da. Eine Formel, die den Zustand ausklammert, in dem das Bild am
+schlechtesten aussieht, misst nicht das Spiel. **Die Dreifachprobe der Aufsicht
+sollte den Escape-Fall mitnehmen**, sonst geht diese Welle mit 14 % in die
+Akten und mit 43 % zum Spieler.
+
+Mein eigenes Stück steht in beiden Zuständen bei **16.800 / 23.712 px** gegen
+28.000 erlaubt, `verdeckt() = []`, `lage = 0`.
+
+## Die vierte Latte — wem die Verbesserung gehört, nachgesehen statt behauptet
+
+`aufsicht/lesbarkeit.mjs`, 1366x768, Vorzustand gegen ausgelieferten Stand:
+
+| | vorher | nachher |
+|---|---|---|
+| Überläufe | 14 | **13** |
+| Textknoten unter 12 px | 497 | **389** |
+| aktive Knöpfe unter 24 px | 0 von 307 | **0 von 291** |
+
+Der EINE Überlauf, der verschwunden ist, steht in E4 und heißt `wort:1`:
+
+```
+vor  E4: Ueberlauf nach Stueck:  nm:2  was:1  wort:1
+nach E4: Ueberlauf nach Stueck:  nm:2  was:1
+```
+
+`.wort` ist **meine** Klasse — `stil/erbe.css:304`, `.knopf.erb-knopf .wort`,
+die Aufschrift im Kaufknopf. Das ist Auflage 9, von einem **zweiten,
+unabhängigen Gerät** gefunden: `breiten.mjs` hatte in genau dieser Epoche
+gemessen, dass `erbe:uebergabe:leibgeding` 253 px braucht und 157 px hat.
+`lesbarkeit.mjs` weiß von jener Messung nichts und meldet denselben Knopf.
+**Zwei Geräte, ein Befund, und er ist weg.**
+
+In allen anderen Epochen tragen die Überläufe fremde Kürzel (`nm`, `was`,
+`fu`, `sud`) — vorher wie nachher. **DAS ERBE stellt vor und nach dieser Welle
+keinen einzigen fremden Überlauf.**
+
+Bei den 108 verschwundenen Textknoten bleibt es dagegen bei dem, was oben
+steht: das ist überwiegend Buchhaltung (das zugeklappte Buch steht nicht mehr
+im DOM, und `lesbarkeit.mjs` zählt weggeschnittene Knoten mit), nicht
+Gestaltung. Die Zahl, die wirklich zählt, ist **0 von 291 Knöpfen unter 24 px**,
+obwohl meine vier Kaufknöpfe von 29 auf 22 px Höhe herunter sind — der
+Knopfboden des Rahmens (`grund.css:298`) fängt sie bei 1366x768 ab.
+
+---
+
+# STAND: FERTIG
+
+Alles gemessen, nichts offen. Prüfsumme des ausgelieferten Stands
+`c87fe55d0ad1`, Abnahme zusätzlich auf dem Integrationsstand `8de274d`.
+Kein `git add/commit/push` von mir; keine fremde Datei angefasst.
