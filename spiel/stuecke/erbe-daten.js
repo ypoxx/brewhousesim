@@ -95,6 +95,9 @@
 
     1: {
       wort: 'DAS ERBE',
+      /* WELLE 11: das Buch hat in jeder Epoche seinen eigenen Namen — der
+         Griff auf der Leiste traegt den kurzen, sein Titel den ganzen. */
+      buchName: 'Das Stadtbuch',   buchKurz: 'Stadtbuch',
       verb: 'Verschreiben',
       wo: 'vor dem Rat ins Stadtbuch',
       womit: 'Verschreibung im Stadtbuch',
@@ -128,6 +131,7 @@
 
     2: {
       wort: 'DAS ERBE',
+      buchName: 'Das Briefbuch der Stadt', buchKurz: 'Briefbuch',
       verb: 'Verbriefen',
       wo: 'im Briefbuch der Stadt, unter Siegel',
       womit: 'Erbbrief unter Stadtsiegel',
@@ -160,6 +164,7 @@
 
     3: {
       wort: 'DAS ERBE',
+      buchName: 'Das Hypothekenbuch', buchKurz: 'Hypothekenbuch',
       verb: 'Eintragen',
       wo: 'ins Hypothekenbuch',
       womit: 'Eintrag im Hypothekenbuch',
@@ -192,6 +197,7 @@
 
     4: {
       wort: 'DAS ERBE',
+      buchName: 'Die Vertragsakte', buchKurz: 'Vertragsakte',
       verb: 'Festschreiben',
       wo: 'notariell, im Liefervertrag',
       womit: 'Bierlieferungsvertrag, notariell',

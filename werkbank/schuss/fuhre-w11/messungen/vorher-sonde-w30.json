@@ -1,0 +1,544 @@
+{
+ "1": {
+  "jahr": 1351,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 20,
+   "px": 1359296,
+   "anteil": 32.15691618217054,
+   "obenPx": 140800,
+   "obenAnteil": 19.98546511627907,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 1325296,
+   "ueberOben": 130800
+  },
+  "gesamt": {
+   "px": 1930128,
+   "anteil": 45.661110101744185
+  },
+  "oben": {
+   "px": 367392,
+   "anteil": 52.1484375
+  },
+  "tafeln": [
+   "fuhre .blatt fu-sommerblatt fu-georgi-1351 NaN×NaN = 1351246"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "fuhre: 1359296/34000 px  oben 140800/10000 px",
+   "gegner: 219584/28000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 118432/40000 px  oben 66944/26000 px",
+   "sud: 89280/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1351",
+    "mass": "1596×847 @578,169",
+    "flaeche": 1351246,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "1538×111 @607,879",
+    "flaeche": 171120,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "knopf gross",
+    "mass": "1538×75 @607,889",
+    "flaeche": 114593,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "fu-verlust",
+    "mass": "1538×61 @607,537",
+    "flaeche": 93635,
+    "text": "Eine Adresse ist weg:Mühlschenke —"
+   },
+   {
+    "klasse": "fu-sommer-uebergabe",
+    "mass": "1538×58 @607,813",
+    "flaeche": 89790,
+    "text": "Weitergeben statt hergeben: Noch 4"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×50 @607,194",
+    "flaeche": 76908,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×40 @607,611",
+    "flaeche": 60757,
+    "text": "Was steht 1351/52 an der Tafel?"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "627×52 @607,719",
+    "flaeche": 32629,
+    "text": "Starkbier · 3 Brautage → 3 Fass · "
+   },
+   {
+    "klasse": "knopf",
+    "mass": "471×52 @607,659",
+    "flaeche": 24501,
+    "text": "Dünnbier · 1 Brautage → 5 Fass−6 P"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "462×52 @1086,659",
+    "flaeche": 24015,
+    "text": "Grutbier · 2 Brautage → 4 Fass−7 P"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "356×52 @1242,719",
+    "flaeche": 18510,
+    "text": "Kofent · 0 Brautage → 3 Fass"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:duenn",
+    "b": 471,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:grut",
+    "b": 462,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:stark",
+    "b": 627,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:kofent",
+    "b": 356,
+    "h": 52,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ },
+ "2": {
+  "jahr": 1601,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 23,
+   "px": 1356800,
+   "anteil": 32.09786821705426,
+   "obenPx": 140800,
+   "obenAnteil": 19.98546511627907,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 1322800,
+   "ueberOben": 130800
+  },
+  "gesamt": {
+   "px": 1890304,
+   "anteil": 44.718992248062015
+  },
+  "oben": {
+   "px": 371232,
+   "anteil": 52.69349563953488
+  },
+  "tafeln": [
+   "fuhre .blatt fu-sommerblatt fu-georgi-1601 NaN×NaN = 1351246"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "fuhre: 1356800/34000 px  oben 140800/10000 px",
+   "gegner: 212688/28000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 126288/40000 px  oben 67200/26000 px",
+   "sud: 90272/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 29184/20000 px",
+   "kern: 102192/120000 px  oben 82432/80000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1601",
+    "mass": "1596×847 @578,169",
+    "flaeche": 1351246,
+    "text": "Von Georgi 1601 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "1538×111 @607,879",
+    "flaeche": 171120,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "knopf gross",
+    "mass": "1538×75 @607,889",
+    "flaeche": 114593,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "fu-verlust",
+    "mass": "1538×61 @607,537",
+    "flaeche": 93635,
+    "text": "Eine Adresse ist weg:Zum Goldenen "
+   },
+   {
+    "klasse": "fu-sommer-uebergabe",
+    "mass": "1538×58 @607,813",
+    "flaeche": 89790,
+    "text": "Weitergeben statt hergeben: Noch 4"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×50 @607,194",
+    "flaeche": 76908,
+    "text": "Von Georgi 1601 bis Michaeli — der"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×40 @607,611",
+    "flaeche": 60757,
+    "text": "Was steht 1601/02 an der Tafel?"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "717×52 @607,719",
+    "flaeche": 37291,
+    "text": "Märzenbier · 1 Sude der Reihe → 4 "
+   },
+   {
+    "klasse": "knopf",
+    "mass": "570×52 @607,659",
+    "flaeche": 29615,
+    "text": "Schankbier · 1 Sude der Reihe → 8 "
+   },
+   {
+    "klasse": "knopf",
+    "mass": "557×52 @1184,659",
+    "flaeche": 28939,
+    "text": "Braunbier · 1 Sude der Reihe → 6 F"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "445×52 @1332,719",
+    "flaeche": 23153,
+    "text": "Nachbier · 0 Sude der Reihe → 5 Fa"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:schank",
+    "b": 570,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:braun",
+    "b": 557,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:maerzen",
+    "b": 717,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:nachbier",
+    "b": 445,
+    "h": 52,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ },
+ "3": {
+  "jahr": 1885,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 15,
+   "px": 1152000,
+   "anteil": 27.252906976744185,
+   "obenPx": 140800,
+   "obenAnteil": 19.98546511627907,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 1118000,
+   "ueberOben": 130800
+  },
+  "gesamt": {
+   "px": 1744944,
+   "anteil": 41.280205305232556
+  },
+  "oben": {
+   "px": 373408,
+   "anteil": 53.00236191860465
+  },
+  "tafeln": [
+   "fuhre .blatt fu-sommerblatt fu-georgi-1885 NaN×NaN = 1145541"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "fuhre: 1152000/34000 px  oben 140800/10000 px",
+   "gegner: 192288/28000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 128320/40000 px  oben 66304/26000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 35264/20000 px",
+   "kern: 105264/120000 px  oben 85504/80000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1885",
+    "mass": "1596×718 @578,169",
+    "flaeche": 1145541,
+    "text": "Von Georgi 1885 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "1538×111 @607,750",
+    "flaeche": 171120,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "knopf gross",
+    "mass": "1538×75 @607,760",
+    "flaeche": 114593,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "fu-sommer-uebergabe",
+    "mass": "1538×58 @607,684",
+    "flaeche": 89790,
+    "text": "Weitergeben statt hergeben: Noch 4"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×50 @607,194",
+    "flaeche": 76908,
+    "text": "Von Georgi 1885 bis Michaeli — der"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×40 @607,543",
+    "flaeche": 60757,
+    "text": "Was steht 1885/86 an der Tafel?"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "477×52 @1281,590",
+    "flaeche": 24779,
+    "text": "Exportbier · 27 hl · sommerfest−47"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "337×52 @607,590",
+    "flaeche": 17518,
+    "text": "Schankbier · 45 hl−320 M"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "321×52 @952,590",
+    "flaeche": 16702,
+    "text": "Lagerbier · 36 hl−360 M"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:schank",
+    "b": 337,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:lager",
+    "b": 321,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:export",
+    "b": 477,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:einfach",
+    "b": 240,
+    "h": 52,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ },
+ "4": {
+  "jahr": 1971,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 23,
+   "px": 1515184,
+   "anteil": 35.84476441375969,
+   "obenPx": 140800,
+   "obenAnteil": 19.98546511627907,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 1481184,
+   "ueberOben": 130800
+  },
+  "gesamt": {
+   "px": 2152080,
+   "anteil": 50.91183684593023
+  },
+  "oben": {
+   "px": 417760,
+   "anteil": 59.297783430232556
+  },
+  "tafeln": [
+   "fuhre .blatt fu-sommerblatt fu-georgi-1971 NaN×NaN = 1504427"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "fuhre: 1515184/34000 px  oben 140800/10000 px",
+   "gegner: 419568/28000 px",
+   "stadt: 173728/40000 px  oben 122112/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 88816/34000 px",
+   "name: 35264/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1971",
+    "mass": "1596×943 @578,169",
+    "flaeche": 1504427,
+    "text": "Von Georgi 1971 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "1538×111 @607,975",
+    "flaeche": 171120,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "fu-sommer-uebergabe",
+    "mass": "1538×84 @607,884",
+    "flaeche": 128532,
+    "text": "Weitergeben statt hergeben: Noch 3"
+   },
+   {
+    "klasse": "knopf gross",
+    "mass": "1538×75 @607,985",
+    "flaeche": 114593,
+    "text": "Tafel schließen — Michaeli, das Ja"
+   },
+   {
+    "klasse": "fu-abgabe",
+    "mass": "1538×63 @607,504",
+    "flaeche": 96567,
+    "text": "Biersteuer und Werbeetat auf einen"
+   },
+   {
+    "klasse": "fu-verlust",
+    "mass": "1538×61 @607,607",
+    "flaeche": 93635,
+    "text": "Eine Adresse ist weg:Gaststätte Ne"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×50 @607,194",
+    "flaeche": 76908,
+    "text": "Von Georgi 1971 bis Michaeli — der"
+   },
+   {
+    "klasse": "",
+    "mass": "1538×40 @607,682",
+    "flaeche": 60757,
+    "text": "Was steht 1971/72 an der Tafel?"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "516×52 @1495,730",
+    "flaeche": 26813,
+    "text": "Exportbier · 45 hl · sommerfest−3."
+   },
+   {
+    "klasse": "knopf",
+    "mass": "477×52 @1010,730",
+    "flaeche": 24787,
+    "text": "Pilsner · 60 hl · sommerfest−3.400"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "395×52 @607,730",
+    "flaeche": 20553,
+    "text": "Vollbier Hell · 75 hl−2.700 DM"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:hell",
+    "b": 395,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:pils",
+    "b": 477,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:export",
+    "b": 516,
+    "h": 52,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:handel",
+    "b": 267,
+    "h": 52,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ }
+}

@@ -123,6 +123,9 @@
     eichRoh: 0,
     stundeJahr: 0,
     stundeWoche: 16,
+    buchOffen: false,         /* Welle 11: das Buch gehoert dem Stueck, nicht
+                                 dem Reiter eines fremden. Zu heisst: nicht im
+                                 DOM. */
     uebergeben: false,        /* die LAUFENDE Hand hat uebergeben */
     erbfaelle: 0,             /* wie oft das Haus schon die Hand gewechselt hat */
     form: null,               /* 'leibgeding' | 'abfindung' | 'bruch' | 'stunde' */
@@ -941,8 +944,16 @@
     if (l.length) knoepfe.appendChild(tatKnopf(l[0]));
 
     var lg = leibgedingPreis(), ab = abfindungPreis();
+    /* AUFLAGE 9 — HIER SASS DER GEKUERZTE KAUFKNOPF.
+       Gemessen am Vorzustand (werkbank/schuss/erbe-w11/breiten.mjs, E4, Lade-
+       wie 30-Wochen-Zustand): das Wort brauchte 253 px und hatte 157 —
+       „Versorgungszusage · j…". Das Anhaengsel „· jährlich" sagte dabei
+       nichts, was nicht ohnehin auf der Leiste steht: sobald ein Leibgeding
+       laeuft, traegt das Band die Spalte „jedes Michaeli N". Es ist fort, und
+       der Knopf misst sich seither an seinem Inhalt (erbe.css: flex 0 0 auto)
+       statt an einem Viertel der Leiste. */
     knoepfe.appendChild(B.knopf({
-      text: ohneArtikel(e.formen.leibgeding.name) + ' · jährlich',
+      text: ohneArtikel(e.formen.leibgeding.name),
       zug: 'erbe:uebergabe:leibgeding',
       preis: -lg,
       klasse: 'erb-knopf erb-uebergabe',
@@ -986,9 +997,45 @@
     kLeer.appendChild(B.el('span', 'preis einnahme', geld(0)));
     knoepfe.appendChild(kLeer);
 
+    /* ------------------------------------------------------------------
+       DER EIGENE GRIFF.  Auflage 2 des Rahmens (Welle 10):
+       „`erb-buch` hat null Elemente mit `data-zug`; der einzige Griff ist
+       der Reiter der STADT."  Seit dieser Welle gehoert das Auf und Zu dem
+       Stueck selbst: dieser Knopf schlaegt das Buch auf, ein zweiter im
+       Buchkopf schlaegt es zu, und solange es zu ist, steht es GAR NICHT im
+       DOM. Damit
+         · braucht die Blattaufsicht des Rahmens keine Klemme
+           (`haushalt.geklemmt()` bleibt leer),
+         · kann die Regel der STADT „ein formatfuellendes Blatt zum
+           Jahreswechsel ist eine Entscheidung" (stadt.js:1408) es nicht mehr
+           von selbst aufschlagen — sie sieht kein Brett,
+         · und die Reiterzeile der STADT traegt einen Reiter weniger
+           (Auflage 12 des Kritikers).
+       Es ist derselbe Weg, den DER GEGNER (`gegner:blatt-zu`), DER NAME
+       (`name:blatt-zu`), DER PREIS und DER SUD schon gehen. ------------- */
+    knoepfe.appendChild(B.knopf({
+      text: e.buchKurz || 'Das Buch',
+      zug: 'erbe:buch',
+      klasse: 'erb-knopf erb-griff',
+      titel: (e.buchName || 'Das Buch') + ' aufschlagen: die vollen Listen — '
+        + 'was am Haus haftet, was an der Person hängt, was gefallen, '
+        + 'geschrieben und erloschen ist, und jede Hand, die das Haus '
+        + 'gehalten hat. Ein zweiter Druck im Buchkopf schlägt es wieder zu; '
+        + 'Escape ebenso.',
+      tu: function () { Z.buchOffen = true; B.sende('zeichne', { grund: 'erbe-buch-auf' }); }
+    }));
+
     t.appendChild(band);
     t.appendChild(knoepfe);
     fach.appendChild(t);
+  }
+
+  /* Das Buch zumachen — von seinem eigenen Knopf, von Escape (ueber
+     BRAUHAUS.blatt.melde) und vom Griff auf der Leiste aus derselbe Weg. */
+  function schlageBuchZu() {
+    if (!Z.buchOffen) return;
+    Z.buchOffen = false;
+    B.sende('zeichne', { grund: 'erbe-buch-zu' });
   }
 
   /* --- das Brett: die volle Liste --------------------------------------- */
@@ -998,8 +1045,24 @@
     var buch = B.el('div', 'erb-buch blatt');
     buch.setAttribute('data-reiter', 'Das Erbe');
 
-    buch.appendChild(B.el('h2', '', e.wort + ' — ' + e.verb + ' ' + e.wo
+    /* Die Kopfzeile traegt jetzt den Schliessknopf — Auflage 2 des Rahmens.
+       Der Rahmen findet ihn auch von selbst (`haushalt.knopfImBlatt`, das
+       Muster `/(^|[:\-])(zu|…)$/` trifft `erbe:buch:zu`); zusaetzlich meldet
+       das Stueck seinen Griff weiter unten ausdruecklich an. Beides
+       zusammen heisst: die Klemme des Rahmens greift hier nie mehr. */
+    var titelzeile = B.el('div', 'erb-buchtitel');
+    titelzeile.appendChild(B.el('h2', '', e.wort + ' — ' + e.verb + ' ' + e.wo
       + ' · ' + roem(a.nr) + ' Hand'));
+    titelzeile.appendChild(B.knopf({
+      text: 'Zuschlagen',
+      zug: 'erbe:buch:zu',
+      klasse: 'erb-knopf erb-mini erb-buchzu',
+      titel: (e.buchName || 'Das Buch') + ' schließen. Die Leiste unten bleibt '
+        + 'stehen — die drei Wege der Übergabe sind von dort aus immer '
+        + 'erreichbar. Escape schlägt es ebenfalls zu.',
+      tu: schlageBuchZu
+    }));
+    buch.appendChild(titelzeile);
 
     var kopf = B.el('div', 'erb-buchkopf');
     kopf.appendChild(B.el('div', 'erb-name', (a.name || '—') + ' · ' + (a.eigenschaftName || '—')));
@@ -1186,6 +1249,14 @@
     }
 
     fach.appendChild(buch);
+
+    /* AUFLAGE 7 DES RAHMENS (Welle 10): jedes ganzseitige Blatt meldet sich
+       an, WENN es aufschlaegt. Der Rahmen laeuft dann an diesem Ereignis
+       statt auf einer Frist — die Saatprobe der Welle 10 hat gezeigt, was
+       eine Wanduhr im Rahmen kostet. `melde` ist dedupliziert; dass hier bei
+       jedem Neuzeichnen ein NEUES Element angemeldet wird, ist gewollt und
+       vom Rahmen vorgesehen (er haelt die letzten 64). */
+    if (B.blatt && B.blatt.melde) B.blatt.melde(buch, schlageBuchZu);
   }
 
   /* ======================================================================
@@ -1233,9 +1304,15 @@
       B.leere(kopf);
       zeichneTafel(kopf);
 
+      /* WELLE 11 — DAS BUCH STEHT NUR IM DOM, WENN ES AUFGESCHLAGEN IST.
+         Vorher stand es immer da und wurde von der STADT zugeklappt
+         (clip-path). Das kostete nichts an Bildpunkten, aber es gab die
+         Entscheidung ueber Auf und Zu an ein fremdes Stueck ab — und deren
+         Jahreswechselregel schlug es nach jedem Escape wieder auf. Jetzt
+         entscheidet das Stueck, und wer es zumacht, macht es zu. */
       var blatt = B.ebene('blatt', 'erbe');
       B.leere(blatt);
-      zeichneBuch(blatt);
+      if (Z.buchOffen) zeichneBuch(blatt);
     },
 
     jahr: function (d) { michaeli(d); },
@@ -1312,6 +1389,7 @@
       return {
         stundeJahr: Z.stundeJahr, stundeWoche: Z.stundeWoche,
         wochenBisStunde: wochenBisStunde(),
+        buchOffen: Z.buchOffen,
         uebergeben: Z.uebergeben, erbfaelle: Z.erbfaelle,
         form: Z.form, letzteForm: Z.letzteForm,
         leibgedinge: Z.leibgedinge.slice(), leibgedingLast: leibgedingLast(),

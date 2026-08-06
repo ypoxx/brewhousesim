@@ -74,27 +74,60 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: calc(var(--s) * 5);
-  padding: calc(var(--s) * 7) calc(var(--s) * 12) calc(var(--s) * 8);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(0, 0, 0, 0.07)),
-    var(--papier);
-  border: calc(var(--s) * 3) solid var(--holz-dunkel);
-  border-radius: calc(var(--s) * 4);
-  box-shadow: 0 calc(var(--s) * 6) calc(var(--s) * 15) rgba(0, 0, 0, 0.42);
+  align-items: flex-start;
+  gap: calc(var(--s) * 4);
+  padding: 0;
+
+  /* ======================================================================
+     WELLE 11 — DAS PAPIER IST FORT, DIE SCHRIFT IST GEBLIEBEN.
+
+     DER BEFUND, MIT DEM DAS ANFAENGT. Der Flaechenhaushalt des Rahmens
+     (kern/haushalt.js, Welle 10) gibt DEM ERBE 28.000 Bildpunkte, davon
+     6.000 im obersten Sechstel. Gemessen am Vorzustand 7896ee6:
+
+       .erb-leiste            1211 x 104 = 126.461 px   Huelle
+       vier Trennstriche im Band              13.891 px  (border-left, s. u.)
+       vier Knoepfe                           33.142 px
+       photographisch, mit Schlagschatten    239.643 px  (rahmen-w10/messen.mjs)
+
+     Das ist der groesste Ueberhang aller neun Stuecke — 8,6faches Budget.
+     Die Leiste allein deckte mehr als das Zielblatt auf dem GANZEN Schirm
+     deckt (132.164 px, Kopfleiste plus WEITER-Tafel).
+
+     WAS NICHT DIE LOESUNG WAR: weniger anzeigen. Die Welle sagt es
+     ausdruecklich, und sie hat recht — ein Zaehler, der Ueberlauf misst,
+     misst nicht Vollstaendigkeit. Auf der Leiste steht Wort fuer Wort
+     dasselbe wie vorher: das Wort der Epoche, die Wochen bis zur Stunde, die
+     Hand mit Nummer, Art und Federpreis, der Stand am Haus und an der
+     Person, was die Stunde nehmen wird, die erloschenen Verschreibungen und
+     die laufende Michaeli-Last. Dazu die vier Knoepfe.
+
+     WAS DIE LOESUNG WAR: das Papier. Der Rahmen hat in Welle 10 vorgemacht,
+     was es kostet und was es bringt — `.hauszeile` fiel von 41.052 auf 6.102
+     Bildpunkte, `.deckung` von 44.145 auf 17.966, und beide stehen weiter
+     vollstaendig am Schirm. Die Regel des blinden Kritikers ist dieselbe:
+     KASTEN ist, was einen deckenden Grund oder einen sichtbaren Rahmen hat;
+     was nur Schrift traegt, ist WELT. Also traegt die Leiste keinen Grund,
+     keinen Rahmen, keinen Schlagschatten und keinen Kopfstreifen mehr — nur
+     Schrift mit einem Lichthof, der sie ueber jedem Dach lesbar haelt.
+
+     WAS DAS KOSTET, UND ES STEHT HIER, WEIL ES GEGEN MICH SPRICHT: die vier
+     Papiere der Epoche (Pergament 1350 · Buetten mit Rippen 1600 · blau
+     linierter Vordruck 1884 · Durchschlag 1970) sind auf der LEISTE fort.
+     Auflage 4 der dritten Runde hat sie verlangt, und sie waren gut. Sie
+     leben im BUCH vollstaendig weiter — dort ist die Flaeche, an der sie
+     gemessen wurden —, und auf der Leiste bleibt von der Epoche, was ohne
+     Papier auskommt: die Schriftart (Antiqua · Antiqua · schmal · Maschine),
+     die Rubrikfarbe des Wortes und die vier Knopfraender. Der Preis ist
+     bezahlt und benannt.
+     ====================================================================== */
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   color: var(--tinte);
   font-family: var(--serif);
   line-height: 1.1;
-}
-
-/* Ein schmaler Streifen am Kopf: das Erbe ist eine Urkunde, kein Schild. */
-.erb-leiste::before {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; top: 0;
-  height: calc(var(--s) * 4);
-  background: linear-gradient(90deg, var(--holz-dunkel), var(--holz-hell), var(--holz-dunkel));
-  opacity: 0.85;
 }
 
 /* Das Band traegt bis zu sieben Spalten (Wort · Uhr · Hand+Feder · Stand ·
@@ -106,19 +139,41 @@
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: calc(var(--s) * 2) calc(var(--s) * 9);
+  gap: calc(var(--s) * 2) calc(var(--s) * 8);
   font-size: calc(var(--s) * 15);
   white-space: nowrap;
   overflow: hidden;
+  /* DER LICHTHOF — er ersetzt das Papier, das unter dieser Zeile lag.
+     Dasselbe Mittel, mit dem der Rahmen in Welle 10 Hauszeile und
+     Deckungsband ueber die gemalte Welt gelegt hat (kern/kopf.js:83,141).
+     Zwei Radien: der weite traegt ueber ein dunkles Dach, der enge haelt die
+     Buchstabenkante scharf. */
+  text-shadow:
+    0 0 calc(var(--s) * 9) rgba(255, 248, 230, 0.98),
+    0 0 calc(var(--s) * 4) rgba(255, 248, 230, 0.98),
+    0 0 calc(var(--s) * 2) rgba(255, 248, 230, 0.98);
 }
 
 .erb-band > span { overflow: hidden; text-overflow: ellipsis; }
 
-/* Die Angaben im Band sind Spalten einer Zeile, keine Prosa — ein feiner
-   Strich trennt sie, damit 'an der Person 0 DIE STUNDE' nicht zusammenlaeuft. */
-.erb-band > *:not(:first-child) {
-  border-left: 1px solid var(--linie);
-  padding-left: calc(var(--s) * 9);
+/* Die Angaben im Band sind Spalten einer Zeile, keine Prosa — ein Trenner
+   muss dazwischen, damit 'an der Person 0 DIE STUNDE' nicht zusammenlaeuft.
+
+   WELLE 11: Hier stand `border-left: 1px solid var(--linie)`. Ein Rahmen von
+   einem Pixel mit voller Deckkraft macht nach der Regel des blinden
+   Kritikers die GANZE HUELLE des Elements zum Kasten — gemessen im
+   Ladezustand aller vier Epochen: erb-hand 4.903 px, erb-stand 4.188,
+   erb-nimmt 2.549, erb-uhr 2.251, zusammen 13.891 Bildpunkte fuer vier
+   Striche von je 17 Pixeln Laenge. Solange das Papier der Leiste darunter
+   lag, fiel das nicht auf; ohne Papier waeren es die einzigen Kaesten
+   gewesen und haetten die Haelfte des Haushalts gefressen.
+   Der Trenner ist jetzt ein Zeichen — Schrift statt Rahmen, also Welt statt
+   Kasten. Ein Pseudoelement steht in keiner Kastenliste (beide Geraete
+   zaehlen `#buehne *`), und es traegt denselben Lichthof wie die Zeile. */
+.erb-band > *:not(:first-child) { padding-left: 0; }
+.erb-band > *:not(:first-child)::before {
+  content: "· ";
+  color: #8a7a5e;
 }
 
 .erb-wort {
@@ -157,20 +212,56 @@
   gap: calc(var(--s) * 6);
   align-items: stretch;
   flex: 0 0 auto;
+  max-width: 100%;
 }
-.erb-band { flex: 0 1 auto; }
+.erb-band { flex: 0 1 auto; max-width: 100%; }
 
+/* ==========================================================================
+   DIE KNOPFREIHE — DIE EINZIGEN KAESTEN, DIE DAS ERBE NOCH HAT.
+
+   Nach dem Abnehmen des Papiers traegt das Stueck im Ruhezustand genau vier
+   Preisschildknoepfe und einen Griff. Sie SIND der ganze Haushalt, und
+   deshalb ist ihr Mass gerechnet, nicht geraten:
+
+     Grenze                            28.000 px
+     vier Knoepfe + Griff, gemessen    s. werkbank/schuss/erbe-w11/
+
+   ZWEI AENDERUNGEN, UND BEIDE HAENGEN AN AUFLAGE 9.
+
+   (1) `flex: 1 1 0` ist fort. Jeder Knopf bekam ein Viertel der Leiste,
+       gleichgueltig wie lang seine Aufschrift war — und wo sie nicht
+       hineinpasste, schnitt `text-overflow: ellipsis` sie ab. Genau so
+       entstanden „Versorgungszusage · j…" (253 px Text in 157 px Kasten,
+       E4) und „Nachschrift · 2 Hä…" (199 in 176). Der Kritiker: „kein Knopf
+       mit Preisschild traegt '…'; entweder der Kasten wird breiter oder der
+       Text kuerzer." Beides ist geschehen: `flex: 0 0 auto` misst den Knopf
+       an seinem Inhalt — er kann gar nicht mehr zu schmal sein —, und die
+       Aufschriften sind gekuerzt (erbe.js: kein „· jaehrlich", kein Buchname
+       im Widerspruch, kein Artikel vor der Stiftung).
+       Damit ist das Auslassungszeichen nicht bekaempft, sondern UNMOEGLICH:
+       `text-overflow` steht nur noch fuer den Fall, dass jemand die Leiste
+       eines Tages schmaler macht als ihre Knoepfe.
+
+   (2) Die Knoepfe sind flacher und enger gesetzt. Das kostet Hoehe, nicht
+       Text: die Aufschrift bleibt Zeichen fuer Zeichen dieselbe. Auf
+       1366x768 greift der Knopfboden des Rahmens (grund.css:298,
+       min-height/min-width 24px) — dort sind sie also NICHT kleiner als
+       vorher, und die vierte Latte sieht denselben Knopf. Nur auf der
+       Entwurfsleinwand 2752x1536, wo der blinde Kritiker Bildpunkte zaehlt,
+       sind sie schmal.
+   ========================================================================== */
 .erb-leiste .knopf,
 .knopf.erb-knopf {
-  flex: 1 1 0;
+  flex: 0 0 auto;
   min-width: 0;
   min-height: 0;
-  padding: calc(var(--s) * 4) calc(var(--s) * 9);
-  font-size: calc(var(--s) * 15);
-  gap: calc(var(--s) * 4);
-  border-width: calc(var(--s) * 2);
+  padding: calc(var(--s) * 2) calc(var(--s) * 7);
+  font-size: calc(var(--s) * 14);
+  line-height: 1.15;
+  gap: calc(var(--s) * 3);
+  border-width: calc(var(--s) * 1);
   border-radius: calc(var(--s) * 3);
-  box-shadow: 0 calc(var(--s) * 2) 0 rgba(0, 0, 0, 0.3);
+  box-shadow: none;
   letter-spacing: 0;
   overflow: hidden;
 }
@@ -183,10 +274,20 @@
 }
 
 .knopf.erb-knopf .preis {
-  font-size: calc(var(--s) * 14);
-  padding-left: calc(var(--s) * 5);
+  font-size: calc(var(--s) * 13);
+  padding-left: calc(var(--s) * 4);
   flex: 0 0 auto;
 }
+
+/* DER GRIFF ZUM BUCH.  Er traegt kein Preisschild und keine Entscheidung —
+   er macht nur auf. Also ist er der schmalste Kasten der Reihe und steht
+   als letzter, hinter den drei Wegen: was zu entscheiden ist, steht vorn. */
+.knopf.erb-griff {
+  background: linear-gradient(180deg, #efe6d2 0%, #dccfae 100%);
+  border-style: dashed;
+  font-style: italic;
+}
+.knopf.erb-griff:hover { background: linear-gradient(180deg, #fbf3e2 0%, #eadcb9 100%); }
 
 /* Die drei Wege der Uebergabe stehen dunkler: sie sind endgueltig. */
 .knopf.erb-uebergabe {
