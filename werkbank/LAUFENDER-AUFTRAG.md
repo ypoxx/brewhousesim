@@ -46,6 +46,64 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## WELLE 8: DER STREIFEN IST FREI — und zwei Berichtigungen an der Aufsicht
+
+**Von der Aufsicht unabhängig nachgemessen am eingefrorenen Stand `8b81250`:**
+
+| | vorher | nachher |
+|---|---|---|
+| **unterstes Sechstel, gesamt gedeckt** | 59,5 – 60,7 % | **11,9 – 13,4 %** |
+| **davon DIE STADT** | 47,1 – 47,3 % | **0,0 %** |
+| Fläche gesamt | 27,1 – 28,2 % | 29,1 – 30,3 % |
+| Hausschild in 1350 gedeckt | 66,9 % | **0,0 %** |
+
+Der Streifen, in dem jedes Zielblatt seinen Vordergrund trägt, ist frei. Die
+Gesamtfläche steigt leicht — **die Werkbank ist umgezogen, nicht verschwunden**,
+und der Builder sagt das selbst. Latte 4 unverändert: 14 / 505 / 0 von 329.
+
+> ### ZWEI BERICHTIGUNGEN AN DER AUFSICHT, beide vom Builder gefunden
+>
+> **1. Die 47 % waren nicht die Reiterzeile.** Der Auftrag in `WELLE-8.md` nannte
+> sie als Adresse; gemessen sind es **Reiterzeile 11,6 % und Bauhof-Lade 35,5 %**.
+> Wer nur den Reiter verschoben hätte, wäre bei 35 gelandet statt bei 0. **Die
+> Aufsicht hatte die Zahl richtig und die Ursache falsch** — sie hat vom größten
+> Kasten auf den Schuldigen geschlossen, statt je Kasten zu messen.
+>
+> **2. Der Welle-7-Stand war nicht „alles steht".** Auf der Entwurfsleinwand
+> standen **6–9 Zeilen je Epoche mit „…"**, zwei Namen als blankes „…". Ein
+> Überlaufzähler sieht das nicht, weil `setzeAufschrift()` **sauber** kürzt — es
+> läuft nichts über, es fehlt nur. Der Auftrag der Aufsicht schrieb „was in
+> Welle 7 erkämpft wurde, darf nicht zurückgenommen werden"; ein Teil davon war
+> gar nicht erkämpft. Neues Gerät dagegen: `stadt-w8/reiterprobe.mjs`. Jetzt
+> **0 gekürzte Namen, 0 gekürzte Kennzahlen, 0 Überläufe**.
+>
+> **Die Lehre für jede weitere Latte: ein Zähler, der Überlauf misst, misst nicht
+> Vollständigkeit.** Wer sauber kürzt, besteht ihn.
+
+**ρ HAT SICH BEWEGT, und der Builder hat es selbst gemeldet** — 24 Läufe, drei je
+Epoche auf beiden Seiten, als A/B im selben Augenblick, alle zwölf Zellen
+byteweise identisch:
+
+| | vorher | nachher | |
+|---|---|---|---|
+| 1350 | −0,245 / −0,170 / −0,336 | −0,014 / +0,137 / −0,007 | |
+| **1600** | +0,189 / −0,066 / −0,156 | **+0,476** / +0,297 / +0,160 | **schlechter**, Abstand 0,511 → 0,224 |
+| 1884 | +0,168 / +0,346 / +0,393 | −0,210 / −0,016 / +0,130 | Vorzeichen gedreht |
+| **1970** | +0,699 / +0,637 / +0,653 | **+0,692** / +0,330 / +0,116 | 0 statt 1 Jahr unter 1× |
+
+**Alle vier bleiben unter 0,700, aber 1600 hat die halbe Reserve verloren.** Die
+Aufsicht misst 1600 und 1970 selbst nach, drei Läufe je Epoche
+(`werkbank/schuss/aufsicht/welle8-schluss/`).
+
+**Drei Dinge, die der Builder gemeldet hat, ohne dass sie seine waren:** das
+Hausschild ist frei **durch DER SUD** (dessen Kesselzettel sucht sich selbst eine
+freie Stelle und fand eine, weil der Rand geräumt ist); dieselbe Ursache kostet in
+1884 einen Pflock (86 → 85 erreichbare Züge); und **1,17 MB unumgestellte fremde
+PNG** liegen in der schwersten Epoche (`name/schild2.png` 683 KB,
+`gegner/hof2.png` 489 KB) — eine davon wiegt mehr als seine ganze Hoffracht.
+
+---
+
 ## DIE ERSTE LATTE IST GERISSEN — und die Ursache ist nicht, was sieben Wellen lang angenommen wurde
 
 **Blindvergleich am eingefrorenen Stand `08baf32`, 5. August, von einem fremden
