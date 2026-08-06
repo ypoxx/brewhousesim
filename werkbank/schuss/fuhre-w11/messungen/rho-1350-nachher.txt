@@ -1,0 +1,19 @@
+====================================================================================================
+EPOCHE 1350
+  e1-a.json        14 J  Spearman +0,191  Pearson +0,066  <1x 0/14  Fehler 0  Abbruch nein  Fest 1x
+                   5,89 · 1,43 · 3,42 · 3,32 · 9,00 · 8,36 · 13,75 · 7,57 · 10,81 · 3,46 · 4,27 · 3,95 · 4,95 · 5,97
+                   woechentlich: Spearman -0,675 ueber 14 Jahre, Median 5.00
+                   Kasse 237→110 (x0.46)  Nenner 42→31 (x0.74)  rho Kennzahl↔Kasse +0,969
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 242 (60.5 %) · Arten umkaempft 242 bindung 144 lage 14
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  e1-b.json        14 J  Spearman -0,160  Pearson -0,051  <1x 2/14  Fehler 0  Abbruch nein  Fest 1x
+                   5,89 · 1,43 · 3,42 · 2,41 · 5,95 · 4,90 · 3,29 · 10,25 · 5,43 · 3,93 · 1,13 · 0,26 · 0,93 · 8,08
+                   woechentlich: Spearman -0,547 ueber 14 Jahre, Median 5.83
+                   Kasse 237→94 (x0.40)  Nenner 42→39 (x0.93)  rho Kennzahl↔Kasse +0,886
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 381 (95.2 %) · Arten umkaempft 379 bindung 19 lage 2
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN -0,160 ,, +0,191   Spannweite 0,352
+  >> PEARSON  -0,051 ,, +0,066   Spannweite 0,118
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+1350  Spearman -0,160 ,, +0,191   BESTEHT
