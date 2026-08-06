@@ -919,3 +919,10 @@ bekommen, der die vier Epochen nacheinander fährt, und die Zusage in seinem
 Kopf gehört berichtigt, bis sie wieder gemessen ist.
 *Abnahme:* dieselbe Epoche, derselbe eingefrorene Stand, dreimal
 nebeneinander und dreimal einzeln — sechs gleiche Prüfsummen.
+
+*(Die `welle.sh`-Runde auf 8932 wurde nach 1350 und 1884 **abgebrochen**, um
+das Messfenster für die einzelnen Läufe freizumachen. Die zwei fertigen
+Läufe stehen in `rho-ohnewache/`; 1600 und 1970 fehlen dort und werden
+einzeln gemessen. Beim Abbrechen habe ich mit `pkill -f` fast die eigene
+Shell erschlagen — genau der Fehler, vor dem `aufsicht/messstand.sh` in
+seinem Kopf warnt. Danach über die PID.)*
