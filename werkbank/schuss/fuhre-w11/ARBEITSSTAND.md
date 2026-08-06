@@ -351,8 +351,44 @@ Streuungsmass". Mein Lauf liefert eine dritte Zahl (+0,191, Kasse 8–514,
 0/14) und liegt damit auf dem Ast von Satz B (positives ρ, 0 Jahre unter
 1×). Beide Aeste bestehen die Latte deutlich.
 
-Ein eigener Vorher-Lauf auf `7896ee6` laeuft; er entscheidet, ob 1350 auch
-ohne meine Aenderung heute diese dritte Zahl liefert.
+**Der eigene Vorher-Lauf ist gefahren, und er spricht gegen mich.**
+`messungen/rho-vorher/e1-a.json`, `7896ee6`, heute, dieselbe Maschine:
+
+| 1350 | 12 J | 13 J | 14 J | Jahre < 1× | Kasse |
+|---|---|---|---|---|---|
+| **vorher** (7896ee6) | −0,245 | −0,170 | **−0,336** | **2/14** | 237→66, 28–524 |
+| **nachher** | +0,252 | +0,181 | **+0,191** | **0/14** | 237→110, 8–514 |
+
+Der Vorzustand liefert heute Ziffer fuer Ziffer den Satz A des Rahmens.
+**Meine Fassung liefert etwas anderes.** Die Kennzahlreihe laeuft in den
+ersten drei Braujahren gleich (5,89 · 1,43 · 3,42) und geht im **vierten**
+auseinander (2,41 gegen 3,32).
+
+**Was ich dazu weiss, und was ich nicht weiss.** Der Nenner sagt, dass es
+eine andere Partie ist, nicht eine andere Rechnung: vorher gewinnt die
+Nennerzeile in 400 von 400 Wochen ohne Zugschluessel und mit der Art
+`umkaempft` (das ist DER GEGNER), nachher in 242 von 400 — dazwischen
+144 Wochen `bindung` und 14 `lage`, also Zuege DER FUHRE selbst.
+**Der wahrscheinliche Weg dahin liegt in der messenden Hand und nicht im
+Spiel:** `linie.mjs:klick()` klickt, wenn ein Knopf nicht getroffen wird,
+DER REIHE NACH JEDEN Reiter der STADT, bis er trifft — und jeder dieser
+Klicks ist ein Umschalter, der Bretter auf- und zuklappt. Wie oft dieser
+Notweg gegangen wird, haengt daran, was gerade wie gross wo liegt. Eine
+kleinere Georgi-Tafel deckt weniger zu, also faellt der Notweg oefter weg,
+also bleiben andere Bretter offen, also findet die Hand in spaeteren Wochen
+andere Knoepfe. Belegen kann ich diese Kette nicht — dazu muesste ich die
+Hand mitschreiben lassen, und an fremden Messgeraeten wird nicht gedreht.
+
+**Was trotzdem feststeht:**
+* Beide Reihen bestehen die Latte mit grossem Abstand (0,336 und 0,191
+  gegen 0,700), und der groesste Wert aller vier Epochen ist unveraendert
+  0,393 (1884).
+* Die Jahre unter 1× sind **besser** geworden: 2/0/1/1 → **0/0/1/1** von
+  14, erlaubt sind 2,33.
+* 1600, 1884 und 1970 sind Ziffer fuer Ziffer unveraendert.
+* 1350 ist die Epoche, die schon beim Rahmen auf dem UNVERAENDERTEN Stand
+  zwischen zwei Laeufen umgesprungen ist (Satz B: +0,270, 0/14) — mein
+  Nachher-Lauf liegt auf genau diesem Ast.
 
 
 ---

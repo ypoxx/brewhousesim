@@ -172,6 +172,83 @@
      stil/gegner-zusatz.css: .gg-gzblock{max-width} */
   var BREIT = { stand: 400, paar: 250, block: 420, spur: 230 };
 
+  /* ----------------------------------------------------------------------
+     DIE SPERRZONEN — AUFLAGE 3, und zwar allgemein statt von Hand
+     ----------------------------------------------------------------------
+     „Die Gegnerkarte darf keine gemalte Beschriftung anschneiden … die Karte
+     weicht den vier Ortsschildern aus."
+
+     Drei der vier kann dieses Stueck ueberhaupt anschneiden. Nachgelesen in
+     stuecke/stadt.js: `zeichneNamen` und `zeichneHausschild` malen
+     ST. MICHAEL, GASTHOF LINDENHOF, BAHNHOF und das Hoftorschild in die
+     Ebene `bau` (teile(), Zeile 1620) — also UNTER die Ebene `marken`, in
+     der DER GEGNER steht. `zeichneGegnername` malt BRAUEREI ADLER /
+     ADLER-BRAEU AG / NORDSTERN-GRUPPE dagegen in die Ebene `hand` mit
+     z-index 962, also DARUEBER; die koennen nicht angeschnitten werden.
+
+     Von Hand ausweichen hiesse, fuer jede Adresse und jede Epoche eine Zahl
+     zu raten. Also wird EINMAL JE EPOCHE gemessen, wo diese Schilder stehen,
+     und das Ergebnis behalten. Ein Ortsschild bewegt sich nicht — das ist
+     die haerteste Zusage von kern/orte.js —, und sein Text aendert sich nur
+     mit der Epoche. Mehr als drei Anlaeufe je Epoche gibt es nicht: liegt
+     beim ersten Zeichnen noch keines da, wird es beim naechsten versucht und
+     dann nicht mehr.
+
+     WARUM NICHT BEI JEDEM ZEICHNEN: der Rahmen hat in Welle 10 gemessen, was
+     eine Layoutabfrage je Bildaufbau kostet — sie verschiebt die Phase gegen
+     die Fristen DER STADT (Takt 240 ms, Handfrist 1400 ms, Jahresfrist
+     1800 ms), und dann laeuft dieselbe Saat zweimal verschieden. Vier
+     Abfragen je Partie sind kein Verhalten an einer Wanduhr.
+
+     GEMESSEN, WARUM ES DIESE ZONEN BRAUCHT: im gebauten Zustand lag ein
+     `gg-paar` in 1350 und 1970 mit 511 px² auf „ST. MICHAEL" (146x23
+     @1550,527) — im Vorzustand ebenso (106 bzw. 475 px²). Der Ort bleibt,
+     wo er ist; nur das Zeichen rueckt so weit, dass die Buchstaben frei
+     stehen.                                                              */
+  var ZONEN = {};              /* Epoche -> [{x,y,b,h}] in Prozent */
+  var ZONEN_ANLAUF = {};
+
+  function sperrzonen() {
+    var e = epNr();
+    if (ZONEN[e]) return ZONEN[e];
+    if ((ZONEN_ANLAUF[e] || 0) >= 3) return [];
+    ZONEN_ANLAUF[e] = (ZONEN_ANLAUF[e] || 0) + 1;
+    var bu = document.getElementById('buehne');
+    if (!bu) return [];
+    var VB = bu.clientWidth, VH = bu.clientHeight;
+    if (!VB || !VH) return [];
+    var l = [];
+    var q = document.querySelectorAll(
+      '#ebene-bau .stadt-name, #ebene-bau .stadt-hausschild');
+    for (var i = 0; i < q.length; i++) {
+      var r = q[i].getBoundingClientRect();
+      if (r.width < 8 || r.height < 6) continue;
+      l.push({ x: 100 * r.x / VB, y: 100 * r.y / VH,
+               b: 100 * r.width / VB, h: 100 * r.height / VH });
+    }
+    if (l.length) ZONEN[e] = l;
+    return l;
+  }
+
+  /* Schiebt die Unterkante eines Zeichens so weit, dass es keine gemalte
+     Beschriftung anschneidet. `yUnten` und `hoehe` in Prozent der Buehne,
+     `x` ist die MITTE (alle Anker dieses Stuecks sind translate(-50%)).
+     Es wird in die Richtung ausgewichen, die weniger kostet — nach oben
+     ueber das Schild oder nach unten darunter. */
+  function weicheAus(x, halbBreite, yUnten, hoehe) {
+    var z = sperrzonen();
+    for (var i = 0; i < z.length; i++) {
+      var s = z[i];
+      if (x + halbBreite <= s.x || x - halbBreite >= s.x + s.b) continue;
+      var oben = yUnten - hoehe;
+      if (yUnten <= s.y || oben >= s.y + s.h) continue;
+      var nachOben = (s.y - 0.4) - yUnten;                 /* negativ */
+      var nachUnten = (s.y + s.h + hoehe + 0.4) - yUnten;  /* positiv */
+      yUnten += (Math.abs(nachOben) <= nachUnten) ? nachOben : nachUnten;
+    }
+    return yUnten;
+  }
+
   /* Jahresmenge einer Adresse in Fass — dieselbe Rechnung wie bei der Fuhre,
      damit die Summen zueinander passen. */
   function menge(a) {
@@ -2052,6 +2129,7 @@
     Z.kennzahlSteht = false;
     offeneAdressen().forEach(function (a) {
       var v = versatz[a.schluessel] || { hoch: 0, seite: 0 };
+      var o0 = B.orte.hole(a.ort) || { x: 50, y: 50 };
       var hoch = -3.6 + v.hoch;
       var k = a.schluessel;
       var b = Z.bindung[k];
@@ -2161,6 +2239,13 @@
       if (reihen.length) {
         var paar = B.el('div', 'gg-paar');
         reihen.forEach(function (r) { paar.appendChild(r); });
+        /* AUFLAGE 3: erst ausweichen, dann haengen. Die Hoehe wird nicht
+           gemessen, sondern aus der Zahl der Reihen geschaetzt — ein Zeichen
+           misst 33 px, der Fassknopf 31, die Kennzahlzeile 16, dazwischen
+           7 px Luft. Gemessen an einem dreireihigen Paar: 94 px = 6,1 %;
+           die Schaetzung 3 x 2,1 + 0,5 = 6,8 % liegt bewusst darueber. */
+        hoch = weicheAus(o0.x + v.seite, BREIT.paar / 2 / 2752 * 100,
+                         o0.y + hoch, reihen.length * 2.1 + 0.5) - o0.y;
         /* ZUSTAENDIGKEIT §10, vollstaendig abgemeldet (Glaettung Welle 1):
            Ein Preisschild ist keine Beschriftung, sondern ein Knopf. Auf der
            Kartenschicht der STADT bekam es 'stadt-marke-ruht' und damit

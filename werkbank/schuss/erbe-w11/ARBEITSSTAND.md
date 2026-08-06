@@ -322,6 +322,42 @@ hat). Was sich dort zwischen den beiden Aufnahmen bewegt, ist nicht mein
 weggeschnittener Kasten. Ich kann nicht sagen, was es ist, und behaupte es
 deshalb auch nicht.
 
+## ICH HABE DAS BILD ANGESEHEN, NICHT NUR GEZAEHLT — und es hat zwei Fehler gefunden, die kein Zaehler gemeldet haette
+
+`bilder/nach-e1-leiste.png` (erster Anlauf) gegen `bilder/nach2-e1-leiste.png`
+(ausgeliefert), Ausschnitt 1300 x 130 px aus der Entwurfsleinwand:
+
+**Fehler 1 — der Lichthof war zu schwach, und der Haushalt sagte nichts.**
+Im ersten Anlauf stand von der Bandzeile ueber den Daechern des Brauhofs nur
+noch „DAS ERBE" lesbar da; „noch 14 Wochen", die Hand mit ihrer Feder, der
+Stand am Haus und an der Person und was die Stunde nimmt verschwammen mit dem
+Dach. **Das ist genau die Falle, vor der diese Welle warnt, nur andersherum:**
+die Zeile ist kein Kasten mehr und faellt damit aus JEDER Kastenliste heraus —
+`haushalt.pruefe()`, `messen.mjs`, `deckung.mjs` melden alle drei nichts. Der
+Zaehler war zufrieden, und der Spieler haette nichts mehr gelesen. Abhilfe:
+eine Stufe groesser, fett, vier Lagen Lichthof, dunklere Tinte in den Spalten.
+Auf `nach2-e1-leiste.png` steht die Zeile Wort fuer Wort ueber dem Dach.
+
+**Fehler 2 — das kuerzere Buch war unten immer noch leer.**
+`bilder/nach-e1-buch.png`: das Buch war von 1075 auf 829 px herunter, und die
+unteren 254 px trugen weiter nichts. Ein kuerzeres Blatt mit demselben Fehler
+ist kein besseres Blatt. Abhilfe: `height: auto; max-height: 54%` — das Buch
+misst sich an seinem Inhalt. Gemessen im Ladezustand:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Buchhoehe vorher | 1075 | 1075 | 1075 | 1075 px |
+| erster Anlauf | 829 | 829 | 829 | 829 px |
+| **ausgeliefert** | **580** | **581** | **539** | **619** px |
+| Inhalt/Kasten | 428/428 | 433/433 | 433/433 | 483/483 |
+| rollt der Koerper? | nein | nein | nein | nein |
+| abgeschnittene Kinder | 0 | 0 | 0 | 0 |
+
+Das Buch deckt damit im Ladezustand **1101 x 580 = 15,1 %** der Buehne statt
+**1156 x 1075 = 29,4 %** — und `bilder/nach2-e1-buch.png` zeigt, was das
+heisst: unter dem Buch steht der **Brauhof mit Pfanne, Fassreihe und
+Brauerinnen** wieder im Bild. Genau das Motiv, das der Kritiker vermisst hat.
+
 ## Zwischenstand der uebrigen Messungen
 
 *(wird laufend ergaenzt; alle Rohdaten in `messungen/`)*
