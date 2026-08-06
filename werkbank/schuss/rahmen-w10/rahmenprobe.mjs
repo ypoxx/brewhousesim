@@ -20,6 +20,14 @@ for (const e of EPS) {
   }
   for (let i = 0; i < ESC; i++) { await s.keyboard.press('Escape'); await s.waitForTimeout(250); }
   await s.waitForTimeout(1500);
+  /* NACHWEITER: kommt das Blatt beim naechsten Wochenschalter zurueck?
+     Die Klemme des Rahmens faellt beim Neuzeichnen ab — die Frage ist, ob
+     der Reiterklick den Zustand DES STUECKS wirklich geschlossen hat. */
+  for (let i = 0; i < +(process.env.NACHWEITER || 0); i++) {
+    await s.evaluate(() => { const k = document.querySelector('[data-zug="weiter"]'); if (k) k.click(); });
+    await s.waitForTimeout(900);
+  }
+  if (+(process.env.NACHWEITER || 0)) await s.waitForTimeout(1500);
   const d = await s.evaluate(() => {
     const m = (sel) => { const el = document.querySelector(sel); if (!el) return null;
       const r = el.getBoundingClientRect();

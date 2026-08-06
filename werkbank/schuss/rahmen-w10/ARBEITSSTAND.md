@@ -107,10 +107,16 @@ beide) — Bretter bleiben unberührt und stehen nur in der Liste
 selbst nach `clip-path: inset(50%)`. Für jedes **Kind** eines zugeklappten
 Bretts meldet `getComputedStyle` aber brav `none`. Ergebnis im Ladezustand
 E1: Haushalt **54,4 %** gesamt und **1.442.176 px** für DEN SUD, während das
-photographische Gerät **19,9 %** und **87.981 px** misst. Nach dem Weg nach
-oben (mit Gedächtnis für gemeinsame Vorfahren): **18,2 %** gesamt — 1,7
-Punkte unter dem photographischen Wert, und das ist die richtige Richtung,
-denn Hüllen kennen keine Schlagschatten.
+photographische Gerät für denselben Stand **18,4 %** gesamt und für DEN SUD
+**95.928 px** misst. Nach dem Weg nach oben (mit Gedächtnis für gemeinsame
+Vorfahren): Haushalt **18,2 %** gesamt gegen photographisch **18,4 %** — 0,2
+Punkte darunter, und das ist die richtige Richtung, denn Hüllen kennen keine
+Schlagschatten.
+
+*(Berichtigt: an dieser Stelle stand zuerst „19,9 % / 87.981 px". Das waren
+die Zahlen des VORzustands aus der Messung des Vorgängers — also weder
+derselbe Stand noch dasselbe Gerät. Der Vergleich Innensicht gegen Kamera
+gehört auf denselben Stand, und dort steht er jetzt.)*
 
 **F3 — Escape kam beim Rahmen nie an.** Erste Fassung: gewöhnlicher Horcher
 in der Blasenphase. `spur()` und `geklemmt()` blieben leer, das Erbe-Buch
@@ -553,3 +559,11 @@ kommentiert, mit den drei eigenen Fehlern und ihren Messungen im Quelltext.
 | **R4** | Preis und Währung nie trennen | **erledigt** — 1 Bruch je Epoche → **0** in allen vier, in beiden Zuständen, ohne neuen Überlauf |
 | **R5** | keine leeren Rechtecke | **Ursache nicht nachstellbar, Abhilfe gebaut** — 0 fehlende Zeichen in allen Zuständen, auch auf dem Vorzustand; die Schriftketten enden jetzt in Unifont, womit ein leeres Rechteck ausgeschlossen ist |
 | **R6** | Flächenhaushalt: eine Regel und ein Gerät | **erledigt** — `BRAUHAUS.haushalt` mit Grenzen je Stück, gemessen im Spiel, `pruefe()` wie `verdeckt()`; je Stück steht die Zahl oben |
+
+Und in `blick-nachher-e4.png` (1970, dieselbe Epoche und dieselben Kästen,
+in denen der Kritiker die zwei roten Rechtecke sah — „FAE" und „BRU" sind
+die Kurzzeichen aus `stuecke/fuhre-daten.js:86` bzw.
+`stuecke/gegner-daten.js:660`): die beiden Kästen stehen da, mit „BRU · LIS"
+und „FAE", und **kein leeres Rechteck darunter**. Das ist ein Blick, keine
+Messung — der Kritiker hat seine Rechtecke in einem anderen Spielstand
+gesehen als jeder, den ich nachstellen konnte.
