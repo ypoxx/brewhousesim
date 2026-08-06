@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-06T03:33:46+00:00",
+ "stand": "2026-08-06T04:31:40+00:00",
  "phase": "Welle 8 hat den Streifen freigeräumt. Das unterste Sechstel des Bildes war zu 60 Prozent von der Bedienoberfläche gedeckt und ist jetzt zu 12 Prozent gedeckt; der Anteil der STADT dort ist von 47 auf null gefallen, und das Hausschild in 1350 von 67 Prozent Deckung auf null. Von der Aufsicht unabhängig nachgemessen. Die Gesamtfläche steigt dabei leicht von 28 auf 30 Prozent — die Werkbank ist umgezogen, nicht verschwunden, und der Builder sagt das selbst. Zwei Berichtigungen gehen an die Aufsicht, beide vom Builder gefunden. Erstens waren die 47 Prozent nicht die Reiterzeile, wie mein Auftrag behauptet hatte, sondern zu 35 Prozent die Bauhof-Lade — ich hatte die Zahl richtig und die Ursache falsch, weil ich vom größten Kasten auf den Schuldigen geschlossen habe, statt je Kasten zu messen. Zweitens war der Stand aus Welle 7 nicht das, was ich für erkämpft hielt: auf der Entwurfsleinwand standen sechs bis neun Zeilen je Epoche mit drei Punkten, zwei Namen sogar nur als drei Punkte. Ein Überlaufzähler sieht das nicht, weil sauber gekürzt wird — es läuft nichts über, es fehlt nur. Und die Kennzahl hat sich bewegt: 1600 ist schlechter geworden und hat die halbe Reserve verloren, 1884 hat das Vorzeichen gedreht, 1970 steht weiter am Rand. Alle vier bleiben unter der Latte. Der Builder hat es selbst gemeldet, mit 24 Läufen als A/B im selben Augenblick.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T16:43:31+00:00",
-   "text": "DER NAME — warum jemand mehr zahlt, als das Bier wert ist · Runde 1 · läuft — DER PREIS liest welt.haus.rufAufschlag noch nicht — eine Zeile in preis.js fehlt, und bis sie da ist, wirkt der Ruf nur ueber Adressen statt auch ueber den Preis. Der Ton ist nur gerufen, nicht komponiert: vierzehn name:-Rufe greifen in den Notfall von kern/ton.js. In E1 und E2 leert sich der Keller nach dem ersten Braujahr (Zustaendigkeit 13, fremde Zahlen), dadurch steht die Klemme dort haeufiger als gedacht — die Regel greift richtig, die Lage ist geliehen."
-  },
   {
    "zeit": "2026-08-01T16:45:03+00:00",
    "text": "NAME R1: Klickfolge zum Nachpruefen, vier Epochen, ohne Quelltext. spiel/?epoche=1&saat=1350 -> links oben steht DER NAME mit Ruf 10, Bekanntheit 18 von 55 (Zielmarke am Balken) und der Zeile 'ohne Namen 900 Pf / unter dem Anker 907 Pf'. Knopf 'Das Zeichen und das Register' oeffnet das Blatt NEBEN dem Band (nicht darueber, das war der erste Fehler und ist behoben). Reiter DAS ZEICHEN zeigt die Verbliste der Epoche, Reiter DAS REGISTER die datierte Spalte. Dann rund 35x WEITER: der Bierkieser kommt unangemeldet, die Klemme erscheint, und ab Woche 30 liegt die Sperre der FUHRE ueber WEITER — von dort geht es nur ueber ihren Knopf 'Michaeli — das Jahr beginnt'. In ?epoche=3 sind 'Emailschilder ausgeben' und 'Das Warenzeichen eintragen' GRAU mit dem Grund darauf. In ?epoche=4 heisst die Liste Kronkorken, Bande, Fernsehspot, Rueckruf, Unterlassung — kein einziger Knopf davon steht in 1350."
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-06T03:33:46+00:00",
    "text": "Welle 8 hat den Streifen freigeräumt. Das unterste Sechstel des Bildes war zu 60 Prozent von der Bedienoberfläche gedeckt und ist jetzt zu 12 Prozent gedeckt; der Anteil der STADT dort ist von 47 auf null gefallen, und das Hausschild in 1350 von 67 Prozent Deckung auf null. Von der Aufsicht unabhängig nachgemessen. Die Gesamtfläche steigt dabei leicht von 28 auf 30 Prozent — die Werkbank ist umgezogen, nicht verschwunden, und der Builder sagt das selbst. Zwei Berichtigungen gehen an die Aufsicht, beide vom Builder gefunden. Erstens waren die 47 Prozent nicht die Reiterzeile, wie mein Auftrag behauptet hatte, sondern zu 35 Prozent die Bauhof-Lade — ich hatte die Zahl richtig und die Ursache falsch, weil ich vom größten Kasten auf den Schuldigen geschlossen habe, statt je Kasten zu messen. Zweitens war der Stand aus Welle 7 nicht das, was ich für erkämpft hielt: auf der Entwurfsleinwand standen sechs bis neun Zeilen je Epoche mit drei Punkten, zwei Namen sogar nur als drei Punkte. Ein Überlaufzähler sieht das nicht, weil sauber gekürzt wird — es läuft nichts über, es fehlt nur. Und die Kennzahl hat sich bewegt: 1600 ist schlechter geworden und hat die halbe Reserve verloren, 1884 hat das Vorzeichen gedreht, 1970 steht weiter am Rand. Alle vier bleiben unter der Latte. Der Builder hat es selbst gemeldet, mit 24 Läufen als A/B im selben Augenblick."
+  },
+  {
+   "zeit": "2026-08-06T04:31:40+00:00",
+   "text": "Siebzehnter Container-Reset überstanden: der Baum stand 333 Commits zurück und das Skript meldete 'origin ist auf Stand'. Die Handprüfung hat es gefangen. Neu war, dass dabei ein Veröffentlicher auf dem alten Baum lief — er ist jetzt gesperrt, solange der Baum hinter origin steht, und das Auftragsdokument wird endlich mitveröffentlicht."
   }
  ]
 }
