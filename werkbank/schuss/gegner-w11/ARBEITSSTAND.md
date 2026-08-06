@@ -224,5 +224,45 @@ Jeder Lauf geht einzeln durch `aufsicht/messfenster.sh` mit
 
 ---
 
+## 4 — Was ich für andere Stücke gefunden habe
+
+**(1) DIE STADT · DIE FUHRE — ein toter Knopf ist wieder lebendig, und das ist
+die einzige Zahl, die ich außerhalb meines Stücks bewegt habe.**
+`stadt.js:1068` räumt einen Pflock ab, dessen Mitte von einem fremden Element
+mit `data-frei` gedeckt wird — „KEIN TOTER KNOPF IM BILD". Im Vorzustand war
+`stadt:marke:fuhre-fluss` in **1970** von einem Kasten des GEGNERS gedeckt und
+wurde deshalb abgeräumt. Jetzt ist er da. Gemessen mit einem vollständigen
+Vergleich aller `[data-zug]` auf beiden Ständen: **das ist der einzige
+Unterschied** (1970: 102 → 103; 1350/1600/1884 unverändert 99/107/110).
+
+**(2) DIE STADT — welche Schicht welches Schild trägt, ist eine Falle für jedes
+Stück.** `zeichneNamen` und `zeichneHausschild` malen ST. MICHAEL, GASTHOF
+LINDENHOF, BAHNHOF und das Hoftorschild in die Ebene **`bau`**; jedes Stück in
+`marken`, `hand`, `kopf` oder `blatt` liegt darüber und kann sie anschneiden.
+`zeichneGegnername` malt BRAUEREI ADLER / ADLER-BRÄU AG / NORDSTERN-GRUPPE
+dagegen in die Ebene **`hand`** mit `z-index: 962` und ist damit geschützt.
+Auflage 3 nennt alle vier in einem Atemzug, aber nur drei von ihnen können
+überhaupt angeschnitten werden. Wer das nicht weiß, sucht am falschen Ende.
+
+**(3) DAS ERBE — Auflage 9 steht am Vorzustand noch offen.** 1970,
+Ladezustand: `.wort` „Versorgungszusage · jährlich" **253 px in 157 px** mit
+`ellipsis`; im gebauten Zustand zusätzlich „Nachschrift · 2 Häuser"
+**199 px in 176 px**. (Gemessen auf `7896ee6`, also vor ihrer Arbeit.)
+
+**(4) DER NAME — zwei gekürzte Beschriftungen, die auf keiner Liste stehen.**
+`.nm-medium`: „Wirtshausschild und gemarkter Krug" **221 px in 208 px** (1600),
+„Kronkorken, Bandenwerbung, Fernsehspot" **258 px in 208 px** (1970). Auflage 9
+des Urteils sagt ausdrücklich: *„Prüft dabei auch die anderen Bänder."*
+
+**(5) DIE FUHRE — `.fu-notsud-zeile` kürzt** 509 px in 482 px (1350) und
+571 px in 482 px (1600), mit Auslassungszeichen. Betrifft eine Zeile mit
+Zahlen („0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die P…").
+
+**(6) DIE STADT — ein Pflock trägt ein abgeschnittenes Wort.**
+`stadt.js:943 markenwort()` schneidet hart bei 22 Zeichen: im Bild steht
+„Adler-Ausschank am Mar". Kein Auslassungszeichen, mitten im Wort.
+
+---
+
 *(Die Zahlen folgen, sobald die Läufe durch sind. Sie werden hier eingetragen,
 sowie sie da sind — nicht erst am Ende.)*
