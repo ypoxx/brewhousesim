@@ -371,6 +371,12 @@ mit `auswerten.py` und `fuhre-w6/schnitte.py`. **Alle drei Läufe je Epoche
 sind byteweise identisch** (gleiche md5) — die strengste Form der
 Gerätekontrolle, die dieser Lauf kennt.
 
+Und ein **vierter Lauf je Epoche auf dem endgültigen Stand**
+(`w9-428fd4f2dbbc`, Hafen 8932, `rho-schluss/`), nachdem das Schild des
+Gegners in die Ebene `hand` gezogen war: `reihe`, `leiterRoh`, `jahre` und
+`schluss` sind mit den zwölf Läufen **Feld für Feld identisch**. Die letzte
+Änderung hat die Wirtschaft also nicht bewegt — gemessen, nicht angenommen.
+
 | Epoche | 12 J | 13 J | 14 J | Jahre < 1× | Wochen Kasse 0 | Seitenfehler |
 |---|---|---|---|---|---|---|
 | 1350 | −0,245 | −0,170 | −0,336 | **2/14** | 0/400 | 0 |
@@ -516,3 +522,27 @@ Damit niemand sie stärker zitiert, als sie ist:
    steht `pr`; ob damit ältere Zahlen jener Datei falsch waren, habe ich
    nicht nachgerechnet.
 6. **Kein blinder Kritiker hat diesen Stand gesehen.**
+
+
+---
+
+## 5 · Was wo liegt
+
+| Datei | was sie ist |
+|---|---|
+| `BEFUND-RUECKVERSCHLECHTERUNG.md` | die Rückverschlechterung, mit beiden Protokollen |
+| `eigenstand.sh` | eingefrorener Stand aus dem Arbeitsbaum, ohne Commit |
+| `deckung.mjs` | Deckung nach Zonen **und nach Stücken**, Verfahren des Kritikers |
+| `wer-oben.mjs` | wem gehören die Kästen im obersten Sechstel |
+| `karte.mjs` | Deckkarte als Raster, ohne Browser — zeigt *wo*, nicht nur *wieviel* |
+| `stadtkaesten.mjs` | die Kästen eines Stücks mit Rechteck und Klassenname |
+| `zielknopf.mjs` | wer deckt `fuhre:ziel:*` zu, bei welcher Fenstergröße |
+| `tor.mjs` | die vier Epochen laden und alles fragen, was Welle 9 prüfen muss |
+| `gespielt.mjs` | 30 Wochen echte Klicks, dann A3 fragen |
+| `kaufprobe.mjs` | geht Bauen noch, wenn die Lade zugeklappt liegt |
+| `hofschuss.mjs` | `?bau=alle` ansehen, mit Rechtecken aller Aufbauten |
+| `abnahme.sh` · `nachprobe.sh` | die ganze Abnahme, sequenziell durchs Messfenster |
+| `bogen/verkehr.txt` · `.json` | Prompt und Schnittplan für die vier Fahrzeuge |
+| `rho/` · `rho-schluss/` | 12 + 4 Läufe, je 400 Wochen |
+| `bild/` | alle Aufnahmen und Ausschnitte, auf die oben verwiesen wird |
+| `log/` | jede Ausgabe jedes Geräts, unbeschnitten |

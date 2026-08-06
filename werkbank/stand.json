@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-06T10:23:03+00:00",
+ "stand": "2026-08-06T10:32:53+00:00",
  "phase": "Welle 9 läuft, DIE STADT allein, und die Ursache der Rückverschlechterung ist gefunden und benannt: es ist ein einziger Klick. Die Zielzeile der FUHRE liegt seit Welle 8 unter der aufgeklappten BAUHOF-Lade der STADT, und das ist der einzige Deckel, den die messende Hand nicht selbst wegklicken kann — alle anderen räumt sie mit einem Reiterklick weg. Aus diesem einen ausgefallenen Klick folgt alles Weitere: sieben ausbleibende Verkäufe, ein ausgefallener Rohstoffkauf, und ab Woche zwei eine Kasse von 62 statt 80. Der Zähler, der das die ganze Zeit gezeigt hätte, stand im Stück selbst und war nie erzwungen worden; er meldet jetzt für die vier Epochen sechs, fünf, fünf und zwei verdeckte fremde Züge vor der Nacharbeit und null danach. Damit ist auch ein Ausschluss der Aufsicht berichtigt: ich hatte am Ladepunkt richtig gemessen, dass die klickbaren Mengen in beiden Ständen gleich sind, und daraus zu weit geschlossen. Eine Momentaufnahme im Stillstand sagt nichts über eine Hand, die sich ihren Weg erst frei klickt. Die Kennzahl wird gerade über alle vier Epochen neu gemessen; danach geht der Stand wieder an einen blinden Kritiker mit derselben Frage: gewinnt das Zielbild noch.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -134,10 +134,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T17:44:05+00:00",
-   "text": "NAME R2: GEMESSEN AM SCHIRM, DREI ARME DESSELBEN GESAETEN SPIELS (E4, saat=1350, 40 Wochen, gleiche Klickfolge). bauen: Einnahmen 577.910 DM, davon 32.877 DM Aufgeld in 100 Buchungen — Gasthof Lindenhof zahlt 130,00 statt 145,43 DM je hl. nichts: 567.977 DM, davon 21.674 Aufgeld — Lindenhof 130,00 -> 141,71. ruhe (Zeichen verdeckt): 545.673 DM, Aufgeld 0, Lindenhof zahlt genau 130,00. Auf annaehernd identischer Menge (4.650 / 4.695 / 4.680 Fass) liegen die Arme 6,0 Prozent auseinander statt 0,05. Genau die Zahl, an der die Runde 1 gescheitert ist — 'Lindenhof zahlt in JEDER Woche ALLER drei Arme exakt 130 DM je hl' — trennt die Arme jetzt."
-  },
   {
    "zeit": "2026-08-01T17:44:05+00:00",
    "text": "NAME R2: WO MAN ES SIEHT, OHNE QUELLTEXT. Neuer dritter Reiter DAS AUFGELD im Blatt, mit (1) drei Summen (diese Woche / dieses Braujahr / seit dem Epochenjahr), (2) der Tafel WAS JEDES HAUS FUER DIESELBE MENGE ZAHLT — je Wirt Menge, Rechnung der Fuhre, Aufgeld und 'je hl 130,0 -> 141,7' —, und (3) jeder einzelnen Buchung mit Jahr, Woche, Wirt, Rechnung, Satz und Ruf. Im Band steht dieselbe Sache klein: die drei Summen, die letzte Buchung im Klartext, und der Knopf name:aufgeldbuch. Die alte Kopfzeile heisst nicht mehr 'ohne Namen', sondern 'Rechnung der Fuhre' gegen 'mit dem Aufgeld'; und was DER NAME NICHT kann, steht DURCHGESTRICHEN daneben: 'und einen hoeheren Grundpreis je Fass — den schreibt DER PREIS, und er liest welt.haus.rufAufschlag noch nicht.'"
@@ -933,6 +929,10 @@
   {
    "zeit": "2026-08-06T10:23:03+00:00",
    "text": "Der Veröffentlicher ist um 08:24 an Altersschwäche gestorben — seine Laufzeit von vier Stunden war um — und danach lagen zwei Stunden lang 21 Dateien ungesichert, darunter die ganze Nacharbeit der STADT und zwölf Messläufe. Neu gestartet mit zwölf Stunden. Der zweite Fehler war meiner: ich habe die Ausgabe der Wiederaufnahmeprüfung abgeschnitten und die Zeile über ihn nie gelesen."
+  },
+  {
+   "zeit": "2026-08-06T10:32:53+00:00",
+   "text": "Welle 9, DIE STADT ist gebaut und gemessen. Die Rueckverschlechterung von 1350 ist geklaert und behoben: es war ein einziger Klick. Die aufgeklappte BAUHOF-Lade lag bei 1920x1000 genau auf fuhre:ziel:bar, die messende Hand konnte sie nicht wegraeumen, das Ziel der Fuhre wurde in 400 Wochen nie gesetzt, und danach stand die Kasse in 70 von 400 Wochen auf null. Die Lade ist jetzt ein Brett wie jedes andere, zugeklappt beim Laden, mit eigenem Reiter. 1350 steht wieder bei Kasse 28 bis 524, null Wochen ohne Geld, zwei von vierzehn Jahren unter 1x, Median 5,69 statt 0,70 — Ziffer fuer Ziffer der Vorzustand. Zwoelf rho-Laeufe, drei je Epoche, alle drei byteweise identisch: 1350 minus 0,245/0,170/0,336, 1600 minus 0,189 plus 0,049 minus 0,116, 1884 plus 0,168/0,346/0,393, 1970 minus 0,112/0,236/0,304 — die Latte haelt zwoelfmal, und keine Epoche hat mehr als die erlaubten zwei Jahre unter 1x. Die Deckung im Ladezustand faellt von 29,0 bis 29,5 auf 21,4 bis 22,0 Prozent, der Anteil DER STADT von 10,6 auf 2,9; nach dreissig gespielten Wochen von 54,7 bis 58,5 auf 46,5 bis 55,4. A1 ist damit NICHT erreicht und von einem Stueck allein nicht erreichbar: im obersten Sechstel liegen die Kopfleiste des Skeletts mit 26 Prozent und der Chronikgriff DES PREISES mit 11,7 — das ist als KERN-Befund gemeldet. Erledigt sind A3 bis A9, offen bleibt die volle Forderung von A7. Latte 4 unveraendert bei 14 Ueberlaeufen und 505 Textknoten, null gekuerzte Namen und Kennzahlen, Gewicht 1600 bei 7,66 von 8 MB. Bericht: werkbank/schuss/stadt-w9/BERICHT.md"
   }
  ]
 }
