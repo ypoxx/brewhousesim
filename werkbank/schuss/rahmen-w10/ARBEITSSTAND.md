@@ -796,3 +796,29 @@ Kasse 28–524, ρ-Reihe 5,8947 · 1,4286 · 3,4167 · 2,4107 · 5,9545 · 1,75 
 über die Stände hinweg und die **md5 innerhalb** eines Standes, wo sie
 aussagekräftig bleibt. Wer die md5 über Stände hinweg vergleicht, misst das
 Leerzeichen.
+
+## Die Nachprobe: das Abnehmen der Wache hat am Bild NICHTS geändert
+
+Ausgelieferter Stand `c9b83c856e55` (Hafen 8932), gegen den Stand mit Wache
+`1f1e9c9b5452` (8931), Ladezustand, `messen.mjs`:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| gesamt, mit Wache | 18,4 % | 19,3 % | 18,7 % | 19,3 % |
+| gesamt, **ohne Wache** | **18,4 %** | **19,3 %** | **18,7 %** | **19,3 %** |
+| oberstes ⅙ | 35,6 / 36,0 / 36,3 / 37,7 % | | | **identisch** |
+| `kern` in px | 95.690 / 97.939 / 101.655 / 101.066 | | | **identisch** |
+| Währungsbruch · über dem Rand · fehlende Zeichen | 0 · 0 · 0 | | | **identisch** |
+
+`tor.mjs` offen in allen vier Epochen. Nach 30 × WEITER und **einem** Escape
+im Spiel gemessen (`rahmenprobe.mjs`, alle vier Epochen):
+`blaetter()` leer · `tafeln()` leer · `ohneGriff()` leer ·
+`geklemmt()` genau ein Eintrag (`erbe .erb-buch blatt`) ·
+`lage` 0 · Seitenfehler 0 · `verdeckt()` 0 ·
+Kopfleiste 10,4 / 10,9 / 11,3 / 11,3 % des obersten Sechstels.
+Die Spur zeigt **einen** Anlauf bei 0 ms — die Aufsicht braucht das Fenster
+gar nicht, solange kein weiteres Neuzeichnen kommt.
+
+**Das war zu erwarten und ist trotzdem gemessen worden:** die Wache hat in
+keinem Zustand je eingegriffen. Sie hat nur Zeit gekostet — und Zeit ist in
+diesem Spiel ein Zustand.
