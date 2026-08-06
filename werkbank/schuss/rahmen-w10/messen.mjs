@@ -38,6 +38,12 @@ const markiere = () => {
   document.querySelectorAll('#buehne *').forEach(el => {
     const c = getComputedStyle(el);
     if (c.visibility === 'hidden' || c.display === 'none') return;
+    /* WEGGESCHNITTEN IST NICHT OFFEN. `.stadt-zugeklappt` traegt
+       clip-path: inset(50%) — die Huelle bleibt 1293x1091, gedeckt wird
+       nichts. bild-w9/deckung.mjs zaehlt sie trotzdem als Kasten; in
+       Bildpunkten macht das nichts aus, in der Tafelliste sehr wohl. */
+    if (/inset\(\s*50%/.test(c.clipPath || '')) return;
+    if (parseFloat(c.opacity) < 0.05) return;
     const r = el.getBoundingClientRect();
     if (r.width < 3 || r.height < 3) return;
     const a = rgba(c.backgroundColor);
@@ -200,6 +206,8 @@ for (const e of [1, 2, 3, 4]) {
   const maske = (kaesten) => {
     const m = new Uint8Array(W * H);
     for (const q of kaesten) {
+      /* Schattenrand: box-shadow faellt neben die Huelle. */
+      q.x -= 40; q.y -= 40; q.b += 80; q.h += 80;
       const x0 = Math.max(0, q.x), y0 = Math.max(0, q.y);
       const x1 = Math.min(W, q.x + q.b), y1 = Math.min(H, q.y + q.h);
       for (let y = y0; y < y1; y++) { const z = y * W; for (let x = x0; x < x1; x++) m[z + x] = 1; }
