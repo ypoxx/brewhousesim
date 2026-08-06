@@ -334,6 +334,12 @@
    ========================================================================== */
 .stadt-werkbank.schmal > .stadt-reiterzeile { max-width: 100%; }
 .stadt-werkbank.schmal { width: 96%; }
+/* Die LADE waechst dabei NICHT mit. Beim Pruefen mit stadt-w9/gespielt.mjs
+   deckte sie in `schmal` genau so weit nach rechts, dass sie den Chronikgriff
+   DES PREISES (x 2356…2722) erwischte — ein Deckel, der nur entsteht, weil
+   ein anderer Kasten breiter wurde. 46/96 = 47,92 % haelt sie auf ihrer
+   alten absoluten Breite. */
+.stadt-werkbank.schmal > .stadt-bauhof { width: 47.92%; align-self: flex-start; }
 .stadt-werkbank.schmal .knopf.stadt-reiter .zahl { display: none; }
 .stadt-werkbank.schmal .knopf.stadt-reiter {
   min-height: calc(var(--s) * 24);

@@ -636,6 +636,13 @@
     lage[schluessel] = (lage[schluessel] === 'zu') ? 'auf' : 'zu';
     /* Der Klick ist die Zeit, nach der die Platzordnung entscheidet. */
     aufZeit[schluessel] = (lage[schluessel] === 'auf') ? Date.now() : 0;
+    /* Die andere Haelfte derselben Regel (A3, Welle 9): wer ein Brett
+       aufschlaegt, klappt die BAUHOF-Lade zu. Sie ist ein Brett wie jedes
+       andere, und zwei aufliegende Blaetter schneiden einander an. */
+    if (lage[schluessel] === 'auf' && !bauhofZu) {
+      bauhofZu = true;
+      B.sende('zeichne', { grund: 'stadt:lade-zu' });
+    }
     if (B.ton && B.ton.spiele) B.ton.spiele('stadt:reiter');
     pruefe();
   }
@@ -1474,7 +1481,24 @@
        Das ist die nachpruefbare Regel, die A3 verlangt; geprueft wird sie
        mit BRAUHAUS.stadt.rahmen.schneidet(), das jedes Brett nennt, dessen
        oberer Rand unter der Werkbank liegt. */
-    var etwasOffen = eintraege.some(function (x) { return lage[x.s] === 'auf'; }) || !bauhofZu;
+    /* `schmal` gilt nur, wenn ein FREMDES Brett aufliegt — dann muss die
+       Reiterzeile ueber dessen Kopf enden. Liegt nur die eigene Lade offen,
+       liegt kein fremder Kopf darunter (sie schliesst sie ja, siehe
+       bauhofSchalten), und die Zeile darf ihre Kennzahlen behalten. */
+    var etwasOffen = eintraege.some(function (x) { return lage[x.s] === 'auf'; });
+    /* Und dieselbe Regel auch dann, wenn das Brett nicht der Spieler
+       aufgeschlagen hat: zum Jahreswechsel schlaegt ein formatfuellendes
+       Blatt von selbst auf ("Ein formatfuellendes Blatt zum Jahreswechsel
+       ist eine Entscheidung"). Gemessen mit stadt-w9/gespielt.mjs: nach
+       dreissig Wochen lag in allen vier Epochen das Jahresblatt DER FUHRE
+       offen UNTER der Lade, obwohl kein Klick beide geoeffnet hatte.
+       Zugeklappt wird hier direkt statt ueber `B.sende('zeichne')` — der
+       Rahmen laeuft gerade selbst, und ein Ereignis von hier aus liefe in
+       seinen eigenen Takt zurueck. */
+    if (etwasOffen && !bauhofZu) {
+      bauhofZu = true;
+      zeichneBauhof(werkbank().querySelector('.stadt-bauhof'));
+    }
     werkbank().classList.toggle('schmal', etwasOffen);
 
     warDa = daJetzt;
