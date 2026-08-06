@@ -175,5 +175,56 @@ Huellen, im Spiel gemessen (`sonde.mjs`), 2752×1536:
 | alle neun (Huellen) **nachher** | **21,8 %** | **22,4 %** | **21,7 %** | **26,5 %** |
 | `verdeckt()` / `lage` / Seitenfehler | 0/0/0 | 0/0/0 | 0/0/0 | 0/0/0 |
 
-*(Fortsetzung: photographische Messung und ρ weiter unten, sobald die
-Laeufe durch sind.)*
+### 3.2 Dieselbe Lage photographisch — das Geraet des blinden Kritikers
+
+`fuhre-w11/messen.mjs` (= `rahmen-w10/messen.mjs`, nur der Zielordner ist
+geaendert), Bildpunkte durch Differenz zweier Aufnahmen, 2752×1536,
+30 × WEITER **ohne** Escape:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Deckung gesamt **vorher** | 48,3 % | 47,9 % | 44,8 % | 53,3 % |
+| Deckung gesamt **nachher** | **22,0 %** | **22,7 %** | **21,9 %** | **26,7 %** |
+| oberstes ⅙ vorher → nachher | 55,8 → **30,5** | 56,4 → **31,1** | 56,3 → **31,1** | 58,8 → **36,9 %** |
+| Mittelband vorher → nachher | 56,8 → **23,6** | 56,1 → **24,5** | 51,4 → **23,4** | 63,5 → **29,1 %** |
+| unterstes ⅙ | 7,0 → 7,0 | 6,7 → 6,7 | 6,6 → 6,6 | 7,2 → 7,2 % |
+| **fuhre** vorher | 1.476.519 | 1.528.368 | 1.398.569 | 1.658.986 px |
+| **fuhre** nachher | **342.331** | **342.202** | **328.844** | **275.433 px** |
+| fuhre, oberstes ⅙ | 25,3 → **0,0** | 25,9 → **0,0** | 25,5 → **0,0** | 23,0 → **0,0 %** |
+| über dem Rand | 0 → 0 | 0 → 0 | 0 → 0 | 0 → 0 |
+| Währungsbruch | 0 → 0 | 0 → 0 | 0 → 0 | 0 → 0 |
+| fehlende Zeichen | 0 → 0 | 0 → 0 | 0 → 0 | 0 → 0 |
+| `lage` / Seitenfehler / `verdeckt()` | 0/0/0 | 0/0/0 | 0/0/0 | 0/0/0 |
+
+Das Blatt selbst, photographisch als groesster Kasten der FUHRE gemessen:
+**716×254 = 181.909 px²** (1350) und **716×239 = 171.288 px²** (1970) —
+gegen 1.351.246 bzw. 1.504.427 px² vorher.
+
+**Zwei Dinge, die gegen die schoene Zahl sprechen, und sie stehen hier:**
+
+**Erstens: photographisch deckt DIE FUHRE 342.331 px, die Huelle nur
+195.456.** Der Unterschied sind Schlagschatten und der Aufschlag aus §1.2 —
+die Reiterzeile der STADT aendert sich, wenn man der FUHRE die Schrift
+wegnimmt. Der Anteil DER FUHRE ist damit weiter zu hoch angesetzt, und zwar
+in beiden Spalten gleichermassen; das Verhaeltnis 1.476.519 → 342.331
+(−77 %) traegt trotzdem.
+
+**Zweitens: ein Teil des Gewinns ist an andere Stuecke weitergegeben, nicht
+eingespart.** Die grosse Tafel hat fremde Kaesten verdeckt und die
+Platzordnung der STADT dazu gebracht, fremde Bretter zuzuklappen. Der kleine
+Anschlag tut das nicht mehr. Gemessen auf demselben Stand, 1970:
+
+| | vorher | nachher |
+|---|---|---|
+| gegner | 319.548 px | **554.170 px** |
+| erbe (1350) | 142.518 px | **208.703 px** |
+
+Diese Zunahme ist **nicht** die Arbeit DES GEGNERS oder DES ERBEN — beide
+sind auf diesem Stand unveraendert. Sie ist meine: was vorher unter meiner
+Tafel lag, liegt jetzt frei. Beide Stuecke raeumen in derselben Welle in
+ihre Grenzen (28.000 px); danach faellt die Summe entsprechend. Die Zahl
+„Gesamtdeckung unter 20 %" ist deshalb ein gemeinsames Ergebnis der drei
+und nicht meines allein: allein DIE FUHRE bringt sie auf **21,9 bis
+26,7 %**.
+
+*(Fortsetzung: ρ, Lesbarkeit und Abnahme weiter unten.)*
