@@ -258,6 +258,36 @@ for (const e of [1, 2, 3, 4]) {
     await s.waitForTimeout(150);
   }
 
+  /* EINZELNE KAESTEN DES RAHMENS — die Zahl, nach der Auflage R1 fragt:
+     „die Kopfleiste ALLEIN unter 12 % des obersten Sechstels". Der
+     Stueck-Anteil `kern` traegt Kopfleiste, Hauszeile, WEITER und das
+     Deckungsband zusammen; hier wird jeder fuer sich weggenommen.
+     Laeuft NACH allen Stueck-Durchgaengen und aendert an ihnen nichts —
+     maske() ist nicht mehr veraendernd (der Fehler, der die Koordinaten der
+     ersten Messung verschoben hat, steckte genau dort). */
+  const EINZELN = ['.kopfleiste', '.hauszeile', '.deckung', '[data-zug="weiter"]'];
+  const jeKasten = {};
+  for (const sel of EINZELN) {
+    const da = await s.evaluate((q) => {
+      const el = document.querySelector('#buehne ' + q);
+      if (!el) return null;
+      el.setAttribute('data-w10einzeln', '1');
+      const r = el.getBoundingClientRect();
+      return { x: Math.round(r.x), y: Math.round(r.y),
+               b: Math.round(r.width), h: Math.round(r.height) };
+    }, sel);
+    if (!da) { jeKasten[sel] = null; continue; }
+    await s.evaluate(() => document.querySelectorAll('[data-w10einzeln]')
+      .forEach(el => { el.style.visibility = 'hidden'; }));
+    await s.waitForTimeout(220);
+    const bild = await s.screenshot();
+    jeKasten[sel] = Object.assign({ huelle: da.b * da.h, mass: `${da.b}×${da.h} @${da.x},${da.y}` },
+      zonen(pngLesen(bild), maske([{ x: da.x, y: da.y, b: da.b, h: da.h }])));
+    await s.evaluate(() => document.querySelectorAll('[data-w10einzeln]')
+      .forEach(el => { el.style.visibility = ''; el.removeAttribute('data-w10einzeln'); }));
+    await s.waitForTimeout(150);
+  }
+
   const p = v => v.toFixed(1).padStart(5) + ' %';
   bericht.push(`\n=== EPOCHE ${e}${WOCHEN ? ' nach ' + WOCHEN + ' Wochen' : ''}${ESC ? ' + ' + ESC + '× Escape' : ''}`
     + `   lage ${lage}  Seitenfehler ${fehler.length}  verdeckt() ${verdeckt}`);
