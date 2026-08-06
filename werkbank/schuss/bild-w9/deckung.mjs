@@ -72,7 +72,7 @@ for (const e of [1, 2, 3, 4]) {
     .forEach(el => { el.style.visibility = 'hidden'; }));
   await s.waitForTimeout(300);
   const nackt = await s.screenshot();
-  writeFileSync(`werkbank/schuss/bild-w9/bilder/e${e}-nackt${WOCHEN ? '-w' + WOCHEN : ''}.png`, nackt);
+  writeFileSync(`werkbank/schuss/bild-w9/bilder/e${e}-nackt${WOCHEN ? "-w" + WOCHEN : ""}${process.env.ESCAPE ? "-esc" : ""}.png`, nackt);
 
   const A = pngLesen(voll), Bd = pngLesen(nackt);
   const zone = (y0, y1) => {
