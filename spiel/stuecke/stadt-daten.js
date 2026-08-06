@@ -509,6 +509,56 @@ var STADT_DATEN = {
       von: 4, bis: 4, wenn: 'kellervoll',
       sagt: 'Der zweite Palettenstapel — der Keller ist voll.' },
 
+    /* --- 1970: DER VERKEHR AUF DER ASPHALTSTRASSE.  AUFLAGE A8, Welle 9.
+
+       Der blinde Kritiker hat 1970 am deutlichsten gegen das Spiel
+       entschieden, und aus diesem Motiv heraus: "Auf der Asphaltstrasse
+       faehrt niemand. Im untersten Sechstel (y 1280…1536) traegt das
+       Zielblatt drei Autos — einen cremefarbenen Kaefer links, eine rote
+       Limousine in der Mitte, eine helle rechts daneben. Im Spiel steht dort
+       kein einziges Fahrzeug: leerer Asphalt mit Mittelstreifen. Auf dem
+       ganzen Bildschirm zaehlt das Spiel ZWEI Personenwagen; das Zielblatt
+       traegt sieben plus einen Stadtbus."
+
+       Vier neue Bilder, mit demselben Geraet erzeugt und geschnitten wie die
+       Hoffracht der Welle 8 (bogen/verkehr.txt -> gen_image.py -> Magenta-
+       schluessel in stadt-w8/schneiden.mjs): Kaefer, Limousine, Kombi,
+       Stadtbus. Zusammen 196 KB, und NUR in Epoche IV geladen — 1970 lag mit
+       4,45 von 8 MB am weitesten unter dem Gewichtsveto, 1600 mit 7,63 am
+       naechsten daran. Was 1600 nicht braucht, laedt 1600 nicht.
+
+       Sie liegen auf der Fahrbahn, nicht daneben: die Mittellinie der Platte
+       1970 laeuft durch (52,3|75,5) - (45,1|85,3) - (38,9|93,1) -
+       (34,9|98,3), abgelesen an den gemalten Strichen im Ausschnitt
+       stadt-w9/bild/schnitt-e4-strasse.png. Der Ort 'strasse' (50|89) liegt
+       daneben auf dem Gehweg — er ist fuer alle vier Epochen festgeschrieben
+       und wird deshalb NICHT bewegt, sondern nur mit dx/dy verlassen.
+
+       `wenn: 'immer'`: Verkehr ist keine Aussage ueber den Keller. --- */
+    { schluessel: 'auto_kaefer', bild: 'auto_kaefer',
+      ort: 'strasse', dx: -6, dy: -1,
+      breite: 8,
+      von: 4, bis: 4, wenn: 'immer',
+      sagt: 'Ein Käfer auf der Bundesstraße.' },
+
+    { schluessel: 'auto_limousine', bild: 'auto_limousine',
+      ort: 'strasse', dx: -12, dy: 6,
+      breite: 9,
+      von: 4, bis: 4, wenn: 'immer',
+      sagt: 'Eine Limousine, stadtauswärts.' },
+
+    { schluessel: 'auto_kombi', bild: 'auto_kombi',
+      ort: 'strasse', dx: -1.5, dy: -10,
+      breite: 6.5,
+      von: 4, bis: 4, wenn: 'immer',
+      sagt: 'Ein Kombi mit Dachgepäck.' },
+
+    { schluessel: 'auto_bus', bild: 'auto_bus',
+      ort: 'strasse', dx: 1.5, dy: -14,
+      breite: 11,
+      von: 4, bis: 4, wenn: 'immer',
+      sagt: 'Der Stadtbus hält an der Brauerei.' },
+
     /* --- Das Gespann im Tor. Es faehrt nur, wenn es etwas zu fahren gibt.
        Es steht in der Torgasse und deshalb VOR der Mauer; ohne 'gasse'
        laege der Wagen hinter dem eigenen Torbogen. --- */
