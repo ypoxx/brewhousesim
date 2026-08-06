@@ -71,6 +71,19 @@ setze() {                       # $1 = Name, $2 = Hafen, $3… = Pfade aus $ALT
   fi
 }
 
+# EIN STUECK IST NICHT SEINE .js — ES IST .js UND .css.
+# Der erste Anlauf dieser Probe hat nur die Skripte zurueckgesetzt. Beide
+# Mischstaende kamen daraufhin auf DIESELBEN Zahlen wie der volle Welle-8-Stand
+# (3/14 Jahre unter 1x, 70 bzw. 74 Wochen ohne Kennzahl) — es sah aus, als sei
+# KEINES der beiden Stuecke die Ursache. Der Grund war die Probe selbst:
+# `stadt.css` allein hat 185 Zeilen geaendert und stand in beiden Staenden in
+# der NEUEN Fassung. Und dass Layout die Kennzahl bewegt, ist in diesem Lauf
+# gemessen (Knopfboden, 1970, 0,811) — die messende Hand klickt, was sie
+# trifft, und was verdeckt ist, klickt sie nicht.
+# Die Besitztabelle in spiel/LIESMICH.md sagt es woertlich: einem Stueck
+# gehoeren stuecke/<name>*.js UND stil/<name>*.css.
 echo "TRENNPROBE $ALT (alt) gegen $NEU (neu)"
-setze ohnePreis 8911 spiel/stuecke/preis.js spiel/stuecke/preis-daten.js
-setze ohneStadt 8912 spiel/stuecke/stadt.js spiel/stuecke/stadt-daten.js
+setze ohnePreis 8911 spiel/stuecke/preis.js spiel/stuecke/preis-daten.js \
+                     spiel/stil/preis-zusatz.css
+setze ohneStadt 8912 spiel/stuecke/stadt.js spiel/stuecke/stadt-daten.js \
+                     spiel/stil/stadt.css spiel/stil/stadt-zusatz.css
