@@ -1,0 +1,14 @@
+Stand  Lauf    J          Kasse  Fehler  md5(8)   Partie gleich wie A?
+------------------------------------------------------------------------------
+OHNE   A      14         28–524       0  35fb3b08  —
+OHNE   B      14         28–524       0  35fb3b08  JA
+OHNE   C      14         28–524       0  35fb3b08  JA
+  -> OHNE: 3 Laeufe, 1 verschiedene Partien, 1 verschiedene Pruefsummen  GERAET DICHT
+------------------------------------------------------------------------------
+VOR    A      14         28–524       0  8ea995fa  —
+VOR    B      14         28–524       0  8ea995fa  JA
+VOR    C      14         28–524       0  8ea995fa  JA
+  -> VOR: 3 Laeufe, 1 verschiedene Partien, 1 verschiedene Pruefsummen  GERAET DICHT
+------------------------------------------------------------------------------
+VOR-A gegen OHNE-A — dieselbe Partie? JA
+  (die md5 unterscheidet sich immer: das geschuetzte Leerzeichen im Preisschild steht im mitgeschriebenen Knopftext.)

@@ -822,3 +822,44 @@ gar nicht, solange kein weiteres Neuzeichnen kommt.
 **Das war zu erwarten und ist trotzdem gemessen worden:** die Wache hat in
 keinem Zustand je eingegriffen. Sie hat nur Zeit gekostet — und Zeit ist in
 diesem Spiel ein Zustand.
+
+## DAS ERGEBNIS DER SAATPROBE — der Befund ist eindeutig
+
+`werkbank/schuss/rahmen-w10/saat-ergebnis.txt`, Epoche 1350, 400 Wochen,
+`?saat=1350`, jeder Lauf einzeln durchs Messfenster, abwechselnd VOR/OHNE,
+damit kein Zeitraum einem Stand zugutekommt:
+
+| Stand | Läufe | verschiedene Partien | md5 | Urteil |
+|---|---|---|---|---|
+| **VOR** `37f4b44` (8930) | 3 | **1** | `8ea995fa…` dreimal | **Gerät dicht** |
+| **MIT Wache** `1f1e9c9b5452` (8931) | 3 | **2** | ρ(14 J) −0,336 · **+0,270** · −0,336 | **AUSEINANDER** |
+| **OHNE Wache** `c9b83c856e55` (8932) | 3 | **1** | `35fb3b08…` dreimal | **Gerät dicht** |
+
+Und: **VOR und OHNE spielen dieselbe Partie** — 14 Braujahre, Kasse 28–524,
+Kennzahlreihe Ziffer für Ziffer gleich. (Die md5 unterscheidet sich zwischen
+den Ständen nur wegen des geschützten Leerzeichens im mitgeschriebenen
+Knopftext; siehe die Falle oben.)
+
+**Damit ist die Frage der Aufsicht beantwortet, und zwar nicht mit einer
+Mehrheit, sondern mit einer Ursache:**
+
+1. Der Vorzustand ist **auf dieser Maschine, heute, dreimal derselbe**. Die
+   Streuung kam nicht von der Maschine und nicht vom Messgerät.
+2. Der Stand **mit** der uhrgetriebenen Wache läuft auseinander.
+3. Der Stand **ohne** sie ist wieder dreimal derselbe — und zwar dieselbe
+   Partie wie der Vorzustand.
+
+**Die Ursache war mein eigener Code, und es war genau die Sorte, die die
+Aufsicht benannt hat: ein Verhalten an einer Wanduhr statt an einem
+Zustand.** Die Wache hat nie eingegriffen; sie hat nur bei jedem Bildaufbau
+ein Layout erzwungen und damit die Phase gegen die Fristen der STADT
+verschoben (Takt 240 ms, Handfrist 1400 ms, Jahresfrist 1800 ms).
+
+**Die Lehre, die über diese Welle hinausgeht und deshalb hier steht:** ein
+Rahmen darf während des Spielens nichts auf einer Frist tun. Nicht „wenig",
+nicht „gedrosselt" — nichts. Wer eine Regel durchsetzen will, hängt sie an
+ein Ereignis (`BRAUHAUS.blatt.melde()`), an eine Taste (Escape) oder an eine
+Abfrage (`BRAUHAUS.haushalt.blaetter()`). Eine gedrosselte Wache sieht
+harmlos aus, weil sie in der Messung nie etwas tut — und genau das macht sie
+gefährlich: sie fällt nur an der Stelle auf, an der zwei gleiche Saaten
+auseinanderlaufen.
