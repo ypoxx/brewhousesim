@@ -62,6 +62,9 @@ for (const e of [1, 2, 3, 4]) {
     await s.evaluate(() => { const k = document.querySelector('[data-zug="weiter"]'); if (k) k.click(); });
     await s.waitForTimeout(180);
   }
+  if (process.env.ESCAPE) {           // Lesetafeln beiseitelegen — der faire Fall
+    for (let i = 0; i < 3; i++) { await s.keyboard.press('Escape'); await s.waitForTimeout(250); }
+  }
   await s.waitForTimeout(700);
   const n = await s.evaluate(istKasten);
   const voll = await s.screenshot();
