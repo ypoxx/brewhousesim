@@ -210,6 +210,27 @@
   pointer-events: none !important;
 }
 
+/* EINE KARTE, DIE UNTER EINEM AUFLIEGENDEN BLATT LIEGT.  (Auflage A3, Welle 9)
+
+   Der blinde Kritiker: das Brett DER SUD legt sich auf die Karte BRAUHAUS
+   ZUM ADLER und "schneidet die Ziffernreihe waagerecht in der Mitte durch;
+   lesbar bleiben nur die oberen Haelften". Eine halb gelesene Zahl ist
+   schlimmer als eine, die man erst wieder aufdeckt — also verschwindet die
+   Karte, solange das Blatt liegt, und kommt zurueck, sobald es zuklappt.
+
+   Warum eine eigene Klasse und nicht `.stadt-zugeklappt`: was ZU traegt,
+   gilt dem Rahmen als BRETT und bekaeme einen Reiter. Eine Karte ist kein
+   Brett; sie hat keinen. */
+.stadt-verdeckt {
+  clip-path: inset(50%) !important;
+  pointer-events: none !important;
+}
+
+/* Zugeklappte BAUHOF-Lade: wirklich weg, nicht nur weggeschnitten. Sie ist
+   das eigene Brett der STADT und traegt keine lebenden Zahlen, die im
+   Reiter stehen muessten — die stehen dort ohnehin (`bauhofKennzahl()`). */
+.stadt-bauhof[hidden] { display: none !important; }
+
 .fach-blatt-stadt { z-index: 80; }
 
 /* ==========================================================================
@@ -300,17 +321,38 @@
 .knopf.stadt-reiter {
   /* Der Reiter ist so breit wie seine Ueberschrift. Die Kennzahl darunter
      zaehlt fuer die Breite nicht mit (width:0 / min-width:100%) — sonst
-     schoebe eine lange Zahl den Namen des Bretts aus dem Reiter. */
+     schoebe eine lange Zahl den Namen des Bretts aus dem Reiter.
+
+     WELLE 9, AUFLAGE A1 — DER REITER GIBT FLAECHE ZURUECK.
+     Gemessen (`stadt-w9/deckung.mjs`, Verfahren des blinden Kritikers):
+     DIE STADT deckte im Ladezustand 10,6 % des Rahmens und 14,4 % des
+     obersten Sechstels; davon rund 3,2 Punkte die zehn Reiter. Die Auflage
+     verlangt die Haelfte der GESAMTEN Deckung.
+
+     Was hier weicht, ist Polster und Mindestbreite, nicht Inhalt:
+       min-width  248 -> 132   (die Kachel misst jetzt ihren Namen, statt
+                                jeden Reiter auf die Breite des laengsten
+                                zu ziehen — "DER SUD" brauchte 248 fuer
+                                sieben Buchstaben)
+       min-height  44 ->  30
+       Polster    4/14/6 -> 3/8/4
+       Schrift     20 ->  16 (Name) und 14 -> 12 (Kennzahl)
+     Die 12-px-Untergrenze der vierten Latte steht in beiden Regeln weiter
+     drin und greift bei 1366x768 unveraendert — dort aendert sich die
+     Schriftgroesse durch diese Zeile NICHT, nur auf der Entwurfsleinwand.
+     Gekuerzt wird weiterhin nichts: `setzeAufschrift()` bricht um, und
+     `reiterprobe.mjs` zaehlt weiter 0 gekuerzte Namen und 0 gekuerzte
+     Kennzahlen. */
   position: relative;
   flex: 0 0 auto;
-  min-width: calc(var(--s) * 248);
-  max-width: calc(var(--s) * 420);
+  min-width: calc(var(--s) * 132);
+  max-width: calc(var(--s) * 330);
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: calc(var(--s) * 1);
-  min-height: calc(var(--s) * 44);
-  padding: calc(var(--s) * 4) calc(var(--s) * 14) calc(var(--s) * 6);
+  gap: 0;
+  min-height: calc(var(--s) * 30);
+  padding: calc(var(--s) * 3) calc(var(--s) * 8) calc(var(--s) * 4);
   background: linear-gradient(180deg, #7b5230 0%, #56341a 100%);
   border: calc(var(--s) * 3) solid #33200e;
   border-bottom: none;

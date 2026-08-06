@@ -439,6 +439,10 @@
      ==================================================================== */
 
   var ZU = 'stadt-zugeklappt';
+  /* Zweite, getrennte Marke: eine KARTE, die unter einem aufliegenden Brett
+     liegt. Sie darf nicht ZU heissen — was ZU traegt, gilt dem Rahmen als
+     Brett und bekaeme einen Reiter. (Auflage A3, Welle 9.) */
+  var VERDECKT = 'stadt-verdeckt';
   var FENSTER = { x0: 0, y0: 11.2, x1: 100, y1: 87.5 };
   var GRENZE = 0.035;           /* Anteil der Buehnenflaeche — so gross darf ein Brett ruhen */
   var MARKE = 0.024;            /* ... und so gross ist eine Ortsmarke hoechstens */
@@ -1324,6 +1328,7 @@
     var benutzt = {};
     var daJetzt = {};
     var eintraege = [];
+    var karten = [];              /* zu klein fuer ein Brett — Karten im Bild */
 
     liste.forEach(function (b) {
       var s = schluesselVon(b);
@@ -1340,6 +1345,7 @@
          ueber der Stadt, nur eben knapp unter der Grenze. */
       if (!b.verwirkt && anteil(r, false) <= GRENZE && !b.el.classList.contains(ZU)) {
         gesehen[s] = jetzt;
+        karten.push({ el: b.el, r: r, s: s });
         return;
       }
 
@@ -1391,9 +1397,94 @@
       });
     });
 
+    /* AUFLAGE A3, zweiter Fall — EIN AUFLIEGENDES BLATT SCHNEIDET KEINE
+       KARTE MEHR AN.
+
+       Der blinde Kritiker, woertlich: "Die Karte BRAUHAUS ZUM ADLER
+       (x 1965…2370, y 585…745) traegt drei Zahlen — Zuege, Kasse, sein
+       Preis. Das Brett DER SUD legt sich mit seiner Oberkante auf y ≈ 700
+       und schneidet die Ziffernreihe waagerecht in der Mitte durch; lesbar
+       bleiben nur die oberen Haelften."
+
+       Der Grund stand genau hier: alles unter GRENZE (3,5 % der Buehne)
+       galt als "Marke im Bild, kein Brett" und wurde von der Platzordnung
+       nie angesehen. Eine Marke kann aber sehr wohl ANGESCHNITTEN werden —
+       nur eben von oben, nicht von der Seite.
+
+       Die Regel ist dieselbe wie fuer Bretter, mit derselben Schwelle
+       (DECKGRENZE): deckt ein AUFLIEGENDES Brett mehr als 12 % einer
+       Karte, verschwindet die Karte, solange das Brett liegt. Sie kommt
+       zurueck, sobald es zuklappt — eine halb gelesene Zahl ist schlimmer
+       als eine, die man erst wieder aufdeckt. Nachpruefbar mit
+       BRAUHAUS.stadt.rahmen.schneidet(). */
+    var offeneKaesten = eintraege.filter(function (x) { return lage[x.s] === 'auf'; })
+      .map(function (x) { return x.r; });
+    karten.forEach(function (k) {
+      var drunter = offeneKaesten.some(function (r) {
+        return ueberdeckung(r, k.r) > DECKGRENZE;
+      });
+      if (drunter) k.el.classList.add(VERDECKT);
+      else k.el.classList.remove(VERDECKT);
+    });
+
+    /* AUFLAGE A3, erster Fall — DIE WERKBANK WEICHT DEM AUFLIEGENDEN BLATT.
+
+       "Die Ueberschrift des Standbuchs (x 40…1210, y 230…290) liest sich
+       als „…dtbuch · II. Hand", weil der Reiter DAS ERBE die ersten drei
+       Buchstaben verdeckt. Darueber schneidet die BAUHOF-Leiste quer durch
+       den Blattkopf."
+
+       Die Lade ist seit Welle 9 zugeklappt (siehe oben), damit ist die
+       zweite Haelfte des Befunds erledigt. Fuer die erste gilt: solange
+       ein Brett aufliegt, traegt die Reiterzeile nur noch die NAMEN und
+       passt damit in den Streifen zwischen Kopfleiste (endet 113) und dem
+       obersten Blattkopf (beginnt 190). Die Kennzahlen stehen dann dort,
+       wo sie ohnehin vollstaendig stehen: auf dem aufgeschlagenen Brett —
+       und ein Klick auf "Stadt zeigen" holt sie alle zurueck.
+
+       Das ist die nachpruefbare Regel, die A3 verlangt; geprueft wird sie
+       mit BRAUHAUS.stadt.rahmen.schneidet(), das jedes Brett nennt, dessen
+       oberer Rand unter der Werkbank liegt. */
+    var etwasOffen = eintraege.some(function (x) { return lage[x.s] === 'auf'; }) || !bauhofZu;
+    werkbank().classList.toggle('schmal', etwasOffen);
+
     warDa = daJetzt;
     var ruhend = marken(jetzt);
     zeichneReiter(reiter, ruhend);
+  }
+
+  /* Welche Ueberschrift liegt unter der Werkbank? Gibt eine leere Liste,
+     wenn keine — das ist die Abnahme fuer A3. Gemessen wird der obere
+     Streifen jedes aufliegenden Bretts (die ersten 60 Bezugspixel, dort
+     steht der Kopf), nicht sein ganzes Rechteck. */
+  function schneidetVonWerkbank() {
+    var w = werkbank();
+    var kaesten = [];
+    ['.stadt-reiterzeile', '.stadt-bauhof'].forEach(function (q) {
+      var t = w.querySelector(q);
+      if (!t || t.hidden) return;
+      var r = t.getBoundingClientRect();
+      if (r.width > 2 && r.height > 2) kaesten.push({ q: q, r: r });
+    });
+    var m = B.buehne.masse();
+    var kopfhoch = m.hoehe * 60 / 1536;
+    var raus = [];
+    fremdeBretter().forEach(function (b) {
+      if (b.el.classList.contains(ZU) || b.el.classList.contains(VERDECKT)) return;
+      var r = b.el.getBoundingClientRect();
+      if (r.width < 8 || r.height < 8) return;
+      var kopf = { left: r.left, right: r.right, top: r.top,
+                   bottom: Math.min(r.bottom, r.top + kopfhoch),
+                   width: r.width, height: Math.min(r.height, kopfhoch) };
+      kaesten.forEach(function (k) {
+        if (ueberdeckung(k.r, kopf) > 0.02) {
+          raus.push({ wer: b.wer, unter: k.q,
+                      kopf: [Math.round(kopf.left), Math.round(kopf.top),
+                             Math.round(kopf.right), Math.round(kopf.bottom)] });
+        }
+      });
+    });
+    return raus;
   }
 
   function pruefe() {
@@ -1691,12 +1782,45 @@
   var bauhofSeite = 'bau';        /* 'bau' | 'geld' */
   var seiteGewaehlt = false;      /* hat der Spieler selbst umgeschlagen? */
 
+  /* Was auf dem Reiter steht, solange die Lade zugeklappt ist. Es ist
+     dieselbe Auskunft wie im Kopf der Lade, nur in einer Zeile — der
+     billigste offene Bau mit seinem Preis, und wenn nichts mehr offen ist,
+     was der Hof noch wert waere. Gekuerzt wird nie: `setzeAufschrift`
+     bricht um, und die Zeile bricht mit. */
+  function bauhofKennzahl() {
+    var ep = e();
+    var baubar = offen(ep).sort(function (a, b) { return a.grund - b.grund; });
+    if (!baubar.length) {
+      var v = verwertbar(ep);
+      return v.length
+        ? 'fertig gebaut · ' + v.length + ' zu ' + verwertungsArt(ep).wort.toLowerCase()
+        : 'für diese Zeit fertig gebaut';
+    }
+    var kann = baubar.filter(function (a) { return B.welt.kann(preis(a, ep)); }).length;
+    return baubar.length + ' offen · ab ' + B.welt.geld(preis(baubar[0], ep))
+      + ' · ' + (kann ? kann + ' bezahlbar' : 'keiner bezahlbar');
+  }
+
   function zeichneBauhof(kasten) {
     var ep = e();
     var art = verwertungsArt(ep);
     var baubar = offen(ep).sort(function (a, b) { return a.grund - b.grund; });
     var geldListe = verwertbar(ep).sort(function (a, b) { return preis(b, ep) - preis(a, ep); });
     var traegt = baubar.filter(function (a) { return B.welt.kann(preis(a, ep)); }).length;
+
+    /* DER NENNER DER ZWEITEN LATTE — vor jedem Zuklappen gemeldet.
+       Er haengt nicht daran, ob die Lade offen liegt: der billigste offene
+       Bau ist der naechste sinnvolle Zug dieses Stuecks, ob man ihn gerade
+       sieht oder nicht. Stuende die Meldung hinter dem Zuklappen, waere
+       rho verschoben, ohne dass sich am Spiel etwas geaendert haette. */
+    if (baubar.length) {
+      B.welt.meldeZug('Bau ' + baubar[0].name, preis(baubar[0], ep), 'lage');
+    }
+
+    /* Zugeklappt heisst hier wirklich weg — kein Kasten, kein Deckel,
+       keine Bildpunkte. Der Reiter darueber traegt die Zahlen weiter. */
+    if (bauhofZu) { B.leere(kasten); kasten.hidden = true; return; }
+    kasten.hidden = false;
 
     /* Solange der Spieler nicht selbst umgeschlagen hat, schlaegt der Kasten
        selbst auf die Seite, auf der noch etwas geht. Das ist die Antwort auf
@@ -1738,17 +1862,6 @@
 
     var reihe = B.el('div', 'reihe');
     kasten.appendChild(reihe);
-
-    /* Die eine Zahl der Messlatte: der naechste sinnvolle Zug. Er haengt
-       NICHT daran, welche Seite gerade oben liegt — der billigste offene Bau
-       ist der naechste Zug dieses Stuecks, auch wenn der Kasten gerade zeigt,
-       womit man ihn bezahlen koennte. Der dritte Wert sagt, was fuer ein Zug
-       das ist: ein Bau aendert die Lage, er ist kein Umtrunk. Vier Stuecke
-       melden ihn inzwischen mit; der Kern nimmt ihn noch nicht an — siehe
-       Bericht, Absatz KERN. */
-    if (baubar.length) {
-      B.welt.meldeZug('Bau ' + baubar[0].name, preis(baubar[0], ep), 'lage');
-    }
 
     if (geld) { zeichneVerwertung(reihe, liste, ep, art); return; }
 
@@ -2016,7 +2129,10 @@
       lage: function () { return JSON.parse(JSON.stringify(lage)); },
       zeige: alleZuklappen,
       schalte: schalte,
-      verdeckt: verdecktVonWerkbank
+      verdeckt: verdecktVonWerkbank,
+      /* A3, Welle 9: welche Ueberschrift liegt unter der Werkbank? */
+      schneidet: schneidetVonWerkbank,
+      bauhof: function () { return bauhofZu ? 'zu' : 'auf'; }
     },
     /* Die Kartenschicht: wer seine Marke selbst setzen will, setzt data-frei
        und wird nicht mehr angefasst — wie beim Rahmen. */
