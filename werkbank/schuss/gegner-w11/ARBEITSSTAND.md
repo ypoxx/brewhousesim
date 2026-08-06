@@ -199,4 +199,30 @@ allein stehen.
 
 ---
 
-*(Fortsetzung wird während der Arbeit geschrieben — Messungen laufen.)*
+## 3 — Wie gemessen wird, und warum ein eigener Nachstand nötig war
+
+**VORHER** = `aufsicht/messstand.sh 7896ee6 8961` — der eingefrorene Vorzustand
+des Auftrags.
+
+**NACHHER** = `gegner-w11/nachstand.sh 8962` — und das ist **kein** Abbild des
+Arbeitsbaums. In dieser Welle arbeiten drei Builder gleichzeitig im selben
+Baum; eine Kopie des Baums enthielte auch den halbfertigen Stand von DAS ERBE
+und DIE FUHRE, und jede Zahl daraus wäre eine Mischung. **Beim ersten Versuch
+am Arbeitsbaum war das sofort sichtbar:** der Reiter „Das Erbe" fehlte in der
+Reiterzeile, `pruefe()` nannte DAS ERBE nicht mehr, und die Zahl der `data-zug`
+in 1350 fiel von 99 auf 95 — nichts davon meine Arbeit.
+
+Der Nachstand ist deshalb ein **Mischstand**: `git archive 7896ee6`, und darin
+genau die fünf Dateien, die mir gehören —
+`stuecke/gegner.js` · `gegner-daten.js` · `gegner-zusatz.js` ·
+`stil/gegner.css` · `gegner-zusatz.css`. **`.js` UND `.css`** — das war der
+Fehler beim ersten Anlauf der Trennprobe in Welle 8 und steht ausdrücklich in
+`WELLE-11.md`. Die Marke trägt beides: `7896ee6+gegner-<md5>`.
+
+Jeder Lauf geht einzeln durch `aufsicht/messfenster.sh` mit
+`MESSFENSTER_WARTE=7200`. Nie zwei Browser nebeneinander.
+
+---
+
+*(Die Zahlen folgen, sobald die Läufe durch sind. Sie werden hier eingetragen,
+sowie sie da sind — nicht erst am Ende.)*
