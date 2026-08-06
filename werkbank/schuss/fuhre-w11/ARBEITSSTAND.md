@@ -725,6 +725,40 @@ der letzten Marke noch einmal gemessen worden — §3.9.
 
 ---
 
+### 3.9 Die Abnahme auf dem Stand, der ausgeliefert wird
+
+`abnahme.sh`, Marke **`7896ee6+3082041165`** (`messungen/abn-marke.txt`),
+jeder Lauf einzeln durchs Messfenster. Der Grund steht in §3.8: die Zahlen
+aus §3.1–3.7 stehen auf `118b191467`, und „nur Kommentar geaendert" ist ein
+Argument, kein Messwert.
+
+**30 × WEITER, ohne Escape, 2752×1536** (`messungen/abn-sonde-w30.txt`):
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| `haushalt.tafeln()` | **0** | **0** | **0** | **0** |
+| `.fu-sommerblatt` | 716×254 = **181.909** | 716×254 = **181.909** | 716×239 = **171.288** | 716×239 = **171.288 px²** |
+| DIE FUHRE (Huellen) | 189.696 | 190.464 | 175.680 | 180.880 px |
+| oberstes ⅙ DER FUHRE | **0** | **0** | **0** | **0 px** / 10.000 |
+| alle neun (Huellen) | 21,7 % | 22,2 % | 21,4 % | 26,4 % |
+| `ueberRand()` · `geklemmt()` | 0 · leer | 0 · leer | 0 · leer | 0 · leer |
+| `lage` · Seitenfehler · `verdeckt()` | 0·0·0 | 0·0·0 | 0·0·0 | 0·0·0 |
+| vier Planknoepfe | 340×31/46, alle **trifft** | dito | dito | dito |
+
+**Bis auf 16 px in einer einzigen Zelle des 4-px-Rasters (1350: 917.760
+gegen 917.744) ist das Ziffer fuer Ziffer der Lauf `nachher-sonde-w30.txt`
+vom Stand `118b191467`.** Die drei Kommentar-Marken messen also wirklich
+dasselbe, und jetzt steht es als Zahl da statt als Zusicherung.
+
+**Der Arbeitsbaum ist waehrend dieser Abnahme noch zweimal angefasst
+worden** — beide Male, um eine falsche Zahl in einem Kommentar zu
+berichtigen (§2 und die Masse der Tafel). Dass auch das nichts am Code
+aendert, ist mit demselben Schnitzer geprueft wie in §3.8:
+`fuhre.js` 110.490 gegen 110.490 Zeichen, `fuhre.css` 22.498 gegen 22.498,
+ohne Kommentare **identisch**.
+
+---
+
 ## 4 — Was DIE FUHRE weiter offen laesst, mit Datei, Zahl und Abnahme
 
 Damit es niemand suchen muss, und weil es gegen meine eigene Zahl spricht:
