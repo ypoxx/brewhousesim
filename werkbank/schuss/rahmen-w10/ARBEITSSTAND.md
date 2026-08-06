@@ -357,3 +357,39 @@ Lichthof — zusammen 0,57 % der Fläche. Das ist ein echter Gewinn (vorher
 85.197 px, also 2,0 %), aber es ist **nicht null**, und der Zähler sagt null.
 Wer die Zahl zitiert, zitiert eine Regel — die des Kritikers: „was nur Schrift
 trägt, ist Welt".
+
+## Nach 30 × WEITER und EINEM Escape
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Deckung gesamt **vorher** | 51,1 % | 50,6 % | 50,9 % | 53,0 % |
+| Deckung gesamt **nachher** | **18,0 %** | **18,1 %** | **18,0 %** | **20,3 %** |
+| oberstes ⅙ vorher → nachher | 51,6 → **29,5 %** | 52,7 → **30,1 %** | 52,9 → **30,2 %** | 57,9 → **36,7 %** |
+| unterstes ⅙ vorher → nachher | 16,0 → **7,0 %** | 15,0 → **6,7 %** | 14,0 → **6,6 %** | 15,2 → **7,2 %** |
+| `erbe` vorher → nachher | 33,6 → **4,9 %** | 33,9 → **5,3 %** | 33,5 → **5,2 %** | 29,8 → **1,2 %** |
+| Tafeln > 200.000 px² | 3 → **2** | 3 → **2** | 3 → **2** | 3 → **2** |
+| Währungsbruch | 1 → **0** | 1 → **0** | 1 → **0** | 1 → **0** |
+| über dem Rand | 0 → 0 | 0 → 0 | 0 → 0 | 0 → 0 |
+| `lage` / Seitenfehler / `verdeckt()` | 0/0/0 | 0/0/0 | 0/0/0 | 0/0/0 |
+
+**Was das heißt.** Die Erbe-Tafel, die nach Escape „die ganze linke Bildhälfte
+samt Brauhof" deckte, ist fort: von 1.421.113 px auf 208.709 px (1350).
+Die Gesamtdeckung fällt um **33 Prozentpunkte**. Escape räumt jetzt auf,
+statt zu tauschen.
+
+**Und was es NICHT heißt — die Auflage ist damit nicht ganz genommen:**
+
+* **„unter 12 % Gesamtdeckung"** ist mit 18,0–20,3 % **nicht erreicht.** Was
+  übrig ist, ist der Ruhezustand der acht Stücke, und das ist genau der
+  Haushalt oben. Der Rahmen hat geliefert, was er allein liefern kann.
+* **„keine Tafel über 200.000 px²"** meldet das Gerät weiter **zwei je
+  Epoche** — und beide sind `.sud-achse` INNERHALB des zugeklappten
+  `.sud-brett`. Sie decken nichts: DER SUD steht in derselben Aufnahme bei
+  1,8–2,3 % Gesamtdeckung, während allein diese beiden Hüllen 570.000 bis
+  726.000 px² groß sind. **Das ist ein Fehler des Zählers, nicht des Bildes**:
+  `messen.mjs` (und `bild-w9/deckung.mjs`, von dem es das Verfahren hat)
+  fragt nur das Element selbst nach `clip-path: inset(50%)` — und `clip-path`
+  vererbt sich nicht. Derselbe Fehler, den dieser Bau in seinem eigenen
+  Haushalt gemacht und behoben hat (F2 oben). `BRAUHAUS.haushalt.tafeln()`
+  geht den Weg nach oben und meldet für denselben Zustand **null** Tafeln.
+  Wer A16 abnimmt, sollte wissen, welche der beiden Zahlen er liest.
