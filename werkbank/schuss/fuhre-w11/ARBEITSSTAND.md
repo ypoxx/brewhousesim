@@ -95,6 +95,52 @@ zuklappt, bekommt denselben Aufschlag zugerechnet. Wer die Tabelle in
 `gauntlet/WELLE-11.md` liest, sollte die Zahlen des Ladezustands mit
 `BRAUHAUS.haushalt.miss()` gegenlesen, bevor er danach baut.
 
+#### 1.2b Beim Neuanlauf zu Ende verfolgt: WEM die 169.305 px gehoeren
+
+Der erste Anlauf konnte zeigen, dass die Zahl nicht DIE FUHRE ist. Jetzt
+steht auch da, **wem sie gehoert**, und beide Geraete sind damit erklaert:
+
+1. **Der Haushalt teilt DER FUHRE etwas zu, was ihr im DOM nicht gehoert.**
+   `kern/haushalt.js:97` schreibt zur Grenze von 34.000 px:
+   „`fuhre` — vier Reiter und die Hofanzeige". **Diese vier Reiter baut aber
+   die STADT**, nicht DIE FUHRE: `stadt.js:742 zeichneReiter()` erzeugt sie
+   als `.stadt-reiter` und haengt sie in `.stadt-reiterzeile`, die im Fach
+   DER STADT liegt. `haushalt.miss()` ordnet ueber
+   `el.closest('.fach').getAttribute('data-stueck')` zu (`haushalt.js:186`)
+   — also zaehlen die Reiter DER FUHRE auf das Konto DER STADT. Daher
+   `fuhre 0 px` und gleichzeitig `stadt: 152.688/40.000 px` im Ladezustand.
+   Die Grenze von 34.000 px steht damit fuer Kaesten, die ein anderes
+   Stueck baut und die kein Bau DER FUHRE verkleinern kann.
+
+2. **Das photographische Geraet ordnet dieselben Bildpunkte umgekehrt zu.**
+   `stadt.js:610 beschriftung(el)` liest den **Text des fremden Bretts**,
+   um dessen Reiter zu beschriften (`kopf.innerText`, erste `b/strong/h*`).
+   `messen.mjs` blendet fuer den Stueck-Durchgang die Kaesten DER FUHRE mit
+   `visibility: hidden` aus — damit liest `beschriftung()` etwas anderes,
+   die Reiterzeile wird neu gesetzt, und der Unterschied faellt DER FUHRE
+   zu. Genau dort liegt er auch: `warum.mjs` findet ihn **vollstaendig** in
+   `x 37..873 × y 127..248`, den Zeilenbloecken 127–179 und 193–248 — die
+   Reiterzeile, die der blinde Kritiker mit „x 35–890, y 120–235" beschreibt.
+
+**Beide Geraete haben recht, und sie widersprechen sich trotzdem**, weil
+sie dieselben Bildpunkte verschieden verbuchen. Die 169.305 px sind die
+**Reiterzeile DER STADT**, einmal unter dem Namen DER FUHRE.
+
+**Warum das dem Rahmen nicht auffallen konnte:** er hat seine Huellenzahl
+gegen die photographische geprueft und 0,05 % Unterschied gefunden
+(`haushalt.js:44` — 138.156 gegen 138.084 px) — **aber an sich selbst**.
+Die Kaesten des Rahmens sind alle sichtbar und stehen im eigenen Fach; dort
+stimmen beide Geraete notwendig ueberein. Fuer ein Stueck, dessen Bretter
+die STADT wegschneidet und dessen Reiter im fremden Fach stehen, traegt
+diese Probe nicht. Es ist eine gute Probe am falschen Stueck.
+
+*Was daraus folgt und nicht mir gehoert:* solange „vier Reiter" auf dem
+Konto DER FUHRE stehen und im Fach DER STADT haengen, kann keiner von
+beiden seine Grenze sauber treffen. Entweder bekommt die Reiterzeile ein
+eigenes Konto, oder `haushalt.miss()` ordnet einen Reiter dem Stueck zu,
+dessen Brett er aufklappt (`b.schluessel` weiss es bereits). Das ist eine
+Aenderung am Skelett und gehoert dem Rahmen, nicht mir.
+
 **Die Gegenprobe ist inzwischen gefahren und sie ist eindeutig.**
 `messungen/nachher-laden.log`, derselbe Ladezustand auf dem Nachstand:
 
@@ -371,6 +417,28 @@ Anschlag selbst ist deshalb gesondert bei 1366×768 geprueft** (`sonde.mjs`,
 `messungen/klein2.txt`, 30 Wochen): 700×162, alle vier Sudknoepfe 342×24 —
 genau auf dem Knopfboden — und alle vier „trifft".
 
+**Und was bei 1366×768 NICHT genommen ist, samt Zahl.** Unterhalb der
+Entwurfsleinwand skaliert die Blattgrenze mit der Flaeche: aus 200.000 px²
+werden 49.632 px². Gemessen nach 30 Wochen ohne Escape
+(`messungen/vorher-klein1.txt` gegen `messungen/klein2.txt`):
+
+| 1366×768, 30 Wochen, E1 | vorher | nachher |
+|---|---|---|
+| `.fu-sommerblatt` | 792×492 = **390.129 px²** | 700×162 = **113.542 px²** (−70,9 %) |
+| `haushalt.tafeln()` | **2** | **2** |
+| DIE FUHRE (Huellen) | 1.594.887 px | **469.847 px** (−70,5 %) |
+| oberstes ⅙ DER FUHRE | 141.122 px | **0 px** |
+| Planknoepfe | 234/229/311/177 × 26, alle „trifft" | 342×24, alle „trifft" |
+
+**`tafeln()` ist dort vorher wie nachher 2 und wird von meiner Arbeit nicht
+leer.** Die Abnahme des Auftrags nennt die Schwelle ausdruecklich fuer
+2752×1536 (`haushalt.js:74`, Auflage A16), und dort ist sie genommen; bei
+1366×768 ist sie es nicht, sie war es vorher aber auch nicht, und die Zahl
+darunter ist auf ein Drittel gefallen. Wer „hoechstens ein ganzseitiges
+Blatt" auch auf kleinen Schirmen will, braucht entweder eine Grenze, die
+nicht mitskaliert, oder eine Tafel, die unterhalb der Leinwand ihre
+absoluten Boeden aufgibt — und das kostet die vierte Latte.
+
 `aufsicht/tor.mjs`: **TOR OFFEN**, E1–E4 je `lage=0 fehler=0`,
 99/107/110/102 Zuege.
 `aufsicht/spielprobe.mjs`: **BESTANDEN**, 60 Wochen je Epoche, `lage 0`,
@@ -627,3 +695,28 @@ leer, wenn `BRAUHAUS.fuhre.stand().antrag` nicht null ist.
    der Reihe nach JEDEN Reiter der STADT — jeder davon ein Umschalter. Wie
    oft dieser Notweg noetig ist, haengt daran, was gerade wie gross wo
    liegt. Eine Kennzahl, die davon abhaengt, misst das Spiel nur zum Teil.
+
+7. **DEM RAHMEN: die Grenze `fuhre: 34.000 px` steht auf einem Konto, das
+   DIE FUHRE nicht fuehrt** (§1.2b). `haushalt.js:97` begruendet sie mit
+   „vier Reiter und die Hofanzeige"; die vier Reiter baut aber
+   `stadt.js:742 zeichneReiter()` als `.stadt-reiter` in der
+   `.stadt-reiterzeile` im Fach DER STADT, und `haushalt.js:186` ordnet
+   nach `closest('.fach')` zu. Ergebnis: `fuhre` misst 0 px, `stadt` misst
+   152.688 gegen 40.000 — und dieselben Bildpunkte heissen beim
+   photographischen Geraet 169.305 px `fuhre`. **Beide Grenzen sind so
+   nicht erreichbar**, weil keines der beiden Stuecke die Kaesten allein in
+   der Hand hat. Der Reiter weiss ueber `b.schluessel` bereits, zu welchem
+   Brett er gehoert; eine Zuordnung danach — oder ein eigenes Konto
+   `reiterzeile` — wuerde beide Zahlen ehrlich machen. Das ist eine
+   Aenderung am Skelett und gehoert nicht einem Stueck.
+
+8. **DEM ERBEN, mit Zahl: nach 30 Wochen und Escape muss die Blattaufsicht
+   `erb-buch` festhalten.** `messungen/nachher-escape.txt`, alle vier
+   Epochen: `geklemmt {"erbe .erb-buch blatt":1}`, `spur` sagt
+   `erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch`
+   — der Rahmen findet keinen eigenen Griff und muss auf einen fremden
+   Reiter ausweichen. Das ist woertlich die Auflage DES ERBEN
+   („`haushalt.geklemmt()` bleibt nach Escape leer"). **Der Vergleichslauf
+   auf dem Vorzustand steht in `messungen/vorher-escape.txt`** (beim
+   Neuanlauf nachgeholt, weil die Nachher-Zeile ohne ihn nicht zu deuten
+   ist): siehe §3.5b.

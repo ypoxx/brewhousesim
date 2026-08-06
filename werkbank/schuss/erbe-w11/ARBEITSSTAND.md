@@ -442,6 +442,61 @@ Partie ist (nebeneinander gemessen waren es 30–558). **Der isolierte Vorstand
 liefert die Referenzpartie Ziffer fuer Ziffer** — damit ist die Messkette
 geeicht, bevor der erste Nachher-Wert da ist.
 
+### Nachgelesen statt geglaubt: warum `geklemmt()` nicht leer sein KANN
+
+Mein erster Anlauf hat notiert, dass `geklemmt()` eine Zeile traegt, wenn der
+Spieler das Buch OFFEN hat und Escape drueckt. Ich habe das im Quelltext
+nachgelesen, statt es abzuschreiben — `kern/haushalt.js:493 ff.`:
+
+```js
+function schliesse(k, klemmen) {
+  var name = k.stueck + ' .' + k.klasse;
+  if (klemmen && k.el.classList) {
+    k.el.classList.add('kern-blatt-zu');
+    geklemmt[name] = (geklemmt[name] || 0) + 1;   // IMMER, und ZUERST
+  }
+  var eigen = eigenerGriff(k.el);
+  if (eigen) { B.wage('haushalt:griff', eigen); return …; }   // erst DANACH
+```
+
+Die Klemme wird **bedingungslos** gezaehlt, bevor ueberhaupt gefragt wird, ob
+das Stueck einen eigenen Griff hat. **Kein Stueck dieses Spiels kann ein
+offenes Blatt haben, Escape bekommen und aus `geklemmt()` herausbleiben.** Das
+ist keine Eigenschaft meines Buches, das ist die Buchfuehrung des Rahmens.
+
+Dass mein Griff wirklich gefunden wird, steht daneben: `eigenerGriff` (Zeile
+380) vergleicht Element fuer Element gegen die Liste aus `blatt.melde()`, und
+`zeichneBuch` meldet bei jedem Neuzeichnen das frische Element an. Der Beweis
+ist die Gegenprobe: **`ohneGriff()` bleibt leer** — waere kein Griff da, stuende
+das Buch dort (`schliesse` zaehlt `ohneGriff` in jedem Zweig ohne Erfolg).
+
+**Befund fuer DEN RAHMEN, nicht fuer mich:** `geklemmt()` kann heute nicht
+unterscheiden zwischen „der Rahmen musste dieses Blatt festhalten" und „der
+Rahmen hat kurz geklemmt, und dann hat das Stueck es selbst ordentlich
+zugemacht". Beides zaehlt gleich. Wer die Auflage „`geklemmt()` bleibt nach
+Escape leer" woertlich abnimmt, nimmt etwas ab, das kein Stueck erfuellen kann,
+sobald sein Blatt offen ist. *Vorschlag:* die Zeile zuruecknehmen, wenn `eigen`
+oder `kn` gegriffen hat — dann bleibt `geklemmt()` das, was es heissen soll.
+*Im Abnahmefall der Auflage* (30 × WEITER, dann Escape, ohne dass jemand das
+Buch aufgeschlagen hat) **ist meines leer**, weil das Buch dann gar nicht im
+DOM steht.
+
+### Erreichbarkeit — die Zahl, die dabei WIRKLICH gefallen ist
+
+`sonde.mjs` zaehlt Knoepfe mit `data-zug` im DOM, `tor.mjs` ebenso:
+
+| Ladezustand | E1 | E2 | E3 | E4 |
+|---|---|---|---|---|
+| `zuege` vorher | 99 | 107 | 110 | 102 |
+| `zuege` **nachher** | **95** | **103** | **106** | **98** |
+
+**Vier weniger je Epoche, und ich schreibe es hin:** das sind die
+`erbe:verschreibe:*` im zugeklappten Buch. Sie standen vorher im DOM — aber
+**treffbar waren sie auch vorher nicht**, die STADT hielt das Buch mit
+`clip-path: inset(50%)` zu. Der Spieler brauchte vorher einen Reiterklick und
+braucht jetzt einen Griffklick; dazwischen liegt kein Zug. Aufgeschlagen
+traegt das Buch **5** statt 4 (der Schliessknopf kam dazu).
+
 ### Woran mein Stueck rho ueberhaupt bewegen KOENNTE
 
 Nur ueber die Erreichbarkeit von Zuegen. Das zugeklappte Buch steht nicht mehr

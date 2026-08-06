@@ -40,6 +40,14 @@ lauf "Deckung 30 Wochen OHNE Escape (Endstand)" \
   env HAFEN=8952 WOCHEN=30 NAME=abn-w30 $M node werkbank/schuss/fuhre-w11/deckung.mjs \
   > $Z/abn-deckung-w30.log 2>&1
 
+# Die Escape-Probe fehlte fuer den VORZUSTAND. Ohne sie steht die Zeile
+# `geklemmt {"erbe .erb-buch blatt":1}` aus der Nachher-Probe ohne Vergleich da,
+# und man kann nicht sagen, ob DIE FUHRE sie verursacht hat. Das gehoert
+# gemessen, nicht vermutet — zumal es die Abnahme DES ERBEN beruehrt.
+lauf "Escape-Probe auf dem VORZUSTAND (Vergleich zu nachher-escape.txt)" \
+  env HAFEN=8951 $M node werkbank/schuss/fuhre-w11/escapeprobe.mjs vorher-escape \
+  > $Z/vorher-escape.log 2>&1
+
 # Die Gegenprobe zu den 169.305 px (§1.2). Sie lief beim ersten Anlauf schon,
 # aber ihr Ergebnis stand nur auf der Konsole und in Bildern — und Bilder
 # wandern in diesem Lauf nicht mit (.gitignore:67). Die Aufsicht hat
@@ -47,5 +55,20 @@ lauf "Deckung 30 Wochen OHNE Escape (Endstand)" \
 lauf "Warum 169.305 px — Gegenprobe auf dem VORZUSTAND, Ladezustand, E1" \
   env HAFEN=8951 EPOCHE=1 WOCHEN=0 $M node werkbank/schuss/fuhre-w11/warum.mjs \
   > $Z/warum-e1-laden.txt 2>&1
+
+# DIE GEMEINSAME ZAHL. Die Abnahme verlangt „Gesamtdeckung unter 20 %".
+# DIE FUHRE allein bringt sie auf 21,9–26,7 % (§3.3) — der Rest liegt bei den
+# beiden Nachbarn, die in derselben Welle raeumen. Solange nur behauptet wird,
+# dass es zusammen aufgeht, ist es nicht gemessen. Also EINMAL gemessen, auf
+# einem eingefrorenen Stand des ganzen Arbeitsbaums, mit genanntem Commit.
+# Das ist ausdruecklich NICHT meine Zahl, sondern die der drei zusammen, und
+# der Stand der beiden anderen ist an dieser Stelle ein Zwischenstand.
+SHA=$(git rev-parse --short HEAD)
+echo "== GEMEINSAM: Stand $SHA (alle drei Stuecke) auf Hafen 8953"
+werkbank/schuss/aufsicht/messstand.sh "$SHA" 8953 || echo "  Messstand fehlgeschlagen"
+lauf "Deckung 30 Wochen OHNE Escape — ALLE DREI, Stand $SHA" \
+  env HAFEN=8953 WOCHEN=30 NAME=gemeinsam-w30 $M node werkbank/schuss/fuhre-w11/deckung.mjs \
+  > $Z/gemeinsam-w30.log 2>&1
+echo "   (Stand $SHA)" >> $Z/deckung-gemeinsam-w30.txt
 
 echo "FERTIG $(date -u +%H:%M:%S)"

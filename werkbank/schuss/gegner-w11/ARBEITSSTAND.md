@@ -337,5 +337,93 @@ Epochen. Meine Kette misst also dasselbe wie seine, und sie misst es einzeln.
 
 ---
 
-*(Die photographischen Zahlen, ρ nachher und die vierte Latte folgen, sobald
-die Läufe durch sind.)*
+---
+
+## 6 — NEUANLAUF nach dem Container-Reset (6.8., ab 21:30 UTC)
+
+*Der Vorgänger ist um 21:2x an einem Container-Reset gestorben. Seine Arbeit
+liegt vollständig vor — §1 bis §5 sind seine. Was hier folgt, ist neu.*
+
+### 6.1 Der erste Griff: die schon gemessenen Blätter zu Ende lesen
+
+Der Vorgänger hatte `nach-gebaut.txt` und `nach-w30.txt` **gemessen, aber nicht
+mehr ausgewertet** — sie kamen an, als er starb. §5.2 trägt deshalb nur die
+Zeile „Ladezustand nachher: 0·0·0·0". **Die beiden anderen Zustände bestehen
+Auflage 3 nicht:**
+
+| A3-Treffer nachher | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Ladezustand | 0 | 0 | 0 | 0 |
+| 34 Baurunden + Esc | **3** | 0 | **0** ✔ | **3** |
+| 30 Wochen | **2** | 0 | **0** ✔ | **4** |
+
+Die benannte Stelle des Kritikers — 1884, die Karte auf „GASTHOF LINDENHOF" —
+**ist weg** (3 Treffer → 0, in beiden Zuständen). Aber:
+
+```
+1350/1970, gebaut:  „ST. MICHAEL"  511 px² unter div.gg-paar amort  227×94 @1345,465
+                    „ST. MICHAEL"  144 px² unter div.gg-kennzahl    227×16 @1345,544
+1970, 30 Wochen:    „NORDSTERN-GRUPPE"  905 px² unter div.gg-paar   143×71 @2405,457
+1350, 30 Wochen:    „BRAUHAUS ZUM ADLER" 591 px² unter div.gg-wagen 150×118 @2209,448
+```
+
+### 6.2 Warum — ein eigener Fehler, gefunden statt vermutet
+
+Die Ausweiche (`sperrzonen`/`weicheAus`) war gebaut und wurde auch gerufen. Ich
+habe ihre Rechnung von Hand nachvollzogen: für das `gg-paar` in 1350 (Mitte
+52,99 %, halbe Höchstbreite 4,54 %, Unterkante 36,39 %, drei Reihen = 6,8 %)
+gegen „ST. MICHAEL" (x 56,32–61,63 %, y 34,31–35,81 %) trifft die Überlappung
+zu, und `weicheAus` hätte um 2,48 % nach oben gerückt. **Es ist nicht gerückt.
+Also war die Zonenliste leer.**
+
+Der Grund steht in drei Zeilen alten Codes:
+
+```js
+if ((ZONEN_ANLAUF[e] || 0) >= 3) return [];
+ZONEN_ANLAUF[e] = (ZONEN_ANLAUF[e] || 0) + 1;   // zaehlt AUCH den Erfolg
+```
+
+`sperrzonen()` wird **einmal je offener Adresse** gerufen, nicht einmal je Bild.
+Wo drei Adressen offen stehen, ist der Zähler nach dem **ersten** Bildaufbau
+verbraucht. Fällt dieses erste Bild in einen Augenblick, in dem DIE STADT ihre
+Namen gerade nicht stehen hat, ist die Ausweiche für die ganze Partie tot —
+**und zwar lautlos: eine leere Zonenliste sieht aus wie „nichts im Weg".**
+
+Das ist die gefährlichere Hälfte des Fehlers. Ein Zähler, der aufgibt, ist
+schlimm; einer, der beim Aufgeben dasselbe zurückgibt wie beim Gelingen, ist
+nicht zu bemerken. Der Vorgänger hat die Zahl 0 im Ladezustand gesehen und
+durfte glauben, es funktioniere — im Ladezustand steht dort ohnehin nichts im
+Weg.
+
+### 6.3 Was ich geändert habe (Änderung 7 und 8)
+
+| # | Was | Auflage | Datei |
+|---|---|---|---|
+| 7 | `sperrzonen()`: nur der **leere** Anlauf zählt, Schranke 40 statt 3; die Zahl der gefundenen Zonen steht als `data-a3zonen` am eigenen Fach | **A3** | `gegner.js` `sperrzonen/meldeZonen` |
+| 8 | Die Ausweiche gilt **allen vier** Schildern: `#ebene-hand .stadt-name-gegner` kommt zu den Zonen dazu | **A3** | `gegner.js` `sperrzonen` |
+
+Zu 8: der Vorgänger hatte richtig nachgelesen, dass BRAUEREI ADLER /
+ADLER-BRÄU AG / NORDSTERN-GRUPPE in der Ebene `hand` mit z-index 962 liegen und
+deshalb **nicht angeschnitten** werden können. Daraus hatte er geschlossen, sie
+gingen ihn nichts an. Das ist die falsche Hälfte des Schlusses: die Schicht
+entscheidet, **wer** unlesbar wird, nicht **ob**. Liegt sein Preisschild unter
+dem gemalten Namen, bleibt der Name lesbar und sein eigenes Zeichen ist
+begraben. Die Auflage nennt vier Schilder; also weicht das Stück vier aus.
+
+Zu `data-a3zonen`: eine Ausweiche, die man nicht messen kann, ist eine
+Behauptung. Genau daran ist dieser Fehler vier Messungen lang vorbeigelaufen.
+`sonde.mjs` liest das Attribut jetzt mit und schreibt es neben die A3-Zahl.
+
+### 6.4 Was ich NICHT ändere, und warum
+
+`div.gg-wagen` (1350, 30 Wochen, 591 px² auf „BRAUHAUS ZUM ADLER") **bleibt.**
+Der graue Wagen ist ein Fahrzeug auf der Straße zwischen zwei Orten; sein Platz
+ist die Strecke, nicht eine Lücke neben einer Beschriftung. Er liegt in
+`marken`, der gemalte Name in `hand` mit z-index 962 — **der Name wird von ihm
+nie angeschnitten, er fährt darunter durch.** Ihn auszuweichen hieße, die
+Geographie zu verbiegen, um einen Zähler zu bedienen; genau diesen Fehler hat
+der Vorgänger beim Hofbild schon einmal gemacht und selbst zurückgenommen (F1).
+Der Zähler in `sonde.mjs` ist absichtlich schichtblind und zählt ihn weiter mit
+— **ich melde ihn, statt ihn wegzurechnen.**
+
+*(Messung folgt; die Läufe gehen einzeln durchs Messfenster.)*

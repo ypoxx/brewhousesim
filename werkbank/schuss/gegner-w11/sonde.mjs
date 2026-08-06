@@ -151,6 +151,11 @@ const lies = () => {
     kaesten: kaesten.sort((a, b) => b.flaeche - a.flaeche),
     schnitt: schnitt.sort((a, b) => (b.soll - b.ist) - (a.soll - a.ist)).slice(0, 24),
     schilder, treffer, zahlen, band,
+    /* Welle 11: DER GEGNER schreibt an sein eigenes Fach, wie viele
+       Sperrzonen seine Ausweiche gefunden hat. 0 oder fehlend heisst: die
+       Ausweiche laeuft ins Leere, auch wenn A3 zufaellig gerade 0 zaehlt. */
+    a3zonen: (() => { const f = document.getElementById('fach-marken-gegner');
+      return f ? f.getAttribute('data-a3zonen') : null; })(),
     haushalt: h ? { gesamt: h.gesamt, oben: h.oben, gegner: h.je.gegner || null } : null,
     pruefe: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.pruefe() : null,
     ueberRand: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.ueberRand() : null,
@@ -243,7 +248,8 @@ for (const e of EPOCHEN) {
     d.band.zeilen.forEach(z => aus.push(`      ${z.voll ? 'ganz  ' : 'GEKUERZT'} `
       + `${String(z.soll).padStart(5)} px in ${String(z.ist).padStart(4)} px  „${z.text}"`));
   }
-  aus.push(`  A3 — GEGNER auf gemalter Beschriftung: ${d.treffer.length}`);
+  aus.push(`  A3 — GEGNER auf gemalter Beschriftung: ${d.treffer.length}`
+    + `   (Sperrzonen gefunden: ${d.a3zonen === null ? 'ATTRIBUT FEHLT' : d.a3zonen})`);
   d.treffer.forEach(t => aus.push(`    „${t.schild}"  ${t.ueber} px² unter ${t.tag}.${t.klasse}  ${t.mass}`));
   aus.push(`  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: ${d.zahlen.length}`);
   d.zahlen.forEach(z => aus.push(`    ${z.soll} px in ${z.ist} px${z.quillt ? ' QUILLT' : ''}  ${z.ellipse}  .${z.klasse}  „${z.text}"`));
