@@ -627,3 +627,50 @@ Das ist der Beleg, den die zweite Messlatte braucht: **die Blattaufsicht
 fasst während des Spielens nichts an.** Sie greift nur, wenn der Spieler
 Escape drückt, und die messende Hand (`linie.mjs`) drückt Escape nie. Genau
 deshalb steht ρ unverändert.
+
+## Satz B — und hier spricht etwas gegen mich
+
+| Epoche | Satz A | Satz B | Spannweite | Jahre < 1× (A / B) |
+|---|---|---|---|---|
+| 1350 | −0,245 / −0,170 / **−0,336** | +0,203 / +0,302 / **+0,270** | **0,607** | 2/14 / **0/14** |
+| 1600 | −0,189 / +0,049 / −0,116 | **identisch** | 0,000 | 0/14 / 0/14 |
+| 1884 | +0,168 / +0,346 / +0,393 | **identisch** | 0,000 | 1/14 / 1/14 |
+| 1970 | −0,112 / −0,236 / −0,304 | **identisch** | 0,000 | 1/14 / 1/14 |
+
+**1350 ist zwischen zwei Läufen auseinandergegangen** — Kasse 28–524 gegen
+34–583, ρ(14 J) −0,336 gegen +0,270. Beide bestehen (die Latte liegt bei
+0,700), und beide sind besser als der Riss von +0,762, der 1350 in Welle 6
+hatte. Aber die Reihe ist in dieser Epoche **nicht** Lauf für Lauf
+reproduzierbar, und das steht hier, weil es gegen die einfache Erzählung
+spricht: Satz A war Ziffer für Ziffer der Vorzustand, Satz B ist es nicht.
+
+**Was es NICHT ist:** eine Verletzung der Messordnung. Die Zeitstempel
+zeigen, dass nie zwei Browser nebeneinander liefen — Satz A gab das Fenster
+um 13:48:09 frei, die Wachenprobe lief 13:48:09–13:48:53 (ihr Kopf trägt
+„MESSFENSTER: belegt, warte"), und Satz B begann um 13:48:53.
+
+**Was es sein kann und was ich nicht auseinanderhalten kann:** dass die
+beharrliche Hand in 1350 an einer Stelle zwei gleich gute Wege hat und die
+Reihenfolge des Bildaufbaus entscheidet. Der Vorgänger hat 1350 dreimal
+gemessen und dreimal dasselbe bekommen; ich bekomme zweimal zwei
+verschiedene Dinge. **Satz C entscheidet, welcher der beiden die Mehrheit
+hat** — und in beiden Fällen hält die Latte.
+
+## Escape legt beiseite — aber nur, bis das Stück neu zeichnet
+
+`messungen/nach-escape-eine-woche.txt`: 30 × WEITER, ein Escape, **dann eine
+weitere Woche**. Ergebnis in 1350 und 1970: `blaetter()` leer,
+`tafeln()` leer, `lage` 0, `verdeckt()` 0 — **aber `geklemmt()` zählt zwei**,
+und die Spur zeigt warum:
+
+```
+0ms:    erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch
+2000ms: erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch
+```
+
+Beim Neuzeichnen ist die Klemme des Rahmens fort (sie hängt am Element, und
+das Element ist neu), und DAS ERBE zeichnet sein Buch wieder auf. Der zweite
+Anlauf des Escape-Fensters fängt es — aber nur, weil das Fenster 2,6 s offen
+steht. **Wer nach Escape drei Sekunden wartet und dann WEITER drückt, hat die
+Tafel wieder.** Der saubere Weg dagegen ist kein längeres Fenster, sondern
+ein Griff im Blatt selbst; er steht als Auflage 2 für Welle 11 oben.
