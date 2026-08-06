@@ -123,6 +123,55 @@
     return s[epNr()] || s[4] || s[1];
   }
 
+  /* ----------------------------------------------------------------------
+     WELLE 11 — DIE RANDWACHE DES STUECKS
+     ----------------------------------------------------------------------
+     Der Rahmen hat in Welle 10 gemessen und benannt, was er selbst nicht
+     verruecken darf, ohne in fremdes DOM zu schreiben:
+
+       gegner .gg-ziel gg-konzern zuteuer  —  312x52 @2458,202
+       „verhandelt · noch 6 Wo. · zuvorkommen …"
+
+     Das sind 18 px ueber die 2752 hinaus; im Bild stand nur noch „Wo".
+     Nachgestellt am Vorzustand 7896ee6, 1970, 34 Baurunden + Escape:
+     `BRAUHAUS.haushalt.ueberRand()` meldet genau diesen einen Eintrag.
+
+     Ein Zeichen haengt an einer Adresse und kann den Ort nicht wechseln —
+     die Ortstreue ueber 620 Jahre ist die haerteste Forderung des Auftrags.
+     Also haelt es sich SELBST am Rand: der Ort bleibt, wo er ist, nur das
+     Zeichen rueckt so weit nach innen, dass es ganz im Bild steht.
+
+     Gerechnet wird OHNE DOM-Abfrage. Die Hoechstbreite jedes Zeichens steht
+     im Stil (`max-width`), also ist die halbe Hoechstbreite in Prozent
+     bekannt, ohne ein einziges getBoundingClientRect. Der Grund steht im
+     ARBEITSSTAND des Rahmens: wer beim Zeichnen ein Layout erzwingt,
+     verschiebt die Phase gegen die Fristen der STADT — und dann laeuft
+     dieselbe Saat zweimal verschieden. Ein Zeichen, das sich am Rand haelt,
+     darf die Partie nicht kosten.
+
+     Anker ist immer 'oben' oder 'unten', also translate(-50%): der Ort ist
+     die MITTE des Zeichens.                                              */
+  function amRand(x, breiteS) {
+    var halb = (breiteS / 2) / 2752 * 100;
+    if (x - halb < 0.5) x = 0.5 + halb;
+    if (x + halb > 99.5) x = 99.5 - halb;
+    return x;
+  }
+
+  /* dx, das ein Zeichen der Hoechstbreite `breiteS` ganz im Bild haelt. */
+  function randDx(ort, dxWunsch, breiteS) {
+    var o = B.orte.hole(ort);
+    if (!o) return dxWunsch || 0;
+    var x = o.x + (dxWunsch || 0);
+    return B.rund(amRand(x, breiteS) - o.x, 3);
+  }
+
+  /* Die Hoechstbreiten stehen hier UND im Stil. Wer eine aendert, aendert
+     beide — deshalb stehen sie beieinander und nicht verstreut.
+     stil/gegner.css: .gg-stand{max-width} · .gg-paar{max-width}
+     stil/gegner-zusatz.css: .gg-gzblock{max-width} */
+  var BREIT = { stand: 400, paar: 250, block: 420 };
+
   /* Jahresmenge einer Adresse in Fass — dieselbe Rechnung wie bei der Fuhre,
      damit die Summen zueinander passen. */
   function menge(a) {

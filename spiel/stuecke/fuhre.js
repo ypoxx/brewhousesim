@@ -109,6 +109,17 @@
     zettel: null,
     sommer: null,
     sommerOffen: false,
+    /* WELLE 11 — DIE TAFEL IST EIN ANSCHLAG, DER BERICHT LIEGT DAHINTER.
+       Die Georgi-Tafel deckte 1596x847 bis 1596x943 Bildpunkte (1,35 bis
+       1,50 Mio px^2) und war damit allein der Grund, warum das Spiel nach
+       dreissig Wochen 45 bis 53 Prozent der Flaeche deckte. Sie traegt
+       zweierlei: EINE Entscheidung (was wird gebraut) und einen
+       Rechenschaftsbericht ueber den Sommer. Das Erste muss liegen, das
+       Zweite muss erreichbar sein — und das ist nicht dasselbe.
+       `berichtOffen` ist der Schalter dazwischen; er faellt bei jedem
+       Georgi auf `false` zurueck, damit der Bericht eine Entscheidung des
+       Spielers bleibt und keine Gewohnheit des Blatts. */
+    berichtOffen: false,
     kaufNr: {},
     bannNr: 0,
     eisGemeldet: false,
@@ -3404,6 +3415,7 @@
   function schliesseSommer(grund) {
     if (!Z.sommerOffen) return false;
     Z.sommerOffen = false;
+    Z.berichtOffen = false;
     B.sende('zeichne', { grund: grund || 'fuhre-sommer-zu' });
     return true;
   }
@@ -3494,6 +3506,7 @@
   function raeumeSommerAb() {
     if (!Z.sommerOffen) return;
     Z.sommerOffen = false;
+    Z.berichtOffen = false;
     var stand = B.welt.zeit.jahr * 100 + B.welt.zeit.woche;
     if (typeof requestAnimationFrame !== 'function') {
       B.sende('zeichne', { grund: 'fuhre-sommer-weiter' });
@@ -3513,20 +3526,33 @@
      dasselbe: sie legt die Tafel beiseite, statt die Woche zu schalten.
      Dieser Horcher laeuft in der Fangphase auf document und damit VOR dem
      Horcher des Kerns, der am selben Knoten in der Blasenphase haengt.
-     stopImmediatePropagation() nimmt ihm die Taste ab, bevor er sie sieht.
-     Angemeldet wird genau einmal, im Aufbau. */
+     Angemeldet wird genau einmal, im Aufbau.
+
+     WELLE 11 — stopImmediatePropagation() IST HIER ZU VIEL, UND DER RAHMEN
+     HAT ES GEMESSEN.  Es nimmt nicht nur dem Kern die Taste ab, sondern
+     JEDEM Horcher, der nach diesem an DEMSELBEN Knoten haengt — auch der
+     Blattaufsicht aus kern/haushalt.js, wenn sie eines Tages nach diesem
+     Stueck geladen wuerde. Heute rettet sie nur die Ladereihenfolge
+     (haushalt.js steht vor jedem Stueck in index.html); das ist eine
+     Zusicherung, die kein Stueck geben darf.
+     stopPropagation() leistet, worauf es hier ankommt: der Weg zum Kern
+     ist zu (die Blasenphase an document findet gar nicht mehr statt), aber
+     wer neben diesem Horcher in derselben Phase am selben Knoten steht,
+     sieht die Taste weiter. Benannt in
+     werkbank/schuss/rahmen-w10/ARBEITSSTAND.md, Auflage 1 fuer Welle 11,
+     mit Stelle: stuecke/fuhre.js:3517. */
   function tastenSperre(ereignis) {
     /* Das Schlussblatt zuerst: es liegt ueber allem, auch ueber Georgi. */
     if (schlussLiegtOben()) {
       if (ereignis.key === 'Escape') {
         ereignis.preventDefault();
-        ereignis.stopImmediatePropagation();
+        ereignis.stopPropagation();
         Z.schlussOffen = false;
         B.sende('zeichne', { grund: 'fuhre-schluss-escape' });
         return;
       }
       if (ereignis.key === ' ' || ereignis.key === 'Enter') {
-        ereignis.stopImmediatePropagation();
+        ereignis.stopPropagation();
         var eigen0 = ereignis.target && ereignis.target.closest
           && ereignis.target.closest('.fu-schlussblatt');
         if (!eigen0) ereignis.preventDefault();
@@ -3538,7 +3564,7 @@
 
     if (ereignis.key === 'Escape') {
       ereignis.preventDefault();
-      ereignis.stopImmediatePropagation();
+      ereignis.stopPropagation();
       B.ton.spiele('tafel:kreide');
       schliesseSommer('fuhre-sommer-escape');
       return;
@@ -4258,6 +4284,7 @@
          beiseitegelegt. So kann kein Blatt liegenbleiben, das der Spieler
          nie gesehen hat. */
       Z.sommerOffen = false;
+      Z.berichtOffen = false;
       if (Z.epoche !== B.welt.zeit.epoche) richteEpocheEin(false);
       Z.meldung = null;
 
@@ -4369,6 +4396,8 @@
       Z.notsud = 0;
       Z.notGemeldet = false;
       Z.sommerOffen = !!Z.sommer;
+      /* Jedes Georgi faengt mit dem Anschlag an, nicht mit dem Bericht. */
+      Z.berichtOffen = false;
       /* Listungen laufen zu Georgi aus, wenn nichts geliefert wurde. */
       /* Ein Regalmeter fällt, wenn zwei Jahre lang nichts darin stand.
          Ein leeres Jahr verzeiht der Händler noch. */
@@ -4449,6 +4478,7 @@
          einen Satz, also wird es fuer jeden Grund aufgeschlagen. */
       Z.schlussOffen = true;
       Z.sommerOffen = false;
+      Z.berichtOffen = false;
       Z.antrag = null;
       Z.uebergabe = null;
       Z.ladung = [];

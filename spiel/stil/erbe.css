@@ -1,9 +1,23 @@
 /* ===========================================================================
    stil/erbe.css — DAS ERBE.
 
+   WELLE 11 IN VIER SAETZEN — der Rest der Datei begruendet jeden einzeln:
+
+     1  Die Leiste hat kein Papier mehr. Kein Grund, kein Rahmen, kein
+        Schatten, kein Kopfstreifen — nur Schrift mit Lichthof. Was auf ihr
+        steht, steht Wort fuer Wort weiter da.  (`.erb-leiste`, ab Zeile 71)
+     2  Die vier Trennstriche im Band sind Zeichen statt Rahmen. Vier Striche
+        von 17 px Laenge kosteten 13.891 Bildpunkte.  (`.erb-band`)
+     3  Die Knoepfe messen sich an ihrem Inhalt statt an einem Viertel der
+        Leiste. Damit ist das Auslassungszeichen aus Auflage 9 nicht
+        bekaempft, sondern unmoeglich.  (`.erb-knoepfe`)
+     4  Das Buch ist von 29,4 % auf 21,6 % der Buehne herunter, rollt statt zu
+        schneiden, faengt unter dem obersten Sechstel an und steht zugeklappt
+        gar nicht mehr im DOM.  (`.erb-buch`; das Auf und Zu in erbe.js)
+
    Zwei Dinge, und beide halten sich an die Platzordnung DER STADT:
 
-   .erb-leiste  steht dauernd. 44 % x 5,6 % = 2,46 % der Buehne. GRENZE in
+   .erb-leiste  steht dauernd. 44 % x 6,8 % = 2,99 % der Buehne. GRENZE in
                 stadt.js liegt bei 3,5 % — darunter laesst der Rahmen ein
                 fremdes Brett voellig in Ruhe. Die Masse sind darum FEST und
                 nicht vom Inhalt abhaengig (overflow:hidden), sonst waechst
@@ -30,8 +44,11 @@
                 verlangt Optionen mit Preisschild NEBENEINANDER, und in einem
                 Streifen ist das woertlich zu nehmen.
 
-   .erb-buch    ist ein richtiges Brett und bekommt einen Reiter wie jedes
-                andere. Fussabdruck wie das Sudbuch, links im Stadtfenster.
+   .erb-buch    war ein Brett der STADT und bekam von ihr einen Reiter. Seit
+                Welle 11 gehoert sein Auf und Zu dem Stueck selbst: der Griff
+                steht auf der Leiste, der Schliessknopf im Buchkopf, und
+                zugeklappt steht es gar nicht im DOM. Der Grund steht bei
+                `.erb-buch` und in stuecke/erbe.js (`schlageBuchZu`).
 
    Alles in Prozent und in Vielfachen von --s. Keine festen Pixel.
    =========================================================================== */
@@ -306,23 +323,100 @@
 .knopf.erb-ohne .wort  { color: var(--tinte); font-style: normal; }
 .knopf.erb-ohne .preis { color: #3d5c2e; font-weight: 600; }
 .knopf.erb-streit { background: linear-gradient(180deg, #e9cfc4 0%, #d3ab99 100%); }
-.knopf.erb-weit   { flex: 1.3 1 0; }
+/* War `flex: 1.3 1 0` — der Tat-Knopf bekam ein Drittel mehr als die drei
+   Wege. Mit Inhaltsmass braucht er keinen Vorzug mehr; er ist ohnehin der
+   laengste, weil er einen Hausnamen traegt. */
+.knopf.erb-weit   { flex: 0 0 auto; }
 .knopf.erb-nach   { background: linear-gradient(180deg, #dfe0c8 0%, #bfc0a2 100%); }
 
 /* --------------------------------------------------------------------------
    DAS BUCH — das Brett mit der vollen Liste
    -------------------------------------------------------------------------- */
 
+/* ==========================================================================
+   DAS MASS DES BUCHES — DREI ZAHLEN, DIE ES BESTIMMEN.
+
+   VORHER: left 2 % · top 13,5 % · 42 % x 70 % = 1156 x 1075 px = 29,4 % der
+   Buehne. Der blinde Kritiker: „Sie deckt die gesamte linke Bildhaelfte samt
+   dem kompletten Brauhof … das untere Drittel dieser Erbe-Tafel ist LEER —
+   etwa 40 % ihrer Flaeche traegt nichts als Grund. Sie deckt 28 % des Bildes
+   zu, um 60 % ihrer selbst zu fuellen."  Nachgemessen mit
+   werkbank/schuss/erbe-w11/breiten.mjs, Inhaltsunterkante gegen Kastenhoehe:
+
+     E1 laden 535 von 1075 px · E2 535 · E3 530 · E4 578
+     nach 30 Wochen 618 / 592 / 558 / 664 von 1075
+
+   Also traegt das Buch im schlechtesten gemessenen Fall 62 % seiner Hoehe
+   und im besten 49 %. Der Kritiker hat recht, und die Zahl ist genauer als
+   „ein Drittel".
+
+   JETZT: left 2 % · top 17,5 % · 40 % x 54 % = 1101 x 829 px = 21,6 %.
+
+   DREI GRUENDE, UND JEDER IST EINE ABNAHME:
+
+   1  UNTER 25 %.  stadt.js:1408 — „Ein formatfuellendes Blatt zum
+      Jahreswechsel ist eine Entscheidung": `if (jetzt - jahrZeit <
+      JAHRESFRIST && anteil(r, true) > 0.25) lage[s] = 'auf'`. Mit 29,4 %
+      fiel das Buch unter diese Regel und schlug nach JEDEM Jahreswechsel von
+      selbst auf — das ist der Befund, an dem sich Welle 10 die Zaehne
+      ausgebissen hat (der Rahmen musste klemmen, weil der Reiterklick
+      „erfolgreich UND wirkungslos" war). Mit 21,6 % ist das Buch fuer diese
+      Regel kein formatfuellendes Blatt mehr. Zusammen damit, dass es
+      zugeklappt gar nicht im DOM steht, kann es ueberhaupt nicht mehr von
+      selbst aufgehen.
+
+   2  AUS DEM OBERSTEN SECHSTEL.  Das oberste Sechstel endet bei 16,67 %.
+      Mit top 13,5 % ragte das Buch 3,17 % hinein und deckte dort 60.320
+      Bildpunkte — bei einer Grenze von 6.000. Mit top 17,5 % ist der Anteil
+      am obersten Sechstel NULL, aufgeschlagen wie zugeklappt.
+
+   3  DER BRAUHOF.  Rechter Rand von 44 % auf 42 %, Unterkante von 83,5 % auf
+      71,5 %. Die Pfanne in 1350 steht bei x 29 % / y 70 %; sie bleibt zwar
+      unter dem aufgeschlagenen Buch, aber das Buch liegt nur noch da,
+      solange der Spieler es aufgeschlagen hat, und der Hof darunter ist um
+      ein Drittel weniger verdeckt.
+
+   UND WAS ES NICHT KOSTET: nichts. Das Buch rollt jetzt (`overflow-y: auto`)
+   statt zu schneiden. Was frueher unter der Unterkante verschwand — und das
+   tat es, `overflow: hidden` stand hier —, ist jetzt erreichbar. Die vierte
+   Latte zaehlt einen abgeschnittenen Kasten nur bei `hidden`/`clip`
+   (aufsicht/lesbarkeit.mjs:56), `auto` zaehlt sie nicht.
+   ========================================================================== */
 .erb-buch {
   left: 2%;
-  top: 13.5%;
-  width: 42%;
-  height: 70%;
+  top: 17.5%;
+  width: 40%;
+  height: 54%;
   display: flex;
   flex-direction: column;
   gap: calc(var(--s) * 7);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
+
+/* Die Kopfzeile: Titel links, Schliessknopf rechts. Sie rollt NICHT mit —
+   der Griff muss auch dann dastehen, wenn weit unten gelesen wird. Deshalb
+   `sticky` und ein deckender Grund in der Papierfarbe der Epoche; ohne ihn
+   liefe die Liste sichtbar unter dem Titel durch.
+   Der Grund macht die Kopfzeile zu einem Kasten — das kostet aber NICHTS,
+   weil sie vollstaendig in der Huelle des Buches liegt und beide Messgeraete
+   je Stueck die VEREINIGUNG der Huellen zaehlen. */
+.erb-buchtitel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: calc(var(--s) * 12);
+  flex: 0 0 auto;
+  position: sticky;
+  top: calc(var(--s) * -22);
+  z-index: 2;
+  margin: calc(var(--s) * -22) calc(var(--s) * -26) 0;
+  padding: calc(var(--s) * 22) calc(var(--s) * 26) calc(var(--s) * 2);
+  background: var(--erb-papier, var(--papier));
+}
+.erb-buchtitel h2 { flex: 1 1 auto; min-width: 0; }
+.knopf.erb-buchzu { flex: 0 0 auto; align-self: flex-start; }
 
 .erb-buch h2 {
   font-size: calc(var(--s) * 30);
@@ -463,18 +557,26 @@
    1350 — DAS STADTBUCH
    -------------------------------------------------------------------------- */
 
+/* WELLE 11 — DAS PAPIER GILT NUR NOCH FUERS BUCH.
+   Bis hierher stand der Hintergrund an EINEM Selektor fuer Leiste UND Buch.
+   Die Leiste traegt keinen Grund mehr (siehe den langen Absatz bei
+   `.erb-leiste`); die Epoche traegt sie jetzt in Tinte, Rubrikfarbe und
+   Schriftart weiter. Das Buch behaelt jedes Pergamentfleckchen. */
 #buehne[data-epoche="1"] .erb-leiste,
 #buehne[data-epoche="1"] .erb-buch {
   --erb-tinte: #2a1c0d;
   --erb-rubrik: #8e2b18;
   --erb-hilfslinie: transparent;
+  --erb-papier: #ecdfbe;
+  color: var(--erb-tinte);
+  font-family: var(--serif);
+}
+#buehne[data-epoche="1"] .erb-buch {
   background:
     radial-gradient(ellipse at 18% 24%, rgba(120, 92, 48, 0.16) 0%, rgba(120, 92, 48, 0) 42%),
     radial-gradient(ellipse at 76% 68%, rgba(104, 76, 38, 0.14) 0%, rgba(104, 76, 38, 0) 38%),
     radial-gradient(ellipse at 44% 92%, rgba(139, 108, 62, 0.12) 0%, rgba(139, 108, 62, 0) 46%),
     linear-gradient(174deg, #f0e3c4 0%, #e6d6b1 58%, #dcc9a1 100%);
-  color: var(--erb-tinte);
-  font-family: var(--serif);
 }
 #buehne[data-epoche="1"] .erb-buch {
   border: calc(var(--s) * 4) solid #3d2614;
@@ -505,6 +607,11 @@
 #buehne[data-epoche="2"] .erb-buch {
   --erb-tinte: #23201a;
   --erb-rubrik: #93211c;
+  --erb-papier: #f1ebd6;
+  color: var(--erb-tinte);
+  font-family: var(--serif);
+}
+#buehne[data-epoche="2"] .erb-buch {
   background:
     /* Die Rippen des Schoepfsiebs: dicht, waagrecht, ueber das ganze Blatt.
        Sie muessen zu SEHEN sein, sonst ist Buetten nur ein Wort im Kommentar. */
@@ -520,8 +627,6 @@
       rgba(126, 114, 84, 0) calc(var(--s) * 2),
       rgba(126, 114, 84, 0) calc(var(--s) * 30)),
     linear-gradient(180deg, #f6f1de 0%, #ece5cb 100%);
-  color: var(--erb-tinte);
-  font-family: var(--serif);
 }
 #buehne[data-epoche="2"] .erb-buch {
   border: calc(var(--s) * 2) solid #6d5c3c;
@@ -563,6 +668,12 @@
   --erb-tinte: #17202b;
   --erb-rubrik: #9d2b22;
   --erb-linie: #7e9dc4;
+  --erb-papier: #e8efe4;
+  color: var(--erb-tinte);
+  font-family: var(--serif);
+  font-stretch: condensed;
+}
+#buehne[data-epoche="3"] .erb-buch {
   /* Durchgehende Zeilenlinien wie auf einem Formular, dazu die rote
      Randlinie der Spalte. */
   background:
@@ -586,9 +697,6 @@
       rgba(74, 116, 166, 0) calc(var(--s) * 13),
       rgba(74, 116, 166, 0) calc(var(--s) * 26)),
     linear-gradient(180deg, #eef3ea 0%, #e2eade 100%);
-  color: var(--erb-tinte);
-  font-family: var(--serif);
-  font-stretch: condensed;
 }
 #buehne[data-epoche="3"] .erb-buch {
   border: calc(var(--s) * 2) solid #5b6470;
@@ -629,14 +737,17 @@
 #buehne[data-epoche="4"] .erb-buch {
   --erb-tinte: #23241f;
   --erb-rubrik: #3c4a5a;
-  /* Durchschlagpapier: flach, kuehl, ohne jede Struktur. Genau das
-     unterscheidet es vom Vordruck von 1884 — der ist liniert und getoent,
-     dieser ist leer. */
-  background: linear-gradient(180deg, #fbfbfa 0%, #f0f0ee 100%);
+  --erb-papier: #f7f7f5;
   color: var(--erb-tinte);
   /* Gleiche Dickte fuer alles. Ein Durchschlag hat keine zweite Schrift. */
   font-family: var(--mono);
   letter-spacing: 0;
+}
+/* Durchschlagpapier: flach, kuehl, ohne jede Struktur. Genau das
+   unterscheidet es vom Vordruck von 1884 — der ist liniert und getoent,
+   dieser ist leer. */
+#buehne[data-epoche="4"] .erb-buch {
+  background: linear-gradient(180deg, #fbfbfa 0%, #f0f0ee 100%);
 }
 #buehne[data-epoche="4"] .erb-buch {
   border: calc(var(--s) * 1) solid #9a9a92;
@@ -673,38 +784,64 @@
 #buehne[data-epoche="4"] .erb-buchkopf { border-left-color: #9a9a92; }
 
 /* --------------------------------------------------------------------------
-   DIE LEISTE FOLGT DEM BLATT — vier Rahmen, vier Schriftbilder
+   DIE LEISTE FOLGT DEM BLATT — vier Schriftbilder, vier Knopfraender
+
+   WELLE 11: hier standen vier Rahmen um die Leiste (E1 3 px braun, E2 mit
+   7 px roter Rubrikleiste links, E3 2 px grau, E4 2 px grau mit
+   Schlagschatten) und ein Kopfstreifen. Jeder einzelne davon haette die
+   Leiste allein — ohne jeden Grund — wieder zu einem Kasten von 126.000
+   Bildpunkten gemacht: die Regel des blinden Kritikers zaehlt einen
+   sichtbaren Rahmen genauso wie einen deckenden Grund, und gezaehlt wird
+   dann die GANZE Huelle.
+
+   Die Epoche steht deshalb jetzt dort, wo sie nichts kostet: in der Schrift
+   des Bandes, in der Rubrikfarbe des Wortes — und in den vier Knopfraendern,
+   die als einzige Kaesten des Stuecks ohnehin dastehen. Ein Knopfrand ist
+   1 px breit und liegt auf einem Kasten, den es sowieso gibt; er kostet
+   keinen einzigen zusaetzlichen Bildpunkt.
    -------------------------------------------------------------------------- */
 
-#buehne[data-epoche="1"] .erb-leiste {
-  border-color: #3d2614;
-  border-width: calc(var(--s) * 3);
-}
+/* 1350 — DAS STADTBUCH: schwerer dunkler Amtsbuchdeckel, rote Rubrik. */
 #buehne[data-epoche="1"] .erb-wort { color: #8e2b18; }
+#buehne[data-epoche="1"] .erb-leiste .knopf { border-color: #3d2614; }
+#buehne[data-epoche="1"] .knopf.erb-uebergabe {
+  background: linear-gradient(180deg, #ecdfbe 0%, #d7c49c 100%);
+}
 
-#buehne[data-epoche="2"] .erb-leiste {
+/* 1600 — DER SIEGELBRIEF: Kanzleikursive, Siegelrot an der Kante. */
+#buehne[data-epoche="2"] .erb-wort { font-style: italic; color: #93211c; }
+#buehne[data-epoche="2"] .erb-leiste .knopf {
   border-color: #6d5c3c;
-  border-left: calc(var(--s) * 7) solid #93211c;
+  border-left-color: #93211c;
+  border-left-width: calc(var(--s) * 3);
   border-radius: calc(var(--s) * 2);
 }
-#buehne[data-epoche="2"] .erb-wort { font-style: italic; color: #93211c; }
+#buehne[data-epoche="2"] .knopf.erb-uebergabe {
+  background: linear-gradient(180deg, #f1ebd6 0%, #ddd4b6 100%);
+}
 
-#buehne[data-epoche="3"] .erb-leiste {
+/* 1884 — DER VORDRUCK: schmale Schrift, rechte Winkel, Behoerdenblau. */
+#buehne[data-epoche="3"] .erb-wort { letter-spacing: calc(var(--s) * 1); color: #9d2b22; }
+#buehne[data-epoche="3"] .erb-band > *:not(:first-child)::before { color: #5b7ba4; }
+#buehne[data-epoche="3"] .erb-leiste .knopf {
   border-color: #5b6470;
-  border-width: calc(var(--s) * 2);
   border-radius: 0;
 }
-#buehne[data-epoche="3"] .erb-wort { letter-spacing: calc(var(--s) * 1); color: #9d2b22; }
-#buehne[data-epoche="3"] .erb-band > *:not(:first-child) { border-left-color: #7e9dc4; }
+#buehne[data-epoche="3"] .knopf.erb-uebergabe {
+  background: linear-gradient(180deg, #e8efe4 0%, #d3ddcf 100%);
+}
 
-#buehne[data-epoche="4"] .erb-leiste {
-  border: calc(var(--s) * 2) solid #9a9a92;
-  border-radius: calc(var(--s) * 1);
-  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 9) rgba(0, 0, 0, 0.35);
-}
-#buehne[data-epoche="4"] .erb-leiste::before {
-  background: linear-gradient(90deg, #b9b9b1, #d8d8d1, #b9b9b1);
-}
+/* 1970 — DIE MASCHINENSCHRIFT: gleiche Dickte, kein Zierat, grauer Rand. */
 #buehne[data-epoche="4"] .erb-wort { letter-spacing: calc(var(--s) * 1); color: #3c4a5a; }
 #buehne[data-epoche="4"] .erb-hand { font-style: normal; color: #4a4a42; }
-#buehne[data-epoche="4"] .erb-band > *:not(:first-child) { border-left-color: rgba(35,36,31,0.25); }
+#buehne[data-epoche="4"] .erb-band > *:not(:first-child)::before { color: rgba(35,36,31,0.5); }
+#buehne[data-epoche="4"] .erb-leiste .knopf {
+  border-color: #9a9a92;
+  border-radius: calc(var(--s) * 1);
+}
+#buehne[data-epoche="4"] .knopf.erb-uebergabe {
+  background: linear-gradient(180deg, #f7f7f5 0%, #e4e4e0 100%);
+}
+#buehne[data-epoche="4"] .knopf.erb-ohne {
+  background: linear-gradient(180deg, #ececeA 0%, #d9d9d5 100%);
+}
