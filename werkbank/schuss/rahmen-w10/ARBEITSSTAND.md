@@ -578,3 +578,20 @@ Gemessen mit `rueckkopplung-r3/linie.mjs` (400 Wochen), ausgewertet mit
 (`rho-vorher.txt`, Stand `37f4b44`); **NACHHER** = drei Sätze je vier
 Epochen auf dem Nachstand 8931, jeder Satz durch das Messfenster.
 
+---
+
+# WAS IN DIESEM ORDNER LIEGT
+
+| Datei | wozu |
+|---|---|
+| `messen.mjs` | vom Vorgänger; Deckung je Stück photographisch, plus Rand-, Tafel-, Währungs- und Zeichenprüfung. **Um einen Durchgang für einzelne Kästen ergänzt** (läuft nach allen Stück-Durchgängen, ändert an ihnen nichts) |
+| `einzeln.mjs` | ein einzelner Kasten photographisch — die Zahl für R1 |
+| `sonde.mjs` | vom Vorgänger; was ist offen und wer hält es offen |
+| `blattprobe.mjs` | welche Schließknöpfe stecken in den großen Blättern, wo bricht ein Preisschild |
+| `rahmenprobe.mjs` | Schnellprobe des Rahmens im Spiel: Kopfleiste, Haushalt, Blattaufsicht, Randwache, Spur |
+| `gebautprobe.mjs` | der Zustand des blinden Kritikers — 34 Baurunden, dann Escape |
+| `zeichenprobe.mjs` | jedes Zeichen des Spiels gegen die alte und die neue Schriftkette |
+| `nachstand.sh` | friert den Arbeitsbaum ein (der Builder darf nicht committen) |
+| `alles-messen.sh` | der ganze Satz, sequenziell durchs Messfenster |
+| `rho-auswerten.sh` | drei Schnitte + Jahre unter 1× |
+| `messungen/` | alle Rohdaten, `vorher2-*` = `37f4b44`, `nachher-*` = Nachstand `1f1e9c9b5452` |
