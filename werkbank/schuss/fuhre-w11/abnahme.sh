@@ -24,6 +24,12 @@ lauf() { echo "== $1  $(date -u +%H:%M:%S)"; shift; "$@"; echo "   -> $? $(date 
 
 mkdir -p werkbank/schuss/fuhre-w11/bilder
 
+# ZUERST den Stand neu einfrieren, damit wirklich das gemessen wird, was im
+# Arbeitsbaum steht. Die Marke wird mitgeschrieben — ohne sie ist hinterher
+# nicht zu sagen, welche Fassung diese Zahlen tragen.
+echo "== Stand einfrieren $(date -u +%H:%M:%S)"
+werkbank/schuss/fuhre-w11/nachstand.sh 8952 | tee $Z/abn-marke.txt
+
 lauf "Sonde 30 Wochen OHNE Escape (Endstand cf76271455)" \
   env HAFEN=8952 WOCHEN=30 ESC=0 $M node werkbank/schuss/fuhre-w11/sonde.mjs abn-sonde-w30 \
   > $Z/abn-sonde-w30.log 2>&1

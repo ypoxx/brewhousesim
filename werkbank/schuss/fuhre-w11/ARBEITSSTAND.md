@@ -229,9 +229,9 @@ drei sind **umformuliert**, und das gehoert benannt:
 
 | alt | heute | wo |
 |---|---|---|
-| Ueberschrift „Was steht 1351/52 an der Tafel?" **plus** Zeile „An der Tafel steht: 2× Dünnbier · 1× Grutbier — der Braumeister hat angeschrieben, was voriges Jahr dort stand." | **eine** Zeile: „Was steht 1351/52 an der Tafel? Angeschrieben: 2× Dünnbier · 1× Grutbier — wie voriges Jahr." Der volle Satz ueber den Braumeister steht im `title` | `fuhre.js:3886` |
-| Knopf „Tafel schließen — Michaeli, das Jahr beginnt" | Knopf „Tafel schließen — Michaeli"; „das Jahr beginnt" steht im `title` | `fuhre.js:3932` |
-| „Solange die Tafel auf dem Tisch liegt, ruht die Woche. WEITER und die Taste Escape legen sie ebenfalls beiseite." | Hinweiszeile „Die Woche ruht, solange die Tafel liegt · WEITER und Escape legen sie beiseite" — der volle Wortlaut im `title` desselben Knopfes | `fuhre.js:3944` |
+| Ueberschrift „Was steht 1351/52 an der Tafel?" **plus** Zeile „An der Tafel steht: 2× Dünnbier · 1× Grutbier — der Braumeister hat angeschrieben, was voriges Jahr dort stand." | **eine** Zeile: „Was steht 1351/52 an der Tafel? Angeschrieben: 2× Dünnbier · 1× Grutbier — wie voriges Jahr." Der volle Satz ueber den Braumeister steht im `title` | `fuhre.js:3912` |
+| Knopf „Tafel schließen — Michaeli, das Jahr beginnt" | Knopf „Tafel schließen — Michaeli"; „das Jahr beginnt" steht im `title` | `fuhre.js:3954` |
+| „Solange die Tafel auf dem Tisch liegt, ruht die Woche. WEITER und die Taste Escape legen sie ebenfalls beiseite." | Hinweiszeile „Die Woche ruht, solange die Tafel liegt · WEITER und Escape legen sie beiseite" — der volle Wortlaut im `title` desselben Knopfes | `fuhre.js:3968` |
 
 Zwei Zeilen fuer eine Sache kosten auf einem Anschlag von 265 px Hoehe ein
 Zehntel der Tafel; deshalb zusammengezogen. **Gesagt wird dasselbe, und
@@ -239,6 +239,14 @@ jede Auskunft ist ohne Klick lesbar oder steht im `title` desselben
 Elements.** Aber es ist eine Umformulierung, keine reine Verschiebung, und
 wer die alte Zeile sucht, findet sie so nicht wieder. Die uebrigen vier
 Abweichungen sind Zerlegungen derselben Saetze in andere Zeichenketten.
+
+**Und der Quelltext hat es selbst falsch behauptet — behoben.** Im
+Erklaerkopf ueber der Georgi-Tafel stand „Nichts ist fort, nichts ist
+gekuerzt, **nichts steht nur noch im Titelfeld**". Der letzte Halbsatz war
+nach dieser Zaehlung nicht wahr. Er ist durch die drei Stellen oben ersetzt,
+mit Grund je Stelle (`fuhre.js:3642`). Eine Datei, deren Kommentar mehr
+verspricht als der Code haelt, ist schlimmer als eine ohne Kommentar — und
+es ist eine reine Kommentaraenderung, also ohne Wirkung auf ρ oder Layout.
 
 ### Zwei eigene Fehler beim Bauen, gefunden und behoben
 
@@ -499,9 +507,48 @@ je Epoche EIN Lauf, jeder einzeln durchs Messfenster. Ausgewertet mit
 0,700), und die Jahre unter 1× liegen mit 0/0/1/1 von 14 unter der
 Erlaubnis (ein Jahr von sechs = 2,33 von 14).
 
-**1600, 1884 und 1970 sind Ziffer fuer Ziffer der Vorzustand**, wie ihn der
-Rahmen in Welle 10 dreimal gemessen hat (Saetze A, B und C) — dieselben
-drei Schnitte, dieselben Jahre unter 1×, dieselbe Spannweite der Kasse.
+**VORHER** — beim Neuanlauf vervollstaendigt. `messungen/rho-vorher/`,
+Vorzustand `7896ee6` auf Hafen 8951, dieselbe Maschine, dieselbe Saat.
+1970 fehlte, weil der Container-Reset genau diesen Lauf getroffen hat; er
+ist nachgeholt (21:29–21:45 UTC):
+
+| Epoche | 12 J | 13 J | 14 J | Jahre < 1× | Kasse | Fehler |
+|---|---|---|---|---|---|---|
+| 1350 (a) | −0,245 | −0,170 | **−0,336** | **2/14** | 28–524 | 0 |
+| 1350 (b) | −0,245 | −0,170 | **−0,336** | **2/14** | 28–524 | 0 |
+| 1600 | −0,189 | +0,049 | **−0,116** | **0/14** | 291–2851 | 0 |
+| 1884 | +0,168 | +0,346 | **+0,393** | **1/14** | 1757–23789 | 0 |
+| 1970 | −0,112 | −0,236 | **−0,304** | **1/14** | 320–95857 | 0 |
+
+#### Und dann ist die Probe schaerfer gemacht worden, als „Ziffer fuer Ziffer"
+
+Der erste Anlauf hatte die abgeleiteten Kennzahlen verglichen. Jetzt sind
+die **Rohdaten** verglichen, Feld fuer Feld, mit `json.load` und `!=`:
+
+| | Felder, die sich unterscheiden |
+|---|---|
+| **1600** | `hafen: 8951` gegen `8952` — **sonst keines** |
+| **1884** | `hafen: 8951` gegen `8952` — **sonst keines** |
+| **1970** | `hafen: 8951` gegen `8952` — **sonst keines** |
+| 1350 | `reihe` (339 von 400 Wochen, erste Abweichung Woche 61), `jahre` (12/14), `leiter`, `leiterRoh`, `kasseMin` 28→8, `kasseMax` 524→514, `schluss.kasse` 117→98 |
+
+**In drei von vier Epochen ist der einzige Unterschied zwischen Vorzustand
+und Nachstand die Hafennummer im Messprotokoll.** Alle 400 Wochen, jede
+Kennzahl, jeder Kassenstand, jeder Zug: dieselbe Partie, Feld fuer Feld.
+Das ist mehr, als „dieselben drei Schnitte" sagt — dieselben drei Schnitte
+koennten aus verschiedenen Partien kommen. Diese hier sind es nicht.
+
+Nachzustellen mit
+
+```
+python3 - <<'EOF'
+import json
+for e in (1,2,3,4):
+    a=json.load(open(f'…/rho-vorher/e{e}-a.json'))
+    b=json.load(open(f'…/rho-nachher/e{e}-a.json'))
+    print(e, [k for k in a if a[k]!=b[k]])
+EOF
+```
 
 **1350 ist es nicht, und das steht hier, weil es gegen die einfache
 Erzaehlung spricht.** Der Rahmen hat fuer 1350 auf demselben Stand ZWEI
@@ -524,7 +571,16 @@ Streuungsmass". Mein Lauf liefert eine dritte Zahl (+0,191, Kasse 8–514,
 Der Vorzustand liefert heute Ziffer fuer Ziffer den Satz A des Rahmens.
 **Meine Fassung liefert etwas anderes.** Die Kennzahlreihe laeuft in den
 ersten drei Braujahren gleich (5,89 · 1,43 · 3,42) und geht im **vierten**
-auseinander (2,41 gegen 3,32).
+auseinander (2,41 gegen 3,32). Auf die Woche genau, aus dem Feldvergleich
+der Rohdaten: **die erste abweichende Woche ist Woche 61**; von den 400
+Wochen sind danach 339 verschieden.
+
+**Der Vorher-Satz reproduziert die Grundlinie des Auftrags punktgenau**,
+und das ist die Probe darauf, dass die Maschine heute misst wie am
+6. August: `gauntlet/WELLE-11.md` nennt als „heute" **2/0/1/1 von 14**
+Braujahre unter 1× — meine vier Vorher-Laeufe liefern 2 (1350), 0 (1600),
+1 (1884), 1 (1970). Dieselbe Reihe. Der groesste Vorher-Wert ist 0,393
+(1884), auch das die Zahl aus dem Auftrag.
 
 **Was ich dazu weiss, und was ich nicht weiss.** Der Nenner sagt, dass es
 eine andere Partie ist, nicht eine andere Rechnung: vorher gewinnt die

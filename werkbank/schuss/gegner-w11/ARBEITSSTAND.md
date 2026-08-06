@@ -426,4 +426,45 @@ der Vorgänger beim Hofbild schon einmal gemacht und selbst zurückgenommen (F1)
 Der Zähler in `sonde.mjs` ist absichtlich schichtblind und zählt ihn weiter mit
 — **ich melde ihn, statt ihn wegzurechnen.**
 
-*(Messung folgt; die Läufe gehen einzeln durchs Messfenster.)*
+### 6.5 Rechenprobe vor der Messung — die Hälfte, die kein Browser braucht
+
+Die Ausweiche hat zwei Hälften: **findet sie die Zonen** (DOM, Zeitpunkt) und
+**rechnet sie richtig** (Geometrie). Die zweite Hälfte lässt sich ohne Browser
+prüfen, indem man die gemessenen Zahlen aus `nach-gebaut.txt` / `nach-w30.txt`
+durch dieselbe Funktion schickt:
+
+| Fall | Unterkante vorher | Schild | Unterkante nachher | Abstand |
+|---|---|---|---|---|
+| 1350/1970 gebaut, `gg-paar` auf ST. MICHAEL | 559 px | y 527–550 | **521 px** (nach oben) | **6 px frei** |
+| 1970 w30, `gg-paar` auf NORDSTERN-GRUPPE | 528 px | y 478–495 | **573 px** (nach unten) | **7 px frei** |
+
+Beide Male wird die billigere Richtung genommen, und beide Male steht das
+Zeichen danach frei. Der Abstand ist knapp, aber er ist es **mit Absicht und
+nachrechenbar**: beim Ausweichen nach oben setzt `nachOben` die Unterkante
+genau 0,4 % (6,1 px) über die Schildoberkante — die Höhenschätzung geht in
+diese Richtung gar nicht ein. Beim Ausweichen nach unten ist der Abstand
+mindestens 0,4 %, weil die Schätzung (`reihen × 2,1 + 0,5`) bewusst **über**
+der wahren Höhe liegt (6,8 % geschätzt gegen 6,1 % gemessen bei drei Reihen).
+Der A3-Zähler der Sonde meldet erst ab mehr als 1 px Überlappung — sechs px
+sind kein Zufallstreffer.
+
+**Damit steht nur noch die erste Hälfte offen, und genau die misst
+`data-a3zonen`.** Zeigt die Sonde `Sperrzonen gefunden: 0`, ist die Diagnose
+aus §6.2 falsch und der Fehler liegt woanders; zeigt sie eine Zahl > 0 und A3
+trotzdem > 0, ist die Rechnung schuld und nicht der Zeitpunkt. Zwei
+Möglichkeiten, ein Messwert — das ist der Grund, warum das Attribut existiert.
+
+### 6.6 Zwei weitere Änderungen, aus der Vorsicht heraus
+
+| # | Was | Warum | Datei |
+|---|---|---|---|
+| 9 | Die Randwache gilt jetzt auch für die Ausweiche: `weicheAus` klemmt die Ober- und Unterkante ins Bild | Ein Zeichen, das einem Schild ausweicht und dabei aus dem Bild fällt, hat nichts gewonnen — `ueberRand()` muss auch gebaut leer bleiben | `gegner.js` `weicheAus` |
+| 10 | `gg-gewonnen` und `gg-frei` weichen wie das Paar aus | Sie hängen an **derselben** Adresse mit **demselben** Anker und **demselben** dy. Sie standen in keinem der acht abgetasteten Zustände im Bild — eine Regel, die für das eine gilt und für das andere nicht, ist keine Regel, sondern ein Zufall | `gegner.js` `zeichneAdressen` |
+
+Änderung 9 ist die Lehre aus Welle 10 an mir selbst: der Vorgänger hat die
+Randwache **seitlich** gebaut (`randDx`), weil der Rahmen die Klage seitlich
+gefunden hatte. Sobald die Ausweiche wirklich läuft, bewegt dieses Stück auch
+**senkrecht** — und eine Randwache, die nur eine Achse kennt, ist keine.
+
+*(Messung folgt; die Läufe gehen einzeln durchs Messfenster. Es hält gerade
+DIE FUHRE mit einer 400-Wochen-Linie, DAS ERBE wartet ebenfalls.)*

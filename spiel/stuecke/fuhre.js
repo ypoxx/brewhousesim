@@ -3642,8 +3642,31 @@
        DER BERICHT klappt auf.  Monat fuer Monat, Zahltag, Abgabe,
        Kerbholz, Notsude, verlorene Adressen, der Weg zum guten Ende —
        jede Zeile, die vorher dalag, steht weiter da, hinter EINEM Knopf,
-       der sie aufschlaegt und wieder zuklappt. Nichts ist fort, nichts
-       ist gekuerzt, nichts steht nur noch im Titelfeld.
+       der sie aufschlaegt und wieder zuklappt. Nichts ist fort und
+       nichts ist gekuerzt.
+
+       AN DREI STELLEN IST DER WORTLAUT TROTZDEM ANDERS, und weil hier
+       „nichts steht nur noch im Titelfeld" stand, was nicht stimmte,
+       steht es jetzt genau:
+
+         · Die Ueberschrift „Was steht 1351/52 an der Tafel?" und die
+           Zeile „An der Tafel steht: 2x Duennbier — der Braumeister hat
+           angeschrieben, was voriges Jahr dort stand." sind EINE Zeile
+           geworden: „… Angeschrieben: 2x Duennbier — wie voriges Jahr."
+           Der Satz ueber den Braumeister steht im `title` derselben
+           Zeile. Zwei Zeilen fuer eine Sache kosten auf 265 px Hoehe ein
+           Zehntel der Tafel.
+         · Der Schliessknopf heisst „Tafel schliessen — Michaeli" statt
+           „… Michaeli, das Jahr beginnt"; der Rest steht in seinem
+           `title`.
+         · Der Hinweis unter den Griffen ist auf eine Zeile gebracht;
+           sein voller Wortlaut steht im `title` desselben Knopfes.
+
+       Jede dieser Auskuenfte ist ohne Klick lesbar — verkuerzt im Bild,
+       vollstaendig im `title` desselben Elements. Aber es ist eine
+       Umformulierung, keine reine Verschiebung, und wer die alte Zeile
+       sucht, findet sie so nicht wieder. Nachgezaehlt in
+       `werkbank/schuss/fuhre-w11/ARBEITSSTAND.md`, §2.
 
      WAS DABEI NICHT ANGEFASST WURDE, weil daran die zweite Messlatte
      haengt: die Klasse `.fu-sommerblatt`, die Zugschluessel
