@@ -1,0 +1,51 @@
+MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 55s
+MESSFENSTER offen — load 1.32 1.22 1.28
+
+===== nach E1 =====
+ 30 Wochen, VOR Escape: gesamt 42.7 % · erbe 16800 · sud 89280 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"zu","name|nm-band":"zu","preis|pr-stil-pergament.pr-tafel":"zu","fuhre|blatt.fu-georgi-1351.fu-sommerblatt":"auf"}
+      1410554 px² (33.4 %) 1293x1091  .sud-brett stadt-zugeklappt   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+      1351246 px² (  32 %) 1596x847   .blatt fu-sommerblatt fu-georgi-1351   LIEGT OFFEN
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       678701 px² (16.1 %) 677x1003   .sud-spalte links   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       482063 px² (11.4 %) 555x869    .sud-spalte rechts   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       467526 px² (11.1 %) 578x809    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+       466301 px² (  11 %) 675x691    .fu-liste   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+   tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1351 1596×847 @578,169"] · blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1351"] · geklemmt: {}
+ 30 Wochen + 1x Escape: gesamt 47.1 % · erbe 16800 · sud 1474816 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"auf","name|nm-band":"zu","preis|pr-stil-pergament.pr-tafel":"zu","fuhre|blatt.fu-georgi-1351.fu-sommerblatt":"auf"}
+      1410554 px² (33.4 %) 1293x1091  .sud-brett   LIEGT OFFEN
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   LIEGT OFFEN
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       678701 px² (16.1 %) 677x1003   .sud-spalte links   LIEGT OFFEN
+       482063 px² (11.4 %) 555x869    .sud-spalte rechts   LIEGT OFFEN
+       467526 px² (11.1 %) 578x809    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+       466301 px² (  11 %) 675x691    .fu-liste   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       419723 px² ( 9.9 %) 638x657    .fu-brett fu-tafel fu-schiefer stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-tafel fu-schiefer 
+   tafeln: ["sud sud-brett 1293×1091 @33,190","sud sud-achse 677×503 @54,365","sud sud-achse 677×486 @54,876"] · blaetter: [] · geklemmt: {}
+
+===== nach E4 =====
+ 30 Wochen, VOR Escape: gesamt 51.4 % · erbe null · sud 88816 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"zu","name|nm-band":"zu","preis|pr-stil-offset.pr-tafel":"zu","gegner|amort.gg-gzblock.gg-gzgebot":"zu","gegner|amort.gg-gzangebot.gg-gzblock":"auf","fuhre|blatt.fu-georgi-1971.fu-sommerblatt":"auf"}
+      1504427 px² (35.6 %) 1596x943   .blatt fu-sommerblatt fu-georgi-1971   LIEGT OFFEN
+      1410554 px² (33.4 %) 1293x1091  .sud-brett stadt-zugeklappt   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       627787 px² (14.9 %) 677x928    .sud-spalte links   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       530951 px² (12.6 %) 578x919    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+       509356 px² (  12 %) 555x918    .sud-spalte rechts   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       454371 px² (10.7 %) 675x674    .fu-liste   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+   tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1971 1596×943 @578,169"] · blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1971"] · geklemmt: {}
+ 30 Wochen + 1x Escape: gesamt 51.5 % · erbe null · sud 1423136 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"auf","name|nm-band":"zu","preis|pr-stil-offset.pr-tafel":"zu","gegner|amort.gg-gzblock.gg-gzgebot":"zu","gegner|amort.gg-gzangebot.gg-gzblock":"auf","fuhre|blatt.fu-georgi-1971.fu-sommerblatt":"auf"}
+      1410554 px² (33.4 %) 1293x1091  .sud-brett   LIEGT OFFEN
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   LIEGT OFFEN
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       627787 px² (14.9 %) 677x928    .sud-spalte links   LIEGT OFFEN
+       530951 px² (12.6 %) 578x919    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+       509356 px² (  12 %) 555x918    .sud-spalte rechts   LIEGT OFFEN
+       454371 px² (10.7 %) 675x674    .fu-liste   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       419723 px² ( 9.9 %) 638x657    .fu-brett fu-tafel fu-schiefer stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-tafel fu-schiefer 
+   tafeln: ["sud sud-brett 1293×1091 @33,190","sud sud-achse 677×476 @54,811","sud sud-achse 677×438 @54,365"] · blaetter: [] · geklemmt: {}

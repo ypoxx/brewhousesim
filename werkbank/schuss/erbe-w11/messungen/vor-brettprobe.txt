@@ -1,0 +1,51 @@
+MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 24s
+MESSFENSTER offen — load 1.08 1.16 1.28
+
+===== vor E1 =====
+ 30 Wochen, VOR Escape: gesamt 45.7 % · erbe 136192 · sud 89280 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"zu","name|nm-band":"zu","preis|pr-stil-pergament.pr-tafel":"zu","erbe|blatt.erb-buch":"zu","fuhre|blatt.fu-georgi-1351.fu-sommerblatt":"auf"}
+      1410554 px² (33.4 %) 1293x1091  .sud-brett stadt-zugeklappt   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+      1351246 px² (  32 %) 1596x847   .blatt fu-sommerblatt fu-georgi-1351   LIEGT OFFEN
+      1242732 px² (29.4 %) 1156x1075  .erb-buch blatt stadt-zugeklappt   WEGGESCHNITTEN von .erb-buch blatt stadt-zugeklapp
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       678701 px² (16.1 %) 677x1003   .sud-spalte links   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       482063 px² (11.4 %) 555x869    .sud-spalte rechts   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       467526 px² (11.1 %) 578x809    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+   tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1351 1596×847 @578,169"] · blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1351"] · geklemmt: {}
+ 30 Wochen + 1x Escape: gesamt 17.8 % · erbe 136192 · sud 87840 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"zu","name|nm-band":"zu","preis|pr-stil-pergament.pr-tafel":"zu","erbe|blatt.erb-buch":"zu","fuhre|blatt.fu-georgi-1351.fu-sommerblatt":"auf","erbe|blatt.erb-buch.kern-blatt-zu":"auf"}
+      1410554 px² (33.4 %) 1293x1091  .sud-brett stadt-zugeklappt   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+      1242732 px² (29.4 %) 1156x1075  .erb-buch blatt kern-blatt-zu   WEGGESCHNITTEN von .erb-buch blatt kern-blatt-zu
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       678701 px² (16.1 %) 677x1003   .sud-spalte links   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       482063 px² (11.4 %) 555x869    .sud-spalte rechts   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       467526 px² (11.1 %) 578x809    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+       466301 px² (  11 %) 675x691    .fu-liste   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+   tafeln: [] · blaetter: [] · geklemmt: {"erbe .erb-buch blatt":1}
+
+===== vor E4 =====
+ 30 Wochen, VOR Escape: gesamt 50.9 % · erbe null · sud 88816 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"zu","name|nm-band":"zu","preis|pr-stil-offset.pr-tafel":"zu","erbe|blatt.erb-buch":"zu","gegner|amort.gg-gzblock.gg-gzgebot":"zu","gegner|amort.gg-gzangebot.gg-gzblock":"auf","fuhre|blatt.fu-georgi-1971.fu-sommerblatt":"auf"}
+      1504427 px² (35.6 %) 1596x943   .blatt fu-sommerblatt fu-georgi-1971   LIEGT OFFEN
+      1410554 px² (33.4 %) 1293x1091  .sud-brett stadt-zugeklappt   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+      1242732 px² (29.4 %) 1156x1075  .erb-buch blatt stadt-zugeklappt   WEGGESCHNITTEN von .erb-buch blatt stadt-zugeklapp
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       627787 px² (14.9 %) 677x928    .sud-spalte links   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       530951 px² (12.6 %) 578x919    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+       509356 px² (  12 %) 555x918    .sud-spalte rechts   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+   tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1971 1596×943 @578,169"] · blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1971"] · geklemmt: {}
+ 30 Wochen + 1x Escape: gesamt 20.2 % · erbe null · sud 88816 · verdeckt [] · lage 0
+   Lage der Bretter: {"gegner|amort.gg-band":"zu","fuhre|fu-brett.fu-haeuser":"zu","fuhre|fu-brett.fu-schiefer.fu-tafel":"zu","fuhre|fu-brett.fu-keller":"zu","fuhre|fu-brett.fu-wagen":"zu","sud|sud-brett":"zu","name|nm-band":"zu","preis|pr-stil-offset.pr-tafel":"zu","erbe|blatt.erb-buch":"zu","gegner|amort.gg-gzblock.gg-gzgebot":"zu","gegner|amort.gg-gzangebot.gg-gzblock":"auf","fuhre|blatt.fu-georgi-1971.fu-sommerblatt":"auf","erbe|blatt.erb-buch.kern-blatt-zu":"auf"}
+      1410554 px² (33.4 %) 1293x1091  .sud-brett stadt-zugeklappt   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+      1242732 px² (29.4 %) 1156x1075  .erb-buch blatt kern-blatt-zu   WEGGESCHNITTEN von .erb-buch blatt kern-blatt-zu
+      1134682 px² (26.8 %) 1251x907   .sud-rolle rolle   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       796426 px² (18.8 %) 705x1130   .fu-brett fu-haeuser stadt-zugeklappt   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+       627787 px² (14.9 %) 677x928    .sud-spalte links   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       530951 px² (12.6 %) 578x919    .nm-band stadt-zugeklappt   WEGGESCHNITTEN von .nm-band stadt-zugeklappt
+       509356 px² (  12 %) 555x918    .sud-spalte rechts   WEGGESCHNITTEN von .sud-brett stadt-zugeklappt
+       454371 px² (10.7 %) 675x674    .fu-liste   WEGGESCHNITTEN von .fu-brett fu-haeuser stadt-zuge
+   tafeln: [] · blaetter: [] · geklemmt: {"erbe .erb-buch blatt":1}
