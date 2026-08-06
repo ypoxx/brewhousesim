@@ -384,5 +384,27 @@ nachher.** Null Seitenfehler, kein Abbruch, alle Läufe volle 400 Wochen und
 >    Sechstels frei, und darunter liegen fremde Züge, die vorher nicht
 >    erreichbar waren.
 
-*(Sätze B und C laufen weiter; `stadt-w8/rho/lauf.sh` ist wiederaufnehmbar und
+### Satz B, ebenfalls durch — 6. August, 02:03 UTC: BYTEWEISE IDENTISCH
+
+Alle acht Läufe des zweiten Satzes liefern dieselben Ziffern wie der erste,
+und zwar nicht nur auf drei Nachkommastellen: **die acht Ergebnisdateien
+haben paarweise dieselbe md5** (`stadt-w8/rho/pruefsummen.txt`).
+
+| | A = B |
+|---|---|
+| vor e1 | `ae23f4f661f23c2abd6c32864cbb6043` |
+| vor e2 | `9265842fd8a5f97430b538a1d0f87cc6` |
+| vor e3 | `bdbac962183ec785c3539cf094077227` |
+| vor e4 | `89186aa6fb11fd1dcda6f8ff86a41e7a` |
+| nach e1 | `8485064bc10f16ecda88f47c0180fccc` |
+| nach e2 | `9840bec5447e87d4dcdfa38783e10de7` |
+| nach e3 | `a69a57f5f467b7b61a54525f443df96b` |
+| nach e4 | `182df2ef314d93d092b3eae627c6867a` |
+
+Das ist die strengste Form der Gerätekontrolle, die dieser Lauf kennt — dieselbe,
+mit der die Aufsicht am 5. August 1350 und 1970 abgenommen hat. Die Zahlen oben
+stehen damit auf **zwei** unabhängigen Läufen je Zelle, nicht auf einem.
+Roh: `stadt-w8/rho/ergebnis-AB.txt`.
+
+*(Satz C läuft weiter; `stadt-w8/rho/lauf.sh` ist wiederaufnehmbar und
 überspringt, was schon dasteht.)*
