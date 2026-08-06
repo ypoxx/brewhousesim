@@ -379,6 +379,27 @@ also bleiben andere Bretter offen, also findet die Hand in spaeteren Wochen
 andere Knoepfe. Belegen kann ich diese Kette nicht — dazu muesste ich die
 Hand mitschreiben lassen, und an fremden Messgeraeten wird nicht gedreht.
 
+**Und dann habe ich 1350 auf BEIDEN Staenden ein zweites Mal gefahren,
+weil eine Zahl aus einem Lauf bei dieser Epoche nichts wert ist:**
+
+| 1350, 400 Wochen, Saat 1350 | Lauf a | Lauf b | Spannweite | Jahre < 1× |
+|---|---|---|---|---|
+| **Vorzustand 7896ee6** | −0,336 | **−0,336** | **0,000** | 2/14 · 2/14 |
+| **Nachstand** | +0,191 | **−0,160** | **0,352** | 0/14 · 2/14 |
+
+**Das ist der Befund, und er spricht gegen mich:** der Vorzustand liefert
+heute zweimal dieselbe Reihe, mein Stand zweimal verschiedene. Die
+Epoche 1350 war schon beim Rahmen die eine, die auf dem UNVERAENDERTEN
+Stand zwischen Laeufen umgesprungen ist (Satz A/C −0,336, Satz B +0,270) —
+aber ich kann nicht behaupten, dass ich nur eine vorhandene Zweideutigkeit
+sichtbar mache. Zwei Laeufe je Stand sind zu wenig fuer diese Aussage; was
+sie zeigen, ist: **auf meinem Stand ist 1350 in zwei von zwei Laeufen nicht
+dieselbe Partie, auf dem Vorzustand in zwei von zwei Laeufen schon.**
+
+*Was das nicht ist:* eine gerissene Latte. Alle vier Werte fuer 1350
+(−0,336, −0,336, +0,191, −0,160) liegen weit unter 0,700, und die Jahre
+unter 1× bleiben in jedem Lauf bei hoechstens 2 von 14 (erlaubt 2,33).
+
 **Was trotzdem feststeht:**
 * Beide Reihen bestehen die Latte mit grossem Abstand (0,336 und 0,191
   gegen 0,700), und der groesste Wert aller vier Epochen ist unveraendert
@@ -387,8 +408,10 @@ Hand mitschreiben lassen, und an fremden Messgeraeten wird nicht gedreht.
   14, erlaubt sind 2,33.
 * 1600, 1884 und 1970 sind Ziffer fuer Ziffer unveraendert.
 * 1350 ist die Epoche, die schon beim Rahmen auf dem UNVERAENDERTEN Stand
-  zwischen zwei Laeufen umgesprungen ist (Satz B: +0,270, 0/14) — mein
-  Nachher-Lauf liegt auf genau diesem Ast.
+  zwischen zwei Laeufen umgesprungen ist (Satz B: +0,270, 0/14).
+* Der Vorher-Satz ist auch mit eigenen Laeufen bestaetigt: 1600
+  (−0,189/+0,049/−0,116) und 1884 (+0,168/+0,346/+0,393) sind auf
+  `7896ee6` Ziffer fuer Ziffer dieselben wie auf dem Nachstand.
 
 
 ### 3.8 Welche Fassung gemessen wurde
