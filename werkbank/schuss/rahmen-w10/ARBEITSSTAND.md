@@ -150,3 +150,24 @@ Vorher (Gerät des Vorgängers, dieselbe Fläche): `.kopfleiste` 1569×67 =
 105.123 px und `.hauszeile` 847×39 = 33.033 px, zusammen 19,6 % des obersten
 Sechstels; `.deckung` 959×38 = 36.442 px im untersten Sechstel; nach 30
 Wochen + einem Escape **drei** Tafeln über 200.000 px².
+
+## Gerätekontrolle, und sie ist besser ausgefallen als erhofft
+
+Der Vorzustand `37f4b44`, neu gemessen mit dem **berichtigten** `messen.mjs`
+(nicht-verändernde Maske), Ladezustand:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| gesamt, neu gemessen | 22,0 % | 22,6 % | 22,3 % | 22,7 % |
+| **blinder Kritiker, `bild-w9/deckung.mjs`** | **22,0 %** | **22,6 %** | **22,3 %** | **22,8 %** |
+| oberstes ⅙, neu gemessen | 50,6 % | 51,2 % | 52,1 % | 53,1 % |
+| **blinder Kritiker** | **50,6 %** | **51,2 %** | **52,1 %** | **53,1 %** |
+| `kern` im obersten ⅙ | 25,4 % | 25,9 % | 27,1 % | 26,6 % |
+| Auftrag: „Kopfleiste des Skeletts" | — | — | — | **26,0 %** |
+
+**Zwei unabhängig gebaute Geräte, Ziffer für Ziffer dieselbe Zahl.** Damit ist
+zugleich belegt, dass die Zahlen des Vorgängers (19,9–20,6 % gesamt,
+44,4–46,6 % oben) durch den Maskenfehler nach UNTEN verzerrt waren — die
+zu weit gewachsene Maske hat die Zonen-Nenner nicht verändert, aber die
+Reihenfolge der Aufrufe hat den Zähler je Durchgang anders beschnitten.
+**Für vorher/nachher wird ausschließlich der neu gemessene Satz benutzt.**
