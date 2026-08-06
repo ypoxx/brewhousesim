@@ -46,6 +46,55 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## WELLE 10 GEMESSEN — der Rahmen hat das Bild geräumt, ohne die Partie anzufassen
+
+*Von der Aufsicht am eingefrorenen Stand `7896ee6` (Hafen 8908) nachgemessen,
+**einzeln, nie nebeneinander**, 1350 dreifach mit **einer einzigen md5**.
+Deckung mit dem Gerät des blinden Kritikers `bild-w9/deckung.mjs` — nicht mit
+dem des Builders.*
+
+| Zustand | Welle 9 | Welle 10 |
+|---|---|---|
+| Ladezustand, gesamt | 22,0 – 22,8 % | **18,1 – 19,3 %** |
+| Ladezustand, oberstes ⅙ | 50,6 – 53,1 % | **35,6 – 37,7 %** |
+| Ladezustand, unterstes ⅙ | 11,9 – 13,4 % | **6,5 – 7,1 %** |
+| 30 Wochen, **ohne** Escape | 47,0 – 55,7 % | **44,8 – 53,3 %** |
+| 30 Wochen **+ Escape** | Escape half nicht | **17,9 – 20,2 %** |
+
+**Die Zeile, die der Builder nicht zeigt, ist die vierte.** Seine Tabelle nennt
+nur „w30+Esc" — und dort ist der Gewinn gewaltig. **Ohne Escape ist der
+gespielte Zustand aber fast unverändert:** 44,8–53,3 % gegen vorher
+47,0–55,7 %. Escape räumt jetzt wirklich auf, das ist erkämpft. **Aber solange
+der Spieler nicht Escape drückt, deckt das Spiel weiter die halbe Fläche.**
+Das ist die eigentliche Aufgabe von A16 und geht als Auflage weiter.
+
+**Die Partie ist unangetastet.** Alle vier Epochen ziffernweise wie am
+Welle-9-Stand: −0,245/−0,170/−0,336 · −0,189/+0,049/−0,116 ·
++0,168/+0,346/+0,393 · −0,112/−0,236/−0,304, Jahre unter 1× 2/0/1/1 von 14,
+null Seitenfehler, sechs von sechs Läufen unter 0,700. **Das Wellenziel der
+zweiten Latte hält.**
+
+**Was sonst gemessen ist:** Währungsbruch 1 → **0** in allen vier Epochen · kein
+Kasten über dem Rand · kein fehlendes Zeichen · `verdeckt()` 0 · Latte 4
+14 Überläufe · **497** statt 505 Textknoten · 0 von 307 Knöpfen · Gewicht
+6,33/7,70/6,65/4,71 MB.
+
+**Und das Bleibende ist der Flächenhaushalt.** `BRAUHAUS.haushalt.GRENZEN`
+gibt jedem der neun Stücke eine Obergrenze in Bildpunkten, im Spiel abfragbar
+wie `verdeckt()`. Summe heute **1.282.119 px = 30,3 %**, Summe der Grenzen
+**332.000 px = 7,86 %** — also unter der Auflage A15. Der Rahmen selbst ist von
+253.642 auf **95.690** px herunter und damit als einziger schon innerhalb
+seiner Grenze.
+
+> **Der Builder hat eine eigene Behauptung zurückgenommen**, ohne dass jemand
+> ihn dazu gebracht hätte: nicht seine uhrgetriebene Wache war am Saat-Befund
+> schuld, sondern `welle.sh`. Er hat die Wache trotzdem entfernt und
+> nachgewiesen, dass sich am Bild nichts ändert — **während des Spielens läuft
+> vom Rahmen jetzt nichts.** Das ist die dritte Welle in Folge, in der ein
+> Builder gegen sich selbst gemeldet hat.
+
+---
+
 ## DIESELBE SAAT, ZWEI PARTIEN — der Befund, der über der Welle 10 steht
 
 *6. August, vom Builder DER RAHMEN selbst gemeldet, während er misst.*
