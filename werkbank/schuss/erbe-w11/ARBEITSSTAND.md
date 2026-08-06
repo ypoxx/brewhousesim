@@ -252,6 +252,76 @@ es nicht mehr von selbst auf), oder die Klasse `blatt` tragen und
 
 ---
 
+## Nach 30 Wochen OHNE Escape (`bild-w9/deckung.mjs`, WOCHEN=30)
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| gesamt vorher | 48,8 % | 48,1 % | 44,8 % | 53,3 % |
+| gesamt nachher | **45,7 %** | **45,8 %** | **40,7 %** | **53,8 %** |
+
+In 1970 steht es um 0,5 Punkte schlechter, und ich schreibe es hin statt es
+wegzulassen: in dieser Epoche und in diesem Zustand traegt DAS ERBE **gar
+keinen** Kasten (die Sommertafel der FUHRE liegt darueber, s. u.), die Zahl
+gehoert also nicht mir — aber sie ist gemessen und sie ist nicht besser.
+
+## Die vierte Latte (1366x768) und das Gewicht
+
+| | vorher (`7896ee6`) | nachher |
+|---|---|---|
+| Ueberlaeufe | 14 | **13** |
+| Textknoten unter 12 px | 497 | **389** |
+| Knoepfe unter 24 px | 0 von 307 | **0 von 291** |
+
+**Und was an dieser Verbesserung Buchhaltung ist, nicht Gestaltung:** von den
+108 Textknoten und 16 Knoepfen sind die meisten nicht kleiner geworden,
+sondern aus dem DOM verschwunden — das zugeklappte Buch steht nicht mehr da,
+und `lesbarkeit.mjs` zaehlt auch weggeschnittene Knoten mit. Erreichbar sind
+sie weiter, einen Knopfdruck entfernt. Was WIRKLICH zaehlt: **0 von 291
+Knoepfen unter 24 px**, obwohl die vier Kaufknoepfe auf der Entwurfsleinwand
+von 29 auf 22 px Hoehe herunter sind. Der Knopfboden des Rahmens
+(`grund.css:298`) faengt sie bei 1366x768 ab, wie er soll.
+
+Gewicht (Veto 8 MB je Epoche): 6,35 / 7,73 / 6,67 / 4,74 MB gegen
+6,33 / 7,70 / 6,65 / 4,71 vorher — +0,02 bis 0,04 MB, alle vier unter dem
+Veto. (Die Zunahme ist der Kommentar in den beiden Dateien.)
+
+## Tor und Spielprobe (auf dem isolierten Nachstand)
+
+`tor.mjs`: **TOR OFFEN**, alle vier Epochen, `lage 0`, `fehler 0`,
+95 / 103 / 106 / 98 Zuege.
+`spielprobe.mjs` (Abschrift mit waehlbarem Hafen): **BESTANDEN**, 60 Wochen je
+Epoche, `lage 0`, 0 Fehler.
+
+## Was die Leiste WIRKLICH noch deckt — die unbequeme Zahl
+
+`einzeln.mjs` nimmt einen einzelnen Kasten photographisch weg und zaehlt die
+Differenz (Maske Huelle + 30 px, damit der Schlagschatten mitzaehlt). Das
+zaehlt AUCH die Schrift, die der Kritiker als Welt rechnet:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| `.erb-leiste` ganz, **vorher** | 142.532 | 144.672 | 145.334 | 135.175 px |
+| `.erb-leiste` ganz, **nachher** | **31.455** | **29.246** | **31.366** | **37.448** px |
+| davon `.erb-band` allein vorher | 5.141 | 5.009 | 5.117 | 5.698 px |
+| davon `.erb-band` allein **nachher** | **14.158** | **13.781** | **13.921** | **14.951** px |
+
+**Das Band deckt jetzt fast dreimal so viel wie vorher** — der Lichthof ist
+Farbe auf dem Bild, und er ist breiter als die Buchstaben, die er traegt. Er
+zaehlt nur deshalb nicht im Haushalt, weil die Regel des Kritikers lautet
+„was nur Schrift traegt, ist Welt". Wer die 17.297 px zitiert, zitiert eine
+Regel; die ehrliche Zahl fuer das, was von DEM ERBE auf dem Schirm steht,
+ist **31.455 statt 142.532** — ein Fuenftel, nicht ein Dreizehntel.
+
+**Und eine Zahl, die ich NICHT auseinanderhalten kann:** `messen.mjs` gibt dem
+Stueck im Vorzustand 233.181 px, `einzeln.mjs` gibt der Leiste 142.532. Die
+Differenz von rund 90.000 px liegt in der Maske des ZUGEKLAPPTEN Buches (die
+Maske ist die Vereinigung aller Kastenhuellen des Stuecks, und `messen.mjs`
+prueft `clip-path` nur am Element selbst, nicht am Vorfahren — derselbe
+Zaehlerfehler, den der Rahmen in Welle 10 an den `.sud-achse` beschrieben
+hat). Was sich dort zwischen den beiden Aufnahmen bewegt, ist nicht mein
+weggeschnittener Kasten. Ich kann nicht sagen, was es ist, und behaupte es
+deshalb auch nicht.
+
 ## Zwischenstand der uebrigen Messungen
 
 *(wird laufend ergaenzt; alle Rohdaten in `messungen/`)*

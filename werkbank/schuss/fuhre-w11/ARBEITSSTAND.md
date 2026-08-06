@@ -317,7 +317,42 @@ genau auf dem Knopfboden — und alle vier „trifft".
 `aufsicht/spielprobe.mjs`: **BESTANDEN**, 60 Wochen je Epoche, `lage 0`,
 `Fehler 0`.
 
-*(Fortsetzung: ρ weiter unten.)*
+### 3.7 ρ — die zweite Messlatte
+
+`rueckkopplung-r3/linie.mjs` unveraendert, 400 Wochen je Epoche, Saat 1350,
+je Epoche EIN Lauf, jeder einzeln durchs Messfenster. Ausgewertet mit
+`fuhre-w6/schnitte.py` (drei Schnitte) und `rueckkopplung-r3/auswerten.py`
+(Jahre unter 1×).
+
+**NACHHER** (Nachstand 8952, `messungen/rho-nachher/`):
+
+| Epoche | 12 J | 13 J | 14 J | Jahre < 1× | Kasse | Fehler |
+|---|---|---|---|---|---|---|
+| 1350 | +0,252 | +0,181 | **+0,191** | **0/14** | 8–514 | 0 |
+| 1600 | −0,189 | +0,049 | **−0,116** | **0/14** | 291–2851 | 0 |
+| 1884 | +0,168 | +0,346 | **+0,393** | **1/14** | 1757–23789 | 0 |
+| 1970 | −0,112 | −0,236 | **−0,304** | **1/14** | 320–95857 | 0 |
+
+**Die Latte haelt in allen vier Epochen** (groesster Wert 0,393, Latte
+0,700), und die Jahre unter 1× liegen mit 0/0/1/1 von 14 unter der
+Erlaubnis (ein Jahr von sechs = 2,33 von 14).
+
+**1600, 1884 und 1970 sind Ziffer fuer Ziffer der Vorzustand**, wie ihn der
+Rahmen in Welle 10 dreimal gemessen hat (Saetze A, B und C) — dieselben
+drei Schnitte, dieselben Jahre unter 1×, dieselbe Spannweite der Kasse.
+
+**1350 ist es nicht, und das steht hier, weil es gegen die einfache
+Erzaehlung spricht.** Der Rahmen hat fuer 1350 auf demselben Stand ZWEI
+verschiedene Reihen gemessen — Satz A und C −0,336 (Kasse 28–524, 2/14
+Jahre unter 1×), Satz B +0,270 (Kasse 34–583, 0/14) — und das ausdruecklich
+als **Geraetebefund** vermerkt: „elf Laeufe sind Ziffer fuer Ziffer der
+Vorzustand und einer ist es nicht, und bei gesaetem Wuerfel ist das kein
+Streuungsmass". Mein Lauf liefert eine dritte Zahl (+0,191, Kasse 8–514,
+0/14) und liegt damit auf dem Ast von Satz B (positives ρ, 0 Jahre unter
+1×). Beide Aeste bestehen die Latte deutlich.
+
+Ein eigener Vorher-Lauf auf `7896ee6` laeuft; er entscheidet, ob 1350 auch
+ohne meine Aenderung heute diese dritte Zahl liefert.
 
 
 ---
