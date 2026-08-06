@@ -76,8 +76,23 @@ zuklappt, bekommt denselben Aufschlag zugerechnet. Wer die Tabelle in
 `gauntlet/WELLE-11.md` liest, sollte die Zahlen des Ladezustands mit
 `BRAUHAUS.haushalt.miss()` gegenlesen, bevor er danach baut.
 
+**Die Gegenprobe ist inzwischen gefahren und sie ist eindeutig.**
+`messungen/nachher-laden.log`, derselbe Ladezustand auf dem Nachstand:
+
+| Ladezustand, photographisch | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| `fuhre` vorher | 169.303 px | 151.951 | 125.997 | 105.811 |
+| `fuhre` **nachher** | **169.305 px** | **151.951** | **125.997** | **105.953** |
+| Deckung gesamt vorher → nachher | 18,4 → 18,4 % | 19,3 → 19,3 | 18,7 → 18,7 | 19,3 → 19,3 |
+
+Ziffer fuer Ziffer dieselbe Zahl — **169.305 px**, genau die Zahl aus dem
+Auftrag — waehrend das Spiel selbst fuer denselben Zustand **0 px** und
+**0 Kaesten** meldet. Damit ist belegt: die 169.305 sind nicht DIE FUHRE,
+und kein Bau der FUHRE kann sie bewegen.
+
 *(Was davon unberuehrt bleibt: die Zahl fuer den GESPIELTEN Zustand. Dort
-deckt die Sommertafel wirklich, und Huellen wie Kamera sagen dasselbe.)*
+deckt die Sommertafel wirklich, und Huellen wie Kamera sagen dasselbe —
+1.476.519 px photographisch gegen 1.375.264 px Huelle in 1350.)*
 
 ### 1.3 Auflage 7 des blinden Kritikers gehoert der FUHRE — und sie war falsch verortet
 
@@ -228,3 +243,49 @@ und nicht meines allein: allein DIE FUHRE bringt sie auf **21,9 bis
 26,7 %**.
 
 *(Fortsetzung: ρ, Lesbarkeit und Abnahme weiter unten.)*
+
+
+---
+
+## 4 — Was DIE FUHRE weiter offen laesst, mit Datei, Zahl und Abnahme
+
+Damit es niemand suchen muss, und weil es gegen meine eigene Zahl spricht:
+**der 30-Wochen-Zustand ist nicht der einzige, in dem dieses Stueck ein
+formatfuellendes Blatt legt.** Zwei weitere kommen spaeter in der Partie und
+sind von der Abnahme dieser Welle nicht erfasst:
+
+| Blatt | Datei · Zeile | Mass (2752×1536) | wann |
+|---|---|---|---|
+| `.fu-ausgangblatt` (Antrag · Übergabe) | `stil/fuhre-zusatz.css:600` | 56 % × 46,5–70 % = **1.542×714 bis 1.075** = 1,10 bis 1,66 Mio px² | Michaeli, sobald ein Antrag vorliegt bzw. das Haus uebergeben werden darf |
+| `.fu-schlussblatt` | `stil/fuhre-zusatz.css:357` | 56 % × bis 80 % = **1.542×1.229** = bis 1,89 Mio px² | am Ende der Partie |
+
+Beide sind mit **Absicht** so gross: der Kopf von `fuhre-zusatz.css:580`
+rechnet vor, dass die Platzordnung der STADT ein Blatt zum Jahreswechsel
+erst ab 25 % der Buehne von selbst aufschlaegt (`stadt.js:1408`). Diese
+Rechnung gilt fuer die Georgi-Tafel nicht mehr — sie schlaegt auch klein
+auf, weil ein Brett, das WAEHREND des Spiels neu auftaucht, der Ordnung als
+eben geholt gilt (nachgemessen, §3.1: `Sommerblatt true` in allen vier
+Epochen). **Damit ist die Begruendung fuer die 26 % auch bei den
+Ausgangblaettern hinfaellig**, und dieselbe Trennung — Anschlag liegt,
+Bestand klappt auf — traegt dort ohne Aenderung am Spiel.
+Ich habe es nicht mehr gemacht, weil jede weitere Aenderung an
+`stuecke/fuhre*.js` die ρ-Messung dieser Welle ungueltig gemacht haette.
+*Abnahme fuer den, der es aufnimmt:* `haushalt.tafeln()` bleibt auch dann
+leer, wenn `BRAUHAUS.fuhre.stand().antrag` nicht null ist.
+
+---
+
+## 5 — Was in diesem Ordner liegt
+
+| Datei | wozu |
+|---|---|
+| `sonde.mjs` | die Innensicht: `haushalt.miss()/tafeln()/pruefe()/ueberRand()`, dazu jeder SICHTBARE Kasten der FUHRE ueber 15.000 px² und ob die vier Planknoepfe sich selbst treffen. Schnell (20 s je Epoche), deshalb das Geraet zum Bauen. `BREITE`/`HOEHE` waehlbar |
+| `messen.mjs` | = `rahmen-w10/messen.mjs`, nur Zielordner und `EPOCHEN` ergaenzt — photographisch, je Stueck |
+| `deckung.mjs` | = `bild-w9/deckung.mjs` des blinden Kritikers, nur Zielordner und `EPOCHEN` ergaenzt |
+| `warum.mjs` | die Gegenprobe zu den 169.305 px: stellt den Stueck-Durchgang nach und zeigt, WO der Unterschied liegt (§1.2) |
+| `blick.mjs` | Aufnahmen von Anschlag und aufgeschlagenem Bericht, plus Masse und Trefferprobe |
+| `escapeprobe.mjs` | die Abnahme der Rahmen-Auflage: Escape schliesst die Tafel UND die Chronik bleibt mit Escape schliessbar |
+| `nachstand.sh` | friert `7896ee6` + **nur** die Dateien DER FUHRE ein (Builder duerfen nicht committen) |
+| `vorher.sh` · `nachher.sh` · `rho.sh` | die Messsaetze, jeder Lauf einzeln durchs Messfenster |
+| `messungen/` | alle Rohdaten. `vorher-*` = `7896ee6`, `nachher-*` = Nachstand |
+| `bilder/` | `blick-*` bei 2752×1536, `klein-*` bei 1366×768, `warum-*` fuer §1.2 |
