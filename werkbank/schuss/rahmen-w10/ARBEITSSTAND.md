@@ -863,3 +863,10 @@ Abfrage (`BRAUHAUS.haushalt.blaetter()`). Eine gedrosselte Wache sieht
 harmlos aus, weil sie in der Messung nie etwas tut — und genau das macht sie
 gefährlich: sie fällt nur an der Stelle auf, an der zwei gleiche Saaten
 auseinanderlaufen.
+
+Und der 30-Wochen-Zustand des ausgelieferten Standes, ebenfalls Ziffer für
+Ziffer der des Standes mit Wache: gesamt **18,0 / 18,1 / 18,0 / 20,3 %**,
+oberstes ⅙ **29,5 / 30,1 / 30,2 / 36,7 %**, unterstes ⅙ 7,0 / 6,7 / 6,6 /
+7,2 %, `kern` 95.755 / 99.379 / 102.133 / 102.026 px, Währungsbruch 0,
+über dem Rand 0, fehlende Zeichen 0, `lage` 0, Seitenfehler 0,
+`verdeckt()` 0. `spielprobe.mjs` bestanden (60 Wochen, alle vier Epochen).
