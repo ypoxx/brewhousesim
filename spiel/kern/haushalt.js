@@ -155,10 +155,18 @@
   /* ----------------------------------------------------------------------
      DIE EINE SAMMLUNG, auf der alles andere steht.
      ---------------------------------------------------------------------- */
-  function sammle() {
+  /* `mindest` (Flaeche in Bildpunkten des Bildschirms) ist die Abkuerzung fuer
+     die Wache: sie sucht nur ganzseitige Blaetter und muss deshalb nicht fuer
+     jedes der rund tausend Elemente `getComputedStyle` rufen. Ohne diese
+     Abkuerzung liefe bei jedem Neuzeichnen ein voller Stilabruf ueber die
+     ganze Buehne — und was den Bildaufbau bremst, bewegt die zweite
+     Messlatte. Der Haushalt selbst (`miss`) laeuft nur auf Zuruf und nimmt
+     sich die volle Runde. */
+  function sammle(mindest) {
     var bu = buehneEl();
     var VB = bu ? bu.clientWidth : BEZUG_B;
     var VH = bu ? bu.clientHeight : BEZUG_H;
+    var min = mindest || 0;
     var liste = [];
     if (!bu) return { liste: liste, breite: VB, hoehe: VH };
     var alle = bu.querySelectorAll('*');
@@ -166,6 +174,7 @@
       var el = alle[i];
       var r = el.getBoundingClientRect();
       if (r.width < 3 || r.height < 3) continue;
+      if (min && r.width * r.height <= min) continue;
       /* Die Epochenplatte ist das einzige Element, dessen Flaeche den ganzen
          Schirm fuellt. Sie ist das BILD und wird ausgenommen — so haelt es
          der blinde Kritiker auch. */
@@ -191,7 +200,7 @@
      MESSEN — Vereinigung der Huellen je Stueck auf einem Raster.
      ---------------------------------------------------------------------- */
   function miss() {
-    var s = sammle();
+    var s = sammle(0);
     var VB = s.breite, VH = s.hoehe;
     var sx = Math.ceil(VB / RASTER), sy = Math.ceil(VH / RASTER);
     var obenBis = Math.ceil((VH / 6) / RASTER);          /* oberstes Sechstel */
@@ -279,7 +288,7 @@
      fremden Kasten nicht verruecken, ohne in fremdes DOM zu schreiben; er
      kann ihn nennen, und das ist der Weg fuer Welle 11. */
   function ueberRand() {
-    var s = sammle();
+    var s = sammle(0);
     var raus = [];
     s.liste.forEach(function (k) {
       if (k.x < -0.5 || k.y < -0.5 || k.x + k.b > s.breite + 0.5 || k.y + k.h > s.hoehe + 0.5) {
@@ -317,6 +326,7 @@
      die Aufsicht keine Klemme. FUER WELLE 11 der saubere Weg:
          BRAUHAUS.blatt.melde(el, function () { ...zumachen... }); */
   var gemeldet = [];       /* [{el, zu}] */
+  var geklemmt = {};       /* welches Blatt musste geklemmt werden — fuer W11 */
 
   function melde(el, zu) {
     if (!el || typeof zu !== 'function') return;
@@ -330,12 +340,43 @@
     return null;
   }
 
-  /* Alle ganzseitigen Blaetter, die gerade wirklich decken. */
+  /* WAS EIN GANZSEITIGES BLATT IST — und was ausdruecklich keines ist.
+
+     ERSTER VERSUCH, UND ER WAR FALSCH, deshalb steht er hier: die Aufsicht
+     nahm zuerst JEDEN Kasten ueber 200.000 px^2. Gemessen im Ladezustand
+     (rahmenprobe.mjs, E1 und E4) hat sie daraufhin die vier `.sud-achse`
+     — die Entscheidungsspalten DES SUD, 677x503 px — und ein `.pr-feld`
+     DES PREISES weggeklemmt. Das sind keine Blaetter, das sind die
+     RUHENDEN Bretter des Spiels; die Aufsicht hat dem Spieler seine
+     Bedienung abgeraeumt. `BRAUHAUS.lage` blieb dabei leer und
+     `verdeckt()` blieb 0 — der Schaden war nur im Bild zu sehen.
+
+     Ein BLATT ist deshalb, was die Klasse `blatt` des Rahmens traegt
+     (grund.css: „Chronik, Michaeli-Blatt, Panels") und dazu ueber der
+     Grenze liegt — also genau das, was auch der Auftrag meint: die
+     `fu-sommerblatt` (traegt `blatt`) und die `erb-buch` (traegt `blatt`).
+     Ein Stueck kann sein Blatt zusaetzlich mit `BRAUHAUS.blatt.melde()`
+     anmelden.
+
+     WAS DIE AUFSICHT DAMIT NICHT MEHR ANFASST, steht trotzdem in der
+     Rechnung: `BRAUHAUS.haushalt.tafeln()` nennt JEDEN Kasten ueber
+     200.000 px^2, ob Blatt oder Brett. Das ist die Liste fuer Welle 11. */
+  function grosseKaesten() {
+    var bu = buehneEl();
+    var VB = bu ? bu.clientWidth : BEZUG_B, VH = bu ? bu.clientHeight : BEZUG_H;
+    var grenze = BLATTGRENZE * ((VB * VH) / BEZUG_FLAECHE);
+    var s = sammle(grenze);
+    return s.liste.sort(function (a, b2) { return b2.flaeche - a.flaeche; });
+  }
+
+  function istBlatt(k) {
+    if (eigenerGriff(k.el)) return true;
+    return /(^|\s)blatt(\s|$)/.test(k.klasse);
+  }
+
+  /* Alle ganzseitigen BLAETTER, die gerade wirklich decken. */
   function blaetter() {
-    var s = sammle();
-    var grenze = BLATTGRENZE * ((s.breite * s.hoehe) / BEZUG_FLAECHE);
-    return s.liste.filter(function (k) { return k.flaeche > grenze; })
-      .sort(function (a, b2) { return b2.flaeche - a.flaeche; });
+    return grosseKaesten().filter(istBlatt);
   }
 
   var SCHLIESSWORT = /(^|[:\-])(zu|zumachen|schliessen|schliess|weg|zurueck|beiseite)$/i;
@@ -397,8 +438,6 @@
     geklemmt[k.stueck + ' .' + k.klasse] = (geklemmt[k.stueck + ' .' + k.klasse] || 0) + 1;
     return 'klemme';
   }
-
-  var geklemmt = {};
 
   /* Raeumt den Tisch. `alles` = jedes ganzseitige Blatt (Escape);
      sonst nur die aelteren, damit hoechstens EINES aufliegt. */
