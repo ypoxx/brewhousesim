@@ -247,81 +247,83 @@
 /* --------------------------------------------------------------------------
    DAS ZEICHEN AM GIEBEL — hier haengt die Bindung, mit ihrem Preis
    -------------------------------------------------------------------------- */
+/* WELLE 11 — der Preis steht am Giebel, mit Kreide statt auf Papier.
+
+   Vier bis acht dieser Zeichen liegen gleichzeitig im Bild; der Kritiker
+   hat sie als „freistehende Wirtskaesten" gezaehlt, je rund 230x100. Sie
+   bleiben, weil sie das Spiel SIND — Optionen mit Preisschild
+   nebeneinander, aus einer Kasse, an vier Giebeln gleichzeitig. Sie
+   verlieren nur ihr Papier und die Haelfte ihrer Flaeche.
+
+   Was NICHT verlorengeht: jedes ist weiter ein echtes <button> mit
+   sichtbarem deutschem Text, stabilem data-zug und data-preis. Die
+   Bedienung ist Wort fuer Wort dieselbe.                                   */
 .gg-schild, .gg-wimpel {
   position: absolute;
   display: flex;
   align-items: center;
-  gap: calc(var(--s) * 6);
-  padding: calc(var(--s) * 4) calc(var(--s) * 9);
-  border: calc(var(--s) * 2) solid var(--gg-tinte);
-  border-radius: calc(var(--s) * 3);
-  box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 9) rgba(0, 0, 0, 0.45);
+  gap: calc(var(--s) * 4);
+  padding: 0;
+  background: none;
+  border: 0;
+  max-width: calc(var(--s) * 250);      /* = BREIT.paar in stuecke/gegner.js */
   cursor: pointer;
   font-family: var(--serif);
   color: var(--gg-tinte);
-  white-space: nowrap;
+  text-align: left;
+  text-shadow: var(--gg-lichthof);
 }
-.gg-schild {
-  background: linear-gradient(180deg, #e3e6e9 0%, #b6bcc2 100%);
-}
-.gg-schild:hover { background: linear-gradient(180deg, #f2f5f7 0%, #c6ccd2 100%); }
-.gg-schildtext b {
+.gg-schild:hover, .gg-wimpel:hover { color: #000; }
+.gg-schildtext b, .gg-wimpeltext b {
   display: block;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 17);
-  letter-spacing: calc(var(--s) * 1);
+  font-size: max(12px, calc(var(--s) * 15));
+  letter-spacing: calc(var(--s) * 0.5);
+  line-height: 1.15;
+  white-space: nowrap;
 }
-.gg-schildtext i {
+.gg-schildtext i, .gg-wimpeltext i {
   display: block;
   font-style: normal;
-  font-size: calc(var(--s) * 15);
-  color: var(--gg-warn);
+  font-weight: 700;
+  font-size: max(12px, calc(var(--s) * 14));
+  line-height: 1.15;
+  /* Preis und Waehrung nie trennen — Auflage 10 des Urteils. */
+  white-space: nowrap;
 }
-.gg-schild.zuteuer .gg-schildtext i { opacity: 0.55; }
-.gg-schild.fest .gg-schildtext i { color: var(--gg-tinte); opacity: 0.7; }
-.gg-schild.fest { border-style: double; border-width: calc(var(--s) * 4); }
+.gg-schildtext i { color: var(--gg-warn); }
+.gg-wimpeltext i { color: var(--gg-gut); }
+.gg-schild.zuteuer .gg-schildtext i { opacity: 0.6; }
+/* „nicht abloesbar" ist keine Warnung, sondern eine Feststellung. */
+.gg-schild.fest .gg-schildtext i { color: var(--gg-tinte); opacity: 0.75; font-weight: 400; }
+.gg-schild.fest .gg-schildtext b::after { content: ' ▪'; }
 
-/* Ein Zeichen, das gerade gewechselt hat, blinkt drei Wochen lang. */
+/* Ein Zeichen, das gerade gewechselt hat, blinkt drei Wochen lang. Ohne
+   Kasten blinkt nicht der Schatten, sondern die Schrift. */
 .gg-schild.frisch, .gg-gewonnen, .gg-frei {
   animation: gg-puls 1.6s ease-in-out infinite;
 }
 @keyframes gg-puls {
-  0%, 100% { box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 9) rgba(0, 0, 0, 0.45); }
-  50%      { box-shadow: 0 0 calc(var(--s) * 16) calc(var(--s) * 4) rgba(141, 47, 28, 0.75); }
+  0%, 100% { text-shadow: var(--gg-lichthof); }
+  50%      { text-shadow: var(--gg-lichthof),
+                          0 0 calc(var(--s) * 14) rgba(141, 47, 28, 0.95),
+                          0 0 calc(var(--s) * 7)  rgba(141, 47, 28, 0.9); }
 }
 
 /* Der Wimpel: er wirbt. Die Uhr laeuft, auch wenn man wegsieht. */
-.gg-wimpel {
-  background: linear-gradient(180deg, #eceadf 0%, #cfcdc0 100%);
-  border-style: dashed;
-}
-.gg-wimpel:hover { background: linear-gradient(180deg, #f8f6ec 0%, #dedbcd 100%); }
-.gg-wimpeltext b {
-  display: block;
-  font-family: var(--mono);
-  font-size: calc(var(--s) * 17);
-  letter-spacing: calc(var(--s) * 1);
-}
-.gg-wimpeltext i {
-  display: block;
-  font-style: normal;
-  font-size: calc(var(--s) * 15);
-  color: var(--gg-gut);
-}
-.gg-wimpel.zuteuer .gg-wimpeltext i { color: var(--gg-warn); opacity: 0.7; }
+.gg-wimpel.zuteuer .gg-wimpeltext i { color: var(--gg-warn); opacity: 0.75; }
 
 .gg-gewonnen, .gg-frei {
   position: absolute;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 16);
-  padding: calc(var(--s) * 4) calc(var(--s) * 9);
-  border-radius: calc(var(--s) * 3);
-  border: calc(var(--s) * 2) solid var(--gg-tinte);
-  white-space: nowrap;
+  font-weight: 700;
+  font-size: max(12px, calc(var(--s) * 15));
+  max-width: calc(var(--s) * 250);
   pointer-events: none;
+  text-shadow: var(--gg-lichthof);
 }
-.gg-gewonnen { background: #dfe8d8; color: #2f4a27; border-color: #3f6b3a; }
-.gg-frei { background: #efe6d2; color: #5a4a2c; }
+.gg-gewonnen { color: #2f4a27; }
+.gg-frei { color: #5a4a2c; }
 
 /* --------------------------------------------------------------------------
    DER GRAUE WAGEN — er faehrt, waehrend man woanders hinsieht
@@ -347,11 +349,10 @@
 }
 .gg-wagenzettel {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
-  background: rgba(35, 38, 42, 0.82);
-  color: #eef1f3;
-  padding: calc(var(--s) * 2) calc(var(--s) * 7);
-  border-radius: calc(var(--s) * 3);
+  font-weight: 700;
+  font-size: max(12px, calc(var(--s) * 13));
+  color: var(--gg-schiefer);
+  text-shadow: var(--gg-lichthof);
   white-space: nowrap;
 }
 
@@ -379,12 +380,11 @@
   top: calc(100% + var(--s) * 12);
   translate: -50% 0;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 16);
+  font-weight: 700;
+  font-size: max(12px, calc(var(--s) * 15));
   white-space: nowrap;
-  background: var(--gg-warn);
-  color: #fff6ec;
-  padding: calc(var(--s) * 2) calc(var(--s) * 9);
-  border-radius: calc(var(--s) * 3);
+  color: var(--gg-warn);
+  text-shadow: var(--gg-lichthof);
 }
 @keyframes gg-ring {
   0%   { opacity: 0.95; scale: 0.85; }
@@ -470,17 +470,48 @@
   font-size: calc(var(--s) * 16);
   white-space: nowrap;
 }
+/* AUFLAGE 10, erste Haelfte — DER SATZ, DER NICHT MEHR GEKUERZT WIRD.
+
+   Hier stand bis Welle 10:
+       .gg-bandzeile .was { flex:1; overflow:hidden;
+                            text-overflow:ellipsis; white-space:nowrap; }
+   Gemessen am Vorzustand: 1772 px Satz in 731 px Kasten (1350), 1588 (1600),
+   1092 (1884), 850 (1970), im gespielten Zustand bis 1652. Es fehlten also
+   bis zu 60 Prozent — sauber gekuerzt, mit Auslassungszeichen, und deshalb
+   von keinem Ueberlaufzaehler zu finden. Ein Zaehler, der Ueberlauf misst,
+   misst nicht Vollstaendigkeit.
+
+   Und es traf ausgerechnet das Band OHNE DICH GESCHEHEN. Das ist die eine
+   Sache, die dieses Stueck zu erzaehlen hat: was der Gegner tat, waehrend
+   man woanders hinsah. Ein halber Satz darueber ist schlimmer als keiner,
+   weil er aussieht, als stuende er ganz da.
+
+   Der Satz umbricht jetzt. Damit das Brett dabei nicht waechst, rollt die
+   Liste: `.gg-bandliste` hat eine feste Hoechsthoehe. Ein Rollkasten zeigt
+   alles — die vierte Latte zaehlt ihn ausdruecklich nicht als Abschnitt
+   (`aufsicht/lesbarkeit.mjs`: `kappt()` fragt je Richtung, ob sie NICHT
+   rollbar ist). */
+.gg-bandliste {
+  max-height: calc(var(--s) * 128);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .gg-bandzeile {
   display: flex;
   align-items: baseline;
   gap: calc(var(--s) * 8);
   font-size: calc(var(--s) * 18);
-  line-height: 1.2;
+  line-height: 1.25;
   padding: calc(var(--s) * 2) 0;
 }
 .gg-bandzeile .wann { font-family: var(--mono); font-size: calc(var(--s) * 15); opacity: 0.7;
-                      min-width: calc(var(--s) * 92); }
-.gg-bandzeile .was { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+                      min-width: calc(var(--s) * 92); flex: none; }
+.gg-bandzeile .was {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
 .gg-bandzeile.neu .was { font-weight: bold; }
 .gg-bandzeile.leer { opacity: 0.6; font-style: italic; }
 .gg-bandmeldung {

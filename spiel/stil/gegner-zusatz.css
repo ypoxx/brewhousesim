@@ -23,51 +23,63 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: calc(var(--s) * 3);
+  gap: calc(var(--s) * 2);
+  /* WELLE 11 — die Randwache rechnet mit dieser Zahl, ohne zu messen.
+     Wer sie aendert, aendert BREIT.paar in stuecke/gegner.js mit. */
+  width: max-content;
+  max-width: calc(var(--s) * 250);
 }
 /* Im Paar duerfen die Schilder nicht mehr selbst absolut liegen — sonst
    fielen sie uebereinander statt untereinander. */
 .gg-paar > .gg-schild,
 .gg-paar > .gg-wimpel,
 .gg-paar > .gg-ziel,
+.gg-paar > .gg-kennzahl,
 .gg-paar > .gg-fass { position: static; }
 
 /* --------------------------------------------------------------------------
    DAS ZIELZEICHEN — er hat sich entschieden, aber noch nicht unterschrieben
    -------------------------------------------------------------------------- */
+/* WELLE 11 — auch dieses Zeichen ist gemalt. Es war der Kasten, den der
+   Rahmen benannt hat und nicht verruecken durfte: 312x52 @2458,202, also
+   18 px ueber den rechten Bildrand hinaus; sichtbar war nur „Wo".
+   Die Randwache steht jetzt in stuecke/gegner.js (randDx), die Breite
+   hier — beide zusammen halten es im Bild. */
 .gg-ziel {
   display: flex;
   align-items: center;
-  gap: calc(var(--s) * 6);
-  padding: calc(var(--s) * 4) calc(var(--s) * 9);
-  border: calc(var(--s) * 2) dashed var(--gg-warn);
-  border-radius: calc(var(--s) * 3);
-  background: linear-gradient(180deg, #f2e6e0 0%, #d8c3ba 100%);
-  box-shadow: 0 calc(var(--s) * 4) calc(var(--s) * 9) rgba(0, 0, 0, 0.45);
+  gap: calc(var(--s) * 4);
+  padding: 0;
+  background: none;
+  border: 0;
+  max-width: calc(var(--s) * 250);
   cursor: pointer;
   font-family: var(--serif);
   color: var(--gg-tinte);
-  white-space: nowrap;
+  text-align: left;
+  text-shadow: var(--gg-lichthof);
 }
-.gg-ziel:hover { background: linear-gradient(180deg, #fbf1ec 0%, #e4d1c9 100%); }
+.gg-ziel:hover { color: #000; }
 .gg-zieltext b {
   display: block;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 17);
-  letter-spacing: calc(var(--s) * 1);
+  font-size: max(12px, calc(var(--s) * 15));
+  letter-spacing: calc(var(--s) * 0.5);
+  line-height: 1.15;
+  white-space: nowrap;
 }
 .gg-zieltext i {
   display: block;
   font-style: normal;
-  font-size: calc(var(--s) * 15);
+  font-weight: 700;
+  font-size: max(12px, calc(var(--s) * 14));
+  line-height: 1.15;
+  white-space: nowrap;
   color: var(--gg-warn);
 }
-.gg-ziel.zuteuer .gg-zieltext i { opacity: 0.55; }
+.gg-ziel.zuteuer .gg-zieltext i { opacity: 0.6; }
 /* Zwei Wochen vor der Unterschrift wird das Zeichen laut. */
-.gg-ziel.knapp {
-  border-style: solid;
-  animation: gg-puls 1.6s ease-in-out infinite;
-}
+.gg-ziel.knapp .gg-zieltext b { animation: gg-puls 1.6s ease-in-out infinite; }
 
 /* --------------------------------------------------------------------------
    DER FASSKNOPF — die Antwort, die Bier kostet und kein Geld
@@ -76,147 +88,145 @@
 .gg-fass {
   display: flex;
   align-items: center;
-  padding: calc(var(--s) * 3) calc(var(--s) * 9);
-  border: calc(var(--s) * 2) solid #6b5433;
-  border-radius: calc(var(--s) * 3);
-  background: linear-gradient(180deg, #f0e3c6 0%, #d9c69c 100%);
-  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 7) rgba(0, 0, 0, 0.4);
+  padding: 0;
+  background: none;
+  border: 0;
+  max-width: calc(var(--s) * 250);
   cursor: pointer;
   font-family: var(--serif);
   color: #3a2c16;
-  white-space: nowrap;
+  text-align: left;
+  text-shadow: var(--gg-lichthof);
 }
-.gg-fass:hover { background: linear-gradient(180deg, #f9efd9 0%, #e6d5ae 100%); }
+.gg-fass:hover { color: #1d1409; }
 .gg-fasstext b {
   display: block;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 16);
-  letter-spacing: calc(var(--s) * 1);
+  font-size: max(12px, calc(var(--s) * 14));
+  letter-spacing: calc(var(--s) * 0.5);
+  line-height: 1.15;
+  white-space: nowrap;
 }
 .gg-fasstext i {
   display: block;
   font-style: normal;
-  font-size: calc(var(--s) * 14);
+  font-size: max(12px, calc(var(--s) * 13));
+  line-height: 1.15;
+  white-space: nowrap;
   color: #6b5433;
 }
-.gg-fass:disabled { cursor: default; opacity: 0.62; filter: saturate(0.4); }
+.gg-fass:disabled { cursor: default; opacity: 0.66; }
 .gg-fass.zuteuer .gg-fasstext i { color: var(--gg-warn); }
 /* Wo das Fass schon steht, ist das Zeichen am Giebel ruhiger: er drueckt
    dort in diesem Braujahr nicht mehr. */
-.gg-schild.hingehalten { border-style: dotted; opacity: 0.9; }
+.gg-schild.hingehalten .gg-schildtext b { opacity: 0.75; }
 
 /* --------------------------------------------------------------------------
    DIE SPUR — was diese Woche geschah, am Ort, drei Wochen lang
    -------------------------------------------------------------------------- */
 .gg-spur {
   position: absolute;
-  padding: calc(var(--s) * 2) calc(var(--s) * 7);
-  border: calc(var(--s) * 2) solid var(--gg-schiefer);
-  border-radius: calc(var(--s) * 2);
-  background: rgba(228, 228, 222, 0.94);
-  color: var(--gg-tinte);
-  white-space: nowrap;
+  max-width: calc(var(--s) * 230);      /* = BREIT.spur in stuecke/gegner.js */
+  color: var(--gg-schiefer);
   pointer-events: none;
-  box-shadow: 0 calc(var(--s) * 2) calc(var(--s) * 6) rgba(0, 0, 0, 0.35);
+  text-shadow: var(--gg-lichthof);
 }
-.gg-spurkopf { display: flex; align-items: baseline; gap: calc(var(--s) * 6); }
+.gg-spurkopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 calc(var(--s) * 5); }
 .gg-spurkopf b {
   font-family: var(--serif);
-  font-size: calc(var(--s) * 16);
-  font-weight: normal;
+  font-size: max(12px, calc(var(--s) * 15));
+  line-height: 1.15;
+  font-weight: 700;
 }
 .gg-spurkopf i {
   font-style: normal;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 13);
-  opacity: 0.68;
+  font-size: max(12px, calc(var(--s) * 13));
+  line-height: 1.15;
+  white-space: nowrap;
+  opacity: 0.8;
 }
-.gg-spur.neu {
-  border-color: var(--gg-warn);
-  background: rgba(243, 231, 226, 0.96);
-}
-.gg-spur.neu .gg-spurkopf i { color: var(--gg-warn); opacity: 1; }
-.gg-spur.alt { opacity: 0.6; }
-.gg-spur.gg-konzern { border-color: #1d2a38; }
+.gg-spur.neu { color: var(--gg-warn); }
+.gg-spur.neu .gg-spurkopf i { opacity: 1; }
+.gg-spur.alt { opacity: 0.62; }
+.gg-spur.gg-konzern { color: #1d2a38; }
 
 /* --------------------------------------------------------------------------
    DAS AMT AM MARKT — der Zug, der kein Geld kostet, im Bild statt im Brett
    -------------------------------------------------------------------------- */
 .gg-amt {
   position: absolute;
-  padding: calc(var(--s) * 4) calc(var(--s) * 10);
-  border: calc(var(--s) * 2) solid var(--gg-gut);
-  border-radius: calc(var(--s) * 3);
-  background: linear-gradient(180deg, #e9efe3 0%, #cfdac6 100%);
+  padding: 0;
+  background: none;
+  border: 0;
+  max-width: calc(var(--s) * 250);      /* = BREIT.paar in stuecke/gegner.js */
   color: #24381f;
   cursor: pointer;
-  white-space: nowrap;
-  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 8) rgba(0, 0, 0, 0.4);
+  text-align: left;
+  text-shadow: var(--gg-lichthof);
 }
-.gg-amt:hover { background: linear-gradient(180deg, #f3f8ee 0%, #dae5d1 100%); }
-.gg-amt:disabled { cursor: default; opacity: 0.66; filter: saturate(0.35); }
+.gg-amt:hover { color: #0f2109; }
+.gg-amt:disabled { cursor: default; opacity: 0.7; }
 .gg-amttext b {
   display: block;
   font-family: var(--serif);
-  font-size: calc(var(--s) * 17);
-  font-weight: normal;
+  font-size: max(12px, calc(var(--s) * 16));
+  font-weight: 700;
+  line-height: 1.15;
 }
 .gg-amttext i {
   display: block;
   font-style: normal;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
-  opacity: 0.78;
+  font-size: max(12px, calc(var(--s) * 13));
+  line-height: 1.15;
+  opacity: 0.85;
 }
 .gg-amttext em {
   display: block;
   font-style: normal;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
-  opacity: 0.9;
+  font-size: max(12px, calc(var(--s) * 13));
+  line-height: 1.15;
+  opacity: 0.95;
 }
-.gg-amt.getan { border-color: var(--gg-schiefer); background: #e2e2dc; color: var(--gg-tinte); }
+.gg-amt.getan { color: var(--gg-schiefer); }
 
 /* --------------------------------------------------------------------------
    AN SEINEM HAUS: die Zahl der zweiten Latte, ohne dass man etwas aufschlaegt
    -------------------------------------------------------------------------- */
-.gg-wochenzug {
-  margin-top: calc(var(--s) * 5);
-  padding: calc(var(--s) * 2) calc(var(--s) * 7);
-  border-radius: calc(var(--s) * 2);
-  background: var(--gg-warn);
-  color: #f6efe6;
-  font-family: var(--mono);
-  font-size: calc(var(--s) * 15);
-  text-align: center;
-}
-.gg-siegel.zorn { color: #fff; background: var(--gg-schiefer); border-color: var(--gg-schiefer); }
+/* „diese Woche N Zuege ohne dich" steht seit Welle 11 als Feld IN der
+   gemalten Zahlenzeile (stuecke/gegner.js, zeichneSitz) — ein eigener
+   roter Balken darunter war ein zweiter Kasten fuer dieselbe Aussage. */
+.gg-siegel.zorn { color: var(--gg-schiefer); font-weight: 700; }
 
 /* Die Karte im Blatt, auf die er zielt. */
 .gg-karte.zielt { border-style: dashed; border-color: var(--gg-warn);
                   background: rgba(250, 240, 234, 0.65); }
 
 /* Sein Wochenzettel, an ihm selbst: die letzten drei Zuege mit dem Verb
-   dieser Epoche. Wer nur auf sein Haus sieht, sieht sie trotzdem. */
+   dieser Epoche. Wer nur auf sein Haus sieht, sieht sie trotzdem.
+   Gemalt seit Welle 11 — drei Kaesten je Haus waren drei Kaesten zuviel. */
 .gg-zettel {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--s) * 4);
-  margin-top: calc(var(--s) * 5);
+  justify-content: center;
+  gap: 0 calc(var(--s) * 9);
 }
 .gg-zchip {
   display: flex;
   align-items: baseline;
-  gap: calc(var(--s) * 4);
-  padding: calc(var(--s) * 1) calc(var(--s) * 6);
-  border: calc(var(--s) * 1) solid var(--gg-schiefer);
-  border-radius: calc(var(--s) * 2);
-  background: rgba(255, 255, 255, 0.55);
+  gap: calc(var(--s) * 3);
+  white-space: nowrap;
+  color: var(--gg-schiefer);
+  text-shadow: var(--gg-lichthof);
 }
-.gg-zchip b { font-weight: normal; font-family: var(--serif); font-size: calc(var(--s) * 15); }
-.gg-zchip i { font-style: normal; font-family: var(--mono); font-size: calc(var(--s) * 13); opacity: 0.65; }
-.gg-zchip.neu { border-color: var(--gg-warn); background: rgba(243, 231, 226, 0.9); }
-.gg-zchip.neu i { color: var(--gg-warn); opacity: 1; }
+.gg-zchip b { font-weight: 700; font-family: var(--serif);
+              font-size: max(12px, calc(var(--s) * 14)); line-height: 1.15; }
+.gg-zchip i { font-style: normal; font-family: var(--mono);
+              font-size: max(12px, calc(var(--s) * 12)); line-height: 1.15; opacity: 0.75; }
+.gg-zchip.neu { color: var(--gg-warn); }
+.gg-zchip.neu i { opacity: 1; }
 
 /* --------------------------------------------------------------------------
    RUNDE 3 — WAS DIE GRUPPE VOM HAUS WILL, STEHT IM BILD
@@ -225,37 +235,60 @@
    genau die Zuege, die bis Runde 2 im fuenften Block eines gescrollten
    Blattes lagen und dort nicht gefunden wurden.
    -------------------------------------------------------------------------- */
+/* WELLE 11 — auch der Zettel der Gruppe ist gemalt.  Gemessen im
+   30-Wochen-Zustand von 1970 war er der groesste Einzelkasten des Stuecks:
+   578x194 = 112.312 px² Huelle, und darin zwei Knoepfe zu je 556x52. Das
+   allein war das Vierfache des ganzen Haushalts.
+
+   Was bleibt: der volle Wortlaut, beide Antworten, die Frist. Was geht:
+   das Papier, der Rahmen, der Schatten und die halbe Breite. Die beiden
+   Antworten sind weiter echte Knoepfe mit Preisschild — sie sehen nur aus
+   wie mit Kreide an eine Wand geschrieben und nicht wie ein Aushang, der
+   ueber der Stadt liegt. */
 .gg-gzblock {
   position: absolute;
-  width: 21%;
-  max-width: calc(var(--s) * 600);
+  width: max-content;
+  max-width: calc(var(--s) * 420);      /* = BREIT.block in stuecke/gegner.js */
   pointer-events: auto;
-  padding: calc(var(--s) * 6) calc(var(--s) * 9) calc(var(--s) * 8);
-  border: calc(var(--s) * 2) solid var(--gg-warn);
-  border-radius: calc(var(--s) * 3);
-  background: linear-gradient(180deg, rgba(255, 250, 246, 0.96), rgba(240, 227, 219, 0.94));
-  box-shadow: 0 calc(var(--s) * 3) calc(var(--s) * 9) rgba(0, 0, 0, 0.32);
   color: var(--gg-tinte);
+  text-shadow: var(--gg-lichthof);
 }
-.gg-gzblock.gg-gzgebot {
-  border-color: #1d2a38;
-  background: linear-gradient(180deg, rgba(247, 249, 250, 0.96), rgba(219, 226, 231, 0.94));
-}
+.gg-gzblock.gg-gzgebot { color: #1d2a38; }
 .gg-gzkopf {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 15);
-  letter-spacing: calc(var(--s) * 2);
+  font-weight: 700;
+  font-size: max(12px, calc(var(--s) * 14));
+  letter-spacing: calc(var(--s) * 1.5);
   text-transform: uppercase;
-  margin-bottom: calc(var(--s) * 3);
+  line-height: 1.15;
+  color: var(--gg-warn);
 }
+.gg-gzblock.gg-gzgebot .gg-gzkopf { color: #1d2a38; }
 .gg-gzsatz {
   font-family: var(--serif);
-  font-size: calc(var(--s) * 16);
-  line-height: 1.3;
-  margin-bottom: calc(var(--s) * 5);
+  font-size: max(12px, calc(var(--s) * 15));
+  line-height: 1.25;
+  margin-bottom: calc(var(--s) * 2);
 }
-.gg-gzreihe { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 4); }
-.gg-gzreihe .knopf { flex: 1 1 calc(var(--s) * 120); }
+.gg-gzreihe { display: flex; flex-wrap: wrap; gap: 0 calc(var(--s) * 12); }
+/* Ein Knopf ohne Kasten ist immer noch ein Knopf: eigener Text, eigener
+   data-zug, eigenes Preisschild, unterstrichen wie eine Aufschrift, die
+   man anfassen kann. */
+.gg-gzreihe .knopf {
+  padding: 0;
+  min-height: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  font-size: max(12px, calc(var(--s) * 15));
+  font-weight: 700;
+  gap: calc(var(--s) * 5);
+  color: var(--gg-warn);
+  text-decoration: underline;
+  text-underline-offset: calc(var(--s) * 3);
+  text-shadow: var(--gg-lichthof);
+}
+.gg-gzreihe .knopf .preis { white-space: nowrap; }
 
 
 /* Der Satz ueber den drei Geboten im Blatt. */
@@ -272,28 +305,41 @@
    Zug. Sie steht bewusst in derselben Schrift und Groesse wie die Zahl des
    Kerns eine Zeile darunter: die beiden gehoeren nebeneinander gelesen.
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   AUFLAGE 6 — DIE ZAHL VERLAESST DAS UNTERSTE SECHSTEL
+
+   Sie lag als Band bei y = 1282 und war 712 bis 860 px breit. Das unterste
+   Sechstel beginnt bei y = 1280; sie lag also ganz darin — und dort traegt
+   jedes der vier Zielblaetter seinen Vordergrund: Asphalt mit Mittelstrich,
+   einen gelben Kaefer, eine rote Limousine, einen Baum, den Fluss.
+
+   Jetzt steht sie da, wo sie hingehoert: als gemalte Zeile UNTER dem
+   Preisschild, das sie meint. Wer den Preis liest, liest im selben Blick,
+   wie oft die Kasse ihn traegt. Der Wortlaut ist unveraendert, und
+   `data-umkaempft` / `data-umkaempft-preis` stehen weiter daran, damit jedes
+   Messgeraet dieses Laufs sie findet.
+   -------------------------------------------------------------------------- */
 .gg-kennzahl {
-  position: absolute;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: calc(var(--s) * 8);
+  gap: 0 calc(var(--s) * 6);
+  max-width: calc(var(--s) * 250);
   font-family: var(--mono);
-  font-size: calc(var(--s) * 19);
-  color: var(--gg-tinte);
-  background: rgba(255, 248, 230, 0.78);
-  border-left: calc(var(--s) * 4) solid var(--gg-warn);
-  padding: calc(var(--s) * 4) calc(var(--s) * 10);
-  border-radius: calc(var(--s) * 4);
-  white-space: nowrap;
+  font-size: max(12px, calc(var(--s) * 13));
+  line-height: 1.2;
+  color: var(--gg-schiefer);
+  text-shadow: var(--gg-lichthof);
   pointer-events: none;
 }
+.gg-kennzahl.frei { position: absolute; }
 .gg-kennzahl b {
-  font-weight: normal;
-  letter-spacing: calc(var(--s) * 2);
+  font-weight: 700;
+  letter-spacing: calc(var(--s) * 1);
   text-transform: uppercase;
-  font-size: calc(var(--s) * 15);
-  opacity: 0.8;
+  white-space: nowrap;
 }
-.gg-kennzahl i { font-style: normal; }
-.gg-kennzahl.knapp { border-left-color: #8c2f1c; }
-.gg-kennzahl.knapp i { color: #8c2f1c; }
+.gg-kennzahl b::after { content: ' ·'; }
+.gg-kennzahl i { font-style: normal; white-space: nowrap; }
+.gg-kennzahl.knapp { color: #8c2f1c; }
+.gg-kennzahl.knapp i { color: #8c2f1c; font-weight: 700; }

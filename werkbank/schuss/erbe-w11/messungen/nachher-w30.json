@@ -1,0 +1,298 @@
+[
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 5,
+   "px": 16800,
+   "anteil": 0.39743822674418605,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": -11200,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 1805744,
+   "anteil": 42.718553173449614
+  },
+  "obenGesamt": {
+   "px": 362400,
+   "anteil": 51.43986191860465
+  },
+  "kaesten": [
+   {
+    "klasse": "knopf erb-knopf erb-nach",
+    "tag": "button",
+    "mass": "197x22 @1486,1153",
+    "px": 4355,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "159x22 @1958,1153",
+    "px": 3519,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "131x22 @1821,1153",
+    "px": 2885,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "126x22 @1689,1153",
+    "px": 2782,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-griff",
+    "tag": "button",
+    "mass": "72x22 @2123,1153",
+    "px": 1591,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "fuhre: 1359296/34000 px  oben 140800/10000 px",
+   "gegner: 219584/28000 px",
+   "stadt: 113440/40000 px  oben 61952/26000 px",
+   "sud: 89280/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1351 1596×847 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1351"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 105,
+  "epoche": 1,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 5,
+   "px": 17376,
+   "anteil": 0.41106468023255816,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": -10624,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 1789088,
+   "anteil": 42.32452156007752
+  },
+  "obenGesamt": {
+   "px": 372192,
+   "anteil": 52.8297601744186
+  },
+  "kaesten": [
+   {
+    "klasse": "knopf erb-knopf erb-nach",
+    "tag": "button",
+    "mass": "207x22 @1486,1153",
+    "px": 4572,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "143x22 @1983,1153",
+    "px": 3166,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "139x22 @1699,1153",
+    "px": 3068,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "133x22 @1844,1153",
+    "px": 2931,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-griff",
+    "tag": "button",
+    "mass": "73x22 @2132,1153",
+    "px": 1618,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "fuhre: 1356800/34000 px  oben 140800/10000 px",
+   "gegner: 212688/28000 px",
+   "stadt: 121424/40000 px  oben 62336/26000 px",
+   "sud: 90272/34000 px  oben 10192/6000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 29184/20000 px",
+   "kern: 102192/120000 px  oben 82432/80000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1601 1596×847 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1601"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 112,
+  "epoche": 2,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 4,
+   "px": 12576,
+   "anteil": 0.2975109011627907,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": -15424,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 1591888,
+   "anteil": 37.65935380329457
+  },
+  "obenGesamt": {
+   "px": 375200,
+   "anteil": 53.25672238372093
+  },
+  "kaesten": [
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "140x22 @1752,1153",
+    "px": 3098,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "131x22 @1616,1153",
+    "px": 2886,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "124x22 @1486,1153",
+    "px": 2731,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-griff",
+    "tag": "button",
+    "mass": "110x22 @1899,1153",
+    "px": 2432,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "fuhre: 1152000/34000 px  oben 140800/10000 px",
+   "gegner: 192288/28000 px",
+   "stadt: 123456/40000 px  oben 61440/26000 px",
+   "sud: 93184/34000 px  oben 11648/6000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 35264/20000 px",
+   "kern: 105264/120000 px  oben 85504/80000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1885 1596×718 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1885"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 114,
+  "epoche": 3,
+  "fehler": []
+ },
+ {
+  "erbe": null,
+  "gesamt": {
+   "px": 2170816,
+   "anteil": 51.35507509689923
+  },
+  "obenGesamt": {
+   "px": 422752,
+   "anteil": 60.00635901162791
+  },
+  "kaesten": [],
+  "pruefe": [
+   "fuhre: 1515184/34000 px  oben 140800/10000 px",
+   "gegner: 419568/28000 px",
+   "stadt: 166432/40000 px  oben 114816/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 88816/34000 px  oben 8736/6000 px",
+   "name: 35264/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1971 1596×943 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1971"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [
+   {
+    "zug": "gegner:oeffnen:konzern",
+    "preis": false,
+    "text": "2.910.070 DM",
+    "scroll": 130,
+    "client": 109
+   }
+  ],
+  "buchZuege": "kein buch",
+  "buchMass": "-",
+  "zuege": 117,
+  "epoche": 4,
+  "fehler": []
+ }
+]

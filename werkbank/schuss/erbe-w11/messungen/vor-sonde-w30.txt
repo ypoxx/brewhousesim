@@ -1,0 +1,61 @@
+MESSFENSTER offen — load 1.27 0.79 0.89
+
+=== E1 w30 ===
+erbe: 136192 px (Grenze 28000) · oben 0 (6000) · 9 Kaesten
+gesamt: 1930128 px = 45.7 %  oben 52.1 %
+buch: 1156x1075 · data-zug darin: 0
+    126461 px  1211x104 @1486,1100    div .erb-leiste
+      8285 px  291x29 @1501,1150      button .knopf erb-knopf erb-nach
+      8285 px  291x29 @1798,1150      button .knopf erb-knopf erb-uebergabe
+      8285 px  291x29 @2095,1150      button .knopf erb-knopf erb-uebergabe
+      8285 px  291x29 @2391,1150      button .knopf erb-knopf erb-uebergabe erb-ohne
+      4564 px  277x17 @1774,1127      span .erb-hand
+      4188 px  254x17 @2060,1127      span .erb-stand
+      2549 px  155x17 @2322,1127      span .erb-nimmt
+      2251 px  136x17 @1629,1127      span .erb-uhr
+gekuerzt: []
+pruefe: ["fuhre: 1359296/34000 px  oben 140800/10000 px","gegner: 219584/28000 px","erbe: 136192/28000 px","stadt: 118432/40000 px  oben 66944/26000 px","sud: 89280/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px"]
+tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1351 1596×847 @578,169"] · ueberRand: 0 · verdeckt: [] · lage: 0  · Fehler: 0 
+
+=== E2 w30 ===
+erbe: 136192 px (Grenze 28000) · oben 0 (6000) · 9 Kaesten
+gesamt: 1890304 px = 44.7 %  oben 52.7 %
+buch: 1156x1075 · data-zug darin: 0
+    126461 px  1211x104 @1486,1100    div .erb-leiste
+      8257 px  290x29 @1505,1150      button .knopf erb-knopf erb-nach
+      8257 px  290x29 @1801,1150      button .knopf erb-knopf erb-uebergabe
+      8257 px  290x29 @2097,1150      button .knopf erb-knopf erb-uebergabe
+      8257 px  290x29 @2392,1150      button .knopf erb-knopf erb-uebergabe erb-ohne
+      4518 px  274x17 @1776,1127      span .erb-hand
+      4188 px  254x17 @2059,1127      span .erb-stand
+      2549 px  155x17 @2322,1127      span .erb-nimmt
+      2251 px  136x17 @1630,1127      span .erb-uhr
+gekuerzt: []
+pruefe: ["fuhre: 1356800/34000 px  oben 140800/10000 px","gegner: 212688/28000 px","erbe: 136192/28000 px","stadt: 126288/40000 px  oben 67200/26000 px","sud: 90272/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 29184/20000 px","kern: 102192/120000 px  oben 82432/80000 px"]
+tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1601 1596×847 @578,169"] · ueberRand: 0 · verdeckt: [] · lage: 0  · Fehler: 0 
+
+=== E3 w30 ===
+erbe: 136192 px (Grenze 28000) · oben 0 (6000) · 8 Kaesten
+gesamt: 1744944 px = 41.3 %  oben 53.0 %
+buch: 1156x1075 · data-zug darin: 0
+    126461 px  1211x104 @1486,1100    div .erb-leiste
+     11123 px  390x29 @1500,1150      button .knopf erb-knopf erb-uebergabe
+     11123 px  390x29 @1896,1150      button .knopf erb-knopf erb-uebergabe
+     11123 px  390x29 @2293,1150      button .knopf erb-knopf erb-uebergabe erb-ohne
+      4921 px  298x17 @1757,1127      span .erb-hand
+      4188 px  254x17 @2064,1127      span .erb-stand
+      2549 px  155x17 @2327,1127      span .erb-nimmt
+      2251 px  136x17 @1612,1127      span .erb-uhr
+gekuerzt: []
+pruefe: ["fuhre: 1152000/34000 px  oben 140800/10000 px","gegner: 192288/28000 px","erbe: 136192/28000 px","stadt: 128320/40000 px  oben 66304/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 105264/120000 px  oben 85504/80000 px"]
+tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1885 1596×718 @578,169"] · ueberRand: 0 · verdeckt: [] · lage: 0  · Fehler: 0 
+
+=== E4 w30 ===
+erbe: kein Kasten
+gesamt: 2152080 px = 50.9 %  oben 59.3 %
+buch: 1156x1075 · data-zug darin: 0
+gekuerzt: [{"zug":"gegner:oeffnen:konzern","preis":false,"text":"2.910.070 DM","scroll":130,"client":109},{"zug":"erbe:nachschrift","preis":true,"text":"Nachschrift · 2 Häuser","scroll":199,"client":176},{"zug":"erbe:uebergabe:leibgeding","preis":true,"text":"Versorgungszusage · jährlich","scroll":253,"client":201}]
+pruefe: ["fuhre: 1515184/34000 px  oben 140800/10000 px","gegner: 419568/28000 px","stadt: 173728/40000 px  oben 122112/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 88816/34000 px","name: 35264/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1971 1596×943 @578,169"] · ueberRand: 0 · verdeckt: [] · lage: 0  · Fehler: 0 
+
+geschrieben: werkbank/schuss/erbe-w11/messungen/vorher-w30.json

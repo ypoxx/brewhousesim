@@ -1,0 +1,399 @@
+[
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 9,
+   "px": 136192,
+   "anteil": 3.2218992248062017,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": 108192,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 1930128,
+   "anteil": 45.661110101744185
+  },
+  "obenGesamt": {
+   "px": 367392,
+   "anteil": 52.1484375
+  },
+  "kaesten": [
+   {
+    "klasse": "erb-leiste",
+    "tag": "div",
+    "mass": "1211x104 @1486,1100",
+    "px": 126461,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-nach",
+    "tag": "button",
+    "mass": "291x29 @1501,1150",
+    "px": 8285,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "291x29 @1798,1150",
+    "px": 8285,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "291x29 @2095,1150",
+    "px": 8285,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "291x29 @2391,1150",
+    "px": 8285,
+    "oben": false
+   },
+   {
+    "klasse": "erb-hand",
+    "tag": "span",
+    "mass": "277x17 @1774,1127",
+    "px": 4564,
+    "oben": false
+   },
+   {
+    "klasse": "erb-stand",
+    "tag": "span",
+    "mass": "254x17 @2060,1127",
+    "px": 4188,
+    "oben": false
+   },
+   {
+    "klasse": "erb-nimmt",
+    "tag": "span",
+    "mass": "155x17 @2322,1127",
+    "px": 2549,
+    "oben": false
+   },
+   {
+    "klasse": "erb-uhr",
+    "tag": "span",
+    "mass": "136x17 @1629,1127",
+    "px": 2251,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "fuhre: 1359296/34000 px  oben 140800/10000 px",
+   "gegner: 219584/28000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 118432/40000 px  oben 66944/26000 px",
+   "sud: 89280/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 30400/20000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1351 1596×847 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1351"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": 0,
+  "buchMass": "1156x1075",
+  "zuege": 105,
+  "epoche": 1,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 9,
+   "px": 136192,
+   "anteil": 3.2218992248062017,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": 108192,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 1890304,
+   "anteil": 44.718992248062015
+  },
+  "obenGesamt": {
+   "px": 371232,
+   "anteil": 52.69349563953488
+  },
+  "kaesten": [
+   {
+    "klasse": "erb-leiste",
+    "tag": "div",
+    "mass": "1211x104 @1486,1100",
+    "px": 126461,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-nach",
+    "tag": "button",
+    "mass": "290x29 @1505,1150",
+    "px": 8257,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "290x29 @1801,1150",
+    "px": 8257,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "290x29 @2097,1150",
+    "px": 8257,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "290x29 @2392,1150",
+    "px": 8257,
+    "oben": false
+   },
+   {
+    "klasse": "erb-hand",
+    "tag": "span",
+    "mass": "274x17 @1776,1127",
+    "px": 4518,
+    "oben": false
+   },
+   {
+    "klasse": "erb-stand",
+    "tag": "span",
+    "mass": "254x17 @2059,1127",
+    "px": 4188,
+    "oben": false
+   },
+   {
+    "klasse": "erb-nimmt",
+    "tag": "span",
+    "mass": "155x17 @2322,1127",
+    "px": 2549,
+    "oben": false
+   },
+   {
+    "klasse": "erb-uhr",
+    "tag": "span",
+    "mass": "136x17 @1630,1127",
+    "px": 2251,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "fuhre: 1356800/34000 px  oben 140800/10000 px",
+   "gegner: 212688/28000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 126288/40000 px  oben 67200/26000 px",
+   "sud: 90272/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 29184/20000 px",
+   "kern: 102192/120000 px  oben 82432/80000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1601 1596×847 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1601"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": 0,
+  "buchMass": "1156x1075",
+  "zuege": 112,
+  "epoche": 2,
+  "fehler": []
+ },
+ {
+  "erbe": {
+   "stueck": "erbe",
+   "kaesten": 8,
+   "px": 136192,
+   "anteil": 3.2218992248062017,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 28000,
+   "grenzeOben": 6000,
+   "bekannt": true,
+   "ueber": 108192,
+   "ueberOben": -6000
+  },
+  "gesamt": {
+   "px": 1744944,
+   "anteil": 41.280205305232556
+  },
+  "obenGesamt": {
+   "px": 373408,
+   "anteil": 53.00236191860465
+  },
+  "kaesten": [
+   {
+    "klasse": "erb-leiste",
+    "tag": "div",
+    "mass": "1211x104 @1486,1100",
+    "px": 126461,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "390x29 @1500,1150",
+    "px": 11123,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe",
+    "tag": "button",
+    "mass": "390x29 @1896,1150",
+    "px": 11123,
+    "oben": false
+   },
+   {
+    "klasse": "knopf erb-knopf erb-uebergabe erb-ohne",
+    "tag": "button",
+    "mass": "390x29 @2293,1150",
+    "px": 11123,
+    "oben": false
+   },
+   {
+    "klasse": "erb-hand",
+    "tag": "span",
+    "mass": "298x17 @1757,1127",
+    "px": 4921,
+    "oben": false
+   },
+   {
+    "klasse": "erb-stand",
+    "tag": "span",
+    "mass": "254x17 @2064,1127",
+    "px": 4188,
+    "oben": false
+   },
+   {
+    "klasse": "erb-nimmt",
+    "tag": "span",
+    "mass": "155x17 @2327,1127",
+    "px": 2549,
+    "oben": false
+   },
+   {
+    "klasse": "erb-uhr",
+    "tag": "span",
+    "mass": "136x17 @1612,1127",
+    "px": 2251,
+    "oben": false
+   }
+  ],
+  "pruefe": [
+   "fuhre: 1152000/34000 px  oben 140800/10000 px",
+   "gegner: 192288/28000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 128320/40000 px  oben 66304/26000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 35264/20000 px",
+   "kern: 105264/120000 px  oben 85504/80000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1885 1596×718 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1885"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [],
+  "buchZuege": 0,
+  "buchMass": "1156x1075",
+  "zuege": 114,
+  "epoche": 3,
+  "fehler": []
+ },
+ {
+  "erbe": null,
+  "gesamt": {
+   "px": 2152080,
+   "anteil": 50.91183684593023
+  },
+  "obenGesamt": {
+   "px": 417760,
+   "anteil": 59.297783430232556
+  },
+  "kaesten": [],
+  "pruefe": [
+   "fuhre: 1515184/34000 px  oben 140800/10000 px",
+   "gegner: 419568/28000 px",
+   "stadt: 173728/40000 px  oben 122112/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 88816/34000 px",
+   "name: 35264/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "tafeln": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1971 1596×943 @578,169"
+  ],
+  "ueberRand": [],
+  "geklemmt": {},
+  "blaetter": [
+   "fuhre blatt fu-sommerblatt fu-georgi-1971"
+  ],
+  "verdeckt": [],
+  "lage": 0,
+  "lageTexte": [],
+  "gekuerzt": [
+   {
+    "zug": "gegner:oeffnen:konzern",
+    "preis": false,
+    "text": "2.910.070 DM",
+    "scroll": 130,
+    "client": 109
+   },
+   {
+    "zug": "erbe:nachschrift",
+    "preis": true,
+    "text": "Nachschrift · 2 Häuser",
+    "scroll": 199,
+    "client": 176
+   },
+   {
+    "zug": "erbe:uebergabe:leibgeding",
+    "preis": true,
+    "text": "Versorgungszusage · jährlich",
+    "scroll": 253,
+    "client": 201
+   }
+  ],
+  "buchZuege": 0,
+  "buchMass": "1156x1075",
+  "zuege": 117,
+  "epoche": 4,
+  "fehler": []
+ }
+]

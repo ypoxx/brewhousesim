@@ -3876,7 +3876,24 @@
        nur der Ausgang, sondern die ganze Jahresentscheidung: sie ist das
        eine, was diese Tafel unbedingt zeigen muss. */
     var fuss = B.el('div', 'fu-sommer-fuss');
-    fuss.appendChild(B.el('h3', null, 'Was steht ' + B.uhr.braujahr() + ' an der Tafel?'));
+
+    /* DIE FRAGE UND DER STAND IN EINER ZEILE. Sie standen vorher in zwei —
+       eine Ueberschrift „Was steht 1351/52 an der Tafel?" und darunter „An
+       der Tafel steht: …". Zwei Zeilen fuer eine Sache kosten auf einem
+       Anschlag von 261 px Hoehe ein Zehntel der Tafel; gesagt wird
+       dasselbe. */
+    var frage = B.el('h3');
+    frage.appendChild(B.el('b', null, 'Was steht ' + B.uhr.braujahr() + ' an der Tafel?'));
+    frage.appendChild(B.el('span', null, planSummeSude()
+      ? 'Angeschrieben: ' + sorten().filter(function (x) { return Z.plan[x.k]; })
+          .map(function (x) { return Z.plan[x.k] + '× ' + x.name; }).join(' · ')
+        + ' — wie voriges Jahr.'
+      : 'Nichts. Dann steht die Pfanne kalt.'));
+    frage.title = planSummeSude()
+      ? 'Der Braumeister hat angeschrieben, was voriges Jahr dort stand. '
+        + 'Jeder Knopf setzt einen Sud dazu.'
+      : 'Steht nichts an der Tafel, wird das ganze Braujahr nicht gebraut.';
+    fuss.appendChild(frage);
 
     var wahl = B.el('div', 'fu-sommer-wahl');
     sorten().forEach(function (so) {
@@ -3892,18 +3909,11 @@
     });
     fuss.appendChild(wahl);
 
-    fuss.appendChild(B.el('div', 'fu-sommer-stand', 'An der Tafel steht: ' + (planSummeSude()
-      ? sorten().filter(function (x) { return Z.plan[x.k]; })
-          .map(function (x) { return Z.plan[x.k] + '× ' + x.name; }).join(' · ')
-        + '  — der Braumeister hat angeschrieben, was voriges Jahr dort stand.'
-      : 'nichts. Dann steht die Pfanne kalt.')));
-
     var griffe = B.el('div', 'fu-sommer-griffe');
     griffe.appendChild(B.knopf({
       /* Der eine Knopf, hinter dem der ganze Bericht liegt. Er sagt, was
          er aufschlaegt — ein Knopf, der „mehr" heisst, ist keiner. */
-      text: weit ? 'Sommerbericht zuklappen'
-                 : 'Sommerbericht: Monat für Monat, Zahltag, Kerbholz',
+      text: weit ? 'Sommerbericht zuklappen' : 'Der ganze Sommerbericht',
       zug: 'fuhre:sommer-bericht',
       klasse: 'fu-klein',
       titel: weit
@@ -3917,16 +3927,21 @@
       /* ZUSTAENDIGKEIT 23, zweiter Teil: ein sichtbarer Knopf mit dem Wort
          darauf, das ihn schliesst. Das Wort steht vorn, damit es auch dann
          zu lesen ist, wenn die Zeile schmal wird. */
-      text: 'Tafel schließen — Michaeli, das Jahr beginnt',
+      text: 'Tafel schließen — Michaeli',
       zug: 'fuhre:sommer-zu', klasse: 'fu-klein',
-      titel: 'Zurück auf den Hof. WEITER und die Taste Escape tun dasselbe.',
+      titel: 'Michaeli, das Jahr beginnt. Zurück auf den Hof. Solange die Tafel '
+        + 'auf dem Tisch liegt, ruht die Woche; WEITER und die Taste Escape legen '
+        + 'sie ebenfalls beiseite.',
       tu: function () { schliesseSommer('fuhre-sommer-zu'); }
     }));
     fuss.appendChild(griffe);
 
+    /* Derselbe Satz wie bisher, auf eine Zeile gebracht: er muss stehen —
+       er ist die einzige Stelle, an der steht, dass diese Tafel die Woche
+       anhaelt — und er darf den Anschlag nicht zweizeilig machen. Der
+       ganze Wortlaut steht im Titel des Schliessknopfes. */
     fuss.appendChild(B.el('div', 'fu-sommer-hinweis',
-      'Solange die Tafel auf dem Tisch liegt, ruht die Woche. '
-      + 'WEITER und die Taste Escape legen sie ebenfalls beiseite.'));
+      'Die Woche ruht, solange die Tafel liegt · WEITER, Escape und der Knopf legen sie beiseite'));
     bl.appendChild(fuss);
 
     fach.appendChild(bl);

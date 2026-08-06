@@ -119,7 +119,13 @@ for (const e of [1, 2, 3, 4]) {
   console.log(' -- nach Escape: Buch offen:', d3.buchOffen, '· im DOM:', !!d3.buch,
               '· geklemmt', JSON.stringify(d3.geklemmt), '· erbe', d3.erbe ? d3.erbe.px : '—',
               '· lage', d3.lage, '· Fehler', fehler.length);
-  /* und noch einmal auf, dann mit dem eigenen Schliessknopf zu */
+  /* und noch einmal auf, dann mit dem eigenen Schliessknopf zu.
+     3,2 s Pause: das Escape-Fenster des Rahmens fasst ueber 2,6 s nach
+     (kern/haushalt.js, ANLAEUFE) und macht ein Blatt, das INNERHALB dieser
+     Frist wieder aufgeht, sofort wieder zu. Beim ersten Anlauf habe ich nur
+     1,2 s gewartet und daraufhin „KEIN SCHLIESSKNOPF" gemessen — das war
+     nicht das Buch, das war die Uhr des Rahmens. */
+  await s.waitForTimeout(3200);
   await s.evaluate(() => { const k = document.querySelector('[data-zug="erbe:buch"]'); if (k) k.click(); });
   await s.waitForTimeout(800);
   const zu = await s.evaluate(() => {
