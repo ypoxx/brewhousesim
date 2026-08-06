@@ -199,7 +199,31 @@ selbst — Median 5,79 → 0,85 und 0 → 70 pleite Wochen — gehört DER STADT
    Teilfolgen (`fuhre:tafel-auf:`, `fuhre:tafel-ab:`, `preis:festlege:`,
    `preis:nimm:`) stehen in **derselben** Reihenfolge.
 
-**Was stattdessen zu sehen ist, Woche für Woche:** Die Reihen laufen ab
+> #### BERICHTIGUNG, VOM BUILDER DER WELLE 9 GEFUNDEN — mein Ausschluss 1 war zu weit
+>
+> Es **ist** ein verdeckter Knopf, und zwar genau einer: **`fuhre:ziel:bar`**.
+> Meine Messung war richtig — am Ladepunkt ist er in *beiden* Ständen verdeckt,
+> die klickbaren Mengen sind identisch. Der Schluss daraus war falsch. **Die
+> messende Hand räumt Deckel weg**, indem sie die Reiter der STADT klickt; im
+> Vorzustand kommt der Klick danach durch. Der einzige Deckel, den sie damit
+> **nicht** wegräumen kann, ist die Werkbank selbst — und seit Welle 8 hängt die
+> oben (`stil/stadt.css`, `.stadt-werkbank { top: 7.8 % }`), wo ihre Zeile
+> `.stadt-bauhof .bauzeile .nutzen` bei 1920×1000 genau auf der Zielzeile der
+> FUHRE liegt (x 39…183, y 324…348).
+>
+> Der Unterschied im ganzen Klickprotokoll ist **ein einziger Klick**
+> (`4d3 < klick fuhre:ziel:bar`); alles Weitere folgt daraus — sieben
+> ausbleibende `fuhre:tafel-ab:grut`, ein ausgefallener Rohstoffkauf, Kasse 62
+> statt 80 ab Woche 2. **Ziel gesetzt 1× gegen 0×.**
+>
+> **Die Lehre, und es ist zum zweiten Mal dieselbe:** eine Momentaufnahme am
+> Ladepunkt sagt nichts über eine Hand, die sich ihren Weg erst frei klickt.
+> *Wer Erreichbarkeit misst, misst sie im Spiel, nicht im Stillstand.* Ich hatte
+> in Welle 8 die Zahl richtig und die Ursache falsch — hier hatte ich die Messung
+> richtig und den Schluss zu weit.
+
+**Was stattdessen zu sehen war, Woche für Woche** (der Befund, der zur Ursache
+führte): Die Reihen laufen ab
 **Woche 2** auseinander (Kasse 80 gegen 62). Im alten Stand fängt die Hand in
 **Woche 9** an, Fässer abzugeben — 12 → 8 → 4 → 3 → 1 — und die Kasse steigt auf
 232. Im neuen liegen die zwölf Fässer bis **Woche 13**, und die Kasse steht bei
