@@ -139,8 +139,14 @@ elif [ "$ZURUECK" != "0" ] && [ "$ZURUECK" != "?" ]; then
 else
   weh "kein Veröffentlicher"
   [ $NUR_PRUEFEN -eq 1 ] || {
-    (setsid nohup ./werkbank/veroeffentlichen.sh 180 14400 >/tmp/pub.log 2>&1 </dev/null &)
-    sleep 3; tat "gestartet (Takt 180 s, Laufzeit 4 h)"
+    # ZWOELF STUNDEN, NICHT VIER. Am 6. August um 08:24 war die Laufzeit von
+    # vier Stunden um; der Prozess schrieb "fertig" und war weg. Danach lagen
+    # zwei Stunden lang 21 Dateien ungesichert da, darunter die ganze
+    # Nacharbeit eines Builders und zwoelf Messlaeufe. Eine Welle dauert in
+    # diesem Lauf drei bis sechs Stunden — die Laufzeit muss laenger sein als
+    # das, was sie sichern soll.
+    (setsid nohup ./werkbank/veroeffentlichen.sh 180 43200 >/tmp/pub.log 2>&1 </dev/null &)
+    sleep 3; tat "gestartet (Takt 180 s, Laufzeit 12 h)"
   }
 fi
 
