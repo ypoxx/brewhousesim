@@ -171,3 +171,127 @@ zugleich belegt, dass die Zahlen des Vorgängers (19,9–20,6 % gesamt,
 zu weit gewachsene Maske hat die Zonen-Nenner nicht verändert, aber die
 Reihenfolge der Aufrufe hat den Zähler je Durchgang anders beschnitten.
 **Für vorher/nachher wird ausschließlich der neu gemessene Satz benutzt.**
+
+---
+
+# R6 — DER FLÄCHENHAUSHALT: die Regel, das Gerät und die Zahlen für Welle 11
+
+## Die Regel, in einem Satz
+
+**Die Summe der Anteile ist immer größer oder gleich dem Ganzen** — Kästen
+überlappen, und keine Überlappung macht die Summe kleiner. Wer also die
+**Summe der Obergrenzen** unter die Latte legt, hat die Latte sicher genommen,
+gleichgültig wie die acht Stücke sich überlagern.
+
+* A15 verlangt **unter 8 %** im Ladezustand = **338.166 px** auf 2752×1536.
+* A15 verlangt **unter 25 %** im obersten Sechstel = **176.128 px**.
+* Der Rahmen bekommt, was das **Zielblatt** dem Rahmen gibt, und knapp
+  darunter: Kopfleiste 1610×72 + WEITER-Tafel 262×62 = 132.164 px → **120.000**.
+* Die übrigen 218.166 px teilen sich die acht Stücke.
+
+## Die Tafel — `BRAUHAUS.haushalt.GRENZEN`
+
+| Stück | gesamt (px) | oberstes ⅙ (px) | wofür |
+|---|---|---|---|
+| kern | 120.000 | 80.000 | Kopfleiste + WEITER, knapp unter dem Zielblatt |
+| stadt | 40.000 | 26.000 | Reiterzeile + die vier gemalten Ortsschilder (≈28.000 px, vom Kritiker selbst als Welt herausgerechnet) |
+| sud | 34.000 | 6.000 | ein Reiter, das Brett zugeklappt |
+| fuhre | 34.000 | 10.000 | vier Reiter, die Hofanzeige |
+| gegner | 28.000 | 8.000 | die Gegnerkarte |
+| erbe | 28.000 | 6.000 | die Erbe-Leiste |
+| preis | 24.000 | 20.000 | Michaelitafel + Chronikgriff |
+| name | 20.000 | 12.000 | das Band |
+| klang | 4.000 | 3.000 | der Notenknopf, 50×50 |
+| **Summe** | **332.000 = 7,86 %** | **171.000 = 24,3 %** | Rest ist Vorrat |
+
+## Das Gerät — im Spiel abfragbar, wie `verdeckt()`
+
+```js
+BRAUHAUS.haushalt.pruefe()     // [] heisst: alle im Rahmen
+BRAUHAUS.haushalt.tafel()      // eine Zeile je Stueck, fuer die Konsole
+BRAUHAUS.haushalt.miss()       // Zahlen je Stueck, gesamt und oberstes Sechstel
+BRAUHAUS.haushalt.tafeln()     // jeder Kasten ueber 200.000 px^2  (A16)
+BRAUHAUS.haushalt.ueberRand()  // was aus der Flaeche haengt        (A8)
+BRAUHAUS.haushalt.blaetter()   // offene ganzseitige Blaetter       (A16)
+BRAUHAUS.blatt.melde(el, fn)   // ein Stueck meldet seinen Schliessgriff an
+```
+
+**Was das Gerät kann und was nicht.** Es vereinigt Hüllen auf einem Raster von
+4 px; der blinde Kritiker misst photographisch. Nachgerechnet im Ladezustand:
+Rahmen-Hüllen 138.156 px gegen photographisch 138.084 px (0,05 % Unterschied),
+Gesamtdeckung Hüllen 18,2 % gegen photographisch 19,9 % (nachher-Stand
+gegen vorher-Stand allerdings — die Innensicht liegt strukturell etwas
+niedriger, weil Hüllen keine Schlagschatten kennen). **Wer eine Zahl vor den
+blinden Kritiker trägt, misst mit `werkbank/schuss/rahmen-w10/messen.mjs`.**
+
+## Je Stück: die Zahl, die es einhalten muss — mit Datei und Abnahme
+
+Gemessen am Vorzustand `37f4b44`, Ladezustand, `messen.mjs`, größter Wert der
+vier Epochen. Die Abnahme läuft in allen Fällen über das Gerät im Spiel:
+`BRAUHAUS.haushalt.miss().je.<stueck>` bzw. `BRAUHAUS.haushalt.pruefe()`.
+
+| Stück | heute gesamt | Grenze | heute oben ⅙ | Grenze oben | Datei, an der es hängt |
+|---|---|---|---|---|---|
+| kern | 253.642 px (6,0 %) | **120.000** | 190.922 px (27,1 %) | **80.000** | erledigt in dieser Welle |
+| erbe | 239.643 px (5,7 %) | **28.000** | 0 | 6.000 | `stil/erbe.css:43` `.erb-leiste` (1211×104) · `.erb-lade` (≈1090×175) |
+| gegner | 214.788 px (5,1 %) | **28.000** | 0 | 8.000 | `stil/gegner.css:181` `.gg-schild`, `:225` `.gg-wimpel`, `:328` `.gg-band` |
+| fuhre | 169.305 px (4,0 %) | **34.000** | 22.544 px (3,2 %) | 10.000 | `stil/fuhre.css:74` `.fu-brett` (vier Reiter tragen ihre Bretter) |
+| stadt | 166.263 px (3,9 %) | **40.000** | 102.859 px (14,6 %) | 26.000 | `stil/stadt.css:294` `.stadt-werkbank`, `:313` Reiterzeile `max-width: 71.7%` |
+| sud | 98.202 px (2,3 %) | **34.000** | 0 | 6.000 | `stil/sud.css:142` `.sud-achse` — **zwei Spalten je Epoche über 200.000 px²** |
+| preis | 88.377 px (2,1 %) | **24.000** | 83.132 px (11,8 %) | 20.000 | `stil/preis.css:454` `.pr-griff` (`left: 85.6%`, `width: 13.3%`) |
+| name | 50.079 px (1,2 %) | **20.000** | 9.159 px (1,3 %) | 12.000 | `stil/name.css:58` `.nm-band`, `:161` `.nm-satz` |
+| klang | 1.420 px (0,03 %) | 4.000 | 1.409 px (0,2 %) | 3.000 | **im Rahmen** |
+
+**Summe heute 1.282.119 px = 30,3 %** gegen **332.000 px = 7,86 %** Haushalt.
+Das ist ein Schnitt von drei Vierteln, und er ist kein Rechenfehler: A15 will
+8 % gegen heute 22 %, und die Summe der Anteile liegt schon deshalb über dem
+Ganzen, weil die Kästen sich überlagern. **Was der Haushalt in einem Satz
+sagt: bis auf den Rahmen zeigt im Ruhezustand kein Stück mehr als einen
+Reiter.** Die STADT hat den Mechanismus dafür gebaut (Reiter + zugeklapptes
+Brett, `stadt-zugeklappt`); die übrigen sieben müssen ihn benutzen.
+
+## Was für Welle 11 zusätzlich benannt ist, mit Datei, Zeile und Abnahme
+
+1. **DIE FUHRE — `stuecke/fuhre.js:3517` `tastenSperre`.**
+   `stopImmediatePropagation()` in der Fangphase an `document` nimmt jedem
+   späteren Horcher die Taste ab, auch dem Rahmen. Besser:
+   `stopPropagation()`, oder den Horcher am eigenen Blatt führen.
+   *Abnahme:* mit aufliegender Sommertafel schließt Escape sie **und** der
+   Chronikgriff des Rahmens (`kern:chronik`) lässt sich weiter mit Escape
+   schließen.
+
+2. **DAS ERBE — `erb-buch` hat keinen Schließknopf.** `blattprobe.mjs`
+   findet **null** Elemente mit `data-zug` darin; der einzige Griff ist der
+   Reiter der STADT. Der Rahmen muss es deshalb klemmen.
+   *Abnahme:* `BRAUHAUS.haushalt.geklemmt()` bleibt nach 30 × WEITER und
+   einem Escape in allen vier Epochen **leer** — entweder durch einen
+   Schließknopf im Blatt oder durch `BRAUHAUS.blatt.melde(el, fn)`.
+   Dazu die Auflage A16 des Kritikers: das untere Drittel der Tafel ist leer,
+   sie darf entsprechend kürzer sein.
+
+3. **DER SUD — `stil/sud.css:142` `.sud-achse`.** Zwei Spalten je Epoche
+   liegen über der A16-Schwelle: 340.112 und 329.115 px² (1350), 455.929 und
+   269.975 (1600), 333.175 und 248.552 (1884), 321.808 und 296.505 (1970) —
+   und zwar **im Ladezustand**, nicht erst im Spiel.
+   *Abnahme:* `BRAUHAUS.haushalt.tafeln()` ist im Ladezustand aller vier
+   Epochen leer.
+
+4. **DER NAME — `stil/name.css:210` `.nm-knopf { white-space: normal }`.**
+   Das ist die Stelle, an der der Währungsbruch entstand. Das geschützte
+   Leerzeichen des Rahmens fängt ihn jetzt ab; die Zeile sollte trotzdem
+   wissen, dass ihre Knöpfe umbrechen dürfen und ihre Preisschilder nicht.
+   *Abnahme:* bleibt 0 Währungsbrüche, auch wenn ein Stück den Preis selbst
+   setzt statt `BRAUHAUS.knopf` zu benutzen.
+
+5. **DER GEGNER — `stil/gegner.css:225` `.gg-wimpel`.** Der Kasten mit rot
+   gestricheltem Rand am rechten Bildrand, von dem der Kritiker nur „Wo"
+   sah, ist die Wimpelzeile „wirbt · noch N Wo." (`stuecke/gegner.js:1979`).
+   Sie hängt an einer Adresse und kann nicht ausweichen; also muss sie sich
+   selbst am Rand halten.
+   *Abnahme:* `BRAUHAUS.haushalt.ueberRand()` ist leer — im Lade-, im
+   30-Wochen- **und** im gebauten Zustand aller vier Epochen.
+
+6. **DIE STADT — `stil/stadt.css:313`.** Die Reiterzeile darf 71,7 % der
+   Werkbankbreite. A12 des Kritikers verlangt einzeilig und unter 50 % der
+   BILDbreite, auch nach 30 Wochen.
+   *Abnahme:* `BRAUHAUS.haushalt.miss().je.stadt.obenPx <= 26000`.
