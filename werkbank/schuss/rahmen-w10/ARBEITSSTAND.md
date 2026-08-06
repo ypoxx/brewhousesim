@@ -393,3 +393,58 @@ statt zu tauschen.
   Haushalt gemacht und behoben hat (F2 oben). `BRAUHAUS.haushalt.tafeln()`
   geht den Weg nach oben und meldet für denselben Zustand **null** Tafeln.
   Wer A16 abnimmt, sollte wissen, welche der beiden Zahlen er liest.
+
+## Der Zustand des blinden Kritikers — 34 Baurunden, dann Escape (`gebautprobe.mjs`)
+
+Nur in diesem Zustand hat der Kritiker (H) den Kasten über dem Bildrand
+gesehen und (G) die zwei leeren Rechtecke. Beide Zustände, die die Auflagen
+nennen (Laden, 30 Wochen), zeigen weder das eine noch das andere.
+
+**VORHER, `37f4b44`:**
+
+| Epoche | fehlende Zeichen | über dem Rand | Tafeln > 200.000 px² |
+|---|---|---|---|
+| 1350 | 0 | 0 | 1 (`stadt .stadt-bauhof` 1266×209, aufgeschlagene Lade) |
+| 1600 | 0 | 0 | 0 |
+| 1884 | 0 | 0 | 1 (dieselbe Lade) |
+| **1970** | 0 | **1** | 1 (dieselbe Lade) |
+
+**Der Kasten über dem Rand ist gefunden und benannt:**
+`gegner .gg-ziel gg-konzern zuteuer` — **312×52 @2458,202**, also 18 px über
+die 2752 hinaus, Text „verhandelt · noch 6 Wo. · zuvorkommen …". Das ist
+genau der Befund (H) des Kritikers: *„ab x ≈ 2725 … sichtbar bleibt nur ‚Wo'"*.
+Der Rahmen kann ihn nicht verrücken, ohne in fremdes DOM zu schreiben; er
+nennt ihn (`BRAUHAUS.haushalt.ueberRand()`), und die Auflage geht mit Datei,
+Zeile und Abnahme an DEN GEGNER (siehe oben, Punkt 5).
+
+**Die zwei leeren Rechtecke (R5) sind nicht nachstellbar.** Der Glyphenabdruck
+(Vergleich gegen U+FFFF, dasselbe Verfahren wie in `messen.mjs`) findet in
+**keinem** der drei Zustände und in **keiner** der vier Epochen ein fehlendes
+Zeichen — auch nicht im Zustand des Kritikers und auch nicht auf dem
+Vorzustand. `zeichenprobe.mjs` prüft zusätzlich jedes im Spiel vorkommende
+Nicht-ASCII-Zeichen gegen alle drei Schriftketten, alt wie neu: kein Treffer.
+**Trotzdem ist die Abhilfe des Rahmens richtig und bleibt**: die Ketten enden
+jetzt in Unifont, das die ganze mehrsprachige Ebene trägt — ein leeres
+Rechteck ist damit für JEDES Zeichen ausgeschlossen, auch für eines, das ein
+Stück in Welle 11 erst einbaut. Was ich nicht sagen kann: ob genau dieses
+Rechteck damit fort ist, denn ich habe es nie gesehen. Die Aufnahmen des
+Kritikers liegen nicht mehr auf der Platte (`bild-w9/bilder/` enthält nur die
+vier Klickprotokolle).
+
+## Ich habe das Bild angesehen, nicht nur gezählt
+
+`messungen/blick-vorher-e1.png` gegen `blick-nachher-e1.png`, 1376×768
+(halbe Entwurfsleinwand, damit die Schriftböden greifen):
+
+* Die Kopfleiste ist schmaler und flacher und trägt **alle sieben Felder**
+  unverändert: `[ SCHEIDING 1350 ] [ KASSE 112 Pf ] [ GRUT 40 ]
+  [ KELLER 4/12 Fass ] [ WOCHE 1/30 ] [ CHRONIK 4 ] [ BUCH 1 ]`. Das Holz,
+  die Klammern und die Farbe DER STADT bleiben.
+* Die Hauszeile steht ohne Papier über dem Himmel und ist gut lesbar.
+* **Sichtbar behoben:** im Kasten „DER ANKER · RUF 10" stand vorher
+  „Umtrunk beim Wirt" mit „−9" und „Pf" **übereinander**; jetzt steht
+  „−9 Pf" in einer Zeile, und der Kasten ist dadurch flacher.
+* **Die eine Stelle, an der das Abnehmen des Papiers etwas kostet:** das
+  Band „nächster Zug: … (Kasse reicht 5,9×)" liegt in 1350 über einem
+  dunklen Dach. Fett und mit doppeltem Lichthof ist es lesbar, aber es ist
+  weniger ruhig als auf Papier. Das steht hier, weil es gegen mich spricht.
