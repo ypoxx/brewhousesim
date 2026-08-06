@@ -870,3 +870,52 @@ oberstes ⅙ **29,5 / 30,1 / 30,2 / 36,7 %**, unterstes ⅙ 7,0 / 6,7 / 6,6 /
 7,2 %, `kern` 95.755 / 99.379 / 102.133 / 102.026 px, Währungsbruch 0,
 über dem Rand 0, fehlende Zeichen 0, `lage` 0, Seitenfehler 0,
 `verdeckt()` 0. `spielprobe.mjs` bestanden (60 Wochen, alle vier Epochen).
+
+---
+
+# EIN ZWEITER GERÄTEBEFUND, UND ER IST GRÖSSER ALS DER ERSTE
+
+Nach der Saatprobe lief zur Kontrolle noch eine **welle.sh**-Runde auf dem
+ausgelieferten Stand (8932) — also vier Epochen **nebeneinander**, so wie
+alle ρ-Sätze dieses Laufs gefahren werden. Ergebnis für 1350 auf **demselben
+eingefrorenen Stand**:
+
+| Protokoll | Epoche | Kasse | ρ (12/13/14 J) |
+|---|---|---|---|
+| **einzeln**, 3 Läufe, gleiche md5 | 1350 | **28–524** | −0,245 / −0,170 / −0,336 |
+| **nebeneinander** (`welle.sh`) | 1350 | **30–558** | −0,266 / −0,418 / −0,160 |
+| **nebeneinander** (`welle.sh`) | 1884 | **2907–25557** | +0,455 / +0,544 / +0,323 |
+| einzeln/nebeneinander, alle bisherigen Sätze | 1884 | 1757–23789 | +0,168 / +0,346 / +0,393 |
+
+**`werkbank/schuss/rueckkopplung-r3/welle.sh` fährt die vier Epochen absichtlich
+nebeneinander** und begründet das im eigenen Kopf: *„Die beharrliche Hand ist
+von der Last der Maschine unabhängig … Nachgewiesen: dieselbe Reihe bei
+Lastmittel 1,5 und bei 13,7."* **Heute stimmt das nicht.** Auf demselben
+Stand liefert dasselbe Skript nebeneinander eine andere Partie als einzeln —
+und zwar in 1350 **und** in 1884.
+
+**Was das für die Zahlen dieser Welle heißt:**
+
+* Die **Saatprobe** ist davon nicht berührt: sie hat von Anfang an **einzeln**
+  gemessen, jeden Lauf allein durchs Messfenster. Ihr Befund steht:
+  Vorzustand und ausgelieferter Stand spielen dieselbe Partie, jeder von
+  beiden dreimal mit derselben Prüfsumme.
+* Die **zwölf Sätze A/B/C** sind mit `welle.sh` gefahren, also nebeneinander.
+  Der eine Ausreißer in 1350 (Satz B) lässt sich damit **nicht mehr allein
+  meiner Wache anlasten** — das Protokoll selbst streut. Ich habe das oben
+  behauptet und nehme es hier zurück: **die Wache war ein Kandidat, sie ist
+  nicht überführt.** Was überführt ist: das Nebeneinander.
+* **Die Wache ist trotzdem zu Recht fort.** Ein Rahmen, der bei jedem
+  Bildaufbau nach der Uhr ein Layout erzwingt, ist unabhängig davon falsch —
+  und die Nachprobe zeigt, dass ihr Fehlen am Bild nichts kostet.
+
+**Deshalb wird der ρ-Nachweis dieser Welle einzeln geführt**
+(`saatprobe2.sh`, 1600/1884/1970 auf beiden Ständen, abwechselnd, jeder Lauf
+allein). Das ist die einzige Form, in der „dieselbe Saat, dieselbe Partie"
+heute überhaupt prüfbar ist.
+
+**Für die Aufsicht, als eigene Auflage:** `welle.sh` sollte einen Schalter
+bekommen, der die vier Epochen nacheinander fährt, und die Zusage in seinem
+Kopf gehört berichtigt, bis sie wieder gemessen ist.
+*Abnahme:* dieselbe Epoche, derselbe eingefrorene Stand, dreimal
+nebeneinander und dreimal einzeln — sechs gleiche Prüfsummen.
