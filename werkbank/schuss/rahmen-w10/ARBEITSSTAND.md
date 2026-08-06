@@ -778,3 +778,21 @@ nichts aufschlägt, und sie ist unabhängig von der Last der Maschine.
 vier Epochen höchstens **einen** Eintrag, und nach einem Escape **keinen**,
 ohne dass `BRAUHAUS.haushalt.geklemmt()` etwas enthält. Und: `?saat=1350`
 über 400 Wochen ergibt dreimal dieselbe Prüfsumme.
+
+## Eine Falle in der Prüfsumme, die ich fast selbst gestellt hätte
+
+Der erste Vergleich sollte über die **md5 der Ergebnisdatei** laufen, wie es
+dieser Lauf immer tut. Das geht hier **nicht über die Stände hinweg**:
+`linie.mjs` schreibt je Woche auch den vom Bildschirm abgelesenen Knopftext
+mit, und Auflage R4 hat das Preisschild auf ein geschütztes Leerzeichen
+umgestellt — „−9 Pf" trägt jetzt U+00A0 statt U+0020. **Jede** Datei
+unterscheidet sich damit zwischen VOR und OHNE, obwohl die Partie dieselbe
+ist. Gemessen an VOR-A gegen OHNE-A: md5 `8ea995fa…` gegen `35fb3b08…`,
+**Reihe und Kassenspanne aber Ziffer für Ziffer gleich** (14 Jahre,
+Kasse 28–524, ρ-Reihe 5,8947 · 1,4286 · 3,4167 · 2,4107 · 5,9545 · 1,75 …).
+
+`werkbank/schuss/rahmen-w10/saat-auswerten.py` vergleicht deshalb die
+**Partie** (Jahresreihe der Kennzahl + Kassenspanne + Zahl der Braujahre)
+über die Stände hinweg und die **md5 innerhalb** eines Standes, wo sie
+aussagekräftig bleibt. Wer die md5 über Stände hinweg vergleicht, misst das
+Leerzeichen.

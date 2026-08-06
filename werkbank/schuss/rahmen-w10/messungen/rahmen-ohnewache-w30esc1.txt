@@ -23,3 +23,67 @@ FLAECHENHAUSHALT  gesamt 17.8 %   oberstes 1/6 31.0 %   (79 Kaesten)
   TAFELN>200k: []
   Spur: ["0ms: erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch"]
   Preisbruch: []
+=== E2 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1283x60 @735,46 = 76957 px (10.9 % des obersten 1/6)
+  hauszeile  797x28 @978,160 = 21906 px (3.1 % des obersten 1/6)
+  deckung    836x24 @1724,1371 = 19849 px (2.8 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 17.9 %   oberstes 1/6 31.6 %   (81 Kaesten)
+  gegner     212688 /  28000 px  UEBER +184688   oben      0 /   8000
+  erbe       136192 /  28000 px  UEBER +108192   oben      0 /   6000
+  stadt      118224 /  40000 px  UEBER +78224   oben  59136 /  26000  UEBER +33136
+  kern       102192 / 120000 px           oben  82432 /  80000  UEBER +2432
+  sud         90272 /  34000 px  UEBER +56272   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        29184 /  20000 px  UEBER +9184   oben      0 /  12000
+  fuhre        3520 /  34000 px           oben      0 /  10000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["gegner: 212688/28000 px","erbe: 136192/28000 px","stadt: 118224/40000 px  oben 59136/26000 px","sud: 90272/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 29184/20000 px","kern: 102192/120000 px  oben 82432/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {"erbe .erb-buch blatt":1}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: ["0ms: erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch"]
+  Preisbruch: []
+=== E3 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1330x60 @711,46 = 79805 px (11.3 % des obersten 1/6)
+  hauszeile  846x28 @953,160 = 23267 px (3.3 % des obersten 1/6)
+  deckung    800x24 @1759,1371 = 18998 px (2.7 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 17.8 %   oberstes 1/6 31.9 %   (76 Kaesten)
+  gegner     192288 /  28000 px  UEBER +164288   oben      0 /   8000
+  erbe       136192 /  28000 px  UEBER +108192   oben      0 /   6000
+  stadt      120256 /  40000 px  UEBER +80256   oben  58240 /  26000  UEBER +32240
+  kern       105264 / 120000 px           oben  85504 /  80000  UEBER +5504
+  sud         94640 /  34000 px  UEBER +60640   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        35264 /  20000 px  UEBER +15264   oben      0 /  12000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["gegner: 192288/28000 px","erbe: 136192/28000 px","stadt: 120256/40000 px  oben 58240/26000 px","sud: 94640/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 105264/120000 px  oben 85504/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {"erbe .erb-buch blatt":1}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: ["0ms: erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch"]
+  Preisbruch: []
+=== E4 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1327x60 @712,46 = 79637 px (11.3 % des obersten 1/6)
+  hauszeile  755x28 @999,160 = 20755 px (2.9 % des obersten 1/6)
+  deckung    943x24 @1616,1371 = 22401 px (3.2 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 20.2 %   oberstes 1/6 39.6 %   (83 Kaesten)
+  gegner     419568 /  28000 px  UEBER +391568   oben   2880 /   8000
+  stadt      161632 /  40000 px  UEBER +121632   oben 110016 /  26000  UEBER +84016
+  kern       104752 / 120000 px           oben  84992 /  80000  UEBER +4992
+  sud         88816 /  34000 px  UEBER +54816   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        35264 /  20000 px  UEBER +15264   oben      0 /  12000
+  fuhre        4784 /  34000 px           oben      0 /  10000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["gegner: 419568/28000 px","stadt: 161632/40000 px  oben 110016/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 88816/34000 px","name: 35264/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {"erbe .erb-buch blatt":1}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: ["0ms: erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch"]
+  Preisbruch: []
