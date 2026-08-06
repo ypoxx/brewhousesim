@@ -147,6 +147,43 @@ Epoche (1600) laden davon vier mit 203 KB; sie steht damit bei 7,63 MB gegen
 eine Obergrenze von 8. `fracht_bank` liegt nur in 1350, weil das Zielblatt
 1600 vorn keine Bank trägt und 1600 die Epoche am Veto ist.
 
+### `hof/auto_*` — der Verkehr von 1970 (Welle 9, Auflage A8)
+
+> **Eine Asphaltstraße mit Mittelstreifen, auf der niemand fährt, ist keine
+> Straße von 1970.**
+
+Der blinde Kritiker hat 1970 am deutlichsten gegen das Spiel entschieden, und
+aus dem Motiv der Epoche heraus: *„Im untersten Sechstel (y 1280…1536) trägt
+das Zielblatt drei Autos — einen cremefarbenen Käfer links, eine rote
+Limousine in der Mitte, eine helle rechts daneben. Im Spiel steht dort **kein
+einziges Fahrzeug**. Auf dem ganzen Bildschirm zählt das Spiel zwei
+Personenwagen; das Zielblatt trägt sieben plus einen Stadtbus."*
+
+Ein 2×2-Bogen, derselbe Weg wie bei der Hoffracht (`--aspect 1:1
+--resolution 2K`, `--ref spiel/bild/platte-1970.jpg`, Grund reines Magenta,
+geschnitten mit `stadt-w8/schneiden.mjs`):
+
+| Bogen | Referenz | woraus geschnitten |
+|---|---|---|
+| `verkehr` | `platte-1970.jpg` | `auto_kaefer` · `auto_limousine` · `auto_kombi` · `auto_bus` |
+
+Prompt und Schnittplan: `werkbank/schuss/stadt-w9/bogen/verkehr.txt` und
+`verkehr.json`.
+
+**Vier Dateien, 196 KB, und sie werden nur in Epoche IV geladen.** Das ist
+keine Nebensache, sondern die Bedingung: 1600 lag vor dieser Welle bei 7,63
+von 8 MB, 1970 bei 4,45. Ein Bild, das 1600 nicht braucht, darf 1600 nicht
+kosten — `bilderDerEpoche()` in `stadt.js` lädt die Fracht der Epoche und
+sonst keine.
+
+**Sie liegen auf der Fahrbahn, nicht daneben.** Die Mittellinie der Platte
+1970 läuft durch (52,3|75,5) – (45,1|85,3) – (38,9|93,1) – (34,9|98,3),
+abgelesen an den gemalten Strichen im Ausschnitt
+`werkbank/schuss/stadt-w9/bild/schnitt-e4-strasse.png`. Der Ort `strasse`
+(50|89) liegt daneben auf dem Gehweg; er ist für alle vier Epochen
+festgeschrieben und wird deshalb **nicht bewegt**, sondern nur mit `dx`/`dy`
+verlassen.
+
 ### Der Boden und der Maßstab (Runde 6)
 
 > **Ein Bild, das keinen Menschen zeigt, hat keinen Maßstab — und wird deshalb
