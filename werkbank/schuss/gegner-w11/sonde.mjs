@@ -139,6 +139,22 @@ const lies = () => {
     ueberRand: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.ueberRand() : null,
     tafeln: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.tafeln() : null,
     geklemmt: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.geklemmt() : null,
+    /* Die Bedienung des Stuecks, Zug fuer Zug — damit ein Vorher/Nachher
+       beweisen kann, dass nichts vom Schirm verschwunden ist. `hit` sagt,
+       ob die Maus den Knopf an seiner Mitte wirklich trifft. */
+    gegnerzuege: [...document.querySelectorAll('#buehne [data-zug^="gegner:"]')].map(el => {
+      const r = el.getBoundingClientRect();
+      let hit = false;
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      if (r.width > 0 && cx >= 0 && cy >= 0 && cx <= innerWidth && cy <= innerHeight) {
+        const t = document.elementFromPoint(cx, cy);
+        hit = !!(t && (t === el || el.contains(t)));
+      }
+      return { zug: el.getAttribute('data-zug'), aus: !!el.disabled, hit,
+        b: Math.round(r.width), h: Math.round(r.height),
+        preis: el.getAttribute('data-preis'),
+        text: (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 44) };
+    }).sort((a, b) => a.zug.localeCompare(b.zug)),
     lage: (BRAUHAUS.lage || []).length,
     lagetext: (BRAUHAUS.lage || []).slice(0, 4).map(String),
     verdeckt: (() => { try { return BRAUHAUS.stadt.rahmen.verdeckt(); } catch (x) { return 'FEHLER'; } })(),
@@ -196,6 +212,14 @@ for (const e of EPOCHEN) {
     `    ${String(k.flaeche).padStart(7)} px²  ${String(k.b).padStart(4)}×${String(k.h).padStart(3)} @${k.x},${k.y}`
     + `${k.raus ? ' RAUS' : ''}  .${k.klasse}  „${k.text}"`));
   aus.push(`    (${d.kaesten.length} Kaesten, Summe der Huellen ${d.kaesten.reduce((a, k) => a + k.flaeche, 0)} px²)`);
+  aus.push(`  BEDIENUNG des GEGNERS: ${d.gegnerzuege.length} Zuege, `
+    + `${d.gegnerzuege.filter(z => z.hit).length} von der Maus zu treffen, `
+    + `${d.gegnerzuege.filter(z => z.aus).length} abgeschaltet, `
+    + `${d.gegnerzuege.filter(z => z.preis !== null).length} mit Preisschild, `
+    + `${d.gegnerzuege.filter(z => Math.min(z.b, z.h) < 24).length} unter 24 px`);
+  d.gegnerzuege.forEach(z => aus.push(`    ${z.hit ? ' ' : '!'} ${z.zug.padEnd(30)} `
+    + `${String(z.b).padStart(4)}×${String(z.h).padStart(3)} ${z.aus ? 'AUS' : '   '} `
+    + `${(z.preis === null ? '' : z.preis).padStart(9)}  „${z.text}"`));
   aus.push(`  A3 — GEGNER auf gemalter Beschriftung: ${d.treffer.length}`);
   d.treffer.forEach(t => aus.push(`    „${t.schild}"  ${t.ueber} px² unter ${t.tag}.${t.klasse}  ${t.mass}`));
   aus.push(`  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: ${d.zahlen.length}`);

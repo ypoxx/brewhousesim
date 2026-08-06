@@ -390,33 +390,40 @@
   display: flex;
   flex-direction: column;
   gap: calc(var(--s) * 7);
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-width: thin;
+  overflow: hidden;
 }
 
-/* Die Kopfzeile: Titel links, Schliessknopf rechts. Sie rollt NICHT mit —
-   der Griff muss auch dann dastehen, wenn weit unten gelesen wird. Deshalb
-   `sticky` und ein deckender Grund in der Papierfarbe der Epoche; ohne ihn
-   liefe die Liste sichtbar unter dem Titel durch.
-   Der Grund macht die Kopfzeile zu einem Kasten — das kostet aber NICHTS,
-   weil sie vollstaendig in der Huelle des Buches liegt und beide Messgeraete
-   je Stueck die VEREINIGUNG der Huellen zaehlen. */
+/* Die Kopfzeile steht fest, der Koerper rollt. Der Schliessknopf muss auch
+   dann dastehen, wenn weit unten gelesen wird — sonst hat das Buch wieder
+   keinen Griff, und genau das war die Auflage. Muster wie `.nm-koerper.rolle`
+   in stil/name.css. */
 .erb-buchtitel {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: calc(var(--s) * 12);
   flex: 0 0 auto;
-  position: sticky;
-  top: calc(var(--s) * -22);
-  z-index: 2;
-  margin: calc(var(--s) * -22) calc(var(--s) * -26) 0;
-  padding: calc(var(--s) * 22) calc(var(--s) * 26) calc(var(--s) * 2);
-  background: var(--erb-papier, var(--papier));
 }
 .erb-buchtitel h2 { flex: 1 1 auto; min-width: 0; }
 .knopf.erb-buchzu { flex: 0 0 auto; align-self: flex-start; }
+
+/* DER KOERPER — was ueber die Unterkante hinausgeht, wird gerollt, nicht
+   abgeschnitten. Vorher stand auf `.erb-buch` schlicht `overflow: hidden`,
+   und die Laden schnitten zusaetzlich selbst ab; was nicht hineinpasste, war
+   weg. Ein Rollkasten ist die Loesung, die der blinde Kritiker in Auflage 9
+   dem Auslassungszeichen ausdruecklich gegenueberstellt, und
+   aufsicht/lesbarkeit.mjs zaehlt `auto` nicht als abgeschnittenen Kasten
+   (Zeile 56: nur `hidden` und `clip` schneiden wirklich ab). */
+.erb-koerper {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 7);
+}
 
 .erb-buch h2 {
   font-size: calc(var(--s) * 30);
@@ -440,12 +447,29 @@
 }
 .erb-frist { color: var(--rot); }
 
+/* DIE LADEN SCHRUMPFEN NICHT MEHR, DAS BUCH ROLLT.
+
+   Beim ersten Anlauf dieser Welle stand hier weiter `overflow: hidden` und
+   `min-height: 0`, waehrend das Buch schon `overflow-y: auto` trug. Das ist
+   die schlechteste aller Kombinationen und ich habe sie selbst gebaut: in
+   einer Flex-Spalte darf ein Kind mit `min-height: 0` bis auf null
+   zusammengedrueckt werden — die Lade waere geschrumpft und haette ihre
+   Zeilen abgeschnitten, statt dass das Buch rollt. Der Rollbalken waere nie
+   erschienen, und das kuerzere Buch haette am Ende doch weniger gezeigt.
+   Genau das, was diese Welle „keine Loesung" nennt.
+   `flex: 0 0 auto` heisst: die Lade behaelt ihre natuerliche Hoehe, das Buch
+   wird laenger als sein Kasten, und der Kasten rollt. */
 .erb-lade {
   border-top: calc(var(--s) * 2) solid var(--linie);
   padding-top: calc(var(--s) * 5);
+  flex: 0 0 auto;
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
 }
+/* Aus demselben Grund: Kopf, Regel und Frist geben keine Hoehe her. */
+.erb-buchkopf,
+.erb-regel,
+.erb-frist { flex: 0 0 auto; }
 
 .erb-ladekopf {
   font-size: calc(var(--s) * 16);

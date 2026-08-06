@@ -1,0 +1,380 @@
+{
+ "1": {
+  "jahr": 1351,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 13,
+   "px": 195456,
+   "anteil": 4.6239098837209305,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 161456,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 921168,
+   "anteil": 21.79210574127907
+  },
+  "oben": {
+   "px": 226592,
+   "anteil": 32.16297238372093
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 219584/28000 px",
+   "fuhre: 195456/34000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 118432/40000 px  oben 66944/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 87840/34000 px",
+   "name: 30400/20000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1351",
+    "mass": "716×265 @1018,323",
+    "flaeche": 189612,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "686×188 @1033,393",
+    "flaeche": 128748,
+    "text": "Was steht 1351/52 an der Tafel?Ang"
+   },
+   {
+    "klasse": "",
+    "mass": "686×29 @1033,335",
+    "flaeche": 19880,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "340×46 @1378,455",
+    "flaeche": 15514,
+    "text": "Kofent · 0 Brautage → 3 Fass"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "340×46 @1033,455",
+    "flaeche": 15513,
+    "text": "Starkbier · 3 Brautage → 3 Fass · "
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:duenn",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:grut",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:stark",
+    "b": 340,
+    "h": 46,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:kofent",
+    "b": 340,
+    "h": 46,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ },
+ "2": {
+  "jahr": 1601,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 16,
+   "px": 196480,
+   "anteil": 4.648134689922481,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 162480,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 944848,
+   "anteil": 22.352304384689923
+  },
+  "oben": {
+   "px": 230432,
+   "anteil": 32.708030523255815
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 212688/28000 px",
+   "fuhre: 196480/34000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 126288/40000 px  oben 67200/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 87840/34000 px",
+   "name: 29184/20000 px",
+   "kern: 102192/120000 px  oben 82432/80000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1601",
+    "mass": "716×265 @1018,323",
+    "flaeche": 189612,
+    "text": "Von Georgi 1601 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "686×188 @1033,393",
+    "flaeche": 128748,
+    "text": "Was steht 1601/02 an der Tafel?Ang"
+   },
+   {
+    "klasse": "",
+    "mass": "686×29 @1033,335",
+    "flaeche": 19880,
+    "text": "Von Georgi 1601 bis Michaeli — der"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "340×46 @1378,455",
+    "flaeche": 15514,
+    "text": "Nachbier · 0 Sude der Reihe → 5 Fa"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "340×46 @1033,455",
+    "flaeche": 15513,
+    "text": "Märzenbier · 1 Sude der Reihe → 4 "
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:schank",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:braun",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:maerzen",
+    "b": 340,
+    "h": 46,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:nachbier",
+    "b": 340,
+    "h": 46,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ },
+ "3": {
+  "jahr": 1885,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 9,
+   "px": 187200,
+   "anteil": 4.4285973837209305,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 153200,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 917664,
+   "anteil": 21.70921148255814
+  },
+  "oben": {
+   "px": 232608,
+   "anteil": 33.01689680232558
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 192288/28000 px",
+   "fuhre: 187200/34000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 128320/40000 px  oben 66304/26000 px",
+   "sud: 93600/34000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "name: 35264/20000 px",
+   "kern: 105264/120000 px  oben 85504/80000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1885",
+    "mass": "716×255 @1018,323",
+    "flaeche": 182803,
+    "text": "Von Georgi 1885 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "686×173 @1033,393",
+    "flaeche": 118573,
+    "text": "Was steht 1885/86 an der Tafel?Ang"
+   },
+   {
+    "klasse": "",
+    "mass": "686×29 @1033,335",
+    "flaeche": 19880,
+    "text": "Von Georgi 1885 bis Michaeli — der"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:schank",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:lager",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:export",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:einfach",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ },
+ "4": {
+  "jahr": 1971,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 15,
+   "px": 191984,
+   "anteil": 4.541772650193798,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 157984,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 1120640,
+   "anteil": 26.511022286821706
+  },
+  "oben": {
+   "px": 279840,
+   "anteil": 39.72111191860465
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 557616/28000 px",
+   "fuhre: 191984/34000 px",
+   "stadt: 173600/40000 px  oben 122112/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 87840/34000 px",
+   "name: 35264/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1971",
+    "mass": "716×255 @1018,323",
+    "flaeche": 182803,
+    "text": "Von Georgi 1971 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "686×173 @1033,393",
+    "flaeche": 118573,
+    "text": "Was steht 1971/72 an der Tafel?Ang"
+   },
+   {
+    "klasse": "",
+    "mass": "686×29 @1033,335",
+    "flaeche": 19880,
+    "text": "Von Georgi 1971 bis Michaeli — der"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:hell",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:pils",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:export",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:handel",
+    "b": 340,
+    "h": 31,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ }
+}

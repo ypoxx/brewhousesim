@@ -1102,15 +1102,23 @@
     }));
     buch.appendChild(titelzeile);
 
+    /* DER ROLLENDE KOERPER.  Kopfzeile fest, Liste rollend — dasselbe Muster
+       wie `.nm-koerper.rolle` in stuecke/name.js:2185. Ein erster Anlauf
+       liess das ganze Buch rollen und haengte den Titel mit `position:
+       sticky` daran; das ist fummelig (der Grund muss die Papierfarbe der
+       Epoche treffen, sonst laeuft die Liste sichtbar darunter durch), und
+       das Haus hat schon einen Weg dafuer. Hier steht der. */
+    var koerper = B.el('div', 'erb-koerper');
+
     var kopf = B.el('div', 'erb-buchkopf');
     kopf.appendChild(B.el('div', 'erb-name', (a.name || '—') + ' · ' + (a.eigenschaftName || '—')));
     kopf.appendChild(B.el('div', 'erb-sagt', '„' + (a.sagt || '') + '"'));
     kopf.appendChild(B.el('div', 'erb-wirkt', ei.wirkt));
-    buch.appendChild(kopf);
+    koerper.appendChild(kopf);
 
-    buch.appendChild(B.el('p', 'erb-regel', e.erklaerung));
+    koerper.appendChild(B.el('p', 'erb-regel', e.erklaerung));
 
-    buch.appendChild(B.el('p', 'erb-frist',
+    koerper.appendChild(B.el('p', 'erb-frist',
       'Die Stunde kommt in ' + wochenBisStunde()
       + (wochenBisStunde() === 1 ? ' Woche' : ' Wochen') + ' — '
       + B.uhr.datum(Z.stundeJahr, Z.stundeWoche).lang
@@ -1121,7 +1129,7 @@
 
     if (Z.erbfaelle) {
       var f = e.formen[Z.letzteForm];
-      buch.appendChild(B.el('p', 'erb-frist erb-frist-alt',
+      koerper.appendChild(B.el('p', 'erb-frist erb-frist-alt',
         (Z.alt ? Z.alt.name : 'Die Hand davor') + ' hat übergeben — '
         + (f ? f.name + '. ' + f.satz : 'ohne Vereinbarung, weil die Stunde nicht wartete.')
         + (Z.vorher ? ' Am Haus ' + Z.vorher.haus + ' → ' + (Z.nachher ? Z.nachher.haus : '—')
@@ -1138,6 +1146,12 @@
     if (!fest.length) lade.appendChild(B.el('div', 'erb-leer', 'Nichts. Alles hängt an einem Menschen.'));
     fest.forEach(function (x) {
       var r = B.el('div', 'erb-satz greifbar');
+      /* Der Name steht in einer Spalte mit `text-overflow: ellipsis`. Auflage
+         9 gilt nur fuer Knoepfe mit Preisschild — aber ein halber Hausname
+         ist auch in einer Liste eine halbe Auskunft, und seit das Buch
+         schmaler ist (40 % statt 42 %), trifft es eher. Der ganze Name haengt
+         deshalb am Titel jeder Zeile. */
+      r.title = x.name + ' — ' + x.bindung.womit + ', bis ' + x.bindung.bis;
       r.appendChild(B.el('span', 'n', x.name));
       r.appendChild(B.el('span', 'v', x.bindung.womit + ' bis ' + x.bindung.bis));
       if (ei.zug === 'zahlen') r.appendChild(B.el('span', 'p', geld(wert(x))));
@@ -1158,7 +1172,7 @@
       }));
       lade.appendChild(r);
     });
-    buch.appendChild(lade);
+    koerper.appendChild(lade);
 
     /* An der Person */
     var los = personListe();
@@ -1171,6 +1185,7 @@
     var borg = ei.zug === 'borg';
     los.forEach(function (x) {
       var r = B.el('div', 'erb-satz greifbar');
+      r.title = x.name + ' — ' + x.bindung.womit;
       r.appendChild(B.el('span', 'n', x.name));
       r.appendChild(B.el('span', 'v', x.bindung.womit));
       if (ei.zug === 'zahlen') r.appendChild(B.el('span', 'p', geld(wert(x))));
@@ -1187,7 +1202,7 @@
       }));
       lade2.appendChild(r);
     });
-    buch.appendChild(lade2);
+    koerper.appendChild(lade2);
 
     /* AUFLAGE 1 — die dritte Lade. Datum, Grund und der gezahlte Betrag.
        Solange die Adresse noch existiert und nicht dem Haus gehoert, steht
@@ -1229,7 +1244,7 @@
         }
         ladeE.appendChild(r);
       });
-      buch.appendChild(ladeE);
+      koerper.appendChild(ladeE);
     }
 
     /* Was gefallen ist */
@@ -1239,11 +1254,12 @@
         + ' — hing an einem Menschen, nicht am Haus'));
       Z.gefallen.forEach(function (x) {
         var r = B.el('div', 'erb-satz');
+        r.title = x.name + ' — ' + x.womit;
         r.appendChild(B.el('span', 'n', x.name));
         r.appendChild(B.el('span', 'v', x.womit));
         lade3.appendChild(r);
       });
-      buch.appendChild(lade3);
+      koerper.appendChild(lade3);
     }
 
     /* Was geschrieben wurde */
@@ -1252,12 +1268,14 @@
       lade4.appendChild(B.el('div', 'erb-ladekopf', 'GESCHRIEBEN · ' + Z.geschrieben.length));
       Z.geschrieben.forEach(function (x) {
         var r = B.el('div', 'erb-satz');
+        r.title = x.name + ' — ' + e.verb + ' ' + x.jahr + '/' + x.woche
+          + ', vorher ' + x.vorher;
         r.appendChild(B.el('span', 'n', x.name));
         r.appendChild(B.el('span', 'v', x.jahr + '/' + x.woche + ' · vorher ' + x.vorher));
         r.appendChild(B.el('span', 'p', x.preis ? geld(x.preis) : 'auf Borg'));
         lade4.appendChild(r);
       });
-      buch.appendChild(lade4);
+      koerper.appendChild(lade4);
     }
 
     /* DAS GESCHLECHT.  Auflage 2: der Kritiker hat drei von vierzehn
@@ -1283,9 +1301,10 @@
         r.appendChild(B.el('span', 'p', 'Feder ' + B.zahl(h.feder, 2) + '×'));
         lade5.appendChild(r);
       });
-      buch.appendChild(lade5);
+      koerper.appendChild(lade5);
     }
 
+    buch.appendChild(koerper);
     fach.appendChild(buch);
 
     /* AUFLAGE 7 DES RAHMENS (Welle 10): jedes ganzseitige Blatt meldet sich

@@ -1,4 +1,6 @@
-MESSFENSTER offen — load 0.58 0.58 0.85
+MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 7s
+MESSFENSTER offen — load 1.31 1.25 1.08
 
 ===== E1 laden =====
  erbe: 19296/28000 px · oben 0/6000 · 5 Kaesten
@@ -17,7 +19,7 @@ MESSFENSTER offen — load 0.58 0.58 0.85
  verdeckt: [] lage: 0  Zuege: 95 Fehler: 0 
  -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"821/821","klasse":"erb-buch blatt"} offen: true · erbe 937824 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
  -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 19296 · lage 0 · Fehler 0
- -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 19296 · Fehler 0 
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe 19296 · Fehler 0 
 
 ===== E2 laden =====
  erbe: 17184/28000 px · oben 0/6000 · 5 Kaesten
@@ -36,7 +38,7 @@ MESSFENSTER offen — load 0.58 0.58 0.85
  verdeckt: [] lage: 0  Zuege: 103 Fehler: 0 
  -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"825/825","klasse":"erb-buch blatt"} offen: true · erbe 935712 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
  -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 17184 · lage 0 · Fehler 0
- -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 17184 · Fehler 0 
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe 17184 · Fehler 0 
 
 ===== E3 laden =====
  erbe: 19488/28000 px · oben 0/6000 · 5 Kaesten
@@ -55,7 +57,7 @@ MESSFENSTER offen — load 0.58 0.58 0.85
  verdeckt: [] lage: 0  Zuege: 106 Fehler: 0 
  -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"825/825","klasse":"erb-buch blatt"} offen: true · erbe 938016 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
  -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 19488 · lage 0 · Fehler 0
- -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 19488 · Fehler 0 
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe 19488 · Fehler 0 
 
 ===== E4 laden =====
  erbe: 24960/28000 px · oben 0/6000 · 5 Kaesten
@@ -74,4 +76,4 @@ MESSFENSTER offen — load 0.58 0.58 0.85
  verdeckt: [] lage: 0  Zuege: 98 Fehler: 0 
  -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"827/827","klasse":"erb-buch blatt"} offen: true · erbe 943488 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
  -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 24960 · lage 0 · Fehler 0
- -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 24960 · Fehler 0 
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe 24960 · Fehler 0 
