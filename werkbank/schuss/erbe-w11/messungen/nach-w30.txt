@@ -1,1 +1,73 @@
 MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 15s
+MESSFENSTER offen — load 0.92 1.13 1.05
+
+===== E1 w30 =====
+ erbe: 16800/28000 px · oben 0/6000 · 5 Kaesten
+ gesamt: 42.7 %  oben 51.4 %
+     4355 px  197x22 @1486,1153        .knopf erb-knopf erb-nach
+     3519 px  159x22 @1958,1153        .knopf erb-knopf erb-uebergabe erb-ohne
+     2885 px  131x22 @1821,1153        .knopf erb-knopf erb-uebergabe
+     2782 px  126x22 @1689,1153        .knopf erb-knopf erb-uebergabe
+     1591 px  72x22 @2123,1153         .knopf erb-knopf erb-griff
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:nachschrift | erbe:uebergabe:leibgeding | erbe:uebergabe:abfindung | erbe:uebergabe:bruch | erbe:buch
+ pruefe: ["fuhre: 1359296/34000 px  oben 140800/10000 px","gegner: 219584/28000 px","stadt: 113440/40000 px  oben 61952/26000 px","sud: 89280/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px"]
+ tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1351"] blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1351"]
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 105 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":1,"scroll":"821/821","klasse":"erb-buch blatt stadt-zugeklappt"} offen: true · erbe 16800 px (oben 0) · blaetter ["fuhre blatt fu-sommerblatt fu-georgi-1351"] · verdeckt []
+ -- nach Escape: Buch offen: true · im DOM: true · geklemmt {} · erbe 16800 · lage 0 · Fehler 0
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe 16800 · Fehler 0 
+
+===== E2 w30 =====
+ erbe: 17376/28000 px · oben 0/6000 · 5 Kaesten
+ gesamt: 42.3 %  oben 52.8 %
+     4572 px  207x22 @1486,1153        .knopf erb-knopf erb-nach
+     3166 px  143x22 @1983,1153        .knopf erb-knopf erb-uebergabe erb-ohne
+     3068 px  139x22 @1699,1153        .knopf erb-knopf erb-uebergabe
+     2931 px  133x22 @1844,1153        .knopf erb-knopf erb-uebergabe
+     1618 px  73x22 @2132,1153         .knopf erb-knopf erb-griff
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:nachschrift | erbe:uebergabe:leibgeding | erbe:uebergabe:abfindung | erbe:uebergabe:bruch | erbe:buch
+ pruefe: ["fuhre: 1356800/34000 px  oben 140800/10000 px","gegner: 212688/28000 px","stadt: 121424/40000 px  oben 62336/26000 px","sud: 90272/34000 px  oben 10192/6000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 29184/20000 px","kern: 102192/120000 px  oben 82432/80000 px"]
+ tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1601"] blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1601"]
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 112 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":1,"scroll":"825/825","klasse":"erb-buch blatt stadt-zugeklappt"} offen: true · erbe 17376 px (oben 0) · blaetter ["fuhre blatt fu-sommerblatt fu-georgi-1601"] · verdeckt []
+ -- nach Escape: Buch offen: true · im DOM: true · geklemmt {} · erbe 17376 · lage 0 · Fehler 0
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe 17376 · Fehler 0 
+
+===== E3 w30 =====
+ erbe: 12576/28000 px · oben 0/6000 · 4 Kaesten
+ gesamt: 37.7 %  oben 53.3 %
+     3098 px  140x22 @1752,1153        .knopf erb-knopf erb-uebergabe erb-ohne
+     2886 px  131x22 @1616,1153        .knopf erb-knopf erb-uebergabe
+     2731 px  124x22 @1486,1153        .knopf erb-knopf erb-uebergabe
+     2432 px  110x22 @1899,1153        .knopf erb-knopf erb-griff
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:uebergabe:leibgeding | erbe:uebergabe:abfindung | erbe:uebergabe:bruch | erbe:buch
+ pruefe: ["fuhre: 1152000/34000 px  oben 140800/10000 px","gegner: 192288/28000 px","stadt: 123456/40000 px  oben 61440/26000 px","sud: 93184/34000 px  oben 11648/6000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 105264/120000 px  oben 85504/80000 px"]
+ tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1885"] blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1885"]
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 114 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":1,"scroll":"825/825","klasse":"erb-buch blatt stadt-zugeklappt"} offen: true · erbe 12576 px (oben 0) · blaetter ["fuhre blatt fu-sommerblatt fu-georgi-1885"] · verdeckt []
+ -- nach Escape: Buch offen: true · im DOM: true · geklemmt {} · erbe 12576 · lage 0 · Fehler 0
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe 12576 · Fehler 0 
+
+===== E4 w30 =====
+ erbe: KEIN KASTEN
+ gesamt: 51.4 %  oben 60.0 %
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:nachschrift !!VERDECKT von . | erbe:uebergabe:leibgeding !!VERDECKT von . | erbe:uebergabe:abfindung !!VERDECKT von . | erbe:uebergabe:bruch !!VERDECKT von .wort | erbe:buch !!VERDECKT von .knopf
+ pruefe: ["fuhre: 1515184/34000 px  oben 140800/10000 px","gegner: 419568/28000 px","stadt: 166432/40000 px  oben 114816/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 88816/34000 px  oben 8736/6000 px","name: 35264/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+ tafeln: ["fuhre blatt fu-sommerblatt fu-georgi-1971"] blaetter: ["fuhre blatt fu-sommerblatt fu-georgi-1971"]
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 117 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":1,"scroll":"827/827","klasse":"erb-buch blatt stadt-zugeklappt"} offen: true · erbe — · blaetter ["fuhre blatt fu-sommerblatt fu-georgi-1971"] · verdeckt []
+ -- nach Escape: Buch offen: true · im DOM: true · geklemmt {} · erbe — · lage 0 · Fehler 0
+ -- Schliessknopf: geklickt · Buch im DOM: false · erbe — · Fehler 0 

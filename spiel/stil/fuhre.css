@@ -585,13 +585,29 @@
   letter-spacing: calc(var(--s) * 1);
   color: var(--fu-tinte);
 }
-.fu-marke .fu-mbetten { display: flex; gap: calc(var(--s) * 2); }
+.fu-marke .fu-mbetten { display: flex; gap: calc(var(--s) * 3); align-items: flex-end; }
+/* AUFLAGE 7 DES BLINDEN KRITIKERS, UND SIE WAR AN DER FALSCHEN STELLE GESUCHT.
+   Der Kritiker sah in 1970 „ein Kästchen FAE … trägt darunter zwei leere
+   Rechtecke in Rot — die klassische Ersatzdarstellung für ein Zeichen, das
+   keine geladene Schrift zeichnen kann", und dasselbe unter „BRU". Der
+   Rahmen hat in Welle 10 daraufhin JEDES Nicht-ASCII-Zeichen des Spiels
+   gegen jede Schriftkette geprueft und in keinem Zustand und keiner Epoche
+   ein fehlendes Zeichen gefunden — und die Schriftketten trotzdem
+   vorsorglich in Unifont enden lassen.
+   Es war nie ein Zeichen. Es sind DIESE Rechtecke: die Durstbetten der
+   Ortsmarke DER FUHRE, 8x11 px, nur ein Rand in --fu-warn, ohne Fuellung
+   — ein Bett je Wagenschritt, den die Adresse gerade will. Gesehen in
+   `werkbank/schuss/fuhre-w11/bilder/blick-e4-bericht.png` unter „FAE" und
+   „BRU", genau die zwei Kuerzel, die der Kritiker nennt.
+   Sie sind jetzt gefuellte Striche statt leerer Kaesten: dieselbe Zahl,
+   dieselbe Stelle, dieselbe Aussage — aber nichts daran sieht mehr aus wie
+   ein Zeichen, das die Schrift nicht kennt. */
 .fu-marke .fu-mbetten i {
   display: block;
-  width: calc(var(--s) * 8);
-  height: calc(var(--s) * 11);
-  border: calc(var(--s) * 1) solid var(--fu-warn);
-  border-radius: calc(var(--s) * 1);
+  width: max(3px, calc(var(--s) * 5));
+  height: max(7px, calc(var(--s) * 13));
+  background: var(--fu-warn);
+  border-radius: calc(var(--s) * 2);
 }
 .fu-marke.weg { opacity: 0.4; filter: grayscale(1); }
 

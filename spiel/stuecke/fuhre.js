@@ -3941,7 +3941,7 @@
        anhaelt — und er darf den Anschlag nicht zweizeilig machen. Der
        ganze Wortlaut steht im Titel des Schliessknopfes. */
     fuss.appendChild(B.el('div', 'fu-sommer-hinweis',
-      'Die Woche ruht, solange die Tafel liegt · WEITER, Escape und der Knopf legen sie beiseite'));
+      'Die Woche ruht, solange die Tafel liegt · WEITER und Escape legen sie beiseite'));
     bl.appendChild(fuss);
 
     fach.appendChild(bl);
