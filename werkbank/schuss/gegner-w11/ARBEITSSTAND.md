@@ -264,5 +264,55 @@ Zahlen („0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die P�
 
 ---
 
-*(Die Zahlen folgen, sobald die Läufe durch sind. Sie werden hier eingetragen,
-sowie sie da sind — nicht erst am Ende.)*
+## 5 — DIE ZAHLEN
+
+### 5.1 Der Flächenhaushalt im Spiel (`BRAUHAUS.haushalt`, Ladezustand)
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| gegner **vorher** | 189.632 | 193.840 | 177.216 | 209.664 px |
+| gegner **nachher** | **11.968** | **10.032** | **9.504** | **19.072 px** |
+| Grenze | 28.000 | 28.000 | 28.000 | 28.000 px |
+| oberstes ⅙ vorher → nachher | 0 → **0** | 0 → **0** | 0 → **0** | 0 → **0** (Grenze 8.000) |
+| Kästen des GEGNERS | 14 → **1** | 16 → **1** | 15 → **1** | 15 → **2** |
+| Summe der Hüllen | 191.166 → **10.721** | 194.339 → **9.010** | 178.633 → **8.501** | 226.175 → **17.882 px²** |
+| `haushalt.pruefe()` nennt gegner | **ja** | ja | ja | ja → **nein, in allen vier** |
+| `haushalt.ueberRand()` | [] | [] | [] | [] |
+
+Der einzige verbliebene Kasten ist sein Namensschild: **268×39 @2013,584**
+(1350) bzw. 204×39 und 243×39 (1970, zwei Häuser). Vorher: 366×171.
+
+### 5.2 Auflage 3 — die gemalten Beschriftungen (`sonde.mjs`, alle Zustände)
+
+| Zustand | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Ladezustand **vorher** | 0 | 0 | 0 | 0 |
+| Ladezustand **nachher** | **0** | **0** | **0** | **0** |
+| 34 Baurunden + Esc **vorher** | 4 (3.024 px² Hofbild) | 4 (2.652 px² Hofbild) | **3 (634 px² die Karte auf GASTHOF LINDENHOF)** | 1 (475 px²) |
+
+### 5.3 Auflage 10 — der Satz und die Zahl
+
+| | vorher | nachher |
+|---|---|---|
+| `.gg-bandzeile .was` 1350 | 1772 px in 731 px | **731 in 731 — ganz** |
+| … 1600 | 1588 px in 731 px | **731 in 731 — ganz** |
+| … 1884 | 1092 px in 731 px | **731 in 731 — ganz** |
+| … 1970 | 850 px in 731 px (gespielt bis 1652) | **731 in 731 — ganz** |
+| Kassenspalte 1970 | `2.637.150 DM`: 130 px in 109 px, `clip` | **kein abgeschnittener Wert in keinem Zustand** |
+
+Das Brett bleibt dabei, wo es hingehört: **936×203 = 190.175 px²** (1350/1600)
+bzw. 936×181 = 169.123 (1884/1970) — über MARKE (101.376 px², also behält es
+seinen Reiter DER STADT) und **unter 200.000 px², also keine Tafel im Sinne
+von A16**. Vorher waren es 936×158 = 147.888; der Rollkasten kostet 42.287 px²
+und kauft dafür 60 % eines Satzes zurück.
+
+### 5.4 Auflage 6 — das unterste Sechstel
+
+`.gg-kennzahl` lag vorher bei **849×32 @1710,1282** (1350) bis 860×32 @1699,1282
+(1970); das unterste Sechstel beginnt bei y = 1280. Nachher hängt die Zeile am
+Giebel, den sie meint, und ist dort **kein Kasten mehr**. Die Deckung des
+untersten Sechstels durch DEN GEGNER: siehe §5.5.
+
+---
+
+*(Die photographischen Zahlen und ρ folgen, sobald die Läufe durch sind.)*
