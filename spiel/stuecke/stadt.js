@@ -1307,6 +1307,13 @@
       var el = l[i];
       var zug = el.getAttribute('data-zug');
       if (zug.indexOf('stadt:') === 0 || el.disabled) continue;
+      /* WELLE 9: ein Knopf auf einem ZUGEKLAPPTEN Brett ist nicht "von der
+         Werkbank zugedeckt" — er ist zugeklappt, und ein Klick auf seinen
+         Reiter holt ihn zurueck. Vorher zaehlte dieser Zaehler `name:band`
+         in allen vier Epochen mit, also das Brett DES NAMEN selbst, das in
+         jeder Epoche unter der Reiterzeile ruht. Ein Zaehler, der Sollzustand
+         als Fehler meldet, macht die vier echten Funde unauffindbar. */
+      if (el.closest('.' + ZU) || el.closest('.' + VERDECKT)) continue;
       var q = el.getBoundingClientRect();
       if (q.width < 2 || q.height < 2) continue;
       for (var k = 0; k < kaesten.length; k++) {
@@ -1596,7 +1603,11 @@
     if (!w) {
       w = B.el('div', 'stadt-werkbank');
       w.appendChild(B.el('div', 'stadt-reiterzeile greifbar'));
-      w.appendChild(B.el('div', 'stadt-bauhof greifbar'));
+      var lade = B.el('div', 'stadt-bauhof greifbar');
+      /* Zugeklappt von der ersten Millisekunde an — sonst blitzt beim Laden
+         ein leerer Kasten auf, bevor `zeichneBauhof` ihn zumacht. */
+      lade.hidden = true;
+      w.appendChild(lade);
       fach.appendChild(w);
     }
     return w;

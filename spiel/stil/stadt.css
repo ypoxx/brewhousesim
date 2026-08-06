@@ -306,6 +306,41 @@
    "Verwaltungsbau" und "Verwaltungsba". */
 .stadt-werkbank > .stadt-reiterzeile { max-width: 71.7%; }
 
+/* ==========================================================================
+   DIE WERKBANK WEICHT DEM AUFLIEGENDEN BLATT.  (Auflage A3, Welle 9)
+
+   Der Befund des blinden Kritikers, woertlich: "Die Ueberschrift des
+   Standbuchs (x 40…1210, y 230…290) liest sich als „…dtbuch · II. Hand",
+   weil der Reiter DAS ERBE die ersten drei Buchstaben verdeckt. Darueber
+   schneidet die BAUHOF-Leiste quer durch den Blattkopf."
+
+   Zwei Deckel, zwei Antworten:
+     · Die BAUHOF-Lade liegt seit Welle 9 zugeklappt (stadt.js) — der
+       zweite Deckel ist damit weg, in jedem Zustand.
+     · Solange ein Brett aufliegt, traegt die Reiterzeile nur noch die
+       NAMEN. Sie ist dann EINE Zeile hoch und endet ueber jedem Blattkopf:
+       die Kopfleiste des Skeletts endet bei y 113, der oberste Blattkopf
+       des Spiels beginnt bei y 190 (gemessen: sud-brett 190, fu-brett 194,
+       gg-band 207, erb-buch 207). Dazwischen liegen 77 Bezugspixel, und
+       eine Reiterzeile ohne Kennzahl misst rund 40.
+
+   WARUM DAS KEIN "WENIGER ANZEIGEN" IST: die Kennzahlen stehen in genau
+   dem Augenblick nicht mehr im Reiter, in dem das Brett, dem sie gehoeren,
+   offen auf dem Tisch liegt und sie dort vollstaendig zeigt. Ein Klick auf
+   "Stadt zeigen" klappt alles zu und holt sie alle zurueck; im
+   Ladezustand — dem Zustand, den A1 misst und den `reiterprobe.mjs` liest
+   — steht jede Kennzahl da. Nachpruefbar mit
+   BRAUHAUS.stadt.rahmen.schneidet(): die Liste muss leer sein.
+   ========================================================================== */
+.stadt-werkbank.schmal > .stadt-reiterzeile { max-width: 100%; }
+.stadt-werkbank.schmal { width: 96%; }
+.stadt-werkbank.schmal .knopf.stadt-reiter .zahl { display: none; }
+.stadt-werkbank.schmal .knopf.stadt-reiter {
+  min-height: calc(var(--s) * 24);
+  padding-top: calc(var(--s) * 2);
+  padding-bottom: calc(var(--s) * 3);
+}
+
 /* --- Die Reiter: ein Klick schlaegt auf, ein zweiter klappt zu. --- */
 .stadt-reiterzeile {
   display: flex;
@@ -372,8 +407,8 @@
 .knopf.stadt-reiter .wort {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: max(12px, calc(var(--s) * 20));
-  letter-spacing: calc(var(--s) * 2.5);
+  font-size: max(12px, calc(var(--s) * 16));
+  letter-spacing: calc(var(--s) * 1.6);
   text-transform: uppercase;
   white-space: normal;
   overflow-wrap: break-word;
@@ -391,7 +426,7 @@
    Der Name darueber bleibt einzeilig — er ist die Ueberschrift. */
 .knopf.stadt-reiter .zahl {
   font-family: var(--mono);
-  font-size: max(12px, calc(var(--s) * 14));
+  font-size: max(12px, calc(var(--s) * 12));
   letter-spacing: 0;
   color: #cba777;
   white-space: normal;
@@ -760,13 +795,16 @@
      viel Polster weg, wie der Boden an Schrift zugelegt hat, und wird auf
      der Entwurfsleinwand von selbst null. */
   #buehne .stadt-werkbank {
-    --zu-reiter: calc(max(0px, 12px - var(--s) * 20) + max(0px, 12px - var(--s) * 14));
+    /* Welle 9: die beiden Zahlen sind die Schriftgroessen des Reiters
+       (Name 16, Kennzahl 12) und muessen mit ihnen wandern — sonst rechnet
+       die Gegenrechnung gegen eine Schrift, die es nicht mehr gibt. */
+    --zu-reiter: calc(max(0px, 12px - var(--s) * 16) + max(0px, 12px - var(--s) * 12));
   }
 
   /* --- Der Reiter: zwei Zeilen Schrift, das Polster weicht. --- */
   #buehne .knopf.stadt-reiter {
-    padding-top: max(0px, calc(var(--s) * 4 - 0.45 * var(--zu-reiter)));
-    padding-bottom: max(0px, calc(var(--s) * 6 - 0.80 * var(--zu-reiter)));
+    padding-top: max(0px, calc(var(--s) * 3 - 0.45 * var(--zu-reiter)));
+    padding-bottom: max(0px, calc(var(--s) * 4 - 0.80 * var(--zu-reiter)));
     gap: 0;
   }
 
