@@ -9,6 +9,47 @@
    Bewegungen NIE ueber transform: ortsgebundene Dinge haengen daran.
    =========================================================================== */
 
+/* ===========================================================================
+   WELLE 11 — GEMALT STATT GEKLEBT
+
+   Der Haushalt des Rahmens gibt diesem Stueck 28.000 Bildpunkte, davon 8.000
+   im obersten Sechstel. Gemessen hat es am Vorzustand 7896ee6 im Ladezustand
+   195.127 / 200.464 / 187.855 / 215.077 — das Sieben- bis Achtfache. Die
+   Zeile, mit der der Rahmen die Grenze begruendet, ist kurz und eindeutig:
+
+       gegner | 28.000 | 8.000 | "die Gegnerkarte"
+
+   Also: EIN Kasten je Haus gegenueber, und das ist sein Namensschild. Alles
+   andere, was dieses Stueck in die Stadt haengt — die Preisschilder an den
+   Giebeln, seine Zahlen, seine Marken, sein Wochenzettel, die Spur seiner
+   Zuege, der Zug ohne Bargeld am Markt — ist GEMALT: Schrift mit Lichthof,
+   kein Papier darunter, kein Rahmen, kein Schlagschatten.
+
+   DREI GRUENDE, und der dritte ist der wichtigste:
+
+   1  Es steht alles weiter im Bild. "Weniger anzeigen" ist keine Loesung;
+      anders anzeigen ist eine. Kein Satz und keine Zahl ist fort.
+
+   2  Der Schlagschatten war teuer. Der Rahmen hat in Welle 10 gemessen: die
+      Kopfleiste deckte 137.866 Bildpunkte bei einer Huelle von 105.123 —
+      ein Drittel der Deckung fiel NEBEN den Kasten. Was keinen Schatten
+      wirft, deckt nur sich selbst.
+
+   3  Und der Grund, der ueber die Zahl hinausgeht: das Zielblatt kennt
+      genau zwei Dinge, die keine Welt sind. Alles andere darin ist gemalt —
+      auch die Schilder. "GASTHOF LINDENHOF" ist ein gemaltes Schild, kein
+      Kasten. Ein Preis, den der Gegner an einen Giebel schreibt, gehoert in
+      dieselbe Sprache. Eine Karteikarte auf einem Aquarell ist nicht nur zu
+      gross, sie ist die falsche Sorte Ding.
+
+   EHRLICH DAZU, damit niemand die Zahl fuer mehr haelt, als sie ist: gemalte
+   Schrift zaehlt der blinde Kritiker als Welt und nicht als Kasten. Der
+   Gewinn ist deshalb ZWEIFACH und die zwei Haelften sind verschieden gross —
+   die Zeichen sind wirklich kleiner geworden (Summe der Huellen, gemessen),
+   und der Rest ist Umzaehlung. Beide Zahlen stehen im ARBEITSSTAND
+   nebeneinander. Wer nur die eine zitiert, zitiert die halbe Wahrheit.
+   =========================================================================== */
+
 :root {
   --gg-tinte:   #23262a;
   --gg-grau:    #676d75;
@@ -18,9 +59,34 @@
   --gg-papier:  #dcdcd6;
   --gg-warn:    #8d2f1c;
   --gg-gut:     #3f6b3a;
+  /* Der Lichthof. Er traegt dunkle Schrift ueber jedem Untergrund der
+     Platte — heller Himmel, dunkles Dach, gruene Wiese — ohne dass Papier
+     daruntergelegt werden muss. Derselbe Kunstgriff, mit dem der Rahmen in
+     Welle 10 die Hauszeile vom Papier genommen hat. */
+  --gg-lichthof:
+      0 0 calc(var(--s) * 3) rgba(253, 248, 236, 0.98),
+      0 0 calc(var(--s) * 6) rgba(253, 248, 236, 0.95),
+      0 0 calc(var(--s) * 11) rgba(253, 248, 236, 0.85),
+      0 calc(var(--s) * 1) 0 rgba(255, 255, 255, 0.9),
+      0 calc(var(--s) * -1) 0 rgba(255, 255, 255, 0.9);
 }
 
 .fach-gegner { color: var(--gg-tinte); }
+
+/* Der Stapel an seinem Haus: das Schild und darunter die gemalten Zeilen.
+   Er ist selbst kein Kasten — er haelt nur zusammen, was zusammengehoert,
+   und begrenzt die Breite, damit die Randwache in gegner.js mit einer
+   festen Zahl rechnen kann statt mit einer Messung. */
+.gg-stand {
+  position: absolute;
+  width: max-content;
+  max-width: calc(var(--s) * 400);      /* = BREIT.stand in stuecke/gegner.js */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--s) * 3);
+  text-align: center;
+}
 
 .gg-svg { display: block; line-height: 0; }
 .gg-svg svg { display: block; width: 100%; height: 100%; overflow: visible; }
@@ -33,81 +99,90 @@
 .gg-konzern .gg-vogel { fill: #1d2a38; }
 
 /* --------------------------------------------------------------------------
-   SEIN SITZ — anklickbar, mit sichtbarer Lage. Nie Dekoration.
+   SEIN SITZ — das eine Schild. Anklickbar, mit sichtbarer Lage, nie Dekoration.
+
+   WELLE 11: 366x171 -> rund 260x38. Kein Schlagschatten (er fiel neben den
+   Kasten und wurde mitgezaehlt), keine drei Spalten (in ihnen wurde die
+   Kasse abgeschnitten), kein Erbspruch (er machte das Schild hoch und liess
+   es in „GASTHOF LINDENHOF" hineinwachsen). Die Breite richtet sich nach dem
+   Namen — deshalb `width:auto` und nicht 366: ein Schild ist so breit wie
+   das, was daraufsteht.
    -------------------------------------------------------------------------- */
 .gg-sitz {
-  position: absolute;
-  display: block;
-  width: calc(var(--s) * 366);
-  padding: calc(var(--s) * 9) calc(var(--s) * 12) calc(var(--s) * 10);
+  display: inline-block;
+  max-width: 100%;
+  padding: calc(var(--s) * 4) calc(var(--s) * 9) calc(var(--s) * 5);
   background: linear-gradient(180deg, #eceef0 0%, #c9ced3 62%, #b3b9bf 100%);
-  border: calc(var(--s) * 3) solid var(--gg-tinte);
-  border-radius: calc(var(--s) * 4);
-  box-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 12) rgba(0, 0, 0, 0.5);
+  border: calc(var(--s) * 2) solid var(--gg-tinte);
+  border-radius: calc(var(--s) * 3);
   cursor: pointer;
   text-align: left;
   font-family: var(--serif);
   color: var(--gg-tinte);
 }
 .gg-sitz:hover { background: linear-gradient(180deg, #f6f8fa 0%, #d6dbe0 62%, #c0c6cc 100%); }
-.gg-sitz.offen { outline: calc(var(--s) * 3) solid var(--gg-schiefer); outline-offset: calc(var(--s) * 2); }
+.gg-sitz.offen { outline: calc(var(--s) * 2) solid var(--gg-schiefer); outline-offset: calc(var(--s) * 2); }
 .gg-sitz.klamm { border-color: var(--gg-warn); }
 
-.gg-sitzkopf { display: flex; align-items: center; gap: calc(var(--s) * 9); }
-.gg-wappen { width: calc(var(--s) * 40); height: calc(var(--s) * 43); flex: none; }
-.gg-wappen.klein { width: calc(var(--s) * 26); height: calc(var(--s) * 28); }
-.gg-sitztext { min-width: 0; }
+.gg-sitzkopf { display: flex; align-items: center; gap: calc(var(--s) * 6); }
+.gg-wappen { width: calc(var(--s) * 24); height: calc(var(--s) * 26); flex: none; }
+.gg-wappen.klein { width: calc(var(--s) * 20); height: calc(var(--s) * 22); }
 .gg-name {
-  font-size: calc(var(--s) * 24);
-  letter-spacing: calc(var(--s) * 2);
+  font-size: max(12px, calc(var(--s) * 18));
+  letter-spacing: calc(var(--s) * 0.5);
   text-transform: uppercase;
-  line-height: 1.05;
-}
-.gg-erbe { font-size: calc(var(--s) * 16); opacity: 0.82; line-height: 1.15; }
-
-.gg-zahlen {
-  display: flex;
-  gap: calc(var(--s) * 4);
-  margin-top: calc(var(--s) * 7);
-  border-top: calc(var(--s) * 1) solid rgba(35, 38, 42, 0.35);
-  padding-top: calc(var(--s) * 5);
-}
-.gg-feld { flex: 1 1 0; min-width: 0; text-align: center; }
-.gg-feld b {
-  display: block;
-  font-family: var(--mono);
-  font-size: calc(var(--s) * 18);
   line-height: 1.1;
   white-space: nowrap;
 }
-.gg-feld i {
-  display: block;
-  font-style: normal;
-  font-size: calc(var(--s) * 13);
-  letter-spacing: calc(var(--s) * 1);
-  text-transform: uppercase;
-  opacity: 0.65;
-}
 
-.gg-marken { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 4); margin-top: calc(var(--s) * 6); }
+/* SEINE ZAHLEN — gemalt, in EINER Zeile, jedes Feld fuer sich unzerbrechlich.
+
+   AUFLAGE 10, zweite Haelfte.  Bis Welle 10 standen sie in drei Spalten zu
+   je 109 px in einem 336 px breiten Kasten. In 1970 trug die Kassenspalte
+   „2.637.150 DM" mit 130 px Bedarf — 21 px zuviel, weggeschnitten OHNE
+   Auslassungspunkte (`text-overflow: clip`). Wer eine gekuerzte Zahl liest,
+   liest eine falsche Zahl, und das ist schlimmer als ein gekuerzter Satz:
+   ein halber Satz sieht halb aus, eine halbe Zahl sieht ganz aus.
+
+   Jetzt gibt es keine Spalten mehr. Die Zeile bricht ZWISCHEN den Feldern
+   um, nie IN einem Feld — `white-space: nowrap` je Feld, `flex-wrap` an der
+   Zeile. Damit kann keine Zahl mehr abgeschnitten werden, gleichgueltig wie
+   reich er wird. */
+.gg-zahlen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--s) * 1) calc(var(--s) * 9);
+  font-family: var(--mono);
+  font-size: max(12px, calc(var(--s) * 14));
+  line-height: 1.2;
+  color: var(--gg-tinte);
+  text-shadow: var(--gg-lichthof);
+}
+.gg-feld { white-space: nowrap; }
+
+.gg-marken {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: calc(var(--s) * 1) calc(var(--s) * 8);
+}
 .gg-siegel {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 13);
-  letter-spacing: calc(var(--s) * 1);
-  padding: calc(var(--s) * 2) calc(var(--s) * 6);
-  border: calc(var(--s) * 1) solid var(--gg-tinte);
-  border-radius: calc(var(--s) * 2);
-  background: rgba(35, 38, 42, 0.09);
+  font-size: max(12px, calc(var(--s) * 13));
+  letter-spacing: calc(var(--s) * 0.5);
   text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--gg-schiefer);
+  text-shadow: var(--gg-lichthof);
 }
-.gg-siegel.not { color: #fff; background: var(--gg-warn); border-color: var(--gg-warn); }
+.gg-siegel::before { content: '· '; opacity: 0.5; }
+.gg-siegel.not { color: var(--gg-warn); font-weight: 700; }
 
 /* --------------------------------------------------------------------------
    SEIN HOF — was er gebaut hat, steht da. Jeder Bau ein Zug.
    -------------------------------------------------------------------------- */
 .gg-hof {
   position: absolute;
-  width: calc(var(--s) * 366);
+  width: calc(var(--s) * 200);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,7 +196,7 @@
    ein Aufkleber auf einer warmen Aquarellplatte. Kuehler als das eigene Haus,
    aber aus demselben Papier. */
 .gg-hofbild {
-  width: calc(var(--s) * 168);
+  width: calc(var(--s) * 150);
   height: auto;
   filter: drop-shadow(0 calc(var(--s) * 4) calc(var(--s) * 8) rgba(0, 0, 0, 0.4))
           sepia(0.42) saturate(1.45) hue-rotate(-12deg) brightness(1.04) contrast(0.96);
@@ -130,48 +205,42 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: calc(var(--s) * 3);
+  gap: calc(var(--s) * 2);
 }
+/* Die Glyphen seines Hofes: gezeichnet, nicht gerahmt. Bis Welle 10 sass
+   jede in einem eigenen kleinen Kasten mit Grund und Rand — vier davon je
+   Epoche. Jetzt steht die Zeichnung selbst da, mit einem Lichthof, damit
+   sie ueber jedem Untergrund lesbar bleibt. */
 .gg-bau {
-  width: calc(var(--s) * 30);
-  height: calc(var(--s) * 30);
-  padding: calc(var(--s) * 2);
-  background: rgba(220, 224, 228, 0.86);
-  border: calc(var(--s) * 1) solid var(--gg-tinte);
-  border-radius: calc(var(--s) * 3);
+  width: calc(var(--s) * 28);
+  height: calc(var(--s) * 28);
   pointer-events: auto;
+  filter: drop-shadow(0 0 calc(var(--s) * 2) rgba(253, 248, 236, 1))
+          drop-shadow(0 0 calc(var(--s) * 4) rgba(253, 248, 236, 0.95));
 }
-/* Was er hat und das Haus nicht: doppelt gerahmt. Man sieht den Vorsprung,
-   ehe man ihn liest. */
-.gg-bau.vor {
-  border-width: calc(var(--s) * 2);
-  border-color: var(--gg-warn);
-  background: rgba(244, 226, 216, 0.9);
-}
+/* Was er hat und das Haus nicht: in seiner Warnfarbe gezeichnet. Man sieht
+   den Vorsprung, ehe man ihn liest. */
+.gg-bau.vor .gg-glyph { stroke: var(--gg-warn); stroke-width: 3.4; }
 .gg-vorschild {
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
-  letter-spacing: calc(var(--s) * 1);
-  color: #fff2ea;
-  background: rgba(141, 47, 28, 0.9);
-  border: calc(var(--s) * 1) solid var(--gg-tinte);
-  border-radius: calc(var(--s) * 3);
-  padding: calc(var(--s) * 2) calc(var(--s) * 8);
-  white-space: nowrap;
+  font-size: max(12px, calc(var(--s) * 13));
+  letter-spacing: calc(var(--s) * 0.5);
+  line-height: 1.15;
+  color: var(--gg-warn);
+  font-weight: 700;
+  text-shadow: var(--gg-lichthof);
   pointer-events: auto;
 }
 
 .gg-stammhaus {
   position: absolute;
   font-family: var(--mono);
-  font-size: calc(var(--s) * 14);
-  letter-spacing: calc(var(--s) * 1);
-  color: var(--gg-tinte);
-  background: rgba(216, 218, 214, 0.72);
-  border: calc(var(--s) * 1) dashed rgba(35, 38, 42, 0.6);
-  border-radius: calc(var(--s) * 3);
-  padding: calc(var(--s) * 3) calc(var(--s) * 8);
-  white-space: nowrap;
+  font-size: max(12px, calc(var(--s) * 13));
+  letter-spacing: calc(var(--s) * 0.5);
+  line-height: 1.15;
+  max-width: calc(var(--s) * 230);      /* = BREIT.spur in stuecke/gegner.js */
+  color: var(--gg-schiefer);
+  text-shadow: var(--gg-lichthof);
   pointer-events: auto;
 }
 

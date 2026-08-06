@@ -611,45 +611,163 @@
    herum und nicht ueber den Hof, er faengt keinen Klick ab (Schatten sind
    nicht anfassbar), und er verschwindet mit ihr, wenn die Platzordnung der
    STADT sie in einen Reiter klappt. */
+/* ==========================================================================
+   WELLE 11 — DER ANSCHLAG UND DER BERICHT
+
+   DIE ZAHL, um die es geht (`fuhre-w11/messungen/vorher-sonde-w30.txt`,
+   30x WEITER ohne Escape, 2752x1536, Vorzustand 7896ee6):
+
+     .fu-sommerblatt  1596x847 = 1.351.246 px^2   1350 · 1600
+                      1596x718 = 1.145.541        1884
+                      1596x943 = 1.504.427        1970
+
+   Das ist bis zum ACHTFACHEN der Schwelle, ab der `haushalt.tafeln()` von
+   einer ganzseitigen Tafel spricht (200.000 px^2), und es war der einzige
+   Posten, der DIE FUHRE im gespielten Zustand auf 27 bis 36 Prozent der
+   Bildflaeche brachte.
+
+   DER DECKEL, und er ist eine Zusage des Stilblatts, keine Rechnung im
+   Kopf des Bauers:
+
+     Breite     max(20%, 560px)   auf der Entwurfsleinwand 550 px
+     Hoehe      max(21%, 330px)   auf der Entwurfsleinwand 323 px
+     Flaeche    177.559 px^2 = 4,20 % — mit 11 % Abstand unter der Schwelle
+
+   Was auch immer eine Epoche in die Zeilen schreibt: groesser wird der
+   Kasten nicht. Er rollt dann, und was rollt, ist der Sommersatz in der
+   Mitte — nie ein Knopf. Kopf und Fuss kleben (`position: sticky`).
+
+   WARUM ZWEI ZAHLEN JE MASS (`max(20%, 560px)`): unterhalb der
+   Entwurfsleinwand haben Schrift und Knopf einen absoluten Boden (12 px
+   und 24 px, vierte Latte). Ein Kasten, der rein prozentual mitschrumpft,
+   traegt dort weniger Zeilen als hier — bei 1366x768 waeren aus 550x323
+   noch 273x161, und in 161 px stehen keine vier Sudknoepfe mit 24 px
+   Boden. Die zweite Zahl ist derselbe Boden, eine Ebene hoeher. Gemessen
+   wird die Schwelle von 200.000 px^2 auf 2752x1536, und dort gilt die
+   Prozentzahl.
+
+   WAS AN DER SPERRE NICHT WIEDER EINGEBAUT WURDE: hier lag bis
+   ZUSTAENDIGKEIT 23 ein Deckel ueber der ganzen Buehne (.fu-sperre). Er
+   deckte den WEITER-Knopf des Kerns und hielt einen Spieler, der nur
+   WEITER klickt, im zweiten Braujahr fest — in allen vier Epochen. Er ist
+   ersatzlos weg und bleibt es. Die Tafel liegt jetzt bei 40 bis 60 Prozent
+   der Breite und 17 bis 38 Prozent der Hoehe; WEITER steht bei 84–93 /
+   94–98 Prozent. Die beiden Rechtecke beruehren einander in keiner
+   Aufloesung.
+
+   DER SCHATTEN IST KLEINER GEWORDEN, und das ist gemessene Absicht: der
+   Rahmen hat in Welle 10 nachgewiesen, dass der Schlagschatten seiner
+   Kopfleiste ein DRITTEL ihrer gedeckten Bildpunkte ausmachte (137.866
+   gedeckt bei 105.123 px Huelle). Ein Schatten mit 54 px Streuung um ein
+   Blatt herum deckt mehr Hof als das Blatt selbst.
+   ========================================================================== */
 .fu-sommerblatt {
-  left: 21%;
+  left: 50%;
+  translate: -50% 0;
+  top: 17%;
+  width: max(20%, 560px);
+  max-height: max(21%, 330px);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 5);
+  padding: calc(var(--s) * 11) calc(var(--s) * 12);
+  overflow-y: auto;
+  box-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 12) rgba(0, 0, 0, 0.45);
+}
+
+/* AUFGESCHLAGEN. Der Bericht braucht Platz, und er bekommt ihn — aber erst,
+   wenn der Spieler ihn geholt hat. Das ist der Unterschied zwischen einem
+   Blatt, das sich oeffnen laesst, und einem, das offen daliegt. */
+.fu-sommerblatt.fu-weit {
   top: 11%;
-  width: 58%;
+  width: max(58%, 700px);
   max-height: 78%;
+  gap: calc(var(--s) * 8);
+  padding: calc(var(--s) * 18) calc(var(--s) * 22);
+}
+
+/* Der Kopf klebt oben: der Tag, um den es geht, rollt nicht weg. */
+.fu-sommer-kopf {
+  position: sticky;
+  top: calc(var(--s) * -11);
+  margin-top: calc(var(--s) * -11);
+  padding: calc(var(--s) * 11) 0 calc(var(--s) * 4);
+  background: linear-gradient(0deg, rgba(239, 230, 210, 0), var(--papier) calc(var(--s) * 10));
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--s) * 3);
+  flex: 0 0 auto;
+  z-index: 3;
+}
+.fu-sommerblatt.fu-weit .fu-sommer-kopf {
+  top: calc(var(--s) * -18);
+  margin-top: calc(var(--s) * -18);
+  padding-top: calc(var(--s) * 18);
+}
+.fu-sommerblatt h2 {
+  margin: 0;
+  font-size: max(12px, calc(var(--s) * 21));
+  letter-spacing: calc(var(--s) * 1);
+  border-bottom: calc(var(--s) * 2) solid var(--linie);
+  padding-bottom: calc(var(--s) * 4);
+  line-height: 1.15;
+}
+.fu-sommerblatt.fu-weit h2 { font-size: max(12px, calc(var(--s) * 28)); }
+
+/* Der Sommer in einer Zeile. Keine Kuerzung des Berichts — seine Summe. */
+.fu-sommer-kurz {
+  font-size: max(12px, calc(var(--s) * 16));
+  line-height: 1.22;
+  color: #4a3d28;
+}
+
+/* Der Bericht selbst rollt; er ist das einzige, was rollen darf. */
+.fu-sommer-bericht {
   display: flex;
   flex-direction: column;
   gap: calc(var(--s) * 8);
-  overflow-y: auto;
-  box-shadow:
-    0 calc(var(--s) * 16) calc(var(--s) * 54) rgba(0, 0, 0, 0.6),
-    0 0 calc(var(--s) * 18) rgba(0, 0, 0, 0.35);
+  flex: 0 1 auto;
 }
 
-/* Der Ausgang klebt am Fuss und scrollt nicht weg — bei jeder Aufloesung
-   dieselbe Stelle, auch wenn das Blatt lang wird. */
+/* Der Fuss klebt unten und traegt die Entscheidung — bei jeder Aufloesung
+   dieselbe Stelle, auch wenn der Bericht lang wird. */
 .fu-sommer-fuss {
   position: sticky;
-  bottom: calc(var(--s) * -22);
+  bottom: calc(var(--s) * -11);
   margin-top: auto;
-  padding: calc(var(--s) * 10) 0 calc(var(--s) * 2);
-  background: linear-gradient(180deg, rgba(239, 230, 210, 0), var(--papier) calc(var(--s) * 14));
+  padding: calc(var(--s) * 6) 0 calc(var(--s) * 11);
+  background: linear-gradient(180deg, rgba(239, 230, 210, 0), var(--papier) calc(var(--s) * 8));
   display: flex;
   flex-direction: column;
-  gap: calc(var(--s) * 6);
+  gap: calc(var(--s) * 5);
   flex: 0 0 auto;
+  z-index: 2;
 }
-.fu-sommer-fuss > .knopf { width: 100%; }
+.fu-sommerblatt.fu-weit .fu-sommer-fuss {
+  bottom: calc(var(--s) * -18);
+  padding: calc(var(--s) * 10) 0 calc(var(--s) * 18);
+}
+.fu-sommer-stand {
+  font-size: max(12px, calc(var(--s) * 15));
+  line-height: 1.2;
+  color: #4a3d28;
+}
+.fu-sommer-griffe { display: flex; gap: calc(var(--s) * 5); }
+.fu-sommer-griffe > .knopf { flex: 1 1 0; justify-content: center; text-align: center; }
+.fu-sommer-griffe > .knopf .wort { white-space: normal; line-height: 1.12; }
 .fu-sommer-hinweis {
   font-family: var(--mono);
-  font-size: max(12px, calc(var(--s) * 15));
+  font-size: max(12px, calc(var(--s) * 14));
   color: #7a6a4e;
   text-align: center;
+  line-height: 1.15;
 }
 .fu-sommerblatt h3 {
-  margin: calc(var(--s) * 6) 0 0;
-  font-size: max(12px, calc(var(--s) * 26));
-  border-bottom: calc(var(--s) * 2) solid var(--linie);
-  padding-bottom: calc(var(--s) * 5);
+  margin: 0;
+  font-size: max(12px, calc(var(--s) * 17));
+  letter-spacing: calc(var(--s) * 1);
+  border-bottom: none;
+  padding-bottom: 0;
 }
 .fu-satz { font-size: max(12px, calc(var(--s) * 20)); line-height: 1.3; }
 .fu-satz.stark { font-family: var(--mono); font-size: max(12px, calc(var(--s) * 19)); }
@@ -678,7 +796,27 @@
 @keyframes fu-leerlauf { from { width: 100%; } }
 .fu-sommer-zeile .w { font-family: var(--mono); font-size: max(12px, calc(var(--s) * 16)); }
 
-.fu-sommer-wahl { display: flex; flex-wrap: wrap; gap: calc(var(--s) * 8); }
+/* DIE ENTSCHEIDUNG. Vier Sorten mit vier Preisschildern nebeneinander —
+   zwei Spalten statt einer Reihe, weil vier Knoepfe nebeneinander die
+   Tafel doppelt so breit machen wuerden wie hoch, und die Breite ist hier
+   das teurere Mass: sie legt sich ueber den Hof. */
+.fu-sommer-wahl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--s) * 5);
+}
+.fu-sommer-wahl .knopf {
+  min-height: calc(var(--s) * 30);
+  padding: calc(var(--s) * 4) calc(var(--s) * 9);
+  gap: calc(var(--s) * 5);
+  font-size: max(12px, calc(var(--s) * 16));
+}
+.fu-sommer-wahl .knopf .wort { white-space: normal; line-height: 1.12; }
+.fu-sommer-wahl .knopf .preis {
+  font-size: max(12px, calc(var(--s) * 15));
+  padding-left: calc(var(--s) * 6);
+  margin-left: auto;
+}
 
 /* --------------------------------------------------------------------------
    DER FRACHTBRIEF — was diese eine Fuhre einbringt, Halt für Halt

@@ -1,0 +1,202 @@
+{
+ "1": {
+  "jahr": 1351,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 14,
+   "px": 188416,
+   "anteil": 4.457364341085271,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 154416,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 917280,
+   "anteil": 21.70012718023256
+  },
+  "oben": {
+   "px": 226592,
+   "anteil": 32.16297238372093
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 219584/28000 px",
+   "fuhre: 188416/34000 px",
+   "erbe: 136192/28000 px",
+   "stadt: 118432/40000 px  oben 66944/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 87840/34000 px",
+   "name: 30400/20000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1351",
+    "mass": "560×330 @1096,261",
+    "flaeche": 184800,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "530×295 @1111,293",
+    "flaeche": 156367,
+    "text": "Was steht 1351/52 an der Tafel?Dün"
+   },
+   {
+    "klasse": "fu-sommer-kopf",
+    "mass": "530×92 @1111,264",
+    "flaeche": 48652,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "",
+    "mass": "530×54 @1111,275",
+    "flaeche": 28769,
+    "text": "Von Georgi 1351 bis Michaeli — der"
+   },
+   {
+    "klasse": "knopf",
+    "mass": "263×66 @1111,378",
+    "flaeche": 17251,
+    "text": "Starkbier · 3 Brautage → 3 Fass · "
+   },
+   {
+    "klasse": "knopf",
+    "mass": "263×66 @1379,378",
+    "flaeche": 17251,
+    "text": "Kofent · 0 Brautage → 3 Fass"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:duenn",
+    "b": 263,
+    "h": 48,
+    "trifft": false
+   },
+   {
+    "zug": "fuhre:jahresplan:grut",
+    "b": 263,
+    "h": 48,
+    "trifft": false
+   },
+   {
+    "zug": "fuhre:jahresplan:stark",
+    "b": 263,
+    "h": 66,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:kofent",
+    "b": 263,
+    "h": 66,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ },
+ "4": {
+  "jahr": 1971,
+  "woche": 1,
+  "fuhre": {
+   "stueck": "fuhre",
+   "kaesten": 16,
+   "px": 190704,
+   "anteil": 4.51149164244186,
+   "obenPx": 0,
+   "obenAnteil": 0,
+   "grenze": 34000,
+   "grenzeOben": 10000,
+   "bekannt": true,
+   "ueber": 156704,
+   "ueberOben": -10000
+  },
+  "gesamt": {
+   "px": 1164976,
+   "anteil": 27.559880692829456
+  },
+  "oben": {
+   "px": 279840,
+   "anteil": 39.72111191860465
+  },
+  "tafeln": [],
+  "ueberRand": [],
+  "geklemmt": {},
+  "pruefe": [
+   "gegner: 557616/28000 px",
+   "fuhre: 190704/34000 px",
+   "stadt: 173600/40000 px  oben 122112/26000 px",
+   "preis: 78864/24000 px  oben 78864/20000 px",
+   "sud: 87840/34000 px",
+   "name: 35264/20000 px",
+   "kern: 104752/120000 px  oben 84992/80000 px"
+  ],
+  "gross": [
+   {
+    "klasse": "blatt fu-sommerblatt fu-georgi-1971",
+    "mass": "560×330 @1096,261",
+    "flaeche": 184800,
+    "text": "Von Georgi 1971 bis Michaeli — der"
+   },
+   {
+    "klasse": "fu-sommer-fuss",
+    "mass": "530×277 @1111,311",
+    "flaeche": 146876,
+    "text": "Was steht 1971/72 an der Tafel?Vol"
+   },
+   {
+    "klasse": "fu-sommer-kopf",
+    "mass": "530×111 @1111,264",
+    "flaeche": 58996,
+    "text": "Von Georgi 1971 bis Michaeli — der"
+   },
+   {
+    "klasse": "",
+    "mass": "530×54 @1111,275",
+    "flaeche": 28769,
+    "text": "Von Georgi 1971 bis Michaeli — der"
+   }
+  ],
+  "lage": 0,
+  "verdeckt": 0,
+  "sommerZug": true,
+  "sommerblatt": true,
+  "planKnoepfe": [
+   {
+    "zug": "fuhre:jahresplan:hell",
+    "b": 263,
+    "h": 48,
+    "trifft": false
+   },
+   {
+    "zug": "fuhre:jahresplan:pils",
+    "b": 263,
+    "h": 48,
+    "trifft": false
+   },
+   {
+    "zug": "fuhre:jahresplan:export",
+    "b": 263,
+    "h": 48,
+    "trifft": true
+   },
+   {
+    "zug": "fuhre:jahresplan:handel",
+    "b": 263,
+    "h": 48,
+    "trifft": true
+   }
+  ],
+  "seitenfehler": 0
+ }
+}

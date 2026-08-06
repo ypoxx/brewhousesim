@@ -1,0 +1,77 @@
+MESSFENSTER offen — load 0.58 0.58 0.85
+
+===== E1 laden =====
+ erbe: 19296/28000 px · oben 0/6000 · 5 Kaesten
+ gesamt: 15.2 %  oben 35.8 %
+     6287 px  285x22 @1486,1153        .knopf erb-knopf erb-weit
+     3519 px  159x22 @2061,1153        .knopf erb-knopf erb-uebergabe erb-ohne
+     3058 px  138x22 @1916,1153        .knopf erb-knopf erb-uebergabe
+     2955 px  134x22 @1777,1153        .knopf erb-knopf erb-uebergabe
+     1591 px  72x22 @2226,1153         .knopf erb-knopf erb-griff
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:tafel:verschreibe | erbe:uebergabe:leibgeding | erbe:uebergabe:abfindung | erbe:uebergabe:bruch | erbe:buch
+ pruefe: ["gegner: 189632/28000 px","stadt: 144784/40000 px  oben 93296/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px"]
+ tafeln: [] blaetter: []
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 95 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"821/821","klasse":"erb-buch blatt"} offen: true · erbe 937824 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
+ -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 19296 · lage 0 · Fehler 0
+ -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 19296 · Fehler 0 
+
+===== E2 laden =====
+ erbe: 17184/28000 px · oben 0/6000 · 5 Kaesten
+ gesamt: 16.0 %  oben 36.2 %
+     4614 px  209x22 @1486,1153        .knopf erb-knopf erb-weit
+     3166 px  143x22 @1992,1153        .knopf erb-knopf erb-uebergabe erb-ohne
+     3103 px  140x22 @1846,1153        .knopf erb-knopf erb-uebergabe
+     3068 px  139x22 @1701,1153        .knopf erb-knopf erb-uebergabe
+     1618 px  73x22 @2142,1153         .knopf erb-knopf erb-griff
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:tafel:verschreibe | erbe:uebergabe:leibgeding | erbe:uebergabe:abfindung | erbe:uebergabe:bruch | erbe:buch
+ pruefe: ["gegner: 193840/28000 px","stadt: 152608/40000 px  oben 93520/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 41344/20000 px","kern: 100656/120000 px  oben 80896/80000 px"]
+ tafeln: [] blaetter: []
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 103 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"825/825","klasse":"erb-buch blatt"} offen: true · erbe 935712 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
+ -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 17184 · lage 0 · Fehler 0
+ -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 17184 · Fehler 0 
+
+===== E3 laden =====
+ erbe: 19488/28000 px · oben 0/6000 · 5 Kaesten
+ gesamt: 15.4 %  oben 36.6 %
+     5688 px  257x22 @1486,1153        .knopf erb-knopf erb-weit
+     3232 px  146x22 @1895,1153        .knopf erb-knopf erb-uebergabe
+     3098 px  140x22 @2047,1153        .knopf erb-knopf erb-uebergabe erb-ohne
+     3077 px  139x22 @1750,1153        .knopf erb-knopf erb-uebergabe
+     2432 px  110x22 @2193,1153        .knopf erb-knopf erb-griff
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:tafel:verschreibe | erbe:uebergabe:leibgeding | erbe:uebergabe:abfindung | erbe:uebergabe:bruch | erbe:buch
+ pruefe: ["gegner: 177216/28000 px","stadt: 153760/40000 px  oben 92064/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+ tafeln: [] blaetter: []
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 106 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"825/825","klasse":"erb-buch blatt"} offen: true · erbe 938016 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
+ -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 19488 · lage 0 · Fehler 0
+ -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 19488 · Fehler 0 
+
+===== E4 laden =====
+ erbe: 24960/28000 px · oben 0/6000 · 5 Kaesten
+ gesamt: 16.4 %  oben 37.9 %
+     6893 px  312x22 @1486,1153        .knopf erb-knopf erb-weit
+     5404 px  245x22 @1804,1153        .knopf erb-knopf erb-uebergabe
+     3914 px  177x22 @2055,1153        .knopf erb-knopf erb-uebergabe
+     3807 px  172x22 @2238,1153        .knopf erb-knopf erb-uebergabe erb-ohne
+     2588 px  117x22 @2416,1153        .knopf erb-knopf erb-griff
+ Buch: null offen: false
+ gekuerzt mit Preisschild: []
+ treffbar: erbe:tafel:verschreibe | erbe:uebergabe:leibgeding | erbe:uebergabe:abfindung | erbe:uebergabe:bruch | erbe:buch
+ pruefe: ["gegner: 209664/28000 px","stadt: 154576/40000 px  oben 102544/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px","kern: 103728/120000 px  oben 83968/80000 px"]
+ tafeln: [] blaetter: []
+ geklemmt: {} ohneGriff: {} ueberRand: 0
+ verdeckt: [] lage: 0  Zuege: 98 Fehler: 0 
+ -- Griff: geklickt · Buch: {"mass":"1101x829","zuege":5,"scroll":"827/827","klasse":"erb-buch blatt"} offen: true · erbe 943488 px (oben 0) · blaetter ["erbe erb-buch blatt"] · verdeckt []
+ -- nach Escape: Buch offen: false · im DOM: false · geklemmt {"erbe .erb-buch blatt":1} · erbe 24960 · lage 0 · Fehler 0
+ -- Schliessknopf: KEIN SCHLIESSKNOPF · Buch im DOM: false · erbe 24960 · Fehler 0 
