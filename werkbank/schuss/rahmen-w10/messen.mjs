@@ -105,10 +105,23 @@ const waehrungsbruch = () => {
   return raus;
 };
 
-/* Fehlende Glyphen: Zeichen, die im gesetzten Font dieselbe Breite haben wie
-   ein garantiert fehlendes Zeichen (U+FFFF) — also als .notdef stehen. */
+/* Fehlende Glyphen: ein Zeichen, das PIXELGLEICH so aussieht wie ein
+   garantiert fehlendes (U+FFFF) — also als leeres Rechteck (.notdef) steht.
+   Ueber die BREITE geht das nicht: in einer Festbreitenschrift haben alle
+   Zeichen dieselbe Breite, und der Zaehler meldet dann jedes Sonderzeichen. */
 const fehlendeZeichen = () => {
-  const c = document.createElement('canvas').getContext('2d');
+  const cv = document.createElement('canvas');
+  cv.width = 64; cv.height = 64;
+  const c = cv.getContext('2d', { willReadFrequently: true });
+  const abdruck = (font, ch) => {
+    c.clearRect(0, 0, 64, 64);
+    c.font = font; c.fillStyle = '#000'; c.textBaseline = 'alphabetic';
+    c.fillText(ch, 4, 48);
+    const d = c.getImageData(0, 0, 64, 64).data;
+    let h = 2166136261;
+    for (let i = 3; i < d.length; i += 4) { h ^= (d[i] > 40 ? 1 : 0); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  };
   const gesehen = new Map();          /* font|zeichen -> boolean */
   const raus = [];
   const gehe = (knoten) => {
@@ -126,10 +139,7 @@ const fehlendeZeichen = () => {
         if (ch.codePointAt(0) < 0x80) continue;
         const k = font + '|' + ch;
         if (gesehen.has(k)) { if (gesehen.get(k)) raus.push({ ch, code: 'U+' + ch.codePointAt(0).toString(16).toUpperCase(), font: st.fontFamily.slice(0, 40) }); continue; }
-        c.font = font;
-        const wTofu = c.measureText('￿').width;
-        const wCh   = c.measureText(ch).width;
-        const fehlt = Math.abs(wCh - wTofu) < 0.01 && wTofu > 0;
+        const fehlt = abdruck(font, ch) === abdruck(font, '￿');
         gesehen.set(k, fehlt);
         if (fehlt) raus.push({ ch, code: 'U+' + ch.codePointAt(0).toString(16).toUpperCase(), font: st.fontFamily.slice(0, 40) });
       }
@@ -160,6 +170,16 @@ for (const e of [1, 2, 3, 4]) {
   }
   for (let i = 0; i < ESC; i++) { await s.keyboard.press('Escape'); await s.waitForTimeout(250); }
   await s.waitForTimeout(700);
+
+  /* BEWEGUNG ANHALTEN. Ohne das misst der Vergleich zweier Aufnahmen nicht nur
+     den weggenommenen Kasten, sondern auch Rauch, Wagen und Laufschrift: der
+     erste Durchgang meldete fuer JEDES Stueck mindestens 4,5 %, auch fuer den
+     Tonschalter, der 40x40 gross ist. Beide Aufnahmen entstehen jetzt im
+     selben angehaltenen Bild. */
+  await s.addStyleTag({ content:
+    '*,*::before,*::after{animation-play-state:paused !important;'
+    + 'animation-delay:0s !important;transition:none !important;}' });
+  await s.waitForTimeout(400);
 
   const k = await s.evaluate(markiere);
   const brueche = await s.evaluate(waehrungsbruch);
