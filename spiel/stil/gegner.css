@@ -178,7 +178,13 @@
   text-shadow: var(--gg-lichthof);
 }
 .gg-feld { white-space: nowrap; }
-.gg-feld + .gg-feld::before { content: '· '; }
+/* Der Trennpunkt haengt HINTEN am Feld, nicht vorn am naechsten. Grund,
+   gesehen und nicht gerechnet: bricht die Zeile um, stand er als einzelnes
+   Zeichen am Zeilenanfang — und ein Mittelpunkt mit heller Strichkontur
+   sieht bei 7-facher Vergroesserung aus wie ein LEERES RECHTECK. Genau
+   danach fragt Auflage 7 des Urteils. Hinten am Feld kann er nie allein
+   stehen: `.gg-feld` ist nowrap, also bleibt er an seinem Wort. */
+.gg-feld:not(:last-child)::after { content: ' ·'; }
 
 .gg-marken {
   display: flex; flex-wrap: wrap; justify-content: center;
@@ -193,7 +199,7 @@
   color: var(--gg-schiefer);
   text-shadow: var(--gg-lichthof);
 }
-.gg-siegel::before { content: '· '; }
+.gg-siegel:not(:last-child)::after { content: ' ·'; }
 .gg-siegel.not { color: var(--gg-warn); font-weight: 700; }
 
 /* --------------------------------------------------------------------------
