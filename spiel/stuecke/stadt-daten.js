@@ -800,20 +800,28 @@ var STADT_DATEN = {
        (x 1040…1250, y 680…820) schneidet quer ueber das Schindeldach des
        Brauhauses und ueber den Malzboden auf Stelzen."
        Der Stall stand bei (41|65) und war 14 % breit, also x 34…48 — genau
-       ueber den Stelzen (x 37…51). Er geht nach WESTEN und nach VORN:
-       (37|69), 12,5 % breit, also x 30,75…43,25. Sein Strohdach kreuzt die
-       Stelzen damit nicht mehr — nachgesehen im Ausschnitt
-       stadt-w9/bild/schnitt-e1-hof-nach2.png steht der Malzboden mit
-       Pfosten, Bottich und Leiter wieder frei da.
-       ZWEIMAL GEMESSEN, EINMAL ZURUECKGENOMMEN: der erste Versuch stellte
-       ihn ganz nach Westen auf (34|71). Dort war der Malzboden frei, aber
-       die Kueferei (34|72) stand davor und deckte den Ochsen zu — ein
-       gekaufter Stall, dessen Tier man nicht sieht, ist kein Fortschritt
-       (schnitt-e1-hof-nach.png gegen -nach2.png).
-       Hofprobe: an x 37 liegt die hintere Kante bei 58,7 und die
-       Mauerlinie bei 72,8 — Fuss 69 steht im Hof. */
+       ueber den Stelzen (x 37…51). Er geht nach WESTEN in die leere Haelfte
+       des Hofes: (34|71), 12,5 % breit statt 14, also x 27,75…40,25. Sein
+       Strohdach kreuzt die Stelzen damit nicht mehr — nachgesehen im
+       Ausschnitt stadt-w9/bild/schnitt-e1-hof-nach.png steht der Malzboden
+       mit Pfosten, Bottich und Leiter wieder frei da.
+
+       ZWEI STELLEN GEMESSEN, DIE ZWEITE VERWORFEN, und es gehoert
+       hergeschrieben: der zweite Versuch (37|69) liess den Malzboden
+       ebenso frei, stellte den Stall dann aber deckungsgleich hinter den
+       Fassschuppen (37|71) — vom Strohdach war nichts mehr zu sehen
+       (schnitt-e1-hof-nach2.png). Bei (34|71) deckt die Kueferei (34|72)
+       nur seine Mitte; Dach links, Tor rechts bleiben im Bild.
+       WAS DABEI OFFEN BLEIBT und nicht behauptet wird: bei ?bau=alle steht
+       in der 1350er Hofraute neunmal etwas auf einer Flaeche, die drei
+       Baender tief ist. Zwischen JE ZWEI Daechern Hofboden — die volle
+       Forderung von A7 — ist so nicht zu haben; erreicht ist der zweite,
+       benannte Teil (der Malzboden auf Stelzen bleibt erkennbar) und die
+       gefuellte West-Ecke.
+       Hofprobe: an x 34 liegt die hintere Kante bei 56,7 und die
+       Mauerlinie bei 75,2 — Fuss 71 steht im Hof. */
     { schluessel: 'ochsenstall', name: 'Ochsenstall', bild: 'ochsenstall',
-      ort: 'rampe', dx: -3, dy: -3, breite: 12.5, von: 1, bis: 1, grund: 28,
+      ort: 'rampe', dx: -6, dy: -1, breite: 12.5, von: 1, bis: 1, grund: 28,
       sagt: 'Ein eigenes Zugtier. Danach fährt die Fuhre, wann das Haus es will.',
       nutzen: {}, wirkt: 'fährt, wann das Haus will' },
 
@@ -932,11 +940,27 @@ var STADT_DATEN = {
       sagt: 'Zwei Kaltblüter. Der Ochse zieht mehr, das Pferd zieht schneller.',
       nutzen: {}, wirkt: 'die Fuhre fährt schneller' },
 
+    /* AUFLAGE A6, VIERTER FALL — VOM KRITIKER NICHT GENANNT, BEIM NACHSEHEN
+       GEFUNDEN, UND ER GEHOERT GEMELDET.
+       Der Kritiker hat den begrabenen Marktbrunnen von 1600 den Gaerbottichen
+       zugeschrieben ("eine offene Fachwerkhalle mit grossem Holzbottich und
+       Leiter"). Das stimmte. Aber am selben Fleck stand ein ZWEITER gekaufter
+       Bau: das Kontor auf (53|61) — dieselbe Koordinate wie der
+       Verwaltungsbau von 1970 (tor +8/-3), nur drei Jahrhunderte frueher.
+       Mit den geraeumten Bottichen war der Brunnen deshalb immer noch weg;
+       nachgesehen im Ausschnitt stadt-w9/bild/schnitt-e2-hofrand-nach.png.
+       Das Kontor behaelt seine Ausnahme — eine Schreibstube am Fuhrplatz ist
+       richtig —, aber es rueckt aus dem PLATZ in die GASSE vor dem Tor:
+       (48|69) statt (53|61), Breite 10 -> 8,5. Der Marktbrunnen liegt bei
+       y 41,7…46,9 %, der Giebel des Kontors reicht jetzt bis 49,4 % — er
+       bleibt frei. Die Mauerlinie an x 48 liegt bei 63,9; ein Fuss auf 69
+       steht also wirklich in der Gasse und nicht auf der Mauer. */
     { schluessel: 'kontor', name: 'Kontor', bild: 'kontor',
-      ort: 'tor', dx: 8, dy: -3, breite: 10, von: 2, bis: 3, grund: 38,
-      boden: 'gasse', warum: 'Das Kontor steht mit Absicht VOR dem Tor, am '
-        + 'Platz, wo die Fuhrleute halten — ein Schreibstube gehoert dorthin, '
-        + 'wo der Wagen ankommt, nicht hinter die Mauer.',
+      ort: 'tor', dx: 3, dy: 5, breite: 8.5, von: 2, bis: 3, grund: 38,
+      boden: 'gasse', warum: 'Das Kontor steht mit Absicht VOR dem Tor, in '
+        + 'der Gasse, wo die Fuhrleute halten — eine Schreibstube gehoert '
+        + 'dorthin, wo der Wagen ankommt, nicht hinter die Mauer. Auf dem '
+        + 'MARKTPLATZ hat sie nichts zu suchen; der gehoert der Stadt.',
       sagt: 'Wer schreibt, weiß im Herbst, was der Frühling gekostet hat.',
       nutzen: {}, wirkt: 'Ordnung im Buch' },
 
