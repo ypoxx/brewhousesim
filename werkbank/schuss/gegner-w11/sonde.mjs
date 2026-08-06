@@ -129,11 +129,28 @@ const lies = () => {
       soll: el.scrollWidth, ist: el.clientWidth, quillt, ellipse: c.textOverflow,
       text: t.slice(0, 40) });
   });
+  /* Das Band OHNE DICH GESCHEHEN liegt im Vorgabestand hinter einem Reiter
+     DER STADT und ist deshalb weggeschnitten — es zaehlt nicht mit. Seine
+     Huelle wird trotzdem gemessen: sie entscheidet, ob DIE STADT ihm weiter
+     einen Reiter gibt (ueber MARKE = 2,4 % = 101.376 px²) und ob es beim
+     Aufschlagen eine Tafel im Sinne von A16 waere (ueber 200.000 px²). */
+  const bandEl = document.querySelector('#buehne .gg-band');
+  const bandR = bandEl && bandEl.getBoundingClientRect();
+  const band = bandEl ? {
+    mass: `${Math.round(bandR.width)}×${Math.round(bandR.height)} @${Math.round(bandR.x)},${Math.round(bandR.y)}`,
+    flaeche: Math.round(bandR.width * bandR.height),
+    zugeklappt: !!bandEl.closest('[style*="clip"], .stadt-zugeklappt, .kern-blatt-zu'),
+    zeilen: [...document.querySelectorAll('#buehne .gg-bandzeile .was')].map(e => ({
+      soll: e.scrollWidth, ist: e.clientWidth,
+      voll: e.scrollWidth <= e.clientWidth + 1,
+      text: (e.textContent || '').trim().slice(0, 70)
+    }))
+  } : null;
   const h = (BRAUHAUS.haushalt ? BRAUHAUS.haushalt.miss() : null);
   return {
     kaesten: kaesten.sort((a, b) => b.flaeche - a.flaeche),
     schnitt: schnitt.sort((a, b) => (b.soll - b.ist) - (a.soll - a.ist)).slice(0, 24),
-    schilder, treffer, zahlen,
+    schilder, treffer, zahlen, band,
     haushalt: h ? { gesamt: h.gesamt, oben: h.oben, gegner: h.je.gegner || null } : null,
     pruefe: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.pruefe() : null,
     ueberRand: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.ueberRand() : null,
@@ -220,6 +237,12 @@ for (const e of EPOCHEN) {
   d.gegnerzuege.forEach(z => aus.push(`    ${z.hit ? ' ' : '!'} ${z.zug.padEnd(30)} `
     + `${String(z.b).padStart(4)}×${String(z.h).padStart(3)} ${z.aus ? 'AUS' : '   '} `
     + `${(z.preis === null ? '' : z.preis).padStart(9)}  „${z.text}"`));
+  if (d.band) {
+    aus.push(`  BAND „Ohne dich geschehen": ${d.band.mass} = ${d.band.flaeche} px²`
+      + `  (Reiter ab 101.376 · Tafel ab 200.000)`);
+    d.band.zeilen.forEach(z => aus.push(`      ${z.voll ? 'ganz  ' : 'GEKUERZT'} `
+      + `${String(z.soll).padStart(5)} px in ${String(z.ist).padStart(4)} px  „${z.text}"`));
+  }
   aus.push(`  A3 — GEGNER auf gemalter Beschriftung: ${d.treffer.length}`);
   d.treffer.forEach(t => aus.push(`    „${t.schild}"  ${t.ueber} px² unter ${t.tag}.${t.klasse}  ${t.mass}`));
   aus.push(`  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: ${d.zahlen.length}`);
