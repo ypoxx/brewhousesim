@@ -63,7 +63,18 @@ bedienen zu können), `werkbank/schuss/aufsicht/messfenster.sh`,
 `werkbank/LAUFENDER-AUFTRAG.md`, keine `gauntlet/WELLE-*.md` (auch nicht
 `gauntlet/EPOCHENBOGEN.md`, das nicht auf meiner Leseliste stand), nichts unter
 `werkbank/schuss/stadt-w9/`, keine `berichte/`- oder `bogen/`-Ordner, keine `BEFUND-*.md`
-in `spiel/`, kein `stand.json`, kein `git log`. **Ich bin nicht befangen.**
+in `spiel/`, kein `stand.json`, kein `git log`, `git show` oder `git diff`.
+**Ich bin nicht befangen.**
+
+> **Ein Hinweis, den die Aufsicht braucht, und den ich melde, statt ihn zu verschweigen.**
+> Diese Datei lag beim Beginn meiner Arbeit **nicht auf der Platte** — ich habe sie neu
+> angelegt. `git status` weist sie aber als *geändert* (` M`) aus, nicht als *unverfolgt*:
+> unter demselben Pfad steht also im Baum eine ältere Fassung, die ich **nie gesehen habe**
+> und die die Platte auch nicht enthielt. Ein Vergleich der beiden Fassungen wird deshalb
+> aussehen wie eine Überschreibung; er ist keine. Wenn dort ein früheres Urteil steht, ist
+> es durch mein Schreiben auf der Platte nicht verlorengegangen, sondern nur im Arbeitsbaum
+> ersetzt — im Baum liegt es weiter. Ich habe es nicht aufgerufen und weiß nicht, was
+> darin steht.
 
 ---
 

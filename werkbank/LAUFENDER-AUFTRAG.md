@@ -46,6 +46,66 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## URTEIL DER WELLE 9 — die Welt ist da, die Oberfläche ist das Problem
+
+*Blinder Bildvergleich am Stand `37f4b44`, Hafen 8907, Marke vor und nach jeder
+Messung geprüft. `werkbank/urteile/welle9-bildvergleich.md`, 574 Zeilen,
+**17 Auflagen**, je Epoche Ladezustand und 34 gespielte Wochen, `lage` 0.*
+
+| | I · 1350 | II · 1600 | III · 1884 | IV · 1970 |
+|---|---|---|---|---|
+| Urteil | Zielbild | Zielbild | **unentschieden** | Zielbild |
+
+**Sein Satz:** *„Die gemalte Welt hat die Latte eingeholt; das, was auf ihr
+liegt, hat sie noch nie gesehen."*
+
+**Er hat beide geerbten Deckungsgeräte verworfen — auch meines.**
+`aufsicht/deckung-je-stueck.mjs` und `bild-w8/deckung.mjs` trennen **nach
+Ebene**; in `index.html:57–60` liegen aber `marken`, `hand` und `blatt` über
+`bau` und tragen **gemalte Ortsschilder, Fässer und Wagen**. Wer sie ausblendet,
+löscht Welt und misst zu viel. Sein Gerät `bild-w9/deckung.mjs` trennt nach
+**Eigenschaft** (deckender Grund α > 0,35 oder sichtbarer Rahmen) und zählt
+Bildpunkte. Und er hat die Zahl geliefert, die bisher nur geschätzt war:
+
+| | Zielblatt | Spiel, Ladezustand | Spiel, nach 30 Wochen |
+|---|---|---|---|
+| Deckung | **3,1 %** (gemessen, nicht geschätzt) | 22,0 – 22,8 % | **47,0 – 55,7 %** |
+| Kästen auf dem Schirm | **2** | **mindestens 15** | mehr |
+
+**Und die Verteilung ist die eigentliche Wunde:** das Zielblatt hält seine zwei
+Kästen am oberen Rand und in einer Ecke, das Spiel legt seine quer über die
+**Bildmitte** — dorthin, wo der Brauhof steht.
+
+> ### DER SCHÄRFSTE FUND: ESCAPE RÄUMT NICHT AUF, ES TAUSCHT
+> Nach 30 Wochen liegt die Georgi-Tafel (1596 × 943) über dem Bild. Drei
+> Escape-Anschläge schließen sie — und legen darunter `erb-buch` (1156 × 1075)
+> frei, das **die ganze linke Bildhälfte samt Brauhof** deckt. **Die
+> Gesamtdeckung sinkt nicht, sie wandert von oben in die Mitte.**
+
+**Die nackte Bühne gewinnt inzwischen.** Gegen die vier Aufnahmen ohne Kästen
+(`e1..e4-nackt.png`, in denen nachweislich kein gemaltes Gebäude fehlt) gewinnt
+kein Zielblatt mehr klar — in 1884 und 1970 gewinnt eher das Spiel. Er nennt
+von selbst, wo: Mauerfragment 1970 mit **einem** Rundturm in einer Grünanlage
+**mit Bänken**, Eiskeller 1884 mit Eisblöcken, Bus mit Fahrgästen hinter den
+Scheiben, „GEGR. **1350**" statt des Zielblatt-Fehlers 1356, alte Monatsnamen
+statt viermal „MAI", der Gegner heißt je Epoche anders.
+
+**Was gegen das Spiel steht, ist fast durchweg Oberfläche:** Hoftorschild 1350
+von der Sud-Tafel gedeckt · „ST. MICHAEL" fehlt in 1884 ganz · „GASTHOF
+LINDENHOF" von der Gegnerkarte angeschnitten · in 1970 zwei **leere Rechtecke**
+(nicht darstellbare Zeichen), ein Kasten, der ab x ≈ 2725 aus dem Bild hängt,
+und zwei sauber gekürzte Kaufbeschriftungen. Weltseitig fehlt nur eines wirklich:
+**Darre und Rauch in 1600** — ohne sie unterscheidet sich der Umriss des Hofes
+kaum von 1350, „vier Tapeten" in Bildpunkten statt in Verblisten.
+
+**Ein Hinweis von ihm, geprüft und entkräftet:** er fand seine Urteilsdatei im
+`git status` als geändert, ohne sie geschrieben zu haben. Die erste Fassung im
+Baum (`8a7e000`) trägt **seine eigene Überschrift** — der Veröffentlicher hat
+seinen Zwischenstand gesichert, während er noch schrieb. Keine fremde
+Altfassung, keine Befangenheit.
+
+---
+
 ## DAS WELLENZIEL IST ERREICHT, MIT ABSTAND — 6. August 2026, 11:14 UTC
 
 *Von der Aufsicht am eingefrorenen Stand `37f4b44` nachgemessen (Hafen 8907,
