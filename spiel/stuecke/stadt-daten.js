@@ -800,15 +800,20 @@ var STADT_DATEN = {
        (x 1040…1250, y 680…820) schneidet quer ueber das Schindeldach des
        Brauhauses und ueber den Malzboden auf Stelzen."
        Der Stall stand bei (41|65) und war 14 % breit, also x 34…48 — genau
-       ueber den Stelzen (x 37…51). Er geht nach WESTEN in die leere Haelfte
-       des Hofes: (34|71), 12,5 % breit, also x 27,75…40,25. Zwischen ihm
-       und dem Malzboden bleibt damit Hofboden stehen, und er fuellt einen
-       Teil dessen, was der Kritiker als "unbespielte Wiese und Erde"
-       gemessen hat (x 320…700, y 780…1120).
-       Hofprobe: an x 34 liegt die hintere Kante bei 56,7 und die
-       Mauerlinie bei 75,2 — Fuss 71 steht im Hof. */
+       ueber den Stelzen (x 37…51). Er geht nach WESTEN und nach VORN:
+       (37|69), 12,5 % breit, also x 30,75…43,25. Sein Strohdach kreuzt die
+       Stelzen damit nicht mehr — nachgesehen im Ausschnitt
+       stadt-w9/bild/schnitt-e1-hof-nach2.png steht der Malzboden mit
+       Pfosten, Bottich und Leiter wieder frei da.
+       ZWEIMAL GEMESSEN, EINMAL ZURUECKGENOMMEN: der erste Versuch stellte
+       ihn ganz nach Westen auf (34|71). Dort war der Malzboden frei, aber
+       die Kueferei (34|72) stand davor und deckte den Ochsen zu — ein
+       gekaufter Stall, dessen Tier man nicht sieht, ist kein Fortschritt
+       (schnitt-e1-hof-nach.png gegen -nach2.png).
+       Hofprobe: an x 37 liegt die hintere Kante bei 58,7 und die
+       Mauerlinie bei 72,8 — Fuss 69 steht im Hof. */
     { schluessel: 'ochsenstall', name: 'Ochsenstall', bild: 'ochsenstall',
-      ort: 'rampe', dx: -6, dy: -1, breite: 12.5, von: 1, bis: 1, grund: 28,
+      ort: 'rampe', dx: -3, dy: -3, breite: 12.5, von: 1, bis: 1, grund: 28,
       sagt: 'Ein eigenes Zugtier. Danach fährt die Fuhre, wann das Haus es will.',
       nutzen: {}, wirkt: 'fährt, wann das Haus will' },
 
