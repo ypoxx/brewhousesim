@@ -1,15 +1,16 @@
 
 === EPOCHE 1   lage 0  Seitenfehler 0  verdeckt() 
-GESAMT      Kaesten  341   gesamt  22.0 %   oberstes 1/6  50.6 %   Mittelband  17.0 %   unterstes 1/6  13.4 %
-  kern       Kaesten   11   gesamt  10.3 %   oberstes 1/6  25.4 %   Mittelband   6.8 %   unterstes 1/6   9.4 %     435633 px
-  gegner     Kaesten   23   gesamt   9.5 %   oberstes 1/6   2.5 %   Mittelband  12.7 %   unterstes 1/6   4.0 %     402579 px
-  erbe       Kaesten   19   gesamt   7.9 %   oberstes 1/6   0.0 %   Mittelband  11.8 %   unterstes 1/6   0.0 %     332812 px
-  stadt      Kaesten   28   gesamt   7.5 %   oberstes 1/6  13.3 %   Mittelband   8.0 %   unterstes 1/6   0.0 %     318776 px
-  preis      Kaesten    3   gesamt   6.6 %   oberstes 1/6  11.7 %   Mittelband   6.9 %   unterstes 1/6   0.0 %     277649 px
-  name       Kaesten   25   gesamt   5.8 %   oberstes 1/6   2.7 %   Mittelband   7.9 %   unterstes 1/6   0.0 %     243221 px
-  fuhre      Kaesten  176   gesamt   5.2 %   oberstes 1/6   4.1 %   Mittelband   6.8 %   unterstes 1/6   0.0 %     219097 px
-  klang      Kaesten    1   gesamt   4.5 %   oberstes 1/6   0.2 %   Mittelband   6.8 %   unterstes 1/6   0.0 %     191702 px
-  sud        Kaesten   55   gesamt   2.3 %   oberstes 1/6   0.0 %   Mittelband   3.4 %   unterstes 1/6   0.0 %      95928 px
+RUHEPROBE   (ohne jede Änderung, muss ~0 sein)  gesamt   0.0 %   oberstes 1/6   0.0 %   0 px
+GESAMT      Kaesten  341   gesamt  19.9 %   oberstes 1/6  44.4 %   Mittelband  15.9 %   unterstes 1/6  11.8 %
+  erbe       Kaesten   19   gesamt   5.2 %   oberstes 1/6   0.0 %   Mittelband   7.8 %   unterstes 1/6   0.0 %     220165 px
+  kern       Kaesten   11   gesamt   4.6 %   oberstes 1/6  19.6 %   Mittelband   0.0 %   unterstes 1/6   7.9 %     193812 px
+  gegner     Kaesten   23   gesamt   4.2 %   oberstes 1/6   0.0 %   Mittelband   5.3 %   unterstes 1/6   3.9 %     176466 px
+  fuhre      Kaesten  176   gesamt   4.1 %   oberstes 1/6   3.0 %   Mittelband   5.4 %   unterstes 1/6   0.0 %     174238 px
+  stadt      Kaesten   28   gesamt   3.3 %   oberstes 1/6  13.3 %   Mittelband   1.6 %   unterstes 1/6   0.0 %     139354 px
+  sud        Kaesten   55   gesamt   2.1 %   oberstes 1/6   0.0 %   Mittelband   3.1 %   unterstes 1/6   0.0 %      87981 px
+  preis      Kaesten    3   gesamt   1.8 %   oberstes 1/6  10.9 %   Mittelband   0.0 %   unterstes 1/6   0.0 %      76479 px
+  name       Kaesten   25   gesamt   0.9 %   oberstes 1/6   1.4 %   Mittelband   1.0 %   unterstes 1/6   0.0 %      38171 px
+  klang      Kaesten    1   gesamt   0.0 %   oberstes 1/6   0.2 %   Mittelband   0.0 %   unterstes 1/6   0.0 %       1370 px
   groesste Kaesten (Huelle):
      1410554 px²  sud      1293×1091 @33,190  .sud-brett stadt-zugeklappt  „DAS SUDHAUS · 1350Die offene Pfanne über"
      1242732 px²  erbe     1156×1075 @55,207  .erb-buch blatt stadt-zugeklappt  „DAS ERBE — Verschreiben vor dem Rat ins "
@@ -32,28 +33,20 @@ GESAMT      Kaesten  341   gesamt  22.0 %   oberstes 1/6  50.6 %   Mittelband  1
   ÜBER DEM RAND: 0
   WÄHRUNGSBRUCH: 1
     „−9 Pf" 2 Zeilen .preis @1589,605
-  FEHLENDE ZEICHEN: 9
-    U+B7 „·" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+FC „ü" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+F6 „ö" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+E4 „ä" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2014 „—" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+D7 „×" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2212 „−" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2192 „→" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2197 „↗" in ui-monospace, SFMono-Regular, Menlo, Con
+  FEHLENDE ZEICHEN: 0
 
 === EPOCHE 2   lage 0  Seitenfehler 0  verdeckt() 
-GESAMT      Kaesten  387   gesamt  22.6 %   oberstes 1/6  51.2 %   Mittelband  18.2 %   unterstes 1/6  11.9 %
-  kern       Kaesten   11   gesamt  10.4 %   oberstes 1/6  26.0 %   Mittelband   6.9 %   unterstes 1/6   8.6 %     438521 px
-  gegner     Kaesten   25   gesamt   9.8 %   oberstes 1/6   2.5 %   Mittelband  13.2 %   unterstes 1/6   3.3 %     413662 px
-  erbe       Kaesten   24   gesamt   8.1 %   oberstes 1/6   0.0 %   Mittelband  12.1 %   unterstes 1/6   0.0 %     340336 px
-  stadt      Kaesten   28   gesamt   8.0 %   oberstes 1/6  13.4 %   Mittelband   8.7 %   unterstes 1/6   0.0 %     338719 px
-  preis      Kaesten    3   gesamt   6.7 %   oberstes 1/6  11.8 %   Mittelband   7.1 %   unterstes 1/6   0.0 %     283900 px
-  name       Kaesten   25   gesamt   6.2 %   oberstes 1/6   3.0 %   Mittelband   8.5 %   unterstes 1/6   0.0 %     260060 px
-  fuhre      Kaesten  215   gesamt   4.8 %   oberstes 1/6   1.0 %   Mittelband   6.9 %   unterstes 1/6   0.0 %     202130 px
-  klang      Kaesten    1   gesamt   4.7 %   oberstes 1/6   0.2 %   Mittelband   6.9 %   unterstes 1/6   0.0 %     197101 px
-  sud        Kaesten   55   gesamt   2.3 %   oberstes 1/6   0.0 %   Mittelband   3.5 %   unterstes 1/6   0.0 %      97824 px
+RUHEPROBE   (ohne jede Änderung, muss ~0 sein)  gesamt   0.0 %   oberstes 1/6   0.0 %   0 px
+GESAMT      Kaesten  387   gesamt  20.5 %   oberstes 1/6  44.8 %   Mittelband  17.0 %   unterstes 1/6  10.4 %
+  erbe       Kaesten   24   gesamt   5.3 %   oberstes 1/6   0.0 %   Mittelband   7.9 %   unterstes 1/6   0.0 %     223515 px
+  kern       Kaesten   11   gesamt   4.5 %   oberstes 1/6  20.0 %   Mittelband   0.0 %   unterstes 1/6   7.1 %     191150 px
+  gegner     Kaesten   25   gesamt   4.2 %   oberstes 1/6   0.0 %   Mittelband   5.5 %   unterstes 1/6   3.2 %     178786 px
+  fuhre      Kaesten  215   gesamt   3.8 %   oberstes 1/6   0.3 %   Mittelband   5.6 %   unterstes 1/6   0.0 %     160038 px
+  stadt      Kaesten   28   gesamt   3.4 %   oberstes 1/6  13.3 %   Mittelband   1.7 %   unterstes 1/6   0.0 %     142855 px
+  sud        Kaesten   55   gesamt   2.1 %   oberstes 1/6   0.0 %   Mittelband   3.2 %   unterstes 1/6   0.0 %      89975 px
+  preis      Kaesten    3   gesamt   1.8 %   oberstes 1/6  10.9 %   Mittelband   0.0 %   unterstes 1/6   0.0 %      76456 px
+  name       Kaesten   25   gesamt   1.2 %   oberstes 1/6   1.7 %   Mittelband   1.4 %   unterstes 1/6   0.0 %      50660 px
+  klang      Kaesten    1   gesamt   0.0 %   oberstes 1/6   0.2 %   Mittelband   0.0 %   unterstes 1/6   0.0 %       1370 px
   groesste Kaesten (Huelle):
      1410554 px²  sud      1293×1091 @33,190  .sud-brett stadt-zugeklappt  „DAS SUDHAUS · 1600Die offene Pfanne unte"
      1242732 px²  erbe     1156×1075 @55,207  .erb-buch blatt stadt-zugeklappt  „DAS ERBE — Verbriefen im Briefbuch der S"
@@ -76,31 +69,20 @@ GESAMT      Kaesten  387   gesamt  22.6 %   oberstes 1/6  51.2 %   Mittelband  1
   ÜBER DEM RAND: 0
   WÄHRUNGSBRUCH: 1
     „−18 fl" 2 Zeilen .preis @1924,866
-  FEHLENDE ZEICHEN: 12
-    U+B7 „·" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+FC „ü" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+F6 „ö" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+E4 „ä" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2014 „—" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+D7 „×" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2212 „−" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2192 „→" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+C4 „Ä" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+D6 „Ö" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+D6 „Ö" in "Iowan Old Style", "Palatino Linotype", 
-    U+2198 „↘" in ui-monospace, SFMono-Regular, Menlo, Con
+  FEHLENDE ZEICHEN: 0
 
 === EPOCHE 3   lage 0  Seitenfehler 0  verdeckt() 
-GESAMT      Kaesten  409   gesamt  22.3 %   oberstes 1/6  52.1 %   Mittelband  17.2 %   unterstes 1/6  12.5 %
-  kern       Kaesten   11   gesamt  10.6 %   oberstes 1/6  27.1 %   Mittelband   6.9 %   unterstes 1/6   8.9 %     448209 px
-  gegner     Kaesten   23   gesamt   9.4 %   oberstes 1/6   2.5 %   Mittelband  12.5 %   unterstes 1/6   3.6 %     395346 px
-  erbe       Kaesten   25   gesamt   8.0 %   oberstes 1/6   0.0 %   Mittelband  12.1 %   unterstes 1/6   0.0 %     339897 px
-  stadt      Kaesten   27   gesamt   7.9 %   oberstes 1/6  13.2 %   Mittelband   8.6 %   unterstes 1/6   0.0 %     335879 px
-  preis      Kaesten    3   gesamt   6.7 %   oberstes 1/6  11.7 %   Mittelband   7.1 %   unterstes 1/6   0.0 %     282368 px
-  name       Kaesten   24   gesamt   5.8 %   oberstes 1/6   2.8 %   Mittelband   8.1 %   unterstes 1/6   0.0 %     246669 px
-  fuhre      Kaesten  242   gesamt   5.3 %   oberstes 1/6   4.1 %   Mittelband   6.9 %   unterstes 1/6   0.0 %     222912 px
-  klang      Kaesten    1   gesamt   4.6 %   oberstes 1/6   0.2 %   Mittelband   6.9 %   unterstes 1/6   0.0 %     195985 px
-  sud        Kaesten   53   gesamt   2.3 %   oberstes 1/6   0.0 %   Mittelband   3.4 %   unterstes 1/6   0.0 %      96564 px
+RUHEPROBE   (ohne jede Änderung, muss ~0 sein)  gesamt   0.0 %   oberstes 1/6   0.0 %   0 px
+GESAMT      Kaesten  409   gesamt  20.0 %   oberstes 1/6  45.6 %   Mittelband  15.9 %   unterstes 1/6  11.0 %
+  erbe       Kaesten   25   gesamt   5.3 %   oberstes 1/6   0.0 %   Mittelband   7.9 %   unterstes 1/6   0.0 %     223699 px
+  kern       Kaesten   11   gesamt   4.7 %   oberstes 1/6  21.0 %   Mittelband   0.0 %   unterstes 1/6   7.4 %     200139 px
+  gegner     Kaesten   23   gesamt   3.9 %   oberstes 1/6   0.0 %   Mittelband   4.9 %   unterstes 1/6   3.5 %     162976 px
+  stadt      Kaesten   27   gesamt   3.4 %   oberstes 1/6  13.1 %   Mittelband   1.8 %   unterstes 1/6   0.0 %     142906 px
+  fuhre      Kaesten  242   gesamt   2.9 %   oberstes 1/6   3.1 %   Mittelband   3.6 %   unterstes 1/6   0.0 %     123457 px
+  sud        Kaesten   53   gesamt   2.1 %   oberstes 1/6   0.0 %   Mittelband   3.2 %   unterstes 1/6   0.0 %      89318 px
+  preis      Kaesten    3   gesamt   1.8 %   oberstes 1/6  10.8 %   Mittelband   0.0 %   unterstes 1/6   0.0 %      76406 px
+  name       Kaesten   24   gesamt   0.9 %   oberstes 1/6   1.4 %   Mittelband   1.0 %   unterstes 1/6   0.0 %      38237 px
+  klang      Kaesten    1   gesamt   0.0 %   oberstes 1/6   0.2 %   Mittelband   0.0 %   unterstes 1/6   0.0 %       1370 px
   groesste Kaesten (Huelle):
      1367750 px²  sud      1293×1057 @33,190  .sud-brett stadt-zugeklappt  „DAS SUDWERK · 1884Die Sudpfanne unter de"
      1242732 px²  erbe     1156×1075 @55,207  .erb-buch blatt stadt-zugeklappt  „DAS ERBE — Eintragen ins Hypothekenbuch "
@@ -123,30 +105,20 @@ GESAMT      Kaesten  409   gesamt  22.3 %   oberstes 1/6  52.1 %   Mittelband  1
   ÜBER DEM RAND: 0
   WÄHRUNGSBRUCH: 1
     „−240 M" 2 Zeilen .preis @1775,728
-  FEHLENDE ZEICHEN: 11
-    U+B7 „·" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+FC „ü" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+F6 „ö" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+E4 „ä" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2014 „—" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+D7 „×" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2212 „−" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2192 „→" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+C4 „Ä" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2198 „↘" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+DF „ß" in ui-monospace, SFMono-Regular, Menlo, Con
+  FEHLENDE ZEICHEN: 0
 
 === EPOCHE 4   lage 0  Seitenfehler 0  verdeckt() 
-GESAMT      Kaesten  366   gesamt  22.8 %   oberstes 1/6  53.1 %   Mittelband  17.9 %   unterstes 1/6  11.9 %
-  kern       Kaesten   11   gesamt  10.5 %   oberstes 1/6  26.6 %   Mittelband   7.0 %   unterstes 1/6   8.6 %     444527 px
-  gegner     Kaesten   23   gesamt  10.1 %   oberstes 1/6   2.5 %   Mittelband  13.7 %   unterstes 1/6   3.3 %     428268 px
-  stadt      Kaesten   26   gesamt   8.2 %   oberstes 1/6  14.6 %   Mittelband   8.6 %   unterstes 1/6   0.0 %     345675 px
-  erbe       Kaesten   24   gesamt   7.8 %   oberstes 1/6   0.0 %   Mittelband  11.8 %   unterstes 1/6   0.0 %     331405 px
-  preis      Kaesten    3   gesamt   6.8 %   oberstes 1/6  11.7 %   Mittelband   7.3 %   unterstes 1/6   0.0 %     288374 px
-  name       Kaesten   25   gesamt   6.1 %   oberstes 1/6   3.5 %   Mittelband   8.3 %   unterstes 1/6   0.0 %     257604 px
-  fuhre      Kaesten  193   gesamt   4.9 %   oberstes 1/6   1.2 %   Mittelband   7.1 %   unterstes 1/6   0.0 %     207779 px
-  klang      Kaesten    1   gesamt   4.7 %   oberstes 1/6   0.2 %   Mittelband   7.1 %   unterstes 1/6   0.0 %     200571 px
-  sud        Kaesten   60   gesamt   2.4 %   oberstes 1/6   0.0 %   Mittelband   3.7 %   unterstes 1/6   0.0 %     102931 px
+RUHEPROBE   (ohne jede Änderung, muss ~0 sein)  gesamt   0.0 %   oberstes 1/6   0.0 %   0 px
+GESAMT      Kaesten  366   gesamt  20.6 %   oberstes 1/6  46.6 %   Mittelband  16.7 %   unterstes 1/6  10.4 %
+  erbe       Kaesten   24   gesamt   5.3 %   oberstes 1/6   0.0 %   Mittelband   7.9 %   unterstes 1/6   0.0 %     223950 px
+  kern       Kaesten   11   gesamt   4.6 %   oberstes 1/6  20.6 %   Mittelband   0.0 %   unterstes 1/6   7.1 %     195268 px
+  gegner     Kaesten   23   gesamt   4.4 %   oberstes 1/6   0.0 %   Mittelband   5.8 %   unterstes 1/6   3.2 %     186704 px
+  stadt      Kaesten   26   gesamt   3.5 %   oberstes 1/6  14.6 %   Mittelband   1.5 %   unterstes 1/6   0.0 %     145975 px
+  fuhre      Kaesten  193   gesamt   2.5 %   oberstes 1/6   0.4 %   Mittelband   3.7 %   unterstes 1/6   0.0 %     107022 px
+  sud        Kaesten   60   gesamt   2.1 %   oberstes 1/6   0.0 %   Mittelband   3.2 %   unterstes 1/6   0.0 %      90537 px
+  preis      Kaesten    3   gesamt   1.8 %   oberstes 1/6  10.8 %   Mittelband   0.0 %   unterstes 1/6   0.0 %      76276 px
+  name       Kaesten   25   gesamt   1.0 %   oberstes 1/6   1.9 %   Mittelband   1.0 %   unterstes 1/6   0.0 %      42202 px
+  klang      Kaesten    1   gesamt   0.0 %   oberstes 1/6   0.2 %   Mittelband   0.0 %   unterstes 1/6   0.0 %       1370 px
   groesste Kaesten (Huelle):
      1410554 px²  sud      1293×1091 @33,190  .sud-brett stadt-zugeklappt  „DAS SUDHAUS · 1970Das Sudwerk im Schaltr"
      1242732 px²  erbe     1156×1075 @55,207  .erb-buch blatt stadt-zugeklappt  „DAS ERBE — Festschreiben notariell, im L"
@@ -169,16 +141,4 @@ GESAMT      Kaesten  366   gesamt  22.8 %   oberstes 1/6  53.1 %   Mittelband  1
   ÜBER DEM RAND: 0
   WÄHRUNGSBRUCH: 1
     „−1.800 DM" 2 Zeilen .preis @1675,1019
-  FEHLENDE ZEICHEN: 12
-    U+B7 „·" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+E4 „ä" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+F6 „ö" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+FC „ü" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2014 „—" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+D7 „×" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+B1 „±" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2212 „−" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+201E „„" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2192 „→" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+2198 „↘" in ui-monospace, SFMono-Regular, Menlo, Con
-    U+C4 „Ä" in ui-monospace, SFMono-Regular, Menlo, Con
+  FEHLENDE ZEICHEN: 0

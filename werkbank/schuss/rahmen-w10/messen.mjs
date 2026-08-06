@@ -194,11 +194,24 @@ for (const e of [1, 2, 3, 4]) {
   const A = pngLesen(voll);
 
   const s6 = Math.floor(H / 6);
-  const zonen = (Bd) => {
+  /* Maske: welche Bildpunkte liegen ueberhaupt in einer Kastenhuelle dieses
+     Satzes? Ausserhalb kann kein weggenommener Kasten etwas veraendern —
+     was sich dort dennoch bewegt, ist Restbewegung und wird nicht gezaehlt. */
+  const maske = (kaesten) => {
+    const m = new Uint8Array(W * H);
+    for (const q of kaesten) {
+      const x0 = Math.max(0, q.x), y0 = Math.max(0, q.y);
+      const x1 = Math.min(W, q.x + q.b), y1 = Math.min(H, q.y + q.h);
+      for (let y = y0; y < y1; y++) { const z = y * W; for (let x = x0; x < x1; x++) m[z + x] = 1; }
+    }
+    return m;
+  };
+  const zonen = (Bd, m) => {
     const zone = (y0, y1) => {
       let t = 0, g = 0;
       for (let y = y0; y < y1; y++) for (let x = 0; x < W; x++) {
-        const i = (y * W + x) * 4; g++;
+        const j = y * W + x, i = j * 4; g++;
+        if (!m[j]) continue;
         if (Math.abs(A.daten[i] - Bd.daten[i]) > 8 || Math.abs(A.daten[i+1] - Bd.daten[i+1]) > 8 ||
             Math.abs(A.daten[i+2] - Bd.daten[i+2]) > 8) t++;
       }
@@ -207,12 +220,17 @@ for (const e of [1, 2, 3, 4]) {
     return { ges: zone(0, H), oben: zone(0, s6), mitte: zone(s6, H - s6), unten: zone(H - s6, H) };
   };
 
+  /* Gerätekontrolle: zwei Aufnahmen OHNE jede Änderung. Was hier auffaellt,
+     ist Restbewegung und gehoert in keinen Haushalt. */
+  await s.waitForTimeout(300);
+  const ruhe = zonen(pngLesen(await s.screenshot()), maske(k.liste));
+
   /* alle Kaesten weg — das Ganze */
   await s.evaluate(() => document.querySelectorAll('[data-w10kasten]')
     .forEach(el => { el.style.visibility = 'hidden'; }));
   await s.waitForTimeout(300);
   const gesamtBild = await s.screenshot();
-  const gesamt = zonen(pngLesen(gesamtBild));
+  const gesamt = zonen(pngLesen(gesamtBild), maske(k.liste));
   await s.evaluate(() => document.querySelectorAll('[data-w10kasten]')
     .forEach(el => { el.style.visibility = ''; }));
   await s.waitForTimeout(200);
@@ -224,7 +242,7 @@ for (const e of [1, 2, 3, 4]) {
       .forEach(el => { el.style.visibility = 'hidden'; }), st);
     await s.waitForTimeout(220);
     const bild = await s.screenshot();
-    jeStueck[st] = zonen(pngLesen(bild));
+    jeStueck[st] = zonen(pngLesen(bild), maske(k.liste.filter(q => q.stueck === st)));
     await s.evaluate((n) => document.querySelectorAll(`[data-w10stueck="${n}"]`)
       .forEach(el => { el.style.visibility = ''; }), st);
     await s.waitForTimeout(150);
@@ -233,6 +251,8 @@ for (const e of [1, 2, 3, 4]) {
   const p = v => v.toFixed(1).padStart(5) + ' %';
   bericht.push(`\n=== EPOCHE ${e}${WOCHEN ? ' nach ' + WOCHEN + ' Wochen' : ''}${ESC ? ' + ' + ESC + '× Escape' : ''}`
     + `   lage ${lage}  Seitenfehler ${fehler.length}  verdeckt() ${verdeckt}`);
+  bericht.push(`RUHEPROBE   (ohne jede Änderung, muss ~0 sein)  gesamt ${p(ruhe.ges.anteil)}   `
+    + `oberstes 1/6 ${p(ruhe.oben.anteil)}   ${ruhe.ges.punkte} px`);
   bericht.push(`GESAMT      Kaesten ${String(k.anzahl).padStart(4)}   gesamt ${p(gesamt.ges.anteil)}   `
     + `oberstes 1/6 ${p(gesamt.oben.anteil)}   Mittelband ${p(gesamt.mitte.anteil)}   unterstes 1/6 ${p(gesamt.unten.anteil)}`);
   const sortiert = Object.entries(jeStueck).sort((a, c) => c[1].ges.punkte - a[1].ges.punkte);
@@ -258,7 +278,7 @@ for (const e of [1, 2, 3, 4]) {
   bericht.push(`  FEHLENDE ZEICHEN: ${zeichen.length}`
     + zeichen.slice(0, 12).map(t => `\n    ${t.code} „${t.ch}" in ${t.font}`).join(''));
 
-  daten[e] = { gesamt, jeStueck, kaesten: k.liste, tafeln, ueberRand, brueche, zeichen, lage, fehler: fehler.length, verdeckt };
+  daten[e] = { ruhe, gesamt, jeStueck, kaesten: k.liste, tafeln, ueberRand, brueche, zeichen, lage, fehler: fehler.length, verdeckt };
   await s.close();
 }
 await b.close();
