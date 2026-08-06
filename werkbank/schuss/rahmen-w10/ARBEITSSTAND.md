@@ -674,3 +674,83 @@ Anlauf des Escape-Fensters fängt es — aber nur, weil das Fenster 2,6 s offen
 steht. **Wer nach Escape drei Sekunden wartet und dann WEITER drückt, hat die
 Tafel wieder.** Der saubere Weg dagegen ist kein längeres Fenster, sondern
 ein Griff im Blatt selbst; er steht als Auflage 2 für Welle 11 oben.
+
+## Satz C — und damit die vollständige Lage: EIN Ausreißer in zwölf Läufen
+
+| Epoche | A | B | C | Spannweite | Jahre < 1× (A/B/C) |
+|---|---|---|---|---|---|
+| 1350 | **−0,336** | **+0,270** | **−0,336** | **0,607** | 2 / **0** / 2 von 14 |
+| 1600 | −0,116 | −0,116 | −0,116 | 0,000 | 0 / 0 / 0 |
+| 1884 | +0,393 | +0,393 | +0,393 | 0,000 | 1 / 1 / 1 |
+| 1970 | −0,304 | −0,304 | −0,304 | 0,000 | 1 / 1 / 1 |
+
+Die Latte hält in allen zwölf Läufen (0 von 12 über 0,700, größter Wert
+0,393). **Aber elf Läufe sind Ziffer für Ziffer der Vorzustand und einer ist
+es nicht** — und bei gesätem Würfel ist das kein Streuungsmaß, sondern ein
+Gerätebefund.
+
+---
+
+# DIE SAATPROBE — dieselbe Saat, dieselbe Partie?
+
+**Die Aufsicht hat das zur Abnahmebedingung dieser Welle erklärt, über allen
+sechs Auflagen, und sie hat recht:** bei gesätem Würfel ist zweimal dasselbe
+die *Voraussetzung* jeder Zahl dieses Laufs, nicht ihr Komfort. Ein
+Mehrheitsentscheid aus drei Sätzen macht daraus zwei zu eins statt einer
+Antwort. Die Frage ist: **wovon hängt der Unterschied ab?**
+
+## Der Verdacht, und er zeigt auf meinen eigenen Code
+
+Von allem, was diese Welle hinzugefügt hat, lief **genau eine Sache während
+des Spielens**: die Wache der Blattaufsicht. Sie hing bei jedem `zeichne` in
+einem `requestAnimationFrame`, war auf 350 ms **nach der Uhr** gedrosselt und
+erzwang dabei ein Layout über die ganze Bühne. Sie hat **nie eingegriffen**
+(`geklemmt()`, `ohneGriff()`, `spur()` blieben über 30 Wochen in allen vier
+Epochen leer) — aber sie hat Zeit gekostet, und zwar je Bildaufbau.
+
+Daneben laufen im Spiel drei Fristen, die an derselben Uhr hängen:
+`stadt.js` sieht alle **240 ms** nach, hält ein Brett **1400 ms** für „vom
+Spieler geholt" und schlägt **1800 ms** nach einem Jahreswechsel jedes
+formatfüllende Blatt wieder auf. Wer diesen Fristen Arbeit je Bildaufbau
+danebenlegt, verschiebt die Phase gegen sie. Genau so sieht ein Ausreißer
+aus, der in elf von zwölf Läufen nicht auftritt.
+
+**Alles andere, was diese Welle geändert hat, ist zustandsfrei:** das
+geschützte Leerzeichen ist eine Zeichenkette, die CSS-Maße sind Layout (und
+Layout ist deterministisch — wäre es die Ursache, hätten alle drei Sätze
+gleich abweichen müssen, nicht einer von dreien), der Escape-Horcher wird von
+der messenden Hand nie ausgelöst (`linie.mjs` drückt keine Taste).
+
+## Was daraufhin geändert wurde
+
+**Die Wache hängt nicht mehr an der Uhr — sie hängt an einem Ereignis.**
+Während des Spielens läuft vom Rahmen jetzt **nichts** mehr. Die Regel
+„höchstens ein ganzseitiges Blatt" greift bei **Escape** (die messende Hand
+drückt es nie) und bei jeder **Anmeldung** über `BRAUHAUS.blatt.melde()`;
+abfragbar bleibt sie jederzeit über `BRAUHAUS.haushalt.blaetter()`.
+Das steht mit der Messung im Quelltext, `kern/haushalt.js`.
+
+## Die Kontrolle, die es dazu braucht
+
+`werkbank/schuss/rahmen-w10/saatprobe.sh` misst 1350 **dreimal je Stand**,
+400 Wochen, `?saat=1350`, jeder Lauf einzeln durchs Messfenster, und
+vergleicht die **Prüfsummen**:
+
+* **VOR** — `37f4b44` auf 8930. *Ist der Vorzustand HEUTE, auf DIESER
+  Maschine, dreimal derselbe?* Ohne diese Kontrolle weiß niemand, ob die
+  Streuung überhaupt von mir kommt. Der Vorgänger hat sie unter seinen
+  Bedingungen erhoben, nicht unter meinen.
+* **OHNE** — der ausgelieferte Stand ohne Wache auf 8932.
+* **MIT** — braucht keinen eigenen Lauf: das sind die zwölf Läufe oben
+  (Stand `1f1e9c9b5452`, Hafen 8931), und dort ist 1350 zweimal −0,336 und
+  einmal +0,270.
+
+## Und eine Nachprobe auf dem ausgelieferten Stand
+
+Weil `kern/haushalt.js` nach der Saatprobe-Erkenntnis geändert wurde, läuft
+der ganze Abnahmesatz auf dem **ausgelieferten** Stand (`c9b83c856e55`,
+Hafen 8932) noch einmal: `tor.mjs` · `spielprobe.mjs` ·
+`rahmenprobe.mjs` (30 Wochen + Escape) · `messen.mjs` im Lade- und im
+30-Wochen-Zustand. Ergebnisse in `messungen/*-ohnewache-*`.
+Erwartung: **identisch mit dem Stand mit Wache**, weil die Wache in keinem
+gemessenen Zustand je eingegriffen hat. Wenn nicht, steht es hier.

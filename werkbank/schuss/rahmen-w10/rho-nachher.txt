@@ -1,0 +1,43 @@
+=== DREI SCHNITTE (fuhre-w6/schnitte.py) ===
+Epoche   Satz             12 J     13 J     14 J   Urteil
+----------------------------------------------------------------------
+1350     rho-nachher    -0,245   -0,170   -0,336   besteht   (14 J, Kasse 28–524, Fehler 0)
+1350     rho-nachher    +0,203   +0,302   +0,270   besteht   (14 J, Kasse 34–583, Fehler 0)
+1350     rho-nachher    -0,245   -0,170   -0,336   besteht   (14 J, Kasse 28–524, Fehler 0)
+1600     rho-nachher    -0,189   +0,049   -0,116   besteht   (14 J, Kasse 291–2851, Fehler 0)
+1600     rho-nachher    -0,189   +0,049   -0,116   besteht   (14 J, Kasse 291–2851, Fehler 0)
+1600     rho-nachher    -0,189   +0,049   -0,116   besteht   (14 J, Kasse 291–2851, Fehler 0)
+1884     rho-nachher    +0,168   +0,346   +0,393   besteht   (14 J, Kasse 1757–23789, Fehler 0)
+1884     rho-nachher    +0,168   +0,346   +0,393   besteht   (14 J, Kasse 1757–23789, Fehler 0)
+1884     rho-nachher    +0,168   +0,346   +0,393   besteht   (14 J, Kasse 1757–23789, Fehler 0)
+1970     rho-nachher    -0,112   -0,236   -0,304   besteht   (14 J, Kasse 320–95857, Fehler 0)
+1970     rho-nachher    -0,112   -0,236   -0,304   besteht   (14 J, Kasse 320–95857, Fehler 0)
+1970     rho-nachher    -0,112   -0,236   -0,304   besteht   (14 J, Kasse 320–95857, Fehler 0)
+----------------------------------------------------------------------
+rho-nachher : LATTE HAELT (0 von 12 Laeufen ueber 0,700)
+
+=== JAHRE UNTER 1x und Spannweite (rueckkopplung-r3/auswerten.py) ===
+EPOCHE 1350
+  e1-A.json        14 J  Spearman -0,336  Pearson -0,307  <1x 2/14  Fehler 0  Abbruch nein  Fest 1x
+  e1-B.json        14 J  Spearman +0,270  Pearson +0,136  <1x 0/14  Fehler 0  Abbruch nein  Fest 1x
+  e1-C.json        14 J  Spearman -0,336  Pearson -0,307  <1x 2/14  Fehler 0  Abbruch nein  Fest 1x
+  >> SPEARMAN -0,336 ,, +0,270   Spannweite 0,607
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+EPOCHE 1600
+  e2-A.json        14 J  Spearman -0,116  Pearson +0,197  <1x 0/14  Fehler 0  Abbruch nein  Fest 1x
+  e2-B.json        14 J  Spearman -0,116  Pearson +0,197  <1x 0/14  Fehler 0  Abbruch nein  Fest 1x
+  e2-C.json        14 J  Spearman -0,116  Pearson +0,197  <1x 0/14  Fehler 0  Abbruch nein  Fest 1x
+  >> SPEARMAN -0,116 ,, -0,116   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+EPOCHE 1884
+  e3-A.json        14 J  Spearman +0,393  Pearson +0,315  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+  e3-B.json        14 J  Spearman +0,393  Pearson +0,315  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+  e3-C.json        14 J  Spearman +0,393  Pearson +0,315  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+  >> SPEARMAN +0,393 ,, +0,393   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+EPOCHE 1970
+  e4-A.json        14 J  Spearman -0,304  Pearson -0,306  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+  e4-B.json        14 J  Spearman -0,304  Pearson -0,306  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+  e4-C.json        14 J  Spearman -0,304  Pearson -0,306  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+  >> SPEARMAN -0,304 ,, -0,304   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT

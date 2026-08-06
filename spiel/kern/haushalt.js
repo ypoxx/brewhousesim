@@ -364,11 +364,17 @@
   var geklemmt = {};       /* welches Blatt musste geklemmt werden — fuer W11 */
   var ohneGriff = {};      /* welches Blatt hat keinen Griff — fuer W11 */
 
+  /* Ein Stueck meldet sein Blatt an, WENN es aufschlaegt. Die Aufsicht laeuft
+     dann genau einmal, an diesem Ereignis — nicht auf einer Frist. Das ist
+     der Weg, auf dem „hoechstens ein ganzseitiges Blatt" lueckenlos wird,
+     ohne dass irgendetwas an einer Uhr haengt. */
   function melde(el, zu) {
     if (!el || typeof zu !== 'function') return;
-    for (var i = 0; i < gemeldet.length; i++) if (gemeldet[i].el === el) { gemeldet[i].zu = zu; return; }
+    var i;
+    for (i = 0; i < gemeldet.length; i++) if (gemeldet[i].el === el) { gemeldet[i].zu = zu; return; }
     gemeldet.push({ el: el, zu: zu });
     if (gemeldet.length > 64) gemeldet.shift();
+    B.wage('haushalt:anmeldung', function () { raeumeAuf(false); });
   }
 
   function eigenerGriff(el) {
