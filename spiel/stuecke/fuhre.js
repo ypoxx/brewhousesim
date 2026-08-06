@@ -3653,14 +3653,15 @@
      diese drei Dinge; wer eines davon umbenennt, aendert die Partie.
 
      UND WARUM DER ANSCHLAG SEINE MASSE AUS DEM STILBLATT NIMMT: er ist
-     dort auf `max(20%, 560px)` Breite und `max(21%, 330px)` Hoehe
-     gedeckelt — auf der Entwurfsleinwand 550x323 = 177.559 px^2, also
-     4,2 % der Flaeche und sicher unter der Schwelle von 200.000 px^2, die
+     dort auf `max(26%, 700px)` Breite und `max(17%, 265px)` Hoehe
+     gedeckelt — auf der Entwurfsleinwand hoechstens 716x265 = 189.740 px^2,
+     also 4,49 % der Flaeche und unter der Schwelle von 200.000 px^2, die
      `BRAUHAUS.haushalt.tafeln()` zieht. Der Deckel ist eine CSS-Zusage und
-     keine Rechnung im Kopf: was auch immer eine Epoche in die Zeile
-     schreibt, groesser wird der Kasten nicht. Damit die Entscheidung
-     davon nichts abbekommt, kleben Kopf und Fuss (`position: sticky`) —
-     was ueberlaeuft, ist der Sommersatz in der Mitte, nie ein Knopf.
+     keine Rechnung im Kopf: was auch immer eine Epoche in die Zeilen
+     schreibt, groesser wird der Kasten nicht. Damit die Entscheidung davon
+     nichts abbekommt, klebt der Fuss (`position: sticky`), auf dem sie
+     steht — was ueberlaeuft, ist der Kopf, nie ein Knopf. Gemessen:
+     189.612 px^2 (1350, 1600) und 182.803 px^2 (1884, 1970).
      ====================================================================== */
 
   /* DER BERICHT. Jede Zeile stand vorher auf dem Blatt; hier steht sie
@@ -3840,8 +3841,8 @@
        sie danach doch zuklappt — dann ist der Weg zurueck beschriftet und
        nicht zu erraten.
 
-       WELLE 11, ZWEITER TEIL DERSELBEN REGEL: die Tafel deckt jetzt 4,2 %
-       der Flaeche statt 32 bis 36 %. Die Regel der STADT, die ein Blatt zum
+       WELLE 11, ZWEITER TEIL DERSELBEN REGEL: die Tafel deckt jetzt 4,5 %
+       der Flaeche statt 27 bis 36 %. Die Regel der STADT, die ein Blatt zum
        Jahreswechsel aufschlaegt, greift ab 25 % (`stadt.js:1408`) — diese
        hier ist also zu klein dafuer. Sie liegt trotzdem auf, und zwar aus
        dem Grund darueber: ein Brett, das WAEHREND des Spiels neu auftaucht,

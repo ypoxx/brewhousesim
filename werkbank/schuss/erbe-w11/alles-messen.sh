@@ -55,4 +55,13 @@ lauf vor-lesbarkeit  env HAFEN=8941 BREITE=1366 HOEHE=768 $M node werkbank/schus
 lauf nach-lesbarkeit env HAFEN=8942 BREITE=1366 HOEHE=768 $M node werkbank/schuss/aufsicht/lesbarkeit.mjs
 lauf nach-gewicht    env HAFEN=8942 $M node werkbank/schuss/aufsicht/gewicht-gegenprobe.mjs
 
-echo "ALLES DURCH  $(date -u +%H:%M:%S)"
+echo "HAUPTSATZ DURCH  $(date -u +%H:%M:%S)"
+
+# ---- 5. Ein einzelner Kasten, photographisch: was kostete die Leiste? ----
+lauf vor-einzeln  env HAFEN=8941 SEL=.erb-leiste,.erb-band NAME=vor  $M node werkbank/schuss/erbe-w11/einzeln.mjs
+lauf nach-einzeln env HAFEN=8942 SEL=.erb-leiste,.erb-band NAME=nach $M node werkbank/schuss/erbe-w11/einzeln.mjs
+
+# ---- 6. Bilder zum Ansehen ---------------------------------------------
+lauf nach-blick env HAFEN=8942 MARKE=nach $M node werkbank/schuss/erbe-w11/blick.mjs
+lauf vor-blick  env HAFEN=8941 MARKE=vor  $M node werkbank/schuss/erbe-w11/blick.mjs
+echo "AUCH DER NACHTRAG DURCH  $(date -u +%H:%M:%S)"
