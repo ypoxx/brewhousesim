@@ -40,4 +40,12 @@ lauf "Deckung 30 Wochen OHNE Escape (Endstand)" \
   env HAFEN=8952 WOCHEN=30 NAME=abn-w30 $M node werkbank/schuss/fuhre-w11/deckung.mjs \
   > $Z/abn-deckung-w30.log 2>&1
 
+# Die Gegenprobe zu den 169.305 px (§1.2). Sie lief beim ersten Anlauf schon,
+# aber ihr Ergebnis stand nur auf der Konsole und in Bildern — und Bilder
+# wandern in diesem Lauf nicht mit (.gitignore:67). Die Aufsicht hat
+# angekuendigt, diese Zahl nachzupruefen; also steht sie jetzt als Text da.
+lauf "Warum 169.305 px — Gegenprobe auf dem VORZUSTAND, Ladezustand, E1" \
+  env HAFEN=8951 EPOCHE=1 WOCHEN=0 $M node werkbank/schuss/fuhre-w11/warum.mjs \
+  > $Z/warum-e1-laden.txt 2>&1
+
 echo "FERTIG $(date -u +%H:%M:%S)"

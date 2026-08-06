@@ -413,5 +413,42 @@ Alles andere lag vollstaendig vor und ist nachgeprueft:
    Werkbank, nicht mir. Ich sehe die Bilder neu an, statt die Urteile meines
    ersten Anlaufs abzuschreiben.
 4. `vor-brettprobe` / `nach2-brettprobe` — die Gegenprobe zum Sud-Befund.
+5. `nach2-einzeln` / `nach2-gewicht` — die zwei Zahlen, die der ZWEITE Anlauf
+   bewegt haben KANN. Begruendung in `nachtrag2.sh`; kurz: `messen.mjs` und
+   `deckung.mjs` zaehlen Kastenhuellen bzw. nur Elemente MIT deckendem Grund,
+   ein Schlagschatten bewegt sie nicht — `einzeln.mjs` nimmt den Kasten
+   photographisch weg und zaehlt den Lichthof mit. **`nach-einzeln.txt` stammt
+   vom SCHWACHEN Lichthof und ist damit zu guenstig fuer mich.** Und E2 stand
+   beim Gewicht bei 7,73 von 8 MB.
+
+Alles drei laeuft verkettet (`nachtrag.sh` wartet auf `rho.sh`, `nachtrag2.sh`
+auf `nachtrag.sh`), damit nie zwei Messungen nebeneinander stehen.
+
+### Das Messfenster teilen sich drei
+
+Um 21:31 hielt **DIE FUHRE** das Fenster mit ihrem eigenen 400-Wochen-Lauf
+(`fuhre-w11/messungen/rho-vorher/e4-a.json`, Hafen 8951); mein `nach e1`
+stand mit „MESSFENSTER: belegt, warte" dahinter. Das ist die Sperre bei der
+Arbeit, kein Fehler — `MESSFENSTER_WARTE=7200` deckt das ab.
+
+### Erster rho-Wert, und er trifft die Eichung
+
+`rho/vor/e1-A.json`: Spearman **−0,336** (12 J −0,245 · 13 J −0,170 ·
+14 J −0,336), **<1× 2/14**, Kasse **28–524**, Fehler 0, 14 Jahre.
+
+Beides trifft die Eichung genau: WELLE-11 nennt fuer den Vorzustand „2/0/1/1
+von 14", und der ARBEITSSTAND haelt fest, dass 28–524 die EINZELN gemessene
+Partie ist (nebeneinander gemessen waren es 30–558). **Der isolierte Vorstand
+liefert die Referenzpartie Ziffer fuer Ziffer** — damit ist die Messkette
+geeicht, bevor der erste Nachher-Wert da ist.
+
+### Woran mein Stueck rho ueberhaupt bewegen KOENNTE
+
+Nur ueber die Erreichbarkeit von Zuegen. Das zugeklappte Buch steht nicht mehr
+im DOM — die `erbe:verschreibe:*` darin sind also fort, bis jemand aufschlaegt.
+Sie waren aber auch vorher nicht treffbar: die STADT hielt das Buch mit
+`clip-path: inset(50%)` zu. `probe.mjs` zaehlt im Ladezustand beider Staende
+dieselben fuenf treffbaren Zuege der Leiste. **Erwartung also: rho bewegt sich
+nicht.** Wenn doch, ist das der Befund, nicht die Erwartung.
 
 

@@ -178,21 +178,22 @@
      „Die Gegnerkarte darf keine gemalte Beschriftung anschneiden … die Karte
      weicht den vier Ortsschildern aus."
 
-     Drei der vier kann dieses Stueck ueberhaupt anschneiden. Nachgelesen in
-     stuecke/stadt.js: `zeichneNamen` und `zeichneHausschild` malen
-     ST. MICHAEL, GASTHOF LINDENHOF, BAHNHOF und das Hoftorschild in die
-     Ebene `bau` (teile(), Zeile 1620) — also UNTER die Ebene `marken`, in
-     der DER GEGNER steht. `zeichneGegnername` malt BRAUEREI ADLER /
+     ALLE VIER, und nicht nur drei. Nachgelesen in stuecke/stadt.js:
+     `zeichneNamen` und `zeichneHausschild` malen ST. MICHAEL, GASTHOF
+     LINDENHOF, BAHNHOF und das Hoftorschild in die Ebene `bau` (teile()) —
+     also UNTER die Ebene `marken`, in der DER GEGNER steht; die kann dieses
+     Stueck anschneiden. `zeichneGegnername` malt BRAUEREI ADLER /
      ADLER-BRAEU AG / NORDSTERN-GRUPPE dagegen in die Ebene `hand` mit
-     z-index 962, also DARUEBER; die koennen nicht angeschnitten werden.
+     z-index 962, also DARUEBER; die kann es nicht anschneiden, wohl aber
+     sein eigenes Zeichen darunter begraben. Die Auflage nennt vier Schilder
+     in einem Atemzug, also weicht das Stueck vier Schildern aus — die
+     Schichtfrage entscheidet, WER unlesbar wird, nicht OB.
 
      Von Hand ausweichen hiesse, fuer jede Adresse und jede Epoche eine Zahl
      zu raten. Also wird EINMAL JE EPOCHE gemessen, wo diese Schilder stehen,
      und das Ergebnis behalten. Ein Ortsschild bewegt sich nicht — das ist
      die haerteste Zusage von kern/orte.js —, und sein Text aendert sich nur
-     mit der Epoche. Mehr als drei Anlaeufe je Epoche gibt es nicht: liegt
-     beim ersten Zeichnen noch keines da, wird es beim naechsten versucht und
-     dann nicht mehr.
+     mit der Epoche.
 
      WARUM NICHT BEI JEDEM ZEICHNEN: der Rahmen hat in Welle 10 gemessen, was
      eine Layoutabfrage je Bildaufbau kostet — sie verschiebt die Phase gegen
@@ -200,26 +201,47 @@
      1800 ms), und dann laeuft dieselbe Saat zweimal verschieden. Vier
      Abfragen je Partie sind kein Verhalten an einer Wanduhr.
 
+     WARUM DER ANLAUFZAEHLER NEU GESCHRIEBEN IST — ein eigener Fehler, in
+     Welle 11 gemessen und nicht vermutet: er zaehlte JEDEN Anlauf, auch den
+     erfolgreichen, und gab nach dreien fuer immer auf. Ein Bildaufbau ruft
+     diese Funktion aber EINMAL JE ADRESSE; wo drei Adressen offen stehen,
+     war der Zaehler nach dem ERSTEN Bild verbraucht. Faellt dieses erste
+     Bild in einen Augenblick, in dem DIE STADT ihre Namen gerade nicht
+     stehen hat, ist die ganze Ausweiche fuer diese Partie tot — lautlos,
+     denn eine leere Zonenliste sieht aus wie „nichts im Weg".
+     Jetzt zaehlt nur der LEERE Anlauf, und die Schranke ist eine Schranke
+     gegen Endlosigkeit, keine gegen den zweiten Versuch. Gefunden wurde das
+     nur, weil `data-a3zonen` die Zahl der gefundenen Zonen hinschreibt: eine
+     Ausweiche, die man nicht messen kann, ist eine Behauptung.
+
      GEMESSEN, WARUM ES DIESE ZONEN BRAUCHT: im gebauten Zustand lag ein
      `gg-paar` in 1350 und 1970 mit 511 px² auf „ST. MICHAEL" (146x23
      @1550,527) — im Vorzustand ebenso (106 bzw. 475 px²). Der Ort bleibt,
      wo er ist; nur das Zeichen rueckt so weit, dass die Buchstaben frei
      stehen.                                                              */
   var ZONEN = {};              /* Epoche -> [{x,y,b,h}] in Prozent */
-  var ZONEN_ANLAUF = {};
+  var ZONEN_LEER = {};         /* Epoche -> Zahl der LEER ausgegangenen Anlaeufe */
+
+  /* Damit die Ausweiche messbar ist und nicht nur behauptet: die Zahl der
+     gefundenen Zonen steht am eigenen Fach. Fremdes DOM wird nicht
+     angefasst. 0 heisst: dieses Stueck weicht gerade NICHTS aus. */
+  function meldeZonen(n) {
+    var f = B.ebene('marken', 'gegner');
+    if (f) f.setAttribute('data-a3zonen', String(n));
+  }
 
   function sperrzonen() {
     var e = epNr();
     if (ZONEN[e]) return ZONEN[e];
-    if ((ZONEN_ANLAUF[e] || 0) >= 3) return [];
-    ZONEN_ANLAUF[e] = (ZONEN_ANLAUF[e] || 0) + 1;
+    if ((ZONEN_LEER[e] || 0) >= 40) return [];
     var bu = document.getElementById('buehne');
     if (!bu) return [];
     var VB = bu.clientWidth, VH = bu.clientHeight;
     if (!VB || !VH) return [];
     var l = [];
     var q = document.querySelectorAll(
-      '#ebene-bau .stadt-name, #ebene-bau .stadt-hausschild');
+      '#ebene-bau .stadt-name, #ebene-bau .stadt-hausschild,'
+      + '#ebene-hand .stadt-name-gegner');
     for (var i = 0; i < q.length; i++) {
       var r = q[i].getBoundingClientRect();
       if (r.width < 8 || r.height < 6) continue;
@@ -227,6 +249,8 @@
                b: 100 * r.width / VB, h: 100 * r.height / VH });
     }
     if (l.length) ZONEN[e] = l;
+    else ZONEN_LEER[e] = (ZONEN_LEER[e] || 0) + 1;
+    meldeZonen(l.length);
     return l;
   }
 

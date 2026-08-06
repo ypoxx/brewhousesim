@@ -168,12 +168,31 @@ daran haengt: die Klasse `.fu-sommerblatt`, die Zugschluessel
 die Wirkung jedes Knopfes. Die messende Hand (`rueckkopplung-r3/linie.mjs`,
 Woche 1 jedes Braujahres) sucht genau diese drei Dinge.
 
-**Nichts ist fort.** Jede Zeile, die vorher auf der Tafel stand — der
-Sommer Monat fuer Monat, der Umgang vor Michaeli, die Abgabe, das
-Kerbholz, die Notsude, die verlorenen Adressen, der Weg zum guten Ende —
-steht unveraendert im Bericht, hinter einem Knopf, der ihn aufschlaegt und
-wieder zuklappt. Auf dem Anschlag steht zusaetzlich der Sommer in einer
-Zeile: ausgeliefert, gekippt, uebrig, in die Lade, Abgabe.
+**Nichts ist fort** — der Sommer Monat fuer Monat, der Umgang vor
+Michaeli, die Abgabe, das Kerbholz, die Notsude, die verlorenen Adressen,
+der Weg zum guten Ende stehen im Bericht, hinter einem Knopf, der ihn
+aufschlaegt und wieder zuklappt. Auf dem Anschlag steht zusaetzlich der
+Sommer in einer Zeile: ausgeliefert, gekippt, uebrig, in die Lade, Abgabe.
+
+**BERICHTIGUNG (Neuanlauf): „steht unveraendert" war zu stark gesagt.**
+Nachgezaehlt mit den Zeichenketten beider Fassungen (`zeichneSommer` des
+Vorzustands, Zeilen 3587–3857, gegen `sommerBericht` + `zeichneSommer`
+heute, 3669–4049): 97 Literale vorher, 121 nachher, und **sieben** stehen
+nur in der alten Fassung. Keines davon ist eine verlorene Auskunft, aber
+drei sind **umformuliert**, und das gehoert benannt:
+
+| alt | heute | wo |
+|---|---|---|
+| Ueberschrift „Was steht 1351/52 an der Tafel?" **plus** Zeile „An der Tafel steht: 2× Dünnbier · 1× Grutbier — der Braumeister hat angeschrieben, was voriges Jahr dort stand." | **eine** Zeile: „Was steht 1351/52 an der Tafel? Angeschrieben: 2× Dünnbier · 1× Grutbier — wie voriges Jahr." Der volle Satz ueber den Braumeister steht im `title` | `fuhre.js:3886` |
+| Knopf „Tafel schließen — Michaeli, das Jahr beginnt" | Knopf „Tafel schließen — Michaeli"; „das Jahr beginnt" steht im `title` | `fuhre.js:3932` |
+| „Solange die Tafel auf dem Tisch liegt, ruht die Woche. WEITER und die Taste Escape legen sie ebenfalls beiseite." | Hinweiszeile „Die Woche ruht, solange die Tafel liegt · WEITER und Escape legen sie beiseite" — der volle Wortlaut im `title` desselben Knopfes | `fuhre.js:3944` |
+
+Zwei Zeilen fuer eine Sache kosten auf einem Anschlag von 265 px Hoehe ein
+Zehntel der Tafel; deshalb zusammengezogen. **Gesagt wird dasselbe, und
+jede Auskunft ist ohne Klick lesbar oder steht im `title` desselben
+Elements.** Aber es ist eine Umformulierung, keine reine Verschiebung, und
+wer die alte Zeile sucht, findet sie so nicht wieder. Die uebrigen vier
+Abweichungen sind Zerlegungen derselben Saetze in andere Zeichenketten.
 
 ### Zwei eigene Fehler beim Bauen, gefunden und behoben
 
