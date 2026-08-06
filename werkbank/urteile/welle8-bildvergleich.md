@@ -9,7 +9,9 @@
 | III · 1884 | **unentschieden** — die gemalte Welt schlägt das Zielblatt, der Bildschirm gibt es wieder her |
 | IV · 1970 | **Zielbild gewinnt** |
 
-*(wird nach der letzten Messung bestätigt oder berichtigt)*
+**Der eine Satz:** *Das Spiel hat das Zielbild beim Malen eingeholt und verliert es unter
+seiner eigenen Oberfläche wieder — 29 % des Rahmens liegen unter Bedienkästen, gegen unter
+4 % im Zielblatt.*
 
 ---
 
@@ -144,6 +146,37 @@ abgemessen, nicht aus einer Datei gelesen; die Größenordnung trägt, die zweit
 
 **Das Verhältnis ist rund 1 : 7,5 im ruhigen Zustand und 1 : 14, sobald ein Blatt aufliegt.**
 
+### Die saubere Trennung: es sind die Kästen, nicht die Bilder
+
+Weil die Ebenentrennung nicht trägt, habe ich sie durch eine **Eigenschaftstrennung** ersetzt
+(`bauorte.mjs`): in den vier oberen Ebenen wird jedes Element ausgeblendet, das einen
+deckenden Grund oder einen sichtbaren Rahmen hat — ein Kasten. Was nur ein freigestelltes
+Bild trägt (Gegnerhof, Fuhrwerke), bleibt stehen. Dieselbe Seite dreimal aufgenommen:
+
+| Epoche | alles über `platte+bau` | davon **Kästen** | davon **gemalte Sprites** |
+|---|---|---|---|
+| 1350 | 29,6 % | **29,0 %** | 0,7 % |
+| 1600 | 30,3 % | **29,5 %** | 0,7 % |
+| 1884 | 29,1 % | **29,1 %** | 0,0 % |
+| 1970 | 29,8 % | **29,5 %** | 0,3 % |
+
+**Die Verdeckung ist fast vollständig Bedienoberfläche.** Was auf den oberen Ebenen gemalt
+ist, kostet zusammen höchstens sieben Zehntel eines Prozents. Damit ist der Einwand
+„ihr habt ja die Welt mitgemessen" erledigt, und zwar mit Bildpunkten.
+
+*Gerätekontrolle:* diese drei Aufnahmen entstanden in einer **anderen Browsersitzung** als
+die Tabelle darüber. Die Spalte „alles über `platte+bau`" reproduziert die dort gemessenen
+Werte 29,6 / 30,3 / 29,1 / 29,8 **auf die Zehntelstelle** — zwei unabhängig erhobene
+Messungen stimmen überein.
+
+### Und die Oberfläche wächst, während man spielt
+
+Nach 30 gespielten Wochen in 1350, **nachdem** das aufliegende Blatt mit dem eigenen
+Schließen-Knopf und viermal Escape weggelegt wurde, deckt sie **51,0 %** (Mittelband
+58,9 %). Der Grund steht in `e1-30-gespielt-frei.png`: das Spiel legt nach dem Jahreswechsel
+**mehrere Blätter hintereinander** auf; Escape blättert nur weiter. `BLATT-KINDER` steht
+danach immer noch bei 7.
+
 > **Eine eigene Fehlmessung, sofort berichtigt.** Mein Beschriftungszähler meldete in 1350
 > neun gekürzte Textknoten. Sechs davon sind `.sud-kartensatz` — und `stil/sud.css:121–126`
 > gibt ihnen `overflow-y: auto`. **Das sind Rollkästen, keine Schnitte.** Genau der
@@ -172,13 +205,22 @@ abgemessen, nicht aus einer Datei gelesen; die Größenordnung trägt, die zweit
 **Wo das Zielblatt gewinnt:**
 
 1. **Der Hof stapelt sich, statt sich zu verteilen.** Nach fünf Käufen liegen im Spiel vier
-   Dächer ineinander: ein strohgelbes Dach (x 880…1240, y 690…830) schneidet quer über das
-   Schindeldach des Brauhauses und über den **Malzboden auf Stelzen**, der in der Aufnahme
-   vor den Käufen (`e1-01`) noch frei und lesbar stand und danach nicht mehr zu erkennen ist.
-   Im Zielblatt steht jedes Hofstück für sich, mit sichtbarem Hofboden dazwischen.
+   Dächer ineinander: das strohgedeckte Dach des **Ochsenstalls** (x 1040…1250, y 680…820;
+   der Ochse steht daneben) schneidet quer über das Schindeldach des Brauhauses und über den
+   **Malzboden auf Stelzen**, der in der Aufnahme vor den Käufen (`e1-01-roh-nackt`,
+   x 1055…1390, y 570…880) noch frei auf seinen Steinpfeilern steht und danach nicht mehr zu
+   erkennen ist. Im Zielblatt steht jedes Hofstück für sich, mit sichtbarem Hofboden
+   dazwischen — und der Malzboden auf Stelzen ist dort eines der drei Motive, die der
+   1350er Prompt ausdrücklich verlangt.
 2. **Die linke Hälfte des ummauerten Hofes bleibt leer.** x 320…700, y 780…1120 ist im
    Spiel unbespielte Wiese und Erde. Im Zielblatt liegt dort ein Stapel von rund zehn
    Fässern und ein Bohlentisch.
+
+   > **Das ist kein Tempoproblem, sondern ein Zeichenproblem.** Der Bauhof meldete nach
+   > 30 Wochen *„Der Hof ist für diese Zeit fertig gebaut"*, und die Aufnahme mit
+   > `?bau=alle` (`e1-20-baualle-nackt.png`) zeigt **dasselbe Bild**: leere linke Hälfte,
+   > dieselbe Dachüberlagerung. 1350 steht bereits an seiner Obergrenze. Mehr Bauten kaufen
+   > zu können, hilft hier nichts.
 3. **Der Vordergrund fährt nicht.** Im untersten Sechstel (y 1280…1536) trägt das Zielblatt
    ein Zweigespann mit Karren und Fuhrmann, das die Straße heraufkommt. Im Spiel liegt dort
    leerer Sandweg mit drei Gänsen und einem Schwein; das einzige Gespann steht klein am Tor.
