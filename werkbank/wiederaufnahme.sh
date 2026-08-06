@@ -124,6 +124,18 @@ if [ "$ANZ" -eq 1 ]; then
 elif [ "$ANZ" -gt 1 ]; then
   weh "$ANZ Veröffentlicher — die jüngeren gezielt per PID beenden, nie pkill mit Muster"
   pgrep -f 'veroeffentlichen\.sh' | sed 's/^/      PID /'
+elif [ "$ZURUECK" != "0" ] && [ "$ZURUECK" != "?" ]; then
+  # KEIN VERÖFFENTLICHER AUF EINEM ALTEN BAUM. Beim siebzehnten Reset am
+  # 6. August stand der Baum 333 Commits zurück, und dieses Skript hat ihm
+  # ahnungslos einen Veröffentlicher danebengestellt. Der committet `-A` über
+  # die ganze Werkbank: hätte in diesem Baum irgendwer eine Datei angefasst,
+  # wäre 333 Commits Arbeit als Rücknahme auf origin gelandet — automatisch,
+  # alle drei Minuten, ohne dass jemand hinsieht.
+  weh "kein Veröffentlicher — und er wird hier auch NICHT gestartet"
+  echo "      Der Baum ist $ZURUECK Commit(s) alt. Reihenfolge:"
+  echo "      1. laufende Veröffentlicher per PID beenden"
+  echo "      2. git reset --hard origin/$ZWEIG"
+  echo "      3. $0 erneut — dann startet er von selbst"
 else
   weh "kein Veröffentlicher"
   [ $NUR_PRUEFEN -eq 1 ] || {
