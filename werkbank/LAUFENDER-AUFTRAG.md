@@ -452,6 +452,31 @@ nachher, sonst ist die Runde nicht auswertbar.
 
 ---
 
+## DER VERÖFFENTLICHER STIRBT AN ALTERSSCHWÄCHE, UND ES SAGT NIEMAND
+
+*6. August, 10:21 UTC.* Er lief mit `veroeffentlichen.sh 180 14400` — Takt drei
+Minuten, **Laufzeit vier Stunden**. Um 08:24 war die Zeit um, er schrieb
+`fertig` nach `/tmp/pub.log` und war weg. Danach lagen **21 Dateien** knapp zwei
+Stunden ungesichert, darunter die ganze Nacharbeit der STADT und zwölf
+ρ-Läufe — genau in dem Fenster, in dem ein Reset alles gekostet hätte.
+
+**Zwei Dinge daraus, beide bezahlt:**
+
+1. **Die Laufzeit muss länger sein als die Welle.** Neu gestartet mit
+   `180 43200`, also zwölf Stunden. Eine Welle dauert in diesem Lauf drei bis
+   sechs Stunden; vier waren zu knapp bemessen.
+2. **Die Ausgabe von `wiederaufnahme.sh` nie abschneiden.** Um 09:21 habe ich
+   `| head -14` genommen; die Liste der uncommitteten Dateien war lang, und die
+   Zeile über den Veröffentlicher stand darunter. **Ob das Skript ihn damals neu
+   gestartet hat, ist nicht mehr feststellbar** — `/tmp/pub.log` wird bei jedem
+   Start überschrieben und trägt nur zwei Startzeilen und ein `fertig`, was
+   gegen einen dritten Start spricht; warum keiner erfolgte, ist offen. **Und
+   genau das ist der Punkt: ich habe eine Prüfung laufen lassen und ihr Ergebnis
+   nicht gelesen.** Ein Prüfbericht, von dem man nur den Anfang liest, ist kein
+   Prüfbericht. Die Zeile steht ab jetzt in jedem Selbst-Check vollständig da.
+
+---
+
 ## DER VERÖFFENTLICHER LIEF MIT EINER ALTEN FASSUNG SEINER SELBST
 
 *Gefunden am 5. August vom blinden Kritiker DER PREIS — er fand seine eigene
