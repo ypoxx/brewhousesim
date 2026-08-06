@@ -39,23 +39,28 @@ await s.screenshot({ path: `${ZIEL}/e${E}-a-laden.png` });
 log(`AUFNAHME A -> e${E}-a-laden.png`);
 
 /* --- spielen --- */
-const BAUWORT = /(bau|errichte|graben|kaufe[nx]?|anlegen|stellen|setzen|hof)/i;
+const klickZug = async zug => s.evaluate(q => {
+  const el = document.querySelector(`[data-zug="${q}"]`);
+  if (!el || el.disabled) return false;
+  el.click(); return true;
+}, zug);
+
 let gebaut = 0, klicks = 0;
 for (let i = 0; i < WOCHEN; i++) {
-  /* erst alles bauen, was bezahlbar ist */
-  for (let runde = 0; runde < 4; runde++) {
+  /* Bauhof aufklappen und alles bauen, was bezahlbar ist */
+  await klickZug('stadt:bauhof'); klicks++;
+  await s.waitForTimeout(220);
+  for (let runde = 0; runde < 5; runde++) {
     const traf = await s.evaluate(() => {
-      const kand = [...document.querySelectorAll('button[data-zug]')].filter(el => {
-        if (el.disabled) return false;
+      const kand = [...document.querySelectorAll('[data-zug^="stadt:bau:"]')].filter(el => {
+        if (el.disabled || el.getAttribute('aria-disabled') === 'true') return false;
+        if ((el.dataset.zug || '') === 'stadt:bau:seite') return false;
         const r = el.getBoundingClientRect();
-        if (r.width < 4 || r.height < 4) return false;
-        const zug = el.dataset.zug || '';
-        return /^(stadt|hof):.*(bau|kauf|errichte|grab)/i.test(zug) ||
-               /^stadt:bau/i.test(zug) || /bau:/i.test(zug);
+        return r.width > 4 && r.height > 4;
       });
       if (!kand.length) return null;
       const el = kand[0];
-      const t = (el.textContent || '').trim().slice(0, 60);
+      const t = (el.textContent || '').trim().slice(0, 70);
       const zug = el.dataset.zug;
       el.click();
       return { zug, t };
@@ -63,8 +68,14 @@ for (let i = 0; i < WOCHEN; i++) {
     if (!traf) break;
     gebaut++; klicks++;
     log(`bauen: ${traf.zug} — ${traf.t.replace(/\s+/g, ' ')}`);
-    await s.waitForTimeout(120);
+    await s.waitForTimeout(200);
   }
+  /* Bauhof wieder zuklappen, damit WEITER frei liegt */
+  await s.evaluate(() => {
+    const b = document.querySelector('[data-zug="stadt:bauhof"]');
+    if (b && b.getAttribute('aria-expanded') === 'true') b.click();
+  });
+  await s.waitForTimeout(150);
   /* Woche weiter */
   const ok = await s.evaluate(() => {
     const k = document.querySelector('[data-zug="weiter"]');
