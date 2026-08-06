@@ -567,3 +567,14 @@ die Kurzzeichen aus `stuecke/fuhre-daten.js:86` bzw.
 und „FAE", und **kein leeres Rechteck darunter**. Das ist ein Blick, keine
 Messung — der Kritiker hat seine Rechtecke in einem anderen Spielstand
 gesehen als jeder, den ich nachstellen konnte.
+
+---
+
+# ρ — DIE ZWEITE MESSLATTE
+
+Gemessen mit `rueckkopplung-r3/linie.mjs` (400 Wochen), ausgewertet mit
+`fuhre-w6/schnitte.py` (drei Schnitte) und `rueckkopplung-r3/auswerten.py`
+(Jahre unter 1×). **VORHER** = die Messung des Vorgängers
+(`rho-vorher.txt`, Stand `37f4b44`); **NACHHER** = drei Sätze je vier
+Epochen auf dem Nachstand 8931, jeder Satz durch das Messfenster.
+
