@@ -39,6 +39,8 @@ for (const e of EPS) {
       blaetter: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.blaetter() : null,
       rand: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.ueberRand() : null,
       geklemmt: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.geklemmt() : null,
+      ohneGriff: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.ohneGriff() : null,
+      tafeln: BRAUHAUS.haushalt ? BRAUHAUS.haushalt.tafeln() : null,
       lage: (BRAUHAUS.lage || []).length,
       lagewo: (BRAUHAUS.lage || []).map(x => x.text),
       verdeckt: (function () { try { return BRAUHAUS.stadt.rahmen.verdeckt().length; } catch (x) { return 'x'; } }()),
@@ -57,7 +59,8 @@ for (const e of EPS) {
   console.log('  pruefe():', JSON.stringify(d.pruefe));
   console.log('  blaetter:', JSON.stringify(d.blaetter));
   console.log('  ueberRand:', JSON.stringify(d.rand));
-  console.log('  geklemmt:', JSON.stringify(d.geklemmt));
+  console.log('  geklemmt:', JSON.stringify(d.geklemmt), ' ohneGriff:', JSON.stringify(d.ohneGriff));
+  console.log('  TAFELN>200k:', JSON.stringify(d.tafeln));
   console.log('  Preisbruch:', JSON.stringify(d.brueche));
   await s.close();
 }

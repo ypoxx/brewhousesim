@@ -127,11 +127,45 @@
     return p.length > 3 ? p[3] : 1;
   }
 
-  /* Weggeschnitten ist nicht offen: `clip-path: inset(50%)` traegt die
-     Huelle weiter, deckt aber nichts. `.stadt-zugeklappt` und
-     `.kern-blatt-zu` arbeiten beide so. */
-  function weggeschnitten(c) {
-    return /inset\(\s*50%/.test(c.clipPath || '');
+  /* WEGGESCHNITTEN IST NICHT OFFEN — UND ES VERERBT SICH NICHT.
+
+     `clip-path: inset(50%)` traegt die Huelle weiter und deckt nichts;
+     `.stadt-zugeklappt`, `.stadt-verdeckt` und `.kern-blatt-zu` arbeiten alle
+     drei so. Der erste Versuch hat nur das Element selbst gefragt — und lag
+     damit um mehr als das Doppelte daneben: `clip-path` VERERBT SICH NICHT,
+     also meldete `getComputedStyle` fuer jedes KIND eines zugeklappten
+     Bretts brav `none`. Gemessen im Ladezustand E1: der Haushalt sagte
+     54,4 % gesamt und 1.442.176 px fuer DEN SUD, waehrend das
+     photographische Geraet 19,9 % und 87.981 px misst. Die ganze Differenz
+     waren die vier `.sud-achse` und ihre Geschwister INNERHALB des
+     zugeklappten `.sud-brett`.
+
+     Deshalb geht die Frage jetzt den Weg nach oben, bis zur Buehne, mit
+     einem Gedaechtnis fuer die gemeinsamen Vorfahren. Gefragt wird nur fuer
+     Elemente, die die Groessen- und die Kastenprobe schon bestanden haben —
+     das sind einige hundert, nicht einige tausend. */
+  function weggeschnitten(el, memo) {
+    var kette = [];
+    var n = el;
+    var i;
+    while (n && n.nodeType === 1 && n.id !== 'buehne') {
+      if (memo.has(n)) {
+        var v = memo.get(n);
+        for (i = 0; i < kette.length; i++) memo.set(kette[i], v);
+        return v;
+      }
+      var c = getComputedStyle(n);
+      if (/inset\(\s*50%/.test(c.clipPath || '') || parseFloat(c.opacity) < 0.05
+          || c.visibility === 'hidden' || c.display === 'none') {
+        memo.set(n, true);
+        for (i = 0; i < kette.length; i++) memo.set(kette[i], true);
+        return true;
+      }
+      kette.push(n);
+      n = n.parentElement;
+    }
+    for (i = 0; i < kette.length; i++) memo.set(kette[i], false);
+    return false;
   }
 
   function istKasten(c) {
@@ -170,6 +204,7 @@
     var liste = [];
     if (!bu) return { liste: liste, breite: VB, hoehe: VH };
     var alle = bu.querySelectorAll('*');
+    var memo = new Map();
     for (var i = 0; i < alle.length; i++) {
       var el = alle[i];
       var r = el.getBoundingClientRect();
@@ -182,8 +217,8 @@
       var c = getComputedStyle(el);
       if (c.visibility === 'hidden' || c.display === 'none') continue;
       if (parseFloat(c.opacity) < 0.05) continue;
-      if (weggeschnitten(c)) continue;
       if (!istKasten(c)) continue;
+      if (weggeschnitten(el, memo)) continue;
       liste.push({
         el: el,
         stueck: wemGehoert(el),
@@ -327,6 +362,7 @@
          BRAUHAUS.blatt.melde(el, function () { ...zumachen... }); */
   var gemeldet = [];       /* [{el, zu}] */
   var geklemmt = {};       /* welches Blatt musste geklemmt werden — fuer W11 */
+  var ohneGriff = {};      /* welches Blatt hat keinen Griff — fuer W11 */
 
   function melde(el, zu) {
     if (!el || typeof zu !== 'function') return;
@@ -421,21 +457,24 @@
     return null;
   }
 
-  /* Schliesst EIN Blatt. Gibt zurueck, womit — fuer den Bericht. */
-  function schliesse(k) {
+  /* Schliesst EIN Blatt mit dem Griff DES STUECKS. `klemmen` erlaubt als
+     letzten Weg die Klemme des Rahmens — das tut nur Escape, nie die Wache. */
+  function schliesse(k, klemmen) {
     var eigen = eigenerGriff(k.el);
     if (eigen) { B.wage('haushalt:griff', eigen); return 'griff'; }
     var kn = knopfImBlatt(k.el);
     if (kn) { kn.click(); return 'knopf:' + kn.getAttribute('data-zug'); }
     var r = reiterZu(k);
     if (r) { r.click(); return 'reiter:' + r.getAttribute('data-zug'); }
+    var name = k.stueck + ' .' + k.klasse;
+    if (!klemmen) { ohneGriff[name] = (ohneGriff[name] || 0) + 1; return 'kein-griff'; }
     /* Letzter Weg: wegklemmen. Weggeschnitten, nicht versteckt — Platz,
        Groesse und Umbruch bleiben stehen, gedeckt wird nichts, und die
        Klemme faellt beim naechsten Neuzeichnen des Stuecks von selbst ab.
        Wer hier landet, steht im Bericht und bekommt in Welle 11 einen
        eigenen Schliessknopf. */
     if (k.el.classList) k.el.classList.add('kern-blatt-zu');
-    geklemmt[k.stueck + ' .' + k.klasse] = (geklemmt[k.stueck + ' .' + k.klasse] || 0) + 1;
+    geklemmt[name] = (geklemmt[name] || 0) + 1;
     return 'klemme';
   }
 
@@ -445,15 +484,22 @@
     var offen = blaetter();
     if (!offen.length) return [];
     if (!alles && offen.length < 2) return [];
-    /* Wer zuletzt aufgeschlagen wurde, bleibt liegen. Die Reihenfolge im
-       DOM ist die des Aufschlagens nicht zuverlaessig; deshalb bleibt das
-       Blatt mit dem hoechsten z-Wert bzw. das zuletzt eingehaengte. */
-    var behalte = alles ? null : offen[offen.length - 1].el;
+    /* Wer zuletzt aufgeschlagen wurde, bleibt liegen — das ist das zuletzt
+       ins DOM gehaengte Blatt, also das letzte in der Baumreihenfolge. */
+    var behalte = null;
+    if (!alles) {
+      behalte = offen[0].el;
+      for (var i = 1; i < offen.length; i++) {
+        if (behalte.compareDocumentPosition(offen[i].el) & Node.DOCUMENT_POSITION_FOLLOWING) {
+          behalte = offen[i].el;
+        }
+      }
+    }
     var getan = [];
     offen.forEach(function (k) {
       if (k.el === behalte) return;
       if (!k.el.isConnected) return;
-      getan.push(k.stueck + ' .' + k.klasse + ' -> ' + schliesse(k));
+      getan.push(k.stueck + ' .' + k.klasse + ' -> ' + schliesse(k, !!alles));
     });
     return getan;
   }
@@ -490,9 +536,16 @@
      und damit die zweite Messlatte bewegen. Sie bremst nichts, solange
      nichts zu tun ist: der Blick kostet einen Durchgang durch die Kaesten,
      hoechstens dreimal in der Sekunde. */
+  /* SCHONFRIST. Der Rahmen der STADT klappt beim Laden alle Bretter zu, und
+     er nimmt sich dafuer 2500 ms (`stadt.js:LADEZEIT`). Wer vorher eingreift,
+     greift in einen Aufbau ein, der noch laeuft. Drei Sekunden Ruhe. */
+  var LADERUHE = 3000;
+  var gestartet = Date.now();
+
   var letzterBlick = 0;
   function wache() {
     var jetzt = Date.now();
+    if (jetzt - gestartet < LADERUHE) return;
     if (jetzt - letzterBlick < 350) return;
     letzterBlick = jetzt;
     B.wage('haushalt:wache', function () { raeumeAuf(false); });
@@ -521,8 +574,21 @@
         };
       });
     },
+    /* JEDER Kasten ueber 200.000 px^2 — Blatt wie Brett. Das ist die Zahl,
+       nach der Auflage A16 fragt, und zugleich die Liste fuer Welle 11. */
+    tafeln: function () {
+      return grosseKaesten().map(function (k) {
+        return {
+          stueck: k.stueck, klasse: k.klasse, blatt: istBlatt(k),
+          mass: Math.round(k.b) + '×' + Math.round(k.h)
+            + ' @' + Math.round(k.x) + ',' + Math.round(k.y),
+          flaeche: Math.round(k.flaeche)
+        };
+      });
+    },
     raeumeAuf: raeumeAuf,
     geklemmt: function () { return geklemmt; },
+    ohneGriff: function () { return ohneGriff; },
     /* Kurzfassung fuer die Konsole — eine Zeile je Stueck. */
     tafel: function () {
       var m = miss();
