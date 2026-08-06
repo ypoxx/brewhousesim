@@ -361,3 +361,57 @@ Brauerinnen** wieder im Bild. Genau das Motiv, das der Kritiker vermisst hat.
 ## Zwischenstand der uebrigen Messungen
 
 *(wird laufend ergaenzt; alle Rohdaten in `messungen/`)*
+
+---
+
+# NEUANLAUF NACH DEM CONTAINER-RESET (6.8., 21:28 UTC)
+
+Der Reset um 21:2x hat die beiden Haefen und alle laufenden Messungen
+getoetet. Auf der Platte war alles da. Neu aufgesetzt:
+
+* `aufsicht/messstand.sh 7896ee6 8941` → **MESSSTAND 7896ee6** (Fassung geprueft)
+* `erbe-w11/nachstand.sh 8942` → **NACHSTAND erbe-w11:7896ee6+c87fe55d0ad1**
+
+Die Pruefsumme `c87fe55d0ad1` ist der ausgelieferte Stand meiner fuenf
+Dateien. Der Arbeitsbaum ist inzwischen sauber — die Aufsicht hat alle drei
+Stuecke committet, `git diff 7896ee6 HEAD -- spiel/` traegt jetzt auch
+`fuhre*` und `gegner*`. Deshalb bleibt der isolierte Nachstand richtig und
+noetig.
+
+## Was der Reset wirklich gekostet hat — genau drei Dinge
+
+| | Zustand vorgefunden | |
+|---|---|---|
+| `messungen/rho/` | **existierte nicht** | rho war noch nicht gelaufen |
+| `messungen/nach2-spielprobe.txt` | **abgeschnitten** — nur „MESSFENSTER: belegt, warte" | im Wartefenster gestorben |
+| `messungen/*brettprobe*` | **fehlten** | nie gelaufen |
+
+Alles andere lag vollstaendig vor und ist nachgeprueft:
+
+* `nach2-messen-laden.txt` ist **Ziffer fuer Ziffer gleich** mit
+  `nach-messen-laden.txt` (17.297 / 15.465 / 17.445 / 22.497 px). Der zweite
+  Anlauf hat an der Leiste nur die Tinte geaendert (Stufe groesser, fett, vier
+  Lagen Lichthof) — die Kastenhuelle ist dieselbe. **Die photographische
+  Tabelle oben gilt fuer den ausgelieferten Stand.**
+* `nach2-laden.txt` traegt die Buchmasse **1101x580 / 581 / 539 / 619** — also
+  den ausgelieferten Stand, nicht den ersten Anlauf (829). Die Innensicht
+  19.296 / 17.184 / 19.488 / 24.960 ist damit ebenfalls die ausgelieferte.
+* `nach-deckung-*` und `nach-w30` gelten unveraendert weiter: **im Ladezustand
+  und nach 30 Wochen steht das Buch gar nicht im DOM**, seine Hoehe kann diese
+  Zahlen also nicht bewegen.
+
+## Der Rest des Satzes, in dieser Reihenfolge
+
+1. `rho.sh` — 8 Laeufe, abwechselnd VOR/NACH, je 400 Wochen, einzeln durchs
+   Messfenster. **Gestartet 21:28:21 UTC.**
+2. `nach2-spielprobe` — der abgeschnittene Lauf, neu.
+3. `blick.mjs` neu — **die Bilder sind fort**, und zwar nicht durch den Reset
+   allein: `.gitignore:67` (`**/schuss/**/*.png`) haelt sie aus dem Baum, also
+   hat die Aufsicht sie nie gesichert. Die Messtexte lagen alle da, weil sie
+   verfolgt werden. **Wer in dieser Werkbank ein Bild ansieht, muss wissen,
+   dass es den naechsten Reset nicht ueberlebt** — der Befund gehoert der
+   Werkbank, nicht mir. Ich sehe die Bilder neu an, statt die Urteile meines
+   ersten Anlaufs abzuschreiben.
+4. `vor-brettprobe` / `nach2-brettprobe` — die Gegenprobe zum Sud-Befund.
+
+

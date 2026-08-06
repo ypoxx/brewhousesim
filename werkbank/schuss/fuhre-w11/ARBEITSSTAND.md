@@ -3,6 +3,25 @@
 *Auftrag: `gauntlet/WELLE-11.md`, Abschnitt DIE FUHRE. Vorzustand `7896ee6`.
 Gemessen wird einzeln, jeder Browser durch `aufsicht/messfenster.sh`.*
 
+> ### NEUANLAUF nach Container-Reset, 6.8. ~21:2x UTC
+>
+> Der Behaelter ist waehrend des letzten Laufs weggefallen. **Verloren ist
+> nichts, was zaehlt** — die Aufsicht hatte alles committet (`ff9bd4a`), der
+> Arbeitsbaum ist sauber. Was der Reset genommen hat:
+>
+> | | Zustand |
+> |---|---|
+> | `spiel/stuecke/fuhre.js`, `spiel/stil/fuhre.css` | **da**, committet |
+> | dieser Ordner samt `messungen/` | **da**, committet |
+> | `messungen/rho-vorher/e4-a.json` | **fehlte** — der Lauf war um 19:53:41 gestartet und nie fertig geworden. **Nachgeholt, siehe §3.7** |
+> | `bilder/` (Aufnahmen) | fort, und das ist **so vorgesehen**: `.gitignore:67` haelt `**/schuss/**/*.png` aus der Historie. Bilder wandern in diesem Lauf grundsaetzlich nicht mit; ihre Aussagen stehen als Zahl oder als Quelltextstelle daneben |
+> | `/tmp/messstand/…`, `/tmp/fuhrestand/…` | fort, aus den Skripten in Sekunden wieder aufgesetzt |
+>
+> Neu aufgesetzt: `aufsicht/messstand.sh 7896ee6 8951` und
+> `fuhre-w11/nachstand.sh 8952`. **Die Fassungsprobe aus §3.8 ist dabei von
+> `/tmp` auf `git` umgestellt worden und damit zum ersten Mal
+> nachstellbar** — siehe dort.
+
 | Stand auf Hafen | was |
 |---|---|
 | 8951 | VORZUSTAND `7896ee6` (`aufsicht/messstand.sh 7896ee6 8951`) |
@@ -121,6 +140,27 @@ Stelle.
 | `stuecke/fuhre.js` | `zeichneSommer` zerlegt: **Anschlag** (liegt) und **Bericht** (klappt auf), `Z.berichtOffen`, neuer Zug `fuhre:sommer-bericht` | A16 · Auftrag DIE FUHRE |
 | `stil/fuhre.css` | `.fu-sommerblatt` gedeckelt auf `max(26%,700px)` × `max(17%,265px)`; Kopf/Fuss neu; `.fu-weit` fuer den aufgeschlagenen Bericht | dito |
 | `stil/fuhre.css` | `.fu-marke .fu-mbetten i` gefuellt statt umrandet | Auflage 7 |
+
+### Die ZWEITE Stelle mit `stopImmediatePropagation()` — stehengelassen, mit Grund
+
+Der Vorzustand hatte **vier** solcher Aufrufe in `fuhre.js`, nicht drei:
+`3523`, `3529`, `3541` in `tastenSperre` — und `3897` in `endeHorcher`.
+Die Auflage nennt `fuhre.js:3517`, und das ist der Erklaerkopf ueber
+`tastenSperre`; diese drei sind umgestellt (heute `3549/3555/3567`).
+
+**Der vierte steht noch da** (heute `fuhre.js:4089`), und das ist Absicht:
+`endeHorcher` ist „Schloss 2" des Hofschlusses. Er haengt in der Fangphase
+auf `document` und hat die eine Aufgabe, nach dem Ende der Partie jeden
+Zug abzufangen, **auch solche, die an rohen Knoepfen anderer Stuecke
+haengen** (der Quelltext nennt DEN GEGNER beim Namen). Genau dafuer
+braucht er `stopImmediatePropagation()`: `stopPropagation()` liesse einen
+Horcher am selben Knoten weiterlaufen, und der duerfte dann nach dem Ende
+noch ziehen. Hier ist das Zuvielnehmen der Zweck, nicht ein Versehen.
+
+Wer die Auflage weiterdenkt, sollte diese Stelle trotzdem kennen. Sie
+liegt in derselben Datei, sie tut dasselbe, und sie ist aus einem anderen
+Grund richtig. Angefasst habe ich sie nicht — eine Aenderung daran haette
+das Ende der Partie beruehrt und mit ihm die ρ-Messung dieser Welle.
 
 **Was ausdruecklich NICHT angefasst wurde**, weil die zweite Messlatte
 daran haengt: die Klasse `.fu-sommerblatt`, die Zugschluessel
@@ -414,20 +454,50 @@ unter 1× bleiben in jedem Lauf bei hoechstens 2 von 14 (erlaubt 2,33).
   `7896ee6` Ziffer fuer Ziffer dieselben wie auf dem Nachstand.
 
 
-### 3.8 Welche Fassung gemessen wurde
+### 3.8 Welche Fassung gemessen wurde — jetzt in `git` nachstellbar
 
-Der Nachstand auf Hafen 8952 traegt die Marke `7896ee6+118b191467`. Die
-Dateien im Arbeitsbaum sind seither noch einmal angefasst worden — **nur
-Kommentare**, nachpruefbar mit
+Der Nachstand, auf dem §3.1–3.7 gemessen wurden, trug die Marke
+`7896ee6+118b191467`. Diese Marke ist die Pruefsumme der eingespielten
+Stueckdateien (`nachstand.sh`), und sie laesst sich einem Commit zuordnen.
+Beim Neuanlauf nachgerechnet, ueber alle Commits, die `fuhre.js` oder
+`fuhre.css` in dieser Welle angefasst haben:
+
+| Commit | Marke | Zeit |
+|---|---|---|
+| `8ccdc7a` | `cf76271455` | 17:52:23 ← **Arbeitsbaum heute** |
+| `d1d758f` | `1d4855fe23` | 17:49:21 |
+| **`91fb766`** | **`118b191467`** | **17:40:15 ← gemessen** |
+| `ae2fb18` | `eb8799232a` | 17:34:11 |
+
+Nachzurechnen mit
 
 ```
-diff /tmp/fuhrestand/7896ee6+118b191467/spiel/stuecke/fuhre.js spiel/stuecke/fuhre.js
-diff /tmp/fuhrestand/7896ee6+118b191467/spiel/stil/fuhre.css  spiel/stil/fuhre.css
+git archive <commit> spiel/stuecke spiel/stil | tar -x -C /tmp/x
+( cd /tmp/x && LC_ALL=C ls spiel/stuecke/fuhre*.js spiel/stil/fuhre*.css \
+  | LC_ALL=C sort | xargs md5sum | md5sum | cut -c1-10 )
 ```
 
-Beide Diffs enthalten ausschliesslich Text innerhalb von `/* … */`
-(Zahlen in den Kommentaren, die nach der Messung berichtigt wurden). Keine
-Regel, kein Selektor, keine Anweisung ist verschieden.
+**Der gemessene Stand ist `91fb766`. Was seither dazugekommen ist, sind
+zwei Commits, und sie enthalten ausschliesslich Kommentar:**
+
+```
+git diff 91fb766 HEAD -- spiel/stuecke/fuhre.js spiel/stil/fuhre.css
+```
+
+Der Diff ist 42 Zeilen lang und liegt **vollstaendig innerhalb von
+`/* … */`**: berichtigte Zahlen in den Erklaerkoepfen (`20%/560px` →
+`26%/700px`, `4,2 %` → `4,5 %`, der Hinweis auf F1, dass nur noch der Fuss
+klebt). Keine Regel, kein Selektor, keine Anweisung, keine Zeile Code ist
+verschieden. Die alte Fassung dieses Abschnitts verwies auf zwei Diffs
+gegen `/tmp/fuhrestand/…`; die hat der Container-Reset genommen, und ein
+Beleg, der einen Neustart nicht ueberlebt, ist kein Beleg. Der Weg ueber
+`git` ist von jedem Behaelter aus derselbe.
+
+**Der Hafen 8952 traegt seit dem Neuanlauf `7896ee6+cf76271455`**, also den
+Arbeitsbaum von heute. Alle Zahlen, die ab dem Neuanlauf dazukommen (§3.9),
+stehen auf dieser Marke; die aelteren auf `118b191467`. Da die beiden sich
+nur im Kommentar unterscheiden, sind sie vergleichbar — nachgemessen ist es
+trotzdem, siehe §3.9.
 
 ---
 
