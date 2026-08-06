@@ -1,1 +1,25 @@
 MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 229s
+MESSFENSTER offen — load 1.66 2.00 3.37
+=== E1 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1224x60 @764,46 = 73463 px (10.4 % des obersten 1/6)
+  hauszeile  772x28 @990,160 = 21236 px (3.0 % des obersten 1/6)
+  deckung    895x24 @1664,1371 = 21267 px (3.0 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 17.8 %   oberstes 1/6 31.0 %   (79 Kaesten)
+  gegner     219584 /  28000 px  UEBER +191584   oben      0 /   8000
+  erbe       136192 /  28000 px  UEBER +108192   oben      0 /   6000
+  stadt      110240 /  40000 px  UEBER +70240   oben  58752 /  26000  UEBER +32752
+  kern        98608 / 120000 px           oben  78848 /  80000
+  sud         87840 /  34000 px  UEBER +53840   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        30400 /  20000 px  UEBER +10400   oben      0 /  12000
+  fuhre        2496 /  34000 px           oben      0 /  10000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["gegner: 219584/28000 px","erbe: 136192/28000 px","stadt: 110240/40000 px  oben 58752/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 87840/34000 px","name: 30400/20000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {"erbe .erb-buch blatt":1}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: ["0ms: erbe .erb-buch blatt -> klemme+reiter:stadt:reiter:erbe-blatt-erb-buch"]
+  Preisbruch: []
