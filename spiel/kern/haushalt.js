@@ -555,12 +555,34 @@
     });
   }
 
-  /* Escape. Der Horcher von kern/kopf.js ist frueher angemeldet und
-     schliesst zuerst das eigene Blatt des Rahmens; danach kommt dieser. */
+  /* ESCAPE — UND WARUM DIESER HORCHER IN DER FANGPHASE HAENGT.
+
+     Erster Versuch: ein gewoehnlicher Horcher in der Blasenphase, wie ihn
+     kern/kopf.js schon hat. Gemessen (rahmenprobe.mjs, 30 Wochen + Escape):
+     `spur()` blieb leer, `geklemmt()` blieb leer — der Horcher hat die
+     Taste NIE GESEHEN, und das Erbe-Buch stand danach da wie zuvor.
+
+     Der Grund steht in `stuecke/fuhre.js:3517` (`tastenSperre`): DIE FUHRE
+     haengt ihren Horcher in der FANGPHASE an `document` und ruft
+     `stopImmediatePropagation()`, solange ihre Tafel obenauf liegt. Das
+     nimmt jedem spaeteren Horcher die Taste ab — auch dem des Rahmens in
+     kern/kopf.js. Die Absicht ist richtig (die Tafel soll die Taste
+     bekommen), die Wirkung reicht weiter als beabsichtigt.
+
+     Der Rahmen haengt deshalb ebenfalls in der Fangphase — und weil
+     `kern/haushalt.js` VOR jedem Stueck geladen wird, ist er dort der
+     erste. Er nimmt niemandem etwas ab: er haelt die Taste nicht auf, er
+     raeumt nur hinterher auf. DIE FUHRE schliesst ihre Tafel wie bisher.
+
+     FUER WELLE 11 benannt: `stuecke/fuhre.js:3517` sollte
+     `stopPropagation()` statt `stopImmediatePropagation()` rufen, oder den
+     Horcher am eigenen Blatt statt an `document` fuehren. Abnahme: mit
+     aufliegender Sommertafel schliesst Escape sie UND der Chronikgriff des
+     Rahmens (`kern:chronik`) laesst sich mit Escape wieder schliessen. */
   document.addEventListener('keydown', function (e) {
     if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
     if (e.key === 'Escape') tischLeeren();
-  });
+  }, true);
 
   /* HOECHSTENS EIN GANZSEITIGES BLATT.
      Gedrosselt, und mit Absicht sparsam: die Regel greift nur, wenn wirklich
