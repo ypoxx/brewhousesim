@@ -112,3 +112,23 @@ das war der Fehler beim ersten Anlauf).
 `bild-w9/deckung.mjs` im Ladezustand **und nach 30 Wochen ohne Escape** ·
 `haushalt.pruefe()` · `verdeckt()` = 0 · ρ je Epoche. Danach ein **blinder
 Kritiker** mit derselben Frage: **gewinnt das Zielbild noch?**
+
+> ### BERICHTIGUNG DER ABNAHME, vom Builder DAS ERBE gefunden — 7. August
+>
+> Die Formel oben sagt „nach 30 Wochen **ohne** Escape". Das war richtig gegen
+> den Stand der Welle 10, wo die Tafel lag, bis man sie wegdrückte. **Der Fall
+> hat sich umgedreht:** ohne Escape ist der Stand jetzt sauber (14,0–14,3 %,
+> `tafeln()` leer — DIE FUHRE hat ihre Abnahme erfüllt). **Ein Escape-Druck
+> bringt ihn auf 43,1 %:** `.sud-brett` schlägt auf, deckt 33,4 % der Bühne,
+> trägt kein `blatt`-Merkmal, und ein zweiter Escape erreicht es nicht.
+>
+> **Der Spieler drückt Escape.** Eine Abnahme, die nur den Zustand ohne Escape
+> misst, ginge mit 14 % in die Akten und mit 43 % zum Spieler. **Gemessen werden
+> ab sofort beide Zustände** — ohne Escape *und* mit einem Escape —, und zwar in
+> der Dreifachprobe der Aufsicht.
+>
+> **Daraus folgt eine Auflage an DEN SUD** für die nächste Welle: `.sud-brett`
+> meldet sich mit `BRAUHAUS.blatt.melde()` an wie jedes andere ganzseitige
+> Blatt. *Abnahme:* nach 30 × WEITER und **einem** Escape liegt in allen vier
+> Epochen keine Tafel über 200.000 px² offen, und die Gesamtdeckung bleibt unter
+> 20 %.
