@@ -157,9 +157,34 @@ var STADT_DATEN = {
      wo bis Welle 8 der schwebende BAHNHOF-Zettel hing — der ist jetzt auf
      dem Dach (siehe oben), die Stelle ist frei.
      -------------------------------------------------------------------- */
+  /* EIN WIDERSPRUCH ZWISCHEN ZWEI VORGABEDATEIEN, gefunden beim Nachsehen
+     des ersten Versuchs, und deshalb hier verzeichnet statt stillschweigend
+     umschifft: `kern/welt.js` laesst den Adler in I und II auf dem
+     'marktplatz' sitzen (`orte: {1:'marktplatz', 2:'marktplatz',
+     3:'konkurrenz', 4:'konkurrenz'}`), `kern/orte.js` sagt dasselbe
+     ("Vor 1884 sitzt er in der Stadt", `konkurrenz` traegt `ab: 3`) —
+     DER GEGNER zeichnet seinen Hof aber in ALLEN VIER Epochen auf
+     'konkurrenz' (gegner-daten.js, `sitz` 1..4). Der blinde Kritiker hat den
+     Hof in 1600 bei x 2060…2260 gesehen, also jenseits des Flusses; das ist
+     `konkurrenz`. Der erste Versuch fragte `welt.gegnerOrt()` und liess das
+     Schild damit in genau den beiden Epochen weg, in denen es der Kritiker
+     vermisst hat (nachgesehen in stadt-w9/bild/schnitt-e2-adler.png).
+     Also richtet sich das Schild nach dem, was gemalt ist. Der Widerspruch
+     selbst gehoert nicht mir und wird nur gemeldet.
+
+     Der Versatz je Epoche folgt dem, was dort steht — und er ist ZWEIMAL
+     gesetzt worden, weil der erste Platz falsch war: unter dem Hof (wie
+     ST. MICHAEL unter seiner Kirche) lag er in I vollstaendig hinter der
+     Karteikarte DES GEGNERS und in II halb hinter seinem Vorsprungsband
+     (gn-schnitt-e1.png und -e2.png). Jetzt sitzt er in allen vier Epochen
+     AUF dem Gebaeude, wie das Zielblatt es zeigt ("ein grosses ockerfarbenes
+     Brauhaus mit gemaltem Schild BRAUEREI ADLER"): in III auf der gemalten
+     Tafel (A4), in I, II und IV auf der Wand darueber.
+     -------------------------------------------------------------------- */
   gegnername: {
-    konkurrenz: { dx: 1.7, dy: 0.3, gross: 0.62 },
-    bahnhof:    { dx: -1.2, dy: 4.6, gross: 0.62 }
+    adler: { ort: 'konkurrenz', dx: 1.7, dy: 0.3, gross: 0.62,
+             versatz: { 1: { dx: -2, dy: -1.5 }, 2: { dx: -2, dy: -2.5 } } },
+    konzern: { ort: 'bahnhof', dx: -1.2, dy: 4.6, gross: 0.62 }
   },
 
   /* --------------------------------------------------------------------

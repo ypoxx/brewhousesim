@@ -1766,14 +1766,37 @@
      liesse das Schild genau in den beiden Epochen weg, in denen der Kritiker
      es vermisst hat. Der Ort selbst bewegt sich nicht — es haengt nur ein
      zweites Ding daran. */
-  function zeichneGegnername(fach) {
+  /* WARUM DAS SCHILD DES GEGNERS NICHT IN DER EBENE 'bau' LIEGT wie die
+     drei anderen Ortsmarken, sondern in einem eigenen Fach der Ebene 'hand':
+     der Hof des Gegners ist ein Sprite in `ebene-marken`, also UEBER 'bau'.
+     Beim ersten Anlauf lag das Schild deshalb hinter seinem eigenen Haus —
+     im Ausschnitt gn-schnitt-e1.png ragen links und rechts vom Giebel noch
+     "BR" und "R" heraus, mehr nicht. Ein Schild, das hinter dem Gebaeude
+     liegt, das es benennt, ist kein Schild.
+     Das Fach ist meins allein (spiel/LIESMICH.md: "Du darfst mehrere Ebenen
+     benutzen — jedes Fach ist deins allein"), und es kostet, was es kostet:
+     vier kleine Kaesten in einer der vier oberen Ebenen, die in der
+     Deckungsmessung mitzaehlen. Gemessen sind das 0,1 Punkte. */
+  function gegnernamenfach() {
+    var fach = B.ebene('hand', 'stadt');
+    B.leere(fach);
+    return fach;
+  }
+
+  function zeichneGegnername() {
     if (!K.gegnername || !B.welt.gegnerJetzt) return;
+    var fach = gegnernamenfach();
     var gesehen = {};
     B.welt.gegnerJetzt().forEach(function (g) {
-      var ort = B.welt.gegnerOrt(g);
-      var s = K.gegnername[ort];
-      if (!s || gesehen[ort]) return;
+      var s = K.gegnername[g.schluessel];
+      if (!s) return;
+      var ort = s.ort || B.welt.gegnerOrt(g);
+      if (gesehen[ort]) return;
       gesehen[ort] = true;
+      var v = (s.versatz && s.versatz[e()]) || {};
+      s = { dx: (v.dx === undefined ? s.dx : v.dx),
+            dy: (v.dy === undefined ? s.dy : v.dy),
+            gross: v.gross || s.gross };
       var text = String(B.welt.gegnerName(g) || '').toUpperCase();
       if (!text) return;
       var el = B.el('div', 'stadt-name stadt-name-gegner');
@@ -1802,7 +1825,7 @@
       B.orte.setze(el, n.ort, { anker: 'mitte', dx: n.dx || 0, dy: n.dy || 0 });
       fach.appendChild(el);
     });
-    zeichneGegnername(fach);
+    zeichneGegnername();
   }
 
   var ANKER = '<svg class="anker" viewBox="0 0 24 24" aria-hidden="true">'

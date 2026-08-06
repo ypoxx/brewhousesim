@@ -100,10 +100,10 @@ stimmen überein.
 
 | Epoche | vorher | nachher | Ziel |
 |---|---|---|---|
-| 1350 | 29,0 % | **21,3 %** | ≤ 15 % |
-| 1600 | 29,5 % | **21,6 %** | ≤ 15 % |
-| 1884 | 29,1 % | **21,2 %** | ≤ 15 % |
-| 1970 | 29,5 % | **21,8 %** | ≤ 15 % |
+| 1350 | 29,0 % | **21,4 %** | ≤ 15 % |
+| 1600 | 29,5 % | **21,8 %** | ≤ 15 % |
+| 1884 | 29,1 % | **21,4 %** | ≤ 15 % |
+| 1970 | 29,5 % | **22,0 %** | ≤ 15 % |
 
 **Oberstes Sechstel:**
 
@@ -118,15 +118,22 @@ stimmen überein.
 
 | Epoche | gesamt vorher → nachher | oberstes 1/6 | unterstes 1/6 |
 |---|---|---|---|
-| 1350 | 10,6 % → **2,8 %** | 14,4 % → 15,7 % | 0 % → **0 %** |
-| 1600 | 11,2 % → **2,5 %** | 14,2 % → 13,7 % | 0 % → **0 %** |
-| 1884 | 10,8 % → **2,7 %** | 14,1 % → 15,5 % | 0 % → **0 %** |
-| 1970 | 10,6 % → **2,7 %** | 15,9 % → 15,5 % | 0 % → **0 %** |
+| 1350 | 10,6 % → **2,9 %** | 14,4 % → 15,7 % | 0 % → **0 %** |
+| 1600 | 11,2 % → **2,7 %** | 14,2 % → 13,7 % | 0 % → **0 %** |
+| 1884 | 10,8 % → **2,8 %** | 14,1 % → 15,5 % | 0 % → **0 %** |
+| 1970 | 10,6 % → **2,9 %** | 15,9 % → 15,5 % | 0 % → **0 %** |
+
+Der Unterschied zu den 2,5–2,8 %, die dieselbe Messung eine Stunde vorher
+ergab, ist bekannt und gewollt: **das Schild des Gegners** (A5) liegt seit
+der letzten Änderung in einem eigenen Fach der Ebene `hand` statt in `bau` —
+sonst läge es hinter dem Haus, das es benennt. Es zählt damit als Kasten und
+kostet **0,1 bis 0,2 Punkte**. Vier Schilder von rund 150 × 26 Bildpunkten
+sind der Preis dafür, dass der Gegner im Bild einen Namen hat.
 
 **Das Ziel ist nicht erreicht, und es ist von DER STADT allein nicht
 erreichbar.** Das gehört hierher, nicht in eine Fußnote:
 
-* **Gesamt:** von 29 Punkten gehörten DER STADT 10,6. Sie sind bis auf 2,8
+* **Gesamt:** von 29 Punkten gehörten DER STADT 10,6. Sie sind bis auf 2,9
   weg. Die restlichen 18,5 Punkte gehören anderen — auch bei einer STADT
   auf null stünde das Spiel bei **19 %**, nicht bei 15.
 * **Oberstes Sechstel:** dort liegen (Ladezustand 1350, Bildpunkte)
@@ -354,5 +361,158 @@ Sie gehören DEM GEGNER (Welle 10). Weder `ebene-marken` noch
 
 ## 3 · Was dabei nicht kaputtgegangen ist
 
-*(Zahlen werden nachgetragen, sobald die Läufe durch sind — siehe
-`log/abnahme.log`.)*
+Alles unten am eingefrorenen Eigenstand **`w9-e7e740292df9`** auf Hafen 8931,
+jeder Browser einzeln durchs Messfenster.
+
+### 3.1 Die Kennzahl und die Nebenbedingung
+
+Drei Läufe je Epoche, 400 Wochen, `rueckkopplung-r3/linie.mjs`, ausgewertet
+mit `auswerten.py` und `fuhre-w6/schnitte.py`. **Alle drei Läufe je Epoche
+sind byteweise identisch** (gleiche md5) — die strengste Form der
+Gerätekontrolle, die dieser Lauf kennt.
+
+| Epoche | 12 J | 13 J | 14 J | Jahre < 1× | Wochen Kasse 0 | Seitenfehler |
+|---|---|---|---|---|---|---|
+| 1350 | −0,245 | −0,170 | −0,336 | **2/14** | 0/400 | 0 |
+| 1600 | −0,189 | +0,049 | −0,116 | **0/14** | 0/400 | 0 |
+| 1884 | +0,168 | +0,346 | +0,393 | **1/14** | 0/400 | 0 |
+| 1970 | −0,112 | −0,236 | −0,304 | **1/14** | 0/400 | 0 |
+
+**|ρ| < 0,700 hält in allen vier Epochen über alle drei Schnitte** (0 von
+12 Läufen über 0,700), und **kein Braujahr mehr als die erlaubten zwei von
+vierzehn** liegt unter 1×. In keiner Epoche steht die Kasse in auch nur einer
+von 400 Wochen auf null. `zielGesetzt`/`festGesetzt` je Epoche: 1/1 · 1/1 ·
+1/0 · 1/0.
+
+**Die Nebenbedingung in 1350 ist wiederhergestellt, und zwar Ziffer für
+Ziffer der Vorzustand:**
+
+| 1350, 400 Wochen | Welle 7 `b6b06bb` | Welle 8 `8b81250` | Vorzustand :8912 | **Welle 9** |
+|---|---|---|---|---|
+| Wochen mit Kasse genau 0 | 0 | **70** | 0 | **0** |
+| Kasse min – max | 26 – 517 | 0 – 143 | 28 – 524 | **28 – 524** |
+| Kennzahl wöchentlich, Median | 5,74 | 0,70 | 5,69 | **5,69** |
+| Braujahre unter 1× | 1/14 | **3/14** | 2/14 | **2/14** |
+| Ziel gesetzt · Festlegung | 1× · 1× | 0× · 0× | 1× · 1× | **1× · 1×** |
+
+**Und der eine Punkt, der gegen mich spricht und trotzdem nicht meiner ist:**
+zwischen Welle 7 (1 von 14 Jahren unter 1×) und heute (2 von 14) liegt ein
+Jahr Unterschied, und der bleibt auch nach der Reparatur stehen. Er steht
+**genauso im Vorzustand :8912**, also in dem Mischstand, aus dem DIE STADT
+herausgenommen ist — er gehört damit der einzigen anderen Änderung in diesem
+Fenster, der Welle-8-Nacharbeit von DER PREIS. Erlaubt sind zwei von
+vierzehn; die Latte hält, aber sie hält am Rand, und wer sie später reißen
+sieht, sucht dort und nicht bei mir.
+
+### 3.2 Was DIE STADT an ρ bewegt hat — gemeldet, nicht verschwiegen
+
+| Epoche | Welle 8 (Auftrag/Aufsicht) | Welle 9 |
+|---|---|---|
+| 1350 | +0,762 / +0,692 / +0,591 *(Welle 7)*, danach ρ „verbessert" durch Verarmung | **−0,245 / −0,170 / −0,336** |
+| 1600 | +0,476 / +0,297 / +0,160 | **−0,189 / +0,049 / −0,116** |
+| 1884 | +0,393 *(14 J, Aufsicht Welle 8)* | **+0,168 / +0,346 / +0,393** |
+| 1970 | +0,692 / +0,330 / +0,116 | **−0,112 / −0,236 / −0,304** |
+
+Das ist zu erwarten und war vorher gemessen worden: **Layout bewegt die
+Wirtschaft.** Der Knopfboden-Befund der Aufsicht (1970, Unterschied 0,811 bei
+zwölf Braujahren) sagt genau das — die messende Hand spielt bei 1920×1000,
+also unterhalb der Entwurfsleinwand, und was sie trifft, hängt an der
+Geometrie der Bretter. Eine Werkbank, die von 442 auf 116 Bezugspixel Höhe
+schrumpft, ändert, welcher Zug der nächste erreichbare ist. **Die Zahlen sind
+also nicht „gleich geblieben, nur besser" — es ist eine andere Partie**, in
+allen vier Epochen fehlerfrei über 400 Wochen und 14 Braujahre.
+
+### 3.3 Die vierte Latte
+
+`aufsicht/lesbarkeit.mjs` bei **1366×768** (die Größe, die MESSLATTE §4
+vorschreibt), mit Rollleiste:
+
+| | Auftrag (Stand Welle 8) | Welle 9 |
+|---|---|---|
+| Überläufe | 14 | **14** |
+| Textknoten < 12 px | 505 | **505** |
+| Knöpfe < 24 px | 0 von 329 | **0 von 307** |
+
+Unverändert. Die 22 Knöpfe weniger sind die `stadt:bau:*` und die zwei
+Seitenreiter, die jetzt hinter dem BAUHOF-Reiter liegen — **das ist eine
+Kürzung der Zählung, nicht der Bedienung**, und sie gehört gesagt: bei
+1600×1000 zählt dasselbe Gerät 7 statt 14 Überläufe und 472 statt 505
+Textknoten.
+
+`stadt-w8/reiterprobe.mjs`, beide Fenster, alle vier Epochen: **0 gekürzte
+Namen, 0 gekürzte Kennzahlen, 0 Überläufe** bei elf Reitern.
+
+### 3.4 Das Gewichtsveto
+
+`aufsicht/gewicht-gegenprobe.mjs`, gesamt nach dem Nachladen:
+
+| Epoche | vorher | nachher | Luft zu 8 MB |
+|---|---|---|---|
+| 1350 | 6,25 MB | **6,29 MB** | 1,71 |
+| 1600 | 7,63 MB | **7,66 MB** | **0,34** |
+| 1884 | 6,57 MB | **6,61 MB** | 1,39 |
+| 1970 | 4,45 MB | **4,67 MB** | 3,33 |
+
+Die vier neuen Verkehrsbilder (196 KB) liegen vollständig in 1970, der
+Epoche mit der meisten Luft. Die 30–40 KB in I–III sind die zwei neuen
+Frachtstücke der West-Ecke — sie benutzen **schon geladene** Dateien, die
+Zunahme ist der zweite Abruf desselben Bildes in der Zählung des Geräts.
+**1600 bleibt die enge Epoche: 0,34 MB Luft.** Wer dort etwas hinzufügt,
+misst vorher.
+
+### 3.5 Bedienung und Fehlerfreiheit
+
+* `aufsicht/tor.mjs`: alle vier Epochen OK, `lage` 0, 0 Seitenfehler.
+* `aufsicht/spielprobe.mjs`: **60 gespielte Wochen je Epoche, 60 Züge,
+  0 Fehler, `lage` 0** — bestanden.
+* `stadt-w9/kaufprobe.mjs` (neu): der Reiter BAUHOF wird mit einem echten
+  Mausklick aufgeschlagen, dann der billigste Bau gekauft — **in allen vier
+  Epochen und in beiden Fenstern (2752×1536 und 1366×768)**: Lade auf,
+  5 bzw. 4 `stadt:bau:*` im DOM, Bau steht danach im Hof, Kasse kleiner,
+  Reiterkennzahl zählt herunter (`5 offen · ab 13 Pf` → `4 offen · ab 15 Pf`),
+  0 Fehler. Das war die eine Stelle, an der das Zuklappen der Lade das SPIEL
+  hätte kaputtmachen können statt nur das Bild zu verbessern.
+* `stadt-w9/gespielt.mjs`: 30 Wochen mit echten Klicks je Epoche,
+  `schneidet` 0, `verdeckt` 0, `lage` 0, 0 Fehler.
+
+### 3.6 Was Welle 8 erkämpft hat und was davon bleibt
+
+Das unterste Sechstel — der Streifen, in dem jedes Zielblatt seinen
+Vordergrund trägt:
+
+| Epoche | Welle 8 | Welle 9 | Anteil DER STADT |
+|---|---|---|---|
+| 1350 | 13,4 % | **13,4 %** | **0 %** |
+| 1600 | 11,9 % | **11,9 %** | **0 %** |
+| 1884 | 12,5 % | **12,5 %** | **0 %** |
+| 1970 | 11,9 % | **11,9 %** | **0 %** |
+
+Nichts davon ist zurückgenommen.
+
+---
+
+## 4 · Was an dieser Arbeit schwach ist
+
+Damit niemand sie stärker zitiert, als sie ist:
+
+1. **A1 ist nicht erreicht** — 21,4–22,0 % statt ≤ 15, und 50,6–53,1 % statt
+   ≤ 25 im obersten Sechstel. Der Anteil DER STADT ist von 10,6 auf 2,9 %
+   gefallen; der Rest gehört anderen Stücken und der eingefrorenen
+   Kopfleiste. Das ist eine Erklärung und keine Entschuldigung: die Latte
+   steht gerissen.
+2. **A7 ist halb erreicht.** Der Malzboden auf Stelzen bleibt erkennbar und
+   die West-Ecke ist belegt; „zwischen je zwei Dächern bleibt Hofboden
+   sichtbar" ist bei `?bau=alle` mit neun Dingen in der Raute nicht zu haben.
+3. **Eine Saat (1350), drei Läufe je Epoche.** Die drei sind byteweise
+   identisch, das prüft das Gerät und nicht die Welt: eine zweite Saat ist
+   nicht gefahren.
+4. **Die Deckungszahlen sind mit meinem eigenen Gerät erhoben.** Es benutzt
+   dieselben zwei Entscheidungen wie das des blinden Kritikers und
+   reproduziert seine vier Ausgangswerte auf die Zehntelstelle (29,0 / 29,5 /
+   29,1 / 29,5 Kästen) — das ist eine Übereinstimmung, keine Unabhängigkeit.
+5. **Ein Fehler im Vorgängergerät, den ich gefunden und in meinem behoben
+   habe, ist nicht rückwirkend geprüft:** `aufsicht/deckung-je-stueck.mjs`
+   sucht das Präfix `preis`, DER PREIS schreibt aber `pr-`. In meinem Gerät
+   steht `pr`; ob damit ältere Zahlen jener Datei falsch waren, habe ich
+   nicht nachgerechnet.
+6. **Kein blinder Kritiker hat diesen Stand gesehen.**

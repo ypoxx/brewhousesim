@@ -111,6 +111,12 @@
 
 .stadt-name .wort { display: block; }
 
+/* Das Schild des Gegners liegt als einziges der vier in einer der oberen
+   Ebenen (siehe zeichneGegnername in stadt.js) — also nimmt es dort auch
+   keine Maus an. Ein Schild ist zum Lesen da; was darunter liegt, gehoert
+   dem, der es gezeichnet hat. */
+.stadt-name-gegner { pointer-events: none; }
+
 /* Das Hausschild an der Hofmauer. Im Zielbild ist es gemalt und zerfaellt;
    hier ist es gesetzt. */
 .stadt-hausschild {
