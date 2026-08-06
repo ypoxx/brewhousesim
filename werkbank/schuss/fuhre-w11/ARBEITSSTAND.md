@@ -378,6 +378,23 @@ Stuecke; in 1970 traegt allein DER GEGNER 13,1 % (554.170 px, Grenze
 Ziffer fuer Ziffer der Vorzustand. Die Georgi-Tafel liegt im Ladezustand
 nicht, also kann sich dort nichts bewegen.
 
+**Eine Ausnahme, und sie geht gegen mich: in 1970 ist der Ladezustand DER
+FUHRE groesser geworden.** `haushalt.miss().je.fuhre`, Huellen, im Spiel
+gemessen (`vorher-sonde-laden.txt` gegen `nachher-sonde-laden.txt`):
+
+| Ladezustand, Huellen | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| vorher | 0 px | 0 px | 0 px | **2.288 px** (2 Kaesten) |
+| **nachher** | 0 px | 0 px | 0 px | **2.704 px** (2 Kaesten) |
+
+**+416 px**, und die Ursache ist die Auflage 7 aus §1.3: die Durstbetten
+`.fu-marke .fu-mbetten i` sind von `8×11` mit Rand auf `max(3px,5·s) ×
+max(7px,13·s)` gefuellt umgestellt worden; die neue Form ist schmaler und
+hoeher, und die Huelle faellt um 416 px groesser aus. Das sind **8 % der
+Grenze von 34.000 px**, und `haushalt.pruefe()` nennt `fuhre` im
+Ladezustand in keiner Epoche. Es ist trotzdem eine Zunahme, sie gehoert
+mir, und sie steht hier statt in einer Fussnote.
+
 ### 3.5 Escape — die Abnahme der Auflage des Rahmens
 
 `escapeprobe.mjs`, 30 × WEITER, dann Escape, dann Chronik auf, dann Escape:
@@ -645,9 +662,10 @@ leer, wenn `BRAUHAUS.fuhre.stand().antrag` nicht null ist.
 | `blick.mjs` | Aufnahmen von Anschlag und aufgeschlagenem Bericht, plus Masse und Trefferprobe |
 | `escapeprobe.mjs` | die Abnahme der Rahmen-Auflage: Escape schliesst die Tafel UND die Chronik bleibt mit Escape schliessbar |
 | `nachstand.sh` | friert `7896ee6` + **nur** die Dateien DER FUHRE ein (Builder duerfen nicht committen) |
-| `vorher.sh` · `nachher.sh` · `rho.sh` | die Messsaetze, jeder Lauf einzeln durchs Messfenster |
-| `messungen/` | alle Rohdaten. `vorher-*` = `7896ee6`, `nachher-*` = Nachstand |
-| `bilder/` | `blick-*` bei 2752×1536, `klein-*` bei 1366×768, `warum-*` fuer §1.2 |
+| `vorher.sh` · `nachher.sh` · `rho.sh` · `rho1350.sh` | die Messsaetze, jeder Lauf einzeln durchs Messfenster |
+| **`abnahme.sh`** | **neu beim Neuanlauf**: die Abnahme auf dem Stand, der wirklich ausgeliefert wird (`cf76271455`), dazu die drei Laeufe, die beim ersten Anlauf gefehlt haben — Escape-Probe auf dem VORZUSTAND, `warum.mjs` mit Ausgabe in eine Datei statt auf die Konsole, und die gemeinsame Deckung aller drei Stuecke |
+| `messungen/` | alle Rohdaten. `vorher-*` = `7896ee6`, `nachher-*` = Nachstand `118b191467`, `abn-*` = Endstand `cf76271455`, `gemeinsam-*` = ganzer Arbeitsbaum |
+| `bilder/` | **wandert nicht mit** (`.gitignore:67`, `**/schuss/**/*.png`). Wer die Aufnahmen braucht, stellt sie mit `blick.mjs`/`warum.mjs` in Minuten wieder her. Deshalb steht seit dem Neuanlauf jede Aussage, die vorher nur ein Bild trug, auch als Zahl in `messungen/` |
 
 
 ---

@@ -270,6 +270,15 @@
       var nachUnten = (s.y + s.h + hoehe + 0.4) - yUnten;  /* positiv */
       yUnten += (Math.abs(nachOben) <= nachUnten) ? nachOben : nachUnten;
     }
+    /* DIE RANDWACHE GILT AUCH FUER DIE AUSWEICHE.  Ein Zeichen, das einem
+       Schild ausweicht und dabei aus dem Bild faellt, hat nichts gewonnen:
+       `haushalt.ueberRand()` muss auch im gebauten Zustand leer bleiben, und
+       zwar gegen JEDE Bewegung dieses Stuecks, nicht nur gegen die seitliche.
+       Zwei Zeilen, die es nie geben wuerde, wenn man Ausweichen und
+       Randhalten getrennt denkt — genau daran hing in Welle 10 das „Wo" am
+       rechten Rand. */
+    if (yUnten - hoehe < 0.4) yUnten = hoehe + 0.4;
+    if (yUnten > 99.6) yUnten = 99.6;
     return yUnten;
   }
 
@@ -2285,14 +2294,24 @@
         return;
       }
 
-      if (frisch && !sichtbar(a)) return;
-      if (frisch && wechsel.an === 'haus') {
+      if (!frisch || !sichtbar(a)) return;
+      if (wechsel.an && wechsel.an !== 'haus') return;
+      /* Dieselbe Ausweiche wie beim Paar, und aus demselben Grund: diese
+         beiden Zettel haengen an DERSELBEN Adresse mit DEMSELBEN Anker und
+         demselben dy. Wer nur das Paar ausweichen laesst, laesst eine Luecke
+         offen, die niemand gemessen hat — sie standen in keinem der acht
+         Zustaende im Bild, die diese Welle abgetastet hat. Eine Regel, die
+         fuer das eine gilt und fuer das andere nicht, ist keine Regel,
+         sondern ein Zufall. Eine Zeile hoch (2,1 + 0,5). */
+      hoch = weicheAus(o0.x + v.seite, BREIT.paar / 2 / 2752 * 100,
+                       o0.y + hoch, 2.6) - o0.y;
+      if (wechsel.an === 'haus') {
         var g = B.el('div', 'gg-gewonnen', 'zurückgeholt — unser Haus');
         g.title = a.name + ' ist wieder gebunden. Vier Jahre lang rührt er die Adresse nicht an.';
         B.orte.setze(g, a.ort, { anker: 'unten',
           dx: randDx(a.ort, v.seite, BREIT.paar), dy: hoch });
         fach.appendChild(g);
-      } else if (frisch && !wechsel.an) {
+      } else {
         var f = B.el('div', 'gg-frei', 'frei geworden');
         B.orte.setze(f, a.ort, { anker: 'unten',
           dx: randDx(a.ort, v.seite, BREIT.paar), dy: hoch });
