@@ -194,10 +194,10 @@ danach immer noch bei 7.
 
 * **Die Braustelle.** Das Zielblatt zeigt eine offene Kupferpfanne über offenem Feuer und
   zwei Frauen mit Holzpaddeln — mehr nicht. Das Spiel zeigt an derselben Stelle
-  (x 780…1010, y 1030…1180) eine vollständige Braustelle: Maischbottich, offene Pfanne auf
+  (x 750…1020, y 1000…1130) eine vollständige Braustelle: Maischbottich, offene Pfanne auf
   einem kniehohen Steinring über offenem Feuer, Kühlschiff, Holzstoß, **fünf** arbeitende
   Figuren. Sperrlistenfest: kein Deckel, kein Helm, kein Schwanenhals.
-* **Der Ziehbrunnen** (x 480…640, y 830…960) hat im Spiel **zwei Frauen** — eine am Kranz,
+* **Der Ziehbrunnen** (x 495…590, y 830…915) hat im Spiel **zwei Frauen** — eine am Kranz,
   eine mit Schulterjoch. Im Zielblatt steht der Brunnen leer.
 * **Die Schrift.** „BRAUHAUS ⚓ ZUM ANKER / GEGR. 1350" steht im Spiel als scharfer, echter
   Text auf dem Torschild. Im Zielblatt ist die zweite Zeile zu unlesbarem Grau zerfallen.
@@ -235,8 +235,8 @@ Reiter, Hund, Marktbuden: alle da. Die drei Ortsnamen stehen als echte, scharfe 
 **Wo das Zielblatt gewinnt:**
 
 1. **Ein gekaufter Hofbau steht auf dem Marktplatz und begräbt ihn.** Vor den Käufen
-   (`e2-01-roh-nackt`, Ausschnitt `schnitte/e2-hofrand-roh.png`) liegt bei x 1330…1500,
-   y 640…790 der **Marktbrunnen** mit Wasserschale, daneben ein Hund, ein Pferdefuhrwerk und
+   (`e2-01-roh-nackt`, Ausschnitt `schnitte/e2-hofrand-roh.png`) liegt bei x 1340…1450,
+   y 650…715 der **Marktbrunnen** mit Wasserschale, daneben ein Hund, ein Pferdefuhrwerk und
    drei Marktleute — alle **außerhalb** der Hofmauer, auf dem Platz der Stadt. Nach den
    Käufen (`schnitte/e2-hofrand.png`) steht dort eine offene Fachwerkhalle mit großem
    Holzbottich und Leiter (x 1130…1510, y 650…910) und **nichts davon ist mehr zu sehen**.
@@ -245,13 +245,13 @@ Reiter, Hund, Marktbuden: alle da. Die drei Ortsnamen stehen als echte, scharfe 
    hinter seiner Mauer.
 2. **„BRAUEREI ADLER" fehlt als Schild im Bild.** Das Zielblatt trägt jenseits des Flusses
    ein großes ockerfarbenes Brauhaus mit gemaltem Schild „BRAUEREI ADLER". Das Spiel zeichnet
-   dort zwar einen Gegnerhof (x 2090…2220, y 390…540, in `ebene-marken`, in der vollen
+   dort zwar einen Gegnerhof (x 2060…2260, y 350…530, in `ebene-marken`, in der vollen
    Aufnahme `schnitte/e2-adler-voll.png` sichtbar), aber **ohne jede Beschriftung**. Der Name
    „BRAUSTATT ADLER" steht ausschließlich auf einer schwebenden Karteikarte der
    Bedienoberfläche. Die Ortsmarken des Spiels sind genau drei — ST. MICHAEL, GASTHOF
    LINDENHOF, BAHNHOF (ab Epoche III); der Gegner hat keine.
 3. **Zwei graue Schaltflächen mitten in der Landschaft.** Unter dem Gegnerhof, bei
-   x 2110…2185, y 545…585, sitzen zwei schlichte hellgraue Quadrate mit Haus- und
+   x 2110…2180, y 525…560, sitzen zwei schlichte hellgraue Quadrate mit Haus- und
    Sternsymbol. Sie sind nicht gezeichnet, sie sind Bedienfläche, und sie liegen auf dem
    Weinberg.
 
@@ -259,8 +259,9 @@ Reiter, Hund, Marktbuden: alle da. Die drei Ortsnamen stehen als echte, scharfe 
 
 **Hier schlägt die gemalte Welt das Zielblatt, und das gehört ausdrücklich gesagt:**
 
-* **Der Schornstein** (x 500…620, y 175…870) ist höher, hat ein gemauertes Kranzgesims und
-  eine eiserne Steigleiter; die Rauchfahne steht. Das Zielblatt hat einen glatten Rohrstumpf.
+* **Der Schornstein** (x 500…620, y 175…870) hat ein gemauertes Kranzgesims und eine eiserne
+  Steigleiter über die volle Höhe; die Rauchfahne steht. Der des Zielblatts ist an derselben
+  Stelle schlanker und glatt — Kranz und Leiter fehlen ihm.
 * **Die drei Gärtanks** (x 1130…1450, y 630…900) stehen auf einer Plattform mit Laufsteg,
   Geländer, Nietreihen und Mannlöchern. Im Zielblatt stehen drei glatte Zylinder ohne Podest.
 * **Der Eiskeller** (x 700…900, y 930…1090) hat ein Ziegelgewölbe im Erdhügel und **zwei
@@ -340,10 +341,18 @@ darin sieben Felder als abgerundete Rechtecke, Schrift eine gesperrte Serifenver
 ist sauber und gut lesbar — und sie liest sich als Webleiste, nicht als gezeichneter Teil
 des Bildes. Dasselbe gilt für alle Bretter, Karten und Zettel.
 
-Dazu kommen die **schwebenden Marken**: in 1600 zähle ich elf, in 1884 zwölf, in 1970 zehn
-kleine helle Rechtecke („Fass in die Lade", „OCH · PAC · ablösen 588 fl", „wirbt · noch 6
-Wo.", „Zuschuss in Bier", „BHF · LIS", …), verteilt über Felder, Fluss und Weinberg. Sie
-sitzen im Mittelband, also mitten im Bild, und keine trägt eine Kontur.
+Dazu kommen die **schwebenden Marken**: kleine helle Rechtecke ohne jeden Umriss, verteilt
+über Felder, Fluss und Weinberg. Gemessen mit `bauorte.mjs` liegen in `ebene-marken`
+**62 / 67 / 63 / 66 Textknoten** (Epoche I–IV), und ein Teil davon sitzt frei in der
+Landschaft, nicht in einem Brett. Drei mit exakter Lage:
+
+| Marke | Epoche | Rechteck | worauf sie liegt |
+|---|---|---|---|
+| „OCH · PAC / ablösen 588 fl" | 1600 | x 1405…1506, y 463…503 | Dächer der Altstadt |
+| „wirbt · noch 6 Wo." | 1600 | x 2376…2578, y 432…453 | Weinbergterrassen |
+| „BHF · LIS / ablösen 58.320 DM" | 1970 | x 2561…2680, y 263…303 | Bahndamm und offenes Feld |
+
+Sie sitzen im Mittelband, also mitten im Bild, und keine trägt eine Kontur.
 
 ### 4.2 Beschriftungen, die nicht ganz dastehen
 
@@ -364,9 +373,204 @@ das Spiel erzählt, was der Gegner getan hat, während man woanders hinsah. Es l
 
 Zusätzlich in 1970: ein Geldbetrag **„2.642.560 DM"** in einem Kasten von 109 px bei 130 px
 Textbreite, **ohne** Auslassungspunkte — hier werden Ziffern abgeschnitten, nicht Wörter.
+Die Stelle ist eindeutig: `bauorte.mjs` misst die Kassenspalte der Gegnerkarte als
+`«1.193.110 DM» x2092..2201 (109×20)`. **Ab acht Ziffern verliert die Kasse des Gegners
+Stellen.** Eine falsch gelesene Zahl ist schlimmer als ein gekürzter Satz.
+
+### 4.3 Bretter, die einander zerschneiden
+
+In `e1-30-gespielt-frei.png` liegen zwei Bretter verschiedener Stücke übereinander und
+kürzen sich gegenseitig:
+
+* Die Überschrift des Standbuchs (x 40…1210, y 230…290) liest sich als **„…dtbuch · II.
+  Hand"**, weil der Reiter DAS ERBE die ersten drei Buchstaben verdeckt. Darüber schneidet
+  die BAUHOF-Leiste quer durch den Blattkopf.
+* Die Karte BRAUHAUS ZUM ADLER (x 1965…2370, y 585…745) trägt drei Zahlen — Züge, Kasse,
+  sein Preis. Das Brett DER SUD legt sich mit seiner Oberkante auf y ≈ 700 und **schneidet
+  die Ziffernreihe waagerecht in der Mitte durch**; lesbar bleiben nur die oberen Hälften.
 
 ---
 
-## 5 · Urteil
+## 5 · Urteil je Epoche
 
-*(§5 und §6 folgen nach der letzten Messung)*
+### I · 1350 — **Zielbild gewinnt** (knapp)
+
+Die gemalte Welt gewinnt: Braustelle, Ziehbrunnen mit zwei Frauen und die scharfe Schrift
+auf dem Torschild sind besser als im Zielblatt. Der **Bildschirm** gibt es wieder her —
+29,0 % Kästen, 51,7 % im obersten Sechstel, dazu ein Hof, der an seiner Obergrenze zur
+Hälfte leer bleibt und dessen Dächer ineinanderlaufen. **Was hier entscheidet, ist nicht der
+Zeichner, sondern der Setzer.**
+
+### II · 1600 — **Zielbild gewinnt**
+
+Dieselbe Deckung, und dazu zwei Dinge, die das Zielblatt richtig macht und das Spiel nicht:
+Der Marktbrunnen samt Hund, Fuhrwerk und drei Marktleuten verschwindet unter einem gekauften
+Hofbau, und der Gegner jenseits des Flusses hat im Bild **keinen Namen**. Das gute Zweigespann
+am Tor wiegt das nicht auf.
+
+### III · 1884 — **unentschieden**
+
+**Die einzige Epoche, in der ich das Zielblatt nicht mehr wählen würde, wenn nur die Welt zu
+sehen wäre.** Schornstein mit Kranzgesims und Steigleiter, drei genietete Gärtanks auf einem
+Laufsteg, Eiskeller mit Eisblöcken, Mälzereiturm, Maschinenhaus — alles reicher als im
+Zielblatt, und „GEGR. **1350**" steht richtig, wo das Zielblatt sich irrt.
+
+Was es zurückholt: 29,1 % Kästen, **zwei leere cremefarbene Tafeln** im Bild, und ein
+Vordergrund, der sein Gespann verliert, sobald man spielt. Keines von beiden dominiert.
+
+*Was es kippen würde:* Werden die zwei Tafeln beschriftet und fällt die Deckung unter 15 %,
+**gewinnt hier das Spiel.** Bleibt beides, wie es ist, kippt es beim nächsten Kritiker
+ebenso gut zum Zielblatt.
+
+### IV · 1970 — **Zielbild gewinnt**
+
+Am deutlichsten von allen vieren, und aus dem Motiv der Epoche heraus: **auf der
+Asphaltstraße mit Mittelstreifen fährt im Spiel niemand.** Dazu zwei gekaufte Hofbauten, die
+in der Stadt stehen und die Tankstelle und eine Ladenzeile begraben, und ein drittes leeres
+Schild auf der eigenen Hofmauer. Mauerfragment-Grünanlage und gläsernes Sudhaus sind besser
+als im Zielblatt — sie stehen aber im oberen Bilddrittel, während das Zielblatt das untere
+gewinnt.
+
+### Wo das Spiel die Messlatte schlägt — zusammengezogen
+
+*Ich kann nicht sagen, was „besser geworden" ist: ich habe kein früheres Urteil und keinen
+früheren Stand gesehen, mit Absicht. Ich kann sagen, wo das Spiel heute vor dem Zielblatt
+liegt.*
+
+1. **Schrift.** Alle Beschriftungen im Bild sind echter, scharfer Text. Die Zielblätter
+   tragen an denselben Stellen zerfallene Buchstabensuppe („GEGR. 1350" in 01, „CU NEHKER"
+   in 05).
+2. **Sachlich richtiger als die Latte.** „GEGR. 1350" gegen „GEGR. 1356" im 1884er Zielblatt.
+3. **Industriedetail 1884.** Kranzgesims, Steigleiter, Nietreihen, Mannlöcher, Laufsteg,
+   Eisblöcke, liegender Dampfkessel — nichts davon steht im Zielblatt.
+4. **Maßstab.** Wo Menschen im Hof stehen, stimmen sie mit den Leuten der Platte überein
+   (Brauerin ≈ Magd am Tor). Im Zielblatt sind die zwei Brauerinnen neben der Pfanne
+   erkennbar zu groß.
+5. **1970 Mauerfragment.** Ein Rundturm mit Mauerstumpf in einer Grünanlage mit Bänken und
+   Wegen — genauer gebaut als im Zielblatt.
+6. **Ein Motiv, das im Zielblatt fehlt:** das gläserne Sudhaus mit sichtbaren Kupferkesseln
+   (1970, x 700…1010, y 700…900).
+7. **Null Seitenfehler** in allen vier Epochen über 140 echte Mausklicks.
+
+---
+
+## 6 · Auflagen
+
+Jede folgt aus einem Bildpunkt-Befund, der oben mit Koordinaten steht.
+
+**A1 — Die Deckung im ruhigen Zustand halbieren.**
+Gemessen: 29,0 / 29,5 / 29,1 / 29,5 % Kästen, oberstes Sechstel 51,7 / 52,2 / 53,1 / 54,0 %.
+Ziel: **≤ 15 % gesamt und ≤ 25 % im obersten Sechstel** in allen vier Epochen, gleich nach
+dem Laden. Gemessen wird mit dem Verfahren aus §2 (dieselbe Seite mit und ohne Kästen,
+Bildpunkte zählen) — `werkbank/schuss/bild-w8/bauorte.mjs` + `deckung.mjs` tun das bereits.
+*Der billigste Weg steht im Bild:* in jeder Epoche liegen im obersten Sechstel acht bis zehn
+Reiterkacheln (`stadt:reiter:*`, x 37…810, y 120…290) ausgeklappt neben der Kopfleiste,
+obwohl sie zugeklappt genauso bedienbar wären.
+
+**A2 — Die schwebenden Marken bekommen eine Kontur oder einen Platz.**
+`ebene-marken` trägt 62 / 67 / 63 / 66 Textknoten je Epoche; ein Teil davon liegt frei in
+der Landschaft als flaches helles Rechteck ohne Umriss. Drei nachgemessene Beispiele:
+„OCH · PAC / ablösen 588 fl" (1600, x 1405…1506, y 463…503, auf den Altstadtdächern),
+„wirbt · noch 6 Wo." (1600, x 2376…2578, y 432…453, auf den Weinbergterrassen),
+„BHF · LIS / ablösen 58.320 DM" (1970, x 2561…2680, y 263…303, auf dem Bahndamm).
+Entweder sie werden gezeichnet wie das Bild (dunkelbraune Tuschekontur wechselnder Stärke,
+wie das Torschild sie schon hat), oder sie ziehen an einen Rand. Beides ist zulässig; der
+jetzige Zustand — flache Webkästchen auf dem Weinberg — nicht.
+
+**A3 — Kein Brett darf ein anderes zerschneiden.**
+Zwei nachgewiesene Fälle in `e1-30-gespielt-frei.png`: die Standbuch-Überschrift wird vom
+Reiter DAS ERBE zu „…dtbuch · II. Hand" verkürzt (x 40…1210, y 230…290); das Brett DER SUD
+schneidet die Zahlenzeile der Gegnerkarte BRAUHAUS ZUM ADLER waagerecht durch (x 1965…2370,
+y ≈ 700). Verlangt ist eine nachprüfbare Regel — z. B. dass ein aufliegendes Blatt alle
+Bretter darunter schließt — und ein Schuss, der zeigt, dass keine Überschrift und keine Zahl
+mehr angeschnitten ist.
+
+**A4 — Die drei leeren Tafeln füllen oder entfernen.**
+Alle drei liegen in der Platte und werden nie beschriftet:
+* 1884, Gegnerwerk jenseits des Flusses: x 2170…2320, y 480…525 → gehört „BRAUEREI ADLER".
+* 1884, Bahnhofsdach: x 2610…2740, y 380…425 → gehört „BAHNHOF" (der Name hängt derzeit als
+  eigener Zettel daneben in der Luft, x 2562…2667, y 490…511).
+* 1970, eigene Hofmauer rechts vom Tor: x 1145…1340, y 990…1090 → in 1884 trägt dieselbe
+  Tafel „BRAUHAUS ZUM ANKER", in 1970 ist sie leer.
+Eine leere helle Tafel liest sich als unfertiges Bild, nicht als Schild.
+
+**A5 — Der Gegner bekommt einen Namen im Bild.**
+Das Zielblatt trägt „BRAUEREI ADLER" in 1600, 1884 und 1970 als gemaltes Schild am Gebäude
+jenseits des Flusses. Das Spiel hat drei Ortsmarken (`stadt-daten.js:100–102`: ST. MICHAEL,
+GASTHOF LINDENHOF, BAHNHOF ab Epoche III) und für den Gegner keine; sein Name steht nur auf
+einer Karteikarte. Verlangt ist eine vierte Ortsmarke am Gegnerhof, mit dem Namen der
+jeweiligen Epoche (BRAUSTATT ADLER · BRAUEREI ADLER · ADLER-BRÄU AG).
+
+**A6 — Gekaufte Hofbauten dürfen nicht in der Stadt stehen.**
+Drei nachgewiesene Fälle, alle an Ankern, die außerhalb der Hofmauer liegen:
+* **Verwaltungsbau** (1970, `ort: 'tor'`, `dx: 8` → x 1420…1610, y 675…930) begräbt Vordach
+  und Zapfsäule der Tankstelle. Vergleich: `schnitte/e4-markt-roh.png` gegen
+  `schnitte/e4-markt-spiel.png`.
+* **Mälzereiturm** (1970 und 1884, `ort: 'malzboden'` = 44 % / 42 % → x 1050…1340,
+  y 600…745) steht mitten in der Stadt und begräbt eine Ladenzeile samt geparktem rotem
+  Wagen.
+* **Eine Fachwerkhalle mit großem Holzbottich** (1600, x 1130…1510, y 650…910 — nach
+  Kaufliste die Gärbottiche) begräbt den **Marktbrunnen**, einen Hund, ein Pferdefuhrwerk
+  und drei Marktleute. Vergleich: `schnitte/e2-hofrand-roh.png` gegen
+  `schnitte/e2-hofrand.png`.
+Die Regel aus `spiel/LIESMICH.md` gilt hier wörtlich: *„Was gebaut wird, darf umziehen."*
+Der Ziehbrunnen darf nicht wandern — ein Verwaltungsbau und ein Mälzereiturm schon.
+
+**A7 — Der Hof 1350 darf sich nicht stapeln, und seine linke Hälfte darf nicht leer bleiben.**
+Bei `?bau=alle` (also an der Obergrenze, nicht aus Geldmangel): das strohgedeckte Dach des
+Ochsenstalls (x 1040…1250, y 680…820) läuft über das Brauhausdach und verdeckt die
+Steinpfeiler des Malzbodens (vorher frei bei x 1055…1390, y 570…880). Gleichzeitig bleibt
+x 320…700, y 780…1120 leerer Boden. Verlangt: die Aufbauten so verteilen, dass zwischen je
+zwei Dächern Hofboden sichtbar bleibt und der Malzboden auf Stelzen als solcher erkennbar
+bleibt — er ist eines der drei Motive, die `zielbild/prompts/1350.txt` namentlich verlangt.
+
+**A8 — 1970 braucht Verkehr.**
+Zielblatt, unterstes Sechstel (y 1280…1536): drei Autos — cremefarbener Käfer links, rote
+Limousine Mitte, helle rechts. Spiel: **null** (`schnitte/e4-unten.png`). Auf dem ganzen
+Rahmen: Zielblatt sieben Wagen plus Stadtbus, Spiel zwei Wagen. Verlangt: mindestens drei
+fahrende oder parkende Fahrzeuge auf der Asphaltstraße im untersten Drittel, in der Epoche,
+die ohne sie nicht 1970 ist. *(Nebenbefund, der nicht gegen das Spiel zählt: die zwei
+Figuren unter der Marktplane links unten tragen in 1970 noch Gewänder von 1350 — im
+Zielblatt allerdings auch.)*
+
+**A9 — Das Gespann am Hoftor darf nicht verschwinden, sobald gespielt wird.**
+1884: beim Laden steht das Zweigespann mit Fuhrmann (x 960…1250, y 960…1145,
+`e3-00-roh.png`), nach 30 Wochen ist es weg (`e3-11`). Ursache ist die Bedingung
+`wenn: 'keller'` an `torfuhre` (`stadt-daten.js:428–432`): ein leerer Keller nimmt dem
+Vordergrund seine einzige Bewegung. Das Zielblatt hat dort dauerhaft Gespann, Fuhrmann,
+Hund, Frau mit Korb und zwei Kinder. Verlangt: eine Bedingung, die im gewöhnlichen Spiel
+meistens wahr ist — oder ein zweites, unbedingtes Fuhrwerk auf der Straße.
+
+**A10 — Zwei Schnitte schließen, die Inhalt kosten.**
+* `.gg-bandzeile .was` (`stil/gegner.css:414`, `text-overflow: ellipsis`): in 1970 stehen
+  **1810 px Text in einem 731 px breiten Kasten** — 60 % des Satzes fehlen, und zwar
+  ausgerechnet im Band **OHNE DICH GESCHEHEN**, das erzählt, was der Gegner getan hat,
+  während man woanders hinsah. Gemessen auf der Entwurfsleinwand 2752 × 1536, nicht auf einem
+  kleinen Schirm. Zählung der echten Schnitte je Epoche: 2 / 2 / 1 / 5.
+* Die Kassenspalte der Gegnerkarte ist 109 px breit (`bauorte.mjs`:
+  `«1.193.110 DM» x2092..2201`). Bei 130 px Textbreite — „2.642.560 DM" — werden **Ziffern**
+  abgeschnitten, ohne Auslassungspunkte. Eine falsch gelesene Zahl ist schlimmer als ein
+  gekürzter Satz.
+
+---
+
+## 7 · Was an dieser Messung schwach ist
+
+Damit niemand sie stärker zitiert, als sie ist:
+
+1. **Eine Partie je Epoche, eine Saat (1350).** Kein zweiter Lauf, keine Prüfsummenkontrolle
+   der Bilder gegeneinander. Die *abgeleiteten* Deckungszahlen sind allerdings in zwei
+   unabhängigen Browsersitzungen auf die Zehntelstelle gleich herausgekommen (§2).
+2. **Die 4 % des Zielblatts sind abgeschätzt, nicht gemessen** — im Container gibt es keinen
+   JPEG-Dekoder außerhalb des Browsers. Die Größenordnung trägt das Urteil, die zweite
+   Stelle nicht.
+3. **30 Wochen sind kurz.** In 1350 reichte es an die Obergrenze (nachgewiesen mit
+   `?bau=alle`), in 1970 wurden nur vier von sechs Bauten gekauft. Die Aufnahmen mit
+   `?bau=alle` für 1600, 1884 und 1970 standen beim Schreiben noch in der Messfenster-Schlange
+   (`kette.sh`); sie können A6 und A7 nur **verschärfen**, nicht entkräften, weil mehr Bauten
+   mehr Stadt verdecken.
+4. **Ich bin durch erlaubtes Material vorbelastet** — die drei Stellen stehen offen in §1.
+5. **Die Vergleichsbogen** (`gegenueber.mjs`, Zielblatt und Spiel im selben Rechteck
+   übereinander) waren beim Schreiben ebenfalls noch in der Schlange. Alle Aussagen oben
+   stehen deshalb auf getrennt angesehenen Bildern und auf Ausschnitten in voller Auflösung
+   (`werkbank/schuss/bild-w8/schnitte/`), nicht auf einer Gegenüberstellung im selben Bild.
