@@ -7,8 +7,8 @@
   tafeln(): []
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-      10453 px²   268× 39 @2013,584  .gg-sitz  „Brauhaus zum Adler"
-    (1 Kaesten, Summe der Huellen 10453 px²)
+      10721 px²   268× 40 @2013,584  .gg-sitz  „Brauhaus zum Adler"
+    (1 Kaesten, Summe der Huellen 10721 px²)
   BEDIENUNG des GEGNERS: 11 Zuege, 8 von der Maus zu treffen, 0 abgeschaltet, 4 mit Preisschild, 1 unter 24 px
       gegner:abloesen:faehrhaus       110× 33           -66  „FAE · BANablösen 66 Pf"
       gegner:abloesen:torschenke      110× 33           -56  „TOR · KONablösen 56 Pf"
@@ -18,12 +18,13 @@
       gegner:hinhalten:faehrhaus      143× 31                „Fass an den Wirt1 Fass statt Geld"
       gegner:hinhalten:obernberg      143× 31                „Fass an den Wirt1 Fass statt Geld"
       gegner:hinhalten:torschenke     143× 31                „Fass an den Wirt1 Fass statt Geld"
-      gegner:oeffnen:adler            268× 39                „Brauhaus zum Adler"
+      gegner:oeffnen:adler            268× 40                „Brauhaus zum Adler"
     ! gegner:zeige:1                   73× 22                „zeigen"
       gegner:zuvorkommen:obernberg    172× 33           -19  „wirbt · noch 4 Wo.zuvorkommen 19 Pf"
+  BAND „Ohne dich geschehen": 936×203 @1404,207 = 190175 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wi"
   A3 — GEGNER auf gemalter Beschriftung: 0
-  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
-    325 px in 325 px QUILLT  clip  .gg-vorschild  „Vorsprung: 2 Dinge · wirbt 2 Wo. kürzer"
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
      146× 23 @1550,527  „ST. MICHAEL"  .wort
      269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
@@ -69,8 +70,8 @@
   tafeln(): []
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-       8785 px²   225× 39 @2034,584  .gg-sitz  „Braustatt Adler"
-    (1 Kaesten, Summe der Huellen 8785 px²)
+       9010 px²   225× 40 @2034,584  .gg-sitz  „Braustatt Adler"
+    (1 Kaesten, Summe der Huellen 9010 px²)
   BEDIENUNG des GEGNERS: 13 Zuege, 10 von der Maus zu treffen, 0 abgeschaltet, 5 mit Preisschild, 1 unter 24 px
       gegner:abloesen:brueckenwirt    110× 33          -231  „BRU · HEIablösen 231 fl"
       gegner:abloesen:obernberg       110× 33          -216  „OBE · ZUNablösen 216 fl"
@@ -82,12 +83,13 @@
       gegner:hinhalten:muehlwirt      143× 31                „Fass in die Lade1 Fass statt Geld"
       gegner:hinhalten:obernberg      143× 31                „Fass in die Lade1 Fass statt Geld"
       gegner:hinhalten:ochse          143× 31                „Fass in die Lade1 Fass statt Geld"
-      gegner:oeffnen:adler            225× 39                „Braustatt Adler"
+      gegner:oeffnen:adler            225× 40                „Braustatt Adler"
     ! gegner:zeige:1                   73× 22                „zeigen"
       gegner:zuvorkommen:muehlwirt    172× 33          -170  „wirbt · noch 6 Wo.zuvorkommen 170 fl"
+  BAND „Ohne dich geschehen": 936×203 @1404,207 = 190175 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Braustatt Adler wirbt um Mühlschenke: Er lässt dem Wirt das Dach richt"
   A3 — GEGNER auf gemalter Beschriftung: 0
-  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 1
-    316 px in 316 px QUILLT  clip  .gg-vorschild  „Vorsprung: 1 Ding · wirbt 1 Wo. kürzer"
+  A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
      146× 23 @1550,527  „ST. MICHAEL"  .wort
      269× 28 @1737,787  „GASTHOF LINDENHOF"  .wort
@@ -134,8 +136,8 @@
   tafeln(): []
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-       8288 px²   213× 39 @2040,584  .gg-sitz  „Brauerei Adler"
-    (1 Kaesten, Summe der Huellen 8288 px²)
+       8501 px²   213× 40 @2040,584  .gg-sitz  „Brauerei Adler"
+    (1 Kaesten, Summe der Huellen 8501 px²)
   BEDIENUNG des GEGNERS: 13 Zuege, 10 von der Maus zu treffen, 0 abgeschaltet, 5 mit Preisschild, 1 unter 24 px
       gegner:abloesen:lindenhof       128× 33        -17741  „LIN · HYPablösen 17.741 M"
       gegner:abloesen:markt           121× 33         -1706  „MKT · VERablösen 1.706 M"
@@ -147,9 +149,11 @@
       gegner:hinhalten:lindenhof       83× 31                „Freibier3,0 hl statt Geld"
       gegner:hinhalten:markt           83× 31                „Freibier3,0 hl statt Geld"
       gegner:hinhalten:muehlwirt       83× 31                „Freibier3,0 hl statt Geld"
-      gegner:oeffnen:adler            213× 39                „Brauerei Adler"
+      gegner:oeffnen:adler            213× 40                „Brauerei Adler"
     ! gegner:zeige:1                   73× 22                „zeigen"
       gegner:zuvorkommen:brueckenwirt  172× 33         -1782  „wirbt · noch 3 Wo.zuvorkommen 1.782 M"
+  BAND „Ohne dich geschehen": 936×181 @1404,207 = 169123 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Brauerei Adler wirbt um Brückenwirt: Er bietet dem Wirt ein Darlehen u"
   A3 — GEGNER auf gemalter Beschriftung: 0
   A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
@@ -196,9 +200,9 @@
   tafeln(): []
   geklemmt(): {}
   Kaesten des GEGNERS (Huelle, groesste zuerst):
-       9478 px²   243× 39 @2410,768  .gg-sitz  „Nordstern-Gruppe"
-       7957 px²   204× 39 @2045,584  .gg-sitz  „Adler-Bräu AG"
-    (2 Kaesten, Summe der Huellen 17435 px²)
+       9721 px²   243× 40 @2410,768  .gg-sitz  „Nordstern-Gruppe"
+       8161 px²   204× 40 @2045,584  .gg-sitz  „Adler-Bräu AG"
+    (2 Kaesten, Summe der Huellen 17882 px²)
   BEDIENUNG des GEGNERS: 12 Zuege, 9 von der Maus zu treffen, 0 abgeschaltet, 4 mit Preisschild, 1 unter 24 px
       gegner:abloesen:bahnhofswirt    138× 33        -58320  „BHF · LISablösen 58.320 DM"
       gegner:abloesen:brueckenwirt    138× 33        -38221  „BRU · LISablösen 38.221 DM"
@@ -209,9 +213,11 @@
       gegner:hinhalten:bahnhofswirt   143× 31                „Zuschuss in Bier4,5 hl statt Geld"
       gegner:hinhalten:brueckenwirt   143× 31                „Zuschuss in Bier4,5 hl statt Geld"
       gegner:hinhalten:hirsch         143× 31                „Zuschuss in Bier4,5 hl statt Geld"
-      gegner:oeffnen:adler            204× 39                „Adler-Bräu AG"
-      gegner:oeffnen:konzern          243× 39                „Nordstern-Gruppe"
+      gegner:oeffnen:adler            204× 40                „Adler-Bräu AG"
+      gegner:oeffnen:konzern          243× 40                „Nordstern-Gruppe"
     ! gegner:zeige:1                   73× 22                „zeigen"
+  BAND „Ohne dich geschehen": 936×181 @1404,207 = 169123 px²  (Reiter ab 101.376 · Tafel ab 200.000)
+      ganz     731 px in  731 px  „Der Adler erhöht den Werbekostenzuschuss beim Brückenwirt um 11.491 DM"
   A3 — GEGNER auf gemalter Beschriftung: 0
   A10 — abgeschnittene/quellende ZAHLEN des GEGNERS: 0
   ORTSSCHILDER der STADT:
