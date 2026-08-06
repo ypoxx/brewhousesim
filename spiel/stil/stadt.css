@@ -347,9 +347,14 @@
   flex-wrap: wrap;
   align-items: stretch;
   align-content: flex-start;
-  gap: calc(var(--s) * 7);
-  padding-left: calc(var(--s) * 12);
-  padding-right: calc(var(--s) * 12);
+  /* Welle 9, A1: 7 -> 4 zwischen den Kacheln und 3 zwischen den Zeilen.
+     Der Zwischenraum einer Reiterzeile ist Luft ueber dem Bild und zaehlt
+     in der Deckung nicht mit — die HOEHE, die er erzwingt, aber schon:
+     zwei Zeilen Reiter kosten mit gap 7 vier Bezugspixel mehr, und die
+     Zeile steht vollstaendig im obersten Sechstel. */
+  gap: calc(var(--s) * 3) calc(var(--s) * 4);
+  padding-left: calc(var(--s) * 8);
+  padding-right: calc(var(--s) * 8);
   min-height: calc(var(--s) * 8);
 }
 
@@ -386,8 +391,8 @@
   align-items: flex-start;
   justify-content: center;
   gap: 0;
-  min-height: calc(var(--s) * 30);
-  padding: calc(var(--s) * 3) calc(var(--s) * 8) calc(var(--s) * 4);
+  min-height: calc(var(--s) * 24);
+  padding: calc(var(--s) * 2) calc(var(--s) * 7) calc(var(--s) * 3);
   background: linear-gradient(180deg, #7b5230 0%, #56341a 100%);
   border: calc(var(--s) * 3) solid #33200e;
   border-bottom: none;
@@ -408,6 +413,12 @@
   font-family: var(--serif);
   font-weight: 700;
   font-size: max(12px, calc(var(--s) * 16));
+  /* Welle 9, A1: der enge Durchschuss galt bisher nur unter 900 px Buehne.
+     Er gilt jetzt ueberall — die Reiterzeile steht seit Welle 8 vollstaendig
+     im obersten Sechstel, und dort kostet jede Zeile Durchschuss Bildpunkte,
+     die A1 zaehlt. 1,05 ist der Wert, mit dem der Boden unten schon misst;
+     zwei Zeilen kleben damit nachweislich nicht zusammen. */
+  line-height: 1.05;
   letter-spacing: calc(var(--s) * 1.6);
   text-transform: uppercase;
   white-space: normal;
@@ -427,6 +438,7 @@
 .knopf.stadt-reiter .zahl {
   font-family: var(--mono);
   font-size: max(12px, calc(var(--s) * 12));
+  line-height: 1.06;
   letter-spacing: 0;
   color: #cba777;
   white-space: normal;
@@ -803,8 +815,8 @@
 
   /* --- Der Reiter: zwei Zeilen Schrift, das Polster weicht. --- */
   #buehne .knopf.stadt-reiter {
-    padding-top: max(0px, calc(var(--s) * 3 - 0.45 * var(--zu-reiter)));
-    padding-bottom: max(0px, calc(var(--s) * 4 - 0.80 * var(--zu-reiter)));
+    padding-top: max(0px, calc(var(--s) * 2 - 0.45 * var(--zu-reiter)));
+    padding-bottom: max(0px, calc(var(--s) * 3 - 0.80 * var(--zu-reiter)));
     gap: 0;
   }
 
@@ -868,7 +880,7 @@
   /* Zwei Zeilen Reiterschrift mit dem engsten Zeilenabstand, der noch nicht
      zusammenklebt (1,08 statt der Vorgabe 1,25 der Serifenschrift). */
   #buehne .knopf.stadt-reiter .wort,
-  #buehne .knopf.stadt-reiter .zahl { line-height: 1.08; }
+  #buehne .knopf.stadt-reiter .zahl { line-height: 1.05; }
 
   /* Die Nutzenzeile ist einzeilig und braucht keinen Durchschuss. */
   #buehne .stadt-bauhof .nutzen { line-height: 1; }
