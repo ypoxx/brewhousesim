@@ -40,7 +40,13 @@ for (const e of [1, 2, 3, 4]) {
   await s.waitForTimeout(600);
   const nach = await s.evaluate(() => !!document.querySelector('.fu-sommerblatt'));
 
-  /* Und jetzt der Griff des Rahmens: Chronik auf, Escape, Chronik zu? */
+  /* Und jetzt der Griff des Rahmens: Chronik auf, Escape, Chronik zu?
+     ERST 3 s WARTEN — der Escape-Sweep des Rahmens fasst ueber 2,6 s nach
+     (ANLAEUFE bis 2600 ms). Wer die Chronik frueher aufschlaegt, bekommt sie
+     von diesem Nachfassen wieder zugeklappt und misst nicht seinen eigenen
+     Escape. Beim ersten Anlauf ist mir genau das passiert: `spur()` zeigte
+     „760ms: kern .blatt rolle -> klemme+knopf:kern:blatt-zu". */
+  await s.waitForTimeout(3200);
   const chronikDa = await s.evaluate(() => {
     const k = document.querySelector('[data-zug="kern:chronik"]');
     if (!k) return 'kein Knopf';
