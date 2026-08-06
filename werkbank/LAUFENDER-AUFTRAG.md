@@ -338,7 +338,16 @@ etwas Committetes. Verloren ging jedes Mal dasselbe:
    sagt „origin ist auf Stand", weil der Reset auch die Reparatur zurücknimmt,
    die das verhindern sollte. Von Hand:
    `git fetch origin <zweig> && git rev-list --count HEAD..origin/<zweig>`.
-   **Hat bei Reset 8 und 9 funktioniert und den Baum gerettet.**
+   **Hat bei Reset 8 bis 17 jedes Mal funktioniert und den Baum gerettet.**
+   Beim **siebzehnten** am 6. August 04:23 UTC stand der Baum **333 Commits**
+   zurück, und die Meldung lautete wörtlich „origin ist auf Stand". Neu daran
+   war nur eines: der Reset hatte auch schon einen **Veröffentlicher aus dem
+   veralteten Baum** gestartet, den `wiederaufnahme.sh` selbst hochgezogen
+   hatte. Er wurde vor dem `git reset --hard` per PID beendet — hätte in diesem
+   Baum jemand eine Datei angefasst, hätte der nächste automatische Commit
+   333 Commits Arbeit als Rücknahme veröffentlicht. **Reihenfolge nach jedem
+   Reset: erst den Veröffentlicher beenden, dann den Baum herstellen, dann den
+   Veröffentlicher neu starten.**
 2. **Wer einen Agenten wieder aufnimmt, stellt ihm ZUERST seinen Messstand her.**
 3. **Kein Aufbau darf nur im Kopf stehen.** Was nach einem Reset von Hand
    nachgebaut werden muss, gehört als Skript ins Repo. Die Knopfboden-Probe

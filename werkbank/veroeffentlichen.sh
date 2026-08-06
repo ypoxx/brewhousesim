@@ -44,8 +44,12 @@ while [ "$(date +%s)" -lt "$ENDE" ]; do
     # der Aufsicht bemerkt und geschlossen.
     PFADE=()
     shopt -s nullglob
+    # Und werkbank/*.md, seit am 6. August dasselbe Loch eine Ebene hoeher
+    # auffiel: LAUFENDER-AUFTRAG.md, das Zustandsdokument des ganzen Laufs, war
+    # von dieser Liste nie erfasst. Es hing allein an den Handcommits der
+    # Aufsicht — und zwischen zweien davon liegt regelmaessig ein Reset.
     for p in werkbank/stand.json werkbank/schuss werkbank/urteile spiel gauntlet \
-             werkbank/*.py werkbank/*.mjs werkbank/*.sh; do
+             werkbank/*.py werkbank/*.mjs werkbank/*.sh werkbank/*.md; do
       [ -e "$p" ] && PFADE+=("$p")
     done
     shopt -u nullglob
