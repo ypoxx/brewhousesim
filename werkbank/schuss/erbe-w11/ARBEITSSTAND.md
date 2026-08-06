@@ -507,3 +507,117 @@ dieselben fuenf treffbaren Zuege der Leiste. **Erwartung also: rho bewegt sich
 nicht.** Wenn doch, ist das der Befund, nicht die Erwartung.
 
 
+
+---
+
+# DRITTER ANLAUF (6.8., nach dem Sitzungslimit des zweiten)
+
+Vorgefunden: Arbeitsbaum **sauber** (die Aufsicht hat alles committet, HEAD
+`eba9f4c`), **kein Hafen mehr offen** (8941/8942 tot, `/tmp/erbe-w11-nachstand`
+fort), `werkbank/.messsperre` fort. Der Container ist also seit dem zweiten
+Anlauf noch einmal neu.
+
+**Die entscheidende Prüfung zuerst — und sie fällt gut aus:**
+
+```
+cat spiel/stuecke/erbe.js spiel/stuecke/erbe-daten.js spiel/stuecke/erbe-zusatz.js \
+    spiel/stil/erbe.css spiel/stil/erbe-zusatz.css | md5sum
+→ c87fe55d0ad1
+```
+
+Das ist **Ziffer für Ziffer die Prüfsumme, unter der alle `nach2-*`-Messungen
+erhoben wurden**. Meine fünf Dateien haben sich seit dem zweiten Anlauf um kein
+Byte bewegt. **Sämtliche `nach2-*`-Messungen gelten unverändert für den
+ausgelieferten Stand** — es gibt nichts zu wiederholen, nur zusammenzutragen.
+
+`git diff --stat 7896ee6 HEAD` auf meinen drei geänderten Dateien:
+`stil/erbe.css` +448/−…, `stuecke/erbe.js` +221, `stuecke/erbe-daten.js` +6.
+`erbe-zusatz.js`/`.css` sind unangetastet. Kein fremdes Stück berührt.
+
+## Was der zweite Anlauf noch fertig bekommen hat (nachgezählt, nicht geglaubt)
+
+Alle acht rho-Läufe liegen vor (`messungen/rho/{vor,nach}/e{1..4}-A.json`),
+dazu `nach2-tor`, `nach2-spielprobe`, `nach2-blick`, `nach2-brettprobe`,
+`nach2-einzeln`, `nach2-gewicht`, `nach2-lesbarkeit`, `nach2-laden`,
+`nach2-messen-laden`. **Der Satz ist vollständig.**
+
+## DIE KENNZAHL — vollständig, mit den Jahren unter 1×
+
+Aus den acht JSON gerechnet (`mal < 1` je Braujahr), Vorzustand `7896ee6` gegen
+Nachstand `erbe-w11:7896ee6+c87fe55d0ad1`, je 400 Wochen, `?saat=1350`,
+jeder Lauf einzeln durchs Messfenster:
+
+| Epoche | Satz | 12 J | 13 J | 14 J | Jahre <1× | Kasse | Fehler |
+|---|---|---|---|---|---|---|---|
+| 1350 | vor | −0,245 | −0,170 | −0,336 | **2/14** | 28–524 | 0 |
+| 1350 | **nach** | **−0,245** | **−0,170** | **−0,336** | **2/14** | 28–524 | 0 |
+| 1600 | vor | −0,189 | +0,049 | −0,116 | **0/14** | 291–2851 | 0 |
+| 1600 | **nach** | **−0,189** | **+0,049** | **−0,116** | **0/14** | 291–2851 | 0 |
+| 1884 | vor | +0,168 | +0,346 | +0,393 | **1/14** | 1757–23789 | 0 |
+| 1884 | **nach** | **+0,168** | **+0,346** | **+0,393** | **1/14** | 1757–23789 | 0 |
+| 1970 | vor | −0,112 | −0,236 | −0,304 | **1/14** | 320–95857 | 0 |
+| 1970 | **nach** | **−0,112** | **−0,236** | **−0,304** | **1/14** | 320–95857 | 0 |
+
+**Vorher und nachher sind in allen 24 Zahlen identisch.** Größter Betrag
+0,393 (1884, 14 J) gegen die Latte 0,700. Jahre unter 1×: **2/0/1/1 von 14** —
+genau die Eichung, die WELLE-11 für den Vorzustand nennt. Auch die
+Kassenspannen stimmen ziffernweise überein.
+
+Das ist die Erwartung aus dem Abschnitt „Woran mein Stück rho überhaupt bewegen
+KÖNNTE", und sie ist eingetreten: das zugeklappte Buch war vorher zwar im DOM,
+aber von der STADT mit `clip-path: inset(50%)` unerreichbar — es fällt weg,
+ohne dass ein Zug wegfällt. **Mein Stück bewegt die Partie nicht um eine
+Ziffer.**
+
+## KORREKTUR AN MEINER EIGENEN TABELLE — gegen mich
+
+Der zweite Anlauf hat `einzeln.mjs` wiederholt, weil der stärkere Lichthof
+photographisch zählt. Er tut es. **Die Tabelle weiter oben („Was die Leiste
+WIRKLICH noch deckt") nennt die Zahlen des ERSTEN Anlaufs und ist damit zu
+günstig für mich.** Die ausgelieferten Zahlen (`nach2-einzeln.txt`):
+
+| `.erb-leiste` photographisch | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| vorher | 142.532 | 144.672 | 145.334 | 135.175 px |
+| erster Anlauf (schwacher Lichthof) | 31.455 | 29.246 | 31.366 | 37.448 px |
+| **ausgeliefert** | **35.376** | **33.005** | **35.124** | **41.497** px |
+| davon `.erb-band` allein | 18.079 | 17.540 | 17.679 | 19.000 px |
+| Bandbreite | 1080 | 1059 | 1066 | 1182 px |
+
+Der lesbare Lichthof kostet **3.900 bis 4.100 px je Epoche** gegenüber dem
+ersten Anlauf. Ich habe ihn trotzdem behalten, weil `nach-e1-leiste.png` gezeigt
+hat, dass ohne ihn die halbe Bandzeile im Dach verschwindet — **eine Zeile, die
+niemand liest, ist kein gesparter Bildpunkt, sondern ein verlorener Satz.** Die
+ehrliche Zahl für das, was von DEM ERBE auf dem Schirm steht, ist damit
+**35.376 statt 142.532** in E1 und **41.497 statt 135.175** in E4 — knapp ein
+Viertel bzw. nicht ganz ein Drittel, nicht ein Dreizehntel.
+
+Der Haushalt sieht davon nichts, und das ist kein Trick von mir, sondern die
+Regel: `.erb-leiste` trägt keinen Grund, keinen Rahmen, keinen Verlauf mehr,
+ist also für `deckung.mjs` (`istKasten`) und `haushalt.miss()` kein Kasten. Wer
+die 17.297 px zitiert, zitiert die Regel des Kritikers („was nur Schrift trägt,
+ist Welt"). Beide Zahlen stehen hier.
+
+## Gegenprobe: hat der zweite Anlauf die Kastenzahlen bewegt?
+
+`diff nach-messen-laden.txt nach2-messen-laden.txt` — **die Zeilen von `erbe`
+sind identisch** (17.297 / 15.465 / 17.445 / 22.497 px). Der einzige
+Zahlenunterschied im ganzen Blatt:
+
+```
+< gegner  Kaesten 22 … 215077 px      (erster Anlauf)
+> gegner  Kaesten 22 … 214498 px      (zweiter Anlauf)
+  GESAMT … Mittelband 13.9 % → 13.8 %
+```
+
+**579 px in einem fremden Stück, auf demselben eingefrorenen Nachstand.** Der
+Gegner ist in beiden Läufen derselbe Quelltext aus `7896ee6` — die Differenz ist
+Messrauschen des Geräts (Gegnerkarte mit gewürfeltem Inhalt), nicht mein Werk.
+Ich schreibe sie hin, damit niemand später eine 0,1-Punkt-Bewegung im
+Mittelband für ein Ergebnis hält. **Rauschmaß dieses Geräts: rund 0,3 % eines
+Stückwerts.**
+
+Damit ist auch die Begründung belegt, warum `nach-deckung-*` und `nach-w30`
+nicht wiederholt werden mussten: der zweite Anlauf hat an der Kastenhülle
+nichts geändert (nur Tinte am Band und die Buchhöhe), und das Buch steht im
+Lade- wie im 30-Wochen-Zustand ohnehin nicht im DOM.

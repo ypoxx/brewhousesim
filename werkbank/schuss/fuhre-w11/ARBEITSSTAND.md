@@ -22,6 +22,24 @@ Gemessen wird einzeln, jeder Browser durch `aufsicht/messfenster.sh`.*
 > `/tmp` auf `git` umgestellt worden und damit zum ersten Mal
 > nachstellbar** — siehe dort.
 
+> ### NEUANLAUF 3 nach Sitzungsende, 6.8. ~23:2x UTC
+>
+> Der zweite Anlauf ist am Sitzungslimit gestorben, mitten in der Nacharbeit
+> an §3.1. **Wieder ist nichts verloren**, was zaehlt. Was ich beim Antritt
+> vorgefunden habe, und was daraus folgt:
+>
+> | | Stand beim Antritt |
+> |---|---|
+> | **Die Berichtigung §3.1** (das Letzte, was mein Vorgaenger anfing) | **war zu Ende gebracht.** Nachgeprueft: die vier Nachher-Zeilen der Tabelle stimmen jetzt Ziffer fuer Ziffer mit `messungen/nachher-sonde-w30.txt`. Die Folgestelle in §3.2 (`195.456` → `189.696`) ist ebenfalls berichtigt (Commit `397aac1`), und die falschen Masse im Quelltext-Erklaerkopf auch (`fuhre.js:3697`). **Die alten Zahlen stehen nur noch dort, wo sie hingehoeren: im Berichtigungskasten selbst.** Nachgezaehlt mit `grep` ueber alle sechs falschen Werte |
+> | `abnahme.sh` | **war fertig durchgelaufen** (`abnahme-fortschritt.txt`: FERTIG 22:49:49) — aber **die letzten fuenf Ergebnisse standen in keinem Abschnitt**, weil die Sitzung um 21:53 endete und der Lauf erst um 22:49 fertig war. Nachgetragen in §3.5b, §3.9. Darunter die wichtigste Zahl des ganzen Auftrags (siehe unten) |
+> | Arbeitsbaum gegen gemessenen Stand | **auseinander**: gemessen wurde `3082041165`, im Baum steht `3bdb5bb282`. Der Unterschied ist **ein Kommentarblock** — nachgerechnet, §3.9 |
+>
+> **Die Latte „Gesamtdeckung unter 20 %" ist genommen, und es stand
+> nirgends.** `messungen/deckung-gemeinsam-w30.txt`, 30 × WEITER ohne
+> Escape, alle drei Stuecke zusammen: **14,5 / 15,0 / 14,8 / 13,8 %**.
+> §3.3 sagt noch „NICHT genommen" — das war zur Zeit des Schreibens richtig
+> und ist es seit 22:49 nicht mehr. Berichtigt in §3.3b.
+
 | Stand auf Hafen | was |
 |---|---|
 | 8951 | VORZUSTAND `7896ee6` (`aufsicht/messstand.sh 7896ee6 8951`) |

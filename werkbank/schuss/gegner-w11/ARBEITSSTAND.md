@@ -484,3 +484,123 @@ findet, statt es für abgedeckt zu halten.
 
 *(Messung läuft. Der Nachstand ist `7896ee6+gegner-f921d8abdd12`, der Code ist
 ab hier eingefroren — jede Zahl unten gehört zu genau dieser Marke.)*
+
+---
+
+## 7 — DRITTER ANLAUF, nach dem Sitzungslimit (6.8., ab 23:2x UTC)
+
+*Der zweite Anlauf ist am Sitzungslimit gestorben, mitten in `schluss.sh`. Er
+hatte den Satz `nach2` fast vollständig gemessen — und, wie sein Vorgänger,
+**nicht mehr ausgewertet**. §7.1 ist diese Auswertung; sie ist keine neue
+Messung, sondern das Lesen von Blättern, die schon dalagen.*
+
+**Der Stand ist unverändert.** `nachstand.sh 8962` liefert dieselbe Marke, die
+über den `nach2`-Blättern steht: **`7896ee6+gegner-f921d8abdd12`**. Der
+Arbeitsbaum ist sauber (die Aufsicht hat alles gesichert), die Prüfsumme meiner
+fünf Dateien ist dieselbe. **Jede Zahl in §7.1 gehört also zum heutigen Code**
+— ich messe nicht nach, was schon gemessen ist.
+
+### 7.1 Der Satz `nach2`, ausgewertet — die reparierte Ausweiche hält
+
+**Auflage 3, alle drei Zustände, alle vier Epochen** (`sonde.mjs`; in Klammern
+`data-a3zonen`, also wie viele Sperrzonen das Stück wirklich gefunden hat):
+
+| A3-Treffer | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Ladezustand | 0 (4) | 0 (4) | 0 (5) | 0 (6) |
+| 34 Baurunden + Esc | **0** (4) | **0** (4) | **0** (5) | **0** (6) |
+| 30 Wochen | **2** (4) | **0** (4) | **0** (5) | **0** (6) |
+
+Zum Vergleich derselbe Zustand vor der Reparatur (Satz `nach`, §6.1):
+gebaut 3·0·0·3, w30 2·0·0·4. **Die sieben Treffer, die auf die tote Zonenliste
+zurückgingen, sind fort; `data-a3zonen` steht nie auf 0.** Das ist die
+Entscheidung, für die §6.5 das Attribut gebaut hat: es war der Zeitpunkt, nicht
+die Rechnung.
+
+Die zwei verbliebenen Treffer sind **ein einziges Ding, zweimal gezählt** —
+der Wagen und sein Bild:
+
+```
+1350, 30 Wochen:  „BRAUHAUS ZUM ADLER"  591 px²  unter div.gg-wagen      150×118 @2209,449
+                  „BRAUHAUS ZUM ADLER"  591 px²  unter img.gg-wagenbild  150×100 @2209,449
+```
+
+Das ist genau der Fall aus §6.4, den ich stehen lasse, und ich melde ihn statt
+ihn wegzurechnen. Nachgerechnet: das Schild steht 191×18 @2051,461, der Wagen
+150×118 @2209,449 — die Überlappung ist **33 px der rechten Schildkante**,
+33×18 = 594 px². Der gemalte Name liegt in der Ebene `hand` mit z-index 962,
+der Wagen in `marken`: **der Name wird darüber gezeichnet und bleibt ganz
+lesbar, der Wagen fährt darunter durch.** Der Zähler der Sonde ist absichtlich
+schichtblind.
+
+**Auflage 10 und der Haushalt, alle drei Zustände:**
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| A10 abgeschnittene ZAHLEN, alle drei Zustände | 0 | 0 | 0 | 0 |
+| `.gg-bandzeile .was`, jede Zeile | ganz 731/731 | ganz | ganz | ganz |
+| abgeschnittener Text des GEGNERS, alle Zustände | — | — | — | — |
+| GEGNER im Haushalt (Laden/gebaut/w30) | 11.968 | 10.032 | 9.504 | 19.072 px |
+| davon oberstes ⅙ | 0 | 0 | 0 | 0 |
+| `ueberRand()` Laden · gebaut · w30 | [] · **[]** · [] | [] · [] · [] | [] · [] · [] | [] · [] · [] |
+| `tafeln()` des GEGNERS | [] | [] | [] | [] |
+| `pruefe()` nennt gegner | nein | nein | nein | nein |
+| `lage` · Seitenfehler · `verdeckt()` | 0·0·[] | 0·0·[] | 0·0·[] | 0·0·[] |
+
+Der Haushaltswert des GEGNERS ist in allen drei Zuständen **dieselbe Zahl** —
+Laden, 34 Baurunden und 30 Wochen unterscheiden sich nicht um ein Byte. Das ist
+die Folge daraus, dass nur noch **ein** Kasten (1970: zwei) übrig ist: sein
+Namensschild wächst nicht mit dem Spiel.
+
+### 7.2 Photographisch — die Bildpunkte, um die der Auftrag gestellt ist
+
+`rahmen-w10/messen.mjs`, dasselbe Gerät, mit dem der Haushalt gerechnet wurde:
+
+| gegner, Bildpunkte | 1350 | 1600 | 1884 | **1970** |
+|---|---|---|---|---|
+| **vorher** (`7896ee6`, Laden) | 195.127 | 200.464 | 187.855 | **215.077** |
+| **nachher** (Laden) | **10.685** | **8.994** | **8.515** | **17.864** |
+| nachher (30 Wochen) | 4.249 | 3.398 | 3.159 | 13.449 |
+| Grenze | 28.000 | 28.000 | 28.000 | 28.000 |
+| oberstes ⅙ vorher → nachher | 0,0 % → **0,0 %** | 0,0 % → 0,0 % | 0,0 % → 0,0 % | 0,0 % → **0,0 %** |
+| Kästen vorher → nachher | 21 → **8** | 23 → 8 | 22 → 8 | 22 → **9** |
+| unterstes ⅙ vorher → nachher (A6) | 4,0 % → **0,0 %** | 3,3 % → **0,0 %** | 3,6 % → **0,0 %** | 3,3 % → **0,0 %** |
+| Ruheprobe | 0 px | 0 px | 0 px | 0 px |
+| über dem Rand · Währungsbruch · fehlende Zeichen | 0·0·0 | 0·0·0 | 0·0·0 | 0·0·0 |
+| `verdeckt()` | [] | [] | [] | [] |
+
+**1970: 215.077 → 17.864 px, ein Achtel der Grenze von 28.000.**
+**Auflage 6 ist photographisch belegt: das unterste Sechstel des GEGNERS steht
+in allen vier Epochen auf 0,0 %** — vorher 3,3 bis 4,0 %.
+
+(Die photographische Zahl liegt über der des Haushalts, weil das Auge auch den
+Schlagschatten und die Strichkontur sieht, die keine Hülle hat. Beide Zahlen
+stehen hier, weil beide gefragt sind.)
+
+### 7.3 Lesbarkeit bei 1366×768 (`aufsicht/lesbarkeit.mjs`)
+
+13 Überläufe im ganzen Bild, davon **einer je Epoche aus diesem Stück**
+(`gg:1` in 1350/1884, in 1600 `gg:1`, in 1970 keiner). 0 von 308 aktiven
+Knöpfen unter 24 px. Der verbliebene `gg`-Überlauf bei 1366 px Breite ist
+gemessen und benannt und steht in §7.5.
+
+### 7.4 Was jetzt noch fehlte — und warum gerade das
+
+Der zweite Anlauf ist in `schluss.sh` gestorben. Was er nicht mehr geschafft
+hat, ist **nicht zufällig verteilt**: `tor.mjs` und `spielprobe.mjs` schreiben
+in `.log`-Dateien, und `*.log` steht in `.gitignore` — die Aufsicht sichert sie
+also nie, und der Container-Reset hat sie mitgenommen. Von den vier
+ρ-Linien war nur e1 durch.
+
+Es fehlen also: **`tor`, `spielprobe`, ρ e2/e3/e4.** Genau das misst dieser
+dritte Anlauf, in dieser Reihenfolge (billig zuerst).
+
+**Zur Frage, welcher ρ-Satz gilt:** `nach-e1.json` und `nach2-e1.json` sind
+**byteweise gleich** (md5 `236412a2…`), obwohl sie auf zwei verschiedenen
+Fassungen gemessen wurden — vor und nach der Reparatur der Ausweiche.
+Das ist plausibel, denn die Änderungen 7–11 verschieben Zeichen, sie ändern
+keinen Preis. Aber plausibel ist nicht gemessen. Deshalb messe ich **e2 auf dem
+heutigen Stand nach**, obwohl `nach-e2.json` schon dasteht: stimmt es
+byteweise mit `nach-e2` überein, ist die Neutralität der Ausweiche belegt statt
+vermutet, und `nach-e1/e2` dürfen im Satz stehen. Weicht es ab, gilt allein der
+neu gemessene Satz `nach2`.
