@@ -76,11 +76,21 @@ Bildpunkte. Und er hat die Zahl geliefert, die bisher nur geschätzt war:
 Kästen am oberen Rand und in einer Ecke, das Spiel legt seine quer über die
 **Bildmitte** — dorthin, wo der Brauhof steht.
 
-> ### DER SCHÄRFSTE FUND: ESCAPE RÄUMT NICHT AUF, ES TAUSCHT
-> Nach 30 Wochen liegt die Georgi-Tafel (1596 × 943) über dem Bild. Drei
-> Escape-Anschläge schließen sie — und legen darunter `erb-buch` (1156 × 1075)
-> frei, das **die ganze linke Bildhälfte samt Brauhof** deckt. **Die
-> Gesamtdeckung sinkt nicht, sie wandert von oben in die Mitte.**
+> ### DER SCHÄRFSTE FUND: ESCAPE RÄUMT NICHT AUF
+> Nach 30 Wochen liegt die Georgi-Tafel (1596 × 943) über dem Bild. Escape
+> schließt sie — und danach liegt `erb-buch` (1156 × 1075) da, das **die ganze
+> linke Bildhälfte samt Brauhof** deckt. **Die Gesamtdeckung sinkt nicht.**
+>
+> **BERICHTIGUNG DES MECHANISMUS, vom Builder der Welle 10 belegt, von der
+> Aufsicht noch nicht nachgemessen:** Die Erbe-Tafel lag **nicht darunter**.
+> Mit `rahmen-w10/sonde.mjs` nachgestellt (30× WEITER, eigener Hafen): *ohne*
+> Escape ist genau **ein** Blatt über 200 000 px² offen — `fu-sommerblatt` —,
+> und `erb-buch` ist **zu**. Nach **einem** Escape ist `fu-sommerblatt` fort
+> und `erb-buch` **auf**. **Escape tauscht nicht, Escape öffnet.** Das Ergebnis
+> ist dasselbe, die Ursache eine andere — und für die Abhilfe ist das der
+> Unterschied zwischen „eine Tafel schließen" und „eine Kette unterbrechen".
+> Dazu: `erb-buch` enthält **null** Elemente mit `data-zug`, hat also gar keinen
+> eigenen Schließknopf; der einzige Griff ist ein Reiter der STADT.
 
 **Die nackte Bühne gewinnt inzwischen.** Gegen die vier Aufnahmen ohne Kästen
 (`e1..e4-nackt.png`, in denen nachweislich kein gemaltes Gebäude fehlt) gewinnt
