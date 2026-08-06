@@ -1,2 +1,79 @@
 == Warum 169.305 px — Gegenprobe auf dem VORZUSTAND, Ladezustand, E1  22:18:36
 MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 1031s
+MESSFENSTER offen — load 1.51 1.43 1.39
+{
+ "bretter": [
+  {
+   "klasse": "fu-brett fu-haeuser stadt-zugeklappt",
+   "clip": "inset(50%)",
+   "vis": "visible",
+   "mass": "705×1130 @30,194"
+  },
+  {
+   "klasse": "fu-brett fu-tafel fu-schiefer stadt-zugeklappt",
+   "clip": "inset(50%)",
+   "vis": "visible",
+   "mass": "638×657 @754,194"
+  },
+  {
+   "klasse": "fu-brett fu-keller stadt-zugeklappt",
+   "clip": "inset(50%)",
+   "vis": "visible",
+   "mass": "638×461 @754,863"
+  },
+  {
+   "klasse": "fu-brett fu-wagen stadt-zugeklappt",
+   "clip": "inset(50%)",
+   "vis": "visible",
+   "mass": "740×461 @1412,863"
+  }
+ ],
+ "marken": [
+  {
+   "klasse": "fu-marke amort stadt-marke-ruht",
+   "clip": "none",
+   "op": "0",
+   "mass": "56×43 @1843,701"
+  },
+  {
+   "klasse": "fu-marke amort stadt-marke-ruht",
+   "clip": "none",
+   "op": "0",
+   "mass": "48×43 @1435,685"
+  },
+  {
+   "klasse": "fu-marke amort stadt-marke-ruht",
+   "clip": "none",
+   "op": "0",
+   "mass": "48×43 @2315,639"
+  },
+  {
+   "klasse": "fu-marke amort stadt-marke-ruht",
+   "clip": "none",
+   "op": "0",
+   "mass": "48×43 @2398,1054"
+  },
+  {
+   "klasse": "fu-marke amort stadt-marke-ruht",
+   "clip": "none",
+   "op": "0",
+   "mass": "48×43 @2233,992"
+  },
+  {
+   "klasse": "fu-marke amort stadt-marke-ruht",
+   "clip": "none",
+   "op": "0",
+   "mass": "48×43 @2288,470"
+  }
+ ],
+ "fach": null,
+ "faecher": [
+  "ebene-hand kinder 10",
+  "ebene-blatt kinder 0"
+ ]
+}
+markierte fuhre-Kaesten: 166
+unterschiedliche Bildpunkte: 28813   Kasten 37..873 × 127..248
+Zeilenbloecke: 127-179 193-248
+   -> 0 22:35:55
