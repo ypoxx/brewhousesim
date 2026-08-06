@@ -46,6 +46,44 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DIESELBE SAAT, ZWEI PARTIEN — der Befund, der über der Welle 10 steht
+
+*6. August, vom Builder DER RAHMEN selbst gemeldet, während er misst.*
+
+In 1350 sind zwei Sätze desselben Standes **auseinandergegangen**: Satz A
+ρ(14 J) **−0,336**, Kasse 28–524; Satz B **+0,270**, Kasse 34–583. Beide
+bestehen die Latte. **Das ist nicht der Punkt.**
+
+**Bei gesätem Würfel ist „zweimal dasselbe" die Voraussetzung jeder Zahl, die
+dieser Lauf je erhoben hat.** Jeder Beleg der Wellen 7 bis 9 steht auf *drei
+Läufe, eine md5*; die Verarmung von 1350 war nur deshalb ein Befund und keine
+Vermutung. Wenn dieselbe Saat zwei Partien ergibt, ist nicht der Wert unsicher,
+sondern **das Gerät**. `spiel/LIESMICH.md` sagt es wörtlich: *„Der Würfel ist
+gesät … sonst kann der Kritiker seine Zählung nicht wiederholen."*
+
+**Der Builder wollte per Mehrheit aus drei Sätzen entscheiden. Das ist das
+falsche Maß** — es macht aus einer offenen Frage ein 2:1. Die Aufsicht hat ihm
+das gemeldet und die Frage umgestellt: *wovon hängt der Unterschied ab?* Sein
+eigener zweiter Fund liefert den Verdacht mit: das Escape-Fenster des Rahmens
+steht **2,6 s** offen und fängt den zweiten Anlauf nur, *weil* es so lange
+offen steht. **Ein Verhalten, das an einer Wanduhr hängt statt am Zustand, ist
+genau die Abhängigkeit, die zwei gleiche Saaten auseinanderlaufen lässt.**
+
+**Damit ist es eine Abnahmebedingung der Welle 10, keine Fußnote:** *dieselbe
+Saat, dieselbe Partie.* Ist sie nicht herstellbar, geht sie als eigene Runde in
+den Loop — aber keine Welle wird abgenommen, deren Zahlen sich nicht
+wiederholen lassen.
+
+*(Zweiter Fund desselben Absatzes: Escape legt die Erbe-Tafel beiseite, aber
+nur bis das Stück neu zeichnet — die Klemme des Rahmens hängt am Element, und
+beim Neuzeichnen ist das Element neu. Wer nach Escape drei Sekunden wartet und
+WEITER drückt, hat die Tafel wieder. Der Builder setzt dagegen ausdrücklich
+**kein längeres Fenster**, sondern benennt einen Griff im Blatt selbst als
+Auflage für Welle 11. Das ist richtig: ein längeres Fenster wäre dieselbe
+Zeitabhängigkeit, nur größer.)*
+
+---
+
 ## URTEIL DER WELLE 9 — die Welt ist da, die Oberfläche ist das Problem
 
 *Blinder Bildvergleich am Stand `37f4b44`, Hafen 8907, Marke vor und nach jeder
