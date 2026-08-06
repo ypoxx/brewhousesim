@@ -357,6 +357,24 @@ genau auf dem Knopfboden — und alle vier „trifft".
 `aufsicht/spielprobe.mjs`: **BESTANDEN**, 60 Wochen je Epoche, `lage 0`,
 `Fehler 0`.
 
+### 3.6b Das Gewichtsveto — nachgerechnet, ohne Browser
+
+Punkt 4 unter „Was nicht kaputtgehen darf": 8 MB je Epoche, heute
+6,33/7,70/6,65/4,71. Die knappste Epoche (1600) hat 0,30 MB Luft. Was DIE
+FUHRE dazulegt, ist reiner Text und laesst sich abzaehlen:
+
+| Datei | `7896ee6` | heute | Zuwachs |
+|---|---|---|---|
+| `spiel/stuecke/fuhre.js` | 208.833 B | 219.484 B | +10.651 B |
+| `spiel/stil/fuhre.css` | 26.781 B | 34.806 B | +8.025 B |
+| `spiel/bild/fuhre/**`, `spiel/ton/fuhre/**` | — | — | **0 B, keine Datei angefasst** |
+
+**+18.676 B = 0,018 MB**, also 6 % der Luft der knappsten Epoche, und der
+groessere Teil davon ist Kommentar. Kein Bild und kein Ton ist dazugekommen
+oder ausgetauscht (`git diff 7896ee6 HEAD -- spiel/bild/fuhre spiel/ton/fuhre`
+ist leer). Das Veto ist damit ohne Browser entschieden; ein Messlauf dafuer
+waere Messzeit, die ein anderes Stueck braucht.
+
 ### 3.7 ρ — die zweite Messlatte
 
 `rueckkopplung-r3/linie.mjs` unveraendert, 400 Wochen je Epoche, Saat 1350,
