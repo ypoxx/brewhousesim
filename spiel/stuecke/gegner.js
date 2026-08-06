@@ -1660,7 +1660,7 @@
 
   function zeichneKennzahl(fach) {
     if (Z.kennzahlSteht) return;             /* haengt schon an ihrem Giebel */
-    var el = kennzahlZeile();
+    var el = kennzahlZeile(false);
     if (!el) return;
     var u = Z.umkaempft;
     var a = u.k ? adresse(u.k) : null;
@@ -1892,7 +1892,7 @@
       if (vor > 0) {
         var v = B.el('div', 'gg-vorschild',
           'Vorsprung: ' + vor + (vor === 1 ? ' Ding' : ' Dinge') + ' · wirbt '
-          + vor + (vor === 1 ? ' Woche' : ' Wochen') + ' kürzer');
+          + vor + (vor === 1 ? ' Wo.' : ' Wo.') + ' kürzer');
         v.title = 'Technik, die er früher hat als das Haus. Jedes Ding kürzt seine '
           + 'Werbung um eine Woche — er ist an der Tür, ehe man ihn kommen sieht.';
         hof.appendChild(v);
@@ -2135,7 +2135,7 @@
          Sechstel. Sie ist gemalt (kein Papier) und nimmt keine Maus an —
          sie sagt etwas ueber die Knoepfe darueber, sie ist keiner. */
       if (reihen.length && Z.umkaempft && Z.umkaempft.k === k) {
-        var kz = kennzahlZeile();
+        var kz = kennzahlZeile(true);
         if (kz) { reihen.push(kz); Z.kennzahlSteht = true; }
       }
 
