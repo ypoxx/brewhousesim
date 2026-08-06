@@ -159,14 +159,52 @@ Kasse gefallen (Startjahr 1 757 → 399). Nur 1970 ist reicher geworden.
 > 4. August nachgetragen, und heute zum ersten Mal das Instrument, das den
 > Ausschlag gibt. **Sie bleibt, und sie wird nie wieder als Beiwerk behandelt.**
 
-**Wem gehört es? Noch offen — und das ist selbst ein Befund.** Zwischen den
-beiden Ständen liegen **zwei** Stücke: DIE STADT (Welle 8) *und* die Nacharbeit
-von DER PREIS aus Welle 7 (`f63d40e`, `preis.js` +223, `preis-daten.js` +70).
-Die Regel „zwei Stücke, die dieselbe Kennzahl füttern, nicht gleichzeitig
-arbeiten lassen" ist eingehalten worden — aber die **Messstände** liegen so weit
-auseinander, dass beide dazwischenfallen. *Ein Messstand je Welle genügt nicht;
-er muss je **Stück** stehen.* Die Trennung leistet
-`werkbank/schuss/aufsicht/welle8-trennprobe/`.
+### ES IST DIE STADT — mit einer Trennprobe belegt
+
+Zwischen den beiden Ständen lagen **zwei** Stücke: DIE STADT (Welle 8) *und* die
+Nacharbeit von DER PREIS aus Welle 7 (`f63d40e`). Getrennt wurde mit zwei
+**Mischständen** aus committeten Dateien, `welle8-trennprobe/aufsetzen.sh`:
+
+| Stand | ρ (14 J) | Jahre < 1× | Kennzahl wöchentl. Median | Wochen ohne Kennzahl |
+|---|---|---|---|---|
+| Welle 7, beides alt | −0,380 | 1/14 | 5,74 | 0/400 |
+| **ohneStadt** — STADT auf alt | **−0,336** | **2/14** | **5,79** | **0/400** |
+| ohnePreis — PREIS auf alt | +0,046 | 3/14 | 0,84 | 74/400 |
+| Welle 8, beides neu | −0,007 | 3/14 | 0,85 | 70/400 |
+
+**Nimmt man DIE STADT heraus, ist die Kasse sofort wieder gesund.** Nimmt man
+DER PREIS heraus, ändert sich nichts. Alle vier Läufe mit null Seitenfehlern.
+*(DER PREIS trägt einen kleinen Teil: von 1 auf 2 Jahre unter 1×. Die Verarmung
+selbst — Median 5,79 → 0,85 und 0 → 70 pleite Wochen — gehört DER STADT.)*
+
+> #### DIE PROBE WAR ERST FALSCH GEBAUT, UND DER FEHLER GEHÖRT HIERHER
+> Der erste Anlauf setzte nur die **Skripte** zurück. Beide Mischstände kamen
+> daraufhin auf die Welle-8-Zahlen — es sah aus, als sei **keines** der beiden
+> Stücke die Ursache. Der Grund war die Probe: `stadt.css` allein hat 185 Zeilen
+> geändert und stand in beiden Ständen neu. **Ein Stück ist nicht seine `.js` —
+> es ist `.js` *und* `.css`**, genau wie die Besitztabelle in `spiel/LIESMICH.md`
+> es sagt. Die wertlosen Messungen liegen als `rho-nur-js/` daneben.
+
+**Zwei naheliegende Erklärungen sind ausgeschlossen**, beide gemessen
+(`welle8-trennprobe/knoepfe.mjs`, 1920×1000 wie die messende Hand):
+
+1. **Nicht: verdeckte Knöpfe.** Am Ladepunkt sind beide Stände Zug für Zug
+   gleich — 104 Züge, 81 offen, 34–35 verdeckt, Kasse 112, und die Menge der
+   klickbaren Züge ist in beiden **identisch** (0 Unterschiede in beide
+   Richtungen). Nach neun mit WEITER gespielten Wochen ebenso: 109 / 83 / 34 /
+   Kasse 71 in beiden.
+2. **Nicht: die DOM-Reihenfolge.** Sie *ist* verschieden (erste Abweichung an
+   Stelle 67), und die Hand hängt an zwei Stellen wörtlich daran — sie braut mit
+   `auf[1]` und verkauft mit `ab[ab.length-1]`. Aber genau diese vier
+   Teilfolgen (`fuhre:tafel-auf:`, `fuhre:tafel-ab:`, `preis:festlege:`,
+   `preis:nimm:`) stehen in **derselben** Reihenfolge.
+
+**Was stattdessen zu sehen ist, Woche für Woche:** Die Reihen laufen ab
+**Woche 2** auseinander (Kasse 80 gegen 62). Im alten Stand fängt die Hand in
+**Woche 9** an, Fässer abzugeben — 12 → 8 → 4 → 3 → 1 — und die Kasse steigt auf
+232. Im neuen liegen die zwölf Fässer bis **Woche 13**, und die Kasse steht bei
+60. **Der Absatz stockt, nicht der Zugriff.** Welche Zeile das tut, weiß der
+Builder besser als die Aufsicht; das Suchfenster ist Woche 1 bis 9 in 1350.
 
 ---
 
