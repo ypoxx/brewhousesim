@@ -621,3 +621,68 @@ Damit ist auch die Begründung belegt, warum `nach-deckung-*` und `nach-w30`
 nicht wiederholt werden mussten: der zweite Anlauf hat an der Kastenhülle
 nichts geändert (nur Tinte am Band und die Buchhöhe), und das Buch steht im
 Lade- wie im 30-Wochen-Zustand ohnehin nicht im DOM.
+
+## ABNAHME AUF DEM INTEGRATIONSSTAND — die Lücke, die der isolierte Stand offen ließ
+
+Der isolierte Nachstand beweist meine Zahlen sauber, aber **`verdeckt()` ist
+seiner Natur nach keine Eigenschaft eines einzelnen Stücks**: „ein Kasten, der
+einen fremden Zug deckt". Auf dem Nachstand stehen FUHRE und GEGNER auf
+`7896ee6` — dort gemessen sagt `verdeckt() = []` nichts darüber, ob mein
+Buch im AUSGELIEFERTEN Spiel einen fremden Knopf zudeckt. Also auf HEAD
+gemessen.
+
+`aufsicht/messstand.sh HEAD 8945` → **MESSSTAND `8de274d`** (alle drei Stücke
+der Welle fertig). Beide Läufe einzeln durchs Messfenster.
+
+### `aufsicht/tor.mjs` auf `8de274d` (`messungen/nach3-tor-HEAD.txt`)
+
+```
+E1: OK jahr=1350 zuege=95  lage=0 fehler=0
+E2: OK jahr=1600 zuege=103 lage=0 fehler=0
+E3: OK jahr=1884 zuege=106 lage=0 fehler=0
+E4: OK jahr=1970 zuege=99  lage=0 fehler=0
+TOR OFFEN
+```
+
+**Alle vier Epochen laden, `BRAUHAUS.lage.length` = 0, keine Konsolenfehler —
+im Zustand, der wirklich ausgeliefert wird.** (E4 trägt 99 statt 98 Züge wie auf
+meinem isolierten Stand; der eine zusätzliche Zug gehört einem fremden Stück.)
+
+### `sonde.mjs` auf `8de274d` (`messungen/nach3-sonde-HEAD-laden.txt`)
+
+| Ladezustand | E1 | E2 | E3 | E4 |
+|---|---|---|---|---|
+| `erbe` | **19.296** | **17.184** | **19.488** | **24.960** px |
+| Grenze | 28.000 | 28.000 | 28.000 | 28.000 |
+| oben (⅙) | **0** | **0** | **0** | **0** von 6.000 |
+| Kästen | 5 | 5 | 5 | 5 |
+| `gekuerzt` | [] | [] | [] | [] |
+| `verdeckt()` | **[]** | **[]** | **[]** | **[]** |
+| `ueberRand()` | 0 | 0 | 0 | 0 |
+| `tafeln()` | [] | [] | [] | [] |
+| `lage` / Fehler | 0/0 | 0/0 | 0/0 | 0/0 |
+
+**Ziffer für Ziffer dieselben Werte wie auf dem isolierten Nachstand**
+(19.296 / 17.184 / 19.488 / 24.960). Die Isolation hat also nichts beschönigt —
+mein Stück misst im Verbund genau, was es allein misst.
+
+`haushalt.pruefe()` auf `8de274d`, Ladezustand:
+
+```
+E1: stadt 144784/40000 (oben 93296/26000) · sud 93600/34000 ·
+    preis 78864/24000 (oben 78864/20000) · name 30400/20000
+E2: … dazu kern 100656/120000 (oben 80896/80000)
+E3: … dazu kern 104752/120000 (oben 84992/80000)
+E4: stadt 155472/40000 (oben 102544/26000) · … · kern 103728/120000
+```
+
+**DAS ERBE wird in keiner der vier Epochen mehr genannt.** Und: **DER GEGNER
+steht dort ebenfalls nicht mehr** — auf meinem isolierten Nachstand (wo er auf
+`7896ee6` liegt) meldet `pruefe()` noch `gegner: 189632/28000 px`. Beide Stücke
+der Welle sind also im Verbund unter ihrer Grenze. Übrig bleiben die vier
+Stücke, die diese Welle nicht angefasst hat (STADT, SUD, PREIS, NAME) und der
+`kern`, der in E2–E4 im obersten Sechstel um 1–5 % über seiner Marke liegt.
+
+Nebenbefund aus derselben Aufnahme: die Kastendeckung der ganzen Bühne im
+Ladezustand liegt auf `8de274d` bei **11,1 %** (E1) gegen **15,2 %** auf meinem
+isolierten Nachstand — die Arbeit der anderen beiden Stücke, nicht meine.

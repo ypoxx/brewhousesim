@@ -180,6 +180,40 @@ und kein Bau der FUHRE kann sie bewegen.
 deckt die Sommertafel wirklich, und Huellen wie Kamera sagen dasselbe —
 1.476.519 px photographisch gegen 1.375.264 px Huelle in 1350.)*
 
+#### 1.2c Berichtigung einer Zeile aus meiner EIGENEN Fertigmeldung
+
+Der erste Anlauf hat der Aufsicht gemeldet, die 169.305 px **stammten aus
+dem gespielten Zustand**. **Das ist falsch, und der Fehler ist meiner.** Die
+Zahl steht im **Ladezustand**, und zwar dort und nur dort:
+
+| photographisch, `fuhre` | Ladezustand | nach 30 × WEITER |
+|---|---|---|
+| Vorzustand `7896ee6` | **169.303 px** (`vorher-laden.txt`) | 1.476.519 px (`vorher-w30.txt`) |
+| Nachstand | **169.305 px** (`nachher-laden.txt`) | 342.331 px (`nachher-w30.txt`) |
+
+Die Zahl aus dem Auftrag (169.305) ist Ziffer fuer Ziffer die
+**Ladezustands**-Zahl. Wer sie dem gespielten Zustand zuschreibt, mischt
+zwei Zustaende, deren Werte um den Faktor 8,7 auseinanderliegen.
+
+**Was an der Meldung richtig war und was nicht:**
+
+* **Richtig:** der Ladezustand DER FUHRE war schon vor meiner ersten Zeile
+  innerhalb der Grenze — `BRAUHAUS.haushalt.miss().je.fuhre` sagt **0 px**
+  (1350/1600/1884) und **2.288 px** (1970) gegen 34.000, und
+  `haushalt.pruefe()` nennt `fuhre` im Ladezustand in keiner Epoche
+  (`vorher-sonde-laden.txt`).
+* **Falsch:** die Herkunft. Die 169.305 kommen nicht aus dem gespielten
+  Zustand, sondern aus dem **photographischen Geraet im Ladezustand**, und
+  sie liegen **vollstaendig in der Reiterzeile DER STADT** — nachgestellt
+  mit `warum.mjs`, Ausgabe in `messungen/warum-e1-laden.txt`, Fundort
+  `x 37..873 × y 127..248`.
+
+**Der belegte Satz lautet deshalb:** die Grenze von 34.000 px war im
+Ladezustand vorher eingehalten (0 px) und ist es nachher (0 px, in 1970
+2.704 px, §3.4); die 169.305 px sind eine **Ladezustands**-Zahl eines
+Geraets, das fremde Bildpunkte DER FUHRE zurechnet, und kein Bau DER FUHRE
+kann sie bewegen — vorher wie nachher steht dieselbe Ziffernfolge da.
+
 ### 1.3 Auflage 7 des blinden Kritikers gehoert der FUHRE — und sie war falsch verortet
 
 Der Kritiker sah in 1970 „ein Kästchen ‚FAE' … trägt darunter **zwei leere
@@ -911,6 +945,49 @@ berichtigen (§2 und die Masse der Tafel). Dass auch das nichts am Code
 aendert, ist mit demselben Schnitzer geprueft wie in §3.8:
 `fuhre.js` 110.490 gegen 110.490 Zeichen, `fuhre.css` 22.498 gegen 22.498,
 ohne Kommentare **identisch**.
+
+**Die restlichen fuenf Laeufe des `abnahme.sh` — beim Neuanlauf 3
+nachgetragen.** Der Lauf war um 22:49:49 fertig
+(`messungen/abnahme-fortschritt.txt`), die Sitzung endete um 21:53. Die
+Ergebnisse lagen also fertig auf der Platte und standen in keinem Abschnitt:
+
+| Lauf | Datei | Ergebnis |
+|---|---|---|
+| `tor.mjs`, Endstand | `abn-tor.txt` | **TOR OFFEN** · E1–E4 je `lage=0 fehler=0` · 99/107/110/102 Zuege |
+| `deckung.mjs` 30 Wochen ohne Escape, Endstand | `deckung-abn-w30.txt` | **22,1 / 22,7 / 21,9 / 26,7 %** — Ziffer fuer Ziffer §3.3 |
+| Escape-Probe auf dem **VORZUSTAND** | `vorher-escape.txt` | Zeichen fuer Zeichen der Nachher-Lauf → **§3.5b**, und dort faellt eine Behauptung aus §3.5 |
+| `warum.mjs`, Vorzustand, Ladezustand, E1 | `warum-e1-laden.txt` | die vier Bretter `stadt-zugeklappt` mit `clip: inset(50%)`, die Marken auf `stadt-marke-ruht` `opacity 0` — die Belegstelle zu §1.2, jetzt als Text statt als Bild |
+| `deckung.mjs` 30 Wochen, **alle drei Stuecke** | `deckung-gemeinsam-w30.txt` | **14,5 / 15,0 / 14,8 / 13,8 %** — die Latte „unter 20 %" ist genommen → **§3.3b** |
+
+#### Und der Stand, der wirklich ausgeliefert wird, ist noch einer weiter
+
+Nachgerechnet beim Neuanlauf 3, mit dem Verfahren aus §3.8 ueber alle
+Commits, die `fuhre.js`/`fuhre.css` angefasst haben:
+
+| Commit | Marke | Zeit | |
+|---|---|---|---|
+| `91fb766` | `118b191467` | 17:40:15 | §3.1–3.7 gemessen |
+| `8ccdc7a` | `cf76271455` | 17:52:23 | |
+| `1472389` | `3082041165` | 21:47:27 | §3.9 gemessen |
+| **`397aac1`** | **`3bdb5bb282`** | **21:51:27** | **Arbeitsbaum = ausgeliefert** |
+
+**Der Arbeitsbaum traegt also `3bdb5bb282` und nicht die Marke, unter der
+§3.9 gemessen wurde.** Der Unterschied ist genau ein Block:
+`git diff 1472389 397aac1 -- spiel/stuecke/fuhre.js spiel/stil/fuhre.css`
+liefert **einen einzigen Hunk**, `fuhre.js:3683–3702`, vollstaendig
+innerhalb von `/* … */` — die berichtigten Tafelmasse, die aus derselben
+§3.1-Berichtigung kommen. Ohne Kommentare gemessen, mit demselben Schnitzer
+wie oben, ueber **alle vier** Dateien DER FUHRE:
+
+| `1472389` gegen Arbeitsbaum, ohne Kommentare | |
+|---|---|
+| `spiel/stuecke/fuhre.js` | **IDENTISCH**, 110.490 Zeichen |
+| `spiel/stil/fuhre.css` | **IDENTISCH**, 22.498 Zeichen |
+| `spiel/stuecke/fuhre-daten.js` | **IDENTISCH**, 38.971 Zeichen |
+| `spiel/stil/fuhre-zusatz.css` | **IDENTISCH**, 19.910 Zeichen |
+
+Weil „sollte dasselbe messen" auch beim dritten Mal kein Messwert ist, ist
+auf `3bdb5bb282` noch einmal gemessen worden — §3.10.
 
 ---
 
