@@ -1,0 +1,116 @@
+=== DREI SCHNITTE (fuhre-w6/schnitte.py)  vor -> nach2 ===
+Epoche   Satz             12 J     13 J     14 J   Urteil
+----------------------------------------------------------------------
+1350     vor            -0,245   -0,170   -0,336   besteht   (14 J, Kasse 28–524, Fehler 0)
+1350     nach2          -0,245   -0,170   -0,336   besteht   (14 J, Kasse 28–524, Fehler 0)
+1600     vor            -0,189   +0,049   -0,116   besteht   (14 J, Kasse 291–2851, Fehler 0)
+1600     nach2          -0,189   +0,049   -0,116   besteht   (14 J, Kasse 291–2851, Fehler 0)
+1884     vor            +0,168   +0,346   +0,393   besteht   (14 J, Kasse 1757–23789, Fehler 0)
+1884     nach2          +0,168   +0,346   +0,393   besteht   (14 J, Kasse 1757–23789, Fehler 0)
+1970     vor            -0,112   -0,236   -0,304   besteht   (14 J, Kasse 320–95857, Fehler 0)
+1970     nach2          -0,112   -0,236   -0,304   besteht   (14 J, Kasse 320–95857, Fehler 0)
+----------------------------------------------------------------------
+vor         : LATTE HAELT (0 von 4 Laeufen ueber 0,700)
+nach2       : LATTE HAELT (0 von 4 Laeufen ueber 0,700)
+
+=== JAHRE UNTER 1x (rueckkopplung-r3/auswerten.py) ===
+--- VORHER (Messstand 7896ee6) ---
+====================================================================================================
+EPOCHE 1350
+  e1-A.json        14 J  Spearman -0,336  Pearson -0,307  <1x 2/14  Fehler 0  Abbruch nein  Fest 1x
+                   5,89 · 1,43 · 3,42 · 2,41 · 5,95 · 1,75 · 7,43 · 5,83 · 5,38 · 2,83 · 2,35 · 0,92 · 3,46 · 0,91
+                   woechentlich: Spearman -0,723 ueber 14 Jahre, Median 5.79
+                   Kasse 237→66 (x0.28)  Nenner 42→56 (x1.33)  rho Kennzahl↔Kasse +0,974
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 400 (100.0 %) · Arten umkaempft 400
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN -0,336 ,, -0,336   Spannweite 0,000
+  >> PEARSON  -0,307 ,, -0,307   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+EPOCHE 1600
+  e2-A.json        14 J  Spearman -0,116  Pearson +0,197  <1x 0/14  Fehler 0  Abbruch nein  Fest 1x
+                   3,76 · 2,98 · 3,46 · 3,91 · 3,08 · 1,96 · 3,38 · 2,81 · 2,84 · 13,67 · 3,85 · 1,50 · 6,69 · 2,76
+                   woechentlich: Spearman -0,569 ueber 14 Jahre, Median 5.20
+                   Kasse 1382→692 (x0.50)  Nenner 183→267 (x1.46)  rho Kennzahl↔Kasse +0,516
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 358 (89.5 %) · Arten umkaempft 358 bindung 39 lage 3
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN -0,116 ,, -0,116   Spannweite 0,000
+  >> PEARSON  +0,197 ,, +0,197   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+EPOCHE 1884
+  e3-A.json        14 J  Spearman +0,393  Pearson +0,315  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+                   8,35 · 5,03 · 2,35 · 2,16 · 2,36 · 1,12 · 0,84 · 2,59 · 3,50 · 3,72 · 6,53 · 6,61 · 9,40 · 5,18
+                   woechentlich: Spearman +0,525 ueber 14 Jahre, Median 2.53
+                   Kasse 9508→13164 (x1.38)  Nenner 1706→2527 (x1.48)  rho Kennzahl↔Kasse +0,916
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 237 (59.2 %) · Arten umkaempft 240 bindung 157 lage 3
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN +0,393 ,, +0,393   Spannweite 0,000
+  >> PEARSON  +0,315 ,, +0,315   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+EPOCHE 1970
+  e4-A.json        14 J  Spearman -0,304  Pearson -0,306  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+                   2,25 · 0,79 · 3,94 · 2,70 · 1,54 · 2,94 · 4,25 · 3,02 · 1,55 · 2,64 · 1,72 · 1,15 · 1,38 · 1,54
+                   woechentlich: Spearman -0,314 ueber 14 Jahre, Median 1.71
+                   Kasse 19676→48530 (x2.47)  Nenner 20239→72900 (x3.60)  rho Kennzahl↔Kasse +0,587
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 400 (100.0 %) · Arten umkaempft 400
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN -0,304 ,, -0,304   Spannweite 0,000
+  >> PEARSON  -0,306 ,, -0,306   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+1350  Spearman -0,336 ,, -0,336   BESTEHT
+1600  Spearman -0,116 ,, -0,116   BESTEHT
+1884  Spearman +0,393 ,, +0,393   BESTEHT
+1970  Spearman -0,304 ,, -0,304   BESTEHT
+--- NACHHER (Nachstand: 7896ee6 + gegner*.js/css) ---
+====================================================================================================
+EPOCHE 1350
+  e1-A.json        14 J  Spearman -0,336  Pearson -0,307  <1x 2/14  Fehler 0  Abbruch nein  Fest 1x
+                   5,89 · 1,43 · 3,42 · 2,41 · 5,95 · 1,75 · 7,43 · 5,83 · 5,38 · 2,83 · 2,35 · 0,92 · 3,46 · 0,91
+                   woechentlich: Spearman -0,723 ueber 14 Jahre, Median 5.79
+                   Kasse 237→66 (x0.28)  Nenner 42→56 (x1.33)  rho Kennzahl↔Kasse +0,974
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 400 (100.0 %) · Arten umkaempft 400
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN -0,336 ,, -0,336   Spannweite 0,000
+  >> PEARSON  -0,307 ,, -0,307   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+EPOCHE 1600
+  e2-A.json        14 J  Spearman -0,116  Pearson +0,197  <1x 0/14  Fehler 0  Abbruch nein  Fest 1x
+                   3,76 · 2,98 · 3,46 · 3,91 · 3,08 · 1,96 · 3,38 · 2,81 · 2,84 · 13,67 · 3,85 · 1,50 · 6,69 · 2,76
+                   woechentlich: Spearman -0,569 ueber 14 Jahre, Median 5.20
+                   Kasse 1382→692 (x0.50)  Nenner 183→267 (x1.46)  rho Kennzahl↔Kasse +0,516
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 358 (89.5 %) · Arten umkaempft 358 bindung 39 lage 3
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN -0,116 ,, -0,116   Spannweite 0,000
+  >> PEARSON  +0,197 ,, +0,197   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+EPOCHE 1884
+  e3-A.json        14 J  Spearman +0,393  Pearson +0,315  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+                   8,35 · 5,03 · 2,35 · 2,16 · 2,36 · 1,12 · 0,84 · 2,59 · 3,50 · 3,72 · 6,53 · 6,61 · 9,40 · 5,18
+                   woechentlich: Spearman +0,525 ueber 14 Jahre, Median 2.53
+                   Kasse 9508→13164 (x1.38)  Nenner 1706→2527 (x1.48)  rho Kennzahl↔Kasse +0,916
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 237 (59.2 %) · Arten umkaempft 240 bindung 157 lage 3
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN +0,393 ,, +0,393   Spannweite 0,000
+  >> PEARSON  +0,315 ,, +0,315   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+EPOCHE 1970
+  e4-A.json        14 J  Spearman -0,304  Pearson -0,306  <1x 1/14  Fehler 0  Abbruch nein  Fest 0x
+                   2,25 · 0,79 · 3,94 · 2,70 · 1,54 · 2,94 · 4,25 · 3,02 · 1,55 · 2,64 · 1,72 · 1,15 · 1,38 · 1,54
+                   woechentlich: Spearman -0,314 ueber 14 Jahre, Median 1.71
+                   Kasse 19676→48530 (x2.47)  Nenner 20239→72900 (x3.60)  rho Kennzahl↔Kasse +0,587
+                   Nenner genannt 400/400 Wochen · OHNE Zugschluessel 400 (100.0 %) · Arten umkaempft 400
+                   Wochen ohne Kennzahl (zugDeckung null): 0/400
+  >> SPEARMAN -0,304 ,, -0,304   Spannweite 0,000
+  >> PEARSON  -0,306 ,, -0,306   Spannweite 0,000
+  >> LATTE |rho| < 0,700 nach Spearman: BESTEHT
+====================================================================================================
+1350  Spearman -0,336 ,, -0,336   BESTEHT
+1600  Spearman -0,116 ,, -0,116   BESTEHT
+1884  Spearman +0,393 ,, +0,393   BESTEHT
+1970  Spearman -0,304 ,, -0,304   BESTEHT

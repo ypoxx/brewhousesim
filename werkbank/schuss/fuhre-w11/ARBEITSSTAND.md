@@ -60,6 +60,13 @@ Gemessen wird einzeln, jeder Browser durch `aufsicht/messfenster.sh`.*
 > **Drei tote Verweise geflickt:** `nachher-laden.log` (gibt es nicht → `.txt`),
 > „siehe §3.5b" (Abschnitt fehlte → geschrieben), `abn-* = cf76271455`
 > (falsche Marke → `3082041165`, gemessen in `abn-marke.txt`).
+>
+> **Und fuenf Zeilennummern nachgezogen**, die der zuletzt eingefuegte
+> Kommentarblock verschoben hat: §2 nannte `fuhre.js:3912/3954/3968/4089`
+> und `:3642`; richtig sind heute `:3924/3966/3980/4124` und `:3649`.
+> Nachgeschlagen ueber die Zeichenketten selbst, nicht geschaetzt. Die
+> Verweise nach draussen (`haushalt.js:44/97/186`, `stadt.js:610/742`,
+> `fuhre-zusatz.css:357/580/600`) sind nachgeprueft und stimmen.
 
 | Stand auf Hafen | was |
 |---|---|
@@ -270,7 +277,8 @@ Der Vorzustand hatte **vier** solcher Aufrufe in `fuhre.js`, nicht drei:
 Die Auflage nennt `fuhre.js:3517`, und das ist der Erklaerkopf ueber
 `tastenSperre`; diese drei sind umgestellt (heute `3549/3555/3567`).
 
-**Der vierte steht noch da** (heute `fuhre.js:4089`), und das ist Absicht:
+**Der vierte steht noch da** (heute `fuhre.js:4124`, in `endeHorcher`
+ab `4117`), und das ist Absicht:
 `endeHorcher` ist „Schloss 2" des Hofschlusses. Er haengt in der Fangphase
 auf `document` und hat die eine Aufgabe, nach dem Ende der Partie jeden
 Zug abzufangen, **auch solche, die an rohen Knoepfen anderer Stuecke
@@ -305,9 +313,9 @@ drei sind **umformuliert**, und das gehoert benannt:
 
 | alt | heute | wo |
 |---|---|---|
-| Ueberschrift „Was steht 1351/52 an der Tafel?" **plus** Zeile „An der Tafel steht: 2× Dünnbier · 1× Grutbier — der Braumeister hat angeschrieben, was voriges Jahr dort stand." | **eine** Zeile: „Was steht 1351/52 an der Tafel? Angeschrieben: 2× Dünnbier · 1× Grutbier — wie voriges Jahr." Der volle Satz ueber den Braumeister steht im `title` | `fuhre.js:3912` |
-| Knopf „Tafel schließen — Michaeli, das Jahr beginnt" | Knopf „Tafel schließen — Michaeli"; „das Jahr beginnt" steht im `title` | `fuhre.js:3954` |
-| „Solange die Tafel auf dem Tisch liegt, ruht die Woche. WEITER und die Taste Escape legen sie ebenfalls beiseite." | Hinweiszeile „Die Woche ruht, solange die Tafel liegt · WEITER und Escape legen sie beiseite" — der volle Wortlaut im `title` desselben Knopfes | `fuhre.js:3968` |
+| Ueberschrift „Was steht 1351/52 an der Tafel?" **plus** Zeile „An der Tafel steht: 2× Dünnbier · 1× Grutbier — der Braumeister hat angeschrieben, was voriges Jahr dort stand." | **eine** Zeile: „Was steht 1351/52 an der Tafel? Angeschrieben: 2× Dünnbier · 1× Grutbier — wie voriges Jahr." Der volle Satz ueber den Braumeister steht im `title` | `fuhre.js:3924` |
+| Knopf „Tafel schließen — Michaeli, das Jahr beginnt" | Knopf „Tafel schließen — Michaeli"; „das Jahr beginnt" steht im `title` | `fuhre.js:3966` |
+| „Solange die Tafel auf dem Tisch liegt, ruht die Woche. WEITER und die Taste Escape legen sie ebenfalls beiseite." | Hinweiszeile „Die Woche ruht, solange die Tafel liegt · WEITER und Escape legen sie beiseite" — der volle Wortlaut im `title` desselben Knopfes | `fuhre.js:3980` |
 
 Zwei Zeilen fuer eine Sache kosten auf einem Anschlag von 265 px Hoehe ein
 Zehntel der Tafel; deshalb zusammengezogen. **Gesagt wird dasselbe, und
@@ -320,7 +328,7 @@ Abweichungen sind Zerlegungen derselben Saetze in andere Zeichenketten.
 Erklaerkopf ueber der Georgi-Tafel stand „Nichts ist fort, nichts ist
 gekuerzt, **nichts steht nur noch im Titelfeld**". Der letzte Halbsatz war
 nach dieser Zaehlung nicht wahr. Er ist durch die drei Stellen oben ersetzt,
-mit Grund je Stelle (`fuhre.js:3642`). Eine Datei, deren Kommentar mehr
+mit Grund je Stelle (`fuhre.js:3649`). Eine Datei, deren Kommentar mehr
 verspricht als der Code haelt, ist schlimmer als eine ohne Kommentar — und
 es ist eine reine Kommentaraenderung, also ohne Wirkung auf ρ oder Layout.
 
@@ -535,6 +543,27 @@ gemessen (`vorher-sonde-laden.txt` gegen `nachher-sonde-laden.txt`):
 | vorher | 0 px | 0 px | 0 px | **2.288 px** (2 Kaesten) |
 | **nachher** | 0 px | 0 px | 0 px | **2.704 px** (2 Kaesten) |
 
+**Beim Neuanlauf 3 auf den ganzen Ladezustand ausgeweitet, und es faellt
+enger aus, als die Tabelle vermuten laesst.** `diff vorher-sonde-laden.txt
+abn2-sonde-laden.txt` (Vorzustand gegen den ausgelieferten Stand, alle vier
+Epochen, jede Kennzahl der Sonde) meldet **genau zwei geaenderte Zeilen**,
+beide in Epoche 4:
+
+```
+< fuhre 2288 px / 34000   oben 0 px / 10000  Kaesten 2
+> fuhre 2704 px / 34000   oben 0 px / 10000  Kaesten 2
+< gesamt (Huellen) 813264 px = 19.2 %
+> gesamt (Huellen) 813472 px = 19.2 %
+```
+
+**1350, 1600 und 1884 sind im Ladezustand Zeichen fuer Zeichen der
+Vorzustand** — dieselben 0 px, dieselbe `pruefe()`-Zeile jedes fremden
+Stuecks, dieselbe Gesamtsumme. Die einzige Bewegung, die DIE FUHRE im
+Ladezustand macht, sind die 416 px in 1970 (208 px davon schlagen auf die
+Gesamthuelle durch). Daraus folgt auch, dass die vierte Latte (§3.6) nicht
+anders ausfallen kann: `lesbarkeit.mjs` misst nur den Ladezustand, und der
+ist in drei von vier Epochen identisch.
+
 **+416 px**, und die Ursache ist die Auflage 7 aus §1.3: die Durstbetten
 `.fu-marke .fu-mbetten i` sind von `8×11` mit Rand auf `max(3px,5·s) ×
 max(7px,13·s)` gefuellt umgestellt worden; die neue Form ist schmaler und
@@ -585,7 +614,7 @@ das Nachfassen des Rahmens hinein, das ueber 2,6 s laeuft — `spur()` zeigte
 „760ms: kern .blatt rolle -> klemme+knopf:kern:blatt-zu". Die Probe wartet
 jetzt 3,2 s. Der Fehler lag in meinem Messgeraet, nicht im Spiel.)*
 
-### 3.5b Dieselbe Escape-Probe auf dem VORZUSTAND — und sie entlastet mich nicht, sie entlastet nur meine Arbeit
+### 3.5b Dieselbe Escape-Probe auf dem VORZUSTAND — sie nimmt mir eine fremde Schuld ab und ein eigenes Verdienst
 
 Die Nachher-Zeile aus §3.5 meldet `geklemmt {"erbe .erb-buch blatt":1}`.
 Ohne einen Vergleichslauf ist nicht zu sagen, ob DIE FUHRE das verursacht
@@ -1055,8 +1084,25 @@ Zeichen derselbe Lauf wie auf `3082041165`. Gegen `118b191467` bleiben die
 dasselbe. Damit ist die Kette geschlossen: **jede Zahl in §3.1–3.9 gilt
 nachgemessen fuer den Stand, der im Arbeitsbaum steht.**
 
-`aufsicht/tor.mjs` auf demselben Stand (`messungen/abn2-tor.txt`): siehe
-Eintrag unten — vier Epochen geladen, `BRAUHAUS.lage.length`, Konsolenfehler.
+**Die Fertigmeldungsprobe des Auftrags** — `aufsicht/tor.mjs` auf demselben
+Stand (`messungen/abn2-tor.txt`, Fenster nach 884 s frei geworden, DER
+GEGNER hielt es mit einem 400-Wochen-Lauf):
+
+```
+E1: OK   jahr=1350 zuege=99  lage=0 fehler=0
+E2: OK   jahr=1600 zuege=107 lage=0 fehler=0
+E3: OK   jahr=1884 zuege=110 lage=0 fehler=0
+E4: OK   jahr=1970 zuege=102 lage=0 fehler=0
+TOR OFFEN
+```
+
+`tor.mjs:37/43` liest dafuer `BRAUHAUS.lage.length` und sammelt jede
+Konsolenzeile vom Typ `error` samt `pageerror` (`:29/30`); `OK` heisst
+`lage === 0 && Fehler === 0 && Zuege > 0`. Damit ist die Bedingung „alle
+vier Epochen laden, `BRAUHAUS.lage.length` = 0, keine Konsolenfehler" **auf
+dem Stand erfuellt, der im Arbeitsbaum steht** — nicht auf einem
+Vorgaengerstand, von dem man es hoffen muesste. Ziffer fuer Ziffer
+dieselben Zugzahlen wie in §3.6 und §3.9.
 
 ---
 
