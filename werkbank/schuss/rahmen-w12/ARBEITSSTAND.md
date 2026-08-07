@@ -866,3 +866,20 @@ Gerät: `rahmen-w12/tor62.sh`.
 
 **Fünf von fünf: Partie B.** Das Tor ist offen — es sagt nur, dass sich die
 Abnahme lohnt, nicht dass sie besteht (siehe die Warnung in `tor62.sh`).
+
+# DIE HARTE ABNAHME DER FASSUNG 5 — Stand `813f776`, Hafen 8950
+
+Jeder Lauf **einzeln** durch `aufsicht/messfenster.sh`,
+`rueckkopplung-r3/linie.mjs <epoche> 400`, `?saat=1350`, Gerät
+`rahmen-w12/lauf.sh`, Ordner `rahmen-w12/abnahme5/`. Die Marke des Hafens
+wird **vor jedem Lauf** geprüft; ein Lauf gegen eine falsche Marke bricht ab.
+
+Reihenfolge mit Absicht: **1884 zuerst** — das ist die Epoche, die F1 am
+lautesten verdorben hat (3 Läufe, 3 Prüfsummen). Wenn die Trennung
+(`rAF` unberührt) trägt, muss sie hier zuerst zu sehen sein.
+
+## 1884
+
+| Lauf | fertig | md5 | Kassenspanne |
+|---|---|---|---|
+| e3-A | 12:55:20 | `3f008dc880b9` | 2.907–25.557 |
