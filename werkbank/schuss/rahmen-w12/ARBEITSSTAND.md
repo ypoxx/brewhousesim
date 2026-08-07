@@ -892,3 +892,7 @@ mit dem Vorziehen fort — und das Vorziehen der Fristen allein kostet ihn
 nicht. Damit steht die Trennung als Messung da, nicht als Behauptung.
 
 ## 1350 — die Epoche, an der F2 gescheitert ist. Sechs Läufe verlangt.
+
+| Lauf | fertig | md5 | Kassenspanne |
+|---|---|---|---|
+| e1-A | 13:11:19 | `3e87b7a47385` | 34–524 |
