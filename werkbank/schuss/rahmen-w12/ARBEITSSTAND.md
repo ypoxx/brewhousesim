@@ -711,3 +711,13 @@ verdorben hatte.**
 
 Fassung 1 hatte hier **drei verschiedene** Pruefsummen. Der Rueckschritt ist
 fort.
+
+## 1600 — drei Laeufe, EINE Pruefsumme
+
+| Lauf | Zeit | md5 |
+|---|---|---|
+| e2-A | 06:42:59 | `616c2ea42e00` |
+| e2-B | 06:55:02 | `616c2ea42e00` |
+| e2-C | 07:07:06 | `616c2ea42e00` |
+
+Fassung 1 hatte hier **zwei** Pruefsummen. Auch dieser Rueckschritt ist fort.
