@@ -795,3 +795,23 @@ gezählt, unter einem Namen, der darüber gemalt wird.)
 E1 `fu:1 nm:1` · E2 `nm:2 sud:1` · E3 `fu:1 nm:1` · E4 `nm:2 wort:1` —
 **in keiner Epoche steht noch ein `gg`.** Die vier verbliebenen Überläufe
 gehören DER FUHRE, DEM NAMEN, DEM SUD und DER STADT und sind in §4 gemeldet.
+
+### 7.11 Photographisch und Deckung, Satz `nach3`
+
+Identisch zu `nach2`, Ziffer für Ziffer — die Vorhersage aus §7.8 gilt auch für
+die Kamera:
+
+| gegner, Bildpunkte | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| vorher (`7896ee6`) | 195.127 | 200.464 | 187.855 | **215.077** |
+| **nach3, Ladezustand** | **10.685** | **8.994** | **8.515** | **17.864** |
+| nach3, 30 Wochen | 4.249 | 3.398 | 3.159 | 13.449 |
+| oberstes ⅙ / unterstes ⅙ | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 |
+| Ruheprobe · über dem Rand · Währungsbruch · fehlende Zeichen | 0·0·0·0 | 0·0·0·0 | 0·0·0·0 | 0·0·0·0 |
+| `verdeckt()` | [] | [] | [] | [] |
+
+`bild-w9/deckung.mjs`, Gesamtdeckung aller Stücke (nicht nur meiner):
+Ladezustand 14,1 / 14,8 / 14,5 / 14,8 % — im Vorzustand 18,4 / 19,3 / 18,7 /
+19,3 %. Nach 30 Wochen **ohne** Escape 46,4 / 45,6 / 42,2 / 49,4 %; das ist das
+Sommerblatt DER FUHRE und ihre Auflage, nicht meine — ich melde die Zahl, weil
+sie in derselben Messung steht.
