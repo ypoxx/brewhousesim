@@ -815,3 +815,45 @@ Ladezustand 14,1 / 14,8 / 14,5 / 14,8 % — im Vorzustand 18,4 / 19,3 / 18,7 /
 19,3 %. Nach 30 Wochen **ohne** Escape 46,4 / 45,6 / 42,2 / 49,4 %; das ist das
 Sommerblatt DER FUHRE und ihre Auflage, nicht meine — ich melde die Zahl, weil
 sie in derselben Messung steht.
+
+### 7.12 ρ — die zweite Messlatte, VORHER gegen NACHHER
+
+Gemessen mit `rueckkopplung-r3/linie.mjs <epoche> 400`, **einzeln**, jeder Lauf
+allein durch das Messfenster. VORHER = Messstand `7896ee6` auf Hafen 8961,
+NACHHER = Nachstand `7896ee6+gegner-*` auf Hafen 8962.
+
+**Drei Schnitte (`fuhre-w6/schnitte.py`), Spearman:**
+
+| Epoche | 12 J | 13 J | 14 J | Urteil |
+|---|---|---|---|---|
+| 1350 vorher | −0,245 | −0,170 | −0,336 | besteht |
+| 1350 **nachher** | **−0,245** | **−0,170** | **−0,336** | besteht |
+| 1600 vorher | −0,189 | +0,049 | −0,116 | besteht |
+| 1600 **nachher** | **−0,189** | **+0,049** | **−0,116** | besteht |
+| 1884 vorher | +0,168 | +0,346 | +0,393 | besteht |
+| 1884 **nachher** | **+0,168** | **+0,346** | **+0,393** | besteht |
+| 1970 vorher | −0,112 | −0,236 | −0,304 | besteht |
+| 1970 **nachher** | **−0,112** | **−0,236** | **−0,304** | besteht |
+
+**Jahre unter 1× (`rueckkopplung-r3/auswerten.py`), je 14 Braujahre:**
+vorher 2 / 0 / 1 / 1 — nachher **2 / 0 / 1 / 1**. Kassenspannen
+28–524 · 291–2851 · 1757–23789 · 320–95857, vorher wie nachher. Fehler 0,
+kein Abbruch, `zugDeckung` in keiner der 400 Wochen null.
+
+**Und der Grund, warum die Zahlen so genau übereinstimmen, ist kein Zufall:**
+
+```
+e1  vor ↔ nach3 : abweichende Felder ['hafen']
+e2  vor ↔ nach3 : abweichende Felder ['hafen']
+e3  vor ↔ nach3 : abweichende Felder ['hafen']
+e1/e2/e3  nach2 ↔ nach3 : []            (byteweise gleich)
+```
+
+Die 400-Wochen-Reihen sind über den ganzen Umbau hinweg **bitgleich** — der
+einzige Unterschied zwischen dem Vorzustand und dem abgegebenen Stand ist die
+Hafennummer, unter der gemessen wurde. Dieses Stück hat kein Zeichen an der
+Wirtschaft verändert; es hat nur aufgehört, das Bild zuzukleben.
+
+Das ist zugleich die schärfste Fassung der Trennprobe, die ich liefern kann:
+wäre versehentlich ein fremdes Stück im Nachstand gelandet, stünde hier eine
+andere Zahl.
