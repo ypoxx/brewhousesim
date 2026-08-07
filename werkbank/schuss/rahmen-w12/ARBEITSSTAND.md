@@ -148,3 +148,84 @@ notwendig: `ohneFuhre` bleibt auf dem Vorzustand), DER GEGNER und DAS ERBE
 verschieben mit ihren eigenen Brettern, wie lange ein Bildaufbau dauert und
 wo die 420-ms-Luecke faellt. **Keines der drei ist die Ursache; die Ursache
 ist, dass die Fertigstellung einer Runde nicht festgelegt ist.**
+
+---
+
+# R8 — ABGESTELLT, OHNE EINE FREMDE STUECKDATEI ANZUFASSEN
+
+## Die Regel, in einem Satz
+
+**Ein Bildaufbau ist eine Runde, und eine Runde hat ein Ende.** Was ein Stueck
+waehrend des Zeichnens auf spaeter verschiebt, gehoert noch zu dieser Runde und
+wird **vom Rahmen** abgearbeitet, bevor die Runde schliesst — in fester
+Reihenfolge, in Mikrotasks, ohne jede Wanduhr. Und wenn sich dabei die
+**Klemmenlage** geaendert hat (wer liegt zugeklappt, wer verdeckt), wird noch
+einmal gezeichnet, damit kein Knopf eine Lage beschriftet, die es nicht mehr
+gibt.
+
+## Warum in Mikrotasks und nicht in Bildern
+
+Der MutationObserver DER STADT (`stadt.js:1560`) ist selbst ein Mikrotask.
+Arbeitet der Rundenschluss seine Schlange in Mikrotask-Durchgaengen ab, kommt
+DIE STADT **zwischen zwei Durchgaengen von allein zum Zug** — der Rahmen muss
+sie nicht kennen. Und die ganze Runde ist trotzdem fertig, **bevor der Browser
+das naechste Bild baut**. Die messende Hand wartet zwei Bilder; sie kann eine
+Runde also gar nicht mehr halb sehen.
+
+Ein Schluss, der in `requestAnimationFrame` arbeitet, koennte das nicht: er
+laege genau in dem Fenster, auf das die Hand wartet.
+
+## Was gefangen wird und was nicht
+
+Gefangen wird, solange eine Runde laeuft: `setTimeout` bis 1200 ms und
+`requestAnimationFrame`. Das sind im ganzen Spiel neun Stellen, jede einzeln
+nachgesehen — **keine Animation darunter**, alle heissen „den Rest meines
+Zeichnens gleich nachholen":
+
+| Stelle | was |
+|---|---|
+| `kern/kopf.js:112` | rAF · Deckungsband, wenn die Zuege gemeldet sind |
+| `stuecke/preis.js:2884` | rAF · Kennzahl in DIE LEITER eintragen |
+| **`stuecke/preis.js:2737`** | **Frist 420 ms · nachsehen, ob DIE STADT weggeklappt hat** |
+| `stuecke/fuhre.js:2541` | rAF · Liste an die Hoehe passen |
+| `stuecke/fuhre.js:3515` | rAF · Sommertafel abraeumen, falls die Woche steht |
+| `stuecke/fuhre.js:3606` | rAF · Georgi-Tafel nachlegen |
+| `stuecke/sud.js:2407/2408` | rAF·rAF · nachsehen, ob das Brett zugeklappt liegt |
+| `stuecke/stadt.js:1554` | rAF · Platzordnung pruefen (aus dem MutationObserver) |
+| `stuecke/name.js:2272` | Frist 0 ms · noch einmal zeichnen, wenn Aufgeld kam |
+
+**Nicht** angefasst werden: `setInterval` (also DER STADT 240-ms-Takt und DES
+SUD 320-ms-Takt bleiben, wie sie sind), Fristen ueber 1200 ms, und alles, was
+ausserhalb einer Runde bestellt wird — der Ton, die Bildstaffel DER STADT
+(`stadt.js:2144` `requestIdleCallback`), das Schlussblatt DES SUD
+(`sud-zusatz.js:250`, 700 ms), der Notenknopf DES KLANGS (`klang.js:55`,
+600 ms). Was nach zwoelf Durchgaengen noch in der Schlange liegt, geht **an
+die echte Uhr zurueck** und wird gezaehlt — verschluckt wird nichts.
+
+## Die Messung, die zeigt, dass es abgestellt ist
+
+Derselbe Drosselfaecher wie oben, auf dem Nachstand mit `kern/runde.js`:
+
+| Drossel | LEITER 1350/51/52 | Kasse an Michaeli | Partie |
+|---|---|---|---|
+| 1× | 1 / 2 / 3 | 79 / 60 / 119 | **eine** |
+| 2× | 1 / 2 / 3 | 79 / 60 / 119 | **eine** |
+| 3× | 1 / 2 / 3 | 79 / 60 / 119 | **eine** |
+| 4× | 1 / 2 / 3 | 79 / 60 / 119 | **eine** |
+| 6× | 1 / 2 / 3 | 79 / 60 / 119 | **eine** |
+
+Vorher kippte derselbe Faecher zwischen 1×/2× und 3× die Partie. **Ueber eine
+Spanne von 1:6 in der Rechengeschwindigkeit steht jetzt eine Partie.**
+Es ist die Partie B (`ohneGegner`, Kasse 30–558) — der Auftrag laesst das
+ausdruecklich zu: „Verlangt ist EINE Partie, nicht die alte."
+
+## Der eine Fehler dieses Baus, gefunden und behoben — er steht hier, weil er teuer war
+
+Die erste Fassung verglich die Klemmenlage mit dem **Anfang des Schlusses**.
+Das ist falsch: jedes Zeichnen baut die Bretter neu, dabei geht
+`stadt-zugeklappt` verloren, und DIE STADT setzt es im Schluss wieder. Gegen
+den Anfang gemessen hat sich also **immer** etwas geaendert — gemessen
+**197 Nachrunden in 205 Runden**, also der doppelte Bildaufbau fuer nichts.
+Verglichen wird jetzt mit der **letzten fertigen Runde**; dann aendert sich
+nur dann etwas, wenn wirklich ein anderes Brett zugeklappt liegt als vorher —
+und nur dann kann ein Knopf luegen.

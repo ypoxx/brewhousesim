@@ -193,6 +193,37 @@
     return s.join('|');
   }
 
+  /* Was die messende Hand von einem Zug liest: Name, Sperre, Beschriftung.
+     `textContent` erzwingt kein Layout — anders als `innerText`. Nur fuer
+     die Probe `nachwehen()`, nie im Spielbetrieb. */
+  function schirmAbdruck() {
+    var l, i, s = [];
+    try { l = document.querySelectorAll('[data-zug]'); } catch (e) { return ''; }
+    for (i = 0; i < l.length; i++) {
+      s.push(l[i].getAttribute('data-zug') + '' + (l[i].disabled ? '1' : '0')
+        + '' + String(l[i].textContent || '').replace(/\s+/g, ' ').trim());
+    }
+    s.sort();
+    return s.join('');
+  }
+
+  function unterschied(a, b) {
+    var A = a.split(''), Bs = b.split(''), i;
+    var mA = {}, mB = {}, raus = [];
+    for (i = 0; i < A.length; i++) mA[A[i].split('')[0]] = A[i];
+    for (i = 0; i < Bs.length; i++) mB[Bs[i].split('')[0]] = Bs[i];
+    Object.keys(mA).forEach(function (k) {
+      if (mA[k] !== mB[k] && raus.length < 12) {
+        raus.push({ zug: k, vorher: (mA[k] || '').split('').slice(1).join(' · '),
+                    nachher: (mB[k] || '(fort)').split('').slice(1).join(' · ') });
+      }
+    });
+    Object.keys(mB).forEach(function (k) {
+      if (!(k in mA) && raus.length < 12) raus.push({ zug: k, vorher: '(neu)', nachher: '' });
+    });
+    return raus;
+  }
+
   /* ---------------------------------------------------------------------
      DER SCHLUSS
      --------------------------------------------------------------------- */
@@ -279,7 +310,10 @@
   var oSende = B.sende;
   B.sende = function (name) {
     if (name !== 'zeichne') return oSende.apply(this, arguments);
-    if (arguments[1] && String(arguments[1].grund || '').indexOf('runde-') !== 0) aussenZaehler = 0;
+    /* Jedes Zeichnen, das NICHT der Rahmen selbst angestossen hat, macht den
+       Zaehler der Klemmenwache wieder frei — der Riegel soll ein Hin und Her
+       abstellen, nicht das Spiel. */
+    if (String((arguments[1] && arguments[1].grund) || '').indexOf('runde-') !== 0) aussenZaehler = 0;
     tiefe++;
     try { return oSende.apply(this, arguments); }
     finally {
@@ -352,6 +386,40 @@
       if (zahl.maxNachrunden >= NACHRUNDEN) raus.push({ was: 'nachrunden-grenze', zahl: zahl.maxNachrunden,
         sagt: 'Eine Runde hat die Grenze von ' + NACHRUNDEN + ' Nachrunden erreicht.' });
       return raus;
+    },
+    /* R9 — DIE FRAGE ALS PROBE, NICHT ALS NEUN MESSLAEUFE.
+       `pruefe()` sagt, was der Rahmen selbst gezaehlt hat. `nachwehen()`
+       fragt das Bild: es nimmt den Abdruck der Klemmenlage UND den Abdruck
+       aller bedienbaren Zuege (Name, gesperrt, Beschriftung — kein Layout),
+       wartet eine echte Wanduhrsekunde, in der NIEMAND etwas anfasst, und
+       sieht noch einmal hin. Aendert sich in dieser Sekunde etwas, dann war
+       die Runde nicht fertig, als sie zu Ende ging — und genau das ist die
+       Bedingung, unter der zwei gleiche Saaten auseinanderlaufen.
+
+       Diese Probe ist das einzige im Rahmen, das eine Uhr benutzt. Sie
+       laeuft NUR auf Zuruf und nie von selbst; wer sie waehrend einer
+       Messung ruft, misst sein eigenes Warten mit.
+
+         await BRAUHAUS.runde.nachwehen()   ->  { ruhig: true, … }  */
+    nachwehen: function (ms) {
+      var frist = ms || 1200;
+      var a1 = abdruck(), s1 = schirmAbdruck();
+      return new Promise(function (fertig) {
+        oST.call(window, function () {
+          var a2 = abdruck(), s2 = schirmAbdruck();
+          var raus = [];
+          if (a1 !== a2) raus.push({ was: 'klemmenlage',
+            vorher: a1, nachher: a2,
+            sagt: 'Ein Stueck hat nach dem Ende der Runde ein Brett weggeklappt oder '
+                + 'aufgeschlagen, ohne dass neu gezeichnet wurde.' });
+          if (s1 !== s2) raus.push({ was: 'zuege',
+            sagt: 'Beschriftung oder Sperre eines Zuges hat sich nach dem Ende der Runde '
+                + 'geaendert. Wer in dieser Zeit hinsieht, sieht etwas anderes als wer '
+                + 'danach hinsieht.', unterschiede: unterschied(s1, s2) });
+          fertig({ frist: frist, ruhig: raus.length === 0, beanstandungen: raus,
+                   bericht: B.runde.bericht() });
+        }, frist);
+      });
     },
     bericht: function () {
       var b = {}, k;
