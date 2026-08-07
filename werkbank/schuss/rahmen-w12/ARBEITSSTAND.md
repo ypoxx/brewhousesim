@@ -896,3 +896,4 @@ nicht. Damit steht die Trennung als Messung da, nicht als Behauptung.
 | Lauf | fertig | md5 | Kassenspanne |
 |---|---|---|---|
 | e1-A | 13:11:19 | `3e87b7a47385` | 34–524 |
+| e1-B | 13:16:44 | `3e87b7a47385` | 34–524 |
