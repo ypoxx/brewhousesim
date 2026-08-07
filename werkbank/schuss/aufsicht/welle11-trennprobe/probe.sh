@@ -31,3 +31,20 @@ for S in "ohneErbe 8913" "ohneGegner 8914" "ohneFuhre 8915"; do
   echo "=== $NAME: $(md5sum $Z/$NAME-*.json 2>/dev/null | awk '{print $1}' | sort -u | wc -l) verschiedene Partie(n) in 3 Laeufen" >> $Z/../lauf.log
 done
 echo "TRENNPROBE 11 FERTIG" >> $Z/../lauf.log
+
+# ------------------------------------------------------------------------
+# NACHTRAG DER AUFSICHT, 7. August: DREI LAEUFE SIND HIER KEIN BELEG.
+#
+# Am vollen Stand 7a1a942 kamen in drei Laeufen ZWEI Partien heraus, und zwar
+# im Verhaeltnis 2:1 (A und C gleich, B abweichend). Ein Mischstand, der
+# dreimal dasselbe liefert, koennte das also auch rein zufaellig tun —
+# (2/3)^3 sind rund 30 Prozent. Wer daraus "dieses Stueck ist unschuldig"
+# liest, liest Rauschen.
+#
+# Deshalb gilt fuer die Auswertung:
+#   * DREI VERSCHIEDENE Partien auf einem Mischstand sind ein harter Befund:
+#     das Stueck ist NICHT die Ursache, die Bistabilitaet bleibt ohne es.
+#   * DREI GLEICHE sind ein VERDACHT, kein Beleg. Wer ihn erhaerten will,
+#     faehrt denselben Stand sechs- statt dreimal — bei 30 Prozent je Dreiersatz
+#     sinkt der Zufall auf rund 9 Prozent.
+# ------------------------------------------------------------------------
