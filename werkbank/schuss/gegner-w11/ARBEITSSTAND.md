@@ -857,3 +857,127 @@ Wirtschaft verändert; es hat nur aufgehört, das Bild zuzukleben.
 Das ist zugleich die schärfste Fassung der Trennprobe, die ich liefern kann:
 wäre versehentlich ein fremdes Stück im Nachstand gelandet, stünde hier eine
 andere Zahl.
+
+---
+
+## 8 — FERTIG. Was abgegeben wird, und was dagegen spricht
+
+**Der abgegebene Stand ist `7896ee6+gegner-8188005c786e`** — der Vorzustand
+plus genau fünf Dateien: `stuecke/gegner.js` · `gegner-daten.js` ·
+`gegner-zusatz.js` · `stil/gegner.css` · `gegner-zusatz.css`. Die Prüfsumme des
+Arbeitsbaums, die Marke auf Hafen 8962 und die Marke über jeder Zahl in §7.10
+bis §7.12 sind dieselbe Zeichenkette. Gemessen wurde nie der Arbeitsbaum: in
+dieser Welle arbeiten drei Builder darin.
+
+Tatsächlich geändert sind **drei** Dateien; `gegner-daten.js` und
+`gegner-zusatz.js` sind unberührt und stehen nur deshalb in der Liste, weil ein
+Mischstand alles mitnehmen muss, was dem Stück gehört.
+
+### Die Abnahme, in einer Tabelle
+
+| | Forderung | gemessen | |
+|---|---|---|---|
+| Haushalt gesamt | ≤ 28.000 px | 11.968 · 10.032 · 9.504 · **19.072** | ✔ |
+| Haushalt oberstes ⅙ | ≤ 8.000 px | 0 · 0 · 0 · 0 | ✔ |
+| Bildpunkte 1970 | 214.788 → | **215.077 → 17.864** | ✔ |
+| A3 Ladezustand | 0 | 0 · 0 · 0 · 0 | ✔ |
+| A3 34 Baurunden + Esc | 0 | 0 · 0 · 0 · 0 | ✔ |
+| A3 30 Wochen | 0 | **2** · 0 · 0 · 0 | ✘ gemeldet, §6.4 |
+| A6 unterstes ⅙ | raus | 27.988/23.502/25.379/23.502 px → **0** | ✔ |
+| A10 gekürzte Sätze | 0 | 0, jede Bandzeile ganz | ✔ |
+| A10 gekürzte Zahlen | 0 | 0 in allen drei Zuständen | ✔ |
+| `ueberRand()` auch gebaut | [] | [] in allen drei Zuständen, alle vier | ✔ |
+| `verdeckt()` | 0 | [] in allen vier | ✔ |
+| `pruefe()` nennt gegner | nein | nein, in allen vier | ✔ |
+| `tafeln()` des GEGNERS | [] | [] | ✔ |
+| Tor · Spielprobe | offen · bestanden | offen · bestanden | ✔ |
+| Latte 2: \|ρ\| < 0,700, 3 Schnitte | alle 12 | größter 0,393, **unverändert** | ✔ |
+| Latte 2: Jahre unter 1× | ≤ 1 von 6 | 2/0/1/1 von 14, **unverändert** | ✔ |
+| Latte 4 bei 1366×768 | nicht schlechter | 14 → **10** Überläufe, **0 davon `gg`** | ✔ |
+| Züge erreichbar | keiner verloren | 11/13/13/12, keiner fort | ✔ |
+
+### Was gegen diesen Stand spricht — von mir, nicht vom Kritiker
+
+1. **1350 nach 30 Wochen: zwei A3-Treffer bleiben.** Der graue Wagen fährt
+   unter „BRAUHAUS ZUM ADLER" durch (33 px der Schildkante, 591 px²). Der Name
+   liegt in `hand` mit z-index 962 und wird **darüber** gemalt, bleibt also
+   ganz lesbar. Ich lasse ihn stehen, weil ein Fahrzeug auf die Straße gehört
+   und nicht in eine Lücke neben eine Beschriftung — und melde ihn, statt den
+   Zähler schichtblind zu machen, der ihn findet.
+2. **Die Spurzettel weichen nicht aus** (§6.7). Ich habe Messungen dafür, dass
+   sie in keinem der neun abgetasteten Zustände ein Schild treffen, und keine
+   dafür, dass das Verschieben zweier gestapelter Zettel gefahrlos ist.
+3. **`weicheAus` prüft nach einer Verschiebung die schon geprüften Zonen nicht
+   erneut.** Bei vier bis sechs Zonen ist das in allen gemessenen Zuständen
+   folgenlos (A3 = 0 dort), aber es ist eine Schleife ohne Fixpunkt. Wer eine
+   siebte Zone hinzufügt, prüft das nach.
+4. **Ein Knopf dieses Stücks ist 22 px hoch** (`gg-winzig`, „zeigen") — unter
+   den 24 px, die die vierte Latte empfiehlt. Er ist **unverändert aus dem
+   Vorzustand**, `lesbarkeit.mjs` zählt ihn bei 1366×768 nicht (0 von 308),
+   und meine eigene Sonde meldet ihn trotzdem. Ich habe ihn nicht angefasst,
+   weil er nicht zu meinen Auflagen gehört; er steht hier, damit er nicht
+   verlorengeht.
+5. **Zwei Zahlen dieser Welle stammen aus einem Satz, den ich nicht selbst
+   gefahren habe:** ρ e1 und e2 wurden zuerst vom zweiten Anlauf gemessen. Ich
+   habe beide auf dem heutigen Stand **wiederholt** — `nach3-e1/e2` sind
+   byteweise gleich mit `nach2-e1/e2`. Es ist also nichts übernommen, sondern
+   nachgemessen.
+
+### Für den nächsten, der hier weiterarbeitet
+
+* **`data-a3zonen` ist der Griff an dieser Ausweiche.** Steht dort 0, weicht
+  das Stück gerade nichts aus — und eine leere Zonenliste sieht in jeder
+  anderen Messung aus wie „nichts im Weg". An genau dieser Verwechslung sind
+  vier Messungen vorbeigelaufen.
+* **`lesbarkeit.mjs` sagt nur das erste Wort der Klasse.** `gegner-w11/schmal.mjs`
+  und `bandrand.mjs` sagen, welcher Kasten, um wieviel und ob Ziffern
+  betroffen sind. Ohne die beiden hätte ich Änderung 12 nie gefunden.
+* **Ergebnisse gehören nie in eine `.log`-Datei** (§7.9).
+
+---
+
+## 9 — ZUR BISTABILITÄT IN 1350: was dieses Stück dazu beitragen kann
+
+Der Stand der Aufsicht (`b857fc7`) hält die Welle an, weil **1350 nicht mehr
+dieselbe Partie spielt**: dreimal einzeln gemessen, null Fehler, Kennzahl
++0,191 · +0,191 · −0,521, Spannweite 0,712 — größer als die Latte selbst. Der
+Vorzustand war dreimal byteweise gleich. Die Trennprobe soll klären, welches
+der drei Stücke es ist.
+
+**DER GEGNER hat 1350 dreimal gemessen, auf zwei unabhängig aufgesetzten
+Mischständen, und dreimal dieselbe Datei erhalten:**
+
+| Lauf | Stand | md5 der 400-Wochen-Reihe |
+|---|---|---|
+| `vor-e1` | `7896ee6`, Hafen 8961 | `901a9365…` |
+| `nach-e1` | `7896ee6+gegner-f921d8abdd12`, Hafen 8962 | `236412a2…` |
+| `nach2-e1` | derselbe Mischstand, **nach Container-Reset neu aufgesetzt** | `236412a2…` |
+| `nach3-e1` | `7896ee6+gegner-8188005c786e` (mit Änderung 12) | `236412a2…` |
+
+Und `vor-e1` unterscheidet sich von allen dreien in **genau einem Feld**:
+`hafen` (8961 gegen 8962). Kennzahlreihe, Kassenreihe, Nennerpreise,
+Zugdeckung, Jahre unter 1× — Ziffer für Ziffer gleich.
+
+**Damit ist für dieses Stück belegt:**
+
+* Der Vorzustand ist auf meinem Weg **nicht bistabil** — vier Läufe in 1350
+  auf drei verschiedenen Ständen, alle identisch.
+* Ein Mischstand aus `7896ee6` **plus nur den Dateien des GEGNERS** spielt
+  dieselbe Partie wie `7896ee6` allein, bitgleich.
+* Dasselbe gilt für 1600, 1884 und 1970 (§7.12: `vor ↔ nach3` unterscheidet
+  sich in allen vier Epochen nur im Feld `hafen`).
+
+Das ist kein Freispruch für DEN GEGNER am **Integrationsstand** — dort liegen
+alle drei Stücke übereinander, und Bistabilität kann aus einem Zusammenspiel
+entstehen, das keiner der drei allein zeigt. Es ist aber die Zahl, die eine
+Trennprobe von diesem Stück braucht: **allein gemessen ist dieses Stück in
+allen vier Epochen bitstabil gegen den Vorzustand.**
+
+Ein Grund, warum das plausibel ist und nicht nur gemessen: dieses Stück ruft
+seit Änderung 7 **vier bis sechs `getBoundingClientRect` je Epoche und Partie**
+(einmal je Epoche, danach aus `ZONEN` bedient) statt bei jedem Bildaufbau. Die
+Randwache (`amRand`/`randDx`) rechnet ganz ohne DOM-Abfrage, aus den
+Höchstbreiten im Stil. Layoutabfragen im Zeichentakt sind der bekannte Weg,
+auf dem dieselbe Saat zweimal verschieden läuft — der Rahmen hat das in
+Welle 10 gemessen. Wer die Bistabilität sucht, sucht dort nach einem Stück,
+das im Takt misst.
