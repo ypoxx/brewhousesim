@@ -721,3 +721,80 @@ fort.
 | e2-C | 07:07:06 | `616c2ea42e00` |
 
 Fassung 1 hatte hier **zwei** Pruefsummen. Auch dieser Rueckschritt ist fort.
+
+---
+
+# NEUANLAUF NACH DEM EINUNDZWANZIGSTEN RESET (7.8., ab 08:3x UTC)
+
+## Der erste Griff war in die eigenen Messdaten, und er sitzt
+
+`abnahme2/` ist der Satz der **ausgelieferten** Fassung 2 (Klemmenwache,
+Stand `7f30b3dfa40e`, Hafen 8946). Er war beim Reset nicht ausgewertet.
+Ausgewertet steht da:
+
+| Epoche | Laeufe | Pruefsummen |
+|---|---|---|
+| 1600 | 3 | **1** — `616c2ea42e00` |
+| 1884 | 3 | **1** — `32587e1d4e9c` |
+| **1350** | **2** | **ZWEI** — `d558a8a12799` · `1a7c625b59e6` |
+
+**1350 ist auf der ausgelieferten Fassung NICHT geheilt.** Das ist der Befund,
+der beim Reset noch nicht dastand, und er kehrt die Lage um.
+
+Die beiden 1350-Laeufe sind bis Woche 60 Ziffer fuer Ziffer gleich und gehen in
+**Woche 61 (1352 W2)** auseinander — dieselbe Stelle wie auf dem Vorzustand:
+
+| | e1-A | e1-B |
+|---|---|---|
+| Kassenspanne | **8–514** | **30–558** |
+| Michaeli 1352, Kasse / LEITER-Zeilen | 164 / **0** | 119 / **3** |
+| Schluss 1363 W11 | Kasse 98 | Kasse 140 |
+| abweichende Wochen | — | **339 von 400** |
+
+Das sind Ziffer fuer Ziffer die beiden alten Partien A (`ohneErbe`) und B
+(`ohneGegner`). Die Klemmenwache allein stellt das Rennen nicht ab.
+
+## Damit steht die Bilanz der Welle so — beide Fassungen halbfertig
+
+| Epoche | Vorzustand `7a1a942` | **F1** Rundenschluss `5707219bc98a` | **F2** Klemmenwache `7f30b3dfa40e` |
+|---|---|---|---|
+| 1350 | 3 / **2** | 6 / **1** ✔ | 2 / **2** ✘ |
+| 1600 | 3 / 1 | 3 / **2** ✘ | 3 / **1** ✔ |
+| 1884 | 3 / 1 | 3 / **3** ✘ | 3 / **1** ✔ |
+| 1970 | — | 2 / 1 | — |
+
+**Keine der beiden Fassungen erfuellt die Abnahme.** F1 heilt genau das, was F2
+offen laesst, und umgekehrt. Und das ist kein Zufall, sondern folgt aus dem,
+was schon gemessen ist:
+
+* Was 1350 heilt, ist das **Vorziehen der 420-ms-Frist** in
+  `stuecke/preis.js:2737` — nur F1 tut das.
+* Was 1600/1884 verdirbt, ist das Vorziehen von
+  **`requestAnimationFrame`**, namentlich `stuecke/fuhre.js:2541`
+  (`clientHeight`/`scrollHeight` — eine Messung, die einen fertigen
+  Bildaufbau braucht) — nur F1 tut das.
+
+F1 hat beides in einem Griff getan. **Die Trennung ist die Fassung 5:**
+`setTimeout` waehrend einer Zeichenrunde vorziehen, `requestAnimationFrame`
+**nicht anfassen**. Damit steht die eigene Lehre der Welle wortwoertlich im
+Bau: *ein Rahmen darf einem Stueck sagen, WANN etwas zu tun ist, nicht WIE
+seine Messung zustande kommt.* Ein `rAF` IST eine Messstelle (Layout fertig);
+ein `setTimeout` ist keine, es heisst nur „spaeter".
+
+Gefangen werden dabei im ganzen Spiel genau **zwei** Stellen — beide nachgesehen:
+`stuecke/preis.js:2737` (420 ms, der Verursacher) und `stuecke/name.js:2272`
+(0 ms, „noch einmal zeichnen, wenn Aufgeld kam"). Alle sieben rAF-Stellen
+bleiben unberuehrt.
+
+## Das schnelle Tor, das diesmal taugt — und warum der Drosselfaecher nicht taugte
+
+Der Drosselfaecher hat F2 fuer 1350 **durchgewinkt** (5 von 5 dieselbe Partie
+ueber 62 Wochen) und ist damit widerlegt: derselbe Stand spielt ungedrosselt
+in 400 Wochen zwei Partien. Gleichmaessige Drosselung erkundet eine andere
+Gegend als das natuerliche Zittern der Maschine.
+
+Das richtige billige Tor steht in den Daten selbst: **die Partie entscheidet
+sich in Woche 61.** Also `linie.mjs 1 62` — rund 40 s statt 7 Minuten —
+mehrfach ungedrosselt hintereinander, und verglichen wird `kasseMichaeli`
+von 1352: **164 = Partie A, 119 = Partie B.** Acht Laeufe kosten sechs
+Minuten und beantworten dieselbe Frage wie sechs 400-Wochen-Laeufe.
