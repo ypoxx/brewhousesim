@@ -55,8 +55,13 @@ for (const e of [1, 2, 3, 4]) {
       const el = await s.$(`[data-zug="${zug}"]:not([disabled])`);
       if (el) { await el.click({ timeout: 1500 }).catch(() => {}); await s.waitForTimeout(120); }
     }
+    /* UND JETZT SOFORT HINSEHEN. Die Luege dauert 420 ms; wer erst eine
+       halbe Sekunde wartet, sieht sie nicht mehr und haelt das Bild fuer
+       ruhig. Die messende Hand wartet genau so wenig: zwei Bildaufbauten. */
+    await s.evaluate(() => new Promise(f => requestAnimationFrame(() => requestAnimationFrame(f))));
+  } else {
+    await s.waitForTimeout(300);
   }
-  await s.waitForTimeout(300);
 
   /* Damit dieselbe Frage auch am VORZUSTAND gestellt werden kann, an dem es
      `BRAUHAUS.runde` noch gar nicht gibt, traegt die Probe ihre eigene
