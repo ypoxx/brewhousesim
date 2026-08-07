@@ -31,14 +31,35 @@ Gemessen wird einzeln, jeder Browser durch `aufsicht/messfenster.sh`.*
 > | | Stand beim Antritt |
 > |---|---|
 > | **Die Berichtigung §3.1** (das Letzte, was mein Vorgaenger anfing) | **war zu Ende gebracht.** Nachgeprueft: die vier Nachher-Zeilen der Tabelle stimmen jetzt Ziffer fuer Ziffer mit `messungen/nachher-sonde-w30.txt`. Die Folgestelle in §3.2 (`195.456` → `189.696`) ist ebenfalls berichtigt (Commit `397aac1`), und die falschen Masse im Quelltext-Erklaerkopf auch (`fuhre.js:3697`). **Die alten Zahlen stehen nur noch dort, wo sie hingehoeren: im Berichtigungskasten selbst.** Nachgezaehlt mit `grep` ueber alle sechs falschen Werte |
-> | `abnahme.sh` | **war fertig durchgelaufen** (`abnahme-fortschritt.txt`: FERTIG 22:49:49) — aber **die letzten fuenf Ergebnisse standen in keinem Abschnitt**, weil die Sitzung um 21:53 endete und der Lauf erst um 22:49 fertig war. Nachgetragen in §3.5b, §3.9. Darunter die wichtigste Zahl des ganzen Auftrags (siehe unten) |
-> | Arbeitsbaum gegen gemessenen Stand | **auseinander**: gemessen wurde `3082041165`, im Baum steht `3bdb5bb282`. Der Unterschied ist **ein Kommentarblock** — nachgerechnet, §3.9 |
+> | `abnahme.sh` | **war fertig durchgelaufen** (`abnahme-fortschritt.txt`: FERTIG 22:49:49) — aber **die letzten fuenf Ergebnisse standen in keinem Abschnitt**, weil die Sitzung um 21:53 endete und der Lauf erst um 22:49 fertig war. Nachgetragen in §3.3b, §3.5b, §3.9. Darunter die wichtigste Zahl des ganzen Auftrags (siehe unten) |
+> | Arbeitsbaum gegen gemessenen Stand | **auseinander**: gemessen wurde `3082041165`, im Baum steht `3bdb5bb282`. Der Unterschied ist **ein Kommentarblock** — nachgerechnet in §3.9, und auf dem Baumstand ist neu gemessen worden: **§3.10** |
 >
 > **Die Latte „Gesamtdeckung unter 20 %" ist genommen, und es stand
 > nirgends.** `messungen/deckung-gemeinsam-w30.txt`, 30 × WEITER ohne
 > Escape, alle drei Stuecke zusammen: **14,5 / 15,0 / 14,8 / 13,8 %**.
 > §3.3 sagt noch „NICHT genommen" — das war zur Zeit des Schreibens richtig
 > und ist es seit 22:49 nicht mehr. Berichtigt in §3.3b.
+>
+> **Und zwei Zahlen bzw. Saetze, die gegen mich gehen und jetzt berichtigt
+> dastehen:**
+>
+> * **§1.2c — meine eigene Fertigmeldung war an einer Stelle falsch.** Der
+>   erste Anlauf hat der Aufsicht gemeldet, die 169.305 px stammten aus dem
+>   GESPIELTEN Zustand. Sie stammen aus dem **Ladezustand** (dort 169.303
+>   vorher, 169.305 nachher; im gespielten Zustand sind es 1.476.519 bzw.
+>   342.331 px). Der richtige Befund bleibt bestehen und ist jetzt sauber
+>   getrennt aufgeschrieben.
+> * **§3.5 — ein Satz von mir hat aus einer Messung mehr gelesen, als
+>   dasteht.** „`spur()` nicht leer ⇒ der Rahmen sieht meinen Anschlag
+>   jetzt" ist falsch: der eine Spur-Eintrag nennt das Buch DES ERBEN, und
+>   er steht auf dem Vorzustand wortgleich da. Berichtigt in §3.5, belegt in
+>   §3.5b. **Folge: die Umstellung `stopImmediatePropagation()` →
+>   `stopPropagation()` hat auf dem heutigen Stand kein beobachtbares
+>   Verhalten geaendert** — sie ist Vorsorge, nicht Wirkung.
+>
+> **Drei tote Verweise geflickt:** `nachher-laden.log` (gibt es nicht → `.txt`),
+> „siehe §3.5b" (Abschnitt fehlte → geschrieben), `abn-* = cf76271455`
+> (falsche Marke → `3082041165`, gemessen in `abn-marke.txt`).
 
 | Stand auf Hafen | was |
 |---|---|
@@ -991,6 +1012,54 @@ auf `3bdb5bb282` noch einmal gemessen worden — §3.10.
 
 ---
 
+### 3.10 Die Abnahme auf `3bdb5bb282` — dem Stand, der im Arbeitsbaum steht
+
+Dritte Marke, dritte Messung. Der Grund ist derselbe wie in §3.9, und er
+gilt weiter: dass ein Kommentar nichts aendert, ist ein Argument und kein
+Messwert. Stand eingefroren mit `nachstand.sh 8952`
+(`messungen/abn2-marke.txt`: `FUHRESTAND 7896ee6+3bdb5bb282 … Fassung
+geprueft`), jeder Lauf einzeln durchs Messfenster.
+
+**30 × WEITER, ohne Escape, 2752×1536** (`messungen/abn2-sonde-w30.txt`):
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| `haushalt.tafeln()` | **0** | **0** | **0** | **0** |
+| `.fu-sommerblatt` | 716×254 = **181.909** | 716×254 = **181.909** | 716×239 = **171.288** | 716×239 = **171.288 px²** |
+| DIE FUHRE (Huellen) | **189.696** | **190.464** | **175.680** | **180.880 px** / 34.000 |
+| oberstes ⅙ DER FUHRE | **0** | **0** | **0** | **0 px** / 10.000 |
+| alle neun (Huellen) | 917.760 px = **21,7 %** | 938.960 = **22,2 %** | 906.208 = **21,4 %** | 1.115.344 = **26,4 %** |
+| `ueberRand()` · `geklemmt()` | 0 · leer | 0 · leer | 0 · leer | 0 · leer |
+| `lage` · Seitenfehler · **`verdeckt()`** | 0·0·**0** | 0·0·**0** | 0·0·**0** | 0·0·**0** |
+| vier Planknoepfe | 340×31/46, alle **trifft** | dito | dito | dito |
+
+**`diff abn-sonde-w30.txt abn2-sonde-w30.txt` ist leer** — Zeichen fuer
+Zeichen derselbe Lauf wie auf `3082041165`. Gegen `118b191467` bleiben die
+16 px in einer Zelle des 4-px-Rasters aus §3.9, und jetzt steht auch da,
+**wo** sie liegen: nicht bei mir, sondern beim Nachbarn — `gegner
+219.584 → 219.600 px`, `fuhre 189.696` in beiden.
+
+**Ladezustand** (`messungen/abn2-sonde-laden.txt`):
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| `haushalt.miss().je.fuhre` | **0 px** | **0 px** | **0 px** | **2.704 px** / 34.000 |
+| oberstes ⅙ DER FUHRE | 0 | 0 | 0 | **0 px** / 10.000 |
+| `haushalt.pruefe()` nennt `fuhre` | nein | nein | nein | nein |
+| `tafeln()` · `ueberRand()` · `geklemmt()` | 0 · 0 · leer | 0 · 0 · leer | 0 · 0 · leer | 0 · 0 · leer |
+| `lage` · Seitenfehler · `verdeckt()` | 0·0·0 | 0·0·0 | 0·0·0 | 0·0·0 |
+| gesamt (Huellen) | 18,2 % | 19,0 % | 18,4 % | 19,2 % |
+
+**Auch hier ist `diff` gegen `abn-sonde-laden.txt` und gegen
+`nachher-sonde-laden.txt` leer** — drei Marken, dreimal Zeichen fuer Zeichen
+dasselbe. Damit ist die Kette geschlossen: **jede Zahl in §3.1–3.9 gilt
+nachgemessen fuer den Stand, der im Arbeitsbaum steht.**
+
+`aufsicht/tor.mjs` auf demselben Stand (`messungen/abn2-tor.txt`): siehe
+Eintrag unten — vier Epochen geladen, `BRAUHAUS.lage.length`, Konsolenfehler.
+
+---
+
 ## 4 — Was DIE FUHRE weiter offen laesst, mit Datei, Zahl und Abnahme
 
 Damit es niemand suchen muss, und weil es gegen meine eigene Zahl spricht:
@@ -1031,8 +1100,8 @@ leer, wenn `BRAUHAUS.fuhre.stand().antrag` nicht null ist.
 | `escapeprobe.mjs` | die Abnahme der Rahmen-Auflage: Escape schliesst die Tafel UND die Chronik bleibt mit Escape schliessbar |
 | `nachstand.sh` | friert `7896ee6` + **nur** die Dateien DER FUHRE ein (Builder duerfen nicht committen) |
 | `vorher.sh` · `nachher.sh` · `rho.sh` · `rho1350.sh` | die Messsaetze, jeder Lauf einzeln durchs Messfenster |
-| **`abnahme.sh`** | **neu beim Neuanlauf**: die Abnahme auf dem Stand, der wirklich ausgeliefert wird (`cf76271455`), dazu die drei Laeufe, die beim ersten Anlauf gefehlt haben — Escape-Probe auf dem VORZUSTAND, `warum.mjs` mit Ausgabe in eine Datei statt auf die Konsole, und die gemeinsame Deckung aller drei Stuecke |
-| `messungen/` | alle Rohdaten. `vorher-*` = `7896ee6`, `nachher-*` = Nachstand `118b191467`, `abn-*` = Endstand `cf76271455`, `gemeinsam-*` = ganzer Arbeitsbaum |
+| **`abnahme.sh`** | **neu beim Neuanlauf**: die Abnahme auf dem Stand, der ausgeliefert wird, dazu die drei Laeufe, die beim ersten Anlauf gefehlt haben — Escape-Probe auf dem VORZUSTAND, `warum.mjs` mit Ausgabe in eine Datei statt auf die Konsole, und die gemeinsame Deckung aller drei Stuecke. *(Sein Kopf und seine Laufnamen nennen noch `cf76271455`; die Marke, unter der er tatsaechlich gelaufen ist, steht gemessen in `messungen/abn-marke.txt` und lautet `3082041165`. Die Marke wird zur Laufzeit aus dem Arbeitsbaum gebildet, der Text im Kopf ist nur eine Beschriftung — sie ist beim Neuanlauf 3 als veraltet erkannt und hier benannt statt still ausgebessert, weil das Skript selbst unveraendert bleiben soll.)* |
+| `messungen/` | alle Rohdaten. `vorher-*` = `7896ee6`, `nachher-*` = Nachstand `118b191467`, `abn-*` = `3082041165`, **`abn2-*` = `3bdb5bb282` (der ausgelieferte Stand, §3.10)**, `gemeinsam-*` = ganzer Arbeitsbaum (`6ace3a0`, alle drei Stuecke) |
 | `bilder/` | **wandert nicht mit** (`.gitignore:67`, `**/schuss/**/*.png`). Wer die Aufnahmen braucht, stellt sie mit `blick.mjs`/`warum.mjs` in Minuten wieder her. Deshalb steht seit dem Neuanlauf jede Aussage, die vorher nur ein Bild trug, auch als Zahl in `messungen/` |
 
 
@@ -1103,6 +1172,30 @@ leer, wenn `BRAUHAUS.fuhre.stand().antrag` nicht null ist.
    — der Rahmen findet keinen eigenen Griff und muss auf einen fremden
    Reiter ausweichen. Das ist woertlich die Auflage DES ERBEN
    („`haushalt.geklemmt()` bleibt nach Escape leer"). **Der Vergleichslauf
-   auf dem Vorzustand steht in `messungen/vorher-escape.txt`** (beim
-   Neuanlauf nachgeholt, weil die Nachher-Zeile ohne ihn nicht zu deuten
-   ist): siehe §3.5b.
+   auf dem Vorzustand steht in `messungen/vorher-escape.txt`** und ist
+   Zeichen fuer Zeichen derselbe (§3.5b) — **die Klemme ist also nicht von
+   der FUHRE verursacht**, sie steht auf dem Vorzustand genauso da.
+
+9. **DEM RAHMEN, und es nimmt meiner eigenen Zeile das Verdienst: die
+   Auflage `stopImmediatePropagation()` → `stopPropagation()` aendert auf
+   dem heutigen Stand kein Verhalten** (§3.5b). Der Escape-Horcher des
+   Rahmens (`haushalt.js:588`, Fangphase) ist frueher angemeldet als der
+   DER FUHRE (`index.html:81` vor `:90`) und wurde nie ueberholt; alle
+   uebrigen Escape-Horcher (`kopf.js:220`, `gegner.js:3239`,
+   `name.js:2349`) haengen in der **Blasenphase** und werden von
+   `stopPropagation()` in der Fangphase genauso abgeschnitten wie vorher.
+   Einen Fangphasen-Horcher auf `document`, der **nach** der FUHRE
+   angemeldet wird, gibt es im ganzen Spiel nicht — nur er koennte den
+   Unterschied sehen. **Gemessen ist es auch:** die Escape-Probe auf dem
+   Vorzustand ist Zeichen fuer Zeichen die auf dem Nachstand. Die
+   Umstellung ist richtig als Vorsorge; als Abnahme ist sie nicht
+   beobachtbar, und `haushalt.js:578` sagt den Grund selbst („Er nimmt
+   niemandem etwas ab"). Wer sie fuer andere Stuecke wiederholt, sollte
+   wissen, dass die zugehoerige Probe sie nicht bestaetigen kann.
+
+10. **DER AUFSICHT: die Latte „Gesamtdeckung unter 20 %" ist zusammen
+    genommen** (§3.3b) — 14,5 / 15,0 / 14,8 / 13,8 % nach 30 Wochen ohne
+    Escape auf `6ace3a0` mit allen drei Stuecken, gegen 48,8 / 48,1 / 44,8 /
+    53,3 % im Vorzustand. Allein DIE FUHRE kommt auf 22,1–26,7 %. Die Zahl
+    lag seit 22:49 in `messungen/deckung-gemeinsam-w30.txt` und stand in
+    keinem Abschnitt, weil die Sitzung vorher endete.
