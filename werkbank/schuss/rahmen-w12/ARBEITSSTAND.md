@@ -265,3 +265,47 @@ Dazu zwei Geraete auf der Platte:
 Vorher kostete dieselbe Frage **neun Laeufe zu je vier Minuten** — und selbst
 die haben sie nicht beantwortet, sondern nur festgestellt, dass es keinen
 Verursacher gibt.
+
+---
+
+# JEDE ZEILE, DIE GEAENDERT WURDE, MIT GRUND
+
+`git diff --stat 9b20ac0 HEAD -- spiel/`:
+`index.html` +13 · `kern/buehne.js` +12/−1 · `kern/runde.js` +473 (neu).
+**Keine Datei eines Stuecks ist beruehrt.** `stil/grund.css` ist **unberuehrt** —
+dieser Befund war keiner des Aussehens, und es gab nichts daran zu regeln.
+
+## `spiel/index.html` — EINE funktionale Zeile
+
+```html
+<script src="kern/runde.js"></script>
+```
+plus elf Zeilen Kommentar. **Grund:** der Rundenschluss umhuellt `B.sende` und
+`window.setTimeout`/`requestAnimationFrame` und muss das tun, **bevor
+irgendein Stueck sie zum ersten Mal ruft**. Deshalb steht die Zeile direkt
+hinter `kern/uhr.js` — dort gibt es `B.sende` und `B.auf` schon, und alle acht
+Stuecke kommen erst weit danach. Kein `<script>`- oder `<link>`-Tag eines
+Stuecks ist angefasst, die Ladereihenfolge der acht Stuecke ist unveraendert.
+
+## `spiel/kern/buehne.js` — eine Klammer um vier Zeilen in `starte()`
+
+Die Schleife, die beim Laden jedem Stueck sein erstes `zeichne` gibt, ruft die
+Stuecke **direkt** und geht nicht ueber `B.sende('zeichne')` — genau dort haengt
+aber der Rundenschluss. Ohne die Klammer waere ausgerechnet der **Ladezustand**
+die einzige Runde ohne Ende, und der Ladezustand ist der, den der blinde
+Kritiker fotografiert. Die Reihenfolge der Aufrufe bleibt Zeile fuer Zeile
+dieselbe; nur der Schluss kommt dazu. Faellt `kern/runde.js` aus, laeuft die
+Schleife unveraendert (`if (B.runde && B.runde.runde) … else malen()`).
+
+## `spiel/kern/runde.js` — neu, 473 Zeilen
+
+Der Rundenschluss (R8), die Klemmenwache und das Geraet (R9). Vollstaendig
+kommentiert, mit dem eigenen Fehler und seiner Messung im Quelltext.
+
+**Was es an fremdem Verhalten aendert und was nicht.** Es aendert die
+**Reihenfolge**, in der aufgeschobene Arbeit laeuft, und den **Zeitpunkt**
+(Ende der Runde statt Wanduhr). Es aendert **keinen** Rueckgabewert, **keine**
+Bedingung und **keine** Zeichenkette. Jede umhuellte Funktion ruft das Original
+mit denselben Argumenten; jeder aufgefangene Rueckruf wird ausgefuehrt,
+hoechstens frueher. Was nach zwoelf Durchgaengen uebrig ist, geht an die echte
+Uhr zurueck (`ueberlauf` in `bericht()`, gemessen: **0**).

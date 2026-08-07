@@ -43,9 +43,43 @@ for (const e of [1, 2, 3, 4]) {
   }
   await s.waitForTimeout(300);
 
+  /* Damit dieselbe Frage auch am VORZUSTAND gestellt werden kann, an dem es
+     `BRAUHAUS.runde` noch gar nicht gibt, traegt die Probe ihre eigene
+     Fassung von `nachwehen()` mit sich. Sie liest genau dieselben zwei
+     Abdruecke (Klemmenlage, Zuege) und wartet dieselbe Frist. */
   const d = await s.evaluate(async (frist) => {
     const B = window.BRAUHAUS;
-    const nw = B.runde ? await B.runde.nachwehen(frist) : null;
+    const KLEMMEN = '.stadt-zugeklappt, .stadt-verdeckt, .kern-blatt-zu';
+    const abdruck = () => [...document.querySelectorAll(KLEMMEN)]
+      .map(el => ((el.closest('.fach') || {}).id || '?') + '/' + el.className).sort().join('|');
+    const T = '\u0001', S = '\u0002';
+    const schirm = () => [...document.querySelectorAll('[data-zug]')]
+      .map(el => el.getAttribute('data-zug') + T + (el.disabled ? '1' : '0')
+        + T + String(el.textContent || '').replace(/\s+/g, ' ').trim())
+      .sort().join(S);
+    const eigen = async () => {
+      const a1 = abdruck(), s1 = schirm();
+      await new Promise(f => setTimeout(f, frist));
+      const a2 = abdruck(), s2 = schirm();
+      const raus = [];
+      if (a1 !== a2) raus.push({ was: 'klemmenlage', vorher: a1, nachher: a2,
+        sagt: 'Klemmenlage hat sich nach dem Ende der Runde geaendert.' });
+      if (s1 !== s2) {
+        const zerlege = t => new Map(t.split(S).filter(Boolean).map(z => [z.split(T)[0], z]));
+        const m1 = zerlege(s1), m2 = zerlege(s2);
+        const zeig = x => {
+          if (!x) return '(fort)';
+          const t = x.split(T);
+          return (t[1] === '1' ? 'gesperrt \u00b7 ' : '') + (t[2] || '').slice(0, 60);
+        };
+        const u = [];
+        for (const [k, v] of m1) if (v !== m2.get(k) && u.length < 12) u.push({ zug: k, vorher: zeig(v), nachher: zeig(m2.get(k)) });
+        raus.push({ was: 'zuege', unterschiede: u,
+          sagt: 'Beschriftung oder Sperre eines Zuges hat sich nach dem Ende der Runde geaendert.' });
+      }
+      return { frist, ruhig: raus.length === 0, beanstandungen: raus, eigen: true };
+    };
+    const nw = (B.runde && B.runde.nachwehen) ? await B.runde.nachwehen(frist) : await eigen();
     let verdeckt = null;
     try { verdeckt = B.stadt.rahmen.verdeckt().length; } catch (x) { verdeckt = 'kein Griff'; }
     return {
