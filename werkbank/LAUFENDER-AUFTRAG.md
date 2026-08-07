@@ -121,6 +121,40 @@ Abweichungsverhältnis von 1:3 zu rund 30 % Zufall. **Drei** stabile Sätze auf
 **drei verschiedenen** Werten sind es zu unter 3 % — und die zwei Werte des
 vollen Standes fallen zusätzlich Ziffer für Ziffer auf zwei der drei.)*
 
+> ### DAS RENNEN IST GEFUNDEN — und es sind nicht die drei Stücke der Welle 11
+>
+> *Vom Builder DER RAHMEN in Welle 12 lokalisiert und reproduziert, mit
+> Protokoll statt Vermutung (`rahmen-w12/ARBEITSSTAND.md`).* Der Augenblick ist
+> **Michaeli 1352**, wenn die Hand `preis:tafel` liest:
+>
+> | | Partie A | Partie B |
+> |---|---|---|
+> | `.pr-tafel` im DOM | ja | **nein** |
+> | Text am Griff | „Michaelitafel **schließen**" | „Michaelitafel 1352 · 5 Angebote" |
+> | die Hand | **klickt nicht** | **klickt** |
+> | Folge | Leiter leer, kein Angebot | Tafel liegt auf, Angebot für 45 Pf |
+>
+> **Die Kette:** `stadt.js` `nachsehen()` setzt `stadt-zugeklappt` auf ein
+> **fremdes** Brett — und **sendet dabei kein `zeichne`**. Niemand erfährt es.
+> `preis.js:2737` sieht deshalb nach einer **Wanduhrfrist von 420 ms** selbst
+> nach. **Dazwischen lügt der Knopf:** er sagt „schließen", während nichts auf
+> dem Tisch liegt. Die messende Hand wartet nach jedem Klick rund **33 ms** —
+> ein Zwölftel davon. Ob sie vor oder nach dem Nachsehen liest, hängt an der
+> Last der Maschine. In 62 Wochen wird die Frist **186-mal bestellt und fällt
+> 5-mal**; Michaeli 1352 liegt in einer dieser fünf Lücken.
+>
+> **Damit ist auch geklärt, warum die Trennprobe keinen Verursacher fand — und
+> warum sie trotzdem recht hatte.** Die Kette braucht drei Teile: ein Brett DES
+> PREISES, das DIE STADT wegklappt, und genug anderes auf dem Tisch, damit die
+> Platzordnung überhaupt in den Streit gerät. DIE FUHRE bringt mit dem
+> Sommerblatt das Dritte (deshalb ist sie notwendig), GEGNER und ERBE
+> verschieben nur, **wo** die 420-ms-Lücke fällt. **Die Bistabilität lag seit
+> jeher im Bau; Welle 11 hat sie bloß sichtbar gemacht.**
+>
+> **Die Lehre, und sie ist allgemein:** *ein Stück, das den Zustand eines
+> fremden Bretts ändert, ohne `zeichne` zu senden, zwingt jedes andere zum
+> Pollen — und jede Wanduhrfrist ist ein Rennen mit der messenden Hand.*
+
 ---
 
 ## WELLE 10 GEMESSEN — der Rahmen hat das Bild geräumt, ohne die Partie anzufassen
