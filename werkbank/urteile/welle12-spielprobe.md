@@ -76,15 +76,134 @@ zwei Knöpfe, die Woche für Woche dasselbe tun.** Alles andere kam zusammen auf
 
 ## 2 · Die Zählung je Epoche
 
-*(wird gefüllt, sobald alle vier Sitzungen gelaufen sind)*
+Alles gezählt **am Bildschirm**: „greifbar" heißt, der Knopf hat eine Fläche, liegt im
+Sichtfeld, ist nicht abgeschaltet, und `elementFromPoint` auf seiner Mitte trifft ihn —
+also: ich hätte hinklicken können. „bezahlbar" heißt zusätzlich: der Preis am Knopf ist
+nicht größer als die Kasse in derselben Woche.
+
+| | **1350** | **1600** | **1884** | **1970** |
+|---|---|---|---|---|
+| Minuten gespielt | 20,1 | 20,1 | — | — |
+| Wochen · Braujahre | 284 · 1350–1359 | 310 · 1600–1610 | — | — |
+| echte Mausklicks | 1.494 | 838 | — | — |
+| Klicks, die ins Leere gingen | 0 | 93 | — | — |
+| **greifbare Züge, Median je Woche** | **48** | **54** | — | — |
+| **davon mit Preisschild, Median** | **7** | **10** | — | — |
+| **davon bezahlbar, Median** | **2** | **3** | — | — |
+| Wochen ohne *eine* bezahlbare Preisoption | **127 von 284** | 20 von 310 | — | — |
+| Wochen mit ≥ 2 bezahlbaren | 153 | 271 | — | — |
+| größte bewiesen einander ausschließende Gruppe | **4** | **4** | — | — |
+| Deckung (Kasse ÷ nächster sinnvoller Zug), Median | **0,16×** | **0,61×** | — | — |
+| Wochen mit Deckung unter 1× | **250 von 284** | 212 von 310 | — | — |
+| Kasse Anfang → Ende | 112 → 17 Pf | 640 → 179 fl | — | — |
+| Gegnerzüge, die ohne mich geschahen | **140** | **151** | — | — |
+| Wochen, in denen der Gegner zog | 125 | 138 | — | — |
+| Züge, die ich gegen ihn getan habe | **0** | **4** | — | — |
+| `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | 0 · 0 | — | — |
+
+### Punkt 1 der Latte — Entscheidungen mit Preisschild nebeneinander, die einander ausschließen
+
+**Es gibt sie, und sie sind echt — aber sie liegen alle auf einem einzigen Brett, das
+einmal im Jahr auftaucht und das man suchen muss.**
+
+Der Ausschluss ist nicht behauptet, sondern **gemessen**: ich habe auf der Michaelitafel
+zugegriffen und danach denselben Schirm noch einmal abgelesen.
+
+| Epoche · genommen | danach noch offen | danach abgeschaltet |
+|---|---|---|
+| 1350 · `preis:nimm:dach` | 1 Angebot | **3 Angebote, 3 Festlegungen** |
+| 1600 · `preis:nimm:darre` | 1 Festlegung | **4 Angebote, 3 Festlegungen** |
+| 1600 · `preis:festlege:reinheit` | nichts | **5 Angebote, 2 Festlegungen** |
+| 1600 · `preis:nimm:probe` | nichts | **4 Angebote, 2 Festlegungen** |
+
+Das Brett sagt es auch selbst, und zwar gut: *„5 nebeneinander, 5 heute noch zu haben ·
+Kasse 112 Pf · was hier weggeht, kommt in diesem Jahr nicht wieder"* und *„Eine je
+Amtszeit. Sie ändert eine Regel für den Rest der Partie und wird nicht zurückgenommen."*
+Das ist genau die Sorte Entscheidung, die die Latte verlangt.
+
+**Der Haken ist die Häufigkeit.** Diese Tafel liegt einmal im Braujahr. In 284 gespielten
+Wochen war sie in 1350 **viermal** auf dem Tisch, und **dreimal davon nur, weil ich sie
+gesucht habe**; in 1600 zweiundzwanzigmal, davon **einundzwanzigmal nur nach Suche**. Von
+selbst kam sie beim Laden der ersten Partie — und danach nie wieder.
+
+In den übrigen 27 bis 29 Wochen des Jahres bleibt: die **Adressen des Gegners**. Dort
+stehen tatsächlich zwei Wege nebeneinander, die einander ausschließen — *„ablösen 66 Pf"*
+gegen *„Fass an den Wirt · 1 Fass statt Geld"*, in 490 von 500 abgelesenen Adressfällen
+der ersten 120 Wochen. Das ist eine echte Wahl mit Preis, und sie ist gut gebaut. Sie ist
+aber immer **dieselbe** Wahl, an einer anderen Adresse.
+
+### Punkt 4 der Latte — die Verbliste je Epoche *(vorläufig, 1350 gegen 1600)*
+
+Ich habe zwei Listen gebildet: die **Verben** (welche Art Handlung war je greifbar) und die
+**Knopfaufschriften** (welche Wörter standen darauf, Zahlen getilgt).
+
+| | 1350 | 1600 | gemeinsam | Jaccard |
+|---|---|---|---|---|
+| Verben | 43 | 42 | **38** | **0,81** |
+| Knopfaufschriften | 116 | 119 | 44 | 0,23 |
+
+**Nur in 1350:** `erbe:anfechten` · `fuhre:bann` · `fuhre:tafel-ab` · `sud:wasser` ·
+`sud:wuerze`.
+**Nur in 1600:** `fuhre:pfand` · `name:liefern` · `name:zurueckhalten` · `sud:schuettung`.
+
+Das ist der wichtigste Befund dieses Papiers und er ist zweischneidig: **die Wörter sind
+verschieden, die Handlungen sind es kaum.** In 1600 heißt der Keller „Gewölbe", der
+Ochsenkarren „Pferdefuhrwerk", das Grutgeld „Ungeld", die Bannmeile „Bierbann über vier
+Dörfer" — und die Reiterleiste hat in beiden Epochen **dieselben elf Fächer in derselben
+Reihenfolge**. Neun von zehn Dingen, die ich tun konnte, konnte ich in beiden Epochen tun.
 
 ## 3 · Unwiderrufliche Festlegungen
 
-*(desgleichen)*
+**Sie gibt es, sie sind sauber beschriftet, und ich habe in 20 Minuten 1350 keine einzige
+davon treffen können.**
+
+Die Tafel führt sie unter *DIE FESTLEGUNG* mit dem Satz: *„Eine je Amtszeit. Sie ändert
+eine Regel für den Rest der Partie und wird nicht zurückgenommen."* Weitere Sätze, die ich
+auf dem Schirm gelesen habe:
+
+* „Der Erbzins endet. **Für immer.** Das Haus gehört von heute an dem Haus."
+* „Der Wasserzins an die Stadt endet. Für immer. Das Haus schöpft aus eigenem Grund."
+* „**Unwiderruflich** — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht
+  mehr zu haben."
+* „1 fertig · 0 im Bau · **0 durch eine Wahl für immer ausgeschlossen**"
+* „Dafür neu und für immer: Kost und Pflege des Pfründners."
+
+Gezählt, wie oft ich eine getroffen habe:
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Festlegungen angeboten (max. gleichzeitig) | 3 | 4 | — | — |
+| **von mir getroffen** | **0** | **1** | — | — |
+| Angebote (nicht dauerhaft, aber jahresweise weg) getroffen | 1 | 2 | — | — |
+
+**Null von drei in 1350**, weil keine bezahlbar war: die billigste kostete 85 Pf bei einer
+Kasse von 112, und ab dem zweiten Jahr stand die Kasse dauerhaft unter 70. Eine
+unwiderrufliche Festlegung, die man nie bezahlen kann, ist keine Festlegung, sondern eine
+Vitrine.
 
 ## 4 · Der Gegner
 
-*(desgleichen)*
+**Er zieht wirklich, oft, und ohne mich — und er ist auf der Karte zu sehen, ohne dass man
+ein Brett aufschlägt.** Das ist die Latte, an der dieses Spiel am klarsten besteht.
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Züge des Gegners in meiner Sitzung | 140 | 151 | — | — |
+| Wochen, in denen er zog | 125 von 284 | 138 von 310 | — | — |
+
+Auf der Karte stand dabei durchgehend, ohne Klick: *„Vorsprung: 3 Dinge · wirbt 3 Wo.
+kürzer"*, *„Sebastian Feist · streitbar · 5 Häuser · 24 Züge · **2 diese Woche** · Kasse
+1.290 fl · sein Preis 14 fl · baut W30 · pachtet W36 · BÜRGERMEISTER"*, dazu an den
+Wirtshäusern *UMKÄMPFT*, *frei geworden*, *ablösen 42 Pf*. Er kündigt an (*baut W30*) und
+er tut es dann auch.
+
+**Aber:** der Reiter, der eigens dafür gebaut ist — *OHNE DICH GESCHEHEN* — trug beim
+Laden noch die Zahl („OHNE DICH GESCHEHEN **1 Zug**") und in **allen 284 gespielten Wochen
+danach keine mehr**: 284 von 284 Ablesungen zeigten nur den nackten Titel, während der
+Gegner 140 Züge machte. Die Zahl, die sagt, wie viel gerade ohne mich passiert ist, steht
+also genau so lange da, wie noch nichts passiert ist. *(Einschränkung: meine Hand hatte
+das Brett zu Beginn einmal aufgeschlagen; die saubere Gegenprobe ohne jedes Aufklappen
+steht unter §4b.)*
 
 ---
 
