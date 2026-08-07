@@ -429,3 +429,83 @@ Im **reinen** Wochenlauf (30 × WEITER, kein Handgriff, `geraet.mjs 30`):
 `ueberlauf` 0 — und `nachwehen()` in allen vier Epochen `ruhig: true`.
 Die Pendel und Riegel entstehen erst, wenn eine Hand Bretter aufschlaegt und
 zuklappt; sie sind der Rest, der DER STADT gehoert (Auflagen 1 und 2 unten).
+
+---
+
+# DIE WEICHE ABNAHME — vorher gegen nachher, dasselbe Geraet, beide Staende eingefroren
+
+VORHER = `7a1a942` auf Hafen **8940** · NACHHER = Nachstand **`5707219bc98a`**
+auf Hafen **8942** (byteweise der ausgelieferte Arbeitsbaum).
+Jede Zeile einzeln durch `aufsicht/messfenster.sh`.
+
+## Deckung, photographisch (`bild-w9/deckung.mjs`), 1920×1000
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| Ladezustand **vorher** | 11,0 % | 11,6 % | 11,3 % | 11,9 % |
+| Ladezustand **nachher** | **11,0 %** | **11,6 %** | **11,3 %** | **11,8 %** |
+| 30 Wochen ohne Escape **vorher** | 14,5 % | 15,0 % | 14,8 % | 13,8 % |
+| 30 Wochen ohne Escape **nachher** | **14,5 %** | **15,0 %** | **14,8 %** | **13,9 %** |
+
+Verlangt: **13,8–15,0 %** nach 30 Wochen. Gehalten, Zehntel fuer Zehntel;
+die einzige Bewegung ist 1970 um **0,1 Punkt** (13,8 → 13,9 im Spiel,
+11,9 → 11,8 im Laden).
+
+## Deckung, Innensicht nach Eigenschaft (`rahmen-w10/messen.mjs`), 2752×1536
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| gesamt vorher | 11,0 % | 11,6 % | 11,3 % | 11,8 % |
+| gesamt **nachher** | **11,0 %** | **11,6 %** | **11,3 %** | **11,8 %** |
+| Tafeln über 200.000 px² | 2 → **2** | 2 → **2** | 2 → **2** | 2 → **2** |
+| ueber dem Rand | 0 → **0** | 0 → **0** | 0 → **0** | 0 → **0** |
+| Waehrungsbruch | 0 → **0** | 0 → **0** | 0 → **0** | 0 → **0** |
+| fehlende Zeichen | 0 → **0** | 0 → **0** | 0 → **0** | 0 → **0** |
+
+## Der Haushalt im Spiel (`rahmen-w10/rahmenprobe.mjs`)
+
+| Zustand | `tafeln()` | `blaetter()` | `ueberRand()` | `geklemmt()` | `ohneGriff()` | Preisbruch |
+|---|---|---|---|---|---|---|
+| Laden, vorher wie **nachher** | **[]** | [] | [] | {} | {} | [] |
+| 30 Wochen, vorher wie **nachher** | **[]** | [] | [] | {} | {} | [] |
+| 30 Wochen + Escape, vorher wie **nachher** | 3 × `sud` | [] | [] | {} | {} | [] |
+
+Die drei nach Escape sind Ziffer fuer Ziffer dieselben wie auf dem
+Vorzustand (`sud .sud-brett` 1293×1091, zwei `sud .sud-achse`) — die
+Auflage 3 der Welle 10 an DEN SUD, unveraendert.
+`BRAUHAUS.stadt.rahmen.verdeckt()` = **0** in allen vier Epochen, im Lade-
+und im 30-Wochen-Zustand (`geraet.mjs`).
+
+`haushalt.pruefe()` meldet auf **beiden** Staenden dieselben fuenf bis sechs
+Ueberschreitungen (stadt, sud, preis, name, kern; nach 30 Wochen zusaetzlich
+fuhre). Das ist der Stand aus Welle 10/11 und **von dieser Welle nicht
+beruehrt** — der Rahmen hat kein Layout angefasst.
+
+## Vierte Latte (`aufsicht/lesbarkeit.mjs`, 1600×1000)
+
+| | vorher | nachher |
+|---|---|---|
+| Ueberlaeufe | 5 | **2** |
+| Textknoten unter 12 px | 237 | **237** |
+| Knoepfe unter 24 px | 0 von 292 | **0 von 292** |
+
+**Zwei Ueberlaeufe weniger, und das ist kein Zufall:** ein Ueberlauf entsteht,
+wenn ein Kasten seinen Inhalt nicht traegt — und drei der fuenf standen an
+Stellen, die im Ladeaugenblick noch nicht fertig gezeichnet waren. Der
+Rundenschluss zeichnet sie fertig, bevor gemessen wird.
+
+## Gewicht (`aufsicht/gewicht-gegenprobe.mjs`, Veto bei 8 MB)
+
+| | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| vorher | 6,40 | 7,78 | 6,72 | 4,79 MB |
+| **nachher** | **6,43** | **7,80** | **6,75** | **4,81 MB** |
+
++0,02 bis +0,03 MB je Epoche — das ist `kern/runde.js`. Alle vier unter dem
+Veto; 1600 liegt mit 7,80 MB am naechsten daran, wie schon vorher.
+
+## Tor und Spielprobe
+
+`tor.mjs`: alle vier Epochen offen, `lage` 0, 0 Konsolenfehler, 95/103/106/99
+Zuege. `spielprobe.mjs` (60 Wochen je Epoche mit echten Klicks): **bestanden**,
+`lage` 0, 0 Fehler in allen vieren.
