@@ -123,6 +123,7 @@
   var schlange = [];
   var naechste = 0;
   var letzterAbdruck = '';
+  var vorletzterAbdruck = null;   /* erkennt ein Hin und Her zwischen zwei Lagen */
   var aussenZaehler = 0;
   var wache = null;
 
@@ -130,6 +131,7 @@
     runden: 0, aufgaben: 0, paesse: 0, nachrunden: 0,
     ueberlauf: 0,             /* an die echte Uhr zurueckgegeben */
     aussen: 0,                /* Nachziehen ausserhalb einer Runde */
+    aussenPendel: 0,          /* Lage kippt zwischen zwei Zustaenden hin und her */
     aussenRiegel: 0,          /* wie oft der Riegel gegriffen hat */
     maxPaesse: 0, maxNachrunden: 0
   };
@@ -221,7 +223,16 @@
     imSchluss = true;
     zahl.runden++;
     var pass = 0, nach = 0;
-    var vorher = abdruck();
+    /* VERGLICHEN WIRD MIT DER LETZTEN FERTIGEN RUNDE, nicht mit dem Anfang
+       dieses Schlusses. Der Unterschied ist der ganze Preis dieser Datei:
+       jedes Zeichnen baut die Bretter neu, dabei geht `stadt-zugeklappt`
+       verloren und DIE STADT setzt es im Schluss wieder — gegen den Anfang
+       gemessen hat sich also IMMER etwas geaendert, und es lief in fast
+       jeder Runde eine Nachrunde (gemessen: 197 in 205 Runden, also der
+       doppelte Bildaufbau fuer nichts). Gegen die letzte fertige Runde
+       gemessen aendert sich nur dann etwas, wenn wirklich ein anderes Brett
+       zugeklappt liegt als vorher — und nur dann kann ein Knopf luegen. */
+    var vorher = letzterAbdruck;
     var bericht = { paesse: 0, aufgaben: 0, nachrunden: 0, ueberlauf: false };
 
     function weiter() {
@@ -250,7 +261,7 @@
         return;
       }
       /* 3 — fertig. */
-      letzterAbdruck = jetzt;
+      if (jetzt !== letzterAbdruck) { vorletzterAbdruck = letzterAbdruck; letzterAbdruck = jetzt; }
       zahl.paesse += bericht.paesse;
       if (bericht.paesse > zahl.maxPaesse) zahl.maxPaesse = bericht.paesse;
       if (bericht.nachrunden > zahl.maxNachrunden) zahl.maxNachrunden = bericht.nachrunden;
@@ -295,6 +306,12 @@
       if (faengt()) return;                       /* die Runde raeumt selbst auf */
       var jetzt = abdruck();
       if (jetzt === letzterAbdruck) return;
+      /* ZWEI LAGEN, DIE SICH ABWECHSELN, sind kein Fortschritt. Wer neu
+         zeichnet, weil die Lage nach A gekippt ist, und dabei B herstellt,
+         das gleich wieder nach A kippt, zeichnet fuer immer. Kommt genau
+         die vorletzte Lage zurueck, wird nur gezaehlt, nicht gezeichnet. */
+      if (jetzt === vorletzterAbdruck) { zahl.aussenPendel++; return; }
+      vorletzterAbdruck = letzterAbdruck;
       letzterAbdruck = jetzt;
       if (aussenZaehler >= AUSSEN_MAX) { zahl.aussenRiegel++; return; }
       aussenZaehler++; zahl.aussen++;
@@ -326,6 +343,9 @@
       if (zahl.ueberlauf) raus.push({ was: 'ueberlauf', zahl: zahl.ueberlauf,
         sagt: 'Aufgaben sind nach ' + PAESSE + ' Durchgaengen an die echte Uhr zurueckgegangen — '
             + 'die Runde war dort NICHT fertig.' });
+      if (zahl.aussenPendel) raus.push({ was: 'aussen-pendel', zahl: zahl.aussenPendel,
+        sagt: 'Die Klemmenlage kippt zwischen zwei Zustaenden hin und her; der Rahmen zeichnet '
+            + 'dabei nicht mit. Ein Stueck klappt ein fremdes Brett weg, ohne zeichne zu senden.' });
       if (zahl.aussenRiegel) raus.push({ was: 'aussen-riegel', zahl: zahl.aussenRiegel,
         sagt: 'Die Klemmenlage ist ' + AUSSEN_MAX + '-mal hintereinander ausserhalb einer Runde '
             + 'gekippt; der Riegel hat weiteres Nachziehen abgestellt.' });
@@ -345,7 +365,8 @@
     zeile: function () {
       return 'RUNDE  ' + zahl.runden + ' Runden · ' + zahl.aufgaben + ' nachgeholte Aufgaben · '
         + 'max ' + zahl.maxPaesse + ' Durchgaenge · ' + zahl.nachrunden + ' Nachrunden · '
-        + zahl.aussen + ' aussen · ueberlauf ' + zahl.ueberlauf
+        + zahl.aussen + ' aussen (' + zahl.aussenPendel + ' Pendel, ' + zahl.aussenRiegel
+        + ' Riegel) · ueberlauf ' + zahl.ueberlauf
         + (B.runde.pruefe().length ? '  !! ' + B.runde.pruefe().length + ' Beanstandung(en)' : '  — sauber');
     },
     /* nur zum Nachmessen */
