@@ -1,0 +1,4837 @@
+{
+ "hafen": "8946",
+ "epoche": 1,
+ "wochen": 62,
+ "laeufe": [
+  {
+   "marke": "A/d1",
+   "drossel": 1,
+   "epoche": 1,
+   "hafen": "8946",
+   "saat": "1350",
+   "wochen": 62,
+   "fehler": [],
+   "abgebrochen": null,
+   "zielGesetzt": 1,
+   "festGesetzt": 0,
+   "kasseMin": 34,
+   "kasseMax": 315,
+   "schluss": {
+    "jahr": 1352,
+    "woche": 3,
+    "kasse": 115,
+    "lage": 0
+   },
+   "jahre": [
+    {
+     "jahr": 1350,
+     "kasseMichaeli": 79,
+     "leiterZeilen": 1
+    },
+    {
+     "jahr": 1351,
+     "kasseMichaeli": 60,
+     "leiterZeilen": 2
+    },
+    {
+     "jahr": 1352,
+     "kasseMichaeli": 119,
+     "leiterZeilen": 3
+    }
+   ],
+   "proto": [
+    {
+     "wo": "W1:anfang 1350",
+     "griffText": "Michaelitafel 1350 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "zu",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1350
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-sommer 1350",
+     "griffText": "Michaelitafel 1350 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "zu",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1350
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-tafelgriff 1350",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 2,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "zu",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": true,
+      "tafelJahr": 1350
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:anfang 1351",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament",
+     "tafelRect": [
+      28,
+      127,
+      1599,
+      742
+     ],
+     "leiterZeilen": 3,
+     "sommerblatt": true,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "auf",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": false,
+      "tafelJahr": 1351
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-sommer 1351",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament stadt-zugeklappt",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 3,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "auf",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": false,
+      "tafelJahr": 1351
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-tafelgriff 1351",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament stadt-zugeklappt",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 3,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "auf",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": false,
+      "tafelJahr": 1351
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:anfang 1352",
+     "griffText": "Michaelitafel 1352 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": true,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf",
+      "fuhre|blatt.fu-georgi-1352.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1352
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-sommer 1352",
+     "griffText": "Michaelitafel 1352 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "auf",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf",
+      "fuhre|blatt.fu-georgi-1352.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1352
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-tafelgriff 1352",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 4,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "auf",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "auf",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf",
+      "fuhre|blatt.fu-georgi-1352.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": true,
+      "tafelJahr": 1352
+     },
+     "spurBis": null,
+     "bild": null
+    }
+   ],
+   "klickSpur": [
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:nimm:dach",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 2
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 5
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "weiter",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:jahresplan:grut",
+     "ergebnis": "geklickt",
+     "versuche": 2,
+     "reiterKlicks": 18
+    },
+    {
+     "zug": "fuhre:sommer-zu",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "weiter",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:bann:brueckenwirt",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:jahresplan:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:sommer-zu",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:nimm:bottich",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "weiter",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    }
+   ],
+   "rundenbericht": {
+    "bericht": {
+     "runden": 861,
+     "nachgezogen": 519,
+     "pendel": 6,
+     "riegel": 210,
+     "abdruck": "fach-hand-fuhre/fu-brett fu-keller stadt-zugeklappt|fach-hand-sud/sud-brett stadt-zugeklappt|fach-kopf-erbe/erb-leiste stadt-verdeckt|fach-kopf-name/nm-band stadt-zugeklappt"
+    },
+    "pruefe": [
+     {
+      "was": "pendel",
+      "zahl": 6,
+      "sagt": "Die Klemmenlage kippt zwischen zwei Zustaenden hin und her; der Rahmen zeichnet dabei nicht mit. Ein Stueck klappt ein fremdes Brett weg, ohne zeichne zu senden."
+     },
+     {
+      "was": "riegel",
+      "zahl": 210,
+      "sagt": "Die Klemmenlage ist 3-mal hintereinander gekippt, ohne dass zwischendurch etwas anderes gezeichnet wurde; der Riegel hat weiteres Nachziehen abgestellt."
+     }
+    ],
+    "zeile": "RUNDE  861 Runden · 519 mal nachgezogen · 6 Pendel · 210 Riegel  !! 2 Beanstandung(en)"
+   },
+   "reihe": [
+    {
+     "n": 0,
+     "jahr": 1350,
+     "woche": 1,
+     "kasse": 112,
+     "rohstoff": 40,
+     "faesser": 4,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.894736842105263,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 1,
+     "jahr": 1350,
+     "woche": 2,
+     "kasse": 80,
+     "rohstoff": 31,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 4.2105263157894735,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 2,
+     "jahr": 1350,
+     "woche": 3,
+     "kasse": 98,
+     "rohstoff": 28,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.157894736842105,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 3,
+     "jahr": 1350,
+     "woche": 4,
+     "kasse": 116,
+     "rohstoff": 25,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 6.105263157894737,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 4,
+     "jahr": 1350,
+     "woche": 5,
+     "kasse": 100,
+     "rohstoff": 62,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 2.380952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 5,
+     "jahr": 1350,
+     "woche": 6,
+     "kasse": 118,
+     "rohstoff": 59,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.363636363636363,
+     "nennerPreis": 22,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Pfarrschenke St. Michael"
+    },
+    {
+     "n": 6,
+     "jahr": 1350,
+     "woche": 7,
+     "kasse": 136,
+     "rohstoff": 56,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 6.181818181818182,
+     "nennerPreis": 22,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Pfarrschenke St. Michael"
+    },
+    {
+     "n": 7,
+     "jahr": 1350,
+     "woche": 8,
+     "kasse": 154,
+     "rohstoff": 53,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 7,
+     "nennerPreis": 22,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Pfarrschenke St. Michael"
+    },
+    {
+     "n": 8,
+     "jahr": 1350,
+     "woche": 9,
+     "kasse": 180,
+     "rohstoff": 53,
+     "faesser": 8,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 4.285714285714286,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 9,
+     "jahr": 1350,
+     "woche": 10,
+     "kasse": 206,
+     "rohstoff": 53,
+     "faesser": 4,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 4.904761904761905,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 10,
+     "jahr": 1350,
+     "woche": 11,
+     "kasse": 232,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.523809523809524,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 11,
+     "jahr": 1350,
+     "woche": 12,
+     "kasse": 235,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.595238095238095,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 12,
+     "jahr": 1350,
+     "woche": 13,
+     "kasse": 236,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.619047619047619,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 13,
+     "jahr": 1350,
+     "woche": 14,
+     "kasse": 237,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.642857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 14,
+     "jahr": 1350,
+     "woche": 15,
+     "kasse": 238,
+     "rohstoff": 53,
+     "faesser": 0,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.666666666666667,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 15,
+     "jahr": 1350,
+     "woche": 16,
+     "kasse": 237,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.642857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 16,
+     "jahr": 1350,
+     "woche": 17,
+     "kasse": 237,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.642857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 17,
+     "jahr": 1350,
+     "woche": 18,
+     "kasse": 238,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.666666666666667,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 18,
+     "jahr": 1350,
+     "woche": 19,
+     "kasse": 239,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.690476190476191,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 19,
+     "jahr": 1350,
+     "woche": 20,
+     "kasse": 240,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.714285714285714,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 20,
+     "jahr": 1350,
+     "woche": 21,
+     "kasse": 241,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.738095238095238,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 21,
+     "jahr": 1350,
+     "woche": 22,
+     "kasse": 242,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.761904761904762,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 22,
+     "jahr": 1350,
+     "woche": 23,
+     "kasse": 243,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.785714285714286,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 23,
+     "jahr": 1350,
+     "woche": 24,
+     "kasse": 244,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.809523809523809,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 24,
+     "jahr": 1350,
+     "woche": 25,
+     "kasse": 245,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.833333333333333,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 25,
+     "jahr": 1350,
+     "woche": 26,
+     "kasse": 246,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.857142857142857,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 26,
+     "jahr": 1350,
+     "woche": 27,
+     "kasse": 247,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.880952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 27,
+     "jahr": 1350,
+     "woche": 28,
+     "kasse": 247,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.880952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 28,
+     "jahr": 1350,
+     "woche": 29,
+     "kasse": 248,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.904761904761905,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 29,
+     "jahr": 1350,
+     "woche": 30,
+     "kasse": 249,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.928571428571429,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 30,
+     "jahr": 1351,
+     "woche": 1,
+     "kasse": 60,
+     "rohstoff": 53,
+     "faesser": 0,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.4285714285714286,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 31,
+     "jahr": 1351,
+     "woche": 2,
+     "kasse": 34,
+     "rohstoff": 44,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 0.8095238095238095,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 32,
+     "jahr": 1351,
+     "woche": 3,
+     "kasse": 58,
+     "rohstoff": 41,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.380952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 33,
+     "jahr": 1351,
+     "woche": 4,
+     "kasse": 82,
+     "rohstoff": 38,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.9523809523809523,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 34,
+     "jahr": 1351,
+     "woche": 5,
+     "kasse": 106,
+     "rohstoff": 35,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 2.5238095238095237,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 35,
+     "jahr": 1351,
+     "woche": 6,
+     "kasse": 84,
+     "rohstoff": 69,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 2,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 36,
+     "jahr": 1351,
+     "woche": 7,
+     "kasse": 108,
+     "rohstoff": 66,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 2.5714285714285716,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 37,
+     "jahr": 1351,
+     "woche": 8,
+     "kasse": 132,
+     "rohstoff": 63,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 3.142857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 38,
+     "jahr": 1351,
+     "woche": 9,
+     "kasse": 156,
+     "rohstoff": 60,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 3.7142857142857144,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 39,
+     "jahr": 1351,
+     "woche": 10,
+     "kasse": 170,
+     "rohstoff": 54,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 4.0476190476190474,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 40,
+     "jahr": 1351,
+     "woche": 11,
+     "kasse": 194,
+     "rohstoff": 51,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 4.619047619047619,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 41,
+     "jahr": 1351,
+     "woche": 12,
+     "kasse": 218,
+     "rohstoff": 48,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.190476190476191,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 42,
+     "jahr": 1351,
+     "woche": 13,
+     "kasse": 242,
+     "rohstoff": 45,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.761904761904762,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 43,
+     "jahr": 1351,
+     "woche": 14,
+     "kasse": 256,
+     "rohstoff": 39,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.095238095238095,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 44,
+     "jahr": 1351,
+     "woche": 15,
+     "kasse": 244,
+     "rohstoff": 76,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.083333333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 45,
+     "jahr": 1351,
+     "woche": 16,
+     "kasse": 268,
+     "rohstoff": 73,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.583333333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 46,
+     "jahr": 1351,
+     "woche": 17,
+     "kasse": 292,
+     "rohstoff": 70,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 11.68,
+     "nennerPreis": 25,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Schenke am Tor"
+    },
+    {
+     "n": 47,
+     "jahr": 1351,
+     "woche": 18,
+     "kasse": 315,
+     "rohstoff": 67,
+     "faesser": 8,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 12.6,
+     "nennerPreis": 25,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Schenke am Tor"
+    },
+    {
+     "n": 48,
+     "jahr": 1351,
+     "woche": 19,
+     "kasse": 287,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.979166666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 49,
+     "jahr": 1351,
+     "woche": 20,
+     "kasse": 306,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.375,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 50,
+     "jahr": 1351,
+     "woche": 21,
+     "kasse": 307,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.395833333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 51,
+     "jahr": 1351,
+     "woche": 22,
+     "kasse": 308,
+     "rohstoff": 67,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.416666666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 52,
+     "jahr": 1351,
+     "woche": 23,
+     "kasse": 309,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.4375,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 53,
+     "jahr": 1351,
+     "woche": 24,
+     "kasse": 310,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.458333333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 54,
+     "jahr": 1351,
+     "woche": 25,
+     "kasse": 311,
+     "rohstoff": 67,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.479166666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 55,
+     "jahr": 1351,
+     "woche": 26,
+     "kasse": 312,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.5,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 56,
+     "jahr": 1351,
+     "woche": 27,
+     "kasse": 313,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.520833333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 57,
+     "jahr": 1351,
+     "woche": 28,
+     "kasse": 314,
+     "rohstoff": 67,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.541666666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 58,
+     "jahr": 1351,
+     "woche": 29,
+     "kasse": 314,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.541666666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 59,
+     "jahr": 1351,
+     "woche": 30,
+     "kasse": 315,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.5625,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 60,
+     "jahr": 1352,
+     "woche": 1,
+     "kasse": 164,
+     "rohstoff": 67,
+     "faesser": 0,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 3.4166666666666665,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 61,
+     "jahr": 1352,
+     "woche": 2,
+     "kasse": 90,
+     "rohstoff": 58,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.875,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    }
+   ],
+   "spur": []
+  },
+  {
+   "marke": "B/d2",
+   "drossel": 2,
+   "epoche": 1,
+   "hafen": "8946",
+   "saat": "1350",
+   "wochen": 62,
+   "fehler": [],
+   "abgebrochen": null,
+   "zielGesetzt": 1,
+   "festGesetzt": 0,
+   "kasseMin": 34,
+   "kasseMax": 315,
+   "schluss": {
+    "jahr": 1352,
+    "woche": 3,
+    "kasse": 115,
+    "lage": 0
+   },
+   "jahre": [
+    {
+     "jahr": 1350,
+     "kasseMichaeli": 79,
+     "leiterZeilen": 1
+    },
+    {
+     "jahr": 1351,
+     "kasseMichaeli": 60,
+     "leiterZeilen": 2
+    },
+    {
+     "jahr": 1352,
+     "kasseMichaeli": 119,
+     "leiterZeilen": 3
+    }
+   ],
+   "proto": [
+    {
+     "wo": "W1:anfang 1350",
+     "griffText": "Michaelitafel 1350 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "zu",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1350
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-sommer 1350",
+     "griffText": "Michaelitafel 1350 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "zu",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1350
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-tafelgriff 1350",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 2,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "zu",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": true,
+      "tafelJahr": 1350
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:anfang 1351",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament",
+     "tafelRect": [
+      28,
+      127,
+      1599,
+      742
+     ],
+     "leiterZeilen": 3,
+     "sommerblatt": true,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "auf",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": false,
+      "tafelJahr": 1351
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-sommer 1351",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament stadt-zugeklappt",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 3,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "auf",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": false,
+      "tafelJahr": 1351
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-tafelgriff 1351",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament stadt-zugeklappt",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 3,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "auf",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": false,
+      "tafelJahr": 1351
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:anfang 1352",
+     "griffText": "Michaelitafel 1352 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": true,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "zu",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf",
+      "fuhre|blatt.fu-georgi-1352.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1352
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-sommer 1352",
+     "griffText": "Michaelitafel 1352 · 5 Angebote",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": false,
+     "tafelKlassen": null,
+     "tafelRect": null,
+     "leiterZeilen": 0,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "auf",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "zu",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf",
+      "fuhre|blatt.fu-georgi-1352.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": true,
+      "erzwungen": false,
+      "tafelJahr": 1352
+     },
+     "spurBis": null,
+     "bild": null
+    },
+    {
+     "wo": "W1:nach-tafelgriff 1352",
+     "griffText": "Michaelitafel schließen",
+     "griffRect": [
+      1648,
+      35,
+      246,
+      24
+     ],
+     "griffAus": false,
+     "obenAmGriff": "wort",
+     "tafelDa": true,
+     "tafelKlassen": "pr-tafel pr-stil-pergament",
+     "tafelRect": [
+      33,
+      130,
+      1589,
+      737
+     ],
+     "leiterZeilen": 4,
+     "sommerblatt": false,
+     "stadtLage": {
+      "gegner|amort.gg-band": "zu",
+      "fuhre|fu-brett.fu-haeuser": "zu",
+      "fuhre|fu-brett.fu-schiefer.fu-tafel": "zu",
+      "fuhre|fu-brett.fu-keller": "zu",
+      "fuhre|fu-brett.fu-wagen": "auf",
+      "sud|sud-brett": "auf",
+      "name|nm-band": "zu",
+      "preis|pr-stil-pergament.pr-tafel": "auf",
+      "fuhre|blatt.fu-georgi-1351.fu-sommerblatt": "auf",
+      "fuhre|blatt.fu-georgi-1352.fu-sommerblatt": "auf"
+     },
+     "prZ": {
+      "offen": true,
+      "weggeklappt": false,
+      "erzwungen": true,
+      "tafelJahr": 1352
+     },
+     "spurBis": null,
+     "bild": null
+    }
+   ],
+   "klickSpur": [
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:nimm:dach",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 2
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 5
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "weiter",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:jahresplan:grut",
+     "ergebnis": "geklickt",
+     "versuche": 2,
+     "reiterKlicks": 18
+    },
+    {
+     "zug": "fuhre:sommer-zu",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "weiter",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:kauf:rohstoff",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:bann:brueckenwirt",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:jahresplan:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:sommer-zu",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:nimm:bottich",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "preis:tafel",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:ziel:bar",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 3
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-auf:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "weiter",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:tafel-ab:grut",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:wie-vorige",
+     "ergebnis": "aus",
+     "versuche": 1
+    },
+    {
+     "zug": "fuhre:fuellen",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    },
+    {
+     "zug": "fuhre:abschicken",
+     "ergebnis": "geklickt",
+     "versuche": 1,
+     "reiterKlicks": 0
+    }
+   ],
+   "rundenbericht": {
+    "bericht": {
+     "runden": 861,
+     "nachgezogen": 519,
+     "pendel": 9,
+     "riegel": 210,
+     "abdruck": "fach-hand-fuhre/fu-brett fu-keller stadt-zugeklappt|fach-hand-sud/sud-brett stadt-zugeklappt|fach-kopf-erbe/erb-leiste stadt-verdeckt|fach-kopf-name/nm-band stadt-zugeklappt"
+    },
+    "pruefe": [
+     {
+      "was": "pendel",
+      "zahl": 9,
+      "sagt": "Die Klemmenlage kippt zwischen zwei Zustaenden hin und her; der Rahmen zeichnet dabei nicht mit. Ein Stueck klappt ein fremdes Brett weg, ohne zeichne zu senden."
+     },
+     {
+      "was": "riegel",
+      "zahl": 210,
+      "sagt": "Die Klemmenlage ist 3-mal hintereinander gekippt, ohne dass zwischendurch etwas anderes gezeichnet wurde; der Riegel hat weiteres Nachziehen abgestellt."
+     }
+    ],
+    "zeile": "RUNDE  861 Runden · 519 mal nachgezogen · 9 Pendel · 210 Riegel  !! 2 Beanstandung(en)"
+   },
+   "reihe": [
+    {
+     "n": 0,
+     "jahr": 1350,
+     "woche": 1,
+     "kasse": 112,
+     "rohstoff": 40,
+     "faesser": 4,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.894736842105263,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 1,
+     "jahr": 1350,
+     "woche": 2,
+     "kasse": 80,
+     "rohstoff": 31,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 4.2105263157894735,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 2,
+     "jahr": 1350,
+     "woche": 3,
+     "kasse": 98,
+     "rohstoff": 28,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.157894736842105,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 3,
+     "jahr": 1350,
+     "woche": 4,
+     "kasse": 116,
+     "rohstoff": 25,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 6.105263157894737,
+     "nennerPreis": 19,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Klosterschenke Obernberg"
+    },
+    {
+     "n": 4,
+     "jahr": 1350,
+     "woche": 5,
+     "kasse": 100,
+     "rohstoff": 62,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 2.380952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 5,
+     "jahr": 1350,
+     "woche": 6,
+     "kasse": 118,
+     "rohstoff": 59,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.363636363636363,
+     "nennerPreis": 22,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Pfarrschenke St. Michael"
+    },
+    {
+     "n": 6,
+     "jahr": 1350,
+     "woche": 7,
+     "kasse": 136,
+     "rohstoff": 56,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 6.181818181818182,
+     "nennerPreis": 22,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Pfarrschenke St. Michael"
+    },
+    {
+     "n": 7,
+     "jahr": 1350,
+     "woche": 8,
+     "kasse": 154,
+     "rohstoff": 53,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 7,
+     "nennerPreis": 22,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Pfarrschenke St. Michael"
+    },
+    {
+     "n": 8,
+     "jahr": 1350,
+     "woche": 9,
+     "kasse": 180,
+     "rohstoff": 53,
+     "faesser": 8,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 4.285714285714286,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 9,
+     "jahr": 1350,
+     "woche": 10,
+     "kasse": 206,
+     "rohstoff": 53,
+     "faesser": 4,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 4.904761904761905,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 10,
+     "jahr": 1350,
+     "woche": 11,
+     "kasse": 232,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.523809523809524,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 11,
+     "jahr": 1350,
+     "woche": 12,
+     "kasse": 235,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.595238095238095,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 12,
+     "jahr": 1350,
+     "woche": 13,
+     "kasse": 236,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.619047619047619,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 13,
+     "jahr": 1350,
+     "woche": 14,
+     "kasse": 237,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 1,
+     "deckung": 5.642857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 14,
+     "jahr": 1350,
+     "woche": 15,
+     "kasse": 238,
+     "rohstoff": 53,
+     "faesser": 0,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.666666666666667,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 15,
+     "jahr": 1350,
+     "woche": 16,
+     "kasse": 237,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.642857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 16,
+     "jahr": 1350,
+     "woche": 17,
+     "kasse": 237,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.642857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 17,
+     "jahr": 1350,
+     "woche": 18,
+     "kasse": 238,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.666666666666667,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 18,
+     "jahr": 1350,
+     "woche": 19,
+     "kasse": 239,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.690476190476191,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 19,
+     "jahr": 1350,
+     "woche": 20,
+     "kasse": 240,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.714285714285714,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 20,
+     "jahr": 1350,
+     "woche": 21,
+     "kasse": 241,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.738095238095238,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 21,
+     "jahr": 1350,
+     "woche": 22,
+     "kasse": 242,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.761904761904762,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 22,
+     "jahr": 1350,
+     "woche": 23,
+     "kasse": 243,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.785714285714286,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 23,
+     "jahr": 1350,
+     "woche": 24,
+     "kasse": 244,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.809523809523809,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 24,
+     "jahr": 1350,
+     "woche": 25,
+     "kasse": 245,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.833333333333333,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 25,
+     "jahr": 1350,
+     "woche": 26,
+     "kasse": 246,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.857142857142857,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 26,
+     "jahr": 1350,
+     "woche": 27,
+     "kasse": 247,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.880952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 27,
+     "jahr": 1350,
+     "woche": 28,
+     "kasse": 247,
+     "rohstoff": 53,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.880952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 28,
+     "jahr": 1350,
+     "woche": 29,
+     "kasse": 248,
+     "rohstoff": 53,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.904761904761905,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 29,
+     "jahr": 1350,
+     "woche": 30,
+     "kasse": 249,
+     "rohstoff": 53,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.928571428571429,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 30,
+     "jahr": 1351,
+     "woche": 1,
+     "kasse": 60,
+     "rohstoff": 53,
+     "faesser": 0,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.4285714285714286,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 31,
+     "jahr": 1351,
+     "woche": 2,
+     "kasse": 34,
+     "rohstoff": 44,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 0.8095238095238095,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 32,
+     "jahr": 1351,
+     "woche": 3,
+     "kasse": 58,
+     "rohstoff": 41,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.380952380952381,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 33,
+     "jahr": 1351,
+     "woche": 4,
+     "kasse": 82,
+     "rohstoff": 38,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.9523809523809523,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 34,
+     "jahr": 1351,
+     "woche": 5,
+     "kasse": 106,
+     "rohstoff": 35,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 2.5238095238095237,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 35,
+     "jahr": 1351,
+     "woche": 6,
+     "kasse": 84,
+     "rohstoff": 69,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 2,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 36,
+     "jahr": 1351,
+     "woche": 7,
+     "kasse": 108,
+     "rohstoff": 66,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 2.5714285714285716,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 37,
+     "jahr": 1351,
+     "woche": 8,
+     "kasse": 132,
+     "rohstoff": 63,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 3.142857142857143,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 38,
+     "jahr": 1351,
+     "woche": 9,
+     "kasse": 156,
+     "rohstoff": 60,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 3.7142857142857144,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 39,
+     "jahr": 1351,
+     "woche": 10,
+     "kasse": 170,
+     "rohstoff": 54,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 4.0476190476190474,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 40,
+     "jahr": 1351,
+     "woche": 11,
+     "kasse": 194,
+     "rohstoff": 51,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 4.619047619047619,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 41,
+     "jahr": 1351,
+     "woche": 12,
+     "kasse": 218,
+     "rohstoff": 48,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.190476190476191,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 42,
+     "jahr": 1351,
+     "woche": 13,
+     "kasse": 242,
+     "rohstoff": 45,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.761904761904762,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 43,
+     "jahr": 1351,
+     "woche": 14,
+     "kasse": 256,
+     "rohstoff": 39,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.095238095238095,
+     "nennerPreis": 42,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Klosterschenke Obernberg"
+    },
+    {
+     "n": 44,
+     "jahr": 1351,
+     "woche": 15,
+     "kasse": 244,
+     "rohstoff": 76,
+     "faesser": 11,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.083333333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 45,
+     "jahr": 1351,
+     "woche": 16,
+     "kasse": 268,
+     "rohstoff": 73,
+     "faesser": 10,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.583333333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 46,
+     "jahr": 1351,
+     "woche": 17,
+     "kasse": 292,
+     "rohstoff": 70,
+     "faesser": 9,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 11.68,
+     "nennerPreis": 25,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Schenke am Tor"
+    },
+    {
+     "n": 47,
+     "jahr": 1351,
+     "woche": 18,
+     "kasse": 315,
+     "rohstoff": 67,
+     "faesser": 8,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 12.6,
+     "nennerPreis": 25,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Zuvorkommen Schenke am Tor"
+    },
+    {
+     "n": 48,
+     "jahr": 1351,
+     "woche": 19,
+     "kasse": 287,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 5.979166666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 49,
+     "jahr": 1351,
+     "woche": 20,
+     "kasse": 306,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.375,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 50,
+     "jahr": 1351,
+     "woche": 21,
+     "kasse": 307,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.395833333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 51,
+     "jahr": 1351,
+     "woche": 22,
+     "kasse": 308,
+     "rohstoff": 67,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.416666666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 52,
+     "jahr": 1351,
+     "woche": 23,
+     "kasse": 309,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.4375,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 53,
+     "jahr": 1351,
+     "woche": 24,
+     "kasse": 310,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.458333333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 54,
+     "jahr": 1351,
+     "woche": 25,
+     "kasse": 311,
+     "rohstoff": 67,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.479166666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 55,
+     "jahr": 1351,
+     "woche": 26,
+     "kasse": 312,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.5,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 56,
+     "jahr": 1351,
+     "woche": 27,
+     "kasse": 313,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.520833333333333,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 57,
+     "jahr": 1351,
+     "woche": 28,
+     "kasse": 314,
+     "rohstoff": 67,
+     "faesser": 1,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.541666666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 58,
+     "jahr": 1351,
+     "woche": 29,
+     "kasse": 314,
+     "rohstoff": 67,
+     "faesser": 3,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.541666666666667,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 59,
+     "jahr": 1351,
+     "woche": 30,
+     "kasse": 315,
+     "rohstoff": 67,
+     "faesser": 2,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 6.5625,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 60,
+     "jahr": 1352,
+     "woche": 1,
+     "kasse": 164,
+     "rohstoff": 67,
+     "faesser": 0,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 3.4166666666666665,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    },
+    {
+     "n": 61,
+     "jahr": 1352,
+     "woche": 2,
+     "kasse": 90,
+     "rohstoff": 58,
+     "faesser": 12,
+     "plaetze": 12,
+     "amtszeit": 2,
+     "deckung": 1.875,
+     "nennerPreis": 48,
+     "nennerArt": "umkaempft",
+     "nennerZug": null,
+     "nennerWas": "Ablösung Pfarrschenke St. Michael"
+    }
+   ],
+   "spur": []
+  }
+ ]
+}
