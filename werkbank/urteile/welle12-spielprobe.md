@@ -47,6 +47,14 @@ Fenster **1600×900** — ein gewöhnlicher Notebook-Schirm, nicht die Entwurfsl
 Gerät: `werkbank/schuss/spiel-w12/hand2.mjs`, Protokolle als JSONL unter
 `werkbank/schuss/spiel-w12/protokoll/`, Bildschirmfotos unter `…/schuesse/`.
 
+**Eine Panne, die ich selbst verursacht habe und die hier steht, damit niemand die Zahlen
+falsch liest:** Bei einem Syntaxtest habe ich die Spielhand versehentlich importiert und
+damit ausgeführt. Sie hat für rund vier Minuten einen **zweiten Browser neben dem
+Messfenster** gestartet und dabei das Protokoll der ersten 1350-Sitzung überschrieben. Die
+erste 1350-Sitzung ist damit **verworfen**; 1350 wurde vollständig neu gespielt. Die
+Beobachtungen aus der verworfenen Sitzung, die nicht an Zahlen hängen (verhungertes Haus,
+tote Reiter unter der Michaelitafel), führe ich als *Beobachtung*, nicht als *Messwert*.
+
 *(Die Zählungen und die vier Menschenfragen folgen, sobald die Sitzungen gelaufen sind.)*
 
 ---
