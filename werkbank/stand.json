@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-07T15:31:56+00:00",
+ "stand": "2026-08-07T16:59:26+00:00",
  "phase": "Welle 12, die Abnahme der fünften Fassung läuft und sieht gut aus: 1350 fünfmal hintereinander dieselbe Prüfsumme, 1884 dreimal dieselbe. Es fehlen der sechste Lauf in 1350 sowie 1600 und 1970. Die fünfte Fassung ist die, die eine feine Unterscheidung trifft: der Rundenschluss zieht Wanduhrfristen vor, lässt aber jede Anforderung eines fertigen Bildaufbaus in Ruhe. Der Builder hat das selbst so begründet — ein Rahmen darf einem Stück sagen, wann etwas zu tun ist, nicht wie seine Messung zustande kommt; eine Anforderung des fertigen Bildaufbaus ist selbst eine Messstelle. Frühere Fassungen hatten beides angefasst und dabei 1600 und 1884 zerbrochen. Gefangen werden dadurch im ganzen Spiel zwei Stellen statt neun. Nebenher hat er ein schnelles Tor gebaut, das in vierzig Sekunden statt sieben Minuten sagt, welche der beiden Partien herauskommt — die Abnahme selbst läuft trotzdem über die vollen vierhundert Wochen, weil er selbst gemessen hat, dass verkürzte oder gedrosselte Läufe eine andere Gegend erkunden als das natürliche Zittern der Maschine.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -26,11 +26,12 @@
   "Runde 1 der Welle 2b": "4 von 4 mit Auflage",
   "Kritiker einig": "3 von 4: Nenner unehrlich",
   "unerreichbar": "0",
-  "Kennzahl Stand": "Welle 12, Stand 813f776, vom Builder gemessen — Gegenmessung der Aufsicht steht aus",
+  "Kennzahl Stand": "Welle 12, Stand 3d9f5c2 — von der Aufsicht am eigenen Hafen ziffernweise nachgemessen",
   "Deckung im Ladezustand": "11,0-11,8 % (Zielblatt 3,1 %, Auflage unter 8 %)",
   "Deckung nach 30 Wochen": "13,9-15,0 % ohne Escape, 41,6-44,3 % nach einem Escape",
   "Latte 4": "257 Textknoten unter 12 px, 9 abgeschnittene Kaesten, 0 von 292 Knoepfen",
-  "Spielstand": "es gibt keinen: kein Speichern, kein Laden, kein Fortsetzen"
+  "Spielstand": "es gibt keinen: kein Speichern, kein Laden, kein Fortsetzen",
+  "Wiederholbarkeit": "1350 dreifach eine Pruefsumme, beim Builder sechsfach — die Bistabilitaet ist weg"
  },
  "stuecke": [
   {

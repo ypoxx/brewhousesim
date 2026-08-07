@@ -46,6 +46,38 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## WELLE 12 IST DURCH — die Wiederholbarkeit ist wieder da
+
+*7. August, von der Aufsicht an einem **eigenen** eingefrorenen Stand (`3d9f5c2`,
+Hafen 8911) nachgemessen — nicht am Hafen des Builders. `spiel/` ist gegen
+seinen Stand `813f776` byteweise gleich, also mussten dieselben Zahlen
+herauskommen; sie kamen heraus.*
+
+| | ρ 12 / 13 / 14 J | Jahre < 1× | Kasse | Läufe / Prüfsummen |
+|---|---|---|---|---|
+| 1350 | −0,259 / −0,236 / −0,389 | 0/14 | 34 – 524 | **3 / 1** |
+| 1600 | +0,406 / +0,489 / **+0,538** | 1/14 | 302 – 2 851 | 1 |
+| 1884 | +0,161 / +0,330 / +0,169 | 0/14 | 2 907 – 25 557 | 1 |
+| 1970 | −0,112 / −0,236 / −0,304 | 1/14 | 320 – 95 857 | 1 |
+
+**Beide Bedingungen halten:** |ρ| < 0,700 in allen vier Epochen über alle drei
+Schnitte, und **0/1/0/1 von 14** Braujahren unter 1×. Dazu die Abnahme des
+Builders: **fünfzehn Läufe, vier Epochen, je eine einzige Prüfsumme, null von
+fünfzehn über 0,700** — jede Zahl davon von der Aufsicht ziffernweise
+reproduziert.
+
+**Die Bistabilität, an der Welle 11 hängenblieb, ist weg.** Was sie verursacht
+hat, steht oben: ein Stück änderte ein fremdes Brett ohne `zeichne`, das
+betroffene Stück pollte nach 420 ms, und dazwischen log der Knopf.
+
+> **Eine Zahl, die daneben gehört:** 1600 ist von **−0,116 auf +0,538**
+> gewandert und damit die knappste Epoche geworden, wo sie vorher die
+> entspannteste war. Sie hält, aber der Abstand zur Latte ist von 0,584 auf
+> **0,162** geschrumpft. Wer als nächstes an 1600 arbeitet, arbeitet an einer
+> Epoche ohne Reserve.
+
+---
+
 ## WELLE 12 — DAS RENNEN IST ABGESTELLT, DIE ABNAHME LÄUFT
 
 *7. August. Fünf Fassungen, die fünfte trägt.*
