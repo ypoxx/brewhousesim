@@ -245,9 +245,22 @@ while (Date.now() < ENDE) {
     await greif('fuhre:sommer-zu', { grund: 'Sommerblatt zu', warte: 300, suchen: false });
   }
 
-  /* Michaeli */
+  /* Michaeli — und wenn die Tafel NICHT von selbst kommt: suchen. */
   s = await schirm();
-  if (s.zuege.some(z => z.hit && !z.aus && (/^preis:(nimm|festlege):/.test(z.zug) || z.zug === 'preis:tafel-zu'))) {
+  const tafelDa = () => s.zuege.some(z => z.hit && !z.aus && (/^preis:(nimm|festlege):/.test(z.zug) || z.zug === 'preis:tafel-zu'));
+  if (s.woche <= 2 && !tafelDa()) {
+    const knopf = s.zuege.find(z => z.zug === 'preis:tafel');
+    schreib({ was: 'michaeli-fehlt', jahr: s.jahr, woche: s.woche,
+              knopfText: knopf ? knopf.text : null, knopfGreifbar: knopf ? knopf.hit : null });
+    const reiterM = s.zuege.find(z => /^stadt:reiter:preis/.test(z.zug) && z.hit && !z.aus);
+    if (reiterM) { await greif(reiterM.zug, { grund: 'Michaelitafel suchen (Reiter)', warte: 300, suchen: false }); s = await schirm(); }
+    if (!tafelDa() && knopf && knopf.hit) {
+      await greif('preis:tafel', { grund: 'Michaelitafel suchen (Knopf oben rechts)', warte: 320, suchen: false });
+      s = await schirm();
+    }
+    schreib({ was: 'michaeli-gesucht', jahr: s.jahr, gefunden: tafelDa() });
+  }
+  if (tafelDa()) {
     const nimm = s.zuege.filter(z => z.hit && !z.aus && /^preis:nimm:/.test(z.zug) && z.preis);
     const fest = s.zuege.filter(z => z.hit && !z.aus && /^preis:festlege:/.test(z.zug) && z.preis);
     const t = await schirmtext();

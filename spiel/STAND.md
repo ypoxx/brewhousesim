@@ -1,5 +1,26 @@
 # STAND — nach Welle 2b
 
+> ## ⚠ DIESE DATEI IST EIN ALTER SCHNAPPSCHUSS, KEIN STAND
+>
+> Geschrieben am **2. August 2026** nach Welle 2b. Seither sind **zehn weitere
+> Wellen** gelaufen. Fast jede Zahl unten ist überholt — manche um eine
+> Größenordnung, manche im Vorzeichen.
+>
+> **Der laufende Stand steht in [`../werkbank/LAUFENDER-AUFTRAG.md`](../werkbank/LAUFENDER-AUFTRAG.md)**,
+> die Latten in [`../gauntlet/MESSLATTE.md`](../gauntlet/MESSLATTE.md), die
+> Urteile der blinden Kritiker in `../werkbank/urteile/`.
+>
+> **Warum sie trotzdem stehenbleibt:** sie hält fest, wie am 2. August gemessen
+> wurde und was damals herauskam. Wer wissen will, wie weit der Lauf gekommen
+> ist, braucht beides — den heutigen Stand *und* den, gegen den er gewachsen
+> ist. Gelöscht wird hier nichts, damit niemand später eine Zahl für neu hält,
+> die alt ist, oder eine für erfunden, die gemessen war.
+>
+> *Vermerkt von der Aufsicht am 7. August 2026, nachdem eine Aktenprüfung
+> gefunden hatte, dass diese Datei zehn Wellen alt im Spielverzeichnis liegt
+> und sich wie ein Stand liest.*
+
+
 Geschrieben von der Aufsicht am 2. August 2026, nachdem der Workflow
 `wf_94fe188f-ca8` durch war: **zwölf Agenten, vier Stücke, je ein Builder, ein
 blinder Kritiker und eine Nacharbeit. Kein Fehler, kein Abbruch.**

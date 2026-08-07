@@ -25,7 +25,8 @@ gemessen; was fehlt, ist noch nicht gespielt.
 |---|---|
 | Gerät gebaut, Rauchprobe 1350 (3 min, 150 Klicks) | fertig |
 | Wiederkehr-Probe (Neuladen) | fertig |
-| 1350 · 20 Minuten | offen |
+| 1350 · 20 Minuten, erste Hand (verhungert) | fertig |
+| 1350 · 20 Minuten, zweite Hand | offen |
 | 1600 · 20 Minuten | offen |
 | 1884 · 20 Minuten | offen |
 | 1970 · 20 Minuten | offen |
