@@ -1,1 +1,13 @@
 MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 228s
+MESSFENSTER offen — load 1.31 1.32 1.31
+E1 1350/W1  RUHIG  lage=0 fehler=0 zuege=95 verdeckt=0 tafeln=0 ueberRand=0 haushalt=5
+     —
+file:///home/user/brewhousesim/werkbank/schuss/rahmen-w12/geraet.mjs:108
+    d.rundePruefe.forEach(r => console.log(`     runde.pruefe: ${r.was} (${r.zahl}) — ${r.sagt}`));
+                  ^
+
+TypeError: d.rundePruefe.forEach is not a function
+    at file:///home/user/brewhousesim/werkbank/schuss/rahmen-w12/geraet.mjs:108:19
+
+Node.js v22.22.2
