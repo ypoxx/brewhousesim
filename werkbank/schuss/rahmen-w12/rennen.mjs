@@ -120,14 +120,22 @@ const SPURSKRIPT = () => {
   oST.call(window, anhaengen, 50);
 };
 
-/* --------------------------------------------------------------- ein Lauf */
-async function einLauf(marke) {
+/* --------------------------------------------------------------- ein Lauf
+   DROSSEL: Emulation.setCPUThrottlingRate. Sie erzeugt die Phasenlage, die
+   sonst nur die Last der Maschine erzeugt — INNERHALB des einen Browsers,
+   also ohne einen zweiten Prozess neben der Messung. Damit ist das Rennen
+   auf einer ruhigen Maschine reproduzierbar. */
+async function einLauf(marke, drossel) {
   const browser = await chromium.launch();
   const seite = await browser.newPage({ viewport: { width: 1920, height: 1000 }, deviceScaleFactor: 1 });
   const fehler = [];
   seite.on('pageerror', e => fehler.push('pageerror: ' + String(e).slice(0, 200)));
   seite.on('console', m => { if (m.type() === 'error') fehler.push('console: ' + m.text().slice(0, 200)); });
   if (SPUR) await seite.addInitScript(SPURSKRIPT);
+  if (drossel && drossel > 1) {
+    const cdp = await seite.context().newCDPSession(seite);
+    await cdp.send('Emulation.setCPUThrottlingRate', { rate: drossel });
+  }
 
   await seite.goto(`http://127.0.0.1:${HAFEN}/spiel/?epoche=${ep}&saat=${SAAT}`, { waitUntil: 'networkidle' });
   await seite.waitForTimeout(900);
@@ -371,20 +379,26 @@ async function einLauf(marke) {
   const kassen = reihe.map(r => r.kasse);
   await browser.close();
 
-  return { marke, epoche: ep, hafen: HAFEN, saat: SAAT, wochen: reihe.length, fehler, abgebrochen,
+  return { marke, drossel, epoche: ep, hafen: HAFEN, saat: SAAT, wochen: reihe.length, fehler, abgebrochen,
     zielGesetzt, festGesetzt, kasseMin: Math.min(...kassen), kasseMax: Math.max(...kassen),
     schluss: { jahr: schluss.jahr, woche: schluss.woche, kasse: schluss.kasse, lage: schluss.lage },
     jahre: jahre.map(j => ({ jahr: j.jahr, kasseMichaeli: j.kasseMichaeli, leiterZeilen: j.leiter.length })),
     proto, klickSpur, reihe, spur };
 }
 
+/* DROSSEL=1,2,3,4 faehrt je einen Lauf mit dieser Drosselung, nacheinander. */
+const DROSSELN = String(process.env.DROSSEL || '1').split(',').map(Number);
 const ergebnisse = [];
-for (let k = 0; k < LAEUFE; k++) {
-  const m = String.fromCharCode(65 + k);
-  const e = await einLauf(m);
-  ergebnisse.push(e);
-  console.log(`  Lauf ${m}: ${e.wochen} Wochen, Kasse ${e.kasseMin}–${e.kasseMax}, `
-    + `LEITER-Zeilen ${e.jahre.map(j => j.leiterZeilen).join('/')}, Fehler ${e.fehler.length}`);
-  fs.writeFileSync(ZIEL, JSON.stringify({ hafen: HAFEN, epoche: ep, wochen: WOCHEN, laeufe: ergebnisse }, null, 1));
+let k = 0;
+for (const dr of DROSSELN) {
+  for (let w = 0; w < LAEUFE; w++) {
+    const m = String.fromCharCode(65 + (k++)) + '/d' + dr;
+    const e = await einLauf(m, dr);
+    ergebnisse.push(e);
+    console.log(`  Lauf ${m}: ${e.wochen} Wochen, Kasse ${e.kasseMin}–${e.kasseMax}, `
+      + `LEITER ${e.jahre.map(j => j.leiterZeilen).join('/')}, `
+      + `KasseMich ${e.jahre.map(j => j.kasseMichaeli).join('/')}, Fehler ${e.fehler.length}`);
+    fs.writeFileSync(ZIEL, JSON.stringify({ hafen: HAFEN, epoche: ep, wochen: WOCHEN, laeufe: ergebnisse }, null, 1));
+  }
 }
 console.log('geschrieben:', ZIEL);
