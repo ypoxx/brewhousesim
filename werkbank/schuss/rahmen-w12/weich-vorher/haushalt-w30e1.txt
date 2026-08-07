@@ -1,0 +1,90 @@
+MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 27s
+MESSFENSTER offen — load 1.25 1.25 1.27
+=== E1 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1224x60 @764,46 = 73463 px (10.4 % des obersten 1/6)
+  hauszeile  772x28 @990,160 = 21236 px (3.0 % des obersten 1/6)
+  deckung    895x24 @1664,1371 = 21267 px (3.0 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 43.1 %   oberstes 1/6 42.8 %   (94 Kaesten)
+  sud       1474816 /  34000 px  UEBER +1440816   oben  88128 /   6000  UEBER +82128
+  stadt      105376 /  40000 px  UEBER +65376   oben  53888 /  26000  UEBER +27888
+  kern        98608 / 120000 px           oben  78848 /  80000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        30400 /  20000 px  UEBER +10400   oben      0 /  12000
+  erbe        16800 /  28000 px           oben      0 /   6000
+  gegner      11968 /  28000 px           oben      0 /   8000
+  fuhre        2496 /  34000 px           oben      0 /  10000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["sud: 1474816/34000 px  oben 88128/6000 px","stadt: 105376/40000 px  oben 53888/26000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: [{"stueck":"sud","klasse":"sud-brett","blatt":false,"mass":"1293×1091 @33,190","flaeche":1410554},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×503 @54,365","flaeche":340112},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×486 @54,876","flaeche":329115}]
+  Spur: []
+  Preisbruch: []
+=== E2 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1283x60 @735,46 = 76957 px (10.9 % des obersten 1/6)
+  hauszeile  797x28 @978,160 = 21906 px (3.1 % des obersten 1/6)
+  deckung    836x24 @1724,1371 = 19849 px (2.8 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 44.3 %   oberstes 1/6 43.4 %   (99 Kaesten)
+  sud       1540832 /  34000 px  UEBER +1506832   oben  88128 /   6000  UEBER +82128
+  stadt      113232 /  40000 px  UEBER +73232   oben  54144 /  26000  UEBER +28144
+  kern       102192 / 120000 px           oben  82432 /  80000  UEBER +2432
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        29184 /  20000 px  UEBER +9184   oben      0 /  12000
+  erbe        17376 /  28000 px           oben      0 /   6000
+  gegner      10032 /  28000 px           oben      0 /   8000
+  fuhre        3264 /  34000 px           oben      0 /  10000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["sud: 1540832/34000 px  oben 88128/6000 px","stadt: 113232/40000 px  oben 54144/26000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 29184/20000 px","kern: 102192/120000 px  oben 82432/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: [{"stueck":"sud","klasse":"sud-brett","blatt":false,"mass":"1293×1091 @33,190","flaeche":1410554},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×674 @54,365","flaeche":455929},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×399 @54,1047","flaeche":269975}]
+  Spur: []
+  Preisbruch: []
+=== E3 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1330x60 @711,46 = 79805 px (11.3 % des obersten 1/6)
+  hauszeile  846x28 @953,160 = 23267 px (3.3 % des obersten 1/6)
+  deckung    800x24 @1759,1371 = 18998 px (2.7 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 41.6 %   oberstes 1/6 43.7 %   (89 Kaesten)
+  sud       1410048 /  34000 px  UEBER +1376048   oben  88128 /   6000  UEBER +82128
+  stadt      115392 /  40000 px  UEBER +75392   oben  53376 /  26000  UEBER +27376
+  kern       105264 / 120000 px           oben  85504 /  80000  UEBER +5504
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        35264 /  20000 px  UEBER +15264   oben      0 /  12000
+  erbe        12576 /  28000 px           oben      0 /   6000
+  gegner       9504 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["sud: 1410048/34000 px  oben 88128/6000 px","stadt: 115392/40000 px  oben 53376/26000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 105264/120000 px  oben 85504/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: [{"stueck":"sud","klasse":"sud-brett","blatt":false,"mass":"1293×1082 @33,190","flaeche":1399035},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×492 @54,365","flaeche":333175},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×367 @54,866","flaeche":248552}]
+  Spur: []
+  Preisbruch: []
+=== E4 w30 esc1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1327x60 @712,46 = 79637 px (11.3 % des obersten 1/6)
+  hauszeile  755x28 @999,160 = 20755 px (2.9 % des obersten 1/6)
+  deckung    943x24 @1616,1371 = 22401 px (3.2 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 42.1 %   oberstes 1/6 43.6 %   (103 Kaesten)
+  sud       1423136 /  34000 px  UEBER +1389136   oben  88128 /   6000  UEBER +82128
+  stadt      105504 /  40000 px  UEBER +65504   oben  53120 /  26000  UEBER +27120
+  kern       104752 / 120000 px           oben  84992 /  80000  UEBER +4992
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        35264 /  20000 px  UEBER +15264   oben      0 /  12000
+  erbe        23712 /  28000 px           oben      0 /   6000
+  gegner      19072 /  28000 px           oben      0 /   8000
+  fuhre        2704 /  34000 px           oben      0 /  10000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["sud: 1423136/34000 px  oben 88128/6000 px","stadt: 105504/40000 px  oben 53120/26000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: [{"stueck":"sud","klasse":"sud-brett","blatt":false,"mass":"1293×1091 @33,190","flaeche":1410554},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×476 @54,811","flaeche":321808},{"stueck":"sud","klasse":"sud-achse","blatt":false,"mass":"677×438 @54,365","flaeche":296505}]
+  Spur: []
+  Preisbruch: []

@@ -67,3 +67,25 @@ FLAECHENHAUSHALT  gesamt 14.8 %   oberstes 1/6 32.3 %   (61 Kaesten)
   TAFELN>200k: []
   Spur: []
   Preisbruch: []
+=== E4 w30  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1327x60 @712,46 = 79637 px (11.3 % des obersten 1/6)
+  hauszeile  755x28 @999,160 = 20755 px (2.9 % des obersten 1/6)
+  deckung    943x24 @1616,1371 = 22401 px (3.2 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 13.8 %   oberstes 1/6 32.2 %   (66 Kaesten)
+  fuhre      178384 /  34000 px  UEBER +144384   oben      0 /  10000
+  stadt      113696 /  40000 px  UEBER +73696   oben  61312 /  26000  UEBER +35312
+  kern       104752 / 120000 px           oben  84992 /  80000  UEBER +4992
+  sud         87840 /  34000 px  UEBER +53840   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        35264 /  20000 px  UEBER +15264   oben      0 /  12000
+  erbe        23712 /  28000 px           oben      0 /   6000
+  gegner      19072 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["fuhre: 178384/34000 px","stadt: 113696/40000 px  oben 61312/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 87840/34000 px","name: 35264/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []
