@@ -900,3 +900,18 @@ nicht. Damit steht die Trennung als Messung da, nicht als Behauptung.
 | e1-C | 13:22:11 | `3e87b7a47385` | 34–524 |
 | e1-D | 13:27:37 | `3e87b7a47385` | 34–524 |
 | e1-E | 13:33:10 | `3e87b7a47385` | 34–524 |
+| e1-F | 13:38:41 | `3e87b7a47385` | 34–524 |
+
+**Sechs Läufe, EINE Prüfsumme.** Das ist die Bedingung, an der F2 gescheitert
+ist (2 Läufe, 2 Prüfsummen) und die F1 als einzige erfüllt hatte. F5 erfüllt
+sie, ohne 1884 zu verderben.
+
+Die Kassenspanne ist **34–524** und damit weder die alte Partie A (8–514) noch
+die alte Partie B (30–558). Das schnelle Tor sagt für die ersten 62 Wochen
+`kasseMichaeli` 1352 = 119, also den Ast der Partie B — über die vollen 400
+Wochen läuft die Partie danach anders weiter als die alte B, weil der
+Fristenschluss auch die späteren Augenblicke festlegt, an denen die alte B
+noch gezittert hat. Der Auftrag lässt das ausdrücklich zu: verlangt ist EINE
+Partie, nicht die alte.
+
+## 1600
