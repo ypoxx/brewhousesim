@@ -286,8 +286,33 @@ das Spiel ist auf genau eine ununterbrochene Sitzung gebaut.
 
 ## 7 · Gibt es ein Ende?
 
-**Es gibt eines — und ich habe es in zwanzig Minuten Spiel nicht zu Gesicht bekommen,
-obwohl es fünfzehn Wochen lang offenstand.**
+**Ja — und es ist das beste Blatt des ganzen Spiels.** In einer eigenen Probe
+(`gutesende.mjs`, 1350, echte Maus, 102 Wochen, 213 Klicks, sieben Minuten) endete die
+Partie von selbst:
+
+> ### Der Rat entzieht das Braurecht · 1353
+> *„Der Rat entzieht dem Haus zum Anker das Braurecht: seit 12 Wochen hat keine Schenke
+> der Stadt ein Fass genommen. Ein Braurecht wird für die Stadt verliehen; wer die Stadt
+> nicht mehr versorgt, hat es verwirkt."*
+>
+> **„Nicht die leere Kasse hat das Haus zugemacht. Am letzten Tag lagen 36 Pf in der Lade,
+> 3 Fass von 14 Fass lagen im Keller, 1 Grut in der Kammer. Was fehlte, war die Adresse,
+> die das Fass abnimmt."**
+
+Darunter, ohne dass man etwas anklicken muss: *Gegründet 1350 · Gespielt 1350 bis 1353 ·
+4 Braujahre · Fuhren hinausgeschickt 0 · Ausgeliefert 0 Fass · Adressen zurückgeholt 0*,
+die Liste der drei Generationen, die es geführt haben, und **WIE DAS AUFTRAGSBUCH LEER
+WURDE** mit neun datierten Zeilen („1352 Fährhaus am Fluss — niemand hat sie genommen").
+Dann ein Knopf **„Von vorn anfangen — dieselbe Stadt, andere Würfel"**, und der
+WEITER-Knopf heißt jetzt **ENDE**. Der Satz darunter: *„DER HOF IST GESCHLOSSEN. Von hier
+an bucht kein Knopf mehr — kein Bau, keine Ablösung, kein Versatz. Was offen bleibt, ist
+zum Lesen: die Reiter der Bretter, die Chronik und das Buch."*
+
+Das ist erwachsene Arbeit: eine Niederlage, die ihre Ursache benennt und die häufigste
+Fehldiagnose („du warst pleite") ausdrücklich zurückweist. **Ich hätte danach sofort noch
+einmal angefangen** — siehe §8.
+
+**Das gute Ende dagegen habe ich nie gesehen**, obwohl es fünfzehn Wochen lang offenstand.
 
 Was ich am Bildschirm gefunden habe: ab dem Braujahr **1355** erschien in der Reiterleiste
 oben ein neuer Reiter mit der Aufschrift **„DIE ÜBERGABE VOR DEM RAT"**. Er stand in
@@ -297,7 +322,8 @@ weil ich keinen Anlass hatte: er ist ein braunes Rechteck unter zehn anderen bra
 Rechtecken, deren Aufschriften sich ohnehin jedes Jahr ändern (`MICHAELI 1355`,
 `GEORGI 1355`), und er verschwindet wieder, bevor man das nächste Mal hinsieht.
 
-Ein Ende „von selbst" gibt es in der Praxis nicht:
+Drei Enden sind gebaut; ich habe eines erreicht, eines nur als Reiter gesehen und das
+dritte ist rechnerisch unerreichbar:
 
 * Die Uhr endet bei **2025**. Epoche I läuft von 1350 bis 1516. Ich habe in zwanzig
   Minuten **zehn** Braujahre gespielt (14,2 Wochen je Minute); bis zum Ende der Epoche
@@ -309,11 +335,13 @@ Ein Ende „von selbst" gibt es in der Praxis nicht:
   Strecke. Die härteste Einzelforderung des Auftrags — *die Stadt wächst über 620 Jahre,
   ohne den Ort zu wechseln* — ist als **Bild** erfüllt und als **Spiel** nicht: man sieht
   die vier Zustände nie nacheinander.
-* **Untergehen kann man auch nicht.** Meine erste 1350-Sitzung stand ab dem dritten Jahr
-  bei Kasse 0, Rohstoff 1, Keller 0 von 12, mit offenen Posten in jeder Zeile der
-  Rechnung — und das Spiel lief weiter, Woche um Woche, ohne ein Wort dazu. Ein Ende
-  „Haus verloren" gibt es im Bau; es greift erst bei negativer Kasse und leerem Hof.
-  Eine Kasse, die bei 0 klebt, ist nicht negativ.
+* **Verarmen allein reicht nicht.** Meine 1350-Sitzung stand ab dem dritten Jahr bei
+  Kasse 0, Rohstoff 1, Keller 0 von 12, mit offenen Posten in jeder Zeile der Rechnung —
+  284 Wochen lang, ohne dass irgendetwas endete. Beendet wird nur, wer **nicht mehr
+  liefert** (Braurecht entzogen, gemessen) oder wer **negative** Kasse *und* leeren Hof
+  hat. Eine Kasse, die bei 0 klebt, ist nicht negativ. Das heißt: der Zustand
+  „handlungsunfähig, aber nicht tot" ist der stabilste Zustand des Spiels, und er hat
+  keinen eigenen Text.
 
 ---
 
