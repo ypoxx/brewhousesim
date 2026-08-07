@@ -122,7 +122,7 @@
 
   /* Trenner, die in keinem Spieltext vorkommen. Als Escape geschrieben,
      damit in dieser Datei kein rohes Steuerzeichen steht. */
-  var TRENN = '', SATZ = '';
+  var TRENN = '\u0001', SATZ = '\u0002';
 
   /* Was die messende Hand von einem Zug liest: Name, Sperre, Beschriftung.
      `textContent` erzwingt kein Layout — anders als `innerText`. Nur fuer
