@@ -884,3 +884,11 @@ lautesten verdorben hat (3 Läufe, 3 Prüfsummen). Wenn die Trennung
 |---|---|---|---|
 | e3-A | 12:55:20 | `3f008dc880b9` | 2.907–25.557 |
 | e3-B | 13:00:41 | `3f008dc880b9` | 2.907–25.557 |
+| e3-C | 13:05:52 | `3f008dc880b9` | 2.907–25.557 |
+
+**Drei Läufe, EINE Prüfsumme.** F1 hatte hier drei verschiedene. Der
+Rückschritt, den das Vorziehen von `requestAnimationFrame` gekostet hat, ist
+mit dem Vorziehen fort — und das Vorziehen der Fristen allein kostet ihn
+nicht. Damit steht die Trennung als Messung da, nicht als Behauptung.
+
+## 1350 — die Epoche, an der F2 gescheitert ist. Sechs Läufe verlangt.
