@@ -28,6 +28,10 @@ lauf() {  # $1 name, Rest: Befehl
 }
 
 lauf tor            node werkbank/schuss/aufsicht/tor.mjs
+# spielprobe.mjs zeigt FEST auf 8899 (den Arbeitsbaum) und nimmt kein HAFEN
+# entgegen. Am fremden Messgeraet wird nicht gedreht — also laeuft sie nur
+# fuer den NACHHER-Satz mit, wo der Arbeitsbaum der gemessene Stand ist.
+[ "${OHNE_SPIELPROBE:-0}" = "1" ] || \
 lauf spielprobe     node werkbank/schuss/aufsicht/spielprobe.mjs
 lauf deckung-lade   node werkbank/schuss/bild-w9/deckung.mjs
 lauf deckung-w30    env WOCHEN=30 node werkbank/schuss/bild-w9/deckung.mjs
@@ -36,5 +40,7 @@ lauf gewicht        node werkbank/schuss/aufsicht/gewicht-gegenprobe.mjs
 lauf haushalt-lade  env WOCHEN=0  ESC=0 node werkbank/schuss/rahmen-w10/rahmenprobe.mjs 1,2,3,4
 lauf haushalt-w30   env WOCHEN=30 ESC=0 node werkbank/schuss/rahmen-w10/rahmenprobe.mjs 1,2,3,4
 lauf haushalt-w30e1 env WOCHEN=30 ESC=1 node werkbank/schuss/rahmen-w10/rahmenprobe.mjs 1,2,3,4
-lauf messen-lade    node werkbank/schuss/rahmen-w10/messen.mjs w12-nachher
+# messen.mjs legt seine Rohdaten unter einem NAMEN ab; der Name traegt den
+# Ordner, damit ein Vorher- und ein Nachher-Satz sich nicht ueberschreiben.
+lauf messen-lade    node werkbank/schuss/rahmen-w10/messen.mjs "w12-$(basename "$Z")"
 echo "== WEICHE ABNAHME FERTIG $(date -u +%H:%M:%S) =="

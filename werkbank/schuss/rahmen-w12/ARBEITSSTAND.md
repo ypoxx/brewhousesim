@@ -309,3 +309,75 @@ Bedingung und **keine** Zeichenkette. Jede umhuellte Funktion ruft das Original
 mit denselben Argumenten; jeder aufgefangene Rueckruf wird ausgefuehrt,
 hoechstens frueher. Was nach zwoelf Durchgaengen uebrig ist, geht an die echte
 Uhr zurueck (`ueberlauf` in `bericht()`, gemessen: **0**).
+
+---
+
+# WAS FUER WELLE 13 BENANNT IST — mit Datei, Zeile und Abnahme
+
+Der Rahmen hat das Rennen abgestellt, ohne eine fremde Datei anzufassen. Er
+hat es damit **abgefangen**, nicht **geheilt**: zwei Stellen in zwei Stuecken
+verlassen sich weiter auf eine Wanduhr, und der Rahmen raeumt hinter ihnen auf.
+Solange sie stehen, kostet jede Runde einen Nachlauf, und die Klemmenwache
+zaehlt Pendel und Riegel.
+
+## 1 — DIE STADT: `stuecke/stadt.js` `nachsehen()` (aufgerufen aus `:1554`, `:1573`)
+
+**Sie klappt fremde Bretter weg (`stadt-zugeklappt`, `stadt-verdeckt`) und
+sendet dabei kein `zeichne`.** Niemand erfaehrt, dass sein Knopf jetzt eine
+Lage beschriftet, die es nicht mehr gibt — genau daran ist 1350 zerfallen.
+
+*Abhilfe, eine Zeile:* am Ende von `nachsehen()`, wenn sich `lage[]` fuer
+mindestens ein **fremdes** Brett geaendert hat:
+```js
+B.sende('zeichne', { grund: 'stadt-platzordnung' });
+```
+*Abnahme:* `BRAUHAUS.runde.bericht().aussen`, `.aussenPendel` und
+`.aussenRiegel` stehen nach 30 × WEITER in allen vier Epochen auf **0**, und
+`await BRAUHAUS.runde.nachwehen()` meldet `ruhig: true`. Heute: 0 / 0–4 / 0
+nach 30 Wochen, aber 25–58 / 11–75 / 18–30 im gespielten Lauf ueber 62 Wochen.
+
+## 2 — DIE STADT: `nachsehen()` haengt an drei Wanduhrfristen
+
+`HANDFRIST` 1400 ms, `JAHRESFRIST` 1800 ms, `VERGESSEN`, dazu
+`setInterval(pruefe, 240)` (`stadt.js:1573`). Wer ein Brett danach beurteilt,
+**wie lange etwas her ist**, beurteilt es unter Last anders. Der Rundenschluss
+faengt die Folge ab; die Ursache bleibt.
+
+*Abhilfe:* die Fristen an **Runden** haengen statt an Millisekunden — „seit
+dem Klick sind zwei Bildaufbauten vergangen" statt „seit dem Klick sind
+1400 ms vergangen". Der Rahmen kann den Zaehler stellen
+(`BRAUHAUS.runde.bericht().runden`).
+*Abnahme:* `rahmen-w12/rennen.mjs` mit `DROSSEL=1,2,3,4,6` liefert in allen
+fuenf Laeufen dieselbe Partie — **auch ohne die Klemmenwache des Rahmens**
+(`AUSSEN_MAX = 0` setzen).
+
+## 3 — DER PREIS: `stuecke/preis.js:2737` `seheNachRahmen()`
+
+Eine **420-ms-Frist**, um zu erfahren, was ein anderes Stueck im selben
+Bildaufbau getan hat. Der Kommentar dort nennt den Grund richtig („DIE STADT
+klappt erst einen Wimpernschlag nach dem Zeichnen zu") und zieht den falschen
+Schluss: nicht warten, sondern **fragen**.
+
+*Abhilfe:* `tafelWeggeklappt()` liest ohnehin live; die Frist kann ersatzlos
+entfallen, sobald DIE STADT ihr `zeichne` sendet (Punkt 1). Bis dahin genuegt
+`0` statt `420` — der Rundenschluss fuehrt sie dann im selben Durchgang aus.
+*Abnahme:* der Griff `preis:tafel` sagt in **keinem** Augenblick
+„Michaelitafel schließen", waehrend `.pr-tafel` fehlt oder
+`stadt-zugeklappt` traegt. Messbar mit
+`rahmen-w12/rennen.mjs` (Protokoll `W1:*`, Feld `griffText` gegen
+`tafelKlassen`) und mit `await BRAUHAUS.runde.nachwehen()`.
+
+## 4 — DER SUD: `stuecke/sud.js:2406` `taktGleich()`
+
+Dieselbe Sorte, nur schon halb geheilt: zwei `requestAnimationFrame`, um
+abzuwarten, ob DIE STADT das eigene Brett zuklappt. Der Kommentar sagt es
+wortwoertlich. Zwei Bildaufbauten sind genau die Frist, auf die auch die
+messende Hand wartet — das ist knapp.
+*Abhilfe:* dieselbe wie 3, sobald Punkt 1 steht.
+*Abnahme:* `sud`-Zettel blinkt nicht, und `nachwehen()` bleibt ruhig.
+
+## 5 — ALLE ACHT: kein Blatt ist beim Rahmen angemeldet
+
+Die Auflage 7 der Welle 10 (`BRAUHAUS.blatt.melde(el, fn)`) ist in Welle 11
+**nicht** eingeloest worden — `BRAUHAUS.haushalt.ohneGriff()` und die
+Blattaufsicht arbeiten weiter ohne Anmeldung. Sie steht.
