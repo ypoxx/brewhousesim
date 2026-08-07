@@ -849,3 +849,14 @@ Gefangen werden dadurch im ganzen Spiel **zwei** Stellen statt neun:
 `stuecke/fuhre.js:2541`, an dem F1 1600 und 1884 zerbrochen hat.
 
 `kern/buehne.js` und `spiel/index.html` bleiben, wie sie in F1/F2 waren.
+
+## Das schnelle Tor auf F5 — Stand `813f776`, Hafen 8950, 62 Wochen, ungedrosselt
+
+Jeder Lauf einzeln durch `aufsicht/messfenster.sh`, `linie.mjs 1 62`,
+`?saat=1350`. `kasseMichaeli` 1352: **164 = Partie A · 119 = Partie B.**
+Gerät: `rahmen-w12/tor62.sh`.
+
+| Lauf | kasseMich 1352 | LEITER | Kasse | Partie |
+|---|---|---|---|---|
+| 1 | 119 | 3 | 34–315 | **B** |
+| 2 | 119 | 3 | 34–315 | **B** |
