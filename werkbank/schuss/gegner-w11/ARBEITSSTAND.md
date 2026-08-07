@@ -755,3 +755,43 @@ diese Dateien nie. Genau deshalb fehlten sie nach dem Container-Reset als
 einzige aus einem sonst vollständigen Satz (§7.4): alles, was als `.txt` oder
 `.json` geschrieben wurde, hat überlebt. Bei diesen beiden Läufen **ist** die
 Ausgabe das ganze Ergebnis. `lauf()` schreibt jetzt `.txt`.
+
+### 7.10 Der Satz `nach3` — der Stand, der abgegeben wird
+
+Marke **`7896ee6+gegner-8188005c786e`** (= Vorzustand plus meine fünf Dateien,
+mit Änderung 12). Alles ganz neu gemessen, einzeln durch das Messfenster.
+
+**Die Zahlen bei voller Breite sind Ziffer für Ziffer die aus `nach2`** — die
+Vorhersage aus §7.8 ist eingetroffen und nicht bloß behauptet worden:
+
+| alle drei Zustände | 1350 | 1600 | 1884 | 1970 |
+|---|---|---|---|---|
+| GEGNER im Haushalt | 11.968 | 10.032 | 9.504 | 19.072 px |
+| oberstes ⅙ | 0/8.000 | 0/8.000 | 0/8.000 | 0/8.000 |
+| Kästen | 1 | 1 | 1 | 2 |
+| A3 Laden · gebaut · w30 | 0·0·**2** | 0·0·0 | 0·0·0 | 0·0·0 |
+| Sperrzonen gefunden | 4 | 4 | 5 | 6 |
+| A10 (Zahlen) alle Zustände | 0 | 0 | 0 | 0 |
+| `ueberRand()` alle Zustände | [] | [] | [] | [] |
+| `tafeln()` des GEGNERS | [] | [] | [] | [] |
+| `geklemmt()` | {} | {} | {} | {} |
+| `lage` · Seitenfehler · `verdeckt()` | 0·0·[] | 0·0·[] | 0·0·[] | 0·0·[] |
+
+(Die 2 in 1350/w30 sind der Wagen aus §6.4 und §7.1 — ein Ding, zweimal
+gezählt, unter einem Namen, der darüber gemalt wird.)
+
+**Tor:** offen, alle vier, `lage=0 fehler=0`.
+**Spielprobe:** bestanden, 60/60 Züge je Epoche, Kasse 48 · 280 · 4.200 ·
+50.000 — dieselben Zahlen wie in `nach` und `nach2`.
+
+**Die vierte Latte bei 1366×768 — jetzt ohne dieses Stück:**
+
+| | Überläufe | davon `gg` | Textknoten < 12 px | Knöpfe < 24 px |
+|---|---|---|---|---|
+| Vorzustand | 14 | 4 (`was:1` je Epoche) | 497 | 0 von 307 |
+| `nach2` (vor Änderung 12) | 13 | 3 | 365 | 0 von 308 |
+| **`nach3`** | **10** | **0** | **365** | **0 von 308** |
+
+E1 `fu:1 nm:1` · E2 `nm:2 sud:1` · E3 `fu:1 nm:1` · E4 `nm:2 wort:1` —
+**in keiner Epoche steht noch ein `gg`.** Die vier verbliebenen Überläufe
+gehören DER FUHRE, DEM NAMEN, DEM SUD und DER STADT und sind in §4 gemeldet.
