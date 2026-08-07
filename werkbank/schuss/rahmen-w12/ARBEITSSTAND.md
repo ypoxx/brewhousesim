@@ -883,3 +883,4 @@ lautesten verdorben hat (3 Läufe, 3 Prüfsummen). Wenn die Trennung
 | Lauf | fertig | md5 | Kassenspanne |
 |---|---|---|---|
 | e3-A | 12:55:20 | `3f008dc880b9` | 2.907–25.557 |
+| e3-B | 13:00:41 | `3f008dc880b9` | 2.907–25.557 |
