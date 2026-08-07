@@ -26,7 +26,13 @@ mkdir -p "$Z" "$R"
 lauf() {                       # lauf <name> <env…> -- <befehl…>
   local name=$1; shift
   echo "### $name  start $(date -u +%H:%M:%S)"
-  HAFEN=$HAFEN $F "$@" > "$Z/$M-$name.log" 2>&1
+  # .txt UND NICHT .log — teuer gelernt. `*.log` steht in .gitignore, die
+  # Aufsicht sichert diese Dateien also nie. Bei tor.mjs und spielprobe.mjs
+  # IST die Ausgabe das ganze Ergebnis; als .log hat der Container-Reset am
+  # 6. August genau diese beiden Messungen mitgenommen, waehrend alles
+  # danebenliegende ueberlebte. Ein Ergebnis gehoert in eine Datei, die
+  # gesichert wird.
+  HAFEN=$HAFEN $F "$@" > "$Z/$M-$name.txt" 2>&1
   echo "### $name  ende $? $(date -u +%H:%M:%S)"
 }
 

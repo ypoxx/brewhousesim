@@ -660,7 +660,8 @@ man daraus nicht, welcher Kasten es ist, um wieviel er kappt und ob eine
 **Zahl** darunter leidet — und genau das unterscheidet Auflage 10. Dafür ist
 `gegner-w11/schmal.mjs` geschrieben: dieselbe Prüfung Zeichen für Zeichen
 (`kappt()` je Richtung), aber mit Name, Maß, Fehlbetrag und einem Merker, ob
-Ziffern im Text stehen. Das Ergebnis steht in §7.7.
+Ziffern im Text stehen. Das Ergebnis steht in §7.8 — und es war ein Fehler von
+mir.
 
 ### 7.7 Die Gegenprobe zur Neutralität der Ausweiche — belegt, nicht vermutet
 
@@ -686,3 +687,71 @@ zwei gleiche Dateien könnten auch heißen, dass jemand kopiert hat. Sie sind
 hier **unabhängig entstanden** — `nach-e2` auf Hafen 8962 vor der Reparatur,
 `nach2-e2` heute auf demselben Hafen, aber aus einem neu aufgesetzten Nachstand
 (der Container ist zwischendurch zurückgesetzt worden, `/tmp` war leer).
+
+### 7.8 Änderung 12 — ein Fehler, den erst der schmale Schirm zeigt
+
+`gegner-w11/schmal.mjs` bei 1366×768 nennt den Kasten, den `lesbarkeit.mjs`
+nur als „gg:1" zählt:
+
+```
+E1  gg  waagerecht  fehlt 8 px breit   438×41  div.gg-bandliste  [ZIFFERN]
+E2  gg  waagerecht  fehlt 8 px breit   438×41  div.gg-bandliste  [ZIFFERN]
+E3  gg  waagerecht  fehlt 5 px breit   438×30  div.gg-bandliste  [ZIFFERN]
+E4  — kein Überlauf dieses Stücks
+```
+
+Der Merker `[ZIFFERN]` heißt nur, dass irgendwo im Kasten Ziffern stehen — er
+sagt nicht, dass eine Zahl abgeschnitten ist. Auflage 10 unterscheidet das
+ausdrücklich, also wird nicht geraten: `gegner-w11/bandrand.mjs` fragt, welcher
+**Nachkomme** über die rechte Innenkante ragt.
+
+```
+E1/E2  +8,5 px  span.wort „zeigen"   28 px breit, links 418   (Liste 438)
+E3     +5,1 px  span.wort „zeigen"
+E4     kein Nachkomme ragt hinaus
+```
+
+**Keine Zahl — aber die Beschriftung eines Knopfes.** Im Bild stand „zeige".
+
+**Und es ist mein Fehler, entstanden in dieser Welle.** Der Vorzustand kennt
+weder `.gg-bandliste` noch `.gg-bandkoerper` als Regel; `overflow-x: hidden` an
+der Liste habe ich hinzugefügt, damit das Brett nicht waagerecht rollt. Vorher
+wäre die Beschriftung über die Kante gelaufen — sichtbar, hässlich, aber
+lesbar. Ich habe aus einem Überstand einen Schnitt gemacht und es vier
+Messungen lang nicht gesehen, weil `lesbarkeit.mjs` nur „gg:1" sagt und ich die
+Zahl für den alten `was:1` gehalten hätte.
+
+**Die Ursache, nachgerechnet:** `.gg-bandzeile` ist eine Flex-Zeile aus drei
+Kindern — `.wann` (`flex: none`), `.was` (`flex: 1 1 auto; min-width: 0`) und
+dem Knopf. Der Knopf hatte keine Angabe, also die Vorgabe `flex: 0 1 auto`:
+**schrumpfbar.** Wird es eng, schrumpft der Browser ihn, seine Beschriftung ist
+`nowrap`, und der Rest liegt unter der Kante der Liste. Der Satz daneben hätte
+schrumpfen sollen — er darf es, er bricht um statt zu kürzen.
+
+| # | Was | Warum | Datei |
+|---|---|---|---|
+| 12 | `.gg-bandzeile > .knopf { flex: none }` | Der einzige elastische Teil der Zeile ist der Satz. Ein halb gelesener Knopf ist schlimmer als ein halb gelesener Satz: beim Satz sieht man, dass er weitergeht | `stil/gegner.css` |
+
+**Gemessen nachher, neuer Nachstand `7896ee6+gegner-8188005c786e`:**
+
+```
+E1  .gg-bandliste 438×41  scrollWidth 438 vs clientWidth 438  KEIN Nachkomme ragt hinaus
+E2  .gg-bandliste 438×41  scrollWidth 438 vs clientWidth 438  KEIN Nachkomme ragt hinaus
+E3  .gg-bandliste 438×30  scrollWidth 438 vs clientWidth 438  KEIN Nachkomme ragt hinaus
+E4  .gg-bandliste 438×30  scrollWidth 438 vs clientWidth 438  KEIN Nachkomme ragt hinaus
+```
+
+Bei voller Breite (2752) ändert die Zeile nichts: dort schrumpft die Zeile gar
+nicht, also greift `flex-shrink` nie. Das ist eine Behauptung über Geometrie,
+und sie wird trotzdem gemessen — der ganze Satz läuft als `nach3` neu, samt
+allen vier ρ-Linien. **Ein Stand, der nicht ganz gemessen ist, ist nicht
+gemessen.**
+
+### 7.9 Eine zweite Reparatur am eigenen Gerät
+
+`schluss.sh` schrieb die Ausgabe von `tor.mjs` und `spielprobe.mjs` nach
+`<marke>-tor.log`. **`*.log` steht in `.gitignore`** — die Aufsicht sichert
+diese Dateien nie. Genau deshalb fehlten sie nach dem Container-Reset als
+einzige aus einem sonst vollständigen Satz (§7.4): alles, was als `.txt` oder
+`.json` geschrieben wurde, hat überlebt. Bei diesen beiden Läufen **ist** die
+Ausgabe das ganze Ergebnis. `lauf()` schreibt jetzt `.txt`.
