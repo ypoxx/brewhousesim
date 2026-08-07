@@ -196,30 +196,39 @@
   /* Was die messende Hand von einem Zug liest: Name, Sperre, Beschriftung.
      `textContent` erzwingt kein Layout — anders als `innerText`. Nur fuer
      die Probe `nachwehen()`, nie im Spielbetrieb. */
+  /* Trenner, die in keinem Spieltext vorkommen. Als Escape geschrieben,
+     damit in dieser Datei kein rohes Steuerzeichen steht. */
+  var TRENN = '\u0001', SATZ = '\u0002';
+
   function schirmAbdruck() {
     var l, i, s = [];
     try { l = document.querySelectorAll('[data-zug]'); } catch (e) { return ''; }
     for (i = 0; i < l.length; i++) {
-      s.push(l[i].getAttribute('data-zug') + '' + (l[i].disabled ? '1' : '0')
-        + '' + String(l[i].textContent || '').replace(/\s+/g, ' ').trim());
+      s.push(l[i].getAttribute('data-zug') + TRENN + (l[i].disabled ? '1' : '0')
+        + TRENN + String(l[i].textContent || '').replace(/\s+/g, ' ').trim());
     }
     s.sort();
-    return s.join('');
+    return s.join(SATZ);
   }
 
+  /* Welche Zuege haben sich geaendert — hoechstens zwoelf, damit die Antwort
+     in eine Konsole passt. */
   function unterschied(a, b) {
-    var A = a.split(''), Bs = b.split(''), i;
     var mA = {}, mB = {}, raus = [];
-    for (i = 0; i < A.length; i++) mA[A[i].split('')[0]] = A[i];
-    for (i = 0; i < Bs.length; i++) mB[Bs[i].split('')[0]] = Bs[i];
+    function nach(t, ziel) {
+      t.split(SATZ).forEach(function (z) { if (z) ziel[z.split(TRENN)[0]] = z; });
+    }
+    nach(a, mA); nach(b, mB);
+    function zeig(z) {
+      if (!z) return '(fort)';
+      var t = z.split(TRENN);
+      return (t[1] === '1' ? 'gesperrt · ' : '') + (t[2] || '').slice(0, 60);
+    }
     Object.keys(mA).forEach(function (k) {
-      if (mA[k] !== mB[k] && raus.length < 12) {
-        raus.push({ zug: k, vorher: (mA[k] || '').split('').slice(1).join(' · '),
-                    nachher: (mB[k] || '(fort)').split('').slice(1).join(' · ') });
-      }
+      if (mA[k] !== mB[k] && raus.length < 12) raus.push({ zug: k, vorher: zeig(mA[k]), nachher: zeig(mB[k]) });
     });
     Object.keys(mB).forEach(function (k) {
-      if (!(k in mA) && raus.length < 12) raus.push({ zug: k, vorher: '(neu)', nachher: '' });
+      if (!(k in mA) && raus.length < 12) raus.push({ zug: k, vorher: '(fort)', nachher: zeig(mB[k]) });
     });
     return raus;
   }
@@ -266,7 +275,22 @@
     var vorher = letzterAbdruck;
     var bericht = { paesse: 0, aufgaben: 0, nachrunden: 0, ueberlauf: false };
 
+    /* DER NOTAUSGANG. Wirft irgendetwas in einem Durchgang, darf der Schluss
+       nicht haengenbleiben: `imSchluss` bliebe wahr, die Umhuellung finge
+       weiter jeden Zeitgeber ein, und die Schlange liefe nie mehr leer — das
+       Spiel staende still. Also wird jeder Durchgang eingepackt, und im
+       Notfall geht alles an die echte Uhr zurueck. */
     function weiter() {
+      try { weiterInnen(); }
+      catch (e) {
+        B.klage('runde.schluss', e);
+        zurueckAnDieUhr();
+        letzte = bericht;
+        imSchluss = false;
+      }
+    }
+
+    function weiterInnen() {
       /* 1 — die Schlange leerlaufen lassen, Durchgang fuer Durchgang. */
       if (schlange.length) {
         if (pass >= PAESSE) {

@@ -229,3 +229,39 @@ den Anfang gemessen hat sich also **immer** etwas geaendert — gemessen
 Verglichen wird jetzt mit der **letzten fertigen Runde**; dann aendert sich
 nur dann etwas, wenn wirklich ein anderes Brett zugeklappt liegt als vorher —
 und nur dann kann ein Knopf luegen.
+
+---
+
+# R9 — DAS GERAET: DIE FRAGE IN EINEM AUFRUF
+
+Drei Griffe, alle drei nach dem Vorbild von `BRAUHAUS.haushalt.pruefe()`:
+
+```js
+BRAUHAUS.runde.pruefe()          // []  = der Rahmen hat nichts zu melden
+BRAUHAUS.runde.zeile()           // eine Zeile fuer die Konsole
+await BRAUHAUS.runde.nachwehen() // { ruhig: true }  = die Runde WAR fertig
+BRAUHAUS.runde.bericht()         // alle Zaehler
+```
+
+**`nachwehen()` ist die eigentliche Antwort auf R9.** Es nimmt den Abdruck der
+Klemmenlage **und** aller bedienbaren Zuege (Name · gesperrt · Beschriftung,
+gelesen mit `textContent`, also **ohne Layout**), wartet **1,2 s echte Wanduhr,
+in denen niemand etwas anfasst**, und sieht noch einmal hin. Aendert sich in
+dieser Sekunde etwas, war die Runde nicht fertig, als sie zu Ende ging — und
+genau das ist die Bedingung, unter der zwei gleiche Saaten auseinanderlaufen.
+In dieser Sekunde schlaegt DER STADT 240-ms-Takt fuenfmal zu; wer sich daran
+noch bewegt, wird gesehen.
+
+Es ist das einzige im Rahmen, das eine Uhr benutzt, und es laeuft **nur auf
+Zuruf**. Wer es waehrend einer Messung ruft, misst sein eigenes Warten mit.
+
+Dazu zwei Geraete auf der Platte:
+
+| Datei | was es kostet | was es beantwortet |
+|---|---|---|
+| `rahmen-w12/geraet.mjs` | **rund 1 Minute** | laden die vier Epochen? `lage` leer? Konsolenfehler? und: ist die Runde in jeder Epoche ruhig? |
+| `rahmen-w12/rennen.mjs` mit `DROSSEL=1,2,3,4,6` | **rund 12 Minuten** | spielt dieselbe Saat ueber eine Spanne von 1:6 in der Rechengeschwindigkeit dieselbe Partie? |
+
+Vorher kostete dieselbe Frage **neun Laeufe zu je vier Minuten** — und selbst
+die haben sie nicht beantwortet, sondern nur festgestellt, dass es keinen
+Verursacher gibt.
