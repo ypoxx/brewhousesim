@@ -375,6 +375,14 @@ async function einLauf(marke, drossel) {
   }
 
   const schluss = await schirm();
+  const rundenbericht = await seite.evaluate(() => {
+    try {
+      return window.BRAUHAUS.runde
+        ? { bericht: window.BRAUHAUS.runde.bericht(), pruefe: window.BRAUHAUS.runde.pruefe(),
+            zeile: window.BRAUHAUS.runde.zeile() }
+        : null;
+    } catch (e) { return { fehler: String(e) }; }
+  });
   const spur = SPUR ? await seite.evaluate(() => window.__spur ? window.__spur.ereignisse : []) : [];
   const kassen = reihe.map(r => r.kasse);
   await browser.close();
@@ -383,7 +391,7 @@ async function einLauf(marke, drossel) {
     zielGesetzt, festGesetzt, kasseMin: Math.min(...kassen), kasseMax: Math.max(...kassen),
     schluss: { jahr: schluss.jahr, woche: schluss.woche, kasse: schluss.kasse, lage: schluss.lage },
     jahre: jahre.map(j => ({ jahr: j.jahr, kasseMichaeli: j.kasseMichaeli, leiterZeilen: j.leiter.length })),
-    proto, klickSpur, reihe, spur };
+    proto, klickSpur, rundenbericht, reihe, spur };
 }
 
 /* DROSSEL=1,2,3,4 faehrt je einen Lauf mit dieser Drosselung, nacheinander. */
@@ -398,6 +406,7 @@ for (const dr of DROSSELN) {
     console.log(`  Lauf ${m}: ${e.wochen} Wochen, Kasse ${e.kasseMin}–${e.kasseMax}, `
       + `LEITER ${e.jahre.map(j => j.leiterZeilen).join('/')}, `
       + `KasseMich ${e.jahre.map(j => j.kasseMichaeli).join('/')}, Fehler ${e.fehler.length}`);
+    if (e.rundenbericht && e.rundenbericht.zeile) console.log('        ' + e.rundenbericht.zeile);
     fs.writeFileSync(ZIEL, JSON.stringify({ hafen: HAFEN, epoche: ep, wochen: WOCHEN, laeufe: ergebnisse }, null, 1));
   }
 }
