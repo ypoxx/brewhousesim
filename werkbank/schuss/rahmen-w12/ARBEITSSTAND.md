@@ -899,3 +899,4 @@ nicht. Damit steht die Trennung als Messung da, nicht als Behauptung.
 | e1-B | 13:16:44 | `3e87b7a47385` | 34–524 |
 | e1-C | 13:22:11 | `3e87b7a47385` | 34–524 |
 | e1-D | 13:27:37 | `3e87b7a47385` | 34–524 |
+| e1-E | 13:33:10 | `3e87b7a47385` | 34–524 |
