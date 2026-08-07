@@ -1081,3 +1081,50 @@ In **allen** bisherigen 400-Wochen-Läufen der F5: `BRAUHAUS.lage` am Schluss
 **0**, Seitenfehler **0**, kein Abbruch. Da `B.klage()` (`kern/basis.js:25`)
 alles in `B.lage` schiebt, was der Rahmen wirft, heißt das zugleich: der
 Notausgang des Rundenschlusses ist in 4.000 gespielten Wochen **nie** gegriffen.
+
+*(Werkzeug: `rahmen-w12/lauf.sh <epoche> <marke> <hafen>` fährt **einen**
+Lauf und prüft vorher die Marke des Hafens; `rahmen-w12/rest.sh` reiht die
+restlichen aneinander und schreibt jede Prüfsumme sofort in
+`abnahme5/kladde.log`. Ein Satz am Stück gibt stundenlang keine Zeile aus —
+das überlebt keinen Reset lesbar.)*
+
+### Was mir gehört und was ich nicht angefasst habe (`git diff 7a1a942 HEAD`)
+
+```
+spiel/index.html     |  13 ++      (eine funktionale Zeile + Kommentar)
+spiel/kern/buehne.js |  12 +-      (eine Klammer um vier Zeilen in starte())
+spiel/kern/runde.js  | 525 ++++    (neu)
+spiel/stuecke/       |   0         KEINE EINZIGE STUECKDATEI BERUEHRT
+spiel/stil/grund.css |   0         unberuehrt
+```
+
+### Die Gegenprobe ohne Prüfsumme — Woche für Woche verglichen
+
+Die md5 ist ein grobes Instrument. Deshalb dieselben Läufe noch einmal, Feld
+für Feld über alle 400 Wochen (`reihe[]`):
+
+| Satz | verglichen | abweichende Wochen |
+|---|---|---|
+| **F5 1350** | A gegen B, C, D, E, F | **0 / 400** in allen fünf Vergleichen |
+| **F5 1884** | A gegen B, C | **0 / 400** in beiden |
+| F1 1884 | A gegen B | 326 / 400, erste Abweichung Index 73: `faesser` **86 gegen 68** |
+
+Die erste Abweichung der F1 ist ein **Fassbestand** — also ein Klick auf einem
+Brett DER FUHRE, der einmal landet und einmal nicht. Genau das sagt die
+Diagnose voraus: `fuhre.js:2541` rechnet aus `clientHeight`/`scrollHeight`
+einen Maßstab, ein anderer Maßstab heißt andere Knopfgrößen, und eine andere
+Knopfgröße heißt, dass ein Klick trifft oder nicht. F5 fasst dieses `rAF`
+nicht an, und die Abweichung ist fort.
+
+Zum Vergleich, dieselbe Rechnung an den beiden Fassungen, die gescheitert sind:
+
+| Satz | erste abweichende Woche | was sich unterscheidet | abweichende Wochen |
+|---|---|---|---|
+| **F2 1350** (e1-A/e1-B) | Index **61** = 1352 W2 | `kasse` 135↔90, `deckung` 2,8125↔1,875 | 339 / 400 |
+| **F1 1884** (e3-A/e3-B) | Index **73** = 1886 W14 | `faesser` 86↔68 | 326 / 400 |
+
+Beide Male ist die Wurzel **ein einzelner Klick**, der einmal landet und
+einmal nicht — bei F2 der auf die Michaelitafel DES PREISES, bei F1 einer auf
+einem Brett DER FUHRE. Das sind zwei verschiedene Ursachen, und F5 ist die
+einzige Fassung, die beide zugleich vermeidet: sie zieht die **Frist** vor
+(gegen die erste) und lässt den **Bildaufbau** in Ruhe (gegen die zweite).
