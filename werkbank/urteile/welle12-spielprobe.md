@@ -55,7 +55,25 @@ erste 1350-Sitzung ist damit **verworfen**; 1350 wurde vollständig neu gespielt
 Beobachtungen aus der verworfenen Sitzung, die nicht an Zahlen hängen (verhungertes Haus,
 tote Reiter unter der Michaelitafel), führe ich als *Beobachtung*, nicht als *Messwert*.
 
-*(Die Zählungen und die vier Menschenfragen folgen, sobald die Sitzungen gelaufen sind.)*
+### Klickprotokoll · Sitzung 1350 (20,1 Minuten)
+
+| | |
+|---|---|
+| gespielte Wochen | **284** (1350/1 bis 1359/15, zehn Braujahre) |
+| echte Mausklicks | **1.494** |
+| Klicks, die ins Leere gingen | **0** |
+| Klicks, die nur ein Brett aufschlagen sollten | 74 |
+| verschiedene Züge, die je greifbar waren | **152** |
+| Seitenfehler · `BRAUHAUS.lage` | **0 · 0** |
+| Kasse Anfang → Ende | 112 → 17 Pf |
+
+Die zehn häufigsten Klicks dieser Sitzung sind vier Knöpfe: `fuhre:tafel-auf:grut` (178×),
+`fuhre:wie-vorige` (86×), `fuhre:abschicken` (84×), `weiter` (9×). **Das ist die Partie:
+zwei Knöpfe, die Woche für Woche dasselbe tun.** Alles andere kam zusammen auf unter
+30 Klicks in zehn Spieljahren.
+
+*(Die Zählungen der übrigen Epochen und die vier Menschenfragen folgen, sobald die
+Sitzungen gelaufen sind.)*
 
 ---
 
