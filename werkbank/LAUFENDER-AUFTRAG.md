@@ -46,6 +46,51 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## WELLE 11 IST GEBAUT UND WIRD NICHT ABGENOMMEN — 1350 ist bistabil
+
+*7. August, von der Aufsicht am eingefrorenen Integrationsstand `7a1a942`
+gemessen, dreimal **einzeln** durch das Messfenster, null Fehler in allen drei
+Läufen.*
+
+| Lauf | ρ (14 J) | Jahre < 1× | md5 |
+|---|---|---|---|
+| A | **+0,191** | 0/14 | gleich C |
+| B | **−0,521** | 2/14 | eigen |
+| C | **+0,191** | 0/14 | gleich A |
+
+**Zwei verschiedene Partien in drei Läufen, Spannweite 0,712 — größer als die
+Latte selbst.** Beide Werte liegen zwar unter 0,700, aber das ist nicht der
+Punkt: **die Abnahmebedingung dieser Welle lautet „dieselbe Saat, dieselbe
+Partie", und sie ist gerissen.** Der Vorzustand `7896ee6` war dreimal
+byteweise gleich; die Bistabilität ist in dieser Welle entstanden.
+
+**DIE FUHRE hat es selbst gemeldet**, bevor irgendwer sie gefragt hat — zwei von
+zwei Läufen auf ihrem Stand auseinander, auf dem Vorzustand nicht. Das ist die
+vierte Welle in Folge, in der ein Builder gegen sich selbst meldet.
+
+**Was die Welle sonst erreicht hat, und es ist viel:**
+
+| | Vorzustand | Welle 11 |
+|---|---|---|
+| Deckung 30 Wochen **ohne** Escape | 44,8 – 53,3 % | **13,8 – 15,0 %** |
+| `tafeln()` nach 30 Wochen | 1 / 1 / 1 / 1 | **0 / 0 / 0 / 0** |
+| `.fu-sommerblatt` | 1,15 – 1,50 Mio px² | **171 – 182 Tsd px²** |
+| DAS ERBE, Bildpunkte | 211 – 240 Tsd | **15,5 – 22,5 Tsd** (Grenze 28 Tsd) |
+| Latte 4, Textknoten | 497 | **389** |
+| Jahre unter 1× | 2/0/1/1 | 0/0/1/1 |
+
+**Nichts davon wird abgenommen, solange 1350 zwei Partien spielt.** Eine Zahl,
+die sich nicht wiederholen lässt, ist keine Messung — und jeder Beleg dieses
+Laufs steht auf „drei Läufe, eine Prüfsumme".
+
+**Nächster Schritt, sobald DER GEGNER fertig ist:** Trennprobe nach dem Muster
+von `aufsicht/welle8-trennprobe/aufsetzen.sh` — je ein Mischstand, in dem **ein**
+Stück auf `7896ee6` zurückgesetzt ist, `.js` **und** `.css`. Drei Stände, je
+dreimal 1350. Welcher Stand wieder eine einzige Prüfsumme liefert, nennt den
+Verursacher.
+
+---
+
 ## WELLE 10 GEMESSEN — der Rahmen hat das Bild geräumt, ohne die Partie anzufassen
 
 *Von der Aufsicht am eingefrorenen Stand `7896ee6` (Hafen 8908) nachgemessen,
