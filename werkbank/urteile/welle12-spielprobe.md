@@ -197,13 +197,37 @@ kürzer"*, *„Sebastian Feist · streitbar · 5 Häuser · 24 Züge · **2 dies
 Wirtshäusern *UMKÄMPFT*, *frei geworden*, *ablösen 42 Pf*. Er kündigt an (*baut W30*) und
 er tut es dann auch.
 
-**Aber:** der Reiter, der eigens dafür gebaut ist — *OHNE DICH GESCHEHEN* — trug beim
-Laden noch die Zahl („OHNE DICH GESCHEHEN **1 Zug**") und in **allen 284 gespielten Wochen
-danach keine mehr**: 284 von 284 Ablesungen zeigten nur den nackten Titel, während der
-Gegner 140 Züge machte. Die Zahl, die sagt, wie viel gerade ohne mich passiert ist, steht
-also genau so lange da, wie noch nichts passiert ist. *(Einschränkung: meine Hand hatte
-das Brett zu Beginn einmal aufgeschlagen; die saubere Gegenprobe ohne jedes Aufklappen
-steht unter §4b.)*
+### 4b · Die saubere Gegenprobe: 50 Wochen, ohne ein einziges Brett aufzuklappen
+
+`werkbank/schuss/spiel-w12/gegnerblick.mjs` spielt 1350 fünfzig Wochen lang **nur** mit
+drei Knöpfen — „Wie vorige Woche", „FUHRE ABSCHICKEN", „WEITER" — und rührt keinen Reiter
+an. Gemessen wird je Woche, welche Textzeilen **neu** auf dem Schirm stehen, die in der
+Vorwoche nicht dastanden.
+
+| | |
+|---|---|
+| gespielte Wochen | 50 (1350/1 – 1351/20) |
+| Züge des Gegners | 27 |
+| Wochen mit einem neuen Gegnerzug | 25 |
+| **davon mit neuem, den Gegner betreffendem Text auf dem Schirm** | **23 von 25** |
+
+Und der Text ist nicht Buchhaltung, sondern Erzählung:
+
+> „Ein grauer Karren des Adlers fährt zum Schenke am Tor."
+> „Dem Adler brennt der Darrboden. Zwei Wochen kein Sud. Es kostet ihn 26 Pf."
+> „Brauhaus zum Adler baut auf dem eigenen Hof: Darrboden für 44 Pf."
+> „28 Züge, **1 diese Woche**" · „kommt in den Rat" · „erwirkt den Bann" · „frei geworden"
+
+**Das ist bestanden, und zwar deutlich.** Ein Gegner, der nur im Protokoll zieht, zieht
+nicht — dieser hier zieht auf der Karte, kündigt an (*„baut W30 · pachtet W36"*), hat
+eigenes Pech und wird sichtbar reicher und ärmer. Von allem, was ich in vier Sitzungen
+geprüft habe, ist das der Teil, der am wenigsten Arbeit braucht.
+
+**Ein Schönheitsfehler mit Ansage:** der Reiter *OHNE DICH GESCHEHEN* trägt die Zahl nur
+im **ersten** Braujahr („OHNE DICH GESCHEHEN 19 Züge", Woche 1–30). Ab 1351/1 steht dort
+in **allen 20 weiteren geprüften Wochen** nur noch der nackte Titel — die Zahl ist dann
+auf das aufgeklappte Brett gewandert. Das ist kein Verlust an Information, aber ein
+Wechsel des Orts mitten in der Partie.
 
 ---
 
