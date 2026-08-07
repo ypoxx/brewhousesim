@@ -180,27 +180,37 @@
   /* ---------------------------------------------------------------------
      DIE KLEMMENWACHE
      --------------------------------------------------------------------- */
-  /* WARUM ERST IM NAECHSTEN BILD UND NICHT SOFORT.
-     Jedes Zeichnen baut die Bretter neu; im selben Augenblick sind ALLE
-     Klemmklassen fort, weil die Elemente neu sind. Wer da schon vergleicht,
-     sieht bei jedem Zeichnen eine „geaenderte" Lage und zeichnet noch einmal
-     — gemessen: 858 Runden statt 202 in 62 Wochen, 209 mal am Riegel.
-     DIE STADT setzt ihre Klassen im NAECHSTEN Bild neu (`stadt.js:1554`,
-     `baldPruefen` haengt selbst in einem requestAnimationFrame, und ihr
-     Beobachter ist frueher angemeldet als dieser hier, also kommt sie im
-     selben Bild zuerst dran). Erst danach steht die Lage, gegen die die
-     Stuecke gezeichnet haben — und erst dann ist der Vergleich etwas wert.
-     Ein Bildaufbau ist keine Wanduhrfrist: er kommt, wenn gezeichnet wurde,
-     und nicht, wenn eine Uhr abgelaufen ist. */
-  var angemeldet = false;
+  /* WORAUF DIE WACHE ANSPRINGT — und worauf ausdruecklich nicht.
 
-  function baldNachsehen() {
-    if (angemeldet) return;
-    angemeldet = true;
-    window.requestAnimationFrame(function () {
-      angemeldet = false;
-      B.wage('runde.wache', nachsehen);
-    });
+     Sie springt NUR an, wenn an einem Element, das es schon gab, eine
+     Klemmklasse DAZUGEKOMMEN oder WEGGEFALLEN ist. Das ist genau der
+     Vorgang, bei dem ein Stueck ein fremdes Brett wegklappt.
+
+     Sie springt NICHT an, wenn ein Stueck sein Brett neu baut. Dabei sind
+     im selben Augenblick alle Klemmklassen fort, weil die ELEMENTE neu sind
+     — ein Vergleich der blossen Lage sieht dort bei jedem Zeichnen eine
+     „Aenderung" und zeichnet noch einmal. Gemessen, als die Wache genau das
+     tat: 858 Runden statt 202 in 62 Wochen und 209 mal am Riegel. Ein
+     Neubau erzeugt `childList`-Meldungen, kein `attributes` — deshalb
+     genuegt es, nur auf Attributmeldungen mit echtem Wechsel zu hoeren.
+
+     Sofort, nicht im naechsten Bild: der MutationObserver ist ein Mikrotask
+     und kommt damit noch vor dem naechsten Bildaufbau. Ein Bild spaeter
+     nachzusehen waere zu spaet — gemessen mit `rennen.mjs`, Drosselfaecher:
+     mit einem Bild Verzoegerung spielt 1350 wieder DREI verschiedene
+     Partien (1x/2x eine, 3x eine zweite, 4x eine dritte). */
+  var KLEMMWORT = /(^|\s)(stadt-zugeklappt|stadt-verdeckt|kern-blatt-zu)(\s|$)/;
+
+  function klemmwechsel(satz) {
+    for (var i = 0; i < satz.length; i++) {
+      var m = satz[i];
+      if (m.type !== 'attributes' || m.attributeName !== 'class') continue;
+      if (!m.target || !m.target.isConnected) continue;
+      var alt = KLEMMWORT.test(m.oldValue || '');
+      var neu = KLEMMWORT.test(m.target.className || '');
+      if (alt !== neu) return true;
+    }
+    return false;
   }
 
   function nachsehen() {
@@ -222,9 +232,12 @@
   function starteWache() {
     if (wache || !window.MutationObserver) return;
     letzterAbdruck = abdruck();
-    wache = new MutationObserver(baldNachsehen);
+    wache = new MutationObserver(function (satz) {
+      if (klemmwechsel(satz)) B.wage('runde.wache', nachsehen);
+    });
     var stapel = document.getElementById('buehne');
-    if (stapel) wache.observe(stapel, { subtree: true, attributes: true, attributeFilter: ['class'] });
+    if (stapel) wache.observe(stapel, { subtree: true, attributes: true,
+                                        attributeFilter: ['class'], attributeOldValue: true });
   }
 
   /* ---------------------------------------------------------------------
