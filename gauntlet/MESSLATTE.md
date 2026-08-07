@@ -67,6 +67,23 @@ geschnitten:
 | 1884 | +0,168 | +0,346 | +0,393 | 1/14 | unverändert |
 | **1970** | **+0,699** | +0,637 | +0,653 | 1/14 | unverändert — **ein Tausendstel unter der Latte** |
 
+> **Diese Tabelle ist der Stand vom 4. August und bleibt als solcher stehen** —
+> sie zeigt, warum die Laufzeit in die Zahl gehört. **Sie ist nicht der heutige
+> Stand.** Am 7. August, nach den Wellen 9 bis 12 und von der Aufsicht an einem
+> eigenen eingefrorenen Stand nachgemessen:
+>
+> | Epoche | 12 J | 13 | 14 | Jahre < 1× |
+> |---|---|---|---|---|
+> | 1350 | −0,259 | −0,236 | −0,389 | 0/14 |
+> | **1600** | +0,406 | +0,489 | **+0,538** | 1/14 |
+> | 1884 | +0,161 | +0,330 | +0,169 | 0/14 |
+> | 1970 | −0,112 | −0,236 | −0,304 | 1/14 |
+>
+> **1970 hat seine Not verloren** — aus einem Tausendstel Abstand sind 0,396
+> geworden. **1600 hat sie geerbt:** von −0,156 am 4. August auf +0,538 heute,
+> Abstand zur Latte **0,162**. Wer die obere Tabelle zitiert, zitiert eine
+> Sorge, die inzwischen woanders wohnt.
+
 ### WIEDERHOLBARKEIT IST KEINE FÜNFTE LATTE — sie ist die Bedingung der anderen vier
 
 *Nachgetragen am 7. August 2026, nachdem 1350 an einem Stand zwei verschiedene
