@@ -1,0 +1,87 @@
+MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 55s
+MESSFENSTER offen — load 1.60 1.31 1.29
+=== E1  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1223x60 @764,46 = 73390 px (10.4 % des obersten 1/6)
+  hauszeile  811x28 @970,160 = 22308 px (3.2 % des obersten 1/6)
+  deckung    931x24 @1628,1371 = 22117 px (3.1 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 11.1 %   oberstes 1/6 35.8 %   (50 Kaesten)
+  stadt      144784 /  40000 px  UEBER +104784   oben  93296 /  26000  UEBER +67296
+  kern        98096 / 120000 px           oben  78336 /  80000
+  sud         93600 /  34000 px  UEBER +59600   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        30400 /  20000 px  UEBER +10400   oben      0 /  12000
+  erbe        19296 /  28000 px           oben      0 /   6000
+  gegner      11968 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["stadt: 144784/40000 px  oben 93296/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []
+=== E2  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1259x60 @747,46 = 75517 px (10.7 % des obersten 1/6)
+  hauszeile  808x28 @972,160 = 22206 px (3.2 % des obersten 1/6)
+  deckung    788x24 @1771,1371 = 18715 px (2.7 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 11.6 %   oberstes 1/6 36.2 %   (50 Kaesten)
+  stadt      152608 /  40000 px  UEBER +112608   oben  93520 /  26000  UEBER +67520
+  kern       100656 / 120000 px           oben  80896 /  80000  UEBER +896
+  sud         93600 /  34000 px  UEBER +59600   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        41344 /  20000 px  UEBER +21344   oben      0 /  12000
+  erbe        17184 /  28000 px           oben      0 /   6000
+  gegner      10032 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["stadt: 152608/40000 px  oben 93520/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 41344/20000 px","kern: 100656/120000 px  oben 80896/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []
+=== E3  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1322x60 @715,46 = 79342 px (11.3 % des obersten 1/6)
+  hauszeile  856x28 @948,160 = 23534 px (3.3 % des obersten 1/6)
+  deckung    848x24 @1712,1371 = 20132 px (2.9 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 11.5 %   oberstes 1/6 36.6 %   (49 Kaesten)
+  stadt      153760 /  40000 px  UEBER +113760   oben  92064 /  26000  UEBER +66064
+  kern       104752 / 120000 px           oben  84992 /  80000  UEBER +4992
+  sud         93600 /  34000 px  UEBER +59600   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        30400 /  20000 px  UEBER +10400   oben      0 /  12000
+  erbe        19488 /  28000 px           oben      0 /   6000
+  gegner       9504 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["stadt: 153760/40000 px  oben 92064/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px","kern: 104752/120000 px  oben 84992/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []
+=== E4  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1311x60 @720,46 = 78672 px (11.2 % des obersten 1/6)
+  hauszeile  807x28 @972,160 = 22194 px (3.2 % des obersten 1/6)
+  deckung    788x24 @1771,1371 = 18715 px (2.7 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 11.9 %   oberstes 1/6 37.9 %   (51 Kaesten)
+  stadt      155472 /  40000 px  UEBER +115472   oben 102544 /  26000  UEBER +76544
+  kern       103728 / 120000 px           oben  83968 /  80000  UEBER +3968
+  sud         93600 /  34000 px  UEBER +59600   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        30400 /  20000 px  UEBER +10400   oben      0 /  12000
+  erbe        24960 /  28000 px           oben      0 /   6000
+  gegner      19072 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["stadt: 155472/40000 px  oben 102544/26000 px","sud: 93600/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 30400/20000 px","kern: 103728/120000 px  oben 83968/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []

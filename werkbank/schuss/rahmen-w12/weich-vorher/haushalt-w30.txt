@@ -1,0 +1,69 @@
+MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 10s
+MESSFENSTER offen — load 0.97 1.18 1.25
+=== E1 w30  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1224x60 @764,46 = 73463 px (10.4 % des obersten 1/6)
+  hauszeile  772x28 @990,160 = 21236 px (3.0 % des obersten 1/6)
+  deckung    895x24 @1664,1371 = 21267 px (3.0 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 14.3 %   oberstes 1/6 31.5 %   (64 Kaesten)
+  fuhre      189696 /  34000 px  UEBER +155696   oben      0 /  10000
+  stadt      113440 /  40000 px  UEBER +73440   oben  61952 /  26000  UEBER +35952
+  kern        98608 / 120000 px           oben  78848 /  80000
+  sud         87840 /  34000 px  UEBER +53840   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        30400 /  20000 px  UEBER +10400   oben      0 /  12000
+  erbe        16800 /  28000 px           oben      0 /   6000
+  gegner      11968 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["fuhre: 189696/34000 px","stadt: 113440/40000 px  oben 61952/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 87840/34000 px","name: 30400/20000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []
+=== E2 w30  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1283x60 @735,46 = 76957 px (10.9 % des obersten 1/6)
+  hauszeile  797x28 @978,160 = 21906 px (3.1 % des obersten 1/6)
+  deckung    836x24 @1724,1371 = 19849 px (2.8 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 14.9 %   oberstes 1/6 32.0 %   (67 Kaesten)
+  fuhre      190464 /  34000 px  UEBER +156464   oben      0 /  10000
+  stadt      121424 /  40000 px  UEBER +81424   oben  62336 /  26000  UEBER +36336
+  kern       102192 / 120000 px           oben  82432 /  80000  UEBER +2432
+  sud         87840 /  34000 px  UEBER +53840   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        29184 /  20000 px  UEBER +9184   oben      0 /  12000
+  erbe        17376 /  28000 px           oben      0 /   6000
+  gegner      10032 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["fuhre: 190464/34000 px","stadt: 121424/40000 px  oben 62336/26000 px","preis: 78864/24000 px  oben 78864/20000 px","sud: 87840/34000 px","name: 29184/20000 px","kern: 102192/120000 px  oben 82432/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []
+=== E3 w30  lage 0 [] fehler 0 verdeckt 0
+  kopfleiste 1330x60 @711,46 = 79805 px (11.3 % des obersten 1/6)
+  hauszeile  846x28 @953,160 = 23267 px (3.3 % des obersten 1/6)
+  deckung    800x24 @1759,1371 = 18998 px (2.7 % des obersten 1/6)
+  weiter     257x75 @2303,1437 = 19134 px (2.7 % des obersten 1/6)
+FLAECHENHAUSHALT  gesamt 14.8 %   oberstes 1/6 32.3 %   (61 Kaesten)
+  fuhre      175680 /  34000 px  UEBER +141680   oben      0 /  10000
+  stadt      123456 /  40000 px  UEBER +83456   oben  61440 /  26000  UEBER +35440
+  kern       105264 / 120000 px           oben  85504 /  80000  UEBER +5504
+  sud         93184 /  34000 px  UEBER +59184   oben      0 /   6000
+  preis       78864 /  24000 px  UEBER +54864   oben  78864 /  20000  UEBER +58864
+  name        35264 /  20000 px  UEBER +15264   oben      0 /  12000
+  erbe        12576 /  28000 px           oben      0 /   6000
+  gegner       9504 /  28000 px           oben      0 /   8000
+  klang        1936 /   4000 px           oben   1936 /   3000
+  pruefe(): ["fuhre: 175680/34000 px","stadt: 123456/40000 px  oben 61440/26000 px","sud: 93184/34000 px","preis: 78864/24000 px  oben 78864/20000 px","name: 35264/20000 px","kern: 105264/120000 px  oben 85504/80000 px"]
+  blaetter: []
+  ueberRand: []
+  geklemmt: {}  ohneGriff: {}
+  TAFELN>200k: []
+  Spur: []
+  Preisbruch: []
