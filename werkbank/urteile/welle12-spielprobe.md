@@ -72,8 +72,19 @@ Die zehn häufigsten Klicks dieser Sitzung sind vier Knöpfe: `fuhre:tafel-auf:g
 zwei Knöpfe, die Woche für Woche dasselbe tun.** Alles andere kam zusammen auf unter
 30 Klicks in zehn Spieljahren.
 
-*(Die Zählungen der übrigen Epochen und die vier Menschenfragen folgen, sobald die
-Sitzungen gelaufen sind.)*
+---
+
+## 2 · Die Zählung je Epoche
+
+*(wird gefüllt, sobald alle vier Sitzungen gelaufen sind)*
+
+## 3 · Unwiderrufliche Festlegungen
+
+*(desgleichen)*
+
+## 4 · Der Gegner
+
+*(desgleichen)*
 
 ---
 

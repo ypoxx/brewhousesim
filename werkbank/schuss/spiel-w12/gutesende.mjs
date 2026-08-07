@@ -96,6 +96,9 @@ while (Date.now() < ENDE) {
     }
   }
 
+  /* Zu Michaeli die Zahlweise verabreden — der Knopf, den niemand erklaert */
+  if (s.woche <= 2) { if (await greif('fuhre:ziel:bar', 240)) schreib({ was: 'ziel-verabredet', jahr: s.jahr, woche: s.woche }); }
+
   /* Wirtschaft: Rohstoff, Plan, Fuhre */
   s = await schirm();
   if (s.rohstoff < 45) {
