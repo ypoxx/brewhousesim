@@ -509,3 +509,58 @@ Veto; 1600 liegt mit 7,80 MB am naechsten daran, wie schon vorher.
 `tor.mjs`: alle vier Epochen offen, `lage` 0, 0 Konsolenfehler, 95/103/106/99
 Zuege. `spielprobe.mjs` (60 Wochen je Epoche mit echten Klicks): **bestanden**,
 `lage` 0, 0 Fehler in allen vieren.
+
+---
+
+# WAS GEGEN MICH SPRICHT — und es gehoert zu R9
+
+**`BRAUHAUS.runde.nachwehen()` hat das alte Rennen NICHT von selbst gefunden.**
+Gemessen am Vorzustand `7a1a942` (Hafen 8940) mit derselben Probe, die die
+Sonde selbst mitbringt (`geraet.mjs`, Fassung fuer Staende ohne
+`kern/runde.js`):
+
+| Zustand am Vorzustand | Urteil von `nachwehen()` |
+|---|---|
+| Ladezustand, alle vier Epochen | **ruhig** |
+| nach 30 × WEITER, alle vier Epochen | **ruhig** |
+| nach 30 × WEITER + Sommerzettel zu (Michaeli), E1/E2 | **ruhig** |
+
+Das ist kein Widerspruch zum Befund, aber es ist eine Grenze, und sie steht
+hier statt in einer Fussnote: die Luege dauert **420 ms** und nur dann, wenn
+in diesen 420 ms **kein** weiteres Zeichnen dazwischenkommt. In einem Lauf
+ueber 62 Wochen faellt sie fuenfmal; sie auf Zuruf zu treffen, verlangt, im
+richtigen Millisekundenfenster zu fragen. Was die Sonde zuverlaessig
+beantwortet, ist die andere Haelfte derselben Frage — **„ist die Runde, die
+gerade zu Ende ging, wirklich fertig?"** —, und darauf hat der Vorzustand
+keinen Griff.
+
+**Das Geraet, das die Frage wirklich in Minuten beantwortet, ist deshalb
+`rennen.mjs` mit `DROSSEL=1,2,3,4,6`:** zwoelf Minuten, fuenf Laeufe, und die
+Antwort ist ein Vergleich von fuenf Zahlenreihen statt neun 400-Wochen-Laeufen.
+`nachwehen()` und `pruefe()` sind die billige Vorstufe (eine Minute) und der
+Griff, mit dem ein Stueck-Bauer beim Bauen sieht, was er hinterlaesst — auf
+dem Nachstand nennt `pruefe()` in 1970 nach Michaeli den Rest beim Namen
+(`aussen-pendel`, 7), und genau dieser Rest ist Auflage 1 und 2 fuer DIE STADT.
+
+## Zwei weitere Dinge, die gegen die einfache Erzaehlung sprechen
+
+**Die Zahlen der vierten Latte im Auftrag stimmen mit keiner meiner beiden
+Messungen ueberein.** WELLE-12.md nennt „10 Ueberlaeufe · 365 Textknoten ·
+0 von 308 Knoepfen". Gemessen mit `aufsicht/lesbarkeit.mjs` auf beiden
+eingefrorenen Staenden:
+
+| Leinwand | vorher `7a1a942` | nachher `5707219bc98a` |
+|---|---|---|
+| 1600×1000 (Voreinstellung des Geraets) | 5 · 237 · 0 von 292 | **2 · 237 · 0 von 292** |
+| 1366×768 | 12 · 257 · 0 von 292 | **9 · 257 · 0 von 292** |
+
+Die Latte ist in beiden Maessen **besser** geworden und in keinem
+schlechter; welche Leinwand die Zahl 10/365/308 erzeugt hat, kann ich nicht
+nachstellen. Wer die Latte abnimmt, sollte die Leinwand dazusagen.
+
+**`haushalt.pruefe()` ist auf beiden Staenden gleich voll.** Der Auftrag
+verlangt „`haushalt.pruefe()` ohne Beanstandung"; gemessen meldet es
+**fuenf** Ueberschreitungen im Ladezustand (stadt, sud, preis, name, kern)
+und **sechs** nach 30 Wochen — **auf dem Vorzustand genauso**. Diese Welle
+hat kein Layout angefasst und daran nichts geaendert; die Auflage steht
+seit Welle 10 bei den Stuecken.
