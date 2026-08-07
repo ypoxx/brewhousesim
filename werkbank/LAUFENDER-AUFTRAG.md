@@ -46,6 +46,56 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## WELLE 12 — DAS RENNEN IST ABGESTELLT, DIE ABNAHME LÄUFT
+
+*7. August. Fünf Fassungen, die fünfte trägt.*
+
+**F5 = F1 ohne das Vorziehen von `requestAnimationFrame`, sonst nichts.** Nur
+ein `setTimeout`, das **während einer Zeichenrunde** bestellt wird, zieht der
+Rundenschluss vor. Das trifft im ganzen Spiel **zwei** Stellen —
+`preis.js:2737` (die 420-ms-Frist, der Verursacher) und `name.js:2272` —,
+während **alle sieben rAF-Stellen unberührt** bleiben, darunter
+`fuhre.js:2541`, an dem die erste Fassung 1600 und 1884 zerbrochen hatte.
+
+> **Die Regel dahinter, vom Builder formuliert und hier übernommen:** *ein
+> Rahmen darf einem Stück sagen, **wann** etwas zu tun ist, nicht **wie** seine
+> Messung zustande kommt.* Ein `requestAnimationFrame` **ist** eine Messstelle
+> („Layout fertig"); ein `setTimeout` ist keine, es heißt nur „später".
+
+**Harte Abnahme, Stand `813f776`, jeder Lauf einzeln durchs Messfenster:**
+
+| | Läufe | Prüfsummen | frühere Fassungen |
+|---|---|---|---|
+| **1350** | 6 | **1** (`3e87b7a47385`) | F2 riss hier: 2 Läufe, 2 Prüfsummen |
+| **1884** | 3 | **1** (`3f008dc880b9`) | F1 riss hier: 3 Läufe, 3 Prüfsummen |
+| 1600 | läuft | — | — |
+| 1970 | in der Schlange | — | — |
+
+Wochenweise sind die sechs 1350-Läufe und die drei 1884-Läufe **0 von 400
+Wochen** auseinander — die eine Prüfsumme ist also kein Formatierungszufall.
+`lage` 0 und null Seitenfehler in allen zehn Läufen.
+
+> ### DIE ORDNERZUORDNUNG, DIE ICH VERLANGT HATTE — belegt statt behauptet
+>
+> Ich hatte die Prüfsummen in seinen Messordnern von außen gezählt und einen
+> Widerspruch gefunden, den ich nicht auflösen konnte: `abnahme/` war in 1350
+> stabil und in 1600/1884 nicht, `abnahme2/` genau umgekehrt. Mein Verdacht war,
+> die Ordner könnten Läufe **zweier Fassungen mischen** — dann wäre keine der
+> Zahlen brauchbar.
+>
+> **Der Beleg dagegen kommt aus einer alten Falle dieses Laufs:** `linie.mjs`
+> schreibt den **Knopftext vom Schirm** mit in seine Ausgabe. Zwei Stände mit
+> verschiedenem Bau haben deshalb verschiedene Prüfsummen, **auch wenn sie
+> dieselbe Partie spielen**. Die drei Prüfsummenmengen sind **disjunkt** — kein
+> einziger Wert kommt in zwei Ordnern vor. Also mischt kein Ordner: `abnahme/`
+> gehört zu F1, `abnahme2/` zu F2, `abnahme-vorher/` zum Vorzustand.
+>
+> **Was mich in die Irre geführt hatte:** dieselbe Eigenschaft, die den Beleg
+> liefert, macht Prüfsummen **zwischen** Ständen unvergleichbar. Wer sie über
+> Fassungsgrenzen hinweg zählt, zählt Bau und Partie in einer Zahl.
+
+---
+
 ## WELLE 11 IST GEBAUT UND WIRD NICHT ABGENOMMEN — 1350 ist bistabil
 
 *7. August, von der Aufsicht am eingefrorenen Integrationsstand `7a1a942`
