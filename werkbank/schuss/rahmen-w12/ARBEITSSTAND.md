@@ -564,3 +564,52 @@ verlangt „`haushalt.pruefe()` ohne Beanstandung"; gemessen meldet es
 und **sechs** nach 30 Wochen — **auf dem Vorzustand genauso**. Diese Welle
 hat kein Layout angefasst und daran nichts geaendert; die Auflage steht
 seit Welle 10 bei den Stuecken.
+
+---
+
+# DIE HARTE ABNAHME — Stand `5707219bc98a` (Hafen 8942)
+
+Jeder Lauf einzeln durch `aufsicht/messfenster.sh`,
+`rueckkopplung-r3/linie.mjs <epoche> 400`, `?saat=1350`.
+
+## 1350 — sechs Laeufe, EINE Pruefsumme
+
+| Lauf | Zeit | md5 |
+|---|---|---|
+| e1-A | 03:16:09 | `f250961e4ff7` |
+| e1-B | 03:19:55 | `f250961e4ff7` |
+| e1-C | 03:23:48 | `f250961e4ff7` |
+| e1-D | 03:27:48 | `f250961e4ff7` |
+| e1-E | 03:31:29 | `f250961e4ff7` |
+| e1-F | 03:35:49 | `f250961e4ff7` |
+
+**Sechsmal dieselbe Pruefsumme.** Vorher: drei Laeufe, **zwei** Pruefsummen
+(`74edb872` zweimal, `ede238f3` einmal), Spannweite ρ 0,712.
+Bei einem Abweichungsverhaeltnis von 1:3 waere ein Dreiersatz zu rund 30 %
+Zufall gewesen — ein Sechsersatz ist es zu unter 3 %.
+
+## 1600 — und hier bleibt ein Rest, den ich melde
+
+| Lauf | md5 |
+|---|---|
+| e2-A | `9d3319d927af` |
+| e2-B | **`0694c7c336fe`** |
+| e2-C | `9d3319d927af` |
+
+**Zwei Pruefsummen in drei Laeufen — die Bedingung ist fuer 1600 nicht
+erfuellt.** Was der Unterschied ist, steht hier vollstaendig, weil er kleiner
+ist, als die Pruefsumme aussehen laesst:
+
+* **Genau EINE von 400 Wochen** unterscheidet sich (Index 153, 1605 W4).
+* In dieser Woche unterscheidet sich **genau EIN Feld**: `faesser` 24 gegen
+  22. Der Keller steht einmal voll und einmal zwei Fass darunter.
+* **Alles andere ist bitgleich:** die Kasse in allen 400 Wochen, die Kennzahl
+  in allen 400 Wochen, `leiterRoh` (also die ganze ρ-Reihe), die Jahre, die
+  Kassenspanne 302–2851 und der Schlussstand 1613/W11 mit 702 in der Lade.
+* **ρ ist damit in allen drei Laeufen Ziffer fuer Ziffer dieselbe.**
+
+Es ist also **dieselbe Partie mit einer voruebergehenden Abweichung von zwei
+Fass in einer Woche**, nicht zwei Partien. Trotzdem: die Abnahmebedingung
+lautet „eine Pruefsumme", und die ist nicht erfuellt. Ob dieser Rest neu ist
+oder auf dem Vorzustand ebenso auftritt, wird gerade nachgemessen
+(`abnahme-vorher/`, 1600 dreimal auf `7a1a942`).
