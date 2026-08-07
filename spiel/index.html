@@ -68,6 +68,19 @@
 <script src="kern/basis.js"></script>
 <script src="kern/orte.js"></script>
 <script src="kern/uhr.js"></script>
+<!-- WELLE 12 — die zweite und letzte Zeile, die in dieser Datei seit dem
+     Einfrieren dazugekommen ist. Sie haengt kern/runde.js ein: den
+     RUNDENSCHLUSS. Er macht aus B.sende('zeichne') eine Runde mit Ende und
+     holt das nach, was ein Stueck waehrend des Zeichnens auf spaeter
+     verschiebt — statt es an der Wanduhr haengen zu lassen. Der Grund steht
+     im Kopf der Datei: an genau dieser Frist (preis.js:2737, 420 ms) ist
+     1350 in zwei Partien zerfallen.
+     SIE STEHT HIER, direkt hinter der Uhr, weil sie B.sende umhuellt und
+     window.setTimeout/requestAnimationFrame umhuellen muss, BEVOR irgendein
+     Stueck sie zum ersten Mal ruft. Kein <script>- oder <link>-Tag eines
+     Stuecks ist beruehrt, die Ladereihenfolge der acht Stuecke ist
+     unveraendert. -->
+<script src="kern/runde.js"></script>
 <script src="kern/welt.js"></script>
 <script src="kern/ton.js"></script>
 <script src="kern/buehne.js"></script>

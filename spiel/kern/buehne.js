@@ -129,7 +129,17 @@
       B.buehne.setzeEpoche(B.welt.zeit.epoche);
       stuecke.forEach(function (s) { s.ruf('aufbau', {}); });
       gestartet = true;
-      stuecke.forEach(function (s) { s.ruf('zeichne', { grund: 'start' }); });
+      /* WELLE 12 — DER ERSTE BILDAUFBAU IST AUCH EINE RUNDE.
+         Diese Schleife ruft die Stuecke direkt und geht NICHT ueber
+         B.sende('zeichne'); der Rundenschluss (kern/runde.js) haengt aber
+         genau dort. Ohne diese Klammer waere ausgerechnet der Ladezustand
+         die einzige Runde ohne Ende — und der Ladezustand ist der, den der
+         blinde Kritiker fotografiert. Die Reihenfolge der Aufrufe bleibt
+         Zeile fuer Zeile dieselbe; nur der Schluss kommt dazu. */
+      var malen = function () {
+        stuecke.forEach(function (s) { s.ruf('zeichne', { grund: 'start' }); });
+      };
+      if (B.runde && B.runde.runde) B.runde.runde(malen); else malen();
     },
 
     istGestartet: function () { return gestartet; }
