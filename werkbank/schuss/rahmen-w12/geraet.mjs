@@ -104,8 +104,13 @@ for (const e of [1, 2, 3, 4]) {
     + ` tafeln=${(d.tafeln || []).length} ueberRand=${(d.ueberRand || []).length}`
     + ` haushalt=${(d.haushalt || []).length}`);
   console.log('     ' + d.rundeZeile);
-  if (d.rundePruefe && d.rundePruefe.length) {
+  /* Am VORZUSTAND gibt es kern/runde.js nicht; dann steht hier eine
+     Zeichenkette statt einer Liste. Das ist kein Fehler, sondern die
+     Auskunft — und es darf die Probe nicht abwuergen. */
+  if (Array.isArray(d.rundePruefe)) {
     d.rundePruefe.forEach(r => console.log(`     runde.pruefe: ${r.was} (${r.zahl}) — ${r.sagt}`));
+  } else if (d.rundePruefe) {
+    console.log('     runde: ' + d.rundePruefe);
   }
   if (!ruhig && d.nachwehen) {
     d.nachwehen.beanstandungen.forEach(x => {
