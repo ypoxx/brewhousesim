@@ -899,6 +899,26 @@ gehört dem Kritiker, nicht dem Zähler.
 
 ## DIE RESETS KOMMEN JETZT STÜNDLICH — was daraus folgt
 
+> ### EIN ZEITSTEMPEL NACH `git reset --hard` IST KEIN LEBENSZEICHEN
+>
+> *7. August, eigener Fehler der Aufsicht, zweimal hintereinander gemacht.*
+>
+> Nach einem Teil-Reset habe ich geprüft, ob der Builder noch arbeitet, indem
+> ich `stat` auf seine Arbeitsstandsdatei laufen ließ — sie war drei Sekunden
+> alt, also „lebt er". **Sie war drei Sekunden alt, weil ich sie drei Sekunden
+> vorher selbst mit `git reset --hard` ausgecheckt hatte.** git setzt die
+> Dateizeit auf den Augenblick des Auscheckens; der Zeitstempel maß meinen
+> eigenen Handgriff.
+>
+> Tatsächlich war der Rahmen zu diesem Zeitpunkt schon **dreieinhalb Stunden
+> tot**, und ich habe es zweimal als „lebt und schreibt" berichtet.
+>
+> **Die Prüfung, die trägt:** ein laufender Prozess
+> (`ps -o etime=,args= -C node`), oder — wenn gerade zwischen zwei Läufen
+> nichts läuft — der **Inhalt** gegen die zuletzt bekannte Fassung, nicht die
+> Dateizeit. *Wer nach einem Reset einen Zeitstempel liest, liest sich selbst.*
+
+
 Am 4./5. August: **Reset 6 bis 9 innerhalb von zwölf Stunden**, zuletzt im
 Stundentakt, jedes Mal auf denselben alten Commit `78c79bb`. Verloren ging nie
 etwas Committetes. Verloren ging jedes Mal dasselbe:
