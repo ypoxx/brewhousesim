@@ -83,23 +83,35 @@ nicht größer als die Kasse in derselben Woche.
 
 | | **1350** | **1600** | **1884** | **1970** |
 |---|---|---|---|---|
-| Minuten gespielt | 20,1 | 20,1 | — | — |
-| Wochen · Braujahre | 284 · 1350–1359 | 310 · 1600–1610 | — | — |
-| echte Mausklicks | 1.494 | 838 | — | — |
-| Klicks, die ins Leere gingen | 0 | 93 | — | — |
-| **greifbare Züge, Median je Woche** | **48** | **54** | — | — |
-| **davon mit Preisschild, Median** | **7** | **10** | — | — |
-| **davon bezahlbar, Median** | **2** | **3** | — | — |
-| Wochen ohne *eine* bezahlbare Preisoption | **127 von 284** | 20 von 310 | — | — |
-| Wochen mit ≥ 2 bezahlbaren | 153 | 271 | — | — |
-| größte bewiesen einander ausschließende Gruppe | **4** | **4** | — | — |
-| Deckung (Kasse ÷ nächster sinnvoller Zug), Median | **0,16×** | **0,61×** | — | — |
-| Wochen mit Deckung unter 1× | **250 von 284** | 212 von 310 | — | — |
-| Kasse Anfang → Ende | 112 → 17 Pf | 640 → 179 fl | — | — |
-| Gegnerzüge, die ohne mich geschahen | **140** | **151** | — | — |
-| Wochen, in denen der Gegner zog | 125 | 138 | — | — |
-| Züge, die ich gegen ihn getan habe | **0** | **4** | — | — |
-| `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | 0 · 0 | — | — |
+| Minuten gespielt | 20,1 | 20,1 | 20,0 | 10,6 *(das Spiel endete)* |
+| Wochen · Braujahre | 284 · 1350–1359 | 310 · 1600–1610 | 308 · 1884–1894 | 128 · 1970–1974 |
+| echte Mausklicks | 1.494 | 838 | 821 | 343 |
+| Klicks, die ins Leere gingen | 0 | 93 | 106 | 61 |
+| zusätzliche Klicks, nur um ein Brett zu suchen | 74 | 1.089 | 1.062 | 709 |
+| **greifbare Züge, Median je Woche** | **48** | **54** | **50** | **48** |
+| **davon mit Preisschild, Median** | **7** | **10** | **11** | **7** |
+| **davon bezahlbar, Median** | **2** | **3** | **7** | **0** |
+| Wochen ohne *eine* bezahlbare Preisoption | **127 von 284** | 20 von 310 | 7 von 308 | **70 von 128** |
+| Wochen mit ≥ 2 bezahlbaren | 153 | 271 | 300 | 51 |
+| Michaelitafeln, die ich zu sehen bekam | 4 | 22 | 22 | 10 |
+| davon **nur nach Suche** | **3** | **21** | **21** | **9** |
+| größte bewiesen einander ausschließende Gruppe | **4** | **4** | **6** | **5** |
+| Deckung (Kasse ÷ nächster sinnvoller Zug), Median | **0,16×** | **0,61×** | **0,62×** | **0,08×** |
+| Wochen mit Deckung unter 1× | **250 von 284** | 212 von 310 | 178 von 308 | **102 von 128** |
+| Kasse Anfang → Ende | 112 → 17 Pf | 640 → 179 fl | 14.250 → 5.028 M | 86.000 → 17.435 DM |
+| Gegnerzüge, die ohne mich geschahen | **140** | **151** | **96** | **70** |
+| Wochen, in denen der Gegner zog | 125 | 138 | 92 | 61 |
+| Züge, die ich gegen ihn getan habe | **0** | **4** | **1** | **0** |
+| unwiderrufliche Festlegungen getroffen | **0** | 1 | 1 | **0** |
+| `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | 0 · 0 | 0 · 0 | 0 · 0 |
+
+**Die Kasse fällt in allen vier Epochen.** Nicht einmal ist sie am Ende der Sitzung höher
+als am Anfang. Das ist bemerkenswert, weil die Latte ausdrücklich gegen die
+*Wohlstandssingularität* von Patrizier gebaut ist — dieses Spiel hat die entgegengesetzte
+Kurve, und sie ist nicht besser: die Deckung, also genau die Zahl, um die es der Latte
+geht, liegt im Median zwischen **0,08×** und **0,62×** und in **742 von 1.030 gespielten
+Wochen unter 1×**. In sieben von zehn Wochen konnte ich den Zug, den das Spiel selbst
+unten am Rand als den nächsten sinnvollen ausweist, **nicht bezahlen**.
 
 ### Punkt 1 der Latte — Entscheidungen mit Preisschild nebeneinander, die einander ausschließen
 
@@ -132,25 +144,55 @@ gegen *„Fass an den Wirt · 1 Fass statt Geld"*, in 490 von 500 abgelesenen Ad
 der ersten 120 Wochen. Das ist eine echte Wahl mit Preis, und sie ist gut gebaut. Sie ist
 aber immer **dieselbe** Wahl, an einer anderen Adresse.
 
-### Punkt 4 der Latte — die Verbliste je Epoche *(vorläufig, 1350 gegen 1600)*
+### Punkt 4 der Latte — die Verbliste je Epoche · **der teuerste Punkt**
 
-Ich habe zwei Listen gebildet: die **Verben** (welche Art Handlung war je greifbar) und die
-**Knopfaufschriften** (welche Wörter standen darauf, Zahlen getilgt).
+Ich habe zwei Listen gebildet, beide aus dem, was während des Spielens wirklich **greifbar
+auf dem Schirm** stand: die **Verben** (welche Art Handlung war je anfassbar — `data-zug`
+ohne den Gegenstand, Rahmenknöpfe wie Reiter, Chronik, WEITER herausgerechnet) und die
+**Knopfaufschriften** (welche deutschen Wörter standen darauf, Zahlen getilgt).
 
-| | 1350 | 1600 | gemeinsam | Jaccard |
+| | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
-| Verben | 43 | 42 | **38** | **0,81** |
-| Knopfaufschriften | 116 | 119 | 44 | 0,23 |
+| Verben erreichbar | 43 | 42 | 46 | 46 |
+| Knopfaufschriften | 116 | 119 | 118 | 120 |
 
-**Nur in 1350:** `erbe:anfechten` · `fuhre:bann` · `fuhre:tafel-ab` · `sud:wasser` ·
-`sud:wuerze`.
-**Nur in 1600:** `fuhre:pfand` · `name:liefern` · `name:zurueckhalten` · `sud:schuettung`.
+| Paar | Verben gemeinsam | Jaccard | Aufschriften gemeinsam | Jaccard |
+|---|---|---|---|---|
+| 1350 ↔ 1600 | 38 | **0,81** | 44 | 0,23 |
+| 1350 ↔ 1884 | 38 | **0,75** | 39 | 0,20 |
+| 1350 ↔ 1970 | 37 | **0,71** | 38 | 0,19 |
+| 1600 ↔ 1884 | 39 | **0,80** | 41 | 0,21 |
+| 1600 ↔ 1970 | 37 | **0,73** | 38 | 0,19 |
+| 1884 ↔ 1970 | 38 | **0,70** | 41 | 0,21 |
 
-Das ist der wichtigste Befund dieses Papiers und er ist zweischneidig: **die Wörter sind
-verschieden, die Handlungen sind es kaum.** In 1600 heißt der Keller „Gewölbe", der
-Ochsenkarren „Pferdefuhrwerk", das Grutgeld „Ungeld", die Bannmeile „Bierbann über vier
-Dörfer" — und die Reiterleiste hat in beiden Epochen **dieselben elf Fächer in derselben
-Reihenfolge**. Neun von zehn Dingen, die ich tun konnte, konnte ich in beiden Epochen tun.
+**In allen vier Epochen greifbar: 37 Verben.** Nur in einer einzigen Epoche:
+
+* **nur 1350 (4):** `erbe:anfechten` · `fuhre:bann` · `sud:wasser` · `sud:wuerze`
+* **nur 1600 (2):** `fuhre:pfand` · `sud:schuettung`
+* **nur 1884 (5):** `fuhre:fracht` · `name:entzug-loesen` · `sud:hefe` · `sud:hefe-fuehren` · `sud:kaelte`
+* **nur 1970 (8):** `fuhre:ausgang` · `fuhre:listen` · `gegner:angebot-ja` · `gegner:angebot-nein` · `sud:behandlung` · `sud:fuehrung` · `sud:zettel-charge-frei` · `sud:zettel-charge-schnitt`
+
+**Das Urteil dazu ist geteilt, und beide Hälften gehören hingeschrieben.**
+
+*Vier Tapeten sind es nicht.* Die Wörter sind zu 80 % verschieden (Jaccard 0,19–0,23), und
+zwar nicht kosmetisch: 1600 verhandelt Reinheitsgebot, Zunftbrief, Bierbann über vier
+Dörfer und den Kauf des Anwesens; 1884 Warmluftdarre, Malzkontrakt und Braumeister; 1970
+Kieselgurfilter, Bierdeckel, Listung im Regal. Die **Enden unterscheiden sich nach
+Ursache** (§7): 1350 endet mit „Der Rat entzieht das Braurecht", 1970 mit „Das Brauhaus
+wird stillgelegt — der Handel nimmt es aus dem Sortiment". 1970 hat als einzige Epoche
+einen zweiten Gegner (die Nordstern-Gruppe) und mit `gegner:angebot-ja/nein` eine
+Übernahmefrage, die es sonst nirgends gibt. Das ist echte Arbeit und keine Typografie.
+
+*Vier Mal dasselbe Spiel ist es trotzdem.* **37 von 43 bis 46 Verben sind in allen vier
+Epochen dieselben**, und die Woche fühlt sich in allen vier gleich an, weil sie es ist:
+Karren füllen, abschicken, weiter. Die Reiterleiste hat in allen vier Epochen **dieselben
+zehn Fächer in derselben Reihenfolge** — nur heißt Fach 5 einmal DER KELLER, einmal DAS
+GEWÖLBE, einmal DER EISKELLER, einmal DIE TANKS, und Fach 6 einmal OCHSENKARREN, einmal
+PFERDEFUHRWERK, einmal HALBER WAGEN, einmal LASTZUG. Was sich zwischen 1350 und 1970
+wirklich ändert, ist die **Ausstattung der immer gleichen Handlung**, nicht die Handlung.
+
+Wer die Latte streng liest („kommt dieselbe Verbliste heraus?"), muss sagen: **zu etwa
+achtzig Prozent ja.**
 
 ## 3 · Unwiderrufliche Festlegungen
 
@@ -172,14 +214,20 @@ Gezählt, wie oft ich eine getroffen habe:
 
 | | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
-| Festlegungen angeboten (max. gleichzeitig) | 3 | 4 | — | — |
-| **von mir getroffen** | **0** | **1** | — | — |
-| Angebote (nicht dauerhaft, aber jahresweise weg) getroffen | 1 | 2 | — | — |
+| Festlegungen gleichzeitig auf der Tafel | 3 | 4 | 4 | 4 |
+| **von mir getroffen** | **0** | **1** | **1** | **0** |
+| Angebote getroffen (jahresweise weg, nicht für immer) | 1 | 2 | 5 | 4 |
 
-**Null von drei in 1350**, weil keine bezahlbar war: die billigste kostete 85 Pf bei einer
-Kasse von 112, und ab dem zweiten Jahr stand die Kasse dauerhaft unter 70. Eine
-unwiderrufliche Festlegung, die man nie bezahlen kann, ist keine Festlegung, sondern eine
-Vitrine.
+**Zusammen in vier Sitzungen und 1.030 Wochen: zwei unwiderrufliche Festlegungen.** In
+1350 null von drei, weil keine bezahlbar war — die billigste kostete 85 Pf bei einer Kasse
+von 112, und ab dem zweiten Jahr stand die Kasse dauerhaft unter 70. In 1970 null von vier
+bei einer Anfangskasse von 86.000 DM, weil die billigste 48.000 DM kostete und die Kasse
+danach fiel.
+
+Die Tafel schreibt das selbst hin, und das ist gut: *„HEUTE NICHT · Die Kasse reicht für
+keines dieser Angebote. Das billigste — Der Wappenbrief — kostet 500 fl, es fehlen 24 fl."*
+Eine unwiderrufliche Festlegung, die man nie bezahlen kann, ist trotzdem keine Festlegung,
+sondern eine Vitrine.
 
 ## 4 · Der Gegner
 
@@ -188,8 +236,13 @@ ein Brett aufschlägt.** Das ist die Latte, an der dieses Spiel am klarsten best
 
 | | 1350 | 1600 | 1884 | 1970 |
 |---|---|---|---|---|
-| Züge des Gegners in meiner Sitzung | 140 | 151 | — | — |
-| Wochen, in denen er zog | 125 von 284 | 138 von 310 | — | — |
+| Züge des Gegners in meiner Sitzung | 140 | 151 | 96 | 70 |
+| Wochen, in denen er zog | 125 von 284 | 138 von 310 | 92 von 308 | 61 von 128 |
+| Züge, die **ich** gegen ihn getan habe | 0 | 4 | 1 | 0 |
+
+Das Verhältnis ist der eigentliche Befund: **457 Züge des Gegners gegen 5 Züge von mir.**
+Nicht weil ich nicht wollte — meine Hand hat es jede dritte Woche versucht —, sondern weil
+„ablösen 76 Pf" bei einer Kasse von 14 Pf kein Zug ist. Der Gegner spielt, ich sehe zu.
 
 Auf der Karte stand dabei durchgehend, ohne Klick: *„Vorsprung: 3 Dinge · wirbt 3 Wo.
 kürzer"*, *„Sebastian Feist · streitbar · 5 Häuser · 24 Züge · **2 diese Woche** · Kasse
@@ -342,6 +395,31 @@ dritte ist rechnerisch unerreichbar:
   hat. Eine Kasse, die bei 0 klebt, ist nicht negativ. Das heißt: der Zustand
   „handlungsunfähig, aber nicht tot" ist der stabilste Zustand des Spiels, und er hat
   keinen eigenen Text.
+
+## 8 · Wollte ich weiterspielen?
+
+**Zweimal ja und einmal nein, und der Unterschied ist die ganze Kritik.**
+
+**Nein** in den Minuten 4 bis 20 jeder Sitzung. Die Woche besteht aus zwei Knöpfen — „Wie
+vorige Woche", „FUHRE ABSCHICKEN" —, und ich habe sie in vier Sitzungen zusammen
+**1.166-mal** gedrückt. Dazwischen läuft ein Gegner herum, den ich mir nicht leisten kann,
+und einmal im Jahr liegt eine prachtvolle Tafel mit fünf Angeboten, von denen keines
+bezahlbar ist. Das ist kein langweiliges Spiel — es ist ein **interessantes Spiel, das man
+nicht spielen darf**, weil das Geld fehlt.
+
+**Ja** in der ersten Minute. Der Hof ist schön, die Kopfzeile sagt Jahr, Kasse, Rohstoff,
+Lager, Woche, und unten steht in einer einzigen Zeile, was als Nächstes sinnvoll wäre und
+ob es reicht. Ich wusste sofort, wo ich bin.
+
+**Ja, sofort und ernsthaft**, in der Sekunde, in der das Spiel zu Ende ging. Als „Der Rat
+entzieht das Braurecht · 1353" aufschlug und darunter stand *„Nicht die leere Kasse hat
+das Haus zugemacht … Was fehlte, war die Adresse, die das Fass abnimmt"* — mit der Liste
+der neun Wirtshäuser und dem Jahr, in dem jedes verlorenging —, **wollte ich es sofort
+noch einmal versuchen und diesmal die Wirte halten.** Genau dafür steht der Knopf „Von
+vorn anfangen — dieselbe Stadt, andere Würfel" schon da.
+
+**Der Satz, der es trifft:** Dieses Spiel wird an seinem Ende gut, und man kommt zu selten
+dorthin. Die zwanzig Minuten dazwischen verkaufen es nicht.
 
 ---
 
