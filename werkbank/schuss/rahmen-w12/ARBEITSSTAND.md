@@ -861,3 +861,8 @@ Gerät: `rahmen-w12/tor62.sh`.
 | 1 | 119 | 3 | 34–315 | **B** |
 | 2 | 119 | 3 | 34–315 | **B** |
 | 3 | 119 | 3 | 34–315 | **B** |
+| 4 | 119 | 3 | 34–315 | **B** |
+| 5 | 119 | 3 | 34–315 | **B** |
+
+**Fünf von fünf: Partie B.** Das Tor ist offen — es sagt nur, dass sich die
+Abnahme lohnt, nicht dass sie besteht (siehe die Warnung in `tor62.sh`).
