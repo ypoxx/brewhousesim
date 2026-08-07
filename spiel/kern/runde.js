@@ -174,44 +174,38 @@
     tiefe++;
     zahl.runden++;
     try { return oSende.apply(this, arguments); }
-    finally { tiefe--; }
+    finally {
+      tiefe--;
+      /* Am Ende einer Runde ist die Lage, gegen die die Stuecke gezeichnet
+         haben, genau die, die jetzt dasteht — auch wenn sie in diesem
+         Augenblick leer ist, weil alle Bretter neu gebaut wurden. Genau
+         deshalb faellt der Wache jedes Wiederanlegen einer Klemme auf. */
+      if (tiefe === 0) letzterAbdruck = abdruck();
+    }
   };
 
   /* ---------------------------------------------------------------------
      DIE KLEMMENWACHE
      --------------------------------------------------------------------- */
-  /* WORAUF DIE WACHE ANSPRINGT — und worauf ausdruecklich nicht.
+  /* WORAUF DIE WACHE ANSPRINGT — und warum SOFORT.
 
-     Sie springt NUR an, wenn an einem Element, das es schon gab, eine
-     Klemmklasse DAZUGEKOMMEN oder WEGGEFALLEN ist. Das ist genau der
-     Vorgang, bei dem ein Stueck ein fremdes Brett wegklappt.
+     Verglichen wird die Klemmenlage mit der, die am Ende der letzten Runde
+     dastand. Baut ein Stueck sein Brett neu, sind die Klemmklassen im
+     Augenblick des Rundenschlusses fort (die Elemente sind neu) — legt DIE
+     STADT sie gleich darauf wieder an, faellt genau das der Wache auf, und
+     sie zeichnet einmal nach. Das ist teurer als noetig aussieht, und es ist
+     der Grund, warum es haelt: **jedes** Wiederanlegen einer Klemme kommt
+     dem Zeichnen zuvor, nicht nur das an einem alten Element.
 
-     Sie springt NICHT an, wenn ein Stueck sein Brett neu baut. Dabei sind
-     im selben Augenblick alle Klemmklassen fort, weil die ELEMENTE neu sind
-     — ein Vergleich der blossen Lage sieht dort bei jedem Zeichnen eine
-     „Aenderung" und zeichnet noch einmal. Gemessen, als die Wache genau das
-     tat: 858 Runden statt 202 in 62 Wochen und 209 mal am Riegel. Ein
-     Neubau erzeugt `childList`-Meldungen, kein `attributes` — deshalb
-     genuegt es, nur auf Attributmeldungen mit echtem Wechsel zu hoeren.
-
-     Sofort, nicht im naechsten Bild: der MutationObserver ist ein Mikrotask
-     und kommt damit noch vor dem naechsten Bildaufbau. Ein Bild spaeter
-     nachzusehen waere zu spaet — gemessen mit `rennen.mjs`, Drosselfaecher:
-     mit einem Bild Verzoegerung spielt 1350 wieder DREI verschiedene
-     Partien (1x/2x eine, 3x eine zweite, 4x eine dritte). */
-  var KLEMMWORT = /(^|\s)(stadt-zugeklappt|stadt-verdeckt|kern-blatt-zu)(\s|$)/;
-
-  function klemmwechsel(satz) {
-    for (var i = 0; i < satz.length; i++) {
-      var m = satz[i];
-      if (m.type !== 'attributes' || m.attributeName !== 'class') continue;
-      if (!m.target || !m.target.isConnected) continue;
-      var alt = KLEMMWORT.test(m.oldValue || '');
-      var neu = KLEMMWORT.test(m.target.className || '');
-      if (alt !== neu) return true;
-    }
-    return false;
-  }
+     Zwei feinere Fassungen sind gemessen worden und BEIDE SCHLECHTER:
+       * nur auf echten Klassenwechsel an einem bestehenden Element hoeren
+         (`attributeOldValue`): 1350 spielt im Drosselfaecher wieder ZWEI
+         Partien (1x eine, 2x/3x/4x/6x die andere).
+       * einen Bildaufbau warten, damit DIE STADT zuerst dran ist:
+         1350 spielt DREI Partien.
+     Der MutationObserver ist ein Mikrotask und kommt damit noch vor dem
+     naechsten Bildaufbau; die messende Hand wartet zwei. Nur wer in diesem
+     Fenster nachzieht, kommt ihr zuvor. */
 
   function nachsehen() {
     if (tiefe > 0) return;                        /* mitten im Zeichnen: gleich fertig */
@@ -232,12 +226,9 @@
   function starteWache() {
     if (wache || !window.MutationObserver) return;
     letzterAbdruck = abdruck();
-    wache = new MutationObserver(function (satz) {
-      if (klemmwechsel(satz)) B.wage('runde.wache', nachsehen);
-    });
+    wache = new MutationObserver(function () { B.wage('runde.wache', nachsehen); });
     var stapel = document.getElementById('buehne');
-    if (stapel) wache.observe(stapel, { subtree: true, attributes: true,
-                                        attributeFilter: ['class'], attributeOldValue: true });
+    if (stapel) wache.observe(stapel, { subtree: true, attributes: true, attributeFilter: ['class'] });
   }
 
   /* ---------------------------------------------------------------------
