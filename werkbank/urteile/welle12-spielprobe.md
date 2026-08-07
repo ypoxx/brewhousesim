@@ -129,3 +129,34 @@ fängt bei 112 Pfennig wieder an.
 Das trifft die zweite Latte unmittelbar: **eine Partie, die keine Unterbrechung überlebt,
 kann nicht länger dauern als eine Sitzung.** Die Latte verlangt zwanzig Minuten je Epoche;
 das Spiel ist auf genau eine ununterbrochene Sitzung gebaut.
+
+## 7 · Gibt es ein Ende?
+
+**Es gibt eines — und ich habe es in zwanzig Minuten Spiel nicht zu Gesicht bekommen,
+obwohl es fünfzehn Wochen lang offenstand.**
+
+Was ich am Bildschirm gefunden habe: ab dem Braujahr **1355** erschien in der Reiterleiste
+oben ein neuer Reiter mit der Aufschrift **„DIE ÜBERGABE VOR DEM RAT"**. Er stand in
+**Woche 2, 3 und 4 jedes Jahres** — 1355, 1356, 1357, 1358, 1359, zusammen **15 von 284
+gespielten Wochen** — und war ansonsten weg. Ich habe ihn in der Sitzung **nie geöffnet**,
+weil ich keinen Anlass hatte: er ist ein braunes Rechteck unter zehn anderen braunen
+Rechtecken, deren Aufschriften sich ohnehin jedes Jahr ändern (`MICHAELI 1355`,
+`GEORGI 1355`), und er verschwindet wieder, bevor man das nächste Mal hinsieht.
+
+Ein Ende „von selbst" gibt es in der Praxis nicht:
+
+* Die Uhr endet bei **2025**. Epoche I läuft von 1350 bis 1516. Ich habe in zwanzig
+  Minuten **zehn** Braujahre gespielt (14,2 Wochen je Minute); bis zum Ende der Epoche
+  wären es 167 Jahre — **rund sechs Stunden** —, bis 2025 rund 675 Jahre, also **rund
+  vierundzwanzig Stunden ununterbrochenes Spielen** — bei einem Spiel, das kein Neuladen
+  überlebt (§6).
+* **Man wechselt die Epoche nicht durch Spielen.** In zwanzig Minuten kommt man 10 von
+  167 Jahren weit. Die vier Epochen sind vier getrennte Eingänge über `?epoche=`, keine
+  Strecke. Die härteste Einzelforderung des Auftrags — *die Stadt wächst über 620 Jahre,
+  ohne den Ort zu wechseln* — ist als **Bild** erfüllt und als **Spiel** nicht: man sieht
+  die vier Zustände nie nacheinander.
+* **Untergehen kann man auch nicht.** Meine erste 1350-Sitzung stand ab dem dritten Jahr
+  bei Kasse 0, Rohstoff 1, Keller 0 von 12, mit offenen Posten in jeder Zeile der
+  Rechnung — und das Spiel lief weiter, Woche um Woche, ohne ein Wort dazu. Ein Ende
+  „Haus verloren" gibt es im Bau; es greift erst bei negativer Kasse und leerem Hof.
+  Eine Kasse, die bei 0 klebt, ist nicht negativ.
