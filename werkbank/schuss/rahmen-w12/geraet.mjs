@@ -41,6 +41,21 @@ for (const e of [1, 2, 3, 4]) {
     await s.evaluate(() => { const k = document.querySelector('[data-zug="weiter"]'); if (k) k.click(); });
     await s.waitForTimeout(70);
   }
+
+  /* HANDGRIFFE=1 — DER AUGENBLICK, AN DEM 1350 ZERFALLEN IST.
+     Nur WEITER zu druecken erreicht ihn nicht: der Rahmen DER STADT klappt
+     ein fremdes Brett erst weg, wenn ihm eines im Weg liegt. Genau das tut
+     die messende Hand zu Michaeli — sie raeumt den Sommerzettel DER FUHRE ab,
+     und im selben Atemzug klappt DIE STADT die Michaelitafel DES PREISES weg.
+     Diese zwei Klicks stellen den Zustand her, in dem die Frage ueberhaupt
+     eine Antwort hat. Sie sind wortgleich die ersten Handgriffe aus
+     `rueckkopplung-r3/linie.mjs` in Woche 1. */
+  if (process.env.HANDGRIFFE === '1') {
+    for (const zug of ['fuhre:jahresplan:grut', 'fuhre:jahresplan:duenn', 'fuhre:sommer-zu']) {
+      const el = await s.$(`[data-zug="${zug}"]:not([disabled])`);
+      if (el) { await el.click({ timeout: 1500 }).catch(() => {}); await s.waitForTimeout(120); }
+    }
+  }
   await s.waitForTimeout(300);
 
   /* Damit dieselbe Frage auch am VORZUSTAND gestellt werden kann, an dem es
