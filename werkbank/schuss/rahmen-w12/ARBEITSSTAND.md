@@ -931,3 +931,138 @@ unter 1×, 0 Seitenfehler.
 | Lauf | fertig | md5 | Kassenspanne |
 |---|---|---|---|
 | e2-A | 13:53:02 | `0066208800b5` | 302–2.851 |
+
+## WARUM F5 1350 HEILT UND F2 NICHT — die Kette, an der Quelle nachgesehen
+
+Nachgesehen im Baum, nicht erinnert:
+
+* `stuecke/preis.js:2876` ruft `seheNachRahmen()` **mitten im Zeichnen**
+  (`if (tafelSichtbar()) { zeichneTafel(fach); seheNachRahmen(); }`). Die
+  420-ms-Frist wird also **innerhalb einer Runde** bestellt — genau die
+  Bedingung, unter der F5 sie fängt.
+* `stuecke/stadt.js:599/605` (`klappeZu`/`klappeAuf`) setzen `stadt-zugeklappt`
+  auf ein fremdes Brett und senden **kein** `zeichne`. Angestoßen aus
+  `nachsehen()` (`:1360`) über `pruefe()` (`:1543`), und dieses aus
+  `baldPruefen()` (`:1554`, **`requestAnimationFrame`**) und
+  `setInterval(pruefe, TAKT)` (`:1573`).
+
+Damit greifen die beiden Hälften an **verschiedenen** Stellen:
+
+* Die **Klemmenwache** (F2) sieht das `classList.add` DER STADT als Mikrotask
+  und zeichnet sofort nach. Sie erreicht aber nicht den Fall, in dem DER PREIS
+  schon geklappt vorfindet und erst nach 420 ms selbst nachsieht — dort steht
+  `Z.weggeklappt` noch falsch und der Griff trägt weiter die alte Schrift.
+* Der **Fristenschluss** (F5) zieht genau dieses Nachsehen in dieselbe Runde.
+
+`stadt.js:1554` ist ein `requestAnimationFrame` und wird von F5 **nicht**
+gefangen — DIE STADT behält ihre Taktung unverändert. Der Rahmen sagt ihr
+nicht, wie sie misst.
+
+### Welche Partie es geworden ist — mit der Zahl dazu
+
+| | Kassenspanne | Schluss 1363 W11 | Michaeli 1350/51/52 |
+|---|---|---|---|
+| alte Partie **A** (`abnahme2/e1-A`) | 8–514 | Kasse 98 | 79/60/**164** |
+| alte Partie **B** (`abnahme2/e1-B`) | 30–558 | Kasse 140 | 79/60/**119** |
+| **F5** (`abnahme5/e1-A…F`) | **34–524** | Kasse **88** | 79/60/**119** |
+
+An der umkämpften Stelle spielt F5 den **Ast der Partie B**: die Michaelitafel
+1352 liegt auf, das Angebot für 45 Pf wird genommen (`kasseMichaeli` 119,
+LEITER 3 Zeilen). Das ist die Partie, die entsteht, wenn der Knopf nicht mehr
+lügt. Über die vollen 400 Wochen läuft sie danach eigenständig weiter — der
+Fristenschluss legt auch die späteren Augenblicke fest, an denen die alte B
+noch gezittert hat. **Eine** Partie, sechsmal dieselbe Prüfsumme; nicht die alte.
+
+---
+
+# WAS FÜR WELLE 13 DEN STÜCKEN BENANNT IST — mit Datei, Zeile und Abnahme
+
+Alle Zeilennummern am Stand `813f776` nachgesehen, nicht erinnert.
+
+## 1 — DIE STADT: `stuecke/stadt.js:599` / `:605` (`klappeZu` / `klappeAuf`)
+
+Sie setzen und nehmen `stadt-zugeklappt` auf einem **fremden** Brett und
+senden dabei **kein** `zeichne`. Angestoßen aus `nachsehen()` (`:1360`) über
+`pruefe()` (`:1543`), und dieses aus `baldPruefen()` (`:1554`,
+`requestAnimationFrame`) und `setInterval(pruefe, TAKT)` (`:1573`). Niemand
+erfährt, dass sein Knopf jetzt eine Lage beschriftet, die es nicht mehr gibt
+— genau daran ist 1350 zerfallen. Der Rahmen fängt es heute mit einer
+Klemmenwache ab; das ist ein Verband, keine Heilung, und er kostet in jedem
+gespielten Lauf hunderte zusätzliche Bildaufbauten.
+
+*Abhilfe, eine Zeile:* am Ende von `nachsehen()`, wenn sich für mindestens ein
+**fremdes** Brett die Lage geändert hat:
+```js
+B.sende('zeichne', { grund: 'stadt-platzordnung' });
+```
+Der Kommentar bei `:1495` nennt den Einwand („der Rahmen läuft gerade selbst,
+und ein Ereignis von hier aus liefe in seinen eigenen Takt zurück"). Er trägt
+nicht mehr: `pruefe()` setzt `imGange` und verwirft die eigenen Records
+(`:1547`), ein `zeichne` am **Ende** läuft also nicht zurück.
+
+*Abnahme:* `BRAUHAUS.runde.bericht().aussen`, `.aussenPendel` und
+`.aussenRiegel` stehen nach 30 × WEITER in allen vier Epochen auf **0** —
+und im gespielten 62-Wochen-Lauf **unter 10** statt der heutigen Hunderte.
+Gemessen wird mit `rahmen-w12/geraet.mjs 30` und `rahmen-w12/rennen.mjs`.
+
+## 2 — DIE STADT: `nachsehen()` urteilt nach Wanduhrfristen
+
+`VERGESSEN` 900 ms (`:452`), `JAHRESFRIST` 1800 ms (`:453`), `HANDFRIST`
+1400 ms (`:456`), ausgewertet in `:1181`, `:1205`, `:1389`, `:1403`, `:1408`,
+dazu `handZeit = Date.now()` (`:529`) und `setInterval(pruefe, TAKT)`
+(`:1573`). Wer ein Brett danach beurteilt, **wie lange etwas her ist**,
+beurteilt es unter Last anders.
+
+*Abhilfe:* die Fristen an **Runden** hängen statt an Millisekunden — „seit dem
+Klick sind zwei Bildaufbauten vergangen" statt „1400 ms". Der Rahmen kann den
+Zähler stellen: `BRAUHAUS.runde.bericht().runden`.
+
+*Abnahme:* `rahmen-w12/rennen.mjs` mit `DROSSEL=1,2,3,4,6` liefert in allen
+fünf Läufen dieselbe Partie — **auch mit `AUSSEN_MAX = 0`**, also ohne die
+Klemmenwache des Rahmens.
+
+## 3 — DER PREIS: `stuecke/preis.js:2737` (`seheNachRahmen`, 420 ms)
+
+Eine Wanduhrfrist, um zu erfahren, was ein anderes Stück im selben Bildaufbau
+getan hat. Gerufen wird sie **mitten im Zeichnen** (`:2876`). Der Kommentar
+dort nennt den Grund richtig und zieht den falschen Schluss: nicht warten,
+sondern fragen. **Dies ist der Verursacher**, den F5 heute abfängt.
+
+*Abhilfe:* `tafelWeggeklappt()` (`:2715`) liest ohnehin live; die Frist kann
+ersatzlos entfallen, sobald DIE STADT ihr `zeichne` sendet (Punkt 1). Bis
+dahin genügt `0` statt `420`.
+
+*Abnahme:* der Griff `preis:tafel` sagt in **keinem** Augenblick
+„Michaelitafel schließen", während `.pr-tafel` fehlt oder `stadt-zugeklappt`
+trägt. Messbar mit `rahmen-w12/rennen.mjs` (Protokoll `W1:*`, Feld `griffText`
+gegen `tafelKlassen`) und mit `await BRAUHAUS.runde.nachwehen()`.
+
+## 4 — DIE FUHRE: `stuecke/fuhre.js:2541` (`passeListe`)
+
+Kein Fehler, sondern eine **Warnung mit Messung**: dieses `rAF` liest
+`clientHeight`/`scrollHeight` (`:2544`/`:2545`) und rechnet daraus einen
+Maßstab. Es ist die Stelle, an der F1 zerbrochen ist — 1600 auf zwei, 1884 auf
+drei Prüfsummen. Wer je einen Rahmen baut, der `rAF` vorzieht, verdirbt hier
+zuerst.
+
+*Abhilfe:* keine verlangt. Was verlangt ist: **dass es dort stehen bleibt**
+und nicht in eine Frist umgeschrieben wird. Ein Layoutmaß gehört in den
+Bildaufbau.
+
+*Abnahme:* `abnahme/` (F1) gegen `abnahme5/` (F5) — dieselbe Datei, derselbe
+Unterschied, drei Prüfsummen gegen eine.
+
+## 5 — DER SUD: `stuecke/sud.js:2405` (`taktGleich`)
+
+Zwei geschachtelte `requestAnimationFrame`, um abzuwarten, ob DIE STADT das
+eigene Brett zuklappt. Der Kommentar bei `:2402` sagt es wörtlich. Zwei
+Bildaufbauten sind genau die Frist, auf die auch die messende Hand wartet —
+das ist knapp.
+*Abhilfe:* dieselbe wie 3, sobald Punkt 1 steht.
+*Abnahme:* `sud`-Zettel blinkt nicht, `nachwehen()` bleibt ruhig.
+
+## 6 — ALLE ACHT: kein Blatt ist beim Rahmen angemeldet
+
+Die Auflage 7 der Welle 10 (`BRAUHAUS.blatt.melde(el, fn)`) ist weiter nicht
+eingelöst; `BRAUHAUS.haushalt.ohneGriff()` und die Blattaufsicht arbeiten ohne
+Anmeldung. Sie steht unverändert.
