@@ -83,11 +83,43 @@ vierte Welle in Folge, in der ein Builder gegen sich selbst meldet.
 die sich nicht wiederholen lässt, ist keine Messung — und jeder Beleg dieses
 Laufs steht auf „drei Läufe, eine Prüfsumme".
 
-**Nächster Schritt, sobald DER GEGNER fertig ist:** Trennprobe nach dem Muster
-von `aufsicht/welle8-trennprobe/aufsetzen.sh` — je ein Mischstand, in dem **ein**
-Stück auf `7896ee6` zurückgesetzt ist, `.js` **und** `.css`. Drei Stände, je
-dreimal 1350. Welcher Stand wieder eine einzige Prüfsumme liefert, nennt den
-Verursacher.
+### DIE TRENNPROBE IST DURCH — es gibt keinen Verursacher, es gibt einen Wettlauf
+
+*Neun Läufe, drei Mischstände aus committeten Dateien, je dreimal 1350, einzeln
+durch das Messfenster, null Fehler. `aufsicht/welle11-trennprobe/`.*
+
+| Stand | was darin neu ist | 1350 | stabil? |
+|---|---|---|---|
+| Vorzustand `7896ee6` | — | −0,336 | ja (Welle 10, dreifach) |
+| **ohneFuhre** | ERBE + GEGNER | **−0,336** | ja, 1 md5 |
+| **ohneErbe** | GEGNER + FUHRE | **+0,191** | ja, 1 md5 |
+| **ohneGegner** | ERBE + FUHRE | **−0,521** | ja, 1 md5 |
+| **voll** | alle drei | **+0,191 / −0,521 / +0,191** | **nein** |
+
+**Die beiden Werte, zwischen denen der volle Stand springt, sind exakt die
+Partien, die `ohneErbe` und `ohneGegner` je für sich stabil spielen.** Dazu
+DER GEGNER, unabhängig und ohne die Trennprobe zu kennen: allein auf den
+Vorzustand gelegt ist er in allen vier Epochen **bitgleich** — der einzige
+Unterschied im ganzen Datensatz ist das Feld `hafen`.
+
+**Daraus folgt genau eine Lesart:**
+1. **DIE FUHRE ist notwendig.** Ohne sie bleibt 1350 auf dem Vorzustandswert,
+   auch mit den beiden anderen zusammen.
+2. **Sie allein genügt nicht.** Mit FUHRE zieht GEGNER die Partie auf +0,191,
+   ERBE auf −0,521 — **jeder für sich stabil, in entgegengesetzte Richtung.**
+3. **Sind beide da, entscheidet ein Rennen.** Nicht der Würfel, nicht die Saat:
+   etwas, das mal so und mal anders fertig wird.
+
+**Es gibt also keinen Schuldigen unter den dreien.** Wer eines der Stücke
+zurücknimmt, macht das Spiel wieder wiederholbar — und keines davon ist die
+Ursache. **Die Ursache ist, dass die Reihenfolge, in der drei Stücke ihr Bild
+fertigstellen, nicht festgelegt ist.** Das ist eine Eigenschaft des Rahmens,
+nicht eines Stückes.
+
+*(Zur Beweiskraft: ein einzelner stabiler Dreiersatz wäre bei einem
+Abweichungsverhältnis von 1:3 zu rund 30 % Zufall. **Drei** stabile Sätze auf
+**drei verschiedenen** Werten sind es zu unter 3 % — und die zwei Werte des
+vollen Standes fallen zusätzlich Ziffer für Ziffer auf zwei der drei.)*
 
 ---
 
