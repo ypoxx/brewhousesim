@@ -798,3 +798,54 @@ sich in Woche 61.** Also `linie.mjs 1 62` — rund 40 s statt 7 Minuten —
 mehrfach ungedrosselt hintereinander, und verglichen wird `kasseMichaeli`
 von 1352: **164 = Partie A, 119 = Partie B.** Acht Laeufe kosten sechs
 Minuten und beantworten dieselbe Frage wie sechs 400-Wochen-Laeufe.
+
+---
+
+# DRITTER ANLAUF (7.8., ab 12:1x UTC) — nach dem zweiundzwanzigsten Reset
+
+## ZUERST: WELCHER MESSORDNER GEHOERT ZU WELCHER FASSUNG
+
+Die Aufsicht hat die Prüfsummen selbst gezählt und gefragt, ob ein Ordner
+Läufe aus zwei Fassungen mischt. **Er tut es nicht**, und der Beweis liegt in
+den Prüfsummen selbst, nicht in meinem Wort. Nachgerechnet mit `md5sum`:
+
+| Ordner | Fassung | Marke (`nachstand.sh`) | Prüfsummen |
+|---|---|---|---|
+| `abnahme-vorher/` | **Vorzustand**, Commit `7a1a942` | Hafen 8940 | e2 3× `5af1d5f1f2eb` · e3 3× `d36f613f391e` |
+| `abnahme/` | **F1 Rundenschluss** | `5707219bc98a` | e1 6× `f250961e4ff7` · e2 `9d3319d927af`/`0694c7c336fe`/`9d3319d927af` · e3 `e4363a2c41af`/`5ff4fff54648`/`b49d340136ec` · e4 2× `5adfd2fb582b` |
+| `abnahme2/` | **F2 Klemmenwache** | `7f30b3dfa40e` | e1 `d558a8a12799`/`1a7c625b59e6` · e2 3× `616c2ea42e00` · e3 3× `32587e1d4e9c` |
+
+**Warum das dicht ist und nicht bloss behauptet:** `linie.mjs` schreibt den vom
+Bildschirm abgelesenen Knopftext mit. Die Prüfsumme ist deshalb **zwischen
+Ständen verschieden, auch bei gleicher Partie** — das ist die Falle aus
+`rahmen-w10/ARBEITSSTAND.md`, und hier ist sie der Nutzen: kein einziger
+Prüfsummenwert kommt in zwei Ordnern vor. Drei disjunkte Wertemengen =
+drei Stände. Kein Ordner mischt.
+
+**Gegenprobe an der Marke:** `nachstand.sh` bildet die Marke als md5 über alle
+ausgelieferten Spieldateien. Der Arbeitsbaum, wie ich ihn vorgefunden habe,
+rechnet sich zu **`7f30b3dfa40e`** — also byteweise der Stand, auf dem
+`abnahme2/` gemessen wurde. Der vorgefundene Baum **ist** F2.
+
+`5707219bc98a` und `7f30b3dfa40e` sind **keine Commits** (`git cat-file` kennt
+sie nicht) — sie sind Nachstands-Marken. Wer sie für Commits hält, sucht
+vergeblich.
+
+## Der Bau: FASSUNG 5 = F1 minus `requestAnimationFrame`
+
+Gebaut, was am Ende des zweiten Anlaufs als Trennung benannt war. `runde.js`
+ist **wortgleich F1**, mit genau diesen Schnitten:
+
+* `window.requestAnimationFrame` / `cancelAnimationFrame` werden **nicht mehr
+  umhüllt**. `oRAF`, `oCAF`, `hatRAF` sind fort.
+* Die Schlange kennt nur noch eine Art (`merke(fn, args)` statt
+  `merke(art, fn, args)`); `fuehreAus` und `zurueckAnDieUhr` entsprechend.
+* Die Klemmenwache aus F1 bleibt Zeile für Zeile, nur in `B.wage` eingepackt
+  (aus F2 übernommen) und in eine benannte Funktion `pruefeKlemmen` gezogen.
+
+Gefangen werden dadurch im ganzen Spiel **zwei** Stellen statt neun:
+`stuecke/preis.js:2737` (420 ms, der Verursacher) und `stuecke/name.js:2272`
+(0 ms). Alle sieben rAF-Stellen bleiben unberührt — namentlich
+`stuecke/fuhre.js:2541`, an dem F1 1600 und 1884 zerbrochen hat.
+
+`kern/buehne.js` und `spiel/index.html` bleiben, wie sie in F1/F2 waren.

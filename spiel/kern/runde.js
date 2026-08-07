@@ -1,5 +1,51 @@
 /* ===========================================================================
-   kern/runde.js — DIE KLEMMENWACHE.  GEHOERT DEM SKELETT.  Neu in Welle 12.
+   kern/runde.js — DER RUNDENSCHLUSS.  GEHOERT DEM SKELETT.  Neu in Welle 12.
+
+   ---------------------------------------------------------------------------
+   LIES ZUERST: DREI FASSUNGEN, ZWEI DAVON GEMESSEN SCHLECHTER
+   ---------------------------------------------------------------------------
+   Diese Datei ist die DRITTE Fassung. Die beiden anderen stehen im Repo mit
+   ihren Messungen, weil jede von ihnen genau die Haelfte geheilt hat, die
+   die andere verdorben hat. Wer hier etwas vereinfachen will, findet unten
+   die Zahl, die dagegen spricht.
+
+     F1  Rundenschluss:  faengt waehrend einer Zeichenrunde `setTimeout` UND
+         `requestAnimationFrame` und arbeitet beides am Rundenende ab.
+         Messordner `werkbank/schuss/rahmen-w12/abnahme/`, Marke 5707219bc98a.
+           1350  6 Laeufe / 1 Pruefsumme  ✔     1600  3 / 2  ✘
+           1884  3 Laeufe / 3 Pruefsummen ✘     1970  2 / 1
+     F2  Klemmenwache allein: fasst KEINEN Zeitgeber an, hoert nur auf die
+         Klemmklassen und zeichnet nach.
+         Messordner `werkbank/schuss/rahmen-w12/abnahme2/`, Marke 7f30b3dfa40e.
+           1350  2 Laeufe / 2 Pruefsummen ✘     1600  3 / 1  ✔
+           1884  3 Laeufe / 1 Pruefsumme  ✔
+     F5  DIESE:  Klemmenwache UND Fristenschluss, aber `requestAnimationFrame`
+         bleibt unberuehrt.
+
+   WARUM DIE TRENNUNG GENAU HIER LAEUFT — und das ist die Lehre der Welle:
+
+     EIN RAHMEN DARF EINEM STUECK SAGEN, *WANN* ETWAS ZU TUN IST,
+     NICHT, *WIE* SEINE MESSUNG ZUSTANDE KOMMT.
+
+   Ein `requestAnimationFrame` IST eine Messstelle: es heisst „wenn das
+   Layout fertig ist". `stuecke/fuhre.js:2541` misst darin
+   `clientHeight`/`scrollHeight` einer Liste und rechnet daraus einen
+   Massstab. In einem Bildaufbau gemessen ist das Layout fertig; in einem
+   Mikrotask unmittelbar nach dem Umbau ist es das nicht unbedingt. Ein
+   anderer Massstab heisst andere Knopfgroessen — und ob ein Klick der
+   messenden Hand trifft. Genau daran sind in F1 1600 und 1884 zerfallen.
+
+   Ein `setTimeout` ist KEINE Messstelle. Es heisst nur „spaeter". Es
+   vorzuziehen aendert die Reihenfolge, nicht die Zahl, die dabei
+   herauskommt. Gefangen werden dadurch im ganzen Spiel genau ZWEI Stellen,
+   beide einzeln nachgesehen und beide von der Sorte „den Rest meines
+   Zeichnens gleich nachholen":
+
+     stuecke/preis.js:2737   420 ms  nachsehen, ob DIE STADT weggeklappt hat
+     stuecke/name.js:2272      0 ms  noch einmal zeichnen, wenn Aufgeld kam
+
+   Die erste davon ist der Verursacher (siehe unten). Alle sieben
+   rAF-Stellen des Spiels bleiben unberuehrt, `setInterval` ebenso.
 
    ---------------------------------------------------------------------------
    WAS ES ABSTELLT — gemessen, nicht vermutet
@@ -7,13 +53,12 @@
    Am Stand 7a1a942 spielte 1350 bei EINER Saat ZWEI Partien: rho +0,191 /
    -0,521 / +0,191 in drei einzeln gemessenen Laeufen. Die Trennprobe
    (`werkbank/schuss/aufsicht/welle11-trennprobe/`) fand keinen Verursacher
-   unter den drei Stuecken, die in Welle 11 gearbeitet haben — und hatte
-   recht: die Ursache gehoert keinem Stueck, sondern der Luecke zwischen
-   zweien.
+   unter den drei Stuecken, die in Welle 11 gearbeitet haben.
 
-   Die Rohdaten sagen, wo: die beiden Reihen sind bis Woche 60 Ziffer fuer
-   Ziffer gleich und gehen in Woche 61 auseinander — Michaeli 1352. Der
-   Unterschied ist EIN KLICK, und die Ursache ist eine LUEGE AUF EINEM KNOPF:
+   Der Grund steht in den Rohdaten: die beiden Reihen sind bis Woche 60
+   Ziffer fuer Ziffer gleich und gehen in Woche 61 auseinander — Michaeli
+   1352. Der Unterschied ist EIN KLICK, und die Ursache ist eine LUEGE AUF
+   EINEM KNOPF:
 
      1  DIE STADT entscheidet die Platzordnung (`stadt.js` nachsehen()) und
         setzt `stadt-zugeklappt` auf ein FREMDES Brett. Sie sendet dabei kein
@@ -35,78 +80,159 @@
    ---------------------------------------------------------------------------
    DIE REGEL, IN EINEM SATZ
    ---------------------------------------------------------------------------
-   WER EIN FREMDES BRETT WEGKLAPPT, LOEST EIN NEUZEICHNEN AUS — SOFORT.
-   Der Rahmen hoert auf die Klemmklassen (`stadt-zugeklappt`,
-   `stadt-verdeckt`, `kern-blatt-zu`). Aendert sich, WER geklemmt liegt,
-   schickt er `zeichne`, damit kein Knopf eine Lage beschriftet, die es nicht
-   mehr gibt. Das haengt an einem EREIGNIS, nicht an einer Uhr: es kostet
-   nichts, solange nichts geklappt wird, und es ist von der Last der Maschine
-   unabhaengig.
+   EIN BILDAUFBAU IST EINE RUNDE, UND EINE RUNDE HAT EIN ENDE.
+   Was ein Stueck waehrend des Zeichnens AUF EINE FRIST verschiebt, gehoert
+   noch zu dieser Runde und wird VOM RAHMEN abgearbeitet, bevor die Runde
+   schliesst — in fester Reihenfolge, in Mikrotasks, ohne jede Wanduhr. Was
+   es auf den naechsten BILDAUFBAU verschiebt, bleibt dort: das ist eine
+   Messstelle und gehoert dem Stueck (siehe oben, F1). Und wenn sich beim
+   Schluss die KLEMMENLAGE geaendert hat (wer ist zugeklappt, wer verdeckt),
+   wird noch einmal gezeichnet, damit kein Knopf eine Lage beschriftet, die
+   es nicht mehr gibt.
 
-   Der MutationObserver laeuft als Mikrotask — also im selben Bildaufbau, in
-   dem geklappt wurde, und lange bevor die messende Hand ihre zwei Bilder
-   abgewartet hat. Die 420-ms-Frist DES PREISES findet danach nichts mehr zu
-   tun; sie schadet nur noch sich selbst.
+   Damit gilt fuer alle acht Stuecke, ohne dass eines etwas aendern muss:
+   wenn die Hand (oder der Spieler, oder der Kritiker) nach einem Klick
+   hinsieht, ist die Runde fertig. Immer dieselbe.
 
    ---------------------------------------------------------------------------
-   DER FEHLER DER ERSTEN FASSUNG — er steht hier, weil er teuer war
+   WIE — und warum genau so
    ---------------------------------------------------------------------------
-   Die erste Fassung ging weiter: sie fing waehrend einer Zeichenrunde JEDEN
-   `setTimeout` (bis 1200 ms) und JEDES `requestAnimationFrame` ab und
-   arbeitete sie am Rundenende in Mikrotasks ab — „ein Bildaufbau ist eine
-   Runde, und eine Runde hat ein Ende".
+   Solange eine Runde laeuft, nimmt der Rahmen `setTimeout` (bis FRISTGRENZE)
+   ENTGEGEN, statt es an die Uhr zu geben. `requestAnimationFrame` fasst er
+   NICHT an. Alle elf Stellen des Spiels, einzeln nachgesehen:
 
-   Fuer 1350 hat das gewirkt: sechs 400-Wochen-Laeufe, EINE Pruefsumme
-   (`f250961e4ff7`), und der Drosselfaecher 1x/2x/3x/4x/6x lieferte fuenfmal
-   dieselbe Partie. Es hat aber ZWEI ANDERE EPOCHEN VERDORBEN, und das ist
-   gemessen:
+     GEFANGEN (Frist, waehrend einer Runde bestellt):
+       stuecke/preis.js:2737 420 ms nachsehen, ob DIE STADT weggeklappt hat
+       stuecke/name.js:2272    0 ms noch einmal zeichnen, wenn Aufgeld kam
 
-     1600  Vorzustand 3 Laeufe / 1 Pruefsumme   ->  3 Laeufe / 2 Pruefsummen
-     1884  Vorzustand 3 Laeufe / 1 Pruefsumme   ->  3 Laeufe / 3 Pruefsummen
+     UNBERUEHRT (Bildaufbau — eine Messstelle, sie gehoert dem Stueck):
+       kern/kopf.js:112      rAF   Deckungsband, wenn die Zuege gemeldet sind
+       stuecke/preis.js:2884 rAF   Kennzahl in die LEITER eintragen
+       stuecke/fuhre.js:2541 rAF   Liste an die Hoehe passen  ← der Zerbrecher
+       stuecke/fuhre.js:3515 rAF   Sommertafel abraeumen
+       stuecke/fuhre.js:3606 rAF   Georgi-Tafel nachlegen
+       stuecke/sud.js:2407/8 rAF   nachsehen, ob das Brett zugeklappt liegt
+       stuecke/stadt.js:1554 rAF   Platzordnung pruefen
 
-   Der Grund liegt auf der Hand, sobald man ihn gesehen hat: `fuhre.js:2541`
-   misst `clientHeight`/`scrollHeight` einer Liste und rechnet daraus einen
-   Massstab. In einem Bildaufbau gemessen ist das Layout fertig; in einem
-   Mikrotask unmittelbar nach dem Umbau ist es das nicht unbedingt. Ein
-   anderer Massstab heisst andere Knopfgroessen, und eine andere Knopfgroesse
-   heisst, dass ein Klick der messenden Hand trifft oder nicht.
+     UNBERUEHRT (ausserhalb jeder Runde bestellt):
+       stuecke/klang.js:55        600 ms  Notenknopf
+       stuecke/sud-zusatz.js:250  700 ms  Schlussblatt
+       stuecke/stadt.js:2145-48   400/1200 ms Bildstaffel
+       kern/haushalt.js:551       Escape-Anlaeufe
 
-   **Ein Rahmen darf die Zeitrechnung fremder Stuecke nicht umschreiben.**
-   Er darf ihnen sagen, WANN etwas zu tun ist (ein Ereignis), nicht WIE
-   ihre Messung zustande kommt. Diese Fassung fasst deshalb weder
-   `setTimeout` noch `requestAnimationFrame` an.
+   KEINE Animation ist unter den gefangenen. Wer eine baut, bekommt sie
+   zurueck: eine Frist ueber FRISTGRENZE laeuft unveraendert an der Uhr,
+   `setInterval` wird ueberhaupt nicht angefasst (DER STADT 240-ms-Takt und
+   DES SUD 320-ms-Takt bleiben, wie sie sind), und was ausserhalb einer Runde
+   bestellt wird auch nicht.
+
+   Abgearbeitet wird in MIKROTASKS (Promise), nicht in Bildern. Das ist der
+   Punkt, an dem es haengt: der MutationObserver der STADT ist selbst ein
+   Mikrotask. Zwischen zwei Durchgaengen kommt er also von allein zum Zug,
+   ohne dass der Rahmen ihn kennen muss — und die ganze Runde ist trotzdem
+   fertig, BEVOR der Browser das naechste Bild baut. Wer danach hinsieht,
+   sieht immer dasselbe.
+
+   ---------------------------------------------------------------------------
+   WAS ES AUSDRUECKLICH NICHT TUT
+   ---------------------------------------------------------------------------
+   * Es laeuft NICHT auf einer Frist. Welle 10 hat das teuer bezahlt: eine
+     gedrosselte Wache, die nie eingriff, hat 1350 auseinanderlaufen lassen.
+     Hier laeuft ueberhaupt nichts, solange nichts gezeichnet wird.
+   * Es misst kein Layout. Der Abdruck der Klemmenlage liest Klassennamen,
+     kein einziges getBoundingClientRect().
+   * Es verschluckt nichts. Was nach PAESSE Durchgaengen noch in der Schlange
+     liegt, geht an die echte Uhr zurueck und wird in `bericht()` gezaehlt.
    =========================================================================== */
 
 (function (B) {
   'use strict';
 
-  /* Wie oft die Klemmenwache hintereinander nachziehen darf, ohne dass
-     zwischendurch etwas anderes gezeichnet wurde. Der Riegel gegen ein Hin
-     und Her zwischen zwei Lagen. */
+  /* Eine Frist bis hierher ist Rundenarbeit; alles darueber ist Absicht.
+     Die laengste Rundenfrist im Spiel ist preis.js:2737 mit 420 ms. */
+  var FRISTGRENZE = 1200;
+  /* Wieviele Mikrotask-Durchgaenge eine Runde bekommt. Gemessen werden 2
+     bis 4 gebraucht; 12 ist Vorrat, nicht Erwartung. */
+  var PAESSE = 12;
+  /* Wieviele zusaetzliche Bildaufbauten der Schluss anstossen darf, wenn
+     sich die Klemmenlage geaendert hat. Gemessen: hoechstens 2. */
+  var NACHRUNDEN = 3;
+  /* Wie oft die Klemmenwache AUSSERHALB einer Runde nachziehen darf, ohne
+     dass zwischendurch etwas anderes gezeichnet wurde. Der Riegel gegen ein
+     Hin und Her zwischen zwei Lagen. */
   var AUSSEN_MAX = 3;
 
+  /* Kennungen des Rahmens liegen weit ueber denen des Browsers, damit
+     clearTimeout/cancelAnimationFrame sie sicher auseinanderhalten. */
+  var ID_BASIS = 900000000;
+
   /* Die drei Klassen, mit denen in diesem Spiel etwas weggeschnitten wird.
-     Sie stehen schon im Kopf von kern/haushalt.js. */
+     Sie stehen schon im Kopf von kern/haushalt.js; hier sind sie der
+     Abdruck, an dem der Rahmen erkennt, dass sich die Lage geaendert hat. */
   var KLEMMEN = '.stadt-zugeklappt, .stadt-verdeckt, .kern-blatt-zu';
 
-  var oST = window.setTimeout;      /* fuer die Probe, nie fuer das Spiel */
+  /* `requestAnimationFrame` steht hier NICHT. Es wird nicht umhuellt — siehe
+     der Kopf dieser Datei, F1. */
+  var oST = window.setTimeout, oCT = window.clearTimeout;
 
-  var tiefe = 0;                    /* Schachtelung der laufenden Zeichenrunde */
+  var tiefe = 0;              /* Schachtelung der laufenden Zeichenrunde */
+  var imSchluss = false;      /* der Rundenschluss arbeitet gerade */
+  var schlange = [];
+  var naechste = 0;
   var letzterAbdruck = '';
-  var vorletzterAbdruck = null;     /* erkennt ein Hin und Her zwischen zwei Lagen */
+  var vorletzterAbdruck = null;   /* erkennt ein Hin und Her zwischen zwei Lagen */
   var aussenZaehler = 0;
   var wache = null;
 
   var zahl = {
-    runden: 0,
-    nachgezogen: 0,   /* wie oft die Wache ein Neuzeichnen ausgeloest hat */
-    pendel: 0,        /* Lage kippt zwischen zwei Zustaenden hin und her */
-    riegel: 0         /* wie oft der Riegel gegriffen hat */
+    runden: 0, aufgaben: 0, paesse: 0, nachrunden: 0,
+    ueberlauf: 0,             /* an die echte Uhr zurueckgegeben */
+    aussen: 0,                /* Nachziehen ausserhalb einer Runde */
+    aussenPendel: 0,          /* Lage kippt zwischen zwei Zustaenden hin und her */
+    aussenRiegel: 0,          /* wie oft der Riegel gegriffen hat */
+    maxPaesse: 0, maxNachrunden: 0
   };
+  var letzte = null;          /* Bericht der letzten Runde, fuer R9 */
+
+  function faengt() { return tiefe > 0 || imSchluss; }
+
+  function merke(fn, args) {
+    var id = ID_BASIS + (++naechste);
+    schlange.push({ id: id, fn: fn, args: args });
+    return id;
+  }
+
+  function vergiss(id) {
+    for (var i = 0; i < schlange.length; i++) {
+      if (schlange[i].id === id) { schlange.splice(i, 1); return true; }
+    }
+    return false;
+  }
 
   /* ---------------------------------------------------------------------
-     DER ABDRUCK DER KLEMMENLAGE.  Nur Klassennamen — kein Layout, kein
-     getBoundingClientRect, kein erzwungener Umbruch.
+     DIE UMHUELLUNG.  Sie greift NUR, solange eine Runde laeuft.
+     --------------------------------------------------------------------- */
+  window.setTimeout = function (fn, ms) {
+    if (faengt() && typeof fn === 'function' && !(+ms > FRISTGRENZE)) {
+      return merke(fn, Array.prototype.slice.call(arguments, 2));
+    }
+    return oST.apply(window, arguments);
+  };
+
+  window.clearTimeout = function (id) {
+    if (typeof id === 'number' && id >= ID_BASIS) { vergiss(id); return; }
+    return oCT.apply(window, arguments);
+  };
+
+  /* HIER STAND IN F1 DIE UMHUELLUNG VON requestAnimationFrame.
+     Sie ist heraus, und das ist der ganze Unterschied zwischen F1 und dieser
+     Fassung. F1 hat damit 1350 geheilt (6 Laeufe, 1 Pruefsumme) und 1600
+     (3/2) und 1884 (3/3) verdorben, weil `fuhre.js:2541` in einem Mikrotask
+     ein Layout misst, das noch nicht steht. Wer sie wieder einbaut, misst
+     `abnahme/` nach, bevor er es behauptet. */
+
+  /* ---------------------------------------------------------------------
+     DER ABDRUCK DER KLEMMENLAGE.  Nur Klassennamen — kein Layout.
      --------------------------------------------------------------------- */
   function abdruck() {
     var l, i, s = [];
@@ -120,13 +246,13 @@
     return s.join('|');
   }
 
+  /* Was die messende Hand von einem Zug liest: Name, Sperre, Beschriftung.
+     `textContent` erzwingt kein Layout — anders als `innerText`. Nur fuer
+     die Probe `nachwehen()`, nie im Spielbetrieb. */
   /* Trenner, die in keinem Spieltext vorkommen. Als Escape geschrieben,
      damit in dieser Datei kein rohes Steuerzeichen steht. */
   var TRENN = '\u0001', SATZ = '\u0002';
 
-  /* Was die messende Hand von einem Zug liest: Name, Sperre, Beschriftung.
-     `textContent` erzwingt kein Layout — anders als `innerText`. Nur fuer
-     die Probe `nachwehen()`, nie im Spielbetrieb. */
   function schirmAbdruck() {
     var l, i, s = [];
     try { l = document.querySelectorAll('[data-zug]'); } catch (e) { return ''; }
@@ -161,74 +287,148 @@
   }
 
   /* ---------------------------------------------------------------------
-     B.sende('zeichne') — der Rahmen merkt sich nur, dass gerade gezeichnet
-     wird. Er greift NICHT ein.
+     DER SCHLUSS
+     --------------------------------------------------------------------- */
+  function fuehreAus(e) {
+    B.wage('runde:frist', function () { e.fn.apply(window, e.args || []); });
+    zahl.aufgaben++;
+  }
+
+  /* Was uebrig bleibt, geht an die echte Uhr — verschluckt wird nichts. */
+  function zurueckAnDieUhr() {
+    if (!schlange.length) return;
+    var rest = schlange; schlange = [];
+    zahl.ueberlauf += rest.length;
+    rest.forEach(function (e) {
+      oST.call(window, function () { e.fn.apply(window, e.args || []); }, 0);
+    });
+  }
+
+  function schliesse() {
+    if (imSchluss) return;
+    imSchluss = true;
+    zahl.runden++;
+    var pass = 0, nach = 0;
+    /* VERGLICHEN WIRD MIT DER LETZTEN FERTIGEN RUNDE, nicht mit dem Anfang
+       dieses Schlusses. Der Unterschied ist der ganze Preis dieser Datei:
+       jedes Zeichnen baut die Bretter neu, dabei geht `stadt-zugeklappt`
+       verloren und DIE STADT setzt es im Schluss wieder — gegen den Anfang
+       gemessen hat sich also IMMER etwas geaendert, und es lief in fast
+       jeder Runde eine Nachrunde (gemessen: 197 in 205 Runden, also der
+       doppelte Bildaufbau fuer nichts). Gegen die letzte fertige Runde
+       gemessen aendert sich nur dann etwas, wenn wirklich ein anderes Brett
+       zugeklappt liegt als vorher — und nur dann kann ein Knopf luegen. */
+    var vorher = letzterAbdruck;
+    var bericht = { paesse: 0, aufgaben: 0, nachrunden: 0, ueberlauf: false };
+
+    /* DER NOTAUSGANG. Wirft irgendetwas in einem Durchgang, darf der Schluss
+       nicht haengenbleiben: `imSchluss` bliebe wahr, die Umhuellung finge
+       weiter jeden Zeitgeber ein, und die Schlange liefe nie mehr leer — das
+       Spiel staende still. Also wird jeder Durchgang eingepackt, und im
+       Notfall geht alles an die echte Uhr zurueck. */
+    function weiter() {
+      try { weiterInnen(); }
+      catch (e) {
+        B.klage('runde.schluss', e);
+        zurueckAnDieUhr();
+        letzte = bericht;
+        imSchluss = false;
+      }
+    }
+
+    function weiterInnen() {
+      /* 1 — die Schlange leerlaufen lassen, Durchgang fuer Durchgang. */
+      if (schlange.length) {
+        if (pass >= PAESSE) {
+          bericht.ueberlauf = true;
+          zurueckAnDieUhr();
+        } else {
+          pass++; bericht.paesse = pass;
+          var los = schlange; schlange = [];
+          bericht.aufgaben += los.length;
+          for (var i = 0; i < los.length; i++) fuehreAus(los[i]);
+          Promise.resolve().then(weiter);   /* laesst den MutationObserver dazwischen */
+          return;
+        }
+      }
+      /* 2 — hat sich die Klemmenlage geaendert? Dann noch einmal zeichnen.
+         Sonst beschriftet ein Knopf eine Lage, die es nicht mehr gibt. */
+      var jetzt = abdruck();
+      if (jetzt !== vorher && nach < NACHRUNDEN) {
+        nach++; bericht.nachrunden = nach; zahl.nachrunden++;
+        vorher = jetzt;
+        B.sende('zeichne', { grund: 'runde-klemme' });
+        Promise.resolve().then(weiter);
+        return;
+      }
+      /* 3 — fertig. */
+      if (jetzt !== letzterAbdruck) { vorletzterAbdruck = letzterAbdruck; letzterAbdruck = jetzt; }
+      zahl.paesse += bericht.paesse;
+      if (bericht.paesse > zahl.maxPaesse) zahl.maxPaesse = bericht.paesse;
+      if (bericht.nachrunden > zahl.maxNachrunden) zahl.maxNachrunden = bericht.nachrunden;
+      letzte = bericht;
+      imSchluss = false;
+    }
+
+    Promise.resolve().then(weiter);
+  }
+
+  /* ---------------------------------------------------------------------
+     B.sende('zeichne') wird zur RUNDE.
+     Jede andere Nachricht laeuft unveraendert durch.
      --------------------------------------------------------------------- */
   var oSende = B.sende;
   B.sende = function (name) {
     if (name !== 'zeichne') return oSende.apply(this, arguments);
-    /* Jedes Zeichnen, das NICHT die Wache angestossen hat, macht ihren
-       Zaehler wieder frei — der Riegel soll ein Hin und Her abstellen,
-       nicht das Spiel. */
+    /* Jedes Zeichnen, das NICHT der Rahmen selbst angestossen hat, macht den
+       Zaehler der Klemmenwache wieder frei — der Riegel soll ein Hin und Her
+       abstellen, nicht das Spiel. */
     if (String((arguments[1] && arguments[1].grund) || '').indexOf('runde-') !== 0) aussenZaehler = 0;
     tiefe++;
-    zahl.runden++;
     try { return oSende.apply(this, arguments); }
     finally {
       tiefe--;
-      /* Am Ende einer Runde ist die Lage, gegen die die Stuecke gezeichnet
-         haben, genau die, die jetzt dasteht — auch wenn sie in diesem
-         Augenblick leer ist, weil alle Bretter neu gebaut wurden. Genau
-         deshalb faellt der Wache jedes Wiederanlegen einer Klemme auf. */
-      if (tiefe === 0) letzterAbdruck = abdruck();
+      if (tiefe === 0 && !imSchluss) schliesse();
     }
   };
 
   /* ---------------------------------------------------------------------
-     DIE KLEMMENWACHE
+     DIE KLEMMENWACHE — und sie haengt an einem EREIGNIS, nicht an einer Uhr.
+
+     DIE STADT prueft die Platzordnung ausserdem alle 240 ms an ihrer eigenen
+     Uhr (`stadt.js:1573`) und haelt Fristen von 1400 und 1800 ms. Klappt sie
+     dabei ZWISCHEN zwei Runden etwas weg, wuerde derselbe Knopf wieder
+     luegen. Der Rahmen sieht das nicht nach einer Frist nach, sondern hoert
+     auf die Klassenaenderung selbst und zeichnet dann neu — hoechstens
+     AUSSEN_MAX-mal hintereinander, damit ein Hin und Her zwischen zwei Lagen
+     das Spiel nicht festhaelt.
      --------------------------------------------------------------------- */
-  /* WORAUF DIE WACHE ANSPRINGT — und warum SOFORT.
+  function starteWache() {
+    if (wache || !window.MutationObserver) return;
+    letzterAbdruck = abdruck();
+    /* In `B.wage` eingepackt: wirft der Abdruck, darf der MutationObserver
+       nicht mit einem rohen Fehler aus dem Rahmen fallen — er laeuft in
+       fremdem Zusammenhang und wuerde als Konsolenfehler des SPIELS
+       gezaehlt. */
+    wache = new MutationObserver(function () { B.wage('runde.wache', pruefeKlemmen); });
+    var stapel = document.getElementById('buehne');
+    if (stapel) wache.observe(stapel, { subtree: true, attributes: true, attributeFilter: ['class'] });
+  }
 
-     Verglichen wird die Klemmenlage mit der, die am Ende der letzten Runde
-     dastand. Baut ein Stueck sein Brett neu, sind die Klemmklassen im
-     Augenblick des Rundenschlusses fort (die Elemente sind neu) — legt DIE
-     STADT sie gleich darauf wieder an, faellt genau das der Wache auf, und
-     sie zeichnet einmal nach. Das ist teurer als noetig aussieht, und es ist
-     der Grund, warum es haelt: **jedes** Wiederanlegen einer Klemme kommt
-     dem Zeichnen zuvor, nicht nur das an einem alten Element.
-
-     Zwei feinere Fassungen sind gemessen worden und BEIDE SCHLECHTER:
-       * nur auf echten Klassenwechsel an einem bestehenden Element hoeren
-         (`attributeOldValue`): 1350 spielt im Drosselfaecher wieder ZWEI
-         Partien (1x eine, 2x/3x/4x/6x die andere).
-       * einen Bildaufbau warten, damit DIE STADT zuerst dran ist:
-         1350 spielt DREI Partien.
-     Der MutationObserver ist ein Mikrotask und kommt damit noch vor dem
-     naechsten Bildaufbau; die messende Hand wartet zwei. Nur wer in diesem
-     Fenster nachzieht, kommt ihr zuvor. */
-
-  function nachsehen() {
-    if (tiefe > 0) return;                        /* mitten im Zeichnen: gleich fertig */
+  function pruefeKlemmen() {
+    if (faengt()) return;                         /* die Runde raeumt selbst auf */
     var jetzt = abdruck();
     if (jetzt === letzterAbdruck) return;
     /* ZWEI LAGEN, DIE SICH ABWECHSELN, sind kein Fortschritt. Wer neu
        zeichnet, weil die Lage nach A gekippt ist, und dabei B herstellt,
-       das gleich wieder nach A kippt, zeichnet fuer immer. Kommt genau die
-       vorletzte Lage zurueck, wird nur gezaehlt, nicht gezeichnet. */
-    if (jetzt === vorletzterAbdruck) { zahl.pendel++; return; }
+       das gleich wieder nach A kippt, zeichnet fuer immer. Kommt genau
+       die vorletzte Lage zurueck, wird nur gezaehlt, nicht gezeichnet. */
+    if (jetzt === vorletzterAbdruck) { zahl.aussenPendel++; return; }
     vorletzterAbdruck = letzterAbdruck;
     letzterAbdruck = jetzt;
-    if (aussenZaehler >= AUSSEN_MAX) { zahl.riegel++; return; }
-    aussenZaehler++; zahl.nachgezogen++;
-    B.sende('zeichne', { grund: 'runde-klemme' });
-  }
-
-  function starteWache() {
-    if (wache || !window.MutationObserver) return;
-    letzterAbdruck = abdruck();
-    wache = new MutationObserver(function () { B.wage('runde.wache', nachsehen); });
-    var stapel = document.getElementById('buehne');
-    if (stapel) wache.observe(stapel, { subtree: true, attributes: true, attributeFilter: ['class'] });
+    if (aussenZaehler >= AUSSEN_MAX) { zahl.aussenRiegel++; return; }
+    aussenZaehler++; zahl.aussen++;
+    B.sende('zeichne', { grund: 'runde-klemme-aussen' });
   }
 
   /* ---------------------------------------------------------------------
@@ -240,34 +440,41 @@
     runde: function (fn) {
       tiefe++;
       try { B.wage('runde', fn); }
-      finally { tiefe--; if (tiefe === 0) letzterAbdruck = abdruck(); }
+      finally {
+        tiefe--;
+        if (tiefe === 0 && !imSchluss) schliesse();
+      }
     },
-
     /* R9 — DIE FRAGE IN EINEM AUFRUF.
-       [] heisst: der Rahmen hat nichts zu melden. Jeder Eintrag nennt eine
-       Stelle, an der ein Stueck ein fremdes Brett klappt, ohne es zu sagen. */
+       [] heisst: die letzte Runde war deterministisch fertig. Jeder Eintrag
+       nennt eine Stelle, an der noch etwas an der Wanduhr haengt. */
     pruefe: function () {
       var raus = [];
-      if (zahl.pendel) raus.push({ was: 'pendel', zahl: zahl.pendel,
+      if (zahl.ueberlauf) raus.push({ was: 'ueberlauf', zahl: zahl.ueberlauf,
+        sagt: 'Aufgaben sind nach ' + PAESSE + ' Durchgaengen an die echte Uhr zurueckgegangen — '
+            + 'die Runde war dort NICHT fertig.' });
+      if (zahl.aussenPendel) raus.push({ was: 'aussen-pendel', zahl: zahl.aussenPendel,
         sagt: 'Die Klemmenlage kippt zwischen zwei Zustaenden hin und her; der Rahmen zeichnet '
             + 'dabei nicht mit. Ein Stueck klappt ein fremdes Brett weg, ohne zeichne zu senden.' });
-      if (zahl.riegel) raus.push({ was: 'riegel', zahl: zahl.riegel,
-        sagt: 'Die Klemmenlage ist ' + AUSSEN_MAX + '-mal hintereinander gekippt, ohne dass '
-            + 'zwischendurch etwas anderes gezeichnet wurde; der Riegel hat weiteres '
-            + 'Nachziehen abgestellt.' });
+      if (zahl.aussenRiegel) raus.push({ was: 'aussen-riegel', zahl: zahl.aussenRiegel,
+        sagt: 'Die Klemmenlage ist ' + AUSSEN_MAX + '-mal hintereinander ausserhalb einer Runde '
+            + 'gekippt; der Riegel hat weiteres Nachziehen abgestellt.' });
+      if (zahl.maxNachrunden >= NACHRUNDEN) raus.push({ was: 'nachrunden-grenze', zahl: zahl.maxNachrunden,
+        sagt: 'Eine Runde hat die Grenze von ' + NACHRUNDEN + ' Nachrunden erreicht.' });
       return raus;
     },
-
     /* R9 — DIE FRAGE ALS PROBE, NICHT ALS NEUN MESSLAEUFE.
-       Nimmt den Abdruck der Klemmenlage UND aller bedienbaren Zuege (Name,
-       gesperrt, Beschriftung — kein Layout), wartet eine echte Wanduhrfrist,
-       in der NIEMAND etwas anfasst, und sieht noch einmal hin. Aendert sich
-       in dieser Zeit etwas, war die Runde nicht fertig, als sie zu Ende ging
-       — und genau das ist die Bedingung, unter der zwei gleiche Saaten
-       auseinanderlaufen.
+       `pruefe()` sagt, was der Rahmen selbst gezaehlt hat. `nachwehen()`
+       fragt das Bild: es nimmt den Abdruck der Klemmenlage UND den Abdruck
+       aller bedienbaren Zuege (Name, gesperrt, Beschriftung — kein Layout),
+       wartet eine echte Wanduhrsekunde, in der NIEMAND etwas anfasst, und
+       sieht noch einmal hin. Aendert sich in dieser Sekunde etwas, dann war
+       die Runde nicht fertig, als sie zu Ende ging — und genau das ist die
+       Bedingung, unter der zwei gleiche Saaten auseinanderlaufen.
 
-       Das ist das einzige im Rahmen, das eine Uhr benutzt. Es laeuft NUR auf
-       Zuruf; wer es waehrend einer Messung ruft, misst sein eigenes Warten.
+       Diese Probe ist das einzige im Rahmen, das eine Uhr benutzt. Sie
+       laeuft NUR auf Zuruf und nie von selbst; wer sie waehrend einer
+       Messung ruft, misst sein eigenes Warten mit.
 
          await BRAUHAUS.runde.nachwehen()   ->  { ruhig: true, … }  */
     nachwehen: function (ms) {
@@ -277,39 +484,42 @@
         oST.call(window, function () {
           var a2 = abdruck(), s2 = schirmAbdruck();
           var raus = [];
-          if (a1 !== a2) raus.push({ was: 'klemmenlage', vorher: a1, nachher: a2,
+          if (a1 !== a2) raus.push({ was: 'klemmenlage',
+            vorher: a1, nachher: a2,
             sagt: 'Ein Stueck hat nach dem Ende der Runde ein Brett weggeklappt oder '
                 + 'aufgeschlagen, ohne dass neu gezeichnet wurde.' });
-          if (s1 !== s2) raus.push({ was: 'zuege', unterschiede: unterschied(s1, s2),
+          if (s1 !== s2) raus.push({ was: 'zuege',
             sagt: 'Beschriftung oder Sperre eines Zuges hat sich nach dem Ende der Runde '
                 + 'geaendert. Wer in dieser Zeit hinsieht, sieht etwas anderes als wer '
-                + 'danach hinsieht.' });
+                + 'danach hinsieht.', unterschiede: unterschied(s1, s2) });
           fertig({ frist: frist, ruhig: raus.length === 0, beanstandungen: raus,
                    bericht: B.runde.bericht() });
         }, frist);
       });
     },
-
     bericht: function () {
-      return { runden: zahl.runden, nachgezogen: zahl.nachgezogen,
-               pendel: zahl.pendel, riegel: zahl.riegel,
-               abdruck: letzterAbdruck };
+      var b = {}, k;
+      for (k in zahl) if (Object.prototype.hasOwnProperty.call(zahl, k)) b[k] = zahl[k];
+      b.letzte = letzte;
+      b.offen = schlange.length;
+      b.abdruck = letzterAbdruck;
+      return b;
     },
-
     /* Fuer die Konsole des Kritikers: eine Zeile. */
     zeile: function () {
-      var p = B.runde.pruefe();
-      return 'RUNDE  ' + zahl.runden + ' Runden · ' + zahl.nachgezogen + ' mal nachgezogen · '
-        + zahl.pendel + ' Pendel · ' + zahl.riegel + ' Riegel'
-        + (p.length ? '  !! ' + p.length + ' Beanstandung(en)' : '  — sauber');
+      return 'RUNDE  ' + zahl.runden + ' Runden · ' + zahl.aufgaben + ' nachgeholte Aufgaben · '
+        + 'max ' + zahl.maxPaesse + ' Durchgaenge · ' + zahl.nachrunden + ' Nachrunden · '
+        + zahl.aussen + ' aussen (' + zahl.aussenPendel + ' Pendel, ' + zahl.aussenRiegel
+        + ' Riegel) · ueberlauf ' + zahl.ueberlauf
+        + (B.runde.pruefe().length ? '  !! ' + B.runde.pruefe().length + ' Beanstandung(en)' : '  — sauber');
     },
-
-    GRENZEN: { AUSSEN_MAX: AUSSEN_MAX },
+    /* nur zum Nachmessen */
+    GRENZEN: { FRISTGRENZE: FRISTGRENZE, PAESSE: PAESSE, NACHRUNDEN: NACHRUNDEN, AUSSEN_MAX: AUSSEN_MAX },
     abdruck: abdruck
   };
 
   /* Die Wache erst, wenn die Buehne steht. 'bereit' kommt aus kern/start.js,
      nach dem ersten Bildaufbau. */
-  B.auf('bereit', function () { B.wage('runde.wache-start', starteWache); });
+  B.auf('bereit', function () { B.wage('runde.wache', starteWache); });
 
 })(BRAUHAUS);
