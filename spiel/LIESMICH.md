@@ -170,6 +170,37 @@ sonst kann der Kritiker seine Zählung nicht wiederholen.
 
 Nach jeder Änderung `BRAUHAUS.sende('zeichne', {grund:'…'})`.
 
+> ### KEIN WÜRFEL, ABER TROTZDEM ZUFALL — die Lehre der Welle 12
+>
+> `Math.random()` zu meiden genügt **nicht**. Am 7. August spielte 1350 zwei
+> verschiedene Partien am selben Stand, mit derselben Saat, ohne einen einzigen
+> Zufallsaufruf: ρ +0,191 in zwei Läufen, −0,521 im dritten. Neun weitere Läufe
+> auf drei Mischständen haben gezeigt, dass **kein einzelnes Stück** die Ursache
+> war. Die Kette lief so:
+>
+> 1. Ein Stück änderte den Zustand eines **fremden** Bretts (eine Klasse
+>    `zugeklappt`) — und **sendete kein `zeichne`**. Niemand erfuhr es.
+> 2. Das betroffene Stück sah deshalb nach einer **Wanduhrfrist von 420 ms**
+>    selbst nach.
+> 3. **Dazwischen log der Knopf:** sein Text sagte „schließen", während nichts
+>    mehr auf dem Tisch lag.
+> 4. Die messende Hand wartet nach jedem Klick rund **33 ms**. Ob sie vor oder
+>    nach dem Nachsehen las, hing an der Last der Maschine — und daran hing die
+>    ganze Partie.
+>
+> **Zwei Regeln daraus, und sie gelten für jedes Stück:**
+>
+> * **Wer den Zustand eines fremden Bretts ändert, sendet `zeichne`.** Wer es
+>   nicht tut, zwingt jedes andere Stück zum Pollen.
+> * **Keine Wanduhrfrist im Zeichenweg.** Jedes `setTimeout`, das „den Rest
+>   meines Zeichnens gleich nachholen" bedeutet, ist ein Rennen mit der
+>   messenden Hand. Was zu einer Runde gehört, gehört **in** die Runde; der
+>   Rahmen arbeitet es vor dem Rundenschluss ab.
+>
+> **Und die allgemeine Fassung, weil sie über dieses Spiel hinausgeht:** *ein
+> Knopf, der eine Lage beschriftet, die es in diesem Augenblick nicht mehr gibt,
+> ist kein Schönheitsfehler — er ist eine Verzweigung im Spielverlauf.*
+
 ## Bedienregel — daran hängt die ganze Spiellatte
 
 Jede Handlung ist über ein echtes `<button>` mit sichtbarem deutschem Text und stabilem

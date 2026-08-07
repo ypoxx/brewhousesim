@@ -67,6 +67,34 @@ geschnitten:
 | 1884 | +0,168 | +0,346 | +0,393 | 1/14 | unverändert |
 | **1970** | **+0,699** | +0,637 | +0,653 | 1/14 | unverändert — **ein Tausendstel unter der Latte** |
 
+### WIEDERHOLBARKEIT IST KEINE FÜNFTE LATTE — sie ist die Bedingung der anderen vier
+
+*Nachgetragen am 7. August 2026, nachdem 1350 an einem Stand zwei verschiedene
+Partien gespielt hat.*
+
+Jede Zahl dieses Papiers steht auf **„drei Läufe, eine Prüfsumme"**. Fällt das
+weg, ist nicht der Wert unsicher, sondern **das Gerät**: ρ, die Jahre unter 1×,
+die Deckung, die Textknoten — alles wird zur Behauptung. Deshalb gilt vor jeder
+Abnahme, und zwar ohne eigene Nummer, weil es keine Latte ist, sondern deren
+Voraussetzung:
+
+> **Dieselbe Saat muss dieselbe Partie ergeben.** Gemessen wird **einzeln**, nie
+> mehrere Epochen nebeneinander, an einem **eingefrorenen** Stand. Drei Läufe je
+> Epoche mit je einer Prüfsumme; wo eine Abweichung schon einmal aufgetreten
+> ist, **sechs**.
+
+**Warum sechs und nicht drei:** trat die Abweichung im Verhältnis 1:3 auf, wäre
+ein einzelner gleicher Dreiersatz zu rund 30 % Zufall — ein Sechsersatz zu unter
+3 %. Wer aus drei gleichen Läufen „stabil" liest, wo vorher eine Abweichung
+stand, liest Rauschen.
+
+**`Math.random()` zu meiden genügt dafür nicht.** Die Bistabilität vom 7. August
+entstand ohne einen einzigen Zufallsaufruf, aus einer Wanduhrfrist von 420 ms
+und einem Knopf, der eine Lage beschriftete, die es nicht mehr gab. Die beiden
+Regeln, die daraus folgen, stehen in `../spiel/LIESMICH.md`.
+
+---
+
 > ## DAS WELLENZIEL IST ERREICHT — 5. August 2026, von der Aufsicht nachgemessen
 >
 > **|ρ| < 0,700 in allen vier Epochen über alle drei Schnitte, und 1 von 14
