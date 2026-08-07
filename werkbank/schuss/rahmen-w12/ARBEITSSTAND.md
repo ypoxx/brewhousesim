@@ -613,3 +613,36 @@ Fass in einer Woche**, nicht zwei Partien. Trotzdem: die Abnahmebedingung
 lautet „eine Pruefsumme", und die ist nicht erfuellt. Ob dieser Rest neu ist
 oder auf dem Vorzustand ebenso auftritt, wird gerade nachgemessen
 (`abnahme-vorher/`, 1600 dreimal auf `7a1a942`).
+
+## 1884 — drei Laeufe, DREI Pruefsummen
+
+| Lauf | md5 | Kassenspanne |
+|---|---|---|
+| e3-A | `e4363a2c41af` | 190–29.433 |
+| e3-B | `5ff4fff54648` | 2.441–28.128 |
+| e3-C | `b49d340136ec` | 3.278–33.284 |
+
+Paarweise 287 bis 326 von 400 Wochen verschieden. Die erste Abweichung steht
+in 1886, Woche 14: **Kasse gleich (5.098), `faesser` 86 gegen 68** — wieder
+ein Handgriff an einem Brett DER FUHRE, der einmal landet und einmal nicht,
+und diesmal traegt er weit.
+
+**Das ist keine Bedingung, die diese Welle erfuellt.** Ob 1884 auch auf dem
+Vorzustand auseinanderlaeuft, wird gerade gemessen (`abnahme-vorher/e3-*`);
+eine Dreierprobe von 1884 gibt es im ganzen Repo bisher nicht — Welle 10 hat
+sie angefangen (`rahmen-w10/saat/VOR-e3-A.json`, ein Lauf) und nie beendet.
+
+## 1600 auf dem Vorzustand — und hier spricht es gegen mich
+
+| Stand | Laeufe | md5 | abweichende Wochen |
+|---|---|---|---|
+| **Vorzustand `7a1a942`** | 3 | `5af1d5f1f2eb` **dreimal** | **0** |
+| Nachstand `5707219bc98a` | 3 | `9d3319d927af` · `0694c7c336fe` · `9d3319d927af` | **1 von 400** |
+
+**1600 war auf dem Vorzustand dreimal byteweise gleich und ist es auf meinem
+Stand nicht mehr.** Der Unterschied ist eine Woche und ein Feld (zwei Fass im
+Keller, 1605 W4) und die ρ-Reihe bleibt bitgleich — aber er ist neu, und er
+geht auf mein Konto. Er gehoert in denselben Satz wie die 1884-Laeufe: der
+Rundenschluss hat die Fertigstellung der Runde festgelegt, **nicht** aber,
+welchen Zustand die uhrgetriebene Platzordnung DER STADT zum Zeitpunkt eines
+Klicks gerade herstellt.
