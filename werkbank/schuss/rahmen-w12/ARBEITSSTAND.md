@@ -646,3 +646,48 @@ geht auf mein Konto. Er gehoert in denselben Satz wie die 1884-Laeufe: der
 Rundenschluss hat die Fertigstellung der Runde festgelegt, **nicht** aber,
 welchen Zustand die uhrgetriebene Platzordnung DER STADT zum Zeitpunkt eines
 Klicks gerade herstellt.
+
+---
+
+# DIE KEHRTWENDE — vier Fassungen, und drei davon sind gemessen schlechter
+
+Die erste Fassung (**RUNDENSCHLUSS**) hat 1350 geheilt und 1600 und 1884
+verdorben. Der Beleg dafuer ist der Grund, warum diese Welle nachgemessen
+statt behauptet wird:
+
+| Epoche | Vorzustand `7a1a942` | Fassung 1 (Rundenschluss) |
+|---|---|---|
+| 1350 | 3 Laeufe / **2** Pruefsummen | 6 Laeufe / **1** Pruefsumme `f250961e4ff7` |
+| 1600 | 3 Laeufe / **1** Pruefsumme `5af1d5f1f2eb`, 0 abweichende Wochen | 3 Laeufe / **2** Pruefsummen |
+| 1884 | 3 Laeufe / **1** Pruefsumme `d36f613f391e`, 0 abweichende Wochen | 3 Laeufe / **3** Pruefsummen |
+| 1970 | — | 2 Laeufe / 1 Pruefsumme `5adfd2fb582b` |
+
+**Die Ursache des Rueckschritts, benannt:** `stuecke/fuhre.js:2541` misst
+`clientHeight`/`scrollHeight` einer Liste und rechnet daraus einen Massstab.
+In einem Bildaufbau gemessen ist das Layout fertig; in einem Mikrotask
+unmittelbar nach dem Umbau ist es das nicht unbedingt. Ein anderer Massstab
+heisst andere Knopfgroessen — und ob ein Klick der messenden Hand trifft.
+
+**Die Lehre, und sie ist groesser als diese Welle:** *ein Rahmen darf die
+Zeitrechnung fremder Stuecke nicht umschreiben.* Er darf ihnen sagen, WANN
+etwas zu tun ist (ein Ereignis), nicht WIE ihre Messung zustande kommt.
+
+## Die vier Fassungen und was der Drosselfaecher zu jeder sagt
+
+`rennen.mjs`, 62 Wochen, `DROSSEL=1,2,3,4,6`, je ein Lauf, alle auf
+eingefrorenen Staenden.
+
+| Fassung | was sie tut | 1350 im Faecher |
+|---|---|---|
+| **1 Rundenschluss** | faengt `setTimeout`/`rAF` waehrend des Zeichnens, arbeitet sie in Mikrotasks ab, zeichnet nach, wenn die Klemmenlage kippte | **eine Partie** — aber 1600/1884 verdorben |
+| **2 Klemmenwache, sofort, grob** | fasst keine Zeitgeber an; vergleicht die Klemmenlage mit der am Rundenende und zeichnet bei jeder Aenderung sofort nach | **eine Partie** (5 von 5) |
+| **3 Klemmenwache, ein Bild spaeter** | dasselbe, aber der Vergleich wartet einen Bildaufbau | **DREI Partien** (1x/2x · 3x · 4x) |
+| **4 Klemmenwache, nur echter Klassenwechsel** | `attributeOldValue`, nur wenn an einem bestehenden Element eine Klemmklasse kam oder ging | **ZWEI Partien** (1x · 2x/3x/4x/6x) |
+
+Fassung 2 ist die ausgelieferte. Sie ist die **teuerste** der drei
+Klemmenwachen (861 Runden statt 202 in 62 Wochen, 519 Nachzuege) und die
+einzige, die haelt: **jedes** Wiederanlegen einer Klemme kommt dem naechsten
+Blick der Hand zuvor, nicht nur das an einem alten Element.
+
+Fassung 3 und 4 stehen hier, weil sie beide „sauberer" aussahen und beide
+messbar schlechter sind. Wer sie noch einmal versucht, findet hier die Zahl.
