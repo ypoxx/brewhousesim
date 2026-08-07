@@ -77,6 +77,37 @@ Sitzungen gelaufen sind.)*
 
 ---
 
+## 5 · Verstehe ich in den ersten fünf Minuten, was ich tun soll und was Gewinnen heißt?
+
+**Was ich tun soll: nach etwa zwei Minuten ja. Was Gewinnen heißt: nein, und zwar auch
+nach zwanzig Minuten nicht.**
+
+Der erste Schirm (1350, 1600×900) trägt **613 sichtbare Textzeilen**, rund 40 anfassbare
+Knöpfe und zehn zugeklappte Bretter. Gut daran ist die untere Zeile:
+
+> `nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf (Kasse reicht 5,9×)`
+
+Das ist die beste Zeile des Spiels. Sie sagt mir, was als Nächstes sinnvoll ist, was es
+kostet und ob ich es mir leisten kann — und sie steht in jeder Woche da. Dazu der große
+WEITER-Knopf unten rechts. Damit war ich nach zwei Minuten handlungsfähig.
+
+**Aber:** die Wörter **Ziel**, **gewinnen**, **überleben** kommen auf dem ersten Schirm
+**null Mal** vor (gezählt über alle 613 Zeilen). Die Epoche trägt im Quelltext das Verb
+*„überleben"*; auf dem Schirm steht davon nichts. Es gibt keine Anleitung, keinen ersten
+Satz, keinen Hinweis, worauf die Partie hinausläuft.
+
+**Und die Stelle, an der ich es wirklich nicht verstanden habe, ist benennbar:** oben rechts
+steht beim Laden der Knopf **„Michaelitafel schließen"** — während die Michaelitafel gar
+nicht auf dem Tisch liegt. Ich habe eine Weile gesucht, was ich da schließen soll. Die
+Michaelitafel ist das Brett, auf dem die *einzigen* Entscheidungen mit Preisschild
+nebeneinander stehen; sie ist beim Start unsichtbar, und der einzige Knopf, der sie holt,
+behauptet, sie liege schon da. In 1600 ist derselbe Knopf zeitweise ehrlich
+(„Michaelitafel 1600 · 4 Angebote"), unmittelbar nach dem Jahreswechsel aber wieder
+falsch beschriftet („schließen", während nichts liegt) — gemessen an zwei Jahreswechseln.
+
+Dass es ein **gutes Ende** gibt (die Übergabe des Hauses, siehe §7), erfährt man auf dem
+ersten Schirm nicht und in zwanzig Minuten Spiel überhaupt nicht.
+
 ## 6 · Kann man eine Partie unterbrechen und fortsetzen?
 
 **Nein. Ein Neuladen löscht die Partie ohne Warnung.**
