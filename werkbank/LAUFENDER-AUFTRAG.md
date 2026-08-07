@@ -46,6 +46,57 @@ nächsten Reset weg — am 2. August hat genau das vier Stunden gekostet: die
 Fortschrittsseite stand auf einem widerlegten Befund, und der Veröffentlicher lief nicht,
 während vier Builder arbeiteten, die selbst kein `git` dürfen.
 
+## DIE SPIELPROBE — der Kritiker, der spielt statt misst, und sein Satz
+
+*7. August, blind am Stand `3d9f5c2`. `werkbank/urteile/welle12-spielprobe.md`,
+581 Zeilen, **13 Auflagen**. Vier Epochen mit echten Mausklicks, 1 760 Klicks in
+den drei unversehrten Protokollen, dazu eigene Proben für Ende, Wiederkehr und
+Gegnerblick. Der letzte dieser Art lief in Welle 7.*
+
+> **Sein Satz:** *„Dieses Spiel wird an seinem Ende gut, und man kommt zu selten
+> dorthin. Die zwanzig Minuten dazwischen verkaufen es nicht."*
+
+**Die vier Fragen, die dieser Lauf nie gestellt hatte:**
+
+| | Antwort |
+|---|---|
+| Verstehe ich, **was ich tun soll**? | nach zwei Minuten ja — wegen der Zeile *„nächster Zug … (Kasse reicht 5,9×)"*, die er die beste Zeile des Spiels nennt |
+| Verstehe ich, **was Gewinnen heißt**? | **nein, auch nach zwanzig Minuten nicht.** Die Wörter *Ziel*, *gewinnen*, *überleben* kommen auf dem ersten Schirm **null Mal** vor — bei 613 sichtbaren Textzeilen |
+| Kann ich **unterbrechen und fortsetzen**? | **nein.** Gemessen: zwölf Wochen gespielt, neu geladen, alles zurück auf Woche 1. `localStorage`, `sessionStorage`, `cookie` leer, keine Warnung |
+| **Wollte ich weiterspielen?** | zweimal ja, einmal nein — und der Unterschied ist die ganze Kritik |
+
+**Das „nein" liegt in den Minuten 4 bis 20.** Die Woche besteht aus zwei
+Knöpfen: *„Wie vorige Woche"* und *„FUHRE ABSCHICKEN"* — **1 256 von 1 760
+Klicks (71 %)**, mit *„Nach Durst füllen"* zusammen **78 %**. Sein Befund dazu
+ist genauer als „langweilig": *„Das ist kein langweiliges Spiel — es ist ein
+**interessantes Spiel, das man nicht spielen darf**, weil das Geld fehlt."*
+Einmal im Jahr liegt die Michaelitafel mit fünf Angeboten da, **von denen keines
+bezahlbar ist**.
+
+**Das „ja, sofort und ernsthaft" liegt am Ende.** Die Partie endete von selbst —
+*„Der Rat entzieht das Braurecht · 1353"* — mit der Zeile *„Nicht die leere
+Kasse hat das Haus zugemacht … Was fehlte, war die Adresse, die das Fass
+abnimmt."* **Er wollte es sofort noch einmal versuchen.** Und erfährt in zwanzig
+Minuten Spiel nirgends, dass es dieses Blatt gibt.
+
+> ### DER LÜGENDE KNOPF IST NOCH DA — die Welle 12 hat das Rennen geheilt, nicht die Lüge
+>
+> Beim Laden steht oben rechts **„Michaelitafel schließen"**, während die Tafel
+> gar nicht liegt. Der Kritiker hat gesucht, was er da schließen soll. **Es ist
+> dasselbe Brett, das die einzigen Entscheidungen mit Preisschild nebeneinander
+> trägt** — unsichtbar beim Start, und der einzige Griff dorthin behauptet, es
+> läge schon da. Welle 12 hat den *Wettlauf* abgestellt, der daraus zwei Partien
+> machte; **die falsche Beschriftung selbst steht unverändert.** Das ist die
+> Auflage A4 des Spielkritikers und ein Beleg dafür, dass eine geheilte Ursache
+> nicht dasselbe ist wie ein geheiltes Symptom.
+
+**Die dreizehn Auflagen** reichen von A1 (Spielstand speichern und fortsetzen)
+über A7 (*„Die Woche braucht mehr als zwei Knöpfe, oder sie braucht keine
+Woche"*) und A10 (*„Wenn nichts bezahlbar ist, muss das Spiel einen Weg
+zeigen"*) bis A12 (*„Das Epochenversprechen wird im Spiel nie eingelöst"*).
+
+---
+
 ## WELLE 12 IST DURCH — die Wiederholbarkeit ist wieder da
 
 *7. August, von der Aufsicht an einem **eigenen** eingefrorenen Stand (`3d9f5c2`,
