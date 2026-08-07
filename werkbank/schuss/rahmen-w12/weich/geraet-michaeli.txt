@@ -1,1 +1,14 @@
 MESSFENSTER: belegt, warte (max 7200s) …
+MESSFENSTER: frei nach 594s
+MESSFENSTER offen — load 1.33 1.26 1.22
+E1 1351/W1  RUHIG  lage=0 fehler=0 zuege=99 verdeckt=0 tafeln=3 ueberRand=0 haushalt=5
+     RUNDE  34 Runden · 285 nachgeholte Aufgaben · max 5 Durchgaenge · 2 Nachrunden · 0 aussen (0 Pendel, 0 Riegel) · ueberlauf 0  — sauber
+E2 1601/W1  RUHIG  lage=0 fehler=0 zuege=106 verdeckt=0 tafeln=3 ueberRand=4 haushalt=5
+     RUNDE  32 Runden · 279 nachgeholte Aufgaben · max 5 Durchgaenge · 4 Nachrunden · 0 aussen (4 Pendel, 0 Riegel) · ueberlauf 0  !! 1 Beanstandung(en)
+     runde.pruefe: aussen-pendel (4) — Die Klemmenlage kippt zwischen zwei Zustaenden hin und her; der Rahmen zeichnet dabei nicht mit. Ein Stueck klappt ein fremdes Brett weg, ohne zeichne zu senden.
+E3 1885/W1  RUHIG  lage=0 fehler=0 zuege=108 verdeckt=0 tafeln=3 ueberRand=0 haushalt=4
+     RUNDE  32 Runden · 269 nachgeholte Aufgaben · max 5 Durchgaenge · 2 Nachrunden · 0 aussen (0 Pendel, 0 Riegel) · ueberlauf 0  — sauber
+E4 1971/W1  RUHIG  lage=0 fehler=0 zuege=110 verdeckt=0 tafeln=3 ueberRand=0 haushalt=5
+     RUNDE  32 Runden · 279 nachgeholte Aufgaben · max 5 Durchgaenge · 4 Nachrunden · 0 aussen (4 Pendel, 0 Riegel) · ueberlauf 0  !! 1 Beanstandung(en)
+     runde.pruefe: aussen-pendel (4) — Die Klemmenlage kippt zwischen zwei Zustaenden hin und her; der Rahmen zeichnet dabei nicht mit. Ein Stueck klappt ein fremdes Brett weg, ohne zeichne zu senden.
+ALLE VIER EPOCHEN RUHIG
