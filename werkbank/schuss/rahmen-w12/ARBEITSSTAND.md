@@ -59,3 +59,92 @@ entscheidet ueber `hit` — und damit ueber die Partie.**
 
 Das ist genau die Sorte Rennen, die der Auftrag beschreibt. Was jetzt gemessen
 wird: WER stellt nach dem Bildaufbau noch etwas fertig.
+
+---
+
+# R7 — DAS RENNEN, GEFUNDEN UND REPRODUZIERT
+
+## Das Geraet
+
+`werkbank/schuss/rahmen-w12/rennen.mjs` — die Hand ist **wortgleich** die von
+`rueckkopplung-r3/linie.mjs`; dazu kommen drei Dinge:
+
+1. ein Init-Skript, das `setTimeout/setInterval/requestAnimationFrame/
+   requestIdleCallback` umhuellt und je Aufruf notiert, **welche Spieldatei und
+   welche Zeile** ihn bestellt hat (aus dem Aufrufstapel) — plus jedes
+   `B.sende('zeichne')` mit seinem Grund;
+2. ein **Protokoll** an der entscheidenden Stelle (jede Woche 1): Text und
+   Rechteck von `preis:tafel`, `elementFromPoint` darauf, Klassenliste von
+   `.pr-tafel`, Zeilen der LEITER, `BRAUHAUS.preis.lage()`;
+3. **`DROSSEL=n`** — `Emulation.setCPUThrottlingRate` im selben Browser.
+   Damit laesst sich die Phasenlage erzeugen, die sonst nur die Last der
+   Maschine erzeugt, **ohne einen zweiten Prozess neben der Messung**.
+
+## Der Kurzschluss: 62 Wochen statt 400 genuegen
+
+Die Partien gehen in Woche 61 auseinander. 62 Wochen reichen also, und ein
+Lauf dauert rund 40 s statt 8 Minuten.
+
+**Messung, Stand `7a1a942`, Hafen 8940, ein Messfenster, fuenf Laeufe
+nacheinander, `?saat=1350`:**
+
+| Drossel | LEITER-Zeilen 1350/51/52 | Kasse an Michaeli 1350/51/52 | = Partie |
+|---|---|---|---|
+| 1× | 1 / 2 / **0** | 79 / 60 / **164** | **A** (voll A+C, `ohneErbe`) |
+| 2× | 1 / 2 / **0** | 79 / 60 / **164** | **A** |
+| **3×** | 1 / 2 / **3** | 79 / 60 / **119** | **B** (voll B, `ohneGegner`) |
+| 4× | 1 / 2 / **3** | 79 / 60 / **119** | **B** |
+| 6× | 1 / 2 / **3** | 79 / 60 / **119** | **B** |
+
+Das sind Ziffer fuer Ziffer die beiden Partien des vollen 400-Wochen-Standes.
+Vier ungedrosselte Laeufe vorher (`rennen-vorher.json`) gaben viermal A.
+**Das Rennen ist damit auf einer ruhigen Maschine schaltbar.**
+
+## WO DAS RENNEN SITZT — mit dem Protokoll, nicht mit einer Vermutung
+
+Michaeli 1352, im Augenblick, in dem die Hand `preis:tafel` liest:
+
+| | Drossel 2 (Partie A) | Drossel 3 (Partie B) |
+|---|---|---|
+| `.pr-tafel` im DOM | ja, `pr-tafel pr-stil-pergament` | **nein** |
+| `BRAUHAUS.preis.lage().weggeklappt` | **false** | **true** |
+| Text an `preis:tafel` | „Michaelitafel **schließen**" | „Michaelitafel 1352 · 5 Angebote" |
+| was die Hand daraufhin tut | **klickt nicht** | **klickt** |
+| Folge | Tafel bleibt fort, LEITER leer, kein Angebot | Tafel liegt auf, Angebot fuer 45 Pf |
+
+Und einen Schritt spaeter (`W1:nach-sommer 1352`, Drossel 2) traegt dieselbe
+`.pr-tafel` die Klasse `stadt-zugeklappt` — **waehrend der Griff weiter
+„schließen" sagt.** Das ist die Luege, an der sich die Partie entscheidet.
+
+## Die Kette, Glied fuer Glied
+
+1. `stuecke/stadt.js` `nachsehen()` entscheidet die Platzordnung und setzt
+   `stadt-zugeklappt` auf ein fremdes Brett. Angestossen wird sie von
+   `stadt.js:1560` (MutationObserver) → `stadt.js:1554` (`requestAnimationFrame`)
+   und zusaetzlich von `stadt.js:1573` `setInterval(pruefe, TAKT)`.
+   **Sie sendet dabei kein `zeichne`.** Niemand erfaehrt es.
+2. `stuecke/preis.js:2737` `seheNachRahmen()` sieht deshalb **nach einer
+   Wanduhrfrist von 420 ms** nach, ob die STADT die Tafel weggeklappt hat, und
+   sendet erst dann `zeichne`. Der Kommentar dort sagt es selbst: *„DIE STADT
+   klappt erst einen Wimpernschlag nach dem Zeichnen zu."*
+3. Zwischen 1. und 2. **luegt der Knopf**: er sagt „Michaelitafel schließen",
+   obwohl nichts auf dem Tisch liegt.
+4. Die messende Hand wartet nach jedem Klick `ruhe()` = **zwei Bildaufbauten**
+   plus eine Runde der Aufgabenschlange — also rund 33 ms. **420 ms sind
+   zwoelfmal so lang.** Ob die Hand vor oder nach dem Nachsehen liest, haengt
+   an der Last der Maschine.
+
+Gezaehlt in einem 62-Wochen-Lauf: `seheNachRahmen` wird **186-mal bestellt und
+faellt 5-mal** — jedes Zeichnen setzt die Frist zurueck. Sie faellt nur dann,
+wenn 420 ms lang kein Bild neu gebaut wird. Genau in einer dieser fuenf
+Luecken liegt Michaeli 1352.
+
+## Warum die Trennprobe „kein Verursacher" ergeben hat, und warum das stimmt
+
+Die Kette braucht **drei** Teile: ein Brett DES PREISES, das die STADT
+wegklappt, und genug anderes auf dem Tisch, damit die Platzordnung ueberhaupt
+in den Streit geht. DIE FUHRE bringt das Sommerblatt (deshalb ist sie
+notwendig: `ohneFuhre` bleibt auf dem Vorzustand), DER GEGNER und DAS ERBE
+verschieben mit ihren eigenen Brettern, wie lange ein Bildaufbau dauert und
+wo die 420-ms-Luecke faellt. **Keines der drei ist die Ursache; die Ursache
+ist, dass die Fertigstellung einer Runde nicht festgelegt ist.**
