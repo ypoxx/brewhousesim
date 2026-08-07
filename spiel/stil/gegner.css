@@ -564,6 +564,31 @@
   white-space: normal;
   overflow-wrap: break-word;
 }
+/* DER EINZIGE ELASTISCHE TEIL DER ZEILE IST DER SATZ — ein eigener Fehler,
+   bei 1366x768 gemessen und nicht vermutet.
+
+   `.gg-bandliste { overflow-x: hidden }` ist in dieser Welle dazugekommen,
+   damit das Brett nicht waagerecht rollt. Damit schneidet die Liste aber
+   auch ab, was ueber ihre rechte Kante ragt — und bei 1366 px ragte etwas:
+
+     .gg-bandliste 438x41, scrollWidth 446   (1350, 1600; 443 in 1884)
+       +8,5 px  span.wort „zeigen"  28 px breit, links 418
+
+   Der Knopf am Zeilenende ist ein Flex-Kind mit der Vorgabe `flex: 0 1 auto`,
+   also SCHRUMPFBAR. Reicht der Platz nicht, schrumpft der Browser lieber ihn
+   als den Satz daneben — und weil seine Beschriftung `nowrap` ist, steht dann
+   „zeige" im Bild und der Rest liegt unter der Kante. Ein halb gelesener Knopf
+   ist schlimmer als ein halb gelesener Satz: beim Satz sieht man, dass er
+   weitergeht.
+
+   Also: der Knopf behaelt seine Breite, und geschrumpft wird der Satz — der
+   darf es, er hat `min-width: 0` und bricht um, statt zu kuerzen. Gemessen
+   nachher: scrollWidth = clientWidth = 438 in allen vier Epochen.
+
+   `.gg-bandzeile .wann` traegt `flex: none` aus demselben Grund schon laenger;
+   diese Zeile zieht den Knopf nach. Wer eine dritte feste Spalte einbaut, gibt
+   ihr ebenfalls `flex: none` — sonst schrumpft der Browser die falsche. */
+.gg-bandzeile > .knopf { flex: none; }
 .gg-bandzeile.neu .was { font-weight: bold; }
 .gg-bandzeile.leer { opacity: 0.6; font-style: italic; }
 .gg-bandmeldung {
