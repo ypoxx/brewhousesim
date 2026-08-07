@@ -381,3 +381,51 @@ messende Hand wartet — das ist knapp.
 Die Auflage 7 der Welle 10 (`BRAUHAUS.blatt.melde(el, fn)`) ist in Welle 11
 **nicht** eingeloest worden — `BRAUHAUS.haushalt.ohneGriff()` und die
 Blattaufsicht arbeiten weiter ohne Anmeldung. Sie steht.
+
+---
+
+# DIE ZUORDNUNG DER BEIDEN PARTIEN, MIT ZAHLEN
+
+`werkbank/schuss/rahmen-w12/auswerten-abnahme.py` und dieselbe
+Spearman-Rechnung wie `fuhre-w6/schnitte.py`, angewandt auf die Rohdaten der
+Welle 11 (nicht neu gemessen — sie liegen im Repo):
+
+| Datei | ρ 12 J | ρ 13 J | ρ 14 J | Kasse | Jahre < 1× |
+|---|---|---|---|---|---|
+| `welle11-saat/e1-A` | +0,252 | +0,181 | **+0,191** | 8–514 | 0/14 |
+| `welle11-saat/e1-B` | −0,266 | −0,418 | **−0,521** | 30–558 | 2/14 |
+| `welle11-saat/e1-C` | +0,252 | +0,181 | **+0,191** | 8–514 | 0/14 |
+| `trennprobe/ohneErbe-A/B/C` | +0,252 | +0,181 | **+0,191** | 8–514 | 0/14 |
+| `trennprobe/ohneGegner-A/B/C` | −0,266 | −0,418 | **−0,521** | 30–558 | 2/14 |
+| `trennprobe/ohneFuhre-A/B/C` | −0,245 | −0,170 | −0,336 | 28–524 | 2/14 |
+
+**Die Zuordnung ist dicht, Ziffer fuer Ziffer:** der volle Stand spielt in
+A und C genau die Partie `ohneErbe` und in B genau die Partie `ohneGegner`.
+Der Rundenschluss faehrt die Partie **B** (`ohneGegner`, Kasse 30–558,
+ρ(14 J) −0,521) — das ist die Partie, in der die Michaelitafel 1352
+**aufliegt** und das Angebot genommen wird, also die, die entsteht, wenn der
+Knopf nicht mehr luegt.
+
+---
+
+# WAS DIESER BAU AN SICH SELBST GEMESSEN HAT — die Zahlen des Rundenschlusses
+
+Aus `BRAUHAUS.runde.bericht()`, am Ende jedes 62-Wochen-Laufs abgefragt
+(`rennen-nachher2.json`, fuenf Drosselstufen):
+
+| | Wert |
+|---|---|
+| Runden in 62 Wochen | 202–225 |
+| nachgeholte Aufgaben | 2561–2918 (≈ 12,7 je Runde) |
+| Mikrotask-Durchgaenge je Runde, groesster | **5** (Vorrat: 12) |
+| `ueberlauf` — was an die echte Uhr zurueckging | **0** |
+| Nachrunden | 33–65 auf ~205 Runden |
+| Nachziehen ausserhalb einer Runde | 30–53 |
+| davon Pendel (Lage kippt hin und her) | 11–75 |
+| Riegel gegriffen | 18–24 |
+
+Im **reinen** Wochenlauf (30 × WEITER, kein Handgriff, `geraet.mjs 30`):
+31 Runden, 255–266 Aufgaben, **1 Nachrunde**, **0** Nachziehen ausserhalb,
+`ueberlauf` 0 — und `nachwehen()` in allen vier Epochen `ruhig: true`.
+Die Pendel und Riegel entstehen erst, wenn eine Hand Bretter aufschlaegt und
+zuklappt; sie sind der Rest, der DER STADT gehoert (Auflagen 1 und 2 unten).
