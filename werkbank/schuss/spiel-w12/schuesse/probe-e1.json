@@ -1,0 +1,5182 @@
+{
+ "ep": 1,
+ "BR": 1366,
+ "HO": 768,
+ "fehler": [],
+ "jahr": 1350,
+ "woche": 1,
+ "epoche": 1,
+ "kasse": 112,
+ "name": "Brauhaus zum Anker",
+ "lage": 0,
+ "lagen": [],
+ "zuege": [
+  {
+   "zug": "gegner:oeffnen:adler",
+   "text": "BRAUHAUS ZUM ADLER",
+   "titel": "Brauhaus zum Adler — jenseits des Flusses, vor der Mauer, wo das Wasser kalt ist und kein Ratszins liegt. Hartmann Feist, streitbar. Anklicken: das ganze Haus gegenüber.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 168,
+   "h": 24,
+   "x": 1065,
+   "y": 304,
+   "klasse": "gg-sitz"
+  },
+  {
+   "zug": "gegner:abloesen:torschenke",
+   "text": "TOR · KON ablösen 56 Pf",
+   "titel": "Schenke am Tor · Konzession des Brauhaus zum Adler, läuft bis 1352. Der Rat schreibt die Konzession auf das Haus um. Schreibgeld und Gunstgeschenk. Ablösung: 56 Pf.",
+   "preis": "-56",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 80,
+   "h": 28,
+   "x": 595,
+   "y": 419,
+   "klasse": "gg-schild gg-adler"
+  },
+  {
+   "zug": "gegner:hinhalten:torschenke",
+   "text": "Fass an den Wirt 1 Fass statt Geld",
+   "titel": "Ein Fass an den Wirt beim Schenke am Tor. Ein Fass ohne Rechnung vor die Tür des Wirts. Er lässt den Adler warten. Kostet 1 Fass aus dem eigenen Vorrat und keinen Pfennig. Einmal im Braujahr je Adresse.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 120,
+   "h": 28,
+   "x": 615,
+   "y": 450,
+   "klasse": "gg-fass"
+  },
+  {
+   "zug": "gegner:abloesen:faehrhaus",
+   "text": "FAE · BAN ablösen 66 Pf",
+   "titel": "Fährhaus am Fluss · Bannmeile des Brauhaus zum Adler, läuft bis 1353. Der Bann wird zerschnitten — das kostet den Rat ein Siegel und dich ein Vermögen. Ablösung: 66 Pf.",
+   "preis": "-66",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 80,
+   "h": 28,
+   "x": 1210,
+   "y": 388,
+   "klasse": "gg-schild gg-adler"
+  },
+  {
+   "zug": "gegner:hinhalten:faehrhaus",
+   "text": "Fass an den Wirt 1 Fass statt Geld",
+   "titel": "Ein Fass an den Wirt beim Fährhaus am Fluss. Ein Fass ohne Rechnung vor die Tür des Wirts. Er lässt den Adler warten. Kostet 1 Fass aus dem eigenen Vorrat und keinen Pfennig. Einmal im Braujahr je Adresse.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 120,
+   "h": 28,
+   "x": 1229,
+   "y": 419,
+   "klasse": "gg-fass"
+  },
+  {
+   "zug": "gegner:zuvorkommen:obernberg",
+   "text": "wirbt · noch 4 Wo. zuvorkommen 19 Pf",
+   "titel": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg mit Gevatterschaft. In 4 Wochen ist die Bindung da, ohne dass du etwas tust. Jetzt zuvorkommen: 19 Pf.",
+   "preis": "-19",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 124,
+   "h": 28,
+   "x": 1229,
+   "y": 272,
+   "klasse": "gg-wimpel gg-adler"
+  },
+  {
+   "zug": "gegner:hinhalten:obernberg",
+   "text": "Fass an den Wirt 1 Fass statt Geld",
+   "titel": "Ein Fass an den Wirt beim Klosterschenke Obernberg. Ein Fass ohne Rechnung vor die Tür des Wirts. Er lässt den Adler warten. Kostet 1 Fass aus dem eigenen Vorrat und keinen Pfennig. Einmal im Braujahr je Adresse.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 120,
+   "h": 28,
+   "x": 1227,
+   "y": 303,
+   "klasse": "gg-fass"
+  },
+  {
+   "zug": "gegner:beschwerde-bild",
+   "text": "Klage vor dem Stadtgericht kostet kein Geld · vier Ansehen gegen Klosterschenke Obernberg",
+   "titel": "Klage vor dem Stadtgericht. Der Wirt hat unter Zwang gesiegelt, und drei Nachbarn sagen es aus. Ein Schreiber setzt es auf, das Haus trägt es selbst vor. Kein Pfennig — aber vier Ansehen, und der Adler weiß, von wem.",
+   "preis": "0",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 124,
+   "h": 97,
+   "x": 615,
+   "y": 386,
+   "klasse": "gg-amt amort"
+  },
+  {
+   "zug": "gegner:blatt",
+   "text": "Das Haus gegenüber",
+   "titel": "Kasse, Erben, Hof und jede Bindung des Gegners — mit der Summe, die sie kostet.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 91,
+   "h": 24,
+   "x": 1110,
+   "y": 120,
+   "klasse": "knopf gg-klein"
+  },
+  {
+   "zug": "gegner:beschwerde",
+   "text": "Klage vor dem Stadtgericht",
+   "titel": "Der Wirt hat unter Zwang gesiegelt, und drei Nachbarn sagen es aus. Ein Schreiber setzt es auf, das Haus trägt es selbst vor. Kein Pfennig — aber vier Ansehen, und der Adler weiß, von wem.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 118,
+   "h": 24,
+   "x": 761,
+   "y": 165,
+   "klasse": "knopf gg-klein"
+  },
+  {
+   "zug": "gegner:zeige:1",
+   "text": "zeigen",
+   "titel": "Zeigt im Bild, wo dieser Zug etwas verändert hat.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 37,
+   "h": 24,
+   "x": 1137,
+   "y": 194,
+   "klasse": "knopf gg-winzig"
+  },
+  {
+   "zug": "sud:zettel-anstich",
+   "text": "Junges Fass · +14 · 1 Fass",
+   "titel": "Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass gibt kräftiges Zeug, ein altes müdes. Kostet 1 Fass.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 168,
+   "h": 24,
+   "x": 519,
+   "y": 182,
+   "klasse": "knopf sud-tat klein voll halb"
+  },
+  {
+   "zug": "sud:zettel-hefe-fass",
+   "text": "Altes Fass · +6 · 1 Fass",
+   "titel": "Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass gibt kräftiges Zeug, ein altes müdes. Kostet 1 Fass aus dem Keller — das älteste wäre ohnehin bald verdorben, gibt dafür nur die Hälfte.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 168,
+   "h": 24,
+   "x": 519,
+   "y": 206,
+   "klasse": "knopf sud-tat klein voll halb"
+  },
+  {
+   "zug": "sud:zettel-wechsel-frei",
+   "text": "Hopfen im Sack, heimlich",
+   "titel": "Womit wird gewürzt? Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 168,
+   "h": 24,
+   "x": 519,
+   "y": 230,
+   "klasse": "knopf sud-tat klein voll"
+  },
+  {
+   "zug": "sud:zettel-wechsel-kauf",
+   "text": "Röhrenrecht an der Quelle −30 Pf",
+   "titel": "Woher kommt das Wasser? Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in den Hof: gebohrte Erlenstämme unter der Gasse durch. Das Wasser steht dann jeden Tag im Hof, ohne einen Gang und ohne den Bach. Unwiderruflich — die Röhre liegt unter der Stadtmauer, und was einmal gegraben ist, gräbt niemand zurück. UNWIDERRUFLICH: danach ist diese Frage entschieden, und die Vorgabe ist nicht mehr zu haben.",
+   "preis": "-30",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 168,
+   "h": 33,
+   "x": 519,
+   "y": 259,
+   "klasse": "knopf sud-tat klein voll siegel"
+  },
+  {
+   "zug": "name:anschlag:umtrunk",
+   "text": "Umtrunk beim Wirt −9 Pf − 1 Fass",
+   "titel": "Man setzt sich hin, stellt ein Fass auf den Tisch und trinkt es mit aus. Der Wirt redet danach anders über das Haus. — Drei Wirte sind das Äußerste, was eine Amtszeit schafft — und das Fass auf dem Tisch ist eines, das niemand mehr kauft.",
+   "preis": "-9",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 140,
+   "h": 27,
+   "x": 792,
+   "y": 312,
+   "klasse": "knopf nm-knopf"
+  },
+  {
+   "zug": "stadt:marke:gegner-marktplatz",
+   "text": "Adler-Ausschank am Mar",
+   "titel": "Adler-Ausschank am Mar — Ortsmarke von gegner. Zeiger darauf zeigt sie, Klick heftet sie fest.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 771,
+   "y": 376,
+   "klasse": "knopf stadt-pflock ruht amort"
+  },
+  {
+   "zug": "stadt:marke:fuhre-lindenhof",
+   "text": "LIN",
+   "titel": "LIN — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 929,
+   "y": 361,
+   "klasse": "knopf stadt-pflock ruht amort"
+  },
+  {
+   "zug": "stadt:marke:fuhre-marktplatz",
+   "text": "OCH",
+   "titel": "OCH — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 732,
+   "y": 353,
+   "klasse": "knopf stadt-pflock ruht amort"
+  },
+  {
+   "zug": "stadt:marke:fuhre-muehle",
+   "text": "MUE",
+   "titel": "MUE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 1161,
+   "y": 330,
+   "klasse": "knopf stadt-pflock ruht amort"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-unten",
+   "text": "BRU",
+   "titel": "BRU — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 1202,
+   "y": 538,
+   "klasse": "knopf stadt-pflock ruht amort"
+  },
+  {
+   "zug": "stadt:marke:fuhre-fluss",
+   "text": "FAE",
+   "titel": "FAE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 1120,
+   "y": 507,
+   "klasse": "knopf stadt-pflock ruht amort"
+  },
+  {
+   "zug": "stadt:marke:fuhre-bruecke-oben",
+   "text": "OBE",
+   "titel": "OBE — Ortsmarke von fuhre. Zeiger darauf zeigt sie, Klick heftet sie fest.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 1147,
+   "y": 246,
+   "klasse": "knopf stadt-pflock ruht amort"
+  },
+  {
+   "zug": "fuhre:ziel:bar",
+   "text": "So verabreden",
+   "titel": "Sicher und klein: wer bar zahlen muss, bestellt weniger.  Verabredet wird bis zur siebten Woche des Braujahres; danach gilt es bis Michaeli.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 93,
+   "h": 24,
+   "x": 76,
+   "y": 384,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:ziel:ziel",
+   "text": "So ist es verabredet",
+   "titel": "Das Übliche. Das meiste Geld kommt am Zahltag, ein Teil kommt nie.  Verabredet wird bis zur siebten Woche des Braujahres; danach gilt es bis Michaeli.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 115,
+   "h": 24,
+   "x": 190,
+   "y": 384,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:ziel:borg",
+   "text": "So verabreden",
+   "titel": "Der Ausschank wächst, und das ganze Jahr hängt an einem Tag.  Verabredet wird bis zur siebten Woche des Braujahres; danach gilt es bis Michaeli.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 93,
+   "h": 24,
+   "x": 304,
+   "y": 384,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:laden:lindenhof",
+   "text": "+ 1 Fass",
+   "titel": "1 Fass für Gasthof Lindenhof auf den Wagen. Gasthof Lindenhof zahlt 9 Pf je Fass.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 47,
+   "h": 24,
+   "x": 308,
+   "y": 459,
+   "klasse": "knopf fu-klein fu-laden fu-tat fu-weiser"
+  },
+  {
+   "zug": "fuhre:abladen:lindenhof",
+   "text": "−",
+   "titel": "Wieder herunter vom Wagen.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 344,
+   "y": 459,
+   "klasse": "knopf fu-klein fu-ab"
+  },
+  {
+   "zug": "fuhre:laden:ochse",
+   "text": "+ 1 Fass",
+   "titel": "1 Fass für Zum Goldenen Ochsen auf den Wagen. Zum Goldenen Ochsen zahlt 9 Pf je Fass.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 47,
+   "h": 24,
+   "x": 308,
+   "y": 505,
+   "klasse": "knopf fu-klein fu-laden fu-tat fu-weiser"
+  },
+  {
+   "zug": "fuhre:abladen:ochse",
+   "text": "−",
+   "titel": "Wieder herunter vom Wagen.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 344,
+   "y": 505,
+   "klasse": "knopf fu-klein fu-ab"
+  },
+  {
+   "zug": "fuhre:laden:torschenke",
+   "text": "+ 1 Fass",
+   "titel": "1 Fass für Schenke am Tor auf den Wagen. Schenke am Tor zahlt 8 Pf je Fass.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 47,
+   "h": 24,
+   "x": 308,
+   "y": 552,
+   "klasse": "knopf fu-klein fu-laden fu-tat fu-weiser"
+  },
+  {
+   "zug": "fuhre:abladen:torschenke",
+   "text": "−",
+   "titel": "Wieder herunter vom Wagen.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 344,
+   "y": 552,
+   "klasse": "knopf fu-klein fu-ab"
+  },
+  {
+   "zug": "fuhre:laden:pfarrhof",
+   "text": "+ 1 Fass",
+   "titel": "1 Fass für Pfarrschenke St. Michael auf den Wagen. Pfarrschenke St. Michael zahlt 8 Pf je Fass.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 47,
+   "h": 24,
+   "x": 308,
+   "y": 598,
+   "klasse": "knopf fu-klein fu-laden fu-tat"
+  },
+  {
+   "zug": "fuhre:abladen:pfarrhof",
+   "text": "−",
+   "titel": "Wieder herunter vom Wagen.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 344,
+   "y": 598,
+   "klasse": "knopf fu-klein fu-ab"
+  },
+  {
+   "zug": "fuhre:bann:muehlwirt",
+   "text": "Bannbrief −60 Pf",
+   "titel": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Mühlschenke liegt 3 km außerhalb.",
+   "preis": "-60",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 102,
+   "h": 24,
+   "x": 306,
+   "y": 644,
+   "klasse": "knopf fu-klein fu-fest fu-tat"
+  },
+  {
+   "zug": "fuhre:bann:brueckenwirt",
+   "text": "Bannbrief −60 Pf",
+   "titel": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Brückenwirt liegt 2 km außerhalb.",
+   "preis": "-60",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 102,
+   "h": 24,
+   "x": 306,
+   "y": 690,
+   "klasse": "knopf fu-klein fu-fest fu-tat"
+  },
+  {
+   "zug": "fuhre:bann:faehrhaus",
+   "text": "Bannbrief −60 Pf",
+   "titel": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Fährhaus am Fluss liegt 4 km außerhalb.",
+   "preis": "-60",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 102,
+   "h": 24,
+   "x": 306,
+   "y": 736,
+   "klasse": "knopf fu-klein fu-fest fu-tat"
+  },
+  {
+   "zug": "fuhre:bann:hirsch",
+   "text": "Bannbrief −60 Pf",
+   "titel": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Landgasthof Hirsch liegt 7 km außerhalb.",
+   "preis": "-60",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": null,
+   "w": 102,
+   "h": 24,
+   "x": 306,
+   "y": 782,
+   "klasse": "knopf fu-klein fu-fest fu-tat"
+  },
+  {
+   "zug": "fuhre:laden:markt",
+   "text": "+ 1 Fass",
+   "titel": "Ausschank: nimmt keine der Sorten, die reif im Keller liegen.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": null,
+   "w": 47,
+   "h": 24,
+   "x": 308,
+   "y": 828,
+   "klasse": "knopf fu-klein fu-laden fu-tat"
+  },
+  {
+   "zug": "fuhre:abladen:markt",
+   "text": "−",
+   "titel": "Wieder herunter vom Wagen.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 344,
+   "y": 828,
+   "klasse": "knopf fu-klein fu-ab"
+  },
+  {
+   "zug": "fuhre:bann:obernberg",
+   "text": "Bannbrief −60 Pf",
+   "titel": "Der Rat erlaubt die Ausfuhr an ein Haus. Für immer. Unwiderruflich. Klosterschenke Obernberg liegt 9 km außerhalb.",
+   "preis": "-60",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": null,
+   "w": 102,
+   "h": 24,
+   "x": 306,
+   "y": 874,
+   "klasse": "knopf fu-klein fu-fest fu-tat"
+  },
+  {
+   "zug": "fuhre:tafel-ab:duenn",
+   "text": "−",
+   "titel": "Einen Sud weniger je Woche.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 627,
+   "y": 236,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:tafel-auf:duenn",
+   "text": "+",
+   "titel": "Zu Michaeli steht die Tafel frei. Ein Tag am Kessel, fünf Fass. In drei Wochen ist es sauer. Der Gasthof nimmt es nicht.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 669,
+   "y": 236,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:tafel-ab:grut",
+   "text": "−",
+   "titel": "Einen Sud weniger je Woche.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 627,
+   "y": 270,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:tafel-auf:grut",
+   "text": "+",
+   "titel": "Zu Michaeli steht die Tafel frei. Das Bier des Hauses. Grut aus Gagel, Porst und Schafgarbe — kein Hopfen.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 669,
+   "y": 270,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:tafel-ab:stark",
+   "text": "−",
+   "titel": "Einen Sud weniger je Woche.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 627,
+   "y": 312,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:tafel-auf:stark",
+   "text": "+",
+   "titel": "Zu Michaeli steht die Tafel frei. Drei Tage für drei Fass. Dafür hält es bis in den Sommer, und das Kloster zahlt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 669,
+   "y": 312,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:tafel-ab:kofent",
+   "text": "−",
+   "titel": "Einen Notsud weniger je Woche.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 627,
+   "y": 314,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:tafel-auf:kofent",
+   "text": "+",
+   "titel": "Der zweite Guss auf dieselben Treber. Kein Pfennig, kein Korn Grut, und der Rat zählt ihn nicht auf die Brautage — Nachbier ist in seinem Buch kein Bier. Er kostet nur die Pfanne. Drei Fass Dünnes, in zwei Wochen sauer, Gesindebier: der Gasthof und das Kloster nehmen es nicht. In einer schlechten Woche das einzige Bier des Hauses. Umstellen kostet hier nichts — der Braumeister braucht dafür weder Kreide noch Erlaubnis.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 24,
+   "h": 24,
+   "x": 669,
+   "y": 314,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:kauf:budget",
+   "text": "Brautage vom Rat · +6 −90 Pf",
+   "titel": "Sechs zusätzliche Brautage in diesem Braujahr. Der Rat verkauft sie ungern und teuer.",
+   "preis": "-90",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 100,
+   "h": 63,
+   "x": 431,
+   "y": 364,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:kauf:rohstoff",
+   "text": "Grut vom Grutherrn · +40 −34 Pf",
+   "titel": "Ohne Grut kein Bier. Hopfen kennt hier noch niemand.",
+   "preis": "-34",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 100,
+   "h": 63,
+   "x": 533,
+   "y": 364,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:rueckkauf:rohstoff",
+   "text": "Grut zurück an den Grutherrn · −40 +19 Pf",
+   "titel": "Vierzig Grut gehen zurück. Der Grutherr nimmt sie, aber nicht zum Einkaufspreis — und ohne Grut steht die Pfanne bald anders da. Einkauf 34 Pf, Rückgabe 19 Pf. In der Kammer liegen 40.",
+   "preis": "19",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 100,
+   "h": 63,
+   "x": 634,
+   "y": 364,
+   "klasse": "knopf fu-klein fu-rueck"
+  },
+  {
+   "zug": "fuhre:kauf:fass",
+   "text": "Fass vom Böttcher · +3 −34 Pf",
+   "titel": "Drei Fässer mehr im Umlauf.",
+   "preis": "-34",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 303,
+   "h": 24,
+   "x": 533,
+   "y": 410,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:fuellen",
+   "text": "Nach Durst füllen",
+   "titel": "Eine Faustregel, kein Rat: der Fuhrmann lädt für die Dürstenden. Der weite Weg und der zahlende Wirt stehen da nicht drin.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 106,
+   "h": 24,
+   "x": 761,
+   "y": 613,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:wie-vorige",
+   "text": "Wie vorige Woche",
+   "titel": "Dieselbe Verteilung wie bei der letzten Fuhre.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 109,
+   "h": 24,
+   "x": 871,
+   "y": 613,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:leeren",
+   "text": "Karren leeren",
+   "titel": "Alles wieder in den Keller.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 84,
+   "h": 24,
+   "x": 971,
+   "y": 613,
+   "klasse": "knopf fu-klein"
+  },
+  {
+   "zug": "fuhre:abschicken",
+   "text": "FUHRE ABSCHICKEN",
+   "titel": "Erst beladen. Jedes Fass bekommt ein Haus.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 354,
+   "h": 28,
+   "x": 884,
+   "y": 642,
+   "klasse": "knopf fu-abschicken"
+  },
+  {
+   "zug": "sud:wuerze:grut",
+   "text": "Grut vom Grutamt",
+   "titel": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Wochen. Ein Starkbier, das den Sommer übersteht, ist mit Grut allein nicht zu brauen — es schlägt als Bier des Hauses aus.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 101,
+   "h": 39,
+   "x": 81,
+   "y": 268,
+   "klasse": "knopf sud-wahl ist"
+  },
+  {
+   "zug": "sud:wuerze:sack",
+   "text": "Hopfen im Sack, heimlich",
+   "titel": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bottich liegen — und es trägt jetzt auch ein Starkbier, das bis zum Kloster fährt. — Der Grutknecht sieht in die Pfanne, wann er will.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 101,
+   "h": 39,
+   "x": 195,
+   "y": 268,
+   "klasse": "knopf sud-wahl"
+  },
+  {
+   "zug": "sud:wuerze:brief",
+   "text": "Offen gehopft, mit Hopfenbrief −78 Pf",
+   "titel": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkeit, eine Woche mehr im Bottich, und kein Grutknecht mehr in der Pfanne. Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.",
+   "preis": "-78",
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 101,
+   "h": 55,
+   "x": 308,
+   "y": 276,
+   "klasse": "knopf sud-wahl siegel"
+  },
+  {
+   "zug": "sud:wasser:bach",
+   "text": "Wasser aus dem Stadtbach",
+   "titel": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand, und die Lohgerber sitzen weiter oben am selben Wasser. So braut die ganze Reihe, und so hält das Bier, was es hält.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 101,
+   "h": 39,
+   "x": 81,
+   "y": 691,
+   "klasse": "knopf sud-wahl ist"
+  },
+  {
+   "zug": "sud:wasser:brunnen",
+   "text": "Wasser aus dem Ziehbrunnen",
+   "titel": "Eimer für Eimer aus dem eigenen Brunnen, den halben Sudtag lang. Das bessere Wasser hält das Bier ein Stück länger — und der halbe Sudtag fehlt hinten: ein Fass weniger geht aus jeder Pfanne in den Gärkeller. — Der Brunnen im Hof gibt nicht jede Woche her, was die Pfanne braucht.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 101,
+   "h": 39,
+   "x": 195,
+   "y": 691,
+   "klasse": "knopf sud-wahl"
+  },
+  {
+   "zug": "sud:wasser:roehre",
+   "text": "Röhrenrecht an der Quelle −30 Pf",
+   "titel": "Der Rat verbrieft dem Haus eine Deichel von der Quelle vor dem Tor bis in den Hof: gebohrte Erlenstämme unter der Gasse durch. Das Wasser steht dann jeden Tag im Hof, ohne einen Gang und ohne den Bach. Unwiderruflich — die Röhre liegt unter der Stadtmauer, und was einmal gegraben ist, gräbt niemand zurück.",
+   "preis": "-30",
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 101,
+   "h": 55,
+   "x": 308,
+   "y": 699,
+   "klasse": "knopf sud-wahl siegel"
+  },
+  {
+   "zug": "sud:hefe-fuehren",
+   "text": "Hefezeug aus dem Bottich heben · +8",
+   "titel": "Solange ein Bottich gärt, hebt der Brauer die Hefe von oben ab. Das kostet kein Fass — es geht nur, solange etwas gärt.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 213,
+   "h": 24,
+   "x": 476,
+   "y": 526,
+   "klasse": "knopf sud-tat"
+  },
+  {
+   "zug": "sud:anstich-jung",
+   "text": "Junges Fass anbrechen · +14 · 1 Fass",
+   "titel": "Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass gibt kräftiges Zeug, ein altes müdes. Das jüngste Fass gibt das kräftigste Zeug — und es wäre noch lange zu verkaufen gewesen. Kostet 1 Fass.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 210,
+   "h": 24,
+   "x": 475,
+   "y": 554,
+   "klasse": "knopf sud-tat"
+  },
+  {
+   "zug": "sud:anstich-alt",
+   "text": "Altes Fass anbrechen · +6 · 1 Fass",
+   "titel": "Ein Fass wird angebrochen und die Hefe abgeschöpft. Ein junges Fass gibt kräftiges Zeug, ein altes müdes. Das älteste Fass wäre ohnehin bald verdorben — dafür gibt es nur die Hälfte her. Kostet 1 Fass.",
+   "preis": null,
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 196,
+   "h": 24,
+   "x": 468,
+   "y": 582,
+   "klasse": "knopf sud-tat"
+  },
+  {
+   "zug": "sud:gaerraum",
+   "text": "Bottich beim Küfer bestellen · +6 Fass −26 Pf",
+   "titel": "6 Fass mehr Gärraum. Was nicht in den Gärkeller passt, reift im Lager mit und altert dabei. Die Reihe duldet keinen, der doppelt so viel ansetzt wie die anderen: der Küfer der Stadt setzt keinem Haus mehr als zwei neue Bottiche.",
+   "preis": "-26",
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": null,
+   "w": 276,
+   "h": 38,
+   "x": 508,
+   "y": 774,
+   "klasse": "knopf sud-tat"
+  },
+  {
+   "zug": "name:band",
+   "text": "▾",
+   "titel": "Das Rufband einklappen und die Stadt freigeben.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "zahl",
+   "w": 24,
+   "h": 24,
+   "x": 283,
+   "y": 79,
+   "klasse": "knopf nm-knopf nm-bandgriff"
+  },
+  {
+   "zug": "name:aufgeldbuch",
+   "text": "Das Aufgeld nachrechnen",
+   "titel": "Jede einzelne Buchung mit Datum, Adresse, Rechnung und Satz.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 263,
+   "h": 24,
+   "x": 158,
+   "y": 284,
+   "klasse": "knopf nm-knopf nm-klein-knopf"
+  },
+  {
+   "zug": "name:jetzt:umtrunk",
+   "text": "Umtrunk beim Wirt −9 Pf − 1 Fass",
+   "titel": "Man setzt sich hin, stellt ein Fass auf den Tisch und trinkt es mit aus. Der Wirt redet danach anders über das Haus. — Drei Wirte sind das Äußerste, was eine Amtszeit schafft — und das Fass auf dem Tisch ist eines, das niemand mehr kauft.",
+   "preis": "-9",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 273,
+   "h": 24,
+   "x": 158,
+   "y": 333,
+   "klasse": "knopf nm-knopf"
+  },
+  {
+   "zug": "name:jetzt:zunftzeichen",
+   "text": "Um das Zunftzeichen bitten −45 Pf",
+   "titel": "Das geschmiedete Zeichen der Brauerzunft neben dem Zeiger. Unwiderruflich. — Wer es führt, wird an ihm gemessen: jeder Rufbruch zählt danach doppelt. Dafür darf niemand sonst den Zeiger des Hauses führen.",
+   "preis": "-45",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 273,
+   "h": 24,
+   "x": 158,
+   "y": 359,
+   "klasse": "knopf nm-knopf"
+  },
+  {
+   "zug": "name:ruhe",
+   "text": "Das Zeichen verdecken",
+   "titel": "Kostet kein Geld, nur Reichweite — und rettet die Einlösung. Umkehrbar.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 273,
+   "h": 24,
+   "x": 158,
+   "y": 398,
+   "klasse": "knopf nm-knopf"
+  },
+  {
+   "zug": "name:herumgehen",
+   "text": "Herumgehen und den Namen sagen",
+   "titel": "Kostet kein Geld, sondern einen Nachmittag. Einmal im Braujahr.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 273,
+   "h": 24,
+   "x": 158,
+   "y": 425,
+   "klasse": "knopf nm-knopf"
+  },
+  {
+   "zug": "name:blatt",
+   "text": "Das Zeichen und das Register",
+   "titel": "Träger dieser Epoche, der Nachahmer, und das Register der Urteile.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 273,
+   "h": 24,
+   "x": 158,
+   "y": 481,
+   "klasse": "knopf nm-knopf nm-griff"
+  },
+  {
+   "zug": "erbe:tafel:verschreibe",
+   "text": "Verschreiben · Zum Goldenen Ochsen −16 Pf",
+   "titel": "Zum Goldenen Ochsen hängt an Kunigunde Bruckner (Gewohnheit). Verschreiben vor dem Rat ins Stadtbuch — dann haftet die Bindung am Haus und überlebt den Erbfall. Feder 0,70×. Unwiderruflich.",
+   "preis": "-16",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 142,
+   "h": 24,
+   "x": 809,
+   "y": 582,
+   "klasse": "knopf erb-knopf erb-weit"
+  },
+  {
+   "zug": "erbe:uebergabe:leibgeding",
+   "text": "Leibgeding −13 Pf",
+   "titel": "Sie behält Kost, Kammer und ein festes Jahrgeld im Haus. Solange es gezahlt wird, halten ihre Leute dem Haus die Treue. — 13 Pf jedes Michaeli, solange das Haus steht. Unwiderruflich.",
+   "preis": "-13",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 67,
+   "h": 24,
+   "x": 916,
+   "y": 582,
+   "klasse": "knopf erb-knopf erb-uebergabe"
+  },
+  {
+   "zug": "erbe:uebergabe:abfindung",
+   "text": "Abfertigung −64 Pf",
+   "titel": "Einmal ausgezahlt und aus dem Haus. Ihre Leute bleiben bis zum nächsten Michaeli, dann sind sie frei. — einmal 64 Pf. Der Preis fällt mit jeder Woche, die der Stunde näher kommt. Unwiderruflich.",
+   "preis": "-64",
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 70,
+   "h": 24,
+   "x": 988,
+   "y": 582,
+   "klasse": "knopf erb-knopf erb-uebergabe"
+  },
+  {
+   "zug": "erbe:uebergabe:bruch",
+   "text": "Mit leeren Händen 0 Pf",
+   "titel": "Nichts gegeben, nichts versprochen. Was nur an ihr hing, ist am selben Tag fort. — kostet nichts und nimmt alles, was nur an der Person hing, dazu 2 Fass aus dem Lager. Unwiderruflich.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 80,
+   "h": 24,
+   "x": 1065,
+   "y": 582,
+   "klasse": "knopf erb-knopf erb-uebergabe erb-ohne"
+  },
+  {
+   "zug": "erbe:buch",
+   "text": "Stadtbuch",
+   "titel": "Das Stadtbuch aufschlagen: die vollen Listen — was am Haus haftet, was an der Person hängt, was gefallen, geschrieben und erloschen ist, und jede Hand, die das Haus gehalten hat. Ein zweiter Druck im Buchkopf schlägt es wieder zu; Escape ebenso.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 37,
+   "h": 24,
+   "x": 1127,
+   "y": 582,
+   "klasse": "knopf erb-knopf erb-griff"
+  },
+  {
+   "zug": "kern:chronik",
+   "text": "CHRONIK 4",
+   "titel": "",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 96,
+   "h": 24,
+   "x": 926,
+   "y": 39,
+   "klasse": "tafel knopf"
+  },
+  {
+   "zug": "kern:protokoll",
+   "text": "BUCH 1",
+   "titel": "",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 72,
+   "h": 24,
+   "x": 1014,
+   "y": 39,
+   "klasse": "tafel knopf"
+  },
+  {
+   "zug": "weiter",
+   "text": "WEITER",
+   "titel": "Eine Woche weiter. Woche 1 von 30.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 126,
+   "h": 36,
+   "x": 1207,
+   "y": 737,
+   "klasse": "knopf gross amort"
+  },
+  {
+   "zug": "klang:ton",
+   "text": "♪",
+   "titel": "Ton ist bereit — der Browser gibt ihn beim ersten Klick frei.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 24,
+   "h": 24,
+   "x": 28,
+   "y": 28,
+   "klasse": "knopf klang-schalter klang-wartet"
+  },
+  {
+   "zug": "stadt:bauhof",
+   "text": "BAUHOF 5 offen · ab 13 Pf · 5 bezahlbar",
+   "titel": "5 offen · ab 13 Pf · 5 bezahlbar. Aufschlagen: die Lade legt sich über die Stadt, bis man sie wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 59,
+   "h": 77,
+   "x": 46,
+   "y": 98,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:gegner-amort-gg-band",
+   "text": "OHNE DICH GESCHEHEN 1 Zug",
+   "titel": "OHNE DICH GESCHEHEN — 1 Zug. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 130,
+   "h": 77,
+   "x": 141,
+   "y": 98,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-haeuser",
+   "text": "DIE HÄUSER wollen 15 · im Keller liegen 4 Fass",
+   "titel": "DIE HÄUSER — wollen 15 · im Keller liegen 4 Fass. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 82,
+   "h": 77,
+   "x": 249,
+   "y": 98,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-schiefer-fu-tafel",
+   "text": "ANSCHLAGTAFEL mit Kreide an der Sudhauswand",
+   "titel": "ANSCHLAGTAFEL — mit Kreide an der Sudhauswand. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 116,
+   "h": 77,
+   "x": 350,
+   "y": 98,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-keller",
+   "text": "DER KELLER 4 von 12 Fass · 4 reif",
+   "titel": "DER KELLER — 4 von 12 Fass · 4 reif. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 86,
+   "h": 51,
+   "x": 60,
+   "y": 164,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:fuhre-fu-brett-fu-wagen",
+   "text": "OCHSENKARREN 0 von 5 Fass · 0 von 4 Halten",
+   "titel": "OCHSENKARREN — 0 von 5 Fass · 0 von 4 Halten. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 111,
+   "h": 51,
+   "x": 160,
+   "y": 164,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:sud-sud-brett",
+   "text": "DAS SUDHAUS zugeklappt",
+   "titel": "DAS SUDHAUS. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 93,
+   "h": 51,
+   "x": 263,
+   "y": 164,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:name-nm-band",
+   "text": "DER RUF DES HAUSES Bierzeiger und Zunftzeichen",
+   "titel": "DER RUF DES HAUSES — Bierzeiger und Zunftzeichen. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 130,
+   "h": 51,
+   "x": 376,
+   "y": 164,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:reiter:preis-pr-stil-pergament-pr-tafel",
+   "text": "MICHAELI 1350 Der Rat setzt den Bierpfennig. Wer darüber g",
+   "titel": "MICHAELI 1350 — Der Rat setzt den Bierpfennig. Wer darüber g. Aufschlagen: es legt sich über die Stadt, bis man es wieder zuklappt.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 99,
+   "h": 77,
+   "x": 66,
+   "y": 229,
+   "klasse": "knopf stadt-reiter"
+  },
+  {
+   "zug": "stadt:ortsmarken",
+   "text": "ORTSMARKEN 7 auf dem Pflock",
+   "titel": "7 Ortsmarken der anderen Stücke liegen auf ihren Pflöcken. Ein Zeiger auf einen Pflock zeigt eine einzelne, dieser Knopf zeigt alle.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 107,
+   "h": 77,
+   "x": 170,
+   "y": 229,
+   "klasse": "knopf stadt-reiter marken"
+  },
+  {
+   "zug": "stadt:alles-zuklappen",
+   "text": "Stadt zeigen",
+   "titel": "Es ist kein Brett aufgeschlagen — es gibt nichts zuzuklappen.",
+   "preis": null,
+   "aus": true,
+   "sicht": false,
+   "hit": false,
+   "oben": null,
+   "w": 0,
+   "h": 0,
+   "x": 0,
+   "y": 0,
+   "klasse": "knopf stadt-reiter frei aus"
+  },
+  {
+   "zug": "preis:tafel",
+   "text": "Michaelitafel schließen",
+   "titel": "Heute ist Michaeli. Was hier genommen wird, wird heute genommen.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": true,
+   "oben": null,
+   "w": 174,
+   "h": 24,
+   "x": 1260,
+   "y": 39,
+   "klasse": "knopf pr-griff-knopf"
+  },
+  {
+   "zug": "preis:chronik",
+   "text": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Tafel",
+   "titel": "Was festgelegt wurde, steht dort unabänderlich.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 317,
+   "h": 24,
+   "x": 994,
+   "y": 116,
+   "klasse": "knopf pr-reiter"
+  },
+  {
+   "zug": "preis:nimm:dach",
+   "text": "Nehmen −33 Pf",
+   "titel": "Das Dach über der Pfanne — Ein Schindeldach auf vier Ständern, über der offenen Pfanne.  +16 Pf in jedem Michaeli · −6 Pf in jedem Michaeli: Schindeln und Lattung für das Dach",
+   "preis": "-33",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 104,
+   "h": 39,
+   "x": 326,
+   "y": 393,
+   "klasse": "knopf pr-nehmen"
+  },
+  {
+   "zug": "preis:nimm:bottich",
+   "text": "Nehmen −42 Pf",
+   "titel": "Ein zweiter Bottich aus Eichenholz — Ein Gärbottich vom Küfer, mit Weidenreifen gebunden.  +3 Fass Lagerplatz · +4 im Hundert je Fass · −8 Pf in jedem Michaeli: Weidenreifen und Dauben für den zweiten Bottich",
+   "preis": "-42",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 104,
+   "h": 39,
+   "x": 446,
+   "y": 393,
+   "klasse": "knopf pr-nehmen"
+  },
+  {
+   "zug": "preis:nimm:ochsenstall",
+   "text": "Nehmen −110 Pf",
+   "titel": "Der Ochsenstall am Tor — Ein eigener Stall statt des geliehenen Gespanns.  +34 Pf in jedem Michaeli · −16 Pf in jedem Michaeli: Futter und Streu für den Ochsen",
+   "preis": "-110",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 104,
+   "h": 39,
+   "x": 566,
+   "y": 393,
+   "klasse": "knopf pr-nehmen"
+  },
+  {
+   "zug": "preis:nimm:karrengaul",
+   "text": "Nehmen −200 Pf",
+   "titel": "Ein Karrengaul statt des Ochsen — Ein kaltblütiges Pferd, Geschirr, Hufbeschlag.  +62 Pf in jedem Michaeli · −47 Pf in jedem Michaeli: Hafer, Beschlag und Geschirr für den Gaul",
+   "preis": "-200",
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 104,
+   "h": 39,
+   "x": 686,
+   "y": 393,
+   "klasse": "knopf pr-nehmen"
+  },
+  {
+   "zug": "preis:nimm:bannmeile",
+   "text": "Nehmen −1.300 Pf",
+   "titel": "Die Bannmeile auf zehn Jahre — Ein Ratsbrief: kein fremdes Bier innerhalb einer Meile.  3 Häuser gebunden, 10 Jahre",
+   "preis": "-1300",
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 104,
+   "h": 39,
+   "x": 807,
+   "y": 393,
+   "klasse": "knopf pr-nehmen"
+  },
+  {
+   "zug": "preis:festlege:freikauf",
+   "text": "Festlegen −1.000 Pf",
+   "titel": "Unabänderlich. Der Erbzins endet. Für immer. Das Haus gehört von heute an dem Haus.",
+   "preis": "-1000",
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 184,
+   "h": 24,
+   "x": 366,
+   "y": 605,
+   "klasse": "knopf pr-siegel"
+  },
+  {
+   "zug": "preis:festlege:realrecht",
+   "text": "Festlegen −800 Pf",
+   "titel": "Unabänderlich. Kein Handlohn mehr bei jedem Erbfall. Wer erbt, erbt auch die Pfanne.",
+   "preis": "-800",
+   "aus": true,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 184,
+   "h": 24,
+   "x": 566,
+   "y": 605,
+   "klasse": "knopf pr-siegel"
+  },
+  {
+   "zug": "preis:festlege:vertrag",
+   "text": "Festlegen −85 Pf",
+   "titel": "Unabänderlich. Vier Häuser nehmen nur noch Bier dieses Hauses. Die übrigen merken sich, dass sie nicht gefragt wurden.",
+   "preis": "-85",
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 184,
+   "h": 24,
+   "x": 767,
+   "y": 605,
+   "klasse": "knopf pr-siegel"
+  },
+  {
+   "zug": "preis:nichts",
+   "text": "Nichts nehmen · das Geld bleibt liegen",
+   "titel": "Die Tafel geht zu, die Kasse bleibt voll. Was fällig wird, steht rechts.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 226,
+   "h": 26,
+   "x": 881,
+   "y": 647,
+   "klasse": "knopf pr-nichts"
+  },
+  {
+   "zug": "preis:tafel-zu",
+   "text": "Das Jahr beginnen",
+   "titel": "Zurück auf den Hof. Die Tafel öffnet zu Michaeli 1351 wieder.",
+   "preis": null,
+   "aus": false,
+   "sicht": true,
+   "hit": false,
+   "oben": "",
+   "w": 152,
+   "h": 32,
+   "x": 1076,
+   "y": 647,
+   "klasse": "knopf gross pr-weiter"
+  }
+ ],
+ "texte": [
+  {
+   "t": "ST. MICHAEL",
+   "px": 12,
+   "x": 761,
+   "y": 262
+  },
+  {
+   "t": "GASTHOF LINDENHOF",
+   "px": 12,
+   "x": 853,
+   "y": 393
+  },
+  {
+   "t": "BRAUHAUS",
+   "px": 12,
+   "x": 664,
+   "y": 476
+  },
+  {
+   "t": "ZUM ANKER",
+   "px": 12,
+   "x": 665,
+   "y": 501
+  },
+  {
+   "t": "GEGR. 1350",
+   "px": 12,
+   "x": 666,
+   "y": 514
+  },
+  {
+   "t": "Vorsprung: 2 Dinge · wirbt 2 Wo. kürzer",
+   "px": 12,
+   "x": 920,
+   "y": 278
+  },
+  {
+   "t": "Brauhaus zum Adler",
+   "px": 12,
+   "x": 1002,
+   "y": 297
+  },
+  {
+   "t": "Hartmann Feist · streitbar",
+   "px": 12,
+   "x": 964,
+   "y": 317
+  },
+  {
+   "t": "2 Häuser",
+   "px": 12,
+   "x": 1002,
+   "y": 333
+  },
+  {
+   "t": "1 Zug",
+   "px": 12,
+   "x": 1079,
+   "y": 333
+  },
+  {
+   "t": "Kasse 320 Pf",
+   "px": 12,
+   "x": 1015,
+   "y": 348
+  },
+  {
+   "t": "sein Preis 9 Pf",
+   "px": 12,
+   "x": 1011,
+   "y": 364
+  },
+  {
+   "t": "wirbt",
+   "px": 12,
+   "x": 1036,
+   "y": 380
+  },
+  {
+   "t": "W1",
+   "px": 12,
+   "x": 1066,
+   "y": 380
+  },
+  {
+   "t": "Adler-Ausschank am Markt",
+   "px": 12,
+   "x": 722,
+   "y": 376
+  },
+  {
+   "t": "TOR · KON",
+   "px": 12,
+   "x": 567,
+   "y": 405
+  },
+  {
+   "t": "ablösen 56 Pf",
+   "px": 12,
+   "x": 567,
+   "y": 419
+  },
+  {
+   "t": "Fass an den Wirt",
+   "px": 12,
+   "x": 555,
+   "y": 436
+  },
+  {
+   "t": "1 Fass statt Geld",
+   "px": 12,
+   "x": 555,
+   "y": 450
+  },
+  {
+   "t": "FAE · BAN",
+   "px": 12,
+   "x": 1182,
+   "y": 374
+  },
+  {
+   "t": "ablösen 66 Pf",
+   "px": 12,
+   "x": 1182,
+   "y": 388
+  },
+  {
+   "t": "Fass an den Wirt",
+   "px": 12,
+   "x": 1170,
+   "y": 406
+  },
+  {
+   "t": "1 Fass statt Geld",
+   "px": 12,
+   "x": 1170,
+   "y": 419
+  },
+  {
+   "t": "wirbt · noch 4 Wo.",
+   "px": 12,
+   "x": 1167,
+   "y": 258
+  },
+  {
+   "t": "zuvorkommen 19 Pf",
+   "px": 12,
+   "x": 1167,
+   "y": 272
+  },
+  {
+   "t": "Fass an den Wirt",
+   "px": 12,
+   "x": 1167,
+   "y": 289
+  },
+  {
+   "t": "1 Fass statt Geld",
+   "px": 12,
+   "x": 1167,
+   "y": 303
+  },
+  {
+   "t": "umkämpft",
+   "px": 12,
+   "x": 1167,
+   "y": 320
+  },
+  {
+   "t": "Kasse reicht 5,9×",
+   "px": 12,
+   "x": 1167,
+   "y": 334
+  },
+  {
+   "t": "Klage vor dem Stadtgericht",
+   "px": 12,
+   "x": 553,
+   "y": 338
+  },
+  {
+   "t": "kostet kein Geld · vier Ansehen",
+   "px": 12,
+   "x": 553,
+   "y": 366
+  },
+  {
+   "t": "gegen Klosterschenke Obernberg",
+   "px": 12,
+   "x": 553,
+   "y": 393
+  },
+  {
+   "t": "Ohne dich geschehen",
+   "px": 7.9,
+   "x": 703,
+   "y": 115
+  },
+  {
+   "t": "1 Zug",
+   "px": 9.4,
+   "x": 827,
+   "y": 113
+  },
+  {
+   "t": "Das Haus gegenüber",
+   "px": 8.4,
+   "x": 1071,
+   "y": 114
+  },
+  {
+   "t": "Gebunden wird hier mit Recht und Gunst",
+   "px": 8.4,
+   "x": 703,
+   "y": 138
+  },
+  {
+   "t": "Ablösung 56 Pf bis 66 Pf",
+   "px": 7.9,
+   "x": 1040,
+   "y": 139
+  },
+  {
+   "t": "Klage vor dem Stadtgericht",
+   "px": 8.4,
+   "x": 709,
+   "y": 160
+  },
+  {
+   "t": "kostet kein Geld · vier Ansehen · einmal im Braujahr",
+   "px": 6.9,
+   "x": 824,
+   "y": 161
+  },
+  {
+   "t": "1350 W1",
+   "px": 7.4,
+   "x": 703,
+   "y": 189
+  },
+  {
+   "t": "Brauhaus zum Adler wirbt um Klosterschenke Obernberg: Er stellt dem Wirt drei Fass umsonst vor die Tür und lässt sie ste",
+   "px": 8.9,
+   "x": 752,
+   "y": 188
+  },
+  {
+   "t": "zeigen",
+   "px": 6.9,
+   "x": 1123,
+   "y": 190
+  },
+  {
+   "t": "Junges Fass · +14 · 1 Fass",
+   "px": 12,
+   "x": 439,
+   "y": 175
+  },
+  {
+   "t": "Altes Fass · +6 · 1 Fass",
+   "px": 12,
+   "x": 439,
+   "y": 199
+  },
+  {
+   "t": "Hopfen im Sack, heimlich",
+   "px": 12,
+   "x": 440,
+   "y": 223
+  },
+  {
+   "t": "Röhrenrecht an der Quelle",
+   "px": 12,
+   "x": 440,
+   "y": 245
+  },
+  {
+   "t": "−30 Pf",
+   "px": 12,
+   "x": 549,
+   "y": 260
+  },
+  {
+   "t": "DER ANKER · Ruf 10",
+   "px": 6.9,
+   "x": 722,
+   "y": 288
+  },
+  {
+   "t": "Umtrunk beim Wirt",
+   "px": 7.9,
+   "x": 727,
+   "y": 302
+  },
+  {
+   "t": "−9 Pf",
+   "px": 7.9,
+   "x": 773,
+   "y": 307
+  },
+  {
+   "t": "− 1 Fass",
+   "px": 7.4,
+   "x": 811,
+   "y": 307
+  },
+  {
+   "t": "Adler-Ausschank am Mar",
+   "px": 12,
+   "x": 699,
+   "y": 390
+  },
+  {
+   "t": "LIN",
+   "px": 12,
+   "x": 914,
+   "y": 375
+  },
+  {
+   "t": "OCH",
+   "px": 12,
+   "x": 714,
+   "y": 367
+  },
+  {
+   "t": "MUE",
+   "px": 12,
+   "x": 1143,
+   "y": 344
+  },
+  {
+   "t": "BRU",
+   "px": 12,
+   "x": 1185,
+   "y": 552
+  },
+  {
+   "t": "FAE",
+   "px": 12,
+   "x": 1104,
+   "y": 521
+  },
+  {
+   "t": "OBE",
+   "px": 12,
+   "x": 1130,
+   "y": 260
+  },
+  {
+   "t": "BRAUHAUS ZUM ADLER",
+   "px": 12,
+   "x": 985,
+   "y": 228
+  },
+  {
+   "t": "LIN",
+   "px": 12,
+   "x": 917,
+   "y": 349
+  },
+  {
+   "t": "OCH",
+   "px": 12,
+   "x": 712,
+   "y": 342
+  },
+  {
+   "t": "MUE",
+   "px": 12,
+   "x": 1150,
+   "y": 318
+  },
+  {
+   "t": "BRU",
+   "px": 12,
+   "x": 1190,
+   "y": 526
+  },
+  {
+   "t": "FAE",
+   "px": 12,
+   "x": 1109,
+   "y": 495
+  },
+  {
+   "t": "OBE",
+   "px": 12,
+   "x": 1136,
+   "y": 234
+  },
+  {
+   "t": "DIE HÄUSER",
+   "px": 12,
+   "x": 22,
+   "y": 103
+  },
+  {
+   "t": "wollen 15 · im Keller liegen 4 Fass",
+   "px": 12,
+   "x": 105,
+   "y": 119
+  },
+  {
+   "t": "„Der Schankknecht vom Gasthof Lindenhof war am Tor. Er ist ohne Fass wieder gegangen.\"",
+   "px": 12,
+   "x": 26,
+   "y": 142
+  },
+  {
+   "t": "DAS KERBHOLZ BEIM WIRT",
+   "px": 12,
+   "x": 26,
+   "y": 182
+  },
+  {
+   "t": "im Holz bis Michaeli: 0 Pf",
+   "px": 12,
+   "x": 166,
+   "y": 201
+  },
+  {
+   "t": "Bar auf die Hand",
+   "px": 12,
+   "x": 29,
+   "y": 220
+  },
+  {
+   "t": "Kein Fass verlässt den Hof ohne Münze.",
+   "px": 12,
+   "x": 29,
+   "y": 235
+  },
+  {
+   "t": "bar 100 %",
+   "px": 12,
+   "x": 29,
+   "y": 276
+  },
+  {
+   "t": "Bestellung 66 %",
+   "px": 12,
+   "x": 29,
+   "y": 290
+  },
+  {
+   "t": "Ausfall 0 %",
+   "px": 12,
+   "x": 29,
+   "y": 317
+  },
+  {
+   "t": "So verabreden",
+   "px": 12,
+   "x": 35,
+   "y": 376
+  },
+  {
+   "t": "Aufs Kerbholz, fällig zu Michaeli",
+   "px": 12,
+   "x": 132,
+   "y": 220
+  },
+  {
+   "t": "Zwei Hölzer, ein Schnitt: eines beim Wirt, eines im Haus.",
+   "px": 12,
+   "x": 132,
+   "y": 249
+  },
+  {
+   "t": "bar 40 %",
+   "px": 12,
+   "x": 132,
+   "y": 290
+  },
+  {
+   "t": "Bestellung 100 %",
+   "px": 12,
+   "x": 132,
+   "y": 304
+  },
+  {
+   "t": "Ausfall 5 %",
+   "px": 12,
+   "x": 132,
+   "y": 331
+  },
+  {
+   "t": "So ist es verabredet",
+   "px": 12,
+   "x": 138,
+   "y": 376
+  },
+  {
+   "t": "Auf Borg bis Michaeli",
+   "px": 12,
+   "x": 257,
+   "y": 220
+  },
+  {
+   "t": "Der Wirt nimmt, so viel er ausschenken kann, und rechnet im Herbst.",
+   "px": 12,
+   "x": 257,
+   "y": 249
+  },
+  {
+   "t": "bar 12 %",
+   "px": 12,
+   "x": 257,
+   "y": 317
+  },
+  {
+   "t": "Bestellung 132 %",
+   "px": 12,
+   "x": 257,
+   "y": 331
+  },
+  {
+   "t": "Ausfall 15 %",
+   "px": 12,
+   "x": 257,
+   "y": 357
+  },
+  {
+   "t": "So verabreden",
+   "px": 12,
+   "x": 263,
+   "y": 376
+  },
+  {
+   "t": "Noch 7 Wochen, dann gilt das Wort bis Michaeli.",
+   "px": 12,
+   "x": 26,
+   "y": 400
+  },
+  {
+   "t": "LIN",
+   "px": 12,
+   "x": 24,
+   "y": 435
+  },
+  {
+   "t": "Gasthof Lindenhof",
+   "px": 12,
+   "x": 49,
+   "y": 435
+  },
+  {
+   "t": "0,2 km",
+   "px": 12,
+   "x": 283,
+   "y": 435
+  },
+  {
+   "t": "frei",
+   "px": 12,
+   "x": 328,
+   "y": 435
+  },
+  {
+   "t": "will 4 Fass",
+   "px": 12,
+   "x": 47,
+   "y": 452
+  },
+  {
+   "t": "+ 1 Fass",
+   "px": 12,
+   "x": 287,
+   "y": 452
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 335,
+   "y": 452
+  },
+  {
+   "t": "OCH",
+   "px": 12,
+   "x": 24,
+   "y": 481
+  },
+  {
+   "t": "Zum Goldenen Ochsen",
+   "px": 12,
+   "x": 49,
+   "y": 481
+  },
+  {
+   "t": "0,6 km",
+   "px": 12,
+   "x": 240,
+   "y": 481
+  },
+  {
+   "t": "unser Haus",
+   "px": 12,
+   "x": 284,
+   "y": 481
+  },
+  {
+   "t": "will 2 Fass",
+   "px": 12,
+   "x": 36,
+   "y": 498
+  },
+  {
+   "t": "+ 1 Fass",
+   "px": 12,
+   "x": 287,
+   "y": 498
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 335,
+   "y": 498
+  },
+  {
+   "t": "TOR",
+   "px": 12,
+   "x": 24,
+   "y": 527
+  },
+  {
+   "t": "Schenke am Tor",
+   "px": 12,
+   "x": 49,
+   "y": 527
+  },
+  {
+   "t": "0,1 km",
+   "px": 12,
+   "x": 276,
+   "y": 527
+  },
+  {
+   "t": "adler",
+   "px": 12,
+   "x": 320,
+   "y": 527
+  },
+  {
+   "t": "will 1 Fass",
+   "px": 12,
+   "x": 30,
+   "y": 544
+  },
+  {
+   "t": "+ 1 Fass",
+   "px": 12,
+   "x": 287,
+   "y": 544
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 335,
+   "y": 544
+  },
+  {
+   "t": "PFA",
+   "px": 12,
+   "x": 24,
+   "y": 573
+  },
+  {
+   "t": "Pfarrschenke St. Michael",
+   "px": 12,
+   "x": 49,
+   "y": 573
+  },
+  {
+   "t": "0,8 km",
+   "px": 12,
+   "x": 240,
+   "y": 573
+  },
+  {
+   "t": "unser Haus",
+   "px": 12,
+   "x": 284,
+   "y": 573
+  },
+  {
+   "t": "will 1 Fass",
+   "px": 12,
+   "x": 30,
+   "y": 590
+  },
+  {
+   "t": "+ 1 Fass",
+   "px": 12,
+   "x": 287,
+   "y": 590
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 335,
+   "y": 590
+  },
+  {
+   "t": "MUE",
+   "px": 12,
+   "x": 24,
+   "y": 619
+  },
+  {
+   "t": "Mühlschenke",
+   "px": 12,
+   "x": 49,
+   "y": 619
+  },
+  {
+   "t": "3 km",
+   "px": 12,
+   "x": 298,
+   "y": 619
+  },
+  {
+   "t": "frei",
+   "px": 12,
+   "x": 328,
+   "y": 619
+  },
+  {
+   "t": "will 1 Fass",
+   "px": 12,
+   "x": 30,
+   "y": 636
+  },
+  {
+   "t": "Bannbrief",
+   "px": 12,
+   "x": 257,
+   "y": 636
+  },
+  {
+   "t": "−60 Pf",
+   "px": 12,
+   "x": 308,
+   "y": 636
+  },
+  {
+   "t": "BRU",
+   "px": 12,
+   "x": 24,
+   "y": 665
+  },
+  {
+   "t": "Brückenwirt",
+   "px": 12,
+   "x": 49,
+   "y": 665
+  },
+  {
+   "t": "2 km",
+   "px": 12,
+   "x": 298,
+   "y": 665
+  },
+  {
+   "t": "frei",
+   "px": 12,
+   "x": 328,
+   "y": 665
+  },
+  {
+   "t": "will 2 Fass",
+   "px": 12,
+   "x": 36,
+   "y": 682
+  },
+  {
+   "t": "Bannbrief",
+   "px": 12,
+   "x": 257,
+   "y": 682
+  },
+  {
+   "t": "−60 Pf",
+   "px": 12,
+   "x": 308,
+   "y": 682
+  },
+  {
+   "t": "FAE",
+   "px": 12,
+   "x": 24,
+   "y": 711
+  },
+  {
+   "t": "Fährhaus am Fluss",
+   "px": 12,
+   "x": 49,
+   "y": 711
+  },
+  {
+   "t": "4 km",
+   "px": 12,
+   "x": 290,
+   "y": 711
+  },
+  {
+   "t": "adler",
+   "px": 12,
+   "x": 320,
+   "y": 711
+  },
+  {
+   "t": "will 1 Fass",
+   "px": 12,
+   "x": 30,
+   "y": 728
+  },
+  {
+   "t": "Bannbrief",
+   "px": 12,
+   "x": 257,
+   "y": 728
+  },
+  {
+   "t": "−60 Pf",
+   "px": 12,
+   "x": 308,
+   "y": 728
+  },
+  {
+   "t": "HIR",
+   "px": 12,
+   "x": 24,
+   "y": 757
+  },
+  {
+   "t": "Landgasthof Hirsch",
+   "px": 12,
+   "x": 49,
+   "y": 757
+  },
+  {
+   "t": "7 km",
+   "px": 12,
+   "x": 254,
+   "y": 757
+  },
+  {
+   "t": "unser Haus",
+   "px": 12,
+   "x": 284,
+   "y": 757
+  },
+  {
+   "t": "ANSCHLAGTAFEL",
+   "px": 12,
+   "x": 381,
+   "y": 102
+  },
+  {
+   "t": "mit Kreide an der Sudhauswand",
+   "px": 12,
+   "x": 475,
+   "y": 118
+  },
+  {
+   "t": "Brautage: 44 übrig",
+   "px": 12,
+   "x": 385,
+   "y": 139
+  },
+  {
+   "t": "Dieser Plan frisst 2 je Woche — reicht 22 Wochen",
+   "px": 12,
+   "x": 385,
+   "y": 155
+  },
+  {
+   "t": "Grut in der Kammer: 40 — reicht für 13 Sude",
+   "px": 12,
+   "x": 381,
+   "y": 188
+  },
+  {
+   "t": "D",
+   "px": 12,
+   "x": 387,
+   "y": 223
+  },
+  {
+   "t": "Dünnbier",
+   "px": 12,
+   "x": 401,
+   "y": 221
+  },
+  {
+   "t": "5 Pf je Fass",
+   "px": 12,
+   "x": 525,
+   "y": 221
+  },
+  {
+   "t": "1 Brautage",
+   "px": 12,
+   "x": 387,
+   "y": 236
+  },
+  {
+   "t": "→ 5 Fass",
+   "px": 12,
+   "x": 463,
+   "y": 236
+  },
+  {
+   "t": "hält 3 Wo.",
+   "px": 12,
+   "x": 525,
+   "y": 236
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 620,
+   "y": 229
+  },
+  {
+   "t": "0",
+   "px": 12,
+   "x": 642,
+   "y": 229
+  },
+  {
+   "t": "+",
+   "px": 12,
+   "x": 662,
+   "y": 229
+  },
+  {
+   "t": "G",
+   "px": 12,
+   "x": 387,
+   "y": 257
+  },
+  {
+   "t": "Grutbier",
+   "px": 12,
+   "x": 401,
+   "y": 255
+  },
+  {
+   "t": "9 Pf je Fass",
+   "px": 12,
+   "x": 525,
+   "y": 255
+  },
+  {
+   "t": "2 Brautage",
+   "px": 12,
+   "x": 387,
+   "y": 270
+  },
+  {
+   "t": "→ 4 Fass",
+   "px": 12,
+   "x": 463,
+   "y": 270
+  },
+  {
+   "t": "hält 6 Wo.",
+   "px": 12,
+   "x": 525,
+   "y": 270
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 620,
+   "y": 262
+  },
+  {
+   "t": "1",
+   "px": 12,
+   "x": 642,
+   "y": 262
+  },
+  {
+   "t": "+",
+   "px": 12,
+   "x": 662,
+   "y": 262
+  },
+  {
+   "t": "S",
+   "px": 12,
+   "x": 387,
+   "y": 290
+  },
+  {
+   "t": "Starkbier",
+   "px": 12,
+   "x": 401,
+   "y": 288
+  },
+  {
+   "t": "19 Pf je Fass",
+   "px": 12,
+   "x": 518,
+   "y": 288
+  },
+  {
+   "t": "3 Brautage",
+   "px": 12,
+   "x": 387,
+   "y": 303
+  },
+  {
+   "t": "→ 3 Fass",
+   "px": 12,
+   "x": 463,
+   "y": 303
+  },
+  {
+   "t": "2 Wo. Lager",
+   "px": 12,
+   "x": 525,
+   "y": 303
+  },
+  {
+   "t": "hält 16 Wo.",
+   "px": 12,
+   "x": 387,
+   "y": 322
+  },
+  {
+   "t": "sommerfest",
+   "px": 12,
+   "x": 470,
+   "y": 322
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 620,
+   "y": 305
+  },
+  {
+   "t": "0",
+   "px": 12,
+   "x": 642,
+   "y": 305
+  },
+  {
+   "t": "+",
+   "px": 12,
+   "x": 662,
+   "y": 305
+  },
+  {
+   "t": "K",
+   "px": 12,
+   "x": 387,
+   "y": 286
+  },
+  {
+   "t": "Kofent",
+   "px": 12,
+   "x": 400,
+   "y": 284
+  },
+  {
+   "t": "3 Pf je Fass",
+   "px": 12,
+   "x": 525,
+   "y": 284
+  },
+  {
+   "t": "0 Pf · 0 Grut · 0 Brautage → 3 Fass · hält 2 Wo. · nur die Pfanne",
+   "px": 12,
+   "x": 387,
+   "y": 299
+  },
+  {
+   "t": "−",
+   "px": 12,
+   "x": 620,
+   "y": 306
+  },
+  {
+   "t": "0",
+   "px": 12,
+   "x": 642,
+   "y": 306
+  },
+  {
+   "t": "+",
+   "px": 12,
+   "x": 662,
+   "y": 306
+  },
+  {
+   "t": "KERBHOLZ BEIM GRUTHERRN",
+   "px": 12,
+   "x": 386,
+   "y": 350
+  },
+  {
+   "t": "0 von 6 · 1 Kerbe = 25 Pf",
+   "px": 12,
+   "x": 499,
+   "y": 366
+  },
+  {
+   "t": "Der Grutherr schneidet die Kerbe ins Holz und zahlt aus. Zu Georgi wird gelöscht — in Geld, wenn welches da ist.",
+   "px": 12,
+   "x": 386,
+   "y": 381
+  },
+  {
+   "t": "KNAPP IN DIESER ZEIT: Brautage · Bannmeile",
+   "px": 12,
+   "x": 385,
+   "y": 417
+  },
+  {
+   "t": "Der Rat verleiht Tage, nicht Geld. Und die Meile ist eine Mauer.",
+   "px": 12,
+   "x": 385,
+   "y": 448
+  },
+  {
+   "t": "Brautage vom Rat · +6",
+   "px": 12,
+   "x": 387,
+   "y": 339
+  },
+  {
+   "t": "−90 Pf",
+   "px": 12,
+   "x": 425,
+   "y": 375
+  },
+  {
+   "t": "Grut vom Grutherrn · +40",
+   "px": 12,
+   "x": 488,
+   "y": 339
+  },
+  {
+   "t": "−34 Pf",
+   "px": 12,
+   "x": 527,
+   "y": 375
+  },
+  {
+   "t": "Grut zurück an den Grutherrn · −40",
+   "px": 12,
+   "x": 590,
+   "y": 335
+  },
+  {
+   "t": "+19 Pf",
+   "px": 12,
+   "x": 628,
+   "y": 379
+  },
+  {
+   "t": "Fass vom Böttcher · +3",
+   "px": 12,
+   "x": 387,
+   "y": 403
+  },
+  {
+   "t": "−34 Pf",
+   "px": 12,
+   "x": 628,
+   "y": 403
+  },
+  {
+   "t": "DER KELLER",
+   "px": 12,
+   "x": 381,
+   "y": 438
+  },
+  {
+   "t": "4 von 12 Fass · 4 reif",
+   "px": 12,
+   "x": 525,
+   "y": 438
+  },
+  {
+   "t": "G",
+   "px": 12,
+   "x": 402,
+   "y": 460
+  },
+  {
+   "t": "W1",
+   "px": 12,
+   "x": 398,
+   "y": 472
+  },
+  {
+   "t": "G",
+   "px": 12,
+   "x": 453,
+   "y": 460
+  },
+  {
+   "t": "W1",
+   "px": 12,
+   "x": 449,
+   "y": 472
+  },
+  {
+   "t": "G",
+   "px": 12,
+   "x": 504,
+   "y": 460
+  },
+  {
+   "t": "W1",
+   "px": 12,
+   "x": 500,
+   "y": 472
+  },
+  {
+   "t": "G",
+   "px": 12,
+   "x": 555,
+   "y": 460
+  },
+  {
+   "t": "W1",
+   "px": 12,
+   "x": 551,
+   "y": 472
+  },
+  {
+   "t": "Fässer des Hauses: 22 eigene · 4 gefüllt · 0 beim Wirt · 18 leer",
+   "px": 12,
+   "x": 381,
+   "y": 626
+  },
+  {
+   "t": "OCHSENKARREN",
+   "px": 12,
+   "x": 708,
+   "y": 438
+  },
+  {
+   "t": "0 von 5 Fass · 0 von 4 Halten",
+   "px": 12,
+   "x": 852,
+   "y": 438
+  },
+  {
+   "t": "Fünf Plätze, vier Halte. Der Ochse geht sieben Meilen am Tag und keine mehr.",
+   "px": 12,
+   "x": 708,
+   "y": 485
+  },
+  {
+   "t": "Der Wagen steht. Jedes Fass bekommt ein Haus — dann fährt er.",
+   "px": 12,
+   "x": 708,
+   "y": 517
+  },
+  {
+   "t": "Nach Durst füllen",
+   "px": 12,
+   "x": 714,
+   "y": 606
+  },
+  {
+   "t": "Wie vorige Woche",
+   "px": 12,
+   "x": 823,
+   "y": 606
+  },
+  {
+   "t": "Karren leeren",
+   "px": 12,
+   "x": 935,
+   "y": 606
+  },
+  {
+   "t": "FUHRE ABSCHICKEN",
+   "px": 12.9,
+   "x": 813,
+   "y": 634
+  },
+  {
+   "t": "DAS SUDHAUS · 1350",
+   "px": 14.9,
+   "x": 26,
+   "y": 104
+  },
+  {
+   "t": "Die offene Pfanne über offenem Feuer",
+   "px": 12,
+   "x": 205,
+   "y": 107
+  },
+  {
+   "t": "Grut oder Hopfen?",
+   "px": 12,
+   "x": 26,
+   "y": 128
+  },
+  {
+   "t": "Die Grut gehört dem Grutherrn, nicht dem Brauer: ein Recht, kein Kraut. Hopfen fällt nicht darunter, hält das Bier doppe",
+   "px": 12,
+   "x": 26,
+   "y": 148
+  },
+  {
+   "t": "DIE WÜRZE",
+   "px": 12,
+   "x": 26,
+   "y": 195
+  },
+  {
+   "t": "Womit wird gewürzt?",
+   "px": 12,
+   "x": 115,
+   "y": 195
+  },
+  {
+   "t": "Es ist keine Geschmacksfrage. Es ist die Frage, wie weit ein Fass fahren darf.",
+   "px": 12,
+   "x": 26,
+   "y": 210
+  },
+  {
+   "t": "Grut vom Grutamt",
+   "px": 12,
+   "x": 37,
+   "y": 253
+  },
+  {
+   "t": "läuft",
+   "px": 12,
+   "x": 31,
+   "y": 290
+  },
+  {
+   "t": "höchstens Grutbier",
+   "px": 12,
+   "x": 31,
+   "y": 310
+  },
+  {
+   "t": "Gagel, Porst, Schafgarbe — gekauft beim Grutherrn, der allein sie verkaufen darf. Das Bier hält, was es hält: wenige Woc",
+   "px": 12,
+   "x": 31,
+   "y": 344
+  },
+  {
+   "t": "Hopfen im Sack, heimlich",
+   "px": 12,
+   "x": 150,
+   "y": 253
+  },
+  {
+   "t": "ohne Ausgabe",
+   "px": 12,
+   "x": 144,
+   "y": 290
+  },
+  {
+   "t": "lässt Starkbier zu",
+   "px": 12,
+   "x": 144,
+   "y": 310
+  },
+  {
+   "t": "Haltbarkeit ×1,7 · +1 Wo. Gärung · +2 Grut je Sud · Anzeige 11 % je Woche",
+   "px": 12,
+   "x": 144,
+   "y": 345
+  },
+  {
+   "t": "Hopfen vom Fernhändler, unter der Grut versteckt. Das Bier hält fast doppelt so lang, muss dafür eine Woche länger im Bo",
+   "px": 12,
+   "x": 144,
+   "y": 437
+  },
+  {
+   "t": "Der Grutknecht sieht in die Pfanne, wann er will.",
+   "px": 12,
+   "x": 144,
+   "y": 509
+  },
+  {
+   "t": "Offen gehopft, mit Hopfenbrief",
+   "px": 12,
+   "x": 264,
+   "y": 253
+  },
+  {
+   "t": "−78 Pf",
+   "px": 12,
+   "x": 264,
+   "y": 284
+  },
+  {
+   "t": "unwiderruflich",
+   "px": 12,
+   "x": 258,
+   "y": 306
+  },
+  {
+   "t": "lässt Starkbier zu",
+   "px": 12,
+   "x": 258,
+   "y": 326
+  },
+  {
+   "t": "Haltbarkeit ×2 · +1 Wo. Gärung · +2 Grut je Sud",
+   "px": 12,
+   "x": 258,
+   "y": 361
+  },
+  {
+   "t": "Der Rat erlaubt dem Haus, gehopftes Bier zu brauen und auszuführen. Der Grutherr klagt und verliert. Doppelte Haltbarkei",
+   "px": 12,
+   "x": 258,
+   "y": 423
+  },
+  {
+   "t": "Unwiderruflich — der Brief wird nie zurückgegeben, und das Grutgeld ist danach nicht mehr zu haben.",
+   "px": 12,
+   "x": 258,
+   "y": 496
+  },
+  {
+   "t": "DAS BRAUWASSER",
+   "px": 12,
+   "x": 26,
+   "y": 602
+  },
+  {
+   "t": "Woher kommt das Wasser?",
+   "px": 12,
+   "x": 163,
+   "y": 602
+  },
+  {
+   "t": "Vier Fuenftel des Fasses sind Wasser. Wo es geschöpft wird, ist keine Kleinigkeit — es ist die zweite Frage, die dieses ",
+   "px": 12,
+   "x": 26,
+   "y": 617
+  },
+  {
+   "t": "Wasser aus dem Stadtbach",
+   "px": 12,
+   "x": 37,
+   "y": 676
+  },
+  {
+   "t": "läuft",
+   "px": 12,
+   "x": 31,
+   "y": 712
+  },
+  {
+   "t": "lässt Starkbier zu",
+   "px": 12,
+   "x": 31,
+   "y": 732
+  },
+  {
+   "t": "Geschöpft, wo der Bach durch die Gasse läuft. Es kostet nichts, es fragt niemand, und die Lohgerber sitzen weiter oben a",
+   "px": 12,
+   "x": 31,
+   "y": 766
+  },
+  {
+   "t": "Wasser aus dem Ziehbrunnen",
+   "px": 12,
+   "x": 150,
+   "y": 676
+  },
+  {
+   "t": "ohne Ausgabe",
+   "px": 12,
+   "x": 144,
+   "y": 712
+  },
+  {
+   "t": "lässt Starkbier zu",
+   "px": 12,
+   "x": 144,
+   "y": 732
+  },
+  {
+   "t": "Haltbarkeit ×1,15 · −1 Fass je Sud",
+   "px": 12,
+   "x": 144,
+   "y": 767
+  },
+  {
+   "t": "Röhrenrecht an der Quelle",
+   "px": 12,
+   "x": 264,
+   "y": 676
+  },
+  {
+   "t": "−30 Pf",
+   "px": 12,
+   "x": 264,
+   "y": 707
+  },
+  {
+   "t": "unwiderruflich",
+   "px": 12,
+   "x": 258,
+   "y": 728
+  },
+  {
+   "t": "lässt Starkbier zu",
+   "px": 12,
+   "x": 258,
+   "y": 748
+  },
+  {
+   "t": "WAS BEIM WIRT ANKOMMT",
+   "px": 12,
+   "x": 370,
+   "y": 195
+  },
+  {
+   "t": "höchstens Grutbier",
+   "px": 12,
+   "x": 559,
+   "y": 195
+  },
+  {
+   "t": "Welches Haus ein Fass nimmt, entscheidet die Pfanne.",
+   "px": 12,
+   "x": 370,
+   "y": 225
+  },
+  {
+   "t": "Bestellt wird die Sorte an der Fuhre. Dieses Brett deckelt sie — es hebt sie nie: was hier offen steht, wird nur dann ge",
+   "px": 12,
+   "x": 370,
+   "y": 244
+  },
+  {
+   "t": "D",
+   "px": 12,
+   "x": 370,
+   "y": 293
+  },
+  {
+   "t": "Dünnbier",
+   "px": 12,
+   "x": 387,
+   "y": 294
+  },
+  {
+   "t": "7 von 10 Häusern",
+   "px": 12,
+   "x": 469,
+   "y": 294
+  },
+  {
+   "t": "trägt die Pfanne",
+   "px": 12,
+   "x": 545,
+   "y": 294
+  },
+  {
+   "t": "G",
+   "px": 12,
+   "x": 370,
+   "y": 328
+  },
+  {
+   "t": "Grutbier",
+   "px": 12,
+   "x": 387,
+   "y": 329
+  },
+  {
+   "t": "8 von 10 Häusern",
+   "px": 12,
+   "x": 469,
+   "y": 329
+  },
+  {
+   "t": "trägt die Pfanne",
+   "px": 12,
+   "x": 545,
+   "y": 329
+  },
+  {
+   "t": "S",
+   "px": 12,
+   "x": 370,
+   "y": 363
+  },
+  {
+   "t": "Starkbier",
+   "px": 12,
+   "x": 387,
+   "y": 364
+  },
+  {
+   "t": "3 von 10 Häusern",
+   "px": 12,
+   "x": 469,
+   "y": 364
+  },
+  {
+   "t": "schlägt als Grutbier aus",
+   "px": 12,
+   "x": 545,
+   "y": 364
+  },
+  {
+   "t": "Klosterschenke Obernberg führt nur Starkbier und bekommt vom Anker nichts.",
+   "px": 12,
+   "x": 370,
+   "y": 396
+  },
+  {
+   "t": "DAS HEFEZEUG",
+   "px": 12,
+   "x": 370,
+   "y": 435
+  },
+  {
+   "t": "70 %",
+   "px": 12,
+   "x": 487,
+   "y": 435
+  },
+  {
+   "t": "Hefe vom vorigen Sud. Ohne Pflege schlägt der Sud um.",
+   "px": 12,
+   "x": 370,
+   "y": 450
+  },
+  {
+   "t": "Was jetzt eingelegt wird, hält ×1,05 — die Hefe steht.",
+   "px": 12,
+   "x": 370,
+   "y": 482
+  },
+  {
+   "t": "Hefezeug aus dem Bottich heben · +8",
+   "px": 12,
+   "x": 377,
+   "y": 518
+  },
+  {
+   "t": "Junges Fass anbrechen · +14 · 1 Fass",
+   "px": 12,
+   "x": 377,
+   "y": 546
+  },
+  {
+   "t": "Altes Fass anbrechen · +6 · 1 Fass",
+   "px": 12,
+   "x": 377,
+   "y": 574
+  },
+  {
+   "t": "Einmal die Woche. Es gärt nichts — die Hefe kostet jetzt 1 Fass.",
+   "px": 12,
+   "x": 370,
+   "y": 594
+  },
+  {
+   "t": "DER GÄRKELLER",
+   "px": 12,
+   "x": 370,
+   "y": 634
+  },
+  {
+   "t": "0 von 10 Fass · 0 Bottiche",
+   "px": 12,
+   "x": 500,
+   "y": 634
+  },
+  {
+   "t": "Offene Bottiche im Erdkeller. Die Haltbarkeit beginnt erst am Fass.",
+   "px": 12,
+   "x": 370,
+   "y": 649
+  },
+  {
+   "t": "Kein Bottich steht an. Das laufende Verfahren braucht keine Gärwochen — was gebraut wird, ist sofort lieferbar und hält ",
+   "px": 12,
+   "x": 370,
+   "y": 685
+  },
+  {
+   "t": "Bottich beim Küfer bestellen · +6 Fass",
+   "px": 12,
+   "x": 377,
+   "y": 759
+  },
+  {
+   "t": "−26 Pf",
+   "px": 12,
+   "x": 585,
+   "y": 766
+  },
+  {
+   "t": "DER RUF DES HAUSES",
+   "px": 10.4,
+   "x": 22,
+   "y": 71
+  },
+  {
+   "t": "Bierzeiger und Zunftzeichen",
+   "px": 7.4,
+   "x": 174,
+   "y": 74
+  },
+  {
+   "t": "▾",
+   "px": 7.9,
+   "x": 275,
+   "y": 75
+  },
+  {
+   "t": "10",
+   "px": 22.8,
+   "x": 22,
+   "y": 98
+  },
+  {
+   "t": "Ruf von 100",
+   "px": 7.9,
+   "x": 49,
+   "y": 109
+  },
+  {
+   "t": "Bekanntheit",
+   "px": 7.9,
+   "x": 22,
+   "y": 124
+  },
+  {
+   "t": "18 ↗",
+   "px": 7.9,
+   "x": 262,
+   "y": 124
+  },
+  {
+   "t": "Einlösung",
+   "px": 7.9,
+   "x": 22,
+   "y": 136
+  },
+  {
+   "t": "55",
+   "px": 7.9,
+   "x": 262,
+   "y": 136
+  },
+  {
+   "t": "Gleiches Bier, 100 Fass, zwei Preise",
+   "px": 6.9,
+   "x": 22,
+   "y": 154
+  },
+  {
+   "t": "ohne das Zeichen 900 Pf",
+   "px": 8.4,
+   "x": 22,
+   "y": 167
+  },
+  {
+   "t": "mit dem Zeichen 907 Pf",
+   "px": 10.4,
+   "x": 144,
+   "y": 165
+  },
+  {
+   "t": "+ 0,8 im Hundert · 7 Pf mehr für dieselbe Menge",
+   "px": 6.9,
+   "x": 22,
+   "y": 179
+  },
+  {
+   "t": "AUFGELD AUF DEN ZEIGER — was der Ruf eingebracht hat",
+   "px": 6.9,
+   "x": 27,
+   "y": 196
+  },
+  {
+   "t": "diese Woche",
+   "px": 6.5,
+   "x": 29,
+   "y": 218
+  },
+  {
+   "t": "0 Pf",
+   "px": 8.9,
+   "x": 29,
+   "y": 227
+  },
+  {
+   "t": "Braujahr",
+   "px": 6.5,
+   "x": 118,
+   "y": 218
+  },
+  {
+   "t": "0 Pf",
+   "px": 8.9,
+   "x": 118,
+   "y": 227
+  },
+  {
+   "t": "seit 1350",
+   "px": 6.5,
+   "x": 207,
+   "y": 218
+  },
+  {
+   "t": "0 Pf",
+   "px": 8.9,
+   "x": 207,
+   "y": 227
+  },
+  {
+   "t": "Noch nichts. Es fällt an, sobald ausgeliefert wird und das Zeichen dabei zu sehen ist.",
+   "px": 6.9,
+   "x": 27,
+   "y": 242
+  },
+  {
+   "t": "und einen höheren Grundpreis je Fass",
+   "px": 6.9,
+   "x": 27,
+   "y": 252
+  },
+  {
+   "t": "Das Aufgeld nachrechnen",
+   "px": 7.4,
+   "x": 34,
+   "y": 280
+  },
+  {
+   "t": "WAS DER NAME JETZT KOSTET",
+   "px": 6.9,
+   "x": 22,
+   "y": 310
+  },
+  {
+   "t": "Umtrunk beim Wirt",
+   "px": 8.9,
+   "x": 29,
+   "y": 327
+  },
+  {
+   "t": "−9 Pf",
+   "px": 7.9,
+   "x": 158,
+   "y": 328
+  },
+  {
+   "t": "− 1 Fass",
+   "px": 7.4,
+   "x": 241,
+   "y": 327
+  },
+  {
+   "t": "Um das Zunftzeichen bitten",
+   "px": 8.9,
+   "x": 29,
+   "y": 354
+  },
+  {
+   "t": "−45 Pf",
+   "px": 7.9,
+   "x": 249,
+   "y": 354
+  },
+  {
+   "t": "Die ganze Liste dieser Epoche, der Nachahmer und das Register stehen unter „Das Zeichen\".",
+   "px": 6.9,
+   "x": 22,
+   "y": 374
+  },
+  {
+   "t": "Das Zeichen verdecken",
+   "px": 8.9,
+   "x": 29,
+   "y": 393
+  },
+  {
+   "t": "Herumgehen und den Namen sagen",
+   "px": 8.9,
+   "x": 29,
+   "y": 419
+  },
+  {
+   "t": "Wer den Zeiger aushängt, hat gesagt, dass Bier da ist. Das ist ein Versprechen vor der ganzen Gasse — und es kostet nich",
+   "px": 7.9,
+   "x": 22,
+   "y": 441
+  },
+  {
+   "t": "Das Zeichen und das Register",
+   "px": 8.9,
+   "x": 98,
+   "y": 475
+  },
+  {
+   "t": "DAS ERBE",
+   "px": 9.4,
+   "x": 738,
+   "y": 558
+  },
+  {
+   "t": "noch 14 Wochen",
+   "px": 7.9,
+   "x": 800,
+   "y": 560
+  },
+  {
+   "t": "I. Kunigunde Bruckner · sparsam · Feder 0,70×",
+   "px": 7.9,
+   "x": 881,
+   "y": 560
+  },
+  {
+   "t": "am Haus 0 · an der Person 4",
+   "px": 7.9,
+   "x": 1045,
+   "y": 560
+  },
+  {
+   "t": "nimmt 4 · 2 Fass",
+   "px": 7.9,
+   "x": 1187,
+   "y": 560
+  },
+  {
+   "t": "Verschreiben · Zum Goldenen Ochsen",
+   "px": 6.9,
+   "x": 742,
+   "y": 578
+  },
+  {
+   "t": "−16 Pf",
+   "px": 6.5,
+   "x": 850,
+   "y": 579
+  },
+  {
+   "t": "Leibgeding",
+   "px": 6.9,
+   "x": 887,
+   "y": 578
+  },
+  {
+   "t": "−13 Pf",
+   "px": 6.5,
+   "x": 920,
+   "y": 579
+  },
+  {
+   "t": "Abfertigung",
+   "px": 6.9,
+   "x": 957,
+   "y": 578
+  },
+  {
+   "t": "−64 Pf",
+   "px": 6.5,
+   "x": 993,
+   "y": 579
+  },
+  {
+   "t": "Mit leeren Händen",
+   "px": 6.9,
+   "x": 1030,
+   "y": 578
+  },
+  {
+   "t": "0 Pf",
+   "px": 6.5,
+   "x": 1083,
+   "y": 579
+  },
+  {
+   "t": "Stadtbuch",
+   "px": 6.9,
+   "x": 1113,
+   "y": 578
+  },
+  {
+   "t": "SCHEIDING",
+   "px": 12,
+   "x": 329,
+   "y": 29
+  },
+  {
+   "t": "1350",
+   "px": 12,
+   "x": 405,
+   "y": 29
+  },
+  {
+   "t": "Kasse",
+   "px": 12,
+   "x": 460,
+   "y": 29
+  },
+  {
+   "t": "112 Pf",
+   "px": 12,
+   "x": 506,
+   "y": 29
+  },
+  {
+   "t": "Grut",
+   "px": 12,
+   "x": 570,
+   "y": 29
+  },
+  {
+   "t": "40",
+   "px": 12,
+   "x": 609,
+   "y": 29
+  },
+  {
+   "t": "Keller",
+   "px": 12,
+   "x": 651,
+   "y": 29
+  },
+  {
+   "t": "4/12 Fass",
+   "px": 12,
+   "x": 706,
+   "y": 29
+  },
+  {
+   "t": "Woche",
+   "px": 12,
+   "x": 787,
+   "y": 29
+  },
+  {
+   "t": "1/30",
+   "px": 12,
+   "x": 838,
+   "y": 29
+  },
+  {
+   "t": "Chronik",
+   "px": 12,
+   "x": 891,
+   "y": 29
+  },
+  {
+   "t": "4",
+   "px": 12,
+   "x": 955,
+   "y": 29
+  },
+  {
+   "t": "Buch",
+   "px": 12,
+   "x": 991,
+   "y": 29
+  },
+  {
+   "t": "1",
+   "px": 12,
+   "x": 1031,
+   "y": 29
+  },
+  {
+   "t": "Brauhaus zum Anker · 1350/51 · Kunigunde Bruckner, sparsam · Das Recht",
+   "px": 12,
+   "x": 465,
+   "y": 80
+  },
+  {
+   "t": "WEITER",
+   "px": 16.9,
+   "x": 1158,
+   "y": 727
+  },
+  {
+   "t": "nächster Zug: Zuvorkommen Klosterschenke Obernberg — 19 Pf  (Kasse reicht 5,9×)",
+   "px": 12,
+   "x": 687,
+   "y": 684
+  },
+  {
+   "t": "♪",
+   "px": 10.9,
+   "x": 17,
+   "y": 22
+  },
+  {
+   "t": "BAUHOF",
+   "px": 12,
+   "x": 19,
+   "y": 61
+  },
+  {
+   "t": "5 offen · ab 13 Pf · 5 bezahlbar",
+   "px": 12,
+   "x": 19,
+   "y": 73
+  },
+  {
+   "t": "OHNE DICH GESCHEHEN",
+   "px": 12,
+   "x": 79,
+   "y": 80
+  },
+  {
+   "t": "1 Zug",
+   "px": 12,
+   "x": 79,
+   "y": 105
+  },
+  {
+   "t": "DIE HÄUSER",
+   "px": 12,
+   "x": 211,
+   "y": 61
+  },
+  {
+   "t": "wollen 15 · im Keller liegen 4 Fass",
+   "px": 12,
+   "x": 211,
+   "y": 73
+  },
+  {
+   "t": "ANSCHLAGTAFEL",
+   "px": 12,
+   "x": 295,
+   "y": 80
+  },
+  {
+   "t": "mit Kreide an der Sudhauswand",
+   "px": 12,
+   "x": 295,
+   "y": 92
+  },
+  {
+   "t": "DER KELLER",
+   "px": 12,
+   "x": 19,
+   "y": 139
+  },
+  {
+   "t": "4 von 12 Fass · 4 reif",
+   "px": 12,
+   "x": 19,
+   "y": 152
+  },
+  {
+   "t": "OCHSENKARREN",
+   "px": 12,
+   "x": 107,
+   "y": 145
+  },
+  {
+   "t": "0 von 5 Fass · 0 von 4 Halten",
+   "px": 12,
+   "x": 107,
+   "y": 158
+  },
+  {
+   "t": "DAS SUDHAUS",
+   "px": 12,
+   "x": 220,
+   "y": 152
+  },
+  {
+   "t": "zugeklappt",
+   "px": 12,
+   "x": 220,
+   "y": 164
+  },
+  {
+   "t": "DER RUF DES HAUSES",
+   "px": 12,
+   "x": 314,
+   "y": 139
+  },
+  {
+   "t": "Bierzeiger und Zunftzeichen",
+   "px": 12,
+   "x": 314,
+   "y": 164
+  },
+  {
+   "t": "MICHAELI 1350",
+   "px": 12,
+   "x": 19,
+   "y": 192
+  },
+  {
+   "t": "Der Rat setzt den Bierpfennig. Wer darüber g",
+   "px": 12,
+   "x": 19,
+   "y": 204
+  },
+  {
+   "t": "Ortsmarken",
+   "px": 12,
+   "x": 120,
+   "y": 211
+  },
+  {
+   "t": "7 auf dem Pflock",
+   "px": 12,
+   "x": 120,
+   "y": 223
+  },
+  {
+   "t": "Michaelitafel schließen",
+   "px": 12,
+   "x": 1178,
+   "y": 32
+  },
+  {
+   "t": "MICHAELI 1350",
+   "px": 16.9,
+   "x": 25,
+   "y": 103
+  },
+  {
+   "t": "Der Rat setzt den Bierpfennig. Wer darüber geht, wird gestraft.",
+   "px": 12,
+   "x": 197,
+   "y": 108
+  },
+  {
+   "t": "Kasse 112 Pf",
+   "px": 12,
+   "x": 734,
+   "y": 108
+  },
+  {
+   "t": "Kunigunde Bruckner, 1. Amtszeit · Anschlag 515 Pf",
+   "px": 12,
+   "x": 571,
+   "y": 124
+  },
+  {
+   "t": "Chronik des Hauses · 0 Festlegungen · 0 von dieser Tafel",
+   "px": 12,
+   "x": 843,
+   "y": 108
+  },
+  {
+   "t": "DIE RECHNUNG 1350",
+   "px": 12,
+   "x": 31,
+   "y": 153
+  },
+  {
+   "t": "Zu diesem Michaeli war nichts abzutragen. Ab Michaeli 1351 laufen:",
+   "px": 12,
+   "x": 31,
+   "y": 173
+  },
+  {
+   "t": "Grutgeld an den Grutherrn",
+   "px": 12,
+   "x": 31,
+   "y": 207
+  },
+  {
+   "t": "−5 Pf",
+   "px": 12,
+   "x": 220,
+   "y": 207
+  },
+  {
+   "t": "nach dem Ausstoß im Schnitt der letzten drei Jahre",
+   "px": 12,
+   "x": 31,
+   "y": 226
+  },
+  {
+   "t": "Mahlgeld an die Mühle",
+   "px": 12,
+   "x": 31,
+   "y": 256
+  },
+  {
+   "t": "−3 Pf",
+   "px": 12,
+   "x": 220,
+   "y": 256
+  },
+  {
+   "t": "nach dem Ausstoß im Schnitt der letzten drei Jahre",
+   "px": 12,
+   "x": 31,
+   "y": 275
+  },
+  {
+   "t": "Erbzins an den Grundherrn",
+   "px": 12,
+   "x": 31,
+   "y": 306
+  },
+  {
+   "t": "−16 Pf",
+   "px": 12,
+   "x": 212,
+   "y": 306
+  },
+  {
+   "t": "läuft weiter, auch wenn nicht gebraut wird",
+   "px": 12,
+   "x": 31,
+   "y": 325
+  },
+  {
+   "t": "Wasserzins an die Stadt",
+   "px": 12,
+   "x": 31,
+   "y": 341
+  },
+  {
+   "t": "−10 Pf",
+   "px": 12,
+   "x": 212,
+   "y": 341
+  },
+  {
+   "t": "läuft weiter, auch wenn nicht gebraut wird",
+   "px": 12,
+   "x": 31,
+   "y": 360
+  },
+  {
+   "t": "Schoss nach der Nahrung",
+   "px": 12,
+   "x": 31,
+   "y": 377
+  },
+  {
+   "t": "−1 Pf",
+   "px": 12,
+   "x": 220,
+   "y": 377
+  },
+  {
+   "t": "nach dem, was die letzten drei Jahre übrig ließen",
+   "px": 12,
+   "x": 31,
+   "y": 396
+  },
+  {
+   "t": "Zusammen im Jahr",
+   "px": 12,
+   "x": 31,
+   "y": 430
+  },
+  {
+   "t": "−35 Pf",
+   "px": 12,
+   "x": 212,
+   "y": 430
+  },
+  {
+   "t": "Drei Wurzeln: was weiterläuft, wenn die Pfanne kalt bleibt · was am Ausstoß hängt · was der Rat nach der Nahrung des Jah",
+   "px": 12,
+   "x": 31,
+   "y": 447
+  },
+  {
+   "t": "Anschlag auf das Geld in der Lade: frei bleiben 1,3 Jahreslasten, mindestens der Preis der nächsten Festlegung — 85 Pf. ",
+   "px": 12,
+   "x": 31,
+   "y": 530
+  },
+  {
+   "t": "Ausstoß des vergangenen Jahres",
+   "px": 12,
+   "x": 31,
+   "y": 651
+  },
+  {
+   "t": "150 Pf",
+   "px": 12,
+   "x": 212,
+   "y": 651
+  },
+  {
+   "t": "davon übrig geblieben",
+   "px": 12,
+   "x": 31,
+   "y": 668
+  },
+  {
+   "t": "0 Pf",
+   "px": 12,
+   "x": 227,
+   "y": 668
+  },
+  {
+   "t": "DIE BIERORDNUNG",
+   "px": 12,
+   "x": 31,
+   "y": 374
+  },
+  {
+   "t": "Satz je Fass",
+   "px": 12,
+   "x": 31,
+   "y": 396
+  },
+  {
+   "t": "9 Pf",
+   "px": 12.9,
+   "x": 225,
+   "y": 395
+  },
+  {
+   "t": "Der Rat setzt den Bierpfennig auf neun je Fass.",
+   "px": 12,
+   "x": 31,
+   "y": 414
+  },
+  {
+   "t": "vom Rat gesetzt 1350",
+   "px": 12,
+   "x": 31,
+   "y": 448
+  },
+  {
+   "t": "9 Pf",
+   "px": 12,
+   "x": 227,
+   "y": 448
+  },
+  {
+   "t": "seither nachgesetzt (60 im Hundert der Teuerung)",
+   "px": 12,
+   "x": 31,
+   "y": 465
+  },
+  {
+   "t": "0%",
+   "px": 12,
+   "x": 31,
+   "y": 498
+  },
+  {
+   "t": "Aufschlag des Hauses — selbst gebaut",
+   "px": 12,
+   "x": 31,
+   "y": 515
+  },
+  {
+   "t": "0%",
+   "px": 12,
+   "x": 241,
+   "y": 515
+  },
+  {
+   "t": "In diesem Jahr gesetzt. Zwischen den Stufen setzt der Rat nach dem Korn nach, aber nicht ganz. Was zur Teuerung fehlt, i",
+   "px": 12,
+   "x": 31,
+   "y": 532
+  },
+  {
+   "t": "DER ANSCHLAG",
+   "px": 12,
+   "x": 31,
+   "y": 475
+  },
+  {
+   "t": "Für 1350",
+   "px": 12,
+   "x": 31,
+   "y": 497
+  },
+  {
+   "t": "515 Pf",
+   "px": 12.9,
+   "x": 209,
+   "y": 496
+  },
+  {
+   "t": "aus dem Umsatz des Vorjahrs",
+   "px": 12,
+   "x": 31,
+   "y": 514
+  },
+  {
+   "t": "45 Pf",
+   "px": 12,
+   "x": 220,
+   "y": 514
+  },
+  {
+   "t": "aus der Barschaft",
+   "px": 12,
+   "x": 31,
+   "y": 531
+  },
+  {
+   "t": "470 Pf",
+   "px": 12,
+   "x": 212,
+   "y": 531
+  },
+  {
+   "t": "Teuerung seit 1350",
+   "px": 12,
+   "x": 31,
+   "y": 548
+  },
+  {
+   "t": "+0%",
+   "px": 12,
+   "x": 234,
+   "y": 548
+  },
+  {
+   "t": "4 von 5 Sachen nach der Taxe",
+   "px": 12,
+   "x": 31,
+   "y": 565
+  },
+  {
+   "t": "470 Pf",
+   "px": 12,
+   "x": 212,
+   "y": 565
+  },
+  {
+   "t": "Der Anschlag ist die Schätzung des Rats: was durch das Haus geht und was im Haus liegt. Böttcher, Maurer und Grutherr re",
+   "px": 12,
+   "x": 31,
+   "y": 583
+  },
+  {
+   "t": "WAS SCHON STEHT",
+   "px": 12,
+   "x": 31,
+   "y": 556
+  },
+  {
+   "t": "Von heute an nichts. Was die Vorfahren hinterlassen haben:",
+   "px": 12,
+   "x": 31,
+   "y": 576
+  },
+  {
+   "t": "Lagerplatz im Keller",
+   "px": 12,
+   "x": 31,
+   "y": 611
+  },
+  {
+   "t": "12 Fass",
+   "px": 12,
+   "x": 205,
+   "y": 611
+  },
+  {
+   "t": "Sud in der Woche",
+   "px": 12,
+   "x": 31,
+   "y": 628
+  },
+  {
+   "t": "1",
+   "px": 12,
+   "x": 249,
+   "y": 628
+  },
+  {
+   "t": "Braurecht",
+   "px": 12,
+   "x": 31,
+   "y": 644
+  },
+  {
+   "t": "vom Rat verliehen",
+   "px": 12,
+   "x": 133,
+   "y": 644
+  },
+  {
+   "t": "Ansehen in der Stadt",
+   "px": 12,
+   "x": 31,
+   "y": 661
+  },
+  {
+   "t": "25",
+   "px": 12,
+   "x": 241,
+   "y": 661
+  },
+  {
+   "t": "Was von heute an dazukommt, steht hier und trägt in jedem Michaeli.",
+   "px": 12,
+   "x": 31,
+   "y": 679
+  },
+  {
+   "t": "DIE ANGEBOTE ZU MICHAELI 1350",
+   "px": 12,
+   "x": 268,
+   "y": 163
+  },
+  {
+   "t": "5 nebeneinander, 5 heute noch zu haben · Kasse 112 Pf · was hier weggeht, kommt in diesem Jahr nicht wieder",
+   "px": 12,
+   "x": 536,
+   "y": 148
+  },
+  {
+   "t": "Das Dach über der Pfanne",
+   "px": 12,
+   "x": 274,
+   "y": 187
+  },
+  {
+   "t": "33 Pf",
+   "px": 13.4,
+   "x": 280,
+   "y": 220
+  },
+  {
+   "t": "ganz, sofort",
+   "px": 12,
+   "x": 280,
+   "y": 237
+  },
+  {
+   "t": "Nach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.",
+   "px": 12,
+   "x": 274,
+   "y": 257
+  },
+  {
+   "t": "Ohne Bauzeit · wirkt ab heute",
+   "px": 12,
+   "x": 274,
+   "y": 364
+  },
+  {
+   "t": "Ein Schindeldach auf vier Ständern, über der offenen Pfanne.",
+   "px": 12,
+   "x": 274,
+   "y": 396
+  },
+  {
+   "t": "Folge",
+   "px": 12,
+   "x": 274,
+   "y": 447
+  },
+  {
+   "t": "+16 Pf in jedem Michaeli · −6 Pf in jedem Michaeli: Schindeln und Lattung für das Dach",
+   "px": 12,
+   "x": 320,
+   "y": 447
+  },
+  {
+   "t": "Regen löscht das Feuer nicht mehr, und der Sud fällt nicht aus.",
+   "px": 12,
+   "x": 274,
+   "y": 606
+  },
+  {
+   "t": "in jedem Michaeli",
+   "px": 12,
+   "x": 274,
+   "y": 311
+  },
+  {
+   "t": "+16 Pf",
+   "px": 12,
+   "x": 274,
+   "y": 341
+  },
+  {
+   "t": "−6 Pf",
+   "px": 12,
+   "x": 320,
+   "y": 341
+  },
+  {
+   "t": "= +10 Pf",
+   "px": 12,
+   "x": 320,
+   "y": 358
+  },
+  {
+   "t": "Nehmen",
+   "px": 12,
+   "x": 280,
+   "y": 378
+  },
+  {
+   "t": "−33 Pf",
+   "px": 12,
+   "x": 323,
+   "y": 378
+  },
+  {
+   "t": "Ein zweiter Bottich aus Eichenholz",
+   "px": 12,
+   "x": 394,
+   "y": 187
+  },
+  {
+   "t": "42 Pf",
+   "px": 13.4,
+   "x": 400,
+   "y": 220
+  },
+  {
+   "t": "von 94 Pf · dann 1 × 52 Pf",
+   "px": 12,
+   "x": 400,
+   "y": 237
+  },
+  {
+   "t": "Nach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.",
+   "px": 12,
+   "x": 394,
+   "y": 272
+  },
+  {
+   "t": "Bauzeit 1 Jahr · fertig 1351",
+   "px": 12,
+   "x": 394,
+   "y": 379
+  },
+  {
+   "t": "Ein Gärbottich vom Küfer, mit Weidenreifen gebunden.",
+   "px": 12,
+   "x": 394,
+   "y": 411
+  },
+  {
+   "t": "Folge",
+   "px": 12,
+   "x": 394,
+   "y": 478
+  },
+  {
+   "t": "+3 Fass Lagerplatz · +4 im Hundert je Fass · −8 Pf in jedem Michaeli: Weidenreifen und Dauben für den zweiten Bottich",
+   "px": 12,
+   "x": 441,
+   "y": 478
+  },
+  {
+   "t": "Zwei Bottiche heißen: der zweite Sud muss nicht warten — und der erste darf ausgären, statt jung aus dem Haus zu gehen.",
+   "px": 12,
+   "x": 394,
+   "y": 683
+  },
+  {
+   "t": "in jedem Michaeli",
+   "px": 12,
+   "x": 394,
+   "y": 327
+  },
+  {
+   "t": "−8 Pf",
+   "px": 12,
+   "x": 394,
+   "y": 358
+  },
+  {
+   "t": "Nehmen",
+   "px": 12,
+   "x": 400,
+   "y": 378
+  },
+  {
+   "t": "−42 Pf",
+   "px": 12,
+   "x": 444,
+   "y": 378
+  },
+  {
+   "t": "Der Ochsenstall am Tor",
+   "px": 12,
+   "x": 514,
+   "y": 187
+  },
+  {
+   "t": "110 Pf",
+   "px": 13.4,
+   "x": 520,
+   "y": 220
+  },
+  {
+   "t": "ganz, sofort",
+   "px": 12,
+   "x": 520,
+   "y": 237
+  },
+  {
+   "t": "Nach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.",
+   "px": 12,
+   "x": 514,
+   "y": 257
+  },
+  {
+   "t": "Ohne Bauzeit · wirkt ab heute",
+   "px": 12,
+   "x": 514,
+   "y": 364
+  },
+  {
+   "t": "Ein eigener Stall statt des geliehenen Gespanns.",
+   "px": 12,
+   "x": 514,
+   "y": 396
+  },
+  {
+   "t": "Folge",
+   "px": 12,
+   "x": 514,
+   "y": 447
+  },
+  {
+   "t": "+34 Pf in jedem Michaeli · −16 Pf in jedem Michaeli: Futter und Streu für den Ochsen",
+   "px": 12,
+   "x": 561,
+   "y": 447
+  },
+  {
+   "t": "Der Ochse steht im Haus und wartet nicht auf den Nachbarn.",
+   "px": 12,
+   "x": 514,
+   "y": 591
+  },
+  {
+   "t": "Schließt aus: Ein Karrengaul statt des Ochsen",
+   "px": 12,
+   "x": 514,
+   "y": 655
+  },
+  {
+   "t": "in jedem Michaeli",
+   "px": 12,
+   "x": 514,
+   "y": 311
+  },
+  {
+   "t": "+34 Pf",
+   "px": 12,
+   "x": 514,
+   "y": 341
+  },
+  {
+   "t": "−16 Pf",
+   "px": 12,
+   "x": 561,
+   "y": 341
+  },
+  {
+   "t": "= +18 Pf",
+   "px": 12,
+   "x": 560,
+   "y": 358
+  },
+  {
+   "t": "Nehmen",
+   "px": 12,
+   "x": 520,
+   "y": 378
+  },
+  {
+   "t": "−110 Pf",
+   "px": 12,
+   "x": 561,
+   "y": 378
+  },
+  {
+   "t": "Ein Karrengaul statt des Ochsen",
+   "px": 12,
+   "x": 635,
+   "y": 187
+  },
+  {
+   "t": "200 Pf",
+   "px": 13.4,
+   "x": 640,
+   "y": 220
+  },
+  {
+   "t": "ganz, sofort",
+   "px": 12,
+   "x": 640,
+   "y": 237
+  },
+  {
+   "t": "Nach der Taxe des Jahres — der Handwerker rechnet für die Sache, nicht für die Lade.",
+   "px": 12,
+   "x": 635,
+   "y": 257
+  },
+  {
+   "t": "Ohne Bauzeit · wirkt ab heute",
+   "px": 12,
+   "x": 635,
+   "y": 364
+  },
+  {
+   "t": "Ein kaltblütiges Pferd, Geschirr, Hufbeschlag.",
+   "px": 12,
+   "x": 635,
+   "y": 396
+  },
+  {
+   "t": "Folge",
+   "px": 12,
+   "x": 635,
+   "y": 447
+  },
+  {
+   "t": "+62 Pf in jedem Michaeli · −47 Pf in jedem Michaeli: Hafer, Beschlag und Geschirr für den Gaul",
+   "px": 12,
+   "x": 681,
+   "y": 447
+  },
+  {
+   "t": "Doppelt so schnell wie der Ochse und dreimal so teuer im Futter.",
+   "px": 12,
+   "x": 635,
+   "y": 637
+  },
+  {
+   "t": "Schließt aus: Der Ochsenstall am Tor",
+   "px": 12,
+   "x": 635,
+   "y": 701
+  },
+  {
+   "t": "in jedem Michaeli",
+   "px": 12,
+   "x": 635,
+   "y": 259
+  },
+  {
+   "t": "+62 Pf",
+   "px": 12,
+   "x": 635,
+   "y": 289
+  },
+  {
+   "t": "−47 Pf",
+   "px": 12,
+   "x": 681,
+   "y": 289
+  },
+  {
+   "t": "= +15 Pf",
+   "px": 12,
+   "x": 681,
+   "y": 306
+  },
+  {
+   "t": "Über der Kasse: es fehlen 88 Pf.",
+   "px": 12,
+   "x": 635,
+   "y": 322
+  },
+  {
+   "t": "Nehmen",
+   "px": 12,
+   "x": 640,
+   "y": 378
+  },
+  {
+   "t": "−200 Pf",
+   "px": 12,
+   "x": 681,
+   "y": 378
+  },
+  {
+   "t": "Die Bannmeile auf zehn Jahre",
+   "px": 12,
+   "x": 755,
+   "y": 187
+  },
+  {
+   "t": "1.300 Pf",
+   "px": 13.4,
+   "x": 761,
+   "y": 220
+  },
+  {
+   "t": "ganz, sofort",
+   "px": 12,
+   "x": 761,
+   "y": 237
+  },
+  {
+   "t": "Nach dem Anschlag von 1350 — was das Haus wert ist, wird mit angeschlagen.",
+   "px": 12,
+   "x": 755,
+   "y": 257
+  },
+  {
+   "t": "Ohne Bauzeit · wirkt ab heute",
+   "px": 12,
+   "x": 755,
+   "y": 349
+  },
+  {
+   "t": "Ein Ratsbrief: kein fremdes Bier innerhalb einer Meile.",
+   "px": 12,
+   "x": 755,
+   "y": 381
+  },
+  {
+   "t": "Folge",
+   "px": 12,
+   "x": 755,
+   "y": 448
+  },
+  {
+   "t": "3 Häuser gebunden, 10 Jahre",
+   "px": 12,
+   "x": 801,
+   "y": 448
+  },
+  {
+   "t": "Drei Häuser dürfen zehn Jahre lang nichts anderes ausschenken.",
+   "px": 12,
+   "x": 755,
+   "y": 499
+  },
+  {
+   "t": "Über der Kasse: es fehlen 1.188 Pf.",
+   "px": 12,
+   "x": 755,
+   "y": 307
+  },
+  {
+   "t": "Nehmen",
+   "px": 12,
+   "x": 761,
+   "y": 378
+  },
+  {
+   "t": "−1.300 Pf",
+   "px": 12,
+   "x": 797,
+   "y": 378
+  },
+  {
+   "t": "DIE FESTLEGUNG",
+   "px": 12,
+   "x": 268,
+   "y": 437
+  },
+  {
+   "t": "Eine je Amtszeit. Sie ändert eine Regel für den Rest der Partie und wird nicht zurückgenommen. · Das Haus hat 0 Festlegu",
+   "px": 12,
+   "x": 408,
+   "y": 422
+  },
+  {
+   "t": "Der Freikauf vom Grundherrn",
+   "px": 12,
+   "x": 274,
+   "y": 462
+  },
+  {
+   "t": "Eine Ablosesumme, ein Siegel, ein Eintrag im Salbuch.",
+   "px": 12,
+   "x": 274,
+   "y": 477
+  },
+  {
+   "t": "Regel",
+   "px": 12,
+   "x": 274,
+   "y": 514
+  },
+  {
+   "t": "Der Erbzins endet. Für immer. Das Haus gehört von heute an dem Haus.",
+   "px": 12,
+   "x": 320,
+   "y": 514
+  },
+  {
+   "t": "Folge",
+   "px": 12,
+   "x": 274,
+   "y": 568
+  },
+  {
+   "t": "kein Erbzins an den Grundherrn mehr",
+   "px": 12,
+   "x": 320,
+   "y": 568
+  },
+  {
+   "t": "Preis dieser Amtszeit: 1.000 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: s",
+   "px": 12,
+   "x": 274,
+   "y": 603
+  },
+  {
+   "t": "Über der Kasse: es fehlen 888 Pf.",
+   "px": 12,
+   "x": 274,
+   "y": 556
+  },
+  {
+   "t": "Festlegen",
+   "px": 12,
+   "x": 280,
+   "y": 597
+  },
+  {
+   "t": "−1.000 Pf",
+   "px": 12,
+   "x": 375,
+   "y": 597
+  },
+  {
+   "t": "Das Braurecht ans Haus",
+   "px": 12,
+   "x": 474,
+   "y": 462
+  },
+  {
+   "t": "Das Recht wird vom Menschen gelöst und auf die Hofstatt geschrieben.",
+   "px": 12,
+   "x": 474,
+   "y": 477
+  },
+  {
+   "t": "Regel",
+   "px": 12,
+   "x": 474,
+   "y": 514
+  },
+  {
+   "t": "Kein Handlohn mehr bei jedem Erbfall. Wer erbt, erbt auch die Pfanne.",
+   "px": 12,
+   "x": 521,
+   "y": 514
+  },
+  {
+   "t": "Preis dieser Amtszeit: 800 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie",
+   "px": 12,
+   "x": 474,
+   "y": 565
+  },
+  {
+   "t": "Über der Kasse: es fehlen 688 Pf.",
+   "px": 12,
+   "x": 474,
+   "y": 556
+  },
+  {
+   "t": "Festlegen",
+   "px": 12,
+   "x": 480,
+   "y": 597
+  },
+  {
+   "t": "−800 Pf",
+   "px": 12,
+   "x": 591,
+   "y": 597
+  },
+  {
+   "t": "Vertrag statt Gunst",
+   "px": 12,
+   "x": 675,
+   "y": 462
+  },
+  {
+   "t": "Vier Wirte setzen ihr Zeichen unter einen Brief auf fünfundzwanzig Jahre.",
+   "px": 12,
+   "x": 675,
+   "y": 477
+  },
+  {
+   "t": "Regel",
+   "px": 12,
+   "x": 675,
+   "y": 514
+  },
+  {
+   "t": "Vier Häuser nehmen nur noch Bier dieses Hauses. Die übrigen merken sich, dass sie nicht gefragt wurden.",
+   "px": 12,
+   "x": 721,
+   "y": 514
+  },
+  {
+   "t": "Folge",
+   "px": 12,
+   "x": 675,
+   "y": 598
+  },
+  {
+   "t": "-6 Ansehen · 4 Häuser gebunden, 25 Jahre",
+   "px": 12,
+   "x": 721,
+   "y": 598
+  },
+  {
+   "t": "Preis dieser Amtszeit: 85 Pf · Kunigunde Bruckner führt das Haus seit 1350. Die Festlegung überdauert die Amtszeit: sie ",
+   "px": 12,
+   "x": 675,
+   "y": 634
+  },
+  {
+   "t": "Festlegen",
+   "px": 12,
+   "x": 681,
+   "y": 597
+  },
+  {
+   "t": "−85 Pf",
+   "px": 12,
+   "x": 800,
+   "y": 597
+  },
+  {
+   "t": "WAS FÄLLIG WIRD",
+   "px": 12,
+   "x": 877,
+   "y": 153
+  },
+  {
+   "t": "1351",
+   "px": 12,
+   "x": 877,
+   "y": 174
+  },
+  {
+   "t": "Anschlag auf das Geld in der Lade",
+   "px": 12,
+   "x": 909,
+   "y": 174
+  },
+  {
+   "t": "12 Pf",
+   "px": 12,
+   "x": 1110,
+   "y": 174
+  },
+  {
+   "t": "Zu Michaeli gehen zwei Ratsherren durch die Häuser und schätzen, was einer bar liegen hat. Was durch das Haus geht und w",
+   "px": 12,
+   "x": 877,
+   "y": 191
+  },
+  {
+   "t": "1352",
+   "px": 12,
+   "x": 877,
+   "y": 277
+  },
+  {
+   "t": "Umlage für den Mauerbau",
+   "px": 12,
+   "x": 909,
+   "y": 277
+  },
+  {
+   "t": "9 Pf",
+   "px": 12,
+   "x": 1118,
+   "y": 277
+  },
+  {
+   "t": "Die Stadt schließt den Ring nach Süden.",
+   "px": 12,
+   "x": 877,
+   "y": 293
+  },
+  {
+   "t": "1355",
+   "px": 12,
+   "x": 877,
+   "y": 315
+  },
+  {
+   "t": "Landfriedensgeld",
+   "px": 12,
+   "x": 909,
+   "y": 315
+  },
+  {
+   "t": "7 Pf",
+   "px": 12,
+   "x": 1118,
+   "y": 315
+  },
+  {
+   "t": "Der Bund der Städte hält Reisige. Bezahlt wird von den Häusern.",
+   "px": 12,
+   "x": 877,
+   "y": 332
+  },
+  {
+   "t": "1359",
+   "px": 12,
+   "x": 877,
+   "y": 370
+  },
+  {
+   "t": "Brandschatzung",
+   "px": 12,
+   "x": 909,
+   "y": 370
+  },
+  {
+   "t": "23 Pf",
+   "px": 12,
+   "x": 1110,
+   "y": 370
+  },
+  {
+   "t": "Ein Heerhaufe steht vor dem Tor und zieht gegen Geld weiter.",
+   "px": 12,
+   "x": 877,
+   "y": 386
+  },
+  {
+   "t": "1361",
+   "px": 12,
+   "x": 877,
+   "y": 425
+  },
+  {
+   "t": "Zehnt auf das Braugerät",
+   "px": 12,
+   "x": 909,
+   "y": 425
+  },
+  {
+   "t": "13 Pf",
+   "px": 12,
+   "x": 1110,
+   "y": 425
+  },
+  {
+   "t": "Der Rat besteuert Pfanne, Bottich und Fass nach Schätzung.",
+   "px": 12,
+   "x": 877,
+   "y": 441
+  },
+  {
+   "t": "1364",
+   "px": 12,
+   "x": 877,
+   "y": 479
+  },
+  {
+   "t": "Umlage für die Brücke",
+   "px": 12,
+   "x": 909,
+   "y": 479
+  },
+  {
+   "t": "11 Pf",
+   "px": 12,
+   "x": 1110,
+   "y": 479
+  },
+  {
+   "t": "Das Hochwasser hat den Steg genommen.",
+   "px": 12,
+   "x": 877,
+   "y": 496
+  },
+  {
+   "t": "Umlage und Erbfall sind ein Vielfaches der Jahreslast — hier steht die von heute (35 Pf Anschlag des Rats). Wächst das H",
+   "px": 12,
+   "x": 877,
+   "y": 517
+  },
+  {
+   "t": "Wer den Anschlag nicht abträgt, dem nimmt der Rat ein Pfand: eine Wirtschaft wird auf fünf Jahre dem Adler zugesprochen.",
+   "px": 12,
+   "x": 877,
+   "y": 582
+  },
+  {
+   "t": "immer",
+   "px": 12,
+   "x": 877,
+   "y": 635
+  },
+  {
+   "t": "Der Notpfennig — was NICHT genommen wird",
+   "px": 12,
+   "x": 916,
+   "y": 635
+  },
+  {
+   "t": "48 Pf",
+   "px": 12,
+   "x": 1110,
+   "y": 635
+  },
+  {
+   "t": "So weit und nicht weiter nimmt der Rat. Liegt zu Michaeli weniger im Kasten, schießt er auf diese Zahl vor — angeschrieb",
+   "px": 12,
+   "x": 877,
+   "y": 666
+  },
+  {
+   "t": "DIE LEITER",
+   "px": 12,
+   "x": 877,
+   "y": 487
+  },
+  {
+   "t": "Links die Kennzahl: Barschaft zu Michaeli gegen den Preis des nächsten sinnvollen Zuges — dieselbe Zahl, die unten recht",
+   "px": 12,
+   "x": 877,
+   "y": 507
+  },
+  {
+   "t": "Jahr",
+   "px": 12,
+   "x": 877,
+   "y": 667
+  },
+  {
+   "t": "Kasse",
+   "px": 12,
+   "x": 912,
+   "y": 667
+  },
+  {
+   "t": "nächster Zug",
+   "px": 12,
+   "x": 955,
+   "y": 667
+  },
+  {
+   "t": "reicht",
+   "px": 12,
+   "x": 1006,
+   "y": 667
+  },
+  {
+   "t": "eigene Tafel",
+   "px": 12,
+   "x": 1044,
+   "y": 667
+  },
+  {
+   "t": "reicht",
+   "px": 12,
+   "x": 1101,
+   "y": 667
+  },
+  {
+   "t": "1350",
+   "px": 12,
+   "x": 877,
+   "y": 700
+  },
+  {
+   "t": "112",
+   "px": 12,
+   "x": 912,
+   "y": 700
+  },
+  {
+   "t": "19",
+   "px": 12,
+   "x": 955,
+   "y": 700
+  },
+  {
+   "t": "5,89×",
+   "px": 12,
+   "x": 1006,
+   "y": 700
+  },
+  {
+   "t": "33",
+   "px": 12,
+   "x": 1044,
+   "y": 700
+  },
+  {
+   "t": "3,39×",
+   "px": 12,
+   "x": 1101,
+   "y": 700
+  },
+  {
+   "t": "Am Michaelistag, dem 29. September, wird fällig, was das Jahr über gestundet war. Danach steht die Pfanne wieder kalt, b",
+   "px": 12,
+   "x": 25,
+   "y": 639
+  },
+  {
+   "t": "Nichts nehmen · das Geld bleibt liegen",
+   "px": 12,
+   "x": 778,
+   "y": 639
+  },
+  {
+   "t": "Das Jahr beginnen",
+   "px": 12.9,
+   "x": 1016,
+   "y": 639
+  }
+ ],
+ "welt": [
+  "LITER_JE_FASS",
+  "LETZTES_JAHR",
+  "EPOCHEN",
+  "EIGENSCHAFTEN",
+  "haus",
+  "zeit",
+  "vorrat",
+  "adressen",
+  "gegner",
+  "chronik",
+  "aufbau",
+  "epocheZuJahr",
+  "epoche",
+  "waehrung",
+  "geld",
+  "menge",
+  "mengeEinheit",
+  "kann",
+  "zahle",
+  "nimm",
+  "legeEin",
+  "nimmHeraus",
+  "fassAlter",
+  "verfall",
+  "adresse",
+  "adressenJetzt",
+  "binde",
+  "gebunden",
+  "gegnerJetzt",
+  "gegnerName",
+  "gegnerOrt",
+  "neueAmtszeit",
+  "erbe",
+  "rechneJahrAb",
+  "schreibe",
+  "protokolliere",
+  "protokollLetzte",
+  "ZUGRANG",
+  "zugMeldungen",
+  "meldeZug",
+  "besterZug",
+  "zugBedienbar",
+  "zugDeckung",
+  "naechsterZug"
+ ],
+ "stuecke": []
+}
