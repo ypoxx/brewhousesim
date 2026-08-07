@@ -160,3 +160,123 @@ Ein Ende „von selbst" gibt es in der Praxis nicht:
   Rechnung — und das Spiel lief weiter, Woche um Woche, ohne ein Wort dazu. Ein Ende
   „Haus verloren" gibt es im Bau; es greift erst bei negativer Kasse und leerem Hof.
   Eine Kasse, die bei 0 klebt, ist nicht negativ.
+
+---
+
+## 9 · Auflagen
+
+*Durchnummeriert, jede so, dass ein Builder sie ohne Rückfrage abarbeiten kann. Die
+Reihenfolge ist die Reihenfolge, in der ich sie beim Spielen vermisst habe.*
+
+### A1 — Spielstand speichern und fortsetzen
+`kern/welt.js` (oder ein neues `kern/stand.js` als Kernänderung melden) schreibt nach jedem
+Wochenwechsel den vollständigen Weltzustand nach `localStorage` unter einem Schlüssel, der
+Epoche **und** Saat enthält (`brauhaus:1:1350`). Beim Laden derselben URL wird er
+gefunden und die Partie fortgesetzt; im Kopf steht dann sichtbar
+„fortgesetzt · 1354/12". Ein Knopf **„Neue Partie"** verwirft ihn nach Rückfrage. Prüfung:
+zwölf Wochen spielen, `location.reload()`, Jahr/Woche/Kasse/Fässer/Chronik müssen Ziffer
+für Ziffer stimmen — das ist genau die Probe aus §6, die heute reißt.
+
+### A2 — Ein Satz, der sagt, wohin das führt
+Von Woche 1 an sichtbar, ohne dass ein Brett aufgeschlagen werden muss: **was das gute Ende
+ist und wie weit das Haus davon entfernt ist.** Die Zahlen liegen bereits vor
+(`uebergabeFehlt()` in `stuecke/fuhre.js` liefert den Klartextsatz — „Noch 3 Braujahre,
+dann ist das Haus alt genug für eine Übergabe" / „Es führen 1 von 3 Häusern Bier des
+Anker"). Dieser Satz gehört neben die schon vorhandene Zeile *„nächster Zug: …"* am unteren
+Rand. Heute erfährt ihn nur, wer ein zugeklapptes Brett aufschlägt, das drei Wochen im Jahr
+existiert.
+
+### A3 — Der Reiter „DIE ÜBERGABE VOR DEM RAT" darf sich nicht verstecken
+Solange das Übergabeangebot liegt, wird es **nicht** als einer von elf gleich aussehenden
+Reitern gezeigt, sondern als aufgeschlagenes Blatt (wie die Michaelitafel) oder mindestens
+als Reiter mit eigener Farbe und einer Frist („noch 3 Wochen"). Prüfung: eine Partie 1350
+bis 1355 spielen, ohne einen einzigen Reiter anzufassen — das Angebot muss auffallen.
+Gemessen heute: 15 von 284 Wochen vorhanden, 0-mal bemerkt.
+
+### A4 — Der Knopf `preis:tafel` darf nicht lügen
+Er trägt in 1350 über 71 abgelesene Zustände hinweg immer „Michaelitafel schließen" —
+auch wenn keine Tafel liegt. In 1600 wechselt er korrekt auf „Michaelitafel 1600 ·
+4 Angebote", fällt aber unmittelbar nach dem Jahreswechsel wieder auf „schließen" zurück,
+während nichts auf dem Tisch liegt (gemessen an zwei Jahreswechseln). Regel: **die
+Aufschrift wird aus dem Zustand gerechnet, in dem der Knopf gerade gezeichnet wird**, und
+sie lautet beim Zeichnen ohne liegende Tafel immer „Michaelitafel `<jahr>` · `<n>`
+Angebote". Das ist dieselbe Klasse Fehler, die `spiel/LIESMICH.md` als Ursache der
+Bistabilität vom 7. August benennt.
+
+### A5 — Die Michaelitafel muss zu Michaeli von selbst aufliegen
+Sie ist das einzige Brett des Spiels, auf dem Entscheidungen mit Preisschild nebeneinander
+stehen. In der 1350-Sitzung lag sie in zehn Braujahren **nicht ein einziges Mal** von selbst
+auf; in 1600 fehlte sie an jedem geprüften Jahreswechsel und musste gesucht werden. Regel:
+in Woche 1 jedes Braujahres wird sie aufgeschlagen, so wie das Sommerblatt zu Georgi
+aufgeschlagen wird — und erst „Das Jahr beginnen" legt sie weg.
+
+### A6 — Reiter, die nichts bewirken, müssen abgeschaltet sein
+Solange ein großes Blatt oben liegt (Georgi, Michaeli, Übergabe), ändert ein Klick auf die
+acht darunterliegenden Reiter **nichts Sichtbares**: gemessen in 1350 und 1600, je acht
+Klicks, je identische Zahl greifbarer Züge davor und danach (E2, Jahreswechsel 1601:
+30/30/30/30/30/30/30/30 — erst der neunte Reiter, MICHAELI, brachte 53). Entweder das Blatt
+schließt sich beim Klick auf einen Reiter, oder die Reiter tragen `disabled`. Ein Knopf, der
+sich anfassen lässt und nichts tut, ist die teuerste Sorte Lüge in einem Spiel, das nach
+Klicks bewertet wird.
+
+### A7 — Die Woche braucht mehr als zwei Knöpfe, oder sie braucht keine Woche
+*(Anteil der drei Wiederholungsknöpfe an allen Klicks — Zahl aus §2.)* `kern/uhr.js` hat
+mit `B.uhr.springe()` bereits das Werkzeug
+dafür („ruhige Jahre werden erzählt, nicht geklickt") — **es wird von keinem Stück je
+aufgerufen** (geprüft: kein Treffer außerhalb von `uhr.js` selbst). Entweder jede Woche
+trägt eine Entscheidung, oder Wochen ohne Entscheidung werden zusammengefasst.
+
+### A8 — Der Gegner muss ohne aufgeklapptes Brett zu bemerken sein
+*(Zahlen aus §4 — Auflage steht, sobald die Zählung dort steht.)*
+
+### A9 — Wenn nichts bezahlbar ist, muss das Spiel einen Weg zeigen
+Die Tafel sagt vorbildlich „HEUTE NICHT · Die Kasse reicht für keines dieser Angebote. Das
+billigste — Der feste Fasskauf bei der Zunft — kostet 60 Pf, es fehlen 12 Pf." Das ist
+gute Arbeit. Was fehlt, ist der Satz danach: **woher die 12 Pfennig kommen sollen.** In
+meiner 1350-Sitzung lag die Deckung in **250 von 284 Wochen unter 1×**, im Median bei
+**0,17×**, und in 127 Wochen war überhaupt nichts mit Preisschild bezahlbar. Ein Spiel, das
+in neun von zehn Wochen alle seine Entscheidungen anzeigt und keine davon zulässt, hat
+keine Entscheidungen.
+
+### A10 — Textüberläufe auf der Michaelitafel bei 1600×900
+Auf demselben Blatt gleichzeitig abgeschnitten (1350, Michaeli 1359): „Zusammen im Jahr"
+in *DIE RECHNUNG*, „Der Anschlag steht im Steuerbuch der Stadt" in *DER ANSCHLAG*,
+„1 fertig · 0 im Bau · 0 durch eine Wahl für immer" in *WAS SCHON STEHT*, und die
+Knopfaufschrift „Nehmen −110 Pf" bricht mitten im Wort („Nehme n −110 P f"). Prüfung bei
+1600×900 **mit** gezeichneter Rollleiste; kein Kasten der Tafel darf Text abschneiden.
+
+---
+
+## X · Was an meiner Prüfung schwach ist
+
+*Steht bewusst vor den Auflagen, nicht dahinter.*
+
+1. **Meine Hand ist ein Skript, kein Mensch.** Sie klickt mit echten Mausereignissen auf
+   echte Knopfflächen und wartet nach jedem Klick, bis das Bild steht — aber sie liest
+   nicht, sie erkennt keine Absicht, und sie fasst nichts an, wonach sie nicht ausdrücklich
+   sucht. Genau daran ist mir das gute Ende durchgerutscht (§7). Ein Mensch hätte den
+   neuen Reiter „DIE ÜBERGABE VOR DEM RAT" vielleicht gesehen. Was ich messe, ist deshalb
+   **eine Untergrenze für das, was auffällt**, keine Obergrenze.
+2. **Die Spielstärke meiner Hand ist mittelmäßig, und das verzerrt die Wirtschaftszahlen.**
+   Die Deckung (Kasse ÷ Preis des nächsten sinnvollen Zuges) hängt daran, wie gut gespielt
+   wird. Meine Zahlen sagen: *diese* Spielweise verarmt. Sie sagen nicht: jede Spielweise
+   verarmt. Ein besserer Spieler hätte eine andere Kurve.
+3. **Eine Sitzung je Epoche, eine Saat.** Die Messlatte selbst verlangt „drei Läufe, eine
+   Prüfsumme"; ich habe je Epoche **einen** Lauf mit `saat=1350`. Wo ich eine Zahl nenne,
+   ist sie **nicht** auf Wiederholbarkeit geprüft. Was ich dazu sagen kann: `lage` war in
+   allen Sitzungen 0 und es gab null Seitenfehler — das Spiel läuft stabil, aber ob es
+   dieselbe Partie zweimal spielt, habe ich nicht gemessen.
+4. **Ich habe ohne Rollleiste gemessen.** Playwright startet Chromium mit
+   `--hide-scrollbars`; ich habe das nicht abgestellt. Wo ich von abgeschnittenem Text
+   spreche, ist das im echten Browser eher mehr, nie weniger.
+5. **Ein Fenster, 1600×900.** Nicht die Entwurfsleinwand und nicht 1366×768. Ein einzelner
+   Blick bei 1366×768 zeigte dieselben Bretter deutlich schlechter (überlappende Kästen
+   oben links); geprüft habe ich dort nicht.
+6. **Die Panne mit dem zweiten Browser** (siehe §1) — vier Minuten lang lief eine zweite
+   Chromium-Instanz neben dem Messfenster. Die betroffene Sitzung ist verworfen, aber ich
+   kann nicht ausschließen, dass die Zahlen der ersten 1350-Sitzung, die ich als
+   *Beobachtung* zitiere, davon berührt sind.
+7. **„Ausschluss" habe ich nur dort bewiesen, wo ich zugegriffen habe.** Dass die
+   Michaeli-Angebote einander ausschließen, ist gemessen (die Geschwister waren danach
+   abgeschaltet). Für andere Brettpaare habe ich es nicht geprüft, sondern nur gelesen,
+   was das Spiel selbst darüberschreibt.
