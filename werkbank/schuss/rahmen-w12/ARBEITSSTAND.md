@@ -915,3 +915,19 @@ noch gezittert hat. Der Auftrag lässt das ausdrücklich zu: verlangt ist EINE
 Partie, nicht die alte.
 
 ## 1600
+
+**Zwischenstand nach 1350 und 1884** (`auswerten-abnahme.py abnahme5`):
+
+```
+Epoche  Laeufe   md5 Partien     12 J    13 J    14 J    <1x Fehler  Urteil
+1350         6     1       1   -0,259  -0,236  -0,389   0/14      0  BESTANDEN
+1884         3     1       1   +0,161  +0,330  +0,169   0/14      0  BESTANDEN
+```
+
+ρ(14 J) in 1350 ist **−0,389** — weder A (+0,191) noch B (−0,521), also die
+neue, eigene Partie der Fassung 5. Latte 0,700 nicht gerissen, 0 von 14 Jahren
+unter 1×, 0 Seitenfehler.
+
+| Lauf | fertig | md5 | Kassenspanne |
+|---|---|---|---|
+| e2-A | 13:53:02 | `0066208800b5` | 302–2.851 |
