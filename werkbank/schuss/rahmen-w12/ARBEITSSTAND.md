@@ -1066,3 +1066,18 @@ das ist knapp.
 Die Auflage 7 der Welle 10 (`BRAUHAUS.blatt.melde(el, fn)`) ist weiter nicht
 eingelöst; `BRAUHAUS.haushalt.ohneGriff()` und die Blattaufsicht arbeiten ohne
 Anmeldung. Sie steht unverändert.
+
+### Ein Punkt, auf den ich vorab hinweise, weil er gegen mich ausgehen kann
+
+`gauntlet/MESSLATTE.md` führt **1970 mit ρ(12 J) = +0,699** — ein Tausendstel
+unter der Latte 0,700. Wenn F5 die Partie von 1970 ändert (und sie ändert
+Partien, das ist ihr Zweck), kann dieser Wert **über** die Latte rutschen, ohne
+dass irgendetwas schlechter geworden wäre. `auswerten-abnahme.py` meldet das
+als „LATTE GERISSEN". Ich messe es und schreibe es hin, wie es herauskommt.
+
+### Nebenbefund aus denselben Läufen
+
+In **allen** bisherigen 400-Wochen-Läufen der F5: `BRAUHAUS.lage` am Schluss
+**0**, Seitenfehler **0**, kein Abbruch. Da `B.klage()` (`kern/basis.js:25`)
+alles in `B.lage` schiebt, was der Rahmen wirft, heißt das zugleich: der
+Notausgang des Rundenschlusses ist in 4.000 gespielten Wochen **nie** gegriffen.
