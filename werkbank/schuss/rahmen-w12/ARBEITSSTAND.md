@@ -691,3 +691,23 @@ Blick der Hand zuvor, nicht nur das an einem alten Element.
 
 Fassung 3 und 4 stehen hier, weil sie beide „sauberer" aussahen und beide
 messbar schlechter sind. Wer sie noch einmal versucht, findet hier die Zahl.
+
+---
+
+# DIE HARTE ABNAHME DER AUSGELIEFERTEN FASSUNG (Klemmenwache)
+
+Stand **`7f30b3dfa40e`** auf Hafen 8946, jeder Lauf einzeln durch
+`aufsicht/messfenster.sh`, `linie.mjs <epoche> 400`, `?saat=1350`.
+Reihenfolge mit Absicht: **zuerst die beiden Epochen, die Fassung 1
+verdorben hatte.**
+
+## 1884 — drei Laeufe, EINE Pruefsumme
+
+| Lauf | Zeit | md5 |
+|---|---|---|
+| e3-A | 06:16:44 | `32587e1d4e9c` |
+| e3-B | 06:23:55 | `32587e1d4e9c` |
+| e3-C | 06:30:50 | `32587e1d4e9c` |
+
+Fassung 1 hatte hier **drei verschiedene** Pruefsummen. Der Rueckschritt ist
+fort.
