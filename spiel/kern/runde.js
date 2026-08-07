@@ -174,37 +174,55 @@
     tiefe++;
     zahl.runden++;
     try { return oSende.apply(this, arguments); }
-    finally {
-      tiefe--;
-      /* Am Ende einer Runde ist die Lage, gegen die die Stuecke gezeichnet
-         haben, genau die, die jetzt dasteht. */
-      if (tiefe === 0) letzterAbdruck = abdruck();
-    }
+    finally { tiefe--; }
   };
 
   /* ---------------------------------------------------------------------
      DIE KLEMMENWACHE
      --------------------------------------------------------------------- */
+  /* WARUM ERST IM NAECHSTEN BILD UND NICHT SOFORT.
+     Jedes Zeichnen baut die Bretter neu; im selben Augenblick sind ALLE
+     Klemmklassen fort, weil die Elemente neu sind. Wer da schon vergleicht,
+     sieht bei jedem Zeichnen eine „geaenderte" Lage und zeichnet noch einmal
+     — gemessen: 858 Runden statt 202 in 62 Wochen, 209 mal am Riegel.
+     DIE STADT setzt ihre Klassen im NAECHSTEN Bild neu (`stadt.js:1554`,
+     `baldPruefen` haengt selbst in einem requestAnimationFrame, und ihr
+     Beobachter ist frueher angemeldet als dieser hier, also kommt sie im
+     selben Bild zuerst dran). Erst danach steht die Lage, gegen die die
+     Stuecke gezeichnet haben — und erst dann ist der Vergleich etwas wert.
+     Ein Bildaufbau ist keine Wanduhrfrist: er kommt, wenn gezeichnet wurde,
+     und nicht, wenn eine Uhr abgelaufen ist. */
+  var angemeldet = false;
+
+  function baldNachsehen() {
+    if (angemeldet) return;
+    angemeldet = true;
+    window.requestAnimationFrame(function () {
+      angemeldet = false;
+      B.wage('runde.wache', nachsehen);
+    });
+  }
+
+  function nachsehen() {
+    if (tiefe > 0) return;                        /* mitten im Zeichnen: gleich fertig */
+    var jetzt = abdruck();
+    if (jetzt === letzterAbdruck) return;
+    /* ZWEI LAGEN, DIE SICH ABWECHSELN, sind kein Fortschritt. Wer neu
+       zeichnet, weil die Lage nach A gekippt ist, und dabei B herstellt,
+       das gleich wieder nach A kippt, zeichnet fuer immer. Kommt genau die
+       vorletzte Lage zurueck, wird nur gezaehlt, nicht gezeichnet. */
+    if (jetzt === vorletzterAbdruck) { zahl.pendel++; return; }
+    vorletzterAbdruck = letzterAbdruck;
+    letzterAbdruck = jetzt;
+    if (aussenZaehler >= AUSSEN_MAX) { zahl.riegel++; return; }
+    aussenZaehler++; zahl.nachgezogen++;
+    B.sende('zeichne', { grund: 'runde-klemme' });
+  }
+
   function starteWache() {
     if (wache || !window.MutationObserver) return;
     letzterAbdruck = abdruck();
-    wache = new MutationObserver(function () {
-      if (tiefe > 0) return;                      /* mitten im Zeichnen: gleich fertig */
-      var jetzt = abdruck();
-      if (jetzt === letzterAbdruck) return;
-      /* ZWEI LAGEN, DIE SICH ABWECHSELN, sind kein Fortschritt. Wer neu
-         zeichnet, weil die Lage nach A gekippt ist, und dabei B herstellt,
-         das gleich wieder nach A kippt, zeichnet fuer immer. Kommt genau
-         die vorletzte Lage zurueck, wird nur gezaehlt, nicht gezeichnet. */
-      if (jetzt === vorletzterAbdruck) { zahl.pendel++; return; }
-      vorletzterAbdruck = letzterAbdruck;
-      letzterAbdruck = jetzt;
-      if (aussenZaehler >= AUSSEN_MAX) { zahl.riegel++; return; }
-      aussenZaehler++; zahl.nachgezogen++;
-      B.wage('runde.wache', function () {
-        B.sende('zeichne', { grund: 'runde-klemme' });
-      });
-    });
+    wache = new MutationObserver(baldNachsehen);
     var stapel = document.getElementById('buehne');
     if (stapel) wache.observe(stapel, { subtree: true, attributes: true, attributeFilter: ['class'] });
   }
