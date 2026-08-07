@@ -16,20 +16,24 @@ liegen — es sind Befunde, kein Quelltext.
 
 ---
 
-## 0 · In Arbeit
+## 0 · Was gespielt wurde
 
-Dieses Papier wird **während** der Prüfung geschrieben, nicht danach. Was hier steht, ist
-gemessen; was fehlt, ist noch nicht gespielt.
+| Sitzung | Gerät | Dauer | Wochen | echte Klicks |
+|---|---|---|---|---|
+| **1350** | `hand2.mjs` | 20,1 min | 284 | 1.494 |
+| **1600** | `hand3.mjs` | 20,1 min | 310 | 838 |
+| **1884** | `hand3.mjs` | 20,0 min | 308 | 821 |
+| **1970** | `hand3.mjs` | 10,6 min *(Spiel endete)* | 128 | 343 |
+| 1350 · zweite Hand | `hand3.mjs` | 20 min | *(siehe §10)* | |
+| 1970 · zweite Hand (Wiederholbarkeit) | `hand3.mjs` | ≤ 20 min | *(siehe §10)* | |
+| Wiederkehr-Probe (Neuladen) | `wiederkehr.mjs` | — | 12 | §6 |
+| Gegnerblick (ohne ein Brett aufzuklappen) | `gegnerblick.mjs` | — | 50 | §4b |
+| Probe auf ein Ende | `gutesende.mjs` | 7 min | 102 | 213 |
 
-| Sitzung | Stand |
-|---|---|
-| Gerät gebaut, Rauchprobe 1350 (3 min, 150 Klicks) | fertig |
-| Wiederkehr-Probe (Neuladen) | fertig |
-| 1350 · 20 Minuten, erste Hand (verhungert) | fertig |
-| 1350 · 20 Minuten, zweite Hand | offen |
-| 1600 · 20 Minuten | offen |
-| 1884 · 20 Minuten | offen |
-| 1970 · 20 Minuten | offen |
+**Zusammen 1.032 gespielte Wochen, 3.709 echte Mausklicks, null Seitenfehler, `lage` in
+jeder Sitzung 0.** Das Spiel ist in keiner Sitzung kaputtgegangen; kein einziger meiner
+Klicks hat einen Skriptfehler ausgelöst. Das gehört an den Anfang, weil alles Folgende
+Kritik ist.
 
 ---
 
@@ -401,8 +405,9 @@ dritte ist rechnerisch unerreichbar:
 **Zweimal ja und einmal nein, und der Unterschied ist die ganze Kritik.**
 
 **Nein** in den Minuten 4 bis 20 jeder Sitzung. Die Woche besteht aus zwei Knöpfen — „Wie
-vorige Woche", „FUHRE ABSCHICKEN" —, und ich habe sie in vier Sitzungen zusammen
-**1.166-mal** gedrückt. Dazwischen läuft ein Gegner herum, den ich mir nicht leisten kann,
+vorige Woche", „FUHRE ABSCHICKEN". In den drei unversehrten Protokollen (1600, 1884, 1970)
+entfielen auf sie **1.256 von 1.760 Klicks (71 %)**; zusammen mit „Nach Durst füllen"
+**1.369 (78 %)**. Dazwischen läuft ein Gegner herum, den ich mir nicht leisten kann,
 und einmal im Jahr liegt eine prachtvolle Tafel mit fünf Angeboten, von denen keines
 bezahlbar ist. Das ist kein langweiliges Spiel — es ist ein **interessantes Spiel, das man
 nicht spielen darf**, weil das Geld fehlt.
@@ -486,10 +491,24 @@ dafür („ruhige Jahre werden erzählt, nicht geklickt") — **es wird von kein
 aufgerufen** (geprüft: kein Treffer außerhalb von `uhr.js` selbst). Entweder jede Woche
 trägt eine Entscheidung, oder Wochen ohne Entscheidung werden zusammengefasst.
 
-### A8 — Der Gegner muss ohne aufgeklapptes Brett zu bemerken sein
-*(Zahlen aus §4 — Auflage steht, sobald die Zählung dort steht.)*
+### A8 — Der Gegner ist in Ordnung; nur der Zähler wandert
+**Keine Nacharbeit am Verhalten** — §4b besteht die Latte klar. Eine einzige Kleinigkeit:
+der Reiter *OHNE DICH GESCHEHEN* trägt die Zahl der Züge nur im **ersten** Braujahr; ab
+dem zweiten steht dort nur noch der Titel, weil das Brett dann aufgeklappt ist. Die Zahl
+gehört an **beiden** Orten zu stehen, damit sie nicht mitten in der Partie den Platz
+wechselt. Prüfung mit `werkbank/schuss/spiel-w12/gegnerblick.mjs` (spielt, ohne einen
+Reiter anzufassen): die Aufschrift muss in Woche 45 dieselbe Form haben wie in Woche 15.
 
-### A9 — Wenn nichts bezahlbar ist, muss das Spiel einen Weg zeigen
+### A9 — Der Spieler muss sich einen Gegenzug leisten können
+In vier Sitzungen standen **457 Züge des Gegners** gegen **5 Züge von mir**. Das ist keine
+Frage der Sichtbarkeit, sondern des Preises: „ablösen 76 Pf" bei 14 Pf in der Lade. Der
+billigste Weg, gegen den Gegner zu halten, muss in jeder Woche mindestens **einer** sein,
+den die Kasse trägt — der Knopf „Fass an den Wirt · 1 Fass statt Geld" ist genau dafür
+gebaut und war in meinen Sitzungen fast immer mit „Vorrat reicht nicht" abgeschaltet, weil
+der Keller leer war. Prüfung: über 100 Wochen darf es nicht mehr als 10 Wochen geben, in
+denen **kein** Zug gegen den Gegner bezahlbar ist.
+
+### A10 — Wenn nichts bezahlbar ist, muss das Spiel einen Weg zeigen
 Die Tafel sagt vorbildlich „HEUTE NICHT · Die Kasse reicht für keines dieser Angebote. Das
 billigste — Der feste Fasskauf bei der Zunft — kostet 60 Pf, es fehlen 12 Pf." Das ist
 gute Arbeit. Was fehlt, ist der Satz danach: **woher die 12 Pfennig kommen sollen.** In
@@ -498,7 +517,27 @@ meiner 1350-Sitzung lag die Deckung in **250 von 284 Wochen unter 1×**, im Medi
 in neun von zehn Wochen alle seine Entscheidungen anzeigt und keine davon zulässt, hat
 keine Entscheidungen.
 
-### A10 — Textüberläufe auf der Michaelitafel bei 1600×900
+### A11 — Die Verbliste braucht je Epoche mehr als ein eigenes Wort
+37 von 43 bis 46 greifbaren Verben sind in **allen vier** Epochen dieselben (§2, Punkt 4).
+Nur 1970 hat mit `gegner:angebot-ja` / `gegner:angebot-nein` (die Nordstern-Gruppe fragt
+an) und `fuhre:listen` etwas, das die Woche wirklich anders macht. **Jede Epoche braucht
+mindestens drei Verben, die es in den anderen dreien nicht gibt und die im normalen
+Wochenlauf vorkommen** — nicht auf der Jahrestafel, sondern zwischen den Fuhren. 1350 hat
+mit `fuhre:bann` (Bannbrief) und `sud:wuerze` (Grut oder Hopfen) zwei davon; 1600 hat
+zwei, 1884 fünf. Prüfung: `werkbank/schuss/spiel-w12/verbliste.mjs` über vier Sitzungen —
+paarweiser Jaccard über die Verben **unter 0,6**.
+
+### A12 — Das Epochenversprechen wird im Spiel nie eingelöst
+Epoche I umfasst 167 Jahre. Bei gemessenen 14,2 Wochen je Minute braucht man **rund sechs
+Stunden**, um von 1350 nach 1517 zu kommen — in einem Spiel ohne Speicherstand (§6). Die
+vier Epochen sind vier `?epoche=`-Eingänge; **kein Spieler wird je einen Epochenwechsel
+sehen**. `kern/uhr.js` hat mit `B.uhr.springe()` das Werkzeug, und kein Stück ruft es auf.
+Entweder ruhige Jahre werden übersprungen, bis ein Epochenwechsel in einer Sitzung
+erreichbar ist — oder die Startseite sagt ehrlich, dass jede Epoche ein eigenes Szenario
+ist. Was nicht geht, ist die Forderung „620 Jahre ohne Ortswechsel" nur im Bild zu
+erfüllen.
+
+### A13 — Textüberläufe auf der Michaelitafel bei 1600×900
 Auf demselben Blatt gleichzeitig abgeschnitten (1350, Michaeli 1359): „Zusammen im Jahr"
 in *DIE RECHNUNG*, „Der Anschlag steht im Steuerbuch der Stadt" in *DER ANSCHLAG*,
 „1 fertig · 0 im Bau · 0 durch eine Wahl für immer" in *WAS SCHON STEHT*, und die
