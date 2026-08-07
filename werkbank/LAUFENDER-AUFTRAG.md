@@ -914,7 +914,7 @@ etwas Committetes. Verloren ging jedes Mal dasselbe:
    sagt „origin ist auf Stand", weil der Reset auch die Reparatur zurücknimmt,
    die das verhindern sollte. Von Hand:
    `git fetch origin <zweig> && git rev-list --count HEAD..origin/<zweig>`.
-   **Hat bei Reset 8 bis 20 jedes Mal funktioniert und den Baum gerettet.**
+   **Hat bei Reset 8 bis 21 jedes Mal funktioniert und den Baum gerettet.**
    Beim **siebzehnten** am 6. August 04:23 UTC stand der Baum **333 Commits**
    zurück, und die Meldung lautete wörtlich „origin ist auf Stand". Neu daran
    war nur eines: der Reset hatte auch schon einen **Veröffentlicher aus dem
