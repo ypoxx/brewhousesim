@@ -1,0 +1,51 @@
+{
+ "epoche": 1,
+ "url": "http://127.0.0.1:8933/spiel/?epoche=1&saat=1350",
+ "anfang": {
+  "jahr": 1350,
+  "woche": 1,
+  "kasse": 112,
+  "faesser": 4,
+  "chronik": 4,
+  "protokoll": 1,
+  "speicher": {
+   "local": [],
+   "session": []
+  },
+  "cookies": 0,
+  "idb": true
+ },
+ "nachSpielen": {
+  "jahr": 1350,
+  "woche": 12,
+  "kasse": 1,
+  "faesser": 12,
+  "chronik": 9,
+  "protokoll": 41,
+  "speicher": {
+   "local": [
+    "brauhaus:1:1350"
+   ],
+   "session": []
+  },
+  "cookies": 0,
+  "idb": true
+ },
+ "nachNeuladen": {
+  "jahr": 1350,
+  "woche": 12,
+  "kasse": 1,
+  "faesser": 12,
+  "chronik": 9,
+  "protokoll": 41,
+  "speicher": {
+   "local": [
+    "brauhaus:1:1350"
+   ],
+   "session": []
+  },
+  "cookies": 0,
+  "idb": true
+ },
+ "fortgesetzt": true
+}
