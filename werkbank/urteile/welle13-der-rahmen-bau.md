@@ -196,6 +196,24 @@ teuerste Sorte Lüge in einem Spiel, das nach Klicks bewertet wird"* (§9 A6).
 die Rückfrage, ein Klick auf einen fremden `stadt:reiter:*` ebenfalls
 (Entscheidung ③ der Aufsicht).
 
+**Gemessen mit echter Maus** (`werkbank/schuss/rahmen-w13/neuepartie.mjs`,
+sechs Runden spielen, dann der ganze Weg):
+
+| Schritt | 1350 | 1970 | Speicher | Rückfrage liegt |
+|---|---|---|---|---|
+| am Anfang | 1350/1 · 112 | 1970/1 · 86.000 | **leer** | — · *kein Knopf* |
+| nach 6 Runden | 1350/6 · 91 | 1970/6 · 62.000 | 1 Schlüssel, 9.122 Zeichen | — · Knopf da |
+| nach `kern:neu` | 1350/6 · 91 | 1970/6 · 62.000 | unverändert | **ja, zwei Knöpfe** |
+| nach `kern:neu:nein` | 1350/6 · 91 | 1970/6 · 62.000 | unverändert | fort |
+| nach `kern:neu:ja` | **1350/1 · 112** | **1970/1 · 86.000** | **leer** | fort |
+
+Die Rückfrage liest sich: *„Neue Partie beginnen? — Der gespeicherte Stand —
+1350, Woche 6 — wird verworfen und kommt nicht zurück."*
+**Browserdialoge in beiden Läufen: 0.** `lage` 0, Seitenfehler 0.
+`B.stand.zeile()` sagt dabei *„spiel · brauhaus:1:1350 · liegt vor · 5×
+geschrieben, zuletzt 9122 Zeichen"* — fünf Schreibvorgänge für fünf
+Wochenwechsel, also genau einer je Woche und keiner zuviel.
+
 ---
 
 ## R2 — `?neu=1` startet frisch und schreibt nichts

@@ -2427,17 +2427,29 @@
       if (!pl.raten) return;
       if (!rate || pl.jetzt < rate.jetzt) rate = { a: a, jetzt: pl.jetzt, ganz: pl.ganz, n: pl.raten, rate: pl.rate };
     });
+    /* Und dann die Zahl, die der Kritiker wirklich gesucht hat: IST DAS
+       UEBERHAUPT ZU ERREICHEN? `Z.ertrag` ist gemessen — die Veraenderung
+       der Lade von Michaeli zu Michaeli, also das, was ein ganzes Braujahr
+       dieses Hauses uebrig gelassen hat. Damit steht da, wie viele Jahre es
+       so dauert, statt „spar halt". Ein Haus, das nichts uebrig laesst,
+       bekommt keine Jahreszahl, sondern den Satz, der dann wahr ist. */
+    var uebrig = Math.round(Z.ertrag || 0);
     kasten.appendChild(B.el('span', 'pr-woher-marke', 'HEUTE BRINGT KEIN KNOPF GELD'));
     kasten.appendChild(B.el('span', 'pr-woher-text',
-      'Auf diesem Schirm steht kein Zug, der etwas in die Lade legt. '
+      'Auf diesem Schirm steht kein Zug mit Preisschild, der etwas in die Lade legt. '
       + (rate
           ? 'Das billigste, was in Raten geht, ist „' + rate.a.name + '": '
             + geld(rate.jetzt) + ' heute, dann ' + rate.n + ' × ' + geld(rate.rate)
             + ' — auch das ist heute zu teuer. '
           : '')
-      + 'Was hier fehlt, kommt aus den Fuhren dieses Braujahres; die Tafel von '
-      + (Z.tafelJahr + 1) + ' steht am selben Ort, und was heute nicht genommen wird, '
-      + 'bleibt in der Kasse.'));
+      + (uebrig > 0
+          ? 'Das vorige Braujahr hat ' + geld(uebrig) + ' übrig gelassen; bei diesem Gang '
+            + 'liegt die Summe in ' + Math.ceil(fehlt / uebrig)
+            + (Math.ceil(fehlt / uebrig) === 1 ? ' Braujahr' : ' Braujahren') + ' in der Lade.'
+          : 'Das vorige Braujahr hat nichts übrig gelassen. Solange das so bleibt, '
+            + 'kommt diese Summe nicht zusammen — sie kommt aus den Fuhren, nicht aus der Zeit.')
+      + ' Was heute nicht genommen wird, bleibt in der Kasse; die Tafel von '
+      + (Z.tafelJahr + 1) + ' steht am selben Ort.'));
     return kasten;
   }
 

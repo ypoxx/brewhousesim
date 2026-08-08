@@ -1,0 +1,86 @@
+{
+ "epoche": 1,
+ "url": "http://127.0.0.1:8921/spiel/?epoche=1&saat=1350",
+ "fehler": [],
+ "browserdialoge": [],
+ "schritte": {
+  "amAnfang": {
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 112,
+   "speicher": [],
+   "fortgesetzt": null,
+   "knopfNeu": false,
+   "frageJa": false,
+   "frageNein": false,
+   "frageText": [],
+   "lage": 0,
+   "stand": "STAND  spiel · brauhaus:1:1350 · leer · 0× geschrieben, zuletzt 0 Zeichen"
+  },
+  "nachSechsRunden": {
+   "jahr": 1350,
+   "woche": 6,
+   "kasse": 91,
+   "speicher": [
+    "brauhaus:1:1350"
+   ],
+   "fortgesetzt": null,
+   "knopfNeu": true,
+   "frageJa": false,
+   "frageNein": false,
+   "frageText": [],
+   "lage": 0,
+   "stand": "STAND  spiel · brauhaus:1:1350 · liegt vor · 5× geschrieben, zuletzt 9122 Zeichen"
+  },
+  "knopfGedrueckt": true,
+  "mitRueckfrage": {
+   "jahr": 1350,
+   "woche": 6,
+   "kasse": 91,
+   "speicher": [
+    "brauhaus:1:1350"
+   ],
+   "fortgesetzt": null,
+   "knopfNeu": true,
+   "frageJa": true,
+   "frageNein": true,
+   "frageText": [
+    "Neue Partie beginnen?",
+    "Der gespeicherte Stand — 1350, Woche 6 — wird verworfen und kommt nicht zurück."
+   ],
+   "lage": 0,
+   "stand": "STAND  spiel · brauhaus:1:1350 · liegt vor · 5× geschrieben, zuletzt 9122 Zeichen"
+  },
+  "neinGedrueckt": true,
+  "nachNein": {
+   "jahr": 1350,
+   "woche": 6,
+   "kasse": 91,
+   "speicher": [
+    "brauhaus:1:1350"
+   ],
+   "fortgesetzt": null,
+   "knopfNeu": true,
+   "frageJa": false,
+   "frageNein": false,
+   "frageText": [],
+   "lage": 0,
+   "stand": "STAND  spiel · brauhaus:1:1350 · liegt vor · 5× geschrieben, zuletzt 9122 Zeichen"
+  },
+  "jaGedrueckt": true,
+  "nachJa": {
+   "jahr": 1350,
+   "woche": 1,
+   "kasse": 112,
+   "speicher": [],
+   "fortgesetzt": null,
+   "knopfNeu": false,
+   "frageJa": false,
+   "frageNein": false,
+   "frageText": [],
+   "lage": 0,
+   "stand": "STAND  spiel · brauhaus:1:1350 · leer · 0× geschrieben, zuletzt 0 Zeichen"
+  }
+ },
+ "bestanden": true
+}
