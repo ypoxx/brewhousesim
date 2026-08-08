@@ -63,7 +63,28 @@ zurückgestellt.
 | **DER RAHMEN** — Spielstand, Zielsatz, Startschirm | 8921 | A1 A2(Platz) A12(Entscheidung) | **gebaut, 09:0x** | `urteile/welle13-der-rahmen-bau.md` |
 | **DIE JAHRESTAFEL** — der lügende Knopf, die Tafel, die nie aufliegt | 8922 | A4 A5 A6 A10 A13 | **gebaut, 09:4x** | `urteile/welle13-die-jahrestafel-bau.md` |
 | **DIE WOCHE** — 71 % der Klicks sind zwei Knöpfe | 8923 | A2(Satz) A3 A6 A7 | **gebaut, 10:0x — eine Schwelle zurück an die Aufsicht** | `urteile/welle13-die-woche-bau.md` |
-| **DER GEGENZUG** — 457 zu 5 | 8924 | A8 A9 | baut | `urteile/welle13-der-gegenzug-bau.md` |
+| **DER GEGENZUG** — 457 zu 5 | 8924 | A8 A9 | **gebaut, 11:0x** | `urteile/welle13-der-gegenzug-bau.md` |
+
+**Alle vier Builder haben abgegeben.** Die Abnahme der Aufsicht läuft am
+eingefrorenen Stand **`b098fc6` auf Hafen 8933**; die Reihenfolge steht unten
+unter „WAS ALS NÄCHSTES ZU TUN IST".
+
+> ### EIN HAFEN IST KEIN BAUM — gemeldet von DER GEGENZUG aus eigenem Schaden
+>
+> Sein erster Geometrievergleich lief gegen **Hafen 8931**, auf dem gar nicht
+> sein Baum lag, sondern der eingefrorene **Vorzustand der Aufsicht** — und
+> meldete prompt 48 von 48 Abweichungen. Er hat es selbst gefunden und prüft
+> seither jeden Messhafen mit `curl` und `md5sum`, bevor er eine Zahl
+> aufschreibt.
+>
+> **Die Regel, die daraus in den Lauf gehört:** wer misst, prüft **vor der
+> ersten Zahl**, welche Fassung der Hafen ausliefert. `messstand.sh` tut das für
+> seinen eigenen Hafen bereits („Fassung geprueft"); wer einen fremden Hafen
+> benutzt, hat diese Sicherung nicht. Es ist derselbe Fehler, der am 4. August
+> den blinden Kritiker DER PREIS eine Stunde gekostet hat — damals lieferte der
+> Messstand still den falschen Commit aus. **Zweimal derselbe Fehler in vier
+> Tagen heißt: die Sicherung gehört nicht in ein Skript, sondern in die
+> Gewohnheit.**
 
 > ### DIE GEGENMESSUNG DER AUFSICHT HAT ZWEI AUFLAGEN WIDERLEGT
 >
