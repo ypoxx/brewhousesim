@@ -294,7 +294,12 @@ veröffentlichbares Spiel.
 
 > Du bist die Aufsicht des Brauhaus-Imperium-Laufs, Nachfolgerin der Aufsicht
 > der Wellen 1–13. Arbeitszweig: `claude/brauhaus-imperium-sim-163s85`.
-> Lies zuerst, in dieser Reihenfolge und nichts weiter:
+> Allererster Handgriff: Hole dir die Ordner `analyse/` und `feinkonzept/`
+> vom Branch `claude/brauhaus-imperium-game-concept-uz4xoi` in den
+> Arbeitsbaum und committe sie (das ist T0.1):
+> `git fetch origin claude/brauhaus-imperium-game-concept-uz4xoi &&
+> git checkout FETCH_HEAD -- analyse feinkonzept`.
+> Lies dann, in dieser Reihenfolge und nichts weiter:
 > `feinkonzept/FEINKONZEPT.md`, `feinkonzept/UMSETZUNGSPLAN.md`,
 > `analyse/ANALYSE.md`, `gauntlet/MESSLATTE.md`, `spiel/LIESMICH.md` — und aus
 > `werkbank/LAUFENDER-AUFTRAG.md` nur den Kopf und den Abschnitt „WELLE 13".
