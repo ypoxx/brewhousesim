@@ -1,6 +1,6 @@
 {
- "stand": "2026-08-07T21:23:17+00:00",
- "phase": "Welle 12, die Abnahme der fünften Fassung läuft und sieht gut aus: 1350 fünfmal hintereinander dieselbe Prüfsumme, 1884 dreimal dieselbe. Es fehlen der sechste Lauf in 1350 sowie 1600 und 1970. Die fünfte Fassung ist die, die eine feine Unterscheidung trifft: der Rundenschluss zieht Wanduhrfristen vor, lässt aber jede Anforderung eines fertigen Bildaufbaus in Ruhe. Der Builder hat das selbst so begründet — ein Rahmen darf einem Stück sagen, wann etwas zu tun ist, nicht wie seine Messung zustande kommt; eine Anforderung des fertigen Bildaufbaus ist selbst eine Messstelle. Frühere Fassungen hatten beides angefasst und dabei 1600 und 1884 zerbrochen. Gefangen werden dadurch im ganzen Spiel zwei Stellen statt neun. Nebenher hat er ein schnelles Tor gebaut, das in vierzig Sekunden statt sieben Minuten sagt, welche der beiden Partien herauskommt — die Abnahme selbst läuft trotzdem über die vollen vierhundert Wochen, weil er selbst gemessen hat, dass verkürzte oder gedrosselte Läufe eine andere Gegend erkunden als das natürliche Zittern der Maschine.",
+ "stand": "2026-08-08T07:30:57+00:00",
+ "phase": "Welle 13 ist angesetzt: DIE ERSTE VOLLVERSION. Der blinde Spielkritiker hat vier Epochen mit echter Maus gespielt — 1032 Wochen, 3709 Klicks, null Seitenfehler — und den Satz hinterlassen: das Spiel wird an seinem Ende gut, und man kommt zu selten dorthin. Vier Stücke arbeiten seine dreizehn Auflagen ab. DER RAHMEN baut den Spielstand (heute setzt ein Neuladen die Partie auf Woche 1 zurück, ohne Warnung) und den Satz, der sagt, wohin das führt — die Wörter Ziel, gewinnen und überleben kommen auf dem ersten Schirm null Mal vor, bei 613 Textzeilen. DIE JAHRESTAFEL macht das einzige Brett mit echten Entscheidungen sichtbar: es lag in zehn Braujahren kein einziges Mal von selbst auf, und der Knopf dorthin behauptet in 71 von 71 abgelesenen Zuständen, es läge schon da. DIE WOCHE zerlegt die zwei Knöpfe, auf die 71 Prozent aller Klicks entfallen. DER GEGENZUG sorgt dafür, dass man sich einen leisten kann — 457 Züge des Gegners standen gegen 5 Züge des Spielers.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
   "Epochen": "4",
@@ -32,7 +32,8 @@
   "Latte 4": "257 Textknoten unter 12 px, 9 abgeschnittene Kaesten, 0 von 292 Knoepfen",
   "Spielstand": "es gibt keinen: kein Speichern, kein Laden, kein Fortsetzen",
   "Wiederholbarkeit": "1350 dreifach eine Pruefsumme, beim Builder sechsfach — die Bistabilitaet ist weg",
-  "Spielprobe": "13 Auflagen · 71 Prozent aller Klicks sind zwei Knoepfe · kein Spielstand · das Ende ist das beste Blatt"
+  "Spielprobe": "13 Auflagen · 71 Prozent aller Klicks sind zwei Knoepfe · kein Spielstand · das Ende ist das beste Blatt",
+  "Welle 13": "angesetzt am 8. August, vier Stücke, dreizehn Auflagen der Spielprobe"
  },
  "stuecke": [
   {
@@ -141,14 +142,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T20:35:51+00:00",
-   "text": "DIE FUHRE: ZUSTAENDIGKEIT 13 ist erfuellt, mit echten Mausklicks nachgewiesen. In jeder der vier Epochen wird innerhalb der ersten zwei Braujahre eine unwiderrufliche Festlegung wirklich anklickbar UND sie kostet etwas: E1 1351 'Vertrag statt Gunst' −160 Pf (Kasse 191→31) · E2 1601 'Das Reinheitsgebot annehmen' −810 fl (838→28) · E3 1884 'Beitritt zur Brauereikonvention' −9.200 M aktiv · E4 1970 'Rueckzug auf die eigene Braustaette' −81.000 DM aktiv. Damit ist auch der Befund aus STAND.md §7 beantwortet: 'ohne Ausgabe' ist nicht mehr die einzige erreichbare Festlegung."
-  },
-  {
-   "zeit": "2026-08-01T20:38:14+00:00",
-   "text": "DIE FUHRE: Das Ziel ist eine echte Wahl, nicht eine Buchungsvorschrift — gemessen in 1350 ueber sechs Braujahre, gleiche Saat, nur die Zahlungsweise getauscht. 'Bar auf die Hand': Michaelitag in 5/5 Jahren gedeckt, Kennzahl 10 bis 47, aber die Bestellung faellt auf 66 %. 'Aufs Kerbholz' (Vorgabe): 5/5 gedeckt, Kennzahl 0,8 bis 15,5. 'Auf Borg': Absatz plus 32 %, aber ab dem dritten Jahr reicht die Kasse zu Michaeli nicht mehr und die Kennzahl liegt in 36 % der Wochen unter 1x. Das steht so auf der Karte, bevor gewaehlt wird. Frage an die Aufsicht: soll die Latte aus ZUSTAENDIGKEIT 17 auch fuer die riskante Wahl gelten, oder darf sie der Preis dieser Wahl sein?"
-  },
   {
    "zeit": "2026-08-01T20:38:14+00:00",
    "text": "DIE FUHRE · Runde 4 · läuft — Eichung gebaut und gemessen: Michaelitag deckt das zweitbilligste Angebot in E1 5/5, E2 4/5 (1604), E3 5/5, E4 4/5 (1974). Offen: die zwei Fehljahre haengen an der Michaeli-Rechnung von DER PREIS (gemessen 22-44 % des Umsatzes gegen 5 % Anteil) und an KERN meldeZug(was,preis,art) fuer ZUSTAENDIGKEIT 18."
@@ -940,6 +933,14 @@
   {
    "zeit": "2026-08-07T13:34:31+00:00",
    "text": "Welle 12, die Abnahme der fünften Fassung läuft und sieht gut aus: 1350 fünfmal hintereinander dieselbe Prüfsumme, 1884 dreimal dieselbe. Es fehlen der sechste Lauf in 1350 sowie 1600 und 1970. Die fünfte Fassung ist die, die eine feine Unterscheidung trifft: der Rundenschluss zieht Wanduhrfristen vor, lässt aber jede Anforderung eines fertigen Bildaufbaus in Ruhe. Der Builder hat das selbst so begründet — ein Rahmen darf einem Stück sagen, wann etwas zu tun ist, nicht wie seine Messung zustande kommt; eine Anforderung des fertigen Bildaufbaus ist selbst eine Messstelle. Frühere Fassungen hatten beides angefasst und dabei 1600 und 1884 zerbrochen. Gefangen werden dadurch im ganzen Spiel zwei Stellen statt neun. Nebenher hat er ein schnelles Tor gebaut, das in vierzig Sekunden statt sieben Minuten sagt, welche der beiden Partien herauskommt — die Abnahme selbst läuft trotzdem über die vollen vierhundert Wochen, weil er selbst gemessen hat, dass verkürzte oder gedrosselte Läufe eine andere Gegend erkunden als das natürliche Zittern der Maschine."
+  },
+  {
+   "zeit": "2026-08-08T07:30:57+00:00",
+   "text": "Welle 13 ist angesetzt: DIE ERSTE VOLLVERSION. Der blinde Spielkritiker hat vier Epochen mit echter Maus gespielt — 1032 Wochen, 3709 Klicks, null Seitenfehler — und den Satz hinterlassen: das Spiel wird an seinem Ende gut, und man kommt zu selten dorthin. Vier Stücke arbeiten seine dreizehn Auflagen ab. DER RAHMEN baut den Spielstand (heute setzt ein Neuladen die Partie auf Woche 1 zurück, ohne Warnung) und den Satz, der sagt, wohin das führt — die Wörter Ziel, gewinnen und überleben kommen auf dem ersten Schirm null Mal vor, bei 613 Textzeilen. DIE JAHRESTAFEL macht das einzige Brett mit echten Entscheidungen sichtbar: es lag in zehn Braujahren kein einziges Mal von selbst auf, und der Knopf dorthin behauptet in 71 von 71 abgelesenen Zuständen, es läge schon da. DIE WOCHE zerlegt die zwei Knöpfe, auf die 71 Prozent aller Klicks entfallen. DER GEGENZUG sorgt dafür, dass man sich einen leisten kann — 457 Züge des Gegners standen gegen 5 Züge des Spielers."
+  },
+  {
+   "zeit": "2026-08-08T07:30:57+00:00",
+   "text": "Welle 13 angesetzt: DIE ERSTE VOLLVERSION — Spielstand, Zielsatz, Jahrestafel, Woche, Gegenzug. gauntlet/WELLE-13.md."
   }
  ]
 }
