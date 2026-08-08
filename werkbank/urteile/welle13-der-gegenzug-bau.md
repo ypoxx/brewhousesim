@@ -123,6 +123,25 @@ schlechter als einer, den man nicht bezahlen kann."* Also die Zahlen:
   Kasse, die in dieser Messreihe im Median bei 30 Pf steht. Er ist billig, aber
   nicht umsonst, und in den ärmsten Wochen ist er es nicht.
 
+**Und dann habe ich es einfach ausprobiert.** `gegenzug.mjs` kennt einen
+Schalter `KLICKE=1`: die Hand drückt dann in JEDER Woche den billigsten
+bezahlbaren Gegenzug, den sie findet. Hundert Wochen, Epoche 1, laufender
+Stand, gegen dieselbe Hand ohne Drücken:
+
+| | Hand rührt ihn nicht an | Hand drückt **31×** |
+|---|---|---|
+| Adressen, die **er** hält, Anfang → Ende | 3 → **6** | 3 → **5** |
+| Adressen, die **das Haus** hält, am Ende | 1 | 2 |
+| **seine Züge** in 100 Wochen | 43 | **68** |
+| seine Kasse, Anfang → Ende | 320 → 224 Pf | 320 → **106** Pf |
+| Wochen ohne bezahlbaren Gegenzug danach | 0 | **69** |
+
+**Wer ihn jede Woche schlägt, räumt ihn nicht ab — er wächst trotzdem von drei
+auf fünf Adressen und zieht 25-mal MEHR.** Was sich ändert: seine Kasse
+halbiert sich, das Haus holt eine Adresse zurück statt keiner — und die eigene
+Lade ist danach in 69 von 100 Wochen leer. Der Zug hat einen Preis, und man
+merkt ihn.
+
 ### 1.3 Der zweite Fund: ein Knopf, den die Maus nicht trifft
 
 Beim Messen fiel etwas auf, das kein Preisproblem ist. In **1971/3 bis
@@ -614,10 +633,12 @@ BRAUHAUS.gegner.zahl()        // dieselbe Zahl, die am Reiter steht
 1. Der Fassknopf hat **kein** `data-preis`, der Zukaufknopf hat eines. Das ist
    Absicht und in §1.1 begründet: der eine kostet wirklich kein Geld, der
    andere wirklich welches. Eine Null wäre bequem und unwahr gewesen.
-2. Der Gegner verliert durch beide **nichts** — sie vertagen ihn. Wer prüfen
-   will, ob er zu leicht abräumbar wurde, zählt `BRAUHAUS.gegner.zahl()` und
-   `BRAUHAUS.welt.adressen` nach hundert Wochen: die Zahl seiner Züge und die
-   Zahl seiner Bindungen sind dieselben wie vorher.
+2. Der Gegner verliert durch beide **keine Adresse** — sie vertagen ihn. Wer
+   prüfen will, ob er zu leicht abräumbar wurde, nimmt den Schalter:
+   `KLICKE=1 HAFEN=8924 node werkbank/schuss/gegenzug-w13/gegenzug.mjs 1 100`
+   drückt hundert Wochen lang jede Woche den billigsten Gegenzug. Ergebnis in
+   §1.2b: er hält am Ende **fünf** Adressen statt drei und zieht **68**-mal
+   statt 43.
 3. Die neun Restwochen in 1350 sind Wochen mit **3 bis 11 Pf in der Lade**.
    Dort ist kein Preis klein genug. Wer sie schließen will, muss nicht am
    Gegenzug drehen, sondern am Auftragsbuch — das ist A10/R8 und gehört DER

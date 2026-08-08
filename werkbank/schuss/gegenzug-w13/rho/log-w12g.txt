@@ -1,2 +1,12 @@
 E1@8934: 400 Wochen (1350–1363), Kasse 34–524, KENNZAHL roh 1.09–7.43× ueber 14 Jahre, Ziel 1× / Festlegung 1×, Amtszeit bis 8, Seitenfehler 0 
 E2@8934: 400 Wochen (1600–1613), Kasse 302–2851, KENNZAHL roh 0.93–7.68× ueber 14 Jahre, Ziel 1× / Festlegung 1×, Amtszeit bis 8, Seitenfehler 0 
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.waitForTimeout: Target page, context or browser has been closed
+    at ruhe (/home/user/brewhousesim/werkbank/schuss/rueckkopplung-r3/linie.mjs:49:15)
+    at klick (/home/user/brewhousesim/werkbank/schuss/rueckkopplung-r3/linie.mjs:126:9)
+    at async file:///home/user/brewhousesim/werkbank/schuss/rueckkopplung-r3/linie.mjs:248:3
+
+Node.js v22.22.2
