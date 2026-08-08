@@ -1681,7 +1681,9 @@
       var m = Z.mahnung[not.schluessel] || 0;
       return { art: 'mager', dringend: true,
         satz: not.name + ': ' + m + (m === 1 ? ' mageres Jahr' : ' magere Jahre') + ', seit '
-            + (Z.leer[not.schluessel] || 0) + ' Wochen kein Fass. Bei drei ist die Adresse weg.' };
+            + (Z.leer[not.schluessel] || 0)
+            + ((Z.leer[not.schluessel] || 0) === 1 ? ' Woche' : ' Wochen')
+            + ' kein Fass. Bei drei ist die Adresse weg.' };
     }
     if (keller().length && fassplaetzeFrei() <= 0) {
       return { art: 'voll', dringend: true,

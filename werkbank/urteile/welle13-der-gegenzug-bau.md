@@ -450,10 +450,41 @@ erfinden, der auf nichts zeigt.
 
 ### 4.4 Die zweite Messlatte — ρ
 
-`werkbank/schuss/rueckkopplung-r3/linie.mjs <epoche> 400` an beiden Bäumen,
-ausgewertet mit `auswerten.py`. Ablage: `werkbank/schuss/gegenzug-w13/rho/`.
+`werkbank/schuss/rueckkopplung-r3/linie.mjs <epoche> 400` an beiden
+eingefrorenen Bäumen, ausgewertet mit `rueckkopplung-r3/auswerten.py`. Ablage:
+`werkbank/schuss/gegenzug-w13/rho/` (`w12-e*.json` ohne, `w12g-e*.json` mit
+meiner Arbeit).
 
-*(Zahlen folgen.)*
+**Warum ich erwarte, dass sich nichts bewegt, und was das prüfbar macht:** die
+Hand, die ρ misst, drückt **keinen einzigen `gegner:*`-Knopf**. Sie klickt
+`fuhre:*`, `preis:*` und `weiter`; wenn ein Ziel verdeckt ist, schlägt sie
+Reiter auf, sonst nichts. Mein Stück kann die Partie dieser Hand also nur über
+zwei Wege verändern: über den **gemeldeten Zug** (`meldeZug` — unangetastet,
+§0) und über die **Geometrie** (ein Zeichen, das einen fremden Knopf deckt).
+Beides ist gemessen, nicht behauptet.
+
+*(Zahlen je Epoche folgen; Epoche 1 steht.)*
+
+**Epoche 1350 — 400 Wochen, Ziffer für Ziffer dieselbe Partie.**
+
+```
+vorher  E1@8933: 400 Wochen (1350–1363), Kasse 34–524, KENNZAHL roh 1.09–7.43×
+nachher E1@8934: 400 Wochen (1350–1363), Kasse 34–524, KENNZAHL roh 1.09–7.43×
+
+SHA-256 der ganzen Aufzeichnung (ohne das Feld `hafen`):
+  vorher  ca86822e306fef8d
+  nachher ca86822e306fef8d          →  GLEICH
+
+Kennzahlreihe, 14 Braujahre, beide Läufe:
+  5,89 · 1,43 · 3,42 · 2,41 · 5,95 · 1,75 · 7,43 · 5,83 · 4,43 · 1,57 ·
+  1,46 · 1,73 · 3,11 · 1,09
+```
+
+Nicht „ρ hat sich kaum bewegt", sondern: **die Aufzeichnung ist byteweise
+dieselbe** — dieselbe Kasse in jeder der 400 Wochen, derselbe Nennerzug,
+dieselbe Amtszeit, dieselbe Leiter. ρ, die Jahre unter 1× und die Spannweite
+können sich damit nicht unterscheiden, weil sie aus denselben Zahlen gerechnet
+werden. Seitenfehler: 0 in beiden.
 
 ### 4.5 Haushalt, Lesbarkeit, Seitenfehler
 
