@@ -753,7 +753,11 @@
      Wahrscheinlichkeit, die an der Abweichung haengt, die er selbst
      durchgewinkt hat. Bezahlt wird in BIER, nicht in Muenze.
      ---------------------------------------------------------------------- */
-  function fuelle(vorlage, x) {
+  /* fuelleRueck ersetzt {nr}, {ab} und {menge} in Ruecklaeufer-Texten.
+     War urspruenglich auch 'fuelle' genannt und wurde von der zweiten
+     Funktion (ab Zeile 1173) ueberlagert, deshalb wurden die Ruecklaeufer
+     von 1970 nie gerufen und zeigten {nr} und {ab} roh. */
+  function fuelleRueck(vorlage, x) {
     return String(vorlage || '')
       .replace('{nr}', x.nr).replace('{ab}', x.ab)
       .replace('{menge}', B.welt.menge(x.weg || x.menge));
@@ -769,7 +773,7 @@
       Z.rueck.splice(i, 1);
       etwas = true;
       if (!B.wuerfel.trifft(Math.min(0.7, (x.ab || 0) / 100 * 2.2))) {
-        buch(fuelle(r.durch, x));
+        buch(fuelleRueck(r.durch, x));
         continue;
       }
       x.weg = Math.max(1, Math.round(x.menge * 0.5));
@@ -777,7 +781,7 @@
       x.weg = raus.length || x.weg;
       Z.guete = B.grenze(Z.guete - 8, 0, 100);
       buch(r.wer + ': Charge ' + x.nr + ' zurück — ' + B.welt.menge(x.weg) + ' aus dem Lager');
-      B.welt.schreibe(fuelle(r.zurueck, x), 'sud');
+      B.welt.schreibe(fuelleRueck(r.zurueck, x), 'sud');
       B.welt.protokolliere({ wer: 'gegner',
         was: r.wer + ': Charge ' + x.nr + ' zurückgewiesen', preis: 0, menge: x.weg });
       B.ton.spiele('sud:rueckruf', { ort: 'keller' });
