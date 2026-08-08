@@ -197,9 +197,16 @@
    Auf der Entwurfsleinwand ohne Erklärkasten ändert sich dadurch nichts: die
    Reihen sind dort 539 und 335 px hoch und stoßen an keinen dieser Böden.
    ========================================================================== */
+/* Der Boden ist gemessen, nicht geraten: eine Angebotskarte trägt unter dem
+   rollenden Text drei Dinge, die NIE schrumpfen dürfen (Welle 7, Auflage 3) —
+   den Hinweis „Über der Kasse: es fehlen …", die Dauerzeile und den Knopf.
+   Bei 1366×768 sind das zusammen rund 150 px; eine Reihe von 137 px hat drei
+   von fünf Karten waagerecht abgeschnitten (gemessen, armes Michaeli 1351 und
+   1602). 330 × `--s` sind 164 px dort, 192 px bei 1600×900 und 330 px auf der
+   Entwurfsleinwand, wo die Reihe ohnehin 373 px hoch ist. */
 .pr-tafel .pr-mitte > .pr-reihe {
   flex: 1 1 0;
-  min-height: calc(var(--s) * 150);
+  min-height: calc(var(--s) * 330);
 }
 .pr-tafel .pr-mitte > .pr-reihe-fest {
   flex: 0 1 38%;

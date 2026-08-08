@@ -32,6 +32,7 @@ for (let i = 0; i < N; i++) {
   const plaene = await seite.evaluate(() =>
     [...document.querySelectorAll('[data-zug^="fuhre:plan:"]')]
       .filter(e => !e.disabled).map(e => e.getAttribute('data-zug')));
+  if (await klick('preis:tafel-zu')) continue;
   if (await klick('fuhre:sommer-zu')) continue;
   if (plaene.length) { await klick(plaene[0]); continue; }
   await klick('weiter');

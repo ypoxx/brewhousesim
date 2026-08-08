@@ -1,0 +1,40 @@
+{
+ "epoche": 3,
+ "url": "http://127.0.0.1:8934/spiel/?epoche=3&saat=1350&neu=1",
+ "gespielteWochen": 100,
+ "jahre": "1884–1887",
+ "lageMax": 0,
+ "seitenfehler": 0,
+ "fehler": [],
+ "ersterSchirm": {
+  "textzeilen": 633,
+  "zielZeilen": 1,
+  "zielBeispiel": [
+   "Bezahlt bei Übergabe, drei Prozent Nachlass."
+  ],
+  "knopf": "Michaelitafel schließen",
+  "tafelLiegt": false,
+  "speicherSchluessel": 0
+ },
+ "wochenMitTafel": 3,
+ "knopfDa": 100,
+ "luegtZu": 97,
+ "luegtAuf": 0,
+ "aufschriften": [
+  "Michaelitafel schließen"
+ ],
+ "jahresanfaenge": 4,
+ "davonMitTafel": 3,
+ "wochenOhneGegenzugEng": 0,
+ "wochenOhneGegenzugWeit": 0,
+ "wochenOhneGegenzugEngJe100": 0,
+ "wochenOhneGegenzugWeitJe100": 0,
+ "wochenMitZielwort": 100,
+ "wochenMitUebergabe": 0,
+ "davonNurAmReiter": 0,
+ "wochenOhneBezahlbares": 0,
+ "deckungUnter1": 0,
+ "kasseAnfang": 14250,
+ "kasseEnde": 7065,
+ "speicherSchluesselEnde": 0
+}

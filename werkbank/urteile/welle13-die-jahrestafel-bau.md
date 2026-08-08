@@ -20,12 +20,36 @@ Protokoll: `werkbank/schuss/tafel-w13/protokoll/vorher-e1.json`.
 | **Knopf `preis:tafel` log** (Aufschrift „schließen", keine Tafel da) | **33 von 308** |
 | davon: alle 30 Wochen des Ladejahres 1350 | 30 |
 | dazu je Jahreswechsel 1351/1, 1352/1, 1353/1 | 3 |
-| Tafel lag von selbst da | 3 (1351, 1352, 1353 — je in Woche 2) |
+| Tafel lag von selbst da | 3 — **1351, 1352, 1353**, also **jeder** erlebte Jahreswechsel |
 | **Ladejahr 1350: Tafel lag von selbst da** | **0 von 1** |
 | `BRAUHAUS.lage` · Seitenfehler | 0 · 0 |
 
-Das reproduziert den Befund des Kritikers und benennt die Ursache genauer, als
-sie bisher stand.
+### Und damit eine Berichtigung, die ich unabhängig bestätige
+
+Der Wellenbrief schrieb zu R7: *„in zehn Braujahren 1350 lag sie kein einziges
+Mal von selbst auf."* **Das ist am Vorzustand nicht wahr.** Meine erste Messung
+— geschrieben, bevor ich eine Zeile angefasst hatte — fand die Tafel an
+**jedem** Jahreswechsel liegend: 1351/1, 1352/1, 1353/1. Genau diese drei
+Jahreszahlen, an genau diesem Stand, hat die Aufsicht mit eigenem Gerät
+gemessen und den Wellenbrief daraufhin berichtigt
+(`werkbank/schuss/aufsicht/welle13-gegen/BEFUND-VORHER.md`). Zwei Geräte, zwei
+Hände, dieselbe Liste.
+
+**Was am Vorzustand wirklich fehlte, ist enger und teurer:**
+
+1. **Am Spielanfang (1350/1) liegt die Tafel nicht** — und genau dort behauptet
+   der Knopf, sie läge. R6 und R7 treffen sich an dieser einen Stelle. In den
+   30 Wochen des Ladejahres lag sie **null Mal**.
+2. **Von fünf Angeboten ist am Jahreswechsel eines bezahlbar.** Gemessen
+   1351/1, Kasse 48 Pf: fünf Karten mit Preisschild nebeneinander (33 · 59 ·
+   120 · 210 · 1.200 Pf), davon **ein** „Nehmen" bedienbar, vier abgeschaltet
+   mit *„Über der Kasse: es fehlen …"*. Das ist nicht die Sichtbarkeit,
+   sondern der Preis — Auflage A10, und dafür ist R8 da.
+3. **Die Reiter unter dem liegenden Blatt sind tot** (R10, von der Aufsicht
+   ziffernweise bestätigt: vier Klicks, greifbare Züge 25 → 26 → 26 → 26 → 26).
+   Deshalb bekommt ein sorgfältiger Spieler das beste Brett des Spiels nicht zu
+   Gesicht: nicht weil es fehlt, sondern weil alles ringsum tot ist, während es
+   liegt.
 
 ### Warum der Knopf log — die Kette, Zeile für Zeile
 

@@ -1,0 +1,114 @@
+[
+ {
+  "fenster": "1600x900",
+  "epoche": 1,
+  "bei": "1351/1",
+  "fehler": [],
+  "ab": [],
+  "karten": 5,
+  "reiheHoch": 191,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 2,
+  "bei": "1602/1",
+  "fehler": [],
+  "ab": [],
+  "karten": 5,
+  "reiheHoch": 191,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 3,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 4,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 1,
+  "bei": "1351/1",
+  "fehler": [],
+  "ab": [
+   {
+    "klasse": "pr-karte pr-zuteuer",
+    "richtung": "y",
+    "text": "Der Grutkasten unter Schloss59 Pfganz, sofortNach der Taxe des Jahres "
+   },
+   {
+    "klasse": "pr-karte pr-zuteuer",
+    "richtung": "y",
+    "text": "Der Ochsenstall am Tor120 Pfganz, sofortNach der Taxe des Jahres — der"
+   },
+   {
+    "klasse": "pr-karte pr-zuteuer",
+    "richtung": "y",
+    "text": "Ein Karrengaul statt des Ochsen210 Pfganz, sofortNach der Taxe des Jah"
+   }
+  ],
+  "karten": 5,
+  "reiheHoch": 137,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 2,
+  "bei": "1602/1",
+  "fehler": [],
+  "ab": [
+   {
+    "klasse": "pr-karte pr-zuteuer",
+    "richtung": "y",
+    "text": "Der Hopfenkontrakt mit dem Händler390 flganz, sofortNach dem Anschlag "
+   },
+   {
+    "klasse": "pr-karte pr-zuteuer",
+    "richtung": "y",
+    "text": "Der Hopfengarten am Südhang680 flvon 1.500 fl · dann 3 × 270 flNach de"
+   },
+   {
+    "klasse": "pr-karte pr-zuteuer",
+    "richtung": "y",
+    "text": "Das Braurecht des Klosters Obernberg9.000 flganz, sofortNach dem Ansch"
+   }
+  ],
+  "karten": 5,
+  "reiheHoch": 137,
+  "nimmGanz": 5,
+  "nimmFrei": 1,
+  "raus": 0
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 3,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 4,
+  "bei": null,
+  "fehler": [],
+  "ab": [],
+  "fehlt": true
+ }
+]

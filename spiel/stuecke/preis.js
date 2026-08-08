@@ -2946,9 +2946,10 @@
     var weg = t.classList.contains('stadt-zugeklappt')
            || t.classList.contains('stadt-verdeckt');
     Z.geklemmt = weg;
-    /* Sie lag wirklich vor dem Spieler. Das ist die Zahl, die R7 abnimmt —
-       und der Grund, aus dem die Tafel danach nicht mehr von selbst
-       wiederkommt (siehe `michaeliHolen`). */
+    /* Sie lag wirklich vor dem Spieler. Nur zum Nachzaehlen —
+       `BRAUHAUS.preis.lage().gesehen` sagt dem Kritiker je Braujahr, ob die
+       Tafel offen dalag. Als Riegel taugt es nicht (Begruendung bei
+       `darfZurueck`). */
     if (!weg) Z.gesehen[Z.tafelJahr] = true;
   }
 

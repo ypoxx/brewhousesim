@@ -4146,6 +4146,24 @@
     B.sende('zeichne', { grund: 'fuhre-reiter-blatt-zu' });
   }
 
+  /* „ANFANGEN" MUSS DIE WOCHENKARTE HOLEN.
+
+     Die Karte tritt zurueck, solange der Anschlag des Rahmens liegt (siehe
+     zeichneWoche). Der Knopf „Anfangen" raeumt den Anschlag weg, sendet dabei
+     aber kein `zeichne` — er muss auch nicht, denn es ist SEIN Blatt und
+     nicht meins. Also sieht dieses Stueck selbst nach, und zwar in der
+     BLASENPHASE: dann ist der Horcher des Kerns am Knopf schon gelaufen und
+     das Fach wirklich fort. Ohne diese vier Zeilen erschiene die Karte erst
+     beim naechsten Zeichnen — gemessen: nach „Anfangen" stand kein einziger
+     `fuhre:plan:*` im Bild, bis WEITER gedrueckt wurde. */
+  function anfangHorcher(ereignis) {
+    var t = ereignis.target && ereignis.target.closest
+      ? ereignis.target.closest('[data-zug="kern:anfangen"]') : null;
+    if (!t) return;
+    if (document.getElementById('fach-kopf-kern-start')) return;
+    B.sende('zeichne', { grund: 'fuhre-anschlag-weg' });
+  }
+
   /* Die Tafel verschwindet, der Klick laeuft weiter. Neu gezeichnet wird
      hier NICHT: der Kern schaltet gleich die Woche und zeichnet dabei
      ohnehin alles neu. Nur wenn die Woche wider Erwarten stehen bleibt —
@@ -5117,6 +5135,8 @@
       /* Fangphase, damit dieses Stueck sein Blatt weggenommen hat, bevor die
          Platzordnung der STADT ihren eigenen Klick verarbeitet. R14. */
       document.addEventListener('click', reiterHorcher, true);
+      /* Blasenphase: NACH dem Horcher des Kerns am Knopf selbst. */
+      document.addEventListener('click', anfangHorcher, false);
       /* DIE VERSIEGELUNG, Schloss 1 und 2. Der Horcher steht VOR
          weiterHorcher in der Wirkung: er laeuft spaeter, greift aber nur
          nach dem Ende, und 'weiter' ist dann ohnehin freigegeben. */
