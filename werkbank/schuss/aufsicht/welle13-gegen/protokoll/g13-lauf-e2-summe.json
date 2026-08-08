@@ -1,0 +1,49 @@
+{
+ "epoche": 2,
+ "url": "http://127.0.0.1:8924/spiel/?epoche=2&saat=1350&neu=1",
+ "gespielteWochen": 100,
+ "jahre": "1600–1603",
+ "lageMax": 0,
+ "seitenfehler": 0,
+ "fehler": [],
+ "ersterSchirm": {
+  "textzeilen": 434,
+  "zielZeilen": 5,
+  "zielBeispiel": [
+   "Auf Ziel bis Michaeli",
+   "Auf langes Ziel, mit Nachlass",
+   "Ein Jahr Ziel und ein Nachlass obendrauf, dafür nimmt er doppelt.",
+   "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)",
+   "DAS ZIEL —"
+  ],
+  "knopf": "Michaelitafel 1600 · 5 Angebote — heute ist Michaeli",
+  "tafelLiegt": false,
+  "speicherSchluessel": 0
+ },
+ "wochenMitTafel": 4,
+ "knopfDa": 100,
+ "luegtZu": 0,
+ "luegtAuf": 0,
+ "aufschriften": [
+  "Michaelitafel 1600 · 5 Angebote — heute ist Michaeli",
+  "Michaelitafel schließen",
+  "Michaelitafel 1600 · 5 Angebote",
+  "Michaelitafel 1601 · 5 Angebote",
+  "Michaelitafel 1602 · 5 Angebote",
+  "Michaelitafel 1603 · 5 Angebote"
+ ],
+ "jahresanfaenge": 5,
+ "davonMitTafel": 4,
+ "wochenOhneGegenzugEng": 0,
+ "wochenOhneGegenzugWeit": 0,
+ "wochenOhneGegenzugEngJe100": 0,
+ "wochenOhneGegenzugWeitJe100": 0,
+ "wochenMitZielwort": 100,
+ "wochenMitUebergabe": 0,
+ "davonNurAmReiter": 0,
+ "wochenOhneBezahlbares": 0,
+ "deckungUnter1": 38,
+ "kasseAnfang": 640,
+ "kasseEnde": 264,
+ "speicherSchluesselEnde": 0
+}

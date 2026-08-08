@@ -417,9 +417,22 @@ dem Zeiger einen anderen Knopf traf.
 |---|---|---|
 | abgeschnittene Kästen, 16 Blätter | 0 | **0** |
 | **Wortbrüche, 16 Blätter** | **51** | **0** |
-| armes Michaeli 1600×900 (E1 1351/1 · E2 1602/1) | 0 · 0 | **0 · 0** |
-| armes Michaeli 1366×768 (E1 1351/1 · E2 1602/1) | 3 · 3 | **0 · 0** |
-| Tafel läuft über den eigenen Rand | 136 / 197 px | **0 px** |
+
+Und der zweite Durchgang, am **armen Michaeli** — dem Tag, an dem die
+Erklärkästen dastehen und die Spalte am vollsten ist:
+
+| | 1600×900 | 1366×768 |
+|---|---|---|
+| E1, Michaeli 1351 | 0 abgeschnitten · Reihe 215 px · 1/5 „Nehmen" frei · 0 unter dem Rand | 0 · 184 px · 1/5 · 0 |
+| E2, Michaeli 1602 | 0 abgeschnitten · Reihe 215 px · 1/5 „Nehmen" frei · 0 unter dem Rand | 0 · 184 px · 1/5 · 0 |
+| E3 · E4 | in 160 Wochen kein Michaeli erreicht, an dem die Kasse für nichts reicht | dito |
+
+*(Die „3 · 3 abgeschnittenen Kästen" und die 136/197 px, mit denen die Tafel
+über ihren eigenen Rand lief, sind der Zwischenstand mit meinem eigenen Fehler
+aus §6 — am eingefrorenen Vorzustand gab es die Erklärkästen noch nicht.
+Dass E3 und E4 diesen Tag nicht erreichen, deckt sich mit dem Urteil: dort
+war nur in 7 von 308 bzw. 70 von 128 Wochen nichts bezahlbar, und 1970 endet
+früh.)*
 
 `werkbank/schuss/aufsicht/lesbarkeit.mjs`, vier Epochen:
 **1600×900 → 2 Überläufe, keiner aus `pr:`** (beide `nm:`);

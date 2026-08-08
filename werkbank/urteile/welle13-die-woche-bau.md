@@ -362,17 +362,36 @@ liegen (Begründung im Quelltext).
 | Wochenkarte im Kasten | **3,21 % der Bühne** in allen vier Epochen (Grenze der Platzordnung 3,5 %) |
 | Wochenkarte **gemalt** (nur die Chips, kein Papier) | **0,74 % (1350) bis 1,57 % (1970)** der Bühne |
 | Wochenkarte je `stadt-zugeklappt` oder `stadt-verdeckt` | **nie**, in keiner Epoche |
+| abgeschnittener Text auf der Wochenkarte (je 24 Wochen, alle vier Epochen, 1366×768 · 1600×900 · 2752×1536) | **kein einziger** |
+| Chip, der über die eigene Kastenkante ragt | keiner — bei 1366×768 trug die Karte anfangs vier Chips und der oberste stand 24 px darüber; sie trägt dort jetzt drei (`B.buehne.masse().hoehe < 820`) |
 | Schlussblatt, „nächster Zug"-Zeile, `fuhre:wie-vorige`, `fuhre:fuellen`, `fuhre:leeren`, `fuhre:abschicken` | unverändert, kein Schlüssel umbenannt |
 | `Math.random()` in `fuhre*.js` | **1 Treffer, unverändert und vor dieser Welle da** — `neuesSpiel()`, der Knopf „Von vorn anfangen — dieselbe Stadt, andere Würfel". Er würfelt die **neue** Saat für die **nächste** Partie und wechselt dabei die Adresse; er kann keine laufende Messung stören. Von mir kam kein einziger Zufallsaufruf dazu. |
 | Wanduhrfristen (`setTimeout`) neu eingebaut | **0** — der Reiterhorcher und der Anschlaghorcher senden `zeichne` in derselben Runde |
 
-**Zur zweiten Messlatte (ρ) in 1600:** das Messgerät `rueckkopplung-r3/linie.mjs`
-klickt `fuhre:wie-vorige` und `fuhre:abschicken` **namentlich** und fasst weder
-`fuhre:plan:*` noch `fuhre:sprung` an. Beide Schlüssel stehen unverändert an
-unveränderter Stelle auf dem Brett DER WAGEN, und an **Preisen, Erträgen,
-Fristen, Sudmengen, Wagengrößen und Fassplätzen wurde nichts geändert** — die
-Fuhrpläne verteilen nur anders, was ohnehin auf den Wagen passt. Die Partie,
-die dieses Gerät spielt, ist deshalb Zug für Zug dieselbe wie vorher.
+### Die zweite Messlatte in 1600 — nachgemessen, nicht behauptet
+
+**1600 hat keine Reserve** (ρ +0,538 gegen eine Grenze von 0,700, Abstand
+0,162), und die Aufsicht verlangt, dass jede Änderung an Preisen, Erträgen
+oder Fristen 1600 zuerst misst. Ich habe an **Preisen, Erträgen, Fristen,
+Sudmengen, Wagengrößen und Fassplätzen nichts geändert** — die Fuhrpläne
+verteilen nur anders, was ohnehin auf den Wagen passt. Gemessen mit dem
+vorhandenen Gerät, 400 Wochen, Saat 1350:
+
+```
+werkbank/schuss/rueckkopplung-r3/linie.mjs 2 400
+→ E2: 400 Wochen (1600–1613), Kasse 302–2851, KENNZAHL roh 0,93–7,68×,
+     Ziel 1× / Festlegung 1×, Seitenfehler 0
+werkbank/schuss/rueckkopplung-r3/auswerten.py
+→ EPOCHE 1600 · 14 J · Spearman +0,538 · Pearson +0,491 · <1× 1/14
+→ LATTE |rho| < 0,700 nach Spearman: BESTEHT
+```
+
+**+0,538 und 1 von 14 Jahren unter 1× — Ziffer für Ziffer der Stand nach
+Welle 12.** Das ist kein Zufall, sondern Bauart: `linie.mjs` klickt
+`fuhre:wie-vorige` und `fuhre:abschicken` **namentlich** und fasst weder
+`fuhre:plan:*` noch `fuhre:sprung` an; beide Schlüssel stehen unverändert an
+unveränderter Stelle auf dem Brett DER WAGEN. Die Partie, die dieses Gerät
+spielt, ist Zug für Zug dieselbe wie vorher.
 
 **Der Flächenhaushalt (`haushalt.pruefe()`) ist heute für sechs von sieben
 Stücken über dem Budget** — 1350 nach 14 Wochen: `stadt 247.002/40.000`,

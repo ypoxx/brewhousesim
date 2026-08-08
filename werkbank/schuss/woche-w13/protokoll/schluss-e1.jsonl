@@ -1,0 +1,423 @@
+{"t":2.6,"was":"laden","url":"http://127.0.0.1:8923/spiel/?epoche=1&saat=1350&neu=1","fenster":"1600x900"}
+{"t":3.2,"was":"erster-schirmtext","n":419,"zielWorte":["Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)","DAS ZIEL —"],"zielWorteN":2}
+{"t":5.1,"was":"klick","nr":1,"zug":"kern:anfangen","grund":"Anschlag gelesen","knopf":{"text":"Anfangen","preis":null,"w":64,"h":24},"vor":{"jahr":1350,"woche":1,"kasse":112},"nach":{"jahr":1350,"woche":1,"kasse":112},"dkasse":0,"lage":0}
+{"t":5.2,"was":"woche","n":1,"jahr":1350,"woche":1,"kasse":112,"greifbar":32,"mitPreis":8,"deckung":5.894736842105263,"nenner":"Zuvorkommen Klosterschenke Obernberg","ziel":null,"uebergabeImText":1}
+{"t":6.7,"was":"klick","nr":2,"zug":"preis:nimm:dach","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −33 Pf","preis":-33,"w":122,"h":25},"vor":{"jahr":1350,"woche":1,"kasse":112},"nach":{"jahr":1350,"woche":1,"kasse":79},"dkasse":-33,"lage":0}
+{"t":7.5,"was":"klick","nr":3,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":158,"h":56},"vor":{"jahr":1350,"woche":1,"kasse":79},"nach":{"jahr":1350,"woche":1,"kasse":79},"dkasse":0,"lage":0}
+{"t":8.3,"was":"klick","nr":4,"zug":"gegner:zuvorkommen:obernberg","grund":"dem Gegner zuvorkommen","knopf":{"text":"wirbt · noch 4 Wo. zuvorkommen 19 Pf","preis":-19,"w":135,"h":28},"vor":{"jahr":1350,"woche":1,"kasse":79},"nach":{"jahr":1350,"woche":1,"kasse":60},"dkasse":-19,"lage":0}
+{"t":8.3,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":31,"text":"Fahren: die mageren Häuser · 4 Fass +31 Pf"}]}
+{"t":9,"was":"klick","nr":5,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 4 Fass +31 Pf","preis":31,"w":247,"h":24},"vor":{"jahr":1350,"woche":1,"kasse":60},"nach":{"jahr":1350,"woche":2,"kasse":60},"dkasse":0,"lage":0}
+{"t":9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":9.1,"was":"woche","n":2,"jahr":1350,"woche":2,"kasse":60,"greifbar":41,"mitPreis":8,"deckung":1.0714285714285714,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":9.2,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":33,"text":"Fahren: die mageren Häuser · 4 Fass +33 Pf"}]}
+{"t":10.3,"was":"klick","nr":6,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1350,"woche":2,"kasse":60},"nach":{"jahr":1350,"woche":8,"kasse":58},"dkasse":-2,"lage":0}
+{"t":10.3,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":10.3,"was":"woche","n":3,"jahr":1350,"woche":8,"kasse":58,"greifbar":46,"mitPreis":12,"deckung":1.7058823529411764,"nenner":"Zuvorkommen Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":10.4,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":30,"text":"Fahren: die mageren Häuser · 4 Fass +30 Pf"}]}
+{"t":11.5,"was":"klick","nr":7,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1350,"woche":8,"kasse":58},"nach":{"jahr":1350,"woche":14,"kasse":55},"dkasse":-3,"lage":0}
+{"t":11.5,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":11.5,"was":"woche","n":4,"jahr":1350,"woche":14,"kasse":55,"greifbar":54,"mitPreis":18,"deckung":1.1458333333333333,"nenner":"Ablösung Pfarrschenke St. Michael","ziel":null,"uebergabeImText":1}
+{"t":11.7,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":30,"text":"Fahren: die mageren Häuser · 4 Fass +30 Pf"}]}
+{"t":12.7,"was":"klick","nr":8,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1350,"woche":14,"kasse":55},"nach":{"jahr":1350,"woche":20,"kasse":57},"dkasse":2,"lage":0}
+{"t":12.8,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":12.8,"was":"woche","n":5,"jahr":1350,"woche":20,"kasse":57,"greifbar":52,"mitPreis":17,"deckung":1.0178571428571428,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":13.5,"was":"klick","nr":9,"zug":"name:anschlag:umtrunk","grund":"etwas fuer den Namen","knopf":{"text":"Umtrunk beim Wirt −9 Pf − 1 Fass","preis":-9,"w":164,"h":31},"vor":{"jahr":1350,"woche":20,"kasse":57},"nach":{"jahr":1350,"woche":20,"kasse":48},"dkasse":-9,"lage":0}
+{"t":13.6,"was":"wahl-der-woche","plaene":0,"sprung":true,"liste":[]}
+{"t":14.5,"was":"klick","nr":10,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1350,"woche":20,"kasse":48},"nach":{"jahr":1350,"woche":26,"kasse":42},"dkasse":-6,"lage":0}
+{"t":14.6,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":14.7,"was":"woche","n":6,"jahr":1350,"woche":26,"kasse":42,"greifbar":49,"mitPreis":14,"deckung":0.75,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":14.7,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":2,"text":"Fahren: die mageren Häuser · 1 Fass +2 Pf"}]}
+{"t":15.7,"was":"klick","nr":11,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 4 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1350,"woche":26,"kasse":42},"nach":{"jahr":1350,"woche":30,"kasse":38},"dkasse":-4,"lage":0}
+{"t":15.7,"was":"sprung","wochen":4,"text":"Weiter wie zuletzt · bis zu 4 Wochen"}
+{"t":15.8,"was":"woche","n":7,"jahr":1350,"woche":30,"kasse":38,"greifbar":48,"mitPreis":14,"deckung":0.6785714285714286,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":15.9,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":17.3,"was":"klick","nr":12,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1350,"woche":30,"kasse":38},"nach":{"jahr":1351,"woche":1,"kasse":74},"dkasse":36,"lage":0}
+{"t":17.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":17.8,"was":"woche","n":8,"jahr":1351,"woche":1,"kasse":74,"greifbar":28,"mitPreis":5,"deckung":1.3214285714285714,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":18.1,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":18.9,"was":"klick","nr":13,"zug":"preis:nimm:fasskauf","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −44 Pf","preis":-44,"w":122,"h":25},"vor":{"jahr":1351,"woche":1,"kasse":74},"nach":{"jahr":1351,"woche":1,"kasse":30},"dkasse":-44,"lage":0}
+{"t":19.7,"was":"klick","nr":14,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":151,"h":56},"vor":{"jahr":1351,"woche":1,"kasse":30},"nach":{"jahr":1351,"woche":1,"kasse":30},"dkasse":0,"lage":0}
+{"t":19.8,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":19.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":20.7,"was":"klick","nr":15,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1351,"woche":1,"kasse":30},"nach":{"jahr":1351,"woche":2,"kasse":29},"dkasse":-1,"lage":0}
+{"t":20.7,"was":"woche","n":9,"jahr":1351,"woche":2,"kasse":29,"greifbar":53,"mitPreis":17,"deckung":0.5178571428571429,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":20.8,"was":"wahl-der-woche","plaene":4,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 3 Fass +4 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"},{"zug":"fuhre:plan:durst","preis":4,"text":"Fahren: nach Durst · 3 Fass +4 Pf"},{"zug":"fuhre:plan:nah","preis":5,"text":"Fahren: kurze Wege · 3 Fass +5 Pf"}]}
+{"t":21.5,"was":"klick","nr":16,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1351,"woche":2,"kasse":29},"nach":{"jahr":1351,"woche":3,"kasse":25},"dkasse":-4,"lage":0}
+{"t":21.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":21.6,"was":"woche","n":10,"jahr":1351,"woche":3,"kasse":25,"greifbar":51,"mitPreis":14,"deckung":0.44642857142857145,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":21.7,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 3 Fass +4 Pf"}]}
+{"t":22.5,"was":"klick","nr":17,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +4 Pf","preis":4,"w":240,"h":24},"vor":{"jahr":1351,"woche":3,"kasse":25},"nach":{"jahr":1351,"woche":4,"kasse":21},"dkasse":-4,"lage":0}
+{"t":22.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":22.6,"was":"woche","n":11,"jahr":1351,"woche":4,"kasse":21,"greifbar":50,"mitPreis":13,"deckung":0.375,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":22.6,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":23.6,"was":"klick","nr":18,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1351,"woche":4,"kasse":21},"nach":{"jahr":1351,"woche":10,"kasse":3},"dkasse":-18,"lage":0}
+{"t":23.6,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":23.7,"was":"woche","n":12,"jahr":1351,"woche":10,"kasse":3,"greifbar":43,"mitPreis":6,"deckung":0.039473684210526314,"nenner":"Ablösung Brückenwirt","ziel":null,"uebergabeImText":1}
+{"t":23.8,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":24.8,"was":"klick","nr":19,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1351,"woche":10,"kasse":3},"nach":{"jahr":1351,"woche":16,"kasse":0},"dkasse":-3,"lage":0}
+{"t":24.8,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":24.9,"was":"woche","n":13,"jahr":1351,"woche":16,"kasse":0,"greifbar":44,"mitPreis":7,"deckung":0,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":25,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":26,"was":"klick","nr":20,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1351,"woche":16,"kasse":0},"nach":{"jahr":1351,"woche":22,"kasse":0},"dkasse":0,"lage":0}
+{"t":26,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":26.1,"was":"woche","n":14,"jahr":1351,"woche":22,"kasse":0,"greifbar":45,"mitPreis":8,"deckung":0,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":26.2,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":27.2,"was":"klick","nr":21,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1351,"woche":22,"kasse":0},"nach":{"jahr":1351,"woche":28,"kasse":0},"dkasse":0,"lage":0}
+{"t":27.2,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":27.3,"was":"woche","n":15,"jahr":1351,"woche":28,"kasse":0,"greifbar":41,"mitPreis":5,"deckung":0,"nenner":"Ablösung Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":27.4,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":28.2,"was":"klick","nr":22,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 2 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1351,"woche":28,"kasse":0},"nach":{"jahr":1351,"woche":30,"kasse":0},"dkasse":0,"lage":0}
+{"t":28.2,"was":"sprung","wochen":2,"text":"Weiter wie zuletzt · bis zu 2 Wochen"}
+{"t":28.3,"was":"woche","n":16,"jahr":1351,"woche":30,"kasse":0,"greifbar":40,"mitPreis":5,"deckung":0,"nenner":"Ablösung Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":28.4,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":30,"was":"klick","nr":23,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf","preis":4,"w":240,"h":24},"vor":{"jahr":1351,"woche":30,"kasse":0},"nach":{"jahr":1352,"woche":1,"kasse":76},"dkasse":76,"lage":0}
+{"t":30.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":30.7,"was":"woche","n":17,"jahr":1352,"woche":1,"kasse":76,"greifbar":26,"mitPreis":2,"deckung":0.76,"nenner":"Ablösung Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":31.5,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":32.5,"was":"klick","nr":24,"zug":"preis:nimm:schild","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −51 Pf","preis":-51,"w":122,"h":25},"vor":{"jahr":1352,"woche":1,"kasse":76},"nach":{"jahr":1352,"woche":1,"kasse":25},"dkasse":-51,"lage":0}
+{"t":33.3,"was":"klick","nr":25,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":158,"h":56},"vor":{"jahr":1352,"woche":1,"kasse":25},"nach":{"jahr":1352,"woche":1,"kasse":25},"dkasse":0,"lage":0}
+{"t":33.4,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":33.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":34.2,"was":"klick","nr":26,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1352,"woche":1,"kasse":25},"nach":{"jahr":1352,"woche":2,"kasse":24},"dkasse":-1,"lage":0}
+{"t":34.3,"was":"woche","n":18,"jahr":1352,"woche":2,"kasse":24,"greifbar":46,"mitPreis":11,"deckung":0.24,"nenner":"Ablösung Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":34.4,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":3,"text":"Fahren: die mageren Häuser · 2 Fass +3 Pf"}]}
+{"t":35.1,"was":"klick","nr":27,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 2 Fass +3 Pf","preis":3,"w":240,"h":24},"vor":{"jahr":1352,"woche":2,"kasse":24},"nach":{"jahr":1352,"woche":3,"kasse":21},"dkasse":-3,"lage":0}
+{"t":35.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":35.2,"was":"woche","n":19,"jahr":1352,"woche":3,"kasse":21,"greifbar":47,"mitPreis":11,"deckung":0.21,"nenner":"Ablösung Zum Goldenen Ochsen","ziel":null,"uebergabeImText":1}
+{"t":35.3,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":1,"text":"Fahren: die mageren Häuser · 1 Fass +1 Pf"}]}
+{"t":36.3,"was":"klick","nr":28,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1352,"woche":3,"kasse":21},"nach":{"jahr":1352,"woche":9,"kasse":14},"dkasse":-7,"lage":0}
+{"t":36.4,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":36.4,"was":"woche","n":20,"jahr":1352,"woche":9,"kasse":14,"greifbar":52,"mitPreis":15,"deckung":0.4666666666666667,"nenner":"Zuvorkommen Fährhaus am Fluss","ziel":null,"uebergabeImText":1}
+{"t":36.6,"was":"wahl-der-woche","plaene":3,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":1,"text":"Fahren: die mageren Häuser · 1 Fass +1 Pf"},{"zug":"fuhre:plan:durst","preis":1,"text":"Fahren: nach Durst · 1 Fass +1 Pf"},{"zug":"fuhre:plan:rechnung","preis":1,"text":"Fahren: nach Rechnung · 1 Fass +1 Pf"}]}
+{"t":37.8,"was":"klick","nr":29,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1352,"woche":9,"kasse":14},"nach":{"jahr":1352,"woche":15,"kasse":8},"dkasse":-6,"lage":0}
+{"t":37.8,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":37.8,"was":"woche","n":21,"jahr":1352,"woche":15,"kasse":8,"greifbar":43,"mitPreis":6,"deckung":0.2962962962962963,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":38,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":39,"was":"klick","nr":30,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1352,"woche":15,"kasse":8},"nach":{"jahr":1352,"woche":21,"kasse":2},"dkasse":-6,"lage":0}
+{"t":39,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":39.1,"was":"woche","n":22,"jahr":1352,"woche":21,"kasse":2,"greifbar":44,"mitPreis":6,"deckung":0.07692307692307693,"nenner":"Zuvorkommen Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":39.2,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":40.3,"was":"klick","nr":31,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1352,"woche":21,"kasse":2},"nach":{"jahr":1352,"woche":27,"kasse":0},"dkasse":-2,"lage":0}
+{"t":40.3,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":40.4,"was":"woche","n":23,"jahr":1352,"woche":27,"kasse":0,"greifbar":42,"mitPreis":5,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":40.5,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":41.4,"was":"klick","nr":32,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 3 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1352,"woche":27,"kasse":0},"nach":{"jahr":1352,"woche":30,"kasse":0},"dkasse":0,"lage":0}
+{"t":41.4,"was":"sprung","wochen":3,"text":"Weiter wie zuletzt · bis zu 3 Wochen"}
+{"t":41.5,"was":"woche","n":24,"jahr":1352,"woche":30,"kasse":0,"greifbar":41,"mitPreis":5,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":41.6,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":43,"was":"klick","nr":33,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1352,"woche":30,"kasse":0},"nach":{"jahr":1353,"woche":1,"kasse":48},"dkasse":48,"lage":0}
+{"t":43.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":43.4,"was":"woche","n":25,"jahr":1353,"woche":1,"kasse":48,"greifbar":26,"mitPreis":3,"deckung":1.1428571428571428,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":43.6,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":44.5,"was":"klick","nr":34,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":158,"h":56},"vor":{"jahr":1353,"woche":1,"kasse":48},"nach":{"jahr":1353,"woche":1,"kasse":48},"dkasse":0,"lage":0}
+{"t":44.6,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":44.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":45.4,"was":"klick","nr":35,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1353,"woche":1,"kasse":48},"nach":{"jahr":1353,"woche":2,"kasse":47},"dkasse":-1,"lage":0}
+{"t":45.4,"was":"woche","n":26,"jahr":1353,"woche":2,"kasse":47,"greifbar":48,"mitPreis":13,"deckung":1.119047619047619,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":45.5,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":46.2,"was":"klick","nr":36,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1353,"woche":2,"kasse":47},"nach":{"jahr":1353,"woche":3,"kasse":43},"dkasse":-4,"lage":0}
+{"t":46.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":46.3,"was":"woche","n":27,"jahr":1353,"woche":3,"kasse":43,"greifbar":49,"mitPreis":13,"deckung":1.0238095238095237,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":46.4,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":47.3,"was":"klick","nr":37,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1353,"woche":3,"kasse":43},"nach":{"jahr":1353,"woche":9,"kasse":24},"dkasse":-19,"lage":0}
+{"t":47.3,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":47.4,"was":"woche","n":28,"jahr":1353,"woche":9,"kasse":24,"greifbar":48,"mitPreis":11,"deckung":0.5714285714285714,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":47.5,"was":"wahl-der-woche","plaene":2,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":48.6,"was":"klick","nr":38,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1353,"woche":9,"kasse":24},"nach":{"jahr":1353,"woche":15,"kasse":6},"dkasse":-18,"lage":0}
+{"t":48.6,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":48.6,"was":"woche","n":29,"jahr":1353,"woche":15,"kasse":6,"greifbar":44,"mitPreis":6,"deckung":0.2222222222222222,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":48.7,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":49.7,"was":"klick","nr":39,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1353,"woche":15,"kasse":6},"nach":{"jahr":1353,"woche":21,"kasse":0},"dkasse":-6,"lage":0}
+{"t":49.7,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":49.7,"was":"woche","n":30,"jahr":1353,"woche":21,"kasse":0,"greifbar":42,"mitPreis":5,"deckung":0,"nenner":"Ablösung Schenke am Tor","ziel":null,"uebergabeImText":1}
+{"t":49.8,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":50.7,"was":"klick","nr":40,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 6 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1353,"woche":21,"kasse":0},"nach":{"jahr":1353,"woche":27,"kasse":0},"dkasse":0,"lage":0}
+{"t":50.8,"was":"sprung","wochen":6,"text":"Weiter wie zuletzt · bis zu 6 Wochen"}
+{"t":50.8,"was":"woche","n":31,"jahr":1353,"woche":27,"kasse":0,"greifbar":43,"mitPreis":6,"deckung":0,"nenner":"Zuvorkommen Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":50.9,"was":"wahl-der-woche","plaene":1,"sprung":true,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":51.8,"was":"klick","nr":41,"zug":"fuhre:sprung","grund":"ruhige Wochen zusammenfassen","knopf":{"text":"Weiter wie zuletzt · bis zu 3 Wochen","preis":null,"w":188,"h":24},"vor":{"jahr":1353,"woche":27,"kasse":0},"nach":{"jahr":1353,"woche":30,"kasse":0},"dkasse":0,"lage":0}
+{"t":51.8,"was":"sprung","wochen":3,"text":"Weiter wie zuletzt · bis zu 3 Wochen"}
+{"t":51.9,"was":"woche","n":32,"jahr":1353,"woche":30,"kasse":0,"greifbar":42,"mitPreis":6,"deckung":0,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":52,"was":"wahl-der-woche","plaene":1,"sprung":false,"liste":[{"zug":"fuhre:plan:mager","preis":4,"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf"}]}
+{"t":53.4,"was":"klick","nr":42,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 2 Fass +4 Pf","preis":4,"w":240,"h":24},"vor":{"jahr":1353,"woche":30,"kasse":0},"nach":{"jahr":1354,"woche":1,"kasse":78},"dkasse":78,"lage":0}
+{"t":53.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":53.8,"was":"woche","n":33,"jahr":1354,"woche":1,"kasse":78,"greifbar":27,"mitPreis":3,"deckung":2.1666666666666665,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":54.7,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":55.8,"was":"klick","nr":43,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":158,"h":56},"vor":{"jahr":1354,"woche":1,"kasse":78},"nach":{"jahr":1354,"woche":1,"kasse":78},"dkasse":0,"lage":0}
+{"t":55.9,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":55.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":56.8,"was":"klick","nr":44,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1354,"woche":1,"kasse":78},"nach":{"jahr":1354,"woche":2,"kasse":77},"dkasse":-1,"lage":0}
+{"t":56.8,"was":"woche","n":34,"jahr":1354,"woche":2,"kasse":77,"greifbar":51,"mitPreis":16,"deckung":2.138888888888889,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":56.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":57.6,"was":"klick","nr":45,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":2,"kasse":77},"nach":{"jahr":1354,"woche":3,"kasse":75},"dkasse":-2,"lage":0}
+{"t":57.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":57.7,"was":"woche","n":35,"jahr":1354,"woche":3,"kasse":75,"greifbar":51,"mitPreis":16,"deckung":2.0833333333333335,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":57.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":58.4,"was":"klick","nr":46,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":3,"kasse":75},"nach":{"jahr":1354,"woche":4,"kasse":73},"dkasse":-2,"lage":0}
+{"t":58.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":58.5,"was":"woche","n":36,"jahr":1354,"woche":4,"kasse":73,"greifbar":51,"mitPreis":16,"deckung":2.0277777777777777,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":58.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":59.2,"was":"klick","nr":47,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":4,"kasse":73},"nach":{"jahr":1354,"woche":5,"kasse":71},"dkasse":-2,"lage":0}
+{"t":59.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":59.3,"was":"woche","n":37,"jahr":1354,"woche":5,"kasse":71,"greifbar":51,"mitPreis":16,"deckung":1.9722222222222223,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":59.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":60.1,"was":"klick","nr":48,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":5,"kasse":71},"nach":{"jahr":1354,"woche":6,"kasse":69},"dkasse":-2,"lage":0}
+{"t":60.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":60.2,"was":"woche","n":38,"jahr":1354,"woche":6,"kasse":69,"greifbar":51,"mitPreis":16,"deckung":1.9166666666666667,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":60.2,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":60.9,"was":"klick","nr":49,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":6,"kasse":69},"nach":{"jahr":1354,"woche":7,"kasse":69},"dkasse":0,"lage":0}
+{"t":60.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":61,"was":"woche","n":39,"jahr":1354,"woche":7,"kasse":69,"greifbar":51,"mitPreis":16,"deckung":1.9166666666666667,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":61.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":61.8,"was":"klick","nr":50,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":7,"kasse":69},"nach":{"jahr":1354,"woche":8,"kasse":67},"dkasse":-2,"lage":0}
+{"t":61.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":61.8,"was":"woche","n":40,"jahr":1354,"woche":8,"kasse":67,"greifbar":51,"mitPreis":16,"deckung":1.8611111111111112,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":62,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":62.6,"was":"klick","nr":51,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":8,"kasse":67},"nach":{"jahr":1354,"woche":9,"kasse":67},"dkasse":0,"lage":0}
+{"t":62.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":62.7,"was":"woche","n":41,"jahr":1354,"woche":9,"kasse":67,"greifbar":52,"mitPreis":16,"deckung":1.8611111111111112,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":62.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":63.5,"was":"klick","nr":52,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":9,"kasse":67},"nach":{"jahr":1354,"woche":10,"kasse":65},"dkasse":-2,"lage":0}
+{"t":63.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":63.6,"was":"woche","n":42,"jahr":1354,"woche":10,"kasse":65,"greifbar":52,"mitPreis":16,"deckung":1.8055555555555556,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":63.7,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":64.4,"was":"klick","nr":53,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":10,"kasse":65},"nach":{"jahr":1354,"woche":11,"kasse":63},"dkasse":-2,"lage":0}
+{"t":64.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":64.5,"was":"woche","n":43,"jahr":1354,"woche":11,"kasse":63,"greifbar":52,"mitPreis":16,"deckung":1.75,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":64.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":65.2,"was":"klick","nr":54,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":11,"kasse":63},"nach":{"jahr":1354,"woche":12,"kasse":61},"dkasse":-2,"lage":0}
+{"t":65.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":65.3,"was":"woche","n":44,"jahr":1354,"woche":12,"kasse":61,"greifbar":52,"mitPreis":16,"deckung":1.6944444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":65.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":66.1,"was":"klick","nr":55,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":12,"kasse":61},"nach":{"jahr":1354,"woche":13,"kasse":60},"dkasse":-1,"lage":0}
+{"t":66.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":66.1,"was":"woche","n":45,"jahr":1354,"woche":13,"kasse":60,"greifbar":50,"mitPreis":15,"deckung":1.6666666666666667,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":66.2,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":66.9,"was":"klick","nr":56,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":13,"kasse":60},"nach":{"jahr":1354,"woche":14,"kasse":58},"dkasse":-2,"lage":0}
+{"t":67,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":67,"was":"woche","n":46,"jahr":1354,"woche":14,"kasse":58,"greifbar":50,"mitPreis":14,"deckung":1.6111111111111112,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":67.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":null,"text":"Fahren: ohne Rechnung · 2 Fass"},{"zug":"fuhre:plan:mager","preis":3,"text":"Fahren: die mageren Häuser · 2 Fass +3 Pf"}]}
+{"t":67.8,"was":"klick","nr":57,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 2 Fass +3 Pf","preis":3,"w":240,"h":24},"vor":{"jahr":1354,"woche":14,"kasse":58},"nach":{"jahr":1354,"woche":15,"kasse":56},"dkasse":-2,"lage":0}
+{"t":67.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":67.9,"was":"woche","n":47,"jahr":1354,"woche":15,"kasse":56,"greifbar":50,"mitPreis":15,"deckung":1.5555555555555556,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":68,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":68.6,"was":"klick","nr":58,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":15,"kasse":56},"nach":{"jahr":1354,"woche":16,"kasse":54},"dkasse":-2,"lage":0}
+{"t":68.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":68.7,"was":"woche","n":48,"jahr":1354,"woche":16,"kasse":54,"greifbar":50,"mitPreis":15,"deckung":1.5,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":68.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":69.4,"was":"klick","nr":59,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":16,"kasse":54},"nach":{"jahr":1354,"woche":17,"kasse":52},"dkasse":-2,"lage":0}
+{"t":69.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":69.5,"was":"woche","n":49,"jahr":1354,"woche":17,"kasse":52,"greifbar":50,"mitPreis":15,"deckung":1.4444444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":69.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":70.3,"was":"klick","nr":60,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":17,"kasse":52},"nach":{"jahr":1354,"woche":18,"kasse":52},"dkasse":0,"lage":0}
+{"t":70.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":70.4,"was":"woche","n":50,"jahr":1354,"woche":18,"kasse":52,"greifbar":50,"mitPreis":15,"deckung":1.4444444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":70.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":71.1,"was":"klick","nr":61,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":18,"kasse":52},"nach":{"jahr":1354,"woche":19,"kasse":50},"dkasse":-2,"lage":0}
+{"t":71.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":71.1,"was":"woche","n":51,"jahr":1354,"woche":19,"kasse":50,"greifbar":50,"mitPreis":15,"deckung":1.3888888888888888,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":71.2,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":71.9,"was":"klick","nr":62,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":19,"kasse":50},"nach":{"jahr":1354,"woche":20,"kasse":48},"dkasse":-2,"lage":0}
+{"t":71.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":71.9,"was":"woche","n":52,"jahr":1354,"woche":20,"kasse":48,"greifbar":50,"mitPreis":15,"deckung":1.3333333333333333,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":72,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":72.7,"was":"klick","nr":63,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":20,"kasse":48},"nach":{"jahr":1354,"woche":21,"kasse":46},"dkasse":-2,"lage":0}
+{"t":72.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":72.7,"was":"woche","n":53,"jahr":1354,"woche":21,"kasse":46,"greifbar":50,"mitPreis":15,"deckung":1.2777777777777777,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":72.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":73.4,"was":"klick","nr":64,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":21,"kasse":46},"nach":{"jahr":1354,"woche":22,"kasse":46},"dkasse":0,"lage":0}
+{"t":73.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":73.5,"was":"woche","n":54,"jahr":1354,"woche":22,"kasse":46,"greifbar":50,"mitPreis":15,"deckung":1.2777777777777777,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":73.5,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":74.1,"was":"klick","nr":65,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":22,"kasse":46},"nach":{"jahr":1354,"woche":23,"kasse":43},"dkasse":-3,"lage":0}
+{"t":74.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":74.2,"was":"woche","n":55,"jahr":1354,"woche":23,"kasse":43,"greifbar":50,"mitPreis":15,"deckung":1.1944444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":74.3,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":75,"was":"klick","nr":66,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":23,"kasse":43},"nach":{"jahr":1354,"woche":24,"kasse":43},"dkasse":0,"lage":0}
+{"t":75,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":75,"was":"woche","n":56,"jahr":1354,"woche":24,"kasse":43,"greifbar":50,"mitPreis":15,"deckung":1.1944444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":75.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":75.7,"was":"klick","nr":67,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":24,"kasse":43},"nach":{"jahr":1354,"woche":25,"kasse":43},"dkasse":0,"lage":0}
+{"t":75.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":75.8,"was":"woche","n":57,"jahr":1354,"woche":25,"kasse":43,"greifbar":50,"mitPreis":15,"deckung":1.1944444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":75.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":76.6,"was":"klick","nr":68,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":25,"kasse":43},"nach":{"jahr":1354,"woche":26,"kasse":43},"dkasse":0,"lage":0}
+{"t":76.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":76.6,"was":"woche","n":58,"jahr":1354,"woche":26,"kasse":43,"greifbar":51,"mitPreis":16,"deckung":1.1944444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":76.7,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":77.4,"was":"klick","nr":69,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":26,"kasse":43},"nach":{"jahr":1354,"woche":27,"kasse":41},"dkasse":-2,"lage":0}
+{"t":77.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":77.4,"was":"woche","n":59,"jahr":1354,"woche":27,"kasse":41,"greifbar":50,"mitPreis":15,"deckung":1.1388888888888888,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":77.5,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":78.1,"was":"klick","nr":70,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":27,"kasse":41},"nach":{"jahr":1354,"woche":28,"kasse":41},"dkasse":0,"lage":0}
+{"t":78.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":78.2,"was":"woche","n":60,"jahr":1354,"woche":28,"kasse":41,"greifbar":50,"mitPreis":15,"deckung":1.1388888888888888,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":78.3,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":6,"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf"}]}
+{"t":78.9,"was":"klick","nr":71,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +6 Pf","preis":6,"w":240,"h":24},"vor":{"jahr":1354,"woche":28,"kasse":41},"nach":{"jahr":1354,"woche":29,"kasse":41},"dkasse":0,"lage":0}
+{"t":79,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":79,"was":"woche","n":61,"jahr":1354,"woche":29,"kasse":41,"greifbar":50,"mitPreis":15,"deckung":1.1388888888888888,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":79.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":79.8,"was":"klick","nr":72,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":29,"kasse":41},"nach":{"jahr":1354,"woche":30,"kasse":39},"dkasse":-2,"lage":0}
+{"t":79.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":79.8,"was":"woche","n":62,"jahr":1354,"woche":30,"kasse":39,"greifbar":50,"mitPreis":15,"deckung":1.0833333333333333,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":1}
+{"t":79.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:mager","preis":5,"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf"}]}
+{"t":81.3,"was":"klick","nr":73,"zug":"fuhre:plan:mager","grund":"Fuhrplan","knopf":{"text":"Fahren: die mageren Häuser · 3 Fass +5 Pf","preis":5,"w":240,"h":24},"vor":{"jahr":1354,"woche":30,"kasse":39},"nach":{"jahr":1355,"woche":1,"kasse":48},"dkasse":9,"lage":0}
+{"t":81.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":81.8,"was":"woche","n":63,"jahr":1355,"woche":1,"kasse":48,"greifbar":26,"mitPreis":2,"deckung":1.3333333333333333,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":3}
+{"t":82,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":82.8,"was":"klick","nr":74,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":158,"h":56},"vor":{"jahr":1355,"woche":1,"kasse":48},"nach":{"jahr":1355,"woche":1,"kasse":48},"dkasse":0,"lage":0}
+{"t":82.9,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":82.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":83.7,"was":"klick","nr":75,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1355,"woche":1,"kasse":48},"nach":{"jahr":1355,"woche":2,"kasse":47},"dkasse":-1,"lage":0}
+{"t":83.7,"was":"woche","n":64,"jahr":1355,"woche":2,"kasse":47,"greifbar":43,"mitPreis":10,"deckung":1.3055555555555556,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":6}
+{"t":83.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":84.4,"was":"klick","nr":76,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":2,"kasse":47},"nach":{"jahr":1355,"woche":3,"kasse":45},"dkasse":-2,"lage":0}
+{"t":84.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":84.5,"was":"woche","n":65,"jahr":1355,"woche":3,"kasse":45,"greifbar":43,"mitPreis":10,"deckung":1.25,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":6}
+{"t":84.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":85.3,"was":"klick","nr":77,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":3,"kasse":45},"nach":{"jahr":1355,"woche":4,"kasse":45},"dkasse":0,"lage":0}
+{"t":85.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":85.3,"was":"woche","n":66,"jahr":1355,"woche":4,"kasse":45,"greifbar":43,"mitPreis":10,"deckung":1.25,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":6}
+{"t":85.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":86.1,"was":"klick","nr":78,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":4,"kasse":45},"nach":{"jahr":1355,"woche":5,"kasse":43},"dkasse":-2,"lage":0}
+{"t":86.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":86.1,"was":"woche","n":67,"jahr":1355,"woche":5,"kasse":43,"greifbar":47,"mitPreis":13,"deckung":1.1944444444444444,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":86.2,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":86.9,"was":"klick","nr":79,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":5,"kasse":43},"nach":{"jahr":1355,"woche":6,"kasse":41},"dkasse":-2,"lage":0}
+{"t":86.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":87,"was":"woche","n":68,"jahr":1355,"woche":6,"kasse":41,"greifbar":50,"mitPreis":15,"deckung":1.1388888888888888,"nenner":"Ablösung Ausschank am Markt","ziel":null,"uebergabeImText":0}
+{"t":87.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":87.7,"was":"klick","nr":80,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":6,"kasse":41},"nach":{"jahr":1355,"woche":7,"kasse":39},"dkasse":-2,"lage":0}
+{"t":87.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":87.8,"was":"woche","n":69,"jahr":1355,"woche":7,"kasse":39,"greifbar":53,"mitPreis":17,"deckung":1.7727272727272727,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":87.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":88.6,"was":"klick","nr":81,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":7,"kasse":39},"nach":{"jahr":1355,"woche":8,"kasse":39},"dkasse":0,"lage":0}
+{"t":88.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":88.7,"was":"woche","n":70,"jahr":1355,"woche":8,"kasse":39,"greifbar":56,"mitPreis":19,"deckung":1.7727272727272727,"nenner":"Zuvorkommen Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":88.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":89.5,"was":"klick","nr":82,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":8,"kasse":39},"nach":{"jahr":1355,"woche":9,"kasse":37},"dkasse":-2,"lage":0}
+{"t":89.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":89.5,"was":"woche","n":71,"jahr":1355,"woche":9,"kasse":37,"greifbar":51,"mitPreis":16,"deckung":0.7708333333333334,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":89.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":90.3,"was":"klick","nr":83,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":9,"kasse":37},"nach":{"jahr":1355,"woche":10,"kasse":35},"dkasse":-2,"lage":0}
+{"t":90.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":90.4,"was":"woche","n":72,"jahr":1355,"woche":10,"kasse":35,"greifbar":50,"mitPreis":15,"deckung":0.7291666666666666,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":90.5,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":91.1,"was":"klick","nr":84,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":10,"kasse":35},"nach":{"jahr":1355,"woche":11,"kasse":35},"dkasse":0,"lage":0}
+{"t":91.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":91.2,"was":"woche","n":73,"jahr":1355,"woche":11,"kasse":35,"greifbar":50,"mitPreis":15,"deckung":0.7291666666666666,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":91.3,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":91.9,"was":"klick","nr":85,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":11,"kasse":35},"nach":{"jahr":1355,"woche":12,"kasse":33},"dkasse":-2,"lage":0}
+{"t":92,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":92,"was":"woche","n":74,"jahr":1355,"woche":12,"kasse":33,"greifbar":48,"mitPreis":14,"deckung":0.6875,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":92.1,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":92.7,"was":"klick","nr":86,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":12,"kasse":33},"nach":{"jahr":1355,"woche":13,"kasse":30},"dkasse":-3,"lage":0}
+{"t":92.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":92.8,"was":"woche","n":75,"jahr":1355,"woche":13,"kasse":30,"greifbar":50,"mitPreis":16,"deckung":0.625,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":92.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":93.5,"was":"klick","nr":87,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":13,"kasse":30},"nach":{"jahr":1355,"woche":14,"kasse":30},"dkasse":0,"lage":0}
+{"t":93.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":93.6,"was":"woche","n":76,"jahr":1355,"woche":14,"kasse":30,"greifbar":50,"mitPreis":16,"deckung":0.625,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":93.7,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":94.4,"was":"klick","nr":88,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":14,"kasse":30},"nach":{"jahr":1355,"woche":15,"kasse":30},"dkasse":0,"lage":0}
+{"t":94.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":94.4,"was":"woche","n":77,"jahr":1355,"woche":15,"kasse":30,"greifbar":50,"mitPreis":15,"deckung":0.625,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":94.5,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":95.3,"was":"klick","nr":89,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":15,"kasse":30},"nach":{"jahr":1355,"woche":16,"kasse":28},"dkasse":-2,"lage":0}
+{"t":95.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":95.4,"was":"woche","n":78,"jahr":1355,"woche":16,"kasse":28,"greifbar":50,"mitPreis":14,"deckung":0.5833333333333334,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":95.5,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":4,"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf"}]}
+{"t":96.2,"was":"klick","nr":90,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf","preis":4,"w":235,"h":24},"vor":{"jahr":1355,"woche":16,"kasse":28},"nach":{"jahr":1355,"woche":17,"kasse":25},"dkasse":-3,"lage":0}
+{"t":96.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":96.3,"was":"woche","n":79,"jahr":1355,"woche":17,"kasse":25,"greifbar":48,"mitPreis":13,"deckung":0.5208333333333334,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":96.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":97.1,"was":"klick","nr":91,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":17,"kasse":25},"nach":{"jahr":1355,"woche":18,"kasse":25},"dkasse":0,"lage":0}
+{"t":97.1,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":97.1,"was":"woche","n":80,"jahr":1355,"woche":18,"kasse":25,"greifbar":48,"mitPreis":13,"deckung":0.5208333333333334,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":97.2,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":3,"text":"Fahren: ohne Rechnung · 3 Fass +3 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":97.8,"was":"klick","nr":92,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":18,"kasse":25},"nach":{"jahr":1355,"woche":19,"kasse":25},"dkasse":0,"lage":0}
+{"t":97.8,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":97.9,"was":"woche","n":81,"jahr":1355,"woche":19,"kasse":25,"greifbar":48,"mitPreis":13,"deckung":0.5208333333333334,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":98,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":98.7,"was":"klick","nr":93,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":19,"kasse":25},"nach":{"jahr":1355,"woche":20,"kasse":23},"dkasse":-2,"lage":0}
+{"t":98.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":98.8,"was":"woche","n":82,"jahr":1355,"woche":20,"kasse":23,"greifbar":51,"mitPreis":15,"deckung":0.4791666666666667,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":98.9,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":99.7,"was":"klick","nr":94,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":20,"kasse":23},"nach":{"jahr":1355,"woche":21,"kasse":21},"dkasse":-2,"lage":0}
+{"t":99.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":99.7,"was":"woche","n":83,"jahr":1355,"woche":21,"kasse":21,"greifbar":49,"mitPreis":14,"deckung":0.4375,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":99.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":100.5,"was":"klick","nr":95,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":21,"kasse":21},"nach":{"jahr":1355,"woche":22,"kasse":19},"dkasse":-2,"lage":0}
+{"t":100.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":100.6,"was":"woche","n":84,"jahr":1355,"woche":22,"kasse":19,"greifbar":50,"mitPreis":14,"deckung":0.3958333333333333,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":100.7,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":101.4,"was":"klick","nr":96,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":22,"kasse":19},"nach":{"jahr":1355,"woche":23,"kasse":18},"dkasse":-1,"lage":0}
+{"t":101.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":101.5,"was":"woche","n":85,"jahr":1355,"woche":23,"kasse":18,"greifbar":50,"mitPreis":14,"deckung":0.375,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":101.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":102.2,"was":"klick","nr":97,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":23,"kasse":18},"nach":{"jahr":1355,"woche":24,"kasse":18},"dkasse":0,"lage":0}
+{"t":102.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":102.3,"was":"woche","n":86,"jahr":1355,"woche":24,"kasse":18,"greifbar":50,"mitPreis":14,"deckung":0.375,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":102.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":103.2,"was":"klick","nr":98,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":24,"kasse":18},"nach":{"jahr":1355,"woche":25,"kasse":16},"dkasse":-2,"lage":0}
+{"t":103.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":103.2,"was":"woche","n":87,"jahr":1355,"woche":25,"kasse":16,"greifbar":53,"mitPreis":16,"deckung":0.5333333333333333,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
+{"t":103.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":104.2,"was":"klick","nr":99,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":25,"kasse":16},"nach":{"jahr":1355,"woche":26,"kasse":16},"dkasse":0,"lage":0}
+{"t":104.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":104.2,"was":"woche","n":88,"jahr":1355,"woche":26,"kasse":16,"greifbar":51,"mitPreis":14,"deckung":0.5333333333333333,"nenner":"Zuvorkommen Pfarrschenke St. Michael","ziel":null,"uebergabeImText":0}
+{"t":104.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":105.2,"was":"klick","nr":100,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":26,"kasse":16},"nach":{"jahr":1355,"woche":27,"kasse":16},"dkasse":0,"lage":0}
+{"t":105.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":105.3,"was":"woche","n":89,"jahr":1355,"woche":27,"kasse":16,"greifbar":50,"mitPreis":13,"deckung":0.3333333333333333,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":105.6,"was":"wahl-der-woche","plaene":3,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"},{"zug":"fuhre:plan:durst","preis":5,"text":"Fahren: nach Durst · 3 Fass +5 Pf"}]}
+{"t":106.5,"was":"klick","nr":101,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":27,"kasse":16},"nach":{"jahr":1355,"woche":28,"kasse":14},"dkasse":-2,"lage":0}
+{"t":106.6,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":106.6,"was":"woche","n":90,"jahr":1355,"woche":28,"kasse":14,"greifbar":47,"mitPreis":10,"deckung":0.2916666666666667,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":106.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":107.7,"was":"klick","nr":102,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":28,"kasse":14},"nach":{"jahr":1355,"woche":29,"kasse":12},"dkasse":-2,"lage":0}
+{"t":107.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":107.8,"was":"woche","n":91,"jahr":1355,"woche":29,"kasse":12,"greifbar":47,"mitPreis":10,"deckung":0.25,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":108,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":6,"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf"}]}
+{"t":108.8,"was":"klick","nr":103,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +6 Pf","preis":6,"w":235,"h":24},"vor":{"jahr":1355,"woche":29,"kasse":12},"nach":{"jahr":1355,"woche":30,"kasse":12},"dkasse":0,"lage":0}
+{"t":108.9,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":108.9,"was":"woche","n":92,"jahr":1355,"woche":30,"kasse":12,"greifbar":46,"mitPreis":10,"deckung":0.25,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":109,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":110.7,"was":"klick","nr":104,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1355,"woche":30,"kasse":12},"nach":{"jahr":1356,"woche":1,"kasse":125},"dkasse":113,"lage":0}
+{"t":110.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":111,"was":"woche","n":93,"jahr":1356,"woche":1,"kasse":125,"greifbar":29,"mitPreis":5,"deckung":2.6041666666666665,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":3}
+{"t":111.8,"was":"nicht-zu-greifen","zug":"fuhre:sommer-zu"}
+{"t":112.7,"was":"klick","nr":105,"zug":"preis:nimm:grutkasten","grund":"Michaeli: billigstes bezahlbare","knopf":{"text":"Nehmen −71 Pf","preis":-71,"w":122,"h":25},"vor":{"jahr":1356,"woche":1,"kasse":125},"nach":{"jahr":1356,"woche":1,"kasse":54},"dkasse":-71,"lage":0}
+{"t":113.6,"was":"klick","nr":106,"zug":"preis:tafel-zu","grund":"Das Jahr beginnen","knopf":{"text":"Das Jahr beginnen","preis":null,"w":155,"h":56},"vor":{"jahr":1356,"woche":1,"kasse":54},"nach":{"jahr":1356,"woche":1,"kasse":54},"dkasse":0,"lage":0}
+{"t":113.7,"was":"wahl-der-woche","plaene":0,"sprung":false,"liste":[]}
+{"t":113.7,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":114.7,"was":"klick","nr":107,"zug":"weiter","grund":"naechste Woche","knopf":{"text":"WEITER","preis":null,"w":147,"h":42},"vor":{"jahr":1356,"woche":1,"kasse":54},"nach":{"jahr":1356,"woche":2,"kasse":53},"dkasse":-1,"lage":0}
+{"t":114.7,"was":"woche","n":94,"jahr":1356,"woche":2,"kasse":53,"greifbar":37,"mitPreis":6,"deckung":1.1041666666666667,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":6}
+{"t":114.8,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":1,"text":"Fahren: ohne Rechnung · 3 Fass +1 Pf"},{"zug":"fuhre:plan:umkaempft","preis":4,"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf"}]}
+{"t":115.5,"was":"klick","nr":108,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +4 Pf","preis":4,"w":235,"h":24},"vor":{"jahr":1356,"woche":2,"kasse":53},"nach":{"jahr":1356,"woche":3,"kasse":48},"dkasse":-5,"lage":0}
+{"t":115.5,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":115.5,"was":"woche","n":95,"jahr":1356,"woche":3,"kasse":48,"greifbar":37,"mitPreis":6,"deckung":1,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":6}
+{"t":115.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":116.3,"was":"klick","nr":109,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1356,"woche":3,"kasse":48},"nach":{"jahr":1356,"woche":4,"kasse":44},"dkasse":-4,"lage":0}
+{"t":116.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":116.4,"was":"woche","n":96,"jahr":1356,"woche":4,"kasse":44,"greifbar":37,"mitPreis":6,"deckung":0.9166666666666666,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":6}
+{"t":116.5,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":117.4,"was":"klick","nr":110,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1356,"woche":4,"kasse":44},"nach":{"jahr":1356,"woche":5,"kasse":39},"dkasse":-5,"lage":0}
+{"t":117.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":117.6,"was":"woche","n":97,"jahr":1356,"woche":5,"kasse":39,"greifbar":47,"mitPreis":13,"deckung":0.8125,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":117.7,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":1,"text":"Fahren: ohne Rechnung · 3 Fass +1 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":118.4,"was":"klick","nr":111,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1356,"woche":5,"kasse":39},"nach":{"jahr":1356,"woche":6,"kasse":35},"dkasse":-4,"lage":0}
+{"t":118.4,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":118.5,"was":"woche","n":98,"jahr":1356,"woche":6,"kasse":35,"greifbar":47,"mitPreis":13,"deckung":0.7291666666666666,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":118.6,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":119.3,"was":"klick","nr":112,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1356,"woche":6,"kasse":35},"nach":{"jahr":1356,"woche":7,"kasse":31},"dkasse":-4,"lage":0}
+{"t":119.3,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":119.3,"was":"woche","n":99,"jahr":1356,"woche":7,"kasse":31,"greifbar":48,"mitPreis":14,"deckung":0.6458333333333334,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":119.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":1,"text":"Fahren: ohne Rechnung · 3 Fass +1 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":120.2,"was":"klick","nr":113,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1356,"woche":7,"kasse":31},"nach":{"jahr":1356,"woche":8,"kasse":26},"dkasse":-5,"lage":0}
+{"t":120.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":120.3,"was":"woche","n":100,"jahr":1356,"woche":8,"kasse":26,"greifbar":47,"mitPreis":12,"deckung":0.5416666666666666,"nenner":"Ablösung Mühlschenke","ziel":null,"uebergabeImText":0}
+{"t":120.4,"was":"wahl-der-woche","plaene":2,"sprung":false,"liste":[{"zug":"fuhre:plan:probe","preis":2,"text":"Fahren: ohne Rechnung · 3 Fass +2 Pf"},{"zug":"fuhre:plan:umkaempft","preis":5,"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf"}]}
+{"t":121.2,"was":"klick","nr":114,"zug":"fuhre:plan:umkaempft","grund":"Fuhrplan","knopf":{"text":"Fahren: wo der Adler wirbt · 3 Fass +5 Pf","preis":5,"w":235,"h":24},"vor":{"jahr":1356,"woche":8,"kasse":26},"nach":{"jahr":1356,"woche":9,"kasse":21},"dkasse":-5,"lage":0}
+{"t":121.2,"was":"abgeschaltet","zug":"fuhre:abschicken","text":"FUHRE ABSCHICKEN"}
+{"t":121.9,"was":"schluss","jahr":1356,"woche":9,"kasse":21,"klicks":114,"danebengegriffen":6,"lage":0,"fehler":[],"abbruch":null,"gespielt":100,"sprungWochen":108}
