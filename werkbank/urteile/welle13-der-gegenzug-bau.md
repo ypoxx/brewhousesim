@@ -163,7 +163,24 @@ halbiert sich, das Haus holt eine Adresse zurück statt keiner — und die eigen
 Lade ist danach in 69 von 100 Wochen leer. Der Zug hat einen Preis, und man
 merkt ihn.
 
-*(Die letzte Zeile ist kein Widerspruch zur Abnahme, sondern ihre Kehrseite:
+Und dieselbe Probe in den beiden anderen Epochen:
+
+| | 1600 ohne / mit (28×) | 1884 ohne / mit (26×) |
+|---|---|---|
+| Adressen, die **er** hält, Anfang → Ende | 3 → 5 / 3 → **4** | 3 → 5 / 3 → **2** |
+| Adressen, die **das Haus** hält, am Ende | 1 / 2 | 0 / 0 |
+| **seine Züge** in 100 Wochen | 43 / **63** | 49 / **54** |
+
+**Die 1884er Zeile ist die einzige, in der er wirklich schrumpft — und sie
+gehört nicht meinem neuen Zug.** Die Hand drückt den *billigsten bezahlbaren*
+Gegenzug, und in 1884 ist die Kasse so voll (Median 10.170 M), dass das oft
+`gegner:abloesen` oder `gegner:zuvorkommen` ist — die teuren, endgültigen
+Antworten, die es seit Runde 2 gibt und an denen ich nichts geändert habe.
+Dass eine reiche Brauerei den Adler herauskaufen kann, ist der Entwurf und
+nicht mein Zutun; dass die Adressen dabei frei werden statt an das Haus zu
+fallen (0 von 0), zeigt, dass er sie nach dem Ablösen anderswo wieder aufnimmt.
+
+*(Die letzte Zeile der 1350er Tabelle ist kein Widerspruch zur Abnahme, sondern ihre Kehrseite:
 gemessen wird die MÖGLICHKEIT eines Gegenzugs, mit einer Hand, die keinen
 drückt — so misst auch das Gerät der Aufsicht. Eine Hand, die jede Woche alles
 ausgibt, was sie hat, ist danach arm; das ist keine Eigenschaft des Gegenzugs,
