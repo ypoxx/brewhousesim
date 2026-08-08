@@ -103,6 +103,14 @@ window.BRAUHAUS = BRAUHAUS;
      ?epoche=1..4  &jahr=  &woche=  &saat=
      Dazu: &orte=1 (Ortsverzeichnis einblenden), &pruefe=1 (Lage einblenden),
            &stumm=1 (Ton aus), &blatt=chronik (Blatt offen aufnehmen)
+
+     &neu=1 — WELLE 13, R2. DER SCHALTER DER MESSENDEN HAND.
+     Er startet eine frische Partie, laedt keinen Spielstand und SCHREIBT
+     KEINEN; beim Anlassen faellt jeder Schluessel `brauhaus:*` aus dem
+     Speicher. Ohne ihn waere die zweite Messlatte ab dem zweiten Lauf nicht
+     mehr messbar: jede Zahl dieses Laufs seit Welle 7 steht auf „dieselbe
+     Saat, dieselbe Partie", und ein zurueckgeladener Stand macht daraus eine
+     andere. Siehe kern/stand.js.
      ---------------------------------------------------------------------- */
   B.arg = (function () {
     var a = {};
@@ -123,6 +131,7 @@ window.BRAUHAUS = BRAUHAUS;
       orte: a.orte === '1' || a.orte === 'ja',
       pruefe: a.pruefe === '1' || a.pruefe === 'ja',
       stumm: a.stumm === '1' || a.stumm === 'ja',
+      neu: a.neu === '1' || a.neu === 'ja',
       blatt: a.blatt || null
     };
   }());

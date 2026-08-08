@@ -34,6 +34,15 @@
     return {
       get saat() { return start; },
       setze: function (neu) { start = (neu >>> 0) || 1350; a = start; },
+      /* DER ZAEHLERSTAND — neu in Welle 13, fuer den Spielstand.
+         mulberry32 hat genau ein Wort Zustand: `a`. Wer eine Partie
+         fortsetzt, muss ihn mitnehmen, sonst wuerfelt das Haus ab der
+         Wiederaufnahme noch einmal dieselben Zahlen wie am Anfang — der
+         Spielstand waere ein Zeitreisegeraet, und die Wiederholbarkeit
+         waere kaputt, ohne dass es jemand saehe. Lesen ist harmlos;
+         Schreiben tut nur kern/stand.js beim Wiederaufnehmen. */
+      get zustand() { return a | 0; },
+      set zustand(v) { a = (v | 0); },
       zahl: zahl,
       /* ganze Zahl von..bis, beide einschliesslich */
       ganz: function (von, bis) { return von + Math.floor(zahl() * (bis - von + 1)); },
@@ -97,6 +106,41 @@
 
   var TAG_JE_WOCHE = 7;
 
+  /* ----------------------------------------------------------------------
+     EINE WOCHE, OHNE BILD.  Neu in Welle 13 — herausgeloest aus
+     naechsteWoche(), damit springe() dieselbe Woche laufen lassen kann wie
+     ein Klick auf WEITER, nur ohne fuer jede einzelne neu zu malen.
+     Vorher hat springe() die Wochen einer Reihe UEBERSPRUNGEN statt sie
+     laufen zu lassen: kein 'vorwoche', kein 'woche', kein Verfall, kein Zug
+     des Gegners. Ein Jahr, das so vergeht, ist kein erzaehltes Jahr — es ist
+     ein Jahr, das nicht stattgefunden hat.
+     ---------------------------------------------------------------------- */
+  function eineWoche(stumm) {
+    var z = B.welt.zeit;
+    if (z.ende) return false;
+
+    B.sende('vorwoche', { jahr: z.jahr, woche: z.woche });
+
+    /* Was ohne den Spieler geschieht, geschieht hier — vor dem Zaehler. */
+    B.welt.verfall();
+
+    if (z.woche >= WOCHEN_IM_JAHR) {
+      /* OHNE `stumm` LAEUFT DIESE ZEILE WIE VOR WELLE 13, EINSCHLIESSLICH
+         DES ZWEITEN 'zeichne'. Am Jahreswechsel gab es immer zwei Runden —
+         eine mit grund 'jahr' aus schliesseJahr(), eine mit grund 'woche'
+         von hier. Sie zusammenzulegen waere aufgeraeumter und WAERE EINE
+         AENDERUNG AM SPIELVERLAUF: sieben rAF-Stellen des Spiels haengen an
+         der Zahl der Zeichenrunden, und die Wiederholbarkeit dieses Laufs
+         ist teuer erkauft (Welle 12, vier Tage). Der Sprung ist neu und darf
+         deshalb stumm sein; der Klick auf WEITER bleibt, wie er war. */
+      B.uhr.schliesseJahr(stumm);
+    } else {
+      z.woche += 1;
+      B.sende('woche', { jahr: z.jahr, woche: z.woche, epoche: z.epoche });
+    }
+    return true;
+  }
+
   B.uhr = {
 
     WOCHEN_IM_JAHR: WOCHEN_IM_JAHR,
@@ -135,29 +179,33 @@
        Wochen 1..30. Der dreissigste Klick schliesst das Braujahr.
        ------------------------------------------------------------------- */
     naechsteWoche: function () {
-      var z = B.welt.zeit;
-      if (z.ende) return false;
-
-      B.sende('vorwoche', { jahr: z.jahr, woche: z.woche });
-
-      /* Was ohne den Spieler geschieht, geschieht hier — vor dem Zaehler. */
-      B.welt.verfall();
-
-      if (z.woche >= WOCHEN_IM_JAHR) {
-        B.uhr.schliesseJahr();
-      } else {
-        z.woche += 1;
-        B.sende('woche', { jahr: z.jahr, woche: z.woche, epoche: z.epoche });
-      }
-
+      if (!eineWoche(false)) return false;
       B.sende('zeichne', { grund: 'woche' });
+      /* DER SPIELSTAND, UND ZWAR HIER. (Welle 13, R1)
+
+         SYNCHRON, in derselben Aufrufkette wie der Klick auf WEITER, ohne
+         jede Frist — das ist die Lehre der Welle 12, und sie steht in
+         spiel/LIESMICH.md: „Keine Wanduhrfrist im Zeichenweg." Ein
+         `setTimeout('gleich noch sichern')` waere genau das Rennen mit der
+         messenden Hand, an dem 1350 am 7. August in zwei Partien zerfallen
+         ist.
+
+         NACH dem Zeichnen, nicht davor: die Stuecke haben in ihrem
+         `woche`-Horcher gerechnet und im Zeichnen noch einmal; was der
+         Rundenschluss danach in Mikrotasks nachholt, gehoert zur naechsten
+         Sicherung. Ein Stueck, das den Weltzustand erst im Rundenschluss
+         aendert, hat ein groesseres Problem als diesen Stand. */
+      if (B.stand) B.stand.sichere('woche');
       return true;
     },
 
     /* -------------------------------------------------------------------
        JAHRESENDE. Georgi. Danach laeuft der Sommer ohne Hand durch.
        ------------------------------------------------------------------- */
-    schliesseJahr: function () {
+    /* `stumm` (Welle 13) heisst nur: DAS BILD KOMMT SPAETER. Alles andere
+       laeuft Zeile fuer Zeile wie bisher. Wer schliesseJahr() wie bisher
+       ohne Argument ruft, bekommt wie bisher sein 'zeichne'. */
+    schliesseJahr: function (stumm) {
       var z = B.welt.zeit;
       var altesJahr = z.jahr;
       var alteEpoche = z.epoche;
@@ -189,7 +237,7 @@
       }
 
       B.sende('jahr', { jahr: z.jahr, epoche: z.epoche, vorher: altesJahr });
-      B.sende('zeichne', { grund: 'jahr' });
+      if (!stumm) B.sende('zeichne', { grund: 'jahr' });
       return true;
     },
 
@@ -218,20 +266,94 @@
       if (text) B.welt.schreibe(String(text), 'ende');
       B.sende('ende', { jahr: z.jahr, woche: z.woche, epoche: z.epoche, grund: z.endgrund });
       B.sende('zeichne', { grund: 'ende' });
+      /* Auch das Ende wird gesichert. Ein Schlussblatt, das ein Neuladen
+         nicht ueberlebt, waere die haerteste Form von A1: gerade das
+         Schlussblatt ist nach dem Urteil das beste Blatt des Spiels. */
+      if (B.stand) B.stand.sichere('ende');
       return true;
     },
 
     /* -------------------------------------------------------------------
-       Ruhige Jahre werden nicht gespielt, sondern erzaehlt.
+       RUHIGE ZEIT WIRD NICHT GEKLICKT, SONDERN ERZAEHLT.
        Ein Stueck ruft das, wenn nichts zu entscheiden ist.
+
+       WAS HIER STAND UND WARUM ES NICHT BENUTZBAR WAR (geprueft in Welle 13,
+       Auflage R5 — kein Stueck hat es je gerufen, und das war richtig so):
+
+           for (i = 0; i < n; i++) {
+             B.welt.zeit.woche = WOCHEN_IM_JAHR;   // <- der Fehler
+             B.uhr.schliesseJahr();
+           }
+
+       Die Zeile setzt den Zaehler auf die letzte Woche und schliesst das
+       Jahr. Damit FANDEN DIE UEBERSPRUNGENEN WOCHEN NICHT STATT: kein
+       'vorwoche', kein 'woche', kein `welt.verfall()`. Das Bier im Keller
+       verdarb nicht, der Gegner zog nicht, geliefert wurde nicht, gezahlt
+       wurde nicht — nur der Jahresabschluss lief. Ein Haus, das zwoelf Jahre
+       „springt", kaeme mit vollem Keller und ohne einen einzigen Zug des
+       Adlers heraus. Das ist kein erzaehltes Jahr, das ist ein Jahr, das
+       uebergangen wurde; als Werkzeug fuer Auflage A7 („Wochen ohne
+       Entscheidung werden zusammengefasst") war es unbrauchbar, weil
+       zusammenfassen heisst: es passiert dasselbe, nur ohne Hand.
+
+       Dazu kam: `B.sende('zeichne')` lief bei JEDEM Jahresschluss mit,
+       zwoelf Jahre also zwoelfmal — der Sprung malte zwoelf Bilder, die
+       niemand sah, und jedes davon zog die sieben rAF-Stellen des Spiels
+       hinterher.
+
+       JETZT laeuft jede Woche wirklich, mit allen Ereignissen, und gemalt
+       wird EINMAL am Ende. Der Wuerfel wird dabei genau so oft gedreht wie
+       beim Spielen — ein Sprung ist damit dasselbe wie „dreissigmal WEITER
+       druecken, ohne hinzusehen", und nichts anderes.
+
+         B.uhr.springe(3)              — 3 Braujahre erzaehlen
+         B.uhr.springeWochen(8)        — 8 Wochen erzaehlen
+         -> {jahre, wochen, angehalten}   angehalten: null | 'ende' | 'grenze'
+
+       Beide halten an, sobald `B.welt.zeit.ende` steht — wer springt,
+       ueberspringt kein Spielende. Beide sichern den Spielstand EINMAL am
+       Schluss, nicht je Woche.
        ------------------------------------------------------------------- */
-    springe: function (jahre) {
-      var n = B.grenze(jahre | 0, 1, 400);
-      for (var i = 0; i < n && !B.welt.zeit.ende; i++) {
-        B.welt.zeit.woche = WOCHEN_IM_JAHR;
-        B.uhr.schliesseJahr();
+
+    /* Obergrenze in Wochen. Ein Sprung ist eine Rechnung, keine Animation:
+       12 Braujahre sind 360 Wochenlaeufe ueber acht Stuecke. 3000 ist der
+       Riegel dagegen, dass ein Rechenfehler in einem Stueck die Seite
+       stehenlaesst — nicht die erwartete Groesse. */
+    SPRUNG_HOECHST: 3000,
+
+    springeWochen: function (wochen) {
+      var n = B.grenze(wochen | 0, 0, B.uhr.SPRUNG_HOECHST);
+      var z = B.welt.zeit;
+      var vonJahr = z.jahr, gelaufen = 0, angehalten = null;
+      if (z.ende) angehalten = 'ende';
+      while (gelaufen < n && !z.ende) {
+        if (!eineWoche(true)) { angehalten = 'ende'; break; }
+        gelaufen++;
       }
+      if (!angehalten && (wochen | 0) > n) angehalten = 'grenze';
+      if (z.ende && !angehalten) angehalten = 'ende';
       B.sende('zeichne', { grund: 'sprung' });
+      if (B.stand) B.stand.sichere('sprung');
+      return { jahre: z.jahr - vonJahr, wochen: gelaufen, angehalten: angehalten };
+    },
+
+    springe: function (jahre) {
+      var n = B.grenze(jahre | 0, 0, 400);
+      var z = B.welt.zeit;
+      var vonJahr = z.jahr, gelaufen = 0, angehalten = null;
+      if (z.ende) angehalten = 'ende';
+      /* Ein „Braujahr" ist von hier bis zum naechsten Michaeli, nicht
+         dreissig Wochen ab Woche eins — wer in Woche 17 springt, kommt in
+         Woche 1 heraus. */
+      while (z.jahr - vonJahr < n && !z.ende) {
+        if (gelaufen >= B.uhr.SPRUNG_HOECHST) { angehalten = 'grenze'; break; }
+        if (!eineWoche(true)) { angehalten = 'ende'; break; }
+        gelaufen++;
+      }
+      if (z.ende && !angehalten) angehalten = 'ende';
+      B.sende('zeichne', { grund: 'sprung' });
+      if (B.stand) B.stand.sichere('sprung');
+      return { jahre: z.jahr - vonJahr, wochen: gelaufen, angehalten: angehalten };
     },
 
     /* Setzt die Uhr hart — nur fuer URL-Parameter und Aufnahmen. */

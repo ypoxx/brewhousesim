@@ -549,6 +549,54 @@
     zugDeckung: function () {
       var z = W.besterZug();
       return z ? W.haus.kasse / z.preis : null;
+    },
+
+    /* ------------------------------------------------------------------
+       DER ZWEITE SATZ AM UNTEREN RAND.  Welle 13, R3 (Auflage A2).
+
+       Die Zeile „naechster Zug: … (Kasse reicht 5,9x)" ist nach dem Urteil
+       des blinden Spielkritikers DIE BESTE ZEILE DES SPIELS. Was daneben
+       fehlt, ist die andere Haelfte: WAS DAS GUTE ENDE IST UND WIE WEIT DAS
+       HAUS DAVON ENTFERNT IST. Der Kritiker hat das gute Ende in vier
+       Sitzungen und 1.030 Wochen nie gesehen, obwohl es fuenfzehn Wochen
+       lang offenstand — er hatte keinen Anlass, den Reiter aufzuschlagen,
+       hinter dem es steht.
+
+       DER KERN ERFINDET DIESEN SATZ NICHT. Er weiss nicht, was in dieser
+       Epoche ein gutes Ende ist; das weiss das Stueck, das es baut (DIE
+       FUHRE hat ihn in `uebergabeFehlt()` seit Welle 6 im Klartext). Der
+       Kern haelt den Platz und die Regel:
+
+           B.welt.meldeZiel(satz, naehe)
+
+         satz   Klartext, ein Satz. Was das gute Ende ist und wie weit das
+                Haus davon entfernt ist.
+         naehe  0..1 — wie nah das Haus dran ist. null/undefined heisst
+                „unbekannt"; dann steht kein Anteil in der Zeile.
+
+       Gebaut wie meldeZug(): in JEDEM Zeichendurchgang neu melden, denn vor
+       jedem Durchgang wird vergessen (kern/buehne.js). MELDET NIEMAND, IST
+       DIE ZEILE LEER — sie luegt nicht und sie steht auch nicht mit einem
+       alten Satz da. Melden mehrere, gewinnt die groesste `naehe`; bei
+       Gleichstand die zuerst gemeldete.
+       ------------------------------------------------------------------ */
+    zielMeldungen: [],
+
+    meldeZiel: function (satz, naehe) {
+      if (!satz) return;
+      var n = (naehe === undefined || naehe === null || isNaN(naehe))
+        ? null : B.grenze(+naehe, 0, 1);
+      W.zielMeldungen.push({ satz: String(satz), naehe: n });
+    },
+
+    /* Die Meldung, die gezeigt wird — oder null. */
+    bestesZiel: function () {
+      var b = null;
+      for (var i = 0; i < W.zielMeldungen.length; i++) {
+        var z = W.zielMeldungen[i];
+        if (!b || (z.naehe !== null && (b.naehe === null || z.naehe > b.naehe))) b = z;
+      }
+      return b;
     }
   };
 
