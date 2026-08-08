@@ -1,5 +1,28 @@
 # LAUFENDER AUFTRAG — was dieser Lauf tut, falls der Kontext weg ist
 
+> ## WORAUF DIESER LAUF AB DEM 8. AUGUST 2026 GEHT — zuerst lesen
+>
+> Der Auftraggeber hat nach dreizehn Wellen eine Vollversion beauftragt und
+> dafür die Entscheidungen F1–F8 getroffen. Was der Lauf ab hier baut und in
+> welcher Reihenfolge, steht nicht mehr in diesem Blatt, sondern in zweien
+> daneben — dieses hier bleibt das **Gedächtnis** (was geschehen ist), jene
+> sind der **Plan** (was geschehen soll):
+>
+> | Blatt | wofür |
+> |---|---|
+> | [`../feinkonzept/FEINKONZEPT.md`](../feinkonzept/FEINKONZEPT.md) | was die Vollversion ist: Bogen light, fünfte Epoche „Die Gegenwart", Wirtschafts-Heilung, Erbstücke, Release-Schnitt |
+> | [`../feinkonzept/UMSETZUNGSPLAN.md`](../feinkonzept/UMSETZUNGSPLAN.md) | wie sie gebaut wird: Phasen P0–P5, Wellen W14–W25, die zehn Tokenregeln, die Gate-Bündel je Pakettyp |
+> | [`../analyse/ANALYSE.md`](../analyse/ANALYSE.md) | worauf beides steht: der belegte Stand vom 8. August, zehn Einzelberichte in `analyse/berichte/` |
+>
+> **Die Reihenfolge ist bindend, und zwar aus zwei Gründen, die schon Geld
+> gekostet haben:** erst die Welle-13-Abnahme zu Ende (T0.2) — auf einem nicht
+> abgenommenen Stand weiterzubauen war in diesem Lauf immer der teuerste
+> Fehler —, und erst der Bogen, dann die Gegenwart.
+>
+> Geholt am 8. August aus `claude/brauhaus-imperium-game-concept-uz4xoi`
+> (das ist T0.1). Die Detailberichte liest die Aufsicht abschnittsweise bei
+> Bedarf; **Builder lesen sie nie** (Tokenregel 2).
+
 ## DIE WERKSTATTSEITE — wo sie steht, und wie sie am 3. August still starb
 
 ```
