@@ -69,6 +69,41 @@ zurückgestellt.
 eingefrorenen Stand **`b098fc6` auf Hafen 8933**; die Reihenfolge steht unten
 unter „WAS ALS NÄCHSTES ZU TUN IST".
 
+> ### RESET NR. 22 UM 11:24 UTC — UND DIESMAL HAT DIE SICHERUNG GETRAGEN
+>
+> Der Baum stand wieder auf `171db5f`, **origin 86 Commits voraus**, Server tot,
+> kein Veröffentlicher — die Sperre nach Reset 17 hat richtig verhindert, dass
+> einer auf einem alten Baum startet. Die beiden uncommitteten Dateien waren wie
+> jedes Mal byteweise gleich mit origin.
+>
+> **Verloren gegangen ist nichts von Belang, und das ist neu.** Fünf der sechs
+> 1350-Läufe der Wiederholbarkeitsprobe lagen bereits committet auf origin,
+> weil der Veröffentlicher sie nimmt, sobald `linie.mjs` sie geschrieben hat.
+> `spiel/` ist zwischen `b098fc6` und dem heutigen Kopf **byteweise gleich** —
+> der Messstand liefert also nach dem Wiedereinfrieren dieselbe Fassung, und
+> `abnahme.sh` überspringt, was schon vorliegt. Die Reihe läuft weiter, wo sie
+> stand.
+>
+> **Die alte Falle beim Aufräumen ist wieder zugeschnappt:** ein
+> `... | xargs -r kill` auf die Prozessliste hat die eigene Warte-Shell
+> mitgenommen (Exit 144), noch **bevor** `git reset --hard` lief — die
+> Wiederherstellung sah dadurch aus, als sei sie erfolgt, und war es nicht.
+> **Erst prüfen, ob überhaupt ein Veröffentlicher läuft; nur dann töten.** Hier
+> lief keiner, der Schritt war überflüssig und hat allein Schaden angerichtet.
+
+### DIE ERSTE ZAHL DER ABNAHME: 1350 ist wiederholbar
+
+**Fünf Läufe zu 400 Wochen, eine einzige Prüfsumme** (`bb96459e6ac5`), einzeln
+nacheinander bei stiller Maschine, 272 s je Lauf. Der sechste läuft. Damit ist
+die Voraussetzung aller anderen Zahlen der Welle 13 in der Epoche gehalten, in
+der sie in Welle 11 gerissen ist — und der Spielstand des RAHMENS hat sie nicht
+angefasst.
+
+Aus demselben Lauf: 1350 über **14 Braujahre**, Kasse **34–524**, Kennzahl roh
+**1,09× bis 7,43×** — also **kein einziges Jahr unter 1×** —, **eine
+unwiderrufliche Festlegung** getroffen (der Spielkritiker kam in 1350 auf
+keine), null Seitenfehler.
+
 > ### EIN HAFEN IST KEIN BAUM — gemeldet von DER GEGENZUG aus eigenem Schaden
 >
 > Sein erster Geometrievergleich lief gegen **Hafen 8931**, auf dem gar nicht

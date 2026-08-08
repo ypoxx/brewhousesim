@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-08T10:56:54+00:00",
+ "stand": "2026-08-08T11:26:40+00:00",
  "phase": "Welle 13: alle vier Builder haben abgegeben, die Abnahme der Aufsicht laeuft am eingefrorenen Stand b098fc6. DER RAHMEN hat den Spielstand gebaut — nach zwoelf Wochen und einem Neuladen stimmen 15 von 15 Feldern in allen vier Epochen, und ?neu=1 haelt die Wiederholbarkeit frei. DIE JAHRESTAFEL hat den luegenden Knopf geheilt (die Abfrage suchte ein Element, das eine Zeile vorher geloescht worden war), die Tafel liegt an 10 von 10 Braujahren von selbst auf, ein fremder Reiterklick nimmt das Blatt in 16 von 16 Faellen weg, 51 Wortbrueche auf 0. DIE WOCHE hat gefunden, dass die Woche ohne Reiterklick gar nicht spielbar war — 94 Prozent der Klicks fielen auf WEITER —, und den haeufigsten Knopf auf 32,5 / 36,8 / 26,8 / 17,0 Prozent gebracht; Wochen mit zwei einander ausschliessenden Preisoptionen von 0 auf 70 / 92 / 81 / 56 von 100. DER GEGENZUG hat die Wochen ohne bezahlbaren Gegenzug von 55/60/0/19 auf 9/0/0/1 gesenkt, ohne dass sich die Partie um ein Byte bewegt: acht Laeufe zu 400 Wochen, vorher gegen nachher, dieselbe Pruefsumme in allen vier Epochen. Jetzt misst die Aufsicht selbst nach, zuerst die Wiederholbarkeit, danach kommen die vier blinden Kritiker.",
  "latte": "BILD: Playwright-Aufnahme 2752x1536 gegen zielbild/0X-JAHR.jpg, blind, vier Epochen derselbe Ort. SPIEL: Kritiker zählt am Bildschirm Preisschilder nebeneinander, unwiderrufliche Festlegungen, Züge des Gegners ohne ihn — plus Barschaft gegen Preis des nächsten sinnvollen Zuges. Ziel dieser Welle, hart: |rho| unter 0,7 in allen vier Epochen und höchstens ein Jahr von sechs unter 1x. TON: 30 Sekunden blind, Epoche und Vorgang benannt. NEU als vierte Prüfung: erreichbar muss jeder aktive Zug sein — werkbank/schuss/eichung/erreichbar.mjs. Sperrliste design/PRUEFUNG.md disqualifiziert.",
  "zahlen": {
@@ -143,10 +143,6 @@
   }
  ],
  "chronik": [
-  {
-   "zeit": "2026-08-01T21:14:44+00:00",
-   "text": "DIE STADT — vier Platten, ein Ort, ein wachsender Hof · Runde 6 · zurück an den Builder — ZURUECK, aber der Vorwurf aus Runde 5 ist erledigt: die Kueferei steht mit -87 px in der Hoftasche statt mit +122 px auf dem Hoftor, kein Fusspunkt eines der 43 Hofbauten liegt unter der Mauerlinie, kein einziger im Torfeld, und der Ziehbrunnen misst neben Menschen derselben Bildtiefe 1,15 Koerperlaengen = 1,9 m statt 4,1 m. Was ihn zurueckschickt, ist 1970: das fremde Auge waehlt in drei von vier Blindlaeufen das Zielbild und nennt dafuer Stellen, die am Schirm nachmessbar sind — ein Bierkasten des Kastenlagers ist neben dem Arbeiter mit der Sackkarre (55 px = 1,70 m) 0,78 m hoch und 2,08 m breit, der Fuenferstapel liest sich als 3,90 m hohe Wand. Dazu ein neuer Fehler derselben Familie wie der alte: DAS LOT misst den Boden, aber niemand misst die Tiefe — bild/hof/pferdestall.png traegt 17,1 Prozent leeren Rand unten (jede andere Hofdatei hoechstens 2,1), der Stall malt deshalb bei 64,1 Prozent und traegt den z-Index 680, und in 1884 sind dadurch 47,2 Prozent der Gaertanks zugedeckt, der vordere Tank ganz weg, der Laufsteg durchschnitten und die Stallveranda samt zwei Maennern auf dem Betonsockel der Tanks. Bestanden haben: Ortstreue ueber 620 Jahre (St. Michael in allen vier Platten auf 4 px genau an derselben Stelle, Flussbiegung und beide Bruecken deckungsgleich), Bildlatte 1350 und 1600 (je 2:0 platzunabhaengig, 1884 unentschieden), Einzelnachweis 7/10/11/10 sichtbare Hofbauten gegen die Forderung sechs, 19 Bauhof-Kaeufe mit echten Mausklicks (19 von 19 von elementFromPoint getroffen, 19 von 19 kosten Geld), kein Konsolenfehler und BRAUHAUS.lage leer in 16 Aufnahmen."
-  },
   {
    "zeit": "2026-08-01T21:15:06+00:00",
    "text": "DIE STADT, Runde 6 — Belege des Kritikers liegen in werkbank/schuss/stadt-r6-kritik/: tiefenumkehr-1884-pferdestall-ueber-gaertanks.png (Gaertanks allein neben Gaertanks im vollen Hof), massstab-1970-kastenlager.png (Kasten gegen Arbeiter mit Sackkarre), brunnen-1350-solo-und-hof.png, mauerlinie-gegenprobe-1350.png (?boden=1 auf leerer Platte), ortstreue-st-michael-vier-platten.png, 1970-gegen-zielbild-04.png. Messgeraet: werkbank/auge.py."
@@ -942,6 +938,10 @@
   {
    "zeit": "2026-08-08T10:56:54+00:00",
    "text": "Ein Hafen ist kein Baum: DER GEGENZUG mass zuerst gegen den eingefrorenen Vorzustand der Aufsicht und bekam 48 von 48 Abweichungen. Zweimal derselbe Fehler in vier Tagen — wer misst, prueft vor der ersten Zahl, welche Fassung der Hafen ausliefert."
+  },
+  {
+   "zeit": "2026-08-08T11:26:40+00:00",
+   "text": "Reset 22 um 11:24 UTC — und die Sicherung hat getragen: fuenf der sechs 1350-Laeufe lagen schon committet auf origin. Erste Zahl der Abnahme: 1350 fuenfmal hintereinander dieselbe Pruefsumme bb96459e6ac5, 400 Wochen je Lauf. Der Spielstand hat die Wiederholbarkeit nicht angefasst."
   }
  ]
 }
