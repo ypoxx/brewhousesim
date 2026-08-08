@@ -140,7 +140,7 @@ Schalter `KLICKE=1`: die Hand drückt dann in JEDER Woche den billigsten
 bezahlbaren Gegenzug, den sie findet. Hundert Wochen, Epoche 1, laufender
 Stand, gegen dieselbe Hand ohne Drücken:
 
-| | Hand rührt ihn nicht an | Hand drückt **31×** |
+| 1350 | Hand rührt ihn nicht an | Hand drückt **31×** |
 |---|---|---|
 | Adressen, die **er** hält, Anfang → Ende | 3 → **6** | 3 → **5** |
 | Adressen, die **das Haus** hält, am Ende | 1 | 2 |
@@ -148,8 +148,17 @@ Stand, gegen dieselbe Hand ohne Drücken:
 | seine Kasse, Anfang → Ende | 320 → 224 Pf | 320 → **106** Pf |
 | Wochen ohne bezahlbaren Gegenzug danach | 0 | **69** |
 
-**Wer ihn jede Woche schlägt, räumt ihn nicht ab — er wächst trotzdem von drei
-auf fünf Adressen und zieht 25-mal MEHR.** Was sich ändert: seine Kasse
+| 1970 | Hand rührt ihn nicht an | Hand drückt **33×** |
+|---|---|---|
+| Adressen, die **er** hält, Anfang → Ende | 3 → **5** | 3 → **4** |
+| Adressen, die **das Haus** hält, am Ende | 0 | 1 |
+| **seine Züge** in 100 Wochen | 50 | **54** |
+| seine Kasse, Anfang → Ende | 1.193.105 → 52.973 DM | 1.193.105 → **116.659** DM |
+
+**Wer ihn jede Woche schlägt, räumt ihn nicht ab — er wächst in beiden Epochen
+trotzdem, von drei auf fünf bzw. vier Adressen, und zieht sogar MEHR
+(1350: 68 statt 43).** In 1970 steht er am Ende sogar reicher da als ohne
+Gegenwehr: das Hinhalten nimmt ihm den Preisdruck, nicht das Geschäft. Was sich ändert: seine Kasse
 halbiert sich, das Haus holt eine Adresse zurück statt keiner — und die eigene
 Lade ist danach in 69 von 100 Wochen leer. Der Zug hat einen Preis, und man
 merkt ihn.
@@ -575,7 +584,7 @@ geprüft: `abweichung []`.)*
 | 1350 | `ca86822e306fef8d` | `ca86822e306fef8d` | **gleich** |
 | **1600** | `94df265afe2fbb10` | `94df265afe2fbb10` | **gleich** |
 | 1884 | `d2978598077039e0` | `d2978598077039e0` | **gleich** |
-| 1970 | *(läuft)* | | |
+| 1970 | *(Lauf hing beim Schreiben dieses Berichts noch)* | | |
 
 Die Prüfsumme geht über die **ganze** Aufzeichnung eines 400-Wochen-Laufs
 (nur das Feld `hafen` ist herausgenommen): Kasse und Rohstoff jeder einzelnen
@@ -594,6 +603,12 @@ Die Kennzahlreihen, damit sie jemand nachrechnen kann:
 1884  8,35 · 5,03 · 1,70 · 2,75 · 1,61 · 6,04 · 3,34 · 2,05 · 3,65 · 1,53 ·
       13,32 · 8,70 · 11,14 · 2,02        (vorher = nachher)
 ```
+
+*(Die 1970er Läufe brauchen je rund zwanzig Minuten und waren beim Schreiben
+dieses Berichts noch nicht durch. Sie landen als `rho/w12-e4.json` und
+`rho/w12g-e4.json`; wer nachsehen will:*
+`python3 -c "import json,hashlib; a=json.load(open('w12-e4.json')); b=json.load(open('w12g-e4.json')); [d.pop('hafen',None) for d in (a,b)]; print(hashlib.sha256(json.dumps(a,sort_keys=True).encode()).hexdigest()==hashlib.sha256(json.dumps(b,sort_keys=True).encode()).hexdigest())"`
+*Ich behaupte für 1970 nichts, was ich nicht gemessen habe.)*
 
 **1600 ist die Epoche ohne Reserve** (ρ +0,538 bei einer Grenze von 0,700, der
 Abstand beträgt 0,162). Sie ist Ziffer für Ziffer unverändert — auch der

@@ -168,6 +168,36 @@ zurückgestellt.
 > zählen in denselben Klickanteil. Jede Zahl von jetzt ist überholt, sobald er
 > abgibt.
 
+### WAS ALS NÄCHSTES ZU TUN IST — die Reihenfolge, falls der Kontext weg ist
+
+Sobald **DER GEGENZUG** abgegeben hat (die anderen drei sind fertig), und
+**erst dann**, weil jede Messung unter der Last fremder Browser wertlos ist:
+
+1. **Einen einzigen Stand einfrieren**, an dem alles Weitere gemessen wird:
+   `./werkbank/schuss/aufsicht/messstand.sh HEAD 8933` — er prüft selbst nach,
+   ob der Server wirklich diese Fassung ausliefert.
+2. **Die Wiederholbarkeit zuerst**, weil sie die Voraussetzung aller anderen
+   Zahlen ist: `HAFEN=8933 linie.mjs <epoche> 400 <datei>`, **einzeln**
+   nacheinander, drei Läufe je Epoche und **sechs in 1350**. Frist großzügig —
+   die Läufe brauchen unter Last über zehn Minuten (am 8. August um 08:35 sind
+   drei an einer 600-s-Frist gescheitert, siehe
+   `aufsicht/welle13-gegen/wdh/WARUM-SPAETER.md`).
+3. **Die Latte 2** aus denselben Läufen: `rueckkopplung-r3/auswerten.py`. Ziel
+   unverändert: |ρ| < 0,700 in allen vier Epochen über 12/13/14 Braujahre,
+   höchstens ein Jahr von sechs unter 1×. **1600 zuerst ansehen** — es stand
+   nach Welle 12 bei +0,538 und hat 0,162 Reserve.
+4. **Die eigene Gegenmessung der Welle 13:**
+   `MARKE=nachher-e<N> HAFEN=8933 probe13.mjs <epoche> 100` gegen die Zahlen in
+   `aufsicht/welle13-gegen/BEFUND-VORHER.md`. Dazu `spiel-w12/wiederkehr.mjs`
+   (Neuladen) und `spiel-w12/hand3.mjs` + `zaehle.mjs` (Klickanteil) —
+   **unverändert**, weil sie die Ausgangszahlen erzeugt haben.
+5. **Erst danach die vier blinden Kritiker** nach `gauntlet/WELLE-13-KRITIK.md`,
+   jeder mit frischem Kontext, am selben eingefrorenen Stand. Sie bekommen
+   **keinen** Baubericht und **keinen** Befund der Aufsicht zu sehen.
+6. Dann die offene Schwelle entscheiden (drei häufigste Knöpfe in 1350/1600) und
+   die Frage aus Welle 12 messen: hält die Wiederholbarkeit **auch ohne** die
+   Vorziehregel des Rundenschlusses?
+
 **Drei Entscheidungen der Aufsicht stehen im Brief**, damit kein Builder rät:
 
 1. **A12, der Epochenwechsel, wird NICHT eingelöst.** Sechs Stunden für Epoche I,
