@@ -261,8 +261,11 @@ allen fünfzig Wochen da.**
 
 ### Und was das an der Geometrie anrichtet — nachgemessen, nicht behauptet
 
-`gegenzug-w13/mass-laden.mjs`, **48 Lagen** (4 Fenster × 4 Epochen × 3
-Zeitpunkte), vorher gegen nachher, Feld für Feld:
+Ein breiterer Reiter kann die Reiterzeile umbrechen lassen, die Werkbank tiefer
+machen und damit Knöpfe verschieben, die eine messende Hand trifft oder nicht
+trifft. `gegenzug-w13/mass-laden.mjs` lädt dieselbe URL an beiden
+eingefrorenen Bäumen und vergleicht Feld für Feld — **48 Lagen** (4 Fenster ×
+4 Epochen × 3 Zeitpunkte), Ablage `protokoll/mass-laden-w12.txt`:
 
 | Feld | Abweichungen |
 |---|---|
@@ -272,13 +275,35 @@ Zeitpunkte), vorher gegen nachher, Feld für Feld:
 | Zahl der Reiter | **0 von 48** |
 | `weiter` · `fuhre:abschicken` · `fuhre:wie-vorige` · `fuhre:fuellen` · `preis:tafel` | **0 von 48** |
 | Kasse · Zählerstand des Gegners | **0 von 48** |
-| **mein eigener Reiter** | 24 von 48 — **nur die Breite**, 224 → 262 Bezugspixel bei 2752×1536; Höhe, Ort und Zeile unverändert |
+| **mein eigener Reiter** | 24 von 48 — **nur die Breite** |
 
-Der Reiter wird also breiter, und **sonst bewegt sich nichts** — die
-Reiterzeile bricht in keiner der 48 Lagen anders um, die Werkbank wird nicht
-höher, und die fünf Knöpfe, an denen jede Messung dieses Loops hängt, stehen
-auf demselben Pixel. Bei 1366×768 ändert sich nicht einmal die Breite (dort
-bricht `.wort` ohnehin um).
+Die 24 im Einzelnen, x/y/Breite/Höhe in Bildpunkten:
+
+```
+2752×1536   vorher [190,120,224,63]   nachher [190,120,262,63]   (12 Lagen)
+1920×1080   vorher [ 91, 84,166,78]   nachher [ 91, 84,183,78]   ( 6 Lagen)
+1920×1080   vorher [ 91, 84,166,91]   nachher [ 91, 84,183,91]   ( 6 Lagen)
+1600× 900   unverändert                                          (12 Lagen)
+1366× 768   unverändert                                          (12 Lagen)
+```
+
+**Ort und Höhe bleiben auf dem Pixel, nur die Breite wächst** — und auf den
+beiden kleinen Fenstern nicht einmal die, weil `.wort` dort ohnehin umbricht.
+Die Reiterzeile bricht in keiner der 48 Lagen anders um, die Werkbank wird
+nicht höher, und die fünf Knöpfe, an denen jede Messung dieses Loops hängt,
+stehen auf demselben Pixel.
+
+> **Und eine Warnung an den, der das nachmisst — mir ist sie teuer zu stehen
+> gekommen:** ein erster Durchgang dieses Vergleichs lief gegen einen Hafen,
+> auf dem gar nicht mein Baum lag, sondern der eines fremden Messstands. Er
+> meldete 48 von 48 Abweichungen, darunter *Zahl der Reiter* und *Werkbank* —
+> und die Ursache war, dass der eine Baum `kern/stand.js` hatte und der andere
+> nicht. **Ein `curl` auf eine Datei, die es nur in einem der beiden Bäume gibt,
+> hätte das in einer Sekunde gezeigt.** Seither prüfe ich jeden Messhafen mit
+> `curl -o /dev/null -w %{http_code}` und einem `md5sum` der eigenen Datei,
+> bevor ich eine Zahl aufschreibe. Die Zahlen oben sind so geprüft: 8933 und
+> 8934 tragen beide `stand.js`-404 und unterscheiden sich im `md5sum` von
+> `stuecke/gegner.js`.
 
 ---
 
@@ -526,19 +551,23 @@ werden. Seitenfehler: 0 in beiden.
 | `data-a3zonen` (Beschriftungen + Griffe) | 5 · 5 · 6 · 7 | 5 · 5 · 6 · 7 |
 | davon Griffe (neu) | 1 · 1 · 1 · 1 | 1 · 1 · 1 · 1 |
 
-Vorher standen dort 4 · 4 · 5 · 6 Zonen; die Ausweiche ist also um **genau
-eine** gewachsen, und das ist der Griff DES PREISES.
+Vorher standen dort 4 · 4 · 5 · 6 Zonen (mit dem Welle-12-Stück gemessen);
+die Ausweiche ist also um **genau eine** gewachsen, und das ist der Griff DES
+PREISES.
 
-`werkbank/schuss/aufsicht/lesbarkeit.mjs`, 1600×900, vier Epochen:
+`werkbank/schuss/aufsicht/lesbarkeit.mjs`, 1600×900, vier Epochen, an
+demselben Paar eingefrorener Bäume (8933 gegen 8934):
 
 | | vorher | nachher |
 |---|---|---|
 | abgeschnittene Kästen | 0 · 1 · 0 · 1 | **0 · 1 · 0 · 1** |
-| aktive Knöpfe unter 24 px | 0 von 78/79/85/81 | **0 von 75/77/81/77** |
-| Textknoten unter 12 px | 59 · 59 · 59 · 60 | 60 · 60 · 60 · 61 |
+| Textknoten unter 12 px | 59 · 59 · 59 · 60 | **59 · 59 · 59 · 60** |
+| aktive Knöpfe **gesamt** | 78 · 79 · 85 · 81 | **81 · 83 · 89 · 84** |
+| davon unter 24 px | **0** | **0** |
 
-Der zweite Knopf bringt also **keinen** neuen abgeschnittenen Kasten und
-keinen Knopf unter die 24-px-Grenze.
+Drei bis vier Knöpfe mehr je Epoche — das sind die Zukaufknöpfe —, **kein**
+neuer abgeschnittener Kasten, **kein** neuer Textknoten unter 12 px und
+**keiner** der neuen Knöpfe unter der 24-px-Grenze der vierten Latte.
 
 `werkbank/schuss.mjs`, 2752×1536, alle vier Epochen: **„keine Fehler auf der
 Seite"** (`werkbank/schuss/gegenzug-w13/schuesse/welle13-gegenzug-e1..4.png`).
