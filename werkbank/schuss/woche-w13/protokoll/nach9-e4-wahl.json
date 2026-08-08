@@ -1,0 +1,1835 @@
+{
+ "epoche": 4,
+ "saat": "1350",
+ "fenster": "1600x900",
+ "gespielteWochen": 100,
+ "sprungWochen": 61,
+ "klicks": 135,
+ "danebengegriffen": 4,
+ "fehler": [],
+ "abbruch": null,
+ "schluss": {
+  "jahr": 1975,
+  "woche": 1,
+  "kasse": 92815,
+  "lage": 0
+ },
+ "ersterSchirmZielWorte": [
+  "Lastschrift mit dem Lieferschein, kein Ziel.",
+  "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)",
+  "DAS ZIEL —"
+ ],
+ "uebergabeGesehen": [
+  {
+   "n": 1,
+   "jahr": 1970,
+   "woche": 1,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 2,
+   "jahr": 1970,
+   "woche": 2,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 3,
+   "jahr": 1970,
+   "woche": 8,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 4,
+   "jahr": 1970,
+   "woche": 14,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 5,
+   "jahr": 1970,
+   "woche": 15,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 6,
+   "jahr": 1970,
+   "woche": 16,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 7,
+   "jahr": 1970,
+   "woche": 22,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 8,
+   "jahr": 1970,
+   "woche": 23,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 9,
+   "jahr": 1970,
+   "woche": 27,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 10,
+   "jahr": 1970,
+   "woche": 28,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 11,
+   "jahr": 1970,
+   "woche": 29,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 12,
+   "jahr": 1970,
+   "woche": 30,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 4 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)"
+   ]
+  },
+  {
+   "n": 13,
+   "jahr": 1971,
+   "woche": 1,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 14,
+   "jahr": 1971,
+   "woche": 2,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 15,
+   "jahr": 1971,
+   "woche": 3,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 16,
+   "jahr": 1971,
+   "woche": 4,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 17,
+   "jahr": 1971,
+   "woche": 5,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 18,
+   "jahr": 1971,
+   "woche": 6,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 19,
+   "jahr": 1971,
+   "woche": 7,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 20,
+   "jahr": 1971,
+   "woche": 8,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 21,
+   "jahr": 1971,
+   "woche": 9,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 22,
+   "jahr": 1971,
+   "woche": 10,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 23,
+   "jahr": 1971,
+   "woche": 11,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 24,
+   "jahr": 1971,
+   "woche": 12,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 25,
+   "jahr": 1971,
+   "woche": 13,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 26,
+   "jahr": 1971,
+   "woche": 14,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 27,
+   "jahr": 1971,
+   "woche": 15,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 28,
+   "jahr": 1971,
+   "woche": 16,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 29,
+   "jahr": 1971,
+   "woche": 17,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 30,
+   "jahr": 1971,
+   "woche": 18,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 31,
+   "jahr": 1971,
+   "woche": 19,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 32,
+   "jahr": 1971,
+   "woche": 20,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 33,
+   "jahr": 1971,
+   "woche": 21,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 34,
+   "jahr": 1971,
+   "woche": 22,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 35,
+   "jahr": 1971,
+   "woche": 23,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 36,
+   "jahr": 1971,
+   "woche": 24,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 37,
+   "jahr": 1971,
+   "woche": 25,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 38,
+   "jahr": 1971,
+   "woche": 26,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 39,
+   "jahr": 1971,
+   "woche": 27,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 40,
+   "jahr": 1971,
+   "woche": 28,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 41,
+   "jahr": 1971,
+   "woche": 29,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 42,
+   "jahr": 1971,
+   "woche": 30,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (75 % des Wegs)"
+   ]
+  },
+  {
+   "n": 43,
+   "jahr": 1972,
+   "woche": 1,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 44,
+   "jahr": 1972,
+   "woche": 2,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 45,
+   "jahr": 1972,
+   "woche": 3,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 46,
+   "jahr": 1972,
+   "woche": 4,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 47,
+   "jahr": 1972,
+   "woche": 5,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 48,
+   "jahr": 1972,
+   "woche": 6,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 49,
+   "jahr": 1972,
+   "woche": 7,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 50,
+   "jahr": 1972,
+   "woche": 8,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 51,
+   "jahr": 1972,
+   "woche": 9,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 52,
+   "jahr": 1972,
+   "woche": 10,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 53,
+   "jahr": 1972,
+   "woche": 11,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 54,
+   "jahr": 1972,
+   "woche": 17,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 55,
+   "jahr": 1972,
+   "woche": 23,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 56,
+   "jahr": 1972,
+   "woche": 29,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 57,
+   "jahr": 1972,
+   "woche": 30,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 2 Braujahre, dann ist das Haus alt genug für eine Übergabe. (83 % des Wegs)"
+   ]
+  },
+  {
+   "n": 58,
+   "jahr": 1973,
+   "woche": 1,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 59,
+   "jahr": 1973,
+   "woche": 2,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 60,
+   "jahr": 1973,
+   "woche": 3,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 61,
+   "jahr": 1973,
+   "woche": 4,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 62,
+   "jahr": 1973,
+   "woche": 5,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 63,
+   "jahr": 1973,
+   "woche": 6,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 64,
+   "jahr": 1973,
+   "woche": 7,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 65,
+   "jahr": 1973,
+   "woche": 8,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 66,
+   "jahr": 1973,
+   "woche": 9,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 67,
+   "jahr": 1973,
+   "woche": 15,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 68,
+   "jahr": 1973,
+   "woche": 21,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 69,
+   "jahr": 1973,
+   "woche": 27,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 70,
+   "jahr": 1973,
+   "woche": 30,
+   "zeilen": [
+    "Ziel: das Haus weitergeben, solange es steht. Noch 1 Braujahr, dann ist das Haus alt genug für eine Übergabe. (92 % des Wegs)"
+   ]
+  },
+  {
+   "n": 71,
+   "jahr": 1974,
+   "woche": 1,
+   "zeilen": [
+    "Ziel: Die Übergabe im Handelsregister liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
+    "DIE ÜBERGABE IM HANDELSREGISTER · 1974",
+    "Die Übergabe vor dem Rat ansehen"
+   ]
+  },
+  {
+   "n": 72,
+   "jahr": 1974,
+   "woche": 2,
+   "zeilen": [
+    "DIE ÜBERGABE IM HANDELSREGISTER liegt — noch 3 Wochen. Das ist das gute Ende.",
+    "DIE ÜBERGABE IM HANDELSREGISTER · noch 3 Wochen",
+    "Ziel: Die Übergabe im Handelsregister liegt auf dem Tisch — noch 3 Wochen. Das ist das gute Ende. (100 % des Wegs)",
+    "DIE ÜBERGABE IM HANDELSREGISTER · noch 3 Wochen",
+    "Die Übergabe im Handelsregister · 1974",
+    "Das Haus übergeben und aufhören"
+   ]
+  },
+  {
+   "n": 73,
+   "jahr": 1974,
+   "woche": 3,
+   "zeilen": [
+    "DIE ÜBERGABE IM HANDELSREGISTER liegt — noch 2 Wochen. Das ist das gute Ende.",
+    "DIE ÜBERGABE IM HANDELSREGISTER · noch 2 Wochen",
+    "Ziel: Die Übergabe im Handelsregister liegt auf dem Tisch — noch 2 Wochen. Das ist das gute Ende. (100 % des Wegs)",
+    "DIE ÜBERGABE IM HANDELSREGISTER · noch 2 Wochen",
+    "Die Übergabe im Handelsregister · 1974",
+    "Das Haus übergeben und aufhören"
+   ]
+  },
+  {
+   "n": 74,
+   "jahr": 1974,
+   "woche": 4,
+   "zeilen": [
+    "DIE ÜBERGABE IM HANDELSREGISTER liegt — noch 1 Woche. Das ist das gute Ende.",
+    "DIE ÜBERGABE IM HANDELSREGISTER · noch 1 Woche",
+    "Ziel: Die Übergabe im Handelsregister liegt auf dem Tisch — noch 1 Woche. Das ist das gute Ende. (100 % des Wegs)",
+    "DIE ÜBERGABE IM HANDELSREGISTER · noch 1 Woche",
+    "Die Übergabe im Handelsregister · 1974",
+    "Das Haus übergeben und aufhören"
+   ]
+  }
+ ],
+ "wahl": [
+  {
+   "n": 1,
+   "jahr": 1970,
+   "woche": 1,
+   "kasse": 86000,
+   "deckung": 2.2500719499751445,
+   "greifbar": 28,
+   "mitPreis": 5,
+   "bezahlbar": 5,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 2,
+   "jahr": 1970,
+   "woche": 2,
+   "kasse": 71441,
+   "deckung": 1.8691556997462129,
+   "greifbar": 47,
+   "mitPreis": 14,
+   "bezahlbar": 14,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 3,
+   "jahr": 1970,
+   "woche": 8,
+   "kasse": 55629,
+   "deckung": 4.102736189984512,
+   "greifbar": 54,
+   "mitPreis": 18,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 4,
+   "jahr": 1970,
+   "woche": 14,
+   "kasse": 66564,
+   "deckung": 3.1558884885264553,
+   "greifbar": 58,
+   "mitPreis": 21,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 5,
+   "jahr": 1970,
+   "woche": 15,
+   "kasse": 70376,
+   "deckung": 3.336620519628295,
+   "greifbar": 57,
+   "mitPreis": 21,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 6,
+   "jahr": 1970,
+   "woche": 16,
+   "kasse": 69153,
+   "deckung": 7.026315789473684,
+   "greifbar": 64,
+   "mitPreis": 20,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 7,
+   "jahr": 1970,
+   "woche": 22,
+   "kasse": 31434,
+   "deckung": 1.1087830687830689,
+   "greifbar": 49,
+   "mitPreis": 12,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 8,
+   "jahr": 1970,
+   "woche": 23,
+   "kasse": 40694,
+   "deckung": 1.4354144620811287,
+   "greifbar": 50,
+   "mitPreis": 11,
+   "bezahlbar": 9,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 9,
+   "jahr": 1970,
+   "woche": 27,
+   "kasse": 42942,
+   "deckung": 1.554686651460845,
+   "greifbar": 50,
+   "mitPreis": 14,
+   "bezahlbar": 13,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 10,
+   "jahr": 1970,
+   "woche": 28,
+   "kasse": 38108,
+   "deckung": 1.379674885051229,
+   "greifbar": 49,
+   "mitPreis": 12,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 11,
+   "jahr": 1970,
+   "woche": 29,
+   "kasse": 34114,
+   "deckung": 1.2579372395737305,
+   "greifbar": 52,
+   "mitPreis": 15,
+   "bezahlbar": 13,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 12,
+   "jahr": 1970,
+   "woche": 30,
+   "kasse": 35584,
+   "deckung": 1.312142778126037,
+   "greifbar": 51,
+   "mitPreis": 15,
+   "bezahlbar": 12,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 13,
+   "jahr": 1971,
+   "woche": 1,
+   "kasse": 66109,
+   "deckung": 2.4377373796968915,
+   "greifbar": 31,
+   "mitPreis": 7,
+   "bezahlbar": 6,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 14,
+   "jahr": 1971,
+   "woche": 2,
+   "kasse": 49128,
+   "deckung": 1.4440917107583775,
+   "greifbar": 60,
+   "mitPreis": 23,
+   "bezahlbar": 20,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 15,
+   "jahr": 1971,
+   "woche": 3,
+   "kasse": 44894,
+   "deckung": 1.3196355085243974,
+   "greifbar": 60,
+   "mitPreis": 23,
+   "bezahlbar": 20,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 16,
+   "jahr": 1971,
+   "woche": 4,
+   "kasse": 39043,
+   "deckung": 1.1476484420928865,
+   "greifbar": 59,
+   "mitPreis": 23,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 17,
+   "jahr": 1971,
+   "woche": 5,
+   "kasse": 35932,
+   "deckung": 1.0562022339800117,
+   "greifbar": 59,
+   "mitPreis": 23,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 18,
+   "jahr": 1971,
+   "woche": 6,
+   "kasse": 32789,
+   "deckung": 3.109140906504836,
+   "greifbar": 62,
+   "mitPreis": 24,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 19,
+   "jahr": 1971,
+   "woche": 7,
+   "kasse": 28724,
+   "deckung": 2.723686705860042,
+   "greifbar": 60,
+   "mitPreis": 23,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 20,
+   "jahr": 1971,
+   "woche": 8,
+   "kasse": 24678,
+   "deckung": 2.3400341361653707,
+   "greifbar": 59,
+   "mitPreis": 22,
+   "bezahlbar": 16,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 21,
+   "jahr": 1971,
+   "woche": 9,
+   "kasse": 22723,
+   "deckung": 1.3358612580834803,
+   "greifbar": 56,
+   "mitPreis": 20,
+   "bezahlbar": 15,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 22,
+   "jahr": 1971,
+   "woche": 10,
+   "kasse": 26586,
+   "deckung": 1.5629629629629629,
+   "greifbar": 56,
+   "mitPreis": 21,
+   "bezahlbar": 16,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 23,
+   "jahr": 1971,
+   "woche": 11,
+   "kasse": 35213,
+   "deckung": 2.1247209316357933,
+   "greifbar": 60,
+   "mitPreis": 23,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 24,
+   "jahr": 1971,
+   "woche": 12,
+   "kasse": 38136,
+   "deckung": 2.3010921378145177,
+   "greifbar": 58,
+   "mitPreis": 23,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 25,
+   "jahr": 1971,
+   "woche": 13,
+   "kasse": 42581,
+   "deckung": 2.5692994629819585,
+   "greifbar": 60,
+   "mitPreis": 23,
+   "bezahlbar": 19,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 26,
+   "jahr": 1971,
+   "woche": 14,
+   "kasse": 40000,
+   "deckung": 2.3515579071134627,
+   "greifbar": 52,
+   "mitPreis": 22,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 27,
+   "jahr": 1971,
+   "woche": 15,
+   "kasse": 39284,
+   "deckung": 2.309465020576132,
+   "greifbar": 56,
+   "mitPreis": 20,
+   "bezahlbar": 16,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 28,
+   "jahr": 1971,
+   "woche": 16,
+   "kasse": 39655,
+   "deckung": 2.331275720164609,
+   "greifbar": 56,
+   "mitPreis": 20,
+   "bezahlbar": 16,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 29,
+   "jahr": 1971,
+   "woche": 17,
+   "kasse": 40059,
+   "deckung": 2.3550264550264552,
+   "greifbar": 52,
+   "mitPreis": 19,
+   "bezahlbar": 16,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 30,
+   "jahr": 1971,
+   "woche": 18,
+   "kasse": 40530,
+   "deckung": 2.382716049382716,
+   "greifbar": 54,
+   "mitPreis": 21,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 31,
+   "jahr": 1971,
+   "woche": 19,
+   "kasse": 40924,
+   "deckung": 2.405878894767784,
+   "greifbar": 54,
+   "mitPreis": 21,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 32,
+   "jahr": 1971,
+   "woche": 20,
+   "kasse": 41392,
+   "deckung": 2.433392122281011,
+   "greifbar": 54,
+   "mitPreis": 21,
+   "bezahlbar": 18,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 33,
+   "jahr": 1971,
+   "woche": 21,
+   "kasse": 41608,
+   "deckung": 3.0686628807434175,
+   "greifbar": 55,
+   "mitPreis": 22,
+   "bezahlbar": 19,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 34,
+   "jahr": 1971,
+   "woche": 22,
+   "kasse": 41999,
+   "deckung": 3.097499815620621,
+   "greifbar": 55,
+   "mitPreis": 22,
+   "bezahlbar": 19,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 35,
+   "jahr": 1971,
+   "woche": 23,
+   "kasse": 42456,
+   "deckung": 3.131204366103695,
+   "greifbar": 59,
+   "mitPreis": 23,
+   "bezahlbar": 19,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 36,
+   "jahr": 1971,
+   "woche": 24,
+   "kasse": 37761,
+   "deckung": 2.7849398923224427,
+   "greifbar": 59,
+   "mitPreis": 22,
+   "bezahlbar": 19,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 37,
+   "jahr": 1971,
+   "woche": 25,
+   "kasse": 38147,
+   "deckung": 1.7442615454961135,
+   "greifbar": 55,
+   "mitPreis": 18,
+   "bezahlbar": 15,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 38,
+   "jahr": 1971,
+   "woche": 26,
+   "kasse": 38514,
+   "deckung": 1.761042524005487,
+   "greifbar": 53,
+   "mitPreis": 18,
+   "bezahlbar": 15,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 39,
+   "jahr": 1971,
+   "woche": 27,
+   "kasse": 38881,
+   "deckung": 3.555647005029721,
+   "greifbar": 56,
+   "mitPreis": 20,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 40,
+   "jahr": 1971,
+   "woche": 28,
+   "kasse": 39243,
+   "deckung": 3.5887517146776404,
+   "greifbar": 55,
+   "mitPreis": 20,
+   "bezahlbar": 17,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 41,
+   "jahr": 1971,
+   "woche": 29,
+   "kasse": 28668,
+   "deckung": 1.3108367626886146,
+   "greifbar": 55,
+   "mitPreis": 14,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 42,
+   "jahr": 1971,
+   "woche": 30,
+   "kasse": 10076,
+   "deckung": 0.4607224508459076,
+   "greifbar": 53,
+   "mitPreis": 12,
+   "bezahlbar": 6,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 43,
+   "jahr": 1972,
+   "woche": 1,
+   "kasse": 57756,
+   "deckung": 2.640877914951989,
+   "greifbar": 31,
+   "mitPreis": 6,
+   "bezahlbar": 4,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 44,
+   "jahr": 1972,
+   "woche": 2,
+   "kasse": 19762,
+   "deckung": 0.9036122542295382,
+   "greifbar": 48,
+   "mitPreis": 13,
+   "bezahlbar": 9,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 45,
+   "jahr": 1972,
+   "woche": 3,
+   "kasse": 14441,
+   "deckung": 1.1319172284057062,
+   "greifbar": 50,
+   "mitPreis": 14,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 46,
+   "jahr": 1972,
+   "woche": 4,
+   "kasse": 7320,
+   "deckung": 0.607317680245582,
+   "greifbar": 53,
+   "mitPreis": 13,
+   "bezahlbar": 8,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 47,
+   "jahr": 1972,
+   "woche": 5,
+   "kasse": 3226,
+   "deckung": 0.26818521905395293,
+   "greifbar": 54,
+   "mitPreis": 12,
+   "bezahlbar": 6,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 48,
+   "jahr": 1972,
+   "woche": 6,
+   "kasse": 552,
+   "deckung": 0.045889101338432124,
+   "greifbar": 49,
+   "mitPreis": 10,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 49,
+   "jahr": 1972,
+   "woche": 7,
+   "kasse": 7406,
+   "deckung": 0.615678776290631,
+   "greifbar": 55,
+   "mitPreis": 16,
+   "bezahlbar": 9,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 50,
+   "jahr": 1972,
+   "woche": 8,
+   "kasse": 2127,
+   "deckung": 0.17682267852689335,
+   "greifbar": 54,
+   "mitPreis": 14,
+   "bezahlbar": 7,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 51,
+   "jahr": 1972,
+   "woche": 9,
+   "kasse": 7848,
+   "deckung": 0.6524233103333611,
+   "greifbar": 55,
+   "mitPreis": 16,
+   "bezahlbar": 9,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 52,
+   "jahr": 1972,
+   "woche": 10,
+   "kasse": 2642,
+   "deckung": 0.21963587995677114,
+   "greifbar": 52,
+   "mitPreis": 14,
+   "bezahlbar": 7,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 53,
+   "jahr": 1972,
+   "woche": 11,
+   "kasse": 8436,
+   "deckung": 0.7013051791503866,
+   "greifbar": 55,
+   "mitPreis": 15,
+   "bezahlbar": 8,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 54,
+   "jahr": 1972,
+   "woche": 17,
+   "kasse": 1284,
+   "deckung": 0.06604938271604938,
+   "greifbar": 52,
+   "mitPreis": 12,
+   "bezahlbar": 7,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 55,
+   "jahr": 1972,
+   "woche": 23,
+   "kasse": 4065,
+   "deckung": 0.16728395061728396,
+   "greifbar": 44,
+   "mitPreis": 8,
+   "bezahlbar": 4,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 56,
+   "jahr": 1972,
+   "woche": 29,
+   "kasse": 195,
+   "deckung": 0.018490422909159872,
+   "greifbar": 44,
+   "mitPreis": 4,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 57,
+   "jahr": 1972,
+   "woche": 30,
+   "kasse": 195,
+   "deckung": 0.025473546701502287,
+   "greifbar": 44,
+   "mitPreis": 4,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 58,
+   "jahr": 1973,
+   "woche": 1,
+   "kasse": 50000,
+   "deckung": 6.531678641410843,
+   "greifbar": 30,
+   "mitPreis": 5,
+   "bezahlbar": 5,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 59,
+   "jahr": 1973,
+   "woche": 2,
+   "kasse": 9906,
+   "deckung": 1.2940561724363162,
+   "greifbar": 43,
+   "mitPreis": 9,
+   "bezahlbar": 6,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 60,
+   "jahr": 1973,
+   "woche": 3,
+   "kasse": 5124,
+   "deckung": 0.6693664271717832,
+   "greifbar": 43,
+   "mitPreis": 9,
+   "bezahlbar": 6,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 61,
+   "jahr": 1973,
+   "woche": 4,
+   "kasse": 1309,
+   "deckung": 0.07695473251028806,
+   "greifbar": 40,
+   "mitPreis": 4,
+   "bezahlbar": 2,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 62,
+   "jahr": 1973,
+   "woche": 5,
+   "kasse": 7020,
+   "deckung": 1.2838332114118507,
+   "greifbar": 40,
+   "mitPreis": 4,
+   "bezahlbar": 3,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 63,
+   "jahr": 1973,
+   "woche": 6,
+   "kasse": 1731,
+   "deckung": 0.3165691294806145,
+   "greifbar": 37,
+   "mitPreis": 1,
+   "bezahlbar": 1,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 64,
+   "jahr": 1973,
+   "woche": 7,
+   "kasse": 878,
+   "deckung": 0.16057059253840528,
+   "greifbar": 40,
+   "mitPreis": 3,
+   "bezahlbar": 2,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 65,
+   "jahr": 1973,
+   "woche": 8,
+   "kasse": 25,
+   "deckung": 0.004572055596196049,
+   "greifbar": 39,
+   "mitPreis": 4,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 66,
+   "jahr": 1973,
+   "woche": 9,
+   "kasse": 626,
+   "deckung": 0.11448427212874908,
+   "greifbar": 37,
+   "mitPreis": 1,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 67,
+   "jahr": 1973,
+   "woche": 15,
+   "kasse": 626,
+   "deckung": 0.04007169376520292,
+   "greifbar": 37,
+   "mitPreis": 2,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 68,
+   "jahr": 1973,
+   "woche": 21,
+   "kasse": 626,
+   "deckung": 0.0408909791625841,
+   "greifbar": 44,
+   "mitPreis": 4,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 69,
+   "jahr": 1973,
+   "woche": 27,
+   "kasse": 626,
+   "deckung": 0.04007169376520292,
+   "greifbar": 45,
+   "mitPreis": 4,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 70,
+   "jahr": 1973,
+   "woche": 30,
+   "kasse": 626,
+   "deckung": 0.04007169376520292,
+   "greifbar": 43,
+   "mitPreis": 3,
+   "bezahlbar": 0,
+   "ziel": null,
+   "uebergabeImText": 1
+  },
+  {
+   "n": 71,
+   "jahr": 1974,
+   "woche": 1,
+   "kasse": 50000,
+   "deckung": 3.2006145179874537,
+   "greifbar": 26,
+   "mitPreis": 2,
+   "bezahlbar": 2,
+   "ziel": null,
+   "uebergabeImText": 3
+  },
+  {
+   "n": 72,
+   "jahr": 1974,
+   "woche": 2,
+   "kasse": 83329,
+   "deckung": 5.3340801433875304,
+   "greifbar": 44,
+   "mitPreis": 7,
+   "bezahlbar": 7,
+   "ziel": null,
+   "uebergabeImText": 6
+  },
+  {
+   "n": 73,
+   "jahr": 1974,
+   "woche": 3,
+   "kasse": 82658,
+   "deckung": 5.291127896556139,
+   "greifbar": 57,
+   "mitPreis": 14,
+   "bezahlbar": 14,
+   "ziel": null,
+   "uebergabeImText": 6
+  },
+  {
+   "n": 74,
+   "jahr": 1974,
+   "woche": 4,
+   "kasse": 81987,
+   "deckung": 5.248175649724748,
+   "greifbar": 56,
+   "mitPreis": 14,
+   "bezahlbar": 14,
+   "ziel": null,
+   "uebergabeImText": 6
+  },
+  {
+   "n": 75,
+   "jahr": 1974,
+   "woche": 5,
+   "kasse": 81316,
+   "deckung": 5.205223402893355,
+   "greifbar": 54,
+   "mitPreis": 14,
+   "bezahlbar": 14,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 76,
+   "jahr": 1974,
+   "woche": 6,
+   "kasse": 78845,
+   "deckung": 5.047049033414416,
+   "greifbar": 55,
+   "mitPreis": 13,
+   "bezahlbar": 13,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 77,
+   "jahr": 1974,
+   "woche": 7,
+   "kasse": 78174,
+   "deckung": 5.004096786583024,
+   "greifbar": 57,
+   "mitPreis": 15,
+   "bezahlbar": 15,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 78,
+   "jahr": 1974,
+   "woche": 8,
+   "kasse": 77503,
+   "deckung": 4.961144539751633,
+   "greifbar": 57,
+   "mitPreis": 15,
+   "bezahlbar": 15,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 79,
+   "jahr": 1974,
+   "woche": 9,
+   "kasse": 76832,
+   "deckung": 4.91819229292024,
+   "greifbar": 57,
+   "mitPreis": 15,
+   "bezahlbar": 15,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 80,
+   "jahr": 1974,
+   "woche": 10,
+   "kasse": 54048,
+   "deckung": 2.8578680203045685,
+   "greifbar": 56,
+   "mitPreis": 14,
+   "bezahlbar": 11,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 81,
+   "jahr": 1974,
+   "woche": 11,
+   "kasse": 53377,
+   "deckung": 2.8223879018612523,
+   "greifbar": 55,
+   "mitPreis": 14,
+   "bezahlbar": 11,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 82,
+   "jahr": 1974,
+   "woche": 12,
+   "kasse": 52706,
+   "deckung": 2.7869077834179357,
+   "greifbar": 54,
+   "mitPreis": 13,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 83,
+   "jahr": 1974,
+   "woche": 13,
+   "kasse": 52035,
+   "deckung": 2.7514276649746194,
+   "greifbar": 53,
+   "mitPreis": 13,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 84,
+   "jahr": 1974,
+   "woche": 14,
+   "kasse": 51364,
+   "deckung": 2.5569494225408205,
+   "greifbar": 52,
+   "mitPreis": 13,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 85,
+   "jahr": 1974,
+   "woche": 15,
+   "kasse": 50693,
+   "deckung": 5.150680755943914,
+   "greifbar": 55,
+   "mitPreis": 15,
+   "bezahlbar": 11,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 86,
+   "jahr": 1974,
+   "woche": 16,
+   "kasse": 45022,
+   "deckung": 4.574476732371469,
+   "greifbar": 59,
+   "mitPreis": 17,
+   "bezahlbar": 13,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 87,
+   "jahr": 1974,
+   "woche": 17,
+   "kasse": 44351,
+   "deckung": 4.506299532615322,
+   "greifbar": 48,
+   "mitPreis": 13,
+   "bezahlbar": 12,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 88,
+   "jahr": 1974,
+   "woche": 18,
+   "kasse": 43763,
+   "deckung": 4.446555578134525,
+   "greifbar": 49,
+   "mitPreis": 13,
+   "bezahlbar": 12,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 89,
+   "jahr": 1974,
+   "woche": 19,
+   "kasse": 44195,
+   "deckung": 4.490449095712254,
+   "greifbar": 47,
+   "mitPreis": 13,
+   "bezahlbar": 12,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 90,
+   "jahr": 1974,
+   "woche": 20,
+   "kasse": 43604,
+   "deckung": 4.4304003251371675,
+   "greifbar": 47,
+   "mitPreis": 13,
+   "bezahlbar": 12,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 91,
+   "jahr": 1974,
+   "woche": 21,
+   "kasse": 43407,
+   "deckung": 4.410384068278805,
+   "greifbar": 47,
+   "mitPreis": 13,
+   "bezahlbar": 12,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 92,
+   "jahr": 1974,
+   "woche": 22,
+   "kasse": 43303,
+   "deckung": 2.159966081404629,
+   "greifbar": 48,
+   "mitPreis": 13,
+   "bezahlbar": 12,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 93,
+   "jahr": 1974,
+   "woche": 23,
+   "kasse": 43199,
+   "deckung": 1.9143401577594612,
+   "greifbar": 48,
+   "mitPreis": 13,
+   "bezahlbar": 11,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 94,
+   "jahr": 1974,
+   "woche": 24,
+   "kasse": 43096,
+   "deckung": 1.9097757688558008,
+   "greifbar": 47,
+   "mitPreis": 13,
+   "bezahlbar": 11,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 95,
+   "jahr": 1974,
+   "woche": 25,
+   "kasse": 42992,
+   "deckung": 1.905167065496765,
+   "greifbar": 47,
+   "mitPreis": 13,
+   "bezahlbar": 11,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 96,
+   "jahr": 1974,
+   "woche": 26,
+   "kasse": 33889,
+   "deckung": 1.5017725782150138,
+   "greifbar": 42,
+   "mitPreis": 10,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 97,
+   "jahr": 1974,
+   "woche": 27,
+   "kasse": 33785,
+   "deckung": 1.4971638748559781,
+   "greifbar": 42,
+   "mitPreis": 10,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 98,
+   "jahr": 1974,
+   "woche": 28,
+   "kasse": 33681,
+   "deckung": 1.4925551714969423,
+   "greifbar": 44,
+   "mitPreis": 11,
+   "bezahlbar": 10,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 99,
+   "jahr": 1974,
+   "woche": 29,
+   "kasse": 33583,
+   "deckung": 1.4882123548701587,
+   "greifbar": 44,
+   "mitPreis": 10,
+   "bezahlbar": 9,
+   "ziel": null,
+   "uebergabeImText": 0
+  },
+  {
+   "n": 100,
+   "jahr": 1974,
+   "woche": 30,
+   "kasse": 33500,
+   "deckung": 1.484534255074005,
+   "greifbar": 42,
+   "mitPreis": 10,
+   "bezahlbar": 9,
+   "ziel": null,
+   "uebergabeImText": 0
+  }
+ ]
+}
