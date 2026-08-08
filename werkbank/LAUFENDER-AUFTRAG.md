@@ -93,16 +93,26 @@ unter „WAS ALS NÄCHSTES ZU TUN IST".
 
 ### DIE ERSTE ZAHL DER ABNAHME: 1350 ist wiederholbar
 
-**Fünf Läufe zu 400 Wochen, eine einzige Prüfsumme** (`bb96459e6ac5`), einzeln
-nacheinander bei stiller Maschine, 272 s je Lauf. Der sechste läuft. Damit ist
-die Voraussetzung aller anderen Zahlen der Welle 13 in der Epoche gehalten, in
-der sie in Welle 11 gerissen ist — und der Spielstand des RAHMENS hat sie nicht
-angefasst.
+**Sechs Läufe zu 400 Wochen, eine einzige Prüfsumme** (`bb96459e6ac5`), einzeln
+nacheinander bei stiller Maschine, 272 s je Lauf. Sechs, nicht drei — bei einem
+Abweichungsverhältnis von 1:3 wäre ein Dreiersatz zu rund 30 % Zufall, ein
+Sechsersatz zu unter 3 %; das ist dieselbe harte Abnahme, an der Welle 12
+gemessen wurde. Damit ist die Voraussetzung aller anderen Zahlen der Welle 13
+in der Epoche gehalten, in der sie in Welle 11 gerissen ist — **und der
+Spielstand des RAHMENS hat sie nicht angefasst.**
 
 Aus demselben Lauf: 1350 über **14 Braujahre**, Kasse **34–524**, Kennzahl roh
 **1,09× bis 7,43×** — also **kein einziges Jahr unter 1×** —, **eine
 unwiderrufliche Festlegung** getroffen (der Spielkritiker kam in 1350 auf
-keine), null Seitenfehler.
+keine), null Seitenfehler. 1600, 1884 und 1970 laufen.
+
+> **Reset Nr. 23 um 12:24 UTC, dieselbe Stunde, dasselbe Muster** — Baum auf
+> `171db5f`, origin 89 Commits voraus, kein Veröffentlicher. Wieder nichts
+> verloren: e1-A bis e1-F und e2-A lagen committet auf origin. Der Messstand
+> wird aus `b098fc6` neu eingefroren, `spiel/` ist dazu byteweise gleich
+> geblieben, `abnahme.sh` überspringt, was vorliegt. **Das Verfahren trägt
+> stündliche Resets, ohne eine Messreihe zu verlieren** — das war in Welle 11
+> noch nicht so.
 
 > ### EIN HAFEN IST KEIN BAUM — gemeldet von DER GEGENZUG aus eigenem Schaden
 >
