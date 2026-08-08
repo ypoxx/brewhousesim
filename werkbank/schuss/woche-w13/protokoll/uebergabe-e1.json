@@ -5,21 +5,19 @@
  "letztesJahr": 1358,
  "wochenMitAngebot": 13,
  "davonMitGreifbaremKnopf": 9,
- "davonMitSichtbaremText": 13,
+ "davonMitSichtbaremText": 12,
  "orteDerKnoepfe": {
   "wochenkarte": 9,
-  "uebergabeblatt": 8
+  "uebergabeblatt": 9
  },
  "ersteWoche": {
   "n": 45,
   "jahr": 1355,
   "woche": 1,
   "liegt": 1355,
-  "imText": 3,
+  "imText": 1,
   "textBeispiel": [
-   "Ziel: Die Übergabe vor dem Rat liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
-   "DIE ÜBERGABE VOR DEM RAT · 1355",
-   "Die Übergabe vor dem Rat ansehen"
+   "Ziel: Die Übergabe vor dem Rat liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)"
   ],
   "knoepfe": []
  },
@@ -206,10 +204,8 @@
    "jahr": 1352,
    "woche": 1,
    "liegt": null,
-   "imText": 1,
-   "textBeispiel": [
-    "Ziel: das Haus weitergeben, solange es steht. Noch 3 Braujahre, dann ist das Haus alt genug für eine Übergabe. (80 % des Wegs)"
-   ],
+   "imText": 0,
+   "textBeispiel": [],
    "knoepfe": []
   },
   {
@@ -514,11 +510,9 @@
    "jahr": 1355,
    "woche": 1,
    "liegt": 1355,
-   "imText": 3,
+   "imText": 1,
    "textBeispiel": [
-    "Ziel: Die Übergabe vor dem Rat liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
-    "DIE ÜBERGABE VOR DEM RAT · 1355",
-    "Die Übergabe vor dem Rat ansehen"
+    "Ziel: Die Übergabe vor dem Rat liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)"
    ],
    "knoepfe": []
   },
@@ -864,6 +858,11 @@
      "zug": "fuhre:uebergabe-auf",
      "wo": "wochenkarte",
      "text": "DIE ÜBERGABE VOR DEM RAT · noch 1 Woche"
+    },
+    {
+     "zug": "fuhre:uebergabe:ja",
+     "wo": "uebergabeblatt",
+     "text": "Das Haus übergeben und aufhören"
     }
    ]
   },
@@ -953,12 +952,8 @@
    "jahr": 1358,
    "woche": 1,
    "liegt": 1358,
-   "imText": 3,
-   "textBeispiel": [
-    "Ziel: Die Übergabe vor dem Rat liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)",
-    "DIE ÜBERGABE VOR DEM RAT · 1358",
-    "Die Übergabe vor dem Rat ansehen"
-   ],
+   "imText": 0,
+   "textBeispiel": [],
    "knoepfe": []
   }
  ]
