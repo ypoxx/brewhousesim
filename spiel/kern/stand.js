@@ -222,6 +222,35 @@
     return true;
   }
 
+  /* ----------------------------------------------------------------------
+     DAS EINSETZEN LAEUFT IN ZWEI ZUEGEN, und der Grund ist gemessen.
+
+     Erster Bau: alles auf einmal, vor `B.buehne.starte()`. Abnahme
+     `wiederkehr.mjs` E1, zwoelf Wochen — Jahr, Woche, Kasse und Faesser
+     standen Ziffer fuer Ziffer richtig, aber:
+
+         Chronik  8 -> 11        Buch  42 -> 43
+
+     Die Ursache steht in den drei zusaetzlichen Zeilen: sie stammen aus dem
+     `aufbau()` der Stuecke, das NACH dem Einsetzen laeuft und in die Chronik
+     schreibt („Die Hand am Haus ist Kunigunde Bruckner…"). Beim ersten Start
+     der Partie sind genau diese Zeilen geschrieben worden — sie stehen im
+     gesicherten Stand also schon drin. Ein zweites Mal geschrieben, sind sie
+     Doubletten.
+
+     Also:
+       ZUG 1  vor `buehne.starte()` — Haus, Zeit, Vorrat, Adressen, Gegner,
+              Wuerfel und die Stueckstaende. Jedes Stueck baut damit auf der
+              Welt auf, die wirklich gilt.
+       ZUG 2  nach dem `aufbau()` aller Stuecke und VOR dem ersten Bild —
+              Chronik, Buch und noch einmal der Zaehlerstand des Wuerfels.
+              Was die Stuecke beim Aufbauen hineingeschrieben und
+              hinausgewuerfelt haben, wird damit ueberschrieben; ein
+              fortgesetztes Spiel wuerfelt ab hier genau da weiter, wo es
+              stehengeblieben ist.
+     ---------------------------------------------------------------------- */
+  var offenerStand = null;      /* haelt den Stand zwischen Zug 1 und Zug 2 */
+
   function setzeEin(d) {
     var w = B.welt;
     fuelleObjekt(w.haus, d.haus);
@@ -229,14 +258,13 @@
     fuelleObjekt(w.vorrat, d.vorrat);
     fuelleListe(w.adressen, d.adressen || []);
     fuelleListe(w.gegner, d.gegner || []);
-    fuelleListe(w.chronik, d.chronik || []);
-    fuelleListe(B.protokoll, d.buch || []);
     /* Der Wuerfel zuerst auf die Saat, dann auf den Zaehlerstand: `setze`
        setzt beides, `zustand` nur den Zaehler. */
     B.wuerfel.setze(d.saat || B.wuerfel.saat);
     B.wuerfel.zustand = d.wuerfel;
     geladeneStuecke = d.stuecke || {};
     fortgesetzt = { jahr: w.zeit.jahr, woche: w.zeit.woche };
+    offenerStand = d;
   }
 
   /* ======================================================================
@@ -297,6 +325,20 @@
       }
       zahl.geladen++;
       return true;
+    },
+
+    /* ZUG 2 des Einsetzens. Ruft kern/buehne.js, nachdem alle Stuecke ihr
+       aufbau() hinter sich haben und bevor das erste Bild entsteht. Ohne
+       geladenen Stand tut das gar nichts. */
+    nachStuecken: function () {
+      if (!offenerStand) return false;
+      var d = offenerStand;
+      offenerStand = null;
+      return B.wage('stand.nachStuecken', function () {
+        fuelleListe(B.welt.chronik, d.chronik || []);
+        fuelleListe(B.protokoll, d.buch || []);
+        B.wuerfel.zustand = d.wuerfel;
+      });
     },
 
     /* Der eine Aufruf, den kern/uhr.js macht. SYNCHRON, ohne jede Frist.

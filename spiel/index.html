@@ -82,6 +82,18 @@
      unveraendert. -->
 <script src="kern/runde.js"></script>
 <script src="kern/welt.js"></script>
+<!-- WELLE 13 — die dritte und letzte Zeile, die in dieser Datei seit dem
+     Einfrieren dazugekommen ist. Sie haengt kern/stand.js ein: DEN SPIELSTAND
+     (Auflage A1). Er schreibt nach jedem Wochenwechsel den vollen Zustand des
+     Kerns nach localStorage — Schluessel `brauhaus:<epoche>:<saat>` — und
+     setzt ihn beim Laden derselben Adresse wieder ein. `?neu=1` schaltet ihn
+     ab und raeumt den Speicher; ohne diesen Schalter waere die zweite
+     Messlatte ab dem zweiten Lauf nicht mehr messbar.
+     SIE STEHT HIER, hinter welt.js (dessen Behaelter sie fuellt) und vor
+     buehne/kopf/start, damit `B.stand` steht, bevor kern/start.js es ruft.
+     Kein <script>- oder <link>-Tag eines Stuecks ist beruehrt, die
+     Ladereihenfolge der acht Stuecke ist unveraendert. -->
+<script src="kern/stand.js"></script>
 <script src="kern/ton.js"></script>
 <script src="kern/buehne.js"></script>
 <script src="kern/kopf.js"></script>

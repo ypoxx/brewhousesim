@@ -1383,8 +1383,16 @@
       if (Z.ertragReihe.length > 6) Z.ertragReihe.shift();
     }
 
+    /* AUFLAGE R7 — DIE TAFEL LIEGT ZU MICHAELI VON SELBST AUF.
+       `Z.offen` stand hier schon; was fehlte, war das Zuruecksetzen der
+       Merkmarken. `Z.geklemmt` haelt sonst das Urteil der STADT ueber die
+       Tafel des VORIGEN Jahres fest, und `Z.gesehen` entscheidet, ob die
+       Tafel sich den Tisch zurueckholen darf (siehe `handHorcher`). */
     Z.offen = (B.arg.roh.tafel !== 'zu') || !erste;
     Z.erzwungen = false;
+    Z.geklemmt = false;
+    Z.gesehen[Z.tafelJahr] = false;
+    Z.rueckholung = 0;
     Z.seite = 'tafel';
     B.ton.spiele('preis:michaeli', { art: 'geraeusch' });
     if (!erste) B.ton.spiele('preis:muenzen', { art: 'geraeusch' });
@@ -2775,6 +2783,92 @@
        Z.geklemmt     — DIE STADT hat sie in ihren Reiter geklappt          */
   function tafelSichtbar() {
     return !!Z.offen && (!sommerLaeuft() || Z.erzwungen) && !Z.geklemmt;
+  }
+
+  /* ======================================================================
+     DIE HAND AM SPIEL — EIN HORCHER, ZWEI AUFLAGEN.
+
+     Er liest `ereignis.target` und sonst nichts. Er ruft kein
+     `preventDefault`, kein `stopPropagation`, er fasst keinen fremden Knopf
+     an und schreibt in kein fremdes DOM. Dasselbe Verfahren benutzt DIE
+     FUHRE seit Welle 6 fuer ihren Georgi-Halt (`fuhre.js` weiterHorcher).
+
+     R10 (Entscheidung ③ der Aufsicht) — WER EINEN FREMDEN REITER ANFASST,
+     BEKOMMT SEINEN TISCH ZURUECK.
+     Gemessen am Jahreswechsel 1601: acht Reiterklicks unter liegendem Blatt,
+     achtmal identisch 30 greifbare Zuege — erst der neunte brachte 53. Die
+     Reiterleiste gehoert DER STADT und diese Welle oeffnet DIE STADT nicht;
+     abgeschaltet werden duerfen die Reiter darum nicht. Also nimmt DIE
+     JAHRESTAFEL ihr EIGENES Blatt weg. Der Klick laeuft unveraendert weiter
+     an den Reiter, der ihn bekommen soll — er kostet den Spieler nichts und
+     tut jetzt, was draufsteht.
+
+     R7, Rueckholung — MICHAELI LAESST SICH NICHT UEBERGEHEN.
+     DIE STADT klappt beim Laden JEDES fremde Brett in einen Reiter
+     (`stadt.js`: `jetzt - startZeit < LADEZEIT` -> 'zu'); das ist ihre Regel
+     und sie ist gut, denn beim Laden will man sein Haus sehen. Fuer die
+     Michaelitafel des LADEJAHRES heisst das aber: sie liegt nie, und
+     genommen wird nur in Woche 1. Diese Tafel holt sich den Tisch deshalb
+     bei der naechsten Handlung des Spielers zurueck — solange Michaeli ist,
+     solange sie nicht weggelegt wurde und solange sie in diesem Braujahr
+     noch kein einziges Mal wirklich dagelegen hat.
+
+     Das ist keine Gegenwehr gegen den Rahmen, sondern sein eigener Weg: ein
+     Brett, das UNMITTELBAR NACH EINEM KLICK neu erscheint, gilt DER STADT
+     als vom Spieler geholt und bleibt aufgeschlagen (`handZeit`, HANDFRIST).
+     Kein Zeitgeber, keine Frist, keine Klasse an fremdem DOM.
+
+     Zwei Klicks sind ausgenommen:
+       · WEITER — wer weitergeht, hat entschieden, heute nichts zu nehmen.
+       · die Reiter DER STADT — die fallen unter R10 und schliessen.
+     ====================================================================== */
+  var REITER = ['stadt:reiter:', 'stadt:bauhof', 'stadt:ortsmarken', 'stadt:alles-zuklappen'];
+  var VERSUCHE = 3;            /* Rueckholungen je Braujahr, Riegel gegen Flackern */
+
+  function istReiter(zug) {
+    for (var i = 0; i < REITER.length; i++) if (zug.indexOf(REITER[i]) === 0) return true;
+    return false;
+  }
+
+  function handHorcher(ereignis) {
+    var ziel = ereignis && ereignis.target && ereignis.target.closest
+      ? ereignis.target.closest('[data-zug]') : null;
+    if (!ziel) return;
+    var zug = ziel.getAttribute('data-zug') || '';
+    if (zug.indexOf('preis:') === 0) return;            /* das eigene Blatt */
+
+    if (istReiter(zug)) {
+      if (!tafelSichtbar()) return;
+      Z.offen = false;
+      Z.erzwungen = false;
+      B.ton.spiele('preis:blatt');
+      B.sende('zeichne', { grund: 'preis-reiter-fremd' });
+      return;
+    }
+
+    if (zug === 'weiter') return;
+    if (B.welt.zeit.woche !== 1) return;
+    if (!Z.offen || !Z.geklemmt || sommerLaeuft()) return;
+    /* `Z.gesehen` steht hier absichtlich NICHT als Bedingung. Es wird aus
+       Klassennamen gelesen und kann in der Runde unmittelbar nach dem
+       Aufschlagen schon `true` sein, bevor DIE STADT im 240-ms-Takt
+       ueberhaupt geurteilt hat — als Riegel waere es ein Rennen. Der Riegel
+       ist `Z.offen` (der Spieler hat die Tafel selbst weggelegt) und die
+       Zahl der Versuche. */
+    if ((Z.rueckholung || 0) >= VERSUCHE) return;
+    Z.rueckholung = (Z.rueckholung || 0) + 1;
+    Z.geklemmt = false;
+    Z.seite = 'tafel';
+    B.sende('zeichne', { grund: 'preis-michaeli-zurueck' });
+  }
+
+  var horchtSchon = false;
+  function horcheAufDieHand() {
+    if (horchtSchon || typeof document === 'undefined') return;
+    horchtSchon = true;
+    document.addEventListener('click', function (e) {
+      B.wage('preis.hand', function () { handHorcher(e); });
+    }, true);
   }
 
   /* --- Der Griff, wenn die Tafel zu ist ---------------------------------

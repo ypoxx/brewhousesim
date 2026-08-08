@@ -129,6 +129,17 @@
       B.buehne.setzeEpoche(B.welt.zeit.epoche);
       stuecke.forEach(function (s) { s.ruf('aufbau', {}); });
       gestartet = true;
+      /* WELLE 13 — ZUG 2 DES SPIELSTANDES, genau hier und nirgends sonst.
+         Die Stuecke haben ihr aufbau() hinter sich (und dabei in die Chronik
+         geschrieben und gewuerfelt), das erste Bild ist noch nicht gemalt.
+         `nachStuecken()` setzt Chronik, Buch und den Zaehlerstand des
+         Wuerfels auf den gesicherten Stand zurueck — die Begruendung mit den
+         gemessenen Zahlen steht im Kopf von kern/stand.js. Ohne geladenen
+         Stand tut der Aufruf nichts, und der Ladezustand einer frischen
+         Partie ist Zeile fuer Zeile derselbe wie vor Welle 13. */
+      if (B.stand && B.stand.nachStuecken) {
+        B.wage('stand.nachStuecken', function () { B.stand.nachStuecken(); });
+      }
       /* WELLE 12 — DER ERSTE BILDAUFBAU IST AUCH EINE RUNDE.
          Diese Schleife ruft die Stuecke direkt und geht NICHT ueber
          B.sende('zeichne'); der Rundenschluss (kern/runde.js) haengt aber
