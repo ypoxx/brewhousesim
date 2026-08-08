@@ -278,7 +278,7 @@ while (gespielt < ZIELWOCHEN) {
     else if (pl.length) bestPlanJetzt = pl[0].zug;
   }
   let gesprungen = false;
-  if (!fragen.length && !ratPlan && sprung && (!bestPlanJetzt || bestPlanJetzt === letzterPlan)) {
+  if (!fragen.length && sprung && (!bestPlanJetzt || bestPlanJetzt === letzterPlan)) {
     const vorSpr = await schirm();
     if (await greif(sprung.zug, { grund: 'ruhige Wochen zusammenfassen', warte: 340 })) {
       const nachSpr = await schirm();
@@ -296,8 +296,8 @@ while (gespielt < ZIELWOCHEN) {
       (/^fuhre:plan:/.test(z.zug) || z.zug === 'fuhre:wie-vorige' || z.zug === 'fuhre:fuellen'));
     if (plaene.length) {
       const mitPreis = plaene.filter(z => z.preis !== null && z.preis !== undefined);
-      let gew = plaene.find(z => z.rat);       /* der Rat des Hauses geht vor */
-      if (!gew && mitPreis.length) gew = mitPreis.reduce((a, z) => (z.preis > a.preis ? z : a));
+      let gew = null;
+      if (mitPreis.length) gew = mitPreis.reduce((a, z) => (z.preis > a.preis ? z : a));
       if (!gew) gew = plaene.find(z => z.zug === 'fuhre:wie-vorige') || plaene[0];
       await greif(gew.zug, { grund: 'Fuhrplan', warte: 220 });
       letzterPlan = gew.zug;

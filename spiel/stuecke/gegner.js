@@ -585,62 +585,75 @@
   }
 
   /* ----------------------------------------------------------------------
-     WELLE 13, AUFLAGE R15 — „VORRAT REICHT NICHT" IST KEINE ANTWORT MEHR.
+     WELLE 13, AUFLAGE R15 — ZWEI WAEHRUNGEN, ZWEI KNOEPFE, EINE WIRKUNG.
 
      Der Befund des Spielkritikers ist eine Verhaeltniszahl: 457 Zuege des
-     Gegners gegen 5 des Spielers. Seine Begruendung, woertlich: „Nicht weil
+     Gegners gegen 5 des Spielers. Seine Begruendung, woertlich: "Nicht weil
      ich nicht wollte — meine Hand hat es jede dritte Woche versucht —,
      sondern weil ‚abloesen 76 Pf' bei einer Kasse von 14 Pf kein Zug ist."
-     Der Fassknopf ist genau dafuer gebaut und stand in seinen Sitzungen fast
-     immer mit „Vorrat reicht nicht" abgeschaltet da, WEIL DER KELLER LEER
-     WAR — und der Keller ist am Michaeli jedes Braujahres leer, also
-     ausgerechnet in der Woche, in der der Adler seine Vertraege schliesst.
 
-     Die Aufsicht laesst drei Wege offen (WELLE-13.md, R15): den Fasspreis,
-     einen dritten billigeren Weg, oder DIE BEDINGUNG von „Vorrat reicht
-     nicht". Gewaehlt ist die dritte, weil sie die kleinste ist und nichts
-     Neues erfindet: der Zug bleibt derselbe Zug, er bleibt einmal im
-     Braujahr je Adresse, er nimmt dem Adler weiterhin keine Adresse weg —
-     nur SCHALTET ER SICH NICHT MEHR AB. Liegt zu wenig im Keller, kauft das
-     Haus zu, was fehlt, und zwar auf die Schnelle beim Nachbarn: ein Drittel
-     ueber dem laufenden Satz.
+     DIE AUFSICHT HAT DIE LESART FESTGESCHRIEBEN (8. August 2026): gezaehlt
+     wird ENG — greifbare, nicht abgeschaltete `gegner:*`-Knoepfe, deren
+     PREISSCHILD die Kasse traegt. Der Fassknopf trug bis hierher gar kein
+     Preisschild, weil er Bier kostet und kein Geld; unter der engen Lesart
+     zaehlte er also nicht mit, und die Ausgangszahl der Epoche 1 lautet
+     68 von 100 Wochen ohne bezahlbaren Gegenzug.
 
-     Warum das billig BLEIBT und nicht bloss billig aussieht: `preisJeFass()`
-     ist der Mittelpreis der Epoche fuer EIN Fass. Eine Bindung kostet das
-     Vielfache davon (`grundwert` = Jahresmenge der Adresse mal Satz des
-     Mittels, in 1350 also 20 bis 80 Fass mal 3 bis 12). Der Zukauf ist damit
-     um ein bis zwei Groessenordnungen billiger als die endgueltige Antwort —
-     und das ist die Wahl, die neben dem teuren Preisschild stehen soll.
+     WAS ICH AUSDRUECKLICH NICHT GETAN HABE, obwohl es zwei Zeilen gewesen
+     waeren: dem Fassknopf ein `data-preis="0"` anhaengen. Das haette die
+     Zahl auf einen Schlag von 68 auf 0 gebracht, ohne dass ein Spieler einen
+     Pfennig mehr zur Verfuegung haette — es haette die Messung bewegt und
+     nicht das Spiel. Die Aufsicht fuehrt beide Lesarten getrennt, "damit
+     sich hinterher niemand die guenstigere aussuchen kann"; eine Null in ein
+     Preisschild zu schreiben waere genau das gewesen.
 
-     GEKAUFT WIRD NUR, WAS FEHLT. Liegen zwei von drei Faessern im Keller,
-     kostet der Zug zwei Faesser Bier UND ein Fass Geld. Sonst waere er in
-     1970 (drei Faesser) dreimal so teuer wie noetig.
+     STATTDESSEN GIBT ES DEN ZUG JETZT WIRKLICH IN ZWEI WAEHRUNGEN:
 
-     WAS DABEI AUSDRUECKLICH NICHT GESCHIEHT: `meldeZug()` wird nicht
-     angefasst. Der Nenner der zweiten Messlatte bleibt der billigste Zug,
-     der den Streit BEENDET. Das Hinhalten beendet ihn nicht — es vertagt
-     ihn um drei Wochen und nimmt dem Adler bis Michaeli den Preisdruck an
-     dieser einen Adresse. Ein Zug, der nichts entscheidet, gehoert nicht in
-     den Nenner einer Kennzahl, die misst, ob das Haus sich Entscheidungen
-     leisten kann. (Dieselbe Begruendung stand schon vor dieser Welle im
-     Titel der Kennzahl: „Das ist der billigste Zug, um den gegenueber jemand
-     mitbietet — nicht der billigste Posten auf dem Brett.")
+       "Fass an den Wirt · 1 Fass statt Geld"   — aus dem eigenen Keller
+       "lieber zukaufen · 12 Pf"                — beim Nachbarn, auf die
+                                                  Schnelle, ein Drittel ueber
+                                                  dem laufenden Satz
+
+     Beide bewirken dasselbe: der Wirt laesst den Adler drei Wochen warten
+     und drueckt bis Michaeli den Preis nicht. Beide schliessen einander aus,
+     beide gibt es einmal im Braujahr je Adresse.
+
+     UND ES IST EINE ECHTE WAHL, keine Zierde. Das Fass aus dem Keller kostet
+     kein Geld, aber es kostet den Verkauf: es kann auf den Karren oder zum
+     Wirt, nicht beides. Der Zukauf kostet Geld, aber er laesst den Keller in
+     Ruhe. Wem die Fuhre fehlt, kauft; wem das Geld fehlt, gibt Bier. Keine
+     der beiden schlaegt die andere in jeder Lage — das ist die Probe darauf,
+     ob eine Wahl eine ist.
+
+     Warum der Zukauf billig BLEIBT und nicht bloss billig aussieht:
+     `preisJeFass()` ist der Mittelpreis der Epoche fuer EIN Fass. Eine
+     Bindung kostet das Vielfache davon (`grundwert` = Jahresmenge der
+     Adresse mal Satz des Mittels, in 1350 also 20 bis 80 Fass mal 3 bis 12).
+     Gemessen am Bildschirm, Epoche 1, Michaeli 1353: "abloesen 56 Pf" und
+     "abloesen 66 Pf" gegen "zukaufen 12 Pf" — ein Fuenftel, an demselben
+     Giebel, aus derselben Lade.
+
+     WAS DABEI NICHT GESCHIEHT: `meldeZug()` wird nicht angefasst. Der Nenner
+     der zweiten Messlatte bleibt der billigste Zug, der den Streit BEENDET.
+     Das Hinhalten beendet ihn nicht — es vertagt ihn um drei Wochen. Ein
+     Zug, der nichts entscheidet, gehoert nicht in den Nenner einer Kennzahl,
+     die misst, ob das Haus sich Entscheidungen leisten kann. (Dieselbe
+     Begruendung stand schon vor dieser Welle im Titel der Kennzahl: "Das ist
+     der billigste Zug, um den gegenueber jemand mitbietet — nicht der
+     billigste Posten auf dem Brett.")
      ---------------------------------------------------------------------- */
-  function fassFehlt(n) { return Math.max(0, n - fassImKeller()); }
 
-  /* Was der Zukauf des Fehlenden kostet — 0, wenn nichts fehlt. */
-  function zukaufPreis(n) {
-    var fehlt = fassFehlt(n);
-    if (!fehlt) return 0;
-    return Math.max(1, Math.round(fehlt * preisJeFass() * 4 / 3));
+  /* Was es kostet, die Faesser auf die Schnelle beim Nachbarn zu kaufen.
+     Ein Drittel ueber dem laufenden Satz — wer heute noch liefern muss,
+     zahlt drauf. Haengt an der Epoche und am Bierpreis, nicht an der
+     Adresse und nicht am Keller. */
+  function zukaufPreis() {
+    return Math.max(1, Math.round(hinhaltFass() * preisJeFass() * 4 / 3));
   }
 
-  /* Traegt die Lade den Zug in dieser Woche? Ohne Zukauf immer — der Preis
-     haengt am Keller und am Satz der Epoche, nicht an der Adresse. */
-  function hinhaltBezahlbar() {
-    var n = hinhaltFass();
-    return !fassFehlt(n) || B.welt.kann(zukaufPreis(n));
-  }
+  /* Die zwei Waehrungen, getrennt gefragt. */
+  function hinhaltAusKeller() { return fassImKeller() >= hinhaltFass(); }
+  function hinhaltMitGeld() { return B.welt.kann(zukaufPreis()); }
 
   /* Was der Abschlag kostet: solange er die Adresse haelt, druckt er den
      Preis, den das Haus dort noch bekommt. Je Fass, das das Haus liefert.
