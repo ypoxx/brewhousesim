@@ -37,6 +37,14 @@ echo "=== Gegenmessung auf Hafen $HAFEN · Messstand $MARK · index.html $KOPF =
 # stillschweigend als fertig. Gepruefte Marken: `<marke>-summe.json` (probe13,
 # Zeile 245), `wiederkehr-e<N>.json` (Zeile 54), `<lauf>-wahl.json` (hand3,
 # Zeile 364). Alle drei entstehen erst nach dem letzten Klick.
+#
+# UND EINE MARKE KANN AUS EINER ANDEREN WELLE STAMMEN. `wiederkehr-e1.json`
+# lag hier bereits — gemessen am 8. August um 09:31 vom RAHMEN auf seinem
+# eigenen Hafen, also an einem anderen Stand als dem eingefrorenen. Das
+# Ueberspringen haette sie fuer die eigene Messung gehalten. Sie heisst
+# seither `wiederkehr-e1-bauphase.json`, und die Regel dahinter gilt fuer
+# jeden, der hier einen Schritt ueberspringt: **eine Marke belegt nur dann
+# etwas, wenn feststeht, an welchem Stand sie entstanden ist.**
 lauf () {  # lauf <schlussdatei> <beschriftung> <befehl…>
   local ziel=$1 name=$2; shift 2
   if [ -s "$ziel" ]; then echo "$name: liegt schon vor" | tee -a "$LOG"; return; fi
