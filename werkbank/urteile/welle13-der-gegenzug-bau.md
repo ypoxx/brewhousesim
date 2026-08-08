@@ -23,7 +23,7 @@ Klageknopf fehlt).
 | **R15** Wochen ohne bezahlbaren Gegenzug je 100, enge Lesart | ≤ 10, alle vier Epochen | **9 · 0 · 0 · 1** am eingefrorenen Welle-12-Stand · **9 · 0 · 1 · 4** am laufenden Stand (ungünstigster von drei Läufen je Epoche) |
 | **R16** Aufschrift des Reiters, Woche 45 = Woche 15 | ja | **ja**, 50 von 50 Wochen tragen die Zahl (vorher 30 von 50) |
 | §4b des Urteils | unangetastet | **kein** Eingriff ins Verhalten, kein `meldeZug` |
-| ρ, 400 Wochen je Epoche | darf sich nicht bewegen | Aufzeichnung **byteweise gleich** in 1350, 1600 und 1884 *(1970 s. §4.4)* |
+| **ρ**, 400 Wochen je Epoche | darf sich nicht bewegen | Aufzeichnung **byteweise gleich in allen vier Epochen** (8 Läufe, 1.600 Wochen, gleiche SHA-256) |
 | Spielstand, `gegnerzuege` nach dem Neuladen | ziffernweise gleich | **gleich**, alle vier Epochen, `abweichung []` |
 | `BRAUHAUS.lage` · Seitenfehler | 0 · 0 | **0 · 0**, vier Epochen, zwei Fenster |
 | `haushalt.tafeln()` · `ueberRand()` | leer | **leer** |
@@ -526,7 +526,9 @@ auf den Karren, Rohstoff, Engpass, Fuhre). Laufender Stand, 100 Wochen:
 | Seitenfehler | 0 | 0 | 0 | 0 |
 
 Aus „im Median **0** bezahlbare Gegenzüge" ist „im Median **5 bis 9**"
-geworden — mit der Hand, die auch das Geld ausgibt.
+geworden — mit der Hand, die auch das Geld ausgibt. **Ein zweiter Lauf je
+Epoche gab Ziffer für Ziffer dieselben Zahlen** (1 · 0 · 0 · 3 und Median
+8 · 9 · 6 · 5).
 
 ### 4.3 Was in 1350 übrig bleibt, und woran es liegt
 
@@ -619,7 +621,7 @@ geprüft: `abweichung []`.)*
 | 1350 | `ca86822e306fef8d` | `ca86822e306fef8d` | **gleich** |
 | **1600** | `94df265afe2fbb10` | `94df265afe2fbb10` | **gleich** |
 | 1884 | `d2978598077039e0` | `d2978598077039e0` | **gleich** |
-| 1970 | *(Lauf hing beim Schreiben dieses Berichts noch)* | | |
+| **1970** | `a19b513cba51be58` | `a19b513cba51be58` | **gleich** |
 
 Die Prüfsumme geht über die **ganze** Aufzeichnung eines 400-Wochen-Laufs
 (nur das Feld `hafen` ist herausgenommen): Kasse und Rohstoff jeder einzelnen
@@ -637,13 +639,14 @@ Die Kennzahlreihen, damit sie jemand nachrechnen kann:
       7,68 · 7,56 · 6,10 · 4,66          (vorher = nachher)
 1884  8,35 · 5,03 · 1,70 · 2,75 · 1,61 · 6,04 · 3,34 · 2,05 · 3,65 · 1,53 ·
       13,32 · 8,70 · 11,14 · 2,02        (vorher = nachher)
+1970  2,25 · 0,79 · 3,94 · 2,70 · 1,54 · 2,94 · 4,25 · 3,02 · 1,55 · 2,64 ·
+      1,72 · 1,15 · 1,38 · 1,54          (vorher = nachher)
 ```
 
-*(Die 1970er Läufe brauchen je rund zwanzig Minuten und waren beim Schreiben
-dieses Berichts noch nicht durch. Sie landen als `rho/w12-e4.json` und
-`rho/w12g-e4.json`; wer nachsehen will:*
-`python3 -c "import json,hashlib; a=json.load(open('w12-e4.json')); b=json.load(open('w12g-e4.json')); [d.pop('hafen',None) for d in (a,b)]; print(hashlib.sha256(json.dumps(a,sort_keys=True).encode()).hexdigest()==hashlib.sha256(json.dumps(b,sort_keys=True).encode()).hexdigest())"`
-*Ich behaupte für 1970 nichts, was ich nicht gemessen habe.)*
+**Alle vier Epochen, 1.600 gespielte Wochen, acht Läufe: die Aufzeichnung ist
+vor und nach meiner Arbeit Byte für Byte dieselbe.** Damit sind auch ρ, die
+Spannweite über die Läufe und die Zahl der Jahre unter 1× unverändert — sie
+werden aus genau denselben Zahlen gerechnet. Seitenfehler: 0 in allen acht.
 
 **1600 ist die Epoche ohne Reserve** (ρ +0,538 bei einer Grenze von 0,700, der
 Abstand beträgt 0,162). Sie ist Ziffer für Ziffer unverändert — auch der
@@ -727,3 +730,9 @@ BRAUHAUS.gegner.zahl()        // dieselbe Zahl, die am Reiter steht
    Dort ist kein Preis klein genug. Wer sie schließen will, muss nicht am
    Gegenzug drehen, sondern am Auftragsbuch — das ist A10/R8 und gehört DER
    JAHRESTAFEL.
+
+---
+
+*Geschrieben am 8. August 2026, während drei andere Builder in denselben Baum
+schrieben. Jede Zahl in diesem Bericht ist am Bildschirm gezählt; wo zwei Läufe
+verschiedene Zahlen gaben, steht die ungünstigere.*
