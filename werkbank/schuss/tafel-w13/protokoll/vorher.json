@@ -1,0 +1,642 @@
+[
+ {
+  "fenster": "1600x900",
+  "epoche": 1,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:ochsenstall",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 42
+   },
+   {
+    "zug": "preis:nimm:karrengaul",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 42
+   },
+   {
+    "zug": "preis:nimm:bannmeile",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   }
+  ],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 1,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 2,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:darre",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 42
+   },
+   {
+    "zug": "preis:nimm:wappenbrief",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 42
+   },
+   {
+    "zug": "preis:nimm:auswaertiger",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 42
+   },
+   {
+    "zug": "preis:nimm:zunftrecht",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:klosterrecht",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 34
+   }
+  ],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 2,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 3,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:braumeister",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 39
+   },
+   {
+    "zug": "preis:nimm:flaschen",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 39
+   },
+   {
+    "zug": "preis:nimm:felsenkeller",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 39
+   },
+   {
+    "zug": "preis:nimm:kaelte",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:niederlage",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   }
+  ],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 3,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 4,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:schankanlage",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:kasten",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:trikot",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:werbefilm",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:logistik",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 34
+   },
+   {
+    "zug": "preis:festlege:denkmal",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 55
+   },
+   {
+    "zug": "preis:festlege:privat",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 55
+   },
+   {
+    "zug": "preis:festlege:genossenschaft",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 52
+   }
+  ],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1600x900",
+  "epoche": 4,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1344,
+   "h": 673
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 1,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:dach",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 39
+   },
+   {
+    "zug": "preis:nimm:bottich",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 39
+   },
+   {
+    "zug": "preis:nimm:ochsenstall",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:karrengaul",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:bannmeile",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:festlege:freikauf",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 46
+   }
+  ],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 1,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 2,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:darre",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:wappenbrief",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:auswaertiger",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 36
+   },
+   {
+    "zug": "preis:nimm:zunftrecht",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:nimm:klosterrecht",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 29
+   },
+   {
+    "zug": "preis:festlege:bierbann",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 46
+   }
+  ],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 2,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 3,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:braumeister",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 33
+   },
+   {
+    "zug": "preis:nimm:flaschen",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 33
+   },
+   {
+    "zug": "preis:nimm:felsenkeller",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 33
+   },
+   {
+    "zug": "preis:nimm:kaelte",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:nimm:niederlage",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:festlege:aktien",
+    "teil": "preis einnahme",
+    "text": "+11.000 M",
+    "zeilen": 3,
+    "woerter": 2,
+    "breite": 45
+   },
+   {
+    "zug": "preis:festlege:bahnvertrag",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 46
+   },
+   {
+    "zug": "preis:festlege:konvention",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 50
+   },
+   {
+    "zug": "preis:festlege:krankenkasse",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 50
+   }
+  ],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 3,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 4,
+  "seite": "tafel",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [
+   {
+    "zug": "preis:nimm:schankanlage",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:nimm:kasten",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:nimm:trikot",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:nimm:werbefilm",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 31
+   },
+   {
+    "zug": "preis:nimm:logistik",
+    "teil": "wort",
+    "text": "Nehmen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 29
+   },
+   {
+    "zug": "preis:festlege:konzern",
+    "teil": "preis einnahme",
+    "text": "+65.000 DM",
+    "zeilen": 3,
+    "woerter": 2,
+    "breite": 45
+   },
+   {
+    "zug": "preis:festlege:denkmal",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 47
+   },
+   {
+    "zug": "preis:festlege:privat",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 47
+   },
+   {
+    "zug": "preis:festlege:genossenschaft",
+    "teil": "wort",
+    "text": "Festlegen",
+    "zeilen": 2,
+    "woerter": 1,
+    "breite": 44
+   }
+  ],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ },
+ {
+  "fenster": "1366x768",
+  "epoche": 4,
+  "seite": "chronik",
+  "fehler": [],
+  "fehlt": false,
+  "ab": [],
+  "bruch": [],
+  "tafel": {
+   "b": 1147,
+   "h": 574
+  },
+  "rand": false
+ }
+]

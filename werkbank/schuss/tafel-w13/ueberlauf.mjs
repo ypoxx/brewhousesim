@@ -72,18 +72,29 @@ for (const [br, ho] of [[1600, 900], [1366, 768]]) {
         /* Knopfwoerter, die mitten im Wort brechen: das Wort ist breiter als
            sein Kasten, obwohl es nicht umbrechen dürfte. */
         const bruch = [];
+        const zeilenVon = (el) => {
+          const rg = document.createRange();
+          rg.selectNodeContents(el);
+          const rs = [...rg.getClientRects()].filter(r => r.width > 0.5 && r.height > 0.5);
+          const oben = [...new Set(rs.map(r => Math.round(r.top)))];
+          return { n: oben.length, breiteste: Math.max(0, ...rs.map(r => r.width)) };
+        };
         t.querySelectorAll('.knopf').forEach(k => {
-          const w = k.querySelector('.wort');
-          if (!w) return;
-          const r = w.getBoundingClientRect();
-          const zeilen = Math.round(r.height / (parseFloat(getComputedStyle(w).lineHeight) || 16));
-          const cs = getComputedStyle(w);
-          if (w.scrollWidth > w.clientWidth + 1 || (zeilen > 1 && cs.overflowWrap === 'anywhere')) {
-            bruch.push({ zug: k.getAttribute('data-zug'),
-              text: (k.innerText || '').trim().replace(/\s+/g, ' ').slice(0, 50),
-              zeilen, breite: Math.round(r.width), roll: w.scrollWidth - w.clientWidth,
-              umbruch: cs.overflowWrap });
-          }
+          k.querySelectorAll('.wort, .preis').forEach(w => {
+            const wort = (w.textContent || '').trim();
+            if (!wort) return;
+            const z = zeilenVon(w);
+            /* Ein Wort ohne Leerzeichen, das auf zwei Zeilen steht, ist
+               mitten im Wort gebrochen. „Nehmen" hat kein Leerzeichen.
+               Ein Preisschild („−110 Pf") traegt ein GESCHUETZTES
+               Leerzeichen und darf ebenfalls nie brechen. */
+            const teile = wort.split(/[\s ]+/).filter(Boolean);
+            if (z.n > teile.length || (teile.length === 1 && z.n > 1)) {
+              bruch.push({ zug: k.getAttribute('data-zug'), teil: w.className,
+                text: wort.slice(0, 40), zeilen: z.n, woerter: teile.length,
+                breite: Math.round(w.getBoundingClientRect().width) });
+            }
+          });
         });
         const rt = t.getBoundingClientRect();
         return { fehlt: false, ab, bruch,
@@ -108,6 +119,7 @@ alles.forEach(a => {
   if (!a.fehlt) a.ab.slice(0, 8).forEach(x =>
     console.log(`      [${x.richtung}] .${x.klasse}  -${x.fehltY || x.fehltX}px  „${x.text}"`));
   if (!a.fehlt) a.bruch.slice(0, 6).forEach(x =>
-    console.log(`      BRUCH ${x.zug} (${x.zeilen} Zeilen, roll ${x.roll}) „${x.text}"`));
+    console.log(`      BRUCH ${x.zug} .${x.teil} — „${x.text}" (${x.woerter} Wort/Wörter auf ${x.zeilen} Zeilen, ${x.breite}px)`));
+  if (a.fehler && a.fehler.length) a.fehler.slice(0, 3).forEach(f => console.log('      SEITENFEHLER ' + f));
 });
 console.log(`\nSUMME: ${sum} abgeschnittene Kästen · ${sumB} Wortbrüche über 16 Blätter`);

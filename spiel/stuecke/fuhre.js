@@ -1577,14 +1577,23 @@
   /* Welche Plaene stehen diese Woche nebeneinander? Die Reihenfolge ist
      fest (sonst waere die Partie nicht wiederholbar), die Dringenden zuerst,
      und was dieselbe Ladung ergibt, erscheint nur einmal. */
-  /* DIE REIHENFOLGE IST EINE AUSSAGE. Zuerst, was diese Woche wirklich
-     ansteht (Probefass, magere Haeuser), dann die Regeln des Fuhrmanns —
-     und ZULETZT „wie zuletzt". Das ist der Unterschied zwischen einem Plan
-     und einer Gewohnheit: die Wiederholung erscheint nur dann als eigener
-     Knopf, wenn sie sich von jeder Regel unterscheidet. Beim ersten Anlauf
-     stand sie vorn, verschluckte durch die Entdopplung „nach Durst" und kam
-     damit auf 59 % aller Klicks — gemessen, siehe Bericht. */
-  var PLAN_REIHE = ['probe', 'mager', 'durst', 'rechnung', 'nah', 'vorige'];
+  /* AUF DER WOCHENKARTE STEHEN NUR REGELN, KEINE GEWOHNHEIT.
+
+     „Wie vorige Woche" ist kein Fuhrplan, sondern die Abwesenheit eines
+     Plans — und genau deshalb steht es hier nicht mehr. Gemessen, warum:
+     mit `vorige` in der Liste fielen 65 bzw. 72 von 110 Klicks (59 bzw.
+     66 %) auf diesen einen Knopf, weil die Wiederholung der zuletzt
+     gewaehlten Ladung fast immer wieder die eintraeglichste ist. Ein Knopf,
+     der sich selbst verstaerkt, ist keine Wahl, sondern eine Rille.
+
+     Die Wiederholung ist damit nicht weg — sie hat nur den richtigen Ort
+     bekommen: den SPRUNG („Weiter wie zuletzt · bis zu N Wochen"), der sie
+     nicht einmal, sondern so lange faehrt, bis sich etwas aendert. Das ist
+     die zweite Haelfte von R13, woertlich: Wochen ohne Entscheidung werden
+     zusammengefasst. Wer eine einzelne Woche genau wie die vorige fahren
+     will, hat dafuer unveraendert `fuhre:wie-vorige` auf dem Brett DER
+     WAGEN. */
+  var PLAN_REIHE = ['probe', 'mager', 'durst', 'rechnung', 'nah'];
   var PLAN_HOECHSTENS = 4;
 
   function planListe() {
@@ -1692,24 +1701,22 @@
      ---------------------------------------------------------------------- */
   var SPRUNG_HOECHSTENS = 6;
 
-  /* WANN IST EINE WOCHE RUHIG? Wenn sie keine Wahl traegt.
+  /* WANN DARF ERZAEHLT STATT GEKLICKT WERDEN?
 
-     Das ist keine Stimmung, sondern eine Zaehlung: `planListe()` gibt nach
-     der Entdopplung genau die Ladungen zurueck, die sich voneinander
-     unterscheiden. Steht dort nur EINE, dann gibt es diese Woche nichts zu
-     entscheiden — der Wagen faehrt so oder so dasselbe. Stehen zwei da, ist
-     es eine Wahl, und eine Wahl wird nicht uebersprungen.
+     Wenn die Fuhre der vorigen Woche noch fahrbar ist — dann ist die
+     Wiederholung eine Moeglichkeit, und eine Woche, deren Antwort „wie
+     zuletzt" heisst, traegt keine Entscheidung.
 
-     Dazu die drei Dinge, die immer aufhalten: ein liegendes Angebot, eine
-     laufende Frist und ein Wirt, der auf ein Probefass wartet. Und der
-     Jahreswechsel: Michaeli ist eine Entscheidung. */
-  function sprungWeite(plaene) {
+     Vier Dinge halten immer auf, und jedes ist eine Entscheidung: ein
+     liegendes Uebergabeangebot, ein liegender Antrag, die laufende Frist des
+     leeren Auftragsbuchs und ein Wirt, der auf ein Probefass wartet. Dazu
+     der Jahreswechsel — Michaeli wird nicht uebersprungen. */
+  function sprungWeite() {
     if (B.welt.zeit.ende) return 0;
     if (sommerLiegtOben() || schlussLiegtOben() || Z.antrag || Z.uebergabe) return 0;
     if (Z.frist !== null && Z.frist !== undefined) return 0;
     if (probeKandidat()) return 0;
-    var l = plaene || planListe();
-    if (l.length >= 2) return 0;
+    if (!planRechne('vorige')) return 0;
     var bisJahresende = B.uhr.WOCHEN_IM_JAHR - B.welt.zeit.woche;
     return B.grenze(Math.min(SPRUNG_HOECHSTENS, bisJahresende), 0, SPRUNG_HOECHSTENS);
   }
@@ -1719,7 +1726,7 @@
     var vonJahr = B.welt.zeit.jahr, vonWoche = B.welt.zeit.woche;
     for (var i = 0; i < n; i++) {
       if (B.welt.zeit.ende) break;
-      var plan = planRechne(Z.letzterPlan) || planRechne('durst') || planRechne('vorige');
+      var plan = planRechne('vorige') || planRechne(Z.letzterPlan) || planRechne('durst');
       var vorKasse = B.welt.haus.kasse;
       if (plan) {
         Z.ladung = plan.ladung;
@@ -3690,7 +3697,7 @@
        hineingehen. */
     var frei = 4;
     var alle = planListe();
-    var weite = sprungWeite(alle);
+    var weite = sprungWeite();
 
     /* DAS GUTE ENDE, wenn es liegt — zuerst und in eigener Farbe.
        Auflage A3: „Solange das Angebot liegt, wird es nicht als einer von elf
@@ -3714,9 +3721,9 @@
 
     if (weite >= 2) {
       reihe.appendChild(B.knopf({
-        text: 'Ruhige Wochen fahren lassen · bis zu ' + weite,
+        text: 'Weiter wie zuletzt · bis zu ' + weite + ' Wochen',
         zug: 'fuhre:sprung', klasse: 'fu-chip fu-sprung',
-        titel: 'Der Fuhrmann fährt weiter wie zuletzt, ohne dass jemand hinsieht. '
+        titel: 'Der Fuhrmann fährt dieselbe Runde weiter, ohne dass jemand hinsieht. '
              + 'Angehalten wird, sobald wieder etwas zu entscheiden ist — spätestens zu '
              + 'Michaeli. Was dabei geschah, steht danach hier und in der Chronik.',
         tu: function () { springeWochen(weite); }

@@ -1,212 +1,28 @@
 {
- "epoche": 3,
- "fenster": "1600x900",
- "fehler": [],
- "mitAnschlag": {
-  "greifbar": 41,
-  "zuege": 106,
-  "textzeilen": 426,
-  "woerter": {
-   "Ziel": 2,
-   "gewinnen": 1,
-   "ueberleben": 1
-  },
-  "zettel": true
+ "zettelDa": true,
+ "zuegeImSichtfeld": 106,
+ "greifbar": 41,
+ "blindeZuege": 65,
+ "vomAnschlagVerdeckt": [],
+ "textzeilen": 426,
+ "woerter": {
+  "Ziel": 2,
+  "gewinnen": 1,
+  "ueberleben": 1
  },
- "ohneAnschlag": {
-  "greifbar": 36,
-  "zuege": 120,
-  "textzeilen": 620,
-  "woerter": {
-   "Ziel": 1,
-   "gewinnen": 0,
-   "ueberleben": 0
-  },
-  "zettel": false
+ "woerterWo": {
+  "Ziel": [
+   "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genu",
+   "DAS ZIEL —"
+  ],
+  "gewinnen": [
+   "das Haus so weit bringen, dass es übergeben werden kann: an die nächste Hand, vor dem Rat."
+  ],
+  "ueberleben": [
+   "das Haus so weit bringen, dass es übergeben werden kann: an die nächste Hand, vor dem Rat."
+  ]
  },
- "anfangenGetroffen": true,
- "unterschied": [
-  {
-   "zug": "gegner:oeffnen:adler",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:abloesen:lindenhof",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:hinhalten:lindenhof",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:abloesen:muehlwirt",
-   "mitAnschlag": "blind",
-   "ohne": "hit"
-  },
-  {
-   "zug": "gegner:abloesen:markt",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:hinhalten:markt",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:beschwerde-bild",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "name:anschlag:annonce",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:marke:fuhre-lindenhof",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:marke:fuhre-marktplatz",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:marke:fuhre-fluss",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "fuhre:plan:mager",
-   "mitAnschlag": "(fort)",
-   "ohne": "blind"
-  },
-  {
-   "zug": "fuhre:plan:durst",
-   "mitAnschlag": "(fort)",
-   "ohne": "blind"
-  },
-  {
-   "zug": "fuhre:plan:nah",
-   "mitAnschlag": "(fort)",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:tafel:verschreibe",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:uebergabe:leibgeding",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:uebergabe:abfindung",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:uebergabe:bruch",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:buch",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:reiter:preis-pr-stil-kontor-pr-tafel",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "stadt:alles-zuklappen",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:chronik",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:braumeister",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:malzkontrakt",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:maelzerei",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:flaschen",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:niederlage",
-   "mitAnschlag": "(fort)",
-   "ohne": "aushit"
-  },
-  {
-   "zug": "preis:festlege:aktien",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:festlege:bahnvertrag",
-   "mitAnschlag": "(fort)",
-   "ohne": "aushit"
-  },
-  {
-   "zug": "preis:festlege:konvention",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nichts",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:tafel-zu",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "kern:anfangen",
-   "mitAnschlag": "hit",
-   "ohne": "(fort)"
-  },
-  {
-   "zug": "preis:chronik-auf",
-   "mitAnschlag": "hit",
-   "ohne": "(fort)"
-  }
- ],
- "nurDerAnschlagKnopf": false,
- "haushalt": [
-  "stadt: 284811/40000 px  oben 118358/26000 px",
-  "preis: 134421/24000 px  oben 81160/20000 px",
-  "sud: 73269/34000 px",
-  "erbe: 39453/28000 px",
-  "name: 28932/20000 px",
-  "kern: 112158/120000 px  oben 91305/80000 px"
- ],
- "haushaltKern": {
+ "kernMit": {
   "stueck": "kern",
   "kaesten": 9,
   "px": 112158,
@@ -219,7 +35,52 @@
   "ueber": -7842,
   "ueberOben": 11305
  },
+ "kernOhne": {
+  "stueck": "kern",
+  "kaesten": 9,
+  "px": 112158,
+  "anteil": 2.6533259901889537,
+  "obenPx": 91305,
+  "obenAnteil": 12.960034747456396,
+  "grenze": 120000,
+  "grenzeOben": 80000,
+  "bekannt": true,
+  "ueber": -7842,
+  "ueberOben": 11305
+ },
+ "gesamtMit": {
+  "px": 674547,
+  "anteil": 15.957783543786338
+ },
+ "gesamtOhne": {
+  "px": 674547,
+  "anteil": 15.957783543786338
+ },
+ "obenMit": {
+  "px": 293124,
+  "anteil": 41.60667242005814
+ },
+ "obenOhne": {
+  "px": 293124,
+  "anteil": 41.60667242005814
+ },
+ "haushalt": [
+  "stadt: 284811/40000 px  oben 118358/26000 px",
+  "preis: 134421/24000 px  oben 81160/20000 px",
+  "sud: 73269/34000 px",
+  "erbe: 39453/28000 px",
+  "name: 28932/20000 px",
+  "kern: 112158/120000 px  oben 91305/80000 px"
+ ],
  "tafeln": [],
  "ueberRand": [],
- "lage": []
+ "lage": [],
+ "epoche": 3,
+ "fenster": "1600x900",
+ "fehler": [],
+ "kostetFlaeche": {
+  "gesamt": 0,
+  "oben": 0
+ },
+ "bestanden": true
 }

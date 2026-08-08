@@ -263,7 +263,7 @@ while (gespielt < ZIELWOCHEN) {
     liste: s.zuege.filter(z => z.hit && !z.aus && /^fuhre:plan:/.test(z.zug))
       .map(z => ({ zug: z.zug, preis: z.preis, text: z.text })) });
   let gesprungen = false;
-  if (!fragen.length && sprung && planZahl <= 1) {
+  if (!fragen.length && sprung) {
     const vorSpr = await schirm();
     if (await greif(sprung.zug, { grund: 'ruhige Wochen zusammenfassen', warte: 340 })) {
       const nachSpr = await schirm();

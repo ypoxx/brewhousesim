@@ -95,7 +95,8 @@ const erg = await seite.evaluate(() => {
     zeilen.push(t);
   }
   const alles = zeilen.join('\n');
-  const zaehl = (w) => (alles.match(new RegExp(w, 'g')) || []).length;
+  const zaehl = (w) => (alles.match(new RegExp(w, 'gi')) || []).length;
+  const wo = (w) => zeilen.filter(z => new RegExp(w, 'i').test(z)).map(z => z.slice(0, 90));
 
   return {
     zettelDa: !!zettel,
@@ -103,7 +104,8 @@ const erg = await seite.evaluate(() => {
     blindeZuege: blind.length,
     vomAnschlagVerdeckt: verdeckt,
     textzeilen: zeilen.length,
-    woerter: { Ziel: zaehl('Ziel'), gewinnen: zaehl('[Gg]ewinn'), ueberleben: zaehl('[Üü]berleb') },
+    woerter: { Ziel: zaehl('ziel'), gewinnen: zaehl('gewinn'), ueberleben: zaehl('überleb') },
+    woerterWo: { Ziel: wo('ziel'), gewinnen: wo('gewinn'), ueberleben: wo('überleb') },
     kernMit: vorher.je.kern || null,
     kernOhne: nachher.je.kern || null,
     gesamtMit: vorher.gesamt, gesamtOhne: nachher.gesamt,
@@ -127,7 +129,7 @@ console.log(JSON.stringify({
   epoche: ep, fenster: erg.fenster, bestanden: erg.bestanden,
   zettelDa: erg.zettelDa, zuegeImSichtfeld: erg.zuegeImSichtfeld, greifbar: erg.greifbar,
   blindeZuege: erg.blindeZuege, vomAnschlagVerdeckt: erg.vomAnschlagVerdeckt,
-  textzeilen: erg.textzeilen, woerter: erg.woerter,
+  textzeilen: erg.textzeilen, woerter: erg.woerter, woerterWo: erg.woerterWo,
   kernMit: erg.kernMit && [erg.kernMit.px, erg.kernMit.obenPx],
   kernOhne: erg.kernOhne && [erg.kernOhne.px, erg.kernOhne.obenPx],
   kostetFlaeche: erg.kostetFlaeche,

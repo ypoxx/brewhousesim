@@ -1,227 +1,31 @@
 {
- "epoche": 2,
- "fenster": "1600x900",
- "fehler": [],
- "mitAnschlag": {
-  "greifbar": 43,
-  "zuege": 103,
-  "textzeilen": 425,
-  "woerter": {
-   "Ziel": 5,
-   "gewinnen": 1,
-   "ueberleben": 1
-  },
-  "zettel": true
+ "zettelDa": true,
+ "zuegeImSichtfeld": 103,
+ "greifbar": 43,
+ "blindeZuege": 60,
+ "vomAnschlagVerdeckt": [],
+ "textzeilen": 425,
+ "woerter": {
+  "Ziel": 5,
+  "gewinnen": 1,
+  "ueberleben": 1
  },
- "ohneAnschlag": {
-  "greifbar": 32,
-  "zuege": 118,
-  "textzeilen": 628,
-  "woerter": {
-   "Ziel": 4,
-   "gewinnen": 0,
-   "ueberleben": 0
-  },
-  "zettel": false
+ "woerterWo": {
+  "Ziel": [
+   "Auf Ziel bis Michaeli",
+   "Auf langes Ziel, mit Nachlass",
+   "Ein Jahr Ziel und ein Nachlass obendrauf, dafür nimmt er doppelt.",
+   "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genu",
+   "DAS ZIEL —"
+  ],
+  "gewinnen": [
+   "das Haus so weit bringen, dass es übergeben werden kann: an die nächste Hand, vor dem Rat."
+  ],
+  "ueberleben": [
+   "das Haus so weit bringen, dass es übergeben werden kann: an die nächste Hand, vor dem Rat."
+  ]
  },
- "anfangenGetroffen": true,
- "unterschied": [
-  {
-   "zug": "gegner:oeffnen:adler",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:abloesen:ochse",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:hinhalten:ochse",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "gegner:beschwerde-bild",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "sud:zettel-anstich",
-   "mitAnschlag": "hit",
-   "ohne": "ausblind"
-  },
-  {
-   "zug": "sud:zettel-hefe-fass",
-   "mitAnschlag": "hit",
-   "ohne": "ausblind"
-  },
-  {
-   "zug": "sud:zettel-wechsel-frei",
-   "mitAnschlag": "hit",
-   "ohne": "ausblind"
-  },
-  {
-   "zug": "sud:zettel-wechsel-kauf",
-   "mitAnschlag": "hit",
-   "ohne": "ausblind"
-  },
-  {
-   "zug": "name:anschlag:kirchweih",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:marke:gegner-marktplatz",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:marke:fuhre-lindenhof",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:marke:fuhre-marktplatz",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:marke:fuhre-fluss",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "fuhre:plan:mager",
-   "mitAnschlag": "(fort)",
-   "ohne": "blind"
-  },
-  {
-   "zug": "fuhre:plan:durst",
-   "mitAnschlag": "(fort)",
-   "ohne": "blind"
-  },
-  {
-   "zug": "fuhre:plan:rechnung",
-   "mitAnschlag": "(fort)",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:tafel:verschreibe",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:uebergabe:leibgeding",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:uebergabe:abfindung",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:uebergabe:bruch",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "erbe:buch",
-   "mitAnschlag": "hit",
-   "ohne": "blind"
-  },
-  {
-   "zug": "stadt:reiter:preis-pr-stil-kanzlei-pr-tafel",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "stadt:alles-zuklappen",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:chronik",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:darre",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:wappenbrief",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:auswaertiger",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:nimm:zunftrecht",
-   "mitAnschlag": "(fort)",
-   "ohne": "aushit"
-  },
-  {
-   "zug": "preis:nimm:klosterrecht",
-   "mitAnschlag": "(fort)",
-   "ohne": "aushit"
-  },
-  {
-   "zug": "preis:festlege:eigentum",
-   "mitAnschlag": "(fort)",
-   "ohne": "aushit"
-  },
-  {
-   "zug": "preis:festlege:reinheit",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:festlege:ratssitz",
-   "mitAnschlag": "(fort)",
-   "ohne": "aushit"
-  },
-  {
-   "zug": "preis:festlege:bierbann",
-   "mitAnschlag": "(fort)",
-   "ohne": "aushit"
-  },
-  {
-   "zug": "preis:nichts",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "preis:tafel-zu",
-   "mitAnschlag": "(fort)",
-   "ohne": "hit"
-  },
-  {
-   "zug": "kern:anfangen",
-   "mitAnschlag": "hit",
-   "ohne": "(fort)"
-  },
-  {
-   "zug": "preis:chronik-auf",
-   "mitAnschlag": "hit",
-   "ohne": "(fort)"
-  }
- ],
- "nurDerAnschlagKnopf": false,
- "haushalt": [
-  "stadt: 249773/40000 px  oben 123102/26000 px",
-  "preis: 124276/24000 px  oben 81160/20000 px",
-  "sud: 80596/34000 px",
-  "name: 41331/20000 px",
-  "erbe: 34850/28000 px",
-  "kern: 107931/120000 px  oben 87078/80000 px"
- ],
- "haushaltKern": {
+ "kernMit": {
   "stueck": "kern",
   "kaesten": 9,
   "px": 107931,
@@ -234,7 +38,52 @@
   "ueber": -12069,
   "ueberOben": 7078
  },
+ "kernOhne": {
+  "stueck": "kern",
+  "kaesten": 9,
+  "px": 107931,
+  "anteil": 2.5533276934956395,
+  "obenPx": 87078,
+  "obenAnteil": 12.360044967296512,
+  "grenze": 120000,
+  "grenzeOben": 80000,
+  "bekannt": true,
+  "ueber": -12069,
+  "ueberOben": 7078
+ },
+ "gesamtMit": {
+  "px": 648480,
+  "anteil": 15.341115552325581
+ },
+ "gesamtOhne": {
+  "px": 648480,
+  "anteil": 15.341115552325581
+ },
+ "obenMit": {
+  "px": 293641,
+  "anteil": 41.68005654978197
+ },
+ "obenOhne": {
+  "px": 293641,
+  "anteil": 41.68005654978197
+ },
+ "haushalt": [
+  "stadt: 249773/40000 px  oben 123102/26000 px",
+  "preis: 124276/24000 px  oben 81160/20000 px",
+  "sud: 80596/34000 px",
+  "name: 41331/20000 px",
+  "erbe: 34850/28000 px",
+  "kern: 107931/120000 px  oben 87078/80000 px"
+ ],
  "tafeln": [],
  "ueberRand": [],
- "lage": []
+ "lage": [],
+ "epoche": 2,
+ "fenster": "1600x900",
+ "fehler": [],
+ "kostetFlaeche": {
+  "gesamt": 0,
+  "oben": 0
+ },
+ "bestanden": true
 }

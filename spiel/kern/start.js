@@ -113,15 +113,25 @@
       + 'zeigen denselben Ort, aber man spielt sie einzeln; keine wächst in '
       + 'die nächste hinüber.'));
 
+    /* DER STREIFEN DARF KEINE KLICKS NEHMEN, NUR DER KNOPF.  Gemessen mit
+       `werkbank/schuss/rahmen-w13/griffprobe.mjs`: hier stand
+       `pointer-events:auto` am UMSCHLIESSENDEN <div>. Das ist ein
+       Blockelement ueber die ganze Breite des Anschlags (47 %), also ein
+       unsichtbarer Balken von rund 750 x 40 px, der Klicks abfing — in 1600
+       lag `sud:gaerung:keller` darunter, in 1970 `fuhre:listen:neustadt`.
+       Beide waren am Bildschirm zu sehen und liessen sich nicht anfassen,
+       und genau das ist der Ausfall, aus dem eine andere Partie wird.
+       `pointer-events:auto` gehoert an den Knopf und an nichts sonst. */
     var knopfzeile = B.el('div');
-    knopfzeile.style.cssText = 'margin-top:calc(var(--s)*10);pointer-events:auto;';
+    knopfzeile.style.cssText = 'margin-top:calc(var(--s)*10);pointer-events:none;';
     var k = B.knopf({
       text: 'Anfangen',
       zug: 'kern:anfangen',
       titel: 'Legt diesen Anschlag beiseite. Er kommt nach dem ersten WEITER ohnehin nicht wieder.',
       tu: function () { zettelWeg(); }
     });
-    k.style.cssText = 'background:none;background-color:transparent;border:0;box-shadow:none;'
+    k.style.cssText = 'pointer-events:auto;'
+      + 'background:none;background-color:transparent;border:0;box-shadow:none;'
       + 'padding:calc(var(--s)*5) calc(var(--s)*10) calc(var(--s)*5) 0;'
       + 'min-height:max(24px,calc(var(--s)*38));min-width:max(24px,calc(var(--s)*38));'
       + 'font-family:var(--serif);font-size:max(12px,calc(var(--s)*22));color:#2b1d10;'

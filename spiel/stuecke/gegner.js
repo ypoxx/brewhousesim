@@ -219,8 +219,10 @@
      @1550,527) — im Vorzustand ebenso (106 bzw. 475 px²). Der Ort bleibt,
      wo er ist; nur das Zeichen rueckt so weit, dass die Buchstaben frei
      stehen.                                                              */
-  var ZONEN = {};              /* Epoche -> [{x,y,b,h}] in Prozent */
+  var ZONEN = {};              /* Epoche -> [{x,y,b,h}] in Prozent — Beschriftungen */
   var ZONEN_LEER = {};         /* Epoche -> Zahl der LEER ausgegangenen Anlaeufe */
+  var GRIFFE = {};             /* Epoche -> [{x,y,b,h}] — fremde Griffe UEBER mir */
+  var GRIFFE_LEER = {};        /* dasselbe, eigener Zaehler (siehe unten) */
 
   /* Damit die Ausweiche messbar ist und nicht nur behauptet: die Zahl der
      gefundenen Zonen steht am eigenen Fach. Fremdes DOM wird nicht
@@ -230,14 +232,19 @@
     if (f) f.setAttribute('data-a3zonen', String(n));
   }
 
-  function sperrzonen() {
+  function buehnenmass() {
+    var bu = document.getElementById('buehne');
+    if (!bu) return null;
+    var VB = bu.clientWidth, VH = bu.clientHeight;
+    return (VB && VH) ? { VB: VB, VH: VH } : null;
+  }
+
+  function beschriftungszonen() {
     var e = epNr();
     if (ZONEN[e]) return ZONEN[e];
     if ((ZONEN_LEER[e] || 0) >= 40) return [];
-    var bu = document.getElementById('buehne');
-    if (!bu) return [];
-    var VB = bu.clientWidth, VH = bu.clientHeight;
-    if (!VB || !VH) return [];
+    var m = buehnenmass();
+    if (!m) return [];
     var l = [];
     var q = document.querySelectorAll(
       '#ebene-bau .stadt-name, #ebene-bau .stadt-hausschild,'
@@ -245,9 +252,13 @@
     for (var i = 0; i < q.length; i++) {
       var r = q[i].getBoundingClientRect();
       if (r.width < 8 || r.height < 6) continue;
-      l.push({ x: 100 * r.x / VB, y: 100 * r.y / VH,
-               b: 100 * r.width / VB, h: 100 * r.height / VH });
+      l.push({ x: 100 * r.x / m.VB, y: 100 * r.y / m.VH,
+               b: 100 * r.width / m.VB, h: 100 * r.height / m.VH });
     }
+    if (l.length) ZONEN[e] = l;
+    else ZONEN_LEER[e] = (ZONEN_LEER[e] || 0) + 1;
+    return l;
+  }
 
     /* ------------------------------------------------------------------
        WELLE 13, R15 — DER GRIFF DES PREISES NIMMT DIE MAUS, UND ZWAR MEINE.
@@ -282,17 +293,40 @@
        WENN DER PREIS SEINEN GRIFF UMBENENNT, greift diese Zone lautlos nicht
        mehr. Damit das messbar bleibt und nicht behauptet ist, steht die Zahl
        der gefundenen Zonen weiter in `data-a3zonen` am eigenen Fach — sie
-       geht dann von 5 auf 4 zurueck. */
+       geht dann von 5 auf 4 zurueck.
+
+       ZWEI GETRENNTE MERKER, UND DAS IST DER FEHLER, DEN ICH SELBST GEMACHT
+       HABE. Beim ersten Anlauf haben die Griffe im DERSELBEN Liste gestanden
+       wie die Beschriftungen — und die Ausweiche griff nicht. Der Grund:
+       `if (l.length) ZONEN[e] = l;` merkt sich die Liste, SOBALD irgendetwas
+       darin steht. Beim ersten Bildaufbau standen die drei Ortsschilder
+       schon da, der Griff DES PREISES noch nicht (fremde Stuecke zeichnen in
+       derselben Runde, aber nicht in derselben Millisekunde). Die Liste war
+       damit fuer die ganze Partie ohne Griff — lautlos, denn drei Zonen
+       sehen aus wie „gefunden". Jede Sorte Zone hat jetzt ihren eigenen
+       Merker und ihren eigenen Leerzaehler; keine kann die andere
+       einfrieren. */
+  function griffzonen() {
+    var e = epNr();
+    if (GRIFFE[e]) return GRIFFE[e];
+    if ((GRIFFE_LEER[e] || 0) >= 40) return [];
+    var m = buehnenmass();
+    if (!m) return [];
+    var l = [];
     var g = document.querySelectorAll('#ebene-blatt .pr-griff');
     for (var j = 0; j < g.length; j++) {
       var rg = g[j].getBoundingClientRect();
       if (rg.width < 8 || rg.height < 6) continue;
-      l.push({ x: 100 * rg.x / VB, y: 100 * rg.y / VH,
-               b: 100 * rg.width / VB, h: 100 * rg.height / VH + 2.5 });
+      l.push({ x: 100 * rg.x / m.VB, y: 100 * rg.y / m.VH,
+               b: 100 * rg.width / m.VB, h: 100 * rg.height / m.VH + 2.5 });
     }
+    if (l.length) GRIFFE[e] = l;
+    else GRIFFE_LEER[e] = (GRIFFE_LEER[e] || 0) + 1;
+    return l;
+  }
 
-    if (l.length) ZONEN[e] = l;
-    else ZONEN_LEER[e] = (ZONEN_LEER[e] || 0) + 1;
+  function sperrzonen() {
+    var l = beschriftungszonen().concat(griffzonen());
     meldeZonen(l.length);
     return l;
   }
@@ -3437,7 +3471,19 @@
   B.gegner = {
     zuege: function () { return Z.zuege.slice(); },
     zahl: function () { return Z.zaehler; },
-    lage: function () { return Z; }
+    lage: function () { return Z; },
+    /* WELLE 13: die Ausweiche soll nachzaehlbar sein und nicht nur im
+       `data-a3zonen` als Zahl stehen. `zonen()` gibt die Rechtecke selbst
+       heraus — in Prozent der Buehne, so wie `weicheAus` mit ihnen rechnet. */
+    zonen: function () {
+      return { beschriftungen: beschriftungszonen().slice(), griffe: griffzonen().slice() };
+    },
+    /* Was das Hinhalten in dieser Woche kostet: 0 heisst „aus dem Keller". */
+    fasspreis: function () {
+      var n = hinhaltFass();
+      return { fass: n, imKeller: fassImKeller(), fehlt: fassFehlt(n),
+               zukauf: zukaufPreis(n), traegtDieLade: hinhaltBezahlbar() };
+    }
   };
 
 })(BRAUHAUS);
