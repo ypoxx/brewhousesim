@@ -246,12 +246,18 @@ derselbe, und jedes vorhandene Messgerät findet ihn weiter.
 
 `gegnerblick.mjs 1 50`:
 
-| | vorher | nachher |
-|---|---|---|
-| Wochen mit Zahl am Reiter | **30 / 50** | **50 / 50** |
-| Woche 15 | `OHNE DICH GESCHEHEN 12 Züge` | `OHNE DICH GESCHEHEN · 12 ZÜGE  zugeklappt` |
-| Woche 45 | `OHNE DICH GESCHEHEN` | `OHNE DICH GESCHEHEN · 25 ZÜGE  zugeklappt` |
-| **Form Woche 45 = Form Woche 15** | **nein** | **ja** |
+| | vorher | nachher (eingefrorener Stand) | nachher (**laufender Stand**) |
+|---|---|---|---|
+| Wochen mit Zahl am Reiter | **30 / 50** | **50 / 50** | **50 / 50** |
+| Woche 15 | `OHNE DICH GESCHEHEN` `12 Züge` | `OHNE DICH GESCHEHEN · 12 ZÜGE  zugeklappt` | `OHNE DICH GESCHEHEN · 17 ZÜGE` |
+| Woche 45 | `OHNE DICH GESCHEHEN` | `OHNE DICH GESCHEHEN · 25 ZÜGE  zugeklappt` | `OHNE DICH GESCHEHEN · 46 ZÜGE` |
+| **Form Woche 45 = Form Woche 15** | **nein** | **ja** | **ja** |
+
+Die dritte Spalte ist der Arbeitsbaum, in dem die anderen drei Builder
+gleichzeitig arbeiten — dort läuft die Partie schneller (50 Klicks reichen bis
+1352/26 statt 1351/14), und die Reiterzeile ist bereits so breit, dass die
+zweite Zeile gar nicht erst ausgeblendet wird. **Beide Male steht die Zahl in
+allen fünfzig Wochen da.**
 
 ### Und was das an der Geometrie anrichtet — nachgemessen, nicht behauptet
 
