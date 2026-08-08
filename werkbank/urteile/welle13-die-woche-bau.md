@@ -326,12 +326,13 @@ keiner seiner Listen.
 | gespielte Wochen · Jahre | 284 · 1350–1359 | 78 · **1350–1358** |
 | **Reiterklicks** | (Reitersuche vor jedem Griff) | **0** |
 | Wochen, in denen das Angebot lag | 15 | **13** |
-| davon mit **sichtbarem Text** im Fenster | — | **13 von 13** |
-| davon mit **greifbarem Knopf** dazu | — | 9 von 13 |
-| **bemerkt** | **0 von 15** | **13 von 13** |
+| davon mit **sichtbarem Text** im Fenster | — | **13 von 13** bzw. **12 von 13** (zwei Läufe) |
+| davon mit **greifbarem Knopf** dazu | — | 9 von 13 (beide Läufe) |
+| **bemerkt** | **0 von 15** | **13 bzw. 12 von 13** |
 
-Wo die Knöpfe standen: **Wochenkarte 9 ×, aufgeschlagenes Übergabeblatt 8 ×**
-— kein einziges Mal nur im Reiter. Die erste Berührung, Wort für Wort vom
+Wo die Knöpfe standen: **Wochenkarte 9 ×, aufgeschlagenes Übergabeblatt 8–9 ×**
+— kein einziges Mal nur im Reiter. In 1600 dieselbe Probe: **9 von 9 Wochen
+sichtbar, 0 Reiterklicks, zuerst 1605/1.** Die erste Berührung, Wort für Wort vom
 Bildschirm, Braujahr **1355, Woche 1**:
 
 > `Ziel: Die Übergabe vor dem Rat liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)`

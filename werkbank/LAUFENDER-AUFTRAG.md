@@ -61,7 +61,7 @@ zurückgestellt.
 | Stück | Hafen | Auflagen | Stand | Berichtsdatei |
 |---|---|---|---|---|
 | **DER RAHMEN** — Spielstand, Zielsatz, Startschirm | 8921 | A1 A2(Platz) A12(Entscheidung) | **gebaut, 09:0x** | `urteile/welle13-der-rahmen-bau.md` |
-| **DIE JAHRESTAFEL** — der lügende Knopf, die Tafel, die nie aufliegt | 8922 | A4 A5 A6 A10 A13 | baut | `urteile/welle13-die-jahrestafel-bau.md` |
+| **DIE JAHRESTAFEL** — der lügende Knopf, die Tafel, die nie aufliegt | 8922 | A4 A5 A6 A10 A13 | **gebaut, 09:4x** | `urteile/welle13-die-jahrestafel-bau.md` |
 | **DIE WOCHE** — 71 % der Klicks sind zwei Knöpfe | 8923 | A2(Satz) A3 A6 A7 | baut | `urteile/welle13-die-woche-bau.md` |
 | **DER GEGENZUG** — 457 zu 5 | 8924 | A8 A9 | baut | `urteile/welle13-der-gegenzug-bau.md` |
 
@@ -101,6 +101,33 @@ zurückgestellt.
 >
 > Beide Builder haben den Befund per Nachricht bekommen, `WELLE-13.md` ist an
 > R7 und R15 berichtigt.
+
+> ### EINE OFFENE FRAGE AN DEN EIGENEN BEFUND DER WELLE 12
+>
+> *Gemeldet von DIE JAHRESTAFEL am 8. August, aufgenommen von der Aufsicht als
+> Frage, nicht als Berichtigung — sie ist nicht nachgemessen.*
+>
+> Welle 12 hat die 420-ms-Wanduhrfrist in `preis.js:2737` als **den** Verursacher
+> der Bistabilität benannt; der Satz steht in `spiel/LIESMICH.md`. Der Builder
+> sagt jetzt: **diese Frist hat nie gefeuert**, weil ihre erste Zeile ein
+> `clearTimeout` war und das Spiel öfter als alle 420 ms zeichnet. Die wirkliche
+> Ursache seiner Seite sei gewesen, dass `tafelWeggeklappt()` nach einem Element
+> fragte, das `B.leere(fach)` eine Zeile vorher entfernt hatte — die Abfrage
+> konnte gar nichts finden.
+>
+> **Beides kann zugleich wahr sein.** `kern/runde.js` zieht ein während einer
+> Zeichenrunde bestelltes `setTimeout` **vor**; eine Frist, die vorher stets
+> gelöscht wurde, bevor sie ablief, **feuert danach**. Die Welle 12 hätte dann
+> nicht ein Rennen abgestellt, sondern einen nie ausgeführten Zweig zum ersten
+> Mal deterministisch ausgeführt — mit demselben guten Ergebnis (sechs Läufe,
+> eine Prüfsumme) und einer anderen Begründung.
+>
+> **Was daraus folgt, ist keine Änderung, sondern eine Messung:** wenn die Welle
+> 13 durch ist, prüft die Aufsicht am eingefrorenen Stand, ob die
+> Wiederholbarkeit **auch ohne** die Vorziehregel hält. Hält sie, war die
+> Begründung der Welle 12 falsch und die Regel überflüssig; hält sie nicht, war
+> sie richtig. Bis dahin bleibt der Satz in `LIESMICH.md` stehen — **eine Regel,
+> die trägt, wird nicht auf einen unbelegten Verdacht hin entfernt.**
 
 **Drei Entscheidungen der Aufsicht stehen im Brief**, damit kein Builder rät:
 
