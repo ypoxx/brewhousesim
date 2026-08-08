@@ -114,6 +114,25 @@ keine), null Seitenfehler. 1600, 1884 und 1970 laufen.
 > stündliche Resets, ohne eine Messreihe zu verlieren** — das war in Welle 11
 > noch nicht so.
 
+> ### DER CONTAINER STEHT STILL, ER LÄUFT NICHT NUR ZURÜCK
+>
+> *Beobachtet am 8. August zwischen den Resets 23 und 24.*
+>
+> Die Abnahmereihe lief von 12:28 bis zum Reset um 13:21 — **53 Minuten, in
+> denen genau ein Lauf fertig wurde**, bei 272 s je Lauf. Der Veröffentlicher
+> hat in derselben Zeit **gar nichts** committet: der letzte Commit vor dem
+> Reset trägt 12:36, danach kommt 45 Minuten lang keiner, obwohl er alle 180 s
+> nachsieht.
+>
+> **Daraus folgt: der Container wird nicht nur zurückgesetzt, er wird
+> zwischendurch angehalten.** Wer aus der Wanduhr auf geleistete Arbeit
+> schließt, rechnet falsch — eine Stunde Wanduhr kann fünf Minuten Rechenzeit
+> sein. Für die Planung heißt das: **jede lange Messreihe muss fortsetzbar
+> sein**, und sie muss ihre Teilergebnisse einzeln auf die Platte schreiben, wo
+> der Veröffentlicher sie findet. `abnahme.sh` tut beides — es prüft je Lauf, ob
+> die Datei schon vorliegt, und überspringt sie. Ohne das wäre die Reihe heute
+> viermal von vorn angefangen und nie fertig geworden.
+
 > ### EIN HAFEN IST KEIN BAUM — gemeldet von DER GEGENZUG aus eigenem Schaden
 >
 > Sein erster Geometrievergleich lief gegen **Hafen 8931**, auf dem gar nicht
