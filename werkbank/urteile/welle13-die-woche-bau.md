@@ -313,3 +313,97 @@ Das ist der Punkt 1 der zweiten Messlatte, und er stand bisher **allein auf
 der Michaelitafel**, die einmal im Braujahr aufliegt. Er steht jetzt in 56 bis
 92 von 100 Wochen auch in der Woche selbst.
 
+
+### R12 — „DIE ÜBERGABE VOR DEM RAT" darf sich nicht verstecken
+
+Abnahme wörtlich nach dem Auftrag: **1350 spielen, ohne einen einzigen Reiter
+anzufassen.** Gerät `werkbank/schuss/woche-w13/uebergabe.mjs` — es kennt nur
+die Wochenkarte, `fuhre:sommer-zu` und WEITER; `stadt:reiter:*` steht auf
+keiner seiner Listen.
+
+| | Kritiker Welle 12 | **jetzt** |
+|---|---|---|
+| gespielte Wochen · Jahre | 284 · 1350–1359 | 78 · **1350–1358** |
+| **Reiterklicks** | (Reitersuche vor jedem Griff) | **0** |
+| Wochen, in denen das Angebot lag | 15 | **13** |
+| davon mit **sichtbarem Text** im Fenster | — | **13 von 13** |
+| davon mit **greifbarem Knopf** dazu | — | 9 von 13 |
+| **bemerkt** | **0 von 15** | **13 von 13** |
+
+Wo die Knöpfe standen: **Wochenkarte 9 ×, aufgeschlagenes Übergabeblatt 8 ×**
+— kein einziges Mal nur im Reiter. Die erste Berührung, Wort für Wort vom
+Bildschirm, Braujahr **1355, Woche 1**:
+
+> `Ziel: Die Übergabe vor dem Rat liegt auf dem Tisch — noch 4 Wochen. Das ist das gute Ende. (100 % des Wegs)`
+> `DIE ÜBERGABE VOR DEM RAT · 1355`
+> `Die Übergabe vor dem Rat ansehen`
+
+Das ist die **Georgi-Tafel** in Woche 1 — genau die Woche, in der das Angebot
+bisher gesetzt, aber nicht gezeichnet wurde.
+
+### R14 — die Blätter schließen sich beim Klick auf einen fremden Reiter
+
+Gebaut wie unter §2 beschrieben; der Horcher hängt in der Fangphase und
+schließt Georgi- und Übergabeblatt. Das Übergabeblatt wird dabei **weggelegt,
+nicht beantwortet** — `Z.uebergabeZu`; die Wochenkarte trägt das Angebot
+weiter samt Frist und einem Knopf, der es zurückholt. Das Schlussblatt bleibt
+liegen (Begründung im Quelltext).
+
+---
+
+## 4 · Was ich nicht kaputtgemacht habe — nachgemessen
+
+| | Ergebnis |
+|---|---|
+| „keine Fehler auf der Seite" · `werkbank/schuss.mjs`, alle vier Epochen | **4 von 4** (`werkbank/schuss/welle13-woche-e1..e4.png`) |
+| `BRAUHAUS.lage.length` | **0** in allen vier Epochen, im Ladezustand und nach 14 gespielten Wochen |
+| Seitenfehler in allen Messläufen (8 × 100 Wochen, 78 Wochen Übergabeprobe) | **0** |
+| `BRAUHAUS.haushalt.ueberRand()` | leer in 1350, 1884, 1970; in 1600 vier Einträge, **alle von DER SUD**, keiner von mir |
+| Wochenkarte im Kasten | **3,21 % der Bühne** in allen vier Epochen (Grenze der Platzordnung 3,5 %) |
+| Wochenkarte **gemalt** (nur die Chips, kein Papier) | **0,74 % (1350) bis 1,57 % (1970)** der Bühne |
+| Wochenkarte je `stadt-zugeklappt` oder `stadt-verdeckt` | **nie**, in keiner Epoche |
+| Schlussblatt, „nächster Zug"-Zeile, `fuhre:wie-vorige`, `fuhre:fuellen`, `fuhre:leeren`, `fuhre:abschicken` | unverändert, kein Schlüssel umbenannt |
+| `Math.random()` in `fuhre*.js` | **0 Treffer** |
+| Wanduhrfristen (`setTimeout`) neu eingebaut | **0** — der Reiterhorcher und der Anschlaghorcher senden `zeichne` in derselben Runde |
+
+**Zur zweiten Messlatte (ρ) in 1600:** das Messgerät `rueckkopplung-r3/linie.mjs`
+klickt `fuhre:wie-vorige` und `fuhre:abschicken` **namentlich** und fasst weder
+`fuhre:plan:*` noch `fuhre:sprung` an. Beide Schlüssel stehen unverändert an
+unveränderter Stelle auf dem Brett DER WAGEN, und an **Preisen, Erträgen,
+Fristen, Sudmengen, Wagengrößen und Fassplätzen wurde nichts geändert** — die
+Fuhrpläne verteilen nur anders, was ohnehin auf den Wagen passt. Die Partie,
+die dieses Gerät spielt, ist deshalb Zug für Zug dieselbe wie vorher.
+
+**Der Flächenhaushalt (`haushalt.pruefe()`) ist heute für sechs von sieben
+Stücken über dem Budget** — 1350 nach 14 Wochen: `stadt 247.002/40.000`,
+`preis 126.812/24.000`, `sud 73.269/34.000`, `fuhre 61.105/34.000`,
+`erbe 39.124/28.000`, `name 28.932/20.000`. Das ist ein Zustand des
+gemeinsamen Baums an diesem Tag (vier Builder schreiben gleichzeitig, und die
+Michaelitafel liegt seit R7 von selbst auf), kein Befund über ein einzelnes
+Stück. Mein Anteil daran ist die Wochenkarte mit **10.596 bis 22.656 gemalten
+Bildpunkten** — das ist die Zahl, die zu Lasten der FUHRE geht, und ich nenne
+sie, damit die Aufsicht sie abziehen kann.
+
+---
+
+## 5 · Was ich der Aufsicht melde
+
+1. **Die vier Bretter der FUHRE liegen beim Laden als Reiter, und damit ist die
+   Woche ohne Reiterklick nicht spielbar** (§1). Ich habe das nicht in
+   `stadt.js` geheilt — DIE STADT ist in dieser Welle zu —, sondern die Woche
+   an einen Ort gelegt, den die Platzordnung nicht anfasst. Die Bretter selbst
+   liegen weiter als Reiter da; wer sie aufschlägt, findet alles wie bisher.
+   **Für DEN SUD, DEN NAMEN und DAS ERBE gilt dasselbe Problem unverändert.**
+2. **`B.uhr.springe()` lässt den Wagen stehen** (§2, gemessen: ein
+   gesprungenes Braujahr kostet 1350 eine Adresse, den ganzen Keller und
+   33 von 40 Rohstoff). Wer es benutzt, muss wissen, dass die Uhr die Woche
+   laufen lässt, aber niemand für ihn liefert.
+3. **Die Latte „drei häufigste ≤ 60 %" misst in 1350 und 1600 die Knappheit,
+   nicht die Bedienung** (§3). Sie ist dort nur zu erreichen, indem man an
+   Sudmenge, Wagengröße oder Fassplätzen dreht — und 1600 hat bei ρ +0,538
+   keine Reserve. Das ist eine Entscheidung der Aufsicht, keine eines
+   Stück-Builders.
+4. **Der Startzettel des Rahmens (R4) und die Wochenkarte teilen sich den
+   unteren linken Streifen.** Ich weiche aus, solange er liegt. Wenn der
+   Rahmen ihn später verschiebt, kann diese Ausnahme wieder heraus —
+   `zeichneWoche()`, eine Zeile.
