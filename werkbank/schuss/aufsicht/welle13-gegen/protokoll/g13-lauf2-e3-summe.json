@@ -1,0 +1,47 @@
+{
+ "epoche": 3,
+ "url": "http://127.0.0.1:8924/spiel/?epoche=3&saat=1350&neu=1",
+ "gespielteWochen": 100,
+ "jahre": "1884–1887",
+ "lageMax": 0,
+ "seitenfehler": 0,
+ "fehler": [],
+ "ersterSchirm": {
+  "textzeilen": 436,
+  "zielZeilen": 3,
+  "zielBeispiel": [
+   "Bezahlt bei Übergabe, drei Prozent Nachlass.",
+   "Ziel: das Haus weitergeben, solange es steht. Noch 5 Braujahre, dann ist das Haus alt genug für eine Übergabe. (33 % des Wegs)",
+   "DAS ZIEL —"
+  ],
+  "knopf": "Michaelitafel 1884 · 5 Angebote — heute ist Michaeli",
+  "tafelLiegt": false,
+  "speicherSchluessel": 0
+ },
+ "wochenMitTafel": 4,
+ "knopfDa": 100,
+ "luegtZu": 0,
+ "luegtAuf": 0,
+ "aufschriften": [
+  "Michaelitafel 1884 · 5 Angebote — heute ist Michaeli",
+  "Michaelitafel schließen",
+  "Michaelitafel 1884 · 5 Angebote",
+  "Michaelitafel 1885 · 5 Angebote",
+  "Michaelitafel 1886 · 5 Angebote",
+  "Michaelitafel 1887 · 5 Angebote"
+ ],
+ "jahresanfaenge": 5,
+ "davonMitTafel": 4,
+ "wochenOhneGegenzugEng": 1,
+ "wochenOhneGegenzugWeit": 1,
+ "wochenOhneGegenzugEngJe100": 1,
+ "wochenOhneGegenzugWeitJe100": 1,
+ "wochenMitZielwort": 100,
+ "wochenMitUebergabe": 0,
+ "davonNurAmReiter": 0,
+ "wochenOhneBezahlbares": 0,
+ "deckungUnter1": 0,
+ "kasseAnfang": 14250,
+ "kasseEnde": 7089,
+ "speicherSchluesselEnde": 0
+}

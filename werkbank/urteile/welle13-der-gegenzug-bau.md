@@ -498,6 +498,10 @@ Die neun Restwochen der Epoche 1 sind dort **verschwunden** — genau wie in
 §4.3 vorhergesagt: sobald die Michaelitafel nicht mehr dauerhaft über der Karte
 liegt, ist der Klageknopf greifbar, und er kostet kein Geld.
 
+**Zweimal gemessen, damit es keine Momentaufnahme ist:** 1600 und 1884 in einem
+zweiten, unabhängigen Lauf — wieder **0** und **1**. Ziffer für Ziffer
+dieselben Zahlen.
+
 ### 4.2c Und mit der KOMPETENTEN Hand, die kauft und festlegt
 
 Die beiden Messungen oben spielen wie §4b des Urteils: füllen, abschicken,
