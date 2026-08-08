@@ -168,7 +168,13 @@
     antragErledigt: false, /* angenommen ODER ausgeschlagen: kommt nie wieder */
     ausgang: null,       /* {art, summe, wer, kopf, urteil, folge}          */
     uebergabe: null,     /* {jahr, erbe} — das Blatt liegt auf              */
-    uebergabeNein: 0     /* Braujahr, in dem sie zuletzt abgelehnt wurde    */
+    uebergabeNein: 0,    /* Braujahr, in dem sie zuletzt abgelehnt wurde    */
+    uebergabeZu: false,  /* Blatt weggelegt — das ANGEBOT liegt weiter      */
+
+    /* DIE WOCHE (Welle 13, R13). `letzterPlan` ist der Fuhrplan, den der
+       Sprung weiterfaehrt; `sprungBericht` das, was er erzaehlt hat. */
+    letzterPlan: 'durst',
+    sprungBericht: null
   };
 
   /* Wie viele ueberzeugende Faesser eine Adresse zurueckholen. Ein Fass, das

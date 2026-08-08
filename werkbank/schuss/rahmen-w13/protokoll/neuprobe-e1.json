@@ -1,0 +1,83 @@
+{
+ "epoche": 1,
+ "wochen": 30,
+ "fehler": [],
+ "mitNeu": {
+  "pruefsummen": [
+   "d71923b8a80abf5c",
+   "d71923b8a80abf5c",
+   "d71923b8a80abf5c"
+  ],
+  "einePruefsumme": true,
+  "speicherLeer": true,
+  "speicher": [
+   [],
+   [],
+   []
+  ],
+  "modus": [
+   "neu",
+   "neu",
+   "neu"
+  ],
+  "geschrieben": [
+   0,
+   0,
+   0
+  ],
+  "schluss": [
+   "1351/1 Kasse 48",
+   "1351/1 Kasse 48",
+   "1351/1 Kasse 48"
+  ]
+ },
+ "ohneNeu": {
+  "pruefsummen": [
+   "d71923b8a80abf5c",
+   "2d7688463ca134c4",
+   "612bd20beea9d238"
+  ],
+  "einePruefsumme": false,
+  "speicher": [
+   [
+    "brauhaus:1:1350"
+   ],
+   [
+    "brauhaus:1:1350"
+   ],
+   [
+    "brauhaus:1:1350"
+   ]
+  ],
+  "anfang": [
+   "1350/1 Kasse 112",
+   "1351/1 Kasse 48",
+   "1352/1 Kasse 48"
+  ],
+  "schluss": [
+   "1351/1 Kasse 48",
+   "1352/1 Kasse 48",
+   "1353/1 Kasse 48"
+  ],
+  "zeichen": [
+   22083,
+   36079,
+   49790
+  ]
+ },
+ "raeumtNach": {
+  "speicher": [],
+  "pruefsumme": "d71923b8a80abf5c",
+  "gleichWieLaufEins": true
+ },
+ "lage": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "bestanden": true
+}

@@ -105,7 +105,47 @@ BRAUHAUS.welt.binde('lindenhof', 'haus', 'Vertrag', 1358)
 BRAUHAUS.welt.schreibe('…', 'art')            // Chronik
 BRAUHAUS.welt.protokolliere({wer, was, preis, menge, adresse})
 BRAUHAUS.welt.meldeZug('Sud', 30)             // Preis deines nächsten sinnvollen Zuges
+BRAUHAUS.welt.meldeZiel(satz, naehe)          // was das gute Ende ist und wie weit das Haus davon weg ist
 ```
+
+> **`meldeZiel(satz, naehe)` — die zweite Zeile am unteren Rand.** Welle 13,
+> Auflage A2. Gebaut wie `meldeZug`: **in jedem Zeichendurchgang neu melden**,
+> denn vor jedem Durchgang wird vergessen. `satz` ist Klartext (*„Noch 3
+> Braujahre, dann ist das Haus alt genug für eine Übergabe"*), `naehe` ist
+> 0..1 oder `null`, wenn unbekannt. Melden mehrere Stücke, gewinnt die größte
+> `naehe`; **meldet niemand, bleibt die Zeile leer** — sie erfindet nichts und
+> sie zeigt nichts Altes. Der Rahmen schreibt sie über *„nächster Zug: …"*.
+
+## Spielstand — `kern/stand.js`, neu in Welle 13
+
+Nach jedem Wochenwechsel schreibt der Rahmen den ganzen Zustand des **Kerns**
+(Haus, Zeit, Vorrat, Adressen, Gegner, Chronik, Buch, Zählerstand des Würfels)
+nach `localStorage`, Schlüssel `brauhaus:<epoche>:<saat>`. Beim Laden derselben
+Adresse wird er eingesetzt, und im Kopf steht *„fortgesetzt · 1354/12"*.
+
+**Der Eigenzustand eines Stücks (`Z`) wird nicht mitgesichert** — dafür gibt es
+zwei Zeilen, und der Kern muss dafür nicht angefasst werden:
+
+```js
+BRAUHAUS.stand.melde('gegner', function () { return { zuege: Z.zuege }; });  // beim Laden anmelden
+var alt = BRAUHAUS.stand.geladen('gegner');   // in aufbau(); null = frische Partie
+```
+
+`sammeln()` gibt **reine Daten** zurück (JSON-fähig), misst nichts und fasst
+kein DOM an. Wer nichts anmeldet, verliert seinen Eigenzustand beim Neuladen —
+still, aber nicht heimlich: `BRAUHAUS.stand.bericht().stuecke` sagt, wer
+angemeldet ist.
+
+* `?neu=1` — frische Partie: **lädt nichts, schreibt nichts** und räumt beim
+  Anlassen jeden Schlüssel `brauhaus:*` weg. **Jede Messreihe benutzt ihn.**
+* `?jahr=` oder `?woche=` in der Adresse — Aufnahme: lädt nichts, schreibt
+  nichts, lässt einen vorhandenen Stand aber liegen.
+* `BRAUHAUS.stand.zeile()` in der Konsole sagt Modus, Schlüssel, Größe.
+
+In `kern/stand.js` steht **kein** `setTimeout`, `setInterval`,
+`requestAnimationFrame` und **kein** `Date.now()`. Gesichert wird synchron am
+Ende des Wochenwechsels, in derselben Aufrufkette wie der Klick auf WEITER —
+siehe den Kasten *„Kein Würfel, aber trotzdem Zufall"* weiter unten.
 
 **Zwei Sperrlisten-Sicherungen — benutze sie, dann kannst du hier nicht durchfallen:**
 
@@ -160,13 +200,37 @@ Marktanteil wird auf die **eigene** Gesamtmenge bezogen.
 BRAUHAUS.uhr.naechsteWoche()   // Wochen 1..30, der 30. Klick schließt das Braujahr
 BRAUHAUS.uhr.schliesseJahr()   // Michaeli 29.9. bis Georgi 23.4.; der Sommer läuft durch
 BRAUHAUS.uhr.datum()           // {tag, monat, jahr, kurz, lang} — alte Monatsnamen in I/II
-BRAUHAUS.uhr.springe(12)       // ruhige Jahre werden erzählt, nicht geklickt
+BRAUHAUS.uhr.springe(12)       // 12 Braujahre erzählen, nicht klicken
+BRAUHAUS.uhr.springeWochen(8)  // 8 Wochen erzählen
 BRAUHAUS.auf('woche', fn) / BRAUHAUS.sende('zeichne', {grund:'…'})
 BRAUHAUS.wuerfel.zahl() / .ganz(1,6) / .aus(liste) / .trifft(0.3) / .misch(liste)
 ```
 
 Der Würfel ist **gesät**: `?saat=1350` ergibt dieselbe Partie. Benutze nie `Math.random()` —
 sonst kann der Kritiker seine Zählung nicht wiederholen.
+
+> ### `springe()` — die drei Zeilen, nach denen Welle 13 gefragt hat
+>
+> **Wie ein Stück es ruft:** `var s = BRAUHAUS.uhr.springe(3)` erzählt drei
+> Braujahre, `BRAUHAUS.uhr.springeWochen(8)` acht Wochen; beide geben
+> `{jahre, wochen, angehalten}` zurück (`angehalten`: `null` · `'ende'` ·
+> `'grenze'`). Ein Sprung ist genau *„n-mal WEITER drücken, ohne hinzusehen"*
+> — **jede übersprungene Woche läuft wirklich**: `vorwoche`, `welt.verfall()`,
+> dann `woche` bzw. am Michaeli `jahresende` → `rechneJahrAb()` → ggf.
+> `epoche`/`erbfall` → `jahr`. Der Würfel dreht sich dabei genau so oft wie
+> beim Spielen.
+> **Was mit dem Bild geschieht:** `zeichne` kommt **einmal** am Ende
+> (`grund:'sprung'`), nicht je Woche — deshalb ist ein Sprung billig. Wer im
+> `woche`-Horcher selbst `zeichne` sendet, macht ihn teuer.
+> **Was mit dem Spielstand geschieht:** einmal am Ende gesichert, nicht je
+> Woche; der Stand steht danach auf der Woche, in der man herauskommt. Ein
+> Sprung hält an, sobald `B.welt.zeit.ende` steht — man überspringt kein
+> Spielende. Obergrenze `B.uhr.SPRUNG_HOECHST` = 3.000 Wochen.
+>
+> *Bis Welle 13 setzte `springe()` nur `woche = 30` und schloss das Jahr: die
+> übersprungenen Wochen fanden **nicht statt** — kein Verfall, kein Zug des
+> Gegners, keine Lieferung, keine Abgabe. Kein Stück hat es je gerufen, und
+> das war richtig so.*
 
 Nach jeder Änderung `BRAUHAUS.sende('zeichne', {grund:'…'})`.
 
@@ -234,7 +298,8 @@ eingehängt, ohne dass eine Stück-Datei angefasst wird.
 ## URL-Parameter
 
 `?epoche=1..4` · `&jahr=` · `&woche=` · `&saat=` · `&orte=1` · `&blatt=chronik` ·
-`&pruefe=1` · `&stumm=1`
+`&pruefe=1` · `&stumm=1` · **`&neu=1`** (frische Partie, kein Spielstand —
+gehört in **jede** Messadresse, siehe oben)
 
 ## Bevor du fertig meldest
 
