@@ -2521,6 +2521,7 @@
        drei, „weil die billigste 85 Pf kostete bei einer Kasse von 112". Ist
        also das billigste ANGEBOT bezahlbar (dann steht oben kein HEUTE
        NICHT), aber keine FESTLEGUNG, dann fehlt der Satz genau hier. */
+    var festKnapp = null;
     if (reicht && festlegungOffen() && !offenJetzt) {
       var billigFest = null;
       festlegungenTafel().forEach(function (f) {
@@ -2529,17 +2530,25 @@
       });
       if (billigFest) {
         var luecke = billigFest.preis - Math.max(0, B.welt.haus.kasse);
-        var kf = B.el('div', 'pr-knapp pr-knapp-fest');
-        kf.appendChild(B.el('span', 'pr-knapp-marke', 'HEUTE KEINE'));
-        kf.appendChild(B.el('span', 'pr-knapp-text',
+        festKnapp = B.el('div', 'pr-knapp pr-knapp-fest');
+        festKnapp.appendChild(B.el('span', 'pr-knapp-marke', 'HEUTE KEINE'));
+        festKnapp.appendChild(B.el('span', 'pr-knapp-text',
           'Für keine dieser Festlegungen reicht die Kasse. Die billigste — ' + billigFest.f.name
           + ' — kostet ' + geld(billigFest.preis) + ', es fehlen ' + geld(luecke)
           + '. Eine Festlegung, die man nie bezahlen kann, ist keine Festlegung.'));
-        kf.appendChild(woherSatz(luecke));
-        fkopf.appendChild(kf);
+        festKnapp.appendChild(woherSatz(luecke));
       }
     }
     sp.appendChild(fkopf);
+    /* NEBEN den Abschnittskopf, nicht HINEIN. `.pr-abschnitt` ist eine ZEILE
+       (`display: flex; align-items: baseline`, stil/preis.css): ein Kasten
+       mit vier Sätzen darin wird dort auf Wortbreite gequetscht und dafür
+       hoch. Gemessen, als er noch drinstand — Michaeli 1351, 1600×900:
+       `.pr-reihe` der Angebote **0 px hoch**, die Reihe der Festlegungen
+       136 px unter den Rand der Tafel geschoben, **kein einziger** der fünf
+       „Nehmen"-Knöpfe mit `elementFromPoint` zu treffen. Als eigene Zeile
+       der Spalte kostet derselbe Text ein Viertel davon. */
+    if (festKnapp) sp.appendChild(festKnapp);
 
     var freihe = B.el('div', 'pr-reihe pr-reihe-fest');
     if (!festlegungOffen()) {
