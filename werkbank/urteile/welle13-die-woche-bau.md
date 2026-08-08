@@ -368,6 +368,7 @@ liegen (Begründung im Quelltext).
 | Schlussblatt, „nächster Zug"-Zeile, `fuhre:wie-vorige`, `fuhre:fuellen`, `fuhre:leeren`, `fuhre:abschicken` | unverändert, kein Schlüssel umbenannt |
 | `Math.random()` in `fuhre*.js` | **1 Treffer, unverändert und vor dieser Welle da** — `neuesSpiel()`, der Knopf „Von vorn anfangen — dieselbe Stadt, andere Würfel". Er würfelt die **neue** Saat für die **nächste** Partie und wechselt dabei die Adresse; er kann keine laufende Messung stören. Von mir kam kein einziger Zufallsaufruf dazu. |
 | Wanduhrfristen (`setTimeout`) neu eingebaut | **0** — der Reiterhorcher und der Anschlaghorcher senden `zeichne` in derselben Runde |
+| **Wiederholbarkeit**: zwei Läufe hintereinander, `?saat=1350&neu=1`, 60 gespielte Wochen | **71 Klicks, Zug für Zug dieselbe Folge**, Schluss beide Male 1354/29 · Kasse 41 · `lage` 0 · 108 erzählte Wochen |
 
 ### Die zweite Messlatte in 1600 — nachgemessen, nicht behauptet
 
