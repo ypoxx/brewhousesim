@@ -1,0 +1,185 @@
+# DIE NACHTMESSUNG — Stufe 2 der Pruefpyramide, agentenlos.
+#
+# T0.8 des Umsetzungsplans. Tokenregel 1 lautet: „Kein Modell sieht Skripten
+# beim Laufen zu." Die volle Latte 2 sind zwoelf Laeufe zu 400 Wochen,
+# nacheinander, rund eine Stunde Rechenzeit — die teuerste Stunde des ganzen
+# Loops, wenn ein Modell danebensitzt, und die billigste, wenn keines dabei
+# ist. Diese Datei ist der Unterschied.
+#
+# ------------------------------------------------------------------------
+# DREI DINGE, DIE HIER FALSCH LAUFEN KOENNEN, UND WARUM SIE ES NICHT TUN
+#
+# 1. EINE ANDERE PLAYWRIGHT-FASSUNG IST EINE ANDERE PARTIE. Die Messhand
+#    klickt echte Knopfflaechen in einem echten Chromium; ein anderer Chromium
+#    setzt anders um, trifft anders, und die Zahlen sind nicht mehr die des
+#    Arbeitscontainers. Darum ist die Fassung hier HART GENAGELT und muss
+#    gleich der des Containers bleiben (dort: playwright 1.56.1,
+#    Chromium 141.0.7390.37, am 8. August 2026 abgelesen). Wer sie hebt, hebt
+#    sie an beiden Stellen am selben Tag und misst die Latte danach neu.
+#
+# 2. EIN HAFEN IST KEIN BAUM. Gemessen wird nie am ausgecheckten Baum, sondern
+#    an einem eingefrorenen Stand, den `messstand.sh` per `git archive` auslegt
+#    und dessen Fassung es beim Server selbst nachfragt. Derselbe Fehler hat am
+#    4. August einen blinden Kritiker eine Stunde gekostet und am 8. August DEN
+#    GEGENZUG 48 falsche Abweichungen.
+#
+# 3. NEBENEINANDER GEMESSEN IST NICHT GEMESSEN. Am 7. August hat ein Skript
+#    vier Epochen parallel gefahren, und die Maschinenlast hat entschieden,
+#    welche von zwei Partien herauskam. Das hat vier Tage gekostet. Die
+#    Schleife unten laeuft strikt nacheinander, und der Laeufer bekommt keine
+#    Nebenlast.
+#
+# ------------------------------------------------------------------------
+# WAS DIESER DATEI NOCH FEHLT, UM WIRKLICH NACHTS ZU LAUFEN
+#
+# GitHub startet `schedule` AUSSCHLIESSLICH aus dem Standardzweig. Der ist hier
+# `claude/project-setup-apis-p51a0f`, gearbeitet wird auf
+# `claude/brauhaus-imperium-sim-163s85`. Solange diese Datei nur auf dem
+# Arbeitszweig liegt, feuert der Zeitplan NICHT — von Hand (`workflow_dispatch`)
+# laeuft sie schon jetzt. Damit die Nacht von selbst kommt, muss die Datei
+# einmal in den Standardzweig; das ist eine Entscheidung des Auftraggebers und
+# steht als solche im laufenden Auftrag. Der `ref`-Eingang unten sorgt dafuer,
+# dass sie auch von dort aus den richtigen Zweig misst.
+name: Nachtmessung — Latte 2
+
+on:
+  schedule:
+    # 01:10 UTC = 03:10 deutscher Sommerzeit. Nicht auf die volle Stunde:
+    # GitHub verteilt Laeufe zur vollen Stunde ueber Minuten hinweg, und ein
+    # verschobener Start verschiebt eine einstuendige Messreihe.
+    - cron: '10 1 * * *'
+  workflow_dispatch:
+    inputs:
+      zweig:
+        description: 'Zweig, der gemessen wird'
+        default: 'claude/brauhaus-imperium-sim-163s85'
+      laeufe:
+        description: 'Laeufe je Epoche'
+        default: '3'
+
+permissions:
+  contents: write
+
+concurrency:
+  # Zwei Messreihen auf derselben Maschine sind keine zwei Messreihen.
+  group: nachtmessung
+  cancel-in-progress: false
+
+jobs:
+  latte2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      ZWEIG: ${{ github.event.inputs.zweig || 'claude/brauhaus-imperium-sim-163s85' }}
+      LAEUFE: ${{ github.event.inputs.laeufe || '3' }}
+      HAFEN: '8933'
+      PW: '1.56.1'
+
+    steps:
+      - name: Zweig holen
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.zweig || 'claude/brauhaus-imperium-sim-163s85' }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Playwright an genau die Stelle legen, an der die Geraete es suchen
+        run: |
+          # Jedes Messgeraet dieses Laufs importiert absolut aus
+          # /opt/node22/lib/node_modules/playwright. Am fremden Messgeraet wird
+          # nicht gedreht (ZUSTAENDIGKEIT §16) — also kommt das Paket dorthin,
+          # statt dass zwanzig Dateien einen neuen Pfad bekommen.
+          sudo mkdir -p /opt/node22/lib/node_modules
+          sudo npm install -g --prefix /opt/node22 "playwright@${PW}"
+          node -e "console.log('playwright', require('/opt/node22/lib/node_modules/playwright/package.json').version)"
+          sudo node /opt/node22/lib/node_modules/playwright/cli.js install --with-deps chromium
+
+      - name: Fassung protokollieren, bevor eine Zahl entsteht
+        run: |
+          node -e "
+          const {chromium}=require('/opt/node22/lib/node_modules/playwright/index.js');
+          chromium.launch().then(async b=>{console.log('Chromium', b.version()); await b.close();});
+          "
+
+      - name: Messstand einfrieren
+        run: |
+          ./werkbank/schuss/aufsicht/messstand.sh HEAD "$HAFEN"
+
+      - name: Die zwoelf Laeufe, nacheinander
+        run: |
+          set -uo pipefail
+          TAG=$(date -u +%Y-%m-%d)
+          SHA=$(git rev-parse --short HEAD)
+          D="werkbank/nacht/$TAG-$SHA"
+          mkdir -p "$D"
+          echo "Messstand $SHA, $LAEUFE Laeufe je Epoche, Hafen $HAFEN" | tee "$D/lauf.log"
+          # Laufbuchstaben ohne Kunststueck: die erste Fassung rechnete sie ueber
+          # oktale Escapes aus und schrieb Dateien namens e1-101.json.
+          BUCH=ABCDEFGHIJ
+          for EP in 1 2 3 4; do
+            for i in $(seq 1 "$LAEUFE"); do
+              L=${BUCH:$((i - 1)):1}
+              Z="$D/e$EP-$L.json"
+              [ -s "$Z" ] && continue
+              T0=$(date +%s)
+              HAFEN=$HAFEN timeout 1800 node werkbank/schuss/rueckkopplung-r3/linie.mjs \
+                "$EP" 400 "$Z" >/dev/null 2>&1
+              if [ -s "$Z" ]; then
+                echo "e$EP-$L: $(md5sum < "$Z" | cut -c1-12)  ($(( $(date +%s) - T0 ))s)" | tee -a "$D/lauf.log"
+              else
+                echo "e$EP-$L: GESCHEITERT nach $(( $(date +%s) - T0 ))s" | tee -a "$D/lauf.log"
+              fi
+            done
+          done
+          echo "D=$D" >> "$GITHUB_ENV"
+
+      - name: Auswerten — drei Schnitte, Pruefsummen, Urteil
+        run: |
+          {
+            echo "# Nachtmessung $(date -u +%Y-%m-%d) · Stand $(git rev-parse --short HEAD)"
+            echo
+            echo '## Wiederholbarkeit — Pruefsummen je Epoche'
+            echo
+            echo '| Epoche | Laeufe | verschiedene Pruefsummen |'
+            echo '|---|---|---|'
+            for EP in 1 2 3 4; do
+              N=$(ls "$D"/e$EP-*.json 2>/dev/null | wc -l)
+              [ "$N" = 0 ] && { echo "| $EP | 0 | — KEINE MESSUNG |"; continue; }
+              P=$(for f in "$D"/e$EP-*.json; do md5sum < "$f" | cut -c1-12; done | sort -u | tr '\n' ' ')
+              echo "| $EP | $N | \`$P\` |"
+            done
+            echo
+            echo '## Latte 2 — drei Schnitte'
+            echo
+            echo '```'
+            python3 werkbank/schuss/fuhre-w6/schnitte.py "$D" 2>&1 || echo 'KEINE AUSWERTUNG'
+            echo '```'
+          } > "$D/BEFUND.md"
+          cat "$D/BEFUND.md"
+
+      - name: Ergebnis in den Zweig legen
+        run: |
+          git config user.name  'Nachtmessung'
+          git config user.email 'noreply@anthropic.com'
+          git add -A -- werkbank/nacht
+          git diff --cached --quiet && { echo 'nichts Neues'; exit 0; }
+          git commit -m "Nachtmessung $(date -u +%Y-%m-%d): Latte 2, agentenlos"
+          # Der Arbeitscontainer schiebt waehrenddessen weiter. Wer hier ohne
+          # Rebase drueckt, verliert entweder seine Messung oder fremde Arbeit.
+          for v in 1 2 3 4; do
+            git pull --rebase origin "$ZWEIG" && git push origin "HEAD:$ZWEIG" && exit 0
+            sleep $((v * 5))
+          done
+          echo 'PUSH GESCHEITERT — die Messung liegt im Artefakt, nicht im Zweig' >&2
+          exit 1
+
+      - name: Rohdaten auch als Artefakt, falls der Push scheitert
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nachtmessung
+          path: werkbank/nacht/**
+          retention-days: 14
